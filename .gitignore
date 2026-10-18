@@ -159,6 +159,16 @@ ENV/
 env.bak/
 venv.bak/
 
+# Prometheus local data / indexes (keep folder shells via .gitkeep)
+data/raw/**
+!data/raw/.gitkeep
+data/processed/**
+!data/processed/.gitkeep
+*.chroma
+*.faiss
+*.pkl
+*.parquet
+
 # Spyder project settings
 .spyderproject
 .spyproject

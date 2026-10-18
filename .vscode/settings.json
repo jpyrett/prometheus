@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "/home/jpyrett/miniconda3/envs/cmu/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.condaPath": "/home/jpyrett/miniconda3/condabin/conda",
+  "terminal.integrated.env.linux": {
+    "CONDA_DEFAULT_ENV": "cmu"
+  }
+}
