@@ -9,7 +9,16 @@ flowchart RL
     evals --- hall["Hallucination Detection"]
     evals --- Brittleness
     evals --- cost["Cost / Quality / Latency"]
+    main --- Application
+    Application --- appMcp[MCP]
+    appMcp --- server(("server.py<br/>(FastMCP 4)"))
+    server --- archHost[Host]
+    server --- archClient[Client]
+    server --- archServer[Server]
+    archClient ---|stdio| archServer
     Course --- main
+    classDef tightCircle font-size:11px
+    class server tightCircle
     llm["LLM Setup"] --- Course
     reasoning[Reasoning] --- llm
     cot["Chain-of-Thought CoT prompting"] --- reasoning

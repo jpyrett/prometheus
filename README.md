@@ -29,14 +29,16 @@ capstone/
 │   ├── raw/                # Downloaded / API dumps (local)
 │   └── processed/          # Cleaned data, vector indexes (local)
 ├── scripts/                # Thin shell/python runners you’ll add later
-├── tests/
+├── tests/                  # pytest (FastMCP tools + later app tests)
+├── pytest.ini              # asyncio_mode=auto for FastMCP Client tests
+├── requirements.txt        # Curated runtime deps (reproducible install)
 ├── .env.example            # Safe template (committed)
 └── .env                    # Your keys (gitignored)
 ```
 
 Keep layers thin: put new code in the folder that matches its job. Prefer porting from `labs/` into one of these folders rather than growing notebook-only logic.
 
-## Conda
+## Conda + reproducible deps
 
 Cursor is pointed at the course env (`cmu`):
 
@@ -50,7 +52,29 @@ Activate in a terminal:
 conda activate cmu
 ```
 
-Install packages into `cmu` as you need them (FastMCP, LangChain, LangGraph, `python-dotenv`, etc.). No dependency file is pre-seeded so you can add packages deliberately while coding by hand.
+**Rule:** when you install a package for Prometheus, also add it to `requirements.txt` (direct deps only — never dump a full `pip freeze`).
+
+```bash
+conda activate cmu
+pip install -r requirements.txt
+# torch is platform-specific — install separately (see comments in requirements.txt)
+```
+
+Same on DGX Spark: recreate or sync the `cmu` env, install torch/CUDA for that box first, then `pip install -r requirements.txt`.
+
+Uncomment LangChain / LangGraph / OpenAI lines in `requirements.txt` when you start using those labs.
+
+## Testing (pytest)
+
+We use **pytest** (+ **pytest-asyncio**) for unit tests and in-process FastMCP `Client(server)` tests. Config lives in `pytest.ini` (`asyncio_mode = auto`).
+
+```bash
+conda activate cmu
+pip install -r requirements.txt   # includes pytest / pytest-asyncio
+pytest                            # from the repo root
+```
+
+FastMCP tools: `tests/fastmcp_tools.py` (imports `prometheus.mcp.server`).
 
 ## Environment variables
 
@@ -108,6 +132,5 @@ Later: `rag/`, `memory/`, `evals/`, paper-trading hooks.
 
 ## Intentional non-goals for this scaffold
 
-- No application Python modules yet (folders + `.gitkeep` only)
-- No lockfile / requirements dump — add packages in `cmu` as you port lab code
+- No full-env lockfile (`pip freeze`) — keep `requirements.txt` curated; pin tighter later if Spark installs drift
 - `labs/` stays read-only reference; copy patterns into `prometheus/` yourself

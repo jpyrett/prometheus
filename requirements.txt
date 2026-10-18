@@ -1,0 +1,32 @@
+# Prometheus runtime deps — add a line here whenever you install something for the app.
+# Install:  pip install -r requirements.txt
+# Do NOT pip-freeze the whole conda env (jupyter/cuda noise is machine-specific).
+
+# Core
+python-dotenv>=1.0
+httpx>=0.28
+pydantic>=2.0
+PyYAML>=6.0
+rich>=13.0
+
+# MCP (Lab 1.2 / prometheus/mcp)
+# Official SDK (protocol) + FastMCP framework (FastMCP / Context / Client API)
+mcp>=2
+fastmcp>=4
+uvicorn>=0.30
+
+# Local / DGX models (Lab 1.1 patterns) — install torch for the TARGET machine
+# Dev box (CUDA 13):  pip install torch --index-url https://download.pytorch.org/whl/cu130
+# DGX Spark: use NVIDIA's recommended torch/CUDA wheel for that box, then:
+transformers>=4.51
+accelerate>=1.0
+numpy>=2.0
+
+# Agentic stack (add when you port those labs)
+# langchain>=0.3
+# langgraph>=0.2
+# openai>=1.0
+
+# Testing (FastMCP Client tests + unit tests)
+pytest>=8.0
+pytest-asyncio>=0.24
