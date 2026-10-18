@@ -76,6 +76,14 @@ pytest                            # from the repo root
 
 FastMCP tools: `tests/fastmcp_tools.py` (imports `prometheus.mcp.server`).
 
+### FastMCP caching (quotes)
+
+Live `market://{symbol}/quote` resources must not be response-cached.
+
+- **Never set `cache=True` or will break the FastMCP `market://{symbol}/quote` resource.**
+- Connect with `Client(server, cache=False)` (see `CLIENT_CACHE` in `prometheus/mcp/server.py`).
+- Server is constructed with `cache_ttl=None` (FastMCP has no `cache=` argument on the server).
+
 ## Environment variables
 
 ```bash

@@ -1,4 +1,10 @@
-"""Run prometheus/mcp/server.py when you want to serve over stdio."""
+"""Run prometheus/mcp/server.py when you want to serve over stdio.
+
+Caching policy (live market quotes):
+    Never set cache=True or will break the FastMCP market://{symbol}/quote resource.
+    Always connect with:  Client(server, cache=False)
+    Server emits no cache hints: cache_ttl=None on FastMCP(...).
+"""
 
 import logging
 from pydantic import BaseModel
@@ -9,7 +15,12 @@ from fastmcp import FastMCP, Context, Client
 logging.getLogger("mcp").setLevel(logging.WARNING)
 logging.getLogger("fastmcp").setLevel(logging.WARNING)
 
-server = FastMCP("prometheus")
+# Pass to every Client(...): Client(server, cache=CLIENT_CACHE)
+# Never set cache=True or will break the FastMCP market://{symbol}/quote resource.
+CLIENT_CACHE = False
+
+# cache_ttl=None = no server-side cache hints (FastMCP has no cache= kwarg).
+server = FastMCP("prometheus", cache_ttl=None)
 
 # ── TOOLS ──  model-controlled actions; the type hints become the input schema.
 @server.tool()
@@ -78,6 +89,9 @@ def quote(symbol: str) -> str:
     """Read-only quote for a market symbol (e.g. market://AAPL/quote).
 
     Later: fetch from Redis. For now returns a stub payload.
+
+    Never set cache=True or will break the FastMCP market://{symbol}/quote resource.
+    Use Client(server, cache=False) (see CLIENT_CACHE).
     """
     symbol = symbol.strip().upper()
     # TODO: redis.get(f"market:{symbol}:quote")
