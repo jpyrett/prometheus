@@ -1,23 +1,20 @@
 """Run prometheus/mcp/server.py when you want to serve over stdio.
 
-Caching policy (live market quotes):
-    Never set cache=True or will break the FastMCP market://{symbol}/quote resource.
-    Always connect with:  Client(server, cache=False)
-    Server emits no cache hints: cache_ttl=None on FastMCP(...).
+This module is the MCP *server* only (tools / resources / prompts).
+Host/client connection lives in client.py — do not import client.py here.
+
+Stdio hosts must connect with mode=\"legacy\" and cache=False
+(see prometheus.mcp.client). Never set cache=True or will break the FastMCP
+market://{symbol}/quote resource. Server emits no cache hints (cache_ttl=None).
 """
 
 import logging
-from pydantic import BaseModel
-import mcp.types as types
-from fastmcp import FastMCP, Context, Client
 
-# Quiet noisy SDK / framework logs for a cleaner notebook.
+from fastmcp import FastMCP
+
+# Quiet noisy SDK / framework logs.
 logging.getLogger("mcp").setLevel(logging.WARNING)
 logging.getLogger("fastmcp").setLevel(logging.WARNING)
-
-# Pass to every Client(...): Client(server, cache=CLIENT_CACHE)
-# Never set cache=True or will break the FastMCP market://{symbol}/quote resource.
-CLIENT_CACHE = False
 
 # cache_ttl=None = no server-side cache hints (FastMCP has no cache= kwarg).
 server = FastMCP("prometheus", cache_ttl=None)
@@ -94,13 +91,11 @@ def quote(symbol: str) -> str:
     supplies data — it is not the briefing template.
 
     Never set cache=True or will break the FastMCP market://{symbol}/quote resource.
-    Use Client(server, cache=False) (see CLIENT_CACHE).
+    Hosts: use prometheus.mcp.client.connect_client() (cache=False).
     """
     symbol = symbol.strip().upper()
     # TODO: redis.get(f"market:{symbol}:quote")
     return f"symbol={symbol}\nprice=stub\nsource=placeholder"
-
-print("✓ Registered resources: config://server  and  note://{topic} and market://{symbol}/quote")
 
 
 # ── PROMPTS ──  user-controlled reusable templates.
@@ -131,7 +126,6 @@ def get_market_data(symbol: str) -> str:
     )
 
 
-
 if __name__ == "__main__":
-    server.run()  # stdio — client/host starts this process
-
+    # stdio — host must connect with mode="legacy" and cache=False (see client.py).
+    server.run()

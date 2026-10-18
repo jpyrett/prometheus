@@ -1,9 +1,9 @@
 """Tests for market quote resource + get_market_data prompt (stub now; Redis later)."""
 
 import pytest
-from fastmcp import Client
 
-from prometheus.mcp.server import get_market_data, quote, server
+from prometheus.mcp.client import connect_client
+from prometheus.mcp.server import get_market_data, quote
 
 
 # ── Stub behavior (current placeholder in server.py) ────────────────────────
@@ -23,7 +23,7 @@ def test_quote_stub_trims_symbol():
 
 @pytest.fixture
 async def mcp_client():
-    async with Client(server) as client:
+    async with connect_client() as client:
         yield client
 
 

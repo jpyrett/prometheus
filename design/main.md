@@ -12,6 +12,8 @@ flowchart RL
     main --- Application
     Application --- appMcp[MCP]
     appMcp --- server(("server.py<br/>(FastMCP 4)"))
+    appMcp --- mcpClientFile(("client.py"))
+    mcpClientFile -.->|connect_client| server
     server --- archHost[Host]
     server --- archClient[Client]
     server --- archServer[Server]
@@ -26,7 +28,8 @@ flowchart RL
     main --- Tests
     Tests --- testMcp(("fastmcp_<br/>tools.py"))
     Tests --- testQuotes(("fastmcp<br/>_quotes<br/>.py"))
-    testMcp -.-> server
+    testMcp -.-> mcpClientFile
+    testQuotes -.-> mcpClientFile
     testQuotes -.-> quoteRes
     testQuotes -.-> redisTodo
     Course --- main
@@ -34,7 +37,7 @@ flowchart RL
     classDef tinyCircle font-size:10px
     classDef microCircle font-size:8px
     class server tightCircle
-    class testMcp,quoteRes tinyCircle
+    class testMcp,quoteRes,mcpClientFile tinyCircle
     class testQuotes microCircle
     llm["LLM Setup"] --- Course
     reasoning[Reasoning] --- llm

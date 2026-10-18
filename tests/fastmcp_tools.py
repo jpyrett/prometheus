@@ -1,11 +1,10 @@
 """Tests for Prometheus FastMCP tools in prometheus/mcp/server.py."""
 
 import pytest
-from fastmcp import Client
 
+from prometheus.mcp.client import connect_client
 from prometheus.mcp.server import (
     add_initials_between,
-    server,
     verify_add_initials_between,
 )
 
@@ -56,7 +55,7 @@ def test_verify_add_initials_between_false_or_bad_format():
 
 @pytest.fixture
 async def mcp_client():
-    async with Client(server) as client:
+    async with connect_client() as client:
         yield client
 
 
