@@ -71,7 +71,8 @@ def verify_add_initials_between(expression: str, initials: str | None = None) ->
     return expected == claimed
 
 # ── RESOURCES ──  application-controlled, read-only context addressed by URI.
-# resources = “look this up”, tools = “do something”
+# Resource = where the host loads data into context (e.g. market://AAPL/quote).
+# tools = “do something”; resources = “look this up” — not user-intent templates.
 
 @server.resource("config://server")
 def server_config() -> str:
@@ -88,7 +89,9 @@ def note(topic: str) -> str:
 def quote(symbol: str) -> str:
     """Read-only quote for a market symbol (e.g. market://AAPL/quote).
 
-    Later: fetch from Redis. For now returns a stub payload.
+    Resource role: host loads this URI into context (Redis-backed later).
+    Pair with the get_market_data *prompt* for user intent; this handler only
+    supplies data — it is not the briefing template.
 
     Never set cache=True or will break the FastMCP market://{symbol}/quote resource.
     Use Client(server, cache=False) (see CLIENT_CACHE).
@@ -98,6 +101,36 @@ def quote(symbol: str) -> str:
     return f"symbol={symbol}\nprice=stub\nsource=placeholder"
 
 print("✓ Registered resources: config://server  and  note://{topic} and market://{symbol}/quote")
+
+
+# ── PROMPTS ──  user-controlled reusable templates.
+# Prompt = user intent (e.g. “What’s happening with AAPL?”).
+# Prompt text must not name URIs or tools — that’s app/agent wiring, not the
+# template’s job. Host loads market://AAPL/quote (resource) into context separately.
+
+@server.prompt()
+def review_code(code: str) -> str:
+    """A prompt template the user can invoke (e.g. as a slash-command)."""
+    return f"Please review the following code and suggest improvements:\n\n{code}"
+
+
+@server.prompt()
+def get_market_data(symbol: str) -> str:
+    """Prompt = user intent (“What’s happening with AAPL?”), slash-command style.
+
+    Returns briefing task text only. Does not name URIs or tools — app/agent
+    wiring loads market://{symbol}/quote into context via the quote resource.
+    """
+    symbol = symbol.strip().upper()
+    return (
+        f"What's happening with {symbol}?\n\n"
+        "Give a concise trading-desk briefing for this symbol: recent price "
+        "context, notable moves, and what to watch next. Use only facts present "
+        "in the conversation context; if quote data is missing, say so clearly "
+        "instead of inventing numbers."
+    )
+
+
 
 if __name__ == "__main__":
     server.run()  # stdio — client/host starts this process
