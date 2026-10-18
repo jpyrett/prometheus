@@ -44,7 +44,7 @@ def test_get_market_data_prompt_direct():
     # Prompt = intent only — must not name MCP URIs or tools
     assert "market://" not in text
     assert "read_resource" not in text
-    assert "add_initials_between" not in text
+    assert "fetch_quote" not in text
 
 
 async def test_get_market_data_prompt_via_mcp(mcp_client):

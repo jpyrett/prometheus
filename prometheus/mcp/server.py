@@ -10,6 +10,7 @@ market://{symbol}/quote resource. Server emits no cache hints (cache_ttl=None).
 
 import logging
 
+import mcp.types as mcp_types
 from pydantic import BaseModel
 from fastmcp import FastMCP, Context
 
@@ -23,75 +24,116 @@ server = FastMCP("prometheus", cache_ttl=None)
 # ── TOOLS ──  model-controlled actions; the type hints become the input schema.
 #
 # Notebook Part 5 mapping (what we port vs skip):
-#   elicitation (pick_number) — YES: HITL still current; see pick_number below
+#   elicitation (enter_symbol) — YES: HITL still current; see enter_symbol below
+#   logging / progress / list-changed / cancellation — YES: see noisy_fetch_quote, report_progress, ping_catalog, client handlers
 #   sampling (summarize via create_message) — NO: deprecated; summarize in LangGraph/LLM host
 #   roots (list_workspace via list_roots) — NO: deprecated; use tool args / resource URIs / config
+#   resource *content* updates (quotes) — NO: prices always move; no resources/updated for quotes
+#
+# Quote data: tool fetch_quote = model-triggered action; resource market://{symbol}/quote =
+# host-loaded context. Both share _quote_payload (Redis later).
+
+
+def _quote_payload(symbol: str) -> str:
+    """Normalize symbol and return quote text (stub now; Redis later)."""
+    symbol = symbol.strip().upper()
+    if not symbol:
+        raise ValueError("symbol must be non-empty")
+    # TODO: redis.get(f"market:{symbol}:quote")
+    return f"symbol={symbol}\nprice=stub\nsource=placeholder"
+
 
 @server.tool()
-def add_initials_between(a: str, b: str, initials: str | None = None) -> str:
-    """Insert trimmed initials between two trimmed strings, joined with underscores.
+def fetch_quote(symbol: str) -> str:
+    """Fetch the latest quote for a market symbol (trading-desk action).
 
-    initials is optional: None or blank -> "Alice_Bob"; otherwise "Alice_JP_Bob".
+    Model-controlled: call when the agent needs a price now. Same payload as
+    the market://{symbol}/quote resource (shared stub / Redis later).
     """
-    a, b = a.strip(), b.strip()
-    init = (initials or "").strip()
-    return f"{a}_{init}_{b}" if init else f"{a}_{b}"
+    return _quote_payload(symbol)
 
 
 @server.tool()
-def verify_add_initials_between(expression: str, initials: str | None = None) -> bool:
-    """Check whether add_initials_between(a, b, initials) equals the claimed result.
+def verify_fetch_quote(expression: str) -> bool:
+    """Check whether fetch_quote(symbol) equals the claimed result.
 
-    Expected expression (quoted strings):
-        "Alice" add_initials_between "Bob" = "Alice_JP_Bob"
-        "Alice" add_initials_between "Bob" = "Alice_Bob"      # when initials omitted/blank
-    Expected initials (optional; letters, optionally quoted):
-        "JP"  |  JP  |  ""  |  omitted
+    Expected expression (quoted symbol + quoted payload; use \\n for newlines):
+        fetch_quote("AAPL") = "symbol=AAPL\\nprice=stub\\nsource=placeholder"
     """
     import re
 
-    # expression: two quoted inputs + claimed quoted result
     expr_m = re.match(
-        r"""\s*(["'])(.*?)\1\s+add_initials_between\s+(["'])(.*?)\3\s*=\s*(["'])(.*?)\5\s*$""",
+        r"""\s*fetch_quote\s*\(\s*(["'])([A-Za-z0-9.\-]+)\1\s*\)\s*=\s*(["'])(.*?)\3\s*$""",
         expression,
+        flags=re.DOTALL,
     )
     if not expr_m:
         return False
 
-    a, b, claimed = expr_m[2].strip(), expr_m[4].strip(), expr_m[6].strip()
-    if not a or not b:
+    symbol, claimed = expr_m[2].strip(), expr_m[4]
+    # Allow escaped newlines in the claimed quoted string.
+    claimed = claimed.replace("\\n", "\n")
+    try:
+        return _quote_payload(symbol) == claimed
+    except ValueError:
         return False
 
-    # initials optional: None / blank are allowed; otherwise letters (optionally quoted)
-    if initials is None or not str(initials).strip():
-        init = ""
-    else:
-        init_m = re.match(r"""^\s*(?:(["'])([A-Za-z.]+)\1|([A-Za-z.]+))\s*$""", initials)
-        if not init_m:
-            return False
-        init = (init_m[2] if init_m[1] else init_m[3]).strip()
 
-    expected = f"{a}_{init}_{b}" if init else f"{a}_{b}"
-    return expected == claimed
-
-
-class NumberChoice(BaseModel):
-    favorite_number: int
+class SymbolChoice(BaseModel):
+    symbol: str
 
 
 @server.tool()
-async def pick_number(ctx: Context) -> str:
-    """ELICITATION demo (notebook Part 5): ask the user mid-tool, then use the answer.
+async def enter_symbol(ctx: Context) -> str:
+    """ELICITATION: ask the user for a market symbol mid-tool, then use the answer.
 
     Host must supply elicitation_handler (see prometheus.mcp.client).
     """
     result = await ctx.elicit(
-        message="What's your favorite number?",
-        response_type=NumberChoice,
+        message="Which market symbol do you want?",
+        response_type=SymbolChoice,
     )
     if result.action == "accept":
-        return f"The user chose {result.data.favorite_number}."
-    return f"The user did not answer (action={result.action})."
+        return result.data.symbol.strip().upper()
+    raise RuntimeError(f"enter_symbol elicitation not accepted (action={result.action})")
+
+
+@server.tool()
+async def noisy_fetch_quote(symbol: str, ctx: Context) -> str:
+    """LOGGING: fetch_quote with ctx.info / ctx.warning along the way.
+
+    Same payload as fetch_quote. Host must supply log_handler (see prometheus.mcp.client).
+    """
+    await ctx.info(f"fetching quote for symbol={symbol!r}")
+    payload = _quote_payload(symbol)
+    await ctx.warning("quote source is still a stub (Redis later)")
+    return payload
+
+
+@server.tool()
+async def report_progress(ctx: Context, steps: int = 3) -> str:
+    """PROGRESS demo: multi-step tool that reports progress to the host.
+
+    Host must supply progress_handler (see prometheus.mcp.client).
+    """
+    n = max(1, int(steps))
+    for i in range(1, n + 1):
+        await ctx.report_progress(progress=i, total=n, message=f"step {i}/{n}")
+        await ctx.info(f"report_progress step {i}/{n}")
+    return f"progress complete ({n} steps)"
+
+
+@server.tool()
+async def ping_catalog(ctx: Context) -> str:
+    """LIST-CHANGED: notify host that tools / prompts / static resources may have changed.
+
+    Does not cover quote *content* updates (market://…/quote always moves — no
+    resources/updated). Use when the catalog of tools, prompts, or static URIs changes.
+    """
+    await ctx.send_notification(mcp_types.ToolListChangedNotification())
+    await ctx.send_notification(mcp_types.PromptListChangedNotification())
+    await ctx.send_notification(mcp_types.ResourceListChangedNotification())
+    return "catalog list-changed notifications sent"
 
 
 # ── RESOURCES ──  application-controlled, read-only context addressed by URI.
@@ -104,11 +146,6 @@ def server_config() -> str:
     """A STATIC resource — always the same URI, returns fixed text."""
     return "name=prometheus\nversion=1.0\nmax_results=10"
 
-@server.resource("note://{topic}")
-def note(topic: str) -> str:
-    """A resource TEMPLATE — the {topic} segment is filled in per request."""
-    return f"This is the note about '{topic}'."
-
 
 @server.resource("market://{symbol}/quote")
 def quote(symbol: str) -> str:
@@ -116,26 +153,18 @@ def quote(symbol: str) -> str:
 
     Resource role: host loads this URI into context (Redis-backed later).
     Pair with the get_market_data *prompt* for user intent; this handler only
-    supplies data — it is not the briefing template.
+    supplies data — it is not the briefing template. Same payload as fetch_quote.
 
     Never set cache=True or will break the FastMCP market://{symbol}/quote resource.
     Hosts: use prometheus.mcp.client.connect_client() (cache=False).
     """
-    symbol = symbol.strip().upper()
-    # TODO: redis.get(f"market:{symbol}:quote")
-    return f"symbol={symbol}\nprice=stub\nsource=placeholder"
+    return _quote_payload(symbol)
 
 
 # ── PROMPTS ──  user-controlled reusable templates.
 # Prompt = user intent (e.g. “What’s happening with AAPL?”).
 # Prompt text must not name URIs or tools — that’s app/agent wiring, not the
 # template’s job. Host loads market://AAPL/quote (resource) into context separately.
-
-@server.prompt()
-def review_code(code: str) -> str:
-    """A prompt template the user can invoke (e.g. as a slash-command)."""
-    return f"Please review the following code and suggest improvements:\n\n{code}"
-
 
 @server.prompt()
 def get_market_data(symbol: str) -> str:
