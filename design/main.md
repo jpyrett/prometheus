@@ -16,14 +16,26 @@ flowchart RL
     server --- archClient[Client]
     server --- archServer[Server]
     archClient ---|stdio| archServer
+    archServer --- mcpTools[Tools]
+    archServer --- mcpResources[Resources]
+    mcpResources --- quoteRes(("quote"))
+    quoteRes --- quoteUri["market://{symbol}/quote"]
+    mcpResources --- redisTodo["Redis (TODO)"]
+    archServer --- mcpPrompts[Prompts]
+    style redisTodo fill:#ffeb3b,stroke:#f9a825,color:#000
     main --- Tests
     Tests --- testMcp(("fastmcp_<br/>tools.py"))
+    Tests --- testQuotes(("fastmcp<br/>_quotes<br/>.py"))
     testMcp -.-> server
+    testQuotes -.-> quoteRes
+    testQuotes -.-> redisTodo
     Course --- main
     classDef tightCircle font-size:11px
     classDef tinyCircle font-size:10px
+    classDef microCircle font-size:8px
     class server tightCircle
-    class testMcp tinyCircle
+    class testMcp,quoteRes tinyCircle
+    class testQuotes microCircle
     llm["LLM Setup"] --- Course
     reasoning[Reasoning] --- llm
     cot["Chain-of-Thought CoT prompting"] --- reasoning
@@ -42,4 +54,6 @@ flowchart RL
     Current --- sources
     filings["Press Releases/Filings"] --- sources
     Financials --- sources
+    Caching --- main
+    Redis --- Caching
 ```

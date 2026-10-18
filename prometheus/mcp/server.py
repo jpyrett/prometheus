@@ -59,8 +59,31 @@ def verify_add_initials_between(expression: str, initials: str | None = None) ->
     expected = f"{a}_{init}_{b}" if init else f"{a}_{b}"
     return expected == claimed
 
+# ── RESOURCES ──  application-controlled, read-only context addressed by URI.
+# resources = “look this up”, tools = “do something”
+
+@server.resource("config://server")
+def server_config() -> str:
+    """A STATIC resource — always the same URI, returns fixed text."""
+    return "name=prometheus\nversion=1.0\nmax_results=10"
+
+@server.resource("note://{topic}")
+def note(topic: str) -> str:
+    """A resource TEMPLATE — the {topic} segment is filled in per request."""
+    return f"This is the note about '{topic}'."
 
 
+@server.resource("market://{symbol}/quote")
+def quote(symbol: str) -> str:
+    """Read-only quote for a market symbol (e.g. market://AAPL/quote).
+
+    Later: fetch from Redis. For now returns a stub payload.
+    """
+    symbol = symbol.strip().upper()
+    # TODO: redis.get(f"market:{symbol}:quote")
+    return f"symbol={symbol}\nprice=stub\nsource=placeholder"
+
+print("✓ Registered resources: config://server  and  note://{topic} and market://{symbol}/quote")
 
 if __name__ == "__main__":
     server.run()  # stdio — client/host starts this process
