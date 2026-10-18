@@ -10,7 +10,8 @@ market://{symbol}/quote resource. Server emits no cache hints (cache_ttl=None).
 
 import logging
 
-from fastmcp import FastMCP
+from pydantic import BaseModel
+from fastmcp import FastMCP, Context
 
 # Quiet noisy SDK / framework logs.
 logging.getLogger("mcp").setLevel(logging.WARNING)
@@ -20,6 +21,12 @@ logging.getLogger("fastmcp").setLevel(logging.WARNING)
 server = FastMCP("prometheus", cache_ttl=None)
 
 # ── TOOLS ──  model-controlled actions; the type hints become the input schema.
+#
+# Notebook Part 5 mapping (what we port vs skip):
+#   elicitation (pick_number) — YES: HITL still current; see pick_number below
+#   sampling (summarize via create_message) — NO: deprecated; summarize in LangGraph/LLM host
+#   roots (list_workspace via list_roots) — NO: deprecated; use tool args / resource URIs / config
+
 @server.tool()
 def add_initials_between(a: str, b: str, initials: str | None = None) -> str:
     """Insert trimmed initials between two trimmed strings, joined with underscores.
@@ -67,7 +74,28 @@ def verify_add_initials_between(expression: str, initials: str | None = None) ->
     expected = f"{a}_{init}_{b}" if init else f"{a}_{b}"
     return expected == claimed
 
+
+class NumberChoice(BaseModel):
+    favorite_number: int
+
+
+@server.tool()
+async def pick_number(ctx: Context) -> str:
+    """ELICITATION demo (notebook Part 5): ask the user mid-tool, then use the answer.
+
+    Host must supply elicitation_handler (see prometheus.mcp.client).
+    """
+    result = await ctx.elicit(
+        message="What's your favorite number?",
+        response_type=NumberChoice,
+    )
+    if result.action == "accept":
+        return f"The user chose {result.data.favorite_number}."
+    return f"The user did not answer (action={result.action})."
+
+
 # ── RESOURCES ──  application-controlled, read-only context addressed by URI.
+# Prefer resource URIs / tool args / config over deprecated client "roots".
 # Resource = where the host loads data into context (e.g. market://AAPL/quote).
 # tools = “do something”; resources = “look this up” — not user-intent templates.
 

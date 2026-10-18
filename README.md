@@ -80,7 +80,7 @@ FastMCP tools: `tests/fastmcp_tools.py` (imports `prometheus.mcp.server`).
 
 Prefer `connect_client()` from **`prometheus/mcp/client.py`** (host-side; `server.py` does not import it):
 
-- **`mode="legacy"`** — Client setting (not `server.run()`). Needed for sampling / roots / elicitation; use with in-process *or* stdio hosts.
+- **`mode="legacy"`** — Client setting (not `server.run()`). Needed for elicitation (HITL); use with in-process *or* stdio hosts. Sampling and roots are deprecated — prefer host LLMs and tool args / resource URIs / config.
 - **`cache=False`** — **Never set `cache=True` or will break the FastMCP `market://{symbol}/quote` resource.**
 - Server: `cache_ttl=None` in `server.py`. Stdio: `python prometheus/mcp/server.py`; host connects via `client.py`.
 

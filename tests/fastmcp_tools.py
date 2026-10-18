@@ -64,6 +64,7 @@ async def test_list_tools_includes_initials_tools(mcp_client):
     names = {t.name for t in tools}
     assert "add_initials_between" in names
     assert "verify_add_initials_between" in names
+    assert "pick_number" in names
 
 
 async def test_add_initials_between_via_mcp(mcp_client):
@@ -91,6 +92,12 @@ async def test_verify_add_initials_between_via_mcp(mcp_client):
         },
     )
     assert result.data is True
+
+
+async def test_pick_number_elicitation_via_mcp(mcp_client):
+    """Elicitation tool; client auto-answers favorite_number=24."""
+    result = await mcp_client.call_tool("pick_number", {})
+    assert result.data == "The user chose 24."
 
 
 def test_forced_failure_known_demo():
