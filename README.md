@@ -30,6 +30,9 @@ capstone/
 │   └── processed/          # Cleaned data, vector indexes (local)
 ├── scripts/                # Thin shell/python runners you’ll add later
 ├── tests/                  # pytest (FastMCP tools + later app tests)
+├── main.py                 # App entry: LocalLLM + FastMCP smoke / HITL
+├── test_prometheus.sh      # Quick e2e shell runs (extend here; pytest stays in tests/)
+├── HowToRun.txt            # Copy-paste shell commands
 ├── pytest.ini              # asyncio_mode=auto for FastMCP Client tests
 ├── requirements.txt        # Curated runtime deps (reproducible install)
 ├── .env.example            # Safe template (committed)
@@ -37,6 +40,30 @@ capstone/
 ```
 
 Keep layers thin: put new code in the folder that matches its job. Prefer porting from `labs/` into one of these folders rather than growing notebook-only logic.
+
+## How to run
+
+See **[HowToRun.txt](HowToRun.txt)** for the full command list. Short version:
+
+```bash
+conda activate cmu
+pip install -r requirements.txt   # once / when deps change
+cp .env.example .env              # once; set LOCAL_MODEL / keys
+
+python main.py --skip-llm         # MCP only (fast)
+python main.py                    # elicit symbol → fetch_quote → LocalLLM
+python main.py --symbol TEST      # demo quote price 999.99; skip elicitation
+./test_prometheus.sh              # quick e2e (LLM + elicit); extend this script later
+
+pytest tests/fastmcp_tools.py tests/fastmcp_quotes.py -q -k 'not forced_failure'
+fastmcp inspect prometheus/mcp/server.py
+```
+
+Notes:
+
+- `LOCAL_MODEL` in `.env` (default `Qwen/Qwen3-4B`) loads via `prometheus.models.llm.LocalLLM`.
+- Leading `$` on symbols is fine (`$AAPL` → `AAPL`). Symbol `TEST` is a temporary hardcoded quote fixture.
+- Do not expect `python prometheus/mcp/server.py` to stay up alone — stdio MCP needs a client; `main.py` uses in-process `connect_client()`.
 
 ## Conda + reproducible deps
 
@@ -90,7 +117,8 @@ Prefer `connect_client()` from **`prometheus/mcp/client.py`** (host-side; `serve
 cp .env.example .env   # already created; edit .env with real keys
 ```
 
-Minimum to start LLM work: set `OPENROUTER_API_KEY` in `.env`.
+For local `main.py` runs: set `LOCAL_MODEL` in `.env` (see `.env.example`).  
+For later OpenRouter agents: set `OPENROUTER_API_KEY` in `.env`.
 
 ## Two “harnesses” (do not confuse them)
 
@@ -111,20 +139,25 @@ That routes Cursor’s agent/chat through OpenRouter. It is **not** the trading 
 
 ### 2) Prometheus application harness — running the bot
 
-This is what lives under `prometheus/application/harness/` once you start coding:
+**Today:** run `python main.py` (see [HowToRun.txt](HowToRun.txt)). That wires:
+
+- `prometheus/models/llm.py` — local HF CausalLM (`LOCAL_MODEL`)
+- `prometheus/application/host.py` — elicit → `fetch_quote` → prompt → LLM
+- `prometheus/mcp/` — FastMCP tools / resources / prompts (in-process Client)
+
+**Later** under `prometheus/application/harness/`:
 
 - Load `.env` (OpenRouter + data keys)
-- Start / connect to **local FastMCP** tools under `prometheus/mcp/`
-- Build / invoke the LangGraph (or LangChain) graph
-- Drive use cases: Case 1 ($N), Case 2 (trend phrases), Case 3 (“What’s Happening?”)
+- LangGraph / LangChain multi-agent desk
+- Use cases: Case 1 ($N), Case 2 (trend phrases), Case 3 (“What’s Happening?”)
 
 Suggested growth order (manual coding):
 
-1. `models/` — OpenRouter chat client from `.env`  
-2. `mcp/` + `tools/` — local FastMCP tools (reuse Lab 1.2 patterns)  
+1. `models/` — local LLM done; add OpenRouter client from `.env`  
+2. `mcp/` + `tools/` — FastMCP quote path in place; Redis next  
 3. `prompts/` + one agent in `agents/`  
 4. `langgraph/` — wire agents into a graph  
-5. `application/harness/` — CLI or script entry that runs one use case end-to-end  
+5. `application/harness/` — richer CLI / multi-case entry  
 
 Later: `rag/`, `memory/`, `evals/`, paper-trading hooks.
 

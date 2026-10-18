@@ -1,0 +1,89 @@
+How to run Prometheus (Capstone)
+================================
+
+Prereqs
+-------
+  - Repo root:  .../CMU-AgenticAI/capstone
+  - Conda env:  cmu
+  - Copy env:   cp .env.example .env   (then edit keys / LOCAL_MODEL)
+
+
+1) Activate env + install deps
+------------------------------
+  conda activate cmu
+  pip install -r requirements.txt
+  # torch: install for YOUR machine (see comments in requirements.txt)
+
+
+2) Application smoke (LLM + FastMCP) — preferred e2e
+----------------------------------------------------
+  cd /path/to/capstone
+
+  # MCP only (no Hugging Face weights) — skips LocalLLM
+  python main.py --skip-llm
+
+  # Full run: elicit symbol (HITL), fetch_quote, prompt, LocalLLM briefing
+  python main.py
+
+  # Skip elicitation; use a fixed symbol
+  python main.py --symbol TEST
+  python main.py --symbol '$AAPL' --skip-llm
+
+  # Stronger / alternate local model (overrides .env LOCAL_MODEL)
+  python main.py --model Qwen/Qwen3-4B
+  python main.py --model Qwen/Qwen3-0.6B --skip-llm   # model flag ignored if --skip-llm
+
+  # Native thinking mode (Qwen3)
+  python main.py --symbol TEST --thinking
+
+
+  Demo tips
+  ---------
+  - At the elicitation prompt, enter TEST (or $TEST) for hardcoded price 999.99
+  - Leading $ is OK: $AAPL → AAPL
+  - LOCAL_MODEL is set in .env (default Qwen/Qwen3-4B)
+
+
+3) Quick e2e shell script (no need to change tests/ first)
+----------------------------------------------------------
+  conda activate cmu
+  ./test_prometheus.sh
+  # Interactive: LocalLLM + HITL symbol elicitation (+ fastmcp inspect)
+  # Same core path as:  python main.py
+  # Add more end-to-end scenarios in this script as the app grows.
+  # Formal unit/integration tests remain under tests/ (pytest).
+
+
+4) Pytest (FastMCP tools / quotes)
+----------------------------------
+  conda activate cmu
+  pytest tests/fastmcp_tools.py tests/fastmcp_quotes.py -q -k 'not forced_failure'
+
+  # Intentional red demo (ignore):
+  # pytest tests/fastmcp_tools.py -k forced_failure
+
+
+5) Inspect FastMCP server catalog
+---------------------------------
+  conda activate cmu
+  fastmcp inspect prometheus/mcp/server.py
+  fastmcp inspect prometheus/mcp/server.py --format fastmcp
+
+
+6) Stdio MCP server (only when a host spawns it)
+------------------------------------------------
+  # Prints banner then exits if you run alone — stdin needs an MCP client.
+  python -m prometheus.mcp.server
+  # or:  python prometheus/mcp/server.py
+
+  For app runs, prefer main.py (in-process Client via connect_client).
+
+
+7) Useful env knobs (.env)
+--------------------------
+  LOCAL_MODEL=Qwen/Qwen3-4B     # HF CausalLM for main.py
+  # SMOKE_SYMBOL=TEST           # if set, main.py skips elicitation (same as --symbol)
+  OPENROUTER_API_KEY=...        # later LangGraph / OpenRouter agents
+
+
+See also: README.md  |  design/session_notes.md
