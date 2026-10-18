@@ -1,0 +1,6 @@
+TODOS
+=====
+
+- Test using FastMCP streaming input instead of stdio
+- hookup Redis for the fetch_quotes MCP resource
+- Add authentication to FastMCP using the notebook example

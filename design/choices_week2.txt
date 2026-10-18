@@ -1,1 +1,93 @@
 1) How to layout source code in this project
+   Done
+2) What version of FastMCp to use - went with v4  and code updated notebook
+
+ 3) How to zoom into mermaid
+ Install Markdown Mermaid Zoom (also on Open VSX for Cursor) — then use +/-, Alt+scroll, or fullscreen.
+ ext install EchEmLabs.markdown-mermaid-zoom
+
+ 4) Find a sample tool.   Came up with add_initials_between ()
+
+ 5) How to write a unit test, went  with pytest , new tests folder
+
+ 6. Reosurces are things that are looked up
+ **Start to design what Resources I need
+
+
+
+ 6a: 
+ resources = “look this up”, tools = “do something” 
+ Normal examples:
+
+Pattern	Example URIs	What it gives the model
+Config / settings
+config://server, config://trading
+Limits, env mode, feature flags
+Static docs
+docs://risk-policy, docs://trading-rules
+Policies, instructions, glossaries
+Templates
+note://{topic}, profile://{user_id}
+One definition, many addresses
+Market snapshots
+market://AAPL/quote, market://SPY/summary
+Latest price/summary (read-only)
+Filings / news
+filing://AAPL/latest-10k, news://AAPL/headlines
+Text the app chose to load
+Portfolio state
+portfolio://positions, portfolio://cash
+Current holdings (no trade)
+Local files
+file:///data/samples/demo.csv
+Files under allowed roots
+Schema / catalogs
+schema://trade-order, catalog://tickers
+Structured definitions
+
+7.  Resources return values. "What to look up" 
+  Created quote:  
+  Outer value:  market://{symbol}/quote
+reflecting the Note/Topic  two level split  taxonomy
+
+
+
+8.  How to cache/fetch.  Call a langchanin ? no
+Layer	Role
+LangGraph / LangChain
+Agent loop: reason, choose tools, stitch steps
+
+MCP tools / resources
+Capability boundary: quotes, filings, portfolio, calc
+
+So LangGraph calls MCP (call_tool / read_resource).
+ The MCP handler usually talks to APIs, DB, files, or your memory/ — not another LLM chain.
+
+ When MCP → LangChain is fine
+
+Retrieval/RAG behind a resource or tool (embeddings + vector search)
+A heavy preprocessing pipeline you want hidden behind one tool name
+When to avoid it
+
+Resources — keep them cheap, deterministic reads (quotes, config). Don’t put an LLM chain in market://{symbol}/quote.
+Nested “agent calls tool that runs another agent” — hard to debug, slow, costly.
+
+Practical for Prometheus: LangGraph owns the desk workflow; MCP exposes market/portfolio/helpers. 
+If a step needs an LLM, put that in the graph node, not inside every resource fetch
+
+------
+Resource handler = Redis GET (or similar) by key derived from the URI (market:AAPL:quote, etc.), return the payload. Fast, read-only, no LLM in the path.
+
+LangGraph still sits above: it decides when to read_resource("market://AAPL/quote"); 
+Redis is just where the bytes live.
+ Tools stay for writes/actions (orders, updates that change Redis).
+
+ 9. Setup Cache layer - Redis - TODo later
+ 10. Turn off FastMCP resource caching.  Its only on the client
+ 11. Prompts are user-intent.  Not focused on how to call specific 
+ 12. Should split FastMCP  client mock into its own client.py file (did this)
+
+ Client capability 
+
+ 13.  Sampling not needed.  Deprecated: Prefer host/LangGraph → LLM APIs directly
+ 14.  Roots not needed. Prefer tool args / resource URIs / config
