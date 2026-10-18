@@ -92,3 +92,9 @@ async def test_verify_add_initials_between_via_mcp(mcp_client):
         },
     )
     assert result.data is True
+
+
+def test_forced_failure_known_demo():
+    """Intentionally fails so you can see a red pytest result."""
+    print("KNOWN FAILURE: test_forced_failure_known_demo is a deliberate demo fail — ignore this one.")
+    assert False, "KNOWN FAILURE: deliberate forced_failure demo (not a real regression)"

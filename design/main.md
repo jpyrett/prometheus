@@ -16,9 +16,14 @@ flowchart RL
     server --- archClient[Client]
     server --- archServer[Server]
     archClient ---|stdio| archServer
+    main --- Tests
+    Tests --- testMcp(("fastmcp_<br/>tools.py"))
+    testMcp -.-> server
     Course --- main
     classDef tightCircle font-size:11px
+    classDef tinyCircle font-size:10px
     class server tightCircle
+    class testMcp tinyCircle
     llm["LLM Setup"] --- Course
     reasoning[Reasoning] --- llm
     cot["Chain-of-Thought CoT prompting"] --- reasoning
