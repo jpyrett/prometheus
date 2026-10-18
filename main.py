@@ -83,7 +83,7 @@ async def _run(args: argparse.Namespace) -> int:
     print(f"prompt: {report.prompt_name} ({len(report.prompt_text)} chars)")
     print(f"quote:  {report.quote_text!r}")
     if report.llm_answer is not None:
-        print(f"llm:    {report.llm_answer[:200]}{'…' if len(report.llm_answer) > 200 else ''}")
+        print(f"llm:\n{report.llm_answer}")
     else:
         print("llm:    (skipped)")
     return 0

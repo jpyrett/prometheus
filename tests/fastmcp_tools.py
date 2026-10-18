@@ -18,6 +18,19 @@ def test_fetch_quote_normalizes_symbol():
     assert fetch_quote("  spy  ") == _quote_payload("SPY")
 
 
+def test_fetch_quote_strips_leading_dollar():
+    assert fetch_quote("$AAPL") == "symbol=AAPL\nprice=stub\nsource=placeholder"
+    assert fetch_quote("  $msft  ") == "symbol=MSFT\nprice=stub\nsource=placeholder"
+    assert fetch_quote("$TEST") == "symbol=TEST\nprice=999.99\nsource=placeholder"
+
+
+def test_fetch_quote_test_symbol_hardcoded_price():
+    """Intentional DEMO fixture — remove with Redis. Accepts test / TEST."""
+    expected = "symbol=TEST\nprice=999.99\nsource=placeholder"
+    assert fetch_quote("test") == expected
+    assert fetch_quote("TEST") == expected
+
+
 def test_fetch_quote_rejects_blank():
     with pytest.raises(ValueError):
         fetch_quote("   ")
@@ -32,6 +45,12 @@ def test_verify_fetch_quote_true():
 def test_verify_fetch_quote_true_lowercase_symbol():
     payload = fetch_quote("msft").replace("\n", "\\n")
     expr = f'fetch_quote("msft") = "{payload}"'
+    assert verify_fetch_quote(expr) is True
+
+
+def test_verify_fetch_quote_true_with_dollar():
+    payload = fetch_quote("$AAPL").replace("\n", "\\n")
+    expr = f'fetch_quote("$AAPL") = "{payload}"'
     assert verify_fetch_quote(expr) is True
 
 

@@ -34,11 +34,30 @@ server = FastMCP("prometheus", cache_ttl=None)
 # host-loaded context. Both share _quote_payload (Redis later).
 
 
-def _quote_payload(symbol: str) -> str:
-    """Normalize symbol and return quote text (stub now; Redis later)."""
-    symbol = symbol.strip().upper()
+def _normalize_symbol(symbol: str) -> str:
+    """Trim, drop a leading ``$`` (e.g. ``$AAPL``), and uppercase."""
+    symbol = symbol.strip()
+    if symbol.startswith("$"):
+        symbol = symbol[1:].strip()
+    symbol = symbol.upper()
     if not symbol:
         raise ValueError("symbol must be non-empty")
+    return symbol
+
+
+def _quote_payload(symbol: str) -> str:
+    """Normalize symbol and return quote text (stub now; Redis later).
+
+    Leading ``$`` is allowed (``$AAPL`` → ``AAPL``). Intentional demo fixture:
+    symbol ``TEST`` returns a hardcoded price of ``999.99`` so LocalLLM smoke
+    runs have a real-looking number (``price=stub`` makes the model claim “no
+    quote data”). TODO: remove this TEST special-case once Redis / live quotes
+    are wired.
+    """
+    symbol = _normalize_symbol(symbol)
+    # TODO: remove TEST hardcode when Redis / live quotes land
+    if symbol == "TEST":
+        return f"symbol={symbol}\nprice=999.99\nsource=placeholder"
     # TODO: redis.get(f"market:{symbol}:quote")
     return f"symbol={symbol}\nprice=stub\nsource=placeholder"
 
@@ -59,11 +78,12 @@ def verify_fetch_quote(expression: str) -> bool:
 
     Expected expression (quoted symbol + quoted payload; use \\n for newlines):
         fetch_quote("AAPL") = "symbol=AAPL\\nprice=stub\\nsource=placeholder"
+        fetch_quote("$AAPL") = "symbol=AAPL\\nprice=stub\\nsource=placeholder"
     """
     import re
 
     expr_m = re.match(
-        r"""\s*fetch_quote\s*\(\s*(["'])([A-Za-z0-9.\-]+)\1\s*\)\s*=\s*(["'])(.*?)\3\s*$""",
+        r"""\s*fetch_quote\s*\(\s*(["'])(\$?[A-Za-z0-9.\-]+)\1\s*\)\s*=\s*(["'])(.*?)\3\s*$""",
         expression,
         flags=re.DOTALL,
     )
@@ -94,7 +114,7 @@ async def enter_symbol(ctx: Context) -> str:
         response_type=SymbolChoice,
     )
     if result.action == "accept":
-        return result.data.symbol.strip().upper()
+        return _normalize_symbol(result.data.symbol)
     raise RuntimeError(f"enter_symbol elicitation not accepted (action={result.action})")
 
 
@@ -173,7 +193,7 @@ def get_market_data(symbol: str) -> str:
     Returns briefing task text only. Does not name URIs or tools — app/agent
     wiring loads market://{symbol}/quote into context via the quote resource.
     """
-    symbol = symbol.strip().upper()
+    symbol = _normalize_symbol(symbol)
     return (
         f"What's happening with {symbol}?\n\n"
         "Give a concise trading-desk briefing for this symbol: recent price "

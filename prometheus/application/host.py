@@ -10,6 +10,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from prometheus.mcp.client import connect_client
+from prometheus.mcp.server import _normalize_symbol
 from prometheus.models.llm import LocalLLM
 
 
@@ -96,11 +97,11 @@ class PrometheusHost:
             if elicit_symbol or not symbol:
                 print("\nCalling enter_symbol (MCP elicitation) ...")
                 entered = (await client.call_tool("enter_symbol", {})).data
-                symbol = str(entered).strip().upper()
+                symbol = _normalize_symbol(str(entered))
                 elicited = True
                 print(f"enter_symbol -> {symbol!r}")
             else:
-                symbol = symbol.strip().upper()
+                symbol = _normalize_symbol(symbol)
                 print(f"\nUsing --symbol {symbol!r} (elicitation skipped)")
 
             quote_uri = f"market://{symbol}/quote"
