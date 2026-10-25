@@ -8,6 +8,7 @@ References we follow:
 - [Build a semantic search engine with LangChain](https://docs.langchain.com/oss/python/langchain/knowledge-base): loading, chunking, Chroma and retrievers (Parts 3 to 5).
 - [Retrieval](https://docs.langchain.com/oss/python/langchain/retrieval): the 2-Step, Agentic and Hybrid RAG architectures (section 0.6).
 - Your class slide "Retrieval-augmented generation": the shape of the pipeline we build (section 0.3).
+- Your Lab 3.1 and Lab 3.2 notebooks, in this folder: chunks that keep their title (Part 4) and MMR (Part 5).
 
 ## Roadmap
 
@@ -17,8 +18,8 @@ References we follow:
 | 1 | Install the stack and prove it works | done |
 | 2 | Where the code lives | done |
 | 3 | Look at the data, then load it into LangChain `Document`s | done |
-| 4 | Chunk, embed and store: ingest AAPL into Chroma | **next** |
-| 5 | Retrieve by hand on real data: search vectors, fetch text by ID, filters, scores, "no supporting text" | |
+| 4 | Chunk, encode and store: ingest the news into Chroma | done |
+| 5 | Retrieve by hand on real data: search vectors, fetch text by ID, filters, scores, "no supporting text" | **next** |
 | 6 | Tools and the chat model: `retrieve_news` and the DataAgent tools as plain functions, numbered sources, the citation check | |
 | 7 | The Data Clerk agent: a LangGraph where the LLM decides whether to retrieve or fetch, and the answer cites its sources | |
 | 8 | FastMCP: serve the same tool functions; tests; the evidence for the week 3 submission (with and without retrieval) | |
@@ -377,7 +378,7 @@ prometheus/
 labs/module3_rag/          this guide and check_install.py
 ```
 
-Today `agents/data_clerk/` (the toolbox and its two test scripts) and `rag/` with `config.py` and `loaders.py` exist. Each remaining file appears in the part that needs it: `store.py` and `ingest.py` in Part 4, `retriever.py` in Part 5, `citations.py`, `tools/data_clerk.py` and `models/chat.py` in Part 6, `agent.py` and `prompts/` in Part 7, `mcp/server.py` in Part 8.
+Today `agents/data_clerk/` (the toolbox and its two test scripts) and `rag/` with `config.py`, `loaders.py`, `store.py` and `ingest.py` exist. Each remaining file appears in the part that needs it: `retriever.py` in Part 5, `citations.py`, `tools/data_clerk.py` and `models/chat.py` in Part 6, `agent.py` and `prompts/` in Part 7, `mcp/server.py` in Part 8.
 
 The rules behind it (full reasoning in entries 12 to 14):
 
@@ -424,7 +425,7 @@ Four things to notice:
 - **Most Polygon articles are long, and Finnhub ones are short.** That is why NVDA (mostly Polygon) has a median of 1,218 characters and AAPL (mostly Finnhub) only 255.
 - **An article can sit in more than one symbol file, and `tickers` means two different things.** 7 of the 288 appear in two files (for example AAPL and NVDA). For **Finnhub** articles `tickers` is only the symbol that was asked for: all 148 are exactly `[the file's symbol]`, so the same article is `["AAPL"]` in one file and `["NVDA"]` in the other (3 of the 7 duplicates). For **Polygon** articles it is the article's real list of companies (122 of 140 name more than one) and it is identical in both files. A file's own symbol is always in the list (288 of 288), so we do not store it separately. We keep one row per article and **merge the two lists when an article is stored a second time** (Part 4), so a filter on any ticker finds it. The CoreWeave article in `news/NVDA.txt` has `tickers: CRWV, MSFT, META, NVDA`, so a filter on any of the four finds it.
 - **There are repeated headlines.** NVDA has 7. Keep an eye on them in Part 5 (MMR, see below).
-- **The embedder cannot read all of it.** See the Part 4 preview.
+- **The embedder cannot read all of it.** See section 4.1.
 
 ### 3.2 What one record becomes
 
@@ -607,7 +608,11 @@ Chunk, encode and store: `rag/store.py` (the embedding model and the Chroma coll
 
 ---
 
-## Part 4 preview: chunk, embed and store
+## Part 4: Chunk, encode and store (done)
+
+The rest of stage 1 of the slide: **Chunk text**, **Encode chunks**, **Store vectors + text**. You can run all of it yourself (sections 4.4 and 4.5).
+
+### 4.1 Why chunk
 
 This is where the knowledge-base tutorial applies. It uses `RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200, add_start_index=True)` and says why: "a page is often too coarse for retrieval. Split pages further so relevant passages are not diluted by surrounding text." For us there is a second, harder reason. Our embedding model reads at most 256 tokens (about 1,178 characters of this news at 4.6 characters per token) and silently ignores the rest:
 
@@ -629,14 +634,178 @@ How to read it:
 - The tutorial's defaults are a good start. The 101 over-limit articles become 489 chunks and only one is still too long (263 tokens against 256).
 - 800 / 100 leaves nothing over the limit, even after the headline is added back, for about 14% more chunks.
 - Overlap costs almost nothing here (1.00x to 1.03x the original text). News text breaks at paragraph boundaries first, and overlap only acts inside a long paragraph. It will matter for 10-K sections, which is what the tutorial's own example is (107 pages became 516 chunks).
-- A chunk that does not start its article loses the headline, so "negative | Stock declined 11.91% due to..." would no longer say what it is about. We plan to prefix such chunks with the headline.
+- A chunk that does not start its article loses the headline, so "negative | Stock declined 11.91% due to..." would no longer say what it is about. So we put the headline back in front of such chunks.
 
-Decisions for Part 4: the size and overlap, the headline prefix, `add_start_index=True` (it records each chunk's character offset, which helps trace a chunk back), the embedding model and its device as a setting, the collection name with the model name inside, whether re-ingestion skips chunks already stored or overwrites everything, and how an article that is stored a second time merges its `tickers` with the stored list (the Part 3 finding, entry 16).
+### 4.2 The decisions we made
+
+| # | Question | Decision | Why |
+|---|---|---|---|
+| 1 | Chunk size and overlap | `chunk_size=800`, `chunk_overlap=100`, in characters | the table above: no chunk is over the embedder's limit, even with the headline put back. The tutorial's 1000 / 200 leaves one over; 800 / 100 costs about 14% more chunks |
+| 2 | Characters or tokens? | characters, plus a check that counts the chunks over the limit | simple, and the same as the tutorial and the week 3 plan. The check (`over_limit`, 0 for all the news) means a future corpus with more numbers per character, such as filings, cannot be cut off silently |
+| 3 | The headline on later chunks | put back in front of any chunk that does not start with it | so an insight line still says which article it is about (your lab keeps the title on every chunk too) |
+| 4 | Chunk id and metadata | id `<article id>#<n>`; the article's metadata plus `start_index`, `chunk` and `chunks` | fixed ids make a re-run overwrite instead of duplicate; `start_index` traces a chunk back to its place in the article |
+| 5 | Embedding model and device | `all-MiniLM-L6-v2`, on the CPU by default (`EMBEDDING_DEVICE=cuda` for the GPU) | the scores are the same on both (Part 1), the CPU needs no CUDA start-up and leaves the GPU free for a local LLM. NVDA's 386 new chunks took 2.6 seconds on the CPU, lookups included |
+| 6 | Collection name | `news-<model name>` | the model is in the name, so vectors from two models never share a collection. Another model means a new collection and a new ingest |
+| 7 | Running it again | reconcile with what is stored: skip unchanged chunks, rewrite changed ones, delete chunks that no longer exist, merge `tickers` | ingestion is safe to repeat, never encodes the same text twice, and the Finnhub finding from Part 3 is handled |
+
+The settings are `EMBEDDING_MODEL`, `EMBEDDING_DEVICE` and `VECTOR_STORE_PATH`, in `config.py` and `.env.example`.
+
+Your Lab 3.1 notebook agrees with the plan on two points: it encodes with `sentence-transformers/all-MiniLM-L6-v2` on the CPU, and its `chunk_document` keeps the original title on every chunk. (It chunks by 100 words; we chunk by characters, because the week 3 submission found 100 words too small for filings.) Its retrieval returns the top 5 by cosine similarity, the same default as the week 3 table.
 
 Two comparisons with the tutorial's Chroma snippet:
 
 - Its `Chroma(collection_name=..., embedding_function=..., persist_directory=...)` is the short form. Ours passes a `PersistentClient` so telemetry can be switched off, and sets the cosine metric at creation (entry 10).
 - Its HuggingFace example uses `all-mpnet-base-v2`, a larger model. Swapping the model is a one-line change, and our corpus is tiny. We can index with two models into two collections and compare them on the same queries. That settles the week 3 submission's "confirm the embedder on real chunks" item with evidence.
+
+### 4.3 The code
+
+**`prometheus/rag/store.py`** is the only file that names the embedding model class or the vector database:
+
+| Piece | Job |
+|---|---|
+| `get_embeddings()` | the MiniLM model from the settings, loaded once per process (it takes a few seconds) |
+| `collection_name()` | `news-<model>`, with anything Chroma does not allow (the `/`) turned into `-` |
+| `get_vector_store()` | the Chroma collection: a folder on disk, telemetry off, cosine fixed at creation |
+| `reset_collection()`, `count_chunks()` | delete the collection to rebuild it, and count what is stored |
+| `count_too_long(texts)` | how many texts the embedder would cut off (the one place that touches LangChain's inner model) |
+| `python -m prometheus.rag.store` | the viewer: what is stored, how big, and a few sample chunks |
+
+**`prometheus/rag/ingest.py`** does the work in four steps:
+
+1. `to_chunks` cuts each article with `RecursiveCharacterTextSplitter` (800 / 100, `add_start_index=True`), gives each chunk the id `<article id>#<n>`, and puts the headline back in front of a chunk that does not start with it.
+2. It looks up what the store already holds for these articles, a hundred articles per lookup: `store.get(where={"article_id": {"$in": [...]}})`.
+3. For each article it compares the new chunks with the stored ones. A chunk with the same id, text and metadata is **unchanged** and skipped. A new or different chunk is written. A stored chunk that the article no longer produces is **deleted**. The tickers are the union of the stored list and the new one.
+4. `store.add_documents(...)` encodes the chunks to write and stores them with their text and metadata. The ids are fixed, so it overwrites (an upsert) instead of duplicating.
+
+The heart of step 3:
+
+```python
+        for chunk in new_chunks:
+            chunk.metadata["tickers"] = tickers  # the merged list
+            if chunk.id not in old:
+                stats["added"] += 1
+                to_write.append(chunk)
+            elif old[chunk.id] == (chunk.page_content, chunk.metadata):
+                stats["unchanged"] += 1  # same text, same metadata: do nothing
+            else:
+                stats["updated"] += 1
+                to_write.append(chunk)
+```
+
+`ingest_documents(docs, store)` takes the store as an argument, so the tests hand it a store with a fake embedder: fast, and no model needed. Only `ingest_symbol` and the command line use the real one.
+
+### 4.4 Run it
+
+```bash
+python -m prometheus.rag.ingest AAPL      # build the index from news/AAPL.txt
+python -m prometheus.rag.ingest AAPL      # again: nothing changes
+python -m prometheus.rag.ingest --all     # every file in news/
+python -m prometheus.rag.store            # look at what is stored
+```
+
+Real output:
+
+```text
+$ python -m prometheus.rag.ingest AAPL
+AAPL: 74 articles -> 110 chunks | added 110, updated 0, unchanged 0, deleted 0 | chunks over the embedder's limit: 0 | 4.4 s
+the collection now holds 110 chunks
+
+$ python -m prometheus.rag.ingest AAPL
+AAPL: 74 articles -> 110 chunks | added 0, updated 0, unchanged 110, deleted 0 | chunks over the embedder's limit: 0 | 3.1 s
+
+$ python -m prometheus.rag.ingest --all
+AAPL: 74 articles -> 110 chunks | added 0, updated 0, unchanged 110, deleted 0 | ...
+META: 20 articles -> 22 chunks | added 22, updated 0, unchanged 0, deleted 0 | ...
+NVDA: 181 articles -> 405 chunks | added 386, updated 3, unchanged 16, deleted 0 | ...
+TSLA: 13 articles -> 20 chunks | added 20, updated 0, unchanged 0, deleted 0 | ...
+the collection now holds 538 chunks
+```
+
+Look at the NVDA line. NVDA shares articles with AAPL and META. The **3 updated** chunks are the Finnhub duplicates, whose `tickers` were merged (`["AAPL"]` and `["NVDA"]` became `["AAPL", "NVDA"]`). The **16 unchanged** chunks are the four Polygon duplicates, which were identical. And 538 is 557 (the 800 / 100 count in section 4.1, which counts the duplicates twice) minus the 19 chunks of those 7 duplicate articles. A second `--all` changes nothing at all. The second AAPL run takes 3 seconds although it encodes nothing: that is the time to load the model.
+
+The index is in `data/processed/vectorstore` (1.4 MB for AAPL alone), and git ignores it. It is derived data, so `--rebuild` deletes the collection and ingests again.
+
+The viewer:
+
+```text
+$ python -m prometheus.rag.store
+folder     : .../data/processed/vectorstore
+collection : news-sentence-transformers-all-MiniLM-L6-v2
+model      : sentence-transformers/all-MiniLM-L6-v2 on cpu, 384 numbers per vector, reads at most 256 tokens
+stored     : 538 chunks of 281 articles | chunks per article: 1 chunk x 150, 2 chunks x 44, 3 chunks x 58, 4 chunks x 21, 5 chunks x 6, 6 chunks x 2
+text length: median 530, longest 963 characters | over the embedder's limit: 0 of 538
+tickers    : NVDA 408, AAPL 155, GOOG 140, GOOGL 140, GOOGM 140, GOOGN 140, MSFT 113, META 96  (chunks per ticker)
+
+--- a later chunk (the headline is put back in front) ---
+id: polygon:9f6e9edaa696ae2fb1a8cf3c77c8ad933844036f7754bf764559759e22145571#1  |  chunk 2 of 2  |  tickers: AAPL
+  Apple's Market Value Grew From $350 Billion to $5 Trillion During Tim Cook's 15 Years as CEO. ...
+
+  AAPL | positive | Apple is outperforming the broader market with 27% YTD gains versus ...
+
+--- a chunk of an article with several tickers ---
+id: finnhub:143134391#0  |  chunk 1 of 1  |  tickers: AAPL, NVDA
+  Can Apple Top Nvidia? iPhone Duo and Nov. 2 Earnings Hold the Key
+  ...
+```
+
+**A first taste of searching** (Part 5 does it properly). Three questions asked of the real index, the best three chunks each, with the relevance score:
+
+```text
+query: 'new folding smartphone sales'
+   0.66  Apple’s $1,999 foldable phone is set to hit stores Friday, are you buyin  [AAPL]  chunk 1/1
+   0.66  Apple’s foldable iPhone has a $2,000 app problem                          [AAPL]  chunk 1/1
+   0.59  Apple’s iPhone Duo shows encouraging early demand signals, with third-pa  [AAPL]  chunk 1/1
+
+query: 'AI memory shortage'
+   0.60  Memory Stocks Are Plummetting. Jensen Huang Says the Bears Have It Wrong  [MU, SKHY, NVDA]  chunk 1/3
+   0.53  Tesla and Nvidia just found another AI bottleneck                         [NVDA]  chunk 1/1
+   0.50  Memory Stocks Are Plummetting. Jensen Huang Says the Bears Have It Wrong  [MU, SKHY, NVDA]  chunk 3/3
+
+query: 'California billionaire tax and Zuckerberg'
+   0.81  Could California's billionaire tax hit Mark Zuckerberg?                   [META]  chunk 1/1
+   0.79  Mark Zuckerberg makes deal with Meta to help him pay California billiona  [META]  chunk 1/1
+   0.75  Zuckerberg Says He May Leave California Over a 5% Billionaire Tax         [META]  chunk 1/1
+```
+
+Two things to see. "AI memory shortage" is your Case 2 phrase, and the best article carries `MU` and `SKHY` (Micron and SK Hynix) in its `tickers`. It was fetched under NVDA, yet its ticker list names the memory companies: that is the "which companies?" answer Case 2 asks for. And the same article appears twice in the top three (its chunks 1 and 3). That redundancy is what your Lab 3.2 on MMR is about, so Part 5 has to decide how to handle it.
+
+### 4.5 Tests
+
+```bash
+pytest tests/test_rag_ingest.py -q
+```
+
+```text
+.......................                                                  [100%]
+23 passed in 5.3s
+```
+
+Most tests use a fake embedder, because the bookkeeping does not depend on what the vectors mean:
+
+| Group | What it checks |
+|---|---|
+| Chunking | one chunk for a short article; for a long one, every chunk starts with the headline exactly once, the ids and numbers are right, and no chunk is longer than designed; the documents you pass in are not changed |
+| Running again | the same article twice changes nothing; a changed article overwrites its chunks and deletes the ones that vanish; another article is left alone |
+| The same article in two files | the second copy's tickers are merged into every chunk, running either copy again changes nothing, the article is found under each of its tickers with `$contains`, and the same article twice in one call is stored once |
+| The command line | ingests a symbol and reports, `--all`, `--rebuild`, and problems are reported without a traceback |
+| The real model (three tests, skipped when the model is not available) | the fixture's chunks are found by meaning (a question with no word in common finds the foldable iPhone; the debt question finds CoreWeave; a `tickers` filter returns only CoreWeave), every real news chunk fits the embedder's limit, and the real entry points work end to end |
+
+As in Part 3, we broke the code on purpose to be sure the tests can fail. Nine breaks across `ingest.py` and `store.py`: never skip unchanged chunks, don't merge tickers, never delete stale chunks, don't put the headline back, chunk ids that collide, chunks more than twice as long as designed, telemetry on, Chroma's default metric instead of cosine, and no model name in the collection name. The tests caught all nine, and the originals were restored and compared byte for byte.
+
+### 4.6 What we found along the way
+
+- **The same article can fill two of the top three places.** Part 5 decides whether to group results by article or use MMR.
+- **A few articles contain raw HTML** (`Nvidia&#39;s`, in 3 of 288 articles, all from Finnhub). It does little harm to search, and decoding it would break the rule that the text is exactly what the DataAgent wrote, so we left it.
+- **Chroma prints a harmless warning in the tests** (`DeprecationWarning: legacy embedding function config`) when LangChain reads the collection's settings to compute relevance scores. It does not affect results, and Python hides it outside pytest.
+- **One private attribute.** Counting tokens needs LangChain's inner model (`HuggingFaceEmbeddings._client`). Only `store.count_too_long` touches it, and a test fails if a LangChain upgrade removes it.
+
+The decisions are recorded in design choices entry 17.
+
+### Next: Part 5
+
+Retrieve: `rag/retriever.py`. Search with filters (`tickers` and a date window), the score and "no supporting text", what to do about the same article appearing twice, and whether MMR helps on real queries. By hand, before any LLM is involved.
+
+---
 
 ## Part 5 preview: retrieve
 
@@ -646,7 +815,11 @@ The tutorial lists three search types for `as_retriever(search_type=...)`:
 
 - `"similarity"`: the nearest chunks.
 - `"similarity_score_threshold"`: only chunks that score above a bar. This is the tool for the week 3 rule "if the filtered search finds nothing relevant, report 'no supporting text' and do not guess".
-- `"mmr"`: maximum marginal relevance, which trades similarity for diversity. We only add it if real results show near-duplicate chunks (NVDA's repeated headlines are the suspect).
+- `"mmr"`: maximum marginal relevance, which trades similarity for diversity. We only add it if real results show near-duplicate chunks. Part 4's first taste did: for "AI memory shortage", two of the top three chunks came from the same article (NVDA's repeated headlines are the other suspect).
+
+Your Lab 3.2 gives a rule of thumb for MMR. Use it when the corpus is redundant, the question is broad and coverage matters. Skip it for narrow questions, small result sets and when latency is critical. It suggests two stages (fetch about 100 candidates, then pick 5 to 10 with MMR) and a lower lambda (0.3 to 0.5) for exploratory questions and a higher one (0.7 to 0.9) for specific ones. Prometheus meets the "use" list for Case 2, a broad question over redundant news (repeated headlines, and the same story from Finnhub and Polygon), and the "skip" list for "what happened to META today?".
+
+MMR works through our stack: `as_retriever(search_type="mmr", search_kwargs={"k": 5, "fetch_k": 20, "lambda_mult": 0.5})`, where `lambda_mult` is the lab's lambda (0 is most diverse, 1 is most relevant). On a toy corpus, at 0.7 and 0.5 a near-duplicate story stayed in the results, and at 0.3 and 0 a different story replaced it. So the setting matters, and we tune it on real queries. The lab's own LangChain snippet imports `langchain_community` and `RetrievalQA`, which are the pre-1.0 imports (entry 11). The idea carries over; those imports do not.
 
 Two cautions we already have evidence for:
 
@@ -705,4 +878,5 @@ The graph is the simple loop from section 0.6, with the DataAgent behind its too
 | 5 to 7 | 15 (RAG style: the class-slide pipeline, with the Data Clerk LLM deciding whether to retrieve, and citations) |
 | 6 and 8 | 14 (tools: plain functions, LangChain now, MCP next) |
 | 3 | 16 (loading the news files into Documents; the Finnhub `tickers` finding) |
-| 4 and later | added as we make them |
+| 4 | 17 (chunking, encoding and storing the news; safe re-runs) |
+| 5 and later | added as we make them |

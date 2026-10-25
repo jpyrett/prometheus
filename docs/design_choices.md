@@ -297,7 +297,7 @@ prometheus/
   langgraph/desk.py        later: wires the five agents into one graph (Account Manager -> Data Clerk -> ...)
 ```
 
-Today `agents/data_clerk/` (the toolbox and its test scripts) and `rag/` with `config.py` and `loaders.py` exist. The other files are created step by step in the guide.
+Today `agents/data_clerk/` (the toolbox and its test scripts) and `rag/` with `config.py`, `loaders.py`, `store.py` and `ingest.py` exist. The other files are created step by step in the guide.
 
 **Rules behind it.**
 1. **One folder per agent under `agents/`,** named after its role in the design: Data Clerk, Advisor, Critic, Account Manager, Trader (the README lists them). The Data Clerk and its toolbox share one folder (entry 13).
@@ -435,7 +435,7 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 - **Symbols are validated before they become a file name** (`news_file`): letters, digits, `.` and `-`, at most 10 characters, so `../../.env` is refused. Symbols will come from an LLM's tool call. The vendored DataAgent only strips and uppercases, so the tool wrapper (Part 6) must validate symbols too.
 - **Settings:** `NEWS_OUTPUT_DIR` (the DataAgent's own name) from the environment, then `.env`, then `news/` at the repo root. A relative path is resolved against the repo root.
 
-**Finding: Finnhub's `tickers` is only the symbol that was asked for.** For all 148 Finnhub articles `tickers` is exactly `[the file's symbol]`. For Polygon it is the article's real company list (122 of 140 name more than one). So the same Finnhub article read from AAPL.txt and from NVDA.txt has `["AAPL"]` and `["NVDA"]`. That is 3 of the 7 articles that sit in two files; the other 4 are Polygon articles and identical. One row per article by id alone would keep only the last list. **Part 4 rule: when an article is stored again, merge its `tickers` with the stored list (a union) and keep everything else.** A test checks the assumption the rule rests on: copies of an article differ only in `tickers`.
+**Finding: Finnhub's `tickers` is only the symbol that was asked for.** For all 148 Finnhub articles `tickers` is exactly `[the file's symbol]`. For Polygon it is the article's real company list (122 of 140 name more than one). So the same Finnhub article read from AAPL.txt and from NVDA.txt has `["AAPL"]` and `["NVDA"]`. That is 3 of the 7 articles that sit in two files; the other 4 are Polygon articles and identical. One row per article by id alone would keep only the last list. **Part 4 rule: when an article is stored again, merge its `tickers` with the stored list (a union) and keep everything else.** A test checks the assumption the rule rests on: copies of an article differ only in `tickers`. The rule is implemented in `ingest.py` (entry 17).
 
 **Options considered.**
 1. A `BaseLoader` subclass. Rejected: both LangChain guides use plain functions.
@@ -450,3 +450,33 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 **Tests.** `tests/test_rag_loaders.py`: 39 tests, passing with and without `PYTHONPATH`. `tests/fixtures/news_sample.txt` holds three real records copied verbatim. Five deliberate breaks of the loader were each caught by the tests.
 
 **Consequences.** *Pro:* the file-format contract is enforced and tested in one place, against real records and against every real file when present. *Con:* one bad record stops the whole file. Fix the file or re-fetch it.
+
+## 17. Chunking, encoding and storing the news (Part 4)
+
+**Date:** 2026-10-24
+
+**Decision.** `prometheus/rag/store.py` owns the embedding model and the Chroma collection. `prometheus/rag/ingest.py` chunks, encodes and stores the news, and is safe to run again. Both are written to entries 10, 15 and 16.
+
+- **Embedding model:** `sentence-transformers/all-MiniLM-L6-v2` through `HuggingFaceEmbeddings`, with `normalize_embeddings=True`. It runs on the **CPU by default** (`EMBEDDING_DEVICE=cuda` for the GPU). The scores are the same on both (Part 1), the CPU needs no CUDA start-up, and it leaves the GPU free for a local LLM. NVDA's 386 new chunks took 2.6 seconds on the CPU, lookups included. Settings: `EMBEDDING_MODEL`, `EMBEDDING_DEVICE`, `VECTOR_STORE_PATH` (in `config.py` and `.env.example`).
+- **Collection:** `news-<model name>`, for example `news-sentence-transformers-all-MiniLM-L6-v2`. The model is in the name so vectors from two models never meet. Another model means a new collection and a new ingest. Filings and press releases will get their own collections, because they chunk differently. The client is a `PersistentClient` with telemetry off and cosine distance fixed at creation (entry 10), set up in one place.
+- **Chunking:** `RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100, add_start_index=True)`, in characters. Measured on the 288 articles against the embedder's 256-token limit: the tutorial's 1000 / 200 leaves 1 chunk over (263 tokens) and 3 with the headline put back, while 800 / 100 leaves none. The price is about 14% more chunks (557 against 489, duplicates counted twice).
+- **Characters, not tokens, plus a check.** Characters are simple and match the tutorial and the week 3 plan. `ingest` counts the chunks the embedder would cut off (`over_limit`, 0 for all the news), so a corpus with more numbers per character, such as filings, cannot be truncated silently. Revisit with a token-based splitter if that check ever fires.
+- **The headline goes back in front of any chunk that does not start with it.** Without it a chunk like `CRWV | negative | Stock declined 11.91% ...` does not say which article it belongs to (Lab 3.1 keeps the title on every chunk for the same reason).
+- **Ids and metadata:** chunk id `<article id>#<n>`; the article's metadata (entry 16) plus `start_index`, `chunk` and `chunks`.
+- **Safe to run again.** For each article, `ingest` compares the new chunks with those stored. An unchanged chunk (same id, text and metadata) is skipped and not encoded again. A new or different chunk is upserted. A stored chunk that the article no longer produces is deleted. The `tickers` become the union of the stored list and the new one (the rule from entry 16, stored list first). Checked on the real files: a second `--all` changes nothing, and NVDA on top of AAPL and META gives 3 updated chunks (the Finnhub duplicates), 16 unchanged (the Polygon duplicates) and a total of 538 = 557 - 19.
+- **Rebuild:** `--rebuild` deletes the collection and ingests again. The index is derived data (entry 10).
+- **Tested without a model.** `ingest_documents(docs, store)` takes the store as an argument, so tests use a fake embedder. Three tests use the real model and skip themselves when it is not available.
+- **One private attribute.** Counting tokens needs LangChain's inner model (`HuggingFaceEmbeddings._client`, a `SentenceTransformer`). Only `store.count_too_long` touches it, and a test fails if an upgrade removes it.
+- **Left as they are on purpose:** raw HTML in 3 of 288 articles (`&#39;`; decoding would break "the text is what the DataAgent wrote"), and `keywords` (Part 5 tests adding them to the text).
+
+**Result on the real files.** AAPL 74 articles to 110 chunks, META 20 to 22, NVDA 181 to 405, TSLA 13 to 20. In total 538 chunks of 281 articles; chunks per article: 1 x 150, 2 x 44, 3 x 58, 4 x 21, 5 x 6, 6 x 2; text length median 530 and longest 963 characters; 0 of 538 over the limit.
+
+**First taste.** "AI memory shortage" (the Case 2 phrase) returns an article whose `tickers` include `MU` and `SKHY`, although it was fetched under NVDA: the "which companies?" answer Case 2 asks for. The same article took two of the top three places (its chunks 1 and 3). Part 5 decides whether to group results by article or use MMR.
+
+**Options considered.**
+1. A token-based splitter built on the model's tokenizer. Rejected for now: more code, and characters measured fine on news. See the check above.
+2. Delete and re-add everything on every run. Rejected: it encodes every chunk every time, and it would also drop the merged `tickers` of articles stored from another file.
+3. One collection per symbol. Rejected (entry 16).
+4. The model on the GPU by default. Rejected: same scores, an extra start-up, and a competing user of the GPU.
+
+**Consequences.** *Pro:* re-running is cheap and safe, the stored text always carries what a citation needs, and the model cannot be mixed up. *Con:* the second run of a symbol still takes about 3 seconds, which is the time to load the model, not to encode. Chroma's embedded mode is single-process (entry 10), so ingest and search should run in one process at a time.

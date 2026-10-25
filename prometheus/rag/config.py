@@ -27,3 +27,18 @@ def path_setting(name: str, default: str) -> Path:
 def news_dir() -> Path:
     """Folder that holds the DataAgent's news files (NEWS_OUTPUT_DIR, the DataAgent's own setting name)."""
     return path_setting("NEWS_OUTPUT_DIR", "news")
+
+
+def vector_store_path() -> Path:
+    """Folder where Chroma keeps its files. It is derived data: delete it and ingest again to rebuild."""
+    return path_setting("VECTOR_STORE_PATH", "data/processed/vectorstore")
+
+
+def embedding_model() -> str:
+    """The sentence-transformers model that turns text into vectors."""
+    return setting("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+
+
+def embedding_device() -> str:
+    """Where the embedding model runs: cpu (default) or cuda. The scores are the same either way."""
+    return setting("EMBEDDING_DEVICE", "cpu")
