@@ -101,6 +101,59 @@ def ids(hits: list[Hit]) -> list[str]:
 
 # ---------------------------------------------------------------- what a hit is
 
+
+# ---------------------------------------------------------------- newest first (found in the SNDK run: "latest" returned old articles)
+
+@pytest.fixture
+def dated(tmp_path):
+    """Four apple articles of different ages and different similarity to "apple iphone", and one old non-apple article."""
+    return fill(make_store(tmp_path / "dated", KeywordEmbeddings()), [
+        chunk("old-best", 0, 1, "apple iphone phone", ["AAPL"], NOW - 6 * DAY),            # the closest match, the oldest
+        chunk("mid-good", 0, 1, "apple iphone phone phone chip", ["AAPL"], NOW - 3 * DAY),
+        chunk("new-ok", 0, 1, "apple iphone chip chip", ["AAPL"], NOW - 1 * DAY),
+        chunk("newest-ok", 0, 1, "apple iphone chip chip chip", ["AAPL"], NOW - 1 * DAY + timedelta(hours=5)),
+        chunk("new-offtopic", 0, 1, "tesla car", ["AAPL"], NOW - 1 * DAY + timedelta(hours=9))])  # the newest of all, but not about apple
+
+
+def test_by_default_the_best_match_comes_first_even_if_it_is_old(dated):
+    hits = search_news("apple iphone", tickers="AAPL", k=2, store=dated, now=NOW)
+    assert [h.article_id for h in hits][0] == "old-best"
+
+
+def test_newest_first_returns_the_newest_relevant_articles_and_not_the_best_matching_ones(dated):
+    hits = search_news("apple iphone", tickers="AAPL", k=2, newest_first=True, min_score=0.3, store=dated, now=NOW)
+    assert [h.article_id for h in hits] == ["newest-ok", "new-ok"]  # newest first, and the older, closer matches are cut by k
+
+
+def test_newest_first_still_applies_the_relevance_bar_so_a_new_article_about_something_else_is_not_returned(dated):
+    hits = search_news("apple iphone", tickers="AAPL", k=5, newest_first=True, store=dated, now=NOW)
+    assert "new-offtopic" not in [h.article_id for h in hits]
+    dates = [h.published_utc for h in hits]
+    assert dates == sorted(dates, reverse=True) and len(hits) >= 2  # the whole list is in date order
+
+
+def test_newest_first_combines_with_the_date_window(dated):
+    hits = search_news("apple iphone", tickers="AAPL", k=5, since_days=2, newest_first=True, min_score=0.3, store=dated, now=NOW)
+    assert [h.article_id for h in hits] == ["newest-ok", "new-ok"]
+
+
+def test_a_tie_in_date_goes_to_the_better_match(tmp_path):
+    same_day = fill(make_store(tmp_path / "tie", KeywordEmbeddings()), [
+        chunk("weaker", 0, 1, "apple iphone chip chip", ["AAPL"], NOW - DAY),
+        chunk("closer", 0, 1, "apple iphone phone", ["AAPL"], NOW - DAY)])
+    assert [h.article_id for h in search_news("apple iphone", tickers="AAPL", newest_first=True, min_score=0.3, store=same_day, now=NOW)] == ["closer", "weaker"]
+
+
+def test_newest_first_wins_over_diverse(dated):
+    hits = search_news("apple iphone", tickers="AAPL", k=2, newest_first=True, diverse=True, min_score=0.3, store=dated, now=NOW)
+    assert [h.article_id for h in hits] == ["newest-ok", "new-ok"]
+
+
+@pytest.mark.parametrize("value", ["yes", 1, None])
+def test_newest_first_must_be_true_or_false(dated, value):
+    with pytest.raises(ValueError, match="newest_first must be true or false"):
+        search_news("apple iphone", newest_first=value, store=dated, now=NOW)
+
 def test_hits_come_best_first_and_carry_what_a_citation_needs(news):
     hits = search_news("apple iphone phone", min_score=None, k=3, store=news)
     assert ids(hits) == ["a1", "a2", "a3"]

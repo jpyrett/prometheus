@@ -126,7 +126,7 @@ class DataClerkTools:
     # ---- search by meaning (rag/)
 
     def retrieve_news(self, query: str, tickers: str | list[str] | None = None, since_days: int | None = None,
-                      k: int = K, diverse: bool = False) -> dict:
+                      k: int = K, diverse: bool = False, newest_first: bool = False) -> dict:
         """Search the stored news by meaning and return numbered sources to cite.
 
         Use this for any question about what a company's news says. It only searches news that is already
@@ -136,7 +136,9 @@ class DataClerkTools:
 
         Put the company's name in the question, and set tickers when the question is about one company. Set
         diverse only for a broad question such as "what is happening with Apple?", where you want different
-        stories. Leave it off for a question with one specific answer.
+        stories. Leave it off for a question with one specific answer. Set newest_first for a question about
+        the latest, newest or most recent news: a search ranks by meaning, not by date, and without it the
+        results can be older articles that match the words better.
 
         Args:
             query: The question or topic, in words. Use the company's name.
@@ -144,11 +146,12 @@ class DataClerkTools:
             since_days: Only articles from the last N days (a whole number, 1 or more).
             k: How many articles to return, 1 to 20. The default is 5.
             diverse: Spread the results over different stories. For broad questions only.
+            newest_first: Of the relevant articles, return the newest first. For questions about the latest news.
         """
         symbols = _symbols(tickers)
         options = dict(tickers=symbols or None, since_days=since_days, k=k, store=self.store)
         try:
-            hits = search_news(query, diverse=diverse, **options)
+            hits = search_news(query, diverse=diverse, newest_first=newest_first, **options)
             if hits:
                 return {"found": True, "reason": None, "message": None, "hits": [h.as_dict() for h in hits]}
             closest = search_news(query, k=1, min_score=None, **{key: v for key, v in options.items() if key != "k"})

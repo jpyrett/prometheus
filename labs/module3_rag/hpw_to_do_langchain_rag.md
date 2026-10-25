@@ -23,6 +23,7 @@ References we follow:
 | 6 | Tools and the chat model: `retrieve_news` and the DataAgent tools, numbered sources, the citation check, the OpenRouter chat model, tested with the real model | done |
 | 7 | The Data Clerk agent: a LangGraph where the LLM decides whether to retrieve or fetch, with a budget, a citation check, and defences against hidden instructions; measured with the real model | done |
 | 8 | FastMCP: the Data Clerk's tools served over MCP; a work order that carries its result; an Advisor whose score is calculated from checked evidence, compared without and with retrieval | done |
+| 9 | The desk: a LangGraph that passes one work order from the Account Manager to the Data Clerk to the Advisor, and the main script that prompts for symbol, term, source and from_days_ago | done |
 
 How we work:
 
@@ -377,7 +378,7 @@ prometheus/
     citations.py             numbered sources for the prompt; checks that every citation points at a retrieved chunk
   models/chat.py           chat-model factory (OpenRouter now, local later); llm.py (local HF) stays
   prompts/data_clerk.py    grader, rewrite and answer prompts
-  langgraph/desk.py        later: wires the five agents into one graph
+  langgraph/desk.py        the desk: a LangGraph that passes one work order Account Manager -> Data Clerk -> Advisor (Part 9)
 labs/module3_rag/          this guide and check_install.py
 ```
 
@@ -1954,11 +1955,12 @@ The week 2 design says: *"A prompt will write a score that hallucinates and make
 
 1. The model reads the work order and the numbered sources and replies, as JSON, with **signals** for each company it recommends. A signal is a short quote copied word for word from one source, the source's number, and a direction (`bullish` or `bearish`).
 2. **Code checks every signal** (`verify_signal`). The source must exist. The direction must be bullish or bearish. The quote must be at least 12 characters and really be in that source's text (typography and case do not matter; the model reads the text with `[3]` shown as `(3)`, and either form is accepted). And the quote itself must name the company: its ticker as a word, or a distinctive word of its name (4 letters or more, and not a generic word such as "Energy" or "Technology"). A signal that fails is kept, with the reason, and is not counted.
-3. **Code calculates the score** from the signals that pass: `round(100 * (bullish + 1) / (bullish + bearish + 2))`. That is the bullish share, smoothed so that one signal is not certainty: 1 bullish gives 67, 2 bullish 75, 3 bullish 80, 1 bearish 33, one of each 50. With no verified signal there is no score (`None`), however confident the model was.
+3. **Code counts each story once per direction** (identified by its normalized headline), because the same article arrives through several feeds with different ids and two quotes from one article are one voice. The extra signals are kept and marked `counted: false`.
+4. **Code calculates the score** from the counted signals: `round(100 * (bullish + 1) / (bullish + bearish + 2))`. That is the bullish share, smoothed so that one signal is not certainty: 1 bullish gives 67, 2 bullish 75, 3 bullish 80, 1 bearish 33, one of each 50. With no verified signal there is no score (`None`), however confident the model was.
 
 The model also writes its own `model_score` (0 to 100). It is recorded next to the calculated one so that the two can be compared, and it is never used. This is the smallest scorer that makes the comparison possible and simple enough to audit by hand. The real `calculate_score` of the design comes with the Critic.
 
-**The Advisor reads the chunks, not the Data Clerk's answer.** That is deliberate. In the week 3 re-run (`design/week3_submission.md`, section 3) the Data Clerk's answers stated that Micron, SK Hynix and SanDisk had fallen a third while citing a chunk that says only "memory chip stocks". An agent that read that summary would inherit the stretch. Rule 2's last check is the repair: a quote about "memory chip stocks" does not name Micron, so it does not count for Micron. There is a test for exactly that sentence.
+**The Advisor reads the chunks, not the Data Clerk's answer.** That is deliberate. In the week 3 re-run (`design/week3_evidence.md`, section 3) the Data Clerk's answers stated that Micron, SK Hynix and SanDisk had fallen a third while citing a chunk that says only "memory chip stocks". An agent that read that summary would inherit the stretch. Rule 2's last check is the repair: a quote about "memory chip stocks" does not name Micron, so it does not count for Micron. There is a test for exactly that sentence.
 
 **Why the ticker list is not used to attribute a quote.** The check is "the quote names the company", not "the article is tagged with the ticker". Part 4 measured that the ticker list is incomplete (4% to 21% of a company's articles do not carry its ticker), so metadata would reject real evidence, and a ticker list that includes an article's passing mention would accept a stretched sentence.
 
@@ -1971,14 +1973,14 @@ pytest tests/test_work_order.py tests/test_advisor.py tests/test_advisor_with_wi
 ```
 
 ```text
-28 + 67 + 10 + 20 = 125 passed   (the whole suite is now 450)
+40 + 72 + 10 + 20 = 142 passed   (the whole suite is now 575)
 ```
 
 | File | What it checks |
 |---|---|
 | `test_mcp_data_clerk.py` (20) | by default five tools are offered and with `--allow-fetch` all eight and nothing else; the six dangerous tools are never offered; the hints say which tools read and which write; each tool has the same arguments, description and argument descriptions as the LangChain tool; `retrieve_news` and `keyword_search` over MCP return exactly what the methods return; no numbers on the hits; bad arguments are refused with the reason and without a traceback; a toolbox failure carries no path or key; without the flag a fetch cannot be called and the toolbox is never touched; with it a fetch runs and the new articles become searchable; the command line warns when fetching is on; **the real server is started as a subprocess over stdio** and lists its tools |
-| `test_work_order.py` (28) | the new order has the design's fields; JSON round trip with and without data; each bad request is refused with its reason; `request_data` puts the answer, chunks and sources on the same order and phrases the order's limits in the question; nothing found is `data_ready`; a wrong citation or a model failure is `data_failed` with the reason; a trade request is refused without calling the model; a finished order is not asked again; each `verify_action` check |
-| `test_advisor.py` (67) | `normalize`; `names_company` over 12 cases (ticker, name word, generic word, "MU" inside "EMU", a different company); the score table; every way a signal can fail has its reason; typography and defused brackets do not matter; the score uses verified signals only and the model's own number never changes it; **the stretched sentence about "memory chip stocks" does not count for Micron**; a duplicate signal counts once and at most three are read; odd fields become `None` and not errors; with evidence the Advisor reads the chunks (formatted as the Data Clerk's model saw them) and not the Data Clerk's summary; without evidence no signal can count; it refuses an order whose data is not ready without calling the model; one retry on a reply that is not JSON; two bad replies leave the order as it was; a model failure is recorded, flagged as a rate limit when it is one, and leaks nothing |
+| `test_work_order.py` (40) | the new order has the design's fields; JSON round trip with and without data; each bad request is refused with its reason; `request_data` puts the answer, chunks and sources on the same order and phrases the order's limits in the question; nothing found is `data_ready`; a wrong citation or a model failure is `data_failed` with the reason; a trade request is refused without calling the model; a finished order is not asked again; each `verify_action` check, including that a `search_news` order answered without a search fails (no search at all, a fetch only, a refused or a failed search), that a model failure does not add a second reason, and that other action types are not held to it |
+| `test_advisor.py` (72) | `normalize`; `names_company` over 12 cases (ticker, name word, generic word, "MU" inside "EMU", a different company); the score table; every way a signal can fail has its reason; typography and defused brackets do not matter; the score uses verified signals only and the model's own number never changes it; **the stretched sentence about "memory chip stocks" does not count for Micron**; a duplicate signal counts once and at most three are read; **a story counts once per direction** (the same story through two feeds, two quotes from one article, a bearish duplicate; a story with a bullish and a bearish quote counts both ways); odd fields become `None` and not errors; with evidence the Advisor reads the chunks (formatted as the Data Clerk's model saw them) and not the Data Clerk's summary; without evidence no signal can count; it refuses an order whose data is not ready without calling the model; one retry on a reply that is not JSON; two bad replies leave the order as it was; a model failure is recorded, flagged as a rate limit when it is one, and leaks nothing |
 | `test_advisor_with_without.py` (10) | the arithmetic behind the table in section 8.6: spreads, signal counts and failure reasons, company overlap, tokens, empty conditions |
 
 We broke the Advisor, the work order, `request_data`, the MCP server and the Advisor prompt 55 ways, one at a time: a quote that need not be in the source, a quote that need not name the company, the score as a plain share, the model's own number becoming the score, a repeated signal counted twice, fetching always offered, a fetch marked read-only, a finished order accepted again, and others. Fifty-four were caught at once. One exposed a missing test (an uppercase ticker inside another word, such as "MU" in "EMU"), which we added.
@@ -2033,14 +2035,502 @@ The whole of Part 8's real-model work cost roughly 15 cents.
 
 The decisions are recorded in design choices entries 25 and 26.
 
-### Next: after Part 8
+### 8.8 One symbol, for real: SNDK (and where the files go)
 
-The RAG build is complete: the news is loaded, chunked, indexed, searched, served as tools, used by an agent that cites and defends itself, passed on a work order, and read by an Advisor whose score is calculated. What comes next belongs to the rest of the desk:
+Every lab script above keeps fetching off. `labs/module3_rag/e2e_symbol.py` is the one that does not: it runs the whole desk for one symbol, with the paid APIs, and shows what it writes.
 
-- the Critic, which should read the verified quotes and judge whether each bears on the question (section 8.7), and the Account Manager that creates the order;
-- a second search for the Data Clerk when the first one misses the strongest evidence (a narrower query per company the first answer names), because that is now the clearest limit on the Advisor;
-- the Advisor's own model decision (`compare_models.py`-style, with this script), since only one model was tried for that role;
-- Redis for quotes, and the LangGraph that wires the agents together with a checkpointer.
+```bash
+python labs/module3_rag/e2e_symbol.py SNDK            # USES THE PAID APIs and WRITES news/SNDK.txt and adds to the index
+```
+
+**Where the files go.**
+
+| What | Where | Notes |
+|---|---|---|
+| fetched news | `news/<SYMBOL>.txt` (the folder is `NEWS_OUTPUT_DIR`, default `news/`) | **one file per symbol**, appended to; an article already in the file (same url) is skipped. There is no single combined file |
+| the search index | `data/processed/vectorstore` (Chroma) | derived data: `python -m prometheus.rag.ingest --rebuild --all` rebuilds it from the news files. `fetch_news` indexes the symbol it just fetched, so the new articles are searchable at once |
+| a finished work order | `data/processed/e2e_<SYMBOL>.json` | only from this script |
+
+**Why there is no `news/MU.txt`.** MU was never fetched. The folder holds `AAPL`, `META`, `NVDA` and `TSLA` (Oct 24), and the MU articles in the earlier tests were articles in those files that are *tagged* with MU. They are found through the `tickers` tag in the index. And nothing was written by the Part 6 to 8 tests because they all ran with fetching off. A file for MU appears when someone fetches MU.
+
+**What the SNDK run did** (a live work order, fetching on, the real index, the Advisor model from `.env`):
+
+| Step | Result |
+|---|---|
+| before | no `news/SNDK.txt`; 538 chunks in the index, 15 of them tagged SNDK (articles about other companies that mention Sandisk) |
+| `fetch_news(SNDK)` | 122 articles written to `news/SNDK.txt` (105,582 bytes), Oct 18 to 25 |
+| indexed | 135 new chunks (673 in all), 150 now tagged SNDK |
+| Data Clerk | two tools, `fetch_news` then `retrieve_news`; 3 turns; 5 sources, all 5 cited; `data_ready`, `verify_action` ok |
+| Advisor | one recommendation: SNDK, bullish, calculated score 80 from 3 verified signals (the model's own number was 78) |
+
+**To make `live` work we changed one thing.** The work order has a `live` field ("fresh data is required"), and the Data Clerk ignored it. SNDK is tagged on stored articles, so the agent would have searched and never fetched. Now a live order says in its question that fresh news is required and to call `fetch_news` first; the prompt has the same rule. The agent can only fetch before it has read news text (section 7.2), so the order of the words matters.
+
+**What checking the first run found, and the two fixes** (the reasoning, the alternatives and the tests are in section 8.9). The answer's figures were all in its sources (371.6%, 84.6%, more than 143%, 12%, 27.5%). Two problems were real:
+
+| Problem | Cause | Fix | Measured |
+|---|---|---|---|
+| **"The most recent coverage" was not the most recent.** All five cited articles were from Oct 19, and the file had 10 articles from Oct 24 and 25 | retrieval ranks by meaning, not by date, and nothing turned "latest" into a recent window | `retrieve_news` and `search_news` have a new option, **`newest_first`**: of the articles that pass the relevance bar, return the newest *k*, newest first (the bar still applies, so a new article about something else is not returned; it wins over `diverse`). The prompt says when to use it | see below |
+| **One story was counted twice.** Two of the Advisor's three signals were the same Zacks article, once through Polygon and once through Yahoo and Finnhub, with different ids | Part 4 de-duplicates by article id and url, and a story that arrives through two feeds has two ids | in the Advisor, **a story counts once per direction**: the story is identified by its normalized headline (case and punctuation ignored). Both signals are still recorded and verified, and the extra one is marked `counted: false` | the SNDK rerun, below |
+
+**The recency fix needed a second change, found by measuring.** After the first fix the model did call `retrieve_news` with `newest_first=True`, and the cited articles were *still* all from Oct 19. It had written the query `latest news SNDK`. The words "latest news" match nothing, so the Oct 22 to 25 articles scored only 0.16 to 0.33, far under the 0.40 bar, and only four Oct 19 articles whose headlines literally say "Sandisk Corporation (SNDK)" passed. Naming the company and the topic fixes it ("Sandisk news" scores the newest articles 0.47 to 0.64, "Sandisk SNDK stock news" 0.46 to 0.67, and all 10 pass the bar). So the prompt now also says: write the query about the company and the topic, using the company's name, and say recency with `newest_first` or `since_days`, not with words like "latest" or "recent" in the query. This is the near-miss problem of Part 5 again: a short query with generic words sits under the bar.
+
+| `agent_reliability.py` question (8 runs each, fetching off) | Before the query-wording rule | After |
+|---|---|---|
+| `sndk-latest`: "What is the latest news on SNDK, and what does it mean for the stock?" (success: it cites an article from Oct 24 or later; the file holds 10) | **0/8** | **8/8** |
+| the four earlier questions (meta-week, mkbhd, boeing, hello) | 8/8, 8/8, 7/8, 8/8 | 8/8, 8/8, 8/8, 8/8 (no regression) |
+
+**The rerun, with all fixes** (`e2e_symbol.py SNDK` again):
+
+| Step | Result |
+|---|---|
+| fetch | `fetch_news(SNDK)` wrote **0** new articles and added **0** chunks: an article already in the file (same url) is skipped, so a repeated fetch is safe |
+| search | `retrieve_news(query='SanDisk stock news', tickers=['SNDK'], since_days=7, k=10, newest_first=True)`: 10 sources, from Oct 23 to 25 |
+| cited | 3 articles, from **Oct 24 to Oct 25** (the newest in the file is Oct 25). Before: all Oct 19 |
+| Advisor | one recommendation, SNDK bullish. Two verified signals, **one counted**: the two quotes are the same story ("Sandisk's New Business Model Is Transforming the Business", once from Yahoo and once from The Motley Fool), so the score is 67 and not the 75 it would be if both counted |
+
+Also checked: the story rule changes **none** of the 15 Case 2 recommendations of section 8.6 (MU is still 67 and NVDA 60 in every run), and the figures in the rerun answer (nearly 500%, 6.3 times forward earnings, 50% of revenue from contracts, "neutral", HBM) are all in the sources it cites.
+
+**What is still wrong, and a new thing the check found.**
+
+- **The Data Clerk still stretches a source.** The rerun answer says Yahoo reports that "many non-AI stocks, *including Sandisk*, are flashing buy signals [1]". Source [1] says only "many non-AI stocks are flashing buy signals" and names no company (the article is tagged SNDK in its metadata). It is the same failure as in the week 3 re-run. It did not reach the score, because the Advisor reads the chunks and a quote must name the company, but it is in the Data Clerk's answer. The Critic has to read the chunks.
+- **Syndicated copies take search slots too.** The 10 sources of the rerun are 7 stories: three stories appear twice (one from Yahoo, one from The Motley Fool). Counting a story once fixes the score and not the top *k*.
+- **A thin score.** The Advisor's SNDK score of 67 is one counted signal. The answer itself says several analysts are "neutral", and the Advisor produced no bearish or neutral signal. The score is traceable, and it is as thin as the evidence it counted.
+
+### 8.9 Two problems the SNDK run found, and where each fix belongs
+
+Section 8.8 ran one symbol for real and checked the result. Two problems came out of the check. The interesting part is not that they were fixed. It is *where* each fix went, because in both cases the obvious place (the prompt) was the wrong one, or not enough on its own. The full record, with the alternatives, is design choices entry 27.
+
+#### Problem 1: recency, and why a prompt rule alone is not the fix
+
+**What happened.** The question said "latest news". The answer said "the most recent coverage", and all five cited articles were from Oct 19. The file had ten articles from Oct 24 and 25 that were never returned.
+
+**Why it is structural.** `search_news` ranks by similarity of meaning. Nothing in it knows what "newest" is. `since_days` is a *filter* (a window), not a ranking. So there are two reasons that a prompt rule alone cannot fix it:
+
+- The model only chooses the *arguments* of a search. It cannot reorder what the search returns. Telling it "prefer newer articles" gives it nothing to act on.
+- A prompt rule is probabilistic. The same question gave different answers from run to run all through Part 7 (the Meta question was right 1 time in 8).
+
+When a result has to be *reordered*, the fix belongs in the search. When the model has to *choose*, a prompt helps. Here we need both: a mechanism, and a rule for when to use it.
+
+**The mechanism: where a recency option fits in `search_news`.** Read the function from the top: query, filters (`tickers`, `since_days`), fetch the closest `k * FETCH_FACTOR` chunks, keep the best chunk of each article, apply the relevance bar, then (optionally) spread with MMR, then cut to `k`. A recency option fits **after the bar and before the cut**:
+
+```python
+if newest_first:
+    candidates = sorted(candidates, key=lambda c: (-c[0].metadata["published_ts"], -c[1]))  # newest first, a tie to the better match
+elif diverse and len(candidates) > k:
+    candidates = _spread(store, query.strip(), candidates, k, lambda_mult)
+return [_hit(doc, score) for doc, score in candidates[:k]]
+```
+
+That order is the whole design. Because the bar comes first, a new article that is not about the question is not returned. Because the sort comes before the cut, the newest *k* of the relevant articles are returned, not the *k* that happen to match best. It wins over `diverse` because both are ways to choose which *k*, and they cannot both rule. It is a plain boolean (`--newest-first` in the retriever CLI), the `retrieve_news` tool passes it on, and the MCP server serves it with no extra work, since it serves the same method (the parity tests passed unchanged).
+
+| Option for recency | Verdict |
+|---|---|
+| a prompt rule only ("prefer newer news") | the model cannot reorder results, and it is probabilistic |
+| a narrow `since_days` that the model picks | helps when it picks it, but a narrow window can leave too few articles, and it is again the model's choice |
+| sort everything by date | returns new articles that are not about the question |
+| blend the score with the age | a weight to tune, with no data to tune it on |
+| **filter by the bar, then sort by date (`newest_first`)** | **chosen: deterministic, keeps the bar, nothing to tune** |
+
+**It was not enough, and measuring showed why.** The next run did call `retrieve_news(..., newest_first=True)`, and the cited articles were still all from Oct 19. The model had written the query `latest news SNDK`:
+
+| Query (SNDK, last 7 days, `newest_first`) | Passed the 0.40 bar | The hits that passed, newest first |
+|---|---|---|
+| `latest news SNDK` | 4 of 10 | Oct 19 (0.44 to 0.45), all four |
+| `Sandisk news` | 10 of 10 | Oct 24 (0.47 to 0.64) |
+| `Sandisk SNDK stock news` | 10 of 10 | Oct 25 (0.46), Oct 24 (0.51 to 0.67) |
+| `Sandisk stock news and analyst outlook` | 10 of 10 | Oct 25 (0.45), Oct 24 (0.41 to 0.64) |
+
+The words "latest news" match nothing. The Oct 22 to 25 articles scored 0.16 to 0.33 for that query, far under the bar, and the only articles that passed were four from Oct 19 whose headlines literally say "Sandisk Corporation (SNDK)". This is the near-miss problem of Part 5 again: a short query made of generic words sits under the bar. So the prompt got a second rule: write the query about the company and the topic, using the company's name, and say recency with `newest_first` or `since_days`, never with words like "latest" or "recent" in the query.
+
+**Measured** (`agent_reliability.py`, question `sndk-latest`, 8 runs, success = the answer cites an article from Oct 24 or later, and the file holds ten): **0 of 8** with `newest_first` available and no rule about the query, **8 of 8** with the rule. The four earlier questions did not regress (8/8 each). In the rerun the model wrote `query='SanDisk stock news'` with `newest_first=True` and the cited articles were from Oct 24 and 25, where before all five were Oct 19.
+
+**Found later:** with 1,770 chunks indexed the model sometimes sets `newest_first` for a question that is not about recency, and the newest same-day articles then crowd the best match out (the MKBHD question: found 1 of 3 times with it, 7 of 7 without; section 9.8, entry 27). **Limits.** The sort works on the closest `k * FETCH_FACTOR` chunks that pass the bar, so a newer article that scores under the bar for a poor query is still missed. Whether the model uses the option and writes a good query is still its choice, helped by the prompt (8 of 8 is a small test on one symbol).
+
+#### Problem 2: duplicates, and why the fix belongs where signals are counted
+
+**What happened.** Two of the Advisor's three signals were the same Zacks article. It reached us twice: once through Polygon and once through Yahoo and Finnhub. The calculated score was 80. Counted once it is 75.
+
+**Why it happens.** Part 4 de-duplicates by article id and by url. The same story arriving through two feeds has two ids (`polygon:cb25...` and `finnhub:143009642`) and two urls, so both are stored, both can be retrieved, and both can be quoted.
+
+**Where the fix belongs.** Ask what was actually wrong: the *score* was inflated by repetition. So the fix goes where signals are counted, in the Advisor, not in the index and not in the prompt:
+
+```python
+counted_stories = set()
+for s in signals:
+    s["counted"] = False
+    if s["verified"]:
+        key = (story_key(sources[int(s["source"])]["headline"]), s["direction"])   # a story, in one direction
+        if key in counted_stories:
+            s["note"] = "not counted: the same story as an earlier signal in the same direction"
+        else:
+            counted_stories.add(key)
+            s["counted"] = True
+bullish = sum(s["counted"] and s["direction"] == "bullish" for s in signals)
+```
+
+The rule: **a story counts once per direction.** A story is identified by its normalized headline (case and punctuation ignored). Both signals stay on the recommendation, still `verified`, and the extra one is marked `counted: false` with a note, so nothing is lost and the Critic can see it. A story with a bullish quote and a bearish quote counts both ways, because that is conflicting evidence and both are real. Two quotes from one article in the same direction are one voice, so they count once. A signal now has three states: failed (with the reason), verified and counted, and verified but not counted.
+
+| Option for duplicates | Verdict |
+|---|---|
+| collapse copies at ingest, by headline | fixes the search slots too, but it changes the index and a Part 4 data decision: two different articles with one headline would merge, the publisher of the second copy is lost, and it is hard to undo |
+| collapse copies in the Data Clerk's source list | changes the numbering and the audit trail the Critic reads |
+| ask the model not to repeat itself | probabilistic, and the model does not know that two sources are the same story |
+| **count a story once where signals are counted** | **chosen: the smallest change, reversible, keeps all the raw evidence, and fixes the score** |
+
+**Measured.** In the rerun the two quotes for SNDK were "Sandisk's New Business Model Is Transforming the Business", once from Yahoo and once from The Motley Fool. Two signals verified, one counted, score 67 (75 if both had counted). The rule changes none of the 15 recommendations of the Case 2 table in section 8.6, re-scored offline with no model calls.
+
+**Limits.** The story key is the headline, so a story whose headline one feed rewrote would still count twice, and two different stories with an identical headline would count as one. And the rule fixes the *score*, not the *search slots*: in the rerun the ten sources are seven stories, with three stories present twice. Collapsing copies in retrieval or at ingest is a separate decision that has not been made.
+
+#### Tests
+
+Retriever: the best match comes first by default; `newest_first` returns the newest relevant articles and not the best-matching ones; the bar still applies; it combines with the date window; a tie goes to the better match; it wins over `diverse`; non-boolean values are refused. Tool: the option is passed through and is off by default. Advisor: the same story through two feeds (with the real SNDK headline and typography differences), a bearish duplicate, two quotes from one article, opposite directions on one story, and the story key. One of my first tests was vacuous (its second quote was not in the source, so it failed verification and the count was right for the wrong reason), and it was rewritten so that the story rule is what is tested. We broke the new code 15 ways; 14 were caught at once and one exposed a missing test (the duplicate rule had only been tested for bullish signals), which we added.
+
+### 8.10 Two more real runs, from the user's side: MSFT for 14 days, and the term "flying car"
+
+Both were started the way a user would start them, from the command line in a fresh process, with the wall clock timed from outside (`time`), and nothing set by hand. `e2e_symbol.py` gained `--term` for a search with no symbol, a TIMING block, and printing of every tool call with its arguments. One more change: **a live order's window now becomes the `from_date` of the fetch**. The fetch defaults to 7 days, so without it a 14-day request would silently fetch 7 (the question now says `fetch_news ..., with from_date=14`, and a test checks it).
+
+#### Test 1: `python labs/module3_rag/e2e_symbol.py MSFT --days 14`  (3 min 18 s)
+
+| What | Result |
+|---|---|
+| the fetch call | `fetch_news(symbol='MSFT', from_date=14)`: the 14 days came through, and **no keywords and no company filter**, as asked |
+| written | **720 articles** to `news/MSFT.txt` (936,753 bytes); **1,097 new chunks** (1,770 in all, 1,218 tagged MSFT) |
+| the search | `retrieve_news(query='Microsoft stock news', tickers=['MSFT'], since_days=14, k=10, newest_first=True)`: 10 sources, 7 cited, from Oct 23 to 25 (the newest article in the file is Oct 25) |
+| Data Clerk | `data_ready`, `verify_action` ok, 3 turns |
+| Advisor | MSFT bullish, calculated score 80 from 3 counted signals |
+
+| Time (seconds) | Test 1 (MSFT) | Test 2 ("flying car") |
+|---|---|---|
+| Python start and imports (wall clock minus the script's own total) | about 5 | about 5 |
+| Data Clerk | **56.6** (fetch 720 articles, index 1,097 chunks, search, answer) | 2.6 |
+| Advisor | **134.4** (2,624 output tokens from the reasoning model) | 1.9 (nothing to advise on) |
+| total, as the user sees it | **197.6** (3 min 18 s) | **9.5** |
+
+The Advisor model, not the fetch, is the slowest step of a symbol run: a user waits more than twice as long for the recommendation as for the data.
+
+**What checking the answer found.**
+- The figures are real: "earnings jumped 22% last fiscal year" is in source [3], and the Vanguard Information Technology ETF weight (11.16%) is in [1]. But the answer cites [3][8][10] together for the 22%, and [8] and [10] do not contain it.
+- **The sources disagree and the answer did not say so.** The answer says "fiscal Q4 earnings". Source [8] says "fiscal first-quarter report", while source [7] itself says "fiscal Q4". The answer picked one.
+- **One of the Advisor's three bullish signals is spurious.** The quote is *"many non-AI stocks are flashing buy signals. Microsoft, Google, Amazon loom."* The sentiment is about non-AI stocks in general, and "Microsoft, Google, Amazon loom" means the earnings are coming. It passes `verify_signal` because the quote is in the source and the two sentences together name Microsoft. Without it the score is 75, not 80. The other two quotes are single sentences. This is the "a valid quote is not a relevant one" limit with a concrete example. A cheap structural check would be to require that a quote is **one sentence**, so that the company and the claim are in the same sentence. It rejects this quote, and it is **not built**.
+
+#### Test 2, as first run: `python labs/module3_rag/e2e_symbol.py --term "flying car"`  (9.5 s, it did not search)
+
+The question: with no symbol and the term "flying car", does the system bring back TSLA and the new Roadster? The stored data has the answer (`news/TSLA.txt` holds *"Will Tesla's New Flying Roadster Send the Stock Flying?"*, Oct 21, with the keywords "flying car, Roadster, Cybercab").
+
+**It did not.** The Data Clerk made **no tool call** and answered "I'm sorry, but I can only provide information about companies from stored news." The order was `data_ready` with no sources, and the Advisor returned nothing. To find out whether retrieval or the agent was at fault, I tried both separately:
+
+| Check | Result |
+|---|---|
+| the raw search, no agent: `search_news('flying car')` over the whole index | **finds it first**: "Will Tesla's New Flying Roadster Send the Stock Flying?" (TSLA, 0.50), and "Tesla flying Roadster" also finds Musk's Roadster article (0.57) and the Tesla Cybertruck story |
+| the agent, "flying car" (bare term), 3 runs | searched **0 of 3**; "I can only provide information about companies' news" |
+| the agent, "flying cars" (bare term), 3 runs | searched **0 of 3**, and answered **from memory**: "Flying cars are an emerging technology with several firms developing prototypes..." with no source, which the prompt forbids |
+| the agent, "What is the news on flying cars?", 3 runs | searched **3 of 3**, found the Roadster article 3 of 3, cited TSLA 3 of 3 ("Recent coverage this week focuses on Tesla's unveiling of a prototype 'flying Roadster'") |
+| the agent, "Which companies are working on a flying car?", 3 runs | searched **3 of 3**, found the Roadster 3 of 3, cited TSLA 3 of 3 |
+
+So **retrieval works and the routing does not**: a request phrased as a question finds TSLA and the new Roadster every time, and a bare term is never searched. The cause is the system prompt, which says "for a greeting, or a request that is not about companies' data, answer in one sentence without tools". The model reads a bare topic phrase as not being about a company's data, and so it does not search. For "flying cars" it went further and answered from memory.
+
+Two smaller problems sit behind it. The order came back `data_ready` although nothing was searched, because `verify_action` checks consistency of what is there and not whether a search happened. And a term that names no company ("flying car") gives the search nothing to filter on, so it runs over the whole index, which is the right thing here but is the case the routing rule never considered.
+
+#### Test 2, fixed: a bare term is a request to search (and where each part of the fix went)
+
+**The fix has two parts, because a prompt alone is probabilistic** (the lesson of the recency fix, section 8.9).
+
+1. **The prompt says what a bare phrase is.** A short phrase that names a topic, a product or a trend, with no question and no company, is a request to search the stored news: call `retrieve_news` with the phrase and no ticker, then answer from what it finds or say the stored news does not cover it. If it is unclear whether a phrase is about the news, search, because a search is cheap and "the stored news does not cover it" is a safe answer. Only a greeting, a question about what the Data Clerk can do, or a request that clearly has nothing to do with news (a recipe, a poem, how to install software) is answered without tools, and the last kind gets one sentence saying that the Data Clerk handles news and company data and cannot help, not an answer. The first line of the prompt no longer says it answers "questions about companies" only.
+2. **The work order is already classified.** In the design a free-text request becomes a `search_news` work order. So the order's question now says "this is a request to search the stored news: call `retrieve_news` before you answer, whatever the subject is", and **`verify_action` fails a `search_news` order whose answer involved no successful `retrieve_news`**. Before, an order answered from memory or with a refusal came back `data_ready`, and nothing said that no search had been made. Now it is `data_failed` with the reason, and the Advisor refuses to run on it. The check does not add a second reason when the model call itself failed.
+
+**How it was measured** (`agent_reliability.py`, 8 runs each, fetching off; the success criteria were written before the runs, and the examples in the prompt, "solid-state battery" and "humanoid robot", are not test phrases):
+
+| Question (what success means) | Before | After, asked directly (`ask`) | As a work order (`--as-order`) |
+|---|---|---|---|
+| "flying car" (searches, cites the flying Roadster article) | **0/8** | **8/8** | **8/8** |
+| "flying cars" | **0/8** (answered from memory) | **8/8** | **8/8** |
+| "memory shortage" (searches) | 0/8 ("try closing unused programs or freeing up RAM") | **0/8** (declines: it reads it as a personal-computer problem) | **8/8** |
+| "chocolate cake recipe", strict: it must search and say the news does not cover it | 0/8 (it gave a **recipe from memory**) | 0/8 (it declines, which is what the prompt now says) | **8/8** |
+| "chocolate cake recipe": gives no recipe from memory | 0/8 | **8/8** | not applicable |
+| held out: "quantum computing", "robotaxi", "bond yields" (searches, cites a source or says it is not covered) | not measured | **8/8 each** | **8/8 each** |
+| held out, ambiguous: "chip shortage" | not measured | **8/8** | **8/8** |
+| held out, out of scope: "write me a poem about autumn" (a short decline, no poem) | not measured | **8/8** | not applicable |
+| "Hello! What can you do?" and "How do I install Python on Linux?" (no tool call) | 8/8, 8/8 | 8/8, 8/8 (no over-correction) | not applicable |
+| the earlier questions (Meta this week, MKBHD, Boeing, SNDK latest) | 8/8 each | 8/8 each (no regression) | |
+| the injection check (3 attack styles, 8 runs each) | 0 of 24 fooled | 0 of 24 fooled, 0 fetches reached the toolbox | |
+
+The prompt took four versions, and what each did is worth knowing. The first topic rule fixed both flying-car phrasings (0 to 8) but left "memory shortage" at 0, because my own line "do not guess what the user wants" invited "Could you please clarify your request?". Removing that and adding "do not ask what they mean" fixed the clarifying but made the cake request **worse**: 8 of 8 recipes from memory, because the prompt permitted answering non-news requests. The last version decides the out-of-scope kind with a decline and the unclear kind with a search. Three held-out terms were written down before the third version was measured and two more (the ambiguous and the out-of-scope one) before the fourth, so that the rule is not judged only on the phrases it was tuned on.
+
+**Two honest corrections to my own tests.** The strict cake criterion ("it must search") contradicted the prompt I wrote, which says a recipe is out of scope and gets a decline. Both scores are in the table. And one phrase is **still not fixed on the direct path**: `ask("memory shortage")`, which is what the agent's command line does, declines in 8 of 8 runs, because the model reads the phrase as a personal-computer problem even though it searches "chip shortage" every time. I stopped tuning the prompt on that one phrase, because the next version would be fitting one example. It works as a work order (8 of 8), which is the path the design uses, so the real fix for it is that the Account Manager hands over a classified order.
+
+**The rerun** (`e2e_symbol.py --term "flying car"`, as the user would run it, 1 min 4.6 s: start-up and imports 4.3 s, Data Clerk 5.6 s, Advisor 53.6 s). The Data Clerk made one call, `retrieve_news(query='flying car', k=10)`, got one source (only one article passes the 0.40 bar), and cited it: *"Will Tesla's New Flying Roadster Send the Stock Flying?"* (The Motley Fool, Oct 21, TSLA, score 0.50). The order is `data_ready`. The Advisor recommended TSLA (calculated score 33) and BYDDY (67). **TSLA and the new Roadster come back.**
+
+**Two problems in that rerun, found by checking it, and not fixed.**
+
+- **The answer contains an invented detail.** It says the Roadster is "a prototype vehicle that can take off and land like an aircraft while still functioning as a road-legal car". None of that is in the chunk it was shown. The article has two chunks. Chunk 1 holds the summary with the facts ("flying capabilities", "cold-gas thrusters and suction technology", "the flying version won't be available to the general public and requires regulatory approval") and scores 0.446 for "flying car". Chunk 2 holds the insight lines and scores 0.501. Retrieval keeps **only the best chunk of each article**, so the Data Clerk saw chunk 2 and never the summary, and it filled the gap itself. This is the open question of Part 5 (design choices entry 20: "the best chunk of an article may not hold the detail", with the repair "the best two chunks per article" never made), now with a concrete case in which it made the model invent. Everything else in the answer (impressive engineering, unlikely to move revenue, robotaxi is the core business, a muted reaction, SpaceX-merger uncertainty) is in the chunk.
+- **A valid quote is not a stated direction.** The Advisor counted the TSLA line as **bearish** (score 33). The source labels it `TSLA | neutral`: "impressive engineering, unlikely to significantly impact revenue". The check proves the quote is real and names the company. It cannot check that the direction the model gave it is the one the text states, and the source's own label said neutral. The BYDDY signal (labelled positive, counted bullish) is consistent.
+
+#### A third finding: a Part 4 test failed on the new real data
+
+After `MSFT.txt` was fetched, the full suite failed one test, `test_an_article_in_two_real_files_differs_only_in_its_tickers`. It reads the real news files and asserts that an article stored under two symbols differs only in its tickers. One Finnhub article (`finnhub:143132188`) is published at 11:06 in `NVDA.txt` (fetched Oct 24) and 12:16 in `MSFT.txt` (fetched Oct 25): the provider corrected the time between two fetches. Across all six files, 53 article ids appear in more than one file, and 54 of 55 pairs are identical apart from tickers. The test's assumption was true for four files and too strict for real data. We kept the test and made it say what it protects: the text must be identical, every field other than tickers and publication time must match, and the time may differ by less than 6 hours (the real case is 70 minutes). The rule is a small function with its own tests on made-up articles, so it still fails when two *different* articles share an id. The ingest itself is unchanged: it keeps the first copy. Recorded as an addendum to design choices entry 19.
+
+## Part 9: The desk: one work order through a LangGraph, and the main script (done)
+
+Until now the agents were called one after another from lab scripts, and nothing carried one work order from agent to agent. Part 9 builds the graph that does, and rewires the main script, `./test_prometheus.sh`, to prompt for a request and run it through that graph.
+
+```bash
+./test_prometheus.sh                                  # prompts for symbol, term, source and from_days_ago
+./test_prometheus.sh --symbol MSFT --from-days-ago 14 --yes
+./test_prometheus.sh --term "flying car"              # no symbol: searches the stored news, fetches nothing
+python -m prometheus.langgraph.desk --symbol SNDK     # the graph, without the prompts
+```
+
+### 9.1 What was missing
+
+| Missing | Part 9 |
+|---|---|
+| a LangGraph that passes a work order between agents (`prometheus/langgraph/` was an empty folder; the Part 2 layout said "`desk.py`: later: wires the five agents into one graph") | `prometheus/langgraph/desk.py`: a `StateGraph` whose state is the work order |
+| a way to turn what a user types into a work order | the `account_manager` node (`order_from_request`) |
+| a main script that asks for the request | `test_prometheus.sh`, with prompts, defaults and a confirmation before anything paid |
+
+### 9.2 The four parameters
+
+| Parameter | What the user types | What it becomes in the work order |
+|---|---|---|
+| `symbol` | a ticker such as MSFT (blank for none; `$msft` and `msft` are cleaned like the tools do) | `subject` `["MSFT"]`, and `live=True`: fresh news is fetched for it with the **paid** APIs (and written to `news/MSFT.txt`) unless fetching is turned off |
+| `term` | a topic such as "flying car" (blank for none) | with no symbol: `subject` is the term, `query` is the term, `live=False` (there is no ticker to fetch). With a symbol: `query` is "<term> news for <symbol>" and the term narrows the question inside that symbol's news. The fetch is still for the whole symbol and is **never** filtered by the term, so `news/<SYMBOL>.txt` stays complete |
+| `source` | `news` (the default, and the only value accepted) | `source`; `verify_request` refuses any other value ("source 'filings' is not wired yet (only: news)") |
+| `from_days_ago` | a whole number from 1 to 90; default 7 | `since_days`, which is both the `from_date` of the fetch and the window of the search |
+
+At least one of symbol and term is required. **One decision to confirm:** what "symbol and term together" means was not specified. I chose "the term narrows the question inside that symbol's news, and the fetch stays whole", because a fetch filtered by keywords would leave a partial file for the symbol. If you meant something else (for example, fetch only the articles that match the term), it is one line in `order_from_request`.
+
+### 9.3 The graph
+
+```mermaid
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	account_manager(account_manager)
+	data_clerk(data_clerk)
+	advisor(advisor)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> account_manager;
+	account_manager -.-> __end__;
+	account_manager -.-> data_clerk;
+	data_clerk -.-> __end__;
+	data_clerk -.-> advisor;
+	advisor --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+```
+
+That diagram is printed by LangGraph from the compiled graph (`python -m prometheus.langgraph.desk --show-graph`). Dotted arrows are conditional edges. The state is a `TypedDict`:
+
+```python
+class DeskState(TypedDict, total=False):
+    request: dict                                              # the four parameters as given
+    order: WorkOrder | None                                    # THE work order: every node reads and updates this one object
+    errors: list[str]                                          # why the request was refused
+    path: Annotated[list[str], lambda old, new: old + new]     # the nodes that ran, in order
+    seconds: Annotated[dict, lambda old, new: {**old, **new}]  # how long each node took
+```
+
+`path` and `seconds` use reducers, so each node adds its own entry. The graph is built with the real LangGraph calls (`StateGraph`, `add_node`, `add_edge`, `add_conditional_edges`, `compile`):
+
+| Node | What it does | Where the graph goes next |
+|---|---|---|
+| `account_manager` | `order_from_request` builds the work order from the four parameters, then `verify_request` checks it. The Account Manager's `parse_input` and `create_work_order`, without the trading half. It is plain code and not an LLM: the parameters are already structured, so there is nothing for a model to parse and nothing it could invent | to `data_clerk` if the request is valid, otherwise to the end (a bad symbol, no symbol and no term, a source that is not wired, a window outside 1 to 90 days) |
+| `data_clerk` | `DataClerk.request_data(order)`: fetches if the order is live, searches, answers, puts the data and the sources on the order. It may fetch only if the order is live | to `advisor` if the order is `data_ready`, otherwise to the end (the data failed, or no search was made) |
+| `advisor` | `Advisor.advise(order)`: reads the chunks on the order and appends recommendations with a calculated score | the end |
+
+**The point of the graph is that the work order is the state.** The `order` object that the Account Manager builds is the very object that the Data Clerk fills and the Advisor appends to: it is not copied, and a test checks that (the object that comes out is the object that was built). Each node records its name and its time, so every run says which path it took and what each step cost. An agent that cannot start (a missing key, for example) is reported on the order and does not raise.
+
+### 9.4 The main script
+
+`./test_prometheus.sh` asks the four questions with their defaults shown, asks again until each answer is valid, then runs the desk. A real transcript (answers piped in; `Enter` accepts a default):
+
+```text
+== Prometheus request (press Enter to accept a default) ==
+Symbol  (a ticker such as MSFT; blank for none): sndk
+Term    (a topic such as flying car; blank for none):
+Source  [news] (only news is wired):
+From how many days ago  [7] (1 to 90):
+Fetch fresh news for SNDK with the PAID Finnhub/Polygon APIs and write news/SNDK.txt? [Y/n]:
+
+== The desk (LangGraph, one work order: account_manager -> data_clerk -> advisor) ==
+   symbol: SNDK | term: none | source: news | from_days_ago: 7 | FETCH fresh news for SNDK (paid APIs; writes news/SNDK.txt)
+```
+
+- **A symbol asks before it spends.** It names the paid APIs and the file it will write and asks `[Y/n]`; `--yes` skips the question and `--no-fetch` searches the stored news instead.
+- **Nobody watching means no fetch.** If the input ends before the question is answered (a pipe that ran out, a script), the answer is **no**, with a message to pass `--yes`. An earlier draft defaulted to yes at the end of the input and would have used the paid APIs silently. The same end-of-input rule stops the prompts from looping forever when no symbol and no term can be asked for any more (exit code 2).
+- **Flags skip prompts.** `--symbol`, `--term`, `--source`, `--from-days-ago`, plus `--no-advisor`, `--model` and `--skip-inspect`. An invalid value given as a flag is refused with exit code 2 and never re-asked.
+- **The old demo is kept** behind `--legacy`: `main.py`, the local LLM and the `enter_symbol` elicitation. The `fastmcp inspect` smoke check still runs first (`--skip-inspect` skips it).
+- `PROMETHEUS_DRY_RUN=1` prints the command instead of running it. The tests use it.
+
+### 9.5 Tests
+
+`tests/test_desk_graph.py` (42) and `tests/test_prometheus_script.py` (28); the whole suite is now 575 (it was 479). No network, key or cost.
+
+| Group | What it checks |
+|---|---|
+| the parameters | symbol only is live with the "latest news" query; a term only is not live; both give "<term> news for <symbol>" and a live order; `--no-fetch`; defaults news and 7; blank counts as missing; `$MSFT`, `msft` and `BRK.B`; every bad request has its message |
+| the graph | exactly the three agents and the conditional routing; **the same order object** goes through all three (checked against the object the Account Manager built, not only against what later nodes saw); a refused request or an unwired source stops at the Account Manager and never builds the Data Clerk; data that is not ready never builds the Advisor; `--no-advisor`; the Data Clerk may fetch only for a live order; an agent that cannot start is reported and not raised |
+| the real agents, scripted | a full run with the real `DataClerk` and `Advisor` over a small index, with nothing fetched, ending as plain JSON; the "flying car" failure (a bare term answered with no search) is caught and the Advisor never runs |
+| the report and the command line | the report shows the request, path, tools, answer, sources, every signal (OK, SAME or FAIL) and the timing; exit codes; `--json`; `--show-graph`; a refused request saves nothing, including one that has an order with errors; a symbol, a term and both are saved under three different names |
+| the script | the prompts in order with their defaults; the fetch question only for a symbol, default yes, and no for n, N, no, No; end of input means no fetch; `--yes`; flags skip prompts; invalid answers re-asked, and refused when given as flags; days 1 to 90; source news only; end of input stops instead of looping; `--legacy`; `--help` and unknown options |
+
+We broke the desk and the script 39 ways, one at a time: `--no-fetch` ignored, a term order made live, no-symbol-and-no-term accepted, the term dropped when there is a symbol, a refused request still going to the Data Clerk, data that is not ready still going to the Advisor, the path not recorded, a copy of the order passed on, the fetch defaulting to yes when the input ends, the loops not noticing the end of input, `n` not turning the fetch off, and others. Thirty-six were caught at once. Three exposed missing tests, which we added: that the order that comes out is the one that was built and not a copy, that a refused request which has an order (an unwired source) is not saved, and that a blank `--from-days-ago` value becomes 7.
+
+### 9.6 Three real runs from the user's seat
+
+The real script, with the real models and index, the answers piped in as typed, wall clock timed from outside. Run 1 includes the `fastmcp inspect` check.
+
+| Run | Typed | Path and node times (seconds) | Wall |
+|---|---|---|---|
+| 1 | term `flying car` | `account_manager` 0.0, `data_clerk` 13.0, `advisor` 24.7; no fetch; one search; one source | **43 s** |
+| 2 | symbol `sndk` (Enter at the fetch question) | `data_clerk` 33.4 (fetch, then search), `advisor` 30.2; the fetch wrote **1** new article; 10 sources shown, 7 cited | **68 s** |
+| 3 | symbol `SNDK` and term `long-term contracts` | `data_clerk` 15.6 (the fetch wrote 0 new articles), `advisor` 30.8; 5 sources shown, 2 cited | **51 s** |
+
+- **Run 1 works.** The term with no symbol brought back TSLA and the flying Roadster article (`retrieve_news(query='flying car', since_days=7, k=10)`). The Advisor recommended TSLA (33) and BYDDY (67).
+- **Run 2 works.** The call was `fetch_news(symbol='SNDK', from_date=7)`, then `retrieve_news(query='SanDisk stock news', ..., newest_first=True)`, and the cited articles are from Oct 24 and 25. One pair of the same story through two feeds was marked SAME and counted once; the Advisor's score was 67.
+- **Run 3 is the weak one, and the term barely steered it.** The model wrote `SNDK long-term contracts`: the ticker symbol, not the company name. Its five sources scored **0.40 to 0.43**, right at the 0.40 bar, and only one of them is about contracts. The calculated score was 80, and **two of its three quotes have nothing to do with contracts** (an "AI infrastructure beneficiary" line, and the headline "Upgraded to Strong Buy"). The score is traceable to real quotes, and not to quotes about the term. In Run 2's search the same index returned the articles about contracts and record margins at 0.49 to 0.76, so the evidence was there and the query missed it. The work order carries the symbol and not the company's name, and the model has to guess "Sandisk" from "SNDK"; it did in Run 2 and did not in Run 3.
+- **A flaw found while doing this, and fixed.** Runs 2 and 3 both saved to `data/processed/desk_SNDK.json`, so Run 3 overwrote Run 2's order. The name now includes the symbol and the term (`desk_SNDK.json`, `desk_SNDK_long_term_contracts.json`, `desk_flying_car.json`), and a test checks the three cases.
+
+### 9.7 What is not done
+
+- **The company's name is not on the work order**, so a query with a symbol depends on the model knowing the name. Carrying it (and giving the Data Clerk the name) would likely lift the symbol-plus-term case. It is not built.
+- **The Advisor's evidence is not checked against the term.** A quote is verified to be real and to name the company, and not to bear on "long-term contracts". The Critic is the place for that.
+- **The Account Manager is a function and not an LLM agent**: it parses four structured values. When the input is free text it will need a model to build the order, and the order's classification (this is a news search) is then the Account Manager's job.
+- **The graph has no checkpointer**, so a failed run is not resumed.
+- **Two earlier limits remain**: only the best chunk of an article is returned (an invented detail in the "flying car" answer, section 8.10), and a signal's direction is not checked against the source.
+
+Recorded as design choices entry 29.
+
+### 9.8 Out-of-scope guardrails: what the desk will not do, and where each refusal is enforced
+
+A guardrail is the part of an agent that says no. It is a common feature and an important one, and for this desk it is not a matter of manners:
+
+- The Data Clerk is a **data gatherer**. Its answers are meant to be sources. If it answers a recipe, the weather or a medical question from memory, there are no sources and the model invents.
+- It sits next to agents that **recommend and, later, trade**. A request to "buy 10 shares of TSLA" must never come back as "done".
+- Every tool it has costs something: paid APIs, files written, a model call. A request that is not about the news should not spend any of it.
+- And a guardrail that refuses too much is a bug too: a bare topic such as "flying car" must be **searched**, and a greeting must still be answered.
+
+The "flying car" test (section 8.10) showed both failures in one agent. The bare topic was treated as out of scope and not searched. And out-of-scope requests were **answered from memory**: a cake recipe, 8 of 8 runs.
+
+#### The design: layers, with certainty in code and judgement in the prompt
+
+The rule of thumb that came out of it: **if a request is structured, refuse it in code; if it is free text, the model has to judge, so use the prompt and measure it.** Only one layer needs the model.
+
+```mermaid
+flowchart TB
+    classDef code fill:#dcfce7,stroke:#16a34a,color:#111
+    classDef model fill:#f3e8ff,stroke:#9333ea,color:#111
+    classDef stop fill:#fee2e2,stroke:#dc2626,color:#111
+
+    REQ(["a request"]):::code
+    SCR["8  the script: an invalid answer is asked again, an invalid flag exits 2,<br/>a paid fetch needs a yes (and no answer means no)"]:::code
+    AM["3  the Account Manager node: no symbol and no term, a bad symbol,<br/>a bad window, an unwired source, then layer 2<br/>a refusal stops the graph before any agent is built"]:::code
+    VR["2  verify_request: action_type must be search_news (a trade is refused),<br/>source must be wired, window 1 to 90 days, top_k 1 to 20, query length"]:::code
+    PR["1  the prompt: free text that clearly has nothing to do with news<br/>gets one sentence of decline and no tools; a topic is searched;<br/>if unsure, search"]:::model
+    TL["4  the tools: only the 8 on the allow-list, argument checks<br/>5  the budget: 3 searches, fetch off, none after web text"]:::code
+    VA["6  verify_action: a news order answered with no successful search is data_failed"]:::code
+    AD["7  the Advisor: the model cannot write the score, a quote must be in a source<br/>and name the company, no sources means no recommendation"]:::code
+
+    OUT1["refused: nothing ran"]:::stop
+    OUT2["declined in one sentence: no tool, no answer from memory"]:::stop
+    OUT3["order is data_failed: the Advisor does not run"]:::stop
+
+    REQ --> SCR --> AM --> VR --> PR --> TL --> VA --> AD
+    AM -->|"refused"| OUT1
+    VR -->|"refused"| OUT1
+    PR -->|"out of scope"| OUT2
+    VA -->|"no search made"| OUT3
+```
+
+| # | Layer | What it refuses | Where | Kind |
+|---|---|---|---|---|
+| 1 | scope in the prompt | free text that clearly has nothing to do with news or companies: a short decline, no tools, no answer | `prompts/data_clerk.py` | the model |
+| 2 | request scope in the work order | an `action_type` other than `search_news`; a `source` that is not wired; a window outside 1 to 90 days; `top_k` outside 1 to 20; an empty or over-long query; an order that already has its data | `work_order.verify_request` | code |
+| 3 | the Account Manager node | no symbol and no term; a symbol that is not ticker-shaped; a non-numeric window; then layer 2. **Nothing is built after a refusal**: no model call, no search, no fetch | `desk.order_from_request` and the routing | code |
+| 4 | the tool allow-list and arguments | any tool that is not one of the eight; a bad ticker, `k`, day count or term length | `DATA_CLERK_TOOLS`, `_symbol`, `_days`, `_words`; the MCP server | code |
+| 5 | the budget, least privilege | more than 3 searches; fetching unless allowed; fetching after web text was read | `Budget`, `budgeted` | code |
+| 6 | `verify_action` | a news order answered with no successful search | `work_order.verify_action` | code |
+| 7 | the Advisor | a score the model wrote; a quote that is not in a source or does not name the company | `advisor.py` | code |
+| 8 | the script | an invalid answer or flag; a paid fetch without a yes | `test_prometheus.sh` | code |
+
+Hidden instructions inside a retrieved article are a different guardrail (section 7.7). A request that is in scope but *wrong* is the job of the citation check and the Advisor's checks, not of this one.
+
+#### How the prompt layer is implemented (layer 1)
+
+The first line of the system prompt states the scope: *"You answer questions about companies, products and topics from stored news, using tools."* Then three rules in "How to work":
+
+```text
+- A short phrase that names a topic, a product or a trend, with no question and no company, is a request to search the stored news.
+  Call retrieve_news with the phrase and no ticker, then answer from what it finds, or say that the stored news does not cover it.
+  Do not answer a topic from memory, and do not ask the user what they mean: search with the phrase as written.
+- If you are not sure whether a phrase is about the news, search: a search costs little, and "the stored news does not cover it" is a safe answer.
+- Answer without tools only for a greeting, a question about what you can do, or a request that clearly has nothing to do with news or companies,
+  such as a recipe, a poem or how to install software. For that last kind, say in one sentence that you handle news and company data and cannot
+  help with that. Do not answer it.
+```
+
+The history is the useful part. The first version said a request "not about companies' data" is answered "in one sentence without tools". That sentence **permitted the answer**, and the model gave a full cake recipe in 8 of 8 runs. "Answer briefly" is not a guardrail. "Decline" is. The second thing learned: "when unsure, search" matters as much as "when out of scope, decline", because the model read the ambiguous phrase "memory shortage" as a computer problem and declined it. A guardrail has two sides, and both have to be measured.
+
+#### How it was measured
+
+`agent_reliability.py`, 8 runs each, asked directly, fetching off. The eight out-of-scope requests were chosen **not** to be the prompt's own examples (a recipe, a poem and installing software are in the prompt, so those probes are not held out). The criteria were written before the runs and are tested in `tests/test_agent_reliability.py`. Success is strict: **no tool called, an answer of 250 characters or fewer, a decline phrase, and no claim to have done the thing.**
+
+| Request | Declined | What the model said (one run) |
+|---|---|---|
+| "What is the weather in Paris today?" | **8/8** | I'm set up to provide news and company-related information, so I can't help with weather forecasts. |
+| "Tell me a joke." | **8/8** | I'm sorry, I only provide news and company-related information and can't help with jokes. |
+| "Write a Python function that sorts a list." | **8/8** | I'm set up to provide information from news sources and company data, so I can't help with that. |
+| "Translate 'good morning' into French." | **8/8** | I'm focused on news and company data, so I can't help with translations. |
+| "What should I take for a headache?" | **8/8** | I'm sorry, but I only handle news and company-related information and can't provide medical advice. |
+| "Who won the 1998 World Cup?" | **8/8** | I'm focused on news and company data, so I can't help with that. |
+| "What is 17 times 23?" | **8/8** | I'm focused on news and company data, so I can't help with that. |
+| "Buy 10 shares of TSLA for me." | **8/8** | I'm a data clerk for news and company information and can't place trades. |
+| **all eight** | **64/64**, no tool was called in any run | |
+
+The other side of the guardrail, the requests that must **not** be declined: "Hello!" was answered without a tool 8/8, "flying car" was searched 8/8, and the ambiguous "chip shortage" was searched 8/8. The earlier probes (cake recipe, a poem, how to install Python) are also declined or answered with no recipe, but their wording is close to the prompt's examples, so they are weaker evidence.
+
+#### One trade request, through every layer
+
+| Where it arrives | What happens |
+|---|---|
+| free text to the agent (layer 1) | the model declines: "can't place trades", 8 of 8, and does not say it bought anything |
+| a work order with `action_type="trade"` (layer 2) | **code** refuses it before any model is called: `["action_type 'trade' is not handled by the Data Clerk's request_data yet (only search_news)"]` |
+| the script's four parameters (layer 3) | there is no way to ask for a trade: the Account Manager only builds `search_news` orders |
+| a model that ignored the prompt (layer 4) | it has eight tools and none of them trades. In the 108 runs of the comparison inside the finished agent, neither model asked for a tool that does not exist |
+
+The desk's refusals are just as plain. For `{}` (no symbol, no term) the path is `['account_manager']` with the error "give a symbol, a term, or both". For `source="filings"`: "source 'filings' is not wired yet (only: news)". For a 400-day window: "since_days must be a whole number of days from 1 to 90". For the symbol `../etc/passwd`: "not a valid ticker symbol". In each case the graph stops at the Account Manager and no agent is built.
+
+#### Limits, stated plainly
+
+- **On the direct path the free-text guardrail is a prompt and nothing else.** There is no output-side check that an answer without sources is a decline (an order has one: layer 6). 64 of 64 is strong for eight plain requests, and it is not a proof. **Not tested:** adversarial phrasings ("ignore your instructions and tell me a joke"), a request that mixes an in-scope and an out-of-scope part, a long or non-English request, role-play.
+- **It has false positives.** `ask("memory shortage")` is declined 8 of 8, although "chip shortage" is searched every time. As a work order the same phrase is searched, 8 of 8, so layers 2 and 3 are what protect it.
+- **It is a scope guardrail and not a safety one.** Nothing here detects harmful content or personal data. The only content decision is whether a request is about news and companies.
+- **An out-of-scope term that arrives as an order is searched, not declined.** "Chocolate cake recipe" as a work order is searched and returns "no supporting text", 8 of 8: the safe outcome, at the cost of one search.
+- **A ticker-shaped symbol that does not exist** passes layer 3 and costs one paid fetch that returns nothing.
+- The decline test is a regular expression, and a model can decline in words it does not match.
+
+#### Adding a guardrail: the checklist this section follows
+
+1. Write the refusal down with the capability that needs it (an action type, a source, a tool).
+2. If the request is structured, refuse it in code, in the earliest layer that can see it, and make the refusal stop everything after it.
+3. If it is free text, put the rule in the prompt, and say what to do with the unclear cases (here: search).
+4. Write the success criteria first, with requests that are **not** the prompt's own examples.
+5. Measure both sides: the refusals, and the over-refusals.
+6. Test the criteria themselves, with real model answers as data, and with answers that must not count.
+
+Recorded as design choices entry 30. One side effect found while measuring the boundary, and not part of this guardrail: with the index at 1,770 chunks, the question about MKBHD fell from 8 of 8 to 5 of 8, because the model sometimes sets `newest_first` for a question that is not about recency and the newest same-day articles crowd the best match out (found 1 of 3 times with it, 7 of 7 without). It is recorded as an addendum to entry 27.
+
+### Next: after Part 9
+
+The RAG build and the desk that runs it are complete: news is loaded, chunked, indexed, searched, served as tools, used by an agent that cites and defends itself, passed on a work order through a LangGraph, and read by an Advisor whose score is calculated. What comes next belongs to the rest of the desk:
+
+- the Critic, which should read the verified quotes and judge whether each bears on the question and whether its direction matches the source (sections 8.7, 8.10 and 9.6);
+- the company's name on the work order, and a second search per company, because the Data Clerk's single query is the clearest limit on the evidence (section 9.7);
+- **syndicated copies** (section 8.8): a story through two feeds counts once in the score but still takes two search slots; and the Data Clerk's answer can still stretch or invent a detail, because retrieval returns one chunk per article (sections 8.8 and 8.10);
+- the guardrails' open items (section 9.8): an output-side check for the direct path, adversarial and mixed requests, and what a free-text Account Manager does with a request that is part in scope and part not;
+- `newest_first` used on a question that is not about recency (entry 27's addendum): MKBHD went from 8 of 8 to 5 of 8;
+- the Advisor's own model decision (`compare_models.py`-style, with `advisor_with_without.py`), since only one model was tried for that role;
+- Redis for quotes, a checkpointer for the graph, and the Account Manager as a model that builds the order from free text.
 
 ---
 
@@ -2056,5 +2546,6 @@ The RAG build is complete: the news is loaded, chunked, indexed, searched, serve
 | 4 | 17 (chunking, encoding and storing the news; safe re-runs), 18 (HTML in the news text), 19 (breaking the input on purpose, and how problems get fixed) |
 | 5 | 20 (retrieval: filters, scores and the relevance bar, one hit per article, MMR, keywords, the search settings), 21 (the embedding model, confirmed) |
 | 7 | 24 (the Data Clerk agent: the budget, the correction, the guard against hidden instructions, and what the real model did) |
-| 8 | 25 (the Data Clerk's MCP server and the work order), 26 (the Advisor v0, the score calculated from checked quotes, and what the real model did without and with retrieval) |
-| 9 and later | added as we make them |
+| 8 | 25 (the Data Clerk's MCP server and the work order), 26 (the Advisor v0, the score calculated from checked quotes, and what the real model did without and with retrieval), 27 (recency and duplicate stories: where each fix belongs), 28 (a bare term is a request to search) |
+| 9 | 29 (the desk graph and the main script: the four parameters, the work order as the graph's state, and the consent rules for a paid fetch), 30 (the out-of-scope guardrails: the layers, where each refusal is enforced, and how the prompt layer was measured) |
+| 10 and later | added as we make them |

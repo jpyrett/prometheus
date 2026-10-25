@@ -48,10 +48,13 @@ Prereqs
 ----------------------------------------------------------
   conda activate cmu
   ./test_prometheus.sh
-  # Interactive: LocalLLM + HITL symbol elicitation (+ fastmcp inspect)
-  # Same core path as:  python main.py
-  # Add more end-to-end scenarios in this script as the app grows.
-  # Formal unit/integration tests remain under tests/ (pytest).
+  # It PROMPTS for the request, then runs it through the desk: a LangGraph that passes ONE work order
+  #   account_manager -> data_clerk -> advisor     (details in 8e below)
+  #   Symbol  a ticker such as MSFT (blank for none)            Term  a topic such as "flying car" (blank for none)
+  #   Source  news (the only one wired; the default)            From how many days ago  default 7 (1 to 90)
+  # A symbol FETCHES fresh news with the PAID APIs and WRITES news/<SYMBOL>.txt: it asks [Y/n] first (--yes skips the question).
+  # ./test_prometheus.sh --legacy    the old demo: LocalLLM + HITL symbol elicitation (python main.py)
+  # Add more end-to-end scenarios as the app grows. Formal unit/integration tests remain under tests/ (pytest).
 
 
 4) Pytest (FastMCP tools / quotes)
@@ -98,7 +101,7 @@ Prereqs
   python -m prometheus.rag.store                 # look at what Chroma holds
   python labs/module3_rag/break_the_input.py     # damage one article 15 ways and see what the pipeline does
   python -m prometheus.rag.retriever "what did MKBHD say about the foldable iPhone" --tickers AAPL   # search the news by meaning
-                                                 # options: --since-days 7  -k 5  --min-score 0.4  --diverse  --text
+                                                         # options: --since-days 7  -k 5  --min-score 0.4  --diverse  --newest-first  --text
   python labs/module3_rag/retrieval_experiments.py scores   # how well retrieval works on real questions
                                                  # sections: questions, scores, k, diverse, keywords, filters, recall, terse, embedders
   python -m prometheus.tools.data_clerk          # the Data Clerk's eight tools, as the LLM sees them (no network)
@@ -111,11 +114,15 @@ Prereqs
   python -m prometheus.mcp.data_clerk_server     # THE DATA CLERK'S MCP SERVER over stdio (Part 8); --allow-fetch also offers the 3 PAID fetch tools
   python labs/module3_rag/mcp_check.py           # talk to that server like another host: list tools, call retrieve_news, check it equals the direct call (no model, free)
   python labs/module3_rag/advisor_with_without.py --model nvidia/nemotron-3-super-120b-a12b   # Case 2: the Advisor without and with the chunks, 3 conditions x 5 runs, about 11 cents
+  python labs/module3_rag/e2e_symbol.py SNDK     # ONE SYMBOL FOR REAL: fetch (PAID APIs, WRITES news/SNDK.txt), index, search, answer, Advisor; about 1 minute
+  python labs/module3_rag/e2e_symbol.py MSFT --days 14      # the same for 14 days (about 3 minutes, mostly the Advisor model)
+  python labs/module3_rag/e2e_symbol.py --term "flying car"  # NO symbol, a term: searches the stored news, fetches nothing, prints timings
   python labs/module3_rag/compare_models.py --check   # no model calls: can each MU question be answered from the index?
   python labs/module3_rag/compare_models.py      # gpt-oss-120b against DeepSeek V4.1 Flash on MU: 108 runs, about 3 min, about 13 cents
   python -m prometheus.agents.data_clerk.agent "What did MKBHD say about Apple's foldable iPhone?"   # THE DATA CLERK: ask it a question (Part 7)
                                                  # options: --json  --model <id>  --max-turns 6  --allow-fetch (PAID APIs, WRITES news files)
   python labs/module3_rag/agent_reliability.py   # each question 8 times through the real Data Clerk: how often does it succeed?
+  python labs/module3_rag/agent_reliability.py --as-order --only flying-car,memory-shortage   # the same, but as a search_news work order (request_data)
   python labs/module3_rag/injection_check.py     # a poisoned article in a scratch index: does the real model obey it? (3 styles x 8 runs)
   python labs/module3_rag/compare_models.py --agent   # the same model comparison, but inside the finished Data Clerk (108 runs, about 3 min, about 16 cents)
   pytest tests/test_rag_loaders.py tests/test_rag_ingest.py tests/test_rag_retriever.py tests/test_rag_citations.py tests/test_data_clerk_tools.py tests/test_chat_model.py tests/test_compare_models.py tests/test_data_clerk_agent.py tests/test_work_order.py tests/test_advisor.py tests/test_advisor_with_without.py tests/test_mcp_data_clerk.py -q   # RAG, tools, agents, MCP tests (run from the repo root)
@@ -173,7 +180,7 @@ Prereqs
          The week 3 submission's Case 2 work order, answered 3 times with no tools and 3 times with retrieve_news.
          Prints both answers, the chunks retrieved (tickers, source, date, chunk id, score) and how many of 5 known facts
          each answer covers. Only retrieve_news runs. Transcripts: data/processed/with_without_retrieval.json.
-         The results are written up in design/week3_submission.md, section 3.
+         The results are written up in design/week3_evidence.md, section 3 (the short submission summarizes them).
 
   CHOOSING THE MODEL
     The model for each role comes from .env (names are in .env.example):
@@ -301,7 +308,7 @@ Prereqs
 
   RUN IT IN THIS ORDER (repo root, conda env "cmu"; the index must exist)
     1. pytest tests/test_mcp_data_clerk.py tests/test_work_order.py tests/test_advisor.py tests/test_advisor_with_without.py -q
-         125 tests, no network, no key, no cost (the whole suite is 450). One test starts the real server over stdio.
+         142 tests, no network, no key, no cost (the whole suite is 575). One test starts the real server over stdio.
     2. python labs/module3_rag/mcp_check.py
          Starts the real server as a subprocess, lists its 5 tools, calls retrieve_news on the real index (the MKBHD question: 0.73, 0.64, 0.57),
          shows the numbered text a model would read, checks the MCP answer equals the direct call, and tries fetch_news (refused).
@@ -315,6 +322,23 @@ Prereqs
          recommendations; C Advisor with retrieval 25 of 26 signals verified, 14 of 15 recommendations scored, MU 67 and NVDA 60 in every run
          while the model's own scores for them ranged 55-78 and 55-75.
 
+    5. python labs/module3_rag/e2e_symbol.py SNDK        (any symbol; --days 14, --no-advisor;  or --term "flying car" with no symbol)
+         THE ONLY SCRIPT THAT FETCHES: it uses the Finnhub and Polygon keys and WRITES files. It makes a live work order, runs
+         DataClerk(allow_fetch=True), and prints before/after of the news file and the index, the answer with its cited sources, and the
+         Advisor's recommendation. The finished order is saved as data/processed/e2e_SNDK.json. Takes about a minute.
+
+  TWO MORE REAL RUNS (guide 8.10): MSFT --days 14 took 3 min 18 s (720 articles fetched, no keywords; the Advisor model was 134 s of it).
+  --term "flying car" first took 9.5 s and the Data Clerk did NOT search; after the routing fix it takes 1 min 4.6 s (the Advisor is 54 s of it),
+  searches, and brings back TSLA and the flying Roadster article. The script prints a TIMING block each run.
+
+  WHERE THE FILES ARE WRITTEN
+    news/<SYMBOL>.txt                 fetched news, ONE FILE PER SYMBOL, appended to, an article with a url already in the file is skipped.
+                                      Folder = NEWS_OUTPUT_DIR (default news/). There is no combined file, and no news/MU.txt unless MU is fetched:
+                                      MU articles in the tests are tagged articles inside the other files.
+    data/processed/vectorstore        the Chroma index (derived data: python -m prometheus.rag.ingest --rebuild --all rebuilds it)
+    data/processed/e2e_<SYMBOL>.json  a finished work order (e2e_symbol.py only)
+    Nothing is written by a run with fetching off, which is every script except e2e_symbol.py (and the agent CLI with --allow-fetch).
+
   WHAT THE RESULT DOES NOT MEAN
     A calculated score is traceable and stable, not necessarily well founded: MU's 67 rests on one general sentence about AI infrastructure, because
     the Data Clerk's one search missed the article about Micron's 35% of revenue under contract. A verified quote is not necessarily relevant.
@@ -327,5 +351,88 @@ Prereqs
     The Advisor gives a recommendation with no score               no signal passed the checks (see the reasons in order.recommendations[i].signals).
     "the Advisor needs an order whose data is ready (status ...)"  run DataClerk().request_data(order) first, or use use_evidence=False.
     mcp_check.py: "Unknown tool: 'fetch_news'"                    expected: fetching is off unless the server has --allow-fetch.
+    e2e_symbol.py: the cited articles are old although newer ones are stored   retrieval ranks by meaning, not date. The Data Clerk now uses newest_first for
+                                      "latest" questions and writes the query about the company and topic (a query like "latest news SNDK" scores the
+                                      newest articles under the 0.40 bar). Check the "retrieve_news arguments" and RECENCY lines of the output (guide 8.8).
+    "no search of the stored news succeeded (no retrieve_news call), so the answer rests on no source"   the order came back data_failed: the Data Clerk answered a
+                                      news-search order without searching. Ask again; the Advisor refuses such an order (guide 8.10).
+    agent CLI: python -m prometheus.agents.data_clerk.agent "memory shortage"   declines ("I can only help with news"): that one phrase is read as a computer problem when
+                                      asked directly (0 of 8) and works as a work order (8 of 8). A bare term is otherwise searched; phrase it as a question if it is not.
+    e2e_symbol.py: the answer has a detail the source does not (a Roadster that "takes off and lands")   retrieval returns only the best chunk of an article and the
+                                      detail is in another chunk (guide 8.10, design entry 20). Not fixed.
+    e2e_symbol.py: an Advisor signal's direction is not the one the source states   the check verifies the quote and the company, not the direction (guide 8.10).
+    e2e_symbol.py: a signal's quote spans two sentences                 the quote passes the check because the two sentences together name the company (guide 8.10).
+    e2e_symbol.py: two signals are the same story                      "SAME" in the output: verified but not counted, a story counts once per direction.
+    e2e_symbol.py: a claim in the answer goes beyond its source (for example "including Sandisk")   a known limit of the Data Clerk's summary; the Advisor reads the chunks.
+
+8e) Part 9: the desk and the main script -- how it works, how to run it
+-----------------------------------------------------------------------
+  Full explanation: labs/module3_rag/hpw_to_do_langchain_rag.md, section Part 9 (9.1 to 9.7). Decisions: docs/design_choices.md entry 29.
+  Code: prometheus/langgraph/desk.py (the graph) and ./test_prometheus.sh (the prompts).
+
+  WHAT IT IS
+    A LangGraph (StateGraph) whose STATE IS THE WORK ORDER. One order object is built by account_manager, filled by data_clerk
+    (DataClerk.request_data) and appended to by advisor (Advisor.advise). Each node records its name and its time.
+      START -> account_manager -> data_clerk -> advisor -> END
+      a bad request stops after account_manager; data that is not ready (failed, or answered with no search) stops after data_clerk.
+    Print the graph as Mermaid:   python -m prometheus.langgraph.desk --show-graph
+
+  THE FOUR PARAMETERS
+    symbol         a ticker. The order is LIVE: fresh news is fetched (PAID Finnhub/Polygon APIs) and written to news/<SYMBOL>.txt.
+    term           a topic. No symbol: the stored news is searched, NOTHING is fetched. With a symbol: the term narrows the question inside that
+                   symbol's news (the fetch is still for the whole symbol and is never filtered by the term).
+    source         news. The only value wired, so the default and the only one accepted.
+    from_days_ago  1 to 90, default 7: the from_date of the fetch AND the window of the search.
+    At least one of symbol and term is required.
+
+  RUN IT
+    ./test_prometheus.sh                                         prompts for the four; Enter accepts a default
+    ./test_prometheus.sh --symbol MSFT --from-days-ago 14 --yes   no prompts for what is given; --yes = do not ask to confirm the fetch
+    ./test_prometheus.sh --term "flying car"                      a term, no symbol: no fetch
+    ./test_prometheus.sh --symbol SNDK --term "long-term contracts" --no-fetch --no-advisor --skip-inspect
+    printf 'sndk\n\n\n\n\n' | ./test_prometheus.sh --skip-inspect     answers piped in (a transcript echoes them)
+    python -m prometheus.langgraph.desk --symbol MSFT --from-days-ago 14 [--term T] [--no-fetch] [--no-advisor] [--model ID] [--json]
+    Flags: --symbol --term --source --from-days-ago --yes --no-fetch --no-advisor --model --skip-inspect --legacy --help.
+    PROMETHEUS_DRY_RUN=1 prints the command instead of running it.
+
+  SAFETY RULES OF THE SCRIPT
+    * A symbol names the paid APIs and the file it will write and asks [Y/n]. --yes skips the question, --no-fetch searches the stored news instead.
+    * If the INPUT ENDS before the question is answered (a pipe that ran out, a script nobody watches) the answer is NO: pass --yes to fetch.
+    * If no symbol and no term can be asked for any more, it stops with exit code 2 instead of looping.
+    * An invalid value given as a FLAG is refused with exit code 2 (no re-asking). An invalid ANSWER at a prompt is asked again.
+
+  WHAT YOU SEE
+    REQUEST, PATH (the nodes that ran; "(stopped here)" if it stopped early), ORDER (id, status, live or not, window, subject), QUERY, TOOLS (every call
+    with its arguments), DATA CLERK ANSWER with its sources, ADVISOR RECOMMENDATIONS with every signal (OK = counted, SAME = verified but the same story
+    counted once, FAIL = not verified, with the reason), and TIMING per node. The order is saved to data/processed/desk_<symbol>_<term>.json.
+    Exit code 0 = finished (a recommendation, or data ready with --no-advisor); 1 = refused or stopped early; 2 = a bad flag or no input.
+
+  REAL RUNS (the real script, the answers typed in, timed; guide 9.6)
+    term "flying car"                      43 s    brought back TSLA and the flying Roadster article
+    symbol sndk (fetch, 7 days)            68 s    fetched 1 new article, 10 sources shown, 7 cited, recent articles (Oct 24 and 25)
+    symbol SNDK + term "long-term contracts"  51 s  WEAK: the term barely steered the search (scores 0.40 to 0.43); see below
+
+  OUT-OF-SCOPE GUARDRAILS (guide 9.8, design entry 30): what the desk refuses and where
+    1 prompt (free text that is clearly not about news: one sentence of decline, no tools; a topic is searched; if unsure, search)
+    2 work order verify_request (action_type must be search_news, so a TRADE is refused; source news; window 1 to 90; top_k; query length)
+    3 the Account Manager node (no symbol and no term, a bad symbol, a bad window: the graph stops before any agent is built)
+    4 the tool allow-list (8 tools) and argument checks   5 the budget (3 searches, fetch off, none after web text)
+    6 verify_action (a news order answered with no search is data_failed)   7 the Advisor (quotes verified, no sources = no recommendation)
+    8 the script (invalid answers asked again, invalid flags exit 2, a paid fetch needs a yes)
+    Measure the prompt layer (REAL MODEL, a few cents; 8 requests that are not the prompt's examples, 64 runs):
+      python labs/module3_rag/agent_reliability.py --runs 8 --only oos-weather,oos-joke,oos-code,oos-translate,oos-medical,oos-trivia,oos-math,oos-trade
+    Last result: 64 of 64 declined (no tool called), and "Hello!", "flying car" and "chip shortage" were NOT declined (8/8 each).
+    Known: asked directly, "memory shortage" is declined (0 of 8); as a work order it is searched (8 of 8). The direct path has no output-side check.
+
+  IF SOMETHING FAILS OR LOOKS WRONG
+    "REFUSED  give a symbol, a term, or both" / "source 'x' is not wired yet (only: news)" / "since_days must be ..."   the Account Manager refused the request.
+    PATH ends at data_clerk with status data_failed                                the Data Clerk's answer was not trustworthy (an invalid citation) or
+                                                                                   no search was made. See ERRORS in the report; the Advisor did not run.
+    "the Data Clerk could not start: OPENROUTER_API_KEY is not set ..."            put the key in .env (see 8b).
+    "(no answer: not fetching. Pass --yes to fetch without being asked.)"           the input ended before the fetch question was answered.
+    A symbol + term run whose sources are not about the term                        the model wrote the ticker, not the company name, in its query and the
+                                                                                   scores sit at the 0.40 bar (guide 9.6). Try the term alone, or --no-fetch with
+                                                                                   the company name as the term. Carrying the company name on the order is not built.
+    The Advisor's score rests on quotes that are real but not about the term       a verified quote is not a relevant one; the Critic is not built (guide 9.7).
 
 See also: README.md  |  design/session_notes.md

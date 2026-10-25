@@ -24,7 +24,8 @@ CONTRACTS = ("Micron Has Locked In Its Revenue\n\nMicron has secured 35% of its 
              "cyclical risk of its memory business. Sandisk has secured 50%.")
 
 
-def source(number, text, tickers=("MU",), headline="H"):
+def source(number, text, tickers=("MU",), headline=None):
+    headline = headline or f"Headline number {number}"  # distinct, because the same headline means the same story
     return {"number": number, "chunk_id": f"art{number}#0", "article_id": f"art{number}", "chunk": 1, "chunks": 1, "headline": headline,
             "publisher": "The Motley Fool", "published_utc": "2026-10-23T10:00:00Z", "url": f"https://example.com/{number}",
             "tickers": list(tickers), "text": text, "score": 0.6}
@@ -34,7 +35,7 @@ def ready_order(*sources):
     order = wo.new_work_order("AI memory shortage. Which companies are affected, and what does the recent news say?", since_days=7, top_k=5)
     cited = [{"number": 1, "chunk_id": sources[0]["chunk_id"]}] if sources else []
     return wo.attach_result(order, Result(question="q", answer="Yes [1]." if sources else "Nothing found.", references=cited, sources=list(sources),
-                                          no_supporting_text=not sources))
+                                          no_supporting_text=not sources, tool_calls=[{"name": "retrieve_news", "args": {}, "outcome": "ok"}]))
 
 
 class Scripted:
@@ -174,6 +175,53 @@ def test_the_stance_is_checked_against_the_calculated_score():
     balanced = adv.build_recommendation(rec(stance="neutral", signals=both), sources, [])
     assert (balanced["bullish_signals"], balanced["bearish_signals"], balanced["score"], balanced["consistent"]) == (1, 1, 50, True)
     assert adv.build_recommendation(rec(stance="bullish", signals=both), sources, [])["consistent"] is False  # 50 is neutral, not bullish
+
+
+def test_the_same_story_through_two_feeds_counts_once():
+    """Found in the SNDK run: one Zacks article came through Polygon and again through Yahoo and Finnhub, and counted twice (80, not 75)."""
+    story = "Sandisk Corporation (SNDK) Upgraded to Strong Buy: Here's What You Should Know"
+    sources = {1: source(1, "Sandisk Corporation (SNDK) has been upgraded to a Zacks Rank #1 (Strong Buy) after estimates rose", ("SNDK",), story),
+               2: source(2, "Sandisk Corporation (SNDK) has been upgraded to a Zacks Rank #1 (Strong Buy) after estimates rose", ("SNDK",), story.upper().replace("'", "\u2019")),
+               3: source(3, "Sandisk reported record revenue as datacenter demand for its flash storage soared.", ("SNDK",), "Bull of the Day: Sandisk")}
+    quote = "Sandisk Corporation (SNDK) has been upgraded to a Zacks Rank #1 (Strong Buy)"
+    r = adv.build_recommendation(rec("SNDK", "Sandisk", signals=[sig(1, quote=quote), sig(2, quote=quote),
+                                                                  sig(3, quote="Sandisk reported record revenue as datacenter demand")]), sources, [])
+    assert [s["verified"] for s in r["signals"]] == [True, True, True] and [s["counted"] for s in r["signals"]] == [True, False, True]
+    assert r["signals_verified"] == 3 and r["signals_counted"] == 2 and (r["bullish_signals"], r["bearish_signals"]) == (2, 0)
+    assert r["score"] == 75 and adv.calculate_score(3, 0) == 80  # counted once, not three times
+    assert r["signals"][1]["note"] == "not counted: the same story as an earlier signal in the same direction" and r["signals"][1]["reason"] is None
+
+
+def test_a_bearish_story_through_two_feeds_also_counts_once():
+    text = "Micron faces rising debt yields and the risk of oversupply as new capacity arrives."
+    sources = {1: source(1, text, headline="Micron Faces Debt Risk"), 2: source(2, text, headline="MICRON faces debt risk!")}
+    quote = "Micron faces rising debt yields and the risk of oversupply"
+    r = adv.build_recommendation(rec(stance="bearish", signals=[sig(1, "bearish", quote), sig(2, "bearish", quote + " as new capacity arrives")]), sources, [])
+    assert (r["bullish_signals"], r["bearish_signals"], r["signals_verified"], r["signals_counted"]) == (0, 1, 2, 1)
+    assert r["score"] == 33 and adv.calculate_score(0, 2) == 25  # counted once: 33, not 25
+
+
+def test_two_quotes_from_one_article_in_the_same_direction_are_one_voice():
+    s = {1: source(1, CONTRACTS)}
+    r = adv.build_recommendation(rec(signals=[sig(1, quote="Micron has secured 35% of its revenue through long-term contracts"),
+                                              sig(1, quote="Micron has secured 35% of its revenue through long-term contracts, which reduces the cyclical risk")]), s, [])
+    assert [x["verified"] for x in r["signals"]] == [True, True]  # both quotes are real and name the company: it is the story rule that counts one
+    assert r["signals_verified"] == 2 and r["signals_counted"] == 1 and r["score"] == 67
+
+
+def test_the_same_story_in_opposite_directions_counts_both_ways():
+    text = "Micron faces rising debt yields, but Micron has locked in 35% of revenue through long-term contracts."
+    s = {1: source(1, text)}
+    r = adv.build_recommendation(rec(signals=[sig(1, "bullish", "Micron has locked in 35% of revenue through long-term contracts"),
+                                              sig(1, "bearish", "Micron faces rising debt yields")]), s, [])
+    assert (r["bullish_signals"], r["bearish_signals"], r["signals_counted"], r["score"]) == (1, 1, 2, 50)
+
+
+def test_different_stories_all_count_and_the_story_key_ignores_case_and_punctuation():
+    assert adv.story_key("Sandisk (SNDK) Upgraded: Here\u2019s What You Should Know!") == adv.story_key("SANDISK  SNDK  upgraded - here's what you should know")
+    assert adv.story_key("Bull of the Day: Sandisk") != adv.story_key("Sandisk Is a Bull")
+    r = adv.build_recommendation(rec(signals=[sig(1), sig(2, quote="Memory chip stocks Micron have declined")]), {1: source(1, CONTRACTS), 2: source(2, "Memory chip stocks Micron have declined roughly one-third")}, [])
+    assert r["signals_counted"] == 2
 
 
 def test_the_same_signal_twice_counts_once_and_no_more_than_three_are_read():

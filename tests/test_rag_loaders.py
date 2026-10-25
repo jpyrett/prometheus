@@ -10,6 +10,7 @@ import re
 from pathlib import Path
 
 import pytest
+from langchain_core.documents import Document
 
 from prometheus.rag import config
 from prometheus.rag.loaders import check_symbol, load_news, main, news_file
@@ -278,10 +279,58 @@ def test_every_real_news_file_loads_and_fits_the_design():
             assert file.stem in doc.metadata["tickers"], f"{file.name}: {doc.id} does not list {file.stem}"
 
 
-def test_an_article_in_two_real_files_differs_only_in_its_tickers():
-    """Part 4 merges the ticker lists of an article it has already stored and keeps everything else,
-    so everything else must match. Finnhub's tickers is just the symbol it was asked for: the same
-    article is ['AAPL'] in AAPL.txt and ['NVDA'] in NVDA.txt."""
+# A provider can correct an article's publication time between two fetches. The real files showed it once in 55 pairs of copies: one Finnhub
+# article is 11:06 in NVDA.txt (fetched Oct 24) and 12:16 in MSFT.txt (fetched Oct 25), 70 minutes apart. Everything else, the text included,
+# was identical. A copy may therefore differ in its tickers and in a publication time that moved by less than this; anything more means that
+# two different articles share an id, which is what this check exists to catch.
+TIME_CORRECTION_HOURS = 6
+
+
+def differs_only_by_tickers_and_a_corrected_time(a, b) -> str | None:
+    """None if the two copies of one article agree (tickers may differ, and the published time by less than TIME_CORRECTION_HOURS),
+    otherwise a short reason."""
+    if a.page_content != b.page_content:
+        return "the text differs"
+    skip = {"tickers", "published_ts", "published_utc"}
+    other = lambda d: {k: v for k, v in d.metadata.items() if k not in skip}  # noqa: E731
+    if other(a) != other(b):
+        return "more than the tickers and the time differs"
+    gap = abs(a.metadata["published_ts"] - b.metadata["published_ts"]) / 3600
+    if gap >= TIME_CORRECTION_HOURS:
+        return f"the published time differs by {gap:.1f} hours"
+    if (a.metadata["published_ts"] == b.metadata["published_ts"]) != (a.metadata["published_utc"] == b.metadata["published_utc"]):
+        return "published_ts and published_utc disagree"
+    return None
+
+
+def _copy(**changes):
+    metadata = {"article_id": "finnhub:1", "headline": "H", "publisher": "Yahoo", "api": "finnhub", "url": "https://x/1", "tickers": ["NVDA"],
+                "published_ts": 1792753560, "published_utc": "2026-10-23T11:06:00Z"}
+    text = changes.pop("text", "H\n\nbody")
+    metadata.update(changes)
+    return Document(id="finnhub:1", page_content=text, metadata=metadata)
+
+
+def test_copies_that_differ_only_in_tickers_or_in_a_small_time_correction_are_the_same_article():
+    assert differs_only_by_tickers_and_a_corrected_time(_copy(), _copy(tickers=["MSFT"])) is None
+    assert differs_only_by_tickers_and_a_corrected_time(_copy(), _copy(published_ts=1792753560 + 4200, published_utc="2026-10-23T12:16:00Z")) is None  # the real 70 minutes
+
+
+@pytest.mark.parametrize("changed, reason", [
+    ({"text": "H\n\na different body"}, "the text differs"),
+    ({"headline": "Another"}, "more than the tickers and the time differs"),
+    ({"url": "https://x/2"}, "more than the tickers and the time differs"),
+    ({"publisher": "Reuters"}, "more than the tickers and the time differs"),
+    ({"published_ts": 1792753560 + 7 * 3600, "published_utc": "2026-10-23T18:06:00Z"}, "the published time differs by 7.0 hours"),
+    ({"published_ts": 1792753560 + 60}, "published_ts and published_utc disagree"),
+])
+def test_copies_that_differ_in_anything_else_are_not_the_same_article(changed, reason):
+    assert differs_only_by_tickers_and_a_corrected_time(_copy(), _copy(**changed)) == reason
+
+
+def test_an_article_in_two_real_files_differs_only_in_its_tickers_or_a_corrected_time():
+    """Part 4 merges the ticker lists of an article it has already stored and keeps the first copy's text and metadata, so the copies must
+    agree. Finnhub's tickers is just the symbol it was asked for: the same article is ['AAPL'] in AAPL.txt and ['NVDA'] in NVDA.txt."""
     files = sorted(config.news_dir().glob("*.txt"))
     if len(files) < 2:
         pytest.skip("needs at least two real news files")
@@ -291,10 +340,8 @@ def test_an_article_in_two_real_files_differs_only_in_its_tickers():
             if doc.id not in first_seen:
                 first_seen[doc.id] = doc
                 continue
-            first = first_seen[doc.id]
-            assert doc.page_content == first.page_content, f"{doc.id}: the text differs between files"
-            without_tickers = lambda d: {k: v for k, v in d.metadata.items() if k != "tickers"}  # noqa: E731
-            assert without_tickers(doc) == without_tickers(first), f"{doc.id}: more than the tickers differs"
+            reason = differs_only_by_tickers_and_a_corrected_time(first_seen[doc.id], doc)
+            assert reason is None, f"{doc.id} in {file.name}: {reason}"
 
 
 HTML_ENTITY = re.compile(r"&(#\d+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);")

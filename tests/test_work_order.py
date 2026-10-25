@@ -77,6 +77,13 @@ def test_each_bad_request_is_refused_with_its_reason(fields, reason):
     assert any(reason in r for r in reasons), reasons
 
 
+@pytest.mark.parametrize("source", ["filings", "press_releases", "News", "", "social"])
+def test_a_source_that_is_not_wired_is_refused_and_news_is_the_default(source):
+    assert wo.verify_request(order()) == [] and order().source == "news"
+    reasons = wo.verify_request(order(source=source))
+    assert any(f"source {source!r} is not wired yet (only: news)" in r for r in reasons), reasons
+
+
 def test_an_order_that_already_has_its_data_is_not_worked_twice():
     o = order()
     o.status = "data_ready"
@@ -95,6 +102,24 @@ def test_request_data_puts_the_answer_the_cited_chunks_and_the_sources_on_the_sa
     assert o.data.completed_utc.endswith("Z") and o.data.turns == 2 and o.data.tokens_in > 0
     asked = model.seen[0][1][1].content  # the question the model received
     assert asked.startswith("What is new with Apple's phone?") and "subject: AAPL" in asked and "last 7 days" in asked and "at most 2 sources" in asked
+
+
+def test_a_live_order_asks_for_fresh_news_and_a_normal_one_does_not(index, toolbox):
+    c, model = clerk([say("ok"), say("ok")], index, toolbox)
+    c.request_data(order(subject=["SNDK"], live=True))
+    c.request_data(order(subject=["SNDK"]))
+    live, normal = model.seen[0][1][1].content, model.seen[1][1][1].content
+    assert "fresh news is required: call fetch_news once for each ticker in the subject first, then search" in live  # no window on this order, so no from_date
+    assert "fresh news" not in normal
+
+
+def test_the_window_of_a_live_order_becomes_the_from_date_of_the_fetch(index, toolbox):
+    c, model = clerk([say("ok"), say("ok")], index, toolbox)
+    c.request_data(order(subject=["MSFT"], live=True, since_days=14))
+    c.request_data(order(subject=["MSFT"], live=True))  # no window: no from_date is asked for
+    windowed, open_ended = model.seen[0][1][1].content, model.seen[1][1][1].content
+    assert "call fetch_news once for each ticker in the subject first, with from_date=14, then search" in windowed
+    assert "from_date" not in open_ended and "call fetch_news once for each ticker in the subject first, then search" in open_ended
 
 
 def test_the_order_survives_json_with_its_data(index, toolbox):
@@ -144,7 +169,8 @@ def test_an_order_that_is_already_done_is_not_asked_again(index, toolbox):
 # ---------------------------------------------------------------- verify_action: the checks on the data
 
 def result(**fields) -> Result:
-    base = dict(question="q", answer="Apple [1].", references=[{"number": 1, "chunk_id": "a#0"}], sources=[{"number": 1, "chunk_id": "a#0"}])
+    base = dict(question="q", answer="Apple [1].", references=[{"number": 1, "chunk_id": "a#0"}], sources=[{"number": 1, "chunk_id": "a#0"}],
+                tool_calls=[{"name": "retrieve_news", "args": {}, "outcome": "ok"}])  # a search_news order must have searched
     return Result(**{**base, **fields})
 
 
@@ -176,6 +202,44 @@ def test_an_empty_answer_fails_even_if_the_clerk_did_not_say_so():
 def test_what_the_clerk_itself_flagged_carries_over():
     o = wo.attach_result(order(), result(problems=["cites [8], which are not among the sources"]))
     assert o.status == "data_failed" and "cites [8], which are not among the sources" in o.errors
+
+
+def test_a_news_search_order_answered_without_a_search_fails_with_the_reason():
+    """Found in the "flying car" run: the Data Clerk answered a bare term from memory or with a refusal, the order came back data_ready,
+    and nothing said that no search had been made."""
+    reason = "no search of the stored news succeeded (no retrieve_news call), so the answer rests on no source"
+    for calls in ([], [{"name": "fetch_news", "args": {}, "outcome": "ok"}],                       # no search at all, or a fetch only
+                  [{"name": "retrieve_news", "args": {}, "outcome": "limit"}],                       # a search the budget refused
+                  [{"name": "retrieve_news", "args": {}, "outcome": "error"}]):                      # a search that failed
+        o = wo.attach_result(order(), result(answer="Flying cars are an emerging technology.", references=[], sources=[], tool_calls=calls))
+        assert o.status == "data_failed" and o.errors == [reason], calls
+
+
+def test_a_model_failure_is_the_only_reason_and_does_not_add_a_no_search_reason():
+    o = wo.attach_result(order(), result(answer="", references=[], sources=[], tool_calls=[], problems=["the model call failed (ConnectionError)"]))
+    assert o.status == "data_failed" and o.errors == ["the model call failed (ConnectionError)"]
+
+
+def test_an_order_that_is_not_a_news_search_is_not_held_to_the_no_search_rule():
+    o = order(action_type="fetch_quote")
+    wo.attach_result(o, result(references=[], sources=[], tool_calls=[]))
+    assert "no search of the stored news succeeded" not in " ".join(o.errors)
+
+
+def test_an_unsearched_answer_is_caught_through_request_data_and_the_advisor_then_refuses_it(index, toolbox):
+    from prometheus.agents.advisor.advisor import Advisor
+    c, _ = clerk([say("I can only provide information about companies.")], index, toolbox)
+    o = c.request_data(order(query="flying car", subject="flying car"))
+    assert o.status == "data_failed" and any("no search of the stored news succeeded" in e for e in o.errors)
+    refusing = ScriptedModel([])  # any call would raise
+    Advisor(model=refusing).advise(o)
+    assert o.recommendations == [] and refusing.seen == [] and any("needs an order whose data is ready" in e for e in o.errors)
+
+
+def test_every_order_tells_the_data_clerk_that_it_is_a_news_search():
+    c, model = clerk([say("ok")], None, None)
+    c.request_data(order(query="flying car", subject="flying car"))
+    assert "this is a request to search the stored news: call retrieve_news before you answer, whatever the subject is" in model.seen[0][1][1].content
 
 
 def test_no_supporting_text_together_with_sources_contradicts_itself():

@@ -253,6 +253,10 @@ class DataClerk:
         elif order.time_period:
             hints.append(f"time period: {order.time_period}")
         hints.append(f"use at most {order.top_k} sources")
+        hints.append("this is a request to search the stored news: call retrieve_news before you answer, whatever the subject is")
+        if order.live:
+            window = f", with from_date={order.since_days}" if order.since_days else ""
+            hints.append(f"fresh news is required: call fetch_news once for each ticker in the subject first{window}, then search")
         return f"{order.query.strip()}\n\n(Work order: {'; '.join(hints)}.)"
 
     @staticmethod

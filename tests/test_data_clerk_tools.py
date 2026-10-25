@@ -125,11 +125,20 @@ def test_every_tool_has_a_description_and_every_argument_is_documented(tools):
             assert spec.get("description"), f"{t.name}.{arg} has no description for the model"
 
 
+def test_retrieve_news_passes_newest_first_to_the_search_and_the_default_is_off(index, toolbox):
+    tools = DataClerkTools(toolbox, index)
+    plain = [h["chunk_id"] for h in tools.retrieve_news("apple iphone", tickers="AAPL", k=5)["hits"]]
+    newest = [h["published_utc"] for h in tools.retrieve_news("apple iphone", tickers="AAPL", k=5, newest_first=True)["hits"]]
+    assert newest == sorted(newest, reverse=True) and plain  # in date order only when asked
+    with pytest.raises(ToolInputError, match="newest_first must be true or false"):
+        tools.retrieve_news("apple iphone", newest_first="yes")
+
+
 def test_the_model_sees_the_arguments_of_retrieve_news_and_not_the_relevance_bar(tools):
     retrieve = tools.langchain_tools()[0]
-    assert list(retrieve.args) == ["query", "tickers", "since_days", "k", "diverse"]  # min_score stays ours
+    assert list(retrieve.args) == ["query", "tickers", "since_days", "k", "diverse", "newest_first"]  # min_score stays ours
     assert retrieve.get_input_schema().model_json_schema()["required"] == ["query"]
-    assert "diverse" in retrieve.description and "no supporting text" in retrieve.description
+    assert "diverse" in retrieve.description and "newest_first" in retrieve.description and "no supporting text" in retrieve.description
 
 
 def test_the_toolbox_of_the_real_default_is_rooted_where_rag_reads_its_files():

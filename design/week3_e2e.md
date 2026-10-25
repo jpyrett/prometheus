@@ -1,6 +1,6 @@
 # Week 3 end to end: how the DataAgent works with RAG
 
-Jacob Pyrett, CMU Agentic AI, Oct 2026. Companion to `design/week3_submission.md` (the answers) and `labs/module3_rag/hpw_to_do_langchain_rag.md` (the walk-through).
+Jacob Pyrett, CMU Agentic AI, Oct 2026. Companion to `design/week3_submission.md` (the answers, 600 to 900 words) and `design/week3_evidence.md` (the full results) and `labs/module3_rag/hpw_to_do_langchain_rag.md` (the walk-through).
 
 Every box below is a real file, class or function in this repository. Nothing is a plan.
 
@@ -468,3 +468,84 @@ flowchart TB
     B1 <--> LLMX
     C3 <--> LLMX
 ```
+
+---
+
+## 7. The desk and the main script (Part 9): the path a request takes
+
+`./test_prometheus.sh` prompts for four parameters and hands them to the desk: a LangGraph whose state is **one work order**, passed from the Account Manager to the Data Clerk to the Advisor. The hand-drawn flow shows how the parameters become the order and where each node goes into the layers of section 1:
+
+```mermaid
+flowchart TB
+    classDef lc fill:#dbeafe,stroke:#2563eb,color:#111
+    classDef lg fill:#dcfce7,stroke:#16a34a,color:#111
+    classDef ours fill:#f3f4f6,stroke:#6b7280,color:#111
+    classDef ext fill:#ffedd5,stroke:#ea580c,color:#111
+    classDef stop fill:#fee2e2,stroke:#dc2626,color:#111
+
+    USER(["user at the terminal"]):::ours
+    SH["test_prometheus.sh<br/>prompts: symbol, term, source (news), from_days_ago (7)<br/>a symbol asks [Y/n] before the paid fetch<br/>no answer means no fetch"]:::ours
+    CLI["python -m prometheus.langgraph.desk<br/>run_desk(request)"]:::ours
+
+    subgraph G["StateGraph(DeskState): the state is the work order"]
+        AM["account_manager<br/>order_from_request: symbol, term, source, days become the order<br/>verify_request: source wired, window 1 to 90"]:::lg
+        DCN["data_clerk<br/>DataClerk.request_data(order)"]:::lg
+        ADN["advisor<br/>Advisor.advise(order)"]:::lg
+    end
+
+    REF1["refused: errors on the request<br/>(no symbol and no term, a bad symbol, an unwired source)"]:::stop
+    REF2["stopped: the order is data_failed<br/>(an invalid citation, or answered with no search)"]:::stop
+    DONE(["order status recommended<br/>report, timings, data/processed/desk_symbol_term.json"]):::ours
+
+    USER --> SH --> CLI --> AM
+    AM -->|"valid"| DCN
+    AM -->|"not valid"| REF1
+    DCN -->|"data_ready"| ADN
+    DCN -->|"not ready"| REF2
+    ADN --> DONE
+
+    subgraph LAYERS["what the nodes use (section 1)"]
+        LG1["the DataClerk's own LangGraph: agent, tools, verify<br/>retrieve_news, fetch_news (only for a live order)"]:::lg
+        FETCH["DataAgent.fetch_news(symbol, from_date)<br/>Finnhub and Polygon, writes news/SYMBOL.txt, then ingest_symbol"]:::ext
+        CHR[("Chroma index<br/>search_news: filters, bar 0.40, newest_first")]:::lc
+        SIG["verify_signal per quote, a story counts once per direction<br/>calculate_score"]:::ours
+    end
+    DCN --> LG1
+    LG1 -->|"live order only"| FETCH --> CHR
+    LG1 --> CHR
+    ADN --> SIG
+```
+
+| Parameter | Becomes |
+|---|---|
+| symbol | `subject` `[SYMBOL]`; the order is live and the Data Clerk may fetch |
+| term, no symbol | `subject` and `query` are the term; not live; the stored news is searched |
+| term and symbol | `query` is "term news for SYMBOL"; live; the fetch is for the whole symbol |
+| source | `source`; only `news` passes `verify_request` |
+| from_days_ago | `since_days`: the fetch's `from_date` and the search window |
+
+The compiled graph as LangGraph itself prints it (`python -m prometheus.langgraph.desk --show-graph`); dotted arrows are the conditional edges above:
+
+```mermaid
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	account_manager(account_manager)
+	data_clerk(data_clerk)
+	advisor(advisor)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> account_manager;
+	account_manager -.-> __end__;
+	account_manager -.-> data_clerk;
+	data_clerk -.-> __end__;
+	data_clerk -.-> advisor;
+	advisor --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+```
+

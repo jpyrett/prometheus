@@ -13,9 +13,12 @@ is calculated from the criteria", so the model never writes the score here:
        copied word for word from one source, the source's number, and a direction (bullish or bearish);
     2. code checks every signal (`verify_signal`): the source exists, the quote is really in that source's text, and the quote itself
        names the company or its ticker. A signal that fails is kept, with the reason, and is not counted;
-    3. code calculates the score from the signals that pass (`calculate_score`).
+    3. code counts each STORY once per direction (`story_key`): the same article arrives through several feeds (Zacks through Polygon,
+       and again through Yahoo and Finnhub) with different ids, and two quotes from one article are one voice. The extra signals are
+       kept, marked `counted: false`, and do not add to the score;
+    4. code calculates the score from the counted signals (`calculate_score`).
 
-The Advisor reads the CHUNKS, not the Data Clerk's summary of them. In the week 3 re-run (design/week3_submission.md, section 3) the Data
+The Advisor reads the CHUNKS, not the Data Clerk's summary of them. In the week 3 re-run (design/week3_evidence.md, section 3) the Data
 Clerk's answers said Micron, SK Hynix and SanDisk fell a third and cited a chunk that names no company: a summary can stretch its source,
 and an agent that read the summary would inherit the stretch. Check 2's last rule is the repair: a quote that does not name the company
 does not count.
@@ -98,6 +101,11 @@ def calculate_score(bullish: int, bearish: int) -> int | None:
     return round(100 * (bullish + 1) / (bullish + bearish + 2))
 
 
+def story_key(headline: str) -> str:
+    """The same story through two feeds has the same headline up to case and punctuation, so that identifies it."""
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", normalize(headline)).split())
+
+
 def _side(score: int) -> str:
     return "bullish" if score > 50 else "bearish" if score < 50 else "neutral"
 
@@ -146,13 +154,23 @@ def build_recommendation(raw, sources: dict[int, dict], dropped: list[str]) -> d
         source = sources.get(int(number)) if ok else None
         signals.append({"source": number, "chunk_id": source["chunk_id"] if source else None, "direction": signal.get("direction"),
                         "quote": str(signal.get("quote", ""))[:300], "verified": ok, "reason": reason})
-    bullish = sum(s["verified"] and s["direction"] == "bullish" for s in signals)
-    bearish = sum(s["verified"] and s["direction"] == "bearish" for s in signals)
+    counted_stories = set()
+    for s in signals:  # a story counts once per direction: a syndicated copy, or a second quote from the same article, adds nothing
+        s["counted"] = False
+        if s["verified"]:
+            key = (story_key(sources[int(s["source"])]["headline"]), s["direction"])
+            if key in counted_stories:
+                s["note"] = "not counted: the same story as an earlier signal in the same direction"
+            else:
+                counted_stories.add(key)
+                s["counted"] = True
+    bullish = sum(s["counted"] and s["direction"] == "bullish" for s in signals)
+    bearish = sum(s["counted"] and s["direction"] == "bearish" for s in signals)
     score = calculate_score(bullish, bearish)
     return {"symbol": symbol, "company": company, "stance": stance, "model_score": model_score, "score": score,
             "supported": score is not None, "consistent": None if score is None or stance is None else stance == _side(score),
-            "bullish_signals": bullish, "bearish_signals": bearish, "signals_claimed": len(signals), "signals_verified": bullish + bearish,
-            "signals": signals}
+            "bullish_signals": bullish, "bearish_signals": bearish, "signals_claimed": len(signals),
+            "signals_verified": sum(s["verified"] for s in signals), "signals_counted": bullish + bearish, "signals": signals}
 
 
 class Advisor:

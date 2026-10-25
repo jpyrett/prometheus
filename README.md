@@ -31,7 +31,7 @@ capstone/
 ├── scripts/                # Thin shell/python runners you’ll add later
 ├── tests/                  # pytest (FastMCP tools + later app tests)
 ├── main.py                 # App entry: LocalLLM + FastMCP smoke / HITL
-├── test_prometheus.sh      # Quick e2e shell runs (extend here; pytest stays in tests/)
+├── test_prometheus.sh      # Main script: prompts for symbol / term / source / from_days_ago, runs the desk (a LangGraph passing one work order); pytest stays in tests/
 ├── HowToRun.txt            # Copy-paste shell commands
 ├── pytest.ini              # asyncio_mode=auto for FastMCP Client tests
 ├── requirements.txt        # Curated runtime deps (reproducible install)
@@ -53,7 +53,8 @@ cp .env.example .env              # once; set LOCAL_MODEL / keys
 python main.py --skip-llm         # MCP only (fast)
 python main.py                    # elicit symbol → fetch_quote → LocalLLM
 python main.py --symbol TEST      # demo quote price 999.99; skip elicitation
-./test_prometheus.sh              # quick e2e (LLM + elicit); extend this script later
+./test_prometheus.sh              # prompts for symbol, term, source (news) and from_days_ago (7), then runs the desk: account_manager -> data_clerk -> advisor
+./test_prometheus.sh --legacy     # the old demo (LocalLLM + elicitation)
 
 pytest tests/fastmcp_tools.py tests/fastmcp_quotes.py -q -k 'not forced_failure'
 fastmcp inspect prometheus/mcp/server.py

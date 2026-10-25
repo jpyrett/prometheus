@@ -13,6 +13,10 @@ questions the week 3 design asks of retrieval (design choices entry 20):
   caller has to say "no supporting text" instead of guessing.
 * No repeats. One hit per article (its best chunk). With diverse=True the hits are also spread over different
   stories (maximal marginal relevance), for a broad question over news that repeats itself.
+* Newest first, on request. A search ranks by meaning, not by date, so a question about "the latest news" can be
+  answered with older articles that match the words better (found in the SNDK run: all five hits were from Oct 19
+  while newer articles were stored). With newest_first=True the articles that pass the relevance bar are ordered
+  by date, newest first, and the newest k are returned.
 """
 import argparse
 import sys
@@ -108,7 +112,7 @@ def _hit(doc: Document, score: float) -> Hit:
 
 def search_news(query: str, *, tickers: str | list[str] | None = None, since_days: int | None = None,
                 k: int = K, min_score: float | None = MIN_SCORE, diverse: bool = False,
-                lambda_mult: float = MMR_LAMBDA, store: Chroma | None = None,
+                lambda_mult: float = MMR_LAMBDA, newest_first: bool = False, store: Chroma | None = None,
                 now: datetime | None = None) -> list[Hit]:
     """Search the news index by meaning. Returns at most k hits, one per article, best first (or, with
     diverse=True, in the order maximal marginal relevance picks them). An empty list means "no supporting text".
@@ -120,6 +124,9 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     k:          how many articles, 1 to MAX_K.
     min_score:  the relevance bar, 0 to 1; None turns it off (for looking at scores).
     diverse:    spread the hits over different stories; use it for a broad question, not a narrow one.
+    newest_first: of the articles that pass the relevance bar (among the closest k * FETCH_FACTOR chunks), return the
+                newest k, newest first, instead of the k that match best. For "latest", "newest", "most recent". The bar
+                still applies, so a new article that is not about the question is not returned. It wins over diverse.
     store, now: for tests; the real index and the real clock when left out."""
     if not isinstance(query, str) or not query.strip():
         raise ValueError("the question must be a non-empty text")
@@ -131,6 +138,8 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
         raise ValueError("min_score must be between 0 and 1 (or None for no bar)")
     if not 0.0 <= lambda_mult <= 1.0:
         raise ValueError("lambda_mult must be between 0 and 1")
+    if not isinstance(newest_first, bool):
+        raise ValueError("newest_first must be true or false")
     symbols = _symbols(tickers)
 
     since_ts = None
@@ -147,7 +156,9 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     candidates = _best_chunk_per_article(scored)
     if min_score is not None:
         candidates = [(doc, score) for doc, score in candidates if score >= min_score]
-    if diverse and len(candidates) > k:
+    if newest_first:
+        candidates = sorted(candidates, key=lambda c: (-c[0].metadata["published_ts"], -c[1]))  # newest first, the better match first on a tie
+    elif diverse and len(candidates) > k:
         candidates = _spread(store, query.strip(), candidates, k, lambda_mult)
     return [_hit(doc, score) for doc, score in candidates[:k]]
 
@@ -169,19 +180,20 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("-k", type=int, default=K, help=f"how many articles (default {K}, at most {MAX_K})")
     parser.add_argument("--min-score", type=float, default=MIN_SCORE, help=f"relevance bar from 0 to 1 (default {MIN_SCORE})")
     parser.add_argument("--diverse", action="store_true", help="spread the hits over different stories (MMR)")
+    parser.add_argument("--newest-first", action="store_true", help="of the relevant articles, the newest first (for 'latest' questions)")
     parser.add_argument("--text", action="store_true", help="also print the text of each hit")
     args = parser.parse_args(argv)
     try:
         if not count_chunks():
             print("nothing is stored yet. Ingest some news first:  python -m prometheus.rag.ingest --all", file=sys.stderr)
             return 1
-        asked = dict(tickers=args.tickers, since_days=args.since_days, k=args.k, diverse=args.diverse)
+        asked = dict(tickers=args.tickers, since_days=args.since_days, k=args.k, diverse=args.diverse, newest_first=args.newest_first)
         hits = search_news(args.query, min_score=args.min_score, **asked)
         print(f"question : {args.query!r}")
         print(f"filters  : {_describe_filters(args.tickers, args.since_days)}")
-        print(f"settings : k={args.k}, relevance bar {args.min_score}, diverse {'yes' if args.diverse else 'no'}")
+        print(f"settings : k={args.k}, relevance bar {args.min_score}, diverse {'yes' if args.diverse else 'no'}, newest first {'yes' if args.newest_first else 'no'}")
         if not hits:
-            closest = search_news(args.query, **{**asked, "k": 1, "diverse": False}, min_score=None)
+            closest = search_news(args.query, **{**asked, "k": 1, "diverse": False, "newest_first": False}, min_score=None)
             if closest:
                 c = closest[0]
                 print(f"\nno supporting text: nothing scored {args.min_score} or more.")

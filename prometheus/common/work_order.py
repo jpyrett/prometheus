@@ -27,6 +27,7 @@ from pydantic import BaseModel, Field
 
 ACTION_TYPES = ("trade", "search_news", "fetch_quote", "search_socials", "calculate_financials")
 STATUSES = ("new", "data_ready", "data_failed", "recommended")
+WIRED_SOURCES = ("news",)  # the sources the Data Clerk can search today; filings, press releases and the rest are not wired into the search yet
 MAX_QUERY = 1000
 MAX_TOP_K = 20
 MAX_SINCE_DAYS = 90
@@ -99,6 +100,8 @@ def verify_request(order: WorkOrder) -> list[str]:
     if order.since_days is not None and (not isinstance(order.since_days, int) or isinstance(order.since_days, bool)
                                          or not 1 <= order.since_days <= MAX_SINCE_DAYS):
         reasons.append(f"since_days must be a whole number of days from 1 to {MAX_SINCE_DAYS}")
+    if order.source not in WIRED_SOURCES:
+        reasons.append(f"source {order.source!r} is not wired yet (only: {', '.join(WIRED_SOURCES)})")
     if order.status in ("data_ready", "recommended"):
         reasons.append(f"the order already has its data (status {order.status})")
     return reasons
@@ -106,11 +109,15 @@ def verify_request(order: WorkOrder) -> list[str]:
 
 def verify_action(order: WorkOrder) -> list[str]:
     """Whether the data on the order can be trusted; an empty list means it can (the design's verify_action, which checks row counts).
-    "Nothing found" passes: it is a result. What fails is data that contradicts itself or that the Data Clerk itself flagged."""
+    "Nothing found" passes: it is a result, but only after a search: a search_news order whose answer involved no successful search fails. What fails is data that contradicts itself or that the Data Clerk itself flagged."""
     data = order.data
     if data is None:
         return ["the order has no data yet"]
     reasons = list(data.problems)
+    searched = any(c.get("name") == "retrieve_news" and c.get("outcome") == "ok" for c in data.tool_calls)
+    if order.action_type == "search_news" and not searched and not data.problems:
+        # a news-search order must search. An answer without a search rests on no source: it is the model's memory or a refusal
+        reasons.append("no search of the stored news succeeded (no retrieve_news call), so the answer rests on no source")
     if not data.answer.strip() and not reasons:  # when the Data Clerk already says why (a failed model call), that is the reason
         reasons.append("the answer is empty")
     known = {s.get("chunk_id") for s in data.sources}

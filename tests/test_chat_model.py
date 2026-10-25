@@ -105,7 +105,7 @@ def test_the_data_clerk_tools_can_be_bound_to_the_chat_model_with_no_network_cal
     schemas = bound.kwargs["tools"]
     assert [s["function"]["name"] for s in schemas] == list(DATA_CLERK_TOOLS)
     retrieve = schemas[0]["function"]
-    assert list(retrieve["parameters"]["properties"]) == ["query", "tickers", "since_days", "k", "diverse"]
+    assert list(retrieve["parameters"]["properties"]) == ["query", "tickers", "since_days", "k", "diverse", "newest_first"]
     assert retrieve["parameters"]["required"] == ["query"] and "no supporting text" in retrieve["description"]
     assert all(s["type"] == "function" and s["function"]["description"] for s in schemas)
 
