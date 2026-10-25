@@ -86,4 +86,14 @@ Prereqs
   OPENROUTER_API_KEY=...        # later LangGraph / OpenRouter agents
 
 
+8) RAG (Module 3): news -> Documents -> Chroma
+----------------------------------------------
+  Step-by-step guide: labs/module3_rag/hpw_to_do_langchain_rag.md   (design: docs/design_choices.md)
+
+  python labs/module3_rag/check_install.py       # prove LangChain + Chroma + local embeddings work
+  python labs/module3_rag/chroma_demo.py         # the class-slide Chroma example, no model download
+  python -m prometheus.rag.loaders AAPL          # look at the Documents made from news/AAPL.txt
+  pytest tests/test_rag_loaders.py -q            # loader tests (run from the repo root)
+
+
 See also: README.md  |  design/session_notes.md

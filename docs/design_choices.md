@@ -297,7 +297,7 @@ prometheus/
   langgraph/desk.py        later: wires the five agents into one graph (Account Manager -> Data Clerk -> ...)
 ```
 
-Today only `agents/data_clerk/` (the toolbox and its test scripts) and the `rag/` package exist. The other files are created step by step in the guide.
+Today `agents/data_clerk/` (the toolbox and its test scripts) and `rag/` with `config.py` and `loaders.py` exist. The other files are created step by step in the guide.
 
 **Rules behind it.**
 1. **One folder per agent under `agents/`,** named after its role in the design: Data Clerk, Advisor, Critic, Account Manager, Trader (the README lists them). The Data Clerk and its toolbox share one folder (entry 13).
@@ -420,3 +420,33 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 6. **Grading and query rewriting stay optional.** The first version is the simple loop: the LLM calls tools, reads the results and answers. The grader and rewriter from the LangChain "custom RAG agent" guide would make it a Hybrid form. We add them only if plain retrieval fails on real questions (the rule in `design/week3_notes.md`).
 
 **Costs.** At least two LLM calls for a question that retrieves (decide, then answer), where 2-Step RAG needs one, and latency varies with the number of tool calls. The LLM can also skip retrieval when it should not. The system prompt tells it to retrieve for any question about a company's news, and a test in Part 8 checks that it does.
+
+## 16. Loading the news files into Documents (Part 3)
+
+**Date:** 2026-10-24
+
+**Decision.** `prometheus/rag/loaders.py` reads a DataAgent news file with one plain function, `load_news(path) -> list[Document]`, and `prometheus/rag/config.py` says where the files are. All five proposals in the guide (section 3.3) held up.
+
+- **One article is one Document,** with the article id as the Document id.
+- **`page_content`** is the headline, the summary and the insight lines, separated by blank lines, exactly as the file has them, so the text can always be rebuilt from the file.
+- **Metadata:** `article_id`, `headline`, `tickers` (a list), `published_utc`, `published_ts` (epoch seconds, a number, because Chroma range filters take numbers only), `publisher`, `api`, `url`. These are the filter and citation fields (entry 15). Left out: `keywords` (140 of 288 articles have them; Part 5 tests adding them to the text), `author`, `image_url`, `category`, `type` and `company`.
+- **The file's own symbol is not stored.** It is always in `tickers` (288 of 288). If a record has no tickers it falls back to the file's symbol, and with neither it is an error.
+- **Errors stop the load.** A record the DataAgent would not have written (no `<<<END>>>`, a new record inside an unfinished one, an unknown `<<<` marker, a header line without a colon, a missing `id`, `headline`, `published_utc` or `url`, a bad date, text outside a record) raises `ValueError` with the file and line. The DataAgent's own `_read_records` silently drops a record that an interrupted fetch cut short. The loader stops instead, so a missing article is noticed.
+- **Symbols are validated before they become a file name** (`news_file`): letters, digits, `.` and `-`, at most 10 characters, so `../../.env` is refused. Symbols will come from an LLM's tool call. The vendored DataAgent only strips and uppercases, so the tool wrapper (Part 6) must validate symbols too.
+- **Settings:** `NEWS_OUTPUT_DIR` (the DataAgent's own name) from the environment, then `.env`, then `news/` at the repo root. A relative path is resolved against the repo root.
+
+**Finding: Finnhub's `tickers` is only the symbol that was asked for.** For all 148 Finnhub articles `tickers` is exactly `[the file's symbol]`. For Polygon it is the article's real company list (122 of 140 name more than one). So the same Finnhub article read from AAPL.txt and from NVDA.txt has `["AAPL"]` and `["NVDA"]`. That is 3 of the 7 articles that sit in two files; the other 4 are Polygon articles and identical. One row per article by id alone would keep only the last list. **Part 4 rule: when an article is stored again, merge its `tickers` with the stored list (a union) and keep everything else.** A test checks the assumption the rule rests on: copies of an article differ only in `tickers`.
+
+**Options considered.**
+1. A `BaseLoader` subclass. Rejected: both LangChain guides use plain functions.
+2. Reuse `DataAgent._read_records`. Rejected: it is private, merges summary and insights into one text, drops cut-short records silently, and `rag/` must not import the DataAgent (entry 12).
+3. Store the file's symbol as metadata. Rejected: see above.
+4. Merge duplicates inside `load_news`. Rejected: the loader reads one file, and the merge needs the row already stored, so it belongs to ingestion.
+
+**Also changed.**
+- `pytest.ini` gets `pythonpath = .`. The existing tests found `prometheus` only because `PYTHONPATH` in this shell ends with a colon (set by the Pleora eBUS SDK), which Python reads as the current folder. With `PYTHONPATH` cleared they failed.
+- `.env.example` now lists `POLYGON_API_KEY` (the DataAgent reads it; no code reads `MASSIVE_API_KEY`) and documents `NEWS_OUTPUT_DIR`. `HowToRun.txt` has a short RAG section.
+
+**Tests.** `tests/test_rag_loaders.py`: 39 tests, passing with and without `PYTHONPATH`. `tests/fixtures/news_sample.txt` holds three real records copied verbatim. Five deliberate breaks of the loader were each caught by the tests.
+
+**Consequences.** *Pro:* the file-format contract is enforced and tested in one place, against real records and against every real file when present. *Con:* one bad record stops the whole file. Fix the file or re-fetch it.

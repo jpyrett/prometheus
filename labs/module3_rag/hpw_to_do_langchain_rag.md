@@ -16,8 +16,8 @@ References we follow:
 | 0 | The big picture: what RAG is and how the pieces fit | done |
 | 1 | Install the stack and prove it works | done |
 | 2 | Where the code lives | done |
-| 3 | Look at the data, then load it into LangChain `Document`s | **next** |
-| 4 | Chunk, embed and store: ingest AAPL into Chroma | |
+| 3 | Look at the data, then load it into LangChain `Document`s | done |
+| 4 | Chunk, embed and store: ingest AAPL into Chroma | **next** |
 | 5 | Retrieve by hand on real data: search vectors, fetch text by ID, filters, scores, "no supporting text" | |
 | 6 | Tools and the chat model: `retrieve_news` and the DataAgent tools as plain functions, numbered sources, the citation check | |
 | 7 | The Data Clerk agent: a LangGraph where the LLM decides whether to retrieve or fetch, and the answer cites its sources | |
@@ -377,7 +377,7 @@ prometheus/
 labs/module3_rag/          this guide and check_install.py
 ```
 
-Today only `agents/data_clerk/` (the toolbox and its two test scripts) and the `rag/` package (still empty) exist. Each file appears in the part that needs it: `config.py` and `loaders.py` in Part 3, `store.py` and `ingest.py` in Part 4, `retriever.py` in Part 5, `citations.py`, `tools/data_clerk.py` and `models/chat.py` in Part 6, `agent.py` and `prompts/` in Part 7, `mcp/server.py` in Part 8.
+Today `agents/data_clerk/` (the toolbox and its two test scripts) and `rag/` with `config.py` and `loaders.py` exist. Each remaining file appears in the part that needs it: `store.py` and `ingest.py` in Part 4, `retriever.py` in Part 5, `citations.py`, `tools/data_clerk.py` and `models/chat.py` in Part 6, `agent.py` and `prompts/` in Part 7, `mcp/server.py` in Part 8.
 
 The rules behind it (full reasoning in entries 12 to 14):
 
@@ -403,9 +403,9 @@ We tested this after the rename: the news folder resolves to `<repo>/news`, and 
 
 ---
 
-## Part 3: Look at the data, then load it (next)
+## Part 3: Look at the data, then load it (done)
 
-Nothing in this part is built yet. It shows what we found in your files and proposes the decisions, so you can steer before any code is written.
+Stage 1 of the slide starts here, with its first box: **Documents**. We read the DataAgent's news files and turn each article into a LangChain `Document`. Nothing is embedded yet. You can run everything in this part yourself (sections 3.5 and 3.6).
 
 ### 3.1 What the DataAgent wrote
 
@@ -422,7 +422,7 @@ Nothing in this part is built yet. It shows what we found in your files and prop
 Four things to notice:
 
 - **Most Polygon articles are long, and Finnhub ones are short.** That is why NVDA (mostly Polygon) has a median of 1,218 characters and AAPL (mostly Finnhub) only 255.
-- **An article can sit in more than one symbol file.** 7 of the 288 appear in two files (for example AAPL and NVDA), and a file's own symbol is always inside the article's `tickers` (288 of 288). So we do not store the file's symbol at all: one row per article, with the whole `tickers` list as the filter. The CoreWeave article in `news/NVDA.txt` has `tickers: CRWV, MSFT, META, NVDA`, so a filter on any of the four finds it.
+- **An article can sit in more than one symbol file, and `tickers` means two different things.** 7 of the 288 appear in two files (for example AAPL and NVDA). For **Finnhub** articles `tickers` is only the symbol that was asked for: all 148 are exactly `[the file's symbol]`, so the same article is `["AAPL"]` in one file and `["NVDA"]` in the other (3 of the 7 duplicates). For **Polygon** articles it is the article's real list of companies (122 of 140 name more than one) and it is identical in both files. A file's own symbol is always in the list (288 of 288), so we do not store it separately. We keep one row per article and **merge the two lists when an article is stored a second time** (Part 4), so a filter on any ticker finds it. The CoreWeave article in `news/NVDA.txt` has `tickers: CRWV, MSFT, META, NVDA`, so a filter on any of the four finds it.
 - **There are repeated headlines.** NVDA has 7. Keep an eye on them in Part 5 (MMR, see below).
 - **The embedder cannot read all of it.** See the Part 4 preview.
 
@@ -448,19 +448,162 @@ metadata:
   url            https://finnhub.io/api/news?id=d785...f1b1
 ```
 
-The Document's `id` is the article id, so the same article read from two files becomes one row. `headline`, `publisher`, `published_utc` and `url` are the citation fields: they are what the answer shows next to a source, so every chunk carries them (design choices entry 15).
+The Document's `id` is the article id, so the same article read from two files is one row after ingestion (with its ticker lists merged). `headline`, `publisher`, `published_utc` and `url` are the citation fields: they are what the answer shows next to a source, so every chunk carries them (design choices entry 15).
 
-### 3.3 Decisions proposed for Part 3
+### 3.3 The decisions we made
 
-| # | Question | Proposal | Why |
+| # | Question | Decision | Why |
 |---|---|---|---|
 | 1 | What is one Document? | one article | the unit we de-duplicate, filter and cite; chunks come from splitting it in Part 4 |
 | 2 | What goes into `page_content`? | headline, summary, then the insight lines, separated by blank lines | the insights carry the reasoning the Advisor needs |
 | 3 | Which metadata? | the fields above: `tickers` stays a list, `published_ts` is a number | filters need them, and the headline, publisher, date and url are what a citation shows; Chroma filters a list with `$contains` and a date only as a number (both tested) |
 | 4 | How do we read the files? | one plain function, `load_news(path) -> list[Document]` | both LangChain guides do the same (`load_pdf_pages`, `load_web_page`) instead of loader classes |
-| 5 | One collection or one per symbol? | one collection, one row per article, filtered with `tickers` and `$contains` | Case 2 has no symbol up front and must search across companies, and 7 articles sit in two symbol files and must not be stored twice |
+| 5 | One collection or one per symbol? | one collection, one row per article, filtered with `tickers` and `$contains`, ticker lists merged when an article is stored again | Case 2 has no symbol up front and must search across companies, and 7 articles sit in two symbol files and must not be stored twice |
 
-Part 3 will produce `rag/config.py`, `rag/loaders.py` and a test, then we look at the first Documents together.
+### 3.4 The code
+
+Two small files. Neither knows about Chroma or an LLM.
+
+**`prometheus/rag/config.py`** says where things are. A setting comes from the environment, then from `.env`, then from a default, so you can move the news folder without touching code. For now there is one: `NEWS_OUTPUT_DIR` (the DataAgent's own setting name), default `news/` at the repo root. A relative path is resolved against the repo root. The settings are functions, not constants, so nothing is read when the module is imported and a test can override one. Part 4 adds the vector store path and the embedding model here.
+
+**`prometheus/rag/loaders.py`** has three pieces:
+
+| Piece | Job |
+|---|---|
+| `load_news(path)` | read one news file and return one `Document` per article |
+| `news_file(symbol)` | turn `AAPL` into `<news dir>/AAPL.txt`, after checking the symbol |
+| `python -m prometheus.rag.loaders AAPL` | a viewer, so you can look at what the Documents are |
+
+A news file is a series of records, and a record has four parts: header lines, a summary, insights and an end line. `load_news` reads it with a small state machine that moves on each time it sees a marker line:
+
+```mermaid
+stateDiagram-v2
+    [*] --> Between
+    Between --> Header: ARTICLE line
+    Header --> Summary: SUMMARY line
+    Summary --> Insights: INSIGHTS line
+    Insights --> Between: END line, one record is done
+```
+
+- In **Header**, every line is `name: value`. The reader splits at the **first** colon only, because values contain colons: the headline "Meta Vs. Apple: Divergent Edge AI ..." and every url.
+- In **Summary** and **Insights**, every line is text and is collected as it is.
+- On the END line the record is handed on and the reader goes back to **Between**.
+
+Each record then becomes one `Document`:
+
+```python
+    return Document(
+        id=head["id"],
+        page_content="\n\n".join(part for part in (head["headline"], summary, insights) if part),
+        metadata={
+            "article_id": head["id"],
+            "headline": head["headline"],
+            "tickers": tickers,
+            "published_utc": head["published_utc"],
+            "published_ts": int(published.timestamp()),  # a number: Chroma range filters take numbers only
+            "publisher": head.get("publisher", ""),
+            "api": head.get("api", ""),
+            "url": head["url"],
+        },
+    )
+```
+
+The text is the headline, the summary and the insight lines exactly as the DataAgent wrote them, so it can always be rebuilt from the file.
+
+**Errors stop the load**, which is the DataAgent's own policy. The reader raises a `ValueError` that names the file and the line for anything the DataAgent would not have written: a record with no END line, a new record starting inside an unfinished one, an unknown `<<<` marker, a header line without a colon, a missing `id`, `headline`, `published_utc` or `url`, a bad date, or text outside a record. The vendored DataAgent's own reader (`_read_records`) does the opposite: when a new record starts it silently drops an unfinished one. An interrupted fetch can leave exactly that, and a quietly missing article is worse for a trading system than an error you can see and fix.
+
+**Symbols are checked before they become a file name.** `news_file` accepts letters, digits, `.` and `-`, at most 10 characters. A symbol will come from an LLM's tool call, and a prompt-injected `../../.env` must not walk out of the news folder. The vendored DataAgent only strips and uppercases the symbol, so the tool wrapper in Part 6 has to validate symbols as well.
+
+### 3.5 Run it
+
+```bash
+python -m prometheus.rag.loaders AAPL
+```
+
+It prints a summary line, then the first two Documents and the first one that has insights. Real output, shortened:
+
+```text
+news/AAPL.txt
+74 articles | 2026-10-17T19:47:00Z to 2026-10-24T14:51:41Z | 14 with insights | 74 distinct ids
+
+--- Document 1 of 74 ---
+id: finnhub:143136906
+page_content (183 characters):
+  The iPhone Duo Launch Kicks Off a Crucial Few Weeks for Apple
+
+  Apple’s foldable iPhone goes on sale ahead of an expected touchscreen MacBook launch and fiscal fourth-quarter earnings.
+metadata:
+  {
+    "article_id": "finnhub:143136906",
+    "headline": "The iPhone Duo Launch Kicks Off a Crucial Few Weeks for Apple",
+    "tickers": [
+      "AAPL"
+    ],
+    "published_utc": "2026-10-23T19:03:00Z",
+    "published_ts": 1792782180,
+    "publisher": "Yahoo",
+    "api": "finnhub",
+    "url": "https://finnhub.io/api/news?id=d785010198f95cde7609b110185876b490a53c6cc083289353e226aeb037f1b1"
+  }
+
+...
+
+--- Document 61 of 74 ---
+id: polygon:9f6e9edaa696ae2fb1a8cf3c77c8ad933844036f7754bf764559759e22145571
+page_content (1062 characters):
+  Apple's Market Value Grew From $350 Billion to $5 Trillion During Tim Cook's 15 Years as CEO. ...
+  (the headline, then the summary, then the insight lines)
+```
+
+The summary lines for the other three files:
+
+```text
+news/META.txt 20 articles | 2026-10-22T09:10:34Z to 2026-10-24T00:07:10Z | 2 with insights | 20 distinct ids
+news/NVDA.txt 181 articles | 2026-10-17T21:30:00Z to 2026-10-24T15:35:00Z | 117 with insights | 181 distinct ids
+news/TSLA.txt 13 articles | 2026-10-20T11:30:00Z to 2026-10-23T11:40:46Z | 7 with insights | 13 distinct ids
+```
+
+That is 288 articles and 281 distinct ids: the 7 duplicates from section 3.1. A damaged file is reported with its place, and nothing is half-loaded. This one is `head -n 19 news/AAPL.txt`, which cuts off the END line of the first record:
+
+```text
+$ python -m prometheus.rag.loaders /tmp/damaged_AAPL.txt
+ERROR: /tmp/damaged_AAPL.txt:1: the record has no <<<END>>>
+```
+
+### 3.6 Tests
+
+```bash
+pytest tests/test_rag_loaders.py -q
+```
+
+```text
+.......................................                                  [100%]
+39 passed in 0.06s
+```
+
+What they cover:
+
+| Group | What it checks |
+|---|---|
+| Real records | `tests/fixtures/news_sample.txt` holds three real records copied word for word from your files: a Finnhub article, the CoreWeave article (four tickers, four insight lines) and one with a colon in its headline. The tests check exact text, exact metadata and the epoch timestamps (worked out by hand) |
+| Errors | every case in section 3.4 raises, with the right file and line |
+| Symbols and settings | `../../.env`, `$AAPL`, and an empty or too long symbol are refused; the order environment, then `.env`, then default holds |
+| Your real files | every file in `news/` loads, the file's symbol is in every article's `tickers`, and an article that sits in two files differs only in `tickers` (skipped when there are no files) |
+
+To be sure the tests can fail, we broke the loader five ways on purpose: split headers on every colon, shift the timestamp by a second, ignore a missing END line, accept any symbol, and drop the insight lines. The tests caught all five (14, 2, 1, 8 and 2 failing tests), and the original file was restored and compared byte for byte.
+
+### 3.7 What we found along the way
+
+- **Finnhub's `tickers` is only the symbol that was asked for.** The same article is `["AAPL"]` in one file and `["NVDA"]` in another. Part 4 merges the lists when it stores an article a second time. A test guards the assumption this relies on: copies of an article differ only in `tickers`.
+- **Your tests only found `prometheus` by accident.** `PYTHONPATH` in your shell ends with a colon (it is set by the Pleora eBUS SDK), and Python reads that empty entry as "the current folder". With `PYTHONPATH` cleared, the existing tests failed with `No module named 'prometheus'`. One line in `pytest.ini` (`pythonpath = .`) fixes it, and the old tests pass either way.
+- **`.env.example` was out of step with the DataAgent.** It listed `MASSIVE_API_KEY`, which no code reads, and not `POLYGON_API_KEY`, which the DataAgent needs. It now lists both and documents `NEWS_OUTPUT_DIR`.
+- **`keywords` are left out of the text for now** (140 of 288 articles have them). Adding them is an experiment for Part 5, where we can compare search results with and without.
+
+The decisions are recorded in design choices entry 16.
+
+### Next: Part 4
+
+Chunk, encode and store: `rag/store.py` (the embedding model and the Chroma collection) and `rag/ingest.py` (load, split, embed, upsert, merging ticker lists). Then `python -m prometheus.rag.ingest AAPL`, and we look at what Chroma holds.
 
 ---
 
@@ -488,7 +631,7 @@ How to read it:
 - Overlap costs almost nothing here (1.00x to 1.03x the original text). News text breaks at paragraph boundaries first, and overlap only acts inside a long paragraph. It will matter for 10-K sections, which is what the tutorial's own example is (107 pages became 516 chunks).
 - A chunk that does not start its article loses the headline, so "negative | Stock declined 11.91% due to..." would no longer say what it is about. We plan to prefix such chunks with the headline.
 
-Decisions for Part 4: the size and overlap, the headline prefix, `add_start_index=True` (it records each chunk's character offset, which helps trace a chunk back), the embedding model and its device as a setting, the collection name with the model name inside, and whether re-ingestion skips chunks already stored or overwrites everything.
+Decisions for Part 4: the size and overlap, the headline prefix, `add_start_index=True` (it records each chunk's character offset, which helps trace a chunk back), the embedding model and its device as a setting, the collection name with the model name inside, whether re-ingestion skips chunks already stored or overwrites everything, and how an article that is stored a second time merges its `tickers` with the stored list (the Part 3 finding, entry 16).
 
 Two comparisons with the tutorial's Chroma snippet:
 
@@ -561,4 +704,5 @@ The graph is the simple loop from section 0.6, with the DataAgent behind its too
 | 2 | 12 (where the code lives), 13 (one data agent: the Data Clerk and its toolbox) |
 | 5 to 7 | 15 (RAG style: the class-slide pipeline, with the Data Clerk LLM deciding whether to retrieve, and citations) |
 | 6 and 8 | 14 (tools: plain functions, LangChain now, MCP next) |
-| 3 and later | added as we make them |
+| 3 | 16 (loading the news files into Documents; the Finnhub `tickers` finding) |
+| 4 and later | added as we make them |
