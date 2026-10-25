@@ -1,0 +1,1560 @@
+<<<ARTICLE>>>
+id: finnhub:143136906
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T19:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d785010198f95cde7609b110185876b490a53c6cc083289353e226aeb037f1b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: The iPhone Duo Launch Kicks Off a Crucial Few Weeks for Apple
+<<<SUMMARY>>>
+Apple’s foldable iPhone goes on sale ahead of an expected touchscreen MacBook launch and fiscal fourth-quarter earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143141072
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T18:35:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7dba4830ed8f9a2838029151f84e3d719a25604ffd989af5aabac3730ac23da4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Named Qnity as a New Domestic Manufacturing Partner. This Is a Meaningful Win for Q Stock... But It Must Pass 1 More Test.
+<<<SUMMARY>>>
+Qnity is partnering with Apple to produce technology for the iPhone 18 Pro camera’s new variable aperture.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143165339
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T17:22:03Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=a6bab19642566178d15d4edf4aa40e11b973da68c50afa407e0c88dddd21b697
+image_url: https://image.cnbcfm.com/api/v1/image/108453124-17927891201792789117-49189628772-1080pnbcnews.jpg?v=1792789119&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple’s iPhone Duo shows encouraging early demand signals, with third-party sales data still to come
+<<<SUMMARY>>>
+CNBC's MacKenzie Sigalos reports from Apple’s Fifth Avenue store as the company launches its first foldable in more than 70 countries, with limited inventory making the early demand picture difficult to gauge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136178
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T16:40:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8175bd6bfd1f6eac64b0c837b4d2ce5f7db41d23ffbe510d04ffb1134b87bed3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple's $2,000 iPhone Duo Debuts With Limited Supply
+<<<SUMMARY>>>
+Apple Inc. has already shown there's a strong appetite for its $2,000-and-up foldable iPhone Duo. Now it needs to meet that demand. The new device went on sale Friday, bringing back the once-familiar sight of people lining up overnight to get their hands on it first. Marking the company's most radical reinvention in the iPhone's nearly two-decade history, the Duo is a major bet the company can establish itself in a category that's remained a niche so far. Bloomberg's Anurag Rana joins to discuss.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143165341
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T16:04:37Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=4191f409d8188606b4706b272497ede0b0b49117d90e8fa35b201fe185e7fea3
+image_url: https://image.cnbcfm.com/api/v1/image/108452991-1792785695662-gettyimages-2301644326-28.jpeg?v=1792785781&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Scalpers offer Apple iPhone Duo buyers hundreds extra outside Beijing launch
+<<<SUMMARY>>>
+Apple's global launch of the foldable iPhone Duo brought scalpers to the Beijing flagship store looking to pay big for the already pricey devices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143165343
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T15:34:18Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=c4abd7a123c1973685ce1724844d90d4726a07159bc0ddc28f5d46c46ed8a44f
+image_url: https://image.cnbcfm.com/api/v1/image/108451420-17927573932026-10-23t080510z_32500351_rc2o8oarl4rn_rtrmadp_0_apple-iphone-china.jpeg?v=1792757410&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple’s iPhone Duo gets good response in China despite eye-popping price tag
+<<<SUMMARY>>>
+Despite the iPhone Duo’s eye-popping price tag, initial interest in Apple’s first foldable phone in China appears solid. CNBC’s Eunice Yoon reports.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143165344
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T15:28:20Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=5e3b28cf18d9ffe61ee77350869a6278d1f4fb1d7cd89e2be5e2a3d5a1a6254a
+image_url: https://image.cnbcfm.com/api/v1/image/108452832-17927835721792783571-49188223517-1080pnbcnews.jpg?v=1792783572&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: iPhone Duo release is first major test of Apple's push under new CEO
+<<<SUMMARY>>>
+CNBC’s MacKenzie Sigalos joins ‘Closing Bell’ to discuss the launch of Apple’s iPhone Duo from the company’s flagship store in New York City.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135547
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T15:20:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b695769e2d8271cf63ed62d97916cf1a3cb3dc147d9ec2be12c0aafa0048a068
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Stock Hits Record High On iPhone Duo Launch
+<<<SUMMARY>>>
+Apple stock surged to an all-time high on Friday after the consumer electronics giant launched its foldable iPhone Duo smartphone in stores.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135548
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:09:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b68cdc1970874be60f719e555b14965454b9ded224d58a17d87aa704f11a81ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Overtakes Nvidia As World's Most Valuable Company — iPhone Duo Hits Stores Amid Strong Demand
+<<<SUMMARY>>>
+IDC expects Apple to capture 44% of the foldable smartphone market by value this year, as strong initial interest tests the company's ability to meet demand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135546
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:01:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b3c854993bec6596ebd03181361386ea9e5d615fceec03ef4b9de773cd38910
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Duo goes on sale in-store as iPhone 18 demand disappoints
+<<<SUMMARY>>>
+The 8:30 hosts Jake Conley, Julie Hyman, and Pras Subramanian react to Apple's (AAPL) iPhone Duo going on sale in stores and discuss whether it's a consumption device with a weak camera, while the iPhone 18 Pro is a higher-quality product.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133328
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T13:58:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e2bbee7c9c5261575ed1996e672beb51d391a76865d641d38c8881a0c86f03bc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: SpaceX is raising debt for AI, and Apple's new iPhone Duo has been released
+<<<SUMMARY>>>
+The 8:30 hosts Julie Hyman, Jake Conely, and Pras Subramanian tackle the top stories of the day. Including Apple's (AAPL) iPhone Duo hitting stores, Airbnb's (ABNB) new rules for owners, and the 10-year yield falling below 5%. The 8:30 team is then joined by EZPR CEO Ed Zitron to talk about SpaceX (SPCX) raising $40B in debt thanks to AI, and the memory unit IPO market slowing down thanks to Antropic's (ANTH.PVT) debut
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143165347
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T13:51:57Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=268c16aa8448edcc07ce0c1e0ed226f40ad1183bde2ccf669145bd94dff2f70b
+image_url: https://image.cnbcfm.com/api/v1/image/108452555-17927777271792777725-49186712180-1080pnbcnews.jpg?v=1792777726&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Mixed reviews don't stop lines for iPhone Duo in NYC
+<<<SUMMARY>>>
+CNBC’s MacKenzie Sigalos joins ‘The Exchange’ to discuss the launch of Apple’s iPhone Duo from the company’s flagship store in New York City.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133322
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T13:08:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8b08d2b3690699b2eafedbe3c9bfbbeae9ac921acce31e3d0e24a856d39d5bc0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple releases $2,000 iPhone Duo – but customers struggle to actually buy one
+<<<SUMMARY>>>
+‘Some people think it was mad. Including myself,’ said one fan who had queued overnight
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143134391
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T09:11:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b14e4e4ab197c59737f4ce9152a5393f2ec90cc3256cf9383f3a9331aac69de6
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Cupertino--California--September-25--202.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Can Apple Top Nvidia? iPhone Duo and Nov. 2 Earnings Hold the Key
+<<<SUMMARY>>>
+Apple is in the spotlight Friday as it closes in on Nvidia&#39;s market value, the iPhone Duo reaches stores and earnings loom next week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143112282
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T02:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e00e695c3411bb51fe8938caa3cb7e8c2fca3562cd6e032f1f2deb406afbf09d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: MKBHD drops a blunt verdict on Apple’s $1,999 iPhone Duo
+<<<SUMMARY>>>
+The YouTube reviewer liked Apple’s first foldable; your wallet might protest.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143104030
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-22T20:34:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44f7e2c85ac670d2eca210b86d3ddd07a722d4b77e3c3685c25fb464e0f88e87
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple’s foldable iPhone has a $2,000 app problem
+<<<SUMMARY>>>
+Apple's (AAPL) new foldable iPhone Duo hits stores Friday. Yahoo Finance Tech Editor Dan Howley got his hands on one and joins Brooke DiPalma on Market Domination to share his takeaways on the new device.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143104031
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-22T20:32:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4fe983b29a7fa808125e898fb5812a9bb07bb8e5b67c2d399786bc6e494da761
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Reportedly Raised Its iPhone Duo Target 44%. Here’s What November 2 Has to Show
+<<<SUMMARY>>>
+Key Stats for Apple StockCurrent Price: $343. 99Target Price (Mid): ~$485Street Target: ~$328Potential Total Return: ~41%Annualized IRR: ~9% / year__Now Live: Discover how much upside your favorite stocks could have using TIKR’s new Valuation Model (It’s free)__ >>> What Happened?Apple (AAPL) has reportedly raised its iPhone Duo shipment target about 44%, a day before the $1,999 foldable reaches stores on October 23.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103074
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-22T16:45:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=571b4061cb5f6d1cfe04c1275187e1ddaa6a4a3f339bbe5a4ca6c9c98de85617
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Meta Vs. Apple: Divergent Edge AI Inference Strategies and Spending
+<<<SUMMARY>>>
+Meta is pouring over a hundred billion dollars into centralized data centers while Apple bets your iPhone and Mac can do the heavy lifting instead. One of these companies will look very smart in 2027, and the gap between their spending levels tells a story worth understanding now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102346
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-22T15:00:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a6b6612a52023d3cef576cdeea704724fa698c603666478f03089cb0013bff2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: iPhone Duo preorder surge prompts Apple to raise shipment targets, DigiTimes says
+<<<SUMMARY>>>
+Investing.com -- Apple Inc (NASDAQ:AAPL) has instructed component suppliers and primary assembler Foxconn (TW:2354) to raise 12-month shipment targets for its debut foldable handset, the iPhone Duo, by 44% to 14 million units, according to supply chain reporting from DigiTimes. The sharp upward adjustment from an initial target of 9.7 million units highlights robust initial consumer appetite, with preorder delivery timelines already stretching into 2027 and prompting rumors of purchasing caps to
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099957
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:41:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=53040484e292da91b6a75d7383b29583eb958466af86a148f18979e31334b2a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple's $1,999 iPhone Duo hits stores Friday amid limited supplies
+<<<SUMMARY>>>
+The iPhone Duo goes on sale Friday, but in-store supplies will be limited.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143093304
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-22T09:17:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bd0f6da674a6ee3d6dcffb01e7f3f17e88573eb48b3e4f4f58b6d45ee9470dca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Is Product Launches And US Supply Deals Altering The Investment Case For Apple (AAPL)?
+<<<SUMMARY>>>
+Apple has rolled out a packed roster of new hardware and home devices, including iPhone 18 Pro, the foldable iPhone Duo, HomeView smart displays, HomePod mini 2 and the Apple Home Collection, while deepening U.S. manufacturing ties with suppliers such as Perryman, Qnity Electronics, Broadcom, Corning, Coherent, TSMC and Amkor. These launches link Apple’s AI-centric device roadmap with a heavier U.S. supply base, which affects product costs, component security and execution risk across its...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143071671
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T17:16:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6f8f6bbd614d556be551e44ce4f0557d924f7d19004110c84b73435992fa6c12
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Dear Apple Stock Fans, Mark Your Calendars for October 28
+<<<SUMMARY>>>
+The iPhone maker will hold its second event in October, with new product launches expected.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143069887
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T15:41:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=174bf79384ee37d903843cee747059678f975c5150e72c9e31e7652dff7ea247
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Faces ‘Slightly Challenging’ Earnings Setup Near Record Highs, Morgan Stanley Says — Sees Limited Upside Potential
+<<<SUMMARY>>>
+According to the note cited by TheFly, Morgan Stanley expects Apple's holiday-quarter revenue and iPhone outlook to fall slightly short of Wall Street estimates, even as demand for its new foldable iPhone strains initial supplies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143069889
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T15:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cf835681acbd9faef8d8c8bcbc9c70eae912544eb4eb96678464303517d091e5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple expands US supplier network for iPhone materials, components
+<<<SUMMARY>>>
+The company added a new titanium supplier and expanded its partnership with an advanced film maker as part of a $600 billion commitment to U.S. manufacturing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143069890
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T14:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7db0fb86eed6bf850243a7b84c2eabda79b9eb5a67ee8fa73e9a18e5f0fb9b74
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple’s iPhone Supply Chain Risk Spells Trouble for This Semiconductor Stock
+<<<SUMMARY>>>
+Cirrus Logic faces a ‘difficult outlook’ given Apple’s iPhone supply chain hurdles and a lack of growth drivers in the near term.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143067264
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T13:24:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7307e073dc81404619fb541f83f62c705c833b9087935f0ceba509ca6f7db01
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Billionaire Ken Fisher and Jim Cramer Still Like Apple (AAPL). Should You?
+<<<SUMMARY>>>
+Apple Inc. (NASDAQ:AAPL) remains in the spotlight after launching its iPhone 18 Pro lineup and its first foldable phone, the iPhone Duo, amid reports that it asked suppliers to cut component orders. The stock ranks first on our list of the top 10 stocks Jim Cramer and billionaire Ken Fisher like. Higher prices and soft […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143067268
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T12:24:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e89d61245fc2d302abe5a5411939d1de41ad535a46c9eb6b31122a16c94545c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: What it’s like to use the iPhone Duo for a week
+<<<SUMMARY>>>
+CNN’s Lisa Eadicicco got to try Apple’s newest phone, the iPhone Duo, ahead of its launch. She traded her regular-sized iPhone for the company’s first-ever folding phone for nearly a week. Apple provided CNN with an iPhone Duo for testing purposes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143063003
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a8df123c9e20c029a29ef05e2c8693fc6cf39e556b03b95aff2cc4d7c35079d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: I Tested Apple’s iPhone Duo for a Week. Is It Worth $2,000?
+<<<SUMMARY>>>
+Apple’s iPhone Duo is the company’s first foldable device. Although it packs a tablet-sized screen into your pocket, WSJ’s Nicole Nguyen found the phone’s $2,000 price tag comes with trade-offs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143068282
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T10:01:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9c05c8dee59427da32fad842656037210bba601411658be2db25c1e0d65ae979
+image_url: 
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Says It Will Have 'Limited' iPhone Duo Units Available For Walk-In Customers On October 23 Launch Date
+<<<SUMMARY>>>
+- Reuters Citing Statement
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143035379
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-21T00:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=efb6905a99469ba57435a227a3af577737383eba4bcdb5f7d4b3c54bd807d3d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Bank of America finds a quicker path to Apple's iPhone Duo
+<<<SUMMARY>>>
+Apple’s $1,999 foldable is sold out into 2027, but a new Bank of America tracker shows where the wait is half as long.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143032078
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T21:05:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=94acab55f66bc8142e2cd2ab1d4b0e3100568ea60acb0eb51954f0387279a823
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple’s $1,999 foldable phone is set to hit stores Friday, are you buying one?
+<<<SUMMARY>>>
+Investing.com -- Apple's (NASDAQ:AAPL) first foldable iPhone hits retail stores this Friday, October 23, with a starting price of $1,999 for the 256GB model. But buyers hoping to get their hands on the device anytime soon may face a long wait. Apple described pre-orders for the Duo as “nothing short of extraordinary,” with online delivery estimates slipping to late January 2027 within hours of pre-orders opening on Friday, October 16. The company has also reportedly advised retail staff to cauti
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143031106
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T18:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=689fb5883c02a5dc568b7900df437e467926a35a939da5a2bcfec21138a4ca9e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple faces gross margin pressure as UBS flags slowing iPhone growth ahead of earnings
+<<<SUMMARY>>>
+Apple Inc (NASDAQ:AAPL, XETRA:APC) is expected to deliver September-quarter revenue broadly in line with forecasts, but rising component costs and slowing growth in key businesses could test investor confidence in the technology giant’s premium valuation, according to UBS. In a research note...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143025596
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T13:48:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92fa7bb756a7aea8ad47dc20ff241b30723421dee46c3cdd1e862a167dd43f2b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Stock Downgraded As Analysts Turn Cautious On iPhone Maker
+<<<SUMMARY>>>
+Apple stock is fully valued near current levels and needs a new catalyst to move higher, a Wall Street analyst said late Monday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143025599
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T12:38:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=39ee21b69b008a2a3649595c9409b850919568246badf1b6c3ff98ea510e0bfd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: AAPL Stock Downgraded As iPhone Shipment Concerns Mount — Analysts Flag Sales Growth Slowing
+<<<SUMMARY>>>
+UBS expects higher iPhone selling prices to offset weaker unit volumes, while Loop Capital questions whether Apple can recover previously planned shipments.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143029681
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T12:02:48Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=ff5a2a6362001463b912bdff0dcb33a22ff1caff3ad90c00736ffb93b5e3e06b
+image_url: https://image.cnbcfm.com/api/v1/image/108438211-1792516219331-1792511999-49122823634-hd.jpg?v=1792516215&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple adds American suppliers: Here's what you need to know
+<<<SUMMARY>>>
+CNBC’s MacKenzie Sigalos reports on Apple as the tech giant is adding a U.S. titanium supplier for its new iPhone Duo.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143025602
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fd52c05b4942f8c3d34b20a3a4fb122c58ac4df94f5bf517d6d28478f35323f7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple announces new American Manufacturing Program partners for iPhone Duo and iPhone 18 Pro
+<<<SUMMARY>>>
+CUPERTINO, Calif., October 20, 2026--Apple® today announced new and expanded partnerships with American companies that are supplying critical materials and components for iPhone Duo® and iPhone 18 Pro.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143025603
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T11:53:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=336930b423aca9a37d14b785f3848a917323a33e16dca6c909c614433ea964b2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Loop Capital downgrades Apple, sees no recovery of cut iPhone shipments
+<<<SUMMARY>>>
+Investing.com -- Loop Capital cut its rating for Apple to Hold from Buy and lowered the price target to $330 from $370 in a note Tuesday, citing new iPhone supply chain data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143068291
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T09:49:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d1a68c82407618bbd67a2816e80a36ef1d441814da813d6cf86db902412fba31
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/20/Basel--Switzerland---December-23--2024-A.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Stock in Focus as iPhone Duo Launch, U.S. Expansion and Earnings Loom
+<<<SUMMARY>>>
+Apple shares are in focus Tuesday ahead of the iPhone Duo launch, new U.S. supplier partnerships and November 2 earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143029684
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T09:41:38Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=d60b86cb9448ad9ee5e30732476583e941e75a9b0c6006131965de57976b5599
+image_url: https://image.cnbcfm.com/api/v1/image/108361573-1789091534704-gettyimages-2293838697-AFP_C7UG4JB.jpeg?v=1789091546&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: How options traders can go long on Apple for less
+<<<SUMMARY>>>
+Mike Khouw, strategist at YieldMaxETFs, discusses how options traders can play Apple amid strong demand for the iPhone Duo.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143029685
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T08:27:40Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=720c3871a42530fdabfc245a5711bb85832aa05b58239dec94672bf2a024dec9
+image_url: https://image.cnbcfm.com/api/v1/image/108437102-1792499249282-1792498266-49119406150-hd.jpg?v=1792499246&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple expands U.S. manufacturing footprint with new iPhone suppliers
+<<<SUMMARY>>>
+CNBC's MacKenzie Sigalos reports on Apple adding new U.S. suppliers for the iPhone Duo and iPhone 18 Pro as the company deepens its domestic manufacturing push.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143029686
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T08:00:02Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=072f3f65eddc332a9842df12edc048dad002edcf4a8ed178b7ad04010ce95789
+image_url: https://image.cnbcfm.com/api/v1/image/108361572-1789091458060-gettyimages-2293838592-AFP_C7UF8CX.jpeg?v=1789091471&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple adds U.S. titanium supplier for iPhone Duo as supply stays tight
+<<<SUMMARY>>>
+Apple is adding a U.S. titanium supplier for its new iPhone Duo and expanding domestic production of camera components for the iPhone 18 Pro.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143025039
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-20T06:06:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=96565995ad151e971523de97e66bb0d8d630377143b5effa0c20549c16781296
+image_url: 
+category: company
+tickers: AAPL
+keywords: 
+headline: UK CMA Outlines Proposals To Unlock Contactless Technology On Apple iPhone; Apple’s Fees And Rules Are Blocking UJ Fintechs And Other Businesses From Innovating And Growing
+<<<SUMMARY>>>
+https://www.gov.uk/government/news/cma-outlines-proposals-to-unlock-contactless-technology-on-apple-iphone
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143012141
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T23:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8af1f349627621ce5897627495d007a201ae041dee9421ff43b45be9a3f038a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Jim Cramer’s 4-word Apple rule could save you real money
+<<<SUMMARY>>>
+Cramer’s ‘own it, don’t trade it’ line resurfaced as the iPhone Duo sold out. Here’s the tax math that makes it matter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143009450
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T17:43:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=522773942a919b923a94eb66756e848a851f89569c35a3e3afdb53e4bc65736e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Confirms October 28 ‘Pro And Tell’ Event — First Touchscreen MacBook Pro Expected
+<<<SUMMARY>>>
+The upcoming product launch follows strong initial demand for Apple's foldable iPhone Duo, even as analysts remain divided over the company's growth outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143009451
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T16:49:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=53d96b99202235fd653bfa19301c852941b2056b69abc7ad0c27eb8edfb2fad5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Stock Holds Strong Amid Healthy iPhone Duo Preorders
+<<<SUMMARY>>>
+Apple stock continues to hover in a tight trading range near a buy zone amid healthy preorders for its first folding handset, the iPhone Duo.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143008399
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T15:49:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=be543a17be5106ef8b558cbca354f40a162ea4d5229232db1805928a920295e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple’s iPhone Duo Sold Out In Minutes. The Last Time Apple Reinvented The Phone, One Apple Supplier’s Stock Soared About 1,200% In A Decade
+<<<SUMMARY>>>
+Although Wall Street spent much of October worrying about a tech slump, Apple (NASDAQ:AAPL) stock pushed to new highs as its first foldable phone arrived. Apple opened worldwide preorders for the iPhone Duo on Oct. 16, and an Invezz report carried on TradingView said it “sold out in minutes”. Shares traded at $342.79 as of […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143029687
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T15:29:05Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=4a26cb1cc9f19431ad713db0d6cdad8ad684dd7247dcd02fbe3c6c42cebe6c19
+image_url: https://image.cnbcfm.com/api/v1/image/108433780-17924377941792437792-49104943313-1080pnbcnews.jpg?v=1792437793&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple stays quiet on walk-in iPhone Duo stock as supply tightens
+<<<SUMMARY>>>
+CNBC’s MacKenzie Sigalos reports on tight iPhone Duo supply ahead of Friday’s in-store launch, with preorder wait times stretching to roughly 14 weeks and Wall Street cutting shipment expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143011278
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T15:05:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=43de9d73dcb467fee9a24308fcd1f786c485db5c419dc6d5eaf181b2c4dfe604
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: If Apple Cuts iPhone Units in 2027, This Stock Could Be a Big Loser
+<<<SUMMARY>>>
+KeyBanc has turned cautious on Cirrus Logic, citing potential iPhone unit cuts and delayed PC growth. Here’s why investors may want to pay attention.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143008398
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T14:34:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=671f3bf06f08feac4493d21e4e2aa6a91042bb0900155da4a005597958f1d8ba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple stock is at a record high — but is it warranted given slowing iPhone 18 demand?
+<<<SUMMARY>>>
+Apple's new crop of iPhones may be falling shy of the sales mark.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006507
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T13:33:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=175d24ebf27bed9d8eaaa5d4e8551aed15c392a0382ff25d6a2cb9347863ea94
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Has Outperformed the S&P 500, but is AAPL’s 35x Valuation Getting Ahead of its Growth?
+<<<SUMMARY>>>
+Apple Inc. (NASDAQ:AAPL) is asking investors to believe two things at once. First, that the iPhone can still deliver meaningful growth, and that a company of its size deserves a premium earnings valuation. Apple’s one-year total return reached 30.25, well above the S&P 500’s nearly 14% return. The rally raises a sharper question than whether […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006508
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T13:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76449f21ae47970a7251e911083af8bbbecb39a36a54763bf62c1660deda0ede
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple extends iPhone Duo delivery, disappointing eager customers
+<<<SUMMARY>>>
+Apple’s first foldable iPhone sold out in minutes, and the wait to get one just got a lot longer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006513
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T12:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bdbbea08914f2d80eb35c65f503f1da6ef5afff7a2ad77bb71437cef38b9736e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Stock Escaped the AI Downturn. Now It Faces a 27% Plunge, Says Analyst.
+<<<SUMMARY>>>
+The iPhone 18 launch is unlikely to go as well as Apple is hoping, KeyBanc’s Brandon Nispel says. That’s a big risk for its highflying shares.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006510
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T12:25:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b9d16fbc4d5a6e72e6623e436bdf252ca8f13e1e0e71948d8abcbe5629cf5cf3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Analyst says iPhone 18 demand weakness is "intensifying"
+<<<SUMMARY>>>
+Investing.com -- Jefferies believes underlying demand for Apple’s iPhone 18 Pro and Pro Max is weakening further, with the firm pointing to shrinking lead times, falling resale prices and reported order cuts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143025047
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T12:07:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=20d7da75ac51a8db0f94be7f1dce5273cbdaa02eaba40c772ceed4895123d8d1
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/19/Apple-iPhone-Duo.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple iPhone Duo Has 82-Day Lead Time: Analyst Names Tech Giant 'Eventual' AI Winner
+<<<SUMMARY>>>
+Strong lead times and demand for the Apple iPhone Duo foldable smartphone have one analyst seeing more upside for the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142999645
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-19T08:13:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=97c8f6aabf002d4a77bbfecc42fb9df15f623f8782804bcb353bd734c684cdc0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: UK regulator set to push Apple to open iPhone payment technology – report
+<<<SUMMARY>>>
+Under the proposals, the CMA will call for changes to iOS that enable iPhone owners to select alternative payment services as their default rather than Apple Pay.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164841
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-24T14:51:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0f9d8afb174bf7814a0e3ec521c3eeada07c93e767d2da8d5204b1f271a900bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Is Demand for Apple’s iPhone 18 Pro Weakening? Jefferies Reports Shorter Delivery Times and Order Cuts
+<<<SUMMARY>>>
+What does Jefferies say about demand for the iPhone 18?Jefferies believes demand for Apple’s (NASDAQ:AAPL) iPhone 18 Pro and iPhone 18 Pro Max is showing further signs of slowing, based on delivery times, resale prices and information from the company’s supply chain. In a research note published Monday, analyst Edison Lee said the firm’s monitoring indicated weaker underlying demand for Apple’s latest premium smartphones.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164842
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-24T14:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e0a46da1a5589affa95cf1d94ee0899eb3918eb20a78c9e6b6b3f7a7abcf73e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple just made a surprising move into your home
+<<<SUMMARY>>>
+A new gadget lineup extends the iPhone ecosystem to the front door.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143162702
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-24T11:15:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27912a0c13a97c41d04d04aee7c6c5c88e071f73b74dfd75c33c7c4b56444663
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Just Passed Nvidia as the World’s Most Valuable Company on iPhone Duo Day
+<<<SUMMARY>>>
+Apple's foldable iPhone Duo sold out in minutes and sent the stock to a record that briefly toppled Nvidia from the top of the global market cap rankings. Whether a supply-starved device cycle can justify that valuation is the question investors face before Apple reports on November 2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143156944
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-24T09:24:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=182ca79959d073e876032410bacd485123127bbe719ba84801ff17764afc70ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Gene Munster Says Apple’s $2,200 iPhone Duo Could Add $8B To FY27 Revenue, Sees 20M Units In Sales Even As Wall Street Expects Only 12M
+<<<SUMMARY>>>
+Munster believes that the higher-priced iPhone Duo could become a meaningful contributor to Apple’s overall iPhone growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143163454
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-24T03:28:35Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=12ae39d9cf795bd8f78f75596eb6d29d57cca2e9e5d925bec77117b375f67075
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/24/Mexico-City--Mexico--09-09-2026--Screen-.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple’s iPhone Duo Launch Lines Surprise Gene Munster, Who Sees 20 Million Units and $8 Billion Revenue Boost; Tim Cook Says, ‘Welcome to the World’
+<<<SUMMARY>>>
+Gene Munster expects Apple’s Duo iPhone to sell 20 million units and add $8 billion in fiscal 2027 revenue.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9f6e9edaa696ae2fb1a8cf3c77c8ad933844036f7754bf764559759e22145571
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-17T19:47:00Z
+publisher: The Motley Fool
+author: Jennifer Saibil
+url: https://www.fool.com/investing/2026/10/17/apple-market-value-from-350-billion-to-5-trillion/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F890966%2Fapple-homeview-lifestyle-dining-room-261013.jpg&w=1200&op=resize
+category: 
+tickers: AAPL
+keywords: Apple, market valuation, Tim Cook, John Ternus, iPhone sales, AI strategy, ecosystem, stock performance
+headline: Apple's Market Value Grew From $350 Billion to $5 Trillion During Tim Cook's 15 Years as CEO. Here's What That Growth Curve Means for Apple's Next Chapter Under John Ternus.
+<<<SUMMARY>>>
+Apple has reached a $5 trillion market valuation under new CEO John Ternus, following Tim Cook's 15-year tenure that saw the company's stock gain over 2,600%. Despite the high valuation, Apple continues to outperform the S&P 500 by double the year-to-date growth rate (27% vs 13%), driven by strong iPhone sales and its interconnected ecosystem of products. The company's measured approach to AI integration and focus on consumer hardware are attracting investor interest, though the stock's P/E ratio of 39 suggests it may be expensive for new buyers.
+<<<INSIGHTS>>>
+AAPL | positive | Apple is outperforming the broader market with 27% YTD gains versus S&P 500's 13%, has reached $5 trillion valuation, maintains strong iPhone sales growth (22% YoY), and is receiving investor appreciation for its measured AI approach. However, the high P/E ratio of 39 suggests valuation concerns for new investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:44a80aba722afd2c40ca23ae9789aafd7f9ac3320d54eecb41eefd77bcacd238
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-18T07:36:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/10/18/vanguard-s-growth-etf-has-returned-about-18-a-year-for-a-decade-i-d-plan-on-much-less-through-2030/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fba1fc44b7ee1f0db65eb697b8517bf3a468c0556-2541x1180.jpg%3Fw%3D800%26q%3D75%26fit%3Dmax%26auto%3Dformat&w=1200&op=resize
+category: 
+tickers: VUG, NVDA, AAPL, GOOG, GOOGL, GOOGM, GOOGN
+keywords: growth ETF, valuation, earnings growth, price-to-earnings ratio, investment forecast, technology stocks
+headline: Vanguard's Growth ETF Has Returned About 18% a Year for a Decade. I'd Plan on Much Less Through 2030.
+<<<SUMMARY>>>
+Vanguard's Morningstar Growth ETF (VUG) has delivered impressive 18% annual returns over the past decade, but analyst Daniel Sparks forecasts significantly lower returns of around 10% annually through 2030. Despite strong earnings growth from top holdings like Nvidia, Apple, and Alphabet, the fund's elevated valuation at 37x earnings and slowing growth rates suggest a $10,000 investment today could reach approximately $15,000 by end of 2030, assuming earnings grow 15% annually and the P/E ratio compresses to 30x.
+<<<INSIGHTS>>>
+VUG | neutral | While the fund has delivered strong historical returns (18% annually), the analyst projects significantly lower future returns (~10% annually through 2030) due to elevated valuations and slowing earnings growth expectations. The outlook is cautiously realistic rather than bullish or bearish.
+NVDA | neutral | Nvidia shows exceptional current earnings growth (120% YoY), but the analyst questions sustainability at this scale, noting that doubling profits every couple of years is unlikely for a company of its size. Strong fundamentals are tempered by valuation concerns.
+AAPL | neutral | Apple demonstrates solid earnings growth (29% YoY), though part of this came from tariff refunds rather than core business growth. Included as a major fund holding but not highlighted as exceptional.
+GOOG | neutral | Alphabet shows strong operating income growth (30%) and margin expansion, but the analyst notes that a significant portion of EPS growth came from investment gains rather than core business performance, making operating income a better metric.
+GOOGL | neutral | Alphabet shows strong operating income growth (30%) and margin expansion, but the analyst notes that a significant portion of EPS growth came from investment gains rather than core business performance, making operating income a better metric.
+GOOGM | neutral | Alphabet shows strong operating income growth (30%) and margin expansion, but the analyst notes that a significant portion of EPS growth came from investment gains rather than core business performance, making operating income a better metric.
+GOOGN | neutral | Alphabet shows strong operating income growth (30%) and margin expansion, but the analyst notes that a significant portion of EPS growth came from investment gains rather than core business performance, making operating income a better metric.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5068c6482075ca439e4b65ee239f1fbc8940b35b0d9885933109b1c7feef7b10
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-19T04:30:00Z
+publisher: The Motley Fool
+author: Geoffrey Seiler
+url: https://www.fool.com/investing/2026/10/19/warren-buffett-warned-about-stock-valuations-so-wh/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891596%2Fbuffett.jpg&w=1200&op=resize
+category: 
+tickers: GOOG, GOOGL, GOOGM, GOOGN, BSP, VOO, AAPL, BRK.A, BRK.B
+keywords: stock valuations, Berkshire Hathaway, Warren Buffett, net buyer, stock repurchase, Alphabet investment, AI infrastructure, market timing, dollar-cost averaging
+headline: Warren Buffett Warned About Stock Valuations. So Why Is Berkshire Still Buying Stocks?
+<<<SUMMARY>>>
+Despite warning in May that stock valuations were too high, Warren Buffett's Berkshire Hathaway has reversed course and become more aggressive in buying stocks and repurchasing its own shares since Q2. The company has invested in Alphabet and Bending Spoons while the S&P 500 has risen 7% since Buffett's warning, suggesting that actions speak louder than words when it comes to investment strategy.
+<<<INSIGHTS>>>
+GOOG | positive | Berkshire significantly increased its position in Alphabet through a private placement to fund AI infrastructure investments. Alphabet is now Berkshire's third-largest holding at nearly 13% of its equity portfolio, demonstrating strong confidence in the company's AI growth prospects.
+GOOGL | positive | Berkshire significantly increased its position in Alphabet through a private placement to fund AI infrastructure investments. Alphabet is now Berkshire's third-largest holding at nearly 13% of its equity portfolio, demonstrating strong confidence in the company's AI growth prospects.
+GOOGM | positive | Berkshire significantly increased its position in Alphabet through a private placement to fund AI infrastructure investments. Alphabet is now Berkshire's third-largest holding at nearly 13% of its equity portfolio, demonstrating strong confidence in the company's AI growth prospects.
+GOOGN | positive | Berkshire significantly increased its position in Alphabet through a private placement to fund AI infrastructure investments. Alphabet is now Berkshire's third-largest holding at nearly 13% of its equity portfolio, demonstrating strong confidence in the company's AI growth prospects.
+BSP | neutral | Berkshire invested $600M at IPO and another $330M in a private placement, but the company trades at 29x forward P/E with significant debt. While Berkshire's investment shows confidence in the business model, the valuation metrics are not traditionally attractive, making this a speculative position.
+VOO | positive | The article recommends dollar-cost averaging into S&P 500 ETFs as a wealth-building strategy, noting that time in the market beats timing the market. The S&P 500 has risen 7% since May, and valuations based on projected future earnings growth appear reasonable despite some backward-looking metrics showing concerns.
+AAPL | neutral | Apple represents nearly 35% of Berkshire's equity portfolio alongside Alphabet, indicating significant exposure. However, the article notes this concentration in megacap tech (40% of S&P 500) carries both opportunity and risk, with no specific positive or negative catalyst mentioned for Apple itself.
+BRK.A | positive | Despite Buffett's May warning about overvaluation, Berkshire became a net buyer of stocks for the first time in 3.5 years in Q2, purchasing $23.5B in stocks while selling only $3.7B. The company also resumed significant share buybacks ($4.5B in Q2), indicating management confidence in valuations and signaling positive outlook.
+BRK.B | positive | Despite Buffett's May warning about overvaluation, Berkshire became a net buyer of stocks for the first time in 3.5 years in Q2, purchasing $23.5B in stocks while selling only $3.7B. The company also resumed significant share buybacks ($4.5B in Q2), indicating management confidence in valuations and signaling positive outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6f682a522f89a4cb7338bbaf1320a4e544ec3d4b4fd6ca6198b9dc3bc56c636c
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-19T14:45:00Z
+publisher: The Motley Fool
+author: Patrick Sanders
+url: https://www.fool.com/investing/2026/10/19/the-most-important-number-in-taiwan-semiconductors/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891340%2Ftaiwan-semiconductor-manufacturing-tsmc-office-with-the-logo-on-the-side-of-the-building.jpg&w=1200&op=resize
+category: 
+tickers: TSM, NVDA, AMD, AAPL
+keywords: Taiwan Semiconductor Manufacturing, Q3 earnings, high-performance computing, AI infrastructure, chip manufacturing, advanced processes, revenue growth
+headline: Opinion: The Most Important Number in Taiwan Semiconductor's Earnings Report Was 68%
+<<<SUMMARY>>>
+Taiwan Semiconductor Manufacturing (TSMC) reported strong Q3 results with 41.2% revenue growth and 68.7% net income increase. The key highlight is that high-performance computing (HPC) now accounts for 68% of quarterly revenue and is growing faster than overall business at 22% sequentially. This reflects strong AI infrastructure demand, with advanced manufacturing processes (7nm and smaller) representing 79% of wafer revenue, positioning TSMC as a critical beneficiary of ongoing AI investment.
+<<<INSIGHTS>>>
+TSM | positive | Strong Q3 results with 41.2% YoY revenue growth, 68.7% net income increase, and 66.4% gross margin. HPC segment growing at 22% sequentially and now representing 68% of revenue. Advanced manufacturing capabilities (79% of wafer revenue from 7nm and smaller) provide competitive moat. Q4 guidance indicates continued growth momentum with expected 44% full-year revenue growth.
+NVDA | positive | TSMC is a key manufacturing partner for Nvidia's AI accelerators. The strong growth in HPC demand and TSMC's advanced chip capabilities directly benefit Nvidia's AI processor business and data center expansion.
+AMD | positive | AMD is another major TSMC customer for chip manufacturing. The surge in HPC demand and TSMC's advanced process capabilities support AMD's AI and data center processor offerings.
+AAPL | neutral | While Apple is mentioned as a TSMC customer, the article emphasizes that smartphone revenue only accounts for 21% of TSMC's Q3 revenue, indicating declining relative importance compared to HPC segment growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ec701917efaed958e686a274acde1146ec120596551efc06787ab126c39b4ea6
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-20T10:15:00Z
+publisher: The Motley Fool
+author: James Brumley
+url: https://www.fool.com/investing/2026/10/20/greg-abel-berkshire-hathaway-stocks-worth/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F890100%2Finvestor-reviewing-a-stock-portfolio.jpg&w=1200&op=resize
+category: 
+tickers: LEN, LEN.B, GOOG, GOOGL, GOOGM, GOOGN, OXY, OXY.WS, DAL, AAPL
+keywords: Berkshire Hathaway, Greg Abel, Warren Buffett, stock portfolio, investment strategy, 2030 projections
+headline: Greg Abel's Berkshire Hathaway Owns These 5 Stocks. Here's What $1,000 in Each Could Be Worth by 2030.
+<<<SUMMARY>>>
+Greg Abel, Berkshire Hathaway's current CEO, is charting a new investment direction by selling some of Warren Buffett's long-held positions (Visa, Mastercard, Amazon) while maintaining or adding to others. The article analyzes five key Berkshire holdings—Lennar, Alphabet, Occidental Petroleum, Delta Air Lines, and Apple—projecting potential returns by 2030, with varying levels of confidence in each investment's future performance.
+<<<INSIGHTS>>>
+LEN | neutral | Berkshire's largest public housing play with potential upside from housing shortage (6M homes), but highly cyclical and uncertain timing. Article suggests $1,000 could reach ~$1,400 by 2030, but acknowledges stock may not move at all.
+LEN.B | neutral | Berkshire's largest public housing play with potential upside from housing shortage (6M homes), but highly cyclical and uncertain timing. Article suggests $1,000 could reach ~$1,400 by 2030, but acknowledges stock may not move at all.
+GOOG | positive | Now Berkshire's third-largest holding ($37B). Strong AI positioning but more importantly, stable search-based advertising business generating 20%+ revenue growth. Projected $1,000 could reach ~$1,500 by 2030.
+GOOGL | positive | Now Berkshire's third-largest holding ($37B). Strong AI positioning but more importantly, stable search-based advertising business generating 20%+ revenue growth. Projected $1,000 could reach ~$1,500 by 2030.
+GOOGM | positive | Now Berkshire's third-largest holding ($37B). Strong AI positioning but more importantly, stable search-based advertising business generating 20%+ revenue growth. Projected $1,000 could reach ~$1,500 by 2030.
+GOOGN | positive | Now Berkshire's third-largest holding ($37B). Strong AI positioning but more importantly, stable search-based advertising business generating 20%+ revenue growth. Projected $1,000 could reach ~$1,500 by 2030.
+OXY | negative | Below-average recent performance, leadership transition concerns, and $8.5B preferred stock buyback obligation starting 2029 with uncertain execution. Energy sector uncertainty adds risk. Article suggests little to no forward progress likely.
+OXY.WS | negative | Below-average recent performance, leadership transition concerns, and $8.5B preferred stock buyback obligation starting 2029 with uncertain execution. Energy sector uncertainty adds risk. Article suggests little to no forward progress likely.
+DAL | negative | Described as one of Abel's least popular purchases. Buffett himself warned against airline investments due to poor economics. Recent earnings show 21% revenue growth but only 2% net income growth, indicating structural weakness. Article recommends avoiding this pick.
+AAPL | positive | Berkshire's largest holding ($78B, 20% of portfolio) with continued record highs. Strong iPhone demand, growing services business, and AI integration support loyalty. Projected $1,000 could reach ~$1,500+ by 2030 based on consistent fundamentals.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:85ffa3722b4dd0284612ca6a470fc9d6867c63c224b5669fc0e82a5d797c4de8
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-20T19:43:00Z
+publisher: The Motley Fool
+author: Keithen Drury
+url: https://www.fool.com/investing/2026/10/20/prediction-apples-stock-is-due-for-a-reality-check/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891661%2Fapple.png&w=1200&op=resize
+category: 
+tickers: AAPL, NVDA, GOOG, GOOGL, GOOGM, GOOGN, MU
+keywords: Apple valuation, memory chip prices, AI investment strategy, Q1 FY2027 earnings, margin pressure, stock correction
+headline: Prediction: Apple’s Stock Is Due for a Reality Check on Nov. 2
+<<<SUMMARY>>>
+Apple's stock has outperformed the S&P 500 in 2026, but the author argues a correction is likely when Q1 FY2027 results are reported on Nov. 2. Despite attractive valuations compared to heavy AI investors, Apple faces headwinds from rising memory chip costs and slowing growth relative to peers. The author suggests investors consider rotating into AI stocks and other alternatives.
+<<<INSIGHTS>>>
+AAPL | negative | Stock is overvalued at decade-high multiples despite modest 16% growth, facing margin compression from rising memory chip costs, and lacks AI tailwinds compared to peers. Author predicts a reality check correction on Nov. 2 earnings.
+NVDA | positive | Trading at reasonable 27x trailing earnings with 106% revenue growth and estimated 70% growth next year, making it a more attractive valuation compared to Apple despite higher absolute multiples.
+GOOG | neutral | Mentioned as Apple's AI partner (Google Gemini), but no specific sentiment expressed. Represents the AI investment approach Apple chose to avoid heavy capital expenditure.
+GOOGL | neutral | Mentioned as Apple's AI partner (Google Gemini), but no specific sentiment expressed. Represents the AI investment approach Apple chose to avoid heavy capital expenditure.
+GOOGM | neutral | Mentioned as Apple's AI partner (Google Gemini), but no specific sentiment expressed. Represents the AI investment approach Apple chose to avoid heavy capital expenditure.
+GOOGN | neutral | Mentioned as Apple's AI partner (Google Gemini), but no specific sentiment expressed. Represents the AI investment approach Apple chose to avoid heavy capital expenditure.
+MU | negative | As a major memory chip supplier, warned that market conditions will worsen in 2027-2028, indicating continued pressure on Apple's costs and margins.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:eb8d1325c99c44329df81ce6f5d464978fb84da28903e33cfcdf3671b4bf022e
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-20T20:45:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3011453/apple-aapl-stock-sinks-as-market-gains-what-you-should-know?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6-3011453
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default4.jpg
+category: 
+tickers: AAPL
+keywords: Apple earnings, stock performance, valuation metrics, Zacks Rank, earnings forecast
+headline: Apple (AAPL) Stock Sinks As Market Gains: What You Should Know
+<<<SUMMARY>>>
+Apple (AAPL) closed down 1% to $339.50, underperforming the S&P 500's 0.28% gain. The company is scheduled to report earnings on November 2, 2026, with projections of $2 EPS (8.11% YoY growth) and $113.01 billion revenue (10.29% YoY growth). Apple currently holds a Zacks Rank #3 (Hold) rating with a Forward P/E of 35.77, trading at a premium to its industry average.
+<<<INSIGHTS>>>
+AAPL | neutral | Apple received a Hold rating (Zacks Rank #3) with mixed signals: positive earnings growth projections (8-19% YoY) and recent upward estimate revisions, but offset by underperformance versus the S&P 500, elevated valuation multiples (Forward P/E 35.77 vs. industry 17.45), and a PEG ratio of 2.72 significantly above industry average of 1.57.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fc9325f3af413b3258d5f10ada82cc59397d460dc33747ad0b61ae4c59cc622d
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-22T13:45:00Z
+publisher: The Motley Fool
+author: Daniel Foelber
+url: https://www.fool.com/investing/2026/10/22/nvidia-apple-alphabet-microsoft-and-amazon-now-mak/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891743%2Fabstract-image-featuring-an-upward-sloping-stock-market-chart-surrounded-by-various-data.jpg&w=1200&op=resize
+category: 
+tickers: NVDA, AAPL, GOOG, GOOGL, GOOGM, GOOGN, MSFT, AMZN, VOO, VUG, VTI
+keywords: concentration risk, mega-cap tech stocks, ETF diversification, S&P 500, artificial intelligence, index funds, low-cost investing
+headline: Nvidia, Apple, Alphabet, Microsoft, and Amazon Now Make Up 30.8% of VOO and 49.2% of VUG. Here's a Better Low-Cost Vanguard ETF to Buy Now.
+<<<SUMMARY>>>
+Five mega-cap tech stocks (Nvidia, Apple, Alphabet, Microsoft, Amazon) represent nearly 31% of the S&P 500 ETF and 49% of the Growth ETF, creating significant concentration risk. The article recommends the Vanguard Morningstar Total Stock Market ETF (VTI) as a better alternative, offering broader diversification across the entire U.S. stock market while maintaining the same ultra-low 0.03% expense ratio.
+<<<INSIGHTS>>>
+NVDA | positive | Praised for unparalleled earnings growth and profit margins for a company of its size; recognized as a key driver of index performance.
+AAPL | positive | Highlighted for integrated customer base, multiple revenue streams, and reliable high-margin revenue regardless of economic conditions.
+GOOG | positive | Recognized as a leading U.S. hyperscaler positioned to capitalize on AI monetization and global AI spending.
+GOOGL | positive | Recognized as a leading U.S. hyperscaler positioned to capitalize on AI monetization and global AI spending.
+GOOGM | positive | Recognized as a leading U.S. hyperscaler positioned to capitalize on AI monetization and global AI spending.
+GOOGN | positive | Recognized as a leading U.S. hyperscaler positioned to capitalize on AI monetization and global AI spending.
+MSFT | positive | Identified as a leading hyperscaler well-positioned to benefit from AI spending and monetization opportunities.
+AMZN | positive | Recognized as a leading U.S. hyperscaler positioned to capitalize on AI monetization and global AI spending.
+VOO | neutral | Solid low-cost option but criticized for excessive concentration in five mega-cap stocks, creating correlated AI exposure risk.
+VUG | neutral | Offers growth exposure but heavily dependent on mega-cap tech stocks with overlapping AI themes, creating concentration and correlation risk.
+VTI | positive | Recommended as superior alternative offering broader diversification across entire U.S. stock market with same ultra-low fees, reducing concentration and AI-related correlation risk.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6b476a3ca16d015f8e6d1db81e1385f997aa05371d65fc8e168868d901172289
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-22T16:00:00Z
+publisher: GlobeNewswire Inc.
+author: Researchandmarkets.Com
+url: https://www.globenewswire.com/news-release/2026/10/22/3386722/28124/en/canada-5g-device-market-size-trends-strategic-insights-and-forecasts-2026-2031-usd-15-2-billion-opportunity-fueled-by-5g-advanced-fwa-and-enterprise-iot.html
+image_url: https://ml.globenewswire.com/Resource/Download/908fb457-7f8e-4a08-9081-5565e3dfb3d7
+category: 
+tickers: AAPL, GOOG, GOOGL, GOOGM, GOOGN, MSFT, QCOM, RCI, TU
+keywords: 5G devices, Canada market, mid-band spectrum, 5G-Advanced, fixed wireless access, IoT, enterprise adoption, market forecast, device segments, rural connectivity
+headline: Canada 5G Device Market - Size, Trends, Strategic Insights, and Forecasts (2026-2031) | USD 15.2 Billion Opportunity Fueled by 5G Advanced, FWA, and Enterprise IoT
+<<<SUMMARY>>>
+Canada's 5G device market is projected to grow from USD 10.0 billion in 2026 to USD 15.2 billion by 2031 at a CAGR of 8.7%, driven by mid-band spectrum deployment, 5G-Advanced technology, fixed wireless access, and enterprise IoT adoption. Key growth drivers include spectrum rollout, regulatory competition measures, rural connectivity initiatives, and carrier innovation, though supply chain dependencies and delayed spectrum availability in some markets present challenges.
+<<<INSIGHTS>>>
+AAPL | positive | Apple continues to lead the premium smartphone category through annual iPhone launches and deep carrier integration, positioning it well in Canada's growing 5G device market.
+GOOG | neutral | Google competes across mid-range smartphones and connected computing but is not highlighted as a primary market leader or innovator in the Canadian 5G device market.
+GOOGL | neutral | Google competes across mid-range smartphones and connected computing but is not highlighted as a primary market leader or innovator in the Canadian 5G device market.
+GOOGM | neutral | Google competes across mid-range smartphones and connected computing but is not highlighted as a primary market leader or innovator in the Canadian 5G device market.
+GOOGN | neutral | Google competes across mid-range smartphones and connected computing but is not highlighted as a primary market leader or innovator in the Canadian 5G device market.
+MSFT | neutral | Microsoft is mentioned as competing in enterprise applications but has no specific strategic initiatives or market advantages highlighted in the report.
+QCOM | positive | As a major chipset provider for 5G devices, Qualcomm benefits from the projected market growth and increased device demand across consumer and enterprise segments.
+RCI | positive | Rogers is a major market gatekeeper through device certification and carrier subsidies, deployed 5G Advanced RedCap software, and launched Rogers Satellite for extended coverage, actively stimulating demand for next-generation devices.
+TU | positive | TELUS is a major market gatekeeper and partner with Samsung to develop Canada's first commercial virtualized and Open RAN 5G network, positioning it as a key driver of market innovation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:633e5cca4fa62d301279841fbd7965bc95a359a542ba3851bee18d3e7ada6b7b
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-22T18:45:00Z
+publisher: The Motley Fool
+author: Keithen Drury
+url: https://www.fool.com/investing/2026/10/22/better-buffett-stock-alphabet-vs-apple/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891660%2Fphoto-of-warren-buffett.jpg&w=1200&op=resize
+category: 
+tickers: GOOG, GOOGL, GOOGM, GOOGN, AAPL, BRK.A, BRK.B
+keywords: AI investment strategy, valuation comparison, data center spending, forward earnings multiples, technology stocks, Warren Buffett, Berkshire Hathaway
+headline: Better Buffett Stock: Alphabet vs. Apple
+<<<SUMMARY>>>
+The article compares Alphabet and Apple as investment opportunities, noting that Alphabet is taking an aggressive AI-first approach with $200 billion in data center spending, while Apple is adopting a more conservative strategy by licensing Google's Gemini model. Alphabet trades at 22x forward earnings versus Apple's 36x, making it significantly cheaper. The author recommends Alphabet as the better buy due to its lower valuation and stronger AI positioning, despite Apple's more cash-conservative business model.
+<<<INSIGHTS>>>
+GOOG | positive | Positioned as an AI-first company with aggressive $200 billion data center investment; trades at attractive 22x forward earnings; author recommends it as the better buy; Berkshire recently increased purchases
+GOOGL | positive | Positioned as an AI-first company with aggressive $200 billion data center investment; trades at attractive 22x forward earnings; author recommends it as the better buy; Berkshire recently increased purchases
+GOOGM | positive | Positioned as an AI-first company with aggressive $200 billion data center investment; trades at attractive 22x forward earnings; author recommends it as the better buy; Berkshire recently increased purchases
+GOOGN | positive | Positioned as an AI-first company with aggressive $200 billion data center investment; trades at attractive 22x forward earnings; author recommends it as the better buy; Berkshire recently increased purchases
+AAPL | neutral | Trades at expensive 36x forward earnings; taking conservative AI approach by licensing Gemini rather than developing in-house; AI features described as lackluster; risks losing smartphone market share to Android competitors with better AI
+BRK.A | neutral | Mentioned as context for investment philosophy and recent buying patterns; CEO Greg Abel continues purchasing Alphabet shares, signaling bullish stance on that company over Apple
+BRK.B | neutral | Mentioned as context for investment philosophy and recent buying patterns; CEO Greg Abel continues purchasing Alphabet shares, signaling bullish stance on that company over Apple
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9608c741b617ebb51f6c2b601e36afb02467cb8270d7534a4e1d4327089382c6
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-23T19:25:00Z
+publisher: Zacks Investment Research
+author: Mark Vickery
+url: https://www.zacks.com/commentary/3013792/top-stock-reports-for-apple-berkshire-hathaway-goldman-sachs?cid=CS-ZC-FT-research_daily-3013792
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ef/1522.jpg
+category: 
+tickers: AAPL, BRK.A, BRK.B, GS, GSpA, GSpC, GSpD, SIF, TXN, RTX, URI
+keywords: stock analysis, AI investment, earnings reports, semiconductor, defense, insurance, investment banking
+headline: Top Stock Reports for Apple, Berkshire Hathaway & Goldman Sachs
+<<<SUMMARY>>>
+Zacks Research Daily presents analysis of 16 major stocks on October 23, 2026. Apple receives a Neutral rating despite strong AI capabilities and device ecosystem, citing supply constraints and margin pressures. Berkshire Hathaway maintains Neutral stance with balanced risk-reward profile. Goldman Sachs outperforms its industry with strong earnings, though rising spending concerns remain. Additional coverage includes Texas Instruments benefiting from AI data center demand, RTX facing supply chain challenges, and various other companies with mixed outlooks.
+<<<INSIGHTS>>>
+AAPL | neutral | Growing device ecosystem and expanding Services business with AI capabilities support long-term outlook, but supply constraints, rising memory costs, iPhone concentration, and margin pressures from higher R&D spending offset gains.
+BRK.A | neutral | Diversified businesses and strong capital position support durable earnings, but insurance exposure to catastrophe losses, lower investment income from reduced rates, and execution risks under new leadership create balanced risk-reward profile.
+BRK.B | neutral | Diversified businesses and strong capital position support durable earnings, but insurance exposure to catastrophe losses, lower investment income from reduced rates, and execution risks under new leadership create balanced risk-reward profile.
+GS | positive | Outperformed industry with strong earnings growth, robust equity trading, and improving deal activity. Growing wealth assets and alternative fundraising support recurring revenues, though rising transaction and technology spending poses near-term profitability concerns.
+GSpA | positive | Outperformed industry with strong earnings growth, robust equity trading, and improving deal activity. Growing wealth assets and alternative fundraising support recurring revenues, though rising transaction and technology spending poses near-term profitability concerns.
+GSpC | positive | Outperformed industry with strong earnings growth, robust equity trading, and improving deal activity. Growing wealth assets and alternative fundraising support recurring revenues, though rising transaction and technology spending poses near-term profitability concerns.
+GSpD | positive | Outperformed industry with strong earnings growth, robust equity trading, and improving deal activity. Growing wealth assets and alternative fundraising support recurring revenues, though rising transaction and technology spending poses near-term profitability concerns.
+SIF | neutral | Strong year-to-date performance driven by defense demand and healthy backlog, but weakness in commercial demand, skilled-labor constraints, elevated input costs, and liquidity concerns warrant caution despite improving cash generation.
+TXN | positive | Benefiting from strong demand for power management and high-speed connectivity products used for AI workloads at data centers.
+RTX | neutral | Likely to benefit from increasing defense order growth from Pentagon and US allies, but supply chain issues result in delays and increase costs.
+URI | positive | Diversified project demand, acquisition strategies, specialty expansion and disciplined fleet management are benefiting growth prospects.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5a2606c5afd6056607f90eb8a179e1f9ab85a7b87138f92195eb0fa988bf62d4
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-23T20:59:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3014354/3-portfolio-worthy-stocks-hitting-52-week-highs-aapl-lly-ko?cid=CS-ZC-FT-video_blog-3014354
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default312.jpg
+category: 
+tickers: AAPL, LLY, KO
+keywords: 52-week highs, large-cap stocks, technology growth, pharmaceutical innovation, defensive consumer staples, dividend income, market strength
+headline: 3 Portfolio-Worthy Stocks Hitting 52-Week Highs: AAPL, LLY & KO
+<<<SUMMARY>>>
+Three blue-chip companies—Apple, Eli Lilly, and Coca-Cola—have reached new 52-week highs, demonstrating strong relative performance amid market volatility. Apple benefits from iPhone momentum and AI opportunities, Eli Lilly capitalizes on booming obesity and diabetes treatments, while Coca-Cola offers defensive stability with consistent dividend growth.
+<<<INSIGHTS>>>
+AAPL | positive | Stock reached new 52-week highs near $350, supported by strong iPhone momentum, expanding services ecosystem, AI opportunities, and record installed base. Q3 revenue grew 16% YoY with 21% EPS growth.
+LLY | positive | Reached new 52-week high of $1,321.21 with exceptional growth driven by blockbuster obesity and diabetes treatments. Q2 revenue surged 48% YoY, EPS beat estimates by 39%, and full-year guidance raised to 32% YoY growth.
+KO | positive | Surged to new 52-week highs near $95 with resilient consumer demand and pricing power. Q2 revenue grew 7% YoY, adjusted EPS climbed 11%, and company maintains 64-year dividend increase streak with 2.2% yield.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f1d891194976c2ae12454d7d15ef8e2c01c01e21ba86d682cbeb32cb6f9469d6
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-23T21:30:02Z
+publisher: The Motley Fool
+author: Motley Fool Staff
+url: https://www.fool.com/investing/2026/10/23/will-apple-take-over-your-smart-home/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F4a2d48b12b440722f32c54f247adf758cfa106ff-1920x1080.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, ASML, AMZN, GOOG, GOOGL, GOOGM, GOOGN, NVDA, LVMUY, PPRUY, BURBY
+keywords: smart home, premium pricing, HomeKit ecosystem, semiconductor manufacturing, luxury retail, China demand, consumer spending
+headline: Will Apple Take Over Your (Smart) Home?
+<<<SUMMARY>>>
+Apple launched new smart home products including the $299 HomeView device and premium security cameras/accessories, but analysts question whether consumers will pay significantly higher prices than competitors like Amazon and Google. The discussion also covers ASML's strong earnings and capacity constraints through 2028, and the luxury sector's struggles due to China's weakening demand and middle-class consumer pullback, though ultra-premium brands like Hermès remain resilient.
+<<<INSIGHTS>>>
+AAPL | neutral | While Apple's smart home products are well-integrated and functional, analysts express skepticism about consumer adoption due to premium pricing ($300+ vs. sub-$100 alternatives), lack of differentiation, and the failure of HomeKit a decade ago. The products are described as 'incremental' rather than revolutionary, with uncertain revenue impact despite potential long-term services growth.
+ASML | positive | ASML reported strong earnings with revenue above 11 billion euros, gross margins approaching 60%, and manufacturing capacity sold out through 2027-2028. As the monopoly provider of EUV lithography machines critical to AI chip production, the company faces artificial supply constraints that validate long-term AI infrastructure demand through 2030.
+AMZN | neutral | Amazon's Alexa ecosystem is mentioned as a more affordable alternative to Apple's smart home offerings, but no specific company performance data is discussed in the article.
+GOOG | neutral | Google Home is mentioned as a competitive alternative to Apple's smart home ecosystem, but no specific company performance data is discussed in the article.
+GOOGL | neutral | Google Home is mentioned as a competitive alternative to Apple's smart home ecosystem, but no specific company performance data is discussed in the article.
+GOOGM | neutral | Google Home is mentioned as a competitive alternative to Apple's smart home ecosystem, but no specific company performance data is discussed in the article.
+GOOGN | neutral | Google Home is mentioned as a competitive alternative to Apple's smart home ecosystem, but no specific company performance data is discussed in the article.
+NVDA | neutral | Nvidia's AI processors are mentioned as dependent on ASML's EUV lithography machines, but the article notes uncertainty about end-customer revenue generation and AI demand sustainability.
+LVMUY | negative | LVMH reported 5% organic revenue decline in fashion and leather goods, down 50% from all-time highs. Weakness stems from China's consumer confidence collapse, post-pandemic price increases causing backlash, and middle-class aspirational buyers pulling back. However, stock trading at 17x forward earnings may present eventual value.
+PPRUY | negative | Kering (owner of Gucci, Saint Laurent, Balenciaga) experienced a 16% revenue plunge in recent results, significantly worse than LVMH, indicating severe weakness in mid-tier luxury brands as middle-class consumers reduce spending.
+BURBY | negative | Burberry, positioned in the mid-tier and aspirational segment, is experiencing major profit slumps as its core middle-class consumer base has pulled back significantly from luxury spending.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:54d76d9486036453f6ae393d4c94944d376ac1142bfe47372da9999369a975a3
+symbol: AAPL
+company: Apple
+api: polygon
+type: news
+published_utc: 2026-10-24T12:26:00Z
+publisher: The Motley Fool
+author: Thomas Niel
+url: https://www.fool.com/investing/2026/10/24/is-mp-materials-stock-a-millionaire-maker/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891381%2Fgettyimages-2208923946-1251x1052-79bf63b.jpg&w=1200&op=resize
+category: 
+tickers: MP, GM, AAPL
+keywords: rare-earth metals, MP Materials, Mountain Pass, NdPr production, General Motors, Apple, earnings, speculative investment, execution risk
+headline: Is MP Materials Stock a Millionaire Maker?
+<<<SUMMARY>>>
+MP Materials has shown strong commercialization progress with 41% year-over-year growth in NdPr production and announced major shipments to General Motors and Apple. However, at a $6.82B valuation, the stock is unlikely to be a 'millionaire maker.' While growth investors may consider it a speculative buy ahead of November 5 earnings, execution risks persist and any production hiccups could trigger pullbacks.
+<<<INSIGHTS>>>
+MP | neutral | While the company shows strong operational progress (41% YoY production growth, major OEM partnerships with GM and Apple), the article tempers optimism by noting the stock's $6.82B valuation already reflects much of its future potential, making significant returns unlikely. Execution risks and the need for a small speculative position indicate cautious outlook rather than strong bullish conviction.
+GM | neutral | Mentioned as a customer receiving rare-earth magnet shipments from MP Materials in Q4 2026, but no direct analysis or sentiment is provided about GM itself in the article.
+AAPL | neutral | Mentioned as a customer receiving rare-earth magnet shipments from MP Materials in Q1 2027, but no direct analysis or sentiment is provided about Apple itself in the article.
+<<<END>>>

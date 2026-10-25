@@ -1,0 +1,401 @@
+<<<ARTICLE>>>
+id: finnhub:143135600
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:20:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8f01f740112a62aacbbfec8ff107e5f6686389469524c19499bf4c26631c1558
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta’s new non-voting shares aim to protect Zuckerberg’s control: Oppenheimer
+<<<SUMMARY>>>
+Investing.com -- Oppenheimer said in a note Friday that Meta Platforms’ plan to issue new non-voting Class C shares is likely designed to protect CEO Mark Zuckerberg’s voting control.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133075
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T03:19:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=bc7df7b9e1c2a15128972ad6b727a4c284412823560ca9c49c743d236a5e5b45
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Mark-Zuckerberg-Image-On-Mobile-Screen-A.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Meta, Nvidia Lead Tech Sell-Off as AI Spending Fears Rattle Wall Street, But Gene Munster Sides With Musk, Zuckerberg and Huang: ‘We’re Still Early'
+<<<SUMMARY>>>
+Tech stocks plunged on AI spending fears, but Gene Munster says the AI revolution is early, with Meta’s Muse poised to reshape commerce.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143106819
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T23:50:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ac573909bbfe809bec722908ab64fed05966f09641f7ad568010f6d1a681755
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Mark Zuckerberg’s creative plan to pay California’s proposed billionaire tax without losing control of Meta
+<<<SUMMARY>>>
+A newly launched stock class being offered was partially engineered to help Meta founder and CEO Mark Zuckerberg pay the "billionaire's tax," should the measure be voted into law.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133919
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T23:27:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c75afd0ee27dc387439a813bd4738c4be182a7b999940012ceb66a66624486db
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Washington--Dc--September-27--2021-Rep--.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Ro Khanna Says Zuckerberg’s California Deal Undercuts Billionaire Tax Exodus Warnings: ‘Gavin, Can You and Sergey Brin Stop...’
+<<<SUMMARY>>>
+Ro Khanna says Zuckerberg’s California deal undermines claims that a proposed billionaire tax will drive the wealthy out of the state.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143112292
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T22:36:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b4ad31ba2ed24e757b4b82df278683e139be57a63f4157499f4bc1e114f5667
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta says shopping is Muse’s primary use case
+<<<SUMMARY>>>
+In its third-quarter earnings transcript, CEO Mark Zuckerberg touted the artificial intelligence agent’s download numbers and outlined its benefits.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143104072
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T21:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=810a3561b5ec175af7fb1fea1c673dfdc18403a20c428269aedf155f30e73d18
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Mark Zuckerberg threatened to leave California over its 5% wealth tax — so Meta created a new stock class to keep him
+<<<SUMMARY>>>
+Meta sweetened the deal for its billionaire boss as California weighs a wealth tax that could cost Mark Zuckerberg billions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143104075
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T20:44:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09de2531fff485dc12f816084bb0e8898d1a47852f2596aba12c175ced03af14
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: How Meta struck a deal to keep Mark Zuckerberg in California despite looming billionaire tax
+<<<SUMMARY>>>
+Zuckerberg worried if the tax passed it could reduce how much control he had over his company but Meta's board struck a deal that quelled his concerns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103643
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T19:15:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=58f56e9638a8d265e5f59bb2e8a61d0ac18900c37dfc944c3527a44e3d5bb893
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Mark Zuckerberg makes deal with Meta to help him pay California billionaire tax, if it passes
+<<<SUMMARY>>>
+(AP) — Mark Zuckerberg made a deal with Meta's board to help him pay a proposed California tax on billionaires without losing his ownership stake in the company he founded, according to regulatory filings published this week. The wealth tax is before California voters in the election that concludes Nov.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103644
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T19:06:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b0e53bc8a961f7dc95782c965ed911000f6d672bf14f0da195a6e82cc5e36ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta Creates Non-Voting Stock to Fund AI Buildout, Keeping Zuckerberg in Control
+<<<SUMMARY>>>
+Meta will hand shareholders a free non-voting share for every share they own in January, giving it a way to raise equity for AI spending without diluting Zuckerberg's 60.6% vote.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103647
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T18:39:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe35d15b42f6fcea81b15292b2afe55bec68cccc01a002fe63e44e562b143d29
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta's Board Convinced Zuckerberg to Stay in California Despite its Wealth Tax. Here's What he Was Offered.
+<<<SUMMARY>>>
+Zuckerberg told the company he was "evaluating relocating his primary residence outside California," if the legislation passed in California.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103124
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T17:45:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c14264c476c47b63aa3a0411898d7d37b1d51004306653843f57b3629c62765
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta Just Created a Stock Zuckerberg Can Sell Without Losing Control
+<<<SUMMARY>>>
+Meta's board just approved a new class of non-voting stock, and the structure reveals something unusual about how Mark Zuckerberg plans to cash in shares while keeping an iron grip on the company he built.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143134076
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:30:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d6cac88a31a1060b9eebd567557e87f18df3bf1bb2db4f07f01d9c1334db49b0
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Mark-Zuckerberg-Speaks-At-Georgetown-Uni.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Meta Bulls Beware: Bond Market Sends Its Loudest Warning on Zuckerberg's Borrowing Binge
+<<<SUMMARY>>>
+Meta’s debt insurance costs hit a record as AI spending concerns mount, despite strong cash reserves and revenue.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102414
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:28:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d5b328630d769e3795deb3312ff5166b721192db33fe3b2c98b76fa7ce3ca2f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Mark Zuckerberg threatened to leave California over wealth tax
+<<<SUMMARY>>>
+Zuckerberg has agreed to remain in California for eight years as part of a board-approved plan to create new shares he can sell to pay a proposed wealth tax.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100018
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:40:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c72ef33710af42ce7449aaedadb3ae96827111226e4492dd86cac6b0810c5c19
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Could California's billionaire tax hit Mark Zuckerberg?
+<<<SUMMARY>>>
+The 8:30 Hosts Julie Hyman, Pras Subramanian, and Jake Conley discuss California's proposed one-time 5% billionaire wealth tax and what it could mean for Meta (META) CEO Mark Zuckerberg. The panel breaks down whether it could push billionaires to leave the state.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143098563
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:21:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=52f140112804059503a624378e6eb85eb03754d8475144f9e9f3e30e58b78802
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Zuckerberg Says He May Leave California Over a 5% Billionaire Tax
+<<<SUMMARY>>>
+When Mark Zuckerberg privately told Meta's board he planned to sell his Palo Alto home and leave California, the board did not try to change his mind. It rewrote the company's stock structure instead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099657
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T09:26:51Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=92c17acf8b9ee8113a95c5055f7e2cbe9e96540adb65481337f389304d08f85c
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Billionaires-Income-Tax--Pile-Of-Us-Doll.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Top Economists Warn California’s Billionaire Tax Could Backfire, Wealthy Residents Leaving Could Cost the State $39 Billion More Than It Collects: 'Will Not Fulfill the Primary Functions'
+<<<SUMMARY>>>
+Stanford economists estimate California’s billionaire tax could raise $30 billion but trigger exits that cost the state $39 billion net.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102124
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T09:10:34Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ab156d497b23510558ce5e0acf65dca6c19abb58b3ff81f710f08bcadd129fbe
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Los-Angeles--California---July-3-2025-Me.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Meta Just Unveiled a New Takeover Weapon — But There's a Catch
+<<<SUMMARY>>>
+Meta will issue non-voting Class C shares to fund AI, pay staff and acquisitions, while preserving Zuckerberg’s control.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143138398
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T00:07:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe43de533c45bf6f5d8417e02de229e7b6db28ac87d2c8c26bfb06f165495f10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Elon Musk Eyes SpaceX-Tesla Merger, Huang Pitches ‘Financeable’ Chips, Zuckerberg Wants More Compute: Mag 7 Voices This Week
+<<<SUMMARY>>>
+The CEOs of the Magnificent Seven spent the week insisting that demand for AI computing is strong, but each had a different bottleneck to flag.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:51a8078665c31f130d1b06f88e83aa08c8a5d359b5d7e2855e4ed88ac98c6511
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T15:04:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3013141/meta-fcf-flips-negative-why-investors-should-overlook-it?cid=CS-ZC-FT-investment_ideas-3013141
+image_url: https://staticx-tuner.zacks.com/images/articles/main/cc/12495.jpg
+category: 
+tickers: META, PEP
+keywords: Meta earnings, AI investment, free cash flow, Muse platform, CAPEX spending, ad revenue growth, Mark Zuckerberg
+headline: Meta FCF Flips Negative: Why Investors Should Overlook It
+<<<SUMMARY>>>
+Meta reported Q3 earnings with revenue of $64.60B beating expectations, but EPS of $3.83 missed due to one-time charges including a $2.4B legal settlement. The company posted its first negative free cash flow quarter since going public in 2012, driven by aggressive AI infrastructure spending. However, analysts argue this is a deliberate reinvestment strategy, with Meta's core ad business growing 28% and the new Muse AI platform showing strong early traction with 10M setups and $200+ average purchase sizes.
+<<<INSIGHTS>>>
+META | positive | Strong revenue beat (26% YoY growth), robust ad revenue growth (28%), and strategic AI investments in Muse platform with impressive early traction (10M setups, $200+ average purchases). Negative FCF is framed as deliberate reinvestment rather than operational weakness, with core business fundamentals remaining strong.
+PEP | neutral | Mentioned only as a comparative example of a 'caretaker' CEO approach focused on stability and cash generation, not as a subject of analysis. No specific company performance data provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9f204514094f10143d87bb4b76fadb6d06d6c3f64a99c12a771dfa81f6f87858
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-23T07:50:01Z
+publisher: The Motley Fool
+author: Adria Cimino
+url: https://www.fool.com/investing/2026/10/23/meta-is-doing-something-it-s-never-done-before-here-s-what-it-means-for-investors/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fff743d5f13207efffe279b37a090ce87abcc2729-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: META
+keywords: stock split, Class C shares, AI investment, capital expenditures, financial flexibility, voting rights, Mark Zuckerberg
+headline: Meta Is Doing Something It’s Never Done Before. Here’s What It Means for Investors.
+<<<SUMMARY>>>
+Meta announced its first-ever stock split by creating a new non-voting Class C share class, doubling share count while preserving CEO Mark Zuckerberg's voting power. This move provides Meta with enhanced financial flexibility to fund its aggressive AI infrastructure investments and pursue acquisitions or employee compensation without diluting leadership control.
+<<<INSIGHTS>>>
+META | positive | The stock split announcement provides Meta with valuable financial flexibility to fund its multi-billion dollar AI infrastructure build-out without diluting founder control. The move enables alternative financing options (issuing new shares, acquisitions, employee compensation) while maintaining strong earnings growth (revenue up double-digits to $64B, net income $9.8B). AI investments are already boosting ad revenue through improved engagement and recommendations.
+<<<END>>>

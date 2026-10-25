@@ -1,0 +1,17 @@
+# Account Manager — application code, not an MCP call
+async def run_account_manager(user_request: dict) -> dict:
+    work_order = {
+        "case": user_request["case"],          # 1, 2, or 3
+        "amount": user_request.get("amount"),  # Case 1
+        "search": user_request.get("search"),  # Case 2
+        "who": user_request["who"],
+    }
+    # This is the agent call: one Python function starts the other agent.
+    data = await run_data_clerk(work_order)
+    return data
+# Data Clerk — owns the MCP. Account Manager never sees these tool names.
+async def run_data_clerk(work_order: dict) -> dict:
+    async with connect_client() as client:  # Data Clerk's MCP
+        quotes = (await client.call_tool("fetch_quote", {"symbol": "AAPL"})).data
+        news = (await client.call_tool("fetch_news", work_order)).data
+    return {"work_order": work_order, "quotes": quotes, "news": news}

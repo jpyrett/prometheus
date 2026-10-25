@@ -1,0 +1,269 @@
+<<<ARTICLE>>>
+id: finnhub:143132251
+symbol: TSLA
+company: Tesla
+api: finnhub
+type: news
+published_utc: 2026-10-23T11:40:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ce988ebbf6e406dd3ca9f3171b01f75f186fcbbfea746afbf9a283bbdc8cfda3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Tesla Gives Up On Cybertruck In Australia. Company Says It Will Refund All Deposits It Has Collected Since 2019 For The Troubled Truck
+<<<SUMMARY>>>
+After nearly seven years of waiting and a deposit that felt more like a promise than a placeholder, Australian Cybertruck reservation holders just got an email that changes everything for them and signals something larger about where Tesla is actually putting its bets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135044
+symbol: TSLA
+company: Tesla
+api: finnhub
+type: news
+published_utc: 2026-10-23T03:26:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8cc1f63d04c3bf835c5cf25355b6e73f938f6c3c33b3286a9462192eda8d93b3
+image_url: 
+category: company
+tickers: TSLA
+keywords: 
+headline: Tesla Drops Plans To Produce Cybertruck For Australia And New Zealand Markets
+<<<SUMMARY>>>
+-Reuters
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102424
+symbol: TSLA
+company: Tesla
+api: finnhub
+type: news
+published_utc: 2026-10-22T15:46:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=782d425372bbbbdecb3adc0a072f9eb72f3676f14fdb30a157cabe9137e81dce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Tesla Outlook Supported by Self-Driving Software, Robotaxi Growth, RBC Says
+<<<SUMMARY>>>
+Tesla (TSLA) Full Self-Driving software is becoming a significant driver of car sales and robotaxi b
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100033
+symbol: TSLA
+company: Tesla
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:45:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb045e83181293b3f4ed52312854f755cc333ab481a9e22a6bff2c6f7155c02e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Analysts Hike Tesla Price Targets; SpaceX Merger, AI 'In Full Control'
+<<<SUMMARY>>>
+Tesla CEO Elon Musk told investors to be patient when it came to progress on robotaxi expansion and Optimus development.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133289
+symbol: TSLA
+company: Tesla
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:15:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8b82fe4c15e7c3b2e3c9be53935ed5f1bd6cd896c6b16045c678e6e570ce621f
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/CathieWood-ArkInvest-Tesla-Shutterstock.png?width=2048&height=1536
+category: company
+tickers: TSLA
+keywords: 
+headline: Cathie Wood’s 1,100% Tesla Stock Forecast Puts These 3 Robotics ETFs in Focus
+<<<SUMMARY>>>
+Cathie Wood sees Tesla stock rising nearly 1,100% by 2031. Here are three robotics ETFs offering exposure to the robotaxi and AI buildout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143075984
+symbol: TSLA
+company: Tesla
+api: finnhub
+type: news
+published_utc: 2026-10-22T00:04:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e36fc285d13ced7350eeed721241c21d8d45861797fd8d2882495db915d5fdb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: What Tesla (TSLA) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+Tesla (NASDAQ:TSLA) said demand for its vehicles exceeded production in the third quarter of 2026, with executives pointing to Full Self-Driving software, energy storage demand and early Robotaxi operations as central drivers of its growth plans. Chief Executive Officer Elon Musk said the company w
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8ae046a8c26f3b11238d3157e188fbed8f8181d89debec2be4fa8621f46013f4
+symbol: TSLA
+company: Tesla
+api: polygon
+type: news
+published_utc: 2026-10-20T11:30:00Z
+publisher: The Motley Fool
+author: Will Ebiefung
+url: https://www.fool.com/investing/2026/10/20/prediction-heres-what-1000-invested-in-tesla-stock/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891652%2Fgettyimages-1271085883.jpg&w=1200&op=resize
+category: 
+tickers: TSLA, SPGI
+keywords: Tesla Roadster, electric vehicles, valuation, P/E ratio, robotaxi, margins, innovation, stock price prediction
+headline: Prediction: Here's What $1,000 Invested in Tesla Stock Will Be Worth in 3 Years
+<<<SUMMARY>>>
+Tesla's new Roadster with advanced features generates buzz but won't significantly impact revenue. While the company shows innovation, its P/E ratio of 352 is extremely expensive compared to the S&P 500's average of 24. Tesla faces margin pressures from price cuts and heavy R&D spending, with operating income down 57% in Q2. The stock is in limbo—valuation is too high for meaningful growth, but future projects like robotaxi services may sustain investor optimism for a few more years.
+<<<INSIGHTS>>>
+TSLA | neutral | Tesla demonstrates strong innovation and revenue growth (+26% YoY), but faces significant headwinds: extremely high P/E ratio (352 vs S&P 500's 24), deteriorating margins, operating income down 57%, and intense competition. Future projects like robotaxi offer potential but are unproven. The article concludes a $1,000 investment is unlikely to deliver meaningful returns over 3 years unless new information emerges.
+SPGI | neutral | Mentioned only as a source of analyst estimates regarding Tesla's robotaxi revenue potential by 2030. No direct investment thesis or sentiment is provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0506995e1b124845d434ec00bd6ed187ed828ce7a2b5d6f79e6dcb6fc6f00708
+symbol: TSLA
+company: Tesla
+api: polygon
+type: news
+published_utc: 2026-10-20T16:50:00Z
+publisher: The Motley Fool
+author: Keith Noonan
+url: https://www.fool.com/investing/2026/10/20/spacex-revenue-projections-optimistic-elon-musk/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F889812%2Fgettyimages-2163002582.jpg&w=1200&op=resize
+category: 
+tickers: SPCX, TSLA
+keywords: SpaceX revenue projections, Elon Musk forecasting, growth targets, Tesla robotaxi, Cybertruck sales, Optimus robots, Starlink, investor skepticism
+headline: SpaceX Revenue Projections Look Wildly Optimistic Based on Elon Musk's Forecasting Track Record
+<<<SUMMARY>>>
+SpaceX aims for $1 trillion in revenue by 2030 and $3.5 trillion by 2033, but Elon Musk's history of missed forecasts raises skepticism. While SpaceX shows strong growth potential in AI, rocket launches, and Starlink, investors should view these ambitious targets with caution given Musk's track record of overly optimistic predictions across Tesla projects.
+<<<INSIGHTS>>>
+SPCX | neutral | While SpaceX demonstrates strong fundamentals and growth potential in AI, rocket launches, and Starlink, the article expresses skepticism about management's revenue projections due to Musk's consistent history of missing forecasts. The company has real accomplishments but ambitious targets lack credibility.
+TSLA | negative | Multiple failed forecasts are cited as evidence of Musk's unreliable projections: robotaxi targets missed by 75-80%, Cybertruck sales fell 92% short of estimates, Optimus robot integration lagged expectations, and Semi-truck production delayed years. This pattern undermines confidence in SpaceX projections.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f9fcaec23e0dfbe40605c94f73a7cd6b6550109f6b656ec89e9e98b55ef43064
+symbol: TSLA
+company: Tesla
+api: polygon
+type: news
+published_utc: 2026-10-21T06:30:01Z
+publisher: The Motley Fool
+author: Prosper Junior Bakiny
+url: https://www.fool.com/investing/2026/10/21/will-tesla-s-new-flying-roadster-send-the-stock-flying/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fdc5e6a802cf0359d707c653b89d4104b191ca110-1200x800.png&w=1200&op=resize
+category: 
+tickers: TSLA, BYDDY
+keywords: flying car, Roadster, robotaxi, Cybercab, SpaceX merger, luxury EV, regulatory approval, cold-gas thrusters
+headline: Will Tesla’s New Flying Roadster Send the Stock Flying?
+<<<SUMMARY>>>
+Tesla unveiled a second-generation Roadster with flying capabilities on October 15, 2026, featuring cold-gas thrusters and suction technology. However, the flying version won't be available to the general public and requires regulatory approval. While the non-flying luxury versions will be expensive, analysts believe the new Roadster will have minimal financial impact on Tesla's revenue and profits. The event has sparked speculation about a potential merger between Tesla and SpaceX, though the author advises caution due to regulatory risks and uncertainty.
+<<<INSIGHTS>>>
+TSLA | neutral | While the flying Roadster is impressive engineering, it's unlikely to significantly impact revenue or profits. The author notes Tesla's core robotaxi business is more important for long-term performance. The stock showed minimal movement after the announcement. Speculation about a SpaceX merger adds uncertainty rather than positive catalysts.
+BYDDY | positive | BYD is mentioned as a competitive threat with a large lineup of EVs catering to various customer segments, including price-sensitive buyers. This positions BYD favorably in an increasingly competitive EV market.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f3be28e18a2dff10a658d8f8110e49620da2fb620b4e26291ebb53222a5b08c3
+symbol: TSLA
+company: Tesla
+api: polygon
+type: news
+published_utc: 2026-10-21T17:46:00Z
+publisher: The Motley Fool
+author: Geoffrey Seiler
+url: https://www.fool.com/investing/2026/10/21/what-10k-invested-spacex-tesla-worth-2030/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891700%2Fspcxtsla.png&w=1200&op=resize
+category: 
+tickers: TSLA
+keywords: Tesla, SpaceX, merger, robotaxis, AI infrastructure, Starlink, investment outlook, 2030 valuation
+headline: Here's What $10,000 Invested in SpaceX and Tesla Could Be Worth in 2030
+<<<SUMMARY>>>
+An analysis suggests that a $10,000 investment split between Tesla and SpaceX could potentially grow to over $30,700 by 2030, assuming a merger occurs before then. Tesla's growth drivers include robotaxis and Optimus robots, while SpaceX is expanding through AI infrastructure, Starlink satellite internet, and space ventures. Prediction markets show a 77% probability of merger by end of 2028.
+<<<INSIGHTS>>>
+TSLA | positive | Article highlights Tesla's differentiated self-driving technology, robotaxi opportunities with cost advantages, and Optimus robot development as major future revenue drivers. Projected 2031 revenue of $331 billion supports bullish outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f67d8a5fc54853291e9fc290e85927aacc6294cfee07cc2636fa12c7ce66723f
+symbol: TSLA
+company: Tesla
+api: polygon
+type: news
+published_utc: 2026-10-22T11:30:02Z
+publisher: The Motley Fool
+author: Tmf Breakfast News
+url: https://www.fool.com/investing/breakfast-news/2026/10/22/breakfast-news-tesla-s-slow-wheels-fast-dreams/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fmisc-assets%2Fbn-1022-tsla.png&w=1200&op=resize
+category: 
+tickers: TSLA, META, IBM, GLW, FIX, BE, KNSL
+keywords: Tesla, AI pivot, robotaxi, Meta, AI assistants, IBM, mainframe, AI sell-off, chip stocks, Corning, data center, photonics
+headline: Breakfast News: Tesla’s Slow Wheels, Fast Dreams
+<<<SUMMARY>>>
+Tesla's stock dipped despite beating earnings, as the market focuses on its pivot to AI and robotics rather than EV sales. Meta surged on AI assistant success with 26% revenue growth, while IBM stabilized mainframe demand. The broader AI sector faces headwinds with chip stocks down 15% in three weeks. Corning targets $355 per share on strong data center demand, and three companies report earnings today.
+<<<INSIGHTS>>>
+TSLA | positive | Despite near-term EV revenue decline and stock dip, Tesla is executing on ambitious AI and robotics roadmap with strong cash position ($45.4B liquidity) to fund $20B capex. Robotaxi revenue targeted for Q2 2027 and Optimus rollouts by year-end represent significant long-term growth catalysts.
+META | positive | Exceeded Q3 expectations with 26% revenue growth driven by AI assistant Muse. Q4 guidance beat estimates, and the company is successfully translating AI capEx into user engagement and ad revenue, addressing previous investor concerns.
+IBM | positive | Software segment grew 8% and mainframe sales decline slowed significantly, suggesting demand stabilization. Raised free cash flow guidance while maintaining revenue growth guidance, indicating solid and reliable cash flow generation from high-margin software.
+GLW | positive | Strong momentum with five multi-billion, multi-year supply deals announced in 2026. Photonics platform expected to grow from zero to $10B revenue by 2030. Management projects 19% annual growth through 2030 with expanding margins, supported by accelerating top-line and profitability.
+FIX | neutral | Earnings report today with heavy dependence on technology/data center customers. Any slowdown in AI data center demand could negatively impact results, creating uncertainty around near-term performance.
+BE | neutral | Earnings report today with exposure to AI data center demand. Oracle's force majeure notice on New Mexico project creates uncertainty about delivery pipeline. Awaiting validation from hyperscalers to convert into firm orders.
+KNSL | neutral | Specialty insurer facing softer property market with declining volume expected through late 2026. Georgia Supreme Court review of $140M judgment adds uncertainty, though management indicates reserves cover it.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fca4915606a5d11f48fd4bb3901e7e91baf933c318484a3d3cb93e88cc06dc07
+symbol: TSLA
+company: Tesla
+api: polygon
+type: news
+published_utc: 2026-10-22T15:43:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3013201/why-a-tesla-spacex-merger-makes-strategic-sense?cid=CS-ZC-FT-investment_ideas-3013201
+image_url: https://staticx-tuner.zacks.com/images/articles/main/70/129539.webp
+category: 
+tickers: TSLA
+keywords: Q3 earnings, free cash flow, merger, synergies, auto margins, energy segment, robotaxi, Optimus
+headline: Why a Tesla & SpaceX Merger Makes Strategic Sense
+<<<SUMMARY>>>
+Tesla reported Q3 2026 earnings beating Wall Street expectations with EPS of $0.50 vs. $0.45 expected, while revenue matched estimates at $28.05B. Free cash flow rebounded strongly to $1.53B-$3.99B, and auto margins improved to 18.1%. The company announced that Tesla and SpaceX have formed special committees to explore a potential merger, which could combine Tesla's strong cash generation with SpaceX's high-growth trajectory and massive CAPEX needs.
+<<<INSIGHTS>>>
+TSLA | positive | Tesla beat EPS expectations ($0.50 vs $0.45), demonstrated strong free cash flow rebound ($1.53B-$3.99B), improved auto margins to 18.1%, and showed robust energy segment growth of 33%. The company is exploring a strategic merger that could unlock new growth avenues.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c02fb1a5e5e171d3f81769449c0f6ca37c6199a15eee13202c1810fb0ea06b3b
+symbol: TSLA
+company: Tesla
+api: polygon
+type: news
+published_utc: 2026-10-23T03:14:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/10/22/i-ve-covered-tesla-for-over-a-decade-here-s-whether-it-s-a-stock-to-buy-more-than-21-below-its-record/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F8c722818b27036923d303800797e4425d9f2436c-5500x3149.jpg&w=1200&op=resize
+category: 
+tickers: TSLA
+keywords: Tesla Q3 earnings, tariff refunds, operating income, revenue growth deceleration, Megapack, Robotaxi, valuation concerns, capital spending forecast
+headline: I've Covered Tesla for Over a Decade. Here's Whether It's a Stock to Buy More Than 21% Below Its Record.
+<<<SUMMARY>>>
+Tesla's Q3 operating income appeared to recover, but over 60% came from tariff refunds rather than core business improvement. Revenue was flat year-over-year at $28.0 billion, marking significant deceleration. While Megapack energy storage shows promise and Robotaxi could become profitable in 2027, the analyst recommends waiting for operating income growth without refunds and concrete Robotaxi profitability metrics before buying, citing elevated valuation at 420x trailing earnings.
+<<<INSIGHTS>>>
+TSLA | negative | Despite surface-level operating income recovery, the analyst identifies that 60% of operating income came from one-time tariff refunds rather than underlying business improvement. Revenue growth has decelerated significantly (flat YoY), operating margins contracted sharply (2.6% from 5.8%), and the P/E ratio has risen to 420x despite flat stock price, indicating deteriorating valuation. The analyst explicitly recommends against buying at current levels.
+<<<END>>>
