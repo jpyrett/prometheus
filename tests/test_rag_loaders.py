@@ -12,7 +12,7 @@ from pathlib import Path
 import pytest
 
 from prometheus.rag import config
-from prometheus.rag.loaders import load_news, main, news_file
+from prometheus.rag.loaders import check_symbol, load_news, main, news_file
 
 FIXTURE = Path(__file__).parent / "fixtures" / "news_sample.txt"
 
@@ -207,6 +207,14 @@ def test_news_file_uppercases_the_symbol_and_uses_the_news_dir(monkeypatch, tmp_
 def test_news_file_refuses_anything_that_is_not_a_ticker(bad):
     with pytest.raises(ValueError, match="not a valid ticker symbol"):
         news_file(bad)
+
+
+def test_check_symbol_cleans_a_good_symbol_and_refuses_a_bad_one():
+    # the same check guards the news file name (above) and the retriever's ticker filter (Part 5)
+    assert [check_symbol(s) for s in ("aapl", " brk.b ", "BF-B", "NVDA")] == ["AAPL", "BRK.B", "BF-B", "NVDA"]
+    for bad in ("../../.env", "$AAPL", "", "A B", "TOOLONGSYMBOL1"):
+        with pytest.raises(ValueError, match="not a valid ticker symbol"):
+            check_symbol(bad)
 
 
 # ---------------------------------------------------------------- settings

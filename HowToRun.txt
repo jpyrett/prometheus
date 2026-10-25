@@ -97,7 +97,11 @@ Prereqs
   python -m prometheus.rag.ingest --rebuild --all   # delete the collection, then ingest every news file
   python -m prometheus.rag.store                 # look at what Chroma holds
   python labs/module3_rag/break_the_input.py     # damage one article 15 ways and see what the pipeline does
-  pytest tests/test_rag_loaders.py tests/test_rag_ingest.py -q   # RAG tests (run from the repo root)
+  python -m prometheus.rag.retriever "what did MKBHD say about the foldable iPhone" --tickers AAPL   # search the news by meaning
+                                                 # options: --since-days 7  -k 5  --min-score 0.4  --diverse  --text
+  python labs/module3_rag/retrieval_experiments.py scores   # how well retrieval works on real questions
+                                                 # sections: questions, scores, k, diverse, keywords, filters, recall, embedders
+  pytest tests/test_rag_loaders.py tests/test_rag_ingest.py tests/test_rag_retriever.py -q   # RAG tests (run from the repo root)
 
 
 See also: README.md  |  design/session_notes.md

@@ -332,6 +332,16 @@ def test_the_length_check_sees_dense_text_but_a_100_character_word_becomes_one_t
     assert rag_store.count_too_long([word], real_embeddings) == 0
 
 
+def test_the_real_store_asks_for_a_thorough_search(monkeypatch, tmp_path):
+    # Found in Part 5: Chroma's default HNSW settings missed some true neighbours (entry 20). No model is needed.
+    monkeypatch.setenv("VECTOR_STORE_PATH", str(tmp_path / "index"))
+    monkeypatch.setattr(rag_store, "get_embeddings", lambda: DeterministicFakeEmbedding(size=8))
+    rag_store.get_vector_store()
+    settings = rag_store._client().get_collection(rag_store.collection_name()).configuration["hnsw"]
+    assert settings["space"] == "cosine"
+    assert (settings["ef_construction"], settings["ef_search"], settings["max_neighbors"]) == (400, 300, 32)
+
+
 def test_the_real_entry_points_end_to_end(monkeypatch, tmp_path, real_embeddings, capsys):
     news = tmp_path / "news"
     news.mkdir()
