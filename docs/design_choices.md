@@ -291,6 +291,7 @@ prometheus/
     store.py                 embeddings + persistent Chroma (the only file that names either)
     ingest.py                load -> split -> embed -> upsert;  python -m prometheus.rag.ingest AAPL
     retriever.py             filtered search -> chunks + scores
+    citations.py             numbered sources for the prompt; checks that every citation points at a retrieved chunk (entry 15)
   models/chat.py           chat-model factory (OpenRouter now, local later); llm.py (local HF) stays
   prompts/data_clerk.py    grader, rewrite and answer prompts
   langgraph/desk.py        later: wires the five agents into one graph (Account Manager -> Data Clerk -> ...)
@@ -383,3 +384,39 @@ They do not do the same thing: the Data Clerk decides and the DataAgent does. Th
 - *Pro:* no new dependency, and no downgrade of `mcp`.
 - *Con:* until Part 8 the week 2 design is followed in spirit only: the Data Clerk does not go through MCP.
 - *Con:* a tool's schema is generated from its signature in two places (LangChain and FastMCP). A signature change shows up in both, which is intended.
+
+## 15. RAG style: the class-slide pipeline, with the Data Clerk LLM deciding whether to retrieve
+
+**Date:** 2026-10-24
+
+**Decision (Jacob).** Use the RAG pipeline from the class slide "Retrieval-augmented generation". The LLM is the Data Clerk agent, and it decides whether to retrieve.
+
+**The slide, box by box, and where each piece lives.**
+
+| Slide stage | Slide box | In Prometheus | Part |
+|---|---|---|---|
+| Before questions arrive | Documents | the DataAgent's text files, read by `rag/loaders.py` into LangChain `Document`s | 3 |
+| | Chunk text | `RecursiveCharacterTextSplitter` in `rag/ingest.py` | 4 |
+| | Encode chunks | `HuggingFaceEmbeddings` (the slide says "encode", LangChain says "embed") | 4 |
+| | Store vectors + text | Chroma: vector, text and metadata under one id | 4 |
+| For each question | Question | the user's request or the work order | 7 |
+| | Encode query | the same embedding model, inside the search call | 5 |
+| | Search vectors | Chroma nearest neighbours with metadata filters | 5 |
+| | Fetch text by ID | Chroma returns the stored text for the hit ids (see below) | 5 |
+| Generate answer | Question + retrieved text | the `retrieve_news` result: numbered sources | 6 |
+| | LLM | the Data Clerk, through `models/chat.py` | 6, 7 |
+| | Answer + citations | the Data Clerk's final message cites its sources, and the app checks them | 7 |
+
+The slide's caption is the principle we rely on: retrieval changes the evidence in the prompt, and the model weights stay fixed. It is also what the week 3 submission asks us to show (the same work order with and without retrieval).
+
+**Where the LLM decides.** In LangChain's terms (retrieval docs, read today) this is Agentic RAG: "an LLM-powered agent decides when and how to retrieve". The alternative, 2-Step RAG, always retrieves before it generates (high control, low flexibility, one LLM call). We chose the agentic form because the Data Clerk is not only a search box. Its actions in the week 2 design are search news, fetch a quote, search socials and calculate financials, and most requests need no stored text at all. It also has to choose between stored text (retrieve) and fresh data (fetch). So stage 2 of the slide becomes a tool the LLM may call, and stage 3 is the LLM's reply after it reads the tool result.
+
+**Consequences for the build.**
+1. **Retrieval is a tool** (`retrieve_news`, entry 14), next to the DataAgent's fetch tools. Stage 1, indexing, stays a batch step.
+2. **Each hit carries what a citation needs:** id, text, headline, publisher, date, url and score. "Fetch text by ID" is the slide's way of saying the search returns ids and the text comes from a lookup. Chroma does both in one call, so `retriever.py` returns finished hits. The seam stays, so the text could later come from Postgres by id (the week 2 hybrid memory). `headline` joins the chunk metadata so a citation can show it even for a chunk that does not start the article.
+3. **Citations are checked, not trusted.** The tool numbers its sources ([1], [2] ...) in the text the model sees, and the model cites by number, which is easier to copy than an id like `polygon:44a8...`. A deterministic check in `rag/citations.py` confirms that every cited number points at a chunk that was really retrieved, and turns the numbers back into ids and urls.
+4. **No supporting text means no answer.** If nothing clears the relevance bar, the tool says so and the Data Clerk must say so too (the week 3 failure mode).
+5. **The answer is a summary of evidence, not a trading decision.** The Advisor decides (week 3 submission). The retrieved chunk ids go onto the work order as the tool's artifact.
+6. **Grading and query rewriting stay optional.** The first version is the simple loop: the LLM calls tools, reads the results and answers. The grader and rewriter from the LangChain "custom RAG agent" guide would make it a Hybrid form. We add them only if plain retrieval fails on real questions (the rule in `design/week3_notes.md`).
+
+**Costs.** At least two LLM calls for a question that retrieves (decide, then answer), where 2-Step RAG needs one, and latency varies with the number of tool calls. The LLM can also skip retrieval when it should not. The system prompt tells it to retrieve for any question about a company's news, and a test in Part 8 checks that it does.

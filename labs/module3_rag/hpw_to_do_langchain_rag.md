@@ -6,6 +6,8 @@ References we follow:
 
 - [Build a custom RAG agent with LangGraph](https://docs.langchain.com/oss/python/langgraph/agentic-rag): the agentic RAG graph (Parts 6 and 7).
 - [Build a semantic search engine with LangChain](https://docs.langchain.com/oss/python/langchain/knowledge-base): loading, chunking, Chroma and retrievers (Parts 3 to 5).
+- [Retrieval](https://docs.langchain.com/oss/python/langchain/retrieval): the 2-Step, Agentic and Hybrid RAG architectures (section 0.6).
+- Your class slide "Retrieval-augmented generation": the shape of the pipeline we build (section 0.3).
 
 ## Roadmap
 
@@ -16,10 +18,10 @@ References we follow:
 | 2 | Where the code lives | done |
 | 3 | Look at the data, then load it into LangChain `Document`s | **next** |
 | 4 | Chunk, embed and store: ingest AAPL into Chroma | |
-| 5 | Retrieve by hand on real data: search, filters, scores, "no supporting text" | |
-| 6 | Tools and the chat model: the Data Clerk's tool functions, and the chat model | |
-| 7 | The Data Clerk agent: a LangGraph with the DataAgent as its tool node, then agentic RAG (grade and rewrite) | |
-| 8 | FastMCP: serve the same tool functions; tests; the evidence for the week 3 submission | |
+| 5 | Retrieve by hand on real data: search vectors, fetch text by ID, filters, scores, "no supporting text" | |
+| 6 | Tools and the chat model: `retrieve_news` and the DataAgent tools as plain functions, numbered sources, the citation check | |
+| 7 | The Data Clerk agent: a LangGraph where the LLM decides whether to retrieve or fetch, and the answer cites its sources | |
+| 8 | FastMCP: serve the same tool functions; tests; the evidence for the week 3 submission (with and without retrieval) | |
 
 How we work:
 
@@ -42,6 +44,8 @@ An LLM knows its training data and whatever you paste into the prompt. It has ne
 2. **Augment** the prompt by pasting those passages in.
 3. **Generate** the answer from them.
 
+Your class slide says it in one line: *retrieval changes the evidence in the prompt, and the model weights stay fixed.* Nothing is retrained.
+
 ### 0.2 Why Prometheus needs it
 
 From the week 3 submission:
@@ -52,25 +56,31 @@ From the week 3 submission:
 
 Retrieval is for text only. Prices and metrics stay in Parquet or Postgres, accounts and trades in Postgres, quote caching in Redis. Those need exact answers, which embeddings cannot give.
 
-### 0.3 Two phases
+### 0.3 The pipeline from the class slide
+
+This is the style of RAG we build: your class slide, redrawn. It has three stages.
 
 ```mermaid
-flowchart LR
-    subgraph IDX["Indexing: batch, run when the news files change"]
-        A["news/AAPL.txt"] --> B["load: records to Documents"]
-        B --> C["split: cut into chunks"]
-        C --> D["embed: text to 384 numbers"]
-        D --> E[("Chroma folder")]
+flowchart TB
+    subgraph S1["1. Before questions arrive (a batch job, run when the news files change)"]
+        direction LR
+        A1["Documents"] --> A2["Chunk text"] --> A3["Encode chunks"] --> A4[("Store vectors + text")]
     end
-    subgraph QRY["Query time: every question"]
-        Q["question"] --> QE["embed, same model"]
-        QE --> S["nearest chunks plus metadata filter"]
-        S --> L["LLM answers from those chunks"]
+    subgraph S2["2. For each question"]
+        direction LR
+        B1["Question"] --> B2["Encode query"] --> B3["Search vectors"] --> B4["Fetch text by ID"]
     end
-    E --> S
+    subgraph S3["3. Generate answer"]
+        direction LR
+        C1["Question + retrieved text"] --> C2["LLM"] --> C3["Answer + citations"]
+    end
 ```
 
-Indexing is a batch job. Query time runs for every question. The question must be embedded with the same model as the chunks, otherwise the numbers mean nothing. This is why Part 4 puts the model's name into the collection name.
+The store built in stage 1 is what stage 2 searches, and the text fetched in stage 2 is what stage 3 hands to the LLM. Three things to notice:
+
+- **The same model encodes both sides.** The question must be encoded with the same model as the chunks, otherwise the numbers mean nothing. This is why Part 4 puts the model's name into the collection name. ("Encode" is the slide's word; LangChain says "embed".)
+- **"Search vectors" returns ids, and "fetch text by ID" looks the text up.** Chroma stores the text next to the vector and does both in one call, so each hit comes back with its id, text and metadata. That is also what a citation needs (design choices entry 15).
+- **In Prometheus the LLM decides whether stage 2 runs at all.** The LLM is the Data Clerk, and retrieval is a tool it may call (section 0.6).
 
 ### 0.4 Embeddings in one paragraph
 
@@ -131,16 +141,37 @@ Raw Chroma against what Prometheus will use:
 |---|---|---|
 | Document | text plus metadata (LangChain's `Document` has `page_content`, `metadata` and an optional `id`) | one news article, later its chunks |
 | Chunk | a piece of a Document, small enough to embed well | Part 4 |
-| Embedding | the list of numbers for a text | 384 numbers from `all-MiniLM-L6-v2` |
+| Embedding | the list of numbers for a text (the slide says "encode") | 384 numbers from `all-MiniLM-L6-v2` |
 | Vector store | a database of embeddings that you search by nearness | Chroma, a folder on disk |
 | Retriever | takes a question and returns the best Documents | what the LangGraph tool will call |
 | Metadata filter | limits the search by facts about the chunk | the work order's symbol and time period |
 | Tool | a function an LLM may ask to run | `fetch_news`, `retrieve_news` |
+| Citation | a pointer from a statement in the answer to the chunk it came from | `[1]` markers that we check against the retrieved chunks (Part 7) |
 | State, node, edge | LangGraph: shared data, one step, which step runs next | Part 7 |
 
-### 0.6 What "agentic" adds
+### 0.6 Who decides whether to retrieve: the Data Clerk LLM
 
-Plain RAG always retrieves, once. Agentic RAG lets the LLM decide whether to retrieve, check what came back, and try again. This is the graph in the LangChain guide:
+In the slide, stage 2 happens for each question. In Prometheus the **LLM decides** whether it does. The LLM is the Data Clerk agent, and retrieval is one of its tools, next to the DataAgent's fetch tools. LangChain calls this **Agentic RAG**. Its retrieval docs compare three architectures:
+
+| Architecture | What it means | Control | Flexibility | LLM calls |
+|---|---|---|---|---|
+| 2-Step RAG | retrieval always happens before generation | high | low | one, capped |
+| Agentic RAG | an LLM-powered agent decides when and how to retrieve | low | high | variable |
+| Hybrid | adds query rewriting, retrieval checks and answer checks | medium | medium | variable |
+
+We chose Agentic RAG because the Data Clerk is not only a search box. Its actions in the week 2 design are search news, fetch a quote, search socials and calculate financials, and most requests need no stored text at all. It also has to choose between stored text (retrieve) and fresh data (fetch). The cost is at least two LLM calls for a question that retrieves (decide, then answer). Design choices entry 15 has the full reasoning.
+
+The first version is the simple loop. The LLM calls a tool, reads the result, and then either calls another tool or answers with citations:
+
+```mermaid
+flowchart TD
+    START(["START"]) --> CLERK["data_clerk<br/>(LLM with tools)"]
+    CLERK -->|"calls a tool"| TOOLS["tools<br/>(retrieve_news, fetch_news, ...)"]
+    TOOLS --> CLERK
+    CLERK -->|"answers with citations"| FIN(["END"])
+```
+
+The LangChain "custom RAG agent" guide adds two steps after retrieval: a grader that checks whether the retrieved text is relevant, and a rewriter that rewrites the question and retries when it is not. That is the Hybrid form. We add them only if plain retrieval fails on real questions, so we can tell whether they earn their cost.
 
 ```mermaid
 flowchart TD
@@ -154,9 +185,7 @@ flowchart TD
     ANS --> FIN
 ```
 
-In words: the LLM either answers directly (for a greeting) or calls the retriever. A grader checks whether the retrieved text is relevant. If not, the question is rewritten and the loop retries. If so, the answer is written from the retrieved text only.
-
-Our version swaps the guide's in-memory store and OpenAI embeddings for Chroma and local embeddings, and puts the DataAgent's fetch tools next to the retriever. We build it last (Part 7), after plain retrieval works. Real results then decide whether grading and rewriting earn their cost.
+Our version swaps that guide's in-memory store and OpenAI embeddings for Chroma and local embeddings, and puts the DataAgent's fetch tools next to the retriever.
 
 ### 0.7 One agent, one toolbox
 
@@ -341,13 +370,14 @@ prometheus/
     store.py                 embeddings + persistent Chroma (the only file that names either)
     ingest.py                load -> split -> embed -> upsert;  python -m prometheus.rag.ingest AAPL
     retriever.py             filtered search -> chunks + scores
+    citations.py             numbered sources for the prompt; checks that every citation points at a retrieved chunk
   models/chat.py           chat-model factory (OpenRouter now, local later); llm.py (local HF) stays
   prompts/data_clerk.py    grader, rewrite and answer prompts
   langgraph/desk.py        later: wires the five agents into one graph
 labs/module3_rag/          this guide and check_install.py
 ```
 
-Today only `agents/data_clerk/` (the toolbox and its two test scripts) and the `rag/` package (still empty) exist. Each file appears in the part that needs it: `config.py` and `loaders.py` in Part 3, `store.py` and `ingest.py` in Part 4, `retriever.py` in Part 5, `tools/data_clerk.py` and `models/chat.py` in Part 6, `agent.py` and `prompts/` in Part 7, `mcp/server.py` in Part 8.
+Today only `agents/data_clerk/` (the toolbox and its two test scripts) and the `rag/` package (still empty) exist. Each file appears in the part that needs it: `config.py` and `loaders.py` in Part 3, `store.py` and `ingest.py` in Part 4, `retriever.py` in Part 5, `citations.py`, `tools/data_clerk.py` and `models/chat.py` in Part 6, `agent.py` and `prompts/` in Part 7, `mcp/server.py` in Part 8.
 
 The rules behind it (full reasoning in entries 12 to 14):
 
@@ -409,6 +439,7 @@ page_content:
 
 metadata:
   article_id     finnhub:143136906
+  headline       The iPhone Duo Launch Kicks Off a Crucial Few Weeks for Apple
   tickers        ["AAPL"]
   published_utc  2026-10-23T19:03:00Z
   published_ts   1792782180
@@ -417,7 +448,7 @@ metadata:
   url            https://finnhub.io/api/news?id=d785...f1b1
 ```
 
-The Document's `id` is the article id, so the same article read from two files becomes one row.
+The Document's `id` is the article id, so the same article read from two files becomes one row. `headline`, `publisher`, `published_utc` and `url` are the citation fields: they are what the answer shows next to a source, so every chunk carries them (design choices entry 15).
 
 ### 3.3 Decisions proposed for Part 3
 
@@ -425,7 +456,7 @@ The Document's `id` is the article id, so the same article read from two files b
 |---|---|---|---|
 | 1 | What is one Document? | one article | the unit we de-duplicate, filter and cite; chunks come from splitting it in Part 4 |
 | 2 | What goes into `page_content`? | headline, summary, then the insight lines, separated by blank lines | the insights carry the reasoning the Advisor needs |
-| 3 | Which metadata? | the fields above: `tickers` stays a list, `published_ts` is a number | filters and provenance need them; Chroma filters a list with `$contains` and a date only as a number (both tested) |
+| 3 | Which metadata? | the fields above: `tickers` stays a list, `published_ts` is a number | filters need them, and the headline, publisher, date and url are what a citation shows; Chroma filters a list with `$contains` and a date only as a number (both tested) |
 | 4 | How do we read the files? | one plain function, `load_news(path) -> list[Document]` | both LangChain guides do the same (`load_pdf_pages`, `load_web_page`) instead of loader classes |
 | 5 | One collection or one per symbol? | one collection, one row per article, filtered with `tickers` and `$contains` | Case 2 has no symbol up front and must search across companies, and 7 articles sit in two symbol files and must not be stored twice |
 
@@ -465,6 +496,8 @@ Two comparisons with the tutorial's Chroma snippet:
 - Its HuggingFace example uses `all-mpnet-base-v2`, a larger model. Swapping the model is a one-line change, and our corpus is tiny. We can index with two models into two collections and compare them on the same queries. That settles the week 3 submission's "confirm the embedder on real chunks" item with evidence.
 
 ## Part 5 preview: retrieve
+
+Stage 2 of the slide is *search vectors*, then *fetch text by ID*. Chroma does both in one call, so each hit comes back with its id, text and metadata. We keep on every hit what a citation needs: id, headline, publisher, date, url and score.
 
 The tutorial lists three search types for `as_retriever(search_type=...)`:
 
@@ -510,7 +543,13 @@ Which toolbox methods become tools (the allow-list, settled in Part 6):
 | `sync_market_news`, `sync_cnbc_news` | no | scheduled refresh jobs; `discover` already refreshes when it needs to |
 | `init_aws_cli`, `fetch_historical_data`, `convert_to_parquet`, `export_project` | never | install software, download over 100 GB, run rsync to any path |
 
+**What `retrieve_news` returns.** This is stage 2 of the slide, handed to the LLM. The text the model sees lists the hits as numbered sources, for example `[1] Yahoo, 2026-10-23: The iPhone Duo Launch Kicks Off ...`. The full hits (id, text, headline, publisher, date, url, score) travel as the tool's *artifact*, so they reach the work order without filling the prompt. The model cites by number, because a short number is easier to copy than an id like `polygon:44a8...`. A small check in `rag/citations.py` then confirms that every `[n]` in the answer points at a chunk that was really retrieved, and turns the numbers back into ids and urls. When nothing clears the relevance bar, the tool says "no supporting text" and the Data Clerk must say so too.
+
 **MCP.** FastMCP serves the same functions to other hosts (Part 8), which is the week 2 "the Data Clerk calls its own MCP". Your existing FastMCP tools already work with LangChain through a hand-made bridge of about 15 lines (tested with `fetch_quote`). LangChain's official bridge, `langchain-mcp-adapters`, cannot be installed here: it needs `mcp<2` and FastMCP 4 needs `mcp>=2`. And `print()` inside an MCP tool is safe on this stack (tested), so the DataAgent's progress bars are not a problem. If you want the Data Clerk to call through MCP from day one, the bridge makes that a small change.
+
+## Part 7 preview: the Data Clerk agent
+
+The graph is the simple loop from section 0.6, with the DataAgent behind its tool node. For a question like "what is happening with META?" the LLM can answer from stored text (call `retrieve_news`), or first refresh the text (call `fetch_news`, which also loads the new articles into Chroma, then `retrieve_news`). For a greeting it answers directly. The system prompt tells it to retrieve for any question about a company's news, to cite sources as `[n]`, and to say so when there is no supporting text. We test two things with real data: that it retrieves when it should (and not for a greeting), and that every citation in its answer is valid.
 
 ---
 
@@ -520,5 +559,6 @@ Which toolbox methods become tools (the allow-list, settled in Part 6):
 |---|---|
 | 1 | 10 (Chroma and the version that works with LangChain), 11 (the LangChain 1.x package set) |
 | 2 | 12 (where the code lives), 13 (one data agent: the Data Clerk and its toolbox) |
+| 5 to 7 | 15 (RAG style: the class-slide pipeline, with the Data Clerk LLM deciding whether to retrieve, and citations) |
 | 6 and 8 | 14 (tools: plain functions, LangChain now, MCP next) |
 | 3 and later | added as we make them |
