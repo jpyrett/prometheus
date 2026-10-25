@@ -60,6 +60,7 @@ class WorkOrder(BaseModel):
     query: str                                  # the request in the user's own words: the Data Clerk's question
     action_type: Literal["trade", "search_news", "fetch_quote", "search_socials", "calculate_financials"] = "search_news"
     subject: str | list[str] | None = None      # a symbol, a list of symbols, or a term such as "memory stocks"
+    company: str | None = None                  # the company's name when the symbol was looked up from a name ("Procter & Gamble Co"), so that the Data Clerk can use it
     source: str = "news"
     time_period: str | None = None              # in words ("last 7 days")
     since_days: int | None = None               # the same, as a number of days
@@ -75,12 +76,12 @@ class WorkOrder(BaseModel):
 
 def new_work_order(query: str, *, requester: str = "user", action_type: str = "search_news", subject=None, source: str = "news",
                    time_period: str | None = None, since_days: int | None = None, top_k: int = 5, live: bool = False,
-                   criteria: dict | None = None) -> WorkOrder:
+                   criteria: dict | None = None, company: str | None = None) -> WorkOrder:
     """A new order, with an id and a timestamp. It is not checked here: `verify_request` is the check, so that a bad request becomes
     a reported reason and not an exception halfway through the desk."""
     return WorkOrder.model_construct(
         schema_version=1, request_id=uuid.uuid4().hex[:12], requester=requester, created_utc=_now(), query=query, action_type=action_type,
-        subject=subject, source=source, time_period=time_period, since_days=since_days, live=live, top_k=top_k, criteria=criteria,
+        subject=subject, company=company, source=source, time_period=time_period, since_days=since_days, live=live, top_k=top_k, criteria=criteria,
         status="new", data=None, recommendations=[], advisor_runs=[], errors=[])
 
 

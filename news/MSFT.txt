@@ -15744,3 +15744,103 @@ AAPL | positive | Apple is the second-largest holding (15.92%) in VGT, contribut
 MSFT | positive | Microsoft is a major holding (11.16%) in VGT, representing significant exposure to enterprise software and cloud computing within the tech sector.
 CRWV | negative | CoreWeave is mentioned as a cautionary example of a tech stock in a bear market due to investor concerns about its debt load and blown-out corporate debt yields, illustrating that not all tech stocks rebound uniformly.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143181057
+symbol: MSFT
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T15:45:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=bc7a644ab6d5e220f9d2386c0362f7d0cd1b3b8821e45130da51134ada7fe643
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/24/Wall-Street-Sign-With-American-Flag-On-T.jpg?width=2048&height=1536
+category: company
+tickers: MSFT
+keywords: 
+headline: S&P 500 and Nasdaq 100 Slip as Strong Earnings Collide With AI Bubble Fears and $117 Oil
+<<<SUMMARY>>>
+The S&amp;P 500 and Nasdaq 100 indices pulled back as investors focused on the strong earnings season amid the AI bubble.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143181413
+symbol: MSFT
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-25T15:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=25694c6ec753dccea4acbd0b562f93a8870de57c25547169bd93e569276feda2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MSFT
+keywords: 
+headline: What To Expect In Markets This Week: GOOGL, MSFT, AMZN, INTC, HOOD, LLY Earnings, Fed Meeting And More
+<<<SUMMARY>>>
+The spotlight will be particularly intense as several of the biggest names in technology report quarterly results, while the Federal Reserve prepares to make its latest policy decision.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143180605
+symbol: MSFT
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-25T15:22:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5a762ee978a7efc622c836511702fd4958ab3846350c6cdc47c421688815d0ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MSFT
+keywords: 
+headline: Dow Jones Futures Due For Doom-And-Bloom Market; Microsoft, Google, Amazon Earnings Ahead
+<<<SUMMARY>>>
+The S&P 500 and Nasdaq are below key levels, but many non-AI stocks are flashing buy signals. Microsoft, Google, Amazon loom.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143181790
+symbol: MSFT
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-25T12:52:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6962ebb4fab13ae73fe11416102ce1a0b5784fca3805599ef698b09bb25c46c1
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2259149623/image_2259149623.jpg?io=getty-c-w1536
+category: company
+tickers: MSFT
+keywords: 
+headline: Wall Street Brunch: Fed And Hyperscaler Earnings
+<<<SUMMARY>>>
+The Fed is expected to hold rates steady Wednesday. Microsoft, Alphabet and Amazon earnings put AI spending under scrutiny. JetBlue creditors organize amid rising fuel costs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143181052
+symbol: MSFT
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-25T08:30:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a5bb0281be2cfc896610787f104b38ffd410d5d4596e2e43f709b9ca31b155c6
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/25/Sandisk-Company-Logo---EK.jpg?width=2048&height=1536
+category: company
+tickers: MSFT
+keywords: 
+headline: Earnings Volatility Watch: SanDisk and 11 Other Stocks Are Priced for at Least 10% Swings This Week
+<<<SUMMARY>>>
+Monolithic Power, Intel and SanDisk lead 12 stocks above $50 billion priced for outsized earnings swings as the AI trade faces Big Tech results.
+<<<INSIGHTS>>>
+
+<<<END>>>

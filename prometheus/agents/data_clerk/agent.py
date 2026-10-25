@@ -247,7 +247,7 @@ class DataClerk:
         """The work order's query, with the order's own limits added in words: the subject, the time window and how many sources."""
         hints = []
         if order.subject:
-            hints.append("subject: " + (order.subject if isinstance(order.subject, str) else ", ".join(order.subject)))
+            hints.append("subject: " + (order.subject if isinstance(order.subject, str) else ", ".join(order.subject)) + (f" ({order.company})" if order.company else ""))
         if order.since_days:
             hints.append(f"use news from the last {order.since_days} days")
         elif order.time_period:

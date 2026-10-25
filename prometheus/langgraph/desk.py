@@ -22,8 +22,11 @@ state of the graph (the design: "the saved WORK_ORDER is the same object every a
 
 THE FOUR PARAMETERS (what the user types, and what each becomes):
 
-  symbol         a ticker, for example MSFT. With a symbol the order is LIVE: fresh news is fetched for it with the PAID APIs (and written to
-                 news/<SYMBOL>.txt) unless fetching is turned off.
+  symbol         a ticker, for example MSFT, OR A COMPANY NAME, for example "Procter & Gamble". A ticker in capitals is used as it is. Anything else
+                 (a name, or a ticker in lower case) is LOOKED UP (Finnhub's symbol search, prometheus/tools/symbols.py), never guessed: the answer is
+                 shown ("Procter&Gamble" -> PG, Procter & Gamble Co), carried on the work order as `company`, and an ambiguous name is refused.
+                 With a symbol the order is LIVE: fresh news is fetched for it with the PAID APIs (and written to news/<SYMBOL>.txt) unless
+                 fetching is turned off.
   term           a topic, for example "flying car". With no symbol it is searched in the stored news and nothing is fetched. With a symbol the
                  term narrows the question inside that symbol's news (fetching is still for the whole symbol, never filtered by the term, so the
                  file stays complete).
@@ -46,6 +49,7 @@ from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.data_clerk.agent import DataClerk
 from prometheus.common.work_order import WIRED_SOURCES, WorkOrder, new_work_order, verify_request
 from prometheus.rag.loaders import check_symbol
+from prometheus.tools import symbols
 
 DEFAULT_SOURCE = WIRED_SOURCES[0]
 DEFAULT_DAYS = 7
@@ -59,6 +63,7 @@ class DeskState(TypedDict, total=False):
     request: dict                                              # the four parameters as given
     order: WorkOrder | None                                    # THE work order: every node reads and updates this one object
     errors: list[str]                                          # why the request was refused (no order could be built, or it is not valid)
+    resolution: dict | None                                    # a company name that was looked up: what was typed, the ticker, the company, how it matched
     path: Annotated[list[str], lambda old, new: old + new]     # the nodes that ran, in order
     seconds: Annotated[dict, lambda old, new: {**old, **new}]  # how long each node took
 
@@ -84,6 +89,7 @@ def order_from_request(request: dict) -> WorkOrder:
         days = int(days)
     if not isinstance(days, int) or isinstance(days, bool):
         raise ValueError("from_days_ago must be a whole number of days")
+    company = request.get("company") if isinstance(request.get("company"), str) and request.get("company").strip() else None
     live = bool(symbol) and bool(request.get("fetch", True))
     if symbol and term:
         query = f"{term} news for {symbol}"
@@ -91,7 +97,7 @@ def order_from_request(request: dict) -> WorkOrder:
         query = f"What is the latest news on {symbol}, and what does it mean for the stock? Is it a bullish or bearish opportunity?"
     else:
         query = term
-    return new_work_order(query, requester=request.get("requester", REQUESTER), subject=[symbol] if symbol else term, source=source,
+    return new_work_order(query, requester=request.get("requester", REQUESTER), subject=[symbol] if symbol else term, company=company if symbol else None, source=source,
                           time_period=f"last {days} days", since_days=days, top_k=TOP_K, live=live, criteria={"sentiment": "bullish or bearish"})
 
 
@@ -105,20 +111,30 @@ def _timed(name: str, step: Callable[[DeskState], dict]) -> Callable[[DeskState]
 
 
 def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, advisor_factory: Callable[[WorkOrder], Advisor] | None = None,
-               with_advisor: bool = True):
+               with_advisor: bool = True, resolver: Callable[[str], symbols.Resolution] | None = None):
     """The compiled graph. The factories make the agents for an order (fakes in tests); by default the Data Clerk may fetch only if the order is
-    live, and the Advisor uses the advisor role's model."""
+    live, and the Advisor uses the advisor role's model. `resolver` turns a company name into a ticker (a fake in tests; the Finnhub lookup of
+    prometheus/tools/symbols.py by default, found when it is called)."""
     clerk_factory = clerk_factory or (lambda order: DataClerk(allow_fetch=order.live))
     advisor_factory = advisor_factory or (lambda order: Advisor())
 
     def account_manager(state: DeskState) -> dict:
+        request, resolution = state["request"], None
+        typed = request.get("symbol")
+        if isinstance(typed, str) and typed.strip() and not symbols.is_plain_ticker(typed):  # a name, or a ticker in lower case: look it up, never guess
+            try:
+                found = (resolver or symbols.resolve_company)(typed)
+            except symbols.SymbolLookupError as error:
+                return {"order": None, "errors": [str(error)], "resolution": None}
+            resolution = {"typed": found.typed, "symbol": found.symbol, "company": found.company, "how": found.how}
+            request = {**request, "symbol": found.symbol, "company": found.company}
         try:
-            order = order_from_request(state["request"])
+            order = order_from_request(request)
         except ValueError as error:
-            return {"order": None, "errors": [str(error)]}
+            return {"order": None, "errors": [str(error)], "resolution": resolution}
         reasons = verify_request(order)
         order.errors = [*order.errors, *reasons]
-        return {"order": order, "errors": reasons}
+        return {"order": order, "errors": reasons, "resolution": resolution}
 
     def data_clerk(state: DeskState) -> dict:
         order = state["order"]
@@ -158,7 +174,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
 def run_desk(request: dict, **options) -> DeskState:
     """Run one request through the desk. `options` are those of `build_desk`. Returns the final state: the order, why a request was refused, the
     path through the graph and the seconds each node took."""
-    return build_desk(**options).invoke({"request": request, "order": None, "errors": [], "path": [], "seconds": {}})
+    return build_desk(**options).invoke({"request": request, "order": None, "errors": [], "resolution": None, "path": [], "seconds": {}})
 
 
 def report(state: DeskState, total_seconds: float | None = None) -> str:
@@ -167,13 +183,16 @@ def report(state: DeskState, total_seconds: float | None = None) -> str:
     request, order = state["request"], state.get("order")
     lines.append(f"REQUEST  symbol {request.get('symbol') or '-'} | term {request.get('term') or '-'} | source {request.get('source') or DEFAULT_SOURCE} "
                  f"| from {request.get('from_days_ago') or DEFAULT_DAYS} days ago")
+    if state.get("resolution"):
+        r = state["resolution"]
+        lines.append(f"RESOLVED {r['typed']!r} -> {r['symbol']} ({r['company']}), looked up and matched as a {r['how']}")
     lines.append("PATH     " + " -> ".join(state.get("path", [])) + ("" if order is not None and order.status == "recommended" else "  (stopped here)"))
     if order is None or state.get("errors"):
         lines.append("\nREFUSED  " + "; ".join(state.get("errors") or ["no work order could be built"]))
         return "\n".join(lines)
     d = order.data
     lines.append(f"ORDER    {order.request_id} | status {order.status} | {'LIVE (fetching on)' if order.live else 'not live (fetching off)'} | window last {order.since_days} days "
-                 f"| subject {order.subject}")
+                 f"| subject {order.subject}" + (f" ({order.company})" if order.company else ""))
     lines.append(f"QUERY    {order.query}")
     if order.errors:
         lines.append("ERRORS   " + "; ".join(order.errors))
@@ -206,7 +225,7 @@ def report(state: DeskState, total_seconds: float | None = None) -> str:
 def main(argv: list[str] | None = None) -> int:
     started = time.perf_counter()
     parser = argparse.ArgumentParser(description="Run one request through the desk: Account Manager, Data Clerk, Advisor, on one work order.")
-    parser.add_argument("--symbol", default="", help="a ticker, for example MSFT (fetches fresh news with the PAID APIs unless --no-fetch)")
+    parser.add_argument("--symbol", default="", help='a ticker such as MSFT, or a company name such as "Procter & Gamble" (looked up, never guessed); fetches fresh news with the PAID APIs unless --no-fetch')
     parser.add_argument("--term", default="", help='a topic, for example "flying car" (no symbol: searches the stored news, fetches nothing)')
     parser.add_argument("--source", default=DEFAULT_SOURCE, help=f"only {DEFAULT_SOURCE!r} is wired")
     parser.add_argument("--from-days-ago", default=str(DEFAULT_DAYS), help=f"how many days back (default {DEFAULT_DAYS}, 1 to 90)")
@@ -227,16 +246,17 @@ def main(argv: list[str] | None = None) -> int:
     total = time.perf_counter() - started
     order = state.get("order")
     if args.json:
-        print(json.dumps({"request": request, "errors": state.get("errors"), "path": state.get("path"), "seconds": state.get("seconds"),
+        print(json.dumps({"request": request, "resolution": state.get("resolution"), "errors": state.get("errors"), "path": state.get("path"), "seconds": state.get("seconds"),
                           "order": order.model_dump() if order else None}, indent=1, default=str))
     else:
         print(report(state, total))
     if order is not None and not state.get("errors"):
         # the symbol and the term both go in the name, so that a run with a symbol and a term does not overwrite a run with the symbol alone
-        label = "_".join(re.sub(r"[^A-Za-z0-9]+", "_", part.strip().lstrip("$")).strip("_") for part in (request["symbol"], request["term"]) if part.strip()) or "order"
+        named = (state.get("resolution") or {}).get("symbol") or request["symbol"]  # a looked-up name is saved under its ticker
+        label = "_".join(re.sub(r"[^A-Za-z0-9]+", "_", part.strip().lstrip("$")).strip("_") for part in (named, request["term"]) if part.strip()) or "order"
         out = OUT_DIR / f"desk_{label}.json"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(json.dumps({"request": request, "path": state.get("path"), "seconds": state.get("seconds"), "order": order.model_dump()}, indent=1, default=str),
+        out.write_text(json.dumps({"request": request, "resolution": state.get("resolution"), "path": state.get("path"), "seconds": state.get("seconds"), "order": order.model_dump()}, indent=1, default=str),
                        encoding="utf-8")
         if not args.json:
             print(f"saved: {out.relative_to(OUT_DIR.parents[1]) if out.is_relative_to(OUT_DIR.parents[1]) else out}")

@@ -50,9 +50,12 @@ Prereqs
   ./test_prometheus.sh
   # It PROMPTS for the request, then runs it through the desk: a LangGraph that passes ONE work order
   #   account_manager -> data_clerk -> advisor     (details in 8e below)
-  #   Symbol  a ticker such as MSFT (blank for none)            Term  a topic such as "flying car" (blank for none)
+  #   Symbol  a ticker such as MSFT, or a COMPANY NAME such as Procter&Gamble (blank for none)    Term  a topic such as "flying car" (blank for none)
+  #           A ticker in capitals is used as it is. A name (or a ticker in lower case) is LOOKED UP, never guessed: Procter&Gamble -> PG, shown as RESOLVED.
+  #           An ambiguous name (alphabet, meta materials) is refused with the candidates: type the ticker. Check a name alone: python -m prometheus.tools.symbols "Procter & Gamble"
   #   Source  news (the only one wired; the default)            From how many days ago  default 7 (1 to 90)
-  # A symbol FETCHES fresh news with the PAID APIs and WRITES news/<SYMBOL>.txt: it asks [Y/n] first (--yes skips the question).
+  # A symbol FETCHES fresh news with the PAID APIs and WRITES news/<TICKER>.txt: it asks [Y/n] first (--yes skips the question).
+  #   ./test_prometheus.sh --symbol "Procter&Gamble" --from-days-ago 7 --yes      the company-name run (about 95 seconds, writes news/PG.txt)
   # ./test_prometheus.sh --legacy    the old demo: LocalLLM + HITL symbol elicitation (python main.py)
   # Add more end-to-end scenarios as the app grows. Formal unit/integration tests remain under tests/ (pytest).
 
@@ -363,6 +366,14 @@ Prereqs
     e2e_symbol.py: an Advisor signal's direction is not the one the source states   the check verifies the quote and the company, not the direction (guide 8.10).
     e2e_symbol.py: a signal's quote spans two sentences                 the quote passes the check because the two sentences together name the company (guide 8.10).
     e2e_symbol.py: two signals are the same story                      "SAME" in the output: verified but not counted, a story counts once per direction.
+    test_prometheus.sh: "'xyz' matches several companies ... Type the ticker symbol instead" / "no company found"   the name was looked up and is ambiguous or unknown: type the
+                                      ticker in capitals, which needs no lookup (guide 9.9, design entry 31).
+    test_prometheus.sh: "the symbol lookup failed (HTTP 429)" or "needs FINNHUB_API_KEY"   the name lookup is a call to Finnhub: wait, or type the ticker in capitals.
+    desk, a company with "&" in its name (Procter & Gamble): a good signal is marked FAIL "the quote is not in source N" or "the quote does not name the company"   FIXED (guide 9.9,
+                                      design entries 18 and 31): the loader decodes "&amp;" and the Advisor derives "P&G" from the name. If you still see it, the index is old:
+                                      python -m prometheus.rag.ingest --all   (updates only the chunks whose text changed).
+    desk: the answer attributes a rating to a publisher ("the Motley Fool gave a neutral rating") from a "PG | neutral | ..." insight line   the Data Clerk's known stretch of a source
+                                      (guide 8.10); the score is not affected, it counts only verified quotes.
     e2e_symbol.py: a claim in the answer goes beyond its source (for example "including Sandisk")   a known limit of the Data Clerk's summary; the Advisor reads the chunks.
 
 8e) Part 9: the desk and the main script -- how it works, how to run it

@@ -1,0 +1,2944 @@
+<<<ARTICLE>>>
+id: finnhub:143141712
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T00:49:41Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=b2cfa1cec02ce8c843d5f4344ffedeb3c95e649055ea2b7aae0ffe65b10f2d14
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Freedom Broker Upgrades Procter & Gamble to Buy from Hold
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143138404
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T23:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87af113463dffacd686da1c9c9ce71fff8d30d944bd6b0f48d132a743c45d01b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble's Earnings Show a Resilient Consumer Despite Price Hikes. Is the Dividend King Stock a Buy?
+<<<SUMMARY>>>
+P&G delivered surprisingly strong results in its fiscal first quarter. Here's what it means for investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136666
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T18:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ec274832a9799503fd6721aafe99f3eeb47fb2573195e493358d165ed715d1d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Has Raised Its Dividend for 70 Straight Years. Here's Why That Matters in a Sell-Off
+<<<SUMMARY>>>
+The consumer staples giant is still a reliable income stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136877
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T16:41:15Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=4713e46d2a2bd8e8faf8efb73a1f33161db3d0ee209e06e2385a9be927afef96
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: PG
+keywords: 
+headline: Dow Jones Losers: AXP, HD, CAT, PG Decline in Today's Session
+<<<SUMMARY>>>
+Dow Jones losers in today's session included American Express, Home Depot, Caterpillar and Procter & Gamble, with declines ranging from 2.04% to 3.62%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136271
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T16:00:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bcec21e01b80ac7cacca62f8a44d3fd61fb1cbb0675f637ad6e6aa509797cbe9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble's Topline Fundamentals Encouraging, RBC Capital Markets Says
+<<<SUMMARY>>>
+Procter & Gamble's (PG) topline fundamentals are encouraging and market share recovery continues to
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143163383
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T15:58:33Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d26a1ddc02d6ab8b4688df9cd7269057ba5db07807aa1cdc0c2df7a97cc0c407
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Hdr-Image--Walmart-Customers-Check-Out-L.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Tech-to-Defensive Rotation, GM Stock Logs Worst Week Since 2023: This Week on Wall Street
+<<<SUMMARY>>>
+Staples ETF XLP heads for its best month since 1998 as investors ask who funds AI; Meta burns cash, GM has its worst week since 2023.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135534
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T15:04:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6cb55c980f8db2e1ceb88e462fe6430e15430ce02dd8ce467a797762ea128c79
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Is Procter & Gamble a Buy After Its Latest Earnings Report?
+<<<SUMMARY>>>
+P&G's stock popped after its fiscal first-quarter earnings report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164392
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:35:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=504a69852fdc443d2c20a2456fb51bde95a16999bf8e3d7c7714f5f78cf1eb89
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Citigroup Maintains Buy on Procter & Gamble, Raises Price Target to $187
+<<<SUMMARY>>>
+Citigroup  analyst Filippo Falorni   maintains Procter &amp; Gamble (NYSE:PG) with a Buy and raises the price target from $180 to $187.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164393
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:34:43Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8b47a1cd2011911e1271fb68b703461ce8f769d06ce91b4745abf981f9963716
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Cincinnati---Circa-February-2019-Procter.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble's Turnaround Gains Steam, but Analyst Warns Rising Oil Costs Could Threaten Recovery
+<<<SUMMARY>>>
+TD Cowen raises Procter &amp; Gamble&#39;s price target to $166 after Q1 beat, but maintains a Hold on rising commodity costs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135658
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:30:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=276d80c44c95a50e9e0a88ae79b5f88bc079fdf437535527e26b3c027cbe3272
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G’s Q1 Results Draw Price-Target Hikes As Analysts Cite Stronger Underlying Performance
+<<<SUMMARY>>>
+According to The Fly, Morgan Stanley raised its price target on P&G to $185 from $166, maintaining an ‘Overweight’ rating, and said recent brand interventions and reinvestment had “begun to bear fruit.”
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164394
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:09:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=80dafedbc766a5dcd72ae966fd29219790f8028211143cc40c86229ad766f4ee
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: BNP Paribas Maintains Outperform on Procter & Gamble, Raises Price Target to $189
+<<<SUMMARY>>>
+BNP Paribas  analyst Kevin Grundy   maintains Procter &amp; Gamble (NYSE:PG) with a Outperform and raises the price target from $177 to $189.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133409
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T13:40:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eae68f33d0c382a9c1e76664cad58e20f588fe442c551e8214d3a5c8909f06e1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Walmart Is Having Its Best Month Since 1999, and Is 4% From $1 Trillion
+<<<SUMMARY>>>
+Walmart is on pace for its best month in over two decades while a trillion-dollar milestone sits just out of reach, but the real question is whether the buying surge reflects the retailer's strength or something more fragile hiding behind a defensive label.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143163302
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T13:15:48Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b0986c4c3346cb6a0b4a48385ffd2137a17dc708668c1b6d7107cdfb1f29e7ab
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Oil-Pump-Jacks-And-Barrels-With-Forex-Ch.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Oil Tops $100 on Iran Fears, Energy ETF XLE Hits New Record: Stock Market Today
+<<<SUMMARY>>>
+WTI crude rose above $100 on fears of renewed U.S. strikes on Iran, lifting XLE to a record while staples, telecoms and the Dow slipped at midday Friday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133425
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T13:04:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4388f6caf2200e5042728c01673c0a6b460314b7ae4e7dc2aa4acc42e79168a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: PG Q3 deep dive: market share gains and product innovation offset input cost headwinds
+<<<SUMMARY>>>
+Consumer products behemoth Procter & Gamble (NYSE:PG) announced better-than-expected revenue in calendar Q3 2026 (fiscal Q1 2027), with sales up 4% year on year to $23.28 billion. Its non-GAAP profit of $2 per share was 5.7% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135659
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ff9ebe1844c3371dc3c61681b08769cf8f9ff8f6bab8b39c907496383e03f7f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: PG Q1 Earnings Call Highlights Growth Amid Rising Cost Pressures
+<<<SUMMARY>>>
+PG posts 4% organic sales growth in Q1 fiscal 2027, fueled by stronger volumes, but rising commodity costs and margin pressures cloud its earnings outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133323
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T12:51:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c77c83484c29d47212abc7370c65f9b1e4d0f873f1cb04586c6f817fc4a243aa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Want Rising Income in Retirement? Invest in These 4 Dividend Growers Whose Free Cash Flow Covers Every Payout
+<<<SUMMARY>>>
+A high yield can vanish the moment a recession hits, but four companies have quietly built something more valuable: dividends that keep climbing because the cash to fund them never runs out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164396
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T12:21:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0f31cc5f111093774d22cfb7e25e03d03652436eaca639d01342ad9852fcf076
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: JP Morgan Maintains Overweight on Procter & Gamble, Raises Price Target to $180
+<<<SUMMARY>>>
+JP Morgan  analyst Andrea Teixeira   maintains Procter &amp; Gamble (NYSE:PG) with a Overweight and raises the price target from $162 to $180.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164397
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T11:54:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2f74bdc202ff9039b698abbef5314f0f0483eb15e4bceeb4536451db3daa21f7
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Evercore ISI Group Maintains Outperform on Procter & Gamble, Raises Price Target to $180
+<<<SUMMARY>>>
+Evercore ISI Group  analyst Robert Ottenstein   maintains Procter &amp; Gamble (NYSE:PG) with a Outperform and raises the price target from $166 to $180.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143132155
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T11:01:12Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a7f610ce5e8bbb9cda6098e6a68e424b2918cc730765a29428a90a3f42c03b56
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_29_0f59b9c0a3.webp
+category: company
+tickers: PG
+keywords: 
+headline: Stock Market Today: Meta’s Spending Plans Reignite AI Bubble Fears as the Nasdaq Sinks 2.6% and Money Runs to Defensives
+<<<SUMMARY>>>
+The Nasdaq fell 2.6% as Meta’s higher capex floor revived doubts about AI spending, dragging chip stocks and hyperscalers lower. Lockheed Martin, Spotify and Procter & Gamble rallied, the 10-year yield dropped below 5%, and Brent oil climbed above $113.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143163312
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T11:00:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9fe2731c81e6a01f6a64bb839414f5ad8f7e8d3787cf132e4ac3eafd5b777673
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: 8 Of 11 Sectors Fall In Friday Trading As Energy Leads
+<<<SUMMARY>>>
+Three sectors are higher and eight are lower in Friday’s regular session, with Energy, Technology and Real Estate holding the top three positions across different market groups. The leaders are separated rather than clustered, with Energy well ahead of the other two.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164399
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T10:40:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d1f894b97e827c687579bb0c17309030fab50c4bfe1e435da650dd2a411ed4bd
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: RBC Capital Maintains Outperform on Procter & Gamble, Raises Price Target to $169
+<<<SUMMARY>>>
+RBC Capital  analyst Nik Modi   maintains Procter &amp; Gamble (NYSE:PG) with a Outperform and raises the price target from $166 to $169.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143127361
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T10:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=852e2dc25d9c8909f457ef5143f9c0969fb2c19a0058305f426af637ada458c9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Wall Street's safest stock just had its biggest day since the pandemic crash: Chart of the Day
+<<<SUMMARY>>>
+P&G just had its best day since 2020 as investors pile into the maker of Tide and Pampers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143134018
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T09:50:54Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c2139804515f56c17ec94301a9ce643e3db66c0b735633bbfbf50cc088badf06
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Wells Fargo Maintains Overweight on Procter & Gamble, Raises Price Target to $180
+<<<SUMMARY>>>
+Wells Fargo  analyst Chris Carey   maintains Procter &amp; Gamble (NYSE:PG) with a Overweight and raises the price target from $164 to $180.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143134019
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T09:02:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0181245b7d58dc4fbf4c796622896b996ff934e7516fa5bf3f83a66108e137af
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: TD Cowen Maintains Hold on Procter & Gamble, Raises Price Target to $166
+<<<SUMMARY>>>
+TD Cowen  analyst Robert Moskow   maintains Procter &amp; Gamble (NYSE:PG) with a Hold and raises the price target from $150 to $166.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133016
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T08:58:46Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6d0e2cf4c41cfa31ef9abb25683ed39f2925f0c49b0ddc0188448d09ffa38688
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Vandalia---Circa-April-2018-Procter-amp-.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble To Rally Over 12%? Here Are 10 Top Analyst Forecasts For Friday
+<<<SUMMARY>>>
+Analysts cut EAT, TTMI and MRTN targets, while raising SPOT, RBLX, S, PG and ARGX; ratings were largely maintained.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143127362
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T08:21:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ece2568ced4c73c6ae50b8f070215c383b22c52bcea05125ddbe5945a5c4f00
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Company News for Oct 23, 2026
+<<<SUMMARY>>>
+Companies In The News Are: LMT, PG, BX, CMCSA.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143134021
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T08:03:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=550dd10b1cbb8c26e1dd90682fd950d80003479287ea9b9b72ec7cd292b8a6ba
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Morgan Stanley Maintains Overweight on Procter & Gamble, Raises Price Target to $185
+<<<SUMMARY>>>
+Morgan Stanley  analyst Dara Mohsenian   maintains Procter &amp; Gamble (NYSE:PG) with a Overweight and raises the price target from $166 to $185.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136272
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T04:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e095c81f344799f30dda992e53254903f4905709efd604c9236c78de84201f21
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Rosy with Thorne
+<<<SUMMARY>>>
+Procter & Gamble stock had its biggest single-day spike since people started hoarding toilet paper in March 2020.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143112298
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T02:07:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0094668738fb6a7cd2b867d72e36f21d80573ea365d1516c3f124557b7946743
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+A $1.4 billion cost headwind this year tests whether innovation-backed pricing can sustain margin protection without sacrificing volume.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143104563
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T23:17:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=093d96191b779c3bdcf0dcce219296cf3fbeb1c89f341d58bdbe351b6fb90574
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble (PG) Stock Climbs As Q1 Earnings Highlight Margin Pressure
+<<<SUMMARY>>>
+Procter & Gamble stock ripped higher today, jumping 5.6% to US$165.59 after its Q1 2027 update hit the tape. The market reacted quickly, but the real story sits inside the income statement. Core earnings per share came in at US$2.00 on revenue of US$23.3b, numbers that matter less for the one day pop and more for what they indicate about the profit engine behind this premium household products giant. Like the way Procter & Gamble turns steady revenue into earnings but want a wider set of cash...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143104561
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T22:04:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23166c86125ffe5aaeb1c5c67ba25410187d1e03834a407f66a6ef1cd2a05da2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Q1 Earnings Call Highlights
+<<<SUMMARY>>>
+Procter & Gamble (NYSE:PG) reported a 4.0% increase in organic sales for the first quarter of fiscal 2027, led primarily by volume growth, while maintaining its full-year outlook despite rising commodity, energy and transportation costs. Chief Financial Officer Andre Schulten said organic sales gro
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143104111
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T20:41:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d06e0fd0882cde9643134c2d31d89bf15741361f1e3a0da822405214f1c9a25f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G’s Boosts Q1 Beauty Sales, but Says It Can Do Better
+<<<SUMMARY>>>
+Organic sales in the consumer product giant’s beauty business increased 5 percent to $4.4 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143104112
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T20:13:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8fc50f36168c50258ef1ff6d253480e2b7ee60b420bec66f8b6f4129363b6423
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Soars 6% on Earnings Beat, Shrugs Off $1.4 Billion Cost Hit: “Strong Start”
+<<<SUMMARY>>>
+Key TakeawaysProcter & Gamble shares jumped 6% after fiscal first-quarter core EPS of $2. 00 and revenue of $23.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103654
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T19:47:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=698b31f03a2ae3cf3449e64ad77001c33edc6c2570641af92c58001d0251fca6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Sector Update: Consumer Stocks Mixed Late Afternoon
+<<<SUMMARY>>>
+Consumer stocks were mixed late Thursday afternoon, with the State Street Consumer Staples Select Se
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103695
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T19:17:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb14cf0966cff1400dac07e36441a1d51d890593bde44d99c1190c37afa96582
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble (PG) Pairs Q1 Beat With AI Focus And Fresh Product Rollout
+<<<SUMMARY>>>
+Procter & Gamble (NYSE: PG) reported Q1 earnings that exceeded analyst expectations, while reaffirming its full-year outlook on the call. Management highlighted increased use of AI tools to study consumer shopping patterns and streamline retail execution across its global portfolio. Recent launches such as Head & Shoulders Scalp Care, Charmin Ultra Strong, Crest Sensitivity Relief, and Pampers Wipes target evolving customer preferences. The combination of stronger Q1 results, AI-focused...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103967
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T19:11:14Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=6ba6eb21e59fd6c1286d6cd915cb82479246b421181b0793bf608366b363e3b8
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: PG
+keywords: 
+headline: Dow Jones Top Movers Today: PG and JNJ Lead Gainers, CAT and AMZN Lead Losers
+<<<SUMMARY>>>
+Dow Jones session movers: PG rose 6.01% and JNJ 4.3% to lead 10 gainers, while CAT fell 5.39%, AMZN 4.98% and NVDA 4.37% to lead 8 losers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103582
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T18:38:44Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=abf2123267dac4c1532ef4ba9140cbfe89133dfa60416d6462e570b548f2db3d
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: The Procter & Gamble Company Reports Q1 FY 2027 Results
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103696
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T18:15:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e2d18ff82a3083d296bfded932277a77e1fcf78e76dac6a966f46719c9642ef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G (PG) Q1 2027 Earnings Call Transcript
+<<<SUMMARY>>>
+Organic sales grew 4%, but commodity costs and margin pressure temper outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103055
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T17:44:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e70e922a2eaf2c2e551a04cb509a4420f120e91bd0e0dc65e61d4d0477d49d6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: The Procter & Gamble Company Q1 2027 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of The Procter & Gamble Company's Q1 2027 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103962
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T17:06:11Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=babdffacd35a6982284a04706edc2c0645c7566da0b3919b51e85550e294399c
+image_url: https://www.chartmill.com/images/uploads/CM_Unusual_Volume_Small_free_b9d2e60841.webp
+category: company
+tickers: PG
+keywords: 
+headline: S&P 500 Unusual Volume Movers in Today's Session
+<<<SUMMARY>>>
+S&P 500 unusual volume movers in today's session include PG, GEV, SNA, KMI, LMT, BX, URI, DXCM, CSX and VST, with both gainers and decliners seeing heavier-than-average activity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103960
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T16:41:16Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=dd0e716c087c296a435bd07e6976db52212f11256849c06f4d99a4595e759e09
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: PG
+keywords: 
+headline: Dow Jones Top Movers: Gainers and Losers on October 22, 2026
+<<<SUMMARY>>>
+Dow Jones top movers for October 22, 2026: Johnson & Johnson, Salesforce, Home Depot and P&G led gains, while Caterpillar, Nvidia and Amazon led declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133065
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T16:18:29Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=89dc7648d13d981025f1c65265daaa9b41858a63b11c743910271fb3bc7617ad
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Hdr-Image--Walmart-Customers-Check-Out-L.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Walmart’s Best Month Since 1999 Leads a Record Staples Rally: Is This a Warning Sign?
+<<<SUMMARY>>>
+Walmart is on track for its best month since 1999 as XLP heads for a record October. Past staples surges like this often came before weaker markets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103036
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T16:01:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4d7a018f3d84e317a422679d6e281251ef3b9cae0203cc0e3d19918750c90cda
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Jumps 6% as Earnings Beat Draws Defensive Buyers; Johnson & Johnson Rises 3%, Coca-Cola Ticks Up
+<<<SUMMARY>>>
+Procter & Gamble is surging on a strong earnings beat, but a collapsing gross margin and soaring commodity costs are quietly building pressure beneath the headline numbers. Whether lower-income shoppers keep absorbing higher prices will decide if this rally holds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102492
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T15:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3fe055ed17a7b39a08912c5df1eaf2632e2fd54d60dd3c26d83c3aa5cad19f3a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: National Advertising Division Recommends Oral Essentials Discontinue “30 Minutes to Whiter Teeth” Claim for Lumineux Whitening Strips
+<<<SUMMARY>>>
+Following a reopened inquiry, BBB National Programs’ National Advertising Division recommended that Oral Essentials, Inc. (OEI) discontinue its “30 minutes to whiter teeth” claim for Lumineux Whitening Strips.New York, NY, Oct. 22, 2026 (GLOBE NEWSWIRE) -- Following a reopened inquiry, BBB National Programs’ National Advertising Division recommended that Oral Essentials, Inc. (OEI) discontinue its “30 minutes to whiter teeth” claim for Lumineux Whitening Strips. In the underlying challenge broug
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102488
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:58:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2669d7bfd15e42a3608310fb297380ac4e19029d94029e0fadb764e71f7e626d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Spotify Rallies on Subscribers; Hermès falls on China Sales | Stock Movers
+<<<SUMMARY>>>
+- Shares of Procter & Gamble (PG) moved higher ahead of the US market open after the company's sales and profits beat Wall Street expectations. Organic revenue rose 4% in the first quarter, the fastest growth in three years. - Shares of Spotify (SPOT) rallied after results and forecast spoke to improving margin trends. Spotify reported that the service's paying subscribers increased 2% to hit 306 million in the third quarter, topping Wall Street estimates of 305.1 million. - Hermès (RMS FP) reported disappointing sales in the third quarter on sluggish demand in China. Their 41% slump so far this year puts them on track for the worst annual performance since the company listed in 1993. - Shares of Lam Research (LRCX) fell in premarket trading after the semiconductor capital equipment company gave a forecast for adjusted second-quarter earnings slightly weaker than expected.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102486
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:57:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0789cef1925352152dc3a088cb8b9296abb09c8b814d8017a9d0133d66421b98
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 'It's still humans using our products': How Tide maker Procter & Gamble is planning for the emerging AI universe
+<<<SUMMARY>>>
+Procter & Gamble CFO Andre Schulten eyes a changing shopping landscape amid the rise of AI agents.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102325
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:44:26Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=f2a1049dae086c0daa302e52748edb9c409c57268efb9746ee8a304ec9970396
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: The Procter & Gamble Company Reports Fiscal Year 2027 First Quarter Net Sales of $23.3 billion
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102418
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:41:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5b9ff708d4441ff2a5e99148ce86dd0915161ca8173eb245c9800476f3234131
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: How agentic AI shopping changes consumer staples: P&G CFO
+<<<SUMMARY>>>
+Procter & Gamble (PG) reported strong first quarter earnings results on Thursday and reiterated its full-year revenue forecast. Yahoo Finance Executive Editor Brian Sozzi sits down with P&G CFO Andre Schulten to discuss how AI is impacting business.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103957
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:35:47Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=b64b1675fefb4698e90c91b13a3bd84b8afa72c0ad07e0b0aa287e90b8342fea
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: PG
+keywords: 
+headline: S&P 500 Gap-Up and Gap-Down Movers in Today's Session
+<<<SUMMARY>>>
+S&P 500 gap movers in today's session include ALLE, LMT, CSX, PG and ROP among gap-up leaders, while COHR, FLEX, GEV, LRCX and TER were among gap-down laggards.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100886
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:05:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fd59b258d89dcbcd6a8836b41849a33a98911e5a460560a9d692d10b5ad15362
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Meta is leading the way for hyperscalers, and don't sleep on the Tesla Cybercab
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi talks about the biggest stories to start your trading day. Meta (META) announced a new class of stock that could be a blueprint for other hyperscalers, people seem to be forgetting about Tesla's (TSLA) Cybertruck, and the bears are out for CoreWeave (CRWV). Sozzi then sits down with P&G Chief Financial Officer Andre  Schulten to discuss encouraging growth and how daily product use products didn't hurt them with consumers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102489
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:53:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=660ce6565df98bf730b4f6b461a53f33408ab0c754a29ab5e38c3cb6029dc455
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble beats Wall Street expectations as organic sales rise
+<<<SUMMARY>>>
+Procter & Gamble Co (NYSE:PG, XETRA:PRG) beat analyst estimates for first-quarter revenue and adjusted earnings on Thursday and held its full-year outlook, as organic sales rose 4% across its portfolio. Revenue rose 4% from a year earlier to $23.28 billion, ahead of the $22.79 billion...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102490
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=82f632b5fc10a1dc5a494f0398785749aafcddc4e8a53ab0f59421ee94346cff
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Why Procter & Gamble Stock Is Heading for Its Biggest Gain Since 2020
+<<<SUMMARY>>>
+Procter & Gamble rises after reporting solid organic growth in its product categories and raising guidance thanks to a recent acquisition.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133842
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:31:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6bd43ff10dd7fb72892a445d4db5c8cecd8cdc84ef2a5de5b1cf8b73674e88a4
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Benzinga-Quick-Spark.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: QUICK SPARK: Procter & Gamble Stock Eyes Best Day Since 2020 – The Rally Is Hiding Something Bigger
+<<<SUMMARY>>>
+Procter &amp; Gamble stock jumps more than 6% on Thursday, its biggest one-day gain since March 2020, after first-quarter results. XLP rose 2.6%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102494
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1bff403866708c78fdc2d5a1dcfbe658ce7fc29f1319ab80f6775dd5f429bf12
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Inflamed Oil Prices Send Pre-Markets Lower
+<<<SUMMARY>>>
+Oil prices per barrel (/bbl) are now $99 on WTI and $112 on Brent, which is back up to a five-month high.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133146
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:26:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2ed675c0f68b6a82b354a501d37a0d3af1af388703cb3284c683b79d0b8610cf
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Menlo-Park--Ca--Usa--June-7--2026-Meta-H.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Meta Tumbles 6% on AI Spending Fears, 10-Year Yield Falls Below 5%: Stock Market Today
+<<<SUMMARY>>>
+Meta&#39;s higher AI spending plan drags tech lower as Treasurys rally and the 10-year yield drops below 5%. Gold, silver and Bitcoin fall; oil climbs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102491
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c09baac1a5203cdaa5c918f514f4e8e6f6e8a060486494f12fcd49ccdb81d9a8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Q1 Earnings Beat on Volume Growth & Favorable Mix
+<<<SUMMARY>>>
+PG's Q1 earnings beat estimates as higher volumes, favorable mix and productivity savings fuel growth despite commodity costs pressuring margins.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100100
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:00:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9dbde3560ed5241ef43459d25195eaec05ed6957800715cf42d5c845565f5b59
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Raises Full-Year Sales Growth Outlook, Posts Surprise Fiscal First-Quarter Earnings Increase
+<<<SUMMARY>>>
+Procter & Gamble (PG) lifted its full-year sales growth outlook to reflect an acquisition, while the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100101
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5b41de84819220f5f59a2f3c2f98d0af0dbdaa49a9f9ab7380e8f431f2dc2bc4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G, Nestlé, Mars, AstraZeneca, ITC and Bekaert win OMP Supply Chain Awards
+<<<SUMMARY>>>
+Awards recognize supply chain innovation, long-term partnership, and community engagement at conferences in Singapore and ShanghaiANTWERPEN, BE / ACCESS Newswire / October 22, 2026 / , a leader in AI-powered supply chain solutions, recently honored six global brands at its conferences held earlier this month in Singapore and Shanghai. The recognized companies - Procter & Gamble (P&G), Nestlé, Mars, AstraZeneca, ITC, and Bekaert - were celebrated for driving decision velocity, co-innovation, and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100104
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T12:56:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=93f56f37550f4c54c5b69461b953fdd47034d34bc1caef9932cb4167b359ce54
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Update: Middle East Tensions, Rising Oil Prices Drag US Equity Futures Lower Pre-Bell
+<<<SUMMARY>>>
+(Updates with economic data, recent oil price movement, world markets' overview and corporate stock
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143165420
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T12:54:54Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=9ab1138028dd60fdecc5eb400dc67b0037de8e7b5bd28914a350d9cfc6b85030
+image_url: https://image.cnbcfm.com/api/v1/image/108310665-1784815439644-108310665-1779380007938-IMG_9160_1.jpg?v=1784815450&w=1920&h=1080
+category: company
+tickers: PG
+keywords: 
+headline: Stocks making the biggest moves midday: Procter & Gamble, Lam Research, Blackstone, Southwest & more
+<<<SUMMARY>>>
+These are some of the stocks posting the largest moves midday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099617
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T12:36:00Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=0e6587981db268f781dd617f08e9b6416cccf336af78afa043bf6ad90d8ac194
+image_url: https://www.chartmill.com/images/uploads/CM_Premarket_Movers_Small_free_90289f6b81.webp
+category: company
+tickers: PG
+keywords: 
+headline: S&P 500 Premarket Movers on Oct. 22: Allegion and Lockheed Martin Gain, Snap-on and Lam Research Fall
+<<<SUMMARY>>>
+S&P 500 premarket movers on Oct. 22: Allegion and Lockheed Martin among gainers, while Snap-on and Lam Research led declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100102
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T12:30:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2db3d52d260aec6b0be9296a6d5f6208a4d64ff9c1df971f8e05cb230f5ecb4b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G (PG) Q1 Earnings: Taking a Look at Key Metrics Versus Estimates
+<<<SUMMARY>>>
+Although the revenue and EPS for P&G (PG) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099598
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T12:25:04Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=0e0a4f70b3311f2b6eb88ec6f69787f3bb588317e7e54f7a3b9d144117c95700
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_16_065e226ebd.webp
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble (NYSE:PG) Reaffirms FY27 Outlook as Core EPS Beat and Volume Growth Offset Sales Miss
+<<<SUMMARY>>>
+P&G beat Q1 profit estimates, sales fell just short, reaffirmed FY27 outlook, and shares rose premarket as volume growth offset commodity pressure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143098899
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9aa2752bb806b01612cd1d382d798d521161a12d9d168ce8f217b3c438a221a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Earnings from P&G, Comcast, Spotify, and initial jobless claims: What to Watch
+<<<SUMMARY>>>
+Market Domination Overtime host Brooke DiPalma takes a closer look at the top stories for investors to watch for Thursday, Oct. 22, including earnings reports from Procter & Gamble (PG), Comcast (CMCSA), Spotify (SPOT), and data on initial jobless claims.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099562
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:59:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9bc25a2ee8883cde8555c83cb4237c908b4d5361c20704fac3381b421d1c3866
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Middle East Tensions, Rising Oil Prices Drag US Equity Futures Lower Pre-Bell
+<<<SUMMARY>>>
+US equity futures were lower pre-bell Thursday as traders observed mounting Middle East tensions and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143098625
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:44:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=614022f30679e72f9d1ead97cd1a45f3abe9034dac8a4e529ab5c2627145d517
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble shares rise 2% in premarket trade after Q1 sales, profit beat
+<<<SUMMARY>>>
+Investing.com -- Procter & Gamble shares rose over 2% in premarket trading on Thursday after the consumer goods giant beat Wall Street estimates for first-quarter sales and profit, helped by a 4% rise in organic sales.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100103
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1571221d63eaf2bea7f316476647891c442240a343638867c306f9397598b4a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Organic Growth and Thorne Acquisition Drive Procter & Gamble Earnings
+<<<SUMMARY>>>
+Procter & Gamble attributes its acquisition of Thorne as a reason for its guidance boost.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143098626
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:17:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a92858a5d0921af2b32894e113ceea3a0fbf7e6196609a2b1d3b9965edaaf69
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G: Fiscal Q1 Earnings Snapshot
+<<<SUMMARY>>>
+CINCINNATI (AP) — CINCINNATI (AP) — Procter & Gamble Co. (PG) on Thursday reported fiscal first-quarter net income of $4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100106
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:15:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6d2aa010241c0f4b3245fae572bbdd4b76d5dad6404f77897d897e7c9811240
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble (PG) Q1 Earnings and Revenues Beat Estimates
+<<<SUMMARY>>>
+P&G (PG) delivered earnings and revenue surprises of +5.82% and +2.51%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143098624
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:13:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=39d65fc72c6c5709d6e86c8682e3ea47fecf806b1661955a26bd98c28b44f636
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G beats estimates as price hikes haven't hurt demand yet
+<<<SUMMARY>>>
+P&G earnings surprise despite macro pressures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143098627
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:10:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=31e2bc9bc7a40ff06733b7505b9d49ea93199e6a6f1752c1f0a7f5b8939421e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble (NYSE:PG) exceeds Q3 CY2026 expectations
+<<<SUMMARY>>>
+Consumer products behemoth Procter & Gamble (NYSE:PG) announced better-than-expected revenue in calendar Q3 2026 (fiscal Q1 2027), with sales up 4% year on year to $23.28 billion. Its non-GAAP profit of $2 per share was 5.7% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102186
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:00:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e02aea0905938e8c99013bb3819c14fa895500efa42abcad711a8be5172aeca9
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Defensives Lead Sectors In Thursday Trading As Growth Trails
+<<<SUMMARY>>>
+Five sectors are higher and six are lower in Thursday’s regular session, with defensive sectors holding the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143098628
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=68e2ea884eab00c3f3a537ce3556b37c3574461c17d56cd1cc3fe61ea5b10ec9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G Announces Fiscal Year 2027 First Quarter Results
+<<<SUMMARY>>>
+CINCINNATI, October 22, 2026--The Procter & Gamble Company (NYSE:PG) reported first quarter fiscal year 2027 net sales of $23.3 billion, an increase of four percent versus the prior year. Organic sales, which excludes the impacts of foreign exchange and acquisitions and divestitures, also increased four percent versus the prior year. Diluted net earnings per share were $1.97, an increase of one percent versus prior year as the increase in net sales was partially offset by an increase in operatin
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102187
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T09:50:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=43c250de793c7d424dbfa9caf10064ae7bc313ef814daf821b91bad7677e4d16
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Procter--Gamble-Co--NYSE-PG.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Tide And Gillette Maker Procter & Gamble's Sales Machine Keeps Humming Despite Inflation Pressure
+<<<SUMMARY>>>
+Procter &amp; Gamble (NYSE: PG) stock jumps after Q1 earnings &amp; revenue beat estimates. Full fiscal 2027 sales outlook raised.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102188
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T09:47:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b79b8f79081c93afb6376fd63e9dd1a89bdbc66844801e5e351a3181c40f5728
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Stock-Market-Crash-Concepts-Backgrounds-.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Q1 2027 Earnings Call Transcript
+<<<SUMMARY>>>
+Procter &amp; Gamble (NYSE:PG) reported first-quarter financial results on Thursday. The transcript from the company’s first-quarter earnings call has been provided below.This transcript is brought to you by Benzinga
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102189
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T08:46:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=020b554a7d0f44b36b42b4e5f3e87bd850121da8bc820ad08f7459ebbc374329
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble CFO Says Expect Materially Higher Cost Headwinds In Q2, Second Half Of Fiscal 2027 From Higher Oil Prices
+<<<SUMMARY>>>
+-Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099686
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T08:37:38Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4fd8624900ed795c03f3a5a6a2df6cd1157169a71e63e60d61dd62498f5c3d20
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Close-Up-Of-Wall-Street-Sign-With-Iconic.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Drop Following Asian Market Sell-off, Middle East Tensions— NFLX, SPCX, SMCI in Focus (UPDATED)
+<<<SUMMARY>>>
+U.S. stock futures were lower on Thursday, as the Dow Jones, S&amp;P 500 and Nasdaq 100 indices fell, following Wednesday&#39;s higher close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143165458
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T07:35:33Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=146fbe49a32ee165e82437bc00013a0abb03f7db380e9b4634c13a18481eb426
+image_url: https://image.cnbcfm.com/api/v1/image/108446201-17926682801792668276-49160401593-1080pnbcnews.jpg?v=1792668279&w=1920&h=1080
+category: company
+tickers: PG
+keywords: 
+headline: P&G CFO Andre Schulten on Q1 results: Driven by 4% organic sales growth
+<<<SUMMARY>>>
+Procter & Gamble CFO Andre Schulten joins 'Squawk Box' to discuss the company's quarterly earnings results, headwinds facing the company, growth outlook, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143165459
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T07:21:27Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=c156b03b8282013a6a0e1ad7dec38d83ea0d6fe7c50d22736cb9a3b68190a814
+image_url: https://image.cnbcfm.com/api/v1/image/108437606-1792506657497-gettyimages-2288432782-260804_dctarger_117.jpeg?v=1792506715&w=1920&h=1080
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble earnings beat as sales rise 4%, boosted by laundry and home products
+<<<SUMMARY>>>
+Procter & Gamble topped Wall Street's estimates for its quarterly earnings and revenue.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102191
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T07:02:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=03b1a452e2f628384d3d9dd6c02173b3dc0afa4843764b2a8597f11acd03ac89
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Affirms FY2027 Adj EPS Guidance of $6.89-$7.11 vs $6.97 Est; Raises FY2027 Sales Guidance from $85.127B-$86.813B to $85.970B-$87.655B vs $88.838B Est
+<<<SUMMARY>>>
+Procter &amp; Gamble (NYSE:PG) affirms FY2027 Adj EPS guidance from $6.89-$7.11 to $6.89-$7.11 vs $6.97 analyst estimate. Raises FY2027 sales outlook from $85.127 billion-$86.813 billion to $85.970 billion-$87.655
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102192
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T07:01:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=141217200e92549203263ecf53ff5c07b140e13ae3af1b3fa2cc1fb5d11d2113
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Q1 Adj. EPS $2.00 Beats $1.88 Estimate, Sales $23.276B Beat $22.795B Estimate
+<<<SUMMARY>>>
+Procter &amp; Gamble (NYSE:PG) reported quarterly earnings of $2.00 per share which beat the analyst consensus estimate of $1.88 by 6.38 percent. This is a 0.5 percent increase over earnings of $1.99 per share from the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102193
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T07:01:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=60f4f384cbfeef199d1393275b88d50ed969101f0db0510f272312003342e713
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Affirms FY2027 GAAP EPS Guidance of $6.69-$6.95 vs $6.85 Est
+<<<SUMMARY>>>
+Procter &amp; Gamble (NYSE:PG) affirms FY2027 GAAP EPS guidance from $6.69-$6.95 to $6.69-$6.95 vs $6.85 analyst estimate..
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100128
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T04:04:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cc6e04381133aced0a0ab5780a8c5d265cce2a78088ac1eee28a54ab30be1068
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Market-sentiment---Fear-and-Greed.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Nasdaq Surges Over 1% As SpaceX Shares Gain: Investor Sentiment Improves, But Greed Index Remains In ‘Fear’ Zone
+<<<SUMMARY>>>
+Market sentiment improved but stayed in Fear; U.S. stocks rose, led by tech, industrials and financials, while mortgage applications fell 5.3%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099699
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T04:00:21Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cb12800d2b2854011b08dc2e8bc86f2be480632c937c2548033ed665437d7124
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Tesla-EV-electric-vehicle-Service-Center.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Tesla, Lockheed Martin And 3 Stocks To Watch Heading Into Thursday
+<<<SUMMARY>>>
+Premarket focus: Lockheed Martin and P&amp;G report earnings; Tesla beats estimates; Meta tops results and announces split; American Airlines expects a loss.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102196
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T03:21:44Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d4bed96425410b3f043ba508bcf5c66727148aef2ce2ec60d645c554219a3645
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Procter--Gamble-Co--NYSE-PG.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Gears Up For Q1 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts
+<<<SUMMARY>>>
+P&amp;G will report Q1 earnings Oct. 22; analysts expect EPS of $1.89 and revenue of $22.82B.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099702
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T02:08:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b68819ed36846cfebf965a4b1f5a7cf5f60f62a4b3fefd245f22c7e2ac75abec
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/22/Stock-S-And-P-500-Index-Fund-Symbol-Is-O.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Stock Market: Will S&P 500 Open Up or Down Today?
+<<<SUMMARY>>>
+Will the S&amp;P 500 open higher? Polymarket odds plunge to 19% as Wall Street faces a tech selloff, $111 Brent crude, and Tesla earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143071245
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T20:41:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aec8495c2e3c296a8d0ed64027764e3326cca21730a58e6ce7a0425044b98801
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Stock Market Today: Dow Pops; Nasdaq Charges Higher As SpaceX Soars On Earnings, Tesla Talks
+<<<SUMMARY>>>
+The Nasdaq rallies Wednesday as SpaceX stock surges on earnings. Meta Platforms and Tesla post earnings late.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143069951
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T19:29:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=18ceb7f9c9bfc0dd34ff0c6c627912be00a08d9b78ab20be862d24f053e77f55
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Stock Market Today: Nasdaq Vaults On SpaceX Report; Software Names Gain (Live Coverage)
+<<<SUMMARY>>>
+The Nasdaq rallies Wednesday as SpaceX stock surges on earnings. Meta and Tesla are set to report late.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143070611
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T17:31:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a3b7c5ba6607dde941d36ce1db67c0e685ebea3df0f22ecec1a5b4e7cc121f03
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble (PG) Expects 1% to 3% Organic Growth, Is That Enough?
+<<<SUMMARY>>>
+Procter & Gamble (NYSE:PG) declared its quarterly dividend of $1.0885 per share earlier this month, a payout the company has raised for 70 years in a row. It reports first-quarter results before the market opens this week. The company is one of the 10 No-Brainer Stocks to Buy Now. But the business behind that streak […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143070599
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T16:15:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3cce3cd2341193d4f670e5042978937e918074723880f9014bec97c161a89089
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Treasury Yields Are Near 5%. Should Retirees Rethink Dividend Stocks?
+<<<SUMMARY>>>
+Short-term Treasurys now pay more than some beloved dividend stocks, which forces a question retirees rarely had to ask: do decades of consecutive raises still beat a government-backed yield you can lock in today?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099735
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T15:30:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=193a22696077603ac318e840808902ba8db27e0b47fb9a6c04ac36436b33ad52
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/21/earnings-scheduled-1.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble, Western Digital On Deck Thursday As Growth, AI Demand Face Test
+<<<SUMMARY>>>
+Procter &amp; Gamble headlines Thursday’s reports, with investors weighing resilient consumer demand against cost pressures and softer earnings growth. Union Pacific, Lockheed Martin, Valero Energy and Spotify report
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099890
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T15:30:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0029087e0e2ee2b8daaf8c4ffb418c8516a5f33327e28515f3d09105a6fc0e5e
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/21/Earnings-Season-Written-In-Search-Bar-Wi.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Traders Are Pricing an 8% Swing In Spotify Ahead of Earnings
+<<<SUMMARY>>>
+Seven stocks to watch for Wednesday earnings, including PG, UNP, NEM, LMT, VLO, WDC and SPOT, ranked by options-implied moves.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143071303
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T15:09:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23be3a41fca9f4408797ec4784f2e68e99bd4301c13aedf424030fd399ec940f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Ahead of Procter & Gamble Earnings, Here's What Barchart Data Says Comes Next for PG Stock
+<<<SUMMARY>>>
+Procter & Gamble is scheduled to report its Q3 earnings on Oct. 22. Options data suggests PG stock will sink after the quarterly print.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143067347
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T13:15:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0bfe081a69056912cdf21946466d7f92ff03727735838b3ef055927f60b463a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: The All-In Hosts Asked If the AI Trade Is Cracking. Here’s What Income Investors Should Do
+<<<SUMMARY>>>
+CoreWeave's bonds and stock are cratering, and the All-In hosts are asking out loud whether the entire AI trade is starting to crack. Before you panic or pile in, there are two quieter corners of the market that income investors near retirement should know about.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143067422
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T12:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e1d4c7d5efff7d649a2a65bbe215d5b4edcaa2b90a822cc697b446294de91f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 2 Dividend Stocks to Buy and Hold Forever
+<<<SUMMARY>>>
+Two industry leaders offer different paths to long-term wealth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143099755
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T11:00:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=72ec799b62eba6edcc9f3e7f04cc4da801cbd0327eecf4bb3f34e9267a270cee
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/21/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Cyclicals Top Sectors In Wednesday Trading As Defensives Trail
+<<<SUMMARY>>>
+Five sectors are higher and six are lower in Wednesday’s regular session, with cyclical sectors holding two of the top three positions alongside Technology. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143061604
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T10:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=917a8b7559ed671bc269c4026f0411980c8de8f45d8d2dc9ed87ca3443dd097b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: The massive risk hiding inside your S&P 500 index fund
+<<<SUMMARY>>>
+The Bahnsen Group Chief Investment Officer David Bahnsen and Roundhill Investments Chief Investment Strategist Drew Pettit discuss the hidden dangers of top-heavy passive index funds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143053999
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T08:06:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c8511f05fb1063a11cb36f584a48c20f528b554a25b2e7b992fa48318d921353
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: What To Expect From Procter & Gamble’s (PG) Q3 Earnings
+<<<SUMMARY>>>
+Consumer products behemoth Procter & Gamble (NYSE:PG) will be announcing earnings results this Thursday morning. Here’s what to look for.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143050106
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T07:09:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c34e901b076a5fe6688d40e1355856946cb64e187979f5a9256796a24d8d76e4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Raymond James Names Top Household and Personal Care Stocks
+<<<SUMMARY>>>
+Investing.com -- Raymond James has identified leading stocks in the household and personal care sector, which encompasses companies that manufacture and distribute consumer products used in daily life, from cleaning supplies to personal hygiene items.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143037663
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T01:50:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=945c7424bc8edd9382339904ea325e80f18077c3334dec6d6b88d375d0809c29
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy in 2026?
+<<<SUMMARY>>>
+Nike is dealing with slumping sales while Procter & Gamble's profitability is soaring, a stark divergence that reshapes the growth-versus-stability trade-off.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143032168
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T21:32:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d030071b7ab04276edb3551b0d3e0dd5f2a27fbf140033622eea06d37c79b104
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: A 67-Year-Old Swapped JEPQ for SCHD in a $1.32 Million Portfolio. Here’s What Happened to His $8,750 Monthly Paycheck
+<<<SUMMARY>>>
+Swapping a high-yield ETF for a dividend-growth fund sounds like a smart retirement move until you see what it does to a monthly paycheck built around a seven-figure portfolio.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143028744
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T15:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f69714b72c9afc40b43ac0b0707176cb63c56f9199962f8759157fdfc562af69
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Nike Now Yields More Than Procter & Gamble and Twice as Much as Coca-Cola. Is It the Most Overlooked Dividend Stock? Here's the Clear Answer.
+<<<SUMMARY>>>
+Nike's dividend yield is flashy, but Coca-Cola and Procter & Gamble offer more stability.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143028876
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T15:00:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7305a8bd327a27b47a5517d74edcf76341c1ff9ee2e3025a3ff4af9234bb072e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Projected to Deliver 2% Fiscal Q1 Organic Sales Growth, RBC Says
+<<<SUMMARY>>>
+Procter & Gamble (PG) is expected to post about 2% organic sales growth for fiscal Q1 2027, supporte
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143023815
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T12:45:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bb7b12454dc872e35f76b5f65ba1cbe53780302378aabc6a261dca0ce66142c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: TIPS vs. Dividend Stocks: Which Keeps More Buying Power in Retirement?
+<<<SUMMARY>>>
+Retirees chasing inflation protection face a genuine dilemma: one option guarantees a real return backed by the U.S. Treasury, while the other has raised its payout for 70 straight years but leaves every payment up to a corporate board vote.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143023644
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T12:26:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=088e1398824e0c7a7a56e4d6aecc4e6971cda256d939b30167bc23b859be0618
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Rising Income Over Big Yields: 4 Dividend Kings That Have Raised Payouts for 70 Years Straight
+<<<SUMMARY>>>
+Some companies have raised their dividend every single year for seven decades, surviving recessions, pandemics, and oil shocks without missing a beat. Four of these rare businesses are still raising payouts today, and their differences reveal which type of investor each one actually suits.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143022305
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T11:45:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b5d5c4ea62f15cf3379a9ee2becf9b9f7905015aa3949c87ed364628265c86f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 4 Dividend Kings Retirees Can Buy and Hold Forever: Safe Income for the Next 60 Years
+<<<SUMMARY>>>
+Four companies have raised their dividends every single year for decades, but one of them is now paying out nearly every dollar it earns, leaving almost no room for error if business gets worse.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143023415
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T11:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d03ade76408beb895bc3eff3d0a596a035d1d870ede290b787af12364454cddf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: The Zacks Analyst Blog Highlights Meta Platforms, Lam Research, Texas Instruments, Tesla, Netflix, Procter & Gamble and GE Aerospace
+<<<SUMMARY>>>
+Meta Platforms and other major companies report Q3 results as AI spending, shifting stock-bond correlations, China's economic data and Brazil's election shape global markets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143022312
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T10:11:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=909da1942751478e1cd3fd1bd955e68e68aa67514dd060f2ed5aa7f203d33b05
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Walmart Stock And Other Consumer Staples With Pricing Power
+<<<SUMMARY>>>
+Investors are trying to make sense of solid US GDP, stubborn inflation at 3.7% and a 10 year yield above 5%, all pulling portfolios in different directions while tariffs and war related energy shocks squeeze household budgets. Essential consumer staples sit in a rare middle ground where people keep buying, yet pricing power really matters. This article walks through three screened stocks exposed to these forces and explains why they may warrant a closer look at this time. The three stocks...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143028452
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T09:16:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=60e5c576cd58587455ef3cd91ed9ac607cf37c80d8480b71f6d379c81d33c639
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: RBC Capital Reiterates Outperform on Procter & Gamble, Maintains $166 Price Target
+<<<SUMMARY>>>
+RBC Capital  analyst Nik Modi   reiterates Procter &amp; Gamble (NYSE:PG) with a Outperform and maintains $166 price target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143013616
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T23:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3662b0b01932967bf839eb4e4d7f7803679863dfb0f752a99292f079a773a980
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Meet the Dividend King Stock That Yields More Than Quintuple the Nasdaq-100. Here's Why It's a Buy in October.
+<<<SUMMARY>>>
+Procter & Gamble has built an impressive track record of dividends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143009428
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T17:10:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ecbe5b52205b499c0f97c0666490e6bce8801c6978d22197090dc906176ea7f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Stock Market Today: Dow Firm, Nasdaq Rallies; Amazon Surges As These Stocks Test Entries (Live Coverage)
+<<<SUMMARY>>>
+The Dow Jones index is steady as techs jump on stock market today. Amazon and Nvidia climb while a biotech stock tests a buy point.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143009596
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T16:45:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=008ee17dcaeb9df814a9a5fdb84c6269422042c1f950032fb75371de8a09fe9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: $11,033 in Annual Dividends: What You Keep in a Roth IRA vs. a Taxable Account
+<<<SUMMARY>>>
+Six dividend stocks, one portfolio, two very different tax outcomes depending on where you hold them. The account you choose today quietly determines how much of every future payout you actually get to keep.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143008541
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T15:15:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=40aa527740f7d534e8d6145a2bed94d251648e8a117910b13adb56aef77c516a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Why Is Procter & Gamble (PG) Refreshing Its Scalp Care Playbook Now?
+<<<SUMMARY>>>
+Procter & Gamble (NYSE:PG) has introduced a Head & Shoulders Scalp Care Collection focused on distinct scalp health needs. The new regimens use clinically tested formulas and advanced ingredients tailored to issues such as dryness, oiliness, and sensitivity. This launch marks one of the largest recent shifts in Head & Shoulders positioning toward more science led, targeted scalp care solutions. The Scalp Care Collection push is only one angle, and investors should consider how this targeted...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143008543
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T15:13:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bc2c8074e98a6a0e225892f0fe96d4ece94d5c85c0bcf7d146f651101a824232
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: A $140,000 Salary, Replaced by Dividends: Here’s the Portfolio Size
+<<<SUMMARY>>>
+Replacing a six-figure salary with passive dividend income sounds straightforward until you realize your yield choice could mean the difference between needing $1.2 million or $4 million in the bank.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143008542
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T13:59:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dbdcab237833141c5c761226e99fea104f21a3b272e1c1a57942d62264eaa0d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble's Innovation Push: Catalyst for Long-Term Growth?
+<<<SUMMARY>>>
+PG's innovation push across key brands, AI-driven capabilities and productivity initiatives aim to revive organic sales growth and strengthen market share.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006654
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T13:45:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d4e50af581b1603134cb9ed60f289ba8872d31548eb89e54214476c5280afdf9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 3 Dividend Kings to Buy Now for Protection Against Rising Rates
+<<<SUMMARY>>>
+A risk-free bond now pays enough to make most dividend stocks look pointless, but three companies have raised their payouts for over 50 straight years and carry betas low enough to sleep through a rate spike.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006581
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T13:41:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=34f9faf16d66331ad839b502d4853564f0f2f412edd88961d20fe5eab4e25f10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Earnings live updates: All eyes on Musk and Meta as Q3 earnings rev up
+<<<SUMMARY>>>
+Big Tech's Q3 earnings parade kicks off this week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143025542
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T13:34:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=60e3bcafac073759b31d44700cb2a00e2a1443ec678a9f5ea7c89a55f347fb04
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/19/Tallinn--Estonia---August-4th-2023---Scr.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Dow Jones Industrial Average in Spotlight: 5 Stocks Report This Week, Including 2 of the Worst Performing
+<<<SUMMARY>>>
+Five of the 30 Dow Jones Industrial Average components reported this week. A look at analyst expectations for the five names.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006594
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T13:01:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=440ba88c4b6a5a6044f0cee85b375bc353ccbc08eb91a77b0ca58ac5945809b2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Update: Tech Stock Rebound Nudges US Equity Futures Mostly Higher Pre-Bell
+<<<SUMMARY>>>
+(Updates with economic data, recent oil price movement, world markets' overview and corporate stock
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006696
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T12:15:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1c5dd06b39b5e472f062bc11b4fed6a9fdfab1d5c77a310072f325cfdc79172c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: P&G (PG) Q1 Earnings on the Horizon: Analysts' Insights on Key Performance Measures
+<<<SUMMARY>>>
+Looking beyond Wall Street's top-and-bottom-line estimate forecasts for P&G (PG), delve into some of its key metrics to gain a deeper insight into the company's potential performance for the quarter ended September 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006591
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T12:02:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd124836842b3071c80da4e71a93129ce972cc37ab26ac8237e25a85d25da5f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Tech Stock Rebound Nudges US Equity Futures Mostly Higher Pre-Bell
+<<<SUMMARY>>>
+US equity futures were edging mostly higher pre-bell Monday as traders observed technology-related s
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143004585
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T11:10:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9d7e5e6fe4bc757c5297c82873c40d22f75cee4d67129e2fa37752a5e8e0b96
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Tech Rebound Lifts Wall Street Pre-Bell; Asia Mixed, Europe Off
+<<<SUMMARY>>>
+Wall Street futures pointed higher pre-bell Monday as traders waded back into tech shares after rece
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143002517
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T10:26:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4f17a53fd1c00385f662f74a49f2a3d6e2326e860e6d54e4044444e5fad68c46
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Stocks Rise Pre-Bell as Traders Prepare for Busy Week of Corporate Earnings
+<<<SUMMARY>>>
+The benchmark US stock measures were tracking in the green before the opening bell Monday as traders
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006420
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T08:29:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=120ec3f11def61ac9e7ee5e7268fd6303b07f12fdab1d8e17f92af69c9249725
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/19/Elon-Musk--The-Ceo-Of-Tesla--Spacex--Pay.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Dan Ives Says Meta, SpaceX and Tesla Face Big Questions This Week — His 3 'Big Focus Points' Ahead of Tech Earnings
+<<<SUMMARY>>>
+Dan Ives highlights top tech earnings focus points: Meta&#39;s AI profits, SpaceX&#39;s Starlink cash flow, and Tesla&#39;s autonomy expansion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143006421
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T08:23:11Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=40f4a1332e7682529eb774ac8525cde8644ea43879c8485469a005d89ef94d55
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/19/Close-Up-Of-Wall-Street-Sign-With-Iconic.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Stock Market Today: Dow Futures Drop, S&P 500, Nasdaq 100 Rise as Scott Bessent Links September Inflation to 'Energy Shock'— RCAT, ESLT, STLD in Focus (UPDATED)
+<<<SUMMARY>>>
+U.S. stock futures were higher on Monday, as the Dow Jones, S&amp;P 500 and Nasdaq 100 indices rose, following Friday&#39;s lower close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142988565
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-18T18:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3b9b65ee48be8769aa35d4a77ac8d2b59e32c0318a3ffda6a015e232e33f52ae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Tesla, Meta, GE Aerospace, GM, IBM, and More Stocks to Watch This Week
+<<<SUMMARY>>>
+It’s a heavy week for earnings, with reports also coming from Lockheed Martin, Spotify, Abbott, and many more. This week will also bring data on manufacturing, services, and new homes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142987976
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-18T17:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bf6c343ab978a09279c2ee8caa5b2419d7797e5da5df61c5d15d1dc73e2455da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Should You Buy Costco Stock Before Oct. 30? Here's the Clear Answer.
+<<<SUMMARY>>>
+Investors who plan to hold Costco shares for the long term can reap the benefits of its stock price appreciation, special dividends, and quarterly dividend payouts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9c04ae015037f493d1523cd55dbd8aa4881c33ebd675b61ff73c6553ac90773f
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-18T17:30:00Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/10/18/should-you-buy-costco-stock-before-oct-30-history/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F888854%2Fcost.png&w=1200&op=resize
+category: 
+tickers: COST, KO, PG, PEP
+keywords: dividend, stock performance, warehouse expansion, long-term investing, total return potential
+headline: Should You Buy Costco Stock Before Oct. 30? Here's the Clear Answer.
+<<<SUMMARY>>>
+Costco will pay a $1.47 dividend on Nov. 13 to shareholders of record as of Oct. 30. While the dividend yield of 0.6% is modest compared to competitors, the article argues that Costco's strong historical outperformance of the S&P 500 (116% over five years vs. 73%), combined with expansion plans, special dividends, and quarterly payouts, makes it worth considering for long-term investors.
+<<<INSIGHTS>>>
+COST | positive | The article highlights Costco's strong historical outperformance versus the S&P 500 (116% vs. 73% over five years), planned warehouse expansion from 939 to 967 locations, multiple shareholder reward mechanisms (quarterly dividends, special dividends, and stock appreciation), and recommends considering a position for long-term wealth building.
+KO | neutral | Mentioned only as a comparison point for dividend yield (2.3%), used to illustrate that Costco's 0.6% yield is lower than some consumer goods competitors. No investment recommendation or analysis provided.
+PG | neutral | Mentioned only as a comparison point for dividend yield (2.7%), used to illustrate that Costco's 0.6% yield is lower than some consumer goods competitors. No investment recommendation or analysis provided.
+PEP | neutral | Mentioned only as a comparison point for dividend yield (4.6%), used to illustrate that Costco's 0.6% yield is lower than some consumer goods competitors. No investment recommendation or analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aa574f91b0a6bbc27d2f03c318c44742aeac818f2d645e385f6f815c346d3a29
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-19T13:59:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3010629/procter-gamble-s-innovation-push-catalyst-for-long-term-growth?cid=CS-ZC-FT-analyst_blog|zer_report_update-3010629
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CHD, CL, CLX
+keywords: product innovation, organic sales growth, brand superiority, artificial intelligence, consumer goods, market share, premiumization, supply chain modernization
+headline: Procter & Gamble's Innovation Push: Catalyst for Long-Term Growth?
+<<<SUMMARY>>>
+Procter & Gamble is prioritizing product innovation, AI integration, and brand superiority to accelerate organic sales growth. Key successes include double-digit Baby Care growth in China and Tide's return to growth. Competitors Church & Dwight, Colgate-Palmolive, and Clorox are similarly investing in innovation pipelines and premiumization strategies to strengthen market positions, though PG faces challenges with modest 1% organic sales growth in FY26.
+<<<INSIGHTS>>>
+PG | positive | Strong innovation results with double-digit Baby Care growth in China for six consecutive quarters and Tide's return to high-single-digit growth. AI and productivity initiatives support future growth, though modest 1% FY26 organic sales growth indicates near-term headwinds.
+CHD | positive | Product launches expected to contribute roughly half of 2026 organic growth with successful innovations like THERABREATH and ARM & HAMMER DUAL DEFENSE gaining traction. Strong distribution expansion and brand investment support long-term growth prospects.
+CL | positive | Accelerating product innovation and premiumization with successful launches like Optic White Pro Series. Leveraging AI and digital capabilities to enhance consumer engagement and support sustainable organic sales growth.
+CLX | positive | Strengthening innovation pipeline with consumer-focused products and portfolio expansion including GOJO/Purell acquisition. Product improvements supporting market-share recovery, though facing near-term pressures.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8ddaccd3ec67156cebf9d07d01e3717beea86a5a2b129d738436df2a1343069c
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-19T23:30:00Z
+publisher: The Motley Fool
+author: Lawrence Rothman, Cfa
+url: https://www.fool.com/investing/2026/10/19/meet-the-dividend-king-stock-that-yields-more-than/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F888026%2Fgettyimages-1924765911-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: PG, AAPL, NVDA
+keywords: dividend king, dividend yield, free cash flow, consumer goods, dividend growth, stock recommendation
+headline: Meet the Dividend King Stock That Yields More Than Quintuple the Nasdaq-100. Here's Why It's a Buy in October.
+<<<SUMMARY>>>
+Procter & Gamble is highlighted as an attractive dividend stock with a 2.8% yield, more than five times higher than the Nasdaq-100's 0.5%. The company has paid dividends for 136 years and raised them for 70 consecutive years, earning Dividend King status. With $15.1 billion in free cash flow easily covering $10.2 billion in annual dividends, P&G demonstrates strong financial capacity to sustain and grow its dividend payments.
+<<<INSIGHTS>>>
+PG | positive | Strong dividend history (136 years of payments, 70 years of consecutive increases), high dividend yield (2.8%), robust free cash flow ($15.1B) that comfortably covers dividend payments ($10.2B), resilient business model with essential consumer products, and recent 3% dividend increase approved by board.
+AAPL | neutral | Mentioned only as an example of a large technology company in the Nasdaq-100 index with higher volatility; no specific analysis or recommendation provided.
+NVDA | neutral | Mentioned only as an example of a large technology company in the Nasdaq-100 index with higher volatility; no specific analysis or recommendation provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:651a41fad7885de786d1315bedcecfd1da51327f7669d7ea7f097926e8c5df02
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-20T14:30:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/10/20/the-ultimate-dividend-growth-stock-to-buy-with-100/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891281%2Fprocter-and-gamble-plant-with-procter-and-gamble-pg-logo-on-side_pg.jpg&w=1200&op=resize
+category: 
+tickers: PG
+keywords: dividend growth, Dividend King, fractional shares, restructuring, cash flow, dividend yield, consumer goods
+headline: The Ultimate Dividend Growth Stock to Buy With $100 Right Now.
+<<<SUMMARY>>>
+Procter & Gamble is highlighted as a reliable dividend growth stock suitable for a $100 investment. The company has achieved 70 consecutive years of dividend increases and is a Dividend King. Currently undergoing restructuring with plans to cut 7,000 jobs and streamline its brand portfolio, P&G generated strong operating cash flow of $19.6 billion in fiscal 2026 while maintaining a 2.7% dividend yield and 3% payout increase.
+<<<INSIGHTS>>>
+PG | positive | P&G demonstrates a 70-year dividend raise streak, strong operating cash flow conversion to free cash flow (100%), and consistent dividend increases despite ongoing restructuring. The company has proven resilience through multiple economic crises and is executing a strategic portfolio optimization plan. While near-term growth is modest (1% organic sales growth), the reliable cash generation and long-term dividend track record support a positive outlook for dividend investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d2d328c4d31dc2767494fc3c0e52bd3e2db02c1e4b9742e507bb6b130c832d7b
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-20T14:52:00Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/10/20/nike-now-yields-more-than-procter-gamble-and-twice/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891195%2Fnke.png&w=1200&op=resize
+category: 
+tickers: NKE, PG, KO
+keywords: dividend stocks, dividend yield, Dividend Kings, stock performance, consumer staples, business turnaround, dividend sustainability
+headline: Nike Now Yields More Than Procter & Gamble and Twice as Much as Coca-Cola. Is It the Most Overlooked Dividend Stock? Here's the Clear Answer.
+<<<SUMMARY>>>
+While Nike's dividend yield of 4.4% exceeds those of Procter & Gamble (2.7%) and Coca-Cola (2.2%), the article advises against investing in Nike due to its struggling business fundamentals. Nike's stock has declined 41.6% in 2026 and 76.7% over five years as the company attempts a turnaround following strategic missteps. In contrast, Coca-Cola and Procter & Gamble are recommended as more reliable dividend stocks with stable business models and consistent dividend growth histories.
+<<<INSIGHTS>>>
+NKE | negative | Stock down 41.6% in 2026 and 76.7% over five years. Company facing revenue decline (4% quarterly drop), struggling turnaround efforts, and questions about dividend sustainability. High yield is a symptom of declining stock price rather than strength.
+PG | positive | 70 consecutive years of dividend increases, defensive business model with essential products, strong gross margin (50.87%), recognized as most innovative household products company, shares up 11.1% year-to-date, reliable and stable dividend payments.
+KO | positive | 64 consecutive years of dividend increases, strong stock performance up 34.3% year-to-date outperforming S&P 500, successful product innovation with Coca-Cola Zero Sugar growing 16%, diversified portfolio across water, sports, coffee and tea, reliable dividend income.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5150c79e1400b89f17351ce773eca6e55372dac2564cfa5648dcb845e7985f71
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-21T01:30:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/10/20/nike-vs-procter-gamble-which-consumer-stock-is-a-better-buy-in-2026/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ff109d3599a58d9662163265dc7819ebbbeb51c82-7952x4829.jpg&w=1200&op=resize
+category: 
+tickers: NKE, PG, UA, UAA, KVUE, WMT, ADDYY
+keywords: consumer stocks, dividend stocks, valuation comparison, profitability, turnaround strategy, recession-resistant, cash flow, brand competition
+headline: Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy in 2026?
+<<<SUMMARY>>>
+The article compares Nike and Procter & Gamble as investment options in 2026. Nike faces a prolonged turnaround with declining sales and a 44.5% stock decline over the past year, while Procter & Gamble demonstrates strong profitability with an 18.4% net margin and consistent dividend growth. The author recommends Procter & Gamble as the more stable choice for long-term investors, citing its recession-resistant business model and 70-year dividend increase streak, while suggesting investors wait for Nike to show sustained earnings improvements before investing.
+<<<INSIGHTS>>>
+NKE | negative | Nike is experiencing a prolonged turnaround with declining sales expectations for fiscal 2027, stock down 44.5% over 12 months and 77% over 5 years. The company has a lower net margin (6.7%) and higher debt-to-equity ratio (73%), with the author recommending waiting for multiple quarters of earnings beats before investing.
+PG | positive | Procter & Gamble demonstrates strong financial health with 18.4% net margin, robust operating cash flow of $19.5 billion, and consistent profitability. The company is a Dividend King with 70 consecutive years of dividend increases, offers recession-resistant products, and shows steady growth with 7% sales increase in Q3 FY2026. The author explicitly recommends this stock for long-term investors.
+UA | neutral | Mentioned as a competitive rival to Nike in the athletic footwear market, but no specific analysis or sentiment is provided regarding the company itself.
+UAA | neutral | Mentioned as a competitive rival to Nike in the athletic footwear market, but no specific analysis or sentiment is provided regarding the company itself.
+KVUE | neutral | Mentioned as a global competitor to Procter & Gamble, but no specific analysis or sentiment is provided regarding the company itself.
+WMT | neutral | Mentioned as Procter & Gamble's largest customer accounting for 16% of sales, highlighting retail partnership importance, but no investment recommendation or sentiment is provided.
+ADDYY | neutral | Mentioned as a competitive rival to Nike in the athletic footwear market, but no specific analysis or sentiment is provided regarding the company itself.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ed2f65d709a55d75c36df0e5f3497beac6ed9f13804ede3e760e645344c488ad
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-21T09:20:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3011556/should-you-invest-in-the-ishares-u-s-consumer-staples-etf-iyk?cid=CS-ZC-FT-sector_etf-3011556
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default115.jpg
+category: 
+tickers: IYK, PG, KO, PM, VDC, XLP
+keywords: Consumer Staples ETF, passive management, dividend yield, expense ratio, sector exposure, diversification
+headline: Should You Invest in the iShares U.S. Consumer Staples ETF (IYK)?
+<<<SUMMARY>>>
+The iShares U.S. Consumer Staples ETF (IYK) is a passively managed fund with $1.64 billion in assets, offering broad exposure to the Consumer Staples sector with a 0.37% expense ratio and 2.44% dividend yield. The fund has gained 17.36% year-to-date and 14.24% over the past year, with top holdings including Procter & Gamble (13.63%), Coca-Cola, and Philip Morris International. It carries a Zacks ETF Rank of 3 (Hold) and is considered a medium-risk option with a beta of 0.40.
+<<<INSIGHTS>>>
+IYK | neutral | The ETF receives a Hold rating (Rank 3) from Zacks. While it shows solid year-to-date performance (17.36%) and reasonable expense ratio (0.37%), the Consumer Staples sector itself is ranked 14th out of 16 sectors (bottom 13%), indicating weaker relative sector performance. The fund is described as a reasonable option but not exceptional.
+PG | neutral | Mentioned as the largest holding in IYK at 13.63% of assets. No specific performance commentary or sentiment is provided; it is simply identified as a major component of the fund.
+KO | neutral | Listed as the second-largest holding in the ETF. No specific analysis or sentiment is provided; it is noted only as a significant portfolio component.
+PM | neutral | Identified as the third-largest holding in IYK. No specific commentary or sentiment is provided in the article.
+VDC | positive | Presented as an alternative option with a lower expense ratio (0.09% vs IYK's 0.37%) and significantly larger assets ($8.02 billion), making it a more cost-efficient competitor.
+XLP | positive | Highlighted as an alternative with the lowest expense ratio (0.08%) and the largest asset base ($14.81 billion) among the three compared ETFs, suggesting superior scale and cost efficiency.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6e839a5c5b3ffa65598f732ad449f78bc2d30e49273cf261e44cc7bf62ab340c
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-21T12:35:00Z
+publisher: The Motley Fool
+author: Jeff Siegel
+url: https://www.fool.com/investing/2026/10/21/2-dividend-stocks-to-buy-and-hold-forever/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891505%2Fmt-dividend.jpg&w=1200&op=resize
+category: 
+tickers: PG, SYK
+keywords: dividend stocks, long-term investing, consumer goods, medical devices, dividend growth, aging population, cash flow
+headline: 2 Dividend Stocks to Buy and Hold Forever
+<<<SUMMARY>>>
+Procter & Gamble and Stryker are recommended as long-term dividend stocks. P&G has increased dividends for 70 consecutive years with stable cash flow from consumer brands, while Stryker benefits from growing demand for medical devices driven by an aging population. Both offer different paths to wealth building through consistent dividend growth.
+<<<INSIGHTS>>>
+PG | positive | 70 consecutive years of dividend increases, strong cash flow generation ($19.6B operating cash flow), established global brands with pricing power, and consistent shareholder returns despite modest organic growth make it a stable long-term holding.
+SYK | positive | Strong revenue growth (9.4% YoY), robust earnings growth (17.9% adjusted EPS), benefits from demographic tailwinds with aging population, and management raising full-year guidance demonstrate solid long-term growth potential with dividend expansion opportunities.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3198b609239bb8caada348aea12ca35521e5a2f0191973bdfce6df9f5ce57501
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T13:08:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013055/procter-gamble-q1-earnings-beat-on-volume-growth-favorable-mix?cid=CS-ZC-FT-analyst_blog|earnings_article-3013055
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, BJ, GO, PRPL
+keywords: earnings, Q1 FY27, organic sales growth, margin pressure, commodity costs, guidance raised, cash flow, shareholder returns
+headline: Procter & Gamble Q1 Earnings Beat on Volume Growth & Favorable Mix
+<<<SUMMARY>>>
+Procter & Gamble (PG) reported Q1 FY27 core EPS of $2.00, up 1% YoY and beating consensus estimates of $1.89. Net sales rose 4% to $23.28B with 4% organic sales growth driven by volume and favorable mix. The company raised FY27 sales guidance to 2-4% but maintained core EPS guidance of $6.89-$7.11. Core operating margins contracted 80 bps due to elevated commodity costs and product reinvestments, despite 250 bps in productivity savings.
+<<<INSIGHTS>>>
+PG | positive | PG beat EPS and sales estimates, delivered 4% organic sales growth across all segments, raised FY27 sales guidance, and generated strong free cash flow of $4.4B with solid shareholder returns. However, margin compression from commodity costs and reinvestments tempers the outlook.
+BJ | neutral | Mentioned as a comparable consumer staples stock with Zacks Rank #2 (Buy), showing 11.7% sales growth and 6.8% earnings growth expectations, but no direct news or performance data provided in the article.
+GO | neutral | Listed as a consumer staples comparison with Zacks Rank #2, but facing expected sales decline of 0.3% and significant earnings decline of 27.6%, though delivering strong earnings surprises of 54.4% on average.
+PRPL | neutral | Mentioned as a consumer staples peer with Zacks Rank #2, expecting 8.5% sales decline but 36.3% earnings growth, with strong 21.3% average earnings surprises, but no direct relevance to the main article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1b8173a5856e25067c7aa47bae67879ba3569c59481ce5044423ca7716abf078
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T13:30:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013001/inflamed-oil-prices-send-pre-markets-lower?cid=CS-ZC-FT-ahead_of_wall_street-3013001
+image_url: https://staticx-tuner.zacks.com/images/articles/main/46/190694.webp
+category: 
+tickers: PG, LMT, SPOT, VLO
+keywords: Middle East tensions, oil prices, Q3 earnings, jobless claims, stock market futures, drone attacks
+headline: Inflamed Oil Prices Send Pre-Markets Lower
+<<<SUMMARY>>>
+Middle Eastern tensions from drone attacks on Saudi and Russian infrastructure and tanker attacks in the Strait of Hormuz drove oil prices up 2% to five-month highs, sending stock futures lower. Jobless claims remained historically low at 194K. Q3 earnings showed mixed results: Procter & Gamble and Lockheed Martin beat estimates while Spotify missed, though all three stocks traded higher. Valero Energy surged on strong refining market conditions.
+<<<INSIGHTS>>>
+PG | positive | Beat earnings estimates with $2.00 EPS vs $1.89 expected, revenues 2.5% ahead of estimates at $23.28B, stock up 2.46% in early trading
+LMT | positive | Significantly beat earnings estimates with $7.97 EPS vs $7.49 expected (+6.4%), revenues beat by 1.35%, stock up 5% pre-market with 14% YTD gains
+SPOT | positive | Missed earnings by 8% ($2.85 vs $3.10 expected), but record gross margins of 33% and strong premium subscription growth drove stock up 7.5%
+VLO | positive | Strong Q3 earnings with 12.3% surprise to $23.90 EPS, revenues 23.3% above consensus at $46.1B driven by oil refining market strength, stock up 1.6% with 168% YTD gains
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:03998350a8a1eb9d37e54a5010a3fc5958e10526a1798622f971f4b4852dc8b9
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T14:09:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013062/pre-markets-in-red-on-higher-crude-oil-prices?cid=CS-ZC-FT-economic_highlights-3013062
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9c/1092.jpg
+category: 
+tickers: PG, LMT, SPOT, VLO
+keywords: oil prices, geopolitical tensions, stock market decline, Q3 earnings, jobless claims, bond yields
+headline: Pre-Markets in Red on Higher Crude Oil Prices
+<<<SUMMARY>>>
+Global oil markets surged following drone attacks on Saudi and Russian infrastructure, pushing WTI to $99/bbl and Brent to $112/bbl (5-month high). Stock futures declined sharply with the Dow down 285 points, S&P 500 down 69 points, and Nasdaq down 479 points, while bond yields fell across the board. Initial jobless claims remained historically low at 194K. Q3 earnings showed mixed results: Procter & Gamble and Lockheed Martin beat expectations, Spotify missed earnings but showed strong subscriber growth, and Valero Energy posted strong refining margins.
+<<<INSIGHTS>>>
+PG | positive | Beat earnings expectations with $2.00 EPS vs $1.89 consensus, revenues exceeded estimates by 2.5%, and stock up 2.46% in early trading
+LMT | positive | Significantly beat earnings estimates by 6.4% ($7.97 vs $7.49), revenues beat by 1.35%, stock up 5% pre-market with 14% YTD gains
+SPOT | positive | Despite missing earnings by 8%, achieved record gross margins of 33% and premium subscriptions grew to 6 million, resulting in 7.5% stock gain
+VLO | positive | Strong Q3 earnings beat by 12.3% ($23.90 vs expected), revenues exceeded consensus by 23.3%, benefiting from oil refining market strength
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d107b27640fb4c3c600166caadf22aa9ea8c983a98f324f86807550889c446ed
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T15:30:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/etfs/2026/10/22/the-consumer-staples-face-off-buy-vdc-for-growth-hold-kxi-for-global-cash-flow/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ffbe1ec5f4197718b9adee2e415cd928a87d02866-1100x733.jpg&w=1200&op=resize
+category: 
+tickers: VDC, KXI, WMT, COST, PG
+keywords: consumer staples ETF, domestic vs global exposure, expense ratio comparison, dividend yield, defensive investments, ETF performance
+headline: The Consumer Staples Face-Off: Buy VDC for Growth, Hold KXI for Global Cash Flow
+<<<SUMMARY>>>
+Vanguard Consumer Staples ETF (VDC) is recommended as the better buy for most investors due to its ultra-low 0.09% expense ratio and superior 5-year performance (44% total return, 7.6% CAGR), despite focusing only on U.S. companies. iShares Global Consumer Staples ETF (KXI) offers international diversification with 60% U.S. and 40% international exposure and slightly higher dividend yield (2.3% vs 2.1%), but charges a higher 0.38% expense ratio and delivered lower returns (31% total return, 5.5% CAGR).
+<<<INSIGHTS>>>
+VDC | positive | Recommended as the better buy for most investors due to significantly lower expense ratio (0.09%), superior 5-year performance (44% total return, 7.6% CAGR), and strong concentration in top holdings like Walmart (13.91%), Costco (12.16%), and P&G (9.93%).
+KXI | neutral | Positioned as a hold for investors seeking international diversification (40% non-U.S. exposure) and higher dividend yield (2.3%), but disadvantaged by higher expense ratio (0.38%) and lower historical returns (31% total return, 5.5% CAGR) compared to VDC.
+WMT | positive | Major holding in both ETFs, representing 13.91% of VDC and 7.26% of KXI, indicating strong position in consumer staples sector.
+COST | positive | Significant holding in both funds at 12.16% of VDC and 6.00% of KXI, demonstrating importance as a core consumer staples company.
+PG | positive | Key position in both ETFs at 9.93% of VDC and 5.05% of KXI, representing a major player in household and personal products.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:633199fbf77dc29dab9a989ba91a6ead25ad4d0c70698205c754dbc8498e6db1
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T21:00:08Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013321/uscb-financial-holdings-inc-uscb-misses-q3-earnings-and-revenue-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3013321
+image_url: https://www.zacks.com/stock/news/3013321/uscb-financial-holdings-inc-uscb-misses-q3-earnings-and-revenue-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3013321
+category: 
+tickers: PM, TSLA, PG, UNP, LMT, KLAC
+keywords: earnings season, dividend stocks, biotech stocks, gold stocks, semiconductor ETFs, energy sector, portfolio tracking, investment strategy
+headline: USCB Financial Holdings, Inc. (USCB) Misses Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+The article discusses earnings season expectations, highlighting challenges for companies to surpass previous strong results. It covers various investment themes including dividend stocks, biotech, gold stocks, semiconductors, and energy sectors. Philip Morris delivered better-than-expected Q3 results despite geopolitical risks. The piece emphasizes the importance of portfolio tracking and long-term investment strategies over short-term trading.
+<<<INSIGHTS>>>
+PM | positive | Company delivered better-than-expected Q3 results, demonstrating strong financial performance despite ongoing geopolitical risks.
+TSLA | positive | Mentioned as having a robust balance sheet with compelling technical, financial, and strategic synergies when combined with SpaceX's growth trajectory.
+PG | neutral | Listed as one of 161 companies reporting earnings; no specific performance commentary provided.
+UNP | neutral | Listed as one of 161 companies reporting earnings; no specific performance commentary provided.
+LMT | neutral | Listed as one of 161 companies reporting earnings; no specific performance commentary provided.
+KLAC | positive | Highlighted as offering a profitable options spread trade with a 32.7% return potential regardless of modest price movements.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:21433bf11f0b6d2e210c149a29e636b65f87a850dc8d726a5962711a6a526577
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-23T01:47:01Z
+publisher: The Motley Fool
+author: The Motley Fool Team
+url: https://www.fool.com/earnings/takeaways/2026/10/22/procter-gamble-3-key-takeaways-for-long-term-investors/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb4204f36ed605fc54d4ba32e2cb31d1dd892afd6-800x450.jpg&w=1200&op=resize
+category: 
+tickers: PG
+keywords: organic sales growth, volume gains, operating leverage, innovation-backed pricing, commodity costs, market share, retail partnerships, margin protection
+headline: Procter & Gamble: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+Procter & Gamble reported 4% organic sales growth in Q1 fiscal 2027, driven by 2.4% volume gains signaling genuine brand loyalty. The company is leveraging innovation-backed pricing to offset a $1.4 billion cost headwind from commodities and transportation. Market share is rebounding across top U.S. retailers, with over 70% of key customers now holding or expanding share, positioning P&G to protect long-term margins despite challenging market conditions.
+<<<INSIGHTS>>>
+PG | positive | Strong Q1 results with 4% organic sales growth driven by volume gains (2.4%), indicating genuine brand loyalty rather than just pricing power. Market share rebounding across 70% of top U.S. retailers, and management demonstrating confidence in innovation-backed pricing strategy to offset $1.4B cost headwinds while maintaining margins. Execution speed and brand equity position the company well for future growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a1c85cbb3638b20e20768681f561d4601be7f3e89f5325e0c66e46893b4a0832
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-23T08:21:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013462/company-news-for-oct-23-2026?cid=CS-ZC-FT-corporate_summary-3013462
+image_url: https://staticx-tuner.zacks.com/images/articles/main/1f/370.jpg
+category: 
+tickers: LMT, PG, BX, CCZ, CMCSA
+keywords: earnings, tech stocks, treasury yields, oil prices, stock performance
+headline: Company News for Oct 23, 2026
+<<<SUMMARY>>>
+Several major companies reported better-than-expected earnings, driving stock gains. Lockheed Martin surged 7% after beating EPS estimates, Procter & Gamble jumped 5.6%, Blackstone climbed 8.4%, and Comcast advanced 3.4%. Meanwhile, tech stocks declined overall while oil prices rose and treasury yields fell below 5%.
+<<<INSIGHTS>>>
+LMT | positive | Shares climbed 7% after reporting Q3 2026 adjusted EPS of $7.97, exceeding Zacks Consensus Estimate of $7.49
+PG | positive | Shares surged 5.6% after posting Q1 FY2027 adjusted EPS of $2.00, outpacing Zacks Consensus Estimate of $1.89
+BX | positive | Shares jumped 8.4% after reporting Q3 2026 adjusted EPS of $1.32, beating Zacks Consensus Estimate of $1.26
+CCZ | positive | Shares advanced 3.4% after reporting Q3 2026 adjusted EPS of $1.07, exceeding Zacks Consensus Estimate of $0.98
+CMCSA | positive | Shares advanced 3.4% after reporting Q3 2026 adjusted EPS of $1.07, exceeding Zacks Consensus Estimate of $0.98
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ad480e02403c1c59625f77f03ea5f15d34a0e4338745b3dc315ae8b0f8ba6346
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-23T13:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013922/pg-q1-earnings-call-highlights-growth-amid-rising-cost-pressures?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3013922
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9c/1092.jpg
+category: 
+tickers: PG
+keywords: earnings, revenue growth, commodity inflation, margin pressure, organic sales, pricing strategy, productivity improvements, consumer demand
+headline: PG Q1 Earnings Call Highlights Growth Amid Rising Cost Pressures
+<<<SUMMARY>>>
+Procter & Gamble (PG) reported Q1 fiscal 2027 earnings of $2.00 per share (up 1%) and revenues of $23.28 billion (up 4%), both beating estimates. The company maintained its full-year guidance despite a $1.9 billion earnings headwind from commodities and currency. While organic sales grew 4% with broad-based volume growth across all categories and regions, management warned that commodity inflation would intensify in Q2, pressuring margins. The company is relying on productivity improvements, innovation-backed pricing, and operational execution to offset inflationary pressures.
+<<<INSIGHTS>>>
+PG | neutral | Mixed results: positive earnings beat and revenue growth with broad-based volume recovery across all categories and regions; however, offset by significant margin compression (150 bps gross margin decline), escalating commodity cost headwinds ($1.9B), and management's cautious full-year guidance citing consumer uncertainty and inflationary pressures. The company maintained rather than raised guidance despite strong Q1 performance, indicating management concern about sustainability.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a3d785adc3aed509f83a598d23ae947ee6d0647470ddad196de2e38578013a0f
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-23T14:44:01Z
+publisher: The Motley Fool
+author: Matt Dilallo
+url: https://www.fool.com/investing/2026/10/23/is-procter-gamble-a-buy-after-its-latest-earnings-report/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F95469cfbe3fe9d3e6140e587bcc074c0351c728e-1200x800.png&w=1200&op=resize
+category: 
+tickers: PG
+keywords: earnings report, organic sales growth, margin pressure, valuation multiple, dividend stock, commodity costs, tariffs, consumer brands
+headline: Is Procter & Gamble a Buy After Its Latest Earnings Report?
+<<<SUMMARY>>>
+Procter & Gamble's stock surged over 5% following stronger-than-expected organic sales growth of 4% in Q1 FY2027, driven primarily by volume and product mix improvements rather than price increases. However, earnings growth remains sluggish with core EPS increasing only 1%, as the company faces persistent margin pressures from higher commodity costs and tariffs. With P&G now trading at 23.5x forward earnings (up from 21x earlier in the year), the analyst suggests waiting for a more favorable entry point, as the stock would need significant earnings acceleration and multiple expansion to deliver compelling 10% annualized returns over the next five years.
+<<<INSIGHTS>>>
+PG | neutral | While P&G showed encouraging sales growth acceleration and maintains strong cash flow generation with quality brands, the stock's recent rally has eliminated the margin of safety. Earnings growth remains sluggish at only 1% core EPS growth, and persistent cost pressures limit near-term upside. The analyst recommends waiting for a better entry point rather than buying at current valuations, indicating the stock is fairly valued but not attractively priced at present levels.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bb4b7f311a878bc206582363d6887952387f3c47018deca82d5326849b078423
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-23T23:30:00Z
+publisher: The Motley Fool
+author: Jeremy Bowman
+url: https://www.fool.com/investing/2026/10/23/procter-gambles-earnings-show-a-resilient-consumer/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892100%2Fwoman-shopping-in-supermarket.jpg&w=1200&op=resize
+category: 
+tickers: PG
+keywords: earnings, organic sales growth, dividend, commodity costs, consumer staples, defensive stock, price hikes
+headline: Procter & Gamble's Earnings Show a Resilient Consumer Despite Price Hikes. Is the Dividend King Stock a Buy?
+<<<SUMMARY>>>
+Procter & Gamble reported strong Q1 fiscal results with 4% organic sales growth and beat earnings estimates, causing the stock to jump 5.6%. However, the company faces headwinds from higher commodity and oil costs that are expected to increase throughout the year. While P&G remains a solid defensive dividend stock with 70 consecutive years of dividend increases, its upside potential appears moderate given flat performance over the past five years.
+<<<INSIGHTS>>>
+PG | positive | P&G delivered surprisingly strong Q1 results with 4% organic sales growth, beat revenue and EPS estimates, and demonstrated resilience despite inflationary pressures. The stock had its best day in over six years with a 5.6% jump. However, sentiment is tempered by warnings of increasing cost headwinds and moderate upside potential going forward.
+<<<END>>>

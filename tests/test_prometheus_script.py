@@ -44,7 +44,7 @@ def test_it_asks_for_the_four_parameters_in_order_and_the_defaults_are_news_and_
 
 
 def test_a_symbol_asks_before_it_fetches_and_the_default_answer_is_yes():
-    result = run("msft\n\n\n14\n\n")
+    result = run("MSFT\n\n\n14\n\n")
     assert "Fetch fresh news for MSFT with the PAID Finnhub/Polygon APIs and write news/MSFT.txt? [Y/n]" in result.stderr
     assert "FETCH fresh news for MSFT (paid APIs; writes news/MSFT.txt)" in result.stdout
     assert command(result) == ["python", "-m", "prometheus.langgraph.desk", "--symbol", "MSFT", "--term", "", "--source", "news", "--from-days-ago", "14"]
@@ -64,10 +64,47 @@ def test_when_the_input_ends_before_the_fetch_question_is_answered_nothing_is_fe
 
 
 def test_yes_fetches_without_asking_and_gives_the_symbol_a_fetch_note():
-    result = run("", "--symbol", "$aapl", "--from-days-ago", "3", "--yes")
+    result = run("", "--symbol", "$AAPL", "--from-days-ago", "3", "--yes")
     assert "Fetch fresh news for" not in result.stderr
     assert command(result) == ["python", "-m", "prometheus.langgraph.desk", "--symbol", "AAPL", "--term", "", "--source", "news", "--from-days-ago", "3"]
     assert "FETCH fresh news for AAPL" in result.stdout
+
+
+def test_a_company_name_is_accepted_at_the_symbol_prompt_and_passed_on_as_typed():
+    result = run("Procter&Gamble\n\n\n7\n\n")
+    assert result.returncode == 0 and "or a company name such as Procter & Gamble" in result.stderr
+    assert command(result) == ["python", "-m", "prometheus.langgraph.desk", "--symbol", "Procter&Gamble", "--term", "", "--source", "news", "--from-days-ago", "7"]
+    # the confirmation names what will happen: a lookup first, and a file named after the ticker the lookup finds
+    assert "Fetch fresh news for 'Procter&Gamble' (its ticker is looked up first) with the PAID Finnhub/Polygon APIs and write news/<its ticker>.txt? [Y/n]" in result.stderr
+    assert "FETCH fresh news for 'Procter&Gamble' (its ticker is looked up first) (paid APIs; writes news/<its ticker>.txt)" in result.stdout
+
+
+def test_a_company_name_with_spaces_given_as_a_flag_is_passed_as_one_argument():
+    result = run("", "--symbol", "Procter & Gamble", "--from-days-ago", "7", "--yes")
+    assert result.returncode == 0 and command(result)[command(result).index("--symbol") + 1] == "Procter & Gamble"
+
+
+def test_a_ticker_in_lower_case_is_passed_as_typed_and_is_said_to_be_looked_up():
+    result = run("", "--symbol", "$aapl", "--yes")
+    assert command(result)[command(result).index("--symbol") + 1] == "aapl"
+    assert "FETCH fresh news for 'aapl' (its ticker is looked up first)" in result.stdout
+
+
+def test_a_ticker_in_capitals_is_not_said_to_be_looked_up():
+    result = run("", "--symbol", "BRK.B", "--yes")
+    assert "FETCH fresh news for BRK.B (paid APIs; writes news/BRK.B.txt)" in result.stdout and "looked up" not in result.stdout
+
+
+@pytest.mark.parametrize("typed", ["Dillard's", "O'Reilly Automotive", "Coca-Cola", "AT&T", "Berkshire Hathaway Inc."])
+def test_ordinary_company_names_are_accepted(typed):
+    cmd = command(run("", "--symbol", typed, "--yes"))
+    assert cmd[cmd.index("--symbol") + 1] == typed
+
+
+@pytest.mark.parametrize("typed", ["a;b", "x|y", "../etc/passwd", "$(whoami)", "`id`", "a" * 61, "&amp", "'quoted"])
+def test_text_that_is_neither_a_ticker_nor_a_company_name_is_refused(typed):
+    result = run("", "--symbol", typed, "--yes")
+    assert result.returncode == 2 and "is not a valid ticker symbol or company name." in result.stderr and "DRY RUN" not in result.stdout
 
 
 def test_parameters_given_as_flags_are_not_asked_for():
@@ -77,7 +114,7 @@ def test_parameters_given_as_flags_are_not_asked_for():
 
 
 def test_a_symbol_and_a_term_together_are_both_passed_on():
-    cmd = command(run("sndk\nlong-term contracts\n\n7\nn\n"))
+    cmd = command(run("SNDK\nlong-term contracts\n\n7\nn\n"))
     assert cmd[cmd.index("--symbol") + 1] == "SNDK" and cmd[cmd.index("--term") + 1] == "long-term contracts"
 
 
@@ -99,13 +136,13 @@ def test_a_blank_answer_the_first_time_and_a_good_one_the_second_time_is_accepte
 
 def test_an_invalid_symbol_is_asked_for_again():
     result = run("../etc\nmsft\n\n\n\nn\n")
-    assert "'../etc' is not a valid ticker symbol." in result.stderr and result.returncode == 0
-    assert command(result)[command(result).index("--symbol") + 1] == "MSFT"
+    assert "'../etc' is not a valid ticker symbol or company name." in result.stderr and result.returncode == 0
+    assert command(result)[command(result).index("--symbol") + 1] == "msft"  # passed as typed: the desk looks a ticker in lower case up
 
 
 def test_an_invalid_symbol_given_as_a_flag_is_refused_without_asking_again():
     result = run("", "--symbol", "../etc")
-    assert result.returncode == 2 and "not a valid ticker symbol" in result.stderr
+    assert result.returncode == 2 and "not a valid ticker symbol or company name" in result.stderr
 
 
 @pytest.mark.parametrize("answers, expected", [("x\n91\nabc\n0\n10\n", "10"), ("\n", "7")])

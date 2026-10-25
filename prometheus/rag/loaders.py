@@ -14,15 +14,18 @@ The DataAgent writes news/<SYMBOL>.txt as a series of records (format: docs/Data
     <<<END>>>
 
 This module turns each record into one Document. It never imports the DataAgent: the file format is
-the contract between them. A record the DataAgent would not have written stops the load with a
+the contract between them. The one change it makes to the text is to decode HTML entities (`Procter &amp; Gamble` becomes
+`Procter & Gamble`, `Nvidia&#39;s` becomes `Nvidia's`): see decode_entities and design choices entry 18. A record the DataAgent would not have written stops the load with a
 ValueError that names the file and the line.
 
 Look at the result:   python -m prometheus.rag.loaders AAPL
 """
 import argparse
+import html
 import json
 import re
 import sys
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -36,6 +39,27 @@ REQUIRED_FIELDS = ("id", "headline", "published_utc", "url")
 TIME_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 SYMBOL_PATTERN = re.compile(r"[A-Z0-9][A-Z0-9.\-]{0,9}")  # AAPL, BRK.B, BF-B
 INSIGHT_LINE = re.compile(r"(?m)^[A-Z][A-Z0-9.\-]* \| (positive|neutral|negative) \| ")
+ENTITY = re.compile(r"&(#\d+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);")
+ESCAPED_MARKUP = re.compile(r"&(lt|gt|#0*(60|62)|#x0*(3c|3e));", re.I)  # < and > in every spelling: what the loader never decodes
+
+
+def _decode_one(match: re.Match) -> str:
+    entity = match.group(0)
+    decoded = html.unescape(entity)
+    if decoded in ("<", ">"):
+        return entity  # decoding these would write `<script>` into text that has none
+    if decoded == entity or not decoded or any(unicodedata.category(c) in ("Cc", "Cs") or c == "\ufffd" for c in decoded):
+        return entity  # not a known entity (&D;), or one that decodes to a control character or to nothing usable: leave it as written
+    return " " if decoded == "\xa0" else decoded
+
+
+def decode_entities(text: str) -> str:
+    """Decode HTML entities that are fully formed (`&amp;`, `&#39;`, `&quot;`, `&nbsp;`, `&eacute;`, `&#x1F680;`), one match at a time, and nothing else.
+
+    A bare `&copy` or `AT&T` or `R&D;` is left alone, and so is an entity that decodes to a control character. `<` and `>` are never written, in any
+    spelling (`&lt;`, `&#60;`, `&#x3c;`), so that decoding never puts markup into text that has none (`&lt;script&gt;` stays as it is). The text is not scanned again after a decode:
+    `&amp;lt;` becomes `&lt;`, the characters, and not `<`. Design choices entry 18."""
+    return ENTITY.sub(_decode_one, text)
 
 
 def check_symbol(symbol: str) -> str:
@@ -105,7 +129,7 @@ def _records(path: Path):
 
 
 def _to_document(path: Path, start: int, head: dict[str, str], summary: str, insights: str) -> Document:
-    """One record -> one Document. The text is the headline, summary and insight lines, as written."""
+    """One record -> one Document. The text is the headline, summary and insight lines, with the HTML entities decoded (decode_entities)."""
     where = f"{path}:{start}"
     missing = [name for name in REQUIRED_FIELDS if not head.get(name)]
     if missing:
@@ -120,12 +144,13 @@ def _to_document(path: Path, start: int, head: dict[str, str], summary: str, ins
         tickers = [head["symbol"]]  # fall back to the symbol the file was fetched for
     if not tickers:
         raise ValueError(f"{where}: the record has neither tickers nor a symbol")
+    headline, summary, insights = decode_entities(head["headline"]), decode_entities(summary), decode_entities(insights)
     return Document(
         id=head["id"],
-        page_content="\n\n".join(part for part in (head["headline"], summary, insights) if part),
+        page_content="\n\n".join(part for part in (headline, summary, insights) if part),
         metadata={
             "article_id": head["id"],
-            "headline": head["headline"],
+            "headline": headline,
             "tickers": tickers,
             "published_utc": head["published_utc"],
             "published_ts": int(published.timestamp()),  # a number: Chroma range filters take numbers only

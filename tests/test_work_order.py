@@ -122,6 +122,15 @@ def test_the_window_of_a_live_order_becomes_the_from_date_of_the_fetch(index, to
     assert "from_date" not in open_ended and "call fetch_news once for each ticker in the subject first, then search" in open_ended
 
 
+def test_the_company_name_on_the_order_is_given_to_the_data_clerk_next_to_the_symbol(index, toolbox):
+    c, model = clerk([say("ok"), say("ok")], index, toolbox)
+    c.request_data(order(subject=["PG"], company="Procter & Gamble Co"))
+    c.request_data(order(subject=["PG"]))
+    assert "subject: PG (Procter & Gamble Co)" in model.seen[0][1][1].content
+    assert "subject: PG;" in model.seen[1][1][1].content  # no company: just the symbol, followed by the next hint
+    assert wo.WorkOrder.model_validate_json(order(subject=["PG"], company="Procter & Gamble Co").model_dump_json()).company == "Procter & Gamble Co"
+
+
 def test_the_order_survives_json_with_its_data(index, toolbox):
     c, _ = clerk([call("retrieve_news", query="apple iphone phone", tickers="AAPL"), say("Yes [1].")], index, toolbox)
     o = c.request_data(order())

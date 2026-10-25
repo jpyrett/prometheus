@@ -62,15 +62,38 @@ def normalize(text: str) -> str:
     return " ".join(text.lower().split())
 
 
-def names_company(quote: str, symbol: str, company: str | None) -> bool:
-    """The quote names the company: its ticker (as a word, in capitals) or a distinctive word of its name (4 letters or more, not generic)."""
+NAME_SUFFIXES = {"co", "corp", "corporation", "inc", "incorporated", "ltd", "limited", "plc", "the", "company"}
+
+
+def short_names(company: str | None) -> list[str]:
+    """The short name a company's own name gives, when it is two words joined by "&": "Procter & Gamble Co" -> ["P&G"], "Johnson & Johnson" -> ["J&J"],
+    "Barnes & Noble Inc" -> ["B&N"]. Nothing is looked up or guessed: it is the initials of the two words around the "&", in capitals, and only when the
+    name is exactly those two words (after Co, Inc, Corp, Ltd, plc, The) and each is at least 3 letters. "Bath & Body Works" gives nothing (three words
+    after the "&"), nor does "AT&T Inc" (its parts are 2 and 1 letters long and "AT&T" is already the name)."""
+    words = [w for w in re.findall(r"[A-Za-z0-9]+|&", company or "") if w.lower() not in NAME_SUFFIXES]
+    if len(words) == 3 and words[1] == "&" and words[0] != "&" and words[2] != "&" and len(words[0]) >= 3 and len(words[2]) >= 3:
+        return [words[0][0].upper() + "&" + words[2][0].upper()]
+    return []
+
+
+def names_company(quote: str, symbol: str, company: str | None, known_company: str | None = None) -> bool:
+    """The quote names the company: its ticker (as a word, in capitals), a distinctive word of its name (4 letters or more, not generic), or the short name
+    the name gives ("P&G" for "Procter & Gamble Co", in capitals, as a word). `company` is what the model wrote; `known_company` is what the work order
+    carries from the name lookup (design choices entry 31), and both count."""
     if re.search(rf"(?<![A-Za-z0-9]){re.escape(symbol)}(?![A-Za-z0-9])", quote):
         return True
-    words = [w for w in re.findall(r"[A-Za-z0-9]+", company or "") if len(w) >= 4 and w.lower() not in GENERIC]
-    return any(re.search(rf"(?<![A-Za-z0-9]){re.escape(w)}(?![A-Za-z0-9])", quote, re.I) for w in words)
+    for name in (company, known_company):
+        words = [w for w in re.findall(r"[A-Za-z0-9]+", name or "") if len(w) >= 4 and w.lower() not in GENERIC]
+        if any(re.search(rf"(?<![A-Za-z0-9]){re.escape(w)}(?![A-Za-z0-9])", quote, re.I) for w in words):
+            return True
+        for short in short_names(name):
+            initials = re.escape(short[0]) + r"\s?&\s?" + re.escape(short[-1])
+            if re.search(rf"(?<![A-Za-z0-9&]){initials}(?![A-Za-z0-9&])", quote):
+                return True
+    return False
 
 
-def verify_signal(signal: dict, symbol: str, company: str | None, sources: dict[int, dict]) -> tuple[bool, str | None]:
+def verify_signal(signal: dict, symbol: str, company: str | None, sources: dict[int, dict], known_company: str | None = None) -> tuple[bool, str | None]:
     """(True, None) when the signal can be counted, else (False, the reason)."""
     if not sources:
         return False, "no sources were provided"
@@ -87,7 +110,7 @@ def verify_signal(signal: dict, symbol: str, company: str | None, sources: dict[
     text = sources[number]["text"]
     if normalize(quote) not in normalize(text) and normalize(quote) not in normalize(_defuse(text)):
         return False, f"the quote is not in source {number}"
-    if not names_company(quote, symbol, company):
+    if not names_company(quote, symbol, company, known_company):
         return False, "the quote does not name the company"
     return True, None
 
@@ -125,7 +148,7 @@ def parse_reply(text: str) -> list:
     return data["recommendations"]
 
 
-def build_recommendation(raw, sources: dict[int, dict], dropped: list[str]) -> dict | None:
+def build_recommendation(raw, sources: dict[int, dict], dropped: list[str], known: dict[str, str] | None = None) -> dict | None:
     """One raw recommendation from the model -> a checked one with its calculated score. Returns None (and says why in `dropped`) if
     it is not usable at all."""
     if not isinstance(raw, dict) or not isinstance(raw.get("symbol"), str):
@@ -149,7 +172,7 @@ def build_recommendation(raw, sources: dict[int, dict], dropped: list[str]) -> d
         if key in seen:
             continue
         seen.add(key)
-        ok, reason = verify_signal(signal, symbol, company, sources)
+        ok, reason = verify_signal(signal, symbol, company, sources, (known or {}).get(symbol))
         number = signal.get("source") if isinstance(signal.get("source"), (int, str)) else None
         source = sources.get(int(number)) if ok else None
         signals.append({"source": number, "chunk_id": source["chunk_id"] if source else None, "direction": signal.get("direction"),
@@ -223,7 +246,8 @@ class Advisor:
             order.errors = [*order.errors, run["error"]]
             return order
         run["error"] = None
-        recommendations = [r for r in (build_recommendation(raw, sources, run["dropped"]) for raw in raws[:MAX_COMPANIES]) if r]
+        known = {order.subject[0]: order.company} if order.company and isinstance(order.subject, list) and len(order.subject) == 1 else {}
+        recommendations = [r for r in (build_recommendation(raw, sources, run["dropped"], known) for raw in raws[:MAX_COMPANIES]) if r]
         if len(raws) > MAX_COMPANIES:
             run["dropped"].append(f"{len(raws) - MAX_COMPANIES} recommendation(s) beyond the first {MAX_COMPANIES}")
         for r in recommendations:

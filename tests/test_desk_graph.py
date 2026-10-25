@@ -13,6 +13,7 @@ from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.data_clerk.agent import DataClerk, Result
 from prometheus.common import work_order as wo
 from prometheus.langgraph import desk
+from prometheus.tools import symbols
 from test_advisor import Scripted, reply, rec, sig
 from test_data_clerk_agent import ScriptedModel, call, say
 from test_data_clerk_tools import FakeToolbox
@@ -112,9 +113,31 @@ class FakeAdvisor:
         return order
 
 
-def run(request, clerk=None, advisor=None, **options):
+NAMES = {"procter&gamble": ("PG", "Procter & Gamble Co", "name"), "procter & gamble": ("PG", "Procter & Gamble Co", "name"),
+         "sndk": ("SNDK", "Sandisk Corp", "ticker"), "msft": ("MSFT", "Microsoft Corp", "ticker"), "microsoft": ("MSFT", "Microsoft Corp", "name")}
+
+
+class FakeResolver:
+    """The name lookup, answering from a small table and recording what it was asked. It never reaches the network."""
+
+    def __init__(self):
+        self.asked = []
+
+    def __call__(self, text):
+        self.asked.append(text)
+        key = text.strip().lstrip("$").lower()
+        if key == "alphabet":
+            raise symbols.SymbolLookupError("'alphabet' matches several companies: GOOGL (Alphabet Inc-Cl A), GOOG (Alphabet Inc-Cl C). Type the ticker symbol instead")
+        if key not in NAMES:
+            raise symbols.SymbolLookupError(f"no company found for {text!r}; type the ticker symbol instead")
+        symbol, company, how = NAMES[key]
+        return symbols.Resolution(typed=text.strip(), symbol=symbol, company=company, how=how)
+
+
+def run(request, clerk=None, advisor=None, resolver=None, **options):
     FakeClerk.seen = FakeAdvisor.seen = None
-    return desk.run_desk(request, clerk_factory=clerk or (lambda order: FakeClerk()), advisor_factory=advisor or (lambda order: FakeAdvisor()), **options)
+    return desk.run_desk(request, clerk_factory=clerk or (lambda order: FakeClerk()), advisor_factory=advisor or (lambda order: FakeAdvisor()),
+                         resolver=resolver or FakeResolver(), **options)
 
 
 def test_one_work_order_travels_through_all_three_agents_and_is_the_same_object():
@@ -235,6 +258,64 @@ def test_a_term_answered_without_any_search_is_caught_and_the_advisor_never_runs
     assert any("no search of the stored news succeeded" in e for e in state["order"].errors)
 
 
+# ---------------------------------------------------------------- a company name in the symbol field
+
+def test_a_company_name_is_looked_up_and_the_order_is_for_its_ticker_with_the_company_on_it():
+    resolver = FakeResolver()
+    state = run({"symbol": "Procter&Gamble", "from_days_ago": 7}, resolver=resolver)
+    order = state["order"]
+    assert resolver.asked == ["Procter&Gamble"] and state["path"] == ["account_manager", "data_clerk", "advisor"]
+    assert order.subject == ["PG"] and order.company == "Procter & Gamble Co" and order.live is True and order.since_days == 7
+    assert state["resolution"] == {"typed": "Procter&Gamble", "symbol": "PG", "company": "Procter & Gamble Co", "how": "name"}
+    assert order.query.startswith("What is the latest news on PG")  # the query is about the ticker the lookup found, never about the typed text
+
+
+def test_a_ticker_in_capitals_is_used_as_it_is_with_no_lookup():
+    resolver = FakeResolver()
+    for typed in ("MSFT", "$AAPL", "BRK.B", "PG"):
+        state = run({"symbol": typed}, resolver=resolver)
+        assert state["resolution"] is None and state["order"].company is None
+    assert resolver.asked == []
+
+
+@pytest.mark.parametrize("typed", ["msft", "$sndk", "microsoft"])
+def test_a_ticker_in_lower_case_and_a_name_are_looked_up(typed):
+    resolver = FakeResolver()
+    state = run({"symbol": typed}, resolver=resolver)
+    assert resolver.asked == [typed] and state["order"].subject[0] in ("MSFT", "SNDK") and state["resolution"]["how"] in ("ticker", "name")
+
+
+def test_a_name_that_cannot_be_resolved_stops_at_the_account_manager_and_builds_nothing():
+    for typed, message in (("alphabet", "matches several companies: GOOGL"), ("Xyzzy Corp", "no company found for 'Xyzzy Corp'")):
+        state = run({"symbol": typed}, clerk=lambda order: pytest.fail("the Data Clerk must not be built"))
+        assert state["path"] == ["account_manager"] and state["order"] is None and state["resolution"] is None and message in state["errors"][0]
+
+
+def test_a_company_name_typed_as_the_term_is_a_topic_and_is_not_looked_up():
+    resolver = FakeResolver()
+    state = run({"term": "Procter&Gamble"}, resolver=resolver)
+    assert resolver.asked == [] and state["order"].live is False and state["order"].subject == "Procter&Gamble" and state["order"].company is None
+
+
+def test_no_fetch_still_looks_the_name_up_and_searches_the_stored_news_for_its_ticker():
+    state = run({"symbol": "Procter&Gamble", "fetch": False})
+    assert state["order"].subject == ["PG"] and state["order"].live is False
+
+
+def test_the_real_lookup_is_used_when_no_resolver_is_given_and_it_is_found_when_called(monkeypatch):
+    monkeypatch.setattr(desk.symbols, "resolve_company", FakeResolver())
+    state = desk.run_desk({"symbol": "microsoft"}, clerk_factory=lambda order: FakeClerk(), advisor_factory=lambda order: FakeAdvisor())
+    assert state["order"].subject == ["MSFT"]
+
+
+def test_the_data_clerk_is_told_the_company_name_next_to_the_ticker(index, toolbox):
+    clerk_model = ScriptedModel([call("retrieve_news", query="Procter & Gamble news", tickers="PG"), say("The stored news has nothing on Procter & Gamble.")])
+    state = run({"symbol": "Procter&Gamble"}, clerk=lambda order: DataClerk(toolbox=toolbox, store=index, model=clerk_model, allow_fetch=order.live), with_advisor=False)
+    question = clerk_model.seen[0][1][1].content
+    assert "subject: PG (Procter & Gamble Co)" in question and "call fetch_news once for each ticker in the subject first, with from_date=7" in question
+    assert state["order"].status == "data_ready" and state["order"].data.no_supporting_text
+
+
 # ---------------------------------------------------------------- the report and the command line
 
 def test_the_report_shows_the_request_the_path_the_answer_the_sources_the_signals_and_the_timing():
@@ -248,6 +329,13 @@ def test_the_report_shows_the_request_the_path_the_answer_the_sources_the_signal
                  "OK   [1] bullish", "SAME [2] bullish", "FAIL [3] bearish", "<- the quote is not in source 3", "TIMING (seconds)", "| total 12.3"):
         assert part in text, part
     assert "(stopped here)" not in text
+
+
+def test_the_report_shows_what_a_company_name_was_looked_up_as():
+    text = desk.report(run({"symbol": "Procter&Gamble", "from_days_ago": 7}), 1.0)
+    assert "RESOLVED 'Procter&Gamble' -> PG (Procter & Gamble Co), looked up and matched as a name" in text
+    assert text.index("RESOLVED") < text.index("PATH") and "subject ['PG'] (Procter & Gamble Co)" in text
+    assert "RESOLVED" not in desk.report(run({"symbol": "MSFT"}), 1.0)  # a ticker in capitals is not looked up, so there is nothing to show
 
 
 def test_the_report_of_a_refused_request_says_why_and_that_it_stopped():
@@ -269,7 +357,8 @@ def cli(monkeypatch, tmp_path):
 
     def fake(request, **options):
         seen.update(request=request, options=options)
-        return real_run(request, clerk_factory=lambda order: FakeClerk(), advisor_factory=lambda order: FakeAdvisor(), with_advisor=options.get("with_advisor", True))
+        return real_run(request, clerk_factory=lambda order: FakeClerk(), advisor_factory=lambda order: FakeAdvisor(), resolver=FakeResolver(),
+                        with_advisor=options.get("with_advisor", True))
 
     monkeypatch.setattr(desk, "run_desk", fake)
     return seen
@@ -284,12 +373,21 @@ def test_the_command_line_passes_the_four_parameters_to_the_graph_and_prints_the
     assert saved["path"] == ["account_manager", "data_clerk", "advisor"] and saved["order"]["status"] == "recommended"
 
 
-@pytest.mark.parametrize("args, name", [(["--symbol", "MSFT"], "desk_MSFT.json"), (["--symbol", "$sndk", "--term", "long-term contracts"], "desk_sndk_long_term_contracts.json"),
+@pytest.mark.parametrize("args, name", [(["--symbol", "MSFT"], "desk_MSFT.json"), (["--symbol", "$sndk", "--term", "long-term contracts"], "desk_SNDK_long_term_contracts.json"),
                                           (["--term", "flying car"], "desk_flying_car.json")])
 def test_runs_with_a_symbol_a_term_or_both_are_saved_under_different_names_so_none_overwrites_another(cli, capsys, tmp_path, args, name):
     assert desk.main(args) == 0
     assert (tmp_path / "out" / "data" / "processed" / name).exists(), sorted(p.name for p in (tmp_path / "out" / "data" / "processed").iterdir())
     capsys.readouterr()
+
+
+def test_a_company_name_on_the_command_line_is_passed_on_as_typed_and_the_order_is_saved_under_its_ticker(cli, capsys, tmp_path):
+    assert desk.main(["--symbol", "Procter&Gamble", "--from-days-ago", "7"]) == 0
+    assert cli["request"]["symbol"] == "Procter&Gamble"
+    out = capsys.readouterr().out
+    assert "RESOLVED 'Procter&Gamble' -> PG" in out
+    saved = json.loads((tmp_path / "out" / "data" / "processed" / "desk_PG.json").read_text())
+    assert saved["resolution"]["symbol"] == "PG" and saved["order"]["company"] == "Procter & Gamble Co" and saved["order"]["subject"] == ["PG"]
 
 
 def test_the_defaults_of_the_command_line_are_news_and_seven_days(cli, capsys):
@@ -318,6 +416,7 @@ def test_json_prints_the_finished_order(cli, capsys):
     assert desk.main(["--symbol", "MSFT", "--json"]) == 0
     printed = json.loads(capsys.readouterr().out)
     assert printed["path"] == ["account_manager", "data_clerk", "advisor"] and printed["order"]["recommendations"][0]["symbol"] == "MSFT"
+    assert "resolution" in printed and printed["resolution"] is None  # MSFT was a ticker in capitals: no lookup
 
 
 def test_show_graph_prints_a_mermaid_diagram_and_runs_nothing(monkeypatch, capsys):

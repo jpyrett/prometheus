@@ -595,7 +595,7 @@ What they cover:
 |---|---|
 | Real records | `tests/fixtures/news_sample.txt` holds three real records copied word for word from your files: a Finnhub article, the CoreWeave article (four tickers, four insight lines) and one with a colon in its headline. The tests check exact text, exact metadata and the epoch timestamps (worked out by hand) |
 | Errors | every case in section 3.4 raises, with the right file and line |
-| Damaged or odd input | a byte order mark and Windows line endings load; a byte that is not UTF-8 is reported with its file and line; a marker line with no escape stops the load; HTML, script, odd characters and injected instructions are kept exactly as written (design choices entry 19) |
+| Damaged or odd input | a byte order mark and Windows line endings load; a byte that is not UTF-8 is reported with its file and line; a marker line with no escape stops the load; tags, script, odd characters and injected instructions are kept exactly as written, and HTML entities are decoded (design choices entries 19 and 18) |
 | Symbols and settings | `check_symbol` cleans a good symbol; `../../.env`, `$AAPL`, and an empty or too long symbol are refused; the order environment, then `.env`, then default holds |
 | Your real files | every file in `news/` loads, the file's symbol is in every article's `tickers`, an article that sits in two files differs only in `tickers`, and a tripwire fails if HTML tags appear or HTML entities become common (all skipped when there are no files) |
 
@@ -805,7 +805,7 @@ As in Part 3, we broke the code on purpose to be sure the tests can fail. Nine b
 ### 4.6 What we found along the way
 
 - **The same article can fill two of the top three places.** Part 5 decides whether to group results by article or use MMR.
-- **A few articles contain raw HTML** (`Nvidia&#39;s`, in 3 of 288 articles, all from Finnhub). We measured it (it changes how well an article is found by at most 0.015), left it as written, and added a test that notices if HTML ever becomes common (design choices entry 18).
+- **A few articles contain raw HTML** (`Nvidia&#39;s`, in 3 of 288 articles, all from Finnhub). We measured it (it changes how well an article is found by at most 0.015), left it as written, and added a test that notices if HTML ever becomes common (design choices entry 18). It did become common in one company's file (`&amp;` in 16% of the Procter & Gamble articles, section 9.9), so **the loader now decodes entities** and the test runs per file.
 - **Chroma prints a harmless warning in the tests** (`DeprecationWarning: legacy embedding function config`) when LangChain reads the collection's settings to compute relevance scores. It does not affect results, and Python hides it outside pytest.
 - **One private attribute.** Counting tokens needs LangChain's inner model (`HuggingFaceEmbeddings._client`). Only `store.count_too_long` touches it, and a test fails if a LangChain upgrade removes it.
 - **We broke the input on purpose** (`python labs/module3_rag/break_the_input.py`). Fifteen kinds of damaged text went through the real loader, chunker and model. It found three bugs, now fixed: a huge headline made an article unfindable, a byte order mark stopped a good file, and an invalid byte gave an error without the file and line. It also turned one silent problem loud: ingest now warns when chunks are longer than the embedder reads. Design choices entry 19 has the full table and the rules we use to fix this kind of problem.
@@ -905,7 +905,7 @@ After the rebuild the scratch index held 2 chunks of 2 articles, as it should. T
 **5. Odd text is not a broken file.** Text that loads but is odd (HTML entities, a giant headline, hidden characters) is not an error the loader can see, and fixing it by hand does not last: the next `fetch_news` brings the same kind of text again. Fix it once, in `loaders.py`:
 
 1. Measure how common it is in your real files: `python labs/module3_rag/break_the_input.py` (Part 1 counts the odd text, Part 2 shows what each kind does to search).
-2. Decide. If it hardly moves the search score, leave it and keep a test that notices if it becomes common. That is what we did for HTML (entry 18).
+2. Decide. If it hardly moves the search score, leave it and keep a test that notices if it becomes common. That is what we did for HTML (entry 18), until one company's file broke the premise and the pre-decided fix was applied (entry 18's addendum).
 3. If it hurts, write the failing test first, fix the loader, and run the tests (entry 19 has the rules).
 4. Run `ingest --all` and read the counts: only the chunks the fix should change may say `updated`. If the fix must remove something, rebuild (section 4.8).
 
@@ -2520,12 +2520,61 @@ The desk's refusals are just as plain. For `{}` (no symbol, no term) the path is
 
 Recorded as design choices entry 30. One side effect found while measuring the boundary, and not part of this guardrail: with the index at 1,770 chunks, the question about MKBHD fell from 8 of 8 to 5 of 8, because the model sometimes sets `newest_first` for a question that is not about recency and the newest same-day articles crowd the best match out (found 1 of 3 times with it, 7 of 7 without). It is recorded as an addendum to entry 27.
 
+### 9.9 A company name in the symbol field: "Procter&Gamble" becomes PG
+
+Added after the first run with a company name. The `symbol` parameter takes a ticker **or** a company name, in the script, the desk and the command line.
+
+```bash
+./test_prometheus.sh                                    # at the Symbol prompt type:  Procter&Gamble
+./test_prometheus.sh --symbol "Procter&Gamble" --yes     # the same, no questions
+python -m prometheus.tools.symbols "Procter & Gamble"    # only the lookup: PG: Procter & Gamble Co (matched as a name)
+python -m prometheus.tools.symbols meta                  # META (a typed ticker)
+python -m prometheus.tools.symbols alphabet              # refused: GOOGL or GOOG, type the ticker
+```
+
+**How it works.** In `build_desk`, the `account_manager` node looks at the symbol before it builds the order:
+
+| What was typed | What happens |
+|---|---|
+| `MSFT`, `$AAPL`, `BRK.B` (a ticker in capitals) | used as it is, **no lookup** |
+| `Procter&Gamble`, `microsoft`, `msft` (a name, or a ticker in lower case) | looked up with Finnhub's symbol search (`prometheus/tools/symbols.py`) |
+| a name that matches several companies, or none | **refused**, with up to five candidates; the Data Clerk is never built |
+| text with a `/`, `;`, `|`, `$(`, or more than 60 characters | refused before any lookup |
+
+The rules of the lookup, in order (only `Common Stock` rows, US symbols preferred to foreign ones): the typed text is a symbol of a row; else it equals one row's name (ignoring case, punctuation, `&` and `Co`, `Inc`, `Corp`, `The`); else it is the start of exactly one row's name; else refuse. The `&` is spaced first: Finnhub finds nothing for `Procter&Gamble` and finds `Procter & Gamble`. The answer rides on the work order (`order.company`), so the Data Clerk is told `subject: PG (Procter & Gamble Co)` and the report shows
+
+```text
+RESOLVED 'Procter&Gamble' -> PG (Procter & Gamble Co), looked up and matched as a name
+ORDER    ... | LIVE (fetching on) | window last 7 days | subject ['PG'] (Procter & Gamble Co)
+```
+
+A company name typed as the **term** is still a topic: it is searched in the stored news, nothing is fetched, and nothing is looked up.
+
+**The first real run** (Symbol `Procter&Gamble`, 7 days, fetch accepted, 94 s): 145 articles written to `news/PG.txt` (2026-10-18 to 2026-10-25); the Data Clerk fetched, searched with `newest_first`, and cited 9 of 10 sources; the answer was checked against the cited text and held (4% organic growth, a 5.6% jump, the 70th dividend increase, price targets of $187 and $189, and the cautions about oil costs and 1% core EPS growth). Advisor: **stance bullish, calculated score 67**.
+
+#### Two problems the run found, and how they were fixed (design choices entries 31 and 18)
+
+The first run's Advisor refused two of its three bullish signals, and both refusals were wrong. The score was 67; with all three it is 80.
+
+1. **`&amp;` in the text.** The Citigroup quote was rejected as "not in source 8": the source said `Procter &amp; Gamble` and the model wrote `&`. Entry 18 had left entities as written because they were in 1% of the articles; in `PG.txt` they were in **24 of 145 (16%)**, and the tripwire passed anyway because it averaged over all files (3%). **Fix:** `loaders.py::decode_entities` decodes fully formed entities in the headline, summary and insight lines (never the url or id), and never writes `<` or `>` in any spelling. Then re-index: `python -m prometheus.rag.ingest --all` updated 41 chunks and nothing else. The tripwire now runs **per file** on the loader's text.
+2. **"P&G".** The earnings-beat quote was rejected with "the quote does not name the company": "P&G" is neither the ticker nor a distinctive word of "Procter & Gamble Co". **Fix:** `advisor.py::short_names` derives the short name from the company's own name when it is two words around an `&` (`P&G`, `J&J`, `B&N`), in capitals and as a whole word, in code and never from the model; the check also gets the looked-up name from the work order.
+
+**The run repeated:** all three signals verified and counted, **calculated score 80** (model's own: 75), 120 s, and the second fetch wrote 0 new articles (a re-fetch does not duplicate).
+
+If you pull this change, **run `python -m prometheus.rag.ingest --all` once**, or the index still holds the old `&amp;` text. One thing the repeat showed and nobody fixed: the answer said "the Motley Fool gave the stock a neutral rating", from a Polygon insight line `PG | neutral | ...`. It is the Data Clerk's known stretch of a source (section 8.10), and it does not reach the score.
+
+**A second company: "Microsoft"** (`./test_prometheus.sh`, Symbol `Microsoft`, 7 days, 153 s). It resolved to MSFT (Microsoft Corp), the fetch added 5 articles to `news/MSFT.txt` (720 to 725), 10 sources were retrieved and 6 cited, and the calculated score was 80. Two weaknesses, not fixed (design choices entry 31):
+
+- The answer said the Oct 22 sell-off "hit Microsoft hard", citing a market-wide article that is tagged MSFT but whose line is about **NVDA** (`NVDA | negative | Stock fell 0.59%...`). Retrieval by ticker tag returns it; the Data Clerk misread whose line it was. The Advisor did not use it, because a signal's quote must name the company.
+- The 80 rests on one real bullish signal (an "I'd buy" opinion piece). The other two quotes are an ETF holding and "earnings loom", which are real and name the company but are not bullish. The check does not verify direction (section 8.10), so a fact can count as much as an opinion.
+
 ### Next: after Part 9
 
 The RAG build and the desk that runs it are complete: news is loaded, chunked, indexed, searched, served as tools, used by an agent that cites and defends itself, passed on a work order through a LangGraph, and read by an Advisor whose score is calculated. What comes next belongs to the rest of the desk:
 
 - the Critic, which should read the verified quotes and judge whether each bears on the question and whether its direction matches the source (sections 8.7, 8.10 and 9.6);
-- the company's name on the work order, and a second search per company, because the Data Clerk's single query is the clearest limit on the evidence (section 9.7);
+- a second search per company, because the Data Clerk's single query is the clearest limit on the evidence (section 9.7). The company's name is now on the work order (section 9.9), so the query can use it;
+- whether the model's own `company` field should be used by the Advisor at all, now that the work order carries the looked-up name (section 9.9);
 - **syndicated copies** (section 8.8): a story through two feeds counts once in the score but still takes two search slots; and the Data Clerk's answer can still stretch or invent a detail, because retrieval returns one chunk per article (sections 8.8 and 8.10);
 - the guardrails' open items (section 9.8): an output-side check for the direct path, adversarial and mixed requests, and what a free-text Account Manager does with a request that is part in scope and part not;
 - `newest_first` used on a question that is not about recency (entry 27's addendum): MKBHD went from 8 of 8 to 5 of 8;
@@ -2547,5 +2596,5 @@ The RAG build and the desk that runs it are complete: news is loaded, chunked, i
 | 5 | 20 (retrieval: filters, scores and the relevance bar, one hit per article, MMR, keywords, the search settings), 21 (the embedding model, confirmed) |
 | 7 | 24 (the Data Clerk agent: the budget, the correction, the guard against hidden instructions, and what the real model did) |
 | 8 | 25 (the Data Clerk's MCP server and the work order), 26 (the Advisor v0, the score calculated from checked quotes, and what the real model did without and with retrieval), 27 (recency and duplicate stories: where each fix belongs), 28 (a bare term is a request to search) |
-| 9 | 29 (the desk graph and the main script: the four parameters, the work order as the graph's state, and the consent rules for a paid fetch), 30 (the out-of-scope guardrails: the layers, where each refusal is enforced, and how the prompt layer was measured) |
+| 9 | 29 (the desk graph and the main script: the four parameters, the work order as the graph's state, and the consent rules for a paid fetch), 30 (the out-of-scope guardrails: the layers, where each refusal is enforced, and how the prompt layer was measured), 31 (a company name is looked up and never guessed: "Procter&Gamble" to PG, and the two Advisor refusals the first real run found) |
 | 10 and later | added as we make them |

@@ -4,12 +4,15 @@
 #
 #   ./test_prometheus.sh                    prompts for the four parameters below
 #   ./test_prometheus.sh --symbol MSFT --from-days-ago 14 --yes          no prompts for what is given
+#   ./test_prometheus.sh --symbol "Procter&Gamble" --yes                  a company name: looked up to its ticker (PG), then as above
 #   ./test_prometheus.sh --term "flying car"                              a term with no symbol: searches the stored news, fetches nothing
 #   ./test_prometheus.sh --legacy           the old demo: LocalLLM + enter_symbol elicitation (main.py)
 #
 # THE FOUR PARAMETERS
-#   symbol         a ticker, for example MSFT. A symbol makes the request LIVE: fresh news is fetched with the PAID Finnhub/Polygon APIs and
-#                  written to news/<SYMBOL>.txt (you are asked to confirm, or pass --yes; --no-fetch searches the stored news instead).
+#   symbol         a ticker, for example MSFT, or a company name, for example "Procter & Gamble". A ticker in capitals is used as it is; a name
+#                  (or a ticker in lower case) is LOOKED UP with Finnhub's symbol search, never guessed, and an ambiguous name is refused (type
+#                  the ticker). A symbol makes the request LIVE: fresh news is fetched with the PAID Finnhub/Polygon APIs and written to
+#                  news/<TICKER>.txt (you are asked to confirm, or pass --yes; --no-fetch searches the stored news instead).
 #   term           a topic, for example "flying car". With no symbol it is searched in the stored news. With a symbol it narrows the
 #                  question inside that symbol's news.
 #   source         only "news" is wired, so it is the default and the only value accepted.
@@ -85,13 +88,17 @@ ask() {
   printf -v "$1" '%s' "${__answer:-$3}"
 }
 
-valid_symbol() { [[ -z "$1" || "$1" =~ ^\$?[A-Za-z0-9][A-Za-z0-9.-]{0,9}$ ]]; }
+# A ticker or a company name: letters, digits, spaces and & . , ' - only (the desk looks a name up, and refuses what it cannot resolve).
+NAME_RE='^\$?[A-Za-z0-9][A-Za-z0-9 &.,’'"'"'-]{0,59}$'
+valid_symbol() { [[ -z "$1" || "$1" =~ $NAME_RE ]]; }
+# A ticker in capitals is used as it is. Anything else is looked up first, which the confirmation says.
+plain_ticker() { [[ "${1#\$}" =~ ^[A-Z0-9][A-Z0-9.-]{0,9}$ ]]; }
 
 echo "== Prometheus request (press Enter to accept a default) =="
 while true; do
-  [[ $HAVE_SYMBOL -eq 0 ]] && ask SYMBOL 'Symbol  (a ticker such as MSFT; blank for none): ' ''
+  [[ $HAVE_SYMBOL -eq 0 ]] && ask SYMBOL 'Symbol  (a ticker such as MSFT, or a company name such as Procter & Gamble; blank for none): ' ''
   if ! valid_symbol "$SYMBOL"; then
-    echo "  '$SYMBOL' is not a valid ticker symbol." >&2
+    echo "  '$SYMBOL' is not a valid ticker symbol or company name." >&2
     if [[ $HAVE_SYMBOL -eq 1 || $INPUT_ENDED -eq 1 ]]; then exit 2; fi
     continue
   fi
@@ -100,7 +107,9 @@ while true; do
   echo "  Give a symbol, a term, or both." >&2
   if [[ $HAVE_SYMBOL -eq 1 || $HAVE_TERM -eq 1 || $INPUT_ENDED -eq 1 ]]; then exit 2; fi   # nothing more can be asked: do not loop forever
 done
-SYMBOL="${SYMBOL#\$}"; SYMBOL="${SYMBOL^^}"
+SYMBOL="${SYMBOL#\$}"   # the case is kept: the desk uses a ticker in capitals as it is and looks up anything else
+if [[ -z "$SYMBOL" ]]; then WHAT=""; elif plain_ticker "$SYMBOL"; then WHAT="$SYMBOL"; else WHAT="'$SYMBOL' (its ticker is looked up first)"; fi
+FILE="news/${SYMBOL}.txt"; plain_ticker "$SYMBOL" || FILE="news/<its ticker>.txt"
 
 while true; do
   [[ $HAVE_SOURCE -eq 0 ]] && ask SOURCE 'Source  [news] (only news is wired): ' 'news'
@@ -123,16 +132,16 @@ done
 FETCH_NOTE="no fetch (the stored news is searched)"
 if [[ -n "$SYMBOL" && $NO_FETCH -eq 0 ]]; then
   if [[ $YES -eq 1 ]]; then
-    FETCH_NOTE="FETCH fresh news for $SYMBOL (paid APIs; writes news/$SYMBOL.txt)"
+    FETCH_NOTE="FETCH fresh news for $WHAT (paid APIs; writes $FILE)"
   else
-    ask CONFIRM "Fetch fresh news for $SYMBOL with the PAID Finnhub/Polygon APIs and write news/$SYMBOL.txt? [Y/n]: " 'Y'
+    ask CONFIRM "Fetch fresh news for $WHAT with the PAID Finnhub/Polygon APIs and write $FILE? [Y/n]: " 'Y'
     if [[ $INPUT_ENDED -eq 1 ]]; then
       echo "  (no answer: not fetching. Pass --yes to fetch without being asked.)" >&2
       NO_FETCH=1
     elif [[ "$CONFIRM" =~ ^[Nn] ]]; then
       NO_FETCH=1
     else
-      FETCH_NOTE="FETCH fresh news for $SYMBOL (paid APIs; writes news/$SYMBOL.txt)"
+      FETCH_NOTE="FETCH fresh news for $WHAT (paid APIs; writes $FILE)"
     fi
   fi
 fi

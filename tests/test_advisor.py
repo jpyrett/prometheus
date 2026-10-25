@@ -89,6 +89,90 @@ def test_a_quote_names_a_company_by_its_ticker_or_a_distinctive_word_of_its_name
     assert adv.names_company(quote, symbol, company) is expected
 
 
+@pytest.mark.parametrize("company, short", [
+    ("Procter & Gamble Co", ["P&G"]), ("PROCTER & GAMBLE CO/THE", ["P&G"]), ("Procter & Gamble", ["P&G"]), ("Johnson & Johnson", ["J&J"]),
+    ("Barnes & Noble Inc", ["B&N"]), ("Procter&Gamble", ["P&G"]),
+    ("Bath & Body Works", []), ("AT&T Inc", []), ("Standard & Poor's", []), ("Procter and Gamble", []), ("Micron Technology", []), ("& Gamble", []),
+    ("Procter &", []), ("", []), (None, []),
+])
+def test_a_short_name_is_derived_from_the_company_name_only_when_it_is_two_words_around_an_ampersand(company, short):
+    assert adv.short_names(company) == short
+
+
+@pytest.mark.parametrize("quote, company, known, expected", [
+    ("P&G delivered surprisingly strong Q1 results with 4% organic sales growth", "Procter & Gamble", None, True),     # the real quote the check refused
+    ("P&G delivered surprisingly strong Q1 results", None, "Procter & Gamble Co", True),                                 # the company's name from the work order
+    ("P&G delivered surprisingly strong Q1 results", "P&G", "Procter & Gamble Co", True),                                # the model wrote the short name itself: the order still gives it
+    ("P & G raised its dividend", "Procter & Gamble", None, True),                                                       # spaced
+    ("J&J raised its outlook", "Johnson & Johnson", None, True),
+    ("p&g delivered", "Procter & Gamble", None, False),                                                                  # in capitals only
+    ("R&G delivered", "Procter & Gamble", None, False),                                                                  # another pair
+    ("S&P&G delivered", "Procter & Gamble", None, False),                                                                # not inside a longer chain
+    ("XP&GX delivered", "Procter & Gamble", None, False),                                                                # nor inside a word
+    ("P&G delivered", "P&G", None, False),                                                                               # the model's own short name creates no short name: it has no "X & Y" in it
+    ("P&G delivered", None, None, False),                                                                                # no company, nothing to derive it from
+    ("J&J raised its outlook", "Procter & Gamble", "Procter & Gamble Co", False),                                       # a different company's short name
+    ("Unilever beat estimates", "Procter & Gamble", "Procter & Gamble Co", False),
+])
+def test_a_quote_may_name_the_company_by_the_short_name_its_own_name_gives(quote, company, known, expected):
+    assert adv.names_company(quote, "PG", company, known) is expected
+
+
+# real text from the Procter & Gamble run (news/PG.txt, 2026-10-23 and 24), after the loader decodes `&amp;`
+PG_FREEDOM = "Freedom Broker Upgrades Procter & Gamble to Buy from Hold\n\nFreedom Broker upgraded Procter & Gamble from Hold to Buy."
+PG_EARNINGS = ("Procter & Gamble's Earnings Show a Resilient Consumer Despite Price Hikes. Is the Dividend King Stock a Buy?\n\n"
+               "Procter & Gamble reported strong Q1 fiscal results with 4% organic sales growth and beat earnings estimates, causing the stock to jump 5.6%.\n\n"
+               "PG | positive | P&G delivered surprisingly strong Q1 results with 4% organic sales growth, beat revenue and EPS estimates, and demonstrated "
+               "resilience despite inflationary pressures. The stock had its best day in over six years with a 5.6% jump.")
+PG_CITI = ("Citigroup Maintains Buy on Procter & Gamble, Raises Price Target to $187\n\n"
+           "Citigroup  analyst Filippo Falorni   maintains Procter & Gamble (NYSE:PG) with a Buy and raises the price target from $180 to $187.")
+PG_SIGNALS = [sig(1, "bullish", "Freedom Broker Upgrades Procter & Gamble to Buy from Hold"),
+              sig(2, "bullish", "P&G delivered surprisingly strong Q1 results with 4% organic sales growth, beat revenue and EPS estimates, and demonstrated resilience despite inflationary pressures."),
+              sig(3, "bullish", "Citigroup analyst Filippo Falorni maintains Procter & Gamble (NYSE:PG) with a Buy and raises the price target from $180 to $187.")]
+
+
+def pg_order(company="Procter & Gamble Co"):
+    sources = [source(1, PG_FREEDOM, ("PG",), "Freedom Broker Upgrades Procter & Gamble to Buy from Hold"),
+               source(2, PG_EARNINGS, ("PG",), "Procter & Gamble's Earnings Show a Resilient Consumer Despite Price Hikes. Is the Dividend King Stock a Buy?"),
+               source(3, PG_CITI, ("PG",), "Citigroup Maintains Buy on Procter & Gamble, Raises Price Target to $187")]
+    order = wo.new_work_order("What is the latest news on PG?", subject=["PG"], company=company, since_days=7, top_k=5)
+    return wo.attach_result(order, Result(question="q", answer="Yes [1].", references=[{"number": 1, "chunk_id": sources[0]["chunk_id"]}], sources=sources,
+                                          no_supporting_text=False, tool_calls=[{"name": "retrieve_news", "args": {}, "outcome": "ok"}]))
+
+
+def test_the_three_real_procter_and_gamble_signals_all_count_and_the_score_is_80_and_not_67():
+    """What the first real run got wrong: the earnings beat said "P&G" and the Citigroup quote said `&amp;`, so two of three signals were refused
+    (score 67). With the entity decoded by the loader and the short name derived, all three are verified, and each is a different story."""
+    order = pg_order()
+    adv.Advisor(Scripted(reply(rec("PG", "Procter & Gamble", "bullish", 70, PG_SIGNALS)))).advise(order)
+    (r,) = order.recommendations
+    assert [(s["verified"], s["counted"], s["reason"]) for s in r["signals"]] == [(True, True, None)] * 3
+    assert (r["bullish_signals"], r["score"]) == (3, 80)
+
+
+def test_with_the_entity_left_in_the_source_the_citigroup_quote_still_fails_which_is_why_the_loader_decodes_it():
+    order = pg_order()
+    order.data.sources[2]["text"] = PG_CITI.replace("Procter & Gamble (NYSE", "Procter &amp; Gamble (NYSE")  # the text as the file has it
+    adv.Advisor(Scripted(reply(rec("PG", "Procter & Gamble", "bullish", 70, PG_SIGNALS)))).advise(order)
+    assert [s["reason"] for s in order.recommendations[0]["signals"]] == [None, None, "the quote is not in source 3"]
+
+
+def test_the_work_orders_company_name_gives_the_short_name_even_when_the_model_writes_only_the_ticker_as_the_company():
+    order = pg_order("Procter & Gamble Co")
+    adv.Advisor(Scripted(reply(rec("PG", "PG", "bullish", 70, [PG_SIGNALS[1]])))).advise(order)
+    assert order.recommendations[0]["signals"][0]["verified"] is True
+    other = pg_order(company=None)  # no name on the order and none from the model that makes "P&G"
+    adv.Advisor(Scripted(reply(rec("PG", "PG", "bullish", 70, [PG_SIGNALS[1]])))).advise(other)
+    assert other.recommendations[0]["signals"][0]["reason"] == "the quote does not name the company"
+
+
+def test_the_work_orders_company_is_used_only_for_its_own_symbol():
+    order = pg_order("Procter & Gamble Co")
+    order.data.sources[1]["tickers"] = ["PG", "KO"]
+    adv.Advisor(Scripted(reply(rec("KO", "Coca-Cola", "bullish", 70, [sig(2, "bullish", "P&G delivered surprisingly strong Q1 results with 4% organic sales growth")])))).advise(order)
+    assert order.recommendations[0]["signals"][0]["reason"] == "the quote does not name the company"  # P&G's short name does not make a quote about Coca-Cola
+
+
 @pytest.mark.parametrize("bullish, bearish, score", [(0, 0, None), (1, 0, 67), (2, 0, 75), (3, 0, 80), (0, 1, 33), (0, 2, 25), (1, 1, 50), (2, 1, 60)])
 def test_the_score_is_calculated_from_the_verified_signals(bullish, bearish, score):
     assert adv.calculate_score(bullish, bearish) == score

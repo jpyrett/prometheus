@@ -428,7 +428,7 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 **Decision.** `prometheus/rag/loaders.py` reads a DataAgent news file with one plain function, `load_news(path) -> list[Document]`, and `prometheus/rag/config.py` says where the files are. All five proposals in the guide (section 3.3) held up.
 
 - **One article is one Document,** with the article id as the Document id.
-- **`page_content`** is the headline, the summary and the insight lines, separated by blank lines, exactly as the file has them, so the text can always be rebuilt from the file.
+- **`page_content`** is the headline, the summary and the insight lines, separated by blank lines, as the file has them with HTML entities decoded (entry 18's addendum), so the text can always be rebuilt from the file by the same loader.
 - **Metadata:** `article_id`, `headline`, `tickers` (a list), `published_utc`, `published_ts` (epoch seconds, a number, because Chroma range filters take numbers only), `publisher`, `api`, `url`. These are the filter and citation fields (entry 15). Left out: `keywords` (140 of 288 articles have them; Part 5 tested adding them to the text and left them out, entry 20), `author`, `image_url`, `category`, `type` and `company`.
 - **The file's own symbol is not stored.** It is always in `tickers` (288 of 288). If a record has no tickers it falls back to the file's symbol, and with neither it is an error.
 - **Errors stop the load.** A record the DataAgent would not have written (no `<<<END>>>`, a new record inside an unfinished one, an unknown `<<<` marker, a header line without a colon, a missing `id`, `headline`, `published_utc` or `url`, a bad date, text outside a record) raises `ValueError` with the file and line. The DataAgent's own `_read_records` silently drops a record that an interrupted fetch cut short. The loader stops instead, so a missing article is noticed. Breaking the input on purpose (entry 19) found two more cases, now handled: a byte order mark at the start of a file used to stop the load, and a byte that is not UTF-8 gave an error without the file and line. Line 1 is now decoded with `utf-8-sig`, and each line is decoded on its own so that the error can name it.
@@ -469,7 +469,7 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 - **Search settings (changed in Part 5).** The collection was first created with Chroma's default search settings. Entry 20 explains why `store.py` now sets `HNSW` (a thorough approximate search), and the real index was rebuilt with the new settings on 2026-10-25.
 - **Tested without a model.** `ingest_documents(docs, store)` takes the store as an argument, so tests use a fake embedder. Three tests use the real model and skip themselves when it is not available.
 - **One private attribute.** Counting tokens needs LangChain's inner model (`HuggingFaceEmbeddings._client`, a `SentenceTransformer`). Only `store.count_too_long` touches it, and a test fails if an upgrade removes it.
-- **Left as they are on purpose:** raw HTML (entry 18), and `keywords` (tested in Part 5 and left out, entry 20).
+- **Left as they are on purpose:** HTML tags (entry 18; entities have been decoded since Part 9), and `keywords` (tested in Part 5 and left out, entry 20).
 
 **Result on the real files.** AAPL 74 articles to 110 chunks, META 20 to 22, NVDA 181 to 405, TSLA 13 to 20. In total 538 chunks of 281 articles; chunks per article: 1 x 150, 2 x 44, 3 x 58, 4 x 21, 5 x 6, 6 x 2; text length median 530 and longest 963 characters; 0 of 538 over the limit.
 
@@ -497,11 +497,11 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 
 **Options considered.**
 1. Leave the text as the DataAgent wrote it. **Chosen.**
-2. Decode entities in the loader (`html.unescape`). Rejected for now.
+2. Decode entities in the loader (`html.unescape`). Rejected for now. **Adopted in Part 9, when the data changed: see the addendum below.**
 3. Strip tags in the loader. Rejected for now.
 4. Clean it at the source, in the DataAgent. Rejected: it is a vendored copy, and a fix there would not cover other writers.
 
-**Decision.** Leave HTML as written, and watch for change with a tripwire.
+**Decision.** Leave HTML as written, and watch for change with a tripwire. *(For entities this was superseded in Part 9: see the addendum below. Tags are still left as written.)*
 - *It is rare and cheap.* 1% of the articles, with a measured effect inside the noise.
 - *The text stays what the DataAgent wrote,* so the index can always be rebuilt from the file and compared with it (entry 16).
 - *Decoding is not always safe.* It turns the escaped text `&lt;script&gt;` into a real tag. How text is shown is the job of whoever shows it: an LLM reads `&#39;` fine, and a web page must escape the text it displays, whatever the loader does.
@@ -514,6 +514,16 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 4. Change the "exactly as the file has them" rule in entry 16, then run `ingest --all`. The reconcile step rewrites the chunks that changed and nothing else.
 
 **Consequences.** *Pro:* nothing to maintain until the data changes, and we are told when it does. *Con:* about 1% of the chunks carry a raw `&#39;`, and any page that displays the text must escape it.
+
+**Addendum (Part 9): the assumption failed, and the fix decided above was applied.** The first real run with a company whose name has an ampersand (Procter & Gamble, entry 31) put `&amp;` in **24 of 145 (16%)** of the articles of one file (23 of them `&amp;`), against 1 to 2% in every other file. It broke an exact quote check: the model quoted `Procter & Gamble`, the source said `Procter &amp; Gamble`, and a genuine upgrade was refused. The tripwire above did not fire: it counted over all the files (3% of 1,276 articles), so one company's concentration was invisible. What was done, following "the fix, decided now" above:
+- Item 1 only: `loaders.py::decode_entities` runs over the headline, the summary and the insight lines, and over the `headline` in the metadata (never the url or the id). Fully formed entities only (`&amp;`, `&#39;`, `&quot;`, `&nbsp;` as a space, `&eacute;`, `&#x1F680;`), one match at a time and one pass (`&amp;lt;` becomes the characters `&lt;`). A bare `&copy`, `AT&T`, `R&D;`, an unknown name (`&D;`) and an entity that decodes to a control character (`&#13;`, `&#0;`) stay as written.
+- **`<` and `>` are never written, in any spelling** (`&lt;`, `&LT;`, `&#60;`, `&#x3c;`), which closes the unsafe case named under "Decoding is not always safe" above. A first version protected only the named forms, and `&#60;b&#62;` became the tag `<b>`; that was found while reviewing the tests and is now a test. Item 2 (stripping tags) was **not** applied: none of the 1,276 real articles has a tag, and the tag tripwire stays.
+- The tripwire now runs **per file, on the text the loader returns**: no article has a tag; no entity is left that the loader would decode (it would mean the decode did not run); and no more than 10% of a file's articles hold an escaped `<` or `>` (escaped markup).
+- `python -m prometheus.rag.ingest --all` updated **41 chunks** (24 in PG, 17 in AAPL, MSFT, NVDA and SNDK) and added or deleted none: 1,934 chunks before and after, chunks holding `&amp;` from 27 to 0 and `&#39;` from 17 to 0. The reconcile step did what item 4 said it would.
+- Entry 16's rule is now "the text as the loader makes it": the index can still be rebuilt from the files, by the same loader, and compared with it.
+- Tested with a real record that has each case (the Citigroup headline and summary with `&amp;`, an insight line with `&#39;`, a url with `&amp;` that stays as it is), and with three mutations: with the decode off, or with `<` and `>` allowed back, 10 and 9 tests fail.
+
+**Consequences, updated.** *Pro:* the quote check, the retriever and the model now read `Procter & Gamble`; the text is the same wherever it is shown. *Con:* a `&nbsp;` is a space, and a source that really meant `&amp;lt;` is shown as `&lt;`. A page that displays the text must still escape it.
 
 ## 19. Breaking the input on purpose: what we tested, what it found, and how problems get fixed
 
@@ -531,7 +541,7 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 
 | What we broke | What happened | Verdict |
 |---|---|---|
-| HTML entities | loads; score -0.015 | left as written (entry 18) |
+| HTML entities | loads; score -0.015 | left as written when this was measured; decoded since Part 9 (entry 18's addendum) |
 | HTML tags (`p`, `b`, `a`, `br`) | loads; score +0.022 | left as written (entry 18) |
 | `<script>` and `<style>` blocks | loads; score -0.025 | left as written; an HTML page must escape the text |
 | markup around every word | loads; score -0.247 | harmful, so the tripwire watches for it (entry 18) |
@@ -1163,3 +1173,58 @@ What the model actually says (one run each): "I'm set up to provide news and com
 - The Account Manager, when it becomes a model that builds the order from free text, takes over layer 1's classification (this is a news search, this is not). Layers 2 to 6 stay as they are.
 - Next decisions: an output-side check for the direct path, the adversarial and mixed requests above, and what the free-text Account Manager does with a request that is part in scope and part not.
 
+## 31. A company name is looked up, never guessed: "Procter&Gamble" to PG, and what the first real run found (Part 9)
+
+**Problem.** The request was an end-to-end test with the company name "Procter&Gamble", which should become the ticker PG, with a week of news. The desk could not do it. The `symbol` parameter had to be ticker-shaped, so `./test_prometheus.sh` answered "'Procter&Gamble' is not a valid ticker symbol". Typed as the *term* it was searched in the stored news only (a term is not live), and the model, unasked, wrote `tickers=['PG']` and tried `fetch_news(PG)` itself; the fetch was refused, because fetching needs a live order, and the answer was "no stored articles". So the model could name the ticker, and nothing in the system checked that it was right or let it fetch.
+
+**What the data source does with the name.** Finnhub's symbol search for `Procter&Gamble` (no spaces) returns **nothing** (count 0); for `Procter & Gamble` it returns PG, and also `PGHH.NS` (Procter & Gamble Hygiene and Health Care Ltd, India), `PGHL.NS` (Procter & Gamble Health Ltd, India) and `GJR` (a securities trust). The search for `PG` returns eleven rows, among them two Canadian receipts, PG&E (`PCG`) and a Thai garment company (`PG.BK`); for `meta`, twelve, among them a Swedish company and a metals ETP. A lookup that takes the first row would be right for P&G and wrong in a way nobody sees for others.
+
+| Option | Verdict |
+|---|---|
+| Let the model write the ticker (what it did on its own) | it was right here; but a model that is wrong once fetches another company's news with a paid API and writes `news/<wrong>.txt`, and nothing shows it |
+| A dictionary of names kept in the code | covers the names someone remembered to add, and goes stale |
+| `discover_tickers` on the stored market news | finds only companies that are already in the news we stored, which is the case we cannot assume for a new name |
+| Require a ticker, tell the user to look it up | the problem as it stood |
+| **A lookup in Finnhub's symbol search, with rules that refuse to guess** | **chosen** |
+
+**Decision.** `prometheus/tools/symbols.py`. A ticker written in capitals (`MSFT`, `BRK.B`, `$AAPL`) is used as it is, with no lookup. Anything else (a name, or a ticker in lower case) is looked up with the key already in `.env`. Only `Common Stock` rows count, and a symbol without a dot (a US listing) is preferred to one with a dot at every step. Then, in this order:
+1. what was typed **is** a symbol of a row (`meta` is META, `pg` is PG): that row;
+2. otherwise the typed name equals the name of exactly one row, ignoring case, punctuation, `&` and suffixes (Co, Inc, Corp, Ltd, plc, The): that row. `Procter & Gamble` is PG, and not the Indian subsidiaries or the trust, whose names are longer;
+3. otherwise the typed name is the start of exactly one row's name: that row (`Berkshire Hathaway` is BRK.B);
+4. otherwise it is **refused**, with up to five candidates listed and the request to type the ticker (`alphabet` is GOOGL or GOOG; `xyzzy corp` is nothing).
+
+The `&` is spaced before the search, since the unspaced form returns nothing. The text is checked first (letters, digits, spaces and `& . , ' -`, 60 characters at most), so a path, a url or a command never becomes a query. The Account Manager does the lookup, before the order is built, and carries the answer on the work order as `company`; the report shows it (`RESOLVED 'Procter&Gamble' -> PG (Procter & Gamble Co), looked up and matched as a name`), the Data Clerk is told `subject: PG (Procter & Gamble Co)`, and the saved order is `desk_PG.json`. The company's name on the work order was an open item since entry 29. A company name typed as the *term* is still a topic and is not looked up: "flying car" is a term, and a rule that tried to tell names from topics would be a guess of the kind this entry refuses.
+
+**The first real run** (`./test_prometheus.sh`, Symbol `Procter&Gamble`, seven days, fetch accepted; 94 s: Data Clerk 32 s, Advisor 57 s). The lookup gave PG; the fetch wrote 145 articles (2026-10-18 to 2026-10-25) to `news/PG.txt`; the Data Clerk called `fetch_news`, then `retrieve_news(query='Procter & Gamble news', tickers=['PG'], newest_first=True)` and cited 9 of 10 sources. The answer was right where it was checked against the cited text: a first quarter with 4% organic growth and a beat, a 5.6% jump ("best day in over six years"), the 70th dividend increase, upgrades and price targets at $187 and $189, and the cautions (1% core EPS growth, oil and commodity costs, "waiting for a better entry point"). It called the outlook "mixed-to-slightly bullish".
+
+**What the run found: the Advisor refused two of its three bullish signals, and both refusals were wrong.** The score was 67, and 80 if all three had counted.
+- *"The quote is not in source 8"*, for the Citigroup upgrade. The source says `Procter &amp; Gamble`; the model quoted it with `&`, which is how it reads. Decoding the entity makes the quote verify (checked on the saved order). This is entry 18's assumption failing: it left entities as written because they were in 1% of the articles. In `PG.txt` they are in **24 of 145 (16%)**, 23 of them `&amp;`, against 1 to 2% in every other file. Entry 18 set a tripwire at 10% and decided the fix in advance. The tripwire test **passes**, because it counts over all the files (3%), so the concentration in one company's file is invisible to it.
+- *"The quote does not name the company"*, for the earnings beat. The quote is verbatim, from the source's own summary, and says "**P&G**". The rule accepts the ticker as a word or a distinctive word of the name (`Procter`, `Gamble`), and "P&G" is neither. It is the most common way anyone writes this company's name.
+
+**Then both were fixed, on request, and the run repeated.**
+1. *Entities are decoded in the loader.* Entry 18's fix, applied and described in its addendum: `decode_entities` over the headline, the summary and the insight lines, `<` and `>` never written, `ingest --all` (41 chunks updated, none added or deleted), and a tripwire that now runs per file on the loader's text.
+2. *A short name from the company's own name.* `advisor.py::short_names`: when the name is exactly two words of at least 3 letters around an `&` (after Co, Inc, Corp, Ltd, plc, The), the initials joined by `&` count as naming the company. `Procter & Gamble Co` gives `P&G`, `Johnson & Johnson` gives `J&J`, `Barnes & Noble Inc` gives `B&N`. It is derived in code, only in capitals and as a whole word (`p&g`, `R&G`, `XP&GX` and `S&P&G` do not match), and never comes from the model: a model that writes "P&G" as the company name creates no short name, because there is no `X & Y` in it. It gives nothing for `Bath & Body Works`, `AT&T Inc` or `Standard & Poor's`. The check now also receives the looked-up name from the work order (`order.company`), for the order's own symbol only, which is a better source than the `company` field the model fills in. An alias list was rejected: it needs a source other than the model, and someone to keep it.
+
+**The run repeated** (same flow; 120 s: Data Clerk 77 s, Advisor 38 s). The second fetch wrote **0** articles, so a re-fetch does not duplicate. All three bullish signals are verified and counted, each a different story: **calculated score 80** (it was 67), and the model's own score 75. With each fix removed the new tests fail, so they test the fix and not the fixture.
+
+**Not fixed, found by the repeat.** The answer says "the Motley Fool gave the stock a neutral rating". The source has the line `PG | neutral | ...`, which is a Polygon insight label and not a rating from the Motley Fool. It is the Data Clerk's known stretch of a source (guide 8.10), and it does not reach the score, which counts only verified quotes.
+
+**Tested.** `tests/test_symbols.py` uses the real Finnhub rows above as data: the spacing and case of the name, the subsidiaries and the trust not chosen, `pg` and `meta` taken as symbols, a US symbol preferred to a foreign one, ambiguous names refused with their candidates (and never resolved by picking one), the foreign receipts and funds ignored, at most five candidates, odd rows skipped, text that cannot be a name refused before any lookup, and the lookup's failures (no key, 401, 429, 500, a network error, an answer that is not JSON) reported without the key or the url in the message. `tests/test_desk_graph.py` runs the node with a fake lookup: a name becomes PG with `company` on the order, a ticker in capitals is never looked up, lower case is, an unresolved name stops at the Account Manager and builds nothing, a name as a term is not looked up, and the Data Clerk is told the company. The Advisor's short name and the decode are tested in `tests/test_advisor.py` (13 cases of the check, 15 of the derivation, and the three real P&G quotes through `advise()`: score 80, and 75 if the entity is put back, because the Citigroup signal is refused again) and `tests/test_rag_loaders.py`. Two real bugs were found by the tests and fixed: the lookup was a default argument (bound when the function was defined, so replacing it still reached the network), and a test fixture that treated "Acme" as ambiguous when the rule says a word that is a symbol is that symbol. No test reaches the network.
+
+**A second company: "Microsoft"** (same flow, 7 days; 153 s: Data Clerk 48 s, Advisor 100 s). The name resolved to MSFT (Microsoft Corp); the fetch wrote 5 new articles to the existing `news/MSFT.txt` (720 to 725), and `retrieve_news(query='Microsoft stock news', tickers=['MSFT'], since_days=7, k=10, newest_first=True)` returned 10 sources and 6 were cited. Calculated score 80 from three verified bullish signals. The run showed two weaknesses, neither fixed:
+- *The answer blamed Microsoft for NVIDIA's move.* It said the Oct 22 tech sell-off "hit Microsoft hard" and cited a source that never mentions Microsoft: the text is `NVDA | negative | Stock fell 0.59% on October 22...`. The article is a market-wide piece tagged with many tickers, so it passes the `MSFT` filter (the broad-tags limit of entry 20) and the Data Clerk read its NVDA line as MSFT's. The Advisor did not repeat it, because its quote must name the company.
+- *The score of 80 rests on one real bullish signal.* `[5]` is an opinion piece saying it would buy at the current price; `[3]` is a fact (Microsoft is 11% of an ETF) and `[2]` says earnings "loom". All three are real quotes that name the company, so all three count: the check does not look at direction (guide 8.10). A signal that is a fact or a date can raise the score as much as an opinion can.
+
+**Limits, stated plainly.**
+- **The lookup is one more call to a rate-limited service, and a name needs it.** Without `FINNHUB_API_KEY`, or with the service down, a name is refused with a message that says to type the ticker in capitals, which needs no lookup.
+- **A word that is also a ticker is taken as the ticker.** "Target" is not TGT here, and `all` is Allstate's symbol; the rule is stated, so it is predictable, and it is the price of "meta" being META.
+- **Only common stock, and the first company wins only when it is unique.** Class A and class C shares of one company (`alphabet`) are refused as ambiguous, which is honest and a little annoying.
+- **A ticker typed in capitals that does not exist** still passes (entry 30's limit), because skipping the lookup for tickers is the point.
+- **A short name is derived only for `X & Y` names.** `3M`, `AT&T` (whose ticker is `T`) and names such as `J.M. Smucker` still need the ticker or a distinctive word in the quote, so a quote that says only `3M` is refused.
+- **The numeric `&#60;` stays as text**, so a source that really meant `<` in that spelling keeps the entity. It has not occurred in the real news.
+
+**Consequences.**
+- The symbol parameter takes "a ticker or a company name" in the script, the desk and the command line; the term stays a topic.
+- The Data Clerk has the company's name for its query, which is the first half of the "company's name on the work order, and a second search per company" item; the second search is still open.
+- The loader decodes entities and the tripwire counts per file; the Advisor accepts the short name a company's own name gives. Both came from one real company, which is the argument for running the desk on more of them.
+- Next decisions: a second search per company; the Data Clerk's stretch of a source (the "neutral rating"); and whether the model's own `company` field should be used at all now that the work order carries the looked-up one.

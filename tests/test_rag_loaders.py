@@ -13,7 +13,7 @@ import pytest
 from langchain_core.documents import Document
 
 from prometheus.rag import config
-from prometheus.rag.loaders import check_symbol, load_news, main, news_file
+from prometheus.rag.loaders import ESCAPED_MARKUP, check_symbol, decode_entities, load_news, main, news_file
 
 FIXTURE = Path(__file__).parent / "fixtures" / "news_sample.txt"
 
@@ -181,7 +181,6 @@ def test_a_byte_that_is_not_utf8_names_the_file_and_line(tmp_path):
 
 
 @pytest.mark.parametrize("body", [
-    "Apple&#39;s &amp; &quot;iPhone&quot;&nbsp;launch",                       # HTML entities (entry 18: left as written)
     '<p>Apple <b>foldable</b> <a href="https://x.com/a?b=1">link</a><br/></p>',  # HTML tags
     "<script>alert('x')</script><style>body{display:none}</style>",           # script and style
     "non\u00a0breaking and zero\u200bwidth characters",
@@ -192,6 +191,62 @@ def test_a_byte_that_is_not_utf8_names_the_file_and_line(tmp_path):
 def test_odd_text_is_kept_exactly_as_written(tmp_path, body):
     (doc,) = load_text(tmp_path, GOOD.replace("A summary.", body))
     assert doc.page_content == f"A headline\n\n{body}"
+
+
+# ---------------------------------------------------------------- HTML entities are decoded (design choices entry 18)
+
+@pytest.mark.parametrize("raw, decoded", [
+    ("Procter &amp; Gamble", "Procter & Gamble"),                          # the case that broke a real quote check: 23 of the 145 PG articles
+    ("Nvidia&#39;s", "Nvidia's"),                                          # the three the real corpus had before PG
+    ("&quot;iPhone&quot;", '"iPhone"'),
+    ("caf&eacute; &hellip; &#x1F680; &#128640;", "caf\u00e9 \u2026 \U0001F680 \U0001F680"),
+    ("a&nbsp;b", "a b"),                                                   # a non-breaking space becomes a space
+    ("P&amp;G P&G &AMP;", "P&G P&G &"),
+    ("Procter &amp; Gamble&#39;s &amp;amp;", "Procter & Gamble's &amp;"),    # one pass: what a decode produces is not decoded again
+])
+def test_a_fully_formed_entity_is_decoded(raw, decoded):
+    assert decode_entities(raw) == decoded
+
+
+@pytest.mark.parametrize("text", [
+    "AT&T and R&D; and Q&A; and S&P 500", "a bare &copy or &amp with no semicolon", "&foo; &D; & ; &;", "5 < 6 and 7 > 3 and P/E < 20",
+    "&lt;script&gt;alert(1)&lt;/script&gt;", "&LT;b&GT;",                  # escaped markup stays escaped: decoding must not write a tag
+    "&#0; &#7; &#10; &#13; &#x7f; &#xD800; &#99999999;",                  # entities that decode to a control character, a surrogate or nothing
+    "",
+])
+def test_anything_else_is_left_exactly_as_written(text):
+    assert decode_entities(text) == text
+
+
+@pytest.mark.parametrize("spelling", ["&lt;", "&LT;", "&#60;", "&#060;", "&#x3c;", "&#x3C;", "&#x003c;", "&gt;", "&GT;", "&#62;", "&#x3e;", "&#x3E;"])
+def test_decoding_never_writes_a_less_than_or_a_greater_than_in_any_spelling(spelling):
+    """Found by reading my own test: the first version protected the named forms only, so `&#60;b&#62;` became the tag `<b>`."""
+    text = f"{spelling}script{spelling}alert(1){spelling}/script{spelling}"
+    assert decode_entities(text) == text and ESCAPED_MARKUP.search(text)
+
+
+def test_decoded_text_never_matches_the_tag_pattern_whatever_the_input():
+    for text in ("&lt;script&gt;alert(1)&lt;/script&gt;", "&amp;lt;b&amp;gt;", "&#60;b&#62; &#x3c;i&#x3e;", "&amp;#60;b&amp;#62;"):
+        assert not re.search(r"</?[a-zA-Z][^<>]{0,200}>", decode_entities(text))
+
+
+def test_a_real_record_is_decoded_in_the_headline_the_summary_and_the_insight_lines_and_in_the_metadata_but_not_in_the_url(tmp_path):
+    record = GOOD.replace("headline: A headline", "headline: Citigroup Maintains Buy on Procter &amp; Gamble, Raises Price Target to $187").replace(
+        "url: https://example.com/a", "url: https://example.com/a?x=1&amp;y=2").replace(
+        "A summary.", "Citigroup  analyst Filippo Falorni   maintains Procter &amp; Gamble (NYSE:PG) with a Buy.").replace(
+        "<<<INSIGHTS>>>\n", "<<<INSIGHTS>>>\nPG | positive | P&G&#39;s quarter &amp; its outlook\n")
+    (doc,) = load_text(tmp_path, record)
+    assert doc.page_content == ("Citigroup Maintains Buy on Procter & Gamble, Raises Price Target to $187\n\n"
+                                "Citigroup  analyst Filippo Falorni   maintains Procter & Gamble (NYSE:PG) with a Buy.\n\n"
+                                "PG | positive | P&G's quarter & its outlook")
+    assert doc.metadata["headline"] == "Citigroup Maintains Buy on Procter & Gamble, Raises Price Target to $187"
+    assert doc.metadata["url"] == "https://example.com/a?x=1&amp;y=2" and doc.id == "x:1" and doc.metadata["publisher"] == "Yahoo"  # identity fields are untouched
+
+
+def test_the_decoded_text_is_what_makes_the_models_quote_match_the_source(tmp_path):
+    """The failure that was found: the model quotes `Procter & Gamble`, the source said `Procter &amp; Gamble`, and an exact match failed."""
+    (doc,) = load_text(tmp_path, GOOD.replace("A summary.", "maintains Procter &amp; Gamble (NYSE:PG) with a Buy"))
+    assert "maintains Procter & Gamble (NYSE:PG) with a Buy" in doc.page_content
 
 
 # ---------------------------------------------------------------- symbols become file names
@@ -349,15 +404,30 @@ HTML_TAG = re.compile(r"</?[a-zA-Z][^<>]{0,200}>")
 
 
 def test_the_tripwire_for_html_in_the_real_text():
-    """Design choices entry 18 leaves HTML as written because it is rare: 3 of 288 articles have an entity
-    and none has a tag. This test notices if the sources change. If it fails, apply the fix described in
-    entry 18 (decode entities and strip tags in loaders.py), then re-run `ingest --all`."""
+    """Design choices entry 18. Entities are decoded by the loader, so what is watched is the text AFTER it, file by file (a company with an
+    ampersand in its name put 16% of its articles in one file, and the average over all files said 3%).
+      1. no article has an HTML tag;
+      2. no entity is left that the loader would decode: it would mean the decode did not run;
+      3. no more than 10% of the articles in a file still hold an escaped `<` or `>` (the two the loader never writes), which would be escaped markup."""
     files = sorted(config.news_dir().glob("*.txt"))
     if not files:
         pytest.skip(f"no news files in {config.news_dir()}")
-    docs = [doc for file in files for doc in load_news(file)]
-    with_tags = [d.id for d in docs if HTML_TAG.search(d.page_content)]
-    with_entities = [d.id for d in docs if HTML_ENTITY.search(d.page_content)]
-    assert not with_tags, f"{len(with_tags)} articles contain HTML tags (first: {with_tags[0]}): see design choices entry 18"
-    assert len(with_entities) <= 0.10 * len(docs), (
-        f"{len(with_entities)} of {len(docs)} articles contain HTML entities (more than 10%): see design choices entry 18")
+    for file in files:
+        docs = load_news(file)
+        with_tags = [d.id for d in docs if HTML_TAG.search(d.page_content)]
+        undecoded = [d.id for d in docs if any(decode_entities(m.group(0)) != m.group(0) for m in HTML_ENTITY.finditer(d.page_content))]
+        escaped_markup = [d.id for d in docs if ESCAPED_MARKUP.search(d.page_content)]
+        assert not with_tags, f"{file.name}: {len(with_tags)} articles contain HTML tags (first: {with_tags[0]}): see design choices entry 18"
+        assert not undecoded, f"{file.name}: {len(undecoded)} articles still hold an entity the loader should decode (first: {undecoded[0]}): entry 18"
+        assert len(escaped_markup) <= 0.10 * max(len(docs), 1), (
+            f"{file.name}: {len(escaped_markup)} of {len(docs)} articles hold escaped markup (&lt; or &gt;, in any spelling): see design choices entry 18")
+
+
+def test_the_real_pg_file_no_longer_has_an_ampersand_entity_in_the_text_the_index_gets():
+    """The regression that started this: `Procter &amp; Gamble` in 23 articles of news/PG.txt. Skipped when the file is not there."""
+    path = config.news_dir() / "PG.txt"
+    if not path.exists():
+        pytest.skip("no news/PG.txt")
+    docs = load_news(path)
+    assert docs and not any("&amp;" in d.page_content for d in docs)
+    assert any("Procter & Gamble" in d.page_content for d in docs)
