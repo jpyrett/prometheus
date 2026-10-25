@@ -169,6 +169,9 @@ data/processed/**
 *.pkl
 *.parquet
 
+# DataAgent downloads: vendor flat files (about 26 GB, re-downloadable with fetch_historical_data)
+data/historical/
+
 # Spyder project settings
 .spyderproject
 .spyproject
