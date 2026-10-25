@@ -839,7 +839,7 @@ A good file prints its path and one summary line (your four print 74, 20, 181 an
 | `the record has neither tickers nor a symbol` | no `tickers:` and no `symbol:` line | add `symbol: AAPL` |
 | `not valid UTF-8 (invalid start byte, at byte N of the line)` | a byte that is not UTF-8, for example text saved in another encoding | retype or delete the character on that line |
 
-**3. Fix the file.** Take a copy first: `news/` is not in git, so there is no other copy. Here is a real case on a scratch copy of the fixture. Record 2 was cut off inside its summary, and record 3 was added after it (long lines shortened):
+**3. Fix the file.** Take a copy first. The files in `news/` are committed, but a fetch since your last commit is not (`git status news/` shows what is uncommitted), so a copy is the one sure way back. Here is a real case on a scratch copy of the fixture. Record 2 was cut off inside its summary, and record 3 was added after it (long lines shortened):
 
 ```text
   35| headline: CoreWeave Is Projected to Have a 6.3x Gross Leverage Ratio by Year End. The Market Is ...
@@ -961,6 +961,19 @@ ERROR: .../news/META.txt:1: the record has no <<<END>>>
 ```
 
 The index then held only AAPL's article. Fix the file (section 4.7) and run the rebuild again.
+
+**Optional follow-up (not done): make `--rebuild` load every file before it deletes anything.** A broken file would then stop the rebuild while the old index is still whole, which removes the partial-index risk above. We left it out because it adds code for a rare case, and step 1 (check the files first) covers it.
+
+If you want it later, the change is two lines in `main` in `ingest.py`, which already imports `load_news` and `news_file`:
+
+```python
+        if args.rebuild:
+            for symbol in symbols:  # read every file first: a broken one stops us before anything is deleted
+                load_news(news_file(symbol))
+            print("rebuild: " + ("deleted the collection" if reset_collection() else "there was no collection to delete"))
+```
+
+The existing `except` in `main` reports the broken file and stops, with nothing deleted. We tried exactly this on a copy of `ingest.py` in `/tmp` (the repo's code is unchanged). With `META.txt` broken, the rebuild stopped with the error and the index still held its 2 chunks, where the current code leaves 1. With every file good it rebuilt as before. If you add it, add a test that a broken file in a `--rebuild --all` leaves the index as it was. It would not help if the process is killed halfway through a rebuild (run the rebuild again), and it becomes worth doing as soon as a rebuild can run without you checking the files first.
 
 **To start completely over** (the folder is damaged, or you want a clean slate): stop everything that uses it, delete the folder and build again. Nothing is lost, because the news files are the source.
 
