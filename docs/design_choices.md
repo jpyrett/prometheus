@@ -431,7 +431,7 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 - **`page_content`** is the headline, the summary and the insight lines, separated by blank lines, exactly as the file has them, so the text can always be rebuilt from the file.
 - **Metadata:** `article_id`, `headline`, `tickers` (a list), `published_utc`, `published_ts` (epoch seconds, a number, because Chroma range filters take numbers only), `publisher`, `api`, `url`. These are the filter and citation fields (entry 15). Left out: `keywords` (140 of 288 articles have them; Part 5 tests adding them to the text), `author`, `image_url`, `category`, `type` and `company`.
 - **The file's own symbol is not stored.** It is always in `tickers` (288 of 288). If a record has no tickers it falls back to the file's symbol, and with neither it is an error.
-- **Errors stop the load.** A record the DataAgent would not have written (no `<<<END>>>`, a new record inside an unfinished one, an unknown `<<<` marker, a header line without a colon, a missing `id`, `headline`, `published_utc` or `url`, a bad date, text outside a record) raises `ValueError` with the file and line. The DataAgent's own `_read_records` silently drops a record that an interrupted fetch cut short. The loader stops instead, so a missing article is noticed.
+- **Errors stop the load.** A record the DataAgent would not have written (no `<<<END>>>`, a new record inside an unfinished one, an unknown `<<<` marker, a header line without a colon, a missing `id`, `headline`, `published_utc` or `url`, a bad date, text outside a record) raises `ValueError` with the file and line. The DataAgent's own `_read_records` silently drops a record that an interrupted fetch cut short. The loader stops instead, so a missing article is noticed. Breaking the input on purpose (entry 19) found two more cases, now handled: a byte order mark at the start of a file used to stop the load, and a byte that is not UTF-8 gave an error without the file and line. Line 1 is now decoded with `utf-8-sig`, and each line is decoded on its own so that the error can name it.
 - **Symbols are validated before they become a file name** (`news_file`): letters, digits, `.` and `-`, at most 10 characters, so `../../.env` is refused. Symbols will come from an LLM's tool call. The vendored DataAgent only strips and uppercases, so the tool wrapper (Part 6) must validate symbols too.
 - **Settings:** `NEWS_OUTPUT_DIR` (the DataAgent's own name) from the environment, then `.env`, then `news/` at the repo root. A relative path is resolved against the repo root.
 
@@ -447,7 +447,7 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 - `pytest.ini` gets `pythonpath = .`. The existing tests found `prometheus` only because `PYTHONPATH` in this shell ends with a colon (set by the Pleora eBUS SDK), which Python reads as the current folder. With `PYTHONPATH` cleared they failed.
 - `.env.example` now lists `POLYGON_API_KEY` (the DataAgent reads it; no code reads `MASSIVE_API_KEY`) and documents `NEWS_OUTPUT_DIR`. `HowToRun.txt` has a short RAG section.
 
-**Tests.** `tests/test_rag_loaders.py`: 39 tests, passing with and without `PYTHONPATH`. `tests/fixtures/news_sample.txt` holds three real records copied verbatim. Five deliberate breaks of the loader were each caught by the tests.
+**Tests.** `tests/test_rag_loaders.py`: 51 tests (39 when this entry was written, 12 added by entry 19), passing with and without `PYTHONPATH`. `tests/fixtures/news_sample.txt` holds three real records copied verbatim. Five deliberate breaks of the loader were each caught by the tests.
 
 **Consequences.** *Pro:* the file-format contract is enforced and tested in one place, against real records and against every real file when present. *Con:* one bad record stops the whole file. Fix the file or re-fetch it.
 
@@ -461,13 +461,14 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 - **Collection:** `news-<model name>`, for example `news-sentence-transformers-all-MiniLM-L6-v2`. The model is in the name so vectors from two models never meet. Another model means a new collection and a new ingest. Filings and press releases will get their own collections, because they chunk differently. The client is a `PersistentClient` with telemetry off and cosine distance fixed at creation (entry 10), set up in one place.
 - **Chunking:** `RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100, add_start_index=True)`, in characters. Measured on the 288 articles against the embedder's 256-token limit: the tutorial's 1000 / 200 leaves 1 chunk over (263 tokens) and 3 with the headline put back, while 800 / 100 leaves none. The price is about 14% more chunks (557 against 489, duplicates counted twice).
 - **Characters, not tokens, plus a check.** Characters are simple and match the tutorial and the week 3 plan. `ingest` counts the chunks the embedder would cut off (`over_limit`, 0 for all the news), so a corpus with more numbers per character, such as filings, cannot be truncated silently. Revisit with a token-based splitter if that check ever fires.
-- **The headline goes back in front of any chunk that does not start with it.** Without it a chunk like `CRWV | negative | Stock declined 11.91% ...` does not say which article it belongs to (Lab 3.1 keeps the title on every chunk for the same reason).
+- **The headline goes back in front of any chunk that does not start with it.** Without it a chunk like `CRWV | negative | Stock declined 11.91% ...` does not say which article it belongs to (Lab 3.1 keeps the title on every chunk for the same reason). The headline is cut at 250 characters when it is put in front (the longest real one is 208), because a giant headline would fill the whole chunk and leave the article unfindable (entry 19).
 - **Ids and metadata:** chunk id `<article id>#<n>`; the article's metadata (entry 16) plus `start_index`, `chunk` and `chunks`.
 - **Safe to run again.** For each article, `ingest` compares the new chunks with those stored. An unchanged chunk (same id, text and metadata) is skipped and not encoded again. A new or different chunk is upserted. A stored chunk that the article no longer produces is deleted. The `tickers` become the union of the stored list and the new one (the rule from entry 16, stored list first). Checked on the real files: a second `--all` changes nothing, and NVDA on top of AAPL and META gives 3 updated chunks (the Finnhub duplicates), 16 unchanged (the Polygon duplicates) and a total of 538 = 557 - 19.
-- **Rebuild:** `--rebuild` deletes the collection and ingests again. The index is derived data (entry 10).
+- **Rebuild:** `--rebuild` deletes the collection and ingests again. The index is derived data (entry 10). A full rebuild of the four real files takes about 9 seconds and ends with the same 538 chunks. `--rebuild` deletes only the current model's collection (the name carries the model): after `EMBEDDING_MODEL` is switched, the new model starts an empty collection and the old one stays in the folder until the folder is deleted (checked on a copy of the real index, which was not touched). Guide section 4.8 has the how-to.
+- **What re-running cannot undo** (found while writing guide section 4.7; tested on a scratch copy of the fixture, never on the real files or the real index). `ingest` only looks at the articles in the file it reads. So an article taken out of a file stays in the index (the second `ingest` said `unchanged 2, deleted 0` and the store still held 3 articles). A ticker taken off an article stays too (`unchanged 4`, and the ticker was still on 2 chunks), because the `tickers` merge is a union. An article whose `id:` line is edited is stored twice (`added 1`, 4 articles). Edits to an article's text are picked up (`updated 1`). **Decision: removals are handled by `--rebuild --all`, not by pruning.** Pruning is not simple, because an article can sit in two symbol files (entry 16), so "no longer in this file" does not mean "gone", and a rebuild takes seconds. Two cautions, both tested: `--rebuild` without `--all` empties the index and ingests only the named symbols (4 chunks of 3 articles became 2 of 2), and `--rebuild --all` empties the index before the first file is read, so a broken file leaves a partial index until the file is fixed and the rebuild is run again. Check every file with the loader first (guide sections 4.7 and 4.8). A possible later hardening, not done because it adds code for a rare case: load every file before `--rebuild` deletes anything.
 - **Tested without a model.** `ingest_documents(docs, store)` takes the store as an argument, so tests use a fake embedder. Three tests use the real model and skip themselves when it is not available.
 - **One private attribute.** Counting tokens needs LangChain's inner model (`HuggingFaceEmbeddings._client`, a `SentenceTransformer`). Only `store.count_too_long` touches it, and a test fails if an upgrade removes it.
-- **Left as they are on purpose:** raw HTML in 3 of 288 articles (`&#39;`; decoding would break "the text is what the DataAgent wrote"), and `keywords` (Part 5 tests adding them to the text).
+- **Left as they are on purpose:** raw HTML (entry 18), and `keywords` (Part 5 tests adding them to the text).
 
 **Result on the real files.** AAPL 74 articles to 110 chunks, META 20 to 22, NVDA 181 to 405, TSLA 13 to 20. In total 538 chunks of 281 articles; chunks per article: 1 x 150, 2 x 44, 3 x 58, 4 x 21, 5 x 6, 6 x 2; text length median 530 and longest 963 characters; 0 of 538 over the limit.
 
@@ -480,3 +481,80 @@ The slide's caption is the principle we rely on: retrieval changes the evidence 
 4. The model on the GPU by default. Rejected: same scores, an extra start-up, and a competing user of the GPU.
 
 **Consequences.** *Pro:* re-running is cheap and safe, the stored text always carries what a citation needs, and the model cannot be mixed up. *Con:* the second run of a symbol still takes about 3 seconds, which is the time to load the model, not to encode. Chroma's embedded mode is single-process (entry 10), so ingest and search should run in one process at a time.
+
+## 18. HTML in the news text: measured, left as written, with a tripwire
+
+**Date:** 2026-10-24
+
+**Question.** Text from the news APIs can contain HTML (`Nvidia&#39;s`). Should the loader decode or strip it before the text is chunked and encoded?
+
+**What we measured** (`python labs/module3_rag/break_the_input.py`, on the real files and the real model).
+- In the 288 real articles: HTML entities in 3 (two distinct articles, one of them in two files; all `&#39;`, all from Finnhub), HTML tags in 0, a non-breaking space in 1, and no zero-width characters, control characters or mojibake. The longest headline is 208 characters.
+- Leaving the entities in barely changes the embedding. The text as written and decoded have a similarity of 0.997 to 0.998, and the score for the article's own headline moved by at most 0.005. The model sees `Nvidia&#39;s` as `n ##vid ##ia & # 39 ; s`, four extra tokens in a text of dozens.
+- Put into one real article, the damage to how well it is found: entities -0.015, light tags (`p`, `b`, `a`, `br`) +0.022, `<script>` and `<style>` blocks -0.025, but **markup around every word -0.247**. A little HTML is noise, a lot of it is harm.
+- Chroma stores all of it exactly as given (NUL, control characters, emoji and CJK, HTML, `<script>`, a line that starts with `<<<`), so storage does not change the text.
+
+**Options considered.**
+1. Leave the text as the DataAgent wrote it. **Chosen.**
+2. Decode entities in the loader (`html.unescape`). Rejected for now.
+3. Strip tags in the loader. Rejected for now.
+4. Clean it at the source, in the DataAgent. Rejected: it is a vendored copy, and a fix there would not cover other writers.
+
+**Decision.** Leave HTML as written, and watch for change with a tripwire.
+- *It is rare and cheap.* 1% of the articles, with a measured effect inside the noise.
+- *The text stays what the DataAgent wrote,* so the index can always be rebuilt from the file and compared with it (entry 16).
+- *Decoding is not always safe.* It turns the escaped text `&lt;script&gt;` into a real tag. How text is shown is the job of whoever shows it: an LLM reads `&#39;` fine, and a web page must escape the text it displays, whatever the loader does.
+- *Heavy markup does hurt (-0.247), so we must notice if the sources change.* The test `test_the_tripwire_for_html_in_the_real_text` fails if any real article contains an HTML tag, or if more than 10% contain an entity. It has been shown to fire: with one tag put into a real record it fails with "1 articles contain HTML tags ... see design choices entry 18".
+
+**The fix, decided now so that it is not improvised later.** If the tripwire fires, in `loaders.py::_to_document` run one function over the headline, the summary and each insight line:
+1. Decode only fully formed entities (`&#39;`, `&amp;`), one match at a time with `html.unescape`, so that a bare `&copy` in plain text is left alone.
+2. Drop `<script>` and `<style>` blocks with their content, then remove tags that start with a letter (`</?[a-zA-Z][^<>]*>`). That keeps `<5%` and `P/E < 20`, but it would also eat something like `x<y and y>z`, which news text almost never contains.
+3. Test it with a real record that contains each case.
+4. Change the "exactly as the file has them" rule in entry 16, then run `ingest --all`. The reconcile step rewrites the chunks that changed and nothing else.
+
+**Consequences.** *Pro:* nothing to maintain until the data changes, and we are told when it does. *Con:* about 1% of the chunks carry a raw `&#39;`, and any page that displays the text must escape it.
+
+## 19. Breaking the input on purpose: what we tested, what it found, and how problems get fixed
+
+**Date:** 2026-10-24
+
+**Why.** The news files come from outside (APIs and web text), and their text will later be read by an LLM that can place trades. The pipeline has to survive text that is damaged, odd or hostile, not only the clean records we happened to fetch. So each layer was tested by breaking its input on purpose.
+
+**Four kinds of breaking.**
+1. *The record structure.* Eleven damaged inputs in `tests/test_rag_loaders.py`: no `<<<END>>>`, a new record inside an unfinished one, an unknown marker, a header line without a colon, a missing `url`, a missing `headline`, a bad date, no tickers and no symbol, stray text before a record, a marker line after a record, and a marker with no escape inside the text. Each must stop with an error that names the file and the line, and nothing is half-loaded.
+2. *The text.* One clean article, damaged 15 ways and pushed through the real loader, chunker and embedding model: `python labs/module3_rag/break_the_input.py`. The table below has the results, and the behaviors that matter are now permanent tests.
+3. *The real data.* Three real records copied word for word into `tests/fixtures/news_sample.txt`, and checks on every real news file: it loads, the file's symbol is in each article's `tickers`, a duplicate article differs only in `tickers`, every real chunk fits the embedder, and the HTML tripwire (entry 18).
+4. *The code.* We broke the code on purpose to prove that the tests can fail (mutation checks): 5 breaks in the loader, 9 in `ingest.py` and `store.py`, and 5 more for the BOM, the line label, the line endings, the headline cap and the warning below. Every one was caught by at least one test, and each file was restored and compared byte for byte.
+
+**The text experiment.** The score is how well the damaged article is still found by "foldable iPhone goes on sale" (0.658 for the clean one).
+
+| What we broke | What happened | Verdict |
+|---|---|---|
+| HTML entities | loads; score -0.015 | left as written (entry 18) |
+| HTML tags (`p`, `b`, `a`, `br`) | loads; score +0.022 | left as written (entry 18) |
+| `<script>` and `<style>` blocks | loads; score -0.025 | left as written; an HTML page must escape the text |
+| markup around every word | loads; score -0.247 | harmful, so the tripwire watches for it (entry 18) |
+| non-breaking and zero-width characters | no change: the tokenizer reads a non-breaking space as a space and drops a zero-width one | nothing to do |
+| injected instructions ("Ignore all previous instructions ...") | stored as plain text; score -0.024 | nothing here reads text as instructions; the defense is where text meets a model (Part 7) |
+| 2,500 characters without a space | loads; 6 chunks; none over the limit; score unchanged | harmless: the tokenizer turns any word longer than 100 characters into one unknown token |
+| 40 hashes of 64 characters (dense text) | loads; 4 of 5 chunks over the limit; score -0.103 | now visible through `over_limit` and a WARNING; a token-based splitter if it ever matters (entry 17) |
+| a 38,000 character summary | 53 chunks, none over the limit | fine |
+| a 3,000 character headline | **found:** every chunk 3,798 characters, all over the limit, the article unfindable (score -0.034, a drop of 0.691) | **fixed:** the headline put in front of a chunk is cut at 250 characters. Now the longest chunk is 1,048, none is over, and the score is -0.009 |
+| an unescaped `<<<END>>>` line in the text | stops: `AAPL.txt:13: text outside a record: 'more text'` | correct as it is: loud, nothing half-loaded |
+| the file starts with a byte order mark (BOM) | **found:** stopped with a message about an invisible character, on a good file | **fixed:** line 1 is decoded with `utf-8-sig` |
+| Windows line endings (CRLF) | loads | fine |
+| one invalid UTF-8 byte | **found:** an error with no file and no line | **fixed:** `AAPL.txt:9: not valid UTF-8 (invalid start byte, at byte 69 of the line)` |
+| a NUL character in the text | loads; Chroma stores it exactly | fine |
+
+Three bugs were found (the headline, the BOM and the unlabeled byte error), and one silent but harmful case became loud (the WARNING when chunks are over the limit). The fixes change nothing for good data: after them, `ingest --all` on the real files reported every chunk unchanged (added 0, updated 0, deleted 0) and the collection still held 538 chunks.
+
+**The high-level approach to fixing, as rules.**
+1. **Structure problems are loud.** Stop, name the file and the line, never half-load, never repair by guessing. The fix is in the file, or re-fetch it. This is the DataAgent's own policy (entry 16).
+2. **Text problems are measured first.** How many articles, and what does it do to how well the article is found? Then decide on the evidence: leave it, normalize it, or reject it. Cosmetic problems that cost less than the noise are left (entry 18). Problems that make an article unfindable or stop the load are fixed.
+3. **Fix a problem once, at the lowest layer that sees it:** reading the file in the loader, cutting text in `ingest`, storing in `store`. Not in several places.
+4. **Every fix starts with a failing test.** Use a real record when there is one, otherwise the smallest made-up one. Afterwards undo the fix and check that the test fails again (the mutation check).
+5. **Make silent harm visible even when it is not fixed:** the `over_limit` count, the WARNING and the HTML tripwire.
+6. **Re-running is cheap and safe.** Ingestion reconciles with what is stored (entry 17). After a fix that changes text, run `ingest --all`: changed chunks are rewritten and the stale chunks of the same article are deleted. The regression check is that everything the fix should not touch comes back `unchanged`. A fix that must remove something (an article, a ticker) needs `--rebuild --all`, because re-running cannot remove it (entry 17; this sentence said "stale ones deleted" without that limit until guide section 4.7 tested it).
+7. **Text from the web is data, never instructions.** The pipeline stores it and returns it as text and never interprets it. The defenses sit where text meets a model or a person. In Part 7 the retrieved text is delimited in the prompt and the model is told to treat it as data, the LLM can only call the tools on the allow-list (entry 14), symbols are validated (entry 16) and citations are checked (entry 15). Any HTML page that shows the text must escape it.
+
+**Not tested yet (an honest list).** An LLM reading injected text (Part 7 adds a test with injected instructions inside a retrieved chunk). Text shown in an HTML page. The market-wide JSON lines files (there is no loader yet). Another embedding model's tokenizer (the 100-character rule is BERT's). Files of hundreds of megabytes. Two processes writing the Chroma folder at once.

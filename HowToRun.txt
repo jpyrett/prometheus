@@ -96,6 +96,7 @@ Prereqs
   python -m prometheus.rag.ingest AAPL NVDA      # chunk, encode and store news into Chroma (safe to repeat)
   python -m prometheus.rag.ingest --rebuild --all   # delete the collection, then ingest every news file
   python -m prometheus.rag.store                 # look at what Chroma holds
+  python labs/module3_rag/break_the_input.py     # damage one article 15 ways and see what the pipeline does
   pytest tests/test_rag_loaders.py tests/test_rag_ingest.py -q   # RAG tests (run from the repo root)
 
 

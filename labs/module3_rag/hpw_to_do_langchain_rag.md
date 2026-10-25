@@ -511,7 +511,7 @@ Each record then becomes one `Document`:
 
 The text is the headline, the summary and the insight lines exactly as the DataAgent wrote them, so it can always be rebuilt from the file.
 
-**Errors stop the load**, which is the DataAgent's own policy. The reader raises a `ValueError` that names the file and the line for anything the DataAgent would not have written: a record with no END line, a new record starting inside an unfinished one, an unknown `<<<` marker, a header line without a colon, a missing `id`, `headline`, `published_utc` or `url`, a bad date, or text outside a record. The vendored DataAgent's own reader (`_read_records`) does the opposite: when a new record starts it silently drops an unfinished one. An interrupted fetch can leave exactly that, and a quietly missing article is worse for a trading system than an error you can see and fix.
+**Errors stop the load**, which is the DataAgent's own policy. The reader raises a `ValueError` that names the file and the line for anything the DataAgent would not have written: a record with no END line, a new record starting inside an unfinished one, an unknown `<<<` marker, a header line without a colon, a missing `id`, `headline`, `published_utc` or `url`, a bad date, or text outside a record. The vendored DataAgent's own reader (`_read_records`) does the opposite: when a new record starts it silently drops an unfinished one. An interrupted fetch can leave exactly that, and a quietly missing article is worse for a trading system than an error you can see and fix. How to fix each error: section 4.7.
 
 **Symbols are checked before they become a file name.** `news_file` accepts letters, digits, `.` and `-`, at most 10 characters. A symbol will come from an LLM's tool call, and a prompt-injected `../../.env` must not walk out of the news folder. The vendored DataAgent only strips and uppercases the symbol, so the tool wrapper in Part 6 has to validate symbols as well.
 
@@ -571,6 +571,8 @@ $ python -m prometheus.rag.loaders /tmp/damaged_AAPL.txt
 ERROR: /tmp/damaged_AAPL.txt:1: the record has no <<<END>>>
 ```
 
+What to do about an error like this, step by step, is in section 4.7.
+
 ### 3.6 Tests
 
 ```bash
@@ -578,8 +580,8 @@ pytest tests/test_rag_loaders.py -q
 ```
 
 ```text
-.......................................                                  [100%]
-39 passed in 0.06s
+...................................................                      [100%]
+51 passed in 0.06s
 ```
 
 What they cover:
@@ -588,10 +590,11 @@ What they cover:
 |---|---|
 | Real records | `tests/fixtures/news_sample.txt` holds three real records copied word for word from your files: a Finnhub article, the CoreWeave article (four tickers, four insight lines) and one with a colon in its headline. The tests check exact text, exact metadata and the epoch timestamps (worked out by hand) |
 | Errors | every case in section 3.4 raises, with the right file and line |
+| Damaged or odd input | a byte order mark and Windows line endings load; a byte that is not UTF-8 is reported with its file and line; a marker line with no escape stops the load; HTML, script, odd characters and injected instructions are kept exactly as written (design choices entry 19) |
 | Symbols and settings | `../../.env`, `$AAPL`, and an empty or too long symbol are refused; the order environment, then `.env`, then default holds |
-| Your real files | every file in `news/` loads, the file's symbol is in every article's `tickers`, and an article that sits in two files differs only in `tickers` (skipped when there are no files) |
+| Your real files | every file in `news/` loads, the file's symbol is in every article's `tickers`, an article that sits in two files differs only in `tickers`, and a tripwire fails if HTML tags appear or HTML entities become common (all skipped when there are no files) |
 
-To be sure the tests can fail, we broke the loader five ways on purpose: split headers on every colon, shift the timestamp by a second, ignore a missing END line, accept any symbol, and drop the insight lines. The tests caught all five (14, 2, 1, 8 and 2 failing tests), and the original file was restored and compared byte for byte.
+To be sure the tests can fail, we broke the loader five ways on purpose: split headers on every colon, shift the timestamp by a second, ignore a missing END line, accept any symbol, and drop the insight lines. The tests caught all five (14, 2, 1, 8 and 2 failing tests), and the original file was restored and compared byte for byte. Later we also broke the *input* itself, fifteen ways (section 4.6 and design choices entry 19), and added the "damaged or odd input" tests and the HTML tripwire from what that showed.
 
 ### 3.7 What we found along the way
 
@@ -646,7 +649,7 @@ How to read it:
 | 4 | Chunk id and metadata | id `<article id>#<n>`; the article's metadata plus `start_index`, `chunk` and `chunks` | fixed ids make a re-run overwrite instead of duplicate; `start_index` traces a chunk back to its place in the article |
 | 5 | Embedding model and device | `all-MiniLM-L6-v2`, on the CPU by default (`EMBEDDING_DEVICE=cuda` for the GPU) | the scores are the same on both (Part 1), the CPU needs no CUDA start-up and leaves the GPU free for a local LLM. NVDA's 386 new chunks took 2.6 seconds on the CPU, lookups included |
 | 6 | Collection name | `news-<model name>` | the model is in the name, so vectors from two models never share a collection. Another model means a new collection and a new ingest |
-| 7 | Running it again | reconcile with what is stored: skip unchanged chunks, rewrite changed ones, delete chunks that no longer exist, merge `tickers` | ingestion is safe to repeat, never encodes the same text twice, and the Finnhub finding from Part 3 is handled |
+| 7 | Running it again | reconcile with what is stored: skip unchanged chunks, rewrite changed ones, delete the chunks an article no longer produces, merge `tickers` | ingestion is safe to repeat, never encodes the same text twice, and the Finnhub finding from Part 3 is handled. It cannot undo a removal (an article or a ticker taken out of a file): that takes a rebuild (sections 4.7 and 4.8) |
 
 The settings are `EMBEDDING_MODEL`, `EMBEDDING_DEVICE` and `VECTOR_STORE_PATH`, in `config.py` and `.env.example`.
 
@@ -723,7 +726,7 @@ the collection now holds 538 chunks
 
 Look at the NVDA line. NVDA shares articles with AAPL and META. The **3 updated** chunks are the Finnhub duplicates, whose `tickers` were merged (`["AAPL"]` and `["NVDA"]` became `["AAPL", "NVDA"]`). The **16 unchanged** chunks are the four Polygon duplicates, which were identical. And 538 is 557 (the 800 / 100 count in section 4.1, which counts the duplicates twice) minus the 19 chunks of those 7 duplicate articles. A second `--all` changes nothing at all. The second AAPL run takes 3 seconds although it encodes nothing: that is the time to load the model.
 
-The index is in `data/processed/vectorstore` (1.4 MB for AAPL alone), and git ignores it. It is derived data, so `--rebuild` deletes the collection and ingests again.
+The index is in `data/processed/vectorstore` (1.4 MB for AAPL alone), and git ignores it. It is derived data, so `--rebuild` deletes the collection and ingests again. Use it as `--rebuild --all` (section 4.8 says why and how).
 
 The viewer:
 
@@ -776,8 +779,8 @@ pytest tests/test_rag_ingest.py -q
 ```
 
 ```text
-.......................                                                  [100%]
-23 passed in 5.3s
+.................................                                        [100%]
+33 passed in 5.7s
 ```
 
 Most tests use a fake embedder, because the bookkeeping does not depend on what the vectors mean:
@@ -787,19 +790,184 @@ Most tests use a fake embedder, because the bookkeeping does not depend on what 
 | Chunking | one chunk for a short article; for a long one, every chunk starts with the headline exactly once, the ids and numbers are right, and no chunk is longer than designed; the documents you pass in are not changed |
 | Running again | the same article twice changes nothing; a changed article overwrites its chunks and deletes the ones that vanish; another article is left alone |
 | The same article in two files | the second copy's tickers are merged into every chunk, running either copy again changes nothing, the article is found under each of its tickers with `$contains`, and the same article twice in one call is stored once |
-| The command line | ingests a symbol and reports, `--all`, `--rebuild`, and problems are reported without a traceback |
-| The real model (three tests, skipped when the model is not available) | the fixture's chunks are found by meaning (a question with no word in common finds the foldable iPhone; the debt question finds CoreWeave; a `tickers` filter returns only CoreWeave), every real news chunk fits the embedder's limit, and the real entry points work end to end |
+| Odd input | a giant headline cannot fill the chunks, a real-length headline is put back whole, Chroma stores odd text exactly (NUL, emoji, a `<<<` line, HTML, injected instructions) |
+| The command line | ingests a symbol and reports, `--all`, `--rebuild`, a WARNING when chunks are over the embedder's limit, and problems are reported without a traceback |
+| The real model (four tests, skipped when the model is not available) | the fixture's chunks are found by meaning (a question with no word in common finds the foldable iPhone; the debt question finds CoreWeave; a `tickers` filter returns only CoreWeave), every real news chunk fits the embedder's limit, the length check sees dense text but not a 100-character word, and the real entry points work end to end |
 
-As in Part 3, we broke the code on purpose to be sure the tests can fail. Nine breaks across `ingest.py` and `store.py`: never skip unchanged chunks, don't merge tickers, never delete stale chunks, don't put the headline back, chunk ids that collide, chunks more than twice as long as designed, telemetry on, Chroma's default metric instead of cosine, and no model name in the collection name. The tests caught all nine, and the originals were restored and compared byte for byte.
+As in Part 3, we broke the code on purpose to be sure the tests can fail. Nine breaks across `ingest.py` and `store.py`: never skip unchanged chunks, don't merge tickers, never delete stale chunks, don't put the headline back, chunk ids that collide, chunks more than twice as long as designed, telemetry on, Chroma's default metric instead of cosine, and no model name in the collection name. The tests caught all nine, and the originals were restored and compared byte for byte. Five more breaks undid the fixes from section 4.6 (the BOM, the line label, the line endings, the headline cap and the warning), and each was caught too.
 
 ### 4.6 What we found along the way
 
 - **The same article can fill two of the top three places.** Part 5 decides whether to group results by article or use MMR.
-- **A few articles contain raw HTML** (`Nvidia&#39;s`, in 3 of 288 articles, all from Finnhub). It does little harm to search, and decoding it would break the rule that the text is exactly what the DataAgent wrote, so we left it.
+- **A few articles contain raw HTML** (`Nvidia&#39;s`, in 3 of 288 articles, all from Finnhub). We measured it (it changes how well an article is found by at most 0.015), left it as written, and added a test that notices if HTML ever becomes common (design choices entry 18).
 - **Chroma prints a harmless warning in the tests** (`DeprecationWarning: legacy embedding function config`) when LangChain reads the collection's settings to compute relevance scores. It does not affect results, and Python hides it outside pytest.
 - **One private attribute.** Counting tokens needs LangChain's inner model (`HuggingFaceEmbeddings._client`). Only `store.count_too_long` touches it, and a test fails if a LangChain upgrade removes it.
+- **We broke the input on purpose** (`python labs/module3_rag/break_the_input.py`). Fifteen kinds of damaged text went through the real loader, chunker and model. It found three bugs, now fixed: a huge headline made an article unfindable, a byte order mark stopped a good file, and an invalid byte gave an error without the file and line. It also turned one silent problem loud: ingest now warns when chunks are longer than the embedder reads. Design choices entry 19 has the full table and the rules we use to fix this kind of problem.
 
-The decisions are recorded in design choices entry 17.
+The decisions are recorded in design choices entries 17 to 19.
+
+### 4.7 When the news data has an error: how to fix it
+
+The files in `news/` are written by the DataAgent, and our code only reads them. An error is fixed in one of two places, depending on its kind. All commands run from the repo root in the `cmu` env.
+
+| Kind of error | Example | What you see | Where you fix it |
+|---|---|---|---|
+| A broken file | a record cut off by an interrupted fetch | the loader stops with `ERROR: <file>:<line>: <reason>`, and nothing is half-loaded | in the file: repair the record or delete it (steps 2 and 3) |
+| Odd text in a good record | `&#39;`, a very long headline | nothing stops, so search can get worse without a sound | in `loaders.py`, once, with a test; not in the files (step 5) |
+
+This note is about the per-symbol files `news/<SYMBOL>.txt`. The market-wide `news/market/*.jsonl` files have no loader yet.
+
+**1. Find the error.** One command checks every file and changes nothing:
+
+```bash
+for f in news/*.txt; do python -m prometheus.rag.loaders "$f" --show 0; done
+```
+
+A good file prints its path and one summary line (your four print 74, 20, 181 and 13 articles). A broken one prints `ERROR: <file>:<line>: <reason>`. `pytest tests/test_rag_loaders.py -q` checks the real files too. Do this before any rebuild (section 4.8 shows why).
+
+**2. Read the error.** The reason is one of nine. The line number is the offending line, except for four errors that are about a whole record: no `<<<END>>>` at the end of the file, a missing field, a bad date, and no tickers or symbol. Those name the **first line of the record** (its `<<<ARTICLE>>>` line), not the line that is wrong. We checked: a bad date on line 27 is reported at line 21.
+
+| The error says | What it means | The fix |
+|---|---|---|
+| `a new record starts before the one at line S ended (it has no <<<END>>>)` | the record at line S was cut off (for example by an interrupted fetch) and later records were added after it | delete the record at line S, up to the line before the line in the error |
+| `the record has no <<<END>>>` | the same, but the cut-off record is the last one in the file | delete from the line in the error to the end of the file |
+| `text outside a record: '...'` | stray text between records, or before the first one | delete the stray line |
+| `unknown marker '<<<...>>>'` | a line starts with `<<<` but is not one of the five markers. The DataAgent puts a space in front of text lines that start that way | if it is text, put a space in front of it; if not, delete it |
+| `header line without a colon: '...'` | a header is not `name: value`. The DataAgent writes each header on one line, so this most likely came from a hand edit | join it back onto the previous header line, or delete it |
+| `the record is missing id, url` | a required header (`id`, `headline`, `published_utc` or `url`) is absent or empty | put the line back, or delete the record |
+| `bad published_utc '...' (expected like 2026-10-23T19:03:00Z)` | the date cannot be read | correct the date |
+| `the record has neither tickers nor a symbol` | no `tickers:` and no `symbol:` line | add `symbol: AAPL` |
+| `not valid UTF-8 (invalid start byte, at byte N of the line)` | a byte that is not UTF-8, for example text saved in another encoding | retype or delete the character on that line |
+
+**3. Fix the file.** Take a copy first: `news/` is not in git, so there is no other copy. Here is a real case on a scratch copy of the fixture. Record 2 was cut off inside its summary, and record 3 was added after it (long lines shortened):
+
+```text
+  35| headline: CoreWeave Is Projected to Have a 6.3x Gross Leverage Ratio by Year End. The Market Is ...
+  36| <<<SUMMARY>>>
+  37| CoreWeave's stock fell 15.5% as investors worry about the neocloud's high leverage and ability ...
+  38| <<<ARTICLE>>>
+
+$ python -m prometheus.rag.loaders news/AAPL.txt
+ERROR: news/AAPL.txt:38: a new record starts before the one at line 21 ended (it has no <<<END>>>)
+```
+
+The record at line 21 never ended, so it goes: lines 21 to 37.
+
+```bash
+cp news/AAPL.txt /tmp/AAPL.txt.before    # a copy first
+sed -i '21,37d' news/AAPL.txt            # delete lines 21 to 37 (use the numbers from your own error)
+python -m prometheus.rag.loaders news/AAPL.txt --show 0
+```
+
+```text
+news/AAPL.txt
+2 articles | 2026-10-22T16:45:26Z to 2026-10-23T19:03:00Z | 0 with insights | 2 distinct ids
+```
+
+An editor works as well (in Cursor, press `Ctrl+P` and type `news/AAPL.txt:21` to open the file at that line).
+
+**Getting the deleted article back (optional).** Deleting a record loses that article. To get it back, fetch it again, **after** the delete. `fetch_news` appends an article only if its URL is not in the file yet, and it reads the URLs from every `url:` line, including those inside broken records. On the scratch copy the cut-off record's URL counted as present while the record was still there, so a fetch would have skipped it; after the delete it no longer counted. So: delete first, then fetch.
+
+```python
+# run from the repo root; base_dir="." makes the DataAgent write to ./news and read ./.env
+from prometheus.agents.data_clerk.data_agent import DataAgent
+DataAgent(base_dir=".").fetch_news(company="Apple", symbol="AAPL", keywords=["iPhone", "earnings"], from_date=30)
+```
+
+- `from_date` is days back, so it must reach back past the article's date. An article the API no longer serves cannot be fetched again.
+- Use the same `company` and `keywords` that file was fetched with (the cases in `test_news.py`), or the fetch also adds other articles that match.
+- A bare `DataAgent()`, which is how `test_news.py` builds it, works from the folder of `data_agent.py`. It would write to `prometheus/agents/data_clerk/news/` and look for `.env` there, and our loader would never see what it fetched.
+- We did not run this call: it uses your API keys and appends to your real files. The URL behaviour above was checked offline, and the rest is read from `fetch_news`.
+
+**4. Get the fix into the index.** Fixing the file does not fix the index. The rule: **adding or changing something takes a re-run of `ingest`; removing something takes a rebuild.** On a scratch copy of the three-article fixture, after each change to the file:
+
+| What you did to the file | `ingest AAPL` said | The index afterwards |
+|---|---|---|
+| fixed a word in one article | `updated 1, unchanged 3` | corrected |
+| deleted an article | `unchanged 2, deleted 0` | **still holds the deleted article** (4 chunks of 3 articles) |
+| took two tickers off an article | `unchanged 4` | **they are still there** (META was still on 2 chunks) |
+| changed an article's `id:` line | `added 1` | **holds both ids** (5 chunks of 4 articles) |
+
+Why: `ingest` only looks at the articles in the file it reads. It rewrites what changed and deletes the stale chunks of those articles, but it knows nothing about an article that is no longer there, and `tickers` are merged as a union (entries 16 and 17), so a ticker can be added but never taken away. To remove something, rebuild:
+
+```bash
+python -m prometheus.rag.ingest --rebuild --all
+```
+
+After the rebuild the scratch index held 2 chunks of 2 articles, as it should. The index is derived data, so nothing is lost. How to rebuild safely, with two cautions: section 4.8.
+
+**5. Odd text is not a broken file.** Text that loads but is odd (HTML entities, a giant headline, hidden characters) is not an error the loader can see, and fixing it by hand does not last: the next `fetch_news` brings the same kind of text again. Fix it once, in `loaders.py`:
+
+1. Measure how common it is in your real files: `python labs/module3_rag/break_the_input.py` (Part 1 counts the odd text, Part 2 shows what each kind does to search).
+2. Decide. If it hardly moves the search score, leave it and keep a test that notices if it becomes common. That is what we did for HTML (entry 18).
+3. If it hurts, write the failing test first, fix the loader, and run the tests (entry 19 has the rules).
+4. Run `ingest --all` and read the counts: only the chunks the fix should change may say `updated`. If the fix must remove something, rebuild (section 4.8).
+
+**What none of this catches.** The loader proves that a file is well formed and that a date can be read. It cannot know that the data is true. A wrong date that still reads, or a wrong ticker list (Finnhub's `tickers` is only the symbol that was asked for, section 3.7), loads without a word. For those, look at a few articles yourself: `python -m prometheus.rag.loaders AAPL --show 5`.
+
+The reasons are in design choices entry 17 (what re-running cannot undo) and entry 19 (how problems get fixed).
+
+### 4.8 How to build and rebuild the index
+
+The index is a Chroma collection in the folder `data/processed/vectorstore` (about 5 MB for the four files). It is **derived data**: all of it is made from `news/*.txt`, git ignores it, and you can delete it and make it again at any time. So building it is cheap and rebuilding it is safe. Where it lives and which model makes the vectors come from `VECTOR_STORE_PATH` and `EMBEDDING_MODEL` (in `.env` or the environment; the defaults are in `.env.example`). All commands run from the repo root in the `cmu` env.
+
+| I want to | Command | Notes |
+|---|---|---|
+| **Build** the index the first time | `python -m prometheus.rag.ingest --all` | the first run downloads the embedding model once (88 MB, needs internet; section 1.3) |
+| **Update** it after new articles arrived | `python -m prometheus.rag.ingest --all` | the same command: it encodes only what is new or changed. `ingest AAPL` does one symbol |
+| **Rebuild** it from scratch | `python -m prometheus.rag.ingest --rebuild --all` | deletes the collection, then builds it again |
+| **Look at** it | `python -m prometheus.rag.store` | chunk count, articles, tickers, sample chunks |
+| **Try** a rebuild without touching the real index | `VECTOR_STORE_PATH=/tmp/scratch python -m prometheus.rag.ingest --rebuild --all` | builds a throw-away index in another folder |
+
+**Build and update are the same command.** `--all` goes through every `news/*.txt` in name order, and `ingest` compares each article with what is stored: new chunks are added, changed ones rewritten, unchanged ones skipped. A real example on the fixture (shortened): two articles are indexed, then a later fetch appends a third.
+
+```text
+$ python -m prometheus.rag.ingest --all        # the first build
+AAPL: 2 articles -> 3 chunks | added 3, updated 0, unchanged 0, deleted 0
+$ python -m prometheus.rag.ingest --all        # after the append
+AAPL: 3 articles -> 4 chunks | added 1, updated 0, unchanged 3, deleted 0
+$ python -m prometheus.rag.ingest --all        # nothing new
+AAPL: 3 articles -> 4 chunks | added 0, updated 0, unchanged 4, deleted 0
+```
+
+Only the new article was encoded. A run that says `added 0, updated 0, deleted 0` for every file means the index already matches the files. For today's four files a complete index is `538 chunks of 281 articles` in the viewer (the numbers move as news arrives).
+
+**When to rebuild.** An update is enough for new and changed articles. Rebuild when:
+
+| Situation | Rebuild? |
+|---|---|
+| an article, a ticker or an `id:` was taken out or changed in a news file | **yes**: re-running cannot remove it (section 4.7) |
+| the folder is damaged, a run crashed halfway, or the index just looks wrong | **yes** |
+| you changed the loader or the chunk settings | optional: `ingest --all` rewrites what changed (read the counts), and a rebuild gives exactly what a fresh build gives |
+| you switched `EMBEDDING_MODEL` | not needed: the model is in the collection's name, so the new model starts an empty collection and `ingest --all` fills it. The old collection stays in the folder, because `--rebuild` only deletes the current model's (we checked on a copy of the index). Delete the folder to get rid of it |
+
+**How to rebuild.**
+
+1. **Check the files.** `for f in news/*.txt; do python -m prometheus.rag.loaders "$f" --show 0; done` (section 4.7, step 1). Nothing is deleted yet, and a broken file would stop the rebuild halfway.
+2. **Stop anything else that uses the index**, such as another Python session (later, the agent). Chroma runs inside the process, so only one process should use the folder at a time (entry 10).
+3. **Rebuild:** `python -m prometheus.rag.ingest --rebuild --all`. For today's files it takes about 9 seconds, a few of them loading the model.
+4. **Check the result.** `python -m prometheus.rag.store` shows the counts (`over the embedder's limit` must be 0, and `ingest` prints a WARNING if it is not). A second `ingest --all` must say `unchanged` for every file.
+
+Two cautions, both tested:
+
+- **Always `--rebuild --all`, never `--rebuild AAPL`.** `--rebuild` empties the whole index first and then ingests only the symbols you name. With two files, 4 chunks of 3 articles became 2 chunks of 2 articles.
+- **A broken file leaves a partial index.** `--rebuild --all` empties the index before it reads the first file, and `ingest` stops at the first broken file. With `META.txt` broken between two good files:
+
+```text
+$ python -m prometheus.rag.ingest --rebuild --all
+rebuild: deleted the collection
+AAPL: 1 articles -> 1 chunks | added 1, updated 0, unchanged 0, deleted 0
+ERROR: .../news/META.txt:1: the record has no <<<END>>>
+```
+
+The index then held only AAPL's article. Fix the file (section 4.7) and run the rebuild again.
+
+**To start completely over** (the folder is damaged, or you want a clean slate): stop everything that uses it, delete the folder and build again. Nothing is lost, because the news files are the source.
+
+```bash
+rm -rf data/processed/vectorstore
+python -m prometheus.rag.ingest --all
+```
 
 ### Next: Part 5
 
@@ -878,5 +1046,5 @@ The graph is the simple loop from section 0.6, with the DataAgent behind its too
 | 5 to 7 | 15 (RAG style: the class-slide pipeline, with the Data Clerk LLM deciding whether to retrieve, and citations) |
 | 6 and 8 | 14 (tools: plain functions, LangChain now, MCP next) |
 | 3 | 16 (loading the news files into Documents; the Finnhub `tickers` finding) |
-| 4 | 17 (chunking, encoding and storing the news; safe re-runs) |
+| 4 | 17 (chunking, encoding and storing the news; safe re-runs), 18 (HTML in the news text), 19 (breaking the input on purpose, and how problems get fixed) |
 | 5 and later | added as we make them |

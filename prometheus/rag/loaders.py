@@ -63,9 +63,12 @@ def _records(path: Path):
     head: dict[str, str] = {}
     summary: list[str] = []
     insights: list[str] = []
-    with open(path, encoding="utf-8") as f:
+    with open(path, "rb") as f:  # read bytes and decode line by line, so an error can name its line
         for number, raw in enumerate(f, 1):
-            line = raw.rstrip("\r\n")
+            try:  # line 1 may start with a byte order mark (BOM); "utf-8-sig" removes it
+                line = raw.decode("utf-8-sig" if number == 1 else "utf-8").rstrip("\r\n")
+            except UnicodeDecodeError as e:
+                raise ValueError(f"{path}:{number}: not valid UTF-8 ({e.reason}, at byte {e.start} of the line)") from None
             if line == ARTICLE_START:
                 if state is not None:
                     raise ValueError(f"{path}:{number}: a new record starts before the one at line "

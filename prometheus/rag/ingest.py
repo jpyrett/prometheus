@@ -26,7 +26,17 @@ from prometheus.rag.store import count_chunks, count_too_long, get_vector_store,
 # 256-token limit, even with the headline put back in front (design choices entry 17).
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 100
+HEADLINE_PREFIX_MAX = 250  # the longest real headline is 208 characters (design choices entry 19)
 LOOKUP_BATCH = 100  # article ids per lookup in the store
+
+
+def _prefix(headline: str) -> str:
+    """The headline as it is put in front of a later chunk. An absurdly long one is cut short: a 3,000
+    character headline in front of every chunk would fill the embedder's whole window and leave the
+    article unfindable (found by breaking the input on purpose, entry 19)."""
+    if len(headline) <= HEADLINE_PREFIX_MAX:
+        return headline
+    return headline[:HEADLINE_PREFIX_MAX].rsplit(" ", 1)[0] + " ..."
 
 
 def to_chunks(docs: list[Document]) -> list[Document]:
@@ -41,7 +51,7 @@ def to_chunks(docs: list[Document]) -> list[Document]:
         headline = doc.metadata["headline"]
         parts = splitter.split_documents([doc])
         for number, part in enumerate(parts):
-            text = part.page_content if part.page_content.startswith(headline) else f"{headline}\n\n{part.page_content}"
+            text = part.page_content if part.page_content.startswith(headline) else f"{_prefix(headline)}\n\n{part.page_content}"
             chunks.append(Document(
                 id=f"{doc.id}#{number}",
                 page_content=text,
@@ -146,6 +156,9 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{s['symbol']}: {s['articles']} articles -> {s['chunks']} chunks | added {s['added']}, "
                   f"updated {s['updated']}, unchanged {s['unchanged']}, deleted {s['deleted']} | "
                   f"chunks over the embedder's limit: {s['over_limit']} | {time.monotonic() - started:.1f} s")
+            if s["over_limit"]:  # silent but harmful: the model ignores the end of such a chunk
+                print(f"WARNING: {s['symbol']}: {s['over_limit']} chunks are longer than the embedder reads, so the end "
+                      f"of their text cannot be found by search (design choices entry 19)", file=sys.stderr)
         print(f"the collection now holds {count_chunks()} chunks")
     except (ValueError, FileNotFoundError) as e:
         print(f"ERROR: {e}", file=sys.stderr)
