@@ -23,7 +23,7 @@ accelerate>=1.0
 sentence-transformers>=3.0
 numpy>=2.0
 
-# DataAgent (prometheus/agents/data_agent): CSV -> Parquet conversion and price summaries.
+# DataAgent (prometheus/agents/data_clerk): CSV -> Parquet conversion and price summaries.
 # 18.0 is the first pyarrow release with a Python 3.13 wheel.
 pyarrow>=18
 
