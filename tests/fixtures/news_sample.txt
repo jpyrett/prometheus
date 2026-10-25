@@ -1,0 +1,63 @@
+<<<ARTICLE>>>
+id: finnhub:143136906
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-23T19:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d785010198f95cde7609b110185876b490a53c6cc083289353e226aeb037f1b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: The iPhone Duo Launch Kicks Off a Crucial Few Weeks for Apple
+<<<SUMMARY>>>
+Apple’s foldable iPhone goes on sale ahead of an expected touchscreen MacBook launch and fiscal fourth-quarter earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:287f3b5c2f0c59c2b903cd391bb97c0c090f48a25c64cdf5e7df1dab0e85382a
+symbol: NVDA
+company: NVIDIA
+api: polygon
+type: news
+published_utc: 2026-10-17T21:30:00Z
+publisher: The Motley Fool
+author: Bram Berkowitz
+url: https://www.fool.com/investing/2026/10/17/coreweave-is-projected-to-have-a-63x-gross-leverag/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891107%2Fcrwv-tmf.png&w=1200&op=resize
+category: 
+tickers: CRWV, MSFT, META, NVDA
+keywords: CoreWeave, neocloud, leverage ratio, debt, AI infrastructure, data centers, balance sheet, rising rates, customer concentration
+headline: CoreWeave Is Projected to Have a 6.3x Gross Leverage Ratio by Year End. The Market Is Worried About the Neocloud's Balance Sheet.
+<<<SUMMARY>>>
+CoreWeave's stock fell 15.5% as investors worry about the neocloud's high leverage and ability to service debt in a rising rate environment. The company has taken on $27.6 billion in debt to build 51 data centers for AI customers, with projections showing a 6.3x gross leverage ratio by year-end. While CoreWeave has a $104 billion revenue backlog, concerns persist about customer concentration and whether the AI infrastructure boom can sustain current commitments.
+<<<INSIGHTS>>>
+CRWV | negative | Stock declined 11.91% due to concerns about high debt levels (6.3x gross leverage ratio), rising capital costs, customer concentration risk (65% from top 2 customers), and vulnerability to AI trade disruptions without a fortress balance sheet.
+MSFT | neutral | Mentioned as a key CoreWeave customer and hyperscaler with AI commitments, but no specific negative or positive developments reported in this article.
+META | neutral | Listed as a CoreWeave customer but no specific developments or concerns mentioned regarding Meta in this article.
+NVDA | neutral | Mentioned as a CoreWeave customer but no specific developments reported; article notes hyperscalers are generating negative free cash flow but doesn't single out Nvidia.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143103074
+symbol: AAPL
+company: Apple
+api: finnhub
+type: news
+published_utc: 2026-10-22T16:45:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=571b4061cb5f6d1cfe04c1275187e1ddaa6a4a3f339bbe5a4ca6c9c98de85617
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Meta Vs. Apple: Divergent Edge AI Inference Strategies and Spending
+<<<SUMMARY>>>
+Meta is pouring over a hundred billion dollars into centralized data centers while Apple bets your iPhone and Mac can do the heavy lifting instead. One of these companies will look very smart in 2027, and the gap between their spending levels tells a story worth understanding now.
+<<<INSIGHTS>>>
+
+<<<END>>>
