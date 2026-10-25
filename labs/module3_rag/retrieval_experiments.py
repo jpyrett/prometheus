@@ -9,6 +9,7 @@ Run from the repo root with the `cmu` conda env active:
     python labs/module3_rag/retrieval_experiments.py keywords     # does adding the API keywords to the text help?
     python labs/module3_rag/retrieval_experiments.py filters      # tickers and date windows, and what the ticker filter cannot see
     python labs/module3_rag/retrieval_experiments.py recall       # is the index's approximate search as good as an exact one?
+    python labs/module3_rag/retrieval_experiments.py terse        # broad questions worded the way a model words them: short
     python labs/module3_rag/retrieval_experiments.py embedders    # the same questions on the same chunks with other embedding models
                                                                   # (downloads two models on the first run, about 500 MB)
 
@@ -365,6 +366,30 @@ def embedders(_real_store):
               f"top 5 {sum(1 for r in ranks if r and r <= 5)}/23  MRR {sum(1 / r for r in ranks if r) / 23:.3f}  build {secs:.1f} s")
 
 
+# The way the chat model words a broad question when it writes the tool call (found in the Part 6 round trip): short,
+# often with "this week" or "latest". Asked with the company's ticker and the last 7 days, as the model asks.
+TERSE = [(f"{company} {tail}", [ticker]) for company, ticker in
+         (("Meta", "META"), ("Apple", "AAPL"), ("Nvidia", "NVDA"), ("Tesla", "TSLA"))
+         for tail in ("this week", "news", "latest developments")] + \
+        [(f"recent {company} news", [ticker]) for company, ticker in
+         (("Meta", "META"), ("Apple", "AAPL"), ("Nvidia", "NVDA"), ("Tesla", "TSLA"))]
+
+
+def terse(store):
+    best = []
+    print(f"{'terse question (ticker filter, last 7 days)':<46}{'best score':>11}")
+    for question, symbols in TERSE:
+        score = search_news(question, tickers=symbols, since_days=7, k=1, min_score=None, store=store)[0].score
+        best.append(score)
+        print(f"{question + ' ' + str(symbols):<46}{score:>11.2f}{f'   <- below the bar of {MIN_SCORE}' if score < MIN_SCORE else ''}")
+    print(f"\nmin {min(best):.2f}  median {statistics.median(best):.2f}  max {max(best):.2f} | below {MIN_SCORE}: "
+          f"{sum(s < MIN_SCORE for s in best)} of {len(best)} | below 0.35: {sum(s < 0.35 for s in best)} | below 0.30: {sum(s < 0.30 for s in best)}")
+    ties = [(q, h.score) for q, h in best_scores_for_no_answer(store) if abs(h.score - min(best)) < 0.015]
+    if ties:
+        print("not in the news, yet scoring about as low as the lowest question above: " + "; ".join(f"{q!r} {sc:.2f}" for q, sc in ties))
+        print("so no bar separates them: the score is a first guard, not a judge")
+
+
 def filters(store):
     now = datetime.now(timezone.utc)
     print(f"now = {now:%Y-%m-%d %H:%M} UTC\n")
@@ -402,7 +427,7 @@ def filters(store):
 
 SECTIONS = {"questions": questions, "scores": scores, "k": k_and_repeats, "diverse": diverse,
             "keywords": keyword_test, "filters": filters, "recall": recall,
-            "embedders": embedders}
+            "embedders": embedders, "terse": terse}
 
 
 def main() -> int:
