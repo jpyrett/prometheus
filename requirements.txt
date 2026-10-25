@@ -20,12 +20,24 @@ uvicorn>=0.30
 # DGX Spark: use NVIDIA's recommended torch/CUDA wheel for that box, then:
 transformers>=4.51
 accelerate>=1.0
+sentence-transformers>=3.0
 numpy>=2.0
 
-# Agentic stack (add when you port those labs)
-# langchain>=0.3
-# langgraph>=0.2
-# openai>=1.0
+# DataAgent (prometheus/agents/data_agent): CSV -> Parquet conversion and price summaries.
+# 18.0 is the first pyarrow release with a Python 3.13 wheel.
+pyarrow>=18
+
+# Agentic stack: LangChain 1.x + LangGraph 1.x + Chroma (Module 3 RAG).
+# Why each choice: docs/design_choices.md entries 10 and 11. Step-by-step: labs/module3_rag/.
+# Everything is capped below the next major version so an unplanned 2.0 cannot break an install.
+# Do NOT add langchain-community: its Chroma / HuggingFace classes are the deprecated pre-1.0 paths.
+langchain>=1.4,<2
+langgraph>=1.2,<2
+langchain-text-splitters>=1.1,<2   # chunking
+langchain-huggingface>=1.2,<2      # HuggingFaceEmbeddings (runs sentence-transformers locally)
+langchain-chroma>=1.1,<2           # LangChain <-> Chroma bridge
+chromadb>=1.3.5,<2                 # the range langchain-chroma 1.1.0 allows; tested with 1.5.9
+langchain-openai>=1.7,<2           # chat-model client: OpenRouter now, a local OpenAI-compatible server later
 
 # Testing (FastMCP Client tests + unit tests)
 pytest>=8.0
