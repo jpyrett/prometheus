@@ -38,15 +38,20 @@ SYMBOL_PATTERN = re.compile(r"[A-Z0-9][A-Z0-9.\-]{0,9}")  # AAPL, BRK.B, BF-B
 INSIGHT_LINE = re.compile(r"(?m)^[A-Z][A-Z0-9.\-]* \| (positive|neutral|negative) \| ")
 
 
-def news_file(symbol: str) -> Path:
-    """The news file for one symbol: AAPL -> <news dir>/AAPL.txt.
+def check_symbol(symbol: str) -> str:
+    """The symbol, stripped and upper-cased, if it is a safe ticker symbol; otherwise a ValueError.
 
-    The symbol becomes part of a file name and will come from an LLM's tool call, so it is checked:
-    letters, digits, '.' and '-' only, at most 10 characters. Something like '../../.env' is refused."""
-    symbol = symbol.strip().upper()
-    if not SYMBOL_PATTERN.fullmatch(symbol):
-        raise ValueError(f"not a valid ticker symbol: {symbol!r}")
-    return news_dir() / f"{symbol}.txt"
+    Letters, digits, '.' and '-' only, at most 10 characters. A symbol will come from an LLM's tool call and
+    can end up in a file name or a search filter, so something like '../../.env' is refused."""
+    clean = symbol.strip().upper()
+    if not SYMBOL_PATTERN.fullmatch(clean):
+        raise ValueError(f"not a valid ticker symbol: {clean!r}")
+    return clean
+
+
+def news_file(symbol: str) -> Path:
+    """The news file for one symbol: AAPL -> <news dir>/AAPL.txt (the symbol is checked first)."""
+    return news_dir() / f"{check_symbol(symbol)}.txt"
 
 
 def load_news(path: Path | str) -> list[Document]:

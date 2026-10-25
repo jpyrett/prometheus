@@ -46,14 +46,22 @@ def _client() -> chromadb.ClientAPI:
     return chromadb.PersistentClient(path=str(vector_store_path()), settings=Settings(anonymized_telemetry=False))
 
 
+# How Chroma's approximate search (HNSW) is set up. The space is cosine (design choices entry 10). The other three
+# make the search thorough. With Chroma's defaults (100, 100, 16) the search found only 96% to 98% of the true
+# nearest chunks on this corpus, and after many in-place updates some questions got a different top 10. These
+# values found 99.9% to 100% and cost nothing measurable at this size (entry 20). A collection keeps the settings
+# it was created with, so a change here takes effect after `python -m prometheus.rag.ingest --rebuild --all`.
+HNSW = {"space": "cosine", "ef_construction": 400, "ef_search": 300, "max_neighbors": 32}
+
+
 def get_vector_store() -> Chroma:
     """The Chroma collection for news: a folder on disk, telemetry off, cosine distance (fixed when the
-    collection is created, design choices entry 10)."""
+    collection is created, design choices entry 10) and a thorough search (HNSW above)."""
     return Chroma(
         client=_client(),
         collection_name=collection_name(),
         embedding_function=get_embeddings(),
-        collection_configuration={"hnsw": {"space": "cosine"}},
+        collection_configuration={"hnsw": HNSW},
     )
 
 

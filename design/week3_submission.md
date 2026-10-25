@@ -41,10 +41,36 @@ The submission will show the two outputs side by side, and point to which retrie
 |---|---|---|
 | Data source | News, press releases, EDGAR filings. Start with a small sample: one ticker, one source, a short date range | Matches my week 2 design; similarity search is for text, not numbers |
 | Chunking | Several hundred to about 1000 characters, with overlap | A retrieved passage must still contain the whole statement. The lab's 100-word chunks are too small for filings |
-| Embedder | sentence-transformers (`all-MiniLM-L6-v2`), loaded through LangChain's `HuggingFaceEmbeddings` | Already installed, runs locally on CPU with no API cost, and keeps the data on my machine. Can be swapped later without changing the rest of the pipeline **[TODO: confirm after testing on real chunks]** |
+| Embedder | sentence-transformers (`all-MiniLM-L6-v2`), loaded through LangChain's `HuggingFaceEmbeddings` | Already installed, runs locally on CPU with no API cost, and keeps the data on my machine. Can be swapped later without changing the rest of the pipeline. Confirmed on real chunks: on the same 538 chunks and 23 real questions, the answer was in the text of the top 5 for 23 of 23 with this model, against 22 of 23 for a same-size model trained for question search and 22 of 23 for the larger `all-mpnet-base-v2` (768 numbers, 6 times slower to build). The answer's rank differed on only 5 questions, with as many wins as losses, so I kept the small model. A relevance bar is tuned to one model, so changing it means choosing the bar again |
 | Metadata | Ticker, source, document date, document id on every chunk | Lets the work order's subject, source, and time period filter the search |
-| Results retrieved | The work order's top-k, defaulting to 5 **[TODO: confirm on real queries]** | Enough evidence for the Advisor without wasting tokens |
-| Duplicates | Add MMR only if real results show near-duplicate chunks | Avoids tuning before I have seen the data |
+| Results retrieved | The work order's top-k, defaulting to 5, counted in articles (one hit per article, its best chunk) | Tested on 23 real questions about the stored news: the answer was in the text of the top 5 for 23 of 23 (top 3: 22 of 23, top 1: 19 of 23). A plain chunk search spent 16% of the top-5 slots on a second chunk of an article already listed |
+| Duplicates | MMR is an option for broad questions, off by default (`lambda_mult` 0.5, applied after the relevance bar). Narrow questions use plain similarity | Real results do show near-duplicate stories, so I tested MMR instead of guessing. It helps broad questions and costs narrow ones (below) |
+
+**MMR evidence (real news, 281 articles, 538 chunks, 2026-10-25).**
+
+*Broad questions* ("What is happening with Apple / Meta / Nvidia / Tesla?", filtered to the ticker and the last 7 days, top 5). "Overlap" is the mean cosine similarity between the five hits, so lower means more varied. "Relevance" is their mean score.
+
+| Question | Plain: relevance / overlap | MMR 0.5: relevance / overlap |
+|---|---|---|
+| Apple | 0.54 / 0.53 | 0.51 / 0.43 |
+| Meta | 0.49 / 0.50 | 0.43 / 0.39 |
+| Nvidia | 0.57 / 0.60 | 0.54 / 0.51 |
+| Tesla | 0.54 / 0.56 | 0.49 / 0.44 |
+
+MMR cut the overlap by 0.09 to 0.12 for 0.03 to 0.06 of relevance. For Apple it brought in the biggest story, the iPhone Duo launch, which the plain top 5 missed. It cannot create variety that is not there: Meta's news is mostly one story, so MMR swapped a relevant near-duplicate for a loosely related article, and without the relevance bar it picked one that scored 0.19. So the bar is applied before the spreading.
+
+*Narrow questions* (23 questions with a known answer, answer found in the text of the top 5):
+
+| Setting | Top 1 | Top 3 | Top 5 | MRR |
+|---|---|---|---|---|
+| Plain | 19/23 | 22/23 | 23/23 | 0.89 |
+| MMR 0.7 | 19/23 | 21/23 | 23/23 | 0.88 |
+| MMR 0.5 | 19/23 | 20/23 | 22/23 | 0.86 |
+| MMR 0.3 | 19/23 | 19/23 | 19/23 | 0.83 |
+
+Some questions have two articles that both answer them, and MMR drops the second one on purpose. At 0.3 it loses four answers. So the rule from the course lab held on real data: use MMR for a broad question over redundant news, and skip it for a narrow one. At 0.5 the spreading is real and the cost is small, 0.7 changes little, and 0.3 loses answers.
+
+Limits: 27 questions that I wrote myself, on one week of news for four tickers. The questions, the ground truth and the script that reproduces every number are in `labs/module3_rag/retrieval_experiments.py`, and the full write-up is in `docs/design_choices.md` entry 20.
 
 ## 5. Failure mode: wrong or stale context
 

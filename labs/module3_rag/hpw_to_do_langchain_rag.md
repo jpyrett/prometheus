@@ -1,6 +1,6 @@
 # How to do LangChain RAG (working guide for Prometheus)
 
-We build the news RAG one small step at a time. Every part says what we do, why, how to check that it worked, and where the decision is recorded in `docs/design_choices.md`. Outputs shown here are real, from this machine on 2026-10-24.
+We build the news RAG one small step at a time. Every part says what we do, why, how to check that it worked, and where the decision is recorded in `docs/design_choices.md`. Outputs shown here are real, from this machine on 2026-10-24 and 2026-10-25.
 
 References we follow:
 
@@ -19,8 +19,8 @@ References we follow:
 | 2 | Where the code lives | done |
 | 3 | Look at the data, then load it into LangChain `Document`s | done |
 | 4 | Chunk, encode and store: ingest the news into Chroma | done |
-| 5 | Retrieve by hand on real data: search vectors, fetch text by ID, filters, scores, "no supporting text" | **next** |
-| 6 | Tools and the chat model: `retrieve_news` and the DataAgent tools as plain functions, numbered sources, the citation check | |
+| 5 | Retrieve by hand on real data: search vectors, fetch text by ID, filters, scores, "no supporting text", repeats | done |
+| 6 | Tools and the chat model: `retrieve_news` and the DataAgent tools as plain functions, numbered sources, the citation check | **next** |
 | 7 | The Data Clerk agent: a LangGraph where the LLM decides whether to retrieve or fetch, and the answer cites its sources | |
 | 8 | FastMCP: serve the same tool functions; tests; the evidence for the week 3 submission (with and without retrieval) | |
 
@@ -378,7 +378,7 @@ prometheus/
 labs/module3_rag/          this guide and check_install.py
 ```
 
-Today `agents/data_clerk/` (the toolbox and its two test scripts) and `rag/` with `config.py`, `loaders.py`, `store.py` and `ingest.py` exist. Each remaining file appears in the part that needs it: `retriever.py` in Part 5, `citations.py`, `tools/data_clerk.py` and `models/chat.py` in Part 6, `agent.py` and `prompts/` in Part 7, `mcp/server.py` in Part 8.
+Today `agents/data_clerk/` (the toolbox and its two test scripts) and `rag/` with `config.py`, `loaders.py`, `store.py`, `ingest.py` and `retriever.py` exist. Each remaining file appears in the part that needs it: `citations.py`, `tools/data_clerk.py` and `models/chat.py` in Part 6, `agent.py` and `prompts/` in Part 7, `mcp/server.py` in Part 8.
 
 The rules behind it (full reasoning in entries 12 to 14):
 
@@ -472,7 +472,8 @@ Two small files. Neither knows about Chroma or an LLM.
 | Piece | Job |
 |---|---|
 | `load_news(path)` | read one news file and return one `Document` per article |
-| `news_file(symbol)` | turn `AAPL` into `<news dir>/AAPL.txt`, after checking the symbol |
+| `check_symbol(symbol)` | clean a ticker symbol (strip, upper-case) or refuse it. The one check behind both `news_file` and the retriever's `tickers` filter (Part 5) |
+| `news_file(symbol)` | turn `AAPL` into `<news dir>/AAPL.txt`, after `check_symbol` |
 | `python -m prometheus.rag.loaders AAPL` | a viewer, so you can look at what the Documents are |
 
 A news file is a series of records, and a record has four parts: header lines, a summary, insights and an end line. `load_news` reads it with a small state machine that moves on each time it sees a marker line:
@@ -513,7 +514,7 @@ The text is the headline, the summary and the insight lines exactly as the DataA
 
 **Errors stop the load**, which is the DataAgent's own policy. The reader raises a `ValueError` that names the file and the line for anything the DataAgent would not have written: a record with no END line, a new record starting inside an unfinished one, an unknown `<<<` marker, a header line without a colon, a missing `id`, `headline`, `published_utc` or `url`, a bad date, or text outside a record. The vendored DataAgent's own reader (`_read_records`) does the opposite: when a new record starts it silently drops an unfinished one. An interrupted fetch can leave exactly that, and a quietly missing article is worse for a trading system than an error you can see and fix. How to fix each error: section 4.7.
 
-**Symbols are checked before they become a file name.** `news_file` accepts letters, digits, `.` and `-`, at most 10 characters. A symbol will come from an LLM's tool call, and a prompt-injected `../../.env` must not walk out of the news folder. The vendored DataAgent only strips and uppercases the symbol, so the tool wrapper in Part 6 has to validate symbols as well.
+**Symbols are checked before they become a file name.** `check_symbol` (used by `news_file`) accepts letters, digits, `.` and `-`, at most 10 characters. A symbol will come from an LLM's tool call, and a prompt-injected `../../.env` must not walk out of the news folder. The vendored DataAgent only strips and uppercases the symbol, so the tool wrapper in Part 6 has to validate symbols as well.
 
 ### 3.5 Run it
 
@@ -580,8 +581,8 @@ pytest tests/test_rag_loaders.py -q
 ```
 
 ```text
-...................................................                      [100%]
-51 passed in 0.06s
+....................................................                     [100%]
+52 passed in 0.08s
 ```
 
 What they cover:
@@ -591,7 +592,7 @@ What they cover:
 | Real records | `tests/fixtures/news_sample.txt` holds three real records copied word for word from your files: a Finnhub article, the CoreWeave article (four tickers, four insight lines) and one with a colon in its headline. The tests check exact text, exact metadata and the epoch timestamps (worked out by hand) |
 | Errors | every case in section 3.4 raises, with the right file and line |
 | Damaged or odd input | a byte order mark and Windows line endings load; a byte that is not UTF-8 is reported with its file and line; a marker line with no escape stops the load; HTML, script, odd characters and injected instructions are kept exactly as written (design choices entry 19) |
-| Symbols and settings | `../../.env`, `$AAPL`, and an empty or too long symbol are refused; the order environment, then `.env`, then default holds |
+| Symbols and settings | `check_symbol` cleans a good symbol; `../../.env`, `$AAPL`, and an empty or too long symbol are refused; the order environment, then `.env`, then default holds |
 | Your real files | every file in `news/` loads, the file's symbol is in every article's `tickers`, an article that sits in two files differs only in `tickers`, and a tripwire fails if HTML tags appear or HTML entities become common (all skipped when there are no files) |
 
 To be sure the tests can fail, we broke the loader five ways on purpose: split headers on every colon, shift the timestamp by a second, ignore a missing END line, accept any symbol, and drop the insight lines. The tests caught all five (14, 2, 1, 8 and 2 failing tests), and the original file was restored and compared byte for byte. Later we also broke the *input* itself, fifteen ways (section 4.6 and design choices entry 19), and added the "damaged or odd input" tests and the HTML tripwire from what that showed.
@@ -601,7 +602,7 @@ To be sure the tests can fail, we broke the loader five ways on purpose: split h
 - **Finnhub's `tickers` is only the symbol that was asked for.** The same article is `["AAPL"]` in one file and `["NVDA"]` in another. Part 4 merges the lists when it stores an article a second time. A test guards the assumption this relies on: copies of an article differ only in `tickers`.
 - **Your tests only found `prometheus` by accident.** `PYTHONPATH` in your shell ends with a colon (it is set by the Pleora eBUS SDK), and Python reads that empty entry as "the current folder". With `PYTHONPATH` cleared, the existing tests failed with `No module named 'prometheus'`. One line in `pytest.ini` (`pythonpath = .`) fixes it, and the old tests pass either way.
 - **`.env.example` was out of step with the DataAgent.** It listed `MASSIVE_API_KEY`, which no code reads, and not `POLYGON_API_KEY`, which the DataAgent needs. It now lists both and documents `NEWS_OUTPUT_DIR`.
-- **`keywords` are left out of the text for now** (140 of 288 articles have them). Adding them is an experiment for Part 5, where we can compare search results with and without.
+- **`keywords` are left out of the text** (136 of the 281 distinct articles have them). Part 5 tested adding them: no question changed rank and the index grew by 20%, so they stay out (section 5.6).
 
 The decisions are recorded in design choices entry 16.
 
@@ -658,7 +659,7 @@ Your Lab 3.1 notebook agrees with the plan on two points: it encodes with `sente
 Two comparisons with the tutorial's Chroma snippet:
 
 - Its `Chroma(collection_name=..., embedding_function=..., persist_directory=...)` is the short form. Ours passes a `PersistentClient` so telemetry can be switched off, and sets the cosine metric at creation (entry 10).
-- Its HuggingFace example uses `all-mpnet-base-v2`, a larger model. Swapping the model is a one-line change, and our corpus is tiny. We can index with two models into two collections and compare them on the same queries. That settles the week 3 submission's "confirm the embedder on real chunks" item with evidence.
+- Its HuggingFace example uses `all-mpnet-base-v2`, a larger model. Swapping the model is a one-line change, and our corpus is tiny. We can index with two models into two collections and compare them on the same queries. That settles the week 3 submission's "confirm the embedder on real chunks" item with evidence, and Part 5 ran it (section 5.6h): MiniLM stays.
 
 ### 4.3 The code
 
@@ -668,7 +669,7 @@ Two comparisons with the tutorial's Chroma snippet:
 |---|---|
 | `get_embeddings()` | the MiniLM model from the settings, loaded once per process (it takes a few seconds) |
 | `collection_name()` | `news-<model>`, with anything Chroma does not allow (the `/`) turned into `-` |
-| `get_vector_store()` | the Chroma collection: a folder on disk, telemetry off, cosine fixed at creation |
+| `get_vector_store()` | the Chroma collection: a folder on disk, telemetry off, cosine fixed at creation, and a thorough search (section 5.8) |
 | `reset_collection()`, `count_chunks()` | delete the collection to rebuild it, and count what is stored |
 | `count_too_long(texts)` | how many texts the embedder would cut off (the one place that touches LangChain's inner model) |
 | `python -m prometheus.rag.store` | the viewer: what is stored, how big, and a few sample chunks |
@@ -779,8 +780,8 @@ pytest tests/test_rag_ingest.py -q
 ```
 
 ```text
-.................................                                        [100%]
-33 passed in 5.7s
+..................................                                       [100%]
+34 passed in 5.7s
 ```
 
 Most tests use a fake embedder, because the bookkeeping does not depend on what the vectors mean:
@@ -791,6 +792,7 @@ Most tests use a fake embedder, because the bookkeeping does not depend on what 
 | Running again | the same article twice changes nothing; a changed article overwrites its chunks and deletes the ones that vanish; another article is left alone |
 | The same article in two files | the second copy's tickers are merged into every chunk, running either copy again changes nothing, the article is found under each of its tickers with `$contains`, and the same article twice in one call is stored once |
 | Odd input | a giant headline cannot fill the chunks, a real-length headline is put back whole, Chroma stores odd text exactly (NUL, emoji, a `<<<` line, HTML, injected instructions) |
+| The store's settings | the collection is cosine and asks for the thorough search settings from Part 5 (section 5.8). No model is needed |
 | The command line | ingests a symbol and reports, `--all`, `--rebuild`, a WARNING when chunks are over the embedder's limit, and problems are reported without a traceback |
 | The real model (four tests, skipped when the model is not available) | the fixture's chunks are found by meaning (a question with no word in common finds the foldable iPhone; the debt question finds CoreWeave; a `tickers` filter returns only CoreWeave), every real news chunk fits the embedder's limit, the length check sees dense text but not a 100-character word, and the real entry points work end to end |
 
@@ -939,6 +941,7 @@ Only the new article was encoded. A run that says `added 0, updated 0, deleted 0
 | an article, a ticker or an `id:` was taken out or changed in a news file | **yes**: re-running cannot remove it (section 4.7) |
 | the folder is damaged, a run crashed halfway, or the index just looks wrong | **yes** |
 | you changed the loader or the chunk settings | optional: `ingest --all` rewrites what changed (read the counts), and a rebuild gives exactly what a fresh build gives |
+| you changed the search settings (`HNSW` in `store.py`) | **yes**: a collection keeps the settings it was created with (section 5.8) |
 | you switched `EMBEDDING_MODEL` | not needed: the model is in the collection's name, so the new model starts an empty collection and `ingest --all` fills it. The old collection stays in the folder, because `--rebuild` only deletes the current model's (we checked on a copy of the index). Delete the folder to get rid of it |
 
 **How to rebuild.**
@@ -946,7 +949,7 @@ Only the new article was encoded. A run that says `added 0, updated 0, deleted 0
 1. **Check the files.** `for f in news/*.txt; do python -m prometheus.rag.loaders "$f" --show 0; done` (section 4.7, step 1). Nothing is deleted yet, and a broken file would stop the rebuild halfway.
 2. **Stop anything else that uses the index**, such as another Python session (later, the agent). Chroma runs inside the process, so only one process should use the folder at a time (entry 10).
 3. **Rebuild:** `python -m prometheus.rag.ingest --rebuild --all`. For today's files it takes about 9 seconds, a few of them loading the model.
-4. **Check the result.** `python -m prometheus.rag.store` shows the counts (`over the embedder's limit` must be 0, and `ingest` prints a WARNING if it is not). A second `ingest --all` must say `unchanged` for every file.
+4. **Check the result.** `python -m prometheus.rag.store` shows the counts (`over the embedder's limit` must be 0, and `ingest` prints a WARNING if it is not). A second `ingest --all` must say `unchanged` for every file, and `python labs/module3_rag/retrieval_experiments.py recall` should say that the search finds 100% of the true nearest chunks (section 5.8).
 
 Two cautions, both tested:
 
@@ -982,30 +985,293 @@ rm -rf data/processed/vectorstore
 python -m prometheus.rag.ingest --all
 ```
 
-### Next: Part 5
-
-Retrieve: `rag/retriever.py`. Search with filters (`tickers` and a date window), the score and "no supporting text", what to do about the same article appearing twice, and whether MMR helps on real queries. By hand, before any LLM is involved.
-
 ---
 
-## Part 5 preview: retrieve
+## Part 5: Retrieve (done)
 
-Stage 2 of the slide is *search vectors*, then *fetch text by ID*. Chroma does both in one call, so each hit comes back with its id, text and metadata. We keep on every hit what a citation needs: id, headline, publisher, date, url and score.
+Stage 2 of the slide is *encode the query, search vectors, fetch text by ID*. Chroma does the last two in one call, so each hit comes back with its id, text and metadata. This part writes the one function that does it, `search_news` in `prometheus/rag/retriever.py`, and tests it on the real news before any LLM is involved. In Part 6 the same function becomes the `retrieve_news` tool.
 
-The tutorial lists three search types for `as_retriever(search_type=...)`:
+```bash
+python -m prometheus.rag.retriever "what did MKBHD say about the foldable iPhone" --tickers AAPL -k 3
+```
 
-- `"similarity"`: the nearest chunks.
-- `"similarity_score_threshold"`: only chunks that score above a bar. This is the tool for the week 3 rule "if the filtered search finds nothing relevant, report 'no supporting text' and do not guess".
-- `"mmr"`: maximum marginal relevance, which trades similarity for diversity. We only add it if real results show near-duplicate chunks. Part 4's first taste did: for "AI memory shortage", two of the top three chunks came from the same article (NVDA's repeated headlines are the other suspect).
+### 5.1 What retrieval has to get right
 
-Your Lab 3.2 gives a rule of thumb for MMR. Use it when the corpus is redundant, the question is broad and coverage matters. Skip it for narrow questions, small result sets and when latency is critical. It suggests two stages (fetch about 100 candidates, then pick 5 to 10 with MMR) and a lower lambda (0.3 to 0.5) for exploratory questions and a higher one (0.7 to 0.9) for specific ones. Prometheus meets the "use" list for Case 2, a broad question over redundant news (repeated headlines, and the same story from Finnhub and Polygon), and the "skip" list for "what happened to META today?".
+The week 3 submission asks four things of retrieval. Each one is a decision in section 5.3.
 
-MMR works through our stack: `as_retriever(search_type="mmr", search_kwargs={"k": 5, "fetch_k": 20, "lambda_mult": 0.5})`, where `lambda_mult` is the lab's lambda (0 is most diverse, 1 is most relevant). On a toy corpus, at 0.7 and 0.5 a near-duplicate story stayed in the results, and at 0.3 and 0 a different story replaced it. So the setting matters, and we tune it on real queries. The lab's own LangChain snippet imports `langchain_community` and `RetrievalQA`, which are the pre-1.0 imports (entry 11). The idea carries over; those imports do not.
+| Question | Why it is not obvious |
+|---|---|
+| Which chunks may be searched? | the work order names a company and a time period, and these must limit the search itself, not only the wording of the question |
+| How good is a hit? | the caller needs a number it can compare |
+| Is there anything at all? | "no supporting text" has to be an answer, not a guess |
+| Is the same thing shown twice? | the news repeats itself: one article has several chunks, and one story has many articles |
 
-Two cautions we already have evidence for:
+The tutorial's `as_retriever(search_type=...)` offers three searches: `"similarity"` (the nearest chunks), `"similarity_score_threshold"` (only chunks above a bar, the tool for "no supporting text") and `"mmr"` (trade similarity for variety, section 5.6). We wrote one small function instead. We need all four answers together, a clock for the date window, hits that carry what a citation needs (id, headline, publisher, date, url, score), and one function that Part 6 can turn into a tool.
 
-- **Scores are only comparable within one query.** In the Part 1 check, the correct answer for "AI cloud company worried about its debt" scored 0.37, while an unrelated chunk scored 0.21 for the same query and the best answer to another query scored 0.62. A fixed threshold needs tuning on real queries, and the grader step in Part 7 (an LLM judging relevance) is the guide's answer to the same problem.
-- **A date window changes every day.** "The last 7 days" must be turned into a `published_ts` bound at call time. We will do that in one small search function (the tutorial's `@chain` retriever has the same shape), and that function becomes the LangChain tool in Part 6.
+### 5.2 How we judged it: real questions
+
+Numbers beat opinions, so we wrote questions about the real articles and measured. `python labs/module3_rag/retrieval_experiments.py questions` prints all of them, with the headlines that answer each one.
+
+| Kind | How many | Example |
+|---|---|---|
+| Answerable, narrow | 23 | "Which analyst thinks the foldable iPhone could sell about 20 million units?" |
+| Answerable, vague | 8 | "What is happening with Apple?" (with `AAPL` and the last 7 days), "Apple news" |
+| Not in the news at all | 7 | "chocolate cake recipe", "Boeing 737 production delays", "Walmart quarterly earnings" |
+| Right company, topic not in the news | 7 | "Tesla's Bitcoin holdings", "Nvidia's partnership with Boeing" (with ticker and 7 days) |
+
+The absent topics were checked: each of `boeing`, `bitcoin`, `walmart`, `pfizer` and the others appears 0 times in the four news files. (The Fed does appear, so it is not used as a negative.) A question counts as answered in two ways:
+
+- **source article:** an article whose headline matches my rule is among the hits. This is strict, because another article may answer the question too.
+- **answer in text:** the text of a retrieved chunk contains the answer. This is what the LLM would really read.
+
+Limits: 23 questions is a small set, and I wrote them. The script and the ground truth are in the repo, so you can check them and add your own.
+
+### 5.3 The decisions we made
+
+| # | Question | Decision | Evidence |
+|---|---|---|---|
+| 1 | How many results? | `k=5` articles, at most 20 | the answer was in the top 5 for 23 of 23 questions, and the top 3 missed one (5.6) |
+| 2 | One hit per chunk or per article? | one per article: its best chunk | a bare chunk search spends 16% of the top-5 slots on a second chunk of an article already listed (5.6) |
+| 3 | Where do the filters act? | inside the search: `tickers` with `$contains` (several tickers are OR-ed), and a date window as a `published_ts` bound counted back from `now` | filtering after the search would have kept 0 of 5 hits. The window moves every day, so it is computed at call time, with a clock that tests can set (5.6) |
+| 4 | What is the score? | cosine similarity, `1 - distance`, computed by us | LangChain's own scored search does the same sum, but warns with a message that lists every document when a score is negative (5.8) |
+| 5 | The "no supporting text" bar | `MIN_SCORE = 0.40` | every answerable question scored 0.47 or more and every off-topic one under 0.40, apart from two finance questions at 0.45 and 0.47. It cannot catch "right company, topic not in the news" (0.40 to 0.64) (5.6) |
+| 6 | Near-duplicate stories | `diverse=True` is an option, off by default: MMR with `lambda_mult=0.5`, the bar applied first | it spreads a broad question over more stories, and it costs narrow questions an answer at 0.5 and below (5.6) |
+| 7 | API `keywords` in the text? | no | 0 of 23 questions changed, and the index grows by 20% (5.6) |
+| 8 | The search settings | HNSW `ef_construction=400`, `ef_search=300`, `max_neighbors=32`, in `store.py`, then rebuild | Chroma's defaults missed 2% to 4% of the true nearest chunks (5.8) |
+| 9 | Which embedding model | stay with `all-MiniLM-L6-v2` | two other models on the same chunks and questions: the answer's rank differs on 5 of 23 questions, with as many wins as losses. The larger one builds 6 times slower (5.6h) |
+
+### 5.4 The code
+
+`retriever.py` has one function, one result type and a viewer for use by hand.
+
+| Piece | Job |
+|---|---|
+| `Hit` | one result: chunk id, article id, chunk number (from 1), headline, publisher, date, url, tickers, text and score. It is frozen, so evidence cannot be edited after the search. `as_dict()` is for Part 6 |
+| `search_news(query, tickers=, since_days=, k=5, min_score=0.40, diverse=False)` | the search |
+| `python -m prometheus.rag.retriever "question" --tickers AAPL --since-days 7 -k 5 --min-score 0.4 --diverse --text` | the viewer (every option is optional) |
+
+The steps inside `search_news`:
+
+1. **Check the arguments.** A bad ticker, `k` outside 1 to 20 or `since_days` below 1 is a `ValueError` before anything is searched. The ticker check is the same `check_symbol` that guards file names (section 3.4), so a prompt-injected `../../.env` stops here.
+2. **Build the filter** and ask Chroma for the `k * 10` nearest chunks, so that grouping by article still finds enough articles.
+3. **Turn distances into scores** and keep each article's best chunk.
+4. **Apply the bar.** Whatever scores below it is dropped. If nothing is left the result is `[]`, which means "no supporting text".
+5. **With `diverse=True`,** choose from what is left with maximal marginal relevance.
+6. **Return the first `k`** as `Hit`s.
+
+The filter is where the Part 3 decisions pay off (`tickers` kept as a list, `published_ts` as a number):
+
+```python
+def _where(symbols, since_ts):
+    clauses = []
+    if symbols:
+        has = [{"tickers": {"$contains": s}} for s in symbols]
+        clauses.append(has[0] if len(has) == 1 else {"$or": has})
+    if since_ts is not None:
+        clauses.append({"published_ts": {"$gte": since_ts}})
+    if not clauses:
+        return None
+    return clauses[0] if len(clauses) == 1 else {"$and": clauses}
+```
+
+Chroma wants at least two clauses inside `$or` and `$and`, hence the special cases.
+
+### 5.5 Run it
+
+A narrow question, filtered to Apple. Real output (each hit also prints its url on a second line, left out here):
+
+```text
+$ python -m prometheus.rag.retriever "what did MKBHD say about the foldable iPhone" --tickers AAPL -k 3
+question : 'what did MKBHD say about the foldable iPhone'
+filters  : tickers AAPL
+settings : k=3, relevance bar 0.4, diverse no
+
+ 1  0.73  Yahoo        2026-10-23  MKBHD drops a blunt verdict on Apple’s $1,999 iPhone Duo  [AAPL]  chunk 1/1
+ 2  0.64  Yahoo        2026-10-22  Apple’s foldable iPhone has a $2,000 app problem  [AAPL]  chunk 1/1
+ 3  0.57  Yahoo        2026-10-19  Apple extends iPhone Duo delivery, disappointing eager customers  [AAPL]  chunk 1/1
+```
+
+When nothing is good enough the answer is an empty result, and the viewer shows how close the best chunk came, so you can see why:
+
+```text
+$ python -m prometheus.rag.retriever "foldable iPhone sales" --tickers META
+no supporting text: nothing scored 0.4 or more.
+closest was 0.24: The Motley Fool, 2026-10-23: Not Intel. Not CoreWeave. This Underappreciated Nvidia-Backed Company Is Growing
+
+$ python -m prometheus.rag.retriever "chocolate cake recipe"
+no supporting text: nothing scored 0.4 or more.
+closest was 0.15: The Motley Fool, 2026-10-20: Greg Abel's Berkshire Hathaway Owns These 5 Stocks. Here's What $1,000 in Each C
+```
+
+The first of these is the filter and the bar working together: the filter limits the search to Meta's articles, and nothing about Meta is near a question on foldable phones. The date window, here "the last day":
+
+```text
+$ python -m prometheus.rag.retriever "What is happening with Apple?" --tickers AAPL --since-days 1 -k 3
+ 1  0.54  Yahoo        2026-10-24  Apple just made a surprising move into your home  [AAPL]  chunk 1/1
+ 2  0.51  Yahoo        2026-10-24  Apple Just Passed Nvidia as the World’s Most Valuable Company on iPhone   [AAPL, NVDA]  chunk 1/1
+ 3  0.49  Yahoo        2026-10-24  Is Demand for Apple’s iPhone 18 Pro Weakening? Jefferies Reports Shorter   [AAPL]  chunk 1/1
+```
+
+And from Python, which is how Part 6 will call it:
+
+```python
+from prometheus.rag.retriever import search_news
+
+hits = search_news("which company did Apple pick as a manufacturing partner", tickers="AAPL", since_days=7)
+for h in hits:
+    print(f"{h.score:.2f}  {h.publisher}  {h.published_utc[:10]}  {h.headline}")
+hits[0].as_dict()   # every field, ready to travel as the tool's artifact
+```
+
+### 5.6 What the experiments showed
+
+**a. The answer is near the top, so 5 is enough.** For the 23 narrow questions, ranks counted among articles:
+
+```text
+answer in text   top 1: 19/23   top 3: 22/23   top 5: 23/23   top 10: 23/23   | MRR 0.89
+source article   top 1: 19/23   top 3: 22/23   top 5: 22/23   top 10: 22/23   | MRR 0.88
+```
+
+The one question that needs the fifth place is a good lesson in the two ways of counting. "Which company did Apple pick as a new US manufacturing partner for iPhone materials?" returns four articles about Apple's US supplier network (0.81, 0.77, 0.75, 0.70) and then, at 0.67, an article whose text names **Qnity**, the answer. The article whose headline names Qnity is not in the top 20 at all: it is a stock-analysis piece *about* Qnity, so it matches questions about Qnity's business, not about Apple's suppliers. The answer still reached the model, in another article's text. That is why we count "answer in text", and why 3 would have been too few.
+
+**b. One hit per article gives the slots back.** In a bare chunk search, 18 of the 115 top-5 slots (16%) went to a second chunk of an article already listed, and 13 of 23 questions lost at least one slot. The answer ranks were the same either way for these narrow questions, so grouping costs nothing and gives the Advisor more different sources for the same prompt budget.
+
+**c. A score bar catches off-topic questions, and nothing more.** The best score each kind of question reached:
+
+| Kind of question | Lowest | Median | Highest |
+|---|---|---|---|
+| answerable, narrow (23) | 0.49 | 0.74 | 0.86 |
+| answerable, vague (8) | 0.47 | 0.58 | 0.63 |
+| not in the news at all (7) | 0.15 | 0.31 | 0.47 |
+| **right company, topic not in the news (7)** | **0.40** | **0.50** | **0.64** |
+
+And how many questions get results at each bar (the unanswerable ones should get none):
+
+| Bar | narrow answerable | vague answerable | not in the news | right company, no topic |
+|---|---|---|---|---|
+| 0.30 | 23/23 | 8/8 | 4/7 | 7/7 |
+| 0.40 | 23/23 | 8/8 | 2/7 | 7/7 |
+| 0.45 | 23/23 | 8/8 | 2/7 | 5/7 |
+| 0.50 | 22/23 | 7/8 | 0/7 | 3/7 |
+
+The bar of 0.40 keeps every question we can answer with room to spare (the lowest is 0.47), and stops the clearly off-topic ones: the cake, the football game, Pfizer, Boeing and Starbucks all score under 0.40. Two finance-adjacent questions get through, "Bitcoin ETF inflows" (0.45) and "Walmart quarterly earnings" (0.47), because the corpus is full of ETF and earnings articles.
+
+The last row of the first table is the important one. When a question names the right company but a topic with no news, the score stays high: "Nvidia's partnership with Boeing" scores 0.64 and "Tesla's Bitcoin holdings" 0.61. The company name dominates the similarity. That is *higher* than some perfectly good questions, so **no bar can reject those without also rejecting real answers**. A score says "this text is about the same things as the question", not "this text answers it". Only something that reads the text can judge that, which is why Part 7 plans an LLM grader and why the Data Clerk must check its citations. Our bar is a cheap first guard.
+
+**d. Near-duplicate stories: MMR helps broad questions and hurts narrow ones.** For four broad questions (ticker filter, last 7 days, top 5), `overlap` is the mean cosine similarity between the five hits (lower means more varied) and `relevance` is their mean score:
+
+| Question | Setting | relevance | overlap |
+|---|---|---|---|
+| What is happening with Apple? | plain | 0.54 | 0.53 |
+| | MMR 0.5 | 0.51 | 0.43 |
+| What is happening with Meta? | plain | 0.49 | 0.50 |
+| | MMR 0.5 | 0.43 | 0.39 |
+| What is happening with Nvidia? | plain | 0.57 | 0.60 |
+| | MMR 0.5 | 0.54 | 0.51 |
+| What is happening with Tesla? | plain | 0.54 | 0.56 |
+| | MMR 0.5 | 0.49 | 0.44 |
+
+MMR spreads the hits out, at a small cost in relevance. For Apple it brings in the biggest story, the iPhone Duo launch, which the plain search missed (its top five were investment-case, prediction, supplier and smart-home pieces). But MMR cannot create variety that is not there. For Meta, whose news is mostly one story, it swapped a relevant near-duplicate for a loosely related article (0.42), and without the bar it picked one that scored 0.19. That is why the bar is applied *before* the spreading.
+
+The cost for the 23 narrow questions, ranks among 10 articles (answer in text):
+
+```text
+plain     top 1: 19/23   top 3: 22/23   top 5: 23/23   | MRR 0.89
+MMR 0.7   top 1: 19/23   top 3: 21/23   top 5: 23/23   | MRR 0.88
+MMR 0.5   top 1: 19/23   top 3: 20/23   top 5: 22/23   | MRR 0.86
+MMR 0.3   top 1: 19/23   top 3: 19/23   top 5: 19/23   | MRR 0.83
+```
+
+Some of these questions have two articles that both answer them, and MMR removes the second one on purpose. At 0.3 it loses four answers. So your Lab 3.2 rule of thumb held on real data: use MMR for a broad question over redundant news, skip it for a narrow one. Hence `diverse` is an option and the default is off. The week 3 submission said "add MMR only if real results show near-duplicate chunks", and they do, so it is there as a choice for the broad questions. At `lambda_mult=0.5` the spreading is real (overlap down 0.09 to 0.12) and the cost is small; 0.7 changes little, and 0.3 loses answers.
+
+**e. The API keywords add nothing.** This was the open item from section 3.7. We built two throw-away indexes, one as stored now and one with each article's `keywords` added to its text (136 of the 281 articles have them):
+
+| Index | Chunks | Answer in top 5 | Questions that changed rank |
+|---|---|---|---|
+| as stored | 538 | 23/23 | |
+| with keywords | 643 (+20%) | 23/23 | 0 of 23 |
+
+The only visible effect was on a vague, unfiltered question ("Apple news"), whose best score rose from 0.47 to 0.50. So the keywords stay out of the text.
+
+**f. Filters.** For "foldable iPhone sales": with no filter, 5 hits with the best at 0.71. With `tickers=["NVDA"]`, 5 hits, best 0.42. With `tickers=["META"]`, 5 hits, best 0.24, which the bar then rejects. Filtering *after* the search would have kept 0 of the 5 unfiltered hits for NVDA. The date window, counted back from 2026-10-25 05:24 UTC, passes 21 articles for 1 day, 92 for 2, 164 for 3, 226 for 5, 278 for 7 and all 281 for 10.
+
+**g. The ticker filter has a blind spot.** For a Finnhub article, `tickers` is only the symbol it was fetched under (section 3.7), so an article about a company that was fetched under another symbol does not carry its ticker:
+
+| Ticker | Headlines naming the company | ... and carrying the ticker | ... but not |
+|---|---|---|---|
+| AAPL | 71 | 68 | 3 |
+| META | 20 | 19 | 1 |
+| NVDA | 81 | 76 | 5 |
+| TSLA | 19 | 15 | 4 |
+
+Those are 4% to 21% of the articles (3 of 71, 1 of 20, 5 of 81 and 4 of 19). The question "Tesla Semi truck production and AI components" shows what it costs: without a filter the best hit (0.69) is "Tesla (TSLA) Starts Semi Volume Output With $2.8 Billion AI Component Bet", which carries only `['NVDA']`. With `tickers=["TSLA"]` it is gone and the best hit is 0.56. We looked at the obvious repair, reading `(TSLA)` out of the headline to add the ticker, but only 2 of the 13 missed articles write their ticker like that, so we did not build it. Instead: put the company's name in the question (people do), and for a company-specific question consider searching without the ticker filter as well.
+
+**h. Is MiniLM the right embedder? Yes, it stays.** Section 4.2 promised this comparison: the same questions on the same chunks, changing only the embedding model. The chunks are the same (800 characters, none over any model's limit), and so are the search settings and the one-hit-per-article rule. `python labs/module3_rag/retrieval_experiments.py embedders` repeats it (the first run downloads two models, about 500 MB).
+
+| Model | Numbers per vector | Answer in the top 1 / 3 / 5 of 23 | MRR | Build of 538 chunks (CPU) |
+|---|---|---|---|---|
+| `all-MiniLM-L6-v2` (ours) | 384 | 19 / 22 / 23 | 0.89 | 3.9 s |
+| `multi-qa-MiniLM-L6-cos-v1` (same size, trained for question to passage search) | 384 | 21 / 21 / 22 | 0.93 | 3.4 s |
+| `all-mpnet-base-v2` (the tutorial's model, 5 times the parameters) | 768 | 20 / 22 / 22 | 0.91 | 24.2 s |
+
+The differences are noise. The rank of the answer differs on only 5 of the 23 questions, and each model beats each other model on about as many questions as it loses to it (MiniLM against either one: better on 2, worse on 2, tied on 19). The hardest question, the Qnity one in section 5.6a, is hard for all three (rank 5, 7 and 6). The larger model costs six times as long to build and twice the vector storage, and buys nothing visible. The model that is trained for questions ranks the answer first slightly more often (21 against 19) but is no better by the top 3, so we do not switch for one question of 23. At the scale of the S&P 500 the build time matters, which is another reason to keep the small model.
+
+Two things this comparison also showed:
+
+- **Scores belong to a model.** The best scores for the questions with answers run from 0.49 to 0.86 on MiniLM, 0.59 to 0.85 on `multi-qa` and 0.59 to 0.86 on `mpnet`, and the off-topic ones from 0.15 to 0.47, 0.22 to 0.47 and 0.11 to 0.54. The relevance bar of 0.40 was chosen for MiniLM. **After a change of `EMBEDDING_MODEL`, run `scores` again and choose the bar again.** None of the three separates "right company, topic not in the news" from a real answer either (section 5.6c): the best bar for each still lets 4 of those 7 questions through.
+- **The model's reading limit did not matter here.** MiniLM reads 256 tokens, `mpnet` 384 and `multi-qa` 512, and no chunk was over any of them. It would matter for longer chunks, such as filings.
+
+Limits: 23 questions that I wrote, one week of news, and models that need no query prefix (models that do, like the BGE family, were not tried). A larger or newer model might do better on filings, which have longer and denser text, and the week 3 submission says a larger model can wait for the DGX.
+
+### 5.7 Tests
+
+```bash
+pytest tests/test_rag_retriever.py -q
+```
+
+```text
+..................................................                       [100%]
+50 passed in 6.2s
+```
+
+Most tests use a tiny fake embedder with one dimension per word, so we know exactly which chunks are alike and what every score is:
+
+| Group | What it checks |
+|---|---|
+| What a hit is | best first; every field; one hit per article, `k` counts articles, and the best chunk is the one shown; a `Hit` cannot be edited |
+| Filters | one symbol, a list, any case; filtering before the ranking (a filter that excludes the best match still returns everything that passes); filters together; the date window uses the clock it is given, includes its edge and moves with the clock |
+| Scores | nothing relevant gives `[]`; a hit that scores exactly the bar is kept; the score equals LangChain's; a negative score raises no warning |
+| Diverse | it picks another story instead of the near-duplicate; the bar applies before the spreading |
+| Bad input | a blank question; `k`, `since_days`, the bar and lambda out of range; bad tickers, including `../../.env` |
+| The command line | hits with score and source; the options; "no supporting text" with the closest score; filters that match nothing; a bad ticker; an empty index |
+| The real model (four tests, skipped when the model is not available) | a question with no word in common finds its article; an off-topic question has no supporting text; filters and the bar work together; the whole chain from `ingest` to the viewer |
+
+Two more tests elsewhere cover `check_symbol` and the store's new settings, and the whole suite is now 151 tests. To be sure the tests can fail, we broke `retriever.py` 14 ways on purpose: ignore the ticker filter, a wrong metadata key, no grouping by article, the worst hit first, ignore the bar, the date edge left out, the window counted in hours, the bar applied after the spreading, the distance used as the score, no limit on `k`, lambda the wrong way round, tickers not checked, the chunk number counted from 0, and the clock argument ignored. The tests caught all 14 (1 to 13 failing tests each), and the file was restored and compared byte for byte. Our first run of this check reported "0 of 14 caught": I had passed `-q` twice, which makes pytest drop the summary line the script reads. A check of the tests needs checking too.
+
+### 5.8 What we found along the way
+
+- **LangChain's scored search is noisy for a large `k`.** `similarity_search_with_relevance_scores` warns when any score is below 0, and the warning message lists every document. A date-window sweep that asked for 200 chunks produced 200 KB of warning text. Far-away chunks can score below 0, so this is normal for a large `k`. We take the distance from `similarity_search_with_score` and compute `1 - distance` ourselves, which is the same number. A test checks that the two agree and that no warning is raised.
+- **Approximate search is not exact, and updating in place makes it worse.** Chroma finds neighbours with an approximate method (HNSW). We compared it with brute force over every stored vector, for the 38 questions, on the top 100 chunks:
+
+  | HNSW settings | after in-place updates: found / top 10 exact | fresh build: found / top 10 exact |
+  |---|---|---|
+  | Chroma's defaults (`ef_search` 100, `ef_construction` 100, `max_neighbors` 16) | 96.1% / 36 of 38 | 97.8% / 36 of 38 |
+  | `ef_search` 300 | 99.4% / 33 of 38 | 100.0% / 38 of 38 |
+  | `ef_search` 300, `ef_construction` 400, `max_neighbors` 32 | 99.9% / 38 of 38 | 100.0% / 38 of 38 |
+
+  We noticed because of a mistake: my first keywords experiment built one index on top of the other by accident (both folders were called `with`), and one question's answer fell out of the top 10. Our `ingest` updates chunks in place, so this is the situation it creates. Your real index, built with the defaults, found 98.4% and had the exact top 10 for 35 of 38 questions, and that number changed from one process start to the next (37 of 38 in an earlier run). The new settings cost nothing measurable here (ingesting the 538 chunks took 3.3 s against 3.4 s, and searches were no slower). A collection keeps the settings it was created with, so they reached your index through `--rebuild --all` (section 4.8). It now finds 100.0% and has the exact top 10 for 38 of 38. `python labs/module3_rag/retrieval_experiments.py recall` repeats this check whenever you want it.
+- **The company name dominates a score** (section 5.6c). That is why a score bar is a first guard and not a judge.
+- **The ticker filter misses 4% to 21% of a company's articles** (section 5.6g), because of how the data was fetched, and the cheap repair would fix almost none of them.
+- **The week 3 submission's three open items are answered.** "Top-k, defaulting to 5 **[TODO: confirm on real queries]**": confirmed, 5 holds the answer for 23 of 23. "Add MMR only if real results show near-duplicate chunks": they do, so it is an option for broad questions (section 5.6d). "Embedder **[TODO: confirm after testing on real chunks]**": confirmed, MiniLM stays (section 5.6h).
+- **A score belongs to its model.** The relevance bar was tuned for MiniLM, and after any change of `EMBEDDING_MODEL` it has to be tuned again (section 5.6h).
+
+The decisions are recorded in design choices entry 20.
+
+### Next: Part 6
+
+Tools and the chat model. `retrieve_news` wraps `search_news`: it shows the model `query`, `tickers`, `since_days`, `k` and `diverse`, and its docstring tells the model to set `diverse` only for broad questions. It numbers the hits as sources and keeps the full `Hit`s as the artifact. An empty result becomes "no supporting text", and the citation check in `rag/citations.py` follows. Part 7 adds the relevance grader that a score bar cannot be.
+
+---
 
 ## Part 6 preview: tools
 
@@ -1036,11 +1302,11 @@ Which toolbox methods become tools (the allow-list, settled in Part 6):
 | `fetch_news`, `fetch_press_releases`, `fetch_filings` | yes | network calls that refresh the text files |
 | `search`, `discover` | yes | keyword search over the stored text; `discover` finds tickers for a trend phrase |
 | `financials.get`, `performance_summary` | yes | `performance_summary` without its 61-point bell curve (that is for the UI chart) |
-| `retrieve_news` (new, from `rag/`) | yes | search by meaning, with filters |
+| `retrieve_news` (new: wraps `rag.retriever.search_news`, Part 5) | yes | search by meaning, with ticker and date filters |
 | `sync_market_news`, `sync_cnbc_news` | no | scheduled refresh jobs; `discover` already refreshes when it needs to |
 | `init_aws_cli`, `fetch_historical_data`, `convert_to_parquet`, `export_project` | never | install software, download over 100 GB, run rsync to any path |
 
-**What `retrieve_news` returns.** This is stage 2 of the slide, handed to the LLM. The text the model sees lists the hits as numbered sources, for example `[1] Yahoo, 2026-10-23: The iPhone Duo Launch Kicks Off ...`. The full hits (id, text, headline, publisher, date, url, score) travel as the tool's *artifact*, so they reach the work order without filling the prompt. The model cites by number, because a short number is easier to copy than an id like `polygon:44a8...`. A small check in `rag/citations.py` then confirms that every `[n]` in the answer points at a chunk that was really retrieved, and turns the numbers back into ids and urls. When nothing clears the relevance bar, the tool says "no supporting text" and the Data Clerk must say so too.
+**What `retrieve_news` returns.** This is stage 2 of the slide, handed to the LLM, and it is `search_news` from Part 5 with `query`, `tickers`, `since_days`, `k` and `diverse` as the arguments the model sees (its docstring says to set `diverse` only for a broad question, section 5.6d). The text the model sees lists the hits as numbered sources, for example `[1] Yahoo, 2026-10-23: The iPhone Duo Launch Kicks Off ...`. The full hits (id, text, headline, publisher, date, url, score) travel as the tool's *artifact*, so they reach the work order without filling the prompt. The model cites by number, because a short number is easier to copy than an id like `polygon:44a8...`. A small check in `rag/citations.py` then confirms that every `[n]` in the answer points at a chunk that was really retrieved, and turns the numbers back into ids and urls. When nothing clears the relevance bar, the tool says "no supporting text" and the Data Clerk must say so too. The bar only catches off-topic questions (section 5.6c), so the Data Clerk's prompt also tells it to say so when the sources do not answer the question.
 
 **MCP.** FastMCP serves the same functions to other hosts (Part 8), which is the week 2 "the Data Clerk calls its own MCP". Your existing FastMCP tools already work with LangChain through a hand-made bridge of about 15 lines (tested with `fetch_quote`). LangChain's official bridge, `langchain-mcp-adapters`, cannot be installed here: it needs `mcp<2` and FastMCP 4 needs `mcp>=2`. And `print()` inside an MCP tool is safe on this stack (tested), so the DataAgent's progress bars are not a problem. If you want the Data Clerk to call through MCP from day one, the bridge makes that a small change.
 
@@ -1060,4 +1326,5 @@ The graph is the simple loop from section 0.6, with the DataAgent behind its too
 | 6 and 8 | 14 (tools: plain functions, LangChain now, MCP next) |
 | 3 | 16 (loading the news files into Documents; the Finnhub `tickers` finding) |
 | 4 | 17 (chunking, encoding and storing the news; safe re-runs), 18 (HTML in the news text), 19 (breaking the input on purpose, and how problems get fixed) |
-| 5 and later | added as we make them |
+| 5 | 20 (retrieval: filters, scores and the relevance bar, one hit per article, MMR, keywords, the search settings), 21 (the embedding model, confirmed) |
+| 6 and later | added as we make them |
