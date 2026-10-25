@@ -6,6 +6,8 @@
 
     python -m prometheus.agents.data_clerk.agent "What did MKBHD say about Apple's foldable iPhone?"
 
+    DataClerk().request_data(work_order)     # the agent call the other agents make: a work order in, the same order out, with its data
+
 NOT to be confused with `data_agent.py` in this folder, which is the Data Clerk's TOOLBOX (the DataAgent: plain Python,
 no LLM, no loop). This file is the agent. It receives its toolbox, so a test can hand it a fake one.
 
@@ -44,6 +46,7 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 
+from prometheus.common.work_order import WorkOrder, attach_result, verify_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.prompts.data_clerk import LAST_TURN, repair_message, system_prompt
 from prometheus.rag.citations import SourceBook
@@ -226,6 +229,31 @@ class DataClerk:
             return result
         self._fill(result, messages, book, budget, forced)
         return result
+
+    def request_data(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
+        """The Data Clerk's agent call (the design's `DataClerk.request_data`): check the work order, answer its query, put the
+        result on the order, check that, and return the SAME order. An order that already has its data comes back unchanged. A request the Data Clerk should not
+        take is not an exception: the order comes back `data_failed` with the reasons in `errors`."""
+        if order.status in ("data_ready", "recommended"):
+            return order  # it already has its data: a repeated request changes nothing (and never damages a good order)
+        reasons = verify_request(order)
+        if reasons:
+            order.status, order.errors = "data_failed", [*order.errors, *reasons]
+            return order
+        return attach_result(order, self.ask(self._question(order), today))
+
+    @staticmethod
+    def _question(order: WorkOrder) -> str:
+        """The work order's query, with the order's own limits added in words: the subject, the time window and how many sources."""
+        hints = []
+        if order.subject:
+            hints.append("subject: " + (order.subject if isinstance(order.subject, str) else ", ".join(order.subject)))
+        if order.since_days:
+            hints.append(f"use news from the last {order.since_days} days")
+        elif order.time_period:
+            hints.append(f"time period: {order.time_period}")
+        hints.append(f"use at most {order.top_k} sources")
+        return f"{order.query.strip()}\n\n(Work order: {'; '.join(hints)}.)"
 
     @staticmethod
     def _fill(result: Result, messages: list, book: SourceBook, budget: Budget, forced: bool) -> None:

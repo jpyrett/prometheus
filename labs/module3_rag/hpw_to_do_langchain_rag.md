@@ -22,7 +22,7 @@ References we follow:
 | 5 | Retrieve by hand on real data: search vectors, fetch text by ID, filters, scores, "no supporting text", repeats | done |
 | 6 | Tools and the chat model: `retrieve_news` and the DataAgent tools, numbered sources, the citation check, the OpenRouter chat model, tested with the real model | done |
 | 7 | The Data Clerk agent: a LangGraph where the LLM decides whether to retrieve or fetch, with a budget, a citation check, and defences against hidden instructions; measured with the real model | done |
-| 8 | FastMCP: serve the same tool functions; a work order that carries the Data Clerk's result; the Advisor comparison for the week 3 submission (with and without retrieval) | **next** |
+| 8 | FastMCP: the Data Clerk's tools served over MCP; a work order that carries its result; an Advisor whose score is calculated from checked evidence, compared without and with retrieval | done |
 
 How we work:
 
@@ -199,7 +199,7 @@ flowchart LR
     CLERK["Data Clerk: LLM plus loop<br/>agents/data_clerk/agent.py"] -->|"tool calls, allow-list only"| FUNCS["tool functions<br/>tools/data_clerk.py"]
     FUNCS --> TOOLBOX["DataAgent toolbox<br/>agents/data_clerk/data_agent.py"]
     FUNCS --> RAGLIB["rag/ and Chroma"]
-    FUNCS -.->|"same functions, Part 8"| MCPSRV["FastMCP server<br/>mcp/server.py"]
+    FUNCS -.->|"same functions, Part 8"| MCPSRV["FastMCP server<br/>mcp/data_clerk_server.py"]
 ```
 
 "The DataAgent is a callable node" (your request 3) is Part 7. The Data Clerk's graph has a tool node that runs the calls the LLM asks for, such as `fetch_news(symbol)`, and a step after the fetch loads the new text into Chroma.
@@ -364,7 +364,10 @@ prometheus/
     data_agent.py            its toolbox: DataAgent, plain Python. Vendored copy, not edited.
     agent.py                 the LLM agent: the agentic-RAG graph (Part 7)
   tools/data_clerk.py      the Data Clerk's tool functions: plain, typed, documented (Part 6)
-  mcp/server.py            serves the same functions as MCP tools (Part 8)
+  mcp/data_clerk_server.py serves the same functions as MCP tools (Part 8); mcp/server.py is the course's quotes server
+  common/work_order.py     the work order the agents pass to each other (Part 8)
+  agents/advisor/advisor.py  the Advisor v0: a score calculated from checked quotes (Part 8)
+  prompts/                 the system prompts (data_clerk.py in Part 7, advisor.py in Part 8)
   rag/                     RAG library, shared by agents: files -> Documents -> Chroma -> retriever
     config.py                paths and model names (from .env, with defaults)
     loaders.py               news/<SYMBOL>.txt -> LangChain Documents
@@ -378,7 +381,7 @@ prometheus/
 labs/module3_rag/          this guide and check_install.py
 ```
 
-Today `agents/data_clerk/` (the toolbox and its two test scripts) and `rag/` with `config.py`, `loaders.py`, `store.py`, `ingest.py`, `retriever.py` and `citations.py` exist, and so do `tools/data_clerk.py`, `models/chat.py`, `prompts/data_clerk.py` and `agents/data_clerk/agent.py`. The one remaining file is `mcp/server.py` (Part 8).
+Today `agents/data_clerk/` (the toolbox and its two test scripts) and `rag/` with `config.py`, `loaders.py`, `store.py`, `ingest.py`, `retriever.py` and `citations.py` exist, and so do `tools/data_clerk.py`, `models/chat.py`, `prompts/data_clerk.py`, `agents/data_clerk/agent.py`, and, from Part 8, `mcp/data_clerk_server.py`, `common/work_order.py`, `agents/advisor/advisor.py` and `prompts/advisor.py`.
 
 The rules behind it (full reasoning in entries 12 to 14):
 
@@ -1415,8 +1418,8 @@ base url : https://openrouter.ai/api/v1
 api key  : set
 data_clerk : openai/gpt-oss-120b
 fast       : qwen/qwen3-30b-a3b
-advisor    : nvidia/nemotron-3-120b
-critic     : nvidia/nemotron-3-120b
+advisor    : nvidia/nemotron-3-super-120b-a12b
+critic     : nvidia/nemotron-3-super-120b-a12b
 ```
 
 ### 6.6 Tests
@@ -1496,9 +1499,9 @@ The broad question got `diverse: True` and a 7-day window, as the description as
 
 The decisions are recorded in design choices entry 22.
 
-### 6.9 MCP, later (Part 8)
+### 6.9 MCP, later (done in Part 8)
 
-FastMCP serves the same methods to other hosts (Part 8), which is the week 2 "the Data Clerk calls its own MCP". Your existing FastMCP tools already work with LangChain through a hand-made bridge of about 15 lines (tested with `fetch_quote`). LangChain's official bridge, `langchain-mcp-adapters`, cannot be installed here: it needs `mcp<2` and FastMCP 4 needs `mcp>=2`. And `print()` inside an MCP tool is safe on this stack (tested), so the DataAgent's progress bars are not a problem. If you want the Data Clerk to call through MCP from day one, the bridge makes that a small change.
+FastMCP serves the same methods to other hosts (built in Part 8, section 8.2), which is the week 2 "the Data Clerk calls its own MCP". Your existing FastMCP tools already work with LangChain through a hand-made bridge of about 15 lines (tested with `fetch_quote`). LangChain's official bridge, `langchain-mcp-adapters`, cannot be installed here: it needs `mcp<2` and FastMCP 4 needs `mcp>=2`. And `print()` inside an MCP tool is safe on this stack (tested), so the DataAgent's progress bars are not a problem. If you want the Data Clerk to call through MCP from day one, the bridge makes that a small change.
 
 ### 6.10 How one question flows through Part 6, step by step
 
@@ -1834,9 +1837,210 @@ The first result was bad: **the real model obeyed in 6 of 8 runs**, calling both
 
 The decisions are recorded in design choices entry 24.
 
-### Next: Part 8
+---
 
-Serve the same tool methods through FastMCP (`prometheus/mcp/server.py`); a work order that carries the Data Clerk's `Result` (answer, references, problems) to the Advisor and the Critic; and then the comparison the week 3 submission asks for, the Advisor's recommendation with and without the retrieved chunks. Two things from this part carry forward: the Critic should read the cited chunks, because a valid citation under a stretched sentence is the failure nothing in code can see, and the agent's `allow_fetch` flag is a decision for whoever owns the work order, not for the model.
+## Part 8: FastMCP, the work order and the Advisor (done)
+
+Part 7 gave us an agent that answers a question from the stored news. Part 8 connects it to the rest of the desk, in three pieces that the week 2 design and the week 3 submission ask for:
+
+1. **The Data Clerk's own MCP server**: the same tools, served to any MCP host (`prometheus/mcp/data_clerk_server.py`).
+2. **The work order**: the one JSON object the agents pass to each other, now carrying the Data Clerk's data (`prometheus/common/work_order.py`, and `DataClerk.request_data`).
+3. **The Advisor, version 0**: recommendations whose score is calculated by code from evidence that code has checked (`prometheus/agents/advisor/advisor.py`). It exists to answer the submission's question: what does retrieval change in the Advisor's recommendation and score?
+
+```bash
+python -m prometheus.mcp.data_clerk_server                  # serve the Data Clerk's tools over MCP (stdio)
+python labs/module3_rag/mcp_check.py                        # talk to it the way another host would
+python labs/module3_rag/advisor_with_without.py --model nvidia/nemotron-3-super-120b-a12b    # Case 2: the Advisor without and with retrieval
+```
+
+```python
+from prometheus.common.work_order import new_work_order
+from prometheus.agents.data_clerk.agent import DataClerk
+from prometheus.agents.advisor.advisor import Advisor
+
+order = new_work_order("AI memory shortage. Which companies are affected?", top_k=10)
+DataClerk().request_data(order)       # the Data Clerk fills order.data: answer, cited chunks, the sources it was shown
+Advisor().advise(order)               # the Advisor appends order.recommendations, each with a calculated score
+print(order.model_dump_json())        # the whole order is plain JSON
+```
+
+**A picture of the whole thing** (the system map, the LangGraph, one question step by step, the ingest pipeline, the classes and the Advisor comparison, with the real LangChain and LangGraph classes named): `design/week3_e2e.md`.
+
+### 8.1 What Part 7 left for this part
+
+| Left open | What Part 8 does |
+|---|---|
+| "Serve the same tool functions through FastMCP" (the plan since Part 0) | a server whose tools are the same bound methods the agent calls, with a test that the two agree |
+| the Data Clerk's result had nowhere to go | a `WorkOrder` with a slot for the data, checks on it (`verify_request`, `verify_action`) and `DataClerk.request_data(order)`, the agent call the design names |
+| the week 3 submission's Advisor half was **[TODO]** | an Advisor, and a comparison of its recommendation and score without and with the chunks |
+| the stretched sentence (the Data Clerk's answers said Micron, SK Hynix and SanDisk fell a third, citing a chunk that names no company) | the Advisor reads the chunks, not the Data Clerk's summary, and a signal whose quote does not name the company does not count |
+| the `advisor` and `critic` roles pointed at a model that does not exist | fixed (section 8.7) |
+
+### 8.2 The Data Clerk's MCP server
+
+The week 2 design says the Data Clerk "calls its own MCP (quotes, news, filings, RAG)". `server.py`, from the course lab, is the quotes server and is left alone. The Data Clerk's tools get their own server, `data_clerk_server.py`, so that the text tools and the Redis-backed quotes can change independently.
+
+The important part is that **it contains no new logic**. Each MCP tool is a bound method of `DataClerkTools`, the same function the LangChain agent calls:
+
+```python
+for name in served_tools(allow_fetch):
+    server.tool(getattr(tools, name), name=name, annotations=ANNOTATIONS[name])
+```
+
+FastMCP reads the name, the typed arguments and the docstring, as LangChain does. We checked that the two give the model the same thing: the argument names, which arguments are required, the description and the text of every argument's description are identical for all eight tools. So there is one implementation and two ways to reach it.
+
+| Decision | What | Why |
+|---|---|---|
+| **Fetch tools are not offered** unless the server is started with `--allow-fetch` | by default the host sees five tools: `retrieve_news`, `keyword_search`, `discover_tickers`, `get_financials`, `get_price_summary` | any host that connects, a stray one or a compromised one, can read the stored news and nothing else. A tool that is not offered cannot be called. It is the same rule as the agent's `allow_fetch`: a fetch uses the paid APIs and writes your news files |
+| **It does not number sources** | `retrieve_news` returns the hits (chunk id, headline, publisher, date, url, tickers, text, score) with no `number` | a number means "the nth source in this answer", and a stateless server cannot know that. The caller owns the numbering and wraps the hits in a `SourceBook` |
+| **It does not enforce the agent's budget** | no search count, no "fetch before you read" rule | the budget belongs to a run of an agent, and the server has no runs. A host that connects needs its own |
+| **Hints to the host** (MCP annotations) | the local reads are `readOnly`, `get_financials` is read-only but reaches an outside API, the fetch tools are not read-only (and not destructive: they add files, they delete nothing) | a well-behaved host can ask for confirmation before it calls a tool that writes |
+| **The agent is not rewired through MCP** | `DataClerk` still calls the tool methods directly | the design has the Advisor reach the Data Clerk by an *agent call* (`DataClerk.request_data`), not through MCP. The MCP server is for other hosts. And `langchain-mcp-adapters` cannot be installed here (section 6.9) |
+| **The same checks protect this way in** | a bad ticker, `k=99` or an empty term list comes back as a `ToolError` with the reason | the argument checks of Part 6 live in the methods, so MCP gets them for free. The error carries no traceback, no path and no key |
+
+Run it, as another host would (real index, real stdio subprocess; no model is called, so it costs nothing and needs no key):
+
+```bash
+python labs/module3_rag/mcp_check.py
+```
+
+```text
+1. the server offers 5 tools (fetching is off, so no fetch tool):
+     retrieve_news      reads stored text
+     keyword_search     reads stored text
+     discover_tickers   reads stored text
+     get_financials     reads an outside API
+     get_price_summary  reads stored text
+
+2. retrieve_news({"query": "what did MKBHD say about the foldable iPhone", "tickers": "AAPL", "k": 3}) over MCP: found=True, 3 hits
+     0.73  Yahoo  2026-10-23  MKBHD drops a blunt verdict on Apple’s $1,999 iPhone Duo  [AAPL]
+     0.64  Yahoo  2026-10-22  Apple’s foldable iPhone has a $2,000 app problem  [AAPL]
+     0.57  Yahoo  2026-10-19  Apple extends iPhone Duo delivery, disappointing eager customers  [AAPL]
+
+4. the same call made directly on the method: identical to the MCP answer: True
+
+5. fetch_news over MCP: refused (Unknown tool: 'fetch_news'). Nothing was fetched.
+```
+
+The scores are the ones from Part 5 (0.73, 0.64, 0.57), and step 3 of the script shows the numbered text a model would read once an agent wraps the hits in a `SourceBook`.
+
+### 8.3 The work order
+
+The design says every agent reads and updates the same `<WORK_ORDER>`: the Account Manager creates it, the Data Clerk fills in the data, the Advisor appends a recommendation, the Critic judges it. `WorkOrder` is that object, as far as the Data Clerk and the Advisor need it today (the Account Manager, Critic and Trader fields come with those agents). It is a Pydantic model, so it is plain JSON in and out.
+
+| Field | What it holds |
+|---|---|
+| `request_id`, `requester`, `created_utc`, `schema_version` | the metadata the design asks for |
+| `query` | the request in the user's own words: it becomes the Data Clerk's question |
+| `action_type`, `subject`, `source`, `time_period`, `since_days`, `live`, `top_k` | the design's fields (`search_news`, a symbol or a term, news, a window in words and in days, fresh data or not, how many results) |
+| `criteria` | for the Advisor, for example `{"sentiment": "bullish"}` |
+| `status` | `new` then `data_ready` or `data_failed`, then `recommended` |
+| `data` | what the Data Clerk put on the order: its answer, `references` (the chunks it cites), `sources` (every chunk it was shown, **with the text**, so the Critic and the audit log can check what a score was based on), problems, notes, tool calls and tokens |
+| `recommendations`, `advisor_runs` | what the Advisor appended, and one record per Advisor call (model, tokens, what it dropped) |
+| `errors` | why an order failed |
+
+Three functions follow the design's loop for the Data Clerk. `verify_request(order)` returns the reasons the Data Clerk may **not** work on an order (an empty query, an action it does not handle, `top_k` outside 1 to 20, `since_days` outside 1 to 90, an order that already has its data); an empty list means go. `request_data` then answers the query, and `verify_action(order)` checks the data: the Data Clerk's own problems carry over, every cited chunk must be among the sources, there cannot be more references than sources, and "no supporting text" cannot come with sources. The status is `data_failed` if any check fails and `data_ready` otherwise.
+
+Two properties are worth knowing:
+
+- **"Nothing found" is a result, not a failure.** An order whose search found nothing comes back `data_ready` with `data.no_supporting_text` true. `data_failed` means something is wrong: an invalid citation, an empty answer, a failed model call, a request the Data Clerk should not have taken.
+- **`request_data` is idempotent.** Asking for an order that already has its data returns it unchanged. A test caught that the first version did not do this: a repeated request marked a good order `data_failed` and added an error to it.
+
+`DataClerk.request_data(order)` returns the *same* order (the design: "returns the same WORK_ORDER with completed metadata"). It turns the order's own fields into words and adds them to the query ("subject: ...; use news from the last 7 days; use at most 10 sources"), and a request it should not take is not an exception: the order comes back `data_failed` with the reasons in `errors`.
+
+### 8.4 The Advisor, version 0
+
+The week 2 design says: *"A prompt will write a score that hallucinates and makes a fluent answer. The number is only reliable when it is calculated from the criteria."* So the model never writes the score here:
+
+1. The model reads the work order and the numbered sources and replies, as JSON, with **signals** for each company it recommends. A signal is a short quote copied word for word from one source, the source's number, and a direction (`bullish` or `bearish`).
+2. **Code checks every signal** (`verify_signal`). The source must exist. The direction must be bullish or bearish. The quote must be at least 12 characters and really be in that source's text (typography and case do not matter; the model reads the text with `[3]` shown as `(3)`, and either form is accepted). And the quote itself must name the company: its ticker as a word, or a distinctive word of its name (4 letters or more, and not a generic word such as "Energy" or "Technology"). A signal that fails is kept, with the reason, and is not counted.
+3. **Code calculates the score** from the signals that pass: `round(100 * (bullish + 1) / (bullish + bearish + 2))`. That is the bullish share, smoothed so that one signal is not certainty: 1 bullish gives 67, 2 bullish 75, 3 bullish 80, 1 bearish 33, one of each 50. With no verified signal there is no score (`None`), however confident the model was.
+
+The model also writes its own `model_score` (0 to 100). It is recorded next to the calculated one so that the two can be compared, and it is never used. This is the smallest scorer that makes the comparison possible and simple enough to audit by hand. The real `calculate_score` of the design comes with the Critic.
+
+**The Advisor reads the chunks, not the Data Clerk's answer.** That is deliberate. In the week 3 re-run (`design/week3_submission.md`, section 3) the Data Clerk's answers stated that Micron, SK Hynix and SanDisk had fallen a third while citing a chunk that says only "memory chip stocks". An agent that read that summary would inherit the stretch. Rule 2's last check is the repair: a quote about "memory chip stocks" does not name Micron, so it does not count for Micron. There is a test for exactly that sentence.
+
+**Why the ticker list is not used to attribute a quote.** The check is "the quote names the company", not "the article is tagged with the ticker". Part 4 measured that the ticker list is incomplete (4% to 21% of a company's articles do not carry its ticker), so metadata would reject real evidence, and a ticker list that includes an article's passing mention would accept a stretched sentence.
+
+**What it is not.** One kind of evidence (news quotes), no price or financial signals, no criteria parsing, no memory, and a formula I chose. Where the design's Advisor will differ, the work order does not need to change.
+
+### 8.5 Tests
+
+```bash
+pytest tests/test_work_order.py tests/test_advisor.py tests/test_advisor_with_without.py tests/test_mcp_data_clerk.py -q
+```
+
+```text
+28 + 67 + 10 + 20 = 125 passed   (the whole suite is now 450)
+```
+
+| File | What it checks |
+|---|---|
+| `test_mcp_data_clerk.py` (20) | by default five tools are offered and with `--allow-fetch` all eight and nothing else; the six dangerous tools are never offered; the hints say which tools read and which write; each tool has the same arguments, description and argument descriptions as the LangChain tool; `retrieve_news` and `keyword_search` over MCP return exactly what the methods return; no numbers on the hits; bad arguments are refused with the reason and without a traceback; a toolbox failure carries no path or key; without the flag a fetch cannot be called and the toolbox is never touched; with it a fetch runs and the new articles become searchable; the command line warns when fetching is on; **the real server is started as a subprocess over stdio** and lists its tools |
+| `test_work_order.py` (28) | the new order has the design's fields; JSON round trip with and without data; each bad request is refused with its reason; `request_data` puts the answer, chunks and sources on the same order and phrases the order's limits in the question; nothing found is `data_ready`; a wrong citation or a model failure is `data_failed` with the reason; a trade request is refused without calling the model; a finished order is not asked again; each `verify_action` check |
+| `test_advisor.py` (67) | `normalize`; `names_company` over 12 cases (ticker, name word, generic word, "MU" inside "EMU", a different company); the score table; every way a signal can fail has its reason; typography and defused brackets do not matter; the score uses verified signals only and the model's own number never changes it; **the stretched sentence about "memory chip stocks" does not count for Micron**; a duplicate signal counts once and at most three are read; odd fields become `None` and not errors; with evidence the Advisor reads the chunks (formatted as the Data Clerk's model saw them) and not the Data Clerk's summary; without evidence no signal can count; it refuses an order whose data is not ready without calling the model; one retry on a reply that is not JSON; two bad replies leave the order as it was; a model failure is recorded, flagged as a rate limit when it is one, and leaks nothing |
+| `test_advisor_with_without.py` (10) | the arithmetic behind the table in section 8.6: spreads, signal counts and failure reasons, company overlap, tokens, empty conditions |
+
+We broke the Advisor, the work order, `request_data`, the MCP server and the Advisor prompt 55 ways, one at a time: a quote that need not be in the source, a quote that need not name the company, the score as a plain share, the model's own number becoming the score, a repeated signal counted twice, fetching always offered, a fetch marked read-only, a finished order accepted again, and others. Fifty-four were caught at once. One exposed a missing test (an uppercase ticker inside another word, such as "MU" in "EMU"), which we added.
+
+### 8.6 The real run: the Advisor without and with the chunks
+
+`python labs/module3_rag/advisor_with_without.py` is the week 3 submission's Case 2 work order ("AI memory shortage. Which companies are affected, and what does the recent news say?"), with no ticker given up front. The criteria were written in the script before the run. There are three conditions:
+
+- **A, prompt only**: the ordinary approach the design argues against: "recommend as well as you can, with a score from 0 to 100". No sources.
+- **B, the Advisor with no sources**: the designed Advisor (exact quotes, never invent) given nothing.
+- **C, the Advisor with retrieval**: the Data Clerk answers the order, and the same designed Advisor reads the chunks.
+
+B against C isolates retrieval. A was added because the first single run showed that B, told never to invent, simply declines, and the design's claim is about the ordinary prompt-only approach. It was added after that one run and before any multi-run result. Five runs of each; the Advisor is `nvidia/nemotron-3-super-120b-a12b`, the Data Clerk is `gpt-oss-120b`, fetching is off.
+
+| | A: prompt only | B: Advisor, no sources | C: Advisor, with retrieval |
+|---|---|---|---|
+| Runs that produced recommendations | 5 of 5 | 5 of 5 | 5 of 5 |
+| Companies recommended per run | 4.6 | **0.0** | 3.0 |
+| Different companies over the five runs | 12 | 0 | 7 |
+| Companies in every run | MU | none | MU, NVDA |
+| Signals proposed, signals that passed the checks | 0, 0 | 0, 0 | 26, **25** |
+| Recommendations with a calculated score | **0 of 23** | none to score | **14 of 15** |
+| The model's own score: mean, and 70 or more | 69.3, 17 of 23 | none | 63.9, 8 of 15 |
+| The model's own score: median spread between runs, for a company recommended more than once | 5 | none | **21.5** |
+| The calculated score: median spread between runs | none | none | **0.0** |
+| Stance agrees with the calculated score | not applicable | not applicable | 14 of 14 |
+| Advisor tokens in and out, all five runs | 1,094 and 4,320 | 2,294 and 214 | 11,706 and 35,080 |
+| Advisor cost at list price, five runs | $0.011 | $0.001 | $0.088 |
+
+Reading the table:
+
+- **Without retrieval, the ordinary prompt gives confident numbers that cannot be checked.** A recommended 23 times (12 different companies, including Samsung and SK Hynix under their Korean tickers) with an average score near 70, and none of it can be traced to anything. NVDA was bearish at 35 in one run and bullish at 70 in another. (An exploratory count, not decided beforehand: 8 of A's 23 recommendations are for a ticker that appears on any chunk retrieval returned. That is weak evidence, because retrieval returned only 10 chunks of 538, but all 15 of C's do.) The designed Advisor (B) does the honest thing and returns nothing: that it cannot score without sources is by construction, and is the design working.
+- **With retrieval, the evidence is auditable and the score is stable.** 25 of 26 signals passed. The one that failed was a correct rejection: a recommendation for `GOOG` quoted a sentence about `GOOGN` (a quirky ticker in the data), which names neither `GOOG` nor "Alphabet". MU and NVDA were recommended in all five runs, with calculated scores of 67 and 60 **every time**, while the model's own scores for the same two companies ranged over 55 to 78 and 55 to 75. The model's own number was *less* stable once it had evidence (median spread 21.5 against 5 without), because it weighs the sources differently each time; the calculated number does not move.
+- **Each score has a trail.** MU's 67 is one signal: the sentence from "The AI Bottleneck Takes Many Forms. These 7 Stocks Will Benefit." (chunk `polygon:d8b3b0b9...#0`, `Seven companies addressing these constraints—Nvidia, Micron, Lumentum, ...—are positioned to benefit as the industry shifts from one bottleneck to another`). NVDA's 60 is two bullish signals (that sentence, and Huang's "the shortage won't ease until after 2029") and one bearish (a Motley Fool line that Nvidia, SpaceX, Oracle and CoreWeave "share a common theme ... and it bodes poorly for artificial intelligence (AI) stocks").
+
+What this does **not** show, and should not be read as:
+
+- **A calculated score is traceable and stable. It is not necessarily well founded.** MU's score rests on one sentence about AI infrastructure in general, not on a memory-shortage fact. The Data Clerk's single search did not retrieve the article that says Micron has 35% of its revenue under long-term contracts, the strongest bullish fact in the stored news (the same limit the week 3 re-run found). NVDA's bearish signal is verified and is about AI stocks, not about memory.
+- **The stability comes partly from identical evidence.** The Data Clerk retrieved the same 10 chunks in all five runs, so what varies between runs is the model's reading, and the calculated score ignores most of that. A different question or index would not give identical evidence.
+- **One work order, five runs, one Advisor model, one formula that I chose.** The model was not compared with others for this role, and `nemotron-3-super-120b-a12b` spends a lot on reasoning (about 7,000 output tokens per run with retrieval against 860 for the prompt-only run), so C costs about eight times A at list price, before the Data Clerk's cost (about 0.1 cent per run).
+- **The comparison is about what evidence adds, not about whether the recommendations make money.** Nothing here backtests anything.
+
+The whole of Part 8's real-model work cost roughly 15 cents.
+
+### 8.7 What we found along the way
+
+- **A Part 6 bug: the `advisor` and `critic` roles pointed at a model that does not exist.** `nvidia/nemotron-3-120b` is not on OpenRouter, and the first real Advisor call failed with `OpenAIInvalidRequestError` (the failure was reported as a structured error, as designed). The 120B the design names is `nvidia/nemotron-3-super-120b-a12b` ($0.30 in and $2.40 out per million tokens). The defaults in `chat.py`, `.env.example`, the tests and this guide are fixed. **Your `.env` still has the old value** (the settings in `.env` override the defaults), so change `ADVISOR_MODEL` and `CRITIC_MODEL` there. Until you do, pass `--model nvidia/nemotron-3-super-120b-a12b` as the commands above do.
+- **Tests that found bugs, again.** Tightening one weak assertion showed that a repeated `request_data` damaged a finished order. A test of the comparison script's arithmetic showed that two "source N is not one of the sources shown" reasons were split into two buckets by a bad string replace (it did not affect the real run, which had one failure of another kind). Break-testing showed an uppercase ticker inside a word was untested.
+- **A comparison needs the right baseline.** The first single run said the designed Advisor with no sources returns nothing. That is the design working, but it is a weak contrast. The ordinary prompt-only baseline is the one that shows what a prompt does with a score.
+- **The same evidence gives the same score, and a model does not.** That is the argument for calculating the score, measured on a real run.
+- **A valid quote is not a relevant one.** The checks prove that a quote is in the source and names the company. They do not prove that it bears on the question. The Critic has to read the quotes, which is why every signal carries its chunk id and its text is on the order.
+
+The decisions are recorded in design choices entries 25 and 26.
+
+### Next: after Part 8
+
+The RAG build is complete: the news is loaded, chunked, indexed, searched, served as tools, used by an agent that cites and defends itself, passed on a work order, and read by an Advisor whose score is calculated. What comes next belongs to the rest of the desk:
+
+- the Critic, which should read the verified quotes and judge whether each bears on the question (section 8.7), and the Account Manager that creates the order;
+- a second search for the Data Clerk when the first one misses the strongest evidence (a narrower query per company the first answer names), because that is now the clearest limit on the Advisor;
+- the Advisor's own model decision (`compare_models.py`-style, with this script), since only one model was tried for that role;
+- Redis for quotes, and the LangGraph that wires the agents together with a checkpointer.
 
 ---
 
@@ -1852,4 +2056,5 @@ Serve the same tool methods through FastMCP (`prometheus/mcp/server.py`); a work
 | 4 | 17 (chunking, encoding and storing the news; safe re-runs), 18 (HTML in the news text), 19 (breaking the input on purpose, and how problems get fixed) |
 | 5 | 20 (retrieval: filters, scores and the relevance bar, one hit per article, MMR, keywords, the search settings), 21 (the embedding model, confirmed) |
 | 7 | 24 (the Data Clerk agent: the budget, the correction, the guard against hidden instructions, and what the real model did) |
-| 8 and later | added as we make them |
+| 8 | 25 (the Data Clerk's MCP server and the work order), 26 (the Advisor v0, the score calculated from checked quotes, and what the real model did without and with retrieval) |
+| 9 and later | added as we make them |

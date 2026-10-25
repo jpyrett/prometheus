@@ -22,8 +22,8 @@ from prometheus.rag.config import setting  # the same lookup as the RAG settings
 ROLES = {  # role -> (setting name, default). The defaults are the values in .env.example.
     "data_clerk": ("DEFAULT_MODEL", "openai/gpt-oss-120b"),
     "fast": ("FAST_MODEL", "qwen/qwen3-30b-a3b"),
-    "advisor": ("ADVISOR_MODEL", "nvidia/nemotron-3-120b"),
-    "critic": ("CRITIC_MODEL", "nvidia/nemotron-3-120b"),
+    "advisor": ("ADVISOR_MODEL", "nvidia/nemotron-3-super-120b-a12b"),
+    "critic": ("CRITIC_MODEL", "nvidia/nemotron-3-super-120b-a12b"),
 }
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
 

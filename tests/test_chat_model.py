@@ -34,7 +34,7 @@ def with_key(monkeypatch):
 def test_the_models_default_to_the_values_in_env_example():
     assert {role: chat.model_name(role) for role in chat.ROLES} == {
         "data_clerk": "openai/gpt-oss-120b", "fast": "qwen/qwen3-30b-a3b",
-        "advisor": "nvidia/nemotron-3-120b", "critic": "nvidia/nemotron-3-120b"}
+        "advisor": "nvidia/nemotron-3-super-120b-a12b", "critic": "nvidia/nemotron-3-super-120b-a12b"}
 
 
 def test_the_defaults_match_the_env_example_file():
@@ -65,14 +65,14 @@ def test_the_chat_model_points_at_openrouter_with_the_roles_model(with_key):
     assert model.model_name == "openai/gpt-oss-120b" and model.temperature == 0.0
     assert model.openai_api_base == "https://openrouter.ai/api/v1"
     assert model.default_headers == {"HTTP-Referer": "http://localhost", "X-Title": "Prometheus"}
-    assert chat.get_chat_model("critic").model_name == "nvidia/nemotron-3-120b"
+    assert chat.get_chat_model("critic").model_name == "nvidia/nemotron-3-super-120b-a12b"
     assert chat.get_chat_model(temperature=0.7).temperature == 0.7
 
 
 def test_an_explicit_model_id_overrides_the_role_and_an_unknown_role_is_still_refused(with_key):
     assert chat.get_chat_model("data_clerk", model="deepseek/deepseek-v4.1-flash-1017").model_name == "deepseek/deepseek-v4.1-flash-1017"
     assert chat.get_chat_model("critic", model="x/y").model_name == "x/y"
-    assert chat.get_chat_model("critic").model_name == "nvidia/nemotron-3-120b"  # without it the role decides
+    assert chat.get_chat_model("critic").model_name == "nvidia/nemotron-3-super-120b-a12b"  # without it the role decides
     with pytest.raises(ValueError, match="unknown role"):
         chat.get_chat_model("trader", model="x/y")
 
@@ -113,7 +113,7 @@ def test_the_data_clerk_tools_can_be_bound_to_the_chat_model_with_no_network_cal
 def test_main_lists_the_roles_and_says_whether_a_key_is_set_without_printing_it(monkeypatch, capsys):
     assert chat.main([]) == 0
     out = capsys.readouterr().out
-    assert "api key  : NOT SET" in out and "data_clerk : openai/gpt-oss-120b" in out and "advisor    : nvidia/nemotron-3-120b" in out
+    assert "api key  : NOT SET" in out and "data_clerk : openai/gpt-oss-120b" in out and "advisor    : nvidia/nemotron-3-super-120b-a12b" in out
     monkeypatch.setenv("OPENROUTER_API_KEY", FAKE_KEY)
     assert chat.main([]) == 0
     out = capsys.readouterr().out

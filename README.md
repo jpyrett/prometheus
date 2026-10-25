@@ -154,12 +154,12 @@ That routes Cursor’s agent/chat through OpenRouter. It is **not** the trading 
 Suggested growth order (manual coding):
 
 1. `models/` — local LLM done; OpenRouter chat model done (`models/chat.py`, Part 6 of the RAG guide)  
-2. `mcp/` + `tools/` — FastMCP quote path in place; the Data Clerk's tools done (`tools/data_clerk.py`); Redis next  
-3. `prompts/` + one agent in `agents/` — the Data Clerk agent done (`agents/data_clerk/agent.py`, `prompts/data_clerk.py`, Part 7 of the RAG guide)  
+2. `mcp/` + `tools/` — FastMCP quote path in place; the Data Clerk's tools done (`tools/data_clerk.py`) and served over MCP (`mcp/data_clerk_server.py`, Part 8); Redis next  
+3. `prompts/` + one agent in `agents/` — the Data Clerk agent (Part 7) and an Advisor v0 with a score calculated from checked quotes (Part 8: `agents/advisor/advisor.py`, `prompts/advisor.py`) done; the work order is in `common/work_order.py`  
 4. `langgraph/` — wire agents into a graph  
 5. `application/harness/` — richer CLI / multi-case entry  
 
-`rag/` is done through retrieval and citations (loaders, store, ingest, retriever, citations; see `labs/module3_rag/hpw_to_do_langchain_rag.md`). The Data Clerk agent (a budgeted LangGraph loop with a citation check and defences against hidden instructions) is done through Part 7; FastMCP and the work order are next (Part 8). Later: `memory/`, `evals/`, paper-trading hooks.
+`rag/` is done through retrieval and citations (loaders, store, ingest, retriever, citations; see `labs/module3_rag/hpw_to_do_langchain_rag.md`). The RAG build is done through Part 8: the Data Clerk agent (a budgeted LangGraph loop with a citation check and defences against hidden instructions), its MCP server, the work order, and an Advisor v0. The Critic, the Account Manager and the LangGraph that wires the agents together are next. Later: `memory/`, `evals/`, paper-trading hooks.
 
 ## Agents (trading desk)
 
