@@ -1,5 +1,5 @@
 OpenRouter:  https://openrouter.ai/settings/credits
 ClaudeCode:  https://platform.claude.com/settings/billing
-Claude: https://claude.ai/chat/335ce0d7-1b20-4337-8753-724487639da0
+Claude: https://claude.ai/chat/335ce0d7-1b20-4337-8753-xxxxx
 Cursor: https://cursor.com/dashboard/spending?from=2026-10-25&to=2026-10-25
 
