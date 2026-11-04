@@ -1,0 +1,2360 @@
+<<<ARTICLE>>>
+id: finnhub:143296701
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T20:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=22f156795864b0dc70fa2d7d0d5249aa07f94f0f332bdf45b0744e6f8bad2eae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Rivian Earnings Show There Is Still Life in the EV Market
+<<<SUMMARY>>>
+The automaker’s quarterly report was solid. Gross profit topped Wall Street estimates and vehicle sales were up.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296837
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T19:06:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=1b1bb5cb0a78212ad7264b061672a8f2ae3b6e792a9afe7e8a4fb71f035eb211
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: F
+keywords: 
+headline: S&P 500 Most Active Stocks in the Oct. 29, 2026 Session
+<<<SUMMARY>>>
+S&P 500 most-active list for Oct. 29, 2026: Alphabet led volume as GOOGL and GOOG fell, while ServiceNow, Intel, Ford, Norwegian, Nvidia, Amazon, Marvell and Netflix also traded.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296890
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T18:06:24Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=59a970ac871be9edd1859360e3613ca0b4c992645bc68f7f48395d00862fdab3
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Company 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-10-29. The following slide deck was published by Ford Motor Company in conjunction with their 2026 Q3 earnings call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293939
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T17:28:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e34cb2738f5f0840428068f22ce59e13857b259be1348ae9181ca8e29b91dde0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Trump and Canada Near a Deal to Ease Steel and Auto Tariffs as Ford Reports
+<<<SUMMARY>>>
+Key TakeawaysReuters reported Monday that the US and Canada are working on a deal to ease US tariffs on Canadian steel and autos. Steel faces tariffs of up to 50% and autos face 25%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293994
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T16:36:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87c10e990593ec389a8883686fa06e4f1b8819266d357a9f8b2c0acbb144cf71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Story to Improve Starting 2028 as New Businesses Contribute, RBC Capital Markets Says
+<<<SUMMARY>>>
+Ford Motor (F) is a 2028/2029 story, when Fathom ramps, Ford Energy scales, and European partnership
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293995
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:54:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=422d8fb412cb09b13d0c8957be4b06b5be965a9444649ed6f9060c825050ad27
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford’s Raptor, Bronco, Tremor and FX4 Sales Numbers Show Why Everyone Wants to Sell You a Rugged SUV
+<<<SUMMARY>>>
+Bronco, Raptor, Tremor, and FX4 models made up 24 percent of Ford sales through September, with higher margins adding to their appeal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292513
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:44:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8923e6c753e378dc45cad0a99089d6a0bb8b4f5fb3403b49c2ddbcd104edcda8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Is Broken, Again
+<<<SUMMARY>>>
+Ford’s (NYSE: F) earnings report outlined its vision for the future. CEO Jim Farley said, “For me, personally, the most exciting upsell opportunity is really the long-term subscription and digital experience for the customer.” Since there is no evidence this is what drivers want, it is not much to stake the future on. But Farley […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292512
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:55:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=06ad1b78b356eabf3f2d51e3bed04f65e252d7f16a87df54145d7a8b325e8d75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford CFO 'confident' on trajectory even as input costs bite
+<<<SUMMARY>>>
+Ford (F) CFO Sherry House outlined the company's third quarter finances and full-year outlook, noting commodity costs climb toward $2.5 billion but that demand for trucks and fleet vehicles remains unchanged.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292093
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50a917dcc9d4d7dc32fff8f2149920366fd828fef8bd1837a0bd434eb516c201
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Tesla vs. Ford: Which Stock Has an Edge After Q3 Earnings?
+<<<SUMMARY>>>
+TSLA looks better positioned after Q3 earnings, backed by improving vehicle demand, margins and robotaxi progress, while F faces rising costs and EV losses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292094
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a08b15eb19cfc48d475aa88a862c6620b3f5d9d11f46131773cdc1088b5a5bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Q3 Earnings Beat on Ford Credit Strength & Favorable Mix
+<<<SUMMARY>>>
+F's Q3 earnings beat estimates on cost cuts and stronger Ford Credit results, despite weaker vehicle sales and margin pressures across key segments.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292515
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:17:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=057ccd2eb147641feeecc03024bb7d7eacf66dc258fc653ae226a85cbb0a49e5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: How Is Ford's Stock Looking After Better-Than-Expected Earnings Results?
+<<<SUMMARY>>>
+Ford beat consensus estimates and slightly lifted its full-year guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292516
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ec4def5f9ab0cef0da380662af255f77ab194b6a71c981ce46abdb711b921f65
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Q3 Earnings Call Highlights Cost Pressures & EV Strategy
+<<<SUMMARY>>>
+F raises its 2026 profit outlook despite rising costs, while advancing affordable EVs, battery storage and services to support long-term profitability.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292437
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:02:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=56105e619cc3e625367255fce6cf4d9b27c53a432723f497844d048a61dad391
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford’s Profit Surprised, but the Jury Is Still Out on 2027
+<<<SUMMARY>>>
+Ford reported a third-quarter operating profit of $2.7 billion, up from $2.6 billion a year ago. Wall Street was looking for an operating profit of $2.4 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289208
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef17b0f26707ddecaf7391a2c08005b9972c4957387f7c9397165cf4af6ad487
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: One Hit, $9,500 in Parts: Ex-Guard Brings Class 8 Protection to Pickups and Vans as Deer Season Peaks
+<<<SUMMARY>>>
+With deer season at its peak, Ex-Guard Industries, North America's leader in heavy-duty front-end protection, is urging fleets and work-truck owners to do the math on front-end damage. Replacement parts alone for a single front-end collision on an unprotected truck average $9,515.68, before labor, paint and downtime. That is more than three times the $2,640 MSRP of most Ex-Guard kits (guard and mounting brackets packaged together). The company's HX, FX and CV Series bring the protection that has
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289206
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:31:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=42cf56f5c7548be0b9abe59eddb4179caca5f838cf4d0370f2ff2158ca408e6b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Q3 Earnings: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+Balancing battery storage expansion with affordable EV launches tests whether Ford can sustain margins across three distinct growth engines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289209
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:19:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bd2d5f91d3b570881d2ec15469687fe4b3354918f7e23c807d2bd90721dfc224
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: 1 stock under $50 to target this week and 2 we brush off
+<<<SUMMARY>>>
+The $10-50 price range often includes mid-sized businesses with proven track records and plenty of growth runway ahead. They also usually carry less risk than penny stocks, though they’re not immune to volatility as many lack the scale advantages of their larger peers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288588
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:09:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=46d071bb8c9e5a6df91883cee2449c25993518894075cde09ad131ff70743212
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Musk's Massive Marketing Miss Cost $10 Trillion
+<<<SUMMARY>>>
+The most persuasive thing Tesla owns is a 30-minute ride. Tesla (TSLA) has never really offered it to the people who would remember it most: families with kids. In the analysis below we talk about the miss, the opportunity to accelerate the magic, and why $10 trillion may prove to be small.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288590
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:09:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=63617259e7b9d5bf5970cc9a4a170facf0ef7e70df6455cfd1214755b3b48f74
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: How Tesla Blundered
+<<<SUMMARY>>>
+Three years ago, a rival CEO admitted buyers wanted Teslas and nothing else. Tesla (TSLA) could have been the iPhone of cars. Why is it a rounding error on America's roads instead? In the analysis below, we look at the blunder, the missed iPhone moment, what Tesla actually got right, and how it can still turn the math around.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289207
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:02:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7712209c9168db85d304fc05446c1dad00d8950318a6dc1d43cc34aae2f631af
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Why Did Ford Raise Its Annual Profit Outlook Despite Higher Raw Material Costs?
+<<<SUMMARY>>>
+Ford Motor Company (NYSE:F) reported a slight increase in third-quarter operating profit to $2. 7 billion, despite higher raw material expenses and production disruptions affecting its F-150 pickup trucks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143286792
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T11:27:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7f82dcfcb08a998dce59ff9b9327aa36ce98338316df193e439905841554869a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Why Should Tesla Stock Holders Watch This One Number?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143287190
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T11:02:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e82afc89846fd33707179e8022c2907394626a87ee45812ad613fa5bb8c5cb4d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford raises lower end 2026 EBIT target despite Q3 profit slip
+<<<SUMMARY>>>
+Quarterly revenue declined 2% year-on-year to $49.52bn and net income fell 16.2% to $2.04bn.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143290555
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T07:30:31Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9c41526d7064807c42be191b34226be9728fec8777639e2c8f250bc86dd62e3f
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/29/Elon-Musk--founder--CEO--and-chief-engin.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Elon Musk Takes a Jab at Apple's $29,799 Mac Studio: 'Makes a Tesla Seem Quite Affordable!'
+<<<SUMMARY>>>
+Elon Musk mocks Apple’s $29,799 fully specced Mac Studio, noting it costs nearly as much as Tesla’s Model 3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143291334
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T06:48:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f2a17d9c7b09146cfd5c3933cbaba17f9e597c5874591c9b353f760a5b16babb
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/29/Ford-Motor-Co--CEO-Jim-Farley-smiles-as-.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Jim Farley's Ford Takes a Leaf Out of Elon Musk-Led Tesla's Book, Produces Over 5,000 Massive Aluminum Parts for Upcoming $28,350 Fathom Electric Truck
+<<<SUMMARY>>>
+Ford has produced 5,000 large aluminum castings for its $28,350 Fathom EV, targeting a 2027 launch with Tesla-inspired unicasting.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143291335
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T06:24:58Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3c434eeae37306b9f3faff0e2f8728d9cf4ef55b9cadf04303574b659495a78e
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: Ford Estimates FY26 Charges Of $500M-$1B Related To Initiated Actions, Mostly Attributable To Employee Separations; Company Started To Get Federal Reimbursements Including ~$500M In Q3 Related To IEEPA And Tariff Rulings
+<<<SUMMARY>>>
+We estimate that we will incur total charges in 2026 that range between $500 million and $1 billion related to initiated actions, primarily attributable to employee separations; some charges are related to plans that
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143279353
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T05:44:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fd651e596e87ad105ab3ee5ea3c0d905172bebd8d8110d7b9a6b9ae21900990b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford (F) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Ford raised full-year guidance despite commodity headwinds and EV transition costs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143285627
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T05:34:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b8abc88282d888af52c5ed7d6a6e9d963fb56e9471893cfa019f5572df40b452
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford CEO Jim Farley Says $28K Fathom EV ‘Completely Blew Me Away:’ ‘Like Something I’ve Never Experienced’
+<<<SUMMARY>>>
+View more earnings on F Ford Motor Co. (NYSE:F) CEO Jim Farley, during the automaker’s Q3 2026 earnings call on Wednesday, hailed the upcoming sub-$30,000 Fathom EV pickup truck, saying its capabilities had exceeded the CEO’s expectations. Ford Fathom’s Hands-Free ADAS Experience ‘Blew Me Away,’ Says Jim Farley During the earnings call, Farley said the EV, which is being tested in Louisville, Kentucky, “remains on track for the fourth quarter of next year.” He then said that he tested the car hi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143277466
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T04:04:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=840eefb7cbb7aefd4291676b23b4d7f3707576f37ed43b06756fa402d038060d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+Ford Motor (NYSE:F) reported third-quarter adjusted EBIT of $2.7 billion and raised the low end of its full-year profit outlook, citing strong truck and utility-vehicle demand, growth in software and parts, and continued cost-reduction efforts. The company now expects 2026 adjusted EBIT of $10.5 bi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143266967
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T00:22:39Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=3c623afb773a1e342596b2a3d5362a85c75009d2914b941b7b50768fe6bebd12
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Company Reports Third-Quarter 2026 Revenue of $49.5 billion and Net Income of $2 billion
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143264862
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T22:09:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c1694cf65f8a5a7c2d8f11527be9d143aeb7cf1b5aa3a84cbdda47d585c13ce5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford (NYSE:F) misses Q3 2026 sales expectations
+<<<SUMMARY>>>
+Automotive manufacturer Ford (NYSE:F) missed Wall Street’s revenue expectations in Q3 2026, with revenue falling 2% year on year to $49.53 billion. Its non-GAAP profit of $0.49 per share was 21.4% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143263193
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T21:44:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a037f2d228172a9558d3e56d3a7f7c29d336a98123563f4ca63c55b4b538cf83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Carvana and Chipotle Soar After Earnings While Ford and ServiceNow Sink
+<<<SUMMARY>>>
+Carvana sold a record number of cars and Chipotle's traffic held up, sending both higher after hours, while Ford's EV losses and a small ServiceNow miss weighed on those stocks. Eric Bleeker breaks down a busy earnings night.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143263425
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T21:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9da486215557fe0d8b7c5074619d645f50f713a1daf50937b9ee9421e1d371e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Grew Third Quarter Profits. It Wasn’t Expected.
+<<<SUMMARY>>>
+Ford reported a third-quarter operating profit of $2.7 billion, up from $2.6 billion a year ago. Wall Street was looking for an operating profit of $2.4 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143269407
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T21:09:54Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=002bcfc8a2e8cd9213b9d10eeabe9f231549c18605627f7182473f0b0037f2c3
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Company (F) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Ford Motor Company (F) Q3 2026 Earnings Call October 28, 2026 5:00 PM EDTCompany ParticipantsMaria Ricciardone - Chief Investor Relations OfficerJames...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143264359
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T21:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44bc13e75f2b721961051b2cb5ad23dd556774454b42a82f13fbcaf913fe0eb7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Notes on FOMC Decision and Earnings After the Close
+<<<SUMMARY>>>
+While the Fed kept rates steady, as expected, Microsoft and Ford beat, while Alphabet and ServiceNow missed on earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143290164
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T21:04:09Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=07c6e9cd86f4c8ee0f85df90fdf001e7f4495e2493a0f12c2fe3cee691223734
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/29/Focused-Shot-Capturing-Elon-Musk-Alongsi.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Elon Musk vs. Tesla? His Midterm Money Could Work Against His Own Cars
+<<<SUMMARY>>>
+A Democratic Party win in the 2026 midterms could provide a boost to the electric vehicle sector. Elon Musk is paying up to keep this from happening.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143264863
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T21:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9197c1c7b2f37f1ad66f51416643119ae7698a7c765452296d01bf6a84c3cae1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor (F) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+<<<SUMMARY>>>
+Although the revenue and EPS for Ford Motor (F) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143263461
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T20:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d02e5f0d37cb9b044b716e3f9a15f67d3fadd308a451c8e757ac4da1acba8ec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford beats third-quarter profit estimates, raises low end of annual outlook
+<<<SUMMARY>>>
+Ford Motor Company (NYSE:F) reported third-quarter earnings ahead of Wall Street expectations on Wednesday and raised the low end of its full-year profit forecast, as the automaker continues to focus on cost reductions and growth in higher-margin businesses. The company posted adjusted...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143263462
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T20:20:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e528da03b3816ee7248354af52058f088998c1fa745b396df6fa9f12af303280
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Company (F) Q3 Earnings and Revenues Beat Estimates
+<<<SUMMARY>>>
+Ford Motor (F) delivered earnings and revenue surprises of +25.64% and +0.90%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143263463
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T20:14:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6bc20b86ad6d3c179c579d23d4c6b350405df3c41b11c9df8b1fdebadabc45f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Q3 pre-tax income rises slightly year-over-year. What we know
+<<<SUMMARY>>>
+Ford Q3 results beat Wall Street expectations, but the automaker points to increasing commodity costs and other challenges in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143263464
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T20:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=de9bf1e896be5192b8e1c40c36e53b8f6d15d7f297d575e2ef4dce2a8804476a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Reports Third-Quarter 2026 Financial Results
+<<<SUMMARY>>>
+DEARBORN, Mich., October 28, 2026--Ford Motor Company (NYSE: F) today announced its third-quarter 2026 financial results and declared a fourth-quarter regular dividend of 15 cents per share, payable on Dec. 1 to shareholders of record at the close of business on Nov. 10. Visit the company’s Investor Relations website at shareholder.ford.com to view the earnings release, earnings presentation and other supporting material.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143264242
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T19:45:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e93f331560db9166fd069346788f5b137606536dc6b5e2ad44d90baf8b4141d8
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2255788088/image_2255788088.jpg?io=getty-c-w1536
+category: company
+tickers: F
+keywords: 
+headline: Market Stays Muted After Fed Decision To Keep Rates Steady
+<<<SUMMARY>>>
+Indices stay mostly flat during and after Fed announcement. Market also shows little reaction to rising crude oil prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143263103
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T19:05:59Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=3bad6005d5f06ce4a41dd4c36043b94dfe3b7ab2e58b7cfc068ee44edf4725ae
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: F
+keywords: 
+headline: S&P 500 Most Active Stocks for October 28, 2026
+<<<SUMMARY>>>
+S&P 500 trading volume on October 28, 2026 was led by INTC, BSX, ORCL, T and HOOD, with Oracle up 11.8% and Boston Scientific down 4.34%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143291338
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T18:12:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7e0e37e95e3bae7e2c45785699252cdb0919f023a5d82457a7065d19bd694549
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/28/Stock-market-chart-with-green-candlestic.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Ford Motor (NYSE:F) reported third-quarter financial results on Wednesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293510
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T17:10:29Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=f2047408944546b8c94f06ffee67a00f05dfd07dc2baf4956872c20cbc417a54
+image_url: https://image.cnbcfm.com/api/v1/image/108476701-17932210701793221068-49292047504-1080pnbcnews.jpg?v=1793221069&w=1920&h=1080
+category: company
+tickers: F
+keywords: 
+headline: Ford beats on earnings, misses Wall Street expectations on revenue
+<<<SUMMARY>>>
+CNBC's Phil LeBeau o
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143260953
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T17:01:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=574781a6ebcb6daae76de2ce1eb95a1d7080527566dd1d8a4a29113102234d81
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Reports Its Third Quarter on October 28. Free Cash Flow Is the Number That Has to Hold
+<<<SUMMARY>>>
+Key TakeawaysFord reports third-quarter results after the close on Oct. 28, after a quarter in which its U.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143291339
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T16:22:01Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f0b0f9d23b5140f9b749b8c173b00885fcd04793272470d2ccfdf7e033763b03
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/28/Balikpapan--Indonesia---September-25--20.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Posts Strong Q3 Results: EPS, Revenue Above Expectations
+<<<SUMMARY>>>
+Ford Motor Co. posts Q3 earnings results — here&#39;s a detailed look inside the report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143291340
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T16:09:42Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=723072adf32db5b18041990ef5e0fdc17fae6127e001510bd1ff5c70edaff67e
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Q3 Adj. EPS $0.49 Beats $0.41 Estimate, Sales $49.526B Beat $46.238B Estimate
+<<<SUMMARY>>>
+Ford Motor (NYSE:F) reported quarterly earnings of $0.49 per share which beat the analyst consensus estimate of $0.41 by 19.51 percent. This is a 8.89 percent increase over earnings of $0.45 per share from the same
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259374
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T15:49:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3bbc74ab72e268d0d34b5ca03a0c775a6e96b0dcf3c5c7a9f2ac1cd8149e7f74
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Stellantis Soars 14% on Q3 Revenue Beat and Guidance Promising “Positive Industrial Free Cash Flow in 2027”
+<<<SUMMARY>>>
+Key TakeawaysStellantis shares jumped 14% after third-quarter revenue of €37. 6 billion beat consensus and it stood by its 2026 guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259375
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T15:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8568d0e12078f40afc247b8e602f230f0a0eaefc8893f095187a1f64868657a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Doesn’t Need to Grow. It Needs to Prove It’s Stable.
+<<<SUMMARY>>>
+Ford reports third-quarter numbers on Wednesday. Wall Street is looking for an operating profit of $2.4 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256776
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T14:02:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cf57da29e129298c75d41dc24b41090ddcc691c22379a747ca34282b06e61d19
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Peltz makes a move to buy Wendy's, AI remains hot, and Chipotle earnings expectations
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor discusses activist investor Nelson Peltz's offer to buy out fast food chain Wendy's (WEN), three signs that AI remains hot, and the three things Chioptle (CMG) must deliver in the earnings report. Sozzi sits down with Cisco (CSCO) President and Chief Product Officer Jeetu Patel to discuss the costs of AI buildouts and the takeaways from Anthropic's (ANTH.PVT) IPO.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256027
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:49:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8306140e6413265e0628490e420a7054daf018b5f10005ad96369c6687e53317
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Tech rises for third day in a row ahead of Microsoft, Alphabet earnings, Fed decision in focus: AlphaCheck
+<<<SUMMARY>>>
+Tech stocks rose on Wednesday as investors shifted focus to the Fed's rate decision and Big Tech earnings from Alphabet and Microsoft.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259229
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a31c4aa1e295543824d9a80799ce3fe05c4bc1fa5a93677f625a2f9369b7390
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Big Day for Econ Data, Hyperscaler Earnings
+<<<SUMMARY>>>
+We have a solid slate of reports today, both of the earnings variety and regarding economic growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256145
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:32:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=943c642e3d0545addc5b4183b6083e93b6137de34e8d6cf30ce219cad66d68ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Badly Crippled GM Moves To Nasdaq
+<<<SUMMARY>>>
+General Motors is betting a stock exchange switch will recast it as a tech-forward automaker, but the company faces shrinking relevance in two of the world's biggest car markets and a tariff shield that politicians could pull away overnight.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288197
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T12:30:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b826c76b196dab103f6994eb806a6c2d01287bf4a30bf71f49614c7a11fc06b8
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/28/Vertiv-Holdings.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: SK Hynix, Vertiv Rescue AI Trade As Oil Tops $102 Before Fed: Stock Market Today
+<<<SUMMARY>>>
+Stock market today: SK hynix and Vertiv rally on AI-driven results as oil tops $102 on Iran fears and the 10-year yield tops 5% before the Fed; SMH gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143262269
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T12:07:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5d76d4686017869af630297ee30948f87051882cb68c2ca623ac0ed7b0a03c00
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford reports Q3 earnings beat, tightens lower end of profit forecast but sees $4 billion in EV losses for year
+<<<SUMMARY>>>
+Ford reported third quarter earnings that topped estimates, and upped the lower end of its profit guidance. The company still sees EV losses piling up by the end of the year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256628
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T12:07:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=67a02496b62db47cdaf4c21cdb57aa0a5c5be132c50699d1b56428e3c42bb90e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Q3 earnings preview: Guidance boost in doubt due to F-150 supply snag, EV slump
+<<<SUMMARY>>>
+Ford (F) is scheduled to report third quarter results after the bell on Wednesday, with investors watching whether the automaker will hold, or raise again, its full-year outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143260448
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T12:00:01Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=152bcbfec3c8e405c5e0061f1821f367e092ed5cc7542aaee17ab976a625c93a
+image_url: https://image.cnbcfm.com/api/v1/image/108452225-1792771283223-gettyimages-2292365225-schneider-fordcomm260830_np9iA.jpeg?v=1792771304&w=1920&h=1080
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor is set to report earnings after the bell. Here's what Wall Street expects
+<<<SUMMARY>>>
+Ford Motor is set to report third-quarter results after markets close Wednesday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143260449
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T11:35:11Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=e4ea4b59e518be47ac4dee8a1632be3c4d4986ce856d8a66c6b5e45c237bade3
+image_url: https://image.cnbcfm.com/api/v1/image/108475252-17932015821793201580-49287226392-1080pnbcnews.jpg?v=1793201582&w=1920&h=1080
+category: company
+tickers: F
+keywords: 
+headline: Stellantis, Ford Q3 earnings: Here's what you need to know
+<<<SUMMARY>>>
+CNBC's Phil LeBeau joins 'Squawk on the Street' to discuss Stellantis' latest earnings results and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143254643
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T10:46:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6bbbf9e7855840a3220d8c0fea211f27ac8cb75693edba2247c14ec9d9567991
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: These Dividend Stocks Look Safe Until You See Their Capital Spending Plans
+<<<SUMMARY>>>
+A high yield can look like a reward until the company's next capital spending plan lands and reorders every priority. Five names in this group are carrying fresh spending commitments that change what the dividend is actually worth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143254629
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T10:11:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f23b2d7fa921cf842d8462e008bcf773f8006b8000ed88a5e077739f12cd6f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: What Is Behind The Move In GM Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143254931
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T10:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7004c960fd8a181bd2fe11d913e287818ffd2e55267f1cf8ce2249b364f904c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Reveals Primetime Legendary Racing Lineup, Military-Inspired Liveries, and Star-Studded Performances for Inaugural Proud to Honor Veterans Day Classic
+<<<SUMMARY>>>
+DEARBORN, Mich., October 28, 2026--Ford today announced new details for the inaugural Proud to Honor Veterans Day Classic, a first-of-its-kind military tribute race and musical performances at Daytona International Speedway on Nov. 11 that will unite racing, music and service in honor of the nation’s military community.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256382
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T07:38:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=662ce957118a3718b9477ee05c1afa920482a781b9c01548593d6b66c0f05695
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/28/Sunnyvale--Ca--Usa---Nov-22--2023-Ford-L.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Jim Farley Says Ford’s Upcoming $30,000 Cybertruck Rival Can Power Owners’ Homes Without a Wall-Mounted Inverter
+<<<SUMMARY>>>
+Ford CEO says the $30,000 Fathom EV can power homes without a wall inverter as Ford works with utility companies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143254459
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T07:30:09Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=3642a576697958f95b096caa21e9485d3b0ff2831ae621dd44cdc36662936d7c
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1030098032/image_1030098032.jpg?io=getty-c-w1536
+category: company
+tickers: F
+keywords: 
+headline: Pause Now, Hike Later?
+<<<SUMMARY>>>
+Wall Street Breakfast previews todayâs Fed decision, December rate hike odds, and key market movers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143252861
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T05:21:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=878d36a6d9cef0384c487511fb3c47d7cf25385fb553b2759b50b5a686bca89c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford (F) Stock Looks Fairly Valued On Fresh Dealer AI News
+<<<SUMMARY>>>
+Ford Motor shares most recently closed at US$11.71 and have moved around over shorter periods, so the immediate question for investors is whether that price still lines up with the cash flows the business is expected to generate. A cash flow lens, using a Discounted Cash Flow (DCF) view of intrinsic value, provides one way to test how much of Ford Motor's story is already reflected in that price tag. Over the past 3 years, Ford Motor has delivered a total shareholder return of 42.8%, which...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143252946
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T02:07:53Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8ba66718654ce4b3eab97d048e8739d97254cf34a2b83a6a6c2efe3fee25982d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1359132050/image_1359132050.jpg?io=getty-c-w1536
+category: company
+tickers: F
+keywords: 
+headline: FPE: Better Than Preferred Stock Index Funds, But Inflation Is A Real Risk
+<<<SUMMARY>>>
+FPE ETF offers a 6.40% yield, outperforming passive preferred stock ETFs over the past decade. Read why FPE is a Hold.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143260947
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T00:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3322d303c36d465c9c0a7c73b904b825a238812931330b8a91ec141e23a4bab8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Earnings from Google and Microsoft and a Fed rate decision: What to Watch
+<<<SUMMARY>>>
+Market Domination Overtime host Brooke DiPalma takes a closer look at the top stories for investors to watch on Wednesday, Oct. 28, including earnings reports from Google (GOOG) and Microsoft (MSFT), and an interest rate decision from the Federal Reserve.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143240316
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T19:05:59Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a039f2d62493b5027b05e82e804d8504f40a42a381216fa5368b60d82c6e05fc
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: F
+keywords: 
+headline: Most Active S&P 500 Stocks in Oct. 27 Session
+<<<SUMMARY>>>
+Intel, Nvidia and Boeing led the most active S&P 500 names on Oct. 27, with volume and price moves across semiconductors, industrials, autos and platforms.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143238553
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T16:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b03bab3c5c1c3c1bb246364cb8745484a0e92d95343c46ccd45b4a3287589c07
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Vehlo’s Total Customer Connect AI Receptionist Named a Preferred Partner by Ford Motor Company
+<<<SUMMARY>>>
+KNOXVILLE, Tenn., October 27, 2026--Vehlo’s Total Customer Connect AI Receptionist(AIR) has been named a preferred partner by Ford Motor Company and is eligible for the Ford Dealer Advertising Co-Op Program and the Lincoln Brand Exclusive Advertising Program. AIR is an AI scheduling agent as part of TCC’s Call Services Suite that is available at all times of day that has automated appointment bookings, customizable, human-like customer interactions, VIN-specific and personalized customer outreac
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143238554
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50659b84c499431f653f6d2ca261af44cb7c03b616138f31d382ae7ef191a88e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford's Maverick Hybrid Sales Just Surged 60%. Here's Exactly Why Investors Should Care.
+<<<SUMMARY>>>
+Ford's Maverick Hybrid was a bright spot during the third quarter, and, considering many of Ford's hybrids are more profitable than their gasoline counterparts, it could mean a lot more to investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143255697
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T15:30:44Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ac0fffc7f399cfd1b22af84e8aa3aabf4d57342269abc8c7bee3a0e61d5acf1d
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/27/earnings-scheduled-1.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Microsoft, Alphabet On Deck Wednesday As AI Spending, Cloud Growth Face Test
+<<<SUMMARY>>>
+Microsoft and Alphabet headline Wednesday’s reports, with investors weighing whether AI infrastructure spending is translating into durable cloud and advertising growth. GE Vernova, Amphenol, Banco Santander, UBS Group
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143237238
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T14:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a6b5fd2ea36df8f945b9e9e276c1ca11cf4221afccb16b5662ac980c75df06f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: WCC students partner with Ford Motor Company to build Ford Bronco live at SEMA 2026
+<<<SUMMARY>>>
+ANN ARBOR, Mich., Oct. 27, 2026 (GLOBE NEWSWIRE) -- Washtenaw Community College (WCC) and Ford Motor Company are partnering for the Ford Custom Garage Ultimate Build, a live Ford Bronco build at the 2026 Specialty Equipment Market Association (SEMA) Show next week in Las Vegas. Six WCC students will work in teams during a two-day, public-facing build intended to mirror a real-world shop environment at the 2026 SEMA Show November 3-6 at the Las Vegas Convention Center. The experience will connect
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143237196
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=638c007ae46f87f65380db61b82730424757571107777cf1529ee83052f81665
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Brampton sale, tariffs loom over Stellantis-Unifor labor talks
+<<<SUMMARY>>>
+Experts see a recent strike authorization vote giving the union more tools to exact pressure, but ahead of the U.S. midterms neither side appears to be in a rush.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143234054
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T13:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20682e4bcfdcb2a690d1a23f6bca50861a743f0bcf4ec3b1d04b6a873cd0fd3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: JFrog and Industry Judges Recognize Global Brands Bringing Trust to the Software Supply Chain in the AI Era
+<<<SUMMARY>>>
+SUNNYVALE, Calif., October 27, 2026--JFrog recognizes 9 companies in its inaugural Software Supply Chain Excellence Awards
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143234150
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T12:54:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4327bf74afb881a79d865243949b160b57982b980bd2b3c4f2a28f94d2c46f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Is Tesla Stock Safer Or Riskier Than A Year Ago?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143234609
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T12:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=54c2d9537117a947b2fe203e180c56eb56e48c242cdaf53147ec861db04c77f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: The Zacks Analyst Blog Highlights Ford, General Motors and Toyota
+<<<SUMMARY>>>
+Ford faces Q3 earnings pressure from falling sales, an 80% plunge in EV deliveries and rising costs, while General Motors and Toyota show contrasting sales trends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143233074
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T11:26:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5bd59457056f886d615fd81a48288f4587f6c0c4bc2ec0cba1371a268925f301
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: What to expect from Ford’s (F) Q3 earnings
+<<<SUMMARY>>>
+Automotive manufacturer Ford (NYSE:F) will be announcing earnings results this Wednesday afternoon. Here’s what investors should know.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143233075
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T11:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9cfd0f1caf4c8bcf214003e0526f982f42247af74569a13b9134c1bf4c966c32
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Jim Farley finds a new chief of staff from Canada. What we know
+<<<SUMMARY>>>
+Goodman's selection as chief of staff 'is not likely to change' crossborder relationships but signals future manufacturing paths, an expert said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143228669
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T10:26:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a1f6c75db9760350ebadd6cf144c2598a313e1553e4116a62317fb2d27b85c10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Why Did Tesla Stock Jump?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143233921
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T03:48:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=be7550503a24b22820a1245e9b762980901977d124b7ad7b25b2af57df5e3f09
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: Ford Recalls 30,123 F-150, F-250 SD, F-350 SD, F-450 SD Vehicles Over Left-Side Tailgate Cable That May Fail Under Heavy Load
+<<<SUMMARY>>>
+-National Highway Traffic Safety Administration
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143233922
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T03:45:01Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0d947e2c78a4aed10b4f7af9f421521232562d37a322841f3cb3a39d67597e12
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: Ford Recalls 11,623 Nautilus Hybrid And Corsair Hybrid Over Park Lock Actuator Circuit Board Corrosion Risking Unexpected Shift To Neutral
+<<<SUMMARY>>>
+-National Highway Traffic Safety Administration
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143234161
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T20:27:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3e5656b428a7e368aa4500a68b4d16fce7630479cf26d4aa53069073836a2e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Earnings live updates: Boeing stock falls on mixed Q3 turnaround picture, SoFi surges
+<<<SUMMARY>>>
+Third quarter earnings season is in full swing this week. Follow along for live updates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143203925
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T20:27:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fd806ad649263591473af903fa05722a938f016e9fd4a728b9f5f337317e0dac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Earnings live updates: Whirlpool stock drops on softer quarter as inflation weighs on sales
+<<<SUMMARY>>>
+Third quarter earnings season is in full swing this week. Follow along for live updates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143203619
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T19:06:03Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=5bdcba2d3052bccb9e09fa68c31b14bf09d8396b1dc379d2be7d046f1dfc7c2d
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: F
+keywords: 
+headline: Most-Active S&P 500 Stocks in the Oct. 26 Session
+<<<SUMMARY>>>
+S&P 500 most-active stocks for Oct. 26: Intel led volume at 70.45M shares and rose 5.71%, while Tesla gained 5.96% and Netflix fell 4.24%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143197793
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T13:10:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=34bd4388e804402182b873462c4ba03c43ff1e1d07b12b4bc6360bfd45e130fb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: One Catalyst Could Completely Change the Tesla Stock Story
+<<<SUMMARY>>>
+Tesla bulls and bears have fought over the same question for two years, but one unproven catalyst is now close enough to either vindicate the optimists or expose the premium as fantasy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143198180
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T12:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d7254a31948d41d142d9efb24c726501dac4c42e0b61ecffe4ffd2512ce5e393
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Buy, Hold or Sell Ford Stock Before Q3 Earnings Release?
+<<<SUMMARY>>>
+F faces declining vehicle sales, rising costs and EV losses ahead of Q3 earnings. Is its attractive valuation enough to offset rising headwinds?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143196473
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T12:30:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2ef859b7374a29b1030de98218bc25631b7fd9501d25a690d727c2425163bb20
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Is General Motors Stock Stronger Than It Looks?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143195197
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T10:03:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e35d7f41f9af767bc16f4cb58976df5a89eb5075c5caf65bb3c6c82ac4c5cf8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Is Tesla Stock Still Worth Owning After Its Quarter?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143198346
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T05:53:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=352a113f19546a0dced47c040ba317da925f039676dee515fd7acd4a6f2687dd
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/26/Sign-of-Audi-AG--a-German-automotive-man.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Audi CEO Defends 200,000-SUV Georgia Plant Announced By Trump: 'If the American President Invites You...'
+<<<SUMMARY>>>
+Audi CEO defends a planned 200,000-unit U.S. facility, while officials warn expansion must not come at the expense of German jobs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143182848
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-25T18:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aa5883d14ff315cdab57208ede071167f22a15cc31076e3abe2a4ef46dba0bc7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Forget Ford's Lucrative Dividend. GM Has a Different and Perhaps Better Way to Reward Investors.
+<<<SUMMARY>>>
+While Ford is often praised for its lucrative dividend yield and additional "special dividends," General Motors actually has a total yield that is roughly double Ford's.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143182350
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-25T18:00:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bee817853f3515c3ca1858da8d0104d028e7c88bff14073122cf2e143f2c9c1a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Whirlpool’s Dividend Collapse Is a Warning for These 3 High-Yield Stocks
+<<<SUMMARY>>>
+Whirlpool paid a reliable dividend for years before slashing it to zero, and three popular high-yield stocks are now showing the same early warning signs investors ignored then.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164988
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T14:57:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a63c119a0abf17fac14efe9bfdefc243aa54a58ecf059e28c372bab31a5116fa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Wall Street Lowers the Bar: Why Ford’s Q3 Earnings on Oct. 28 Could Trigger a Surprise October Breakout
+<<<SUMMARY>>>
+Ford reports Q3 earnings on October 28 with the stock already beaten down and analyst expectations trimmed, setting up a scenario where a modest beat could flip sentiment fast or confirm that something deeper is wrong with the recovery story.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143162766
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T11:45:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=81544d08acacdd79622be44f6731880a4cd5e5b6f52b886fc28858e55683f8a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Yields Nearly 5%. Is the Dividend Safe With Earnings in the Red?
+<<<SUMMARY>>>
+Ford's trailing earnings show a loss of nearly two dollars per share, yet the automaker keeps writing dividend checks and even raised its forward cash flow guidance. Before assuming the payout is doomed, look at what actually drove those losses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143162765
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T11:04:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=310fa0c7a0ab51904768a162f0532cfd40a591586c589f9eb4d6731be3e3cd0b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford, GM, Stellantis stocks decline for week ending Oct. 23
+<<<SUMMARY>>>
+GM's stock price dropped the same week it reported earnings and announced a $20 billion stock buyback.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143140266
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T00:58:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bdf4029342356d46de87cb7734aa5432d39fb6215e8001b0b219bc26e159bad7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Stocktwits Zero To Sixty: Tesla And SpaceX Form Merger Committees As Profits Drop, While Rivian Buys AI Startup And GM, Ford Advance EV Plans
+<<<SUMMARY>>>
+Tesla and SpaceX formed special committees to explore a merger as the EV maker reported flat revenue and a sharp profit drop this week, while Rivian acquired a simulation AI startup and GM unveiled its next-gen EV platform.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136881
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T18:05:57Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=677b3233e6394270f95189eda22ec56482302cc39db82cf77662bc002543adf2
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: F
+keywords: 
+headline: Most Active S&P 500 Stocks for Oct. 23, 2026
+<<<SUMMARY>>>
+Most-active S&P 500 scan for Oct. 23, 2026 ranks AT&T, Verizon, Bloom Energy, Ford, Netflix and others by volume with price moves and performance context.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136227
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T16:45:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e761f11cd811568c45e5d94c8a8a0085f0c871d359376d80db338cc79887e0f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Tesla Continues to Falter and Lose Value: This Renowned Analyst Predicts 60% Returns Soon
+<<<SUMMARY>>>
+A top Wall Street analyst sees Tesla soaring while the rest of the Street keeps slashing estimates and the stock drifts further below its highs. The case for and against that bullish call comes down to one business that Tesla has not yet proven it can run.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136434
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T16:05:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=88c31031ba8ef80b8fe128165d9a5aa146b0734b11c96213943e070f95e4f1a2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Stellantis at Record Low: Turnaround Play or Value Trap?
+<<<SUMMARY>>>
+Stellantis stock just broke through a five-year floor while rivals Ford and GM hold steady, and a make-or-break earnings report arrives in days. The bulls and bears each have a credible case, but only one of them survives October 28.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143163383
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T15:58:33Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d26a1ddc02d6ab8b4688df9cd7269057ba5db07807aa1cdc0c2df7a97cc0c407
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Hdr-Image--Walmart-Customers-Check-Out-L.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Tech-to-Defensive Rotation, GM Stock Logs Worst Week Since 2023: This Week on Wall Street
+<<<SUMMARY>>>
+Staples ETF XLP heads for its best month since 1998 as investors ask who funds AI; Meta burns cash, GM has its worst week since 2023.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135893
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:56:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=273356da972a7598b2820ac28691435783016dd38994458aa08b37117e4bd2c1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Stellantis Sinks 8% as Q3 Report Nears; Ford Drops 4%, General Motors Slides 3%
+<<<SUMMARY>>>
+Stellantis shares are cratering ahead of a quarterly report that management already warned would be seasonally weak, and Ford and General Motors are getting dragged down with it. Whether next week's results steady the sector or deepen the rout depends on a turnaround story that has yet to fully prove itself.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135917
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:28:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d079c3462116e12eea16d025e27432810036ae212d3443e172a534f6a3cfc5b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Takes A Beating In Europe
+<<<SUMMARY>>>
+Ford's grip on global auto markets is slipping faster than most realize, and the places it once counted on for growth are now closing the door on the American automaker.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143135916
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T14:12:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a32a69df47b3128c635fccbbfe0d21174510970ed98faabe4a489bd71a85f601
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor (F) Faces Fresh Fuel Pump Legal Risk As Undervalued Narrative Holds
+<<<SUMMARY>>>
+Ford Motor (F) is back under the legal spotlight after a federal judge certified state classes in a long running lawsuit over CP4 fuel pumps used in certain 6.7L diesel trucks. At a share price of $11.94, Ford Motor has seen pressure in recent months, with the 30 day share price return down 8.86% and the 90 day move down 16.91%. However, the 3 year total shareholder return of 27.04% still paints a stronger longer term picture as investors weigh legal risks against improving profit guidance...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143163884
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T12:27:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e2f92efd25ae62b77dcc021d6963053493ef5104e4d8bca28ef337a982d94765
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Sunnyvale--Ca--Usa---Nov-22--2023-A-Ford.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Ford Stock Drops: What's Going On?
+<<<SUMMARY>>>
+Ford Motor Co. (NYSE: F) shares are dropping Friday along with the rest of the auto sector. Here&#39;s what you should know.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143133777
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T12:15:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f2c991d7d0b07ab5dc99c4d6febe62522af49d5821f5029bbeda535600017436
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Exploring Analyst Estimates for Ford Motor (F) Q3 Earnings, Beyond Revenue and EPS
+<<<SUMMARY>>>
+Besides Wall Street's top-and-bottom-line estimates for Ford Motor (F), review projections for some of its key metrics to gain a deeper understanding of how the company might have fared during the quarter ended September 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143324838
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T07:12:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd3cb545c7ad14771ed32aeba882a3827267400377d4841cd9287ff1a2ce5ab4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford (F) Stock Jumps As Q3 Results Ease Cash Flow Fears
+<<<SUMMARY>>>
+Ford Motor shares closed at US$12.36, up 3.4% on the session, as traders reacted quickly to a cleaner looking Q3 2026 print. On the surface, the story is simple. Adjusted EBIT landed at US$2.7b and adjusted free cash flow reached US$4.7b, which soothed near term worries after a choppy year. The longer view is trickier. Over the past 90 days the stock is still down about 16%, and trailing 12 month earnings remain in the red. That tension between a solid quarterly profit run rate and an...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143320496
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T06:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0454e4501d26465fa806bf169f44127259d4550a4b25b7e0df3f8b63a797b2e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: ‘This Is a Knife Fight:’ Inside China’s Ruthless EV Blitz Upending the World
+<<<SUMMARY>>>
+China is flooding the world with cars, hurting rivals everywhere. Why GM and Lear could thrive anyway.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143312663
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T03:30:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b035aa1618a39ddecadb5d21575c23702a6ab5b34a8010e0a29dcfaab43a9eee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford CEO Jim Farley Says $28K Fathom EV ‘Completely Blew Me Away:’ ‘Like Something I’ve Never Experienced’
+<<<SUMMARY>>>
+Ford Motor Co. CEO Jim Farley, during the automaker’s Q3 2026 earnings call on Wednesday, hailed the upcoming sub-$30,000 Fathom EV pickup truck, saying its capabilities had exceeded the CEO’s expectations. Ford Fathom’s Hands-Free ADAS Experience ‘Blew Me Away,’ Says...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a2c55717b2c21fb2cd287a31dcde23cdf8065866f53bd85291028f7f226d3449
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-25T18:03:00Z
+publisher: The Motley Fool
+author: Daniel Miller
+url: https://www.fool.com/investing/2026/10/25/forget-fords-lucrative-dividend-gm-has-a-different/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892081%2Fgettyimages-2259152139.jpg&w=1200&op=resize
+category: 
+tickers: GM, F, FpB, FpC, FpD, STLA
+keywords: share buybacks, shareholder returns, earnings per share, total yield, automotive industry, cash flow, share repurchase
+headline: Forget Ford's Lucrative Dividend. GM Has a Different and Perhaps Better Way to Reward Investors.
+<<<SUMMARY>>>
+General Motors has announced a $20 billion share repurchase authorization and has reduced outstanding shares by nearly 40% since early 2023. With strong cash flow generation, GM's total shareholder yield (buybacks plus dividends) reaches 12.59%, roughly double Ford's 5.7%, potentially offering better long-term value despite Ford's more publicized dividend strategy.
+<<<INSIGHTS>>>
+GM | positive | GM is executing a massive $20 billion buyback program, has reduced shares by 40% since 2023, generated strong Q3 free cash flow of $5.9 billion, raised full-year guidance, and offers a total yield of 12.59%, demonstrating strong financial execution and shareholder value creation.
+F | neutral | While Ford maintains a well-regarded dividend strategy with consistent payouts, its total yield of 5.7% is significantly lower than GM's 12.59%, suggesting a less aggressive shareholder return strategy despite receiving more investor attention for its dividend approach.
+FpB | neutral | While Ford maintains a well-regarded dividend strategy with consistent payouts, its total yield of 5.7% is significantly lower than GM's 12.59%, suggesting a less aggressive shareholder return strategy despite receiving more investor attention for its dividend approach.
+FpC | neutral | While Ford maintains a well-regarded dividend strategy with consistent payouts, its total yield of 5.7% is significantly lower than GM's 12.59%, suggesting a less aggressive shareholder return strategy despite receiving more investor attention for its dividend approach.
+FpD | neutral | While Ford maintains a well-regarded dividend strategy with consistent payouts, its total yield of 5.7% is significantly lower than GM's 12.59%, suggesting a less aggressive shareholder return strategy despite receiving more investor attention for its dividend approach.
+STLA | neutral | Stellantis is mentioned only as a comparative rival to GM and Ford in the automotive sector with no specific performance analysis or commentary provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d40d66a9f1d020c6d95e3b5139686f29384cbb94e18b8987e335b8461dada21d
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-27T00:04:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/10/27/3388653/0/en/electric-vehicle-market-to-reach-1-46-trillion-by-2032-driven-by-falling-battery-costs-and-expanding-fleet-electrification-says-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: TSLA, GM, F, FpB, FpC, FpD, VWAGY, TM
+keywords: electric vehicles, battery costs, fleet electrification, charging infrastructure, Asia-Pacific growth, commercial vehicles, EV market forecast
+headline: Electric Vehicle Market to Reach $1.46 Trillion by 2032 Driven by Falling Battery Costs and Expanding Fleet Electrification, Says Mordor Intelligence
+<<<SUMMARY>>>
+The global EV market is projected to grow from $0.86 trillion in 2027 to $1.46 trillion by 2032 at a CAGR of 11.2%, driven by declining battery costs, stricter efficiency requirements, and fleet electrification. Asia-Pacific leads regional growth, while challenges include charging infrastructure delays and critical mineral price fluctuations.
+<<<INSIGHTS>>>
+TSLA | positive | Tesla is positioned to benefit from expanding EV market growth, declining battery pack costs enabling competitive pricing, and increasing demand for electric vehicles globally.
+GM | neutral | While GM can benefit from overall EV market growth, North American demand is noted as sensitive to policy changes and incentives, creating less predictable sales conditions.
+F | neutral | Ford faces similar North American market volatility tied to policy changes, though it can benefit from commercial vehicle electrification opportunities mentioned in the report.
+FpB | neutral | Ford faces similar North American market volatility tied to policy changes, though it can benefit from commercial vehicle electrification opportunities mentioned in the report.
+FpC | neutral | Ford faces similar North American market volatility tied to policy changes, though it can benefit from commercial vehicle electrification opportunities mentioned in the report.
+FpD | neutral | Ford faces similar North American market volatility tied to policy changes, though it can benefit from commercial vehicle electrification opportunities mentioned in the report.
+VWAGY | positive | As a major automaker, Volkswagen can leverage declining battery costs to expand EV offerings and capitalize on growing European EV adoption mentioned in the report.
+TM | neutral | While included as a major player, Toyota's diversified powertrain strategy (including FCEVs and hybrids) means it may not capture full benefits of BEV-focused market growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:72cfa90266e37431d3cb3a681a6f3433d4338fcf33bbafcba500af11198344c5
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-27T15:45:00Z
+publisher: The Motley Fool
+author: Daniel Miller
+url: https://www.fool.com/investing/2026/10/27/fords-maverick-hybrid-sales-just-surged-60-heres/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892082%2Fford_maverick.png&w=1200&op=resize
+category: 
+tickers: F, FpB, FpC, FpD
+keywords: Maverick Hybrid, hybrid vehicles, Q3 sales, profitability, pickup trucks, automotive industry, consumer demand
+headline: Ford's Maverick Hybrid Sales Just Surged 60%. Here's Exactly Why Investors Should Care.
+<<<SUMMARY>>>
+Ford's Maverick Hybrid pickup sales surged 59.6% in Q3 2026, accounting for roughly two-thirds of total Maverick sales. Despite Ford's overall 6.6% U.S. sales decline, the hybrid's strong performance is significant because many Ford hybrids are more profitable than their gasoline counterparts, suggesting potential margin improvements for the Maverick lineup.
+<<<INSIGHTS>>>
+F | positive | The Maverick Hybrid's 60% sales surge and record quarterly performance demonstrates strong consumer demand and market understanding. The potential for higher profit margins on hybrid vehicles compared to gasoline counterparts suggests improved profitability prospects, offsetting broader sales declines driven by planned vehicle phaseouts.
+FpB | positive | The Maverick Hybrid's 60% sales surge and record quarterly performance demonstrates strong consumer demand and market understanding. The potential for higher profit margins on hybrid vehicles compared to gasoline counterparts suggests improved profitability prospects, offsetting broader sales declines driven by planned vehicle phaseouts.
+FpC | positive | The Maverick Hybrid's 60% sales surge and record quarterly performance demonstrates strong consumer demand and market understanding. The potential for higher profit margins on hybrid vehicles compared to gasoline counterparts suggests improved profitability prospects, offsetting broader sales declines driven by planned vehicle phaseouts.
+FpD | positive | The Maverick Hybrid's 60% sales surge and record quarterly performance demonstrates strong consumer demand and market understanding. The potential for higher profit margins on hybrid vehicles compared to gasoline counterparts suggests improved profitability prospects, offsetting broader sales declines driven by planned vehicle phaseouts.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7e32ba3dab71f4a3b31c25abe87184ed8695029af63898d864124141e17a0a74
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-28T13:38:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3017353/big-day-for-econ-data-hyperscaler-earnings?cid=CS-ZC-FT-ahead_of_wall_street-3017353
+image_url: https://staticx-tuner.zacks.com/images/articles/main/8f/170423.webp
+category: 
+tickers: ETSY, BIIB, PSX, VFC, GOOG, GOOGL, GOOGM, GOOGN, MSFT, NOW, F, FpB, FpC, FpD
+keywords: Q3 earnings, AI outlook, Federal Reserve decision, oil prices, trade deficit, hyperscalers
+headline: Big Day for Econ Data, Hyperscaler Earnings
+<<<SUMMARY>>>
+Markets opened higher on October 28, 2026, driven by positive AI sentiment ahead of earnings reports from Alphabet and Microsoft. Several companies beat Q3 expectations: Etsy exceeded earnings by 15.67%, Biogen posted a 27.2% earnings surprise, and Phillips 66 crushed revenue estimates. The Fed is expected to hold rates steady at 2pm ET, while oil prices remain elevated at $102/bbl WTI following a Saudi refinery attack.
+<<<INSIGHTS>>>
+ETSY | positive | Q3 earnings beat expectations by 15.67% ($1.55 vs expected), revenues exceeded consensus by 3.5%, and stock gained 6% in pre-market trading with 58% year-to-date gains.
+BIIB | positive | Earnings of $2.62 per share significantly exceeded $2.06 expectations (27.2% surprise), revenues outpaced estimates by 8%, and company raised guidance despite flat pre-market movement.
+PSX | positive | Earnings of $14.08 per share beat $11.97 expectations, revenues of $51.51 billion vastly exceeded $33.72 billion consensus forecast, with 108% year-to-date gains.
+VFC | neutral | Earnings beat expectations by 29.63%, but revenues only beat by 0.07%, company did not raise guidance due to weakness in Vans brand, and shares fell 3% in early trading.
+GOOG | positive | Expected to report earnings growth of 2.44% and revenue growth of 27.82% year-over-year; positive AI sentiment driving market optimism ahead of earnings release.
+GOOGL | positive | Expected to report earnings growth of 2.44% and revenue growth of 27.82% year-over-year; positive AI sentiment driving market optimism ahead of earnings release.
+GOOGM | positive | Expected to report earnings growth of 2.44% and revenue growth of 27.82% year-over-year; positive AI sentiment driving market optimism ahead of earnings release.
+GOOGN | positive | Expected to report earnings growth of 2.44% and revenue growth of 27.82% year-over-year; positive AI sentiment driving market optimism ahead of earnings release.
+MSFT | positive | Expected to report 14% earnings growth and 16.6% revenue growth in fiscal Q1; hyperscaling efforts anticipated to be pronounced, supporting positive AI narrative.
+NOW | positive | Anticipated to report 6.25% year-over-year earnings growth and 19.96% revenue growth, indicating solid operational performance.
+F | negative | Expected to report negative earnings growth of -13.33% and negative sales growth of -3.21% in Q3 results.
+FpB | negative | Expected to report negative earnings growth of -13.33% and negative sales growth of -3.21% in Q3 results.
+FpC | negative | Expected to report negative earnings growth of -13.33% and negative sales growth of -3.21% in Q3 results.
+FpD | negative | Expected to report negative earnings growth of -13.33% and negative sales growth of -3.21% in Q3 results.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:44ef4f54f84bb5f0e012e628a6d335b90833c4557537181ee7536569f21c214b
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-28T21:00:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3017781/ford-motor-f-q3-earnings-how-key-metrics-compare-to-wall-street-estimates?cid=CS-ZC-FT-fundamental_analysis|nfm-3017781
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default139.jpg
+category: 
+tickers: F, FpB, FpC, FpD
+keywords: Q3 earnings, revenue, EPS, wholesale units, Ford Pro, Ford Blue, Ford Model e, Ford Credit, EBIT, stock performance
+headline: Ford Motor (F) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+<<<SUMMARY>>>
+Ford Motor reported Q3 2026 revenue of $46.08 billion, down 2.3% year-over-year but beating consensus estimates by 0.9%. EPS of $0.49 significantly exceeded the $0.39 estimate by 25.64%. However, wholesale units across most segments fell short of analyst expectations, with Ford Pro and Ford Blue underperforming. Ford Model e losses were better than expected, while Ford Credit outperformed. The stock carries a Zacks Rank #4 (Sell) rating and has underperformed the broader market.
+<<<INSIGHTS>>>
+F | negative | While Ford beat EPS and revenue estimates, the company missed on wholesale unit volumes across Ford Pro and Ford Blue segments. Revenue declined 2.3% year-over-year, and the stock has underperformed the market by 4.8% over the past month. The Zacks Rank #4 (Sell) rating and Ford Model e's continued significant losses (-$1.06B EBIT) indicate underlying operational challenges despite near-term earnings beats.
+FpB | negative | While Ford beat EPS and revenue estimates, the company missed on wholesale unit volumes across Ford Pro and Ford Blue segments. Revenue declined 2.3% year-over-year, and the stock has underperformed the market by 4.8% over the past month. The Zacks Rank #4 (Sell) rating and Ford Model e's continued significant losses (-$1.06B EBIT) indicate underlying operational challenges despite near-term earnings beats.
+FpC | negative | While Ford beat EPS and revenue estimates, the company missed on wholesale unit volumes across Ford Pro and Ford Blue segments. Revenue declined 2.3% year-over-year, and the stock has underperformed the market by 4.8% over the past month. The Zacks Rank #4 (Sell) rating and Ford Model e's continued significant losses (-$1.06B EBIT) indicate underlying operational challenges despite near-term earnings beats.
+FpD | negative | While Ford beat EPS and revenue estimates, the company missed on wholesale unit volumes across Ford Pro and Ford Blue segments. Revenue declined 2.3% year-over-year, and the stock has underperformed the market by 4.8% over the past month. The Zacks Rank #4 (Sell) rating and Ford Model e's continued significant losses (-$1.06B EBIT) indicate underlying operational challenges despite near-term earnings beats.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d5918fe63b7e2093dda68376dc940525df8a40067a10474c54131aea26aa18ef
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-28T21:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3017791/notes-on-fomc-decision-and-earnings-after-the-close?cid=CS-ZC-FT-ahead_of_wall_street-3017791
+image_url: https://staticx-tuner.zacks.com/images/articles/main/98/1265.jpg
+category: 
+tickers: MSFT, GOOG, GOOGL, GOOGM, GOOGN, NOW, F, FpB, FpC, FpD
+keywords: Federal Reserve, interest rates, FOMC meeting, earnings reports, tech stocks, monetary policy
+headline: Notes on FOMC Decision and Earnings After the Close
+<<<SUMMARY>>>
+The Federal Reserve kept interest rates unchanged at 3.75-4.00% as expected, with major stock indexes finishing in the green. Tech earnings were mixed: Microsoft beat expectations with strong revenue and earnings growth, while Google and ServiceNow missed estimates. Ford exceeded low expectations despite a $4 billion loss on its electric vehicle division.
+<<<INSIGHTS>>>
+MSFT | positive | Beat earnings expectations with $4.89 EPS (+19% YoY) versus $4.70 expected, and revenues of $92.3B (+21% YoY) above $90.58B anticipated. Shares up +4% in late trading.
+GOOG | negative | Missed both earnings and revenue estimates with $2.12 EPS versus expectations of higher results. Only second earnings miss in five years. Shares fell -7.5% immediately after announcement.
+GOOGL | negative | Missed both earnings and revenue estimates with $2.12 EPS versus expectations of higher results. Only second earnings miss in five years. Shares fell -7.5% immediately after announcement.
+GOOGM | negative | Missed both earnings and revenue estimates with $2.12 EPS versus expectations of higher results. Only second earnings miss in five years. Shares fell -7.5% immediately after announcement.
+GOOGN | negative | Missed both earnings and revenue estimates with $2.12 EPS versus expectations of higher results. Only second earnings miss in five years. Shares fell -7.5% immediately after announcement.
+NOW | negative | Posted first-ever earnings miss since 2014 with $1.00 EPS versus $1.02 expected, despite revenue beating estimates. Shares plummeted -16% on earnings news despite new OpenAI deal announcement.
+F | neutral | Beat earnings and revenue expectations ($0.49 EPS vs. consensus, $49.5B in sales), but gains dampened by $4 billion loss on Model e electric vehicle division. Shares down -1.9% in late trading.
+FpB | neutral | Beat earnings and revenue expectations ($0.49 EPS vs. consensus, $49.5B in sales), but gains dampened by $4 billion loss on Model e electric vehicle division. Shares down -1.9% in late trading.
+FpC | neutral | Beat earnings and revenue expectations ($0.49 EPS vs. consensus, $49.5B in sales), but gains dampened by $4 billion loss on Model e electric vehicle division. Shares down -1.9% in late trading.
+FpD | neutral | Beat earnings and revenue expectations ($0.49 EPS vs. consensus, $49.5B in sales), but gains dampened by $4 billion loss on Model e electric vehicle division. Shares down -1.9% in late trading.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a86539701af0d3d108ef0ae91499738e84b9b169229b75cb6b35cf560358848d
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T13:11:14Z
+publisher: The Motley Fool
+author: The Motley Fool Team
+url: https://www.fool.com/earnings/takeaways/2026/10/29/ford-q3-earnings-3-key-takeaways-for-long-term-investors/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb4204f36ed605fc54d4ba32e2cb31d1dd892afd6-800x450.jpg&w=1200&op=resize
+category: 
+tickers: F, FpB, FpC, FpD
+keywords: Q3 earnings, EBIT guidance, battery storage, electric vehicles, software subscriptions, commercial fleet, profit margins, capital efficiency
+headline: Ford Q3 Earnings: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+Ford raised its 2026 adjusted EBIT guidance to $10.5-$11 billion, driven by three strategic initiatives: expanding grid-scale battery storage through Ford Energy (80% of 2028 capacity contracted), launching affordable electric vehicles like the Fathom to reduce EV costs, and growing high-margin software and parts businesses which contributed 10% of Q3 revenue. The company targets 8% adjusted EBIT margins by 2029.
+<<<INSIGHTS>>>
+F | positive | Ford raised full-year EBIT guidance, demonstrated strong Q3 performance with 10% revenue contribution from high-margin software and parts, secured 80% of 2028 Ford Energy capacity through contracts, and is on track with affordable EV launches. Management projects achieving 8% adjusted EBIT margins by 2029, indicating confidence in profitability and shareholder returns.
+FpB | positive | Ford raised full-year EBIT guidance, demonstrated strong Q3 performance with 10% revenue contribution from high-margin software and parts, secured 80% of 2028 Ford Energy capacity through contracts, and is on track with affordable EV launches. Management projects achieving 8% adjusted EBIT margins by 2029, indicating confidence in profitability and shareholder returns.
+FpC | positive | Ford raised full-year EBIT guidance, demonstrated strong Q3 performance with 10% revenue contribution from high-margin software and parts, secured 80% of 2028 Ford Energy capacity through contracts, and is on track with affordable EV launches. Management projects achieving 8% adjusted EBIT margins by 2029, indicating confidence in profitability and shareholder returns.
+FpD | positive | Ford raised full-year EBIT guidance, demonstrated strong Q3 performance with 10% revenue contribution from high-margin software and parts, secured 80% of 2028 Ford Energy capacity through contracts, and is on track with affordable EV launches. Management projects achieving 8% adjusted EBIT margins by 2029, indicating confidence in profitability and shareholder returns.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b28da6789d0ce8350691dba31eac1350025bbba750e0bac2af04926db07e76ce
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T13:57:01Z
+publisher: The Motley Fool
+author: Bram Berkowitz
+url: https://www.fool.com/investing/2026/10/29/how-is-ford-s-stock-looking-after-better-than-expected-earnings-results/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F2e23455231d8fa8684c1686f64ac48c6158668d9-1200x800.png&w=1200&op=resize
+category: 
+tickers: F, FpB, FpC, FpD, GS, GSpA, GSpC, GSpD
+keywords: Q3 earnings, better-than-expected results, commodity costs, electric vehicle business, dividend yield, guidance raise, EV restructuring
+headline: How Is Ford's Stock Looking After Better-Than-Expected Earnings Results?
+<<<SUMMARY>>>
+Ford Motor Company reported Q3 2026 earnings that beat Wall Street expectations with $2.7 billion operating profit and $49.5 billion in revenue, leading to a slight raise in full-year EBIT guidance to $10.5-11 billion. However, the stock's 2% post-earnings pop was tempered by concerns over $2.5 billion in commodity and logistics headwinds, with an additional $2 billion expected in 2027. The company continues restructuring its EV business toward profitability by 2029, though the analyst community remains cautious.
+<<<INSIGHTS>>>
+F | neutral | While Ford beat earnings expectations and raised guidance, the stock remains down ~9% year-to-date and faces significant headwinds from $2.5 billion in commodity/logistics costs with $2 billion expected in 2027. The EV business, though improving, still generated over $1 billion in losses. Goldman Sachs maintained a neutral rating citing cost pressures. The 5% dividend is attractive but the company remains operationally challenged, warranting a neutral stance.
+FpB | neutral | While Ford beat earnings expectations and raised guidance, the stock remains down ~9% year-to-date and faces significant headwinds from $2.5 billion in commodity/logistics costs with $2 billion expected in 2027. The EV business, though improving, still generated over $1 billion in losses. Goldman Sachs maintained a neutral rating citing cost pressures. The 5% dividend is attractive but the company remains operationally challenged, warranting a neutral stance.
+FpC | neutral | While Ford beat earnings expectations and raised guidance, the stock remains down ~9% year-to-date and faces significant headwinds from $2.5 billion in commodity/logistics costs with $2 billion expected in 2027. The EV business, though improving, still generated over $1 billion in losses. Goldman Sachs maintained a neutral rating citing cost pressures. The 5% dividend is attractive but the company remains operationally challenged, warranting a neutral stance.
+FpD | neutral | While Ford beat earnings expectations and raised guidance, the stock remains down ~9% year-to-date and faces significant headwinds from $2.5 billion in commodity/logistics costs with $2 billion expected in 2027. The EV business, though improving, still generated over $1 billion in losses. Goldman Sachs maintained a neutral rating citing cost pressures. The 5% dividend is attractive but the company remains operationally challenged, warranting a neutral stance.
+GS | neutral | Goldman Sachs analyst Mark Delaney lowered Ford's price target and maintained a neutral rating, indicating a cautious but not bearish outlook on the automotive sector based on cost pressures.
+GSpA | neutral | Goldman Sachs analyst Mark Delaney lowered Ford's price target and maintained a neutral rating, indicating a cautious but not bearish outlook on the automotive sector based on cost pressures.
+GSpC | neutral | Goldman Sachs analyst Mark Delaney lowered Ford's price target and maintained a neutral rating, indicating a cautious but not bearish outlook on the automotive sector based on cost pressures.
+GSpD | neutral | Goldman Sachs analyst Mark Delaney lowered Ford's price target and maintained a neutral rating, indicating a cautious but not bearish outlook on the automotive sector based on cost pressures.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bbadd483734062a337483f845c6daf249c70a538613a7b61739faefb922a2e61
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T14:33:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018756/ford-q3-earnings-beat-on-ford-credit-strength-favorable-mix?cid=CS-ZC-FT-analyst_blog|earnings_article-3018756
+image_url: https://staticx-tuner.zacks.com/images/articles/main/37/503.jpg
+category: 
+tickers: F, FpB, FpC, FpD, GM, TSLA, GPC
+keywords: Q3 2026 earnings, Ford Motor, EPS beat, EBIT guidance raised, Ford Blue, Ford Pro, Model e, Ford Credit, commodity costs, electric vehicles
+headline: Ford Q3 Earnings Beat on Ford Credit Strength & Favorable Mix
+<<<SUMMARY>>>
+Ford Motor reported Q3 2026 adjusted EPS of 49 cents, beating estimates by 25.64%, with earnings up 8.9% year-over-year despite a 2% revenue decline. The company raised its 2026 adjusted EBIT outlook to $10.5-$11 billion, supported by favorable product mix and strong Ford Credit results. However, Ford Blue faced volume pressures and commodity headwinds, while Model e losses narrowed but remained significant at $1.06 billion.
+<<<INSIGHTS>>>
+F | positive | Beat EPS estimates by 25.64%, raised full-year EBIT guidance, improved adjusted free cash flow, and maintained strong liquidity. However, offset by revenue decline, wholesale volume drop, and significant Model e losses.
+FpB | positive | Beat EPS estimates by 25.64%, raised full-year EBIT guidance, improved adjusted free cash flow, and maintained strong liquidity. However, offset by revenue decline, wholesale volume drop, and significant Model e losses.
+FpC | positive | Beat EPS estimates by 25.64%, raised full-year EBIT guidance, improved adjusted free cash flow, and maintained strong liquidity. However, offset by revenue decline, wholesale volume drop, and significant Model e losses.
+FpD | positive | Beat EPS estimates by 25.64%, raised full-year EBIT guidance, improved adjusted free cash flow, and maintained strong liquidity. However, offset by revenue decline, wholesale volume drop, and significant Model e losses.
+GM | positive | Delivered strong Q3 results with EPS growth of 32.2%, revenues up 3% year-over-year, and raised adjusted automotive free cash flow forecast significantly. Authorized $20 billion share repurchase program.
+TSLA | neutral | Beat EPS estimates by 6.67% but earnings declined 4% year-over-year due to higher operating expenses. Revenues marginally down and capital expenditure guidance reduced, indicating mixed performance.
+GPC | neutral | Slightly missed EPS estimates ($2.07 vs $2.09 consensus) but earnings grew 4.5% year-over-year. Revenues exceeded expectations with strong Industrial demand, showing balanced performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ae76b1b5ec3b11b226042f0b993f3696f7628884d1766d74ed2226e0568e500e
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T14:39:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018771/tesla-vs-ford-which-stock-has-an-edge-after-q3-earnings?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3018771
+image_url: https://staticx-tuner.zacks.com/images/articles/main/d7/3839.jpg
+category: 
+tickers: TSLA, F, FpB, FpC, FpD
+keywords: Q3 2026 earnings, capital expenditure, automotive margins, robotaxi, EV losses, commodity headwinds, vehicle deliveries, energy storage
+headline: Tesla vs. Ford: Which Stock Has an Edge After Q3 Earnings?
+<<<SUMMARY>>>
+Tesla and Ford both beat Q3 2026 EPS estimates, but diverge significantly in outlook. Tesla cut capex to $20B while improving margins to 18.5% and showing strong robotaxi momentum with 486,532 deliveries. Ford faces $2.5B in commodity headwinds and $4B in EV losses, guiding to flat 2027 earnings. Tesla shares gained 14% over the past month while Ford lost 1%, positioning Tesla as the better near-term investment.
+<<<INSIGHTS>>>
+TSLA | positive | Strong demand with 486,532 Q3 deliveries and highest 4-year order backlog; improving automotive gross margins (18.5%); successful robotaxi deployment with 2M unsupervised miles; energy business showing strong visibility with 33.1% margins; capex reduction to $20B protects cash flow while maintaining growth investments; expected earnings growth in 2027.
+F | negative | Facing $2.5B in 2026 commodity headwinds plus additional $2B expected in 2027; Model e EV unit losing $4B annually with no turnaround before 2028; Ford Pro margins contracting (9.4% from 11.4%); guiding to flat 2027 earnings; wholesale units and revenues declining; tariff and inflation uncertainties pose additional risks; near-term earnings pressure from external cost factors beyond management control.
+FpB | negative | Facing $2.5B in 2026 commodity headwinds plus additional $2B expected in 2027; Model e EV unit losing $4B annually with no turnaround before 2028; Ford Pro margins contracting (9.4% from 11.4%); guiding to flat 2027 earnings; wholesale units and revenues declining; tariff and inflation uncertainties pose additional risks; near-term earnings pressure from external cost factors beyond management control.
+FpC | negative | Facing $2.5B in 2026 commodity headwinds plus additional $2B expected in 2027; Model e EV unit losing $4B annually with no turnaround before 2028; Ford Pro margins contracting (9.4% from 11.4%); guiding to flat 2027 earnings; wholesale units and revenues declining; tariff and inflation uncertainties pose additional risks; near-term earnings pressure from external cost factors beyond management control.
+FpD | negative | Facing $2.5B in 2026 commodity headwinds plus additional $2B expected in 2027; Model e EV unit losing $4B annually with no turnaround before 2028; Ford Pro margins contracting (9.4% from 11.4%); guiding to flat 2027 earnings; wholesale units and revenues declining; tariff and inflation uncertainties pose additional risks; near-term earnings pressure from external cost factors beyond management control.
+<<<END>>>

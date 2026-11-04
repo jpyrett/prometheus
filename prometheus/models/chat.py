@@ -7,7 +7,7 @@
 The model for each role comes from the settings in .env (the names are in .env.example), so changing a model is
 a settings change, not a code change:
 
-    data_clerk -> DEFAULT_MODEL     fast -> FAST_MODEL     advisor -> ADVISOR_MODEL     critic -> CRITIC_MODEL
+    data_clerk -> DEFAULT_MODEL     fast -> FAST_MODEL     advisor -> ADVISOR_MODEL     critic -> CRITIC_MODEL     account_manager -> ACCOUNT_MANAGER_MODEL
 
 `llm.py` (the local Hugging Face model from Lab 1.1) stays as it is. A local chat model for the agents is later work.
 The temperature is 0 by default: the Data Clerk should pick the same tool for the same question.
@@ -24,6 +24,7 @@ ROLES = {  # role -> (setting name, default). The defaults are the values in .en
     "fast": ("FAST_MODEL", "qwen/qwen3-30b-a3b"),
     "advisor": ("ADVISOR_MODEL", "nvidia/nemotron-3-super-120b-a12b"),
     "critic": ("CRITIC_MODEL", "nvidia/nemotron-3-super-120b-a12b"),
+    "account_manager": ("ACCOUNT_MANAGER_MODEL", "openai/gpt-oss-120b"),  # RaiseFunds, the Tree of Thought (entry 42): Jacob asked for gpt-oss-120b
 }
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
 

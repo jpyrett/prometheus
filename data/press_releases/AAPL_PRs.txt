@@ -1,0 +1,297 @@
+<<<PRESS_RELEASE>>>
+id: 44107d69ebe0e861
+symbol: AAPL
+published_utc: 2025-10-30T16:30:00Z
+url: https://www.nasdaq.com/press-release/apple-reports-fourth-quarter-results-2025-10-30
+headline: Apple reports fourth quarter results
+<<<TEXT>>>
+"Today, Apple is very proud to report a September quarter revenue record of $102.5 billion, including a September quarter revenue record for iPhone and an all-time revenue record for Services," said Tim Cook, Apple’ s CEO." In September, we were thrilled to launch our best iPhone lineup ever, including iPhone 17, iPhone 17 Pro and Pro Max, and iPhone Air.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a31fe63040096fc
+symbol: AAPL
+published_utc: 2025-12-01T17:10:00Z
+url: https://www.nasdaq.com/press-release/john-giannandrea-retire-apple-2025-12-01
+headline: John Giannandrea to retire from Apple
+<<<TEXT>>>
+Apple ® today announced John Giannandrea, Apple’ s senior vice president for Machine Learning and AI Strategy, is stepping down from his position and will serve as an advisor to the company before retiring in the spring of 2026. Apple also announced that renowned AI researcher Amar Subramanya has joined Apple as vice president of AI, reporting to Craig...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 519ab77bd1631dd7
+symbol: AAPL
+published_utc: 2025-12-04T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-unveils-winners-2025-app-store-awards-2025-12-04
+headline: Apple unveils the winners of the 2025 App Store Awards
+<<<TEXT>>>
+The winning apps and games were hand-selected by App Store editors from a list of 45 finalists for demonstrating exceptional innovation, user experience, and design. "Every year, we’ re inspired by the ways developers turn their best ideas into innovative experiences that enrich people’ s lives," said Tim Cook, Apple’ s CEO." This year’ s winners represent the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5e23f8ad6c775e57
+symbol: AAPL
+published_utc: 2025-12-04T16:30:00Z
+url: https://www.nasdaq.com/press-release/apple-announces-executive-transitions-2025-12-04
+headline: Apple announces executive transitions
+<<<TEXT>>>
+Apple ® today announced that Jennifer Newstead will become Apple’ s general counsel on March 1, 2026, following a transition of duties from Kate Adams, who has served as Apple’ s general counsel since 2017. She will join Apple as senior vice president in January, reporting to CEO Tim Cook and serving on Apple’ s executive team. The Environment and Social Initiatives...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0be942ba143f10d0
+symbol: AAPL
+published_utc: 2025-12-17T20:00:00Z
+url: https://www.nasdaq.com/press-release/apple-announces-changes-ios-japan-2025-12-18
+headline: Apple announces changes to iOS in Japan
+<<<TEXT>>>
+These updates create new options for developers to distribute apps on alternative app marketplaces and to process app payments for digital goods and services outside of Apple In- App Purchase. Across these changes, Apple has worked to reduce new privacy and security risks the law creates to provide users in Japan the best and safest experience possible.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6386bb61763ad522
+symbol: AAPL
+published_utc: 2026-01-13T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-introduces-apple-creator-studio-inspiring-collection-most-powerful-creative
+headline: Apple introduces Apple Creator Studio, an inspiring collection of the most powerful creative apps
+<<<TEXT>>>
+Apple ® today unveiled Apple Creator Studio, a groundbreaking collection of powerful creative apps designed to put studio-grade power into the hands of everyone, building on the essential role Mac ®, iPad ®, and iPhone ® play in the lives of millions of creators around the world. Final Cut Pro introduces exceptional new video editing tools and intelligent...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ba16a7c2fd2f4786
+symbol: AAPL
+published_utc: 2026-01-29T16:30:00Z
+url: https://www.nasdaq.com/press-release/apple-reports-first-quarter-results-2026-01-29
+headline: Apple reports first quarter results
+<<<TEXT>>>
+"Today, Apple is proud to report a remarkable, record-breaking quarter, with revenue of $143.8 billion, up 16 percent from a year ago and well above our expectations," said Tim Cook, Apple’ s CEO." iPhone had its best-ever quarter driven by unprecedented demand, with all-time records across every geographic segment, and Services also achieved an all-time revenue...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9fbf65fd44645b38
+symbol: AAPL
+published_utc: 2026-02-12T10:14:00Z
+url: https://www.nasdaq.com/press-release/sunbit-appoints-shachar-g-scott-chief-marketing-officer-accelerate-its-next-phase
+headline: Sunbit Appoints Shachar G. Scott as Chief Marketing Officer to Accelerate its Next Phase of Growth
+<<<TEXT>>>
+Sunbit, the personalized financial partner for everyday life, today announced the appointment of Shachar G. Scott as Chief Marketing Officer, signaling a pivotal next chapter in the company’ s growth. Scott brings more than 25 years of experience building and scaling global brands across technology and consumer products with leadership roles at Meta, Apple,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ed8c761575748bed
+symbol: AAPL
+published_utc: 2026-02-24T06:00:00Z
+url: https://www.nasdaq.com/press-release/apple-accelerates-us-manufacturing-mac-mini-production-coming-later-year-2026-02-24
+headline: Apple accelerates U.S. manufacturing, with Mac mini production coming later this year
+<<<TEXT>>>
+Apple began producing advanced AI servers in Houston in 2025 for the first time, and production is already ahead of schedule. Servers assembled in Houston— including logic boards produced onsite— are used in Apple data centers around the country. Beyond production, Apple is investing in the workforce that will drive American manufacturing forward.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8dbf601c9b9f7ea3
+symbol: AAPL
+published_utc: 2026-03-02T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-introduces-iphone-17e-2026-03-02
+headline: Apple introduces iPhone 17e
+<<<TEXT>>>
+Apple ® today announced iPhone ® 17 e, a powerful and more affordable addition to the iPhone 17 lineup. At the heart of iPhone 17 e is the latest-generation A19, which delivers exceptional performance for everything users do. iPhone 17 e also features C1X, the latest-generation cellular modem designed by Apple, which is up to 2 x faster than C1 in iPhone 16 e.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f6680b766aa49cad
+symbol: AAPL
+published_utc: 2026-03-02T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-introduces-new-ipad-air-powered-m4-2026-03-02
+headline: Apple introduces the new iPad Air, powered by M4
+<<<TEXT>>>
+With M4, iPad Air is up to 30 percent faster than iPad Air with M3, 1 and up to 2.3 x faster than iPad Air with M1. 2 The new iPad Air also features the latest in Apple silicon connectivity chips, N1 and C1X, delivering fast wireless and cellular connections— and support for Wi-Fi 7— that empower users to work and be creative anywhere. 3 Available in two sizes and four...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5c238f86526a9554
+symbol: AAPL
+published_utc: 2026-03-03T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-introduces-macbook-pro-all-new-m5-pro-and-m5-max-delivering-breakthrough-pro
+headline: Apple introduces MacBook Pro with all-new M5 Pro and M5 Max, delivering breakthrough pro performance and next-level on-device AI
+<<<TEXT>>>
+The new MacBook Pro includes N1, an Apple- designed wireless networking chip that enables Wi-Fi 7 and Bluetooth 6, bringing improved performance and reliability to wireless connections. It also offers up to 24 hours of battery life; a gorgeous Liquid Retina XDR ® display with a nano-texture option; a wide array of connectivity, including Thunderbolt 5; a 12 MP...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 142c709f82a6399f
+symbol: AAPL
+published_utc: 2026-03-03T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-introduces-new-macbook-air-m5-2026-03-03
+headline: Apple introduces the new MacBook Air with M5
+<<<TEXT>>>
+Apple ® today announced the new MacBook Air ® with M5, bringing exceptional performance and expanded AI capabilities to the world’ s most popular laptop. Combined with the power of macOS ® Tahoe and Apple Intelligence™, MacBook Air delivers unmatched value for college students and creative professionals, and it’ s the most popular laptop for business users.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4c455b922dd4629e
+symbol: AAPL
+published_utc: 2026-03-03T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-unveils-new-studio-display-and-all-new-studio-display-xdr-2026-03-03
+headline: Apple unveils new Studio Display and all-new Studio Display XDR
+<<<TEXT>>>
+The new Studio Display with a tilt-adjustable stand starts at $1,599, and Studio Display XDR with a tilt- and height-adjustable stand starts at $3,299. Both are available in standard or nano-texture glass options, and can be pre-ordered starting tomorrow, March 4, with availability beginning Wednesday, March 11. "Apple has led the industry in delivering the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: acf867d4280cc25f
+symbol: AAPL
+published_utc: 2026-03-03T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-debuts-m5-pro-and-m5-max-supercharge-most-demanding-pro-workflows-2026-03-03
+headline: Apple debuts M5 Pro and M5 Max to supercharge the most demanding pro workflows
+<<<TEXT>>>
+The chips are built using a new Apple- designed Fusion Architecture. "M5 Pro and M5 Max are a monumental leap forward for Apple silicon, leveraging our new Fusion Architecture to scale the capabilities of Apple silicon while preserving its core tenets of performance, power efficiency, and unified memory architecture," said Johny Srouji, Apple’ s senior vice...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fc3f341a3f96922e
+symbol: AAPL
+published_utc: 2026-03-04T09:15:00Z
+url: https://www.nasdaq.com/press-release/say-hello-macbook-neo-2026-03-04
+headline: Say hello to MacBook Neo
+<<<TEXT>>>
+MacBook Neo starts with a beautiful Apple design, featuring a durable aluminum enclosure in an array of gorgeous colors— blush, indigo, silver, and a fresh new citrus. Completing the MacBook Neo experience is macOS ® Tahoe, with powerful built-in apps like Messages, Pages, Calendar, and Safari ®; seamless integration with iPhone ®; Apple Intelligence™; as well as...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 056d8e4b69169d4a
+symbol: AAPL
+published_utc: 2026-03-16T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-introduces-airpods-max-2-2026-03-16
+headline: Apple introduces AirPods Max 2
+<<<TEXT>>>
+Apple ® today announced AirPods Max ® 2, bringing even better Active Noise Cancellation, elevated sound quality, and intelligent features to the iconic over-ear design. AirPods Max 2 will be available to order starting March 25 in midnight, starlight, orange, purple, and blue, with availability beginning early next month. "With the incredible performance of H2,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 20d3861c896f27d9
+symbol: AAPL
+published_utc: 2026-03-23T13:00:00Z
+url: https://www.nasdaq.com/press-release/apples-worldwide-developers-conference-returns-week-june-8-2026-03-23
+headline: Apple’s Worldwide Developers Conference returns the week of June 8
+<<<TEXT>>>
+WWDC26 will spotlight incredible updates for Apple platforms, including AI advancements and exciting new software and developer tools. As part of the company’ s ongoing commitment to supporting developers, WWDC will also provide unique access to Apple engineers and designers, and insight into new tools, frameworks, and features. The conference will take...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: abbfc8f2e93165bb
+symbol: AAPL
+published_utc: 2026-04-20T16:30:00Z
+url: https://www.nasdaq.com/press-release/tim-cook-become-apple-executive-chairman-john-ternus-become-apple-ceo-2026-04-20
+headline: Tim Cook to become Apple Executive Chairman; John Ternus to become Apple CEO
+<<<TEXT>>>
+"It has been the greatest privilege of my life to be the CEO of Apple and to have been trusted to lead such an extraordinary company. I love Apple with all of my being, and I am so grateful to have had the opportunity to work with a team of such ingenious, innovative, creative, and deeply caring people who have been unwavering in their dedication to enriching the lives of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 99aad7e515cf6112
+symbol: AAPL
+published_utc: 2026-04-20T16:30:00Z
+url: https://www.nasdaq.com/press-release/johny-srouji-named-apples-chief-hardware-officer-2026-04-20
+headline: Johny Srouji named Apple’s Chief Hardware Officer
+<<<TEXT>>>
+Apple ® today announced that, effective immediately, Apple executive Johny Srouji will become chief hardware officer. "Johny is one of the most talented people I have ever had the privilege to work with," said Apple CEO Tim Cook." He has played a singular role in driving Apple’ s silicon strategy, and his influence has been felt deeply not just inside the company, but...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 36f8b6035d65a041
+symbol: AAPL
+published_utc: 2026-04-30T16:30:00Z
+url: https://www.nasdaq.com/press-release/apple-reports-second-quarter-results-2026-04-30
+headline: Apple reports second quarter results
+<<<TEXT>>>
+The Company posted quarterly revenue of $111.2 billion, up 17 percent year over year. "Today Apple is proud to report our best March quarter ever, with revenue of $111.2 billion and double-digit growth across every geographic segment," said Tim Cook, Apple’ s CEO." iPhone achieved a March quarter revenue record, fueled by such extraordinary demand for the iPhone 17...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 62310d470e319dfc
+symbol: AAPL
+published_utc: 2026-05-19T08:00:00Z
+url: https://www.nasdaq.com/press-release/apple-unveils-new-accessibility-features-and-updates-powered-apple-intelligence-2026
+headline: Apple unveils new accessibility features, and updates powered by Apple Intelligence
+<<<TEXT>>>
+Apple ® today previewed a suite of accessibility updates that use Apple Intelligence to bring new capabilities to features users rely on every day, including VoiceOver, Magnifier, Voice Control, and Accessibility Reader. 1 Apple also announced on-device generated subtitles for uncaptioned video content coming to the Apple ecosystem, as well as a new...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 00d6a3ed6354c5fb
+symbol: AAPL
+published_utc: 2026-06-08T14:13:00Z
+url: https://www.nasdaq.com/press-release/apple-intelligence-brings-powerful-ai-capabilities-everyday-experiences-2026-06-08
+headline: Apple Intelligence brings powerful AI capabilities into everyday experiences
+<<<TEXT>>>
+Apple ® today introduced the next generation of Apple Intelligence™, powered by a bold new architecture that integrates the latest Apple Foundation Models deep into Apple’ s platforms and is uniquely designed to protect users’ privacy. This makes the apps and experiences users rely on every day across iPhone ®, iPad ®, Mac ®, Apple Watch ®, AirPods ®, and Apple...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c25d8f8704f1b084
+symbol: AAPL
+published_utc: 2026-06-08T14:13:00Z
+url: https://www.nasdaq.com/press-release/wwdc26-apple-unveils-next-generation-apple-intelligence-siri-ai-powerful-parental
+headline: WWDC26: Apple unveils next generation of Apple Intelligence, Siri AI, powerful parental controls, and an expansive set of software improvements
+<<<TEXT>>>
+Today, during the Worldwide Developers Conference, Apple ® previewed its upcoming software releases that will deliver the next generation of Apple Intelligence™ and introduce Siri ® AI, an entirely new version of Siri that is profoundly more intelligent, knowledgeable, and capable. At WWDC26, Apple unveiled the next generation of Apple Intelligence, Siri AI,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c590ba0b0d799886
+symbol: AAPL
+published_utc: 2026-06-08T14:13:00Z
+url: https://www.nasdaq.com/press-release/apple-introduces-siri-ai-profoundly-more-capable-and-personal-assistant-2026-06-08
+headline: Apple introduces Siri AI, a profoundly more capable and personal assistant
+<<<TEXT>>>
+Apple ® today introduced Siri ® AI, an entirely new version of Siri, powered by Apple Intelligence™. With a bold new architecture uniquely designed to protect users’ privacy, Siri AI leverages the next generation of Apple Intelligence to bring state-of-the-art understanding and reasoning, along with powerful systemwide capabilities, to Apple’ s operating...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e852c88d66e3f019
+symbol: AAPL
+published_utc: 2026-06-08T14:13:00Z
+url: https://www.nasdaq.com/press-release/apple-previews-new-child-safety-features-2026-06-08
+headline: Apple previews new child safety features
+<<<TEXT>>>
+Apple ® today previewed a new suite of powerful, intuitive, and easy-to-use features designed to allow parents to more easily manage the content their children can see, who they can communicate with, and when they have access to apps. Apple today previewed a new suite of powerful, intuitive, and easy-to-use tools that are designed to help parents create safer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9cbf6839a05c29cc
+symbol: AAPL
+published_utc: 2026-06-08T17:00:00Z
+url: https://www.nasdaq.com/press-release/apple-accelerates-app-development-new-intelligence-frameworks-and-advanced-tools-2026
+headline: Apple accelerates app development with new intelligence frameworks and advanced tools
+<<<TEXT>>>
+"Developers are at the heart of the Apple ecosystem, and our goal is to provide them with the best possible tools and technologies to build the future," said Susan Prescott, Apple’ s vice president of Worldwide Developer Relations." With new intelligence frameworks and agentic coding in Xcode 27, developers have the tools they need to focus on what they do best:...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2e0fa0052afb7247
+symbol: AAPL
+published_utc: 2026-07-08T06:00:00Z
+url: https://www.nasdaq.com/press-release/apple-increase-spend-broadcom-produce-billions-more-us-chips-2026-07-08
+headline: Apple to increase spend with Broadcom to produce billions more U.S. chips
+<<<TEXT>>>
+Apple ® today announced a new multiyear commitment with Broadcom to design and produce custom silicon components and cutting-edge wireless connectivity technologies for a wide range of Apple products. Apple has been working with the administration and businesses across the U.S. to help create an end-to-end silicon supply chain in America, and today’ s...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3f560ffae3fe621e
+symbol: AAPL
+published_utc: 2026-07-08T20:21:00Z
+url: https://www.nasdaq.com/press-release/apple-scores-record-89-emmy-award-nominations-top-category-nods-celebrated-comedies
+headline: Apple scores record 89 Emmy Award nominations, with top category nods for celebrated comedies Widow’s Bay, Shrinking, and Margo’s Got Money Troubles, and global hit dramas Pluribus, Slow Horses, and Your Friends & Neighbors
+<<<TEXT>>>
+Nominations for the 78th Emmy Awards were announced today by the Television Academy, and the winners will be unveiled at a ceremony on September 14. "Great stories have the ability to entertain, surprise, and bring people together, and these unprecedented nominations recognize shows that have done exactly that," said Matt Cherniss, Apple TV’ s head of programming."...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 948439085a83dad2
+symbol: AAPL
+published_utc: 2026-07-21T10:15:00Z
+url: https://www.nasdaq.com/press-release/appswarm-releases-finx-advanced-hidden-camera-detector-app-enhanced-personal-privacy
+headline: AppSwarm Releases Finx: Advanced Hidden Camera Detector App for Enhanced Personal Privacy
+<<<TEXT>>>
+TULSA, OK- July 21, 2026- AppSwarm, Corp., a publicly traded technology company specializing in the accelerated development and publishing of mobile applications, today announced the release of its latest innovative app, Finx. Finx is a powerful new hidden-camera detector and privacy-protection app now available on the Apple App Store. Hidden Camera...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 432fc78f08c77ec0
+symbol: AAPL
+published_utc: 2026-07-28T08:15:00Z
+url: https://www.nasdaq.com/press-release/apple-upgrade-launches-united-states-2026-07-28
+headline: Apple Upgrade launches in the United States
+<<<TEXT>>>
+Apple ® today announced Apple Upgrade, a new product leasing program provided by Klarna for iPhone ®, Apple Watch ®, Mac ®, and iPad ® available on the Apple Store ® online, in the Apple Store app, and at Apple Store locations in the United States. 1 Apple Upgrade makes it even easier for customers to get the Apple products they love with a leasing plan that is right...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1277c124d6ee4e21
+symbol: AAPL
+published_utc: 2026-07-30T16:30:00Z
+url: https://www.nasdaq.com/press-release/apple-reports-third-quarter-results-2026-07-30
+headline: Apple reports third quarter results
+<<<TEXT>>>
+Diluted earnings per share was $2.02, up 29 percent year over year, and included a favorable impact of $0.11 from tariff refunds. "Today, Apple is proud to report our strongest June quarter ever, with double-digit revenue growth across iPhone, Mac and Services, and in every geographic segment," said Tim Cook, Apple’ s CEO." At WWDC26, we were thrilled to introduce the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b3a5b087da84f9db
+symbol: AAPL
+published_utc: 2026-08-13T14:30:00Z
+url: https://www.nasdaq.com/press-release/apple-opens-advanced-manufacturing-center-houston-2026-08-13
+headline: Apple opens Advanced Manufacturing Center in Houston
+<<<TEXT>>>
+At the center— the company’ s second U.S. manufacturing learning site— experts teach participants many of the same innovative processes used to make Apple products. As part of the center’ s kickoff event, Apple is proud to host U.S. They are joining Apple leaders and the AMC’ s first cohort of small- and medium-sized business leaders for a full day of hands-on training...
+<<<END>>>

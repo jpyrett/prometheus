@@ -240,9 +240,9 @@ def cli(monkeypatch, tmp_path, store):
     news.mkdir()
     shutil.copy(FIXTURE, news / "AAPL.txt")
     monkeypatch.setenv("NEWS_OUTPUT_DIR", str(news))
-    monkeypatch.setattr(ingest, "get_vector_store", lambda: store)
+    monkeypatch.setattr(ingest, "get_vector_store", lambda kind="news": store)  # `kind` since press releases got their own collection (entry 34)
     monkeypatch.setattr(ingest, "count_too_long", lambda texts: 0)
-    monkeypatch.setattr(ingest, "count_chunks", lambda: len(store.get()["ids"]))
+    monkeypatch.setattr(ingest, "count_chunks", lambda kind="news": len(store.get()["ids"]))
     return news
 
 
@@ -268,10 +268,10 @@ def test_cli_warns_loudly_when_chunks_are_over_the_embedder_limit(cli, monkeypat
 def test_cli_all_ingests_every_file_and_rebuild_clears_first(cli, monkeypatch, capsys):
     shutil.copy(FIXTURE, cli / "META.txt")
     resets = []
-    monkeypatch.setattr(ingest, "reset_collection", lambda: resets.append(True) or True)
+    monkeypatch.setattr(ingest, "reset_collection", lambda kind="news": resets.append(kind) or True)
     assert ingest.main(["--rebuild", "--all"]) == 0
     out = capsys.readouterr().out
-    assert resets == [True] and "rebuild: deleted the collection" in out
+    assert resets == ["news"] and "rebuild: deleted the collection" in out  # the news collection, and only it
     assert "AAPL: 3 articles" in out and "META: 3 articles" in out
 
 

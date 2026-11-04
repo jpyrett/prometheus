@@ -1,5 +1,5 @@
-"""Quick test of DataAgent conversion: take the first N rows of a real trades_v1 and quotes_v1 file,
-convert them with DataAgent._convert_file, and check rows, schema and values. Takes seconds.
+"""Quick test of DataToolbox conversion: take the first N rows of a real trades_v1 and quotes_v1 file,
+convert them with DataToolbox._convert_file, and check rows, schema and values. Takes seconds.
 Run: python test_convert.py [rows]   (default 1,000,000)"""
 import gzip
 import itertools
@@ -10,7 +10,7 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from data_agent import ARROW_TYPES, SCHEMAS, DataAgent
+from data_toolbox import ARROW_TYPES, SCHEMAS, DataToolbox
 
 DAY = "2026-10-01"
 
@@ -21,7 +21,7 @@ def sample(src: Path, dst: Path, rows: int) -> None:
 
 
 def main(rows: int = 1_000_000) -> int:
-    agent = DataAgent()
+    agent = DataToolbox()
     failed = False
     with tempfile.TemporaryDirectory() as tmp:
         for data_type in ("trades_v1", "quotes_v1"):

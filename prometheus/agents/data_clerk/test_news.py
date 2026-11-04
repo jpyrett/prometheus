@@ -1,11 +1,11 @@
-"""NewsTest: run DataAgent.fetch_news, discover and fetch_press_releases, fetch_filings and search (independent of the historical download).
+"""NewsTest: run DataToolbox.fetch_news, discover and fetch_press_releases, fetch_filings and search (independent of the historical download).
 
 Run:  ~/miniforge3/envs/bmd/bin/python test_news.py
 Edit CASES / FROM_DAYS below to change what is fetched. Output goes to NEWS_OUTPUT_DIR (.env) or ./news.
 """
 import sys
 
-from data_agent import DataAgent
+from data_toolbox import DataToolbox
 
 FROM_DAYS = 7
 CASES = [
@@ -28,7 +28,7 @@ class NewsTest:
                  press_release_days: int = PRESS_RELEASE_DAYS, filing_symbols: list[str] | None = None,
                  filing_days: int = FILING_DAYS, searches: list[dict] | None = None,
                  search_days: int = SEARCH_DAYS):
-        self.agent = DataAgent()
+        self.agent = DataToolbox()
         self.searches = SEARCHES if searches is None else searches
         self.search_days = search_days
         self.filing_symbols = FILING_SYMBOLS if filing_symbols is None else filing_symbols

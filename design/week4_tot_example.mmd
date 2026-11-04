@@ -1,0 +1,23 @@
+graph TD
+    R["START: nothing sold yet<br/>need $768.77 (2 MU = $820, less $51.23 cash)"]
+
+    R -->|"LLM proposes: sell 2 MSFT"| A["sell 2 MSFT<br/>raises $840, gain $540<br/>COMPLETE, score 72.1"]
+    R -->|"LLM proposes: sell 14 GM"| C["sell 14 GM<br/>raises $770, gain $630<br/>COMPLETE, score 67.2"]
+    R -->|"LLM proposes: sell 2 TSLA"| B["sell 2 TSLA (a loss, saves tax)<br/>raises $500, still short $268.77<br/>OPEN, score 100 so far: KEPT"]
+    R -->|"LLM proposes: sell 1 MU"| X["REJECTED by code:<br/>MU is the stock being bought"]
+
+    B -->|"LLM proposes: add 1 MSFT"| D["2 TSLA + 1 MSFT<br/>raises $920, gain $170<br/>COMPLETE, score 80.5"]
+    B -->|"LLM proposes: add 5 GM"| E["2 TSLA + 5 GM<br/>raises $775, gain $125<br/>COMPLETE, score 85.9"]
+
+    E ==>|"highest score among completed plans"| W["ANSWER: sell 2 TSLA and 5 GM, buy 2 MU<br/>every position kept, 2 orders"]
+
+    classDef done fill:#e3f2e1,stroke:#2e7d32,color:#000
+    classDef open fill:#fff4d6,stroke:#b8860b,color:#000
+    classDef bad fill:#fde2e2,stroke:#c62828,color:#000
+    classDef win fill:#cfe8ff,stroke:#14305c,stroke-width:3px,color:#000
+    classDef start fill:#eeeeee,stroke:#555,color:#000
+    class A,C,D,E done
+    class B open
+    class X bad
+    class W win
+    class R start

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "user": "claude",
+  "currency": "USD",
+  "cash_avail": "800",
+  "positions": [
+    {"symbol": "KO",   "name": "Coca-Cola Co",        "shares": 30,  "cost_basis": 55.00,  "acquired": "2022-03-14"},
+    {"symbol": "PEP",  "name": "PepsiCo Inc",         "shares": 12,  "cost_basis": 120.00, "acquired": "2023-07-19"},
+    {"symbol": "WMT",  "name": "Walmart Inc",         "shares": 25,  "cost_basis": 60.00,  "acquired": "2021-11-02"},
+    {"symbol": "DIS",  "name": "Walt Disney Co",      "shares": 14,  "cost_basis": 95.00,  "acquired": "2023-01-25"},
+    {"symbol": "INTC", "name": "Intel Corp",          "shares": 60,  "cost_basis": 25.00,  "acquired": "2022-09-08"},
+    {"symbol": "T",    "name": "AT&T Inc",            "shares": 100, "cost_basis": 15.00,  "acquired": "2020-06-30"},
+    {"symbol": "PFE",  "name": "Pfizer Inc",          "shares": 80,  "cost_basis": 35.00,  "acquired": "2022-12-01"},
+    {"symbol": "NKE",  "name": "Nike Inc",            "shares": 20,  "cost_basis": 80.00,  "acquired": "2023-04-10"},
+    {"symbol": "JPM",  "name": "JPMorgan Chase & Co", "shares": 6,   "cost_basis": 200.00, "acquired": "2024-02-06"},
+    {"symbol": "ORCL", "name": "Oracle Corp",         "shares": 8,   "cost_basis": 70.00,  "acquired": "2022-05-23"},
+    {"symbol": "BA",   "name": "Boeing Co",           "shares": 9,   "cost_basis": 150.00, "acquired": "2024-08-13"}
+  ],
+  "note": "A MADE-UP portfolio for the real-time test of RaiseFunds (design choices entry 48): the user is 'claude'. Eleven holdings across price ranges, $800 of free cash; PFE and NKE are made up at a LOSS (basis 35 and 80 against prices near 30 and 38), the others are in profit. The acquired dates are sample values. Not a real account."
+}

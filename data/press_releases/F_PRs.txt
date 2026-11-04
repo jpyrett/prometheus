@@ -1,0 +1,279 @@
+<<<PRESS_RELEASE>>>
+id: 2388520770ead251
+symbol: F
+published_utc: 2025-11-13T04:00:00Z
+url: https://www.nasdaq.com/press-release/ford-brings-hands-free-bluecruise-tech-masses-2025-11-13
+headline: Ford Brings Hands-Free BlueCruise Tech to the Masses
+<<<TEXT>>>
+Following its availability first on the Mustang Mach-E 2 in Europe, the advanced driver assistance system is being introduced to a further four models: Puma, 3 Puma Gen-E, 4 Kuga 5 and Ranger PHEV 6 from spring 2026.. BlueCruise was the first system of its kind to receive regulatory approval in Europe in 2023 with the launch in Great Britain. Since then, BlueCruise...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 175068b5f8906c2e
+symbol: F
+published_utc: 2025-12-09T01:00:00Z
+url: https://www.nasdaq.com/press-release/ford-announces-next-phase-european-strategy-new-strategic-partnership-product
+headline: Ford Announces Next Phase of European Strategy: New Strategic Partnership, Product Offensive, and Call for Policy Alignment
+<<<TEXT>>>
+Ford's strategy for Europe is built on three pillars– further strengthening its successful Ford Pro commercial vehicle division, expanding the Ford passenger car range with distinctive new vehicles, and optimising its industrial system to drive scale and cost efficiencies. Building towards a sustainably profitable business in Europe, Ford's next...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a1d5716ced33f3a9
+symbol: F
+published_utc: 2025-12-15T16:05:00Z
+url: https://www.nasdaq.com/press-release/ford-follows-customers-drive-profitable-growth-reinvests-trucks-hybrids-affordable
+headline: Ford Follows Customers to Drive Profitable Growth; Reinvests in Trucks, Hybrids, Affordable EVs, Battery Storage; Takes EV-Related Charges
+<<<TEXT>>>
+Ford Motor Company today announced a series of actions to sharpen its Ford+ plan, executing a decisive redeployment of capital to meet customer demand and drive profitable growth. The company is shifting to higher-return opportunities, including leveraging its U.S. manufacturing footprint to add trucks and vans to its lineup and launch a new, high-growth...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2c4dc81feafef05a
+symbol: F
+published_utc: 2026-01-06T09:15:00Z
+url: https://www.nasdaq.com/press-release/ford-sales-rose-6-2025-torrid-truck-hybrid-demand-gains-share-highest-sales-year
+headline: Ford Sales Rose 6% in 2025 on Torrid Truck, Hybrid Demand; Gains Share; Highest Sales Year this Decade
+<<<TEXT>>>
+Ford Motor Company outperformed the industry for its 10 th consecutive month in December, pushing market share higher for the year by 0.6 percentage points. Ford's total sales for the year climbed 6.0% to 2,204,124 vehicles, with overall market share reaching 13.2%. "This past year proved that Ford has the right product and powertrain offering for the lives of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9e2143216ec032f3
+symbol: F
+published_utc: 2026-01-08T13:32:00Z
+url: https://www.nasdaq.com/press-release/ardent-health-class-action-notice-bfa-law-has-filed-securities-fraud-class-action
+headline: ARDENT HEALTH CLASS ACTION NOTICE: BFA Law has Filed a Securities Fraud Class Action Lawsuit Against Ardent Health, Inc. (NYSE:ARDT)
+<<<TEXT>>>
+NEW YORK CITY, NY/ ACCESS Newswire/ January 8, 2026/ Bleichmar Fonti& Auld LLP announces that it has filed a class action lawsuit for violations of the federal securities laws against Ardent Health, Inc. and certain of the Company's senior executives. The complaint asserts claims under Sections 10 and 20 of the Securities Exchange Act of 1934 on behalf of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3fe3f2d87ed75811
+symbol: F
+published_utc: 2026-01-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/ford-motor-company-announces-details-q4-full-year-2025-earnings-conference-call-2026
+headline: Ford Motor Company Announces Details for Q4, Full-Year 2025 Earnings Conference Call
+<<<TEXT>>>
+Ford Motor Company and Ford Motor Credit Company will release fourth-quarter and full-year 2025 financial results at 4:05 p.m. ET on Tuesday, Feb. 10. At 5:00 p.m. ET the same day, Jim Farley, president and chief executive officer; Sherry House, chief financial officer; and other members of the Ford senior management team will host a conference call to discuss...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e8a3a310d7538866
+symbol: F
+published_utc: 2026-01-27T10:00:00Z
+url: https://www.nasdaq.com/press-release/lisa-drake-appointed-president-ford-energy-will-launch-new-battery-energy-storage
+headline: Lisa Drake Appointed President, Ford Energy; Will Launch New Battery Energy Storage Business
+<<<TEXT>>>
+Ford Motor Company today named Lisa Drake president, Ford Energy, effective immediately. She will report to John Lawler, vice chair. Her background in industrialization and purchasing will be central to operationalizing the new business unit, which leverages Ford’ s battery expertise and U.S. manufacturing footprint.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 24a67665885c4039
+symbol: F
+published_utc: 2026-02-02T16:05:00Z
+url: https://www.nasdaq.com/press-release/ford-motor-company-board-declares-dividend-first-quarter-2026-2026-02-02
+headline: Ford Motor Company Board Declares Dividend for First-Quarter 2026
+<<<TEXT>>>
+The board of directors of Ford Motor Company today declared a first-quarter regular dividend of 15 cents per share on the company’ s outstanding common and Class B stock. Ford Motor Company is a global company based in Dearborn, Michigan, committed to helping build a better world, where every person is free to move and pursue their dreams. Equity Investment...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: deda32691318f085
+symbol: F
+published_utc: 2026-02-10T16:05:00Z
+url: https://www.nasdaq.com/press-release/ford-reports-fourth-quarter-full-year-2025-financial-results-2026-02-10
+headline: Ford Reports Fourth-Quarter, Full-Year 2025 Financial Results
+<<<TEXT>>>
+Ford Motor Company today reported fourth-quarter and full-year 2025 financial results. At 5:00 p.m. ET, Ford and Ford Motor Credit Company management will hold a conference call to discuss these financial results. For the webcast, click here. Ford Motor Company is a global company based in Dearborn, Michigan, committed to helping build a better world, where...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f99768b7f95a5db4
+symbol: F
+published_utc: 2026-02-12T08:00:00Z
+url: https://www.nasdaq.com/press-release/bewhere-asset-tracking-devices-now-available-ford-pro-telematics-customers-2026-02-12
+headline: BeWhere Asset Tracking Devices Now Available to Ford Pro Telematics Customers
+<<<TEXT>>>
+BeWhere Holdings Inc., an innovative pioneer and provider of low-power 5 G IoT wide area asset tracking solutions, today announced that it has completed the commercial soft launch phase of its collaboration with Ford Pro, the commercial division within Ford Motor Company, integrating BeWhere's suite of innovative devices into Ford Pro Telematics Software....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cbf8ec2c089e7533
+symbol: F
+published_utc: 2026-03-23T07:30:00Z
+url: https://www.nasdaq.com/press-release/ford-and-major-league-baseball-unite-celebrate-americas-pastime-and-people-who-power
+headline: Ford and Major League Baseball Unite to Celebrate America’s Pastime and the People Who Power It
+<<<TEXT>>>
+The partnership unites America’ s Most Iconic Company with America’ s pastime, placing Ford at the center of MLB’ s biggest moments, including Opening Day presented by Adobe, All‑ Star Week, MLB at Field of Dreams, and the World Series presented by Capital One. As part of the partnership, Ford also secures rights across Minor League Baseball and Little League Baseball...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bb861d25a6f7c737
+symbol: F
+published_utc: 2026-03-23T11:36:00Z
+url: https://www.nasdaq.com/press-release/ford-motor-company-announces-details-q1-2026-earnings-conference-call-2026-03-23
+headline: Ford Motor Company Announces Details for Q1 2026 Earnings Conference Call
+<<<TEXT>>>
+Ford Motor Company and Ford Motor Credit Company will release first-quarter 2026 financial results at 4:05 p.m. ET on Wednesday, Apr. 29. At 5:00 p.m. ET the same day, Jim Farley, president and chief executive officer; Sherry House, chief financial officer; and other members of the Ford senior management team will host a conference call to discuss the results and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3a2b4c7201d5e483
+symbol: F
+published_utc: 2026-03-27T07:05:00Z
+url: https://www.nasdaq.com/press-release/ford-issues-2026-proxy-statement-sets-virtual-annual-meeting-may-14-2026-03-27
+headline: Ford Issues 2026 Proxy Statement, Sets Virtual Annual Meeting for May 14
+<<<TEXT>>>
+The annual meeting will take place online at 8:30 a.m. Eastern Time on Thursday, May 14. Ford Motor Company is a global company based in Dearborn, Michigan, committed to helping build a better world, where every person is free to move and pursue their dreams. Additionally, the company provides financial services through Ford Motor Credit Company. Ford employs...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9d4cf882a1eea673
+symbol: F
+published_utc: 2026-03-31T10:00:00Z
+url: https://www.nasdaq.com/press-release/ford-and-onx-give-owners-complimentary-year-road-navigation-2026-03-31
+headline: Ford and onX Give Owners a Complimentary Year of Off-Road Navigation
+<<<TEXT>>>
+--From Explorer Tremor to F-150 Raptor R, Ford Motor Company offers vehicles ready for adventure.  "Outdoor recreation participation continues to hit record levels," said Andrew Willard, onX Offroad General Manager. Starting today, Ford owners in the U.S. with 2017 model year and newer vehicles with an active modem, who are also new onX customers, are eligible to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: db38da26702aeebe
+symbol: F
+published_utc: 2026-04-09T09:30:00Z
+url: https://www.nasdaq.com/press-release/ford-motor-company-and-sharrow-engineering-scale-production-sharrow-propeller-detroit
+headline: Ford Motor Company and Sharrow Engineering Scale Production of the Sharrow Propeller in Detroit
+<<<TEXT>>>
+Sharrow Engineering announced today it is scaling production of its patented Sharrow™ Propeller through a collaboration with Ford Motor Company’ s Advanced Industrial Technology& Platforms team, using advanced 3 D sand-casting techniques thanks to connections made through the Michigan Central innovation ecosystem. This press release features...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 230b2e9dae0f1cb1
+symbol: F
+published_utc: 2026-04-15T16:05:00Z
+url: https://www.nasdaq.com/press-release/ford-establishes-new-product-creation-and-industrialization-organization-scale-next
+headline: Ford Establishes New Product Creation and Industrialization Organization to Scale Next-Gen Vehicles and Technology
+<<<TEXT>>>
+Ford Motor Company today announced the establishment of a new end-to-end organization, Product Creation and Industrialization, to deliver one of the most intensive product, software, and services rollouts in Ford’ s history. The new structure, which integrates Ford’ s Electric Vehicle, Digital and Design team with its global Industrial System, is a key lever in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 26dfce9b0aedc7ea
+symbol: F
+published_utc: 2026-04-15T18:00:00Z
+url: https://www.nasdaq.com/press-release/new-streets-kiton-interview-series-surpasses-1-million-views-across-all-segments-2026
+headline: New to The Street's KITON Interview Series Surpasses 1 Million Views Across All Segments
+<<<TEXT>>>
+NEW YORK CITY, NY/ ACCESS Newswire/ April 15, 2026/ New to The Street, the premier business television and digital media platform, today announced that its exclusive interview series featuring luxury fashion house KITON has achieved a major milestone, with all interviews in the series surpassing 1 million views across its distribution ecosystem.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 81a7746ca0392da1
+symbol: F
+published_utc: 2026-04-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/ford-motor-company-board-declares-dividend-second-quarter-2026-2026-04-28
+headline: Ford Motor Company Board Declares Dividend for Second-Quarter 2026
+<<<TEXT>>>
+The board of directors of Ford Motor Company today declared a second-quarter regular dividend of 15 cents per share on the company’ s outstanding common and Class B stock. Ford Motor Company is a global company based in Dearborn, Michigan, committed to helping build a better world, where every person is free to move and pursue their dreams. Equity Investment...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 673f46168e7ba57a
+symbol: F
+published_utc: 2026-04-29T16:05:00Z
+url: https://www.nasdaq.com/press-release/ford-reports-first-quarter-2026-financial-results-2026-04-29
+headline: Ford Reports First-Quarter 2026 Financial Results
+<<<TEXT>>>
+Ford Motor Company today announced its first-quarter 2026 financial results. At 5 p.m. ET, Ford and Ford Motor Credit Company management will hold a conference call to discuss these financial results. For the webcast, click here. Representatives of the investment community will be able to ask questions on the call. About Ford Motor Company Ford Motor Company is a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 08abfe34860a3f4d
+symbol: F
+published_utc: 2026-04-30T09:23:00Z
+url: https://www.nasdaq.com/press-release/ford-appoints-maria-ricciardone-chief-investor-relations-officer-2026-04-30
+headline: Ford Appoints Maria Ricciardone Chief Investor Relations Officer
+<<<TEXT>>>
+Ford Motor Company today announced Maria Ricciardone has been appointed chief investor relations officer, effective May 1. She succeeds Lynn Antipas Tyson, who will transition to a senior advisory role, reporting to chief financial officer Sherry House. "With her background spanning both treasury and investor relations, Maria knows how to guide the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4887c9ff162b2f84
+symbol: F
+published_utc: 2026-05-01T06:00:00Z
+url: https://www.nasdaq.com/press-release/ford-marks-americas-250th-putting-american-values-work-2026-05-01
+headline: Ford Marks America’s 250th by Putting American Values to Work
+<<<TEXT>>>
+As the United States approaches its 250th anniversary, Ford Motor Company is reaffirming its long-standing commitment to American values by putting those values into action for workers, customers, and communities across the country. Ford employs more U.S. hourly workers and assembles more vehicles in the United States than any other automaker–...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9460714059b6832a
+symbol: F
+published_utc: 2026-05-18T06:00:00Z
+url: https://www.nasdaq.com/press-release/ford-charges-ahead-europe-seven-new-models-and-smart-tech-keep-vans-road-and
+headline: Ford Charges Ahead in Europe: Seven New Models and Smart Tech to Keep Vans on Road and Businesses Earning
+<<<TEXT>>>
+--Ford today detailed a vibrant new vision for its future in Europe at a gathering of European dealers and partners. Ford's European strategy is supported by its new Ready-Set- Ford global brand platform, which focuses on the territories where Ford authentically plays and differentiates: Build, Thrill and Adventure. The strategy supports Ford's global target...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9dfc27455bf085fe
+symbol: F
+published_utc: 2026-05-18T07:00:00Z
+url: https://www.nasdaq.com/press-release/ford-energy-and-edf-power-solutions-north-america-announce-five-year-framework
+headline: Ford Energy and EDF power solutions North America Announce Five-Year Framework Agreement for Up to 20 GWh of Battery Energy Storage Systems
+<<<TEXT>>>
+Agreement provides EDF power solutions with access to up to 4 GWh per year to support grid-scale renewable integration and grid resilience across North America. DEARBORN, Mich.& SAN DIEGO---- Ford Energy, a wholly owned subsidiary of Ford Motor Company, and EDF power solutions North America, an entity of the EDF Group, today announced the signing of a five-year...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fb8c928b17da77e6
+symbol: F
+published_utc: 2026-05-19T16:05:00Z
+url: https://www.nasdaq.com/press-release/ford-announces-marketing-leadership-transition-2026-05-19
+headline: Ford Announces Marketing Leadership Transition
+<<<TEXT>>>
+Ford Motor Company today announced that Lisa Materazzo, global chief marketing officer, has elected to depart the company, effective June 1. Dean Stoneley, global product marketing executive director, is appointed interim CMO. Ford Motor Company is a global company based in Dearborn, Michigan, committed to helping build a better world, where every person is free...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 39f7f8247db8c63d
+symbol: F
+published_utc: 2026-06-03T21:00:00Z
+url: https://www.nasdaq.com/press-release/ford-bronco-filson-specs-features-and-everything-you-need-know-2026-06-04
+headline: Ford Bronco Filson: Specs, Features, and Everything You Need to Know
+<<<TEXT>>>
+Ford and Filson have introduced the first-ever Bronco Filson— a new rugged premium 4 x4 SUV that unites Bronco's Built Wild™ capability with Filson's promise of Unfailing Goods.  "Bronco buyers don't just want a vehicle— they want a partner for wherever they're headed," said Andrew Frick, president, Ford Blue and Ford Model e. What is the Ford Bronco Filson?
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3320b392176aece1
+symbol: F
+published_utc: 2026-06-25T08:00:00Z
+url: https://www.nasdaq.com/press-release/ford-named-top-mainstream-brand-new-vehicle-quality-jd-power-2026-us-initial-quality
+headline: Ford Named Top Mainstream Brand for New Vehicle Quality in JD Power 2026 U.S. Initial Quality Study for First Time Since 2010
+<<<TEXT>>>
+Ford today became the new gold standard for mass market new vehicle quality in America, ranking as the top mainstream brand in the closely watched JD Power 2026 U.S. "This is a proud day for everyone at Ford, and the result of years of intensive work across our company," said Jim Farley, Ford president and CEO." Many doubted that an American company with a huge American...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e3462e8049194489
+symbol: F
+published_utc: 2026-07-01T09:00:00Z
+url: https://www.nasdaq.com/press-release/ford-motor-company-announces-details-q2-2026-earnings-conference-call-2026-07-01
+headline: Ford Motor Company Announces Details for Q2 2026 Earnings Conference Call
+<<<TEXT>>>
+Ford Motor Company and Ford Motor Credit Company will release second-quarter 2026 financial results at 4:05 p.m. ET on Tuesday, July 28. At 5:00 p.m. ET the same day, Jim Farley, president and chief executive officer; Sherry House, chief financial officer; and other members of the Ford senior management team will host a conference call to discuss the results and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a0e4b8dc7237fd6a
+symbol: F
+published_utc: 2026-07-10T09:25:00Z
+url: https://www.nasdaq.com/press-release/new-streets-exclusive-ford-motor-company-f-interview-surpasses-4-million-views
+headline: New to The Street's Exclusive Ford Motor Company (F) Interview Surpasses 4 Million Views, Continues to Deliver More Than 100,000 Monthly Views - Demonstrating the Power of Premium Content and Global Distribution
+<<<TEXT>>>
+NEW YORK CITY, NY/ ACCESS Newswire/ July 10, 2026/ New to The Street announced today that its exclusive interview featuring Ford Motor Company has surpassed 4 million YouTube views and continues to generate more than 100,000 views every month, underscoring the enduring value of premium corporate storytelling backed by one of the world's largest business...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e1a94cf1005cf08b
+symbol: F
+published_utc: 2026-07-21T06:00:00Z
+url: https://www.nasdaq.com/press-release/blackrock-carhartt-ford-and-google-launch-new-alliance-expand-skilled-workforce
+headline: BlackRock, Carhartt, Ford and Google Launch New Alliance to Expand Skilled Workforce Training
+<<<TEXT>>>
+DEARBORN, Mich. and NEW YORK and MOUNTAIN VIEW, Calif., July 21, 2026/ PRNewswire/-- Four leading American companies– BlackRock, Carhartt, Ford Motor Company, and Google– have come together to launch the Alliance for America's Skilled Trades, a new initiative focused on expanding access to skilled trades training and helping meet the nation's growing workforce needs.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: af61426121162b85
+symbol: F
+published_utc: 2026-07-23T04:30:00Z
+url: https://www.nasdaq.com/press-release/ford-and-geely-auto-join-forces-europe-produce-next-generation-multi-energy-vehicles
+headline: FORD AND GEELY AUTO JOIN FORCES IN EUROPE TO PRODUCE NEXT-GENERATION MULTI-ENERGY VEHICLES IN SPAIN
+<<<TEXT>>>
+--Ford Motor Company and Geely Automobile Holdings today announced an agreement to form a Europe- focused joint venture at Ford's Valencia, Spain, manufacturing hub. By pooling production volume, Ford and Geely will maximize the capacity of the Valencia plant, lower the cost of every vehicle built there, and compete at this emerging cost standard while...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 36de2627b71b8814
+symbol: F
+published_utc: 2026-07-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/ford-reports-second-quarter-2026-financial-results-2026-07-28
+headline: Ford Reports Second-Quarter 2026 Financial Results
+<<<TEXT>>>
+Ford Motor Company today announced its second-quarter 2026 financial results and declared a third-quarter regular dividend of 15 cents per share, payable on Sept. 1 to shareholders of record at the close of business on Aug. 11. Visit the company’ s Investor Relations website at shareholder.ford.com to view the earnings release, earnings presentation and...
+<<<END>>>

@@ -12,7 +12,7 @@ import pytest
 from langchain_core.messages import AIMessage
 
 from prometheus.agents.advisor import advisor as adv
-from prometheus.agents.data_clerk.agent import Result
+from prometheus.agents.data_clerk.data_clerk_agent import Result
 from prometheus.common import work_order as wo
 from prometheus.prompts import advisor as prompts
 from prometheus.rag.citations import HEADER
@@ -454,3 +454,143 @@ def test_the_user_message_states_the_order_and_either_the_sources_or_that_there_
     assert "Criteria: {'sentiment': 'bullish'}" in with_sources and with_sources.endswith("SOURCES TEXT")
     assert prompts.user_message(order, None).endswith("Sources: none were retrieved for this work order.")
     assert "none given" in prompts.user_message(wo.new_work_order("q"), None)
+
+
+# ================================================================ the Advisor reads data.results and data.filing_evidence (design choices entry 40)
+#
+# The evidence is the REAL one: what `recommendation_evidence` makes of the real META filings of tests/fixtures/filings_meta_sample.txt (no balance sheet: the 10-Q has no text there).
+# E2 and E3 are negative-type (an officer's base salary, restricted stock units), E6 and E7 positive-type (dividend passages of the 8-K about the recapitalization).
+
+from pathlib import Path  # noqa: E402
+
+from prometheus.agents.data_clerk import filing_signals  # noqa: E402
+from prometheus.rag.loaders import load_filings  # noqa: E402
+
+META_FILINGS = Path(__file__).parent / "fixtures" / "filings_meta_sample.txt"
+
+
+def meta_evidence() -> dict:
+    return filing_signals.recommendation_evidence("META", filing_signals.filings_from_documents(load_filings(META_FILINGS)), today=date(2026, 11, 1))
+
+
+def meta_source(number, text, headline=None):
+    return {**source(number, text, tickers=("META",), headline=headline)}
+
+
+META_NEWS = "Meta Platforms has told investors it will keep spending heavily on AI chips this year."
+
+
+def meta_order_with_evidence(sources=(), results=None):
+    order = wo.new_work_order("What do Meta's filings say?", subject=["META"], since_days=365, source="filings", action_type="search_filing")
+    sources = list(sources) or [meta_source(1, META_NEWS)]
+    r = Result(question="q", answer="Yes [1].", references=[{"number": 1, "chunk_id": sources[0]["chunk_id"]}], sources=sources,
+               tool_calls=[{"name": "retrieve_filings", "args": {}, "outcome": "ok"}], filing_evidence={"META": meta_evidence()})
+    wo.attach_result(order, r)
+    return order
+
+
+def evidence_quote(item_id, limit=60):
+    return next(e for e in meta_evidence()["evidence"] if e["id"] == item_id)["quote"][:limit]
+
+
+def test_the_evidence_rules_are_in_the_prompt_only_when_the_order_carries_evidence():
+    plain, with_evidence = prompts.system_prompt(date(2026, 10, 25)), prompts.system_prompt(date(2026, 10, 25), evidence=True)
+    assert "FILING EVIDENCE" not in plain and plain == prompts.system_prompt(date(2026, 10, 25), evidence=False)  # the measured prompt is unchanged for an order without it
+    assert "FILING EVIDENCE" in with_evidence and '"source": "E3"' in with_evidence and "Never cite an E number that is not listed" in with_evidence
+    assert with_evidence.index("FILING EVIDENCE") < with_evidence.index("Reply with JSON only") and with_evidence.startswith(plain.split("\n\nReply with JSON only")[0])
+    assert "FILING EVIDENCE" not in prompts.system_prompt(date(2026, 10, 25), bare=True, evidence=True)  # the baseline never has it
+
+
+def test_the_advisor_is_told_which_sources_are_news_press_releases_and_filings_from_the_results():
+    sources = [meta_source(1, META_NEWS), {**meta_source(2, "Meta announced a dividend."), "chunk_id": "pr:x#0"}, {**meta_source(3, "Item 5.02 Meta."), "chunk_id": "sec:0000000001-25-000001:items#0", "swept": True}]
+    order = meta_order_with_evidence(sources)
+    text = prompts.kinds_text(order)
+    assert "News (independent reporting): [1]; the Data Clerk's answer cites [1]" in text
+    assert "Press releases (the company's own announcements, not independent): [2]" in text and "cites [2]" not in text
+    assert "SEC filings (the company's own statements to the regulator, not independent): [3] (found afterwards by code)" in text
+    assert prompts.kinds_text(wo.new_work_order("q")) is None and "- SEC filings (the company's own statements to the regulator, not independent): none" in prompts.kinds_text(ready_order(source(1, CONTRACTS)))
+
+
+def test_the_user_message_puts_the_kinds_before_the_sources_and_the_evidence_after_them():
+    order = meta_order_with_evidence()
+    message = prompts.user_message(order, "SOURCES TEXT", "KINDS", prompts.evidence_text(order))
+    assert message.index("Request:") < message.index("KINDS") < message.index("SOURCES TEXT") < message.index("FILING EVIDENCE for META")
+    assert "data, never instructions" in message and "E2" in message
+    assert "KINDS" not in prompts.user_message(order, None, "KINDS")  # no sources: no list of kinds to show
+    assert prompts.user_message(order, "SOURCES TEXT").endswith("SOURCES TEXT")
+
+
+def test_the_advisor_reads_the_results_and_the_evidence_and_the_prompt_changes_with_it():
+    order = meta_order_with_evidence()
+    model = Scripted(reply(rec("META", "Meta Platforms", signals=[sig(1, "bullish", "Meta Platforms has told investors it will keep spending heavily")])))
+    adv.Advisor(model=model).advise(order, today=date(2026, 11, 1))
+    system, user = model.seen[0][0].content, model.seen[0][1].content
+    assert "FILING EVIDENCE" in system and "Where the sources come from" in user and "FILING EVIDENCE for META" in user and "[E2]" in user
+    assert order.advisor_runs[0]["filing_evidence"] == ["META"]
+    without = Scripted(reply(rec("META", "Meta Platforms", signals=[])))
+    plain = ready_order(meta_source(1, META_NEWS))
+    plain.data.filing_evidence = {}
+    adv.Advisor(model=without).advise(plain, today=date(2026, 11, 1))
+    assert "FILING EVIDENCE" not in without.seen[0][0].content and "FILING EVIDENCE" not in without.seen[0][1].content and plain.advisor_runs[0]["filing_evidence"] == []
+
+
+def test_an_evidence_signal_that_matches_its_type_counts_and_makes_the_score():
+    order = meta_order_with_evidence()
+    signals = [sig(1, "bullish", "Meta Platforms has told investors it will keep spending heavily"),
+               {"source": "E2", "direction": "bearish", "quote": evidence_quote("E2")}, {"source": "e6", "direction": "bullish", "quote": evidence_quote("E6")}]
+    adv.Advisor(model=Scripted(reply(rec("META", "Meta Platforms", signals=signals)))).advise(order)
+    r = order.recommendations[0]
+    assert [(s["source"], s["verified"], s["counted"]) for s in r["signals"]] == [(1, True, True), ("E2", True, True), ("e6", True, True)]
+    assert r["bullish_signals"] == 2 and r["bearish_signals"] == 1 and r["score"] == adv.calculate_score(2, 1) == 60
+    e2, e6 = r["signals"][1], r["signals"][2]
+    assert e2["evidence_id"] == "E2" and e2["topic"] == "executive_compensation" and e2["chunk_id"] == "evidence:0001628280-26-002429:E2" and e6["topic"] == "dividend"
+
+
+@pytest.mark.parametrize("signal, reason", [
+    ({"source": "E2", "direction": "bullish", "quote": "$QUOTE2"}, "the direction contradicts the evidence: a negative-type item (executive_compensation) is bearish"),
+    ({"source": "E6", "direction": "bearish", "quote": "$QUOTE6"}, "the direction contradicts the evidence: a positive-type item (dividend) is bullish"),
+    ({"source": "E2", "direction": "bearish", "quote": "Powell McCormick will receive a base salary of ten million dollars"}, "the quote is not in evidence E2"),
+    ({"source": "E2", "direction": "bearish", "quote": "base salary"}, "the quote is missing or too short to check"),
+    ({"source": "E99", "direction": "bearish", "quote": "$QUOTE2"}, "evidence 'E99' is not one of this company's evidence items"),
+    ({"source": "E2", "direction": "sideways", "quote": "$QUOTE2"}, "the direction must be bullish or bearish"),
+])
+def test_an_evidence_signal_that_breaks_a_rule_is_kept_with_its_reason_and_does_not_count(signal, reason):
+    order = meta_order_with_evidence()
+    signal = {**signal, "quote": signal["quote"].replace("$QUOTE2", evidence_quote("E2")).replace("$QUOTE6", evidence_quote("E6"))}
+    adv.Advisor(model=Scripted(reply(rec("META", "Meta Platforms", signals=[signal])))).advise(order)
+    r = order.recommendations[0]
+    assert r["signals"][0]["verified"] is False and r["signals"][0]["reason"] == reason and r["score"] is None and r["signals_counted"] == 0
+
+
+def test_evidence_of_another_company_cannot_be_cited_for_this_one():
+    order = meta_order_with_evidence()
+    adv.Advisor(model=Scripted(reply(rec("MU", "Micron", signals=[{"source": "E2", "direction": "bearish", "quote": evidence_quote("E2")}])))).advise(order)
+    s = order.recommendations[0]["signals"][0]
+    assert s["verified"] is False and s["reason"] == "source 'E2' is not one of the sources shown"  # MU has no evidence: E2 is an ordinary source number
+
+
+def test_five_passages_on_one_topic_are_one_voice_and_the_sources_and_the_evidence_have_a_cap_each():
+    order = meta_order_with_evidence()
+    same_topic = [{"source": n, "direction": "bullish", "quote": evidence_quote(n)} for n in ("E6", "E7")]
+    adv.Advisor(model=Scripted(reply(rec("META", "Meta Platforms", signals=same_topic)))).advise(order)
+    first, second = order.recommendations[0]["signals"]
+    assert first["counted"] is True and second["verified"] is True and second["counted"] is False and second["note"].startswith("not counted: the same topic")
+    assert order.recommendations[0]["bullish_signals"] == 1
+    many = [sig(1, "bullish", "Meta Platforms has told investors it will keep spending heavily")] * 1 + [{"source": f"E{n}", "direction": "bearish" if n < 5 else "bullish", "quote": evidence_quote(f"E{n}")} for n in (1, 2, 3, 4, 5, 6)]
+    again = meta_order_with_evidence()
+    adv.Advisor(model=Scripted(reply(rec("META", "Meta Platforms", signals=many)))).advise(again)
+    kinds = [bool(s.get("evidence_id")) for s in again.recommendations[0]["signals"]]
+    assert kinds.count(True) == 3 and kinds.count(False) == 1  # 3 from the evidence at most, apart from the 3 from the sources
+
+
+def test_an_e_number_with_no_evidence_on_the_order_is_an_ordinary_failing_source_as_before():
+    order = ready_order(source(1, CONTRACTS))
+    adv.Advisor(model=Scripted(reply(rec(signals=[sig("E1", "bearish", "Micron has secured 35% of its revenue")])))).advise(order)
+    s = order.recommendations[0]["signals"][0]
+    assert s["verified"] is False and s["reason"] == "source 'E1' is not one of the sources shown" and "evidence_id" not in s
+
+
+def test_the_order_with_evidence_and_signals_is_plain_json():
+    order = meta_order_with_evidence()
+    adv.Advisor(model=Scripted(reply(rec("META", "Meta Platforms", signals=[{"source": "E2", "direction": "bearish", "quote": evidence_quote("E2")}])))).advise(order)
+    assert wo.WorkOrder.model_validate_json(order.model_dump_json()) == order

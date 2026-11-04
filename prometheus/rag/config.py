@@ -25,8 +25,20 @@ def path_setting(name: str, default: str) -> Path:
 
 
 def news_dir() -> Path:
-    """Folder that holds the DataAgent's news files (NEWS_OUTPUT_DIR, the DataAgent's own setting name)."""
+    """Folder that holds the DataToolbox's news files (NEWS_OUTPUT_DIR, the DataToolbox's own setting name)."""
     return path_setting("NEWS_OUTPUT_DIR", "news")
+
+
+def press_releases_dir() -> Path:
+    """Folder that holds the DataToolbox's press release files, one per symbol: <SYMBOL>_PRs.txt (PRESS_RELEASES_OUTPUT_DIR).
+    The default is the folder the toolbox has always written to, so no file moves (design choices entry 34)."""
+    return path_setting("PRESS_RELEASES_OUTPUT_DIR", "data/press_releases")
+
+
+def filings_dir() -> Path:
+    """Folder that holds the DataToolbox's SEC filing files, one per symbol: <SYMBOL>.txt (FILINGS_OUTPUT_DIR).
+    The default is the folder the toolbox has always written to, so no file moves (design choices entry 35)."""
+    return path_setting("FILINGS_OUTPUT_DIR", "data/filings")
 
 
 def vector_store_path() -> Path:

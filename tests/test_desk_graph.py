@@ -10,7 +10,7 @@ import json
 import pytest
 
 from prometheus.agents.advisor.advisor import Advisor
-from prometheus.agents.data_clerk.agent import DataClerk, Result
+from prometheus.agents.data_clerk.data_clerk_agent import DataClerk, Result
 from prometheus.common import work_order as wo
 from prometheus.langgraph import desk
 from prometheus.tools import symbols
@@ -97,7 +97,7 @@ class FakeClerk:
         FakeClerk.seen = order
         result = Result(question=order.query, answer="Yes [1].", has_citations=True, references=[{"number": 1, "chunk_id": "a#0", "article_id": "a", "headline": "Microsoft is up on AI demand", "publisher": "Yahoo",
                                                                   "published_utc": "2026-10-23T10:00:00Z", "url": "https://x/a", "score": 0.61}],
-                        sources=[{"number": 1, "chunk_id": "a#0"}], tool_calls=[{"name": "retrieve_news", "args": {}, "outcome": "ok"}],
+                        sources=[{"number": 1, "chunk_id": "a#0"}], tool_calls=[{"name": wo.SEARCH_TOOL[order.source][0], "args": {}, "outcome": "ok"}],  # the search tool of the order's source
                         problems=["cites [9], which are not among the sources"] if self.fail else [])
         return wo.attach_result(order, result)
 
@@ -163,8 +163,8 @@ def test_a_request_with_no_symbol_and_no_term_stops_at_the_account_manager():
 
 
 def test_a_source_that_is_not_wired_stops_at_the_account_manager_with_the_reason_on_the_order():
-    state = run({"symbol": "MSFT", "source": "filings"}, clerk=lambda order: pytest.fail("the Data Clerk must not be built"))
-    assert state["path"] == ["account_manager"] and state["errors"] == ["source 'filings' is not wired yet (only: news)"]
+    state = run({"symbol": "MSFT", "source": "social"}, clerk=lambda order: pytest.fail("the Data Clerk must not be built"))  # 'filings' was the example until entry 35 wired it
+    assert state["path"] == ["account_manager"] and state["errors"] == ["source 'social' is not wired yet (only: news, press_releases, filings)"]
     assert state["order"].errors == state["errors"] and state["order"].status == "new"
 
 
@@ -408,8 +408,8 @@ def test_a_refused_request_exits_with_1_and_saves_nothing(cli, capsys, tmp_path)
 
 
 def test_a_refused_request_that_has_an_order_with_errors_is_not_saved_either(cli, capsys, tmp_path):
-    assert desk.main(["--symbol", "MSFT", "--source", "filings"]) == 1  # the order exists (with its errors), the request is still refused
-    assert "REFUSED  source 'filings' is not wired yet (only: news)" in capsys.readouterr().out and not (tmp_path / "out").exists()
+    assert desk.main(["--symbol", "MSFT", "--source", "social"]) == 1  # the order exists (with its errors), the request is still refused
+    assert "REFUSED  source 'social' is not wired yet (only: news, press_releases, filings)" in capsys.readouterr().out and not (tmp_path / "out").exists()
 
 
 def test_json_prints_the_finished_order(cli, capsys):
@@ -424,3 +424,359 @@ def test_show_graph_prints_a_mermaid_diagram_and_runs_nothing(monkeypatch, capsy
     assert desk.main(["--show-graph"]) == 0
     out = capsys.readouterr().out
     assert "graph TD" in out and all(name in out for name in ("account_manager", "data_clerk", "advisor"))
+
+
+# ================================================================ press releases (design choices entry 34)
+#
+# The Account Manager passes a symbol and/or a company name on the work order, unchecked as a ticker: the Data Clerk looks them up (symbol first, then the name).
+
+from test_symbols import META as META_ROWS, PG_NAME as PG_NAME_ROWS, PG_TICKER as PG_TICKER_ROWS, FakeSearch  # noqa: E402  (the REAL Finnhub rows)
+
+PG_CO = "Procter & Gamble Co"
+
+
+def press(**request):
+    return desk.order_from_request({"source": "press_releases", **request})
+
+
+def test_a_press_release_request_with_a_symbol_is_a_live_order_with_a_year_window_and_no_company():
+    o = press(symbol="AAPL")
+    assert o.source == "press_releases" and o.subject == ["AAPL"] and o.company is None and o.live is True and o.action_type == "search_news"
+    assert o.since_days == 365 and o.time_period == "last 365 days" and o.top_k == desk.TOP_K
+    assert o.query.startswith("What do AAPL's latest press releases say") and "bullish or bearish" in o.query
+
+
+def test_a_press_release_request_with_only_a_company_name_has_no_subject_and_carries_the_name():
+    o = press(company="Apple Inc")
+    assert o.subject is None and o.company == "Apple Inc" and o.live is True and o.query.startswith("What do Apple Inc's latest press releases say")
+
+
+def test_a_press_release_request_with_both_keeps_both_for_the_data_clerk_to_choose():
+    o = press(symbol="AAPL", company="Apple Inc")
+    assert o.subject == ["AAPL"] and o.company == "Apple Inc" and "AAPL's latest" in o.query  # the symbol is what the question names; the lookup decides later
+
+
+def test_a_term_narrows_a_press_release_question_and_cannot_replace_the_company():
+    assert press(symbol="AAPL", term="dividend").query == "dividend press releases for AAPL"
+    with pytest.raises(ValueError, match="a press release request needs a symbol, a company name, or both"):
+        press(term="dividend")
+
+
+def test_fetch_off_makes_a_press_release_order_not_live():
+    assert press(symbol="AAPL", fetch=False).live is False and press(company="Apple Inc", fetch=False).live is False
+
+
+def test_the_window_defaults_to_a_year_for_press_releases_and_to_a_week_for_news():
+    assert press(symbol="AAPL").since_days == 365 and press(symbol="AAPL", from_days_ago="").since_days == 365 and press(symbol="AAPL", from_days_ago=30).since_days == 30
+    assert build(symbol="AAPL").since_days == 7 and build(symbol="AAPL", source="news").since_days == 7
+
+
+def test_the_symbol_of_a_press_release_request_is_not_checked_as_a_ticker_here_so_the_company_name_can_still_take_over():
+    o = press(symbol="Procter and Gamble!", company=PG_CO)  # a name typed into the symbol field: not a symbol, but the company name is good
+    assert o.subject == ["Procter and Gamble!"] and o.company == PG_CO and wo.verify_request(o) == []
+    with pytest.raises(ValueError, match="not a valid ticker symbol"):
+        build(symbol="Procter and Gamble!")  # for NEWS the symbol is still checked, as before
+    assert press(symbol="$aapl").subject == ["aapl"]  # the dollar sign and spaces go; the case is the lookup's business
+
+
+@pytest.mark.parametrize("request_, message", [({"symbol": "", "company": ""}, "a press release request needs a symbol, a company name, or both"),
+                                               ({"symbol": "x" * 61}, "the symbol is longer than 60 characters"),
+                                               ({"company": "x" * 61}, "the company name is longer than 60 characters"),
+                                               ({"symbol": "AAPL", "from_days_ago": "soon"}, "from_days_ago must be a whole number of days")])
+def test_a_bad_press_release_request_is_refused_with_its_reason(request_, message):
+    with pytest.raises(ValueError, match=message):
+        press(**request_)
+
+
+@pytest.mark.parametrize("days, ok", [(1, True), (365, True), (730, True), (731, False), (0, False)])
+def test_the_account_manager_accepts_a_press_release_window_up_to_two_years(days, ok):
+    state = run({"symbol": "AAPL", "source": "press_releases", "from_days_ago": days})
+    assert (state["errors"] == []) is ok and (ok or any("from 1 to 730" in e for e in state["errors"]))
+
+
+def test_a_press_release_order_travels_through_all_three_agents_like_a_news_order():
+    state = run({"symbol": "AAPL", "source": "press_releases"})
+    order = state["order"]
+    assert state["path"] == ["account_manager", "data_clerk", "advisor"] and FakeClerk.seen is order and FakeAdvisor.seen is order
+    assert order.source == "press_releases" and order.subject == ["AAPL"] and order.status == "recommended"
+
+
+def test_the_account_manager_does_not_look_a_press_release_symbol_up_the_data_clerk_does():
+    resolver = FakeResolver()
+    state = run({"symbol": "microsoft", "source": "press_releases"}, resolver=resolver)  # for news this would be looked up and become MSFT
+    assert resolver.asked == [] and state["resolution"] is None and state["order"].subject == ["microsoft"]
+    assert FakeClerk.seen.subject == ["microsoft"]  # unchanged on its way to the Data Clerk
+    news = FakeResolver()
+    run({"symbol": "microsoft"}, resolver=news)
+    assert news.asked == ["microsoft"]  # news is as it was
+
+
+def real_clerk(search):
+    """The REAL Data Clerk with a model that must never be asked: a refused order must not reach it."""
+    model = ScriptedModel([])
+    return lambda order: DataClerk(toolbox=FakeToolbox(), model=model, symbol_search=search)
+
+
+@pytest.mark.parametrize("request_, message", [({"symbol": "ZZZZ"}, "Symbol: ZZZZ is not found"),
+                                               ({"company": "Nonexistent Holdings"}, "Company Name not found."),
+                                               ({"symbol": "ZZZZ", "company": "Nonexistent Holdings"}, "Company Name not found.")])
+def test_a_symbol_or_company_that_is_not_found_stops_after_the_data_clerk_with_the_message_and_the_advisor_never_runs(request_, message):
+    state = run({"source": "press_releases", **request_}, clerk=real_clerk(FakeSearch()), advisor=lambda order: pytest.fail("the Advisor must not be built"))
+    order = state["order"]
+    assert state["path"] == ["account_manager", "data_clerk"] and state["errors"] == []  # the request was fine; the lookup found nothing
+    assert order.status == "data_failed" and order.errors == [message] and order.data is None
+    text = desk.report(state)
+    assert f"ERRORS   {message}" in text and "(stopped here)" in text and "RESOLVED" not in text
+
+
+def test_the_symbol_wins_and_the_name_is_the_fallback_through_the_whole_desk_and_the_report_says_which():
+    class ResolvingClerk(FakeClerk):
+        def request_data(self, order):
+            order.resolved = {"typed_symbol": "ZZZZ", "typed_company": PG_CO, "symbol": "PG", "company": PG_CO, "how": "name"}
+            order.subject, order.company = ["PG"], PG_CO
+            return super().request_data(order)
+
+    state = run({"symbol": "ZZZZ", "company": PG_CO, "source": "press_releases"}, clerk=lambda order: ResolvingClerk())
+    text = desk.report(state, 1.0)
+    assert "REQUEST  symbol ZZZZ | term - | source press_releases | from 365 days ago | company Procter & Gamble Co" in text
+    assert "RESOLVED press releases for PG (Procter & Gamble Co), found by its company name (typed: symbol ZZZZ, company Procter & Gamble Co)" in text
+    assert text.index("ORDER") < text.index("QUERY") < text.index("RESOLVED") and "subject ['PG'] (Procter & Gamble Co)" in text  # the lookup's answer follows the question
+
+
+def test_a_news_order_has_no_resolved_line_and_no_company_in_the_request_line():
+    text = desk.report(run({"symbol": "MSFT"}), 1.0)
+    assert "RESOLVED press releases" not in text and "| company" not in text
+
+
+# ---------------------------------------------------------------- the command line
+
+def test_the_command_line_takes_a_company_and_a_press_release_source_with_a_year_default(cli, capsys, tmp_path):
+    assert desk.main(["--source", "press_releases", "--company", "Apple Inc"]) == 0
+    assert cli["request"] == {"symbol": "", "term": "", "source": "press_releases", "from_days_ago": "365", "fetch": True, "company": "Apple Inc"}
+    assert "| company Apple Inc" in capsys.readouterr().out
+    assert (tmp_path / "out" / "data" / "processed" / "desk_press_releases.json").exists()  # nothing resolved the symbol in this fake run: named by the source alone
+
+
+def test_a_run_for_press_releases_is_saved_apart_from_a_news_run_of_the_same_symbol(cli, capsys, tmp_path):
+    assert desk.main(["--symbol", "AAPL"]) == 0 and desk.main(["--source", "press_releases", "--symbol", "AAPL", "--from-days-ago", "30"]) == 0
+    assert cli["request"] == {"symbol": "AAPL", "term": "", "source": "press_releases", "from_days_ago": "30", "fetch": True}  # no company key when none was given
+    capsys.readouterr()
+    assert sorted(p.name for p in (tmp_path / "out" / "data" / "processed").iterdir()) == ["desk_AAPL.json", "desk_AAPL_press_releases.json"]
+
+
+def test_a_press_release_order_is_saved_under_the_symbol_the_lookup_found(monkeypatch, capsys, tmp_path):
+    class ResolvingClerk(FakeClerk):
+        def request_data(self, order):
+            order.resolved = {"typed_symbol": None, "typed_company": PG_CO, "symbol": "PG", "company": PG_CO, "how": "name"}
+            return super().request_data(order)
+
+    monkeypatch.setattr(desk, "OUT_DIR", tmp_path / "out" / "data" / "processed")
+    real_run = desk.run_desk
+    monkeypatch.setattr(desk, "run_desk", lambda request, **o: real_run(request, clerk_factory=lambda order: ResolvingClerk(), advisor_factory=lambda order: FakeAdvisor(),
+                                                                         resolver=FakeResolver(), with_advisor=o.get("with_advisor", True)))
+    assert desk.main(["--source", "press_releases", "--company", PG_CO]) == 0
+    capsys.readouterr()
+    assert (tmp_path / "out" / "data" / "processed" / "desk_PG_press_releases.json").exists()  # found by its name, saved under its ticker
+
+
+def test_the_news_defaults_of_the_command_line_are_unchanged(cli, capsys):
+    desk.main(["--symbol", "MSFT"])
+    assert cli["request"] == {"symbol": "MSFT", "term": "", "source": "news", "from_days_ago": "7", "fetch": True}  # still no company key, still a week
+    capsys.readouterr()
+
+
+def test_a_company_name_on_the_command_line_is_not_looked_up_by_the_desk(cli, capsys):
+    assert desk.main(["--source", "press_releases", "--company", "Procter & Gamble"]) == 0
+    assert "RESOLVED 'Procter" not in capsys.readouterr().out  # the desk's own symbol-field lookup (entry 31) is for news only
+
+
+# ================================================================ filings (design choices entry 35)
+#
+# The Account Manager passes filings on the work order exactly as it passes press releases: a symbol and/or a company name, unchecked as a ticker, and the Data Clerk looks
+# them up. These are the press release tests again with the source changed.
+
+def filings(**request):
+    return desk.order_from_request({"source": "filings", **request})
+
+
+def test_a_filings_request_with_a_symbol_is_a_live_order_with_a_year_window_and_no_company():
+    o = filings(symbol="AAPL")
+    assert o.source == "filings" and o.subject == ["AAPL"] and o.company is None and o.live is True and o.action_type == "search_filing"  # entry 37 (entry 35 had search_news)
+    assert o.since_days == 365 and o.time_period == "last 365 days" and o.top_k == desk.TOP_K and o.requester == "desk" and o.status == "new"
+    assert o.query.startswith("What do AAPL's latest SEC filings say") and "bullish or bearish" in o.query and o.criteria == {"sentiment": "bullish or bearish"}
+
+
+def test_a_filings_request_with_only_a_company_name_has_no_subject_and_carries_the_name():
+    o = filings(company="Apple Inc")
+    assert o.subject is None and o.company == "Apple Inc" and o.live is True and o.query.startswith("What do Apple Inc's latest SEC filings say")
+
+
+def test_a_filings_request_with_both_keeps_both_for_the_data_clerk_to_choose():
+    o = filings(symbol="AAPL", company="Apple Inc")
+    assert o.subject == ["AAPL"] and o.company == "Apple Inc" and "AAPL's latest" in o.query
+
+
+def test_a_term_narrows_a_filings_question_and_cannot_replace_the_company():
+    assert filings(symbol="AAPL", term="risk factors").query == "risk factors SEC filings for AAPL"
+    with pytest.raises(ValueError, match="a filings request needs a symbol, a company name, or both"):
+        filings(term="risk factors")
+
+
+def test_the_press_release_wording_of_the_request_is_unchanged_by_filings():
+    assert press(symbol="AAPL", term="dividend").query == "dividend press releases for AAPL" and press(symbol="AAPL").query.startswith("What do AAPL's latest press releases say")
+    with pytest.raises(ValueError, match="a press release request needs a symbol, a company name, or both"):
+        press(term="dividend")
+
+
+def test_fetch_off_makes_a_filings_order_not_live():
+    assert filings(symbol="AAPL", fetch=False).live is False and filings(company="Apple Inc", fetch=False).live is False
+
+
+def test_the_window_defaults_to_a_year_for_filings_and_may_be_two_years():
+    assert desk.DEFAULT_DAYS_BY_SOURCE == {"news": 7, "press_releases": 365, "filings": 365}
+    assert filings(symbol="AAPL").since_days == 365 and filings(symbol="AAPL", from_days_ago="").since_days == 365 and filings(symbol="AAPL", from_days_ago=30).since_days == 30
+
+
+def test_the_symbol_of_a_filings_request_is_not_checked_as_a_ticker_here_so_the_company_name_can_still_take_over():
+    o = filings(symbol="Procter and Gamble!", company=PG_CO)
+    assert o.subject == ["Procter and Gamble!"] and o.company == PG_CO and wo.verify_request(o) == []
+    assert filings(symbol="$aapl").subject == ["aapl"]  # the dollar sign and spaces go; the case is the lookup's business
+
+
+@pytest.mark.parametrize("request_, message", [({"symbol": "", "company": ""}, "a filings request needs a symbol, a company name, or both"),
+                                               ({"symbol": "x" * 61}, "the symbol is longer than 60 characters"),
+                                               ({"company": "x" * 61}, "the company name is longer than 60 characters"),
+                                               ({"symbol": "AAPL", "from_days_ago": "soon"}, "from_days_ago must be a whole number of days")])
+def test_a_bad_filings_request_is_refused_with_its_reason(request_, message):
+    with pytest.raises(ValueError, match=message):
+        filings(**request_)
+
+
+@pytest.mark.parametrize("days, ok", [(1, True), (365, True), (730, True), (731, False), (0, False)])
+def test_the_account_manager_accepts_a_filings_window_up_to_two_years(days, ok):
+    state = run({"symbol": "AAPL", "source": "filings", "from_days_ago": days})
+    assert (state["errors"] == []) is ok and (ok or any("from 1 to 730" in e for e in state["errors"]))
+
+
+def test_a_filings_order_travels_through_all_three_agents_like_a_news_order():
+    state = run({"symbol": "AAPL", "source": "filings"})
+    order = state["order"]
+    assert state["path"] == ["account_manager", "data_clerk", "advisor"] and FakeClerk.seen is order and FakeAdvisor.seen is order
+    assert order.source == "filings" and order.subject == ["AAPL"] and order.status == "recommended"
+
+
+def test_the_account_manager_does_not_look_a_filings_symbol_up_the_data_clerk_does():
+    resolver = FakeResolver()
+    state = run({"symbol": "microsoft", "source": "filings"}, resolver=resolver)  # for news this would be looked up and become MSFT
+    assert resolver.asked == [] and state["resolution"] is None and state["order"].subject == ["microsoft"] and FakeClerk.seen.subject == ["microsoft"]
+
+
+@pytest.mark.parametrize("request_, message", [({"symbol": "ZZZZ"}, "Symbol: ZZZZ is not found"),
+                                               ({"company": "Nonexistent Holdings"}, "Company Name not found."),
+                                               ({"symbol": "ZZZZ", "company": "Nonexistent Holdings"}, "Company Name not found.")])
+def test_a_filings_symbol_or_company_that_is_not_found_stops_after_the_data_clerk_with_the_message_and_the_advisor_never_runs(request_, message):
+    """The error goes back to the user: the report prints it, and the desk's exit code (tested below) is 1."""
+    state = run({"source": "filings", **request_}, clerk=real_clerk(FakeSearch()), advisor=lambda order: pytest.fail("the Advisor must not be built"))
+    order = state["order"]
+    assert state["path"] == ["account_manager", "data_clerk"] and state["errors"] == []  # the request was fine; the lookup found nothing
+    assert order.status == "data_failed" and order.errors == [message] and order.data is None
+    text = desk.report(state)
+    assert f"ERRORS   {message}" in text and "(stopped here)" in text and "RESOLVED" not in text
+
+
+def test_the_report_of_a_filings_order_says_what_the_lookup_decided_in_the_words_of_filings():
+    class ResolvingClerk(FakeClerk):
+        def request_data(self, order):
+            order.resolved = {"typed_symbol": "ZZZZ", "typed_company": PG_CO, "symbol": "PG", "company": PG_CO, "how": "name"}
+            order.subject, order.company = ["PG"], PG_CO
+            return super().request_data(order)
+
+    text = desk.report(run({"symbol": "ZZZZ", "company": PG_CO, "source": "filings"}, clerk=lambda order: ResolvingClerk()), 1.0)
+    assert "REQUEST  symbol ZZZZ | term - | source filings | from 365 days ago | company Procter & Gamble Co" in text
+    assert "RESOLVED filings for PG (Procter & Gamble Co), found by its company name (typed: symbol ZZZZ, company Procter & Gamble Co)" in text
+    press_text = desk.report(run({"symbol": "ZZZZ", "company": PG_CO, "source": "press_releases"}, clerk=lambda order: ResolvingClerk()), 1.0)
+    assert "RESOLVED press releases for PG (Procter & Gamble Co), found by its company name" in press_text  # unchanged
+
+
+def test_the_command_line_takes_a_filings_source_with_a_company_and_a_year_default(cli, capsys, tmp_path):
+    assert desk.main(["--source", "filings", "--company", "Apple Inc"]) == 0
+    assert cli["request"] == {"symbol": "", "term": "", "source": "filings", "from_days_ago": "365", "fetch": True, "company": "Apple Inc"}
+    assert "| company Apple Inc" in capsys.readouterr().out
+    assert (tmp_path / "out" / "data" / "processed" / "desk_filings.json").exists()
+
+
+def test_a_run_for_filings_is_saved_apart_from_a_news_run_and_a_press_release_run_of_the_same_symbol(cli, capsys, tmp_path):
+    assert desk.main(["--symbol", "AAPL"]) == 0 and desk.main(["--source", "press_releases", "--symbol", "AAPL"]) == 0
+    assert desk.main(["--source", "filings", "--symbol", "AAPL", "--from-days-ago", "30"]) == 0
+    assert cli["request"] == {"symbol": "AAPL", "term": "", "source": "filings", "from_days_ago": "30", "fetch": True}  # no company key when none was given
+    capsys.readouterr()
+    assert sorted(p.name for p in (tmp_path / "out" / "data" / "processed").iterdir()) == ["desk_AAPL.json", "desk_AAPL_filings.json", "desk_AAPL_press_releases.json"]
+
+
+def test_a_filings_order_that_found_nothing_exits_with_1_and_prints_the_error_to_the_user(monkeypatch, capsys, tmp_path):
+    monkeypatch.setattr(desk, "OUT_DIR", tmp_path / "out" / "data" / "processed")
+    real_run = desk.run_desk
+    monkeypatch.setattr(desk, "run_desk", lambda request, **o: real_run(request, clerk_factory=real_clerk(FakeSearch()), advisor_factory=lambda order: pytest.fail("no Advisor"),
+                                                                         resolver=FakeResolver(), with_advisor=o.get("with_advisor", True)))
+    assert desk.main(["--source", "filings", "--symbol", "ZZZZ"]) == 1
+    out = capsys.readouterr().out
+    assert "ERRORS   Symbol: ZZZZ is not found" in out and "(stopped here)" in out
+    assert desk.main(["--source", "filings", "--symbol", "ZZZZ", "--company", "Nonexistent Holdings"]) == 1
+    assert "ERRORS   Company Name not found." in capsys.readouterr().out
+
+
+def test_the_help_names_filings_and_its_company_and_window(capsys):
+    with pytest.raises(SystemExit):
+        desk.main(["--help"])
+    text = " ".join(capsys.readouterr().out.split())
+    assert "news, press_releases, filings" in text and "press_releases and filings only" in text and "365 for press_releases and filings, 1 to 730" in text
+
+
+def test_the_account_manager_gives_each_source_its_own_action_and_only_filings_have_search_filing():
+    assert filings(symbol="AAPL").action_type == "search_filing" and filings(company="Apple Inc").action_type == "search_filing"
+    assert press(symbol="AAPL").action_type == "search_news" and build(symbol="AAPL").action_type == "search_news" and build(term="flying car").action_type == "search_news"
+    for order in (filings(symbol="AAPL"), press(symbol="AAPL"), build(symbol="AAPL")):
+        assert wo.verify_request(order) == []  # each is a valid order for the Data Clerk
+
+
+def test_a_filings_order_goes_through_the_desk_with_its_action_and_the_saved_order_keeps_it(cli, capsys, tmp_path):
+    assert desk.main(["--source", "filings", "--symbol", "AAPL"]) == 0
+    capsys.readouterr()
+    saved = json.loads((tmp_path / "out" / "data" / "processed" / "desk_AAPL_filings.json").read_text(encoding="utf-8"))
+    assert saved["order"]["action_type"] == "search_filing" and saved["order"]["source"] == "filings"
+
+
+def test_the_report_shows_the_results_of_each_source_and_the_filing_evidence_the_data_clerk_put_on_the_order():
+    from prometheus.agents.data_clerk.data_clerk_agent import Result
+    sources = [{"number": 1, "chunk_id": "polygon:a#0", "headline": "h", "publisher": "Yahoo", "published_utc": "2026-10-01T00:00:00Z", "score": 0.7, "text": "t"},
+               {"number": 2, "chunk_id": "pr:b#0", "headline": "h", "publisher": "Press release", "published_utc": "2026-10-02T00:00:00Z", "score": 0.6, "text": "t"},
+               {"number": 3, "chunk_id": "sec:0000000001-25-000001:items#0", "headline": "h", "publisher": "SEC filing", "published_utc": "2026-10-03T00:00:00Z", "score": 0.5, "text": "t"}]
+    result = Result(question="q", answer="A [1] [3].", sources=sources, references=[{"number": n, "chunk_id": sources[n - 1]["chunk_id"], "headline": "h", "publisher": sources[n - 1]["publisher"],
+                                                                                    "published_utc": sources[n - 1]["published_utc"], "score": 0.5} for n in (1, 3)],
+                    tool_calls=[{"name": "retrieve_filings", "args": {}, "outcome": "ok"}],
+                    filing_evidence={"META": {"symbol": "META", "evidence": [{"id": "E1"}, {"id": "E2"}], "balance_sheet": None, "gaps": ["no balance sheet: ..."], "digest": "d"}})
+    order = wo.attach_result(wo.new_work_order("q", source="filings", action_type="search_filing", subject=["META"]), result)
+    text = desk.report({"request": {"symbol": "META", "source": "filings"}, "order": order, "errors": [], "resolution": None, "path": ["account_manager", "data_clerk"], "seconds": {}})
+    assert "RESULTS  news: 1 shown, 1 cited | press releases: 1 shown, 0 cited | filings: 1 shown, 1 cited" in text
+    assert "EVIDENCE filings of META: 2 passages, balance sheet not available, 1 gap(s) (scores nothing: the Advisor does)" in text
+    assert text.index("DATA ") < text.index("RESULTS") < text.index("EVIDENCE") < text.index("DATA CLERK ANSWER")
+    news_only = wo.attach_result(wo.new_work_order("q", subject=["MSFT"]), Result(question="q", answer="A [1].", sources=sources[:1], references=[{"number": 1, "chunk_id": "polygon:a#0", "headline": "h", "publisher": "Yahoo",
+                                 "published_utc": "2026-10-01T00:00:00Z", "score": 0.7}], tool_calls=[{"name": "retrieve_news", "args": {}, "outcome": "ok"}]))
+    plain = desk.report({"request": {"symbol": "MSFT"}, "order": news_only, "errors": [], "resolution": None, "path": ["account_manager", "data_clerk"], "seconds": {}})
+    assert "RESULTS  news: 1 shown, 1 cited | press releases: 0 shown, 0 cited | filings: 0 shown, 0 cited" in plain and "EVIDENCE" not in plain  # no evidence line when the tool was not called
+
+
+def test_the_report_says_who_searched_each_source_when_the_data_clerks_code_swept_them():
+    from prometheus.agents.data_clerk.data_clerk_agent import Result
+    sources = [{"number": 1, "chunk_id": "polygon:a#0", "headline": "h", "publisher": "Yahoo", "published_utc": "2026-10-01T00:00:00Z", "score": 0.7, "text": "t"},
+               {"number": 2, "chunk_id": "pr:b#0", "headline": "h", "publisher": "Press release", "published_utc": "2026-10-02T00:00:00Z", "score": 0.6, "text": "t", "swept": True}]
+    result = Result(question="q", answer="A [1].", sources=sources, references=[{"number": 1, "chunk_id": "polygon:a#0", "headline": "h", "publisher": "Yahoo", "published_utc": "2026-10-01T00:00:00Z", "score": 0.7}],
+                    tool_calls=[{"name": "retrieve_news", "args": {}, "outcome": "ok"}],
+                    sweep={"news": {"by": "model", "sources": 1, "note": ""}, "press_releases": {"by": "code", "sources": 1, "note": ""},
+                           "filings": {"by": "code", "sources": 0, "note": "No supporting text: no stored filing scored 0.40 or more for this question (tickers META); the closest scored 0.31."},
+                           "filing_evidence": {"by": "code", "sources": 0, "note": "no filings of META are stored"}})
+    order = wo.attach_result(wo.new_work_order("q", subject=["META"]), result)
+    text = desk.report({"request": {"symbol": "META"}, "order": order, "errors": [], "resolution": None, "path": ["account_manager", "data_clerk"], "seconds": {}})
+    assert "RESULTS  news: 1 shown, 1 cited | press releases: 0 shown, 0 cited, 1 swept | filings: 0 shown, 0 cited" in text
+    assert "SWEEP    news: model, 1 | press releases: code, 1 | filings: code, 0 (No supporting text: no stored filing scored 0.40 or more for) | filing evidence: code, 0 (no filings of META are stored)" in text
+    assert text.index("RESULTS") < text.index("SWEEP") < text.index("DATA CLERK ANSWER")

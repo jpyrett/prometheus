@@ -325,8 +325,8 @@ def test_a_bad_ticker_is_refused_before_anything_is_searched(news, tickers):
 
 @pytest.fixture
 def cli(news, monkeypatch, capsys):
-    monkeypatch.setattr(retriever, "get_vector_store", lambda: news)
-    monkeypatch.setattr(retriever, "count_chunks", lambda: 8)
+    monkeypatch.setattr(retriever, "get_vector_store", lambda kind="news": news)  # `kind` since press releases got their own collection (entry 34)
+    monkeypatch.setattr(retriever, "count_chunks", lambda kind="news": 8)
     return capsys
 
 
@@ -364,8 +364,8 @@ def test_cli_reports_a_bad_ticker_without_a_traceback(cli):
 
 
 def test_cli_tells_you_to_ingest_when_the_index_is_empty(news, monkeypatch, capsys):
-    monkeypatch.setattr(retriever, "get_vector_store", lambda: news)
-    monkeypatch.setattr(retriever, "count_chunks", lambda: 0)
+    monkeypatch.setattr(retriever, "get_vector_store", lambda kind="news": news)
+    monkeypatch.setattr(retriever, "count_chunks", lambda kind="news": 0)
     assert retriever.main(["apple"]) == 1
     assert "nothing is stored yet" in capsys.readouterr().err
 

@@ -18,6 +18,12 @@ is calculated from the criteria", so the model never writes the score here:
        kept, marked `counted: false`, and do not add to the score;
     4. code calculates the score from the counted signals (`calculate_score`).
 
+Entry 40: the Advisor also reads `data.results` (which sources are news, press releases and filings: the prompt says so) and `data.filing_evidence` (the figures and exact quotes
+read from the company's stored filings). A signal may cite an evidence item, "source": "E3" (`verify_evidence_signal`): the item must exist for THAT company, the quote must be in
+the item, and the direction must be the one the item's type fixes (buyback and dividend items are bullish, dilution and compensation items bearish). The quote need not name the company:
+the evidence is that company's by construction. An evidence signal counts once per topic and direction, because five passages about dilution are one voice. Only an order
+that carries evidence gets the evidence rules in its prompt.
+
 The Advisor reads the CHUNKS, not the Data Clerk's summary of them. In the week 3 re-run (design/week3_evidence.md, section 3) the Data
 Clerk's answers said Micron, SK Hynix and SanDisk fell a third and cited a chunk that names no company: a summary can stretch its source,
 and an agent that read the summary would inherit the stretch. Check 2's last rule is the repair: a quote that does not name the company
@@ -37,7 +43,7 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 from prometheus.common.work_order import WorkOrder
 from prometheus.models.chat import get_chat_model, is_rate_limited
-from prometheus.prompts.advisor import RETRY, system_prompt, user_message
+from prometheus.prompts.advisor import RETRY, evidence_text, kinds_text, system_prompt, user_message
 from prometheus.rag.citations import HEADER, _defuse, format_source
 from prometheus.rag.loaders import check_symbol
 from prometheus.rag.retriever import Hit
@@ -91,6 +97,34 @@ def names_company(quote: str, symbol: str, company: str | None, known_company: s
             if re.search(rf"(?<![A-Za-z0-9&]){initials}(?![A-Za-z0-9&])", quote):
                 return True
     return False
+
+
+EVIDENCE_ID = re.compile(r"E\d+")
+DIRECTION_OF_TYPE = {"positive": "bullish", "negative": "bearish"}  # the direction an evidence item's type fixes (filing_signals.TOPIC_FILTER)
+
+
+def evidence_id(signal: dict) -> str | None:
+    """"E3" (or "e3", " E3 ") when the signal cites an evidence item, else None."""
+    number = signal.get("source")
+    return number.strip().upper() if isinstance(number, str) and EVIDENCE_ID.fullmatch(number.strip().upper()) else None
+
+
+def verify_evidence_signal(signal: dict, items: dict[str, dict]) -> tuple[bool, str | None]:
+    """(True, None) when a signal that cites an evidence item can be counted: the item exists for this company, the direction is the one its type fixes, and the quote is in the item
+    (its quote or its `what`, which carries the figures of a derived item). `items` is {id: item} for this company's evidence."""
+    item = items.get(evidence_id(signal) or "")
+    if item is None:
+        return False, f"evidence {signal.get('source')!r} is not one of this company's evidence items"
+    if signal.get("direction") not in DIRECTIONS:
+        return False, "the direction must be bullish or bearish"
+    if signal["direction"] != DIRECTION_OF_TYPE.get(item.get("filter")):
+        return False, f"the direction contradicts the evidence: a {item.get('filter')}-type item ({item.get('topic')}) is {DIRECTION_OF_TYPE.get(item.get('filter'))}"
+    quote = signal.get("quote")
+    if not isinstance(quote, str) or len(normalize(quote)) < MIN_QUOTE:
+        return False, "the quote is missing or too short to check"
+    if not any(normalize(quote) in normalize(item.get(field) or "") for field in ("quote", "what")):
+        return False, f"the quote is not in evidence {evidence_id(signal)}"
+    return True, None
 
 
 def verify_signal(signal: dict, symbol: str, company: str | None, sources: dict[int, dict], known_company: str | None = None) -> tuple[bool, str | None]:
@@ -148,9 +182,9 @@ def parse_reply(text: str) -> list:
     return data["recommendations"]
 
 
-def build_recommendation(raw, sources: dict[int, dict], dropped: list[str], known: dict[str, str] | None = None) -> dict | None:
+def build_recommendation(raw, sources: dict[int, dict], dropped: list[str], known: dict[str, str] | None = None, evidence: dict[str, dict[str, dict]] | None = None) -> dict | None:
     """One raw recommendation from the model -> a checked one with its calculated score. Returns None (and says why in `dropped`) if
-    it is not usable at all."""
+    it is not usable at all. `evidence` is {symbol: {id: item}}: the filing evidence a signal may cite (entry 40)."""
     if not isinstance(raw, dict) or not isinstance(raw.get("symbol"), str):
         dropped.append("a recommendation without a symbol")
         return None
@@ -164,26 +198,38 @@ def build_recommendation(raw, sources: dict[int, dict], dropped: list[str], know
     stance = raw["stance"].lower() if isinstance(raw.get("stance"), str) and raw["stance"].lower() in STANCES else None
     model_score = raw.get("model_score")
     model_score = round(model_score) if isinstance(model_score, (int, float)) and not isinstance(model_score, bool) and 0 <= model_score <= 100 else None
-    signals, seen = [], set()
-    for signal in (raw.get("signals") if isinstance(raw.get("signals"), list) else [])[:MAX_SIGNALS]:
+    items = (evidence or {}).get(symbol) or {}
+    signals, seen, taken = [], set(), {"source": 0, "evidence": 0}
+    for signal in (raw.get("signals") if isinstance(raw.get("signals"), list) else []):
         if not isinstance(signal, dict):
+            taken["source"] += 1  # it still uses up a place, as when only the first MAX_SIGNALS entries were read
             continue
+        kind = "evidence" if items and evidence_id(signal) else "source"  # without evidence for this company an "E3" is an ordinary (failing) source number, as it always was
+        if taken[kind] >= MAX_SIGNALS:
+            continue
+        taken[kind] += 1
         key = (str(signal.get("source")), signal.get("direction"), normalize(str(signal.get("quote", ""))))
         if key in seen:
             continue
         seen.add(key)
-        ok, reason = verify_signal(signal, symbol, company, sources, (known or {}).get(symbol))
         number = signal.get("source") if isinstance(signal.get("source"), (int, str)) else None
+        if kind == "evidence":
+            ok, reason = verify_evidence_signal(signal, items)
+            item = items[evidence_id(signal)] if ok else None
+            signals.append({"source": number, "chunk_id": f"evidence:{item['source']['accession']}:{item['id']}" if item else None, "direction": signal.get("direction"),
+                            "quote": str(signal.get("quote", ""))[:300], "verified": ok, "reason": reason, "evidence_id": evidence_id(signal), "topic": item["topic"] if item else None})
+            continue
+        ok, reason = verify_signal(signal, symbol, company, sources, (known or {}).get(symbol))
         source = sources.get(int(number)) if ok else None
         signals.append({"source": number, "chunk_id": source["chunk_id"] if source else None, "direction": signal.get("direction"),
                         "quote": str(signal.get("quote", ""))[:300], "verified": ok, "reason": reason})
     counted_stories = set()
-    for s in signals:  # a story counts once per direction: a syndicated copy, or a second quote from the same article, adds nothing
+    for s in signals:  # a story counts once per direction: a syndicated copy, or a second quote from the same article, adds nothing. Evidence counts once per topic and direction
         s["counted"] = False
         if s["verified"]:
-            key = (story_key(sources[int(s["source"])]["headline"]), s["direction"])
+            key = (("evidence", s["topic"]) if s.get("evidence_id") else story_key(sources[int(s["source"])]["headline"]), s["direction"])
             if key in counted_stories:
-                s["note"] = "not counted: the same story as an earlier signal in the same direction"
+                s["note"] = "not counted: the same " + ("topic" if s.get("evidence_id") else "story") + " as an earlier signal in the same direction"
             else:
                 counted_stories.add(key)
                 s["counted"] = True
@@ -203,6 +249,13 @@ class Advisor:
         self.model = model or get_chat_model("advisor", model=model_id)
 
     @staticmethod
+    def _evidence(order: WorkOrder) -> dict[str, dict[str, dict]]:
+        """The filing evidence a signal may cite: {symbol: {"E3": item}}, from `data.filing_evidence` (written by the Data Clerk's code, entry 39 and 40). Empty when there is none."""
+        if not order.data:
+            return {}
+        return {symbol: {item["id"]: item for item in ev.get("evidence", []) if item.get("id")} for symbol, ev in order.data.filing_evidence.items()}
+
+    @staticmethod
     def _sources(order: WorkOrder) -> tuple[dict[int, dict], str | None]:
         """The chunks the Data Clerk found, by number, and the text the model reads (formatted exactly as the Data Clerk's model saw them)."""
         if not order.data or not order.data.sources:
@@ -220,8 +273,10 @@ class Advisor:
             order.errors = [*order.errors, f"the Advisor needs an order whose data is ready (status {order.status})"]
             return order
         sources, text = self._sources(order) if use_evidence else ({}, None)
-        messages = [SystemMessage(content=system_prompt(today, bare)), HumanMessage(content=user_message(order, text))]
-        run = {"model": getattr(self.model, "model_name", None), "evidence": use_evidence, "sources": len(sources), "tokens_in": 0,
+        items = self._evidence(order) if use_evidence and not bare else {}
+        messages = [SystemMessage(content=system_prompt(today, bare, evidence=bool(items))),
+                    HumanMessage(content=user_message(order, text, kinds_text(order) if use_evidence and not bare else None, evidence_text(order) if items else None))]
+        run = {"model": getattr(self.model, "model_name", None), "evidence": use_evidence, "sources": len(sources), "filing_evidence": sorted(items), "tokens_in": 0,
                "tokens_out": 0, "calls": 0, "dropped": [], "error": None, "bare_prompt": bare}
         raws = None
         for attempt in range(2):  # one retry if the reply is not the JSON we asked for
@@ -247,7 +302,7 @@ class Advisor:
             return order
         run["error"] = None
         known = {order.subject[0]: order.company} if order.company and isinstance(order.subject, list) and len(order.subject) == 1 else {}
-        recommendations = [r for r in (build_recommendation(raw, sources, run["dropped"], known) for raw in raws[:MAX_COMPANIES]) if r]
+        recommendations = [r for r in (build_recommendation(raw, sources, run["dropped"], known, items) for raw in raws[:MAX_COMPANIES]) if r]
         if len(raws) > MAX_COMPANIES:
             run["dropped"].append(f"{len(raws) - MAX_COMPANIES} recommendation(s) beyond the first {MAX_COMPANIES}")
         for r in recommendations:

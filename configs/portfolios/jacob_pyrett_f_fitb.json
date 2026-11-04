@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "user": "Jacob Pyrett",
+  "currency": "USD",
+  "cash_avail": "51.23",
+  "positions": [
+    {"symbol": "MSFT", "name": "Microsoft Corp",           "shares": 50,  "cost_basis": 150.00, "acquired": "2024-03-15"},
+    {"symbol": "TSLA", "name": "Tesla Inc",                "shares": 123, "cost_basis": 300.00, "acquired": "2024-06-20"},
+    {"symbol": "GM",   "name": "General Motors Co",        "shares": 60,  "cost_basis": 10.00,  "acquired": "2023-09-05"},
+    {"symbol": "F",    "name": "Ford Motor Co",            "shares": 260, "cost_basis": 2.00,   "acquired": "2022-05-10"},
+    {"symbol": "FITB", "name": "Fifth Third Bancorp",      "shares": 52,  "cost_basis": 15.00,  "acquired": "2023-02-21"}
+  ],
+  "note": "A MADE-UP portfolio for the two-purchase test of RaiseFunds (design choices entry 43): the sample portfolio of Jacob Pyrett plus F (260 shares at a cost basis of 2.00) and FITB (52 shares at 15.00), both numbers made up. FITB is Fifth Third Bancorp (the request said FITH, read as FITB). Not a real account."
+}

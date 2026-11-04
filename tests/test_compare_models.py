@@ -1,4 +1,4 @@
-"""Tests for the scoring and the decision rule of labs/module3_rag/compare_models.py (design choices entry 23).
+"""Tests for the scoring and the decision rule of labs/module3_rag/other/compare_models.py (design choices entry 23).
 
 Run:  pytest tests/test_compare_models.py -q
 
@@ -14,7 +14,7 @@ import pytest
 
 from prometheus.rag.citations import CitationCheck
 
-SPEC = importlib.util.spec_from_file_location("compare_models", Path(__file__).parents[1] / "labs" / "module3_rag" / "compare_models.py")
+SPEC = importlib.util.spec_from_file_location("compare_models", Path(__file__).parents[1] / "labs" / "module3_rag" / "other" / "compare_models.py")
 cm = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(cm)
 
@@ -157,7 +157,7 @@ def test_the_error_hint_is_short_one_line_and_has_no_key():
 # ---------------------------------------------------------------- --agent: a Data Clerk result in the shape the scoring reads
 
 def test_a_data_clerk_result_becomes_a_row_the_scoring_understands():
-    from prometheus.agents.data_clerk.agent import Result
+    from prometheus.agents.data_clerk.data_clerk_agent import Result
     result = Result(question="q", answer="After 2029 [1].", turns=2, tokens_in=10, tokens_out=5, has_citations=True,
                     references=[{"number": 1, "chunk_id": "a#0"}],
                     sources=[{"number": 1, "headline": "H", "score": 0.7, "text": "until after 2029", "chunk_id": "a#0"}],
@@ -171,7 +171,7 @@ def test_a_data_clerk_result_becomes_a_row_the_scoring_understands():
 
 
 def test_an_agent_model_failure_and_a_rate_limit_carry_over_to_the_row():
-    from prometheus.agents.data_clerk.agent import Result
+    from prometheus.agents.data_clerk.data_clerk_agent import Result
     failed = Result(question="q", error="RuntimeError", rate_limited=True, problems=["the model call failed (RuntimeError)"])
     row = cm.agent_row("m/x", BY_ID["mu-huang"], failed, 0.5)
     assert row["error"] == "RuntimeError" and row["rate_limited"] and "model call failed" in row["error_hint"]

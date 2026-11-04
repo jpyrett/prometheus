@@ -4,3 +4,26 @@ TODOS
 - Test using FastMCP streaming input instead of stdio
 - hookup Redis for the fetch_quotes MCP resource
 - Add authentication to FastMCP using the notebook example
+
+TODO for Advisor implementation
+-------------------------------
+(from the real AAPL filings desk run of 2026-10-30, design/week4.md section 55; Jacob chose to leave it for the Critic, option (c))
+
+The result: the Advisor's stance is bearish and its own score is 30, but the calculated score is 60, which is on the bullish side.
+
+Where it comes from: one counted bearish signal, a one-day price move from a news article. Two counted bullish signals, both evidence items whose direction code forced from their type. One is a share-count row filed under buyback. The other is the "Payments for dividends" line. Neither says this quarter was good news.
+
+The cause: this is the crude direction-by-type rule I warned about, now seen on real data. The type rule overrode the model's own bearish judgement for those two items.
+--------------------
+
+Problems I found and did not fix
+
+Ford's balance sheet can't be read. The report says "balance sheet not available". The stored financial_statements section of Ford's 10-Q is only 4,099 characters and starts at a page header ("Item 1. Financial Statements (Continued)"). So edgar_text.py cut the section at the wrong place, and the real statements are missing. The splitter was written against Apple's and META's layouts. Until it's fixed, a company whose 10-Q repeats the item heading on every page will show no balance sheet, and its evidence will have only passages. I can fix it, with a test on Ford's real 10-Q prefix, if you say so.
+The "judging word" note fired once on a compliant answer. The Data Clerk wrote that it does "not provide an opinion on whether the stock is a bullish or bearish opportunity" and handed the call to the Advisor. The sentence naming those words has no "Advisor" in it, so my check flagged it. Two other small things in that answer: it says "As the system notes", which leaks the prompt, and one bullet is a light interpretation.
+The filings Advisor was slow: 147 seconds, against 28–72 seconds for the other two runs.
+The details and the table are in design/week4.md section 60.Problems I found and did not fix
+
+Ford's balance sheet can't be read. The report says "balance sheet not available". The stored financial_statements section of Ford's 10-Q is only 4,099 characters and starts at a page header ("Item 1. Financial Statements (Continued)"). So edgar_text.py cut the section at the wrong place, and the real statements are missing. The splitter was written against Apple's and META's layouts. Until it's fixed, a company whose 10-Q repeats the item heading on every page will show no balance sheet, and its evidence will have only passages. I can fix it, with a test on Ford's real 10-Q prefix, if you say so.
+The "judging word" note fired once on a compliant answer. The Data Clerk wrote that it does "not provide an opinion on whether the stock is a bullish or bearish opportunity" and handed the call to the Advisor. The sentence naming those words has no "Advisor" in it, so my check flagged it. Two other small things in that answer: it says "As the system notes", which leaks the prompt, and one bullet is a light interpretation.
+The filings Advisor was slow: 147 seconds, against 28–72 seconds for the other two runs.
+The details and the table are in design/week4.md section 60.

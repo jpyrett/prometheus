@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "user": "Jacob Pyrett",
+  "currency": "USD",
+  "cash_avail": "51.23",
+  "positions": [
+    {"symbol": "MSFT", "name": "Microsoft Corp",         "shares": 50,  "cost_basis": 150.00, "acquired": "2024-03-15"},
+    {"symbol": "TSLA", "name": "Tesla Inc",              "shares": 123, "cost_basis": 300.00, "acquired": "2024-06-20"},
+    {"symbol": "GM",   "name": "General Motors Co",      "shares": 60,  "cost_basis": 10.00,  "acquired": "2023-09-05"}
+  ],
+  "note": "A static sample portfolio for the Account Manager's RaiseFunds feature (design choices entry 42). The shares and cost bases are Jacob's, and cash_avail (the free settled cash, 51.23, written as a string on purpose: it must load as a number); the acquired dates are sample values (all old enough to be sellable under T+1). Not a real account."
+}

@@ -1,0 +1,23 @@
+I ran Ford (F) end to end for news, press releases and filings (three ./test_prometheus.sh --source <s> --symbol F --yes runs). All three exited 0, in 6.3 minutes in total. Each run used paid Finnhub, Massive and sec.gov fetches plus the models.
+
+I ran them in the order news, press releases, filings, so that each sweep would find what the earlier runs had fetched.
+
+What got fetched
+
+News: 115 articles written to news/F.txt.
+Press releases: 31 written to data/press_releases/F_PRs.txt.
+Filings: 24 filings written to data/filings/F.txt, plus the 10-Q text for 3 filings from EDGAR (SEC_USER_AGENT worked).
+Saved orders: desk_F.json, desk_F_press_releases.json and desk_F_filings.json, all new.
+What the Advisor said
+
+Run	Stance	Calculated score (its own)
+News
+bullish
+80 (70)
+Press releases
+bullish
+80 (70)
+Filings
+bearish
+43 (42)
+The filings run is the first order with all three sources on it: 10 news articles and 10 press releases swept in, plus 25 evidence passages. The three scores differ because each run saw different sources, and only the last saw everything. Which one to trust is a question for the Critic.

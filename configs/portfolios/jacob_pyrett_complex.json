@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "user": "Jacob Pyrett",
+  "currency": "USD",
+  "cash_avail": "100",
+  "positions": [
+    {"symbol": "F",     "name": "Ford Motor Co",       "shares": 40, "cost_basis": 2.00,   "acquired": "2022-05-10"},
+    {"symbol": "GM",    "name": "General Motors Co",   "shares": 10, "cost_basis": 10.00,  "acquired": "2023-09-05"},
+    {"symbol": "FITB",  "name": "Fifth Third Bancorp", "shares": 8,  "cost_basis": 60.00,  "acquired": "2023-02-21"},
+    {"symbol": "PG",    "name": "Procter & Gamble Co", "shares": 5,  "cost_basis": 60.00,  "acquired": "2023-04-12"},
+    {"symbol": "MCD",   "name": "McDonald's Corp",     "shares": 6,  "cost_basis": 40.00,  "acquired": "2022-08-30"},
+    {"symbol": "GOOGL", "name": "Alphabet Inc",        "shares": 4,  "cost_basis": 100.00, "acquired": "2023-01-18"},
+    {"symbol": "TSLA",  "name": "Tesla Inc",           "shares": 3,  "cost_basis": 300.00, "acquired": "2024-06-20"},
+    {"symbol": "MSFT",  "name": "Microsoft Corp",      "shares": 2,  "cost_basis": 150.00, "acquired": "2024-03-15"}
+  ],
+  "note": "A MADE-UP portfolio for the complex RaiseFunds test (design choices entry 45): eight small holdings, none of them worth as much as one share-lot of what is bought, so every plan has to combine several. FITB is made up at a LOSS (basis 60 against a price near 54), the others are in profit. The acquired dates are sample values. Not a real account."
+}

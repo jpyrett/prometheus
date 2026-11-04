@@ -34,7 +34,7 @@ def with_key(monkeypatch):
 def test_the_models_default_to_the_values_in_env_example():
     assert {role: chat.model_name(role) for role in chat.ROLES} == {
         "data_clerk": "openai/gpt-oss-120b", "fast": "qwen/qwen3-30b-a3b",
-        "advisor": "nvidia/nemotron-3-super-120b-a12b", "critic": "nvidia/nemotron-3-super-120b-a12b"}
+        "advisor": "nvidia/nemotron-3-super-120b-a12b", "critic": "nvidia/nemotron-3-super-120b-a12b", "account_manager": "openai/gpt-oss-120b"}
 
 
 def test_the_defaults_match_the_env_example_file():

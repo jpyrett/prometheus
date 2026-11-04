@@ -1,4 +1,4 @@
-"""Tests for the success criteria of labs/module3_rag/agent_reliability.py that the guide quotes (out-of-scope guardrail, routing).
+"""Tests for the success criteria of labs/module3_rag/other/agent_reliability.py that the guide quotes (out-of-scope guardrail, routing).
 
 Run:  pytest tests/test_agent_reliability.py -q
 
@@ -12,7 +12,7 @@ from types import SimpleNamespace
 
 import pytest
 
-SCRIPT = Path(__file__).resolve().parents[1] / "labs" / "module3_rag" / "agent_reliability.py"
+SCRIPT = Path(__file__).resolve().parents[1] / "labs" / "module3_rag" / "other" / "agent_reliability.py"
 spec = importlib.util.spec_from_file_location("agent_reliability", SCRIPT)
 ar = importlib.util.module_from_spec(spec)
 sys.modules["agent_reliability"] = ar

@@ -1,20 +1,23 @@
-"""Turn design/week3_submission.md into design/week3_submission.pdf.
+"""Turn design/weekN_submission.md into design/weekN_submission.pdf (default: week 4).
 
-    python design/make_submission_pdf.py
+    python design/make_submission_pdf.py        # week 4
+    python design/make_submission_pdf.py 3      # week 3
 
 Markdown (tables, fenced code) -> HTML -> PDF with WeasyPrint. Letter paper, 0.75 inch margins. Edit the markdown, run this again.
 """
+import sys
 from pathlib import Path
 
 import markdown
 from weasyprint import HTML
 
 HERE = Path(__file__).parent
-SOURCE, TARGET = HERE / "week3_submission.md", HERE / "week3_submission.pdf"
+WEEK = sys.argv[1] if len(sys.argv) > 1 else "4"
+SOURCE, TARGET = HERE / f"week{WEEK}_submission.md", HERE / f"week{WEEK}_submission.pdf"
 
 CSS = """
 @page { size: Letter; margin: 0.75in 0.8in 0.8in 0.8in;
-        @bottom-center { content: "Prometheus Capstone - Week 3 Submission - page " counter(page) " of " counter(pages); font: 8pt 'DejaVu Sans', sans-serif; color: #666; } }
+        @bottom-center { content: "Prometheus Capstone - Week WEEK_NUMBER Submission - page " counter(page) " of " counter(pages); font: 8pt 'DejaVu Sans', sans-serif; color: #666; } }
 body { font: 10pt/1.38 'DejaVu Serif', Georgia, serif; color: #1a1a1a; }
 h1 { font: bold 17pt 'DejaVu Sans', sans-serif; margin: 0 0 4pt 0; color: #14305c; border-bottom: 2px solid #14305c; padding-bottom: 4pt; }
 h1 + p { color: #444; margin-top: 2pt; font-size: 9.5pt; }
@@ -32,13 +35,14 @@ th { background: #14305c; color: white; text-align: left; padding: 3.5pt 5pt; fo
 td { border: 1px solid #c9ced6; padding: 3.5pt 5pt; vertical-align: top; }
 tr:nth-child(even) td { background: #f6f7f9; }
 strong { color: #000; }
+img { max-width: 100%; display: block; margin: 6pt auto 8pt auto; }
 """
 
 
 def main() -> None:
     body = markdown.markdown(SOURCE.read_text(encoding="utf-8"), extensions=["tables", "fenced_code", "sane_lists"])
-    html = f"<html><head><meta charset='utf-8'><title>Prometheus Capstone: Week 3 Submission</title><style>{CSS}</style></head><body>{body}</body></html>"
-    HTML(string=html).write_pdf(TARGET)
+    html = f"<html><head><meta charset='utf-8'><title>Prometheus Capstone: Week {WEEK} Submission</title><style>{CSS.replace('WEEK_NUMBER', WEEK)}</style></head><body>{body}</body></html>"
+    HTML(string=html, base_url=str(HERE)).write_pdf(TARGET)
     print(f"wrote {TARGET}")
 
 

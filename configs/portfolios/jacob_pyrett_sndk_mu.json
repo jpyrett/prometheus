@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "user": "Jacob Pyrett",
+  "currency": "USD",
+  "cash_avail": "200",
+  "positions": [
+    {"symbol": "PG",    "name": "Procter & Gamble Co", "shares": 15,  "cost_basis": 60.00,  "acquired": "2023-04-12"},
+    {"symbol": "MCD",   "name": "McDonald's Corp",     "shares": 120, "cost_basis": 40.00,  "acquired": "2022-08-30"},
+    {"symbol": "GOOGL", "name": "Alphabet Inc",        "shares": 30,  "cost_basis": 100.00, "acquired": "2023-01-18"},
+    {"symbol": "LLY",   "name": "Eli Lilly and Co",    "shares": 25,  "cost_basis": 155.00, "acquired": "2022-11-07"}
+  ],
+  "note": "A MADE-UP portfolio for the SNDK and MU test of RaiseFunds (design choices entry 44): PG 15 @ 60, MCD 120 @ 40, GOOGL 30 @ 100, LLY 25 @ 155, $200 of free cash. The acquired dates are sample values. Not a real account."
+}

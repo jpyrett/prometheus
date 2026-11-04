@@ -2,12 +2,13 @@
 
 Each tool is a plain method of `DataClerkTools` with type hints and a docstring written for the model. LangChain
 reads the name, the docstring and the typed arguments to build the tool the model sees, and FastMCP can read
-the same three things (Part 8). The class is handed its toolbox (the `DataAgent`), so a test can hand it a fake
+the same three things (Part 8). The class is handed its toolbox (the `DataToolbox`), so a test can hand it a fake
 one and run every tool with no network, no keys and no cost.
 
     DATA_CLERK_TOOLS       the allow-list. Only these names are shown to the LLM.
     DataClerkTools         the tools themselves
-    .langchain_tools(book) the LangChain tools; `retrieve_news` numbers its sources in `book` (a SourceBook)
+    .langchain_tools(book) the LangChain tools; `retrieve_news`, `retrieve_press_releases` and `retrieve_filings` number their sources in `book` (a SourceBook);
+                           `fetch_filings_recommendation` returns its digest as the text and the whole evidence as the artifact (entry 38)
     describe_tool_error    the message the model gets when a tool fails
     ToolInputError         raised for arguments the model should fix and send again
     ToolLimitError         raised by the agent's budget when a limit on this question's tool use is reached
@@ -20,17 +21,30 @@ See what the model sees:   python -m prometheus.tools.data_clerk
 """
 import functools
 import sys
+from datetime import date
 
 from langchain_core.tools import BaseTool, StructuredTool, tool
 
+from prometheus.agents.data_clerk import filing_signals
+from prometheus.agents.data_clerk.edgar_text import EdgarNotConfigured
 from prometheus.rag.citations import SourceBook
 from prometheus.rag.config import REPO_ROOT
-from prometheus.rag.ingest import ingest_symbol
-from prometheus.rag.loaders import check_symbol
-from prometheus.rag.retriever import K, MAX_K, MIN_SCORE, Hit, search_news
+from prometheus.rag.ingest import ingest_filings, ingest_press_releases, ingest_symbol
+from prometheus.rag.loaders import check_symbol, filing_file, load_filings
+from prometheus.rag.retriever import K, MAX_K, MIN_SCORE, Hit, search_filings, search_news, search_press_releases
 
-DATA_CLERK_TOOLS = ("retrieve_news", "fetch_news", "fetch_press_releases", "fetch_filings",
-                    "keyword_search", "discover_tickers", "get_financials", "get_price_summary")
+DATA_CLERK_TOOLS = ("retrieve_news", "retrieve_press_releases", "retrieve_filings", "fetch_news", "fetch_press_releases", "fetch_filings", "fetch_filings_recommendation",
+                    "keyword_search", "discover_tickers", "get_financials", "get_price_summary", "get_quote")
+EVIDENCE_TOOLS = ("fetch_filings_recommendation",)  # tools that read stored filings and return evidence: the digest is the text the model reads, the full result is the artifact (entry 38)
+RETRIEVE_TOOLS = ("retrieve_news", "retrieve_press_releases", "retrieve_filings")  # the tools that search a collection and number their hits in the run's SourceBook
+
+# What differs between the searches, in the words of the messages the model reads when nothing is found.
+NEWS_WORDS = dict(item="article", label="news", fetch="fetch_news",
+                  not_covered="the stored news does not cover it", should_cover="the stored news should cover this")
+PRESS_WORDS = dict(item="press release", label="press releases", fetch="fetch_press_releases",
+                   not_covered="the stored press releases do not cover it", should_cover="the stored press releases should cover this")
+FILING_WORDS = dict(item="filing", label="filings", fetch="fetch_filings",
+                    not_covered="the stored filings do not cover it", should_cover="the stored filings should cover this")
 
 # Limits on what the model may ask for. The paid APIs are paced and slow, and a mistyped 36500 days would be a
 # very long download, so the bounds are checked before anything is called.
@@ -113,15 +127,18 @@ def _text(name: str, value, required: bool = False) -> str | None:
 # ---------------------------------------------------------------- the tools
 
 class DataClerkTools:
-    """The Data Clerk's tools. `toolbox` is the DataAgent (a fake in tests), `store` the Chroma store (the real
-    one when left out)."""
+    """The Data Clerk's tools. `toolbox` is the DataToolbox (a fake in tests), `store` the Chroma store of the news, `press_store`
+    the one of the press releases and `filings_store` the one of the SEC filings (the real ones when left out)."""
 
-    def __init__(self, toolbox=None, store=None):
+    def __init__(self, toolbox=None, store=None, press_store=None, filings_store=None):
         if toolbox is None:
-            from prometheus.agents.data_clerk.data_agent import DataAgent  # imported here: it needs pyarrow and httpx
-            toolbox = DataAgent(base_dir=REPO_ROOT)  # the same root as rag/: news/ and .env are the ones rag/ reads
+            from prometheus.agents.data_clerk.data_toolbox import DataToolbox  # imported here: it needs pyarrow and httpx
+            toolbox = DataToolbox(base_dir=REPO_ROOT)  # the same root as rag/: news/ and .env are the ones rag/ reads
         self.toolbox = toolbox
+        self.today: date | None = None  # the date `fetch_filings_recommendation` counts its window back from: today when None (a test sets it; the model never sees it)
         self.store = store
+        self.press_store = press_store
+        self.filings_store = filings_store
 
     # ---- search by meaning (rag/)
 
@@ -148,29 +165,83 @@ class DataClerkTools:
             diverse: Spread the results over different stories. For broad questions only.
             newest_first: Of the relevant articles, return the newest first. For questions about the latest news.
         """
+        return self._retrieve(search_news, self.store, NEWS_WORDS, query, tickers, since_days, k, diverse=diverse, newest_first=newest_first)
+
+    def retrieve_press_releases(self, query: str, tickers: str | list[str] | None = None, since_days: int | None = None,
+                                k: int = K, newest_first: bool = False) -> dict:
+        """Search the stored press releases by meaning and return numbered sources to cite.
+
+        Use this for any question about what a company itself announced: earnings results, product launches, executive
+        changes, dividends, partnerships. A press release is the company's own statement, not independent reporting, so
+        say that it is a press release when you rely on it. It only searches releases that are already stored. It returns
+        the best matching releases, one per release, each with a number: cite them as [1], [2] in your answer. If it says
+        there is no supporting text, say so and do not answer from memory. If no stored release matches the ticker at all,
+        call fetch_press_releases for that ticker and search again.
+
+        Put the company's name in the question, and set tickers when the question is about one company. Set newest_first
+        for a question about the latest, newest or most recent announcement: a search ranks by meaning, not by date.
+
+        Args:
+            query: The question or topic, in words. Use the company's name.
+            tickers: One ticker symbol such as "AAPL", or a list of symbols. Only releases of these companies are searched.
+            since_days: Only releases from the last N days (a whole number, 1 or more).
+            k: How many releases to return, 1 to 20. The default is 5.
+            newest_first: Of the relevant releases, return the newest first. For questions about the latest announcement.
+        """
+        return self._retrieve(search_press_releases, self.press_store, PRESS_WORDS, query, tickers, since_days, k, newest_first=newest_first)
+
+    def retrieve_filings(self, query: str, tickers: str | list[str] | None = None, since_days: int | None = None,
+                         k: int = K, newest_first: bool = False) -> dict:
+        """Search the stored SEC filings (10-K annual reports, 8-K current reports, 10-Q, proxy statements, insider sale notices) by meaning and return numbered sources to cite.
+
+        Use this for any question about what a company told the SEC: its business and risk factors (10-K), a material event such
+        as results, an acquisition or an executive change (8-K), or whether a form was filed at all. A filing is the company's own
+        statement to the regulator, not independent reporting, so say that it is a filing when you rely on it. 10-K and 8-K
+        filings are stored WITH text, and so is a 10-Q whose text was fetched from EDGAR. A 10-Q without it, a proxy statement (DEF 14A), a
+        Schedule 13G and a Form 144 (an insider plans to sell shares) are stored without text: such a source says only the form, the date and
+        that its text is not stored. Say exactly that; never describe what such a filing contains. It only searches filings that are already stored. It returns the
+        best matching sections, one per section, each with a number: cite them as [1], [2] in your answer. If it says there is no
+        supporting text, say so and do not answer from memory. If no stored filing matches the ticker at all, call fetch_filings
+        for that ticker and search again.
+
+        Put the company's name in the question, and set tickers when the question is about one company. Set newest_first for a
+        question about the latest or most recent filing: a search ranks by meaning, not by date.
+
+        Args:
+            query: The question or topic, in words. Use the company's name.
+            tickers: One ticker symbol such as "AAPL", or a list of symbols. Only filings of these companies are searched.
+            since_days: Only filings made in the last N days (a whole number, 1 or more).
+            k: How many filing sections to return, 1 to 20. The default is 5.
+            newest_first: Of the relevant filings, return the newest first. For questions about the latest filing.
+        """
+        return self._retrieve(search_filings, self.filings_store, FILING_WORDS, query, tickers, since_days, k, newest_first=newest_first)
+
+    def _retrieve(self, search, store, words: dict, query, tickers, since_days, k, **flags) -> dict:
+        """The one search-and-explain routine behind both retrieval tools: search `store` with `search`, and when nothing comes back say WHY in words
+        the model can act on (no stored text for that ticker, so fetch; or stored text that scores under the bar, so say the sources do not cover it)."""
         symbols = _symbols(tickers)
-        options = dict(tickers=symbols or None, since_days=since_days, k=k, store=self.store)
+        options = dict(tickers=symbols or None, since_days=since_days, k=k, store=store)
         try:
-            hits = search_news(query, diverse=diverse, newest_first=newest_first, **options)
+            hits = search(query, **flags, **options)
             if hits:
                 return {"found": True, "reason": None, "message": None, "hits": [h.as_dict() for h in hits]}
-            closest = search_news(query, k=1, min_score=None, **{key: v for key, v in options.items() if key != "k"})
+            closest = search(query, k=1, min_score=None, **{key: v for key, v in options.items() if key != "k"})
         except ValueError as error:  # every ValueError from the search is a bad argument
             raise ToolInputError(str(error)) from None
         where = ", ".join(filter(None, [f"tickers {', '.join(symbols)}" if symbols else "",
                                          f"the last {since_days} days" if since_days else ""])) or "no filters"
         if not closest:
             reason = "no_article_matches_filters"
-            message = (f"No stored article matches the filters ({where}). " +
-                       (f"The news for {', '.join(symbols)} may not be fetched yet: call fetch_news for it, then search again."
-                        if symbols else "The news index may be empty or the time window too short."))
+            message = (f"No stored {words['item']} matches the filters ({where}). " +
+                       (f"The {words['label']} for {', '.join(symbols)} may not be fetched yet: call {words['fetch']} for it, then search again."
+                        if symbols else f"The {words['label']} index may be empty or the time window too short."))
         else:
             reason = "nothing_relevant"
-            message = (f"No supporting text: no stored article scored {MIN_SCORE:.2f} or more for this question ({where}); "
-                       f"the closest scored {closest[0].score:.2f}. Say that the stored news does not cover it. "
+            message = (f"No supporting text: no stored {words['item']} scored {MIN_SCORE:.2f} or more for this question ({where}); "
+                       f"the closest scored {closest[0].score:.2f}. Say that {words['not_covered']}. "
                        f"Do not answer from memory.")
             if closest[0].score >= MIN_SCORE - NEAR_MISS:  # a short question often just scores a little low
-                message += (" That is close to the bar, so if you believe the stored news should cover this, search "
+                message += (f" That is close to the bar, so if you believe {words['should_cover']}, search "
                             "once more with a clearer question that names the company and the topic.")
         return {"found": False, "reason": reason, "message": message, "hits": []}
 
@@ -200,9 +271,10 @@ class DataClerkTools:
                 "indexed": {key: indexed[key] for key in ("articles", "chunks", "added", "updated", "unchanged", "deleted")}}
 
     def fetch_press_releases(self, symbol: str, from_date: int = 365) -> dict:
-        """Download a company's official press releases and store them. They are stored as text only: retrieve_news does not search them yet.
+        """Download a company's official press releases and add the new ones to the stored press releases, so that retrieve_press_releases can find them.
 
-        Slow and uses a paid API. Call it only when the user asks for press releases.
+        This is slow (seconds) and uses a paid API. Call it when retrieve_press_releases says nothing is stored for a ticker, or when
+        the work order asks for fresh press releases. It skips releases that are already stored. Fetch before you search, not after.
 
         Args:
             symbol: The ticker symbol, such as "AAPL".
@@ -211,12 +283,18 @@ class DataClerkTools:
         symbol = _symbol(symbol)
         from_date = _days("from_date", from_date, MAX_FILING_DAYS)
         stats = self.toolbox.fetch_press_releases(symbol, from_date=from_date)
-        return {"symbol": symbol, **{key: stats.get(key) for key in ("fetched", "written", "duplicates")}}
+        indexed = ingest_press_releases(symbol, store=self.press_store)  # the new releases become searchable now
+        return {"symbol": symbol, **{key: stats.get(key) for key in ("fetched", "written", "duplicates")},
+                "indexed": {key: indexed[key] for key in ("articles", "chunks", "added", "updated", "unchanged", "deleted")}}
 
     def fetch_filings(self, symbol: str, from_date: int = 365) -> dict:
-        """Download a company's SEC filings (10-K, 10-Q, 8-K and others) and store them. They are stored as text only: retrieve_news does not search them yet, keyword_search does.
+        """Download a company's SEC filings (10-K, 10-Q, 8-K and others) and add the new ones to the stored filings, so that retrieve_filings can find them.
 
-        Slow and uses a paid API. Call it only when the user asks for filings.
+        This is slow (many seconds) and uses a paid API. Call it when retrieve_filings says nothing is stored for a ticker, or when
+        the work order asks for fresh filings. It skips filings that are already stored. Fetch before you search, not after.
+        The paid API gives no text for a 10-Q, so this also fetches the text of the stored 10-Q filings from SEC EDGAR when it can. The result
+        says what happened in edgar_text: how many 10-Qs it wrote the text of, or "skipped" with the reason (for example SEC_USER_AGENT is not
+        set). If it says skipped, the 10-Qs stay without text: tell the user that, and do not call this again for it.
 
         Args:
             symbol: The ticker symbol, such as "AAPL".
@@ -225,7 +303,36 @@ class DataClerkTools:
         symbol = _symbol(symbol)
         from_date = _days("from_date", from_date, MAX_FILING_DAYS)
         stats = self.toolbox.fetch_filings(symbol, from_date=from_date)
-        return {"symbol": symbol, **{key: stats.get(key) for key in ("fetched", "written", "duplicates")}}
+        try:  # the 10-Q's text comes from EDGAR (design choices entry 36). Not being set up for EDGAR is reported, and the rest still happens; any other failure stops here
+            text = self.toolbox.fetch_filing_text(symbol, from_date=from_date)
+            edgar = {key: text.get(key) for key in ("candidates", "written")}
+        except EdgarNotConfigured:  # a fixed reason: the error's own message holds the path of the .env file, and a tool result goes into the model's prompt
+            edgar = {"skipped": "SEC_USER_AGENT is not set (EDGAR needs a User-Agent that names you and gives a contact), so the text of the 10-Qs was not fetched from EDGAR"}
+        indexed = ingest_filings(symbol, store=self.filings_store)  # the new filings, and the new 10-Q text, become searchable now
+        return {"symbol": symbol, **{key: stats.get(key) for key in ("fetched", "written", "duplicates")}, "edgar_text": edgar,
+                "indexed": {key: indexed[key] for key in ("articles", "chunks", "added", "updated", "unchanged", "deleted")}}
+
+    def fetch_filings_recommendation(self, symbol: str, since_days: int = filing_signals.DEFAULT_WINDOW) -> dict:
+        """Get the evidence in a company's STORED filings that a recommendation needs: the latest balance sheet, the buybacks, dividends and share issuance, and the passages about stock dilution and executive compensation.
+
+        It only reads filings that are already stored (it costs nothing and fetches nothing: call fetch_filings first when none are stored). It returns evidence and does NOT
+        rate anything: the latest balance sheet for both periods with the change (cash, debt, equity, shares issued and outstanding), the capital actions of the cash-flow
+        statement (repurchases, dividends paid, share-based compensation, debt raised), the headline income figures, and the passages about stock dilution, executive compensation
+        and employee equity compensation (negative-type topics) and about buybacks and dividends (positive-type topics), each as an exact quote with its filing, section and date,
+        with how many were found and how many are shown. It also lists what could not be read (for example that no stored 10-Q has its financial statements yet). Report what
+        it says, with the [E] numbers, and the gaps it lists. Do not call a stock good or bad and do not give a score: the Advisor does that.
+
+        Args:
+            symbol: The ticker symbol, such as "AAPL".
+            since_days: Only filings filed in the last N days, 1 to 730. The default is 365.
+        """
+        symbol = _symbol(symbol)
+        since_days = _days("since_days", since_days, MAX_FILING_DAYS)
+        try:
+            docs = load_filings(filing_file(symbol))
+        except FileNotFoundError:
+            raise ToolInputError(f"no filings of {symbol} are stored: run fetch_filings for it first") from None
+        return filing_signals.recommendation_evidence(symbol, filing_signals.filings_from_documents(docs), today=self.today, since_days=since_days)
 
     # ---- keyword search over the stored text, and the other data
 
@@ -284,25 +391,49 @@ class DataClerkTools:
             summary["distribution"] = {k: v for k, v in summary["distribution"].items() if k != "curve"}
         return summary
 
+    def get_quote(self, symbol: str) -> dict:
+        """Get the current price of one ticker from Finnhub: the last price, the change since the previous close, today's high, low and open, and when it last traded.
+
+        Outside market hours the time is the last trade of the session, not now. Use this for "what is it trading at"; use get_price_summary for how it traded this month.
+
+        Args:
+            symbol: The ticker symbol, such as "AAPL".
+        """
+        return self.toolbox.get_quote(_symbol(symbol))
+
     # ---- the LangChain edge
 
     def langchain_tools(self, book: SourceBook | None = None) -> list[BaseTool]:
-        """The allow-listed tools as LangChain tools. `retrieve_news` returns the numbered sources as its text and
-        the full hits (with their numbers) as the artifact; its numbers continue in `book`, one book per run."""
+        """The allow-listed tools as LangChain tools. The three retrieval tools return the numbered sources as their text and
+        the full hits (with their numbers) as the artifact. They share ONE `book`, one book per run, so a [3] means the same
+        chunk whichever of them found it, and a news article, a press release and a filing can never share a number."""
         book = book if book is not None else SourceBook()
         tools = []
         for name in DATA_CLERK_TOOLS:
             method = getattr(self, name)
-            if name == "retrieve_news":
-                tools.append(self._retrieve_news_tool(method, book))
+            if name in RETRIEVE_TOOLS:
+                tools.append(self._retrieve_tool(method, book))
+            elif name in EVIDENCE_TOOLS:
+                tools.append(self._evidence_tool(method))
             else:
                 tools.append(tool(method, parse_docstring=True))
         return tools
 
     @staticmethod
-    def _retrieve_news_tool(method, book: SourceBook) -> StructuredTool:
+    def _evidence_tool(method) -> StructuredTool:
+        """The model reads the digest (compact, fixed wording); the whole result (the figures, every quote with its source, the gaps) goes along as the artifact for the code that
+        wants it. The same shape as the retrieve tools, with no source numbers: the evidence carries its own [E] numbers."""
         @functools.wraps(method)  # same name, docstring and arguments as the method
-        def retrieve_news(*args, **kwargs):
+        def evidence(*args, **kwargs):
+            result = method(*args, **kwargs)
+            return result["digest"], result
+
+        return StructuredTool.from_function(evidence, name=method.__name__, parse_docstring=True, response_format="content_and_artifact")
+
+    @staticmethod
+    def _retrieve_tool(method, book: SourceBook) -> StructuredTool:
+        @functools.wraps(method)  # same name, docstring and arguments as the method
+        def retrieve(*args, **kwargs):
             result = method(*args, **kwargs)
             hits = [Hit(**h) for h in result["hits"]]
             if not hits:
@@ -311,7 +442,7 @@ class DataClerkTools:
             return text, {"found": True, "reason": None,
                           "hits": [{"number": book.number_of(h), **h.as_dict()} for h in hits]}
 
-        return StructuredTool.from_function(retrieve_news, name="retrieve_news", parse_docstring=True,
+        return StructuredTool.from_function(retrieve, name=method.__name__, parse_docstring=True,
                                             response_format="content_and_artifact")
 
 

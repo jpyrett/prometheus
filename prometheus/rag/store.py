@@ -5,6 +5,7 @@ asks it for `get_vector_store()`, so changing either one is a change here and in
 
 Look at what is stored:   python -m prometheus.rag.store
 """
+import argparse
 import re
 import statistics
 import sys
@@ -34,12 +35,23 @@ def get_embeddings() -> HuggingFaceEmbeddings:
     return _load_embeddings(embedding_model(), embedding_device())
 
 
-def collection_name(model: str | None = None) -> str:
-    """news-<model>. The model's name is part of the collection's name, so vectors from two different
-    models never share a collection (they cannot be compared with each other).
+# What can be stored. Each kind is its own collection, so a search of one never sees the others and the news collection is the same
+# as it was before press releases and filings existed (design choices entries 34 and 35).
+KINDS = ("news", "press_releases", "filings")
+
+
+def _kind(kind: str) -> str:
+    if kind not in KINDS:
+        raise ValueError(f"unknown kind {kind!r}: one of {', '.join(KINDS)}")
+    return kind
+
+
+def collection_name(model: str | None = None, kind: str = "news") -> str:
+    """<kind>-<model>, for example news-sentence-transformers-all-MiniLM-L6-v2. The model's name is part of the collection's name,
+    so vectors from two different models never share a collection (they cannot be compared with each other).
     Chroma allows only letters, digits, '.', '_' and '-', so anything else (the '/') becomes '-'."""
     clean = re.sub(r"[^a-zA-Z0-9._-]+", "-", model or embedding_model()).strip("-._")
-    return f"news-{clean}"
+    return f"{_kind(kind)}-{clean}"
 
 
 def _client() -> chromadb.ClientAPI:
@@ -54,31 +66,31 @@ def _client() -> chromadb.ClientAPI:
 HNSW = {"space": "cosine", "ef_construction": 400, "ef_search": 300, "max_neighbors": 32}
 
 
-def get_vector_store() -> Chroma:
-    """The Chroma collection for news: a folder on disk, telemetry off, cosine distance (fixed when the
-    collection is created, design choices entry 10) and a thorough search (HNSW above)."""
+def get_vector_store(kind: str = "news") -> Chroma:
+    """The Chroma collection for `kind` ("news", the default, "press_releases" or "filings"): a folder on disk, telemetry off, cosine distance (fixed when the
+    collection is created, design choices entry 10) and a thorough search (HNSW above). All kinds live in the same folder, each in its own collection."""
     return Chroma(
         client=_client(),
-        collection_name=collection_name(),
+        collection_name=collection_name(kind=kind),
         embedding_function=get_embeddings(),
         collection_configuration={"hnsw": HNSW},
     )
 
 
-def reset_collection() -> bool:
-    """Delete the news collection. The index is derived data: ingest again to rebuild it.
+def reset_collection(kind: str = "news") -> bool:
+    """Delete the collection of `kind` (news by default). The index is derived data: ingest again to rebuild it.
     Returns whether there was a collection to delete."""
     try:
-        _client().delete_collection(collection_name())
+        _client().delete_collection(collection_name(kind=kind))
         return True
     except NotFoundError:
         return False
 
 
-def count_chunks() -> int:
-    """How many chunks the news collection holds (0 if there is none yet)."""
+def count_chunks(kind: str = "news") -> int:
+    """How many chunks the collection of `kind` holds (0 if there is none yet)."""
     try:
-        return _client().get_collection(collection_name()).count()
+        return _client().get_collection(collection_name(kind=kind)).count()
     except NotFoundError:
         return 0
 
@@ -93,13 +105,22 @@ def count_too_long(texts: list[str], embeddings: HuggingFaceEmbeddings | None = 
     return sum(len(ids) > model.max_seq_length for ids in lengths)
 
 
-def main() -> int:
-    """Print what the vector store holds: python -m prometheus.rag.store"""
-    path, name = vector_store_path(), collection_name()
+def main(argv: list[str] | None = None) -> int:
+    """Print what the vector store holds: python -m prometheus.rag.store [--press-releases | --filings]"""
+    parser = argparse.ArgumentParser(description=main.__doc__)
+    which = parser.add_mutually_exclusive_group()
+    which.add_argument("--press-releases", action="store_true", help="show the press release collection instead of the news one")
+    which.add_argument("--filings", action="store_true", help="show the filings collection instead of the news one")
+    # No argv means "no options" (as main() always meant): the command line below passes sys.argv itself. Parsing sys.argv here would read pytest's arguments.
+    args = parser.parse_args([] if argv is None else argv)
+    kind = "press_releases" if args.press_releases else "filings" if args.filings else "news"
+    path, name = vector_store_path(), collection_name(kind=kind)
     print(f"folder     : {path}")
     print(f"collection : {name}")
-    if not path.exists() or not count_chunks():
-        print("nothing is stored yet. Ingest some news first:  python -m prometheus.rag.ingest AAPL")
+    if not path.exists() or not count_chunks(kind):
+        print("nothing is stored yet. Ingest some " + {"press_releases": "press releases first:  python -m prometheus.rag.ingest --press-releases AAPL",
+                                                       "filings": "filings first:  python -m prometheus.rag.ingest --filings AAPL",
+                                                       "news": "news first:  python -m prometheus.rag.ingest AAPL"}[kind])
         return 0
     data = _client().get_collection(name).get(include=["documents", "metadatas"])
     texts, metas = data["documents"], data["metadatas"]
@@ -138,4 +159,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

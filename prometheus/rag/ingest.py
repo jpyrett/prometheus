@@ -3,6 +3,8 @@
     python -m prometheus.rag.ingest AAPL NVDA        ingest news/AAPL.txt and news/NVDA.txt
     python -m prometheus.rag.ingest --all            ingest every file in the news folder
     python -m prometheus.rag.ingest --rebuild --all  delete the collection first (the index is derived data)
+    python -m prometheus.rag.ingest --press-releases AAPL   the same for <SYMBOL>_PRs.txt, into the press release collection (entry 34)
+    python -m prometheus.rag.ingest --filings AAPL          the same for the SEC filings file <SYMBOL>.txt in the filings folder, into the filings collection (entry 35)
 
 It is safe to run again. A chunk that has not changed is skipped (it is not encoded again), a changed
 chunk is overwritten, a chunk that no longer exists is deleted, and an article that is stored a second
@@ -18,8 +20,9 @@ from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from prometheus.rag.config import news_dir
-from prometheus.rag.loaders import load_news, news_file
+from prometheus.rag.config import filings_dir, news_dir, press_releases_dir
+from prometheus.rag.loaders import (PRESS_RELEASES_SUFFIX, filing_file, load_filings, load_news, load_press_releases, news_file,
+                                    press_release_file)
 from prometheus.rag.store import count_chunks, count_too_long, get_vector_store, reset_collection
 
 # Characters, not tokens. With these numbers no chunk of the 288 news articles passes the embedding model's
@@ -135,31 +138,66 @@ def ingest_symbol(symbol: str, store: Chroma | None = None) -> dict:
     return {"symbol": symbol.strip().upper(), "path": str(path), **stats}
 
 
+def ingest_press_releases(symbol: str, store: Chroma | None = None) -> dict:
+    """Ingest <press releases dir>/<SYMBOL>_PRs.txt into the PRESS RELEASE collection (its own collection, entry 34). Exactly the news path
+    (`ingest_documents`: the same chunk size, the same headline in front of a later chunk, the same safe re-runs) with another loader and another
+    store. With no store given it uses the real one; a test passes its own."""
+    path = press_release_file(symbol)
+    stats = ingest_documents(load_press_releases(path), store or get_vector_store("press_releases"),
+                             too_long=count_too_long if store is None else None)
+    return {"symbol": symbol.strip().upper(), "path": str(path), **stats}
+
+
+def ingest_filings(symbol: str, store: Chroma | None = None) -> dict:
+    """Ingest <filings dir>/<SYMBOL>.txt into the FILINGS collection (its own collection, entry 35). The news path again (`ingest_documents`: the same chunk size,
+    the same headline in front of a later chunk, the same safe re-runs) with another loader and another store. A 10-K section is 16,000 to 200,000 characters, so it
+    becomes 20 to 250 chunks that all share one article id (the section's); the headline in front of each says form, section and date. With no store given it uses
+    the real one; a test passes its own."""
+    path = filing_file(symbol)
+    stats = ingest_documents(load_filings(path), store or get_vector_store("filings"),
+                             too_long=count_too_long if store is None else None)
+    return {"symbol": symbol.strip().upper(), "path": str(path), **stats}
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("symbols", nargs="*", help="ticker symbols to ingest, for example AAPL NVDA")
-    parser.add_argument("--all", action="store_true", help="ingest every .txt file in the news folder")
-    parser.add_argument("--rebuild", action="store_true", help="delete the collection before ingesting")
+    parser.add_argument("--all", action="store_true", help="ingest every .txt file in the news folder (with --press-releases: every <SYMBOL>_PRs.txt; with --filings: every .txt in the filings folder)")
+    parser.add_argument("--rebuild", action="store_true", help="delete the collection before ingesting (the news one, or with --press-releases or --filings that one)")
+    which = parser.add_mutually_exclusive_group()
+    which.add_argument("--press-releases", action="store_true", help="ingest <SYMBOL>_PRs.txt (press releases) into the press release collection, not news")
+    which.add_argument("--filings", action="store_true", help="ingest <SYMBOL>.txt of the filings folder (SEC filings) into the filings collection, not news")
     args = parser.parse_args(argv)
     if bool(args.symbols) == args.all:
         parser.error("give ticker symbols, or --all (not both)")
+    kind, ingest = (("press_releases", ingest_press_releases) if args.press_releases else ("filings", ingest_filings) if args.filings else ("news", ingest_symbol))
+    noun = "press releases" if args.press_releases else "filing documents" if args.filings else "articles"
     try:
-        symbols = [path.stem for path in sorted(news_dir().glob("*.txt"))] if args.all else args.symbols
+        if args.press_releases:
+            folder = press_releases_dir()
+            found = [path.name[:-len(PRESS_RELEASES_SUFFIX)] for path in sorted(folder.glob(f"*{PRESS_RELEASES_SUFFIX}"))]
+        elif args.filings:
+            folder = filings_dir()
+            found = [path.stem for path in sorted(folder.glob("*.txt"))]
+        else:
+            folder = news_dir()
+            found = [path.stem for path in sorted(folder.glob("*.txt"))]
+        symbols = found if args.all else args.symbols
         if not symbols:
-            print(f"ERROR: no news files in {news_dir()}", file=sys.stderr)
+            print(f"ERROR: no {'press release' if args.press_releases else 'filing' if args.filings else 'news'} files in {folder}", file=sys.stderr)
             return 1
         if args.rebuild:
-            print("rebuild: " + ("deleted the collection" if reset_collection() else "there was no collection to delete"))
+            print("rebuild: " + ("deleted the collection" if reset_collection(kind) else "there was no collection to delete"))
         for symbol in symbols:
             started = time.monotonic()
-            s = ingest_symbol(symbol)
-            print(f"{s['symbol']}: {s['articles']} articles -> {s['chunks']} chunks | added {s['added']}, "
+            s = ingest(symbol)
+            print(f"{s['symbol']}: {s['articles']} {noun} -> {s['chunks']} chunks | added {s['added']}, "
                   f"updated {s['updated']}, unchanged {s['unchanged']}, deleted {s['deleted']} | "
                   f"chunks over the embedder's limit: {s['over_limit']} | {time.monotonic() - started:.1f} s")
             if s["over_limit"]:  # silent but harmful: the model ignores the end of such a chunk
                 print(f"WARNING: {s['symbol']}: {s['over_limit']} chunks are longer than the embedder reads, so the end "
                       f"of their text cannot be found by search (design choices entry 19)", file=sys.stderr)
-        print(f"the collection now holds {count_chunks()} chunks")
+        print(f"the collection now holds {count_chunks(kind)} chunks")
     except (ValueError, FileNotFoundError) as e:
         print(f"ERROR: {e}", file=sys.stderr)
         return 1

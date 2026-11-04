@@ -2,6 +2,8 @@
 
     python -m prometheus.rag.retriever "what did MKBHD say about the foldable iPhone" --tickers AAPL
     python -m prometheus.rag.retriever "what is happening with Meta" --tickers META --since-days 7 --diverse
+    python -m prometheus.rag.retriever "what did Apple announce about AI" --tickers AAPL --press-releases   # the press releases (entry 34)
+    python -m prometheus.rag.retriever "what risks does Apple name" --tickers AAPL --filings                 # the SEC filings (entry 35)
 
 `search_news` is the one function the rest of the system calls (the Part 6 tool wraps it). It answers the four
 questions the week 3 design asks of retrieval (design choices entry 20):
@@ -163,6 +165,21 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     return [_hit(doc, score) for doc, score in candidates[:k]]
 
 
+def search_press_releases(query: str, **options) -> list[Hit]:
+    """`search_news` over the PRESS RELEASE collection (design choices entry 34): the same filters, relevance bar, one hit per release, `diverse`
+    and `newest_first`, and the same `Hit`. `options` are those of `search_news`; `store` is the press release store (the real one when left out)."""
+    store = options.pop("store", None) or get_vector_store("press_releases")
+    return search_news(query, store=store, **options)
+
+
+def search_filings(query: str, **options) -> list[Hit]:
+    """`search_news` over the FILINGS collection (design choices entry 35): the same filters, relevance bar, one hit per article (here: per filing SECTION, so a 10-K
+    gives at most two hits, its Business and its Risk Factors), `diverse` and `newest_first`, and the same `Hit`. `options` are those of `search_news`; `store` is
+    the filings store (the real one when left out)."""
+    store = options.pop("store", None) or get_vector_store("filings")
+    return search_news(query, store=store, **options)
+
+
 def _describe_filters(tickers: list[str] | None, since_days: int | None) -> str:
     parts = []
     if tickers:
@@ -182,18 +199,24 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--diverse", action="store_true", help="spread the hits over different stories (MMR)")
     parser.add_argument("--newest-first", action="store_true", help="of the relevant articles, the newest first (for 'latest' questions)")
     parser.add_argument("--text", action="store_true", help="also print the text of each hit")
+    which = parser.add_mutually_exclusive_group()
+    which.add_argument("--press-releases", action="store_true", help="search the press releases instead of the news")
+    which.add_argument("--filings", action="store_true", help="search the SEC filings instead of the news")
     args = parser.parse_args(argv)
+    kind, search = (("press_releases", search_press_releases) if args.press_releases else ("filings", search_filings) if args.filings else ("news", search_news))
     try:
-        if not count_chunks():
-            print("nothing is stored yet. Ingest some news first:  python -m prometheus.rag.ingest --all", file=sys.stderr)
+        if not count_chunks(kind):
+            print("nothing is stored yet. Ingest some " + {"press_releases": "press releases first:  python -m prometheus.rag.ingest --press-releases --all",
+                                                           "filings": "filings first:  python -m prometheus.rag.ingest --filings --all",
+                                                           "news": "news first:  python -m prometheus.rag.ingest --all"}[kind], file=sys.stderr)
             return 1
         asked = dict(tickers=args.tickers, since_days=args.since_days, k=args.k, diverse=args.diverse, newest_first=args.newest_first)
-        hits = search_news(args.query, min_score=args.min_score, **asked)
+        hits = search(args.query, min_score=args.min_score, **asked)
         print(f"question : {args.query!r}")
         print(f"filters  : {_describe_filters(args.tickers, args.since_days)}")
         print(f"settings : k={args.k}, relevance bar {args.min_score}, diverse {'yes' if args.diverse else 'no'}, newest first {'yes' if args.newest_first else 'no'}")
         if not hits:
-            closest = search_news(args.query, **{**asked, "k": 1, "diverse": False, "newest_first": False}, min_score=None)
+            closest = search(args.query, **{**asked, "k": 1, "diverse": False, "newest_first": False}, min_score=None)
             if closest:
                 c = closest[0]
                 print(f"\nno supporting text: nothing scored {args.min_score} or more.")
@@ -203,7 +226,7 @@ def main(argv: list[str] | None = None) -> int:
             return 0
         print()
         for rank, h in enumerate(hits, 1):
-            print(f"{rank:>2}  {h.score:.2f}  {h.publisher[:12]:<12} {h.published_utc[:10]}  {h.headline[:72]}  "
+            print(f"{rank:>2}  {h.score:.2f}  {h.publisher[:13]:<13} {h.published_utc[:10]}  {h.headline[:72]}  "  # 13: "Press release" fits whole
                   f"[{', '.join(h.tickers[:4])}{', ...' if len(h.tickers) > 4 else ''}]  chunk {h.chunk}/{h.chunks}")
             print(f"            {h.url}")
             if args.text:

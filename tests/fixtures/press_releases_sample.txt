@@ -1,0 +1,27 @@
+<<<PRESS_RELEASE>>>
+id: 44107d69ebe0e861
+symbol: AAPL
+published_utc: 2025-10-30T16:30:00Z
+url: https://www.nasdaq.com/press-release/apple-reports-fourth-quarter-results-2025-10-30
+headline: Apple reports fourth quarter results
+<<<TEXT>>>
+"Today, Apple is very proud to report a September quarter revenue record of $102.5 billion, including a September quarter revenue record for iPhone and an all-time revenue record for Services," said Tim Cook, Apple’ s CEO." In September, we were thrilled to launch our best iPhone lineup ever, including iPhone 17, iPhone 17 Pro and Pro Max, and iPhone Air.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a31fe63040096fc
+symbol: AAPL
+published_utc: 2025-12-01T17:10:00Z
+url: https://www.nasdaq.com/press-release/john-giannandrea-retire-apple-2025-12-01
+headline: John Giannandrea to retire from Apple
+<<<TEXT>>>
+Apple ® today announced John Giannandrea, Apple’ s senior vice president for Machine Learning and AI Strategy, is stepping down from his position and will serve as an advisor to the company before retiring in the spring of 2026. Apple also announced that renowned AI researcher Amar Subramanya has joined Apple as vice president of AI, reporting to Craig...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 519ab77bd1631dd7
+symbol: AAPL
+published_utc: 2025-12-04T09:00:00Z
+url: https://www.nasdaq.com/press-release/apple-unveils-winners-2025-app-store-awards-2025-12-04
+headline: Apple unveils the winners of the 2025 App Store Awards
+<<<TEXT>>>
+The winning apps and games were hand-selected by App Store editors from a list of 45 finalists for demonstrating exceptional innovation, user experience, and design. "Every year, we’ re inspired by the ways developers turn their best ideas into innovative experiences that enrich people’ s lives," said Tim Cook, Apple’ s CEO." This year’ s winners represent the...
+<<<END>>>

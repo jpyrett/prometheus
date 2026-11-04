@@ -1,6 +1,6 @@
-# DataAgent Working Session Notes
+# DataToolbox Working Session Notes
 
-Notes for future Claude/Copilot chats. Full details are in [DataAgent.md](DataAgent.md).
+Notes for future Claude/Copilot chats. Full details are in [DataToolbox.md](DataToolbox.md).
 Update this file at the end of each working session.
 
 ## Rules from the user (follow these)
@@ -12,7 +12,7 @@ Update this file at the end of each working session.
 - Never print or repeat secrets. `notes/notes.txt` contains plaintext credentials; do not quote it.
 - Do not use the bmd Redis/RAG code; the user is re-implementing that.
 - Do not poll running terminals unless asked ("stop checking, I will message you").
-- Do not run other `aws` commands while DataAgent is downloading; they share one bandwidth cap.
+- Do not run other `aws` commands while DataToolbox is downloading; they share one bandwidth cap.
 - Do not create extra markdown docs unless asked.
 
 ## Environment

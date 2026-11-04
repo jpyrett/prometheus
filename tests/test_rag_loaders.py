@@ -119,7 +119,7 @@ def test_empty_summary_and_insights_leave_just_the_headline(tmp_path):
 
 
 def test_a_line_that_only_looks_like_a_marker_is_text(tmp_path):
-    # The DataAgent escapes a text line that starts with <<< by putting a space in front of it.
+    # The DataToolbox escapes a text line that starts with <<< by putting a space in front of it.
     (doc,) = load_text(tmp_path, GOOD.replace("A summary.", " <<<SUMMARY>>> is only mentioned here."))
     assert "<<<SUMMARY>>> is only mentioned here." in doc.page_content
 
@@ -148,7 +148,7 @@ def test_missing_file_raises():
      "AAPL.txt:1: the record has neither tickers nor a symbol"),
     ("some stray text\n" + GOOD, "AAPL.txt:1: text outside a record: 'some stray text'"),
     (GOOD + "<<<SUMMARY>>>\n", "AAPL.txt:15: text outside a record"),
-    # text that contains a marker line WITHOUT the DataAgent's escape: stops loudly, never half-loads
+    # text that contains a marker line WITHOUT the DataToolbox's escape: stops loudly, never half-loads
     (GOOD.replace("A summary.", "A summary.\n<<<END>>>\nmore text"), "AAPL.txt:13: text outside a record: 'more text'"),
 ])
 def test_bad_records_raise_with_file_and_line(tmp_path, text, expected):
@@ -316,7 +316,7 @@ def test_viewer_reports_errors_instead_of_a_traceback(capsys):
     assert "ERROR" in capsys.readouterr().err
 
 
-# ---------------------------------------------------------------- the DataAgent's real files
+# ---------------------------------------------------------------- the DataToolbox's real files
 
 def test_every_real_news_file_loads_and_fits_the_design():
     files = sorted(config.news_dir().glob("*.txt"))

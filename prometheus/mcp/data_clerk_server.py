@@ -2,7 +2,7 @@
 
     python -m prometheus.mcp.data_clerk_server                  # stdio; search and read tools only
     python -m prometheus.mcp.data_clerk_server --allow-fetch    # also the three fetch tools (PAID APIs, they WRITE files)
-    python labs/module3_rag/mcp_check.py                        # connect to it, list the tools, call retrieve_news
+    python labs/module3_rag/other/mcp_check.py                        # connect to it, list the tools, call retrieve_news
 
 The week 2 design says the Data Clerk "calls its own MCP (quotes, news, filings, RAG)". This is that server for the text tools. It does
 NOT contain new logic. Each MCP tool is the bound method of `DataClerkTools` (prometheus/tools/data_clerk.py): the same function the
@@ -40,8 +40,9 @@ FETCH_TOOLS = ("fetch_news", "fetch_press_releases", "fetch_filings")
 READ_LOCAL = {"readOnlyHint": True, "openWorldHint": False}       # reads the stored text only
 READ_REMOTE = {"readOnlyHint": True, "openWorldHint": True}       # calls an outside API, changes nothing here
 WRITES = {"readOnlyHint": False, "destructiveHint": False, "openWorldHint": True}  # downloads and adds files, deletes nothing
-ANNOTATIONS = {"retrieve_news": READ_LOCAL, "keyword_search": READ_LOCAL, "discover_tickers": READ_LOCAL, "get_price_summary": READ_LOCAL,
-               "get_financials": READ_REMOTE, "fetch_news": WRITES, "fetch_press_releases": WRITES, "fetch_filings": WRITES}
+ANNOTATIONS = {"retrieve_news": READ_LOCAL, "retrieve_press_releases": READ_LOCAL, "retrieve_filings": READ_LOCAL, "fetch_filings_recommendation": READ_LOCAL, "keyword_search": READ_LOCAL, "discover_tickers": READ_LOCAL,
+               "get_price_summary": READ_LOCAL,
+               "get_financials": READ_REMOTE, "get_quote": READ_REMOTE, "fetch_news": WRITES, "fetch_press_releases": WRITES, "fetch_filings": WRITES}
 
 
 def served_tools(allow_fetch: bool = False) -> tuple[str, ...]:

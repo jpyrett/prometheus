@@ -48,7 +48,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))  # so "import prometheus" works from any folder
 
 from prometheus.agents.advisor.advisor import Advisor  # noqa: E402
-from prometheus.agents.data_clerk.agent import DataClerk  # noqa: E402
+from prometheus.agents.data_clerk.data_clerk_agent import DataClerk  # noqa: E402
 from prometheus.common.work_order import WorkOrder, new_work_order  # noqa: E402
 
 QUERY = "Case 2: AI memory shortage. Which companies are affected, and what does the recent news say?"
