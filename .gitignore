@@ -234,3 +234,5 @@ __marimo__/
 
 # aws cli
 .aws/   
+# local-only notes (bill/dashboard links); not shared
+design/check_bills.txt
