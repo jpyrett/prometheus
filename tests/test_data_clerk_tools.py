@@ -153,7 +153,7 @@ def tools(toolbox, index, press_index, filings_index) -> DataClerkTools:
 
 def test_the_allow_list_is_exactly_what_the_model_is_shown(tools):
     assert DATA_CLERK_TOOLS == ("retrieve_news", "retrieve_press_releases", "retrieve_filings", "fetch_news", "fetch_press_releases", "fetch_filings", "fetch_filings_recommendation",
-                                "keyword_search", "discover_tickers", "get_financials", "get_price_summary", "get_quote")
+                                "keyword_search", "discover_tickers", "get_financials", "get_price_summary", "get_quote", "calculate_metrics")
     assert [t.name for t in tools.langchain_tools()] == list(DATA_CLERK_TOOLS)
 
 
@@ -585,7 +585,7 @@ def test_the_evidence_method_is_one_of_the_tools_the_model_sees_with_two_argumen
     by_name = {t.name: t for t in tools.langchain_tools()}
     tool = by_name["fetch_filings_recommendation"]
     assert list(tool.args) == ["symbol", "since_days"] and tool.get_input_schema().model_json_schema()["required"] == ["symbol"]  # `today` is an attribute of the class, not an argument
-    assert tool.response_format == "content_and_artifact" and len(by_name) == len(DATA_CLERK_TOOLS) == 12
+    assert tool.response_format == "content_and_artifact" and len(by_name) == len(DATA_CLERK_TOOLS) == 13
     text = " ".join(tool.description.split())
     assert "only reads filings that are already stored" in text and "does NOT rate anything" in text and "Do not call a stock good or bad and do not give a score" in text
     assert "negative-type topics" in text and "positive-type topics" in text and "exact quote" in text and "call fetch_filings first" in text

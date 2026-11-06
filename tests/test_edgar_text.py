@@ -458,3 +458,22 @@ def test_fetch_filings_end_to_end_stores_the_filings_adds_the_10_Q_text_from_edg
     again = DataClerkTools(box, filings_store=store).fetch_filings("AAPL", from_date=400)
     capsys.readouterr()
     assert again["written"] == 0 and again["edgar_text"] == {"candidates": 0, "written": 0} and again["indexed"]["added"] == 0 and again["indexed"]["updated"] == 0
+
+
+# ---------------------------------------------------------------- Procter & Gamble's real 10-Q: the headings are two-cell table rows (found by the first real run of the Advisor)
+
+PG_LINES = ["PART I | Item 1. | Financial Statements | 1", "Item 2. | Management's Discussion and Analysis of Financial Condition and Results of Operations | 14", "PART II | Item 1. | Legal Proceedings | 30",
+            "PART I. FINANCIAL INFORMATION", "Item 1. | Financial Statements", "Consolidated Statements of Earnings", "Net sales | $ | 22,386 | $ | 21,740",
+            "Item 2. | Management's Discussion and Analysis of Financial Condition and Results of Operations", "Overview", "Item 3. | Quantitative and Qualitative Disclosures About Market Risk",
+            "Market risk is described in the 10-K.", "PART II. OTHER INFORMATION", "Item 1A. | Risk Factors", "No changes to the risk factors."]
+
+
+def test_a_heading_written_as_a_two_cell_row_is_a_heading_and_the_table_of_contents_is_not():
+    from prometheus.agents.data_clerk.edgar_text import _two_cell_heading, split_items
+    assert _two_cell_heading("Item 1. | Financial Statements") == "Item 1. Financial Statements" and _two_cell_heading("Item 1A. | Risk Factors") == "Item 1A. Risk Factors"
+    assert _two_cell_heading("Item 1. | Financial Statements | 1") == "Item 1. | Financial Statements | 1"                            # a page number in a third cell: the table of contents
+    assert _two_cell_heading("PART I | Item 1. | Financial Statements | 1") == "PART I | Item 1. | Financial Statements | 1"
+    assert _two_cell_heading("Item 1. | 12") == "Item 1. | 12" and _two_cell_heading("Net sales | $") == "Net sales | $"
+    sections = dict(split_items(PG_LINES))
+    assert list(sections) == ["financial_statements", "mdna", "market_risk", "risk_factors"] and sections["financial_statements"].splitlines()[1] == "Consolidated Statements of Earnings"
+    assert "Net sales | $ | 22,386 | $ | 21,740" in sections["financial_statements"] and sections["risk_factors"].endswith("No changes to the risk factors.")

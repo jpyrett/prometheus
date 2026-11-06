@@ -43,7 +43,7 @@ FORBIDDEN_KEYS = ("score", "stance", "sentiment", "recommendation", "rating", "v
 NUMBER = re.compile(r"\(?\$?\s*\d[\d,]*(?:\.\d+)?\)?%?")
 DASH = {"\u2014", "\u2013", "-"}
 STATEMENTS = [("balance_sheet", re.compile(r"balance sheets?", re.I)), ("cash_flow", re.compile(r"statements? of cash flows", re.I)),
-              ("equity", re.compile(r"statements? of (?:share|stock)holders[\u2019'] equity", re.I)), ("comprehensive", re.compile(r"statements? of comprehensive (?:income|loss)", re.I)),
+              ("equity", re.compile(r"statements? of (?:share|stock)holders[\u2019'] (?:equity|deficit)", re.I)), ("comprehensive", re.compile(r"statements? of comprehensive (?:income|loss)", re.I)),
               ("income", re.compile(r"statements? of (?:operations|income|earnings)", re.I)), ("notes", re.compile(r"^notes to |^note \d+", re.I))]
 
 
@@ -63,7 +63,8 @@ def to_number(cell: str) -> float | None:
 def statement_of(line: str) -> str | None:
     """Which statement a heading line starts: only a short, all-capitals line without a bar counts (a sentence of a note that says 'balance sheet' does not)."""
     plain = re.sub(r"\(.*?\)", "", line).strip()
-    if " | " in line or len(plain) > 120 or not (plain.isupper() or re.match(r"(?i)^notes? ", plain)):
+    title_case = re.match(r"(?i)^(?:condensed )?consolidated ", plain) and len(plain) <= 100 and not plain.endswith(".")  # Domino's and Papa John's write "Condensed Consolidated Statements of Income"
+    if " | " in line or len(plain) > 120 or not (plain.isupper() or title_case or re.match(r"(?i)^notes? ", plain)):
         return None
     for name, pattern in STATEMENTS:
         if pattern.search(plain):
@@ -84,10 +85,17 @@ def parse_rows(text: str) -> list[dict]:
         if " | " not in line:
             if line.endswith(":"):
                 group = line.rstrip(":")
-            elif line.startswith("(In ") and not units:
+            elif line.lower().startswith("(in ") and not units:  # "(In millions, ...)" (Apple, META) and "(in millions, except per share amounts)" (Sandisk): found on the real Sandisk 10-Q, where the lower case left `units` empty and every figure was read as dollars
                 units = line
             continue
-        cells = [c.strip() for c in line.split(" | ")]
+        cells = []
+        for cell in (c.strip() for c in line.split(" | ")):
+            if cell in (")", ")%") and cells:  # Domino's splits a negative number over two cells: "(308,239 | )"
+                cells[-1] += cell
+            else:
+                cells.append(cell)
+        if not units and re.match(r"(?i)(?:(?:amounts|dollars) in|\(?in) (?:millions|thousands|billions)", cells[0]):  # the units are the first cell of the column-heading row: "Amounts in millions | 2025 | 2024" (P&G), "(In thousands) | 2026 | 2025" (Domino's)
+            units = cells[0]
         data = [c for c in cells[1:] if c != "$"]
         numbers = [to_number(c) for c in data]
         if data and all(n is not None for n in numbers) and to_number(cells[0]) is None:
@@ -112,10 +120,16 @@ def two_values(row: dict) -> dict:
 
 BALANCE_ITEMS = [("cash", r"cash and cash equivalents"), ("marketable_securities", r"marketable securities"), ("total_current_assets", r"total current assets"),
                  ("total_assets", r"total assets"), ("total_current_liabilities", r"total current liabilities"), ("total_liabilities", r"total liabilities"),
-                 ("total_equity", r"total (?:share|stock)holders[\u2019'] equity"), ("retained_earnings", r"retained earnings|accumulated deficit")]
+                 ("total_equity", r"total (?:(?:share|stock)holders[\u2019'] )?(?:equity|deficit)(?: \((?:deficit|equity)\))?"), ("retained_earnings", r"retained earnings|accumulated deficit"),
+                 ("accounts_receivable", r"accounts receivable(?:, net.*)?|receivables?(?:, net)?"), ("inventories", r"(?:total )?inventor(?:y|ies)(?:, net)?")]  # the last two: Advisor v1 spec 5.5 (receivables and inventories against sales)
 DEBT_ROW = re.compile(r"term debt|long-term debt|commercial paper|notes payable|short-term (?:debt|borrowings)|borrowings|convertible", re.I)
 SHARES_ROW = re.compile(r"([\d,]+)( million)?\s+and\s+([\d,]+)( million)?\s+shares issued and outstanding", re.I)
 AUTHORIZED = re.compile(r"([\d,]+)( million)?\s+(?:class [ab] )?shares authorized", re.I)
+# a third layout (Sandisk): "authorized — 450 shares; issued — 150 shares and outstanding — 144 shares (as of July 3, 2026 issued — 149 shares and outstanding — 146 shares)": the outstanding
+# shares now and at the earlier date, in the units of the statement
+SHARES_DASH = re.compile(r"issued\s+[\u2014\u2013-]\s+[\d,]+\s+shares\s+and\s+outstanding\s+[\u2014\u2013-]\s+([\d,]+)\s+shares\s+\(as of [^)]*?issued\s+[\u2014\u2013-]\s+[\d,]+\s+shares\s+and\s+outstanding\s+[\u2014\u2013-]\s+([\d,]+)\s+shares\)", re.I)
+SHARES_ISSUED_IN = re.compile(r"([\d,]+)\s+shares issued in \d{4}\s+and\s+([\d,]+)\s+shares issued in \d{4}", re.I)   # Yum: "273 shares issued in 2026 and 277 shares issued in 2025" (retired shares: issued is outstanding)
+AUTHORIZED_DASH = re.compile(r"authorized\s+[\u2014\u2013-]\s+([\d,]+)\s+shares", re.I)
 
 
 def balance_sheet(rows: list[dict]) -> dict | None:
@@ -161,16 +175,31 @@ def share_classes(label: str, units: str) -> list[dict]:
                     "authorized": float(authorized[-1].group(1).replace(",", "")) if authorized else None,
                     "unit": "million" if found.group(2) else "thousands" if "reflected in thousands" in units else "shares"})
         taken = found.end()
+    if not out:
+        issued = SHARES_ISSUED_IN.search(label)
+        if issued:
+            current, prior = (float(issued.group(i).replace(",", "")) for i in (1, 2))
+            authorized = re.search(r"([\d,]+)\s+shares authorized", label, re.I)
+            out.append({"class": "common stock", "current": current, "prior": prior, **change(current, prior), "authorized": float(authorized.group(1).replace(",", "")) if authorized else None,
+                        "unit": "million" if re.search(r"\bin millions\b", units or "", re.I) else "thousands" if re.search(r"\bin thousands\b", units or "", re.I) else "shares"})
+    if not out:
+        dash = SHARES_DASH.search(label)
+        if dash:
+            current, prior = (float(dash.group(i).replace(",", "")) for i in (1, 2))
+            authorized = AUTHORIZED_DASH.search(label)
+            out.append({"class": "common stock", "current": current, "prior": prior, **change(current, prior), "authorized": float(authorized.group(1).replace(",", "")) if authorized else None,
+                        "unit": "million" if re.search(r"\bin millions\b", units or "", re.I) else "thousands" if re.search(r"\bin thousands\b", units or "", re.I) else "shares"})
     return out
 
 
-CASH_FLOW_ITEMS = [("repurchases of common stock", "buyback", r"repurchases? of |common stock repurchased|share repurchases?|purchases? of treasury"),
-                   ("dividends paid", "dividend", r"payments? for dividends|dividends? paid|cash dividends"),
+CASH_FLOW_ITEMS = [("repurchases of common stock", "buyback", r"repurchases? of |repurchase shares|common stock repurchased|share repurchases?|purchases? of (?:treasury|common) stock|treasury (?:stock )?purchases"),
+                   ("dividends paid", "dividend", r"payments? for dividends|payments? of (?:common (?:share|stock) )?dividends|dividends? paid|cash dividends|common stock dividends|dividends on (?:common|ordinary)|dividends to (?:share|stock)holders"),
                    ("share-based compensation expense", "equity_compensation", r"share-based compensation|stock-based compensation"),
                    ("taxes paid for net share settlement", "equity_compensation", r"taxes (?:paid )?related to net share settlement"),
                    ("proceeds from issuing common stock", "dilution", r"proceeds from (?:the )?(?:issuance of (?:common|class [ab])|exercise of (?:stock )?options|employee stock)"),
                    ("proceeds from issuing debt", None, r"proceeds from (?:the )?issuance of (?:long-term|term) debt|proceeds from (?:the )?issuance of .*notes"),
-                   ("repayments of debt", None, r"repayments? of (?:long-term |term )?debt|repayments? of commercial paper")]
+                   ("repayments of debt", None, r"repayments? of (?:long-term |term )?debt|repayments? of commercial paper"),
+                   ("cash from operations", None, r"cash provided by operations|cash generated by operating activities|net cash (?:provided by|from|generated by)[^|]*operating activities|total operating activities")]  # Advisor v1 spec 5.5 (accruals, CFO against profit)
 
 
 def capital_actions(rows: list[dict]) -> list[dict]:
@@ -179,16 +208,18 @@ def capital_actions(rows: list[dict]) -> list[dict]:
     to, or None."""
     out = []
     for r in rows:
-        if r["statement"] != "cash_flow" or len(r["values"]) != 2:
+        if r["statement"] != "cash_flow" or len(r["values"]) not in (2, 4):
             continue
+        if len(r["values"]) == 4:  # McDonald's shows the quarter and the year to date, this year and last: the year to date (the last two) is what the months of the period count
+            r = {**r, "values": r["values"][2:], "cells": r["cells"][-2:], "columns": r["columns"][-2:] if r["columns"] else r["columns"]}
         for item, topic, pattern in CASH_FLOW_ITEMS:
             if re.search(pattern, r["label"], re.I):
-                out.append({"item": item, "topic": topic, **two_values(r), "columns": r["columns"][-1].split(" | ") if r["columns"] else []})
+                out.append({"item": item, "topic": topic, **two_values(r), "columns": r["columns"][-1].split(" | ") if r["columns"] else [], "units": r["units"]})
                 break
     return out
 
 
-INCOME_ITEMS = [("revenue", None, r"(?:total )?(?:net sales|revenues?)"), ("net income", None, r"net income"), ("diluted earnings per share", "per share", r"diluted"),
+INCOME_ITEMS = [("revenue", None, r"(?:total )?(?:net sales|revenues?(?:, net)?|net revenues?)"), ("net income", None, r"net (?:income|earnings)(?: \(loss\))?"), ("diluted earnings per share", "per share", r"diluted"),
                 ("basic weighted shares", "shares used", r"basic"), ("diluted weighted shares", "shares used", r"diluted")]
 
 
@@ -202,9 +233,53 @@ def income_headlines(rows: list[dict]) -> list[dict]:
         for item, group, pattern in INCOME_ITEMS:
             if item not in taken and re.fullmatch(pattern, r["label"].strip(), re.I) and (group is None or group in r["group"].lower()):
                 taken.add(item)
-                out.append({"item": item, "label": r["label"], "values": r["values"], "as_reported": r["cells"], "columns": r["columns"][-2:]})
+                out.append({"item": item, "label": r["label"], "values": r["values"], "as_reported": r["cells"], "columns": r["columns"][-2:], "units": r["units"]})
                 break
     return out
+
+
+MONTHS_WORDS = {"three": 3, "six": 6, "nine": 9, "twelve": 12}
+
+
+DATE_FORMATS = ("%B %d, %Y", "%b %d, %Y", "%m/%d/%Y", "%B %d %Y", "%b %d %Y")
+
+
+def parse_date(text: str):
+    """A date as a balance sheet column writes it ("September 6, 2026", "Dec 28, 2025", "6/30/2026", "June 28,2026"), or None."""
+    clean = re.sub(r"\s+", " ", re.sub(r",(?=\S)", ", ", text.replace("\u00a0", " "))).strip().rstrip(".")
+    for fmt in DATE_FORMATS:
+        try:
+            return datetime.strptime(clean, fmt).date()
+        except ValueError:
+            continue
+    return None
+
+
+def months_from_balance_sheet(sheet: dict | None) -> int | None:
+    """The months of the year to date, from the two columns of the balance sheet: a 10-Q compares the quarter end with the LAST FISCAL YEAR END, so the distance between the two dates, to the
+    nearest quarter, is the months of the year to date (Domino's: December 28, 2025 to September 6, 2026 is 9; Papa John's 6; Yum 6). None when the dates cannot be read or are not 1 to 12 months apart."""
+    dates = [d for d in (parse_date(c) for c in (sheet or {}).get("columns", [])) if d]  # the units cell ("(In thousands)") is the first of the columns of some pages: not a date
+    if len(dates) < 2:
+        return None
+    months = round(abs((dates[0] - dates[1]).days) / 30.44 / 3) * 3
+    return months if 3 <= months <= 12 else None
+
+
+def period_months(rows: list[dict], form: str | None, sheet: dict | None = None) -> int | None:
+    """How many months the cash-flow figures cover. A 10-Q's cash-flow statement is year to date and does not say so; the INCOME statement's column headings do ("Three Months Ended |
+    Nine Months Ended": the longest is the year to date). A 10-K is 12. A first-quarter 10-Q has one heading ("Three Months Ended") that the row reader does not keep as a
+    header, but its income rows have exactly two columns (this year, last year), where the second and third quarters have four: so a 10-Q with two columns is 3. None when
+    neither says (the caller then does not annualize and says why). Advisor v1 spec 5.5."""
+    if form == "10-K":
+        return 12
+    income = [r for r in rows if r["statement"] == "income"]
+    words = re.findall(r"(three|six|nine|twelve) months ended", " ".join(c for r in income for c in r["columns"]), re.I)
+    if words:
+        return max(MONTHS_WORDS[w.lower()] for w in words)
+    headline = [i for i in income_headlines(rows) if i["item"] in ("revenue", "net income")]
+    if form == "10-Q" and headline and all(len(i["values"]) == 2 for i in headline):
+        return 3
+    return months_from_balance_sheet(sheet) if form == "10-Q" else None
 
 
 # ---------------------------------------------------------------- passages
@@ -257,6 +332,11 @@ def filings_from_documents(docs) -> list[dict]:
         if parts["section"]:
             filing["has_text"] = True
             filing["sections"][parts["section"]] = doc.page_content.split("\n\n", 1)[1] if "\n\n" in doc.page_content else ""
+    for filing in filings.values():   # a 10-Q stored when no "Part I" line was found (Restaurant Brands writes "Part I. Financial Information") has item1..item4: those of Part I
+        if filing["form"] == "10-Q" and "financial_statements" not in filing["sections"] and "item1" in filing["sections"]:
+            for old, new in (("item1", "financial_statements"), ("item2", "mdna"), ("item3", "market_risk"), ("item4", "controls")):
+                if old in filing["sections"]:
+                    filing["sections"].setdefault(new, filing["sections"].pop(old))
     return list(filings.values())
 
 
@@ -288,6 +368,9 @@ def recommendation_evidence(symbol: str, filings: list[dict], today: date | None
     source = next((f for f in window if f["form"] in ("10-Q", "10-K") and "financial_statements" in f["sections"]), None)
     rows = parse_rows(source["sections"]["financial_statements"]) if source else []
     sheet, actions, income = balance_sheet(rows), capital_actions(rows), income_headlines(rows)
+    months = period_months(rows, source["form"] if source else None, sheet)
+    for action in actions:
+        action["months"] = months   # the months the (year-to-date) cash-flow figures cover, or None
     if sheet:
         sheet["source"] = {"accession": source["accession"], "form": source["form"], "filed": source["filed"], "period_end": source["period_end"], "url": source["url"],
                            "section": "financial_statements"}
@@ -325,7 +408,7 @@ def recommendation_evidence(symbol: str, filings: list[dict], today: date | None
         gaps.insert(0, f"the financial statements of the {source['form']} filed {source['filed']} have no balance sheet that could be read (the rows found are those of: {', '.join(sorted({r['statement'] or 'no statement' for r in rows})) or 'none'})")
     result = {"symbol": symbol, "as_of": max((f["filed"] for f in window), default=""), "window_days": since_days,
               "filings": {"in_window": len(window), "by_form": sorted(by_form.values(), key=lambda e: e["form"]), "with_text": stored},
-              "balance_sheet": sheet, "capital_actions": actions, "income": income, "evidence": evidence, "found": counts, "gaps": gaps}
+              "period_months": months, "balance_sheet": sheet, "capital_actions": actions, "income": income, "evidence": evidence, "found": counts, "gaps": gaps}
     result["digest"] = digest(result)
     return result
 

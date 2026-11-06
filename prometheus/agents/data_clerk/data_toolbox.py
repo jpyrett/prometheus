@@ -16,7 +16,7 @@ import time
 import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -99,6 +99,9 @@ FILING_FORMS = ("10-K", "10-Q", "8-K", "PRE 14C", "DEF 14C", "DEF 14A", "SCHEDUL
                 "SCHEDULE 13G", "SCHEDULE 13G/A", "144", "144/A")
 MARKET_DIR = "market"          # subfolder of the news folder holding the market-wide news store
 POLYGON_NEWS_URL = "https://api.massive.com/v2/reference/news"
+MASSIVE_AGGS_URL = "https://api.massive.com/v2/aggs/ticker/{ticker}/range/1/day/{start}/{end}"   # daily bars of ONE ticker (REST); the same numbers as the day_aggs_v1 flat files
+TICKER_BARS_DIR = "ticker_bars_v1"   # under data/historical: one <SYMBOL>.csv of daily bars per ticker, in the columns of the day files; what `fetch_daily_bars` writes and BarStore merges in
+BARS_HEADER = ["ticker", "volume", "open", "close", "high", "low", "window_start", "transactions"]
 FINNHUB_MIN_INTERVAL = 0.25    # 4 calls/s = 240/min, under the paid 300/min limit
 POLYGON_PAGE_SIZE = 1000
 POLYGON_MIN_INTERVAL = 0.1     # 10 calls/s, well under the paid limit
@@ -178,8 +181,10 @@ class DataToolbox:
 
     def _aws_env(self) -> dict:
         env = os.environ.copy()
-        env["AWS_SHARED_CREDENTIALS_FILE"] = str(self.aws_dir / "credentials")
-        env["AWS_CONFIG_FILE"] = str(self.aws_dir / "config")
+        if (self.aws_dir / "credentials").exists():  # the project's own .aws folder when there is one; otherwise the user's ~/.aws (naming a file that is not there would make every sync fail)
+            env["AWS_SHARED_CREDENTIALS_FILE"] = str(self.aws_dir / "credentials")
+        if (self.aws_dir / "config").exists():
+            env["AWS_CONFIG_FILE"] = str(self.aws_dir / "config")
         env["AWS_PAGER"] = ""
         # Skip checksum calculation/validation on transfers
         env["AWS_REQUEST_CHECKSUM_CALCULATION"] = "when_required"
@@ -187,9 +192,9 @@ class DataToolbox:
         env["PATH"] = f"{self.aws_bin_dir}{os.pathsep}{env.get('PATH', '')}"
         return env
 
-    def _run(self, cmd: list[str], cwd: Path | None = None) -> None:
+    def _run(self, cmd: list[str], cwd: Path | None = None, env: dict | None = None) -> None:
         try:
-            subprocess.run(cmd, cwd=cwd, env=self._aws_env(), check=True)
+            subprocess.run(cmd, cwd=cwd, env=env or self._aws_env(), check=True)
         except (subprocess.CalledProcessError, FileNotFoundError) as e:
             raise RuntimeError(f"Command failed: {' '.join(cmd)}: {e}") from e
 
@@ -208,6 +213,79 @@ class DataToolbox:
                  "--endpoint-url", ENDPOINT_URL],
                 cwd=target,
             )
+
+    def sync_day_aggs(self, months: list[str]) -> list[Path]:
+        """Sync the DAY AGGREGATES (`day_aggs_v1`: one small gzip CSV per trading day, about 0.3 MB, every US ticker) of the given months, and nothing else: the Advisor's indicators need a year
+        of daily bars (Advisor v1 spec section 2.1) and `fetch_historical_data` syncs only the current month, for all four data types (minute bars, trades and quotes are gigabytes). `months` are
+        "YYYY-MM" texts. It only ADDS files under data/historical/day_aggs_v1 (`aws s3 sync` never deletes here), it does not convert them, and it is not a tool of the Data Clerk's model (it is not in
+        DATA_CLERK_TOOLS). It uses the Massive flat-file bucket and the credentials in .aws (the project's, else ~/.aws): a real network call. Returns the folders synced."""
+        if not months or len(months) > 36:
+            raise ValueError("give 1 to 36 months as 'YYYY-MM'")
+        parsed = []
+        for text in months:  # every month is checked BEFORE anything is called: a mistyped one must not leave half a range synced
+            found = re.fullmatch(r"(\d{4})-(\d{2})", text) if isinstance(text, str) else None
+            if not found or not (2000 <= int(found.group(1)) <= 2100 and 1 <= int(found.group(2)) <= 12):
+                raise ValueError(f"not a month 'YYYY-MM': {text!r}")
+            parsed.append((int(found.group(1)), int(found.group(2))))
+        with tempfile.TemporaryDirectory() as tmp:
+            env = self._classic_aws_env(Path(tmp))
+            folders = []
+            for year, month in parsed:
+                target = self.root_data_dir / "day_aggs_v1" / str(year) / f"{month:02d}"
+                target.mkdir(parents=True, exist_ok=True)
+                self._run(["aws", "s3", "sync", f"{S3_ROOT}/day_aggs_v1/{year}/{month:02d}", ".", "--endpoint-url", ENDPOINT_URL], cwd=target, env=env)
+                folders.append(target)
+            return folders
+
+    def _classic_aws_env(self, tmp: Path) -> dict:
+        """The AWS environment with the CLASSIC transfer client set, in a TEMPORARY copy of the config (init_aws_cli sets it in the project's own config: "the CRT transfer client gets 403 Forbidden from
+        files.massive.com; classic works"). The user's config file is read, never changed."""
+        env = self._aws_env()
+        source = Path(env.get("AWS_CONFIG_FILE") or Path.home() / ".aws" / "config")
+        text = source.read_bytes() if source.exists() else b"[default]\n"
+        config = tmp / "config"
+        config.write_bytes(text if text.endswith(b"\n") else text + b"\n")
+        env["AWS_CONFIG_FILE"] = str(config)
+        self._run(["aws", "configure", "set", "default.s3.preferred_transfer_client", "classic"], env=env)
+        return env
+
+    def fetch_daily_bars(self, symbols: list[str], days: int = 400, end: date | None = None) -> dict[str, dict]:
+        """Refresh the DAILY BARS of some tickers from Massive's REST aggregates API: one call per ticker, the last `days` calendar days up to `end` (default today), UNADJUSTED like the flat files
+        (the numbers of 2026-10-23 are the same as the day_aggs_v1 file's). A real, paid-API network call. For tickers the day files do not cover or that are fresher than they are (the flat files
+        arrive in batches; the Advisor's freshness gate wants yesterday's close), and it needs no flat-file credentials. Each ticker is written to data/historical/ticker_bars_v1/<SYMBOL>.csv in
+        the columns of the day files, MERGED with what is there (a date fetched again replaces the old row); nothing else under data/historical is touched. Returns {symbol: {fetched, stored,
+        first, last}}. A symbol that is not a ticker, or `days` outside 1 to 800, is refused before any call; an API failure raises (the message never holds the key)."""
+        wanted = list(dict.fromkeys(s.strip().lstrip("$").upper() for s in symbols))
+        if not wanted or any(not re.fullmatch(r"[A-Z0-9][A-Z0-9.\-]{0,9}", s) for s in wanted):
+            raise ValueError("give one or more ticker symbols")
+        if not isinstance(days, int) or isinstance(days, bool) or not 1 <= days <= 800:
+            raise ValueError("days must be a whole number from 1 to 800")
+        end = end or datetime.now(timezone.utc).date()
+        key = self._api_keys()["POLYGON_API_KEY"]
+        folder = self.root_data_dir / TICKER_BARS_DIR
+        out = {}
+        with httpx.Client(timeout=httpx.Timeout(30.0)) as client:
+            limiter = _RateLimiter(POLYGON_MIN_INTERVAL)
+            for symbol in wanted:
+                url = MASSIVE_AGGS_URL.format(ticker=symbol, start=(end - timedelta(days=days)).isoformat(), end=end.isoformat())
+                data = self._get_json(client, limiter, "Massive aggregates", url, {"adjusted": "false", "sort": "asc", "limit": 50000, "apiKey": key})
+                rows = {int(r["t"]) * 1_000_000: [symbol, r["v"], r["o"], r["c"], r["h"], r["l"], int(r["t"]) * 1_000_000, int(r.get("n", 0))] for r in data.get("results", []) if {"t", "v", "o", "c", "h", "l"} <= set(r)}
+                path = folder / f"{symbol}.csv"
+                stored = {}
+                if path.exists():
+                    for line in path.read_text(encoding="utf-8").splitlines()[1:]:
+                        cells = line.split(",")
+                        if len(cells) == len(BARS_HEADER):
+                            stored[int(cells[6])] = cells
+                stored.update({stamp: [str(c) for c in row] for stamp, row in rows.items()})
+                folder.mkdir(parents=True, exist_ok=True)
+                tmp = path.with_suffix(".csv.tmp")
+                tmp.write_text("\n".join([",".join(BARS_HEADER), *(",".join(stored[stamp]) for stamp in sorted(stored))]) + "\n", encoding="utf-8")
+                tmp.replace(path)
+                stamps = sorted(stored)
+                out[symbol] = {"fetched": len(rows), "stored": len(stored), "first": datetime.fromtimestamp(stamps[0] / 1e9, timezone.utc).date().isoformat() if stamps else None,
+                               "last": datetime.fromtimestamp(stamps[-1] / 1e9, timezone.utc).date().isoformat() if stamps else None}
+        return out
 
     # ------------------------------------------------------------------ Convert
     def convert_to_parquet(self) -> None:
@@ -1179,6 +1257,9 @@ class DataToolbox:
 
 FINNHUB_METRIC_URL = "https://finnhub.io/api/v1/stock/metric"
 # name -> (Finnhub 'metric' key, unit, description). Same sources the main bmd FundamentalTicker uses.
+# The first ten are the original ones. The rest (Advisor v1 spec section 5.4, design choices entry 51) are Finnhub's own fields, kept as Finnhub gives them; a field Finnhub does
+# not return for a company is None. `FINANCIAL_SCALE` converts a unit Finnhub quotes (market capitalization is in millions of dollars) and `FINANCIAL_FALLBACK` names the key
+# to try when the first is absent (price to book is quoted quarterly and annually).
 FINANCIAL_METRICS = {
     "pe_ratio": ("peTTM", "x", "Price/Earnings, trailing 12 months"),
     "eps": ("epsTTM", "USD", "Earnings per share, trailing 12 months"),
@@ -1190,11 +1271,35 @@ FINANCIAL_METRICS = {
     "current_ratio": ("currentRatioQuarterly", "x", "Current assets / current liabilities, latest quarter"),
     "dividend_yield": ("currentDividendYieldTTM", "%", "Dividends per share / price, trailing 12 months"),
     "revenue_growth": ("revenueGrowthTTMYoy", "%", "Revenue growth vs. a year earlier (TTM)"),
+    "market_cap": ("marketCapitalization", "USD", "Market capitalization (Finnhub quotes millions; converted to dollars)"),
+    "beta_provider": ("beta", "x", "Beta as Finnhub computes it"),
+    "high_52w": ("52WeekHigh", "USD", "52-week high"),
+    "low_52w": ("52WeekLow", "USD", "52-week low"),
+    "adv_10d_provider": ("10DayAverageTradingVolume", "M shares", "Average daily volume over 10 days, in millions of shares"),
+    "ps_ratio": ("psTTM", "x", "Price/Sales, trailing 12 months"),
+    "pb_ratio": ("pbQuarterly", "x", "Price/Book, latest quarter (the annual figure when the quarterly one is absent)"),
+    "payout_ratio_provider": ("payoutRatioTTM", "%", "Dividend payout ratio, trailing 12 months"),
+    "eps_growth_ttm": ("epsGrowthTTMYoy", "%", "EPS growth vs. a year earlier (TTM)"),
 }
+FINANCIAL_SCALE = {"market_cap": 1_000_000}
+FINANCIAL_FALLBACK = {"pb_ratio": "pbAnnual"}
+
+
+def parse_metric_payload(symbol: str, raw: dict, as_of: str) -> dict:
+    """Finnhub's `metric` object -> {symbol, as_of, metrics: {name: {value, unit, description}}}. A metric Finnhub has no value for is None. Pure: the same payload gives the same
+    result, so a test can feed it a payload that was recorded from the real API."""
+    metrics = {}
+    for name, (field, unit, description) in FINANCIAL_METRICS.items():
+        value = raw.get(field)
+        if value is None and name in FINANCIAL_FALLBACK:
+            value = raw.get(FINANCIAL_FALLBACK[name])
+        value = None if isinstance(value, bool) or not isinstance(value, (int, float)) else float(value) * FINANCIAL_SCALE.get(name, 1)
+        metrics[name] = {"value": round(value, 4) if value is not None else None, "unit": unit, "description": description}
+    return {"symbol": symbol, "as_of": as_of, "metrics": metrics}
 
 
 class Financials:
-    """The 10 most commonly asked financial metrics (see FINANCIAL_METRICS), used through DataToolbox:
+    """The commonly asked financial metrics (see FINANCIAL_METRICS: the original ten, and the ones the Advisor's strategies read), used through DataToolbox:
     agent.financials.get('AAPL')  or  agent.financials.pe_ratio('AAPL'). One Finnhub call per request."""
 
     def __init__(self, agent: DataToolbox):
@@ -1214,12 +1319,7 @@ class Financials:
         raw = data.get("metric") if isinstance(data, dict) else None
         if not raw:
             raise RuntimeError(f"No financial metrics returned for {symbol}")
-        metrics = {}
-        for name, (field, unit, description) in FINANCIAL_METRICS.items():
-            value = raw.get(field)
-            metrics[name] = {"value": round(float(value), 4) if value is not None else None,
-                             "unit": unit, "description": description}
-        return {"symbol": symbol, "as_of": f"{datetime.now(timezone.utc):%Y-%m-%d}", "metrics": metrics}
+        return parse_metric_payload(symbol, raw, f"{datetime.now(timezone.utc):%Y-%m-%d}")
 
     def _one(self, symbol: str, name: str):
         return self.get(symbol)["metrics"][name]["value"]

@@ -1,0 +1,189 @@
+<<<PRESS_RELEASE>>>
+id: 98ef68554610f5f8
+symbol: SNDK
+published_utc: 2025-11-06T16:05:00Z
+url: https://www.nasdaq.com/press-release/sandisk-reports-fiscal-first-quarter-2026-financial-results-2025-11-06
+headline: Sandisk Reports Fiscal First Quarter 2026 Financial Results
+<<<TEXT>>>
+Sandisk Corporation today reported fiscal first quarter financial results. Non-GAAP gross margin guidance excludes stock-based compensation expense and expense for short-term incentives granted in connection with the separation, totaling approximately $4 million to $6 million. The Company’ s Non-GAAP operating expenses guidance excludes...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: de552d88d7ea7bed
+symbol: SNDK
+published_utc: 2025-11-25T19:00:00Z
+url: https://www.nasdaq.com/press-release/sandisk-announces-participation-investor-conferences-2025-11-26
+headline: Sandisk Announces Participation in Investor Conferences
+<<<TEXT>>>
+Sandisk Corporation announced today management’ s participation in the following upcoming investor conferences:. Event: UBS 2025 Global Technology and AI Conference Date: Tuesday, December 2, 2025 at 3:15 p.m. PT/ 6:15 p.m. ET. Sandisk and the Sandisk logo are registered trademarks or trademarks of Sandisk Corporation or its affiliates in the U.S. and/or...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 653ab8e51fb3e82d
+symbol: SNDK
+published_utc: 2025-12-30T17:00:00Z
+url: https://www.nasdaq.com/press-release/sandisk-report-fiscal-second-quarter-results-january-29-2026-2025-12-30
+headline: Sandisk to Report Fiscal Second Quarter Results on January 29, 2026
+<<<TEXT>>>
+Sandisk Corporation announced today that it will hold its fiscal second quarter earnings conference call on Thursday, January 29, 2026, at 1:30 p.m. Pacific Time. Sandisk and the Sandisk logo are registered trademarks or trademarks of Sandisk Corporation or its affiliates in the U.S. and/or other countries. © 2025 Sandisk Corporation or its affiliates.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d99569d2e3ce564e
+symbol: SNDK
+published_utc: 2026-01-02T16:05:00Z
+url: https://www.nasdaq.com/press-release/sandisk-appoints-alexander-r-bradley-its-board-directors-2026-01-02
+headline: Sandisk Appoints Alexander R. Bradley to its Board of Directors
+<<<TEXT>>>
+Sandisk Corp today announced that Alexander R. Bradley has joined its board of directors and been appointed to the audit committee. Prior to joining First Solar, Bradley worked in investment banking and leveraged finance at HSBC in London and New York, focusing on the energy and utilities sector. He also served as an officer and board member of the general...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da98a73803de5724
+symbol: SNDK
+published_utc: 2026-01-29T16:07:00Z
+url: https://www.nasdaq.com/press-release/sandisk-reports-fiscal-second-quarter-2026-financial-results-2026-01-29
+headline: Sandisk Reports Fiscal Second Quarter 2026 Financial Results
+<<<TEXT>>>
+Sandisk Corporation today reported fiscal second quarter financial results. Non-GAAP gross margin guidance excludes stock-based compensation expense and expense for short-term incentives granted in connection with the separation, totaling approximately $3 million to $5 million. The Company’ s Non-GAAP operating expenses guidance excludes...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ac0da40e21b27f28
+symbol: SNDK
+published_utc: 2026-01-29T16:21:00Z
+url: https://www.nasdaq.com/press-release/kioxia-and-sandisk-extend-yokkaichi-joint-venture-agreement-through-2034-2026-01-29
+headline: Kioxia and Sandisk Extend Yokkaichi Joint Venture Agreement Through 2034
+<<<TEXT>>>
+TOKYO& MILPITAS, Calif.---- Kioxia Corporation, a subsidiary of Kioxia Holdings Corporation, and Sandisk Corporation today announced the extension of their joint venture agreements at Kioxia’ s Yokkaichi Plant for an additional five years. Originally set to expire on December 31, 2029, the agreement will now run through December 31, 2034, marking another...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cadfa5cc2f5d8a41
+symbol: SNDK
+published_utc: 2026-02-17T16:45:00Z
+url: https://www.nasdaq.com/press-release/sandisk-announces-launch-secondary-offering-common-stock-2026-02-17
+headline: Sandisk Announces Launch of Secondary Offering of Common Stock
+<<<TEXT>>>
+Prior to the closing of the Offering, WDC is expected to exchange the SNDK Shares for certain indebtedness of WDC held by affiliates of J.P. Morgan Securities LLC and BofA Securities. Upon the consummation of the debt-for-equity exchange, WDC is expected to deliver the SNDK Shares, at the request of the debt-for-equity exchange parties, to J.P. Morgan Securities...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b0d88f10c1a4b009
+symbol: SNDK
+published_utc: 2026-02-18T00:50:00Z
+url: https://www.nasdaq.com/press-release/sandisk-announces-pricing-secondary-offering-common-stock-2026-02-18
+headline: Sandisk Announces Pricing of Secondary Offering of Common Stock
+<<<TEXT>>>
+Prior to the closing of the Offering, WDC is expected to exchange the SNDK Shares for certain indebtedness of WDC held by affiliates of J.P. Morgan Securities LLC and BofA Securities. Upon the consummation of the debt-for-equity exchange, WDC is expected to deliver the SNDK Shares, at the request of the debt-for-equity exchange parties, to J.P. Morgan Securities...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4dc4a1b20f10dd63
+symbol: SNDK
+published_utc: 2026-02-19T19:05:00Z
+url: https://www.nasdaq.com/press-release/sandisk-announces-participation-investor-conferences-2026-02-20
+headline: Sandisk Announces Participation in Investor Conferences
+<<<TEXT>>>
+Sandisk Corporation announced today management’ s participation in the following upcoming investor conferences:. 4th Annual TMT Forum Date: Wednesday, February 25, 2026 at 3:30 p.m. PT/ 6:30 p.m. ET. Sandisk and the Sandisk logo are registered trademarks or trademarks of Sandisk Corporation or its affiliates in the U.S. and/or other countries.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dc81e8071bb03c3b
+symbol: SNDK
+published_utc: 2026-03-31T13:00:00Z
+url: https://www.nasdaq.com/press-release/sandisk-report-fiscal-third-quarter-results-april-30-2026-2026-03-31
+headline: Sandisk to Report Fiscal Third Quarter Results on April 30, 2026
+<<<TEXT>>>
+Sandisk Corporation announced today that it will hold its fiscal third quarter earnings conference call on Thursday, April 30, 2026, at 1:30 p.m. Pacific Time. Sandisk and the Sandisk logo are registered trademarks or trademarks of Sandisk Corporation or its affiliates in the U.S. and/or other countries. © 2026 Sandisk Corporation or its affiliates.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c15ce12d67001798
+symbol: SNDK
+published_utc: 2026-04-23T06:46:00Z
+url: https://www.nasdaq.com/press-release/tradr-debuts-short-etfs-lumentum-and-sandisk-2026-04-23
+headline: Tradr Debuts Short ETFs on Lumentum and Sandisk
+<<<TEXT>>>
+Tradr 2 X Short LITE Daily ETF– tracks Lumentum Holdings Inc. Tradr 2 X Short SNDK Daily ETF– tracks Sandisk Corp.. "Fresh off its inclusion in the Nasdaq 100 Index, Sandisk is arguably one of the most watched stocks in the world right now," said Matt Markiewicz, Head of Product and Capital Markets at Tradr ETFs." Both Sandisk and Lumentum have witnessed meteoric price...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 78ab2a6f5cb6fd8b
+symbol: SNDK
+published_utc: 2026-04-30T16:05:00Z
+url: https://www.nasdaq.com/press-release/sandisk-reports-fiscal-third-quarter-2026-financial-results-2026-04-30
+headline: Sandisk Reports Fiscal Third Quarter 2026 Financial Results
+<<<TEXT>>>
+Sandisk Corporation today reported fiscal third quarter financial results. On February 21, 2025, Sandisk Corporation completed its separation from Western Digital Corporation and became a standalone publicly traded company. The financial statements for all periods presented, including the historical results of the Company prior to February 21, 2025,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b065d42ac009078e
+symbol: SNDK
+published_utc: 2026-05-14T20:00:00Z
+url: https://www.nasdaq.com/press-release/sandisk-recommends-stockholders-reject-mini-tender-offer-tutanota-llc-2026-05-15
+headline: Sandisk Recommends Stockholders Reject "Mini-Tender" Offer by Tutanota LLC
+<<<TEXT>>>
+Sandisk Corporation today announced that it recently became aware of an unsolicited" mini-tender" offer by Tutanota LLC to purchase up to 100,000 shares of Sandisk’ s common stock at an offer price of $1,150.00 per share. The offer price of $1,150.00 per share is conditioned upon, among other things, the closing price per share of Sandisk’ s common stock exceeding...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e6c6bdf4452b0ad
+symbol: SNDK
+published_utc: 2026-05-18T14:20:00Z
+url: https://www.nasdaq.com/press-release/sandisk-announces-participation-investor-conferences-2026-05-18
+headline: Sandisk Announces Participation in Investor Conferences
+<<<TEXT>>>
+Sandisk Corporation announced today management’ s participation in the following upcoming investor conferences:. Sandisk and the Sandisk logo are registered trademarks or trademarks of Sandisk Corporation or its affiliates in the U.S. and/or other countries. © 2026 Sandisk Corporation or its affiliates.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: febb324bc611ea19
+symbol: SNDK
+published_utc: 2026-07-02T19:00:00Z
+url: https://www.nasdaq.com/press-release/sandisk-announces-sampling-bics10-1tb-tlc-3d-nand-flash-memory-pushing-density-power
+headline: Sandisk Announces Sampling of BiCS10 1Tb TLC 3D NAND Flash Memory Pushing Density, Power Efficiency and Performance to Support Data-Intensive Workloads
+<<<TEXT>>>
+Sandisk Corporation today announced it is sampling its BiCS10 1 Tb TLC, its 10th- generation 3 D NAND flash memory technology. BiCS10 applies advanced lateral scaling techniques to achieve industry-leading 1 Tb TLC memory density greater than 29 Gb/mm 2, improving bit density by 59 percent while delivering up to 4.8 Gb/s** interface speed, a 33 percent...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a3b29ef79658f19d
+symbol: SNDK
+published_utc: 2026-07-03T06:19:00Z
+url: https://www.nasdaq.com/press-release/kioxia-and-sandisk-begin-production-10th-generation-3d-flash-memory-products-kitakami
+headline: Kioxia and Sandisk Begin Production of 10th-Generation 3D Flash Memory Products at Kitakami Plant Fab2
+<<<TEXT>>>
+Companies Showcase Ongoing Buildout of Manufacturing Infrastructure at K2 to Address Growing Demand for NAND Flash. TOKYO& MILPITAS, Calif.---- Kioxia Corporation, a subsidiary of Kioxia Holdings Corporation and Sandisk Corporation today announced the start of production for their 10th- generation 3 D Flash memory technology at Fab2 at the Kitakami Plant in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c5d5b43052c216ea
+symbol: SNDK
+published_utc: 2026-07-09T12:05:00Z
+url: https://www.nasdaq.com/press-release/sandisk-report-fiscal-fourth-quarter-and-fiscal-year-2026-results-august-5-2026
+headline: Sandisk to Report Fiscal Fourth Quarter and Fiscal Year 2026 Results on August 5, 2026; Announces Investor Day on August 13, 2026
+<<<TEXT>>>
+Sandisk Corporation announced today that it will hold its fiscal fourth quarter and fiscal year 2026 earnings conference call on Wednesday, August 5, 2026, at 1:30 p.m. Pacific Time. Additionally, Sandisk Corporation today announced that the company will hold its Investor Day on Thursday, August 13, 2026 at 9:00 a.m. Eastern Time. The event will include...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3ad160b7a2f2723b
+symbol: SNDK
+published_utc: 2026-08-03T19:34:00Z
+url: https://www.nasdaq.com/press-release/sandisk-and-sk-hynix-advance-global-standardization-high-bandwidth-flash-release
+headline: Sandisk and SK hynix Advance Global Standardization of High Bandwidth Flash with Release of First OCP Technical Specification
+<<<TEXT>>>
+Sandisk Corporation and SK hynix Inc. today announced the release of the HBF™ technical specification through the Open Compute Project, advancing the workstream to drive HBF standardization for the AI inference era, just six months after the consortium began work in February. This press release features multimedia. "AI inference is creating a new set of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7bd600a042615c70
+symbol: SNDK
+published_utc: 2026-08-04T08:30:00Z
+url: https://www.nasdaq.com/press-release/new-3d-flash-memory-technology-kioxia-and-sandisk-achieves-industrys-highest-bit
+headline: New 3D Flash Memory Technology from Kioxia and Sandisk Achieves Industry’s Highest Bit Density for QLC NAND
+<<<TEXT>>>
+Future of Memory and Storage Conference– Kioxia Corporation, a subsidiary of Kioxia Holdings Corporation and Sandisk Corporation today unveiled their next-generation Quad-Level-Cell 3 D flash memory technology, which delivers up to 60% increase in bit density compared to their 8th- generation, surpassing 37 Gb/mm² and setting the industry benchmark 1...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d4828faa4f373b2b
+symbol: SNDK
+published_utc: 2026-08-05T16:05:00Z
+url: https://www.nasdaq.com/press-release/sandisk-reports-fiscal-fourth-quarter-2026-financial-results-2026-08-05
+headline: Sandisk Reports Fiscal Fourth Quarter 2026 Financial Results
+<<<TEXT>>>
+Sandisk Corporation today reported fiscal fourth quarter financial results. Non-GAAP gross margin guidance excludes stock-based compensation expense, totaling approximately $5 million to $7 million. The Company’ s Non-GAAP operating expenses guidance excludes stock-based compensation expense, totaling approximately $54 million to $74 million.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0eddb1677b1fc139
+symbol: SNDK
+published_utc: 2026-08-12T08:30:00Z
+url: https://www.nasdaq.com/press-release/kioxia-and-sandisk-unveil-new-high-performance-qlc-3d-flash-memory-technology
+headline: Kioxia and Sandisk Unveil New High-Performance QLC 3D Flash Memory Technology Designed for AI and Data-Intensive Applications
+<<<TEXT>>>
+Innovative 9 th- Generation architecture pairs advanced CMOS technology with a proven memory-array platform to meet the fast pace of AI while enabling capital-efficient NAND scaling. MILPITAS, Calif.& TOKYO---- Kioxia Corporation, a subsidiary of Kioxia Holdings Corporation, and Sandisk Corporation today unveiled their new 9th- generation, high-performance 2...
+<<<END>>>

@@ -42,7 +42,7 @@ READ_REMOTE = {"readOnlyHint": True, "openWorldHint": True}       # calls an out
 WRITES = {"readOnlyHint": False, "destructiveHint": False, "openWorldHint": True}  # downloads and adds files, deletes nothing
 ANNOTATIONS = {"retrieve_news": READ_LOCAL, "retrieve_press_releases": READ_LOCAL, "retrieve_filings": READ_LOCAL, "fetch_filings_recommendation": READ_LOCAL, "keyword_search": READ_LOCAL, "discover_tickers": READ_LOCAL,
                "get_price_summary": READ_LOCAL,
-               "get_financials": READ_REMOTE, "get_quote": READ_REMOTE, "fetch_news": WRITES, "fetch_press_releases": WRITES, "fetch_filings": WRITES}
+               "get_financials": READ_REMOTE, "get_quote": READ_REMOTE, "calculate_metrics": READ_REMOTE, "fetch_news": WRITES, "fetch_press_releases": WRITES, "fetch_filings": WRITES}
 
 
 def served_tools(allow_fetch: bool = False) -> tuple[str, ...]:

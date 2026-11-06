@@ -1,0 +1,153 @@
+<<<PRESS_RELEASE>>>
+id: e2df1f0bfba3f899
+symbol: QSR
+published_utc: 2025-11-10T06:30:00Z
+url: https://www.nasdaq.com/press-release/rbi-and-cpe-announce-joint-venture-reignite-growth-burger-kingr-china-2025-11-10
+headline: RBI and CPE Announce Joint Venture to Reignite Growth at Burger King® in China
+<<<TEXT>>>
+-Restaurant Brands International Inc. today announced a joint venture with CPE to unlock the next phase of growth for Burger King in China. CPE is a leading Chinese alternative asset manager with a global perspective and a proven track record of scaling consumer brands in China.  "China remains one of the most exciting long-term opportunities for Burger King...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8aff78ee70937bd4
+symbol: QSR
+published_utc: 2025-11-13T19:48:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-restaurant-brands-international-inc-2025-11-13
+headline: /C O R R E C T I O N -- Restaurant Brands International Inc./
+<<<TEXT>>>
+-Restaurant Brands International Inc. announced today that an underwritten registered public offering of up to 17,626,570 common shares commenced by HL1 17 LP, an affiliate of 3 G Capital Partners Ltd., had priced. These common shares relate to the exchange notice received by Restaurant Brands International Limited Partnership from the Selling...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0b559bdb4873e47a
+symbol: QSR
+published_utc: 2025-11-25T07:00:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-inc-participate-barclays-11th-annual-eat-sleep-play
+headline: Restaurant Brands International Inc. to Participate in the Barclays 11th Annual Eat, Sleep, Play, Shop Conference
+<<<TEXT>>>
+MIAMI, Nov. 25, 2025/ PRNewswire/- Restaurant Brands International Inc. announced today that Josh Kobza, Chief Executive Officer, and Sami Siddiqui, Chief Financial Officer, will participate in a fireside chat at the Barclays 11th Annual Eat, Sleep, Play, Shop Conference in New York City on December 3, 2025 at 8:15am Eastern Time.. About Restaurant Brands...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3cc4804be74614bb
+symbol: QSR
+published_utc: 2026-01-13T07:00:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-inc-host-investor-event-february-26-2026-miami-2026
+headline: Restaurant Brands International Inc. to Host Investor Event on February 26, 2026 in Miami
+<<<TEXT>>>
+-Restaurant Brands International Inc. today announced key 2026 dates, including an upcoming Investor Event on February 26, 2026 and preliminary 2026 earnings call dates. The company will host an Investor Event in Miami, Florida on February 26, 2026. February 12, 2026: Fourth quarter and year ended December 31, 2025 May 6, 2026: First quarter ended March 31, 2026...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f7d24b8411e48986
+symbol: QSR
+published_utc: 2026-01-26T07:00:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-report-fourth-quarter-and-full-year-2025-results
+headline: Restaurant Brands International to Report Fourth Quarter and Full Year 2025 Results on February 12, 2026
+<<<TEXT>>>
+About Restaurant Brands International Inc. Restaurant Brands International Inc. is one of the world's largest quick service restaurant companies with over $45 billion in annual system-wide sales and over 32,000 restaurants in more than 120 countries and territories. RBI owns four of the world's most prominent and iconic quick service restaurant...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 88aff2edce7f9e25
+symbol: QSR
+published_utc: 2026-02-02T07:00:00Z
+url: https://www.nasdaq.com/press-release/rbi-and-cpe-complete-previously-announced-joint-venture-reignite-growth-burger-kingr
+headline: RBI and CPE Complete Previously Announced Joint Venture to Reignite Growth at Burger King® in China
+<<<TEXT>>>
+-Restaurant Brands International Inc., the parent company of the Burger King brand, and CPE today announced the completion of their previously announced joint venture, marking an important step forward in Burger King China's next phase of growth. Josh Kobza, Chief Executive Officer of Restaurant Brands International, said: "China remains one of the most...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d0e4c36ca897da5f
+symbol: QSR
+published_utc: 2026-02-12T06:30:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-inc-reports-fourth-quarter-and-full-year-2025-results
+headline: Restaurant Brands International Inc. Reports Fourth Quarter and Full Year 2025 Results
+<<<TEXT>>>
+-Restaurant Brands International Inc. today reported financial results for the fourth quarter and full year ended December 31, 2025. Operating and Reportable Segments RBI reports results under six operating and reportable segments consisting of four franchisor segments for the Tim Hortons, Burger King, Popeyes, and Firehouse Subs brands in the U.S. and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 51439859daa33732
+symbol: QSR
+published_utc: 2026-02-23T16:15:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-hosting-investor-event-february-26-2026-2026-02-23
+headline: Restaurant Brands International is Hosting an Investor Event on February 26, 2026
+<<<TEXT>>>
+About Restaurant Brands International Inc. Restaurant Brands International Inc. is one of the world's largest quick service restaurant companies with nearly $47 billion in annual system-wide sales and over 33,000 restaurants in more than 120 countries and territories. RBI owns four of the world's most prominent and iconic quick service restaurant...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 394872dc06bc5827
+symbol: QSR
+published_utc: 2026-02-26T08:00:00Z
+url: https://www.nasdaq.com/press-release/rbi-reaffirms-growth-algorithm-including-8-organic-adjusted-operating-income-growth
+headline: RBI Reaffirms Growth Algorithm, including 8%+ Organic Adjusted Operating Income Growth and 5%+ Net Restaurant Growth by 2028, with Plans to Return $1.6 Billion of Capital to Shareholders in 2026
+<<<TEXT>>>
+-Restaurant Brands International Inc. today hosted its 2026 Investor Day at the Company's Miami headquarters, reaffirming expectations to deliver against its growth algorithm within the 2028 outlook period and providing enhanced visibility into the execution of its strategic plan. Reaffirmed 8%+ organic Adjusted Operating Income growth from...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4cbee1194b9fb040
+symbol: QSR
+published_utc: 2026-03-06T16:15:00Z
+url: https://www.nasdaq.com/press-release/rbi-recommends-shareholders-reject-nysbs-mini-tender-offer-2026-03-06
+headline: RBI Recommends Shareholders Reject NYSB's "Mini-tender Offer"
+<<<TEXT>>>
+-Restaurant Brands International Inc. has been notified of an unsolicited mini-tender offer made by New York Stock and Bond LLC to purchase up to 100,000 RBI common shares, or approximately 0.03% of the company's outstanding common shares, at a price of US $43.60 per share. NYSB's offer price of US $43.60 represents a discount of 34.92% to the NYSE closing price...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b38dca65e8b6dd54
+symbol: QSR
+published_utc: 2026-04-08T07:00:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-report-first-quarter-2026-results-may-6-2026-2026-04
+headline: Restaurant Brands International to Report First Quarter 2026 Results on May 6, 2026
+<<<TEXT>>>
+-Restaurant Brands International Inc. will release its first quarter 2026 financial results on Wednesday, May 6, 2026 and will host an investor conference call that morning at 8:30 a.m. Eastern Time. About Restaurant Brands International Inc. Restaurant Brands International Inc. is one of the world's largest quick service restaurant companies with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c40a27e3650dfd49
+symbol: QSR
+published_utc: 2026-05-06T06:30:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-inc-reports-first-quarter-2026-results-2026-05-06
+headline: Restaurant Brands International Inc. Reports First Quarter 2026 Results
+<<<TEXT>>>
+-Restaurant Brands International Inc. today reported financial results for the first quarter ended March 31, 2026. We have six operating and reportable segments, including four franchisor segments for our Tim Hortons, Burger King, Popeyes, and Firehouse Subs brands in the U.S. and Canada and a fifth franchisor segment for all of our brands in the rest of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b82ac0129eda4092
+symbol: QSR
+published_utc: 2026-05-22T08:00:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-inc-participate-bernstein-42nd-annual-strategic
+headline: Restaurant Brands International Inc. to Participate in the Bernstein 42nd Annual Strategic Decisions Conference
+<<<TEXT>>>
+-Restaurant Brands International Inc. announced today that Patrick Doyle, Executive Chairman, and Josh Kobza, Chief Executive Officer will participate in a fireside chat at the Bernstein 42nd Annual Strategic Decisions Conference in New York City on May 28, 2026 at 9:00am Eastern Time. About Restaurant Brands International Inc. Restaurant Brands...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5d7da9b082e710b0
+symbol: QSR
+published_utc: 2026-06-03T16:30:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-inc-announces-election-directors-2026-06-03
+headline: Restaurant Brands International Inc. Announces Election of Directors
+<<<TEXT>>>
+-Restaurant Brands International Inc. today announced the results of the vote on the election of directors at its Annual Meeting of Shareholders held on June 3, 2026. Each nominee other than Ms. Smith was an incumbent director. Final voting results on all matters at the Annual Meeting of Shareholders will be filed with Canadian and U.S. securities regulators.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d421273869485959
+symbol: QSR
+published_utc: 2026-06-23T07:00:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-report-second-quarter-2026-results-august-6-2026-2026
+headline: Restaurant Brands International to Report Second Quarter 2026 Results on August 6, 2026
+<<<TEXT>>>
+-Restaurant Brands International Inc. will release its second quarter 2026 financial results on Thursday, August 6, 2026, and will host an investor conference call that morning at 8:30 a.m. Eastern Time. The earnings call will be webcast on the company's investor relations website and a replay will be available for a limited time following the release.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b784f55d0d044fd7
+symbol: QSR
+published_utc: 2026-08-06T06:30:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-inc-reports-second-quarter-2026-results-2026-08-06
+headline: Restaurant Brands International Inc. Reports Second Quarter 2026 Results
+<<<TEXT>>>
+--Restaurant Brands International Inc. today reported financial results for the second quarter ended June 30, 2026. We have six operating and reportable segments, including four franchisor segments for our Tim Hortons, Burger King, Popeyes, and Firehouse Subs brands in the U.S. and Canada and a fifth franchisor segment for all of our brands in the rest of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e5acb4dfa23f9926
+symbol: QSR
+published_utc: 2026-08-10T16:36:00Z
+url: https://www.nasdaq.com/press-release/restaurant-brands-international-inc-announces-receipt-exchange-notice-approximately
+headline: Restaurant Brands International Inc. Announces Receipt of Exchange Notice for Approximately 2.8 million Class B Exchangeable Limited Partnership Units and Intent to Satisfy with Cash on Hand
+<<<TEXT>>>
+--Restaurant Brands International Inc. announced today that Restaurant Brands International Limited Partnership has received an exchange notice from 3 G Restaurant Brands Holdings LP, an affiliate of 3 G Capital Partners Ltd., to exchange 2,784,549 Class B exchangeable limited partnership units of RBI LP. RBI LP intends to satisfy this notice with the...
+<<<END>>>

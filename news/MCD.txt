@@ -1,0 +1,4241 @@
+<<<ARTICLE>>>
+id: finnhub:143296578
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T20:45:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=98fd7c3eca8c24fa8d3b7eed82d4c0950ec386a78cb95272a4d6fde8f7792738
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Rises As Market Takes a Dip: Key Facts
+<<<SUMMARY>>>
+McDonald's (MCD) closed the most recent trading day at $257.38, moving +2.75% from the previous trading session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296840
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T20:11:06Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=9b35994d3490224b539eaaffad00d2cd1c24a4fd0f6a20218b6f9d4d5cc28ec0
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MCD
+keywords: 
+headline: Dow Jones Top Movers for Oct. 29, 2026: Merck and Nike Lead Gainers, Alphabet and Caterpillar Fall
+<<<SUMMARY>>>
+Dow Jones components on Oct. 29, 2026: Merck, Nike and Home Depot led gainers, while Alphabet and Caterpillar had the largest declines. Merck rose 3.92%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143295209
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T18:08:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe1443ffaa179eedef2d72ccda125e47d49db4fa6d200520cb8d2e78db060655
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Chipotle Jumps 9% as Same-Store Sales Top Estimates; McDonald’s Climbs 2%, Starbucks Edges Higher
+<<<SUMMARY>>>
+Chipotle's latest quarter handed Wall Street a mixed bag, with traffic beating expectations while margins took a visible hit from heavy promotions. Whether that tradeoff can sustain a rally in a stock still deep in the red this year is the question investors are now wrestling with.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296833
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T17:41:18Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=ed8305e68c381b4e0cf0a585dce9c85e92f2f2b76c42d54470324256ce3a4638
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MCD
+keywords: 
+headline: Dow Jones Top Movers Today: 8 Gainers, 4 Losers in Split Session
+<<<SUMMARY>>>
+Dow Jones top movers today: Merck rose 4.9% to lead eight gainers, while Alphabet fell 12.73% and Caterpillar dropped 8.23% among four decliners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343093
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T17:13:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=97dae3f58f1bd9ae3fc8e68e6d7aca63271a907065922ed999070ec4df49fdb3
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: 'McDonald’s Aims to Lure Budget Seekers With New US Value Deal' - Bloomberg
+<<<SUMMARY>>>
+https://www.bloomberg.com/news/articles/2026-10-29/mcdonald-s-aims-to-lure-budget-seekers-with-new-us-value-deal
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143347977
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T16:55:53Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=1407ec51ee324d9601ff60f469f12d2855730bbaed335394fd3c2f047a3beb75
+image_url: https://image.cnbcfm.com/api/v1/image/108482564-17933065621793306560-49312919333-1080pnbcnews.jpg?v=1793306561&w=1920&h=1080
+category: company
+tickers: MCD
+keywords: 
+headline: Starbucks reports mixed quarter, revenue weaker than expected
+<<<SUMMARY>>>
+CNBC's Brandon Gomez joins 'Closing Bell Overtime' with Starbucks quarterly results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292174
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d428483546ab5283342fbdb53a361407d3c118239ec36d07dc962f8a3cb0ac7e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Walmart, Eli Lilly Join 38 Companies Opposing OKX-ICE Tokenized Stocks
+<<<SUMMARY>>>
+Walmart (NYSE: $WMT), Eli Lilly (NYSE: $LLY), Cigna Group (NYSE: $CI), Carnival (NYSE: $CCL) and Arcos Dorados (NYS...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292898
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:22:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=137e1066a88092102e24224894ca1c390208f5b6e635a0f163c41f3ab002a4bc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Chipotle Soars 8% on Third Straight Quarter of Traffic Growth: “Lower Income Cohort Outperformed”
+<<<SUMMARY>>>
+Key TakeawaysChipotle jumped about 8% after a third straight quarter of transaction growth, despite an earnings miss. Lower-income diners led the gain, which matters more than the miss.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292034
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:07:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=59776322c154fcffb24c10ea0a57a48b2d5b40fd4e2c16d07cd97a1b0f703d95
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Walmart Blocks Its Stock From OKX-ICE Tokenized Trading Venue
+<<<SUMMARY>>>
+Walmart, Eli Lilly, Cigna, Carniva,l and Arcos Dorados objected to trading of their shares on the planned OKX-ICE tokenized stock venue, bringing the total to 38.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292304
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9dfe4c956b9bb970eb8dad88c139be8f8d5fa45ff0605526fd5f017dd820c52a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Dine Brands (DIN) Moves 8.3% Higher: Will This Strength Last?
+<<<SUMMARY>>>
+Dine Brands (DIN) witnessed a jump in share price last session on above-average trading volume. The latest trend in earnings estimate revisions for the stock doesn't suggest further strength down the road.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288780
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:47:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b3f759467e81686ded801acf7bba66344cef74698ed493334a5097aa61f339fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: $300,000 in Home Depot, IBM and McDonald’s Could Pay Over $8,500 a Year
+<<<SUMMARY>>>
+Three household names have paid dividends for decades, and a closer look at their current yields reveals how much passive income a fixed lump sum can quietly generate each quarter without selling a single share.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343094
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:37:47Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7bdd1d2ebbc7176e80db713926f0458ce9332b7b1dffb7b223f1b06f62e06797
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/aggregated_options_2.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: 10 Consumer Discretionary Stocks With Whale Alerts In Today’s Session
+<<<SUMMARY>>>
+This whale alert can help traders discover the next big trading opportunities.
+Whales are entities with large sums of money and we track their transactions here at Benzinga on our options activity scanner.
+Traders will
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141072287
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:07:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2ba734184d782541d1c86d0505e30b153806557b163e34e0b4edb7cfde3c1de0
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: Jersey Mike's Subs Shares Open For Trade At $21 Per Share
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292305
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:00:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a2c1a90de6cf90e397d414a03afdf7f0e292b4eb5195c8695fc230e88e6813f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Kura Sushi (KRUS) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Kura Sushi (KRUS) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143284255
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T02:57:22Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=807257c13e74946a68a21be02d49c23d4fc998bc7d72b757ba6622fe1a0b343a
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2209914068/image_2209914068.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: Best Dividend Aristocrats For November 2026
+<<<SUMMARY>>>
+Dividend Aristocrats underperformed SPY in Sept. but rebounded sharply in Oct., narrowing the YTD gap. Check out the Nov. list of best dividend aristocrats here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143264495
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T22:30:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3519a03515f5bd0096991246e7688925bab7c572597c34f2f5bc99c348de6be9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: PC Connection (CNXN) Q3 Earnings and Revenues Top Estimates
+<<<SUMMARY>>>
+PC Connection (CNXN) delivered earnings and revenue surprises of +19.23% and +13.00%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259218
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T15:02:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=675e83b680919a13aa2268a808dc5f6a181b588ee41db7d0b7ebfee13e73e3c6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Wendy’s Surges 14% on Trian-Led $1.4B Take-Private Offer; McDonald’s Edges Higher, Yum Brands Stays Put
+<<<SUMMARY>>>
+Trian Fund Management wants to pull Wendy's off the public market, but the burger chain's board has gone silent and some shareholders are already calling the price too cheap.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259220
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T14:53:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8ab0ef250754eb834e7ec5b3315ce89d07a7cc8c849dad811b7f14e0e0b65681
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Trian Says It Can Revive Wendy’s. Nelson Peltz Offers $1.4 Billion for the Fast-Food Chain.
+<<<SUMMARY>>>
+Wendy’s has struggled in recent years. Trian Fund Management says a buyout could revive its business.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259221
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:20:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d08d833182e65c920c7dc7043947e126f859e09173a9029b9c0ec817ba60736e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Wendy's, struggling with beef prices and growing competition, gets a buyout offer
+<<<SUMMARY>>>
+Wendy’s shares jumped 15% at the opening bell Wednesday after noted investor Nelson Peltz made an offer to buy the chain, which has been struggling with high beef prices and aging stores.Peltz’s Trian Fund Management and several partners are offering Wendy’s $7.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256311
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:11:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e73563731e852ef3c63ba2088b9fce1275cb968ca05ffe8603143ebf9292c7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: What's Going To Happen With McDonald's Stock Soon?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259219
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:00:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dfce873eb350dd3b329c59a590f9ca8239abbd47bb8e5860b39c2335706d16e7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Reports Next Week: Wall Street Expects Earnings Growth
+<<<SUMMARY>>>
+McDonald's (MCD) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256313
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T12:16:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9f522b3c982a6bc9e0977c94d7221ad631777eb8ddb1b5b2bf620417ca5afeea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Billionaire investor Nelson Peltz makes move to buy struggling Wendy's
+<<<SUMMARY>>>
+Longtime Wendy's investor and former chairman Nelson Peltz of Trian Partners has reportedly offered $1.4 billion to buy the struggling fast food giant, according to the Wall Street Journal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256312
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T12:00:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=acaf05ad58ab5b8114b490d7f1b83deed14a6a2dfa26a0be97f2b386c5a7e5ba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Corporation (MCD) is Attracting Investor Attention: Here is What You Should Know
+<<<SUMMARY>>>
+Zacks.com users have recently been watching McDonald's (MCD) quite a bit. Thus, it is worth knowing the facts that could determine the stock's prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143253924
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T09:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f81ccca8ccc27a12c54fe4793842bd03cd3ef3e40fc588c1a487b064cbcd52b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Lululemon vs. McDonald's: Can a Beaten-Down Growth Stock Outshine a Dividend Giant?
+<<<SUMMARY>>>
+Lululemon and McDonald's are two recognizable consumer brands with very different financial profiles, but the cheaper stock isn't necessarily the better long-term investment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143253353
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T07:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0224355f8341e4cf7f0a32f231bc8c43abd1e189fcf9bf2c141b89be6b43eb2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: HKMA/ViuTV & Now TV Awards for Marketing Excellence 2026 announced West Kowloon Cultural District Authority as Top Award Winners
+<<<SUMMARY>>>
+Widely acclaimed as the Oscars of the marketing industry and organized by The Hong Kong Management Association (HKMA), the results of the HKMA/ViuTV & Now TV Awards for Marketing Excellence 2026 were unveiled on 26 October 2026, during the Award Presentation Ceremony at the Hong Kong Ocean Park Marriott Hotel.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143241734
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T23:33:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f53d9f2dd196ca50e529fd9237bbef97fe99f65006655611790751862130a47b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Why McDonald’s Playgrounds Started Disappearing
+<<<SUMMARY>>>
+Why McDonald’s Playgrounds Started Disappearing
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143240577
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T20:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=40f4b26e150d99ee954a225901240c79eed0157b546e5ac48bc0b92848f33e7b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: NBA partners with Kalshi and Polymarket as 'preferred' prediction markets
+<<<SUMMARY>>>
+Scott Melker discusses the NBA making Kalshi and Polymarket its preferred prediction partners, even though regulators haven't clarified what prediction markets can and cannot do. "The Daily Wolf with Scott Melker" airs every day at 12:00 p.m. Tune in for your daily dose of all things crypto. Make sure to also check out Yahoo Finance's new crypto hub to find the latest crypto-related news.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143239448
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T18:23:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1bb02a0f1d8e958fd20127e25079d52eb95cf4c42c3b20f7fd15f9a07c2d71f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 4 Blue-Chip Dividend Stocks That Could Turn $200,000 Into Annual Retirement Income
+<<<SUMMARY>>>
+Four blue-chip companies have quietly built dividend records spanning decades, but the real story is how a $200,000 split across them generates cash every quarter regardless of what the broader market decides to do next.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143238383
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T15:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=02ca64392c5d8cb4c63c4a70953577014e88b41936cb0f023c94acdade8bcb8e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's vs. Chipotle: Which Restaurant Stock Is the Better Buy Now?
+<<<SUMMARY>>>
+MCD and CMG trade below their historical valuations, but traffic challenges and margin pressures cloud their outlooks. Which restaurant stock offers better growth potential?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143237057
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T14:09:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ac3b8bb6ef13b384ebff4f95ee5a5fa7fd0c25dee8111ae741d15cc1a7565356
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Ends World Cup Sponsorship, Is The Stock Fairly Priced?
+<<<SUMMARY>>>
+McDonald's (MCD) is ending its long running FIFA World Cup sponsorship after more than three decades. The company is redirecting marketing spend toward smaller partnerships and year round fan engagement, which could matter for how you think about the stock. Despite a 6.1% 30 day share price return and a 3.4% gain over the past week, McDonald's is still down 17.3% on a year to date share price basis and has a 1 year total shareholder return decline of 17%. As a result, this World Cup exit...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143234335
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T13:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed5ec537bc8a48404bc4fa04067315a879df8af28061b8445e2ca64dfaa48e86
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: What McDonald’s dropping its FIFA sponsorship means for sports marketing
+<<<SUMMARY>>>
+The fast-food giant's marketing model is evolving, which could have downstream implications for QSR competitors’ marketing efforts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143233556
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T09:03:06Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=bfce0bb26c5ef358408439043ced28e5ece8a629bca6b635deafd2869b77420d
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's: 30% Decline Probably Isn't Enough
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143222487
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T08:32:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da8e90d7efba0236e6d1464bab1bf22db7ac23396a7b58e295d5a9d13b073fbe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: What Happened to McDonald’s PlayPlaces?
+<<<SUMMARY>>>
+And now McDonald's may be bringing many of them back...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143209156
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T00:30:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0d4a28cff620ac84fd4471743861976c3a3d3941271d285b3c316c3212f5de60
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Traditional fast food stocks Q2 recap: benchmarking McDonald's (NYSE:MCD)
+<<<SUMMARY>>>
+Earnings results often indicate what direction a company will take in the months ahead. With Q2 behind us, let’s have a look at McDonald's (NYSE:MCD) and its peers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143203898
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T21:23:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d313f1c6350af7d6d93a7d35b44c45841326d568897964e33b0eb0e80c6b3caa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Why Arcos Dorados Stock Got Socked Today
+<<<SUMMARY>>>
+Investors were caught off-guard by the result of Brazil's presidential election.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143201748
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T16:36:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0c382f3c684db69e837906b35588512befdd12eb93814ebf3f1465451b5f0644
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s is ending its FIFA World Cup sponsorship
+<<<SUMMARY>>>
+The fast-food giant has opted to step away from its sponsorship of the event for the first time in more than 30 years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143200385
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T14:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a9c063c9d25374a62e1901a5aa64c9179b5237e5a32e5d2fdbdac19c1fd284a2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Burger King Japan sells a burger that’s missing almost everything
+<<<SUMMARY>>>
+It’s built for the way millions of Americans now eat, and the chain’s U.S. menus haven’t gone this far.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143200386
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T14:15:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b2ce19b50ef05ba0c675c9b7b5dc940fbc13c15c57e4f7a6895e8f56153bf111
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Starbucks Is Beating McDonald’s in 2026. But Which Dividend Is Safer?
+<<<SUMMARY>>>
+McDonald's and Starbucks have gone in opposite directions this year, and each stock tells a very different story about dividend safety, valuation, and who actually belongs in a retirement portfolio right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143200813
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T12:08:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=095ed5faca70dcd5f76a975dcf1cd326ea34c71be5efc7f719b2114479dab939
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2236593542/image_2236593542.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's: Greatest Restaurant In America, Underpriced Stock
+<<<SUMMARY>>>
+Read why McDonald's looks undervalued at a 15-year low P/E, with 26% upside, strong margins, and 5% shareholder yieldâread the full analysis.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143190878
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T06:31:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2ec9a43dbdfb6c47e9220263d796ac8aa7050406c53f1d5a9d322173435b27e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Why McDonald's Burgers Taste the Same Everywhere
+<<<SUMMARY>>>
+They've got a rule book.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143199841
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T06:19:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7e3e3e8ba45541989ad3bde6b0e528ef4efe219e09fd754d4e25807d064e7bd2
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: BTIG Reiterates Buy on McDonald's, Maintains $295 Price Target
+<<<SUMMARY>>>
+BTIG  analyst Peter Saleh   reiterates McDonald&#39;s (NYSE:MCD) with a Buy and maintains $295 price target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143185861
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T01:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cccd67b8b97454cfc9e6c8f292ff3a3823791eccac69c8dca36bac69798e2f10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Coffee Price Check: Starbucks, Dunkin', 7 Brew, Wawa, and McDonald's
+<<<SUMMARY>>>
+TheStreet visited a number of chains to compare the price of an iced vanilla latte.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143168788
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T21:46:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7b96662e647f3256699a951d4496c1e8935ab94f364ba02fec5d3e940988668b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Bets $8.5 Billion on NEXT as Its CEO Warns Traffic Will Stay Flat
+<<<SUMMARY>>>
+Key TakeawaysMcDonald’s grew Q2 revenue 4% to $7. 10 billion, but global comparable sales rose only 1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143168007
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T20:13:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cd0ce8c32d5fb32cc41413382b71a8658a68ae29203b000b754575c90c4c9218
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Japan (TSE:2702) Stock May Look Fully Valued On Earnings
+<<<SUMMARY>>>
+McDonald's Holdings Company (Japan) has logged strong share price gains in recent years, which puts fresh attention on whether its earnings are doing enough work to justify where the stock trades today. With that kind of backdrop, you need to ask whether you are paying a fair price for each yen of profit. Over the past 5 years the stock has returned 70.1%, which makes the link between the current valuation and the underlying earnings power especially important. The group runs a...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143164915
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T14:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ab9a363964da9c7a36f0f3812f9fae573944c6e0d1ab3000b60450089f3acb98
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's changes its discount strategy
+<<<SUMMARY>>>
+Customers might not like the fast-food giant’s efforts to focus on value at the expense of its cheapest items.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143162749
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T10:11:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fafffde3aeea772fad7e230d3b485ae64940b19edb6335335eec53f0c3a1eceb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: How Investors Are Reacting To Arcos Dorados Stock After Earnings Estimate Upgrades
+<<<SUMMARY>>>
+Arcos Dorados Holdings is being highlighted for a sharp expected 207.7% earnings increase in 2026, alongside upward revisions to those earnings forecasts in the past two months. The company is also drawing attention for its EV to EBITDA valuation, which some analysts view as signaling a potentially undervalued Latin American McDonald’s operator. This article will now examine how this upgraded earnings outlook and value profile could reshape the broader investment narrative for Arcos Dorados...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136329
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T16:08:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=220d04e22265f4896fdadcab8022f99c97762c23e89b021cd8894ebecc0b9ebe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Why Is McDonald's (MCD) Challenging Tokenized Trading Of Its Shares?
+<<<SUMMARY>>>
+McDonald's (NYSE:MCD) and several large U.S. issuers have formally objected to tokenized trading of their shares on the OKX-ICE venue. The coalition is using recent SEC exemptive relief to argue that tokenized versions of their stocks should not trade without issuer consent. Corporate filings highlight concerns about investor protections and regulatory oversight when traditional equities are mirrored as tokens on digital platforms. The pushback against OKX-ICE tokenized stock trading fits...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143163312
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T11:00:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9fe2731c81e6a01f6a64bb839414f5ad8f7e8d3787cf132e4ac3eafd5b777673
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/23/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: 8 Of 11 Sectors Fall In Friday Trading As Energy Leads
+<<<SUMMARY>>>
+Three sectors are higher and eight are lower in Friday’s regular session, with Energy, Technology and Real Estate holding the top three positions across different market groups. The leaders are separated rather than clustered, with Energy well ahead of the other two.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143132317
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T10:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=39ec382dbcb13c38a0037b84bb028a8f2642b37c7bb7c6c8054e45bad55a6755
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Has Lost a Fifth of Its Value in 2026. Is It Time to Buy?
+<<<SUMMARY>>>
+McDonald's stock is now down nearly 28% from its high and yields 3%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143122468
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T08:03:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ebcd901e67e8ffd35addb26cdcac8910ebf5ea3ad4299e0dc784542b66bc086
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: What Could Lift Starbucks Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541962
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e91202676c190e21ccfedccc138c021f9965d450343eb3ca95316aad74314e95
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s US CMO steps down as sales decline
+<<<SUMMARY>>>
+As the fast-food giant searches for a new marketing leader, it will split the role between two longtime executives on an interim basis.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540802
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T19:33:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=54be20bd34af9013b813af642e127deda510a6547e06aa4738173e838538d2d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Stock Rally Runs Into Wall Street Warning
+<<<SUMMARY>>>
+Oppenheimer sees stretched technicals after McDonald's shares surged more than 20%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541963
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:57:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9950ef493f9690f70bf1292ca40ffd4261c7515b0617f8e9d588e1a24b9b6362
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's plans new value menu offerings next year to boost sluggish sales
+<<<SUMMARY>>>
+McDonald's is testing new value menu constructs in 1,900 restaurants, with CEO Christopher Kempczinski eyeing a national launch in early 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540803
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7a4b42c761a6f395863d575532af7e4c88924a2454486eed9fcc66db15829ae7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: NX3 Commercial Group - 9th McDonald's Closing of 2026
+<<<SUMMARY>>>
+NX3 Commercial Group Closes Ninth McDonald's Sale of 2026 with $3,000,000 Ground Lease Trade in Broken Arrow, OklahomaNational net lease investment sales firm represents the buyer in a 4.33% cap rate acquisition in the Tulsa MSA, capping a year of sustained volume in the QSR ground lease sector.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540804
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:02:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d6ffd55e1955a28766f384aa74d18573269e36b190844b09457c8c366ca219b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Q3 Report Draws Price Target Hikes Across Wall Street – Freedom Broker Has A Different Take
+<<<SUMMARY>>>
+Freedom Broker downgraded McDonald’s to ‘Hold’ from ‘Buy’ and cut its price target to $298 from $305, citing valuation after a 6.5% post-earnings rally, according to The Fly.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541964
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:54:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=13e423e72f8cf91b493df6589da5b1e4df8150b7e835c81d1f09edf7e76d4f0f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s is changing how it collects customer feedback
+<<<SUMMARY>>>
+Customers will be able to leave reviews inside the McDonald’s app, marking “significant enhancements” to feedback collection efforts, CEO Chris Kempczinski said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540808
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:01:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3757a8766756fdf116715541edfdc6f541aae99b3f6e18243f600a42a357949d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Krispy Kreme raises guidance as turnaround plan gains steam
+<<<SUMMARY>>>
+Free cash flow improved by $82 million as the doughnut chain refranchises, cuts capital spending, and prunes underperforming delivery doors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540805
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ffb0aecc82c47d743bab847aec42b71a5f6e546ec87f2db7058e9a153d74ffd7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Is McDonald's Stock Worth Buying Amid Growth and Valuation Risks?
+<<<SUMMARY>>>
+MCD's franchise model, global growth and strong cash generation support its long-term outlook, but weak U.S. traffic and valuation risks favor patience.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539666
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:58:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83bfb70dfbf27b3cd05ae272034dff5995d341a16d67bff0adc4e55e5872a997
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Jumps 21.4% in a Month, but Can MCD Keep Climbing Higher?
+<<<SUMMARY>>>
+MCD's 21.4% rally gains support from stronger earnings and international sales, but weak U.S. traffic and inflation pose challenges to sustaining momentum.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539667
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=221a136df3d9829d843862445ce402600292d55b67cd29fe3c7f4c26f7224bce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Q3 Earnings Beat, but U.S. Traffic Still Pressures Growth
+<<<SUMMARY>>>
+MCD beats Q3 earnings estimates as franchised margins and international growth support results, but weak U.S. traffic and modest revenue growth pose challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539461
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:36:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bfefa8b6cd3378cfbdf311947c3146e1503560473d299275af5aa88725df4545
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Portillo’s Shares Up 20%, Raises FY Outlook
+<<<SUMMARY>>>
+By Karen Roman Portillo’s Inc. (Nasdaq: PTLO) said third quarter total revenue was up 7% to $194.1 million compared to the year prior, due to seven new restaurant openings and higher same-restaurant sales, with the latter increasing 1.4%. Net income was $4.8 million rising $4 million, and adjusted EBITDA was up 23.7% to $26.5 million, […] The post Portillo’s Shares Up 20%, Raises FY Outlook appeared first on ExecEdge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539462
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:34:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0af17b5c8180b7e5050a1676e3704ea7a80566ab311861019c9322f156226f90
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: A 30-unit Denny’s operator files for bankruptcy
+<<<SUMMARY>>>
+The Chapter 11 filing by EYM Diner is the latest in a series of bankruptcies for former Pizza Hut and Panera operator EYM Group.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539397
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb553efd5bea542576635a591052636de3bd9b1f6ae2ac2cdae4a676a7fcfe3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: What 3.4% GDP Growth and a 4.2% Jobless Rate Say About a Hard Day on Wall Street
+<<<SUMMARY>>>
+American News Group News Commentary - U.S. stocks were sharply lower on Thursday morning. As of 11:02 a.m. ET, the S&P 500 was down 3.39% at 7,427.97, the Nasdaq Composite was down 5.08% at 24,430.26 and the Dow Jones Industrial Average was down 2.37% at 52,093.82, each measured against Wednesday's close. It is one session. The most recent official readings on output and jobs, along with the latest quarterly reports from large companies in payments, restaurants, medical technology, aerospace and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539463
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:17:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b4e98c07872185d2ee7dec55770b498957b688013b63a8f48e954d1830383a25
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Krispy Kreme Shares Up 30% After EPS Surprise
+<<<SUMMARY>>>
+By Karen Roman Krispy Kreme, Inc. (Nasdaq: DNUT) said third quarter net revenue was $328.8 million, down 12.4% compared to the year prior. Adjusted earnings per share were $0.06 compared to $0.01, with price per share trading 30% up in the open market. Systemwide sales increased 1.0% in constant currency from the prior year to […] The post Krispy Kreme Shares Up 30% After EPS Surprise appeared first on ExecEdge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539464
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:16:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e8ad4d2692202cc2c71fa770a7c6c41cfa0a16876b7dd70bd85b48f4365be74c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Thicker bacon and ditching breakfast. Wendy’s hopes a menu shakeup can revive sales
+<<<SUMMARY>>>
+Wendy’s reported its seventh consecutive quarter of declining sales, prompting the company to reveal a turnaround plan while rejecting a massive takeover offer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539459
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=691482b7d60ac55dde0c02db662de8ca58c3767c60ad43c10885978e23b5ad3b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Q3 Earnings Call Highlights U.S. Recovery & Value Strategy
+<<<SUMMARY>>>
+MCD targets a U.S. sales recovery through affordable menu bundles, digital promotions and beverage expansion as consumer pressures and global challenges persist.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539460
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5f6f69d4c53584262e1b02ede7f4689d890b0b3390416b3675d7f5816acae1f0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Wendy’s takes a shot at McDonald’s with rewards-based video game
+<<<SUMMARY>>>
+“WendyQuest” challenges players to defeat various enemies like the Golden Archers, and arrives as the chain chases a turnaround.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541242
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:12:08Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7cecaf6d998be2918108737a2b0222bad8bb2ce0b1dfa897e3770803638886ca
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2156714333/image_2156714333.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: Stocks To Consider Ahead Of The Upcoming October 2026 CPI Report
+<<<SUMMARY>>>
+Federal Reserve held rates at 3.75%-4.00% amid elevated inflation and resilient domestic spending, with a 25 bps hike next month. Read full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537904
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da7a37ce3dfd9e45e11071cb4af6042263fa80d55b7f8f9641dff696b13ec26f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s drive-thrus will use AI ordering nationwide by 2027
+<<<SUMMARY>>>
+The fast food giant says the automated ordering system could save 50 weekly labor hours, but some franchisees are unsure if the technology is something customers want or if it can improve hospitality.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141362897
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:58:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23c015fc1e28f30a934f8ff584c750a9efebf526a5298ffcdfa26c0041028b84
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: First Solar upgraded, Celsius downgraded: Wall Street's top analyst calls
+<<<SUMMARY>>>
+First Solar upgraded, Celsius downgraded: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537905
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3f0c8f56815ff59b1a237f9e1d7da13a7ce5b22aec8515fcb8d4babc26ce8415
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Company News for Nov 5, 2026
+<<<SUMMARY>>>
+Companies in The News Are: MCD, GWW, IREN, NVO
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533903
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:48:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ac95777885ab2fa8825740027d17d826fe9133fe07ba8878bf62b148e296a196
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Is Rallying, but Can You Sleep at Night Owning It?
+<<<SUMMARY>>>
+McDonald's stock has jumped 20% in a month, yet one podcast host says weight-loss drugs make it impossible to own. Another host points to a hidden real estate empire. Which argument holds up when traffic and franchisee discipline get tested?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533160
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T09:22:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a547284721ad46f221f3d8880f1c65e8dac214bc8b1b991d6ab658d0bd3e4a9c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Mcdonalds-Ptt-Nakornchaisri-Bang-Kaeo-Su.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's To Rally Around 9%? Here Are 10 Top Analyst Forecasts For Thursday
+<<<SUMMARY>>>
+Analysts raised targets for PTRN, VRDN, JBLU and GTM; cut targets for BROS, CSCO and CAVA. Cisco was downgraded; JetBlue upgraded.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532727
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T08:30:51Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=b25bb6aac5817517735bb773499d06d7adfd7034b38cd8cfcc498154a160fc1b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1371448871/image_1371448871.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Q3: 11% EPS Growth And A 50% Operating Margin Say The Sell-Off Was A Mistake
+<<<SUMMARY>>>
+McDonaldâs delivered Q3 2026 EPS growth of 11% YoY and a 50% operating margin, despite a minor revenue miss. Read why MCD stock is a buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533352
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T05:37:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9568f2d0f228be79285c693917257b685b3fc0bb9f24f89050990fb972644b38
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: BTIG Maintains Buy on McDonald's, Raises Price Target to $305
+<<<SUMMARY>>>
+BTIG  analyst Peter Saleh   maintains McDonald&#39;s (NYSE:MCD) with a Buy and raises the price target from $295 to $305.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143510878
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T05:06:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2d0b1644932e1628bd86fab43cf7b9753a3f92039c33d5093b42b7d7d3dcb36
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+The margin story rests on a 98% franchised target, and whether baseline traffic can carry that model through 2028 is still open.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143510806
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T04:05:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27d68cf357cf2f04b9b8c62fa06a79cb980c239f2f8cf578e2a700fcba33a11c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Why McDonald's Stock Popped Today
+<<<SUMMARY>>>
+New value menus are bringing bargain hunters back to the burger chain's restaurants.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533353
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T02:45:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=dbcde8333ab7b5c1039395546e8046cf31d10fcd830259b808b3ad6915db2c8d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Market-sentiment---Fear-and-Greed.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Dow Jumps Over 1,500 Points After Midterms: Investor Sentiment Improves, Greed Index Moves To ‘Fear’ Zone
+<<<SUMMARY>>>
+CNN Fear &amp; Greed rose to 27 in the Fear zone as U.S. stocks surged after Democrats won Congress; oil fell and most sectors gained.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143505169
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T00:17:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62200562b6a13e1fca5af39e527e1f921c63d0077bf5e90a859a49b8c7c99279
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s (MCD) Stock Jumps As Q3 Earnings Beat Meets Growth Questions
+<<<SUMMARY>>>
+McDonald's stock jumped higher today, rising 6.6% to about US$280 after Q3 2026 earnings were released. Traders focused on straightforward headline numbers. Adjusted earnings per share came in at US$3.57 and restaurant-level profit reached nearly US$4.2b in the quarter. This short-term move sits against a slower grind in the longer-term story. Revenue over the trailing twelve months is US$27.8b, and current earnings forecasts indicate only mid single digit annual growth. The key question now...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143495756
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T22:34:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=019386f1e7dacf3412287e45ab728d80ea7c7664f07ffc906dfab1b47e93fe7c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's pushes cheaper meals as customers cut back
+<<<SUMMARY>>>
+Customers looking to spend less may find more value-focused offers, but how consistently those deals are available may depend on franchisees.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143495650
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T22:10:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76dfeca1e3549aeadb441c020ef97d95e53bf2180818ba004313bc68b545f6ac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Stock Market Today, Nov. 4: Dow Surges 3% in Biggest Post-Midterm Rally in 44 Years
+<<<SUMMARY>>>
+Wall Street surged following the midterm elections, with the Dow posting its strongest post-election rally in decades as oil prices retreated and investors reassessed the market outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143495757
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T22:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3b798c165ffe36fea4a20fac64f416343ce6105af06b24ab764827f25852e6bd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's plans to cook up cheaper menu items as sales slow
+<<<SUMMARY>>>
+McDonald's CEO Christopher Kempczinski said the company is testing new value options at select U.S. locations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494699
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:18:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a41691588c7d9fba956018fce069f1296047258b8096569a0c53414b36ada2c5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Chipotle Soars 6% as Fast-Food Bellwether’s Earnings Beat Lifts Restaurant Stocks
+<<<SUMMARY>>>
+Key TakeawaysChipotle Mexican Grill shares rose 6% today after McDonald’s beat on third-quarter earnings and lifted restaurant stocks, including Yum! Brands and Starbucks. McDonald’s U.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494702
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T20:53:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62aca50d714adbb97e2f9fd5ffa4c7d135430c766062c10882aa5634536f47a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Sector Update: Consumer Stocks Gain Late Afternoon
+<<<SUMMARY>>>
+Consumer stocks were higher late Wednesday afternoon, with the State Street Consumer Staples Select
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143497361
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T20:11:04Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=d4bdd796857727fa2abd93c6efb66bd59e192868210e70730858794921e62018
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MCD
+keywords: 
+headline: Dow Jones Gainers: Top Movers in Today's US Session
+<<<SUMMARY>>>
+Dow Jones gainers in today's US session, led by MMM, AMZN, MSFT, MCD, SHW, HD, NKE, WMT, DIS and GOOGL, ranked by percentage change.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493915
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T20:01:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=19465ed6ce209866e3e581f9c6fd5f6578fbf9654f21afe57a1979e889d72190
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: US large-cap dividend hike watch: 10 stocks with the longest growth streaks
+<<<SUMMARY>>>
+Investing.com -- This screen looks for US large caps (market cap above $10B) with a yield above 2%, a payout ratio below 60%, and dividend growth above 5%. They also need more than 5 straight years of increases. 47 stocks matched, and the table shows the 10 with the longest streaks. A low payout ratio means the company keeps room to raise the dividend again.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493697
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:49:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c0e4dbfb5316ccfa09e209483c1225f8a36d80ad3bcac1502138db00187948ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Puts Focus on Entry-Level Value to Lift Sluggish Sales
+<<<SUMMARY>>>
+McDonald’s is preparing another major push to win back value-conscious customers in the U.S., with new affordable menu options, expanded digital deals, and restaurant improvements expected to drive stronger performance in 2027. The burger giant reported a 0.2 percent decline in domestic same-store sales during the third quarter, although performance improved as the period progressed. […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143538998
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:31:45Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=9a4a4ef5ae54f6219850240e20d4f47c462d6f03cfd331b0559632f80a9cdd17
+image_url: https://image.cnbcfm.com/api/v1/image/108522052-4ED3-MM-C-BLOCK-110426.jpg?v=1793835944&w=1920&h=1080
+category: company
+tickers: MCD
+keywords: 
+headline: Jim Cramer talks the turnaround brewing in this fast food giant's stock
+<<<SUMMARY>>>
+'Mad Money' host Jim Cramer talks McDonald's stock bounce and what he sees ahead for the fast food giant.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143538999
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:30:44Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=ed723c942f55c5def46bed8f2690f27b3fe8b134a5c29a72ea2e88ce956f4375
+image_url: https://image.cnbcfm.com/api/v1/image/108522241-4ED3-MM-C-BLOCK-SHORT-110426.jpg?v=1793837633&w=1920&h=1080
+category: company
+tickers: MCD
+keywords: 
+headline: I think McDonald's rallied on management's clearer outlook for what comes next, says Jim Cramer
+<<<SUMMARY>>>
+'Mad Money' host Jim Cramer talks McDonald's stock bounce and what he sees ahead for the fast food giant.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493698
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:16:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8b23463be4d7220f8a1ee117a198ce46c63aa73d1217cba6c12be5210a3a4039
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Global comps rose 1.5% as U.S. value tests gained traction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493699
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:05:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c392eb299f81c02ef210f9ac8162c22bfff0d5fb1bc422fd04fc7997317aa49b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Soars 6% on Earnings Beat as CEO Calls Entry-Level Value the “Final Piece That’s Missing”
+<<<SUMMARY>>>
+Key TakeawaysMcDonald’s shares rose 6% after third-quarter adjusted EPS of $3. 57 beat the $3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493700
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:57:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eaa709613e9a7be90da00dda34ec962f979491e0bdc954910c9d7ba78b76852b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Corporation Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of McDonald's Corporation's Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493702
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:54:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a9041ed1343d94b27e8331cf8e57681cf5dd3e3405a14609914306ef153491b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Sector Update: Consumer Stocks Higher Wednesday Afternoon
+<<<SUMMARY>>>
+Consumer stocks gained Wednesday afternoon, with the State Street Consumer Staples Select Sector SPD
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539000
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:50:46Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=7d6c9c9e27fd1f78623dba792e12d3e9a78adb3d266493c694a497ae4a241b40
+image_url: https://image.cnbcfm.com/api/v1/image/108367016-1790186078580-gettyimages-2291870221-310481final.jpeg?v=1790186121&w=1920&h=1080
+category: company
+tickers: MCD
+keywords: 
+headline: Jim Cramer says this fast food giant has more room to run
+<<<SUMMARY>>>
+CNBC’s Jim Cramer said McDonald’s turnaround is gaining traction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143502308
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:12:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a02c5ca41424e438bf270423a9796a511e6b32ba2c8634488a0b7d690bf4d0b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Starbucks Served Up a 54% Earnings Jump. The SBUX Comeback Story Is Brewing.
+<<<SUMMARY>>>
+Starbucks still has challenges, but its latest earnings report suggests the worst of its sales slowdown could be behind it.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493701
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:12:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=85b0c234e29f85a7361e1152942ce831d0f2e720b31b38f574f90a85b18e4bed
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s earnings analysis: questions answered and next catalysts
+<<<SUMMARY>>>
+Investing.com -- McDonald’s Corporation (MCD) reported Q3 2026 on Nov 4. Adjusted EPS was $3.57 against a $3.38 estimate (+5.62%). Revenue of $7.16B missed the $7.29B forecast. The stock was at $277.07 (+5.33%) as of Nov 4, 12:26 PM EST, and is up about 19.5% over one month. It is still down 9.21% year to date.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143538968
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:06:58Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=24737f06e149b2b5c809157cbd1a3bc71999d8e83cc7a1c3adf50fc5c613f56e
+image_url: https://image.cnbcfm.com/api/v1/image/108521741-17938333611793833358-49439932792-1080pnbcnews.jpg?v=1793833360&w=1920&h=1080
+category: company
+tickers: MCD
+keywords: 
+headline: Fast Money: MCD, LLY, MLPX, CAT
+<<<SUMMARY>>>
+The final trades of the day with CNBC's Melissa Lee and the 'Fast Money' traders.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143497354
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:41:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=27be114a8587306c770c6242b345a7c99677766e6911bd31212e409ae4801817
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MCD
+keywords: 
+headline: Dow Jones Top Gainers in Today's US Session
+<<<SUMMARY>>>
+Dow Jones top gainers in today's US session: 3M rose 9.02%, followed by Amazon, Sherwin-Williams, Microsoft, Nike, Apple, McDonald's, Home Depot, Disney and Alphabet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493703
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=952f0ac848ab61063916d5234490063ee42dc3c6602babfe81d11a0a695d733d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Bloomin' Brands to Report Q3 Earnings: Buy, Sell or Hold the Stock?
+<<<SUMMARY>>>
+BLMN set to report Q3 earnings amid traffic pressure and rising food costs. Will Outback's turnaround and cost savings support the results?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492566
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:59:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe13df7c03828fb534cf60b864af3c30989fe43dda53b4eff1bcbf3211080eec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Beats Earnings, but US Sales Tell Another Story
+<<<SUMMARY>>>
+The restaurant chain exceeded profit expectations, but revenue missed forecasts as domestic comparable sales weakened.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533354
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:50:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=36a25c95e9a9e9486a2fb2f4f6b293287fc9e41cc7ce26530d9921ecd1aff7bd
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: TD Cowen Maintains Hold on McDonald's, Raises Price Target to $285
+<<<SUMMARY>>>
+TD Cowen  analyst Andrew M. Charles   maintains McDonald&#39;s (NYSE:MCD) with a Hold and raises the price target from $270 to $285.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494701
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:29:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe04fa1d6d5723f5a239a2a3f48111bf24e82f529ecc70d795f612744974e712
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Even McDonald’s Can’t Escape America’s Spending Squeeze
+<<<SUMMARY>>>
+McDonald’s made lots of changes. But wallets are still tight.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492567
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c3e743d9487ac3bc796c07ed0fd4a99715397a2dfca77ec692cef354e152dee2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Q3 Earnings Beat on Franchised Margins, Revenues Miss
+<<<SUMMARY>>>
+MCD's Q3 earnings top estimates as franchised margins climb, but revenues miss and U.S. comparable sales slip. International markets lead growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492458
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:12:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=071b5c9c5991f58b2103a0e75babef4cf77048c48df8e942b353eabf1d109d38
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Tesla, SpaceX Take a Hit as Dems' Sweep Midterms; McDonald's Moves on Revenue | Stock Movers
+<<<SUMMARY>>>
+On this episode of Stock Movers: - Tesla (TSLA) and SpaceX (SPCX) are lower this morning as Elon Musk's companies take a hit after a Democratic sweep in the Midterm elections and the prospect for tighter regulations. - McDonald's (MCD) shares are moving after the fast food chain reported higher profit and revenue in the latest quarter, with solid performance across much of its international business offsetting sluggish sales in the U.S. - Uber (UBER) shares are following news the company posted weaker-than-expected ride-hail bookings due to driver supply constraints overseas and ongoing tensions in the Middle East.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494359
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:10:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=dbc9a22617d46067fbd47419e75fcb58147ec1197e89fb041b0f9f12fd756401
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2242373726/image_2242373726.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: Investing Lately? It's Tricky! How To Move Past Fear And Uncertainty
+<<<SUMMARY>>>
+Main Street Alpha's Leo Nelissen discusses how the midterm elections might reshape market expectations and why AI data center investment will remain a major growth driver.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492569
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:04:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9355bde5a72db5c35645f704f9d56bd9c9bcc1bfe31589e70aa3ef4a47601bb2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Rises 5% as Earnings Beat Outweighs U.S. Sales Dip; Chipotle Climbs 4%, Starbucks Gains 3%
+<<<SUMMARY>>>
+McDonald's posted its first U.S. same-store sales decline in over a year, yet the stock is surging and dragging the entire restaurant sector along with it. The reason investors are cheering a miss tells you something important about where the fast food industry stands right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533355
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:00:46Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f71f5039ca3e2b4b84490e46ce76cfc4e3cb3eac473d6391bc5cf24e66e856d7
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: 'McDonald's wages war on KFC in Japan as consumers crave chicken' - Nikkei Asia
+<<<SUMMARY>>>
+https://asia.nikkei.com/business/food-beverage/mcdonald-s-wages-war-on-kfc-in-japan-as-consumers-crave-chicken
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533356
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T15:50:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=84a86927d8230b926bd6f404be3570979e930ed03bc86d8771f70bd67e0bedc5
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/McDonalds-Sign-With-Large-Yellow-M-Logo-.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's CEO Sounds Alarm on 2027 Inflation, Says Pricing Requires Extreme Caution
+<<<SUMMARY>>>
+McDonald&#39;s stock jumps 6% as Q3 earnings beat estimates at $3.57 per share, driven by strong international sales and U.S. traffic recovery.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490819
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T15:47:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=849ffa00b143f9d5610d453f889e4be19a66a4d4a48eabc29d08539872f9e811
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Roth IRA vs. Taxable Account: How Much of $13,467 in Dividends Would You Keep?
+<<<SUMMARY>>>
+A $500,000 portfolio of six blue-chip dividend growers kicks off thousands in annual income, but where you hold those shares determines how much of that income you actually get to keep.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490935
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T15:47:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ce097de592a3c9137bb6f0c55c68715b2a29aefb5023b9a5db29bc5c4f750ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Third-Quarter Earnings, Comparable Sales Beat Estimates
+<<<SUMMARY>>>
+McDonald's (MCD) reported third-quarter earnings and comparable sales growth above market expectatio
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490446
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T15:32:40Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=e0a06743da9897e2a61dbd2822d6b30d34077ff9ed722f4f567b5699368f3b72
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Corporation Reports Third Quarter 2026 Results with 4% Increase in Systemwide Sales
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490934
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:52:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2e902996c994292f0a926cb91bff421c62f4a916efe03a964008c2fb607f0504
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's reports mixed Q3 results as it shifts to value offerings
+<<<SUMMARY>>>
+Defiance ETFs CIO Sylvia Jablonski joins The 8:30's Jake Conley and Pras Subramanian to discuss McDonald's (MCD) reporting a mixed quarter, highlighted by a revenue miss and store traffic down slightly.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490936
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:45:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bb5687522dac2b2afd5cb8f994268cf238c241537395e95a122cb8f0c11c81f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: MCD Stock Rises After Q3 Earnings Beat Street Expectations – CEO Cites Improving US Trends
+<<<SUMMARY>>>
+CEO Chris Kempczinski highlighted the U.S. improvement as the quarter progressed following the company’s value-focused initiatives.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492439
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:41:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7eddfe7e3d99fdbec6cc7c388fa76ac7084caa8d505215ef6e720279cc657b28
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: AI data center stocks and Musk's companies take hits as Democrats take control
+<<<SUMMARY>>>
+The 8:30 hosts, Pras Subramanian, Jake Conley, and Defiance ETFs CIO Sylvia Jablonski, break down the latest market headlines, including the Democrats retaking Congress and its possible negative effects on AI stocks and Elon Musk's companies. Plus, the team dives into the stocks to watch: CVS (CVS), McDonald's (MCD), Meta (META), and Uber (UBER).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490940
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5b7794208a14d050308d77927ac102e97a7bdc467dca24a31018d94f48f30a4b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Divided Government Sends the Dow Up 1000 Points
+<<<SUMMARY>>>
+Between big Democratic wins and the Trump White House, the U.S. now has the epitome of divided government.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492570
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:18:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eba4c3549fed5f1e61dee1c236be5835490bf8e20bf6efb5fc036c685dc61a0f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s pilots mix-and-match bundles
+<<<SUMMARY>>>
+Following mishaps with its $3 and Under menu, the fast food chain laid out a plan to restore frequency and increase sales through entry-level value options.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490941
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:59:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3cd2948d64b9d99ffe4138c2c936c4917316dbd89e5bfa41f91729829e9b46d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Update: US Equity Futures Rise Pre-Bell as Traders Assess Implications of Democrat Win in US Midterm Elections
+<<<SUMMARY>>>
+(Updates with economic data, recent oil price movement, world markets' overview and corporate stock
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490937
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0d376545095f314972c87c3cb1b854353a3d59197763a62ce6742e366d6495b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's earnings beat estimates, but revenue falls short
+<<<SUMMARY>>>
+McDonald's Corp (NYSE:MCD, XETRA:MDO) reported third-quarter adjusted earnings above analysts' expectations, although revenue fell short of forecasts. Revenue rose 1.1% to $7.16 billion, below the S&P analyst consensus of $7.30 billion, while adjusted earnings rose 11% to $3.57 a share,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493207
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:45:19Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=cb98228031e8a6fea53fbb9cb40fa5c599d2bf35275db097a026963f72a51fc9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1438003347/image_1438003347.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: November Dogs Of The Dow: No Buys, Yet 5 Are Worth Watching
+<<<SUMMARY>>>
+Dow Dogs November update: see which stocks look safer on free cash flow, projected gains through 2027, and where yield investors may find entry points. Read the full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493133
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:34:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a8eaeed013ad5c4f26fad514c084fdbf68043b893e3ac11dada15cce0ff6061e
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Corporation (MCD) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+McDonald's Corporation (MCD) Q3 2026 Earnings Call November 4, 2026 8:30 AM ESTCompany ParticipantsDexter Congbalay - Vice President of Investor...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490938
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:30:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b8ac4f2ed77f090d1fa654253afb553136f0a58ad8c8d9260f0cb01e6f7c9b6f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+<<<SUMMARY>>>
+The headline numbers for McDonald's (MCD) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487575
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:29:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ac6c30c22913ac3fcc3187ca04f9a3541a5c8b55e808367c572d44016ea7e5e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: US Equity Futures Rise Pre-Bell as Traders Assess Implications of Democrat Win in US Midterm Elections
+<<<SUMMARY>>>
+US equity futures were edging higher pre-bell Wednesday as traders evaluated the implications of the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490942
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:25:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0d96a8cca7c5db2e269176c70913fa05d5d650022bb2472ef1ee935b062eae12
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 5 Things Investors Need to Know About Wednesday’s Markets
+<<<SUMMARY>>>
+News of the Day for Nov. 4, 2026
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487576
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23ad721dbdf2d295d7d6692807ad9ae1da6afc0301a6af9c78f5b9952043e9f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Stock Rises After Revenue Miss. Plans Are for Its NEXT Strategy to Power a Rebound.
+<<<SUMMARY>>>
+McDonald’s reports disappointing third-quarter revenue, but investors are cashing in on hopes for its new growth strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487567
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:38:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41b1dd7e83357195f0a979f8a5c7c1db1d63304f7ece2522098ad3285b561456
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s posts better-than-expected third-quarter comparable sales
+<<<SUMMARY>>>
+Investing.com - McDonald’s has posted better-than-expected growth in third-quarter comparable sales, as the burger giant pursues a value push aimed to entice lower-income customers reining in restaurant spending.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487269
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3cd0d4d5375826c2c087b51bedca9344ef9a21cec6c4ebc9d4a1351615c6417a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: These 4 Restaurant Giants Have Different Ways to Win Diners
+<<<SUMMARY>>>
+Cheap eats, menu buzz, table service, or fresh paint? Here's which restaurant strategy is winning diners right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487569
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:22:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a07c32332b982841ebcd45a19145d55ef9929a3e4cb62d961d75aea425f0a73
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's US foot traffic falls as more customers struggle with the high cost of living
+<<<SUMMARY>>>
+McDonald’s restaurants fell during the third quarter as customers struggled with higher gas prices and the uncomfortably high cost of living. same-store sales – or sales at locations open at least a year -- fell 0.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487570
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:20:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a8dcce0fa1ec50d349bec141a8b18f61cb8b5cf2ae10c7d27e65fc31de37d3c0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (NYSE:MCD) misses Q3 2026 revenue estimates
+<<<SUMMARY>>>
+Fast-food chain McDonald’s (NYSE:MCD) missed Wall Street’s revenue expectations in Q3 2026 as revenue rose only 1.1% year on year to $7.16 billion. Its non-GAAP profit of $3.57 per share was 5.6% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487571
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:10:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7a67c8f816a85854b905e9d9d7427d4405d2d4e045d2a7bda4bc01f3cda30e53
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Beats Q3 Earnings Estimates
+<<<SUMMARY>>>
+McDonald's (MCD) delivered earnings and revenue surprises of +6.25% and -1.71%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487572
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:06:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f55531afb3becab4c0b0501faceee3dee0d62aff6298ff1ab7936c2e4fd58815
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+CHICAGO (AP) — CHICAGO (AP) — McDonald's Corp. (MCD) on Wednesday reported third-quarter earnings of $2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532883
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:00:34Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f679e2656ec804ede4bc1beedd9f1070ea0b4ae0790da5ffd52534d70d29ea56
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: 8 Of 11 Sectors Rise Wednesday As Growth Leads
+<<<SUMMARY>>>
+Eight of 11 sectors are higher in Wednesday’s regular session, with growth sectors holding two of the top three positions and Consumer Staples completing the leading group. Energy sits well clear of the rest, separated from the next-weakest sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487573
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=97146ab0d0ef9a28225be002e05531edaa9260d94933b2e33284e36289089453
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDONALD'S REPORTS THIRD QUARTER 2026 RESULTS
+<<<SUMMARY>>>
+McDonald's Corporation today announced results for the third quarter ended September 30, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487574
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:45:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3ceda893a32689df41b33c3d5c5aa404fdaf5e7a2250772d4935d6f2743144a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Investors May Want to Catch the Stock Ahead of Pokémon Partnership
+<<<SUMMARY>>>
+McDonald’s Corporation reports third-quarter financial results Wednesday before market open. While the restaurant company could show signs of growth and reasons why shares are enjoying a one-month 12% rally, the big catalyst could be coming in a week. McDonald’s Q3...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143485361
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:14:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2aad3d1d0ce3c59fe9d58e56c0e637f5134a49385cd958213c7da9a6b1d2ebd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: US Elections, Tech Optimism Lift Wall Street Pre-Bell; Asia Mixed, Europe Up
+<<<SUMMARY>>>
+Wall Street futures pointed pre-bell higher pre-bell Wednesday following election results that appea
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140539979
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:04:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ee45cf873cf001d60c9c58c068d6c44bcea8b65e28b6a9b02068fe228aca4a86
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: SpaceX Files Form S-1 Amendment, Disclosing June 2026 Cloud Service Agreement To Provide Google With 110,000 NVIDIA GPUs For $920M Monthly Fee Through June 2029
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533002
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T10:42:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=012822e73af82da659c4f1c1caf0df0d49b60f2d732274cf94f82c2e8dd18f2f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Over-the-last-week--the-SP-500--Nasdaq-1.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Dow Jumps Over 1,100 Points; McDonald’s Shares Gain Following Upbeat Earnings
+<<<SUMMARY>>>
+U.S. stocks rallied, led by a 1,100-point Dow gain. McDonald’s rose on strong earnings; oil fell 3%, while gold and silver climbed.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533360
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T10:42:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1b94584ce1068e245945295c9372209d5f8230af8d98093ea7af632801015f79
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+McDonald’s (NYSE:MCD) reported third-quarter financial results on Wednesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487752
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T09:51:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=df1f08f6e9f253d5fd2613755cc640b14a0049977273a55915ec49507828436f
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's CEO Says France Underperformed Expectations In Q3 Due To Protests, Continues To See Disruptions
+<<<SUMMARY>>>
+-Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487753
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T09:36:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9c46e3c9a8f73ae0470866983304161254c0e92063858f24eef703c61b681d15
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Mcdonalds-Ptt-Nakornchaisri-Bang-Kaeo-Su.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Earnings Beat Estimates, but US Customer Traffic Remains Under Pressure
+<<<SUMMARY>>>
+McDonald’s Q3 EPS beat estimates, but revenue missed. Global sales grew, U.S. comps dipped; shares rose 2% premarket.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143468219
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T06:42:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7394716971e1add1615c8d0a082f158100e85756e777fb77c8d63b8b1d27b1bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: MCD Stock Ticks Lower Overnight: McDonald’s Faces Earnings Test As Short Bets Hit 52-Week High
+<<<SUMMARY>>>
+McDonald’s bearish bets surged 64% ahead of its third-quarter earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487754
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T06:08:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ad500dd1b6169eef8254e754066027d3b2a58c42dbd8a06b15451be1c8741c94
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Mcdonalds-Ptt-Nakornchaisri-Bang-Kaeo-Su.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Top Wall Street Forecasters Revamp McDonald's Expectations Ahead Of Q3 Earnings
+<<<SUMMARY>>>
+McDonald&#39;s is expected to report Q3 EPS of $3.38 and revenue of $7.28B, while analysts mostly maintain bullish ratings but lower price targets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487755
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T03:50:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=47a50ffc35fbdbac4add810f4f0083f0ac3ec0cbb8cda71777543dd639ae8506
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Tech-CEOs-Briefed-On-Taiwan.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's, AMD and 3 Stocks to Watch Heading Into Wednesday
+<<<SUMMARY>>>
+Stocks in focus: AMD and Block beat estimates; McDonald’s, Uber and Qualcomm report earnings as U.S. futures trade lower.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143486883
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T03:17:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=bc013db639c26fc9378ab32fda1745aabc90867f457663467a5771e910d48d3d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Market-sentiment---Fear-and-Greed.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Nasdaq Jumps Over 200 Points as Chip Stocks Gain: Fear & Greed Index Remains in ‘Extreme Fear’ Zone
+<<<SUMMARY>>>
+Markets closed mixed as CNN Fear &amp; Greed stayed at 19 (Extreme Fear); Nasdaq rose 0.83%, Dow fell, Apple dropped and Aehr surged 26%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143486940
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T01:57:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9691a7f926266cc05f1c04e7eaf09a63f1396451e9436cdb402556305f51e99b
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Stock-S-And-P-500-Index-Fund-Symbol-Is-O.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Stock Market: Will S&P 500 Open Up or Down Today?
+<<<SUMMARY>>>
+Will the S&amp;P 500 open higher? Polymarket odds plunge to 22% as Wall Street digests midterm results, a tech futures drop, and key earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143454626
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T01:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8fadd7515340603108e9f6353761f0c9f065b3bf8ec86eafaa8707954c2864f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's and Qualcomm earnings, ADP labor data: What to Watch
+<<<SUMMARY>>>
+Market Domination Overtime Host Jake Conley previews several of the biggest stories to come tomorrow, Wednesday, November 4, including earnings out from Qualcomm (QCOM), McDonald's (MCD), and DoorDash (DASH), as well as the latest employment data out from ADP.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492053
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T00:01:01Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=746f856a3800bdecc25c9bc887d0c6786611a870570ca6c8eda7ef5f997cd75c
+image_url: https://image.cnbcfm.com/api/v1/image/108481727-1793295164624-gettyimages-2296147239-golba-dailylif260912_np5rf.jpeg?v=1793295193&w=1920&h=1080
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's stock rises as earnings beat, U.S. restaurants show improvement
+<<<SUMMARY>>>
+McDonald's has leaned into discounts to attract budget-conscious diners over the last two years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143450020
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T22:20:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ac01f3de218cbb0ed5844ab03d3c38d81a60860a9bb4071071b8a8efe79cb2a8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Third Quarter Earnings Might Change The Case For Investing In McDonalds Stock (MCD)
+<<<SUMMARY>>>
+McDonald's is heading into its third quarter 2026 earnings release with analysts expecting modest profit growth, while U.S. traffic, costs and operational issues weigh on the near term picture. The fast food giant is pivoting marketing spend toward its own brands and longer running programs, just as investors scrutinize how weak U.S. guest counts and higher expenses feed through to operating margins. Next, the focus turns to how McDonald's investment narrative holds up as upcoming third...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449120
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:57:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db61e8484ad29a3bb331dd6cd6322bc11fc0d13a3f888945d54610dfb6707d8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Can Chipotle Stock Jump 50%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487566
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:33:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f935369346321b1a0c56dfe6cd3f3e2ccf1eac6a788a97e74a8284a8d4b6689e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Q3 sales growth slows amid tough consumer backdrop, new drinks push
+<<<SUMMARY>>>
+McDonald's faces another tough quarter as consumers pull back.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143478453
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:33:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5170dfd364cd99cd42f4189eb69be201e522da307ecc05d820350d42f6c380d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: EMBARGOED 7AM PLS DONT PUB: McDonald's posts slow Q3 growth amid tough consumer backdrop, new drinks push
+<<<SUMMARY>>>
+McDonald's faces another tough quarter as consumers pull back.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449119
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:33:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1543f58dfac382fd1471cbd4b6873f2a18ec7bd001ed503105b60fb2bf03c7bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Q3 sales expected to slow amid tough consumer backdrop, new drinks push
+<<<SUMMARY>>>
+McDonald's faces another tough quarter as consumers pull back.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492055
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T17:22:45Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=092d631be7616413e23d035233d89069f5cbd991882d59c96dcff55b49eed2f8
+image_url: https://image.cnbcfm.com/api/v1/image/108513679-17937440551793744053-49417405972-1080pnbcnews.jpg?v=1793744055&w=1920&h=1080
+category: company
+tickers: MCD
+keywords: 
+headline: BTIG's Peter Saleh previews Wednesday's McDonald's earnings
+<<<SUMMARY>>>
+Peter Saleh, BTIG analyst, joins 'Closing Bell Overtime' to talk what to expect out of McDonald's earnings tomorrow as the fast food giant struggles under a difficult macro consumer environment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143486908
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:31:01Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6d08a6cf7c05ca4aa6a464af1cc16164e25b9dcc276082b5211edc73defe35b3
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/earnings-scheduled-1.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: ARM, McDonald's On Deck Wednesday As AI Demand, Consumer Spending Face Test
+<<<SUMMARY>>>
+ARM Holdings headlines Wednesday’s reports, with investors looking for evidence that AI-related demand can support the chip designer after a sharp stock pullback. McDonald’s, Novo Nordisk, Uber Technologies, CVS Health
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487759
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:30:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8db6455403dfe9798fbcd4e11b49aecbae60641c93233cefbcd5e27604a727e3
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/Earnings-Season-Written-In-Search-Bar-Wi.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Qualcomm Could Swing $14.4 Billion In Value After Earnings
+<<<SUMMARY>>>
+McDonald&#39;s, Uber, Qualcomm and six other stocks report earnings Wednesday. See which stocks face the biggest expected moves, according to options market data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143486942
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:08:43Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f31307d10340c293b7a7e1a4fb2252a8f24ce9ee6cffc07d0a47495574a7a9e2
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Growth And Cyclical Lead Sectors Tuesday
+<<<SUMMARY>>>
+Four sectors are higher and six are lower among those with available change data in Tuesday&#39;s regular session, with growth and cyclical sectors splitting the top of the table. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445835
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:40:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2aa7b5fe2bd7f3f7ab59ed8bc03c2795bb50b0cc3e2df5d78299f904517aaad0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Why McDonald's Q3 earnings results could look a bit ugly
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi outlines what to expect from McDonald's (MCD) third quarter earnings on Wednesday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445836
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:33:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b8e0aeabe25c419456ba41f5e58f3296d904b1ea561f323b254824c45fdda87
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 5 Big Funds Sold McDonald’s. Should You Follow Them Before Earnings?
+<<<SUMMARY>>>
+Key TakeawaysFive funds cut or sold their McDonald’s stakes in Q2, and three of them sold every share, according to their latest 13Fs. Two of the sellers added Yum! Brands, Chipotle Mexican Grill and Starbucks over the same quarter, and all three trade at higher multiples than McDonald’s.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445837
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:32:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ce422ce95ade1640df453656ccc1ec475d4690b81d543313cfaf11f720b72fb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Stock Rests on Full-Year Earnings Growth. Here’s What the November 4 Report Has to Show
+<<<SUMMARY>>>
+Key TakeawaysMcDonald’s reports third-quarter results before the open on Wednesday, Nov. 4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487762
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:00:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7b5b256bf9c966b30478967be195fea2abf4d6e46ee4eeead347825f7b7e8703
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/Los-Angeles---Aug-04-Mark-Cuban-Arrives-.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Mark Cuban Ate 'Lousy Food' Out of Cans, Ramen and Peanuts Making $2.15 an Hour — 'Respect to the People Who Do Whatever It Takes’
+<<<SUMMARY>>>
+Billionaire entrepreneur Mark Cuban says getting ahead doesn’t always start with the perfect job.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442779
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:27:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=13540b1bfb1fbdf161ccb19406b0efbb2ebe35cd795d41cbfc840b804c51f06d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: ‘Too Cheap to Ignore’? What to Watch When CVS and McDonald’s Report
+<<<SUMMARY>>>
+Jim Cramer called CVS too cheap to ignore and McDonald's the cheapest it has been since 2014, but both stocks still carry real risks that their upcoming earnings reports will either confirm or crush.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442780
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0037256e9a479688a1c25b4a68dbc06b69ca61ab715ee18c5ecb4fb16a3a7eb1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Comfort Systems and PulteGroup have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Comfort Systems USA's surging revenue, record backlog and rising earnings estimates contrast with PulteGroup's declining earnings and housing-market challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143441304
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:01:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5cdb916ef5dfeb8d278a34683a25772c14e1eebe5ee6a248d68252bb707c797e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: ETFs Bought $93.7 Million of McDonald's (MCD) on Oct. 30
+<<<SUMMARY>>>
+ETFs bought $93.7 million of McDonald's stock on Friday, Oct. 30.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143424762
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T08:14:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=65fc736485c4ee7df1fd17c38dd2a27a004bc55b45202a188dc563f9c6705780
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: While fast food struggles, this wing chain surged 43% in October: Can it last?
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143405825
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T00:21:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=146695887c2573aa71d254f8ca136f15fb1506cd0704abd4f80168754585b89d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Must Keep Fighting McRib Marketing Class Action Suit
+<<<SUMMARY>>>
+McDonald's (NYSE:MCD) failed to secure dismissal of a proposed class-action lawsuit over McRib marketing in a recent federal court ruling. Plaintiffs claim McDonald's advertising led customers to believe the McRib contained rib meat rather than other processed pork parts. The judge's order keeps alive allegations that McDonald's misrepresented the nature and quality of pork used in the McRib sandwich. The decision letting the McRib marketing lawsuit move ahead aligns with broader themes our...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143405830
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T00:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c293c5972469593038079b93f61e0e7400ddf7f66c73aaf3d5e84a88037c73aa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 5 Key Earnings Charts to Watch This Week
+<<<SUMMARY>>>
+Will AMD and Ralph Lauren, who have perfect 5-year earnings surprise streaks, beat again?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143402217
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T00:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=17bfad28116eb893ff8dc8ff547af3e541a4a37eb993a7626dc6ffa2d28e26ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 39 New Companies Join the 2026 Fortune Best Companies to Work For Southeast Asia List
+<<<SUMMARY>>>
+Fortune and Great Place To Work today named the 2026 Fortune Best Companies to Work For Southeast Asia. This year's list has the most change in its line-up so far, with 39 of 100 companies appearing for the first time.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401327
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T21:28:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f405697ffef04bc26d1932b0481443c990f3546dc8912e24331cbdc1c2fc1ab2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Earnings live updates: Roku posts earnings beat ahead of acquisition by Fox
+<<<SUMMARY>>>
+The third quarter earnings season is over halfway done, and the reports continue to pour in.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401762
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T20:10:50Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=1d25363b920ad84a2a094728ff253b285963c8b8462a76a03ec81b1838e897aa
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MCD
+keywords: 
+headline: Dow Jones Gainers: Today's US Session Top Movers
+<<<SUMMARY>>>
+Dow Jones top gainers in today's US session, led by Sherwin-Williams, Amazon, Home Depot, Walmart and Visa, ranked by percentage move.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401075
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T18:46:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff4f9a4f32870eecf8855bf34d72a075b54cde8ab47e1d6b94c4d852f2ed2662
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Is Chipotle Stock Still Worth Owning After Its Quarter?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400258
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62b86b24ac8abec621964a16d3a77bba5985f05f03589857a632c3fbf4c89d72
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Stock Ahead of Q3 Earnings: Buy, Sell or Wait for Now?
+<<<SUMMARY>>>
+MCD faces mixed Q3 prospects as beverage expansion and international growth support sales, while weak U.S. traffic, rising costs and operational challenges raise concerns about earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398559
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:12:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6aa0a79127d1d7a55f22efdbe57449b81e7e92a6e23e456d2a5e883e22f1a44e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: JPMorgan's shocking capital expenditures estimates for Amazon, and worries for McDonald's ahead
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi breaks down all the top headlines of the trading day, including how hyperscalers have gotten "silly cheap," Nvidia's (NVDA) "unbelievable" valuation, and why McDonald's (MCD) earnings should have investors worried. Sozzi also sits down with the Founder & CEO of JC2 Ventures and Former Cisco Executive Chairman & CEO John Chambers to discuss the current state of the tech market.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143396609
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:17:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e6dce2de3ff0087939479c3150565aaf6c413caea13ec321b75c1fb95a51162
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Bets on Its Own Brands as It Ends a 32-Year World Cup Deal. Here’s What November 4 Needs to Show
+<<<SUMMARY>>>
+Key Stats for McDonald StockCurrent Price: $258. 12Target Price (Mid): ~$393Street Target: ~$292Potential Total Return: ~52%Annualized IRR: ~11% / yearWhat Happened?McDonald’s (MCD:NYSE) said in late October that its FIFA World Cup sponsorship, which began in 1994, will end with the current agreement.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401074
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32f62178462860e0946f9ef3a67345e1b2d3c7a166d87ff1acd7ae53f32f903e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Option Volatility and Earnings Report For Nov 2-6
+<<<SUMMARY>>>
+It was a bloodbath last week for a lot of companies that reported earnings, will this week be more of the same? Let’s take a look at which companies are reporting this week and what the options market is saying.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393362
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:35:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cef85ff0937c7ac1cb4d2d41b349f1b8b3d40b853689a124eadd8ab27530af3b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Tech Rebound, Crude Slide Lift Wall Street Pre-Bell; Asia Mixed, Europe Up
+<<<SUMMARY>>>
+Wall Street futures pointed moderately higher pre-bell Monday as traders waded back into tech shares
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143397003
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T08:30:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e77e43c1a1a5581c246e6f57896c7ccf50fdecf5e373644143922253a2091e21
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/02/Quarterly-Results-Sales-Profits-Earnings.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings
+<<<SUMMARY>>>
+Shopify leads the Q3 2026 earnings volatility watchlist with a 12.08% implied move, followed by Cloudflare at 12.07%, as traders brace for earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143381309
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T03:16:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27f7659154ecc28f04b05851ea8a18029ee2d304f5a53ee22ae9593ec18cde73
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Midterms, Jobs Data, and Apple Earnings Test Wall Street This Week: Will Stocks Hold?
+<<<SUMMARY>>>
+Midterms, jobs data and Apple earnings test Wall Street this week after the Nasdaq's worst month since March 2025.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143377108
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T19:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=296f1b1163841a1dc813faa8e77cf25dc03e4939ab3a3f7042d94234d9df6bc4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Jobs, Midterm Elections, Apple, Palantir, McDonald’s, Moderna, and More to Watch This Week
+<<<SUMMARY>>>
+In another busy earnings week, AMD, Estée Lauder, Qualcomm, Pfizer, and many more will report results. We’ll see three readings on jobs this week, as well as data on the manufacturing and services sectors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143376433
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T16:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6bb51310911dce5abb450cf47a9626d62a6936ff68bcee7dcabbe6d1f3353e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Burger King's menu change isn’t just about better chicken nuggets
+<<<SUMMARY>>>
+The chain has reclaimed one crown and has made a major menu change to better challenge McDonald’s and Wendy’s.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143374577
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T08:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=96f31051c4bb2eb94c1405ade46dd4af1f7f6d634df4afb4f1cbecc2033162c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Why Wendy’s is losing the burger wars—and is now a takeover target for Nelson Peltz
+<<<SUMMARY>>>
+Its new CEO says Wendy's has let quality slip and now it has fallen behind Burger King to No. 3 in the burger wars.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143374329
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T06:04:46Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5e8a66c2ae9627fb2b37b602e1abc9cb2514651b3b144ae478cdac85043c7610
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/177313078/image_177313078.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: Wall Street Week Ahead
+<<<SUMMARY>>>
+Wall Streetâs big week: midterm elections, October jobs report and key earnings from Apple, AMD and Uber.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143364757
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T11:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=830af5c87daf35a8f602c2ec6680ca3553df23bdc7beabc0bcac73d5ef2dce14
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: MCD
+keywords: 
+headline: Apple Leads Packed Earnings Calendar As Investors Eye Tech, Pharma Results
+<<<SUMMARY>>>
+Preview next weekâs market movers: jobs data, PMI reports, major earnings from Apple and AMD, and IPO buzz. Read here for more details.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143351433
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T22:14:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=18581d1d4941e001756b0c2ea76c22edb1e2badb8c4cadf2244d406b380973cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Strong Growth Momentum and Rising Revisions Fuel Bright Earnings Outlook
+<<<SUMMARY>>>
+The Q3 results we have already seen from 60% of S&P 500 members through Friday, October 30th, reconfirm the broad-based growth momentum we have become used to in the last few reporting cycles. Upcoming notable reports include Tech bellwethers like Apple, Advanced Micro Devices, and Palantir.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143350547
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T21:10:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ef6a20a7bec32743137a418cbbce3a1e2096fac45587a5bde147403a45a46cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 3 Dividend Stocks With Yields Up To 4%
+<<<SUMMARY>>>
+Higher inflation readings from the Bank of Japan and a more hawkish tone from Governor Ueda keep interest rates and income on everyone’s mind. Cash rates pay something again, but they do not grow. Investors looking for rising paycheques from their portfolios are paying closer attention to businesses that steadily lift dividends. This article walks through three companies with current yields in the 2% to 5% range. The three stocks below are just a starting sample. The full Type 2 Dividend...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348683
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T14:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=09cecd212c9c2d9cca6371f2c76b04ef3c3eed0764dd1e86343fdabb919b8be9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2159094949/image_2159094949.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: How To Build A $50,000 Dividend Portfolio With SCHD And October's High-Yield Picks
+<<<SUMMARY>>>
+Build a diversified dividend portfolio with ETFs and top stocks targeting 5.59% yield and 6.16% dividend growth. Click here to read more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143346917
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8abda38ad82837a32048f8c53c492d2fc494a9b295355f10aeb6e6dba7e34ff1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Green Trail Fuels makes 25-store acquisition
+<<<SUMMARY>>>
+The joint venture, which began operating earlier this year, bought Littlefield Retail Group’s c-store arm, with locations in Arkansas and Oklahoma.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343925
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T12:15:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0729ee43b5d699d2ee70b10a8e4e94e515300b35a81668d9b2b2959c5d070273
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Unveiling McDonald's (MCD) Q3 Outlook: Wall Street Estimates for Key Metrics
+<<<SUMMARY>>>
+Besides Wall Street's top-and-bottom-line estimates for McDonald's (MCD), review projections for some of its key metrics to gain a deeper understanding of how the company might have fared during the quarter ended September 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343926
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T12:08:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8685bbe4f33732db78e124e3b959f241bca88755a702d26218bce575346c6e53
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Stock Could Be Trading At A Premium
+<<<SUMMARY>>>
+McDonald's has seen its share price recover in recent weeks after a rough start to the year, which puts fresh focus on whether the current market value lines up with the cash the business is expected to generate. With the stock still down over the year to date, investors are asking if the recent moves and headline stories are already fully reflected in the cash flow outlook. The share price is down 15.1% year to date, which makes the link between the current valuation and the durability of...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143346544
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T11:31:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=53fe148cbe6b395424ecd9f35ff4b09d33603af7dfa9eb32cad8aa6599f37beb
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2120169924/image_2120169924.jpg?io=getty-c-w1536
+category: company
+tickers: MCD
+keywords: 
+headline: Wingstop: Don't Confuse A Rally With A Turnaround
+<<<SUMMARY>>>
+Wingstop Inc. remains a Sell despite its rally, as weak same-store sales, slowing growth, and rich valuation risks persist. Click for this WING earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143342107
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T11:15:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84a4d388f51e8006779032e5e43928cbe9f4a605c13c553e5ab8698589f332ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Why Did Chipotle Stock Jump?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343092
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T07:40:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b3d56d7bc942c92220de54a1b984de5f070e3fe07ed27f2824f6c1d041b5bfe2
+image_url: 
+category: company
+tickers: MCD
+keywords: 
+headline: Mizuho Maintains Neutral on McDonald's, Lowers Price Target to $260
+<<<SUMMARY>>>
+Mizuho  analyst Nick Setyan   maintains McDonald&#39;s (NYSE:MCD) with a Neutral and lowers the price target from $290 to $260.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:46a6816bb36a86b54032675f3d1660e2f97f6a265729400654f6d2df5afafe5d
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-23T10:27:00Z
+publisher: The Motley Fool
+author: Keith Noonan
+url: https://www.fool.com/investing/2026/10/23/mcdonalds-has-lost-fifth-value-2026-time-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F889911%2Fmcd-1.jpg&w=1200&op=resize
+category: 
+tickers: MCD
+keywords: McDonald's stock decline, consumer traffic decline, GLP-1 drugs impact, dividend yield, valuation, earnings growth, same-store sales
+headline: McDonald's Has Lost a Fifth of Its Value in 2026. Is It Time to Buy?
+<<<SUMMARY>>>
+McDonald's stock has declined nearly 20% in 2026 and 28% from its lifetime high, facing headwinds including declining consumer traffic, challenging unit economics, and potential demand impacts from GLP-1 diet drugs. While the stock's forward P/E ratio of ~19 and 3% dividend yield appear attractive, the company's slow earnings growth (5% YoY) and persistent business challenges suggest patient investors may find better entry points.
+<<<INSIGHTS>>>
+MCD | negative | The article highlights significant headwinds including a 20% stock decline in 2026, falling consumer traffic, weak same-store sales growth (1.3%), and potential sustained demand pressure from GLP-1 drugs. While valuation metrics appear reasonable, the author suggests waiting for better entry points as business challenges are likely to persist.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:00b73660facf7e454f6f5c022f19724e3158076f118268bd603b4a9740a05628
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-27T15:05:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3016242/mcdonald-s-vs-chipotle-which-restaurant-stock-is-the-better-buy-now?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3016242
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6f/392.jpg
+category: 
+tickers: MCD, CMG
+keywords: restaurant industry, quick-service restaurants, franchise model, customer traffic, earnings estimates, restaurant expansion, menu innovation, digital engagement, consumer spending, valuation, comparable sales growth
+headline: McDonald's vs. Chipotle: Which Restaurant Stock Is the Better Buy Now?
+<<<SUMMARY>>>
+McDonald's faces persistent traffic challenges and downward earnings revisions despite its strong brand and franchise model, earning a Zacks Rank #4 (Sell). Chipotle offers better growth prospects through expansion plans of 350 new restaurants in 2026, menu innovation, and digital engagement, though near-term margin pressures remain. Both stocks trade below historical valuations, but Chipotle is rated Zacks Rank #3 (Hold) with stronger sales growth potential.
+<<<INSIGHTS>>>
+MCD | negative | Facing persistent customer traffic challenges, downward earnings estimate revisions, intense competition, and pressure to maintain affordable pricing while sustaining franchisee profitability. Zacks Rank #4 (Sell) reflects unfavorable outlook despite strong brand and franchise-led business model.
+CMG | neutral | Offers stronger long-term growth potential through planned 350 restaurant openings in 2026, menu innovation, and digital engagement initiatives. However, near-term challenges from cautious consumer spending, softer traffic, and elevated operating costs constrain near-term earnings. Zacks Rank #3 (Hold) suggests monitoring progress rather than initiating new positions.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1d1fcdd85f70d3e5b42066b4d2a4ea46ec8b37672cab5029584a3683a0bdd1ff
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-28T22:30:05Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3017874/pc-connection-cnxn-q3-earnings-and-revenues-top-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3017874
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default124.jpg
+category: 
+tickers: CNXN, MCD
+keywords: earnings surprise, revenue growth, PC Connection, Zacks Rank, consensus estimates, stock performance
+headline: PC Connection (CNXN) Q3 Earnings and Revenues Top Estimates
+<<<SUMMARY>>>
+PC Connection reported Q3 2026 earnings of $1.24 per share, beating consensus estimates of $1.04 and surpassing revenue expectations with $874.31 million. The stock has gained 53.4% year-to-date, outperforming the S&P 500's 12.8% gain. However, the company received a Zacks Rank #3 (Hold) rating, suggesting near-term performance in line with the market.
+<<<INSIGHTS>>>
+CNXN | positive | Company beat EPS estimates by 19.23% ($1.24 vs $1.04 consensus) and exceeded revenue expectations by 13%, with strong year-to-date stock performance of 53.4%. However, mixed estimate revisions and Hold rating temper the outlook.
+MCD | neutral | Expected to report Q3 2026 earnings with modest 4.4% year-over-year growth and 2.9% revenue growth. Consensus EPS estimate was revised 0.2% lower in the last 30 days, indicating flat to slightly negative momentum.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:815d71df25f8eb210859830549df8b7dc349816b41092a0cdff8c8cfd79522e3
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T13:00:32Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3018458/kura-sushi-krus-earnings-expected-to-grow-what-to-know-ahead-of-next-week-s-release?cid=CS-ZC-FT-fundamental_analysis|yseop_template_9-3018458
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default47.jpg
+category: 
+tickers: KRUS, MCD
+keywords: earnings report, Q3 2026, earnings surprise, Earnings ESP, estimate revisions, restaurant industry, stock price prediction
+headline: Kura Sushi (KRUS) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Kura Sushi is expected to report Q3 2026 earnings on November 5, with consensus estimates of $0.22 EPS (up 10% YoY) and $91.6M revenue (up 15.3% YoY). However, a negative Earnings ESP of -11.63% combined with recent analyst estimate revisions suggests the stock may not beat consensus expectations, despite carrying a Zacks Rank #1 rating.
+<<<INSIGHTS>>>
+KRUS | neutral | While the company shows strong revenue growth (15.3% YoY) and earnings growth (10% YoY), the negative Earnings ESP of -11.63% indicates recent analyst downgrades and reduced likelihood of beating consensus estimates. The conflicting signals (strong fundamentals vs. negative ESP) warrant a neutral stance ahead of earnings.
+MCD | negative | McDonald's shows modest growth (4.4% EPS, 2.9% revenue YoY) with a negative Earnings ESP of -0.10% and a Zacks Rank #4 (Sell), making it unlikely to beat consensus estimates and suggesting underperformance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a8bdb78eea8a6b957a5344049724d434ef152ec728b85743ea50b3cd4affc715
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T14:28:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018742/dine-brands-din-moves-8-3-higher-will-this-strength-last?cid=CS-ZC-FT-fundamental_analysis|daily_price_change_5%-3018742
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default2.jpg
+category: 
+tickers: DIN, MCD
+keywords: takeover proposal, Dine Brands, Applebee's, IHOP, earnings growth, stock rally, acquisition
+headline: Dine Brands (DIN) Moves 8.3% Higher: Will This Strength Last?
+<<<SUMMARY>>>
+Dine Brands (DIN) shares surged 8.3% following a takeover proposal from investment firms Cobblers Cove Capital and Arkhouse Management at $39 per share. The company is expected to report strong quarterly earnings growth of 46.6% year-over-year with revenue up 14.1%, though earnings estimate revisions have remained flat over the past month.
+<<<INSIGHTS>>>
+DIN | positive | Stock rallied 8.3% on takeover proposal at $39/share; strong expected earnings growth of 46.6% YoY and revenue growth of 14.1%; however, flat earnings estimate revisions may limit sustained momentum.
+MCD | neutral | Minimal price movement (+0.4%) with modest month-over-month gains (6.6%); slight negative earnings estimate revision (-0.2%) despite positive YoY EPS growth of 4.4%; rated Zacks Rank #4 (Sell).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e90927e6e9934c70b5901957b04664b081da502d55249f6eaf31760be3e22a3c
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T20:45:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3019076/mcdonald-s-mcd-rises-as-market-takes-a-dip-key-facts?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6-3019076
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default300.jpg
+category: 
+tickers: MCD
+keywords: McDonald's earnings, stock performance, Zacks Rank, valuation, restaurant industry
+headline: McDonald's (MCD) Rises As Market Takes a Dip: Key Facts
+<<<SUMMARY>>>
+McDonald's (MCD) rose 2.75% to $257.38 in the latest session, outperforming the S&P 500's 0.31% decline. The stock has gained 8.47% over the past month. The company is expected to report Q3 earnings on November 4, 2026, with forecasted EPS of $3.36 (up 4.35% YoY) and revenue of $7.28 billion (up 2.88% YoY). However, McDonald's holds a Zacks Rank of #4 (Sell) with a Forward P/E of 19.52, and the Retail-Restaurants industry ranks in the bottom 40% of all industries.
+<<<INSIGHTS>>>
+MCD | negative | Despite recent positive price performance (+2.75% daily, +8.47% monthly), McDonald's received a Zacks Rank of #4 (Sell), indicating analyst estimate revisions have turned negative. The stock's PEG ratio of 2.86 significantly exceeds the industry average of 1.84, suggesting overvaluation relative to growth prospects. Additionally, the Retail-Restaurants industry ranks in the bottom 40% of all industries, indicating weak sector fundamentals.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1cda168bdc9b23de1e3de639a0f17b639b099383fc9e001b63658613a4837be6
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T00:20:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021288/5-key-earnings-charts-to-watch-this-week?cid=CS-ZC-FT-video_blog-3021288
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default121.jpg
+category: 
+tickers: AMD, MCD, EXPE, ELF, RL
+keywords: earnings season, earnings surprise, consumer spending, valuation, P/E ratio, earnings beat
+headline: 5 Key Earnings Charts to Watch This Week
+<<<SUMMARY>>>
+As earnings season moves beyond the Magnificent 7, over 1,000 companies are reporting this week, including consumer-focused firms. Five key stocks to watch include AMD and Ralph Lauren, which have perfect 5-year earnings surprise records; Expedia, which is cheap with a forward P/E of 14 and has beaten earnings five quarters in a row; e.l.f. Beauty, which has six consecutive earnings beats despite a high valuation; and McDonald's, which has a solid track record but faces consumer spending concerns.
+<<<INSIGHTS>>>
+AMD | neutral | Perfect 5-year earnings record is impressive, but shares are down 26% in the last month due to AI sell-off, creating mixed signals about near-term performance despite strong earnings growth expectations.
+MCD | neutral | Good earnings track record with three beats in last four quarters, but shares down 13% year-to-date on consumer spending concerns and stock is not cheap with forward P/E of 20.
+EXPE | positive | Five consecutive earnings beats, excellent 5-year track record with only three misses, cheap valuation with forward P/E of 14, and shares up 12.8% in the last month on positive consumer travel signals.
+ELF | positive | Six consecutive earnings beats with only one miss in five years, strong momentum with shares up 45% year-to-date, though valuation is expensive at forward P/E of 30.
+RL | positive | Perfect 5-year earnings surprise record, shares up 9.4% over the last month, and strong earnings growth expected (13.8% in fiscal 2027 after 34.5% jump in fiscal 2026).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a4b812d9ecd3bbde9e649f2b3ddc7e861f64dec018cd0511242a47d72bf68c9d
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T12:34:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3021498/comfort-systems-and-pultegroup-have-been-highlighted-as-zacks-bull-and-bear-of-the-day?cid=CS-ZC-FT-press_releases-3021498
+image_url: https://staticx-tuner.zacks.com/images/articles/main/e6/52046.jpg
+category: 
+tickers: FIX, PHM, MCD, DRI, SBUX
+keywords: data center, AI Revolution, homebuilder, mortgage rates, earnings beat, housing market, dividend, valuation
+headline: Comfort Systems and PulteGroup have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Comfort Systems USA (FIX) is highlighted as the Bull of the Day with strong performance in the data center trade, beating earnings estimates for the 19th consecutive quarter and expecting 48.6% sales growth in 2026. PulteGroup (PHM) is the Bear of the Day, facing headwinds from elevated mortgage rates and declining earnings, with expectations for a 16.9% earnings decline in 2026 and only 1.3% growth in 2027. The article also provides analysis on McDonald's (MCD), Darden Restaurants (DRI), and Starbucks (SBUX).
+<<<INSIGHTS>>>
+FIX | positive | Strong earnings beat streak (19 consecutive quarters), robust backlog growth ($17.8B, up from $9.38B YoY), 50% revenue growth, 73.8% expected earnings growth in 2026, and analyst estimate revisions higher. Stock down 35.7% in 6 months creating attractive valuation opportunity at forward P/E of 24.6.
+PHM | negative | Missed earnings in Q3 2026, declining revenue (-9%), falling gross margins (24.8% from 26.2%), expected earnings decline of 16.9% in 2026 and only 1.3% growth in 2027. Elevated mortgage rates continue to pressure housing demand and affordability. Zacks Rank #5 (Strong Sell).
+MCD | negative | Negative Earnings ESP (-0.10%), Zacks Rank #4 (Sell), weak U.S. comparable sales, operational inefficiencies, and margin pressures from elevated input costs and promotional spending. Stock underperformed industry and S&P 500 over the past year.
+DRI | neutral | Mentioned as industry comparison with 24% gain over the past year, outperforming McDonald's but no specific analysis provided in the main article content.
+SBUX | neutral | Mentioned as industry comparison with 28% gain over the past year, outperforming McDonald's but no specific analysis provided in the main article content.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:818759af217ea4af45b07e0a3a38f7d7e06545ee2456c1ac42f942a4e76806e5
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T12:45:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/03/3-dividend-stocks-to-buy-in-november-that-keep-pay/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892640%2Fgettyimages-1872427369-1858x880-465ee1e.jpg&w=1200&op=resize
+category: 
+tickers: CL, MCD, TGT
+keywords: dividend stocks, Dividend Kings, dividend yield, consumer stocks, dividend growth, recession-resistant, income investing
+headline: 3 Dividend Stocks to Buy in November That Keep Paying
+<<<SUMMARY>>>
+The article highlights three consumer dividend stocks—Colgate-Palmolive, McDonald's, and Target—that have each raised their dividends for 50+ consecutive years, demonstrating commitment to shareholders even during business challenges. These Dividend Kings maintained payout increases through stock price declines, sales struggles, and market volatility, making them attractive for income-focused investors seeking stability in uncertain markets.
+<<<INSIGHTS>>>
+CL | positive | 63 consecutive years of dividend increases, recession-resistant business model in oral care and household products, maintained dividend growth despite stock removal from S&P 100 index, demonstrating strong commitment to shareholders.
+MCD | positive | Recently achieved Dividend King status with 50 consecutive years of dividend increases, raised dividend 4% to $1.93/share in September despite trading near 52-week lows and slowing comparable sales growth, signaling strong prioritization of dividend payments.
+TGT | positive | 55 consecutive years of dividend increases, maintained dividend streak through three years of sales declines, recent stock struggles pushed yield to ~3%, demonstrating management commitment to shareholders during business turnaround.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5f9a79e574bfd947a1eeb6c771a2503df98631fc0738ffe603b17def187c27fc
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T12:09:00Z
+publisher: The Motley Fool
+author: Anders Bylund
+url: https://www.fool.com/investing/2026/11/04/4-restaurant-giants-win-diners-in-different-ways/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893145%2Frestaurant-staff-working-with-tablet-computer-getty-images.jpg&w=1200&op=resize
+category: 
+tickers: MCD, YUM, DRI, QSR
+keywords: restaurant industry, comparable sales, value pricing, menu innovation, full-service dining, restaurant remodeling, consumer spending, food safety
+headline: These 4 Restaurant Giants Have Different Ways to Win Diners
+<<<SUMMARY>>>
+Four major restaurant chains employ distinct strategies to attract cost-conscious diners: McDonald's focuses on value pricing but stumbled with a spring 2026 promotion; Yum! Brands drives traffic through menu novelty and limited-time offerings; Darden competes on full-service hospitality and modest pricing; and Restaurant Brands succeeds with restaurant remodels and menu refinements. Darden and Restaurant Brands currently show stronger performance, while McDonald's recovers from missteps and Taco Bell rebounds from a food safety incident.
+<<<INSIGHTS>>>
+MCD | negative | Failed value promotion in spring 2026 with inconsistent pricing and removal of popular app deals resulted in weak 0.8% comparable sales growth and declining foot traffic. Company is now in recovery mode.
+YUM | neutral | Menu novelty strategy showing mixed results; Taco Bell recovered quickly from July cyclospora outbreak with 3% same-store sales growth over four weeks, but faced significant headwinds during the crisis period.
+DRI | positive | Strong performance with 3.2% same-restaurant sales growth, record-high guest satisfaction scores, and LongHorn achieving 22 consecutive quarters of positive growth. Full-service hospitality model and modest pricing strategy resonating well with consumers.
+QSR | positive | Burger King achieved 8.4% U.S. comparable sales growth through successful restaurant remodels and menu refinements, reclaiming No. 2 position in burger market. Back-to-basics strategy proving effective, though Popeyes still struggling.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d287c27ea29de9f2c2b927c24541e3f1e7e6d3db64ebb9405379459bf652b4e0
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T14:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023153/divided-government-sends-the-dow-up-1000-points?cid=CS-ZC-FT-ahead_of_wall_street-3023153
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f6/192902.webp
+category: 
+tickers: CVS, MCD, KHC, W
+keywords: midterm elections, divided government, pre-market rally, ADP jobs report, Q3 earnings, private-sector employment, stock market
+headline: Divided Government Sends the Dow Up 1000 Points
+<<<SUMMARY>>>
+Following the U.S. midterm elections, pre-market futures rallied on uncertainty resolution and divided government prospects. The Dow, S&P 500, and Nasdaq all posted gains. ADP reported October private-sector job gains of +86K, meeting September's revised figure. CVS Health, McDonald's, Kraft-Heinz, and Wayfair all posted earnings beats this morning, though CVS shares fell on separation plans.
+<<<INSIGHTS>>>
+CVS | negative | Despite a significant +29% earnings beat to $2.09 per share, shares fell -4% in pre-market trading due to company plans to separate its healthcare business, creating uncertainty among investors.
+MCD | positive | Outpaced Q3 earnings estimates by +6.25%, resulting in +2% share price gain. However, stock remains down year-to-date with challenged domestic sales.
+KHC | neutral | Posted a +23% earnings surprise to $0.53 per share, but pre-market trading remained flat, reflecting the stock's flat performance throughout 2026.
+W | positive | Posted a +12% earnings beat in Q3 results, adding +4% to share price ahead of the bell and contributing to its +10% year-to-date gains.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9c16129d93ecc6b8b6ed87678cb71e43726bc36b02730a0ac1b8da816193d378
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T15:03:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023190/wall-street-rallies-as-midterm-election-uncertainty-eases?cid=CS-ZC-FT-economic_highlights-3023190
+image_url: https://staticx-tuner.zacks.com/images/articles/main/78/424.jpg
+category: 
+tickers: CVS, MCD, KHC, W
+keywords: midterm elections, divided government, stock futures, private-sector jobs, earnings results, bond yields, oil prices
+headline: Wall Street Rallies as Midterm Election Uncertainty Eases
+<<<SUMMARY>>>
+U.S. stock futures rallied following midterm elections, with the Dow up +1013 points, S&P 500 +80, and Nasdaq +97 as markets favor divided government. Private-sector jobs grew by 86K in October, meeting expectations. Mixed earnings results emerged with CVS beating estimates but planning a healthcare separation, McDonald's outperforming forecasts, Kraft-Heinz surprising positively, and Wayfair posting strong Q3 results.
+<<<INSIGHTS>>>
+CVS | neutral | Posted a significant +29% earnings beat to $2.09 per share, but shares declined -4% in pre-market trading due to plans to separate its healthcare business, offsetting the positive earnings surprise.
+MCD | positive | Outpaced Q3 earnings estimates by +6.25% with shares up +2% on the news, though domestic sales remain challenged and stock is down year-to-date.
+KHC | neutral | Delivered a +23% earnings surprise to $0.53 per share, but pre-market trading remained flat, reflecting investor indifference despite the positive earnings beat.
+W | positive | Posted a +12% earnings beat in Q3 results, adding +4% to share price ahead of the bell and contributing to its +10% year-to-date gains.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fe3629c18ff33b939c8fb3e9aa8e7832349d6c4427d294d85da6101a12c71d9a
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T16:17:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023287/mcdonald-s-q3-earnings-beat-on-franchised-margins-revenues-miss?cid=CS-ZC-FT-analyst_blog|earnings_article-3023287
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f6/355.jpg
+category: 
+tickers: MCD, CMG, SBUX, DPZ
+keywords: Q3 2026 earnings, comparable sales, franchise model, restaurant margins, international growth, capital expenditures
+headline: McDonald's Q3 Earnings Beat on Franchised Margins, Revenues Miss
+<<<SUMMARY>>>
+McDonald's reported Q3 2026 adjusted EPS of $3.57, up 11% and beating estimates, but revenues of $7.16B missed forecasts. Global comparable sales grew 1.5% with international strength offsetting a 0.2% U.S. decline. Franchised restaurant margins increased 3% to $3.8B. The company maintains 2026 capital expenditure guidance of $3.7B. Other restaurant chains showed mixed results: Chipotle missed earnings but beat revenue, Starbucks beat earnings with strong comps, and Domino's beat both metrics.
+<<<INSIGHTS>>>
+MCD | neutral | Mixed results with earnings beat (+11% YoY) offset by revenue miss. Global comps growth of 1.5% shows moderation from prior year 3.6%, and U.S. comps declined 0.2%. Strong franchise margins (+3%) and stock gained 2.7% pre-market, but Zacks Rank #4 (Sell) rating indicates caution.
+CMG | negative | Earnings missed consensus by 6.9% (27 cents vs. 29 cents estimate) and declined 6.9% YoY. Despite revenue beat and 2.1% comparable sales growth, the earnings miss and YoY decline indicate weakening profitability.
+SBUX | positive | Earnings beat consensus by 9.6% with 53.8% YoY growth. Global comparable coffeehouse sales increased 7.2% with North America comps up 7.9%. FY2027 guidance of $3.15-$3.25 EPS and ~4% North America comp growth shows confidence, though revenue missed slightly.
+DPZ | positive | Earnings beat consensus by 6.2% with 12.7% YoY growth. Revenue beat by 1.6% with supply chain revenues up 7.1%. Strong performance driven by higher order volumes and pricing power, though same-store sales remain sluggish.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:349753803c6f77755531ef62389b934ad0068007f7d6cda5836f785b66e75fdb
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T17:20:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023352/bloomin-brands-to-report-q3-earnings-buy-sell-or-hold-the-stock?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3023352
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/2264.jpg
+category: 
+tickers: BLMN, DRI, MCD, SHAK
+keywords: restaurant earnings, traffic pressure, food inflation, Outback turnaround, comparable sales, margin pressure, menu mix, productivity savings
+headline: Bloomin' Brands to Report Q3 Earnings: Buy, Sell or Hold the Stock?
+<<<SUMMARY>>>
+Bloomin' Brands (BLMN) is expected to report Q3 2026 results showing an adjusted loss of 22-27 cents per share, wider than the 3-cent loss in the prior year. The company faces headwinds from weaker customer traffic, commodity inflation of 4.5-5.5%, and turnaround investment costs at Outback Steakhouse. However, improved menu mix, productivity savings, and service enhancements are expected to provide partial support. The stock has gained 65.8% year-to-date but trades at a discount valuation of 9.71X forward earnings.
+<<<INSIGHTS>>>
+BLMN | negative | Expected Q3 loss of 22-27 cents per share (vs. 3-cent loss prior year), declining 2026 earnings (-15.8% YoY), persistent traffic pressure, commodity inflation outpacing pricing power (4.5-5.5% vs. 4.5%), and significant turnaround costs. While some positive factors exist (menu mix, productivity savings), near-term profitability challenges and operating headwinds dominate the outlook.
+DRI | neutral | Mentioned as an industry peer for comparison. YTD performance of 19.2% is noted, but no specific analysis or outlook is provided regarding the company's fundamentals or earnings.
+MCD | neutral | Referenced as an industry peer with YTD decline of 13.9%, but no specific analysis or forward-looking commentary is provided about the company.
+SHAK | neutral | Mentioned as an industry peer with YTD decline of 13.6%, but no specific analysis or outlook is provided regarding the company's fundamentals.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:243c1843294ed74078185721e632a68f8d731cb081511ea5cd1eab8c66c38e10
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T03:05:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/04/celsius-vs-chipotle-mexican-grill-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F522b28bd47ebd4b7e382f6f480d51caa6500b5df-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: CELH, CMG, MNST, AMZN, MCD
+keywords: energy drinks, fast-casual dining, consumer goods stocks, valuation comparison, growth vs stability, distribution partnerships, market expansion
+headline: Celsius vs. Chipotle Mexican Grill: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Celsius Holdings and Chipotle Mexican Grill as investment options for 2027. Celsius offers rapid growth (85.5% revenue increase) in the functional energy drink market but faces risks from heavy Pepsi dependence and intense competition. Chipotle provides stability with $11.9B in revenue and strong profitability ($1.5B net income) but carries food safety and labor cost risks. The author recommends Chipotle for 2027 due to its established business model, stability, and growth potential toward 7,000 North American locations, despite Celsius's higher growth potential.
+<<<INSIGHTS>>>
+CELH | neutral | Strong revenue growth (85.5% YoY) and market expansion in functional energy drinks are positive, but significant risks from Pepsi distribution dependence, competition from Monster Beverage, and recent stock underperformance (-48% over 12 months) create a mixed outlook. Positioned as high-risk, high-reward.
+CMG | positive | Recommended as the better buy for 2027 due to established business model, strong profitability (12.9% net margin, $1.5B net income), stability, and clear growth strategy (targeting 7,000 North American locations). Positive 12-month stock performance (+9.4%) demonstrates relative stability despite market uncertainties.
+MNST | neutral | Mentioned as a significant competitor to Celsius in the energy drink market, representing competitive pressure but not directly evaluated in the article.
+AMZN | neutral | Mentioned as a delivery platform partner for Chipotle but not evaluated as an investment option in this comparison.
+MCD | neutral | Mentioned as a large competitor to Chipotle in the restaurant space but not directly evaluated in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6895a00c6195d11b186e11e35172e429cd93d7eb5d722f488b1eb7ad39d20a45
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T03:45:31Z
+publisher: The Motley Fool
+author: Joe Tenebruso
+url: https://www.fool.com/investing/2026/11/04/why-mcdonald-s-stock-popped-today/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F2df53e0fb02623d45122d770b8a593c8261b8f53-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: MCD
+keywords: McDonald's earnings, value menu strategy, dividend increase, comparable sales, consumer spending, restaurant industry
+headline: Why McDonald's Stock Popped Today
+<<<SUMMARY>>>
+McDonald's stock surged 6.53% after Q3 earnings beat expectations, with adjusted EPS of $3.57 versus Wall Street estimates of $3.38. The company's value-focused menu strategy is attracting cost-conscious consumers, with U.S. comparable sales turning positive in September. McDonald's also raised its dividend by 4% to $1.93 per share, marking the 50th consecutive year of dividend increases.
+<<<INSIGHTS>>>
+MCD | positive | Stock jumped 6.53% on better-than-expected Q3 earnings with 11% EPS growth, improving U.S. comparable sales trends, and a 50th consecutive year of dividend increases, demonstrating strong profitability and shareholder returns despite challenging consumer spending environment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:44fb691fe838fe73c95038e9443ee92b6abcd44358383e309a8b59373e205c5c
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T04:46:01Z
+publisher: The Motley Fool
+author: The Motley Fool Team
+url: https://www.fool.com/earnings/takeaways/2026/11/04/mcdonald-s-3-key-takeaways-for-long-term-investors/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb4204f36ed605fc54d4ba32e2cb31d1dd892afd6-800x450.jpg&w=1200&op=resize
+category: 
+tickers: MCD
+keywords: comparable sales growth, value menu, specialty beverages, franchising strategy, operating margins, baseline traffic, digital engagement, store remodels
+headline: McDonald's: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+McDonald's reported Q3 2026 comparable sales growth of 1.5% and announced three strategic initiatives: testing affordable value menu options across 1,900 U.S. restaurants to boost traffic, expanding specialty beverages that increase check sizes by ~50%, and progressing toward a 98% franchised model by 2028 to improve operating margins. Management noted improving baseline traffic trends heading into Q4 and remains focused on executing its McDonald's > NEXT growth plan.
+<<<INSIGHTS>>>
+MCD | positive | McDonald's demonstrated improving operational trends with positive baseline traffic momentum in September-October, successful specialty beverage initiatives driving higher check sizes (+50%), and strategic progress on franchising goals. The company is actively addressing traffic challenges through targeted value offerings and maintaining strong brand equity with unmatched supply chain scale. Stock price gained 6.53% on earnings announcement.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aeed19101829492bccc5722cd6cfac16fd494cee96c12aee106820e955bfd64b
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T16:56:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024729/mcdonald-s-q3-earnings-beat-but-u-s-traffic-still-pressures-growth?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3024729
+image_url: https://staticx-tuner.zacks.com/images/articles/main/72/1111.jpg
+category: 
+tickers: MCD, CMG, QSR
+keywords: Q3 earnings, comparable sales, franchise margins, U.S. traffic decline, international growth, restaurant expansion, inflation pressure
+headline: McDonald's Q3 Earnings Beat, but U.S. Traffic Still Pressures Growth
+<<<SUMMARY>>>
+McDonald's reported Q3 adjusted EPS of $3.57, beating consensus by 6.3%, driven by strong franchised margins and other operating income. However, revenue missed expectations at $7.16B, revealing weak U.S. comparable sales (-0.2%) offset by international strength, particularly in Japan, Germany, and Australia. The company plans 2,500 gross restaurant openings in 2026, but softer U.S. traffic and inflation pressures temper near-term growth prospects.
+<<<INSIGHTS>>>
+MCD | neutral | Mixed results with earnings beat offset by revenue miss and weak U.S. comparable sales. Strong franchise model and international growth provide support, but softer U.S. traffic, inflation, and modest revenue growth create near-term execution risks. Zacks Rank #4 (Sell) rating reflects cautious outlook.
+CMG | positive | Reported 2.1% comparable sales growth and 0.8% transaction increase in Q3, outperforming McDonald's U.S. performance and indicating stronger competitive positioning in the QSR space.
+QSR | positive | Burger King U.S. reported 8.4% comparable sales growth in Q3, significantly outperforming McDonald's U.S. comparable sales decline and demonstrating stronger market momentum.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5d00fc8c416f4be3c2659cfa01fc39a84e0118522e35df18b5f6d09f398b41bb
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T16:58:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024736/mcdonald-s-jumps-21-4-in-a-month-but-can-mcd-keep-climbing-higher?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3024736
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f6/355.jpg
+category: 
+tickers: MCD, CMG, QSR
+keywords: McDonald's earnings, comparable sales, U.S. traffic weakness, international growth, restaurant expansion, valuation, competitive pressure
+headline: McDonald's Jumps 21.4% in a Month, but Can MCD Keep Climbing Higher?
+<<<SUMMARY>>>
+McDonald's shares surged 21.4% over four weeks, driven by stronger third-quarter earnings (adjusted EPS up 11% to $3.57) and international sales growth of 1.5%. However, the rally faces headwinds from weak U.S. comparable sales (-0.2%), negative guest traffic, and persistent inflation pressures. The stock carries a Zacks Rank #4 (Sell) rating, suggesting the recent momentum may not be sustainable without improved U.S. traffic recovery.
+<<<INSIGHTS>>>
+MCD | negative | Despite recent 21.4% share price surge and better-than-expected earnings, the company faces significant headwinds including negative U.S. comparable sales (-0.2%), declining guest traffic, and persistent inflation pressures. The Zacks Rank #4 (Sell) rating and Value Score of F indicate the stock does not present a compelling investment case. Valuation support is limited, and U.S. traffic recovery remains uncertain.
+CMG | positive | Chipotle reported stronger third-quarter comparable restaurant sales growth of 2.1% with positive transaction growth, outperforming McDonald's U.S. performance and demonstrating competitive strength in the restaurant sector.
+QSR | positive | Burger King U.S. posted robust 8.4% comparable sales growth in Q3, significantly outperforming McDonald's U.S. performance and indicating competitive market share gains.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9fc42f32c43d29896b1c20a3e17bb583f3e852af6d7bcb430acd6f5deb8736f1
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T17:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024739/is-mcdonald-s-stock-worth-buying-amid-growth-and-valuation-risks?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3024739
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6f/392.jpg
+category: 
+tickers: MCD, CMG, QSR
+keywords: McDonald's, U.S. traffic decline, franchise model, comparable sales, cash generation, competitive pressure, valuation, capital expenditures
+headline: Is McDonald's Stock Worth Buying Amid Growth and Valuation Risks?
+<<<SUMMARY>>>
+McDonald's reported 5% revenue growth and 7% operating income increase in the first nine months of 2026, supported by its franchise model and international expansion. However, weak U.S. comparable sales (-0.2% in Q3), persistent inflation, and competitive pressures from rivals like Chipotle and Burger King present near-term challenges. While strong cash generation supports capital expenditures and shareholder returns, the stock carries a Zacks Rank #4 (Sell) rating, suggesting investors should exercise patience until execution improves.
+<<<INSIGHTS>>>
+MCD | negative | Despite solid revenue and operating income growth, weak U.S. comparable sales (-0.2%), declining guest counts, persistent inflation, and competitive pressures from Chipotle and Burger King warrant caution. The Zacks Rank #4 (Sell) rating and Value Score of F indicate limited near-term appeal, with execution risks outweighing long-term strengths.
+CMG | positive | Chipotle reported strong Q3 comparable sales growth of 2.1% and transaction growth of 0.8%, demonstrating competitive strength and gaining market share relative to McDonald's in the quick-service restaurant category.
+QSR | positive | Burger King reported robust 8.4% comparable sales growth at U.S. locations in Q3, outperforming McDonald's and indicating strong competitive positioning in the fast-casual segment.
+<<<END>>>

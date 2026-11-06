@@ -27,3 +27,7 @@ Ford's balance sheet can't be read. The report says "balance sheet not available
 The "judging word" note fired once on a compliant answer. The Data Clerk wrote that it does "not provide an opinion on whether the stock is a bullish or bearish opportunity" and handed the call to the Advisor. The sentence naming those words has no "Advisor" in it, so my check flagged it. Two other small things in that answer: it says "As the system notes", which leaks the prompt, and one bullet is a light interpretation.
 The filings Advisor was slow: 147 seconds, against 28–72 seconds for the other two runs.
 The details and the table are in design/week4.md section 60.
+
+
+Add Redis
+Leverage VectorDB better

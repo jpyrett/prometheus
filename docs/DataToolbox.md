@@ -24,7 +24,7 @@ reads them.
 src/capstone/
   data_toolbox.py
   docs/DataToolbox.md       this guide
-  docs/SESSION_NOTES.md   working notes for future chats
+  docs/SESSION_NOTES.md   how the recommendation system works (Week 5 session notes; the old DataToolbox notes are in git history)
   .aws/{credentials,config}
   .env                    API keys (FINNHUB_API_KEY, POLYGON_API_KEY, ...)
   news/{SYMBOL}.txt       per-symbol news (fetch_news)

@@ -329,7 +329,7 @@ Prereqs
          DataClerk().request_data(order)     # fills order.data (answer, cited chunks, sources WITH text, problems); status data_ready | data_failed
          verify_request(order) / verify_action(order)     # the checks, as lists of reasons ([] = fine)
        "Nothing found" is data_ready with data.no_supporting_text. Asking again for a finished order changes nothing.
-    3. Advisor v0 (prometheus/agents/advisor/advisor.py): the model proposes SIGNALS (an exact quote from a source + direction), code verifies
+    3. Advisor v0 (prometheus/agents/advisor/advisor.py; v1 is 8i): the model proposes SIGNALS (an exact quote from a source + direction), code verifies
        each one (the quote is really in that source AND names the company) and CALCULATES the score from the verified ones:
        round(100*(bullish+1)/(bullish+bearish+2)); no verified signal = no score. The model's own number is recorded, never used.
          Advisor().advise(order)                      the normal case: reads order.data.sources (the chunks, not the Data Clerk's summary)
@@ -694,3 +694,52 @@ Prereqs
   The plan is a PROPOSAL: nothing is sold or bought, and the portfolio file is never changed.
 
 See also: README.md  |  design/session_notes.md
+
+
+8i) Week 5: the Advisor's Generate Recommendations (Advisor v1) -- how it works, how to run it
+-----------------------------------------------------------------------------------------------
+  Guide (read this to learn how it was built, step by step): design/week5_advisor_implementation.md.   Decisions: docs/design_choices.md entries 51 and 52.
+  What it is: Advisor.generate_recommendations(order, portfolio, case, today). One work order whose data is ready goes in, the SAME order comes out with status "recommended",
+    `recommendations` (a reduction first, then additions, then new ideas by rank), `candidates` (looked at, not returned, with the reason) and `advisor_runs`. The model is called TWICE
+    (a plan call and a thesis call) and writes no number that is used; the Data Clerk calculates every number (DataClerk.request_metrics); thresholds are in configs/advisor_v1.json.
+      from datetime import date
+      from prometheus.agents.advisor.advisor import Advisor
+      from prometheus.common.portfolio import load_portfolio
+      order = Advisor().generate_recommendations(order, load_portfolio("configs/portfolios/jacob_pyrett.json"), case="funds", today=date.today())   # case: funds | theme ("market" is not built)
+    It needs daily bars through today (freshness gate) and 20+ sessions for the liquidity gate, 252+ for trend: the Data Clerk's refresh is a step BEFORE the Advisor in the graph.
+  REFRESH THE DATA (paid / network; each asks for --yes):
+    python scripts/fetch_bars.py --symbols SNDK PG --days 400 --yes        # daily bars of the tickers, SPY and the 11 sector ETFs, Massive REST (17 calls) -> data/historical/ticker_bars_v1/
+    python scripts/sync_day_aggs.py --from 2025-09 --to 2026-11 --yes      # the flat-file route (aws s3 sync of day_aggs_v1 only); needs flat-file keys in .aws/ (returned 403 on 2026-11-05)
+    (news, press releases and filings: the Data Clerk's fetch tools, as in 8e to 8g; the 10-Q text of a company needs its layout read by prometheus/agents/data_clerk/edgar_text.py)
+  TESTS (no network, no cost):
+    pytest tests/test_bars.py tests/test_technicals.py tests/test_fundamentals.py tests/test_metrics_catalog.py tests/test_data_clerk_metrics.py -q          # the Data Clerk's numbers
+    pytest tests/test_events.py tests/test_gates.py tests/test_quality.py tests/test_families.py tests/test_ranking.py tests/test_trade_plan.py tests/test_ledger.py -q   # the Advisor's parts
+    pytest tests/test_candidates.py tests/test_thesis.py tests/test_advisor_v1.py tests/test_advisor_config.py -q                                                # the whole step on fakes
+    pytest tests/test_advisor_sndk_pg.py -q     # SNDK and PG on REAL captured data (tests/fixtures/advisor_real/), judged by a simple Critic (tests/simple_critic.py)
+  CAPTURE A NEW REAL RUN (LIVE, paid: the Data Clerk's model, Finnhub, the Advisor's model; about 1 minute; reads the stored text and bars, fetches nothing):
+    python scripts/capture_advisor_fixture.py --symbol SNDK --company Sandisk --sector XLK --today 2026-11-05 --yes     # writes tests/fixtures/advisor_real/SNDK.json (--name PG_open for a second capture)
+  WHAT TO LOOK AT in a record: families (computable? passed? the notes say which rule failed and with what value), ranking (composite, cost, excess after cost), trade (entry, stop, size,
+    invalidation rules), gates, evidence (verified quotes, events, counter-evidence), features (every number with unit, date and source), thesis (checked by code), audit.
+
+
+PART 9. RECOMMENDATIONS, END TO END (Week 5, part 3; design choices entry 53)
+  ./test_recommendations.sh                                       prompts: what to look at, how many, whether to fetch
+  ./test_recommendations.sh "Pizza" --find 5 --yes                a SEARCH PHRASE: the Data Clerk finds the companies, the Advisor ranks them
+  ./test_recommendations.sh DPZ                                   one symbol           ./test_recommendations.sh "DPZ PZZA YUM"      a list of symbols
+  ./test_recommendations.sh "Domino's Pizza"                      a company name       ./test_recommendations.sh 'MCD, YUM, "Burger King"'   COMPARE a list (a brand's listed owner is found: QSR)
+  ./test_recommendations.sh 'MCD, YUM, "Burger King"' --find 3 --no-fetch      use the data already stored (no paid data calls; the two model calls still cost a cent or two)
+  --list / --symbols / --company / --phrase force the kind; --cash 1000 sizes for $1,000 instead of the sample portfolio; --help has everything.
+  MODEL: the Advisor uses openai/gpt-oss-120b here on Cerebras then Groq at reasoning effort low (2 s for the plan call); --model ID picks another, --model advisor the ADVISOR_MODEL of .env.
+  NEEDS YOUR YES (AGENTS.md): without --no-fetch it refreshes bars, news, press releases and filings with the paid APIs (and 10-Q text from sec.gov) and writes files; the script asks first and never fetches when
+    nobody can answer. Finding the companies of a phrase or a brand calls the Data Clerk's model and Finnhub's symbol search either way.
+  READING THE REPORT: RANKING (best to worst, every company scored; 47 = no strategy fired), KEY NUMBERS side by side, WHY NOT RECOMMENDED (what each strategy family found), RECOMMENDATIONS (plan, size, thesis),
+    YOUR HOLDINGS. "no listed company" = private (Little Caesars, Donatos). A franchisor with negative equity fails the leverage rules (entry 53).
+  Code: prometheus/application/recommendations.py.  Tests: pytest tests/test_recommendations.py tests/test_recommendations_script.py -q
+  NEGATIVE EQUITY (entry 54, spec Amendment 1): for a company with a stockholders' deficit (Domino's, Papa John's, Yum, McDonald's) the four debt/equity rules are not applied, and the report marks it: * on the ranking,
+    "waived" in the debt/equity row, DEFICIT in the equity row, [debt/equity waived] on each strategy line. Ranking = expected 20-day excess return after cost, highest first (the least negative first).
+  THE LEDGER: every real run appends to data/ledger/recommendations.jsonl, and its cooldown then hides the same recommendation on a later run ("cooldown: an earlier ... recommendation still stands").
+  THE BLEND (entry 55, spec Amendment 2): the score is 40% news and press releases (the newer the heavier: a story loses half its weight every 7 days; a press release counts half an article) + 30% stock
+    performance + 20% historical metrics + 10% filings. The ranking shows Blend (0-100) and the four parts (News, Price, Hist, File, each -1 to +1; n/a = nothing to say, counted as 0); a recommendation shows
+    the blend line and its three heaviest news items. The weights and every measure are in configs/advisor_v1.json under "blend"; design/week5_advisor_implementation.md section 10 explains it.
+  EXPLORING: every run appends to the ledger and its cooldown then hides the same company ("cooldown: an earlier ... recommendation still stands"). Add --no-ledger to explore a comparison with a throwaway ledger:
+    nothing is read from or written to data/ledger/. Without it the run behaves as the Advisor will in the desk.

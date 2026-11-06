@@ -1,0 +1,324 @@
+<<<PRESS_RELEASE>>>
+id: b2fe25530ca6cbfe
+symbol: PZZA
+published_utc: 2025-11-06T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-announces-third-quarter-2025-financial-results-2025-11-06
+headline: Papa Johns Announces Third Quarter 2025 Financial Results
+<<<TEXT>>>
+Papa John’ s International, Inc. today announced financial results for the third quarter ended September 28, 2025. Global system-wide restaurant sales were $1.21 billion, a 2% increase compared with the prior year period driven by higher International comparable sales and trailing twelve-month net restaurant growth. North America comparable sales...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9b7ee708e9f2d8f4
+symbol: PZZA
+published_utc: 2025-11-18T07:30:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-promotes-ravi-thanawala-chief-financial-officer-and-president-north
+headline: Papa Johns Promotes Ravi Thanawala to Chief Financial Officer and President, North America
+<<<TEXT>>>
+Papa John’ s International, Inc. today announced that Ravi Thanawala, most recently Chief Financial Officer and Executive Vice President, International, has been promoted to Chief Financial Officer and President, North America, in which role he will lead the Company’ s North American business, including restaurant operations and development strategies...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 36e1e67ac745aa15
+symbol: PZZA
+published_utc: 2025-11-25T17:31:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-completes-strategic-refranchising-and-new-restaurant-development-agreement
+headline: Papa Johns Completes Strategic Refranchising and New Restaurant Development Agreement with Franchisee Chris Patel of Pie Investments
+<<<TEXT>>>
+Papa John’ s International, Inc. today announced that it has refranchised restaurants previously owned and operated by Colonel’ s Limited, LLC, a joint venture between Papa Johns and Steeplechase Express, Inc. Pie Investments, led by Chris Patel, a leading franchisee operator and now one of Papa Johns largest domestic franchise partners, has assumed control of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5338372581746755
+symbol: PZZA
+published_utc: 2025-12-01T09:11:00Z
+url: https://www.nasdaq.com/press-release/dont-settle-less-papa-johns-delivers-better-just-999-2025-12-01
+headline: Don’t Settle for Less: Papa Johns Delivers Better for Just $9.99
+<<<TEXT>>>
+Not all pizzas are created equal– and Papa Johns continues to raise the bar. Papa Johns $9.99 Create Your Own Pizza. "Pizza lovers deserve the quality of Papa Johns at the value they are looking for," said Shivram Vaideeswaran, Senior Vice President of Brand at Papa Johns." We’ re serving up a great product at an affordable price, which includes no artificial flavors,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1c4128da442a7635
+symbol: PZZA
+published_utc: 2026-01-06T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-and-chlr-launch-champions-tomorrow-support-canadas-young-hockey-players
+headline: Papa Johns and the CHL® Launch "Champions of Tomorrow" to Support Canada’s Young Hockey Players
+<<<TEXT>>>
+--Papa Johns Canada and the Canadian Hockey League are launching the Champions of Tomorrow Program, a new national initiative supporting youth hockey across Canada. From January 6 to June 30, 2026, Papa Johns will donate $1 from every $35+ order placed with promo code CHLCHAMPS, up to $100,000 CAD. A joint judging panel from Papa Johns and the CHL will review...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b62e979b7274d66c
+symbol: PZZA
+published_utc: 2026-01-11T09:57:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-and-google-cloud-reimagine-future-food-ordering-better-serve-customers
+headline: Papa Johns and Google Cloud Reimagine the Future of Food Ordering to Better Serve Customers
+<<<TEXT>>>
+The QSR leader is the first partner for Google Cloud's newly expanded AI solution, Food Ordering agent, which is helping the pizza brand deploy a fully unified voice and text AI ordering system to remove friction across customer touchpoints. By serving as Google Cloud's launch customer for these new capabilities, Papa Johns is establishing a new industry...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a2505a05103e5d2e
+symbol: PZZA
+published_utc: 2026-01-12T16:01:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-partners-par-technology-power-pos-and-ops-transformation-across-3200-us
+headline: Papa Johns Partners with PAR Technology to Power POS and OPS Transformation Across 3,200 U.S. Restaurants
+<<<TEXT>>>
+Papa Johns today announced it has selected PAR POS™ and PAR OPS™ from PAR Technology Corporation to anchor its next-generation U.S. in-restaurant technology stack. "At Papa Johns, one of our strategic priorities is investing in and optimizing our technology to deliver a better experience," said Kevin Vasconi, Chief Digital and Technology Officer, Papa Johns." A key...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3100723617307e75
+symbol: PZZA
+published_utc: 2026-01-15T09:11:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-testing-protein-infused-dough-protein-crust-pizza-2026-01-15
+headline: Papa Johns Is Testing Protein-Infused Dough With the "Protein Crust Pizza"
+<<<TEXT>>>
+Papa Johns is redefining pizza for the wellness-minded era. As more consumers look for ways to enjoy the foods they love while staying aligned with more balanced lifestyles, Papa Johns is stepping into the moment and testing the Protein Crust Pizza, a perfectly portioned pizza with protein-infused dough. The Protein Crust Pizza is a limited, one-day-only...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 789222ab33a74229
+symbol: PZZA
+published_utc: 2026-01-22T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-report-fourth-quarter-and-full-year-2025-results-february-26-2026-2026-01
+headline: Papa Johns to Report Fourth Quarter and Full Year 2025 Results on February 26, 2026
+<<<TEXT>>>
+Participants on the call will include Todd Penegor, President and Chief Executive Officer, Ravi Thanawala, Chief Financial Officer and President, North America, and Heather Hollander, SVP Strategy, Investor Relations, and Financial Planning and Analysis. BETTER PIZZA. ® Papa Johns believes that using high-quality ingredients leads to superior quality...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 19f7eb837a68b2cd
+symbol: PZZA
+published_utc: 2026-01-26T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-declares-quarterly-dividend-2026-01-26
+headline: Papa Johns Declares Quarterly Dividend
+<<<TEXT>>>
+Papa John’ s International, Inc. today announced that its Board of Directors has declared a quarterly dividend of $0.46 per common share. Papa John’ s International, Inc. opened its doors in 1984 with one goal in mind: BETTER INGREDIENTS. Papa Johns is co-headquartered in Atlanta, Ga. and Louisville, Ky. and is the world’ s third-largest pizza delivery company with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b00b3896015bbf6e
+symbol: PZZA
+published_utc: 2026-01-28T12:00:00Z
+url: https://www.nasdaq.com/press-release/wait-over-pan-pizza-has-entered-new-era-papa-johns-2026-01-28
+headline: The Wait is Over: Pan Pizza Has Entered a New Era at Papa Johns
+<<<TEXT>>>
+Pan Pizza is coming to Papa Johns, and it’ s bolder than ever. "After nearly a decade, we've reimagined Pan Pizza to bring it back onto our menu," said Jenna Bromberg, Chief Marketing Officer of Papa Johns." Consumer expectations for flavor and value are higher than ever. Pan pizza is nostalgic, indulgent and so beloved, and we saw the chance to elevate a pan-style pizza in a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c8f9cb61ad8519b9
+symbol: PZZA
+published_utc: 2026-02-06T07:30:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-canada-launches-pizza-my-heart-valentines-day-2026-02-06
+headline: Papa Johns Canada Launches Pizza My Heart for Valentine’s Day
+<<<TEXT>>>
+--Papa Johns Canada is launching Pizza My Heart, a new limited-time heart pizza available nationwide for Valentine’ s Day. The limited-time Pizza My Heart will be available for carryout and delivery at participating Papa Johns locations across Canada, while supplies last. About Papa Johns Papa John’ s International, Inc. opened its doors in 1984 with one goal in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3f47ec61bb971419
+symbol: PZZA
+published_utc: 2026-02-11T09:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-makes-bold-run-become-first-pizzeria-awarded-michelin-star-2026-02-11
+headline: Papa Johns Makes a Bold Run to Become the First Pizzeria Awarded a MICHELIN Star
+<<<TEXT>>>
+No pizza establishment has ever earned a MICHELIN Star and Papa Johns is leading the charge to become the first. With the launch of their new Pan Pizza, Papa Johns is ready to prove it. Papa Johns and the new Pan Pizza check every box of what MICHELIN looks for in a star-worthy contender:.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3358baa0ab9b4fec
+symbol: PZZA
+published_utc: 2026-02-26T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-announces-fourth-quarter-and-full-year-2025-financial-results-2026-02-26
+headline: Papa Johns Announces Fourth Quarter and Full Year 2025 Financial Results
+<<<TEXT>>>
+Global system-wide restaurant sales were $4.92 billion, a 1% increase compared with the prior year. North America comparable sales decreased 2% as Domestic Company- owned restaurants were down 3% and North America franchised restaurants were down 2%; International comparable sales increased 5%; all compared with 2024. Opened 279 new restaurants in fiscal...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d8eb29c28f4334a4
+symbol: PZZA
+published_utc: 2026-03-05T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-participate-ubs-global-consumer-and-retail-conference-2026-03-05
+headline: Papa Johns to Participate in the UBS Global Consumer and Retail Conference
+<<<TEXT>>>
+Papa John’ s International, Inc. today announced that members of its leadership team will participate in the 2026 UBS Global Consumer and Retail Conference. Todd Penegor, President and Chief Executive Officer and Ravi Thanawala, Chief Financial Officer and President, North America will be interviewed in an analyst-led fireside chat discussion at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 07bf5b1e4e40ab45
+symbol: PZZA
+published_utc: 2026-03-18T09:18:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-selects-deliverect-modernize-delivery-operations-across-us-restaurants
+headline: Papa Johns Selects Deliverect to Modernize Delivery Operations Across U.S. Restaurants
+<<<TEXT>>>
+--Papa Johns today announced a strategic partnership with Deliverect to deploy its Smart Dispatch& Delivery Management platform across all Papa Johns restaurants in the U.S. by the end of 2027.. The partnership is part of Papa Johns multi-year initiative to modernize its fulfillment technology stack. —Kevin Vasconi, Chief Digital and Technology Officer, Papa...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fd6efcf01556317d
+symbol: PZZA
+published_utc: 2026-03-30T09:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-turns-heat-menu-innovation-bold-new-launch-oven-toasted-sandwiches-2026-03
+headline: Papa Johns Turns Up the Heat on Menu Innovation with Bold New Launch: Oven‑Toasted Sandwiches
+<<<TEXT>>>
+Papa Johns is raising the bar on sandwich flavor with the debut of its new Oven‑ Toasted Sandwiches, a crave‑ worthy lineup crafted to bring the brand’ s signature" better ingredients" promise into an exciting new category. As Papa Johns continues its evolution beyond pizza, this launch marks a defining step, introducing sandwiches that don’ t just compete in the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 087823f437d6f400
+symbol: PZZA
+published_utc: 2026-04-02T10:02:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-launches-pizza-miles-reimbursing-customers-gas-when-they-drive-carryout
+headline: Papa Johns Launches "Pizza Miles," Reimbursing Customers for Gas When They Drive for Carryout
+<<<TEXT>>>
+Papa Johns is turning a routine drive into a reason to celebrate with Pizza Miles, a limited‑ time Papa Rewards ® promotion that gives customers Papa Dough back when they choose carryout. Instead of letting the cost of getting from point A to pizza stand in the way of a craving, Papa Johns is giving customers a reason to make the trip worth it.. From Friday, April 3...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ef86fc9b2cec823d
+symbol: PZZA
+published_utc: 2026-04-06T07:30:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-canada-introduces-spinach-alfredo-chicken-tomato-pizza-2026-04-06
+headline: Papa Johns Canada Introduces Spinach Alfredo Chicken Tomato Pizza
+<<<TEXT>>>
+Made on Papa Johns’ fresh, never frozen dough, the pizza brings together a new mix of familiar favourites: a creamy spinach Alfredo sauce, grilled chicken, and fresh-cut Roma tomatoes. BETTER PIZZA. ® Papa Johns believes that using high-quality ingredients leads to superior quality pizzas. Papa Johns tops its pizzas with real cheese made from mozzarella, pizza...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8f2cf80fb92adc95
+symbol: PZZA
+published_utc: 2026-04-09T16:01:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-report-first-quarter-2026-results-may-7-2026-2026-04-09
+headline: Papa Johns to Report First Quarter 2026 Results on May 7, 2026
+<<<TEXT>>>
+Participants on the call will include Todd Penegor, President and Chief Executive Officer, Ravi Thanawala, Chief Financial Officer and President, North America, and Heather Hollander, SVP Strategy, Investor Relations, and Financial Planning and Analysis. BETTER PIZZA. ® Papa Johns believes that using high-quality ingredients leads to superior quality...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 13267a223dc2ded1
+symbol: PZZA
+published_utc: 2026-04-15T11:34:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-deli-pops-los-angeles-celebrate-launch-papa-johns-oven-toasted-sandwiches
+headline: "Papa Johns Deli" Pops Up in Los Angeles to Celebrate the Launch of Papa Johns Oven‑Toasted Sandwiches
+<<<TEXT>>>
+To debut its new Oven-Toasted Sandwiches, Papa Johns is bringing a one-day" Papa Johns Deli" pop-up to Los Angeles, serving bold, indulgent sandwiches inspired by classic neighborhood delis. "Papa Johns Deli" Pops Up in Los Angeles to Celebrate the Launch of Papa Johns Oven Toasted Sandwiches. "We love our fans, and that means continuing to raise the bar on how we bring...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 35efb926de831f56
+symbol: PZZA
+published_utc: 2026-04-28T09:04:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-digital-pizza-assistant-lou-ai-ends-group-order-gridlock-smarter
+headline: Papa Johns Digital Pizza Assistant "Lou AI" Ends Group-Order Gridlock with Smarter, Personalized Picks
+<<<TEXT>>>
+Today, Papa Johns further advanced its technology transformation by unveiling Lou AI– a next-generation AI-powered pizza assistant available in the Papa Johns app designed to end group ordering chaos, help pizza lovers satisfy their cravings quickly and score great deals seamlessly. Lou AI is the first AI-powered platform deployed through Google Cloud’ s...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4e71b4d6f3647ef6
+symbol: PZZA
+published_utc: 2026-05-01T07:30:00Z
+url: https://www.nasdaq.com/press-release/griffin-seafoot-named-champions-tomorrow-scholarship-recipient-papa-johns-canada-and
+headline: Griffin Seafoot Named Champions of Tomorrow Scholarship Recipient by Papa Johns Canada and the CHL
+<<<TEXT>>>
+--Papa Johns Canada and the Canadian Hockey League are proud to announce Griffin Seafoot of British Columbia as the recipient of the Champions of Tomorrow Scholarship. The program awards $25,000 to a youth hockey player making a lasting difference through sport, academics, and service. Griffin was also recently accepted into Shad Canada, one of the country’ s...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 361b40e1d9766912
+symbol: PZZA
+published_utc: 2026-05-05T08:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-teams-disney-and-pixar-release-toy-story-5-2026-05-05
+headline: Papa Johns Teams Up with Disney and Pixar for the release of Toy Story 5
+<<<TEXT>>>
+That sense of wonder comes full circle today as Papa Johns teams-up with Disney and Pixar for Toy Story 5– hitting theaters June 19– for a global collaboration inspired by the all-new movie and the universal language of great pizza. A first for the franchise, Papa Johns brings its commitment to quality ingredients together with the imagination and heart that has...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 385249d0be213878
+symbol: PZZA
+published_utc: 2026-05-06T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-declares-quarterly-dividend-2026-05-06
+headline: Papa Johns Declares Quarterly Dividend
+<<<TEXT>>>
+Papa John’ s International, Inc. today announced that its Board of Directors has declared a quarterly dividend of $0.46 per common share. Papa John’ s International, Inc. opened its doors in 1984 with one goal in mind: BETTER INGREDIENTS. Papa Johns is co-headquartered in Atlanta, Ga. and Louisville, Ky. and is the world’ s third-largest pizza delivery company with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b372ec4e6be2bc30
+symbol: PZZA
+published_utc: 2026-05-07T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-announces-first-quarter-2026-financial-results-2026-05-07
+headline: Papa Johns Announces First Quarter 2026 Financial Results
+<<<TEXT>>>
+Papa John’ s International, Inc. today announced financial results for the first quarter ended March 29, 2026. Global system-wide restaurant sales were $1.20 billion, a 3% decrease compared with the prior year first quarter. North America comparable sales decreased 6.4% from a year ago as comparable sales from Domestic Company- owned restaurants were down...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 41dfb848aeb69dca
+symbol: PZZA
+published_utc: 2026-05-08T09:00:00Z
+url: https://www.nasdaq.com/press-release/skies-pies-papa-johns-turns-spirits-grounded-loyalty-program-free-pizza-2026-05-08
+headline: Skies to Pies: Papa Johns Turns Spirit's Grounded Loyalty Program into Free Pizza
+<<<TEXT>>>
+As recent airline uncertainty has left many travelers clutching expired boarding passes and loyalty points that were rendered useless, Papa Johns is offering a soft landing. Introducing Skies to Pies, a limited‑ time offer that transforms Spirit Airlines’ unusable loyalty program into something reliable: hot Papa Johns pizza. Show you were a Spirit Loyalty...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 42ef61a10166761f
+symbol: PZZA
+published_utc: 2026-05-13T09:10:00Z
+url: https://www.nasdaq.com/press-release/its-finally-here-papa-johns-brings-garlic-flavored-sauce-retail-stores-summer-2026-05
+headline: It’s Finally Here – Papa Johns Brings Garlic Flavored Sauce to Retail Stores This Summer
+<<<TEXT>>>
+For the first time, Papa Johns is bringing the flavors of its iconic Special Garlic Dipping Sauce to grocery stores nationwide with the debut of Papa Johns Garlic Flavored Sauce. Beloved, endlessly talked about, and the must‑ have part of every Papa Johns order, Papa Johns’ Special Garlic Dipping Sauce has achieved cult‑ favorite status among fans who have spent...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8640f69153817163
+symbol: PZZA
+published_utc: 2026-05-27T07:00:00Z
+url: https://www.nasdaq.com/press-release/big-screen-real-life-papa-johns-launches-papa-johns-pizza-planet-pop-ups-celebrate
+headline: From the Big Screen to Real Life: Papa Johns Launches ‘Papa Johns Pizza Planet’ Pop-Ups to Celebrate the Release of Disney and Pixar’s Toy Story 5 in Theaters
+<<<TEXT>>>
+Papa Johns today announced the launch of four Papa Johns Pizza Planet experiences as part of their global collaboration celebrating Disney and Pixar’ s upcoming June 19 theatrical release, Toy Story 5. Opening on select dates throughout June across major cities including London, Seoul, Madrid and Los Angeles, each Papa Johns Pizza Planet pop-up will fully...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7c2e92d096fbb013
+symbol: PZZA
+published_utc: 2026-05-27T07:30:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-teams-disney-and-pixar-release-toy-story-5-2026-05-27
+headline: Papa Johns Teams Up with Disney and Pixar for the Release of Toy Story 5
+<<<TEXT>>>
+That sense of wonder comes full circle today as Papa Johns teams-up with Disney and Pixar for Toy Story 5– hitting theatres June 19– for a global collaboration inspired by the all-new movie and the universal language of great pizza. A first for the franchise, Papa Johns brings its commitment to quality ingredients together with the imagination and heart that has...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ea578dda5c0e6c83
+symbol: PZZA
+published_utc: 2026-06-16T07:30:00Z
+url: https://www.nasdaq.com/press-release/kamloops-student-athlete-awarded-25000-champions-tomorrow-scholarship-memorial-cup
+headline: Kamloops Student-Athlete Awarded $25,000 Champions of Tomorrow Scholarship at Memorial Cup
+<<<TEXT>>>
+--Papa Johns Canada and the Canadian Hockey League proudly announced Griffin Seafoot of Kamloops, British Columbia, as the recipient of the Champions of Tomorrow Scholarship during the championship game of the 2026 Memorial Cup presented by Kubota on May 31. A goaltender from Kamloops, Seafoot has built an impressive record in hockey, academics, and community...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 66a3acf12c7237d0
+symbol: PZZA
+published_utc: 2026-06-30T16:30:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-report-second-quarter-2026-results-august-6-2026-2026-06-30
+headline: Papa Johns to Report Second Quarter 2026 Results on August 6, 2026
+<<<TEXT>>>
+Papa John's International, Inc. will release its second quarter 2026 financial results before the market opens on Thursday, August 6, 2026, with a conference call to follow at 8:00 a.m. ET. Participants on the call will include Todd Penegor, President and Chief Executive Officer, Chris Collins, interim Chief Financial Officer, SVP, Corporate Finance and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2488f52c7d3a5ae1
+symbol: PZZA
+published_utc: 2026-06-30T16:31:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-announces-cfo-transition-2026-06-30
+headline: Papa Johns Announces CFO Transition
+<<<TEXT>>>
+Collins succeeds Ravi Thanawala, who is leaving Papa Johns to assume a chief financial officer position at another public company. He joined Papa Johns as Vice President, Treasury and Tax in April 2021 and previously served as the Company’ s interim Chief Financial Officer and Principal Accounting Officer from March 2023 until July 2023.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: de937b633c6191a3
+symbol: PZZA
+published_utc: 2026-07-13T09:00:00Z
+url: https://www.nasdaq.com/press-release/back-popular-demand-epic-pepperoni-stuffed-crust-pizza-returns-papa-johns-2026-07-13
+headline: Back by Popular Demand: Epic Pepperoni-Stuffed Crust Pizza Returns to Papa Johns
+<<<TEXT>>>
+This summer, Papa Johns is bringing back the fan-favorite Epic Pepperoni-Stuffed Crust Pizza for a limited time. Crafted with Papa Johns fresh, never-frozen original dough made from six simple ingredients, stuffed by hand with real pepperoni and cheese baked directly into the crust, the Epic Pepperoni-Stuffed Crust Pizza showcases the quality ingredients...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2259094d3c2eab31
+symbol: PZZA
+published_utc: 2026-08-06T06:58:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-announces-leadership-appointments-support-ongoing-transformation-strategy
+headline: Papa Johns Announces Leadership Appointments to Support Ongoing Transformation Strategy
+<<<TEXT>>>
+Papa Johns International, Inc. today announced several changes to the Company’ s leadership team to further support the Company’ s ongoing strategic transformation. Chris Lyn-Sue, who serves as Senior Vice President, General Manager of International, has been named Global Chief Marketing Officer. Prior to joining Papa Johns, he held global brand leadership...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bbf8b0338b27f248
+symbol: PZZA
+published_utc: 2026-08-06T07:00:00Z
+url: https://www.nasdaq.com/press-release/papa-johns-announces-second-quarter-2026-financial-results-2026-08-06
+headline: Papa Johns Announces Second Quarter 2026 Financial Results
+<<<TEXT>>>
+Papa John’ s International, Inc. today announced financial results for the second quarter ended June 28, 2026. Global system-wide restaurant sales were $1.20 billion, a 4.8% decrease compared with the prior year second quarter. North America comparable sales decreased 8.3% from a year ago as comparable sales from Domestic Company- owned restaurants were...
+<<<END>>>

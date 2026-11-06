@@ -1,0 +1,47 @@
+{
+  "XLK": {
+    "name": "Technology",
+    "industries": []
+  },
+  "XLF": {
+    "name": "Financials",
+    "industries": []
+  },
+  "XLV": {
+    "name": "Health Care",
+    "industries": []
+  },
+  "XLE": {
+    "name": "Energy",
+    "industries": []
+  },
+  "XLY": {
+    "name": "Consumer Discretionary",
+    "industries": []
+  },
+  "XLP": {
+    "name": "Consumer Staples",
+    "industries": []
+  },
+  "XLI": {
+    "name": "Industrials",
+    "industries": []
+  },
+  "XLB": {
+    "name": "Materials",
+    "industries": []
+  },
+  "XLU": {
+    "name": "Utilities",
+    "industries": []
+  },
+  "XLRE": {
+    "name": "Real Estate",
+    "industries": []
+  },
+  "XLC": {
+    "name": "Communication Services",
+    "industries": []
+  },
+  "_note": "The 11 SPDR sector ETFs. `industries` stays empty until the Finnhub company-profile endpoint is added (Advisor v1 spec section 2.1): it will hold that endpoint's own industry names, which are not guessed here. Until then the sector is given on the work order (`WorkOrder.sector`, one of these keys)."
+}

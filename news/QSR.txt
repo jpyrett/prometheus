@@ -1,0 +1,1255 @@
+<<<ARTICLE>>>
+id: finnhub:143501124
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T17:30:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=972b8adc6c2dfeb65c54e28c85fa08acb8bedae02571c0b442bbf6ad16561f56
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Tim Hortons parent RBI reports increased profit, slower sales growth
+<<<SUMMARY>>>
+The iconic Canadian coffee chain represents roughly 41 per cent of the parent company's operating profit
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143307884
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:15:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c71c41142615b8a516d22011871cf327e8df99a4ab35acefbcab125584b83141
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands Q3 Profit Exceeds Forecasts Despite Revenue Miss
+<<<SUMMARY>>>
+Restaurant Brands International (NYSE:QSR) reported third-quarter 2026 adjusted earnings above analysts’ expectations on Thursday, although revenue fell slightly short of forecasts. The company also reaffirmed its full-year operating income growth guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143307885
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:06:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=157d60fbc028931ac640e31def3071a3df067062b1c259fa8b23cdab377ba8a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Burger King sales soar, while Popeyes struggles
+<<<SUMMARY>>>
+Burger King's same-store sales rose 8.4% in the U.S. and declined 2.2% at its fast-food chicken chain sibling.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143307891
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:00:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e58eeb4e4fdc0c96b065790bc05ca210757a505e640d326e844254497ef72008
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Popeyes wing cuts and value miss drag sales, Burger King stays hot
+<<<SUMMARY>>>
+Popeyes’ focus on the core menu has improved satisfaction, food quality and value scores — but not sales. Burger King’s success sped up its refranchising.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143307886
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=874664b94b221b2eb1e7c6a4ff50d07762e61ae0d92028fba385a5827e5ab8be
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands (QSR) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+<<<SUMMARY>>>
+Although the revenue and EPS for Restaurant Brands (QSR) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143294105
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:58:54Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=83948e6d2a466120dc33af601638b4c93d3bb1322cd771e4e5878c4b90f6c3c8
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1449133039/image_1449133039.jpg?io=getty-c-w1536
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands: A Zombie Stock, But Burger King Shines
+<<<SUMMARY>>>
+Restaurant Brands International is rated hold as Q3 revenue & EPS show modest growth, but debt and macro headwinds cap upside. Click for this QSR stock update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288085
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:32:12Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=12de9623f0f837edd50ca46f56947984617825e3789f2c9ed3559fe94f793e04
+image_url: 
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International Inc. Reports Third Quarter 2026 Results
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288070
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:29:40Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=c2bc66bcd0991a9af261b49ef0d77da38112ea0e7af38f1089657b880127d779
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_17_c249efcc18.webp
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands Intern (NYSE:QSR) Posts In-Line Q3 Results With Solid System Sales Growth
+<<<SUMMARY>>>
+Restaurant Brands Q3 2026 results came in line with estimates as revenue slightly missed and EPS edged higher, with steady system sales growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293027
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:29:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=d85a2c4ba9a61714fffe078e612a033690d28a34a90f4292d59418e9dbcd0d69
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International Inc. (QSR) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Restaurant Brands International Inc. (QSR) Q3 2026 Earnings Call October 29, 2026 8:30 AM EDTCompany ParticipantsTara AndrewsJoshua Kobza - Chief Executive...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143301139
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T11:35:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db43cc307b1b0249c828b1a410f887c089663bca0f2a8a95b517a3d493a9889a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands (QSR) Beats Q3 Earnings Estimates
+<<<SUMMARY>>>
+Restaurant Brands (QSR) delivered earnings and revenue surprises of +1.85% and -0.43%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143307888
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T11:07:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=05e292be99fa101977844224f7a187a7902adab2f58a8d598a1efe0c55996037
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands (NYSE:QSR) misses Q3 2026 sales expectations
+<<<SUMMARY>>>
+Fast-food company Restaurant Brands (NYSE:QSR) fell short of the market’s revenue expectations in Q3 2026 as revenue rose 3.1% year on year to $2.53 billion. Its non-GAAP profit of $1.10 per share was 1.4% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143307889
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T10:44:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6ff82dfc50e0d49ea551c2293e6c143169b1ab22bfebda5604232f64ea82f42
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+MIAMI (AP) — MIAMI (AP) — Restaurant Brands International (QSR) on Thursday reported third-quarter earnings of $542 million.The Miami-based company said it had net income of $1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143345733
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T10:09:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=902976f9e51be1123e76169ff91c70a2e4ce0131d8a2b2762e10a984bc1e1286
+image_url: 
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands Exec Says Popeyes' Return To Positive Same-Store Sales In H2 Will Take Longer Than Expected
+<<<SUMMARY>>>
+- Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289144
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T10:03:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6f30f1590c7a8f837626f93e92e4ccdc8494bb4b36be7a11d7dd9224950167a0
+image_url: 
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands Exec Says Co Sees Some Impact From Higher Gas Prices, Especially In Drive-Thru And Rural Market
+<<<SUMMARY>>>
+- Conference Call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289145
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T09:14:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a10cdabc7c2ced49175a7f88bee856f9c0d08a5257892afdff3990d36836bec6
+image_url: 
+category: company
+tickers: QSR
+keywords: 
+headline: TD Cowen Reiterates Hold on Restaurant Brands Intl, Maintains $78 Price Target
+<<<SUMMARY>>>
+TD Cowen  analyst Andrew M. Charles   reiterates Restaurant Brands Intl (NYSE:QSR) with a Hold and maintains $78 price target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289146
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T08:12:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=22cc86aecb3cb7c689b9543f46a3c7ebeb02cad51311a3ba37c81a6945bf711f
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/29/Berlin---Oct-01-Burger-King-Restaurant-E.jpg?width=2048&height=1536
+category: company
+tickers: QSR
+keywords: 
+headline: Burger King or Popeyes: Who Is Shining?
+<<<SUMMARY>>>
+Restaurant Brands posts Q3 EPS beat of $1.10 as Burger King drives growth, offsetting a slight revenue miss and softer Popeyes sales.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289147
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T06:32:35Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2b256369a3ae1e8e48c96fea0a984741f98e3ea5e8f7224628c3230587af9aee
+image_url: 
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands Intl Q3 Adj. EPS $1.10 Beats $1.08 Estimate, Sales $2.525B Miss $2.541B Estimate
+<<<SUMMARY>>>
+Restaurant Brands Intl (NYSE:QSR) reported quarterly earnings of $1.10 per share which beat the analyst consensus estimate of $1.08 by 0.92 percent. This is a 6.8 percent increase over earnings of $1.03 per share from
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143261826
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T15:18:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76391c7cf14384ae54f15494637d361103af9ffd87ae7708539808c4f2eefe4f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands (QSR) Q3 earnings report preview: what to look for
+<<<SUMMARY>>>
+Fast-food company Restaurant Brands (NYSE:QSR) will be reporting results this Thursday morning. Here’s what to expect.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256311
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:11:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e73563731e852ef3c63ba2088b9fce1275cb968ca05ffe8603143ebf9292c7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: What's Going To Happen With McDonald's Stock Soon?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143238441
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T15:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=390e26e0d11f2e5857ecdcbc01d9c6f8a02908e0db37c35964f7966fcb88dc63
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Starbucks to Post Q4 Earnings: What's in the Cards for the Stock?
+<<<SUMMARY>>>
+SBUX's fiscal fourth-quarter results are likely to reflect China's shift to a licensed model, stronger U.S. comparable sales and cost-saving initiatives supporting earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143237251
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T13:00:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f232fbecb759a3de51012c0ea6c5f4b93d6dcdf7c9143648be1ec6bc2c29978
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Analysts Estimate Yum Brands (YUM) to Report a Decline in Earnings: What to Look Out for
+<<<SUMMARY>>>
+Yum (YUM) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143235653
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T10:30:51Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7675ba42b1a3ea8b88fe6c4bf603a9ed21ae7120a04e6dc0a28fb4ede5563d5d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2226709220/image_2226709220.jpg?io=getty-c-w1536
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International: Burger King Gains, But Tim Hortons Sags
+<<<SUMMARY>>>
+Restaurant Brands International stock looks fairly valued as Burger King strength offsets Tim Hortons softness. Learn more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143201779
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T16:06:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e1e3640d4bada89bb0441750d0603ae1478a09eff94cd5e2279a9b809229dcc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: RBC flags earnings upside at Chipotle, Burger King parent and Jersey Mike’s
+<<<SUMMARY>>>
+Investing.com -- RBC Capital Markets sees potential for stronger comparable sales at Chipotle Mexican Grill, Restaurant Brands International and Jersey Mike's Subs as the restaurant operators prepare to report quarterly results, with promotional activity and digital engagement among the potential growth drivers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143208569
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T15:10:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da180f9354a3564a9e38f90181df983bd881fca958a95a9a8e9f8a50d0c85be0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Will Restaurant Brands (QSR) Beat Estimates Again in Its Next Earnings Report?
+<<<SUMMARY>>>
+Restaurant Brands (QSR) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143207659
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T14:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a9435ffc210ce3dc163394448a1ad64ab55fbab3ec55a1293b33417520cc6990
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Builders FirstSource Gears Up for Q3 Earnings: What's in Store?
+<<<SUMMARY>>>
+BLDR heads into Q3 earnings with sales and EPS seen falling amid housing headwinds, as acquisitions and value-added products offer support.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143184350
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-25T15:00:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ab1a69c205cacecc8c72b7ecc324ebc7a903d8f2aa8dd17ca70353214d6a73b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Why Placer.ai Traffic Data Predicts a Surprise for Restaurant Brands (QSR) on Oct 29
+<<<SUMMARY>>>
+Placer.ai foot traffic data points to a potential fifth straight earnings beat for Restaurant Brands International, but one struggling brand and record beef costs could unravel the entire multi-brand growth story before it gets credit.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143160397
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T07:16:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6a32061af25d2b467ce9976081caf3f0f2b4327581b09f9b0d186c75b99e2f8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: How Raised Earnings Forecasts At Restaurant Brands International Stock Has Changed Its Investment Story
+<<<SUMMARY>>>
+Analysts recently raised their earnings forecasts for Restaurant Brands International ahead of the September 2026 quarter, with the consensus EPS estimate moving higher and the latest projections pointing to the possibility of an earnings beat on stronger revenue. The shift in expectations centers on how Restaurant Brands International is converting its multi brand quick service model into higher profitability, as analysts highlight upside potential in earnings quality rather than just top...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143145289
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T01:36:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=466528cb3298fb4b04c7e5eaac4c8ff3ce9096a52b991f2d8832a3695c9c49c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Traditional fast food stocks Q2 teardown: Restaurant Brands (NYSE:QSR) vs the rest
+<<<SUMMARY>>>
+Wrapping up Q2 earnings, we look at the numbers and key takeaways for the traditional fast food stocks, including Restaurant Brands (NYSE:QSR) and its peers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143139468
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T22:07:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b93f3ffd30ad4e68ea30cfae7c89718b0ede589066efff5c08f12d73d35b441f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International (QSR) Could Be 12% Undervalued After Rising Earnings Expectations
+<<<SUMMARY>>>
+Restaurant Brands International (NYSE:QSR) is back in focus after the market turned more upbeat on its upcoming September quarter results, with consensus earnings estimates raised and expectations pointing to higher revenue. The stock has climbed with a 5.14% 30 day share price return and an 11.10% year to date share price gain, contributing to a 15.80% one year total shareholder return and a 58.49% five year total shareholder return. This indicates momentum building as Restaurant Brands...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143139469
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T13:14:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0465c64c4692ad5b2201437c63d6206ecf35dbe57257e7406a35503850927a49
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Is Restaurant Brands International (QSR) Too Pricey After Its 60% Run?
+<<<SUMMARY>>>
+Restaurant Brands International has ridden a solid multi year run and fresh optimism around Burger King's turnaround, which puts a spotlight on a basic question for you as a shareholder or potential buyer. Is the current share price really backed by the cash flows the business is expected to generate over time, or has sentiment moved ahead of the numbers. Over the past 5 years the stock has returned 60.2%, which puts real pressure on the cash flow story to justify where the valuation now...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143122468
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T08:03:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ebcd901e67e8ffd35addb26cdcac8910ebf5ea3ad4299e0dc784542b66bc086
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: What Could Lift Starbucks Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540805
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ffb0aecc82c47d743bab847aec42b71a5f6e546ec87f2db7058e9a153d74ffd7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Is McDonald's Stock Worth Buying Amid Growth and Valuation Risks?
+<<<SUMMARY>>>
+MCD's franchise model, global growth and strong cash generation support its long-term outlook, but weak U.S. traffic and valuation risks favor patience.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539666
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:58:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83bfb70dfbf27b3cd05ae272034dff5995d341a16d67bff0adc4e55e5872a997
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: McDonald's Jumps 21.4% in a Month, but Can MCD Keep Climbing Higher?
+<<<SUMMARY>>>
+MCD's 21.4% rally gains support from stronger earnings and international sales, but weak U.S. traffic and inflation pose challenges to sustaining momentum.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539667
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=221a136df3d9829d843862445ce402600292d55b67cd29fe3c7f4c26f7224bce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: McDonald's Q3 Earnings Beat, but U.S. Traffic Still Pressures Growth
+<<<SUMMARY>>>
+MCD beats Q3 earnings estimates as franchised margins and international growth support results, but weak U.S. traffic and modest revenue growth pose challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539668
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0ec7e6a99c2381fa0def5025d6ca8594bfbb7660d2945bb977da631279b01b1b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Should You Buy, Sell or Hold Chipotle Stock Post Q3 Earnings?
+<<<SUMMARY>>>
+CMG's Q3 revenue growth and positive traffic trends signal progress, but shrinking margins, rising costs and premium valuation warrant caution.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539463
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:17:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b4e98c07872185d2ee7dec55770b498957b688013b63a8f48e954d1830383a25
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Krispy Kreme Shares Up 30% After EPS Surprise
+<<<SUMMARY>>>
+By Karen Roman Krispy Kreme, Inc. (Nasdaq: DNUT) said third quarter net revenue was $328.8 million, down 12.4% compared to the year prior. Adjusted earnings per share were $0.06 compared to $0.01, with price per share trading 30% up in the open market. Systemwide sales increased 1.0% in constant currency from the prior year to […] The post Krispy Kreme Shares Up 30% After EPS Surprise appeared first on ExecEdge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493699
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:05:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c392eb299f81c02ef210f9ac8162c22bfff0d5fb1bc422fd04fc7997317aa49b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: McDonald’s Soars 6% on Earnings Beat as CEO Calls Entry-Level Value the “Final Piece That’s Missing”
+<<<SUMMARY>>>
+Key TakeawaysMcDonald’s shares rose 6% after third-quarter adjusted EPS of $3. 57 beat the $3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143496092
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T15:02:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=466a1fe18ffe9c5517157a834eeb0581352e92b2d3ee3fbeba5189c8d4396b12
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International Inc. (QSR) Is Pursuing a Major Growth Opportunity: Can It Deliver?
+<<<SUMMARY>>>
+Pershing Square Inc. recently released its Q3 2026 investor letter. A copy of the letter can be downloaded here. The letter reported 13% year-over-year growth in third-quarter fee-related earnings (FRE) to $63.7 million, while distributable earnings (DE) before taxes increased 8% to $61.0 million. After taxes, DE totaled $49.5 million, or $0.12 per share, down […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487269
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3cd0d4d5375826c2c087b51bedca9344ef9a21cec6c4ebc9d4a1351615c6417a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: These 4 Restaurant Giants Have Different Ways to Win Diners
+<<<SUMMARY>>>
+Cheap eats, menu buzz, table service, or fresh paint? Here's which restaurant strategy is winning diners right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143469810
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T02:35:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=37d252857055b040ef7c2c7bc56bb09f747677fc357e5ea779ec010b7991094d
+image_url: 
+category: company
+tickers: QSR
+keywords: 
+headline: Higher Margins, Better ROIC And Capable Management Define Pershing Square's Q3 2026 Portfolio
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449120
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:57:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db61e8484ad29a3bb331dd6cd6322bc11fc0d13a3f888945d54610dfb6707d8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Can Chipotle Stock Jump 50%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143405540
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T23:17:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=821f27c6d4b6f593500d6b7b464bb1f752243959ea86c53d83d1de31aacd7a10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: QSR Q3 deep dive: Burger King remodels and menu innovation drive operational focus
+<<<SUMMARY>>>
+Fast-food company Restaurant Brands (NYSE:QSR) missed Wall Street’s revenue expectations in Q3 2026 as sales rose 3.1% year on year to $2.53 billion. Its non-GAAP profit of $1.10 per share was 1.4% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401075
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T18:46:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff4f9a4f32870eecf8855bf34d72a075b54cde8ab47e1d6b94c4d852f2ed2662
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Is Chipotle Stock Still Worth Owning After Its Quarter?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143405541
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T18:37:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=33253eec5fddfc3a2d964f027308883b370a32fbf5eaed4a6dd3c1809d4644f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: The top 5 analyst questions from Restaurant Brands’s Q3 earnings call
+<<<SUMMARY>>>
+Restaurant Brands’ third quarter results were met with a negative market reaction as revenue came in below Wall Street’s expectations, despite non-GAAP earnings per share slightly beating consensus. Management attributed performance to resilient same-store sales growth and continued expansion of its global restaurant footprint. CEO Josh Kobza noted consistent sales gains at Burger King and Tim Hortons, highlighting “strong performances from Burger King U.S. and International and a return to soli
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143405542
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a97aabfaa7daa6985c062aeb2a7f5119f81a12fd292e5c9594a6a939990185f0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Dine Growth Group Adds HTeaO to Portfolio of Restaurant Brands
+<<<SUMMARY>>>
+Dine Growth Group (DGG), a franchise sales organization designed exclusively to support the growth of restaurant brands, is partnering with HTeaO to accelerate the iced tea concept's expansion as the brand opens new states and markets for franchise development. Approaching 200 locations across 11 states, the rapidly-expanding brand now joins East Coast Wings + Grill and Sammy's Sliders in the DGG portfolio.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143376433
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T16:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6bb51310911dce5abb450cf47a9626d62a6936ff68bcee7dcabbe6d1f3353e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Burger King's menu change isn’t just about better chicken nuggets
+<<<SUMMARY>>>
+The chain has reclaimed one crown and has made a major menu change to better challenge McDonald’s and Wendy’s.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143371003
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T10:13:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5fab5199d0a21c2eb3f5548847aa9fafb7bc4385ac0a11cf4976d0f380637a9e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International (QSR) Resets Popeyes Leadership As Sales Slip And Other Brands Grow
+<<<SUMMARY>>>
+Restaurant Brands International (NYSE:QSR) reported contrasting brand trends, with Burger King and Tim Hortons outpacing a weaker Popeyes segment. Popeyes is undergoing an operational shake-up after ongoing same store sales declines and the departure of its chief marketing officer. Burger King reported strong recent U.S. sales momentum tied to menu changes and restaurant investment, while Tim Hortons posted solid growth. The Popeyes leadership shake-up and brand divergence matter, but...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143371004
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T04:13:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1791453af828479bcc90ad94b033350e74eff526874455a4327c608271c34da6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: What Restaurant Brands International (QSR) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+Restaurant Brands International (NYSE:QSR) reported third-quarter results marked by 3.8% comparable sales growth, 3% net restaurant growth and 6.2% system-wide sales growth, as strength at Burger King and the company’s international operations helped offset continued sales pressure at Popeyes. Chie
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143359421
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T00:27:35Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=0172ef774cf9b272f8adbe022a41b3868287d8f9a1ea660362da48fe9e29d85a
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2226709220/image_2226709220.jpg?io=getty-c-w1536
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International: Burger King Continues To Sizzle, But Popeyes Has Me Worried
+<<<SUMMARY>>>
+Restaurant Brands looks attractive as Burger King drives growth, Tim Hortons improves, and valuation stays compelling. Read here for more on QSR stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143352062
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T15:46:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd723f8467316eb46acf96da8700a0caf5e792a13d00d2cf7614909ac42375f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Burger King's chicken nuggets just got a Whopper-like makeover — fries are next
+<<<SUMMARY>>>
+The turnaround at Burger King continues to sizzle.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143346544
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T11:31:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=53fe148cbe6b395424ecd9f35ff4b09d33603af7dfa9eb32cad8aa6599f37beb
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2120169924/image_2120169924.jpg?io=getty-c-w1536
+category: company
+tickers: QSR
+keywords: 
+headline: Wingstop: Don't Confuse A Rally With A Turnaround
+<<<SUMMARY>>>
+Wingstop Inc. remains a Sell despite its rally, as weak same-store sales, slowing growth, and rich valuation risks persist. Click for this WING earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143352063
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T11:29:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c519865989a3e8da705840c12577557a994b71aa6b068fd6be43ff8181d7383
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International’s net income rises to $542m in Q3
+<<<SUMMARY>>>
+Revenue for the quarter rose to $2.53bn from $2.4bn a year earlier.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143342107
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T11:15:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84a4d388f51e8006779032e5e43928cbe9f4a605c13c553e5ab8698589f332ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Why Did Chipotle Stock Jump?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143352064
+symbol: QSR
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T01:45:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fbb0681c123dd304184425df6f234f22fcbdb41281f3a6d021bca92c587324b3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: QSR
+keywords: 
+headline: Restaurant Brands International Inc. Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Restaurant Brands International Inc.'s Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a078921147c5504823fa8081d3a472ce100f7c92f5da3cfcf8dce9d7855f7b8a
+symbol: QSR
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-26T14:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3015204/builders-firstsource-gears-up-for-q3-earnings-what-s-in-store?cid=CS-ZC-FT-analyst_blog|earnings_preview-3015204
+image_url: https://staticx-tuner.zacks.com/images/articles/main/24/218.jpg
+category: 
+tickers: BLDR, SG, QSR, LOCO
+keywords: earnings preview, housing market weakness, profit margin pressure, acquisitions, fuel costs, residential construction
+headline: Builders FirstSource Gears Up for Q3 Earnings: What's in Store?
+<<<SUMMARY>>>
+Builders FirstSource is set to report Q3 2026 results on October 29 with consensus EPS expected at $1.13, down 39.9% year-over-year. The company faces headwinds from weak housing demand, elevated interest rates, competitive pricing, and higher fuel costs that are pressuring both revenues (projected at $3.79 billion, down 3.8% YoY) and profit margins. While strategic acquisitions and value-added products provide some support, the Zacks model does not predict an earnings beat given the negative Earnings ESP of -0.35% and Zacks Rank #4 (Sell) rating.
+<<<INSIGHTS>>>
+BLDR | negative | Significant year-over-year EPS decline of 39.9%, revenue decline of 3.8%, margin pressures from weak volumes and elevated fuel costs, negative Earnings ESP of -0.35%, and Zacks Rank #4 (Sell) rating indicate poor near-term outlook despite acquisition support.
+SG | neutral | Positive Earnings ESP of +4.26% and Zacks Rank #2 (Buy) suggest potential for earnings beat, but expected 3.7% YoY earnings decline and consistent misses in trailing four quarters (average miss 43%) create mixed signals.
+QSR | positive | Positive Earnings ESP of +0.26%, Zacks Rank #3 (Hold), expected 4.9% YoY earnings growth, and consistent earnings beats in trailing four quarters (average surprise 3.8%) indicate solid performance expectations.
+LOCO | neutral | Positive Earnings ESP of +2.08% and Zacks Rank #3 (Hold) with strong historical beat record (average surprise 16.8%) are offset by expected 11.1% YoY earnings decline in the to-be-reported quarter.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c49b933062e680fbc03d6a22cc0829b1f8bf1254434c30ac4bdd05a3f3dd3dfc
+symbol: QSR
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-26T15:10:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3015143/will-restaurant-brands-qsr-beat-estimates-again-in-its-next-earnings-report?cid=CS-ZC-FT-fundamental_analysis|yseop_template_7-3015143
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default288.jpg
+category: 
+tickers: QSR
+keywords: earnings beat, Restaurant Brands, Burger King, Tim Hortons, Earnings ESP, earnings estimates, Zacks Rank
+headline: Will Restaurant Brands (QSR) Beat Estimates Again in Its Next Earnings Report?
+<<<SUMMARY>>>
+Restaurant Brands (QSR), operator of Burger King and Tim Hortons, has a strong track record of beating earnings estimates with an average surprise of 4.38% over the past two quarters. The company has a positive Earnings ESP of +0.26% combined with a Zacks Rank #3 (Hold), suggesting another potential earnings beat is likely when it reports on October 29, 2026.
+<<<INSIGHTS>>>
+QSR | positive | The company has demonstrated a consistent pattern of beating earnings estimates with a 4.38% average surprise over the past two quarters. It currently has a positive Earnings ESP of +0.26% combined with a Zacks Rank #3, which historically produces positive surprises nearly 70% of the time. The upcoming earnings report on October 29, 2026 is positioned favorably based on these metrics.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a9e48b33e78ecbb3d11c5fa92bb5d42d7b84f5646cebe8b668395196e3f2bf63
+symbol: QSR
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T14:00:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3018718/restaurant-brands-qsr-q3-earnings-how-key-metrics-compare-to-wall-street-estimates?cid=CS-ZC-FT-fundamental_analysis|nfm-3018718
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default177.jpg
+category: 
+tickers: QSR
+keywords: Q3 earnings, comparable sales, revenue, EPS, Burger King, Tim Hortons, Popeyes, Firehouse Subs
+headline: Restaurant Brands (QSR) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+<<<SUMMARY>>>
+Restaurant Brands reported Q3 2026 revenue of $2.53 billion (+3.1% YoY) and EPS of $1.10 (+6.8% YoY), slightly missing revenue estimates but beating EPS expectations. Mixed comparable sales performance across brands, with Burger King showing strong growth at +8.3% while Popeyes declined -1.8%. The stock has a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+QSR | neutral | Mixed results with revenue slightly missing consensus estimates (-0.43% surprise) while EPS beat expectations (+1.85% surprise). Year-over-year growth is modest at 3.1% for revenue. Comparable sales performance is inconsistent across brands, with Burger King strong but Popeyes weak. Hold rating suggests market-in-line performance expected.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5f9a79e574bfd947a1eeb6c771a2503df98631fc0738ffe603b17def187c27fc
+symbol: QSR
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T12:09:00Z
+publisher: The Motley Fool
+author: Anders Bylund
+url: https://www.fool.com/investing/2026/11/04/4-restaurant-giants-win-diners-in-different-ways/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893145%2Frestaurant-staff-working-with-tablet-computer-getty-images.jpg&w=1200&op=resize
+category: 
+tickers: MCD, YUM, DRI, QSR
+keywords: restaurant industry, comparable sales, value pricing, menu innovation, full-service dining, restaurant remodeling, consumer spending, food safety
+headline: These 4 Restaurant Giants Have Different Ways to Win Diners
+<<<SUMMARY>>>
+Four major restaurant chains employ distinct strategies to attract cost-conscious diners: McDonald's focuses on value pricing but stumbled with a spring 2026 promotion; Yum! Brands drives traffic through menu novelty and limited-time offerings; Darden competes on full-service hospitality and modest pricing; and Restaurant Brands succeeds with restaurant remodels and menu refinements. Darden and Restaurant Brands currently show stronger performance, while McDonald's recovers from missteps and Taco Bell rebounds from a food safety incident.
+<<<INSIGHTS>>>
+MCD | negative | Failed value promotion in spring 2026 with inconsistent pricing and removal of popular app deals resulted in weak 0.8% comparable sales growth and declining foot traffic. Company is now in recovery mode.
+YUM | neutral | Menu novelty strategy showing mixed results; Taco Bell recovered quickly from July cyclospora outbreak with 3% same-store sales growth over four weeks, but faced significant headwinds during the crisis period.
+DRI | positive | Strong performance with 3.2% same-restaurant sales growth, record-high guest satisfaction scores, and LongHorn achieving 22 consecutive quarters of positive growth. Full-service hospitality model and modest pricing strategy resonating well with consumers.
+QSR | positive | Burger King achieved 8.4% U.S. comparable sales growth through successful restaurant remodels and menu refinements, reclaiming No. 2 position in burger market. Back-to-basics strategy proving effective, though Popeyes still struggling.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:28d6cb3806795385694de0226da397ba0591c6111d0d9595336ac5c81536efb5
+symbol: QSR
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T16:43:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024696/should-you-buy-sell-or-hold-chipotle-stock-post-q3-earnings?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3024696
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b7/464.jpg
+category: 
+tickers: CMG, CAVA, QSR, TXRH
+keywords: earnings miss, margin contraction, labor costs, inflation, restaurant expansion, sales mix, consumer demand, pricing pressure
+headline: Should You Buy, Sell or Hold Chipotle Stock Post Q3 Earnings?
+<<<SUMMARY>>>
+Chipotle Mexican Grill reported Q3 2026 revenues up 9.6% YoY but earnings fell 6.9%, with restaurant-level operating margins declining 120 basis points to 23.3%. Higher labor costs, increased marketing spending, and unfavorable sales mix pressured profitability. The company expects Q4 margins to remain below 22%, and analysts have downwardly revised 2026 earnings estimates. With a premium valuation and weak near-term outlook, Chipotle received a Zacks Rank #4 (Sell) rating.
+<<<INSIGHTS>>>
+CMG | negative | Earnings declined 6.9% despite revenue growth, restaurant-level operating margins contracted 120 basis points, labor costs increased, and Q4 margins expected to fall below 22%. Downward earnings estimate revisions, premium valuation relative to peers, and uneven consumer demand create near-term headwinds. Zacks Rank #4 (Sell) rating reflects weak investment appeal.
+CAVA | neutral | Mentioned as an industry peer with 60-day earnings estimate decline of negative 3.5%, similar to broader industry headwinds. YTD stock performance up 5.6% but valuation at 87.88 P/E is significantly elevated compared to industry average.
+QSR | neutral | Industry peer with minimal 60-day earnings estimate change of 0.3% and YTD stock performance up 14.9%, outperforming Chipotle. P/E multiple of 18.02 is below industry average, suggesting better relative valuation.
+TXRH | neutral | Industry peer with modest 60-day earnings estimate growth of 2.3% and strong YTD stock performance up 18.4%. P/E multiple of 25.92 is near industry average, indicating relatively stable positioning compared to Chipotle.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aeed19101829492bccc5722cd6cfac16fd494cee96c12aee106820e955bfd64b
+symbol: QSR
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T16:56:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024729/mcdonald-s-q3-earnings-beat-but-u-s-traffic-still-pressures-growth?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3024729
+image_url: https://staticx-tuner.zacks.com/images/articles/main/72/1111.jpg
+category: 
+tickers: MCD, CMG, QSR
+keywords: Q3 earnings, comparable sales, franchise margins, U.S. traffic decline, international growth, restaurant expansion, inflation pressure
+headline: McDonald's Q3 Earnings Beat, but U.S. Traffic Still Pressures Growth
+<<<SUMMARY>>>
+McDonald's reported Q3 adjusted EPS of $3.57, beating consensus by 6.3%, driven by strong franchised margins and other operating income. However, revenue missed expectations at $7.16B, revealing weak U.S. comparable sales (-0.2%) offset by international strength, particularly in Japan, Germany, and Australia. The company plans 2,500 gross restaurant openings in 2026, but softer U.S. traffic and inflation pressures temper near-term growth prospects.
+<<<INSIGHTS>>>
+MCD | neutral | Mixed results with earnings beat offset by revenue miss and weak U.S. comparable sales. Strong franchise model and international growth provide support, but softer U.S. traffic, inflation, and modest revenue growth create near-term execution risks. Zacks Rank #4 (Sell) rating reflects cautious outlook.
+CMG | positive | Reported 2.1% comparable sales growth and 0.8% transaction increase in Q3, outperforming McDonald's U.S. performance and indicating stronger competitive positioning in the QSR space.
+QSR | positive | Burger King U.S. reported 8.4% comparable sales growth in Q3, significantly outperforming McDonald's U.S. comparable sales decline and demonstrating stronger market momentum.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5d00fc8c416f4be3c2659cfa01fc39a84e0118522e35df18b5f6d09f398b41bb
+symbol: QSR
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T16:58:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024736/mcdonald-s-jumps-21-4-in-a-month-but-can-mcd-keep-climbing-higher?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3024736
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f6/355.jpg
+category: 
+tickers: MCD, CMG, QSR
+keywords: McDonald's earnings, comparable sales, U.S. traffic weakness, international growth, restaurant expansion, valuation, competitive pressure
+headline: McDonald's Jumps 21.4% in a Month, but Can MCD Keep Climbing Higher?
+<<<SUMMARY>>>
+McDonald's shares surged 21.4% over four weeks, driven by stronger third-quarter earnings (adjusted EPS up 11% to $3.57) and international sales growth of 1.5%. However, the rally faces headwinds from weak U.S. comparable sales (-0.2%), negative guest traffic, and persistent inflation pressures. The stock carries a Zacks Rank #4 (Sell) rating, suggesting the recent momentum may not be sustainable without improved U.S. traffic recovery.
+<<<INSIGHTS>>>
+MCD | negative | Despite recent 21.4% share price surge and better-than-expected earnings, the company faces significant headwinds including negative U.S. comparable sales (-0.2%), declining guest traffic, and persistent inflation pressures. The Zacks Rank #4 (Sell) rating and Value Score of F indicate the stock does not present a compelling investment case. Valuation support is limited, and U.S. traffic recovery remains uncertain.
+CMG | positive | Chipotle reported stronger third-quarter comparable restaurant sales growth of 2.1% with positive transaction growth, outperforming McDonald's U.S. performance and demonstrating competitive strength in the restaurant sector.
+QSR | positive | Burger King U.S. posted robust 8.4% comparable sales growth in Q3, significantly outperforming McDonald's U.S. performance and indicating competitive market share gains.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9fc42f32c43d29896b1c20a3e17bb583f3e852af6d7bcb430acd6f5deb8736f1
+symbol: QSR
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T17:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024739/is-mcdonald-s-stock-worth-buying-amid-growth-and-valuation-risks?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3024739
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6f/392.jpg
+category: 
+tickers: MCD, CMG, QSR
+keywords: McDonald's, U.S. traffic decline, franchise model, comparable sales, cash generation, competitive pressure, valuation, capital expenditures
+headline: Is McDonald's Stock Worth Buying Amid Growth and Valuation Risks?
+<<<SUMMARY>>>
+McDonald's reported 5% revenue growth and 7% operating income increase in the first nine months of 2026, supported by its franchise model and international expansion. However, weak U.S. comparable sales (-0.2% in Q3), persistent inflation, and competitive pressures from rivals like Chipotle and Burger King present near-term challenges. While strong cash generation supports capital expenditures and shareholder returns, the stock carries a Zacks Rank #4 (Sell) rating, suggesting investors should exercise patience until execution improves.
+<<<INSIGHTS>>>
+MCD | negative | Despite solid revenue and operating income growth, weak U.S. comparable sales (-0.2%), declining guest counts, persistent inflation, and competitive pressures from Chipotle and Burger King warrant caution. The Zacks Rank #4 (Sell) rating and Value Score of F indicate limited near-term appeal, with execution risks outweighing long-term strengths.
+CMG | positive | Chipotle reported strong Q3 comparable sales growth of 2.1% and transaction growth of 0.8%, demonstrating competitive strength and gaining market share relative to McDonald's in the quick-service restaurant category.
+QSR | positive | Burger King reported robust 8.4% comparable sales growth at U.S. locations in Q3, outperforming McDonald's and indicating strong competitive positioning in the fast-casual segment.
+<<<END>>>

@@ -218,7 +218,10 @@ def test_apples_capital_actions_are_the_cash_flow_rows_with_both_periods(apple):
     assert [a["label"] for a in apple["capital_actions"] if a["item"] == "repayments of debt"] == ["Repayments of term debt", "Repayments of commercial paper, net"]
     assert apple["capital_actions"][0]["columns"] == ["December 27,2025", "December 28,2024"]
     assert {a["item"]: a["topic"] for a in apple["capital_actions"]} == {"share-based compensation expense": "equity_compensation", "taxes paid for net share settlement": "equity_compensation",
-                                                                         "dividends paid": "dividend", "repurchases of common stock": "buyback", "repayments of debt": None}
+                                                                         "dividends paid": "dividend", "repurchases of common stock": "buyback", "repayments of debt": None,
+                                                                         "cash from operations": None}  # the last: Advisor v1 spec 5.5
+    assert apple["period_months"] == 3 and {a["months"] for a in apple["capital_actions"]} == {3}   # a first-quarter 10-Q: the year to date is three months
+    assert apple["capital_actions"][0]["units"].startswith("(In millions")
 
 
 def test_metas_buyback_stopped_and_its_debt_and_share_based_pay_grew(meta):
@@ -398,3 +401,234 @@ def test_a_10_Q_with_only_some_statements_still_gives_what_it_has():
 def test_the_result_is_plain_json(apple):
     import json
     assert json.loads(json.dumps(apple)) == apple
+
+
+# ---------------------------------------------------------------- the Sandisk 10-Q (real lines of the stored page, found by the first real run of the Advisor)
+
+SNDK_SHARES_LABEL = ("Common stock, $0.01 par value; authorized \u2014 450 shares; issued \u2014 150 shares and outstanding \u2014 144 shares "
+                     "(as of July 3, 2026 issued \u2014 149 shares and outstanding \u2014 146 shares)")
+
+
+def test_a_lower_case_units_line_is_read_as_units():
+    rows = fs.parse_rows("CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS\n(in millions, except per share amounts)\nRevenue, net | $ | 11,031 | $ | 2,308\nNet income | $ | 8,101 | $ | 112")
+    assert {r["units"] for r in rows} == {"(in millions, except per share amounts)"} and [r["label"] for r in rows] == ["Revenue, net", "Net income"]
+
+
+def test_revenue_net_is_the_revenue_headline():
+    rows = fs.parse_rows("CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS\n(in millions, except per share amounts)\nRevenue, net | $ | 11,031 | $ | 2,308\nCost of revenue | 1,653 | 1,621\nNet income | $ | 8,101 | $ | 112")
+    assert {i["item"]: i["values"] for i in fs.income_headlines(rows)} == {"revenue": [11031.0, 2308.0], "net income": [8101.0, 112.0]}
+
+
+def test_the_share_count_of_the_dash_layout_is_the_outstanding_shares_now_and_at_the_earlier_date():
+    classes = fs.share_classes(SNDK_SHARES_LABEL, "(in millions, except par value)")
+    assert classes == [{"class": "common stock", "current": 144.0, "prior": 146.0, "change": -2.0, "change_pct": -1.37, "authorized": 450.0, "unit": "million"}]
+    text = f"CONDENSED CONSOLIDATED BALANCE SHEETS\n(in millions, except par value)\nDecember 31, 2026 | July 3, 2026\nTotal assets | $ | 25,793 | $ | 22,507\n{SNDK_SHARES_LABEL} | $ | 2 | $ | 1"
+    sheet = fs.balance_sheet(fs.parse_rows(text))
+    assert sheet["units"] == "(in millions, except par value)" and sheet["shares"]["current"] == 144.0 and sheet["shares"]["change_pct"] == -1.37
+
+
+# ---------------------------------------------------------------- Procter & Gamble's 10-Q (real lines of the stored page: a third layout, found by the first real run of the Advisor)
+
+PG_STATEMENTS = """CONSOLIDATED STATEMENTS OF EARNINGS
+Three Months Ended December 31 | Six Months Ended December 31
+Amounts in millions except per share amounts | 2025 | 2024 | 2025 | 2024
+NET SALES | $ | 22,208 | $ | 21,882 | $ | 44,594 | $ | 43,619
+NET EARNINGS | 4,331 | 4,659 | 9,112 | 8,646
+CONSOLIDATED BALANCE SHEETS
+Amounts in millions | December 31, 2025 | June 30, 2025
+Cash and cash equivalents | $ | 10,825 | $ | 9,556
+Accounts receivable | 6,279 | 6,185
+Total inventories | 7,817 | 7,551
+TOTAL ASSETS | $ | 127,286 | $ | 125,231
+CONSOLIDATED STATEMENTS OF CASH FLOWS
+Six Months Ended December 31
+Amounts in millions | 2025 | 2024
+OPERATING ACTIVITIES (1)
+Net earnings | 9,112 | 8,646
+Share-based compensation expense | 262 | 241
+TOTAL OPERATING ACTIVITIES | 10,380 | 9,127
+Dividends to shareholders | (5,093) | (4,886)
+Treasury stock purchases | (3,528) | (4,449)"""
+
+
+def test_procter_and_gambles_units_row_and_labels_are_read():
+    rows = fs.parse_rows(PG_STATEMENTS)
+    assert {r["units"] for r in rows} == {"Amounts in millions except per share amounts", "Amounts in millions"}
+    actions = {a["item"]: a for a in fs.capital_actions(rows)}
+    assert (actions["dividends paid"]["current"], actions["dividends paid"]["prior"], actions["dividends paid"]["units"]) == (-5093.0, -4886.0, "Amounts in millions")
+    assert (actions["repurchases of common stock"]["current"], actions["cash from operations"]["current"], actions["share-based compensation expense"]["current"]) == (-3528.0, 10380.0, 262.0)
+    items = {i["item"]: i["values"] for i in fs.income_headlines(rows)}
+    assert items["revenue"] == [22208.0, 21882.0, 44594.0, 43619.0] and items["net income"][2] == 9112.0
+    sheet = fs.balance_sheet(rows)
+    assert sheet["units"] == "Amounts in millions" and sheet["items"]["inventories"]["current"] == 7817.0 and sheet["items"]["accounts_receivable"]["current"] == 6279.0 and sheet["items"]["cash"]["current"] == 10825.0
+    assert fs.period_months(rows, "10-Q") == 6                                                         # "Six Months Ended" is the longest heading of the income statement
+
+
+def test_procter_and_gambles_payout_yield_is_worked_in_dollars_from_those_figures():
+    from prometheus.agents.data_clerk import fundamentals as f
+    rows = fs.parse_rows(PG_STATEMENTS)
+    evidence = {"period_months": fs.period_months(rows, "10-Q"), "capital_actions": fs.capital_actions(rows), "income": fs.income_headlines(rows), "balance_sheet": fs.balance_sheet(rows)}
+    value, summary = f.net_payout_yield_ttm(evidence, 393.3e9)
+    assert value == pytest.approx((5093e6 + 3528e6) * 12 / 6 / 393.3e9) and summary["months"] == 6          # about 4.4% a year
+    assert f.cash_balance(evidence)[0] == 10825e6 and f.payout_coverage(evidence)[0] == pytest.approx(5093 / 9112)
+
+
+# ---------------------------------------------------------------- Domino's, Papa John's and Yum's 10-Qs (real lines of the stored pages; the pizza run was the fourth, fifth and sixth layout)
+
+DPZ_STATEMENTS = """Condensed Consolidated Balance Sheets
+(Unaudited)
+(In thousands) | September 6, 2026 | December 28, 2025
+Cash and cash equivalents | $ | 229,035 | $ | 125,675
+Accounts receivable, net | 286,489 | 315,958
+Inventories | 89,535 | 79,189
+Total assets | $ | 1,766,373 | $ | 1,716,459
+Total stockholders\u2019 deficit | (3,955,098 | ) | (3,901,142 | )
+Condensed Consolidated Statements of Income
+(Unaudited)
+Fiscal Quarter Ended | Three Fiscal Quarters Ended
+(In thousands, except per-share data) | 2026 | 2025 | 2026 | 2025
+Total revenues | 1,185,598 | 1,147,054 | 3,530,619 | 3,404,254
+Net income | $ | 152,179 | $ | 139,319 | $ | 427,740 | $ | 420,061
+Condensed Consolidated Statements of Cash Flows
+(Unaudited)
+Three Fiscal Quarters Ended
+(In thousands) | 2026 | 2025
+Net cash provided by operating activities | 520,601 | 552,256
+Purchases of common stock | (308,239 | ) | (277,698 | )
+Payments of common stock dividends and equivalents | (134,331 | ) | (119,503 | )"""
+PZZA_STATEMENTS = """Condensed Consolidated Balance Sheets
+(Unaudited)
+(In thousands, except per share amounts) | June 28,2026 | December 28,2025
+Accounts receivable, net | 94,512 | 103,068
+Inventories | 32,546 | 34,336
+Total assets | $ | 805,031 | $ | 837,508
+Condensed Consolidated Statements of Operations
+(Unaudited)
+Three Months Ended | Six Months Ended
+(In thousands, except per share amounts) | June 28,2026 | June 29,2025 | June 28,2026 | June 29,2025
+Total revenues | 482,397 | 529,166 | 961,006 | 1,047,475
+Net income | 8,700 | 9,671 | 15,638 | 19,014
+Condensed Consolidated Statements of Cash Flows
+(In thousands) | June 28,2026 | June 29,2025
+Net cash provided by operating activities | 35,828 | 66,843
+Dividends paid to common stockholders | (30,864) | (30,493)"""
+YUM_STATEMENTS = """CONDENSED CONSOLIDATED STATEMENTS OF INCOME (Unaudited)
+(in millions, except per share data)
+Quarter ended | Year to date
+Revenues | 6/30/2026 | 6/30/2025 | 6/30/2026 | 6/30/2025
+Total revenues | 2,169 | 1,933 | 4,228 | 3,720
+Net Income | $ | 853 | $ | 374 | $ | 1,285 | $ | 628
+CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited)
+(in millions)
+Year to date
+Net Cash Provided by Operating Activities | 923 | 850
+Repurchase shares of Common Stock | (674) | (338)
+Dividends paid on Common Stock | (413) | (395)
+CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited)
+(in millions)
+6/30/2026 | 12/31/2025
+Cash and cash equivalents | $ | 674 | $ | 709
+Total Assets | $ | 8,682 | $ | 8,197
+Common Stock, no par value, 750 shares authorized; 273 shares issued in 2026 and 277 shares issued in 2025 | — | —
+Total Shareholders\u2019 Deficit | (7,107) | (7,325)"""
+
+
+def pizza(text):
+    rows = fs.parse_rows(text)
+    return rows, {a["item"]: a for a in fs.capital_actions(rows)}, {i["item"]: i["values"] for i in fs.income_headlines(rows)}, fs.balance_sheet(rows)
+
+
+def test_dominos_negative_numbers_split_over_two_cells_title_case_headings_and_a_units_row_are_read():
+    rows, actions, income, sheet = pizza(DPZ_STATEMENTS)
+    assert {r["units"] for r in rows if r["statement"] == "cash_flow"} == {"(In thousands)"} and sheet["units"] == "(In thousands)"
+    assert (actions["repurchases of common stock"]["current"], actions["repurchases of common stock"]["prior"]) == (-308239.0, -277698.0)          # "(308,239 | )" is one negative number
+    assert actions["dividends paid"]["current"] == -134331.0 and actions["cash from operations"]["current"] == 520601.0
+    assert income["revenue"] == [1185598.0, 1147054.0, 3530619.0, 3404254.0] and income["net income"][2] == 427740.0
+    assert sheet["items"]["inventories"]["current"] == 89535.0 and sheet["items"]["accounts_receivable"]["current"] == 286489.0
+    assert sheet["items"]["total_equity"]["current"] == -3955098.0                                                           # a stockholders' DEFICIT is the total equity, negative
+    assert fs.period_months(rows, "10-Q", sheet) == 9                                                                      # "Three Fiscal Quarters": December 28, 2025 to September 6, 2026
+
+
+def test_papa_johns_title_case_headings_and_units_row_are_read_and_the_months_are_six():
+    rows, actions, income, sheet = pizza(PZZA_STATEMENTS)
+    assert actions["dividends paid"]["current"] == -30864.0 and actions["cash from operations"]["current"] == 35828.0 and income["revenue"][2] == 961006.0 and income["net income"][2] == 15638.0
+    assert sheet["units"] == "(In thousands, except per share amounts)" and sheet["items"]["inventories"]["current"] == 32546.0
+    assert fs.period_months(rows, "10-Q", sheet) == 6 and fs.parse_date("June 28,2026").isoformat() == "2026-06-28"
+
+
+def test_yums_year_to_date_months_labels_and_share_count_are_read():
+    rows, actions, income, sheet = pizza(YUM_STATEMENTS)
+    assert actions["repurchases of common stock"]["current"] == -674.0 and actions["dividends paid"]["current"] == -413.0 and income["revenue"][2] == 4228.0
+    assert fs.period_months(rows, "10-Q", sheet) == 6 and sheet["items"]["total_equity"]["current"] == -7107.0              # the balance sheet's own columns are 6/30/2026 and 12/31/2025
+    assert sheet["shares"] and (sheet["shares"]["current"], sheet["shares"]["prior"], sheet["shares"]["unit"]) == (273.0, 277.0, "million")
+
+
+def test_months_from_the_balance_sheet_dates_to_the_nearest_quarter():
+    cols = lambda a, b: {"columns": [a, b]}
+    assert fs.months_from_balance_sheet(cols("September 6, 2026", "December 28, 2025")) == 9
+    assert fs.months_from_balance_sheet(cols("December 31, 2025", "June 30, 2025")) == 6 and fs.months_from_balance_sheet(cols("6/30/2026", "12/31/2025")) == 6
+    assert fs.months_from_balance_sheet({"columns": ["(In thousands)", "June 28,2026", "December 28,2025"]}) == 6          # the units cell is skipped
+    assert fs.months_from_balance_sheet(cols("June 28, 2026", "June 28, 2026")) is None and fs.months_from_balance_sheet(cols("x", "y")) is None and fs.months_from_balance_sheet(None) is None
+
+
+# ---------------------------------------------------------------- McDonald's and Restaurant Brands' 10-Qs (real lines): bare units, four cash-flow columns, other labels, a Part I heading in title case
+
+MCD_STATEMENTS = """CONDENSED CONSOLIDATED STATEMENT OF CASH FLOWS (UNAUDITED)
+In millions | 2026 | 2025 | 2026 | 2025
+Cash provided by operations | 2,807 | 1,998 | 5,222 | 4,426
+Purchases of restaurant businesses | (74) | (56) | (153) | (131)
+Treasury stock purchases | (856) | (505) | (1,251) | (982)
+Common stock dividends | (1,317) | (1,265) | (2,640) | (2,530)
+CONDENSED CONSOLIDATED BALANCE SHEET (UNAUDITED)
+In millions, except per share data | June 30,2026 | December 31,2025
+Total assets | $ | 56,000 | $ | 55,000"""
+QSR_STATEMENTS = """CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
+(In millions of U.S. dollars, except share data, Unaudited) | 2026 | 2025
+Net cash provided by operating activities from continuing operations | 1,308 | 1,159
+Payment of common share dividends and Partnership exchangeable unit distributions | (875) | (826)
+Repurchases of common shares | (444) | (306)"""
+
+
+def test_mcdonalds_bare_units_four_cash_flow_columns_and_its_labels_are_read():
+    _, actions, _, sheet = pizza(MCD_STATEMENTS)
+    assert actions["cash from operations"]["current"] == 5222.0 and actions["cash from operations"]["prior"] == 4426.0                       # the year to date, the last two of four columns
+    assert actions["repurchases of common stock"]["current"] == -1251.0 and actions["dividends paid"]["current"] == -2640.0 and "purchases of restaurant businesses" not in actions
+    assert sheet["units"] == "In millions, except per share data" and fs.period_months(fs.parse_rows(MCD_STATEMENTS), "10-Q", sheet) == 6
+
+
+def test_restaurant_brands_dividend_label_is_read():
+    _, actions, _, _ = pizza(QSR_STATEMENTS)
+    assert actions["dividends paid"]["current"] == -875.0 and actions["cash from operations"]["current"] == 1308.0 and actions["repurchases of common stock"]["current"] == -444.0
+
+
+def test_the_title_case_part_line_is_found_and_a_10q_stored_without_a_part_line_is_read_as_part_one():
+    from langchain_core.documents import Document
+    from prometheus.agents.data_clerk import edgar_text
+    assert edgar_text.PART_LINE.fullmatch("Part I. Financial Information") and edgar_text.PART_LINE.fullmatch("PART II - OTHER INFORMATION") and not edgar_text.PART_LINE.fullmatch("Part I, Item 1A of the Form 10-K")
+
+    def doc(section, body):  # the Document the loader makes for a section of a 10-Q: id sec:<accession>:<section>, headline "<SYMBOL> <form>, filed <date>"
+        return Document(id=f"sec:0001618921-26-000099:{section}", page_content=f"QSR 10-Q, filed 2026-10-29\n\n{body}", metadata={"headline": "QSR 10-Q, filed 2026-10-29", "url": "u"})
+    stored = fs.filings_from_documents([doc("item1", "statements"), doc("item2", "management discussion"), doc("item3", "market risk"), doc("item4", "controls"), doc("item5", "other")])
+    assert set(stored[0]["sections"]) == {"financial_statements", "mdna", "market_risk", "controls", "item5"} and stored[0]["sections"]["financial_statements"] == "statements"
+    named = fs.filings_from_documents([doc("financial_statements", "statements"), doc("mdna", "management discussion")])                       # a filing that was named properly is left alone
+    assert set(named[0]["sections"]) == {"financial_statements", "mdna"}
+
+
+def test_every_way_the_total_equity_row_is_written_is_found_and_a_total_of_liabilities_and_equity_is_not():
+    for label, value in (("Total shareholders\u2019 equity (deficit)", -1023.0), ("Total stockholders\u2019 deficit", -3955098.0), ("Total stockholders\u2019 equity", 500.0), ("Total equity", 7.0), ("Total equity (deficit)", -2.0)):
+        text = f"Condensed Consolidated Balance Sheets\n(In millions) | June 30, 2026 | December 31, 2025\nTotal assets | $ | 59,920 | $ | 59,515\n{label} | ({-value:,.0f}) | (1) \nTotal liabilities and shareholders\u2019 equity (deficit) | $ | 59,920 | $ | 59,515" if value < 0 else \
+               f"Condensed Consolidated Balance Sheets\n(In millions) | June 30, 2026 | December 31, 2025\nTotal assets | $ | 59,920 | $ | 59,515\n{label} | {value:,.0f} | 1\nTotal liabilities and shareholders\u2019 equity (deficit) | $ | 59,920 | $ | 59,515"
+        sheet = pizza(text)[3]
+        assert sheet["items"]["total_equity"]["current"] == value, label
+        assert sheet["items"]["total_equity"]["label"] == label
+
+
+def test_negative_equity_is_true_for_a_deficit_false_for_positive_equity_and_missing_without_a_balance_sheet():
+    from prometheus.agents.data_clerk import fundamentals as fund
+    deficit = fund.negative_equity({"balance_sheet": {"items": {"total_equity": {"current": -1023.0, "label": "Total shareholders\u2019 equity (deficit)"}}, "units": "In millions"}})
+    assert deficit[0] is True and deficit[1]["total_equity_as_reported"] == -1023.0
+    assert fund.negative_equity({"balance_sheet": {"items": {"total_equity": {"current": 5.0}}, "units": None}})[0] is False
+    with pytest.raises(fund.Missing):
+        fund.negative_equity({"balance_sheet": {"items": {}}})
+    with pytest.raises(fund.Missing):
+        fund.negative_equity({})

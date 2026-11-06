@@ -1,0 +1,5005 @@
+{
+ "symbol": "SNDK",
+ "company": "Sandisk",
+ "sector": "XLK",
+ "today": "2026-11-05",
+ "portfolio": "configs/portfolios/jacob_pyrett.json",
+ "order": {
+  "schema_version": 2,
+  "request_id": "c6355c7cbc97",
+  "requester": "user",
+  "created_utc": "2026-11-06T04:14:35Z",
+  "query": "What do the stored news, press releases and filings say about Sandisk (SNDK)?",
+  "action_type": "search_news",
+  "subject": [
+   "SNDK"
+  ],
+  "company": null,
+  "source": "news",
+  "time_period": null,
+  "since_days": 14,
+  "live": false,
+  "top_k": 10,
+  "criteria": null,
+  "status": "data_ready",
+  "resolved": null,
+  "data": {
+   "answer": "**Stored news (last\u202f14\u202fdays)**  \nThe recent news coverage of Sandisk (SNDK) focuses on three main themes:\n\n* **Stock\u2011price pressure and market sentiment** \u2013 Several articles note that Sandisk\u2019s shares have fallen sharply (down\u202f\u2248\u202f45\u202f% over the past four months and an 18\u202f% drop on a single day) as investors trim exposure to AI\u2011linked memory stocks after the U.S. mid\u2011term elections\u202f[5][10].  \n* **Upcoming 8\u2011for\u20111 forward stock split** \u2013 Analysts are discussing the company\u2019s announced split scheduled for\u202fNov\u202f19, describing it as a way to make the shares more accessible to retail investors\u202f[2][9].  \n* **Valuation and growth outlook** \u2013 Opinion pieces debate whether the steep price decline makes the stock a \u201cbargain\u201d or a \u201cvalue trap,\u201d while some analysts highlight strong AI\u2011driven demand, solid revenue and earnings beats, and a low valuation as a \u201cgolden opportunity\u201d\u202f[1][4][8].\n\n**Stored press releases**  \nNo press releases for Sandisk are stored for the past 14\u202fdays, and fetching new releases is not possible at this time.\n\n**Stored SEC filings (last\u202f14\u202fdays)**  \n\n* **Form\u202f10\u2011Q (filed\u202fOct\u202f30,\u202f2026)** \u2013 The filing describes Sandisk as a vertically integrated semiconductor\u2011memory company with a broad portfolio of NAND\u2011flash\u2011based storage solutions serving AI workloads in data\u2011centers, edge devices and consumer products\u202f[11][12].  \n* **Form\u202f8\u2011K (filed\u202fOct\u202f29,\u202f2026)** \u2013 Announces the company\u2019s fiscal Q1\u202f2026 results (quarter ended\u202fOct\u202f2,\u202f2026) and references a press release that contains the detailed financial numbers\u202f[14].\n\nThese sources together show that recent coverage emphasizes Sandisk\u2019s steep share\u2011price decline, the planned 8\u2011for\u20111 split, and mixed analyst views on valuation, while the filings provide the company\u2019s own description of its business and a recent earnings announcement.",
+   "references": [
+    {
+     "number": 5,
+     "chunk_id": "finnhub:143539369#0",
+     "article_id": "finnhub:143539369",
+     "headline": "What's Going On With Sandisk Stock Today?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T15:42:24Z",
+     "url": "https://finnhub.io/api/news?id=7d233f11b870ff15b6faccd0058c8089cc513b7cd04b8908611133c868d6927d",
+     "score": 0.5786145925521851
+    },
+    {
+     "number": 10,
+     "chunk_id": "finnhub:143492395#0",
+     "article_id": "finnhub:143492395",
+     "headline": "Why Sandisk Stock Sank Today",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-04T17:26:38Z",
+     "url": "https://finnhub.io/api/news?id=1681a1a84e459a2e123abc988250224adb85b18b836ddb4f398747c0231cea77",
+     "score": 0.6674376130104065
+    },
+    {
+     "number": 2,
+     "chunk_id": "finnhub:143541839#0",
+     "article_id": "finnhub:143541839",
+     "headline": "Should You Buy Sandisk Before Its 8-for-1 Stock Split on Nov. 19?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T21:27:00Z",
+     "url": "https://finnhub.io/api/news?id=72ba962202a6a75e46e83ba4f1a146ce4dd5a3211a36ee9bf141494843ca8cd6",
+     "score": 0.599095344543457
+    },
+    {
+     "number": 9,
+     "chunk_id": "polygon:85417b6f982df368c4beecc1718c1379c1bedeb3238a6b068920fe33d39f760d#0",
+     "article_id": "polygon:85417b6f982df368c4beecc1718c1379c1bedeb3238a6b068920fe33d39f760d",
+     "headline": "The Wait Is Over: 2 Historic Artificial Intelligence (AI) Stock Splits Were Just Announced",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-05T11:06:02Z",
+     "url": "https://www.fool.com/investing/2026/11/05/the-wait-is-over-2-historic-artificial-intelligence-ai-stock-splits-were-just-announced/?source=iedfolrf0000001",
+     "score": 0.5504757165908813
+    },
+    {
+     "number": 1,
+     "chunk_id": "finnhub:143547024#0",
+     "article_id": "finnhub:143547024",
+     "headline": "Should You Buy SanDisk Stock For Its Cash?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-06T00:01:36Z",
+     "url": "https://finnhub.io/api/news?id=a639a86132a0da05b8d7ba7f830e73886d5c9424654ba344ef208dc2e9e73fba",
+     "score": 0.5999913215637207
+    },
+    {
+     "number": 4,
+     "chunk_id": "finnhub:143542690#0",
+     "article_id": "finnhub:143542690",
+     "headline": "Sandisk: This Is A Golden Opportunity",
+     "publisher": "SeekingAlpha",
+     "published_utc": "2026-11-05T18:18:30Z",
+     "url": "https://finnhub.io/api/news?id=2e30b91eadd5ba65d6001404ecef0423c13e91b46283de441ff92358d86b6331",
+     "score": 0.7653560042381287
+    },
+    {
+     "number": 8,
+     "chunk_id": "finnhub:143538734#0",
+     "article_id": "finnhub:143538734",
+     "headline": "Sandisk: A 35% Stock Decline, But RPO Tells A Different Story (Rating Upgrade)",
+     "publisher": "SeekingAlpha",
+     "published_utc": "2026-11-05T11:50:41Z",
+     "url": "https://finnhub.io/api/news?id=f7fe528b5b54b333ace4d619cedd1579f56cb33c20d90701b2acf3de824967cf",
+     "score": 0.5744912624359131
+    },
+    {
+     "number": 11,
+     "chunk_id": "sec:0001628280-26-068601:financial_statements#13",
+     "article_id": "sec:0001628280-26-068601:financial_statements",
+     "headline": "SNDK 10-Q, Financial Statements, filed 2026-10-30, period ending 2026-10-02",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-30T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt",
+     "score": 0.6908429265022278
+    },
+    {
+     "number": 12,
+     "chunk_id": "sec:0001628280-26-068601:mdna#4",
+     "article_id": "sec:0001628280-26-068601:mdna",
+     "headline": "SNDK 10-Q, Management's Discussion and Analysis, filed 2026-10-30, period ending 2026-10-02",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-30T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt",
+     "score": 0.580317497253418
+    },
+    {
+     "number": 14,
+     "chunk_id": "sec:0001628280-26-068243:items#1",
+     "article_id": "sec:0001628280-26-068243:items",
+     "headline": "SNDK 8-K, filed 2026-10-29",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-29T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068243.txt",
+     "score": 0.5023757815361023
+    }
+   ],
+   "sources": [
+    {
+     "number": 1,
+     "chunk_id": "finnhub:143547024#0",
+     "article_id": "finnhub:143547024",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Should You Buy SanDisk Stock For Its Cash?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-06T00:01:36Z",
+     "url": "https://finnhub.io/api/news?id=a639a86132a0da05b8d7ba7f830e73886d5c9424654ba344ef208dc2e9e73fba",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "Should You Buy SanDisk Stock For Its Cash?\n\nFor questions about this article or underlying research, email help@trefis.com.",
+     "score": 0.5999913215637207
+    },
+    {
+     "number": 2,
+     "chunk_id": "finnhub:143541839#0",
+     "article_id": "finnhub:143541839",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Should You Buy Sandisk Before Its 8-for-1 Stock Split on Nov. 19?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T21:27:00Z",
+     "url": "https://finnhub.io/api/news?id=72ba962202a6a75e46e83ba4f1a146ce4dd5a3211a36ee9bf141494843ca8cd6",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "Should You Buy Sandisk Before Its 8-for-1 Stock Split on Nov. 19?\n\nStock splits aren't as big a deal as they used to be.",
+     "score": 0.599095344543457
+    },
+    {
+     "number": 3,
+     "chunk_id": "finnhub:143540614#0",
+     "article_id": "finnhub:143540614",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Sandisk Stock Is Down 45% Over the Past Four Months. Is It a Bargain or a Value Trap?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T19:03:00Z",
+     "url": "https://finnhub.io/api/news?id=bcf91ba72d591ad49ce7c48f07ea17cecb4952f6e398ba50914cdca637b70cf8",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "Sandisk Stock Is Down 45% Over the Past Four Months. Is It a Bargain or a Value Trap?\n\nInvestors are worried about the future.",
+     "score": 0.6049961447715759
+    },
+    {
+     "number": 4,
+     "chunk_id": "finnhub:143542690#0",
+     "article_id": "finnhub:143542690",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Sandisk: This Is A Golden Opportunity",
+     "publisher": "SeekingAlpha",
+     "published_utc": "2026-11-05T18:18:30Z",
+     "url": "https://finnhub.io/api/news?id=2e30b91eadd5ba65d6001404ecef0423c13e91b46283de441ff92358d86b6331",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "Sandisk: This Is A Golden Opportunity",
+     "score": 0.7653560042381287
+    },
+    {
+     "number": 5,
+     "chunk_id": "finnhub:143539369#0",
+     "article_id": "finnhub:143539369",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "What's Going On With Sandisk Stock Today?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T15:42:24Z",
+     "url": "https://finnhub.io/api/news?id=7d233f11b870ff15b6faccd0058c8089cc513b7cd04b8908611133c868d6927d",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "What's Going On With Sandisk Stock Today?\n\nSandisk Corp. (NASDAQ:SNDK) stock extended its decline Thursday as investors continued reducing exposure to AI-linked semiconductor and memory stocks following the U.S. midterm elections.The stock slid almost 18% in Thursday trading with the S&P 500 futures down 2.54%, pointing to continued pressure within the chip sector rather than a broader market selloff.Memory Stocks Extend Post-Midterm SelloffThe decline spread across the memory complex.Micron Technology Inc. (NASDAQ:MU) fell more than 5%",
+     "score": 0.5786145925521851
+    },
+    {
+     "number": 6,
+     "chunk_id": "finnhub:143537658#0",
+     "article_id": "finnhub:143537658",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Why Sandisk Stock Keeps Going Down",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T15:29:22Z",
+     "url": "https://finnhub.io/api/news?id=9a7bb8653c81428a58126e549c9e1c914f12a770154ee146cb4905e4523f51a6",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "Why Sandisk Stock Keeps Going Down\n\nSandisk soared as the AI revolution took off. But will competition from China bring it all crashing down?",
+     "score": 0.5521003007888794
+    },
+    {
+     "number": 7,
+     "chunk_id": "finnhub:143533679#0",
+     "article_id": "finnhub:143533679",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "SanDisk Slides 7%, Micron and Western Digital Fall 5% as Lawmaker\u2019s Call for AI Pause Extends Memory Rout",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T13:47:07Z",
+     "url": "https://finnhub.io/api/news?id=6ba02d89d6087546c241239d253c29ba5b1ba34f9b01be649d3a12fea94b0d6f",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "SanDisk Slides 7%, Micron and Western Digital Fall 5% as Lawmaker\u2019s Call for AI Pause Extends Memory Rout\n\nA single post on X from a freshly empowered Democrat is rattling the AI trade. Memory and storage stocks that rode data center demand to record quarters now face a policy threat, and one name is bleeding the most.",
+     "score": 0.5632023811340332
+    },
+    {
+     "number": 8,
+     "chunk_id": "finnhub:143538734#0",
+     "article_id": "finnhub:143538734",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Sandisk: A 35% Stock Decline, But RPO Tells A Different Story (Rating Upgrade)",
+     "publisher": "SeekingAlpha",
+     "published_utc": "2026-11-05T11:50:41Z",
+     "url": "https://finnhub.io/api/news?id=f7fe528b5b54b333ace4d619cedd1579f56cb33c20d90701b2acf3de824967cf",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "Sandisk: A 35% Stock Decline, But RPO Tells A Different Story (Rating Upgrade)\n\nSandisk Corporation Q1 2027 beats on revenue and EPS, with AI demand, strong contracts, and low valuation signaling major upside. Click for this SNDK update.",
+     "score": 0.5744912624359131
+    },
+    {
+     "number": 9,
+     "chunk_id": "polygon:85417b6f982df368c4beecc1718c1379c1bedeb3238a6b068920fe33d39f760d#0",
+     "article_id": "polygon:85417b6f982df368c4beecc1718c1379c1bedeb3238a6b068920fe33d39f760d",
+     "chunk": 1,
+     "chunks": 3,
+     "headline": "The Wait Is Over: 2 Historic Artificial Intelligence (AI) Stock Splits Were Just Announced",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-05T11:06:02Z",
+     "url": "https://www.fool.com/investing/2026/11/05/the-wait-is-over-2-historic-artificial-intelligence-ai-stock-splits-were-just-announced/?source=iedfolrf0000001",
+     "tickers": [
+      "META",
+      "METAM",
+      "SNDK",
+      "WDC"
+     ],
+     "text": "The Wait Is Over: 2 Historic Artificial Intelligence (AI) Stock Splits Were Just Announced\n\nMeta Platforms and Sandisk announced their first-ever forward stock splits to make shares more accessible to retail investors. Meta is conducting an unorthodox 2-for-1 split through a new non-voting share class, while Sandisk approved an aggressive 8-for-1 split following a 6,000% rally since its February 2025 spinoff from Western Digital. Both companies are benefiting from AI demand, though Sandisk faces cyclical risks in the memory storage market.",
+     "score": 0.5504757165908813
+    },
+    {
+     "number": 10,
+     "chunk_id": "finnhub:143492395#0",
+     "article_id": "finnhub:143492395",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Why Sandisk Stock Sank Today",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-04T17:26:38Z",
+     "url": "https://finnhub.io/api/news?id=1681a1a84e459a2e123abc988250224adb85b18b836ddb4f398747c0231cea77",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "Why Sandisk Stock Sank Today\n\nElection 2026 wasn't good news for Sandisk stock.",
+     "score": 0.6674376130104065
+    },
+    {
+     "number": 11,
+     "chunk_id": "sec:0001628280-26-068601:financial_statements#13",
+     "article_id": "sec:0001628280-26-068601:financial_statements",
+     "chunk": 14,
+     "chunks": 146,
+     "headline": "SNDK 10-Q, Financial Statements, filed 2026-10-30, period ending 2026-10-02",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-30T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "SNDK 10-Q, Financial Statements, filed 2026-10-30, period ending 2026-10-02\n\nSandisk Corporation (\u201cSandisk\u201d or the \u201cCompany\u201d) is a leading global semiconductor memory company with more than 30 years of innovation in NAND flash technology. Sandisk is a vertically integrated solutions provider with ownership of chip-level design and IP, front and back-end manufacturing, as well as systems engineering and design. Sandisk\u2019s broad and ever-expanding portfolio delivers powerful flash storage solutions for artificial intelligence (\u201cAI\u201d) workloads in datacenters, edge devices, and consumer applications. Sandisk\u2019s technologies enable everyone from students, gamers, and home offices to the largest enterprises and public clouds to produce, analyze, and store data. The Company\u2019s solutions include a broad range of solid-state drives, embedded products, removable cards,",
+     "score": 0.6908429265022278
+    },
+    {
+     "number": 12,
+     "chunk_id": "sec:0001628280-26-068601:mdna#4",
+     "article_id": "sec:0001628280-26-068601:mdna",
+     "chunk": 5,
+     "chunks": 75,
+     "headline": "SNDK 10-Q, Management's Discussion and Analysis, filed 2026-10-30, period ending 2026-10-02",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-30T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "SNDK 10-Q, Management's Discussion and Analysis, filed 2026-10-30, period ending 2026-10-02\n\nSandisk is a leading global semiconductor memory company with more than 30 years of innovation in NAND flash technology. We are a vertically integrated solutions provider with ownership of chip-level design and IP, front and back-end manufacturing, as well as systems engineering and design. With a differentiated innovation engine driving advancements in storage and semiconductor technologies, our broad and ever-expanding portfolio delivers powerful flash storage solutions for artificial intelligence (\u201cAI\u201d) workloads in datacenters, edge devices, and consumer applications. Our technologies enable everyone from students, gamers, and home offices to the largest enterprises and public clouds to produce, analyze, and store data. Our solutions include a broad range of solid-state drives,",
+     "score": 0.580317497253418
+    },
+    {
+     "number": 13,
+     "chunk_id": "sec:0001628280-26-068601:exhibits#2",
+     "article_id": "sec:0001628280-26-068601:exhibits",
+     "chunk": 3,
+     "chunks": 6,
+     "headline": "SNDK 10-Q, Exhibits, filed 2026-10-30, period ending 2026-10-02",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-30T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "SNDK 10-Q, Exhibits, filed 2026-10-30, period ending 2026-10-02\n\n3.1 | Amended and Restated Certificate of Incorporation of Sandisk Corporation dated as of January 28, 2025 (Filed as Exhibit 3.1 to the Company\u2019s Current Report on Form 8-K with the Securities and Exchange Commission on February 24, 2025)\n3.2 | Amended and Restated Bylaws of the Company (Filed as Exhibit 3.1 to the Company\u2019s Current Report on Form 8-K with the Securities and Exchange Commission on February 14, 2025)\n10.1 | Amendment No. 1 dated as of September 9, 2026 by and among Sandisk Corporation, Sandisk Technologies, Inc., each lender party thereto, and JPMorgan Chase Bank, N.A., as administrative agent (Filed as Exhibit 10.1 to the Company\u2019s Current Report on Form 8-K with the Securities and Exchange Commission on September 11, 2026)#",
+     "score": 0.46432650089263916
+    },
+    {
+     "number": 14,
+     "chunk_id": "sec:0001628280-26-068243:items#1",
+     "article_id": "sec:0001628280-26-068243:items",
+     "chunk": 2,
+     "chunks": 7,
+     "headline": "SNDK 8-K, filed 2026-10-29",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-29T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068243.txt",
+     "tickers": [
+      "SNDK"
+     ],
+     "text": "SNDK 8-K, filed 2026-10-29\n\nItem 2.02    Results of Operations and Financial Condition.\nOn October 29, 2026, Sandisk Corporation (the \"Company\") announced financial results for the fiscal first quarter ended October 2, 2026. A copy of the press release making this announcement is attached hereto as Exhibit 99.1 and is incorporated herein by reference.",
+     "score": 0.5023757815361023
+    }
+   ],
+   "sweep": {
+    "news": {
+     "by": "model",
+     "sources": 10,
+     "note": ""
+    },
+    "press_releases": {
+     "by": "model",
+     "sources": 0,
+     "note": ""
+    },
+    "filings": {
+     "by": "model",
+     "sources": 4,
+     "note": ""
+    },
+    "filing_evidence": {
+     "by": "code",
+     "sources": 27,
+     "note": ""
+    }
+   },
+   "results": {
+    "news": {
+     "shown": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "cited": [
+      1,
+      2,
+      4,
+      5,
+      8,
+      9,
+      10
+     ],
+     "swept": []
+    },
+    "press_releases": {
+     "shown": [],
+     "cited": [],
+     "swept": []
+    },
+    "filings": {
+     "shown": [
+      11,
+      12,
+      13,
+      14
+     ],
+     "cited": [
+      11,
+      12,
+      14
+     ],
+     "swept": []
+    }
+   },
+   "filing_evidence": {
+    "SNDK": {
+     "symbol": "SNDK",
+     "as_of": "2026-10-30",
+     "window_days": 365,
+     "filings": {
+      "in_window": 51,
+      "by_form": [
+       {
+        "form": "10-K",
+        "count": 1,
+        "with_text": 1,
+        "latest": "2026-08-17"
+       },
+       {
+        "form": "10-Q",
+        "count": 4,
+        "with_text": 4,
+        "latest": "2026-10-30"
+       },
+       {
+        "form": "144",
+        "count": 24,
+        "with_text": 0,
+        "latest": "2026-09-17"
+       },
+       {
+        "form": "144/A",
+        "count": 1,
+        "with_text": 0,
+        "latest": "2026-02-03"
+       },
+       {
+        "form": "8-K",
+        "count": 11,
+        "with_text": 11,
+        "latest": "2026-10-29"
+       },
+       {
+        "form": "DEF 14A",
+        "count": 1,
+        "with_text": 0,
+        "latest": "2026-10-06"
+       },
+       {
+        "form": "SCHEDULE 13G",
+        "count": 2,
+        "with_text": 0,
+        "latest": "2026-08-05"
+       },
+       {
+        "form": "SCHEDULE 13G/A",
+        "count": 7,
+        "with_text": 0,
+        "latest": "2026-10-27"
+       }
+      ],
+      "with_text": [
+       {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "period_end": "2026-10-02",
+        "sections": [
+         "financial_statements",
+         "mdna",
+         "market_risk",
+         "controls",
+         "legal_proceedings",
+         "risk_factors",
+         "unregistered_sales",
+         "other_information",
+         "exhibits"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       {
+        "accession": "0001628280-26-068243",
+        "form": "8-K",
+        "filed": "2026-10-29",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068243.txt"
+       },
+       {
+        "accession": "0001628280-26-062267",
+        "form": "8-K",
+        "filed": "2026-09-16",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-062267.txt"
+       },
+       {
+        "accession": "0001193125-26-389293",
+        "form": "8-K",
+        "filed": "2026-09-11",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001193125-26-389293.txt"
+       },
+       {
+        "accession": "0001628280-26-057406",
+        "form": "10-K",
+        "filed": "2026-08-17",
+        "period_end": "2026-07-03",
+        "sections": [
+         "business",
+         "risk_factors",
+         "mda"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-057406.txt"
+       },
+       {
+        "accession": "0001628280-26-053346",
+        "form": "8-K",
+        "filed": "2026-08-05",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-053346.txt"
+       },
+       {
+        "accession": "0001193125-26-224694",
+        "form": "8-K",
+        "filed": "2026-05-15",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001193125-26-224694.txt"
+       },
+       {
+        "accession": "0001628280-26-029401",
+        "form": "10-Q",
+        "filed": "2026-05-01",
+        "period_end": "2026-04-03",
+        "sections": [
+         "financial_statements",
+         "mdna",
+         "market_risk",
+         "controls",
+         "legal_proceedings",
+         "risk_factors",
+         "other_information",
+         "exhibits"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-029401.txt"
+       },
+       {
+        "accession": "0001628280-26-028879",
+        "form": "8-K",
+        "filed": "2026-04-30",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-028879.txt"
+       },
+       {
+        "accession": "0001193125-26-122705",
+        "form": "8-K",
+        "filed": "2026-03-25",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001193125-26-122705.txt"
+       },
+       {
+        "accession": "0001628280-26-004407",
+        "form": "10-Q",
+        "filed": "2026-01-30",
+        "period_end": "2026-01-02",
+        "sections": [
+         "financial_statements",
+         "mdna",
+         "market_risk",
+         "controls",
+         "legal_proceedings",
+         "risk_factors",
+         "other_information",
+         "exhibits"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-004407.txt"
+       },
+       {
+        "accession": "0001628280-26-004121",
+        "form": "8-K",
+        "filed": "2026-01-29",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-004121.txt"
+       },
+       {
+        "accession": "0001628280-26-000127",
+        "form": "8-K",
+        "filed": "2026-01-02",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-000127.txt"
+       },
+       {
+        "accession": "0001193125-25-289885",
+        "form": "8-K",
+        "filed": "2025-11-20",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001193125-25-289885.txt"
+       },
+       {
+        "accession": "0001628280-25-050698",
+        "form": "10-Q",
+        "filed": "2025-11-07",
+        "period_end": "2025-10-03",
+        "sections": [
+         "financial_statements",
+         "mdna",
+         "market_risk",
+         "controls",
+         "legal_proceedings",
+         "risk_factors",
+         "other_information",
+         "exhibits"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-25-050698.txt"
+       },
+       {
+        "accession": "0001628280-25-050180",
+        "form": "8-K",
+        "filed": "2025-11-06",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-25-050180.txt"
+       }
+      ]
+     },
+     "period_months": 3,
+     "balance_sheet": {
+      "columns": [
+       "October 2,2026",
+       "July 3,2026"
+      ],
+      "units": "(in millions, except par value)",
+      "items": {
+       "cash": {
+        "label": "Cash and cash equivalents",
+        "group": "Current assets",
+        "current": 5136.0,
+        "prior": 4762.0,
+        "change": 374.0,
+        "change_pct": 7.85,
+        "as_reported": [
+         "5,136",
+         "4,762"
+        ]
+       },
+       "total_current_assets": {
+        "label": "Total current assets",
+        "group": "Current assets",
+        "current": 15352.0,
+        "prior": 12780.0,
+        "change": 2572.0,
+        "change_pct": 20.13,
+        "as_reported": [
+         "15,352",
+         "12,780"
+        ]
+       },
+       "total_assets": {
+        "label": "Total assets",
+        "group": "Current assets",
+        "current": 25793.0,
+        "prior": 22507.0,
+        "change": 3286.0,
+        "change_pct": 14.6,
+        "as_reported": [
+         "25,793",
+         "22,507"
+        ]
+       },
+       "total_current_liabilities": {
+        "label": "Total current liabilities",
+        "group": "Current liabilities",
+        "current": 5951.0,
+        "prior": 5581.0,
+        "change": 370.0,
+        "change_pct": 6.63,
+        "as_reported": [
+         "5,951",
+         "5,581"
+        ]
+       },
+       "total_liabilities": {
+        "label": "Total liabilities",
+        "group": "Current liabilities",
+        "current": 7659.0,
+        "prior": 6771.0,
+        "change": 888.0,
+        "change_pct": 13.11,
+        "as_reported": [
+         "7,659",
+         "6,771"
+        ]
+       },
+       "total_equity": {
+        "label": "Total shareholders\u2019 equity",
+        "group": "Shareholders\u2019 equity",
+        "current": 18134.0,
+        "prior": 15736.0,
+        "change": 2398.0,
+        "change_pct": 15.24,
+        "as_reported": [
+         "18,134",
+         "15,736"
+        ]
+       },
+       "retained_earnings": {
+        "label": "Retained earnings",
+        "group": "Shareholders\u2019 equity",
+        "current": 17750.0,
+        "prior": 9649.0,
+        "change": 8101.0,
+        "change_pct": 83.96,
+        "as_reported": [
+         "17,750",
+         "9,649"
+        ]
+       },
+       "accounts_receivable": {
+        "label": "Accounts receivable, net",
+        "group": "Current assets",
+        "current": 6585.0,
+        "prior": 4708.0,
+        "change": 1877.0,
+        "change_pct": 39.87,
+        "as_reported": [
+         "6,585",
+         "4,708"
+        ]
+       },
+       "inventories": {
+        "label": "Inventories",
+        "group": "Current assets",
+        "current": 3016.0,
+        "prior": 2698.0,
+        "change": 318.0,
+        "change_pct": 11.79,
+        "as_reported": [
+         "3,016",
+         "2,698"
+        ]
+       }
+      },
+      "debt": [],
+      "shares": {
+       "label": "Common stock, $0.01 par value; authorized \u2014 450 shares; issued \u2014 150 shares and outstanding \u2014 144 shares (as of July 3, 2026 issued \u2014 149 shares and outstanding \u2014 146 shares)",
+       "unit": "million",
+       "classes": [
+        {
+         "class": "common stock",
+         "current": 144.0,
+         "prior": 146.0,
+         "change": -2.0,
+         "change_pct": -1.37,
+         "authorized": 450.0,
+         "unit": "million"
+        }
+       ],
+       "as_reported": [
+        "2",
+        "1"
+       ],
+       "current": 144.0,
+       "prior": 146.0,
+       "change": -2.0,
+       "change_pct": -1.37
+      },
+      "source": {
+       "accession": "0001628280-26-068601",
+       "form": "10-Q",
+       "filed": "2026-10-30",
+       "period_end": "2026-10-02",
+       "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt",
+       "section": "financial_statements"
+      }
+     },
+     "capital_actions": [
+      {
+       "item": "share-based compensation expense",
+       "topic": "equity_compensation",
+       "label": "Stock-based compensation",
+       "group": "Adjustments to reconcile net income to net cash provided by operations",
+       "current": 91.0,
+       "prior": 53.0,
+       "change": 38.0,
+       "change_pct": 71.7,
+       "as_reported": [
+        "91",
+        "53"
+       ],
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "units": "(in millions)",
+       "months": 3
+      },
+      {
+       "item": "cash from operations",
+       "topic": null,
+       "label": "Net cash provided by operating activities",
+       "group": "Changes in",
+       "current": 6363.0,
+       "prior": 488.0,
+       "change": 5875.0,
+       "change_pct": 1203.89,
+       "as_reported": [
+        "6,363",
+        "488"
+       ],
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "units": "(in millions)",
+       "months": 3
+      },
+      {
+       "item": "repurchases of common stock",
+       "topic": "buyback",
+       "label": "Repurchases of common stock",
+       "group": "Changes in",
+       "current": -5000.0,
+       "prior": 0.0,
+       "change": -5000.0,
+       "change_pct": null,
+       "as_reported": [
+        "(5,000)",
+        "\u2014"
+       ],
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "units": "(in millions)",
+       "months": 3
+      },
+      {
+       "item": "repayments of debt",
+       "topic": null,
+       "label": "Repayment of debt",
+       "group": "Changes in",
+       "current": 0.0,
+       "prior": -500.0,
+       "change": 500.0,
+       "change_pct": 100.0,
+       "as_reported": [
+        "\u2014",
+        "(500)"
+       ],
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "units": "(in millions)",
+       "months": 3
+      },
+      {
+       "item": "repurchases of common stock",
+       "topic": "buyback",
+       "label": "Unpaid taxes relating to vested stock awards and repurchases of common stock",
+       "group": "Supplemental disclosure of cash flow information",
+       "current": 47.0,
+       "prior": 0.0,
+       "change": 47.0,
+       "change_pct": null,
+       "as_reported": [
+        "47",
+        "\u2014"
+       ],
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "units": "(in millions)",
+       "months": 3
+      }
+     ],
+     "income": [
+      {
+       "item": "revenue",
+       "label": "Revenue, net",
+       "values": [
+        11031.0,
+        2308.0
+       ],
+       "as_reported": [
+        "11,031",
+        "2,308"
+       ],
+       "columns": [
+        "October 2,2026 | October 3,2025"
+       ],
+       "units": "(in millions, except per share amounts)"
+      },
+      {
+       "item": "net income",
+       "label": "Net income",
+       "values": [
+        8101.0,
+        112.0
+       ],
+       "as_reported": [
+        "8,101",
+        "112"
+       ],
+       "columns": [
+        "October 2,2026 | October 3,2025"
+       ],
+       "units": "(in millions, except per share amounts)"
+      }
+     ],
+     "evidence": [
+      {
+       "id": "E1",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "anti-dilutive",
+       "quote": "(1) For the three months ended October 2, 2026 and October 3, 2025, an insignificant number of weighted average outstanding awards were excluded from the calculation of diluted net income per share because their effect would have been anti-dilutive.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'anti-dilutive'",
+       "derived": false
+      },
+      {
+       "id": "E2",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "dilutive share",
+       "quote": "Potentially dilutive shares include dilutive outstanding employee RSUs, PSUs, and rights to purchase shares of common stock under the ESPP.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'dilutive share'",
+       "derived": false
+      },
+      {
+       "id": "E3",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "issuance of common stock",
+       "quote": "Issuance of common stock and reclassification of net transfers from Western Digital Corporation | 145 | 1 | 11,214 | \u2014 | \u2014 | (11,215) | \u2014",
+       "truncated": false,
+       "statement": "equity",
+       "columns": [
+        "Shares",
+        "Amount",
+        "Additional Paid in Capital",
+        "Accumulated Deficit",
+        "Accumulated Other Comprehensive Loss",
+        "Net Investment from Western Digital Corporation",
+        "Total"
+       ],
+       "source": {
+        "accession": "0001628280-26-029401",
+        "form": "10-Q",
+        "filed": "2026-05-01",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-029401.txt"
+       },
+       "what": "10-Q financial_statements, equity statement row: mentions 'issuance of common stock'",
+       "derived": false
+      },
+      {
+       "id": "E4",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "public offering",
+       "quote": "On June 9, 2025, WDC disposed of 21,314,768, or 14.6%, of the Company\u2019s common stock through an exchange of Sandisk\u2019s common stock for WDC debt held by WDC creditors, which shares were sold by affiliates of the WDC creditors in a registered public offering by the Company.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-029401",
+        "form": "10-Q",
+        "filed": "2026-05-01",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-029401.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'public offering'",
+       "derived": false
+      },
+      {
+       "id": "E5",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "anti-dilutive",
+       "quote": "(1) For the three months ended April 3, 2026, 0.1 million weighted average outstanding awards were excluded from the calculation of diluted net income per share because their effect would have been anti-dilutive.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-029401",
+        "form": "10-Q",
+        "filed": "2026-05-01",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-029401.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'anti-dilutive'",
+       "derived": false
+      },
+      {
+       "id": "E6",
+       "topic": "executive_compensation",
+       "filter": "negative",
+       "matched": "compensatory arrangements",
+       "quote": "Item 5.02    Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-062267",
+        "form": "8-K",
+        "filed": "2026-09-16",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-062267.txt"
+       },
+       "what": "8-K items: mentions 'compensatory arrangements'",
+       "derived": false
+      },
+      {
+       "id": "E7",
+       "topic": "executive_compensation",
+       "filter": "negative",
+       "matched": "base salary",
+       "quote": "The table below sets forth the adjusted annual base salary (if applicable) and adjusted annual short-term incentive (\"STI\") target percentage amounts as a percentage of annual base salary (if applicable).",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-062267",
+        "form": "8-K",
+        "filed": "2026-09-16",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-062267.txt"
+       },
+       "what": "8-K items: mentions 'base salary'",
+       "derived": false
+      },
+      {
+       "id": "E8",
+       "topic": "executive_compensation",
+       "filter": "negative",
+       "matched": "base salary",
+       "quote": "| Name | Position | Annual Base Salary | Annual STI Target % |",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-062267",
+        "form": "8-K",
+        "filed": "2026-09-16",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-062267.txt"
+       },
+       "what": "8-K items: mentions 'base salary'",
+       "derived": false
+      },
+      {
+       "id": "E9",
+       "topic": "executive_compensation",
+       "filter": "negative",
+       "matched": "compensatory arrangements",
+       "quote": "Item 5.02    Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-000127",
+        "form": "8-K",
+        "filed": "2026-01-02",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-000127.txt"
+       },
+       "what": "8-K items: mentions 'compensatory arrangements'",
+       "derived": false
+      },
+      {
+       "id": "E10",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock-based compensation",
+       "quote": "Stock-based compensation | 91 | 53",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements, cash flow statement row: mentions 'stock-based compensation'",
+       "derived": false
+      },
+      {
+       "id": "E11",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock-based compensation",
+       "quote": "Stock-based compensation | \u2014 | \u2014 | \u2014 | \u2014 | 91 | \u2014 | \u2014 | 91",
+       "truncated": false,
+       "statement": "equity",
+       "columns": [
+        "Shares",
+        "Amount",
+        "Shares",
+        "Amount",
+        "Additional Paid in Capital",
+        "Retained Earnings",
+        "Accumulated Other Comprehensive Loss",
+        "Total*"
+       ],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements, equity statement row: mentions 'stock-based compensation'",
+       "derived": false
+      },
+      {
+       "id": "E12",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock-based compensation",
+       "quote": "Stock-based compensation | \u2014 | \u2014 | \u2014 | \u2014 | 53 | \u2014 | \u2014 | 53",
+       "truncated": false,
+       "statement": "equity",
+       "columns": [
+        "Shares",
+        "Amount",
+        "Shares",
+        "Amount",
+        "Additional Paid in Capital",
+        "Accumulated Deficit",
+        "Accumulated Other Comprehensive Loss",
+        "Total"
+       ],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements, equity statement row: mentions 'stock-based compensation'",
+       "derived": false
+      },
+      {
+       "id": "E13",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock-based compensation",
+       "quote": "In the financial information presented below, Segment cost of revenue, Segment research and development and Segment selling, general and administrative consist of Cost of revenue, Research and development and Selling, general and administrative, respectively, as reported in the Company\u2019s Condensed Consolidated Statement of Operations, less stock-based compensation costs allocated to those captions",
+       "truncated": true,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'stock-based compensation'",
+       "derived": false
+      },
+      {
+       "id": "E14",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock-based compensation",
+       "quote": "Stock-based compensation | (91) | (53)",
+       "truncated": false,
+       "statement": "notes",
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements, table in the notes: mentions 'stock-based compensation'",
+       "derived": false
+      },
+      {
+       "id": "E15",
+       "topic": "buyback",
+       "filter": "positive",
+       "what": "total shares issued and outstanding fell: 144 vs 146 (-2, -1.37%) million",
+       "matched": "",
+       "quote": "Common stock, $0.01 par value; authorized \u2014 450 shares; issued \u2014 150 shares and outstanding \u2014 144 shares (as of July 3, 2026 issued \u2014 149 shares and outstanding \u2014 146 shares)",
+       "truncated": false,
+       "statement": "balance_sheet",
+       "columns": [
+        "October 2,2026",
+        "July 3,2026"
+       ],
+       "derived": true,
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       }
+      },
+      {
+       "id": "E16",
+       "topic": "buyback",
+       "filter": "positive",
+       "what": "cash flow, repurchases of common stock: -5,000 vs 0 (-5,000) (October 2,2026; October 3,2025)",
+       "matched": "",
+       "quote": "Repurchases of common stock",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "derived": true,
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       }
+      },
+      {
+       "id": "E17",
+       "topic": "buyback",
+       "filter": "positive",
+       "what": "cash flow, repurchases of common stock: 47 vs 0 (+47) (October 2,2026; October 3,2025)",
+       "matched": "",
+       "quote": "Unpaid taxes relating to vested stock awards and repurchases of common stock",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "derived": true,
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       }
+      },
+      {
+       "id": "E18",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "On August 5, 2026, the Company announced that its Board of Directors had approved a $14 billion (exclusive of fees and commissions) share repurchase program (the \"Repurchase Program\").",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-053346",
+        "form": "8-K",
+        "filed": "2026-08-05",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-053346.txt"
+       },
+       "what": "8-K items: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E19",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "On April 30, 2026, the Company announced that its Board of Directors had approved a $6 billion (exclusive of fees and commissions) share repurchase program (the \"Repurchase Program\").",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-028879",
+        "form": "8-K",
+        "filed": "2026-04-30",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-028879.txt"
+       },
+       "what": "8-K items: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E20",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "Repurchases of common stock | (5,000) | \u2014",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements, cash flow statement row: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E21",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "Unpaid taxes relating to vested stock awards and repurchases of common stock | 47 | \u2014",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements, cash flow statement row: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E22",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "Repurchases of common stock | \u2014 | \u2014 | (3) | (5,044) | \u2014 | \u2014 | \u2014 | (5,044)",
+       "truncated": false,
+       "statement": "equity",
+       "columns": [
+        "Shares",
+        "Amount",
+        "Shares",
+        "Amount",
+        "Additional Paid in Capital",
+        "Retained Earnings",
+        "Accumulated Other Comprehensive Loss",
+        "Total*"
+       ],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements, equity statement row: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E23",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "The Loan Agreement includes certain restrictions (subject to certain exceptions outlined in the Loan Agreement) on the ability of the Company and its subsidiaries to undertake certain activities, including to incur indebtedness and liens, merge or consolidate with other entities, dispose or transfer their assets, pay dividends or make distributions, make investments, make payments on junior or sub",
+       "truncated": true,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001193125-26-389293",
+        "form": "8-K",
+        "filed": "2026-09-11",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001193125-26-389293.txt"
+       },
+       "what": "8-K items: mentions 'dividend'",
+       "derived": false
+      },
+      {
+       "id": "E24",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "Equity loss in investees, net of dividends received | 18 | 27",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [
+        "October 2,2026",
+        "October 3,2025"
+       ],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements, cash flow statement row: mentions 'dividend'",
+       "derived": false
+      },
+      {
+       "id": "E25",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "The Loan Agreement includes certain restrictions (subject to certain exceptions outlined in the Loan Agreement) on the ability of the Company and its subsidiaries to undertake certain activities, including to incur indebtedness and liens, merge or consolidate with other entities, dispose of or transfer their assets, pay dividends or make distributions, make investments, make payments on junior or ",
+       "truncated": true,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-068601",
+        "form": "10-Q",
+        "filed": "2026-10-30",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-068601.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'dividend'",
+       "derived": false
+      },
+      {
+       "id": "E26",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "Equity loss in investees, net of dividends received | 58 | 68",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [
+        "April 3,2026",
+        "March 28,2025"
+       ],
+       "source": {
+        "accession": "0001628280-26-029401",
+        "form": "10-Q",
+        "filed": "2026-05-01",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-029401.txt"
+       },
+       "what": "10-Q financial_statements, cash flow statement row: mentions 'dividend'",
+       "derived": false
+      },
+      {
+       "id": "E27",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "The Loan Agreement includes certain restrictions (subject to certain exceptions outlined in the Loan Agreement) on the ability of the Company and its subsidiaries to undertake certain activities, including to incur indebtedness and liens, merge or consolidate with other entities, dispose of or transfer their assets, pay dividends or make distributions, make investments, make payments on junior or ",
+       "truncated": true,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0001628280-26-029401",
+        "form": "10-Q",
+        "filed": "2026-05-01",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/2023554/0001628280-26-029401.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'dividend'",
+       "derived": false
+      }
+     ],
+     "found": {
+      "dilution": {
+       "filter": "negative",
+       "found": 14,
+       "shown": 5,
+       "derived": 0
+      },
+      "executive_compensation": {
+       "filter": "negative",
+       "found": 4,
+       "shown": 4,
+       "derived": 0
+      },
+      "equity_compensation": {
+       "filter": "negative",
+       "found": 72,
+       "shown": 5,
+       "derived": 0
+      },
+      "buyback": {
+       "filter": "positive",
+       "found": 29,
+       "shown": 5,
+       "derived": 3
+      },
+      "dividend": {
+       "filter": "positive",
+       "found": 12,
+       "shown": 5,
+       "derived": 0
+      }
+     },
+     "gaps": [
+      "executive compensation plans are described in the proxy statement, and 1 proxy/information statement(s) in the window are stored without text"
+     ],
+     "digest": "FILING EVIDENCE for SNDK (stored filings, last 365 days, as of 2026-10-30). This is evidence, not a score: nothing here rates the stock.\nFilings in the window: 10-K x1 (1 with text), 10-Q x4 (4 with text), 144 x24 (0 with text), 144/A x1 (0 with text), 8-K x11 (11 with text), DEF 14A x1 (0 with text), SCHEDULE 13G x2 (0 with text), SCHEDULE 13G/A x7 (0 with text).\nBALANCE SHEET from the 10-Q filed 2026-10-30 (period ended 2026-10-02); columns October 2,2026 vs July 3,2026; (in millions, except par value)\n  Cash and cash equivalents: 5,136 vs 4,762 (+374, +7.85%)\n  Total current assets: 15,352 vs 12,780 (+2,572, +20.13%)\n  Total assets: 25,793 vs 22,507 (+3,286, +14.60%)\n  Total current liabilities: 5,951 vs 5,581 (+370, +6.63%)\n  Total liabilities: 7,659 vs 6,771 (+888, +13.11%)\n  Total shareholders\u2019 equity: 18,134 vs 15,736 (+2,398, +15.24%)\n  Retained earnings: 17,750 vs 9,649 (+8,101, +83.96%)\n  Accounts receivable, net: 6,585 vs 4,708 (+1,877, +39.87%)\n  Inventories: 3,016 vs 2,698 (+318, +11.79%)\n  shares issued and outstanding, common stock: 144 vs 146 (-2, -1.37%) million; authorized 450\nCAPITAL ACTIONS (cash-flow statement, columns October 2,2026 vs October 3,2025; as the filing shows them, so a cash outflow is negative):\n  share-based compensation expense [row: Stock-based compensation]: 91 vs 53 (+38, +71.70%)\n  cash from operations [row: Net cash provided by operating activities]: 6,363 vs 488 (+5,875, +1203.89%)\n  repurchases of common stock: -5,000 vs 0 (-5,000)\n  repayments of debt [row: Repayment of debt]: 0 vs -500 (+500, +100.00%)\n  repurchases of common stock [row: Unpaid taxes relating to vested stock awards and repurchases of common stock]: 47 vs 0 (+47)\nINCOME STATEMENT:\n  revenue: 11,031, 2,308 (October 2,2026 | October 3,2025)\n  net income: 8,101, 112 (October 2,2026 | October 3,2025)\nNEGATIVE-TYPE TOPICS (dilution, executive compensation, employee equity compensation): passages shown of found: dilution 5 of 14, executive_compensation 4 of 4, equity_compensation 5 of 72\n  [E1] dilution | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements: mentions 'anti-dilutive' | \"(1) For the three months ended October 2, 2026 and October 3, 2025, an insignificant number of weighted average outstanding awards were excluded from the calculation of diluted net income per share because their effect would have been anti-dilutive.\"\n  [E2] dilution | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements: mentions 'dilutive share' | \"Potentially dilutive shares include dilutive outstanding employee RSUs, PSUs, and rights to purchase shares of common stock under the ESPP.\"\n  [E3] dilution | 10-Q filed 2026-05-01, financial_statements | 10-Q financial_statements, equity statement row: mentions 'issuance of common stock' | \"Issuance of common stock and reclassification of net transfers from Western Digital Corporation | 145 | 1 | 11,214 | \u2014 | \u2014 | (11,215) | \u2014\"\n  [E4] dilution | 10-Q filed 2026-05-01, financial_statements | 10-Q financial_statements: mentions 'public offering' | \"On June 9, 2025, WDC disposed of 21,314,768, or 14.6%, of the Company\u2019s common stock through an exchange of Sandisk\u2019s common stock for WDC debt held by WDC creditors, which shares were sold by affiliates of the WDC creditors in a registered public offering by the Company.\"\n  [E5] dilution | 10-Q filed 2026-05-01, financial_statements | 10-Q financial_statements: mentions 'anti-dilutive' | \"(1) For the three months ended April 3, 2026, 0.1 million weighted average outstanding awards were excluded from the calculation of diluted net income per share because their effect would have been anti-dilutive.\"\n  [E6] executive_compensation | 8-K filed 2026-09-16, items | 8-K items: mentions 'compensatory arrangements' | \"Item 5.02    Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers.\"\n  [E7] executive_compensation | 8-K filed 2026-09-16, items | 8-K items: mentions 'base salary' | \"The table below sets forth the adjusted annual base salary (if applicable) and adjusted annual short-term incentive (\"STI\") target percentage amounts as a percentage of annual base salary (if applicable).\"\n  [E8] executive_compensation | 8-K filed 2026-09-16, items | 8-K items: mentions 'base salary' | \"| Name | Position | Annual Base Salary | Annual STI Target % |\"\n  [E9] executive_compensation | 8-K filed 2026-01-02, items | 8-K items: mentions 'compensatory arrangements' | \"Item 5.02    Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers\"\n  [E10] equity_compensation | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements, cash flow statement row: mentions 'stock-based compensation' | \"Stock-based compensation | 91 | 53\"\n  [E11] equity_compensation | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements, equity statement row: mentions 'stock-based compensation' | \"Stock-based compensation | \u2014 | \u2014 | \u2014 | \u2014 | 91 | \u2014 | \u2014 | 91\"\n  [E12] equity_compensation | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements, equity statement row: mentions 'stock-based compensation' | \"Stock-based compensation | \u2014 | \u2014 | \u2014 | \u2014 | 53 | \u2014 | \u2014 | 53\"\n  [E13] equity_compensation | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements: mentions 'stock-based compensation' | \"In the financial information presented below, Segment cost of revenue, Segment research and development and Segment selling, general and administrative consist of Cost of revenue, Research and development and Selling, general and administrative, respectively, as reported in the Company\u2019s Condensed Consolidated Statement of Operations, less stock-based compensation costs allocated to those captions\" [cut]\n  [E14] equity_compensation | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements, table in the notes: mentions 'stock-based compensation' | \"Stock-based compensation | (91) | (53)\"\nPOSITIVE-TYPE TOPICS (buybacks, dividends): passages shown of found: buyback 5 of 29 +3 from the statements, dividend 5 of 12\n  [E15] buyback | 10-Q filed 2026-10-30, financial_statements | total shares issued and outstanding fell: 144 vs 146 (-2, -1.37%) million | \"Common stock, $0.01 par value; authorized \u2014 450 shares; issued \u2014 150 shares and outstanding \u2014 144 shares (as of July 3, 2026 issued \u2014 149 shares and outstanding \u2014 146 shares)\"\n  [E16] buyback | 10-Q filed 2026-10-30, financial_statements | cash flow, repurchases of common stock: -5,000 vs 0 (-5,000) (October 2,2026; October 3,2025) | \"Repurchases of common stock\"\n  [E17] buyback | 10-Q filed 2026-10-30, financial_statements | cash flow, repurchases of common stock: 47 vs 0 (+47) (October 2,2026; October 3,2025) | \"Unpaid taxes relating to vested stock awards and repurchases of common stock\"\n  [E18] buyback | 8-K filed 2026-08-05, items | 8-K items: mentions 'repurchas' | \"On August 5, 2026, the Company announced that its Board of Directors had approved a $14 billion (exclusive of fees and commissions) share repurchase program (the \"Repurchase Program\").\"\n  [E19] buyback | 8-K filed 2026-04-30, items | 8-K items: mentions 'repurchas' | \"On April 30, 2026, the Company announced that its Board of Directors had approved a $6 billion (exclusive of fees and commissions) share repurchase program (the \"Repurchase Program\").\"\n  [E20] buyback | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements, cash flow statement row: mentions 'repurchas' | \"Repurchases of common stock | (5,000) | \u2014\"\n  [E21] buyback | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements, cash flow statement row: mentions 'repurchas' | \"Unpaid taxes relating to vested stock awards and repurchases of common stock | 47 | \u2014\"\n  [E22] buyback | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements, equity statement row: mentions 'repurchas' | \"Repurchases of common stock | \u2014 | \u2014 | (3) | (5,044) | \u2014 | \u2014 | \u2014 | (5,044)\"\n  [E23] dividend | 8-K filed 2026-09-11, items | 8-K items: mentions 'dividend' | \"The Loan Agreement includes certain restrictions (subject to certain exceptions outlined in the Loan Agreement) on the ability of the Company and its subsidiaries to undertake certain activities, including to incur indebtedness and liens, merge or consolidate with other entities, dispose or transfer their assets, pay dividends or make distributions, make investments, make payments on junior or sub\" [cut]\n  [E24] dividend | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements, cash flow statement row: mentions 'dividend' | \"Equity loss in investees, net of dividends received | 18 | 27\"\n  [E25] dividend | 10-Q filed 2026-10-30, financial_statements | 10-Q financial_statements: mentions 'dividend' | \"The Loan Agreement includes certain restrictions (subject to certain exceptions outlined in the Loan Agreement) on the ability of the Company and its subsidiaries to undertake certain activities, including to incur indebtedness and liens, merge or consolidate with other entities, dispose of or transfer their assets, pay dividends or make distributions, make investments, make payments on junior or \" [cut]\n  [E26] dividend | 10-Q filed 2026-05-01, financial_statements | 10-Q financial_statements, cash flow statement row: mentions 'dividend' | \"Equity loss in investees, net of dividends received | 58 | 68\"\n  [E27] dividend | 10-Q filed 2026-05-01, financial_statements | 10-Q financial_statements: mentions 'dividend' | \"The Loan Agreement includes certain restrictions (subject to certain exceptions outlined in the Loan Agreement) on the ability of the Company and its subsidiaries to undertake certain activities, including to incur indebtedness and liens, merge or consolidate with other entities, dispose of or transfer their assets, pay dividends or make distributions, make investments, make payments on junior or \" [cut]\nNOT AVAILABLE: executive compensation plans are described in the proxy statement, and 1 proxy/information statement(s) in the window are stored without text"
+    }
+   },
+   "metrics": {},
+   "market_brief": {},
+   "quotes": {},
+   "problems": [],
+   "notes": [
+    "a limit stopped 1 tool call(s): fetch_press_releases: fetching is turned off for this question, so only the stored news can be searched"
+   ],
+   "no_supporting_text": false,
+   "tool_calls": [
+    {
+     "name": "retrieve_news",
+     "args": {
+      "query": "Sandisk news",
+      "tickers": [
+       "SNDK"
+      ],
+      "since_days": 14,
+      "k": 10,
+      "newest_first": true
+     },
+     "outcome": "ok"
+    },
+    {
+     "name": "retrieve_press_releases",
+     "args": {
+      "query": "Sandisk press release",
+      "tickers": [
+       "SNDK"
+      ],
+      "since_days": 14,
+      "newest_first": true,
+      "k": 10
+     },
+     "outcome": "ok"
+    },
+    {
+     "name": "fetch_press_releases",
+     "args": {
+      "symbol": "SNDK",
+      "from_date": 14
+     },
+     "outcome": "limit"
+    },
+    {
+     "name": "retrieve_filings",
+     "args": {
+      "query": "Sandisk",
+      "tickers": [
+       "SNDK"
+      ],
+      "since_days": 14,
+      "k": 10,
+      "newest_first": true
+     },
+     "outcome": "ok"
+    }
+   ],
+   "turns": 5,
+   "tokens_in": 27091,
+   "tokens_out": 1266,
+   "completed_utc": "2026-11-06T04:14:49Z"
+  },
+  "recommendations": [],
+  "advisor_runs": [],
+  "errors": [],
+  "metrics": null,
+  "case": "funds",
+  "sector": "XLK",
+  "candidates": []
+ },
+ "metrics": {
+  "SNDK": {
+   "mom_12_1": {
+    "value": 6.433995381062356,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "pct_of_52w_high": {
+    "value": 0.3425218567239011,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "above_sma_200": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 200 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "ret_21d": {
+    "value": -0.5235048037721133,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "rsi_14": {
+    "value": 24.145628802892602,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 30 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "atr_pct": {
+    "value": 0.134763956668143,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "residual_mom_12_1": {
+    "value": 6.763759181936666,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "symbol_value": 6.433995381062356,
+     "etf": "XLK",
+     "etf_value": -0.32976380087430945
+    },
+    "note": null
+   },
+   "macd_hist": {
+    "value": -39.44906382375393,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 60 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "adx_14": {
+    "value": 31.221751189519903,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 40 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "obv_20d_change": {
+    "value": -0.5368845844524041,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "vol_63d_ann": {
+    "value": 0.9640310212387755,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "breakout_20d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "bollinger_pct_b": {
+    "value": -0.1863705634779535,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "ret_1d": {
+    "value": -0.22264314632735693,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "volume_ratio_1d": {
+    "value": 3.3820274104984906,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "gap_1d": {
+    "value": -0.07244264507422404,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 147610980000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": -0.39368444795308444,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "zscore_21d": {
+    "value": -2.629789585348509,
+    "unit": "std",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "roe": {
+    "value": 134.27,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 0.0,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 2.5797,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": 272.38,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": -0.25402141944826295,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "symbol_value": -0.39368444795308444,
+     "etf": "XLK",
+     "etf_value": -0.13966302850482148
+    },
+    "note": null
+   },
+   "sector_ret_5d": {
+    "value": -0.13966302850482148,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of the ETF",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "etf": "XLK",
+     "bars": 276
+    },
+    "note": null
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "candle_reversal_1d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "stoch_k_14": {
+    "value": 0.39644897750005775,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 14 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "earnings_yield": {
+    "value": 0.1315754848556617,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 7.6002
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-10-30",
+    "window": "latest filings",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {
+     "reasons": []
+    },
+    "note": null
+   },
+   "payout_coverage": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": "2026-10-30",
+    "window": "year to date",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {},
+    "note": "no dividends row in the stored cash-flow statement"
+   },
+   "net_payout_yield_ttm": {
+    "value": 0.13549127578449788,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "derived:filing:0001628280-26-068601+finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "repurchases": 5000000000.0,
+     "dividends": 0.0,
+     "issued": 0.0,
+     "months": 3,
+     "market_cap": 147610980000.0,
+     "absent": [
+      "dividends",
+      "proceeds from issuing common stock"
+     ]
+    },
+    "note": null
+   },
+   "share_count_change": {
+    "value": -0.0137,
+    "unit": "fraction",
+    "as_of": "2026-10-30",
+    "window": "latest balance sheet vs the earlier one",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {
+     "current": 144.0,
+     "prior": 146.0,
+     "unit": "million",
+     "columns": [
+      "October 2,2026",
+      "July 3,2026"
+     ]
+    },
+    "note": null
+   },
+   "sbc_to_revenue": {
+    "value": 0.008249478741727857,
+    "unit": "fraction",
+    "as_of": "2026-10-30",
+    "window": "year to date",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {
+     "sbc": 91000000.0,
+     "revenue": 11031000000.0
+    },
+    "note": null
+   },
+   "cash_balance": {
+    "value": 5136000000.0,
+    "unit": "USD",
+    "as_of": "2026-10-30",
+    "window": "latest balance sheet",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {
+     "label": "Cash and cash equivalents",
+     "as_reported": 5136.0,
+     "units": "(in millions, except par value)"
+    },
+    "note": null
+   },
+   "residual_21d": {
+    "value": -0.32980104489630024,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "symbol_value": -0.5235048037721133,
+     "etf": "XLK",
+     "etf_value": -0.19370375887581304
+    },
+    "note": null
+   },
+   "operating_margin": {
+    "value": 72.46,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": [
+     [
+      "2026-09-18",
+      1791.82,
+      17788393.001126
+     ],
+     [
+      "2026-09-21",
+      1766.64,
+      10442662.66106
+     ],
+     [
+      "2026-09-22",
+      1887.04,
+      12927076.140658
+     ],
+     [
+      "2026-09-23",
+      1816.57,
+      7732012.039922
+     ],
+     [
+      "2026-09-24",
+      1753.62,
+      8231652.732864
+     ],
+     [
+      "2026-09-25",
+      1777.8,
+      7341781.694149
+     ],
+     [
+      "2026-09-28",
+      1712.89,
+      6662150.22687
+     ],
+     [
+      "2026-09-29",
+      1729.76,
+      5962973.46285
+     ],
+     [
+      "2026-09-30",
+      1739.89,
+      6052425.711983
+     ],
+     [
+      "2026-10-01",
+      1787.69,
+      9218050.638755
+     ],
+     [
+      "2026-10-02",
+      1719.99,
+      8191520.34528
+     ],
+     [
+      "2026-10-05",
+      1704.16,
+      6502465.995903
+     ],
+     [
+      "2026-10-06",
+      1660.46,
+      6529678.882246
+     ],
+     [
+      "2026-10-07",
+      1692.42,
+      9166860.012234
+     ],
+     [
+      "2026-10-08",
+      1609.46,
+      9357012.285525
+     ],
+     [
+      "2026-10-09",
+      1581.82,
+      5606795.60015
+     ],
+     [
+      "2026-10-12",
+      1487.33,
+      8803866.125015
+     ],
+     [
+      "2026-10-13",
+      1482.33,
+      8400262.015294
+     ],
+     [
+      "2026-10-14",
+      1403.34,
+      7458803.953596
+     ],
+     [
+      "2026-10-15",
+      1394.83,
+      13279791.031833
+     ],
+     [
+      "2026-10-16",
+      1299.3,
+      8954661.543119
+     ],
+     [
+      "2026-10-19",
+      1371.12,
+      8535353.345092
+     ],
+     [
+      "2026-10-20",
+      1365.38,
+      6579861.406698
+     ],
+     [
+      "2026-10-21",
+      1378.22,
+      6964081.790409
+     ],
+     [
+      "2026-10-22",
+      1260.93,
+      10414775.240077
+     ],
+     [
+      "2026-10-23",
+      1238.03,
+      7923529.013683
+     ],
+     [
+      "2026-10-26",
+      1255.58,
+      6713868.472254
+     ],
+     [
+      "2026-10-27",
+      1304.84,
+      7061906.468299
+     ],
+     [
+      "2026-10-28",
+      1404.77,
+      9261242.67159
+     ],
+     [
+      "2026-10-29",
+      1330.05,
+      8483554.79098
+     ],
+     [
+      "2026-10-30",
+      1150.89,
+      17469621.863334
+     ],
+     [
+      "2026-11-02",
+      1075.08,
+      10569949.444899
+     ],
+     [
+      "2026-11-03",
+      1126.52,
+      8550423.270359
+     ],
+     [
+      "2026-11-04",
+      1037.4,
+      11549828.114911
+     ],
+     [
+      "2026-11-05",
+      806.43,
+      30766166.1186
+     ]
+    ],
+    "unit": "[date, close, volume]",
+    "as_of": "2026-11-05",
+    "window": "last 35 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "adv_20d_dollars": {
+    "value": 12404950028.907635,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "last_close": {
+    "value": 806.43,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "1 bar",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bar_date": "2026-11-05"
+    },
+    "note": null
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-10-30",
+    "window": "year to date",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {
+     "net_income": 8101000000.0,
+     "cash_from_operations": 6363000000.0
+    },
+    "note": null
+   },
+   "atr_14": {
+    "value": 108.67769757589055,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "sma_50": {
+    "value": 1517.4326999999998,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": 3.5060205672437514,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "spy_bars": 276
+    },
+    "note": null
+   },
+   "max_drawdown_63d": {
+    "value": -0.5726481685602849,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 63 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 806.43
+    },
+    "note": null
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": "XLK",
+    "unit": "ticker",
+    "as_of": "2026-11-05",
+    "window": "n/a",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": null
+   },
+   "accrual_ratio": {
+    "value": 0.06738262319233901,
+    "unit": "ratio",
+    "as_of": "2026-10-30",
+    "window": "year to date",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {
+     "net_income": 8101000000.0,
+     "cash_from_operations": 6363000000.0,
+     "total_assets": 25793000000.0
+    },
+    "note": null
+   },
+   "receivables_vs_sales": {
+    "value": -338.07627383015597,
+    "unit": "points",
+    "as_of": "2026-10-30",
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {
+     "accounts_receivable_change_pct": 39.87,
+     "revenue_change_pct": 377.95
+    },
+    "note": null
+   },
+   "inventory_vs_sales": {
+    "value": -366.15627383015595,
+    "unit": "points",
+    "as_of": "2026-10-30",
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "filing:0001628280-26-068601",
+    "inputs_summary": {
+     "inventories_change_pct": 11.79,
+     "revenue_change_pct": 377.95
+    },
+    "note": null
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  },
+  "MSFT": {
+   "mom_12_1": {
+    "value": 0.030463758971527755,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "pct_of_52w_high": {
+    "value": 0.9584726817490834,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 200 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "ret_21d": {
+    "value": 0.011646783449108966,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "rsi_14": {
+    "value": 54.44905424467309,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 30 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "atr_pct": {
+    "value": 0.02903464022177125,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "residual_mom_12_1": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "macd_hist": {
+    "value": -0.4022402827234677,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 60 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "adx_14": {
+    "value": 21.896459214940368,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 40 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "obv_20d_change": {
+    "value": -0.12578643533210007,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "vol_63d_ann": {
+    "value": 0.26710817186846253,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "breakout_20d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "bollinger_pct_b": {
+    "value": 0.6103907624558859,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "ret_1d": {
+    "value": -0.035750269881252295,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "volume_ratio_1d": {
+    "value": 1.7806120984824731,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "gap_1d": {
+    "value": -0.0015563152213026177,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 4127478800000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": 0.01092164333949519,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "zscore_21d": {
+    "value": 0.47604769972434396,
+    "unit": "std",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "roe": {
+    "value": 33.21,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 0.2263,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 1.2248,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": 17.91,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "sector_ret_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars of the ETF",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "candle_reversal_1d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "stoch_k_14": {
+    "value": 57.15076582395271,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 14 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "earnings_yield": {
+    "value": 0.03455639949962334,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 28.9382
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "latest filings",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "payout_coverage": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "net_payout_yield_ttm": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "share_count_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "latest balance sheet vs the earlier one",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "sbc_to_revenue": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "cash_balance": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "latest balance sheet",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "residual_21d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "operating_margin": {
+    "value": 47.04,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": [
+     [
+      "2026-09-18",
+      493.78,
+      39622288.835584
+     ],
+     [
+      "2026-09-21",
+      501.61,
+      27959944.53236
+     ],
+     [
+      "2026-09-22",
+      498.0,
+      21652838.382225
+     ],
+     [
+      "2026-09-23",
+      500.59,
+      19445555.523738
+     ],
+     [
+      "2026-09-24",
+      497.93,
+      16657643.497618
+     ],
+     [
+      "2026-09-25",
+      516.17,
+      38193112.834108
+     ],
+     [
+      "2026-09-28",
+      509.22,
+      19626939.79751
+     ],
+     [
+      "2026-09-29",
+      508.96,
+      21341832.293104
+     ],
+     [
+      "2026-09-30",
+      512.9,
+      27223264.633875
+     ],
+     [
+      "2026-10-01",
+      512.8,
+      19731882.68355
+     ],
+     [
+      "2026-10-02",
+      517.53,
+      17822339.535113
+     ],
+     [
+      "2026-10-05",
+      525.18,
+      26604760.672552
+     ],
+     [
+      "2026-10-06",
+      529.3,
+      21107455.705776
+     ],
+     [
+      "2026-10-07",
+      529.76,
+      16790229.481735
+     ],
+     [
+      "2026-10-08",
+      522.61,
+      20228699.715829
+     ],
+     [
+      "2026-10-09",
+      535.07,
+      18500612.215796
+     ],
+     [
+      "2026-10-12",
+      541.15,
+      18314943.573478
+     ],
+     [
+      "2026-10-13",
+      543.45,
+      23851953.364812
+     ],
+     [
+      "2026-10-14",
+      533.69,
+      22324295.686446
+     ],
+     [
+      "2026-10-15",
+      539.44,
+      24151211.130548
+     ],
+     [
+      "2026-10-16",
+      529.05,
+      24845667.791386
+     ],
+     [
+      "2026-10-19",
+      533.52,
+      17994851.814296
+     ],
+     [
+      "2026-10-20",
+      531.87,
+      14576043.171513
+     ],
+     [
+      "2026-10-21",
+      532.95,
+      13940102.251871
+     ],
+     [
+      "2026-10-22",
+      521.08,
+      21266610.945292
+     ],
+     [
+      "2026-10-23",
+      524.51,
+      13681067.849592
+     ],
+     [
+      "2026-10-26",
+      532.6,
+      19021036.573432
+     ],
+     [
+      "2026-10-27",
+      531.33,
+      19532321.128196
+     ],
+     [
+      "2026-10-28",
+      531.01,
+      28594163.143995
+     ],
+     [
+      "2026-10-29",
+      530.14,
+      39333217.909218
+     ],
+     [
+      "2026-10-30",
+      521.91,
+      35652049.083929
+     ],
+     [
+      "2026-11-02",
+      507.12,
+      34743321.755964
+     ],
+     [
+      "2026-11-03",
+      520.99,
+      20010170.366442
+     ],
+     [
+      "2026-11-04",
+      555.8,
+      50859796.478412
+     ],
+     [
+      "2026-11-05",
+      535.93,
+      42861303.987532
+     ]
+    ],
+    "unit": "[date, close, volume]",
+    "as_of": "2026-11-05",
+    "window": "last 35 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "adv_20d_dollars": {
+    "value": 13416701623.452906,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "last_close": {
+    "value": 535.93,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "1 bar",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bar_date": "2026-11-05"
+    },
+    "note": null
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "atr_14": {
+    "value": 15.560534734053865,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "sma_50": {
+    "value": 516.1348,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": 1.3381529850201357,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "spy_bars": 276
+    },
+    "note": null
+   },
+   "max_drawdown_63d": {
+    "value": -0.06685067623516427,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 63 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": null,
+    "unit": "ticker",
+    "as_of": "2026-11-05",
+    "window": "n/a",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "accrual_ratio": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "receivables_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "inventory_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  },
+  "TSLA": {
+   "mom_12_1": {
+    "value": -0.18843465275824012,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "pct_of_52w_high": {
+    "value": 0.6889922418459195,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "above_sma_200": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 200 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "ret_21d": {
+    "value": -0.09030994415182236,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "rsi_14": {
+    "value": 35.80921154339343,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 30 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "atr_pct": {
+    "value": 0.04784066017135678,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "residual_mom_12_1": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "macd_hist": {
+    "value": -2.9509519473055867,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 60 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "adx_14": {
+    "value": 15.956906671931623,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 40 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "obv_20d_change": {
+    "value": -0.24901202985521118,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "vol_63d_ann": {
+    "value": 0.4600207986328233,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "breakout_20d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "bollinger_pct_b": {
+    "value": -0.04460150455999118,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "ret_1d": {
+    "value": -0.10773903787741113,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "volume_ratio_1d": {
+    "value": 2.1385408592468007,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "gap_1d": {
+    "value": -0.028739063838625123,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 1522562900000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": -0.1478056037689065,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "zscore_21d": {
+    "value": -2.1527958836139733,
+    "unit": "std",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "roe": {
+    "value": 3.76,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 0.1067,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 1.7387,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": 8.3,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "sector_ret_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars of the ETF",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "candle_reversal_1d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "stoch_k_14": {
+    "value": 7.281808622502652,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 14 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "earnings_yield": {
+    "value": 0.002114855250847211,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 472.8456
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "latest filings",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "payout_coverage": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "net_payout_yield_ttm": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "share_count_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "latest balance sheet vs the earlier one",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "sbc_to_revenue": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "cash_balance": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "latest balance sheet",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "residual_21d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "operating_margin": {
+    "value": 3.35,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": [
+     [
+      "2026-09-18",
+      364.27,
+      51922256.609311
+     ],
+     [
+      "2026-09-21",
+      375.3,
+      36599609.367856
+     ],
+     [
+      "2026-09-22",
+      378.9,
+      28229908.803628
+     ],
+     [
+      "2026-09-23",
+      380.12,
+      33522492.963083
+     ],
+     [
+      "2026-09-24",
+      377.94,
+      26165727.916313
+     ],
+     [
+      "2026-09-25",
+      372.11,
+      45999470.260491
+     ],
+     [
+      "2026-09-28",
+      357.45,
+      39452901.766692
+     ],
+     [
+      "2026-09-29",
+      352.84,
+      32492406.174072
+     ],
+     [
+      "2026-09-30",
+      354.81,
+      39235838.740659
+     ],
+     [
+      "2026-10-01",
+      354.11,
+      31080774.031296
+     ],
+     [
+      "2026-10-02",
+      370.59,
+      55330140.540632
+     ],
+     [
+      "2026-10-05",
+      378.73,
+      42232669.530816
+     ],
+     [
+      "2026-10-06",
+      380.68,
+      27735438.587963
+     ],
+     [
+      "2026-10-07",
+      377.81,
+      25594563.545792
+     ],
+     [
+      "2026-10-08",
+      375.0,
+      28394945.553229
+     ],
+     [
+      "2026-10-09",
+      382.7,
+      38952426.939911
+     ],
+     [
+      "2026-10-12",
+      378.03,
+      20244285.110128
+     ],
+     [
+      "2026-10-13",
+      375.23,
+      18393043.235272
+     ],
+     [
+      "2026-10-14",
+      367.16,
+      31001421.081316
+     ],
+     [
+      "2026-10-15",
+      362.44,
+      26728314.1145
+     ],
+     [
+      "2026-10-16",
+      354.72,
+      62067344.446491
+     ],
+     [
+      "2026-10-19",
+      368.06,
+      38817910.056266
+     ],
+     [
+      "2026-10-20",
+      373.71,
+      32123322.962033
+     ],
+     [
+      "2026-10-21",
+      386.47,
+      48875814.549238
+     ],
+     [
+      "2026-10-22",
+      374.58,
+      51610857.976348
+     ],
+     [
+      "2026-10-23",
+      372.22,
+      34762967.914602
+     ],
+     [
+      "2026-10-26",
+      391.62,
+      53090212.05654
+     ],
+     [
+      "2026-10-27",
+      407.46,
+      45333228.605216
+     ],
+     [
+      "2026-10-28",
+      404.22,
+      35598772.640517
+     ],
+     [
+      "2026-10-29",
+      403.3,
+      22858268.433261
+     ],
+     [
+      "2026-10-30",
+      399.81,
+      41737178.389785
+     ],
+     [
+      "2026-11-02",
+      403.82,
+      43141083.782529
+     ],
+     [
+      "2026-11-03",
+      398.5,
+      26647733.040377
+     ],
+     [
+      "2026-11-04",
+      385.19,
+      47847226.513713
+     ],
+     [
+      "2026-11-05",
+      343.69,
+      80005631.863401
+     ]
+    ],
+    "unit": "[date, close, volume]",
+    "as_of": "2026-11-05",
+    "window": "last 35 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "adv_20d_dollars": {
+    "value": 15176347943.500376,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "last_close": {
+    "value": 343.69,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "1 bar",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bar_date": "2026-11-05"
+    },
+    "note": null
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "atr_14": {
+    "value": 16.442356494293612,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "sma_50": {
+    "value": 372.0689,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": 2.1337574810179487,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "spy_bars": 276
+    },
+    "note": null
+   },
+   "max_drawdown_63d": {
+    "value": -0.1565061601138762,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 63 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": null,
+    "unit": "ticker",
+    "as_of": "2026-11-05",
+    "window": "n/a",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "accrual_ratio": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "receivables_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "inventory_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  },
+  "GM": {
+   "mom_12_1": {
+    "value": 0.19601570452232076,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "pct_of_52w_high": {
+    "value": 0.9533617929562432,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 200 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "ret_21d": {
+    "value": 0.10297567600938384,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "rsi_14": {
+    "value": 60.32427895899245,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 30 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "atr_pct": {
+    "value": 0.034371746424661606,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "residual_mom_12_1": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "macd_hist": {
+    "value": 1.3517402528987936,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 60 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "adx_14": {
+    "value": 25.56728390031091,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 40 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "obv_20d_change": {
+    "value": 0.11863299101148582,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "vol_63d_ann": {
+    "value": 0.3737394690269751,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "breakout_20d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "bollinger_pct_b": {
+    "value": 0.8292260252843291,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "ret_1d": {
+    "value": -0.03353889429838808,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "volume_ratio_1d": {
+    "value": 1.3286920959683135,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "gap_1d": {
+    "value": 0.00643730390565822,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 77969270000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": 0.04211385907606169,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "zscore_21d": {
+    "value": 1.3241544115477002,
+    "unit": "std",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "roe": {
+    "value": 6.37,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 2.0499,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 1.0897,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": -0.26,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "sector_ret_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars of the ETF",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "candle_reversal_1d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "stoch_k_14": {
+    "value": 77.13239141810568,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 14 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "earnings_yield": {
+    "value": 0.05076348278102664,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 19.6992
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "latest filings",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "payout_coverage": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "net_payout_yield_ttm": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "share_count_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "latest balance sheet vs the earlier one",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "sbc_to_revenue": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "cash_balance": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "latest balance sheet",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "residual_21d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "operating_margin": {
+    "value": 1.89,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": [
+     [
+      "2026-09-18",
+      82.2,
+      21148053.693949
+     ],
+     [
+      "2026-09-21",
+      83.95,
+      7936516.145171
+     ],
+     [
+      "2026-09-22",
+      83.45,
+      6232948.578661
+     ],
+     [
+      "2026-09-23",
+      83.77,
+      4730304.495677
+     ],
+     [
+      "2026-09-24",
+      80.57,
+      7936246.192274
+     ],
+     [
+      "2026-09-25",
+      82.63,
+      7222753.69304
+     ],
+     [
+      "2026-09-28",
+      80.64,
+      8626724.887366
+     ],
+     [
+      "2026-09-29",
+      80.47,
+      6251186.371165
+     ],
+     [
+      "2026-09-30",
+      77.0,
+      9768390.243356
+     ],
+     [
+      "2026-10-01",
+      79.31,
+      8443487.696709
+     ],
+     [
+      "2026-10-02",
+      78.27,
+      9089387.260595
+     ],
+     [
+      "2026-10-05",
+      80.23,
+      6491462.710165
+     ],
+     [
+      "2026-10-06",
+      82.01,
+      5210174.174864
+     ],
+     [
+      "2026-10-07",
+      80.99,
+      6270312.153521
+     ],
+     [
+      "2026-10-08",
+      82.25,
+      4976503.540812
+     ],
+     [
+      "2026-10-09",
+      82.73,
+      6593427.455371
+     ],
+     [
+      "2026-10-12",
+      82.37,
+      5586969.106697
+     ],
+     [
+      "2026-10-13",
+      84.0,
+      6224767.201269
+     ],
+     [
+      "2026-10-14",
+      83.05,
+      6103332.348748
+     ],
+     [
+      "2026-10-15",
+      83.66,
+      5715292.183492
+     ],
+     [
+      "2026-10-16",
+      83.96,
+      7486647.470911
+     ],
+     [
+      "2026-10-19",
+      82.75,
+      7989332.065676
+     ],
+     [
+      "2026-10-20",
+      77.09,
+      24697390.367422
+     ],
+     [
+      "2026-10-21",
+      76.11,
+      9027128.253171
+     ],
+     [
+      "2026-10-22",
+      77.21,
+      7507529.988739
+     ],
+     [
+      "2026-10-23",
+      75.92,
+      6713655.897196
+     ],
+     [
+      "2026-10-26",
+      76.31,
+      5262102.353417
+     ],
+     [
+      "2026-10-27",
+      80.54,
+      13436236.427873
+     ],
+     [
+      "2026-10-28",
+      82.48,
+      9247396.926564
+     ],
+     [
+      "2026-10-29",
+      85.72,
+      9627009.220987
+     ],
+     [
+      "2026-10-30",
+      87.4,
+      11695578.812575
+     ],
+     [
+      "2026-11-02",
+      89.94,
+      8431300.753335
+     ],
+     [
+      "2026-11-03",
+      88.34,
+      6436260.875856
+     ],
+     [
+      "2026-11-04",
+      92.43,
+      7608388.505783
+     ],
+     [
+      "2026-11-05",
+      89.33,
+      11318214.473521
+     ]
+    ],
+    "unit": "[date, close, volume]",
+    "as_of": "2026-11-05",
+    "window": "last 35 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "adv_20d_dollars": {
+    "value": 730932392.1963199,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "last_close": {
+    "value": 89.33,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "1 bar",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bar_date": "2026-11-05"
+    },
+    "note": null
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "atr_14": {
+    "value": 3.070428108115021,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "sma_50": {
+    "value": 83.36120000000001,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": 0.7517064287640698,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "spy_bars": 276
+    },
+    "note": null
+   },
+   "max_drawdown_63d": {
+    "value": -0.15030777839955223,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 63 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": null,
+    "unit": "ticker",
+    "as_of": "2026-11-05",
+    "window": "n/a",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "accrual_ratio": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "receivables_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "inventory_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  }
+ },
+ "replies": [
+  "\n\n{\n  \"companies\": [\n    {\n      \"symbol\": \"SNDK\",\n      \"company\": \"Sandisk\",\n      \"archetypes\": [\n        \"event\",\n        \"reversion\",\n        \"capital_return\"\n      ],\n      \"signals\": [\n        {\n          \"source\": 4,\n          \"direction\": \"bullish\",\n          \"quote\": \"Sandisk: This Is A Golden Opportunity\"\n        },\n        {\n          \"source\": 9,\n          \"direction\": \"bullish\",\n          \"quote\": \"Sandisk approved an aggressive 8-for-1 split following a 6,000% rally since its February 2025 spinoff from Western Digital.\"\n        },\n        {\n          \"source\": 5,\n          \"direction\": \"bearish\",\n          \"quote\": \"Sandisk Corp. (NASDAQ:SNDK) stock extended its decline Thursday as investors continued reducing exposure to AI-linked semiconductor and memory stocks following the U.S. midterm elections.\"\n        }\n      ],\n      \"events\": [],\n      \"drop_cause\": {\n        \"source\": 5,\n        \"class\": \"sector_sympathy\",\n        \"quote\": \"Sandisk Corp. (NASDAQ:SNDK) stock extended its decline Thursday as investors continued reducing exposure to AI-linked semiconductor and memory stocks following the U.S. midterm elections.\"\n      },\n      \"model_score\": 58\n    }\n  ]\n}",
+  "\n\n{\n  \"theses\": [\n    {\n      \"symbol\": \"SNDK\",\n      \"thesis\": \"Open a position using the capital_return strategy, expecting an excess return of 0.08% over 20 days after cost based on an unmeasured prior. The recommendation rests on the family capital_return passing with a score of 0.9, an expected 20\u2011day edge of 0.27%, and supportive evidence such as the aggressive 8\u2011for\u20111 split and positive news. It would be wrong if the unmeasured prior fails to materialize, if bearish evidence (e.g., the post\u2011election decline) outweighs the bullish signals, or if the stock fails trend or reversion gates (e.g., price below its 200\u2011day mean or negative residual versus sector).\",\n      \"bull_case\": [\n        {\n          \"text\": \"Sandisk: This Is A Golden Opportunity\",\n          \"ref\": \"[4]\"\n        },\n        {\n          \"text\": \"Sandisk approved an aggressive 8-for-1 split following a 6,000% rally since its February 2025 spinoff from Western Digital.\",\n          \"ref\": \"[9]\"\n        }\n      ],\n      \"bear_case\": [\n        {\n          \"text\": \"Sandisk Corp. (NASDAQ:SNDK) stock extended its decline Thursday as investors continued reducing exposure to AI-linked semiconductor and memory stocks following the U.S. midterm elections.\",\n          \"ref\": \"[5]\"\n        },\n        {\n          \"text\": \"The price is not above its 200\u2011day mean and pct_of_52w_high is 0.343, below the 0.9 threshold.\",\n          \"ref\": \"pct_of_52w_high\"\n        }\n      ]\n    }\n  ]\n}"
+ ]
+}

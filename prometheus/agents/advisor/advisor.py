@@ -243,10 +243,58 @@ def build_recommendation(raw, sources: dict[int, dict], dropped: list[str], know
 
 
 class Advisor:
-    def __init__(self, model=None, model_id: str | None = None):
+    def __init__(self, model=None, model_id: str | None = None, clerk=None, config_path=None, ledger=None, effort: str | None = "auto", providers: tuple[str, ...] | str | None = "auto"):
         """model: a chat model (anything with `invoke`; a scripted one in tests); otherwise OpenRouter through `get_chat_model` with the
-        model of the `advisor` role (ADVISOR_MODEL), or `model_id`."""
-        self.model = model or get_chat_model("advisor", model=model_id)
+        model of the `advisor` role (ADVISOR_MODEL), or `model_id`.
+
+        effort and providers (entry 53; the same two options as the Account Manager, entries 46 and 50) are for a gpt-oss model only: "auto" is reasoning effort "low" and the providers Cerebras then
+        Groq (the same model, about ten times the tokens a second of OpenRouter's own choice, the others as fallback); any other model gets neither with "auto", so the default Advisor is unchanged.
+        Pass "low"/"medium"/"high" or a tuple of providers to force them for any model, None for OpenRouter's own.
+
+        The rest is for `generate_recommendations` (entry 51) and is read only when it is called, so version 0 behaves exactly as before: `clerk` is the Data Clerk whose `request_metrics` is asked for the
+        numbers (anything with `request_metrics` and `tools.discover_tickers`; a fake in tests; the real one, with no model of its own to call, when left out), `config_path` the settings file
+        (configs/advisor_v1.json), `ledger` the `Ledger` the recommendations are appended to and the cooldown is read from (data/ledger/recommendations.jsonl when left out; a test passes one in a temporary folder)."""
+        if model is None:
+            from prometheus.models.chat import model_name
+            is_oss = "gpt-oss" in (model_id or model_name("advisor")).lower()
+            effort = "low" if effort == "auto" and is_oss else None if effort == "auto" else effort
+            providers = ("cerebras", "groq") if providers == "auto" and is_oss else None if providers == "auto" else providers
+            extra = {**({"reasoning": {"effort": effort}} if effort else {}), **({"provider": {"order": list(providers), "allow_fallbacks": True}} if providers else {})}
+            model = get_chat_model("advisor", model=model_id, **({"extra_body": extra} if extra else {}))
+        self.model = model
+        self._clerk, self._config_path, self._ledger, self._config = clerk, config_path, ledger, None
+
+    @property
+    def config(self):
+        """The Advisor's thresholds (configs/advisor_v1.json), read and checked once."""
+        if self._config is None:
+            from prometheus.agents.advisor.config import load_config
+            self._config = load_config(self._config_path)
+        return self._config
+
+    @property
+    def clerk(self):
+        if self._clerk is None:
+            from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
+            self._clerk = DataClerk(model=object())  # metrics and discovery are code: this Data Clerk's own model is never called here
+        return self._clerk
+
+    @property
+    def ledger(self):
+        if self._ledger is None:
+            from prometheus.memory.ledger import Ledger
+            self._ledger = Ledger(self.config.ledger.path)
+        return self._ledger
+
+    def generate_recommendations(self, order: WorkOrder, portfolio, case: str | None = None, today: date | None = None, top_k: int | None = None, only_subject: bool = False) -> WorkOrder:
+        """Advisor v1 (design choices entry 51; the walk-through is design/week5_advisor_implementation.md): turn a work order whose data is ready into ranked, audited recommendations, and return
+        the SAME order with `status == "recommended"`, `recommendations` (a reduction first, then additions, then new ideas by rank), `candidates` (what was looked at and not returned, with the
+        reason) and `advisor_runs` (the plan call and the thesis call).
+
+        `portfolio` is the user's `Portfolio` (cash and holdings: the size of every position is worked from it). `case` is "funds" (symbols, here is money), "theme" (a term: companies
+        exposed to it); left out, the order's own `case`, else inferred. `today` is the date everything is counted from. `only_subject=True` looks only at the order's own symbols (and the holdings): a comparison of named companies. `advise` (version 0) is untouched and still works on the same order."""
+        from prometheus.agents.advisor.recommend import generate  # imported here: recommend.py imports this module
+        return generate(self, order, portfolio, case, today, top_k, only_subject)
 
     @staticmethod
     def _evidence(order: WorkOrder) -> dict[str, dict[str, dict]]:

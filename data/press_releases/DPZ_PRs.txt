@@ -1,0 +1,243 @@
+<<<PRESS_RELEASE>>>
+id: e158bfca69fc7868
+symbol: DPZ
+published_utc: 2025-11-10T07:07:00Z
+url: https://www.nasdaq.com/press-release/treat-yo-self-dominosr-new-spicy-chicken-bacon-ranch-pizza-2025-11-10
+headline: 'Treat Yo Self' to Domino's® New Spicy Chicken Bacon Ranch Pizza
+<<<TEXT>>>
+"Domino's Specialty Pizzas help put the' mmm' in' Dommmino's,' and our Spicy Chicken Bacon Ranch Pizza is no exception," said Kate Trumbull, Domino's executive vice president– chief marketing officer. Treat Yo Self "became an iconic catchphrase from NBC's hit sitcom" Parks and Recreation "– originating from a" Treat Yo Self "tradition in which Retta's character, Donna...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f7667f1ace217687
+symbol: DPZ
+published_utc: 2025-11-28T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-unveils-50-pizza-deal-just-time-black-friday-and-cyber-monday-2025-11-28
+headline: Domino's® Unveils 50% Off Pizza Deal - Just in Time for Black Friday and Cyber Monday
+<<<TEXT>>>
+--Domino's Pizza Inc. is no stranger to providing customers with value, where they want it, as well as convenience. Customers can enjoy both thanks to Domino's 50% off pizza deal when they order online between Nov. 28- Dec. 7. About Domino's Pizza ® Founded in 1960, Domino's Pizza is the largest pizza company in the world, with a significant business in both delivery...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2033f45f04324e58
+symbol: DPZ
+published_utc: 2025-12-08T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-celebrating-its-65th-birthday-giving-away-free-orders-chocolate-lava-crunch
+headline: Domino's® is Celebrating Its 65th Birthday by Giving Away Free Orders of Chocolate Lava Crunch Cakes
+<<<TEXT>>>
+--Domino's Pizza Inc. is turning 65 on Dec. 9 and in celebration of its birthday, the iconic brand is offering customers a special deal: free Chocolate Lava Crunch Cakes with any online order of at least $10 between Dec. 8-22.  "In honor of our birthday, we decided there was only one way to celebrate– by sharing some delicious, oven-baked goodness with our customers," said...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3169ec8afc80862f
+symbol: DPZ
+published_utc: 2026-01-22T16:05:00Z
+url: https://www.nasdaq.com/press-release/dominosr-announces-fourth-quarter-year-end-2025-earnings-webcast-2026-01-22
+headline: Domino's® Announces Fourth Quarter/Year-End 2025 Earnings Webcast
+<<<TEXT>>>
+--Domino's Pizza, Inc. announces the following event:. Founded in 1960, Domino's Pizza is the largest pizza company in the world, with a significant business in both delivery and carryout. In the U.S., Domino's generated more than 85% of U.S. retail sales in 2024 via digital channels and has developed many innovative ordering platforms.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7eae5b94efeced79
+symbol: DPZ
+published_utc: 2026-01-26T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-throws-game-winning-pass-carryout-special-2026-01-26
+headline: Domino's® Throws Game-Winning Pass with Carryout Special
+<<<TEXT>>>
+--Football's biggest game of the season is a few weeks away, but Domino's Pizza Inc. is kicking off its own big event by giving customers a special deal: large two-topping carryout pizzas for just $6.99 each from Jan. 26- Feb. 1. Domino's $6.99 carryout special is available for any large pizza with two toppings, including Hand Tossed, Crunchy Thin or New York Style...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: af8b888278955c5a
+symbol: DPZ
+published_utc: 2026-02-11T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-customers-raise-record-breaking-19-million-st-jude-childrens-research
+headline: Domino's® Customers Raise Record-Breaking $19 Million for St. Jude Children's Research Hospital®
+<<<TEXT>>>
+--Thanks to the generosity of customers across the U.S., Domino's Pizza Inc. is proud to announce that it has raised an all-time high of more than $19 million for St. Jude Children's Research Hospital ® in 2025 through the following efforts:. Jude Thanks and Giving ® campaign raised more than $10.5 million between Oct. 13, 2025- Jan. 4, 2026 through Domino's St.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6482cff833eb74ef
+symbol: DPZ
+published_utc: 2026-02-23T06:05:00Z
+url: https://www.nasdaq.com/press-release/dominos-pizzar-announces-fourth-quarter-and-fiscal-2025-financial-results-2026-02-23
+headline: Domino's Pizza® Announces Fourth Quarter and Fiscal 2025 Financial Results
+<<<TEXT>>>
+--Domino's Pizza, Inc., the largest pizza company in the world, announced results for the fourth quarter and fiscal 2025.. In our U.S. business, we gained another point of market share, pacing well ahead of the QSR Pizza category, which grew again in 2025. As we look ahead to 2026, it is our expectation that we will meaningfully increase our market share within a U.S. QSR...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a22d68365431df8
+symbol: DPZ
+published_utc: 2026-03-03T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-brings-back-its-best-deal-ever-big-tournament-2026-03-03
+headline: Domino's® Brings Back Its Best Deal Ever for the Big Tournament
+<<<TEXT>>>
+--Bracket busting season is upon us, but Domino's Pizza Inc. is dropping a deal worthy of a championship run. From now through the final basketball game on April 6, customers can enjoy Domino's "Best Deal Ever" promotion: any pizza with any toppings for just $9.99 each.  "The games are almost here, and we knew we had to give basketball fans the MVP of all deals to enjoy as they...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f1ed304db77bc219
+symbol: DPZ
+published_utc: 2026-03-24T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-updates-its-iconic-industry-first-tracker-even-better-customer-experience
+headline: Domino's® Updates Its Iconic, Industry-First Tracker for an Even Better Customer Experience
+<<<TEXT>>>
+--Domino's Pizza Inc. revolutionized the customer experience by launching its innovative, industry-first Tracker in 2008. Now, the world's largest pizza company has improved the tool to provide all customers with a better, more detailed experience.  "For 18 years, we've been providing customers with the ability to track every step of their order, from when it's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 661700783ecb8fd3
+symbol: DPZ
+published_utc: 2026-03-26T16:05:00Z
+url: https://www.nasdaq.com/press-release/dominosr-announces-q1-2026-earnings-webcast-2026-03-26
+headline: Domino's® Announces Q1 2026 Earnings Webcast
+<<<TEXT>>>
+--Domino's Pizza, Inc. announces the following event:. Founded in 1960, Domino's Pizza is the largest pizza company in the world, with a significant business in both delivery and carryout. In the U.S., Domino's generated more than 85% of U.S. retail sales in 2025 via digital channels and has developed many innovative ordering platforms.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 12aacd66516065b7
+symbol: DPZ
+published_utc: 2026-04-07T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominos-celebrates-new-signature-sauce-exclusive-access-cobranded-merchandise-shinola
+headline: Domino's Celebrates New Signature Sauce with Exclusive Access to Cobranded Merchandise from Shinola
+<<<TEXT>>>
+Now, Domino's Pizza Inc. is offering customers exclusive access to a curated selection of black and gold Shinola timepieces and leather goods to celebrate the launch of Domino's new Slice Sauce– a creamy, craveable dip made to level up every bite of pizza– which also comes in premium black and gold packaging. Customers who order Handmade Pan or Parmesan Stuffed...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b09be9ddb665d20
+symbol: DPZ
+published_utc: 2026-04-20T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-delivers-draft-week-win-all-pizza-50-2026-04-20
+headline: Domino's® Delivers a Draft Week Win: All Pizza is 50% Off
+<<<TEXT>>>
+--With the football draft right around the corner, Domino's Pizza Inc. is delivering a deal worthy of a first-round pick.  "The draft is one of those moments when food, friends and anticipation all come together," said Frank Garrido, Domino's executive vice president– chief restaurant officer. About Domino's Pizza ® Founded in 1960, Domino's Pizza is the largest...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a10a6daec3d6e921
+symbol: DPZ
+published_utc: 2026-04-27T06:05:00Z
+url: https://www.nasdaq.com/press-release/dominos-pizzar-announces-first-quarter-2026-financial-results-2026-04-27
+headline: Domino's Pizza® Announces First Quarter 2026 Financial Results
+<<<TEXT>>>
+--Domino's Pizza, Inc., the largest pizza company in the world, announced results for the first quarter of 2026..  "Q1 2026 represented another quarter of positive order count and market share growth for Domino's in the U.S.," said Russell Weiner, Domino's Chief Executive Officer. Revenues increased $38.5 million, or 3.5%, in the first quarter of 2026 as compared to the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 93d4eb629acc70a8
+symbol: DPZ
+published_utc: 2026-04-28T07:07:00Z
+url: https://www.nasdaq.com/press-release/missed-out-dominosr-giving-customers-second-chance-its-50-pizza-deal-after-online
+headline: Missed Out? Domino's® is Giving Customers a Second Chance at Its 50% Off Pizza Deal After Online Ordering Glitch
+<<<TEXT>>>
+--Domino's online ordering platforms were impacted by a third-party technology issue on Friday, April 24, affecting customers who tried to order during the brand's 50% off pizza deal. Domino's Pizza Inc. wants to make it right by giving customers a pizza night do-over and offering half-off menu-priced pizzas from Wednesday, May 6 to Saturday, May 9.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 940b76439a21c697
+symbol: DPZ
+published_utc: 2026-05-18T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-help-ease-pain-us-red-card-giving-away-1-million-worth-emergency-pizzas-2026
+headline: Domino's® to Help Ease the Pain of a U.S. Red Card by Giving Away $1 Million Worth of Emergency Pizzas
+<<<TEXT>>>
+If any player from the U.S. team receives a red card in the soccer tournament, Domino's is here to help soften the blow by giving away $1 million worth of Emergency Pizzas. Whether you're planning to watch all the matches or perhaps you're playing pickup games of your own, Domino's has some fun ways to help you get ready, "said Kate Trumbull, Domino's executive vice...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 122855f30eeeb948
+symbol: DPZ
+published_utc: 2026-05-27T07:07:00Z
+url: https://www.nasdaq.com/press-release/richard-delcid-wins-dominosr-2026-worlds-fastest-pizza-maker-title-2026-05-27
+headline: Richard Delcid Wins Domino's® 2026 World's Fastest Pizza Maker Title
+<<<TEXT>>>
+--Domino's Pizza Inc. has awarded the 2026 World's Fastest Pizza Maker title to its new champion, Richard Delcid, among top competitors from across the globe at Mandalay Bay Resort in Las Vegas on May 13, 2026. Delcid, who is a general manager at Domino's in Manassas, Virginia, won the competition by making three large pizzas in a record-breaking 31.22 seconds!
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 92c61a21e110b9a7
+symbol: DPZ
+published_utc: 2026-06-01T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-kicks-national-dairy-month-50-pizzas-june-1-7-2026-06-01
+headline: Domino's® Kicks Off National Dairy Month With 50% Off Pizzas June 1-7
+<<<TEXT>>>
+--Domino's Pizza Inc. is celebrating the start of National Dairy Month with a "legen-dairy" deal: 50% off all menu priced pizzas between June 1-7.  "Domino's is committed to delivering delicious food at an unbeatable value, but that wouldn't be possible without farmers across the country who work hard every day to produce the high-quality ingredients our...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1cd5df721a8ff18a
+symbol: DPZ
+published_utc: 2026-06-15T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-adds-parmesan-stuffed-crust-its-best-deal-ever-just-time-soccers-biggest
+headline: Domino's® Adds Parmesan Stuffed Crust to Its Best Deal Ever Just in Time for Soccer's Biggest Matches
+<<<TEXT>>>
+--Domino's Pizza Inc. is turning up the value in time for soccer's biggest matchups of the year. The brand's "Best Deal Ever" is now even better, with Parmesan Stuffed Crust joining the lineup without an additional charge– giving customers any pizza made with any crust and any toppings for $9.99 each, now through July 26.  "Domino's is as fanatical about Parmesan...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 40fa8237a1944be9
+symbol: DPZ
+published_utc: 2026-06-18T16:05:00Z
+url: https://www.nasdaq.com/press-release/dominosr-announces-q2-2026-earnings-webcast-2026-06-18
+headline: Domino's® Announces Q2 2026 Earnings Webcast
+<<<TEXT>>>
+--Domino's Pizza, Inc. announces the following event:. Founded in 1960, Domino's Pizza is the largest pizza company in the world, with a significant business in both delivery and carryout. In the U.S., Domino's generated more than 85% of U.S. retail sales in 2025 via digital channels and has developed many innovative ordering platforms.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e01da99ed40c8dea
+symbol: DPZ
+published_utc: 2026-06-22T16:05:00Z
+url: https://www.nasdaq.com/press-release/dominos-announces-ceo-succession-plan-2026-06-22
+headline: Domino's Announces CEO Succession Plan
+<<<TEXT>>>
+--Domino's Pizza Inc., the largest pizza company in the world, today announced that Russell Weiner has informed the Company's Board of Directors of his intention to retire as Chief Executive Officer following a distinguished career with Domino's. Consistent with its multi-year succession planning process, the Domino's Board of Directors has appointed Joe...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bcf17a9c53be7947
+symbol: DPZ
+published_utc: 2026-07-14T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-fires-summer-new-smores-lava-cakes-2026-07-14
+headline: Domino's® Fires Up Summer with New S'mores Lava Cakes
+<<<TEXT>>>
+--Domino's Pizza Inc. is making it easier than ever to enjoy a classic campfire favorite with its newest indulgent dessert: S'mores Lava Cakes. Domino's Rewards members will receive exclusive early access to the new product, starting on July 20, with the dessert rolling out to everyone on July 27.  "Customers already love our Chocolate Lava Cakes, so we wanted to take...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e4d0fe4061a88c06
+symbol: DPZ
+published_utc: 2026-07-14T16:15:00Z
+url: https://www.nasdaq.com/press-release/dominos-pizzar-announces-appointment-two-new-independent-directors-and-election-corie
+headline: Domino's Pizza® Announces Appointment of Two New Independent Directors and Election of Corie Barry as Lead Independent Director
+<<<TEXT>>>
+--Domino's Pizza, Inc., the largest pizza company in the world, today announced the appointment of Michael C. Creedon, Jr. and Anneliese Olson to its Board of Directors and the election of Corie Barry as the Lead Independent Director of the Board. We're also delighted to elect Corie Barry as Lead Independent Director. Corie Barry has served on Domino's Board of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da7fea3a23e15e6e
+symbol: DPZ
+published_utc: 2026-07-20T06:05:00Z
+url: https://www.nasdaq.com/press-release/dominos-pizza-announces-second-quarter-2026-financial-results-2026-07-20
+headline: Domino's Pizza Announces Second Quarter 2026 Financial Results
+<<<TEXT>>>
+--Domino's Pizza, Inc., the largest pizza company in the world, announced results for the second quarter of 2026..  "In the second quarter, Domino's drove meaningful order count growth," said Russell Weiner, Domino's Chief Executive Officer. In a quarter where the broader U.S.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 26ab45b4f3a8f78a
+symbol: DPZ
+published_utc: 2026-07-20T10:09:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-dominos-pizza-2026-07-20
+headline: /C O R R E C T I O N -- Domino's Pizza/
+<<<TEXT>>>
+--Domino's Pizza, Inc.' s third-party webcast provider experienced technical issues this morning, on Monday, July 20. Domino's second quarter 2026 earnings call has been rescheduled. About Domino's Pizza ® Founded in 1960, Domino's Pizza is the largest pizza company in the world, with a significant business in both delivery and carryout.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1985798e595a8b05
+symbol: DPZ
+published_utc: 2026-07-27T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-serves-summer-savings-all-menu-priced-pizzas-are-50-july-27-aug-2-2026-07-27
+headline: Domino's® Serves Up Summer Savings: All Menu-Priced Pizzas Are 50% Off July 27-Aug. 2
+<<<TEXT>>>
+--Summer just got a whole lot tastier. Domino's Pizza Inc. is helping customers make the most of the season by offering 50% off all menu-priced pizzas from July 27- Aug. 2.  "Summer is all about making memories, whether that's a backyard get-together, family movie night or simply sharing a meal with friends," said Frank Garrido, Domino's executive vice president– chief...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c8d1a43a31ce1d1d
+symbol: DPZ
+published_utc: 2026-08-03T07:07:00Z
+url: https://www.nasdaq.com/press-release/dominosr-paying-customers-beta-test-its-new-website-and-app-2026-08-03
+headline: Domino's® is Paying Customers to Beta Test Its New Website and App
+<<<TEXT>>>
+--Domino's Pizza Inc. redesigned its website and app earlier this year to make it even better, but don't take our word for it. While other companies treat consumers like guinea pigs and ask them to test their sites and provide feedback for free, Domino's is paying customers to try its new digital ordering experience by giving them $5 off their next order.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f640d94857e0532f
+symbol: DPZ
+published_utc: 2026-08-11T07:07:00Z
+url: https://www.nasdaq.com/press-release/after-more-65-years-dominosr-launch-first-pizza-worthy-its-name-introducing-dominotm
+headline: After More Than 65 Years, Domino's® to Launch the First Pizza Worthy of Its Name: Introducing the Domino™
+<<<TEXT>>>
+--After more than 65 years, Domino's Pizza Inc. is introducing the first pizza worthy of its name: the Domino. Launching nationwide on Aug. 31, the new Detroit-style pizza made for one delivers the demands of today's modern pizza occasion, providing customization without compromise. It is topped with two layers of cheese, customers' choice of sauce and up to three...
+<<<END>>>

@@ -1,0 +1,108 @@
+<<<PRESS_RELEASE>>>
+id: b10a56595bfaf2c9
+symbol: MCD
+published_utc: 2025-11-20T09:00:00Z
+url: https://www.nasdaq.com/press-release/serving-holidays-side-chaos-dr-seusss-grinch-meal-coming-mcdonalds-2025-11-20
+headline: Serving Holidays with a Side of Chaos: Dr. Seuss's The Grinch Meal Is Coming to McDonald's
+<<<TEXT>>>
+--CODE PICKLE: Dr. Seuss's The Grinch has successfully slipped into the Golden Arches and on Dec. 2, he's unleashing The Grinch Meal. The meal, made in partnership with Dr. Seuss Enterprises and McDonald's, will be available at participating restaurants nationwide for a limited time, while supplies last. His diabolical culinary debut features Dill Pickle "Grinch...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2621125d0f19d490
+symbol: MCD
+published_utc: 2026-02-02T07:00:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-debuts-exclusive-mcnuggetr-caviar-just-time-valentines-day-no-cost-fans
+headline: McDonald's Debuts Exclusive McNugget® Caviar Just in Time for Valentine's Day - at No Cost to Fans
+<<<TEXT>>>
+We've teamed up with our friends at Paramount Caviar to offer a premium product at a price that only McDonald's can– free of charge. The kits drop at 11 a.m. ET on Tuesday, Feb. 10, exclusively at McNuggetCaviar.com– and supplies are limited, so act fast. The crispy, golden goodness of our signature McNuggets and the salty, savory, black pearls of Paramount's Baerii...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 360c84eaee891440
+symbol: MCD
+published_utc: 2026-02-02T15:40:00Z
+url: https://www.nasdaq.com/press-release/wait-over-mcdonalds-drops-final-rosters-49th-annual-all-american-games-2026-02-02
+headline: The Wait is Over! McDonald's Drops Final Rosters for the 49th Annual All American Games
+<<<TEXT>>>
+Now, the countdown is officially on for the girls and boys games taking place on Tuesday, March 31 at Desert Diamond Arena in Glendale, AZ..  "Nearly five decades into the McDonald's All American Games, I continue to be amazed by the talent who raise the bar every year, and the fans who show up to support them," said Elizabeth Campbell, Vice President of Marketing,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: aa65d02f6e609fe5
+symbol: MCD
+published_utc: 2026-02-04T17:00:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-announces-quarterly-cash-dividend-2026-02-04
+headline: McDONALD'S ANNOUNCES QUARTERLY CASH DIVIDEND
+<<<TEXT>>>
+--Today, McDonald's Board of Directors declared a quarterly cash dividend of $1.86 per share of common stock payable on March 17, 2026 to shareholders of record at the close of business on March 3, 2026. For important news and information regarding McDonald's, including the timing of future investor conferences and earnings calls, visit the Investor Relations...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 550797147c46085f
+symbol: MCD
+published_utc: 2026-02-10T09:15:00Z
+url: https://www.nasdaq.com/press-release/james-d-farley-jr-elected-mcdonalds-board-directors-2026-02-10
+headline: James D. Farley, Jr. Elected to McDonald's Board of Directors
+<<<TEXT>>>
+Earlier in his career at Ford, Farley held leadership roles overseeing Ford Europe, Middle East, and Africa; Global Marketing, Sales& Service; the ongoing reinvention of the Lincoln brand; and Ford's operations in Canada, Mexico, and South America.  "Jim brings invaluable experience balancing innovation with operational excellence, modernizing customer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 35de877e1b58a7e9
+symbol: MCD
+published_utc: 2026-02-11T16:01:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-reports-fourth-quarter-and-full-year-2025-results-2026-02-11
+headline: McDONALD'S REPORTS FOURTH QUARTER AND FULL YEAR 2025 RESULTS
+<<<TEXT>>>
+--McDonald's Corporation today announced results for the fourth quarter and year ended December 31, 2025. Global comparable sales increased 5.7%: U.S. increased 6.8% International Operated Markets increased 5.2% International Developmental Licensed Markets increased 4.5% Consolidated revenues increased 10%. Systemwide sales increased 11%....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3816c7b3d2623dc6
+symbol: MCD
+published_utc: 2026-05-07T07:00:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-reports-first-quarter-2026-results-2026-05-07
+headline: McDONALD'S REPORTS FIRST QUARTER 2026 RESULTS
+<<<TEXT>>>
+--McDonald's Corporation today announced results for the first quarter ended March 31, 2026. Results reflected pre-tax charges of $47 million and $66 million for the current year and prior year, respectively, primarily related to restructuring charges associated with Accelerating the Organization. Excluding these current and prior year charges,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a558452c9f7b3d87
+symbol: MCD
+published_utc: 2026-05-13T05:30:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-and-chicago-fire-football-club-announce-landmark-stadium-naming-rights
+headline: McDonald's and Chicago Fire Football Club Announce Landmark Stadium Naming Rights Partnership: McDonald's Park to Open in 2028 as a New Destination for Soccer, Culture, and Community in Chicago
+<<<TEXT>>>
+--McDonald's and Chicago Fire Football Club today announced a historic naming rights partnership that will see the Major League Soccer club's new $750 million privately-funded stadium named McDonald's Park, opening in 2028.  "As we take the next step on our journey to build a world class Club, our commitment to Chicago is at the center of everything we do," said Joe...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: faad65f53eb26d13
+symbol: MCD
+published_utc: 2026-05-20T17:00:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-announces-quarterly-cash-dividend-2026-05-20
+headline: McDONALD'S ANNOUNCES QUARTERLY CASH DIVIDEND
+<<<TEXT>>>
+--Today, McDonald's Board of Directors declared a quarterly cash dividend of $1.86 per share of common stock payable on June 16, 2026 to shareholders of record at the close of business on June 2, 2026. For important news and information regarding McDonald's, including the timing of future investor conferences and earnings calls, visit the Investor Relations...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ea94e3219e92c56f
+symbol: MCD
+published_utc: 2026-07-23T17:00:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-announces-quarterly-cash-dividend-2026-07-23
+headline: McDONALD'S ANNOUNCES QUARTERLY CASH DIVIDEND
+<<<TEXT>>>
+--Today, McDonald's Board of Directors declared a quarterly cash dividend of $1.86 per share of common stock payable on September 16, 2026 to shareholders of record at the close of business on September 1, 2026. For important news and information regarding McDonald's, including the timing of future investor conferences and earnings calls, visit the Investor...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e8c78b598e399fe
+symbol: MCD
+published_utc: 2026-08-04T07:00:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-reports-second-quarter-2026-results-2026-08-04
+headline: McDONALD'S REPORTS SECOND QUARTER 2026 RESULTS
+<<<TEXT>>>
+--McDonald's Corporation today announced results for the second quarter ended June 30, 2026.  "While our playbook is working around the world, we see an opportunity to raise the bar in the U.S. and accelerate performance in our largest market. U.S.: Comparable sales results were driven by positive check growth, including favorable product mix, partly offset by...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 722b04788ae36953
+symbol: MCD
+published_utc: 2026-08-04T07:00:00Z
+url: https://www.nasdaq.com/press-release/mcdonalds-appoints-skye-anderson-president-mcdonalds-usa-2026-08-04
+headline: McDonald's Appoints Skye Anderson as President of McDonald's USA
+<<<TEXT>>>
+--McDonald's Corporation today announced that Skye Anderson, a Company executive with more than 26 years of McDonald's experience, has been appointed President, McDonald's USA, effective today. Her appointment reflects the Company's focus on improving everyday restaurant experience, strengthening value offerings for customers and driving long-term...
+<<<END>>>

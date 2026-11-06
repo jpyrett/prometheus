@@ -66,7 +66,7 @@ async def test_by_default_only_the_search_and_read_tools_are_offered(tools):
     async with served(tools) as c:
         names = {t.name for t in await c.list_tools()}
     assert names == set(DATA_CLERK_TOOLS) - set(FETCH) == {"retrieve_news", "retrieve_press_releases", "retrieve_filings", "fetch_filings_recommendation", "keyword_search",
-                                                           "discover_tickers", "get_financials", "get_price_summary", "get_quote"}
+                                                           "discover_tickers", "get_financials", "get_price_summary", "get_quote", "calculate_metrics"}
 
 
 async def test_with_fetching_allowed_the_whole_allow_list_is_offered_and_nothing_else(tools):
@@ -284,7 +284,7 @@ def filings_tools(index, press_index, filings_index, toolbox):
 async def test_retrieve_filings_is_offered_by_default_and_fetch_filings_only_with_the_flag(filings_tools):
     async with served(filings_tools) as c:
         offered = {t.name for t in await c.list_tools()}
-    assert "retrieve_filings" in offered and "fetch_filings" not in offered and len(offered) == 9  # six before filings were searchable, seven before the evidence tool, eight before get_quote (entry 42)
+    assert "retrieve_filings" in offered and "fetch_filings" not in offered and len(offered) == 10  # six before filings were searchable, seven before the evidence tool, eight before get_quote (entry 42), nine before calculate_metrics (entry 51)
     async with served(filings_tools, allow_fetch=True) as c:
         assert {"retrieve_filings", "fetch_filings"} <= {t.name for t in await c.list_tools()}
 

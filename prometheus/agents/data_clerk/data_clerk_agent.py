@@ -43,6 +43,7 @@ import json
 import re
 import sys
 import threading
+import time
 from dataclasses import asdict, dataclass, field
 from datetime import date, datetime, timezone
 from typing import Annotated, TypedDict
@@ -53,23 +54,30 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 
-from prometheus.common.work_order import DataResult, WorkOrder, attach_result, corpus_of, verify_quote_request, verify_request
+from prometheus.common.work_order import DataResult, WorkOrder, attach_result, corpus_of, sector_map, verify_metric_request, verify_quote_request, verify_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
-from prometheus.prompts.data_clerk import LAST_TURN, repair_message, system_prompt
+from prometheus.prompts.data_clerk import COMPANIES_RETRY, LAST_TURN, companies_prompt, repair_message, system_prompt
 from prometheus.rag.citations import SourceBook
+from prometheus.rag.loaders import check_symbol
 from prometheus.rag.retriever import Hit
 from prometheus.tools import symbols
 from prometheus.tools.data_clerk import EVIDENCE_TOOLS, RETRIEVE_TOOLS, DataClerkTools, ToolInputError, ToolLimitError, describe_tool_error
+
+def _utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
 
 # one search at a time across all questions in this process: the embedding model and the Chroma index are shared
 _RETRIEVE_LOCK = threading.Lock()
 
 FETCH_TOOLS = ("fetch_news", "fetch_press_releases", "fetch_filings")
 LOOKUP_SOURCES = ("press_releases", "filings")  # the sources whose symbol or company name is looked up in code, before any model runs (entries 34 and 35)
-DEFAULT_CALLS = {"retrieve_news": 3, "retrieve_press_releases": 3, "retrieve_filings": 3, "fetch_filings_recommendation": 2, "keyword_search": 2, "discover_tickers": 2, "get_financials": 2, "get_price_summary": 2, "get_quote": 5,
+DEFAULT_CALLS = {"retrieve_news": 3, "retrieve_press_releases": 3, "retrieve_filings": 3, "fetch_filings_recommendation": 2, "keyword_search": 2, "discover_tickers": 2, "get_financials": 2, "get_price_summary": 2, "get_quote": 5, "calculate_metrics": 2,
                  "fetch_news": 1, "fetch_press_releases": 1, "fetch_filings": 1}
 JUDGES = re.compile(r"\b(?:bullish|bearish)\b", re.I)  # the words of the Advisor's job; the Data Clerk's answer should not carry them (entry 41)
 SWEEP_TOOLS = (("news", "retrieve_news"), ("press_releases", "retrieve_press_releases"), ("filings", "retrieve_filings"))  # the corpora every order carries (entry 40), and the search of each
+MAX_REFRESH_SYMBOLS = 15  # `refresh_data` fetches for at most this many symbols at a time
+MAX_EVIDENCE_SYMBOLS = 10  # the sweep reads the stored filing evidence of an order's symbols when it names at most this many
 MAX_TURNS = 6  # model turns per question, including a correction; the last one is without tools
 
 
@@ -190,6 +198,7 @@ class DataClerk:
         self.tools = DataClerkTools(toolbox, store, press_store, filings_store)
         self.model = model or get_chat_model("data_clerk", model=model_id)
         self.allow_fetch, self.max_turns, self.calls, self.symbol_search, self.sweep = allow_fetch, max_turns, calls, symbol_search, sweep
+        self.lookup_interval = 0.3   # seconds between two symbol lookups of `find_companies` (Finnhub answered HTTP 429 to ten searches in two seconds); a test sets 0
 
     def _graph(self, book: SourceBook, budget: Budget, today: date | None):
         tools = [budgeted(t, budget) for t in self.tools.langchain_tools(book)]
@@ -289,18 +298,20 @@ class DataClerk:
         symbols = spec["tickers"] or []
         if result.filing_evidence:
             result.sweep["filing_evidence"] = {"by": "model", "sources": sum(len(e.get("evidence", [])) for e in result.filing_evidence.values()), "note": ""}
-        elif len(symbols) != 1:
-            result.sweep["filing_evidence"] = {"by": "code", "sources": 0, "note": "the filing evidence is read for one symbol: the order does not name exactly one"}
-        else:
-            try:
-                evidence = self.tools.fetch_filings_recommendation(symbols[0])
-            except ToolInputError as error:  # for example "no filings of X are stored": the reason is the message
-                result.sweep["filing_evidence"] = {"by": "code", "sources": 0, "note": str(error)[:200]}
-            except Exception as error:
-                result.sweep["filing_evidence"] = {"by": "code", "sources": 0, "note": f"reading the filings failed ({type(error).__name__})"}
-            else:
-                result.filing_evidence[evidence["symbol"]] = evidence
-                result.sweep["filing_evidence"] = {"by": "code", "sources": len(evidence["evidence"]), "note": ""}
+        elif not 1 <= len(symbols) <= MAX_EVIDENCE_SYMBOLS:
+            result.sweep["filing_evidence"] = {"by": "code", "sources": 0, "note": f"the filing evidence is read for the symbols an order names (1 to {MAX_EVIDENCE_SYMBOLS}): this order names {len(symbols)}"}
+        else:  # one symbol (entry 40) or a short list (entry 53: a ranking of several companies needs each one's evidence); the stored filings only, nothing is fetched
+            notes = []
+            for symbol in symbols:
+                try:
+                    evidence = self.tools.fetch_filings_recommendation(symbol)
+                except ToolInputError as error:  # for example "no filings of X are stored": the reason is the message
+                    notes.append(f"{symbol}: {str(error)[:120]}")
+                except Exception as error:
+                    notes.append(f"{symbol}: reading the filings failed ({type(error).__name__})")
+                else:
+                    result.filing_evidence[evidence["symbol"]] = evidence
+            result.sweep["filing_evidence"] = {"by": "code", "sources": sum(len(e["evidence"]) for e in result.filing_evidence.values()), "note": "; ".join(notes)}
 
     def request_data(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
         """The Data Clerk's agent call (the design's `DataClerk.request_data`): check the work order, answer its query, put the
@@ -342,6 +353,169 @@ class DataClerk:
         order.errors = [*order.errors, *problems]
         order.status = "data_failed" if problems else "data_ready"
         return order
+
+    def request_metrics(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
+        """The Data Clerk's agent call for a `calculate_financials` order (Advisor v1 spec section 4.1, entry 51): the metrics asked for, for every symbol of `order.subject`, put on
+        `order.data.metrics` as {symbol: {metric: result}} (each result: value, unit, as_of, window, source, inputs_summary, note), and the SAME order returned.
+
+        There is no model call: a number is a calculation, so the Data Clerk calls its own tool code (`DataClerkTools.metrics_for`, the code behind the `calculate_metrics` tool the model is
+        also offered) in code. A metric that cannot be computed is `value: None` with a note: that is a result, not a failure. The order is `data_failed` only when a symbol could not be read at
+        ALL (no stored bars, no Finnhub payload and no stored filings), and that symbol is named in `order.errors`; every other symbol keeps its results. What could not be read for a symbol
+        that has other data (a Finnhub call that failed, no stored filings) is in `data.notes`. An order that already has its data comes back unchanged."""
+        if order.status in ("data_ready", "recommended"):
+            return order
+        reasons = verify_metric_request(order)
+        if reasons:
+            order.status, order.errors = "data_failed", [*order.errors, *reasons]
+            return order
+        wanted = [order.subject] if isinstance(order.subject, str) else list(order.subject)
+        try:
+            symbols = list(dict.fromkeys(check_symbol(s.strip().lstrip("$")) for s in wanted))
+        except ValueError as error:  # not a ticker symbol: refused before anything is read
+            order.status, order.errors = "data_failed", [*order.errors, str(error)]
+            return order
+        try:
+            found = self.tools.metrics_for(symbols, order.metrics, today, sector_map(order))
+            call = {"name": "calculate_metrics", "args": {"symbols": len(symbols), "metrics": len(order.metrics)}, "outcome": "ok"}
+        except Exception as error:  # the bars could not be read at all, or a bug in a metric: say the kind, never details
+            order.status, order.errors = "data_failed", [*order.errors, f"the metrics could not be calculated ({type(error).__name__}: {' '.join(str(error).split())[:160]})"]
+            order.data = DataResult(tool_calls=[{"name": "calculate_metrics", "args": {"symbols": len(symbols), "metrics": len(order.metrics)}, "outcome": "error"}], completed_utc=_utc_now())
+            return order
+        unreadable = [s for s in symbols if not found["bars"].get(s) and all(r["value"] is None for r in found["results"][s].values())]  # no bars and not one number from anything else
+        failed = [f"{s}: nothing could be read ({found['problems'].get(s, 'no stored bars for it')})" for s in unreadable]
+        notes = [f"{s}: {reason}" for s, reason in found["problems"].items() if s not in unreadable] + [f"bars: {gap}" for gap in found["gaps"]]
+        order.data = DataResult(answer=f"{len(order.metrics)} metrics for {len(symbols)} symbols", metrics=found["results"], problems=failed, notes=notes, tool_calls=[call], completed_utc=_utc_now())
+        order.errors = [*order.errors, *failed]
+        order.status = "data_failed" if failed else "data_ready"
+        return order
+
+    # ---------------------------------------------------------------- a phrase to companies, and the data for them (design choices entry 53)
+
+    def find_companies(self, phrase: str, count: int = 10, today: date | None = None) -> dict:
+        """Which listed companies belong to an industry or a theme ("Pizza"): the Data Clerk's model PROPOSES brands and the companies that own them, and CODE turns every proposal into a real
+        ticker or says it cannot. The model's memory is only the list of names; it supplies no ticker that is used, no number and no evidence (every score still comes from bars, filings and news).
+
+        Each proposal ({brand, parent, ticker}) is resolved in this order, the first that works winning: the parent's name by `symbols.find_company` (the same words as a Finnhub listing, generic
+        company words ignored: "Domino's Pizza" is "Domino's Pizza Inc"); the brand's name the same way; the start of a listed name when exactly one listing starts with it
+        (`resolve_company`: "Papa John's" is "Papa John's International"); the model's ticker hint, only if Finnhub has that ticker AND every distinctive word of one of the two names is in the other. A proposal with no parent is private (or unsure): listed as not scored. Tickers the stored market news ties to the phrase (`discover_tickers`, free) are added.
+        Returns {phrase, companies: [{brand, parent, symbol, company, public, how, note}], sector_etf (one of the 11, or None), notes, run}; never raises for a model or lookup failure: it is in `notes`."""
+        from prometheus.agents.advisor.calls import ask_object, new_run  # the one JSON-with-a-retry loop of the Advisor's calls
+        from prometheus.agents.data_clerk.metrics_catalog import sector_etfs
+        text = " ".join(phrase.split()) if isinstance(phrase, str) else ""
+        if not text or len(text) > 60 or not re.fullmatch(r"[A-Za-z0-9 &.,'\u2019\-]+", text):
+            raise ValueError("the phrase must be 1 to 60 characters of letters, digits, spaces and & . , ' -")
+        if not isinstance(count, int) or isinstance(count, bool) or not 1 <= count <= 20:
+            raise ValueError("count must be a whole number from 1 to 20")
+        self.symbol_search = self._paced(self.symbol_search or symbols.search_finnhub)
+        run = new_run("companies", self.model)
+        out = {"phrase": text, "companies": [], "sector_etf": None, "notes": [], "run": run}
+        reply = ask_object(self.model, [SystemMessage(content=companies_prompt(text, count, today)), HumanMessage(content=f"Industry or theme: {text}")], run, "companies", COMPANIES_RETRY)
+        if reply is None:
+            out["notes"].append(run["error"])
+        else:
+            sector = reply.get("sector_etf")
+            out["sector_etf"] = sector.strip().upper() if isinstance(sector, str) and sector.strip().upper() in sector_etfs() else None
+            for proposal in reply["companies"][:count]:
+                if isinstance(proposal, dict):
+                    out["companies"].append(self._resolve_proposal(proposal, out["notes"]))
+        try:
+            for row in self.tools.discover_tickers(text, from_date=30, top=10)["tickers"]:
+                if row.get("articles", 0) >= 3 and row.get("symbol") not in {c["symbol"] for c in out["companies"]}:
+                    out["companies"].append({"brand": row["symbol"], "parent": None, "symbol": row["symbol"], "company": None, "public": True, "how": "stored market news", "note": f"{row['articles']} stored articles"})
+        except Exception as error:  # the stored market news cannot be read: the model's list stands alone
+            out["notes"].append(f"stored-news discovery failed ({type(error).__name__})")
+        seen = set()
+        out["companies"] = [c for c in out["companies"] if not (c["symbol"] and (c["symbol"] in seen or seen.add(c["symbol"])))]
+        return out
+
+    def _paced(self, search):
+        """The symbol search, no faster than `lookup_interval` and with a pause and a second try when Finnhub answers 429 (a rate limit is not "not found"). Wrapped once."""
+        if getattr(search, "_paced", False) or not self.lookup_interval:
+            return search
+        last = [0.0]
+
+        def paced(query: str):
+            for attempt in range(3):
+                time.sleep(max(0.0, last[0] + self.lookup_interval - time.monotonic()))
+                last[0] = time.monotonic()
+                try:
+                    return search(query)
+                except symbols.SymbolLookupError as error:
+                    if "429" not in str(error) or attempt == 2:
+                        raise
+                    time.sleep(3.0 * (attempt + 1))
+        paced._paced = True
+        return paced
+
+    def _resolve_proposal(self, proposal: dict, notes: list[str]) -> dict:
+        """One proposal -> {brand, parent, symbol, company, public, how, note}; see `find_companies` for the order of the attempts."""
+        clean = lambda v: " ".join(v.split())[:60] if isinstance(v, str) and v.strip() else None
+        brand, parent, hint = clean(proposal.get("brand") or proposal.get("name")), clean(proposal.get("parent")), clean(proposal.get("ticker"))
+        row = {"brand": brand or parent or "?", "parent": parent, "symbol": None, "company": None, "public": False, "how": None, "note": None}
+        if not parent:
+            row["note"] = "privately held, or not known to be listed: not scored"
+            return row
+        found, how = None, None
+        try:
+            for name in dict.fromkeys(n for n in (parent, brand) if n):
+                found = symbols.find_company(name, self.symbol_search)
+                if found:
+                    how = f'company name "{name}": the same words as the listing'
+                    break
+            if not found:
+                try:
+                    start = symbols.resolve_company(parent, self.symbol_search)
+                    found, how = (start, "the start of the listed name") if start.how == "name" else (None, None)
+                except symbols.SymbolLookupError:
+                    pass
+            if not found and hint:
+                guess = symbols.find_symbol(hint, self.symbol_search)
+                words = lambda t: {w for w in re.findall(r"[a-z0-9]+", (t or "").lower()) if len(w) >= 3 and w not in symbols.GENERIC_WORDS}
+                listed, named = words(guess.company) if guess else set(), words(parent)
+                if listed and named and (named <= listed or listed <= named):  # every distinctive word of one name is in the other: "Yum Brands" and "YUM! BRANDS INC", not "Zorblax Pizza Holdings" and "Domino's Pizza" (they share "pizza")
+                    found, how = guess, f"the model's ticker {hint}, checked: Finnhub has it and its name has the same distinctive words as {parent!r}"
+        except symbols.TargetNotFound as error:  # several listings carry the name: not guessed
+            row["note"] = f"{parent!r} matches several listings ({error.detail[:100]}): not scored"
+            return row
+        except symbols.SymbolLookupError as error:
+            notes.append(f"{parent}: the lookup failed ({getattr(error, 'reason', error)})")
+            row["note"] = "the symbol lookup failed: not scored"
+            return row
+        if not found:
+            row["note"] = f"no listed company named {parent!r} in Finnhub's directory: not scored"
+            return row
+        row.update(symbol=found.symbol, company=found.company, public=True, how=how)
+        if hint and hint.upper() != found.symbol:
+            row["note"] = f"the model guessed {hint}; the lookup says {found.symbol}"
+        return row
+
+    def refresh_data(self, symbols_: list[str], news_days: int = 14, filings_days: int = 365, bars_days: int = 400, end: date | None = None, bars_for: list[str] | None = None) -> list[dict]:
+        """Fetch what the Advisor needs for these symbols, with the PAID APIs, and say what happened to each step (only when the Data Clerk was built with `allow_fetch`: otherwise nothing is
+        fetched and the one entry says so). For SPY, the 11 sector ETFs and every symbol: the daily bars (`DataToolbox.fetch_daily_bars`, one call each, Massive REST). For each symbol: its news
+        (`news_days`), its press releases and its SEC filings with the 10-Q text from EDGAR (`filings_days`), indexed for search. A step that fails is an entry with `outcome: "error"` and its
+        kind, and the next step still runs: a company whose filings cannot be read still gets its bars and news. `bars_for` are more symbols that need only their bars (the user's holdings: the
+        Advisor sizes a position from their prices). Returns [{step, symbol, outcome, detail}]."""
+        from prometheus.agents.data_clerk.metrics_catalog import SPY, sector_etfs
+        if not self.allow_fetch:
+            return [{"step": "all", "symbol": None, "outcome": "refused", "detail": "the Data Clerk was built without allow_fetch: nothing is fetched (fetching uses paid APIs and writes files)"}]
+        wanted = list(dict.fromkeys(check_symbol(s.strip().lstrip("$")) for s in symbols_))
+        if not wanted or len(wanted) > MAX_REFRESH_SYMBOLS:
+            raise ValueError(f"refresh 1 to {MAX_REFRESH_SYMBOLS} symbols at a time")
+        report = []
+
+        def step(name: str, symbol: str | None, call) -> None:
+            try:
+                detail = call()
+                report.append({"step": name, "symbol": symbol, "outcome": "ok", "detail": detail})
+            except Exception as error:  # the kind and a short message, never request details or a key
+                report.append({"step": name, "symbol": symbol, "outcome": "error", "detail": f"{type(error).__name__}: {' '.join(str(error).split())[:160]}"})
+
+        step("daily_bars", None, lambda: {s: i["stored"] for s, i in self.tools.toolbox.fetch_daily_bars(list(dict.fromkeys([*wanted, *(check_symbol(b.strip().lstrip("$")) for b in bars_for or []), SPY, *sector_etfs()])), bars_days, end).items()})
+        for symbol in wanted:
+            step("news", symbol, lambda s=symbol: {k: v for k, v in self.tools.fetch_news(s, from_date=news_days).items() if k in ("fetched", "written", "duplicates")})
+            step("press_releases", symbol, lambda s=symbol: {k: v for k, v in self.tools.fetch_press_releases(s, from_date=filings_days).items() if k in ("fetched", "written", "duplicates")})
+            step("filings", symbol, lambda s=symbol: {k: v for k, v in self.tools.fetch_filings(s, from_date=filings_days).items() if k in ("fetched", "written", "edgar_text")})
+        return report
 
     def _resolve_target(self, order: WorkOrder) -> bool:
         """Press releases and filings (the same rules, entries 34 and 35): turn the order's two arguments (subject = the symbol, company = the company name) into ONE symbol, by the rules of

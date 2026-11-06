@@ -1,0 +1,140 @@
+{
+ "Domino's Pizza": [
+  {
+   "symbol": "DPZ",
+   "type": "Common Stock",
+   "description": "Domino's Pizza, Inc.",
+   "displaySymbol": "DPZ"
+  },
+  {
+   "symbol": "DMP.AX",
+   "type": "Common Stock",
+   "description": "Domino's Pizza Enterprises Ltd",
+   "displaySymbol": "DMP.AX"
+  },
+  {
+   "symbol": "DOM.L",
+   "type": "Common Stock",
+   "description": "Domino's Pizza Group PLC",
+   "displaySymbol": "DOM.L"
+  }
+ ],
+ "Papa John's": [
+  {
+   "symbol": "PZZA",
+   "type": "Common Stock",
+   "description": "Papa John's International Inc",
+   "displaySymbol": "PZZA"
+  }
+ ],
+ "Yum! Brands": [
+  {
+   "symbol": "YUM",
+   "type": "Common Stock",
+   "description": "Yum! Brands, Inc.",
+   "displaySymbol": "YUM"
+  }
+ ],
+ "Yum Brands": [],
+ "Little Caesars": [],
+ "Donatos": [],
+ "YUM": [
+  {
+   "symbol": "YUM",
+   "type": "Common Stock",
+   "description": "YUM! BRANDS INC",
+   "displaySymbol": "YUM"
+  },
+  {
+   "symbol": "YUM.MX",
+   "type": "Common Stock",
+   "description": "YUM! BRANDS INC",
+   "displaySymbol": "YUM.MX"
+  },
+  {
+   "symbol": "YUM.SW",
+   "type": "Common Stock",
+   "description": "YUM! BRANDS INC",
+   "displaySymbol": "YUM.SW"
+  },
+  {
+   "symbol": "YUM.VI",
+   "type": "Common Stock",
+   "description": "YUM! BRANDS INC",
+   "displaySymbol": "YUM.VI"
+  },
+  {
+   "symbol": "YUM",
+   "type": "Common Stock",
+   "description": "Yum! Brands, Inc.",
+   "displaySymbol": "YUM"
+  },
+  {
+   "symbol": "YUMC",
+   "type": "Common Stock",
+   "description": "Yum China Holdings Inc",
+   "displaySymbol": "YUMC"
+  },
+  {
+   "symbol": "300993.SZ",
+   "type": "Common Stock",
+   "description": "Shandong Yuma Sun-Shading Technology Corp Ltd",
+   "displaySymbol": "300993.SZ"
+  },
+  {
+   "symbol": "YUMM",
+   "type": "Common Stock",
+   "description": "Yummies Inc",
+   "displaySymbol": "YUMM"
+  },
+  {
+   "symbol": "ATATR.E.IS",
+   "type": "Common Stock",
+   "description": "Ata Turizm Isletmecilik Tasimacilik Madencilik Kuyumculuk Sanayi ve Dis Ticaret AS",
+   "displaySymbol": "ATATR.E.IS"
+  },
+  {
+   "symbol": "TUCLK.E.IS",
+   "type": "Common Stock",
+   "description": "Tugcelik Aluminyum ve Metal Mamulleri Sanayi ve Ticaret AS",
+   "displaySymbol": "TUCLK.E.IS"
+  }
+ ],
+ "DPZ": [
+  {
+   "symbol": "DPZ",
+   "type": "Common Stock",
+   "description": "DOMINO'S PIZZA INC",
+   "displaySymbol": "DPZ"
+  },
+  {
+   "symbol": "DPZ.MX",
+   "type": "Common Stock",
+   "description": "DOMINO'S PIZZA INC",
+   "displaySymbol": "DPZ.MX"
+  },
+  {
+   "symbol": "DPZ.VI",
+   "type": "Common Stock",
+   "description": "DOMINO'S PIZZA INC",
+   "displaySymbol": "DPZ.VI"
+  }
+ ],
+ "PZZA": [
+  {
+   "symbol": "PZZA",
+   "type": "Common Stock",
+   "description": "PAPA JOHN'S INTL INC",
+   "displaySymbol": "PZZA"
+  },
+  {
+   "symbol": "PZZA.JK",
+   "type": "Common Stock",
+   "description": "SARIMELATI KENCANA PT",
+   "displaySymbol": "PZZA.JK"
+  }
+ ],
+ "ZZZZ": [],
+ "Pizza Hut": [],
+ "Zorblax Pizza": []
+}

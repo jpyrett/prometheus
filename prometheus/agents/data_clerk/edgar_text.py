@@ -35,7 +35,7 @@ ITEM_LINE = re.compile(r"item\s+(\d{1,2}[a-z]?)\s*[.:\u2013\u2014-]*\s*(.*)", re
 # `PART I`, `PART II - OTHER INFORMATION`, `Part I`; the words after the dash must not contain a lower-case letter, so "Part I, Item 1A of the ..." is not a part line.
 # Only the word and the numeral are case-insensitive: under re.I the class [^a-z] would exclude capitals too and "PART I - FINANCIAL INFORMATION" would not match (found by the
 # first run on the real 10-Q: the part stayed at II from the table of contents, and Part I's Items were named as Part II's).
-PART_LINE = re.compile(r"(?i:part)\s+(?i:(iv|iii|ii|i))\b(?:\s*[.:\u2013\u2014-]\s*[^a-z]{0,70})?")
+PART_LINE = re.compile(r"(?i:part)\s+(?i:(iv|iii|ii|i))\b(?:\s*[.:\u2013\u2014-]\s*(?:[^a-z]{0,70}|(?i:financial information|other information)))?")   # "Part I. Financial Information" (Restaurant Brands) too
 MAX_HEADING = 150
 
 
@@ -136,6 +136,16 @@ def html_to_lines(html: str) -> list[str]:
     return [line for line in (" ".join(raw.split()) for raw in text.split("\n")) if line]
 
 
+def _two_cell_heading(line: str) -> str:
+    """Procter & Gamble writes its real headings as a two-cell table row, `Item 1. | Financial Statements` (found on its real 10-Q: "no Item heading was found"). A row of exactly two cells,
+    an item number and then a title that starts with a capital letter, is a heading and is returned as `Item 1. Financial Statements`. The table of contents has a page number in
+    a third cell (`Item 1. | Financial Statements | 1`) and `PART I | Item 1. | ...` has four: neither is changed."""
+    cells = line.split(" | ")
+    if len(cells) == 2 and re.fullmatch(r"item\s+\d{1,2}[a-z]?\s*[.:\u2013\u2014-]*", cells[0], re.I) and cells[1][:1].isupper() and not cells[1].isdigit():
+        return f"{cells[0]} {cells[1]}"
+    return line
+
+
 def split_items(lines: list[str]) -> list[tuple[str, str]]:
     """The Items of a 10-Q as (section name, text), in order. Text before the first Item heading (the cover page and the table of contents) is left out; the heading line
     stays at the top of its section. A name that comes twice keeps the longer text (a table of contents written as plain lines gives a heading that is a line long, and then
@@ -143,6 +153,7 @@ def split_items(lines: list[str]) -> list[tuple[str, str]]:
     part = None
     sections: list[list] = []  # [name, lines]
     for line in lines:
+        line = _two_cell_heading(line)
         part_line = PART_LINE.fullmatch(line) if len(line) <= 80 else None
         heading = ITEM_LINE.fullmatch(line) if len(line) <= MAX_HEADING and " | " not in line else None
         if part_line:

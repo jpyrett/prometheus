@@ -1,0 +1,14 @@
+The final spec is written: design/advisor_v1_final_spec.md. It supersedes the four earlier files (the Grok summary turned out to be a copy of the expansion's summary, so it added nothing new) and covers only the Generate Recommendations step.
+
+How it is built for Sonnet
+
+Section 0 is the operating contract: exact read order, the code patterns to copy (today: date | None, check_symbol, None + note, fakes in tests), and the meaning of MUST / NEVER / ASK JACOB / NEEDS-YES / PHASE. Section 17 lists what it must not do; section 18 lists the open questions with the default it should take if you have not answered.
+Section 7 walks the step in 12 numbered sub-steps, each with its function name, inputs, output, and the failure path. Two model calls only: a plan call (archetypes, quotes, events, drop cause) and a thesis call (three sentences, bull/bear bullets), both checked by code the way v0 checks quotes.
+Sections 3 and 4 give the calculate_financials contract exactly: new WorkOrder fields, verify_metric_request, DataClerk.request_metrics mirroring request_quotes (no model loop), DataClerkTools.calculate_metrics on the allow-list, the result object per metric, and the four new modules.
+Indicators added (section 5, each with its formula, MIN_BARS, and the family it feeds — none is a vote on its own): RSI-14 (Wilder), MACD histogram, Bollinger %B, 21-day z-score, ADX-14, ATR-14, OBV change, Stochastic %K, Donchian 20-day breakout, reversal candle, SMA 50/200, residual returns vs the sector ETF, beta and correlation to SPY, breadth, plus the fundamentals and filing-derived ratios (net payout yield, payout coverage, SBC/revenue, accruals, receivables vs sales, CFO sign, 10-K risk-factor change).
+
+One fact that shaped the spec: only October 2026 day aggregates are on disk (17 sessions). The spec requires every long-window metric to return None with a note, the trend family to report not_computable, and the regime to be unknown until you approve syncing earlier months. Tests cover the 17-bar case explicitly so Sonnet cannot shorten a window to make a number appear.
+
+Everything in configs/advisor_v1.json: thresholds, priors (20-day excess vs SPY, labelled prior until the ledger has 30 outcomes), regime multipliers, haircut factors. Section 16 is a 10-phase build order with acceptance criteria; phases 1 to 6 are the step itself, 7 to 10 are the ledger, Case 3 brief, theme counterparties, and the bench modifiers behind NEEDS-YES.
+
+The v1 score is mapped so that account_manager.top_recommendation keeps working unchanged, and Advisor v0 stays untouched for the week 3 comparison. The Critic is deliberately not specified; section 14's record schema and order.candidates are what it will read when you come back for it.

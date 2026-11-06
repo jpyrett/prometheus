@@ -30,6 +30,10 @@ which of them the answer cites and which were added by the Data Clerk's code swe
 `fetch_filings_recommendation` tool (the balance sheet for both periods, the capital actions, the exact quotes on dilution, executive compensation, buybacks and dividends,
 the gaps; it scores nothing) when the Data Clerk called it. The Advisor reads these from the order; nothing here is a score.
 
+ADVISOR V1 (design choices entry 51): an order may also carry `metrics` (a `calculate_financials` request: the metrics asked for), `case` (funds / theme / market), `sector` (the sector ETF the user gives) and `candidates`
+(what the Advisor looked at and did not return); `DataResult.metrics` holds the numbers the Data Clerk calculated (`DataClerk.request_metrics`, `verify_metric_request`). An order with none of them is a version 1
+order and reads exactly as before; one that carries any is `schema_version` 2.
+
 The chunks travel with the order (`data.sources` holds every chunk the model was shown, with its text) so the Critic and the audit
 log can check what a score was based on.
 """
@@ -93,6 +97,9 @@ class DataResult(BaseModel):
     sweep: dict[str, dict] = Field(default_factory=dict)  # per corpus (news, press_releases, filings, filing_evidence): who searched it ("model" or "code"), how many sources it gave and why none (entry 40)
     results: dict[str, dict] = Field(default_factory=dict)  # per corpus (news, press_releases, filings): the numbers of `sources` shown and cited (`group_results`); empty on an order that has no data yet
     filing_evidence: dict[str, dict] = Field(default_factory=dict)  # per symbol: the whole result of the fetch_filings_recommendation tool, if the Data Clerk called it (it scores nothing)
+    metrics: dict[str, dict] = Field(default_factory=dict)  # per symbol, per metric name: the metric result of a `calculate_financials` order (value, unit, as_of, window, source, inputs_summary, note); entry 51
+    companies: list[dict] = Field(default_factory=list)  # a phrase's companies, found by the Data Clerk (`find_companies`): {brand, parent, symbol, company, public, how, note}; empty on any other order
+    market_brief: dict = Field(default_factory=dict)  # Case 3 only (the "what is happening" brief of Advisor v1 spec section 13): not built yet, always empty
     quotes: dict[str, dict] = Field(default_factory=dict)  # per symbol: the current quote (price, change, high, low, open, previous close, as_of_utc, source) of a `fetch_quote` order (entry 42); empty on any other order
     problems: list[str] = Field(default_factory=list)
     notes: list[str] = Field(default_factory=list)
@@ -135,17 +142,24 @@ class WorkOrder(BaseModel):
     recommendations: list[dict] = Field(default_factory=list)
     advisor_runs: list[dict] = Field(default_factory=list)  # one record per Advisor call: model, whether it had evidence, tokens, what it dropped
     errors: list[str] = Field(default_factory=list)
+    # Advisor v1 (entry 51). All optional: an order without them is a version 1 order and reads exactly as before; one that carries any of them is `schema_version` 2.
+    metrics: list[dict] | None = None           # a `calculate_financials` order: the metrics asked for, each {"name": str, "params": dict} (params optional)
+    case: Literal["funds", "theme", "industry", "market"] | None = None  # which use case the order serves. None: the Advisor infers it (symbols as the subject -> funds, a term -> theme). industry: rank the companies of an industry, leaders included (entry 53)
+    sector: str | dict[str, str] | None = None  # the sector ETF (a key of configs/sector_etfs.json), given by the user until the profile endpoint exists: one ticker (the subject symbols' sector)
+                                                # or, on a metrics order that covers several companies, {symbol: ETF ticker} (spec 3 says a string; a map is the one widening, entry 51)
+    candidates: list[dict] = Field(default_factory=list)  # the symbols that reached scoring and were not returned as recommendations, with the gate or rank that stopped them
 
 
 def new_work_order(query: str, *, requester: str = "user", action_type: str = "search_news", subject=None, source: str = "news",
                    time_period: str | None = None, since_days: int | None = None, top_k: int = 5, live: bool = False,
-                   criteria: dict | None = None, company: str | None = None) -> WorkOrder:
+                   criteria: dict | None = None, company: str | None = None, metrics: list[dict] | None = None, case: str | None = None,
+                   sector: str | dict[str, str] | None = None) -> WorkOrder:
     """A new order, with an id and a timestamp. It is not checked here: `verify_request` is the check, so that a bad request becomes
     a reported reason and not an exception halfway through the desk."""
     return WorkOrder.model_construct(
-        schema_version=1, request_id=uuid.uuid4().hex[:12], requester=requester, created_utc=_now(), query=query, action_type=action_type,
+        schema_version=2 if (metrics is not None or case is not None or sector is not None) else 1, request_id=uuid.uuid4().hex[:12], requester=requester, created_utc=_now(), query=query, action_type=action_type,
         subject=subject, company=company, source=source, time_period=time_period, since_days=since_days, live=live, top_k=top_k, criteria=criteria,
-        status="new", resolved=None, data=None, recommendations=[], advisor_runs=[], errors=[])
+        status="new", resolved=None, data=None, recommendations=[], advisor_runs=[], errors=[], metrics=metrics, case=case, sector=sector, candidates=[])
 
 
 def verify_request(order: WorkOrder) -> list[str]:
@@ -200,6 +214,60 @@ def verify_quote_request(order: WorkOrder) -> list[str]:
         reasons.append("a quote request needs one or more ticker symbols as its subject")
     elif len(symbols) > MAX_QUOTE_SYMBOLS:
         reasons.append(f"a quote request is for at most {MAX_QUOTE_SYMBOLS} symbols at a time")
+    if order.status in ("data_ready", "recommended"):
+        reasons.append(f"the order already has its data (status {order.status})")
+    return reasons
+
+
+METRIC_ACTION = "calculate_financials"
+MAX_METRIC_SYMBOLS = 30   # as the quote order: the Advisor's code path asks for its candidates (at most 15 new ideas and the holdings), not the model
+MAX_METRICS = 100         # the catalogue has 80 metrics (Advisor v1 spec 4.1 says 40, but the union of what the five families, the gates and the plan read is more than that: entry 51)
+
+
+def sector_map(order: WorkOrder) -> dict[str, str] | None:
+    """{symbol: sector ETF ticker} from the order's `sector`: a single ticker applies to every symbol of the subject, a map is taken as it is, nothing is {}. None when `sector` is not
+    one of those (the check reports it)."""
+    symbols = [order.subject] if isinstance(order.subject, str) else [s for s in (order.subject or []) if isinstance(s, str)]
+    sector = order.sector
+    if sector is None:
+        return {}
+    if isinstance(sector, str):
+        return {s.strip().lstrip("$").upper(): sector.strip().upper() for s in symbols}
+    if isinstance(sector, dict) and all(isinstance(k, str) and isinstance(v, str) for k, v in sector.items()):
+        return {k.strip().lstrip("$").upper(): v.strip().upper() for k, v in sector.items()}
+    return None
+
+
+def verify_metric_request(order: WorkOrder) -> list[str]:
+    """Why the Data Clerk may NOT answer this `calculate_financials` order (`DataClerk.request_metrics`); an empty list means it may. Like `verify_quote_request`, it has its own check:
+    `verify_request` is the check of a SEARCH and still refuses `calculate_financials` (entry 25). The subject is 1 to 30 symbols, `metrics` a non-empty list of at most 100 requests
+    whose names are in the catalogue (the message lists the unknown names and the known ones)."""
+    reasons = []
+    if order.action_type != METRIC_ACTION:
+        reasons.append(f"action_type {order.action_type!r} is not {METRIC_ACTION!r}")
+    symbols = [order.subject] if isinstance(order.subject, str) else list(order.subject or [])
+    if not symbols or not all(isinstance(s, str) and s.strip() for s in symbols):
+        reasons.append("a metrics request needs one or more ticker symbols as its subject")
+    elif len(symbols) > MAX_METRIC_SYMBOLS:
+        reasons.append(f"a metrics request is for at most {MAX_METRIC_SYMBOLS} symbols at a time")
+    requests = order.metrics
+    if not isinstance(requests, list) or not requests:
+        reasons.append("a metrics request needs a non-empty list of metrics")
+    elif len(requests) > MAX_METRICS:
+        reasons.append(f"a metrics request asks for at most {MAX_METRICS} metrics at a time")
+    elif not all(isinstance(r, dict) and isinstance(r.get("name"), str) and isinstance(r.get("params", {}), dict) for r in requests):
+        reasons.append('each metric is {"name": text, "params": {...}} (params optional)')
+    else:
+        from prometheus.agents.data_clerk.metrics_catalog import METRIC_NAMES, sector_etfs  # imported here: the catalogue needs pyarrow and httpx, and the order is plain data
+        unknown = [r["name"] for r in requests if r["name"] not in METRIC_NAMES]
+        if unknown:
+            reasons.append(f"unknown metrics: {', '.join(dict.fromkeys(unknown))}; known metrics: {', '.join(METRIC_NAMES)}")
+        sectors = sector_map(order)
+        bad = sorted({etf for etf in sectors.values() if etf not in sector_etfs()}) if sectors is not None else []
+        if sectors is None and order.sector is not None:
+            reasons.append("sector must be one ETF ticker or a {symbol: ETF ticker} map")
+        elif bad:
+            reasons.append(f"unknown sector ETF {', '.join(bad)}; known sectors: {', '.join(sector_etfs())}")
     if order.status in ("data_ready", "recommended"):
         reasons.append(f"the order already has its data (status {order.status})")
     return reasons

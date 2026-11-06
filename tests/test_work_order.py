@@ -977,8 +977,10 @@ def test_a_term_order_is_swept_across_every_company_and_reads_no_evidence(tmp_pa
     c, _ = three_corpus_clerk([call("retrieve_news", query="meta tax"), say("Meta [1].")], tmp_path, toolbox, filings_index, press_index)
     o = order(query="meta tax", subject="meta tax", since_days=7, top_k=3)
     c.request_data(o)
-    assert o.status == "data_ready" and [s.get("swept") for s in o.data.sources] == [None, True, True]  # no ticker filter: the term finds the press release and the filing of any company
-    assert o.data.filing_evidence == {} and "exactly one" in o.data.sweep["filing_evidence"]["note"]
+    swept = [s for s in o.data.sources if s.get("swept")]
+    assert o.status == "data_ready" and len(o.data.sources) == 1 + len(swept) and o.data.sources[0].get("swept") is None
+    assert {t for s in swept for t in s["tickers"]} == {"META", "PG"} and len(swept) == 4  # no ticker filter: the term finds the press release and the filing of ANY company (Meta's and Procter & Gamble's)
+    assert o.data.filing_evidence == {} and "this order names 0" in o.data.sweep["filing_evidence"]["note"]
 
 
 def test_the_sweep_query_names_the_company_when_the_order_has_one_and_the_query_does_not():
@@ -1005,3 +1007,50 @@ def test_a_swept_order_is_still_plain_json(tmp_path, toolbox, filings_index, pre
     o = meta_order()
     c.request_data(o)
     assert wo.WorkOrder.model_validate_json(o.model_dump_json()) == o
+
+
+# ---------------------------------------------------------------- the metrics order of Advisor v1 (design choices entry 51)
+
+def metric_order(symbols=("AAPL",), metrics=({"name": "rsi_14"},), **kw):
+    return wo.new_work_order("metrics", requester="advisor", action_type="calculate_financials", subject=list(symbols), metrics=list(metrics), **kw)
+
+
+def test_a_version_1_order_is_unchanged_and_a_metrics_order_is_version_2():
+    old = wo.new_work_order("x")
+    assert old.schema_version == 1 and old.metrics is None and old.case is None and old.sector is None and old.candidates == []
+    assert old.data is None and json.loads(old.model_dump_json())["schema_version"] == 1
+    assert metric_order().schema_version == 2 and wo.new_work_order("x", case="funds").schema_version == 2 and wo.new_work_order("x", sector="XLK").schema_version == 2
+    assert wo.WorkOrder.model_validate_json(metric_order(case="theme", sector="XLK").model_dump_json()).case == "theme"
+    assert wo.DataResult().metrics == {} and wo.DataResult().market_brief == {}
+
+
+@pytest.mark.parametrize("kwargs, message", [
+    (dict(symbols=("AAPL",), metrics=({"name": "rsi_14"},)), None),
+    (dict(symbols=("AAPL",), metrics=({"name": "nope"}, {"name": "rsi_14"}, {"name": "nope"})), "unknown metrics: nope; known metrics: ret_1d"),
+    (dict(symbols=[f"S{i}" for i in range(31)]), "at most 30 symbols"),
+    (dict(symbols=[f"S{i}" for i in range(30)]), None),
+    (dict(symbols=()), "needs one or more ticker symbols"),
+    (dict(metrics=()), "non-empty list of metrics"),
+    (dict(metrics=[{"name": "rsi_14"}] * 101), "at most 100 metrics"),
+    (dict(metrics=("rsi_14",)), 'each metric is {"name"'),
+    (dict(sector="XLZ"), "unknown sector ETF XLZ; known sectors: XLK"),
+    (dict(sector="XLK"), None),
+    (dict(sector={"AAPL": "XLK"}), None),
+    (dict(sector=5), "sector must be one ETF ticker"),
+])
+def test_verify_metric_request(kwargs, message):
+    reasons = wo.verify_metric_request(metric_order(**kwargs))
+    assert (message is None and reasons == []) or any(message in r for r in reasons), reasons
+
+
+def test_a_metrics_request_must_be_a_metrics_order_and_must_not_already_have_its_data():
+    assert any("is not 'calculate_financials'" in r for r in wo.verify_metric_request(wo.new_work_order("x", subject=["AAPL"], metrics=[{"name": "rsi_14"}])))
+    done = metric_order()
+    done.status = "data_ready"
+    assert any("already has its data" in r for r in wo.verify_metric_request(done))
+
+
+def test_the_search_check_still_refuses_a_metrics_order_and_the_sector_map_reads_both_forms():
+    assert any("not handled by the Data Clerk's request_data yet" in r for r in wo.verify_request(metric_order()))
+    assert wo.sector_map(metric_order(("aapl", "$MU"), sector="xlk")) == {"AAPL": "XLK", "MU": "XLK"}
+    assert wo.sector_map(metric_order(sector={"mu": "xlk"})) == {"MU": "XLK"} and wo.sector_map(metric_order()) == {}

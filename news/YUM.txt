@@ -1,0 +1,1935 @@
+<<<ARTICLE>>>
+id: finnhub:143289227
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:15:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b34b2ea0daa41e44097e010fbec31e24ce622785ed2d46ebb97172e4779cfaee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Unlocking Q3 Potential of Yum (YUM): Exploring Wall Street Estimates for Key Metrics
+<<<SUMMARY>>>
+Looking beyond Wall Street's top-and-bottom-line estimate forecasts for Yum (YUM), delve into some of its key metrics to gain a deeper insight into the company's potential performance for the quarter ended September 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143286534
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T07:08:14Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e6b30613d59bca8d4b576c5610197ad753505f4c2b4e71f24f0e4827e8b080af
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1412054547/image_1412054547.jpg?io=getty-c-w1536
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands Q3 Preview: It's Time For A Reset And Return To Proper Growth
+<<<SUMMARY>>>
+Yum! Brands faces weak Q3 outlook, Taco Bell margin pressure, and soft KFC growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259218
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T15:02:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=675e83b680919a13aa2268a808dc5f6a181b588ee41db7d0b7ebfee13e73e3c6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Wendy’s Surges 14% on Trian-Led $1.4B Take-Private Offer; McDonald’s Edges Higher, Yum Brands Stays Put
+<<<SUMMARY>>>
+Trian Fund Management wants to pull Wendy's off the public market, but the burger chain's board has gone silent and some shareholders are already calling the price too cheap.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259220
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T14:53:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8ab0ef250754eb834e7ec5b3315ce89d07a7cc8c849dad811b7f14e0e0b65681
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Trian Says It Can Revive Wendy’s. Nelson Peltz Offers $1.4 Billion for the Fast-Food Chain.
+<<<SUMMARY>>>
+Wendy’s has struggled in recent years. Trian Fund Management says a buyout could revive its business.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256311
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:11:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e73563731e852ef3c63ba2088b9fce1275cb968ca05ffe8603143ebf9292c7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: What's Going To Happen With McDonald's Stock Soon?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143257214
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:00:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7a994710964f84f90bc3d5500e5b57a3a260259f8edf6b641334bf12832b2a9f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Dutch Bros (BROS) Earnings Expected to Grow: Should You Buy?
+<<<SUMMARY>>>
+Dutch Bros (BROS) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256313
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T12:16:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9f522b3c982a6bc9e0977c94d7221ad631777eb8ddb1b5b2bf620417ca5afeea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Billionaire investor Nelson Peltz makes move to buy struggling Wendy's
+<<<SUMMARY>>>
+Longtime Wendy's investor and former chairman Nelson Peltz of Trian Partners has reportedly offered $1.4 billion to buy the struggling fast food giant, according to the Wall Street Journal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143256209
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2e2fb33ff1c8d129b2870b74c424a1067df77883e2233686a617fd01f4c7407
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Why Coca-Cola ETFs Are Good Bets After Q3 Earnings Beat
+<<<SUMMARY>>>
+Coca-Cola beats Q3 earnings estimates and raises its outlook for the third straight quarter. Explore ETFs offering exposure to the beverage giant.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143253877
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T07:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8364e63d5ae7dfbaf006c00e7dd96cf18ff15ba1a7a074b0eae74b07e001eaf7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Palantir Technologies and Yum! Brands have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Palantir's AI growth and government demand bolster its outlook, while Yum! Brands faces food-safety fallout, consumer pressures and brand concentration risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143253922
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T07:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f8ac44381f47e371f73a2c284a9ed418ec885c8eeb1a98abba1115c20dfe5a42
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Bear of the Day: Yum! Brands (YUM)
+<<<SUMMARY>>>
+A stretched consumer backdrop and food-safety overhang remind us how quickly brand equity can wobble. Between single-digit growth on the horizon and relative price weakness, Yum is an avoid.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143234667
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=962b8181924726f3df3e875975a2846ee4f578e834528b4256d1e27b5b0c303d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Celebrates Food & Futures in Action Around the Globe
+<<<SUMMARY>>>
+NORTHAMPTON, MA / ACCESS Newswire / October 27, 2026 / Throughout Food & Futures in Action Month, Yum. employees around the world gave their time to turn our Food & Futures mission into meaningful local impact.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143237251
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T13:00:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f232fbecb759a3de51012c0ea6c5f4b93d6dcdf7c9143648be1ec6bc2c29978
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Analysts Estimate Yum Brands (YUM) to Report a Decline in Earnings: What to Look Out for
+<<<SUMMARY>>>
+Yum (YUM) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143204065
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T21:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=274e06ffea2d05716afb1d543cb12e566cd0e68104bb7bb66e831d62ff947e02
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: AMGEN APPOINTS DAVID W. GIBBS TO BOARD OF DIRECTORS
+<<<SUMMARY>>>
+Amgen (NASDAQ: AMGN) today announced the appointment of David W. Gibbs to its Board of Directors, effective immediately. Gibbs will serve on the Board's Audit Committee and Compensation and Management Development Committee.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143204268
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T21:10:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=75766aec4683edbdb6d6e24fa60621ad2e5c5ca7f294e7081f23651f3165fcf8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: 2 profitable stocks with solid fundamentals and 1 we turn down
+<<<SUMMARY>>>
+Even if a company is profitable, it doesn’t always mean it’s a great investment. Some struggle to maintain growth, face looming threats, or fail to reinvest wisely, limiting their future potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143204269
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T20:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3ec14c343c9f74ac46782f4e973fd04f8eed3c2bd257fe5b73bd20a112303a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Casey’s Wants a Bigger Slice of the Pizza Market. Why Fast Food Chains Are Worried.
+<<<SUMMARY>>>
+The convenience store operator says nearly 80% of the small towns it serves lack a nearby national pan-pizza option.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143137275
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T22:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=64267a6e7713647cdb6035a1169b1f705951ba8c69664b407fbd409f9fcba2e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Pepsi Tastes a Victory
+<<<SUMMARY>>>
+PepsiCo has had a rough stretch in the cola wars.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143137070
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T20:13:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a15ba6bb8f5443cd9f35b3bb07d28b0d32965d2d657a10dfa4fc2965946d17e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands Third-Quarter Earnings Likely Weighed Down by Cyclospora Outbreak, UBS Says
+<<<SUMMARY>>>
+Yum Brands (YUM) could take a hit to its third-quarter earnings from the Cyclospora outbreak that en
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136792
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T19:25:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=be587f85e65f57db72d3bf670add52c7e013b9c99fde0f5b0cfdeb084ca91320
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands' Growth Set to Accelerate as Taco Bell Recovers, UBS Says
+<<<SUMMARY>>>
+Yum! Brands (YUM) is expected to maintain an accelerating growth trajectory following the separation
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143136321
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T17:14:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ec4cefb29ecedce3b699501ec966c8d90dd68b9fbfb8195bbcb2dd8aadf64daf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: PepsiCo (PEP) Renews Taco Bell Deal, Is The Stock A Bargain?
+<<<SUMMARY>>>
+PepsiCo (PEP) is back in focus after renewing its beverage partnership with Taco Bell for 11 years. The move keeps exclusive fountain rights in key Yum Brands restaurants through 2036. Investors saw that renewal hit the tape alongside a 1-day share price return of 3.07% and a 7-day share price gain of 8.14%. However, PepsiCo’s longer record is more muted, with year-to-date share price return down 2.39% and 1-year total shareholder return falling 4.66%, suggesting that recent momentum is...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143129438
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T10:00:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8b8799e99a5e5363039a0d0f94c471ceda8f8e1cc95e40ecb283d9ee2b3aa8f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: PepsiCo renews deal to supply Taco Bell
+<<<SUMMARY>>>
+The drinks giant will remain Taco Bell's US supplier through 2036, the companies said yesterday (22 October).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143122468
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T08:03:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ebcd901e67e8ffd35addb26cdcac8910ebf5ea3ad4299e0dc784542b66bc086
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: What Could Lift Starbucks Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543491
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:11:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5717b3d39ce118fb361373ead88a4e40d3916a8c97c04465db9fc2616fa39c77
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Learn Why The Bull Case For Yum! Brands (YUM) Could Change Following Earnings Beat
+<<<SUMMARY>>>
+Yum! Brands reported Q3 2026 revenue of US$2.054b and net income of US$1.623b, with earnings per share lifted by the Pizza Hut divestiture gain and solid KFC performance while Taco Bell worked through food safety related pressure. Taco Bell’s faster than expected recovery, combined with KFC’s new Muse flagship concept and global Marvel campaign, shows Yum! Brands using brand refresh and experiential formats to support franchise economics after simplifying the portfolio. We will now look at...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494699
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:18:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a41691588c7d9fba956018fce069f1296047258b8096569a0c53414b36ada2c5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Chipotle Soars 6% as Fast-Food Bellwether’s Earnings Beat Lifts Restaurant Stocks
+<<<SUMMARY>>>
+Key TakeawaysChipotle Mexican Grill shares rose 6% today after McDonald’s beat on third-quarter earnings and lifted restaurant stocks, including Yum! Brands and Starbucks. McDonald’s U.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494907
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T20:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7399e27aebf76a60f5593c6053bdb7bd4e63f512d0331950f0c99a929e7069c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum (YUM) Reports Q3 Earnings: What Key Metrics Have to Say
+<<<SUMMARY>>>
+The headline numbers for Yum (YUM) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493840
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:42:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8b49885b76a7f61bdd8c843aeef8785c9c2d3d3ad15ddd326885506314091c2d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands' Taco Bell Trends Inflecting Toward 2027 Growth, UBS Says
+<<<SUMMARY>>>
+Yum! Brands' (YUM) Taco Bell is on a recovery path toward historical growth levels following July's
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539660
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=df1fe8ea2648f728901e5de14498d4994c98806118f2f2ccdb0a8913a3a134a8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Despite Sales Dip, Yum Says Taco Bell Is Rebounding as Company Refocuses Following Pizza Hut Sale
+<<<SUMMARY>>>
+In August, Taco Bell through its Decades Menu brought back several items such as the Naked Chicken Chalupa and Meximelt as the chain aimed to win back customers following a parasitic outbreak that was linked to lettuce at its restaurants.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143536524
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:36:30Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c0eba087c553958cb639a3d5cd9698798429712ffe361a4b6ece4736791ad03d
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: Citigroup Maintains Neutral on Yum Brands, Raises Price Target to $171
+<<<SUMMARY>>>
+Citigroup  analyst Jon Tower   maintains Yum Brands (NYSE:YUM) with a Neutral and raises the price target from $163 to $171.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492795
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:05:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aba7424555cadd28a81f09704c96b1df6dda6b17f53e3a7471d16bb0b30d2cc2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands' Taco Bell Recovery Outpaces Expectations Despite Mixed Q3 Results, RBC Says
+<<<SUMMARY>>>
+Yum! Brands' (YUM) Q3 results were mixed, but Taco Bell's improvement was faster than expected, incr
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492569
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:04:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9355bde5a72db5c35645f704f9d56bd9c9bcc1bfe31589e70aa3ef4a47601bb2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: McDonald’s Rises 5% as Earnings Beat Outweighs U.S. Sales Dip; Chipotle Climbs 4%, Starbucks Gains 3%
+<<<SUMMARY>>>
+McDonald's posted its first U.S. same-store sales decline in over a year, yet the stock is surging and dragging the entire restaurant sector along with it. The reason investors are cheering a miss tells you something important about where the fast food industry stands right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533355
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:00:46Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f71f5039ca3e2b4b84490e46ce76cfc4e3cb3eac473d6391bc5cf24e66e856d7
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: 'McDonald's wages war on KFC in Japan as consumers crave chicken' - Nikkei Asia
+<<<SUMMARY>>>
+https://asia.nikkei.com/business/food-beverage/mcdonald-s-wages-war-on-kfc-in-japan-as-consumers-crave-chicken
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143536527
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:36:55Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3f8efce54df9117f7f15785422148026857495839dec93c36f28cce0cc9c5b54
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: RBC Capital Maintains Sector Perform on Yum Brands, Raises Price Target to $180
+<<<SUMMARY>>>
+RBC Capital  analyst Logan Reich   maintains Yum Brands (NYSE:YUM) with a Sector Perform and raises the price target from $170 to $180.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487914
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:14:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5b2c1cea520b57d5a3669ead674673fe9dcaf84351ff211d7cdad76a55b0f7f0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+Yum! Brands (NYSE:YUM) reported third-quarter results shaped by the completed divestiture of Pizza Hut and an industry-wide food safety issue that pressured Taco Bell’s U.S. sales during the summer. The company said it is entering its next phase with a narrower focus on its remaining brands and its
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143536528
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:00:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=df1770e2bc7c85784cebac952c3fef9fd83954ddfd2fce94d1535c038c22b945
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Yum-Brands--Inc.jpg?width=2048&height=1536
+category: company
+tickers: YUM
+keywords: 
+headline: This Yum! Brands Analyst Raises Price Target After Q3 Results
+<<<SUMMARY>>>
+Yum shares rise after Q3 results; TD Cowen keeps Buy, lifts target, citing Taco Bell recovery and KFC international growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487269
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3cd0d4d5375826c2c087b51bedca9344ef9a21cec6c4ebc9d4a1351615c6417a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: These 4 Restaurant Giants Have Different Ways to Win Diners
+<<<SUMMARY>>>
+Cheap eats, menu buzz, table service, or fresh paint? Here's which restaurant strategy is winning diners right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487915
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:27:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b148e59306cd1265438d99fe91c5078ae52673d96aca370586d26c3d8c461f4e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: KFC’s U.S. Turnaround Has a Long Way to Go as International Business Surges
+<<<SUMMARY>>>
+KFC’s efforts to revive its U.S. business are producing encouraging results from individual menu launches, but the chicken chain is still struggling to translate that excitement into sustained sales growth. The brand’s domestic system sales declined 6 percent in the third quarter. The performance contrasted with KFC’s international operations, where new value platforms, menu innovation, […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143536529
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:31:11Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5d90b12e04ceb01fc9f04aef9a5d2101533609858fa01a59b51bce88752408e0
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_4.jpg?width=2048&height=1536
+category: company
+tickers: YUM
+keywords: 
+headline: If You Invested $100 In Yum Brands Stock 20 Years Ago, You Would Have This Much Today
+<<<SUMMARY>>>
+Yum Brands (NYSE:YUM) has outperformed the market over the past 20 years by 1.61% on an annualized basis producing an average annual return of 10.55%. Currently, Yum Brands has a market capitalization of $42.86 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143488639
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T09:15:44Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=680e04131f38049a3fa809359b06d794cdbf4efb126e333de754996a7a830db7
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/649580218/image_649580218.jpg?io=getty-c-w1536
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands Earnings: Taco Bell Fell Ill, KFC Served Cold
+<<<SUMMARY>>>
+Yum! Brands posted mixed earnings as Taco Bell recovers and KFC grows abroad. Click here to read this earnings analysis of YUM stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143486226
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T07:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8221161ffdc31179b438bd1566c5f10a72deef17cac4830d7ebb01c2b9a20585
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: KFC Brings the Doom: New Marvel-Inspired Menu Lands Ahead of Marvel Studios' "Avengers: Doomsday"
+<<<SUMMARY>>>
+KFC today announced its boldest collaboration to date: a first-ever global venture with Marvel Studios' "Avengers: Doomsday", in cinemas globally 18 December. It unites the most iconic chicken brand with the MCU's newest villain – Doctor Doom – around a new menu worthy of his name.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143489336
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T05:55:47Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3d9984df63aa7c524bd25637fe11d663159aa0c6ade17843851eeb73d09e3772
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: BTIG Reiterates Neutral on Yum Brandsto Neutral
+<<<SUMMARY>>>
+BTIG  analyst Peter Saleh   reiterates Yum Brands (NYSE:YUM) from Neutral to Neutral.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143450327
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T23:07:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=93a11a880b76ec6fdd1ad5b24ecb823db46094b267790980eba002634e8e2a65
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands Inc (YUM) Q3 2026 Earnings Call Highlights: Post-Pizza Hut Growth, Taco Bell ...
+<<<SUMMARY>>>
+Yum Brands Inc (YUM) posted 3% system sales growth and 7% unit growth ex-Pizza Hut, with Taco Bell US recovering from a food safety setback and KFC International delivering 9% system sales growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143450328
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:56:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4b627a22ba8847417bf22f6c9d48589206dcf9721ecb79e81fffc803ae52c71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands (YUM) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Pizza Hut sale closed as Taco Bell works through a food safety setback.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449227
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:14:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0c48f0f5f4a6360155bfcccf79e0df1ade45e36a7c9ad3589183a2d49e40de9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands flags AI as ‘transformative to the business’
+<<<SUMMARY>>>
+KFC and Taco Bell’s parent company is adding the tech to kitchens, drive-thrus and management strategies in a modernization push, CFO Ranjith Roy said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449228
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:09:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e023e3454c80c596b075dab6041b91c7e849b32c5ba1797da92cf407e54711c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Taco Bell sales rebounding after cyclosporiasis outbreak
+<<<SUMMARY>>>
+Taco Bell's sales are recovering after a cyclosporiasis outbreak linked to lettuce served at some of its restaurants hurt business over the summer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449229
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:08:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62fd6a166d85e2155dd48196c7a92f048ba277b08e188752e24d27f6ca1596c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands (YUM) Unveils KFC Muse Flagship In Dubai
+<<<SUMMARY>>>
+Yum! Brands (NYSE:YUM) introduced KFC Muse, a new global flagship restaurant design, with an inaugural site in Dubai. The KFC Muse format debuts a fresh visual identity along with a more immersive in store environment for guests. The Dubai flagship showcases bespoke offerings, including the KWENCH beverage range and customizable KFC MIX'D meal options. A second KFC Muse location is planned for Seoul, signaling Yum! Brands' focus on experiential dining concepts and international expansion...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449230
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dab833feb70173465c922d3495f3268fe29fcf217dc03d1303625410e9a52bd5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: An entire island just lost its KFC and Taco Bell overnight
+<<<SUMMARY>>>
+Yum! Brands abruptly ended its relationship with the Puerto Rican operator of KFC and Taco Bell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449231
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:59:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9aa3952c2306e34c6e8d3f985075f200e26aef5f34ac23a181e0312590a751fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Taco Bell’s loyalty program helped the brand recover from Cyclospora outbreak
+<<<SUMMARY>>>
+Loyalty members returned to Taco Bell twice as quickly as non-loyalty customers following a foodborne illness scare this summer, parent company Yum Brands CEO Chris Turner said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449120
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:57:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db61e8484ad29a3bb331dd6cd6322bc11fc0d13a3f888945d54610dfb6707d8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Can Chipotle Stock Jump 50%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449232
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:10:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0073e198a435b74f969c89f2ae72d0f8621b7a82f347bb4a044f81ec68b16bc4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands (YUM) Posts A Profit Surge, Is The Stock Still Undervalued?
+<<<SUMMARY>>>
+Yum! Brands (YUM) just posted third quarter 2026 earnings that sharply reshaped its headline numbers, as net income reached US$1.623b on revenue of US$2.054b, driven in part by Pizza Hut divestiture effects. Yum! Brands’ latest results landed after a strong run in the shares, with a 30 day share price return of 15.78% and a 7 day gain of 5.44%, taking the stock to US$157.60. That short term momentum sits on top of a 1 year total shareholder return of 15.27%, with 3 and 5 year total...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448438
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:35:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84ffeb0daef1c34f3cb2a365eabc84876a3a85a3027953c3c9bd1c6ae2b89ee6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Sector Update: Consumer Stocks Fall in Afternoon Trading
+<<<SUMMARY>>>
+Consumer stocks declined Tuesday afternoon, with the State Street Consumer Staples Select Sector SPD
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448437
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:30:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32b00138eb292e9c1521bb50fcb9f690dab6ffb230a6ef774c755385d4fe5931
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands earnings analysis: questions answered and next catalysts
+<<<SUMMARY>>>
+Investing.com -- Yum! Brands (YUM) reported Q3 on Nov 3, 2026. Adjusted EPS of $1.56 beat the $1.53 consensus (+1.96%). Revenue of $2.05B missed the $2.10B estimate. Shares were at $157.05 (-0.35%) as of Nov 3, 12:51 PM EST. They had opened near $163 and given back the early pop. The stock is up 15.38% over one month and 12.68% over one year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447392
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:48:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d7deacb1ae6ba067dd112fa6879c5ade8546c67184624a13a2db8b5dcbc5224
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands Beats Third-Quarter Profit Views as KFC's Strength Offsets Taco Bell Pressures
+<<<SUMMARY>>>
+Yum! Brands' (YUM) third-quarter profit beat Wall Street expectations, supported by stronger KFC sal
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447393
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:35:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30eb807812f9eae78d4ff00fe046c8ad2ccd459a86bd1e32543f4d3623c783f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Taco Bell’s Recovery Gains Momentum After Challenging Cyclospora Issues
+<<<SUMMARY>>>
+Taco Bell is working to regain its momentum after the Cyclospora food-safety issue disrupted sales during the summer, sending U.S. same-store sales down 4 percent in Q3. The setback interrupted a period of growth for Yum! Brands’ largest domestic business, but the company says Taco Bell is recovering faster than expected. Same-store sales improved each […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447394
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:15:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a34e181affb3daab8eda1cd0c6a79e438b4f93c62ce5a8276a2cc25294e0f33d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Shopify Revenue Miss; Yum Brands Jumps on Taco Bell Sales | Stock Movers
+<<<SUMMARY>>>
+On this episode of Stock Movers: - Shopify (SHOP) shares are plunging after its quarterly revenue missed analysts' expectations for the first time in four years. - Lattice Semiconductor (LSCC) shares are soaring after the chipmaker's outlook showed strong visibility, suggesting robust growth into 2028. - Yum Brands (YUM) shares jumped on "better-than-feared" Taco Bell 3Q sales. RBC says Taco Bell's 3Q comparable sales drop of 4% is better than the buyside feared.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446071
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:49:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6c53a7bc30a83784a12600190688cceaa3a98334e10099f8660d6bbf3573f7d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Taco Bell sales recover in the US after summer cyclospora outbreak
+<<<SUMMARY>>>
+are climbing again after a cyclospora outbreak over the summer slowed business.Taco Bell’s same-store sales, or sales at locations open at least a year, have been outperforming the U.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143489337
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:38:53Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=bbc8b5a697b0dd413367ac2eebfbad52eb207b06e5a8a5b1695cb72dbaf67deb
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: TD Cowen Maintains Buy on Yum Brands, Raises Price Target to $180
+<<<SUMMARY>>>
+TD Cowen  analyst Andrew M. Charles   maintains Yum Brands (NYSE:YUM) with a Buy and raises the price target from $177 to $180.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445836
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:33:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b8e0aeabe25c419456ba41f5e58f3296d904b1ea561f323b254824c45fdda87
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: 5 Big Funds Sold McDonald’s. Should You Follow Them Before Earnings?
+<<<SUMMARY>>>
+Key TakeawaysFive funds cut or sold their McDonald’s stakes in Q2, and three of them sold every share, according to their latest 13Fs. Two of the sellers added Yum! Brands, Chipotle Mexican Grill and Starbucks over the same quarter, and all three trade at higher multiples than McDonald’s.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447269
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d878fcca961aaacd9f1e36f9d4ce6541adf08119492e3145af9fc2d2ca96a0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: YUM Stock Up on Q3 Earnings Beat, Revenues Miss on Taco Bell Weakness
+<<<SUMMARY>>>
+Yum! Brands beats Q3 earnings estimates as KFC's global expansion supports growth, while Taco Bell's U.S. sales weakness weighs on results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446072
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:44:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27911a5dae24493c68ef568aae6a5cdce23437df69527ccc7628029c8935ef2b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands earnings show KFC growth as Taco Bell profit falls
+<<<SUMMARY>>>
+Yum! Brands Inc (NYSE:YUM) reported third-quarter adjusted earnings above analyst estimates, while revenue fell short of expectations. Adjusted earnings were $1.56 a share, beating the $1.53 analyst estimate but slipping from $1.58 a year earlier. Revenue increased 4% to $2.05 billion,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446073
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:38:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=deb212c11ea9296ee3735fe460cc8dc91d46c4f219ac3d6adc5123d01d18cc14
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Cyclospora outbreak weighed heavy on Taco Bell in the third quarter
+<<<SUMMARY>>>
+The chain’s same-store sales fell 4%, marking its first quarterly decline since the pandemic.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446074
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:24:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=262772aa550af6e2bed6cf6dbc11b99400d0f12e5c573fab8b69a148148b5844
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: You Can See The Diarrhea in YUM! Brands Third Quarter
+<<<SUMMARY>>>
+A Cyclospora outbreak knocked Taco Bell’s same-store sales down 4%, the regulars are already back, and KFC’s U.S. business is now the bigger headache
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447396
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:22:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=674d5c0e952f3e62963c968c125e6efae260b6534269eae50461c50a814f8dae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Taco Bell’s winning streak ends, KFC’s turnaround continues
+<<<SUMMARY>>>
+Yum Brands hopes continued marketing magic at Taco Bell, menu investments at KFC and overall tech improvements will result in strong sales growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143444540
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:02:24Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=7ec7be105af220afede160d90464975234b0b842ecc1136e597b83392e8a2762
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands Reports Third-Quarter 2026 Results and $1.7 billion Pizza Hut Divestiture Gain
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442399
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:50:48Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=10b7b4f2bf86b5dbd4e91bf3551f09cfa0ef0107f69f30a0b6a0903b4a99b646
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_17_c249efcc18.webp
+category: company
+tickers: YUM
+keywords: 
+headline: YUM! Brands (NYSE:YUM) EPS Beat Lifts Shares as Pizza Hut Divestiture Sharpens Growth Story
+<<<SUMMARY>>>
+Yum Brands Q3 2026 adjusted EPS beat and in-line revenue lifted shares premarket, highlighting post-Pizza Hut KFC and Taco Bell growth focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143443122
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:29:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27e70af7cfb7be2fefaaf37e2d475cae250fa8570c0a6def9711ebe59da05c14
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands (NYSE:YUM) surprises with Q3 2026 sales
+<<<SUMMARY>>>
+Fast-food company Yum! Brands (NYSE:YUM) reported Q3 2026 results beating Wall Street’s revenue expectations, with revenue up 3.8% year on year to $2.05 billion. Its non-GAAP profit of $1.56 per share was 6.9% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447726
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:25:58Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=07e4f4cd4dc906db013c8bc9f38af4807338ce215c5dd51fa664c9de577d648d
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands, Inc. (YUM) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Yum! Brands, Inc. (YUM) Q3 2026 Earnings Call November 3, 2026 8:15 AM ESTCompany ParticipantsMatthew Morris - Head of Investor RelationsChristopher Turner...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446985
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:55:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a5824fc8373d5d78a96e7fe9e2b5ae8b4a4600f6fbc4c6120dcf404323828585
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2296539027/image_2296539027.jpg?io=getty-c-w1536
+category: company
+tickers: YUM
+keywords: 
+headline: Wall Street Lunch: Midterm Elections & Earnings
+<<<SUMMARY>>>
+U.S. midterm elections. Palantir beat expectations, AMD faces high expectations;
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143443123
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:45:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=036a68c2abf8d6d777ca5abcf3e7e2f96d31873b6e0c21fe59592ec2fb28d4fb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands beats EPS estimates despite revenue miss
+<<<SUMMARY>>>
+Investing.com -- Yum! Brands, Inc. (NYSE: YUM) reported third-quarter adjusted earnings per share of $1.56, surpassing the analyst estimate of $1.53, though revenue of $2.05 billion fell short of the $2.1 billion consensus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143443124
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:15:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f51b4ccf0eab82b57453656d52f73789bfbccb6f38808cece5e8a50f067bcad0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands (YUM) Surpasses Q3 Earnings Estimates
+<<<SUMMARY>>>
+Yum (YUM) delivered earnings and revenue surprises of +6.12% and -0.10%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143443125
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:07:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2e7b123cb3981dc7cce6d024ed3f346729f55ecbb814bc890dac1503c3a3b855
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+(YUM) on Tuesday reported third-quarter profit of $1.The Louisville, Kentucky-based company said it had net income of $5.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143443126
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=704e079dc97f79b5ee80e96ed58223161ee8753672351ea5d80bbdc7b43c8450
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands Reports Third-Quarter Results
+<<<SUMMARY>>>
+LOUISVILLE, Ky., November 03, 2026--Yum! Brands Reports Third-Quarter Results
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143489202
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:26:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2436d392da24c3923c94d9a48a3d643f7de6b7f79ac6f1fc6659d0d421ad28f4
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/Konskie--Poland---November-24--2024-Yum-.jpg?width=2048&height=1536
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands Earnings Beat Masks Taco Bell Weakness, but CEO Sees Recovery Taking Hold
+<<<SUMMARY>>>
+Yum! Brands beat Q3 EPS estimates but narrowly missed revenue; KFC growth offset Taco Bell weakness as Pizza Hut divestitures closed.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143489339
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T10:17:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=42a273bdf93a4f1471c2651c463c427cb683935c237ffa3e7798110370a21de2
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Yum Brands (NYSE:YUM) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442183
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T09:47:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6052ef5c2d21c0d2559f624c80f85e399aaf9518deeb0420ac66451848426223
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands CEO Says Excluding China, Quarterly Same Store Sales In KFC International Rose 4%; KFC China Same Store Sales Declined In Q3; Taco Bell Same-Store Sales Up About 1% Quarter To Date
+<<<SUMMARY>>>
+-Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139934981
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T08:36:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ae39164a62950adb4dfa40c0320680f6548c2e950539a4fa40e31c4892ada72a
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: Shares of restaurant companies are trading higher amid sympathy with Wingstop after the company reported Q4 financial results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442185
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T08:03:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d4af396bb29a44b38035d902cbfc8d30b3ac19301722a14045a0b23d8596bca5
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands Q3 Adj. EPS $1.56 Beats $1.49 Estimate, Sales $2.054B Miss $2.056B Estimate
+<<<SUMMARY>>>
+Yum Brands (NYSE:YUM) reported quarterly earnings of $1.56 per share which beat the analyst consensus estimate of $1.49 by 4.7 percent. This is a 1.27 percent decrease over earnings of $1.58 per share from the same
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442186
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T08:02:43Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f11ff15d21a103a3e3a33df392d58482e44b7c1cdbc3aa173b259da90b44fe9e
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands Q3 Adj. EPS $1.56 Beats $1.49 Estimate
+<<<SUMMARY>>>
+Yum Brands (NYSE:YUM) reported quarterly earnings of $1.56 per share which beat the analyst consensus estimate of $1.49 by 4.7 percent. This is a 1.27 percent decrease over earnings of $1.58 per share from the same
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446886
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T07:01:12Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=7e7ea65c9e6cc77d4c3b0f41e509894654d7249905a5bc6f3b319e263508823e
+image_url: https://image.cnbcfm.com/api/v1/image/108475778-1793209285434-gettyimages-2287702879-TACOBELL.jpeg?v=1793209354&w=1920&h=1080
+category: company
+tickers: YUM
+keywords: 
+headline: Yum Brands earnings beat estimates, but cyclospora outbreak weighs on Taco Bell
+<<<SUMMARY>>>
+Taco Bell's same-store sales declined as a Cyclospora outbreak tied to lettuce served at its restaurants weighed on traffic.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401075
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T18:46:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff4f9a4f32870eecf8855bf34d72a075b54cde8ab47e1d6b94c4d852f2ed2662
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Is Chipotle Stock Still Worth Owning After Its Quarter?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400432
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:43:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8168e48146c15d5e278e8e73cf9b32e05eafb7c6b5b66b9c198126035bf56fc5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: KFC and Taco Bell restaurants close across Puerto Rico as they seek new franchise partner
+<<<SUMMARY>>>
+SAN JUAN, Puerto Rico (AP) — All KFC and Taco Bell restaurants in Puerto Rico have temporarily closed after parent company Yum. Brands ended its relationship with an island-based operator, officials said Monday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143441978
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:30:28Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e7c211c59b8aa9c25c5b9aa72fa49a64bcacd16c92aef0e802d010b389b76c8c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/02/earnings-scheduled-1.jpg?width=2048&height=1536
+category: company
+tickers: YUM
+keywords: 
+headline: AMD, Shopify On Deck Tuesday As AI Spending, Merchant Growth Face Test
+<<<SUMMARY>>>
+Advanced Micro Devices headlines Tuesday’s reports, with investors looking for evidence that AI demand can withstand a sharp pullback in the stock. Shopify, Pfizer, Eaton, Marathon Petroleum and Ferrari report before
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393686
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T10:53:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=18295a313ff9f9b63ced7e384216c123a776de133ea6ea7c185d644ae6c617ae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands (YUM) Q3 earnings: what to expect
+<<<SUMMARY>>>
+Fast-food company Yum! Brands (NYSE:YUM) will be reporting earnings this Tuesday morning. Here’s what investors should know.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348604
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T17:12:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2003fcb903e90a2b3014def42b089f4b45e67c2112c52353e12f03a1181ca8b0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands (YUM) Stock Looks Below Fair Value Despite Its 36% Run
+<<<SUMMARY>>>
+Yum! Brands has quietly built a solid track record for shareholders over the past few years, and the stock now changes hands near US$154.55. With that backdrop, the key issue for anyone looking at Yum! today is whether the current share price is supported by the cash the business is expected to generate. Over the past 5 years, Yum! Brands has delivered a total shareholder return of 35.5%. That puts real weight on the question of what its cash flows are worth today. Against a backdrop of...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348605
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T15:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7a68e7ccb0a2302fc05be55c1cb4ebc65254e41b32b2522880d47deb55d13774
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: YUM Set to Report Q3 Earnings: KFC Growth & Taco Bell Trends in Focus
+<<<SUMMARY>>>
+Yum! Brands heads into Q3 earnings with KFC expansion and international growth in focus, while Taco Bell U.S. faces sales and margin pressures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143344218
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e47060d7c1a0ce2d19f520f2e2cd986571b8a52485497940d917831ad155ebda
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: KFC Brings Brand Evolution to Life with the World-First Launch of its Immersive Restaurant Concept, KFC Muse, in Dubai
+<<<SUMMARY>>>
+As appetite for chicken continues to grow across the region, KFC is embarking on what's next with the unveiling of KFC Muse - a fully immersive, two-story restaurant, showcasing one of the boldest expressions of the brand's next-generation restaurant design. Designed to disrupt the quick-service restaurant category, the world's first KFC Muse restaurant will open on Jumeirah Beach Residence (JBR) in Dubai on October 31, pairing the brand's most craveable chicken with a modern and dynamic dining
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143346544
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T11:31:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=53fe148cbe6b395424ecd9f35ff4b09d33603af7dfa9eb32cad8aa6599f37beb
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2120169924/image_2120169924.jpg?io=getty-c-w1536
+category: company
+tickers: YUM
+keywords: 
+headline: Wingstop: Don't Confuse A Rally With A Turnaround
+<<<SUMMARY>>>
+Wingstop Inc. remains a Sell despite its rally, as weak same-store sales, slowing growth, and rich valuation risks persist. Click for this WING earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143342107
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T11:15:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84a4d388f51e8006779032e5e43928cbe9f4a605c13c553e5ab8698589f332ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Why Did Chipotle Stock Jump?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143329801
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T09:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cea8db80155ef7475426f36af851363ecc56957300227bad63f4c4433d47c267
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Taco Bell is giving away $13 million in scholarships — no GPA required
+<<<SUMMARY>>>
+The fast-food chain is giving the cash to both employees and fans of the restaurant.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:43ac1e3eb89e7e56da034274440a2f4ef665ef4d926fae99978885709f75f9f4
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-28T07:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3016433/bear-of-the-day-yum-brands-yum?cid=CS-ZC-FT-bear_of_the_day-3016433
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default344.jpg
+category: 
+tickers: YUM, PEP
+keywords: food safety outbreak, Taco Bell, consumer strain, inflation, Pizza Hut sale, concentration risk, single-digit growth, stock underperformance
+headline: Bear of the Day: Yum! Brands (YUM)
+<<<SUMMARY>>>
+Yum! Brands has been assigned a Zacks Rank #5 (Strong Sell) rating due to multiple challenges: a Taco Bell food safety outbreak that reduced restaurant traffic, increased consumer financial strain from inflation and rising credit card delinquencies, declining value perception from fast-food price increases, and concentration risk following the Pizza Hut sale. Wall Street expects only single-digit growth ahead, and the stock has significantly underperformed the S&P 500 over the past five years.
+<<<INSIGHTS>>>
+YUM | negative | Yum! Brands faces multiple significant headwinds including a Taco Bell food safety outbreak impacting traffic and profits, strained consumer spending due to inflation and rising credit card delinquencies, declining value perception from price increases, and concentration risk after the Pizza Hut sale. Analyst consensus expects only lackluster single-digit growth, and the stock has significantly underperformed the S&P 500 over five years, warranting a Strong Sell rating.
+PEP | neutral | PepsiCo is mentioned only as the historical parent company from which Yum! Brands was spun off in 1997. No current operational or financial information is provided regarding PepsiCo, so neutral sentiment is appropriate.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4a1c29cccc6683a947ba1676e017aba2c1cb0d0b56c18e6bbd300d1afe3224b0
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-28T07:43:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3016675/palantir-technologies-and-yum-brands-have-been-highlighted-as-zacks-bull-and-bear-of-the-day?cid=CS-ZC-FT-press_releases-3016675
+image_url: https://staticx-tuner.zacks.com/images/articles/main/fc/93047.jpg
+category: 
+tickers: PLTR, YUM, MS, MSpA, MSpE, MSpF, MSpI, MSpK, MSpL, MSpO, MSpP, MSpQ, GS, GSpA, GSpC, GSpD, AMJB, JPM, JPMpC, JPMpD, JPMpJ, JPMpK, JPMpL, JPMpM, VYLD
+keywords: AI software platforms, government contracts, food safety crisis, consumer spending, earnings growth, geopolitical hedge, franchise concentration
+headline: Palantir Technologies and Yum! Brands have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Zacks Equity Research designated Palantir Technologies as the Bull of the Day (Zacks Rank #1 Strong Buy) due to its AI-powered platforms serving government and commercial clients, strong revenue growth, low capital expenditure, and consistent earnings beats. Yum! Brands was named the Bear of the Day (Zacks Rank #5 Strong Sell) facing headwinds from food safety issues at Taco Bell, strained consumer spending, and concentration risk following the Pizza Hut sale, with only single-digit growth expected.
+<<<INSIGHTS>>>
+PLTR | positive | Zacks Rank #1 Strong Buy rating based on robust government accreditations (FedRAMP High, DoD Impact Level 6), accelerating revenue growth (149% U.S. commercial, 90% government in Q2), consistent earnings beats for 15 consecutive quarters, low capital expenditure model, and resilience with 50%+ gains over three months while broader tech declined.
+YUM | negative | Zacks Rank #5 Strong Sell rating due to Taco Bell food safety outbreak (cyclosporiasis) impacting 43% of divisional operating profit, strained consumer spending with credit card delinquencies rising, declining value perception from fast-food price increases, concentration risk after Pizza Hut sale, and only single-digit growth projected with 5-year underperformance versus S&P 500.
+MS | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpA | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpE | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpF | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpI | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpK | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpL | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpO | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpP | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+MSpQ | neutral | Zacks Rank #3 Hold rating. While AI adoption is improving advisor productivity and supporting record Wealth Management revenues ($9.07B, +10.1% YoY) with strong asset inflows, the direct earnings contribution remains unquantified and technology costs pose challenges. 2026 earnings expected to rise 25.7% but 2027 growth slows to 3.9%.
+GS | neutral | Mentioned as a peer leveraging AI to streamline workflows and enhance employee productivity, supporting operational efficiency and cost optimization. No specific rating or performance data provided in the article.
+GSpA | neutral | Mentioned as a peer leveraging AI to streamline workflows and enhance employee productivity, supporting operational efficiency and cost optimization. No specific rating or performance data provided in the article.
+GSpC | neutral | Mentioned as a peer leveraging AI to streamline workflows and enhance employee productivity, supporting operational efficiency and cost optimization. No specific rating or performance data provided in the article.
+GSpD | neutral | Mentioned as a peer leveraging AI to streamline workflows and enhance employee productivity, supporting operational efficiency and cost optimization. No specific rating or performance data provided in the article.
+AMJB | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+JPM | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+JPMpC | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+JPMpD | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+JPMpJ | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+JPMpK | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+JPMpL | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+JPMpM | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+VYLD | neutral | Mentioned as a peer using its LLM Suite platform to automate workflows and expand AI applications across operations, expected to improve efficiency and reduce costs. No specific rating or performance data provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:eb085d58010dc1bb1e3d6bfc859d3269dd8b46e8b3f1d45cf6c040b35d3ed08b
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-28T13:00:26Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3017157/dutch-bros-bros-earnings-expected-to-grow-should-you-buy?cid=CS-ZC-FT-fundamental_analysis|yseop_template_9-3017157
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default186.jpg
+category: 
+tickers: BROS, YUM
+keywords: earnings preview, Q3 2026 results, Earnings ESP, Zacks Rank, earnings surprise, revenue growth, analyst estimates
+headline: Dutch Bros (BROS) Earnings Expected to Grow: Should You Buy?
+<<<SUMMARY>>>
+Dutch Bros is expected to report Q3 2026 earnings of $0.24 per share with 29.6% revenue growth on November 4, but faces headwinds with a negative Earnings ESP of -1.67% and Zacks Rank #4, making an earnings beat unlikely. Similarly, Yum Brands is projected to post $1.47 EPS with declining earnings year-over-year, a negative Earnings ESP of -4.08%, and a Zacks Rank #5, suggesting weak near-term performance for both stocks.
+<<<INSIGHTS>>>
+BROS | negative | Negative Earnings ESP of -1.67% combined with Zacks Rank #4 (Sell) indicates low probability of beating consensus estimates. Recent analyst estimate revisions have been 2.86% lower, suggesting deteriorating sentiment despite expected revenue growth of 29.6%.
+YUM | negative | Negative Earnings ESP of -4.08% paired with Zacks Rank #5 (Strong Sell) makes an earnings beat unlikely. Expected EPS decline of 7% year-over-year and 6.3% downward estimate revisions over 30 days indicate weakening business conditions.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:831ff4448bb628d823b75a83a3e4aab6c2548bf6d5520b35214a4ba67dd341fc
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-30T15:23:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3019900/yum-set-to-report-q3-earnings-kfc-growth-taco-bell-trends-in-focus?cid=CS-ZC-FT-analyst_blog|earnings_preview-3019900
+image_url: https://staticx-tuner.zacks.com/images/articles/main/85/1110.jpg
+category: 
+tickers: YUM, SG, LOCO
+keywords: Q3 2026 earnings, revenue growth, KFC international expansion, Taco Bell food safety, margin pressure, digital engagement, restaurant expansion
+headline: YUM Set to Report Q3 Earnings: KFC Growth & Taco Bell Trends in Focus
+<<<SUMMARY>>>
+Yum! Brands is set to report Q3 2026 results on Nov. 3 with expected revenue growth of 3.9%. KFC's international expansion and menu innovation are expected to drive growth, while Taco Bell U.S. faces headwinds from food safety concerns and promotional spending, pressuring profitability. The company has a negative Earnings ESP of -4.08% and Zacks Rank #5 (Strong Sell), suggesting limited likelihood of an earnings beat.
+<<<INSIGHTS>>>
+YUM | negative | Despite expected 3.9% revenue growth, the company faces significant profitability pressures from Taco Bell U.S. due to food safety concerns, declining customer traffic, and promotional spending. The negative Earnings ESP of -4.08% and Zacks Rank #5 (Strong Sell) indicate low probability of earnings beat and weak analyst outlook.
+SG | neutral | Positive Earnings ESP of +4.26% with Zacks Rank #2 (Buy), but earnings expected to decline 3.7% year-over-year. Consistent history of missing estimates (average miss of 43% over trailing four quarters) tempers the positive outlook.
+LOCO | neutral | Modest positive Earnings ESP of +2.08% with Zacks Rank #3 (Hold), but earnings expected to decrease 11.1% year-over-year. However, consistent history of beating estimates (average surprise of 16.8%) provides some support.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:679dd12ba68843f37201a3b20c7cfd085eddbb606e74591f5cb66150e94b5cf7
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T12:15:04Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021467/yum-brands-yum-surpasses-q3-earnings-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3021467
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default67.jpg
+category: 
+tickers: YUM, TXRH
+keywords: earnings surprise, Yum Brands, KFC, Taco Bell, Pizza Hut, restaurant industry, earnings estimates, Zacks Rank, revenue miss, stock performance
+headline: Yum Brands (YUM) Surpasses Q3 Earnings Estimates
+<<<SUMMARY>>>
+Yum Brands reported Q3 2026 earnings of $1.56 per share, beating consensus estimates of $1.47, but revenues slightly missed expectations at $2.05 billion. Despite the earnings beat, the company received a Zacks Rank #5 (Strong Sell) rating due to unfavorable estimate revision trends. The stock has underperformed the S&P 500 year-to-date, and the restaurant industry remains in the bottom 30% of Zacks-ranked industries.
+<<<INSIGHTS>>>
+YUM | negative | Despite beating EPS estimates by 6.12%, Yum received a Zacks Rank #5 (Strong Sell) rating due to unfavorable estimate revision trends. The company missed revenue expectations and has underperformed the S&P 500 year-to-date (4.2% vs 10.2%). The restaurant industry outlook is also weak, ranking in the bottom 30% of industries.
+TXRH | neutral | Texas Roadhouse is expected to report Q3 2026 results on November 5 with anticipated earnings of $1.49 per share (up 19.2% year-over-year) and revenues of $1.58 billion (up 10%). However, consensus EPS estimates have been revised 5.3% lower over the last 30 days, indicating mixed sentiment ahead of the earnings release.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:12777f9bbb59c7921906b517e1a7e257ff02df8aaffc478b283e9dfd95a42eca
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T15:26:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021981/yum-stock-up-on-q3-earnings-beat-revenues-miss-on-taco-bell-weakness?cid=CS-ZC-FT-analyst_blog|earnings_article-3021981
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6f/1035.jpg
+category: 
+tickers: YUM, CMG, SBUX, DPZ
+keywords: Q3 2026 earnings, KFC expansion, Taco Bell weakness, Pizza Hut divestiture, same-store sales, digital sales, franchise growth
+headline: YUM Stock Up on Q3 Earnings Beat, Revenues Miss on Taco Bell Weakness
+<<<SUMMARY>>>
+Yum! Brands reported Q3 2026 adjusted EPS of $1.56, beating estimates by 6.1%, though revenues missed expectations. KFC drove growth with 6% system sales increase and 878 new restaurants across 66 countries, while Taco Bell's U.S. same-store sales declined 4%. The company completed Pizza Hut divestitures generating $2.38 billion in proceeds.
+<<<INSIGHTS>>>
+YUM | neutral | Mixed results with EPS beat offset by revenue miss. KFC's strong global expansion and digital growth are positive, but Taco Bell's 4% U.S. same-store sales decline and overall core operating profit decline of 4% are concerning. Stock gained 3.6% pre-market, but company carries Zacks Rank #5 (Strong Sell).
+CMG | neutral | Earnings missed consensus by 6.9%, declining 6.9% year-over-year. However, revenues beat expectations and grew 9.6% YoY, driven by new openings and 2.1% comparable sales growth with strong digital contribution of 38.8%.
+SBUX | positive | Adjusted EPS of 80 cents beat consensus by 9.6% with 53.8% YoY earnings growth. Global comparable sales increased 7.2% with North America up 7.9%. Though revenues missed slightly, strong cost management and sales leverage drove profitability. FY2027 guidance provided with expected 4% North America comp sales growth.
+DPZ | positive | EPS of $4.60 beat consensus by 6.2% with 12.7% YoY earnings growth. Revenues exceeded expectations with 7.1% supply chain revenue growth and higher franchise royalties. Strong pricing power demonstrated with 2.2% food basket pricing increase offsetting sluggish same-store sales.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5f9a79e574bfd947a1eeb6c771a2503df98631fc0738ffe603b17def187c27fc
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T12:09:00Z
+publisher: The Motley Fool
+author: Anders Bylund
+url: https://www.fool.com/investing/2026/11/04/4-restaurant-giants-win-diners-in-different-ways/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893145%2Frestaurant-staff-working-with-tablet-computer-getty-images.jpg&w=1200&op=resize
+category: 
+tickers: MCD, YUM, DRI, QSR
+keywords: restaurant industry, comparable sales, value pricing, menu innovation, full-service dining, restaurant remodeling, consumer spending, food safety
+headline: These 4 Restaurant Giants Have Different Ways to Win Diners
+<<<SUMMARY>>>
+Four major restaurant chains employ distinct strategies to attract cost-conscious diners: McDonald's focuses on value pricing but stumbled with a spring 2026 promotion; Yum! Brands drives traffic through menu novelty and limited-time offerings; Darden competes on full-service hospitality and modest pricing; and Restaurant Brands succeeds with restaurant remodels and menu refinements. Darden and Restaurant Brands currently show stronger performance, while McDonald's recovers from missteps and Taco Bell rebounds from a food safety incident.
+<<<INSIGHTS>>>
+MCD | negative | Failed value promotion in spring 2026 with inconsistent pricing and removal of popular app deals resulted in weak 0.8% comparable sales growth and declining foot traffic. Company is now in recovery mode.
+YUM | neutral | Menu novelty strategy showing mixed results; Taco Bell recovered quickly from July cyclospora outbreak with 3% same-store sales growth over four weeks, but faced significant headwinds during the crisis period.
+DRI | positive | Strong performance with 3.2% same-restaurant sales growth, record-high guest satisfaction scores, and LongHorn achieving 22 consecutive quarters of positive growth. Full-service hospitality model and modest pricing strategy resonating well with consumers.
+QSR | positive | Burger King achieved 8.4% U.S. comparable sales growth through successful restaurant remodels and menu refinements, reclaiming No. 2 position in burger market. Back-to-basics strategy proving effective, though Popeyes still struggling.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5132ffd4cdf7355cce48bb583e36ffc270edd196ddf571699c57e7f290f856db
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T20:00:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023423/yum-yum-reports-q3-earnings-what-key-metrics-have-to-say?cid=CS-ZC-FT-fundamental_analysis|nfm-3023423
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default86.jpg
+category: 
+tickers: YUM
+keywords: Yum Brands, Q3 2026 earnings, revenue miss, EPS beat, KFC, Taco Bell, franchise growth, stock rating
+headline: Yum (YUM) Reports Q3 Earnings: What Key Metrics Have to Say
+<<<SUMMARY>>>
+Yum Brands reported Q3 2026 revenue of $2.05 billion, up 3.8% YoY but missing consensus estimates by 0.1%. EPS of $1.56 beat expectations by 6.12%, though slightly down from $1.58 in the prior year. The company showed mixed divisional performance with KFC growing 7.9% but Taco Bell underperforming estimates. Despite a +12.3% stock return over the past month, Zacks assigned the stock a Strong Sell rating.
+<<<INSIGHTS>>>
+YUM | negative | Despite beating EPS expectations, Yum missed revenue consensus estimates and received a Zacks Rank #5 (Strong Sell) rating, indicating expected underperformance relative to the broader market. Several divisional revenues fell short of analyst estimates, and franchise contribution revenues declined year-over-year, suggesting underlying operational challenges despite modest top-line growth.
+<<<END>>>

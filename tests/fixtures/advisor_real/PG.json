@@ -1,0 +1,5606 @@
+{
+ "symbol": "PG",
+ "company": "Procter & Gamble",
+ "sector": "XLP",
+ "today": "2026-11-05",
+ "portfolio": "configs/portfolios/jacob_pyrett.json",
+ "order": {
+  "schema_version": 2,
+  "request_id": "9e8baae28dae",
+  "requester": "user",
+  "created_utc": "2026-11-06T04:15:40Z",
+  "query": "What do the stored news, press releases and filings say about Procter & Gamble (PG)?",
+  "action_type": "search_news",
+  "subject": [
+   "PG"
+  ],
+  "company": null,
+  "source": "news",
+  "time_period": null,
+  "since_days": 14,
+  "live": false,
+  "top_k": 10,
+  "criteria": null,
+  "status": "data_ready",
+  "resolved": null,
+  "data": {
+   "answer": "**Stored news (last\u202f14\u202fdays)**  \n\nThe recent news items about Procter\u202f&\u202fGamble (PG) focus on several themes:\n\n* **Earnings and margins** \u2013 Two consumer\u2011giant articles note that P&G beat earnings expectations while its margins are moving opposite to those of Colgate\u2011Palmolive as oil prices rise, and that one of the two dividends is backed by a thin balance\u2011sheet buffer\u30101\u3011.  \n* **Investor\u2011day webcast** \u2013 P&G announced it will webcast its Investor Day on\u202f19\u202fNov\u202f2026, where CEO\u202fShailesh\u202fJejurikar, CFO\u202fAndre\u202fSchulten and the leadership team will discuss the company\u2019s long\u2011term transformation and growth strategy\u30102\u3011.  \n* **Analyst sentiment** \u2013 A Wall\u2011Street\u2011focused piece says analysts remain \u201cmoderately bullish\u201d on the stock\u2019s prospects\u30103\u3011.  \n* **Technical outlook** \u2013 A technical\u2011analysis article highlights a breakout setup with a key resistance level around\u202f167.22 and a strong technical rating\u30104\u3011.  \n* **Comparative positioning** \u2013 Two articles compare P&G with Nike, noting that P&G\u2019s defensive portfolio offers a contrasting risk\u2011return profile to the premium\u2011valuation\u2011driven Nike stock\u30105\u3011\u30106\u3011.  \n* **Premium\u2011brand performance** \u2013 Zacks reports that P&G posted\u202f4\u202f% organic sales growth in Q1\u202fFY2027, driven by volume and product\u2011mix improvements while navigating inflation\u2011sensitive consumers\u30107\u3011.  \n* **Dividend history** \u2013 A Yahoo piece quantifies the cumulative dividend paid to a\u202f$5,000\u202finvestment since\u202f2020, emphasizing P&G\u2019s long\u2011standing dividend record\u30108\u3011.  \n* **Recent price performance** \u2013 Two articles note that P&G\u2019s shares have risen strongly this month, benefitting from a defensive rotation out of AI\u2011heavy stocks and being viewed as a better buy than Coca\u2011Cola within the Dow dividend cohort\u30109\u3011\u301010\u3011.\n\n**Press releases**  \n\nNo stored press releases for PG covering the last\u202f14\u202fdays are available in the system.\n\n**SEC filings**  \n\nNo stored filings for PG covering the last\u202f14\u202fdays are available in the system.",
+   "references": [
+    {
+     "number": 1,
+     "chunk_id": "finnhub:143540741#0",
+     "article_id": "finnhub:143540741",
+     "headline": "Procter & Gamble vs. Colgate-Palmolive: Which Dividend Stock Is Safer?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T18:47:53Z",
+     "url": "https://finnhub.io/api/news?id=dfa0b63660d6b4288ff8623931acd8454a88102c8fc1399d7b724dce559714ca",
+     "score": 0.45381367206573486
+    },
+    {
+     "number": 2,
+     "chunk_id": "finnhub:143533723#0",
+     "article_id": "finnhub:143533723",
+     "headline": "P&G to Webcast Presentation From P&G Investor Day 2026, November 19",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T12:00:00Z",
+     "url": "https://finnhub.io/api/news?id=74273872a0bdeadec7550b8598665a27e1fa558a36a20d1e395dc0deaa982d67",
+     "score": 0.5404847860336304
+    },
+    {
+     "number": 3,
+     "chunk_id": "finnhub:143539418#0",
+     "article_id": "finnhub:143539418",
+     "headline": "Is Wall Street Bullish or Bearish on Procter & Gamble Stock?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T10:33:02Z",
+     "url": "https://finnhub.io/api/news?id=2e1abb85e680526d6f97e0c0fb5d8f3f806f0e34e3835b924ac49183a14084cf",
+     "score": 0.5439080595970154
+    },
+    {
+     "number": 4,
+     "chunk_id": "finnhub:143479042#0",
+     "article_id": "finnhub:143479042",
+     "headline": "Procter & Gamble (NYSE:PG) Eyes Breakout as Technical Strength Builds",
+     "publisher": "ChartMill",
+     "published_utc": "2026-11-04T10:00:36Z",
+     "url": "https://finnhub.io/api/news?id=2a3855f8f85ba86159c0e300ecb807061d923380623b5be1766324c679f86b7c",
+     "score": 0.5837231278419495
+    },
+    {
+     "number": 5,
+     "chunk_id": "finnhub:143460075#0",
+     "article_id": "finnhub:143460075",
+     "headline": "Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-04T02:20:01Z",
+     "url": "https://finnhub.io/api/news?id=6fa78261620b5334eed7e2cc84574cf0f852f2f67e55c2751856781d5dfd5689",
+     "score": 0.5180199146270752
+    },
+    {
+     "number": 6,
+     "chunk_id": "polygon:a61fb371fa65fb37be2c541d74ca7d3718556d1362574a2c838e74de3bb549e6#3",
+     "article_id": "polygon:a61fb371fa65fb37be2c541d74ca7d3718556d1362574a2c838e74de3bb549e6",
+     "headline": "Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-04T02:00:01Z",
+     "url": "https://www.fool.com/coverage/better-buy/2026/11/03/nike-vs-procter-gamble-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001",
+     "score": 0.5088054537773132
+    },
+    {
+     "number": 7,
+     "chunk_id": "polygon:a436418a2c64b9144a47541a7fd9f3eac77449077dd4d11bce7d8a3c6b74bc55#0",
+     "article_id": "polygon:a436418a2c64b9144a47541a7fd9f3eac77449077dd4d11bce7d8a3c6b74bc55",
+     "headline": "Can PG's Premium Brands Hold Up in a Value-Seeking Market?",
+     "publisher": "Zacks Investment Research",
+     "published_utc": "2026-11-03T15:41:00Z",
+     "url": "https://www.zacks.com/stock/news/3022003/can-pg-s-premium-brands-hold-up-in-a-value-seeking-market?cid=CS-ZC-FT-analyst_blog|quick_take-3022003",
+     "score": 0.4479954242706299
+    },
+    {
+     "number": 8,
+     "chunk_id": "finnhub:143441238#0",
+     "article_id": "finnhub:143441238",
+     "headline": "Here's Exactly How Much $5,000 in Procter & Gamble Has Paid Out in Dividends Since 2020",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-03T10:35:00Z",
+     "url": "https://finnhub.io/api/news?id=7043ea3792869f63704c366ed753bd91720efe043fbabca14a0c2caaf9ebcdee",
+     "score": 0.5663444399833679
+    },
+    {
+     "number": 9,
+     "chunk_id": "finnhub:143363114#0",
+     "article_id": "finnhub:143363114",
+     "headline": "Coca-Cola and Procter & Gamble Are Up This Month. Which Dow Dividend Stock Is the Better Buy Now?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-10-31T12:40:00Z",
+     "url": "https://finnhub.io/api/news?id=6ca4bc61dbf090fede4e9c14491f6e8424b23711d7363e09d22783a300a2b019",
+     "score": 0.4147557020187378
+    },
+    {
+     "number": 10,
+     "chunk_id": "polygon:415a98183b5055e9b996b0ebf659554d7a28ba1b58a7cb972a23dc7fa6b70ef6#0",
+     "article_id": "polygon:415a98183b5055e9b996b0ebf659554d7a28ba1b58a7cb972a23dc7fa6b70ef6",
+     "headline": "Coca-Cola and Procter & Gamble Are Up This Month. Which Dow Dividend Stock Is the Better Buy Now?",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-10-31T12:20:00Z",
+     "url": "https://www.fool.com/investing/2026/10/31/coca-cola-and-procter-gamble-are-up-this-mont/?source=iedfolrf0000001",
+     "score": 0.5393673181533813
+    }
+   ],
+   "sources": [
+    {
+     "number": 1,
+     "chunk_id": "finnhub:143540741#0",
+     "article_id": "finnhub:143540741",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Procter & Gamble vs. Colgate-Palmolive: Which Dividend Stock Is Safer?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T18:47:53Z",
+     "url": "https://finnhub.io/api/news?id=dfa0b63660d6b4288ff8623931acd8454a88102c8fc1399d7b724dce559714ca",
+     "tickers": [
+      "PG"
+     ],
+     "text": "Procter & Gamble vs. Colgate-Palmolive: Which Dividend Stock Is Safer?\n\nBoth consumer giants beat earnings, yet their margins are moving in opposite directions as oil prices climb and a cautious U.S. shopper holds back. One dividend carries a thin balance sheet buffer, and retirees need to know which one.",
+     "score": 0.45381367206573486
+    },
+    {
+     "number": 2,
+     "chunk_id": "finnhub:143533723#0",
+     "article_id": "finnhub:143533723",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "P&G to Webcast Presentation From P&G Investor Day 2026, November 19",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T12:00:00Z",
+     "url": "https://finnhub.io/api/news?id=74273872a0bdeadec7550b8598665a27e1fa558a36a20d1e395dc0deaa982d67",
+     "tickers": [
+      "PG"
+     ],
+     "text": "P&G to Webcast Presentation From P&G Investor Day 2026, November 19\n\nCINCINNATI, November 05, 2026--The Procter & Gamble Company (NYSE:PG) will webcast the presentation from the P&G Investor Day 2026 in Cincinnati, Ohio on Thursday, November 19, 2026, beginning at 2:00 p.m. ET (Eastern Time). Chairman of the Board, President and Chief Executive Officer, Shailesh Jejurikar; Chief Financial Officer, Andre Schulten; and the broader executive leadership team will discuss P&G\u2019s strategy and the long-term transformation underway to deliver balanced growth and value cre",
+     "score": 0.5404847860336304
+    },
+    {
+     "number": 3,
+     "chunk_id": "finnhub:143539418#0",
+     "article_id": "finnhub:143539418",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Is Wall Street Bullish or Bearish on Procter & Gamble Stock?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-05T10:33:02Z",
+     "url": "https://finnhub.io/api/news?id=2e1abb85e680526d6f97e0c0fb5d8f3f806f0e34e3835b924ac49183a14084cf",
+     "tickers": [
+      "PG"
+     ],
+     "text": "Is Wall Street Bullish or Bearish on Procter & Gamble Stock?\n\nProcter & Gamble has outpaced the broader market over the past year, and analysts remain moderately bullish about the stock\u2019s prospects.",
+     "score": 0.5439080595970154
+    },
+    {
+     "number": 4,
+     "chunk_id": "finnhub:143479042#0",
+     "article_id": "finnhub:143479042",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Procter & Gamble (NYSE:PG) Eyes Breakout as Technical Strength Builds",
+     "publisher": "ChartMill",
+     "published_utc": "2026-11-04T10:00:36Z",
+     "url": "https://finnhub.io/api/news?id=2a3855f8f85ba86159c0e300ecb807061d923380623b5be1766324c679f86b7c",
+     "tickers": [
+      "PG"
+     ],
+     "text": "Procter & Gamble (NYSE:PG) Eyes Breakout as Technical Strength Builds\n\nProcter & Gamble (PG) clears a Technical Breakout Setups screen with a 9 Technical Rating and 8 Setup Quality score. Key breakout level: 167.22.",
+     "score": 0.5837231278419495
+    },
+    {
+     "number": 5,
+     "chunk_id": "finnhub:143460075#0",
+     "article_id": "finnhub:143460075",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-04T02:20:01Z",
+     "url": "https://finnhub.io/api/news?id=6fa78261620b5334eed7e2cc84574cf0f852f2f67e55c2751856781d5dfd5689",
+     "tickers": [
+      "PG"
+     ],
+     "text": "Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?\n\nNike trades at a premium valuation despite slowing growth, while P&G's defensive portfolio offers a contrasting risk-return profile.",
+     "score": 0.5180199146270752
+    },
+    {
+     "number": 6,
+     "chunk_id": "polygon:a61fb371fa65fb37be2c541d74ca7d3718556d1362574a2c838e74de3bb549e6#3",
+     "article_id": "polygon:a61fb371fa65fb37be2c541d74ca7d3718556d1362574a2c838e74de3bb549e6",
+     "chunk": 4,
+     "chunks": 4,
+     "headline": "Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-04T02:00:01Z",
+     "url": "https://www.fool.com/coverage/better-buy/2026/11/03/nike-vs-procter-gamble-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001",
+     "tickers": [
+      "NKE",
+      "PG",
+      "LULU",
+      "UA",
+      "UAA",
+      "WMT",
+      "ADDYY"
+     ],
+     "text": "Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?\n\nADDYY | neutral | Mentioned as a competitive rival to Nike in the athletic footwear and apparel market, but no specific performance analysis or recommendation is provided in the article.",
+     "score": 0.5088054537773132
+    },
+    {
+     "number": 7,
+     "chunk_id": "polygon:a436418a2c64b9144a47541a7fd9f3eac77449077dd4d11bce7d8a3c6b74bc55#0",
+     "article_id": "polygon:a436418a2c64b9144a47541a7fd9f3eac77449077dd4d11bce7d8a3c6b74bc55",
+     "chunk": 1,
+     "chunks": 3,
+     "headline": "Can PG's Premium Brands Hold Up in a Value-Seeking Market?",
+     "publisher": "Zacks Investment Research",
+     "published_utc": "2026-11-03T15:41:00Z",
+     "url": "https://www.zacks.com/stock/news/3022003/can-pg-s-premium-brands-hold-up-in-a-value-seeking-market?cid=CS-ZC-FT-analyst_blog|quick_take-3022003",
+     "tickers": [
+      "PG",
+      "CHD",
+      "CL"
+     ],
+     "text": "Can PG's Premium Brands Hold Up in a Value-Seeking Market?\n\nProcter & Gamble, Church & Dwight, and Colgate-Palmolive are balancing premium product innovation with value offerings as consumers become increasingly price-sensitive. P&G reported 4% organic sales growth in Q1 FY2027 driven by volume and product mix, while managing inflation and competition pressures. All three companies are leveraging strong brand equity and differentiated portfolios across price points to sustain market share amid uncertain consumer spending.",
+     "score": 0.4479954242706299
+    },
+    {
+     "number": 8,
+     "chunk_id": "finnhub:143441238#0",
+     "article_id": "finnhub:143441238",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Here's Exactly How Much $5,000 in Procter & Gamble Has Paid Out in Dividends Since 2020",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-03T10:35:00Z",
+     "url": "https://finnhub.io/api/news?id=7043ea3792869f63704c366ed753bd91720efe043fbabca14a0c2caaf9ebcdee",
+     "tickers": [
+      "PG"
+     ],
+     "text": "Here's Exactly How Much $5,000 in Procter & Gamble Has Paid Out in Dividends Since 2020\n\nProcter & Gamble has one of the most impressive dividend histories.",
+     "score": 0.5663444399833679
+    },
+    {
+     "number": 9,
+     "chunk_id": "finnhub:143363114#0",
+     "article_id": "finnhub:143363114",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Coca-Cola and Procter & Gamble Are Up This Month. Which Dow Dividend Stock Is the Better Buy Now?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-10-31T12:40:00Z",
+     "url": "https://finnhub.io/api/news?id=6ca4bc61dbf090fede4e9c14491f6e8424b23711d7363e09d22783a300a2b019",
+     "tickers": [
+      "PG"
+     ],
+     "text": "Coca-Cola and Procter & Gamble Are Up This Month. Which Dow Dividend Stock Is the Better Buy Now?\n\nThe consumer staples giants just had one of their best months in years as money rotated out of AI stocks.",
+     "score": 0.4147557020187378
+    },
+    {
+     "number": 10,
+     "chunk_id": "polygon:415a98183b5055e9b996b0ebf659554d7a28ba1b58a7cb972a23dc7fa6b70ef6#0",
+     "article_id": "polygon:415a98183b5055e9b996b0ebf659554d7a28ba1b58a7cb972a23dc7fa6b70ef6",
+     "chunk": 1,
+     "chunks": 2,
+     "headline": "Coca-Cola and Procter & Gamble Are Up This Month. Which Dow Dividend Stock Is the Better Buy Now?",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-10-31T12:20:00Z",
+     "url": "https://www.fool.com/investing/2026/10/31/coca-cola-and-procter-gamble-are-up-this-mont/?source=iedfolrf0000001",
+     "tickers": [
+      "KO",
+      "PG"
+     ],
+     "text": "Coca-Cola and Procter & Gamble Are Up This Month. Which Dow Dividend Stock Is the Better Buy Now?\n\nBoth Coca-Cola and Procter & Gamble have surged recently due to a defensive rotation out of AI stocks into consumer staples. While both companies showed strong earnings and growth prospects, the author recommends Procter & Gamble as the better buy, trading closer to its historical valuation multiple compared to Coca-Cola, which has already priced in significant growth expectations.",
+     "score": 0.5393673181533813
+    },
+    {
+     "number": 11,
+     "chunk_id": "sec:0001628280-26-068591:items#1",
+     "article_id": "sec:0001628280-26-068591:items",
+     "chunk": 2,
+     "chunks": 3,
+     "headline": "PG 8-K, filed 2026-10-30",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-30T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/0001628280-26-068591.txt",
+     "tickers": [
+      "PG"
+     ],
+     "text": "PG 8-K, filed 2026-10-30\n\nItem 8.01 Other Events.\nOn October 30, 2026, The Procter & Gamble Company (the \"Company\") closed an underwritten public\noffering of $750,000,000 aggregate principal amount of 5.125% Notes due October 30, 2031, $750,000,000\naggregate principal amount of 5.300% Notes due October 30, 2033, $1,250,000,000 aggregate principal amount of\n5.450% Notes due October 30, 2036 and $1,250,000,000 aggregate principal amount of 5.900% Notes due October\n30, 2056 under the Company's Registration Statement on Form S-3 (Registration No. 333-299472). Legal opinions\nrelated to these notes are attached hereto as Exhibits (5)(a) and (5)(b) and are incorporated herein by reference.\nItem 9.01 Financial Statements and Exhibits.\n(d)The following exhibits are being filed with this Current Report on Form 8-K.",
+     "score": 0.5805005431175232,
+     "swept": true
+    },
+    {
+     "number": 12,
+     "chunk_id": "sec:0001628280-26-069608:items#1",
+     "article_id": "sec:0001628280-26-069608:items",
+     "chunk": 2,
+     "chunks": 3,
+     "headline": "PG 8-K, filed 2026-11-03",
+     "publisher": "SEC filing",
+     "published_utc": "2026-11-03T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/0001628280-26-069608.txt",
+     "tickers": [
+      "PG"
+     ],
+     "text": "PG 8-K, filed 2026-11-03\n\nItem 8.01 Other Events.\nOn November 3, 2026, The Procter & Gamble Company (the \"Company\") closed an underwritten public\noffering of \u20ac750,000,000 aggregate principal amount of 3.750% Notes due November 3, 2030, \u20ac1,000,000,000\naggregate principal amount of 4.100% Notes due November 3, 2034, \u20ac750,000,000 aggregate principal amount of\n4.250% Notes due November 3, 2038 and \u20ac750,000,000 aggregate principal amount of 4.625% Notes due\nNovember 3, 2046 under the Company's Registration Statement on Form S-3 (Registration No. 333-299472). Legal\nopinions related to these notes are attached hereto as Exhibits (5)(a) and (5)(b) and are incorporated herein by\nreference.\nItem 9.01 Financial Statements and Exhibits.\n(d)The following exhibits are being filed with this Current Report on Form 8-K.",
+     "score": 0.5719923973083496,
+     "swept": true
+    },
+    {
+     "number": 13,
+     "chunk_id": "sec:0001628280-26-068909:items#1",
+     "article_id": "sec:0001628280-26-068909:items",
+     "chunk": 2,
+     "chunks": 3,
+     "headline": "PG 8-K, filed 2026-11-02",
+     "publisher": "SEC filing",
+     "published_utc": "2026-11-02T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/0001628280-26-068909.txt",
+     "tickers": [
+      "PG"
+     ],
+     "text": "PG 8-K, filed 2026-11-02\n\nItem 8.01 Other Events.\nOn November 2, 2026, The Procter & Gamble Company (the \"Company\") closed an underwritten public\noffering of $352,231,000 aggregate principal amount of Floating Rate Notes due November 2, 2076 under the\nCompany's Registration Statement on Form S-3 (Registration No. 333-299472). Legal opinions related to these\nnotes are attached hereto as Exhibits (5)(a) and (5)(b) and are incorporated herein by reference.\nItem 9.01 Financial Statements and Exhibits.\n(d)The following exhibits are being filed with this Current Report on Form 8-K.\n| Exhibit Number | Description |\n| (5)(a) | Travonte Warren, Esq., Director and Assistant General Counsel of the Company. |",
+     "score": 0.5422653555870056,
+     "swept": true
+    },
+    {
+     "number": 14,
+     "chunk_id": "sec:0000080424-26-000262#0",
+     "article_id": "sec:0000080424-26-000262",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "PG 144, filed 2026-10-26",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-26T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000262.txt",
+     "tickers": [
+      "PG"
+     ],
+     "text": "PG 144, filed 2026-10-26\n\nForm 144 (notice of a planned sale of restricted shares by an insider (insider selling)) filed 2026-10-26. The text of this filing is not stored: only its form, date and link are known.",
+     "score": 0.4318004846572876,
+     "swept": true
+    },
+    {
+     "number": 15,
+     "chunk_id": "sec:0000080424-26-000265#0",
+     "article_id": "sec:0000080424-26-000265",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "PG 144, filed 2026-11-02",
+     "publisher": "SEC filing",
+     "published_utc": "2026-11-02T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000265.txt",
+     "tickers": [
+      "PG"
+     ],
+     "text": "PG 144, filed 2026-11-02\n\nForm 144 (notice of a planned sale of restricted shares by an insider (insider selling)) filed 2026-11-02. The text of this filing is not stored: only its form, date and link are known.",
+     "score": 0.4279230237007141,
+     "swept": true
+    },
+    {
+     "number": 16,
+     "chunk_id": "sec:0000080424-26-000266#0",
+     "article_id": "sec:0000080424-26-000266",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "PG 144, filed 2026-11-02",
+     "publisher": "SEC filing",
+     "published_utc": "2026-11-02T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000266.txt",
+     "tickers": [
+      "PG"
+     ],
+     "text": "PG 144, filed 2026-11-02\n\nForm 144 (notice of a planned sale of restricted shares by an insider (insider selling)) filed 2026-11-02. The text of this filing is not stored: only its form, date and link are known.",
+     "score": 0.4279230237007141,
+     "swept": true
+    },
+    {
+     "number": 17,
+     "chunk_id": "sec:0000080424-26-000264#0",
+     "article_id": "sec:0000080424-26-000264",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "PG 144, filed 2026-10-29",
+     "publisher": "SEC filing",
+     "published_utc": "2026-10-29T00:00:00Z",
+     "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000264.txt",
+     "tickers": [
+      "PG"
+     ],
+     "text": "PG 144, filed 2026-10-29\n\nForm 144 (notice of a planned sale of restricted shares by an insider (insider selling)) filed 2026-10-29. The text of this filing is not stored: only its form, date and link are known.",
+     "score": 0.42469459772109985,
+     "swept": true
+    }
+   ],
+   "sweep": {
+    "news": {
+     "by": "model",
+     "sources": 10,
+     "note": ""
+    },
+    "press_releases": {
+     "by": "model",
+     "sources": 0,
+     "note": ""
+    },
+    "filings": {
+     "by": "code",
+     "sources": 7,
+     "note": ""
+    },
+    "filing_evidence": {
+     "by": "code",
+     "sources": 26,
+     "note": ""
+    }
+   },
+   "results": {
+    "news": {
+     "shown": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "cited": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "swept": []
+    },
+    "press_releases": {
+     "shown": [],
+     "cited": [],
+     "swept": []
+    },
+    "filings": {
+     "shown": [],
+     "cited": [],
+     "swept": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+     ]
+    }
+   },
+   "filing_evidence": {
+    "PG": {
+     "symbol": "PG",
+     "as_of": "2026-11-03",
+     "window_days": 365,
+     "filings": {
+      "in_window": 61,
+      "by_form": [
+       {
+        "form": "10-K",
+        "count": 1,
+        "with_text": 1,
+        "latest": "2026-08-04"
+       },
+       {
+        "form": "10-Q",
+        "count": 3,
+        "with_text": 3,
+        "latest": "2026-10-22"
+       },
+       {
+        "form": "144",
+        "count": 36,
+        "with_text": 0,
+        "latest": "2026-11-02"
+       },
+       {
+        "form": "8-K",
+        "count": 18,
+        "with_text": 18,
+        "latest": "2026-11-03"
+       },
+       {
+        "form": "DEF 14A",
+        "count": 1,
+        "with_text": 0,
+        "latest": "2026-08-28"
+       },
+       {
+        "form": "SCHEDULE 13G",
+        "count": 1,
+        "with_text": 0,
+        "latest": "2026-04-30"
+       },
+       {
+        "form": "SCHEDULE 13G/A",
+        "count": 1,
+        "with_text": 0,
+        "latest": "2026-03-27"
+       }
+      ],
+      "with_text": [
+       {
+        "accession": "0001628280-26-069608",
+        "form": "8-K",
+        "filed": "2026-11-03",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0001628280-26-069608.txt"
+       },
+       {
+        "accession": "0001628280-26-068909",
+        "form": "8-K",
+        "filed": "2026-11-02",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0001628280-26-068909.txt"
+       },
+       {
+        "accession": "0001628280-26-068591",
+        "form": "8-K",
+        "filed": "2026-10-30",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0001628280-26-068591.txt"
+       },
+       {
+        "accession": "0000080424-26-000250",
+        "form": "8-K",
+        "filed": "2026-10-22",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000250.txt"
+       },
+       {
+        "accession": "0000080424-26-000252",
+        "form": "8-K",
+        "filed": "2026-10-22",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000252.txt"
+       },
+       {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "period_end": "2026-09-30",
+        "sections": [
+         "financial_statements",
+         "mdna",
+         "market_risk",
+         "controls",
+         "legal_proceedings",
+         "risk_factors",
+         "unregistered_sales",
+         "other_information",
+         "exhibits"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       {
+        "accession": "0000080424-26-000245",
+        "form": "8-K",
+        "filed": "2026-10-16",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000245.txt"
+       },
+       {
+        "accession": "0000080424-26-000214",
+        "form": "8-K",
+        "filed": "2026-10-13",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000214.txt"
+       },
+       {
+        "accession": "0000080424-26-000103",
+        "form": "10-K",
+        "filed": "2026-08-04",
+        "period_end": "2026-06-30",
+        "sections": [
+         "mda",
+         "business",
+         "risk_factors"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000103.txt"
+       },
+       {
+        "accession": "0000080424-26-000093",
+        "form": "8-K",
+        "filed": "2026-07-29",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000093.txt"
+       },
+       {
+        "accession": "0000080424-26-000094",
+        "form": "8-K",
+        "filed": "2026-07-29",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000094.txt"
+       },
+       {
+        "accession": "0000080424-26-000097",
+        "form": "8-K",
+        "filed": "2026-07-29",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000097.txt"
+       },
+       {
+        "accession": "0000080424-26-000082",
+        "form": "8-K",
+        "filed": "2026-07-14",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000082.txt"
+       },
+       {
+        "accession": "0000080424-26-000056",
+        "form": "8-K",
+        "filed": "2026-04-24",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000056.txt"
+       },
+       {
+        "accession": "0000080424-26-000057",
+        "form": "8-K",
+        "filed": "2026-04-24",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000057.txt"
+       },
+       {
+        "accession": "0000080424-26-000060",
+        "form": "10-Q",
+        "filed": "2026-04-24",
+        "period_end": "2026-03-31",
+        "sections": [
+         "financial_statements",
+         "mdna",
+         "market_risk",
+         "controls",
+         "legal_proceedings",
+         "risk_factors",
+         "unregistered_sales",
+         "other_information",
+         "exhibits"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000060.txt"
+       },
+       {
+        "accession": "0000080424-26-000048",
+        "form": "8-K",
+        "filed": "2026-04-14",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000048.txt"
+       },
+       {
+        "accession": "0000080424-26-000011",
+        "form": "10-Q",
+        "filed": "2026-01-23",
+        "period_end": "2025-12-31",
+        "sections": [
+         "financial_statements",
+         "mdna",
+         "market_risk",
+         "controls",
+         "legal_proceedings",
+         "risk_factors",
+         "unregistered_sales",
+         "other_information",
+         "exhibits"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000011.txt"
+       },
+       {
+        "accession": "0000080424-26-000006",
+        "form": "8-K",
+        "filed": "2026-01-22",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000006.txt"
+       },
+       {
+        "accession": "0000080424-26-000009",
+        "form": "8-K",
+        "filed": "2026-01-22",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000009.txt"
+       },
+       {
+        "accession": "0000080424-26-000002",
+        "form": "8-K",
+        "filed": "2026-01-13",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000002.txt"
+       },
+       {
+        "accession": "0000080424-25-000287",
+        "form": "8-K",
+        "filed": "2025-12-15",
+        "period_end": "",
+        "sections": [
+         "items"
+        ],
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-25-000287.txt"
+       }
+      ]
+     },
+     "period_months": 3,
+     "balance_sheet": {
+      "columns": [
+       "Amounts in millions",
+       "September 30, 2026",
+       "June 30, 2026"
+      ],
+      "units": "Amounts in millions",
+      "items": {
+       "cash": {
+        "label": "Cash and cash equivalents",
+        "group": "",
+        "current": 15365.0,
+        "prior": 9942.0,
+        "change": 5423.0,
+        "change_pct": 54.55,
+        "as_reported": [
+         "15,365",
+         "9,942"
+        ]
+       },
+       "total_current_assets": {
+        "label": "TOTAL CURRENT ASSETS",
+        "group": "",
+        "current": 32508.0,
+        "prior": 26208.0,
+        "change": 6300.0,
+        "change_pct": 24.04,
+        "as_reported": [
+         "32,508",
+         "26,208"
+        ]
+       },
+       "total_assets": {
+        "label": "TOTAL ASSETS",
+        "group": "",
+        "current": 133132.0,
+        "prior": 126521.0,
+        "change": 6611.0,
+        "change_pct": 5.23,
+        "as_reported": [
+         "133,132",
+         "126,521"
+        ]
+       },
+       "total_current_liabilities": {
+        "label": "TOTAL CURRENT LIABILITIES",
+        "group": "",
+        "current": 44996.0,
+        "prior": 38694.0,
+        "change": 6302.0,
+        "change_pct": 16.29,
+        "as_reported": [
+         "44,996",
+         "38,694"
+        ]
+       },
+       "total_liabilities": {
+        "label": "TOTAL LIABILITIES",
+        "group": "",
+        "current": 77795.0,
+        "prior": 72210.0,
+        "change": 5585.0,
+        "change_pct": 7.73,
+        "as_reported": [
+         "77,795",
+         "72,210"
+        ]
+       },
+       "total_equity": {
+        "label": "TOTAL SHAREHOLDERS\u2019 EQUITY",
+        "group": "",
+        "current": 55337.0,
+        "prior": 54311.0,
+        "change": 1026.0,
+        "change_pct": 1.89,
+        "as_reported": [
+         "55,337",
+         "54,311"
+        ]
+       },
+       "retained_earnings": {
+        "label": "Retained earnings",
+        "group": "",
+        "current": 138021.0,
+        "prior": 135852.0,
+        "change": 2169.0,
+        "change_pct": 1.6,
+        "as_reported": [
+         "138,021",
+         "135,852"
+        ]
+       },
+       "accounts_receivable": {
+        "label": "Accounts receivable",
+        "group": "",
+        "current": 6620.0,
+        "prior": 6056.0,
+        "change": 564.0,
+        "change_pct": 9.31,
+        "as_reported": [
+         "6,620",
+         "6,056"
+        ]
+       },
+       "inventories": {
+        "label": "Total inventories",
+        "group": "",
+        "current": 8485.0,
+        "prior": 8170.0,
+        "change": 315.0,
+        "change_pct": 3.86,
+        "as_reported": [
+         "8,485",
+         "8,170"
+        ]
+       }
+      },
+      "debt": [
+       {
+        "label": "LONG-TERM DEBT",
+        "group": "",
+        "current": 21897.0,
+        "prior": 22842.0,
+        "change": -945.0,
+        "change_pct": -4.14,
+        "as_reported": [
+         "21,897",
+         "22,842"
+        ],
+        "classification": "non-current"
+       }
+      ],
+      "shares": null,
+      "source": {
+       "accession": "0000080424-26-000256",
+       "form": "10-Q",
+       "filed": "2026-10-22",
+       "period_end": "2026-09-30",
+       "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt",
+       "section": "financial_statements"
+      }
+     },
+     "capital_actions": [
+      {
+       "item": "share-based compensation expense",
+       "topic": "equity_compensation",
+       "label": "Share-based compensation expense",
+       "group": "",
+       "current": 98.0,
+       "prior": 121.0,
+       "change": -23.0,
+       "change_pct": -19.01,
+       "as_reported": [
+        "98",
+        "121"
+       ],
+       "columns": [],
+       "units": "Amounts in millions",
+       "months": 3
+      },
+      {
+       "item": "cash from operations",
+       "topic": null,
+       "label": "TOTAL OPERATING ACTIVITIES",
+       "group": "",
+       "current": 5767.0,
+       "prior": 5408.0,
+       "change": 359.0,
+       "change_pct": 6.64,
+       "as_reported": [
+        "5,767",
+        "5,408"
+       ],
+       "columns": [],
+       "units": "Amounts in millions",
+       "months": 3
+      },
+      {
+       "item": "dividends paid",
+       "topic": "dividend",
+       "label": "Dividends to shareholders",
+       "group": "",
+       "current": -2603.0,
+       "prior": -2549.0,
+       "change": -54.0,
+       "change_pct": -2.12,
+       "as_reported": [
+        "(2,603)",
+        "(2,549)"
+       ],
+       "columns": [],
+       "units": "Amounts in millions",
+       "months": 3
+      },
+      {
+       "item": "repurchases of common stock",
+       "topic": "buyback",
+       "label": "Treasury stock purchases",
+       "group": "",
+       "current": -1250.0,
+       "prior": -1250.0,
+       "change": 0.0,
+       "change_pct": 0.0,
+       "as_reported": [
+        "(1,250)",
+        "(1,250)"
+       ],
+       "columns": [],
+       "units": "Amounts in millions",
+       "months": 3
+      }
+     ],
+     "income": [
+      {
+       "item": "revenue",
+       "label": "NET SALES",
+       "values": [
+        23276.0,
+        22386.0
+       ],
+       "as_reported": [
+        "23,276",
+        "22,386"
+       ],
+       "columns": [],
+       "units": "Amounts in millions except per share amounts"
+      },
+      {
+       "item": "net income",
+       "label": "NET EARNINGS",
+       "values": [
+        4757.0,
+        4781.0
+       ],
+       "as_reported": [
+        "4,757",
+        "4,781"
+       ],
+       "columns": [],
+       "units": "Amounts in millions except per share amounts"
+      }
+     ],
+     "evidence": [
+      {
+       "id": "E1",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "dilutive effect",
+       "quote": "The diluted shares include the dilutive effect of stock options and other unvested share-based awards based on the treasury stock method and the assumed conversion of preferred stock.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'dilutive effect'",
+       "derived": false
+      },
+      {
+       "id": "E2",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "dilutive securit",
+       "quote": "Add effect of dilutive securities:",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'dilutive securit'",
+       "derived": false
+      },
+      {
+       "id": "E3",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "antidilutive",
+       "quote": "(1)For the three months ended September 30, 2026 and 2025, the weighted average of stock options that were antidilutive and not included in the diluted net earnings per share calculation were 22 million and 11 million, respectively.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'antidilutive'",
+       "derived": false
+      },
+      {
+       "id": "E4",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "dilutive effect",
+       "quote": "The diluted shares include the dilutive effect of stock options and other share-based awards based on the treasury stock method and the assumed conversion of preferred stock.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000060",
+        "form": "10-Q",
+        "filed": "2026-04-24",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000060.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'dilutive effect'",
+       "derived": false
+      },
+      {
+       "id": "E5",
+       "topic": "dilution",
+       "filter": "negative",
+       "matched": "antidilutive",
+       "quote": "(1)For the three months ended March 31, 2026 and 2025, the weighted average of stock options that were antidilutive and not included in the diluted net earnings per share calculation were 22 million and 8 million, respectively.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000060",
+        "form": "10-Q",
+        "filed": "2026-04-24",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000060.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'antidilutive'",
+       "derived": false
+      },
+      {
+       "id": "E6",
+       "topic": "executive_compensation",
+       "filter": "negative",
+       "matched": "compensatory arrangements",
+       "quote": "ITEM 5.02   DEPARTURE OF DIRECTORS OR CERTAIN OFFICERS; ELECTION OF DIRECTORS; APPOINTMENT OF CERTAIN OFFICERS; COMPENSATORY ARRANGEMENTS OF CERTAIN OFFICERS",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000094",
+        "form": "8-K",
+        "filed": "2026-07-29",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000094.txt"
+       },
+       "what": "8-K items: mentions 'compensatory arrangements'",
+       "derived": false
+      },
+      {
+       "id": "E7",
+       "topic": "executive_compensation",
+       "filter": "negative",
+       "matched": "compensatory arrangements",
+       "quote": "The Company is filing the information under this item pursuant to Item 5.02, \"Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers.\"",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000094",
+        "form": "8-K",
+        "filed": "2026-07-29",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000094.txt"
+       },
+       "what": "8-K items: mentions 'compensatory arrangements'",
+       "derived": false
+      },
+      {
+       "id": "E8",
+       "topic": "executive_compensation",
+       "filter": "negative",
+       "matched": "compensatory arrangements",
+       "quote": "ITEM 5.02    DEPARTURE OF DIRECTORS OR CERTAIN OFFICERS; ELECTION OF DIRECTORS; APPOINTMENT OF CERTAIN OFFICERS; COMPENSATORY ARRANGEMENTS OF CERTAIN OFFICERS.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-25-000287",
+        "form": "8-K",
+        "filed": "2025-12-15",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-25-000287.txt"
+       },
+       "what": "8-K items: mentions 'compensatory arrangements'",
+       "derived": false
+      },
+      {
+       "id": "E9",
+       "topic": "executive_compensation",
+       "filter": "negative",
+       "matched": "severance",
+       "quote": "Employee separation costs relate to severance packages that are primarily voluntary and the amounts calculated are based on salary levels and past service periods.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000060",
+        "form": "10-Q",
+        "filed": "2026-04-24",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000060.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'severance'",
+       "derived": false
+      },
+      {
+       "id": "E10",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "share-based compensation",
+       "quote": "Share-based compensation expense | 98 | 121",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q financial_statements, cash flow statement row: mentions 'share-based compensation'",
+       "derived": false
+      },
+      {
+       "id": "E11",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock options",
+       "quote": "Impact of stock options and other | 143 | 134",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q financial_statements, cash flow statement row: mentions 'stock options'",
+       "derived": false
+      },
+      {
+       "id": "E12",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock options",
+       "quote": "The diluted shares include the dilutive effect of stock options and other unvested share-based awards based on the treasury stock method and the assumed conversion of preferred stock.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'stock options'",
+       "derived": false
+      },
+      {
+       "id": "E13",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock options",
+       "quote": "Stock options and other unvested share-based awards (1) | 17.0 | 25.3",
+       "truncated": false,
+       "statement": "notes",
+       "columns": [
+        "2026",
+        "2025"
+       ],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q financial_statements, table in the notes: mentions 'stock options'",
+       "derived": false
+      },
+      {
+       "id": "E14",
+       "topic": "equity_compensation",
+       "filter": "negative",
+       "matched": "stock options",
+       "quote": "(1)For the three months ended September 30, 2026 and 2025, the weighted average of stock options that were antidilutive and not included in the diluted net earnings per share calculation were 22 million and 11 million, respectively.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q financial_statements: mentions 'stock options'",
+       "derived": false
+      },
+      {
+       "id": "E15",
+       "topic": "buyback",
+       "filter": "positive",
+       "what": "cash flow, repurchases of common stock: -1,250 vs -1,250 (+0, +0.00%) (columns as in the statement)",
+       "matched": "",
+       "quote": "Treasury stock purchases",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [],
+       "derived": true,
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       }
+      },
+      {
+       "id": "E16",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "(2) the ability to successfully manage local, regional or global economic volatility, including reduced market growth rates, and to generate sufficient income and cash flow to allow the Company to effect the expected share repurchases and dividend payments;",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "mdna",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q mdna: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E17",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "We view free cash flow as an important measure because it is one factor used in determining the amount of cash available for dividends, share repurchases, acquisitions and other discretionary investments.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "mdna",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       },
+       "what": "10-Q mdna: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E18",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "(2) the ability to successfully manage local, regional or global economic volatility, including reduced market growth rates, and to generate sufficient income and cash flow to allow the Company to effect the expected share repurchases and dividend payments;",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000060",
+        "form": "10-Q",
+        "filed": "2026-04-24",
+        "section": "mdna",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000060.txt"
+       },
+       "what": "10-Q mdna: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E19",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "flow as an important measure because it is one factor used in determining the amount of cash available for dividends, share repurchases, acquisitions and other discretionary investments.",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000060",
+        "form": "10-Q",
+        "filed": "2026-04-24",
+        "section": "mdna",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000060.txt"
+       },
+       "what": "10-Q mdna: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E20",
+       "topic": "buyback",
+       "filter": "positive",
+       "matched": "repurchas",
+       "quote": "(2) the ability to successfully manage local, regional or global economic volatility, including reduced market growth rates, and to generate sufficient income and cash flow to allow the Company to effect the expected share repurchases and dividend payments;",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000011",
+        "form": "10-Q",
+        "filed": "2026-01-23",
+        "section": "mdna",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000011.txt"
+       },
+       "what": "10-Q mdna: mentions 'repurchas'",
+       "derived": false
+      },
+      {
+       "id": "E21",
+       "topic": "dividend",
+       "filter": "positive",
+       "what": "cash flow, dividends paid: -2,603 vs -2,549 (-54, -2.12%) (columns as in the statement)",
+       "matched": "",
+       "quote": "Dividends to shareholders",
+       "truncated": false,
+       "statement": "cash_flow",
+       "columns": [],
+       "derived": true,
+       "source": {
+        "accession": "0000080424-26-000256",
+        "form": "10-Q",
+        "filed": "2026-10-22",
+        "section": "financial_statements",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000256.txt"
+       }
+      },
+      {
+       "id": "E22",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "On October 13, 2026, The Procter & Gamble Company (the \"Company\") issued a news release announcing that its Board of Directors declared a quarterly dividend of $1.0885 per share on the Common Stock and on the Series A and Series B ESOP Convertible Class A Preferred Stock of the Company, payable on or after November 16, 2026 to Common Stock shareholders of record at the close of business on October",
+       "truncated": true,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000214",
+        "form": "8-K",
+        "filed": "2026-10-13",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000214.txt"
+       },
+       "what": "8-K items: mentions 'dividend'",
+       "derived": false
+      },
+      {
+       "id": "E23",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "| 99.1 | Dividend News Release by The Procter & Gamble Company dated October 13, 2026. |",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000214",
+        "form": "8-K",
+        "filed": "2026-10-13",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000214.txt"
+       },
+       "what": "8-K items: mentions 'dividend'",
+       "derived": false
+      },
+      {
+       "id": "E24",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "| 99.1 | Dividend News Release by The Procter & Gamble Company dated July 29, 2026. |",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000094",
+        "form": "8-K",
+        "filed": "2026-07-29",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000094.txt"
+       },
+       "what": "8-K items: mentions 'dividend'",
+       "derived": false
+      },
+      {
+       "id": "E25",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "On July 14, 2026, The Procter & Gamble Company (the \"Company\") issued a news release announcing that its Board of Directors declared a quarterly dividend of $1.0885 per share on the Common Stock and on the Series A and Series B ESOP Convertible Class A Preferred Stock of the Company, payable on or after August 17, 2026, to Common Stock shareholders of record at the close of business on July 24, 20",
+       "truncated": true,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000082",
+        "form": "8-K",
+        "filed": "2026-07-14",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000082.txt"
+       },
+       "what": "8-K items: mentions 'dividend'",
+       "derived": false
+      },
+      {
+       "id": "E26",
+       "topic": "dividend",
+       "filter": "positive",
+       "matched": "dividend",
+       "quote": "| 99.1 | Dividend News Release by The Procter & Gamble Company dated July 14, 2026. |",
+       "truncated": false,
+       "statement": null,
+       "columns": [],
+       "source": {
+        "accession": "0000080424-26-000082",
+        "form": "8-K",
+        "filed": "2026-07-14",
+        "section": "items",
+        "url": "https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000082.txt"
+       },
+       "what": "8-K items: mentions 'dividend'",
+       "derived": false
+      }
+     ],
+     "found": {
+      "dilution": {
+       "filter": "negative",
+       "found": 6,
+       "shown": 5,
+       "derived": 0
+      },
+      "executive_compensation": {
+       "filter": "negative",
+       "found": 4,
+       "shown": 4,
+       "derived": 0
+      },
+      "equity_compensation": {
+       "filter": "negative",
+       "found": 33,
+       "shown": 5,
+       "derived": 0
+      },
+      "buyback": {
+       "filter": "positive",
+       "found": 18,
+       "shown": 5,
+       "derived": 1
+      },
+      "dividend": {
+       "filter": "positive",
+       "found": 39,
+       "shown": 5,
+       "derived": 1
+      }
+     },
+     "gaps": [
+      "executive compensation plans are described in the proxy statement, and 1 proxy/information statement(s) in the window are stored without text"
+     ],
+     "digest": "FILING EVIDENCE for PG (stored filings, last 365 days, as of 2026-11-03). This is evidence, not a score: nothing here rates the stock.\nFilings in the window: 10-K x1 (1 with text), 10-Q x3 (3 with text), 144 x36 (0 with text), 8-K x18 (18 with text), DEF 14A x1 (0 with text), SCHEDULE 13G x1 (0 with text), SCHEDULE 13G/A x1 (0 with text).\nBALANCE SHEET from the 10-Q filed 2026-10-22 (period ended 2026-09-30); columns Amounts in millions vs September 30, 2026 vs June 30, 2026; Amounts in millions\n  Cash and cash equivalents: 15,365 vs 9,942 (+5,423, +54.55%)\n  TOTAL CURRENT ASSETS: 32,508 vs 26,208 (+6,300, +24.04%)\n  TOTAL ASSETS: 133,132 vs 126,521 (+6,611, +5.23%)\n  TOTAL CURRENT LIABILITIES: 44,996 vs 38,694 (+6,302, +16.29%)\n  TOTAL LIABILITIES: 77,795 vs 72,210 (+5,585, +7.73%)\n  TOTAL SHAREHOLDERS\u2019 EQUITY: 55,337 vs 54,311 (+1,026, +1.89%)\n  Retained earnings: 138,021 vs 135,852 (+2,169, +1.60%)\n  Accounts receivable: 6,620 vs 6,056 (+564, +9.31%)\n  Total inventories: 8,485 vs 8,170 (+315, +3.86%)\n  debt, LONG-TERM DEBT (non-current): 21,897 vs 22,842 (-945, -4.14%)\nCAPITAL ACTIONS (cash-flow statement; as the filing shows them, so a cash outflow is negative):\n  share-based compensation expense: 98 vs 121 (-23, -19.01%)\n  cash from operations [row: TOTAL OPERATING ACTIVITIES]: 5,767 vs 5,408 (+359, +6.64%)\n  dividends paid [row: Dividends to shareholders]: -2,603 vs -2,549 (-54, -2.12%)\n  repurchases of common stock [row: Treasury stock purchases]: -1,250 vs -1,250 (+0, +0.00%)\nINCOME STATEMENT:\n  revenue: 23,276, 22,386\n  net income: 4,757, 4,781\nNEGATIVE-TYPE TOPICS (dilution, executive compensation, employee equity compensation): passages shown of found: dilution 5 of 6, executive_compensation 4 of 4, equity_compensation 5 of 33\n  [E1] dilution | 10-Q filed 2026-10-22, financial_statements | 10-Q financial_statements: mentions 'dilutive effect' | \"The diluted shares include the dilutive effect of stock options and other unvested share-based awards based on the treasury stock method and the assumed conversion of preferred stock.\"\n  [E2] dilution | 10-Q filed 2026-10-22, financial_statements | 10-Q financial_statements: mentions 'dilutive securit' | \"Add effect of dilutive securities:\"\n  [E3] dilution | 10-Q filed 2026-10-22, financial_statements | 10-Q financial_statements: mentions 'antidilutive' | \"(1)For the three months ended September 30, 2026 and 2025, the weighted average of stock options that were antidilutive and not included in the diluted net earnings per share calculation were 22 million and 11 million, respectively.\"\n  [E4] dilution | 10-Q filed 2026-04-24, financial_statements | 10-Q financial_statements: mentions 'dilutive effect' | \"The diluted shares include the dilutive effect of stock options and other share-based awards based on the treasury stock method and the assumed conversion of preferred stock.\"\n  [E5] dilution | 10-Q filed 2026-04-24, financial_statements | 10-Q financial_statements: mentions 'antidilutive' | \"(1)For the three months ended March 31, 2026 and 2025, the weighted average of stock options that were antidilutive and not included in the diluted net earnings per share calculation were 22 million and 8 million, respectively.\"\n  [E6] executive_compensation | 8-K filed 2026-07-29, items | 8-K items: mentions 'compensatory arrangements' | \"ITEM 5.02   DEPARTURE OF DIRECTORS OR CERTAIN OFFICERS; ELECTION OF DIRECTORS; APPOINTMENT OF CERTAIN OFFICERS; COMPENSATORY ARRANGEMENTS OF CERTAIN OFFICERS\"\n  [E7] executive_compensation | 8-K filed 2026-07-29, items | 8-K items: mentions 'compensatory arrangements' | \"The Company is filing the information under this item pursuant to Item 5.02, \"Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory Arrangements of Certain Officers.\"\"\n  [E8] executive_compensation | 8-K filed 2025-12-15, items | 8-K items: mentions 'compensatory arrangements' | \"ITEM 5.02    DEPARTURE OF DIRECTORS OR CERTAIN OFFICERS; ELECTION OF DIRECTORS; APPOINTMENT OF CERTAIN OFFICERS; COMPENSATORY ARRANGEMENTS OF CERTAIN OFFICERS.\"\n  [E9] executive_compensation | 10-Q filed 2026-04-24, financial_statements | 10-Q financial_statements: mentions 'severance' | \"Employee separation costs relate to severance packages that are primarily voluntary and the amounts calculated are based on salary levels and past service periods.\"\n  [E10] equity_compensation | 10-Q filed 2026-10-22, financial_statements | 10-Q financial_statements, cash flow statement row: mentions 'share-based compensation' | \"Share-based compensation expense | 98 | 121\"\n  [E11] equity_compensation | 10-Q filed 2026-10-22, financial_statements | 10-Q financial_statements, cash flow statement row: mentions 'stock options' | \"Impact of stock options and other | 143 | 134\"\n  [E12] equity_compensation | 10-Q filed 2026-10-22, financial_statements | 10-Q financial_statements: mentions 'stock options' | \"The diluted shares include the dilutive effect of stock options and other unvested share-based awards based on the treasury stock method and the assumed conversion of preferred stock.\"\n  [E13] equity_compensation | 10-Q filed 2026-10-22, financial_statements | 10-Q financial_statements, table in the notes: mentions 'stock options' | \"Stock options and other unvested share-based awards (1) | 17.0 | 25.3\"\n  [E14] equity_compensation | 10-Q filed 2026-10-22, financial_statements | 10-Q financial_statements: mentions 'stock options' | \"(1)For the three months ended September 30, 2026 and 2025, the weighted average of stock options that were antidilutive and not included in the diluted net earnings per share calculation were 22 million and 11 million, respectively.\"\nPOSITIVE-TYPE TOPICS (buybacks, dividends): passages shown of found: buyback 5 of 18 +1 from the statements, dividend 5 of 39 +1 from the statements\n  [E15] buyback | 10-Q filed 2026-10-22, financial_statements | cash flow, repurchases of common stock: -1,250 vs -1,250 (+0, +0.00%) (columns as in the statement) | \"Treasury stock purchases\"\n  [E16] buyback | 10-Q filed 2026-10-22, mdna | 10-Q mdna: mentions 'repurchas' | \"(2) the ability to successfully manage local, regional or global economic volatility, including reduced market growth rates, and to generate sufficient income and cash flow to allow the Company to effect the expected share repurchases and dividend payments;\"\n  [E17] buyback | 10-Q filed 2026-10-22, mdna | 10-Q mdna: mentions 'repurchas' | \"We view free cash flow as an important measure because it is one factor used in determining the amount of cash available for dividends, share repurchases, acquisitions and other discretionary investments.\"\n  [E18] buyback | 10-Q filed 2026-04-24, mdna | 10-Q mdna: mentions 'repurchas' | \"(2) the ability to successfully manage local, regional or global economic volatility, including reduced market growth rates, and to generate sufficient income and cash flow to allow the Company to effect the expected share repurchases and dividend payments;\"\n  [E19] buyback | 10-Q filed 2026-04-24, mdna | 10-Q mdna: mentions 'repurchas' | \"flow as an important measure because it is one factor used in determining the amount of cash available for dividends, share repurchases, acquisitions and other discretionary investments.\"\n  [E20] buyback | 10-Q filed 2026-01-23, mdna | 10-Q mdna: mentions 'repurchas' | \"(2) the ability to successfully manage local, regional or global economic volatility, including reduced market growth rates, and to generate sufficient income and cash flow to allow the Company to effect the expected share repurchases and dividend payments;\"\n  [E21] dividend | 10-Q filed 2026-10-22, financial_statements | cash flow, dividends paid: -2,603 vs -2,549 (-54, -2.12%) (columns as in the statement) | \"Dividends to shareholders\"\n  [E22] dividend | 8-K filed 2026-10-13, items | 8-K items: mentions 'dividend' | \"On October 13, 2026, The Procter & Gamble Company (the \"Company\") issued a news release announcing that its Board of Directors declared a quarterly dividend of $1.0885 per share on the Common Stock and on the Series A and Series B ESOP Convertible Class A Preferred Stock of the Company, payable on or after November 16, 2026 to Common Stock shareholders of record at the close of business on October\" [cut]\n  [E23] dividend | 8-K filed 2026-10-13, items | 8-K items: mentions 'dividend' | \"| 99.1 | Dividend News Release by The Procter & Gamble Company dated October 13, 2026. |\"\n  [E24] dividend | 8-K filed 2026-07-29, items | 8-K items: mentions 'dividend' | \"| 99.1 | Dividend News Release by The Procter & Gamble Company dated July 29, 2026. |\"\n  [E25] dividend | 8-K filed 2026-07-14, items | 8-K items: mentions 'dividend' | \"On July 14, 2026, The Procter & Gamble Company (the \"Company\") issued a news release announcing that its Board of Directors declared a quarterly dividend of $1.0885 per share on the Common Stock and on the Series A and Series B ESOP Convertible Class A Preferred Stock of the Company, payable on or after August 17, 2026, to Common Stock shareholders of record at the close of business on July 24, 20\" [cut]\n  [E26] dividend | 8-K filed 2026-07-14, items | 8-K items: mentions 'dividend' | \"| 99.1 | Dividend News Release by The Procter & Gamble Company dated July 14, 2026. |\"\nNOT AVAILABLE: executive compensation plans are described in the proxy statement, and 1 proxy/information statement(s) in the window are stored without text"
+    }
+   },
+   "metrics": {},
+   "market_brief": {},
+   "quotes": {},
+   "problems": [],
+   "notes": [
+    "the answer uses a judging word (bullish or bearish): the Data Clerk should only report what the sources say",
+    "a limit stopped 1 tool call(s): fetch_press_releases: fetching is turned off for this question, so only the stored news can be searched"
+   ],
+   "no_supporting_text": false,
+   "tool_calls": [
+    {
+     "name": "retrieve_news",
+     "args": {
+      "query": "Procter & Gamble",
+      "tickers": [
+       "PG"
+      ],
+      "since_days": 14,
+      "k": 10,
+      "newest_first": true
+     },
+     "outcome": "ok"
+    },
+    {
+     "name": "retrieve_press_releases",
+     "args": {
+      "query": "Procter & Gamble",
+      "tickers": [
+       "PG"
+      ],
+      "since_days": 14,
+      "k": 5,
+      "newest_first": true
+     },
+     "outcome": "ok"
+    },
+    {
+     "name": "fetch_press_releases",
+     "args": {
+      "symbol": "PG",
+      "from_date": 14
+     },
+     "outcome": "limit"
+    }
+   ],
+   "turns": 4,
+   "tokens_in": 21111,
+   "tokens_out": 1545,
+   "completed_utc": "2026-11-06T04:15:56Z"
+  },
+  "recommendations": [],
+  "advisor_runs": [],
+  "errors": [],
+  "metrics": null,
+  "case": "funds",
+  "sector": "XLP",
+  "candidates": []
+ },
+ "metrics": {
+  "PG": {
+   "mom_12_1": {
+    "value": 0.03292406886617738,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "pct_of_52w_high": {
+    "value": 0.9799437016185784,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 200 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "ret_21d": {
+    "value": 0.1304289000135299,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "rsi_14": {
+    "value": 67.90333636418644,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 30 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "atr_pct": {
+    "value": 0.01967862757096627,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "residual_mom_12_1": {
+    "value": -0.06557474598765456,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "symbol_value": 0.03292406886617738,
+     "etf": "XLP",
+     "etf_value": 0.09849881485383194
+    },
+    "note": null
+   },
+   "macd_hist": {
+    "value": 0.438651545459531,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 60 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "adx_14": {
+    "value": 41.05037605059151,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 40 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "obv_20d_change": {
+    "value": 0.19716410498749684,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "vol_63d_ann": {
+    "value": 0.20696886047497104,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "breakout_20d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "bollinger_pct_b": {
+    "value": 0.944210766119006,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "ret_1d": {
+    "value": -0.0013148458044465183,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "volume_ratio_1d": {
+    "value": 1.5529186721648331,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "gap_1d": {
+    "value": 0.01004064068850119,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 393327800000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": 0.040538016065757354,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "zscore_21d": {
+    "value": 1.7066257924545998,
+    "unit": "std",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "roe": {
+    "value": 29.57,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 0.7065,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 0.7225,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": 3.52,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": 0.005722865237905328,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "symbol_value": 0.040538016065757354,
+     "etf": "XLP",
+     "etf_value": 0.034815150827852026
+    },
+    "note": null
+   },
+   "sector_ret_5d": {
+    "value": 0.034815150827852026,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of the ETF",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "etf": "XLP",
+     "bars": 276
+    },
+    "note": null
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "candle_reversal_1d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "stoch_k_14": {
+    "value": 75.07288629737597,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 14 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "earnings_yield": {
+    "value": 0.04073950346693175,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 24.5462
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-10-22",
+    "window": "latest filings",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {
+     "reasons": []
+    },
+    "note": null
+   },
+   "payout_coverage": {
+    "value": 0.5471936094177002,
+    "unit": "ratio",
+    "as_of": "2026-10-22",
+    "window": "year to date",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {
+     "dividends": 2603000000.0,
+     "net_income": 4757000000.0
+    },
+    "note": null
+   },
+   "net_payout_yield_ttm": {
+    "value": 0.039183602074402066,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "derived:filing:0000080424-26-000256+finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "repurchases": 1250000000.0,
+     "dividends": 2603000000.0,
+     "issued": 0.0,
+     "months": 3,
+     "market_cap": 393327800000.0,
+     "absent": [
+      "proceeds from issuing common stock"
+     ]
+    },
+    "note": null
+   },
+   "share_count_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": "2026-10-22",
+    "window": "latest balance sheet vs the earlier one",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {},
+    "note": "no shares issued and outstanding on the stored balance sheet"
+   },
+   "sbc_to_revenue": {
+    "value": 0.004210345420175288,
+    "unit": "fraction",
+    "as_of": "2026-10-22",
+    "window": "year to date",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {
+     "sbc": 98000000.0,
+     "revenue": 23276000000.0
+    },
+    "note": null
+   },
+   "cash_balance": {
+    "value": 15365000000.0,
+    "unit": "USD",
+    "as_of": "2026-10-22",
+    "window": "latest balance sheet",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {
+     "label": "Cash and cash equivalents",
+     "as_reported": 15365.0,
+     "units": "Amounts in millions"
+    },
+    "note": null
+   },
+   "residual_21d": {
+    "value": 0.013537835142048982,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "symbol_value": 0.1304289000135299,
+     "etf": "XLP",
+     "etf_value": 0.11689106487148093
+    },
+    "note": null
+   },
+   "operating_margin": {
+    "value": 22.76,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": [
+     [
+      "2026-09-18",
+      146.39,
+      12944276.089156
+     ],
+     [
+      "2026-09-21",
+      146.08,
+      5825551.457104
+     ],
+     [
+      "2026-09-22",
+      148.22,
+      5639198.462673
+     ],
+     [
+      "2026-09-23",
+      147.39,
+      6583524.237473
+     ],
+     [
+      "2026-09-24",
+      145.68,
+      7430956.301992
+     ],
+     [
+      "2026-09-25",
+      146.23,
+      5790952.254056
+     ],
+     [
+      "2026-09-28",
+      149.03,
+      8850081.877526
+     ],
+     [
+      "2026-09-29",
+      148.32,
+      7672514.048779
+     ],
+     [
+      "2026-09-30",
+      145.28,
+      8582222.905644
+     ],
+     [
+      "2026-10-01",
+      143.95,
+      7323305.213608
+     ],
+     [
+      "2026-10-02",
+      144.91,
+      6251440.16996
+     ],
+     [
+      "2026-10-05",
+      145.94,
+      7039622.677916
+     ],
+     [
+      "2026-10-06",
+      148.41,
+      13334779.098749
+     ],
+     [
+      "2026-10-07",
+      147.82,
+      8676314.783847
+     ],
+     [
+      "2026-10-08",
+      150.59,
+      12054628.733828
+     ],
+     [
+      "2026-10-09",
+      151.23,
+      6307709.72434
+     ],
+     [
+      "2026-10-12",
+      153.2,
+      6221453.039449
+     ],
+     [
+      "2026-10-13",
+      153.04,
+      6038341.861539
+     ],
+     [
+      "2026-10-14",
+      156.53,
+      10676367.711966
+     ],
+     [
+      "2026-10-15",
+      157.08,
+      16416600.28922
+     ],
+     [
+      "2026-10-16",
+      159.35,
+      13533952.877819
+     ],
+     [
+      "2026-10-19",
+      157.69,
+      10091263.714149
+     ],
+     [
+      "2026-10-20",
+      159.32,
+      9748612.747078
+     ],
+     [
+      "2026-10-21",
+      156.84,
+      9980748.146203
+     ],
+     [
+      "2026-10-22",
+      165.59,
+      22037240.032974
+     ],
+     [
+      "2026-10-23",
+      161.02,
+      10331863.347936
+     ],
+     [
+      "2026-10-26",
+      159.92,
+      9492449.940832
+     ],
+     [
+      "2026-10-27",
+      159.23,
+      7607966.868022
+     ],
+     [
+      "2026-10-28",
+      158.26,
+      5207858.44056
+     ],
+     [
+      "2026-10-29",
+      160.59,
+      7507524.553819
+     ],
+     [
+      "2026-10-30",
+      161.57,
+      11629704.353212
+     ],
+     [
+      "2026-11-02",
+      163.56,
+      9724500.09161
+     ],
+     [
+      "2026-11-03",
+      162.06,
+      10683601.239319
+     ],
+     [
+      "2026-11-04",
+      167.32,
+      13962518.333689
+     ],
+     [
+      "2026-11-05",
+      167.1,
+      16247792.542168
+     ]
+    ],
+    "unit": "[date, close, volume]",
+    "as_of": "2026-11-05",
+    "window": "last 35 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "adv_20d_dollars": {
+    "value": 1713585409.4076855,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "last_close": {
+    "value": 167.1,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "1 bar",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bar_date": "2026-11-05"
+    },
+    "note": null
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-10-22",
+    "window": "year to date",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {
+     "net_income": 4757000000.0,
+     "cash_from_operations": 5767000000.0
+    },
+    "note": null
+   },
+   "atr_14": {
+    "value": 3.2882986671084637,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "sma_50": {
+    "value": 151.5564,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": -0.08267464241181276,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "spy_bars": 276
+    },
+    "note": null
+   },
+   "max_drawdown_63d": {
+    "value": -0.04426595808925671,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 63 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 167.1
+    },
+    "note": null
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": "XLP",
+    "unit": "ticker",
+    "as_of": "2026-11-05",
+    "window": "n/a",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": null
+   },
+   "accrual_ratio": {
+    "value": -0.0075864555478772945,
+    "unit": "ratio",
+    "as_of": "2026-10-22",
+    "window": "year to date",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {
+     "net_income": 4757000000.0,
+     "cash_from_operations": 5767000000.0,
+     "total_assets": 133132000000.0
+    },
+    "note": null
+   },
+   "receivables_vs_sales": {
+    "value": 5.334300902349684,
+    "unit": "points",
+    "as_of": "2026-10-22",
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {
+     "accounts_receivable_change_pct": 9.31,
+     "revenue_change_pct": 3.98
+    },
+    "note": null
+   },
+   "inventory_vs_sales": {
+    "value": -0.11569909765031694,
+    "unit": "points",
+    "as_of": "2026-10-22",
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "filing:0000080424-26-000256",
+    "inputs_summary": {
+     "inventories_change_pct": 3.86,
+     "revenue_change_pct": 3.98
+    },
+    "note": null
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  },
+  "ADDYY": {
+   "mom_12_1": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 252 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 252 bars, 0 stored"
+   },
+   "pct_of_52w_high": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 252 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 252 bars, 0 stored"
+   },
+   "above_sma_200": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "last 200 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 200 bars, 0 stored"
+   },
+   "ret_21d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 22 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 22 bars, 0 stored"
+   },
+   "rsi_14": {
+    "value": null,
+    "unit": "0-100",
+    "as_of": null,
+    "window": "last 30 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 30 bars, 0 stored"
+   },
+   "atr_pct": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 20 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 20 bars, 0 stored"
+   },
+   "residual_mom_12_1": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "252 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 252 bars, 0 stored"
+   },
+   "macd_hist": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "last 60 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 60 bars, 0 stored"
+   },
+   "adx_14": {
+    "value": null,
+    "unit": "0-100",
+    "as_of": null,
+    "window": "last 40 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 40 bars, 0 stored"
+   },
+   "obv_20d_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 21 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 21 bars, 0 stored"
+   },
+   "vol_63d_ann": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 64 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 64 bars, 0 stored"
+   },
+   "breakout_20d": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "last 21 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 21 bars, 0 stored"
+   },
+   "bollinger_pct_b": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "last 20 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 20 bars, 0 stored"
+   },
+   "ret_1d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 2 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 2 bars, 0 stored"
+   },
+   "volume_ratio_1d": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "last 21 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 21 bars, 0 stored"
+   },
+   "gap_1d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 2 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 2 bars, 0 stored"
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 30429030000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 6 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 6 bars, 0 stored"
+   },
+   "zscore_21d": {
+    "value": null,
+    "unit": "std",
+    "as_of": null,
+    "window": "last 21 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 21 bars, 0 stored"
+   },
+   "roe": {
+    "value": 27.1,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 0.9567,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 1.4184,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": 7.95,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 6 bars, 0 stored"
+   },
+   "sector_ret_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars of the ETF",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "last 50 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 50 bars, 0 stored"
+   },
+   "candle_reversal_1d": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "last 2 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 2 bars, 0 stored"
+   },
+   "stoch_k_14": {
+    "value": null,
+    "unit": "0-100",
+    "as_of": null,
+    "window": "last 14 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 14 bars, 0 stored"
+   },
+   "earnings_yield": {
+    "value": 0.053370051929060525,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 18.7371
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "latest filings",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "payout_coverage": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "net_payout_yield_ttm": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "share_count_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "latest balance sheet vs the earlier one",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "sbc_to_revenue": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "cash_balance": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "latest balance sheet",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "residual_21d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "22 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 22 bars, 0 stored"
+   },
+   "operating_margin": {
+    "value": 9.19,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": null,
+    "unit": "[date, close, volume]",
+    "as_of": null,
+    "window": "last 35 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 1 bars, 0 stored"
+   },
+   "adv_20d_dollars": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "last 20 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 20 bars, 0 stored"
+   },
+   "last_close": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "1 bar",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 1 bars, 0 stored"
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "atr_14": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "last 20 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 20 bars, 0 stored"
+   },
+   "sma_50": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "last 50 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 50 bars, 0 stored"
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "last 64 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 64 bars, 0 stored"
+   },
+   "max_drawdown_63d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "last 63 bars",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 0
+    },
+    "note": "needs 63 bars, 0 stored"
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "n/a",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": null,
+    "unit": "ticker",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "accrual_ratio": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "receivables_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "inventory_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of ADDYY (fetch_filings has not been run for it)"
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  },
+  "MSFT": {
+   "mom_12_1": {
+    "value": 0.030463758971527755,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "pct_of_52w_high": {
+    "value": 0.9584726817490834,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 200 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "ret_21d": {
+    "value": 0.011646783449108966,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "rsi_14": {
+    "value": 54.44905424467309,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 30 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "atr_pct": {
+    "value": 0.02903464022177125,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "residual_mom_12_1": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "macd_hist": {
+    "value": -0.4022402827234677,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 60 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "adx_14": {
+    "value": 21.896459214940368,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 40 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "obv_20d_change": {
+    "value": -0.12578643533210007,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "vol_63d_ann": {
+    "value": 0.26710817186846253,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "breakout_20d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "bollinger_pct_b": {
+    "value": 0.6103907624558859,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "ret_1d": {
+    "value": -0.035750269881252295,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "volume_ratio_1d": {
+    "value": 1.7806120984824731,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "gap_1d": {
+    "value": -0.0015563152213026177,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 4127478800000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": 0.01092164333949519,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "zscore_21d": {
+    "value": 0.47604769972434396,
+    "unit": "std",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "roe": {
+    "value": 33.21,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 0.2263,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 1.2248,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": 17.91,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "sector_ret_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars of the ETF",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "candle_reversal_1d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "stoch_k_14": {
+    "value": 57.15076582395271,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 14 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "earnings_yield": {
+    "value": 0.03455639949962334,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 28.9382
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "latest filings",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "payout_coverage": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "net_payout_yield_ttm": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "share_count_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "latest balance sheet vs the earlier one",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "sbc_to_revenue": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "cash_balance": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "latest balance sheet",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "residual_21d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "operating_margin": {
+    "value": 47.04,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": [
+     [
+      "2026-09-18",
+      493.78,
+      39622288.835584
+     ],
+     [
+      "2026-09-21",
+      501.61,
+      27959944.53236
+     ],
+     [
+      "2026-09-22",
+      498.0,
+      21652838.382225
+     ],
+     [
+      "2026-09-23",
+      500.59,
+      19445555.523738
+     ],
+     [
+      "2026-09-24",
+      497.93,
+      16657643.497618
+     ],
+     [
+      "2026-09-25",
+      516.17,
+      38193112.834108
+     ],
+     [
+      "2026-09-28",
+      509.22,
+      19626939.79751
+     ],
+     [
+      "2026-09-29",
+      508.96,
+      21341832.293104
+     ],
+     [
+      "2026-09-30",
+      512.9,
+      27223264.633875
+     ],
+     [
+      "2026-10-01",
+      512.8,
+      19731882.68355
+     ],
+     [
+      "2026-10-02",
+      517.53,
+      17822339.535113
+     ],
+     [
+      "2026-10-05",
+      525.18,
+      26604760.672552
+     ],
+     [
+      "2026-10-06",
+      529.3,
+      21107455.705776
+     ],
+     [
+      "2026-10-07",
+      529.76,
+      16790229.481735
+     ],
+     [
+      "2026-10-08",
+      522.61,
+      20228699.715829
+     ],
+     [
+      "2026-10-09",
+      535.07,
+      18500612.215796
+     ],
+     [
+      "2026-10-12",
+      541.15,
+      18314943.573478
+     ],
+     [
+      "2026-10-13",
+      543.45,
+      23851953.364812
+     ],
+     [
+      "2026-10-14",
+      533.69,
+      22324295.686446
+     ],
+     [
+      "2026-10-15",
+      539.44,
+      24151211.130548
+     ],
+     [
+      "2026-10-16",
+      529.05,
+      24845667.791386
+     ],
+     [
+      "2026-10-19",
+      533.52,
+      17994851.814296
+     ],
+     [
+      "2026-10-20",
+      531.87,
+      14576043.171513
+     ],
+     [
+      "2026-10-21",
+      532.95,
+      13940102.251871
+     ],
+     [
+      "2026-10-22",
+      521.08,
+      21266610.945292
+     ],
+     [
+      "2026-10-23",
+      524.51,
+      13681067.849592
+     ],
+     [
+      "2026-10-26",
+      532.6,
+      19021036.573432
+     ],
+     [
+      "2026-10-27",
+      531.33,
+      19532321.128196
+     ],
+     [
+      "2026-10-28",
+      531.01,
+      28594163.143995
+     ],
+     [
+      "2026-10-29",
+      530.14,
+      39333217.909218
+     ],
+     [
+      "2026-10-30",
+      521.91,
+      35652049.083929
+     ],
+     [
+      "2026-11-02",
+      507.12,
+      34743321.755964
+     ],
+     [
+      "2026-11-03",
+      520.99,
+      20010170.366442
+     ],
+     [
+      "2026-11-04",
+      555.8,
+      50859796.478412
+     ],
+     [
+      "2026-11-05",
+      535.93,
+      42861303.987532
+     ]
+    ],
+    "unit": "[date, close, volume]",
+    "as_of": "2026-11-05",
+    "window": "last 35 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "adv_20d_dollars": {
+    "value": 13416701623.452906,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "last_close": {
+    "value": 535.93,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "1 bar",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bar_date": "2026-11-05"
+    },
+    "note": null
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "atr_14": {
+    "value": 15.560534734053865,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "sma_50": {
+    "value": 516.1348,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": 1.3381529850201357,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "spy_bars": 276
+    },
+    "note": null
+   },
+   "max_drawdown_63d": {
+    "value": -0.06685067623516427,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 63 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 535.93
+    },
+    "note": null
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": null,
+    "unit": "ticker",
+    "as_of": "2026-11-05",
+    "window": "n/a",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "accrual_ratio": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "receivables_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "inventory_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of MSFT (fetch_filings has not been run for it)"
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  },
+  "TSLA": {
+   "mom_12_1": {
+    "value": -0.18843465275824012,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "pct_of_52w_high": {
+    "value": 0.6889922418459195,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "above_sma_200": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 200 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "ret_21d": {
+    "value": -0.09030994415182236,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "rsi_14": {
+    "value": 35.80921154339343,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 30 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "atr_pct": {
+    "value": 0.04784066017135678,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "residual_mom_12_1": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "macd_hist": {
+    "value": -2.9509519473055867,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 60 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "adx_14": {
+    "value": 15.956906671931623,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 40 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "obv_20d_change": {
+    "value": -0.24901202985521118,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "vol_63d_ann": {
+    "value": 0.4600207986328233,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "breakout_20d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "bollinger_pct_b": {
+    "value": -0.04460150455999118,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "ret_1d": {
+    "value": -0.10773903787741113,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "volume_ratio_1d": {
+    "value": 2.1385408592468007,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "gap_1d": {
+    "value": -0.028739063838625123,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 1522562900000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": -0.1478056037689065,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "zscore_21d": {
+    "value": -2.1527958836139733,
+    "unit": "std",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "roe": {
+    "value": 3.76,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 0.1067,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 1.7387,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": 8.3,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "sector_ret_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars of the ETF",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "candle_reversal_1d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "stoch_k_14": {
+    "value": 7.281808622502652,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 14 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "earnings_yield": {
+    "value": 0.002114855250847211,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 472.8456
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "latest filings",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "payout_coverage": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "net_payout_yield_ttm": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "share_count_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "latest balance sheet vs the earlier one",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "sbc_to_revenue": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "cash_balance": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "latest balance sheet",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "residual_21d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "operating_margin": {
+    "value": 3.35,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": [
+     [
+      "2026-09-18",
+      364.27,
+      51922256.609311
+     ],
+     [
+      "2026-09-21",
+      375.3,
+      36599609.367856
+     ],
+     [
+      "2026-09-22",
+      378.9,
+      28229908.803628
+     ],
+     [
+      "2026-09-23",
+      380.12,
+      33522492.963083
+     ],
+     [
+      "2026-09-24",
+      377.94,
+      26165727.916313
+     ],
+     [
+      "2026-09-25",
+      372.11,
+      45999470.260491
+     ],
+     [
+      "2026-09-28",
+      357.45,
+      39452901.766692
+     ],
+     [
+      "2026-09-29",
+      352.84,
+      32492406.174072
+     ],
+     [
+      "2026-09-30",
+      354.81,
+      39235838.740659
+     ],
+     [
+      "2026-10-01",
+      354.11,
+      31080774.031296
+     ],
+     [
+      "2026-10-02",
+      370.59,
+      55330140.540632
+     ],
+     [
+      "2026-10-05",
+      378.73,
+      42232669.530816
+     ],
+     [
+      "2026-10-06",
+      380.68,
+      27735438.587963
+     ],
+     [
+      "2026-10-07",
+      377.81,
+      25594563.545792
+     ],
+     [
+      "2026-10-08",
+      375.0,
+      28394945.553229
+     ],
+     [
+      "2026-10-09",
+      382.7,
+      38952426.939911
+     ],
+     [
+      "2026-10-12",
+      378.03,
+      20244285.110128
+     ],
+     [
+      "2026-10-13",
+      375.23,
+      18393043.235272
+     ],
+     [
+      "2026-10-14",
+      367.16,
+      31001421.081316
+     ],
+     [
+      "2026-10-15",
+      362.44,
+      26728314.1145
+     ],
+     [
+      "2026-10-16",
+      354.72,
+      62067344.446491
+     ],
+     [
+      "2026-10-19",
+      368.06,
+      38817910.056266
+     ],
+     [
+      "2026-10-20",
+      373.71,
+      32123322.962033
+     ],
+     [
+      "2026-10-21",
+      386.47,
+      48875814.549238
+     ],
+     [
+      "2026-10-22",
+      374.58,
+      51610857.976348
+     ],
+     [
+      "2026-10-23",
+      372.22,
+      34762967.914602
+     ],
+     [
+      "2026-10-26",
+      391.62,
+      53090212.05654
+     ],
+     [
+      "2026-10-27",
+      407.46,
+      45333228.605216
+     ],
+     [
+      "2026-10-28",
+      404.22,
+      35598772.640517
+     ],
+     [
+      "2026-10-29",
+      403.3,
+      22858268.433261
+     ],
+     [
+      "2026-10-30",
+      399.81,
+      41737178.389785
+     ],
+     [
+      "2026-11-02",
+      403.82,
+      43141083.782529
+     ],
+     [
+      "2026-11-03",
+      398.5,
+      26647733.040377
+     ],
+     [
+      "2026-11-04",
+      385.19,
+      47847226.513713
+     ],
+     [
+      "2026-11-05",
+      343.69,
+      80005631.863401
+     ]
+    ],
+    "unit": "[date, close, volume]",
+    "as_of": "2026-11-05",
+    "window": "last 35 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "adv_20d_dollars": {
+    "value": 15176347943.500376,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "last_close": {
+    "value": 343.69,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "1 bar",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bar_date": "2026-11-05"
+    },
+    "note": null
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "atr_14": {
+    "value": 16.442356494293612,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "sma_50": {
+    "value": 372.0689,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": 2.1337574810179487,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "spy_bars": 276
+    },
+    "note": null
+   },
+   "max_drawdown_63d": {
+    "value": -0.1565061601138762,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 63 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 343.69
+    },
+    "note": null
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": null,
+    "unit": "ticker",
+    "as_of": "2026-11-05",
+    "window": "n/a",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "accrual_ratio": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "receivables_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "inventory_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of TSLA (fetch_filings has not been run for it)"
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  },
+  "GM": {
+   "mom_12_1": {
+    "value": 0.19601570452232076,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "pct_of_52w_high": {
+    "value": 0.9533617929562432,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 200 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "ret_21d": {
+    "value": 0.10297567600938384,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "rsi_14": {
+    "value": 60.32427895899245,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 30 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "atr_pct": {
+    "value": 0.034371746424661606,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "residual_mom_12_1": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "252 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "macd_hist": {
+    "value": 1.3517402528987936,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 60 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "adx_14": {
+    "value": 25.56728390031091,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 40 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "obv_20d_change": {
+    "value": 0.11863299101148582,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "vol_63d_ann": {
+    "value": 0.3737394690269751,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "breakout_20d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "bollinger_pct_b": {
+    "value": 0.8292260252843291,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "ret_1d": {
+    "value": -0.03353889429838808,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "volume_ratio_1d": {
+    "value": 1.3286920959683135,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "gap_1d": {
+    "value": 0.00643730390565822,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "sue_4q": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "eps_surprise_last": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "market_cap": {
+    "value": 77969270000.0,
+    "unit": "USD",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "ret_5d": {
+    "value": 0.04211385907606169,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "zscore_21d": {
+    "value": 1.3241544115477002,
+    "unit": "std",
+    "as_of": "2026-11-05",
+    "window": "last 21 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "roe": {
+    "value": 6.37,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "debt_to_equity": {
+    "value": 2.0499,
+    "unit": "ratio",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "current_ratio": {
+    "value": 1.0897,
+    "unit": "x",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "revenue_growth": {
+    "value": -0.26,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "residual_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "sector_ret_5d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "6 bars of the ETF",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "spy_ret_5d": {
+    "value": -0.04726006030986796,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "6 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "above_sma_50": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "candle_reversal_1d": {
+    "value": false,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "last 2 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "stoch_k_14": {
+    "value": 77.13239141810568,
+    "unit": "0-100",
+    "as_of": "2026-11-05",
+    "window": "last 14 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "earnings_yield": {
+    "value": 0.05076348278102664,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "TTM",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {
+     "pe_ratio": 19.6992
+    },
+    "note": null
+   },
+   "dilution_current": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "latest filings",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "payout_coverage": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "net_payout_yield_ttm": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": "2026-11-06",
+    "window": "year to date, annualized",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "share_count_change": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "latest balance sheet vs the earlier one",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "sbc_to_revenue": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "cash_balance": {
+    "value": null,
+    "unit": "USD",
+    "as_of": null,
+    "window": "latest balance sheet",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "residual_21d": {
+    "value": null,
+    "unit": "fraction",
+    "as_of": null,
+    "window": "22 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "operating_margin": {
+    "value": 1.89,
+    "unit": "%",
+    "as_of": "2026-11-06",
+    "window": "as Finnhub reports",
+    "source": "finnhub_metric:2026-11-06",
+    "inputs_summary": {},
+    "note": null
+   },
+   "recent_bars": {
+    "value": [
+     [
+      "2026-09-18",
+      82.2,
+      21148053.693949
+     ],
+     [
+      "2026-09-21",
+      83.95,
+      7936516.145171
+     ],
+     [
+      "2026-09-22",
+      83.45,
+      6232948.578661
+     ],
+     [
+      "2026-09-23",
+      83.77,
+      4730304.495677
+     ],
+     [
+      "2026-09-24",
+      80.57,
+      7936246.192274
+     ],
+     [
+      "2026-09-25",
+      82.63,
+      7222753.69304
+     ],
+     [
+      "2026-09-28",
+      80.64,
+      8626724.887366
+     ],
+     [
+      "2026-09-29",
+      80.47,
+      6251186.371165
+     ],
+     [
+      "2026-09-30",
+      77.0,
+      9768390.243356
+     ],
+     [
+      "2026-10-01",
+      79.31,
+      8443487.696709
+     ],
+     [
+      "2026-10-02",
+      78.27,
+      9089387.260595
+     ],
+     [
+      "2026-10-05",
+      80.23,
+      6491462.710165
+     ],
+     [
+      "2026-10-06",
+      82.01,
+      5210174.174864
+     ],
+     [
+      "2026-10-07",
+      80.99,
+      6270312.153521
+     ],
+     [
+      "2026-10-08",
+      82.25,
+      4976503.540812
+     ],
+     [
+      "2026-10-09",
+      82.73,
+      6593427.455371
+     ],
+     [
+      "2026-10-12",
+      82.37,
+      5586969.106697
+     ],
+     [
+      "2026-10-13",
+      84.0,
+      6224767.201269
+     ],
+     [
+      "2026-10-14",
+      83.05,
+      6103332.348748
+     ],
+     [
+      "2026-10-15",
+      83.66,
+      5715292.183492
+     ],
+     [
+      "2026-10-16",
+      83.96,
+      7486647.470911
+     ],
+     [
+      "2026-10-19",
+      82.75,
+      7989332.065676
+     ],
+     [
+      "2026-10-20",
+      77.09,
+      24697390.367422
+     ],
+     [
+      "2026-10-21",
+      76.11,
+      9027128.253171
+     ],
+     [
+      "2026-10-22",
+      77.21,
+      7507529.988739
+     ],
+     [
+      "2026-10-23",
+      75.92,
+      6713655.897196
+     ],
+     [
+      "2026-10-26",
+      76.31,
+      5262102.353417
+     ],
+     [
+      "2026-10-27",
+      80.54,
+      13436236.427873
+     ],
+     [
+      "2026-10-28",
+      82.48,
+      9247396.926564
+     ],
+     [
+      "2026-10-29",
+      85.72,
+      9627009.220987
+     ],
+     [
+      "2026-10-30",
+      87.4,
+      11695578.812575
+     ],
+     [
+      "2026-11-02",
+      89.94,
+      8431300.753335
+     ],
+     [
+      "2026-11-03",
+      88.34,
+      6436260.875856
+     ],
+     [
+      "2026-11-04",
+      92.43,
+      7608388.505783
+     ],
+     [
+      "2026-11-05",
+      89.33,
+      11318214.473521
+     ]
+    ],
+    "unit": "[date, close, volume]",
+    "as_of": "2026-11-05",
+    "window": "last 35 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "adv_20d_dollars": {
+    "value": 730932392.1963199,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "last_close": {
+    "value": 89.33,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "1 bar",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bar_date": "2026-11-05"
+    },
+    "note": null
+   },
+   "median_spread_bps_1d": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "intraday quotes are not read in this build (spec 5.6, phase 10)"
+   },
+   "days_to_next_earnings": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "cfo_negative_with_profit": {
+    "value": null,
+    "unit": "bool",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "atr_14": {
+    "value": 3.070428108115021,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 20 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "sma_50": {
+    "value": 83.36120000000001,
+    "unit": "USD",
+    "as_of": "2026-11-05",
+    "window": "last 50 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "earnings_move_abs": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)"
+   },
+   "beta_63d": {
+    "value": 0.7517064287640698,
+    "unit": "ratio",
+    "as_of": "2026-11-05",
+    "window": "last 64 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "spy_bars": 276
+    },
+    "note": null
+   },
+   "max_drawdown_63d": {
+    "value": -0.15030777839955223,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "last 63 bars",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 89.33
+    },
+    "note": null
+   },
+   "spy_above_sma_200": {
+    "value": true,
+    "unit": "bool",
+    "as_of": "2026-11-05",
+    "window": "200 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_vol_21d_ann": {
+    "value": 0.19850606366876647,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_drawdown_63d": {
+    "value": -0.059158762145580135,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "63 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "spy_ret_21d": {
+    "value": -0.05689508761997897,
+    "unit": "fraction",
+    "as_of": "2026-11-05",
+    "window": "22 bars of SPY",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {
+     "bars": 276,
+     "last_close": 733.0
+    },
+    "note": null
+   },
+   "breadth_200": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "needs an index universe (configs/universe_sp500.json), which does not exist yet"
+   },
+   "sector_etf": {
+    "value": null,
+    "unit": "ticker",
+    "as_of": "2026-11-05",
+    "window": "n/a",
+    "source": "day_aggs:2025-10-02..2026-11-05",
+    "inputs_summary": {},
+    "note": "no sector ETF given for this symbol (WorkOrder.sector)"
+   },
+   "accrual_ratio": {
+    "value": null,
+    "unit": "ratio",
+    "as_of": null,
+    "window": "year to date",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "receivables_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "inventory_vs_sales": {
+    "value": null,
+    "unit": "points",
+    "as_of": null,
+    "window": "latest balance sheet vs earlier; sales year over year",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "no stored filings of GM (fetch_filings has not been run for it)"
+   },
+   "risk_factor_change": {
+    "value": null,
+    "unit": "n/a",
+    "as_of": null,
+    "window": "n/a",
+    "source": "n/a",
+    "inputs_summary": {},
+    "note": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+   }
+  }
+ },
+ "replies": [
+  "\n\n{\"companies\": [{\"symbol\": \"PG\", \"company\": \"Procter & Gamble\", \"archetypes\": [\"event\", \"trend\", \"capital_return\", \"theme\"], \"signals\": [{\"source\": 3, \"direction\": \"bullish\", \"quote\": \"Procter & Gamble has outpaced the broader market over the past year, and analysts remain moderately bullish about the stock\u2019s prospects.\"}, {\"source\": 4, \"direction\": \"bullish\", \"quote\": \"Procter & Gamble (PG) clears a Technical Breakout Setups screen with a 9 Technical Rating and 8 Setup Quality score. Key breakout level: 167.22.\"}, {\"source\": 8, \"direction\": \"bullish\", \"quote\": \"Procter & Gamble has one of the most impressive dividend histories.\"}], \"events\": [{\"class\": \"earnings_beat\", \"source\": 1, \"quote\": \"Both consumer giants beat earnings\"}], \"drop_cause\": null, \"model_score\": 70}]",
+  "\n\n{\"companies\": [{\"symbol\": \"PG\", \"company\": \"Procter & Gamble\", \"archetypes\": [\"event\", \"trend\", \"capital_return\", \"theme\"], \"signals\": [{\"source\": 3, \"direction\": \"bullish\", \"quote\": \"Procter & Gamble has outpaced the broader market over the past year, and analysts remain moderately bullish about the stock\u2019s prospects.\"}, {\"source\": 4, \"direction\": \"bullish\", \"quote\": \"Procter & Gamble (PG) clears a Technical Breakout Setups screen with a 9 Technical Rating and 8 Setup Quality score. Key breakout level: 167.22.\"}, {\"source\": 8, \"direction\": \"bullish\", \"quote\": \"Procter & Gamble has one of the most impressive dividend histories.\"}], \"events\": [{\"class\": \"earnings_beat\", \"source\": 1, \"quote\": \"Both consumer giants beat earnings,\"}], \"drop_cause\": null, \"model_score\": 70}]}"
+ ]
+}

@@ -161,8 +161,8 @@ def resolve_company(text: str, search=None) -> Resolution:
 
 SYMBOL_NOT_FOUND = "Symbol: {symbol} is not found"
 COMPANY_NOT_FOUND = "Company Name not found."
-NAME_CHARS = re.compile(r"[A-Za-z0-9 &.,'\u2019\-/()]+")  # what a company name may contain. The "/" and the brackets are in real names ("PROCTER & GAMBLE CO/THE"),
-                                                          # so an exact match needs them; ; | $ ` < > and a newline stay out. A name is only ever sent as a query value and compared
+NAME_CHARS = re.compile(r"[A-Za-z0-9 &.,'\u2019\-/()!]+")  # what a company name may contain. The "/" and the brackets are in real names ("PROCTER & GAMBLE CO/THE"),
+                                                          # so an exact match needs them, and so is the "!" ("Yum! Brands": found when Data Clerk looked up the companies of the pizza industry); ; | $ ` < > and a newline stay out. A name is only ever sent as a query value and compared
 
 
 class TargetNotFound(SymbolLookupError):

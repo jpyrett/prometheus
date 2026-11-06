@@ -1,0 +1,347 @@
+<<<ARTICLE>>>
+id: finnhub:143314647
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T23:30:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d390e5f9015cfa1ecb8f05a34ffe29bab345bded6ca695ef62dbc93049092e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: DPZ’s Dividend Yield Is a Tasty 2.5%, So Grab a Slice of Domino’s Stock Here
+<<<SUMMARY>>>
+Domino's Pizza has a dividend yield of 2.5% and trades at a reasonable valuation. Should you buy the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143253998
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T10:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=990d4b9f98be6b53e55b495e12f8ac58f2528c5ba925210cef99e44f26e236e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: GM is pitching itself more as a tech company like Tesla
+<<<SUMMARY>>>
+A legacy Detroit automaker pitches itself as a tech-forward enterprise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143204269
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T20:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3ec14c343c9f74ac46782f4e973fd04f8eed3c2bd257fe5b73bd20a112303a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Casey’s Wants a Bigger Slice of the Pizza Market. Why Fast Food Chains Are Worried.
+<<<SUMMARY>>>
+The convenience store operator says nearly 80% of the small towns it serves lack a nearby national pan-pizza option.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143157431
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T08:13:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=efc6fd424f4a0a230557dba2a7330c2752442df36fc21537689eae27b55cca2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Is Improved Earnings Altering The Investment Case For Domino's Pizza (DPZ)?
+<<<SUMMARY>>>
+Domino's Pizza reported third quarter 2026 revenue of US$1,185.6 million and net income of US$152.18 million, with higher basic and diluted EPS from continuing operations than the same period a year earlier, and confirmed a US$1.99 quarterly dividend declared in October 2026. The business continued its third quarter and year to date earnings progress while also returning cash through share repurchases completed under a 2024 authorization. This signals an ongoing focus on both profitability...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543815
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:14:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c77cd5979cc5caed97d133034201e374b77083bde816cc8196b68218fb230cf8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Papa John's International Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+Papa John's International (NASDAQ:PZZA) reported lower third-quarter sales and adjusted earnings as promotional competition and weaker customer acquisition weighed on its North American business. The pizza chain also introduced a turnaround plan centered on food quality, marketing and support for fr
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492567
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c3e743d9487ac3bc796c07ed0fd4a99715397a2dfca77ec692cef354e152dee2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: McDonald's Q3 Earnings Beat on Franchised Margins, Revenues Miss
+<<<SUMMARY>>>
+MCD's Q3 earnings top estimates as franchised margins climb, but revenues miss and U.S. comparable sales slip. International markets lead growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447269
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d878fcca961aaacd9f1e36f9d4ce6541adf08119492e3145af9fc2d2ca96a0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: YUM Stock Up on Q3 Earnings Beat, Revenues Miss on Taco Bell Weakness
+<<<SUMMARY>>>
+Yum! Brands beats Q3 earnings estimates as KFC's global expansion supports growth, while Taco Bell's U.S. sales weakness weighs on results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143443328
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d383213d7721c2165eb96ff871fc72b2221e41e4995200d850cf59f92bd95d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Chord Expands into Enterprise AI With Zenlytic Acquisition, Adding Verizon, J.Crew, Domino's, and Stanley Black & Decker as Customers
+<<<SUMMARY>>>
+Today, Chord, the AI native data platform for commerce, announced its acquisition of Zenlytic, an AI-powered business intelligence platform, doubling its revenue and adding a customer portfolio that includes Verizon, J.Crew, Domino's, and Stanley Black & Decker.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143407849
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T20:10:22Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=cdbac65bcf9e2c4380410e2107c31f38e63b9a7b846a3ac4aa71055d9c2082a7
+image_url: 
+category: company
+tickers: DPZ
+keywords: 
+headline: Top 25 Attractive Dividend Stocks For November 2026
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348474
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T15:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=624fea49a6000ee9a72d9c9fd3a1a5c31363364a25dcbdb46a3bc993579accde
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Starbucks vs. Domino's: Which Restaurant Stock Is the Better Buy?
+<<<SUMMARY>>>
+SBUX and DPZ showcase contrasting growth strategies, sales trends and earnings outlooks as shifting consumer demand shapes the restaurant industry.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348862
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T14:22:49Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=93849247bc4d9ab5ea238b0ab9d002a104dd674781a13cd91d192bb310d19f6a
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/476746664/image_476746664.jpg?io=getty-c-w1536
+category: company
+tickers: DPZ
+keywords: 
+headline: Domino's Pizza: Sales Slowdown Is Now Priced In (Rating Upgrade)
+<<<SUMMARY>>>
+Dominoâs Pizza stock faces weak sales and consumer pressure, but store growth and lower valuation offer support. Learn more on the DPZ stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143346646
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T14:06:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84b312037c222fb1eec8a0d64ba05d04db9ece1493dc1e8ad8658f9f2f95d8ee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Chip shortage impact on the tech sector, Burger King and Starbucks turnarounds
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi breaks down Google's (GOOGL) (GOOG) stunning P/E ratio and how a chip shortage is affecting companies like Intel (INTC) and Sandisk. (SNDK) Sozzi sits down with the CEO of Burger King (QSR), Tom Curtis, and the CEO of Starbucks (SBUX), Brian Niccol, to talk about food innovation and turnarounds for both brands.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143344613
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T12:18:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3a0f2f22082522818bd2089cc5949ac002c22bbc50a50b4eb3fb43e8ea988ee1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Papa John’s 10% Dividend Yield Is Misleading. Here’s How Domino’s Compares
+<<<SUMMARY>>>
+One pizza chain flashes a near double-digit dividend yield that no longer exists, while the other quietly raises its payout every year. Knowing which number to trust could be the difference between steady retirement income and a dividend trap.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143346544
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T11:31:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=53fe148cbe6b395424ecd9f35ff4b09d33603af7dfa9eb32cad8aa6599f37beb
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2120169924/image_2120169924.jpg?io=getty-c-w1536
+category: company
+tickers: DPZ
+keywords: 
+headline: Wingstop: Don't Confuse A Rally With A Turnaround
+<<<SUMMARY>>>
+Wingstop Inc. remains a Sell despite its rally, as weak same-store sales, slowing growth, and rich valuation risks persist. Click for this WING earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:849e764e10fc223aea7df9d2e8299698161f5c9250d0a1743922cd13c4f64097
+symbol: DPZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-30T15:08:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3019882/starbucks-vs-domino-s-which-restaurant-stock-is-the-better-buy?cid=CS-ZC-FT-analyst_blog|comparison_of_stocks-3019882
+image_url: https://staticx-tuner.zacks.com/images/articles/main/05/563.jpg
+category: 
+tickers: SBUX, DPZ
+keywords: restaurant stocks, comparable sales growth, customer loyalty, international expansion, operating margins, earnings outlook, consumer spending, franchise network
+headline: Starbucks vs. Domino's: Which Restaurant Stock Is the Better Buy?
+<<<SUMMARY>>>
+Starbucks demonstrates stronger investment potential with 7.2% global comparable sales growth, successful turnaround execution, strong customer loyalty through its rewards program (36M members), and improving operating margins. Domino's faces headwinds from softer average tickets, slower store expansion, and international challenges, despite maintaining order growth and market share gains. Starbucks is rated a Buy while Domino's receives a Hold rating.
+<<<INSIGHTS>>>
+SBUX | positive | Strong Q4 fiscal 2026 performance with 7.2% global comparable sales growth, fifth consecutive quarter of growth, record Rewards membership at 36M, expanding operating margins (450 bps), successful turnaround strategy execution, and positive earnings estimate revisions supporting 18% EPS growth guidance for fiscal 2027. Zacks Rank #2 (Buy) rating.
+DPZ | negative | Facing significant headwinds including softer average ticket sizes, slower U.S. store expansion (lowered guidance to 125-150 locations), international market weakness, declining earnings estimates, and pressure on franchisee profitability. Despite order growth and market share gains, weak consumer spending and competitive promotional environment limit near-term growth visibility. Zacks Rank #3 (Hold) rating.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:12777f9bbb59c7921906b517e1a7e257ff02df8aaffc478b283e9dfd95a42eca
+symbol: DPZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T15:26:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021981/yum-stock-up-on-q3-earnings-beat-revenues-miss-on-taco-bell-weakness?cid=CS-ZC-FT-analyst_blog|earnings_article-3021981
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6f/1035.jpg
+category: 
+tickers: YUM, CMG, SBUX, DPZ
+keywords: Q3 2026 earnings, KFC expansion, Taco Bell weakness, Pizza Hut divestiture, same-store sales, digital sales, franchise growth
+headline: YUM Stock Up on Q3 Earnings Beat, Revenues Miss on Taco Bell Weakness
+<<<SUMMARY>>>
+Yum! Brands reported Q3 2026 adjusted EPS of $1.56, beating estimates by 6.1%, though revenues missed expectations. KFC drove growth with 6% system sales increase and 878 new restaurants across 66 countries, while Taco Bell's U.S. same-store sales declined 4%. The company completed Pizza Hut divestitures generating $2.38 billion in proceeds.
+<<<INSIGHTS>>>
+YUM | neutral | Mixed results with EPS beat offset by revenue miss. KFC's strong global expansion and digital growth are positive, but Taco Bell's 4% U.S. same-store sales decline and overall core operating profit decline of 4% are concerning. Stock gained 3.6% pre-market, but company carries Zacks Rank #5 (Strong Sell).
+CMG | neutral | Earnings missed consensus by 6.9%, declining 6.9% year-over-year. However, revenues beat expectations and grew 9.6% YoY, driven by new openings and 2.1% comparable sales growth with strong digital contribution of 38.8%.
+SBUX | positive | Adjusted EPS of 80 cents beat consensus by 9.6% with 53.8% YoY earnings growth. Global comparable sales increased 7.2% with North America up 7.9%. Though revenues missed slightly, strong cost management and sales leverage drove profitability. FY2027 guidance provided with expected 4% North America comp sales growth.
+DPZ | positive | EPS of $4.60 beat consensus by 6.2% with 12.7% YoY earnings growth. Revenues exceeded expectations with 7.1% supply chain revenue growth and higher franchise royalties. Strong pricing power demonstrated with 2.2% food basket pricing increase offsetting sluggish same-store sales.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fe3629c18ff33b939c8fb3e9aa8e7832349d6c4427d294d85da6101a12c71d9a
+symbol: DPZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T16:17:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023287/mcdonald-s-q3-earnings-beat-on-franchised-margins-revenues-miss?cid=CS-ZC-FT-analyst_blog|earnings_article-3023287
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f6/355.jpg
+category: 
+tickers: MCD, CMG, SBUX, DPZ
+keywords: Q3 2026 earnings, comparable sales, franchise model, restaurant margins, international growth, capital expenditures
+headline: McDonald's Q3 Earnings Beat on Franchised Margins, Revenues Miss
+<<<SUMMARY>>>
+McDonald's reported Q3 2026 adjusted EPS of $3.57, up 11% and beating estimates, but revenues of $7.16B missed forecasts. Global comparable sales grew 1.5% with international strength offsetting a 0.2% U.S. decline. Franchised restaurant margins increased 3% to $3.8B. The company maintains 2026 capital expenditure guidance of $3.7B. Other restaurant chains showed mixed results: Chipotle missed earnings but beat revenue, Starbucks beat earnings with strong comps, and Domino's beat both metrics.
+<<<INSIGHTS>>>
+MCD | neutral | Mixed results with earnings beat (+11% YoY) offset by revenue miss. Global comps growth of 1.5% shows moderation from prior year 3.6%, and U.S. comps declined 0.2%. Strong franchise margins (+3%) and stock gained 2.7% pre-market, but Zacks Rank #4 (Sell) rating indicates caution.
+CMG | negative | Earnings missed consensus by 6.9% (27 cents vs. 29 cents estimate) and declined 6.9% YoY. Despite revenue beat and 2.1% comparable sales growth, the earnings miss and YoY decline indicate weakening profitability.
+SBUX | positive | Earnings beat consensus by 9.6% with 53.8% YoY growth. Global comparable coffeehouse sales increased 7.2% with North America comps up 7.9%. FY2027 guidance of $3.15-$3.25 EPS and ~4% North America comp growth shows confidence, though revenue missed slightly.
+DPZ | positive | Earnings beat consensus by 6.2% with 12.7% YoY growth. Revenue beat by 1.6% with supply chain revenues up 7.1%. Strong performance driven by higher order volumes and pricing power, though same-store sales remain sluggish.
+<<<END>>>

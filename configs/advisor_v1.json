@@ -1,0 +1,77 @@
+{
+  "config_version": "1",
+  "_note": "Every threshold, weight, prior and multiplier of the Advisor's Generate Recommendations step (design/advisor_v1_final_spec.md, design/week5_advisor_implementation.md). Code reads these once at start (prometheus/agents/advisor/config.py checks that none is missing or unknown). The model never chooses one. Change a number here, never in the code, and never tune one from the ledger.",
+  "limits": {"max_candidates": 15, "max_companies": 5, "max_signals_per_kind": 3, "max_events": 3, "discover_min_articles": 3, "max_candidates_on_order": 30, "recent_bars": 35},
+  "gates": {"min_adv_dollars": 5000000, "min_price": 5, "max_spread_bps": 20, "max_bar_age_sessions": 1, "max_fundamentals_age_days": 100,
+            "red_flag_event_bars": 60, "red_flag_debt_to_equity": 4, "red_flag_current_ratio": 1, "earnings_days": 3, "earnings_estimate_low": 85, "earnings_estimate_high": 95},
+  "quality": {"floor": 0.2, "statement_max_age_days": 120,
+              "checks": [
+                {"name": "operating_margin", "metric": "operating_margin", "op": "<=", "value": 0, "factor": 0.6},
+                {"name": "roe", "metric": "roe", "op": "<", "value": 8, "factor": 0.85},
+                {"name": "revenue_growth", "metric": "revenue_growth", "op": "<", "value": 0, "factor": 0.85},
+                {"name": "debt_to_equity", "metric": "debt_to_equity", "op": ">", "value": 2, "factor": 0.7},
+                {"name": "current_ratio", "metric": "current_ratio", "op": "<", "value": 1, "factor": 0.85},
+                {"name": "share_count_change", "metric": "share_count_change", "op": ">", "value": 0.01, "factor": 0.8},
+                {"name": "dilution_current", "metric": "dilution_current", "op": "==", "value": true, "factor": 0.6},
+                {"name": "sbc_to_revenue", "metric": "sbc_to_revenue", "op": ">", "value": 0.15, "factor": 0.7},
+                {"name": "accrual_ratio", "metric": "accrual_ratio", "op": ">", "value": 0.10, "factor": 0.5, "group": "earnings_quality", "statement": true, "turns_off": ["reversion"]},
+                {"name": "receivables_vs_sales", "metric": "receivables_vs_sales", "op": ">", "value": 15, "factor": 0.5, "group": "earnings_quality", "statement": true, "turns_off": ["reversion"]},
+                {"name": "inventory_vs_sales", "metric": "inventory_vs_sales", "op": ">", "value": 15, "factor": 0.5, "group": "earnings_quality", "statement": true, "turns_off": ["reversion"]},
+                {"name": "cfo_negative_with_profit", "metric": "cfo_negative_with_profit", "op": "==", "value": true, "factor": 0.5, "statement": true, "turns_off": ["reversion"]},
+                {"name": "risk_factor_change", "metric": "risk_factor_change", "op": ">", "value": 0.35, "factor": 0.75}
+              ]},
+  "families": {
+    "trend": {"horizon": 63, "prior_20d": 0.006, "basis_ref": "jegadeesh_titman_1993", "min_mom_12_1": 0.15, "min_pct_of_52w_high": 0.90, "max_ret_21d": 0.15, "max_rsi": 75, "max_pct_b": 1.05,
+              "base": 0.40, "w_mom": 0.20, "mom_scale": 0.50, "w_macd": 0.10, "w_adx": 0.10, "adx_min": 20, "w_obv": 0.10, "w_lowvol": 0.10, "lowvol": 0.35},
+    "event": {"horizon": 40, "prior_surprise": 0.010, "prior_event": 0.008, "basis_ref": "bernard_thomas_1989", "max_age_bars": 10, "max_reaction_atr": 3, "base": 0.50, "w_unpriced": 0.30, "w_volume": 0.20,
+              "volume_ratio_min": 2, "large_cap": 200000000000, "large_cap_factor": 0.5, "sue_min": 1.0},
+    "reversion": {"horizon": 10, "prior_20d": 0.010, "basis_ref": "jegadeesh_1990", "ret_5d": -0.07, "zscore": -2, "rsi": 30, "residual_5d": -0.05, "sector_ret_5d_min": -0.03, "spy_ret_5d_min": -0.03,
+                  "roe": 10, "debt_to_equity": 1.5, "current_ratio": 1, "revenue_growth": 0, "base": 0.40, "w_zscore": 0.20, "zscore_floor": 2, "zscore_span": 2, "w_rsi": 0.10, "w_pct_b": 0.10,
+                  "w_volume": 0.10, "volume_ratio": 2, "w_candle": 0.10, "cause_lookback_bars": 5,
+                  "fundamental_causes": ["guidance_cut", "dilution_offering", "restatement", "going_concern", "material_weakness", "earnings_miss"]},
+    "capital_return": {"horizon": 126, "prior_20d": 0.003, "prior_bearish": -0.003, "basis_ref": "boudoukh_et_al_2007", "min_net_payout_yield": 0.03, "min_share_count_change": -0.005, "max_debt_to_equity": 2,
+                       "max_payout_coverage": 1.0, "min_revenue_growth": -5, "base": 0.40, "w_payout": 0.30, "payout_scale": 0.08, "w_missing_payout": 0.15, "w_shares": 0.10, "shares_bonus": -0.01,
+                       "w_event": 0.10, "event_bars": 60, "w_growth": 0.10, "bearish_score": 0.6},
+    "theme": {"horizon": 42, "prior_20d": 0.005, "basis_ref": "barber_odean_2008", "min_articles": 3, "min_positive_share": 0.6, "min_quality": 0.5, "base": 0.40, "w_article": 0.20, "article_scale": 0.30,
+              "w_laggard": 0.20, "w_positive": 0.10, "positive_high": 0.8, "w_volume": 0.10}
+  },
+  "regime": {"stress_vol": 0.25, "narrow_breadth": 0.4, "trend_breadth": 0.5, "recovering_drawdown": -0.10, "recovering_ret_21d": 0.05, "min_spy_bars": 200,
+             "multipliers": {
+               "trend":      {"trend": 1.0, "narrow": 0.5, "stress": 1.0, "recovering": 0.0, "unknown": 1.0},
+               "event":      {"trend": 1.0, "narrow": 1.0, "stress": 1.0, "recovering": 0.8, "unknown": 1.0},
+               "reversion":  {"trend": 1.0, "narrow": 1.0, "stress": 1.0, "recovering": 1.0, "unknown": 1.0},
+               "capital_return": {"trend": 1.0, "narrow": 1.0, "stress": 1.0, "recovering": 1.0, "unknown": 1.0},
+               "theme":      {"trend": 1.0, "narrow": 1.0, "stress": 1.0, "recovering": 1.0, "unknown": 1.0}}},
+  "ranking": {"edge_scale": 0.03, "default_half_spread": 0.0010, "slippage": 0.0010, "stress_cost_multiplier": 2.0,
+              "diversity_within": 0.8, "add_max_position_pct": 0.20, "oversized_pct": 0.20},
+  "blend": {
+    "weights": {"news": 0.40, "performance": 0.30, "historical": 0.20, "filings": 0.10},
+    "half_life_days": 7, "news_prior_n": 2, "press_release_weight": 0.5, "scale_strength": 0.5, "no_strategy_edge_scale": 0.003,
+    "measures": [
+      {"group": "performance", "metric": "mom_12_1", "neutral": 0.0, "span": 0.5},
+      {"group": "performance", "metric": "ret_21d", "neutral": 0.0, "span": 0.15},
+      {"group": "performance", "metric": "pct_of_52w_high", "neutral": 0.75, "span": 0.25},
+      {"group": "performance", "metric": "above_sma_200", "good": true},
+      {"group": "historical", "metric": "earnings_yield", "neutral": 0.03, "span": 0.05},
+      {"group": "historical", "metric": "roe", "neutral": 10, "span": 20},
+      {"group": "historical", "metric": "revenue_growth", "neutral": 0, "span": 15},
+      {"group": "historical", "metric": "operating_margin", "neutral": 10, "span": 20},
+      {"group": "historical", "metric": "current_ratio", "neutral": 1.0, "span": 1.0},
+      {"group": "historical", "metric": "debt_to_equity", "neutral": 1.0, "span": -2.0, "waived_by_negative_equity": true},
+      {"group": "filings", "metric": "net_payout_yield_ttm", "neutral": 0.03, "span": 0.05},
+      {"group": "filings", "metric": "share_count_change", "neutral": 0.0, "span": -0.02},
+      {"group": "filings", "metric": "payout_coverage", "neutral": 0.8, "span": -0.4},
+      {"group": "filings", "metric": "dilution_current", "good": false, "only_bad": true},
+      {"group": "filings", "metric": "cfo_negative_with_profit", "good": false, "only_bad": true}
+    ]
+  },
+  "sleeves": {
+    "funds":  {"sleeve": "preserve", "top_k": 3, "eligible": ["capital_return", "trend", "reversion"], "veto_only": ["event"]},
+    "theme":  {"sleeve": "theme", "top_k": 5, "eligible": ["theme", "capital_return", "trend", "reversion", "event"], "veto_only": []},
+    "industry": {"sleeve": "industry", "top_k": 5, "eligible": ["event", "trend", "capital_return", "reversion"], "veto_only": []},
+    "market": {"sleeve": "tape", "top_k": 5, "eligible": ["event", "trend", "capital_return", "reversion"], "veto_only": []}
+  },
+  "trade": {"entry_atr": 0.5, "stop_atr": {"reversion": 2, "event": 2, "trend": 3, "capital_return": 3, "theme": 3}, "target_edge_multiple": 1.5, "risk_pct": 0.01, "risk_pct_stress": 0.005,
+            "max_position_pct": 0.20, "max_adv_pct": 0.05, "limit_spread_bps": 10, "trend_limit_atr": 0.25, "event_limit_reaction_atr": 1},
+  "ledger": {"path": "data/ledger/recommendations.jsonl"}
+}

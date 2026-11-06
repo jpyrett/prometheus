@@ -34,7 +34,7 @@ from prometheus.rag.loaders import check_symbol, filing_file, load_filings
 from prometheus.rag.retriever import K, MAX_K, MIN_SCORE, Hit, search_filings, search_news, search_press_releases
 
 DATA_CLERK_TOOLS = ("retrieve_news", "retrieve_press_releases", "retrieve_filings", "fetch_news", "fetch_press_releases", "fetch_filings", "fetch_filings_recommendation",
-                    "keyword_search", "discover_tickers", "get_financials", "get_price_summary", "get_quote")
+                    "keyword_search", "discover_tickers", "get_financials", "get_price_summary", "get_quote", "calculate_metrics")
 EVIDENCE_TOOLS = ("fetch_filings_recommendation",)  # tools that read stored filings and return evidence: the digest is the text the model reads, the full result is the artifact (entry 38)
 RETRIEVE_TOOLS = ("retrieve_news", "retrieve_press_releases", "retrieve_filings")  # the tools that search a collection and number their hits in the run's SourceBook
 
@@ -130,7 +130,7 @@ class DataClerkTools:
     """The Data Clerk's tools. `toolbox` is the DataToolbox (a fake in tests), `store` the Chroma store of the news, `press_store`
     the one of the press releases and `filings_store` the one of the SEC filings (the real ones when left out)."""
 
-    def __init__(self, toolbox=None, store=None, press_store=None, filings_store=None):
+    def __init__(self, toolbox=None, store=None, press_store=None, filings_store=None, bars_root=None):
         if toolbox is None:
             from prometheus.agents.data_clerk.data_toolbox import DataToolbox  # imported here: it needs pyarrow and httpx
             toolbox = DataToolbox(base_dir=REPO_ROOT)  # the same root as rag/: news/ and .env are the ones rag/ reads
@@ -139,6 +139,7 @@ class DataClerkTools:
         self.store = store
         self.press_store = press_store
         self.filings_store = filings_store
+        self.bars_root = bars_root  # where the day_aggs_v1 files are (a folder holding YYYY/MM/YYYY-MM-DD.csv.gz): the toolbox's own data/historical when left out; a test points it at a temporary folder
 
     # ---- search by meaning (rag/)
 
@@ -400,6 +401,56 @@ class DataClerkTools:
             symbol: The ticker symbol, such as "AAPL".
         """
         return self.toolbox.get_quote(_symbol(symbol))
+
+    def calculate_metrics(self, symbols: list[str], metrics: list[str]) -> dict:
+        """Calculate technical and fundamental numbers for up to 10 tickers: returns over 5 to 252 sessions, RSI, MACD, Bollinger %B, ADX, ATR, volatility, beta, volume ratios, P/E, margins, debt, payout yield and more.
+
+        It only reads the stored daily bars and the stored filings and asks Finnhub for the company's financial metrics, and it rates NOTHING: it returns numbers, each with its unit, the date it is
+        as of, the window it covers, where it came from, the inputs behind it and, when it cannot be computed, why (for example "needs 30 bars, 17 stored"). A number that is None is a
+        gap: say so, never estimate it. An unknown metric name is refused with the list of known names.
+
+        Args:
+            symbols: One to 10 ticker symbols, such as ["AAPL", "PG"].
+            metrics: The names of the metrics wanted, such as ["rsi_14", "ret_21d", "roe"].
+        """
+        from prometheus.agents.data_clerk.metrics_catalog import METRIC_NAMES  # imported here: the catalogue needs pyarrow and httpx
+        names = _words("metrics", metrics, required=True)
+        unknown = [n for n in names if n not in METRIC_NAMES]
+        if unknown:
+            raise ToolInputError(f"unknown metrics: {', '.join(unknown)}; known metrics: {', '.join(METRIC_NAMES)}")
+        picked = _symbols(symbols)
+        if not picked:
+            raise ToolInputError("symbols needs at least one ticker")
+        return self.metrics_for(picked, [{"name": n} for n in dict.fromkeys(names)], self.today)
+
+    def metrics_for(self, symbols: list[str], requests: list[dict], today: date | None = None, sectors: dict[str, str] | None = None) -> dict:
+        """The code path behind `calculate_metrics` (and `DataClerk.request_metrics`, Advisor v1 spec section 4): read the bars ONCE for every symbol and for SPY and the sector ETFs, ask Finnhub
+        for each symbol's financial metrics (only when a requested metric needs them), read each symbol's STORED filing evidence (free, never fetched), and compute. Returns
+        {as_of, results: {symbol: {metric: result}}, problems: {symbol: reason}, gaps: [...bars store gaps]}. A problem is something that could not be read (a Finnhub call that failed, no stored filings): the
+        metrics that needed it say so in their own `note`, and everything else is still computed. No symbol check here: the callers check them."""
+        from prometheus.agents.data_clerk import metrics_catalog as catalog
+        from prometheus.agents.data_clerk.bars import BarStore
+        today = today or self.today or date.today()
+        root = self.bars_root or getattr(self.toolbox, "root_data_dir", REPO_ROOT / "data" / "historical") / "day_aggs_v1"
+        store = BarStore(root).load([*symbols, catalog.SPY, *catalog.sector_etfs()], end=today)
+        needs = {kind for r in requests for kind in catalog.METRICS[r["name"]].inputs}
+        financials, evidence, problems = {}, {}, {}
+        for symbol in symbols:
+            if "financials" in needs:
+                try:
+                    financials[symbol] = self.toolbox.financials.get(symbol)
+                except Exception as error:  # a bad ticker, no key, an API failure: say which kind, never request details
+                    problems[symbol] = f"Finnhub metrics failed ({type(error).__name__}: {' '.join(str(error).split())[:120]})"
+            if "evidence" in needs:
+                try:
+                    evidence[symbol] = self.fetch_filings_recommendation(symbol)
+                except ToolInputError:
+                    problems.setdefault(symbol, "no filings are stored for it")
+                except Exception as error:
+                    problems.setdefault(symbol, f"reading the stored filings failed ({type(error).__name__})")
+        results = catalog.compute(symbols, requests, store, financials, evidence, today, sectors)
+        return {"as_of": today.isoformat(), "results": results, "problems": problems, "gaps": store.gaps[:20],
+                "bars": {s: len(store.bars(s, end=today)) for s in symbols}}
 
     # ---- the LangChain edge
 

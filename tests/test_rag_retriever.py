@@ -26,8 +26,11 @@ from prometheus.rag.retriever import MAX_K, MIN_SCORE, Hit, search_news
 
 FIXTURE = Path(__file__).parent / "fixtures" / "news_sample.txt"
 COREWEAVE = "polygon:287f3b5c2f0c59c2b903cd391bb97c0c090f48a25c64cdf5e7df1dab0e85382a"
-NOW = datetime(2026, 10, 25, 12, 0, tzinfo=timezone.utc)
 DAY = timedelta(days=1)
+# The test clock follows the real one: yesterday at noon UTC. The tools count windows (since_days) back from the real clock, so a clock pinned to a past day made those tests fail as the days went by.
+# The synthetic chunks are dated NOW minus some days; a test that needs a fixed date (the real stored sample above) builds its own.
+NOW = (datetime.now(timezone.utc) - DAY).replace(hour=12, minute=0, second=0, microsecond=0)
+STAMP = "%Y-%m-%dT%H:%M:%SZ"
 
 
 class KeywordEmbeddings(Embeddings):
@@ -162,10 +165,10 @@ def test_hits_come_best_first_and_carry_what_a_citation_needs(news):
     assert best.score == pytest.approx(1.0, abs=1e-3)  # the same words: cosine similarity 1
     assert (best.chunk_id, best.article_id, best.chunk, best.chunks) == ("a1#0", "a1", 1, 1)
     assert (best.headline, best.publisher, best.url) == ("Headline of a1", "Yahoo", "https://example.com/a1")
-    assert (best.published_utc, best.tickers, best.text) == ("2026-10-20T12:00:00Z", ["AAPL"], "apple iphone phone")
+    assert (best.published_utc, best.tickers, best.text) == ((NOW - 5 * DAY).strftime(STAMP), ["AAPL"], "apple iphone phone")
     assert best.as_dict() == {
         "chunk_id": "a1#0", "article_id": "a1", "chunk": 1, "chunks": 1, "headline": "Headline of a1",
-        "publisher": "Yahoo", "published_utc": "2026-10-20T12:00:00Z", "url": "https://example.com/a1",
+        "publisher": "Yahoo", "published_utc": (NOW - 5 * DAY).strftime(STAMP), "url": "https://example.com/a1",
         "tickers": ["AAPL"], "text": "apple iphone phone", "score": best.score}
     with pytest.raises(AttributeError):
         best.score = 0.0  # a Hit is frozen: the evidence cannot be edited after the search

@@ -13,8 +13,8 @@ capstone/
 │   ├── application/        # Orchestration / use-case entrypoints
 │   │   └── harness/        # How you run & drive the multi-agent loop
 │   ├── agents/             # Data Clerk, Advisor, Critic, Account Manager, Trader
-│   │   ├── data_clerk/     # data_clerk_agent.py (DataClerk: the LLM agent), data_toolbox.py (DataToolbox: plain Python, no LLM)
-│   │   ├── advisor/        # advisor.py (Advisor v0: a score calculated from checked quotes)
+│   │   ├── data_clerk/     # data_clerk_agent.py (DataClerk: the LLM agent; `request_metrics` calculates numbers), data_toolbox.py (DataToolbox: plain Python, no LLM), bars.py / technicals.py / fundamentals.py / metrics_catalog.py (the numbers)
+│   │   ├── advisor/        # advisor.py (v0 `advise`: a score from checked quotes; v1 `generate_recommendations`: ranked, audited recommendations; recommend.py is its twelve steps, config/families/blend/gates/quality/ranking/trade_plan/events/thesis/record its parts; guide: design/week5_advisor_implementation.md)
 │   │   └── account_manager/ # account_manager.py (AccountManager: the LLM agent behind RaiseFunds, a Tree of Thought)
 │   ├── mcp/                # Local FastMCP servers (tools / resources / prompts)
 │   ├── rag/                # Embeddings, vector store, retrieval
@@ -36,6 +36,7 @@ capstone/
 ├── tests/                  # pytest (FastMCP tools + later app tests)
 ├── main.py                 # App entry: LocalLLM + FastMCP smoke / HITL
 ├── test_prometheus.sh      # Main script: prompts for symbol / term / source / from_days_ago, runs the desk (a LangGraph passing one work order); pytest stays in tests/
+├── test_recommendations.sh # Recommendations end to end: a symbol, a list, a company, a brand or a phrase ("Pizza", 'MCD, YUM, "Burger King"') to a ranked report; Advisor on gpt-oss-120b (design choices entry 53)
 ├── AGENTS.md               # Instructions for Cursor agents: how to run, where things are, what never to run unasked
 ├── HowToRun.txt            # Copy-paste shell commands
 ├── pytest.ini              # asyncio_mode=auto for FastMCP Client tests
@@ -180,7 +181,7 @@ Suggested growth order (manual coding):
 | Folder target        | Role |
 |----------------------|------|
 | `agents/data_clerk/` Data Clerk | Retrieve / filter / aggregate; call tools. `data_clerk_agent.py` is the agent; `data_toolbox.py` is its toolbox. Built (search news, press releases and filings) |
-| `agents/advisor/` Advisor | Recommend opportunities; memory + tools. Version 0 built |
+| `agents/advisor/` Advisor | Recommend opportunities; memory + tools. Version 0 (`advise`) and version 1 (`generate_recommendations`, week 5) built |
 | `agents/` Critic     | Reason / rank / approve or deny. Not built |
 | `agents/` Account Manager | Cash, T+1, positions, approve trades. Only the request half exists, as a node in `langgraph/desk.py` |
 | `agents/` Trader     | Paper trade / backtest; future Alpaca. Not built |
