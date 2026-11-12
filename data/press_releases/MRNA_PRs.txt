@@ -1,0 +1,396 @@
+<<<PRESS_RELEASE>>>
+id: 0dcf7536f9fe6e97
+symbol: MRNA
+published_utc: 2025-11-18T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-present-upcoming-piper-sandlers-37th-annual-healthcare-conference-december-2
+headline: Moderna to Present at Upcoming Piper Sandler's 37th Annual Healthcare Conference on December 2, 2025
+<<<TEXT>>>
+CAMBRIDGE, MASSACHUSETTS/ ACCESS Newswire/ November 18, 2025/ Moderna, Inc., today announced its participation in the following upcoming investor conference:. Piper Sandler's 37 th Annual Healthcare Conference, on Tuesday, December 2 nd at 11:00am ET. A live webcast of each of the presentation will be available under "Events and Presentations" in the Investors...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d43069d370106973
+symbol: MRNA
+published_utc: 2025-11-19T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-expands-us-manufacturing-onshoring-drug-product-capabilities-2025-11-19
+headline: Moderna Expands U.S. Manufacturing with Onshoring of Drug Product Capabilities
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ November 19, 2025/ Moderna, Inc. today announced the expansion of its U.S. manufacturing capabilities with the onshoring of Drug Product manufacturing to its existing Moderna Technology Center in Norwood, Massachusetts. Through this strategic onshoring, Moderna will now operate full end-to-end manufacturing for its mRNA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 32d0be9160242d7b
+symbol: MRNA
+published_utc: 2025-11-20T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-secures-15-billion-five-year-credit-facility-ares-management-2025-11-20
+headline: Moderna Secures $1.5 Billion Five-Year Credit Facility from Ares Management
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ November 20, 2025/ Moderna, Inc. today announced it has closed a five-year term loan facility for up to $1.5 billion of capital from Ares Management Credit Funds, a leading global alternative investment manager, to increase flexibility. A $400 million delayed draw term loan facility, available in multiple draws at Moderna's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4bfe849a6e6da46a
+symbol: MRNA
+published_utc: 2025-11-20T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-analyst-day-highlights-pipeline-progress-and-business-strategy-updates-2025
+headline: Moderna Analyst Day Highlights Pipeline Progress and Business Strategy Updates
+<<<TEXT>>>
+Further improves 2026 and 2027 expected GAAP operating expenses by approximately $0.5 billion each year on path to targeted cash breakeven in 2028. CAMBRIDGE, MA/ ACCESS Newswire/ November 20, 2025/ Moderna, Inc. today announced program and financial updates at its Analyst Day event.  "Over the next three years, we expect to build a large seasonal vaccine...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e89b4d7c68eaaf7e
+symbol: MRNA
+published_utc: 2025-12-17T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-present-44th-annual-jp-morgan-healthcare-conference-2025-12-17
+headline: Moderna to Present at the 44th Annual J.P. Morgan Healthcare Conference
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ December 17, 2025/ Moderna, Inc. today announced it will present at the 44 th annual J.P. Morgan Healthcare Conference on Monday, January 12th at 7:30 p.m. ET/ 4:30 p.m. PT. A live webcast of the presentation will be available under "Events and Presentations" in the Investors section of the Moderna website at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: afe71cc82268477a
+symbol: MRNA
+published_utc: 2025-12-18T07:00:00Z
+url: https://www.nasdaq.com/press-release/cepi-fund-pivotal-phase-3-trial-modernas-mrna-pandemic-influenza-vaccine-candidate
+headline: CEPI to Fund Pivotal Phase 3 Trial for Moderna's mRNA Pandemic Influenza Vaccine Candidate
+<<<TEXT>>>
+Up to $54.3 million CEPI investment aims to help advance Moderna's H5 pandemic influenza vaccine candidate to licensure. OSLO, NORWAY and CAMBRIDGE, MA/ ACCESS Newswire/ December 18, 2025/ The Coalition for Epidemic Preparedness Innovations will invest up to $54.3 million to support a pivotal Phase 3 clinical trial that aims to help advance Moderna's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bd5b0ce26b8ec4e3
+symbol: MRNA
+published_utc: 2026-01-05T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-global-regulatory-submissions-its-investigational-seasonal
+headline: Moderna Announces Global Regulatory Submissions for Its Investigational Seasonal Influenza Vaccine
+<<<TEXT>>>
+Moderna has filed for marketing authorization in the U.S., EU, Canada and Australia for mRNA-1010. CAMBRIDGE, MA/ ACCESS Newswire/ January 5, 2026/ Moderna, Inc. today provided an update on regulatory submissions for its investigational seasonal influenza vaccine, mRNA-1010, for adults aged 50 years and older. The Company has filed for marketing authorization...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 71f2fdf2a5042c56
+symbol: MRNA
+published_utc: 2026-01-12T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-provides-business-and-pipeline-updates-44th-annual-jp-morgan-healthcare
+headline: Moderna Provides Business and Pipeline Updates at 44th Annual J.P. Morgan Healthcare Conference
+<<<TEXT>>>
+Expects 2025 revenue of approximately $1.9 billion, $100 million above midpoint communicated on 3 Q25 Earnings Call. Improves 2025 expected GAAP operating expenses by $200 million since 3 Q25 Earnings Call. CAMBRIDGE, MASSACHUSETTS/ ACCESS Newswire/ January 12, 2026/ Moderna, Inc. today announced business updates and progress across its pipeline of mRNA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 49bff5baacfd4dd7
+symbol: MRNA
+published_utc: 2026-01-26T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-report-fourth-quarter-2025-financial-results-friday-february-13-2026-2026-01
+headline: Moderna to Report Fourth Quarter 2025 Financial Results on Friday, February 13, 2026
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ January 26, 2026/ Moderna, Inc., today announced that it will host a live conference call and webcast at 8:00 a.m. ET on Friday, February 13, 2026 to report its fourth quarter 2025 financial results, and provide a corporate update. A live webcast of the call will be available under "Events and Presentations" in the Investors section of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 479b650ca66b0126
+symbol: MRNA
+published_utc: 2026-01-27T10:50:00Z
+url: https://www.nasdaq.com/press-release/registration-ready-how-2026s-clinical-leaders-are-beating-cancer-benchmarks-2026-01
+headline: Registration-Ready: How 2026's Clinical Leaders Are Beating Cancer Benchmarks
+<<<TEXT>>>
+With the FDA's accelerated approval pathway delivering survival wins across 65% of solid tumor indications, the 2026 regulatory landscape is demanding a new breed of registration-directed study designs that prioritize raw objective response rates and durability. This structural shift creates an asymmetric investment window for Oncolytics Biotech...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9f320bf6fb6e9fec
+symbol: MRNA
+published_utc: 2026-01-29T17:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-strategic-collaboration-recordati-globally-commercialize
+headline: Moderna Announces Strategic Collaboration with Recordati to Globally Commercialize Investigational Propionic Acidemia Therapeutic (mRNA-3927)
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ January 29, 2026/ Moderna, Inc. today announced a strategic collaboration with Recordati to advance Moderna's investigational propionic acidemia therapeutic, mRNA-3927, through the final stages of clinical development and, upon approval, global commercialization. Recordati, based in Milan, Italy, is an international...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d87c204dd550dbc9
+symbol: MRNA
+published_utc: 2026-01-30T07:30:00Z
+url: https://www.nasdaq.com/press-release/dr-david-berman-join-moderna-chief-development-officer-2026-01-30
+headline: Dr. David Berman to Join Moderna as Chief Development Officer
+<<<TEXT>>>
+CAMBRIDGE, MASSACHUSETTS/ ACCESS Newswire/ January 30, 2026/ Moderna, Inc. today announced that David Berman, M.D., Ph.D. has been appointed as the Company's Chief Development Officer, beginning March 2, 2026. He will serve on Moderna's Executive Committee and report to Chief Executive Officer Stéphane Bancel. Over a two-decade career, Dr. Berman has worked on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9cd2a610223bb928
+symbol: MRNA
+published_utc: 2026-02-04T09:15:00Z
+url: https://www.nasdaq.com/press-release/defiance-launches-mrnx-first-daily-2x-long-etf-moderna-inc-2026-02-04
+headline: Defiance Launches MRNX: The First Daily 2X Long ETF for Moderna, Inc.
+<<<TEXT>>>
+MRNX is designed for traders seeking magnified, short-term bullish exposure to Moderna, Inc., a biotechnology company known for its messenger RNA– based medicines and vaccine development platform. By seeking to deliver 200% of the daily percentage change in the share price of Moderna, Inc., the Fund allows investors to express tactical upside views on MRNA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 68f1adc68e6d5d5b
+symbol: MRNA
+published_utc: 2026-02-10T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-enter-long-term-strategic-agreement-government-mexico-2026-02-10
+headline: Moderna to Enter into Long-Term Strategic Agreement with the Government of Mexico
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ February 10, 2026/ Moderna, Inc. today announced it has signed a Memorandum of Understanding for a long-term strategic agreement with the Mexican Government, Laboratorios de Biológicos y Reactivos de Mexico, and Laboratorios Liomont, to enhance Mexico's health sovereignty and mRNA manufacturing resilience.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a44020f0038cd18d
+symbol: MRNA
+published_utc: 2026-02-10T18:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-receives-refusal-file-letter-us-food-and-drug-administration-its
+headline: Moderna Receives Refusal-to-File Letter from the U.S. Food and Drug Administration for Its Investigational Seasonal Influenza Vaccine, mRNA-1010
+<<<TEXT>>>
+mRNA-1010 has been submitted and accepted for review in the EU, Canada and Australia. CAMBRIDGE, MA/ ACCESS Newswire/ February 10, 2026/ Moderna, Inc. today announced the U.S. Food and Drug Administration's Center for Biologics Evaluation and Research has notified the Company that it will not initiate a review of the biologics license application for its...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6426deaa84be83e2
+symbol: MRNA
+published_utc: 2026-02-13T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-reports-fourth-quarter-and-fiscal-year-2025-financial-results-and-provides
+headline: Moderna Reports Fourth Quarter and Fiscal Year 2025 Financial Results and Provides Business Updates
+<<<TEXT>>>
+Announces influenza vaccine filing accepted for regulatory review in the EU, Canada and Australia; Company received Refusal-to-File letter from U.S. FDA and has requested Type A meeting to understand path forward. CAMBRIDGE, MA/ ACCESS Newswire/ February 13, 2026/ Moderna, Inc. today reported financial results and provided business updates for the fourth...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 397b93b0cb0e6a4c
+symbol: MRNA
+published_utc: 2026-02-17T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-receives-european-commission-marketing-authorization-covid-19-vaccine
+headline: Moderna Receives European Commission Marketing Authorization for COVID-19 Vaccine mNEXSPIKE
+<<<TEXT>>>
+mNEXSPIKE is the third Moderna vaccine authorized in the European Union, strengthening the Company's respiratory vaccine portfolio in Europe. CAMBRIDGE, MA/ ACCESS Newswire/ February 17, 2026/ Moderna, Inc. today announced that the European Commission has granted marketing authorization for mNEXSPIKE ®, a new COVID vaccine, for active immunization to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 73eb053a41e4f4d4
+symbol: MRNA
+published_utc: 2026-02-18T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-us-food-and-drug-administration-will-initiate-review-its
+headline: Moderna Announces the U.S. Food and Drug Administration will Initiate the Review of Its Investigational Seasonal Influenza Vaccine Submission
+<<<TEXT>>>
+Following a Type A meeting, the FDA's Center for Biologics Evaluation and Research has notified Moderna that its biologics license application for mRNA-1010 will proceed to review. CAMBRIDGE, MASSACHUSETTS/ ACCESS Newswire/ February 18, 2026/ Moderna, Inc. today announced that, in response to a prior Refusal-to-File letter, the Company engaged with the U.S....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 20855902de0628c8
+symbol: MRNA
+published_utc: 2026-02-19T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-present-upcoming-conferences-march-2026-2026-02-19
+headline: Moderna to Present at Upcoming Conferences in March 2026
+<<<TEXT>>>
+CAMBRIDGE, MASSACHUSETTS/ ACCESS Newswire/ February 19, 2026/ Moderna, Inc., today announced its participation in the following upcoming investor conferences:. TD Cowen 46 th Annual Healthcare Conference, on Tuesday, March 3 rd at 1:50pm ET. Barclays 28 th Annual Global Healthcare Conference, on Tuesday, March 10 th at 9:30am ET.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 12638376bb874518
+symbol: MRNA
+published_utc: 2026-02-27T07:00:00Z
+url: https://www.nasdaq.com/press-release/european-medicines-agencys-committee-medicinal-products-human-use-adopts-positive
+headline: European Medicines Agency's Committee for Medicinal Products for Human Use Adopts Positive Opinion Recommending Marketing Authorization of mCOMBRIAX, Moderna's mRNA Combination Vaccine Against Influenza and COVID-19
+<<<TEXT>>>
+mCOMBRIAX will be made available in the European Union, subject to final European Commission authorization and national regulatory and access procedures. CAMBRIDGE, MASSACHUSETTS/ ACCESS Newswire/ February 27, 2026/ Moderna, Inc. today announced that the European Medicines Agency's Committee for Medicinal Products for Human Use has adopted a positive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9eca8c7f13856d05
+symbol: MRNA
+published_utc: 2026-03-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/moderna-resolves-global-patent-litigation-arbutus-genevant-2026-03-03
+headline: Moderna Resolves Global Patent Litigation with Arbutus/Genevant
+<<<TEXT>>>
+Moderna to pay $950 million with no future royalties to resolve all global litigation; corresponding charge expected in Q1 2026. 2026 year-end cash and cash equivalents now expected to be in the range of $4.5- $5.0 billion. CAMBRIDGE, MA/ ACCESS Newswire/ March 3, 2026/ Moderna, Inc. today announced that it has entered into a settlement agreement with Arbutus...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f29f20e8866596eb
+symbol: MRNA
+published_utc: 2026-04-06T18:01:00Z
+url: https://www.nasdaq.com/press-release/moderna-present-revaccination-data-its-investigational-seasonal-influenza-vaccine-and
+headline: Moderna to Present Revaccination Data for Its Investigational Seasonal Influenza Vaccine and for mRESVIA at ESCMID 2026
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ April 6, 2026/ Moderna, Inc. today announced that the Company will present late-breaking oral presentations on revaccination data for both mRNA-1010, its investigational seasonal influenza vaccine, and for mRESVIA ®, its mRNA respiratory syncytial virus vaccine, at the 2026 European Society of Clinical Microbiology and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f183d85c90d27717
+symbol: MRNA
+published_utc: 2026-04-15T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-report-first-quarter-2026-financial-results-friday-may-1-2026-2026-04-15
+headline: Moderna to Report First Quarter 2026 Financial Results on Friday, May 1, 2026
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ April 15, 2026/ Moderna, Inc. today announced that it will host a live conference call and webcast at 8:00 a.m. ET on Friday, May 1,2026 to report its first quarter 2026 financial results, and provide a corporate update. A live webcast of the call will be available under "Events and Presentations" in the Investors section of the Moderna...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 63edf17aec0aff58
+symbol: MRNA
+published_utc: 2026-04-21T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-present-upcoming-conferences-may-2026-2026-04-21
+headline: Moderna to Present at Upcoming Conferences in May 2026
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ April 21, 2026/ Moderna, Inc., today announced its participation in the following upcoming investor conferences:. BofA Securities 2026 Healthcare Conference, on Tuesday, May 12th at 11:20am PT. Bernstein's 42 nd Annual Strategic Decisions Conference, Thursday, May 28 th at 10:00am ET.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ca23e76c04440aeb
+symbol: MRNA
+published_utc: 2026-04-21T09:40:00Z
+url: https://www.nasdaq.com/press-release/moderna-receives-european-commission-marketing-authorization-mcombriax-modernas-mrna
+headline: Moderna Receives European Commission Marketing Authorization for mCOMBRIAX, Moderna's mRNA Combination Vaccine Against Influenza and COVID-19
+<<<TEXT>>>
+mCOMBRIAX will be made available in the European Union, subject to national regulatory and access procedures. This marketing authorization follows the positive opinion from the European Medicines Agency's Committee for Medicinal Products for Human Use and is valid in all 27 European Union member states, as well as Iceland, Liechtenstein and Norway....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9ccd64e60b11bea3
+symbol: MRNA
+published_utc: 2026-04-21T10:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-data-be-presented-2026-asco-annual-meeting-2026-04-21
+headline: Moderna Announces Data to be Presented at 2026 ASCO Annual Meeting
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ April 21, 2026/ Moderna, Inc. today announced that three abstracts on its investigational mRNA therapeutics have been accepted for presentation at the 2026 American Society of Clinical Oncology Annual Meeting, which will be held May 29- June 2 in Chicago, IL.. Abstract #9500: Individualized neoantigen therapy intismeran autogene...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: be8d5536508c7db0
+symbol: MRNA
+published_utc: 2026-04-21T19:01:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-initiation-phase-3-study-investigational-mrna-pandemic-influenza
+headline: Moderna Announces Initiation of Phase 3 Study of Investigational mRNA Pandemic Influenza Vaccine Candidate
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ April 21, 2026/ Moderna, Inc. today announced that the first participants in the U.S. and UK have been dosed in a Phase 3 study of the Company's investigational mRNA-based H5 pandemic influenza vaccine candidate, mRNA-1018. In December 2025, the Coalition for Epidemic Preparedness Innovations and Moderna announced that CEPI will...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c508bf3a73617b80
+symbol: MRNA
+published_utc: 2026-05-01T06:30:00Z
+url: https://www.nasdaq.com/press-release/moderna-reports-first-quarter-2026-financial-results-and-provides-business-updates
+headline: Moderna Reports First Quarter 2026 Financial Results and Provides Business Updates
+<<<TEXT>>>
+Reports first quarter GAAP net loss of$ billion and GAAP EPS of$, including $0.9 billion non-recurring litigation settlement charge. CAMBRIDGE, MA/ ACCESS Newswire/ May 1, 2026/ Moderna, Inc. today reported financial results and provided business updates for the first quarter of 2026.. We received two product approvals in Europe, including the world's first flu...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a138b95eecf3a8fc
+symbol: MRNA
+published_utc: 2026-05-06T17:15:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-new-england-journal-medicine-publication-pivotal-phase-3-clinical
+headline: Moderna Announces New England Journal of Medicine Publication of Pivotal Phase 3 Clinical Safety and Efficacy Data for Its Investigational Seasonal Influenza Vaccine, mRNA-1010
+<<<TEXT>>>
+Regulatory filings are under review in the U.S., Europe, Canada and Australia, with potential approvals expected to begin in 2026. CAMBRIDGE, MA/ ACCESS Newswire/ May 6, 2026/ Moderna, Inc. today announced a publication in the New England Journal of Medicine of the positive Phase 3 study results evaluating mRNA-1010, its vaccine candidate for seasonal influenza.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e469d887bff49772
+symbol: MRNA
+published_utc: 2026-05-12T17:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-recognized-time-one-worlds-most-impactful-companies-2026-05-12
+headline: Moderna Recognized by TIME as One of the World's Most Impactful Companies
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ May 12, 2026/ Moderna, Inc. today announced it was ranked no. 1 on TIME' s 2026 list of the World's Most Impactful Companies. As its product portfolio grows, the Company continues to invest in its long-term strategic partnerships with the United Kingdom, Canada and Australia to support pandemic readiness by expanding manufacturing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7a0e92074e83fa7d
+symbol: MRNA
+published_utc: 2026-06-01T05:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-and-cepi-expand-strategic-collaboration-advance-potential-vaccine-against
+headline: Moderna and CEPI Expand Strategic Collaboration to Advance Potential Vaccine Against Bundibugyo Ebolavirus
+<<<TEXT>>>
+Coalition for Epidemic Preparedness Innovations funding builds on Moderna's prior filovirus research and supports preclinical development and Phase 1 clinical evaluation. CAMBRIDGE, MA/ ACCESS Newswire/ June 1, 2026/ Moderna, Inc. today announced an expanded collaboration with the Coalition for Epidemic Preparedness Innovations to advance the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 055254b1e243df93
+symbol: MRNA
+published_utc: 2026-06-01T08:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-and-merck-present-5-year-data-intismeran-autogene-combination-keytruda
+headline: Moderna and Merck Present 5-Year Data for Intismeran Autogene in Combination With KEYTRUDA (pembrolizumab) in Patients With High-Risk Stage III/IV Melanoma Following Complete Resection at the 2026 ASCO Annual Meeting
+<<<TEXT>>>
+CAMBRIDGE, MA AND RAHWAY, NJ/ ACCESS Newswire/ June 1, 2026/ Moderna, Inc. and Merck, known as MSD outside of the United States and Canada, today announced detailed results from a planned five-year follow-up analysis of the Phase 2 b randomized KEYNOTE-942/mRNA-4157-P201 study evaluating intismeran autogene, an investigational mRNA-based individualized...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: df0ab2fca2e445be
+symbol: MRNA
+published_utc: 2026-06-02T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-present-upcoming-conference-june-2026-2026-06-02
+headline: Moderna to Present at Upcoming Conference in June 2026
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ June 2, 2026/ Moderna, Inc., today announced its participation in the following upcoming investor conference:. Goldman Sachs 47 th Annual Global Healthcare Conference 2026, on Tuesday, June 9 th at 3:20 p.m. ET. A live webcast of the presentation will be available under "Events and Presentations" in the Investors section of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 648dcb7aa8890226
+symbol: MRNA
+published_utc: 2026-06-08T19:01:00Z
+url: https://www.nasdaq.com/press-release/moderna-and-university-oxford-receive-uk-authorization-begin-phase-1-2-study
+headline: Moderna and the University of Oxford Receive UK Authorization to Begin Phase 1/2 Study of Investigational mRNA Cancer Vaccine for People with Lynch Syndrome
+<<<TEXT>>>
+The INTERCEPT-Lynch trial is part of a scientific collaboration between the University of Oxford and Moderna to advance a novel mRNA approach to cancer prevention. OXFORD, UK AND CAMBRIDGE, MA/ ACCESS Newswire/ June 8, 2026/ The University of Oxford and Moderna, Inc. today announced a Phase 1/ 2 study of mRNA-4194, Moderna's investigational mRNA-based cancer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7049024928d82c6a
+symbol: MRNA
+published_utc: 2026-06-16T07:30:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-organizational-changes-prepare-multiple-product-launches-2027-and
+headline: Moderna Announces Organizational Changes to Prepare for Multiple Product Launches in 2027 and 2028
+<<<TEXT>>>
+Stephen Hoge, President of Moderna, to Assume an Expanded Role With Operational Oversight of the Company's Infectious Disease, Intismeran and Rare Disease Franchises. CAMBRIDGE, MA/ ACCESS Newswire/ June 16, 2026/ Moderna, Inc. today announced changes to its operating model to support its short- and long-term business goals. To support this next phase of growth,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8e01708f614a285a
+symbol: MRNA
+published_utc: 2026-06-17T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-host-investor-event-science-day-2026-06-17
+headline: Moderna to Host Investor Event - Science Day
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ June 17, 2026/ Moderna, Inc. today announced that it will host its Investor Event- Science Day at 9:00am ET on Thursday, June 25, 2026. The event will feature an overview of Moderna's research and early development programs, highlighting how the Company's mRNA platform, together with advances in AI and robotics, is accelerating...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 66a920223b80d27a
+symbol: MRNA
+published_utc: 2026-06-18T16:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-fda-advisory-committee-votes-unanimously-favor-benefit-risk-profile
+headline: Moderna Announces FDA Advisory Committee Votes Unanimously in Favor of the Benefit-Risk Profile of mRNA-1010, an Investigational Seasonal Influenza Vaccine
+<<<TEXT>>>
+FDA Prescription Drug User Fee Act goal date remains August 5, 2026. CAMBRIDGE, MA/ ACCESS Newswire/ June 18, 2026/ Moderna, Inc. today announced that the U.S. Food and Drug Administration's Vaccines and Related Biological Products Advisory Committee voted 9-0 that the benefits of mRNA-1010, Moderna's investigational seasonal influenza vaccine, outweigh its...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 18ad06256d2ea1c3
+symbol: MRNA
+published_utc: 2026-06-25T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-science-day-highlights-expanding-potential-mrna-platform-2026-06-25
+headline: Moderna Science Day Highlights Expanding Potential of mRNA Platform
+<<<TEXT>>>
+Provides broad overview of Company's research and early development programs expected to continue to fuel future growth. CAMBRIDGE, MA/ ACCESS Newswire/ June 25, 2026/ Moderna, Inc. today announced research and early development updates at its Science Day event.  "As we execute our strategic plan to become a diversified, multi-modality biotechnology company,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6223b638111c4947
+symbol: MRNA
+published_utc: 2026-07-08T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-appoints-michael-mcdonnell-board-directors-2026-07-08
+headline: Moderna Appoints Michael McDonnell to Board of Directors
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ July 8, 2026/ Moderna, Inc. today announced the appointment of Michael McDonnell to its Board of Directors, effective July 8, 2026. Mr. McDonnell will also serve on the Board's Audit Committee.  "I am honored to join Moderna's Board at such an important time in the company's evolution," said Mr. McDonnell. "
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 05da9bc977a28418
+symbol: MRNA
+published_utc: 2026-07-09T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-report-second-quarter-2026-financial-results-friday-july-31-2026-2026-07-09
+headline: Moderna to Report Second Quarter 2026 Financial Results on Friday, July 31, 2026
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ July 9, 2026/ Moderna, Inc., today announced that it will host a live conference call and webcast at 8:00 a.m. ET on Friday, July 31, 2026 to report its second quarter 2026 financial results, and provide a corporate update. A live webcast of the call will be available under "Events and Presentations" in the Investors section of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6c9b038b29d60a8e
+symbol: MRNA
+published_utc: 2026-07-16T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-first-participant-dosed-phase-1-clinical-trial-evaluating
+headline: Moderna Announces First Participant Dosed in Phase 1 Clinical Trial Evaluating Investigational Tumor-Targeted Cancer Antigen Therapy in Solid Tumors
+<<<TEXT>>>
+CAMBRIDGE, MA/ ACCESS Newswire/ July 16, 2026/ Moderna, Inc. today announced the dosing of the first U.S. participant in its Phase 1 study evaluating mRNA-4200, a tumor-targeted cancer antigen therapy candidate, in patients with advanced or metastatic solid tumors. mRNA-4200 encodes for seven antigens commonly shared across patients and tumor types and is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1729090b90a1371c
+symbol: MRNA
+published_utc: 2026-07-31T07:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-reports-second-quarter-2026-financial-results-and-provides-business-updates
+headline: Moderna Reports Second Quarter 2026 Financial Results and Provides Business Updates
+<<<TEXT>>>
+Reports second quarter revenue of $0.1 billion, GAAP net loss of$ billion and GAAP EPS of$. CAMBRIDGE, MA/ ACCESS Newswire/ July 31, 2026/ Moderna, Inc. today reported financial results and provided business updates for the second quarter of 2026..  "In the second half of 2026, we are preparing for the potential approval of mFLUSIVA in the U.S., which would be our fifth...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c8090959f0ae196a
+symbol: MRNA
+published_utc: 2026-08-04T11:00:00Z
+url: https://www.nasdaq.com/press-release/moderna-announces-initiation-phase-1-clinical-trial-mrna-1469-modernas
+headline: Moderna Announces Initiation of Phase 1 Clinical Trial of mRNA-1469, Moderna's Investigational Vaccine Against Bundibugyo Ebolavirus
+<<<TEXT>>>
+Phase 1 trial is being conducted in Canada as part of our expanded collaboration with the Coalition for Epidemic Preparedness Innovations, building on Moderna's prior filovirus research. CAMBRIDGE, MA/ ACCESS Newswire/ August 4, 2026/ Moderna, Inc. today announced that following Health Canada's authorization of the study, the first participants have been...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 334574d70b5159bb
+symbol: MRNA
+published_utc: 2026-08-05T22:15:00Z
+url: https://www.nasdaq.com/press-release/moderna-receives-us-fda-approval-influenza-vaccine-mflusiva-2026-08-06
+headline: Moderna Receives U.S. FDA Approval for Influenza Vaccine mFLUSIVA
+<<<TEXT>>>
+mFLUSIVA becomes Moderna's fifth approved product globally and fourth FDA- approved product. CAMBRIDGE, MA/ ACCESS Newswire/ August 5, 2026/ Moderna, Inc. today announced that the U.S. Food and Drug Administration has approved mFLUSIVA ®, a new vaccine against seasonal influenza, for use in all adults 50 years and older.  "The FDA approval of mFLUSIVA, our fourth...
+<<<END>>>

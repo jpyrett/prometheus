@@ -1,6 +1,6 @@
 # Session notes: how the recommendation system works
 
-Last updated 2026-11-06, end of the Week 5 session. Written for Jacob and for the next chat. It is a map, not the spec: the build guide is
+Last updated 2026-11-11 (the Critic was added: see section 9 and design/how_to_code_critic.md); the rest is as of 2026-11-06, end of the Week 5 session. Written for Jacob and for the next chat. It is a map, not the spec: the build guide is
 `design/week5_advisor_implementation.md`, the reasons are the numbered entries 51 to 55 at the end of `docs/design_choices.md`, the spec is
 `design/advisor_v1_final_spec.md` (with Amendments 1 and 2 at its end), the rules for working in this repo are `AGENTS.md`, the commands are `HowToRun.txt`.
 (The earlier DataToolbox notes of October are in git history: `git log -- docs/SESSION_NOTES.md`; `docs/DataToolbox.md` still describes the toolbox.)
@@ -66,8 +66,8 @@ in the record, and it must say "unmeasured" while the basis is a prior.
 ## 4. The record (what the Critic reads)
 
 `order.recommendations` (the picks) and `order.candidates` (everything else, with the reason) hold dicts shaped by `record.py`: identity, action, families (with `waived`), quality, evidence (verified quotes),
-features (every number with unit, date and source), agreement, ranking (`scale_factor`), `blend` (the four parts and their pieces), trade, risk, gates, thesis, audit. `tests/simple_critic.py` is a working example
-of an auditor: it recomputes the stop, the position, the composite, the whole blend (with the recency weights), the scale, the excess and the score, and looks every quote up in the order's own sources.
+features (every number with unit, date and source), agreement, ranking (`scale_factor`), `blend` (the four parts and their pieces), trade, risk, gates, thesis, audit. `tests/simple_critic.py` was the working example
+(now ported into `prometheus/agents/critic/integrity.py`) of an auditor: it recomputes the stop, the position, the composite, the whole blend (with the recency weights), the scale, the excess and the score, and looks every quote up in the order's own sources.
 The ledger (`data/ledger/recommendations.jsonl`) is append-only; its cooldown hides a company already recommended by the same strategy for a while.
 
 ## 5. Where things are
@@ -110,7 +110,8 @@ tests/  test_blend.py test_negative_equity.py test_recommendations.py test_recom
 - **No leverage test for deficit companies** now. A rule that does not use equity (debt over annualised operating cash flow) would still catch over-borrowed ones; it needs a threshold nobody has measured.
   Return on equity and the current ratio are also distorted for these companies and still used.
 - `capital_return` recommends a stock that fell by half (SNDK): a "not far under the 52-week high" rule would catch it earlier. Bars are not refreshed for candidates discovered in the news.
-- Not built: the Critic agent, the LangGraph wiring (call `advisor.generate_recommendations` in a node; put a refresh node before it), Case 3 `market`, theme counterparties, measured-basis shrinkage.
+- Not built: the refresh node before the Advisor in the desk graph, Case 3 `market`, theme counterparties, measured-basis shrinkage, the Trader.
+- **The Critic (2026-11-11, entries 56 to 59) is built**: it approves or denies each recommendation (a score 0 to 100), the Account Manager decides what may trade (Ask or Auto), and `./test_recommendations.sh` and `desk --critic` run it. See `design/how_to_code_critic.md` for how it works, what it found and what is open. It has not had a live run: the first one needs your yes (Finnhub and Z.ai GLM 5.3), and `.env` needs `CRITIC_MODEL=z-ai/glm-5.3`.
 
 ## 10. Gotchas
 

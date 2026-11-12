@@ -13,7 +13,7 @@ def test_the_shipped_config_loads_and_every_family_has_a_multiplier_per_regime_a
     for family in FAMILIES:
         assert set(config.regime.multipliers[family]) >= set(REGIMES) and family in config.trade.stop_atr
     assert {c.name for c in config.quality.checks} >= {"operating_margin", "accrual_ratio", "cfo_negative_with_profit"}
-    assert config.families.trend.horizon == 63 and config.sleeves["funds"].eligible == ["capital_return", "trend", "reversion"]
+    assert config.families.trend.horizon == 63 and config.sleeves["funds"].eligible == ["capital_return", "trend", "reversion", "conviction"]
 
 
 def edited(tmp_path, change):

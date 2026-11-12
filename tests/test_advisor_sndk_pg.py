@@ -4,7 +4,7 @@ The inputs are not invented. `scripts/capture_advisor_fixture.py` ran the real s
 the work order the Data Clerk produced from the stored news and 10-Q filings (real sources, real filing evidence), the metrics the Data Clerk calculated (real daily bars of 276 sessions,
 Finnhub's real figures for the day, the real 10-Q statements) and every raw reply of the Advisor's model (the plan call and the thesis call, and a retry of either when there was one). These tests feed them back through the real Advisor code with a
 model that returns the recorded replies: the same numbers and words, offline and free. A new capture (`--yes`: three paid APIs) changes the fixture and may change what a test pins:
-PG sits near the line (its expected excess is within a tenth of a percent of its cost): in five live runs it was a recommendation twice and neutral three times, depending on how
+PG sits near the line (a strategy passed or not depending on small differences): in five live runs it was a recommendation twice and neutral three times, depending on how
 the model worded its quotes. So there are two captures of PG, `PG.json` (neutral) and `PG_open.json` (a recommendation), and a test for each.
 
 What is asked of each: does the symbol score as a recommendation, and does the record carry everything a Critic needs to judge it?
@@ -102,7 +102,7 @@ def test_the_critic_questions_a_stock_that_fell_by_half_and_is_recommended_on_a_
     order, _ = sndk
     result = critic.critique(order.recommendations[0], order)
     text = " | ".join(result.warnings)
-    assert "below its 200-day mean" in text and "far under its 52-week high (34% of it)" in text and "a -57% drawdown in 63 days" in text and "the stop is 40% away" in text and "a thin edge" in text
+    assert "below its 200-day mean" in text and "far under its 52-week high (34% of it)" in text and "a -57% drawdown in 63 days" in text and "the stop is 40% away" in text
     assert "counter-evidence on file" in text                                                         # the model's own bearish quote ("down 45% from its high") is in the record
 
 
@@ -139,19 +139,21 @@ def test_the_holdings_of_the_sample_portfolio_were_reviewed_and_left_alone(sndk)
 
 # ---------------------------------------------------------------- PG
 
-def test_pg_in_the_neutral_capture_scores_as_a_thin_recommendation_only_because_the_blend_lifts_its_edge_over_the_cost(pg):
+def test_pg_in_the_neutral_capture_is_a_recommendation_on_conviction_because_the_blend_is_high(pg):
     order, fx = pg
     record = next(r for r in order.recommendations if r["symbol"] == "PG")
     assert order.status == "recommended" and order.errors == [] and record["action"]["action"] == "open" and record["stance"] == "bullish"
     families = {f["family"]: f for f in record["families"]}
     assert families["capital_return"]["passed"] and families["capital_return"]["direction"] == "bullish" and 0 < families["capital_return"]["edge_20d"] < 0.002   # its edge alone is smaller than the 0.20% cost
     assert not families["trend"]["passed"] and not families["reversion"]["passed"]
+    conviction = families["conviction"]                                                    # Amendment 5: the blend (0.55, score 78) is over 0.30 with news, so the blend is a strategy of its own
+    assert conviction["passed"] and conviction["score"] == 0.5 and conviction["basis_ref"] == "borrowed_from_trend" and conviction["features_used"] == {"rsi_14": pytest.approx(conviction["features_used"]["rsi_14"])}
+    assert conviction["edge_20d"] == pytest.approx(0.006 * conviction["regime_multiplier"] * 0.5 * 0.85, rel=1e-6) and record["trade"]["family"] == "conviction" and record["trade"]["horizon_bars"] == 40
     ranking, blend = record["ranking"], record["blend"]
-    assert ranking["composite"] < ranking["cost_pct"]                                      # unscaled, the edge is under the cost: the old rule would have said neutral
-    assert blend["score"] == 78 and blend["components"]["news"]["n"] == 3 and ranking["scale_factor"] == pytest.approx(1 + 0.5 * blend["value"], abs=1e-3) and ranking["scale_factor"] > 1.27
-    assert 0 < ranking["excess_20d_after_cost"] < 0.0005                                   # news, prices, history and filings together carry it just over the cost
+    assert ranking["composite"] == conviction["edge_20d"] and "excess_20d_after_cost" not in ranking and "cost_pct" not in ranking and "scale_factor" not in ranking     # Amendment 7: no expected return on the record
+    assert blend["score"] == 78 and blend["components"]["news"]["n"] == 3 and record["score"] == 78 and record["agreement"]["confidence"] == pytest.approx((1 + blend["value"]) / 2, abs=1e-3)
     result = critic.critique(record, order)
-    assert result.failures == [] and any("thin edge" in w for w in result.warnings)   # a Critic is told the edge is thin
+    assert result.failures == []
     with pytest.raises(ValueError):                                                                          # the real model's first plan reply was cut short (no closing brace): not valid JSON
         parse_list(fx["replies"][0], "companies")
     assert order.advisor_runs[0]["calls"] == 2 and order.advisor_runs[0]["error"] is None                    # the retry, also recorded, worked
@@ -172,7 +174,7 @@ def test_pg_in_the_other_capture_is_a_recommendation_and_the_critic_finds_it_com
     assert len(records) == 1
     record = records[0]
     Recommendation.model_validate(record)
-    assert record["action"]["action"] == "open" and record["stance"] == "bullish" and record["score"] > 50 and record["trade"]["family"] == "capital_return"
+    assert record["action"]["action"] == "open" and record["stance"] == "bullish" and record["score"] > 50 and record["trade"]["family"] == "conviction"
     result = critic.critique(record, order)
     assert result.failures == [] and len(result.checked) >= 55 and result.verdict in ("review", "approve")
     assert record["thesis"]["thesis"] and record["thesis"]["thesis_error"] is None and "unmeasured" in record["thesis"]["thesis"].lower()                  # the real model's thesis passed the number and ref checks
@@ -183,8 +185,7 @@ def test_pg_in_the_other_capture_is_a_recommendation_and_the_critic_finds_it_com
 
 
 def test_a_dilution_passage_of_the_10q_does_not_turn_pgs_capital_return_bearish(pg_open):
-    """Found by the first real run: the model cited the earnings-per-share note ("the diluted shares include the dilutive effect of stock options") as a bearish dilution item and the
-    family flipped. Only an item that shows stock being issued now (a derived one, or a passage of an 8-K) counts."""
+    """The captured Procter & Gamble record stays bullish on capital return. Issuance is no longer a family vote (entry 70); this checks the stored record, which was written before that."""
     order, fx = pg_open
     evidence = order.data.filing_evidence["PG"]["evidence"]
     note = next(i for i in evidence if i["topic"] == "dilution" and not i["derived"] and i["source"]["form"] == "10-Q")
@@ -201,9 +202,9 @@ def test_the_simple_critic_catches_each_kind_of_defect(sndk):
     cases = [
         ({"trade.stop_price": 900.0}, "trade.stop"), ({"trade.stop_price": 400.0}, "recompute.stop"), ({"trade.entry_zone": None}, "trade.entry"), ({"trade.suggested_shares": 0}, "trade.size"),
         ({"trade.invalidation": []}, "trade.invalidation"), ({"trade.time_stop_date": "2026-11-01"}, "trade.time_stop"), ({"score": 99}, "recompute.score"),
-        ({"ranking.composite": 0.5}, "recompute.composite"), ({"ranking.excess_20d_after_cost": 0.02}, "recompute.excess"), ({"agreement.confidence": 0.99}, "recompute.confidence"),
+        ({"ranking.composite": 0.5}, "recompute.composite"), ({"agreement.confidence": 0.99}, "recompute.confidence"),
         ({"trade.position_pct": 0.9}, "recompute.position"), ({"gates": [{"gate": "liquidity", "passed": False}]}, "gates"), ({"audit.metric_order": None}, "audit"),
-        ({"thesis.thesis": "Buy it, a sure thing."}, "thesis.unmeasured"), ({"thesis.bull_case": [{"text": "x", "ref": "made_up"}]}, "thesis.refs"),
+        ({"thesis.bull_case": [{"text": "x", "ref": "made_up"}]}, "thesis.refs"),
         ({"features.roe.unit": None}, "complete.features"), ({"risk": None}, "complete"), ({"features.rsi_14.as_of": "2026-10-01"}, "features.fresh"),
     ]
     for change, name in cases:

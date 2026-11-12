@@ -13,7 +13,6 @@ Code then checks the reply (`check`) and a thesis that fails is not shown:
   3. every NUMBER in the thesis and the bullets is a number the record has (a value of a metric, the ranking, the trade, a number inside a verified quote), compared after rounding to the
      precision the text shows (`4.2%` matches 0.0421, `$163.45` matches 163.4512, `1.2 billion` matches 1.2e9); ISO dates are checked as text;
   4. when the record lists counter-evidence or contradictions, `bear_case` is not empty and cites at least one of them;
-  5. when the basis of the expected return is `prior`, the word "unmeasured" is in the thesis.
 
 A failed thesis gets ONE retry with the reasons listed; a second failure leaves `thesis: null` and `thesis_error` naming the reasons, and the record is still returned: a recommendation does not
 disappear because the prose was not good enough. The two sentences about a number and a ref are the whole anti-hallucination story for the prose: the model cannot say a figure the program did not calculate.
@@ -73,10 +72,7 @@ def digest(record: dict) -> str:
     ident, action, ranking, trade = record["identity"], record["action"], record["ranking"], record["trade"]
     lines = [f"RECORD {record['symbol']}" + (f" ({record['company']})" if record.get("company") else ""),
              f"Decision: {action['action']} ({action['reason']}). Case {ident['case']}, regime {ident['regime']}" + (f" ({ident['regime_note']})" if ident.get("regime_note") else "") + "."]
-    passed = [f for f in record["families"] if f["passed"]]
-    basis = passed[0]["basis"] if passed else "prior"
-    lines.append(f"Expected: composite edge {_pct(ranking['composite'])}, cost {_pct(ranking['cost_pct'])}, expected 20-day excess return after cost {_pct(ranking['excess_20d_after_cost'])}, "
-                 f"stance {ranking['stance']}; basis: {basis}" + (" (an unmeasured research prior: this system has no outcomes of its own yet)" if basis == "prior" else "") + ".")
+    lines.append(f"Score: {record['score']} of 100 (the blend of news, performance, historical metrics and filings), stance {ranking['stance']}. No return is promised: the record has no expected return.")
     if trade.get("entry_zone"):
         lines.append(f"Trade: strategy {trade['family'] or 'none'}; entry zone {trade['entry_zone'][0]} to {trade['entry_zone'][1]} ({trade['entry_basis']}); stop {_num(trade['stop_price'])}; target {_num(trade['target_price'])}; "
                      f"time stop {trade['time_stop_date'] or 'none'}; suggested shares {trade['suggested_shares']}" + (f" (oversized: {trade['size_note']})" if trade.get("oversized") else "")
@@ -180,9 +176,6 @@ def check(item: dict, record: dict) -> list[str]:
     counters = counter_refs(record)
     if counters and not any(p["ref"].strip().strip("[]") in {c.strip("[]") for c in counters} for p in bear):
         reasons.append("the record lists counter-evidence or contradictions: bear_case must cite at least one of them (" + ", ".join(sorted(counters)) + ")")
-    passed = [f for f in record["families"] if f["passed"]]
-    if (passed[0]["basis"] if passed else "prior") == "prior" and "unmeasured" not in text.lower():
-        reasons.append('the expected return is a prior: the thesis must use the word "unmeasured"')
     return reasons
 
 

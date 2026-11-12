@@ -1,0 +1,621 @@
+<<<PRESS_RELEASE>>>
+id: 8e0bc99de2e9ed81
+symbol: V
+published_utc: 2025-11-12T03:00:00Z
+url: https://www.nasdaq.com/press-release/visa-direct-stablecoin-payouts-pilot-speeds-access-funds-creators-gig-workers-2025-11
+headline: Visa Direct Stablecoin Payouts Pilot Speeds Up Access to Funds for Creators & Gig Workers
+<<<TEXT>>>
+New Visa Direct pilot sends USD-backed stablecoin payouts directly to stablecoin wallets, giving creators and gig workers faster access to their funds.. SAN FRANCISCO& LISBON, Portugal---- At Web Summit today, Visa Inc. announced a breakthrough pilot allowing businesses and platforms to send payouts directly to recipients’ stablecoin wallets.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 80104f919b11a0c4
+symbol: V
+published_utc: 2025-11-20T13:50:00Z
+url: https://www.nasdaq.com/press-release/ahead-holiday-season-visa-identifies-five-transformative-forces-reshaping-global
+headline: Ahead of Holiday Season, Visa Identifies Five Transformative Forces Reshaping Global Payment Security
+<<<TEXT>>>
+To celebrate International Fraud Awareness Week, Visa today released its Fall 2025 Biannual Threats Report, revealing five forces that are transforming the global payments security landscape. The report, produced by Visa's Payment Ecosystem Risk and Control team, draws on intelligence from Visa's global network to identify how criminal operations are...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 92006c280c6eca93
+symbol: V
+published_utc: 2025-11-27T01:48:00Z
+url: https://www.nasdaq.com/press-release/visa-partners-aquanow-enable-faster-settlement-using-stablecoins-2025-11-27
+headline: Visa Partners with Aquanow to Enable Faster Settlement Using Stablecoins
+<<<TEXT>>>
+--Visa, a global leader in digital payments, today announced the expansion of its stablecoin settlement capabilities across the Central and Eastern Europe, Middle East and Africa region through a partnership with Aquanow, a global digital assets platform expert in liquidity and infrastructure solutions. "By harnessing the power of stablecoins and pairing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9a5048b9f50d08dd
+symbol: V
+published_utc: 2025-12-02T09:00:00Z
+url: https://www.nasdaq.com/press-release/visa-survey-finds-ai-and-crypto-poised-transform-us-holiday-spending-2025-12-02
+headline: Visa Survey Finds AI and Crypto Poised to Transform U.S. Holiday Spending
+<<<TEXT>>>
+Visa Inc. today released new survey data, revealing AI’ s influence in shopping and spending, a generational shift in consumer spending behavior, and emerging payments trends this holiday season.  "The data tells a fascinating story about the spending shift we're witnessing: shoppers are embracing AI and digital tools at remarkable speed, with nearly half of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5c1ce007ff81567b
+symbol: V
+published_utc: 2025-12-03T22:01:00Z
+url: https://www.nasdaq.com/press-release/circle-collaborates-pismo-and-visa-launch-vietnams-first-ai-powered-paylater-card
+headline: Circle Collaborates with Pismo and Visa to Launch Vietnam’s First AI-Powered PayLater Card
+<<<TEXT>>>
+Visa, a world leader in digital payments, and Pismo today jointly announced a strategic collaboration with Circle Asia Technologies, a pioneering credit-led neobank in Southeast Asia, to unlock credit for millions in Vietnam. This will enable Circle to launch the nation’ s first truly AI-powered PayLater card aiming to set new standards for transparency,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7a82a8af3d984805
+symbol: V
+published_utc: 2025-12-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/visa-launches-global-art-collection-elevate-creators-and-celebrate-fifa-world-cup
+headline: Visa Launches Global Art Collection to Elevate Creators and Celebrate the FIFA World Cup 26™
+<<<TEXT>>>
+Visa debuted the first five pieces in the collection at an exclusive Miami showcase," The Art of the Draw", hosted by multidisciplinary creator KidSuper. The showcase featured the works of artists Darien Birks, Nathan Walker, Cesar Canseco, Ivan Roque, and Rafael Mayani that celebrate the culture and traditions of each host country and host city Miami.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d9e6e3a3aa8fc778
+symbol: V
+published_utc: 2025-12-11T10:30:00Z
+url: https://www.nasdaq.com/press-release/visa-foundation-board-appoints-najada-kumbuli-president-visa-foundation-2025-12-11
+headline: Visa Foundation Board Appoints Najada Kumbuli as President of Visa Foundation
+<<<TEXT>>>
+Visa, a global leader in digital payments, today announced that Najada Kumbuli has been appointed President of Visa Foundation, effective immediately. Prior to Visa Foundation, she served as the Investment Director at Calvert Impact Capital, a global impact investment firm. To date, Visa Foundation has committed over $350 million across more than 150 global...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d499627071659c22
+symbol: V
+published_utc: 2025-12-15T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-unveils-new-global-stablecoins-advisory-practice-2025-12-15
+headline: Visa Unveils New Global Stablecoins Advisory Practice
+<<<TEXT>>>
+Visa, a global leader in digital payments, today announced the launch of its Stablecoins Advisory Practice. The new value-added service offering by Visa Consulting& Analytics provides actionable insights and recommendations to guide banks, fintechs, merchants, and businesses of all sizes on market fit, strategy, and implementation. "Having a comprehensive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 28e062d3f825fdf3
+symbol: V
+published_utc: 2025-12-16T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-launches-stablecoin-settlement-united-states-marking-breakthrough-stablecoin
+headline: Visa Launches Stablecoin Settlement in the United States, Marking a Breakthrough for Stablecoin Integration
+<<<TEXT>>>
+For the first time, U.S. issuer and acquirer partners can settle with Visa in Circle’ s USDC, a fully reserved, dollar-denominated stablecoin. Broader availability in the U.S. is planned through 2026.. By bringing USDC settlement to the U.S., Visa is delivering a reliable, bank‑ ready capability that improves treasury efficiency while maintaining the security,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e907552dd1819910
+symbol: V
+published_utc: 2025-12-17T07:00:00Z
+url: https://www.nasdaq.com/press-release/akamai-and-visa-collaborate-build-trust-agentic-commerce-2025-12-17
+headline: Akamai and Visa Collaborate to Build Trust in Agentic Commerce
+<<<TEXT>>>
+Visa’ s Trusted Agent Protocol to authenticate AI shopping agents and help prevent fraud across Akamai Cloud, strengthening the trust layer in agentic commerce. CAMBRIDGE, Mass.& SAN FRANCISCO---- Akamai Technologies, Inc., the cybersecurity and cloud computing company that powers and protects business online, today announced a strategic collaboration with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 60db324d30ddcff2
+symbol: V
+published_utc: 2025-12-17T07:00:00Z
+url: https://www.nasdaq.com/press-release/akamai-and-visa-join-forces-secure-next-era-agentic-commerce-2025-12-17
+headline: Akamai and Visa Join Forces to Secure the Next Era of Agentic Commerce
+<<<TEXT>>>
+--Akamai Technologies, Inc., the cybersecurity and cloud computing company that powers and protects business online, today announced a strategic collaboration with Visa Inc. to bring stronger identity, user recognition, and security controls to the emerging world of agentic commerce. Through its integration of Visa’ s Trusted Agent Protocol with Akamai’ s...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f7618a5601c59325
+symbol: V
+published_utc: 2025-12-18T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-and-partners-complete-secure-ai-transactions-setting-stage-mainstream-adoption
+headline: Visa and Partners Complete Secure AI Transactions, Setting the Stage for Mainstream Adoption in 2026
+<<<TEXT>>>
+Visa Inc. today announced a major milestone in the evolution of AI-powered commerce: hundreds of secure, agent-initiated transactions have now been successfully completed in collaboration with partners across the ecosystem. This breakthrough signals that 2025 will be the final year consumers shop and checkout alone, as AI agent-driven payments rapidly...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7f7e0436b64e49e3
+symbol: V
+published_utc: 2025-12-23T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-analysis-us-holiday-spending-rose-42-2025-12-23
+headline: Visa Analysis: U.S. Holiday Spending Rose 4.2%
+<<<TEXT>>>
+Visa, a global leader in digital payments, today released its annual Retail Spend Monitor from Visa Consulting& Analytics, offering a broad view of U.S. holiday retail activity. In-store shopping remains strong: 73% of holiday payment volume was in physical stores while 27% of retail spend happened online. E-commerce continues to expand: Online retail spending...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 16010b435934b42c
+symbol: V
+published_utc: 2025-12-23T07:05:00Z
+url: https://www.nasdaq.com/press-release/visa-analysis-canada-holiday-spending-rises-44-2025-12-23
+headline: Visa Analysis: Canada Holiday Spending Rises 4.4%
+<<<TEXT>>>
+--Visa, a global leader in digital payments, today released its annual Retail Spend Monitor from Visa Consulting& Analytics, offering a comprehensive view of Canada’ s holiday retail activity. In-store shopping remains strong: 88% of holiday payment volume was in physical stores and 12% online E-commerce continues to expand: Online retail spending increased 7%...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f25af678d3af9333
+symbol: V
+published_utc: 2026-01-13T09:00:00Z
+url: https://www.nasdaq.com/press-release/visa-2026-global-economic-outlook-ai-adoption-and-shifting-trade-patterns-drive
+headline: Visa 2026 Global Economic Outlook: AI Adoption and Shifting Trade Patterns Drive Economic Transformation Beneath Steady Growth
+<<<TEXT>>>
+Visa, a global leader in digital payments, today released its Global Economic Outlook for 2026, revealing that while headline growth appears steady at 2.7%, the global economy is undergoing fundamental transformation driven by artificial intelligence adoption, evolving trade networks and shifting investment patterns. Analysis from Visa Business and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 29ab1b5787bb9bc1
+symbol: V
+published_utc: 2026-01-15T16:05:00Z
+url: https://www.nasdaq.com/press-release/visa-announce-fiscal-first-quarter-2026-financial-results-january-29-2026-2026-01-15
+headline: Visa to Announce Fiscal First Quarter 2026 Financial Results on January 29, 2026
+<<<TEXT>>>
+Visa will report its fiscal first quarter 2026 financial results on Thursday, January 29, 2026. Visa’ s executive management team will then host a live audio webcast beginning at 2:00 p.m. Pacific Time to discuss financial results and business highlights. Visa is a world leader in digital payments, facilitating transactions between consumers, sellers,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fbe0613824bc5e2a
+symbol: V
+published_utc: 2026-01-26T09:01:00Z
+url: https://www.nasdaq.com/press-release/visa-debuts-milano-cortina-2026-campaign-starring-record-breaking-athletes-mikaela
+headline: Visa Debuts Milano Cortina 2026 Campaign Starring Record‑Breaking Athletes Mikaela Shiffrin and Oksana Masters
+<<<TEXT>>>
+Visa today debuted its newest Milano Cortina 2026 U.S. campaign, an athlete‑ led storytelling platform featuring Mikaela Shiffrin and Oksana Masters, two of the most accomplished women competing on the global stage. Set against the global backdrop of Milano Cortina 2026, the films continue Visa’ s Olympic and Paralympic Games storytelling.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fe2970ad771266ac
+symbol: V
+published_utc: 2026-01-28T08:27:00Z
+url: https://www.nasdaq.com/press-release/visa-spending-study-shows-how-americans-will-use-ai-plan-book-and-spend-winter-sports
+headline: Visa Spending Study Shows How Americans Will Use AI to Plan, Book and Spend on Winter Sports
+<<<TEXT>>>
+Visa today released new U.S. insights from its multi-market Winter Sports Study, revealing a strong resurgence in winter travel interest ahead of the 2026 Winter Olympics- and marking the first Winter Games where Gen AI is widely used by consumers for research and planning. Milano Cortina 2026 will be the first Winter Games where Gen AI is widely integrated...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f8d69f2de1cb833f
+symbol: V
+published_utc: 2026-01-29T16:05:00Z
+url: https://www.nasdaq.com/press-release/visa-fiscal-first-quarter-2026-financial-results-2026-01-29
+headline: Visa Fiscal First Quarter 2026 Financial Results
+<<<TEXT>>>
+Visa today announced its fiscal first quarter 2026 financial results through an earnings release that will be furnished with the Securities and Exchange Commission on a Form 8- K and available on its Investor Relations website at investor.visa.com/financial-information/quarterly-earnings/default. aspx. Visa is a world leader in digital payments,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 26f35ee7d757d510
+symbol: V
+published_utc: 2026-02-03T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-direct-and-unionpay-international-will-extend-global-money-movement-network
+headline: Visa Direct and UnionPay International Will Extend Global Money Movement Network to Billions of Cards in Chinese Mainland
+<<<TEXT>>>
+SAN FRANCISCO& DOHA, Qatar---- At Web Summit Qatar, Visa and UnionPay International announced an agreement to enable cross-border money movement into Chinese Mainland through Visa Direct. Once fully rolled out, clients will be able to send cross-border remittances and business-to-consumer payouts to more than 95 percent of UnionPay International debit...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1a9a7d7ee6db2e79
+symbol: V
+published_utc: 2026-02-05T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-introduces-visa-main-new-platform-accelerate-small-business-growth-across-us
+headline: Visa Introduces Visa & Main, A New Platform to Accelerate Small Business Growth Across the U.S.
+<<<TEXT>>>
+New program aims to tackle biggest challenges for entrepreneurs across three pillars: Business Capital, Business Connect and Business Essentials Visa& Main launches $100 M working capital facility. SAN FRANCISCO& ATLANTA---- Visa today announced the launch of Visa& Main, a new platform designed to give small business owners across the United States better...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bb48bae75aa28141
+symbol: V
+published_utc: 2026-02-11T16:05:00Z
+url: https://www.nasdaq.com/press-release/visa-participate-upcoming-investor-conferences-2026-02-11
+headline: Visa to Participate in Upcoming Investor Conferences
+<<<TEXT>>>
+Visa today announced its participation in the following investor conferences. On Tuesday, March 3, Jack Forestell, Chief Product and Strategy Officer, will present at the Morgan Stanley Technology, Media& Telecom Conference. Visa is a world leader in digital payments, facilitating transactions between consumers, sellers, financial institutions and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f99fb9e383d74e63
+symbol: V
+published_utc: 2026-02-16T03:00:00Z
+url: https://www.nasdaq.com/press-release/italy-sees-economic-boost-opening-weekend-olympic-winter-games-milano-cortina-2026
+headline: Italy Sees Economic Boost From the Opening Weekend of the Olympic Winter Games Milano Cortina 2026
+<<<TEXT>>>
+VisaNet data analysed by Visa Consulting& Analytics shows the positive impact that Milano Cortina 2026 is having on commerce:. Overseas Visa cardholders visits rose by more than 60%, with the largest share of visitors coming from the U.S., followed by China, Brazil, Canada and Japan. In Europe, Visa cardholders from Germany represent the largest share of visitors,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 397f04f5f74eee9e
+symbol: V
+published_utc: 2026-02-19T09:00:00Z
+url: https://www.nasdaq.com/press-release/visa-renews-partnership-across-red-bull-formula-one-teams-2026-02-19
+headline: Visa Renews Partnership Across Red Bull Formula One Teams
+<<<TEXT>>>
+Long‑ term renewal deepens Visa’ s presence across Red Bull F1 Teams with enhanced branding, fan access and client experiences Renewed partnership to expand support of Oracle Red Bull Racing and Visa Cash App Racing Bulls. SAN FRANCISCO& FAENZA, Italy& MILTON KEYNES, England---- Visa today announced a multi‑ year renewal and expansion of its global partnership with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3a8fb8ab02b6c5fb
+symbol: V
+published_utc: 2026-02-19T09:08:00Z
+url: https://www.nasdaq.com/press-release/visa-acquire-prisma-medios-de-pago-and-newpay-argentina-2026-02-19
+headline: Visa to Acquire Prisma Medios de Pago and Newpay in Argentina
+<<<TEXT>>>
+Visa today announced that it has entered into a definitive agreement to acquire Prisma Medios de Pago S.A.U. and Newpay S.A.U. in Argentina from Advent International. "This acquisition is an important step for Visa in Argentina, strengthening our client partnerships and advancing innovation across the payments ecosystem," said Ryan McInerney, CEO of Visa." By...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2f883a4287d07aca
+symbol: V
+published_utc: 2026-02-27T08:00:00Z
+url: https://www.nasdaq.com/press-release/visa-completes-acquisition-prisma-and-newpay-2026-02-27
+headline: Visa Completes Acquisition of Prisma and Newpay
+<<<TEXT>>>
+BUENOS AIRES, Argentina& SAN FRANCISCO---- Visa today announced it has completed its acquisition of Prisma Medios de Pago S.A.U. and Newpay S.A.U. in Argentina. This transaction strengthens Visa's commitment to advancing payment innovation and modernizing financial infrastructure across the country. By combining Prisma and Newpay with Visa's global...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3ba0e3e04c00c04f
+symbol: V
+published_utc: 2026-03-03T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-and-bridge-expand-collaboration-plans-bring-stablecoin-linked-cards-over-100
+headline: Visa and Bridge Expand Collaboration, with Plans to Bring Stablecoin-Linked Cards to Over 100 Countries
+<<<TEXT>>>
+Visa, a global leader in digital payments, and Bridge, a leading stablecoin infrastructure platform and a Stripe company, today announced an expansion of their global card issuance product that they first unveiled in 2025. Now, through Bridge’ s partnership with Lead Bank, these card transactions can be settled onchain with Visa. Bridge-enabled...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f6398e4aab4c0a1b
+symbol: V
+published_utc: 2026-03-25T12:00:00Z
+url: https://www.nasdaq.com/press-release/visa-bring-privacy-preserving-payments-canton-network-2026-03-25
+headline: Visa to Bring Privacy-Preserving Payments to Canton Network
+<<<TEXT>>>
+Visa, a global leader in digital payments, today announced it will join the Canton Network as the first major global payments company to serve as a Super Validator, to help extend privacy‑ preserving blockchain infrastructure to banks and financial institutions around the world. Visa will be one of 40 Super Validators on Canton. That move goes straight to a core...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6fafac05ae9aa44a
+symbol: V
+published_utc: 2026-03-26T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-launches-enhanced-subscription-manager-giving-consumers-greater-control-over
+headline: Visa Launches Enhanced Subscription Manager, Giving Consumers Greater Control Over Recurring Payments
+<<<TEXT>>>
+Visa, a global leader in digital payments, today unveiled an Enhanced Subscription Manager solution, a new value‑ added service within its Digital Issuer Solutions business. As the number of subscriptions worldwide is projected to reach 12 billion by 2030, consumers are seeking simple, transparent ways to track and manage recurring charges.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 729638da03175981
+symbol: V
+published_utc: 2026-03-28T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-street-soccer-usa-and-bank-america-bring-visa-street-soccer-parks-every-fifa
+headline: Visa, Street Soccer USA and Bank of America to Bring Visa Street Soccer Parks to Every FIFA World Cup 2026™ Host City in the U.S.
+<<<TEXT>>>
+With 75 days to go until the FIFA World Cup 2026™, Visa and partners expand community investment— bringing additional access to sport, education and opportunity to communities across the U.S.. SAN FRANCISCO and CHARLOTTE, N.C., March 28, 2026/ PRNewswire/-- Visa, the Official Payment Technology Partner of the FIFA World Cup 26™, together with national nonprofit Street...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a9703de1bd7d5681
+symbol: V
+published_utc: 2026-04-01T09:00:00Z
+url: https://www.nasdaq.com/press-release/visa-unveils-new-services-modernize-dispute-resolution-process-2026-04-01
+headline: Visa Unveils New Services to Modernize Dispute Resolution Process
+<<<TEXT>>>
+Visa, a global leader in digital payments, today announced six new dispute resolution tools designed to reduce the billions of dollars lost annually to inefficient, outdated dispute processes. The expanded suite of dispute resolution services is being designed to help merchants and financial institutions cut administrative costs, reduce fraud-related...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 714029099c39f724
+symbol: V
+published_utc: 2026-04-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/visa-defines-next-era-commerce-when-ai-becomes-customer-2026-04-02
+headline: Visa Defines the Next Era of Commerce: When AI Becomes the Customer
+<<<TEXT>>>
+New research from Visa underscores how quickly that shift is gaining momentum. The Visa Business-to-AI Report, conducted in conjunction with Morning Consult, highlights how AI is already influencing demand. The new report also reveals that 53% of U.S. businesses in the survey would allow AI agents to negotiate prices or terms directly with other AI agents on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cd8856e55b1196d0
+symbol: V
+published_utc: 2026-04-08T12:00:00Z
+url: https://www.nasdaq.com/press-release/visa-opens-door-ai-driven-shopping-businesses-worldwide-2026-04-08
+headline: Visa Opens the Door to AI-Driven Shopping for Businesses Worldwide
+<<<TEXT>>>
+Visa Inc. today unveiled Intelligent Commerce Connect, a new solution that makes it easier for businesses to connect to and participate in AI-powered commerce. Intelligent Commerce Connect acts as a network, protocol, and token vault-agnostic‘ on ramp’ to agentic commerce for agent builders, merchants, and enablers. "From small businesses to the world’ s biggest...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8798326bda89dbbb
+symbol: V
+published_utc: 2026-04-09T16:05:00Z
+url: https://www.nasdaq.com/press-release/visa-announce-fiscal-second-quarter-2026-financial-results-april-28-2026-2026-04-09
+headline: Visa to Announce Fiscal Second Quarter 2026 Financial Results on April 28, 2026
+<<<TEXT>>>
+Visa will report its fiscal second quarter 2026 financial results on Tuesday, April 28, 2026. Visa’ s executive management team will then host a live audio webcast beginning at 2:00 p.m. Pacific Time to discuss financial results and business highlights. Visa is a world leader in digital payments, facilitating transactions between consumers, sellers,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e590d670d076498a
+symbol: V
+published_utc: 2026-04-13T09:14:00Z
+url: https://www.nasdaq.com/press-release/visa-commences-exchange-offer-class-b-1-and-class-b-2-common-stock-2026-04-13
+headline: Visa Commences Exchange Offer for Class B-1 and Class B-2 Common Stock
+<<<TEXT>>>
+Visa today commenced an Exchange Offer pursuant to which its Class B-1 and Class B-2 common stock may be exchanged for a combination of Visa’ s Class B-3 common stock, Visa’ s Class C common stock, which will be freely tradeable following temporary transfer restrictions, and, where applicable, cash consideration in lieu of fractional shares.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 17ab126d1f81e58b
+symbol: V
+published_utc: 2026-04-14T09:06:00Z
+url: https://www.nasdaq.com/press-release/visa-launches-validator-node-tempo-blockchain-2026-04-14
+headline: Visa Launches Validator Node on Tempo Blockchain
+<<<TEXT>>>
+Visa, a global leader in digital payments, today announced it has officially launched its validator node on the Tempo network, marking a key milestone in Visa’ s continued advancement of blockchain infrastructure leadership and its role in shaping stablecoin payments. Tempo, the next generation blockchain built for agentic commerce and real-time payments,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4d8a9b221e9a09af
+symbol: V
+published_utc: 2026-04-16T04:00:00Z
+url: https://www.nasdaq.com/press-release/payabl-launches-click-pay-visa-help-merchants-improve-checkout-conversion-and-reduce
+headline: payabl. launches Click to Pay with Visa to help merchants improve checkout conversion and reduce fraud
+<<<TEXT>>>
+payabl. has launched Click to Pay with Visa, a new card payment experience designed to help merchants reduce checkout friction, improve authorisation rates, and deliver a faster, more secure online payment journey. Click to Pay replaces manual card number entry with a token-based checkout experience. "With online checkout, every extra step costs conversion,"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 98c9ce5a6fd5441f
+symbol: V
+published_utc: 2026-04-16T11:00:00Z
+url: https://www.nasdaq.com/press-release/erling-haaland-and-vinicius-junior-front-new-marriott-bonvoy-and-visa-fans-everywhere
+headline: Erling Haaland and Vinicius Júnior Front New Marriott Bonvoy and Visa 'For Fans, Everywhere' Campaign Ahead of FIFA World Cup 2026™
+<<<TEXT>>>
+--As the FIFA World Cup™ returns to North America for the first time in more than three decades, Marriott Bonvoy, Marriott International's award‑ winning travel platform, and Visa, a global leader in digital payments, today announced their joint global campaign: For Fans, Everywhere. Throughout the tournament, For Fans, Everywhere will unlock unparalleled match...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ae7aed2e430f2563
+symbol: V
+published_utc: 2026-04-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/visa-fiscal-second-quarter-2026-financial-results-2026-04-28
+headline: Visa Fiscal Second Quarter 2026 Financial Results
+<<<TEXT>>>
+Visa today announced its fiscal second quarter 2026 financial results through an earnings release that will be furnished with the Securities and Exchange Commission on a Form 8- K and available on its Investor Relations website at investor.visa.com/financial-information/quarterly-earnings/default. aspx. Visa is a world leader in digital payments,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 05eadb01fb15e6da
+symbol: V
+published_utc: 2026-04-29T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-announces-global-expansion-agentic-ready-program-2026-04-29
+headline: Visa Announces Global Expansion of Agentic Ready Program
+<<<TEXT>>>
+Visa Inc. today announced the expansion of its global Agentic Ready program to clients in Asia Pacific and Latin America. First launched with banks and issuing partners across Europe, including the UK, Agentic Ready is designed to support the payments ecosystem as it prepares for the emergence of agent-led commerce. In the United States, Visa has already...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a0ab7c0d353ea16b
+symbol: V
+published_utc: 2026-04-29T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-accelerates-stablecoin-momentum-adding-five-blockchains-settlement-2026-04-29
+headline: Visa Accelerates Stablecoin Momentum: Adding Five Blockchains for Settlement
+<<<TEXT>>>
+Today, Visa announced that it is adding five blockchains to its global stablecoin settlement pilot, expanding how issuers and acquirers can settle with the network. As stablecoins move into mainstream payment flows, Visa’ s stablecoin settlement pilot now supports nine blockchains and has reached a $7 billion annualized stablecoin settlement run rate, up...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b9e0162389f7d272
+symbol: V
+published_utc: 2026-05-04T10:00:00Z
+url: https://www.nasdaq.com/press-release/electronic-arts-and-visa-team-launch-global-multi-year-partnership-ea-sports-2026-05
+headline: Electronic Arts and Visa Team Up to Launch a Global, Multi-Year Partnership With EA SPORTS
+<<<TEXT>>>
+Electronic Arts Inc., a global leader in interactive entertainment, today announced a landmark, multi-year collaboration with Visa, the world’ s leader in digital payments, to deliver the next generation of immersive, player-first experiences across EA SPORTS™ franchises. This press release features multimedia. "We’ re thrilled to be partnering with Visa for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3b1bb243daabac8f
+symbol: V
+published_utc: 2026-05-05T10:30:00Z
+url: https://www.nasdaq.com/press-release/visa-canada-and-wealthsimple-pilot-stablecoin-settlement-canada-2026-05-05
+headline: Visa Canada and Wealthsimple Pilot Stablecoin Settlement in Canada
+<<<TEXT>>>
+This marks a significant milestone in Visa’ s global stablecoin strategy and underscores both companies’ commitment to modernizing the payment infrastructure underpinning commerce across Canada. Canada is a natural home for what comes next," said Michiel Wielhouwer, President and Country Manager, Visa Canada." By bringing stablecoin settlement to Canada...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 31fca52e3193dcaa
+symbol: V
+published_utc: 2026-05-05T10:45:00Z
+url: https://www.nasdaq.com/press-release/visa-expands-agentic-ready-program-canada-advance-ai-driven-commerce-2026-05-05
+headline: Visa Expands ‘Agentic Ready’ Program to Canada to Advance AI-Driven Commerce
+<<<TEXT>>>
+--Visa today announced the expansion of its global program, Visa Agentic Ready, to issuers in Canada. The program is designed to help the Canadian payments ecosystem prepare for the next evolution of commerce, where AI agents may act on behalf of consumers to initiate and complete transactions securely and at scale.  "Visa Agentic Ready gives Canadian issuers a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 89c3de96d1a03e80
+symbol: V
+published_utc: 2026-05-05T16:05:00Z
+url: https://www.nasdaq.com/press-release/visa-participate-upcoming-investor-conferences-2026-05-05
+headline: Visa to Participate in Upcoming Investor Conferences
+<<<TEXT>>>
+Visa today announced its participation in the following investor conferences. On Thursday, May 28, Ryan McInerney, Chief Executive Officer, will present at the Bernstein Strategic Decisions Conference. Visa is a world leader in digital payments, facilitating transactions between consumers, sellers, financial institutions and government entities across...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 012d90a2112c6d7d
+symbol: V
+published_utc: 2026-05-06T08:00:00Z
+url: https://www.nasdaq.com/press-release/visa-canada-and-remitbee-power-instant-secure-canadian-cross-border-payments-2026-05
+headline: Visa Canada and RemitBee to Power Instant, Secure Canadian Cross-Border Payments
+<<<TEXT>>>
+--RemitBee Inc., a Canadian remitter and fintech platform, today announced a collaboration with Visa Canada, a global leader in digital payments. RemitBee was founded in 2015 to address a challenge familiar to many immigrants in Canada: cross-border payments that were often expensive, fragmented, and difficult to navigate. Canada is home to a large and deeply...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a1025cdf29d305e1
+symbol: V
+published_utc: 2026-05-11T09:00:00Z
+url: https://www.nasdaq.com/press-release/visa-announces-expiration-and-results-exchange-offer-class-b-1-and-class-b-2-common
+headline: Visa Announces Expiration and Results of Exchange Offer for Class B-1 and Class B-2 Common Stock
+<<<TEXT>>>
+Visa today announced that its Exchange Offer for Class B-1 and B-2 common stock expired on May 8, 2026. approximately 60.6 million shares of Class B-3 common stock; approximately 23.3 million shares of Class C common stock; and in lieu of issuing fractional shares, Visa will pay cash based on the reported closing Class A common stock price on the NYSE as of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6269d37d04f71d30
+symbol: V
+published_utc: 2026-05-11T10:48:00Z
+url: https://www.nasdaq.com/press-release/your-card-your-security-tap-safer-way-verify-identity-visa-keyno-and-fidelity-bank
+headline: Your Card, Your Security. Tap: A Safer Way to Verify Identity — Visa, Keyno, and Fidelity Bank (Bahamas) Lead the Transformation
+<<<TEXT>>>
+The breakthrough technology showcases Visa's innovation leadership by leveraging advanced EMV cryptography and Visa's proprietary Chip Authenticate service. The solution integrates Visa's robust Transaction Exchange API for real-time card data authentication directly through VisaNet— the world's most advanced payment processing network,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bccb9d7148fb6839
+symbol: V
+published_utc: 2026-05-18T07:00:00Z
+url: https://www.nasdaq.com/press-release/visa-and-jason-sudeikis-turn-simplest-goal-football-biggest-fan-moments-fifa-world
+headline: Visa and Jason Sudeikis Turn the Simplest Goal in Football Into the Biggest Fan Moments at the FIFA World Cup 2026™
+<<<TEXT>>>
+At the FIFA World Cup 2026™, everything can change in a split second. This summer, Visa, the Worldwide Payment Technology Partner of the FIFA World Cup 2026™, is turning those fleeting moments into something much bigger— launching Tap In, a bold new global campaign based on the belief that everything is a tap in with Visa. Visa cardholders across the United States and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8470701fdf2c36e5
+symbol: V
+published_utc: 2026-05-19T23:18:00Z
+url: https://www.nasdaq.com/press-release/visa-canada-brings-visa-street-soccer-park-toronto-2026-05-20
+headline: Visa Canada Brings Visa Street Soccer Park to Toronto
+<<<TEXT>>>
+The park was officially unveiled today at Nathan Phillips Square in collaboration with the City of Toronto. With parks already open in U.S. host cities, Toronto marks the program's expansion into Canada. Open to the public at Nathan Phillips Square until July 19, with plans to relocate to a permanent city location following the tournament Two...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1e89b6a05315e506
+symbol: V
+published_utc: 2026-05-20T07:00:00Z
+url: https://www.nasdaq.com/press-release/men-blazers-media-network-and-visa-team-launch-fan-powered-city-guides-celebrating
+headline: Men in Blazers Media Network and Visa Team Up to Launch Fan-Powered City Guides Celebrating Soccer Culture and Local Small Businesses
+<<<TEXT>>>
+NEW YORK& SAN FRANCISCO---- With millions of travelers set to explore new cities across North America this summer, Men in Blazers Media Network and Visa today announced a new collaboration designed to celebrate the cities, cultures, and small businesses that give the global game its local heartbeat. City Guides were built to offer the authentic, local soccer fan’ s...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8d16cfff9bd4cf22
+symbol: V
+published_utc: 2026-05-20T09:16:00Z
+url: https://www.nasdaq.com/press-release/visa-threats-report-network-security-strengthens-criminals-accelerate-shift-ai
+headline: Visa Threats Report: As Network Security Strengthens, Criminals Accelerate Shift to AI-Enabled Social Engineering
+<<<TEXT>>>
+Visa, a world leader in digital payments, today released its Spring 2026 Biannual Threats Report, revealing that scams have become the fastest-growing source of consumer harm as criminals increasingly use artificial intelligence and social engineering to manipulate people into authorizing payments themselves. From July to December 2025, Visa...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d9efb8cdd714c84e
+symbol: V
+published_utc: 2026-05-27T08:00:00Z
+url: https://www.nasdaq.com/press-release/visa-expands-commercial-solutions-hub-integration-visa-accounts-receivable-manager
+headline: Visa Expands Commercial Solutions Hub with Integration of Visa Accounts Receivable Manager
+<<<TEXT>>>
+Visa Inc., a global leader in digital payments, today announced an expansion of the Visa Commercial Solutions Hub, further strengthening how issuers and suppliers connect to scale virtual card programs. Through a new integration with Visa Accounts Receivable Manager, eligible issuers gain built-in access to end-to-end processing designed to reduce...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 05ed92847f9b0232
+symbol: V
+published_utc: 2026-06-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/visa-and-brale-explore-private-stablecoin-settlement-institutional-payments-2026-06
+headline: Visa and Brale Explore Private Stablecoin Settlement for Institutional Payments
+<<<TEXT>>>
+Visa today announced a collaboration with Brale to explore stablecoin-based settlement using SBC, a U.S. dollar-backed stablecoin issued by Brale, on the Canton Network. The proof of concept will evaluate how privacy-enabled blockchain infrastructure can support faster, more programmable settlement while helping financial institutions and payment...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e92209bfda846f9f
+symbol: V
+published_utc: 2026-06-10T14:00:00Z
+url: https://www.nasdaq.com/press-release/visa-partners-openai-power-next-generation-ai-commerce-2026-06-10
+headline: Visa Partners with OpenAI to Power the Next Generation of AI Commerce
+<<<TEXT>>>
+Visa today announced a strategic collaboration with OpenAI to enable secure Visa payments within agentic commerce, enabling seamless and trusted payments across OpenAI. The companies made the announcement at the Visa Payments Forum in San Francisco. Through the partnership, Visa will provide its global network, credentialing capabilities and security...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c31af49ae123cb06
+symbol: V
+published_utc: 2026-06-10T14:00:00Z
+url: https://www.nasdaq.com/press-release/visa-announces-new-ai-stablecoin-and-token-innovations-power-intelligent-programmable
+headline: Visa Announces New AI, Stablecoin and Token Innovations to Power Intelligent, Programmable Commerce at Visa Payments Forum
+<<<TEXT>>>
+At Visa Payments Forum 2026, Visa today announced new AI, stablecoin and token capabilities designed to help clients unlock the next generation of commerce. These innovations reflect a simple objective: ensuring trust, security and control evolve alongside increasingly fast, automated and intelligent commerce experiences. In a keynote presentation, Jack...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 70fa2f0163b361d2
+symbol: V
+published_utc: 2026-06-15T09:37:00Z
+url: https://www.nasdaq.com/press-release/rockefeller-center-and-visa-announce-partnership-top-rock-observation-deck-2026-06-15
+headline: ROCKEFELLER CENTER AND VISA ANNOUNCE PARTNERSHIP FOR TOP OF THE ROCK OBSERVATION DECK
+<<<TEXT>>>
+--Rockefeller Center and Visa today announced a new partnership, naming Visa a Proud Partner of Top of the Rock, Rockefeller Center's iconic observation deck located on the 67th, 69th, and 70th floors of 30 Rockefeller Plaza. Rooted in a shared commitment to creating meaningful, memorable experiences, the partnership brings together one of New York City's most...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ed1b851de961a094
+symbol: V
+published_utc: 2026-06-24T13:15:00Z
+url: https://www.nasdaq.com/press-release/evo-and-visa-announce-multi-year-partnership-power-global-game-community-2026-06-24
+headline: Evo and Visa Announce Multi-Year Partnership to Power a Global Game Community
+<<<TEXT>>>
+--The Evolution Championship Series, the world's largest and longest-running fighting game tournaments, announced a multi-year partnership with Visa, a world leader in digital payments, to elevate the experience at its global events through early 2028. Evo and Visa will work together to deepen the connection with the game community and help shape cultural...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 303f5fd509473f91
+symbol: V
+published_utc: 2026-06-25T10:00:00Z
+url: https://www.nasdaq.com/press-release/visa-redefines-its-role-travel-global-launch-visa-destinations-2026-06-25
+headline: Visa Redefines Its Role in Travel With the Global Launch of Visa Destinations
+<<<TEXT>>>
+Visa, a global leader in digital payments, today announced the launch of Visa Destinations, a passion-led travel platform live in 10 major locations around the world, as the company redefines its role in the rapidly growing experience-driven travel economy. Visa Destinations is available and curating experiences in 10 locations, including Paris, London,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cb070621e91c4f62
+symbol: V
+published_utc: 2026-06-30T09:00:00Z
+url: https://www.nasdaq.com/press-release/visa-ai-and-digital-commerce-power-global-economy-growth-amid-rising-costs-2026-06-30
+headline: Visa: AI and Digital Commerce Power Global Economy Growth Amid Rising Costs
+<<<TEXT>>>
+The global economy is expected to grow 2.4% in 2026, according to Visa Business and Economic Insights’ 2026 Midyear Global Economic Outlook. "As digital commerce continues to reshape how people shop and pay, consumers are finding more ways to compare prices and stretch their budgets, helping to keep inflation in check," said Wayne Best, chief economist at Visa." We’...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e6072d951a41c1a1
+symbol: V
+published_utc: 2026-07-07T16:05:00Z
+url: https://www.nasdaq.com/press-release/visa-announce-fiscal-third-quarter-2026-financial-results-july-28-2026-2026-07-07
+headline: Visa to Announce Fiscal Third Quarter 2026 Financial Results on July 28, 2026
+<<<TEXT>>>
+Visa will report its fiscal third quarter 2026 financial results on Tuesday, July 28, 2026. Visa’ s executive management team will then host a live audio webcast beginning at 2:00 p.m. Pacific Time to discuss financial results and business highlights. This quiet period will be in place until fiscal third quarter 2026 earnings are publicly available on July...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 91a0570745bd8106
+symbol: V
+published_utc: 2026-07-08T09:00:00Z
+url: https://www.nasdaq.com/press-release/visa-research-great-wealth-transfer-already-reshaping-how-americans-spend-2026-07-08
+headline: Visa Research: The Great Wealth Transfer Is Already Reshaping How Americans Spend
+<<<TEXT>>>
+The research estimates that approximately $36 trillion will transfer from baby boomers to Gen X and millennial households over the next 20 years. The result: approximately $36 trillion transferring to Gen X and millennial households over the next 20 years, equivalent to roughly $515,000 per inheriting household. Nearly 75 percent of those receiving an...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f3e9e471c5f5f1b2
+symbol: V
+published_utc: 2026-07-14T09:00:00Z
+url: https://www.nasdaq.com/press-release/visa-introduces-ai-financial-assistant-helping-banks-guide-customers-insight-action
+headline: Visa Introduces AI Financial Assistant, Helping Banks Guide Customers from Insight to Action
+<<<TEXT>>>
+Visa, a global leader in digital payments, today announced AI Financial Assistant, a new value‑ added service designed to help financial institutions evolve their apps for an AI‑ driven era. The feature helps banks bring AI-powered financial insights to cardholders under their own brand, look and feel with no custom development required. "Consumers are already...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 89ca3cf8ef3617a5
+symbol: V
+published_utc: 2026-07-15T03:00:00Z
+url: https://www.nasdaq.com/press-release/thredd-joins-visa-agentic-ready-programme-bringing-agent-network-readiness-issuers
+headline: Thredd Joins The Visa Agentic Ready Programme, Bringing Agent Network Readiness To Issuers Across Europe, Starting With Zilch
+<<<TEXT>>>
+Thredd, the AI-first issuer processing platform, today announced it has joined the Visa Agentic Ready programme, enabling issuers across Europe to participate in agent-initiated payments without rebuilding their payments infrastructure. Consumer payments platform Zilch will be among the first issuers on the platform to enable agent-initiated...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6efbe41987f3cb82
+symbol: V
+published_utc: 2026-07-16T10:30:00Z
+url: https://www.nasdaq.com/press-release/visa-introduces-platform-stablecoin-minting-movement-and-management-2026-07-16
+headline: Visa Introduces Platform for Stablecoin Minting, Movement and Management
+<<<TEXT>>>
+Today, Visa announced the Visa Stablecoin Platform, a new enterprise platform designed to help financial institutions, fintechs, and crypto natives access stablecoin capabilities through a single Visa- managed environment. This press release features multimedia. "Stablecoins are opening up a new layer of programmable money, but for most institutions the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 11d27bd15c00720b
+symbol: V
+published_utc: 2026-07-22T07:00:00Z
+url: https://www.nasdaq.com/press-release/new-visa-data-reveals-how-fifa-world-cup-2026tm-created-pop-economies-across-canada
+headline: New Visa Data Reveals How the FIFA World Cup 2026™ Created Pop-Up Economies Across Canada, Mexico and the United States
+<<<TEXT>>>
+After the final whistle blew on the FIFA World Cup 2026™, millions of fans returned home with unforgettable memories and a trail of economic activity that stretched across countries. Every tap to pay left a lasting impact, as spending throughout the tournament delivered a meaningful boost to merchants and local economies across host cities in Canada, Mexico...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cfc4c02f67ab0ef5
+symbol: V
+published_utc: 2026-07-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/visa-fiscal-third-quarter-2026-financial-results-2026-07-28
+headline: Visa Fiscal Third Quarter 2026 Financial Results
+<<<TEXT>>>
+Visa today announced its fiscal third quarter 2026 financial results through an earnings release that will be furnished with the Securities and Exchange Commission on a Form 8- K and available on its Investor Relations website at investor.visa.com/financial-information/quarterly-earnings/default. aspx. Visa will host a live audio webcast at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 56f461282d3e7ef9
+symbol: V
+published_utc: 2026-08-03T08:30:00Z
+url: https://www.nasdaq.com/press-release/visa-acquire-biocatch-2026-08-03
+headline: Visa to Acquire BioCatch
+<<<TEXT>>>
+SAN FRANCISCO& TEL AVIV, Israel---- Visa today announced it has signed a definitive agreement to acquire BioCatch, a leading provider of behavioral-first, multi-signal fraud intelligence, from funds advised by Permira and other shareholders for $2.4 billion in cash. "Account takeovers and scams cost the global economy over $1 trillion annually and AI is enabling...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dc4683935624907f
+symbol: V
+published_utc: 2026-08-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/new-visa-data-shows-fifa-world-cup-2026tm-drove-spending-surges-246-toronto-and
+headline: New Visa Data Shows FIFA World Cup 2026™ Drove Spending Surges of Up to 24.6% in Toronto and Vancouver
+<<<TEXT>>>
+Matchday spending rose as much as 24.6% in Toronto and 12.7% in Vancouver compared to the same period in 2025, highlighting how major sporting events can create temporary and highly concentrated" pop-up economies" driven by increased consumer spending and international visitors. Visa’ s analysis of card-present spending in Toronto and Vancouver during...
+<<<END>>>

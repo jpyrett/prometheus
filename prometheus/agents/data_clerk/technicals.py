@@ -20,6 +20,9 @@ MIN_BARS = {
     "rsi_14": 30, "macd_hist": 60, "bollinger_pct_b": 20, "zscore_21d": 21, "adx_14": 40, "atr_14": 20, "atr_pct": 20, "obv_20d_change": 21, "stoch_k_14": 14,
     "vol_21d_ann": 22, "vol_63d_ann": 64, "max_drawdown_63d": 63, "beta_63d": 64, "corr_63d_spy": 64,
     "adv_20d_dollars": 20, "volume_ratio_1d": 21,
+    "sma_50_vs_200": 200, "cross_50_200_20d": 220, "structure_63d": 63,   # chart patterns the Critic reads (Critic v1 Amendment 1, design choices entry 62)
+    "decline_from_peak_63d": 63, "rebound_from_trough_63d": 63, "sessions_since_trough_63d": 63,
+    "sma_126": 126, "high_126d": 126, "low_126d": 126,   # the six-month average, high and low: what the Critic judges a price against (Critic v1 spec 5.1)
 }
 
 
@@ -58,6 +61,91 @@ def pct_of_52w_high(bars: list[Bar]) -> float | None:
 def sma(bars: list[Bar], n: int) -> float | None:
     """The simple mean of the last n closes."""
     return fmean(_closes(bars[-n:])) if len(bars) >= n else None
+
+
+def high_126d(bars: list[Bar]) -> float | None:
+    """The highest HIGH of the last 126 bars (six months of sessions). None below 126 bars: the window is never shortened."""
+    return max(b.high for b in bars[-126:]) if _enough(bars, "high_126d") else None
+
+
+def low_126d(bars: list[Bar]) -> float | None:
+    """The lowest LOW of the last 126 bars (six months of sessions). None below 126 bars."""
+    return min(b.low for b in bars[-126:]) if _enough(bars, "low_126d") else None
+
+
+CROSS_WINDOW = 20   # a crossing of the 50- and 200-day means counts as recent for this many sessions
+
+
+def sma_50_vs_200(bars: list[Bar]) -> float | None:
+    """`sma_50 / sma_200 - 1`: positive when the 50-day mean is above the 200-day mean (the "golden" side), negative on the "death" side."""
+    if not _enough(bars, "sma_50_vs_200"):
+        return None
+    slow = sma(bars, 200)
+    return sma(bars, 50) / slow - 1 if slow else None
+
+
+def cross_50_200_20d(bars: list[Bar]) -> int | None:
+    """When the 50-day mean last crossed the 200-day mean, within the last 20 sessions: `+age` for a golden cross (it went from at-or-under to above), `-age` for a death cross (from above to
+    at-or-under), `0` when there was none. `age` is 1 for the latest bar, 2 for the one before, up to 20. The two means are worked out again at every bar, from that bar's own closes."""
+    if not _enough(bars, "cross_50_200_20d"):
+        return None
+    closes = _closes(bars)
+
+    def above(end: int) -> bool:   # the means at the bar closes[end - 1]
+        return fmean(closes[end - 50:end]) > fmean(closes[end - 200:end])
+
+    for age in range(1, CROSS_WINDOW + 1):
+        end = len(closes) - (age - 1)
+        now, before = above(end), above(end - 1)
+        if now != before:
+            return age if now else -age
+    return 0
+
+
+def structure_63d(bars: list[Bar]) -> str | None:
+    """The shape of the last 63 sessions as three windows of 21: `"up"` when the highest high AND the lowest low both rise from each window to the next (higher highs and higher lows),
+    `"down"` when both fall (lower highs and lower lows), else `"mixed"`."""
+    if not _enough(bars, "structure_63d"):
+        return None
+    windows = (bars[-63:-42], bars[-42:-21], bars[-21:])
+    highs, lows = [max(b.high for b in w) for w in windows], [min(b.low for b in w) for w in windows]
+    if highs[0] < highs[1] < highs[2] and lows[0] < lows[1] < lows[2]:
+        return "up"
+    if highs[0] > highs[1] > highs[2] and lows[0] > lows[1] > lows[2]:
+        return "down"
+    return "mixed"
+
+
+def _peak_and_trough(bars: list[Bar]) -> tuple[list[float], int, int | None]:
+    """(the last 63 closes, the index of their peak (the first of equal ones), the index of the lowest close AFTER the peak (the latest of equal ones), None when the peak is the latest bar))."""
+    closes = _closes(bars[-63:])
+    peak = max(range(len(closes)), key=lambda i: (closes[i], -i))
+    after = range(peak + 1, len(closes))
+    return closes, peak, (min(after, key=lambda i: (closes[i], -i)) if len(after) else None)
+
+
+def decline_from_peak_63d(bars: list[Bar]) -> float | None:
+    """`trough / peak - 1` over the last 63 closes: how far it fell from the peak close to the lowest close after it (a negative number; 0.0 when the peak is the latest bar)."""
+    if not _enough(bars, "decline_from_peak_63d"):
+        return None
+    closes, peak, trough = _peak_and_trough(bars)
+    return 0.0 if trough is None else closes[trough] / closes[peak] - 1
+
+
+def rebound_from_trough_63d(bars: list[Bar]) -> float | None:
+    """`close[-1] / trough - 1`: how far the price has bounced off that lowest close (0.0 when the peak is the latest bar)."""
+    if not _enough(bars, "rebound_from_trough_63d"):
+        return None
+    closes, _, trough = _peak_and_trough(bars)
+    return 0.0 if trough is None else closes[-1] / closes[trough] - 1
+
+
+def sessions_since_trough_63d(bars: list[Bar]) -> int | None:
+    """How many sessions ago that lowest close was (0 for the latest bar, and 0 when the peak is the latest bar)."""
+    if not _enough(bars, "sessions_since_trough_63d"):
+        return None
+    closes, _, trough = _peak_and_trough(bars)
+    return 0 if trough is None else len(closes) - 1 - trough
 
 
 def above_sma(bars: list[Bar], n: int) -> bool | None:

@@ -717,3 +717,55 @@ that cites an article or a press release counts `kind x 0.5 ** (age_days / 7)` (
 a table of measures, each `clip((x - neutral) / span, -1, 1)` (the table is `blend.measures` of the config); filings also count each verified filing-evidence item and filing-index event as one vote. A part with nothing to say is
 unavailable and counts as 0. The strategy's edge is scaled: `excess = composite x (1 + 0.5 x direction x blend) - cost` (so `confidence = (1 + direction x blend) / 2` and the old formula `composite x (0.5 + confidence)` holds);
 when no strategy passed, `excess = blend x 0.003 - cost` and the stance stays neutral. Design choices entry 55; the walk-through is `design/week5_advisor_implementation.md` section 10.
+
+
+## Amendment 3 (2026-11-12, Jacob): the dilution red flag counts only equity issuance
+
+Section 5.5, `dilution_current`: a share count that rose by less than 1.0% (vesting), an 8-K passage about debt (senior or convertible notes, debentures, capped calls, anti-dilution adjustments) and the "not a public offering" boilerplate of a private issuance no longer make the metric true. A rise of 1.0% or more, proceeds from issuing common stock, and an 8-K passage about an equity offering or an at-the-market programme still do. Why and what it costs: `docs/design_choices.md` entry 60.
+
+
+## Amendment 4 (2026-11-12, Jacob): a breakout path for the trend family
+
+Section 8.3. `above_sma_50` joins the OPTIONAL inputs. A stock above BOTH its 50- and 200-day means is in a confirmed uptrend, and then: (a) the anti-chase limit is `ret_21d ≤ 0.25` (`max_ret_21d_uptrend`) instead of 0.15; (b) when `mom_12_1 ≥ 0.50` (`breakout_min_mom_12_1`) the proximity rule needs `pct_of_52w_high ≥ 0.80` (`breakout_min_pct_of_52w_high`) instead of 0.90. RSI under 75, `%B ≤ 1.05`, residual momentum and `mom_12_1 ≥ 0.15` apply as before; a missing `above_sma_50` leaves the old rules. The notes of a pass say when a relaxed rule was used. The score formula is unchanged. Why: `docs/design_choices.md` entry 61.
+
+
+## Amendment 5 (2026-11-12, Jacob): the `conviction` family, so a high blend can be a recommendation by itself
+
+Section 8 gets a sixth family, `conviction`: the blend of news, performance, historical metrics and filings (Amendment 2) as a strategy of its own. Until now a name needed one of the five strategies to pass before it could be recommended, and the blend alone was worth at most 0.30% against a cost of about 0.20% (`no_strategy_edge_scale`), so a company with good news, a good chart and sound numbers but no strategy trigger (Yum! Brands, 2026-11-12: blend 70, `trend` failing on 12-1 momentum of -2.7%) was never one.
+
+`conviction` (`families.py`, `configs/advisor_v1.json` `families.conviction`). REQUIRED: none (it reads the blend, computed before the families now). OPTIONAL: `rsi_14`. Pass when ALL: `blend.value >= 0.30` (a score of 65); at least 3 of the 4 blend parts have a value (`min_parts`); the news part, when it has a value, is at least 0 (`min_news`); `rsi_14 < 75` when known (`max_rsi`). Score fixed at 0.5 (`score`): the blend already scales every edge, so it is not counted twice. Bullish only. Horizon 40 bars, prior 0.6% (borrowed from `trend`: unmeasured, `basis_ref` `borrowed_from_trend`), regime multipliers trend 1, narrow, stress and recovering 0.5, unknown 1, stop 3 ATR, no family-specific invalidation (the stop, the time stop and a bearish event end it). Eligible in all four sleeves (in the funds sleeve it is not limited to the `trend` regime).
+
+Edge = `0.006 x regime x 0.5 x quality` = 0.30% in a normal regime; the expected excess is that times the blend's scale factor (`1 + 0.5 x blend`) less the cost: 0.14% at a blend of 0.30, 0.20% at 0.60. It is a family like the others: one vote, the best edge wins the composite and the open family, the cooldown is per family. The Critic's counterfactual (Critic spec 8.2) drops the family when the blend, worked again without the quotes the review did not accept, is under `min_blend`. Why and the alternatives: `docs/design_choices.md` entry 63.
+
+
+## Amendment 6 (2026-11-12, Jacob): no cost hurdle; the blend ranks; no profit number is shown
+
+The expected 20-day excess return after cost (sections 9.5 to 9.7) was the Advisor's gate and its ranking key. It is a product of priors nobody has measured, and a few hundredths of a percent decided whether a company such as Procter & Gamble was a recommendation. Amendment 6:
+
+- **Stance** (9.5): bullish when a bullish strategy passed (the composite edge is above zero), bearish when the composite is below zero, else neutral (`stance_reason` `no edge` for an edge of exactly zero; `no family passed` when none did). The `edge_below_cost` reason no longer exists. A new position or an addition still needs a bullish stance.
+- **Score**: `round(50 + 50 x the blend)` (the v0 field `top_recommendation` reads), not the excess. A company with no metrics has none.
+- **Ranking** (9.6): `sort_key` is the blend (highest first), then the larger strategy edge, the confidence, fewer haircuts, lower volatility, the symbol. The sleeve's diversity rule (the next pick is taken from another sector when its blend is at least 80% of the same-sector one's) and the holdings' `add_floor` (the lowest blend among the new ideas picked) use the blend.
+- **Kept, internal**: `ranking.excess_20d_after_cost`, `cost_pct` and `scale_factor` are still worked out and recorded (the Critic checks their arithmetic); nothing decides on them and no report, thesis or card shows them.
+- **Thesis**: the record the model reads says "Score: N of 100 (the blend ...)" and "No return is promised"; the "unmeasured" word rule (section 11) is removed with the number it labelled.
+- **Report**: the ranking table has no "Excess 20d" column and is "ranked by the blended score"; a recommendation's line has no expected return; the empty case reads "no strategy passed for any company".
+- **Critic** (its Amendment 3 removed the matching rule): `stance.action` needs a bullish stance with a composite above zero, and `recompute.score` is `round(50 + 50 x the blend)`.
+
+Reasons and what it costs: `docs/design_choices.md` entry 66.
+
+
+## Amendment 7 (2026-11-12, Jacob): the expected return after cost is removed from the record
+
+The expected 20-day excess return after cost was a product of fixed priors (a 0.3% to 0.6% edge per strategy, a 0.2% cost) that this system has not measured, and it is not a reliable evaluator. Amendment 6 stopped using it; Amendment 7 removes it.
+
+- `Ranking.cost_pct`, `Ranking.scale_factor`, `Ranking.excess_20d_after_cost` and `Candidate.excess_20d_after_cost` are gone from the records; `Scored.excess`, `cost_pct` and `scale_factor`, `ranking.cost_of` and `ranking.v1_score` are gone from the code; `rank_symbol(s)` takes no regime and no config.
+- Config keys removed: `ranking.edge_scale`, `ranking.default_half_spread`, `ranking.slippage`, `ranking.stress_cost_multiplier`, `blend.scale_strength`, `blend.no_strategy_edge_scale`.
+- The Critic's checks `recompute.scale` and `recompute.excess` are removed. What the Critic still works again: the composite, the blend and its parts, the confidence `(1 + direction x blend) / 2` and the score `round(50 + 50 x blend)`.
+- The strategy edge (`FamilyResult.edge_20d`, the prior x regime x score x quality) stays: it chooses the strongest strategy and the composite, and still sizes the target price of the trade plan. It is a ranking of strategies, not a promised return, and no report shows it as one.
+- Not built, by decision: a tracker of the realized outcomes of past recommendations. Past outcomes do not predict the future.
+
+Reasons: `docs/design_choices.md` entry 68.
+
+
+## Amendment 8 (2026-11-12, Jacob): `dilution_current` is not evaluated
+
+Section 5.5's metric `dilution_current` is removed from the Data Clerk, and every rule that read it is removed from the Advisor: the `red_flag` leg, the quality haircut (factor 0.6), the filings blend measure, the REQUIRED input of `capital_return`, that family's bearish vote (score 0.6, prior −0.3%, including a cited 8-K or derived dilution item) and its `metric_crossed` invalidation. `families.capital_return.prior_bearish` and `bearish_score` are removed with the vote. `share_count_change` is unchanged. A news class `dilution_offering` is unchanged. Why: `docs/design_choices.md` entry 70.

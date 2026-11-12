@@ -14,9 +14,33 @@ class EmptyStore:
     def similarity_search_with_score(self, query, k=4, filter=None):
         return []
 
+    def get(self, ids=None, include=None, **options):
+        return {"ids": [], "documents": [], "metadatas": []}
+
 
 @pytest.fixture(autouse=True)
 def no_real_collections(request, monkeypatch):
     if "real_embeddings" in request.fixturenames:
         return
     monkeypatch.setattr("prometheus.rag.retriever.get_vector_store", lambda kind="news": EmptyStore())
+
+
+@pytest.fixture(autouse=True)
+def market_hours_count(monkeypatch):
+    """The Critic reads IGNORE_MARKET_HOURS from the environment, then from .env. A test must not inherit Jacob's .env: the closed market stays a blocker unless a test sets the flag itself."""
+    monkeypatch.setenv("IGNORE_MARKET_HOURS", "false")
+
+
+@pytest.fixture(autouse=True)
+def no_writes_to_the_real_ledger(monkeypatch):
+    """No test may append to the project's real ledgers (data/ledger/: the Advisor's recommendations and the Critic's reviews, which a real run reads and writes). A test passes its own ledger in a temporary folder."""
+    from prometheus.memory.ledger import Ledger
+    from prometheus.rag.config import REPO_ROOT
+    real, original = REPO_ROOT / "data" / "ledger", Ledger.append
+
+    def guarded(self, record):
+        if real in self.path.parents:
+            raise AssertionError(f"a test tried to write to the real ledger {self.path}: give the Advisor or the Critic a ledger in a temporary folder")
+        return original(self, record)
+
+    monkeypatch.setattr(Ledger, "append", guarded)

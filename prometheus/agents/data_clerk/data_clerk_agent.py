@@ -54,7 +54,7 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 
-from prometheus.common.work_order import DataResult, WorkOrder, attach_result, corpus_of, sector_map, verify_metric_request, verify_quote_request, verify_request
+from prometheus.common.work_order import HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, sector_map, verify_metric_request, verify_quote_request, verify_request, verify_verification_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.prompts.data_clerk import COMPANIES_RETRY, LAST_TURN, companies_prompt, repair_message, system_prompt
 from prometheus.rag.citations import SourceBook
@@ -317,7 +317,7 @@ class DataClerk:
         """The Data Clerk's agent call (the design's `DataClerk.request_data`): check the work order, answer its query, put the
         result on the order, check that, and return the SAME order. An order that already has its data comes back unchanged. A request the Data Clerk should not
         take is not an exception: the order comes back `data_failed` with the reasons in `errors`."""
-        if order.status in ("data_ready", "recommended"):
+        if order.status in HAS_DATA:
             return order  # it already has its data: a repeated request changes nothing (and never damages a good order)
         reasons = verify_request(order)
         if reasons:
@@ -333,7 +333,7 @@ class DataClerk:
         There is no model call: a price is one lookup, so the Data Clerk calls its own `get_quote` tool (`DataClerkTools.get_quote`, the tool the model is also offered and the MCP
         server serves) once per symbol, in code. A symbol that fails (not a ticker, unknown to Finnhub, the API down) is named in `order.errors` and the order is `data_failed`;
         the quotes that did come back stay on the order, so a caller can see what it has. An order that already has its data comes back unchanged."""
-        if order.status in ("data_ready", "recommended"):
+        if order.status in HAS_DATA:
             return order
         reasons = verify_quote_request(order)
         if reasons:
@@ -362,7 +362,7 @@ class DataClerk:
         also offered) in code. A metric that cannot be computed is `value: None` with a note: that is a result, not a failure. The order is `data_failed` only when a symbol could not be read at
         ALL (no stored bars, no Finnhub payload and no stored filings), and that symbol is named in `order.errors`; every other symbol keeps its results. What could not be read for a symbol
         that has other data (a Finnhub call that failed, no stored filings) is in `data.notes`. An order that already has its data comes back unchanged."""
-        if order.status in ("data_ready", "recommended"):
+        if order.status in HAS_DATA:
             return order
         reasons = verify_metric_request(order)
         if reasons:
@@ -387,6 +387,71 @@ class DataClerk:
         order.data = DataResult(answer=f"{len(order.metrics)} metrics for {len(symbols)} symbols", metrics=found["results"], problems=failed, notes=notes, tool_calls=[call], completed_utc=_utc_now())
         order.errors = [*order.errors, *failed]
         order.status = "data_failed" if failed else "data_ready"
+        return order
+
+    def request_verification(self, order: WorkOrder, now: datetime | None = None) -> WorkOrder:
+        """The Data Clerk's agent call for a `verify_data` order (Critic v1 spec section 5.2, design choices entry 58): read again, from the stores, what a recommendation rests on, and put the answer on
+        `order.data.verification`; the SAME order is returned. `order.verify` says what (`verify_verification_request` is the check):
+
+            chunks    stored chunk ids, read again with their text                                  (`DataClerkTools.read_sources`)
+            evidence  {symbol: [E ids]}, the filing-evidence items, read again from the stored filings  (`read_evidence`)
+            symbols   tickers, looked up in Finnhub's directory: listed, and under which name        (`symbols.find_symbol`)
+            fresh     the newest stored news and press releases of each symbol                        (`recent_sources`, no relevance bar)
+
+        There is no model call: a lookup is a lookup, and this Data Clerk answers a Critic that wants to know whether the Advisor's evidence is real, so nothing here may be "reasoned". Nothing is
+        fetched and nothing is written. A chunk that is not found is a RESULT (`found: False` with a note), not a failure; a symbol whose lookup failed is `listed: None`, never `False` (a rate limit is not
+        "not listed"). Each part that raises is named in `order.errors`; the order is `data_failed` only when the request is refused or EVERY part failed. An order that already has its data comes back unchanged."""
+        if order.status in HAS_DATA:
+            return order
+        reasons = verify_verification_request(order)
+        if reasons:
+            order.status, order.errors = "data_failed", [*order.errors, *reasons]
+            return order
+        spec, answer, calls, problems = order.verify, {"chunks": {}, "evidence": {}, "symbols": {}, "fresh": {}}, [], []
+        attempted = failed = 0
+
+        def part(name: str, args: dict, call) -> bool:
+            """Run one part: record the tool call and, when it raises, the problem. Returns whether it worked."""
+            nonlocal attempted, failed
+            attempted += 1
+            try:
+                call()
+            except Exception as error:  # the kind and a short message, never request details
+                failed += 1
+                calls.append({"name": name, "args": args, "outcome": "error"})
+                problems.append(f"{name}{' ' + args['symbol'] if 'symbol' in args else ''}: {type(error).__name__}: {' '.join(str(error).split())[:160]}")
+                return False
+            calls.append({"name": name, "args": args, "outcome": "ok"})
+            return True
+
+        chunks = list(dict.fromkeys(spec.get("chunks", [])))
+        if chunks:
+            with _RETRIEVE_LOCK:
+                part("read_sources", {"chunks": len(chunks)}, lambda: answer["chunks"].update(self.tools.read_sources(chunks)))
+        for symbol, ids in spec.get("evidence", {}).items():
+            part("read_evidence", {"symbol": symbol, "ids": len(ids)}, lambda s=symbol, i=ids: answer["evidence"].__setitem__(s, self.tools.read_evidence(s, i)))
+        wanted = list(dict.fromkeys(spec.get("symbols", [])))
+        search = self._paced(self.symbol_search or symbols.search_finnhub) if wanted else None
+        for symbol in wanted:
+            attempted += 1
+            try:
+                found = symbols.find_symbol(symbol, search)
+                answer["symbols"][symbol] = {"listed": found is not None, "company": found.company if found else None, "note": None if found else "Finnhub's directory has no such symbol"}
+                calls.append({"name": "find_symbol", "args": {"symbol": symbol}, "outcome": "ok"})
+            except Exception as error:  # a lookup that FAILED (rate limit, no key): unknown, not "not listed"
+                answer["symbols"][symbol] = {"listed": None, "company": None, "note": f"the lookup failed ({getattr(error, 'reason', type(error).__name__)})"[:160]}
+                calls.append({"name": "find_symbol", "args": {"symbol": symbol}, "outcome": "error"})
+                problems.append(f"find_symbol {symbol}: {answer['symbols'][symbol]['note']}")
+                failed += 1
+        fresh = spec.get("fresh")
+        for symbol in wanted if fresh else []:
+            with _RETRIEVE_LOCK:
+                part("recent_sources", {"symbol": symbol}, lambda s=symbol: answer["fresh"].__setitem__(
+                    s, self.tools.recent_sources(s, spec.get("company", {}).get(s), fresh.get("since_days", 14), fresh.get("k", 8), now)))
+        order.data = DataResult(answer=f"read again: {len(answer['chunks'])} chunks, {sum(len(v) for v in answer['evidence'].values())} evidence items, {len(answer['symbols'])} symbols, "
+                                       f"{sum(len(v) for v in answer['fresh'].values())} newer sources", verification=answer, problems=problems, tool_calls=calls, completed_utc=_utc_now())
+        order.errors = [*order.errors, *problems]
+        order.status = "data_failed" if attempted and failed == attempted else "data_ready"
         return order
 
     # ---------------------------------------------------------------- a phrase to companies, and the data for them (design choices entry 53)

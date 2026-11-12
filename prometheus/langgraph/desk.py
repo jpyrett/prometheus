@@ -12,6 +12,11 @@ The graph:
                    |                +-- the data is not ready (failed, or no search was made) --> END
                    +-- the request is not valid --> END
 
+    with_critic=True (Critic v1, entries 56 to 59; `--critic`):
+    START -> account_manager -> data_clerk -> advisor -> critic -> account_manager_decision -> END     (or -> account_manager_funds -> END with with_funds)
+                                                  |
+                                                  +-- no recommendations --> END
+
 Each node is one agent of the week 2 design, reduced to what exists today, and each one reads and updates the SAME work order, which is the
 state of the graph (the design: "the saved WORK_ORDER is the same object every agent reads"):
 
@@ -20,6 +25,9 @@ state of the graph (the design: "the saved WORK_ORDER is the same object every a
   data_clerk       `DataClerk.request_data(order)`: fetches if the order is live, searches, answers, then (entry 40) searches the stored sources the model did not search and reads the filing
                    evidence, so the order carries all three; puts the data and the sources on the order.
   advisor          `Advisor.advise(order)`: reads the chunks, `data.results` and `data.filing_evidence` on the order and appends recommendations with a calculated score.
+  critic           (only with `build_desk(with_critic=True)`, entries 56 to 59) the Advisor then runs `generate_recommendations` (the Critic reads schema 2 records) and the Critic approves or denies each one: it asks the
+                   Data Clerk for the numbers, a quote and the sources again, judges risk against the user's profile, timing and value, and puts a review beside each recommendation (`order.reviews`).
+  account_manager_decision  (only with the Critic) the Account Manager turns each verdict into a trade decision (`order.trade_decisions`): trade on its own (Auto), ask the user (Ask), or not at all.
   account_manager_funds  (only with `build_desk(with_funds=True)`, entry 42) the Account Manager's RaiseFunds: it takes the best recommendation (or the stock the user named), asks the Data Clerk for the
                    current prices, and runs a Tree of Thought for what to sell from the user's portfolio to buy it. Its answer is `state["funds"]`; the work order is not changed.
 
@@ -55,16 +63,21 @@ import json
 import re
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Annotated, Callable, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
-from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO, AccountManager, report as funds_report, top_recommendation
+from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO, DEFAULT_PROFILE, AccountManager, report as funds_report, top_recommendation
+from prometheus.agents.account_manager.decisions import terminal_approver
 from prometheus.agents.advisor.advisor import Advisor
+from prometheus.agents.critic.critic import Critic
+from prometheus.agents.critic.report import review_section
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
+from prometheus.common.market_calendar import eastern_date
 from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, WIRED_SOURCES, WorkOrder, new_work_order, verify_request
-from prometheus.common.portfolio import load_portfolio
+from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.rag.loaders import check_symbol
 from prometheus.tools import symbols
 
@@ -157,14 +170,33 @@ def _timed(name: str, step: Callable[[DeskState], dict]) -> Callable[[DeskState]
 
 def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, advisor_factory: Callable[[WorkOrder], Advisor] | None = None,
                with_advisor: bool = True, resolver: Callable[[str], symbols.Resolution] | None = None,
-               with_funds: bool = False, funds_factory: Callable[[], AccountManager] | None = None):
+               with_funds: bool = False, funds_factory: Callable[[], AccountManager] | None = None,
+               with_critic: bool = False, critic_factory: Callable[[WorkOrder], Critic] | None = None, approver: Callable[[dict], bool | None] | None = None,
+               clock: Callable[[], datetime] | None = None):
     """The compiled graph. The factories make the agents for an order (fakes in tests); by default the Data Clerk may fetch only if the order is
     live, and the Advisor uses the advisor role's model. `resolver` turns a company name into a ticker (a fake in tests; the Finnhub lookup of
     prometheus/tools/symbols.py by default, found when it is called). `with_funds` adds the `account_manager_funds` node after the Advisor (entry 42); `funds_factory` makes its
-    AccountManager (a fake model in tests). The request then carries `funds`: {"portfolio": a file path or a Portfolio, "shares": how many to buy, "buy": the symbol, optional}."""
+    AccountManager (a fake model in tests). The request then carries `funds`: {"portfolio": a file path or a Portfolio, "shares": how many to buy, "buy": the symbol, optional}.
+
+    `with_critic` (Critic v1, entries 56 to 59) puts two nodes after the Advisor, `critic` and `account_manager_decision`, and makes the Advisor run `generate_recommendations` instead of `advise` (the Critic
+    reads schema 2 records). The request then carries `account`: {"portfolio": a path or a Portfolio, "profile": a path or a UserProfile, "mode": "ask" or "auto", all optional: the sample files and the
+    profile's own mode}. `critic_factory` makes the Critic for an order (fakes in tests), `approver` is asked about each recommendation that needs the user (Ask mode; None: it stays pending), and `clock`
+    returns the aware moment everything is dated and judged at (a fake in tests; the real clock by default). The date a recommendation is made on is the US EASTERN date of that moment, never the UTC one."""
     clerk_factory = clerk_factory or (lambda order: DataClerk(allow_fetch=order.live))
     advisor_factory = advisor_factory or (lambda order: Advisor())
     funds_factory = funds_factory or (lambda: AccountManager())
+    critic_factory = critic_factory or (lambda order: Critic())
+    clock = clock or (lambda: datetime.now(timezone.utc))
+
+    def account(state: DeskState) -> tuple[AccountManager, Portfolio]:
+        """The Account Manager with the user's profile, and the user's portfolio, from `request["account"]` (the sample files when it says nothing). Raises ValueError or RuntimeError, with a message
+        that names the setting and never a value."""
+        spec = state["request"].get("account") or {}
+        portfolio = spec.get("portfolio", DEFAULT_PORTFOLIO)
+        manager = funds_factory()
+        manager.profile = spec.get("profile") or DEFAULT_PROFILE
+        _ = manager.profile                    # read it now: a profile that is not valid is an error HERE, where a node can report it, and not later inside the Critic's call
+        return manager, portfolio if isinstance(portfolio, Portfolio) else load_portfolio(portfolio)
 
     def account_manager(state: DeskState) -> dict:
         request, resolution = state["request"], None
@@ -198,27 +230,61 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         order = state["order"]
         try:
             agent = advisor_factory(order)
-        except (RuntimeError, ValueError) as error:
+            portfolio = account(state)[1] if with_critic else None
+        except (RuntimeError, ValueError, OSError) as error:
             order.errors = [*order.errors, f"the Advisor could not start: {error}"]
             return {"order": order}
+        if with_critic:   # version 1: the Critic reads schema 2 records. The case is the order's own, else inferred from its subject
+            return {"order": agent.generate_recommendations(order, portfolio, today=eastern_date(clock()))}
         return {"order": agent.advise(order)}
+
+    def critic(state: DeskState) -> dict:
+        """The Critic approves or denies each recommendation: never raises, and never changes a recommendation."""
+        order = state["order"]
+        try:
+            manager, portfolio = account(state)
+            agent = critic_factory(order)
+        except (RuntimeError, ValueError, OSError) as error:
+            order.errors = [*order.errors, f"the Critic could not start: {error}"]
+            return {"order": order}
+        return {"order": agent.review_recommendations(order, manager.risk_view(), portfolio, clock())}
+
+    def account_manager_decision(state: DeskState) -> dict:
+        """The Account Manager turns each review into a trade decision: Auto trades, Ask asks the user, a denial is final."""
+        order = state["order"]
+        try:
+            manager, portfolio = account(state)
+        except (RuntimeError, ValueError, OSError) as error:
+            order.errors = [*order.errors, f"the Account Manager could not decide: {error}"]
+            return {"order": order}
+        return {"order": manager.decide_trades(order, portfolio, approver, clock(), (state["request"].get("account") or {}).get("mode"))}
 
     def account_manager_funds(state: DeskState) -> dict:
         """RaiseFunds for the best recommendation: never raises, and never changes the work order."""
         spec = state["request"].get("funds") or {}
         order = state["order"]
-        target = spec.get("buy") or top_recommendation(order)
+        trades = [d for d in order.trade_decisions if d["will_trade"] in ("yes_auto", "yes_user") and d["action"] != "reduce"]   # with the Critic: what it approved and the user or Auto allowed
+        target = spec.get("buy") or (trades[0]["symbol"] if trades else None if with_critic else top_recommendation(order))
+        if not spec.get("shares") and trades and trades[0]["symbol"] == target:
+            spec = {**spec, "shares": trades[0]["shares"]}
         if not target:
-            return {"funds": {"status": "refused", "errors": ["the Advisor made no recommendation with a verified bullish score to buy, and no symbol was given"], "quotes": {}, "run": {}}}
+            return {"funds": {"status": "refused", "errors": ["the Critic approved no purchase that was allowed to trade, and no symbol was given" if with_critic else
+                                                              "the Advisor made no recommendation with a verified bullish score to buy, and no symbol was given"], "quotes": {}, "run": {}}}
         try:
-            portfolio = spec["portfolio"] if not isinstance(spec.get("portfolio"), (str, Path)) else load_portfolio(spec["portfolio"])
+            chosen = spec["portfolio"] if "portfolio" in spec or not with_critic else (state["request"].get("account") or {}).get("portfolio", DEFAULT_PORTFOLIO)   # with the Critic: the user's own portfolio
+            portfolio = chosen if not isinstance(chosen, (str, Path)) else load_portfolio(chosen)
             manager = funds_factory()
         except (KeyError, ValueError, OSError, RuntimeError) as error:  # no portfolio, a bad portfolio file, or a missing key: the message names the setting, never a value
             return {"funds": {"status": "refused", "errors": [f"the Account Manager could not start: {error}"], "quotes": {}, "run": {}}}
         return {"funds": manager.raise_funds(portfolio, target, spec.get("shares", 1))}
 
     def after_advisor(state: DeskState) -> str:
+        if with_critic:
+            return "critic" if state["order"].status == "recommended" and state["order"].recommendations else END
         return "account_manager_funds" if with_funds and state["order"].status == "recommended" else END
+
+    def after_decision(state: DeskState) -> str:
+        return "account_manager_funds" if with_funds and state["order"].status in ("decided", "reviewed") else END
 
     def after_account_manager(state: DeskState) -> str:
         return "data_clerk" if state.get("order") is not None and not state.get("errors") else END
@@ -230,12 +296,23 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     graph.add_node("account_manager", _timed("account_manager", account_manager))
     graph.add_node("data_clerk", _timed("data_clerk", data_clerk))
     graph.add_node("advisor", _timed("advisor", advisor))
+    if with_critic:
+        graph.add_node("critic", _timed("critic", critic))
+        graph.add_node("account_manager_decision", _timed("account_manager_decision", account_manager_decision))
     if with_funds:
         graph.add_node("account_manager_funds", _timed("account_manager_funds", account_manager_funds))
     graph.add_edge(START, "account_manager")
     graph.add_conditional_edges("account_manager", after_account_manager, {"data_clerk": "data_clerk", END: END})
     graph.add_conditional_edges("data_clerk", after_data_clerk, {"advisor": "advisor", END: END})
-    if with_funds:
+    if with_critic:
+        graph.add_conditional_edges("advisor", after_advisor, {"critic": "critic", END: END})
+        graph.add_edge("critic", "account_manager_decision")
+        if with_funds:
+            graph.add_conditional_edges("account_manager_decision", after_decision, {"account_manager_funds": "account_manager_funds", END: END})
+            graph.add_edge("account_manager_funds", END)
+        else:
+            graph.add_edge("account_manager_decision", END)
+    elif with_funds:
         graph.add_conditional_edges("advisor", after_advisor, {"account_manager_funds": "account_manager_funds", END: END})
         graph.add_edge("account_manager_funds", END)
     else:
@@ -302,10 +379,13 @@ def report(state: DeskState, total_seconds: float | None = None) -> str:
                 lines.append(f"            {mark} [{s['source']}] {s['direction']}: {s['quote'][:96]!r}" + ("" if s["verified"] else f"   <- {s['reason']}"))
     elif order.status == "recommended":
         lines.append("\nADVISOR  no recommendation: nothing in the sources gave a signal for a company")
+    review = review_section(order)
+    if review:
+        lines.append("\n" + "\n".join(review))
     if state.get("funds"):
         lines.append("\nACCOUNT MANAGER: RAISE FUNDS (a Tree of Thought, entry 42)\n" + funds_report(state["funds"]))
     seconds = state.get("seconds", {})
-    parts = "  ".join(f"{name} {seconds[name]:.1f}" for name in ("account_manager", "data_clerk", "advisor", "account_manager_funds") if name in seconds)
+    parts = "  ".join(f"{name} {seconds[name]:.1f}" for name in ("account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_funds") if name in seconds)
     lines.append(f"\nTIMING (seconds)  {parts}" + (f"  | total {total_seconds:.1f}" if total_seconds is not None else ""))
     return "\n".join(lines)
 
@@ -328,11 +408,15 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--portfolio", default=str(DEFAULT_PORTFOLIO), help="--raise-funds: the portfolio JSON file (default: the sample portfolio of Jacob Pyrett)")
     parser.add_argument("--buy-shares", type=int, default=1, help="--raise-funds: how many shares of the recommended stock to buy (default 1)")
     parser.add_argument("--buy", default="", help="--raise-funds: buy this symbol instead of the Advisor's best recommendation")
+    parser.add_argument("--critic", action="store_true", help="after the Advisor (version 1: ranked, audited recommendations), the Critic approves or denies each one and the Account Manager decides what to trade "
+                        "(Critic v1, entries 56 to 59; it calls Finnhub for numbers and quotes and OpenRouter for the critic's model: PAID)")
+    parser.add_argument("--profile", default=str(DEFAULT_PROFILE), help="--critic: the user's profile JSON file (risk tolerance, Ask or Auto, the size limits; default: the sample profile of Jacob Pyrett)")
+    parser.add_argument("--mode", choices=("ask", "auto"), help="--critic: override the profile's trade mode for this run (ask: you approve each trade; auto: what the Critic approves with a high score trades)")
     parser.add_argument("--json", action="store_true", help="print the finished work order as JSON instead of the report")
     parser.add_argument("--show-graph", action="store_true", help="print the graph as a Mermaid diagram and stop")
     args = parser.parse_args(argv)
     if args.show_graph:
-        print(build_desk(clerk_factory=lambda order: None, advisor_factory=lambda order: None, with_funds=args.raise_funds).get_graph().draw_mermaid())
+        print(build_desk(clerk_factory=lambda order: None, advisor_factory=lambda order: None, with_funds=args.raise_funds, with_critic=args.critic).get_graph().draw_mermaid())
         return 0
     days = args.from_days_ago if args.from_days_ago is not None else str(DEFAULT_DAYS_BY_SOURCE.get(args.source, DEFAULT_DAYS))
     request = {"symbol": args.symbol, "term": args.term, "source": args.source, "from_days_ago": days, "fetch": not args.no_fetch}
@@ -342,6 +426,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.raise_funds:
         options["with_funds"] = True
         request["funds"] = {"portfolio": args.portfolio, "shares": args.buy_shares, **({"buy": args.buy} if args.buy else {})}
+    if args.critic:
+        options["with_critic"] = True
+        request["account"] = {"portfolio": args.portfolio, "profile": args.profile, **({"mode": args.mode} if args.mode else {})}
+        options["approver"] = terminal_approver()   # Ask mode at a terminal: you are asked; with nobody there the decision stays pending, never a yes
     if args.model:
         options["advisor_factory"] = lambda order: Advisor(model_id=args.model)
     state = run_desk(request, **options)
@@ -349,7 +437,7 @@ def main(argv: list[str] | None = None) -> int:
     order = state.get("order")
     if args.json:
         print(json.dumps({"request": request, "resolution": state.get("resolution"), "errors": state.get("errors"), "path": state.get("path"), "seconds": state.get("seconds"),
-                          "funds": state.get("funds"), "order": order.model_dump() if order else None}, indent=1, default=str))
+                          "funds": state.get("funds"), "decisions": order.trade_decisions if order else None, "order": order.model_dump() if order else None}, indent=1, default=str))
     else:
         print(report(state, total))
     if order is not None and not state.get("errors"):

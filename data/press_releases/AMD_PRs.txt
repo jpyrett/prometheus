@@ -1,0 +1,351 @@
+<<<PRESS_RELEASE>>>
+id: 4976e94ddb43abb7
+symbol: AMD
+published_utc: 2025-11-12T10:00:00Z
+url: https://www.nasdaq.com/press-release/niron-magnetics-expands-board-directors-seasoned-technology-and-finance-experts-lead
+headline: Niron Magnetics Expands Board of Directors with Seasoned Technology and Finance Experts to Lead the Next Chapter of Growth
+<<<TEXT>>>
+Niron Magnetics, the company manufacturing high-performance Iron Nitride permanent magnets made without rare earths, announced the appointment of Jon Olson and Eric Stang to its Board of Directors. Jon Olson brings more than 30 years of strategic and financial leadership in the global technology and semiconductor industries. He currently serves on the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a11d4af8ebf3f823
+symbol: AMD
+published_utc: 2025-11-14T08:24:00Z
+url: https://www.nasdaq.com/press-release/defiance-etfs-launches-damd-first-2x-short-etf-advanced-micro-devices-inc-2025-11-14
+headline: Defiance ETFs Launches DAMD: the First 2X Short ETF of Advanced Micro Devices, Inc.
+<<<TEXT>>>
+DAMD seeks to deliver -200% of the daily percentage change in the share price of Advanced Micro Devices, Inc., offering investors an instrument to express short-term bearish views on one of the world’ s leading semiconductor companies. The Defiance Daily Target 2 X Short AMD ETF seeks daily inverse investment results, before fees and expenses, of -2 times the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 93bdb805d7fbb950
+symbol: AMD
+published_utc: 2025-11-18T06:06:00Z
+url: https://www.nasdaq.com/press-release/amd-and-eviden-power-europes-new-exascale-supercomputer-first-based-france-2025-11-18
+headline: AMD and Eviden to Power Europe’s New Exascale Supercomputer, the First Based in France
+<<<TEXT>>>
+--AMD and Eviden, the Atos Group product brand leading in advanced computing, announced their selection to build Alice Recoque, a next-generation supercomputer to support the need for high performance computing and AI, serving as an AI Factory. This project, representing an overall cost of 544 million euros, is funded by EuroHPC JU, with budget stemming from the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 113da9012d00d432
+symbol: AMD
+published_utc: 2025-11-19T13:31:00Z
+url: https://www.nasdaq.com/press-release/amd-cisco-and-humain-form-joint-venture-deliver-world-leading-ai-infrastructure-2025
+headline: AMD, Cisco and HUMAIN to Form Joint Venture to Deliver World-Leading AI Infrastructure
+<<<TEXT>>>
+--AMD, Cisco and HUMAIN, a PIF company delivering global full-stack AI solutions, announced today plans to establish a joint venture aimed to support the development of Saudi Arabia's position as a leading provider of world-class AI solutions for regional and global customers. As part of this deepening collaboration, we're also establishing an AMD Center of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d57852680b20aef4
+symbol: AMD
+published_utc: 2025-11-24T09:01:00Z
+url: https://www.nasdaq.com/press-release/amd-powers-frontier-ai-training-zyphra-2025-11-24
+headline: AMD Powers Frontier AI Training for Zyphra
+<<<TEXT>>>
+--AMD announced that Zyphra has achieved a major milestone in large-scale AI model training with the development of ZAYA1, the first large-scale Mixture-of-Experts foundation model trained using an AMD GPU and networking platform. Using AMD Instinct™ MI300X GPUs and AMD Pensando™ networking and enabled by the AMD ROCm™ open software stack, the achievement is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 363b3649f59c65f2
+symbol: AMD
+published_utc: 2025-12-02T09:00:00Z
+url: https://www.nasdaq.com/press-release/vultr-and-amd-expand-collaboration-drive-global-ai-innovation-and-scale-2025-12-02
+headline: Vultr and AMD Expand Collaboration to Drive Global AI Innovation and Scale
+<<<TEXT>>>
+Vultr will launch an AI supercluster, powered by AMD Instinct MI355X GPUs deployed in its new Springfield, Ohio cloud data center location. Vultr was among the first cloud providers to deploy AMD Instinct MI325X and AMD Instinct MI355X GPUs, and is now expanding its AI infrastructure with an additional 24,000 AMD Instinct MI355X GPUs in its new Springfield,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 639757e514e675a0
+symbol: AMD
+published_utc: 2025-12-02T09:00:00Z
+url: https://www.nasdaq.com/press-release/amd-and-hpe-expand-collaboration-advance-open-rack-scale-ai-infrastructure-2025-12-02
+headline: AMD and HPE Expand Collaboration to Advance Open Rack-Scale AI Infrastructure
+<<<TEXT>>>
+Lisa Su, Chair and CEO, AMD." With‘ Helios’, we’ re taking that collaboration further, bringing together the full stack of AMD compute technologies and HPE’ s system innovation to deliver an open, rack-scale AI platform that drives new levels of efficiency, scalability, and breakthrough performance for our customers in the AI era.". "For more than a decade, HPE and AMD have...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7fef2f3f756369ba
+symbol: AMD
+published_utc: 2026-01-05T22:31:00Z
+url: https://www.nasdaq.com/press-release/amd-expands-ai-leadership-across-client-graphics-and-software-new-ryzen-ryzen-ai-and
+headline: AMD Expands AI Leadership Across Client, Graphics, and Software with New Ryzen, Ryzen AI, and AMD ROCm Announcements at CES 2026
+<<<TEXT>>>
+The company also announced the Ryzen™ AI PRO 400 Series, enabling AI acceleration, modern security, and enterprise-class manageability designed to meet the needs of today’ s business laptops. As AI becomes central to the PC experience, AMD is expanding its hardware portfolio with the launch of AMD Ryzen™ AI Halo— the company’ s first AMD- branded AI developer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6bbf0cea7d669561
+symbol: AMD
+published_utc: 2026-01-05T22:32:00Z
+url: https://www.nasdaq.com/press-release/amd-introduces-ryzen-ai-embedded-processor-portfolio-powering-ai-driven-immersive
+headline: AMD Introduces Ryzen AI Embedded Processor Portfolio, Powering AI-Driven Immersive Experiences in Automotive, Industrial and Physical AI
+<<<TEXT>>>
+--Today, AMD introduced the AMD Ryzen™ AI Embedded processors, a new portfolio of embedded x86 processors designed to power AI-driven applications at the edge. From automotive digital cockpits and smart healthcare to physical AI for autonomous systems, including humanoid robotics, the new P100 and X100 Series processors provide OEMs, tier-1 suppliers and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 864dacce83a0d5b1
+symbol: AMD
+published_utc: 2026-01-05T23:30:00Z
+url: https://www.nasdaq.com/press-release/amd-and-its-partners-share-their-vision-ai-everywhere-everyone-ces-2026-2026-01-06
+headline: AMD and its Partners Share their Vision for "AI Everywhere, for Everyone" at CES 2026
+<<<TEXT>>>
+Lisa Su detailed in the show’ s opening keynote how the company’ s extensive portfolio of AI products and deep cross-industry collaborations are turning the promise of AI into real-world impact. The keynote showcased major advancements from the data center to the edge, with partners including OpenAI, Luma AI, Liquid AI, World Labs, Blue Origin, Generative Bionics,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: aa149fde196c14b4
+symbol: AMD
+published_utc: 2026-01-06T16:15:00Z
+url: https://www.nasdaq.com/press-release/amd-report-fiscal-fourth-quarter-and-full-year-2025-financial-results-2026-01-06
+headline: AMD to Report Fiscal Fourth Quarter and Full Year 2025 Financial Results
+<<<TEXT>>>
+Management will conduct a conference call to discuss these results at 5:00 p.m. EST/ 2:00 p.m. PST. Mark Papermaster, executive vice president, chief technology officer, will present at Morgan Stanley Technology, Media& Telecom Conference on Tuesday, March 3, 2026.. AMD, the AMD Arrow logo and the combination thereof are trademarks of Advanced Micro Devices,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: de3e1a515b519d76
+symbol: AMD
+published_utc: 2026-01-14T01:00:00Z
+url: https://www.nasdaq.com/press-release/tcs-and-amd-announce-strategic-collaboration-drive-ai-adoption-scale-2026-01-14
+headline: TCS and AMD Announce Strategic Collaboration to Drive AI Adoption at Scale
+<<<TEXT>>>
+--Tata Consultancy Services, a global leader in IT services, consulting, and business solutions, today announced a strategic collaboration with AMD to help enterprises scale AI adoption from pilots to production, modernize legacy environments, and build secure, high performance digital workplaces. Lisa Su, Chair and Chief Executive Officer, AMD, said," AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3e4f8742c0a1d0e8
+symbol: AMD
+published_utc: 2026-01-20T16:15:00Z
+url: https://www.nasdaq.com/press-release/amd-appoints-kc-mcclure-board-directors-2026-01-20
+headline: AMD Appoints KC McClure to Board of Directors
+<<<TEXT>>>
+Lisa Su, AMD chair and CEO." KC is a proven finance leader whose operating expertise and global perspective will be an asset as we execute our strategy and extend AMD’ s leadership in high-performance and AI computing.". McClure holds a Bachelor of Science degree in accounting and business administration from Pennsylvania State University’ s Smeal College of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3a5e052ef44d9308
+symbol: AMD
+published_utc: 2026-02-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/amd-reports-fourth-quarter-and-full-year-2025-financial-results-2026-02-03
+headline: AMD Reports Fourth Quarter and Full Year 2025 Financial Results
+<<<TEXT>>>
+Fourth quarter revenue was a record $10.3 billion, gross margin was 54%, operating income was $1.8 billion, net income was $1.5 billion and diluted earnings per share was $0.92. On a non-GAAP basis, gross margin was 57%, operating income was a record $2.9 billion, net income was a record $2.5 billion and diluted earnings per share was a record $1.53.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a319c1c19570d36
+symbol: AMD
+published_utc: 2026-02-09T14:00:00Z
+url: https://www.nasdaq.com/press-release/amd-hires-ariel-kelman-chief-marketing-officer-2026-02-09
+headline: AMD Hires Ariel Kelman as Chief Marketing Officer
+<<<TEXT>>>
+--Today AMD announced that Ariel Kelman has been appointed Senior Vice President and Chief Marketing Officer, effective immediately. Kelman will report to Ruth Cotter, Senior Vice President and Chief Administrative Officer, and will work closely with the AMD executive team to deepen engagement with customers, partners, developers and the broader technology...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a540569a084d16a0
+symbol: AMD
+published_utc: 2026-02-16T02:00:00Z
+url: https://www.nasdaq.com/press-release/amd-and-tcs-bring-state-art-helios-rack-scale-ai-architecture-india-2026-02-16
+headline: AMD and TCS to bring state-of-the-art ‘Helios’ rack-scale AI architecture to India
+<<<TEXT>>>
+As part of this strategic collaboration, both companies will offer an AI-ready data center blueprint supporting up to 200 MW of capacity and will work with hyperscalers and AI companies to accelerate data center build-outs in India. Together with TCS, we are enabling enterprises across India to deploy AI at scale today while building the compute foundation...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 358efd843946e358
+symbol: AMD
+published_utc: 2026-02-24T07:00:00Z
+url: https://www.nasdaq.com/press-release/amd-and-meta-announce-expanded-strategic-partnership-deploy-6-gigawatts-amd-gpus-2026
+headline: AMD and Meta Announce Expanded Strategic Partnership to Deploy 6 Gigawatts of AMD GPUs
+<<<TEXT>>>
+Shipments supporting the first gigawatt deployment are scheduled to begin in the second half of 2026 powered by the custom AMD Instinct MI450-based GPU and 6 th Gen AMD EPYC™ CPUs, codenamed" Venice," running ROCm™ software and built on the AMD Helios rack-scale architecture. AMD Helios was developed jointly by AMD and Meta through the Open Compute Project to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6b37803b7e84b4d6
+symbol: AMD
+published_utc: 2026-02-25T16:11:00Z
+url: https://www.nasdaq.com/press-release/amd-and-nutanix-announce-strategic-partnership-advance-open-and-scalable-platform
+headline: AMD and Nutanix Announce Strategic Partnership to Advance an Open and Scalable Platform for Enterprise AI
+<<<TEXT>>>
+--AMD and Nutanix today announced a multi-year strategic partnership to jointly develop an open, full-stack AI infrastructure platform designed to power agentic AI applications, everywhere. As part of the agreement, AMD will make a strategic investment of $150 million in Nutanix common stock at a purchase price of $36.26 per share, and fund up to $100 million...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ebd835b8a03cec0a
+symbol: AMD
+published_utc: 2026-03-02T02:00:00Z
+url: https://www.nasdaq.com/press-release/gsma-launches-open-telco-ai-accelerate-development-telco-grade-ai-2026-03-02
+headline: GSMA launches Open Telco AI to accelerate development of telco‑grade AI
+<<<TEXT>>>
+--GSMA today launched Open Telco AI, a global industry initiative designed to accelerate telco-grade AI through open collaboration across operators, vendors, AI developers and academic institutions. As founding supporters of Open Telco AI, AT&T and AMD are making significant contributions. AT&T is releasing a family of open telco-models developed and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a77e4c01d45018c4
+symbol: AMD
+published_utc: 2026-03-02T03:00:00Z
+url: https://www.nasdaq.com/press-release/amd-gives-consumers-and-businesses-more-ai-pc-options-expanded-ryzentm-ai-400-series
+headline: AMD Gives Consumers and Businesses More AI PC Options with Expanded Ryzen™ AI 400 Series Portfolio
+<<<TEXT>>>
+--At Mobile World Congress 2026, AMD announced an expanded Ryzen™ AI portfolio with the launch of the AMD Ryzen™ AI 400 Series and Ryzen™ AI PRO 400 Series desktop processors. The new processors deliver powerful on-device AI acceleration and next-generation performance, enabling users to run AI applications and LLMs locally and tackle compute-intensive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d214240a3b048f02
+symbol: AMD
+published_utc: 2026-03-18T09:00:00Z
+url: https://www.nasdaq.com/press-release/samsung-and-amd-expand-strategic-collaboration-next-generation-ai-memory-solutions
+headline: Samsung and AMD Expand Strategic Collaboration on Next-Generation AI Memory Solutions
+<<<TEXT>>>
+SEOUL, South Korea& SANTA CLARA, Calif.---- Samsung Electronics Co., Ltd. today announced it has signed a Memorandum of Understanding with AMD to expand their strategic collaboration on next-generation AI memory and computing technologies. Lisa Su, Chair and CEO of AMD, and Young Hyun Jun, Vice Chairman& CEO of Samsung Electronics. "Samsung and AMD share a commitment to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1cb032f337853aab
+symbol: AMD
+published_utc: 2026-04-08T16:15:00Z
+url: https://www.nasdaq.com/press-release/amd-report-fiscal-first-quarter-2026-financial-results-2026-04-08
+headline: AMD to Report Fiscal First Quarter 2026 Financial Results
+<<<TEXT>>>
+Management will conduct a conference call to discuss these results at 5:00 p.m. ET/ 2:00 p.m. PT. Jean Hu, executive vice president, chief financial officer and treasurer, will present at Bank of America Global Technology Conference on Tuesday, June 2, 2026.. AMD, the AMD Arrow logo and the combination thereof are trademarks of Advanced Micro Devices, Inc. Other...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b7314b1b9779118e
+symbol: AMD
+published_utc: 2026-04-28T09:00:00Z
+url: https://www.nasdaq.com/press-release/amd-announces-advancing-ai-2026-2026-04-28
+headline: AMD Announces "Advancing AI 2026"
+<<<TEXT>>>
+Lisa Su, alongside AI ecosystem partners, customers and developers, to share how the company’ s end-to-end AI solutions, from silicon to software, are reshaping the AI and high-performance computing landscape. Contact: Brandi Martina AMD Communications +1 512-705-1720 Brandi.Martina@amd.com Liz Stine AMD Investor Relations +1 720-652-3965...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2b0bbd26b60c5ce0
+symbol: AMD
+published_utc: 2026-05-04T15:40:00Z
+url: https://www.nasdaq.com/press-release/zyphra-and-amd-partner-power-zyphra-cloud-amd-instincttm-mi355x-gpus-2026-05-04
+headline: Zyphra and AMD Partner to Power Zyphra Cloud on AMD Instinct™ MI355X GPUs
+<<<TEXT>>>
+--Zyphra today announced Zyphra Cloud, a full-stack AI platform that brings advanced innovations from Zyphra Research into production for developers, enterprises, and frontier AI hyperscalers.  "AMD delivers leadership solutions, in combination with open platforms and deep industry-wide collaborations, to power the next generation of AI infrastructure,"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2a471cccd2566015
+symbol: AMD
+published_utc: 2026-05-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/amd-reports-first-quarter-2026-financial-results-2026-05-05
+headline: AMD Reports First Quarter 2026 Financial Results
+<<<TEXT>>>
+First quarter revenue was $10.3 billion, gross margin was 53%, operating income was $1.5 billion, net income was $1.4 billion and diluted earnings per share was $0.84. On a non-GAAP basis, gross margin was 55%, operating income was $2.5 billion, net income was $2.3 billion and diluted earnings per share was $1.37. Data Center segment revenue was $5.8 billion, up 57%...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d34aa4859daa5cb9
+symbol: AMD
+published_utc: 2026-05-07T16:15:00Z
+url: https://www.nasdaq.com/press-release/amd-host-annual-meeting-stockholders-2026-05-07
+headline: AMD to Host Annual Meeting of Stockholders
+<<<TEXT>>>
+--AMD will hold its Annual Meeting of Stockholders on Wednesday, May 13, 2026 at 9 a.m. PT as a virtual meeting accessible at https://www.virtualshareholdermeeting.com/AMD2026. Forward-looking and other material information may be discussed during the meeting.. AMD, the AMD Arrow logo and the combination thereof are trademarks of Advanced Micro Devices,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7289c96d7fd31381
+symbol: AMD
+published_utc: 2026-05-21T01:35:00Z
+url: https://www.nasdaq.com/press-release/amd-announces-production-ramp-next-generation-amd-epyc-processor-venice-tsmc-2nm
+headline: AMD Announces Production Ramp of Next-Generation AMD EPYC Processor "Venice" on TSMC 2nm Process Technology
+<<<TEXT>>>
+--AMD today announced that its next-generation AMD EPYC™ processor, codenamed" Venice," is ramping production in Taiwan on TSMC’ s advanced 2 nm process technology, with future plans to ramp production at TSMC’ s Arizona fabrication facility. Lisa Su, chair and CEO, AMD." As AI and agentic workloads scale rapidly, customers need platforms that can move from innovation to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 39152f0b37b63baa
+symbol: AMD
+published_utc: 2026-05-21T01:35:00Z
+url: https://www.nasdaq.com/press-release/amd-announces-more-10-billion-taiwan-ecosystem-investments-accelerate-ai
+headline: AMD Announces More Than $10 Billion in Taiwan Ecosystem Investments to Accelerate AI Infrastructure
+<<<TEXT>>>
+--To meet the growing demand for AI infrastructure, AMD today announced more than $10 billion in investments across the Taiwan ecosystem to expand strategic partnerships and scale advanced packaging manufacturing for next-generation AI infrastructure. Working with strategic partners in Taiwan and globally, AMD is advancing leading-edge silicon,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 82eb77da72d9eccf
+symbol: AMD
+published_utc: 2026-06-08T04:30:00Z
+url: https://www.nasdaq.com/press-release/amd-commits-ps2-billion-accelerate-ai-innovation-and-research-united-kingdom-2026-06
+headline: AMD Commits up to £2 Billion to Accelerate AI Innovation and Research in the United Kingdom
+<<<TEXT>>>
+Lisa Su, chair and CEO, AMD." AMD is proud to deepen our commitment to the UK and work with partners across government, academia and industry to expand access to the compute infrastructure needed to advance sovereign AI, accelerate discovery and drive long-term economic growth.". The announcement was welcomed by UK government leaders as a significant step toward...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8680f5b24f85046b
+symbol: AMD
+published_utc: 2026-06-15T09:32:00Z
+url: https://www.nasdaq.com/press-release/longpoint-adds-its-family-double-leveraged-single-stock-etfs-2026-06-15
+headline: LongPoint Adds to Its Family of Double Leveraged Single Stock ETFs
+<<<TEXT>>>
+The SavvyLong AMD ETF offers two times leveraged long exposure to Advanced Micro Devices, Inc., the SavvyLong Micron ETF offers two times leveraged long exposure to Micron Technology, Inc., and the SavvyLong SpaceX ETF offers two times leveraged long exposure to Space Exploration Technologies Corporation.  "LongPoint is proud to add to Canada's only...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c6562d98a038da09
+symbol: AMD
+published_utc: 2026-06-19T10:38:00Z
+url: https://www.nasdaq.com/press-release/longpoint-etfs-opens-market-2026-06-19
+headline: LongPoint ETFs Opens the Market
+<<<TEXT>>>
+Steve Hawkins, Chief Executive Officer, LongPoint Asset Management Inc., joined Graham MacKenzie, Managing Director, Exchange Traded Products, Toronto Stock Exchange, to open the market and celebrate the launch of their three new ETFs:. ORBU, AMDU and MUU provide two times leveraged long exposure to Space Exploration Technologies Corporation, Advanced Micro...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9b55e53b87e3e0ba
+symbol: AMD
+published_utc: 2026-07-08T16:15:00Z
+url: https://www.nasdaq.com/press-release/amd-report-fiscal-second-quarter-2026-financial-results-2026-07-08
+headline: AMD to Report Fiscal Second Quarter 2026 Financial Results
+<<<TEXT>>>
+--AMD announced today that it will report fiscal second quarter 2026 financial results on Tuesday, Aug. 4, 2026, after the market close. Management will conduct a conference call to discuss these results at 5:00 p.m. ET/ 2:00 p.m. PT. KeyBanc’ s Technology Leadership Forum on Tuesday, Aug. 11, 2026 Citi’ s 2026 Global TMT Conference on Tuesday, Sept. 8, 2026 Goldman...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dbf2bbedfa870fb2
+symbol: AMD
+published_utc: 2026-07-16T09:00:00Z
+url: https://www.nasdaq.com/press-release/amd-appoints-alan-smith-newest-corporate-fellow-2026-07-16
+headline: AMD Appoints Alan Smith as Newest Corporate Fellow
+<<<TEXT>>>
+--AMD announces the appointment of Alan Smith as the newest AMD Corporate Fellow, recognizing his contributions to GPU architecture and technical leadership that have helped advance AMD AI computing. "Alan’ s technical leadership in GPU architecture was critical to achieving AMD’ s product success across HPC, AI for science and data center AI computing," said...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2f41dfdda10c5b5a
+symbol: AMD
+published_utc: 2026-07-20T09:00:00Z
+url: https://www.nasdaq.com/press-release/microsoft-deploy-next-gen-amd-instinct-and-amd-epyc-processors-companies-expand-their
+headline: Microsoft to Deploy Next-Gen AMD Instinct and AMD EPYC Processors as the Companies Expand Their Long-Term Strategic Partnership
+<<<TEXT>>>
+"AMD and Microsoft have spent years building high-performance infrastructure together, and today we're extending that partnership across the full stack of AMD AI solutions on Azure," said Dr. Lisa Su, Chair and CEO, AMD." Microsoft's new AMD deployments mark an important milestone as we deliver leadership compute solutions to Azure customers and scale the next...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 975ec700d2299348
+symbol: AMD
+published_utc: 2026-07-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/amd-and-anthropic-announce-strategic-partnership-deploy-2-gigawatts-amd-instinct
+headline: AMD and Anthropic Announce Strategic Partnership to Deploy Up to 2 Gigawatts of AMD Instinct MI450 Series GPUs
+<<<TEXT>>>
+--AMD and Anthropic today announced a strategic partnership to deploy up to 2 gigawatts of AMD Instinct MI450 Series GPUs in AMD Helios rack-scale solutions, with deployment of the first gigawatt beginning in the first half of 2027.. Anthropic is scaling its compute infrastructure to serve strong and growing demand for Claude, and its adoption of AMD Helios at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b0ecba50f2c3fb41
+symbol: AMD
+published_utc: 2026-07-23T14:30:00Z
+url: https://www.nasdaq.com/press-release/aai-2026-amd-delivers-full-stack-compute-agentic-ai-era-2026-07-23
+headline: AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era
+<<<TEXT>>>
+Lisa Su, chair and CEO, AMD." Realizing that potential will take the entire industry working together. AMD is partnering across the ecosystem to deliver leadership compute and open platforms that give customers the performance, flexibility and choice to scale AI from the data center to the edge.". They include OpenAI, Anthropic, Meta, Microsoft, Oracle, HUMAIN,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bc688dabf34a2cb9
+symbol: AMD
+published_utc: 2026-07-28T07:00:00Z
+url: https://www.nasdaq.com/press-release/core-scientific-and-amd-announce-infrastructure-partnership-2026-07-28
+headline: Core Scientific and AMD Announce Infrastructure Partnership
+<<<TEXT>>>
+MIAMI& SANTA CLARA, Calif.---- Core Scientific and AMD today announced a partnership to shape the future of AI infrastructure, with AMD to secure up to 2.5 gigawatts of data center capacity to support end customer deployments of AMD AI solutions. As part of the agreement, Core Scientific and AMD will collaborate on physical infrastructure design and the deployment...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9c3358b6d0d5bd6e
+symbol: AMD
+published_utc: 2026-08-04T16:15:00Z
+url: https://www.nasdaq.com/press-release/amd-reports-second-quarter-2026-financial-results-2026-08-04
+headline: AMD Reports Second Quarter 2026 Financial Results
+<<<TEXT>>>
+Second quarter revenue was $11.5 billion, gross margin was 54%, operating income was $2.0 billion, net income was $2.3 billion and diluted earnings per share was $1.38. Q2’ 25 results included $800 million in inventory and related charges due to the U.S. Government's export control on AMD Instinct™ MI308 data center GPU products. Q2’ 25 results included $800...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1832c4f48d22fc77
+symbol: AMD
+published_utc: 2026-08-06T16:05:00Z
+url: https://www.nasdaq.com/press-release/amd-acquires-taalas-advance-compute-solutions-rapidly-growing-ai-inference-market
+headline: AMD Acquires Taalas to Advance Compute Solutions for Rapidly Growing AI Inference Market
+<<<TEXT>>>
+Founded in 2023 and headquartered in Toronto, Canada, Taalas’ technology optimizes inference dataflows, significantly reducing compute and memory bottlenecks associated with general-purpose architectures and enabling highly optimized AI inference capabilities. "AMD is building a full-stack AI platform that gives customers the flexibility to deploy...
+<<<END>>>

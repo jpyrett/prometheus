@@ -11,7 +11,7 @@ ONE work order in (status `data_ready`), the SAME work order out (status `recomm
      5  gates               liquidity, freshness, red flags, event risk (gates.py): a failure is recorded, never silent
      6  families            five strategy families, each one score from fixed rules (families.py)
      7  quality             the haircut multiplier (quality.py)
-     8  rank                composite edge, cost, excess after cost, stance, the regime (ranking.py)
+     8  rank                composite edge, cost, stance, the blended score that ranks, the regime (ranking.py)
      9  holdings + select   what to do about what is already held; the cooldown; the sleeve of the case picks the new ideas (ranking.py)
     10  trade plan          entry, stop, target, whole-share size, order style, invalidation rules (trade_plan.py)
     11  THESIS call         MODEL call 2: three sentences and bullets from the FINISHED record, every number and ref checked by code (thesis.py)
@@ -45,7 +45,7 @@ from prometheus.prompts.advisor_v1 import RETRY_PLAN, plan_message, plan_system
 from prometheus.prompts.advisor import evidence_text, kinds_text, user_message
 from prometheus.rag.loaders import check_symbol
 
-GATE_METRICS = ("adv_20d_dollars", "last_close", "median_spread_bps_1d", "days_to_next_earnings", "dilution_current", "debt_to_equity", "negative_equity", "current_ratio", "cfo_negative_with_profit")
+GATE_METRICS = ("adv_20d_dollars", "last_close", "median_spread_bps_1d", "days_to_next_earnings", "debt_to_equity", "negative_equity", "current_ratio", "cfo_negative_with_profit")
 PLAN_METRICS = ("atr_14", "sma_50", "above_sma_200", "earnings_move_abs")
 RISK_METRICS = ("vol_63d_ann", "atr_pct", "beta_63d", "max_drawdown_63d", "adv_20d_dollars")
 REGIME_METRICS = ("spy_above_sma_200", "spy_vol_21d_ann", "spy_drawdown_63d", "spy_ret_21d", "breadth_200")
@@ -201,7 +201,7 @@ def _record(s: rk.Scored, checked: Checked | None, family, action: str, reason: 
         action=Action(action=action, reason=reason, held_shares=s.held_shares, cost_basis=s.cost_basis, unrealized_pct=round(price / s.cost_basis - 1, 4) if price and s.cost_basis else None, cooldown_of=cooldown),
         families=s.families, quality=s.quality, evidence=_evidence(s, direction, items), features=_features(s.metrics),
         agreement=Agreement(agreement=round(s.agreement, 4), evidence_n=s.evidence_n, completeness=s.passed()[0].completeness if s.passed() else None, confidence=round(s.confidence, 4)),
-        ranking=Ranking(composite=s.composite, conflict=s.conflict, cost_pct=s.cost_pct, scale_factor=round(s.scale_factor, 4), excess_20d_after_cost=s.excess, stance=s.stance, stance_reason=s.stance_reason,
+        ranking=Ranking(composite=s.composite, conflict=s.conflict, stance=s.stance, stance_reason=s.stance_reason,
                         diversity_adjustment=extra.get("diversity_adjustment", False), displaced_by=extra.get("displaced_by")),
         trade=plan, risk=_risk(s, plan), portfolio_fit=PortfolioFit(position_pct_after=after, funds_feasible=plan.funds_feasible, note=extra.get("portfolio_note")),
         gates=s.gates.gates, thesis=Thesis(thesis=None, thesis_error="not written yet"),
@@ -289,9 +289,9 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
             total = sum(r["articles"] for r in theme_rows if r["articles"] >= config.limits.discover_min_articles) or 1
             theme = {"articles": row["articles"], "positive": row.get("positive", 0), "neutral": row.get("neutral", 0), "negative": row.get("negative", 0), "article_share": row["articles"] / total,
                      "basket_ret_21d": {b: value(metrics.get(b), "ret_21d") for b in basket if value(metrics.get(b), "ret_21d") is not None}}
-        inp = fam.FamilyInput(symbol=symbol, metrics=m or {}, events=events, signals=signals, quality=quality, regime=regime[0], config=config, today=today, drop_cause=chk.drop_cause if chk else None,
-                              recent_company_sources=recent_company, theme=theme,
-                              current_dilution_ids=frozenset(i for i, item in evidence.get(symbol, {}).items() if item.get("topic") == "dilution" and (item.get("derived") or (item.get("source") or {}).get("form") == "8-K")))
+        blend = compute_blend(m, signals, events, sources, today, config.blend, negative_equity(m))      # before the families: `conviction` reads it
+        inp = fam.FamilyInput(symbol=symbol, metrics=m or {}, events=events, signals=signals, quality=quality, regime=regime[0], config=config, today=today, drop_cause=chk.drop_cause if chk else None, blend=blend,
+                              recent_company_sources=recent_company, theme=theme)
         results = [fam.evaluate(f, inp) for f in fam.FAMILIES if f != "theme" or case == "theme"]
         position = held.get(symbol)
         s = rk.Scored(symbol=symbol, company=c.get("company") or (chk.company if chk else None), origin=c["origin"], held=c["held"], metrics=m or {}, gates=gates, quality=quality, families=results,
@@ -299,8 +299,8 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
                       held_shares=position.shares if position else 0, cost_basis=position.cost_basis if position else None)
         theme_result = next((r for r in results if r.family == "theme"), None)
         s.theme_role = (theme_result.features_used.get("theme_role") if theme_result else None)
-        s.blend = compute_blend(m, signals, events, sources, today, config.blend, negative_equity(m))
-        scored[symbol] = rk.rank_symbol(s, regime[0], config)
+        s.blend = blend
+        scored[symbol] = rk.rank_symbol(s)
     # ---- 9 holdings, cooldown, select
     ledger = advisor.ledger
     ident = {"request_id": order.request_id, "case": case, "as_of_utc": as_of}
@@ -321,7 +321,7 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
     universe = {s.symbol: n for n, s in enumerate(sorted(new_ideas, key=lambda s: (bool(s.gates.failed), *rk.sort_key(s))), 1)}   # every new idea, best to worst: those that passed every gate first
     for symbol, reason in why.items():
         rejected.setdefault(symbol, {"reason": reason})
-    add_floor = min((s.excess for s, _, _ in picked), default=None)
+    add_floor = min((rk.rank_value(s) for s, _, _ in picked), default=None)
     prices = equity[2]
     records: list[tuple[str, Recommendation]] = []
     for s in (x for x in scored.values() if x.held):
@@ -341,13 +341,13 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
         price = tp.price_of(s.symbol, s.metrics, quotes.get(s.symbol))[0]
         if case == "funds" and len(picked) > 1:
             extra = {**extra, "portfolio_note": f"{len(picked)} names are one bet: sectors {[p[0].sector_etf or 'unknown' for p in picked]}, betas {[value(p[0].metrics, 'beta_63d') for p in picked]}"}
-        rec = _record(s, checked.get(s.symbol), family, "open", f"{family.family}: expected excess {s.excess:.2%} over 20 days after cost (unmeasured prior)", plan, ident, run_ids, regime, evidence.get(s.symbol, {}), config, price, extra=extra)
+        rec = _record(s, checked.get(s.symbol), family, "open", f"{family.family}: blended score {s.score} (news, performance, history and filings together)", plan, ident, run_ids, regime, evidence.get(s.symbol, {}), config, price, extra=extra)
         if case == "funds":
             rec.ranking.concentrated = True
         rec.ranking.universe_rank = universe.get(s.symbol)
         records.append(("open", rec))
     order_of = {"reduce": 0, "add": 1, "open": 2}
-    records.sort(key=lambda pair: (order_of[pair[0]], pair[1].ranking.excess_20d_after_cost is None, -(pair[1].ranking.excess_20d_after_cost or 0.0)))
+    records.sort(key=lambda pair: (order_of[pair[0]], pair[1].score is None, -(pair[1].score or 0)))
     for number, (_, rec) in enumerate(records, 1):
         rec.ranking.rank = number
     # ---- 11 thesis call
@@ -372,9 +372,9 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
         parts = ([f"gate {gate.gate} failed" + (f": {gate.note}" if gate.note else "")] if gate else []) + ([info["reason"]] if info.get("reason") and not (gate and info["reason"].startswith("gate ")) else [])
         reason = "; ".join(parts) or "not selected"
         leftovers.append(Candidate(symbol=s.symbol, company=s.company, origin=next(c["origin"] for c in candidates if c["symbol"] == s.symbol), held=s.held, gate=gate.gate if gate else None,
-                                   gate_value=gate.value if gate else None, families=s.families, negative_equity=negative_equity(s.metrics), blend=s.blend, excess_20d_after_cost=s.excess, score=s.score, stance=s.stance, rank=universe.get(s.symbol), reason=reason, cooldown_of=info.get("cooldown_of"),
+                                   gate_value=gate.value if gate else None, families=s.families, negative_equity=negative_equity(s.metrics), blend=s.blend, score=s.score, stance=s.stance, rank=universe.get(s.symbol), reason=reason, cooldown_of=info.get("cooldown_of"),
                                    theme_role=s.theme_role))
-    leftovers.sort(key=lambda c: (c.excess_20d_after_cost is None, -(c.excess_20d_after_cost or 0.0), c.symbol))
+    leftovers.sort(key=lambda c: (c.score is None, -(c.score or 0), c.symbol))
     order.candidates = [c.model_dump(mode="json") for c in leftovers[:config.limits.max_candidates_on_order]]
     for rec in final:
         ledger.append(rec)

@@ -30,7 +30,7 @@ from prometheus.agents.advisor.record import FamilyResult, TradePlan
 from prometheus.common.portfolio import Portfolio
 from prometheus.tools import trading_math as tm
 
-FAMILY_INVALIDATION = {"trend": "below_sma_200", "reversion": "rsi_14_above_70", "capital_return": "dilution_current"}
+FAMILY_INVALIDATION = {"trend": "below_sma_200", "reversion": "rsi_14_above_70"}   # capital_return and conviction have none of their own: the stop, the time and a bearish event end them
 
 
 def add_weekdays(day: date, n: int) -> date:

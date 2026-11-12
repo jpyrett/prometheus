@@ -1,0 +1,738 @@
+<<<PRESS_RELEASE>>>
+id: c363313f01cd5a8a
+symbol: LLY
+published_utc: 2025-11-18T10:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-participate-citis-2025-global-healthcare-conference-2025-11-18
+headline: Lilly to participate in Citi's 2025 Global Healthcare Conference
+<<<TEXT>>>
+--Eli Lilly and Company will participate in the Citi's 2025 Global Healthcare Conference on December 2, 2025. Ilya Yuffa, executive vice president and president Lilly USA and Global Customer Capabilities, will take part in a fireside chat at 10:30 a.m., Eastern time. A live audio webcast will be available on the "Webcasts& Presentations" section of Lilly's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e6f0f1283fb47e85
+symbol: LLY
+published_utc: 2025-11-19T06:45:00Z
+url: https://www.nasdaq.com/press-release/lilly-announces-plans-open-lilly-gateway-labs-site-philadelphia-2025-11-19
+headline: Lilly announces plans to open Lilly Gateway Labs site in Philadelphia
+<<<TEXT>>>
+--Eli Lilly and Company today announced plans to open a new Lilly Gateway Labs site in Philadelphia, bringing its distinctive model of scientific partnership to a city known for shaping the future of medicine. The new Gateway Labs site will occupy 44,000 square feet of 2300 Market, a life sciences facility in Center City newly developed and operated by...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 81c2c9bd2cf38f43
+symbol: LLY
+published_utc: 2025-11-24T12:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-present-data-two-positive-phase-3-studies-jaypirca-pirtobrutinib-chronic
+headline: Lilly to present data from two positive Phase 3 studies of Jaypirca (pirtobrutinib) in chronic lymphocytic leukemia at the 2025 American Society of Hematology (ASH) Annual Meeting
+<<<TEXT>>>
+--Eli Lilly and Company today announced that data from studies of Jaypirca, the first and only approved non-covalent Bruton tyrosine kinase inhibitor, will be presented at the 67 th American Society of Hematology Annual Meeting and Exposition, taking place Dec. 6-9 in Orlando, Florida. These results were also selected to be highlighted in the ASH Annual Meeting...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fdfe2670ddc21eb3
+symbol: LLY
+published_utc: 2025-11-24T16:30:00Z
+url: https://www.nasdaq.com/press-release/lilly-highlight-progress-across-key-programs-early-and-advanced-hormone-receptor
+headline: Lilly to highlight progress across key programs in early and advanced hormone receptor-positive breast cancer at the 2025 San Antonio Breast Cancer Symposium
+<<<TEXT>>>
+--Eli Lilly and Company today announced that new data from across its breast oncology portfolio and pipeline will be featured at the San Antonio Breast Cancer Symposium, taking place December 9– 12 in San Antonio, Texas. These updates reflect Lilly's continued progress across key pathways in hormone receptor– positive, human epidermal growth factor receptor 2-...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 196ac7e579aa9d89
+symbol: LLY
+published_utc: 2025-12-03T12:59:00Z
+url: https://www.nasdaq.com/press-release/us-fda-approves-expanded-indication-lillys-jaypirca-pirtobrutinib-first-and-only-non
+headline: U.S. FDA approves expanded indication for Lilly's Jaypirca (pirtobrutinib), the first and only non-covalent (reversible) BTK inhibitor, for adults with relapsed or refractory CLL/SLL previously treated with a covalent BTK inhibitor
+<<<TEXT>>>
+--Eli Lilly and Company today announced that the U.S. Food and Drug Administration has granted approval to Jaypirca for the treatment of adults with relapsed or refractory chronic lymphocytic leukemia or small lymphocytic lymphoma who have previously been treated with a covalent Bruton tyrosine kinase inhibitor.  "This label expansion allows physicians to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6f115f7f87bf6ea1
+symbol: LLY
+published_utc: 2025-12-07T16:30:00Z
+url: https://www.nasdaq.com/press-release/lillys-jaypirca-pirtobrutinib-met-its-primary-endpoint-first-its-kind-head-head-phase
+headline: Lilly's Jaypirca (pirtobrutinib) met its primary endpoint in first-of-its-kind, head-to-head Phase 3 study versus Imbruvica (ibrutinib)
+<<<TEXT>>>
+--Eli Lilly and Company today announced results from the Phase 3 BRUIN CLL-314 clinical trial evaluating Jaypirca, a non-covalent Bruton tyrosine kinase inhibitor, versus Imbruvica, a covalent BTK inhibitor, in patients with chronic lymphocytic leukemia or small lymphocytic lymphoma who were treatment-naïve or were BTK inhibitor-naïve.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dc1a2155c86c59e4
+symbol: LLY
+published_utc: 2025-12-08T10:00:00Z
+url: https://www.nasdaq.com/press-release/carolyn-bertozzi-returns-lilly-board-directors-2025-12-08
+headline: Carolyn Bertozzi returns to Lilly board of directors
+<<<TEXT>>>
+--The board of directors of Eli Lilly and Company elected Carolyn R. Bertozzi, Ph.D., as a returning member, effective Dec. 8, 2025. Currently serving as the Baker Family director of Sarafan ChEM-H, Anne T. and Robert M. Bass professor in the School of Humanities and Sciences and professor, by courtesy, of Chemical and Systems Biology and of Radiology at Stanford...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cf66df546e26522d
+symbol: LLY
+published_utc: 2025-12-08T14:05:00Z
+url: https://www.nasdaq.com/press-release/lilly-declares-first-quarter-2026-dividend-2025-12-08
+headline: Lilly declares first-quarter 2026 dividend
+<<<TEXT>>>
+--The board of directors of Eli Lilly and Company has declared a dividend for the first quarter of 2026 of $1.73 per share on outstanding common stock. The dividend is payable on March 10, 2026, to shareholders of record at the close of business on February 13, 2026. About Lilly Lilly is a medicine company turning science into healing to make life better for people...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d09575940bf2a589
+symbol: LLY
+published_utc: 2025-12-09T07:30:00Z
+url: https://www.nasdaq.com/press-release/lillys-jaypirca-pirtobrutinib-significantly-improved-progression-free-survival
+headline: Lilly's Jaypirca (pirtobrutinib) significantly improved progression-free survival, reducing the risk of progression or death by 80%, versus chemoimmunotherapy in patients with treatment-naïve CLL/SLL
+<<<TEXT>>>
+These data will be highlighted in a late-breaking oral presentation at the 67th American Society of Hematology (ASH) Annual Meeting and Exposition taking place in Orlando, Florida and simultaneously published in the Journal of Clinical Oncology.  "The results from BRUIN CLL-313 show a significant effect size, among the most pronounced ever observed for a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7347193bc612cb73
+symbol: LLY
+published_utc: 2025-12-09T08:28:00Z
+url: https://www.nasdaq.com/press-release/lilly-and-adverum-announce-expiration-and-completion-adverum-tender-offer-and
+headline: Lilly and Adverum announce expiration and completion of Adverum tender offer and acquisition
+<<<TEXT>>>
+--Eli Lilly and Company and Adverum Biotechnologies, Inc. today announced that the tender offer by Flying Tigers Acquisition Corporation, a direct wholly-owned subsidiary of Lilly, to purchase all of the issued and outstanding shares of Adverum's common stock in exchange for $3.56 per Share, net to the stockholder in cash, without interest and less any...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 075518d44bb1913b
+symbol: LLY
+published_utc: 2025-12-09T15:30:00Z
+url: https://www.nasdaq.com/press-release/lilly-build-6-billion-facility-manufacture-active-pharmaceutical-ingredients-alabama
+headline: Lilly to build $6 billion facility to manufacture active pharmaceutical ingredients in Alabama
+<<<TEXT>>>
+--Eli Lilly and Company today announced plans to invest more than $6 billion in a new manufacturing facility in Huntsville, Alabama. This next-generation synthetic medicine active pharmaceutical ingredient facility, the third of four new U.S. sites Lilly plans to announce, will produce small molecule synthetic and peptide medicines.  "Huntsville's track...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e0e01dbac55cc890
+symbol: LLY
+published_utc: 2025-12-11T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-triple-agonist-retatrutide-delivered-weight-loss-average-712-lbs-along
+headline: Lilly's triple agonist, retatrutide, delivered weight loss of up to an average of 71.2 lbs along with substantial relief from osteoarthritis pain in first successful Phase 3 trial
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive topline results from the Phase 3 TRIUMPH-4 clinical trial evaluating the safety and efficacy of the two highest investigational doses of retatrutide, a first-in-class GIP, GLP-1 and glucagon triple hormone receptor agonist, in adults with obesity or overweight and knee osteoarthritis, and without diabetes,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b247c67f59b291a
+symbol: LLY
+published_utc: 2025-12-12T11:45:00Z
+url: https://www.nasdaq.com/press-release/updated-data-lillys-inluriyotm-imlunestrant-reinforce-efficacy-results-monotherapy
+headline: Updated data for Lilly's Inluriyo™ (imlunestrant) reinforce efficacy results as monotherapy and in combination with Verzenio® (abemaciclib) in ER+, HER2- advanced breast cancer
+<<<TEXT>>>
+--Eli Lilly and Company today announced updated results from the Phase 3 EMBER-3 study of Inluriyo, an oral estrogen receptor antagonist, in patients with estrogen receptor positive, human epidermal growth factor receptor 2– negative advanced or metastatic breast cancer, whose disease progressed on a prior aromatase inhibitor, with or without a CDK4/6...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 91c33d6ce8cd599b
+symbol: LLY
+published_utc: 2025-12-16T10:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-participate-jp-morgan-healthcare-conference-2025-12-16
+headline: Lilly to participate in J.P. Morgan Healthcare Conference
+<<<TEXT>>>
+--Eli Lilly and Company will participate in the 44 th Annual J.P. Morgan Healthcare Conference, Jan. 12-15, 2025. David A. Ricks, Lilly chair and CEO, will take part in a fireside chat on Tuesday Jan. 13 at 5:15 p.m., Eastern time. A live audio webcast will be available on the "Webcasts& Presentations" section of Lilly's investor website at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 657c2d94c386b8d5
+symbol: LLY
+published_utc: 2025-12-18T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-orforglipron-helped-people-maintain-weight-loss-after-switching-injectable
+headline: Lilly's orforglipron helped people maintain weight loss after switching from injectable incretins to oral GLP-1 therapy in first-of-its-kind Phase 3 trial
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive topline results from the ATTAIN-MAINTAIN trial. The Phase 3 study evaluated orforglipron, an investigational, once-daily oral small molecule glucagon-like peptide-1 receptor agonist, for weight maintenance over 52 weeks after initial treatment for 72 weeks with the highest tolerated doses of Wegovy or...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a16f5eea9ea09ee1
+symbol: LLY
+published_utc: 2026-01-07T16:17:00Z
+url: https://www.nasdaq.com/press-release/lilly-acquire-ventyx-biosciences-advance-oral-therapies-targeting-inflammatory
+headline: Lilly to acquire Ventyx Biosciences to advance oral therapies targeting inflammatory-mediated diseases
+<<<TEXT>>>
+--Eli Lilly and Company and Ventyx Biosciences, Inc., a San Diego- based clinical-stage biopharmaceutical company focused on developing innovative oral therapies for patients with inflammatory-mediated diseases, today announced entry into a definitive agreement for Lilly to acquire Ventyx.  "There is increasing evidence that inflammation is a key driver...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a65bd2adbb780e49
+symbol: LLY
+published_utc: 2026-01-08T14:00:00Z
+url: https://www.nasdaq.com/press-release/lillys-taltz-ixekizumab-and-zepbound-tirzepatide-used-together-delivered-superior
+headline: Lilly's Taltz (ixekizumab) and Zepbound (tirzepatide) used together delivered superior efficacy in first-of-its-kind Phase 3b trial for adults with active psoriatic arthritis and obesity or overweight
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive topline results from the novel TOGETHER-PsA open-label Phase 3 b trial evaluating the concomitant use of Taltz and Zepbound compared to Taltz alone in adults with active psoriatic arthritis and obesity or overweight with at least one weight-related condition. An estimated 65% of adults with PsA in the U.S....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 845e16bfeb83713e
+symbol: LLY
+published_utc: 2026-01-09T12:58:00Z
+url: https://www.nasdaq.com/press-release/vida-ventures-congratulates-aktis-oncology-its-entry-public-markets-2026-01-09
+headline: Vida Ventures Congratulates Aktis Oncology on Its Entry into the Public Markets
+<<<TEXT>>>
+Vida has partnered with Aktis since co-leading its Series A, supporting the company from discovery through IPO and establishing itself as one of Aktis’ largest shareholders; Helen Kim, Vida Senior Managing Director, has served on the Board since 2021 Brian Goodman, Ph.D., Managing Director at Vida Ventures and Co-Founder of Aktis, served as founding Chief...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 76857e6fa52cb830
+symbol: LLY
+published_utc: 2026-01-20T07:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-sofetabart-mipitecan-receives-us-fdas-breakthrough-therapy-designation
+headline: Lilly's sofetabart mipitecan receives U.S. FDA's Breakthrough Therapy designation for the treatment of certain patients with platinum-resistant ovarian cancer
+<<<TEXT>>>
+--Eli Lilly and Company today announced that the U.S. Food and Drug Administration has granted Breakthrough Therapy designation to sofetabart mipitecan for the treatment of adult patients with platinum-resistant epithelial ovarian, fallopian tube, or primary peritoneal cancer, who have received prior bevacizumab and mirvetuximab soravtansine, if...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e577fa4f389debc1
+symbol: LLY
+published_utc: 2026-01-21T10:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-confirms-date-and-conference-call-fourth-quarter-2025-financial-results
+headline: Lilly confirms date and conference call for fourth-quarter 2025 financial results announcement
+<<<TEXT>>>
+--Eli Lilly and Company will announce its fourth-quarter 2025 financial results on February 4, 2026. Lilly will also conduct a conference call that day with the investment community and media to further detail the company's financial performance. The conference call will begin at 10 a.m. Eastern time.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da54de71f31b0db8
+symbol: LLY
+published_utc: 2026-01-30T11:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-selects-pennsylvania-home-its-newest-injectable-medicine-and-device
+headline: Lilly selects Pennsylvania as home for its newest injectable medicine and device manufacturing facility
+<<<TEXT>>>
+The site will serve as Lilly's newest injectable medicine and device manufacturing facility that will produce next-generation weight-loss therapies, including retatrutide, a first-in-class investigational GIP, GLP-1 and glucagon triple hormone receptor agonist. To meet increasing demand, we're expanding our U.S. manufacturing network, with Lehigh...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4a713c430b648fbb
+symbol: LLY
+published_utc: 2026-02-04T06:45:00Z
+url: https://www.nasdaq.com/press-release/lilly-reports-fourth-quarter-2025-financial-results-and-provides-2026-guidance-2026
+headline: Lilly reports fourth-quarter 2025 financial results and provides 2026 guidance
+<<<TEXT>>>
+We expanded our manufacturing capacity, and through our U.S. government agreement, opened new access to obesity medicines. Revenue in the U.S. increased 43% to $12.9 billion, driven by a 50% increase in volume, partially offset by a 7% decrease due to lower realized prices. The increase in U.S. volume and decline in realized prices were driven by Zepbound and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a494a16d0799d10a
+symbol: LLY
+published_utc: 2026-02-09T07:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-acquire-orna-therapeutics-advance-cell-therapies-2026-02-09
+headline: Lilly to acquire Orna Therapeutics to advance cell therapies
+<<<TEXT>>>
+INDIANAPOLIS and WATERTOWN, Mass., Feb. 9, 2026/ PRNewswire/-- Eli Lilly and Company and Orna Therapeutics, Inc., a biotechnology company dedicated to engineering immune cells in vivo, today announced entry into a definitive agreement for Lilly to acquire Orna.  "Early autologous CAR-T studies have shown the promise of cell therapy for patients with autoimmune...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1ddff0af0a7bbc1a
+symbol: LLY
+published_utc: 2026-02-16T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-retevmo-selpercatinib-delivers-substantial-event-free-survival-benefit
+headline: Lilly's Retevmo (selpercatinib) delivers substantial event-free survival benefit as an adjuvant therapy in early-stage RET fusion-positive lung cancer
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive topline results from the Phase 3 LIBRETTO-432 clinical trial of Retevmo as adjuvant therapy versus placebo. The LIBRETTO-432 results support this observation, demonstrating an effect size in line with the most striking data for targeted adjuvant therapy in lung cancer, "said Jacob Van Naarden, executive vice...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7bdc907f148d1df1
+symbol: LLY
+published_utc: 2026-02-16T08:00:00Z
+url: https://www.nasdaq.com/press-release/usopc-announces-team-usa-athlete-recovery-program-partnership-eli-lilly-and-company
+headline: USOPC Announces the Team USA Athlete Recovery Program in Partnership with Eli Lilly and Company
+<<<TEXT>>>
+--The United States Olympic& Paralympic Committee today announced the Team USA Athlete Recovery Program in partnership with Lilly, reinforcing a shared commitment across multiple years to fostering athlete health, recovery, and well-being beyond competition. This partnership underscores Lilly's long-term commitment to Team USA, building on their role as...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d1bfcd14feaafc37
+symbol: LLY
+published_utc: 2026-02-16T10:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-participate-td-cowens-46th-annual-health-care-conference-2026-02-16
+headline: Lilly to participate in TD Cowen's 46th Annual Health Care Conference
+<<<TEXT>>>
+--Eli Lilly and Company will participate in TD Cowen's 46 th Annual Health Care Conference on March 2, 2026. Lucas Montarce, executive vice president and chief financial officer, will take part in a fireside chat at 3:10 p.m., Eastern time. A live audio webcast will be available on the "Webcasts& Presentations" section of Lilly's investor website at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2a0bfa927fada854
+symbol: LLY
+published_utc: 2026-02-17T08:00:00Z
+url: https://www.nasdaq.com/press-release/scribe-therapeutics-achieves-second-success-milestone-vivo-program-collaboration-eli
+headline: Scribe Therapeutics Achieves Second Success Milestone for In Vivo Program in Collaboration with Eli Lilly and Company
+<<<TEXT>>>
+Scribe Therapeutics, Inc., a biotechnology company pioneering highly engineered CRISPR technologies designed to reshape the treatment of disease by enabling earlier intervention, improved outcomes, and longer, healthier lives, today announced the achievement of a second success milestone for one of the targets in its collaboration with Eli Lilly and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 182e4aa5d86a97dc
+symbol: LLY
+published_utc: 2026-02-18T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-taltz-ixekizumab-and-zepbound-tirzepatide-used-together-delivered-superior-0
+headline: Lilly's Taltz (ixekizumab) and Zepbound (tirzepatide) used together delivered superior efficacy in first-of-its-kind Phase 3b trial for adults with psoriasis and obesity or overweight
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive topline results from the landmark TOGETHER-PsO open-label Phase 3 b clinical trial evaluating the concomitant use of Taltz and Zepbound compared to Taltz alone in adults with moderate-to-severe plaque psoriasis and obesity or overweight with at least one additional weight-related comorbid condition.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 36b553f0c8eea9ad
+symbol: LLY
+published_utc: 2026-02-19T12:15:00Z
+url: https://www.nasdaq.com/press-release/patients-crohns-disease-maintained-steroid-free-remission-three-years-lillys-omvoh
+headline: Patients with Crohn's disease maintained steroid-free remission for three years with Lilly's Omvoh (mirikizumab-mrkz)
+<<<TEXT>>>
+--New long-term data from Eli Lilly and Company showed Omvoh delivered durable efficacy through three years in adults with moderately to severely active Crohn's disease. 1 These data from the Phase 3 VIVID-2 open-label extension study were presented at the 21st Congress of the European Crohn's and Colitis Organisation in Stockholm.  "Too many people with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b2e33774fc22319
+symbol: LLY
+published_utc: 2026-02-23T09:00:00Z
+url: https://www.nasdaq.com/press-release/zepbound-tirzepatide-most-prescribed-weight-management-medication-2025-now-available
+headline: Zepbound (tirzepatide), the most prescribed weight management medication in 2025, now available in multi-dose KwikPen
+<<<TEXT>>>
+--Eli Lilly and Company today announced the U.S. Food and Drug Administration approved a label expansion for Zepbound ® to include the four-dose single-patient use KwikPen ® that delivers a full month of treatment in one device. Patients, with a valid prescription, opting for self-pay through LillyDirect ®, can receive all doses of Zepbound in a KwikPen or...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2bf791dd55ed7182
+symbol: LLY
+published_utc: 2026-02-26T06:30:00Z
+url: https://www.nasdaq.com/press-release/lillys-oral-glp-1-orforglipron-delivered-superior-blood-sugar-control-and-weight-loss
+headline: Lilly's oral GLP-1, orforglipron, delivered superior blood sugar control and weight loss compared to oral semaglutide in head-to-head type 2 diabetes trial published in The Lancet
+<<<TEXT>>>
+--Eli Lilly and Company today announced detailed results from ACHIEVE-3, the first head-to-head Phase 3 trial evaluating the safety and efficacy of orforglipron, a small molecule oral GLP-1 without food or water restrictions, compared with oral semaglutide in adults with type 2 diabetes inadequately controlled with metformin. In ACHIEVE-3, orforglipron...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e51f0eaec03de524
+symbol: LLY
+published_utc: 2026-03-05T06:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-employer-connect-platform-launches-over-fifteen-independent-program
+headline: Lilly Employer Connect platform launches with over fifteen independent program administrators offering tailored obesity coverage options to expand access to patients
+<<<TEXT>>>
+Obesity affects over 100 million American adults and costs the U.S. economy more than $1.7 trillion annually— including $480 billion in direct medical costs and $1.24 trillion in lost productivity. 1 Although obesity is a chronic disease, coverage for obesity management medications remains inconsistent across employer-sponsored plans, leaving roughly...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: edb0f4a6f32b8e1c
+symbol: LLY
+published_utc: 2026-03-16T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-ebglyss-lebrikizumab-lbkz-first-and-only-selective-il-13-inhibitor-deliver
+headline: Lilly's EBGLYSS (lebrikizumab-lbkz) is the first and only selective IL-13 inhibitor to deliver positive Phase 3 outcomes in patients aged six months to 18 years with moderate-to-severe atopic dermatitis
+<<<TEXT>>>
+Atopic dermatitis is more common in children than adults, affecting 9.6 million children in the U.S., one-third of whom have moderate-to-severe disease. 1 Lilly plans to submit these data to U.S. and global regulators for a potential label update. The co-primary endpoints in ADorable-1 were EASI -75 and IGA 0,1 at Week 16.  "Children with moderate-to-severe...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 68095311c50c0078
+symbol: LLY
+published_utc: 2026-03-19T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-triple-agonist-retatrutide-demonstrated-significant-reductions-a1c-and-weight
+headline: Lilly's triple agonist, retatrutide, demonstrated significant reductions in A1C and weight in first Phase 3 trial for treatment of type 2 diabetes
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive topline results from TRANSCEND-T2D-1, a Phase 3 clinical trial evaluating the efficacy and safety of retatrutide, an investigational first-in-class GIP, GLP-1 and glucagon triple hormone receptor agonist, as an adjunct to diet and exercise. The trial enrolled adults diagnosed with type 2 diabetes with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0bc8879b7be99013
+symbol: LLY
+published_utc: 2026-03-27T09:00:00Z
+url: https://www.nasdaq.com/press-release/lillys-ebglyss-lebrikizumab-lbkz-delivered-four-years-durable-disease-control
+headline: Lilly's EBGLYSS (lebrikizumab-lbkz) delivered up to four years of durable disease control for patients with moderate-to-severe atopic dermatitis
+<<<TEXT>>>
+--New long-term data show Eli Lilly and Company's EBGLYSS delivered durable skin clearance and relief from persistent itch for up to four years for patients with moderate-to-severe atopic dermatitis in an open-label extension study offering once-monthly maintenance injection. Interim findings from the first year of the ADlong Phase 3 b study will be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e7aa91a1db459547
+symbol: LLY
+published_utc: 2026-03-28T15:15:00Z
+url: https://www.nasdaq.com/press-release/phase-3b-data-presented-aad-annual-meeting-show-lillys-taltz-ixekizumab-plus-zepbound
+headline: Phase 3b data presented at AAD Annual Meeting show Lilly's Taltz (ixekizumab) plus Zepbound (tirzepatide) delivered superior efficacy for adults with psoriatic arthritis and obesity
+<<<TEXT>>>
+--Eli Lilly and Company today announced detailed results from the TOGETHER-PsA open-label Phase 3 b clinical trial evaluating the concomitant use of Taltz and Zepbound compared to Taltz alone in adults with active psoriatic arthritis and obesity or overweight with at least one additional weight-related comorbid condition. These results were presented...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 30ed756f0f8524b7
+symbol: LLY
+published_utc: 2026-04-01T07:27:00Z
+url: https://www.nasdaq.com/press-release/cardiol-therapeutics-announces-year-end-2025-update-operations-2026-04-01
+headline: Cardiol Therapeutics Announces Year-End 2025 Update on Operations
+<<<TEXT>>>
+Cardiol Therapeutics Inc., a late-stage life sciences company focused on advancing the development of anti-inflammatory and anti-fibrotic therapies for heart disease, today announced its year-end 2025 update on operations following the filing of its audited Financial Statements and Management's Discussion and Analysis for the year ended December...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9808022422bae76b
+symbol: LLY
+published_utc: 2026-04-01T11:30:00Z
+url: https://www.nasdaq.com/press-release/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill-weight-loss-can-be-taken
+headline: FDA approves Lilly's Foundayo™ (orforglipron), the only GLP-1 pill for weight loss that can be taken any time of day without food or water restrictions
+<<<TEXT>>>
+--Eli Lilly and Company today announced the U.S. Food and Drug Administration approved Foundayo™ for adults with obesity, or overweight with weight-related medical problems.  "People living with obesity need treatment options that meet them where they are– and for many, a once-daily pill that can be taken with no food or water restrictions can offer them greater...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 204991653152839c
+symbol: LLY
+published_utc: 2026-04-09T06:45:00Z
+url: https://www.nasdaq.com/press-release/foundayotm-orforglipron-lillys-new-oral-glp-1-pill-weight-loss-now-available-us-2026
+headline: Foundayo™ (orforglipron), Lilly's new oral GLP-1 pill for weight loss, now available in the U.S.
+<<<TEXT>>>
+--Eli Lilly and Company today announced that Foundayo™ is now available to adults with obesity or overweight with weight-related medical problems following the U.S. Food and Drug Administration approval on April 1, 2026. People can now access Foundayo via LillyDirect ® and telehealth providers, with availability expanding to U.S. retail pharmacies...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1b5ec569067ef63d
+symbol: LLY
+published_utc: 2026-04-13T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-jaypirca-pirtobrutinib-significantly-extended-progression-free-survival-when
+headline: Lilly's Jaypirca (pirtobrutinib) significantly extended progression-free survival when added to a venetoclax time-limited regimen in patients with previously treated CLL/SLL
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive topline results from the Phase 3 BRUIN CLL-322 trial of Jaypirca, a non-covalent Bruton tyrosine kinase inhibitor, plus venetoclax and rituximab versus venetoclax and rituximab in patients with relapsed or refractory chronic lymphocytic leukemia or small lymphocytic lymphoma. Treatment in both study arms...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b24761f2a2354f29
+symbol: LLY
+published_utc: 2026-04-16T06:45:00Z
+url: https://www.nasdaq.com/press-release/achieve-4-longest-phase-3-study-lillys-foundayo-orforglipron-date-reaffirmed-its
+headline: ACHIEVE-4, the longest Phase 3 study of Lilly's Foundayo (orforglipron) to date, reaffirmed its cardiovascular and overall safety profile as well as consistent improvements across key measures of cardiometabolic health
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive topline results from the Phase 3 ACHIEVE-4 trial evaluating the efficacy and safety of Foundayo, compared to insulin glargine in adults with type 2 diabetes and obesity or overweight at increased cardiovascular risk. ACHIEVE-4, the largest and longest study of Foundayo in type 2 diabetes to date, enrolled more...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ef4b4a1843b823df
+symbol: LLY
+published_utc: 2026-04-16T10:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-confirms-date-and-conference-call-first-quarter-2026-financial-results
+headline: Lilly confirms date and conference call for first-quarter 2026 financial results announcement
+<<<TEXT>>>
+--Eli Lilly and Company will announce its first-quarter 2026 financial results on April 30, 2026. Lilly will also conduct a conference call that day with the investment community and media to further detail the company's financial performance. The conference call will begin at 10 a.m. Eastern time.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4bee396aaddc2567
+symbol: LLY
+published_utc: 2026-04-20T09:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-acquire-kelonia-therapeutics-advance-vivo-car-t-cell-therapies-2026-04-20
+headline: Lilly to acquire Kelonia Therapeutics to advance in vivo CAR-T cell therapies
+<<<TEXT>>>
+INDIANAPOLIS and BOSTON, Mass., April 20, 2026/ PRNewswire/-- Eli Lilly and Company and Kelonia Therapeutics, Inc., a clinical-stage biotechnology company pioneering in vivo gene delivery, today announced a definitive agreement for Lilly to acquire Kelonia. Encouraging early clinical results were presented in the plenary session of the 2025 American Society...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b97dbd80463cad8c
+symbol: LLY
+published_utc: 2026-04-27T06:45:00Z
+url: https://www.nasdaq.com/press-release/lilly-acquire-ajax-therapeutics-advance-outcomes-patients-myelofibrosis-and
+headline: Lilly to acquire Ajax Therapeutics to advance outcomes for patients with myelofibrosis and polycythemia vera
+<<<TEXT>>>
+Ajax's lead program, AJ1-11095, is a first-in-class Type II JAK2 inhibitor currently in Phase 1 clinical development, with first proof-of-concept clinical data to be presented later in 2026. INDIANAPOLIS and NEW YORK and CAMBRIDGE, Mass., April 27, 2026/ PRNewswire/-- Eli Lilly and Company and Ajax Therapeutics, Inc., a biopharmaceutical company developing next...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4e112d49257738ac
+symbol: LLY
+published_utc: 2026-04-30T06:45:00Z
+url: https://www.nasdaq.com/press-release/lilly-reports-first-quarter-2026-financial-results-raises-full-year-guidance-and
+headline: Lilly reports first-quarter 2026 financial results, raises full year guidance, and highlights momentum of new medicines
+<<<TEXT>>>
+--Eli Lilly and Company today announced its financial results for the first quarter of 2026 and provided updated 2026 financial guidance.  "A key milestone was the U.S. FDA approval of Foundayo— the only approved GLP-1 pill that can be taken any time of day, without food and water restrictions. Revenue in the U.S. increased 43% to $12.1 billion, driven by a 49% increase...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 17779e7c4e4e2d03
+symbol: LLY
+published_utc: 2026-05-04T11:11:00Z
+url: https://www.nasdaq.com/press-release/lilly-declares-second-quarter-2026-dividend-2026-05-04
+headline: Lilly declares second-quarter 2026 dividend
+<<<TEXT>>>
+--The board of directors of Eli Lilly and Company has declared a dividend for the second quarter of 2026 of $1.73 per share on outstanding common stock. The dividend is payable on June 10, 2026, to shareholders of record at the close of business on May 15, 2026. About Lilly Lilly is a medicine company turning science into healing to make life better for people around...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d39c22ecc78389ec
+symbol: LLY
+published_utc: 2026-05-05T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-omvoh-mirikizumab-mrkz-first-and-only-il-23p19-demonstrate-durable-disease
+headline: Lilly's Omvoh (mirikizumab-mrkz) is the first and only IL-23p19 to demonstrate durable disease clearance in ulcerative colitis through four years
+<<<TEXT>>>
+--New long-term data from Eli Lilly and Company show patients with moderately to severely active ulcerative colitis treated with Omvoh achieved durable disease clearance through four years of continuous treatment.  "Ulcerative colitis is a lifelong disease, and every person living with the condition deserves a treatment that can deliver strong and durable...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e9deb9d5c3ab729
+symbol: LLY
+published_utc: 2026-05-06T09:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-commits-additional-45-billion-across-indiana-manufacturing-sites-opens-first
+headline: Lilly commits additional $4.5 billion across Indiana manufacturing sites, opens first dedicated genetic medicine facility
+<<<TEXT>>>
+--Eli Lilly and Company today announced an additional $4.5 billion investment across two of its three Lebanon sites— bringing the company's total Indiana capital expansion commitments since 2020 to more than $21 billion. This facility is the first of three planned sites on the Lebanon campus, which will also include Lilly Lebanon API and the Lilly Medicine...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ba5572ce3596f195
+symbol: LLY
+published_utc: 2026-05-12T12:00:00Z
+url: https://www.nasdaq.com/press-release/honor-its-150th-anniversary-eli-lilly-and-company-commits-support-community
+headline: In honor of its 150th anniversary, Eli Lilly and Company commits to support community organizations aiming to provide 500,000 meals and cold storage for 150 food pantries
+<<<TEXT>>>
+--Eli Lilly and Company today announced an initiative to support nationwide nutritious food distribution as part of the company's 150th anniversary, through charitable support of trusted community organizations in the United States. Through charitable support of HATCH, United Way Worldwide, United Way of Central Indiana, and the Pacers Foundation, the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 34be16fa9d41abfe
+symbol: LLY
+published_utc: 2026-05-12T18:01:00Z
+url: https://www.nasdaq.com/press-release/lillys-foundayo-and-lower-dose-zepbound-helped-people-maintain-weight-loss-after
+headline: Lilly's Foundayo and lower-dose Zepbound helped people maintain weight loss after switching from higher doses of injectable incretin therapy in two late-phase trials
+<<<TEXT>>>
+--Eli Lilly and Company today announced detailed results from two late-phase trials showing that people with obesity maintained their weight loss long term with either Foundayo or lower-dose Zepbound after switching from higher doses of injectable incretin therapy. The findings from SURMOUNT-MAINTAIN and ATTAIN-MAINTAIN, were presented at the 33rd...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 662c378e09d7628e
+symbol: LLY
+published_utc: 2026-05-14T07:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-and-unicef-collaborate-give-millions-children-healthier-start-2026-05-14
+headline: Lilly and UNICEF collaborate to give millions of children a healthier start
+<<<TEXT>>>
+Marking its 150 th anniversary, Lilly is committing $50 million to UNICEF USA, supporting UNICEF's efforts to strengthen primary healthcare systems to better prevent, detect and manage NCDs such as diabetes, congenital heart disease, sickle cell disease and respiratory illness in children and adolescents. UNICEF will support governments to make...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5417976e30b60ea9
+symbol: LLY
+published_utc: 2026-05-16T11:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-caitlin-clark-foundation-and-musco-lighting-open-three-community-sports-courts
+headline: Lilly, Caitlin Clark Foundation, and Musco Lighting open three community sports courts in Indianapolis, expanding year-round access for youth
+<<<TEXT>>>
+--The Caitlin Clark Foundation, in partnership with Eli Lilly and Company and Musco Lighting, has opened three new multi-sport community courts across Indianapolis— creating year-round access to safe, high-quality spaces for youth to play. These latest court openings include two courts at Indianapolis Public Schools— Clarence Farrington and Edison School...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a0f9473ed711d3e
+symbol: LLY
+published_utc: 2026-05-18T10:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-participate-bernsteins-42nd-annual-strategic-decisions-conference-2026-05-18
+headline: Lilly to participate in Bernstein's 42nd Annual Strategic Decisions Conference
+<<<TEXT>>>
+--Eli Lilly and Company will participate in Bernstein's 42 nd Annual Strategic Decisions Conference on May 28, 2026. Daniel M. Skovronsky, M.D., Ph.D., chief scientific and product officer, and president of Lilly Research Laboratories, will take part in a fireside chat at 1:30 p.m., Eastern time. A live audio webcast will be available on the "Webcasts& Presentations"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2767eb9a781d946f
+symbol: LLY
+published_utc: 2026-05-21T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-triple-agonist-retatrutide-delivered-powerful-weight-loss-pivotal-phase-3
+headline: Lilly's triple agonist, retatrutide, delivered powerful weight loss in pivotal Phase 3 obesity trial
+<<<TEXT>>>
+--Eli Lilly and Company, the maker of Zepbound and Foundayo, today announced positive topline results from TRIUMPH-1, a Phase 3 clinical trial evaluating the efficacy and safety of retatrutide, an investigational, first-in-class GIP, GLP-1, and glucagon triple hormone receptor agonist, in adults with obesity or overweight and at least one weight-related...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c3a8105693d9c951
+symbol: LLY
+published_utc: 2026-05-21T17:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-showcase-oncology-portfolio-across-tumor-types-and-treatment-modalities-2026
+headline: Lilly to showcase oncology portfolio across tumor types and treatment modalities at the 2026 American Society of Clinical Oncology Annual Meeting
+<<<TEXT>>>
+--Eli Lilly and Company today announced the details of presentations from across its oncology portfolio at the American Society of Clinical Oncology Annual Meeting, taking place May 29- June 2 in Chicago, Illinois. Data at ASCO include two Plenary Session presentations, featuring primary event-free survival results from the Phase 3 LIBRETTO-432 study of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0b5c0dd8d890212c
+symbol: LLY
+published_utc: 2026-05-25T08:45:00Z
+url: https://www.nasdaq.com/press-release/single-dose-lillys-pcsk9-base-editor-verve-102-reduced-pcsk9-88-and-ldl-c-62-durable
+headline: A single dose of Lilly's PCSK9 base editor, VERVE-102, reduced PCSK9 by up to 88% and LDL-C by up to 62%, with durable effects supporting its potential as a one-time treatment for hypercholesterolemia
+<<<TEXT>>>
+--Eli Lilly and Company today announced positive Phase 1 b Heart-2 study results for VERVE-102, an investigational in vivo base editing medicine designed to durably turn off the PCSK9 gene in the liver and lower blood low-density lipoprotein cholesterol following a single infusion. These data were presented as a late-breaking oral presentation at the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d75f0fc89ea07564
+symbol: LLY
+published_utc: 2026-05-26T06:45:00Z
+url: https://www.nasdaq.com/press-release/lilly-announces-three-acquisitions-build-infectious-disease-portfolio-2026-05-26
+headline: Lilly announces three acquisitions to build infectious disease portfolio
+<<<TEXT>>>
+--Eli Lilly and Company today announced agreements to acquire three companies, Curevo Inc., LimmaTech Biologics AG, and Vaccine Company, Inc., that expand its research and development efforts into infectious disease. The transactions advance Lilly's strategy of investing in differentiated technology platforms to address significant health problems.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3f35b57823353c92
+symbol: LLY
+published_utc: 2026-05-27T11:15:00Z
+url: https://www.nasdaq.com/press-release/lilly-participate-goldman-sachs-47th-annual-global-healthcare-conference-2026-05-27
+headline: Lilly to participate in Goldman Sachs 47th Annual Global Healthcare Conference
+<<<TEXT>>>
+--Eli Lilly and Company will participate in the Goldman Sachs 47th Annual Global Healthcare Conference on June 9, 2026. Kenneth Custer, executive vice president and president, Lilly Cardiometabolic Health, will take part in a fireside chat at 3:20 p.m. Eastern time. A live audio webcast will be available on the "Webcasts& Presentations" section of Lilly's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8d77f8ff73f0923f
+symbol: LLY
+published_utc: 2026-05-28T06:45:00Z
+url: https://www.nasdaq.com/press-release/foundayo-and-zepbound-now-covered-millions-americans-2026-05-28
+headline: Foundayo and Zepbound now covered for millions of Americans
+<<<TEXT>>>
+--Eli Lilly and Company today announced an access milestone in obesity care: all three of the nation's largest pharmacy benefit managers will cover Lilly's full obesity medicine portfolio.  "For too long, effective obesity treatment has been out of reach for the people who need it," said Ilya Yuffa, executive vice president and president of Lilly USA and global...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 651564de4cbad37a
+symbol: LLY
+published_utc: 2026-05-28T13:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-present-new-data-foundayo-mounjaro-and-retatrutide-american-diabetes
+headline: Lilly to present new data on Foundayo, Mounjaro and retatrutide at the American Diabetes Association's 86th Scientific Sessions, building toward a new era of choice in diabetes and obesity care
+<<<TEXT>>>
+--Eli Lilly and Company, the maker of Zepbound, Mounjaro, Foundayo and retatrutide, will present new data across its cardiometabolic portfolio at the American Diabetes Association's 86th Scientific Sessions taking place June 5-8 in New Orleans.  "The data we're presenting at ADA, including pivotal Phase 3 results for retatrutide and Foundayo, the only oral GLP-1...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6e40a930155071c5
+symbol: LLY
+published_utc: 2026-05-31T08:01:00Z
+url: https://www.nasdaq.com/press-release/lillys-retevmo-selpercatinib-demonstrated-83-reduction-risk-disease-recurrence-or
+headline: Lilly's Retevmo (selpercatinib) demonstrated an 83% reduction in the risk of disease recurrence or death as adjuvant therapy for people with early-stage RET fusion-positive lung cancer
+<<<TEXT>>>
+--Eli Lilly and Company today announced results from the Phase 3 LIBRETTO-432 clinical trial of Retevmo as adjuvant therapy versus placebo in patients with early-stage rearranged during transfection fusion-positive non-small cell lung cancer. These data will be simultaneously published in the New England Journal of Medicine and presented during the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4b393b7119907828
+symbol: LLY
+published_utc: 2026-06-02T09:30:00Z
+url: https://www.nasdaq.com/press-release/lilly-spotlight-growing-hematology-portfolio-2026-european-hematology-association-eha
+headline: Lilly to spotlight growing hematology portfolio at 2026 European Hematology Association (EHA) Annual Meeting
+<<<TEXT>>>
+--Eli Lilly and Company today announced the details of presentations at the European Hematology Association Annual Meeting, taking place June 11-14 in Stockholm, Sweden. Lilly is strengthening its hematology portfolio through the recently announced proposed acquisitions of Ajax Therapeutics, Inc.* and Kelonia Therapeutics, Inc.*, each of which will present...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f4edb9e22aede278
+symbol: LLY
+published_utc: 2026-06-06T14:30:00Z
+url: https://www.nasdaq.com/press-release/lillys-triple-agonist-retatrutide-drove-substantial-improvements-weight-a1c-knee
+headline: Lilly's triple agonist, retatrutide, drove substantial improvements in weight, A1C, knee osteoarthritis pain, and obstructive sleep apnea, demonstrating its remarkable potential to treat obesity and its complications
+<<<TEXT>>>
+--Eli Lilly and Company, the maker of Zepbound and Foundayo, today announced additional positive results from pivotal Phase 3 trials of retatrutide, an investigational, first-in-class GIP, GLP-1, and glucagon triple hormone receptor agonist, showing substantial weight loss along with meaningful improvements across knee osteoarthritis pain,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b7321791b612f7bf
+symbol: LLY
+published_utc: 2026-06-07T11:00:00Z
+url: https://www.nasdaq.com/press-release/lillys-foundayo-orforglipron-only-oral-glp-1-taken-without-food-or-water-restrictions
+headline: Lilly's Foundayo (orforglipron), the only oral GLP-1 taken without food or water restrictions, was associated with significant weight loss in women at every stage of menopause
+<<<TEXT>>>
+--Eli Lilly and Company, the maker of Zepbound, today announced results demonstrating that women with obesity or overweight who took the highest dose of Foundayo experienced significant weight loss at every stage of menopause. Hormonal changes during this time can accelerate fat accumulation, particularly around the abdomen, and make weight loss harder to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 35ac85f0a0ade375
+symbol: LLY
+published_utc: 2026-06-08T14:30:00Z
+url: https://www.nasdaq.com/press-release/lillys-oral-glp-1-foundayo-orforglipron-delivered-superior-a1c-control-and-weight
+headline: Lilly's oral GLP-1 Foundayo (orforglipron) delivered superior A1C control and weight loss in three pivotal type 2 diabetes trials
+<<<TEXT>>>
+--Eli Lilly and Company, the maker of Zepbound, today announced detailed results from three Phase 3 trials in the ACHIEVE program evaluating Foundayo, a small molecule oral GLP-1 taken without food or water restrictions, in adults with type 2 diabetes. In ACHIEVE-2 and ACHIEVE-5, Foundayo met the primary endpoint and key secondary endpoints, delivering superior...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 84c0e2784cfae5df
+symbol: LLY
+published_utc: 2026-06-09T04:00:00Z
+url: https://www.nasdaq.com/press-release/convatec-and-lilly-foundation-commit-5m-partners-health-improve-care-non-communicable
+headline: Convatec and Lilly Foundation Commit $5m to Partners In Health to Improve Care for Non‑communicable Disease and Chronic Conditions
+<<<TEXT>>>
+LONDON& BOSTON---- Convatec, a leading medical products and technologies company focused on solutions for the management of chronic conditions; The Eli Lilly and Company Foundation, a tax-exempt private foundation supported by donations from Eli Lilly and Company have committed c. The initiative honours the legacy of Karim Bitar, formerly Chief Executive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c9cc34a5675844e5
+symbol: LLY
+published_utc: 2026-06-09T18:18:00Z
+url: https://www.nasdaq.com/press-release/fda-approves-lillys-ebglyssr-lebrikizumab-lbkz-one-maintenance-dose-every-eight-weeks
+headline: FDA approves Lilly's EBGLYSS® (lebrikizumab-lbkz) for one maintenance dose every eight weeks in patients with moderate-to-severe atopic dermatitis
+<<<TEXT>>>
+--Eli Lilly and Company announced today that the U.S. Food and Drug Administration approved a regimen of one maintenance dose every eight weeks of a single injection of EBGLYSS for subcutaneous use in adults and children 12 years of age and older who weigh at least 88 pounds with moderate-to-severe atopic dermatitis. For people living with moderate-to-severe...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e1987318b4bc41ac
+symbol: LLY
+published_utc: 2026-06-10T09:30:00Z
+url: https://www.nasdaq.com/press-release/zepbound-tirzepatide-and-shaquille-oneal-launch-national-campaign-after-nba-legend
+headline: Zepbound (tirzepatide) and Shaquille O'Neal launch national campaign after NBA legend learns the obstructive sleep apnea he has lived with for years is treatable
+<<<TEXT>>>
+--Eli Lilly and Company today announced that basketball legend and cultural icon Shaquille O'Neal is sharing his personal experience with moderate obstructive sleep apnea, including candid insight into his diagnosis and treatment journey with Zepbound ®. After years of dismissing fatigue, loud snoring and difficulty focusing as normal parts of his life,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 610a19a2bcc868ce
+symbol: LLY
+published_utc: 2026-06-13T11:15:00Z
+url: https://www.nasdaq.com/press-release/lilly-present-initial-clinical-data-first-class-type-ii-jak2-inhibitor-patients
+headline: Lilly to present initial clinical data for first-in-class type II JAK2 inhibitor in patients with previously treated myelofibrosis at the 2026 EHA Annual Meeting
+<<<TEXT>>>
+--Eli Lilly and Company today announced new data from the Phase 1 AJX-101 study showing that its investigational type II JAK2 inhibitor demonstrated an encouraging safety profile and promising clinical activity in patients with myelofibrosis who have been failed by a type I JAK2 inhibitor. These data will be highlighted in an oral presentation at the 2026...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 56c7bb7b2fcd6de9
+symbol: LLY
+published_utc: 2026-06-14T03:15:00Z
+url: https://www.nasdaq.com/press-release/lillys-jaypirca-pirtobrutinib-significantly-reduced-risk-disease-progression-or-death
+headline: Lilly's Jaypirca (pirtobrutinib) significantly reduced the risk of disease progression or death by 45% when added to a venetoclax time-limited regimen in people with previously treated CLL/SLL
+<<<TEXT>>>
+--Eli Lilly and Company today announced results from the Phase 3 BRUIN CLL-322 clinical trial of Jaypirca, a non-covalent Bruton tyrosine kinase inhibitor, plus venetoclax and rituximab versus venetoclax and rituximab in patients with relapsed or refractory chronic lymphocytic leukemia or small lymphocytic lymphoma. These data will be highlighted in a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 982487ab6512861d
+symbol: LLY
+published_utc: 2026-06-22T11:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-declares-third-quarter-2026-dividend-2026-06-22
+headline: Lilly declares third-quarter 2026 dividend
+<<<TEXT>>>
+--The board of directors of Eli Lilly and Company has declared a dividend for the third quarter of 2026 of $1.73 per share on outstanding common stock. The dividend is payable on September 10, 2026, to shareholders of record at the close of business on August 14, 2026. About Lilly Lilly is a medicine company turning science into healing to make life better for people...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9f84a7383771e175
+symbol: LLY
+published_utc: 2026-06-24T08:45:00Z
+url: https://www.nasdaq.com/press-release/lilly-completes-acquisition-centessa-pharmaceuticals-advance-treatments-sleep-wake
+headline: Lilly completes acquisition of Centessa Pharmaceuticals to advance treatments for sleep-wake disorders
+<<<TEXT>>>
+--Eli Lilly and Company today announced the successful completion of its acquisition of Centessa Pharmaceuticals plc. Centessa is a clinical-stage company developing orexin receptor 2 agonists as a new class of medicines for the treatment of narcolepsy and potentially other sleep- wake disorders.  "The orexin system plays a fundamental role in human brain...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f026a81c67563569
+symbol: LLY
+published_utc: 2026-06-25T06:45:00Z
+url: https://www.nasdaq.com/press-release/what-medicare-part-d-patients-need-know-about-accessing-foundayo-orforglipron-and
+headline: What Medicare Part D patients need to know about accessing Foundayo (orforglipron) and Zepbound (tirzepatide) for weight management
+<<<TEXT>>>
+--Eli Lilly and Company today announced additional details regarding the Medicare GLP-1 Bridge* program taking effect July 1, 2026. Below is what patients and their healthcare providers need to know, including an overview of the clinical and program eligibility requirements determined by Centers for Medicare& Medicaid Services. Medicare Part D patients who...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 424f13e3bb22f2a3
+symbol: LLY
+published_utc: 2026-06-26T07:16:00Z
+url: https://www.nasdaq.com/press-release/lillys-jaypirca-pirtobrutinib-recommended-chmp-approval-european-union-adults-chronic
+headline: Lilly's Jaypirca (pirtobrutinib) recommended by CHMP for approval in the European Union for adults with chronic lymphocytic leukemia (CLL) across all lines of therapy
+<<<TEXT>>>
+--Eli Lilly and Company today announced that the European Medicines Agency's Committee for Medicinal Products for Human Use has issued a positive opinion for Jaypirca, a non-covalent Bruton tyrosine kinase inhibitor, for the treatment of adults with chronic lymphocytic leukemia across all lines of therapy and regardless of prior BTK inhibitor treatment.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 755020787bd58885
+symbol: LLY
+published_utc: 2026-07-09T07:30:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-eli-lilly-and-company-2026-07-09
+headline: /C O R R E C T I O N -- Eli Lilly and Company/
+<<<TEXT>>>
+--Eli Lilly and Company today announced it will present 16 abstracts at the 2026 Alzheimer's Association International Conference, July 12-15 in London. Also on July 15, Samantha Burnham, Ph.D., senior research scientist, Eli Lilly and Company, will present data showing P-tau217 blood biomarker assays demonstrated strong rule-in performance comparable to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a648305db1f40ea0
+symbol: LLY
+published_utc: 2026-07-16T06:45:00Z
+url: https://www.nasdaq.com/press-release/lilly-acquire-ataibeckley-advance-therapies-treatment-resistant-depression-and-other
+headline: Lilly to acquire AtaiBeckley to advance therapies for treatment-resistant depression and other mental health conditions
+<<<TEXT>>>
+INDIANAPOLIS and NEW YORK, July 16, 2026/ PRNewswire/-- Eli Lilly and Company and AtaiBeckley Inc., a clinical-stage biopharmaceutical company developing innovative therapeutics for mental health conditions, today announced a definitive agreement for Lilly to acquire AtaiBeckley. The lead asset, BPL-003, is a synthetic form of 5- MeO-DMT administered...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2a3af880f7c45540
+symbol: LLY
+published_utc: 2026-07-21T08:30:00Z
+url: https://www.nasdaq.com/press-release/billions-flow-next-generation-depression-treatments-pharma-innovation-accelerates
+headline: Billions Flow Into Next-Generation Depression Treatments as Pharma Innovation Accelerates
+<<<TEXT>>>
+--Market News Updates News Commentary- Globally, Major Depressive Disorder is a prevalent mental health condition that has seen an improvement in patient outcomes due to new approaches introduced by pharmaceutical companies. Active Companies in the mental health space with current developments include: Helus PharmaTM, Eli Lilly and Company, AtaiBeckley...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bf0f485368231b0d
+symbol: LLY
+published_utc: 2026-07-22T10:00:00Z
+url: https://www.nasdaq.com/press-release/lilly-confirms-date-and-conference-call-second-quarter-2026-financial-results
+headline: Lilly confirms date and conference call for second-quarter 2026 financial results announcement
+<<<TEXT>>>
+--Eli Lilly and Company will announce its second-quarter 2026 financial results on August 5, 2026. Lilly will also conduct a conference call that day with the investment community and media to further detail the company's financial performance. The conference call will begin at 10 a.m. Eastern time. Investors, media and the general public can access a live...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ed22b32be739a5c7
+symbol: LLY
+published_utc: 2026-07-23T06:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-triple-agonist-retatrutide-successful-two-additional-phase-3-obesity-trials
+headline: Lilly's triple agonist, retatrutide, successful in two additional Phase 3 obesity trials, delivering significant improvements in weight and A1C
+<<<TEXT>>>
+--Eli Lilly and Company, the maker of Zepbound and Foundayo, today announced positive topline results from TRIUMPH-2 and TRIUMPH-3, two pivotal Phase 3 trials evaluating retatrutide, an investigational, first-in-class GIP, GLP-1, and glucagon triple hormone receptor agonist. In both studies, retatrutide met the primary endpoint, delivering substantial...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f3f48afaa3c5dc89
+symbol: LLY
+published_utc: 2026-08-03T07:45:00Z
+url: https://www.nasdaq.com/press-release/lillys-olomorasib-receives-us-fdas-breakthrough-therapy-designation-treatment
+headline: Lilly's olomorasib receives U.S. FDA's Breakthrough Therapy designation for the treatment of previously treated KRAS G12C-mutant advanced pancreatic cancer
+<<<TEXT>>>
+--Eli Lilly and Company today announced that the U.S. Food and Drug Administration has granted Breakthrough Therapy designation to olomorasib as a monotherapy for the treatment of adult patients with advanced pancreatic cancer who have received at least one prior systemic therapy and have a KRAS G12C mutation, as determined by an FDA- approved test.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 45228d1796ebe821
+symbol: LLY
+published_utc: 2026-08-05T06:45:00Z
+url: https://www.nasdaq.com/press-release/lilly-reports-second-quarter-2026-financial-results-raises-full-year-guidance-and
+headline: Lilly reports second-quarter 2026 financial results, raises full-year guidance, and highlights continued growth and pipeline progress
+<<<TEXT>>>
+--Eli Lilly and Company today announced its financial results for the second quarter of 2026 and provided updated 2026 financial guidance.  "Lilly' s momentum continues, as we delivered 48% revenue growth and raised our full-year guidance," said David A. Ricks, Lilly chair and CEO.  "At the same time, Lilly is building for the future.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4fbdab38ec18bb2d
+symbol: LLY
+published_utc: 2026-08-12T05:30:00Z
+url: https://www.nasdaq.com/press-release/lilly-calls-online-platforms-payment-companies-and-regulators-shut-down-illegal
+headline: Lilly calls on online platforms, payment companies and regulators to shut down the illegal retatrutide black market
+<<<TEXT>>>
+--Eli Lilly and Company today escalated its continued fight to protect patients from the dangerous black market for retatrutide, filing six new lawsuits against U.S. entities selling black-market products in addition to having referred hundreds of bad actors to regulators and law enforcement worldwide. Lilly is also calling on the entities that sellers use...
+<<<END>>>

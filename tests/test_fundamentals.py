@@ -4,8 +4,6 @@ The evidence is the REAL one: Apple's first-quarter 10-Q (three months, the cash
 read from the real stored pages in tests/fixtures by the real `filing_signals`. Every expected number is worked from the figures on those pages (listed in test_filing_signals.py).
 The tests that remove a row use small hand-made evidence dictionaries: they test what happens when a figure is absent.
 """
-from datetime import date
-
 import pytest
 from test_filing_signals import APPLE_TODAY, META_TODAY, store
 
@@ -29,7 +27,7 @@ def meta(tmp_path, monkeypatch, capsys):
 
 def test_units_and_the_year_to_date_pair():
     assert f.multiplier("(In millions, except number of shares)") == 1e6
-    assert f.multiplier("(In thousands)") == 1e3 and f.multiplier("(In billions)") == 1e9 and f.multiplier(None) == 1.0 and f.multiplier("(in dollars)") == 1.0
+    assert f.multiplier("(In thousands)") == 1e3 and f.multiplier("(In billions)") == 1e9 and f.multiplier("(in dollars)") == 1.0
     assert f.ytd([1, 2, 3, 4]) == (3, 4)      # three months and year to date, this year and last: the year to date is the second pair
     assert f.ytd([1, 2]) == (1, 2) and f.ytd([1, 2, 3]) is None
 
@@ -122,27 +120,9 @@ def test_every_ratio_is_missing_not_guessed_when_its_inputs_are_not_there():
 
 
 def test_a_negative_net_income_has_no_payout_coverage():
-    evidence = {"capital_actions": [{"item": "dividends paid", "current": -5.0, "units": ""}], "income": [{"item": "net income", "values": [-10.0, 4.0], "units": ""}]}
+    evidence = {"capital_actions": [{"item": "dividends paid", "current": -5.0, "units": "(In dollars)"}], "income": [{"item": "net income", "values": [-10.0, 4.0], "units": "(In dollars)"}]}
     with pytest.raises(f.Missing, match="not positive"):
         f.payout_coverage(evidence)
-
-
-def test_dilution_current_from_the_balance_sheet_an_8k_and_not_from_a_10q_note(apple, meta):
-    value, summary = f.dilution_current(meta, META_TODAY)
-    assert value is True and "shares outstanding rose" in summary["reasons"][0]          # META's share count rose
-    value, summary = f.dilution_current(apple, APPLE_TODAY)
-    assert value is False and summary["reasons"] == []                                   # fewer shares, no issuance, and no 8-K about dilution (a 10-Q's anti-dilutive note is not one)
-    eight_k = {"evidence": [{"id": "E1", "topic": "dilution", "derived": False, "matched": "at-the-market", "source": {"form": "8-K", "filed": "2026-10-01"}}], "capital_actions": [{"item": "x"}]}
-    assert f.dilution_current(eight_k, date(2026, 11, 5))[0] is True
-    assert f.dilution_current(eight_k, date(2027, 3, 1))[0] is False                     # 120 days later it is no longer current
-    ten_q = {"evidence": [{"id": "E1", "topic": "dilution", "derived": False, "matched": "dilutive effect", "source": {"form": "10-Q", "filed": "2026-10-01"}}]}
-    assert f.dilution_current(ten_q, date(2026, 11, 5))[0] is False
-    option_proceeds = {"capital_actions": [{"item": "proceeds from issuing common stock", "current": 900.0, "label": "Proceeds from exercise of stock options"}]}
-    assert f.dilution_current(option_proceeds, date(2026, 11, 5))[0] is False            # employee options are not an issuance
-    issuance = {"capital_actions": [{"item": "proceeds from issuing common stock", "current": 900.0, "label": "Proceeds from issuance of common stock"}]}
-    assert f.dilution_current(issuance, date(2026, 11, 5))[0] is True
-    with pytest.raises(f.Missing, match="no stored filing evidence"):
-        f.dilution_current({}, date(2026, 11, 5))
 
 
 def test_nothing_here_scores_anything(apple, meta):
@@ -154,3 +134,20 @@ def test_nothing_here_scores_anything(apple, meta):
             except f.Missing:
                 continue
             assert not fs.keys_of(summary) & set(fs.FORBIDDEN_KEYS)
+
+
+def test_every_statement_is_put_in_dollars_by_its_own_units_line_and_an_unknown_scale_is_never_assumed():
+    """Companies are compared in the same unit: millions with millions. A figure of unknown scale is Missing, not dollars (it would be wrong by a thousand or a million)."""
+    for line, factor in (("Amounts in millions", 1e6), ("(in millions, except per share amounts)", 1e6), ("($ in thousands)", 1e3), ("(Thousands of dollars)", 1e3), ("(In 000's)", 1e3), ("(000s omitted)", 1e3),
+                         ("Dollars in Billions", 1e9), ("(In millions, except number of shares, which are reflected in thousands, and per-share amounts)", 1e6), ("(In dollars)", 1.0), ("Whole dollars", 1.0),
+                         ("(in U.S. dollars)", 1.0)):
+        assert f.multiplier(line) == factor, line
+    for line in (None, "", "(except per share amounts)", "Assets", "(unaudited)"):
+        with pytest.raises(f.Missing, match="units of the statement"):
+            f.multiplier(line)
+    # the same payout in two companies' own units gives the same dollars: 500 million and 500,000 thousand
+    a = {"capital_actions": [{"item": "repurchases", "current": -500.0, "units": "(In millions)", "label": "x"}]}
+    b = {"capital_actions": [{"item": "repurchases", "current": -500000.0, "units": "(In thousands)", "label": "x"}]}
+    assert abs(f._dollars(a["capital_actions"][0])) == abs(f._dollars(b["capital_actions"][0])) == 500e6
+    with pytest.raises(f.Missing):
+        f._dollars({"item": "repurchases", "current": -500.0, "units": None})

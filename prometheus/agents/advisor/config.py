@@ -15,7 +15,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from prometheus.rag.config import REPO_ROOT
 
 CONFIG_PATH = REPO_ROOT / "configs" / "advisor_v1.json"
-FAMILIES = ("event", "trend", "reversion", "capital_return", "theme")
+FAMILIES = ("event", "trend", "reversion", "capital_return", "theme", "conviction")
 REGIMES = ("trend", "narrow", "stress", "recovering", "unknown")
 
 
@@ -73,6 +73,9 @@ class Trend(_Section):
     max_ret_21d: float
     max_rsi: float
     max_pct_b: float
+    breakout_min_mom_12_1: float
+    breakout_min_pct_of_52w_high: float
+    max_ret_21d_uptrend: float
     base: float
     w_mom: float
     mom_scale: float
@@ -130,7 +133,6 @@ class Reversion(_Section):
 class CapitalReturn(_Section):
     horizon: int
     prior_20d: float
-    prior_bearish: float
     basis_ref: str
     min_net_payout_yield: float
     min_share_count_change: float
@@ -146,7 +148,6 @@ class CapitalReturn(_Section):
     w_event: float
     event_bars: int
     w_growth: float
-    bearish_score: float
 
 
 class Theme(_Section):
@@ -165,12 +166,25 @@ class Theme(_Section):
     w_volume: float
 
 
+class Conviction(_Section):
+    """The blend of news, performance, historical metrics and filings as a strategy of its own (Amendment 5)."""
+    horizon: int
+    prior_20d: float
+    basis_ref: str
+    min_blend: float          # the blend (-1 to +1) must be at least this
+    min_parts: int            # at least this many of the four blend parts must have a value
+    min_news: float           # the news part, when it has a value, must be at least this (0: not negative)
+    max_rsi: float            # not bought when RSI is this or more (a blow-off)
+    score: float              # the family's score, fixed: the blend already scales the edge, so it is not counted twice
+
+
 class Families(_Section):
     trend: Trend
     event: Event
     reversion: Reversion
     capital_return: CapitalReturn
     theme: Theme
+    conviction: Conviction
 
 
 class Regime(_Section):
@@ -184,10 +198,6 @@ class Regime(_Section):
 
 
 class Ranking(_Section):
-    edge_scale: float
-    default_half_spread: float
-    slippage: float
-    stress_cost_multiplier: float
     diversity_within: float
     add_max_position_pct: float
     oversized_pct: float
@@ -197,7 +207,7 @@ class BlendWeights(_Section):
     news: float = Field(ge=0)          # news AND press releases, the newer the heavier
     performance: float = Field(ge=0)   # the stock's own price behaviour
     historical: float = Field(ge=0)    # the Finnhub history of the company: profitability, growth, valuation, balance sheet
-    filings: float = Field(ge=0)       # what the SEC filings show: payouts, share count, dilution, cash flow, their evidence items
+    filings: float = Field(ge=0)       # what the SEC filings show: payouts, share count, cash flow, their evidence items
 
     def model_post_init(self, _):
         if abs(self.news + self.performance + self.historical + self.filings - 1.0) > 1e-9:
@@ -221,8 +231,6 @@ class Blend(_Section):
     half_life_days: float = Field(gt=0)       # a piece of news loses half its weight every this many days: weight = 0.5 ** (age_days / half_life_days)
     news_prior_n: float = Field(ge=0)         # shrinkage: the news value is sum(sign x weight) / (sum(weight) + prior), so one old quote is not certainty
     press_release_weight: float = Field(gt=0)  # a news article weighs 1.0; a company's own press release this much (its own words are not an independent voice)
-    scale_strength: float = Field(ge=0)       # edge x (1 + strength x direction x blend): 0.5 keeps the old 0.5x to 1.5x range
-    no_strategy_edge_scale: float             # no strategy fired: the expected 20-day excess is blend x this, minus the cost. 0.003 is the smallest strategy prior (capital_return): a blend alone is never worth more than the weakest strategy
     measures: list[Measure]
 
 

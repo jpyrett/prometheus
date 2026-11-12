@@ -14,7 +14,7 @@ A record is the CONTRACT with the Critic: everything the Critic needs to judge a
     risk, portfolio_fit, gates, thesis (the model's words, checked), audit (which model calls, which config)
 
 The v0 fields (`symbol, company, stance, model_score, score, supported, consistent, bullish_signals, bearish_signals, signals_claimed, signals_verified, signals_counted, signals, advisor`)
-keep their meaning, so `account_manager.top_recommendation` and the week 3 lab read a v1 record unchanged. `score` is `round(50 + 50 * clip(excess_20d_after_cost / 0.03, -1, 1))`.
+keep their meaning, so `account_manager.top_recommendation` and the week 3 lab read a v1 record unchanged. `score` is `round(50 + 50 * the blend)` (Amendment 6); the expected excess return after cost was removed from the record (Amendment 7).
 
 Every model here forbids unknown fields: a typo in the code that builds a record fails when the record is built, not when the Critic reads it. A test asserts that no field except the ones
 listed in `MODEL_FIELDS` originates from a model's reply.
@@ -108,9 +108,6 @@ class Agreement(_Model):
 class Ranking(_Model):
     composite: float | None = None
     conflict: bool = False
-    cost_pct: float | None = None
-    scale_factor: float | None = None      # entry 55: what multiplied the composite edge: 1 + 0.5 x direction x blend (0.5 to 1.5)
-    excess_20d_after_cost: float | None = None
     stance: Literal["bullish", "bearish", "neutral"] = "neutral"
     stance_reason: str | None = None
     rank: int | None = None                # the place in the list this run returned (a reduction first)
@@ -225,6 +222,7 @@ class Recommendation(_Model):
     gates: list[Gate] = Field(default_factory=list)
     thesis: Thesis = Field(default_factory=Thesis)
     audit: Audit
+    critic: dict | None = None             # the Critic's feedback (`critic/feedback.py`), put here by the Critic after its review: the Advisor never writes it
 
 
 class Candidate(_Model):
@@ -238,8 +236,7 @@ class Candidate(_Model):
     families: list[FamilyResult] = Field(default_factory=list)
     blend: dict | None = None              # the same blend as a record has
     negative_equity: bool = False          # a stockholders' deficit: the debt-to-equity rules were waived
-    excess_20d_after_cost: float | None = None
-    score: int | None = None               # the same 0 to 100 score a record has (None only when the company has no metrics; with no family passed it is the no-edge score, just under 50)
+    score: int | None = None               # the same 0 to 100 score a record has: the blend (None only when the company has no metrics)
     stance: str | None = None
     rank: int | None = None                # the place among all the new ideas evaluated, best to worst
     reason: str

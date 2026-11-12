@@ -1,0 +1,108 @@
+<<<PRESS_RELEASE>>>
+id: cb46882747e67c40
+symbol: TTWO
+published_utc: 2026-01-06T08:00:00Z
+url: https://www.nasdaq.com/press-release/take-two-interactive-software-inc-report-third-quarter-fiscal-year-2026-results
+headline: Take-Two Interactive Software, Inc. to Report Third Quarter Fiscal Year 2026 Results on Tuesday, February 3, 2026
+<<<TEXT>>>
+Take-Two Interactive Software, Inc. today announced that it plans to report financial results for its third quarter of Fiscal Year 2026, ended December 31, 2025, after the market close on Tuesday, February 3, 2026. Headquartered in New York City, Take-Two Interactive Software, Inc. is a leading developer, publisher, and marketer of interactive entertainment...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 33e3a9e0e62b870c
+symbol: TTWO
+published_utc: 2026-01-30T13:34:00Z
+url: https://www.nasdaq.com/press-release/best-world-cm-punk-graces-wwer-2k26-cover-four-new-match-types-upgrades-all-game
+headline: "The Best in the World" CM Punk Graces WWE® 2K26 Cover as Four New Match Types, Upgrades to All Game Modes, and Unprecedented Roster Ensure The Show Never Stops
+<<<TEXT>>>
+Today, 2 K announced WWE ® 2 K26, the newest installment of the flagship WWE video game franchise developed by Visual Concepts, will be available starting March 6 for PlayStation ® 5, Xbox Series X| S, Nintendo Switch™ 2, and PC via Steam. Today, 2 K announced WWE ® 2 K26, the newest installment of the flagship WWE video game franchise developed by Visual Concepts, will...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d50b12c5766f9028
+symbol: TTWO
+published_utc: 2026-02-03T16:05:00Z
+url: https://www.nasdaq.com/press-release/take-two-interactive-software-inc-reports-results-fiscal-third-quarter-2026-2026-02
+headline: Take-Two Interactive Software, Inc. Reports Results for Fiscal Third Quarter 2026
+<<<TEXT>>>
+Take-Two Interactive Software, Inc. today reported results for the third quarter of its fiscal year 2026, ended December 31, 2025. Total Net Bookings* grew 28% to $1.76 billion, compared to $1.37 billion during last year’ s fiscal third quarter. Net Bookings from recurrent consumer spending** grew 23% and accounted for 76% of total Net Bookings. The largest...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b95382b421ef416a
+symbol: TTWO
+published_utc: 2026-02-18T11:00:00Z
+url: https://www.nasdaq.com/press-release/cbs-and-zynga-bring-survivor-season-50-hands-fans-partnership-words-friends-zynga
+headline: CBS and Zynga Bring Survivor Season 50 into The Hands of Fans with Partnership in Words With Friends, Zynga Poker, Two Dots, and More
+<<<TEXT>>>
+Zynga Inc., a wholly-owned publishing label of Take-Two Interactive and a global leader in interactive entertainment, today announced a cross-title collaboration with CBS to celebrate the landmark 50 th season of the Emmy-winning reality competition Survivor, bringing the show’ s groundbreaking gameplay to five titles in the Zynga portfolio.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 471eaa98852bf071
+symbol: TTWO
+published_utc: 2026-03-06T08:00:00Z
+url: https://www.nasdaq.com/press-release/show-never-stops-wwer-2k26-king-kings-edition-attitude-era-edition-and-monday-night
+headline: The Show Never Stops in WWE® 2K26 King of Kings Edition, Attitude Era Edition, and Monday Night War Edition Available Now Worldwide
+<<<TEXT>>>
+Today, 2 K announced King of Kings Edition, Attitude Era Edition, and Monday Night War Edition of WWE ® 2 K26, the newest installment of the flagship WWE video game franchise developed by Visual Concepts, are available now for PlayStation ® 5, Xbox Series X| S, Nintendo Switch™ 2, and PC via Steam. Today, 2 K announced King of Kings Edition, Attitude Era Edition, and Monday...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 325a8624d24c3d2d
+symbol: TTWO
+published_utc: 2026-04-23T08:00:00Z
+url: https://www.nasdaq.com/press-release/take-two-interactive-software-inc-report-fourth-quarter-and-fiscal-year-2026-results
+headline: Take-Two Interactive Software, Inc. to Report Fourth Quarter and Fiscal Year 2026 Results on Thursday, May 21, 2026
+<<<TEXT>>>
+Take-Two Interactive Software, Inc. today announced that it plans to report financial results for its fourth quarter and fiscal year 2026, ended March 31, 2026, after the market close on Thursday, May 21, 2026. Headquartered in New York City, Take-Two Interactive Software, Inc. is a leading developer, publisher, and marketer of interactive entertainment for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 12c708669fce8493
+symbol: TTWO
+published_utc: 2026-05-11T08:00:00Z
+url: https://www.nasdaq.com/press-release/take-two-interactive-software-inc-present-td-cowen-54th-annual-technology-media
+headline: Take-Two Interactive Software, Inc. to Present at the TD Cowen 54th Annual Technology, Media & Telecom Conference
+<<<TEXT>>>
+Take-Two Interactive Software, Inc. today announced that Strauss Zelnick, the Company’ s Chairman and Chief Executive Officer, plans to participate in a Fireside Chat at the TD Cowen 54 th Annual Technology, Media& Telecom Conference. Headquartered in New York City, Take-Two Interactive Software, Inc. is a leading developer, publisher, and marketer of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 27ea0f35b8a867b7
+symbol: TTWO
+published_utc: 2026-05-21T16:05:00Z
+url: https://www.nasdaq.com/press-release/take-two-interactive-software-inc-reports-results-fourth-quarter-and-fiscal-year-2026
+headline: Take-Two Interactive Software, Inc. Reports Results for Fourth Quarter and Fiscal Year 2026
+<<<TEXT>>>
+Take-Two Interactive Software, Inc. today reported results for the fourth quarter of its fiscal year 2026, ended March 31, 2026. ™,Empires& Puzzles™, WWE ® 2 K26, Color Block Jam™, Red Dead Redemption ® 2 and Red Dead Online, Words With Friends™, and Civilization ® VII. GAAP net revenue was $1.68 billion, compared to $1.58 billion in last year’ s fiscal fourth quarter....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4aa80322f5981938
+symbol: TTWO
+published_utc: 2026-06-24T06:15:00Z
+url: https://www.nasdaq.com/press-release/rockstar-games-announces-pre-orders-grand-theft-auto-vi-2026-06-24
+headline: Rockstar Games Announces Pre-Orders for Grand Theft Auto VI
+<<<TEXT>>>
+Rockstar Games ®, a publishing label of Take-Two Interactive Software, Inc., is excited to announce that pre-orders for Grand Theft Auto VI will begin on June 25, 2026, at midnight local time. Rockstar Games ®, a publishing label of Take-Two Interactive Software, Inc., is excited to announce that pre-orders for Grand Theft Auto VI will begin on June 25, 2026, at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dfb20de2c0badb94
+symbol: TTWO
+published_utc: 2026-07-09T08:00:00Z
+url: https://www.nasdaq.com/press-release/take-two-interactive-software-inc-report-first-quarter-fiscal-year-2027-results
+headline: Take-Two Interactive Software, Inc. to Report First Quarter Fiscal Year 2027 Results on Friday, August 7, 2026
+<<<TEXT>>>
+Take-Two Interactive Software, Inc. today announced that it plans to report financial results for its first quarter of fiscal year 2027, ended June 30, 2026, before the market open on Friday, August 7, 2026. The Company plans to hold a conference call to discuss its results at 8:00 a.m. Eastern Time, which can be accessed by dialing 461-5787.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 88c60bdc5908e955
+symbol: TTWO
+published_utc: 2026-07-22T10:00:00Z
+url: https://www.nasdaq.com/press-release/nbar-2k27-cover-athletes-revealed-victor-wembanyama-caitlin-clark-and-derrick-rose
+headline: NBA® 2K27 Cover Athletes Revealed: Victor Wembanyama, Caitlin Clark, and Derrick Rose
+<<<TEXT>>>
+Today, 2 K officially announced the cover athletes for NBA 2 K27, the latest iteration of the NBA video game franchise developed by Visual Concepts and published by 2 K. Victor Wembanyama, the San Antonio Spurs Center who made history as the NBA’ s first-ever unanimous Defensive Player of the Year, will grace the cover of the Standard Edition. Indiana Fever Guard,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: faff1d7d177260eb
+symbol: TTWO
+published_utc: 2026-08-07T07:30:00Z
+url: https://www.nasdaq.com/press-release/take-two-interactive-software-inc-reports-results-fiscal-first-quarter-2027-2026-08
+headline: Take-Two Interactive Software, Inc. Reports Results for Fiscal First Quarter 2027
+<<<TEXT>>>
+Take-Two Interactive Software, Inc. today reported results for the first quarter of its fiscal year 2027, ended June 30, 2026. With these positive trends and excitement around the November 19 th launch of Grand Theft Auto VI, we are reiterating our Fiscal 2027 Net Bookings outlook of $8.0 to $8.2 billion. ,the Red Dead Redemption series, Words With Friends, Color...
+<<<END>>>

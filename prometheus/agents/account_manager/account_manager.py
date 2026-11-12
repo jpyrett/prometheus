@@ -32,7 +32,8 @@ from pathlib import Path
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 from prometheus.common.portfolio import Portfolio, after_purchase, load_portfolio
-from prometheus.common.work_order import new_work_order
+from prometheus.common.user_profile import RiskView, UserProfile, load_profile
+from prometheus.common.work_order import WorkOrder, new_work_order
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.models.chat import model_name as chat_model_name
 from prometheus.prompts.account_manager import RETRY, system_prompt, user_message
@@ -40,6 +41,7 @@ from prometheus.rag.loaders import check_symbol
 from prometheus.reasoning import raise_funds as rf
 
 DEFAULT_PORTFOLIO = Path(__file__).resolve().parents[3] / "configs" / "portfolios" / "jacob_pyrett.json"
+DEFAULT_PROFILE = Path(__file__).resolve().parents[3] / "configs" / "profiles" / "jacob_pyrett.json"
 REQUESTER = "account_manager"
 
 
@@ -73,7 +75,7 @@ PREFERRED_PROVIDERS = ("cerebras", "groq")   # the fast hosts of gpt-oss-120b on
 class AccountManager:
     def __init__(self, model=None, model_id: str | None = None, clerk=None, effort: str | None = "auto", only_green: bool = True, never_liquidate: bool = True, green_first: bool = True,
                  explore: bool = True, lean: bool = True, whole_plans: bool = False, parallel: bool = True, up_to: bool = True, deadline: float | None = 90.0,
-                 providers: tuple[str, ...] | str | None = "auto"):
+                 providers: tuple[str, ...] | str | None = "auto", profile: UserProfile | str | Path | None = None):
         """model: a chat model (anything with `invoke`; a scripted one in tests); otherwise OpenRouter through `get_chat_model` with the model of the `account_manager` role
         (ACCOUNT_MANAGER_MODEL), or `model_id`. clerk: the Data Clerk that is asked for prices (anything with `request_quotes`; a fake in tests); built when first needed.
         effort (entry 46): "low", "medium" or "high", OpenRouter's `reasoning` effort for a model that thinks before it answers (gpt-oss-120b does): a thought is three short JSON steps and most of a
@@ -89,7 +91,11 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
         providers (entry 50): the OpenRouter providers to prefer, in order (the others are the fallback). "auto" (the default) is Cerebras then Groq for gpt-oss and OpenRouter's own choice for any other
         model; None is OpenRouter's own choice. Measured: the same gpt-oss-120b answers at about 55 tokens a second by default, 650 on Cerebras and 370 on Groq: the largest single gain in time.
-        The model is the same; only where it runs changes (the provider sees the prompt: prices, holdings and quantities, no keys)."""
+        The model is the same; only where it runs changes (the provider sees the prompt: prices, holdings and quantities, no keys).
+
+        profile (Critic v1, design choices entry 56): the user's `UserProfile` (risk tolerance, Ask or Auto mode, the size limits), or the path of its JSON file; `configs/profiles/jacob_pyrett.json` when left
+        out, read when first needed. The Account Manager is the only agent that holds it: the Critic is given `risk_view()`, the limits and never the mode, and `decide_trades` turns the Critic's verdicts
+        into permissions to trade. None of that calls the model (`AccountManager(model=object())` is enough for it)."""
         is_oss = "gpt-oss" in (model_id or chat_model_name("account_manager"))
         if effort == "auto":
             effort = "low" if is_oss else None
@@ -98,6 +104,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         extra = {**({"reasoning": {"effort": effort}} if effort else {}), **({"provider": {"order": list(providers), "allow_fallbacks": True}} if providers else {})}
         self.model = model or get_chat_model("account_manager", model=model_id, **({"extra_body": extra} if extra else {}))
         self._clerk = clerk
+        self._profile = profile
         self.only_green, self.never_liquidate = only_green, never_liquidate
         self.green_first, self.explore, self.lean, self.whole_plans, self.parallel, self.up_to, self.deadline = green_first, explore, lean, whole_plans, parallel, up_to, deadline
         self._lock = threading.Lock()  # the plans of a level may call the model at the same time (parallel): the counters of the run are shared
@@ -109,6 +116,35 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         numbers of shares, no limit, one call after the other). The tests of the earlier entries use it; `options` override any argument."""
         return cls(model=model, clerk=clerk, **{"effort": None, "only_green": False, "never_liquidate": False, "green_first": False, "explore": False, "lean": False, "whole_plans": False,
                                                  "parallel": False, "up_to": False, "deadline": None, "providers": None, **options})
+
+    @property
+    def profile(self) -> UserProfile:
+        """The user's profile, read when first needed (the default file when none was given). Raises ValueError, naming the file, when it is not a valid profile."""
+        if not isinstance(self._profile, UserProfile):
+            self._profile = load_profile(self._profile or DEFAULT_PROFILE)
+        return self._profile
+
+    @profile.setter
+    def profile(self, value: UserProfile | str | Path | None) -> None:
+        self._profile = value
+
+    def risk_view(self) -> RiskView:
+        """What the Critic may know about the user: the limits, never the name or the trading mode."""
+        return self.profile.risk_view()
+
+    def decide_trades(self, order: WorkOrder, portfolio: Portfolio, approver=None, now=None, mode: str | None = None) -> WorkOrder:
+        """The Critic's verdicts become trade decisions (`order.trade_decisions`, one per review; see `decisions.py` for the rules): a denial is final, an approval that ran out or that the money does not
+        cover is not traded, and an approved recommendation is traded automatically only in Auto mode with a high enough score and nothing for a person to look at; the rest goes to the user, through
+        `approver` (called with the scorecard; True, False or None for no answer = `pending_user`). `mode` overrides the profile's `trade_mode` for one run. Returns the SAME order, `decided` unless an
+        answer is pending. Refuses (a message on the order) a profile that is not the portfolio's user's."""
+        from prometheus.agents.account_manager import decisions
+        from prometheus.agents.critic.config import load_config as load_critic_config
+        return decisions.decide_trades(order, portfolio, self.profile, load_critic_config().verdict.auto_min_score, approver, now, mode)
+
+    def record_user_decision(self, order: WorkOrder, record_id: str, approve: bool, now=None) -> WorkOrder:
+        """The user's later answer to a decision that was `pending_user`: yes, no, or `no_expired` when the approval has run out by now."""
+        from prometheus.agents.account_manager import decisions
+        return decisions.record_user_decision(order, record_id, approve, now)
 
     @property
     def clerk(self):

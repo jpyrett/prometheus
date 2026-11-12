@@ -1,0 +1,657 @@
+<<<PRESS_RELEASE>>>
+id: e2c4920da7cfc5d4
+symbol: NVDA
+published_utc: 2025-11-17T17:30:00Z
+url: https://www.nasdaq.com/press-release/worlds-leading-scientific-supercomputing-centers-adopt-nvidia-nvqlink-integrate-grace
+headline: World’s Leading Scientific Supercomputing Centers Adopt NVIDIA NVQLink to Integrate Grace Blackwell Platform With Quantum Processors
+<<<TEXT>>>
+--SC25-- NVIDIA today announced that the world’ s leading scientific computing centers are adopting NVIDIA ® NVQLink™, a first-of-its-kind, universal interconnect for linking quantum processors with state-of-the-art accelerated computing. "In the future, supercomputers will be quantum-GPU systems— combining the unique strengths of each: the quantum...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 376771f7775487c6
+symbol: NVDA
+published_utc: 2025-11-17T17:30:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-riken-advance-japans-scientific-frontiers-new-supercomputers-ai-and
+headline: NVIDIA and RIKEN Advance Japan’s Scientific Frontiers With New Supercomputers for AI and Quantum Computing
+<<<TEXT>>>
+--SC25— NVIDIA today announced that RIKEN, Japan’ s leading national research institute, is integrating NVIDIA GB200 NVL4 systems with two new supercomputers in Japan— one built for AI for science and the other for quantum computing. "RIKEN has long been one of the world’ s great scientific institutions, and today it stands at the forefront of a new era in computing,"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3c02793c8c260bfc
+symbol: NVDA
+published_utc: 2025-11-19T16:20:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-financial-results-third-quarter-fiscal-2026-2025-11-19
+headline: NVIDIA Announces Financial Results for Third Quarter Fiscal 2026
+<<<TEXT>>>
+--NVIDIA today reported record revenue for the third quarter ended October 26, 2025, of $57.0 billion, up 22% from the previous quarter and up 62% from a year ago. "Blackwell sales are off the charts, and cloud GPUs are sold out," said Jensen Huang, founder and CEO of NVIDIA." Compute demand keeps accelerating and compounding across training and inference— each growing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a724d5384385e64a
+symbol: NVDA
+published_utc: 2025-11-20T17:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-upcoming-event-financial-community-2025-11-20
+headline: NVIDIA Announces Upcoming Event for Financial Community
+<<<TEXT>>>
+UBS Global Technology and AI Conference Tuesday, Dec. 2, 6:35 a.m. Pacific time. About NVIDIA NVIDIA is the world leader in AI and accelerated computing. All rights reserved. NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 614f4880596bdc7d
+symbol: NVDA
+published_utc: 2025-12-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-debuts-nemotron-3-family-open-models-2025-12-15
+headline: NVIDIA Debuts Nemotron 3 Family of Open Models
+<<<TEXT>>>
+--NVIDIA today announced the NVIDIA Nemotron™ 3 family of open models, data and libraries designed to power transparent, efficient and specialized agentic AI development across industries. "Open innovation is the foundation of AI progress," said Jensen Huang, founder and CEO of NVIDIA." With Nemotron, we’ re transforming advanced AI into an open platform that gives...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 63638299dd1680dc
+symbol: NVDA
+published_utc: 2026-01-05T16:49:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-alpamayo-family-open-source-ai-models-and-tools-accelerate-safe
+headline: NVIDIA Announces Alpamayo Family of Open-Source AI Models and Tools to Accelerate Safe, Reasoning-Based Autonomous Vehicle Development
+<<<TEXT>>>
+--CES— NVIDIA today unveiled the NVIDIA Alpamayo family of open AI models, simulation tools and datasets designed to accelerate the next era of safe, reasoning‑ based autonomous vehicle development. These systems can think through novel or rare scenarios step by step, improving driving capability and explainability— which is critical to scaling trust and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 33a3f1ff3e659179
+symbol: NVDA
+published_utc: 2026-01-05T17:04:00Z
+url: https://www.nasdaq.com/press-release/nvidia-releases-new-physical-ai-models-global-partners-unveil-next-generation-robots
+headline: NVIDIA Releases New Physical AI Models as Global Partners Unveil Next-Generation Robots
+<<<TEXT>>>
+--CES— NVIDIA today announced new open models, frameworks and AI infrastructure for physical AI, and unveiled robots for every industry from global partners. The new NVIDIA technologies speed workflows across the entire robot development lifecycle to accelerate the next wave of robotics, including building generalist-specialist robots that can quickly...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6196d916cf0ef826
+symbol: NVDA
+published_utc: 2026-01-05T17:20:00Z
+url: https://www.nasdaq.com/press-release/nvidia-kicks-next-generation-ai-rubin-six-new-chips-one-incredible-ai-supercomputer
+headline: NVIDIA Kicks Off the Next Generation of AI With Rubin — Six New Chips, One Incredible AI Supercomputer
+<<<TEXT>>>
+--CES-- NVIDIA today kickstarted the next generation of AI with the launch of the NVIDIA Rubin platform, comprising six new chips designed to deliver one incredible AI supercomputer. The Rubin platform uses extreme codesign across the six chips— the NVIDIA Vera CPU, NVIDIA Rubin GPU, NVIDIA NVLink™ 6 Switch, NVIDIA ConnectX ® -9 SuperNIC, NVIDIA BlueField ® -4 DPU...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 143678c9e35afe7f
+symbol: NVDA
+published_utc: 2026-01-05T17:37:00Z
+url: https://www.nasdaq.com/press-release/nvidia-bluefield-4-powers-new-class-ai-native-storage-infrastructure-next-frontier-ai
+headline: NVIDIA BlueField-4 Powers New Class of AI-Native Storage Infrastructure for the Next Frontier of AI
+<<<TEXT>>>
+--CES— NVIDIA today announced that the NVIDIA BlueField ® -4 data processor, part of the full-stack NVIDIA BlueField platform, powers NVIDIA Inference Context Memory Storage Platform, a new class of AI-native storage infrastructure for the next frontier of AI. NVIDIA Inference Context Memory Storage Platform provides the infrastructure for context memory...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fec29c2acc5ea646
+symbol: NVDA
+published_utc: 2026-01-06T12:07:00Z
+url: https://www.nasdaq.com/press-release/siemens-and-nvidia-expand-partnership-build-industrial-ai-operating-system-2026-01-06
+headline: Siemens and NVIDIA Expand Partnership to Build the Industrial AI Operating System
+<<<TEXT>>>
+CES 2026- Siemens and NVIDIA today announced a significant expansion of their strategic partnership to bring artificial intelligence into the real world. "Generative AI and accelerated computing have ignited a new industrial revolution, transforming digital twins from passive simulations into the active intelligence of the physical world," said Jensen...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 156bdae1d94b0576
+symbol: NVDA
+published_utc: 2026-01-12T10:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-lilly-announce-co-innovation-ai-lab-reinvent-drug-discovery-age-ai-2026-01
+headline: NVIDIA and Lilly Announce Co-Innovation AI Lab to Reinvent Drug Discovery in the Age of AI
+<<<TEXT>>>
+--J.P. Morgan Healthcare Conference-- NVIDIA and Eli Lilly and Company today announced a first-of-its-kind AI co-innovation lab focused on applying AI to tackle some of the most enduring challenges in the pharmaceutical industry. Based in the San Francisco Bay Area, the lab will co-locate Lilly domain experts in biology, science and medicine with top AI model...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ad366b552895b657
+symbol: NVDA
+published_utc: 2026-01-12T10:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-bionemo-platform-adopted-life-sciences-leaders-accelerate-ai-driven-drug
+headline: NVIDIA BioNeMo Platform Adopted by Life Sciences Leaders to Accelerate AI-Driven Drug Discovery
+<<<TEXT>>>
+--J.P. Morgan Healthcare Conference-- NVIDIA today announced a major expansion of NVIDIA BioNeMo™, an open development platform that enables lab-in-the-loop workflows to develop breakthroughs in AI-driven biology and drug discovery. BioNeMo provides the development platform to generate and process data, train, optimize and deploy models— enabling the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 64a46335e5d50ab4
+symbol: NVDA
+published_utc: 2026-01-20T09:00:00Z
+url: https://www.nasdaq.com/press-release/data-center-infrastructure-investment-accelerates-global-compute-demand-expands-2026
+headline: Data Center Infrastructure Investment Accelerates as Global Compute Demand Expands
+<<<TEXT>>>
+Analysts project the sector to exceed $300 billion by 2026, with annual capacity growth supported by both hyperscale facilities and decentralized edge nodes that bring compute closer to end users and low-latency applications. Investment activity has mirrored this momentum, with record dealmaking and large strategic projects underway— from...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 347ab8454c53d383
+symbol: NVDA
+published_utc: 2026-01-26T08:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-coreweave-strengthen-collaboration-accelerate-buildout-ai-factories-2026
+headline: NVIDIA and CoreWeave Strengthen Collaboration to Accelerate Buildout of AI Factories
+<<<TEXT>>>
+CoreWeave to Adopt NVIDIA CPU and Storage Platforms and Multiple NVIDIA Generations. SANTA CLARA, Calif.& LIVINGSTON, N.J.---- NVIDIA and CoreWeave, Inc. today announced an expansion of their long-standing complementary relationship to enable CoreWeave to accelerate the buildout of more than 5 gigawatts of AI factories by 2030 to advance AI adoption at global...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c990c16714ac8c3b
+symbol: NVDA
+published_utc: 2026-01-28T17:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-sets-conference-call-fourth-quarter-financial-results-2026-01-28
+headline: NVIDIA Sets Conference Call for Fourth-Quarter Financial Results
+<<<TEXT>>>
+--NVIDIA will host a conference call on Wednesday, February 25, at 2 p.m. About NVIDIA NVIDIA is the world leader in accelerated computing. All rights reserved. NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f16bdbaca4c1f6d4
+symbol: NVDA
+published_utc: 2026-02-02T09:05:00Z
+url: https://www.nasdaq.com/press-release/real-ironman-economy-how-ai-superfibers-and-defense-tech-could-theoretically-converge
+headline: The Real Ironman Economy: How AI, Superfibers, and Defense Tech Could Theoretically Converge
+<<<TEXT>>>
+--Recent reports that Palantir Technologies has been tapped by President Trump to deploy AI systems to hunt fraud, likened in headlines to an AI" Ironman suit", have reignited interest in how far advanced technology can really go. So, what if Palantir, or some future prime contractor, were actually tasked with building a next-generation, Ironman-style wearable...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f1cafe48af31eb11
+symbol: NVDA
+published_utc: 2026-02-03T11:00:00Z
+url: https://www.nasdaq.com/press-release/dassault-systemes-and-nvidia-partner-build-industrial-ai-platform-powering-virtual
+headline: Dassault Systèmes and NVIDIA Partner to Build Industrial AI Platform Powering Virtual Twins
+<<<TEXT>>>
+Dassault Systèmes and NVIDIA today announced a long-term strategic partnership to establish a shared industrial architecture for mission-critical artificial intelligence across industries. Combining Dassault Systèmes’ Virtual Twin technologies with NVIDIA AI infrastructure, open models and accelerated software libraries will establish...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 65ae53110c8f5773
+symbol: NVDA
+published_utc: 2026-02-17T16:15:00Z
+url: https://www.nasdaq.com/press-release/meta-builds-ai-infrastructure-nvidia-2026-02-17
+headline: Meta Builds AI Infrastructure With NVIDIA
+<<<TEXT>>>
+This partnership will enable the large-scale deployment of NVIDIA CPUs and millions of NVIDIA Blackwell and Rubin GPUs, as well as the integration of NVIDIA Spectrum-X™ Ethernet switches for Meta’ s Facebook Open Switching System platform. "No one deploys AI at Meta’ s scale— integrating frontier research with industrial-scale infrastructure to power the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da2847c70688af1a
+symbol: NVDA
+published_utc: 2026-03-01T02:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-global-telecom-leaders-commit-build-6g-open-and-secure-ai-native-platforms
+headline: NVIDIA and Global Telecom Leaders Commit to Build 6G on Open and Secure AI-Native Platforms
+<<<TEXT>>>
+--Mobile World Congress— NVIDIA today announced a commitment— together with Booz Allen, BT Group, Cisco, Deutsche Telekom, Ericsson, MITRE, Nokia, OCUDU Ecosystem Foundation, ODC, SK Telecom, SoftBank Corp. and T-Mobile— to build the world’ s next generation of wireless networks on AI-native, open, secure and trustworthy platforms. To address this, NVIDIA is bringing the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1c406afd055a016e
+symbol: NVDA
+published_utc: 2026-03-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-coherent-announce-strategic-partnership-develop-optics-technology-scale
+headline: NVIDIA and Coherent Announce Strategic Partnership to Develop Optics Technology to Scale Next-Generation Data Center Architecture
+<<<TEXT>>>
+--NVIDIA and Coherent Corp. today announced a multiyear strategic agreement to advance the frontier of advanced optics technologies, including manufacturing capacity and research and development, to enable next-generation AI infrastructure. In addition, NVIDIA is investing $2 billion in Coherent to support research and development, future capacity and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 70b6c78b0f3fcca3
+symbol: NVDA
+published_utc: 2026-03-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-strategic-partnership-lumentum-develop-state-art-optics-technology
+headline: NVIDIA Announces Strategic Partnership With Lumentum to Develop State-of-the-Art Optics Technology
+<<<TEXT>>>
+--NVIDIA today announced multiyear strategic agreements with Lumentum Holdings Inc. to accelerate innovation in advanced optics technologies, including research and development, to enable next-generation AI infrastructure and systems designs. In addition, NVIDIA is investing $2 billion in Lumentum to support R&D, future capacity and operations as the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 921bc746f829236f
+symbol: NVDA
+published_utc: 2026-03-03T09:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-ceo-jensen-huang-and-global-technology-leaders-showcase-age-ai-gtc-2026-2026
+headline: NVIDIA CEO Jensen Huang and Global Technology Leaders to Showcase Age of AI at GTC 2026
+<<<TEXT>>>
+--NVIDIA today announced that GTC, the world’ s premier conference on AI and accelerated computing, will take place March 16-19 this year in San Jose, California. "GTC is the epicenter of the AI industrial era," said Jensen Huang, founder and CEO of NVIDIA." AI is no longer a single breakthrough or application— it is essential infrastructure. What to Expect at GTC 2026...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 437864875f2bd8f9
+symbol: NVDA
+published_utc: 2026-03-05T10:38:00Z
+url: https://www.nasdaq.com/press-release/answir-inc-admitted-nvidia-inception-program-accelerate-development-ai-investor
+headline: Answir Inc. Admitted to NVIDIA Inception Program to Accelerate Development of AI Investor Relations Platform
+<<<TEXT>>>
+Meadowbank Strategic Partners Inc., a Calgary- based investor relations and capital markets advisory firm, today announced that Answir Inc., its artificial intelligence technology subsidiary, has been admitted to the NVIDIA Inception Program, an initiative designed to support and accelerate startups developing advanced AI technologies.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d60244e594ed7703
+symbol: NVDA
+published_utc: 2026-03-11T08:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-nebius-partner-scale-full-stack-ai-cloud-2026-03-11
+headline: NVIDIA and Nebius Partner to Scale Full-Stack AI Cloud
+<<<TEXT>>>
+--NVIDIA and Nebius Group N.V. today announced a strategic partnership to develop and deploy the next generation of hyperscale cloud for the AI market, from AI natives to enterprises. This partnership builds upon Nebius’ s ongoing deployment of NVIDIA infrastructure across its global platform, including multiple gigawatt-scale AI factories in the U.S. To...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e9422efb2adbc3a
+symbol: NVDA
+published_utc: 2026-03-16T16:24:00Z
+url: https://www.nasdaq.com/press-release/byd-geely-isuzu-and-nissan-adopt-nvidia-drive-hyperion-level-4-vehicles-2026-03-16
+headline: BYD, Geely, Isuzu and Nissan Adopt NVIDIA DRIVE Hyperion for Level 4 Vehicles
+<<<TEXT>>>
+--GTC-- NVIDIA today announced that NVIDIA DRIVE Hyperion™ platform adoption is growing expansively, including with global automakers BYD, Geely, Isuzu and Nissan, as well as leading mobility providers— reflecting rapid momentum toward safe, scalable autonomous vehicle development. Isuzu and TIER IV are also collaborating on L4 autonomous bus development...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 14da066e408cb46f
+symbol: NVDA
+published_utc: 2026-03-16T16:30:00Z
+url: https://www.nasdaq.com/press-release/adobe-and-nvidia-announce-strategic-partnership-deliver-next-generation-firefly
+headline: Adobe and NVIDIA Announce Strategic Partnership to Deliver the Next Generation of Firefly Models and Creative, Marketing and Agentic Workflows
+<<<TEXT>>>
+The models will be built on NVIDIA’ s advanced computing technology and tap into NVIDIA CUDA-X™, NVIDIA NeMo™ libraries, NVIDIA Cosmos™ open models and NVIDIA Agent Toolkit software to enable the interactive, high-quality creation customers expect. "Content creation is exploding, and our partnership with NVIDIA is grounded in a shared vision to reinvent...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 618403241063ec14
+symbol: NVDA
+published_utc: 2026-03-16T16:36:00Z
+url: https://www.nasdaq.com/press-release/nvidia-enters-production-dynamo-broadly-adopted-inference-operating-system-ai
+headline: NVIDIA Enters Production With Dynamo, the Broadly Adopted Inference Operating System for AI Factories
+<<<TEXT>>>
+--GTC-- NVIDIA today announced NVIDIA Dynamo 1.0, open source software for generative and agentic inference at scale, with widespread global adoption. "Inference is the engine of intelligence, powering every query, every agent and every application," said Jensen Huang, founder and CEO of NVIDIA." With NVIDIA Dynamo, we’ ve created the first-ever‘ operating system’ for AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2f0425578f9ce086
+symbol: NVDA
+published_utc: 2026-03-16T16:37:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-open-physical-ai-data-factory-blueprint-accelerate-robotics-vision
+headline: NVIDIA Announces Open Physical AI Data Factory Blueprint to Accelerate Robotics, Vision AI Agents and Autonomous Vehicle Development
+<<<TEXT>>>
+--NVIDIA today announced the NVIDIA Physical AI Data Factory Blueprint, an open reference architecture that unifies and automates how training data is generated, augmented and evaluated, reducing the costs, time and complexity of training physical AI systems at scale. Curate and Search: NVIDIA Cosmos Curator processes, refines and annotates large-scale...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0c1a0baf7054e03f
+symbol: NVDA
+published_utc: 2026-03-16T16:39:00Z
+url: https://www.nasdaq.com/press-release/hyundai-motor-kia-and-nvidia-expand-strategic-partnership-next-generation-autonomous
+headline: Hyundai Motor, Kia and NVIDIA Expand Strategic Partnership for Next-Generation Autonomous Driving Technology
+<<<TEXT>>>
+--GTC— NVIDIA today announced an expanded collaboration with Hyundai Motor Company and Kia Corporation to advance next-generation autonomous driving technologies built on the NVIDIA DRIVE Hyperion™ autonomous vehicle development platform. The collaboration brings together Hyundai Motor Group’ s software-defined vehicle capabilities, global vehicle...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 23f701b7df1d70f9
+symbol: NVDA
+published_utc: 2026-03-16T16:40:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-global-industrial-software-giants-bring-design-engineering-and
+headline: NVIDIA and Global Industrial Software Giants Bring Design, Engineering and Manufacturing Into the AI Era
+<<<TEXT>>>
+--GTC-- NVIDIA today announced it is working with global industrial software leaders Cadence, Dassault Systèmes, PTC, Siemens and Synopsys to bring NVIDIA CUDA-X™, NVIDIA Omniverse™ and GPU-accelerated industrial software and tools to FANUC, HD Hyundai, Honda, JLR, KION, Mercedes-Benz, MediaTek, PepsiCo, Samsung, SK hynix and TSMC to accelerate design, engineering...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8ea26c69f8a53c6c
+symbol: NVDA
+published_utc: 2026-03-16T16:40:00Z
+url: https://www.nasdaq.com/press-release/nvidia-t-mobile-and-partners-integrate-physical-ai-applications-ai-ran-ready
+headline: NVIDIA, T-Mobile and Partners Integrate Physical AI Applications on AI-RAN-Ready Infrastructure
+<<<TEXT>>>
+GTC— NVIDIA and T-Mobile today announced they are working with Nokia and a growing ecosystem of developers to bring physical AI applications over distributed edge AI networks. This collaboration demonstrates how next generation AI-RAN infrastructure can transform the wireless network into a platform for distributed high-performance edge AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 244f2e3bc1938310
+symbol: NVDA
+published_utc: 2026-03-16T16:41:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-global-robotics-leaders-take-physical-ai-real-world-2026-03-16
+headline: NVIDIA and Global Robotics Leaders Take Physical AI to the Real World
+<<<TEXT>>>
+NVIDIA also unveiled new NVIDIA Isaac™ simulation frameworks and new NVIDIA Cosmos™ and NVIDIA Isaac GR00T open models for the industry to develop, train and deploy the next generation of intelligent robots. Industry leaders building on the NVIDIA platform include ABB Robotics, AGIBOT, Agility, FANUC, Figure, Hexagon Robotics, KUKA, Skild AI, Universal Robots,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: eb0c4f76b897eb32
+symbol: NVDA
+published_utc: 2026-03-16T17:27:00Z
+url: https://www.nasdaq.com/press-release/catches-launches-generative-ai-physics-based-sizing-technology-fashion-e-commerce
+headline: CATCHES Launches Generative AI with Physics-Based Sizing Technology for Fashion E-Commerce with AMIRI Powered by NVIDIA
+<<<TEXT>>>
+CATCHES, a physics-backed AI company building both application and infrastructure layers for the next generation of digital fashion experiences, today launched its Generative AI with Sizing technology– a new AI powered online consumer experience, built on NVIDIA’ s CUDA platform, to provide real sizing, fit, and drape for fashion e-commerce.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9c6248ae23420b6b
+symbol: NVDA
+published_utc: 2026-03-16T22:02:00Z
+url: https://www.nasdaq.com/press-release/nvidia-taps-51world-global-l4-simulation-partner-gtc-2026-03-17
+headline: NVIDIA Taps 51WORLD as Global L4 Simulation Partner at GTC
+<<<TEXT>>>
+HONG KONG, Mar 17, 2026--- On March 16 at GTC 2026, NVIDIA announced a deep integration between its Omniverse NuRec and 51 WORLD's SimOne.Leveraging neural rendering technology, this collaboration solves the problem that real-world scenario data collected is non-interactive. This breakthrough accelerates the development of reasoning-based AV systems...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cc511811703504e3
+symbol: NVDA
+published_utc: 2026-03-23T07:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-emerald-ai-join-leading-energy-companies-pioneer-flexible-ai-factories
+headline: NVIDIA and Emerald AI Join Leading Energy Companies to Pioneer Flexible AI Factories as Grid Assets
+<<<TEXT>>>
+--CERAWeek 2026-- NVIDIA and Emerald AI today announced that they are working with AES, Constellation, Invenergy, NextEra Energy, Nscale Energy& Power and Vistra to power and advance a new class of AI factories that connect to the grid faster, generate valuable AI tokens and intelligence, and operate as flexible energy assets that can support the grid.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2c9e0b9c726866de
+symbol: NVDA
+published_utc: 2026-03-31T08:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-ai-ecosystem-expands-marvell-joins-forces-through-nvlink-fusion-2026-03-31
+headline: NVIDIA AI Ecosystem Expands as Marvell Joins Forces Through NVLink Fusion
+<<<TEXT>>>
+--NVIDIA and Marvell Technology, Inc. today announced a strategic partnership to connect Marvell to the NVIDIA AI factory and AI-RAN ecosystem through NVIDIA NVLink Fusion™, offering customers building on NVIDIA architectures greater choice and flexibility in developing next-generation infrastructure. The partnership builds on NVIDIA NVLink Fusion, a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8ce9d0f798f16523
+symbol: NVDA
+published_utc: 2026-04-06T06:00:00Z
+url: https://www.nasdaq.com/press-release/10-federal-taps-top-ranked-nvidia-ai-engineer-fill-self-storage-industrys-first-chief
+headline: 10 Federal Taps Top-Ranked Nvidia AI Engineer to Fill Self-Storage Industry's First Chief AI Officer Role
+<<<TEXT>>>
+--10 Federal, a leading technology-driven self-storage owner and operator, today announced the appointment of Christopher Taylor as its Chief A.I. Officer, a newly created executive position that represents the first dedicated C-suite AI role in the self-storage industry. Taylor joins 10 Federal from Nvidia, the global leader in AI computing, where he served...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b535d8816dab255a
+symbol: NVDA
+published_utc: 2026-04-14T10:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-launches-ising-worlds-first-open-ai-models-accelerate-path-useful-quantum
+headline: NVIDIA Launches Ising, the World’s First Open AI Models to Accelerate the Path to Useful Quantum Computers
+<<<TEXT>>>
+--NVIDIA today announced the world’ s first family of open source quantum AI models, NVIDIA Ising, designed to help researchers and enterprises build quantum processors capable of running useful applications. Named after a landmark mathematical model that dramatically simplified the understanding of complex physical systems, the NVIDIA Ising family...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0ff6389db13790b3
+symbol: NVDA
+published_utc: 2026-04-29T17:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-sets-conference-call-first-quarter-financial-results-2026-04-29
+headline: NVIDIA Sets Conference Call for First-Quarter Financial Results
+<<<TEXT>>>
+--NVIDIA will host a conference call on Wednesday, May 20, at 2 p.m. About NVIDIA NVIDIA is the world leader in AI and accelerated computing. All rights reserved. NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d54bbe83ddff1fa9
+symbol: NVDA
+published_utc: 2026-05-06T07:30:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-corning-announce-long-term-partnership-strengthen-us-manufacturing-ai
+headline: NVIDIA and Corning Announce Long-Term Partnership To Strengthen U.S. Manufacturing for AI Infrastructure
+<<<TEXT>>>
+SANTA CLARA, Calif.& CORNING, N.Y.---- NVIDIA and Corning Incorporated today announced a multiyear commercial and technology partnership to dramatically expand U.S.- based manufacturing of the advanced optical connectivity solutions needed to power next-generation AI infrastructure. Corning will increase its U.S.- based optical connectivity manufacturing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1b5dee5a785372fc
+symbol: NVDA
+published_utc: 2026-05-08T16:30:00Z
+url: https://www.nasdaq.com/press-release/nvidia-names-suzanne-nora-johnson-board-directors-2026-05-08
+headline: NVIDIA Names Suzanne Nora Johnson to Board of Directors
+<<<TEXT>>>
+--NVIDIA today announced that it has named to its board of directors Suzanne Nora Johnson, effective July 13, 2026. "Suzanne is an extraordinary leader whose career spans finance, technology, healthcare and public policy," said Jensen Huang, founder and CEO of NVIDIA." Her experience guiding global companies, together with her leadership at the forefront of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 712d427c9b67796c
+symbol: NVDA
+published_utc: 2026-05-20T16:20:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-financial-results-first-quarter-fiscal-2027-2026-05-20
+headline: NVIDIA Announces Financial Results for First Quarter Fiscal 2027
+<<<TEXT>>>
+--NVIDIA today reported record revenue for the first quarter ended April 26, 2026, of $81.6 billion, up 20% from the previous quarter and up 85% from a year ago. "The buildout of AI factories— the largest infrastructure expansion in human history— is accelerating at extraordinary speed," said Jensen Huang, founder and CEO of NVIDIA." Agentic AI has arrived, doing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4cbb1290271c8c97
+symbol: NVDA
+published_utc: 2026-05-21T17:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-upcoming-events-financial-community-2026-05-21
+headline: NVIDIA Announces Upcoming Events for Financial Community
+<<<TEXT>>>
+TD Cowen 54th Annual Technology, Media,& Telecom Conference Thursday, May 28, at 7:15 a.m. PT. About NVIDIA NVIDIA is the world leader in AI and accelerated computing. All rights reserved. NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 99bdec15dabc327f
+symbol: NVDA
+published_utc: 2026-06-01T00:26:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-microsoft-reinvent-windows-pcs-age-personal-ai-2026-06-01
+headline: NVIDIA and Microsoft Reinvent Windows PCs for the Age of Personal AI
+<<<TEXT>>>
+--NVIDIA GTC Taipei-- NVIDIA today unveiled NVIDIA RTX Spark™, a new superchip that reinvents Windows PCs for the era of personal AI agents— offering a new class of computer that moves from tool to teammate. Designed for AI, creating and gaming, RTX Spark brings together 30 years of NVIDIA innovation— including NVIDIA CUDA ®, NVIDIA RTX™, DLSS, FP4, NVIDIA TensorRT™, NVIDIA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3ff474c53488d6bb
+symbol: NVDA
+published_utc: 2026-06-01T00:35:00Z
+url: https://www.nasdaq.com/press-release/nvidia-dgx-station-windows-puts-trillion-parameter-ai-supercomputer-every-enterprise
+headline: NVIDIA DGX Station for Windows Puts a Trillion-Parameter AI Supercomputer on Every Enterprise Desk
+<<<TEXT>>>
+--NVIDIA GTC Taipei-- NVIDIA today announced NVIDIA DGX Station™ for Windows, the world’ s most powerful deskside AI supercomputer designed to build, run and connect always-on AI agents to Windows applications and workflows, capable of running frontier AI models of up to 1 trillion parameters locally. Building on the NVIDIA DGX Station system design, DGX Station...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 634436bc13d1e85e
+symbol: NVDA
+published_utc: 2026-06-01T00:42:00Z
+url: https://www.nasdaq.com/press-release/nvidia-launches-cosmos-3-open-frontier-foundation-model-physical-ai-2026-06-01
+headline: NVIDIA Launches Cosmos 3, the Open Frontier Foundation Model for Physical AI
+<<<TEXT>>>
+--NVIDIA GTC Taipei-- NVIDIA today launched NVIDIA Cosmos™ 3, an open world foundation model for physical AI built on a breakthrough mixture-of-transformers architecture that combines vision reasoning, world generation and action prediction in a single system. NVIDIA also launched the NVIDIA Cosmos Coalition, a global collaboration between world model...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 99c704b6fc5911d7
+symbol: NVDA
+published_utc: 2026-06-01T00:46:00Z
+url: https://www.nasdaq.com/press-release/nvidia-launches-alpamayo-2-super-open-reasoning-model-robotaxis-2026-06-01
+headline: NVIDIA Launches Alpamayo 2 Super Open Reasoning Model for Robotaxis
+<<<TEXT>>>
+--NVIDIA GTC Taipei-- NVIDIA today introduced NVIDIA Alpamayo 2 Super, a 32- billion-parameter reasoning‑ based vision language action model that extends the NVIDIA Alpamayo family of open AI models, simulation frameworks and physical AI datasets for safe, level 4 robotaxi development. Alongside the model, the company announced new tools, models and agent...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9378928d09937e8c
+symbol: NVDA
+published_utc: 2026-06-01T00:48:00Z
+url: https://www.nasdaq.com/press-release/nvidia-drive-hyperion-becomes-global-platform-robotaxi-ready-world-2026-06-01
+headline: NVIDIA DRIVE Hyperion Becomes the Global Platform for a Robotaxi-Ready World
+<<<TEXT>>>
+--NVIDIA GTC Taipei-- NVIDIA today announced a major expansion of the NVIDIA DRIVE Hyperion™ robotaxi-ready platform ecosystem, bringing together leading global automakers, manufacturing and autonomous vehicle software ecosystem partners along with ride-hailing mobility providers to build and expand level 4- ready robotaxi fleets.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b75ee28a8fddd165
+symbol: NVDA
+published_utc: 2026-06-01T00:50:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-nvidia-isaac-gr00t-reference-humanoid-robot-academic-research-2026
+headline: NVIDIA Announces NVIDIA Isaac GR00T Reference Humanoid Robot for Academic Research
+<<<TEXT>>>
+--NVIDIA GTC Taipei-- NVIDIA today announced the NVIDIA Isaac™ GR00T Reference Humanoid Robot, the first open humanoid robot reference design built on NVIDIA Jetson Thor™ and the NVIDIA Isaac GR00T open development platform. The NVIDIA Isaac GR00T Reference Humanoid Robot unifies development by bringing a Unitree H2 Plus humanoid robot and Sharpa Wave tactile...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 86cb3f0889efbe47
+symbol: NVDA
+published_utc: 2026-06-01T00:53:00Z
+url: https://www.nasdaq.com/press-release/nvidia-releases-major-collection-open-source-agent-tools-and-skills-physical-ai-2026
+headline: NVIDIA Releases Major Collection of Open Source Agent Tools and Skills for Physical AI
+<<<TEXT>>>
+--NVIDIA GTC Taipei-- NVIDIA today announced a major collection of open source physical AI skills and tools that help developers turn complex robotics, autonomous vehicle, vision AI and industrial digital twin workflows into agent-executable tasks— reducing the costs, time and complexity of building physical AI workflows at scale. NVIDIA physical AI skills,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: de953d986f77d7c3
+symbol: NVDA
+published_utc: 2026-06-01T00:59:00Z
+url: https://www.nasdaq.com/press-release/nvidia-foxconn-and-taiwan-medical-centers-bring-agentic-and-physical-ai-healthy
+headline: NVIDIA, Foxconn and Taiwan Medical Centers Bring Agentic and Physical AI to ‘Healthy Taiwan’
+<<<TEXT>>>
+With one of the world’ s fastest-aging populations, Taiwan faces mounting pressure on its clinical workforce. Under the Taiwan government’ s" Healthy Taiwan" initiative, the region has committed $1.5 billion to build a sovereign, regulated AI-native health system spanning clinical hospitals, academic institutions and technology companies.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 298c54efd2bd18c1
+symbol: NVDA
+published_utc: 2026-06-01T01:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-tsmc-bring-ai-fabs-advance-semiconductor-design-and-manufacturing-2026-06
+headline: NVIDIA and TSMC Bring AI Into Fabs to Advance Semiconductor Design and Manufacturing
+<<<TEXT>>>
+--NVIDIA GTC Taipei-- NVIDIA today announced that TSMC, the world’ s leading semiconductor company, is using NVIDIA accelerated computing and AI to advance semiconductor design and manufacturing. "NVIDIA and TSMC have worked together for nearly three decades to push the limits of computing," said Jensen Huang, founder and CEO of NVIDIA." TSMC is bringing NVIDIA AI and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6021531bdf7ff30b
+symbol: NVDA
+published_utc: 2026-06-07T19:00:00Z
+url: https://www.nasdaq.com/press-release/sk-telecom-and-nvidia-build-ai-infrastructure-power-koreas-ai-innovation-2026-06-07
+headline: SK Telecom and NVIDIA Build AI Infrastructure to Power Korea’s AI Innovation
+<<<TEXT>>>
+--NVIDIA and SK Telecom today announced that SK Telecom plans to build a gigawatt-scale AI Cloud in Korea using the NVIDIA DSX™ platform, with the first AI factory coming online in 2027.. SK Telecom’ s AI Cloud will be built on the NVIDIA DSX full-stack reference architecture of software, hardware and operations producing the lowest-cost tokens at maximum energy...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2d83c9f012a6ea3a
+symbol: NVDA
+published_utc: 2026-06-07T19:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-sk-hynix-announce-multiyear-technology-partnership-advance-memory-ai
+headline: NVIDIA and SK hynix Announce Multiyear Technology Partnership to Advance Memory for AI Factories
+<<<TEXT>>>
+--NVIDIA and SK hynix today announced a multiyear technology partnership to advance next-generation memory for the global AI factory buildout and accelerate semiconductor design and manufacturing. "AI factories are the engines of the next industrial revolution, and advanced memory is essential to their performance," said Jensen Huang, founder and CEO of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4e0bc4d676e8e80e
+symbol: NVDA
+published_utc: 2026-06-07T19:00:00Z
+url: https://www.nasdaq.com/press-release/naver-expands-ai-infrastructure-nvidia-serve-surging-global-ai-demand-2026-06-07
+headline: NAVER Expands AI Infrastructure With NVIDIA to Serve Surging Global AI Demand
+<<<TEXT>>>
+--NVIDIA and NAVER today announced that NAVER will expand sovereign AI infrastructure, starting at 55 megawatts with plans to move to gigawatt scale using the NVIDIA DSX™ platform to rapidly design, build and scale full-stack, end-to-end AI platforms that can serve enterprises, industries and government. With NVIDIA DSX, we can help Korea scale sovereign...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a1aaab1434beebf
+symbol: NVDA
+published_utc: 2026-06-11T17:32:00Z
+url: https://www.nasdaq.com/press-release/nvidia-stockholder-meeting-set-june-24-individuals-can-participate-online-2026-06-11
+headline: NVIDIA Stockholder Meeting Set for June 24; Individuals Can Participate Online
+<<<TEXT>>>
+--NVIDIA today announced it will hold its 2026 Annual Meeting of Stockholders online on Wednesday, June 24, at 9 a.m. PT. The matters to be voted on at the meeting are set forth in the company’ s proxy statement filed on May 12, 2026, with the U.S. A replay of the 2026 annual meeting webcast will be available until June 24, 2027, at www.nvidia.com/proxy.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d275da7461f1b193
+symbol: NVDA
+published_utc: 2026-06-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-vera-rubin-delivers-world-class-supercomputers-science-2026-06-22
+headline: NVIDIA Vera Rubin Delivers World-Class Supercomputers for Science
+<<<TEXT>>>
+--ISC High Performance 2026-- NVIDIA today announced the NVIDIA Vera Rubin platform delivers world-class supercomputers for science, combining native double-precision performance, NVIDIA CUDA-X™ libraries and the full-stack capabilities of the NVIDIA AI platform. "Scientific discovery is now a race between the complexity of the world’ s greatest...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 957100d63ff80a5a
+symbol: NVDA
+published_utc: 2026-06-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-halos-robotics-industrys-first-full-stack-safety-system-physical-ai
+headline: NVIDIA Announces Halos for Robotics, the Industry’s First Full-Stack Safety System for Physical AI
+<<<TEXT>>>
+Agility, a leading humanoid robotics and physical AI company, is the first to use NVIDIA Halos for Robotics to build safety into its humanoids working in factories, warehouses and logistics operations for customers including Amazon, GXO, Schaeffler and Toyota Motor Manufacturing Canada. NVIDIA IGX Thor™ and NVIDIA Holoscan Sensor Bridge provide...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 876f12e4e43ea368
+symbol: NVDA
+published_utc: 2026-06-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/europe-unveils-record-35-new-nvidia-ai-supercomputers-2026-06-22
+headline: Europe Unveils a Record 35 New NVIDIA AI Supercomputers
+<<<TEXT>>>
+--ISC High Performance 2026-- NVIDIA today announced that a record 35 NVIDIA AI HPC supercomputers are in development across Europe— equipping more than 3 million researchers with next-generation infrastructure for continental AI, accelerated science and industrial innovation. The NVIDIA Blackwell and NVIDIA Hopper™ platforms are powering the majority of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d3526c43975f0b74
+symbol: NVDA
+published_utc: 2026-06-23T09:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-announces-bionemo-agent-toolkit-tools-agents-accelerate-scientific-discovery
+headline: NVIDIA Announces BioNeMo Agent Toolkit — Tools for Agents to Accelerate Scientific Discovery
+<<<TEXT>>>
+--BIO-- NVIDIA today announced NVIDIA BioNeMo Agent Toolkit, which provides domain-specific tools and skills for the agentic life sciences era. Including more than a decade’ s worth of NVIDIA life sciences libraries, tools and open models, the toolkit enables AI agents, scientists and labs to work together by gathering evidence, reasoning across findings, running...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ba2edd652405053f
+symbol: NVDA
+published_utc: 2026-07-15T08:45:00Z
+url: https://www.nasdaq.com/press-release/ai-rewrites-drug-discovery-bio-native-ai-company-just-joined-russell-3000e-and
+headline: As AI Rewrites Drug Discovery, This Bio-Native AI Company Just Joined the Russell 3000E, and Reports Earnings July 22
+<<<TEXT>>>
+The biggest pharmaceutical companies in the world are now racing to design molecules with machine learning rather than trial and error, and the market has begun to reward the names building the infrastructure underneath that shift. MindWalk Holdings Corp., a self-described Bio-Native AI company based in Austin, is one of the smaller players staking out a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1d72a16bbff00b3d
+symbol: NVDA
+published_utc: 2026-07-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/ai-boom-ran-power-wall-nasdaq-company-building-battery-rolls-fix-it-2026-07-15
+headline: The AI Boom Ran Into a Power Wall; This Nasdaq Company Is Building the Battery That Rolls In to Fix It
+<<<TEXT>>>
+--Equity Insider News Commentary— The artificial intelligence buildout has collided with a physical limit that no algorithm can code its way around: electricity. Against that backdrop, NOMAD Power Solutions, Inc., The Company has entered an exciting new phase of growth by expanding into the AI energy infrastructure sector while continuing to build upon its...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 71119ebe05802b59
+symbol: NVDA
+published_utc: 2026-07-15T19:00:00Z
+url: https://www.nasdaq.com/press-release/japans-enterprises-and-startups-build-industry-specialized-ai-nvidia-nemotron-open
+headline: Japan’s Enterprises and Startups Build Industry-Specialized AI With NVIDIA Nemotron Open Models
+<<<TEXT>>>
+--NVIDIA today announced that leading Japanese enterprises, startups and research institutions are building industry-specialized AI models and applications with NVIDIA Nemotron™ open models, data and libraries, accelerating the development of AI tailored to Japan’ s language, industries and workforce. Building Specialized AI for Japan With NVIDIA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 51c96610061a88d6
+symbol: NVDA
+published_utc: 2026-07-15T23:40:00Z
+url: https://www.nasdaq.com/press-release/japans-robotics-and-manufacturing-leaders-build-nvidia-cosmos-advance-physical-ai
+headline: Japan’s Robotics and Manufacturing Leaders Build on NVIDIA Cosmos to Advance Physical AI Frontier
+<<<TEXT>>>
+--NVIDIA today announced that Japan’ s physical AI leaders are building on the NVIDIA Cosmos™, NVIDIA Isaac™, NVIDIA Metropolis and NVIDIA Jetson™ platforms to accelerate the deployment of intelligent machines across manufacturing, mobility, infrastructure and robotics. NVIDIA also announced Cosmos 3 Edge, a new addition to the NVIDIA Cosmos 3 open world model...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a56e1030061931ae
+symbol: NVDA
+published_utc: 2026-07-16T04:00:00Z
+url: https://www.nasdaq.com/press-release/japan-government-industrial-leaders-and-nvidia-launch-worlds-first-national-ai
+headline: Japan Government, Industrial Leaders and NVIDIA Launch the World’s First National AI Infrastructure
+<<<TEXT>>>
+--NVIDIA today announced it is working with Noetra Corp. to launch an NVIDIA Vera Rubin AI factory with 13,750 NVIDIA Vera CPUs and 27,500 NVIDIA Rubin GPUs for national physical AI. The new AI factory, established by Noetra, will be architected with NVIDIA Vera Rubin NVL72 racks using the NVIDIA DSX™ platform, connected and scaled with NVIDIA Spectrum-X™ Ethernet...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f6226cd849f16e4c
+symbol: NVDA
+published_utc: 2026-07-20T11:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-agent-toolkit-expands-new-omniverse-libraries-putting-ai-agents-work-building
+headline: NVIDIA Agent Toolkit Expands With New Omniverse Libraries, Putting AI Agents to Work Building Simulation-Ready Worlds
+<<<TEXT>>>
+--SIGGRAPH-- NVIDIA today announced that NVIDIA Agent Toolkit now includes NVIDIA Omniverse™ libraries— a collection of software components that give AI agents tools and skills to add physical AI capabilities to existing applications and prepare 3 D content for simulation. With NVIDIA Omniverse libraries in NVIDIA Agent Toolkit, AI agents have the tools and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3cf3f4d77b264db2
+symbol: NVDA
+published_utc: 2026-07-23T19:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-and-kaist-launch-joint-ai-research-lab-accelerate-ai-innovation-korea-2026-07
+headline: NVIDIA and KAIST Launch Joint AI Research Lab to Accelerate AI Innovation in Korea
+<<<TEXT>>>
+--NVIDIA and the Korea Advanced Institute of Science and Technology today announced the launch of a joint AI research laboratory at the KAIST Kim Jaechul Graduate School of AI in Seoul, dedicated to advancing agentic AI for South Korea. "AI research is entering a new era— one that requires frontier talent, large-scale infrastructure and deep collaboration...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7102fb610bd764f1
+symbol: NVDA
+published_utc: 2026-07-24T09:10:00Z
+url: https://www.nasdaq.com/press-release/small-ai-company-just-took-stage-one-biggest-events-computing-and-it-points-where
+headline: A Small AI Company Just Took the Stage at One of the Biggest Events in Computing, and It Points to Where Drug Discovery Is Headed
+<<<TEXT>>>
+MindWalk Holdings Corp. gave the first public demonstration of ReefIQ™, its biological context layer for AI drug discovery, running on AMD Instinct at AMD' s Advancing AI 2026, appearing in the AMD Instinct Demo Showcase. The broader AI-drug-discovery field is drawing intense investor attention, with Recursion Pharmaceuticals, Absci, Tempus AI, and NVIDIA all...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 20777d64e52519a8
+symbol: NVDA
+published_utc: 2026-07-25T01:10:00Z
+url: https://www.nasdaq.com/press-release/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next
+headline: SK Group and NVIDIA Expand Strategic Partnership Across AI Factories and Next-Generation Memory
+<<<TEXT>>>
+NVIDIA Vera Rubin Infrastructure and DSX Platform Drive 2- Gigawatt Build Today’ s announcement builds on the decades-long technology partnership between SK Group and NVIDIA, including the recently announced plans for SK Telecom to build a 2- gigawatt- scale AI Cloud in Korea. This cloud will use the NVIDIA ® DSX™ platform and deploy NVIDIA Vera Rubin...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7f98c8bffcbfd815
+symbol: NVDA
+published_utc: 2026-07-25T01:10:00Z
+url: https://www.nasdaq.com/press-release/naver-nvidia-and-brookfield-expand-koreas-national-ai-factory-infrastructure-buildout
+headline: NAVER, NVIDIA and Brookfield to Expand Korea’s National AI Factory Infrastructure Buildout
+<<<TEXT>>>
+--AI Summit-- NAVER, NVIDIA and Brookfield today announced a proposed expansion of Korea's sovereign AI factory infrastructure, with planned investments that will grow the initial NVIDIA ® DSX™ AI factory deployment to 200 megawatts— more than tripling the 55- megawatt buildout announced last month. NAVER intends to expand its deployment of NVIDIA AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 11f9ab9888499375
+symbol: NVDA
+published_utc: 2026-07-26T20:45:00Z
+url: https://www.nasdaq.com/press-release/nvidia-expands-nvidia-agent-toolkit-nvidia-physicsnemo-and-cuda-x-libraries-transform
+headline: NVIDIA Expands NVIDIA Agent Toolkit With NVIDIA PhysicsNeMo and CUDA-X Libraries to Transform How the World Engineers, Designs and Builds
+<<<TEXT>>>
+--NVIDIA today announced an expansion of NVIDIA Agent Toolkit for engineering, now adding NVIDIA PhysicsNeMo™ and CUDA-X™ libraries as agent-ready tools and skills built to transform how the world designs and develops products. Building the next generation of chips and systems requires teams to connect physics, simulation and performance analysis across...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 11f83132c04937fd
+symbol: NVDA
+published_utc: 2026-07-27T09:00:00Z
+url: https://www.nasdaq.com/press-release/ilya-sutskevers-safe-superintelligence-inc-and-nvidia-announce-long-term-strategic
+headline: Ilya Sutskever’s Safe Superintelligence Inc. and NVIDIA Announce Long-Term Strategic Partnership
+<<<TEXT>>>
+--Safe Superintelligence Inc. and NVIDIA today announced a long-term partnership to rapidly accelerate SSI’ s strategic growth. NVIDIA has additionally made an investment in SSI. "We have research that is worthy of scaling up, and having access to a big NVIDIA computer will let us do so," said Ilya Sutskever, cofounder and CEO of SSI." We’ re incredibly proud to be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f4927e3beaac053f
+symbol: NVDA
+published_utc: 2026-07-29T17:00:00Z
+url: https://www.nasdaq.com/press-release/nvidia-sets-conference-call-second-quarter-financial-results-2026-07-29
+headline: NVIDIA Sets Conference Call for Second-Quarter Financial Results
+<<<TEXT>>>
+--NVIDIA will host a conference call on Wednesday, August 26, at 2 p.m. PT to discuss its financial results for the second quarter of fiscal year 2027, which ended July 26, 2026. All rights reserved. NVIDIA and the NVIDIA logo are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries.
+<<<END>>>

@@ -1,0 +1,144 @@
+<<<PRESS_RELEASE>>>
+id: ce122289242f2531
+symbol: COST
+published_utc: 2025-11-13T08:00:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-opens-new-location-w-winnipeg-2025-11-13
+headline: Costco Wholesale Opens New Location in W. Winnipeg
+<<<TEXT>>>
+--Costco Wholesale opened a new location in W. Winnipeg today– located at 4077 Portage Avenue West, just north of Highway 1. The new warehouse is a relocation of the St. James St location- located at 1315 St. James St- which served its members for almost 35 years. "With the relocation of our St. James St location, we can continue to serve all of our members in W. Winnipeg and the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8196c0b24b16e7e0
+symbol: COST
+published_utc: 2025-11-14T10:15:00Z
+url: https://www.nasdaq.com/press-release/canadas-eighth-costco-business-centre-now-open-new-westminster-2025-11-14
+headline: Canada’s Eighth Costco Business Centre is now open in New Westminster
+<<<TEXT>>>
+--Costco Wholesale opened its eighth Canadian Business Centre today, located at 1085 Tanaka Court, north of Highway 91 A near Boyd Street. Open to ALL Costco members, the Business Centre concept is vastly different from the traditional Costco warehouse, with more than 70 per cent of the product offerings unique to the Business Centre, and targeted to meet the needs...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c742084732807a17
+symbol: COST
+published_utc: 2025-12-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-november-sales-results-2025-12-03
+headline: Costco Wholesale Corporation Reports November Sales Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today reported net sales of $23.64 billion for the retail month of November, the four weeks ended November 30, 2025, an increase of 8.1 percent from $21.87 billion last year. Costco currently operates 921 warehouses, including 633 in the United States and Puerto Rico, 112 in Canada, 42 in Mexico, 37 in Japan, 29 in the United Kingdom, 20 in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c5fb2872cd1e2d6d
+symbol: COST
+published_utc: 2025-12-04T16:44:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-announces-nomination-gina-raimondo-board-directors-2025
+headline: Costco Wholesale Corporation Announces Nomination of Gina Raimondo to Board of Directors
+<<<TEXT>>>
+--Costco Wholesale Corporation today announced the nomination for election to its Board of Directors of Secretary Gina Raimondo. Costco currently operates 921 warehouses, including 633 in the United States and Puerto Rico, 112 in Canada, 42 in Mexico, 37 in Japan, 29 in the United Kingdom, 20 in Korea, 15 in Australia, 14 in Taiwan, seven in China, five in Spain, three in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3f5879eef4d936e5
+symbol: COST
+published_utc: 2025-12-06T08:00:00Z
+url: https://www.nasdaq.com/press-release/canadas-tenth-costco-business-centre-now-open-east-gwillimbury-2025-12-06
+headline: Canada’s Tenth Costco Business Centre is now open in East Gwillimbury
+<<<TEXT>>>
+--Costco Wholesale opened its tenth Canadian Business Centre today, located at 18182 Yonge Street, south of York Regional Rd 19. It's the fifth Costco Business Centre in Ontario and is part of a Costco national expansion plan, with additional Costco Business Centre locations planned to open across Canada in the near future. Some of the promotions being offered at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9dcce4150a55a8b5
+symbol: COST
+published_utc: 2025-12-11T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-first-quarter-fiscal-year-2026-operating-results
+headline: Costco Wholesale Corporation Reports First Quarter Fiscal Year 2026 Operating Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today announced its operating results for the first quarter of fiscal 2026, ended November 23, 2025. Net income for the quarter was $2,001 million, $4.50 per diluted share, compared to $1,798 million, $4.04 per diluted share, last year. Costco currently operates 923 warehouses, including 633 in the United States and Puerto Rico, 114...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b14c7e3571255a59
+symbol: COST
+published_utc: 2026-01-07T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-december-sales-results-2026-01-07
+headline: Costco Wholesale Corporation Reports December Sales Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today reported net sales of $29.86 billion for the retail month of December, the five weeks ended January 4, 2026, an increase of 8.5 percent from $27.52 billion last year. Net sales for the first eighteen weeks were $101.83 billion, an increase of 8.3 percent from $94.04 billion last year. Costco currently operates 923 warehouses,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d104570a221226ed
+symbol: COST
+published_utc: 2026-01-15T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-announces-quarterly-cash-dividend-2026-01-15
+headline: Costco Wholesale Corporation Announces Quarterly Cash Dividend
+<<<TEXT>>>
+--Costco Wholesale Corporation today announced that its Board of Directors has declared a quarterly cash dividend on Costco common stock of $1.30 per share. Costco currently operates 923 warehouses, including 633 in the United States and Puerto Rico, 114 in Canada, 42 in Mexico, 37 in Japan, 29 in the United Kingdom, 20 in Korea, 15 in Australia, 14 in Taiwan, seven in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1e6f5e1f6f02bb3e
+symbol: COST
+published_utc: 2026-02-04T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-january-sales-results-2026-02-04
+headline: Costco Wholesale Corporation Reports January Sales Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today reported net sales of $21.33 billion for the retail month of January, the four weeks ended February 1, 2026, an increase of 9.3 percent from $19.51 billion last year. The shift negatively impacted January Other International and Total Company sales by approximately 4.0% and 0.5%, respectively. This message will be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a21e215b100c0220
+symbol: COST
+published_utc: 2026-03-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-second-quarter-and-year-date-operating-results
+headline: Costco Wholesale Corporation Reports Second Quarter and Year-to-Date Operating Results for Fiscal 2026 and February Sales Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today announced its operating results for the second quarter and the first 24 weeks of fiscal 2026, ended February 15, 2026. Net income for the quarter was $2,035 million, $4.58 per diluted share, compared to $1,788 million, $4.02 per diluted share, last year. Net income for the first 24 weeks was $4.04 billion, $9.08 per diluted share,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4936beca6c227b90
+symbol: COST
+published_utc: 2026-03-27T08:05:00Z
+url: https://www.nasdaq.com/press-release/canadas-eleventh-costco-business-centre-now-open-winnipeg-2026-03-27
+headline: Canada’s Eleventh Costco Business Centre is now open in Winnipeg
+<<<TEXT>>>
+--Costco Wholesale opened its eleventh Canadian Business Centre today, marking the first in Manitoba. Located at the site of the former 1315 St. James St warehouse, the 137,000 square-foot facility is a conversion of the original Costco Winnipeg, which recently relocated to 4077 Portage Avenue W. The new Business Centre has created 190 local jobs and offers...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c5484aa1c8421790
+symbol: COST
+published_utc: 2026-04-08T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-march-sales-results-2026-04-08
+headline: Costco Wholesale Corporation Reports March Sales Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today reported net sales of $28.41 billion for the retail month of March, the five weeks ended April 5, 2026, an increase of 11.3 percent from $25.51 billion last year. Net sales for the first 31 weeks were $173.26 billion, an increase of 9.1 percent from $158.87 billion last year. This message will be available through 4:00 p.m. on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 751b2cc601961c85
+symbol: COST
+published_utc: 2026-04-15T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-announces-increase-its-quarterly-cash-dividend-2026-04
+headline: Costco Wholesale Corporation Announces an Increase in Its Quarterly Cash Dividend
+<<<TEXT>>>
+--Costco Wholesale Corporation today announced that its Board of Directors has declared a quarterly cash dividend on Costco common stock and approved a quarterly increase from $1.30 to $1.47 per share, $5.88 on an annualized basis. Costco currently operates 928 warehouses, including 637 in the United States and Puerto Rico, 115 in Canada, 42 in Mexico, 37 in Japan,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f5cae6d4d532ba4b
+symbol: COST
+published_utc: 2026-05-06T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-april-sales-results-2026-05-06
+headline: Costco Wholesale Corporation Reports April Sales Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today reported net sales of $23.92 billion for the retail month of April, the four weeks ended May 3, 2026, an increase of 13.0 percent from $21.18 billion last year. Net sales for the first 35 weeks were $197.18 billion, an increase of 9.5 percent from $180.05 billion last year. Costco currently operates 928 warehouses, including 637...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 069340f0334b58a1
+symbol: COST
+published_utc: 2026-06-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-may-sales-results-2026-06-03
+headline: Costco Wholesale Corporation Reports May Sales Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today reported net sales of $24.01 billion for the retail month of May, the four weeks ended May 31, 2026, an increase of 14.5 percent from $20.97 billion last year. Net sales for the first 39 weeks were $221.19 billion, an increase of 10.0 percent from $201.02 billion last year. Costco currently operates 931 warehouses, including 639...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 34ecd0a76dda1b64
+symbol: COST
+published_utc: 2026-08-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/costco-wholesale-corporation-reports-july-sales-results-2026-08-05
+headline: Costco Wholesale Corporation Reports July Sales Results
+<<<TEXT>>>
+--Costco Wholesale Corporation today reported net sales of $23.12 billion for the retail month of July, the four weeks ended August 2, 2026, an increase of 10.7 percent from $20.89 billion last year. Net sales for the first 48 weeks were $273.55 billion, an increase of 10.1 percent from $248.35 billion last year. Comparable sales for the periods ended August 2, 2026,...
+<<<END>>>

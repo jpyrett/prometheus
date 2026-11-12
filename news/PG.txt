@@ -4695,3 +4695,981 @@ BEPC | positive | Offers flexible investment approach in global renewable energy
 VZ | positive | Reliable cash cow business with 98% U.S. adult mobile phone penetration providing stable, recurring revenue. Demonstrates 20-year dividend growth streak with attractive 6.3% yield, though limited capital appreciation potential due to market saturation.
 PG | neutral | Mentioned as comparison point to Clorox regarding scale advantages ($87B vs $6.7B revenue), but not recommended as primary investment in this article.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143730975
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=116b4eabb7fcdc4d345997c333e94c67b56983d4ef94eaf40a916dacba86fc75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: These Stocks Are Beating the S&P 500—and Have Steady Yields
+<<<SUMMARY>>>
+The market is tied closely to large-caps. Take a look in the middle for alternatives.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143713947
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T01:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1c17ce96037999664222c8a31283d45349fbf77942a3a6e1464172aa30b58c34
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2212701687/image_2212701687.jpg?io=getty-c-og
+category: company
+tickers: PG
+keywords: 
+headline: Nvidia, Caterpillar And Nike: 3 Corporate Events That Could Move Markets
+<<<SUMMARY>>>
+Market volatility rose following the midterms, putting the AI trade and data center buildout under renewed scrutiny. Read more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692691
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:17:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=17d73eb69b1f35a300d1f36908382a4cefe497f6bb4114a9406e1cae9a25f67f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Treasuries Now Offer 2.66% Above Inflation. Are Dividend Stocks in Trouble?
+<<<SUMMARY>>>
+Real yields hit a level that crushed income stocks once before, and one dividend name is already repeating the old script. Which holdings sat out the damage this time, and what single number could turn the tide again?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692637
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:58:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=558ef90238987e88a3afc0c5d08780001a753dfe2b7274135f35ccd5bfd41de8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: The Kiplinger Dividend 15: Our Favorite Dividend-Paying Stocks
+<<<SUMMARY>>>
+Rising interest rates create a risk for The Kiplinger Dividend 15, but our favorite dividend-paying stocks remain a worthy consideration for most portfolios.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691533
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:53:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef5dc421f760dd8ad7157703dbe6fc3b2eb185737a509422db78ade93569c9d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Clara Shih and Joe Jimenez on AI and Leadership | WSJ Leadership Institute
+<<<SUMMARY>>>
+Joe Jimenez, who is on the board of GM and Procter & Gamble, and Clara Shih, New Work Foundation founder, discuss AI's disruptive impact on the workforce and how corporate leaders should proactively think about how to democratize the technology and prevent widening inequality.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690219
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:18:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=52c71317d0f109ba0490b58170f1da1fd5bd8cce35bddbb1657078aae5398f54
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: NVIDIA, Caterpillar & Nike: Three Corporate Events That Could Move Markets
+<<<SUMMARY>>>
+NVIDIA, Caterpillar, and Nike headline next week’s corporate events, offering important clues on AI investment, construction demand, and the consumer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693124
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:16:51Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=2355a323b3adf31596f84792929f31a24faab7dbe44dd1535953e0ab9291d5ea
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2254596200/image_2254596200.jpg?io=getty-c-og
+category: company
+tickers: PG
+keywords: 
+headline: The Most Important Market Shift Of The Decade Is Already Underway
+<<<SUMMARY>>>
+A market rotation could drive outperformance over 3, 5, and 10 years as investors overlook AI's long-term beneficiaries. Discover more in this market outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690362
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eced610144d8444385021a96c68e52123919865ff7dd6bc3d82c4810e0f2abbe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Herbal Essences Brings Its #1 Best-Selling Rose Hips Floral Scent to Frizz Care with the New Twist & Bloom Collection
+<<<SUMMARY>>>
+CINCINNATI, November 10, 2026--Herbal Essences is blooming into new realms by launching the new Rose Hips Twist & Bloom Collection, a three-step frizz-care regimen that brings the brand’s iconic Rose Hips fragrance to treatments for the first time. The collection launches with its hero innovation, the Twist & Bloom Smoothing Mask, the first blooming rinse-off hair mask from Herbal Essences that leaves hair petal-soft in just two minutes, available now at Amazon, Walmart.com and TikTok Shop. Addi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687277
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:31:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e9325f028ccd02e401a70689590025c3987df8a9e3ce172b57a0d3ca66ed7cf3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Meet Wall Street’s Safest Dividend Stocks: 3 Companies That Have Paid Through Recessions, Wars and Market Crashes
+<<<SUMMARY>>>
+One of these three dividend payers started out selling candles and soap, another grew out of Rockefeller's Standard Oil. Each carries a hidden risk, and one stock looks pricey enough to challenge its own safe reputation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143665415
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T05:17:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e4fe3b44a0988e95acc7d15d81adc1b6ad23520f78b76efc65acc0015c34a895
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: What Does Procter & Gamble (PG) Naming A New India Beauty Head Signal?
+<<<SUMMARY>>>
+Procter & Gamble (NYSE:PG) has appointed Shalini Saraswat as Brand Director and Business Head for Pantene India. Saraswat steps into the Pantene India role with prior brand leadership experience within Procter & Gamble. Her background includes earlier work in research and development at Unilever, adding technical depth to her consumer brand remit. The elevation of Shalini Saraswat to lead Pantene India comes as Procter & Gamble sharpens its hair care focus in the Indian market. Check out 2...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658706
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=51f2f8f958ff91f4abac0b716189e29532bb0dd66600b55edd0955709d47779c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Is Procter & Gamble's Beauty Momentum Enough to Lift Growth?
+<<<SUMMARY>>>
+PG's Beauty business posts 5% organic sales growth in Q1 FY27, fueled by Pantene and SK-II. Can this momentum boost overall growth?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657486
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef0fcb9529ff5174d3209e6cf9ad22018f7650614d120c74f9b8ad43216ba8dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: National Advertising Division Found Unilever’s Dove Deep Moisture Body Wash Claims Supported
+<<<SUMMARY>>>
+In a challenge brought by The Procter & Gamble Company, BBB National Programs’ National Advertising Division determined that Unilever United States, Inc. supported the challenged express and implied claims that Dove Deep Moisture Body Wash moisturizes skin for 24 hours, nourishes skin, and provides “Deep Moisture.”New York, NY, Nov. 09, 2026 (GLOBE NEWSWIRE) -- In a challenge brought by The Procter & Gamble Company, BBB National Programs’ National Advertising Division determined that Unilever Un
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657454
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:27:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=00e0b213f324e8133296891e45898b7fe18155b32197d7c3b59702a184f4a11f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: After the Democratic Midterm Sweep: 4 Dividend Stocks Built for Gridlock
+<<<SUMMARY>>>
+When Congress locks up, some dividends barely notice. Four blue chips span power, soap, medicine and banking, and one of them already survived a payout collapse that income investors should not forget before trusting it.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657475
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b7a508f547ed2244d54a1b84648f6405c5943042df00723f8fa210829dc70a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Benjamin Graham Had a 20-Year Rule for Retirement Income. It Just Won the AI Sell-Off
+<<<SUMMARY>>>
+Benjamin Graham's rule for the defensive investor was uninterrupted dividends for at least 20 years. In the month since the S&P 500's record, five holdings that pass it rose 8.8% while the Nasdaq-100 fund fell 13.6%. Here is what that did to a retired couple with $3 million living on $99,265 a year of dividends, and three moves for the week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654616
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:18:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b84e7f7f4f09f9a9d5adc12637aa601b57fc9182b2fd350eb21e7a5680fce428
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 3 Legacy Dividend Stocks That Never Go Out of Style
+<<<SUMMARY>>>
+Coke, Tide and Kleenex have sat in American homes for generations, and the companies behind them keep raising their payouts. But one of these three Dividend Kings carries a debt load that could test its streak.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657487
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1356dfad7629fa2a93d275d42997793f22cd4a61b53bc0c414919cb2a5f69c23
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Here is What to Know Beyond Why Procter & Gamble Company (The) (PG) is a Trending Stock
+<<<SUMMARY>>>
+P&G (PG) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686716
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:00:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0ae16468fb2d0b7cab7abf03424bf96c001876248f24bcc858b43baf9aed5a1a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: 11 Of 11 Sectors Rise Monday As Growth Leads
+<<<SUMMARY>>>
+All 11 sectors are higher in Monday’s regular session, with growth sectors holding two of the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652337
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8b3cd1e436f9183ac0fcaec4c028fed41806347d026cd59faedd32a71dbf2ae9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 3 Top Dividend Stocks to Buy in November for a Lifetime of Passive Income
+<<<SUMMARY>>>
+These three companies have built advantages that keep the cash flowing through good markets and bad.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652826
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7c19770c6b39343435143fdc85bcace975150f75826ef34ccbfba7c8d31f0db
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Take the Zacks Approach to Beat the Markets: Ulta Beauty, Accenture, HCA in Focus
+<<<SUMMARY>>>
+Zacks highlights how its research strategies have delivered strong returns, with ACN, HCA and ULTA among the standout performers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143643442
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T23:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84f4800adf8febd696471db77487468b6014ea8e83fd6cb34642315c4fe9ec05
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble's Dividend Has Survived 26 Recessions. Here's What $10,000 Now Earns in Yearly Dividend Income.
+<<<SUMMARY>>>
+P&G has paid a dividend through 26 recessions and raised it for 70 straight years. Here's what $10,000 earns today, and why the streak looks safe.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640929
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T17:33:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50807a5027031dfa48a3ad0b5881012a649e0f8562d97bde171cd2fb3ae55996
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Volume, Not Price, Drove the Surprise at Procter & Gamble (PG)
+<<<SUMMARY>>>
+Our latest list of the 10 Worst Dow Stocks To Buy is live, and Procter & Gamble (NYSE:PG) comes in at 8th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640871
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9843f7861128e7ec221db2d4e02bef02ec27a7327627250d9fc0d4ffa7e1c2ec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: This Dividend King Has Raised Its Payout Through Every Recession Since the 1950s. I'm Buying Before the End of the Year.
+<<<SUMMARY>>>
+Procter & Gamble's dividend increase is one of the longest among U.S. companies and hasn't been interrupted by 10 recessions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143607439
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:14:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fa8b155b5856f03e564c73c30d5f7e498809329d4db2539642e8b255422f69dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: What If You Add Gold And Cash To A Dividend Portfolio?
+<<<SUMMARY>>>
+Part of our series on building a mix that lasts. Start here: is 60/40 dead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143607437
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:14:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ec23ff2dbd237185016548aacc146b3d68b1c6c519f4f04b5b226bd6da94c73
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Are Dividends The New Bonds?
+<<<SUMMARY>>>
+Part of our series on building a mix that lasts. Start here: is 60/40 dead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143607438
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:13:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ce12813797dccb5c6020230dac0cc076e1318b672026ece504275b506b38df0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Is Your Retirement Portfolio Built For 2008 Or For 2022?
+<<<SUMMARY>>>
+Part of our series on building a mix that lasts. Start here: is 60/40 dead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143593581
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T04:24:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e71e1379125ca604b5c4f1aa5b4ab2f625d4fc1eb4f57353331d3ec1a753d758
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: What Does Procter & Gamble (PG) Mean By Raising $4 Billion In Debt?
+<<<SUMMARY>>>
+Procter & Gamble (NYSE: PG) has issued US$4b of senior notes in a new long term debt financing deal. The multi tranche offering spreads maturities across several future dates, adding staggered repayment obligations to the balance sheet. Management has indicated the funds are intended to help address operating costs and support future investment plans. This US$4b senior notes issuance is important, but investors should weigh it alongside other financial signals and risks. Take a look at 2...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591599
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T20:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a54994a5c77cd701aa7dfe08cdf896a0108957da9f4c1313b636f0069ec4fe5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Here's How Many Shares of Procter & Gamble You'd Need for $1,000 in Yearly Dividends
+<<<SUMMARY>>>
+Even if generating $1,000 in dividend payouts from Procter & Gamble isn't in an investor's budget, it's still a stock worthy of investment consideration.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592225
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:30:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=179932ced585c47b91f7c497290f9405d62b1ac2a2bf533cfb1fe4d053589441
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-w1536
+category: company
+tickers: PG
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week of November 8
+<<<SUMMARY>>>
+Get the latest dividend activity for Dividend Champions, Contenders, and Challengers. Read this week's list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590769
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:17:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c5be0092a088ebc8426b6b0f02ace9bcbe272dd5bf1a36f58c2c8b82e845a7d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: The Average 1-Year CD Pays Just 1.76%. These Dividend Stocks Could Pay More
+<<<SUMMARY>>>
+A guaranteed bank rate sounds safe until you weigh what it can't do. Six blue-chip payers offer income that can grow, but a board can cut it at any meeting, and the tax bill may decide which side comes out ahead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588366
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:17:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f020726ecb0ac02c1f2126080ae50f10415c792d59aaa61aecb4b5439715f276
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 4 Dividend Raisers With Balance Sheets Strong Enough to Keep Raising Through Any Downturn
+<<<SUMMARY>>>
+When profits dip, lenders get paid first and the dividend is usually what gets cut. Four household names have raised their payouts year after year, and one of them holds a credit rating almost no other U.S. company can match.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584684
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:48:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5cc51aaf2d25f332c6ef2fa88829686c558b0fadf24643c98433d568a041bd10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Coca-Cola vs P&G: Staples Rotation Crowns a Clear Income Winner
+<<<SUMMARY>>>
+Tech is bleeding while soda and detergent makers rally, and Jim Cramer wants to camp out in staples "for a bit." Two dividend legends have very different runs behind them, and only one suits someone living off portfolio income.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584622
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:37:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e86673e45f5f7834c6bc873a20a0225a55a076dccf96a63bba590ac1203cf540
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Rate Hikes Could Be Coming: History Likes These 4 Consumer Staples Stocks
+<<<SUMMARY>>>
+The Fed ended its pause, and traders now price in another hike by December. Three past tightening cycles reveal which household-name staples stocks protected portfolios, and one of them beat the market every single time.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583975
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:36:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=62b04ae66ee60ccb54e250b200f6edf51857cdf90b85f41fba76bc3ca5d7ebb5
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Jakarta--September-07-2024-Nvidia-Corpor.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Nvidia Stock Is Now Cheaper Than a Toilet-Paper Company, Data Shows
+<<<SUMMARY>>>
+Nvidia&#39;s forward P/E fell to 15.2x, below Kimberly-Clark&#39;s 15.5x. The AI chipmaker now trades cheaper than 22 of 33 consumer staples stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584029
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:00:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9ce4e9e86cb402377a38029a275831210efafdbabaf281d7c2af669242938dbf
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Defensives Lead Sectors Thursday As Growth Sectors Trail
+<<<SUMMARY>>>
+Four sectors are higher and seven are lower in Thursday’s regular session, with defensive sectors holding two of the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748016
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=58facd99869ab1fa943f556e75eba1b86f93cd90ed151d3c6fc0c84313be3d85
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: These 5 Dividend Aristocrats® Have Raised Payouts for Decades
+<<<SUMMARY>>>
+Investors worried about market turmoil may want to look at reliable dividend stocks, and these five stand out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:59ddb83d3dec32321ea527e20e689c90404e62a7ecffae95e0354ef1caf26df7
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T13:54:00Z
+publisher: The Motley Fool
+author: Stefon Walters
+url: https://www.fool.com/investing/2026/11/07/want-500-a-month-in-dividends-heres-how-much-youd/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892226%2Fgettyimages-1134609986.jpg&w=1200&op=resize
+category: 
+tickers: SCHD, PG, HD, TXN
+keywords: dividend investing, passive income, dividend ETF, SCHD, dividend yield, long-term investing
+headline: Want $500 a Month in Dividends? Here's How Much You'd Need to Invest to Get There.
+<<<SUMMARY>>>
+To generate $500 in monthly dividends using the Schwab U.S. Dividend Equity ETF (SCHD), investors would need between $171,429 and $208,897 depending on yield assumptions. SCHD screens for companies with 10+ consecutive years of dividend payments and 5+ years of dividend increases, making it suitable for long-term dividend investors who contribute consistently over time.
+<<<INSIGHTS>>>
+SCHD | positive | The article highlights SCHD's strong screening criteria (10+ years of dividend payments, 5+ years of dividend increases), low expense ratio (0.06%), and consistent dividend yield (3.00%), positioning it as a reliable vehicle for generating passive dividend income. The fund is presented as a 'set it and forget it' investment suitable for long-term wealth building.
+PG | neutral | PG is mentioned only as a top holding (4.45%) in SCHD's portfolio. No specific analysis or commentary is provided about the company itself; it is merely listed as part of the fund's composition.
+HD | neutral | HD is mentioned only as a top holding (4.32%) in SCHD's portfolio. No specific analysis or commentary is provided about the company itself; it is merely listed as part of the fund's composition.
+TXN | neutral | TXN is mentioned only as a top holding (4.29%) in SCHD's portfolio. No specific analysis or commentary is provided about the company itself; it is merely listed as part of the fund's composition.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:71ee555edd8bf9f75d06af71e9decf7738ccddd384b2dd75c2ed16dd049377f6
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T16:30:00Z
+publisher: The Motley Fool
+author: James Brumley
+url: https://www.fool.com/investing/2026/11/07/these-5-consumer-stocks-raised-their-dividends-in/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893126%2Fthinking-man-at-a-desk-reviewing-paperwork.jpg&w=1200&op=resize
+category: 
+tickers: KO, PG, MCD, TGT, O
+keywords: dividend stocks, consumer goods, dividend yield, income investing, dividend kings, REIT
+headline: These 5 Consumer Stocks Raised Their Dividends in 2026. Here's What $10,000 in Each Pays in 2027.
+<<<SUMMARY>>>
+Five consumer stocks that raised dividends in 2026 are analyzed for their 2027 dividend income potential on a $10,000 investment. Coca-Cola leads with 64 consecutive years of dividend increases but offers modest 2.2% yield ($220 annually). Procter & Gamble, McDonald's, Target, and Realty Income provide higher yields ranging from 2.6% to 5.7%, with Realty Income offering the best income at $570 annually despite limited capital growth prospects.
+<<<INSIGHTS>>>
+KO | positive | Stock up 35% year-to-date with 64 consecutive years of dividend increases, supported by 5% revenue growth and 9%+ earnings growth. Provides safety and reliability, though current 2.2% yield is modest due to strong stock performance.
+PG | positive | World's largest consumer goods company with 70 consecutive years of dividend increases. Strong market position, significant advertising spend, and reliable business model support dividend growth, though 2.6% yield is modest.
+MCD | neutral | Dividend King with 50 consecutive years of increases and 2.9% yield, but facing economic headwinds with weak Q2 sales growth (1.3%) and stock down 14% since end of 2025. Dividend remains secure despite near-term challenges.
+TGT | positive | Compelling income investment with 3% forward yield and 55 consecutive years of dividend increases. Strong Q2 performance with 3.8% same-store sales growth and 5% revenue growth expected to persist, supporting earnings growth.
+O | positive | REIT offering highest yield at 5.7% with monthly dividend payments increased quarterly for nearly three decades. Maintains 99% occupancy rate with resilient tenants, though limited capital growth expected in current interest-rate environment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:244543d341179478f1d1523267cae0c924c9f9b21497ed294a7996be750f8643
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T21:15:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/etfs/2026/11/07/consumer-staples-showdown-weighing-the-differences-between-vdc-and-rsps/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0dbeaa0b9e42976b520af8192b7b599528bff488-4000x3000.jpg&w=1200&op=resize
+category: 
+tickers: VDC, RSPS, WMT, COST, PG
+keywords: consumer staples ETF, VDC vs RSPS, expense ratio, dividend yield, market-cap weighting, equal weighting, ETF performance comparison
+headline: Consumer Staples Showdown: Weighing the Differences Between VDC and RSPS
+<<<SUMMARY>>>
+Vanguard Consumer Staples ETF (VDC) outperforms Invesco S&P 500 Equal Weight Consumer Staples ETF (RSPS) with 21.3% one-year returns and a lower 0.09% expense ratio, while RSPS offers higher dividend yield at 2.8% through its equal-weighting strategy. VDC is recommended for cost-conscious long-term investors, while RSPS appeals to income-focused investors seeking reduced concentration risk.
+<<<INSIGHTS>>>
+VDC | positive | Superior 1-year return of 21.3%, significantly lower expense ratio of 0.09%, better 5-year performance with 45% total return, and lower maximum drawdown of 16.5% make it the more attractive option for most investors.
+RSPS | neutral | While offering higher dividend yield of 2.8% and an equal-weighting strategy that reduces concentration risk, it underperforms VDC with 15.4% 1-year returns, higher expense ratio of 0.4%, and lower 5-year CAGR of 2.7%, making it suitable only for specific income-focused strategies.
+WMT | neutral | Mentioned as a major holding in both ETFs (13.86% in VDC, 3.32% in RSPS), indicating its importance in the consumer staples sector but without specific performance commentary.
+COST | neutral | Listed as second-largest holding in VDC at 12.12%, indicating significant portfolio weight but no specific performance analysis provided.
+PG | neutral | Third-largest holding in VDC at 9.90%, representing a key consumer staples position but without individual performance commentary.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:146c9404cedeb7b2c496ee18f9176031548d956e4a1b6e1665ae605b4b0f00fc
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T15:45:00Z
+publisher: The Motley Fool
+author: Todd Shriber
+url: https://www.fool.com/investing/2026/11/08/this-dividend-king-has-raised-its-payout-through/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893376%2Fshopping-for-cleaning-supplies.jpg&w=1200&op=resize
+category: 
+tickers: PG
+keywords: dividend growth, Dividend King, recession resilience, consumer staples, defensive stocks, dividend yield, free cash flow, payout ratio
+headline: This Dividend King Has Raised Its Payout Through Every Recession Since the 1950s. I'm Buying Before the End of the Year.
+<<<SUMMARY>>>
+Procter & Gamble has maintained a 71-year streak of consecutive dividend increases, making it a Dividend King with the third-longest payout-increase streak among U.S. companies. The company has raised dividends through all 10 recessions since 1955, demonstrating exceptional reliability. With a safe dividend, reasonable payout ratio of 67.8%, and strong free cash flow, the author is bullish on P&G heading into 2027, particularly as defensive stocks may attract investors amid AI trade uncertainty and potential legislative changes.
+<<<INSIGHTS>>>
+PG | positive | The article highlights P&G's exceptional 71-year dividend increase streak uninterrupted through 10 recessions, safe dividend with reasonable payout ratio of 67.8%, strong free cash flow, and positions it as an attractive defensive stock heading into 2027. The author explicitly states bullish sentiment and plans to buy before year-end.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:159ab07627728f760249bef248630097b8dc903d4e9bf8336a1663aaeff836a2
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T23:30:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/08/procter-gambles-dividend-has-survived-26-recession/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893002%2Fgettyimages-1407853676-1215x810-c2a1abd.jpg&w=1200&op=resize
+category: 
+tickers: PG, CPB, FLO
+keywords: dividend king, dividend growth, consumer staples, recession resilience, margin pressure, organic sales growth, cost inflation
+headline: Procter & Gamble's Dividend Has Survived 26 Recessions. Here's What $10,000 Now Earns in Yearly Dividend Income.
+<<<SUMMARY>>>
+Procter & Gamble maintains its status as a Dividend King with 70 consecutive years of dividend increases, surviving 26 recessions since 1890. A $10,000 investment yields approximately $265-$269 annually at the current 2.6% yield. Despite facing $1.4 billion in higher commodity and energy costs, P&G showed resilience with 4% organic sales growth across all product categories and regions. The company's conservative payout ratio of two-thirds earnings and essential consumer staples business position it well for future recessions.
+<<<INSIGHTS>>>
+PG | positive | P&G demonstrates strong fundamentals with 70 years of consecutive dividend increases, 4% organic sales growth across all categories and regions, and a sustainable payout ratio. Despite cost pressures, the company maintained its full-year outlook and showed resilience in demand. The business model of essential consumer products provides structural stability through economic cycles.
+CPB | negative | Campbell's cut its dividend this year amid cost pressures, contrasting sharply with P&G's dividend growth streak. The company's lower gross margin (27.90% vs P&G's 50.48%) and weaker financial position make it vulnerable to commodity and energy cost headwinds.
+FLO | negative | Flowers Foods also cut its dividend this year, indicating financial stress from rising costs. The company is mentioned as an example of weaker consumer companies unable to maintain dividend payments during inflationary pressures.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:05eec7f2c618916a0671e8c4816d374560be76ff92e43a5056bbdfe1095869e8
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T11:03:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3026068/take-the-zacks-approach-to-beat-the-markets-ulta-beauty-accenture-hca-in-focus?cid=CS-ZC-FT-analyst_blog|investment_ideas-3026068
+image_url: https://staticx-tuner.zacks.com/images/articles/main/86/1911.jpg
+category: 
+tickers: HCA, ULTA, ACN, FDS, HHH, TLS, CON, BP, PG, ADP, FCFS
+keywords: stock market decline, AI valuations, employment report, Zacks Rank, portfolio performance, dividend stocks, market uncertainty
+headline: Take the Zacks Approach to Beat the Markets: Ulta Beauty, Accenture, HCA in Focus
+<<<SUMMARY>>>
+Stock markets declined for the week ended November 6, with the Nasdaq, S&P 500, and Dow falling 3.4%, 2.7%, and 0.9% respectively, as investors reassessed AI valuations and infrastructure spending. A partial recovery on Friday was driven by stronger-than-expected October employment data, though concerns about potential Fed rate hikes persisted. Zacks highlighted several outperforming stocks across its various portfolios, including HCA Healthcare and Ulta Beauty from its Focus List, Accenture from its ECAP portfolio, and dividend stocks like Procter & Gamble and Automatic Data Processing.
+<<<INSIGHTS>>>
+HCA | positive | Stock gained 21.1% over the past 12 weeks, significantly outperforming the S&P 500's decline of 4.3% in the same period. Part of Zacks Focus List with strong long-term track record.
+ULTA | positive | Stock returned 19.7% over the past 12 weeks, substantially outperforming the S&P 500's 4.3% decline. Part of Zacks Focus List with consistent outperformance.
+ACN | positive | Stock surged 52.2% over the past 12 weeks, demonstrating exceptional performance. Component of Zacks Earnings Certain Admiral Portfolio (ECAP).
+FDS | positive | Stock delivered 19.4% return over 12 weeks, outperforming broader market. Part of ECAP portfolio.
+HHH | positive | Stock gained 26.31% since Zacks Rank upgrade to #1 (Strong Buy) on September 18, significantly outperforming S&P 500's 3.3% decline in the same period.
+TLS | positive | Stock returned 14% since Zacks Rank upgrade to #1 on September 16, outperforming S&P 500's 2.7% decline in the same period.
+CON | positive | Stock surged 23.2% since Zacks Recommendation upgrade to Outperform on August 31, significantly outperforming S&P 500's 4.4% decline.
+BP | neutral | Stock gained 1.6% since Zacks Recommendation upgrade to Outperform on September 8, modestly outperforming S&P 500's 4.6% decline but showing relatively weak absolute performance.
+PG | positive | Stock returned 12.5% over the past 12 weeks. Part of Zacks Earnings Certain Dividend Portfolio (ECDP) with strong dividend history and defensive characteristics.
+ADP | positive | Stock climbed 10.9% over the past 12 weeks. Part of ECDP portfolio with low beta and consistent dividend performance.
+FCFS | positive | Stock jumped 18.4% since January 5, 2026, outperforming S&P 500's 7.7% gain. Part of Zacks Top 10 Stocks for 2025.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d60bd24bc06db58a9fc8923ab8a9e84a28b826ff48afa9423f69d0bf1618dc82
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T11:25:00Z
+publisher: The Motley Fool
+author: John Ballard
+url: https://www.fool.com/investing/2026/11/09/3-top-dividend-stocks-buy-november-lifetime-income/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893063%2Fcoca-cola-bottles-image-source-getty.jpg&w=1200&op=resize
+category: 
+tickers: KO, LOW, PG
+keywords: dividend stocks, passive income, Coca-Cola, Lowe's, Procter & Gamble, dividend growth, consumer staples, competitive advantages
+headline: 3 Top Dividend Stocks to Buy in November for a Lifetime of Passive Income
+<<<SUMMARY>>>
+The article recommends three dividend stocks for passive income: Coca-Cola (64 years of consecutive dividend increases, 2.2% yield), Lowe's (25+ years of increases, 2.2% yield, positioned for housing market recovery), and Procter & Gamble (70 years of consecutive increases, 2.6% yield). All three companies have strong competitive advantages and durable business models that support consistent dividend growth.
+<<<INSIGHTS>>>
+KO | positive | Strong brand portfolio with 32 billion-dollar brands, 64 consecutive years of dividend increases, 7% organic revenue growth, 22 consecutive quarters of value share gains, and sustainable 2.2% dividend yield with 78% payout ratio.
+LOW | positive | Demonstrated resilience with five consecutive quarters of positive comparable sales despite weak housing market, 16% online sales growth, 25+ years of dividend increases, low 38% payout ratio providing room for growth, and positioned to benefit from $20-50 billion in pent-up home improvement demand.
+PG | positive | Strong household brand portfolio, 4% organic sales growth with 2.4% volume growth, 70 consecutive years of dividend increases, 2.6% dividend yield, growing market share with major retailers, and sustainable dividend policy using two-thirds of free cash flow.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fa9300adc11e3b61ce1a83095b5a7d9c70c5a6ba06f7a6ddfc96c5b3195aa252
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T13:00:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3026216/here-is-what-to-know-beyond-why-procter-gamble-company-the-pg-is-a-trending-stock?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks_v1-3026216
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default360.jpg
+category: 
+tickers: PG
+keywords: Procter & Gamble, earnings estimates, revenue growth, valuation, Zacks Rank, consumer products, stock performance
+headline: Here is What to Know Beyond Why Procter & Gamble Company (The) (PG) is a Trending Stock
+<<<SUMMARY>>>
+Procter & Gamble (PG) has outperformed the broader market with a +9.4% return over the past month, significantly beating the S&P 500's -5.6% decline. However, the company faces modest earnings headwinds with current quarter EPS expected to decline 3.7% year-over-year, though full-year earnings are projected to grow 1.5%. The stock carries a Zacks Rank #3 (Hold) rating and trades at a premium valuation (Grade D) relative to peers, suggesting it may perform in line with the broader market in the near term.
+<<<INSIGHTS>>>
+PG | neutral | While PG has outperformed the market recently (+9.4% vs S&P 500's -5.6%), the company faces near-term earnings headwinds with current quarter EPS declining 3.7% YoY. The Zacks Rank #3 (Hold) rating and premium valuation (Grade D) suggest the stock will perform in line with the broader market. Modest full-year earnings growth of 1.5% and revenue growth of 3.2% indicate stable but unspectacular fundamentals.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:36c87d4e7684bb2c55452beb897af473edd3d9a782eb58d31c18aecae59a2201
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T15:33:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026583/is-procter-gamble-s-beauty-momentum-enough-to-lift-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3026583
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CHD, CL
+keywords: Beauty business growth, Organic sales growth, Product innovation, Pantene, SK-II, Consumer engagement, Premium offerings, Market share gains
+headline: Is Procter & Gamble's Beauty Momentum Enough to Lift Growth?
+<<<SUMMARY>>>
+Procter & Gamble's Beauty segment achieved 5% organic sales growth in Q1 FY27, driven by product innovation and stronger brand execution across Hair Care and Skin & Personal Care. Pantene gained U.S. market share while SK-II posted double-digit growth in Greater China. PG maintains its fiscal 2027 organic sales growth outlook of 1-3%, with management seeing further acceleration opportunities through innovation and retail execution.
+<<<INSIGHTS>>>
+PG | positive | PG's Beauty segment delivered strong 5% organic sales growth in Q1 FY27 with gains across all segments. Pantene achieved market share gains and SK-II posted double-digit growth in Greater China. The company maintains confidence in its 1-3% organic sales growth outlook for FY27, indicating positive momentum despite challenging market conditions.
+CHD | positive | CHD is leveraging product innovation and brand expansion in beauty and personal care, with its HERO acne-care brand benefiting from growing consumer demand. The company is expanding distribution and strengthening digital engagement, though competitive pressures remain a concern.
+CL | positive | CL is capitalizing on beauty growth through premiumization, science-backed innovation, and stronger brand investments. Its portfolio includes premium offerings like EltaMD and PCA SKIN, positioning the company to benefit from evolving consumer preferences, though consumer uncertainty and competition remain challenges.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a5910c4f5eac80be54a898a67552cf996b90d2d2c1d355f42514916b3b4c3372
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T15:45:00Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/11/09/general-mills-has-paid-uninterrupted-dividends-for/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893004%2Fgis.png&w=1200&op=resize
+category: 
+tickers: GIS, KMB, PG, KO
+keywords: dividend yield, consumer staples, food stocks, dividend aristocrats, revenue decline, stock performance
+headline: General Mills Has Paid Uninterrupted Dividends for 127 Years. Here's the Yearly Payout on $5,000.
+<<<SUMMARY>>>
+General Mills offers an attractive 6.8% dividend yield with 127 years of uninterrupted payouts, translating to roughly $334 annually on a $5,000 investment. However, the stock has declined 21% in 2026 due to slowing sales and the company's struggle to adapt to changing consumer preferences toward healthier options. The author recommends avoiding General Mills in favor of alternatives like Kimberly-Clark, Procter & Gamble, or Coca-Cola that offer both reliable dividends and better growth potential.
+<<<INSIGHTS>>>
+GIS | negative | Despite a high 6.8% dividend yield and 127 years of uninterrupted dividends, the company faces significant headwinds including a 21% stock decline in 2026, 5% revenue decline in fiscal 2026, and ongoing struggles to adapt to consumer preferences for healthier foods. The author explicitly recommends avoiding the stock.
+KMB | positive | Mentioned as a preferred alternative to General Mills, offering both reliable dividend payouts and positive stock price return potential.
+PG | positive | Recommended as a superior alternative to General Mills for investors seeking reliable dividends with better growth prospects.
+KO | positive | Suggested as a preferable dividend stock option compared to General Mills, implying stronger fundamentals and growth potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:be961339eaba40c6bdc499d59bd7a6b119cfe05bcb00f239b138a9ae0658060c
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T14:17:02Z
+publisher: The Motley Fool
+author: Dave Kovaleski
+url: https://www.fool.com/investing/2026/11/11/what-you-actually-own-when-you-buy-a-share-of-berkshire-hathaway/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc793cc41f267cf19c5be1af31d952f1734332016-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, NVDA, PG, BRK.A, BRK.B
+keywords: conglomerate, value investing, long-term performance, stock portfolio, corporate culture, leadership transition, shareholder returns
+headline: What You Actually Own When You Buy a Share of Berkshire Hathaway
+<<<SUMMARY>>>
+Berkshire Hathaway is a conglomerate that owns approximately 70 private companies across insurance, railroads, construction, and consumer brands, alongside a $335 billion stock portfolio. Under new CEO Greg Abel, the company maintains Warren Buffett's value-investing philosophy and culture focused on long-term performance. Since 1965, Berkshire has delivered 19.7% average annual returns, nearly double the S&P 500's 10.5%, making it one of the most reliable stocks for investors.
+<<<INSIGHTS>>>
+AAPL | neutral | Apple is mentioned only as a comparative example of a company that manufactures products, with no specific analysis or sentiment provided about the company itself.
+NVDA | neutral | Nvidia is mentioned only as a comparative example of a company that manufactures products, with no specific analysis or sentiment provided about the company itself.
+PG | neutral | Procter & Gamble is mentioned only as a comparative example of a company that manufactures products, with no specific analysis or sentiment provided about the company itself.
+BRK.A | positive | The article highlights Berkshire's exceptional 60-year track record with 19.7% average annual returns (nearly 2x the S&P 500), strong culture under new leadership, diversified ownership of 70 companies, and consistent outperformance in 40 of 60 years with only 11 years of negative returns.
+BRK.B | positive | The article highlights Berkshire's exceptional 60-year track record with 19.7% average annual returns (nearly 2x the S&P 500), strong culture under new leadership, diversified ownership of 70 companies, and consistent outperformance in 40 of 60 years with only 11 years of negative returns.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a9e6a8dc1d26e7ea9b8ce6a67181f444822c821e06abaeca06a7c04e530949bc
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T01:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/11/these-5-dividend-aristocrats-have-raised-payouts-f/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893162%2F26_10_01-a-money-roll-with-a-post-it-note-with-the-word-dividends-written-on-it-_mf-dload-getty-dividend-income-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: KO, PG, JNJ, PEP, CL
+keywords: dividend aristocrats, dividend kings, consumer staples, healthcare, recession-resistant, dividend yield, market volatility
+headline: These 5 Dividend Aristocrats® Have Raised Payouts for Decades
+<<<SUMMARY>>>
+Five Dividend King stocks—Coca-Cola, Procter & Gamble, Johnson & Johnson, PepsiCo, and Colgate-Palmolive—have each increased dividends for at least 50 consecutive years. These recession-resistant companies from consumer staples and healthcare sectors offer reliable income streams and resilience during market volatility, making them attractive for investors seeking stability.
+<<<INSIGHTS>>>
+KO | positive | Strong organic sales growth of 7% in Q3 2026, highest among beverage competitors, appeals to conservative investors willing to pay premium for high-performing businesses
+PG | positive | Longest dividend streak at 70 years, reasonable organic sales growth of ~4%, slightly higher yield at 2.5% compared to direct competitor, strong industry leadership
+JNJ | positive | 64-year dividend streak (longest in healthcare), diversified across pharmaceutical and medical device sectors, resilient business model, highest Moneyball Superscore at 83/100
+PEP | positive | 54-year dividend streak, highest dividend yield at 4.1% on the list, attractive for value investors despite lower organic sales growth of 3.1% versus Coca-Cola
+CL | positive | Reliable dividend history as Dividend King, reasonable organic sales growth of ~4%, direct competitor to P&G with similar performance metrics
+<<<END>>>

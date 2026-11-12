@@ -32,7 +32,7 @@ def test_the_whole_step_on_the_fixture_universe(tmp_path):
     record = Recommendation.model_validate(out.recommendations[0])                          # the record validates against schema 2
     assert record.action.action == "open" and record.identity.case == "funds" and record.identity.sleeve == "preserve" and record.identity.regime == "trend" and record.identity.as_of_utc == "2026-10-23T00:00:00Z"
     assert record.ranking.rank == 1 and record.ranking.concentrated is True and record.stance == "bullish" and record.supported is True and 50 < record.score <= 100
-    assert [f.family for f in record.families if f.passed] == ["event", "capital_return"] and record.trade.family == "capital_return" and record.trade.suggested_shares >= 1
+    assert [f.family for f in record.families if f.passed] == ["event", "capital_return", "conviction"] and record.trade.family == "conviction" and record.trade.suggested_shares >= 1
     assert record.thesis.thesis.startswith("Open Procter") and record.thesis.thesis_error is None
     assert [g.gate for g in record.gates] == ["no_metrics", "liquidity", "freshness", "red_flag", "event_risk"] and all(g.passed for g in record.gates)
     assert record.audit.config_version == "1" and record.audit.metric_order == out.advisor_runs[0]["metric_order"] and record.audit.plan_run["calls"] == 1 and record.audit.thesis_run["calls"] == 1
@@ -45,7 +45,7 @@ def test_the_record_carries_everything_the_critic_needs():
     assert set(record) >= {"identity", "action", "families", "quality", "evidence", "features", "agreement", "ranking", "trade", "risk", "portfolio_fit", "gates", "thesis", "audit", "signals", "advisor"}
     assert record["evidence"]["events"][0]["class"] == "guidance_raise" and record["evidence"]["events"][0]["age_bars"] == 1 and record["evidence"]["signals"][0]["quote"].startswith("Procter")
     assert record["features"]["roe"] == {"value": 20.0, "unit": "x", "as_of": "2026-10-23", "source": "test"} and "recent_bars" in record["features"]
-    assert record["trade"]["stop_price"] is not None and record["trade"]["invalidation"][0]["kind"] == "price_below" and record["trade"]["time_stop_date"] == "2027-04-19"
+    assert record["trade"]["stop_price"] is not None and record["trade"]["invalidation"][0]["kind"] == "price_below" and record["trade"]["time_stop_date"] == "2026-12-18"
     assert record["agreement"]["evidence_n"] == 1 and record["agreement"]["confidence"] == pytest.approx((1 + record["blend"]["value"]) / 2, abs=1e-4)   # entry 55: the blend, not the agreement of the text alone
     assert record["blend"]["score"] == round(50 + 50 * record["blend"]["value"]) and set(record["blend"]["components"]) == {"news", "performance", "historical", "filings"}
     capital = next(f for f in record["families"] if f["family"] == "capital_return")
@@ -188,7 +188,7 @@ def test_the_ledger_gets_one_line_per_record_and_a_cooldown_keeps_the_same_famil
     earlier = advisor.ledger.records[0]
     again, _, _ = run(*GOOD, ledger=MemoryLedger([earlier]))
     assert again.recommendations == [] and again.candidates[0]["symbol"] == "PG" and again.candidates[0]["cooldown_of"] == earlier["identity"]["record_id"]
-    assert again.candidates[0]["reason"].startswith("cooldown: an earlier capital_return recommendation")
+    assert again.candidates[0]["reason"].startswith("cooldown: an earlier conviction recommendation")
     invalidated = json.loads(json.dumps(earlier))
     invalidated["trade"]["invalidation"] = [{"kind": "price_below", "value": 150.0}]                    # the price (100) is under its stop: the idea was invalidated
     free, _, _ = run(*GOOD, ledger=MemoryLedger([invalidated]))
@@ -197,7 +197,7 @@ def test_the_ledger_gets_one_line_per_record_and_a_cooldown_keeps_the_same_famil
 
 def test_a_holding_with_a_red_flag_is_a_reduce_returned_above_every_open():
     portfolio = Portfolio(user="t", cash_avail=500.0, positions=[Position(symbol="MCD", name="McDonald's Corp", shares=10, cost_basis=40.0)])
-    metrics = {"PG": full_metrics(), "MCD": full_metrics(dilution_current=True, last_close=300.0)}
+    metrics = {"PG": full_metrics(), "MCD": full_metrics(cfo_negative_with_profit=True, last_close=300.0)}
     out, _, _ = run(plan_reply(company(signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply(), thesis_reply(), order=ready_order(subject=("PG",)), portfolio=portfolio, metrics=metrics)
     assert [(r["symbol"], r["action"]["action"]) for r in out.recommendations] == [("MCD", "reduce"), ("PG", "open")]
     reduce = out.recommendations[0]

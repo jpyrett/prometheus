@@ -27,7 +27,7 @@ def test_the_digest_is_fixed_wording_from_the_record_and_never_shows_the_models_
     text = th.digest(record)
     assert text.startswith("RECORD PG (Procter & Gamble)\nDecision: open (") and "model_score" not in text and "model" not in text.split("Expected:")[0].split("Decision:")[0]
     assert "Family capital_return: passed, bullish, score 0.7875" in text and "Family trend: not computable, missing mom_12_1" in text
-    assert "basis: prior (an unmeasured research prior" in text and "ALLOWED REFS: [1], guidance_raise, " in text and 'Evidence [1] bullish: "Procter & Gamble (PG) lifted' in text
+    assert "Score: 71 of 100 (the blend of news, performance, historical metrics and filings), stance bullish. No return is promised" in text and "ALLOWED REFS: [1], guidance_raise, " in text and 'Evidence [1] bullish: "Procter & Gamble (PG) lifted' in text
     assert "Gates: no_metrics ok; liquidity ok; freshness ok; red_flag ok; event_risk ok (no earnings date known" in text
 
 
@@ -80,9 +80,8 @@ def test_the_digits_of_an_identifier_are_not_numbers_of_the_record(record):
     assert any("3737" in r for r in th.check(item(thesis="The id is 3737: an unmeasured prior."), tweaked))
 
 
-def test_the_prior_must_be_called_unmeasured(record):
-    assert any('the word "unmeasured"' in r for r in th.check(item(thesis="Open Procter & Gamble on its capital return."), record))
-    assert th.check(item(thesis="The edge is UNMEASURED."), record) == []
+def test_the_thesis_does_not_have_to_use_the_word_unmeasured_any_more(record):
+    assert not any("unmeasured" in r for r in th.check(item(thesis="Open Procter & Gamble on its capital return."), record))
 
 
 def test_counter_evidence_requires_a_bear_case_that_cites_it(record):

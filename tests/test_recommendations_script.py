@@ -119,3 +119,32 @@ def test_a_list_to_compare_with_commas_and_quotes_is_passed_on_and_can_be_forced
 def test_no_ledger_is_passed_on_and_is_off_by_default():
     assert "--no-ledger" not in command(run("", "Pizza", "--yes", "--find", "3"))
     assert command(run("", "Pizza", "--yes", "--find", "3", "--no-ledger"))[-2:] == ["--no-ledger", "--fetch"]
+
+
+# ---------------------------------------------------------------- the Critic's flags (Critic v1, entries 56 to 59)
+
+def test_the_critic_runs_by_default_and_its_flags_reach_the_command():
+    assert "--no-critic" not in command(run("", "PG", "--yes", "--no-fetch"))
+    result = run("", "PG", "--no-fetch", "--mode", "auto", "--now", "2026-11-05 10:30", "--profile", "configs/profiles/jacob_pyrett.json", "--critic-model", "z-ai/glm-5.3", "--critic-effort", "max", "--no-ask")
+    assert command(result) == [*MODULE, "PG", "--find", "5", *OSS, "--profile", "configs/profiles/jacob_pyrett.json", "--mode", "auto", "--now", "2026-11-05 10:30", "--critic-model", "z-ai/glm-5.3",
+                               "--critic-effort", "max", "--no-ask"]
+    assert "Critic: z-ai/glm-5.3, mode auto" in result.stdout and "the Critic approves or denies each" in result.stdout
+
+
+def test_no_critic_leaves_it_out_and_says_so():
+    result = run("", "PG", "--no-fetch", "--no-critic")
+    assert command(result)[-1] == "--no-critic" and "no Critic" in result.stdout
+
+
+@pytest.mark.parametrize("args, message", [
+    (("--mode", "manual"), "--mode is ask or auto"), (("--now", "tomorrow"), "--now is a US Eastern moment"), (("--now", "2026-11-05T10:30"), "--now is a US Eastern moment"),
+    (("--critic-model", "x y"), "--critic-model is an OpenRouter model id"), (("--critic-effort", "extreme"), "--critic-effort is low, high or max"), (("--profile", "p;rm -rf"), "--profile is the path"),
+    (("--no-critic", "--mode", "auto"), "go with the Critic: drop --no-critic"), (("--no-critic", "--no-ask"), "go with the Critic: drop --no-critic"), (("--no-critic", "--critic-effort", "low"), "go with the Critic")])
+def test_bad_critic_options_are_refused_with_the_reason(args, message):
+    result = run("", "PG", "--yes", "--no-fetch", *args)
+    assert result.returncode == 2 and message in result.stderr and "DRY RUN" not in result.stdout
+
+
+def test_help_documents_the_critic_and_what_it_costs():
+    out = run("", "--help").stdout
+    assert "THE CRITIC" in out and "z-ai/glm-5.3" in out and "--no-critic" in out and "NOTHING IS BOUGHT OR SOLD" in out and "ASK mode" in out

@@ -9,11 +9,11 @@ HARD CHECKS (a failure is a defect of the record: `reject`)
   complete     every section of the schema is there and has what the Critic reads; every feature has value, unit, as_of and source
   trade        an `open` or `add` has an entry zone, a stop under the entry, a time stop in the future, at least one share, an order style and the invalidation rules, and the price rule
                says the stop price
-  recompute    stop = entry mid - stop distance; position = shares x entry mid / equity; composite, the blend (news with its recency weights, performance, historical, filings), the scale factor, excess after cost and score from their own inputs
+  recompute    stop = entry mid - stop distance; position = shares x entry mid / equity; composite, the blend (news with its recency weights, performance, historical, filings), the confidence and the score (the blend) from their own inputs
   evidence     every verified quote is a substring of the source it names (the Critic reads the work order's sources itself); every filing item cited is in the order's evidence
   features     a number a family says it used is the number in `features`; no feature is older than 5 days at the run date
   gates        every gate passed for a new position
-  thesis       there is one (or an error that says why); every ref it cites is in the record; "unmeasured" is in it while the basis is a prior
+  thesis       there is one (or an error that says why); every ref it cites is in the record; it is a thesis, not a promise (Amendment 6 removed the "unmeasured" rule with the expected return)
   audit        the config version, the metric order and the plan run are named
 WARNINGS (a judgement of the position, not a defect: `review`)
   the stock is far under its 52-week high or its 200-day mean, a 63-day drawdown worse than 30%, a stop more than 25% away, an oversized position, a thin edge (under 0.2% after cost), a
@@ -104,10 +104,8 @@ def critique(record: dict, order) -> Critique:
         check("blend.score", blend["score"] == round(50 + 50 * blend["value"]), "the blend score is not round(50 + 50 x value)")
         direction = -1 if ranking["composite"] is not None and ranking["composite"] < 0 else 1
         check("recompute.confidence", close(agreement["confidence"], (1 + direction * blend["value"]) / 2, 1e-3), "confidence is not (1 + direction x blend) / 2")
-        check("recompute.scale", close(ranking["scale_factor"], 1 + 0.5 * direction * blend["value"], 1e-3), "the scale factor is not 1 + 0.5 x direction x blend")
-    if ranking["composite"] is not None and blend:
-        check("recompute.excess", close(ranking["excess_20d_after_cost"], ranking["composite"] * ranking["scale_factor"] - ranking["cost_pct"], 1e-4), "excess is not composite x scale factor - cost")
-        check("recompute.score", record["score"] == round(50 + 50 * max(-1.0, min(1.0, ranking["excess_20d_after_cost"] / 0.03))), "score is not 50 + 50 x clip(excess / 0.03)")
+    if blend:
+        check("recompute.score", record["score"] == round(50 + 50 * blend["value"]), "score is not 50 + 50 x the blend")
 
     # ---- evidence: the Critic reads the order's own sources
     sources = {s["number"]: norm(s["text"]) for s in (order.data.sources if order.data else [])}
@@ -140,8 +138,6 @@ def critique(record: dict, order) -> Critique:
             | {e["class"] for e in record["evidence"]["events"]} | set(features)
         bad = [p["ref"] for p in [*thesis["bull_case"], *thesis["bear_case"]] if p["ref"] not in allowed and f"[{p['ref']}]" not in allowed]
         check("thesis.refs", not bad, f"refs not in the record: {bad}")
-        if passed and passed[0]["basis"] == "prior":
-            check("thesis.unmeasured", "unmeasured" in thesis["thesis"].lower(), "the prior is not called unmeasured")
     audit = record["audit"]
     check("audit", bool(audit.get("config_version") and audit.get("metric_order") and audit.get("plan_run")), "config version, metric order or plan run is not named")
 
@@ -163,8 +159,6 @@ def critique(record: dict, order) -> Critique:
             c.warnings.append(f"the position is {trade['position_pct']:.0%} of equity")
         if trade.get("funds_feasible") is False:
             c.warnings.append("the funds are not feasible")
-        if ranking["excess_20d_after_cost"] is not None and ranking["excess_20d_after_cost"] < 0.002:
-            c.warnings.append(f"a thin edge: {ranking['excess_20d_after_cost']:.2%} after cost")
         if agreement.get("completeness") is not None and agreement["completeness"] < 0.5:
             c.warnings.append(f"the inputs are {agreement['completeness']:.0%} complete")
     if record["evidence"]["counter_evidence"]:

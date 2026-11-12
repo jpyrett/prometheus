@@ -1,0 +1,3775 @@
+<<<ARTICLE>>>
+id: finnhub:143495774
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:56:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09e5d815f6d4d1181cbcaa906a0079d0e0fbca5328232092853f7fd7eae3cdd9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Which Dates Could Move Moderna Stock Most?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143495937
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:50:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ab70ea04c19407567bc407627783c228ff9b72a252ffc66db8329dbc2441537c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: X4 Pharmaceuticals (XFOR) Reports Q3 Loss, Tops Revenue Estimates
+<<<SUMMARY>>>
+X4 Pharmaceuticals (XFOR) delivered earnings and revenue surprises of +15.79% and +43.95%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494802
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:18:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fcdc0302e0702d1b4c9185ef1211e0805160339c156515555e88ba481af4eca7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: US Equity Markets End Higher After Crude Oil Drops, Democrats Sweep Midterm Elections
+<<<SUMMARY>>>
+US equity indexes ended higher Wednesday after crude oil prices dropped and Democrats swept both cha
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493750
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:31:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5f820063edc209aea0414e17da24995b05c4fd53db23bf0e00eef79840c6ab24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Sector Update: Healthcare Stocks Rise Wednesday Afternoon
+<<<SUMMARY>>>
+Healthcare stocks were higher Wednesday afternoon, with the NYSE Healthcare Index rising 2.6% and th
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492494
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:41:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78d37b4966780febc0e24b988a250141a379c54afbedeac829cb275867dc2aec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Soars 8% on Early Multiple Myeloma Data for Its Three-in-One mRNA Therapy
+<<<SUMMARY>>>
+Key TakeawaysModerna shares jumped 8% after its myeloma therapy, mRNA-2808, showed four confirmed responses among 11 heavily pretreated patients. The data shows Moderna’s mRNA can get the body to make three cancer drugs at once, though it’s years from challenging Johnson & Johnson, Pfizer and Regeneron.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492721
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e199d7c391e99488a1b33688065b785ef4301dc6e7688fb0fb0342a821049c83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Advances Investigational Bundibugyo Ebolavirus Vaccine Toward Phase 2/3 Study
+<<<SUMMARY>>>
+WHO Technical Advisory Group recommends mRNA-1469 for inclusion in efficacy study following encouraging Phase 1 clinical resultsCAMBRIDGE, MA / ACCESS Newswire / November 4, 2026 / (NASDAQ:MRNA) today announced that mRNA-1469, the Company's investigational mRNA vaccine candidate against Bundibugyo ebolavirus (BDBV), has been recommended to advance into a Phase 2/3 efficacy study in the Democratic Republic of the Congo (DRC), supported by encouraging preclinical and Phase 1 clinical data.The reco
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143491166
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5591a1a5c585c07a09f9e71d8a11f0ddd1652a150092d414c8e2453fb5994dac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Announces Oral Presentation of mRNA-2808 Clinical Data at 2026 American Society of Hematology Annual Meeting
+<<<SUMMARY>>>
+Initial Phase 1/2 data highlight the potential of Moderna's multiplexed mRNA approach in relapsed or refractory multiple myelomaCAMBRIDGE, MA / ACCESS Newswire / November 4, 2026 / (NASDAQ:MRNA) today announced that initial clinical data from its ongoing Phase 1/2 study of mRNA-2808 have been selected for oral presentation at the 68th American Society of Hematology (ASH) Annual Meeting, taking place December 12-15, 2026, in New Orleans, Louisiana. mRNA-2808 is an investigational multiplexed mRNA
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139947186
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:25:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=767034aa492baf2d4eabfc6e27c7e418c0ed1536957fecf956e1cf8d1747ddfc
+image_url: 
+category: company
+tickers: MRNA
+keywords: 
+headline: Human Genome Sciences Announces Rejects Offer from GlaxoSmithKline; HGS Board of Directors Authorizes Exploration of Strategic Alternatives
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143491167
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=07b6da56e13b8cc30ef53798a7d9a8af8e89d439391741ff6f0f3d8d18df9b33
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Caribou Biosciences, Inc. (CRBU) Expected to Beat Earnings Estimates: Can the Stock Move Higher?
+<<<SUMMARY>>>
+Caribou Biosciences (CRBU) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143534795
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:02:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=83322ed80c570d17b63d6b5fe70ad5f7206e95416381bf91565ec794c4724904
+image_url: 
+category: company
+tickers: MRNA
+keywords: 
+headline: World Health Organization Announces Two New Candidate Vaccines To Join Ebola Trial; Two Vaccine Candidates Are Chadox1, Developed By The University Of Oxford With The Serum Institute Of India, And Moderna’s MRNA-1469; Recommended Adding Two New Ebola Vaccine Candidates To Ongoing Tumaini Clinical Trial In Democratic Republic Of Congo; Initial Findings From Treatment Trials Are Expected In Coming Months, With Results From Vaccine Trial Expected In Early 2027
+<<<SUMMARY>>>
+https://www.who.int/philippines/news/detail-global/04-11-2026-two-new-candidate-vaccines-to-join-ebola-trial-as-treatment-research-advances
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143534796
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:03:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=846dcd6f14f7ed1ad47ffe91b68fc99618d8b1cc33ef6460e23469da67748655
+image_url: 
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna's Data From Its Current Phase 1/2 Trial Of mRNA-2808 Selected For Oral Presentation At 68th American Society Of Hematology Annual Meeting
+<<<SUMMARY>>>
+Moderna, Inc. (NASDAQ:MRNA) today announced that initial clinical data from its ongoing Phase 1/2 study of mRNA-2808 have been selected for oral presentation at the 68th American Society of Hematology (ASH) Annual
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532851
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:02:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=50d2e64ce11cb977255941d20536f44a3447579d0f7913e7eafd2387e6b1eecd
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Portland--Or--Usa---Apr-8--2020-Wayfair-.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Wayfair, Lendingtree, Bruker, Zimmer Biomet And Other Big Stocks Moving Higher On Wednesday
+<<<SUMMARY>>>
+U.S. stocks surged, led by Wayfair after strong results; Cricut, Array Technologies, Clear Secure and others also posted double-digit gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448973
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:12:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=470ec20ffc183e50f94c6913ccce87a4b49bd01121a94acb76169fce0b1a8216
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna's Cancer Vaccine Is Incredibly Promising, but This Could Be a Major Obstacle to Its Success
+<<<SUMMARY>>>
+Even if the company's vaccine obtains approval, producing it at scale could be a big challenge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448293
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=994fef29cc79fb237484251f27244f692c59e986bc63b200ffe58444c0c08f00
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Pfizer CEO Says Covid Is ‘Irrelevant.’ He’s Betting on Cancer and Weight-Loss Drugs.
+<<<SUMMARY>>>
+Pfizer boosts full-year guidance on the back of its latest quarter, citing growth in non-Covid offerings and acquired products.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448183
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:53:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb1fa793ef0a1700e814118f3e4dcce360760bc84f52c5a6b332d896c20ff141
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Climbs 5% Ahead of Earnings, Pfizer Eases Despite Raised Outlook, Merck Slides 2% Amid New Phase 3 Trial
+<<<SUMMARY>>>
+Moderna surges on pre-earnings momentum, Pfizer dips after beating estimates and raising guidance, and Merck drops despite launching a new trial. When stock prices and headlines point in opposite directions across the sector, something beneath the surface deserves a closer look.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445850
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=512a4e4fca57a530ef6f09c3d4860d30d12b760a3d91d1eb53c339290e047934
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Pfizer Bets on Cancer and Weight-Loss Drugs in Post-Pandemic Second Act
+<<<SUMMARY>>>
+Pfizer boosts full-year guidance on the back of its latest quarter, citing growth in non-Covid offerings and acquired products.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442795
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=18345245616d314f0b30d253bb5fad35a597b0922791c1711e0cd557d708b770
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Pfizer Finds Life Beyond the Pandemic as Earnings Top Estimates
+<<<SUMMARY>>>
+Pfizer boosts full-year guidance on the back of its latest quarter, citing growth in non-Covid offerings and acquired products.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143437883
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:05:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db9b3e59ea0ef0d5203dc0d69d915383c4491877628c7c3653830474791d3939
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: What Invesco S&P 500 Equal Weight ETF (RSP) Bought: Moderna Leads on Oct. 30
+<<<SUMMARY>>>
+The fund added $167.6 million in gross purchases on Friday, increasing all 502 positions and selling nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143437286
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T10:28:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=acb9ce63cfad4358aaaa0c0db4cf54c41cbcb834bd55e9405d3c247a7b5f2554
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Could Investing in Moderna's Stock Double Your Money?
+<<<SUMMARY>>>
+The healthcare stock has generated massive returns this year and may still have room to rise even higher in the future.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401327
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T21:28:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f405697ffef04bc26d1932b0481443c990f3546dc8912e24331cbdc1c2fc1ab2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Earnings live updates: Roku posts earnings beat ahead of acquisition by Fox
+<<<SUMMARY>>>
+The third quarter earnings season is over halfway done, and the reports continue to pour in.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401140
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T19:09:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed99702dd3ed3bfca6af6878a6500400dfd6ed99532ef097fb0cb11be09e04ee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: What Is Moderna (MRNA) Answering As FDA Vaccine Betting Markets Grow?
+<<<SUMMARY>>>
+Moderna (NasdaqGS:MRNA) faces fresh regulatory questions as prediction markets start trading on FDA timelines for its melanoma vaccine. Platforms such as Kalshi and Polymarket have introduced contracts that pay out based on when or whether the treatment secures FDA approval. Regulators and biotech firms now confront potential insider trading and information leakage issues linked to these vaccine approval betting markets. The new prediction markets around Moderna's melanoma vaccine approval...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400034
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:45:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3917460c37be623f287a1d753d55801bcbec28b6e8e2d30e747b203faefbf2a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Amgen Just Gave Its Shareholders Great News
+<<<SUMMARY>>>
+The red-hot healthcare stock may soon have another catalyst that drives its value even higher.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400162
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5749633911b3d2d8383d48c100eef4ab5f3a562e4d28b6a5964a9dd15385edad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Will These 5 Drug Bigwigs Surpass Q3 Earnings Forecasts?
+<<<SUMMARY>>>
+AMGN, PFE, MRNA, NVO and VTRS are set to report this week as recent beats and key drug demand set up a pivotal Q3 earnings test for pharma giants.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400193
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:14:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09ef5de1195783d07fa81e08b2dc2f3191d047821bb4a59c4777a4083273b468
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Buy Moderna Stock Before Q3 Earnings? Here's What to Know
+<<<SUMMARY>>>
+MRNA's Q3 earnings are expected to arrive amid a 652% stock rally, premium valuation and promising cancer therapy data. Should investors buy, sell or hold?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398573
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:39:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da7b737f5ccd1bb42a7b8f20f72353377c0d34b4777d375b50b527c0c03e5e27
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: If Moderna's CEO Is Right, the Stock's Rally Could Just Be Getting Started
+<<<SUMMARY>>>
+Stéphane Bancel has high hopes for the company's cancer vaccine, beyond just treating melanoma.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398739
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=954e9bbafb77650225891b8ed7f87ef78884459fc075b9178e75e53e022dd389
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Tempus AI’s Cancer Screen Business Drives Revenue Up 23%, While a Major Purchase Draws Closer
+<<<SUMMARY>>>
+Tempus AI reported better-than-expected third-quarter earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393655
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:04:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=80e76023729953f0328f40b0f484ee81fc35a22e18bced0c3ec3425efed5bdb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Invesco S&P 500 Equal Weight (RSP) Buys $0.2 Million More Morgan Stanley on Thursday
+<<<SUMMARY>>>
+The $100.66 billion fund bought $0.2 million of stock and sold $174.3 million, increasing 1 position and cutting 498.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143392795
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T09:15:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=69c7610c1a218a2b3c975dd7270a5c7efe4ea7751e5d637cd7a42ed9cadf3ccd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Stock Split Watch: Is Moderna Next?
+<<<SUMMARY>>>
+Moderna stock has skyrocketed this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143387386
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T06:11:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=31c078a11e9e6acbe5168571eb2d4c69a7611c7cda96026040de80a41952d863
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: SLS, IBRX, IOVA End October In Red: Merck And AstraZeneca Earnings Put Cancer Bets And Buyout Hopes In Focus
+<<<SUMMARY>>>
+AstraZeneca emphasized ADC combinations, cell therapies and internally developed cancer vaccines as key oncology priorities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143381364
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T03:52:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cce29e12077f18afb24435ee6521a1e4b26eb7ed69a664baa8a6b33fe0e0315a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Stocktwits Pharma Pulse: Biotech Beats The Broader Market — Novo, Pfizer And Moderna Earnings Up Next
+<<<SUMMARY>>>
+Moderna will report on Friday, while the SITC meeting will bring fresh cancer-treatment findings from Immunocore and Candel.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143377108
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T19:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=296f1b1163841a1dc813faa8e77cf25dc03e4939ab3a3f7042d94234d9df6bc4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Jobs, Midterm Elections, Apple, Palantir, McDonald’s, Moderna, and More to Watch This Week
+<<<SUMMARY>>>
+In another busy earnings week, AMD, Estée Lauder, Qualcomm, Pfizer, and many more will report results. We’ll see three readings on jobs this week, as well as data on the manufacturing and services sectors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143376411
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T17:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a650e5e3a0316e904457bcddc9187ec14cc7af7a6aec153cd3719b18b4224417
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Merck stock rises as its cancer strategy gets personal
+<<<SUMMARY>>>
+A personalized melanoma vaccine could prevent recurrence and fuel Merck’s growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143397588
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T16:05:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=dbd0cdd1f528b2d069a99613f415baa3295efdf1938ea54c4a6edb5914f6d4f6
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/01/Tempus-AI.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Tempus AI Earnings Ahead: Is TEM Set Up To Pop or Drop?
+<<<SUMMARY>>>
+Tempus AI, a company that Cathie Wood has invested in, will publish its financial results this week as its volatility continues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143375747
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T14:06:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d16b8085ff0f4b19b91eb7fe8141f1f639bc465eefc1803211670631621e6991
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: What To Expect In Markets This Week: AAPL, PLTR, AMD, SMCI, SHOP, Earnings, Jobs Report And More
+<<<SUMMARY>>>
+The week will bring results from some of the market’s most closely watched technology companies, while a major labor-market report could provide an important read on the health of the U.S. economy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143375341
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T08:30:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=11580ea46adbde2a6243b452b62d658eeaae614850c1595b883ece0ea213f70f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/01/Moderna-Sign-With-Bold-Red-3D-Lettering-.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Earnings Volatility Watch: 10 Stocks Are Set to Swing More Than 10% This Week
+<<<SUMMARY>>>
+Ten stocks carry implied earnings moves above 10% next week, led by Moderna and AppLovin. Five are tech names hit in Friday&#39;s chip rout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143374329
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T06:04:46Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5e8a66c2ae9627fb2b37b602e1abc9cb2514651b3b144ae478cdac85043c7610
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/177313078/image_177313078.jpg?io=getty-c-w1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Wall Street Week Ahead
+<<<SUMMARY>>>
+Wall Streetâs big week: midterm elections, October jobs report and key earnings from Apple, AMD and Uber.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143365288
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T12:21:45Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a66ddb1a988fc98501e719ccfc8af16f03b3b44dd42ba3c745527dc9de0d2810
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1213764535/image_1213764535.jpg?io=getty-c-w1536
+category: company
+tickers: MRNA
+keywords: 
+headline: The 1-Minute Market Report October 31, 2026
+<<<SUMMARY>>>
+The S&P 500 declined 0.6% last week, with AI and mega-cap growth stocks under heavy selling pressure. Discover more in this market report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143364757
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T11:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=830af5c87daf35a8f602c2ec6680ca3553df23bdc7beabc0bcac73d5ef2dce14
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Apple Leads Packed Earnings Calendar As Investors Eye Tech, Pharma Results
+<<<SUMMARY>>>
+Preview next weekâs market movers: jobs data, PMI reports, major earnings from Apple and AMD, and IPO buzz. Read here for more details.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143361795
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T09:14:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4c695ea2f3013ef9057b6494557af575c231b7b60627bdcd91748f09c3a86e7b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: How Investors Are Reacting To Moderna Stock Phase 3 Melanoma Vaccine Data
+<<<SUMMARY>>>
+Merck and Moderna reported Phase 3 data from the INTerpath-001 trial in resected high-risk melanoma, where personalized mRNA therapy intismeran autogene plus KEYTRUDA reduced the risk of recurrence or death by 42% and distant metastasis or death by 38% compared with KEYTRUDA alone. The therapy’s one-patient-at-a-time manufacturing model and reliance on individualized neoantigen selection highlight both a potential new oncology revenue pillar for Moderna and a materially complex production...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348393
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=085211218b0d52cafdcb4f3d307ed79cce07d6b5570b96e65453e05d0df1521e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: This week in charts: ESMO’s winners and losers
+<<<SUMMARY>>>
+The latest installment in BioPharma Dive’s visualization-focused series looks at Wall Street’s response to a trio of closely watched presentations at a top meeting for cancer drugs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143346740
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T15:26:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f4967becba30f450c48b95edd4940130df6067e9e0d5bc3eca6ccccce8878f4d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Prediction markets herald insider trading risks for private biotechs
+<<<SUMMARY>>>
+Legal experts say that pharma outcome bets on platforms like Kalshi and Polymarket pose new insider trading risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143362865
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T14:21:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9ba2ebafdb2ffa9dd1297ff4944e8efb12de2dc8eb2dc70bcb91d6f722d7beee
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/30/Merck.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Merck One of Top Large-Cap Biopharma Picks-Analyst
+<<<SUMMARY>>>
+Merck beats Q3 estimates on oncology strength and raised guidance, while Guggenheim eyes pipeline progress ahead of Keytruda patent loss.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143347028
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T13:00:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2d11585ccf23af1c996c176e315b734ea786f42a5567aef83ec3347bba020c38
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Earnings Preview: Moderna (MRNA) Q3 Earnings Expected to Decline
+<<<SUMMARY>>>
+Moderna (MRNA) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343854
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T12:14:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cb7bb19caa415eccdc76b94b4193e89e3ca1984e03cd2efe604a084138131b3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Merck & Co., Inc. Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+Merck & Co., Inc. (NYSE:MRK) reported third-quarter 2026 revenue of $18.1 billion, up 5% from a year earlier, as growth in oncology, vaccines, cardiometabolic products and animal health helped offset product-specific and market headwinds. Non-GAAP earnings per share were $2.49 for the quarter,
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293581
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T17:54:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a3a51f6b81656139361089e31c86836b6646ea8f0c6733b4c9856b88f856b7fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: These 2 Stocks Have Skyrocketed in 2026. Here’s Why I’d Stay Away
+<<<SUMMARY>>>
+These biotechs’ valuations are through the roof.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293735
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ea33b323a1b73525aec9c6a1b9f8a60f6c41cf20b0f6b51f6852f91d358cec21
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: GSK vs. Moderna: Which Large-Cap Biotech Stock Offers More Growth?
+<<<SUMMARY>>>
+GSK's Specialty Medicines growth, deep pipeline and dividend offer a compelling case against MRNA's oncology potential and premium valuation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293733
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bf51e19ef822aad385d0ec9f24e462c1c3b4b98f4c0360dbe57422a5dd4a739e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: MRK Q3 Earnings & Sales Beat Estimates, '26 EPS View Raised, Stock Up
+<<<SUMMARY>>>
+Merck's Q3 earnings and sales beat estimates as Keytruda and newer products drive growth, prompting the company to raise its 2026 earnings outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292183
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:05:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da13f59b898e771ca618c6f78c8e5aca962bf00c35fbd8291a54f6274d21f211
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Merck Surges 5% On Sales Beat, Outplaying Cancer Vaccine Woes
+<<<SUMMARY>>>
+Dow Jones component Merck hiked its 2026 outlook Thursday on the back of a solid third-quarter report that included a notable Keytruda beat.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289019
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:42:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bbd50a690cda5fdac85ec911b3dd247de54f0e65f2a9e012028bd8d9c66cddba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Podcast: ESMO26: Major readouts from the 2026 congress
+<<<SUMMARY>>>
+This week's podcast features the Clinical Trials Arena team and GlobalData analysts who discuss the biggest study readouts from the ESMO Congress 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289020
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1c52bedeeab01ecaf7f0b950a369da9d6396696f18c2009b871162461a3b77c0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Investors Heavily Search Moderna, Inc. (MRNA): Here is What You Need to Know
+<<<SUMMARY>>>
+Moderna (MRNA) has received quite a bit of attention from Zacks.com users lately. Therefore, it is wise to be aware of the facts that can impact the stock's prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143286859
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T10:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=432c7c467b0de3914cb9c486d8a7d48e99701a631cf3a6fc502c4b7b73f33743
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Merck Earnings Blow Past Estimates. Why Wall Street Is Looking Past the Numbers.
+<<<SUMMARY>>>
+Merck is leaning on newer drugs and the promise of its pipeline assets as a patent cliff looms for its largest revenue driver, Keytruda.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143286861
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T10:30:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e0f054b340c84d290606829012aaff1be6e5a137f79e9e0fedb07d8dbcab4ed9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Merck Beats, But Can Shares Outplay The Cancer Vaccine News?
+<<<SUMMARY>>>
+Dow Jones component Merck hiked its 2026 outlook Thursday on the back of a solid third-quarter report that included a notable Keytruda beat.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143290004
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T10:11:06Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=568e5c08de221bd10d1b7d441e865f07a58f2cc610a12796b59d57cac053690b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2165724876/image_2165724876.jpg?io=getty-c-w1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Bought Time Not Earnings
+<<<SUMMARY>>>
+Modernaâs cancer vaccine data cut recurrence risk 42%, but valuation looks full. Click for more on MRNA stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143286106
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T08:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c30efc4ebfcb4304aba3433ee0c138ed22c4f0b95081862787c97ba08fdb00c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Will Moderna Soar on Nov. 6?
+<<<SUMMARY>>>
+Moderna shares have outperformed tech giants this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741539
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T23:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1a698bcef4650ea6d792480b1db181df97b79003cae9e9922ff46593fc8841da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: MSCI Equity Indexes November 2026 Index Review
+<<<SUMMARY>>>
+LONDON, November 11, 2026--MSCI Inc. (NYSE: MSCI), a leading provider of critical decision support tools and services for the global investment community, announced the results of the November 2026 Index Review for the MSCI Equity Indexes. All changes will be implemented as of the close of November 30, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740993
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:36:23Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2b884a383f63ba74edf4a45050a46bf32c23166fd573ba68c9077445c2089631
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MRNA
+keywords: 
+headline: S&P 500 Top Movers Today: Double-Digit Gainers Lead, Declines Stay Smaller
+<<<SUMMARY>>>
+S&P 500 top movers for today's session: Bloom Energy and Sandisk led double-digit gainers, while Clorox and Lululemon paced much smaller declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738118
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=267f8cb3d6f293f350823880da231c98da18e8c89c7dfbcc58bda3e36203c8aa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Announces JAMA Network Open Publication of Real-World Comparative Effectiveness Data for mNEXSPIKE (COVID-19 Vaccine, mRNA) in Adults Aged 65 Years and Older
+<<<SUMMARY>>>
+Real-world analysis of more than 294,000 U. Veterans aged 65 and older found mNEXSPIKE was associated with a 35.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734741
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:39:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=11aba682d9ab5a03f6cdafab85683a7128c3d39a58d8cb1c7ffc7a2be07ee483
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Stock Jumped 10% in 5 Sessions: Take Profits, or Buy More?
+<<<SUMMARY>>>
+Key TakeawaysModerna (MRNA) stock gained approximately 9. 8% over five trading sessions, closing at $250.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734744
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:14:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b859772ba7cc493e51e197b517255981eff5e3fa754f13ecf56f403b5dc3fc1f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: US Stock Market Today: S&P 500 Futures Rebound On Stubborn Inflation Higher-For-Longer Risk
+<<<SUMMARY>>>
+The Morning Bull - US Market Morning Update Wednesday, Nov, 11 2026 US equities are set for a cautious but firmer open, with sentiment driven almost entirely by another hot inflation print. Investors are reading the rebound in futures as a reluctant embrace of higher for longer rates. The October CPI report showed headline prices up 0.4% month on month and core inflation at 0.3%. Those figures, alongside hawkish recent Fed comments, keep a December move of at least 25 bp firmly on the table...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734639
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7b70b0c15bcf264c6883ba3467a27807030bc3c9deb0cb96b7ccc441f70b699
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: 10 Stocks Rode Trump Era — What Happens As MAGA 'Disintegrates'?
+<<<SUMMARY>>>
+How fast U.S. politics change. Just months ago S&P 500 tech bigwigs elbowed each other for a spot next to President Trump. And now MAGA is disintegrating.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734742
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:27:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0b7fbbd1c398663e5865184fa85e3ce2801e84f019a57ecf94129f9dc681818c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna’s CEO eyes Keytruda-eclipsing future for personalised cancer vaccine
+<<<SUMMARY>>>
+Analysts have placed intismeran central to Moderna’s long-term growth beyond infectious diseases.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143733393
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:04:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c8f93063dc31c5557e8cbe55e9d2f4ec901c36246ff5e3a926a6ba698fb49f0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: iShares Biotechnology ETF (IBB) Adds Gilead and Amgen on Nov. 9
+<<<SUMMARY>>>
+The $11.34 billion fund bought $230.1 million of stock on Monday, Nov. 9, lifting 231 positions and trimming none.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734658
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T03:47:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2d06d74b47a7c12c42d3b84f3ea7393821778f7cb24efc4f11a2d019702935bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: “More Cancers Than Melanoma”: Moderna Is Up 750% in 2026. Take Profits, or Buy More?
+<<<SUMMARY>>>
+Key TakeawaysModerna stock is up 750% in 2026, mostly on its melanoma vaccine with Merck, which succeeded in Phase 3. Third-quarter revenue rose 29% on COVID deals abroad, while Pfizer’s rival shot sold less.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694694
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T20:06:07Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=6fce76dd7876e030d37b388ebacf02dc819d615b61dee883f327a61f69708576
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MRNA
+keywords: 
+headline: S&P 500 Top Gainers and Losers for Today's Session
+<<<SUMMARY>>>
+S&P 500 market movers for today's session: Charter Communications led gainers at 9.68%, while Carvana led losers at 6.32%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693869
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=289cd4691ad6fdd776a0211f6caec34a97790b934b68e9adbe958438a14a2815
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Top Stock Picks for Week of November 9, 2026
+<<<SUMMARY>>>
+A Semiconductor Stock with an Improving Earnings Outlook and a Pharmaceutical Company That Raised its Revenue Outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694687
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:36:13Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=4b6e7e9ee293a5892be5922c2159d3b2fd8682a7b7465976d0cf38d9b250a668
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: MRNA
+keywords: 
+headline: S&P 500 Gap-Down Stocks: Nov. 10, 2026 Session
+<<<SUMMARY>>>
+S&P 500 gap-down stocks on Nov. 10, 2026, including GEV, APP, LEN, DHI, BBY, MRNA, PHM, NVDA, FSLR and ETN, with session moves and gap details.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686154
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=404ee1d46ec66c17967028f40c87e8ebb2a14af8b46f52e2356c4ef29a43d05d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna to Present at Upcoming Conference in November 2026
+<<<SUMMARY>>>
+CAMBRIDGE, MA / ACCESS Newswire / November 10, 2026 / (Nasdaq:MRNA), today announced its participation in the following upcoming investor conference:Jefferies Global Health Care Conference, on Wednesday, November 18th 11:00am GMTA live webcast of each of these presentations will be available under "Events and Presentations" in the Investors section of the Moderna website at investors.A replay of each webcast will be archived on Moderna's website for at least 30 days following the presentation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686138
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:05:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=79e6c963eac81d33c75424bc85a72408ccc9b9611730e2a21e893c9b0ff3287e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: What Invesco S&P 500 Equal Weight ETF (RSP) Bought: Moderna Leads on Nov. 6
+<<<SUMMARY>>>
+The fund added $291.5 million in gross purchases on Friday, increasing all 503 positions and selling nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143683929
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:05:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a35d2e2b7c0a42bcdb27f9cc7671c1a4ed2e2772e9307c953953d8265c6232a6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: iShares Russell Mid-Cap (IWR) Adds Fox and Marathon Petroleum on Nov. 6
+<<<SUMMARY>>>
+The fund bought $273.2 million of stock and sold nothing, lifting 796 positions, with Fox Class A the largest addition at $36.3 million.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143672454
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T07:25:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8888f94ed4007fdd842914feecdeca61893c4f7f92ad95e352276f0243a476b7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Why is Moderna (MRNA) stock soaring today
+<<<SUMMARY>>>
+Shares of biotechnology company Moderna (NASDAQ:MRNA) jumped 6.4% in the afternoon session after the company reported third-quarter 2026 financial results, with revenue rising 29% to $1.3 billion, and raised its full-year revenue growth forecast.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143666663
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T04:34:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=46f3c173fcf288b45eae4199bf11a3f0325c8bfcb89af3f5db04c8c015221f2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Why Did U, MRNA, ABNB Stocks Surge To 52-Week Highs Today?
+<<<SUMMARY>>>
+Investors showed interest in AI gaming tools, advances in cancer vaccines and future business growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661164
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T20:25:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fcca4c1756d1656a263ac3481dbaccabb74145f14cba85a7e3eee75d3184653f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna's Q3 Numbers May Have Seemed Impressive, but They Aren't Enough to Make the Stock a Buy
+<<<SUMMARY>>>
+Revenue for the vaccine maker rose sharply in the third quarter, but it was largely due to COVID sales, which have been down significantly over the past five years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661165
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T20:08:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b844661839f3a10f97cd2f00d8560749c336f38a8b14b354b5c638d1006779d7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Is Moderna (MRNA) Priced For Too Much Sales Growth?
+<<<SUMMARY>>>
+Moderna has turned into one of the market’s sharpest movers, and after such a powerful run, the key issue for you is whether the current share price still lines up with what its sales can support. A stock can move very quickly when sentiment swings on new data or approvals, so the question is how that rapid repricing stacks up against the revenue Moderna is generating today and what investors expect it to produce next. Over the past year, Moderna has delivered a share price gain of about 9x,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143660004
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T19:13:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8cdbd0fb459ba28f3a6292d8016838a00c59d97942b83f2a8aa85813daacd217
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (MRNA) Stock Fair Value Rises After Intismeran Data And Q3 Beat
+<<<SUMMARY>>>
+Analysts have lifted their fair value estimate for Moderna from US$135.84 to US$145.42 per share, signaling a reset in how the stock is being framed. Much of this shift ties back to the debate over intismeran oncology potential, Q3 execution, and how much future COVID and oncology revenue is already reflected in current pricing. As you read on, you will see how to track these moving pieces and what to watch as the Moderna story evolves from here. Analyst Price Targets don't always capture the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659984
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T19:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=07dce57d8291aa840beca0696e4352abe426b67e03c802fdbb1fae188cf33f25
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: SanDisk's 64% collapse: another leg down or buying opportunity?
+<<<SUMMARY>>>
+SanDisk’s steep decline has investors weighing whether the worst is over or another selloff lies ahead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659903
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e5d8471a0ed65d457e1f38ce2c57c7c217b6e0b61ac037b8628fb1d74d912c50
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Can Moderna's First Cancer Therapy Win FDA Approval in 2027?
+<<<SUMMARY>>>
+MRNA targets a year-end 2026 FDA filing for its personalized cancer therapy, intismeran, potentially paving the way for a regulatory decision in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658713
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:35:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=053f4ce6a3696c43cf5b9d453b8fb4b1d2daba7aeebb489692cebaee54446f6a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Soars Another 9% as Piper Sandler Lifts Target to $305 on Raised Outlook
+<<<SUMMARY>>>
+Key TakeawaysModerna jumped 9% after Piper Sandler raised its price target to $305 from $230, following Friday’s third-quarter beat. Piper’s target bets on the melanoma vaccine Moderna is developing with Merck, a win investors already pay a lot for.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658843
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:59:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6c29033795c7ecd6d93bec1a3795b85dcae7ed2b971b55acaa307d4bc14db704
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: MRNA support and resistance levels to watch
+<<<SUMMARY>>>
+Investing.com -- Moderna Inc (MRNA) is trading at $270.85 as of Nov 9, 2026, 10:28 AM EST. The daily trend is strongly bullish, but the stock is pressing into overhead supply.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143660081
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:02:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=9e632ac01474f4e5bb75d195aa004867e1150d08354049d1394c9273363da39d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2260474979/image_2260474979.jpg?io=getty-c-og
+category: company
+tickers: MRNA
+keywords: 
+headline: ValuEngine Weekly Market Commentary With Outlook For The Remainder Of 2026
+<<<SUMMARY>>>
+U.S. equity markets faced broad selling pressure this week, with sharp declines in technology, energy, and growth-oriented sectors weighing on the major benchmarks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143689500
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:48:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=aa1470d345312031583ac5882eb8dfb9a28cf0f3a68f43d71558e57a0590a31a
+image_url: 
+category: company
+tickers: MRNA
+keywords: 
+headline: Goldman Sachs Maintains Neutral on Moderna, Raises Price Target to $195
+<<<SUMMARY>>>
+Goldman Sachs  analyst Salveen Richter   maintains Moderna (NASDAQ:MRNA) with a Neutral and raises the price target from $137 to $195.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657656
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=51670f9c7c24c76d7fbaad2d555e49d0b8f77c474c05c905738ec169e32e2f53
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Q3 Earnings Call Highlights Raised Outlook and Oncology
+<<<SUMMARY>>>
+MRNA raises its 2026 revenue growth outlook after strong Q3 results, lower costs and respiratory vaccine gains, while advancing its oncology pipeline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143689501
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:13:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2f4ba376751c415f45943532c45e747d92b1e9be9978392b15925503e6259027
+image_url: 
+category: company
+tickers: MRNA
+keywords: 
+headline: Piper Sandler Reiterates Overweight on Moderna, Raises Price Target to $305
+<<<SUMMARY>>>
+Piper Sandler  analyst Edward Tenthoff   reiterates Moderna (NASDAQ:MRNA) with a Overweight and raises the price target from $230 to $305.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686904
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:51:46Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b3df94d3aa5fe2cc3b56807ab9fae07783eb529469ed10ff651eea49dbb17a26
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/South-San-Francisco--Ca--Usa---January-2.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Hims-Eli Lilly GLP-1 Deal Meets Summit’s FDA Gamble: Which Biotech ETFs Stand to Gain?
+<<<SUMMARY>>>
+Biotech ETFs face key FDA catalysts as Summit Therapeutics&#39; decision and the Hims-Lilly GLP-1 deal put XLV, IBB and XBI in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652532
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:04:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0bda31c4db5aa3e66c7213b9a1a7fb7040ca081a93516b681502909ee5b849f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Invesco S&P 500 Equal Weight (RSP) Adds Vylor and Moderna on Nov. 5
+<<<SUMMARY>>>
+The $101.82 billion fund bought $976.9 million of stock on Thursday, adding 503 positions and selling none.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652545
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T10:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a1dc2337461e1a543773683ae563c3d165cfe913cacde307743988ddcb8e845
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: BioNTech vs. Moderna: The COVID Vaccine Giants Are Entering a New Era. One Stock Could Have the Edge for 2027
+<<<SUMMARY>>>
+Five years after their pandemic-era success, BioNTech and Moderna are racing to transform promising medical breakthroughs into sustainable businesses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652404
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T09:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=28919c93456b4edb347083c386db997daac2af200980c527d98eb84323420a41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Zacks Investment Ideas feature highlights: Moderna, AbbVie, Eli Lilly and Merck
+<<<SUMMARY>>>
+MRNA hits a 52-week high after crushing Q3 earnings expectations and raising 2026 revenue guidance, but its nearly 800% rally raises valuation concerns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652061
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T08:40:38Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=037d5a7497094658b8f5ca3f4adab844ede8aff4ac0d2ad7143c0d53e11672dd
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_44_f2ac484d49.webp
+category: company
+tickers: MRNA
+keywords: 
+headline: Stock Market Today: Nvidia Board Opens Probe Into Jensen Huang as Wall Street Licks Its AI Wounds
+<<<SUMMARY>>>
+Nvidia’s board launched an independent investigation into CEO Jensen Huang’s relationship with a suspected Chinese spy. On Friday, chip stocks bounced, a strong jobs report lifted December rate-hike odds, and IonQ, IREN and Airbnb soared.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692819
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T05:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f64055d5eed769014dbde901831d9715686908b998168d34d509ac4cd8aa4b07
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: COVID Is Still Cash at Moderna, Where a Surprise Profit and New Vaccines Are Hyping Up the Stock
+<<<SUMMARY>>>
+Moderna reported $1.3 billion in revenue in the third quarter, up 29% and well above Wall Street’s $890 million expectation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143647945
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T04:13:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1092052684c81ca413005a0c3c0947a52fc38018eb70b60651b292852ee93bba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Why Did MRNA, XERS, VIR Stocks Surge To 52-Week Highs Last Week?
+<<<SUMMARY>>>
+Moderna, Xeris Biopharma, and Vir Biotechnology shares surged to annual highs on Friday as Wall Street optimism grew and markets awaited trial data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143645676
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T01:19:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dce920816b402b01fab9c90cfb62f547259b537be6cb87b1d942f3ad1ed961f9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+Its proprietary software is built into the cancer drug itself, creating a front-end design moat that rivals may struggle to replicate.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614560
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T12:49:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5d460bb3fd6c4bc1e6081ce3c197bd8c7e36c397442457e3a7f46843b60cd1cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: What Is Behind The Rise In Moderna Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592943
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T00:16:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b018d3ef674cd365ce1aea4e8dbc330c105aeb53714a40273745f1abe78c0d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (MRNA) Stock Climbs As Q3 Earnings Mark Return To Profit
+<<<SUMMARY>>>
+Moderna came into this Q3 2026 report with a volatile reputation and a rich story stock label, yet the hard numbers just forced a reset. The share price jumped 5.3% to US$254.19 on the first full trading day after results, and this time the move matched something real. The messenger RNA specialist swung to a quarterly profit, posting US$162 million in net income on US$1.3b in revenue. That profit squeeze in reverse is what grabbed the market’s attention. For a business still unprofitable over...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591739
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T21:14:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=503544107bf3839a3f194eca8eec5af623596c4160b3d76d0fd32ff80303b51e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Inc (MRNA) Q3 2026 Earnings Call Highlights: Revenue Surges 29% as Guidance Raised and ...
+<<<SUMMARY>>>
+Moderna Inc (MRNA) posted $1.3 billion in quarterly revenue, swung to net income of $162 million, and lifted its full-year 2026 growth outlook to 15%--25% while trimming R&D spending.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591634
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T20:53:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=622adba011383c324b3c506e52ca6423634bafa976cfe509c46ad6519c565df0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Sector Update: Healthcare Stocks Edge Lower Late Afternoon
+<<<SUMMARY>>>
+Healthcare stocks edged lower late Friday afternoon, with the NYSE Healthcare Index and the State St
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591612
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T20:19:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a1dd5ecf5353f9af2f97ce2f2c8dd5f0a4a397c7ae78e17329394a6e23c02bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Stock Market Today: Nasdaq Bounces After Jobs Report; Moderna Races Higher (Live Coverage)
+<<<SUMMARY>>>
+The Dow Jones index falls Friday after a strong October jobs report. Nvidia stock gains after an AI trade rout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143605179
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T20:06:23Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=0398cd187515393b2ec1fa88b495f7621e74df47c69e4f2f9685e2c2bc9ca75f
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MRNA
+keywords: 
+headline: S&P 500 Top Movers: Nov. 6, 2026 Gainers and Losers
+<<<SUMMARY>>>
+S&P 500 top movers for Nov. 6, 2026: Coherent, Airbnb, AppLovin, NRG and Vistra led gainers, while Axon and Microchip led losers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590955
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:20:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b0bec62f5c49afe703644830f67949027003db00c89bef7875f858698ebdf232
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (MRNA) Wins Canada Approval For Two MRNA Flu Vaccines
+<<<SUMMARY>>>
+Moderna (NasdaqGS:MRNA) received Health Canada authorization for its mRNA influenza vaccine and a combined influenza/COVID-19 shot. Canada is the first country to approve both a standalone Moderna mRNA flu vaccine and the dual flu/COVID-19 product. The approvals expand Moderna's authorized vaccine portfolio in Canada beyond COVID-19 and into seasonal respiratory shots. Health Canada's green light for Moderna's flu and combo flu/COVID-19 vaccines is only one part of the investment story. We...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590956
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:14:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e4db655531f89a8822542ed3d85e3f1a5743f2befc094e6219001fcdc104b9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (MRNA) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Profitability returned as international partnerships offset a norovirus setback.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592592
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:10:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c7b6c75c168ed93832eef1ecf7cd5b76d8460ecd86fd5da248568a28e38ba4ba
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2218739654/image_2218739654.jpg?io=getty-c-w1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Tech Stocks Rebound But Nasdaq Is Still In Correction Territory
+<<<SUMMARY>>>
+Nvidia, Micron lead tech recovery. Jobs report comes in better than expected
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590957
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:02:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dc018a126393a8e097430894f7fd590e238a3e860b25e10f8a75e7f86f7a0209
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Delivers Surprise Profit, Raises 2026 Outlook
+<<<SUMMARY>>>
+Wall Street sees renewed hope, but major challenges remain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590965
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ffac9eda5b673d2d4443d2edc382303530a03034f3b3afd97cd3da2471c0b9c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (MRNA) Stock Hits 52-Week Highs After Q3 Earnings: Buy, Hold, or Sell?
+<<<SUMMARY>>>
+Moderna stock has surged as much as 10% in Friday's trading session, reaching a fresh 52-week high after delivering much stronger-than-expected Q3 results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590958
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:41:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3a19acb55779063b12298080a30e25cea14b1249fbc97c236b905362c8d736a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna, Inc. Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Moderna, Inc.'s Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590959
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:24:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e9ed912d37909ce2d22b74ef05b65f411e18e340781b5cceb8d2803325a23d31
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna earnings analysis: questions answered and next catalysts
+<<<SUMMARY>>>
+Investing.com -- Moderna Inc (MRNA) reported Q3 2026 before the open on Nov 6. The result was a swing from consistent losses to a profit.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590854
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:13:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15b642afe1713379fa11e45aaf355ce9e49f167b0c1c6df53049a34f03eadad0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Hits Five-Year High On Sales Beat; But The Real Story Is Still Its Cancer Vaccine
+<<<SUMMARY>>>
+Moderna stock surged to a five-year high Friday on the back of its Street-walloping vaccine sales and guidance hike for the year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589915
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:33:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5c8bb26d930d7e20343573b54b158b5333da615b5289920e054675406f855249
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Stock Rises 8% in Five Sessions as CEO Sees Cancer Vaccine Working in “More Cancers Than Melanoma”
+<<<SUMMARY>>>
+Key TakeawaysModerna (MRNA)stock gained approximately 8% over five trading sessions through November 5, closing at $241 as investors reassessed its personalized cancer vaccine. Merck (MRK) and Moderna reported that intismeran combined with Keytruda reduced the risk of melanoma recurrence or death by 42%, with a 58% reduction after six months in a prespecified sensitivity analysis.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590826
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2480405a1cce846a97720bc8c938ac402e4170a6e2d73d97494757da4d3a6d54
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Nvidia, Intel, Tesla, AMD, Coherent, Lam Research, Moderna, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia trades higher Friday after recording its second-largest one-day market cap decline on record on Thursday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590853
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=370fc5747f3d5b80cf6c801ebde5ba7782d00ff445f70348fde6bed4a51994d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Merck Stock Shows Sustained Strength: Time to Buy, Sell or Hold?
+<<<SUMMARY>>>
+MRK's growth momentum faces patent and competitive risks as Keytruda demand and new launches support growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616749
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:06:23Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=268ec620bf03747760a8a8749bfd8957c15917cf95ed75c903bcea08af484bc6
+image_url: https://image.cnbcfm.com/api/v1/image/108534992-17940020111794002007-49479584128-1080pnbcnews.jpg?v=1794002009&w=1920&h=1080
+category: company
+tickers: MRNA
+keywords: 
+headline: Bernstein's Courtney Breen talks what is driving Moderna's post-earnings gains
+<<<SUMMARY>>>
+Bernstein's Senior Research Analyst Courtney Breen joins 'Closing Bell Overtime' to talk Moderna shares popping after earnings, gains in the pharma sector overall, impact of policy changes, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590855
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41e976e720da77881c19ef15cfbe0115fa5113ea871b20478d4126f92c9d61ff
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: MRNA Q3 Earnings Beat on COVID Sales, Raises '26 Outlook, Stock Rises
+<<<SUMMARY>>>
+Moderna's Q3 earnings beat estimates on strong COVID-19 vaccine sales, returning to profitability and boosting its 2026 revenue growth outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589916
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:58:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d99d9656df5a97d27f727419df0c0a72b0fadabcc61f7eb2a2818a3a391d815
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Turns a Profit as R&D Spending Falls: Rapid Earnings Reaction
+<<<SUMMARY>>>
+A look at what really drove Moderna's swing to profit, why its cash picture is less impressive than it first looks, and what matters most from here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590963
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:37:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6dc14ae762a8fac1fbb7488054c6360dd494a6a801b2d11596e7bc3ce6b5ee0c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Finally Has More Than a Covid Story
+<<<SUMMARY>>>
+Moderna’s third-quarter beat sent shares sharply higher as stronger vaccine sales, lower costs and a surprise profit gave investors fresh evidence that the post-pandemic rebuild is working. The bigger prize remains its cancer vaccine.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589864
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:23:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a0d3f8e8b178c4f733fddeaa17a15a0942a703722b358387882580cabc37df56
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Soars 8% on Raised Revenue Outlook as CEO Touts Geographic “Diversification”
+<<<SUMMARY>>>
+Key TakeawaysModerna shares jumped 8% today after third-quarter revenue rose 29% and it raised its 2026 revenue growth outlook to 15%-25%. The growth came mostly from Covid vaccine sales abroad under long-term government deals, which make the business steadier.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589784
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5982161fa2d3e7efa7520ddac680e761217ef08ad0acccdd284ba0ad104d70cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: What Moderna (MRNA) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+Moderna (NASDAQ:MRNA) raised its 2026 revenue growth outlook after reporting higher third-quarter sales and a return to quarterly profitability, as demand for its COVID-19 vaccines and international partnerships supported results. The company reported revenue of $1.3 billion, up 29% from a year ear
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589785
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:05:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a19bfe307f06da5eb3ae0c2e12bd5b888502c4c6a9d21ae92ffe1c196a51c09d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Climbs 5% as Surprise Profit and Raised Outlook Beat Forecasts; Pfizer Dips, BioNTech Edges Higher
+<<<SUMMARY>>>
+Moderna flipped a forecasted loss into a profit, yet part of the first pop has already faded while bigger rivals barely budge. What is holding back the rally, and which open question could decide the stock's next move?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589735
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4ea7342dc0a56a7dfd62d77772e76e8efb8adf01b2ceaa58981c2bdf3ea96ed2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Sandisk, AMD, Coherent, Lam Research, Airbnb, Moderna, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Coherent and Advanced Micro Devices are the best performers in the S&P 500 as AI-related stocks stage a comeback after the previous session’s brutal selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588592
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:33:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=450973215c755f23aacc4fde1676c15efd731fd6686051cfa1c0ae8d4ef9dc9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Raises Full-Year Revenue Growth Outlook Following Surprise Third-Quarter Profit
+<<<SUMMARY>>>
+Moderna (MRNA) raised its full-year revenue growth outlook on Friday and swung to a surprise third-q
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591221
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:24:38Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8361b2619cafcc41e466ab11bfdbeae788cade12f1d2bd450eedc57a2474af13
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna, Inc. (MRNA) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Moderna, Inc. (MRNA) Q3 2026 Earnings Call November 6, 2026 8:00 AM ESTCompany ParticipantsLavina Talukdar - Senior VP & Head of Investor...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588593
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:08:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e280da6f4e218b09b48341700685994feb6133dc6ea075d0393737a50bde398
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Just Gave Investors Yet Another Thing to Cheer About
+<<<SUMMARY>>>
+Moderna's cancer vaccine has been the big story this year, but its latest quarter showed the rest of its business is improving, too.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588594
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a767db903c3d8cabb27f44140291156a32d3383414781168eae83efb1825d0e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna shares jump as earnings beat prompts higher 2026 sales outlook
+<<<SUMMARY>>>
+Moderna Inc (NASDAQ:MRNA, XETRA:0QF) shares rose 7% to $259 as the biotechnology company beat third-quarter earnings and revenue estimates and raised its full-year sales growth outlook. Quarterly revenue increased 29% to $1.31 billion, well above the $885.7 million S&P analyst...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588595
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dedda2371632de14630f16eed6568e3a052bf63e3c2f27059a3bc91b8c7a34cc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Great Jobs Report. Will It Matter to Market Participants?
+<<<SUMMARY>>>
+BLS results were far better than expected: +165K, close to triple the +59K analysts were looking for.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588596
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:39:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8e167c64108ec9575bb413a231891865d5346c1a05fa0587d9b543033d5827e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: 5 Things Investors Need to Know About Friday’s Markets
+<<<SUMMARY>>>
+News of the Day for Nov. 6, 2026
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590342
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:32:02Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e00015f051f498f1a216a735fd503bc879456f799d36fb3c8fbbf35b36bb4daa
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna, Inc. 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-06. The following slide deck was published by Moderna, Inc.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584816
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:30:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5a8a20ee0bf55b2c1aeb596d12ef38d39e7219d36579cfcdcb48359aca324dd5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Stock Soars After $162 Million Profit Reverses Last Year's Loss
+<<<SUMMARY>>>
+Moderna Delivers Stunning Earnings Surprise as Revenue Outlook Gets Major Upgrade
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584817
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:16:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=73f750394c5e59707b610308a023ffe6c41db20b784eb87b792b4729b728b647
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Shares Jump 10% as Q3 Earnings Beat Forecasts and Revenue Outlook Improves
+<<<SUMMARY>>>
+Moderna Inc. (NASDAQ:MRNA) shares surged 10% after the biotechnology company reported stronger-than-expected third-quarter 2026 earnings and revenue, raised its full-year sales growth forecast and increased its projected year-end cash balance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584692
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b868db8192e78ffcd31a073ba0cafa51122346de7263e4ab3aae00db576766b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Stock Is Up 700% on Cancer Vaccine Hype. Earnings Reveal That Covid Still Counts.
+<<<SUMMARY>>>
+Moderna posts higher-than-expected revenue as results get a lift from international Covid vaccine demand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584819
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:50:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b1c6a128c2f2b21aaf3d509604159b4d2c917894f636e24bc14254f6f59081d7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna shares surge 10% on earnings beat and raised revenue outlook
+<<<SUMMARY>>>
+Investing.com -- Moderna Inc. reported third-quarter earnings that significantly exceeded analyst expectations, prompting shares to jump 10% as the biotechnology company raised its full-year revenue growth forecast.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143615493
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:31:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=45d96aefc2179192c28b6ace6775133c4e7d229cada1ea916dda1bf997b1089c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Moderna-vaccine.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Stuns Wall Street With Surprise Profit, Raises Outlook
+<<<SUMMARY>>>
+Moderna (MRNA) jumps as Q3 earnings swing to a surprise profit of $0.38/share on strong global vaccine sales and cost cuts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583550
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:28:06Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=44f0fdcfa627338f82c211b9f2488c8bacdddfb75e63ee789f29c28ee56b952f
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_17_c249efcc18.webp
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (NASDAQ:MRNA) Q3 Earnings Beat and Raised Guidance Fuel Stock Rally
+<<<SUMMARY>>>
+Moderna Q3 revenue and EPS beat consensus, swung to profit, raised 2026 revenue guidance, and shares rose 7.9% premarket on strong results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584820
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:24:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f5f7bc6b2c4b5e844b23082cd2f53c2140555b4e5e3338150bc09cb77bba87be
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (NASDAQ:MRNA) delivers strong Q3 2026 numbers, stock soars
+<<<SUMMARY>>>
+Biotechnology company Moderna (NASDAQ:MRNA) reported Q3 2026 results topping the market’s revenue expectations, with revenue up 29.2% year on year to $1.31 billion. Its GAAP profit of $0.38 per share was significantly above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584821
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0384453825664583477799d1b5d7cd6f49fca6eff53b2edf77097c8c4e8bac0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (MRNA) Q3 Earnings and Revenues Top Estimates
+<<<SUMMARY>>>
+Moderna (MRNA) delivered earnings and revenue surprises of +134.55% and +47.73%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583263
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:51:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=526d5159c04812f2ecc2298aff13eb71f3e5e83ea2323f81c07bab2ac8bdbff8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+(MRNA) on Friday reported third-quarter profit of $162 million.On a per-share basis, the Cambridge, Massachusetts-based company said it had profit of 38 cents.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614029
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:51:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=47c2482c4d6ac675a6096a814bfa7adfa05d709d399b2b3801374ce9f826d666
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Moderna-vaccine.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna, JFrog, TransMedics, Ubiquiti And Other Big Stocks Moving Higher On Friday
+<<<SUMMARY>>>
+U.S. stocks rose, Nasdaq gained ~400 points. Moderna jumped 9.1% on strong Q3 results and higher FY26 guidance; other stocks rallied on results and deals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584822
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:45:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6bf56f863c3f65a4d2d73992fd95bb28d420c865c771a8a6b272c71573d8d5a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna swings to profit as momentum for cancer vaccine builds
+<<<SUMMARY>>>
+Moderna reported its first quarterly profit in two years, as the US biotech company built on momentum from its successful melanoma vaccine results...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583264
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=340447f5dff23208f01d532339634d09cc078857b5492d22a53ab559707fe463
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Reports Third Quarter 2026 Financial Results and Provides Business Updates
+<<<SUMMARY>>>
+Reports third quarter revenue of $1.3 billion, GAAP net income of $0.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143581589
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:04:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27658733d4f4c4c46c2195333471ab042f3e55c76ff1b52ffcc425c42b840fee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Invesco S&P 500 Equal Weight (RSP) Adds Okta and Moderna on Nov. 4
+<<<SUMMARY>>>
+The fund bought $585.6 million more than it sold, with Okta Inc. its largest new position at $224.7 million.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143578592
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:35:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a84f05fa2744c0b7f57db64eb6c2a96dbb186752b357cb71916c6dd601de0f8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: While biotech bets swing on trial data, this dividend payer gained 72% since 2024
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585645
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:08:12Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f3803b49850c5542f0f12d0375cbeb07f030a9c91a329605ff27151f2833516c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Stock-market-chart-with-green-candlestic.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Moderna (NASDAQ:MRNA) reported third-quarter financial results on Friday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589424
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T07:47:01Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=4fc90d9c29f3c0fc39c8e0b6655aab3abf45cf716bf4da9d1089ad8ebf2d4127
+image_url: https://image.cnbcfm.com/api/v1/image/108532299-17939688331793968829-49471522670-1080pnbcnews.jpg?v=1793968832&w=1920&h=1080
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna CEO Stephane Bancel on Q3 results: A big year of growth for us
+<<<SUMMARY>>>
+Moderna CEO Stephane Bancel joins 'Squawk Box' to discuss the company's quarterly earnings results, the company's vaccine portfolio, drug pipeline outlook, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585646
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T07:46:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a0078347780cf87fc74fc0008d4d2b5fea2208673d2c3cf67c713fce6ff8018a
+image_url: 
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Raises FY2026 Sales Guidance from $2.138B to $2.236B-$2.430B vs $2.102B Est
+<<<SUMMARY>>>
+Moderna (NASDAQ:MRNA) raises FY2026 sales outlook from $2.138 billion to $2.236 billion-$2.430 billion vs $2.102 billion estimate.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585647
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T07:45:54Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0f9f5bf7df8e2b8ea2596c63599fcbee1ae9f7ea00e1b7e31b6714f69ccdad5f
+image_url: 
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Q3 EPS $0.38 Beats $(1.26) Estimate, Sales $1.313B Beat $885.051M Estimate
+<<<SUMMARY>>>
+Moderna (NASDAQ:MRNA) reported quarterly earnings of $0.38 per share which beat the analyst consensus estimate of $(1.26) by 130.16 percent. This is a 174.51 percent increase over losses of $(0.51) per share from the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143567908
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T07:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9944682cf707d4b93a424aa0149aff3c59ecaadf05e85f4303235ecc45df5fe1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Scottish Mortgage NAV total return rises 31.5% as SpaceX listing and Moderna trial success lift performance
+<<<SUMMARY>>>
+Scottish Mortgage Investment Trust PLC (LSE:SMT), managed by Baillie Gifford, delivered a net asset value (NAV) total return of 31.5% in the six months to 30 September, against 16.0% for the FTSE All-World Index. The share price total return was 33.8%, and shareholders’ funds, the trust’s net...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589425
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T06:47:42Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=d0b90f2500ce964d4087821aa29583e384d1375ac77ef02bef160ad1a82d505c
+image_url: https://image.cnbcfm.com/api/v1/image/108222303-1762434766877-gettyimages-2235744008-CANADA_BIOMANUFACTURING.jpeg?v=1793926043&w=1920&h=1080
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna raises 2026 outlook as CEO says newer vaccines are gaining traction
+<<<SUMMARY>>>
+The biotech company now expects 2026 revenue growth of 15% to 25%, up from its previous guidance of up to 10%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585648
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T03:18:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=62e2f7d796999a390aa345d6ef789ed2ee53385a5febaea941697c266446d6c9
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Moderna.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts
+<<<SUMMARY>>>
+Moderna reports Q3 earnings Friday, with analysts expecting a $1.25 loss per share and $890M revenue; shares fell 6.6% after vaccine approvals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584022
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T01:56:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3a3aa70116fe1aabb3949146c2e0079817dbd0bf45a13be0db739b5417ce42a4
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Stock-S-And-P-500-Index-Fund-Symbol-Is-O.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Stock Market: Will S&P 500 Open Up or Down Today?
+<<<SUMMARY>>>
+Will the S&amp;P 500 open higher? Polymarket odds hit 62% as Wall Street eyes jobs data and a tech rebound.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143553081
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T01:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4db425e3e9a0c01ab5670d1645f253f4a5f9ac8359e0f8419c4933d41b0162c6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: October jobs report and earnings from Moderna and Humana: What to Watch
+<<<SUMMARY>>>
+Yahoo Finance’s Brooke DiPalma takes a closer look at the top stories for investors to watch on Friday, Nov. 6, including third quarter earnings from Moderna (MRNA) and Humana (HUM), and the October jobs report being released.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143553082
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T00:00:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87b5f73d904384fe72f89826e769208fa70f27c9686bd95d659480d548e204e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Prothena (PRTA) Reports Q3 Loss, Misses Revenue Estimates
+<<<SUMMARY>>>
+Prothena (PRTA) delivered earnings and revenue surprises of +15.79% and -39.81%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543312
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a0d831b42bafe34a431a879c3ef2653c969b5cbbd8dfa2f1fcd75a4b9ce0ee35
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Health Canada Authorizes Moderna's mRNA Influenza and Combination Influenza and COVID-19 Vaccines
+<<<SUMMARY>>>
+Canada becomes the first country to authorize both Moderna's mRNA seasonal influenza vaccine, mFLUSIVA®, and combination influenza and COVID-19 vaccine, mCOFLU®CAMBRIDGE, MA / ACCESS Newswire / November 5, 2026 / (NASDAQ:MRNA) today announced that Health Canada has authorized mFLUSIVA® (Influenza mRNA vaccine; mRNA-1010) and mCOFLU® (Combined Influenza and COVID-19 mRNA vaccine; mRNA-1083) for adults 50 years of age and older. Canada is the first country in the world to authorize both Moderna's
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143548636
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:06:16Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=c8baf959ed6ac7e6a8a6c13e13dd7b2a5e7d98ce47ba0c504559205276777cab
+image_url: https://www.chartmill.com/images/uploads/CM_Aftermarket_Movers_Small_free_e077945a19.webp
+category: company
+tickers: MRNA
+keywords: 
+headline: S&P 500 After-Hours Movers: ABNB and SNDK Gain, AXON and SOLV Fall
+<<<SUMMARY>>>
+S&P 500 after-hours movers after today's U.S. session included ABNB up 10.68%, SNDK up 3.17%, AXON down 12.14% and SOLV down 7.03%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585650
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:26:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=818fac90fda1916916eb359fc0cb63a2cf529aab3f9b50a84e8ef828a951e14e
+image_url: 
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Says Health Canada Authorizes mFLUSIVA And mCOFLU For Adults 50 Years Of Age And Older
+<<<SUMMARY>>>
+Canada becomes the first country to authorize both Moderna&#39;s mRNA seasonal influenza vaccine, mFLUSIVA®, and combination influenza and COVID-19 vaccine, mCOFLU®CAMBRIDGE, MA / ACCESS Newswire / November 5, 2026 /
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543313
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:42:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f9a4f68079f047fba0775bbfdfd94162dd47862640cf6ba87ecc23ed75bb2c29
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Ahead of Moderna Earnings, Here's What Barchart Data Says Comes Next for MRNA Stock
+<<<SUMMARY>>>
+Moderna is set to report its fiscal Q3 earnings on Nov. 6. Options data suggests MRNA shares could tumble after the quarterly update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583906
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:30:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fadea71ac94ce6fe655c9f761ecabdc1e27209c433c59ee9087828101f938fc8
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/earnings-scheduled-1.jpg?width=2048&height=1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Enbridge, Moderna On Deck Friday As Demand, Vaccine Pipeline Face Test
+<<<SUMMARY>>>
+Enbridge headlines Friday’s reports, with investors weighing whether resilient pipeline utilization can offset a softer revenue comparison. Moderna, Brookfield Asset Management, Humana, Vistra, PPL, Plains All American
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537843
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:49:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=74cb67858032af1398cb1bb162739fc436950bc2206e2852b972d9bfa81751bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Soared 8% on Cancer Data. Friday’s Report Shows Whether It Can Afford the Pipeline
+<<<SUMMARY>>>
+Key TakeawaysModerna stock jumped 13% on Wednesday to a new 52-week high on early multiple myeloma data and an Ebola vaccine recommendation, then gave back 5% on Thursday ahead of Friday’s report. Pfizer’s Comirnaty sales fell 29% operationally in the third quarter, and BioNTech’s revenue fell 15%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533930
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:18:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9debc1a91640480ca0bd490ba513f9f4a73b24bdade5958e630b6df0b639296
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna, Humana and Elanco Earnings Previews: What Investors Should Watch
+<<<SUMMARY>>>
+One stock has soared more than sevenfold this year, another just lost a quarter of its value on leaked data, and a third carries the fate of millions of retirees. Friday's earnings could test each rally in very different ways.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143534025
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:22:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9b1324cf76eb871cd9f66296c2c4a651b989b3b63b147af3850a42106d1a057a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: 12 S&P 500 Stocks Gain The Most From The 'Blue Wave'
+<<<SUMMARY>>>
+Voters made no mystery of how they're feeling about the direction the U.S. is in. And some S&P 500 stocks were clear winners, too.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143538885
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:09:43Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c1da7a8476779e29657306debfffc135f72492072e93a751ca557769982577ed
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2296539027/image_2296539027.jpg?io=getty-c-w1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Democrats Sweep Midterms: What It Means For Pharma And Biotech Holdings (Stocks To Watch)
+<<<SUMMARY>>>
+Blue Wave election results could reshape healthcare policy. Click to discover stocks that need to be watched in the Big Pharma and biotech sectors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143531632
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T11:04:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=54ca81bc6b666bddfd699db4caabe201364dbaa466b71534ad8e88f609b6b8e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Invesco S&P 500 Equal Weight (RSP) Adds Kimberly-Clark and Moderna on Nov. 3
+<<<SUMMARY>>>
+The fund bought $608.1 million of stock and sold nothing, lifting 500 positions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143525178
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T08:14:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f5ce3426fc62907a85de5cfd87fc9ac3083db2c3c2d4ab9ec145268bb7601fbe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna (MRNA) After WHO Vaccine Backing Looks Pricey Despite The Rally
+<<<SUMMARY>>>
+Moderna (MRNA) moved back into focus after the World Health Organization’s technical advisory group backed its Bundibugyo ebolavirus vaccine candidate, mRNA-1469, to progress into a Phase 2/3 efficacy study in the Democratic Republic of the Congo. The mRNA-1469 update landed on a stock that has already been on a steep upswing, with a 1-day share price return of 13.1%, a 7-day gain of 20.7% and a 90-day move of almost 4x. This signals strong recent momentum after a much more modest 5-year...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143512546
+symbol: MRNA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T01:23:59Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8e8e525bea759126b25d496ace3221fc2682a0ad30d786b863726c3645dec40e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2159351609/image_2159351609.jpg?io=getty-c-w1536
+category: company
+tickers: MRNA
+keywords: 
+headline: Moderna Earnings Preview: The Melanoma Breakthrough Is Real, But $221 Is Way Too Much
+<<<SUMMARY>>>
+Moderna's cancer vaccine shows real promise, but vaccine cash burn and uncertain oncology profits don't justify its $221 share price. Read more on MRNA stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d7d57a10f802466d2a6413e3017064a3fb56d15c1bf791a015f1b3494ab8a649
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T08:10:02Z
+publisher: The Motley Fool
+author: Adria Cimino
+url: https://www.fool.com/investing/2026/10/29/will-moderna-soar-on-nov-6/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F81482ca71cd058ef7e90c4440c11b87eb7908351-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: MRNA, MRK, NVDA, MU
+keywords: mRNA technology, personalized cancer vaccine, melanoma clinical trial, Q3 earnings, oncology pipeline, biotech stock, coronavirus vaccine, flu vaccine
+headline: Will Moderna Soar on Nov. 6?
+<<<SUMMARY>>>
+Moderna stock has surged over 100% this year, driven by positive results from its personalized cancer vaccine candidate in combination with Merck's Keytruda. The company is scheduled to report Q3 earnings on Nov. 6, with investors focused on oncology progress and cancer vaccine development. While recent data leak caused a stock dip, the author expects the next major catalyst to come from fresh cancer vaccine data rather than the earnings report itself.
+<<<INSIGHTS>>>
+MRNA | positive | Stock has surged over 100% this year with strong clinical trial results for cancer vaccine candidate. Positive phase 3 melanoma trial data in August drove 177% single-day surge. Company is transitioning from COVID vaccine dependency to oncology focus with multiple pipeline candidates. Recent data leak caused temporary decline but confirmed positive results.
+MRK | positive | Merck's Keytruda is being used in combination with Moderna's personalized cancer vaccine in melanoma trials that recently delivered strong results, positioning the company as a partner in a potentially game-changing cancer treatment.
+NVDA | neutral | Mentioned as a tech giant that Moderna has outperformed this year, but no specific company developments or sentiment drivers are discussed in the article.
+MU | neutral | Mentioned as a tech giant that Moderna has outperformed this year, but no specific company developments or sentiment drivers are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d1c5fc82ddd6df824e59c21d769225d33c3b9df66a9314fb426c570551c0c25b
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T15:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018854/mrk-q3-earnings-sales-beat-estimates-26-eps-view-raised-stock-up?cid=CS-ZC-FT-analyst_blog|earnings_article-3018854
+image_url: https://staticx-tuner.zacks.com/images/articles/main/cd/2084.jpg
+category: 
+tickers: MRK, MRNA, AZN
+keywords: Q3 2026 earnings, Keytruda, oncology, guidance raise, generic competition, Winrevair, Gardasil, pipeline progress
+headline: MRK Q3 Earnings & Sales Beat Estimates, '26 EPS View Raised, Stock Up
+<<<SUMMARY>>>
+Merck (MRK) beat Q3 2026 earnings and revenue estimates with adjusted EPS of $2.49 and revenues of $18.09 billion. Keytruda sales grew 6% to $8.60 billion, while newer products like Winrevair, Welireg, and Enflonsia showed strong momentum. The company raised its 2026 guidance for adjusted EPS to $2.77-$2.82 and sales to $66.8-$67.3 billion. However, established drugs like Januvia/Janumet and Bridion faced headwinds from generic competition.
+<<<INSIGHTS>>>
+MRK | positive | Merck exceeded Q3 earnings and revenue estimates, raised full-year 2026 guidance for both sales and EPS, demonstrated strong growth in key oncology products (Keytruda +6%), and showed momentum in newer products (Winrevair +94%, Enflonsia +136%). Stock rose in premarket trading and is up 36.7% year-to-date.
+MRNA | neutral | Moderna is mentioned only as a collaboration partner with Merck on intismeran autogene, a personalized cancer therapy in combination with Keytruda that met phase III endpoints for melanoma. The mention is incidental and provides no direct information about Moderna's business performance.
+AZN | neutral | AstraZeneca is mentioned only as a partner for Lynparza, which showed a 7% sales decline in Q3. The mention is incidental to Merck's results and provides no direct information about AstraZeneca's overall performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1f5c9e90f4df8f8602aceb906252f70db7274dd03973706148fb1d40d13cc17f
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T15:23:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018949/gsk-vs-moderna-which-large-cap-biotech-stock-offers-more-growth?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3018949
+image_url: https://staticx-tuner.zacks.com/images/articles/main/21/594.jpg
+category: 
+tickers: GSK, MRNA, MRK, PFE
+keywords: pharmaceutical stocks, vaccine development, oncology pipeline, specialty medicines, mRNA technology, stock valuation, clinical trials, patent expiration
+headline: GSK vs. Moderna: Which Large-Cap Biotech Stock Offers More Growth?
+<<<SUMMARY>>>
+GSK and Moderna are compared as investment options in the pharmaceutical and vaccine sectors. GSK shows solid momentum in specialty medicines with 14% sales growth and a diversified portfolio, trading at a reasonable valuation of 2.15x forward sales with dividend support. Moderna has expanded into oncology with promising but mixed results from its cancer therapy trials, but trades at a premium 33.23x forward sales with profitability challenges. Analysts favor GSK as the more compelling choice for balanced growth and income, while Moderna offers longer-term potential but faces higher execution risk at elevated valuations.
+<<<INSIGHTS>>>
+GSK | positive | GSK demonstrates solid fundamentals with 14% specialty medicines sales growth, a diversified portfolio across vaccines and oncology, strong pipeline progress with doubled phase II/III blockbuster assets since 2022, and attractive valuation at 2.15x forward sales. The company also offers dividend income. However, sentiment is tempered by patent expiration risks (2028-2030) and near-term vaccine sales weakness.
+MRNA | neutral | Moderna shows significant longer-term potential in oncology and respiratory vaccines with expanding pipeline, but faces headwinds including disappointing detailed results from cancer therapy trials (38% vs expected 59% risk reduction), intense competition from established players, recent pipeline setback in norovirus vaccine, widening losses, and extremely elevated valuation at 33.23x forward sales leaving little room for disappointment.
+MRK | neutral | Merck is mentioned as a partner with Moderna in developing personalized mRNA cancer therapy (intismeran), which showed mixed clinical results. The partnership represents a potential growth opportunity but with execution risks given the underwhelming detailed trial outcomes.
+PFE | neutral | Pfizer is mentioned as a competitor to Moderna in COVID-19 vaccines (with BioNTech) and RSV vaccines. Competitive positioning is noted but no specific performance data provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:28efce57374c8e40a785e7d22f081c705e13bfd6e31ced220331dd042e1624b8
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-30T13:00:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3019671/merck-q3-earnings-call-highlights-pipeline-progress-and-raised-outlook?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3019671
+image_url: https://staticx-tuner.zacks.com/images/articles/main/30/172914.webp
+category: 
+tickers: MRK, MRNA
+keywords: Q3 earnings, revenue guidance raised, KEYTRUDA, WINREVAIR, oncology pipeline, generic competition, mRNA vaccine, sacituzumab tirumotecan
+headline: Merck Q3 Earnings Call Highlights Pipeline Progress and Raised Outlook
+<<<SUMMARY>>>
+Merck reported Q3 2026 earnings of $2.49 per share, beating estimates by 17.5%, with revenues rising 4.7% to $18.09 billion. The company raised its full-year 2026 guidance to $66.8-$67.3 billion in sales and $2.77-$2.82 in earnings per share. KEYTRUDA sales grew 6% to $8.60 billion while WINREVAIR surged 93% to $694 million. Management highlighted positive Phase III results for sacituzumab tirumotecan in endometrial cancer and encouraging mRNA vaccine results with Moderna. However, management cautioned that 2027 will see modest growth due to over $2 billion in generic headwinds and rising pipeline investments.
+<<<INSIGHTS>>>
+MRK | positive | Merck beat earnings expectations by 17.5%, raised full-year 2026 guidance, demonstrated strong revenue growth (4.7%), and reported significant pipeline breakthroughs including positive Phase III results for sacituzumab tirumotecan and encouraging mRNA vaccine collaboration results. However, sentiment is tempered by near-term challenges including slowing KEYTRUDA growth, generic competition headwinds exceeding $2 billion in 2027, and elevated R&D spending.
+MRNA | positive | Moderna's collaboration with Merck on intismeran autogene (individualized mRNA cancer vaccine) demonstrated encouraging Phase III results with a 42% reduction in recurrence or death risk when combined with KEYTRUDA in melanoma patients, with potential expansion to additional tumor types.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cc4362586ab2ba265b113bbd9af9cb3f721b048d4a544aa0f6fbc0486b9cfb13
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T08:55:02Z
+publisher: The Motley Fool
+author: Adria Cimino
+url: https://www.fool.com/investing/2026/11/02/stock-split-watch-is-moderna-next/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F4243ea6b2bd31afb7b20c41713993d427d364a9b-1200x800.jpg&w=1200&op=resize
+category: 
+tickers: MRNA
+keywords: stock split, Moderna, biotech, cancer vaccine, stock price, earnings turnaround, oncology
+headline: Stock Split Watch: Is Moderna Next?
+<<<SUMMARY>>>
+Moderna's stock has surged 650% in 2026 following a turnaround driven by cost-cutting and focus on oncology and rare disease candidates. While the biotech's personalized cancer vaccine shows promise with strong phase 3 melanoma trial results, the article suggests a stock split may not be imminent, as the current price remains accessible to investors and the company has significant growth catalysts ahead.
+<<<INSIGHTS>>>
+MRNA | positive | The company has achieved a major turnaround with 650% stock gains in 2026, successfully pivoted to oncology and rare disease focus, and has a promising personalized cancer vaccine candidate with excellent phase 3 trial results and multiple upcoming catalysts. The article suggests strong long-term growth potential despite questioning near-term stock split likelihood.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fb14d948896fa08de99c58860435676e275fa53bfc6f066e48f17e9b2de2c842
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T12:30:02Z
+publisher: The Motley Fool
+author: Tmf Breakfast News
+url: https://www.fool.com/investing/breakfast-news/2026/11/02/breakfast-news/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fmisc-assets%2Fnasdaq.png&w=1200&op=resize
+category: 
+tickers: AAPL, SHOP, AMD, VRTX, SEZL, LITE, NET, MRNA, KNSA, MRVL, BRK.A, BRK.B
+keywords: market correction, Nasdaq-100, earnings season, dollar-cost averaging, portfolio diversification, midterm elections, blockbuster drug
+headline: Breakfast News: We’re Right There With You
+<<<SUMMARY>>>
+The Nasdaq-100 fell nearly 5% on Friday, marking its third 10% correction this year, though it has nearly doubled over three years. The article advises investors to stay invested during market volatility through strategies like dollar-cost averaging and diversification. Key earnings this week include Apple, Shopify, AMD, and Berkshire Hathaway. Kiniksa Pharmaceuticals' heart drug Arcalyst is projected to become a blockbuster with $1B+ sales. Investors should focus on long-term plans rather than election-driven trading.
+<<<INSIGHTS>>>
+AAPL | neutral | Reports Monday with management warnings over supply constraints that could limit iPhone and Mac availability, creating uncertainty about near-term sales.
+SHOP | neutral | Reports Tuesday with guided low-30s Q3 revenue growth; focus on enterprise expansion and holiday guidance will determine investor sentiment.
+AMD | neutral | Reports Tuesday; data-center guidance may matter more than quarterly results as it competes with Nvidia in AI chip market.
+VRTX | neutral | Reports after market close; focus on growth of newer medicines beyond cystic fibrosis will indicate pipeline strength.
+SEZL | neutral | Reports Wednesday; credit quality and growth metrics are equally important for buy-now-pay-later lender heading into holiday shopping season.
+LITE | neutral | Reports Thursday amid reported takeover talks from Marvell; management comments could outweigh financial results.
+NET | neutral | Reports Thursday; investors will monitor whether AI-driven traffic is translating into revenue growth for internet security specialist.
+MRNA | neutral | Reports Friday; first report since phase 3 melanoma data; focus on cash position and launch preparations.
+KNSA | positive | Arcalyst heart drug raised 2026 sales forecast to $1B+, achieving blockbuster status with only 23% market penetration; longer-lasting version trials planned by end of 2026 with strong cash position.
+MRVL | neutral | Reported takeover talks with Lumentum; no deal signed, so outcome remains uncertain.
+BRK.A | neutral | Reports Saturday; cash pile will indicate management's willingness to deploy capital at current market valuations.
+BRK.B | neutral | Reports Saturday; cash pile will indicate management's willingness to deploy capital at current market valuations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3f74bdd7c1d44fc6439e2320ae62383fb241af89f4cdd47abd20ba9dfe5516bf
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T14:19:01Z
+publisher: The Motley Fool
+author: David Jagielski, Cpa
+url: https://www.fool.com/investing/2026/11/02/if-moderna-s-ceo-is-right-the-stock-s-rally-could-just-be-getting-started/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F78d87df7b61e1f480d3670c7ce01d2cf858c591f-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: MRNA, MRK
+keywords: cancer vaccine, intismeran, melanoma, clinical trial results, stock rally, growth catalyst, regulatory approval pending
+headline: If Moderna's CEO Is Right, the Stock's Rally Could Just Be Getting Started
+<<<SUMMARY>>>
+Moderna's stock has surged 650% in 2026, driven by excitement around its cancer vaccine intismeran developed with Merck. Recent trials showed the vaccine reduced melanoma death/recurrence risk by 42% when combined with Merck's Keytruda. CEO Stéphane Bancel believes intismeran could work across multiple cancer types where Keytruda is effective, potentially unlocking significant growth. However, the stock faces sky-high expectations and intismeran remains unapproved, warranting cautious investor approach.
+<<<INSIGHTS>>>
+MRNA | positive | Strong clinical trial results for intismeran showing 42% reduction in death/recurrence risk, CEO optimism about broader applications, and exceptional stock performance (650% YTD). However, sentiment is tempered by unapproved status, declining recent revenues ($1.9B in 2025), and cautionary tone about high expectations.
+MRK | positive | Keytruda continues to be highly successful ($32B revenue), and partnership with Moderna on intismeran represents a potential new growth avenue for the company's oncology portfolio.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:965e1f81574e042acfd0570fe2309e213584f2baaeac6a131546e3963da167d0
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T16:14:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020905/buy-moderna-stock-before-q3-earnings-here-s-what-to-know?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3020905
+image_url: https://staticx-tuner.zacks.com/images/articles/main/db/3160.jpg
+category: 
+tickers: MRNA, MRK, GSK, PFE
+keywords: Q3 2026 earnings, COVID-19 vaccines, cancer therapy, intismeran, valuation premium, earnings beat, respiratory portfolio, oncology pipeline
+headline: Buy Moderna Stock Before Q3 Earnings? Here's What to Know
+<<<SUMMARY>>>
+Moderna is set to report Q3 2026 earnings on Nov. 6 with estimated sales of $888.8 million and a $1.37 per-share loss. While positive phase III results for its cancer therapy intismeran boost long-term prospects, the company faces near-term headwinds from modest flu vaccine uptake and RSV vaccine competition. The stock's 652% year-to-date rally has pushed valuation to a premium 34.10x forward sales, leaving limited room for execution missteps.
+<<<INSIGHTS>>>
+MRNA | neutral | Positive clinical progress in oncology (intismeran phase III results showing 42% risk reduction) supports long-term growth potential. However, near-term outlook is challenged by negative Earnings ESP (-71.32%), continued losses, premium valuation (34.10x forward sales vs. 2.08x industry average), and modest contributions from new flu and RSV vaccines. Risk-reward profile appears unfavorable for short-term investors.
+MRK | positive | Merck's Keytruda combination with Moderna's intismeran demonstrated strong phase III efficacy (42% risk reduction in melanoma recurrence/death), with potential expansion across multiple cancer indications including NSCLC, bladder, and renal cell carcinoma. This represents meaningful pipeline advancement for the company's oncology portfolio.
+GSK | positive | GSK's established RSV vaccine Arexvy is successfully competing against Moderna's mResvia, indicating strong market position and commercial traction in the growing RSV vaccine market.
+PFE | positive | Pfizer's RSV vaccine Abrysvo is successfully competing against Moderna's mResvia, demonstrating strong market position and commercial success in the RSV vaccine segment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0b9308f0ad884d5cf809d0dddc920cc770a9deef568e648403c6cabc89cdb692
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T16:22:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020922/will-these-5-drug-bigwigs-surpass-q3-earnings-forecasts?cid=CS-ZC-FT-analyst_blog|earnings_preview_esp-3020922
+image_url: https://staticx-tuner.zacks.com/images/articles/main/5a/2110.jpg
+category: 
+tickers: AMGN, PFE, MRNA, NVO, VTRS
+keywords: Q3 2026 earnings, pharma sector, biotech, drug sales, earnings beat, biosimilar erosion, GLP-1 drugs
+headline: Will These 5 Drug Bigwigs Surpass Q3 Earnings Forecasts?
+<<<SUMMARY>>>
+The Medical sector's Q3 2026 earnings season shows strong performance with 81.3% of reporting companies beating earnings estimates and 93.8% beating revenue expectations. Major pharma companies including Amgen, Pfizer, Moderna, Novo Nordisk, and Viatris are scheduled to report this week, with most expected to benefit from key drug launches and market demand, though some face headwinds from biosimilar competition and mature brand weakness.
+<<<INSIGHTS>>>
+AMGN | neutral | Expected growth from Repatha, Evenity, and Tezspire, but offset by biosimilar erosion and mature brand weakness. Negative Earnings ESP of -1.82% suggests potential miss on expectations.
+PFE | positive | Strong four-quarter earnings surprise average of 16.62%. Positive Earnings ESP of +3.53% indicates likely earnings beat. Growth driven by Vyndaqel, Eliquis, and newer products like RSV vaccine Abrysvo.
+MRNA | neutral | Expected to report a loss of $1.37 per share. Very negative Earnings ESP of -71.32% suggests significant miss expected. Revenue dependent on respiratory vaccine portfolio, particularly COVID-19 vaccines.
+NVO | positive | Impressive four-quarter earnings surprise average of 20.05% with consistent beats. Neutral Earnings ESP of 0.00% but strong historical performance. Growth driven by high-demand GLP-1 drugs Ozempic and Wegovy.
+VTRS | positive | Excellent performance with earnings beating estimates in all trailing four quarters (10.18% average surprise). Positive Earnings ESP of +0.31% indicates likely beat. Growth in Developed Markets and Greater China expected.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5bda808bd051d3c3eeae3425163ca3ec0c78fb0dfa8a2aa032dc78e9fe306229
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T17:25:02Z
+publisher: The Motley Fool
+author: David Jagielski, Cpa
+url: https://www.fool.com/investing/2026/11/02/amgen-just-gave-its-shareholders-great-news/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd8e6072d5000dbc87fc3e4a4b81120f13c213b80-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AMGN, AZN, MRNA
+keywords: cancer treatment, Imdelltra, Imfinzi, lung cancer, drug efficacy, pharmaceutical pipeline, stock valuation
+headline: Amgen Just Gave Its Shareholders Great News
+<<<SUMMARY>>>
+Amgen's cancer drug Imdelltra demonstrated significant efficacy when combined with AstraZeneca's Imfinzi, reducing death risk by 58% in advanced lung cancer patients and extending median survival to 21.1 months versus 12.7 months with Imfinzi alone. With Imdelltra already generating 115% growth and a robust pipeline of 22 double-digit growth products, Amgen's stock may have further upside potential despite its 40% year-to-date gain.
+<<<INSIGHTS>>>
+AMGN | positive | Positive clinical trial results for Imdelltra showing 58% reduction in death risk, strong revenue growth (115% for Imdelltra, 22 products with double-digit growth), reasonable valuation at 19x forward P/E, and significant pipeline potential suggest continued upside for the stock.
+AZN | positive | Imfinzi's successful combination with Imdelltra in treating advanced lung cancer represents a positive development for AstraZeneca's oncology portfolio and expands the therapeutic potential of its existing drug.
+MRNA | neutral | Mentioned as receiving hype for its cancer vaccine, but the article positions Amgen as a larger and safer alternative investment, suggesting Moderna is not the primary focus and lacks the established scale of Amgen.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b65efe745028e665f4e8155636c477d553ee62cf209ed732fabfcba0fe527794
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T10:08:02Z
+publisher: The Motley Fool
+author: David Jagielski, Cpa
+url: https://www.fool.com/investing/2026/11/03/could-investing-in-moderna-s-stock-double-your-money/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F81482ca71cd058ef7e90c4440c11b87eb7908351-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: MRNA, MRK
+keywords: cancer vaccine, intismeran, clinical trials, stock valuation, healthcare, melanoma, non-small cell lung cancer
+headline: Could Investing in Moderna's Stock Double Your Money?
+<<<SUMMARY>>>
+Moderna's stock has surged over 650% in 2026 driven by excitement around its cancer vaccine intismeran, developed with Merck. While the vaccine shows promising clinical trial results for melanoma and is being evaluated for other cancers, it remains unapproved. Despite this year's gains, the stock is still down 36% over five years. For the stock to double to a $180 billion valuation, Moderna would need strong revenue generation beyond expectations, making it a high-risk investment.
+<<<INSIGHTS>>>
+MRNA | positive | The article highlights strong 650% year-to-date gains driven by promising clinical trial results for intismeran cancer vaccine. Multiple ongoing late-stage trials for various cancer types present significant future catalysts. However, the positive sentiment is tempered by the fact that the vaccine remains unapproved and the stock is still down 36% over five years, indicating volatility and execution risk.
+MRK | neutral | Merck is mentioned as a collaborative partner evaluating intismeran alongside its top cancer drug Keytruda. While the partnership shows promise, the article focuses primarily on Moderna's potential, and Merck's involvement is presented as supportive context rather than a primary investment thesis.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9e59176c128cb22ae367656297414ec4699cffe80b94e0a6aeb2deca38e2e545
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T14:00:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3023071/caribou-biosciences-inc-crbu-expected-to-beat-earnings-estimates-can-the-stock-move-higher?cid=CS-ZC-FT-fundamental_analysis|yseop_template_9-3023071
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default322.jpg
+category: 
+tickers: CRBU, MRNA
+keywords: earnings beat, Earnings ESP, Zacks Rank, biotech, Q3 2026 earnings, consensus estimates, stock price prediction
+headline: Caribou Biosciences, Inc. (CRBU) Expected to Beat Earnings Estimates: Can the Stock Move Higher?
+<<<SUMMARY>>>
+Caribou Biosciences is expected to beat Q3 2026 earnings estimates with a positive Earnings ESP of +7.41% and Zacks Rank #2 (Buy). The company is projected to report a quarterly loss of $0.27 per share (improved 10% YoY) on revenues of $1.5 million (down 31.8% YoY). With a strong history of beating consensus estimates in the last four quarters, the stock appears positioned for a potential positive price movement.
+<<<INSIGHTS>>>
+CRBU | positive | Positive Earnings ESP of +7.41% combined with Zacks Rank #2 (Buy) indicates high probability of beating consensus EPS estimates. Company has beaten estimates in all four recent quarters. Recent estimate revisions were 26.58% higher over 30 days, suggesting analyst confidence.
+MRNA | negative | Negative Earnings ESP of -28.69% combined with Zacks Rank #3 (Hold) makes it difficult to predict an earnings beat. Consensus EPS estimate revised 2.6% lower over 30 days. Expected to report significant loss of $1.1 per share with declining revenues.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:497866492c4ea9dfec30529a4a2e9808c1df936b44c76b853a31f0801f6e705f
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T21:50:10Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023475/x4-pharmaceuticals-xfor-reports-q3-loss-tops-revenue-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3023475
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default229.jpg
+category: 
+tickers: XFOR, MRNA
+keywords: earnings surprise, biotech, revenue growth, earnings estimates, Zacks Rank, Medical - Biomedical and Genetics industry
+headline: X4 Pharmaceuticals (XFOR) Reports Q3 Loss, Tops Revenue Estimates
+<<<SUMMARY>>>
+X4 Pharmaceuticals reported a quarterly loss of $0.16 per share, beating consensus estimates of $0.19 loss, with a 15.79% earnings surprise. The company posted revenues of $2.88 million, surpassing estimates by 43.95% and showing year-over-year growth. Despite underperforming the S&P 500 by 20.8% this year, the stock holds a Zacks Rank #2 (Buy) rating based on favorable estimate revisions.
+<<<INSIGHTS>>>
+XFOR | positive | Company beat EPS consensus estimates by 15.79% and surpassed revenue estimates by 43.95%. It has surpassed consensus EPS estimates four times over the last four quarters and revenue estimates three times. Assigned Zacks Rank #2 (Buy) with favorable estimate revision trends, indicating expected near-term outperformance.
+MRNA | negative | Expected to post a quarterly loss of $1.10 per share representing a -115.7% year-over-year change. Consensus EPS estimate has been revised 2.6% lower over the last 30 days. Revenues expected to decline 12.5% year-over-year to $888.78 million.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f7e22ef973a134f0b8e83278b9df447412c9fbf429db90417f71964fbb88a783
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T00:00:21Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025021/prothena-prta-reports-q3-loss-misses-revenue-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3025021
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default211.jpg
+category: 
+tickers: PRTA, MRNA
+keywords: earnings surprise, revenue miss, biomedical, quarterly results, stock performance, earnings estimates
+headline: Prothena (PRTA) Reports Q3 Loss, Misses Revenue Estimates
+<<<SUMMARY>>>
+Prothena (PRTA) reported a quarterly loss of $0.32 per share, beating consensus estimates of $0.38 loss, representing a 15.79% earnings surprise. However, the company missed revenue expectations significantly, posting $0.62 million versus the consensus estimate, down from $2.41 million year-over-year. The stock has underperformed the market by 24.5% year-to-date and carries a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+PRTA | negative | While the company beat EPS estimates, it significantly missed revenue expectations by 39.81% and has underperformed the S&P 500 by 24.5% year-to-date. The company has failed to beat revenue estimates over the last four quarters, indicating a concerning trend in business performance.
+MRNA | negative | Expected to report a quarterly loss of $1.10 per share with a year-over-year change of -115.7%, indicating significant deterioration. Consensus EPS estimates have been revised 2.6% lower over the last 30 days, and revenues are expected to decline 12.5% year-over-year.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b89701b3403055b3ea4e879aacf34d4e0389f86434539900444d3aaf72ac5cef
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T12:00:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025255/moderna-mrna-q3-earnings-and-revenues-top-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3025255
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default83.jpg
+category: 
+tickers: MRNA, SEPN
+keywords: earnings surprise, revenue growth, biotech, Zacks Rank, consensus estimates, stock performance
+headline: Moderna (MRNA) Q3 Earnings and Revenues Top Estimates
+<<<SUMMARY>>>
+Moderna reported quarterly earnings of $0.38 per share, significantly beating the consensus estimate of a loss of $1.1 per share, with a 134.55% earnings surprise. The company posted revenues of $1.31 billion, surpassing estimates by 47.73%. However, the stock received a Zacks Rank #3 (Hold) rating, suggesting near-term performance in line with the market. Moderna shares have gained 718.8% year-to-date, substantially outperforming the S&P 500's 7.4% gain.
+<<<INSIGHTS>>>
+MRNA | positive | Company beat EPS consensus estimates by a significant margin ($0.38 vs. -$1.1 expected), delivered a 134.55% earnings surprise, and exceeded revenue estimates by 47.73%. Stock has outperformed the market substantially with 718.8% year-to-date gains. However, sentiment is tempered by the Hold rating suggesting near-term performance will be in line with the market.
+SEPN | neutral | Company has not yet reported results for the quarter. Expected to post a quarterly loss of $0.55 per share with consensus EPS estimate unchanged over the last 30 days. Revenues expected to grow 9.1% year-over-year, showing modest positive momentum but overall outlook remains uncertain pending earnings release.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7fa2173010c7fa00b02d2ea182cdf619fb254f4246c8b1c3d68cbb617afbcd75
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T14:29:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025636/great-jobs-report-will-it-matter-to-market-participants?cid=CS-ZC-FT-ahead_of_wall_street-3025636
+image_url: https://staticx-tuner.zacks.com/images/articles/main/77/106166.jpg
+category: 
+tickers: HUM, MRNA
+keywords: jobs report, employment, unemployment, earnings season, wage growth, market volatility, Federal Reserve, healthcare, pharmaceuticals
+headline: Great Jobs Report. Will It Matter to Market Participants?
+<<<SUMMARY>>>
+The BLS jobs report exceeded expectations with 165K new jobs added and unemployment at 4.1%, along with stronger wage growth. Humana beat earnings estimates despite medical cost pressures, while Moderna reported positive earnings and raised guidance. Markets showed mixed reactions with the Dow down 525 points, Nasdaq up 318 points, and bond yields moderating.
+<<<INSIGHTS>>>
+HUM | positive | Beat earnings estimates by 32% on bottom line (loss of -$0.70 vs -$1.03 expected) and revenue beat by 0.90%, demonstrating operational strength despite medical cost headwinds.
+MRNA | positive | Reported positive earnings of $0.38 per share versus expected loss of -$1.10, revenues outperformed by 47.7%, raised full-year guidance, and shares up 1% with year-to-date gains of 718%.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c64e411020601cef82b10a53ae3f72ace8df9cdd3503b2b7c979ac2221724726
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T14:48:01Z
+publisher: The Motley Fool
+author: Matt Frankel, Cfp®
+url: https://www.fool.com/investing/2026/11/06/moderna-just-gave-investors-yet-another-thing-to-cheer-about/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F81482ca71cd058ef7e90c4440c11b87eb7908351-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: MRNA, MRK
+keywords: cancer vaccine, profitability, earnings beat, Phase 3 trial, melanoma, guidance raise, biotech, immunotherapy
+headline: Moderna Just Gave Investors Yet Another Thing to Cheer About
+<<<SUMMARY>>>
+Moderna reported a surprise profitable quarter with $1.31B in revenue (29% YoY growth) and $0.38 EPS, defying analyst expectations of a loss. The company raised full-year guidance and ended with $8.1-8.3B in cash. Its cancer vaccine with Merck showed strong Phase 3 results, reducing melanoma recurrence risk by 42%, while the stock has surged 720% in 2026. However, risks include COVID vaccine sales volatility and significant optimism already priced into the stock.
+<<<INSIGHTS>>>
+MRNA | positive | Company achieved surprise profitability, beat revenue expectations significantly, raised full-year guidance, increased cash position substantially, and its cancer vaccine showed strong Phase 3 efficacy results. However, sentiment is tempered by acknowledgment that significant gains are already priced in and biotech volatility poses risks.
+MRK | positive | Merck's blockbuster immunotherapy Keytruda is being used in combination with Moderna's cancer vaccine, which demonstrated strong Phase 3 results. The partnership positions Merck to benefit from a potentially successful cancer treatment heading toward regulatory submission.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bed93dbcc0c20ce5e982c0f771e5455408c9fa847e63cb1339a3af84529917da
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T17:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025875/mrna-q3-earnings-beat-on-covid-sales-raises-26-outlook-stock-rises?cid=CS-ZC-FT-analyst_blog|earnings_article-3025875
+image_url: https://staticx-tuner.zacks.com/images/articles/main/db/3160.jpg
+category: 
+tickers: MRNA, MRK, ABUS
+keywords: Q3 earnings, revenue growth, COVID-19 vaccine, guidance raise, profitability, cancer therapy, pipeline advancement
+headline: MRNA Q3 Earnings Beat on COVID Sales, Raises '26 Outlook, Stock Rises
+<<<SUMMARY>>>
+Moderna exceeded Q3 earnings expectations with 38 cents EPS versus an estimated loss of $1.10, driven by 29.2% revenue growth to $1.31 billion from international COVID-19 vaccine sales. The company raised its 2026 revenue growth target to 15-25% and reduced R&D spending plans to $2.7 billion. The stock surged in pre-market trading, with year-to-date gains exceeding 700%.
+<<<INSIGHTS>>>
+MRNA | positive | Strong Q3 earnings beat with return to profitability (38 cents EPS vs. $1.10 loss estimate), 29.2% revenue growth, raised 2026 guidance to 15-25%, improved operating margins, and promising pipeline progress including cancer therapy data showing 42% risk reduction in melanoma trials.
+MRK | positive | Collaboration with Moderna on intismeran cancer therapy showing strong phase III results with 42% reduction in recurrence/death risk in melanoma patients, advancing toward regulatory submissions and commercial launch across multiple tumor types.
+ABUS | neutral | Received $950 million litigation settlement payment from Moderna related to COVID-19 patent disputes, representing a one-time financial gain but not indicative of ongoing business performance or pipeline strength.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8feca5cc9354eddb75a83b760699fd60d52c559cf5248f8b1c3960150038a3b3
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T17:08:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025880/merck-stock-shows-sustained-strength-time-to-buy-sell-or-hold?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3025880
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ef/472.jpg
+category: 
+tickers: MRK, MRNA, AZN, ESAIY
+keywords: Keytruda patent expiration, biosimilar competition, pipeline diversification, Gardasil sales decline, generic pressure, immuno-oncology combinations, strategic acquisitions
+headline: Merck Stock Shows Sustained Strength: Time to Buy, Sell or Hold?
+<<<SUMMARY>>>
+Merck (MRK) maintains strong investor confidence with shares trading above key moving averages. While the blockbuster cancer drug Keytruda generates over 55% of pharmaceutical sales and is expected to reach peak sales of $35 billion by 2028, its patent expiration in 2028 poses significant risks. The company faces near-term headwinds from Gardasil vaccine sales decline and generic competition, but its expanding pipeline, new product launches, and strategic acquisitions position it for long-term growth. Analysts recommend holding the stock (Zacks Rank #3) as long-term prospects remain intact despite moderate revenue growth expected in 2027.
+<<<INSIGHTS>>>
+MRK | neutral | Merck demonstrates strong near-term momentum with shares outperforming the market and sustained trading above key moving averages. However, this is tempered by significant challenges: heavy dependence on Keytruda (55% of pharma sales) facing 2028 patent expiration, Gardasil vaccine sales declining sharply, and expected generic competition headwinds exceeding $2 billion in 2027. While long-term pipeline prospects are encouraging with $70+ billion revenue opportunity by mid-2030s, near-term growth is expected to be only moderate. The neutral rating reflects balanced risks and opportunities.
+MRNA | positive | Moderna is mentioned as a partner with Merck in developing intismeran autogene, a personalized mRNA cancer vaccine combined with Keytruda. The combination showed clinically meaningful improvements in recurrence-free and distant metastasis-free survival in phase III melanoma studies, indicating positive clinical progress and potential commercial opportunity.
+AZN | neutral | AstraZeneca is mentioned as a partner in the Lynparza oncology drug, which contributes to Merck's top-line growth. However, limited specific information is provided about its performance or outlook, warranting a neutral sentiment.
+ESAIY | neutral | Eisai is mentioned as a partner in the Lenvima cancer drug contributing to Merck's growth. However, insufficient detail is provided to assess sentiment beyond its role as a contributing partner.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9d4717828cfbcd7276d2313ff5ad905f1178b435e0d59cb2d9d674f1e0fe745e
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T18:55:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/commentary/3025905/moderna-mrna-stock-hits-52-week-highs-after-q3-earnings-buy-hold-or-sell?cid=CS-ZC-FT-investment_ideas-3025905
+image_url: https://staticx-tuner.zacks.com/images/articles/main/db/3160.jpg
+category: 
+tickers: MRNA, ABBV, LLY, MRK
+keywords: Q3 earnings, cancer vaccine, COVID-19 vaccine, valuation concerns, biotech, revenue guidance, profitability
+headline: Moderna (MRNA) Stock Hits 52-Week Highs After Q3 Earnings: Buy, Hold, or Sell?
+<<<SUMMARY>>>
+Moderna surged 10% to a 52-week high of $267 after crushing Q3 earnings expectations with $0.38 EPS (vs. expected loss of $1.10) and $1.31B revenue (vs. $889M estimate). The company raised full-year 2026 revenue guidance to 15-25% growth and reduced R&D spending outlook. However, despite impressive fundamentals, MRNA's valuation at 40X forward sales and $100B+ market cap raises concerns after an 800% YTD rally. Zacks rates it a Hold, suggesting investors await a pullback for better entry points.
+<<<INSIGHTS>>>
+MRNA | neutral | While Q3 earnings significantly beat expectations and guidance was raised, the stock's 800% YTD rally has created an elevated valuation (40X forward sales) that poses downside risk. The Hold rating suggests the positive fundamentals are already priced in, making current levels unattractive for new buyers despite the company's improving profitability and promising pipeline.
+ABBV | positive | Mentioned as reaching new highs alongside other healthcare stocks benefiting from defensive positioning amid technology sector selloff, indicating positive market sentiment.
+LLY | positive | Referenced as reaching new highs as part of the healthcare sector rally, suggesting positive investor sentiment toward the company.
+MRK | positive | Partnering with Moderna on the personalized cancer vaccine with positive Phase 3 melanoma trial results, indicating progress on a potentially valuable pipeline asset.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:38451edd549ba91df24b1e61a8a3e47ca330422e6ec7793fe192c3b0a4d8837e
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T14:37:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/07/bristol-myers-squibb-vs-vertex-which-pharma-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F83dcc1c84305b7d514833a59c4f21c81d7d71269-6872x3902.jpg&w=1200&op=resize
+category: 
+tickers: BMY, CELGr, VRTX, BNTX, MRNA, CRSP, EDIT
+keywords: pharmaceutical stocks, valuation comparison, cystic fibrosis, drug pipeline, biotech investment, 2027 outlook
+headline: Bristol Myers Squibb vs. Vertex: Which Pharma Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Bristol Myers Squibb (BMY) and Vertex Pharmaceuticals (VRTX) as investment options for 2027. BMY trades at a cheaper valuation (9.8x forward P/E) with a 4.06% dividend yield but faces revenue concentration risks and uncertain recovery timeline. VRTX commands a higher valuation (29.8x forward P/E) but demonstrates superior growth prospects, strong margins (85.61%), and successful product launches like Alyftrek. The author recommends Vertex as the better choice, citing its strong execution and growth momentum despite higher valuation multiples.
+<<<INSIGHTS>>>
+BMY | neutral | BMY is valued attractively at 9.8x forward P/E with a solid 4.06% dividend yield and improving net income projections (+40% for FY2026). However, the company faces revenue concentration risks from key products like Eliquis and Opdivo, patent expiration concerns, and an uncertain recovery timeline. The low valuation reflects priced-in difficulties ahead.
+CELGr | neutral | BMY is valued attractively at 9.8x forward P/E with a solid 4.06% dividend yield and improving net income projections (+40% for FY2026). However, the company faces revenue concentration risks from key products like Eliquis and Opdivo, patent expiration concerns, and an uncertain recovery timeline. The low valuation reflects priced-in difficulties ahead.
+VRTX | positive | VRTX is recommended as the better buy despite higher valuation (29.8x forward P/E) due to strong execution, superior profit margins (85.61%), successful product launches (Alyftrek), and promising pipeline candidates (Povetacicept with $4-7B peak sales potential). The company demonstrates consistent growth (~10% expected for FY2026) and strong market position in cystic fibrosis with 95% addressable market coverage in the U.S.
+BNTX | neutral | BioNTech is mentioned as a strategic partner with Bristol Myers Squibb for global collaborations but receives no substantive analysis or investment recommendation in the article.
+MRNA | neutral | Moderna is mentioned as a collaborator with Vertex Pharmaceuticals on genetic therapy development but receives no detailed analysis or investment recommendation.
+CRSP | neutral | CRISPR Therapeutics is mentioned as a partner with Vertex on genetic therapy development but is not analyzed or recommended in the article.
+EDIT | neutral | Editas Medicine is mentioned only in the context of potential intellectual property litigation involving Vertex's Casgevy product, creating uncertainty but receiving no direct investment recommendation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e5a730fecfd300fb44d202f7b40f965558c6b2525f767b3ef996c9efce5e5e93
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T15:15:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/etfs/2026/11/07/decoding-healthcare-etfs-different-sectors-different-strategies/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0dbeaa0b9e42976b520af8192b7b599528bff488-4000x3000.jpg&w=1200&op=resize
+category: 
+tickers: RSPH, XBI, MRNA, ILMN, NTRA, BIIB
+keywords: healthcare ETFs, RSPH, XBI, biotech stocks, sector diversification, volatility, dividend yield, expense ratio
+headline: Decoding Healthcare ETFs: Different Sectors, Different Strategies
+<<<SUMMARY>>>
+The article compares two healthcare ETFs: RSPH (Invesco S&P 500 Equal Weight Healthcare ETF) and XBI (State Street SPDR S&P Biotech ETF). RSPH offers broader healthcare sector diversification with lower volatility and higher dividend yield (0.56%), while XBI provides concentrated biotech exposure with higher short-term returns (39.6% 1-year) but steeper drawdowns (53.2% max). RSPH is recommended for conservative investors seeking stability, while XBI suits those with higher risk tolerance seeking biotech-specific growth.
+<<<INSIGHTS>>>
+RSPH | positive | RSPH demonstrates superior long-term performance with 37% total return since 2021 (6.6% CAGR), lower volatility (21.9% max drawdown), higher dividend yield (0.56%), and better 5-year growth ($1,333 from $1,000 investment). Recommended for conservative, income-seeking investors.
+XBI | neutral | XBI offers higher 1-year returns (39.6%) and lower expense ratio (0.35%), but exhibits significantly higher volatility with 53.2% max drawdown and weaker long-term performance (14% total return, 2.6% CAGR since 2021). Suitable only for risk-tolerant investors seeking concentrated biotech exposure.
+MRNA | neutral | Listed as a top holding in both ETFs (2.26% in RSPH, 2.23% in XBI), indicating significant presence in healthcare/biotech portfolios, but no specific performance commentary provided.
+ILMN | neutral | Top holding in RSPH at 2.02%, representing meaningful exposure in the broader healthcare ETF, but no specific analysis or sentiment provided.
+NTRA | negative | Top holding in XBI at 1.85%, but showing significant negative price movement (-14.59%), indicating recent weakness in this biotech stock.
+BIIB | neutral | Top holding in XBI at 1.80%, representing meaningful biotech exposure, but no specific performance analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:318216997f6a0248a436915b54f6ce80b2446d6fc60e3ce53a12da6b0b290f81
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T09:20:00Z
+publisher: Zacks Investment Research
+author: Zacks Investment Research
+url: https://www.zacks.com/stock/news/3026021/zacks-investment-ideas-feature-highlights-moderna-abbvie-eli-lilly-and-merck?cid=CS-ZC-FT-press_releases-3026021
+image_url: https://staticx-tuner.zacks.com/images/articles/main/fc/588.jpg
+category: 
+tickers: MRNA, ABBV, LLY, MRK
+keywords: Q3 earnings, biotechnology, cancer vaccine, valuation concerns, revenue guidance, healthcare stocks, defensive positioning
+headline: Zacks Investment Ideas feature highlights: Moderna, AbbVie, Eli Lilly and Merck
+<<<SUMMARY>>>
+Moderna surged 10% to a 52-week high of $267 after delivering strong Q3 results with EPS of $0.38 (beating expectations by 134%) and raising full-year revenue guidance to 15-25% growth. However, with an 800% year-to-date rally and valuation at 40X forward sales, Zacks rates the stock as a Hold, suggesting investors await a better entry point despite impressive fundamentals and pipeline potential.
+<<<INSIGHTS>>>
+MRNA | neutral | While Q3 earnings significantly beat expectations and guidance was raised, the stock's 800% YTD rally and elevated 40X forward sales valuation present substantial downside risk. Zacks Rank #3 (Hold) reflects impressive operational improvements offset by stretched valuation, suggesting investors should wait for a pullback rather than chase momentum.
+ABBV | positive | Mentioned as a healthcare industry giant recently reaching new highs, benefiting from defensive investor positioning amid technology sector weakness.
+LLY | positive | Noted as a healthcare industry giant recently reaching new highs, benefiting from defensive investor positioning amid technology sector weakness.
+MRK | positive | Collaborating with Moderna on a personalized cancer vaccine with positive Phase 3 melanoma trial results, which has been a key driver of Moderna's rally.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ed70081d039825eefe8a72e925da64f74c9e41fe982d2d3f34651deab1f08e01
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T10:00:02Z
+publisher: The Motley Fool
+author: Rj Fulton
+url: https://www.fool.com/coverage/better-buy/2026/11/09/biontech-vs-moderna-the-covid-vaccine-giants-are-entering-a-new-era-one-stock-could-have-the-edge-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fff4aa8227e27e2f77cc30e2c9bc54b19479b01a3-1280x720.png&w=1200&op=resize
+category: 
+tickers: BNTX, MRNA, BMY, CELGr, RHHBY, MRK, PFE
+keywords: mRNA technology, COVID-19 vaccines, cancer treatment, oncology pipeline, personalized cancer vaccine, financial resilience, clinical trials, biotech transition
+headline: BioNTech vs. Moderna: The COVID Vaccine Giants Are Entering a New Era. One Stock Could Have the Edge for 2027
+<<<SUMMARY>>>
+BioNTech and Moderna are transitioning from pandemic-era COVID-19 vaccine dominance to sustainable businesses through oncology and other disease pipelines. BioNTech is favored for 2027 due to its stronger financial position (€16.2 billion cash, zero debt, positive cash flow) and expanding cancer treatment pipeline, while Moderna faces greater financial pressure from declining vaccine revenue despite promising late-stage cancer vaccine results.
+<<<INSIGHTS>>>
+BNTX | positive | Strong cash reserves (€16.2 billion), zero debt, positive cash flow, expanding oncology pipeline with major pharma partnerships (Bristol Myers Squibb, Roche), and analyst recommendation as preferred buy for 2027 despite modest revenue growth and current operating losses.
+MRNA | neutral | Mixed signals: promising Phase 3 personalized cancer vaccine data and recent improving quarterly results (29% revenue growth, positive net income in Q3 2026), but offset by significant revenue decline (40% YoY in FY2025), higher financial pressure, reliance on convertible debt, and premium valuation (679.2x forward P/E) introducing considerable risk.
+BMY | neutral | Mentioned as a partnership collaborator with BioNTech on oncology treatments, but no specific performance data or sentiment indicators provided in the article.
+CELGr | neutral | Mentioned as a partnership collaborator with BioNTech on oncology treatments, but no specific performance data or sentiment indicators provided in the article.
+RHHBY | neutral | Mentioned as a partnership collaborator with BioNTech on oncology treatments, but no specific performance data or sentiment indicators provided in the article.
+MRK | neutral | Mentioned as a partnership collaborator with Moderna on personalized cancer vaccine development, but no specific performance data or sentiment indicators provided in the article.
+PFE | neutral | Mentioned as a competitive threat in the vaccine and pharmaceutical space, but no specific performance data provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:851c1cc3d30583a0d1b9b0366c477035914dce1a72eff478da515746b021c2ef
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T17:09:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026694/can-moderna-s-first-cancer-therapy-win-fda-approval-in-2027?cid=CS-ZC-FT-analyst_blog|quick_take-3026694
+image_url: https://staticx-tuner.zacks.com/images/articles/main/db/3160.jpg
+category: 
+tickers: MRNA, MRK, PFE, SNY, GSK
+keywords: personalized cancer therapy, FDA approval, intismeran, Phase III results, manufacturing capacity, oncology, mRNA treatment, melanoma
+headline: Can Moderna's First Cancer Therapy Win FDA Approval in 2027?
+<<<SUMMARY>>>
+Moderna and Merck plan to submit an FDA application for intismeran, a personalized cancer therapy, by year-end 2026, with potential approval in 2027. Phase III results showed the treatment combined with Keytruda reduced recurrence or death risk by 42%. However, key challenges remain around manufacturing capacity, patient turnaround times, commercialization logistics, and pricing strategy.
+<<<INSIGHTS>>>
+MRNA | positive | Positive Phase III trial results showing 42% reduction in recurrence/death risk, on track for FDA filing by end of 2026, stock up 760% YTD, and strategic hiring of manufacturing COO to scale production. However, sentiment is tempered by execution risks around manufacturing and commercialization.
+MRK | positive | Partnership with Moderna on promising personalized cancer therapy with strong Phase III efficacy data. Merck's established oncology franchise and commercialization expertise support the program's development and potential market success.
+PFE | neutral | Mentioned as a competitor in the respiratory vaccine market where Moderna faces stiff competition from larger, more established players. No direct impact from intismeran development.
+SNY | neutral | Mentioned as a competitor in the respiratory vaccine market where Moderna faces stiff competition. No direct impact from intismeran development.
+GSK | neutral | Mentioned as a competitor in the respiratory vaccine market where Moderna faces stiff competition. No direct impact from intismeran development.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:12191cee596331a7f0c3fb004bc60c633068b912422f8fd36bcc4a9c991c2af4
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T19:20:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027505/top-stock-picks-for-week-of-november-9-2026?cid=CS-ZC-FT-video_blog-3027505
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default321.jpg
+category: 
+tickers: AMD, MRNA
+keywords: semiconductor, AI infrastructure, server CPUs, accelerators, mRNA therapies, vaccine, earnings growth, revenue outlook
+headline: Top Stock Picks for Week of November 9, 2026
+<<<SUMMARY>>>
+Advanced Micro Devices (AMD) strengthens its semiconductor market position through strong AI infrastructure demand for EPYC server CPUs and Instinct accelerators, with earnings expected to grow 90.9% in the current quarter and 92.8% for the fiscal year. Moderna raises its 2026 revenue outlook following stronger-than-expected Q3 sales, with third-quarter revenues increasing 29% year-over-year, supported by increased COVID vaccine demand and international partnerships.
+<<<INSIGHTS>>>
+AMD | positive | Strong product portfolio with growing AI infrastructure demand, expected earnings growth of 90.9% for current quarter and 92.8% for fiscal year, elevated server growth expected through 2027, and improved market diversification through client share gains and embedded recovery.
+MRNA | positive | Raised 2026 revenue outlook following stronger-than-expected Q3 results with 29% year-over-year revenue increase, European approval of combination vaccine, FDA approval of mFlusiva, and potential growth driver from Merck-partnered personalized cancer therapy with possible 2027 launch.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fa1fec0f0a26afb6dbe183231d2b58c0a7e20ce60ecfe689ef6cae5edf2571a2
+symbol: MRNA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T20:39:50Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3028199/is-invesco-s-p-500-equal-weight-health-care-etf-rsph-a-strong-etf-right-now?cid=CS-ZC-FT-smart_beta_etf-3028199
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default216.jpg
+category: 
+tickers: PDP, VDE, STT, STTpG, XLF, MRNA
+keywords: healthcare ETF, equal-weight strategy, smart beta, RSPH, fund performance, expense ratio, diversification
+headline: Is Invesco S&P 500 Equal Weight Health Care ETF (RSPH) a Strong ETF Right Now?
+<<<SUMMARY>>>
+RSPH, an equal-weight healthcare ETF managed by Invesco, has delivered strong year-to-date returns of 30.11% and 12-month returns of 36.18% as of November 11, 2026. With $1.04 billion in assets and a 0.40% expense ratio, it provides diversified exposure to 64 healthcare holdings. However, investors seeking lower-cost alternatives may consider VHT (0.09% expense ratio) or XLV (0.08% expense ratio), which track traditional market-cap weighted healthcare indexes.
+<<<INSIGHTS>>>
+PDP | positive | RSPH has delivered strong performance with 30.11% YTD and 36.18% 12-month returns, manages $1.04 billion in assets, and offers competitive 0.40% expense ratio with effective diversification across 64 holdings.
+VDE | positive | VHT offers a significantly lower expense ratio of 0.09% and manages $21.15 billion in assets, making it an attractive lower-cost alternative for healthcare exposure.
+STT | positive | XLV provides the lowest expense ratio at 0.08% and manages the largest asset base at $50.74 billion, positioning it as a cost-efficient option for healthcare sector investment.
+STTpG | positive | XLV provides the lowest expense ratio at 0.08% and manages the largest asset base at $50.74 billion, positioning it as a cost-efficient option for healthcare sector investment.
+XLF | positive | XLV provides the lowest expense ratio at 0.08% and manages the largest asset base at $50.74 billion, positioning it as a cost-efficient option for healthcare sector investment.
+MRNA | neutral | MRNA is mentioned as RSPH's largest holding at 2.31% of assets; no performance assessment or sentiment is provided in the article.
+<<<END>>>

@@ -23,7 +23,7 @@ ROLES = {  # role -> (setting name, default). The defaults are the values in .en
     "data_clerk": ("DEFAULT_MODEL", "openai/gpt-oss-120b"),
     "fast": ("FAST_MODEL", "qwen/qwen3-30b-a3b"),
     "advisor": ("ADVISOR_MODEL", "nvidia/nemotron-3-super-120b-a12b"),
-    "critic": ("CRITIC_MODEL", "nvidia/nemotron-3-super-120b-a12b"),
+    "critic": ("CRITIC_MODEL", "z-ai/glm-5.3"),  # Z.ai GLM 5.3: a different producer than the Advisor's models, so the reviewer does not agree with text a model of its own family wrote (Critic v1 spec 11.1)
     "account_manager": ("ACCOUNT_MANAGER_MODEL", "openai/gpt-oss-120b"),  # RaiseFunds, the Tree of Thought (entry 42): Jacob asked for gpt-oss-120b
 }
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
@@ -43,9 +43,9 @@ def model_name(role: str) -> str:
     return setting(name, default)
 
 
-def get_chat_model(role: str = "data_clerk", *, model: str | None = None, temperature: float = 0.0, **options) -> ChatOpenAI:
+def get_chat_model(role: str = "data_clerk", *, model: str | None = None, temperature: float = 0.0, timeout: float = 60, **options) -> ChatOpenAI:
     """A chat model for this role, or for the OpenRouter model id given in `model` (to compare models; the role then
-    only checks that the role exists). Raises RuntimeError, naming the setting and never its value, if the key is missing."""
+    only checks that the role exists). `timeout` is the client's wait for one response in seconds (60 for every role; the Critic asks for more, its model reasons for a while before it answers). Raises RuntimeError, naming the setting and never its value, if the key is missing."""
     role_model = model_name(role)  # also checks that the role exists, even when a model id is given
     model = model or role_model
     key = setting("OPENROUTER_API_KEY", "")
@@ -56,7 +56,7 @@ def get_chat_model(role: str = "data_clerk", *, model: str | None = None, temper
         api_key=key,
         base_url=setting("OPENROUTER_BASE_URL", DEFAULT_BASE_URL),
         temperature=temperature,
-        timeout=60,
+        timeout=timeout,
         max_retries=2,
         default_headers={"HTTP-Referer": setting("OPENROUTER_HTTP_REFERER", "http://localhost"),
                          "X-Title": setting("OPENROUTER_APP_TITLE", "Prometheus")},

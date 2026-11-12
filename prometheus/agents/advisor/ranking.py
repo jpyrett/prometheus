@@ -1,18 +1,18 @@
-"""From family scores to a ranked short list: the regime, the expected excess return after cost, the stance, the holdings pass, the cooldown, the sleeves and the diversity rule
+"""From family scores to a ranked short list: the regime, the stance, the blend that ranks, the holdings pass, the cooldown, the sleeves and the diversity rule
 (Advisor v1 spec sections 9.5 to 9.8 and 12, design choices entry 51). Plain Python over numbers the families and the Data Clerk produced: nothing here calls a model.
 
 The chain for one symbol:
 
-    families (each a FamilyResult with an `edge_20d`)  ->  composite  ->  excess_20d_after_cost  ->  stance, score
+    families (each a FamilyResult with an `edge_20d`)  ->  composite  ->  stance, score
 
     composite = the best bullish edge, minus the largest bearish magnitude when both exist (`conflict`); the only bullish edge; or the most negative edge when only bearish.
                 One vote per FAMILY: two correlated trend features already became one trend score inside the family.
-    cost_pct  = half the spread (0.10% when it is not known) + 0.10% slippage; doubled in the `stress` regime.
     confidence = (evidence_n x agreement + 4 x 0.5) / (evidence_n + 4): a prior of four neutral observations, so one quote is not certainty. Agreement is how much of the TEXT
                 evidence points the way of the composite (a bearish composite uses 1 - agreement).
-    excess_20d_after_cost = composite x (0.5 + confidence) - cost_pct          (confidence 0.5 multiplies by 1.0, confidence 1.0 by 1.5)
-    stance    = bullish when that is above zero; bearish when the composite is below zero; else neutral ("edge_below_cost")
-    score     = round(50 + 50 x clip(excess / 0.03, -1, 1)): the v0 field `top_recommendation` reads, so the Account Manager keeps working
+    (There is no expected return and no cost in the chain: Amendment 7 removed the expected 20-day excess return after cost, which was a product of unmeasured priors.)
+    stance    = bullish when a bullish strategy passed (the composite is above zero); bearish when the composite is below zero; else neutral
+    score     = round(50 + 50 x the blend): the v0 field `top_recommendation` reads, so the Account Manager keeps working. The blend (news and press releases 40%, performance 30%, history 20%,
+                filings 10%) is what ranks the candidates, highest first (`rank_value`).
 
 The regime (computed once per run from SPY) scales the families through the config; the sleeve of the use case decides which families may OPEN a name and how many (`select`).
 """
@@ -50,9 +50,6 @@ class Scored:
     evidence_n: int = 0
     confidence: float = 0.5
     blend: dict | None = None                       # `blend.compute_blend`: the 0.40 news / 0.30 performance / 0.20 historical / 0.10 filings score; None counts as 0 (neutral)
-    scale_factor: float = 1.0                       # what multiplies the strategy's edge: 1 + scale_strength x direction x blend
-    cost_pct: float | None = None
-    excess: float | None = None
     stance: str = "neutral"
     stance_reason: str | None = None
     score: int | None = None
@@ -108,52 +105,41 @@ def combine(families: list[FamilyResult]) -> tuple[float | None, bool]:
     return None, False
 
 
-def cost_of(metrics: dict | None, regime: str, config: AdvisorConfig) -> float:
-    spread = value(metrics, "median_spread_bps_1d")
-    half = spread / 10000 / 2 if spread is not None else config.ranking.default_half_spread
-    cost = half + config.ranking.slippage
-    return cost * config.ranking.stress_cost_multiplier if regime == "stress" else cost
+def rank_value(s: Scored) -> float:
+    """What ranks a symbol (Amendment 6): its blend, -1 to +1 (news, performance, history and filings together). A symbol with no blend ranks as 0."""
+    return (s.blend or {}).get("value", 0.0)
 
 
-def v1_score(excess: float | None, config: AdvisorConfig) -> int | None:
-    """`round(50 + 50 x clip(excess / 0.03, -1, 1))`; None when there is no excess (the company has no metrics)."""
-    if excess is None:
-        return None
-    return round(50 + 50 * max(-1.0, min(1.0, excess / config.ranking.edge_scale)))
+def blend_score(s: Scored) -> int | None:
+    """`round(50 + 50 x the blend)`; None when the company has no metrics at all (nothing was calculated for it)."""
+    return None if s.metrics is None else round(50 + 50 * rank_value(s))
 
 
-def rank_symbol(s: Scored, regime: str, config: AdvisorConfig) -> Scored:
-    """Fill the composite, agreement, confidence, cost, excess, stance and score of one symbol. Returns it."""
+def rank_symbol(s: Scored) -> Scored:
+    """Fill the composite, agreement, confidence, stance and score of one symbol. Returns it."""
     s.composite, s.conflict = combine(s.families)
     s.agreement, s.evidence_n = agreement_of(s.votes)
     if s.composite is not None and s.composite < 0:
         s.agreement = 1 - s.agreement                      # a bearish composite is supported by the text that is bearish
-    blended = (s.blend or {}).get("value", 0.0)       # entry 55: -1 to +1, 40% news and press releases (the newer the heavier), 30% performance, 20% historical, 10% filings
+    blended = rank_value(s)                            # -1 to +1: 40% news and press releases (the newer the heavier), 30% performance, 20% historical, 10% filings
     direction = -1.0 if s.composite is not None and s.composite < 0 else 1.0
-    s.scale_factor = 1 + config.blend.scale_strength * direction * blended
-    s.confidence = (1 + direction * blended) / 2       # the blend on a 0 to 1 scale, on the side of the composite (scale_factor = 0.5 + confidence at the default strength)
-    s.cost_pct = cost_of(s.metrics, regime, config)
+    s.confidence = (1 + direction * blended) / 2       # the blend on a 0 to 1 scale, on the side of the composite
+    s.score = blend_score(s)
     if s.composite is None:
-        # No family passed: there is no edge to scale, so the expected excess is what the blend alone is worth, minus the cost: a company with good news, good prices and good numbers outranks one
-        # without (entry 55). It is not a recommendation (the stance stays neutral: no strategy gave an entry). A company with no numbers at all (no metrics) has no score.
-        s.excess = blended * config.blend.no_strategy_edge_scale - s.cost_pct if s.metrics is not None else None
-        s.stance, s.stance_reason, s.score = "neutral", "no family passed", v1_score(s.excess, config)
-        return s
-    s.excess = s.composite * s.scale_factor - s.cost_pct
-    if s.excess > 0:
+        s.stance, s.stance_reason = "neutral", "no family passed"      # not a recommendation: no strategy gave an entry
+    elif s.composite > 0:
         s.stance, s.stance_reason = "bullish", None
     elif s.composite < 0:
         s.stance, s.stance_reason = "bearish", None
     else:
-        s.stance, s.stance_reason = "neutral", "edge_below_cost"
-    s.score = v1_score(s.excess, config)
+        s.stance, s.stance_reason = "neutral", "no edge"
     return s
 
 
 def sort_key(s: Scored):
-    """Best first: the highest excess, then the higher confidence (more of the verified text evidence on the side of the composite; with no composite it is how bullish the text is), then fewer
-    haircuts, then lower volatility, then the symbol (so the order is the same every run)."""
-    return (-(s.excess if s.excess is not None else float("-inf")), -s.confidence, len(s.quality.haircuts), s.vol(), s.symbol)
+    """Best first: the highest blend, then the larger strategy edge, then the higher confidence (more of the verified text evidence on the side of the composite), then fewer haircuts, then
+    lower volatility, then the symbol (so the order is the same every run)."""
+    return (-(rank_value(s) if s.metrics is not None else float("-inf")), -(s.composite or 0.0), -s.confidence, len(s.quality.haircuts), s.vol(), s.symbol)
 
 
 # ---------------------------------------------------------------- invalidation and cooldown
@@ -170,8 +156,7 @@ def invalidation_fired(rules: list[dict], metrics: dict | None, events: list[dic
         elif kind == "event_class" and any(e.get("class") in (target or []) for e in events):
             fired.append(kind)
         elif kind == "metric_crossed":
-            if (target == "below_sma_200" and value(metrics, "above_sma_200") is False) or (target == "rsi_14_above_70" and (value(metrics, "rsi_14") or 0) > 70) \
-                    or (target == "dilution_current" and value(metrics, "dilution_current") is True):
+            if (target == "below_sma_200" and value(metrics, "above_sma_200") is False) or (target == "rsi_14_above_70" and (value(metrics, "rsi_14") or 0) > 70):
                 fired.append(f"{kind}:{target}")
     return fired
 
@@ -195,7 +180,7 @@ def holding_action(s: Scored, records: list[dict], plan_oversized: bool, positio
     """(action, reason) for a symbol the portfolio holds: the first rule that matches.
     reduce  a red_flag gate failed; or a bearish class event of the last 10 bars; or an earlier recommendation's invalidation rule fired; or the family that recommended it before
             no longer passes (None or bearish);
-    add     the stance is bullish, it is not oversized, its excess would have made this run's list (`add_floor`: the lowest excess among the new ideas picked; None when there are
+    add     the stance is bullish, it is not oversized, its blend would have made this run's list (`add_floor`: the lowest blend among the new ideas picked; None when there are
             none), and the position after adding stays within the limit;
     hold    everything else."""
     gate = next((g for g in s.gates.gates if g.gate == "red_flag" and not g.passed), None)
@@ -215,8 +200,8 @@ def holding_action(s: Scored, records: list[dict], plan_oversized: bool, positio
         if original is not None and original.computable and (not original.passed or original.direction == "bearish"):
             return "reduce", f"the family that recommended it ({original.family}) no longer passes"
         break
-    if s.stance == "bullish" and not plan_oversized and (add_floor is None or (s.excess or 0) >= add_floor) and position_pct_after is not None and position_pct_after <= config.ranking.add_max_position_pct:
-        return "add", f"bullish, excess {s.excess:.2%}, position after adding {position_pct_after:.0%}"
+    if s.stance == "bullish" and not plan_oversized and (add_floor is None or rank_value(s) >= add_floor) and position_pct_after is not None and position_pct_after <= config.ranking.add_max_position_pct:
+        return "add", f"bullish, blended score {s.score}, position after adding {position_pct_after:.0%}"
     return "hold", "no reason to change the position" if s.stance != "bullish" else "bullish, but not enough to add (oversized, limit, or below this run's new ideas)"
 
 
@@ -235,8 +220,8 @@ def select(candidates: list[Scored], case: str, regime: str, config: AdvisorConf
     """Choose the new ideas to OPEN. Returns ([(scored, the family it opens on, {diversity_adjustment, displaced_by})] in rank order, {symbol: why it was not chosen}).
     A name must: pass its gates for an allowed family, have a bullish stance and a positive composite, not be vetoed (the funds sleeve lets `event` only veto: a bearish event vote blocks
     an open), and, in the theme sleeve, pass the `theme` family. In the funds sleeve a name that only an `event` family supports is used ONLY when no other name qualifies.
-    Order: the highest excess, fewer haircuts, lower volatility, symbol. Diversity: when the next pick is in the same sector ETF as one already picked, the best name of another sector
-    (or of an unknown one) whose excess is within 80% of it is taken instead, and both facts are recorded."""
+    Order: the highest blend, the larger edge, fewer haircuts, lower volatility, symbol. Diversity: when the next pick is in the same sector ETF as one already picked, the best name of another sector
+    (or of an unknown one) whose blend is within 80% of it is taken instead, and both facts are recorded."""
     sleeve, why = config.sleeves[case], {}
     primary, fallback = [], []
     for s in candidates:
@@ -265,7 +250,7 @@ def select(candidates: list[Scored], case: str, regime: str, config: AdvisorConf
         choice, extra = first, {"diversity_adjustment": False, "displaced_by": None}
         taken = {p[0].sector_etf for p in picked if p[0].sector_etf}
         if first[0].sector_etf and first[0].sector_etf in taken:
-            alt = next((p for p in remaining[1:] if p[0].sector_etf != first[0].sector_etf and (p[0].excess or 0) >= config.ranking.diversity_within * (first[0].excess or 0)), None)
+            alt = next((p for p in remaining[1:] if p[0].sector_etf != first[0].sector_etf and rank_value(p[0]) >= config.ranking.diversity_within * rank_value(first[0])), None)
             if alt is not None:
                 choice, extra = alt, {"diversity_adjustment": True, "displaced_by": first[0].symbol}
         remaining.remove(choice)

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "user": "Jacob Pyrett",
+  "risk_tolerance": "moderate",
+  "age": null,
+  "investment_horizon_years": null,
+  "trade_mode": "ask",
+  "auto_min_score": null,
+  "max_position_pct": 0.10,
+  "max_loss_per_trade_pct": 0.01,
+  "max_new_exposure_pct": 0.30,
+  "max_order_dollars": null,
+  "min_price": 5.0,
+  "excluded_symbols": [],
+  "excluded_sectors": [],
+  "note": "A SAMPLE profile for the Critic (design/critic_v1_final_spec.md section 4.1): moderate risk, Ask mode, the defaults of the limits. Age and horizon are left empty on purpose (no cap is applied); the real values are Jacob's to give. Not a real account."
+}

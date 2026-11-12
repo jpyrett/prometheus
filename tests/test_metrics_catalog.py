@@ -96,12 +96,12 @@ def test_the_finnhub_metrics_are_read_from_the_payload_with_the_market_cap_in_do
 def test_filing_metrics_are_derived_from_the_evidence_and_say_where_they_came_from(tmp_path, apple_evidence):
     bars = write_series(tmp_path, 30)
     payload = parse_metric_payload("AAA", FINNHUB, "2026-10-22")
-    out = catalog.compute(["AAA"], [{"name": n} for n in ("net_payout_yield_ttm", "payout_coverage", "share_count_change", "dilution_current")], bars, {"AAA": payload}, {"AAA": apple_evidence}, TODAY)["AAA"]
+    out = catalog.compute(["AAA"], [{"name": n} for n in ("net_payout_yield_ttm", "payout_coverage", "share_count_change")], bars, {"AAA": payload}, {"AAA": apple_evidence}, TODAY)["AAA"]
     accession = apple_evidence["balance_sheet"]["source"]["accession"]
     assert out["net_payout_yield_ttm"]["value"] == pytest.approx((24701e6 + 3921e6) * 4 / 4.0e12)
     assert out["net_payout_yield_ttm"]["source"] == f"derived:filing:{accession}+finnhub_metric:2026-10-22"
     assert out["payout_coverage"]["source"] == f"filing:{accession}" and out["payout_coverage"]["value"] == pytest.approx(3921 / 42097)
-    assert out["dilution_current"]["value"] is False and out["share_count_change"]["value"] < 0
+    assert out["share_count_change"]["value"] < 0 and "dilution_current" not in catalog.METRIC_NAMES
     none = catalog.compute(["AAA"], [{"name": "payout_coverage"}, {"name": "net_payout_yield_ttm"}], bars, {}, {}, TODAY)["AAA"]
     assert none["payout_coverage"]["note"] == "no stored filings of AAA (fetch_filings has not been run for it)" and none["net_payout_yield_ttm"]["value"] is None
 
@@ -150,3 +150,26 @@ def test_finnhub_payload_parser_keeps_finnhubs_values_and_none_for_the_rest():
     m = parsed["metrics"]
     assert parsed["symbol"] == "AAA" and parsed["as_of"] == "2026-10-22" and list(m) == list(FINANCIAL_METRICS)
     assert m["pe_ratio"]["value"] == 12.3457 and m["market_cap"]["value"] == 2_500_000.0 and m["beta_provider"]["value"] is None and m["pb_ratio"]["value"] == 3.0 and m["eps"]["value"] is None
+
+
+def test_the_six_month_metrics_are_in_the_catalogue_and_computed_from_126_bars(tmp_path):
+    for name in ("sma_126", "high_126d", "low_126d"):
+        spec = catalog.METRICS[name]
+        assert (spec.group, spec.unit, spec.min_bars, spec.inputs) == ("price", "USD", 126, ("bars",))
+    names = [{"name": "sma_126"}, {"name": "high_126d"}, {"name": "low_126d"}]
+    short = catalog.compute(["AAA"], names, write_series(tmp_path / "short", 17), {}, {}, TODAY)["AAA"]
+    assert all(short[n]["value"] is None and short[n]["note"] == "needs 126 bars, 17 stored" for n in short)
+    out = catalog.compute(["AAA"], names, write_series(tmp_path / "long", 130), {}, {}, TODAY)["AAA"]   # closes 100.5 + i, highs 101.5 + i, lows 99 + i for i = 0..129
+    assert out["sma_126"]["value"] == pytest.approx(167.0) and out["high_126d"]["value"] == 230.5 and out["low_126d"]["value"] == 103.0
+    assert out["sma_126"]["window"] == "last 126 bars" and out["sma_126"]["source"].startswith("day_aggs:")
+
+
+def test_every_quantity_is_in_base_units_so_companies_compare_like_with_like():
+    """Money is in dollars and volume in shares, whatever a provider quotes (Finnhub quotes market cap and volume in millions): no unit of the catalogue is a scaled one, and the conversions that
+    exist are in `FINANCIAL_SCALE`."""
+    import re
+    from prometheus.agents.data_clerk import data_toolbox
+    for name, spec in catalog.METRICS.items():
+        assert not re.search(r"\b(?:M|K|B|millions?|thousands?|billions?)\b", spec.unit), f"{name} has the scaled unit {spec.unit!r}"
+    assert data_toolbox.FINANCIAL_SCALE == {"market_cap": 1_000_000, "adv_10d_provider": 1_000_000}
+    assert catalog.METRICS["market_cap"].unit == "USD" and catalog.METRICS["adv_10d_provider"].unit == "shares" and catalog.METRICS["adv_20d_dollars"].unit == "USD"

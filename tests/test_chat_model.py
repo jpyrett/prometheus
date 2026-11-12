@@ -34,7 +34,7 @@ def with_key(monkeypatch):
 def test_the_models_default_to_the_values_in_env_example():
     assert {role: chat.model_name(role) for role in chat.ROLES} == {
         "data_clerk": "openai/gpt-oss-120b", "fast": "qwen/qwen3-30b-a3b",
-        "advisor": "nvidia/nemotron-3-super-120b-a12b", "critic": "nvidia/nemotron-3-super-120b-a12b", "account_manager": "openai/gpt-oss-120b"}
+        "advisor": "nvidia/nemotron-3-super-120b-a12b", "critic": "z-ai/glm-5.3", "account_manager": "openai/gpt-oss-120b"}
 
 
 def test_the_defaults_match_the_env_example_file():
@@ -65,14 +65,14 @@ def test_the_chat_model_points_at_openrouter_with_the_roles_model(with_key):
     assert model.model_name == "openai/gpt-oss-120b" and model.temperature == 0.0
     assert model.openai_api_base == "https://openrouter.ai/api/v1"
     assert model.default_headers == {"HTTP-Referer": "http://localhost", "X-Title": "Prometheus"}
-    assert chat.get_chat_model("critic").model_name == "nvidia/nemotron-3-super-120b-a12b"
+    assert chat.get_chat_model("critic").model_name == "z-ai/glm-5.3"
     assert chat.get_chat_model(temperature=0.7).temperature == 0.7
 
 
 def test_an_explicit_model_id_overrides_the_role_and_an_unknown_role_is_still_refused(with_key):
     assert chat.get_chat_model("data_clerk", model="deepseek/deepseek-v4.1-flash-1017").model_name == "deepseek/deepseek-v4.1-flash-1017"
     assert chat.get_chat_model("critic", model="x/y").model_name == "x/y"
-    assert chat.get_chat_model("critic").model_name == "nvidia/nemotron-3-super-120b-a12b"  # without it the role decides
+    assert chat.get_chat_model("critic").model_name == "z-ai/glm-5.3"  # without it the role decides
     with pytest.raises(ValueError, match="unknown role"):
         chat.get_chat_model("trader", model="x/y")
 
@@ -138,3 +138,18 @@ def test_live_prints_the_reply_and_a_failure_names_the_kind_of_error_only(monkey
     assert chat.main(["--live", "hello"]) == 1
     captured = capsys.readouterr()
     assert "ERROR: the call failed (ConnectionError)" in captured.err and FAKE_KEY not in captured.err + captured.out
+
+
+def test_the_critic_is_a_different_model_from_a_different_producer_than_the_advisor():
+    advisor, critic = chat.model_name("advisor"), chat.model_name("critic")
+    assert critic == "z-ai/glm-5.3" and advisor.split("/")[0] != critic.split("/")[0] and critic.split("/")[0] != chat.model_name("data_clerk").split("/")[0]
+
+
+def test_the_critic_setting_overrides_the_default(with_key, monkeypatch):
+    monkeypatch.setenv("CRITIC_MODEL", "qwen/qwen3.8-2.4t-a95b")
+    assert chat.model_name("critic") == "qwen/qwen3.8-2.4t-a95b" and chat.get_chat_model("critic").model_name == "qwen/qwen3.8-2.4t-a95b"
+
+
+def test_the_client_timeout_is_60_seconds_unless_a_caller_asks_for_more(with_key):
+    assert chat.get_chat_model().request_timeout == 60
+    assert chat.get_chat_model("critic", timeout=240).request_timeout == 240

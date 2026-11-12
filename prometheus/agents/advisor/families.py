@@ -8,7 +8,8 @@ by the family's own formula, so that three of them do not count three times. The
     trend           momentum with a quality filter and an anti-chase rule (do not buy what already ran 15% in a month)
     event           a corporate event (guidance, buyback, ...) that the price has not fully reacted to yet
     reversion       a sound company that fell for a reason that is not about the company
-    capital_return  a company that gives money back (buybacks, dividends) without diluting its holders
+    capital_return  a company that gives money back (buybacks, dividends) and whose share count did not rise
+    conviction      news, performance, historical metrics and filings together favourable (the blend at least 0.30), no single strategy needed (Amendment 5)
     theme           Case 2 only: a company in the theme's basket that has lagged it
 
 WHAT A RESULT SAYS. `computable` is False when a REQUIRED number is missing: the family then says nothing and `missing` names what it needed (with 17 stored sessions `trend` needs
@@ -34,15 +35,17 @@ REQUIRED = {
     "trend": ("mom_12_1", "pct_of_52w_high", "above_sma_200", "ret_21d", "rsi_14", "atr_pct"),
     "event": ("atr_pct", "ret_1d", "volume_ratio_1d"),
     "reversion": ("ret_5d", "zscore_21d", "rsi_14", "atr_pct", "roe", "debt_to_equity", "current_ratio", "revenue_growth"),
-    "capital_return": ("earnings_yield", "debt_to_equity", "dilution_current"),
+    "capital_return": ("earnings_yield", "debt_to_equity"),
     "theme": ("ret_21d",),
+    "conviction": (),
 }
 OPTIONAL = {
-    "trend": ("residual_mom_12_1", "macd_hist", "adx_14", "obv_20d_change", "vol_63d_ann", "breakout_20d", "bollinger_pct_b"),
+    "trend": ("above_sma_50", "residual_mom_12_1", "macd_hist", "adx_14", "obv_20d_change", "vol_63d_ann", "breakout_20d", "bollinger_pct_b"),
     "event": ("gap_1d", "sue_4q", "eps_surprise_last", "market_cap"),
     "reversion": ("residual_5d", "sector_ret_5d", "spy_ret_5d", "above_sma_200", "above_sma_50", "bollinger_pct_b", "volume_ratio_1d", "gap_1d", "candle_reversal_1d", "stoch_k_14"),
     "capital_return": ("payout_coverage", "revenue_growth", "net_payout_yield_ttm", "share_count_change", "sbc_to_revenue", "market_cap", "cash_balance"),
     "theme": ("residual_21d", "volume_ratio_1d", "roe", "operating_margin"),
+    "conviction": ("rsi_14",),
 }
 ANY_OF = {"capital_return": ("share_count_change", "net_payout_yield_ttm")}   # at least one of these must be present
 EXTRA_REQUIRED = {"recent_bars": "dates the events and measures their reaction"}  # asked for every candidate (the Advisor times events with it), not a family's own input
@@ -61,7 +64,7 @@ class FamilyInput:
     today: date
     drop_cause: dict | None = None                  # {class, source, quote}: the model's checked explanation of a recent fall (reversion)
     recent_company_sources: int = 0                 # sources about this company in the last 5 bars (reversion: "no company-specific news" means it is sympathy)
-    current_dilution_ids: frozenset = frozenset()   # the ids of the filing-evidence items that show stock being issued NOW: a derived item (shares outstanding rose, proceeds from an issuance) or a passage of an 8-K. A passage of a 10-Q or 10-K is not one (see capital_return)
+    blend: dict | None = None                       # `blend.compute_blend` of this company: what the `conviction` family reads
     theme: dict | None = None                       # Case 2: {articles, positive, neutral, negative, article_share, basket_ret_21d: {symbol: value}}
     extra: dict = field(default_factory=dict)
 
@@ -115,19 +118,30 @@ def _fail(result: FamilyResult, failures: list[str]) -> FamilyResult:
 def trend(inp: FamilyInput) -> FamilyResult:
     """Momentum that is not chased. Pass when ALL: 12-1 momentum >= 15%, the price within 10% of its 52-week high, above the 200-day mean, NOT up more than 15% in the last 21 bars (the
     anti-chase rule), RSI under 75, residual momentum (against the sector) positive and %B at most 1.05 when they are known.
+    BREAKOUT PATH (Amendment 4): a stock above BOTH its 50- and 200-day means is in a confirmed uptrend, and then two rules relax: the 52-week-high proximity needs only 80% when the
+    12-1 momentum is at least 50% (a strong runner that is digesting its gains), and the anti-chase limit is 25% instead of 15%. RSI, %B and residual momentum still apply: they are what
+    stops a blow-off. The notes say when a relaxed rule was used.
     Score = 0.40 + 0.20 x clip(momentum / 50%) + 0.10 each for: MACD histogram positive, ADX >= 20, OBV rising, volatility under 35%. A missing optional input adds nothing and lowers completeness."""
     result, cfg = _start("trend", inp), inp.config.families.trend
     if not result.computable:
         return result
     mom, high, above, ret21, rsi = inp.v("mom_12_1"), inp.v("pct_of_52w_high"), inp.v("above_sma_200"), inp.v("ret_21d"), inp.v("rsi_14")
     residual, pct_b = inp.v("residual_mom_12_1"), inp.v("bollinger_pct_b")
+    uptrend = above is True and inp.v("above_sma_50") is True
+    runner = uptrend and mom >= cfg.breakout_min_mom_12_1
+    min_high = min(cfg.min_pct_of_52w_high, cfg.breakout_min_pct_of_52w_high) if runner else cfg.min_pct_of_52w_high
+    max_ret21 = max(cfg.max_ret_21d, cfg.max_ret_21d_uptrend) if uptrend else cfg.max_ret_21d
     failures = [msg for ok, msg in (
-        (mom >= cfg.min_mom_12_1, f"mom_12_1 {mom:.3f} is under {cfg.min_mom_12_1}"), (high >= cfg.min_pct_of_52w_high, f"pct_of_52w_high {high:.3f} is under {cfg.min_pct_of_52w_high}"),
-        (above is True, "the price is not above its 200-day mean"), (ret21 <= cfg.max_ret_21d, f"ret_21d {ret21:.3f} is over {cfg.max_ret_21d}: it already ran (anti-chase)"),
+        (mom >= cfg.min_mom_12_1, f"mom_12_1 {mom:.3f} is under {cfg.min_mom_12_1}"), (high >= min_high, f"pct_of_52w_high {high:.3f} is under {min_high}"),
+        (above is True, "the price is not above its 200-day mean"), (ret21 <= max_ret21, f"ret_21d {ret21:.3f} is over {max_ret21}: it already ran (anti-chase)"),
         (rsi < cfg.max_rsi, f"rsi_14 {rsi:.1f} is {cfg.max_rsi} or more"),
         (residual is None or residual > 0, f"residual_mom_12_1 {residual} is not above the sector's"), (pct_b is None or pct_b <= cfg.max_pct_b, f"bollinger_pct_b {pct_b} is over {cfg.max_pct_b}")) if not ok]
     if failures:
         return _fail(result, failures)
+    if high < cfg.min_pct_of_52w_high:
+        result.notes.append(f"breakout path: pct_of_52w_high {high:.3f} is under {cfg.min_pct_of_52w_high} but the stock is above its 50- and 200-day means with 12-1 momentum {mom:.3f}")
+    if ret21 > cfg.max_ret_21d:
+        result.notes.append(f"uptrend: ret_21d {ret21:.3f} is over {cfg.max_ret_21d} but under {cfg.max_ret_21d_uptrend} with the price above its 50- and 200-day means")
     macd, adx, obv, vol = inp.v("macd_hist"), inp.v("adx_14"), inp.v("obv_20d_change"), inp.v("vol_63d_ann")
     score = (cfg.base + cfg.w_mom * _clip(mom / cfg.mom_scale) + cfg.w_macd * (macd is not None and macd > 0) + cfg.w_adx * (adx is not None and adx >= cfg.adx_min)
              + cfg.w_obv * (obv is not None and obv > 0) + cfg.w_lowvol * (vol is not None and vol < cfg.lowvol))
@@ -237,23 +251,16 @@ def reversion(inp: FamilyInput) -> FamilyResult:
 # ---------------------------------------------------------------- capital_return
 
 def capital_return(inp: FamilyInput) -> FamilyResult:
-    """A company that returns cash and does not dilute. Pass when ALL: the net payout yield (buybacks + dividends - stock issued, over market cap) is at least 3% (or, when it cannot be
-    computed, the share count fell at least 0.5%); the share count did not rise; the company is not issuing stock now; debt to equity <= 2; earnings yield > 0; dividends are covered
+    """A company that returns cash. Pass when ALL: the net payout yield (buybacks + dividends - stock issued, over market cap) is at least 3% (or, when it cannot be
+    computed, the share count fell at least 0.5%); the share count did not rise; debt to equity <= 2; earnings yield > 0; dividends are covered
     (payout coverage < 1) and revenue is not falling more than 5%, when known.
     Score = 0.40 + 0.30 x clip(payout yield / 8%) + 0.10 if the share count fell more than 1% + 0.10 for a buyback authorization or dividend raise in the last 60 bars (halved when the
     authorization is larger than the company's cash) + 0.10 for revenue growth. Without the payout yield the 0.30 term is 0.15 if the share count fell more than 1%.
-    A company that IS issuing stock (dilution_current, or a verified bearish dilution item of its filings that shows stock being issued NOW: `current_dilution_ids`) is a BEARISH vote of this family,
-    score 0.6. A dilution PASSAGE of a 10-Q is not such an item: the real Procter & Gamble run showed the model citing "the diluted shares include the dilutive effect of stock options" (the earnings-per-share
-    note every 10-Q has) and flipping the family bearish; spec 8.6 says "a dilution E-item that passes the Advisor's check", and entry 51 narrows it as `dilution_current` is narrowed."""
+    Issuance is not a separate rule: `dilution_current` is not computed and does not vote (design choices entry 70). A rising share count is still `share_count_change`."""
     result, cfg = _start("capital_return", inp), inp.config.families.capital_return
     if not result.computable:
         return result
     npy, shares, growth = inp.v("net_payout_yield_ttm"), inp.v("share_count_change"), inp.v("revenue_growth")
-    dilution_items = [s for s in inp.signals if s.get("topic") == "dilution" and s.get("direction") == "bearish" and s.get("evidence_id") in inp.current_dilution_ids]
-    if inp.v("dilution_current") is True or dilution_items:
-        result.evidence_ids = [s.get("evidence_id") or f"[{s.get('source')}]" for s in dilution_items]
-        result.notes.append("issuing stock: " + ("dilution_current" if inp.v("dilution_current") is True else "a verified dilution item of the filings"))
-        return _finish(result, inp, cfg.bearish_score, "bearish", prior=cfg.prior_bearish)
     failures = []
     if npy is not None and npy < cfg.min_net_payout_yield:
         failures.append(f"net_payout_yield_ttm {npy:.4f} is under {cfg.min_net_payout_yield}")
@@ -336,7 +343,33 @@ def theme(inp: FamilyInput) -> FamilyResult:
     return _finish(result, inp, score, "bullish")
 
 
-EVALUATORS = {"trend": trend, "event": event, "reversion": reversion, "capital_return": capital_return, "theme": theme}
+# ---------------------------------------------------------------- conviction
+
+def conviction(inp: FamilyInput) -> FamilyResult:
+    """The blend as a strategy (Amendment 5): news, performance, historical metrics and filings together are favourable enough that no single strategy is needed. Pass when ALL: the blend (-1 to +1,
+    40% news and press releases, 30% performance, 20% historical, 10% filings) is at least 0.30 (a score of 65), at least 3 of its 4 parts have a value, the news part is not negative when it has
+    one, and RSI is under 75 when known. The score is fixed (0.5): the blend already multiplies every strategy's edge, so counting it again in the score would count it twice. Bullish only.
+    The edge is the prior (0.6%, borrowed from trend and unmeasured) x regime x 0.5 x quality, then scaled by the blend like any other."""
+    result, cfg = _start("conviction", inp), inp.config.families.conviction
+    blend = inp.blend
+    if blend is None:
+        result.computable = False
+        result.missing.append("blend")
+        return result
+    parts = [name for name, part in blend["components"].items() if part["available"]]
+    news = blend["components"]["news"]
+    failures = [msg for ok, msg in (
+        (blend["value"] >= cfg.min_blend, f"blend {blend['value']:+.3f} is under {cfg.min_blend}"),
+        (len(parts) >= cfg.min_parts, f"only {len(parts)} of 4 blend parts have a value ({', '.join(parts) or 'none'}); it needs {cfg.min_parts}"),
+        (not news["available"] or news["value"] >= cfg.min_news, f"the news part is {news['value']:+.3f}, under {cfg.min_news}"),
+        (inp.v("rsi_14") is None or inp.v("rsi_14") < cfg.max_rsi, f"rsi_14 {inp.v('rsi_14')} is {cfg.max_rsi} or more")) if not ok]
+    if failures:
+        return _fail(result, failures)
+    result.notes.append(f"blend {blend['value']:+.3f} (score {blend['score']}) from {', '.join(parts)}" + ("" if news["available"] else "; no news counted"))
+    return _finish(result, inp, cfg.score, "bullish")
+
+
+EVALUATORS = {"trend": trend, "event": event, "reversion": reversion, "capital_return": capital_return, "theme": theme, "conviction": conviction}
 
 
 def evaluate(family: str, inp: FamilyInput) -> FamilyResult:

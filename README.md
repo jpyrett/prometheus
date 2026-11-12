@@ -14,20 +14,21 @@ capstone/
 │   │   └── harness/        # How you run & drive the multi-agent loop
 │   ├── agents/             # Data Clerk, Advisor, Critic, Account Manager, Trader
 │   │   ├── data_clerk/     # data_clerk_agent.py (DataClerk: the LLM agent; `request_metrics` calculates numbers), data_toolbox.py (DataToolbox: plain Python, no LLM), bars.py / technicals.py / fundamentals.py / metrics_catalog.py (the numbers)
+│   │   ├── critic/         # critic.py (Critic: approve or deny each recommendation), review.py (its nine steps), integrity/recheck/evidence/timing/risk/value/scoring/report.py, config.py, record.py (design choices entries 56 to 59)
 │   │   ├── advisor/        # advisor.py (v0 `advise`: a score from checked quotes; v1 `generate_recommendations`: ranked, audited recommendations; recommend.py is its twelve steps, config/families/blend/gates/quality/ranking/trade_plan/events/thesis/record its parts; guide: design/week5_advisor_implementation.md)
-│   │   └── account_manager/ # account_manager.py (AccountManager: the LLM agent behind RaiseFunds, a Tree of Thought)
+│   │   └── account_manager/ # account_manager.py (AccountManager: the LLM agent behind RaiseFunds, a Tree of Thought; holds the user's profile), decisions.py (the Critic's verdicts become trade decisions: Ask or Auto)
 │   ├── mcp/                # Local FastMCP servers (tools / resources / prompts)
 │   ├── rag/                # Embeddings, vector store, retrieval
 │   ├── reasoning/          # raise_funds.py: the Tree of Thought for what to sell to buy a stock (a LangGraph; design/week4_tot_guide.md)
 │   ├── prompts/            # Prompt templates (per agent / use case)
 │   ├── langchain/          # LangChain pieces you port from labs
-│   ├── langgraph/          # desk.py: the top-level graph, account_manager -> data_clerk -> advisor (-> account_manager_funds with --raise-funds)
+│   ├── langgraph/          # desk.py: the top-level graph, account_manager -> data_clerk -> advisor (-> critic -> account_manager_decision with --critic; -> account_manager_funds with --raise-funds)
 │   ├── tools/              # Local Python tools (calc, sentiment, search, …)
 │   ├── models/             # OpenRouter client wiring + domain JSON schemas
 │   ├── memory/             # Short / long-term memory (later modules)
 │   ├── evals/              # Hallucination, brittleness, cost/quality/latency
-│   └── common/             # Shared non-agent helpers (work_order.py: the work order every agent reads)
-├── configs/                # Non-code config (portfolios/jacob_pyrett.json: the static sample portfolio; models, agent YAML, later)
+│   └── common/             # Shared non-agent helpers (work_order.py: the work order every agent reads; user_profile.py: risk tolerance and Ask/Auto; market_calendar.py: trading days and the trading window)
+├── configs/                # Non-code config (portfolios/ and profiles/jacob_pyrett.json: the static sample portfolio and user profile; advisor_v1.json, critic_v1.json: every threshold; market_calendar.json)
 ├── data/
 │   ├── samples/            # Small explainability samples for demos
 │   ├── raw/                # Downloaded / API dumps (local)
@@ -182,8 +183,8 @@ Suggested growth order (manual coding):
 |----------------------|------|
 | `agents/data_clerk/` Data Clerk | Retrieve / filter / aggregate; call tools. `data_clerk_agent.py` is the agent; `data_toolbox.py` is its toolbox. Built (search news, press releases and filings) |
 | `agents/advisor/` Advisor | Recommend opportunities; memory + tools. Version 0 (`advise`) and version 1 (`generate_recommendations`, week 5) built |
-| `agents/` Critic     | Reason / rank / approve or deny. Not built |
-| `agents/` Account Manager | Cash, T+1, positions, approve trades. Only the request half exists, as a node in `langgraph/desk.py` |
+| `agents/critic/` Critic | Approve or deny each recommendation (Critic v1, `design/critic_v1_final_spec.md`, entries 56 to 59): asks the Data Clerk again for the numbers, a quote and the sources and compares; judges risk against the user's profile, expiry (the market's trading window) and value (against the six-month average); one model call per recommendation (Z.ai GLM 5.3) that only labels quotes; a score from 0 to 100. Built |
+| `agents/account_manager/` Account Manager | Cash, T+1, positions, approve trades. RaiseFunds, the user's profile and `decide_trades` (the Critic's verdicts become permissions: Ask or Auto) are built; as nodes in `langgraph/desk.py` |
 | `agents/` Trader     | Paper trade / backtest; future Alpaca. Not built |
 
 ## Intentional non-goals for this scaffold

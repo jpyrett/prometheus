@@ -138,11 +138,11 @@ def test_a_missing_metric_is_left_out_not_counted_as_neutral():
     assert [p["metric"] for p in b["parts"]] == ["mom_12_1"] and b["value"] == 1.0
 
 
-def test_filings_count_payouts_the_share_count_dilution_and_cash_flow_and_a_good_state_of_a_warning_is_silence():
-    b = run(metrics=metrics_of(net_payout_yield_ttm=0.055, share_count_change=0.02, payout_coverage=1.2, dilution_current=False, cfo_negative_with_profit=False))["components"]["filings"]
-    assert {p["metric"]: p["value"] for p in b["parts"]} == {"net_payout_yield_ttm": 0.5, "share_count_change": -1.0, "payout_coverage": -1.0}     # no dilution and no cash-flow warning: no vote
-    bad = run(metrics=metrics_of(dilution_current=True, cfo_negative_with_profit=True))["components"]["filings"]
-    assert [p["value"] for p in bad["parts"]] == [-1.0, -1.0] and bad["value"] == -1.0
+def test_filings_count_payouts_the_share_count_and_cash_flow_and_a_good_state_of_a_warning_is_silence():
+    b = run(metrics=metrics_of(net_payout_yield_ttm=0.055, share_count_change=0.02, payout_coverage=1.2, cfo_negative_with_profit=False))["components"]["filings"]
+    assert {p["metric"]: p["value"] for p in b["parts"]} == {"net_payout_yield_ttm": 0.5, "share_count_change": -1.0, "payout_coverage": -1.0}     # no cash-flow warning: no vote
+    bad = run(metrics=metrics_of(cfo_negative_with_profit=True))["components"]["filings"]
+    assert [p["metric"] for p in bad["parts"]] == ["cfo_negative_with_profit"] and bad["value"] == -1.0
 
 
 def test_verified_filing_evidence_items_vote_in_the_filings_part():

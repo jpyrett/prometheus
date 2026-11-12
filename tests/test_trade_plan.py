@@ -95,7 +95,7 @@ def test_the_invalidation_rules_by_family():
     kinds = [(r["kind"], r["value"]) for r in p.invalidation]
     assert kinds[0] == ("price_below", p.stop_price) and kinds[1] == ("days_elapsed", 63) and kinds[2][0] == "event_class" and "guidance_cut" in kinds[2][1] and kinds[3] == ("metric_crossed", "below_sma_200")
     assert plan("reversion", horizon=10).invalidation[-1] == {"kind": "metric_crossed", "value": "rsi_14_above_70"}
-    assert plan("capital_return").invalidation[-1] == {"kind": "metric_crossed", "value": "dilution_current"}
+    assert len(plan("capital_return").invalidation) == 3 and plan("capital_return").invalidation[-1]["kind"] == "event_class"
     assert len(plan("event", horizon=40).invalidation) == 3
 
 

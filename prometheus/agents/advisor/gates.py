@@ -10,7 +10,7 @@ idea fails `liquidity` until more day files are synced: that is the honest answe
 
     liquidity   new ideas   ADV in dollars, the price, the spread (the spread when available: intraday quotes are not read in this build)
     freshness   all         the newest stored bar is within `max_bar_age_sessions` weekdays of today; the Finnhub figures are not older than `max_fundamentals_age_days`
-    red_flag    all         a going-concern, material-weakness or restatement event in the last 60 bars; stock being issued now; debt over 4x equity with a current ratio under 1;
+    red_flag    all         a going-concern, material-weakness or restatement event in the last 60 bars; debt over 4x equity with a current ratio under 1;
                             cash from operations negative while profit is positive. A HELD symbol that fails it is still reviewed (the holdings pass may say `reduce`)
     event_risk  all         the next earnings report is 3 days away or less; without the calendar, the last results press release is 85 to 95 days old (estimated, and the note says so).
                             It blocks every family EXCEPT `event` (an earnings event is what that family trades)
@@ -110,8 +110,6 @@ def run_gates(metrics: dict | None, events: list[dict], held: bool, today: date,
 
     # red flags
     flags = [f"{e['class']} {e['age_bars']} bars ago" for e in events if e.get("class") in RED_FLAG_EVENTS and e.get("age_bars") is not None and e["age_bars"] <= config.red_flag_event_bars]
-    if value(metrics, "dilution_current") is True:
-        flags.append("dilution_current")
     debt, current = value(metrics, "debt_to_equity"), value(metrics, "current_ratio")
     waived = negative_equity(metrics)
     if debt is not None and current is not None and debt > config.red_flag_debt_to_equity and current < config.red_flag_current_ratio and not waived:

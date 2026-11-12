@@ -10,7 +10,7 @@ from prometheus.agents.advisor.quality import quality_multiplier
 
 REV = dict(ret_5d=-0.09, zscore_21d=-2.5, rsi_14=28.0, atr_pct=0.02, roe=18.0, debt_to_equity=0.9, current_ratio=1.4, revenue_growth=6.0, residual_5d=-0.06, sector_ret_5d=-0.01, spy_ret_5d=0.0,
            above_sma_200=True, above_sma_50=True, bollinger_pct_b=-0.1, volume_ratio_1d=2.2, candle_reversal_1d=True)
-CR = dict(earnings_yield=0.04, debt_to_equity=0.9, dilution_current=False, net_payout_yield_ttm=0.05, share_count_change=-0.02, payout_coverage=0.6, revenue_growth=4.0, market_cap=300e9, cash_balance=10e9)
+CR = dict(earnings_yield=0.04, debt_to_equity=0.9, net_payout_yield_ttm=0.05, share_count_change=-0.02, payout_coverage=0.6, revenue_growth=4.0, market_cap=300e9, cash_balance=10e9)
 
 
 def run(family, metrics):
@@ -33,9 +33,8 @@ def test_high_debt_to_equity_with_a_weak_current_ratio_is_a_red_flag_unless_the_
 
 
 def test_the_other_red_flags_still_stop_a_company_with_negative_equity_and_the_note_keeps_both():
-    gate = red_flag(debt_to_equity=33.6, current_ratio=0.83, negative_equity=True, dilution_current=True)
-    assert not gate.passed and gate.value == ["dilution_current"] and gate.note == "dilution_current; " + gate_module.WAIVED_NOTE
-    assert red_flag(cfo_negative_with_profit=True, negative_equity=True).passed is False
+    gate = red_flag(debt_to_equity=33.6, current_ratio=0.83, negative_equity=True, cfo_negative_with_profit=True)
+    assert not gate.passed and gate.value == ["cfo_negative_with_profit"] and gate.note == "cfo_negative_with_profit; " + gate_module.WAIVED_NOTE
 
 
 # ---------------------------------------------------------------- the families
@@ -83,12 +82,12 @@ def test_the_debt_to_equity_haircut_is_skipped_with_the_reason_for_negative_equi
 
 # ---------------------------------------------------------------- the ranking: the least negative first
 
-def test_companies_are_ranked_by_excess_so_the_least_negative_is_first_and_a_waived_one_is_ranked_like_any_other():
+def test_companies_are_ranked_by_blend_then_edge_so_a_bearish_one_is_last_and_a_waived_one_is_ranked_like_any_other():
     a = scored(symbol="AAA", families=[fr_bearish(-0.002)])
     b = scored(symbol="BBB", families=[fr_bearish(-0.008)])
     c = scored(symbol="CCC", families=[])
     order = sorted([b, c, a], key=rk.sort_key)
-    assert [s.symbol for s in order] == ["CCC", "AAA", "BBB"] and order[0].excess == -0.002 and all(s.excess < 0 for s in order)       # no edge (the cost alone) beats a bearish edge, and -0.2% beats -0.8%
+    assert [s.symbol for s in order] == ["CCC", "AAA", "BBB"] and all(s.score == 50 for s in order)       # with no blend all tie on the blend: no edge beats a bearish edge, and a small bearish edge beats a larger one
 
 
 def fr_bearish(edge):

@@ -1,0 +1,11 @@
+{
+  "timezone": "America/New_York",
+  "pre_market_open": "04:00",
+  "regular_open": "09:30",
+  "regular_close": "16:00",
+  "after_hours_close": "20:00",
+  "early_close": "13:00",
+  "after_hours_before_closed_day": false,
+  "early_close_dates": ["2026-11-27", "2026-12-24", "2027-11-26", "2028-07-03", "2028-11-24"],
+  "extra_closed_dates": {}
+}

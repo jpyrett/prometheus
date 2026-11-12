@@ -3731,3 +3731,14 @@ October 22, 2026 | /s/ MATTHEW W. JANZARUK
 Date | (Matthew W. Janzaruk)
 Senior Vice President - Chief Accounting Officer(Principal Accounting Officer)
 <<<END>>>
+<<<FILING>>>
+accession: 0000080424-26-000274
+symbol: PG
+form: 144
+filed: 2026-11-09
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/80424/0000080424-26-000274.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>

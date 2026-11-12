@@ -26,7 +26,10 @@ def test_every_indicator_is_none_below_its_min_bars_and_never_shortens_the_windo
              "adx_14": t.adx_14, "atr_14": t.atr_14, "atr_pct": t.atr_pct, "obv_20d_change": t.obv_20d_change, "stoch_k_14": t.stoch_k_14,
              "vol_21d_ann": lambda b: t.vol_ann(b, 21), "vol_63d_ann": lambda b: t.vol_ann(b, 63), "max_drawdown_63d": t.max_drawdown_63d,
              "beta_63d": lambda b: t.beta_and_corr(b, b)[0], "corr_63d_spy": lambda b: t.beta_and_corr(b, b)[1],
-             "adv_20d_dollars": t.adv_20d_dollars, "volume_ratio_1d": t.volume_ratio_1d}
+             "adv_20d_dollars": t.adv_20d_dollars, "volume_ratio_1d": t.volume_ratio_1d,
+             "sma_126": lambda b: t.sma(b, 126), "high_126d": t.high_126d, "low_126d": t.low_126d,
+             "sma_50_vs_200": t.sma_50_vs_200, "cross_50_200_20d": t.cross_50_200_20d, "structure_63d": t.structure_63d, "decline_from_peak_63d": t.decline_from_peak_63d,
+             "rebound_from_trough_63d": t.rebound_from_trough_63d, "sessions_since_trough_63d": t.sessions_since_trough_63d}
     assert set(calls) == set(t.MIN_BARS)  # a new indicator needs its MIN_BARS and a line here
     for name, fn in calls.items():
         answer = fn(bars)
@@ -57,6 +60,17 @@ def test_52_week_high_and_moving_averages():
     assert t.above_sma(make_bars([1, 2, 3, 4, 5]), 5) is True
     assert t.above_sma(make_bars([5, 4, 3, 2, 1]), 5) is False
     assert t.above_sma(make_bars([5, 4, 3, 2, 1]), 6) is None
+
+
+def test_the_six_month_average_high_and_low_use_exactly_126_bars():
+    bars = make_bars(ramp(200))            # closes 100..299; highs are close + 0.5, lows close - 0.5
+    window = ramp(200)[-126:]              # the last 126 closes: 174..299
+    assert t.sma(bars, 126) == pytest.approx(sum(window) / 126) == pytest.approx(236.5)
+    assert t.high_126d(bars) == 299.5 and t.low_126d(bars) == 173.5
+    # a spike older than 126 bars is out of the window, one inside it is in
+    spiked = make_bars(ramp(200), highs=[500.0 if i == 60 else 100 + i + 0.5 for i in range(200)], lows=[1.0 if i == 190 else 100 + i - 0.5 for i in range(200)])
+    assert t.high_126d(spiked) == 299.5 and t.low_126d(spiked) == 1.0
+    assert t.high_126d(make_bars(ramp(125))) is None and t.low_126d(make_bars(ramp(125))) is None and t.sma(make_bars(ramp(125)), 126) is None
 
 
 def test_breakout_gap_and_reversal_candle():
@@ -164,3 +178,66 @@ def test_beta_matches_series_by_date():
     own = [b for i, b in enumerate(make_bars([50.0 + 0.5 * i + (i % 4) / 2 for i in range(80)])) if i != 40]
     beta, corr = t.beta_and_corr(own, market)
     assert beta is not None and corr is not None and -1.0 <= corr <= 1.0
+
+
+# ---------------------------------------------------------------- chart patterns the Critic reads (Critic v1 Amendment 1)
+
+def _above(closes, end):
+    """The reference: is the 50-day mean over the 200-day mean at the bar closes[end - 1]? Plain sums, written apart from the indicator."""
+    return sum(closes[end - 50:end]) / 50 > sum(closes[end - 200:end]) / 200
+
+
+def test_the_50_day_mean_against_the_200_day_mean():
+    assert t.sma_50_vs_200(make_bars(ramp(199))) is None
+    assert t.sma_50_vs_200(make_bars(ramp(200))) == pytest.approx(274.5 / 199.5 - 1)          # means of 250..299 and 100..299
+    assert t.sma_50_vs_200(make_bars(ramp(200, 300.0, -1.0))) < 0                             # a falling series is on the death side
+    assert t.sma_50_vs_200(make_bars([100.0] * 200)) == 0.0
+
+
+def test_a_golden_cross_is_found_with_its_age_and_not_when_older_than_twenty_sessions():
+    assert t.cross_50_200_20d(make_bars([100.0] * 219)) is None                               # 220 bars needed: the means of the bar before the oldest one in the window
+    jump = [100.0] * 245 + [200.0] * 5                                                         # both means are 100 (equal, so not above) until the jump bar, 5th from the end
+    assert t.cross_50_200_20d(make_bars(jump)) == 5
+    assert t.cross_50_200_20d(make_bars([100.0] * 249 + [200.0])) == 1                        # the latest bar crossed
+    assert t.cross_50_200_20d(make_bars([100.0] * 230 + [200.0] * 20)) == 20                  # the oldest bar the window looks at
+    assert t.cross_50_200_20d(make_bars([100.0] * 229 + [200.0] * 21)) == 0                   # one session older: out of the window
+    assert t.cross_50_200_20d(make_bars(ramp(250))) == 0                                       # above all along: no crossing
+    assert t.cross_50_200_20d(make_bars([100.0] * 250)) == 0
+
+
+def test_a_death_cross_is_negative_and_both_agree_with_a_plain_reference():
+    closes = [100.0] * 100 + [200.0] * 100 + [100.0] * 30                                      # the 50-day mean falls under the 200-day mean about 25 sessions into the drop
+    for n in range(220, len(closes) + 1):
+        series, expected = closes[:n], 0
+        for age in range(1, 21):
+            end = len(series) - (age - 1)
+            if _above(series, end) != _above(series, end - 1):
+                expected = age if _above(series, end) else -age
+                break
+        assert t.cross_50_200_20d(make_bars(series)) == expected, n
+    found = {t.cross_50_200_20d(make_bars(closes[:n])) for n in range(220, len(closes) + 1)}
+    assert any(x < 0 for x in found) and 0 in found                                           # at least one length shows a death cross, and some show none
+
+
+def test_the_structure_of_63_sessions_is_up_down_or_mixed():
+    assert t.structure_63d(make_bars(ramp(62))) is None
+    assert t.structure_63d(make_bars(ramp(63))) == "up"                                        # highs and lows rise window to window
+    assert t.structure_63d(make_bars(ramp(63, 200.0, -1.0))) == "down"
+    assert t.structure_63d(make_bars([100.0] * 63)) == "mixed"                                 # equal is not rising
+    assert t.structure_63d(make_bars(ramp(42) + ramp(21, 141.0, -1.0))) == "mixed"            # rose, then fell: the last window's high is lower, its low is lower, the middle's higher
+    assert t.structure_63d(make_bars(ramp(63), lows=[50.0 if i == 62 else 100 + i - 0.5 for i in range(63)])) == "mixed"   # higher highs but a lower low
+
+
+def test_decline_from_the_peak_the_rebound_and_how_long_ago_the_trough_was():
+    assert t.decline_from_peak_63d(make_bars(ramp(62))) is None and t.rebound_from_trough_63d(make_bars(ramp(62))) is None and t.sessions_since_trough_63d(make_bars(ramp(62))) is None
+    closes = [100.0] * 20 + [150.0, 140.0, 120.0, 100.0, 90.0] + [99.0] * 38                  # peak 150 at index 20, the lowest close after it 90 at index 24
+    bars = make_bars(closes)
+    assert t.decline_from_peak_63d(bars) == pytest.approx(90 / 150 - 1)
+    assert t.rebound_from_trough_63d(bars) == pytest.approx(99 / 90 - 1)
+    assert t.sessions_since_trough_63d(bars) == 62 - 24
+    tied = make_bars([150.0] + [90.0, 100.0, 90.0] + [95.0] * 59)                              # a tied peak is the first, a tied trough the latest
+    assert t.sessions_since_trough_63d(tied) == 62 - 3 and t.rebound_from_trough_63d(tied) == pytest.approx(95 / 90 - 1)
+    rising = make_bars(ramp(63))                                                               # the peak is the latest bar: nothing fell
+    assert (t.decline_from_peak_63d(rising), t.rebound_from_trough_63d(rising), t.sessions_since_trough_63d(rising)) == (0.0, 0.0, 0)
+    assert t.decline_from_peak_63d(make_bars([100.0] * 63)) == 0.0                              # all equal: the peak is the first bar, the trough the latest, and nothing fell
+    assert t.sessions_since_trough_63d(make_bars([100.0] * 63)) == 0

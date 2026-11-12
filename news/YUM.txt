@@ -1933,3 +1933,283 @@ Yum Brands reported Q3 2026 revenue of $2.05 billion, up 3.8% YoY but missing co
 <<<INSIGHTS>>>
 YUM | negative | Despite beating EPS expectations, Yum missed revenue consensus estimates and received a Zacks Rank #5 (Strong Sell) rating, indicating expected underperformance relative to the broader market. Several divisional revenues fell short of analyst estimates, and franchise contribution revenues declined year-over-year, suggesting underlying operational challenges despite modest top-line growth.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739270
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:10:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d980bc05c7ae13a7027958c8b23a6ff82853d78b6f16b12a6cefaacf264424f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Can Chipotle Stock Hit $54?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692890
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:28:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba1a5d5ad05c3e217d1270dafe354c2767bc5f0ff1028a9b7061279855c9e5ba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: KFC, Taco Bell Puerto Rico franchisee files bankruptcy
+<<<SUMMARY>>>
+Encanto Restaurants’ filing came just three days after parent company Yum Brands ended its longstanding relationship with the operator.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691815
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=740d1868776c3266c781791e8ce7a91b418a9aba4e2080f0b582c0fc88fb4c39
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: KFC's "Finger Lickin' Fan Fest"* Gives Rewards Members 2X Points and More Ways to Score Free Food
+<<<SUMMARY>>>
+KFC is giving its most loyal fans more to love this November with Finger Lickin' Fan Fest, a limited-time celebration packed with even more ways for KFC Rewards members to get rewarded.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690452
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:31:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b416aa3bf2265ece14ed4a412406b67d79483c53ddf139bc753d124f9cc12b95
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: What Is Next For McDonald's Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691816
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=70753dd83ef36fca600fb4675863de01984b9d80a0e56ce6f0e8e0b2ed8993d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Taco Bell Put AI in 900 Drive-Thrus — Here’s What Happened to Sales
+<<<SUMMARY>>>
+Customers are happier and spending a bit more with AI taking their orders. KFC kitchens are getting a tech upgrade too.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143664349
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T04:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20c72893fb2d4438d40fded7f79d8546d8c90c83057152b7fbca62b451553f3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Chart of the Day: Yum China Offers Fresh Evidence to Stay Bullish on Region
+<<<SUMMARY>>>
+Yum China stock is riding a seven-session winning streak and advanced 9% last week on its heaviest weekly volume since May 2025.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143672070
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T02:45:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=2223f7a7261f97ea5d132a547758c7668f22a8712047fa6fc79504eba2ba1349
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1498123628/image_1498123628.jpg?io=getty-c-og
+category: company
+tickers: YUM
+keywords: 
+headline: Earnings Breadth Hits Near-Record Highs, But Cracks Emerge At The Margins
+<<<SUMMARY>>>
+Nearly 2-to-1 EPS increases vs. decreases thus far in Q3, with 63% of reporting companies topping their prior EPS print, well above the 54% historical baseline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659947
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T18:03:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a69edb33d2d2ed79c6dc000d57ab4cbe4afdf2d8933e984e1ae75e395662aca4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: MCD Stock Outlook: Wall Street Eyes a Potential Upside Breakout After Q3 Results
+<<<SUMMARY>>>
+McDonald's stock bounced hard after earnings, yet U.S. guest counts are still sliding and revenue missed again. One variable could decide whether the rally runs or stalls, and it starts with a cheap bundle being tested in 1,900 restaurants.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642790
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T21:09:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0f321bec1532f1fccab7cd528ff458076a87dbe677110b59e82d2d52892d33f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: AI is changing the KFC and Taco Bell experience for customers
+<<<SUMMARY>>>
+From who takes your order to how fast your food arrives, AI is reshaping two of America’s biggest fast-food chains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642726
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T21:07:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e29f95904ef600207e861f089e851292c4d0e449228060f5ccb54f3c9c13e205
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: McDonald’s Just Became a Dividend King. Is It Still a Buy for Retirement?
+<<<SUMMARY>>>
+Fifty years of dividend hikes sound bulletproof, but McDonald's U.S. traffic is sliding while debt costs climb. The cash coverage numbers and one balance sheet cushion reveal how much room retirees really have.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590851
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:46:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1aa5592b4ed4d21ce9bd5d1e68039b9bf6157ed43724ab3da92cf2a47397cc76
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: KFC makes surprising Pepsi decision after Coca-Cola switch
+<<<SUMMARY>>>
+The agreement covers Australia, India, Spain, Germany, France, the Netherlands, Belgium and the United Kingdom.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584745
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:21:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d6b28e1211d7730959b5212566256fac1558693e8e78c15f6d4d08d2ad23e282
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Can Yum China Afford Its Spending Bill?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143586577
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:08:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e74a94b96fc9c35e563d326b17d2bfb71cb716024673fc078321e8e418254ba6
+image_url: 
+category: company
+tickers: YUM
+keywords: 
+headline: Guggenheim Maintains Buy on Yum Brands, Raises Price Target to $180
+<<<SUMMARY>>>
+Guggenheim  analyst Gregory Francfort   maintains Yum Brands (NYSE:YUM) with a Buy and raises the price target from $155 to $180.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748382
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=658fc1cf8d301f3a9547e7f2334dbddb1b02ed28aa1ecbc74ac6bb8f52fd2b03
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Pizza franchisee files Chapter 11 bankruptcy, chain cut 239 units
+<<<SUMMARY>>>
+Papa John’s pizza chain will close hundreds of locations by the end of 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>

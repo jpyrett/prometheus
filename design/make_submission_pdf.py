@@ -2,8 +2,10 @@
 
     python design/make_submission_pdf.py        # week 4
     python design/make_submission_pdf.py 3      # week 3
+    python design/make_submission_pdf.py 5 week5_submission_jpyrett.pdf   # week 5, named output
 
 Markdown (tables, fenced code) -> HTML -> PDF with WeasyPrint. Letter paper, 0.75 inch margins. Edit the markdown, run this again.
+Anything before the first line starting with "# " is left out (week 5 keeps the assignment text above its submission).
 """
 import sys
 from pathlib import Path
@@ -13,7 +15,8 @@ from weasyprint import HTML
 
 HERE = Path(__file__).parent
 WEEK = sys.argv[1] if len(sys.argv) > 1 else "4"
-SOURCE, TARGET = HERE / f"week{WEEK}_submission.md", HERE / f"week{WEEK}_submission.pdf"
+SOURCE = HERE / f"week{WEEK}_submission.md"
+TARGET = HERE / (sys.argv[2] if len(sys.argv) > 2 else f"week{WEEK}_submission.pdf")
 
 CSS = """
 @page { size: Letter; margin: 0.75in 0.8in 0.8in 0.8in;
@@ -40,7 +43,9 @@ img { max-width: 100%; display: block; margin: 6pt auto 8pt auto; }
 
 
 def main() -> None:
-    body = markdown.markdown(SOURCE.read_text(encoding="utf-8"), extensions=["tables", "fenced_code", "sane_lists"])
+    text = SOURCE.read_text(encoding="utf-8")
+    text = text[text.index("# "):] if text.startswith("# ") else text[text.index("\n# ") + 1:]
+    body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists"])
     html = f"<html><head><meta charset='utf-8'><title>Prometheus Capstone: Week {WEEK} Submission</title><style>{CSS.replace('WEEK_NUMBER', WEEK)}</style></head><body>{body}</body></html>"
     HTML(string=html, base_url=str(HERE)).write_pdf(TARGET)
     print(f"wrote {TARGET}")

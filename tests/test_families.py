@@ -12,7 +12,7 @@ from prometheus.agents.advisor.record import Haircut, Quality
 
 # ---------------------------------------------------------------- trend
 
-TREND = dict(mom_12_1=0.30, pct_of_52w_high=0.95, above_sma_200=True, ret_21d=0.05, rsi_14=60.0, atr_pct=0.02, residual_mom_12_1=0.05, macd_hist=0.4, adx_14=25.0, obv_20d_change=0.2,
+TREND = dict(mom_12_1=0.30, pct_of_52w_high=0.95, above_sma_200=True, above_sma_50=True, ret_21d=0.05, rsi_14=60.0, atr_pct=0.02, residual_mom_12_1=0.05, macd_hist=0.4, adx_14=25.0, obv_20d_change=0.2,
              vol_63d_ann=0.30, bollinger_pct_b=0.9, breakout_20d=True)
 
 
@@ -30,12 +30,12 @@ def test_trend_passes_and_the_score_is_the_formula():
 
 def test_a_missing_optional_input_adds_nothing_and_lowers_completeness():
     r = run("trend", {**TREND, "macd_hist": None, "adx_14": None})
-    assert r.passed and r.score == pytest.approx(0.40 + 0.12 + 0.2) and r.completeness == pytest.approx(5 / 7, abs=1e-4)
+    assert r.passed and r.score == pytest.approx(0.40 + 0.12 + 0.2) and r.completeness == pytest.approx(6 / 8, abs=1e-4)
 
 
 @pytest.mark.parametrize("override, message", [
     (dict(mom_12_1=0.149), "mom_12_1"), (dict(pct_of_52w_high=0.899), "pct_of_52w_high"), (dict(above_sma_200=False), "200-day mean"),
-    (dict(ret_21d=0.151), "anti-chase"), (dict(rsi_14=75.0), "rsi_14"), (dict(residual_mom_12_1=-0.01), "residual_mom_12_1"), (dict(bollinger_pct_b=1.06), "bollinger_pct_b"),
+    (dict(ret_21d=0.151, above_sma_50=False), "anti-chase"), (dict(rsi_14=75.0), "rsi_14"), (dict(residual_mom_12_1=-0.01), "residual_mom_12_1"), (dict(bollinger_pct_b=1.06), "bollinger_pct_b"),
 ])
 def test_each_trend_rule_fails_on_its_own_and_says_which(override, message):
     r = run("trend", {**TREND, **override})
@@ -47,8 +47,23 @@ def test_trend_at_the_thresholds_passes():
 
 
 def test_the_anti_chase_case_a_stock_that_ran_25_percent_in_a_month_is_not_a_trend_buy():
-    r = run("trend", {**TREND, "ret_21d": 0.25, "mom_12_1": 0.80})
+    r = run("trend", {**TREND, "ret_21d": 0.25, "mom_12_1": 0.80, "above_sma_50": False})
     assert not r.passed and "already ran" in r.notes[0]
+    r = run("trend", {**TREND, "ret_21d": 0.26, "mom_12_1": 0.80})
+    assert not r.passed and "over 0.25" in r.notes[0]                                    # even in an uptrend there is a limit
+
+
+def test_the_breakout_path_for_a_strong_runner_above_its_50_and_200_day_means():
+    """Amendment 4: Moderna on 2026-11-11 (12-1 momentum 757%, 88.6% of its high, up 15.001% in a month, RSI 58.8, above both means) is a trend candidate; a weaker case is not."""
+    moderna = run("trend", {**TREND, "mom_12_1": 7.57, "pct_of_52w_high": 0.886, "ret_21d": 0.15001, "rsi_14": 58.8})
+    assert moderna.passed and moderna.direction == "bullish" and any("breakout path" in n for n in moderna.notes) and any("uptrend" in n for n in moderna.notes)
+    assert run("trend", {**TREND, "mom_12_1": 0.50, "pct_of_52w_high": 0.80, "ret_21d": 0.25}).passed                   # at the limits
+    assert not run("trend", {**TREND, "mom_12_1": 0.50, "pct_of_52w_high": 0.799}).passed                             # too far under the high
+    assert not run("trend", {**TREND, "mom_12_1": 0.49, "pct_of_52w_high": 0.85}).passed                              # not strong enough to be a runner
+    assert not run("trend", {**TREND, "mom_12_1": 0.80, "pct_of_52w_high": 0.85, "above_sma_50": False}).passed       # under its 50-day mean: no breakout path
+    assert not run("trend", {**TREND, "mom_12_1": 0.80, "pct_of_52w_high": 0.85, "above_sma_50": None}).passed        # unknown 50-day mean: the old rules
+    assert not run("trend", {**TREND, "mom_12_1": 7.57, "pct_of_52w_high": 0.886, "rsi_14": 75.0}).passed             # a blow-off is still stopped by the RSI
+    assert run("trend", TREND).notes == []                                                                          # an ordinary pass has no relaxed rule to note
 
 
 def test_trend_with_17_bars_is_not_computable_and_names_what_it_needed():
@@ -195,7 +210,7 @@ def test_reversion_with_17_bars_is_not_computable():
 
 # ---------------------------------------------------------------- capital_return
 
-CR = dict(earnings_yield=0.04, debt_to_equity=0.9, dilution_current=False, net_payout_yield_ttm=0.05, share_count_change=-0.02, payout_coverage=0.6, revenue_growth=4.0, market_cap=300e9, cash_balance=10e9)
+CR = dict(earnings_yield=0.04, debt_to_equity=0.9, net_payout_yield_ttm=0.05, share_count_change=-0.02, payout_coverage=0.6, revenue_growth=4.0, market_cap=300e9, cash_balance=10e9)
 
 
 def test_capital_return_passes_and_scores_by_the_formula():
@@ -224,13 +239,12 @@ def test_it_needs_the_payout_yield_or_the_share_count():
     assert not r.computable and r.missing == ["share_count_change or net_payout_yield_ttm"]
 
 
-def test_a_company_issuing_stock_is_a_bearish_vote():
-    r = run("capital_return", {**CR, "dilution_current": True})
-    assert r.passed and r.direction == "bearish" and r.score == 0.6 and r.prior_20d == -0.003 and r.edge_20d == pytest.approx(-0.003 * 0.6)
+def test_a_dilution_figure_does_not_vote():
+    """Issuance is not a strategy rule (entry 70). A bearish dilution item leaves capital_return bullish; a rising share count is still its own failure."""
     item = {"topic": "dilution", "direction": "bearish", "verified": True, "counted": True, "evidence_id": "E2"}
-    assert run("capital_return", CR, signals=[item], current_dilution_ids=frozenset({"E2"})).direction == "bearish"          # an item that shows stock being issued now
-    note = run("capital_return", CR, signals=[item])                                                                          # a passage of a 10-Q (the earnings-per-share note): not an issuance
-    assert note.direction == "bullish" and note.passed
+    base = run("capital_return", CR)
+    cited = run("capital_return", CR, signals=[item])
+    assert cited.passed and cited.direction == "bullish" and cited.score == base.score and cited.edge_20d == base.edge_20d
 
 
 def test_a_buyback_authorization_adds_a_tenth_and_is_halved_when_it_exceeds_the_cash():
@@ -294,4 +308,43 @@ def test_required_metrics_cover_every_family_and_the_event_timing():
 
 
 def test_every_family_is_registered_and_the_config_has_a_section_for_each():
-    assert set(fam.EVALUATORS) == set(fam.FAMILIES) == {"trend", "event", "reversion", "capital_return", "theme"} and set(CONFIG.regime.multipliers) == set(fam.FAMILIES)
+    assert set(fam.EVALUATORS) == set(fam.FAMILIES) == {"trend", "event", "reversion", "capital_return", "theme", "conviction"} and set(CONFIG.regime.multipliers) == set(fam.FAMILIES)
+
+
+# ---------------------------------------------------------------- conviction (Advisor v1 Amendment 5)
+
+def blend_of(value=0.40, news=0.2, performance=0.5, historical=0.4, filings=0.3, missing=()):
+    """A blend as `compute_blend` writes it: the four parts, each with a value and whether it has one (`missing` names the parts with none). INPUTS for the rule, not market data."""
+    values = {"news": news, "performance": performance, "historical": historical, "filings": filings}
+    return {"value": value, "score": round(50 + 50 * value), "weights": {},
+            "components": {n: {"weight": 0.25, "value": 0.0 if n in missing else v, "available": n not in missing, "n": 1, "contribution": 0.0, "parts": []} for n, v in values.items()}}
+
+
+def conviction(blend, **metrics):
+    return fam.evaluate("conviction", family_input(metrics_of(**{"rsi_14": 60.0, **metrics}), blend=blend))
+
+
+def test_conviction_passes_on_a_favourable_blend_with_a_fixed_score_and_the_formula_edge():
+    r = conviction(blend_of())
+    assert r.computable and r.passed and r.direction == "bullish" and r.score == 0.5 and r.horizon_bars == 40 and r.basis == "prior" and r.basis_ref == "borrowed_from_trend"
+    assert r.edge_20d == pytest.approx(0.006 * 1.0 * 0.5 * 1.0) and r.features_used == {"rsi_14": 60.0}                # prior x regime x score x quality
+    assert "blend +0.400 (score 70) from news, performance, historical, filings" in r.notes[0]
+    assert conviction(blend_of(value=0.99)).score == 0.5                                                                  # a better blend is not counted twice in the score: it scales the edge later
+
+
+def test_conviction_at_its_bounds():
+    assert conviction(blend_of(value=0.30)).passed and not conviction(blend_of(value=0.299)).passed
+    three = blend_of(missing=("news",))                                                                                    # news has nothing to say: three parts are enough
+    assert conviction(three).passed and "no news counted" in conviction(three).notes[0]
+    two = conviction(blend_of(missing=("news", "filings")))
+    assert not two.passed and "only 2 of 4 blend parts" in two.notes[0]
+    assert conviction(blend_of(news=0.0)).passed and not conviction(blend_of(news=-0.01)).passed                           # the news part must not be negative
+    assert conviction(blend_of(), rsi_14=74.99).passed and not conviction(blend_of(), rsi_14=75.0).passed                 # a blow-off is not bought
+    assert conviction(blend_of(), rsi_14=None).passed                                                                      # RSI unknown: no rule
+
+
+def test_conviction_needs_a_blend_and_the_regime_scales_it():
+    r = fam.evaluate("conviction", family_input(metrics_of(rsi_14=60.0)))
+    assert not r.computable and r.missing == ["blend"] and not r.passed
+    stress = fam.evaluate("conviction", family_input(metrics_of(rsi_14=60.0), blend=blend_of(), regime="stress"))
+    assert stress.passed and stress.regime_multiplier == 0.5 and stress.edge_20d == pytest.approx(0.006 * 0.5 * 0.5)

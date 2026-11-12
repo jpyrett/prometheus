@@ -13,7 +13,7 @@ Plain Python, no model, no network. Four parts, each -1 (all bearish) to +1 (all
     performance   the stock's own prices: the measures of `config.blend.measures` in the group `performance` (12-1 month momentum, one-month return, the distance from the 52-week high,
                   the 200-day mean).
     historical    the Finnhub history of the company (earnings yield, return on equity, revenue growth, margin, current ratio, debt to equity: not for negative equity, entry 54).
-    filings       the SEC filings: the measures of the group `filings` (net payout yield, share count change, payout coverage, dilution, cash flow against profit), plus the verified
+    filings       the SEC filings: the measures of the group `filings` (net payout yield, share count change, payout coverage, cash flow against profit), plus the verified
                   filing-evidence items and filing-index events (Form 144, Schedule 13D) as one vote each.
 
 A measure is `clip((x - neutral) / span, -1, 1)` (a negative span: lower is better) or, for a yes/no metric, +1 when it equals `good` and -1 when it does not (`only_bad`: the good state is

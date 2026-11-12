@@ -50,77 +50,65 @@ def blend_of(value):
     return {"value": value, "score": round(50 + 50 * value)}
 
 
-def test_excess_after_cost_is_the_formula_and_the_stance_follows_it():
+def test_the_stance_follows_the_strategy_the_confidence_follows_the_blend_and_the_score_is_the_blend():
     s = scored(families=[fr("trend", edge=0.006)])
-    # no blend (neutral, 0): the scale factor is 1.0; cost = 0.0010 (the default half spread) + 0.0010
-    assert s.confidence == 0.5 and s.scale_factor == 1.0 and s.cost_pct == pytest.approx(0.002) and s.excess == pytest.approx(0.006 - 0.002) and s.stance == "bullish" and s.score == round(50 + 50 * 0.004 / 0.03)
+    assert s.confidence == 0.5 and s.stance == "bullish" and s.score == 50                      # no blend: neutral, 0
     good = scored(families=[fr("trend", edge=0.006)], blend=blend_of(0.6))
-    assert good.scale_factor == pytest.approx(1.3) and good.confidence == pytest.approx(0.8) and good.excess == pytest.approx(0.006 * 1.3 - 0.002)
     bad = scored(families=[fr("trend", edge=0.006)], blend=blend_of(-0.6))
-    assert bad.scale_factor == pytest.approx(0.7) and bad.excess == pytest.approx(0.006 * 0.7 - 0.002)
-    assert good.excess > s.excess > bad.excess                                                         # good news, prices and numbers raise the excess; bad ones lower it
+    assert good.confidence == pytest.approx(0.8) and bad.confidence == pytest.approx(0.2)
+    assert (good.score, bad.score) == (80, 20) and good.stance == s.stance == bad.stance == "bullish"  # the blend is the score; a passed strategy is what makes a name bullish
 
 
-def test_a_bearish_edge_is_made_larger_by_a_bearish_blend_and_smaller_by_a_bullish_one():
-    base = scored(families=[fr("event", "bearish", edge=-0.008)])
+def test_a_bearish_edge_has_the_confidence_of_the_bearish_side_of_the_blend():
     worse = scored(families=[fr("event", "bearish", edge=-0.008)], blend=blend_of(-0.6))
     better = scored(families=[fr("event", "bearish", edge=-0.008)], blend=blend_of(0.6))
-    assert worse.scale_factor == pytest.approx(1.3) and better.scale_factor == pytest.approx(0.7)
-    assert worse.excess < base.excess < better.excess and worse.confidence == pytest.approx(0.8)      # a bearish blend is the confidence of a bearish composite
+    assert worse.confidence == pytest.approx(0.8) and better.confidence == pytest.approx(0.2)       # a bearish blend is the confidence of a bearish composite
+    assert not hasattr(worse, "excess") and not hasattr(worse, "cost_pct") and not hasattr(worse, "scale_factor")
 
 
-def test_the_blend_can_turn_a_thin_edge_into_a_recommendation_and_back():
-    thin = dict(families=[fr("trend", edge=0.0019)])                                                    # under the 0.20% cost on its own
-    assert scored(**thin).stance == "neutral" and scored(**thin, blend=blend_of(0.5)).stance == "bullish" and scored(**thin, blend=blend_of(-0.5)).stance == "neutral"
-    firm = dict(families=[fr("trend", edge=0.0030)])
-    assert scored(**firm).stance == "bullish" and scored(**firm, blend=blend_of(-0.8)).stance == "neutral"
+def test_a_thin_edge_is_a_recommendation_because_there_is_no_cost_hurdle_and_the_blend_only_ranks_it():
+    thin = dict(families=[fr("trend", edge=0.0019)])                                                    # under the old 0.20% cost hurdle on its own
+    assert scored(**thin).stance == "bullish" and scored(**thin, blend=blend_of(0.5)).stance == "bullish" and scored(**thin, blend=blend_of(-0.5)).stance == "bullish"
+    assert scored(**thin, blend=blend_of(0.5)).score == 75 and scored(**thin, blend=blend_of(-0.5)).score == 25
 
 
-def test_with_no_family_passed_the_blend_alone_sets_the_excess_and_the_stance_stays_neutral():
-    for value, excess in ((0.0, -0.002), (1.0, 0.001), (-1.0, -0.005)):          # blend x 0.003 (the smallest strategy prior) minus the 0.20% cost
+def test_with_no_family_passed_the_stance_stays_neutral_and_the_score_is_the_blend():
+    for value, score in ((0.0, 50), (1.0, 100), (-1.0, 0)):
         s = scored(families=[fr("trend", passed=False)], blend=blend_of(value))
-        assert s.composite is None and s.excess == pytest.approx(excess) and s.stance == "neutral" and s.stance_reason == "no family passed" and s.score == round(50 + 50 * max(-1, min(1, excess / 0.03)))
+        assert s.composite is None and s.stance == "neutral" and s.stance_reason == "no family passed" and s.score == score
 
 
-def test_an_edge_below_the_cost_is_neutral_and_says_so():
-    s = scored(families=[fr("trend", edge=0.0015)])
-    assert s.stance == "neutral" and s.stance_reason == "edge_below_cost" and s.excess < 0 and s.score < 50
+def test_an_edge_of_zero_is_neutral_and_says_so_and_any_edge_above_zero_is_bullish():
+    s = scored(families=[fr("trend", edge=0.0)])
+    assert s.stance == "neutral" and s.stance_reason == "no edge" and s.score == 50
+    assert scored(families=[fr("trend", edge=0.0001)]).stance == "bullish"
 
 
 def test_a_bearish_composite_is_bearish_and_uses_the_bearish_agreement():
     s = scored(families=[fr("event", "bearish", edge=-0.008)], votes=[("bearish", 1.0)] * 2)
-    assert s.stance == "bearish" and s.composite == -0.008 and s.agreement == pytest.approx(1 - 1 / 4) and s.score < 50   # two bearish news votes: bullish agreement (0+1)/(0+2+2) = 0.25, so the bearish one is 0.75
+    assert s.stance == "bearish" and s.composite == -0.008 and s.agreement == pytest.approx(1 - 1 / 4) and s.score == 50 and scored(families=[fr("event", "bearish", edge=-0.008)], blend=blend_of(-0.4)).score == 30   # two bearish news votes: bullish agreement (0+1)/(0+2+2) = 0.25, so the bearish one is 0.75
 
 
-def test_a_symbol_with_no_passed_family_has_no_edge_so_its_excess_is_minus_its_cost_and_its_score_is_just_under_50():
+def test_a_symbol_with_no_passed_family_has_no_edge_and_a_neutral_score_without_a_blend():
     s = scored(families=[fr("trend", passed=False)])
-    assert s.composite is None and s.excess == -s.cost_pct == -0.002 and s.score == 47 and s.stance == "neutral" and s.stance_reason == "no family passed"    # a number, so an industry can be ranked (entry 53)
+    assert s.composite is None and s.score == 50 and s.stance == "neutral" and s.stance_reason == "no family passed"    # a number, so an industry can be ranked (entry 53)
     blind = scored(families=[fr("trend", passed=False)], rank=False)
     blind.metrics = None
-    rk.rank_symbol(blind, "trend", CONFIG)
-    assert blind.excess is None and blind.score is None                                                                    # no metrics at all: nothing to score
+    rk.rank_symbol(blind)
+    assert blind.score is None                                                                    # no metrics at all: nothing to score
 
 
-def test_cost_uses_the_spread_when_known_and_doubles_in_stress():
-    spread = healthy()
-    spread["median_spread_bps_1d"] = metric(10.0)
-    assert rk.cost_of(spread, "trend", CONFIG) == pytest.approx(0.0005 + 0.001)
-    assert rk.cost_of(healthy(), "stress", CONFIG) == pytest.approx(0.004) and rk.cost_of(healthy(), "unknown", CONFIG) == pytest.approx(0.002)
-    stressed = scored(families=[fr("trend", edge=0.006)], regime="stress")
-    assert stressed.excess == pytest.approx(0.006 - 0.004)
-
-
-def test_the_v1_score_maps_the_excess_to_0_100_so_top_recommendation_keeps_working():
-    assert rk.v1_score(0.0, CONFIG) == 50 and rk.v1_score(0.03, CONFIG) == 100 and rk.v1_score(0.5, CONFIG) == 100 and rk.v1_score(-0.03, CONFIG) == 0 and rk.v1_score(None, CONFIG) is None
+def test_the_score_is_the_blend_on_0_to_100_so_top_recommendation_keeps_working():
+    assert rk.blend_score(scored(families=[fr()], blend=blend_of(0.0))) == 50 and rk.blend_score(scored(families=[fr()], blend=blend_of(1.0))) == 100
+    assert rk.blend_score(scored(families=[fr()], blend=blend_of(-1.0))) == 0 and rk.blend_score(scored(families=[fr()])) == 50
     from prometheus.agents.account_manager.account_manager import top_recommendation
     from prometheus.common.work_order import new_work_order
     order = new_work_order("x")
-    order.recommendations = [{"symbol": "LOW", "supported": True, "score": rk.v1_score(0.002, CONFIG)}, {"symbol": "HIGH", "supported": True, "score": rk.v1_score(0.02, CONFIG)},
-                             {"symbol": "NEG", "supported": True, "score": rk.v1_score(-0.01, CONFIG)}, {"symbol": "NONE", "supported": False, "score": None}]
+    order.recommendations = [{"symbol": "LOW", "supported": True, "score": 55}, {"symbol": "HIGH", "supported": True, "score": 85}, {"symbol": "NEG", "supported": True, "score": 30}, {"symbol": "NONE", "supported": False, "score": None}]
     assert top_recommendation(order) == "HIGH"
 
 
-def test_the_order_is_by_excess_then_fewer_haircuts_then_lower_volatility_then_the_symbol():
+def test_the_order_is_by_blend_then_edge_then_fewer_haircuts_then_lower_volatility_then_the_symbol():
     a = scored("BBB", [fr(edge=0.006)], metrics=healthy(vol_63d_ann=0.30))
     b = scored("AAA", [fr(edge=0.006)], metrics=healthy(vol_63d_ann=0.30))
     c = scored("CCC", [fr(edge=0.006)], metrics=healthy(vol_63d_ann=0.20))
@@ -128,6 +116,8 @@ def test_the_order_is_by_excess_then_fewer_haircuts_then_lower_volatility_then_t
     best = scored("EEE", [fr(edge=0.009)], metrics=healthy(vol_63d_ann=0.90))
     assert [s.symbol for s in sorted([a, b, c, d, best], key=rk.sort_key)] == ["EEE", "CCC", "AAA", "BBB", "DDD"]
     assert [s.symbol for s in sorted([d, c, b, a, best], key=rk.sort_key)] == ["EEE", "CCC", "AAA", "BBB", "DDD"]       # the same whatever order they arrive in
+    liked = scored("LLL", [fr(edge=0.003)], blend=blend_of(0.5))
+    assert sorted([best, liked], key=rk.sort_key)[0].symbol == "LLL"                                                    # a better blend ranks above a larger edge
 
 
 # ---------------------------------------------------------------- invalidation, cooldown, holdings
@@ -145,7 +135,7 @@ def test_invalidation_rules_fire_on_the_price_a_bearish_event_and_the_family_con
     assert rk.invalidation_fired(RULES, healthy(last_close=100.0), [{"class": "guidance_cut"}]) == ["event_class"]
     assert rk.invalidation_fired(RULES, healthy(last_close=100.0, above_sma_200=False), []) == ["metric_crossed:below_sma_200"]
     assert rk.invalidation_fired([{"kind": "metric_crossed", "value": "rsi_14_above_70"}], healthy(rsi_14=71.0), []) == ["metric_crossed:rsi_14_above_70"]
-    assert rk.invalidation_fired([{"kind": "metric_crossed", "value": "dilution_current"}], healthy(dilution_current=True), []) == ["metric_crossed:dilution_current"]
+    assert rk.invalidation_fired([{"kind": "metric_crossed", "value": "dilution_current"}], healthy(), []) == []          # an older record's issuance rule is not evaluated
 
 
 def test_the_cooldown_holds_until_the_time_stop_and_ends_when_an_invalidation_rule_fires():
@@ -165,7 +155,7 @@ def hold(s, records=(), oversized=False, after=0.05, floor=None):
 
 
 def test_the_holdings_pass_reduces_on_a_red_flag_a_bearish_event_an_invalidation_or_a_family_that_stopped_passing():
-    assert hold(scored(metrics=healthy(dilution_current=True), held=True))[0] == "reduce"
+    assert hold(scored(metrics=healthy(cfo_negative_with_profit=True), held=True))[0] == "reduce"
     action, reason = hold(scored(events=[{"class": "guidance_cut", "direction": "bearish", "age_bars": 3}], held=True))
     assert action == "reduce" and "guidance_cut" in reason
     assert hold(scored(events=[{"class": "guidance_cut", "direction": "bearish", "age_bars": 11}], held=True))[0] == "hold"
@@ -180,7 +170,7 @@ def test_the_holdings_pass_reduces_on_a_red_flag_a_bearish_event_an_invalidation
 
 def test_the_holdings_pass_adds_only_a_bullish_not_oversized_name_that_would_have_made_the_list_and_fits_the_limit():
     good = scored(families=[fr(edge=0.01)], held=True)
-    assert hold(good)[0] == "add" and hold(good, floor=good.excess)[0] == "add" and hold(good, floor=good.excess + 0.001)[0] == "hold"
+    assert hold(good)[0] == "add" and hold(good, floor=rk.rank_value(good))[0] == "add" and hold(good, floor=rk.rank_value(good) + 0.001)[0] == "hold"
     assert hold(good, oversized=True)[0] == "hold" and hold(good, after=0.2001)[0] == "hold" and hold(good, after=0.20)[0] == "add" and hold(good, after=None)[0] == "hold"
     assert hold(scored(families=[fr(passed=False)], held=True))[0] == "hold"
     assert hold(scored(families=[fr("trend", passed=True, edge=0.01)], held=True), [record()])[0] == "add"      # the family that recommended it still passes
@@ -193,7 +183,7 @@ def pick(candidates, case="funds", regime="trend"):
     return [(s.symbol, f.family, extra["diversity_adjustment"], extra["displaced_by"]) for s, f, extra in chosen], why
 
 
-def test_funds_opens_on_capital_return_trend_and_reversion_and_ranks_by_excess():
+def test_funds_opens_on_capital_return_trend_and_reversion_and_ranks_by_edge_when_the_blends_tie():
     names, why = pick([scored("CR", [fr("capital_return", edge=0.004)]), scored("RV", [fr("reversion", edge=0.008)]), scored("TR", [fr("trend", edge=0.006)])])
     assert names == [("RV", "reversion", False, None), ("TR", "trend", False, None), ("CR", "capital_return", False, None)] and why == {}
 
@@ -228,9 +218,9 @@ def test_a_bearish_event_vote_vetoes_an_open_in_funds_but_not_in_other_sleeves()
 
 
 def test_names_that_are_not_bullish_or_are_gated_are_left_out_with_the_reason():
-    cands = [scored("NEU", [fr("trend", edge=0.0015)]), scored("GAT", [fr("capital_return", edge=0.006)], metrics=healthy(adv_20d_dollars=1.0)), scored("NON", [fr("trend", passed=False)])]
+    cands = [scored("NEU", [fr("trend", edge=0.0)]), scored("GAT", [fr("capital_return", edge=0.006)], metrics=healthy(adv_20d_dollars=1.0)), scored("NON", [fr("trend", passed=False)])]
     names, why = pick(cands)
-    assert names == [] and why["NEU"] == "stance neutral (edge_below_cost)" and why["GAT"] == "gate liquidity failed" and why["NON"] == "stance neutral (no family passed)"
+    assert names == [] and why["NEU"] == "stance neutral (no edge)" and why["GAT"] == "gate liquidity failed" and why["NON"] == "stance neutral (no family passed)"
 
 
 def test_the_theme_sleeve_needs_the_theme_family_and_takes_up_to_five():
@@ -239,14 +229,15 @@ def test_the_theme_sleeve_needs_the_theme_family_and_takes_up_to_five():
     assert [n[0] for n in names] == ["T5", "T4", "T3", "T2", "T1"] and why["LD"] == "the theme family did not pass (theme_role: leader)" and why["T0"] == "rank 6 is beyond the top 5"
 
 
-def test_diversity_takes_a_different_sector_when_it_is_within_80_percent_and_records_it():
-    cands = [scored("A1", [fr("capital_return", edge=0.010)], sector="XLK"), scored("A2", [fr("capital_return", edge=0.009)], sector="XLK"),
-             scored("B1", [fr("capital_return", edge=0.0085)], sector="XLP"), scored("C1", [fr("capital_return", edge=0.003)], sector="XLE")]
+def test_diversity_takes_a_different_sector_when_its_blend_is_within_80_percent_and_records_it():
+    cands = [scored("A1", [fr("capital_return", edge=0.010)], sector="XLK", blend=blend_of(0.6)), scored("A2", [fr("capital_return", edge=0.009)], sector="XLK", blend=blend_of(0.5)),
+             scored("B1", [fr("capital_return", edge=0.0085)], sector="XLP", blend=blend_of(0.45)), scored("C1", [fr("capital_return", edge=0.003)], sector="XLE", blend=blend_of(0.1))]
     names, why = pick(cands)
-    # A1 first; the next in rank is A2 (same sector): B1's excess 0.0085 x 1.0 - 0.002 = 0.0065 is >= 80% of A2's 0.007 (0.0056), so B1 is taken and A2 is displaced
+    # A1 first; the next in rank is A2 (same sector): B1's blend 0.45 is >= 80% of A2's 0.5 (0.4), so B1 is taken and A2 is displaced
     assert names[0] == ("A1", "capital_return", False, None) and names[1] == ("B1", "capital_return", True, "A2") and names[2][0] == "A2"
-    far = [scored("A1", [fr("capital_return", edge=0.010)], sector="XLK"), scored("A2", [fr("capital_return", edge=0.009)], sector="XLK"), scored("B1", [fr("capital_return", edge=0.0045)], sector="XLP")]
-    assert [n[0] for n in pick(far)[0]] == ["A1", "A2", "B1"]                                            # B1 is under 80% of A2's excess: no change
+    far = [scored("A1", [fr("capital_return", edge=0.010)], sector="XLK", blend=blend_of(0.6)), scored("A2", [fr("capital_return", edge=0.009)], sector="XLK", blend=blend_of(0.5)),
+           scored("B1", [fr("capital_return", edge=0.0045)], sector="XLP", blend=blend_of(0.3))]
+    assert [n[0] for n in pick(far)[0]] == ["A1", "A2", "B1"]                                            # B1's 0.3 is under 80% of A2's 0.5: no change
     unknown = [scored("A1", [fr("capital_return", edge=0.010)]), scored("A2", [fr("capital_return", edge=0.009)])]
     assert all(n[2] is False for n in pick(unknown)[0])                                                 # no sector known: no diversity rule (correlation is not built)
 
@@ -256,6 +247,6 @@ def test_a_bearish_company_ranks_below_one_with_no_signal_and_the_blend_orders_t
     none_b = scored(symbol="BBB", families=[fr("trend", passed=False)], blend=blend_of(0.3))                                # no signal, but good news, prices and numbers
     bearish = scored(symbol="CCC", families=[fr("event", "bearish", edge=-0.008)])
     order = sorted([bearish, none_a, none_b], key=rk.sort_key)
-    assert [s.symbol for s in order] == ["BBB", "AAA", "CCC"] and none_b.excess > none_a.excess > bearish.excess
+    assert [s.symbol for s in order] == ["BBB", "AAA", "CCC"] and none_b.score > none_a.score == bearish.score
     tie = sorted([scored(symbol="ZZZ", families=[fr("trend", passed=False)]), scored(symbol="YYY", families=[fr("trend", passed=False)])], key=rk.sort_key)
     assert [s.symbol for s in tie] == ["YYY", "ZZZ"]                                                                        # a full tie ends on the symbol: the same order every run

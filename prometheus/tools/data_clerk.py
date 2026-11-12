@@ -31,6 +31,8 @@ from prometheus.rag.citations import SourceBook
 from prometheus.rag.config import REPO_ROOT
 from prometheus.rag.ingest import ingest_filings, ingest_press_releases, ingest_symbol
 from prometheus.rag.loaders import check_symbol, filing_file, load_filings
+from prometheus.common.work_order import corpus_of
+from prometheus.rag import retriever
 from prometheus.rag.retriever import K, MAX_K, MIN_SCORE, Hit, search_filings, search_news, search_press_releases
 
 DATA_CLERK_TOOLS = ("retrieve_news", "retrieve_press_releases", "retrieve_filings", "fetch_news", "fetch_press_releases", "fetch_filings", "fetch_filings_recommendation",
@@ -59,6 +61,8 @@ MAX_TEXT = 60                  # longest company name, keyword or search term
 SHOWN_NEWS = 20                # keyword_search shows at most this many articles and filings, and says how many there were
 SHOWN_FILINGS = 10
 NEAR_MISS = 0.10               # a closest score this near the relevance bar earns the model a hint to reword and retry once
+EVIDENCE_PREFIX = "evidence:"  # a signal's `chunk_id` for a filing-evidence item (not a stored chunk: `read_evidence` reads those)
+CORPUS_LABELS = {"news": "news", "press_releases": "press releases", "filings": "filings"}   # what a corpus is called in a message
 
 
 class ToolInputError(ValueError):
@@ -451,6 +455,66 @@ class DataClerkTools:
         results = catalog.compute(symbols, requests, store, financials, evidence, today, sectors)
         return {"as_of": today.isoformat(), "results": results, "problems": problems, "gaps": store.gaps[:20],
                 "bars": {s: len(store.bars(s, end=today)) for s in symbols}}
+
+    # ---- the Critic's code path (Critic v1 spec 5.2): NOT tools of the model, so not in DATA_CLERK_TOOLS (a model has no use for them)
+
+    def read_sources(self, chunk_ids: list[str]) -> dict[str, dict]:
+        """Read stored chunks again by their ids: {chunk_id: {found, corpus, article_id, headline, publisher, published_utc, url, tickers, text} | {found: False, note}}. Each id goes to the collection its
+        prefix names (`corpus_of`: `pr:` press releases, `sec:` filings, anything else news). The Critic uses it to prove that a source the Advisor quoted exists in the store today and says what it said.
+        An id that is not in the store, an `evidence:` id (not a chunk) and a collection that cannot be read are each `found: False` with the reason: never an exception, never a guess."""
+        wanted = list(dict.fromkeys(chunk_ids))
+        out: dict[str, dict] = {}
+        by_corpus: dict[str, list[str]] = {}
+        for chunk_id in wanted:
+            if chunk_id.startswith(EVIDENCE_PREFIX):
+                out[chunk_id] = {"found": False, "note": "a filing-evidence item is not a chunk: ask for it by its evidence id"}
+            else:
+                by_corpus.setdefault(corpus_of(chunk_id), []).append(chunk_id)
+        stores = {"news": self.store, "press_releases": self.press_store, "filings": self.filings_store}
+        for corpus, ids in by_corpus.items():
+            try:
+                got = (stores[corpus] or retriever.get_vector_store(corpus)).get(ids=ids, include=["documents", "metadatas"])
+            except Exception as error:  # a store that cannot be read: the kind, never the details
+                out.update({i: {"found": False, "note": f"the store could not be read ({type(error).__name__})"} for i in ids})
+                continue
+            stored = {i: (doc, meta or {}) for i, doc, meta in zip(got.get("ids", []), got.get("documents", []), got.get("metadatas", []))}
+            for chunk_id in ids:
+                if chunk_id not in stored:
+                    out[chunk_id] = {"found": False, "note": f"not in the stored {CORPUS_LABELS[corpus]}"}
+                    continue
+                doc, meta = stored[chunk_id]
+                out[chunk_id] = {"found": True, "corpus": corpus, "article_id": meta.get("article_id"), "headline": meta.get("headline"), "publisher": meta.get("publisher"),
+                                 "published_utc": meta.get("published_utc"), "url": meta.get("url"), "tickers": list(meta.get("tickers") or []), "text": doc}
+        return {chunk_id: out[chunk_id] for chunk_id in wanted}
+
+    def read_evidence(self, symbol: str, ids: list[str]) -> dict[str, dict]:
+        """The filing-evidence items of one symbol with these ids (E3 ...), read again from the STORED filings (free, nothing fetched): {id: {found, topic, filter, quote, what, derived, source: {accession,
+        form, filed}} | {found: False, note}}. With no stored filings every id is `found: False` with the tool's own message."""
+        symbol = _symbol(symbol)
+        try:
+            items = {item["id"]: item for item in self.fetch_filings_recommendation(symbol).get("evidence", []) if item.get("id")}
+        except ToolInputError as error:
+            return {i: {"found": False, "note": str(error)} for i in ids}
+        out = {}
+        for evidence_id in dict.fromkeys(ids):
+            item = items.get(evidence_id)
+            out[evidence_id] = ({"found": False, "note": f"{symbol} has no evidence item {evidence_id} in its stored filings"} if item is None else
+                                {"found": True, "topic": item.get("topic"), "filter": item.get("filter"), "quote": item.get("quote"), "what": item.get("what"), "derived": bool(item.get("derived")),
+                                 "source": {k: (item.get("source") or {}).get(k) for k in ("accession", "form", "filed")}})
+        return out
+
+    def recent_sources(self, symbol: str, company: str | None = None, since_days: int = 14, k: int = 8, now=None) -> list[dict]:
+        """The newest stored news and press releases of one symbol, newest first, at most `k`: the Hit fields plus `corpus`. No relevance bar (the Critic wants what is NEWER than the Advisor's evidence, on
+        topic or not: a person decides what matters). Stored text only: nothing is fetched."""
+        symbol = _symbol(symbol)
+        since_days = _days("since_days", since_days, MAX_DISCOVER_DAYS)
+        if not isinstance(k, int) or isinstance(k, bool) or not 1 <= k <= MAX_K:
+            raise ToolInputError(f"k must be a whole number from 1 to {MAX_K}")
+        query = f"{company or symbol}: latest news, results, guidance, risks"
+        options = dict(tickers=[symbol], since_days=since_days, k=k, min_score=None, newest_first=True, now=now)
+        found = [(h, "news") for h in search_news(query, store=self.store, **options)] + [(h, "press_releases") for h in search_press_releases(query, store=self.press_store, **options)]
+        found.sort(key=lambda pair: pair[0].published_utc, reverse=True)
+        return [{**hit.as_dict(), "corpus": corpus} for hit, corpus in found[:k]]
 
     # ---- the LangChain edge
 

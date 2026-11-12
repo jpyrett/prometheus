@@ -1,0 +1,4205 @@
+<<<ARTICLE>>>
+id: finnhub:143494634
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86652cbde191364e7be62c58d2aaec5587b8abff4dc54885802873202708e36f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: BLS International Services Ltd (BOM:540073) (Q2 2027) Earnings Call Highlights: Record Revenue ...
+<<<SUMMARY>>>
+BLS International Services Ltd (BOM:540073) posted 32% year-on-year revenue growth in Q2 2027, but consolidated EBITDA margin slipped to 25.5% as lower-margin digital services gained share.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493549
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:56:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a0548c4488fc79f3297ff36ed9adf19d3d768be1136bb71ac40176a91c0277e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Why Bill Ackman Says He Feels Like “Markets Are Broken” Casinos
+<<<SUMMARY>>>
+Bill Ackman called today's stock market a leverage-fueled casino, then admitted the chaos is good for his firm. The tension between his warning and his buy list raises a question every Pershing Square investor should ask.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493640
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8c6f58067e0471d3c57eea6d23590db8b509388192f249cae7980a34dddb0010
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: FIS Q3 Earnings Meet Estimates, Revenues Beat on Banking Strength
+<<<SUMMARY>>>
+FIS' Q3 earnings meet estimates as revenues jump 27.1% on banking strength, but higher technology spending and conversion delays prompt a 2026 outlook cut.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139956959
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T15:47:55Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ffadfc9ec21cf5d5d2aaf304368c94b9f02dcfd95a26c02c0b4c0134e79b8239
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: CNBC Halftime Report Final Trades: Nasdaq, D.R. Horton, CrowdStrike, iShares Core S&P Small-Cap ETF
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490815
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:54:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1746c5ad119733d000f3c655727398a8357dd1f2e454cae05cac585ba8db47d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Inc. (V) Is Benefiting From a Powerful Payments Trend: What’s Next for the Stock?
+<<<SUMMARY>>>
+Pershing Square Inc. recently released its Q3 2026 investor letter. A copy of the letter can be downloaded here. The letter reported 13% year-over-year growth in third-quarter fee-related earnings (FRE) to $63.7 million, while distributable earnings (DE) before taxes increased 8% to $61.0 million. After taxes, DE totaled $49.5 million, or $0.12 per share, down […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490818
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d57b5480ef6d8a4af4beeda73bb39e347d1c73f64ac594ddb04602fae9ec06d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Can Affirm Beat Q1 Earnings on Higher GMV and Active Consumers?
+<<<SUMMARY>>>
+AFRM looks poised for a fiscal Q1 earnings beat, fueled by rising GMV, growing active consumers and higher transaction volumes, despite elevated transaction costs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490817
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:04:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=643a5c7d034c7706d0999fedb53ad9eac9e659808b47e24d345bdc3a849107b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard Is “One of the Greatest Businesses in the World,” Says Bill Ackman. Do the Estimates Agree?
+<<<SUMMARY>>>
+Key TakeawaysBill Ackman said on CNBC on Tuesday that he picked up Visa (V:NYSE) and Mastercard (MA:NYSE) in the low 20s times earnings, and he called them a royalty on consumer spending. Analysts expect Mastercard’s normalized EPS to grow about 16% a year from 2026 to 2028, faster than the roughly 14% a year they expect from Visa.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490816
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:51:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=54516acd18cea75e94b5dd46c8ab9994930278924efbfbc8d93d32fc6b40443b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Slipped on Its Incentives Outlook. Days Later, Cantor Raised Its Target to $500
+<<<SUMMARY>>>
+Key TakeawaysVisa’s client incentives jumped 21% to $5. 1 billion in its fiscal fourth quarter, and that weighed on the stock after the report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487487
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bc78a6301bce03d3fdc7e0e87b77ffc6bc42d9a382617c766112f3347215ae40
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Verifone adds adaptive anti-fraud screening, powered by Visa
+<<<SUMMARY>>>
+Real-time risk scoring protects revenue across in-store, online and mobile payments Security that protects revenue: real-time fraud screening across every channel, built into Verifone’s gateways Verifone and Visa together help make the world a safer place to transact NEW YORK, Nov. 04, 2026 (GLOBE NEWSWIRE) -- Verifone, a global leader in payments and commerce technologies, today announced it has deployed Featurespace, a Visa solution, in its anti-fraud framework. The platform, which uses adapti
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487243
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:51:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bbb748d8a88347b92924ac2568e8e8862af75bc243edf45e89ed6cd8ddd129c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Buy, Sell, or Hold? Wednesday’s Top Upgrades and Downgrades: Adobe, Apple, Duolingo, Exxon Mobil, Fiserv, Fortinet, Gartner, Lockheed Martin, Skyworks Solutions, Visa and More
+<<<SUMMARY>>>
+Wall Street analysts shifted their stances on some of the market's most closely watched names Wednesday, with surprising cuts hitting stocks many investors still consider safe bets and fresh upgrades landing on names that have struggled all year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487488
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:00:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78cd1843f0788da9ecacd433b174b3b09189f9cad8b2eda3675fd2c8cf98b6d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Is a “Royalty on People Spending Money,” Says Ackman. Analysts See Up to 19% Upside
+<<<SUMMARY>>>
+Key TakeawaysBill Ackman called Visa “a royalty on people spending money” on CNBC on Tuesday, after the stock gained 14% in a month. Analysts’ earnings estimates for Visa have risen only a little over the past year, so most of the stock’s gain has come from a higher multiple.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143485329
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:14:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c7ab4404ae0e118c40ec3b1b2648c6d97384af7c8ded3301f51eb00466ee9e8d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Does Tencent Holdings (SEHK:700) Look Fairly Valued After Its 36% Fall?
+<<<SUMMARY>>>
+Tencent Holdings has seen its share price fall sharply this year, and that kind of reset puts the focus squarely on whether the current HK$401.60 level is still supported by the cash the business can generate over time. With fresh headlines on both AI infrastructure access and new payment partnerships, the question for investors is how those shifts affect the value implied by Tencent's future cash flows. The stock is down 35.5% year to date, which raises the question of whether the market is...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143485972
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:14:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=36a4f0b6343c2990b144758833286dbe7c8d40ebca9e48b53a2e67cdf6711ec3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What Toast (TOST) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+Toast (NYSE:TOST) reported third-quarter results marked by continued location growth, higher recurring gross profit and expanding operating margins, while highlighting investments in artificial intelligence products, new customer segments and international markets. Chief Executive Officer Aman Nara
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143483703
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:06:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a041267b6c3762a874b703e58ca24bb17eeb8d8181a0974d413908047ac0c004
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Is Mastercard Stock Paying You Enough For The Swings?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143534151
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:01:12Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=45b6a0ffd89ca844183f8cebed790c729db758d7eebcccdd11eed4cb6afe0c9b
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/insider_trade_3.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: Rajat Taneja At Visa Capitalizes: Options Exercised, Resulting In $10.91M
+<<<SUMMARY>>>
+A large exercise of company stock options by Rajat Taneja, President at Visa (NYSE:V) was disclosed in a new SEC filing on November 3, as part of an insider exercise.
+What Happened: Disclosed in a Form 4 filing on
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143488641
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T09:15:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=87bfa539c3b1928a9da08426d3119af727f11631dc87aa76cbc06e988c84a2bb
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: Hard To Imagine A Retirement Portfolio Without These 2 Dividend Machines
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143469051
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T07:14:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a31f44954ad3f3721af49ef99844399b6293e22e2adda0de2caaee2bd9b17040
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Pershing Square Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+Pershing Square (NYSE:PS) CEO Bill Ackman and Chief Investment Officer Ryan Israel said the investment firm sees value across several portfolio holdings following recent earnings reports, while also outlining its approach to permanent capital, new fund launches and the transformation of Howard Hughe
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143464662
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T05:57:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3aa7aa8cc31b88a56733d34f2136684c54c8cda5b40464582146712189cefd01
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 5 Payment Stocks That Earn a Fee Every Time You Swipe
+<<<SUMMARY>>>
+Each of these businesses gets paid when you pay. Why does the market price some of those fees at around three times the rest?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143463238
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T04:27:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a35ccd1147bf1b46d5163bd42e9aec2c9a795d370f737f45424020a18035ade7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Hamilton Wins Kansas Senate Race. Why It Matters For Credit Card Companies.
+<<<SUMMARY>>>
+Democrat Adam Hamilton has defeated incumbent Republican Sen. Roger Marshall in the Kansas senate race, according to the AP.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143469054
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T00:30:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e2fdb0b4bff8bb9740328f613c99f0c60700567c2fc1707a62707a0a7745ff6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Just Hiked Its Dividend by More Than 16%, But Investors Should Consider Waiting for V to Pull Back Before Buying.
+<<<SUMMARY>>>
+Visa raised its quarterly dividend by 16.4% to $0.78 per share after Q4 revenue rose 13% to $12.1 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449049
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:47:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b17b8c2c393516f89fabe60fdeb56627bb05bba06aeb0bf47333a8a014abf47
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 4 Companies Just Raised Their Dividends. Which Payout Has the Most Room to Grow?
+<<<SUMMARY>>>
+Visa, Entergy, Tennant, and Fortis all just lifted their quarterly payouts, but a dividend raise is only as good as the cash flow standing behind it. One of these four companies raised its payout while its earnings coverage was already running thin.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143454660
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:03:58Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=f203b4e55f36e0c44572361f8342afabe0bc8a60a47eaa813bd36438c8368f5e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1503371245/image_1503371245.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: Dividend Announcements: October 24-30, 2026 (Part 1 Of 2)
+<<<SUMMARY>>>
+Dividend stock picks: explore dividend growth, safety, yield, and valuation across top names like Visa, Hartford, and Exxonâsee where to buy now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143486929
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T19:55:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6fc3bf7bfc770e75966e2258d029525116722ff57ec9c7f106d2b4123b9a96e7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/Armenia--Yerevan-18-September-2022-U-s--.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: Nancy Pelosi Isn't Running for Re-Election in 2026 Midterms: Say Goodbye to Her Stock Picks in Two Months
+<<<SUMMARY>>>
+Nancy Pelosi is not seeking re-election Tuesday and will leave Congress in January 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448205
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T19:13:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ae623d384a1ae17510a80b55bb1c948b29788001d42cbda3b61fb1ebed82380
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa vs Mastercard: growth, valuation, and fair value compared
+<<<SUMMARY>>>
+Investing.com -- As of November 3, 2026 at 1:41 PM EST, Visa Inc (V) trades at $422.50, while Mastercard Inc (MA) trades at $650.40. Both have nearly identical trailing P/E ratios, but Mastercard carries the stronger growth profile.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448204
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T19:01:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=025aab125d30ac412a8d3140cd37f6c7f7ba1bbd06c9f47d1a3b867bdbc62b9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Ackman calls stock market "broken" but touts Visa, MasterCard and Netflix
+<<<SUMMARY>>>
+Investing.com -- Bill Ackman expressed concern on Tuesday about the current state of the stock market, stating that increased speculative trading has created excessive price volatility driven by high levels of leverage.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448206
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T19:00:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=797dc47950bfdca597565e21636ba6af115f316b782587f5f3d5c230a5a7387f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Fiserv Just Gained 17% in a Month: Take Profits, or Buy More?
+<<<SUMMARY>>>
+Key TakeawaysFiserv shares are up 17% in the past month, off their 52-week low, as payments stocks like Mastercard and Visa rallied while the Nasdaq fell. Analysts cut their price targets through October, and Fiserv’s own news didn’t explain the rally.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448207
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:14:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a17fee80c9a9d0c09a752c8eb38f2f277574f59be53b9c1facdd95f761102152
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What Fiserv (FISV) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+Fiserv (NASDAQ:FISV) reported third-quarter results that were in line with its expectations, with organic revenue flat year over year as the payments and financial-services company said it moved past its second-quarter revenue trough. Management reaffirmed its full-year outlook, projected a return t
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447118
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=942c0541d6b4839a465eb4cd92c272b3b09fcf5a1750e8bbd72c695ea1ba5871
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Will Higher Enterprise & SMB Contribution Aid GPN's Q3 Earnings?
+<<<SUMMARY>>>
+Global Payments' Q3 earnings may benefit from Enterprise and SMB growth, but rising costs could temper gains. Can it beat estimates?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445713
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9014c942872c1b072dd1ab76f418edb03270c4c9812d302dcd04554d7ae19799
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Expensify Announces Referral Agreement With Visa to Help Companies Simplify Expense Management
+<<<SUMMARY>>>
+SAN FRANCISCO, November 03, 2026--Expensify, Inc. (Nasdaq: EXFY), the easiest way to manage expenses, corporate cards, and travel, today announced it has entered into a referral agreement with Visa. Under the agreement, Visa can refer eligible clients and corporate card programs to Expensify as an expense management option for businesses seeking a simple, connected way to manage spend.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442544
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:18:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=879107488b0cab9484d308fcbd5d4754aa33ed190d47c89ddb1e1af2890ab0e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Is Mastercard's Next Big Thing Already Here?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442542
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:10:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a964ba83450b5df20179bea01077ecc37d0b6924a083c8df34653326db09efee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa (V) Signs Two New Deals To Push AI Commerce And Digital Payments
+<<<SUMMARY>>>
+Visa (NYSE:V) has signed new Memorandums of Understanding to support AI-enabled commerce and digital payments in Hong Kong and Senegal. The agreement with Hong Kong Science and Technology Parks focuses on applying artificial intelligence to fintech and digital commerce solutions. The separate accord with the Government of Senegal targets wider digital payment adoption as part of the country's financial inclusion agenda. These Hong Kong and Senegal partnerships sit alongside wider shifts in...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442432
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=35109259c155b6337072007ffa907221cb2c61e6acbd6d47a51b368cb4205347
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 2 Dividend Growth Stocks to Buy Now: One Raised Its Payout 16%, the Other 71%
+<<<SUMMARY>>>
+Dividend investors seek out companies that can raise their payouts consistently each year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442543
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:09:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=53579448c7144df7f74876f77ca439788d4c1c581f7f04dda32c38ce044e8388
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Will Earnings Beat Change Visa Stock's Narrative
+<<<SUMMARY>>>
+Visa reported fourth quarter revenue of US$12,139 million and net income of US$6,002 million, with full year figures of US$45,903 million and US$23,504 million respectively, and raised its quarterly dividend to US$0.780 per share. The combination of double digit year over year gains in both quarterly and full year profit and a higher cash payout indicates that Visa management is prioritizing the return of surplus cash while the core payments engine continues to scale. We will now examine how...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143441091
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:05:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23e5f16e1d7c00c017197236f666caefd415f03703505e860d005daa06f7dbf4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Spdr Dow Jones Industrial Avg ETF (DIA) Sells Goldman Sachs and Caterpillar on Oct. 30
+<<<SUMMARY>>>
+The fund cut all 30 of its positions, selling $258.4 million of stock and buying nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143437227
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:04:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7225c366a6330da6edfcb1fc72b82da91795cfc3f04d01b303b7c5014086858
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: State Street Fin Sel Sector SPDR (XLF) Sells Berkshire, JPMorgan on Friday
+<<<SUMMARY>>>
+The $53.58 billion fund sold $370.1 million across all 76 positions, with no buys.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143488468
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:01:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=090a3894226534601d4fee85d52efc8dcee27a2307a8bbaf4423c43759dd1267
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/insider_trade_1.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: Director At Visa Sells $251K Of Stock
+<<<SUMMARY>>>
+It was reported on November 2, that LLOYD CARNEY, Director at Visa (NYSE:V) executed a significant insider sell, according to an SEC filing.
+What Happened: CARNEY opted to sell 605 shares of Visa, according to a Form 4
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143434294
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T10:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=efafbd5f538d5b4f2f7433be5f488b612250a97843b927ca4de7e4489b82679c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Clean Sweep for Seven Companies in Extel’s 2026 U.S. Corporates Survey
+<<<SUMMARY>>>
+NEW YORK, November 03, 2026--Seven companies swept all seven categories on the Overall leaderboard of Extel’s 2026 All-America Executive Team Survey, which published today. Each placed first in its sector for Best CEO, Best CFO, Best Investor Relations Professional, Best IR Program, Best ESG, Best Investor/Analyst Event and Best Company Board.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401904
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T22:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5cbac1826ae32b963bc2da61121af0aaee101938019c48d8dda662e64442a295
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 2026 Season of Savings: New Hankook Tire Rebate Offers Up to $80 in Savings
+<<<SUMMARY>>>
+Nashville, Tennessee, Nov. 02, 2026 (GLOBE NEWSWIRE) -- Hankook’s latest rebate brings the ‘Season of Savings’ into full gear with deals on popular Hankook Tire and Laufenn brand tiresUp to $80 in Visa Reward Cards available on select 4-tire set purchases through December 12Hankook Tire offers wide-ranging options for SUV, CUV, passenger, and all-weather driving ahead of the winter season As drivers prepare for holiday road trips and shifting winter weather, Hankook Tire is helping consumers jou
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401426
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T20:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ab9b5657a916b5a11ddb3dc0f5fbb881d5145b606e5271a93192695f3fa2102
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa raises quarterly dividend by 16%
+<<<SUMMARY>>>
+See what the raise means for income investors and the risks behind 2027 guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401762
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T20:10:50Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=1d25363b920ad84a2a094728ff253b285963c8b8462a76a03ec81b1838e897aa
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: V
+keywords: 
+headline: Dow Jones Gainers: Today's US Session Top Movers
+<<<SUMMARY>>>
+Dow Jones top gainers in today's US session, led by Sherwin-Williams, Amazon, Home Depot, Walmart and Visa, ranked by percentage move.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401755
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:40:59Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=67c8e174c0596db87e60ca249a20027e0e503999dba30d61e4eaf4185cc235c7
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: V
+keywords: 
+headline: Dow Jones Top Gainers: Nov. 2, 2026 US Session
+<<<SUMMARY>>>
+Sherwin-Williams, Amazon, Honeywell, American Express and Boeing were among the strongest Dow Jones gainers in the Nov. 2, 2026 US session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400157
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:22:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2bd4831e6a61d0b79d06d0c0120a382badbe2460fe490b3de9cd52be8f1a5487
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Stocks Rise 2.4% With Higher Cantor Target Facing a Payments-Mix Test
+<<<SUMMARY>>>
+Cantor Fitzgerald raises its target to $500 and retains Overweight.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400158
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:08:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=300631f06b7a753a9d3f256b5a5e50c6823bd502d587bac9ca867a40d67ce3a7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Fraud, AI Use Emerge as Key Issues in Visa Holiday Report
+<<<SUMMARY>>>
+The poll of U.S. consumers showed how shoppers are using AI for practical tasks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400160
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:18:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b6e69acef829874882ae9d6e13de56658f2ea6d2e3bcc29c706cade5161f8337
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard scales in India
+<<<SUMMARY>>>
+The card network expanded its tie with the country’s largest private bank, increasing its opportunities to sell to small businesses and consumers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400159
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:00:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=edfeac85d762f7201a1bc14262572f36642fd3d177cc9ddb79eed6f719520997
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa (V) Upgraded to Buy: Here's What You Should Know
+<<<SUMMARY>>>
+Visa (V) might move higher on growing optimism about its earnings prospects, which is reflected by its upgrade to a Zacks Rank #2 (Buy).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398692
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff7c4678f7675efda26dfa53d49364ea8c9ed4eed679dd28bc998ed662d0fb60
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: BMO Elevates Rewards and Travel Experience with BMO eclipse Visa Infinite Privilege Card Enhancements
+<<<SUMMARY>>>
+BMO today announced enhancements to its BMO eclipse Visa Infinite Privilege1 credit card, bringing together expanded rewards and premium travel benefits through its longstanding relationship with Visa to elevate the cardholder experience at home and abroad. The enhancements include no foreign transaction fees, a $200 annual travel credit, 10 complimentary airport lounge visits annually and a new rewards accelerator on health and wellness purchases.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442009
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:19:58Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=02d58b84e44963ae68160577059cd8a2d1164b214bb037481afe3269b709b361
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: Shares of banks and financial services companies are trading higher as declining oil prices ease inflation concerns and reduce expectations for interest rates to remain elevated. Softer energy costs could support economic activity, improve loan demand, and ease concerns about potential credit deterioration.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143397201
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:00:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=678f3aa4859bcb0b10b99f4464e94abcdfcf024b33c53d66345409932b3f01a2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Investors Heavily Search Visa Inc. (V): Here is What You Need to Know
+<<<SUMMARY>>>
+Recently, Zacks.com users have been paying close attention to Visa (V). This makes it worthwhile to examine what the stock has in store.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143394856
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:38:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4dc839b909280fbb386867413a9b53dfb3ce038d0e2f294153656aaa8c64a00
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Latest News In Digital Payment - Transuite Expands AI Via Key Acquisition and China Growth
+<<<SUMMARY>>>
+Transuite.ORG Inc. (TRSO) has announced an expansion into AI and digital payment sectors, leveraging its subsidiary SolanAI Global Limited to drive this strategy. The move includes plans to acquire a majority stake in Zhongke Haichuang (Fujian) Technology Co., Ltd., an independent software provider specializing in merchant management and cross-border payment solutions. The acquisition aims to support expanded commercialization of digital-payment applications, facilitating cost efficiencies...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393495
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:04:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0292808328d9b1291875f54558be8cd0ac28134bd84a35c6f88758fcbd93fc7b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What State Street Fin Select Sector SPDR (XLF) Bought: Berkshire Leads on Oct. 29
+<<<SUMMARY>>>
+The fund added $885.1 million in new buying across all 76 holdings, led by a $111.6 million purchase of Berkshire Hathaway.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393492
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:01:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1bf2307dc00749da3a3c46c97d65132f000aa56695c3b8736e7149f821b13b7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: ETFs Bought $64.1 Million of Visa (V) on Oct. 29
+<<<SUMMARY>>>
+ETFs bought $64.1 million of Visa on Thursday, with 38 funds adding shares against 23 selling.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393493
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T10:57:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=68e2c2e55b8a80af8b76d996455fe766efa00caff445f3d4c4c8b084fd4a8b5b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: HKSTP Partners to Power the Next Frontier of AI-enabled Finance at FinTech Week x StartmeupHK Festival 2026
+<<<SUMMARY>>>
+3 MoUs signed to reach global market through payment, position and platform Hong Kong SAR--(Newsfile Corp. - November 2, 2026) - Hong Kong Science and Technology Parks Corporation (HKSTP), from 2 to 3 November at FinTech Week x StartmeupHK Festival 2026, had the HKSTP Pavilion set up with waves of memoranda signing took place, other than the 20 tech ventures showcasing innovative solutions spanning Wealth & RegTech, Web3 & Digital Assets, Life & Health InsurTech, and GreenTech...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393494
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T09:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d9301d6405b12fffe1876746b73d7aad3f1b63c909780e6b103b2cc813a6caa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Zacks Industry Outlook Highlights Visa, Mastercard, PayPal, Global Payments and WEX
+<<<SUMMARY>>>
+V, MA, PYPL, GPN and WEX face rising technology costs and inflation pressures but remain positioned to benefit from digital payments, cross-border transactions and strategic acquisitions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143392228
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T07:27:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c1b722b9e4f69905fef38f8682d92f661d5cbce725c57791ce44e4352072ad23
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Has Mastercard Stock Become A Different Bet?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143380621
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T01:23:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d7104920b3a5a4a5dd1c039b5e7c983402296d603f5456549ee9694c0e18ba4f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What Is Behind The Move In Global Payments Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143370353
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T21:38:41Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=f70e342250174f88051b34e3ae019b370b384dd1f77cce71f814d562b2b386b5
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1466574639/image_1466574639.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: Emerson Among 14 Dividend Growth Companies To Announce Annual Dividend Increases In First Half Of November
+<<<SUMMARY>>>
+Emerson may extend its 70-year dividend growth streak as earnings rebound.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143363158
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T13:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9de15d363d2620095d28e94d85ddc8d97bf8352490aa93cdeeb53ff670c9d7d2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What the Big Banks' Third-Quarter Reports Say About Credit Card Borrowers
+<<<SUMMARY>>>
+When you dig into the quarterly numbers, it looks like consumers are handling their debt well.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143362984
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T09:00:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f9959dcb791cb0c49dbe24c3ca575e8f144576d0cb1b688a1df5173f55923076
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/31/Stock-Whisper-Index.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: Benzinga's 'Stock Whisper' Index: Five Stocks Investors Secretly Monitor But Don't Talk About Yet
+<<<SUMMARY>>>
+The Stock Whisper Index is a market indicator highlighting stocks that are attracting heightened interest from traders and investors over the last trading week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143359245
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T02:08:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bcaff53f9696643191d88434a99788aa27a657ba571708f47c21251f143d0a93
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa (V) Stock Fair Value Edges Higher After Analysts Lift Targets On Q4 Results
+<<<SUMMARY>>>
+Visa's updated fair value estimate now sits at US$437.06, up from US$419.36, as analysts refresh their price targets in light of the latest assumptions. Much of this shift lines up with recent Street research that clusters around higher valuation anchors following Visa's Q4 results and guidance. As you read on, you will see how these changing targets, along with the bullish and bearish talking points, can help you track and interpret the evolving Visa narrative. Analyst Price Targets don't...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143357995
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T00:51:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4093e8f4e6ee206671db0f45ccf559e574722c069eaaea750df6bfe44a2b1b13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: V Q3 deep dive: value-added services and agentic commerce drive steady growth
+<<<SUMMARY>>>
+Global payments technology company Visa (NYSE:V) met Wall Street’s revenue expectations in calendar Q3 2026 (fiscal Q4 2026), with sales up 13.2% year on year to $12.14 billion. Its non-GAAP profit of $3.48 per share was 1.1% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143359444
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T00:40:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=29195c7330c6a0345435d337c4b578d80e75f3cb148875a665c17671faede09d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2256993385/image_2256993385.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: Dividend Income Report: +15.25% And A Listener's Portfolio Roast
+<<<SUMMARY>>>
+This month I tried something different on the podcast - a listener sent me one of his portfolios and asked me to roast it. Read more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143352701
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T00:02:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6944966e9b65a019354bf80d550e919e595744e31682ebb580fd9fdcdf5498e1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Stocktwits Fintech Pulse: US Fintech Weekly Briefing & Market Drivers
+<<<SUMMARY>>>
+Strong Q3 earnings beats across payment networks, neobanks, and crypto brokerages, along with multiple target price hikes, were seen during the week ending Oct.30.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143358956
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T22:25:16Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5d6453c7a542dfd0da7d8ced9919c6e3d89a065a4872003b12f2b24d92fd0fff
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week November 1
+<<<SUMMARY>>>
+Get a weekly dividend summary for Champions, Contenders, and Challengers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143351481
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T22:00:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=81c018f5f8c5f0860b185280f8c7e916ee738b6a866083674b310c72f4b8e682
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: US Consumers Keep Spending, But They’re Watching Value: Visa and Coca-Cola Offer a Split Read on the Economy
+<<<SUMMARY>>>
+Visa Inc. and Coca-Cola Co. offered different signals on consumer conditions in their latest earnings calls, with Visa reporting resilient spending across consumer groups while Coca-Cola said value remains a consideration across markets and consumers. Visa Sees Spending Holding Up...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143350470
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T20:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30edfde7407709d0c7bc877d63835cdabdd06d1eb45bee940687f15fc016c446
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Weekly Wrap: Crypto Plunges After Binance Hack
+<<<SUMMARY>>>
+Bitcoin’s (CRYPTO: $BTC) price was down 5% and trading at $77,000 on the afternoon of Oct. 30 following revel...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143350281
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T17:37:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=873f65b298ab4d1cdf28e30ac3ae0d11ba647252770c8123d44185cd6a5c3e09
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: American Tower's Starlink Opportunity
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348648
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T16:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7d00aeacb54164064134002f6de5a12a356f14c50b9fc7d3e56f9acd573ec624
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 5 Financial Transaction Stocks to Watch Amid Cost and Inflation Pressure
+<<<SUMMARY>>>
+Growing cross-border transactions, resilient consumer spending and strategic acquisitions support financial transaction stocks, while rising technology costs and inflation pose challenges. Companies like V, MA, PYPL, GPN and WEX are likely to navigate industry challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348342
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T16:31:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=407873ebed1423cda17e4af6ba644875741019c2ed4775d9da871c60ba0bd467
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: This Money Transfer Fintech Stock With Profits Seen Surging 381% Eyes Entry
+<<<SUMMARY>>>
+Transferring money can be a lucrative endeavor. And this is certainly the case for this fintech stock, which is eyeing an entry.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348246
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T16:17:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2437515fa9d08a3db92b9d4335debc181953d529c8142e107fcb2b8753edfc06
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Just Raised Its Dividend 16%. Here Are 3 More Blue Chips Built for Dividend Growth
+<<<SUMMARY>>>
+Visa's latest dividend hike proves a low yield can outpace a fat one over time, and three other blue chips are quietly running the same playbook with even more room to grow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143364053
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T15:31:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=103fc921d2c61c6f2c140f25e063443806a5ee7634fd956057a75ebf9b4f1e61
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: Visa Strikes MoU With Senegal To Enhance Its Digital Transformation
+<<<SUMMARY>>>
+Visa (www.Visa.com ) and Senegal’s Ministry of Telecommunications and Digital Affairs have signed a Memorandum of Understanding (MoU) establishing a two-year framework for strategic collaboration to support Senegal’s
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343800
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T13:20:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ec23ad7f334af6f5c15b26146a7cc3b595e912453d351a56916d202e9e591db
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard Stock Rose 4% on Its Q3 Beat. Its New CFO Says Part of It Came Out of Q4
+<<<SUMMARY>>>
+Key Stats for Mastercard StockCurrent Price: $635. 70Target Price (Mid): ~$1,055Street Target: ~$676Potential Total Return: ~66%Annualized IRR: ~13% / yearWhat Happened?Mastercard (MA:NYSE) gained 4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343717
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T13:17:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f030834558c7fa9c2cd60e9b4d49b552e91ece13fcdd4f89d29d65e70d01bdd4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 4 Stocks Where Rising Yields Come From Bigger Dividend Checks, Not Falling Prices
+<<<SUMMARY>>>
+Not every rising dividend yield signals good news, but four familiar companies just handed shareholders bigger checks while their stock prices climbed. The distinction separating these raisers from the rest is worth understanding before you buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343708
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8528d4f6ab8a950dfb2a13ca9d3b580203f21dcc797d6f11d07f9ebd99f91b34
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: AI, Agentic Commerce and the New Rules of Chargeback Management
+<<<SUMMARY>>>
+Chargeback Gurus CEO Tim Tynan shares how proprietary technology and expert human oversight are helping enterprise brands adapt to evolving fraud vectors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343802
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T12:32:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fc9abde9513f73ead022143c8a3cb8630c799a04c3be3c07386016849aa9ad98
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What Could PayPal Stock Be Worth In Three Years?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343799
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T12:27:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=817e8d3d8d00bbf9375f202967e37386e880adfac0006d955b6a8ac30cd36183
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 5 insightful analyst questions from Visa’s Q3 earnings call
+<<<SUMMARY>>>
+Visa’s third quarter results reflected solid execution across its core payments network, with management attributing growth to continued expansion in digital credentials, rising cross-border volumes, and the outperformance of value-added services. CEO Ryan McInerney highlighted strong adoption of tokenization and a surge in commercial and e-commerce transaction volumes, noting that over 60% of e-commerce transactions are now tokenized. Chief Financial Officer Chris Suh pointed to resilient U.S.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348341
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T12:07:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=31f7d74f99417812f36942643e1c5f0479de45fd1b7581be566c5ecd6418f656
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa’s Record Year Pushes Shares Higher
+<<<SUMMARY>>>
+Shares of Visa, Inc. (V) rise 3,054% since institutions first bought big in 2009.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143344909
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T09:58:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3e5df163cacf67b84806f1b442306a735d5e9bae5c1ec3c6ecb467c04b704355
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/30/Democrats-See-Kansas-Opportunity.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: Will U.S. Midterms Impact Crypto? Grayscale Says Election Outcome Matters Only 'At The Margins'
+<<<SUMMARY>>>
+Grayscale says crypto growth should withstand U.S. midterm shifts, driven by bipartisan support, global adoption and institutional integration.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143324425
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T07:12:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41ad730aa32235d0bf0a9619b89e57e762746f0552e2f263a97128770f29350b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Tencent and Visa partner on cross-border payments and AI
+<<<SUMMARY>>>
+The companies also plan to extend their cross-border remittance work through Visa Direct.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348343
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T04:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae19486ebe606484cebc4f392079c847ef9ee32557ed748b35771e28077a7b53
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard’s Earnings Beat Underscores Payments Pivot to Cryptocurrency, Fraud Services, Agentic Commerce
+<<<SUMMARY>>>
+Mastercard and its top rival Visa control as much as 90% of all card payment transactions and processing outside of China.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296840
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T20:11:06Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=9b35994d3490224b539eaaffad00d2cd1c24a4fd0f6a20218b6f9d4d5cc28ec0
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: V
+keywords: 
+headline: Dow Jones Top Movers for Oct. 29, 2026: Merck and Nike Lead Gainers, Alphabet and Caterpillar Fall
+<<<SUMMARY>>>
+Dow Jones components on Oct. 29, 2026: Merck, Nike and Home Depot led gainers, while Alphabet and Caterpillar had the largest declines. Merck rose 3.92%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143345034
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T18:43:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1989fc8e2bfa95183585048582041c8515dae88874d332b4777f33103795da68
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: Macquarie Maintains Outperform on Visa, Raises Price Target to $465
+<<<SUMMARY>>>
+Macquarie  analyst Paul Golding   maintains Visa (NYSE:V) with a Outperform and raises the price target from $420 to $465.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296833
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T17:41:18Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=ed8305e68c381b4e0cf0a585dce9c85e92f2f2b76c42d54470324256ce3a4638
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: V
+keywords: 
+headline: Dow Jones Top Movers Today: 8 Gainers, 4 Losers in Split Session
+<<<SUMMARY>>>
+Dow Jones top movers today: Merck rose 4.9% to lead eight gainers, while Alphabet fell 12.73% and Caterpillar dropped 8.23% among four decliners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293702
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:58:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=67519f1d0a36e3bd5b1ed4e709de607142e8cdbfd45c7e75237bf989395b3609
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard Beats Q3 Earnings on Higher Cross-Border Volumes & Pricing
+<<<SUMMARY>>>
+MA's Q3 earnings beat estimates on higher cross-border volumes, pricing and value-added services, lifting revenues 14% as adjusted EPS rises 21.2% YoY.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292548
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c170656ca76f4c15f53a7e59fbe152d6d2b554575756f108f5f9ee7e8050cb71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa vs. Block: Which Digital Payments Stock Has More Upside?
+<<<SUMMARY>>>
+XYZ outshines V with stronger growth prospects, a more attractive valuation and expanding Square and Cash App ecosystems that support its upside potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292128
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f35d8505b3c538cd4841127f1587f88e5b336fee27dd904af9316589d995c421
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Will ditching the ‘honor all cards’ rule matter?
+<<<SUMMARY>>>
+Visa and Mastercard agreed to drop the standard in settling litigation with merchants, but the concession may not be much of a victory.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288669
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eeb3c734fc4385e53195938db01ea4a47eb76e90bfe619167d8fff579fa37d34
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard Pushes to Be an AI and Stablecoin Powerhouse. The Stock Jumps on Earnings Beat.
+<<<SUMMARY>>>
+Mastercard is expanding far beyond being a credit-card company.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288667
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b7a54ec49f114ac11d3c12ddd6eaaebadbabfab5c2e53960ac4323a15a76cbb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Reports Tenfold Increase In Stablecoin Settlements
+<<<SUMMARY>>>
+Credit card giant Visa (NYSE: $V) says it has surpassed $25 billion U.S. in annualized stablecoin settlement volume...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288670
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=657c843fe3d39bde3e42c38fec8340c65fb77694be0fa529b86b91d7565cd987
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: FIS Q3 Earnings: Can Banking Solutions Growth Offset Rising Costs?
+<<<SUMMARY>>>
+Fidelity National nears Q3 earnings with Banking Solutions growth, driven by an acquisition, but rising costs may squeeze profitability. Can revenue gains offset the pressure?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143291599
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T11:00:28Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=60dfdba246d66acc83cd4212f62d93b341bd8ad7a4e3bf0d4db2b4c40f4294e5
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/29/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: 8 Of 11 Sectors Rise Thursday As Defensives Lead
+<<<SUMMARY>>>
+Eight sectors are higher and three are lower in Thursday’s regular session, with defensive sectors holding two of the top three positions. The leaders are separated rather than clustered, with Health Care ahead of the next group.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143345036
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T10:39:42Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=be259c504a0c243d636273f4125b9c1d8f85363e69983503cd1856578cca866c
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: Wells Fargo Maintains Overweight on Visa, Raises Price Target to $463
+<<<SUMMARY>>>
+Wells Fargo  analyst Jason Kupferberg   maintains Visa (NYSE:V) with a Overweight and raises the price target from $432 to $463.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741002
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T22:06:19Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=06de5c4551d7b705cba423430683dacc7cdf38df3419851f1401334c05734b82
+image_url: https://www.chartmill.com/images/uploads/CM_Aftermarket_Movers_Small_free_e077945a19.webp
+category: company
+tickers: V
+keywords: 
+headline: S&P 500 After-Hours Movers: MNST, RDDT Among Gainers; VEEV, LLY Among Losers in Latest Session
+<<<SUMMARY>>>
+S&P 500 after-hours movers from the latest U.S. session include MNST and RDDT among gainers, while VEEV and LLY posted sharp after-hours declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740258
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T21:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=309def47e4801cd9999a3864fb9dc9d6f56466e7cad003fb66a9e7126f958958
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa (V) Ties Monad Stablecoin Settlement Move To New Fraud API Rollout
+<<<SUMMARY>>>
+Visa (NYSE: V) has added the Monad blockchain to its stablecoin settlement program as a new multi-chain option. Global Payments is integrating Visa's IDX API into its Adaptive Authentication service to support identity and fraud checks for clients. Both moves signal Visa's push to expand blockchain-based settlement tools and strengthen digital transaction security for payment partners. Visa's Monad stablecoin expansion and IDX integration with Global Payments matter, but they are only part...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739216
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=473a08a7cd49bbbbb5a72bab87ce75607fbe526a6579ba8d90f9690109b65ad1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa adds Monad to stablecoin settlement options
+<<<SUMMARY>>>
+Scott Melker discusses Visa (V) adding Monad as yet another option for settlecoin settlements. Visa already allows settlements on ethereum (ETH-USD), Solana (SOL-USD), and Avalanche (AVAX-USD). "The Daily Wolf with Scott Melker" airs every day at 12:00 p.m. Tune in for your daily dose of all things crypto.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738048
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:58:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2e1decad6d0070bc80facc2304b57db8ab9bb7f7768d473251225038bdac72af
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Goldman Sachs, Citi commit millions to stablecoin venture: What to know
+<<<SUMMARY>>>
+Goldman Sachs, Citi, and other banks are committing $270 million to a stablecoin venture called "Project Faro." Scott Melker outlines what you need to know.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739217
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9f63e808ec46178c84c3182254553847a1ff6b255609caec15024afc593adde1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Can Visa's Monad Integration Boost Its Stablecoin Strategy?
+<<<SUMMARY>>>
+V expands its stablecoin settlement network with Monad, enhancing blockchain flexibility as settlement volumes surge and institutional adoption gains momentum.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737955
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=02a542cfe668adfd8d7acf9354ca04cbf5d8e72c50119c752c51c2f7f27827ba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Wall Street hits the night shift thanks to Okxice, and Kraken puts daq in your wallet
+<<<SUMMARY>>>
+Scott Melker discusses Okxice's plans for a Nov. 23 launch under an SEC innovation exemption; Kraken (KRAK.PVT) to launch Nasdaq-backed tokenized versions of European stocks; and Goldman Sachs (GS) and Citi (C) among the banks committing to stablecoin ventures. "The Daily Wolf with Scott Melker" airs every day at 12:00 p.m. Tune in for your daily dose of all things crypto.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143733323
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:04:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae59a1a819f305516d49126dd1102e44903466e8d86a15a53c024cdd4de6ecc2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Financial Select Sector SPDR (XLF) Buys $26.7 Million More Berkshire on Nov. 9
+<<<SUMMARY>>>
+The fund added $202.9 million across all 76 of its positions on Monday, with Berkshire Hathaway and JPMorgan leading the buys.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143731450
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:03:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e291a2e40ecca531a8186d11ff6133f96466e78aad37b7e85a70add0f8a176ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Spdr Dow Jones Industrial Average ETF (DIA) Buys $40.3 Million More GS on Nov. 9
+<<<SUMMARY>>>
+The fund added $392.3 million across all 30 of its positions, with Goldman Sachs its largest buy at $40.3 million.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143713356
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T06:14:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe4cea8e924561b9fd2288a1194bbbf61a9c0ff8486a708af572b5a896487a39
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Fiserv CEO Sees Clearer Results Ahead as Company Targets $1 Billion in Savings
+<<<SUMMARY>>>
+Fiserv (NASDAQ:FISV) expects its financial results to become more predictable as it moves past the effects of elevated nonrecurring revenue, CEO Takis Georgakopoulos said during a discussion with Citi fintech analyst Bryan Keane. Georgakopoulos said underlying recurring revenue and transaction-volu
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143708271
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T02:14:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5eadb6c848507116b0bbdc49ee9f7a7382f1c118033c02f42d092ed3756b0dbf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa’s Services Grow Over 20% as Company Pushes Beyond Payments
+<<<SUMMARY>>>
+Visa (NYSE:V) is expanding its value-added services business through faster product development, broader payment and banking capabilities, and increased investment in security, according to Andrew Torre, the company’s president of value-added services. Torre said Visa launched more than 350 product
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694874
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T20:19:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bb399fad1cb3dc71403be6dc4631bd782cf91da8a8cd27a5ccf0d52f722c45ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Goldman, Citi Commit $270M to Their Own Stablecoin: Can Tether and Circle Hold On?
+<<<SUMMARY>>>
+Goldman, Citi and 19 other firms fund a $270M stablecoin to take on Tether and Circle. Here is what it means for Circle stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692688
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=069aa458fa296ca09145dba2fbbe6bfbdfa33d5fd2e4d9e955d4c1b907fedc7f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Monad Is Now a Settlement Option in Visa’s Stablecoin Program
+<<<SUMMARY>>>
+Visa hasn't announced the addition itself, and the Monad Foundation's release doesn't say which stablecoins will settle on the network.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692689
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:47:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=304b42e7e11b253cd64234d4b3357ff3edf6745dfc7354c15053b94b37084325
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: US credit card debt hits record $1.29 trillion in third quarter
+<<<SUMMARY>>>
+Investing.com -- Credit card balances in the United States rose by $22 billion in the third quarter to reach a record $1.29 trillion, according to the Federal Reserve Bank of New York's household debt report released today. The balances increased 4.2% compared to the same period last year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691583
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:18:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=95e7ff804141240eb78d27d0057db662c58eeaa9701950419cd0010c21867895
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Bill Ackman’s Best Buy Is Already Up 27%. Is It Too Late to Follow Him?
+<<<SUMMARY>>>
+Key TakeawaysFour of the five stocks Bill Ackman’s Pershing Square bought or added to in the second quarter are up since June 30: Mastercard, Visa, S&P Global and Meta Platforms. Netflix is down 11%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693681
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:41:05Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8c234c6b393f1ed6a0ad1f194308d3d994876da6cf9e219bd4077861f54aa38a
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Inc. (V) Presents at KBW Fintech Ecosystem Conference 2026 Transcript
+<<<SUMMARY>>>
+Visa Inc. (V) KBW Fintech Ecosystem Conference 2026 November 10, 2026 1:55 PM ESTCompany ParticipantsAndrew Torre - President of Value-Added...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143735916
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:14:21Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=bad628a883e9731c6f7e97c9171de318ba148affdaca37b3b53c343cc578f87a
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: Citigroup Maintains Buy on Visa, Raises Price Target to $490
+<<<SUMMARY>>>
+Citigroup  analyst Bryan Keane   maintains Visa (NYSE:V) with a Buy and raises the price target from $440 to $490.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690345
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:11:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=24a2a8a850aa34d87ac0eefabe69bc7ad158963399f1b3659f0b6802d5321a3d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa (V) Stock Could Be Reasonable With Excess Returns Intact
+<<<SUMMARY>>>
+Visa has delivered strong long term gains for shareholders, which puts a spotlight on whether the current share price is properly supported by the returns the business earns on its capital. With the stock now reflecting years of compounding performance and a growing role in global payments, the question is how much of those capital returns are already embedded in today’s valuation. Over the past 5 years, Visa has returned 106.5%, which raises the question of whether the company’s returns on...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692230
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:02:14Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=619b14b485d016f544062f7f4c3fc3aee3a8b0603f2c50c1f564d49594d25bec
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1319488921/image_1319488921.jpg?io=getty-c-og
+category: company
+tickers: V
+keywords: 
+headline: Visa: Fairly Valued After Its Run Up (Rating Downgrade)
+<<<SUMMARY>>>
+Visa stock is rated a "Hold" as Q4 2026 revenue rose 13.2% to $12.14 billion. Learn more about the company's valuation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687275
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:11:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=536ac43cc6e7adfd3560af0d150fbad1814a97d5d59a039a2cb1837b82c02003
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: The Dates That Matter Most For Visa Stock
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687274
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b2c48c397a0cc993849844da187bcc6d3ff22ede43d536e68dcdfc25a890d07b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Global Payments adds Visa IDX API to Adaptive Authentication
+<<<SUMMARY>>>
+The payments technology company said the integration is intended to help merchants share more transaction data with card issuers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734174
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:00:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=100eea2b1f29d1ff263c2d959daa9cc8df79bf19c651b273ef0f9e361267946f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/10/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: 11 Of 11 Sectors Fall In Tuesday Trading As Leaders Move Together
+<<<SUMMARY>>>
+All 11 sectors are lower in Tuesday&#39;s regular session, with Financials, Consumer Staples and Consumer Discretionary at the top of the table. The leaders are clustered rather than separated, with the first three sectors grouped within a narrow range of performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143685553
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:05:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=de9ee641492486ee72d144c5b24e232ed1622ba8d9dfad7f46506b2b93fb172e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Spdr Dow Jones Industrial Average ETF (DIA) Buys $36 Million More GS on Friday
+<<<SUMMARY>>>
+The fund added $358.4 million across all 30 holdings, with Goldman Sachs its largest purchase at $36.0 million.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143683945
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:04:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=903334ccb962c30557b1a4ee35f83d795015a959620a5329623ee95026c5d816
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What State Street Fin. Select Sector SPDR (XLF) Sold: Berkshire Leads on Friday
+<<<SUMMARY>>>
+The $53.58 billion fund sold $551.5 million across all 76 positions, with Berkshire Hathaway's $72.9 million reduction the largest.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687976
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T08:57:25Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=512403d615af66cc40411cb5deeba373168828454f2b3a671fddde86df30a829
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2252731546/image_2252731546.jpg?io=getty-c-og
+category: company
+tickers: V
+keywords: 
+headline: Nvidia: TPUs, Trainiums, And Jalapenos Scare Me More Than China (Rating Downgrade)
+<<<SUMMARY>>>
+Nvidia faces intensifying competitive threats from hyperscalers and AI labs developing their own silicon, eroding its moat. Read why NVDA stock is a hold.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661089
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T20:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86e4e8396f40f1341092a562656e4b121fc0a9abfdfd7c5adb3fab1990490f87
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: PayPal’s (PYPL) Turnaround Still Needs Proof
+<<<SUMMARY>>>
+PayPal’s (PYPL) turnaround still needs more proof, even after its Q3 FY2026 report showed higher adjusted earnings per share (EPS) and an improved full-year outlook. PayPal Holdings operates a global digital-payments network spanning its PayPal and Venmo wallets, branded checkout, Braintree payment processing, credit products, and other merchant services. At the end of 2025, its network connected 440 million active accounts across roughly 200 markets. There is progress. PayPal’s Q3 FY2026 revenu
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694873
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T19:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bb2b4253ac332dd6819090d41faf93805a8e8e81c07e009909fa83bd5a509242
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Americans are sacrificing to afford holiday gifts this year. Here’s how
+<<<SUMMARY>>>
+As travel and shopping prices have soared, consumers are skipping everything from brand names to family gatherings to keep costs down.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658685
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:15:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3bb586f2e428fcd179cbdf47a499bdcf81379d1406ddb54b04ccfc3d018dc909
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Sees 20%‑Plus Services Growth as U.S. Payment Volumes Gain Momentum
+<<<SUMMARY>>>
+Visa (NYSE:V) said its key business drivers remained stable and strong throughout October, while its value-added services business is expected to continue growing at a double-digit pace in fiscal 2027. Chief Financial Officer Chris Suh told Citi analyst Bryan Keane that the rest of October matched
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143655223
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4bcbe58ac33a150828ae3448c6229694a1de778b432f9e822941144821fccd46
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Global Payments Expands Adaptive Authentication Platform
+<<<SUMMARY>>>
+ATLANTA, November 09, 2026--Global Payments today announced the expansion of its Adaptive Authentication platform with the addition of Visa Intelligent Data Exchange (IDX) API.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654612
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9bc822ccdc36bf2a5519bc8e8dbbe8dc42f083805f92b649b14d5d67f7005b3c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Byzfunder to Participate Alongside Leading Fintech Executives and Investors at Exclusive 2026 KBW Fintech Ecosystem Conference
+<<<SUMMARY>>>
+Byzfunder, a leading technology-driven provider of small business financing, today announced its participation in the 2026 KBW Fintech Ecosystem Conference, taking place November 10–12 at Convene 30 Hudson Yards in New York City.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654021
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:37:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1d270d33649c5ff04fc5179327df9c8a27a8fa65e67797e868cefe95812a8da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Latest News In Digital Payment - Malaysian Fintech Surge Driven By Digital Innovation
+<<<SUMMARY>>>
+The Malaysian fintech market is witnessing robust growth driven by the proliferation of digital payments and neobanking, supported by strong smartphone adoption and extensive internet connectivity. With digital initiatives comprising a significant portion of government strategies, the expansion of cashless incentives and digital banking licensing are nurturing a favorable environment for fintech innovation. As digital payments dominate the fintech sector's market share, e-commerce growth and...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658326
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:20:59Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=d3f0746865bc38e03b61b50d6afc3ed7b8ee1bc05d859e64b76640208331ae5c
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Inc. (V) Presents at Citi's 15th Annual FinTech Conference Transcript
+<<<SUMMARY>>>
+Visa Inc. (V) Citi's 15th Annual FinTech Conference November 9, 2026 9:00 AM ESTCompany ParticipantsChristopher Suh - Chief Financial OfficerConference Call...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652424
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:05:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=96b91162eef161aa596f577ef610aeae86eaeb752bb6f87104e9b008243830cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What State Street Fin Select Sector SPDR (XLF) Sold: Berkshire Leads on Thursday
+<<<SUMMARY>>>
+The fund sold $737.7 million of stock on Thursday, trimming all 76 of its positions and adding nothing new.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652343
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:04:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fbf8d9598f5d872f1ff9150966f3d222d0944601bb18ebb7e005e8ba1831d3bc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What SPDR Dow Jones Industrial Avg ETF (DIA) Sold: Goldman Leads on Nov. 5
+<<<SUMMARY>>>
+The fund sold $1.08 billion of stock on Thursday, cutting all 30 positions and buying nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652434
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:02:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1b3db6677f5bd9926662599a0cca902b519508feb8a580be6359e72909e7b4bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: ETFs Are Net Sellers of Visa (V) on Nov. 5
+<<<SUMMARY>>>
+ETFs sold $202.7 million of Visa (V) on Thursday, with 18 sellers against 41 buyers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658686
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T10:42:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7d31a1a7fd3fa9ea704b08af7a5b9566e6e1f2a29cf99aaa5174cf7ae838d18
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Are Wall Street Analysts Predicting Visa Stock Will Climb or Sink?
+<<<SUMMARY>>>
+Over the past year, Visa has outperformed the broader market, and analysts remain highly optimistic about the stock's prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640917
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T17:32:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9f522b154ab5c515de66975712da09ce33e17132f96d3f926b243a3f66ac2a5a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa (V): A 15% Revenue Gain at Scale, With 7% Average Analyst Upside
+<<<SUMMARY>>>
+We recently covered the 10 Worst Dow Stocks To Buy in a new list, and Visa (NYSE:V) ranks 10th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into correction […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143638826
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T06:13:56Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8ed77bcc6a5c0ce2a441198e80d91e1deef8ae0f8344e7149e21e0234b479b6d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2149953719/image_2149953719.jpg?io=getty-c-og
+category: company
+tickers: V
+keywords: 
+headline: Wall Street Week Ahead
+<<<SUMMARY>>>
+Preview the week ahead: October CPI, Fed speakers, AI IPO buzz, and key earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616117
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T14:04:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1903c3bf4e5165f5b6da0faf0008ec37167d86551639a27e59ed5b757a5c4335
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Ackman Calls Mastercard “One of the Greatest Businesses in the World.” The Stock Is Up 33% in Six Months
+<<<SUMMARY>>>
+Key TakeawaysMastercard closed at $653, about 4% below its 52-week high, after a 33% climb since early May. Third-quarter net revenue rose 14% to $9.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143613871
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T08:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=2d7933e41c48901112f5efbd44f69b3100156c2961e77bc20e1d8a52ce4c781e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1249993252/image_1249993252.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: 5 Relatively Secure And Cheap Dividend Stocks, Yields Up To 8% (November 2026)
+<<<SUMMARY>>>
+This is part of our monthly series where we highlight five large-cap, relatively safe, dividend-paying companies offering significant discounts to their historical norms. Read it here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143593662
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T04:12:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a525e8518d20a92caf3a4a1397aa22a1cf33f9d26bded8367ca86a64d16534f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 5 Best Stocks To Buy According to Billionaire Armitage
+<<<SUMMARY>>>
+John Armitage has managed money since the early 1980s, and the record behind his firm is the reason investors keep an eye on his filings. He started Egerton Capital in London in 1994 with William Bollinger, after a career at Morgan Grenfell that began in 1981. There he ran a unit trust for six years […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614110
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T03:30:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=697bf75480aa7687e5aeff047e50c012c6687176156a1880ec9e7937f5448e6f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/07/Wooden-Blocks-Spelling-Fed-Placed-On-U-s.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: Mark Zandi Says Strong Jobs Report Gives Fed ‘Latitude To Raise Rates’ as He Sees ‘Very High Probability’ of December Hike
+<<<SUMMARY>>>
+Moody’s Mark Zandi says strong October jobs data gives Fed room to hike rates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143593366
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T03:20:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14296384ad72ad69d8f55a00fa8666d70c75757bc841b48dedbdd37f12e3a753
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Tencent Music (TME) Stock Looks Fairly Valued After Payments Partnership News
+<<<SUMMARY>>>
+Tencent Music Entertainment Group has seen a sharp share price reset over the past year, which puts a spotlight on whether the current US$9.56 level is properly supported by the cash the business can generate. With sentiment swinging and fresh corporate developments in the background, the question now is how the stock price lines up against its intrinsic value based on those cash flows. The share price is down 53.9% over the past year, so the market has already repriced Tencent Music...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592883
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T01:13:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5fc189dac24c9ea70c66c7583db8b378d6f52ee27b31315e9301912569841640
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa (V) Q4 Earnings Justified Strong Growth But Left Valuation Questions
+<<<SUMMARY>>>
+Visa came into this Q4 2026 report priced for excellence. The stock has climbed about 13.6% over the past month and barely moved on the day of the release, up only 0.01%. This suggests expectations were already rich. Yet the headline print was powerful for a mature payments network, as quarterly revenue reached US$12.1b and basic earnings per share hit US$3.25. That mix of a flat immediate reaction and strong reported profitability, with a net profit margin above 50%, highlights where the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590837
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:16:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bd39b82c466f9ef686c3184426639bb2a99101ff7290e3eb9db3e92539eec0e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard Hit a Record as Visa Raised Its Dividend 16%. Here’s Where Mastercard’s Cash Goes
+<<<SUMMARY>>>
+Key TakeawaysVisa raised its quarterly dividend 16% to $0. 78 a share, a 0.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590835
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:13:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d4ec05206b9bed9bd02e122056cd36e8ec39c8b9c0f8168abbec393cbb3d9e85
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Just Raised Its Dividend 16%. Free Cash Flow Shows Whether the Buybacks Can Keep Pace
+<<<SUMMARY>>>
+Key TakeawaysVisa raised its quarterly dividend 16% to $0. 78 a share, but after a 30% gain over the past year the stock yields just 0.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592225
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:30:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=179932ced585c47b91f7c497290f9405d62b1ac2a2bf533cfb1fe4d053589441
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week of November 8
+<<<SUMMARY>>>
+Get the latest dividend activity for Dividend Champions, Contenders, and Challengers. Read this week's list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591658
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b9f59acd7317a19135e40f323b02717584f2b624bf304bc0086b8ae4dd9d2999
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Late Payments Steal Affirm’s Earnings Spotlight. Wall Street Sees More Run to Run.
+<<<SUMMARY>>>
+Some Wall Street analysts say the credit anxieties have been overblown.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590836
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b537e79f7628631047307331a248b07dbe21483123e468ad65d7f66ab9ed2812
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Why Is Visa (V) Building AI Shopping Standards And Six Singapore Hubs?
+<<<SUMMARY>>>
+Visa (NYSE:V) launched its Agentic Commerce Benchmark, a new framework to evaluate AI powered shopping experiences. The benchmark focuses on measuring AI shopping agents for consistency, reliability, and trust in transaction processes. Visa created six global capability hubs in Singapore that target advanced payments, cybersecurity, quantum computing, and digital money infrastructure. The Agentic Commerce Benchmark and new Singapore hubs matter, but investors should weigh them alongside...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589742
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:25:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5b13d93d719a549106b626c58c373bde68a44db43084627366c494d5061eb265
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Is PayPal Stock Ready For A Year Of Higher Spending?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589743
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4db31661cdb291a072ed41bf42be55edfcb0382482813694914a2e324d8dff1e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Affirm Q1 Earnings Beat Estimates on Strong GMV and Card Growth
+<<<SUMMARY>>>
+AFRM beats Q1 fiscal 2027 earnings estimates as GMV surges 34% and cardholders more than double, while rising credit loss provisions weigh on gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588361
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:04:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2dd4d919089d31ee5fe2fb51e4cc569033fcd7fc78c8c363330f101e83c794d9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 55 Laurentian Bank branches to close by end of day, halting services
+<<<SUMMARY>>>
+National Bank said Laurentian Bank products and services will be migrated to National Bank over the weekend
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590739
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:52:58Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=f896b8d63598a82fe40a4aab1f177a637fa12b0a556b1f8a8a135c768708d9e8
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2226022596/image_2226022596.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: Top 20 S&P 500 Ranked By PEG Ratio After Massive Tech Route
+<<<SUMMARY>>>
+Learn how the PEG ratio compares Apple, Microsoft, Nvidia and other mega-cap stocks to reveal growth-adjusted value.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614492
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aec7add83165a84ffe68cf7892143448ddbbde5be4dc8ea96c24f59914b4d2cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Expensify, Inc. Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Expensify, Inc.'s Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584437
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:00:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f4b8547d5e0bc6abdc467fdbd8f2d1df97dea7e66b7ec30891cd553a40b9b4ac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Top Funds Feast On Shell, Microsoft, Palantir And 24 More Stocks
+<<<SUMMARY>>>
+The best mutual funds place massive bets on Microsoft, Palantir and Apple. But that's just the start. See the full list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584619
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c17501c89b14c0541c0ad15b5ce0fa979a50ef527e394f103bd2f47f243c889
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard's 19% Services Growth Steals the Q3 Show: Buy or Hold MA?
+<<<SUMMARY>>>
+MA's Q3 services revenues jump 19% and adjusted EPS rises 21.2%, but rising incentives and a premium valuation raise questions about buying shares now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583020
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3f34f09bd3c4d283bb14601fda3bb41fddd1954dc77f7f1f7de4dacd0427c38d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Has Grown Earnings per Share by 17% a Year for a Decade. Can the Stock Keep Compounding?
+<<<SUMMARY>>>
+Analysts expect the company to continue its streak of double-digit net income growth over the next three fiscal years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143582082
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:04:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f2c7765f9d7a9d509f07ca1948a338cc61f148dfecf1c7122816a8ee792885de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Financial Select Sector SPDR (XLF) Buys $70.9 Million More Berkshire on Nov. 4
+<<<SUMMARY>>>
+The fund added $547.3 million across all 76 holdings, led by a $70.9 million increase in Berkshire Hathaway.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143580687
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:04:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=285a2f91534bc78ea80308c3cd87a055158b3ce62d798662d31dbc1846b54f96
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Dow Jones Industrial Average ETF (DIA) Buys $96.4 Million More Goldman on Nov. 4
+<<<SUMMARY>>>
+The fund added $932.2 million across all 30 of its positions, with no sales, on a day it held $45.93 billion in assets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614111
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:01:53Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=662dd450a6ea24ff2fbaf4359e76b6e19c62eeab0820a59a8344fb1f276e37e8
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/insider_trade_2.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: Options Exercise: Rajat Taneja At Visa Realizes $10.68M
+<<<SUMMARY>>>
+A substantial insider activity was disclosed on November 5, as Taneja, President at Visa (NYSE:V), reported the exercise of a large block of company stock options.
+What Happened: A Form 4 filing with the U.S. Securities
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583141
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:01:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09ab7b807f8ba0b2e2c490cb6ee9bd9fb10f0bc0dfcef00671ac5ad78e1b8c48
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: 48 ETFs Add to Visa (V) Holdings on Nov. 4
+<<<SUMMARY>>>
+ETFs bought $65.2 million of Visa stock on Wednesday, with 48 buyers against 16 sellers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587994
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=cd5280782e88bd36c8a2b3e80634759ea321aba0512712c145c12490097fa652
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1252670521/image_1252670521.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: November Buy: 6 IDEAL S&P 500 'Safer' Dividend Dogs
+<<<SUMMARY>>>
+Read here for six safer high-yield S&P 500 dividend stocks with strong free cash flow and buy signals; see top projected gains and act now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585968
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:15:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=39822867d32a8196dea01d415e07dae03f9ade890ceb6e3d7bf7435dcf969e28
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2217575683/image_2217575683.jpg?io=getty-c-w1536
+category: company
+tickers: V
+keywords: 
+headline: 8%+ Yields Without The Sleepless Nights: My Top 2 Picks
+<<<SUMMARY>>>
+Read about 2 stable 8%+ yield income picks for retirees seeking reliable monthly cash flow, lower risk, and peace of mind. Access the full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584235
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T07:38:52Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fb02a5c5efe94ed2e6893b6586f1cbb72ae5d4072bb6bdddc01c99bb5356ca48
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Gav-Blaxberg.jpg?width=2048&height=1536
+category: company
+tickers: V
+keywords: 
+headline: Nasdaq’s 5.5% Wipeout And AI's Next Reality Check—IRS' New Tax Brackets
+<<<SUMMARY>>>
+AI stocks unravel as Cloudflare, Airbnb and the IRS deliver a very different set of numbers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143559738
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T05:48:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0b138c9fe3a8164f5b1d37e7a0b1fe48e62bdc2ef7ee7840625e7cc1a8fedac9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa sets up six hubs in Singapore for AI and ‘next-generation payments’
+<<<SUMMARY>>>
+The six hubs will operate across three areas: AI and commerce, next-generation payments, and trust, security, and resilience.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543098
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T23:09:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1e63c9251ce89efbeda4e1f81ad655c60dbd605b3b0ed7642e30f00b8b0e452f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: US Fintech Weekly: Fiserv Bounces Post-Earnings, Crypto Brokers Suffer, And Federal Agencies Prepare Innovation Guidelines
+<<<SUMMARY>>>
+A Democratic sweep is pulling Bitcoin prices lower and weighing on crypto brokerages.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543099
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f2df308dcced1ac850d37f2f871b6db6117d6b9d58cbea0ee26ae92915d49ecd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: BILL Reports First Quarter Fiscal Year 2027 Financial Results
+<<<SUMMARY>>>
+SAN JOSE, Calif., November 05, 2026--BILL (NYSE: BILL), the intelligent finance platform trusted by nearly half a million businesses to manage, move, and maximize their money, today announced financial results for the first fiscal quarter ended September 30, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540711
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T19:11:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7f3c13d2dc2d58645afcab4f12f758e4917a43299688df3e73e0fcbd7b026742
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa (V) Reports Record Earnings And Dividend Hike, Is The Stock Overvalued?
+<<<SUMMARY>>>
+Visa (V) is back in focus after reporting record fourth quarter and full year results, with adjusted earnings up 17% year over year and a 16% dividend increase, signaling continued confidence from management. Visa’s recent momentum has been hard to ignore, with a 1-day share price return of 3.84% and a 30-day share price return of 18.08% lifting the stock to US$436.57. A series of fresh partnership wins, AI and payments initiatives, and a higher dividend have helped support a 1-year total...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540712
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5a71d9e53ae3c532e0ca02766d7eb1f36eb52c84ba58eee73129b5c44a742e40
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: GPN Q3 Earnings Beat Estimates on Genius Growth, Margins Rise
+<<<SUMMARY>>>
+Global Payments tops Q3 earnings estimates, driven by strong Genius adoption and higher enterprise volumes, while expanding margins and progress on Worldpay integration support growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539397
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb553efd5bea542576635a591052636de3bd9b1f6ae2ac2cdae4a676a7fcfe3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What 3.4% GDP Growth and a 4.2% Jobless Rate Say About a Hard Day on Wall Street
+<<<SUMMARY>>>
+American News Group News Commentary - U.S. stocks were sharply lower on Thursday morning. As of 11:02 a.m. ET, the S&P 500 was down 3.39% at 7,427.97, the Nasdaq Composite was down 5.08% at 24,430.26 and the Dow Jones Industrial Average was down 2.37% at 52,093.82, each measured against Wednesday's close. It is one session. The most recent official readings on output and jobs, along with the latest quarterly reports from large companies in payments, restaurants, medical technology, aerospace and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539398
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=77bc539b283c2504f0aa0df3541625ceaf433ff3504294d76381b836a88afdd6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Will a ‘blue wave’ push the CCCA?
+<<<SUMMARY>>>
+With Sen. Roger Marshall voted out and Sen. Dick Durbin retiring, the Credit Card Competition Act faces an uncertain future.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143564245
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:35:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4da3f122eb582b3a0cd96c6012000ef40fce1cd05fade2ace9870484614b09c9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: BeInCrypto at MERGE Madrid 2026: Banks Turn to Stablecoin Infrastructure
+<<<SUMMARY>>>
+MERGE Madrid ran from October 27 to 29, opening at Bolsa de Madrid, the city’s stock exchange, before the main program moved to Palacio de Cibeles. Luís De Magalhães, our Head of Latin America, and Martin Coxall, our VP of Institutional Partnerships, represented BeInCrypto. Key Themes From MERGE Madrid Much of the program focused on
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537803
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:18:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=51705f092f541ed004ab59818033770a581fffb8ff33d6d1153562c36c7e66d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Adjusted for Inflation, Economists From Visa Call for a Holiday Sales Gain of 1.1%
+<<<SUMMARY>>>
+Not adjusted for inflation, the November and December period is pegged for a 4.5 percent gain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537804
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6b5173675d2b391b27df726a2f23d344c884af44c482ebe125ea6b732ff1978
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Releases First-of-Its-Kind Industry Benchmark for AI Shopping; Almost Half of Test Runs Fail
+<<<SUMMARY>>>
+SAN FRANCISCO, November 05, 2026--Visa (NYSE: V) today launched Visa Agentic Commerce Benchmark, a new benchmark for industry that puts leading AI models through realistic buying challenges—and is letting people take the test, too.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537805
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=574f699e56214558023631d4fa2e3f8a588679bb5ec809987b29af8478491575
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa's Solid Q4 Masks Rising Incentives: Is V Still Worth Buying?
+<<<SUMMARY>>>
+V's Q4 earnings beat and surging value-added services signal strength, but rising client incentives and a premium valuation cloud the case for buying now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533695
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:17:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aa68693413bed31bebffaace142c33456fe517e2da5cacbc8cd8acaf25d3b530
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Just Raised Its Dividend 16%. Is It a Better Buy Than Mastercard?
+<<<SUMMARY>>>
+Both payments giants just rallied double digits after earnings, yet their yields sit below 1%. The real contest hides in dividend growth, buyback firepower, and what each stock charges you for growth. Which one fits your timeline?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537806
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:09:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c14aabba0824c6264b91111f01d848fa3cc7de7fc192725ffd486d1462075ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Stock Market Today: Futures Mixed After Yesterday’s Massive Post-Election Gains; Dow Poised to Extend Rally
+<<<SUMMARY>>>
+Futures are pointing to a mixed open for major indexes this morning, with the Dow Jones Industrial Average on track to add to yesterday’s blockbuster gains while tech sector weakness pulls the Nasdaq lower.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533696
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92c2cf68aae6c02ef7cb8aae4603be636da1e89ee831839081f3ce6889cf1130
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Does AI Truly Understand What Shoppers Want? Visa Put It To The Test.
+<<<SUMMARY>>>
+Visa developed a test called the Agentic Commerce Benchmark.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533697
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:11:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b0940671e4c5fceaac232a619fcdaf80a782385f9fd8a0f3c0a93a03286944d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Got Downgraded to Hold at $427 After a 18% Month. Here’s What Its P/E Assumes
+<<<SUMMARY>>>
+Key TakeawaysFreedom Capital Markets downgraded Visa (V:NYSE) to Hold with a $427 price target after the stock gained 18% in a month to a 52-week high. Visa’s forward P/E has climbed from 23x at the end of March to its 10-year average.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587419
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:07:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=bf7dc191fca2496d1fb5531a910884be843706368dc7b20ed4d7179f0200c3ed
+image_url: 
+category: company
+tickers: V
+keywords: 
+headline: Truist Securities Maintains Buy on Visa, Raises Price Target to $470
+<<<SUMMARY>>>
+Truist Securities  analyst Matthew Coad   maintains Visa (NYSE:V) with a Buy and raises the price target from $443 to $470.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532250
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c3aebd73b6911fd27f31edf2c12236dc990bd3868d8071e1bb3771b6c032af1d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Forecasts U.S. Holiday Spending to Rise 4.5% as Consumers Keep the Holidays a Priority
+<<<SUMMARY>>>
+SAN FRANCISCO, November 05, 2026--U.S. consumers are poised to keep the registers ringing this holiday season. New research from Visa Business and Economic Insights (VBEI) forecasts U.S. holiday retail sales will rise 4.5% year-over-year in November and December, the strongest growth since 2021.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143529921
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T11:05:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=babcf2869acd3ef4097128694bc882d35aa29fa034f1ed69a9d34f459128611d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Spdr Dow Jones Industrial Average ETF (DIA) Sells Goldman Sachs, Caterpillar on Nov. 3
+<<<SUMMARY>>>
+The $44.89 billion fund sold $310.2 million of stock, trimming all 30 positions and buying nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143538982
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T06:00:01Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=8c5f2aea6ee7dedd8c1d915a409b6545f932024e9776d001c5f0478f2522f2e0
+image_url: https://image.cnbcfm.com/api/v1/image/108334689-1784035335117-gettyimages-2280323873-US_CPI.jpeg?v=1793834094&w=1920&h=1080
+category: company
+tickers: V
+keywords: 
+headline: Consumers are spending on physical gifts even as travel tops wish lists, Visa survey finds
+<<<SUMMARY>>>
+Even as travel and experiences top the wish list, consumers are still prioritizing spending on physical gifts this holiday season.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143510653
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T04:14:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4a5aec2744ce35d61cf8d6b18af9b3f8ded8d13c2690dab4840d334c31776905
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: What Sezzle (SEZL) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+Sezzle (NASDAQ:SEZL) raised its 2026 outlook after third-quarter revenue rose 42.6% and net income climbed 79.3%, as growth in subscriptions and transaction volume helped drive higher profitability. The company reported revenue of $166.5 million and net income of $47.8 million for the quarter. Adju
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143516029
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T03:21:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=12e30d4cda9a747e80bb0edcb3a0bce50013058092778cf1ded350926ba70354
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Mastercard Soars 10% in a Week to a Record. Its CFO’s Warning: “A Similar Offset in Q4”
+<<<SUMMARY>>>
+Key TakeawaysMastercard stock rose 10% in a week to a record. The run began with 14% revenue growth and ended the day after a Senate author of the swipe-fee bill, which also hangs over Visa, lost his seat.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143507316
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T02:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed219f1be9da988a51bd6882ed2ea37ba78c7147c74ecbdc38d425f7cda6eee8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Grayscale and BlackRock Say Democratic Midterm Sweep Won’t Slow Crypto Growth
+<<<SUMMARY>>>
+Crypto asset manager Grayscale said Wednesday that the industry’s future depends less on Washington than on o...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143507315
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T01:59:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7ee7f1bb72e859194341a81808fc4167896c8fc34647516a00eb20e0fb81621
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Visa Establishes Global Capability Hubs in Singapore to Build the Future of Global Commerce
+<<<SUMMARY>>>
+Visa (NYSE: V), a global leader in digital payments, today announced the establishment of six global capability hubs at its new Solution Center in Singapore. Spanning AI, cybersecurity, quantum computing and next-generation payments, the hubs will develop technologies and solutions designed for deployment across Visa's global network.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143745740
+symbol: V
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T00:58:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2dc4d4fb2c9e27c1985cccc02a649723a1f81e915eed101143b48f23180bd9af
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: V
+keywords: 
+headline: Scalare Partners Provides Corporate Update on Portfolio Company 10XU
+<<<SUMMARY>>>
+Sydney, Australia--(Newsfile Corp. - November 11, 2026) - Scalare Partners Holdings Limited (ASX: SCP) ("Scalare" or "the Company") today provides a corporate update on 10XU, a Scalare Partners portfolio company, covering key 2026 milestones across its FitTech platform.Formerly the WithU Group, 10XU builds and scales technology-first wellbeing brands spanning movement, training, recovery, travel and social sport, including WithU, Mvmnt, URUNN and TrvlWell. Ranked the fastest-growing company in..
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d7e8c11de58e906e0a7637c498e1e1615418a20a6778167219771b0e4a9e4452
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T14:56:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018924/visa-vs-block-which-digital-payments-stock-has-more-upside?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3018924
+image_url: https://staticx-tuner.zacks.com/images/articles/main/17/182.jpg
+category: 
+tickers: V, XYZ
+keywords: digital payments, payment processing, e-commerce, financial services, AI investments, valuation comparison, earnings growth, merchant solutions, consumer fintech
+headline: Visa vs. Block: Which Digital Payments Stock Has More Upside?
+<<<SUMMARY>>>
+A comparative analysis of Visa and Block in the digital payments sector reveals that while both companies benefit from growing cashless transactions and e-commerce expansion, Block offers greater upside potential. Visa maintains a strong global network and value-added services but faces rising expenses and regulatory pressures. Block demonstrates accelerating earnings growth, attractive valuation, and strategic investments in AI and financial services integration, making it the preferred choice despite both carrying a Hold rating.
+<<<INSIGHTS>>>
+V | neutral | Visa demonstrates solid fundamentals with expanding global payment networks, growing transaction volumes, and strong cash position supporting dividends and buybacks. However, rising operating expenses, higher client incentives, and regulatory pressures on interchange fees constrain growth potential. The company's high P/S valuation (14X) and modest 7.2% upside potential limit appeal.
+XYZ | positive | Block shows stronger growth prospects with 70.9% EPS growth expected for 2026 and accelerating Square and Cash App ecosystem expansion. Strategic AI investments, banking infrastructure development, and Square-Cash App integration through Neighborhoods drive future growth. Significantly lower valuation (1.59X P/S) and attractive 30.9% analyst price target upside make it the preferred investment choice.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:35c281f8c724ed2c9c062184a1b5676ae27831542b5dd57f66fc3b10ea51f226
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T14:58:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018925/mastercard-beats-q3-earnings-on-higher-cross-border-volumes-pricing?cid=CS-ZC-FT-analyst_blog|earnings_article-3018925
+image_url: https://staticx-tuner.zacks.com/images/articles/main/15/497.jpg
+category: 
+tickers: MA, V, AXP
+keywords: Q3 2026 earnings, cross-border volumes, value-added services, operating margin expansion, payment network, gross dollar volume
+headline: Mastercard Beats Q3 Earnings on Higher Cross-Border Volumes & Pricing
+<<<SUMMARY>>>
+Mastercard delivered robust third-quarter 2026 results with adjusted EPS of $5.31, up 21.2% year-over-year and beating consensus estimates. Net revenues grew 14% to $9.8 billion, driven by cross-border volumes, pricing initiatives, and strong value-added services growth of 19%. The company maintained an adjusted operating margin of 60.5% despite higher operating expenses and payment network rebates.
+<<<INSIGHTS>>>
+MA | positive | Strong earnings beat with 21.2% EPS growth, 14% revenue growth, and margin expansion to 60.5%. Value-added services grew 19%, cross-border volumes increased 11%, and the company demonstrated operational leverage despite rising costs. Zacks Rank #2 (Buy) rating supports positive outlook.
+V | positive | Q4 fiscal 2026 adjusted EPS of $3.48 grew 17% year-over-year, beating consensus by 1.5%. Net revenues rose 13% to $12.1 billion, driven by higher payment volumes and robust cross-border activity, though offset partially by increased operating expenses.
+AXP | positive | Q3 2026 EPS of $4.68 surpassed consensus by 4.7% with 13% year-over-year growth. Total revenues improved 9% to $20.1 billion, driven by increased Card Member spending, higher net interest income, and improved card fee growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:63ddb2198be905cd7c91fa54018da9c1991ffe29a31a404bb6c9b535100ca1ae
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-30T10:45:00Z
+publisher: The Motley Fool
+author: Daniel Foelber
+url: https://www.fool.com/investing/2026/10/30/just-15-stocks-make-up-71-of-the-dow-heres-my-top/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892266%2Fa-person-smiles-while-holding-a-credit-card-and-looking-at-a-laptop-computer.jpg&w=1200&op=resize
+category: 
+tickers: AXP, V, MA
+keywords: Dow Jones Industrial Average, price-weighted index, payment processors, financial services, valuation comparison, credit quality, stock buybacks, dividend yield
+headline: Just 15 Stocks Make Up 71% of the Dow. Here's My Top Pick to Buy Now.
+<<<SUMMARY>>>
+American Express is highlighted as a top buy among the 15 largest Dow components, which represent 71% of the index's weight. Despite a 15.3% year-to-date decline and recent Q3 earnings-driven sell-off, AXP offers compelling value at 17.6x adjusted 2026 earnings guidance. The company demonstrates strong fundamentals with double-digit revenue growth, excellent credit quality metrics, aggressive buybacks, and a diversified revenue model superior to competitors Visa and Mastercard.
+<<<INSIGHTS>>>
+AXP | positive | Strong business model with diversified revenue streams, excellent credit metrics (1.8% net write-off rate vs 3.9% industry average), double-digit revenue and earnings growth, aggressive buybacks reducing shares 3% YoY, and attractive valuation at 17.6x earnings compared to peers trading at 30x+. Recent sell-off creates buying opportunity.
+V | neutral | Trading near all-time highs with strong performance, but commands premium valuation of 30.8x 2026 earnings. Lower dividend yield (0.7%) and simpler business model focused on transaction volume compared to American Express's diversified approach.
+MA | neutral | Similar to Visa with strong performance near all-time highs, but trading at elevated 31.9x 2026 earnings multiple. Lower dividend yield (0.6%) and transaction-focused revenue model limits upside relative to valuation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fc820dab26f40d9a404271fab98b67b7d96028479188aca039f7ffdcd74d2d67
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-30T16:52:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/commentary/3019761/5-financial-transaction-stocks-to-watch-amid-cost-and-inflation-pressure?cid=CS-ZC-FT-industry_outlook-3019761
+image_url: https://staticx-tuner.zacks.com/images/articles/main/74/190.jpg
+category: 
+tickers: MA, WEX, V, PYPL, GPN
+keywords: financial transaction services, payment processing, cost pressure, inflation, cross-border transactions, e-commerce, technology investments, cybersecurity, M&A strategy
+headline: 5 Financial Transaction Stocks to Watch Amid Cost and Inflation Pressure
+<<<SUMMARY>>>
+The Financial Transaction Services industry faces near-term margin pressure from rising technology investments in AI, cybersecurity, and cloud infrastructure, while benefiting from expanding cross-border trade, e-commerce, and resilient consumer spending. Despite the industry ranking in the bottom 26% of Zacks industries, five well-positioned companies—Mastercard, WEX, Visa, PayPal, and Global Payments—are recommended for long-term growth potential through strategic M&As and digital capabilities.
+<<<INSIGHTS>>>
+MA | positive | Zacks Rank #2 (Buy) with strong global payments network across 220+ countries, consistent earnings beats (6.71% average surprise), and 16.9% projected earnings growth for 2026.
+WEX | positive | Zacks Rank #2 (Buy) with diversified payments ecosystem, strong fleet network coverage (90%+ of fuel locations), consistent earnings beats (5.57% average surprise), and robust 24.5% projected earnings growth for 2026.
+V | positive | Zacks Rank #3 (Hold) with vast global network, 5.2 billion payment credentials, consistent earnings beats (3.08% average surprise), and 13% projected earnings growth for fiscal 2027.
+PYPL | neutral | Zacks Rank #3 (Hold) with extensive global presence (439 million active accounts), diversified payment solutions, but modest 4% projected earnings growth and one earnings miss in last four quarters.
+GPN | positive | Zacks Rank #3 (Hold) with broad geographic diversification, strong acquisition strategy (Worldpay acquisition), and 11.6% projected earnings growth for 2026.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8d05c519757cc37c00ad67d7fbc96f951070b7d727ca50cbe933787283251879
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-31T10:30:00Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/10/31/anthropic-ipo-why-there-could-be-more-than-one-ai/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892446%2Fgettyimages-2143112732-1280x896-1b86c6f.jpg&w=1200&op=resize
+category: 
+tickers: KO, PEP, V, MA
+keywords: Anthropic IPO, OpenAI, artificial intelligence, large language models, AI market growth, competitive advantage, investor strategy
+headline: Anthropic IPO: Why There Could Be More Than One AI Winner
+<<<SUMMARY>>>
+Anthropic's upcoming IPO in mid-November offers retail investors direct access to a pure-play AI company. Rather than viewing the AI market as winner-take-all, the article argues that with the global AI market projected to reach $1.9 trillion by 2032, there is sufficient opportunity for both Anthropic and OpenAI to thrive as competitors, similar to how Coca-Cola and PepsiCo coexist in beverages, or Visa and Mastercard in payments.
+<<<INSIGHTS>>>
+KO | neutral | Used as a historical comparison example to demonstrate that multiple competitors can coexist profitably in large markets without requiring a winner-take-all outcome.
+PEP | neutral | Used as a historical comparison example alongside Coca-Cola to illustrate successful coexistence of competitors in a mature, large market.
+V | neutral | Used as an example of a company that thrives in a large market alongside competitors, demonstrating that multiple players can generate significant profits in payments processing.
+MA | neutral | Used as an example of a competitor to Visa that successfully operates profitably in the payments space, supporting the thesis that large markets support multiple winners.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2649a5788eb0b0fdaa2e815531f779dfb9dd68627efb4cacab57498c595d12df
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-31T13:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/10/31/what-the-big-banks-third-quarter-reports-say-about/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891472%2F26_10_09-a-person-holding-a-credit-card-_mf-dload-gettyimages-1323520710-1281x850-e2661ee.jpg&w=1200&op=resize
+category: 
+tickers: BAC, BACpB, BACpE, BACpK, BACpL, BACpM, BACpN, BACpO, BACpP, BACpQ, BACpS, BMLpG, BMLpH, BMLpJ, BMLpL, MERpK, AMJB, JPM, JPMpC, JPMpD, JPMpJ, JPMpK, JPMpL, JPMpM, VYLD, C, CpN, CpR, COF, COFpI, COFpJ, COFpK, COFpL, COFpN, V, MA
+keywords: credit card delinquency, consumer debt, Q3 2026 earnings, charge-off rates, financial health, banking sector
+headline: What the Big Banks' Third-Quarter Reports Say About Credit Card Borrowers
+<<<SUMMARY>>>
+Analysis of Q3 2026 earnings from major credit card issuers shows consumers are managing debt well. Delinquency and charge-off rates at Bank of America, JPMorgan Chase, Citigroup, and Capital One all improved year-over-year, indicating financial strain among consumers remains limited despite economic pressures.
+<<<INSIGHTS>>>
+BAC | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpB | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpE | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpK | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpL | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpM | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpN | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpO | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpP | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpQ | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BACpS | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BMLpG | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BMLpH | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BMLpJ | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+BMLpL | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+MERpK | positive | 30-day delinquency rate of 2.32% and 90-day rate of 1.13% both improved year-over-year; net charge-offs of 3.22% also lower than prior year, indicating improving credit quality
+AMJB | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+JPM | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+JPMpC | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+JPMpD | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+JPMpJ | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+JPMpK | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+JPMpL | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+JPMpM | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+VYLD | positive | 30-day delinquency rate of 1.97% and 90-day rate of 0.96% both declined year-over-year, showing strong credit performance and improving consumer payment behavior
+C | positive | 30-day delinquency ratios of 1.16% (branded) and 1.96% (private-label) both lower than prior year; 90-day delinquency ratios also improved, indicating manageable credit risk
+CpN | positive | 30-day delinquency ratios of 1.16% (branded) and 1.96% (private-label) both lower than prior year; 90-day delinquency ratios also improved, indicating manageable credit risk
+CpR | positive | 30-day delinquency ratios of 1.16% (branded) and 1.96% (private-label) both lower than prior year; 90-day delinquency ratios also improved, indicating manageable credit risk
+COF | positive | 30-day delinquency rate of 3.72% lower year-over-year despite slight sequential increase; charge-offs fell to 4.01% both sequentially and year-over-year, suggesting credit risks remain controlled
+COFpI | positive | 30-day delinquency rate of 3.72% lower year-over-year despite slight sequential increase; charge-offs fell to 4.01% both sequentially and year-over-year, suggesting credit risks remain controlled
+COFpJ | positive | 30-day delinquency rate of 3.72% lower year-over-year despite slight sequential increase; charge-offs fell to 4.01% both sequentially and year-over-year, suggesting credit risks remain controlled
+COFpK | positive | 30-day delinquency rate of 3.72% lower year-over-year despite slight sequential increase; charge-offs fell to 4.01% both sequentially and year-over-year, suggesting credit risks remain controlled
+COFpL | positive | 30-day delinquency rate of 3.72% lower year-over-year despite slight sequential increase; charge-offs fell to 4.01% both sequentially and year-over-year, suggesting credit risks remain controlled
+COFpN | positive | 30-day delinquency rate of 3.72% lower year-over-year despite slight sequential increase; charge-offs fell to 4.01% both sequentially and year-over-year, suggesting credit risks remain controlled
+V | neutral | Mentioned only as a payment processor; article focuses on card issuers' credit quality rather than payment network performance
+MA | neutral | Mentioned only as a payment processor; article focuses on card issuers' credit quality rather than payment network performance
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:00093d64f615151652e4284c69a0fd3979a52c9edfd0e9fc216c19cc6c9d29f7
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T09:13:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3020187/zacks-industry-outlook-highlights-visa-mastercard-paypal-global-payments-and-wex?cid=CS-ZC-FT-press_releases-3020187
+image_url: https://staticx-tuner.zacks.com/images/articles/main/31/119.jpg
+category: 
+tickers: MA, WEX, V, PYPL, GPN
+keywords: financial transaction services, payment processing, cross-border payments, e-commerce, technology investments, cybersecurity, AI, consumer spending, digital payments
+headline: Zacks Industry Outlook Highlights Visa, Mastercard, PayPal, Global Payments and WEX
+<<<SUMMARY>>>
+The Financial Transaction Services industry faces near-term headwinds from rising technology investments in AI, cybersecurity, and cloud infrastructure that are pressuring margins, alongside inflation-driven cautious consumer spending. However, the industry benefits from expanding cross-border trade, e-commerce growth, and resilient travel/digital services demand. Five payment processing companies—Mastercard, WEX, Visa, PayPal, and Global Payments—are well-positioned for long-term growth despite the industry's current bearish outlook (Zacks Industry Rank #183).
+<<<INSIGHTS>>>
+MA | positive | Zacks Rank #2 (Buy) with strong global network across 220+ countries, multi-rail payment capabilities, and consistent earnings beats (6.71% average surprise). 2026 earnings expected to rise 16.9% year-over-year.
+WEX | positive | Zacks Rank #2 (Buy) with diversified payments ecosystem, proprietary technology, and strong growth prospects. 2026 earnings expected to rise 24.5% year-over-year with consistent quarterly earnings beats (5.57% average surprise).
+V | positive | Zacks Rank #3 (Hold) with vast global payments network, 5.2 billion payment credentials, and strong security infrastructure. Fiscal 2027 earnings expected to rise 13% with consistent earnings beats (3.08% average surprise).
+PYPL | neutral | Zacks Rank #3 (Hold) with extensive global network and 439 million active accounts, but modest 4% earnings growth expected for 2026. Mixed earnings performance with three beats and one miss in last four quarters.
+GPN | neutral | Zacks Rank #3 (Hold) with broad payment technology portfolio and geographic diversification, but modest 11.6% earnings growth expected for 2026. Worldpay acquisition expands capabilities but low earnings surprise average (1.55%).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:53342d3784ee60052878a1cc31aa830dbd35d090f69dd942d638c0cfbe2864a9
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T10:20:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3020218/should-you-invest-in-the-vanguard-financials-index-fund-etf-shares-vfh?cid=CS-ZC-FT-sector_etf-3020218
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default240.jpg
+category: 
+tickers: VFH, AMJB, JPM, JPMpC, JPMpD, JPMpJ, JPMpK, JPMpL, JPMpM, VYLD, V, IYF, XLF, BRK.A, BRK.B
+keywords: ETF, financials sector, passive management, low expense ratio, dividend yield, sector exposure
+headline: Should You Invest in the Vanguard Financials Index Fund ETF Shares (VFH)?
+<<<SUMMARY>>>
+VFH, a passively managed financials sector ETF with $13.37 billion in assets, offers broad exposure to the financial sector with a very low expense ratio of 0.09% and a 1.71% dividend yield. The fund has returned 4.13% year-to-date and 9.89% over the past year, with a medium risk profile (beta of 0.91). Zacks assigns it a Hold rating, suggesting it is a sufficient but not exceptional option for financials exposure.
+<<<INSIGHTS>>>
+VFH | positive | VFH is presented as a solid investment option with very low expenses (0.09%), substantial assets ($13.37 billion), reasonable performance (9.89% YTD), and effective diversification with 426 holdings. The Hold rating indicates it is a sufficient choice for financials exposure.
+AMJB | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+JPM | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+JPMpC | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+JPMpD | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+JPMpJ | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+JPMpK | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+JPMpL | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+JPMpM | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+VYLD | neutral | Mentioned as the largest holding in VFH at 10.42% of assets, but no independent sentiment is expressed about the company itself.
+V | neutral | Mentioned as a top holding in VFH, but no independent sentiment is expressed about the company.
+IYF | neutral | Presented as an alternative option with higher expense ratio (0.37%) and lower assets ($3.73 billion) compared to VFH.
+XLF | neutral | Listed as an alternative with similar low expense ratio (0.08%) but significantly higher assets ($52.10 billion) than VFH.
+BRK.A | neutral | Listed as a top holding in VFH, but no independent sentiment is provided about the company.
+BRK.B | neutral | Listed as a top holding in VFH, but no independent sentiment is provided about the company.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:49d3683ce9b40a578a43db93a644dcb24dedc123790ca91f4242b6c7cd204994
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T16:00:06Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020873/visa-v-upgraded-to-buy-here-s-what-you-should-know?cid=CS-ZC-FT-fundamental_analysis|yseop_template_12_zacks_rank_upgrade-3020873
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default203.jpg
+category: 
+tickers: V
+keywords: earnings estimate revisions, Zacks Rank, stock rating upgrade, Visa, institutional investors, stock price movement
+headline: Visa (V) Upgraded to Buy: Here's What You Should Know
+<<<SUMMARY>>>
+Visa has been upgraded to a Zacks Rank #2 (Buy) rating, reflecting upward trends in earnings estimates over the past three months. The upgrade positions Visa in the top 20% of Zacks-covered stocks, suggesting potential for near-term stock price appreciation driven by improving business fundamentals and institutional investor activity.
+<<<INSIGHTS>>>
+V | positive | Visa received an upgrade to Zacks Rank #2 (Buy) based on upward earnings estimate revisions over the past three months (0.7% increase). The upgrade indicates improving business fundamentals and positions the stock in the top 20% of covered stocks, suggesting potential for near-term price appreciation driven by institutional investor activity responding to better earnings outlooks.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9eb990ccef9f0d4be434cb4e78b5f017acf55d3d47e150e8f8ca9a4ebfe6c793
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T15:23:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021975/will-higher-enterprise-smb-contribution-aid-gpn-s-q3-earnings?cid=CS-ZC-FT-analyst_blog|earnings_preview-3021975
+image_url: https://staticx-tuner.zacks.com/images/articles/main/cc/1727.jpg
+category: 
+tickers: GPN, SYF, SYFpA, SYFpB, AXP, V
+keywords: Q3 2026 earnings, Global Payments, Worldpay acquisition, revenue growth, earnings beat, payment processing
+headline: Will Higher Enterprise & SMB Contribution Aid GPN's Q3 Earnings?
+<<<SUMMARY>>>
+Global Payments (GPN) is expected to report Q3 2026 earnings on Nov. 5 with consensus estimates of $3.57 EPS and $3.18B in revenues, representing 9.5% and 31% year-over-year growth respectively. The company benefits from the Worldpay acquisition completed in January 2026, with strong adjusted EBITDA margins expected to reach 46.9%. However, rising operating expenses may partially offset gains. GPN has an Earnings ESP of +0.81% and Zacks Rank #3, suggesting a likely earnings beat.
+<<<INSIGHTS>>>
+GPN | positive | Strong revenue growth of 31% YoY, positive Earnings ESP of +0.81%, Zacks Rank #3 (Hold), history of beating consensus estimates (3 of last 4 quarters), and improved EBITDA margins to 46.9% support positive outlook. Worldpay acquisition integration appears successful.
+SYF | neutral | Beat consensus estimate by 8.1% but EPS declined 6.3% YoY. Strong purchase volume and credit performance offset by higher operating expenses and credit loss provisions, resulting in mixed performance.
+SYFpA | neutral | Beat consensus estimate by 8.1% but EPS declined 6.3% YoY. Strong purchase volume and credit performance offset by higher operating expenses and credit loss provisions, resulting in mixed performance.
+SYFpB | neutral | Beat consensus estimate by 8.1% but EPS declined 6.3% YoY. Strong purchase volume and credit performance offset by higher operating expenses and credit loss provisions, resulting in mixed performance.
+AXP | positive | Beat consensus estimate by 4.7% with 13% YoY EPS growth. Strong Card Member spending, higher net interest income, and improved card fee growth demonstrate solid business momentum despite elevated operating expenses.
+V | positive | Beat consensus estimate by 1.5% with 17% YoY earnings growth. Higher payment volumes, robust cross-border activity, and increased transaction processing demonstrate strong market position, though partially offset by increased expenses.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cc1f374ff14aaeee29bb7e3a7e70535dcab3093ab021a05776411b6cf1c6de3e
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T05:37:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/04/5-payment-stocks-that-earn-a-fee-every-time-you-swipe/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb0e7c853010fa49f1db46472fdd703a17c0ff111-7008x4672.jpg&w=1200&op=resize
+category: 
+tickers: V, MA, AXP, PYPL, COF, COFpI, COFpJ, COFpK, COFpL, COFpN
+keywords: payment processing, transaction fees, payment networks, valuation multiples, credit risk, payment volume
+headline: 5 Payment Stocks That Earn a Fee Every Time You Swipe
+<<<SUMMARY>>>
+The article analyzes five payment processing stocks that earn fees on transactions: Visa, Mastercard, American Express, PayPal, and Capital One. Visa and Mastercard trade at premium valuations (~28x earnings) due to their low-risk fee-based models with no lending exposure. PayPal and Capital One trade cheaper (~9-10x earnings) due to higher risks from shrinking margins and credit exposure respectively. American Express falls in between at ~16x earnings. The author recommends Visa and Mastercard as the simplest payment fee plays, with Mastercard having a slight edge due to faster-growing services revenue.
+<<<INSIGHTS>>>
+V | positive | Trading at premium 28x earnings multiple justified by pure fee-based model with no credit risk. Handled 74.2B transactions (up 10% YoY) with 13% revenue growth and 17% EPS growth. Author recommends as top choice for simplest payment fee exposure.
+MA | positive | Trading at premium 28x earnings with strong fundamentals. Value-added services revenue jumped 19% and now comprises 41% of net revenue, providing diversification. Author gives it slight edge over Visa due to faster-growing services business.
+AXP | neutral | Trading at moderate 16x earnings, falling between pure networks and lenders. Generates fees from merchants but also carries credit risk from lending operations. Net write-off rate improved to 1.8%, but credit quality remains a key risk factor.
+PYPL | negative | Trading cheaply at ~10x earnings due to significant headwinds. Transaction revenue grew only 3% despite 6% payment volume growth, indicating shrinking margins (1.58% cut down from 1.65%). Author identifies margin compression as primary reason for cheap valuation.
+COF | negative | Trading cheaply at ~9x earnings primarily due to credit risk exposure. While Discover network volume grew 25%, lending remains core business with net charge-off rates as key metric. Economic slowdown could reverse recent credit quality improvements.
+COFpI | negative | Trading cheaply at ~9x earnings primarily due to credit risk exposure. While Discover network volume grew 25%, lending remains core business with net charge-off rates as key metric. Economic slowdown could reverse recent credit quality improvements.
+COFpJ | negative | Trading cheaply at ~9x earnings primarily due to credit risk exposure. While Discover network volume grew 25%, lending remains core business with net charge-off rates as key metric. Economic slowdown could reverse recent credit quality improvements.
+COFpK | negative | Trading cheaply at ~9x earnings primarily due to credit risk exposure. While Discover network volume grew 25%, lending remains core business with net charge-off rates as key metric. Economic slowdown could reverse recent credit quality improvements.
+COFpL | negative | Trading cheaply at ~9x earnings primarily due to credit risk exposure. While Discover network volume grew 25%, lending remains core business with net charge-off rates as key metric. Economic slowdown could reverse recent credit quality improvements.
+COFpN | negative | Trading cheaply at ~9x earnings primarily due to credit risk exposure. While Discover network volume grew 25%, lending remains core business with net charge-off rates as key metric. Economic slowdown could reverse recent credit quality improvements.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:145f530bd5aabf081ff13f3bc6816b62cf45f5791d27098e1f88e12c1d17f1b8
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T10:20:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022588/should-you-invest-in-the-ishares-u-s-financial-services-etf-iyg?cid=CS-ZC-FT-sector_etf-3022588
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default163.jpg
+category: 
+tickers: IYG, BRK.A, BRK.B, AMJB, JPM, JPMpC, JPMpD, JPMpJ, JPMpK, JPMpL, JPMpM, VYLD, V, VFH, XLF
+keywords: ETF, financial services, passive management, expense ratio, dividend yield, sector exposure
+headline: Should You Invest in the iShares U.S. Financial Services ETF (IYG)?
+<<<SUMMARY>>>
+The iShares U.S. Financial Services ETF (IYG) is a passively managed fund tracking the Dow Jones U.S. Financial Services Index with $2.27 billion in assets. It offers a 0.37% expense ratio and 1.08% dividend yield, with top holdings including Berkshire Hathaway (13.64%), JPMorgan Chase, and Visa. Year-to-date performance is 4.27%, with a beta of 0.97 and standard deviation of 17.19%, making it a high-risk option. The fund holds a Zacks ETF Rank of 2 (Buy).
+<<<INSIGHTS>>>
+IYG | positive | The ETF received a Zacks ETF Rank of 2 (Buy), has competitive expense ratio of 0.37%, substantial assets of $2.27 billion, and provides diversified exposure with 101 holdings. It is described as an 'outstanding option' for investors seeking financials sector exposure.
+BRK.A | neutral | Mentioned as the largest holding (13.64%) in IYG, but no specific sentiment is expressed about the company itself; it is simply noted as a portfolio component.
+BRK.B | neutral | Mentioned as the largest holding (13.64%) in IYG, but no specific sentiment is expressed about the company itself; it is simply noted as a portfolio component.
+AMJB | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+JPM | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+JPMpC | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+JPMpD | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+JPMpJ | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+JPMpK | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+JPMpL | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+JPMpM | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+VYLD | neutral | Listed as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+V | neutral | Mentioned as a top holding in IYG, but no specific sentiment or analysis is provided about the company.
+VFH | neutral | Presented as an alternative ETF option with lower expense ratio (0.09%) and higher assets ($13.56 billion), but no comparative sentiment judgment is made.
+XLF | neutral | Presented as an alternative ETF option with the lowest expense ratio (0.08%) and highest assets ($53.23 billion), but no comparative sentiment judgment is made.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9684df8e0532cf9a01d61be5467e07244204606eaec90d6218681b89d502925e
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T11:15:02Z
+publisher: The Motley Fool
+author: Erin Kennedy
+url: https://www.fool.com/coverage/better-buy/2026/11/04/mastercard-vs-sp-global-which-financial-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F619c9bdd51dd42dbfd2f26c6082e9a3eeaae39b6-1200x800.jpg&w=1200&op=resize
+category: 
+tickers: MA, SPGI, V, AXP
+keywords: payments network, financial stocks, net margin, revenue growth, valuation, capital markets, digital payments, credit ratings
+headline: Mastercard vs. S&P Global: Which Financial Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Mastercard and S&P Global as investment options through 2027. Mastercard operates a scalable payments network with a 45.6% net margin and 16.4% revenue growth, while S&P Global provides credit ratings and market data with a 29.2% net margin and 7.9% revenue growth. The author recommends Mastercard as the better buy due to its superior margins, growth trajectory, and 200+ percentage point outperformance over the past decade, despite its higher valuation.
+<<<INSIGHTS>>>
+MA | positive | Strong 45.6% net margin, 16.4% revenue growth, $16.4B free cash flow, and dominant market position in scalable payments network. Author explicitly recommends it as the better buy despite higher valuation, citing superior profitability and long-term outperformance.
+SPGI | neutral | Solid fundamentals with 29.2% net margin and lower valuation (P/E 27.72 vs 33.85), but faces cyclical risks from capital market slowdowns and lower growth (7.9%). Author views it as less attractive than Mastercard due to market dependency and lower margins.
+V | neutral | Mentioned as a competitor to Mastercard in the payments network space, representing competitive pressure but not analyzed in detail.
+AXP | neutral | Mentioned as a competitor to Mastercard in the payments network space, representing competitive pressure but not analyzed in detail.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3a739a72d82307904426c99880e3d4b9df8dcc49b907db387abd5ef7d42b4a11
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T14:45:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023170/can-affirm-beat-q1-earnings-on-higher-gmv-and-active-consumers?cid=CS-ZC-FT-analyst_blog|earnings_preview-3023170
+image_url: https://staticx-tuner.zacks.com/images/articles/main/0b/2042.jpg
+category: 
+tickers: AFRM, SYF, SYFpA, SYFpB, AXP, V
+keywords: buy now pay later, BNPL, earnings preview, Q1 fiscal 2027, GMV growth, card network revenues, merchant network, active consumers
+headline: Can Affirm Beat Q1 Earnings on Higher GMV and Active Consumers?
+<<<SUMMARY>>>
+Affirm Holdings (AFRM) is expected to report Q1 fiscal 2027 earnings on November 5, 2026, with consensus estimates for 35 cents EPS and $1.22 billion in revenues, representing 52.2% and 30.3% year-over-year growth respectively. The company's GMV is projected to grow 30.1%, while card network revenues and interest income are expected to increase 26.4% and 32.9% respectively. With an Earnings ESP of +14.49% and Zacks Rank #3, analysts predict another earnings beat.
+<<<INSIGHTS>>>
+AFRM | positive | Strong expected earnings growth of 52.2% YoY, revenue growth of 30.3%, consistent history of beating consensus estimates (379.4% average surprise over last 4 quarters), positive Earnings ESP of +14.49%, and robust growth across key metrics including GMV (+30.1%), active consumers (+19.8%), and card network revenues (+26.4%).
+SYF | neutral | Reported Q3 2026 earnings beat with 8.1% surprise, but bottom line declined 6.3% YoY. Mixed results with strong purchase volume offset by higher operating expenses and increased credit loss provisions.
+SYFpA | neutral | Reported Q3 2026 earnings beat with 8.1% surprise, but bottom line declined 6.3% YoY. Mixed results with strong purchase volume offset by higher operating expenses and increased credit loss provisions.
+SYFpB | neutral | Reported Q3 2026 earnings beat with 8.1% surprise, but bottom line declined 6.3% YoY. Mixed results with strong purchase volume offset by higher operating expenses and increased credit loss provisions.
+AXP | positive | Q3 2026 adjusted EPS of $4.68 beat consensus by 4.7% and advanced 13% YoY, driven by increased Card Member spending, higher net interest income, and improved card fee growth.
+V | positive | Q4 fiscal 2026 adjusted earnings of $3.48 per share increased 17% YoY and beat consensus by 1.5%, supported by higher payment volumes, robust cross-border activity, and increased transaction processing.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c5711011c3d6fc77b4074cc7fc5235f211351978f13f0cb6fa94617fbf898a01
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T17:16:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023347/fis-q3-earnings-meet-estimates-revenues-beat-on-banking-strength?cid=CS-ZC-FT-analyst_blog|earnings_article-3023347
+image_url: https://staticx-tuner.zacks.com/images/articles/main/fe/17407.jpg
+category: 
+tickers: FIS, V, MA
+keywords: Q3 earnings, revenue growth, guidance cut, banking solutions, conversion delays, EBITDA margin expansion, debt reduction, free cash flow
+headline: FIS Q3 Earnings Meet Estimates, Revenues Beat on Banking Strength
+<<<SUMMARY>>>
+Fidelity National Information Services (FIS) reported Q3 2026 adjusted earnings of $1.61 per share and revenues of $3.45 billion, both meeting or exceeding expectations. However, the company cut its full-year 2026 EPS guidance to $5.82-$5.89 from $6.15-$6.24, citing client-led banking conversion delays, consolidation impacts, and increased technology and security spending. Banking Solutions revenues surged 41% year-over-year, while adjusted EBITDA margin expanded 111 basis points to 42.9%.
+<<<INSIGHTS>>>
+FIS | negative | While Q3 results met expectations with strong revenue growth (27.1%) and EBITDA margin expansion, the significant downward revision of full-year 2026 EPS guidance (down ~5.4% from midpoint) and 2027 earnings decline outlook outweigh the quarterly beat. Banking conversion delays and elevated tech spending indicate operational challenges ahead.
+V | positive | Q4 fiscal 2026 adjusted EPS of $3.48 surpassed consensus by 1.5% with 17% year-over-year growth. Net revenues of $12.1 billion rose 13% year-over-year, benefiting from higher payment volumes, robust cross-border activity, and increased transaction processing.
+MA | positive | Q3 2026 adjusted EPS of $5.31 topped consensus by 3.3% with 21.2% year-over-year growth. Net revenues advanced 14% year-over-year to $9.8 billion, driven by higher cross-border volumes, increased gross dollar volume, and strong demand for value-added services.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7be097cc3c37f5cebe0fa975653d0f2b360663b5d632f19c93d20c8b734d9bff
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T12:45:01Z
+publisher: The Motley Fool
+author: Erin Kennedy
+url: https://www.fool.com/coverage/better-buy/2026/11/05/american-express-vs-paypal-which-financial-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F5be796083a6a6843b850893f62bfa0d68e81b842-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AXP, PYPL, V, MA, DAL, AMZN
+keywords: payment networks, financial stocks, valuation comparison, closed-loop payments, digital payments, profitability metrics, 2027 investment outlook
+headline: American Express vs. PayPal: Which Financial Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares American Express and PayPal as investment options for 2027. American Express operates a premium closed-loop payments network with strong margins (13.5% net margin) and high-spending customers, while PayPal offers massive global scale with 439 million active accounts but lower growth (4.3% YoY). Despite PayPal's cheaper valuation (P/E of 11.48 vs. 18.73), the author recommends American Express for 2027, citing its superior 10-year performance and more reliable business model over PayPal's stagnant stock returns.
+<<<INSIGHTS>>>
+AXP | positive | Strong financial performance with 8.4% revenue growth, robust 13.5% net margin, $16B free cash flow, premium brand positioning, and superior 10-year stock performance. Author's recommended pick for 2027 despite higher valuation.
+PYPL | neutral | Maintains massive global scale (439M accounts) and healthy 15.8% net margin with $5.6B free cash flow, but faces slower growth (4.3% YoY), significantly cheaper valuation, and poor historical stock performance (underperformed S&P 500 over 10 years). Not recommended despite attractive valuation.
+V | neutral | Mentioned as a competitive threat to American Express in the global payments landscape.
+MA | neutral | Mentioned as a competitive threat to American Express in the global payments landscape.
+DAL | neutral | Noted as American Express's largest strategic partner with co-branded credit cards, representing both a revenue opportunity and concentration risk.
+AMZN | neutral | Mentioned as a competitive threat to PayPal in the digital payments space.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f658ab458abddce95b6ab8070408781dcfcee0bd2358440d53159631a4e92ead
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T13:00:00Z
+publisher: GlobeNewswire Inc.
+author: Not Specified
+url: https://www.globenewswire.com/news-release/2026/11/05/3396336/0/en/dune-completes-soc-2-type-ii-as-tokenized-assets-doubled-to-32-6b.html
+image_url: https://ml-eu.globenewswire.com/Resource/Download/dbe4505b-96ab-445e-9078-c62927d0972b
+category: 
+tickers: V, UBS
+keywords: SOC 2 Type II certification, onchain data, stablecoins, tokenized real-world assets, institutional adoption, blockchain markets, data security
+headline: Dune Completes SOC 2 Type II as Tokenized Assets Doubled to $32.6B
+<<<SUMMARY>>>
+Dune, an onchain data platform, has completed a SOC 2 Type II examination with no exceptions, strengthening its credibility with institutional clients. The certification comes as blockchain markets expand significantly, with USD stablecoin market cap reaching $314 billion and tokenized real-world assets doubling to $32.6 billion year-over-year. Dune serves over 1,000 customers including major financial institutions and is positioning itself as the industry standard for institutional-grade blockchain data.
+<<<INSIGHTS>>>
+V | neutral | Visa is mentioned only as a customer of Dune's data services. No specific business developments or performance metrics related to Visa are discussed in the article.
+UBS | neutral | UBS is mentioned only as a customer of Dune's data services. No specific business developments or performance metrics related to UBS are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:716c41f75f54b170c6663fc3b2ba75b3c6dab6d239dcd16114a41ec5fc5b69a2
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T14:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024460/visa-s-solid-q4-masks-rising-incentives-is-v-still-worth-buying?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3024460
+image_url: https://staticx-tuner.zacks.com/images/articles/main/8c/1033.jpg
+category: 
+tickers: V, MA, AXP
+keywords: earnings beat, payment volumes, value-added services, client incentives, contract renewals, cross-border spending, valuation premium, growth moderation
+headline: Visa's Solid Q4 Masks Rising Incentives: Is V Still Worth Buying?
+<<<SUMMARY>>>
+Visa reported fiscal Q4 earnings of $3.48 per share, up 17% YoY, with revenues rising 13% to $12.14 billion. Value-added services jumped 31% to $4 billion, and cross-border volume grew 14%. However, client incentives surged 21%, outpacing revenue growth, and 25% of payments volume faces renewal in fiscal 2027. Management expects slower growth ahead, with low-double-digit revenue and EPS growth expected for fiscal 2027 versus 15-16% growth in fiscal 2026. The stock trades at a premium 28.68X forward P/E and carries a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+V | neutral | While Visa delivered solid Q4 results with 17% EPS growth and strong payment volumes, the outlook is tempered by rising client incentives (up 21%), increased contract renewal pressure (25% of volume up for renewal), and moderating fiscal 2027 growth expectations (low-double-digit vs. 15-16% prior year). Premium valuation at 28.68X forward P/E limits near-term upside, warranting a Hold rating.
+MA | neutral | Mastercard is mentioned as a peer comparison, trading at a slightly higher forward P/E of 29.82X compared to Visa's 28.68X. No specific performance data provided, but YTD performance of 17.8% is noted as context for relative industry performance.
+AXP | neutral | American Express is referenced as a peer with a lower valuation multiple of 16.77X forward P/E and YTD performance of -10.1%. No specific analysis provided; mentioned only for comparative valuation context.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9cb5bb2c91f125561c604bf94b1b6481d295543f57cc588aa10fd83b3a9f761c
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T18:03:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024800/gpn-q3-earnings-beat-estimates-on-genius-growth-margins-rise?cid=CS-ZC-FT-analyst_blog|earnings_article-3024800
+image_url: https://staticx-tuner.zacks.com/images/articles/main/29/187.jpg
+category: 
+tickers: GPN, V, MA
+keywords: Q3 2026 earnings, payment processing, margin expansion, Worldpay integration, shareholder returns, synergy targets
+headline: GPN Q3 Earnings Beat Estimates on Genius Growth, Margins Rise
+<<<SUMMARY>>>
+Global Payments reported Q3 2026 adjusted EPS of $3.58, beating estimates by 0.3%, with adjusted net revenues rising 31% year-over-year to $3.18 billion. The company expanded operating margins by 220 basis points to 42.5% and raised its synergy target to $650 million. GPN reaffirmed full-year guidance and expects over $2 billion in shareholder returns for 2026. Peers Visa, Mastercard, and Marsh & McLennan also reported strong quarterly results.
+<<<INSIGHTS>>>
+GPN | positive | Beat EPS and revenue estimates, achieved 220 bps margin expansion, raised synergy targets to $650M, and maintained strong 2026 guidance with over $2B in planned shareholder returns. Strong performance across all segments with continued Genius platform adoption.
+V | positive | Q4 FY2026 adjusted EPS of $3.48 beat consensus by 1.5% with 17% year-over-year growth. Net revenues of $12.1B rose 13% YoY, driven by higher payment volumes and robust cross-border activity.
+MA | positive | Q3 2026 adjusted EPS of $5.31 topped estimates by 3.3% with 21.2% year-over-year growth. Net revenues advanced 14% YoY to $9.8B, benefiting from higher cross-border volumes and strong value-added services demand.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3a69125dc935d94ab95721ed45615f73ac7c805b01acb9e518d5441215b43236
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T11:30:00Z
+publisher: The Motley Fool
+author: Neil Patel
+url: https://www.fool.com/investing/2026/11/06/visa-eps-17-a-year-decade-stock-compounding/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F889191%2Fvisa-on-purple-filter-with-card-in-background_-the-motley-fool.png&w=1200&op=resize
+category: 
+tickers: V
+keywords: earnings per share growth, payment volume, cashless transactions, value-added services, stablecoins, valuation, addressable market, double-digit growth
+headline: Visa Has Grown Earnings per Share by 17% a Year for a Decade. Can the Stock Keep Compounding?
+<<<SUMMARY>>>
+Visa has delivered impressive 17.4% annualized EPS growth over the past decade, driving a 459% total stock return. While analysts expect continued double-digit EPS growth over the next three years and the company has only captured half its addressable market, investors should temper expectations as growth will moderate. The stock's forward P/E ratio of 27.5 raises valuation concerns despite strong fundamentals and innovation in value-added services and stablecoins.
+<<<INSIGHTS>>>
+V | positive | Visa demonstrates strong fundamentals with 17.4% annualized EPS growth over a decade, 21% EPS growth in fiscal 2026, and analyst expectations for 13.7% compound annual EPS growth over the next three years. The company has only penetrated half its addressable market, indicating significant runway. Innovation in value-added services (up 30% YoY) and emerging technologies like stablecoins and agentic commerce show forward-thinking strategy. However, sentiment is tempered by elevated valuation (27.5x forward P/E) and expectations for moderating growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f6a1facd87a609ca644d35da888f9b38a0c686b58f86a5597bdff8442b19c728
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T12:28:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025273/mastercard-s-19-services-growth-steals-the-q3-show-buy-or-hold-ma?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3025273
+image_url: https://staticx-tuner.zacks.com/images/articles/main/15/497.jpg
+category: 
+tickers: MA, V, AXP
+keywords: Q3 earnings, services business, customer incentives, regulatory pressure, cross-border spending, valuation, digital payments, cybersecurity, stablecoins, AI commerce
+headline: Mastercard's 19% Services Growth Steals the Q3 Show: Buy or Hold MA?
+<<<SUMMARY>>>
+Mastercard delivered strong Q3 results with adjusted EPS up 21.2% and revenue growth of 14%, driven by its high-margin services business which contributed over half of incremental revenue growth. However, rising customer incentives, regulatory pressures, and uneven cross-border spending trends pose risks. The stock's premium valuation of 29.06X forward P/E leaves limited room for disappointment, warranting a Hold rating.
+<<<INSIGHTS>>>
+MA | neutral | While Q3 performance was strong with 21.2% EPS growth and expanding margins, the premium valuation (29.06X forward P/E) already reflects optimistic growth expectations. Rising customer incentives, regulatory uncertainties, and slowing cross-border trends create headwinds that limit upside potential, supporting a Hold stance rather than a Buy.
+V | positive | Visa outperformed Mastercard year-to-date with 20.5% gains versus MA's 14.9%, and trades at a lower forward P/E of 27.75X, suggesting better relative value in the payments sector.
+AXP | negative | American Express declined 12.2% year-to-date, significantly underperforming both Mastercard and Visa, indicating weaker market sentiment toward the company.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:06e7ebc386c028b00f9a5c82e8769e30547637373ba78905f208d8753a45ac21
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T15:42:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025770/affirm-q1-earnings-beat-estimates-on-strong-gmv-and-card-growth?cid=CS-ZC-FT-analyst_blog|earnings_article-3025770
+image_url: https://staticx-tuner.zacks.com/images/articles/main/30/172914.webp
+category: 
+tickers: AFRM, MA, V, AXP
+keywords: earnings, fintech, buy now pay later, payment processing, GMV growth, card adoption, credit losses
+headline: Affirm Q1 Earnings Beat Estimates on Strong GMV and Card Growth
+<<<SUMMARY>>>
+Affirm Holdings (AFRM) reported Q1 FY27 earnings of 47 cents per share, beating estimates by 34.3%, with revenues surging 35.2% to $1.3 billion. GMV grew 34% to $14.4 billion while active cardholders more than doubled to 6 million. However, credit loss provisions jumped 59.4%, and the company projects FY27 GMV above $65.25 billion. Peers Mastercard, Visa, and American Express also reported strong quarterly results with double-digit revenue growth.
+<<<INSIGHTS>>>
+AFRM | positive | Strong earnings beat (34.3% above consensus), significant revenue growth (35.2% YoY), impressive GMV growth (34% YoY), and active cardholders more than doubled (112% YoY). Operating margin expanded and adjusted operating income climbed 43.9%. However, credit loss provisions surged 59.4%, which is a concern for profitability sustainability.
+MA | positive | Q3 2026 adjusted EPS beat consensus by 3.3%, improved 21.2% YoY. Net revenues advanced 14% YoY to $9.8 billion, driven by higher cross-border volumes and robust demand for value-added services.
+V | positive | Q4 FY2026 adjusted EPS beat consensus by 1.5%, up 17% YoY. Net revenues rose 13% YoY to $12.1 billion, reflecting higher payment volumes and robust cross-border activity.
+AXP | positive | Q3 2026 EPS surpassed consensus by 4.7%, advanced 13% YoY. Total revenues improved 9% YoY to $20.1 billion, driven by increased Card Member spending and higher net interest income.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e2282638894250c2b298d514b17ad121bcf875cdd0dba99a3ba9e1cc706bc32f
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T17:00:00Z
+publisher: The Motley Fool
+author: Stefon Walters
+url: https://www.fool.com/investing/2026/11/10/1-reliable-etf-im-buying-forever-even-if-the-stock/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892952%2Fgettyimages-1329421602.jpg&w=1200&op=resize
+category: 
+tickers: VOO, NVDA, AAPL, MSFT, AMJB, JPM, JPMpC, JPMpD, JPMpJ, JPMpK, JPMpL, JPMpM, VYLD, LLY, JNJ, V, CVX
+keywords: S&P 500 ETF, VOO, market crash, diversification, dollar-cost averaging, bear market, long-term investing, expense ratio
+headline: 1 Reliable ETF I'm Buying Forever, Even if the Stock Market Crashes
+<<<SUMMARY>>>
+The author recommends the Vanguard S&P 500 ETF (VOO) as a reliable long-term investment despite current market volatility and crash concerns. VOO offers diversification across 500 large U.S. companies, a low 0.03% expense ratio, and has historically recovered from all 27 bear markets it has experienced, averaging 12.5% annual returns since 2010. The author suggests dollar-cost averaging to mitigate timing risk in uncertain market conditions.
+<<<INSIGHTS>>>
+VOO | positive | Recommended as a reliable, diversified investment with low costs (0.03% expense ratio), strong historical performance (570% gain since 2010, 12.5% average annual returns), and resilience through multiple market crashes. Author plans to continue buying regardless of market conditions.
+NVDA | neutral | Mentioned as a top holding in VOO (8.39%) and part of the 'Magnificent Seven' tech stocks. While acknowledged as a leader, the article notes tech sector volatility could cause short-term pullbacks due to AI bubble concerns.
+AAPL | neutral | Listed as a top holding in VOO (7.38%) and industry leader, but no specific sentiment expressed beyond being part of the diversified portfolio.
+MSFT | neutral | Included as a top holding in VOO (5.78%) and tech powerhouse, but discussed only in context of sector composition without specific positive or negative outlook.
+AMJB | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+JPM | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+JPMpC | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+JPMpD | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+JPMpJ | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+JPMpK | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+JPMpL | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+JPMpM | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+VYLD | neutral | Mentioned as a financial powerhouse and industry leader within the S&P 500 portfolio, but no specific sentiment or analysis provided.
+LLY | neutral | Referenced as a healthcare giant within the diversified S&P 500 holdings, but no specific analysis or sentiment expressed.
+JNJ | neutral | Mentioned as a healthcare industry leader in the S&P 500 portfolio without specific positive or negative commentary.
+V | neutral | Listed as a financial powerhouse within the S&P 500 holdings, but discussed only as part of the diversified portfolio composition.
+CVX | neutral | Referenced as an oil sector leader within the diversified S&P 500 portfolio without specific sentiment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:17bcc07ed332ee180ef8ce4a272bfaabd6e9a9e12369e5e038ef62a53bac0b4b
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T11:30:02Z
+publisher: The Motley Fool
+author: Parkev Tatevosian, Cfa
+url: https://www.fool.com/investing/2026/11/11/my-forever-portfolio-4-spectacular-stocks-you-can-buy-now-and-never-sell/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F6a2c5b12626f485ce42392477d05b0aa189cb728-1280x720.jpg&w=1200&op=resize
+category: 
+tickers: V, LLY, CL, KO
+keywords: forever portfolio, long-term investing, buy-and-hold strategy, stock selection
+headline: My Forever Portfolio: 4 Spectacular Stocks You Can Buy Now and Never Sell
+<<<SUMMARY>>>
+The article discusses a long-term investment strategy for building a 'forever portfolio' with stocks suitable for buy-and-hold investors. It emphasizes the importance of adopting a different mindset when investing for longer time horizons, though the specific stock recommendations are behind a paywall.
+<<<INSIGHTS>>>
+V | positive | Mentioned as a stock recommendation for long-term holding; author has a position in the company; highlighted for consistent earnings growth (17% annually over a decade)
+LLY | positive | Included in the forever portfolio recommendations; author has a disclosed position in the company
+CL | positive | Recommended as part of the forever portfolio strategy for long-term buy-and-hold investors
+KO | positive | Mentioned as a stock recommendation suitable for a forever portfolio strategy
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:877d17654997a3673265c3c76838b5b1f625e38b3e1e21f3550b7206b77ad28c
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T12:25:02Z
+publisher: The Motley Fool
+author: Erin Kennedy
+url: https://www.fool.com/coverage/better-buy/2026/11/11/interactive-brokers-group-vs-mastercard-which-financial-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F915b014fa5b56b1759956b6a0b42aa989270d937-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: IBKR, MA, V, AXP
+keywords: financial stocks, investment comparison, payment networks, brokerage services, valuation metrics, net margins, digital payments
+headline: Interactive Brokers Group vs. Mastercard: Which Financial Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Interactive Brokers Group and Mastercard as investment options for 2027. Interactive Brokers trades at a lower forward P/E (28.8 vs 33.5) and has zero debt, but Mastercard demonstrates superior profitability with a 45.6% net margin versus 15.9%. The author recommends Mastercard due to secular tailwinds in digital payments and its impressive ability to convert revenue into profits, despite Interactive Brokers being a solid company.
+<<<INSIGHTS>>>
+IBKR | neutral | Described as a solid company with attractive valuation (lower forward P/E) and strong financial health (zero debt, high free cash flow), but ultimately not recommended due to lack of secular growth tailwinds compared to Mastercard.
+MA | positive | Recommended as the better buy for 2027 based on exceptional net margins (45.6%), strong historical performance outpacing S&P 500, secular tailwinds from increasing digital payments adoption, and dividend payments. Author finds the business model particularly attractive.
+V | neutral | Mentioned as a competitor to Mastercard in the payment network space, representing competitive risk but not directly evaluated in the article.
+AXP | neutral | Mentioned as a competitor in the payment network industry but not directly analyzed or recommended in the comparison.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bdf2849a24cd8b38e9ac7e249129609e76e38dba221286abb80184b364537fbd
+symbol: V
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T17:17:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027990/can-visa-s-monad-integration-boost-its-stablecoin-strategy?cid=CS-ZC-FT-analyst_blog|quick_take-3027990
+image_url: https://staticx-tuner.zacks.com/images/articles/main/78/189.jpg
+category: 
+tickers: V, MA, PYPL
+keywords: blockchain, stablecoin settlement, Monad integration, payment infrastructure, multi-chain approach, digital assets
+headline: Can Visa's Monad Integration Boost Its Stablecoin Strategy?
+<<<SUMMARY>>>
+Visa has integrated Monad into its stablecoin settlement network, enabling card issuers and acquirers to use the blockchain for fund transfers. The move supports Visa's multi-chain strategy as its stablecoin settlement run rate reached $25 billion in Q4 fiscal 2026, growing tenfold year-over-year. Monad's upcoming Private Settlement feature will protect transaction data while maintaining regulatory oversight.
+<<<INSIGHTS>>>
+V | positive | Visa is expanding its blockchain capabilities with Monad integration, demonstrating strong stablecoin business growth ($25B run rate, 10x YoY growth), and 225+ stablecoin-linked card programs globally. The company is strengthening its position in evolving payments market and deepening relationships with financial institutions.
+MA | neutral | Mastercard is advancing its stablecoin strategy through blockchain settlement and BVNK acquisition, with SoFi collaboration for stablecoin-based card settlement. While competitive, no specific growth metrics or recent developments are highlighted in the article.
+PYPL | neutral | PayPal is expanding stablecoin presence through PayPal USD (PYUSD) across 70 markets with growing blockchain connectivity. However, no specific growth metrics or recent developments are provided to differentiate its performance from competitors.
+<<<END>>>

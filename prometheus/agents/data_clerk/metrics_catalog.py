@@ -178,10 +178,6 @@ def _net_payout(c: Context):
     return fund.net_payout_yield_ttm(_need_evidence(c), _finnhub_value(c, "market_cap"))
 
 
-def _dilution(c: Context):
-    return fund.dilution_current(_need_evidence(c), c.today)
-
-
 UNAVAILABLE = {  # names the strategies read but that this build cannot compute yet, each with the reason: they are in the catalogue so that a gap is a visible result, not a missing key
     "sue_4q": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)",
     "eps_surprise_last": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)",
@@ -210,6 +206,16 @@ def _build() -> dict[str, MetricSpec]:
         _bar_spec("mom_12_1", "price", "fraction", _simple(tech.mom_12_1), "12-month return skipping the latest month: close[-21] / close[-252] - 1"),
         _bar_spec("pct_of_52w_high", "price", "fraction", _simple(tech.pct_of_52w_high), "close / the highest high of the last 252 bars"),
         _bar_spec("sma_50", "price", "USD", _simple(lambda b: tech.sma(b, 50)), "simple mean of the last 50 closes"),
+        _bar_spec("sma_50_vs_200", "price", "fraction", _simple(tech.sma_50_vs_200), "sma_50 / sma_200 - 1: positive on the golden side, negative on the death side"),
+        _bar_spec("cross_50_200_20d", "price", "sessions", _simple(tech.cross_50_200_20d),
+                  "the last crossing of the 50-day mean and the 200-day mean in the last 20 sessions: +age golden, -age death (1 = the latest bar), 0 none", "last 220 bars"),
+        _bar_spec("structure_63d", "price", "up | down | mixed", _simple(tech.structure_63d), "three windows of 21 sessions: up = higher highs and higher lows, down = lower highs and lower lows, else mixed"),
+        _bar_spec("decline_from_peak_63d", "price", "fraction", _simple(tech.decline_from_peak_63d), "lowest close after the 63-session peak close, over that peak, minus 1 (0 when the peak is today)"),
+        _bar_spec("rebound_from_trough_63d", "price", "fraction", _simple(tech.rebound_from_trough_63d), "the latest close over that lowest close, minus 1"),
+        _bar_spec("sessions_since_trough_63d", "price", "sessions", _simple(tech.sessions_since_trough_63d), "how many sessions ago that lowest close was (0 = today)"),
+        _bar_spec("sma_126", "price", "USD", _simple(lambda b: tech.sma(b, 126)), "simple mean of the last 126 closes: the six-month average price"),
+        _bar_spec("high_126d", "price", "USD", _simple(tech.high_126d), "the highest high of the last 126 sessions (six months)"),
+        _bar_spec("low_126d", "price", "USD", _simple(tech.low_126d), "the lowest low of the last 126 sessions (six months)"),
         _bar_spec("sma_200", "price", "USD", _simple(lambda b: tech.sma(b, 200)), "simple mean of the last 200 closes"),
         _bar_spec("above_sma_50", "price", "bool", _simple(lambda b: tech.above_sma(b, 50)), "the close is above its 50-bar mean"),
         _bar_spec("above_sma_200", "price", "bool", _simple(lambda b: tech.above_sma(b, 200)), "the close is above its 200-bar mean"),
@@ -262,7 +268,6 @@ def _build() -> dict[str, MetricSpec]:
         MetricSpec("inventory_vs_sales", "filings", ("evidence",), "points", 0, "% change of inventories minus % change of sales", _evidence(fund.inventory_vs_sales), "latest balance sheet vs earlier; sales year over year"),
         MetricSpec("cfo_negative_with_profit", "filings", ("evidence",), "bool", 0, "cash from operations below zero while net income is above", _evidence(fund.cfo_negative_with_profit), "year to date"),
         MetricSpec("negative_equity", "filings", ("evidence",), "bool", 0, "total stockholders' equity of the latest stored balance sheet is below zero (a deficit): debt / equity has no meaning", _evidence(fund.negative_equity), "latest balance sheet"),
-        MetricSpec("dilution_current", "filings", ("evidence",), "bool", 0, "the company is issuing stock now, from the stored filings", _dilution, "latest filings"),
     ]
     for name in UNAVAILABLE:
         group = "unavailable"

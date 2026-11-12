@@ -1,0 +1,3818 @@
+<<<ARTICLE>>>
+id: finnhub:143495703
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:45:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9eced302fc138e5c53e69678eb7d433e24d7a6e3320617594fa8028790a130fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco (COST) Rises Higher Than Market: Key Facts
+<<<SUMMARY>>>
+The latest trading day saw Costco (COST) settling at $1, representing a +2.67% change from its previous close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494640
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1fbaaf95b48a1f18982a123156c865402e9f3c998d41e8a14d56a81070398deb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Wholesale Corporation Reports October Sales Results
+<<<SUMMARY>>>
+ISSAQUAH, Wash., Nov. 04, 2026 (GLOBE NEWSWIRE) -- Costco Wholesale Corporation (“Costco” or the “Company”) (Nasdaq: COST) today reported net sales of $24.50 billion for the retail month of October, the four weeks ended November 1, 2026, an increase of 12.6 percent from $21.75 billion last year. Net sales for the first nine weeks were $54.52 billion, an increase of 12.8 percent from $48.33 billion last year. Comparable sales were as follows: 4 Weeks 9 WeeksU.S.12.6% 12.5%Canada4.9% 5.7%Other Int
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493526
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b60a6db8d14ef172d0b00bf54253aebc3c1964af316bd5777a18e30e98ad0a4b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Uber Technologies, Inc. Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Uber Technologies, Inc.'s Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492499
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T15:14:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b564620f9a6b42fcf93c6bba4a04060c7dd9ef784f5fc17aaf61d58570b759ec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Is Dollar General Stock a Buy at Its Current Valuation?
+<<<SUMMARY>>>
+Dollar General trades at a discount to industry peers, while store upgrades, expansion and digital growth bolster its appeal despite lingering cost pressures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487505
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:11:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=43ebf90fef77c090b1098994ac5d3ca683c394dffc84e3fcdd60250889c91e8a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco (COST) Stock Looks Rich Despite Its Healthcare Push
+<<<SUMMARY>>>
+Costco Wholesale has rewarded long term holders with a strong run, which puts a bright spotlight on whether the current share price lines up with what its earnings can justify. With the stock now trading above US$1,000, the key issue for you is how much of Costco Wholesale's earnings power is already reflected in that price. Over the past 5 years, Costco Wholesale has delivered a 112.7% share price gain, so a lot now rides on whether that rise is fully backed by the earnings the business...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487506
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:15:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=19433fe4cf90593992b1a1227fc87e227351cdfe5386cd31e7135b790d25f9b9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco’s Capital Preservation Function Will Be on Display Over the Next Few Weeks
+<<<SUMMARY>>>
+Costco has outrun a falling market while trading at multiples that price in perfection, and the next few weeks will reveal whether its loyal membership base and defensive reputation can justify a valuation that leaves almost no room for error.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143486377
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:53:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41e107905b83adb468c457044bfc208f1517888f8a55b415866b7f5d2c16b6d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Can Casey's Stock Jump 30%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143484267
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:04:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e608ee828f3e07839c7afb45ee241408b348da75b61c32fc6d36437ce15ac10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: State Street Consumer Staples SPDR (XLP) Sells $17.0 Million of Walmart on Nov. 2
+<<<SUMMARY>>>
+The fund sold $143.6 million of stock and bought nothing, cutting 32 positions while adding none.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143485524
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:02:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=07f2f122e98b98f7e13c0fe7b0335d814a2389527d1d6d5c13b7169eee768223
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: ETFs Are Buying Costco (COST) on Monday
+<<<SUMMARY>>>
+ETFs bought $110.6 million of Costco stock on Monday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492500
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T05:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fcd0207bb809ab849ea0783680881c7d302654ee3d6cd5a1a5155618fbe449b4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Shopify Stock Dives After Revenue and Gross Merchandise Volume Come Up Short
+<<<SUMMARY>>>
+Third-quarter revenue of $3.74 billion came in below what analysts had expected, marking the company’s first revenue miss in four years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448967
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6cc8fde63c2ffc7e73cf07c8c9dc15f93023714aa433243109445de17f2cab7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: The Best Blue Chip Stock to Buy in November and Hold for 10 Years
+<<<SUMMARY>>>
+Costco will remain a reliable investment for the next decade.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448115
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:34:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9000896ee39d23e5e925346f71d5f3ddd6fb61120a2b9888f63f4b82d2742457
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: What Needs To Be True To Buy Walmart Stock Now?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447006
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T17:46:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0bc8996724b1b679ff1302af6294eff6a1848ddc8916086c98b04ace0beba44a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Elon Musk’s Tesla and SpaceX Block Their Stock From OKX-ICE Tokenized Venue
+<<<SUMMARY>>>
+Amazon, Tesla, SpaceX, Netflix, Lam Research, and SoFi objected to trading of their shares on the planned OKX-ICE tokenized stock venue, bringing the total to 56.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447133
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cd3a688ac171cd1de0a4e8759f6a2171434a5313d7df7eb58e6eb37a47e4cb20
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Hasn't Split Its Stock Since 2000. Here's Why 2027 Could Be the Year.
+<<<SUMMARY>>>
+Costco's long-term potential extends well beyond a stock split.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143486942
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:08:43Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f31307d10340c293b7a7e1a4fb2252a8f24ce9ee6cffc07d0a47495574a7a9e2
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: Growth And Cyclical Lead Sectors Tuesday
+<<<SUMMARY>>>
+Four sectors are higher and six are lower among those with available change data in Tuesday&#39;s regular session, with growth and cyclical sectors splitting the top of the table. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442459
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:40:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30e20fc384951946d4a0378fa2b44fa34cc42285d5b053ecd12820fc416b4755
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Why Should Costco Stock Holders Watch This Number?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446985
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T12:55:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a5824fc8373d5d78a96e7fe9e2b5ae8b4a4600f6fbc4c6120dcf404323828585
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2296539027/image_2296539027.jpg?io=getty-c-w1536
+category: company
+tickers: COST
+keywords: 
+headline: Wall Street Lunch: Midterm Elections & Earnings
+<<<SUMMARY>>>
+U.S. midterm elections. Palantir beat expectations, AMD faces high expectations;
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143438491
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:04:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ed2c837cfe7e68ffab22c9d1f1a0fc406eeecb77493aaab7f9eb855e5ef988e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: State Street Consumer Staples SPDR (XLP) Adds Vylor and Walmart on Oct. 30
+<<<SUMMARY>>>
+The fund bought $359.6 million of stock and sold nothing, lifting all 34 positions, led by a new $227.5 million stake in Vylor.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143439567
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T06:30:42Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=46fe764486b9f3628d2698b80ac20aa937b88af2b3cdff2f401eaa47d949a7c3
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1223791576/image_1223791576.jpg?io=getty-c-w1536
+category: company
+tickers: COST
+keywords: 
+headline: AI Bubble Burst: Where To Hide?
+<<<SUMMARY>>>
+AI bubble fears are rising as Amazon and Meta struggle to monetize AI.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143410395
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T05:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c86dc814b0063ed897d1defd767cdbe7f03707e225c180341b7f1ca41ac5d96
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco's latest coffee offering hones in on emerging trend
+<<<SUMMARY>>>
+Costco has once again shown how adept it is at introducing compelling new products.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143406484
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T00:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a8b48abebf0e2a6bc9e0e4a9cc4420027548cafdfbc95f3f185bc7c0397dffc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Target copies Costco food court with new in-store snack bar
+<<<SUMMARY>>>
+The retail giant is taking a smart page out of a major competitor’s playbook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401857
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T22:10:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3b2d7c9fd1d4e7665d61ccf4a1c90680ae46d04a189718b15744019863def5e7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: IREN (NasdaqGS:IREN) Objects To Tokenized Share Trading On New Blockchain Venue
+<<<SUMMARY>>>
+IREN (NasdaqGS:IREN) has formally objected to tokenized trading of its shares on the new ICE/OKX blockchain stock platform. The objection aligns IREN with companies including Nvidia, Costco, and Nike in challenging unauthorized tokenization of their equity. These issuers are citing an SEC exemptive order that they say restricts tokenized trading of their stocks without explicit consent. IREN's pushback against ICE/OKX tokenizing its stock without approval is one factor to weigh against the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401870
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T22:05:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3e0348b77f4d832598a0c55a5f713dd55c346e791c2fa8e51f0cf81d44fbd49
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Stock Market Today, Nov. 2: Amazon Rallies on Phillip Securities Buy Upgrade and $330 Target
+<<<SUMMARY>>>
+Today, Nov. 2, 2026, the analyst upgrade cited clearer cloud-demand visibility and AI positioning as AWS revenue growth accelerates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401430
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T21:40:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=33eee11fe0345b0d5886d2e1c0b9df476d9ae9daa58eebfab7ad1fb89f97e7ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Walmart Is Asking for Your Spare Change the Same Month the FTC Is Mailing Its Customers Nearly $10 Million
+<<<SUMMARY>>>
+While Walmart launches its holiday giving campaign with a $1 million match for military families, a separate federal action is putting far more money back into shoppers' pockets, and the math between the two tells a complicated story about the retailer's relationship with its customers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401337
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T20:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=443dc4c585a70e10b333a51e6660645c3230f2b74718e5f81952deaf2ac14702
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Wholesale Stock Is Trading Over $1,000. Here's Why a Stock Split Still May Not Come in 2027.
+<<<SUMMARY>>>
+Costco may not split its stock in 2027, but it's still worth considering as an investment heading into the new year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401339
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T20:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aba896868aa4037633cc6ba01258c4989bf44de4a46cbc38a30b548f34d75e4f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Nvidia, Microsoft, and JPMorgan object to OKXICE tokenized stocks
+<<<SUMMARY>>>
+Scott Melker discusses the growing list of major US companies, now about 50, filing objections to unaffiliated third-party tokens tracking their shares on a new tokenized stock venue backed by ICE (ICE). "The Daily Wolf with Scott Melker" airs every day at 12:00 p.m. Tune in for your daily dose of all things crypto. Make sure to also check out Yahoo Finance's new crypto hub to find the latest crypto-related news.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401019
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T19:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=73bba1c6489321e67373f3a8863db1dc172d5ef7a3648117b258b14090201e53
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: SharkNinja Still Looks Sharp Heading Into Earnings
+<<<SUMMARY>>>
+New products and international growth could help the appliance maker extend its rally, Jefferies analyst Randal Konik argues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400025
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:36:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=061c13d7438d48a64c5e5a70c6c2755e23be706ffdcc8016737ebc83728491ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Nvidia and Nike Lead Biggest Wave Yet of Tokenized Stock Objections
+<<<SUMMARY>>>
+Nvidia, Costco, Nike and nine other companies objected to trading of their shares on the planned OKX-ICE tokenized stock venue, bringing the total to 50.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398719
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:25:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=60fd65571e150c5c633e4ba3d2046f8d16edce295e3edc5da3d9645955e71407
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Anthropic's long-term leadership in AI looks 'extremely strong': Fmr. Cisco CEO
+<<<SUMMARY>>>
+JC2 Ventures founder and CEO John Chambers sits down with Yahoo Finance Executive Editor Brian Sozzi to discuss Anthropic's (ANTH.PVT) amended prospectus and what that could indicate about the company's leadership in the space, while also commenting on what a "trainwreck" company in the AI ecosystem looks like. Chambers was executive chairman and CEO of Cisco Systems (CSCO).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398559
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:12:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6aa0a79127d1d7a55f22efdbe57449b81e7e92a6e23e456d2a5e883e22f1a44e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: JPMorgan's shocking capital expenditures estimates for Amazon, and worries for McDonald's ahead
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi breaks down all the top headlines of the trading day, including how hyperscalers have gotten "silly cheap," Nvidia's (NVDA) "unbelievable" valuation, and why McDonald's (MCD) earnings should have investors worried. Sozzi also sits down with the Founder & CEO of JC2 Ventures and Former Cisco Executive Chairman & CEO John Chambers to discuss the current state of the tech market.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398579
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ac627d8cc9b6756090d2d1eaf428eb7573e81ecb70f0f402b1c23eab0aff556f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: ‘They sell the big hot dogs’: The companies that hyperscalers trail in valuations
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi walks through a chart showing Microsoft (MSFT), Amazon (AMZN), Alphabet (GOOGL) (GOOG), Meta (META), and Oracle (ORCL) trading at lower forward P/E multiples than consumer staples and retailers like Costco (COST), Walmart (WMT), Coca-Cola (KO), and Home Depot (HD).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143399039
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f22198eaf6b2c7e8cbc8cfa9bd7d3ac1b3767e24d87b4a00f4466c63c4744791
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Can Costco's DoorDash and Uber Eats Expansion Drive Incremental Sales?
+<<<SUMMARY>>>
+Costco's DoorDash and Uber Eats expansion drives incremental sales, attracting younger shoppers and boosting digital growth without hurting warehouse traffic.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398716
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:07:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fc744a8affe43381cf384713d1c93bfb9e8b0868be2cdec5c10a23bc59ee3bd6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Why Is Costco (COST) Facing Class Action Lawsuits Over Tariff Refunds?
+<<<SUMMARY>>>
+Costco Wholesale (NasdaqGS:COST) is facing multiple class action lawsuits over how it handled tariff-related refunds to members. Plaintiffs claim Costco passed import tariffs on to shoppers, then did not properly share later refund amounts tied to those tariffs. The litigation challenges Costco's treatment of alleged overcharges on tariffed goods and its process for crediting customers. The tariff refund class actions against Costco’s member practices deserve to be weighed against the rest...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398717
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:06:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f8a6d353b3e787baa77a6c0a473235af4f989cf0a85b7afd014c9abbb57210de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Warehouse Club Comparison: Is BJ’s, Costco or Sam’s Club Cheapest?
+<<<SUMMARY>>>
+A wholesale club can offer great savings, but membership is expensive! We compared the prices at BJ’s, Costco and Sam’s Club to help you figure out if it’s worth it for you. This was originally published on The Penny Hoarder, a personal finance website that empowers millions of readers nationwide to make smart decisions with their money through actionable and inspirational advice, and resources about how to make, save and manage money.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398700
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:02:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e4ed72dbba1aa7ad5618b6d0f7dc5f2aac679d27d51fe316a852f6f6fd1783a3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Getting a big head start on holiday shopping can benefit retailers and consumers alike
+<<<SUMMARY>>>
+But before you buy gifts long before you plan to give them away, be sure to read vendors’ fine print and get familiar with their return policies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398718
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:00:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78bc731962cde94d7eae4813f3c2fd0bde995308566992aa1c13f7ba86cc00d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Here is What to Know Beyond Why Costco Wholesale Corporation (COST) is a Trending Stock
+<<<SUMMARY>>>
+Zacks.com users have recently been watching Costco (COST) quite a bit. Thus, it is worth knowing the facts that could determine the stock's prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398697
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:57:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=907efa80fb0ca0978a1396674b356fc17eaed4e1839164cc1f8b4e4f4dcfc171
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Can Walmart's Expanded Sparky AI Boost Holiday Shopping and Sales?
+<<<SUMMARY>>>
+Walmart's expanded Sparky AI brings smarter shopping tools ahead of the holidays as rising adoption and higher spending per order signal potential for growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143395428
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5f7ee231a0ce8fb39faef07c26aafa60e342b04d50b782df2648baf6de216fdd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Consumer Staples ETF (VDC) Hits a New 52-Week High
+<<<SUMMARY>>>
+VDC hits a 52-week high amid defensive-sector rotation. Can this consumer staples ETF extend its rally?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393540
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:03:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f1164d0b6ed35017fa8566f623da6e215e9185a3677ad7f73a478f3b11ef1fbb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: ETFs Are Net Sellers of Costco (COST) on Thursday
+<<<SUMMARY>>>
+ETFs sold a net $75.6 million of Costco on Thursday, Oct. 29.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393367
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T10:52:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b2a9846da3ddc455a7227035e8fa391cd67c077ec72742fc210a9b60f418b58
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: It would shock you how bearish Wall Street is on hyperscalers Microsoft, Amazon, Alphabet, Meta and Oracle
+<<<SUMMARY>>>
+The market has gotten sharply negative on the hyperscalers. Here are the numbers to prove it.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393371
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T10:25:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a0efdb41ab7fbc37fd80fae204aba6f4385a7969e857df097f09d71a755f7557
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Microsoft, Nvidia, JPMorgan Among 50 US Giants Blocking Tokenized Shares on OKXICE
+<<<SUMMARY>>>
+50 companies have objected to tokenized versions of their shares trading on OKXICE, including Microsoft, Nvidia, and JPMorgan. Timely objections block the affected third-party stock…
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143392787
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T09:30:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2b86b2bee10efb041a762b0f9b1ec90fbf3f152b3813bb7fc086d05003144ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Nvidia, Costco and 10 More Issuers Opt Out of ICE and OKX’s Tokenized Stock Venue
+<<<SUMMARY>>>
+The venue’s Oct. 30 notice lists 50 objecting companies, up from 38 two days earlier, and still gives no date for trading to start.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143376351
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T16:57:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba33dd86bcf8ef35db0525dca4f22a652e4d3873ea62e17b14253d720436c1bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: ICE And OKX's Tokenized Stock Venue Hits A Wall As Nvidia, Nike Join Growing List Of Objectors
+<<<SUMMARY>>>
+OKXICE plans 24/7 trading of tokenized stocks against stablecoins, under a temporary SEC exemption.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143365028
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T15:26:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2204ccec5e6456b91175b8c0e816a920250a756a4d4bfd49dc07d03fb3cf4f4a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Housing and Food Now Take Nearly Half of What Americans Spend, the Most in 15 Years
+<<<SUMMARY>>>
+American households are squeezing more of their paychecks into rent and groceries than they have in over a decade, and the pressure is already reshaping where investors park their money and where shoppers spend theirs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143365029
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T13:33:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9bac312cd5e1b68c5909e8020b019eddb0f6451deddda05e753ccdedc4ec8804
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Is Up 19% in 2026 as It Reinvests Tariff Refunds “to Give Value Back to Our Members”
+<<<SUMMARY>>>
+Key TakeawaysCostco shares rose 1. 6% Friday to $1,012 and are up 19% in 2026, as September net sales climbed 13% to $30.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143350448
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T21:35:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8af776c42ea3d28d485922c82c3fc941a4a6b9eff086dea13aa05e6c4fec9ce3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Stock Market Today, Oct. 30: Amazon Misses Revenue and Earnings Expectations
+<<<SUMMARY>>>
+Today, Oct. 30, 2026, Amazon's cloud business grew 39% but heavy AI investment and weaker cash flow kept investors on edge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143349463
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T18:30:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4fea43aa4b3b5058bae470d3b5b78ccbea808672c869683d8e74068e7099fa1f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Levi Strauss Faces Class Action Lawsuit Over Tariff Refunds
+<<<SUMMARY>>>
+LS&Co. is the latest apparel giant to face a class-action lawsuit related to President Donald Trump’s tariff policies and subsequent refunds
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143363843
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T17:48:31Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8a51fb5601ac4323c6c677efbf313a805c0d9f12bb8878b12923b0fc67cc9be0
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_4.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: $100 Invested In Costco Wholesale 5 Years Ago Would Be Worth This Much Today
+<<<SUMMARY>>>
+Costco Wholesale (NASDAQ:COST) has outperformed the market over the past 5 years by 4.94% on an annualized basis producing an average annual return of 15.29%. Currently, Costco Wholesale has a market capitalization of
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348383
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T17:14:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2bbbf3fdab24d4f130b754f30996748534f2f1325b06c04eb79751aa8df45a2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: How New Rules And Robotaxi Pressure At Uber Technologies (UBER) Has Changed Its Investment Story
+<<<SUMMARY>>>
+Uber Technologies is heading into its Q3 2026 results with regulators in the UK and US tightening scrutiny on VAT, pricing and data use, while robotaxi competition and new autonomous vehicle partnerships add pressure on its core ride hailing and delivery operations. Alongside these regulatory and automation headwinds, Uber is reshaping its delivery footprint through moves such as the Key Food grocery partnership, the ezCater acquisition and a broader Costco tie up. Collectively, these...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348246
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T16:17:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2437515fa9d08a3db92b9d4335debc181953d529c8142e107fcb2b8753edfc06
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Visa Just Raised Its Dividend 16%. Here Are 3 More Blue Chips Built for Dividend Growth
+<<<SUMMARY>>>
+Visa's latest dividend hike proves a low yield can outpace a fat one over time, and three other blue chips are quietly running the same playbook with even more room to grow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143348385
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T16:15:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=943d6d4e79f892b04c8fd1e054130b598947e59a4c1d40354b40d253bba1578d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Sanofi Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+Sanofi (NASDAQ:SNY) reported third-quarter 2026 sales growth of 14.3% at constant exchange rates, supported by continued demand for Dupixent, recently launched medicines and growth in rare diseases. The company also raised its full-year sales and business EPS outlook while outlining a strategy focus
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143346825
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T15:30:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1b591c988b9718bfc99ecac2abd45f258c9f91f8dc34495ef250624cc613a703
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: The Costco Commandments, a Crypto Heist and More of Today’s Top Money News
+<<<SUMMARY>>>
+Welcome to "GO in the Know," our daily rundown of some of the top financial stories out there.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143349462
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T12:17:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cda73c9fce6d07fb2ab61481fddea7560ea77ec20ef6fb789afa38f34b726785
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: What to Expect From Costco Wholesale’s Next Quarterly Earnings Report
+<<<SUMMARY>>>
+Costco Wholesale is set to report its Q1 fiscal 2027 results soon, with analysts anticipating double-digit year-over-year EPS growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143342024
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T10:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e51cd854bd51dc88f9ec8e0dc15f6bc1011c6db2d8ccd18e61514030cb1d32fa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: The Zacks Analyst Blog Highlights Uber, WeRide and Costco
+<<<SUMMARY>>>
+Uber faces Q3 earnings pressure from currency headwinds, rising costs and AV investments, despite expanding partnerships with WeRide and Costco.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143342025
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T10:12:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=00aa9f49945fd8755f4bc07a649a9e89f28ba4c704028b1b80c49b793b341136
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Should Medicare Push Require Action From Costco (COST) Investors?
+<<<SUMMARY>>>
+NationsBenefits previously announced a nationwide retail integration with Costco Wholesale, bringing its Basket Adjudication Service to more than 600 U.S. warehouses so members can use Flex Cards for real time, item level health benefit redemptions at checkout. This wider healthcare presence, alongside co branded Medicare plans with SCAN Health Plan, positions Costco more deeply in everyday medical spending and member engagement, extending beyond traditional bulk retail trips. We will now...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296722
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T21:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=81b9d203e547b4739e5fc0a7cce5145542c44c4a393205d997387d4bdae423c9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: First Google Search, Now Amazon Retail. Tech’s Moneymakers Are Stumbling.
+<<<SUMMARY>>>
+Amazon Web Services is chugging along, but like Alphabet the day before, the business that made it famous underperformed.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296532
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T20:45:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a2ffbb119fcb7528ef898a670458c223affacc47c10cfa0b2228ef74c963554
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco (COST) Ascends While Market Falls: Some Facts to Note
+<<<SUMMARY>>>
+In the closing of the recent trading day, Costco (COST) stood at $996.08, denoting a +1.36% move from the preceding trading day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296467
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T20:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=adc4f6be97057d970f3ecbef10a002ef4a061b8acb5b19c482743abca1df87b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Amazon Stock Tanks After Earnings Miss
+<<<SUMMARY>>>
+The retail and cloud services giant reports weaker-than-expected earnings and revenue in the third quarter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143295151
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T18:14:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=092d13a03f5ec22c8f72a3cab981ff7f489c5dbf65a2d97a722d1889df06e6af
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: What DoorDash (DASH) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+DoorDash (NASDAQ:DASH) executives emphasized the company’s proposed acquisition of Instacart, product investments and continued momentum in its core restaurant and new-verticals businesses during its third-quarter 2026 earnings call. Co-founder, Chair and CEO Tony Xu said the combination with Insta
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293707
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T17:36:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=54a6b0352bfef667ef57a58e9fff49370501c21dff86efc8a16865a4201c1786
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: If Casey's Stock Looks Expensive, You Need To Read This
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293706
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T17:00:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e4fe2fc3820fdea7fbf928e7b2528e847bb60b611e4732de7fbe9bc41bd61f41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Sprouts Farmers Market Sinks 23% on Q3 Miss and Guidance Cut: “Need to Improve Our Performance”
+<<<SUMMARY>>>
+Key TakeawaysSprouts Farmers Market fell 23% today after missing third-quarter earnings estimates and forecasting a 2% to 4% drop in fourth-quarter comparable store sales. Record store openings keep total sales growing, but transactions at existing stores fell 3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293722
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=95994bc3d6d2df5da6a2ec886fdfb6c20a8d3cc2d85afc96510511683a886b51
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Buy, Hold or Sell Uber Stock Before Q3 Earnings Release?
+<<<SUMMARY>>>
+UBER faces earnings pressure ahead of its Q3 results as rising costs, foreign exchange headwinds and autonomous vehicle investments cloud its outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292459
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:49:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7a868c46a282babc3be16f59193cf420a0c2180820f6a3775c65fbd19a6168f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: DoorDash Plans to Buy Instacart for $17B: What That Means for Consumers, Grocers and Delivery Workers
+<<<SUMMARY>>>
+DoorDash may soon shell out billions to buy Instacart. On Thursday, October 29, the Associated Press revealed that DoorDash is offering to buy Instacart for $17 billion. The food delivery company noted Instacart would keep its name and app, and its 600,000 delivery workers, called shoppers, would continue. While consumers now pay $9.99 per month […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292040
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:34:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=49ad968a2ab525132cdaad2e23687a2f70a0cff208d8bbcbd806bde88a76e5cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: How Much Could You Lose In Target Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143292042
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:39:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da8509df79931b3a9f10c629d145266e4be0d8ee99917a506e9e95cfa0a120ac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: What Did It Take To Hold Costco Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143289700
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:19:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c86e8adc060b1222fed668414c314a2273472cacc555ae2dfbca1c08c825b66d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: DoorDash is buying Instacart for $17 billion
+<<<SUMMARY>>>
+DoorDash is buying rival Instacart in a deal worth roughly $17 billion, signaling that the delivery wars continue to heat up.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143288526
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T12:15:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a1389b128ea701a4d78bf0f8d16dbec7caaf27946f817570871da44602c793fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Is Walmart Stock's Winning Streak Skill Or Luck?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143286824
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T11:23:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=22ed4a6847beaf50d0ee494addfc98440b19d9a694c371fbd2ac6204dacda64d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Stock’s Long-Term Upside Could Come From These 3 Competitive Advantages
+<<<SUMMARY>>>
+Costco commands a valuation premium that makes even its biggest fans nervous, yet three structural advantages keep analysts bullish and renewal rates near record highs. Understanding what actually drives that loyalty reveals whether the stock deserves its lofty price or is priced for perfection.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143286825
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T10:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=33db639004887a2dc06aab17f377d77a47e9ff6e29bfac939540978a9d8aa1ee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Amazon Earnings Are All About Its Cloud Business
+<<<SUMMARY>>>
+Investors will be paying close attention to the retail giant’s cloud segment, Amazon Web Services (AWS), to see if its AI spending is paying off.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143286110
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T08:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8c87c988b2f2d3ebd701d093473a88ad39ff0536e3e0425e9ce9f94c775286d9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Is Now a Good Time to Buy Costco Stock?
+<<<SUMMARY>>>
+Costco stock is up 104% over the past five years. Will it continue to reward investors?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741313
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T23:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ac821abe7932e798cb4252480d1b98fa1713f1e6bd3c5183fc305c06798f60d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco’s $30-per-share special dividend means just 3 shares could cover your $65 membership. But there’s a catch
+<<<SUMMARY>>>
+This dividend could be a new way to equalize costs via the membership-only warehouse giant.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741314
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T23:19:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e6076aca67315888f7ae521349b221313af11368f4a679f90475b7674b031e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Can a 74-Year-Old Use Costco’s $30 Special Dividend to Meet a $40,000 RMD?
+<<<SUMMARY>>>
+Costco is about to drop a big year-end payout, and a retiree facing a December 31 withdrawal deadline could put it to work. But the cash only helps if it actually leaves the IRA in time, and the gap it leaves might surprise you.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741315
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T21:45:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dfda0f5c195f35c68768d35fc328874bb15faf74e294bf5685c0e4d3d882a4a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco (COST) Surpasses Market Returns: Some Facts Worth Knowing
+<<<SUMMARY>>>
+Costco (COST) closed at $1 in the latest trading session, marking a +2.01% move from the prior day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740269
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T21:07:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62d36756f7b0e376709861476a94990c94259609ba822e563e1eb92b78d4db2f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Just Declared a $30 Special Dividend. Is It Reason Enough to Buy the Stock Before Nov. 24?
+<<<SUMMARY>>>
+Costco is a high-quality business at an ultra-premium price.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741316
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T21:06:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0f5b3987d72ab24e2d0d24c52d5fadaa9bdc5e71500a8ec0a1ec7644442b77d7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Nasdaq Adds 400 Points as CoreWeave Earnings Revive the AI Trade: Stock Market Today
+<<<SUMMARY>>>
+Tech stocks rebounded Wednesday after CoreWeave's earnings eased concerns over its debt load, while Costco rewarded investors with a big special dividend.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740263
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T20:17:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a58475a8265f9da560ae6b87a05d88e6a003c8202709e4872fac453c107fb4d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco’s Regular Dividend Looks Tiny. Its Special Dividends Tell a Different Story
+<<<SUMMARY>>>
+Costco's quarterly check looks forgettable, yet shareholders have watched giant one-time payouts land without warning. Cash is piling up, store spending is climbing, and the stock carries a price that leaves little room for error.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740207
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:51:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=076c363c1bc636b24426a8cad446345814e060a5a0401e9161e7fd171474fe78
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: What Are Costco Stock Bulls Not Worried About?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748048
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:09:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6563a34adf55c17ffa0815fefc990c0635c3c360a4384fe27882866966f8b553
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: COST Stock Alert: What to Know as Costco Issues $30 Special Dividend
+<<<SUMMARY>>>
+Costco stock rallies on a massive special cash dividend and fresh buyback authorization announcement. Jim Cramer reiterates bullish view on COST shares.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739223
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:07:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d83a942f33460315bd875b9958792f703e862a7c06b95ef71d868560f2c9b7c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco’s $30 Special Dividend Returns $13.3 Billion. Is It Still a “Good Place to Shelter”?
+<<<SUMMARY>>>
+Key TakeawaysCostco declared a $30-a-share special dividend worth about $13. 3 billion, double its last special in December 2023.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739226
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:43:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=94519213d3128135e7ae7a13bbb43fb06f63518c57bc70596ce88ad1e2e13257
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Stocks Rise 1.62% After Record $30 Special Dividend Worth $13.3 Billion
+<<<SUMMARY>>>
+Costco also renewed its $4 billion buyback, with the special payout going to holders of record on November 24.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737966
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:14:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=df881b32d328f5efcee5fc2c4d06dac7ff914528b55098971c5b802acf9fc4f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Is Up 18% in a Year. Freedom Broker Says That’s Enough
+<<<SUMMARY>>>
+Key TakeawaysFreedom Broker downgraded Costco to Hold from Buy on Nov. 10 because of its valuation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737967
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:08:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a5ae8ac27c405a252882e5fa95d93ac53c3939cf47ab99dd90fc3c49c5ab76e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: COST Stock Draws Street Attention After $30 Cash Dividend – Mizuho Highlights Significantly Higher Payout, Bernstein Eyes Q4 Trends
+<<<SUMMARY>>>
+Bernstein raised its price target on the firm to $1,155 from $1,143 while maintaining an ‘Outperform’ rating, according to The Fly.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737858
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:06:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7866a4348f11394f27757a8b5a4f6302c4e1a6524aeef3b383b83852d7541f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Jim Cramer’s Top 5 Dividend Stocks for Safe, Consistent Returns
+<<<SUMMARY>>>
+From 2000 through 2009, dividends earned S&P 500 investors an annualized 1.8%, according to Hartford Funds. Even with those payments, the index posted a negative total return for the decade. Over the longer stretch from 1940 through 2025, Hartford found that dividend income accounted for an average of 33% of the index’s total return. For […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737963
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=53aef6f3515f102720ec4be696d18c15d5f25582e4db1e9aa17536c1c1f09c5d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco's $30 Special Dividend Set to Boost Investor Confidence
+<<<SUMMARY>>>
+Costco's $30 special dividend and $4 billion buyback plan highlight strong cash generation and shareholder returns, but does its premium valuation pose risks?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143736879
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:46:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=10161c3a825a5f124b1ddcf1598585954c290fa9234ef4046e8863f462d21092
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: The Dates That Matter Most For Casey's Stock
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143736880
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a46598793a6af0484fde92befd0e765e3ae746194719b746f9719653336f355
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Five Below and Dollar General challenge Kroger, Publix
+<<<SUMMARY>>>
+Ollie’s is also on the list of retailers creating new problems for traditional grocery chains and new opportunities for customers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737969
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c672d2603083da02b58e180f0dbb79d849e17a6410d189aeedff2e7bb94deeb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Nvidia, CoreWeave, Teradyne, Rigetti, Applied Aerospace, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia rises following a rebound in shares of AI companies even as Baird calls for Nvidia CEO Jensen Huang to step down.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739066
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T14:44:41Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6ccdf68da85ac947fa485ea20e8247a0de3447c10e2dc31b8787832600d2d46b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2246176034/image_2246176034.jpg?io=getty-c-og
+category: company
+tickers: COST
+keywords: 
+headline: Costco Is Never Cheap, But This Is Special Dividend Euphoria (Downgrade)
+<<<SUMMARY>>>
+Costco Wholesale Corporation shares are downgraded to Hold until its $30 special dividend is paid. Click for this updated look at COST and a strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143736884
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=99c41ee11397912e9dc5536089e4b3ef2aded0ba159684466007a19b09bca3f7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco’s Special Dividend Is Just One Reason It’s a Good Place to Shelter From AI Chaos
+<<<SUMMARY>>>
+The big-box warehouse chain declares a special cash dividend of $30 a share, showing why it’s “a high-quality, defensive compounder.”
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734653
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b1dcd1efc02669f11b2a9f00a92328500c38cfd15d36028df1f46cd6eb97054d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: AI Villain Turns Hero but Stock Market Chaos Is Just Getting Started
+<<<SUMMARY>>>
+All the news you need to start your day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734652
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=076f2f2aa7efc721f63efc9677573f65e1c93587863bb23e56b5bac0239675d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Nvidia, CoreWeave, Marvell, Dell, Costco, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia shares get boosted by an AI rebound, while CoreWeave soars thanks to better-than-expected third-quarter results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143733355
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:10:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=de0150433585af76e1e4e345c87c093d4194a5e20be7c81f3ec5e39f8fa8e400
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco (COST) Declares $30 Special Dividend And Reauthorizes $4 Billion Buyback
+<<<SUMMARY>>>
+Costco Wholesale (NasdaqGS:COST) declared a special cash dividend of $30 per share on common stock. The retailer also reauthorized a $4b share repurchase program with an expiration date in January 2030. The one time $30 special dividend and long dated buyback plan matter, but they are only part of the Costco picture. Our analysis turns up 1 warning sign for Costco Wholesale as well. For a wider view on cash returns and income potential across the market, compare Costco’s move with other...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143731213
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:03:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=331996e8a1ca0116de51da3a6dc3c140fbaa8a68b519e6996378a53e245b553a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: State Street Consumer Staples SPDR (XLP) Buys $46.9 Million More Walmart on Nov. 9
+<<<SUMMARY>>>
+The fund added $418.2 million of stock on Monday, lifting all 33 of its positions and selling nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143730979
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T10:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=65c7507b8558be2e8cedad50ebd8a4c37ce8aaedf427b50807e6645deaf8a7af
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Stock Is a Good Place to Shelter From the AI Chaos
+<<<SUMMARY>>>
+The big-box warehouse chain declares a special cash dividend of $30 a share, showing why it’s “a high-quality, defensive compounder.”
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737636
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T09:29:09Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=65bdc3f0eea7199896510bf494c1dee69e4beae73bd120f5ea9fe11df2d77eab
+image_url: https://image.cnbcfm.com/api/v1/image/108548990-17944072081794407206-49573175600-1080pnbcnews.jpg?v=1794407207&w=1920&h=1080
+category: company
+tickers: COST
+keywords: 
+headline: Cramer's Mad Dash: Costco
+<<<SUMMARY>>>
+CNBC’s Jim Cramer delivers his daily Mad Dash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143724013
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T09:05:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=59d6a85e4e965de7ef9501d19e598f2ca67f5da7d200f294e6eb0f77823526c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: GEN Restaurant Group Inc (GENK) (Q3 2026) Earnings Call Highlights: CPG Ambitions, Chubby Group ...
+<<<SUMMARY>>>
+GEN Restaurant Group Inc (GENK) targets a $40 million CPG run rate and a 75% corporate overhead cut while navigating a proposed 47-restaurant transaction and a Q3 revenue decline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734287
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T08:14:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=539315a14cb14c68d5bada6919c040d1b86535f52f1a115de197818a9e0806e1
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Jim-Cramer.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: Jim Cramer: Buy This Consumer Defensive Stock, SharkNinja Is ‘Fantastic’
+<<<SUMMARY>>>
+Jim Cramer picks Costco and SharkNinja, but rejects Vicor until valuation falls, and remains skeptical of Sezzle despite strong earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143728913
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T05:45:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1f1a43be2e801977b13b9e963bb216321ceb37e177fbe23b9a4a06d1ab91283c
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/458887889/image_458887889.jpg?io=getty-c-og
+category: company
+tickers: COST
+keywords: 
+headline: Wall Street Breakfast Podcast: Stocking Up On Costco Cash
+<<<SUMMARY>>>
+Costco has a $13.3B surprise for investors. CoreWeave just gave Wall Street more to like. 7 Brew serves Starbucks, Dutch Bros a fresh challenge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143709652
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T04:25:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=660f21cefbbe1a6cbdb2e11ea0d0a621e787b308fd6dcb337b22b8ab9851ed85
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Jim Cramer Ties CPI Relief to $40 Oil, but Brent Trades Over $92
+<<<SUMMARY>>>
+Jim Cramer ties CPI relief to $40 oil, but Brent trades near $91 and core inflation still ran hot in October.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143708273
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T02:23:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d6b6996c2d9e71be8623c524ca4cfce719e639b332091ca8f95d7447896bbcb8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Just Sent Shareholders a $13 Billion Signal It Has More Cash Than It Can Use. Here’s What 200 Shares Collect
+<<<SUMMARY>>>
+Costco declared a $30 a share special cash dividend after Tuesday's close, about $13.3 billion in all and the largest in its history, payable December 4 to holders of record November 24, plus a new $4 billion buyback. For a retired couple with 200 shares bought in 2010 that is a $6,000 check: here is the tax on it in a brokerage account, an IRA and a Roth, what the stock does on the ex-date, and the one decision the check forces.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143707157
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T01:59:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5152b95c98ba74b5e6fc3f9a3de82cca99787309047876b6cb2ecbf148e15406
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: COST Stock Rises Overnight: Costco’s $30 Special Dividend Has Retail Celebrating ‘Santa Coming Early’
+<<<SUMMARY>>>
+Costco's $13.3 billion special dividend lifted investor sentiment around the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734288
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T21:19:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7512857b0bb23b107b77c2dcbf4e7e0c9b17bf27b65772d15e54cd4a9a3de1e9
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Stock-Market-Analysis-Shows-Trading-Patt.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: CoreWeave, Rigetti Computing, ServiceNow, Costco and Nvidia: Why These 5 Stocks Are on Investors' Radars Today
+<<<SUMMARY>>>
+Major U.S. indices closed lower on Tuesday, with the Dow Jones Industrial Average falling 0.30% to 52,231.89.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693875
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T21:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bbaf53a6dd37024e90b6db919a385dfdc231df01730c74a78b100e16a1d079ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Wholesale Corporation Declares $30 Special Cash Dividend and Reauthorizes Stock Repurchase Program
+<<<SUMMARY>>>
+ISSAQUAH, Wash., Nov. 10, 2026 (GLOBE NEWSWIRE) -- Costco Wholesale Corporation (“Costco” or the “Company”) (Nasdaq: COST) today announced that its Board of Directors has declared a special cash dividend of $30 per share on Costco common stock. It is payable December 4, 2026, to shareholders of record as of the close of business on November 24, 2026. The total amount of the payment will be approximately $13.3 billion. The Company also announced that the Board has reauthorized a common-stock repu
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737637
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:34:49Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=74b3dcd653467a6c07da7d570f27e49bbd98489d85a83a66f98e0aa2d0facabd
+image_url: https://image.cnbcfm.com/api/v1/image/108548637-3ED4-MM-E-111026.jpg?v=1794355236&w=1920&h=1080
+category: company
+tickers: COST
+keywords: 
+headline: Lightning Round: Buy some SharkNinja here, says Jim Cramer
+<<<SUMMARY>>>
+'Mad Money' host Jim Cramer weighs in on stocks including: Vicor, SharkNinja, Costco, and Sezzle.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734289
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:46:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=46298c64972dc3dd06c8929c3f237f31b47476feebcccca0ab9cfd981956cbbf
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/10/Costco-Earnings-Beat.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: Costco Goes Bulk on Payouts with $30 Special Dividend
+<<<SUMMARY>>>
+Costco will pay a $30/share special dividend totaling $13.3B on Dec. 4 and renew its $4B stock buyback program through 2030.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734290
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:31:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f53731e0d39e875899e680b4906012318e65c1b6f3d72a259fb59c3cddf2036b
+image_url: 
+category: company
+tickers: COST
+keywords: 
+headline: Costco Wholesale Declares Special Dividend Of $30 Per Share; Reauthorized $4B Buyback Plan Through November 2030
+<<<SUMMARY>>>
+Costco Wholesale Corporation (&#34;Costco&#34; or the &#34;Company&#34;) (Nasdaq: COST) today announced that its Board of Directors has declared a special cash dividend of $30 per share on Costco common stock. It is
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691629
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1dc5b277e3c483f221220f6559713d8e745d8a268185c719857d4a6f6c76c939
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: How These 5 Big-Box Retailers Compete for the Same Shopper
+<<<SUMMARY>>>
+Walmart keeps gaining ground among shoppers of all income levels, but there's still strong potential among the big-box retailer's four key peers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690358
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=550c1ea769f3123ade35f44a4bc9ce2c15ef2d2ff81bceb209db08df76650125
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco members are paying more for gas and filling up anyway
+<<<SUMMARY>>>
+A Bank of America analyst says Costco’s October proved one thing about its shoppers. The stock may already reflect it.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690356
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=63d5115afa7f02374fdd779754383e086ceaa1c15d5d4c1b51e1d2de47abfd09
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Walmart's Sam's Club Sees Higher Traffic: Can Momentum Last?
+<<<SUMMARY>>>
+WMT's Sam's Club gains momentum from higher traffic, membership growth and digital sales, while declining average ticket values weigh on comparable-sales growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734174
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:00:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=100eea2b1f29d1ff263c2d959daa9cc8df79bf19c651b273ef0f9e361267946f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/10/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: 11 Of 11 Sectors Fall In Tuesday Trading As Leaders Move Together
+<<<SUMMARY>>>
+All 11 sectors are lower in Tuesday&#39;s regular session, with Financials, Consumer Staples and Consumer Discretionary at the top of the table. The leaders are clustered rather than separated, with the first three sectors grouped within a narrow range of performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686034
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:06:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=70b2d63d2cd68d7babcacabb3f6ada29f8fe00715517907d70a7c67a8b419fb7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: State Street Consumer Staples SPDR (XLP) Sells Walmart and Costco on Nov. 6
+<<<SUMMARY>>>
+The fund sold $144.2 million of stock, cutting all 33 positions, with $16.3 million of Walmart and $13.6 million of Costco leading the exits.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686097
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:01:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2d24de6ac1ec312fa3bfe002ef5de96a181101327c9f1a9b68c839740b5f7c28
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: ETFs Bought $69.5 Million of Costco (COST) on Friday
+<<<SUMMARY>>>
+49 ETFs bought Costco shares versus 15 that sold on Friday, Nov. 6.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143663056
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T03:12:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=04841a73c8873cbdbb6baa3269fcc32ac29c25be59513a1087be797edda7111a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Wholesale (COST) Gains Grocery Share As Its Valuation Looks Harder To Ignore
+<<<SUMMARY>>>
+Costco Wholesale (COST) has just overtaken Kroger in a key grocery market share ranking, as warehouse expansion, digital sales growth, and partnerships like NationsBenefits draw more everyday food spending into its membership model. Recent moves in Costco Wholesale’s share price back up that story. The stock trades at US$1,066.18 after a 1-day share price return of 1.20%, a 30-day share price return of 12.59%, and a year-to-date share price return of 24.77%. The 5-year total shareholder...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662592
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T00:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23e1b37b1de29ac1c96719f8035d22e07b13f69dfa8057f2851a740c4b700bdd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco just passed Kroger in a grocery ranking that matters
+<<<SUMMARY>>>
+The numbers don’t lie: Shoppers are choosing Costco for a very specific reason.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661091
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T20:03:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0def323b3bf6d38864d21223a77c510f8600e3d6ae61846d9e62d5e1cd480592
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: She Plans to Join Costco’s New Medicare Advantage Plan at 65. Once Her 12-Month Trial Right Ends, a Medigap Insurer Could Ask Health Questions and Reject Her Application
+<<<SUMMARY>>>
+A $0 premium and a trusted warehouse brand make Costco's new Medicare Advantage plan an easy yes at 65. The fine print on getting out of it, and a clock that starts on day one, could turn an easy yes into a costly trap.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143660080
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:04:13Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=92be90d9344b35d75312a293abf0dffd5b7cffdef57a78e3bb68cab126f9fb5b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2217045009/image_2217045009.jpg?io=getty-c-og
+category: company
+tickers: COST
+keywords: 
+headline: Amazon: Grocery & Alexa Deep Dive As Retail Margins Hit Records
+<<<SUMMARY>>>
+Amazon.com, Inc. looks undervalued as retail, grocery, Alexa, and ads fuel growth and margin upside. Click for this AMZN earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657481
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe0e86704a1f45a588783fee0e11938e7621c920894dcc4707b3387785a2ed7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco's Digital Sales Outpace Store Comps as Shopping Evolves
+<<<SUMMARY>>>
+Costco's digital sales surge 22.5% in October, outpacing store comps as delivery partnerships, personalization and online engagement reshape member shopping.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654398
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:45:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d98790799faedb55b487fe862b32c3e6ed80368b2bee8ed3ded0f38b1b373c17
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: What Did Target Say Before Its Stock Took Off?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143653180
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=69f5e277eee71f1f0e42fc62c4995704aa346e49285906e5fd065c74c027ce1b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Kroger and Albertsons’ CEOs Just Signaled the Walmart Price Gap Is Here to Stay. It Costs a Couple About $1,000 a Year.
+<<<SUMMARY>>>
+Kroger's CEO told investors in September that "we're not in the game of being the cheapest," and Albertsons' CEO named Walmart, Amazon and Aldi as where her shoppers go. Consumer Reports measured the gap at 14.8% for Kroger, 20.3% for Publix and 24.8% for Albertsons against Walmart. Here is what it costs a retired couple spending $7,800 a year, what their grocery bill looks like in 2027 on the USDA's new forecast, and the three moves that close most of the gap.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143653303
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=712e59a756e7a07f984ad2eff18296b63bbe2506389ae5ac00f6aeac776c6bb2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: The Major Grocery Chain That Actually Owns Sam's Club
+<<<SUMMARY>>>
+Sam's Club is a warehouse brand that boasts low prices and high volume, but the brand is actually owned by a major grocery chain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652443
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:05:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=af86f249775e4eef4173ebeb577fa589366d63afb4afc9c5256bab458504ad61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: State Street Consumer Staples SPDR (XLP) Sells $44.1 Million of Walmart on Nov. 5
+<<<SUMMARY>>>
+The fund cut all 33 of its positions, selling $387.9 million of stock and buying nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143647902
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T04:09:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e7d1b14d71cebdc030d15df090874315399d1f133345bce4a51cd062d7e9af9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco closes popular California store location after 37 years
+<<<SUMMARY>>>
+The warehouse retailer opens a new 152,000 square-foot Costco location 1 mile from the store it closed.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640890
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T17:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0ba60a335b9bd7be68b215d772b2bdc5b927fbf736ac0b3dbdbfcdd365cb117a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Kroger, Albertsons, Publix have a pricing problem they can't fix
+<<<SUMMARY>>>
+Regional grocers face competitors with advantages they may never be able to overcome.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143651852
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T15:32:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9baf5e8adf468c3e653ca116b2c99ff38e5627e97d8500fb68ffa6ff05ba871a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: A Fund With $4.5 Billion in US Equities Dumps These 3 Stocks
+<<<SUMMARY>>>
+Key TakeawaysAlphinity Investment Management sold all of its Costco, American Express and Intuitive Surgical shares in the third quarter, its latest 13F shows. The Costco exit looks smartest: the stock trades at 46x forward earnings with 3% left to analysts’ average target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616124
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T15:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe6ac7a79b4ab450a968788c3f57583b36bbf683e1e6fb4bf466ecd5d520f7dd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco’s longtime shoppers may not love what comes next
+<<<SUMMARY>>>
+The warehouse club has been quietly making changes to serve its changing customer base.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143618880
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T15:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3db075724265b315a6b170541b1ea7621af1f5507092328a755403d2810b43b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Dollar Tree Pops 10% as Democratic Sweep Brings Cheer to the Markets. How to Play DLTR Stock Here.
+<<<SUMMARY>>>
+Shares of the discount retailer outperformed its retail peers after midterms.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616125
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T14:12:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=36b4f64f874d9e711269aa3101705db5f4bd46b59a8962d8f141dd57c2e10008
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Top 3 Defensive Stocks To Watch In November 2026
+<<<SUMMARY>>>
+The US October jobs report just surprised markets, with 165,000 new hires and a lower unemployment rate reinforcing a picture of a steady, resilient economy. When growth looks durable and politics feel noisy, investors often look for solid anchors rather than lottery tickets. This is where financially robust, low risk leaders can matter. This article highlights three such stocks that help form a sturdier core for your portfolio. The stocks in the rest of this article are just a sample set,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143610125
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T10:09:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5c19481197cd73a2eb7223db68ef105eafdc36280d4d426839d74f4b5eb983d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Where Could Home Depot's Next Growth Come From?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143605181
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:01:09Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=ffd7c53e1423b1096dfb6cdcadc280241d6b34c51267807f1b91a64291afdd09
+image_url: https://www.chartmill.com/images/uploads/thumbnail_article_luc_kroeze_c1f44c837d.webp
+category: company
+tickers: COST
+keywords: 
+headline: Costco Wholesale (NASDAQ:COST): A Quality Stock With Strong Fundamentals and a Demanding Valuation
+<<<SUMMARY>>>
+Costco passes a quality-investing screen on strong ROIC, cash conversion and low debt, but premium valuation leaves little room for error.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143613874
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=612feb412a6a6eb0a4e933ae7ba4ba1a62e85759bb6b4276afb40ef64b22210d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/535109409/image_535109409.jpg?io=getty-c-w1536
+category: company
+tickers: COST
+keywords: 
+headline: Papa John's: Paying The Price For Being Stuck In The Middle
+<<<SUMMARY>>>
+Papa John's International, Inc. faces a tough turnaround as sales slide and competition intensifies. Click for this PZZA stock earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143593367
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T02:10:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8126fe2a0d4f85c44a89fa31a6e45573890d89e9b2303f9205ffc15989e60797
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco (COST) Brings Real Time Health Benefit Checkout To More Than 600 Warehouses
+<<<SUMMARY>>>
+Costco Wholesale (NasdaqGS:COST) is now integrated with NationsBenefits' Flex Card across more than 600 U.S. warehouses. The rollout lets eligible health plan members redeem over the counter, healthy food, and wellness benefits directly at Costco checkout. NationsBenefits' Flex Card processes these health related purchases in real time, reducing manual reimbursement steps for members. The new Costco and NationsBenefits Flex Card redemption at checkout is only one piece of what investors...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592225
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:30:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=179932ced585c47b91f7c497290f9405d62b1ac2a2bf533cfb1fe4d053589441
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-w1536
+category: company
+tickers: COST
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week of November 8
+<<<SUMMARY>>>
+Get the latest dividend activity for Dividend Champions, Contenders, and Challengers. Read this week's list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589753
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b6809590b25d08768fc5d6ea5f09a9af2c95314f61780ce9e57c6885d872314
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco's October Net Sales Jump 12.6% as Digital Growth Accelerates
+<<<SUMMARY>>>
+Costco's October sales surge 12.6%, fueled by strong comparable sales and digital growth, but its premium valuation and earnings revisions raise concerns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584622
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:37:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e86673e45f5f7834c6bc873a20a0225a55a076dccf96a63bba590ac1203cf540
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Rate Hikes Could Be Coming: History Likes These 4 Consumer Staples Stocks
+<<<SUMMARY>>>
+The Fed ended its pause, and traders now price in another hike by December. Three past tightening cycles reveal which household-name staples stocks protected portfolios, and one of them beat the market every single time.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584621
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:33:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cc423c34517bc7b4f3f4954b5c7afe5d7c75a8fa85abef6e3cd9110e41584589
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco Stock: Earnings Growth Could Shape the Next Big Move
+<<<SUMMARY>>>
+Six straight earnings beats have pushed Costco shares up 20% this year, yet a 49x trailing P/E leaves little room for error. One metric could decide whether the rally keeps running or finally stalls.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616685
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:15:44Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=48d5d9219737e4c581b848a1b37154549d8fe4e404a0740544e77c73a7c0849f
+image_url: https://image.cnbcfm.com/api/v1/image/108481191-1793287178813-gettyimages-2302006596-102926-buf-news-costco-p17.jpeg?v=1793287304&w=1920&h=1080
+category: company
+tickers: COST
+keywords: 
+headline: AI crush is powering one stock to sky-high valuations
+<<<SUMMARY>>>
+Despite sky-high valuations, Mike Khouw argues Costco shares could present a compelling buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616675
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:10:53Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=b1f89c2b4bf04d2a17b60c3c7ef7740b8f69b083826a0ea6afe91bb62b1d8a7c
+image_url: https://image.cnbcfm.com/api/v1/image/108364471-1789662329964-gettyimages-2293730562-schneider-costcowh260908_npKEb.jpeg?v=1789662357&w=1920&h=1080
+category: company
+tickers: COST
+keywords: 
+headline: This wholesale retailer looks attractive for options traders
+<<<SUMMARY>>>
+Mike Khouw, strategist at YieldMaxETFs, explains why Costco could appeal to options traders amid a broad market drawdown.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614041
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:00:51Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5bb4a5e8fbdb544544381ce7241945d6bf9b7d382581108c387f732b631ed40f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: Growth Lead Sectors In Friday Trading As Defensives Trail
+<<<SUMMARY>>>
+Seven sectors are higher and four are lower in Friday’s regular session, with growth sectors holding the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583061
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:05:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4ec8a6b42d53a1c74f6fd004455f6a10084e679e41ec98cf133841465ed5f21
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: iShares U.S. Consumer Discretionary (IYC) Adds Amazon and Tesla on Nov. 4
+<<<SUMMARY>>>
+The fund bought $244.2 million of stock, adding to 153 positions and trimming none, with $33.6 million going into Amazon.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143580897
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:19:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a812307e337cec5f00de14083212645be10ec2882a086d56ccfe2d772444f9d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: ‘Only Go Into Physical Stores Every Sixth Week’: Clark Howard’s Anti-Impulse Rule as Costco Hits $1,025
+<<<SUMMARY>>>
+Clark Howard spent years watching couples bleed money one warehouse trip at a time, and the fix he landed on sounds almost too simple to work. With Costco shares surging past $1,000 and the holiday treasure-hunt season starting, the math behind his rule gets uncomfortable fast.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143574359
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:07:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=391b61d820cebae90b20afc92a1fa162bdd9b85da4e468c93b4276aa30fafb26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: In 1975, Sol Price Was Pushed Out of FedMart, the Discount Chain He Founded. The Warehouse Store He Opened Next Became Part of Costco
+<<<SUMMARY>>>
+A lawyer-turned-retailer got fired from the discount chain he built over two decades, and the warehouse he opened next with a handful of friends and a converted Hughes property became the blueprint for one of the most powerful retail businesses on the planet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143559740
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T05:25:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=05b2775c84b08c28253f3ed0fdd62eac0084865d7bd8005298fde57e5fcb726a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: BARK Inc (BARK) (Q2 2027) Earnings Call Highlights: Revenue Beat, Lixsters Launch and Strategic ...
+<<<SUMMARY>>>
+BARK Inc (BARK) topped Q2 fiscal 2027 revenue guidance with $87.6 million, returned to positive adjusted EBITDA, and unveiled new growth initiatives while exiting Bark Air.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543047
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:59:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ea86e0ace8567288d4283b327a4166a20a9f43c9894da5e9c17734b3d2dc8c5c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Stock Market Today, Nov. 5: Amazon Shares Slide as Technology Selloff Erases Early Gains
+<<<SUMMARY>>>
+On Nov. 5, 2026, Amazon shares reversed an early rally as rising yields and tech selling took over the session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543106
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:07:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=997d43c78c279a83e61f79bf4999eeb739e3a3a29697f04dde9f6175b972c5d2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Jim Cramer Says Costco Is Still a Great Value. Charlie Munger’s Rule Explains Why
+<<<SUMMARY>>>
+Charlie Munger once said Costco is the one stock where you can look past the P/E. After a month-long rally, that exception faces its toughest test yet, and the business and the price may tell two different stories.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541924
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T20:47:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1dc01f0b064b4c64db646476b671bc267bbe958eccdad01e70700a04d7d4d940
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Sector Update: Consumer Stocks Decline Late Afternoon
+<<<SUMMARY>>>
+Consumer stocks were lower late Thursday afternoon, with the State Street Consumer Staples Select Se
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143586673
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T19:28:12Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f6d360db85dbbd529dbe55b1955877398f2e9348ac4261e80b9d7fdc01092122
+image_url: 
+category: company
+tickers: COST
+keywords: 
+headline: JP Morgan Maintains Overweight on Costco Wholesale, Raises Price Target to $1150
+<<<SUMMARY>>>
+JP Morgan  analyst Christopher Horvers   maintains Costco Wholesale (NASDAQ:COST) with a Overweight and raises the price target from $1015 to $1150.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540718
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T19:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c56ea5674b05010f2912850288ed6bd833c55ade0a03ebce3b00ff0fd8878d9c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Costco retains BofA "buy" as October US comps rise 8.1%
+<<<SUMMARY>>>
+Costco Wholesale Corporation (NASDAQ:COST, XETRA:CTO) US comparable sales accelerated in October, prompting Bank of America to maintain its "buy" rating. US comparable sales excluding gasoline price changes rose 8.1%, with growth improving from September on both a year-over-year and two-year...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540719
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3f81074af9ff700137925fbcbc0752e27bf506a4e24af7c0b781d90c12eb8dee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Energy-Drinks Are Exploding. Why Is Celsius Stock Fizzling?
+<<<SUMMARY>>>
+The energy-drink industry is growing sales at 15% a year, the fastest in the beverage aisle. But competition is fierce, with each brand staking a claim to niche consumers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540720
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:30:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e421d2ee88f78063688f6882830a7604fe733f12d7390f1366e40c6aea4026d9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Workers Caught In 'The Great 2026 Mass Layoff Wave' Share What Life Looks Like Now. 'Been Playing A Lot Of Video Games, But…'
+<<<SUMMARY>>>
+Months after losing their jobs, workers caught up in what one Reddit user recently called “the great 2026 mass layoff wave” are sharing what their lives look like now. For some, that means a new job, often with lower pay....
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583975
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:36:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=62b04ae66ee60ccb54e250b200f6edf51857cdf90b85f41fba76bc3ca5d7ebb5
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Jakarta--September-07-2024-Nvidia-Corpor.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: Nvidia Stock Is Now Cheaper Than a Toilet-Paper Company, Data Shows
+<<<SUMMARY>>>
+Nvidia&#39;s forward P/E fell to 15.2x, below Kimberly-Clark&#39;s 15.5x. The AI chipmaker now trades cheaper than 22 of 33 consumer staples stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537815
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=054aa112de330ff1467c22b38e4d68915256f1abae7beb479fe07fff1af416a8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Jackery Expands Retail Footprint of Award-Winning FridgeGuard, Announces First-Ever Holiday Promotional Pricing for Black Friday and Cyber Monday
+<<<SUMMARY>>>
+Formerly exclusive to Costco, the critically acclaimed home backup system is now available on Amazon and Jackery.com, offering consumers new ways to shop as well as unprecedented seasonal savings FREMONT, Calif., Nov. 05, 2026 (GLOBE NEWSWIRE) -- Jackery, a global leader in innovative portable power and The World's No. 1 Solar Generator Brand*, today announced the expanded retail availability of its highly acclaimed FridgeGuard appliance backup system. Originally launched earlier this year as a
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584628
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=deed8fb386b12f8f24ba2da28215a31de9c122b4e58e2244174d9d1e86dd253f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Sezzle Inc. Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Sezzle Inc.'s Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584029
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:00:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9ce4e9e86cb402377a38029a275831210efafdbabaf281d7c2af669242938dbf
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: Defensives Lead Sectors Thursday As Growth Sectors Trail
+<<<SUMMARY>>>
+Four sectors are higher and seven are lower in Thursday’s regular session, with defensive sectors holding two of the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143586677
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T11:08:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1fea7da79d57fda1913a3d9ab26832bee46d410be8ecc02f21f341cefe10af6d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Costco-Challenges-Chicken-Lawsuit.jpg?width=2048&height=1536
+category: company
+tickers: COST
+keywords: 
+headline: Costco Stock Moves Higher: What's Going On?
+<<<SUMMARY>>>
+Costco Wholesale Corp. (NASDAQ: COST) shares are rising Thursday. The company reported a 12.6% jump in October net sales, to $24.50 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143534582
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T09:06:05Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=b7c0b76cb6d1152d753afea350542bc2b90916621326c69c715c952afeaf7614
+image_url: 
+category: company
+tickers: COST
+keywords: 
+headline: Midterms Aftermath: The Dem Sweep Means Recession
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143514234
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T06:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb99c18d9be15b23b460d1d9b5b1e5b35adb0cf42e5fd4aca4fc4d98d5993d05
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Amazon Trades at a Fraction of Costco's Valuation. Is the Discount Deserved?
+<<<SUMMARY>>>
+The numbers would normally be reversed. Let's look at what's got investors thinking so defensively right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143507319
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T03:06:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=533d1b56e203749c028c9f884e8484232ff0bbdad892adc703238e8033e4c304
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Freshpet Inc (FRPT) Q3 2026 Earnings Call Highlights: Record Gross Margin, Raised Guidance and ...
+<<<SUMMARY>>>
+Freshpet Inc (FRPT) posted 10% volume-driven sales growth, a seven-year-high 50% adjusted gross margin and lifted its full-year outlook despite rising logistics costs and competitive pressures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143749546
+symbol: COST
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T02:38:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e8101fb72ddc1ef6156ef8da41909e245d9319dad6c9ba4adab2e4429de2df25
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COST
+keywords: 
+headline: Cramer Says Tito’s Refused Costco on Price and Kirkland Made Vodka for Half
+<<<SUMMARY>>>
+Jim Cramer says Costco has a playbook for suppliers that push prices higher, and a famous vodka brand may have felt it. The same morning, a record payout landed, and the two stories share one engine worth understanding.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c2ccbe3c789db95701e9194c0a9c23b726f9fec79b3470620b451fa35055d5a4
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T07:55:00Z
+publisher: The Motley Fool
+author: Lawrence Rothman, Cfa
+url: https://www.fool.com/investing/2026/10/29/is-now-a-good-time-to-buy-costco-stock/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F888056%2Fcostco-warehouse-wholesale-shopping-1280x819-a201dd6.jpg&w=1200&op=resize
+category: 
+tickers: COST
+keywords: Costco stock, long-term investing, valuation, membership retention, warehouse expansion, operating income growth
+headline: Is Now a Good Time to Buy Costco Stock?
+<<<SUMMARY>>>
+Costco stock has doubled over the past five years, outperforming the S&P 500 by 35 percentage points. Despite a high P/E ratio of 48 (above its 10-year median of 38), the company continues to execute well with strong member retention (90% renewal rate), membership growth of 4% to 84.1 million, and consistent warehouse expansion. The analyst recommends buying and holding Costco for long-term investors, arguing that paying a premium valuation for a profitably growing company is preferable to cheaper valuations for weaker prospects.
+<<<INSIGHTS>>>
+COST | positive | Strong operational performance with 90% member renewal rate, 4% membership growth to 84.1 million, consistent warehouse expansion (25 added in last fiscal year), and 12.5% year-over-year operating income growth to $11.7 billion. Despite elevated P/E ratio of 48, the analyst recommends buying for long-term investors due to profitable growth trajectory and market-beating historical performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5b69ca5e91c3fefa189758b51c6393c5f7d466508525bbd3f4752e63fb7e6e8b
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T15:54:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018923/buy-hold-or-sell-uber-stock-before-q3-earnings-release?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3018923
+image_url: https://staticx-tuner.zacks.com/images/articles/main/1c/715.jpg
+category: 
+tickers: UBER, WRD, COST
+keywords: Q3 2026 earnings, EPS decline, revenue growth, autonomous vehicles, foreign exchange headwinds, robotaxi competition, debt levels
+headline: Buy, Hold or Sell Uber Stock Before Q3 Earnings Release?
+<<<SUMMARY>>>
+Uber is set to report Q3 2026 earnings on Nov. 4 with expected EPS decline of 69.8% year-over-year despite 9.4% revenue growth to $14.74 billion. The company faces headwinds from foreign exchange impacts, tariffs, high fuel costs, and increased autonomous vehicle expansion expenses. With a Zacks Rank #4 (Sell) rating and stock down 12% over six months, analysts recommend caution ahead of the earnings report.
+<<<INSIGHTS>>>
+UBER | negative | Expected 69.8% EPS decline year-over-year, stock down 12% in six months, Zacks Rank #4 (Sell), rising competition in autonomous driving space, higher operating costs, increasing debt levels, and foreign exchange/tariff headwinds warrant caution.
+WRD | positive | Secured Spain's first national Level 4 autonomous vehicle permit in partnership with Uber, marking ninth autonomous-driving permit globally and strengthening European expansion strategy.
+COST | positive | Significantly expanded U.S. partnership with Uber Eats, expanding delivery availability from 17 to 47 states with nearly 600 locations, providing enhanced convenience for members.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4331033c496458357464ef8d08a4f3fc909f463adfa243eb3baa05f9e827b2ab
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-30T10:17:00Z
+publisher: Zacks Investment Research
+author: Zacks Investment Research
+url: https://www.zacks.com/stock/news/3019340/the-zacks-analyst-blog-highlights-uber-weride-and-costco?cid=CS-ZC-FT-press_releases-3019340
+image_url: https://staticx-tuner.zacks.com/images/articles/main/44/1814.jpg
+category: 
+tickers: UBER, COST, WRD
+keywords: Q3 2026 earnings, autonomous vehicles, foreign exchange headwinds, tariff impacts, Uber Eats expansion, Costco partnership, robotaxi competition
+headline: The Zacks Analyst Blog Highlights Uber, WeRide and Costco
+<<<SUMMARY>>>
+Uber Technologies faces headwinds ahead of Q3 2026 earnings on November 4, with analysts recommending investors avoid or sell the stock. The company expects gross bookings of $58.25-$60.25 billion but faces challenges from foreign exchange impacts, tariffs, and high autonomous vehicle expansion costs. During the quarter, Uber expanded its partnership with Costco to 47 states and secured Spain's first Level 4 autonomous vehicle permit with WeRide.
+<<<INSIGHTS>>>
+UBER | negative | Zacks Rank #4 (Sell) with Earnings ESP of +7.77%. Analysts recommend avoiding or selling ahead of Q3 earnings due to foreign exchange headwinds, tariff impacts, high autonomous vehicle costs, rising competition in robotaxi space, and increasing debt levels. Stock has declined over 12% in past six months.
+COST | neutral | Mentioned positively for expanding delivery partnership with Uber Eats to 47 states, making nearly 600 Costco locations accessible through the platform. However, no specific sentiment analysis provided for the company itself.
+WRD | positive | Secured Spain's first national Level 4 autonomous vehicle permit alongside Uber, marking the company's ninth autonomous-driving permit globally and strengthening its European expansion strategy.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7c96335e5a4ceec013b70606348c3a87279d556c97dd4d4bbd3489b85af3eafb
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-30T21:15:02Z
+publisher: The Motley Fool
+author: Will Healy
+url: https://www.fool.com/coverage/stock-market-today/2026/10/30/stock-market-today-oct-30-amazon-misses-revenue-and-earnings-expectations/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F6329f3080466ce6af5a3b2bd1d051ea56ecd6cff-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AMZN, WMT, COST
+keywords: Amazon earnings miss, AI investment spending, AWS growth, capital expenditures, free cash flow, stock market decline, retail sector
+headline: Stock Market Today, Oct. 30: Amazon Misses Revenue and Earnings Expectations
+<<<SUMMARY>>>
+Amazon stock fell 1.41% after missing Q3 revenue and earnings expectations, with concerns over heavy AI capital expenditures ($220B planned for 2026) and negative free cash flow of $42.4B over the trailing 12 months. However, AWS grew 39% year-over-year, and the company's $114B in liquidity provides a cushion. The broader market declined with S&P 500 down 2.07% and Nasdaq down 2.86%, while retail competitors Walmart and Costco gained.
+<<<INSIGHTS>>>
+AMZN | negative | Stock declined 1.41% after missing revenue ($201.9B vs. expectations) and earnings per share ($1.89 vs. expectations) targets. Heavy capex spending of $220B planned for 2026 and negative free cash flow of $42.4B over trailing 12 months raised investor concerns, though AWS's 39% growth and $114B liquidity provide some mitigation.
+WMT | positive | Stock closed up 1.86%, benefiting from a split in retail sentiment as investors rotated away from Amazon's disappointing earnings and concerns about heavy AI spending.
+COST | positive | Stock finished up 1.63%, gaining from the same retail sector rotation as Walmart as investors sought alternatives to Amazon amid earnings disappointment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:926ad47f4e9c0928872c9a8082c7fd008aa175d00e3159d4e3c3296a4df5846d
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-30T23:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020048/4-halloween-etf-treats-for-investors?cid=CS-ZC-FT-etf_news_and_commentary-3020048
+image_url: https://staticx-tuner.zacks.com/images/articles/main/25/307.jpg
+category: 
+tickers: WMT, COST, ROST, DG, IBUY, RTH, XLY
+keywords: Halloween Effect, retail spending, seasonal investing, consumer discretionary, holiday shopping, discount retailers
+headline: 4 Halloween ETF Treats for Investors
+<<<SUMMARY>>>
+The Halloween Effect, a historically observed increase in stock prices from November through April, is expected to drive retail performance this year. Record Halloween spending projections of $13.5 billion signal strength in the upcoming holiday shopping season, with 74% of Americans planning to celebrate. Strong Halloween spending typically indicates robust Christmas season spending, benefiting retail and consumer discretionary stocks and ETFs.
+<<<INSIGHTS>>>
+WMT | positive | Discount retailer with considerable weight in retail-focused ETFs; positioned to benefit from expected strong Halloween and holiday spending surge
+COST | positive | Discount retailer with solid exposure in retail ETFs; expected to capture increased consumer spending during seasonal retail surge
+ROST | positive | Discount retailer featured in multiple retail ETFs; positioned to benefit from 39% of Halloween shopping expected at discount stores
+DG | positive | Discount retailer with solid exposure in retail ETFs; well-positioned for seasonal spending increase
+IBUY | positive | Amazon-heavy ETF positioned to benefit from expected online shopping surge during Halloween and holiday season
+RTH | positive | Diversified retail ETF with exposure to multiple discount retailers positioned to benefit from seasonal spending surge
+XLY | positive | Consumer discretionary ETF with significant Amazon exposure; positioned to capture seasonal consumer spending gains
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5fe72c304242879bd24c28b3e6e040c728a0233035be1e5f5f7444d39c830c01
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T12:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020287/consumer-staples-etf-vdc-hits-a-new-52-week-high?cid=CS-ZC-FT-etf_news_and_commentary-3020287
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default148.jpg
+category: 
+tickers: VDC, WMT, COST, KO, PG
+keywords: consumer staples, defensive stocks, tech volatility, ETF performance, rotation strategy
+headline: Consumer Staples ETF (VDC) Hits a New 52-Week High
+<<<SUMMARY>>>
+The Vanguard Consumer Staples Index Fund ETF (VDC) has reached a 52-week high, up 18.9% from its low, as investors shift toward defensive stocks amid technology sector volatility and AI spending concerns. The fund's exposure to essential-goods companies like Walmart, Costco, Coca-Cola, and Procter & Gamble provides stable demand and cash flows. With a positive weighted alpha of 16.25, analysts suggest VDC may continue its rally in the near term.
+<<<INSIGHTS>>>
+VDC | positive | VDC hit a 52-week high with 18.9% gains from its low, demonstrating strong momentum. The positive weighted alpha of 16.25 and analyst outlook suggest continued near-term performance as investors favor defensive consumer staples.
+WMT | positive | Mentioned as a key holding in VDC providing stable demand and cash flows during market uncertainty, benefiting from the defensive rotation trend.
+COST | positive | Listed as a major essential-goods company supporting VDC's momentum with stable earnings and cash flows amid market volatility.
+KO | positive | Highlighted as a consumer staples holding providing relatively stable demand and earnings during periods of market uncertainty.
+PG | positive | Included as a key essential-goods company supporting VDC's defensive positioning with stable cash flows and earnings.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:32be5404c346d28809d304e34c2d9d7602dc74334166d3b9b8439379fac08e05
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T12:57:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020361/can-walmart-s-expanded-sparky-ai-boost-holiday-shopping-and-sales?cid=CS-ZC-FT-analyst_blog|quick_take-3020361
+image_url: https://staticx-tuner.zacks.com/images/articles/main/63/121.jpg
+category: 
+tickers: WMT, COST, TGT
+keywords: AI shopping assistant, digital innovation, e-commerce growth, holiday shopping, omnichannel retail, customer engagement
+headline: Can Walmart's Expanded Sparky AI Boost Holiday Shopping and Sales?
+<<<SUMMARY>>>
+Walmart is enhancing its AI-powered shopping assistant Sparky with new features including image search, handwritten list conversion, and multilingual support for the upcoming holiday season. Sparky usage surged 70% year-over-year in Q2, with users spending 40% more per order than non-users. Walmart's U.S. digital sales grew 24% in Q2, demonstrating strong e-commerce momentum.
+<<<INSIGHTS>>>
+WMT | positive | Strong Q2 digital sales growth of 24%, significant 70% year-over-year increase in Sparky adoption, and users spending 40% more per order demonstrate successful AI integration and robust e-commerce momentum heading into the holiday season.
+COST | neutral | Mentioned as a competitor with no specific performance data or developments discussed in the article; included only for comparative valuation context.
+TGT | neutral | Mentioned as a competitor with no specific performance data or developments discussed in the article; included only for comparative valuation context.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b49b9c4eccc7770f6a51cb897f258fa6dfe921f773fca0ae46929416c1fd6e5c
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T14:47:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3020727/can-costco-s-doordash-and-uber-eats-expansion-drive-incremental-sales?cid=CS-ZC-FT-analyst_blog|quick_take-3020727
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a0/810.jpg
+category: 
+tickers: COST, WMT, TGT
+keywords: same-day delivery, e-commerce expansion, digital sales growth, membership loyalty, fast delivery competition, incremental sales, younger demographics
+headline: Can Costco's DoorDash and Uber Eats Expansion Drive Incremental Sales?
+<<<SUMMARY>>>
+Costco has expanded its same-day delivery partnerships with Uber Eats (nationwide) and DoorDash to drive incremental sales and attract younger demographics. With digitally enabled sales exceeding $33 billion in fiscal 2026 (growing over 20%), management indicates these delivery services largely complement rather than cannibalize warehouse traffic. However, Costco's premium valuation and moderating membership growth present near-term headwinds.
+<<<INSIGHTS>>>
+COST | positive | Costco is successfully expanding delivery partnerships with strong digital sales growth (>20% in fiscal 2026), attracting younger demographics, and management indicates these are largely incremental sales without cannibalizing warehouse traffic. However, this is tempered by premium valuation and moderating membership growth.
+WMT | positive | Walmart is strengthening fast-delivery capabilities with 24% e-commerce growth, 48% fast-delivery growth, and sub-30-minute delivery expanding to 38 markets. Data shows customers using faster delivery shop more frequently, supporting incremental spending potential.
+TGT | positive | Target's same-day delivery services are driving strong digital growth (8.7% digital comparable sales with >25% same-day delivery growth), outpacing overall comparable sales growth of 3.8%, indicating successful leverage of convenience-driven shopping trends.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:85c8d87a96d15c86e737c450009b91bbe132912fe39f4027d9e5419889a68719
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T21:45:58Z
+publisher: The Motley Fool
+author: Howard Smith
+url: https://www.fool.com/coverage/stock-market-today/2026/11/02/stock-market-today-nov-2-amazon-rallies-on-phillip-securities-buy-upgrade-and-330-target/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0c66124d42f4e751b4f4ab5c00dc958da05a0a23-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AMZN, WMT, COST
+keywords: Amazon, AWS, cloud computing, AI spending, analyst upgrade, stock rally, e-commerce, digital advertising
+headline: Stock Market Today, Nov. 2: Amazon Rallies on Phillip Securities Buy Upgrade and $330 Target
+<<<SUMMARY>>>
+Amazon stock rallied 2.20% to $245.63 on November 2, 2026, following a Phillip Securities buy upgrade with a $330 price target. Analyst Helena Wang cited strong AWS cloud demand and AI positioning, with AWS revenue jumping 39% year-over-year to $46 billion. The broader market saw the S&P 500 down 0.50% and Nasdaq down 1.07%, while retail peers Walmart and Costco posted gains.
+<<<INSIGHTS>>>
+AMZN | positive | Phillip Securities upgraded Amazon to 'buy' with a raised $330 price target. AWS segment showed exceptional growth with 39% YoY revenue increase to $46 billion and 61% operating income surge. Strong cloud demand and AI positioning drove investor confidence despite earlier concerns about capital spending.
+WMT | positive | Walmart closed up 3.38%, outperforming the broader market decline and showing strength in the retail sector alongside Amazon's gains.
+COST | positive | Costco closed up 2.79%, demonstrating resilience in the retail sector despite overall market weakness.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:470554fcf9d684c6d0969386a7bf6e7cd6a864fbaecc93e9c1a34daf1ef8ff34
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T16:30:00Z
+publisher: The Motley Fool
+author: Jeff Siegel
+url: https://www.fool.com/investing/2026/11/03/costco-hasnt-split-its-stock-since-2000-heres-why/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893092%2Fmf-costco.jpg&w=1200&op=resize
+category: 
+tickers: COST
+keywords: stock split, Costco Wholesale, share price, retail investors, membership model, earnings growth, valuation, warehouse expansion
+headline: Costco Hasn't Split Its Stock Since 2000. Here's Why 2027 Could Be the Year.
+<<<SUMMARY>>>
+With Costco's stock trading above $1,000 per share for the first time since its last split in 2000, a potential stock split in 2027 could make the stock more accessible to retail investors. While a split wouldn't change the company's underlying valuation, Costco's strong fundamentals—including its membership model, consistent earnings growth, and international expansion opportunities—make it an attractive long-term holding regardless of share price.
+<<<INSIGHTS>>>
+COST | positive | The article highlights Costco's strong business fundamentals including 10.1% net sales growth, 14% net income increase, robust cash flow generation ($15.8B), efficient membership-based model, customer loyalty, and significant expansion opportunities. The company is characterized as an exceptional business with consistent earnings growth potential, despite trading at a premium valuation of 49x trailing earnings.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:28c255b9037cd6ef4a8a0f5452e130e3753f29c8ca1efeba988587b7930ed20e
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T11:45:00Z
+publisher: The Motley Fool
+author: Jennifer Saibil
+url: https://www.fool.com/investing/2026/11/04/my-top-5-stocks-to-buy-before-2027-and-hold-for-a/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893058%2Ftarget_summer_storedisplay_foodaisle.jpg&w=1200&op=resize
+category: 
+tickers: TGT, BROS, MELI, ELF, ONON, WMT, COST
+keywords: long-term investing, buy and hold, stock recommendations, retail, e-commerce, growth stocks, market cycles
+headline: My Top 5 Stocks to Buy Before 2027 and Hold for a Decade
+<<<SUMMARY>>>
+The article recommends five stocks for long-term buy-and-hold investors: Target (trading at a bargain valuation with recovery potential), Dutch Bros (rapidly expanding coffee chain with growth plans to 7,000 stores), MercadoLibre (Latin American e-commerce and fintech leader showing strong momentum), e.l.f. Beauty (young cosmetics company with 36% sales growth and margin expansion), and On Holding (athletic wear newcomer gaining market share with premium positioning). All five are positioned as having excellent 10-year wealth creation potential despite recent market volatility.
+<<<INSIGHTS>>>
+TGT | positive | Trading at attractive forward P/E of 16 (discount to peers), showing strong recovery with 58% YTD gain, 3.8% comparable sales growth, and 54-year dividend increase history. Positioned as a bargain with ample expansion opportunities.
+BROS | positive | Demonstrating robust growth with 32% YoY revenue increase and 5.8% same-store sales growth. Plans to nearly double store count by 2029 with long-term target of 7,000 stores. Highly profitable with rising earnings.
+MELI | positive | Showing exceptional momentum with 50% YoY sales growth (highest in nearly 4 years), 44% GMV increase, and 56% payment volume growth. Dual ecosystem provides competitive advantage. Stock down 19% YTD presents buying opportunity.
+ELF | positive | Strong growth with 36% YoY sales increase, gross margin improved to 83% (up 14 percentage points), and successful luxury market entry via Rhode acquisition. Stock up 47% YTD despite being 49% off its high.
+ONON | positive | Rapidly gaining market share in athletic wear with 22% currency-neutral YoY sales growth and improving gross margins (61.5% to 65.4%). Management guidance of high-teens growth through 2029. Stock down 27% YTD offers attractive entry point at 16x forward earnings.
+WMT | neutral | Mentioned as comparison point but noted as expensive relative to Target. Not recommended for purchase at current valuation.
+COST | neutral | Mentioned as comparison point but noted as expensive relative to Target. Not recommended for purchase at current valuation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1941d6ef57e48f7b659cf51a76e2cc61d45fbb28fc4f1e41d5077f1be1119e56
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T13:30:00Z
+publisher: The Motley Fool
+author: Daniel Foelber
+url: https://www.fool.com/investing/2026/11/04/meet-the-only-magnificent-seven-stock-thats-outper/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893207%2Fa-person-smiles-while-leaning-against-a-railing-by-a-river-in-a-city-and-looking-at-an-apple-iphone.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, NVDA, GOOG, GOOGL, GOOGM, GOOGN, AMZN, MSFT, META, METAM, TSLA, WMT, COST
+keywords: Magnificent Seven, Apple outperformance, AI capital expenditures, free cash flow, tech stock valuation, consumer staples, hyperscaler spending
+headline: Meet the Only "Magnificent Seven" Stock That's Outperforming the S&P 500 and Nasdaq This Year (Hint: It's Not Nvidia)
+<<<SUMMARY>>>
+Apple is the only Magnificent Seven stock outperforming both the S&P 500 and Nasdaq in 2025, up 26.8% year-to-date. Unlike peers that are heavily investing in AI infrastructure, Apple generates strong free cash flow with minimal capital expenditures, positioning it as a recession-resistant consumer staples/tech hybrid. However, its premium valuation of 39.5x earnings raises concerns for value-focused investors.
+<<<INSIGHTS>>>
+AAPL | positive | Only Magnificent Seven stock outperforming major indexes; strong free cash flow with low capex; positioned as recession-resistant with AI as upside rather than core thesis; however, premium valuation at 39.5x earnings is a concern
+NVDA | neutral | Outperformed indexes in 2025 but underperforming in recent sell-off; dependent on hyperscaler AI spending returns to justify future investments; no longer the clear leader among Magnificent Seven
+GOOG | negative | Experiencing record $505 billion market cap loss; FCF-negative due to massive AI spending; taking on debt and diluting shareholders; guiding for even higher spending in 2027; investors losing patience
+GOOGL | negative | Experiencing record $505 billion market cap loss; FCF-negative due to massive AI spending; taking on debt and diluting shareholders; guiding for even higher spending in 2027; investors losing patience
+GOOGM | negative | Experiencing record $505 billion market cap loss; FCF-negative due to massive AI spending; taking on debt and diluting shareholders; guiding for even higher spending in 2027; investors losing patience
+GOOGN | negative | Experiencing record $505 billion market cap loss; FCF-negative due to massive AI spending; taking on debt and diluting shareholders; guiding for even higher spending in 2027; investors losing patience
+AMZN | negative | FCF-negative due to massive AI infrastructure spending; racing to attract cloud spend with uncertain ROI; valuation more attractive but fundamentals weakened by capex demands
+MSFT | neutral | Only Magnificent Seven stock besides Microsoft that underperformed in 2024; racing to attract cloud spend with heavy AI investments; valuation concerns similar to other hyperscalers
+META | negative | FCF-negative due to massive AI spending; competing for user engagement in crowded AI market; heavy capex requirements without clear near-term returns
+METAM | negative | FCF-negative due to massive AI spending; competing for user engagement in crowded AI market; heavy capex requirements without clear near-term returns
+TSLA | negative | Underperformed both Nasdaq and S&P 500 in 2025; not benefiting from AI narrative like other Magnificent Seven peers
+WMT | neutral | Mentioned as recession-resistant consumer staples comparison; trades at even higher forward P/E (42.8x) than Apple, suggesting premium valuations across defensive stocks
+COST | neutral | Mentioned as recession-resistant consumer staples comparison; trades at highest forward P/E (44.4x) among defensive stocks, indicating market's willingness to pay premium for safety
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2c90fe8d44408c1b8728b9e0b0b53580dfbdccf3c948b39e034d368ecba4530e
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T15:14:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023204/is-dollar-general-stock-a-buy-at-its-current-valuation?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3023204
+image_url: https://staticx-tuner.zacks.com/images/articles/main/2a/106304.jpg
+category: 
+tickers: DG, WMT, COST
+keywords: Dollar General, valuation, P/E multiple, store expansion, Project Renovate, Project Elevate, digital growth, comparable sales, discount retail
+headline: Is Dollar General Stock a Buy at Its Current Valuation?
+<<<SUMMARY>>>
+Dollar General (DG) trades at an attractive forward P/E of 15.74, below industry average of 28.89, supported by improving fundamentals and strategic growth initiatives including store renovations, digital expansion, and 450 planned new U.S. stores for fiscal 2026. Despite cost pressures and consumer uncertainties, analysts rate DG as a Buy with favorable risk-reward profile.
+<<<INSIGHTS>>>
+DG | positive | Attractive valuation at 15.74 forward P/E (below industry average), improving business performance, strong customer traffic, strategic growth initiatives (store renovations, digital expansion, 450 new stores planned), and Zacks Rank #2 Buy rating support positive outlook despite near-term cost pressures.
+WMT | neutral | Mentioned as a peer comparison with higher forward P/E of 39.77 and stronger recent stock performance (+10.4% in 3 months), but no specific analysis or recommendation provided.
+COST | neutral | Referenced as a comparable company with highest forward P/E of 44.13 and solid recent performance (+7.6% in 3 months), but included only for valuation comparison without specific investment recommendation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:efa1bef6b53b4790647b5bcc9a0127c8eb0793fe46e99dee4be0bd2b5ba3c79b
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T21:45:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023469/costco-cost-rises-higher-than-market-key-facts?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6-3023469
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default266.jpg
+category: 
+tickers: COST
+keywords: Costco, stock performance, earnings forecast, valuation, Zacks Rank, warehouse retail, P/E ratio
+headline: Costco (COST) Rises Higher Than Market: Key Facts
+<<<SUMMARY>>>
+Costco (COST) closed at $1,046.47, up 2.67%, outperforming the S&P 500's 1.58% gain. The stock has appreciated 8.93% over the past month. Analysts expect earnings of $4.87 per share (up 12.21% YoY) and revenue of $74.02 billion (up 9.98% YoY). However, Costco trades at a Forward P/E of 44.91, significantly above the industry average of 20.13, and holds a Zacks Rank of #3 (Hold).
+<<<INSIGHTS>>>
+COST | neutral | While Costco demonstrates strong recent performance (up 2.67% in latest session, 8.93% over one month) and positive earnings growth expectations (12.21% YoY), the stock carries a premium valuation with a Forward P/E of 44.91 versus industry average of 20.13. The Zacks Rank of #3 (Hold) and recent downward EPS estimate revision of 0.73% suggest limited near-term upside, balancing bullish fundamentals against valuation concerns.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:17e397d5d640dbfe1fc3ef19427572d331183091b77e94f6d876c3467539a15c
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T06:15:00Z
+publisher: The Motley Fool
+author: James Brumley
+url: https://www.fool.com/investing/2026/11/05/amazon-trades-at-a-fraction-of-costcos-valuation-i/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892617%2Ffinancial-analysis-company-filing-business-papers.jpg&w=1200&op=resize
+category: 
+tickers: AMZN, COST, GOOG, GOOGL, GOOGM, GOOGN, MSFT
+keywords: valuation, price-to-earnings ratio, cloud computing, artificial intelligence, competitive pressure, defensive investing, market sentiment
+headline: Amazon Trades at a Fraction of Costco's Valuation. Is the Discount Deserved?
+<<<SUMMARY>>>
+Amazon's P/E ratio has dropped to 20 (from historically expensive levels) while Costco's has surged to 50, reversing their traditional valuation roles. The shift reflects market concerns about AI competition slowing Amazon Web Services' growth and investors seeking defensive positions in Costco. However, both valuations may be overreacting to potential risks, presenting a buying opportunity in Amazon once market fears subside.
+<<<INSIGHTS>>>
+AMZN | positive | Despite current undervaluation concerns, the article suggests Amazon is oversold and presents a buying opportunity. AWS showed strong 39% Q3 growth, and the market is pricing in excessive catastrophe risk that is unlikely to materialize.
+COST | neutral | While Costco offers above-average safety and deserves a valuation premium, the article argues its current P/E of 50 is excessive and overpriced relative to realistic risk, suggesting it will normalize downward.
+GOOG | neutral | Mentioned as a competitive threat to Amazon Web Services through increased cloud computing investment, but no direct valuation assessment provided.
+GOOGL | neutral | Mentioned as a competitive threat to Amazon Web Services through increased cloud computing investment, but no direct valuation assessment provided.
+GOOGM | neutral | Mentioned as a competitive threat to Amazon Web Services through increased cloud computing investment, but no direct valuation assessment provided.
+GOOGN | neutral | Mentioned as a competitive threat to Amazon Web Services through increased cloud computing investment, but no direct valuation assessment provided.
+MSFT | neutral | Noted as a competitive threat to Amazon Web Services through cloud computing expansion, but no direct valuation assessment provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7eb6f79eae753fd180be168122cfcb98f173d2be62974144d98bb10ed14f1f65
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T16:52:00Z
+publisher: GlobeNewswire Inc.
+author: Globe Newswire
+url: https://www.globenewswire.com/news-release/2026/11/05/3396851/0/en/wswa-announces-program-highlights-for-access-live-2027.html
+image_url: https://ml.globenewswire.com/Resource/Download/918e4c47-6fc5-4486-98f3-a823d687b3f3
+category: 
+tickers: COST
+keywords: Access LIVE 2027, Wine and Spirits Wholesalers of America, beverage alcohol industry, conference, Dallas, three-tier system, Brand Battle, industry trends, networking
+headline: WSWA Announces Program Highlights for Access LIVE 2027
+<<<SUMMARY>>>
+WSWA announced programming highlights for Access LIVE 2027, a major industry conference taking place February 1-4, 2027, in Dallas, Texas. The event will feature keynote remarks from WSWA leadership, industry trend analysis, retail perspectives, an 11th annual Brand Battle competition, and educational sessions focused on wine, spirits, and beverage alcohol business strategies. The conference aims to unite wholesalers, suppliers, retailers, and industry professionals across all three tiers of the beverage alcohol distribution system.
+<<<INSIGHTS>>>
+COST | neutral | Costco is mentioned as a panelist in retail discussions at the conference, indicating its prominence in the beverage alcohol retail space, but the article provides no specific business performance or strategic information about the company.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7ceb5b2d2eb464695288fea2854fa246d3770e5654fab575b622027945a2d886
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T22:39:37Z
+publisher: The Motley Fool
+author: Robert Izquierdo
+url: https://www.fool.com/coverage/stock-market-today/2026/11/05/stock-market-today-nov-5-amazon-shares-slide-as-technology-selloff-erases-early-gains/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F474fa53694cddc7fa17518a88b616b294e8541d3-2000x1200.png&w=1200&op=resize
+category: 
+tickers: AMZN, UBER, WMT, COST
+keywords: technology selloff, Amazon, AWS, AI infrastructure, midterm elections, regulations, free cash flow, rising yields
+headline: Stock Market Today, Nov. 5: Amazon Shares Slide as Technology Selloff Erases Early Gains
+<<<SUMMARY>>>
+Amazon shares fell 2.19% on Nov. 5, 2026, despite early gains from a partnership announcement with Uber. A broad technology selloff occurred following midterm election results, with concerns about potential Democratic regulations on AI and data centers. The decline reflects investor worries about Amazon's rising AI infrastructure costs and negative free cash flow, though AWS is projected to grow 40% in 2027-2028.
+<<<INSIGHTS>>>
+AMZN | negative | Stock declined 2.19% amid tech selloff. Concerns about rising AI infrastructure costs, negative Q3 free cash flow (-$42.4B), potential regulatory headwinds from Democratic control of Congress, and macroeconomic pressures from rising rates and inflation outweigh positive AWS growth forecasts.
+UBER | neutral | Mentioned positively for partnership with Amazon providing Prime members free Uber Eats delivery, but no specific stock performance data provided in the article.
+WMT | neutral | Closed down 1.12%, a modest decline compared to broader tech selloff, suggesting relative resilience among retail peers.
+COST | positive | Closed up 1.83%, showing strength and outperforming the broader market decline, indicating investor confidence in the company.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:919100f6d8785cdb7923f1e9c04d0a025aa5d13076dff83e5e74ba358f701198
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T23:13:01Z
+publisher: The Motley Fool
+author: The Motley Fool Team
+url: https://www.fool.com/investing/2026/11/05/what-tom-gardner-said-about-days-like-this/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fe1798c3c841a5cdc494f8e96bec08f0ce5f8de65-6720x4480.jpg&w=1200&op=resize
+category: 
+tickers: CRWD, COST, RKLB
+keywords: market downturn, portfolio volatility, diversification, long-term investing, risk management, emergency fund, stock market correction
+headline: What Tom Gardner Said About Days Like This
+<<<SUMMARY>>>
+Following a significant market downturn (S&P 500 down 4.36%, Nasdaq down 5.52%), Tom Gardner shares five investment principles for navigating volatility: expect 10-15% pullbacks as normal, move in stages rather than making dramatic trades, favor quality companies with lower return expectations, maintain a diversified portfolio of 50+ companies, and ensure adequate emergency funds to treat market declines as buying opportunities.
+<<<INSIGHTS>>>
+CRWD | neutral | Hidden Gems sold 15% of position due to rich valuation, not business concerns. Stock down 9.88% on the day, but Gardner's team took profits strategically rather than expressing negative outlook on the company.
+COST | positive | Used as example of high-quality company with modest but reliable returns (~10% annually). Recommended as 'solid ballast' for portfolio stability. Up 1.83% on a down market day.
+RKLB | neutral | Tom Gardner still believes in the business despite significant volatility (ran to $150 then cut in half). Used as example of why diversification matters. Down 12.18% on the day.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:87b5ac0a758a4af151ebf81f5bd76a538c076b25fc0889aecc641aa54dd5a05f
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T12:30:02Z
+publisher: The Motley Fool
+author: Tmf Breakfast News
+url: https://www.fool.com/investing/breakfast-news/2026/11/07/breakfast-news/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fmisc-assets%2Flive-1107-move-cost.png&w=1200&op=resize
+category: 
+tickers: COST, O, MA, JNJ
+keywords: defensive stocks, market volatility, dividend stocks, capital preservation, steady investments, membership model, REIT, payments network
+headline: Breakfast News: Stocks That Let You Sleep at Night
+<<<SUMMARY>>>
+The Motley Fool analysts recommend four steady stocks that historically move less than the market and can help investors stay confident during market downturns: Costco (strong membership model with 90% renewal rates), Realty Income (REIT with 50+ years of dividend growth), Mastercard (dominant payments network with consistent growth), and Johnson & Johnson (Dividend King with 64 consecutive years of dividend increases and AAA credit rating).
+<<<INSIGHTS>>>
+COST | positive | Praised for its resilient business model with 90% membership renewal rates, high-margin membership fees ($5.9B on $9.2B net income), and consistent earnings growth. Positioned as a confidence-holding stock through market downturns.
+O | positive | Highlighted as a 'safe' investment with 50+ years of responsible capital allocation, 116 consecutive quarterly dividend increases, and 13.5% annualized total return since 1994. Recommended for capital preservation.
+MA | positive | Commended for its massive global payments network, strong growth metrics (9% transaction growth, 12% revenue growth), consistent share buybacks (11% reduction over 5 years), and resilient toll-booth business model despite regulatory scrutiny.
+JNJ | positive | Recognized as a Dividend King with 64 consecutive years of dividend increases, AAA credit rating, and proven resilience through multiple recessions. Positioned as ideal for capital preservation due to essential healthcare products.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:244543d341179478f1d1523267cae0c924c9f9b21497ed294a7996be750f8643
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T21:15:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/etfs/2026/11/07/consumer-staples-showdown-weighing-the-differences-between-vdc-and-rsps/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0dbeaa0b9e42976b520af8192b7b599528bff488-4000x3000.jpg&w=1200&op=resize
+category: 
+tickers: VDC, RSPS, WMT, COST, PG
+keywords: consumer staples ETF, VDC vs RSPS, expense ratio, dividend yield, market-cap weighting, equal weighting, ETF performance comparison
+headline: Consumer Staples Showdown: Weighing the Differences Between VDC and RSPS
+<<<SUMMARY>>>
+Vanguard Consumer Staples ETF (VDC) outperforms Invesco S&P 500 Equal Weight Consumer Staples ETF (RSPS) with 21.3% one-year returns and a lower 0.09% expense ratio, while RSPS offers higher dividend yield at 2.8% through its equal-weighting strategy. VDC is recommended for cost-conscious long-term investors, while RSPS appeals to income-focused investors seeking reduced concentration risk.
+<<<INSIGHTS>>>
+VDC | positive | Superior 1-year return of 21.3%, significantly lower expense ratio of 0.09%, better 5-year performance with 45% total return, and lower maximum drawdown of 16.5% make it the more attractive option for most investors.
+RSPS | neutral | While offering higher dividend yield of 2.8% and an equal-weighting strategy that reduces concentration risk, it underperforms VDC with 15.4% 1-year returns, higher expense ratio of 0.4%, and lower 5-year CAGR of 2.7%, making it suitable only for specific income-focused strategies.
+WMT | neutral | Mentioned as a major holding in both ETFs (13.86% in VDC, 3.32% in RSPS), indicating its importance in the consumer staples sector but without specific performance commentary.
+COST | neutral | Listed as second-largest holding in VDC at 12.12%, indicating significant portfolio weight but no specific performance analysis provided.
+PG | neutral | Third-largest holding in VDC at 9.90%, representing a key consumer staples position but without individual performance commentary.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aece5eff52851544db5c9485d9d11e96868d84b8ea384d93fc142c5c275db52e
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T01:30:00Z
+publisher: The Motley Fool
+author: Alex Carchidi
+url: https://www.fool.com/investing/2026/11/07/the-1-investing-habit-that-separates-stock-market/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892947%2Finvestor-considers-screen-while-writing-on-pad.jpg&w=1200&op=resize
+category: 
+tickers: VOO, AAPL, COST
+keywords: consistency, index funds, long-term investing, compound growth, S&P 500, 401(k), dollar-cost averaging, emotional discipline
+headline: The 1 Investing Habit That Separates Stock Market Millionaires From Everyone Else
+<<<SUMMARY>>>
+The key habit separating stock market millionaires from others is consistency—regularly investing over long periods, particularly in index funds like the S&P 500. Research shows 769,000 401(k) millionaires have invested for an average of 25 years. A 25-year-old investing $100 weekly could accumulate $2.4 million by retirement through compound growth, requiring emotional discipline to maintain investments during market downturns.
+<<<INSIGHTS>>>
+VOO | positive | Highlighted as the primary vehicle for wealth building through consistent investing. Praised for low expense ratio (0.03%), historical 10% annual returns, and reliability as a core holding for millionaire investors.
+AAPL | positive | Cited as a durable blue-chip stock worthy of consistent monthly purchases due to large customer base, high brand value, and reliable earnings growth across economic cycles.
+COST | positive | Mentioned as an evergreen business suitable for perpetual consistent investment, with loyal customer base, strong brand value, and consistent earnings growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:927cb7e3efc4eec282ad1c1abbf355f6218eceab355a92a3409294bcb068bcf7
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T15:30:00Z
+publisher: The Motley Fool
+author: Geoffrey Seiler
+url: https://www.fool.com/investing/2026/11/08/billionaire-bill-ackman-has-been-all-in-on-uber-is/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893531%2Fbill-ackman_pershing-square-capital-management_ceo_imagesource_getty-images.jpeg&w=1200&op=resize
+category: 
+tickers: UBER, COST
+keywords: Uber, Bill Ackman, operating leverage, autonomous vehicles, Q3 earnings, rideshare, food delivery, stock valuation
+headline: Billionaire Bill Ackman Has Been All-In on Uber. Is Now the Time to Buy the Stock?
+<<<SUMMARY>>>
+Billionaire investor Bill Ackman has made Uber his largest position, betting on the company's strong operating leverage and resilience against autonomous vehicle disruption. Uber's Q3 2026 results showed robust growth with gross bookings up 20% and adjusted EBITDA jumping 31%, while the stock trades at an attractive forward P/E of 16. Despite strong fundamentals, the stock is down 25% over the past year, presenting a potential buying opportunity for long-term investors.
+<<<INSIGHTS>>>
+UBER | positive | Strong Q3 2026 earnings with 20% gross bookings growth, 31% EBITDA growth, and 35% EPS growth. Forward P/E of 16 is attractive. Company demonstrates strong operating leverage with profits outpacing revenue growth. Positioned well for autonomous vehicle future with brand equity and existing infrastructure. Billionaire investor Ackman's significant position and endorsement adds credibility.
+COST | neutral | Mentioned only in context of Uber's partnership performing ahead of expectations. No direct information about Costco's business performance or outlook provided. Mentioned as a disclosure that The Motley Fool has positions in and recommends the company.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:93e54785d193055cf73a872159793c4d099ddb55035b5be595d349fdc0eb37e9
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T13:51:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026441/costco-s-digital-sales-outpace-store-comps-as-shopping-evolves?cid=CS-ZC-FT-analyst_blog|quick_take-3026441
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a0/810.jpg
+category: 
+tickers: COST, WMT, TGT
+keywords: digital sales growth, e-commerce momentum, delivery expansion, omnichannel retail, premium valuation, membership model
+headline: Costco's Digital Sales Outpace Store Comps as Shopping Evolves
+<<<SUMMARY>>>
+Costco's digitally enabled sales grew 22.5% in October, significantly outpacing its 11.1% comparable sales growth. The company expanded delivery partnerships with Uber Eats and DoorDash nationwide, while personalized digital initiatives drove triple-digit growth. However, the stock trades at a premium valuation of 45.56x forward P/E, warranting a cautious approach despite strong fundamentals.
+<<<INSIGHTS>>>
+COST | positive | Strong digital sales growth of 22.5% YoY, expanded delivery capabilities through major partnerships (Uber Eats, DoorDash), and triple-digit growth from personalized initiatives demonstrate robust digital transformation and member engagement.
+WMT | positive | Global e-commerce sales rose 23% in Q2 FY2027, significantly outpacing overall revenue growth of 5.9%, with strong omnichannel capabilities and marketplace expansion driving customer engagement.
+TGT | positive | Comparable digital sales increased 8.7% in Q2 FY2026, with same-day delivery sales rising over 25%, supported by AI-powered recommendations and personalized technology investments.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a7ef66df7aa967225c11b9d8719188b8f48d9dc4944a6d794e9df2f68fc860ef
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T12:55:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027060/how-to-find-strong-retail-and-wholesale-stocks-slated-for-positive-earnings-surprises?cid=CS-ZC-FT-fundamental_analysis|zacks_education_earnings_esp-3027060
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default47.jpg
+category: 
+tickers: COST, DLTR
+keywords: earnings surprise, Earnings ESP, Zacks Rank, retail stocks, wholesale stocks, earnings estimates, stock screening
+headline: How to Find Strong Retail and Wholesale Stocks Slated for Positive Earnings Surprises
+<<<SUMMARY>>>
+The article explains how to use the Zacks Earnings ESP (Expected Surprise Prediction) filter to identify stocks likely to beat earnings expectations. It demonstrates that combining positive ESP with a Zacks Rank #3 or better resulted in positive earnings surprises 70% of the time with ~28% average annual returns. Two retail stocks are highlighted as examples: Costco with a +3.08% ESP and Dollar Tree with a +4.10% ESP, both suggesting potential positive earnings surprises.
+<<<INSIGHTS>>>
+COST | positive | Costco has a positive Earnings ESP of +3.08%, indicating the Most Accurate Estimate ($5.02) exceeds the Zacks Consensus Estimate ($4.87). Combined with a Zacks Rank #3 (Hold), this suggests a higher probability of beating earnings expectations on December 10, 2026.
+DLTR | positive | Dollar Tree has a positive Earnings ESP of +4.10%, with the Most Accurate Estimate ($0.92) exceeding the Zacks Consensus Estimate ($0.88). With a Zacks Rank #3 (Hold), this indicates a strong likelihood of a positive earnings surprise ahead of its November 24, 2026 earnings release.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:10e78ddbf0e48ed62b917db33a8cf607dcdb8bffce44b719200bbffd4f5d37e0
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T15:45:00Z
+publisher: The Motley Fool
+author: Thomas Niel
+url: https://www.fool.com/investing/2026/11/10/how-these-5-big-box-retailers-compete-for-the-same/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893154%2Fgettyimages-2268553304-1300x975-1bf3a37.jpg&w=1200&op=resize
+category: 
+tickers: WMT, COST, TGT, HD, LOW
+keywords: big-box retail, market share competition, valuation, e-commerce growth, membership model, home improvement, professional contractors, dividend stocks
+headline: How These 5 Big-Box Retailers Compete for the Same Shopper
+<<<SUMMARY>>>
+Five major big-box retailers—Walmart, Costco, Target, Home Depot, and Lowe's—compete for household budget share through different strategies. Walmart leads on price and convenience with strong e-commerce growth, but trades at a premium 46x forward earnings valuation. Costco maintains loyalty through its membership model but faces similar valuation concerns. Target is executing a turnaround with improving sales and a more attractive 17.5x P/E multiple. Home Depot and Lowe's are pivoting toward the professional contractor market, with Lowe's offering better value at 17.5x earnings compared to Home Depot's mid-20s multiple.
+<<<INSIGHTS>>>
+WMT | neutral | Strong operational performance with market share gains across income levels and 24% e-commerce growth, but stock is overvalued at 46x forward earnings with limited margin of safety. Recent earnings miss and guidance shortfall create downside risk.
+COST | neutral | Excellent customer loyalty with 92.3% renewal rates and strong comparable sales growth (7.3%), but valuation at 46x forward earnings is stretched. Sustainability of growth rates needed to justify tech-stock-like valuation is questionable.
+TGT | positive | Turnaround progressing well with 3.8% same-store sales growth and raised guidance. Attractive valuation at 17.5x forward earnings with significant upside potential. Dividend King status with 56-year consecutive increase track record and 3% forward yield provide additional appeal.
+HD | neutral | Strategic pivot to professional contractor market showing early success with 5.6% sales growth and 4.5% earnings growth. However, valuation at 23x forward earnings may be stretched if housing market remains sluggish. Success depends on execution of pro strategy and macroeconomic conditions.
+LOW | positive | Following Home Depot's pro contractor strategy with acquisitions, but offers better value at 17.5x forward earnings versus Home Depot's mid-20s. Superior dividend durability with Dividend King status, 38.6% payout ratio, and longer dividend growth track record provide downside protection.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0052aef3808a77c1b70883ca3025415dbb792346b76676c3a9ae61c3f87c2a2b
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T13:30:00Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/11/11/stock-market-sell-off-the-6-best-stocks-to-buy-in/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893896%2Fgettyimages-1424564416-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: COST, WMT, KO, MNST, BRK.A, BRK.B
+keywords: stock market sell-off, S&P 500, artificial intelligence, interest rates, durable business models, market volatility, dividend stocks, retail stocks
+headline: Stock Market Sell-Off: The 5 Best Stocks to Buy in November
+<<<SUMMARY>>>
+With the S&P 500 down 3.1% in early November amid concerns about AI stocks and interest rates, the article recommends five stocks with durable business models: Berkshire Hathaway, Costco Wholesale, Walmart, Coca-Cola, and Monster Beverage. These companies are positioned to weather market uncertainty better than speculative stocks.
+<<<INSIGHTS>>>
+COST | positive | Membership-based model with 92.3% renewal rate in North America provides stable revenue, outperformed S&P 500 by 103.7% over five years, and offers multiple shareholder return mechanisms including special dividends and quarterly payouts.
+WMT | positive | Strong price leadership in retail, 154.8% outperformance versus S&P 500 over five years, diversified revenue streams including AI shopping assistant and advertising business, and robust online presence provide competitive advantages.
+KO | positive | Dividend King with 64 consecutive years of dividend increases, 2.2% dividend yield, and consumer habit-driven product demand provide stability and consistent returns during market downturns.
+MNST | positive | Strong international growth with 28.1% increase in international net sales, expanding alcoholic beverage segment, and consumer habit-driven demand provide growth opportunities despite mature business status.
+BRK.A | positive | Strong operating profits of $12.7 billion, massive cash holdings of $377.4 billion providing stability during market turbulence, and active acquisition strategy under new CEO Greg Abel demonstrate financial strength and resilience.
+BRK.B | positive | Strong operating profits of $12.7 billion, massive cash holdings of $377.4 billion providing stability during market turbulence, and active acquisition strategy under new CEO Greg Abel demonstrate financial strength and resilience.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6f1c1fdc437bafab19c24be3c917fedd8d6de45646d34ba33ccc1d15cd1c1373
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T16:11:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027848/costco-s-30-special-dividend-set-to-boost-investor-confidence?cid=CS-ZC-FT-analyst_blog|quick_take-3027848
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a0/810.jpg
+category: 
+tickers: COST, WMT, DG
+keywords: special dividend, share buyback, shareholder returns, cash reserves, valuation, earnings growth
+headline: Costco's $30 Special Dividend Set to Boost Investor Confidence
+<<<SUMMARY>>>
+Costco announced a $30-per-share special dividend totaling $13.3 billion and renewed a $4 billion stock repurchase program, reflecting strong cash generation with fiscal 2026 cash reserves reaching $20.2 billion. While the stock has outperformed its industry by 25.6% year-to-date, its forward P/E ratio of 46.07 signals premium valuation that may limit near-term upside.
+<<<INSIGHTS>>>
+COST | neutral | While Costco demonstrates strong financial fundamentals with robust cash generation, special dividend, and renewed buyback program, the stock's premium valuation (forward P/E of 46.07 vs. industry 29.96) and elevated investor expectations may limit near-term upside potential. The company carries a Zacks Rank #3 (Hold) rating.
+WMT | positive | Walmart returned $5 billion to shareholders in Q2 fiscal 2027 through dividends and buybacks, demonstrating strong cash generation and commitment to shareholder value with $25.1 billion remaining under repurchase authorization.
+DG | positive | Dollar General declared a quarterly dividend and announced plans to resume share buybacks with up to $700 million in repurchases expected in the second half, supported by improving liquidity and reinforcing shareholder-friendly capital allocation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f88d685ce9570b6c76fec9598fcb2da237bdde8b700af720249cd7c466986992
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T20:47:16Z
+publisher: The Motley Fool
+author: Daniel Foelber
+url: https://www.fool.com/investing/2026/11/11/costco-just-declared-a-usd30-special-dividend-is-it-reason-enough-to-buy-the-stock-before-nov-24/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F55fe9becbeb39400d992704d1d0b890b4836c761-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: COST, KO
+keywords: special dividend, capital return, stock buyback, dividend yield, valuation, P/E ratio, membership fees, cash reserves
+headline: Costco Just Declared a $30 Special Dividend. Is It Reason Enough to Buy the Stock Before Nov. 24?
+<<<SUMMARY>>>
+Costco announced a $30-per-share special dividend (its largest ever at $13.3 billion total) payable December 4 to shareholders of record by November 24. While the company's fundamentals are strong and it has a track record of special dividends, the stock trades at a premium 51.4 P/E ratio, making it expensive compared to peers. The author suggests investors should only buy if they believe in long-term ownership, not purely for the dividend.
+<<<INSIGHTS>>>
+COST | neutral | While Costco is praised as a high-quality, well-run business with strong fundamentals and loyal customers, the article emphasizes that its 51.4 P/E ratio is at 'nosebleed levels,' making it overvalued. The special dividend is attractive but doesn't justify buying at current premium prices. The author recommends only buying if committed to long-term ownership, not for the dividend alone.
+KO | positive | Coca-Cola is presented as a more reasonably valued alternative with a 28.6 P/E ratio (still premium to S&P 500 at 24.9). The article highlights its 64-year consecutive dividend increase track record, positioning it as appealing for risk-averse investors seeking reliable passive income, making it a more attractive value proposition than Costco.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2ec5c9e6ec76d684415fabc3026526dc1f5920452508c08ae112e64ece69581b
+symbol: COST
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T21:45:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028237/costco-cost-surpasses-market-returns-some-facts-worth-knowing?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6-3028237
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default288.jpg
+category: 
+tickers: COST
+keywords: Costco, warehouse club, earnings growth, valuation premium, stock performance, analyst estimates
+headline: Costco (COST) Surpasses Market Returns: Some Facts Worth Knowing
+<<<SUMMARY>>>
+Costco (COST) rose 2.01% to $1,087.61, outperforming the S&P 500's 1.31% gain. The warehouse operator is expected to report EPS of $4.87 (up 12.21% YoY) and revenue of $74.29 billion (up 10.38% YoY). However, the stock trades at a Forward P/E of 46.97, significantly above the industry average of 21.31, and carries a PEG ratio of 4.71 versus the industry average of 1.98. Costco holds a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+COST | neutral | While Costco demonstrates strong operational performance with double-digit earnings and revenue growth and recent stock outperformance, the neutral sentiment reflects concerns about valuation. The stock trades at a significant premium (Forward P/E of 46.97 vs. industry average of 21.31) and elevated PEG ratio (4.71 vs. industry average of 1.98), which limits upside potential. The Zacks Rank #3 (Hold) rating further supports a neutral stance despite positive fundamentals.
+<<<END>>>

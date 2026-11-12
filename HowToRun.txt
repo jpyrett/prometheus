@@ -213,7 +213,7 @@ Prereqs
 
   CHOOSING THE MODEL
     The model for each role comes from .env (names are in .env.example):
-      DEFAULT_MODEL   the Data Clerk (now openai/gpt-oss-120b)      FAST_MODEL   ADVISOR_MODEL   CRITIC_MODEL
+      DEFAULT_MODEL   the Data Clerk (now openai/gpt-oss-120b)      FAST_MODEL   ADVISOR_MODEL   CRITIC_MODEL (now z-ai/glm-5.3, Critic v1: a different producer than the Advisor's)
     To try another model, change DEFAULT_MODEL in .env. No code change. Result of the last comparison: keep gpt-oss-120b.
     Re-run done in Part 7 (step 7 with --agent, see 8c): the verdict is the same, keep gpt-oss-120b.
 
@@ -317,6 +317,7 @@ Prereqs
     The code defaults and .env.example are fixed. Your .env still has the old value, and .env overrides the defaults, so change
     ADVISOR_MODEL and CRITIC_MODEL in .env to:   nvidia/nemotron-3-super-120b-a12b   ($0.30 in / $2.40 out per million tokens).
     Until you do, pass --model nvidia/nemotron-3-super-120b-a12b to the Advisor commands below.
+    CRITIC_MODEL: the Critic's default is now z-ai/glm-5.3 (Z.ai GLM 5.3 on OpenRouter). A CRITIC_MODEL line in .env OVERRIDES it, so set  CRITIC_MODEL=z-ai/glm-5.3  in .env (or pass --critic-model).
 
   THREE PIECES
     1. MCP server (prometheus/mcp/data_clerk_server.py): the SAME tool methods the agent uses, served over MCP.
@@ -718,7 +719,7 @@ See also: README.md  |  design/session_notes.md
     pytest tests/test_advisor_sndk_pg.py -q     # SNDK and PG on REAL captured data (tests/fixtures/advisor_real/), judged by a simple Critic (tests/simple_critic.py)
   CAPTURE A NEW REAL RUN (LIVE, paid: the Data Clerk's model, Finnhub, the Advisor's model; about 1 minute; reads the stored text and bars, fetches nothing):
     python scripts/capture_advisor_fixture.py --symbol SNDK --company Sandisk --sector XLK --today 2026-11-05 --yes     # writes tests/fixtures/advisor_real/SNDK.json (--name PG_open for a second capture)
-  WHAT TO LOOK AT in a record: families (computable? passed? the notes say which rule failed and with what value), ranking (composite, cost, excess after cost), trade (entry, stop, size,
+  WHAT TO LOOK AT in a record: families (computable? passed? the notes say which rule failed and with what value), ranking (composite, cost, stance; the score is the blend; the excess after cost is kept for the record's arithmetic only), trade (entry, stop, size,
     invalidation rules), gates, evidence (verified quotes, events, counter-evidence), features (every number with unit, date and source), thesis (checked by code), audit.
 
 
@@ -736,10 +737,36 @@ PART 9. RECOMMENDATIONS, END TO END (Week 5, part 3; design choices entry 53)
     YOUR HOLDINGS. "no listed company" = private (Little Caesars, Donatos). A franchisor with negative equity fails the leverage rules (entry 53).
   Code: prometheus/application/recommendations.py.  Tests: pytest tests/test_recommendations.py tests/test_recommendations_script.py -q
   NEGATIVE EQUITY (entry 54, spec Amendment 1): for a company with a stockholders' deficit (Domino's, Papa John's, Yum, McDonald's) the four debt/equity rules are not applied, and the report marks it: * on the ranking,
-    "waived" in the debt/equity row, DEFICIT in the equity row, [debt/equity waived] on each strategy line. Ranking = expected 20-day excess return after cost, highest first (the least negative first).
+    "waived" in the debt/equity row, DEFICIT in the equity row, [debt/equity waived] on each strategy line. Ranking = the blended score (news, performance, history, filings), highest first.
   THE LEDGER: every real run appends to data/ledger/recommendations.jsonl, and its cooldown then hides the same recommendation on a later run ("cooldown: an earlier ... recommendation still stands").
   THE BLEND (entry 55, spec Amendment 2): the score is 40% news and press releases (the newer the heavier: a story loses half its weight every 7 days; a press release counts half an article) + 30% stock
     performance + 20% historical metrics + 10% filings. The ranking shows Blend (0-100) and the four parts (News, Price, Hist, File, each -1 to +1; n/a = nothing to say, counted as 0); a recommendation shows
     the blend line and its three heaviest news items. The weights and every measure are in configs/advisor_v1.json under "blend"; design/week5_advisor_implementation.md section 10 explains it.
   EXPLORING: every run appends to the ledger and its cooldown then hides the same company ("cooldown: an earlier ... recommendation still stands"). Add --no-ledger to explore a comparison with a throwaway ledger:
     nothing is read from or written to data/ledger/. Without it the run behaves as the Advisor will in the desk.
+
+
+PART 10. THE CRITIC (Critic v1: Week 5, part 6; design choices entries 56 to 59; spec design/critic_v1_final_spec.md; the build notes design/how_to_code_critic.md)
+  What it is: after the Advisor writes its recommendations, the CRITIC approves or denies each one, with a score from 0 to 100 and the reasons. Then the Account Manager decides what may trade.
+  ./test_recommendations.sh PG --no-fetch --no-ledger                  the whole desk with the Critic (the default); ASK mode: you are asked about each approved recommendation at the terminal
+  ./test_recommendations.sh PG --no-fetch --mode auto                  AUTO: an approval with a score of 80 or more (and nothing for a person to look at) is decided "trade" without asking
+  ./test_recommendations.sh PG --no-fetch --now "2026-11-05 10:30"    review as if it were that US Eastern moment (a recommendation is only valid in the trading window of the day it was made)
+  ./test_recommendations.sh PG --no-fetch --no-ask                     never prompt: Ask-mode decisions stay "pending" (the default when nobody is at the terminal)
+  ./test_recommendations.sh PG --no-critic                             leave the Critic out (the run ends at the Advisor's report, as before)
+  --profile FILE (default configs/profiles/jacob_pyrett.json)   --critic-model ID (default CRITIC_MODEL of .env)   --critic-effort low|high|max (default: the model's own, max: do not lower it to save time)
+  python -m prometheus.langgraph.desk --symbol MU --critic [--mode ask|auto] [--profile FILE]      the desk graph: ... -> advisor -> critic -> account_manager_decision (it also fetches news: PAID)
+  WHAT IT CHECKS, in this order (every check runs; a "blocker" denies, a "warning" is shown):
+    ACCURACY (30 points)   the Advisor's own arithmetic worked again; the Data Clerk is asked AGAIN for the key numbers, a current quote and the cited sources, and old and new must match; the symbol must be listed
+    EVIDENCE (15)          a model of another producer (GLM 5.3) reads each quote in its source and says supports / weak / unrelated / contradicts; a planted control claim proves it read the text; newer stored news is read too
+    RISK FIT (20)          the position's risk score (0-100) against YOUR profile (conservative low, moderate medium, aggressive high; age and horizon lower it); the Critic may CUT the size, never raise it
+    TIMING (10)            the market must be open (pre-market 04:00, regular 09:30-16:00, after-hours to 20:00 only when the next day trades: nothing after 4 PM on a Friday, at weekends or on holidays) and the record from that day
+    VALUE (25)             the price against its six-month average (overpriced = 30% above), valuation, a collapsing stock is not a discount, and a profit left after cost; a price 3% to 15% under the average earns up to +10
+    Approve = no blocker and a score of 70 or more. A blocked recommendation never shows more than 49. An approval lasts until the window closes or an hour, whichever is first.
+  READING THE REPORT: the CRITIC REVIEW section prints one card per recommendation (APPROVE or DENY, score, points of each dimension, warnings, blockers) and TRADE DECISIONS (yes (AUTO), yes (you approved), pending your answer (ASK),
+    no (system denied) -- final: you are never asked to override a denial --, no (the approval ran out), no (no funds)). NOTHING IS BOUGHT OR SOLD: the Trader is not built; the decision is the permission it will need
+    (work_order.verify_trade is its precondition).
+  YOUR PROFILE: configs/profiles/jacob_pyrett.json (a SAMPLE: moderate, Ask, 10% a position, 1% a stop-out, 30% new exposure a review, no age; the real values are yours to give). The Critic sees only the limits, never the mode.
+  NEEDS YOUR YES (AGENTS.md): a review calls Finnhub (metrics, quotes, symbol lookups) and the critic's model once per recommendation. Tests use fakes and are free:
+    pytest tests/test_critic*.py tests/test_market_calendar.py tests/test_user_profile.py tests/test_account_manager_decisions.py tests/test_desk_critic.py tests/test_recommendations_critic.py -q
+  THE REVIEWS LEDGER: data/ledger/reviews.jsonl (append only, one line per review). Every threshold is in configs/critic_v1.json (the model never chooses one).
+

@@ -11,21 +11,30 @@ The evidence is the result of `filing_signals.recommendation_evidence` for one c
   * a cash outflow is negative as the filing shows it (repurchases, dividends paid); proceeds from issuing stock are positive.
 """
 import re
-from datetime import date, timedelta
 
 from prometheus.agents.data_clerk.filing_signals import change
-
-DILUTION_WINDOW_DAYS = 120   # an 8-K that discusses dilution counts as current for this long (spec 5.5)
 
 
 class Missing(Exception):
     """A derived metric cannot be computed; the message says what is missing, in words."""
 
 
+SCALE_WORDS = re.compile(r"\b(billions?|millions?|thousands?)\b|\$\s*000s?\b|\b000'?s\b", re.I)
+DOLLARS = re.compile(r"\b(?:in |whole )?(?:u\.?s\.? )?dollars\b|\bin usd\b", re.I)
+
+
 def multiplier(units: str | None) -> float:
-    """The factor a statement's units line gives: "(In millions, ...)" 1e6, "(In thousands ...)" 1e3, "(In billions ...)" 1e9, else 1 (dollars)."""
-    found = re.search(r"\bin (millions|thousands|billions)\b", units or "", re.I)
-    return {"millions": 1e6, "thousands": 1e3, "billions": 1e9}[found.group(1).lower()] if found else 1.0
+    """The factor that puts a statement's figures in DOLLARS, from its units line, so that companies are compared in the same unit (millions with millions, never millions with thousands): the first
+    scale word wins ("(In millions, except number of shares, which are reflected in thousands)" is millions): billions 1e9, millions 1e6, thousands or `000s` 1e3; a line that says dollars and names no
+    scale is 1. A line that is missing or says neither raises Missing: a figure of unknown scale is never assumed to be dollars (that would be wrong by a thousand or a million)."""
+    text = units or ""
+    found = SCALE_WORDS.search(text)
+    if found:
+        word = (found.group(1) or "thousands").lower()
+        return 1e9 if word.startswith("billion") else 1e6 if word.startswith("million") else 1e3
+    if DOLLARS.search(text):
+        return 1.0
+    raise Missing(f"the units of the statement are not stated or not understood ({text!r}): its figures cannot be put in dollars")
 
 
 def ytd(values: list[float]) -> tuple[float, float] | None:
@@ -181,27 +190,3 @@ def cash_balance(evidence: dict) -> tuple[float, dict]:
     """The cash and cash equivalents of the latest stored balance sheet, in dollars (not the marketable securities): what a buyback authorization is compared with."""
     item = _balance(evidence, "cash")
     return item["current"] * multiplier(evidence["balance_sheet"].get("units")), {"label": item.get("label"), "as_reported": item["current"], "units": evidence["balance_sheet"].get("units")}
-
-
-def dilution_current(evidence: dict, today: date) -> tuple[bool, dict]:
-    """True when the company is issuing stock NOW, from what the stored filings show: (a) the total shares outstanding rose between the two balance sheets, (b) a cash-flow row of
-    proceeds from an ISSUANCE of common or class A/B stock is not zero (not the exercise of employee options: every company has those), or (c) an 8-K filed within 120 days of
-    `today` has a passage about dilution (an offering, an at-the-market programme, convertible notes). A dilution passage in a 10-Q does not count: every 10-Q has one (the
-    anti-dilutive securities note), so it would mark every company. Spec 5.5 says "an 8-K or a 10-Q"; see design choices entry 51 for why 10-Q passages are left out.
-    Missing when there is no evidence at all to decide from."""
-    reasons = []
-    sheet = evidence.get("balance_sheet")
-    shares = sheet and sheet.get("shares")
-    if shares and shares.get("change") is not None and shares["change"] > 0:
-        reasons.append(f"shares outstanding rose {shares['change_pct']:+.2f}%")
-    for action in evidence.get("capital_actions", []):
-        if action["item"] == "proceeds from issuing common stock" and action.get("current") and re.search(r"issuance of (?:common|class [ab])", action.get("label", ""), re.I):
-            reasons.append(f"proceeds from issuing stock: {action['label']}")
-    cutoff = (today - timedelta(days=DILUTION_WINDOW_DAYS)).isoformat()
-    for item in evidence.get("evidence", []):
-        source = item["source"]
-        if item["topic"] == "dilution" and not item.get("derived") and source["form"] == "8-K" and source["filed"] >= cutoff:
-            reasons.append(f"8-K filed {source['filed']} mentions '{item.get('matched', '')}' [{item['id']}]")
-    if not reasons and not shares and not evidence.get("evidence") and not evidence.get("capital_actions"):
-        raise Missing("no stored filing evidence to decide from")
-    return bool(reasons), {"reasons": reasons[:5]}

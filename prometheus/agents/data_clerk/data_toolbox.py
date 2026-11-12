@@ -1275,13 +1275,13 @@ FINANCIAL_METRICS = {
     "beta_provider": ("beta", "x", "Beta as Finnhub computes it"),
     "high_52w": ("52WeekHigh", "USD", "52-week high"),
     "low_52w": ("52WeekLow", "USD", "52-week low"),
-    "adv_10d_provider": ("10DayAverageTradingVolume", "M shares", "Average daily volume over 10 days, in millions of shares"),
+    "adv_10d_provider": ("10DayAverageTradingVolume", "shares", "Average daily volume over 10 days (Finnhub quotes millions of shares; converted to shares)"),
     "ps_ratio": ("psTTM", "x", "Price/Sales, trailing 12 months"),
     "pb_ratio": ("pbQuarterly", "x", "Price/Book, latest quarter (the annual figure when the quarterly one is absent)"),
     "payout_ratio_provider": ("payoutRatioTTM", "%", "Dividend payout ratio, trailing 12 months"),
     "eps_growth_ttm": ("epsGrowthTTMYoy", "%", "EPS growth vs. a year earlier (TTM)"),
 }
-FINANCIAL_SCALE = {"market_cap": 1_000_000}
+FINANCIAL_SCALE = {"market_cap": 1_000_000, "adv_10d_provider": 1_000_000}
 FINANCIAL_FALLBACK = {"pb_ratio": "pbAnnual"}
 
 

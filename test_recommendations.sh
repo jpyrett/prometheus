@@ -12,6 +12,8 @@
 #   ./test_recommendations.sh 'MCD, YUM, "Burger King"'    COMPARE a list: tickers, company names or brands, separated by commas (a brand's listed owner is found: Burger King is QSR)
 #   ./test_recommendations.sh "Pizza" --cash 1000          size the positions for $1,000 of cash instead of the sample portfolio
 #   ./test_recommendations.sh "Pizza" --model advisor      use the Advisor model of .env (ADVISOR_MODEL) instead of gpt-oss-120b
+#   ./test_recommendations.sh PG --mode auto               the Critic reviews each recommendation and, in AUTO mode, what it approves with a high score is decided "trade" without asking
+#   ./test_recommendations.sh PG --now "2026-11-05 10:30"  review as if it were that moment (US Eastern): a recommendation is only valid in the trading window of the day it was made
 #
 # WHAT THE REQUEST CAN BE (it is worked out for you; --symbols, --company and --phrase force it)
 #   symbols   every word is a ticker in capitals: DPZ, "DPZ PZZA YUM", "DPZ,PZZA". At most 15.
@@ -30,9 +32,18 @@
 # to ask (the input ended) and --yes was not given, the answer is NO: a script that is not being watched must not spend the paid APIs. Without a fetch the stored data is used, and a company with no
 # stored bars fails the Advisor's freshness and liquidity gates (the report says so).
 #
+# THE CRITIC (Critic v1, design choices entries 56 to 59). IGNORE_MARKET_HOURS=true in .env skips the closed-market denial (entry 69); a recommendation from an earlier trading day is still expired.
+# After the Advisor ranks the companies, the CRITIC reviews every recommendation: it asks the Data Clerk again for the key numbers, a current quote and the
+# cited sources, checks that they match, judges the risk against YOUR PROFILE (configs/profiles/jacob_pyrett.json: risk tolerance, Ask or Auto, size limits), whether the recommendation has EXPIRED (the market's
+# trading window: no trading after 4 PM on a Friday, at weekends or on holidays) and whether the price is a good DEAL against its six-month average, then approves or denies it with a score from 0 to 100. Then the
+# Account Manager decides what to trade: in ASK mode (the default) it asks you at the terminal for each approved recommendation (nobody there, or --no-ask: it stays "pending", never a yes); in AUTO mode a high score
+# trades without asking. NOTHING IS BOUGHT OR SOLD: the Trader is not built, the decision is the permission it will need. The Critic costs: Finnhub (metrics, quotes, symbol lookups) and one call of the critic's model
+# (z-ai/glm-5.3 on OpenRouter, CRITIC_MODEL of .env) per recommendation. --no-critic leaves it out.
+#
 # THE MODEL. The Data Clerk uses DEFAULT_MODEL of .env (openai/gpt-oss-120b). The Advisor uses openai/gpt-oss-120b here too, on OpenRouter's fast hosts (Cerebras, then Groq; the others as fallback) at
 # reasoning effort low, the settings of the Account Manager (entries 46 and 50): --model ID picks another OpenRouter model, --model advisor the ADVISOR_MODEL of .env, --effort and --providers change the settings.
 #
+# CRITIC FLAGS  --no-critic  --profile FILE  --mode ask|auto  --now "YYYY-MM-DD HH:MM" (US Eastern)  --critic-model ID  --critic-effort low|high|max  --no-ask
 # FLAGS  --symbols S  --company NAME  --phrase TEXT  --list "A, B, C"  --find N (1 to 20, default 5)  --case funds|industry|theme  --sector XLY  --portfolio FILE  --cash N  --from-days-ago N (1 to 90, default 14)
 #        --today YYYY-MM-DD  --yes  --no-fetch  --no-ledger (explore: ignore and do not write the real ledger, whose cooldown hides a company already recommended)  --model ID|advisor (the Advisor's model; default openai/gpt-oss-120b)  --effort low|medium|high  --providers a,b|none  --save FILE (the finished work order, JSON)  --help
 # PROMETHEUS_DRY_RUN=1 prints the command instead of running it (used by tests/test_recommendations_script.py).
@@ -43,6 +54,7 @@ cd "$(dirname "$0")"
 usage() { sed -n '2,/^set -euo/p' "$0" | sed '$d' | sed 's/^# \{0,1\}//'; }
 
 WHAT=""; KIND=""; KIND_TEXT=""; FIND=""; CASE=""; SECTOR=""; PORTFOLIO=""; CASH=""; DAYS=""; TODAY=""; YES=0; NO_FETCH=0; NO_LEDGER=0; MODEL="openai/gpt-oss-120b"; EFFORT=""; PROVIDERS=""; SAVE=""
+NO_CRITIC=0; NO_ASK=0; PROFILE=""; MODE=""; NOW=""; CRITIC_MODEL=""; CRITIC_EFFORT=""
 HAVE_FIND=0
 
 need() { [[ $2 -ge 2 ]] || { echo "ERROR: $1 needs a value" >&2; exit 2; }; }
@@ -63,6 +75,13 @@ while [[ $# -gt 0 ]]; do
     --effort)           need "$1" $#; EFFORT="$2"; shift 2 ;;
     --providers)        need "$1" $#; PROVIDERS="$2"; shift 2 ;;
     --save)             need "$1" $#; SAVE="$2"; shift 2 ;;
+    --profile)          need "$1" $#; PROFILE="$2"; shift 2 ;;
+    --mode)             need "$1" $#; MODE="$2"; shift 2 ;;
+    --now)              need "$1" $#; NOW="$2"; shift 2 ;;
+    --critic-model)     need "$1" $#; CRITIC_MODEL="$2"; shift 2 ;;
+    --critic-effort)    need "$1" $#; CRITIC_EFFORT="$2"; shift 2 ;;
+    --no-critic)        NO_CRITIC=1; shift ;;
+    --no-ask)           NO_ASK=1; shift ;;
     --yes|-y)           YES=1; shift ;;
     --no-fetch)         NO_FETCH=1; shift ;;
     --no-ledger)        NO_LEDGER=1; shift ;;
@@ -125,6 +144,12 @@ if [[ -n "$SECTOR" && ! "$SECTOR" =~ ^[A-Za-z]{2,5}$ ]]; then echo "ERROR: --sec
 if [[ -n "$EFFORT" && "$EFFORT" != "low" && "$EFFORT" != "medium" && "$EFFORT" != "high" ]]; then echo "ERROR: --effort is low, medium or high" >&2; exit 2; fi
 if [[ -n "$PROVIDERS" && ! "$PROVIDERS" =~ ^[A-Za-z0-9,._-]+$ ]]; then echo "ERROR: --providers is a comma separated list of provider names, or none" >&2; exit 2; fi
 if [[ ! "$MODEL" =~ ^[A-Za-z0-9._:/-]+$ ]]; then echo "ERROR: --model is an OpenRouter model id such as openai/gpt-oss-120b, or advisor" >&2; exit 2; fi
+if [[ -n "$MODE" && "$MODE" != "ask" && "$MODE" != "auto" ]]; then echo "ERROR: --mode is ask or auto" >&2; exit 2; fi
+if [[ -n "$NOW" ]] && ! [[ "$NOW" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}\ [0-9]{2}:[0-9]{2}$ ]]; then echo "ERROR: --now is a US Eastern moment such as \"2026-11-05 10:30\"" >&2; exit 2; fi
+if [[ -n "$CRITIC_MODEL" && ! "$CRITIC_MODEL" =~ ^[A-Za-z0-9._:/-]+$ ]]; then echo "ERROR: --critic-model is an OpenRouter model id such as z-ai/glm-5.3" >&2; exit 2; fi
+if [[ -n "$CRITIC_EFFORT" && "$CRITIC_EFFORT" != "low" && "$CRITIC_EFFORT" != "high" && "$CRITIC_EFFORT" != "max" ]]; then echo "ERROR: --critic-effort is low, high or max" >&2; exit 2; fi
+if [[ -n "$PROFILE" && ! "$PROFILE" =~ ^[A-Za-z0-9._/-]+$ ]]; then echo "ERROR: --profile is the path of a profile JSON file" >&2; exit 2; fi
+if [[ $NO_CRITIC -eq 1 ]] && [[ -n "$MODE$NOW$CRITIC_MODEL$CRITIC_EFFORT$PROFILE" || $NO_ASK -eq 1 ]]; then echo "ERROR: the Critic options (--mode, --now, --profile, --critic-model, --critic-effort, --no-ask) go with the Critic: drop --no-critic" >&2; exit 2; fi
 if [[ -n "$CASH" && -n "$PORTFOLIO" ]]; then echo "ERROR: give --cash or --portfolio, not both" >&2; exit 2; fi
 if [[ -n "$CASH" ]] && ! [[ "$CASH" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then echo "ERROR: --cash is a number of dollars" >&2; exit 2; fi
 
@@ -147,8 +172,8 @@ if [[ $NO_FETCH -eq 0 ]]; then
 fi
 
 echo ""
-echo "== Recommendations: find the companies -> refresh their data -> the Data Clerk's order -> the Advisor ranks them =="
-echo "   request: $WHAT${KIND:+ (forced as $KIND)} | top $FIND${CASE:+ | case $CASE}${SECTOR:+ | sector $SECTOR} | Advisor model: $([[ "$MODEL" == advisor ]] && echo "ADVISOR_MODEL of .env" || echo "$MODEL") | $FETCH_NOTE"
+echo "== Recommendations: find the companies -> refresh their data -> the Data Clerk's order -> the Advisor ranks them -> the Critic approves or denies each -> the Account Manager decides =="
+echo "   request: $WHAT${KIND:+ (forced as $KIND)} | top $FIND${CASE:+ | case $CASE}${SECTOR:+ | sector $SECTOR} | Advisor model: $([[ "$MODEL" == advisor ]] && echo "ADVISOR_MODEL of .env" || echo "$MODEL") | $FETCH_NOTE | $([[ $NO_CRITIC -eq 1 ]] && echo "no Critic" || echo "Critic: ${CRITIC_MODEL:-CRITIC_MODEL of .env (z-ai/glm-5.3)}, mode ${MODE:-of the profile}")"
 
 CMD=(python -m prometheus.application.recommendations)
 case "$KIND" in
@@ -171,6 +196,13 @@ CMD+=(--find "$FIND")
 [[ -n "$SAVE" ]] && CMD+=(--save "$SAVE")
 [[ $NO_LEDGER -eq 1 ]] && CMD+=(--no-ledger)
 [[ $FETCH -eq 1 ]] && CMD+=(--fetch)
+[[ $NO_CRITIC -eq 1 ]] && CMD+=(--no-critic)
+[[ -n "$PROFILE" ]] && CMD+=(--profile "$PROFILE")
+[[ -n "$MODE" ]] && CMD+=(--mode "$MODE")
+[[ -n "$NOW" ]] && CMD+=(--now "$NOW")
+[[ -n "$CRITIC_MODEL" ]] && CMD+=(--critic-model "$CRITIC_MODEL")
+[[ -n "$CRITIC_EFFORT" ]] && CMD+=(--critic-effort "$CRITIC_EFFORT")
+[[ $NO_ASK -eq 1 ]] && CMD+=(--no-ask)
 
 if [[ -n "${PROMETHEUS_DRY_RUN:-}" ]]; then
   printf 'DRY RUN:'; printf ' %q' "${CMD[@]}"; printf '\n'

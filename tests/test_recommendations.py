@@ -196,7 +196,7 @@ def test_a_company_that_is_not_recommended_is_in_the_ranking_with_its_reason_and
 
 def test_the_holdings_are_reviewed_in_their_own_section_and_are_not_ranked_with_the_new_ideas():
     portfolio = Portfolio(user="t", cash_avail=500.0, positions=[Position(symbol="MCD", name="McDonald's Corp", shares=10, cost_basis=40.0)])
-    result, _, _ = go("Pizza", portfolio=portfolio, clerk=Clerk({**METRICS, "MCD": full_metrics(dilution_current=True, last_close=300.0)}), replies=(plan_reply(), theses("MCD", "DPZ", "PZZA", "YUM")))
+    result, _, _ = go("Pizza", portfolio=portfolio, clerk=Clerk({**METRICS, "MCD": full_metrics(cfo_negative_with_profit=True, last_close=300.0)}), replies=(plan_reply(), theses("MCD", "DPZ", "PZZA", "YUM")))
     text = rec.report(result)
     assert [r["symbol"] for r in rec.ranking_rows(result)] == ["DPZ", "PZZA", "YUM"] and "YOUR HOLDINGS (reviewed before the new ideas)" in text and "MCD     REDUCE" in text
 
@@ -229,7 +229,8 @@ def test_an_index_that_cannot_be_read_is_no_number_never_a_guess():
 
 # ---------------------------------------------------------------- the command
 
-def fake_main(monkeypatch, capsys, *argv):
+def fake_main(monkeypatch, capsys, *argv, critic=False):
+    argv = argv if critic else (*argv, "--no-critic")      # these tests are about the Advisor's report; tests/test_recommendations_critic.py runs the Critic
     clerk = Clerk()
     monkeypatch.setattr("prometheus.agents.data_clerk.data_clerk_agent.DataClerk", lambda **kw: clerk)
     monkeypatch.setattr("prometheus.agents.advisor.advisor.Advisor", lambda **kw: Advisor(model=Scripted(plan_reply(), theses("DPZ", "PZZA", "YUM")), clerk=clerk, ledger=MemoryLedger()))
@@ -445,7 +446,8 @@ def test_the_report_marks_negative_equity_in_the_ranking_the_numbers_and_the_rec
     ranking = text[text.index("RANKING"):text.index("KEY NUMBERS")]
     assert "DPZ*" in ranking and "PZZA*" in ranking and "YUM*" not in ranking and "YUM " in ranking
     assert "* NEGATIVE EQUITY (DPZ, PZZA): a stockholders' deficit, so debt/equity has no meaning: the debt/equity rules were WAIVED" in ranking
-    assert "ranked by the expected 20-day excess return after cost, the highest first: when all are negative, the least negative is first" in ranking
+    assert "ranked by the blended score, the highest first" in ranking
+    assert "Excess" not in ranking and "expected 20-day excess" not in text                           # Amendment 6: no profit number in the ranking or the recommendations
     table = text[text.index("KEY NUMBERS"):text.index("RECOMMENDATIONS  (")]
     assert "waived" in [line for line in table.split("\n") if line.strip().startswith("Debt / equity")][0] and "DEFICIT" in table and "positive" in table
     assert "equity  : NEGATIVE (stockholders' deficit): the debt/equity rules were waived for this company" in text
