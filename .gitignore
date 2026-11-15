@@ -239,3 +239,6 @@ design/check_bills.txt
 
 # Local Postgres passwords (scripts/setup_postgres.sh). Never commit.
 secrets/
+
+# Local Postgres notes that include the role passwords (written beside secrets/postgres_local.txt). Never commit.
+design/accountmanager_postgres_notes.md
