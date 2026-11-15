@@ -34,6 +34,7 @@ class _Model(BaseModel):
 
 
 class Identity(_Model):
+    model_config = ConfigDict(extra="ignore")      # a record made before design choices entry 97 holds a `market_cap` key that no longer exists; it is read and dropped
     schema_version: int = SCHEMA_VERSION
     record_id: str
     request_id: str
@@ -41,7 +42,6 @@ class Identity(_Model):
     sleeve: str
     as_of_utc: str
     sector_etf: str | None = None
-    market_cap: float | None = None
     regime: str
     regime_note: str | None = None
 
@@ -138,12 +138,11 @@ class TradePlan(_Model):
 
 
 class Risk(_Model):
+    model_config = ConfigDict(extra="ignore")      # a record made before design choices entry 93 holds two keys that no longer exist (the stock's daily dollars and its spread: the Advisor has no such input, and neither has the Data Clerk any more, entry 95); they are read and dropped
     vol_63d_ann: float | None = None
     atr_pct: float | None = None
     beta_63d: float | None = None
     max_drawdown_63d: float | None = None
-    adv_20d_dollars: float | None = None
-    median_spread_bps_1d: float | None = None
     days_to_next_earnings: float | None = None
     earnings_move_abs: float | None = None
     gap_risk: bool = False

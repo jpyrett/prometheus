@@ -411,7 +411,7 @@ class DataClerkTools:
         return self.toolbox.get_quote(_symbol(symbol))
 
     def calculate_metrics(self, symbols: list[str], metrics: list[str]) -> dict:
-        """Calculate technical and fundamental numbers for up to 10 tickers: returns over 5 to 252 sessions, RSI, MACD, Bollinger %B, ADX, ATR, volatility, beta, volume ratios, P/E, margins, debt, payout yield and more.
+        """Calculate technical and fundamental numbers for up to 10 tickers: returns over 5 to 252 sessions, RSI, MACD, Bollinger %B, ADX, ATR, volatility, beta, volume ratios, P/E, margins, debt, share count change and more.
 
         It only reads the stored daily bars and the stored filings and asks Finnhub for the company's financial metrics, and it rates NOTHING: it returns numbers, each with its unit, the date it is
         as of, the window it covers, where it came from, the inputs behind it and, when it cannot be computed, why (for example "needs 30 bars, 17 stored"). A number that is None is a

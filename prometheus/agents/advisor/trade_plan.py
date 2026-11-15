@@ -10,7 +10,7 @@ All arithmetic, no model. The plan is the part of a recommendation a Critic can 
     stop_price      the entry mid minus the stop distance (long only: a bearish call on a name that is not held is `avoid`, not a short)
     target_price    the entry mid x (1 + 1.5 x the family's edge at its horizon); none for capital_return (it is held for the payout, not for a target)
     time_stop_date  `horizon_bars` weekdays after today (the calendar of the future has no holidays in it: the note says so)
-    order_style     limit at the entry mid for reversion, for capital_return, for an event that has moved less than one ATR, and for any stock with a spread over 10 bps; a marketable limit
+    order_style     limit at the entry mid for reversion, for capital_return, for an event that has moved less than one ATR; a marketable limit
                     at the last price + 0.25 ATR for trend while it is above its 200-day mean; a limit otherwise
     invalidation    the rules that say "this idea is wrong or finished": the price under the stop, the time stop, a bearish event, and the family's own condition
 
@@ -53,7 +53,7 @@ def build(family: FamilyResult | None, metrics: dict | None, quote: dict | None,
     """The plan for one symbol on `family` (None for a name that is not being opened: a reduction or an avoidance has an entry zone and nothing more). No plan has a size (module text)."""
     tc = config.trade
     last, basis = price_of(symbol, metrics, quote)
-    atr, sma50, spread = value(metrics, "atr_14"), value(metrics, "sma_50"), value(metrics, "median_spread_bps_1d")
+    atr, sma50 = value(metrics, "atr_14"), value(metrics, "sma_50")
     plan = TradePlan(family=family.family if family else None, entry_basis=basis, horizon_bars=family.horizon_bars if family else None)
     if last is None or atr is None:
         plan.notes.append("no plan prices: " + ("there is no price" if last is None else "atr_14 is missing (needs 20 bars)"))
@@ -76,7 +76,7 @@ def build(family: FamilyResult | None, metrics: dict | None, quote: dict | None,
     plan.time_stop_date = add_weekdays(today, family.horizon_bars).isoformat()
     plan.time_stop_note = "weekdays only: holidays of the coming weeks are not known"
     style = "limit"
-    if family.family == "trend" and value(metrics, "above_sma_200") is True and not (spread is not None and spread > tc.limit_spread_bps):
+    if family.family == "trend" and value(metrics, "above_sma_200") is True:
         style = "marketable_limit"
     elif family.family == "event" and (reaction_atr is None or reaction_atr >= tc.event_limit_reaction_atr):
         plan.notes.append("order style: a limit at the entry mid (the move since the event is one ATR or more, or unknown)")

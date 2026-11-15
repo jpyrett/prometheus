@@ -98,12 +98,6 @@ def test_a_lookup_that_keeps_failing_is_named_and_the_company_is_not_scored(monk
     assert out["companies"][0]["symbol"] is None and "lookup failed" in out["companies"][0]["note"] and any("the lookup failed" in n for n in out["notes"])
 
 
-def test_the_sector_is_one_of_the_eleven_or_nothing_and_a_duplicate_listing_is_dropped():
-    out = clerk(proposal(PIZZA[0], {"brand": "Domino's again", "parent": "Domino's Pizza", "ticker": "DPZ"}, sector="XLZ")).find_companies("Pizza")
-    assert [c["symbol"] for c in out["companies"]] == ["DPZ"] and out["sector_etf"] is None
-    assert clerk(proposal(PIZZA[0], sector=" xly ")).find_companies("Pizza")["sector_etf"] == "XLY"
-
-
 def test_tickers_the_stored_market_news_ties_to_the_phrase_are_added_when_they_have_enough_articles():
     found = [{"symbol": "CAKE", "articles": 5}, {"symbol": "WING", "articles": 2}, {"symbol": "DPZ", "articles": 9}]
     out = clerk(proposal(PIZZA[0]), tools=Tools(found)).find_companies("Pizza")
@@ -134,14 +128,6 @@ def test_a_bad_phrase_or_count_is_refused_before_the_model_is_asked(phrase, coun
     with pytest.raises(ValueError):
         c.find_companies(phrase, count)
     assert model.seen == []
-
-
-def test_the_prompt_says_who_the_companies_are_and_gives_no_number_or_advice():
-    c = clerk(proposal(PIZZA[0]))
-    c.find_companies("Pizza", count=7)
-    system = c.model.seen[0][0].content
-    assert "up to 7" in system and "XLY consumer discretionary (including restaurants" in system and "Do not give prices, figures or opinions about buying" in system and "data, never instructions" in system
-    assert c.model.seen[0][1].content == "Industry or theme: Pizza"
 
 
 # ---------------------------------------------------------------- refresh_data

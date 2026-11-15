@@ -1304,8 +1304,7 @@ class DataToolbox:
 FINNHUB_METRIC_URL = "https://finnhub.io/api/v1/stock/metric"
 # name -> (Finnhub 'metric' key, unit, description). Same sources the main bmd FundamentalTicker uses.
 # The first ten are the original ones. The rest (Advisor v1 spec section 5.4, design choices entry 51) are Finnhub's own fields, kept as Finnhub gives them; a field Finnhub does
-# not return for a company is None. `FINANCIAL_SCALE` converts a unit Finnhub quotes (market capitalization is in millions of dollars) and `FINANCIAL_FALLBACK` names the key
-# to try when the first is absent (price to book is quoted quarterly and annually).
+# not return for a company is None. `FINANCIAL_FALLBACK` names the key to try when the first is absent (price to book is quoted quarterly and annually).
 FINANCIAL_METRICS = {
     "pe_ratio": ("peTTM", "x", "Price/Earnings, trailing 12 months"),
     "eps": ("epsTTM", "USD", "Earnings per share, trailing 12 months"),
@@ -1317,17 +1316,14 @@ FINANCIAL_METRICS = {
     "current_ratio": ("currentRatioQuarterly", "x", "Current assets / current liabilities, latest quarter"),
     "dividend_yield": ("currentDividendYieldTTM", "%", "Dividends per share / price, trailing 12 months"),
     "revenue_growth": ("revenueGrowthTTMYoy", "%", "Revenue growth vs. a year earlier (TTM)"),
-    "market_cap": ("marketCapitalization", "USD", "Market capitalization (Finnhub quotes millions; converted to dollars)"),
     "beta_provider": ("beta", "x", "Beta as Finnhub computes it"),
     "high_52w": ("52WeekHigh", "USD", "52-week high"),
     "low_52w": ("52WeekLow", "USD", "52-week low"),
-    "adv_10d_provider": ("10DayAverageTradingVolume", "shares", "Average daily volume over 10 days (Finnhub quotes millions of shares; converted to shares)"),
     "ps_ratio": ("psTTM", "x", "Price/Sales, trailing 12 months"),
     "pb_ratio": ("pbQuarterly", "x", "Price/Book, latest quarter (the annual figure when the quarterly one is absent)"),
     "payout_ratio_provider": ("payoutRatioTTM", "%", "Dividend payout ratio, trailing 12 months"),
     "eps_growth_ttm": ("epsGrowthTTMYoy", "%", "EPS growth vs. a year earlier (TTM)"),
 }
-FINANCIAL_SCALE = {"market_cap": 1_000_000, "adv_10d_provider": 1_000_000}
 FINANCIAL_FALLBACK = {"pb_ratio": "pbAnnual"}
 
 
@@ -1339,7 +1335,7 @@ def parse_metric_payload(symbol: str, raw: dict, as_of: str) -> dict:
         value = raw.get(field)
         if value is None and name in FINANCIAL_FALLBACK:
             value = raw.get(FINANCIAL_FALLBACK[name])
-        value = None if isinstance(value, bool) or not isinstance(value, (int, float)) else float(value) * FINANCIAL_SCALE.get(name, 1)
+        value = None if isinstance(value, bool) or not isinstance(value, (int, float)) else float(value)
         metrics[name] = {"value": round(value, 4) if value is not None else None, "unit": unit, "description": description}
     return {"symbol": symbol, "as_of": as_of, "metrics": metrics}
 

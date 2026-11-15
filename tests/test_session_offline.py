@@ -64,7 +64,6 @@ def test_exactly_fifteen_is_not_a_cut():
     (["--prompt", "x", "--name", "A", "--age", "40", "--risk", "low", "--cash", "100", "--mode", "auto"], "invalid choice"),
     (["--prompt", "x", "--name", "A", "--age", "40", "--risk", "moderate", "--cash", "100", "--mode", "manual"], "invalid choice"),
     (["--prompt", "x", "--account", "5", "--name", "A"], "do not give --name"),
-    (["--prompt", "x", "--account", "5", "--max-position-pct", "2"], "--max-position-pct must be above 0 and at most 1"),
     (["--prompt", "x", "--account", "5", "--auto-min-score", "101"], "--auto-min-score must be from 0 to 100"),
     (["--prompt", "x", "--account", "5", "--default-count", "11"], "--default-count must be from 1 to 10"),
     ([], "--prompt"),
@@ -127,7 +126,7 @@ def test_nothing_in_the_session_knows_a_sector_a_company_or_a_ticker():
 
 def test_the_graph_has_no_node_the_other_requests_do_not_have():
     nodes = lambda **o: set(desk.build_desk(clerk_factory=lambda order: None, advisor_factory=lambda order: None, **o).get_graph().nodes)
-    assert nodes(with_critic=True, with_trader=True) == {"__start__", "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader", "__end__"}
+    assert nodes(with_critic=True, with_trader=True) == {"__start__", "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "trader", "__end__"}      # account_manager_direct: a trade the user names themselves (entry 87)
     assert nodes() == {"__start__", "account_manager", "data_clerk", "advisor", "__end__"}
 
 
@@ -138,3 +137,11 @@ def test_a_request_whose_account_cannot_be_opened_stops_the_desk_at_its_first_no
     state = desk.run_desk({"ask": {"text": "I want to buy oil stocks"}, "account": {"profile": "/nonexistent/profile.json", "portfolio": Portfolio(user="Jacob Pyrett", cash_avail=1.0)}},
                           clerk_factory=lambda order: None, advisor_factory=lambda order: None, with_critic=True, funds_factory=lambda: AccountManager(model=object(), model_id="account-book"))
     assert state["order"] is None and state["plan"] is None and state["path"] == ["account_manager"] and "the profile file does not exist" in state["errors"][0]
+
+
+@pytest.mark.parametrize("flag", ["--max-position-pct", "--max-exposure-pct", "--max-loss-pct"])
+def test_the_session_has_no_flag_for_a_size_limit(flag, capsys):
+    """Design choices entry 91: no profile limit exists, so a session cannot raise one."""
+    with pytest.raises(SystemExit) as stop:
+        ss.main(["--prompt", "x", "--account", "5", flag, "0.5"], parts=object())
+    assert stop.value.code == 2 and "unrecognized arguments" in capsys.readouterr().err

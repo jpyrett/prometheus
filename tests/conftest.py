@@ -32,6 +32,12 @@ def market_hours_count(monkeypatch):
 
 
 @pytest.fixture(autouse=True)
+def neutral_recommendations_off(monkeypatch):
+    """The Account Manager reads ALLOW_NEUTRAL_RECOMMENDATIONS from the environment, then from .env (entry 91). A test must not inherit Jacob's .env (the same reason as `market_hours_count`): a neutral score is NOT approved unless a test sets the flag itself (`tests/test_neutral_recommendation.py` does)."""
+    monkeypatch.setenv("ALLOW_NEUTRAL_RECOMMENDATIONS", "false")
+
+
+@pytest.fixture(autouse=True)
 def paper_trading_on(monkeypatch):
     """The Trader reads PAPER_TRADING from the environment, then from .env. A test must not inherit Jacob's .env (the same reason as `market_hours_count`): paper trading is on unless a test turns it off itself."""
     monkeypatch.setenv("PAPER_TRADING", "true")

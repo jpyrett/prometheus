@@ -15,7 +15,7 @@ from prometheus.agents.critic.critic import Critic
 from prometheus.common.portfolio import Portfolio
 from prometheus.langgraph import desk
 
-RICH = Portfolio(user="Jacob Pyrett", cash_avail=74481.40)      # what the sample portfolio is worth at the capture's prices: the Account Manager's 10% position limit buys 44 shares of PG at 167.10 (the sample's own $51.23 buys none)
+RICH = Portfolio(user="Jacob Pyrett", cash_avail=74481.40)      # what the sample portfolio is worth at the capture's prices: the cash buys 445 shares of PG at 167.10 (the sample's own $51.23 buys none)
 
 
 class CapturedAdvisor:
@@ -29,7 +29,8 @@ class CapturedAdvisor:
         CapturedAdvisor.seen = (order, portfolio_, today)
         source = captured(self.name)
         order.data = source.data
-        order.recommendations = [tamper(r, **{"identity.request_id": order.request_id}) for r in source.recommendations]
+        named = set(order.subject or [])           # the captured SNDK run also holds GM; a request for SNDK is answered with SNDK's recommendation
+        order.recommendations = [tamper(r, **{"identity.request_id": order.request_id}) for r in source.recommendations if not named or r["symbol"] in named]
         order.candidates = source.candidates
         order.status = "recommended"
         return order
@@ -61,9 +62,9 @@ def run(request=None, name="PG_open", approver=None, critic=None, manager=None, 
 
 def test_the_graph_has_the_two_new_nodes_and_stops_early_when_nothing_was_recommended():
     g = desk.build_desk(clerk_factory=lambda order: None, advisor_factory=lambda order: None, with_critic=True).get_graph()
-    assert set(g.nodes) == {"__start__", "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "__end__"}
+    assert set(g.nodes) == {"__start__", "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "__end__"}      # account_manager_direct: a trade the user names themselves (entry 87)
     edges = {(e.source, e.target, bool(e.conditional)) for e in g.edges}
-    assert ("advisor", "critic", True) in edges and ("advisor", "__end__", True) in edges and ("critic", "account_manager_decision", False) in edges and ("account_manager_decision", "__end__", False) in edges
+    assert ("advisor", "critic", True) in edges and ("advisor", "__end__", True) in edges and ("critic", "account_manager_decision", False) in edges and ("advisor", "account_manager_decision", True) in edges and ("account_manager_decision", "__end__", False) in edges
     with_funds = desk.build_desk(clerk_factory=lambda order: None, advisor_factory=lambda order: None, with_critic=True, with_funds=True).get_graph()
     assert ("account_manager_decision", "account_manager_funds", True) in {(e.source, e.target, bool(e.conditional)) for e in with_funds.edges}
 
@@ -78,7 +79,7 @@ def test_one_work_order_travels_through_the_critic_and_the_decision_and_comes_ou
     order = state["order"]
     assert state["path"] == ["account_manager", "data_clerk", "advisor", "critic", "account_manager_decision"] and state["errors"] == []
     assert order.status == "decided" and order.schema_version == 3 and len(order.reviews) == 1 and order.reviews[0]["approved"]
-    assert [(d["symbol"], d["will_trade"], d["shares"], d["mode"]) for d in order.trade_decisions] == [("PG", "yes_user", 44, "ask")]
+    assert [(d["symbol"], d["will_trade"], d["shares"], d["mode"]) for d in order.trade_decisions] == [("PG", "yes_user", 445, "ask")]
     assert set(state["seconds"]) == {"account_manager", "data_clerk", "advisor", "critic", "account_manager_decision"}
 
 
@@ -103,11 +104,11 @@ def test_in_auto_mode_the_critics_approval_trades_without_asking():
 
 
 def test_the_request_can_give_the_portfolio_and_the_profile_as_objects_or_files():
-    """The Account Manager sizes the purchase from the profile's limits and the portfolio's money (the Critic sees neither): a 20% position limit on $74,481.40 allows 89 shares, the loss limit (1% of equity over the
-    plan's stop distance of 9.8649) 75: the smaller is the size. A portfolio given as a FILE is read too: the sample's $51.23 buys no share of PG."""
-    request = {"symbol": "PG", "fetch": False, "account": {"portfolio": RICH, "profile": profile(max_position_pct=0.20)}}
+    """The Account Manager sizes the purchase from the portfolio's money alone (the Critic sees neither the money nor any limit, and there is no limit: design choices entry 91): $74,481.40 of cash buys as many whole shares of PG
+    as the money pays for. A portfolio given as a FILE is read too: the sample's $51.23 buys no share of PG."""
+    request = {"symbol": "PG", "fetch": False, "account": {"portfolio": RICH, "profile": profile()}}
     d = run(request)["order"].trade_decisions[0]
-    assert (d["shares"], d["size"]["binding"], d["size"]["caps"]["position"], d["size"]["caps"]["loss"]) == (75, "loss", 89, 75)
+    assert d["size"]["binding"] == "money" and d["shares"] == d["size"]["caps"]["money"] >= 100
     request = {"symbol": "PG", "fetch": False, "account": {"portfolio": "configs/portfolios/jacob_pyrett.json".replace("configs", str(desk.DEFAULT_PORTFOLIO.parents[1])), "profile": str(desk.DEFAULT_PROFILE)}}
     d = run(request)["order"].trade_decisions[0]
     assert (d["will_trade"], d["shares"], d["size"]["caps"]["money"]) == ("no_funds", 0, 0) and d["size"]["equity_basis"].startswith("cash and holdings")      # the file's own portfolio: $51.23 and three holdings
@@ -123,7 +124,7 @@ def test_a_denied_recommendation_is_final_and_with_nothing_approved_the_funds_no
 def test_raise_funds_buys_what_the_critic_approved_and_the_user_allowed_with_the_account_managers_size():
     manager = Manager(profile=profile())
     state = run({"symbol": "PG", "fetch": False, "funds": {}, "account": {"portfolio": RICH}}, approver=lambda card: True, with_funds=True, manager=manager)
-    assert manager.raised == [("PG", 44)] and state["funds"]["status"] == "funded"
+    assert manager.raised == [("PG", 445)] and state["funds"]["status"] == "funded"
     manager = Manager(profile=profile())
     run({"symbol": "PG", "fetch": False, "funds": {"shares": 3}, "account": {"portfolio": RICH}}, approver=lambda card: True, with_funds=True, manager=manager)
     assert manager.raised == [("PG", 3)]

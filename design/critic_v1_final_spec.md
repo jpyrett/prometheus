@@ -1133,3 +1133,20 @@ Two corrections, design choices entry 71.
 - **Appendix A (the config) and B.2 (the numbers)**: with the `position_pct` measure gone, B.2's table is read without that row and with the new weights: PG_open's risk score is 5.2 (it was 7.1 at 44 shares and 10.6 at 75) and SNDK's is 77.8 (it was 70.0), the denial of SNDK for `risk_above_profile` is unchanged.
 
 Reasons and what it costs: `docs/design_choices.md` entry 80.
+
+## Amendment 7 (2026-11-15, design choices entry 92): the risk score has no liquidity and no stop-distance measure
+
+Jacob: *"Remove: Critic liquidity input: the Critic's risk score still includes a company's average daily dollar volume (adv_20d_dollars) and stop distance."* The text above is left as it was written; where it lists these measures, this note wins.
+
+- **Section 8.4 (the risk measures) and Appendix A (the config).** `stop_loss_pct` and `adv_20d_dollars` are removed (and `position_pct` was removed by Amendment 6, entry 80). Six measures remain, with weights scaled in proportion to add up to 100 again: `vol_63d_ann` 33.4, `max_drawdown_63d` 20.0, `beta_63d` 13.3, `atr_pct` 13.3, `market_cap` 13.3, `flags` 6.7. The levels (`low` under 20, `medium` under 45, `high` under 70) and the allowed level of each tolerance are unchanged. The weights are Jacob's to tune in `configs/critic_v1.json`.
+- **Section 8.1 (the metrics asked of the Data Clerk again, the `ALWAYS` list).** `adv_20d_dollars` is no longer in `ALWAYS`: the Critic does not read the stock's volume.
+- **Appendix B.2 (the worked numbers).** SNDK: 33.4 + 20.0 + 13.3 + 13.3 = 80.0 (very high; it was 77.8); PG_open: 0.1266 x 33.4 + 0.104 x 13.3 = 5.6 (low; it was 5.2), risk fit 18.76 points of 20 (it was 18.84).
+- **Not changed.** The Advisor's own liquidity GATE for a new idea (`design/advisor_v1_final_spec.md`, section 9.1) and the Critic's integrity check that a new position has no failed gate: they are the Advisor's test of a company, not a cap on a user's size. Jacob's to say whether they stay.
+
+## Amendment 8 (2026-11-15, design choices entry 94): the Critic enforces four gates
+
+Jacob: *"Remove the Critic dependency on this Advisor liquidity gate. Critic denies a new position if that gate failed."* Section 8.1's check that a new position has no failed gate now reads only the four gates the Advisor has (`integrity.GATES`: `no_metrics`, `freshness`, `red_flag`, `event_risk`); a gate record of any other name, such as the `liquidity` record of a capture made before the Advisor's Amendment 11, decides nothing. The Critic has no liquidity rule anywhere (Amendment 7 removed it from the risk score).
+
+## Amendment 9 (2026-11-15, design choices entry 97): the risk score has five measures
+
+Jacob: *"Delete all code and tests that use or checks: market cap."* Section 8.4 and Appendix A: `market_cap` leaves the risk score, so five measures remain with weights scaled in proportion to add up to 100 again: `vol_63d_ann` 38.5, `max_drawdown_63d` 23.1, `beta_63d` 15.3, `atr_pct` 15.3, `flags` 7.8 (the levels and the allowed level of each tolerance are unchanged; the weights are Jacob's to tune in `configs/critic_v1.json`). `market_cap` is also removed from `accuracy.price_linked` and from the metrics asked of the Data Clerk again (`recheck.ALWAYS`), and the `log` option of a risk measure (only the market cap and the daily dollars used it) is deleted. Worked on the real captures: SNDK 38.5 + 23.1 + 15.3 + 15.3 = 92.2 (very high); PG open 0.1266 x 38.5 + 0.104 x 15.3 = 6.5 (low).

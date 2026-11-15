@@ -33,12 +33,15 @@ def trade(text=ALL, trader=None, acct=None, approver=lambda card: True, **kw):
 # ---------------------------------------------------------------- run()
 
 def test_a_run_with_a_trader_executes_the_permitted_trades_after_the_decisions_and_the_order_is_traded():
+    """Design choices entry 91: nothing limits a purchase but the cash, so each of the three approved purchases is sized to all of the $1,000 (10 shares at 100; the cash is not reserved), and the Trader's handshake meets the
+    cash as it is at each trade: DPZ has no quote (rejected), PZZA takes the $1,000, and YUM then finds none left."""
     result, trader = trade()
     order = result.order
-    assert order.status == "traded" and order.schema_version == 4 and [d["will_trade"] for d in order.trade_decisions] == ["no_funds", "yes_user", "yes_user"]
-    assert [(t["trade_id"], t["symbol"], t["side"], t["shares"], t["status"], t["placed_by"]) for t in order.trades] == [("T1", "PZZA", "buy", 1, "filled", "code"), ("T2", "YUM", "buy", 1, "filled", "code")]
-    assert order.trades[0]["fill"]["price"] == 100.0 and order.trades[0]["fill"]["price_source"] == "quote" and order.trader_runs[0]["mode"] == "paper" and order.trader_runs[0]["use_model"] is False
-    assert order.trader_runs[0]["portfolio_before"]["cash"] == 1000.0 and order.trader_runs[0]["portfolio_after"]["cash"] == 800.0
+    assert order.status == "traded" and order.schema_version == 4 and [d["will_trade"] for d in order.trade_decisions] == ["yes_user", "yes_user", "yes_user"] and {d["shares"] for d in order.trade_decisions} == {10}
+    assert [(t["trade_id"], t["symbol"], t["side"], t["shares"], t["status"], t.get("reject_code")) for t in order.trades] == [("T1", "DPZ", "buy", 10, "rejected", "price_unavailable"), ("T2", "PZZA", "buy", 10, "filled", None),
+                                                                                                                              ("T3", "YUM", "buy", 10, "rejected", "insufficient_cash")]
+    assert order.trades[1]["fill"]["price"] == 100.0 and order.trades[1]["fill"]["price_source"] == "quote" and order.trader_runs[0]["mode"] == "paper" and order.trader_runs[0]["use_model"] is False and order.trades[1]["placed_by"] == "code"
+    assert order.trader_runs[0]["portfolio_before"]["cash"] == 1000.0 and order.trader_runs[0]["portfolio_after"]["cash"] == 0.0
     assert {"critic", "decide", "trade"} <= set(result.seconds) and list(result.seconds)[-1] != "relevance"
 
 
@@ -55,7 +58,7 @@ def test_the_report_has_the_trader_section_after_the_critics_and_says_the_trades
     result, _ = trade()
     text = rec.report(result)
     assert text.index("CRITIC REVIEW  (model z-ai/glm-5.3") < text.index("TRADER  (no model: the program placed the orders; PAPER mode, prices: the current quotes") < text.index("MODEL CALLS (Advisor)")
-    assert "T1" in text and "FILLED 1 at 100.0000" in text and "account  cash $1,000.00 -> $800.00" in text and "kept in memory only: the account book was not changed" in text
+    assert "T1" in text and "FILLED 10 at 100.0000" in text and "account  cash $1,000.00 -> $0.00" in text and "kept in memory only: the account book was not changed" in text
     assert "The trades above are SIMULATED (paper or backtest): no order was sent to a broker and no money moved." in text and "Nothing here is bought or sold." not in text
     assert "The Trader can only place trades the Account Manager decided on" in text and "RANKING, best to worst" in text                # a `traded` order is a finished one: the whole report is there
 
@@ -69,7 +72,7 @@ def test_a_decision_that_is_still_waiting_for_the_user_is_not_traded_and_the_run
 
 def test_when_every_decision_is_a_no_the_trader_does_not_run():
     result, _ = trade(approver=lambda card: False)
-    assert [d["will_trade"] for d in result.order.trade_decisions] == ["no_funds", "no_user_denied", "no_user_denied"] and result.order.trades == [] and result.order.status == "decided"
+    assert [d["will_trade"] for d in result.order.trade_decisions] == ["no_user_denied"] * 3 and result.order.trades == [] and result.order.status == "decided"
     assert any("the Trader did not run" in n for n in result.notes)
 
 
@@ -96,7 +99,7 @@ def test_the_trader_asks_for_its_quotes_through_the_account_manager_and_the_runn
     called = AccountManager(model=object(), profile=profile(user="t"), clerk=clerk)                        # what `run` builds when none is given, with the profile the decisions need
     result = rec.run(rec.classify(ALL, None, search), clerk=clerk, advisor=advisor, portfolio=EMPTY_PORTFOLIO, today=TODAY, relevance_searches=(Relevance({}),), critic=Critic(model=ReviewerModel(), clerk=clerk, ledger=MemoryLedger()),
                      manager=called, now=NOW, approver=lambda card: True, trader=trader)
-    assert result.order.status == "traded" and ("account_manager", ["PZZA", "YUM"]) in asked and called.clerk is clerk
+    assert result.order.status == "traded" and ("account_manager", ["DPZ", "PZZA", "YUM"]) in asked and called.clerk is clerk
 
 
 def test_the_funding_answer_the_approver_and_book_reach_the_trader():
@@ -104,7 +107,7 @@ def test_the_funding_answer_the_approver_and_book_reach_the_trader():
     result, trader = trade(funding=plan("PZZA", status="funded"), book=True, approver=lambda card: asked.append(card.get("kind", "decision")) or True)
     run = result.order.trader_runs[0]
     assert run["funding"]["status"] == "funded" and "already covers" in run["funding"]["note"]                                                    # the RaiseFunds answer arrived as the funding plan
-    assert any("the fills were not booked" in e and "no saved account" in e for e in run["errors"]) and run["booked"] is False and asked == ["decision", "decision"]    # book was asked for; this runner holds no saved account
+    assert any("the fills were not booked" in e and "no saved account" in e for e in run["errors"]) and run["booked"] is False and asked == ["decision", "decision", "decision"]    # book was asked for; this runner holds no saved account
 
 
 def test_a_backtest_enters_at_the_next_sessions_open_from_the_stored_bars_and_asks_for_no_quote():
@@ -113,9 +116,10 @@ def test_a_backtest_enters_at_the_next_sessions_open_from_the_stored_bars_and_as
     clerk = MarketClerk(QUOTES, bars=bars)
     result, trader = trade(trader=Trader(mode="backtest", use_model=False, ledger=MemoryLedger()), acct=manager(clerk))
     order = result.order
-    assert clerk.asked("quotes") == [] and clerk.asked("bars") == [["PZZA", "YUM", "SPY"]] and order.trader_runs[0]["mode"] == "backtest"
-    assert [(t["status"], t["fill"]["date"], t["fill"]["price_source"], t["outcome"]["status"]) for t in order.trades] == [("filled", "2026-10-26", "bar_limit", "open")] * 2          # Friday's decision enters on Monday; the Advisor's limit of 100.00 sets the price (the open of 100.00 plus slippage is over it)
-    assert order.status == "traded" and "outcome  T1" in rec.report(result)
+    assert clerk.asked("quotes") == [] and clerk.asked("bars") == [["DPZ", "PZZA", "YUM", "SPY"]] and order.trader_runs[0]["mode"] == "backtest"
+    assert [(t["symbol"], t["status"], (t["fill"] or {}).get("date"), (t["fill"] or {}).get("price_source")) for t in order.trades if t["status"] == "filled"] == [("PZZA", "filled", "2026-10-26", "bar_limit")]    # DPZ has no stored bar; PZZA fills; YUM then finds no cash left
+    assert [(t["fill"]["date"], t["fill"]["price_source"], t["outcome"]["status"]) for t in order.trades if t["status"] == "filled"] == [("2026-10-26", "bar_limit", "open")]          # Friday's decision enters on Monday; the Advisor's limit of 100.00 sets the price (the open of 100.00 plus slippage is over it)
+    assert order.status == "traded" and "outcome  T2" in rec.report(result)               # T2: the filled one
 
 
 def test_a_review_made_on_another_day_than_the_run_is_expired_so_nothing_is_permitted_and_the_trader_does_not_run():

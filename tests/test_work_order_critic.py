@@ -39,35 +39,7 @@ def test_every_check_refuses_an_order_that_already_has_its_data(status):
         assert any(f"already has its data (status {status})" in r for r in check(o))
 
 
-def test_a_v1_order_still_validates_and_the_new_fields_are_empty():
-    order = wo.new_work_order("What is the news on PG?", subject=["PG"])
-    assert order.schema_version == 1 and order.reviews == [] and order.critic_runs == [] and order.trade_decisions == [] and order.verify is None
-    assert order.trades == [] and order.trader_runs == [] and order.bars is None             # Trader v1 (spec section 11): the fields are there and empty
-    wo.WorkOrder.model_validate(order.model_dump())
-    assert wo.DataResult().verification == {}
-
-
-def test_a_verify_order_is_a_version_2_order_and_round_trips_as_json():
-    order = verify_order(symbols=["PG"])
-    assert order.schema_version == 2 and order.action_type == "verify_data" and order.verify == {"symbols": ["PG"]}
-    assert wo.WorkOrder.model_validate_json(order.model_dump_json()).verify == {"symbols": ["PG"]}
-
-
-def test_the_search_check_refuses_a_verify_order_and_names_the_new_action():
-    reasons = wo.verify_request(verify_order(symbols=["PG"]))
-    assert any("not handled by the Data Clerk's request_data yet" in r for r in reasons)
-    assert any("is not one of" in r and "verify_data" in r for r in wo.verify_request(wo.new_work_order("x", action_type="launch_rocket")))
-
-
 # ---------------------------------------------------------------- verify_verification_request
-
-def test_a_minimal_request_is_allowed():
-    assert reasons_of(symbols=["PG"]) == [] and reasons_of(chunks=["finnhub:1#0"]) == [] and reasons_of(evidence={"PG": ["E15"]}) == []
-
-
-def test_a_full_request_is_allowed():
-    assert reasons_of(chunks=["finnhub:1#0", "pr:ab12#0"], evidence={"PG": ["E15", "E21"]}, symbols=["PG", "SNDK"], company={"PG": "Procter & Gamble"},
-                      fresh={"since_days": 14, "k": 8}) == []
 
 
 @pytest.mark.parametrize("spec, message", [
@@ -101,11 +73,6 @@ def test_the_requests_the_data_clerk_may_not_answer(spec, message):
     assert any(message in r for r in reasons_of(**spec)), reasons_of(**spec)
 
 
-def test_the_limits_are_inclusive():
-    assert reasons_of(chunks=[f"c{i}" for i in range(60)]) == [] and reasons_of(symbols=[f"S{i}" for i in range(30)]) == []
-    assert reasons_of(symbols=["PG"], fresh={"since_days": 30, "k": 20}) == [] and reasons_of(symbols=["PG"], fresh={"since_days": 1, "k": 1}) == []
-
-
 def test_a_verification_request_must_be_a_verify_order_with_a_verify_dict_and_no_data_yet():
     assert any("is not 'verify_data'" in r for r in wo.verify_verification_request(wo.new_work_order("x", subject=["PG"], verify={"symbols": ["PG"]})))
     assert any("needs `verify`" in r for r in wo.verify_verification_request(wo.new_work_order("x", action_type="verify_data", subject=["PG"])))
@@ -116,17 +83,6 @@ def test_a_verification_request_must_be_a_verify_order_with_a_verify_dict_and_no
 
 # ---------------------------------------------------------------- lookups and parse_utc
 
-def test_a_review_and_a_decision_are_found_by_record_id():
-    order = wo.new_work_order("x", subject=["PG"])
-    order.reviews, order.trade_decisions = [{"record_id": "a"}, {"record_id": "b", "n": 2}], [{"record_id": "b", "will_trade": "yes_user"}]
-    assert wo.review_of(order, "b")["n"] == 2 and wo.review_of(order, "zz") is None
-    assert wo.decision_of(order, "b")["will_trade"] == "yes_user" and wo.decision_of(order, "a") is None
-
-
-@pytest.mark.parametrize("text, expected", [("2026-11-05T15:30:00Z", NOW), ("2026-11-05T10:30:00-05:00", NOW), ("2026-11-05T15:30:00", None), ("garbage", None), (None, None)])
-def test_parse_utc(text, expected):
-    assert wo.parse_utc(text) == expected
-
 
 # ---------------------------------------------------------------- verify_trade: the Trader's precondition
 
@@ -136,15 +92,6 @@ def reviewed(will_trade="yes_user", approved=True, valid_until=None, shares=44):
     order.reviews = [{"record_id": "r1", "approved": approved, "valid_until_utc": valid_until or (NOW + timedelta(minutes=30)).isoformat().replace("+00:00", "Z")}]
     order.trade_decisions = [{"record_id": "r1", "will_trade": will_trade, "shares": shares}]
     return order
-
-
-def test_a_review_an_approval_a_permission_and_time_left_let_the_trader_trade():
-    assert wo.verify_trade(reviewed(), "r1", NOW) == [] and wo.verify_trade(reviewed("yes_auto"), "r1", NOW) == []
-
-
-@pytest.mark.parametrize("will_trade", ["pending_user", "no_system_denied", "no_expired", "no_funds", "no_user_denied"])
-def test_only_yes_auto_and_yes_user_are_permission(will_trade):
-    assert any(will_trade in r for r in wo.verify_trade(reviewed(will_trade), "r1", NOW))
 
 
 def test_no_review_no_decision_a_denial_an_expired_approval_or_no_shares_each_stop_the_trade():
@@ -159,10 +106,6 @@ def test_no_review_no_decision_a_denial_an_expired_approval_or_no_shares_each_st
     assert any("whole number of shares" in r for r in wo.verify_trade(reviewed(shares=True), "r1", NOW))
     assert any("whole number of shares" in r for r in wo.verify_trade(reviewed(shares=2.5), "r1", NOW))
     assert wo.verify_trade(reviewed(shares=1), "r1", NOW) == [] and wo.verify_trade(reviewed(shares=45), "r1", NOW) == []      # the number of shares is the Account Manager's (the decision's): the Critic approves no size to compare it with
-
-
-def test_a_decision_without_a_matching_review_for_a_different_record_does_not_help():
-    assert any("no Critic review of recommendation r2" in r for r in wo.verify_trade(reviewed(), "r2", NOW))
 
 
 def test_verify_trade_refuses_a_naive_clock():

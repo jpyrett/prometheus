@@ -40,40 +40,6 @@ def test_earnings_yield():
         f.earnings_yield(None)
 
 
-def test_apples_net_payout_yield_is_worked_from_the_cash_flow_and_annualized(apple):
-    """Three months: 24,701 million of buybacks and 3,921 of dividends (the 10-Q's figures), no row of stock issued: (24,701 + 3,921) x 4 over a market cap of 4 trillion."""
-    value, summary = f.net_payout_yield_ttm(apple, 4.0e12)
-    assert value == pytest.approx((24701e6 + 3921e6) * 4 / 4.0e12)
-    assert summary["months"] == 3 and summary["absent"] == ["proceeds from issuing common stock"] and summary["repurchases"] == 24701e6
-
-
-def test_metas_net_payout_yield_uses_nine_months_and_a_buyback_that_stopped(meta):
-    value, summary = f.net_payout_yield_ttm(meta, 1.6e12)
-    assert value == pytest.approx(4060e6 * 12 / 9 / 1.6e12)         # repurchases 0 (a row that says zero), dividends 4,060 million, nine months annualized by 12 / 9
-    assert summary["months"] == 9 and summary["repurchases"] == 0.0 and "repurchases" not in summary["absent"]
-
-
-@pytest.mark.parametrize("change, reason", [({"period_months": None}, "months"), ({"capital_actions": []}, "no repurchases or dividends"), ({}, None)])
-def test_net_payout_yield_says_what_is_missing(apple, change, reason):
-    evidence = {**apple, **change}
-    if reason is None:
-        with pytest.raises(f.Missing, match="market capitalization"):
-            f.net_payout_yield_ttm(evidence, None)
-        with pytest.raises(f.Missing, match="market capitalization"):
-            f.net_payout_yield_ttm(evidence, 0)
-    else:
-        with pytest.raises(f.Missing, match=reason):
-            f.net_payout_yield_ttm(evidence, 4.0e12)
-
-
-def test_proceeds_from_issuing_stock_are_taken_off():
-    evidence = {"period_months": 12, "capital_actions": [{"item": "repurchases of common stock", "current": -100.0, "units": "(In millions)"},
-                                                        {"item": "dividends paid", "current": -50.0, "units": "(In millions)"},
-                                                        {"item": "proceeds from issuing common stock", "current": 30.0, "units": "(In millions)"}]}
-    value, summary = f.net_payout_yield_ttm(evidence, 10_000e6)
-    assert value == pytest.approx((100e6 + 50e6 - 30e6) / 10_000e6) and summary["absent"] == []
-
-
 def test_share_count_change_is_the_balance_sheets_change_as_a_fraction(apple, meta):
     value, summary = f.share_count_change(apple)
     assert value == pytest.approx(apple["balance_sheet"]["shares"]["change_pct"] / 100) and value < 0   # Apple's count fell (it buys back stock)

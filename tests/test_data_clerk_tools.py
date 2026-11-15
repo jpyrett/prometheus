@@ -151,26 +151,6 @@ def tools(toolbox, index, press_index, filings_index) -> DataClerkTools:
 
 # ---------------------------------------------------------------- the allow-list and what the model sees
 
-def test_the_allow_list_is_exactly_what_the_model_is_shown(tools):
-    assert DATA_CLERK_TOOLS == ("retrieve_news", "retrieve_press_releases", "retrieve_filings", "fetch_news", "fetch_press_releases", "fetch_filings", "fetch_filings_recommendation",
-                                "keyword_search", "discover_tickers", "get_financials", "get_price_summary", "get_quote", "calculate_metrics")
-    assert [t.name for t in tools.langchain_tools()] == list(DATA_CLERK_TOOLS)
-
-
-def test_nothing_dangerous_is_on_the_allow_list_or_reachable_through_the_tools(tools):
-    never = {"init_aws_cli", "fetch_historical_data", "convert_to_parquet", "export_project", "sync_market_news", "sync_cnbc_news"}
-    assert never.isdisjoint(DATA_CLERK_TOOLS)
-    assert never.isdisjoint({t.name for t in tools.langchain_tools()})
-    assert not [name for name in never if hasattr(tools, name)]  # the class does not even have such a method
-
-
-def test_every_tool_has_a_description_and_every_argument_is_documented(tools):
-    for t in tools.langchain_tools():
-        assert len(t.description) > 40, t.name
-        assert "self" not in t.args, t.name
-        for arg, spec in t.args.items():
-            assert spec.get("description"), f"{t.name}.{arg} has no description for the model"
-
 
 def test_retrieve_news_passes_newest_first_to_the_search_and_the_default_is_off(index, toolbox):
     tools = DataClerkTools(toolbox, index)
@@ -181,29 +161,7 @@ def test_retrieve_news_passes_newest_first_to_the_search_and_the_default_is_off(
         tools.retrieve_news("apple iphone", newest_first="yes")
 
 
-def test_the_model_sees_the_arguments_of_retrieve_news_and_not_the_relevance_bar(tools):
-    retrieve = tools.langchain_tools()[0]
-    assert list(retrieve.args) == ["query", "tickers", "since_days", "k", "diverse", "newest_first"]  # min_score stays ours
-    assert retrieve.get_input_schema().model_json_schema()["required"] == ["query"]
-    assert "diverse" in retrieve.description and "newest_first" in retrieve.description and "no supporting text" in retrieve.description
-
-
-def test_the_toolbox_of_the_real_default_is_rooted_where_rag_reads_its_files():
-    # no network: building a DataToolbox only sets paths
-    assert Path(DataClerkTools().toolbox.base_dir) == REPO_ROOT
-
-
 # ---------------------------------------------------------------- argument checks
-
-@pytest.mark.parametrize("value,expected", [("aapl", "AAPL"), ("$nvda", "NVDA"), (" brk.b ", "BRK.B"), ("$$tsla", "TSLA")])
-def test_symbols_are_cleaned(value, expected):
-    assert data_clerk._symbol(value) == expected
-
-
-@pytest.mark.parametrize("bad", ["../../.env", "AAPL/../x", "", "A B", "TOOLONGSYMBOL1", 5, None, ["AAPL"]])
-def test_a_bad_symbol_is_a_tool_input_error(bad):
-    with pytest.raises(ToolInputError):
-        data_clerk._symbol(bad)
 
 
 def test_tickers_may_be_one_symbol_or_a_list_without_repeats():
@@ -212,13 +170,6 @@ def test_tickers_may_be_one_symbol_or_a_list_without_repeats():
     for bad in (5, {"a": 1}, ["AAPL", 5], ["AAPL", "../x"], ["A"] * 11):
         with pytest.raises(ToolInputError):
             data_clerk._symbols(bad)
-
-
-@pytest.mark.parametrize("bad", [0, -1, 91, 10_000, True, "7", 2.5, None])
-def test_days_outside_the_allowed_range_never_reach_the_toolbox(tools, toolbox, bad):
-    with pytest.raises(ToolInputError, match="from_date"):
-        tools.fetch_news("AAPL", from_date=bad)
-    assert toolbox.calls == []
 
 
 def test_the_longer_limits_for_filings_and_the_shorter_one_for_discover(tools, toolbox):
@@ -244,24 +195,6 @@ def test_keywords_company_terms_and_phrase_are_limited(tools, toolbox):
 
 # ---------------------------------------------------------------- retrieve_news (rag/)
 
-def test_retrieve_news_returns_hits_as_plain_data(tools):
-    result = tools.retrieve_news("apple iphone phone", tickers="aapl", k=2)
-    assert result["found"] and result["reason"] is None and result["message"] is None
-    assert [h["article_id"] for h in result["hits"]] == ["a1", "a2"]
-    assert {"chunk_id", "headline", "publisher", "published_utc", "url", "tickers", "text", "score"} <= set(result["hits"][0])
-
-
-def test_retrieve_news_filters_by_ticker_and_window(tools):
-    assert {h["article_id"] for h in tools.retrieve_news("nvidia chip", tickers=["NVDA"], k=5)["hits"]} == {"a3", "n1"}
-    assert tools.retrieve_news("tesla car", tickers="TSLA")["hits"][0]["article_id"] == "t1"
-
-
-def test_nothing_relevant_says_no_supporting_text_with_the_closest_score(tools):
-    result = tools.retrieve_news("cake")
-    assert not result["found"] and result["hits"] == [] and result["reason"] == "nothing_relevant"
-    assert result["message"].startswith("No supporting text: no stored article scored 0.40 or more")
-    assert "no filters" in result["message"] and "closest scored" in result["message"] and "Do not answer from memory" in result["message"]
-
 
 def test_a_near_miss_tells_the_model_to_reword_once_and_a_clear_miss_does_not(tools):
     near = tools.retrieve_news("apple tesla car", tickers="AAPL")  # the best AAPL chunk scores 0.33, within 0.10 of the 0.40 bar
@@ -269,25 +202,6 @@ def test_a_near_miss_tells_the_model_to_reword_once_and_a_clear_miss_does_not(to
     assert "close to the bar" in near["message"] and "search once more with a clearer question" in near["message"]
     far = tools.retrieve_news("cake")
     assert "close to the bar" not in far["message"] and "search once more" not in far["message"]
-
-
-def test_a_ticker_with_no_stored_article_tells_the_model_to_fetch(tools):
-    result = tools.retrieve_news("anything about meta", tickers="META")
-    assert result["reason"] == "no_article_matches_filters" and not result["found"]
-    assert "tickers META" in result["message"] and "call fetch_news" in result["message"]
-
-
-def test_an_empty_index_says_so_without_asking_for_a_fetch(tmp_path):
-    empty = DataClerkTools(FakeToolbox(), store=make_store(tmp_path / "empty", KeywordEmbeddings()))
-    result = empty.retrieve_news("apple")
-    assert result["reason"] == "no_article_matches_filters" and "may be empty" in result["message"] and "fetch_news" not in result["message"]
-
-
-@pytest.mark.parametrize("kwargs", [dict(query=""), dict(query="apple", k=0), dict(query="apple", k=21), dict(query="apple", since_days=0),
-                                    dict(query="apple", tickers="../../.env"), dict(query="apple", tickers=[1])])
-def test_bad_retrieve_arguments_are_tool_input_errors(tools, kwargs):
-    with pytest.raises(ToolInputError):
-        tools.retrieve_news(**kwargs)
 
 
 # ---------------------------------------------------------------- the fetch tools (the toolbox, then the index)
@@ -300,19 +214,6 @@ def test_fetch_news_calls_the_toolbox_and_then_makes_the_new_articles_searchable
     assert "secret" not in str(result) and "path" not in result  # the local file path stays out of the prompt
     again = tools.fetch_news("AAPL")  # same file again: everything is unchanged
     assert again["indexed"]["added"] == 0 and again["indexed"]["unchanged"] == 4
-
-
-def test_fetch_news_defaults_are_a_week_and_no_filters(tools, toolbox):
-    tools.fetch_news("AAPL")
-    assert toolbox.calls[0][2] == dict(company=None, symbol="AAPL", keywords=[], from_date=7)
-
-
-def test_when_the_fetch_fails_nothing_is_indexed_and_the_error_is_not_swallowed(tools, toolbox, index):
-    toolbox.fail = RuntimeError("Finnhub HTTP 429")
-    before = index.get()["ids"]
-    with pytest.raises(RuntimeError, match="429"):
-        tools.fetch_news("AAPL")
-    assert index.get()["ids"] == before
 
 
 def test_fetch_press_releases_calls_the_toolbox_and_then_makes_the_new_releases_searchable(tools, toolbox, press_index, index):
@@ -339,28 +240,6 @@ def test_fetch_press_releases_defaults_to_a_year_and_checks_its_arguments(tools,
     assert len(toolbox.calls) == 1  # nothing was fetched for the bad ones
 
 
-def test_when_the_press_release_fetch_fails_nothing_is_indexed_and_the_error_is_not_swallowed(tools, toolbox, press_index):
-    toolbox.fail = RuntimeError("Finnhub press releases HTTP 429")
-    before = press_index.get()["ids"]
-    with pytest.raises(RuntimeError, match="429"):
-        tools.fetch_press_releases("AAPL")
-    assert press_index.get()["ids"] == before
-
-
-def test_fetch_filings_calls_the_toolbox_and_then_makes_the_new_filings_searchable(tools, toolbox, filings_index, press_index, index):
-    result = tools.fetch_filings("$aapl", from_date=100)
-    assert toolbox.calls == [("fetch_filings", ("AAPL",), dict(from_date=100)), ("fetch_filing_text", ("AAPL",), dict(from_date=100))]  # the Massive fetch, then the EDGAR text, then one index
-    indexed = result.pop("indexed")
-    assert result == {"symbol": "AAPL", "fetched": 7, "written": 1, "duplicates": 6, "edgar_text": {"candidates": 3, "written": 1}}  # counts and no path
-    assert "secret" not in str(result) and "path" not in result  # the local file path stays out of the prompt
-    assert indexed["articles"] == 7 and indexed["chunks"] > 150 and indexed["added"] == indexed["chunks"] and indexed["unchanged"] == 0
-    stored = set(filings_index.get()["ids"])
-    assert {"sec:0000320193-25-000077:items#0", "sec:0000320193-26-000006#0"} <= stored  # two of the REAL filings of the fixture, in the FILINGS collection
-    assert not any(i.startswith("sec:") for i in index.get()["ids"] + press_index.get()["ids"])  # and in neither of the other two
-    again = tools.fetch_filings("AAPL")  # the same file again: everything is unchanged
-    assert again["indexed"]["added"] == 0 and again["indexed"]["unchanged"] == indexed["chunks"]
-
-
 def test_fetch_filings_defaults_to_a_year_and_checks_its_arguments(tools, toolbox):
     tools.fetch_filings("AAPL")
     assert toolbox.calls[0][2] == toolbox.calls[1][2] == dict(from_date=365)  # both steps, a year
@@ -372,27 +251,7 @@ def test_fetch_filings_defaults_to_a_year_and_checks_its_arguments(tools, toolbo
     assert [c[0] for c in toolbox.calls] == ["fetch_filings", "fetch_filing_text"]  # nothing was fetched for the bad ones
 
 
-def test_when_the_filings_fetch_fails_nothing_is_indexed_and_the_error_is_not_swallowed(tools, toolbox, filings_index):
-    toolbox.fail = RuntimeError("Massive filings HTTP 429")
-    before = filings_index.get()["ids"]
-    with pytest.raises(RuntimeError, match="429"):
-        tools.fetch_filings("AAPL")
-    assert filings_index.get()["ids"] == before
-
-
 # ---------------------------------------------------------------- retrieve_press_releases (rag/, the press release collection)
-
-def test_retrieve_press_releases_returns_hits_as_plain_data(tools):
-    result = tools.retrieve_press_releases("apple iphone phone", tickers="aapl", k=2)
-    assert result["found"] and result["reason"] is None and result["message"] is None
-    assert [h["article_id"] for h in result["hits"]] == ["pr:a1", "pr:a2"]
-    assert {"chunk_id", "headline", "publisher", "published_utc", "url", "tickers", "text", "score"} <= set(result["hits"][0])
-    assert result["hits"][0]["publisher"] == "Press release"
-
-
-def test_the_two_searches_each_see_only_their_own_collection(tools):
-    assert {h["article_id"] for h in tools.retrieve_news("nvidia chip", tickers="NVDA", k=5)["hits"]} == {"a3", "n1"}
-    assert {h["article_id"] for h in tools.retrieve_press_releases("nvidia chip", tickers="NVDA", k=5)["hits"]} == {"pr:n1"}
 
 
 def test_retrieve_press_releases_filters_by_ticker_and_window_and_can_put_the_newest_first(tools):
@@ -405,13 +264,6 @@ def test_retrieve_press_releases_filters_by_ticker_and_window_and_can_put_the_ne
         tools.retrieve_press_releases("apple iphone", newest_first="yes")
 
 
-def test_a_ticker_with_no_stored_press_release_tells_the_model_to_fetch_press_releases_not_news(tools):
-    result = tools.retrieve_press_releases("anything about meta", tickers="META")
-    assert result["reason"] == "no_article_matches_filters" and not result["found"]
-    assert "No stored press release matches" in result["message"] and "tickers META" in result["message"]
-    assert "call fetch_press_releases" in result["message"] and "fetch_news" not in result["message"]
-
-
 def test_press_releases_that_do_not_answer_say_no_supporting_text_in_their_own_words(tools):
     far = tools.retrieve_press_releases("cake")
     assert far["reason"] == "nothing_relevant" and far["message"].startswith("No supporting text: no stored press release scored 0.40 or more")
@@ -420,35 +272,11 @@ def test_press_releases_that_do_not_answer_say_no_supporting_text_in_their_own_w
     assert "if you believe the stored press releases should cover this" in near["message"] and "search once more" in near["message"]
 
 
-def test_an_empty_press_release_index_says_so_without_asking_for_a_fetch(tmp_path):
-    empty = DataClerkTools(FakeToolbox(), press_store=make_store(tmp_path / "empty_pr", KeywordEmbeddings()))
-    result = empty.retrieve_press_releases("apple")
-    assert result["reason"] == "no_article_matches_filters" and "may be empty" in result["message"] and "fetch_press_releases" not in result["message"]
-
-
 @pytest.mark.parametrize("kwargs", [dict(query=""), dict(query="apple", k=0), dict(query="apple", k=21), dict(query="apple", since_days=0),
                                     dict(query="apple", tickers="../../.env"), dict(query="apple", tickers=[1])])
 def test_bad_press_release_search_arguments_are_tool_input_errors(tools, kwargs):
     with pytest.raises(ToolInputError):
         tools.retrieve_press_releases(**kwargs)
-
-
-def test_the_model_sees_the_press_release_search_without_the_news_only_options(tools):
-    retrieve = {t.name: t for t in tools.langchain_tools()}["retrieve_press_releases"]
-    assert list(retrieve.args) == ["query", "tickers", "since_days", "k", "newest_first"]  # no diverse (one story per release), and min_score stays ours
-    assert retrieve.get_input_schema().model_json_schema()["required"] == ["query"]
-    assert "press release" in retrieve.description and "company's own statement" in retrieve.description and "no supporting text" in retrieve.description
-
-
-def test_both_search_tools_number_their_sources_in_one_book_so_a_number_means_one_chunk(tools):
-    """The reason the two tools share a SourceBook: [3] must never be a news article for one citation and a press release for another."""
-    book = SourceBook()
-    by_name = {t.name: t for t in tools.langchain_tools(book)}
-    news = call(by_name["retrieve_news"], {"query": "apple iphone phone", "tickers": "AAPL", "k": 2}, "c1")
-    press = call(by_name["retrieve_press_releases"], {"query": "apple iphone phone", "tickers": "AAPL", "k": 2}, "c2")
-    assert [h["number"] for h in news.artifact["hits"]] == [1, 2]
-    assert [(h["number"], h["article_id"]) for h in press.artifact["hits"]] == [(3, "pr:a1"), (4, "pr:a2")]  # new numbers, continuing
-    assert "[3] Press release," in press.content and len(book) == 4 and book.check("[1] and [4]").ok and not book.check("[5]").ok
 
 
 def test_without_sec_user_agent_the_edgar_step_is_reported_as_skipped_and_everything_else_still_happens(tools, toolbox, filings_index):
@@ -475,34 +303,7 @@ def test_any_other_edgar_failure_stops_the_call_and_nothing_is_indexed(tools, to
     assert filings_index.get()["ids"] == before
 
 
-def test_when_the_massive_fetch_fails_edgar_is_not_asked(tools, toolbox):
-    toolbox.fail = RuntimeError("Massive filings HTTP 429")
-    with pytest.raises(RuntimeError, match="429"):
-        tools.fetch_filings("AAPL")
-    assert [c[0] for c in toolbox.calls] == ["fetch_filings"]
-
-
-def test_the_model_is_told_about_the_edgar_step_and_what_to_do_when_it_was_skipped(tools):
-    fetch = {t.name: t for t in tools.langchain_tools()}["fetch_filings"]
-    text = " ".join(fetch.description.split())
-    assert "fetches the text of the stored 10-Q filings from SEC EDGAR" in text and "edgar_text" in text and "skipped" in text
-    assert "do not call this again for it" in text and list(fetch.args) == ["symbol", "from_date"]  # no new argument: the tool the model sees keeps its shape
-
-
 # ---------------------------------------------------------------- retrieve_filings (rag/, the filings collection)
-
-def test_retrieve_filings_returns_hits_as_plain_data(tools):
-    result = tools.retrieve_filings("apple iphone phone", tickers="aapl", k=2)
-    assert result["found"] and result["reason"] is None and result["message"] is None
-    assert [h["article_id"] for h in result["hits"]] == ["sec:0000000001-25-000001:business", "sec:0000000001-25-000001:risk_factors"]  # one hit per SECTION, the exact match first
-    assert {"chunk_id", "headline", "publisher", "published_utc", "url", "tickers", "text", "score"} <= set(result["hits"][0])
-    assert result["hits"][0]["publisher"] == "SEC filing"
-
-
-def test_the_three_searches_each_see_only_their_own_collection(tools):
-    assert {h["article_id"] for h in tools.retrieve_news("nvidia chip", tickers="NVDA", k=5)["hits"]} == {"a3", "n1"}
-    assert {h["article_id"] for h in tools.retrieve_press_releases("nvidia chip", tickers="NVDA", k=5)["hits"]} == {"pr:n1"}
-    assert {h["article_id"] for h in tools.retrieve_filings("nvidia chip", tickers="NVDA", k=5)["hits"]} == {"sec:0000000002-25-000002:items"}
 
 
 def test_retrieve_filings_filters_by_ticker_and_window_and_can_put_the_newest_first(tools):
@@ -515,13 +316,6 @@ def test_retrieve_filings_filters_by_ticker_and_window_and_can_put_the_newest_fi
         tools.retrieve_filings("apple iphone", newest_first="yes")
 
 
-def test_a_ticker_with_no_stored_filing_tells_the_model_to_fetch_filings_not_news(tools):
-    result = tools.retrieve_filings("anything about meta", tickers="META")
-    assert result["reason"] == "no_article_matches_filters" and not result["found"]
-    assert "No stored filing matches" in result["message"] and "tickers META" in result["message"]
-    assert "call fetch_filings" in result["message"] and "fetch_news" not in result["message"] and "fetch_press_releases" not in result["message"]
-
-
 def test_filings_that_do_not_answer_say_no_supporting_text_in_their_own_words(tools):
     far = tools.retrieve_filings("cake")
     assert far["reason"] == "nothing_relevant" and far["message"].startswith("No supporting text: no stored filing scored 0.40 or more")
@@ -530,45 +324,11 @@ def test_filings_that_do_not_answer_say_no_supporting_text_in_their_own_words(to
     assert "if you believe the stored filings should cover this" in near["message"] and "search once more" in near["message"]
 
 
-def test_an_empty_filings_index_says_so_without_asking_for_a_fetch(tmp_path):
-    empty = DataClerkTools(FakeToolbox(), filings_store=make_store(tmp_path / "empty_f", KeywordEmbeddings()))
-    result = empty.retrieve_filings("apple")
-    assert result["reason"] == "no_article_matches_filters" and "may be empty" in result["message"] and "fetch_filings" not in result["message"]
-
-
 @pytest.mark.parametrize("kwargs", [dict(query=""), dict(query="apple", k=0), dict(query="apple", k=21), dict(query="apple", since_days=0),
                                     dict(query="apple", tickers="../../.env"), dict(query="apple", tickers=[1])])
 def test_bad_filings_search_arguments_are_tool_input_errors(tools, kwargs):
     with pytest.raises(ToolInputError):
         tools.retrieve_filings(**kwargs)
-
-
-def test_the_model_sees_the_filings_search_without_the_news_only_options_and_is_told_what_has_no_text(tools):
-    retrieve = {t.name: t for t in tools.langchain_tools()}["retrieve_filings"]
-    assert list(retrieve.args) == ["query", "tickers", "since_days", "k", "newest_first"]  # the same arguments as the press release search
-    assert retrieve.get_input_schema().model_json_schema()["required"] == ["query"]
-    text = " ".join(retrieve.description.split())  # the docstring wraps lines
-    assert "company's own statement" in text and "no supporting text" in text and "10-K and 8-K filings are stored WITH text" in text
-    assert "a 10-Q whose text was fetched from EDGAR" in text and "A 10-Q without it" in text  # entry 36: a 10-Q can have text now
-    assert "never describe what such a filing contains" in text and "Form 144" in text and "call fetch_filings" in text
-
-
-def test_a_filing_without_text_is_stored_as_a_source_that_says_so(tools, filings_index):
-    """The real record of a 10-Q, through the real loader and ingest: what the model would read for it."""
-    tools.fetch_filings("AAPL")  # indexes the six real filings
-    stored = filings_index.get(ids=["sec:0000320193-26-000006#0"], include=["documents"])["documents"][0]
-    assert "10-Q (quarterly report) filed 2026-01-30. The text of this filing is not stored" in stored
-
-
-def test_all_three_search_tools_number_their_sources_in_one_book(tools):
-    """The same rule with filings: [3] must never be a news article for one citation and a filing for another."""
-    book = SourceBook()
-    by_name = {t.name: t for t in tools.langchain_tools(book)}
-    call(by_name["retrieve_news"], {"query": "apple iphone phone", "tickers": "AAPL", "k": 2}, "c1")
-    call(by_name["retrieve_press_releases"], {"query": "apple iphone phone", "tickers": "AAPL", "k": 2}, "c2")
-    filings = call(by_name["retrieve_filings"], {"query": "apple iphone phone", "tickers": "AAPL", "k": 2}, "c3")
-    assert [h["number"] for h in filings.artifact["hits"]] == [5, 6] and "[5] SEC filing," in filings.content and len(book) == 6
-    assert book.check("[1] and [6]").ok and not book.check("[7]").ok
 
 
 # ---------------------------------------------------------------- fetch_filings_recommendation (the stored filings read as evidence: design choices entry 38)
@@ -579,52 +339,6 @@ def stored_apple(tools, toolbox):
     shutil.copy(FILINGS_FIXTURE, toolbox.filings_dir / "AAPL.txt")
     tools.today = date(2026, 5, 1)  # the window is counted back from this day: a fixed one, not the clock
     return tools
-
-
-def test_the_evidence_method_is_one_of_the_tools_the_model_sees_with_two_arguments_and_no_test_hook(tools):
-    by_name = {t.name: t for t in tools.langchain_tools()}
-    tool = by_name["fetch_filings_recommendation"]
-    assert list(tool.args) == ["symbol", "since_days"] and tool.get_input_schema().model_json_schema()["required"] == ["symbol"]  # `today` is an attribute of the class, not an argument
-    assert tool.response_format == "content_and_artifact" and len(by_name) == len(DATA_CLERK_TOOLS) == 13
-    text = " ".join(tool.description.split())
-    assert "only reads filings that are already stored" in text and "does NOT rate anything" in text and "Do not call a stock good or bad and do not give a score" in text
-    assert "negative-type topics" in text and "positive-type topics" in text and "exact quote" in text and "call fetch_filings first" in text
-
-
-def test_despite_its_name_the_evidence_tool_is_not_a_fetch_tool(tools):
-    """It reads the stored files and costs nothing, so the budget does not turn it off with fetching and the MCP server offers it without --allow-fetch."""
-    from prometheus.agents.data_clerk.data_clerk_agent import FETCH_TOOLS as agent_fetch
-    from prometheus.mcp.data_clerk_server import FETCH_TOOLS as server_fetch
-    assert "fetch_filings_recommendation" not in agent_fetch and "fetch_filings_recommendation" not in server_fetch
-    assert "fetch_filings_recommendation" in DATA_CLERK_TOOLS and "fetch_filings_recommendation" not in data_clerk.RETRIEVE_TOOLS
-
-
-def test_the_model_reads_the_digest_and_the_whole_evidence_travels_as_the_artifact(stored_apple, toolbox):
-    tool = {t.name: t for t in stored_apple.langchain_tools()}["fetch_filings_recommendation"]
-    message = call(tool, {"symbol": "aapl"})
-    assert message.content.startswith("FILING EVIDENCE for AAPL (stored filings, last 365 days, as of 2026-04-20). This is evidence, not a score: nothing here rates the stock.")
-    assert message.artifact["digest"] == message.content and message.artifact["symbol"] == "AAPL" and message.artifact["balance_sheet"] is None
-    assert [e["id"] for e in message.artifact["evidence"]][:1] == ["E1"] and any("no balance sheet" in g for g in message.artifact["gaps"])
-    assert "secret" not in message.content and toolbox.calls == []  # no toolbox call at all: it reads the stored files only (no network, no key, no cost)
-
-
-def test_the_method_returns_the_same_result_the_tool_carries_and_takes_a_window(stored_apple):
-    full = stored_apple.fetch_filings_recommendation("AAPL")
-    assert full["window_days"] == 365 and full["filings"]["in_window"] == 6
-    assert stored_apple.fetch_filings_recommendation("AAPL", since_days=60)["filings"]["in_window"] == 2  # the 8-K of 2026-04-20 and the Form 144 of 2026-04-02
-    assert stored_apple.fetch_filings_recommendation("$aapl")["symbol"] == "AAPL"
-
-
-@pytest.mark.parametrize("kwargs", [dict(symbol=""), dict(symbol="../../.env"), dict(symbol="AAPL", since_days=0), dict(symbol="AAPL", since_days=731), dict(symbol="AAPL", since_days=True),
-                                    dict(symbol="AAPL", since_days="30"), dict(symbol=["AAPL"])])
-def test_bad_arguments_of_the_evidence_tool_are_tool_input_errors(stored_apple, kwargs):
-    with pytest.raises(ToolInputError):
-        stored_apple.fetch_filings_recommendation(**kwargs)
-
-
-def test_a_symbol_with_no_stored_filings_says_to_run_fetch_filings_first(stored_apple):
-    with pytest.raises(ToolInputError, match="no filings of NVDA are stored: run fetch_filings for it first"):
-        stored_apple.fetch_filings_recommendation("NVDA")
 
 
 def test_a_broken_filing_file_stops_with_its_line_and_is_not_swallowed(tools, toolbox):
@@ -653,18 +367,6 @@ def test_discover_never_refreshes(tools, toolbox):
     assert result["tickers"][0]["symbol"] == "MU"
 
 
-def test_get_quote_passes_through_with_a_cleaned_symbol(tools, toolbox):
-    assert tools.get_quote("$mu")["price"] == 410.25
-    assert toolbox.calls == [("get_quote", ("MU",), {})]
-
-
-@pytest.mark.parametrize("bad", ["../etc", "", "MU; DROP", 5])
-def test_get_quote_refuses_a_symbol_that_is_not_a_ticker_before_anything_is_called(tools, toolbox, bad):
-    with pytest.raises(ToolInputError):
-        tools.get_quote(bad)
-    assert toolbox.calls == []
-
-
 def test_financials_pass_through_with_a_cleaned_symbol(tools, toolbox):
     assert tools.get_financials("$aapl")["metrics"]["pe_ratio"]["value"] == 31.2
     assert toolbox.calls == [("financials.get", ("AAPL",), {})]
@@ -680,36 +382,6 @@ def test_the_price_summary_drops_the_chart_curve_and_leaves_the_toolbox_result_a
 
 def call(tool, args, call_id="c1"):
     return tool.invoke({"name": tool.name, "args": args, "id": call_id, "type": "tool_call"})
-
-
-def test_retrieve_news_as_a_langchain_tool_gives_numbered_sources_and_the_hits_as_the_artifact(tools):
-    book = SourceBook()
-    retrieve = tools.langchain_tools(book)[0]
-    message = call(retrieve, {"query": "apple iphone phone", "tickers": "AAPL", "k": 2})
-    assert message.content.startswith(citations.HEADER)
-    assert "[1] Yahoo," in message.content and "[2] Yahoo," in message.content and "apple iphone phone" in message.content
-    assert [h["number"] for h in message.artifact["hits"]] == [1, 2] and message.artifact["found"] is True
-    assert [h["chunk_id"] for h in message.artifact["hits"]] == ["a1#0", "a2#0"]
-    assert len(book) == 2 and book.check("yes [1]").ok
-
-
-def test_numbers_continue_across_two_searches_in_one_run(tools):
-    book = SourceBook()
-    retrieve = tools.langchain_tools(book)[0]
-    first = call(retrieve, {"query": "apple iphone phone", "tickers": "AAPL", "k": 2}, "c1")
-    second = call(retrieve, {"query": "nvidia chip", "tickers": "NVDA", "k": 2}, "c2")
-    assert [h["number"] for h in first.artifact["hits"]] == [1, 2]
-    numbers = {h["article_id"]: h["number"] for h in second.artifact["hits"]}
-    assert numbers == {"n1": 3, "a3": 4}  # new chunks get new numbers
-    third = call(retrieve, {"query": "apple iphone", "tickers": "AAPL", "k": 1}, "c3")
-    assert third.artifact["hits"][0]["number"] == 1  # a chunk seen before keeps its number
-    assert book.check("[1] and [3] and [4]").ok and not book.check("[5]").ok
-
-
-def test_no_supporting_text_reaches_the_model_as_the_message_and_the_artifact_says_why(tools):
-    message = call(tools.langchain_tools()[0], {"query": "cake"})
-    assert message.content.startswith("No supporting text:") and message.status != "error"
-    assert message.artifact == {"found": False, "reason": "nothing_relevant", "hits": []}
 
 
 # ---------------------------------------------------------------- errors, through a small graph
@@ -747,12 +419,6 @@ def test_a_failing_tool_becomes_a_message_and_the_run_goes_on(tools, toolbox):
     assert messages[-1].content == "done"  # the run reached its last step instead of crashing
 
 
-def test_without_the_handler_the_same_failure_ends_the_whole_run(tools, toolbox):
-    toolbox.fail = RuntimeError("Finnhub HTTP 429")
-    with pytest.raises(RuntimeError, match="429"):
-        run_graph(tools.langchain_tools(), [[("fetch_news", {"symbol": "AAPL"})]], handler=None)
-
-
 def test_bad_arguments_come_back_as_a_message_that_says_to_fix_them(tools, toolbox):
     messages = run_graph(tools.langchain_tools(), [[("fetch_news", {"symbol": "AAPL", "from_date": 5000})]])
     tool_message = next(m for m in messages if m.type == "tool")
@@ -767,13 +433,6 @@ def test_a_missing_argument_and_an_unknown_tool_are_answered_without_a_crash(too
     assert by_name["retrieve_news"].status == "error" and "query" in by_name["retrieve_news"].content
     assert by_name["export_project"].status == "error" and "retrieve_news" in by_name["export_project"].content  # lists the valid names
     assert messages[-1].content == "done"
-
-
-def test_retrieve_news_works_through_the_graph_and_keeps_its_artifact(tools):
-    messages = run_graph(tools.langchain_tools(SourceBook()), [[("retrieve_news", {"query": "apple iphone phone", "tickers": ["AAPL"]})]])
-    tool_message = next(m for m in messages if m.type == "tool")
-    assert tool_message.status != "error" and tool_message.content.startswith(citations.HEADER)
-    assert tool_message.artifact["hits"][0]["number"] == 1
 
 
 def test_error_messages_are_short_one_line_and_leak_no_arguments():

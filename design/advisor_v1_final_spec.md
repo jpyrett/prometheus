@@ -785,3 +785,35 @@ Section 5.5's metric `dilution_current` is removed from the Data Clerk, and ever
 - **Section 15.2**: `tests/test_trade_plan.py` no longer tests `oversized`, the liquidity cap or `funds_feasible` (the Account Manager's sizing tests do); the new tests are `tests/test_trade_plan_real.py` and `tests/test_advisor_no_size.py`.
 
 Reasons and what it costs: `docs/design_choices.md` entry 80.
+
+
+## Amendment 10 (2026-11-15, Jacob): the Advisor is not run for a trade the user names
+
+"Skip generating recommendations if the User directly wants to place specific trades." A request such as "Buy 50 shares of MSFT" names the trade; it asks for no advice. The Account Manager reads it as a DIRECT ORDER (`action: "order"` in its form, `prometheus/agents/account_manager/intent.py`), and the desk takes the work order from the Account Manager's reading of the request to its decision and on to the Trader: `account_manager -> account_manager_direct -> trader`. The Data Clerk's search, **the Advisor** and the Critic are skipped (the Critic's step is auto-approved by the user's own order: no review is made, none is forged).
+
+- **Sections 1 and 2 (what the Advisor is called with)**: `generate_recommendations` is called only for a request for recommendations (a symbol, a list, a company, a phrase, "buy the 3 most recommended ..."). A direct order never reaches it: no record is generated, nothing is ledgered, and the cooldown of a company is not started by it. The Advisor's contract is unchanged; `tests/test_direct_order.py` builds the desk with an Advisor factory that fails the test if it is called.
+- **Section 14 (record)**: a direct order has NO recommendation record. The user's own order is a record of the work order's `direct_orders` (side, ticker, shares, the user's words) and the Account Manager's decision for it carries `origin: "direct"`; the Trader's permission (`work_order.verify_trade`) reads that, and only a decision of that kind may trade without a Critic review.
+- **Nothing else in this spec changes.** A request for recommendations, a holding to review (section 9.7), the Critic's verdicts and the Account Manager's sizing are as before; "Buy $5,000 of MSFT" (a dollar amount is not a number of shares) is still a request to recommend.
+
+Reasons and what it costs: `docs/design_choices.md` entry 87.
+
+## Amendment 11 (2026-11-15, design choices entry 93): there is no liquidity gate
+
+Jacob: *"There are no liquidity gates at all for the Advisor."* The text above is left as it was written; where it lists the `liquidity` gate, this note wins.
+
+- **Section 9.1 (gates).** Four gates remain: `no_metrics`, `freshness`, `red_flag`, `event_risk`. `liquidity` (`adv_20d_dollars` under $5,000,000, a price under $5, a median spread over 20 bps, or a volume that cannot be read) is removed, with its three thresholds in `configs/advisor_v1.json` (`gates.min_adv_dollars`, `gates.min_price`, `gates.max_spread_bps`; a file that still has them is refused). A holding is no longer treated differently from a new idea by the gates (that exemption existed only for this gate), so `run_gates` has no `held` argument.
+- **Section 5 and the metric lists.** `adv_20d_dollars` is still calculated and requested (it is a metric of the Data Clerk's catalog); no rule reads it.
+- **The record.** A recommendation lists four gates, not five. A capture made before this amendment still holds a `liquidity` gate record; the `gate` field is a string and such a record is valid.
+
+**Added the same day (design choices entry 94):** *"We don't want any of this advisor liquidity anywhere."* The Advisor no longer asks the Data Clerk for `adv_20d_dollars` or `median_spread_bps_1d` (sections 5 and 9: the gate and risk metric lists), the `risk` block of the record (section 10) has neither field (a record that has them is still read), the order style (section 12) no longer looks at a spread (`trade.limit_spread_bps` is removed from the config: a marketable limit for the trend family depends only on the 200-day mean), and the report's key numbers have no daily-dollars column.
+
+**And the Data Clerk (design choices entry 95):** *"We do not want any code and tests that handle any spread, the daily-dollars requests."* The Data Clerk no longer calculates `adv_20d_dollars` (`technicals.adv_20d_dollars`, the catalog entry of the `risk` group) and the catalog no longer lists `median_spread_bps_1d`; the metric tables of sections 5 and 6 that name them are history.
+
+The Finnhub 10-day average volume (`adv_10d_provider`, section 5.4's list of Finnhub fields) is removed too (design choices entry 96).
+
+## Amendment 12 (2026-11-15, design choices entry 97): no market capitalization and no net payout yield
+
+Jacob: *"Delete all code and tests that use or checks: market cap."* The text above is left as it was written; where it names the market capitalization or the net payout yield, this note wins.
+- **Section 5.4 (metrics) and 6 (families).** The Data Clerk no longer calculates `market_cap` or `net_payout_yield_ttm` (`(buybacks + dividends - stock issued) / market cap` cannot exist without its denominator). The `event` family has no large-cap haircut (`large_cap`, `large_cap_factor` removed). The `capital_return` family passes when the **share count fell at least 0.5%** (`min_share_count_change`), the share count did not rise, debt to equity is at most 2 (waived at negative equity), earnings yield is positive, dividends are covered and revenue is not falling more than 5%; it scores `0.40 + 0.15 + 0.10` (share count down more than 1%) `+ 0.10` (a buyback authorization or dividend raise in the last 60 bars, halved when larger than the cash) `+ 0.10` (revenue growth); config keys `w_buyback` (was `w_missing_payout`), and no `min_net_payout_yield`, `w_payout` or `payout_scale`.
+- **Section 7 (the blend).** The `filings` part (10%) has three measures: share count change, payout coverage and cash flow against profit (plus the verified filing-evidence items).
+- **Section 10 (the record).** `identity.market_cap` is removed (a record that has it is read and the key dropped). The report's key numbers have no "Market cap" or "Net payout yield" row.

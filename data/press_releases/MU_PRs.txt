@@ -1,0 +1,342 @@
+<<<PRESS_RELEASE>>>
+id: 7ce21d636219e4ab
+symbol: MU
+published_utc: 2025-11-19T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-technology-report-fiscal-first-quarter-results-december-17-2025-2025-11-19
+headline: Micron Technology to Report Fiscal First Quarter Results on December 17, 2025
+<<<TEXT>>>
+--Micron Technology, Inc. announced today that it will hold its fiscal first quarter earnings conference call on Wednesday, Dec. 17, 2025, at 2:30 p.m. Mountain time. About Micron Technology, Inc. We are an industry leader in innovative memory and storage solutions transforming how the world uses information to enrich life for all. To learn more about Micron...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9acbc8994878e9e0
+symbol: MU
+published_utc: 2025-12-03T11:40:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-exit-crucial-consumer-business-2025-12-03
+headline: Micron Announces Exit from Crucial Consumer Business
+<<<TEXT>>>
+--Micron Technology, Inc., a leader in innovative memory and storage solutions, today announced its decision to exit the Crucial consumer business, including the sale of Crucial consumer-branded products at key retailers, e-tailers and distributors worldwide. Micron will continue Crucial consumer product shipments through the consumer channel until the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0f83d5c2e367db8f
+symbol: MU
+published_utc: 2025-12-17T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-technology-inc-reports-results-first-quarter-fiscal-2026-2025-12-17
+headline: Micron Technology, Inc. Reports Results for the First Quarter of Fiscal 2026
+<<<TEXT>>>
+--Micron Technology, Inc. today announced results for its first quarter of fiscal 2026, which ended November 27, 2025. Revenue of $13.64 billion versus $11.32 billion for the prior quarter and $8.71 billion for the same period last year GAAP net income of $5.24 billion, or $4.60 per diluted share Non-GAAP net income of $5. 48 billion, or $4.78 per diluted share...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4bd0d73788097312
+symbol: MU
+published_utc: 2026-01-07T09:00:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-groundbreaking-historic-new-york-megafab-2026-01-07
+headline: Micron Announces Groundbreaking for Historic New York Megafab
+<<<TEXT>>>
+--Micron Technology, Inc. today announced that on Jan. 16, 2026, it will officially break ground on its megafab in Onondaga County, New York. "Breaking ground at Micron’ s New York megafab is a pivotal moment for Micron and the United States," said Sanjay Mehrotra, Chairman, President and CEO of Micron Technology." I want to thank President Trump, Secretary Lutnick,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 58517cc4aa14b962
+symbol: MU
+published_utc: 2026-01-13T09:00:00Z
+url: https://www.nasdaq.com/press-release/bertram-capital-promotes-chris-brown-partner-2026-01-13
+headline: Bertram Capital Promotes Chris Brown to Partner
+<<<TEXT>>>
+--Bertram Capital, a middle market private equity firm, today announced the promotion of Chris Brown to Partner. Mr. Brown also played a key role in managing Bertram investments in Flow Control Group and Solo Stove.  "Chris's promotion reflects the impact he has had over many years at Bertram," said Jeff Drazan, Managing Partner at Bertram Capital.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d1e5622163a7f657
+symbol: MU
+published_utc: 2026-01-16T08:30:00Z
+url: https://www.nasdaq.com/press-release/micron-celebrates-official-groundbreaking-new-york-megafab-site-2026-01-16
+headline: Micron Celebrates Official Groundbreaking at New York Megafab Site
+<<<TEXT>>>
+--Micron Technology, Inc. will officially break ground today on its $100 billion leading-edge memory manufacturing complex in Onondaga County, New York. "Breaking ground at Micron’ s New York megafab underscores our commitment to building leading‑ edge memory at scale in the United States," said Sanjay Mehrotra, Chairman, President and CEO of Micron Technology." We...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5f0b04a78bb2339d
+symbol: MU
+published_utc: 2026-01-17T04:00:00Z
+url: https://www.nasdaq.com/press-release/micron-signs-letter-intent-purchase-tongluo-site-begin-strategic-partnership-psmc
+headline: Micron Signs Letter of Intent to Purchase Tongluo Site, Begin Strategic Partnership with PSMC
+<<<TEXT>>>
+--Micron Technology, Inc. today announced it has signed an exclusive Letter of Intent to acquire Powerchip Semiconductor Manufacturing Corporation’ s P5 fabrication site in Tongluo, Miaoli County, Taiwan, for total cash consideration of US $1.8 billion. "This strategic acquisition of an existing cleanroom complements our current Taiwan operations and will...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: efc1c04e023faa21
+symbol: MU
+published_utc: 2026-01-26T21:30:00Z
+url: https://www.nasdaq.com/press-release/micron-breaks-ground-advanced-wafer-fabrication-facility-singapore-2026-01-27
+headline: Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore
+<<<TEXT>>>
+--Micron Technology, Inc. broke ground today on an advanced wafer fabrication facility located within the company's existing NAND manufacturing complex in Singapore. The groundbreaking ceremony for this facility, Singapore’ s first double-story wafer manufacturing fab, was marked by the attendance of Gan Kim Yong, deputy prime minister and minister for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c7c9b89f714483fc
+symbol: MU
+published_utc: 2026-01-27T16:13:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-participation-investor-event-2026-01-27
+headline: Micron Announces Participation in Investor Event
+<<<TEXT>>>
+--Micron Technology, Inc. announced today that company executives will participate at the Wolfe Research Auto, Auto Tech and Semiconductor Conference in New York, New York on Wednesday, February 11, at 6:50 a.m. Mountain time. About Micron Technology, Inc. Micron Technology, Inc. is an industry leader in innovative memory and storage solutions transforming...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2baa41edd44d4a0a
+symbol: MU
+published_utc: 2026-02-24T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-technology-report-fiscal-second-quarter-results-march-18-2026-2026-02-24
+headline: Micron Technology to Report Fiscal Second Quarter Results on March 18, 2026
+<<<TEXT>>>
+--Micron Technology, Inc. announced today that it will hold its fiscal second quarter earnings conference call on Wednesday, Mar. 18, 2026, at 2:30 p.m. Mountain time. About Micron Technology, Inc. Micron Technology, Inc. is an industry leader in innovative memory and storage solutions transforming how the world uses information to enrich life for all.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6c1b10915f6f943d
+symbol: MU
+published_utc: 2026-02-28T07:00:00Z
+url: https://www.nasdaq.com/press-release/micron-celebrates-opening-indias-first-semiconductor-assembly-and-test-facility-2026
+headline: Micron Celebrates Opening of India’s First Semiconductor Assembly and Test Facility
+<<<TEXT>>>
+--Micron Technology, Inc. today celebrated the grand opening of its semiconductor assembly and test facility in Sanand, Gujarat, India. Micron Chairman, President and CEO Sanjay Mehrotra and other executives witnessed the opening ceremony with Prime Minister Narendra Modi, Chief Minister of Gujarat Bhupendra Patel, Union Minister for Railways,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fdd44c92ed1f5550
+symbol: MU
+published_utc: 2026-03-03T09:00:00Z
+url: https://www.nasdaq.com/press-release/micron-sets-new-benchmark-worlds-first-high-capacity-256gb-lpdram-socamm2-data-center
+headline: Micron Sets New Benchmark With the World's First High-Capacity 256GB LPDRAM SOCAMM2 for Data Center Infrastructure
+<<<TEXT>>>
+--Micron Technology, Inc. today extended its leadership in low-power server memory by shipping customer samples of the industry’ s highest-capacity LPDRAM module— 256 GB SOCAMM2. Enabled by the industry’ s first monolithic 32 Gb LPDDR5X design, this milestone represents a transformational step forward for AI data centers, delivering low-power memory...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: add9a0cb989f631c
+symbol: MU
+published_utc: 2026-03-15T19:00:00Z
+url: https://www.nasdaq.com/press-release/micron-completes-acquisition-psmcs-tongluo-p5-site-taiwan-2026-03-15
+headline: Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan
+<<<TEXT>>>
+--Micron Technology, Inc. today announced it has completed the acquisition and assumed ownership of Powerchip Semiconductor Manufacturing Corporation’ s P5 site in Tongluo, Miaoli County, Taiwan, under the acquisition agreement previously announced on January 17, 2026. "The Tongluo facility complements our Taiwan operations and is a critical component of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7a0b0b546e25346d
+symbol: MU
+published_utc: 2026-03-16T17:00:00Z
+url: https://www.nasdaq.com/press-release/micron-high-volume-production-hbm4-designed-nvidia-vera-rubin-pcie-gen6-ssd-and
+headline: Micron in High-Volume Production of HBM4 Designed for NVIDIA Vera Rubin, PCIe Gen6 SSD and SOCAMM2
+<<<TEXT>>>
+--GTC 2026— AI-optimized memory and storage have become strategic assets driving system performance to enable AI workloads and infrastructure to deliver real-world value. Micron Technology, Inc., has begun volume shipment of its HBM4 36 GB 12 H in the first quarter of calendar year 2026 and is designed for NVIDIA Vera Rubin. Our close collaboration with NVIDIA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6fe6144ffe7eada2
+symbol: MU
+published_utc: 2026-03-18T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-technology-inc-reports-results-second-quarter-fiscal-2026-2026-03-18
+headline: Micron Technology, Inc. Reports Results for the Second Quarter of Fiscal 2026
+<<<TEXT>>>
+--Micron Technology, Inc. today announced results for its second quarter of fiscal 2026, which ended February 26, 2026. Revenue of $23.86 billion versus $13.64 billion for the prior quarter and $8.05 billion for the same period last year GAAP net income of $13.79 billion, or $12.07 per diluted share Non-GAAP net income of $14. 02 billion, or $12.20 per diluted...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 10543eb2a942a0cc
+symbol: MU
+published_utc: 2026-03-25T08:17:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-cash-tender-offers-any-and-all-certain-outstanding-senior-notes-2026
+headline: Micron Announces Cash Tender Offers for Any and All of Certain Outstanding Senior Notes
+<<<TEXT>>>
+--Micron Technology, Inc., announced today that it has commenced offers to purchase for cash any and all of the notes listed in the table below. The Tender Offers will expire at 5:00 p.m., New York City time, on March 31, 2026, unless extended or earlier terminated as described in the offer to purchase. Persons with questions regarding the Tender Offers should...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 724f9bdadd20ffca
+symbol: MU
+published_utc: 2026-03-31T16:40:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-pricing-cash-tender-offers-any-and-all-certain-outstanding-senior
+headline: Micron Announces the Pricing of the Cash Tender Offers for Any and All of Certain Outstanding Senior Notes
+<<<TEXT>>>
+--Micron Technology, Inc., announced today the Reference Yield and Notes Consideration to be paid in connection with the previously announced cash tender offers. The Tender Offers will expire at 5:00 p.m., New York City time, on March 31, 2026, unless extended or earlier terminated as described in the offer to purchase. The Notes Consideration for each $1,000...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e7b58e18887bcfe9
+symbol: MU
+published_utc: 2026-04-01T08:30:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-expiration-cash-tender-offers-any-and-all-certain-outstanding-senior
+headline: Micron Announces the Expiration of the Cash Tender Offers for Any and All of Certain Outstanding Senior Notes
+<<<TEXT>>>
+--Micron Technology, Inc., announced today that the previously announced cash tender offers to purchase any and all of Micron’ s senior notes listed in the table below expired at 5:00 p.m., New York City time, on March 31, 2026. BofA Securities, Morgan Stanley& Co. LLC, and Wells Fargo Securities, LLC acted as lead dealer managers. Persons with questions regarding the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 76c76b6ea24bf7b2
+symbol: MU
+published_utc: 2026-04-08T08:30:00Z
+url: https://www.nasdaq.com/press-release/simaai-secures-strategic-investment-micron-scale-high-performance-power-efficient
+headline: SiMa.ai Secures Strategic Investment from Micron to Scale High-Performance, Power-Efficient Physical AI
+<<<TEXT>>>
+--SiMa.ai, a leader in Physical AI, today announced a strategic investment from Micron Technology, Inc., strengthening its ability to scale production-ready, high-performance Physical AI solutions for real-world intelligent systems. The investment deepens the companies' collaboration around tightly integrated compute and memory architectures...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2e19be6145474f37
+symbol: MU
+published_utc: 2026-04-29T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-participation-investor-event-2026-04-29
+headline: Micron Announces Participation in Investor Event
+<<<TEXT>>>
+--Micron Technology, Inc. announced today that company executives will participate at the J.P. About Micron Technology, Inc. Micron Technology, Inc. is an industry leader in innovative memory and storage solutions transforming how the world uses information to enrich life for all. To learn more about Micron Technology, Inc., visit micron.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 51a0b25548811592
+symbol: MU
+published_utc: 2026-05-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/industry-leading-245tb-micron-6600-ion-data-center-ssd-now-shipping-2026-05-05
+headline: Industry-Leading 245TB Micron 6600 ION Data Center SSD Now Shipping
+<<<TEXT>>>
+--Micron Technology, Inc., today announced it is now shipping the 245 TB capacity Micron ® 6600 ION SSD, the world’ s highest capacity commercially available SSD. With 245 TB in a single SSD, the Micron 6600 ION makes solid state storage the clear choice for modern data centers, "said Jeremy Werner, senior vice president and general manager of Micron's Core Data Center...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 29e7d4810f65cff7
+symbol: MU
+published_utc: 2026-05-12T09:01:00Z
+url: https://www.nasdaq.com/press-release/micron-redefines-ai-performance-sampling-256gb-ddr5-server-module-2026-05-12
+headline: Micron Redefines AI Performance With Sampling of 256GB DDR5 Server Module
+<<<TEXT>>>
+--Micron Technology, Inc., today announced it has sampled 256 GB DDR5 registered dual in-line memory modules to key server ecosystem enablers. The module is built on the company’ s leading-edge 1- gamma technology, which is capable of speeds up to 9,200 megatransfers per second, greater than 40% faster than modules in volume production today. 1 Micron’ s module...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4958597234946cf8
+symbol: MU
+published_utc: 2026-05-22T09:25:00Z
+url: https://www.nasdaq.com/press-release/micron-advances-made-america-memory-manufacturing-expansion-virginia-2026-05-22
+headline: Micron Advances Made-in-America Memory With Manufacturing Expansion in Virginia
+<<<TEXT>>>
+--Micron Technology, Inc. today is celebrating the start of 1 α DRAM manufacturing at its Manassas, Virginia, fab, an important step in the company's efforts to significantly expand U.S. memory manufacturing. Micron's Virginia manufacturing expansion serves the automotive, defense and aerospace, industrial, networking and medical device sectors that depend...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e25a1f87f85abb6
+symbol: MU
+published_utc: 2026-05-27T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-technology-report-fiscal-third-quarter-results-june-24-2026-2026-05-27
+headline: Micron Technology to Report Fiscal Third Quarter Results on June 24, 2026
+<<<TEXT>>>
+--Micron Technology, Inc. announced today that it will hold its fiscal third quarter earnings conference call on Wednesday, June 24, 2026, at 2:30 p.m. Mountain time. About Micron Technology, Inc. Micron Technology, Inc. is an industry leader in innovative memory and storage solutions transforming how the world uses information to enrich life for all.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e3ed92a9ff05e85b
+symbol: MU
+published_utc: 2026-06-01T18:00:00Z
+url: https://www.nasdaq.com/press-release/micron-powers-ai-everywhere-computex-2026-2026-06-01
+headline: Micron Powers AI Everywhere at COMPUTEX 2026
+<<<TEXT>>>
+--Micron Technology, Inc. today announced a showcase of its full portfolio of AI-optimized memory and storage solutions during COMPUTEX 2026, empowering next-generation AI data center and intelligent edge applications. As AI workloads expand from training to large-scale inference, including reasoning-heavy and agent-based systems, the demands on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6eb1e72f9a20643d
+symbol: MU
+published_utc: 2026-06-09T00:37:00Z
+url: https://www.nasdaq.com/press-release/defiance-launches-muz-first-2x-short-etf-micron-technology-inc-2026-06-09
+headline: Defiance Launches MUZ: The First 2X Short ETF for Micron Technology, Inc.
+<<<TEXT>>>
+MUZ is designed for traders seeking magnified, short-term bearish exposure to Micron Technology, Inc., one of the world's leading designers and manufacturers of memory and storage technologies. The Fund seeks daily inverse investment results, before fees and expenses, of -2 times the daily percentage change in the share price of Micron Technology, Inc..
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b59dbca8651a11dc
+symbol: MU
+published_utc: 2026-06-09T16:05:00Z
+url: https://www.nasdaq.com/press-release/micron-appoints-alexis-black-bjorlin-board-directors-2026-06-09
+headline: Micron Appoints Alexis Black Björlin to Board of Directors
+<<<TEXT>>>
+--Micron Technology, Inc. today announced the appointment of Dr. She has also held senior leadership roles at several other leading technology companies, including vice president of infrastructure at Meta Platforms, senior vice president and general manager of the Optical Systems division at Broadcom, corporate vice president of Intel’ s Data Center Group...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6c065eff87660808
+symbol: MU
+published_utc: 2026-06-10T09:05:00Z
+url: https://www.nasdaq.com/press-release/micron-selects-bechtel-construction-partner-historic-new-york-semiconductor-project
+headline: Micron Selects Bechtel as Construction Partner for Historic New York Semiconductor Project
+<<<TEXT>>>
+--Micron Technology, Inc. and Bechtel announced today that Micron has selected Bechtel to partner on the engineering, procurement and construction of the first phase of Micron’ s historic leading-edge memory manufacturing complex in Clay, New York, which is planned to become the nation's largest semiconductor manufacturing facility. Bechtel will mobilize...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b892b3ae456e04b
+symbol: MU
+published_utc: 2026-06-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/micron-and-anthropic-announce-strategic-agreement-scale-next-generation-ai
+headline: Micron and Anthropic Announce Strategic Agreement to Scale Next-Generation AI Infrastructure
+<<<TEXT>>>
+--Micron Technology, Inc. today announced a strategic agreement with Anthropic that spans memory and storage AI architecture design, supply and demand, enterprise adoption of Claude across Micron and a strategic investment in Anthropic’ s Series H funding round. The agreement directly links the demands of frontier AI models to how infrastructure is designed,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ac77f5523b94ce6c
+symbol: MU
+published_utc: 2026-06-24T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-technology-inc-reports-record-results-third-quarter-fiscal-2026-2026-06-24
+headline: Micron Technology, Inc. Reports Record Results for the Third Quarter of Fiscal 2026
+<<<TEXT>>>
+--Micron Technology, Inc. today announced results for its third quarter of fiscal 2026, which ended May 28, 2026. Revenue of $41.46 billion versus $23.86 billion for the prior quarter and $9.30 billion for the same period last year GAAP net income of $28.24 billion, or $24.67 per diluted share Non-GAAP net income of $28. 86 billion, or $25.11 per diluted share...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3fb2ca019bbd7981
+symbol: MU
+published_utc: 2026-06-30T09:22:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-250-million-investment-trump-accounts-reaching-1-million-children
+headline: Micron Announces $250 Million Investment in Trump Accounts Reaching 1 Million Children, Families and the Future Workforce
+<<<TEXT>>>
+--In honor of America’ s 250 th anniversary, Micron Technology, Inc. today announced a $250 million investment to increase long-term savings opportunities for children and families through Trump Accounts. Additionally, Micron will provide a community benefit of a one-time $250 seed deposit for children with Trump Accounts where Micron operates in Idaho, New...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1e329fa406c6bcfe
+symbol: MU
+published_utc: 2026-07-01T08:30:00Z
+url: https://www.nasdaq.com/press-release/micron-and-general-motors-sign-strategic-agreement-secure-supply-and-accelerate
+headline: Micron and General Motors Sign Strategic Agreement to Secure Supply and Accelerate Innovation
+<<<TEXT>>>
+Micron and GM are working together to strengthen semiconductor and automotive supply chains while supporting the next generation of U.S. manufacturing and innovation. In addition to the committed supply in this agreement, Micron and GM continue to collaborate on future memory and storage technology requirements essential for the next generation of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5db1d9fe45699262
+symbol: MU
+published_utc: 2026-07-06T08:30:00Z
+url: https://www.nasdaq.com/press-release/micron-and-ford-sign-strategic-agreement-strengthen-long-term-memory-supply-and
+headline: Micron and Ford Sign Strategic Agreement to Strengthen Long-Term Memory Supply and Industry Resilience
+<<<TEXT>>>
+--Micron Technology, Inc. and Ford Motor Company today announced a long-term Strategic Customer Agreement to strengthen the supply of memory and storage solutions supporting Ford’ s next-generation vehicle production. "Producing the high-volume vehicles of the future in the U.S. will require a resilient supply chain," said Jim Farley, President and CEO of Ford...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b9733349e8d4987a
+symbol: MU
+published_utc: 2026-07-09T08:30:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-3-billion-strategic-investment-strengthen-us-semiconductor-ecosystem
+headline: Micron Announces Up to $3 Billion Strategic Investment to Strengthen U.S. Semiconductor Ecosystem
+<<<TEXT>>>
+--Micron Technology, Inc. today announced plans to invest up to $3 billion to strengthen the U.S. semiconductor supply-chain ecosystem and enable the critical semiconductor manufacturing footprint needed for future technology innovation. As part of Micron’ s planned investment into the U.S. supply chain, the company will provide GlobalWafers Co., Ltd. with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6772ba19d320d311
+symbol: MU
+published_utc: 2026-07-09T08:45:00Z
+url: https://www.nasdaq.com/press-release/micron-accelerates-us-investments-pours-first-concrete-new-york-fab-2026-07-09
+headline: Micron Accelerates U.S. Investments, Pours First Concrete at New York Fab
+<<<TEXT>>>
+--Micron Technology, Inc. today announced it is accelerating its planned U.S. fab and technology investments and increasing its expected spend to more than $250 billion through 2035, driven by surging demand for memory in the AI era. Secretary of Commerce Howard Lutnick, New York Governor Kathy Hochul, Small Business Administration Administrator Kelly...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2ccb5462dc097343
+symbol: MU
+published_utc: 2026-07-15T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-announces-participation-investor-event-2026-07-15
+headline: Micron Announces Participation in Investor Event
+<<<TEXT>>>
+--Micron Technology, Inc. announced today that company executives will participate at the KeyBanc Capital Markets Technology Leadership Forum in Deer Valley, Utah, on Monday, August 10, at 8:00 a.m. Mountain Time. Live webcasts and subsequent replays of presentations can be accessed from Micron’ s Investor Relations website at investors.micron.com/.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e5b583a050a3cd13
+symbol: MU
+published_utc: 2026-07-16T09:00:00Z
+url: https://www.nasdaq.com/press-release/micron-strengthens-automotive-ecosystem-supply-through-strategic-customer-agreements
+headline: Micron Strengthens Automotive Ecosystem Supply Through Strategic Customer Agreements
+<<<TEXT>>>
+--Micron Technology, Inc. has completed Strategic Customer Agreements with key Tier 1 suppliers and ecosystem partners supporting the global automotive industry and automotive manufacturers. Automotive platforms require consistent, high-quality component supply over extended lifecycles, making continuity and reliability of memory and storage a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f1f8e3406af02ce5
+symbol: MU
+published_utc: 2026-08-13T16:01:00Z
+url: https://www.nasdaq.com/press-release/micron-ventures-launches-250-million-fund-invest-next-generation-ai-2026-08-13
+headline: Micron Ventures Launches $250 Million Fund to Invest in the Next Generation of AI
+<<<TEXT>>>
+Micron Ventures’ third and largest fund to date, the Paradigm Fund will invest across the full AI technology stack, from model architectures and compute infrastructure to enterprise applications and physical AI. Micron’ s Paradigm Fund will invest in and partner with startups driving these innovations and strengthen our ability to deliver leading memory...
+<<<END>>>

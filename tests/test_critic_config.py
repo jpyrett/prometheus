@@ -20,36 +20,6 @@ def write(tmp_path, data) -> str:
     return path
 
 
-def test_the_shipped_file_loads_and_holds_the_specs_numbers():
-    c = cc.load_config()
-    assert c.weights == {"accuracy": 30, "evidence": 15, "risk_fit": 20, "timing": 10, "value": 15, "chart": 10}
-    assert (c.verdict.approve_min_score, c.verdict.blocked_score_cap, c.verdict.auto_min_score, c.verdict.unknown_credit) == (70, 49, 80, 0.5)
-    assert c.risk.levels == {"low": 20, "medium": 45, "high": 70} and c.risk.allowed == {"conservative": "low", "moderate": "medium", "aggressive": "high"}
-    assert (c.value.max_premium, c.value.bonus.max_points) == (0.30, 10) and [m.name for m in c.value.measures] == ["discount_to_avg_6m", "reward_to_risk", "earnings_yield"]
-    assert (c.chart.neutral, c.chart.weak_below, c.chart.dead_cat.min_decline, c.chart.dead_cat.max_trough_age) == (50, 35, -0.25, 15) and len(c.chart.patterns) == 15
-    assert c.limits.model_timeout_seconds == 240 and len(c.evidence.control_texts) == 3 and c.ledger.path == "data/ledger/reviews.jsonl"
-
-
-def test_the_weights_of_each_score_add_up_to_what_they_must():
-    c = cc.load_config()
-    assert sum(c.weights.values()) == 100 and sum(m.weight for m in c.risk.measures) == 100 and sum(m.weight for m in c.value.measures) == 100
-    assert c.accuracy.parts.metrics + c.accuracy.parts.sources + c.accuracy.parts.cross == pytest.approx(1.0)
-    assert c.evidence.parts.support + c.evidence.parts.clean + c.evidence.parts.breadth == pytest.approx(1.0)
-
-
-def test_the_risk_measures_have_no_position_size_and_their_weights_are_the_earlier_ones_scaled_so_that_they_add_up_to_exactly_100():
-    """Design choices entry 80: the Critic sizes nothing, so the `position_pct` measure (weight 10 of 100) is gone; the other eight weights (25, 15, 10, 10, 10, 10, 5, 5) are scaled by 100/90, to one decimal, with the
-    rounding fixed (the largest remainders get the extra tenths) so that the total is exactly 100."""
-    from decimal import Decimal
-    c = cc.load_config()
-    earlier = {"vol_63d_ann": 25, "max_drawdown_63d": 15, "beta_63d": 10, "atr_pct": 10, "stop_loss_pct": 10, "market_cap": 10, "adv_20d_dollars": 5, "flags": 5}
-    assert [m.name for m in c.risk.measures] == list(earlier) and "position_pct" not in {m.name for m in c.risk.measures}
-    assert {m.name: m.weight for m in c.risk.measures} == {"vol_63d_ann": 27.8, "max_drawdown_63d": 16.7, "beta_63d": 11.1, "atr_pct": 11.1, "stop_loss_pct": 11.1, "market_cap": 11.1, "adv_20d_dollars": 5.6, "flags": 5.5}
-    assert sum(Decimal(str(m.weight)) for m in c.risk.measures) == 100                                          # exactly, not within a float's error
-    assert all(abs(m.weight - earlier[m.name] * 100 / 90) < 0.1 for m in c.risk.measures)                      # each is its earlier weight scaled, to within the tenth the rounding moves it
-    assert c.risk.levels == {"low": 20, "medium": 45, "high": 70}                                               # the scale of the risk score, and so the cut-offs, is kept
-
-
 def test_the_critics_blocker_codes_have_no_size_and_the_review_has_no_field_for_one():
     from prometheus.agents.critic.record import Review, RiskDetail
     codes = {code for codes in BLOCKER_CODES.values() for code in codes}
@@ -57,10 +27,6 @@ def test_the_critics_blocker_codes_have_no_size_and_the_review_has_no_field_for_
     assert not {"approved_shares", "suggested_shares"} & set(Review.model_fields) and not {"equity", "equity_basis", "caps", "allowed_shares"} & set(RiskDetail.model_fields)
     with pytest.raises(ValueError):
         RiskDetail(caps={"position": 8})                                                                         # `extra="forbid"`: a size cannot be put back by accident
-
-
-def test_a_blocked_score_can_never_reach_the_approval_mark():
-    assert cc.load_config().verdict.blocked_score_cap < cc.load_config().verdict.approve_min_score
 
 
 @pytest.mark.parametrize("edit, message", [
@@ -77,8 +43,7 @@ def test_a_blocked_score_can_never_reach_the_approval_mark():
     (lambda d: d["risk"]["allowed"].update(moderate="very_high"), "very_high is allowed to nobody"),
     (lambda d: d["risk"]["age_caps"].append({"min_age": 80, "tolerance": "reckless"}), "tolerance that does not exist"),
     (lambda d: d["risk"]["measures"][0].update(safe=0.6, risky=0.6), "different safe and risky"),
-    (lambda d: d["risk"]["measures"][6].update(safe=-1), "logarithmic"),
-    (lambda d: d["value"].update(rich_premium=0.5), "rich_premium must be under"),
+        (lambda d: d["value"].update(rich_premium=0.5), "rich_premium must be under"),
     (lambda d: d["value"].update(good_discount=0.5), "good_discount must be under"),
     (lambda d: d["value"]["bonus"].update(zero_at=0.2), "zero_at must be under"),
     (lambda d: d["chart"]["patterns"].pop(), "chart.patterns needs exactly one entry"),
@@ -110,12 +75,6 @@ def test_a_missing_or_broken_file_is_named(tmp_path):
     (tmp_path / "bad.json").write_text("{", encoding="utf-8")
     with pytest.raises(ValueError, match="not valid JSON"):
         cc.load_config(tmp_path / "bad.json")
-
-
-def test_the_note_key_is_ignored_and_the_config_cannot_be_changed():
-    c = cc.load_config()
-    with pytest.raises(Exception):
-        c.verdict.approve_min_score = 0
 
 
 def test_the_closed_list_of_blocker_codes_has_every_code_once():

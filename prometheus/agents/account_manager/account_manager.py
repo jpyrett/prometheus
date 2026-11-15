@@ -29,8 +29,17 @@ and reports each fill AT ONCE with `record_fill` (applied to the portfolio and, 
 `apply_earlier_fills` and `current_portfolio` are the two small reads that belong to it. The Trader never asks the Data Clerk, the portfolio or the database itself. `notify_trades` stays for a caller that reports a
 list of fills to a portfolio it holds.
 
-The Account Manager decides HOW MUCH to buy or sell (design choices entry 80: the Advisor and the Critic only deal with recommendations): `decide_trades` sizes every purchase the Critic approved from the user's money and
-limits (`sizing.py`; Auto mode spends the funds round-robin, a share of each stock in turn), and a sale is the whole holding. It asks the Data Clerk for the current prices of the holdings first, when it needs them.
+A NEUTRAL RECOMMENDATION IS APPROVED (design choices entry 91): with `ALLOW_NEUTRAL_RECOMMENDATIONS=true` a company the user named that the Advisor scored neutral counts as approved when `decide_trades` works with the work order's
+recommendation result, and the Trader may buy it (`neutral.py`).
+
+THE ACCOUNT MANAGER DOES NO RISK MANAGEMENT (Jacob, 2026-11-15): it delegates tasks to the other agents, updates the user's profile and portfolio, and works with verifying the trades the Trader has made. The only check on
+an order is that the funds cover it (entry 91).
+
+A DIRECT ORDER (design choices entry 87): when the user names the trade ("Buy 50 shares of MSFT") `understand_request` reads it as `orders`, the desk skips the Data Clerk's search, the Advisor and the Critic, and `decide_direct` prices
+each order with the Data Clerk and decides it (the user's own order is the approval), and the Trader places it through the same handshake: as typed or not at all.
+
+The Account Manager decides HOW MUCH to buy or sell (design choices entry 80: the Advisor and the Critic only deal with recommendations): `decide_trades` sizes every purchase the Critic approved from the user's money
+(`sizing.py`; the only check is that the funds cover the order; Auto mode spends the funds round-robin, a share of each stock in turn), and a sale is the whole holding. It asks the Data Clerk for the current prices of the holdings first, when it needs them.
 
     python -m prometheus.agents.account_manager.account_manager --account avery_chen
 """
@@ -48,13 +57,14 @@ from pathlib import Path
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
-from prometheus.agents.account_manager import handshake, sizing
+from prometheus.agents.account_manager import handshake, neutral, sizing
+from prometheus.agents.critic import feedback
 from prometheus.agents.account_manager.config import load_config as load_account_manager_config
 from prometheus.agents.account_manager.intent import TradeIntent, check_typed, parse_intent
 from prometheus.common.portfolio import Portfolio, after_purchase, apply_fill, load_portfolio
 from prometheus.common.user_account import UserDirectory
 from prometheus.common.user_profile import RiskView, UserProfile, load_profile
-from prometheus.common.work_order import WorkOrder, iso_date, new_work_order, verify_trade
+from prometheus.common.work_order import DIRECT, WorkOrder, decision_of, iso_date, new_work_order, verify_trade
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.models.chat import model_name as chat_model_name
 from prometheus.prompts import account_manager_request as request_prompt
@@ -115,9 +125,9 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         model; None is OpenRouter's own choice. Measured: the same gpt-oss-120b answers at about 55 tokens a second by default, 650 on Cerebras and 370 on Groq: the largest single gain in time.
         The model is the same; only where it runs changes (the provider sees the prompt: prices, holdings and quantities, no keys).
 
-        profile (Critic v1, design choices entry 56): the user's `UserProfile` (risk tolerance, Ask or Auto mode, the size limits), or the path of its JSON file; `configs/profiles/jacob_pyrett.json` when left
+        profile (Critic v1, design choices entry 56): the user's `UserProfile` (risk tolerance, Ask or Auto mode), or the path of its JSON file; `configs/profiles/jacob_pyrett.json` when left
         out, read when first needed. When `account_id` is set and no profile was given, the profile is the account row instead. The Account Manager is the only agent that holds it: the Critic is given
-        `risk_view()` (no mode, no size limit), and `decide_trades` turns the Critic's verdicts into permissions to trade and sizes them. None of that calls the model (`AccountManager(model=object())` is enough for it).
+        `risk_view()` (no mode, no money), and `decide_trades` turns the Critic's verdicts into permissions to trade and sizes them. None of that calls the model (`AccountManager(model=object())` is enough for it).
 
         store and account_id (entry 72): the Postgres account book, both or neither (or attached later with `connect`, as the desk does for `--account`). The book methods below refuse to run without them. `decide_trades` writes
         each verdict when they are set, and the Trader's fills are booked one at a time through `record_fill` when the run asks to `book`; `trading_portfolio` is then the saved account, not a file.
@@ -174,76 +184,179 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         self._profile_from_file = False  # a profile somebody set is a profile that was given
 
     def risk_view(self) -> RiskView:
-        """What the Critic may know about the user: the risk tolerance, age, horizon, exclusions and minimum price. Never the name, the trading mode or a size limit (the user's money is the Account Manager's: `profile.sizing_limits()`)."""
+        """What the Critic may know about the user: the risk tolerance, age, horizon, exclusions and minimum price. Never the name, the trading mode or any money (the user's money is the Account Manager's, which only checks that the funds cover an order)."""
         return self.profile.risk_view()
 
     def decide_trades(self, order: WorkOrder, portfolio: Portfolio, approver=None, now=None, mode: str | None = None, balance: str | None = None, budget: float | None = None,
                       clarify=None, said_how_much: bool = False, request_text: str = "") -> WorkOrder:
         """The Critic's verdicts become trade decisions (`order.trade_decisions`, one per review; see `decisions.py` for the rules), and the Account Manager decides HOW MUCH (design choices entry 80: the Advisor and the
-        Critic only deal with recommendations): a denial is final, an approval that ran out is not traded, every approved purchase is sized from the user's money and limits (`sizing.py`), and an approved recommendation
+        Critic only deal with recommendations): a denial is final, an approval that ran out is not traded, every approved purchase is sized from the user's money (`sizing.py`: the only check is that the funds cover the order), and an approved recommendation
         is traded automatically only in Auto mode with a high enough score and nothing for a person to look at; the rest goes to the user, through `approver` (called with the scorecard; True, False or None for no
         answer = `pending_user`). `mode` overrides the profile's `trade_mode` for one run. `balance` says how the money is spread over the purchases ("even": equal dollars, "round_robin": a share of each in turn;
-        left out, Auto mode spends round-robin and Ask mode gives as much as the limits allow) and `budget` is the funds requested (dollars): the user's own words, "split it evenly" and "spend $5,000".
+        left out, Auto mode spends round-robin and Ask mode gives as much as the cash allows) and `budget` is the funds requested (dollars): the user's own words, "split it evenly" and "spend $5,000".
 
         HOW MUCH, ASKED OF THE USER (design choices entry 85). In Ask mode, when `clarify` (the channel to the user: a callable that takes a card and returns what they typed, or None) is given, an approved purchase is
         waiting to be sized and the request did not already say how much (`said_how_much` False and no `budget`), the Account Manager first asks the user, with a bounded ReAct loop (`clarify_sizing`): a percentage of the
-        account, a dollar amount, a number of shares, or "as much as I can". What comes out sizes the purchases (`balance`, `budget`, and the shares asked for each company), under the limits; the user then approves each
+        account, a dollar amount, a number of shares, or "as much as I can". What comes out sizes the purchases (`balance`, `budget`, and the shares asked for each company), under the cash; the user then approves each
         trade as before. Auto mode never asks, and without `clarify` nothing is asked. `request_text` is the user's request, shown to the model so that it does not ask what was said.
 
-        The current prices of the symbols the portfolio HOLDS are asked of the Data Clerk first (one quote order: `request_prices`), for the equity the size limits are a share of; a portfolio with no holding asks for nothing (and an
+        The current prices of the symbols the portfolio HOLDS are asked of the Data Clerk first (one quote order: `request_prices`), for the equity ("20% of my account", and the record); a portfolio with no holding asks for nothing (and an
         order with no purchase to size asks for nothing), and a price that cannot be had is a message on the order and that holding counts at its cost basis. `decisions.decide_trades` itself calls no API.
         Returns the SAME order, `decided` unless an answer is pending. Refuses (a message on the order) a profile that is not the portfolio's user's."""
         from prometheus.agents.account_manager import decisions
         from prometheus.agents.critic.config import load_config as load_critic_config
-        prices = self._held_prices(order, portfolio, now)
-        wanted = overrides = None
+        names = neutral.neutral_candidates(order)       # ALLOW_NEUTRAL_RECOMMENDATIONS (entry 91): the companies the user named that the Advisor scored neutral count as approved; empty when the setting is off
+        neutral_prices = self._neutral_prices(order, names) if names else {}
+        extra = [p for p in neutral.purchases_for(order, names, neutral_prices) if p.price is not None]      # the neutral purchases are asked about with the others: ONE set of questions, over everything that is to be bought
+        prices = self._held_prices(order, portfolio, now, bool(extra))
+        wanted = None
         if (clarify is not None and getattr(clarify, "available", lambda: True)() and (mode or self.profile.trade_mode) == "ask" and budget is None and not said_how_much
-                and decisions.has_purchase_to_size(order, now)):
-            plan = self.clarify_sizing(order, portfolio, prices, clarify, now, balance, request_text)
+                and (decisions.has_purchase_to_size(order, now) or extra)):
+            plan = self.clarify_sizing(order, portfolio, prices, clarify, now, balance, request_text, extra)
             if plan is not None:
-                balance, budget, wanted, overrides = plan.balance, plan.budget, plan.wanted, plan.limit_overrides
-        order = decisions.decide_trades(order, portfolio, self.profile, load_critic_config().verdict.auto_min_score, approver, now, mode, balance, budget, prices, wanted, overrides)
+                balance, budget, wanted = plan.balance, plan.budget, plan.wanted
+        neutral_ids = {p.record_id for p in extra}
+        neutral_wanted = {k: v for k, v in (wanted or {}).items() if k in neutral_ids} or None
+        wanted = {k: v for k, v in (wanted or {}).items() if k not in neutral_ids} or None
+        if names and order.status == "recommended" and not order.recommendations:
+            order.trade_decisions, order.status = [], "decided"      # the Advisor recommended nothing, so the Critic had nothing to review: only the neutral companies are decided here
+        else:
+            order = decisions.decide_trades(order, portfolio, self.profile, load_critic_config().verdict.auto_min_score, approver, now, mode, balance, budget, prices, wanted)
+        if names and order.status in ("reviewed", "decided"):
+            self._decide_neutral(order, portfolio, names, neutral_prices, now, mode, approver, budget, neutral_wanted, balance if balance in ("even", "round_robin") else None)
         self._save_decisions(order)
         return order
 
-    def clarify_sizing(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, float], channel, now=None, balance: str | None = None, request_text: str = ""):
+    def _neutral_prices(self, order: WorkOrder, names: list[dict]) -> dict[str, float]:
+        """{symbol: current price} of the neutral companies, from ONE quote order to the Data Clerk (`request_prices`). Never raises: a price that cannot be had is a message on the order and that company is left out (it is not bought)."""
+        try:
+            quoted = self.request_prices([c["symbol"] for c in names])
+            quotes = dict(quoted.data.quotes) if quoted.data else {}
+        except Exception as error:  # an outage, a missing key: the companies cannot be priced, and say so
+            order.errors = [*order.errors, f"the current prices of {', '.join(c['symbol'] for c in names)} could not be had ({type(error).__name__})"]
+            quotes = {}
+        return {c["symbol"]: float(quotes[c["symbol"]]["price"]) for c in names if isinstance(quotes.get(c["symbol"]), dict) and isinstance(quotes[c["symbol"]].get("price"), (int, float)) and quotes[c["symbol"]]["price"] > 0}
+
+    def _decide_neutral(self, order: WorkOrder, portfolio: Portfolio, names: list[dict], prices: dict[str, float], now, mode: str | None, approver, budget: float | None,
+                        wanted: dict[str, int] | None = None, allocation: str | None = None) -> None:
+        """A neutral recommendation counts as approved (design choices entry 91): decide each neutral company at the Data Clerk's price (`neutral.decide_neutral`: equal dollars of the cash or the budget, or the shares the
+        user asked for in Ask mode (`wanted`), no limit of any profile, `yes_auto` in Auto mode and the user's yes in Ask mode). A company with no price (`_neutral_prices` left it out) is not bought."""
+        now = now or trading_now()
+        neutral.decide_neutral(order, portfolio, names, mode or self.profile.trade_mode, prices, now, load_account_manager_config().neutral.valid_minutes, approver, budget, wanted, allocation)
+        feedback.attach_decisions(order)
+
+    def request_symbols(self, stocks: list[str]):
+        """Ask the Data Clerk for the company name and the symbol of each stock (a ticker in capitals, or a company's name as the user typed it): a `lookup_symbol` work order, answered by `DataClerk.request_symbols`
+        (no model: the symbol directory, with exact matching, never a guess). Returns the order, `data_ready` with `data.companies`, or `data_failed` with the Data Clerk's own message for a name it did not find, one that
+        fits several listings or a lookup that failed. Beside `request_prices`."""
+        order = new_work_order(f"Company names and symbols of {', '.join(stocks)}", requester=REQUESTER, action_type="lookup_symbol", subject=list(stocks))
+        return self.clerk.request_symbols(order)
+
+    def name_the_stocks(self, order: WorkOrder, orders, typed: str, now=None) -> list[str]:
+        """A DIRECT ORDER skips the Data Clerk's node, so the Account Manager gets the company name and the symbol of each stock the user named itself (design choices entry 88): it asks the Data Clerk
+        (`request_symbols`) and APPENDS the answer to the work order (`direct.name_the_stocks`: `data.companies`, the symbols as the subject, and the user's own orders in `direct_orders`). `orders` are the form's
+        (`intent.orders`), `typed` the user's words. Returns the problems, in the Data Clerk's own words (empty when the work order now holds every company name and symbol); never raises."""
+        from prometheus.agents.account_manager import direct
+        try:
+            found = self.request_symbols([o.named for o in orders])
+        except Exception as error:  # a missing key, an outage: nothing is guessed, the order is not made
+            return [f"the Data Clerk could not be asked for the symbols ({type(error).__name__})"]
+        return direct.name_the_stocks(order, orders, typed, now or trading_now(), found)
+
+    def decide_direct(self, order: WorkOrder, portfolio: Portfolio, now=None, mode: str | None = None, approver=None, clarify=None, said_how_much: bool = False, request_text: str = "",
+                      balance: str | None = None, budget: float | None = None) -> WorkOrder:
+        """The trade decisions for a DIRECT ORDER (design choices entries 87 and 88): the user named the trades, so no recommendation was made and the Critic was not asked (`direct.py`). The current price of each symbol is
+        asked of the Data Clerk (one quote order: `request_prices`); each of `order.direct_orders` is then decided at its price: `yes_user` (the user's own order is the approval; the user is not asked again), or `no_funds`
+        (the cash does not pay for the shares in full, or the account does not hold them: it is never made smaller), or `no_system_denied` (no price). When the user NAMED A COMPANY, the symbol is the Data Clerk's: in Ask mode
+        `approver` (the callable that asks the user: True, False, None for no answer) confirms the symbol, the company, the shares and the amount first (no answer: `pending_user`, not traded); in Auto mode the symbol is used
+        without asking. NO LIMIT OF THE PROFILE EXISTS (entry 91): the profile is read for its user and its trade mode, nothing else. A connected account book saves the decisions. `mode` overrides the profile's. Returns the SAME
+        order, `decided`. A price that cannot be had is a message on the order; a profile that is not the portfolio's user's is refused (a message and nothing decided).
+
+        A PURCHASE THE USER NAMED WITH NO NUMBER ("I want to buy MSFT", design choices entry 98) is still a direct order: no recommendation. In ASK mode, with `clarify` (the channel to the user) and no dollars or "as much as I can" in
+        the request (`said_how_much`), the Account Manager first ASKS for the number with the same bounded questions as for any purchase (`clarify_sizing`); then it shows the order (the shares and the amount) and the user says yes
+        or no. In AUTO mode nothing is asked: the funds are spent as the user's words say (`balance`, `budget`; round-robin by default: one stock gets what the cash allows). A SALE with no number is not placed: say how many."""
+        from prometheus.agents.account_manager import direct
+        now = now or trading_now()
+        prices = self._direct_prices(order)
+        sized = self._size_direct(order, portfolio, prices, now, mode, clarify, said_how_much, request_text, balance, budget)
+        order = direct.decide_direct(order, portfolio, self.profile, mode, prices, now, load_account_manager_config().direct.valid_minutes, approver, sized)
+        self._save_decisions(order)
+        return order
+
+    def _size_direct(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, float], now, mode: str | None, clarify, said_how_much: bool, request_text: str, balance: str | None, budget: float | None) -> dict[str, dict]:
+        """The number of shares of each PURCHASE the user named with no number (entry 98): {record_id: {"shares", "how"}} ("asked": the user answered the Account Manager's questions; "budget": the dollars they said; "cash":
+        as much as the cash allows). Nothing else bounds it (no limit of any profile). Never raises: whatever fails leaves the order unsized, and `direct.decide_direct` refuses it with the reason."""
+        entries = [e for e in order.direct_orders if isinstance(e, dict) and e.get("shares") is None and e.get("side") == "buy" and prices.get(e.get("symbol"))]
+        if not entries:
+            return {}
+        mode = mode or self.profile.trade_mode
+        purchases = [sizing.Purchase(record_id=e["record_id"], symbol=e["symbol"], action="open", price=prices[e["symbol"]], rank=n) for n, e in enumerate(entries, 1)]
+        wanted, how = None, "budget" if budget is not None else "cash"
+        if mode == "ask" and clarify is not None and getattr(clarify, "available", lambda: True)() and budget is None and not said_how_much:
+            plan = self.clarify_sizing(order, portfolio, self._held_prices(order, portfolio, now, True), clarify, now, balance, request_text, purchases)
+            if plan is not None:
+                balance, budget, wanted, how = plan.balance, plan.budget, plan.wanted, "asked"
+        try:
+            sized = sizing.size_purchases(purchases, portfolio.cash_avail, allocation=balance or ("round_robin" if mode == "auto" else None), budget=budget, wanted=wanted)
+        except ValueError as error:  # only a program gets these wrong: a message on the order, nothing is bought
+            order.errors = [*order.errors, f"the purchases you named could not be sized: {error}"]
+            return {}
+        return {p.record_id: {"shares": s.shares, "how": how if wanted is None or how != "asked" else "asked"} for p, s in zip(purchases, sized) if s.shares >= 1}
+
+    def _direct_prices(self, order: WorkOrder) -> dict[str, float]:
+        """{symbol: current price} of the tickers the user named, from ONE quote order to the Data Clerk. Never raises: a price that cannot be had is left out (that order is then not decided as a trade) and the order says so."""
+        symbols = list(dict.fromkeys(entry["symbol"] for entry in order.direct_orders if isinstance(entry, dict) and isinstance(entry.get("symbol"), str)))
+        if not symbols:
+            return {}
+        try:
+            quoted = self.request_prices(symbols)
+            quotes = dict(quoted.data.quotes) if quoted.data else {}
+        except Exception as error:  # an outage, a missing key: the orders cannot be priced, and say so
+            order.errors = [*order.errors, f"the current prices of {', '.join(symbols)} could not be had ({type(error).__name__})"]
+            return {}
+        prices = {symbol: float(quote["price"]) for symbol, quote in quotes.items() if symbol in symbols and isinstance(quote, dict) and isinstance(quote.get("price"), (int, float)) and quote["price"] > 0}
+        missing = [symbol for symbol in symbols if symbol not in prices]
+        if missing:
+            order.errors = [*order.errors, f"no current price for {', '.join(missing)}"]
+        return prices
+
+    def clarify_sizing(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, float], channel, now=None, balance: str | None = None, request_text: str = "", extra: list[sizing.Purchase] | None = None):
         """Ask the user how much to buy (design choices entry 85, `clarify.py`): a bounded ReAct loop with this agent's model. It phrases at most three questions through `channel`, reads the user's answer (a percentage
-        of the account, dollars, shares, or "as much as I can") into a form, and CODE checks the form against what the user typed and works out the whole shares; then, once, the user may be asked to raise a limit of their
-        own that cut the request (no model). Returns a `clarify.SizingPlan` (what `decisions.decide_trades` sizes under), or None when nothing could be worked out (no purchase, a model that cannot be reached, nonsense,
-        or nobody answering): the order then says why and the default size, the largest the limits allow, is shown. Never raises. `last_sizing` says what it cost and what was asked and answered."""
+        of the account, dollars, shares, or "as much as I can") into a form, and CODE checks the form against what the user typed and works out the whole shares (the only thing that can cut it is the cash: there is no
+        limit of the profile to raise, entry 91). Returns a `clarify.SizingPlan` (what `decisions.decide_trades` sizes under), or None when nothing could be worked out (no purchase, a model that cannot be reached, nonsense,
+        or nobody answering): the order then says why and the default size, the most the cash buys, is shown. Never raises. `last_sizing` says what it cost and what was asked and answered."""
         from prometheus.agents.account_manager import clarify as clarifying, decisions
         config = load_account_manager_config()
         self.last_sizing = {"model": getattr(self.model, "model_name", None), "calls": 0, "questions": [], "answers": [], "problems": [], "choice": None, "plan": None, "why": ""}
         try:
-            purchases = decisions.purchases_to_size(order, portfolio, now)
+            purchases = [*decisions.purchases_to_size(order, portfolio, now), *(extra or [])]      # the Critic's approved purchases, and the neutral ones that count as approved (entry 91): one set of questions
             if not purchases:
                 return None
             equity, _ = sizing.equity_of(portfolio, prices)
-            cash, limits = portfolio.cash_avail, self.profile.sizing_limits()
-            facts = clarifying.facts_for(purchases, sizing.size_purchases(purchases, equity, cash, limits, config), cash, equity, request_text, balance, config)
+            cash = portfolio.cash_avail
+            facts = clarifying.facts_for(purchases, sizing.size_purchases(purchases, cash, config), cash, equity, request_text, balance, config)
             outcome = clarifying.run_loop(self.model, facts, purchases, cash, equity, channel, config, balance)
             self.last_sizing.update(calls=outcome.calls, questions=outcome.questions, answers=outcome.answers, problems=outcome.problems, tokens_in=outcome.tokens_in, tokens_out=outcome.tokens_out, why=outcome.why)
             if outcome.choice is None:
                 raise ValueError(outcome.why or "no amount was given")
             plan = clarifying.plan_choice(outcome.choice, purchases, equity, cash, prior_balance=balance, guard=config.sizing.float_guard)
-            plan = clarifying.offer_raise(plan, purchases, equity, cash, limits, config, channel)
         except AssertionError:
             raise
         except Exception as error:   # whatever went wrong, the default size is shown and the user is told: never a stop
             why = " ".join(str(error).split())[:200] if isinstance(error, ValueError) else f"{type(error).__name__}"
             self.last_sizing["why"] = self.last_sizing["why"] or why
-            order.errors = [*order.errors, f"how much to buy could not be worked out with you ({why}): the largest size your limits allow is shown, and you can still say no to each trade"]
-            self.tell_user("", f"  I could not work out how much you want ({why}). The largest size your limits allow is shown below; you can still say no to each trade.")
+            order.errors = [*order.errors, f"how much to buy could not be worked out with you ({why}): the most your cash buys is shown, and you can still say no to each trade"]
+            self.tell_user("", f"  I could not work out how much you want ({why}). The most your cash buys is shown below; you can still say no to each trade.")
             return None
         self.last_sizing.update(choice=outcome.choice.model_dump(), plan=plan.model_dump())
         self.tell_user("", f"  How much: {plan.text}.", *[f"      {note}" for note in plan.notes])
         return plan
 
-    def _held_prices(self, order: WorkOrder, portfolio: Portfolio, now=None) -> dict[str, float]:
+    def _held_prices(self, order: WorkOrder, portfolio: Portfolio, now=None, neutral_waiting: bool = False) -> dict[str, float]:
         """{symbol: current price} of the symbols `portfolio` holds, from ONE quote order to the Data Clerk, and only when something needs it: the order is waiting to be decided, an approved purchase that has not run out
         is on it, and the portfolio holds something (cash alone needs no quote). Never raises: a price that cannot be had is left out (the equity counts that holding at its cost basis) and the order says so."""
         from prometheus.agents.account_manager import decisions
-        if not portfolio.positions or not decisions.has_purchase_to_size(order, now):
+        if not portfolio.positions or not (neutral_waiting or decisions.has_purchase_to_size(order, now)):
             return {}
         try:
             quoted = self.request_prices(portfolio.symbols)
@@ -468,7 +581,13 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
                 status = self._book().get_user(self.account_id).status
                 if status != "active":
                     return handshake.refusal("account_refused", f"the account is {status}: it cannot take a trade")
-            return handshake.decide_approval(self.current_portfolio(), trade, price, on, commission, expected_proceeds)
+            answer = handshake.decide_approval(self.current_portfolio(), trade, price, on, commission, expected_proceeds)
+            decision = decision_of(order, trade.get("record_id"))
+            if answer.approved and trade.get("kind") != "funding" and decision is not None and decision.get("origin") == DIRECT and answer.shares < decision.get("shares", 0):
+                # the user named this trade (entry 87): it is placed as typed or not at all, never cut to the cash or to the shares sellable today
+                return handshake.refusal("insufficient_cash" if trade.get("side") == "buy" else "not_sellable_today", f"the order is for {decision.get('shares')} shares and is placed as you typed it or not at all, and the account can take {answer.shares}: {answer.reason}",
+                                         answer.cash_avail)
+            return answer
         except AssertionError:   # a programming mistake or a test's guard: not hidden
             raise
         except Exception as error:   # a database failure, or anything else: the trade is not approved, and the sentence names the kind only

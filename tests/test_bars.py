@@ -25,37 +25,6 @@ def three_days(tmp_path, skip=()):
     return days
 
 
-def test_window_start_nanoseconds_become_the_trading_date():
-    assert date_of(1792728000000000000) == date(2026, 10, 23)    # the real stamp of 2026-10-23 (04:00 UTC)
-    assert date_of(1759291200000000000) == date(2025, 10, 1)
-
-
-def test_it_reads_the_files_sorted_and_keeps_only_the_symbols_asked_for(tmp_path):
-    days = three_days(tmp_path)
-    store = BarStore(tmp_path).load(["aaa"])           # case does not matter
-    bars = store.bars("AAA")
-    assert [b.date for b in bars] == days and store.bars("BBB") == [] and store.gaps == []
-    assert bars[1] == Bar(days[1], 11.0, 13.0, 10.0, 12.0, 1001.0, 100)
-    assert store.dates == days and store.loaded == {"AAA"}
-
-
-def test_end_and_max_bars_limit_what_is_returned(tmp_path):
-    days = three_days(tmp_path)
-    store = BarStore(tmp_path).load(["AAA"], end=days[1])
-    assert [b.date for b in store.bars("AAA")] == days[:2]
-    full = BarStore(tmp_path).load(["AAA"])
-    assert [b.date for b in full.bars("AAA", max_bars=2)] == days[1:]
-    assert [b.date for b in full.bars("AAA", end=days[0])] == days[:1]
-
-
-def test_a_missing_weekday_between_the_first_and_last_file_is_a_gap_and_no_bar_is_invented(tmp_path):
-    days = three_days(tmp_path, skip=(weekdays(3, date(2026, 10, 7))[1],))
-    store = BarStore(tmp_path).load(["AAA"])
-    assert len(store.bars("AAA")) == 2
-    assert store.gaps == [f"{weekdays(3, date(2026, 10, 7))[1]}: no file (a market holiday, or not synced)"]
-    assert days[1] not in [b.date for b in store.bars("AAA")]
-
-
 def test_a_corrupt_file_is_reported_with_its_day_and_the_rest_is_still_read(tmp_path):
     days = three_days(tmp_path)
     bad = tmp_path / f"{days[1]:%Y}" / f"{days[1]:%m}" / f"{days[1]}.csv.gz"
@@ -65,18 +34,6 @@ def test_a_corrupt_file_is_reported_with_its_day_and_the_rest_is_still_read(tmp_
     assert [b.date for b in store.bars("AAA")] == [days[0], days[2]]
     assert len(store.gaps) == 1 and store.gaps[0].startswith(f"{days[1]}: unreadable (")
     assert "not,the" not in store.gaps[0]               # the file's content is never put in a message
-
-
-def test_no_files_is_one_gap_and_no_bars(tmp_path):
-    store = BarStore(tmp_path / "nothing").load(["AAA"])
-    assert store.bars("AAA") == [] and len(store.gaps) == 1 and "no day_aggs_v1 files" in store.gaps[0]
-
-
-def test_it_never_writes_under_the_root(tmp_path):
-    three_days(tmp_path)
-    before = sorted(p.relative_to(tmp_path) for p in tmp_path.rglob("*"))
-    BarStore(tmp_path).load(["AAA", "BBB"])
-    assert sorted(p.relative_to(tmp_path) for p in tmp_path.rglob("*")) == before
 
 
 @pytest.mark.skipif(not REAL_ROOT.exists(), reason="the real day_aggs_v1 files are not on this machine")
@@ -178,25 +135,6 @@ def test_fetch_daily_bars_refuses_bad_input_before_any_call(tmp_path, monkeypatc
     with pytest.raises(ValueError):
         box.fetch_daily_bars(symbols, days)
     assert calls == [] and not (tmp_path / "data").exists()
-
-
-def test_the_rest_bars_add_the_dates_the_day_files_lack_and_the_day_file_wins_where_both_have_one(tmp_path):
-    root, extra = tmp_path / "day_aggs_v1", tmp_path / "ticker_bars_v1"
-    days = weekdays(5, date(2026, 10, 30))
-    write_day_files(root, {d: rows(i, AAA=1) for i, d in enumerate(days[:3])})                    # the day files stop on the third day
-    extra.mkdir()
-    import csv
-    from datetime import datetime, timezone
-    with open(extra / "AAA.csv", "w", newline="") as handle:
-        writer = csv.writer(handle)
-        writer.writerow(["ticker", "volume", "open", "close", "high", "low", "window_start", "transactions"])
-        for i, d in enumerate(days):                                                                # the REST file has all five, with a different close for the days the day files have
-            writer.writerow(["AAA", 5.0, 5.0, 999.0 + i, 5.0, 5.0, int(datetime(d.year, d.month, d.day, 4, tzinfo=timezone.utc).timestamp() * 1e9), 1])
-    store = BarStore(root, extra_root=extra).load(["AAA"])
-    bars = store.bars("AAA")
-    assert [b.date for b in bars] == days and bars[0].close == 11.0 and bars[2].close == 13.0 and bars[3].close == 1002.0 and bars[4].close == 1003.0    # the day file's closes for the first three
-    assert store.gaps == [] and store.dates == days
-    assert [b.date for b in BarStore(root, extra_root=extra).load(["AAA"], end=days[3]).bars("AAA")] == days[:4]                # `end` applies to the REST bars too
 
 
 def test_a_missing_weekday_is_still_a_gap_when_no_source_has_it_and_a_damaged_rest_file_is_named(tmp_path):

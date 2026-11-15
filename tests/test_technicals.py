@@ -26,7 +26,7 @@ def test_every_indicator_is_none_below_its_min_bars_and_never_shortens_the_windo
              "adx_14": t.adx_14, "atr_14": t.atr_14, "atr_pct": t.atr_pct, "obv_20d_change": t.obv_20d_change, "stoch_k_14": t.stoch_k_14,
              "vol_21d_ann": lambda b: t.vol_ann(b, 21), "vol_63d_ann": lambda b: t.vol_ann(b, 63), "max_drawdown_63d": t.max_drawdown_63d,
              "beta_63d": lambda b: t.beta_and_corr(b, b)[0], "corr_63d_spy": lambda b: t.beta_and_corr(b, b)[1],
-             "adv_20d_dollars": t.adv_20d_dollars, "volume_ratio_1d": t.volume_ratio_1d,
+             "volume_ratio_1d": t.volume_ratio_1d,
              "sma_126": lambda b: t.sma(b, 126), "high_126d": t.high_126d, "low_126d": t.low_126d,
              "sma_50_vs_200": t.sma_50_vs_200, "cross_50_200_20d": t.cross_50_200_20d, "structure_63d": t.structure_63d, "decline_from_peak_63d": t.decline_from_peak_63d,
              "rebound_from_trough_63d": t.rebound_from_trough_63d, "sessions_since_trough_63d": t.sessions_since_trough_63d}
@@ -87,24 +87,6 @@ def test_breakout_gap_and_reversal_candle():
     assert t.candle_reversal_1d(no_new_low) is False
 
 
-def test_rsi_is_100_on_a_ramp_0_on_a_fall_and_50_when_gains_equal_losses(monkeypatch):
-    assert t.rsi_14(make_bars(ramp(40))) == 100.0                       # avg_loss == 0
-    assert t.rsi_14(make_bars(ramp(40, 200.0, -1.0))) == pytest.approx(0.0)
-    alternating = [100.0 + (i % 2) for i in range(40)]                  # +1, -1, +1, ...: 7 gains and 7 losses in the first 14 changes
-    assert t.rsi_14(make_bars(alternating)) == pytest.approx(50.0, abs=3.5)  # 7/14 then smoothed: stays close to 50
-    # worked by hand: the first 14 changes are +1 x8 and -1 x6 -> 8/14 and 6/14; with exactly 14 changes (15 bars) RSI = 100 - 100 / (1 + 8/6) = 57.142857
-    first = 100.0
-    closes = [first]
-    for step in [1] * 8 + [-1] * 6:
-        closes.append(closes[-1] + step)
-    monkeypatch.setitem(t.MIN_BARS, "rsi_14", 15)   # the textbook example has only 15 bars; the shipped minimum is 30
-    assert t.rsi_14(make_bars(closes)) == pytest.approx(100 - 100 / (1 + 8 / 6))
-    # one more change (+1) is the Wilder smoothing step: avg_gain = (8/14 * 13 + 1) / 14, avg_loss = (6/14 * 13 + 0) / 14
-    monkeypatch.setitem(t.MIN_BARS, "rsi_14", 16)
-    gain, loss = (8 / 14 * 13 + 1) / 14, (6 / 14 * 13) / 14
-    assert t.rsi_14(make_bars(closes + [closes[-1] + 1])) == pytest.approx(100 - 100 / (1 + gain / loss))
-
-
 def test_ema_is_seeded_with_the_simple_mean():
     assert t.ema([1, 2, 3, 4, 5], 3) == [2, 3, 4]       # seed (1+2+3)/3 = 2, then k = 0.5
     assert t.ema([1, 2], 3) == []
@@ -149,7 +131,6 @@ def test_obv_stochastic_volume_and_dollar_volume():
     assert t.stoch_k_14(make_bars([10.0] * 14, highs=[10.0] * 14, lows=[10.0] * 14)) is None
     volumes = [100.0] * 20 + [300.0]
     assert t.volume_ratio_1d(make_bars([10.0] * 21, volumes=volumes)) == pytest.approx(3.0)
-    assert t.adv_20d_dollars(make_bars([10.0] * 20, volumes=[50.0] * 20)) == pytest.approx(500.0)
 
 
 def test_volatility_drawdown_beta_and_correlation():

@@ -198,12 +198,12 @@ def decided(name: str = "PG_open", answer: bool | None = True, mode: str | None 
     167.10, entry zone 165.4559 to 168.7441, plan limit 167.10, stop 157.2351, target 168.3783, time stop 2026-12-31, approval valid until 2026-11-05T16:30:00Z, `NOW` 10:30 Eastern that day. `answer` is what the
     user says to the Ask prompt: True (yes_user), False (no_user_denied), None (pending_user).
 
-    The purchase is the Account Manager's size (design choices entry 80), for an account of $74,481.40 in cash (what the sample portfolio is worth at the capture's prices): the profile's 10% position limit is 44 shares
-    at 167.10. The Trader tests then give the Trader their OWN account (`account(51.23)`, the sample's cash, to prove the funding and the `insufficient_cash` rejection): the Trader checks the money again when it
-    places each order, whatever the decision was sized for."""
+    The purchase is the Account Manager's size, for an account of $74,481.40 in cash (what the sample portfolio is worth at the capture's prices) and an amount to spend of $7,400, which buys 44 shares at 167.10: the size the
+    tests were written for when a 10% position limit made it (design choices entry 80); since entry 91 nothing limits a purchase but the cash, so the amount to spend is what gives the 44. The Trader tests then give the Trader
+    their OWN account (`account(51.23)`, the sample's cash, to prove the funding and the `insufficient_cash` rejection): the Trader checks the money again when it places each order, whatever the decision was sized for."""
     order = captured(name)
     make_critic(order).review_recommendations(order, view(), now)
-    return decisions.decide_trades(order, Portfolio(user=USER, cash_avail=74481.40), profile(), load_critic_config().verdict.auto_min_score, lambda card: answer, now, mode)
+    return decisions.decide_trades(order, Portfolio(user=USER, cash_avail=74481.40), profile(), load_critic_config().verdict.auto_min_score, lambda card: answer, now, mode, None, 7400.0)
 
 
 def row(symbol="PG", action="open", shares=10, price=100.0, zone=None, limit=None, will_trade="yes_auto", approved=True, valid_until=VALID_UNTIL, stop=90.0, target=110.0, time_stop="2026-12-31", **extra) -> dict:

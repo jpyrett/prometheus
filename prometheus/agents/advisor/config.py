@@ -1,10 +1,10 @@
 """The Advisor's thresholds: `configs/advisor_v1.json`, read and checked ONCE (Advisor v1 spec section 6, design choices entry 51).
 
     config = load_config()                      # the file, validated: a missing key, an unknown key or a wrong type is an error NOW, not halfway through a run
-    config.gates.min_adv_dollars                # 5,000,000
+    config.gates.max_bar_age_sessions           # 1
 
 Every number the strategies use is in that file and nowhere else: the model never chooses a threshold, a weight, a price, a size or a rank, and neither does the ledger (it may change
-the `basis` of a family's prior to "measured", never a threshold). `extra="forbid"` means a typo in the JSON ("min_adv_dolars") fails when the file is loaded, instead of being
+the `basis` of a family's prior to "measured", never a threshold). `extra="forbid"` means a typo in the JSON ("max_bar_age_sesions") fails when the file is loaded, instead of being
 silently ignored while the code uses a default.
 """
 import json
@@ -34,9 +34,6 @@ class Limits(_Section):
 
 
 class Gates(_Section):
-    min_adv_dollars: float
-    min_price: float
-    max_spread_bps: float
     max_bar_age_sessions: int
     max_fundamentals_age_days: int
     red_flag_event_bars: int
@@ -98,8 +95,6 @@ class Event(_Section):
     w_unpriced: float
     w_volume: float
     volume_ratio_min: float
-    large_cap: float
-    large_cap_factor: float
     sue_min: float
 
 
@@ -134,15 +129,12 @@ class CapitalReturn(_Section):
     horizon: int
     prior_20d: float
     basis_ref: str
-    min_net_payout_yield: float
     min_share_count_change: float
     max_debt_to_equity: float
     max_payout_coverage: float
     min_revenue_growth: float
     base: float
-    w_payout: float
-    payout_scale: float
-    w_missing_payout: float
+    w_buyback: float
     w_shares: float
     shares_bonus: float
     w_event: float
@@ -243,7 +235,6 @@ class Trade(_Section):
     entry_atr: float
     stop_atr: dict[str, float]
     target_edge_multiple: float
-    limit_spread_bps: float
     trend_limit_atr: float
     event_limit_reaction_atr: float
 

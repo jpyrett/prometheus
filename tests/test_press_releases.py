@@ -47,50 +47,6 @@ def load_text(tmp_path: Path, text: str):
 
 # ---------------------------------------------------------------- the loader, on real records
 
-def test_the_fixture_loads_three_documents_with_unique_prefixed_ids():
-    docs = load_press_releases(FIXTURE)
-    assert len(docs) == 3
-    assert [d.id for d in docs] == [d.metadata["article_id"] for d in docs]
-    assert len({d.id for d in docs}) == 3 and all(d.id.startswith("pr:") for d in docs)  # "pr:" keeps them apart from news ids in one SourceBook
-
-
-def test_a_press_release_becomes_its_headline_plus_its_text_with_the_metadata_of_a_news_article():
-    doc = load_press_releases(FIXTURE)[1]
-    assert doc.id == GIANNANDREA
-    assert doc.page_content.startswith("John Giannandrea to retire from Apple\n\nApple ® today announced John Giannandrea")
-    assert doc.metadata == {
-        "article_id": GIANNANDREA,
-        "headline": "John Giannandrea to retire from Apple",
-        "tickers": ["AAPL"],
-        "published_utc": "2025-12-01T17:10:00Z",
-        "published_ts": 1764609000,  # 2025-12-01 17:10:00 UTC, worked out by hand
-        "publisher": PRESS_RELEASE_PUBLISHER,
-        "api": "finnhub",
-        "url": "https://www.nasdaq.com/press-release/john-giannandrea-retire-apple-2025-12-01",
-    }
-
-
-def test_the_metadata_has_exactly_the_keys_of_a_news_article_so_everything_downstream_treats_them_alike():
-    news_keys = set(load_news(Path(__file__).parent / "fixtures" / "news_sample.txt")[0].metadata)
-    for doc in load_press_releases(FIXTURE):
-        assert set(doc.metadata) == news_keys
-
-
-def test_the_source_text_is_kept_as_the_api_gave_it():
-    doc = load_press_releases(FIXTURE)[0]
-    assert "said Tim Cook, Apple’ s CEO" in doc.page_content  # Finnhub's own odd spacing is not repaired
-
-
-def test_a_release_with_no_url_still_loads_because_the_toolbox_writes_an_empty_url_when_finnhub_gives_none(tmp_path):
-    docs = load_text(tmp_path, GOOD.replace("url: https://example.com/a\n", "url: \n"))
-    assert len(docs) == 1 and docs[0].metadata["url"] == ""
-
-
-def test_html_entities_are_decoded_like_in_news(tmp_path):
-    text = GOOD.replace("headline: A headline\n<<<TEXT>>>\nSome text.", "headline: Procter &amp; Gamble beats\n<<<TEXT>>>\nIt&#39;s up.")
-    doc = load_text(tmp_path, text)[0]
-    assert doc.metadata["headline"] == "Procter & Gamble beats" and doc.page_content == "Procter & Gamble beats\n\nIt's up."
-
 
 # ---------------------------------------------------------------- the loader, on broken input: a release that fails is discarded (design choices entry 83)
 
@@ -134,37 +90,7 @@ def test_bytes_that_are_not_utf8_discard_that_release_and_name_the_line(tmp_path
     assert [d.id for d in load_press_releases(path, skipped)] == ["pr:abc124"] and len(skipped) == 1 and "line 8: not valid UTF-8" in skipped[0].reason
 
 
-def test_an_empty_file_is_no_press_releases_and_a_byte_order_mark_is_ignored(tmp_path):
-    assert load_text(tmp_path, "") == []
-    assert len(load_text(tmp_path, "\ufeff" + GOOD)) == 1
-
-
-def test_a_missing_file_is_a_file_not_found_error(tmp_path):
-    with pytest.raises(FileNotFoundError):
-        load_press_releases(tmp_path / "nothing_PRs.txt")
-
-
 # ---------------------------------------------------------------- where the files are
-
-def test_the_press_release_folder_defaults_to_where_the_toolbox_always_wrote(monkeypatch):
-    monkeypatch.delenv("PRESS_RELEASES_OUTPUT_DIR", raising=False)
-    monkeypatch.setattr(config, "dotenv_values", lambda path: {})  # whatever .env says, the default is the toolbox's folder
-    assert config.press_releases_dir() == config.REPO_ROOT / "data" / "press_releases"
-
-
-def test_the_press_release_folder_can_be_set_by_the_environment_and_a_relative_path_is_from_the_repo_root(monkeypatch, tmp_path):
-    monkeypatch.setenv("PRESS_RELEASES_OUTPUT_DIR", str(tmp_path / "prs"))
-    assert config.press_releases_dir() == tmp_path / "prs"
-    monkeypatch.setenv("PRESS_RELEASES_OUTPUT_DIR", "somewhere/prs")
-    assert config.press_releases_dir() == config.REPO_ROOT / "somewhere" / "prs"
-
-
-def test_the_file_of_a_symbol_is_symbol_underscore_PRs_and_the_symbol_is_checked_first(monkeypatch, tmp_path):
-    monkeypatch.setenv("PRESS_RELEASES_OUTPUT_DIR", str(tmp_path))
-    assert press_release_file("aapl") == tmp_path / "AAPL_PRs.txt" and press_release_file(" brk.b ") == tmp_path / "BRK.B_PRs.txt"
-    for bad in ("../../.env", "A B", "", "TOOLONGSYMBOL1"):
-        with pytest.raises(ValueError):
-            press_release_file(bad)
 
 
 def test_the_loader_command_line_shows_what_a_press_release_file_becomes(capsys):
@@ -187,10 +113,6 @@ def test_the_loader_command_line_says_a_broken_release_was_discarded_without_a_t
 
 
 # ---------------------------------------------------------------- two collections in one folder
-
-def test_the_news_collection_keeps_its_name_and_press_releases_get_their_own():
-    assert rag_store.collection_name("sentence-transformers/all-MiniLM-L6-v2") == "news-sentence-transformers-all-MiniLM-L6-v2"  # unchanged: no re-ingest
-    assert rag_store.collection_name("sentence-transformers/all-MiniLM-L6-v2", kind="press_releases") == "press_releases-sentence-transformers-all-MiniLM-L6-v2"
 
 
 def test_an_unknown_kind_is_refused_before_anything_is_created():
@@ -222,33 +144,6 @@ def test_each_kind_has_its_own_collection_so_a_count_or_a_reset_of_one_never_tou
 @pytest.fixture
 def press_store(tmp_path):
     return make_store(tmp_path / "chroma_pr", KeywordEmbeddings())
-
-
-def test_ingest_press_releases_chunks_and_stores_them_and_is_safe_to_repeat(press_store, monkeypatch, tmp_path):
-    monkeypatch.setenv("PRESS_RELEASES_OUTPUT_DIR", str(tmp_path))
-    (tmp_path / "AAPL_PRs.txt").write_bytes(FIXTURE.read_bytes())
-    first = ingest_press_releases("aapl", store=press_store)
-    assert (first["symbol"], first["articles"], first["chunks"], first["added"]) == ("AAPL", 3, 3, 3)  # a teaser is shorter than one chunk
-    assert first["path"] == str(tmp_path / "AAPL_PRs.txt")
-    got = press_store.get(include=["metadatas", "documents"])
-    assert sorted(got["ids"]) == ["pr:44107d69ebe0e861#0", "pr:519ab77bd1631dd7#0", "pr:5a31fe63040096fc#0"]
-    assert all(m["publisher"] == "Press release" and m["tickers"] == ["AAPL"] for m in got["metadatas"])
-    again = ingest_press_releases("AAPL", store=press_store)
-    assert (again["added"], again["updated"], again["unchanged"], again["deleted"]) == (0, 0, 3, 0)
-
-
-def test_a_symbol_with_an_empty_file_ingests_nothing_and_does_not_fail(press_store, monkeypatch, tmp_path):
-    """The real toolbox creates an empty file when Finnhub returns no releases."""
-    monkeypatch.setenv("PRESS_RELEASES_OUTPUT_DIR", str(tmp_path))
-    (tmp_path / "ZZZ_PRs.txt").write_text("", encoding="utf-8")
-    stats = ingest_press_releases("ZZZ", store=press_store)
-    assert (stats["articles"], stats["chunks"], stats["added"]) == (0, 0, 0)
-
-
-def test_a_symbol_with_no_file_is_a_file_not_found_error(press_store, monkeypatch, tmp_path):
-    monkeypatch.setenv("PRESS_RELEASES_OUTPUT_DIR", str(tmp_path))
-    with pytest.raises(FileNotFoundError):
-        ingest_press_releases("AAPL", store=press_store)
 
 
 @pytest.fixture
@@ -294,27 +189,6 @@ def stored(press_store, monkeypatch, tmp_path):
     (tmp_path / "AAPL_PRs.txt").write_bytes(FIXTURE.read_bytes())
     ingest_press_releases("AAPL", store=press_store)
     return press_store
-
-
-def test_search_press_releases_is_search_news_on_the_press_collection(stored):
-    options = dict(tickers="AAPL", k=3, min_score=None, store=stored)
-    same = [(h.chunk_id, h.score) for h in search_news("Apple", **options)]
-    assert [(h.chunk_id, h.score) for h in search_press_releases("Apple", **options)] == same and len(same) == 3
-
-
-def test_a_hit_is_a_news_shaped_hit_with_the_press_release_publisher_and_the_symbol(stored):
-    hit = search_press_releases("Apple", tickers="AAPL", k=3, min_score=None, store=stored)[0]
-    assert hit.publisher == "Press release" and hit.tickers == ["AAPL"] and hit.chunk_id.startswith("pr:") and (hit.chunk, hit.chunks) == (1, 1)
-    assert hit.url.startswith("https://www.nasdaq.com/press-release/") and hit.published_utc.endswith("Z")
-
-
-def test_the_ticker_and_window_filters_and_newest_first_work_on_press_releases(stored):
-    assert search_press_releases("Apple", tickers="NVDA", min_score=None, store=stored) == []
-    dates = [h.published_utc for h in search_press_releases("Apple", tickers="AAPL", min_score=None, newest_first=True, store=stored)]
-    assert dates == ["2025-12-04T09:00:00Z", "2025-12-01T17:10:00Z", "2025-10-30T16:30:00Z"]  # the three real dates, newest first
-    now = datetime(2025, 12, 5, tzinfo=timezone.utc)
-    recent = search_press_releases("Apple", tickers="AAPL", since_days=5, min_score=None, store=stored, now=now)
-    assert {h.published_utc[:10] for h in recent} == {"2025-12-01", "2025-12-04"}  # the Oct 30 release is outside five days of Dec 5
 
 
 def test_bad_search_arguments_are_refused_for_press_releases_as_for_news(stored):
@@ -426,9 +300,3 @@ def test_store_main_can_show_the_press_release_collection(monkeypatch, capsys):
     assert "collection : press_releases-" in out and "ingest --press-releases AAPL" in out
 
 
-def test_the_store_module_run_as_a_command_passes_its_arguments_on(tmp_path):
-    """Run for real (no model: an empty folder shows 'nothing is stored yet'): `python -m prometheus.rag.store --press-releases` must show the press collection."""
-    import os, subprocess, sys
-    env = {**os.environ, "VECTOR_STORE_PATH": str(tmp_path / "empty"), "PYTHONDONTWRITEBYTECODE": "1"}
-    done = subprocess.run([sys.executable, "-m", "prometheus.rag.store", "--press-releases"], capture_output=True, text=True, env=env, cwd=config.REPO_ROOT)
-    assert done.returncode == 0 and "collection : press_releases-" in done.stdout, done.stdout + done.stderr

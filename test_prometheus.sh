@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# Prometheus end to end: ask for the request, then run it through the desk (a LangGraph that passes ONE work order from the
-# Account Manager to the Data Clerk to the Advisor). Unit/integration pytest still lives under tests/.
+# Prometheus end to end. TWO WAYS IN, both through the desk (a LangGraph that passes ONE work order from agent to agent):
+#   --session   THE END-TO-END PATH, through the Account Manager's own interface: you type what you want in your own words, the Account Manager reads it, and the desk goes on to the end (below).
+#   no flag     a RESEARCH request by four parameters (symbol, term, source, days): Account Manager (builds the work order) -> Data Clerk -> Advisor. No Critic, no decision, no trade.
+# Unit/integration pytest still lives under tests/.
 #
-#   ./test_prometheus.sh                    prompts for the four parameters below
+#   ./test_prometheus.sh                    prompts for the four parameters below (the research desk)
 #   ./test_prometheus.sh --symbol MSFT --from-days-ago 14 --yes          no prompts for what is given
 #   ./test_prometheus.sh --symbol "Procter&Gamble" --yes                  a company name: looked up to its ticker (PG), then as above
 #   ./test_prometheus.sh --term "flying car"                              a term with no symbol: searches the stored news, fetches nothing
@@ -12,12 +14,19 @@
 #   ./test_prometheus.sh --source filings --company "Apple Inc" --yes     the same, by company name (the same lookup rules as press releases)
 #   ./test_prometheus.sh --legacy           the old demo: LocalLLM + enter_symbol elicitation (main.py)
 #   ./test_prometheus.sh --session          A USER SESSION, END TO END (design choices entry 78): prompts for the user (name, age, risk, money, Ask or Auto) and for what they want in their OWN WORDS,
-#                                           creates the account in Postgres, adds the money, and starts the LangGraph desk with the request: the Account Manager reads it, the Data Clerk finds the
-#                                           companies, the Advisor ranks them, the Critic reviews them against the profile, the Account Manager decides (and spreads the money evenly when asked),
-#                                           the Trader executes (simulated) and books the fills. It prints the status of the recommendations, the Trader's results and the portfolio before and after.
-#                                           ASK MODE (the default): after the Critic, the Account Manager shows the trades it proposes (final shares and cost) and asks you, Y/N, about each one;
-#                                           only the ones you approve go on to the Trader, exactly as shown. --yes does NOT approve trades. AUTO mode trades what the Critic approved above the mark.
+#                                           creates the account in Postgres, adds the money, and starts the LangGraph desk with the request. The ACCOUNT MANAGER is the only agent you talk to: it reads the
+#                                           request into a form that code checks against your words, shows what it understood (Go ahead? [Y/n]), and then, for a request for RECOMMENDATIONS ("buy the 3 most
+#                                           recommended oil companies"): the Data Clerk finds the companies, the Advisor ranks them, the Critic reviews them against the profile, the Account Manager decides
+#                                           how much (it spreads the money evenly when asked) and the Trader executes (simulated), the Account Manager approving and booking each fill one at a time.
+#                                           ASK MODE (the default): when your words did not say how much, the Account Manager first asks (a percentage, dollars, shares or "as much as I can": design choices entry 85),
+#                                           then shows the trades it proposes (final shares and cost) and asks you, Y/N, about each one; only the ones you approve go on to the Trader, exactly as shown.
+#                                           --yes does NOT approve trades. AUTO mode trades what the Critic approved above the mark and never asks.
+#                                           A request that NAMES THE TRADE ("Buy 50 shares of MSFT", "sell 10 shares of Tesla": a ticker or a company's name, and a number of SHARES) is a DIRECT ORDER (entry 87): no research, no
+#                                           recommendation, no Critic, nothing fetched and no second question in either mode: your own order is the approval. The Account Manager prices it with the Data Clerk and the
+#                                           Trader places it as typed or not at all (there is no profile limit on any order: the cash, or the shares you hold, are the only check).
+#                                           It prints the status of the recommendations (a direct order: the order and its decision), the Trader's results and the portfolio before and after.
 #   ./test_prometheus.sh --session --name "Bob Jones" --age 60 --risk conservative --cash 15000 --mode auto --yes --prompt "I want to buy oil stocks. Buy the most amount of oil stocks shares from the 3 most recommended companies. Balance the purchased stocks evenly among the 3 recommended companies."
+#   ./test_prometheus.sh --session --name "Bill Gates" --age 70 --risk moderate --cash 30000 --mode ask --yes --prompt "Buy 50 shares of MSFT"          a direct order (PAID: the Account Manager's and the Trader's models; no fetch)
 #   Every agent is REAL (Data Clerk, Advisor, Critic, Trader, Account Manager, the Postgres account book) and the data are the real stored data: it costs OpenRouter and Finnhub calls, and with a fetch (the
 #   default unless --no-fetch; you are asked, --yes answers) the PAID Massive/Finnhub APIs, which write files. Nothing is sent to a broker. Exit code 0: the session did what was asked (the portfolio
 #   changed); 1: it could not trade (the reasons are printed; --allow-no-trade accepts that); 2: a bad flag, the account book or the request could not be used.
@@ -48,7 +57,7 @@
 #        --model ID (Advisor model)  --skip-inspect (skip the fastmcp smoke check)  --legacy  --help
 # SESSION FLAGS (with --session; anything not given is asked)  --name N  --age N  --risk conservative|moderate|aggressive  --cash DOLLARS  --mode ask|auto  --prompt TEXT  --account N|KEY (an existing account: no
 #        user is created)  --yes (ask nothing: not the fetch, not the understanding; in Ask mode you are still asked to approve each trade)  --no-fetch  --no-trader-model  --cleanup (delete the new account at the end)  --allow-no-trade  --real-ledger
-#        --auto-min-score N  --max-position-pct X  --max-exposure-pct X  --max-loss-pct X  --default-count N  --model ID (the Advisor's)  --save FILE (what the desk made, as JSON: a real capture)
+#        --auto-min-score N  --default-count N  --model ID (the Advisor's)  --save FILE (what the desk made, as JSON: a real capture)
 # PROMETHEUS_DRY_RUN=1 prints the command instead of running it (used by tests/test_prometheus_script.py).
 set -euo pipefail
 
@@ -59,7 +68,7 @@ usage() { sed -n '2,/^set -euo/p' "$0" | sed '$d' | sed 's/^# \{0,1\}//'; }
 SYMBOL=""; TERM_TEXT=""; SOURCE=""; DAYS=""; COMPANY=""; YES=0; NO_FETCH=0; NO_ADVISOR=0; MODEL=""; SKIP_INSPECT=0; LEGACY=0
 HAVE_SYMBOL=0; HAVE_TERM=0; HAVE_SOURCE=0; HAVE_DAYS=0; HAVE_COMPANY=0
 SESSION=0; S_NAME=""; S_AGE=""; S_RISK=""; S_CASH=""; S_MODE=""; S_PROMPT=""; S_ACCOUNT=""; S_CLEANUP=0; S_ALLOW_NO_TRADE=0; S_NO_TRADER_MODEL=0; S_REAL_LEDGER=0
-S_AUTO_MIN=""; S_MAX_POS=""; S_MAX_EXP=""; S_MAX_LOSS=""; S_COUNT=""; S_SAVE=""
+S_AUTO_MIN=""; S_COUNT=""; S_SAVE=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -83,9 +92,6 @@ while [[ $# -gt 0 ]]; do
     --prompt)         [[ $# -ge 2 ]] || { echo "ERROR: --prompt needs a value" >&2; exit 2; }; S_PROMPT="$2"; shift 2 ;;
     --account)        [[ $# -ge 2 ]] || { echo "ERROR: --account needs a value" >&2; exit 2; }; S_ACCOUNT="$2"; shift 2 ;;
     --auto-min-score) [[ $# -ge 2 ]] || { echo "ERROR: --auto-min-score needs a value" >&2; exit 2; }; S_AUTO_MIN="$2"; shift 2 ;;
-    --max-position-pct) [[ $# -ge 2 ]] || { echo "ERROR: --max-position-pct needs a value" >&2; exit 2; }; S_MAX_POS="$2"; shift 2 ;;
-    --max-exposure-pct) [[ $# -ge 2 ]] || { echo "ERROR: --max-exposure-pct needs a value" >&2; exit 2; }; S_MAX_EXP="$2"; shift 2 ;;
-    --max-loss-pct)   [[ $# -ge 2 ]] || { echo "ERROR: --max-loss-pct needs a value" >&2; exit 2; }; S_MAX_LOSS="$2"; shift 2 ;;
     --default-count)  [[ $# -ge 2 ]] || { echo "ERROR: --default-count needs a value" >&2; exit 2; }; S_COUNT="$2"; shift 2 ;;
     --save)           [[ $# -ge 2 ]] || { echo "ERROR: --save needs a value" >&2; exit 2; }; S_SAVE="$2"; shift 2 ;;
     --cleanup)        S_CLEANUP=1; shift ;;
@@ -98,7 +104,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # The session flags belong to --session. Without it they are refused, not silently ignored.
-if [[ $SESSION -eq 0 ]] && [[ -n "$S_NAME$S_AGE$S_RISK$S_CASH$S_MODE$S_PROMPT$S_ACCOUNT$S_AUTO_MIN$S_MAX_POS$S_MAX_EXP$S_MAX_LOSS$S_COUNT$S_SAVE" || $S_CLEANUP -eq 1 || $S_ALLOW_NO_TRADE -eq 1 || $S_NO_TRADER_MODEL -eq 1 || $S_REAL_LEDGER -eq 1 ]]; then
+if [[ $SESSION -eq 0 ]] && [[ -n "$S_NAME$S_AGE$S_RISK$S_CASH$S_MODE$S_PROMPT$S_ACCOUNT$S_AUTO_MIN$S_COUNT$S_SAVE" || $S_CLEANUP -eq 1 || $S_ALLOW_NO_TRADE -eq 1 || $S_NO_TRADER_MODEL -eq 1 || $S_REAL_LEDGER -eq 1 ]]; then
   echo "ERROR: --name, --age, --risk, --cash, --mode, --prompt, --account, --cleanup and the other session flags go with --session" >&2; exit 2
 fi
 # --company belongs to press releases. Alone it means that source; with another source it is a mistake, and it is refused, not silently ignored.
@@ -151,6 +157,19 @@ if [[ $SESSION -eq 1 ]]; then
   valid_mode() { [[ "$1" == "ask" || "$1" == "auto" ]]; }
   valid_prompt() { [[ -n "${1// /}" && ${#1} -le 600 ]]; }
 
+  # names_the_trade TEXT: whether the words NAME A TRADE, "a number of SHARES of a TICKER or a COMPANY's name" after a buying or selling word, or a TICKER with no number (a DIRECT ORDER, design choices entries 87, 88 and 98). A direct order does no research and fetches nothing, so the paid-fetch
+  # question below is not asked for it. This only spares a question: the Account Manager's own reading of the request (in Python) decides what the desk does, and a request this misses is simply asked about as before.
+  # The same words as `intent.check_order`: a number, "shares", up to three words, then a ticker or a company's name (a word that starts with a capital) (tests/test_prometheus_script.py pins the two together on the real requests).
+  names_the_trade() {
+    local text="$1" lower
+    lower="$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')"
+    [[ "$lower" =~ (^|[^[:alnum:]])(buy|bought|purchase|purchasing|get|acquire|sell|selling|sold|unload|dump|liquidate|trim|exit)([^[:alnum:]]|$) ]] || return 1
+    # a request for recommendations, advice or research, or about a THEME, is not a direct order (entry 98: a named stock is the user's own trade unless they ask for a recommendation)
+    [[ "$lower" =~ (recommend|advi[cs]e|research|analy[sz]|should[[:space:]]+i|worth|best|top|most|stocks|companies|sector|industry|pass) ]] && return 1
+    [[ "$text" =~ (^|[^[:alnum:]\$.,%-])([0-9][0-9,]*|[Oo]ne|[Tt]wo|[Tt]hree|[Ff]our|[Ff]ive|[Ss]ix|[Ss]even|[Ee]ight|[Nn]ine|[Tt]en)[[:space:]]+[Ss]hares?[[:space:]]+((of|in)[[:space:]]+)?([A-Za-z\&\'’-]+[[:space:]]+){0,3}\(?\$?[A-Z] ]] && return 0
+    # or a ticker in capitals (two to five letters) with no number of shares ("I want to buy" and the ticker); the Account Manager then asks how many in Ask mode
+    [[ "$text" =~ (^|[^[:alnum:]\$.])[A-Z]{2,5}([^[:alnum:]]|$) ]]
+  }
   valid_account() { [[ "$1" =~ ^[0-9]+$ || "$1" =~ ^[a-z][a-z0-9_]{0,40}$ ]]; }
   valid_yes_no() { [[ "$1" =~ ^[YyNn]([Ee][Ss]|[Oo])?$ ]]; }
 
@@ -170,7 +189,7 @@ if [[ $SESSION -eq 1 ]]; then
     need_value S_AGE   'Age  [60] (18 to 120; an older user is held to a lower risk): ' '60' valid_age "Age is a whole number from 18 to 120."
     need_value S_RISK  'Risk tolerance  [conservative] (conservative, moderate or aggressive): ' 'conservative' valid_risk "Risk tolerance is conservative, moderate or aggressive."
     need_value S_CASH  'Money to add to the account, in dollars  [15000]: ' '15000' valid_cash "Money is a number of dollars above zero, with at most two decimals (no $ or commas)."
-    need_value S_MODE  'Trade mode  [ask] (ask: you approve each trade before it is made; auto: the desk trades what the Critic approves): ' 'ask' valid_mode "Trade mode is ask or auto."
+    need_value S_MODE  'Trade mode  [ask] (ask: you approve each trade the desk proposes; auto: the desk trades what the Critic approves; a trade you name yourself is never asked about again): ' 'ask' valid_mode "Trade mode is ask or auto."
   else
     if [[ -n "$S_NAME$S_AGE$S_RISK$S_CASH$S_MODE" ]]; then echo "ERROR: --account uses an existing account: do not give --name, --age, --risk, --cash or --mode with it" >&2; exit 2; fi
     echo "-- an existing account (no user is created and no money is added) --"
@@ -178,13 +197,16 @@ if [[ $SESSION -eq 1 ]]; then
   fi
   # 2. the main prompt: what the user wants, in their own words
   echo "-- the request --"
+  [[ -n "$S_PROMPT" ]] || echo "   (in your own words: a theme or companies to be recommended, or a trade you name yourself, for example: Buy 20 shares of ABCD)"
   need_value S_PROMPT 'Tell me what you want to do?:  [Enter: the sample request, buy oil stocks]: ' 'I want to buy oil stocks. Use as much of the money in my account as you can to buy shares of the 3 most recommended oil companies, and split the money evenly among the 3.' valid_prompt "Say what you want (1 to 600 characters)."
   [[ -z "$S_COUNT" ]] || { [[ "$S_COUNT" =~ ^[0-9]+$ ]] || { echo "ERROR: --default-count is a whole number" >&2; exit 2; }; }
 
   # Fetching uses the PAID APIs and writes files: say so, and ask. Nobody to ask (the input ended) and no --yes: NO, so a script that is not watched never spends by default.
   FETCH_FLAG=""
   if [[ $NO_FETCH -eq 0 ]]; then
-    if [[ $YES -eq 1 ]]; then
+    if names_the_trade "$S_PROMPT"; then
+      echo "  (this request names the trade itself, a direct order: the desk does no research and fetches nothing, so the paid refresh is not asked about and --fetch is not passed)"
+    elif [[ $YES -eq 1 ]]; then
       FETCH_FLAG="--fetch"
     else
       ask CONFIRM "Refresh the data of the companies (daily bars, news, press releases, SEC filings) with the PAID APIs and write news/, data/press_releases/, data/filings/ and data/historical/ticker_bars_v1/? [Y/n]: " 'Y'
@@ -200,9 +222,6 @@ if [[ $SESSION -eq 1 ]]; then
   [[ -n "$MODEL" ]] && CMD+=(--model "$MODEL")
   [[ -n "$S_COUNT" ]] && CMD+=(--default-count "$S_COUNT")
   [[ -n "$S_AUTO_MIN" ]] && CMD+=(--auto-min-score "$S_AUTO_MIN")
-  [[ -n "$S_MAX_POS" ]] && CMD+=(--max-position-pct "$S_MAX_POS")
-  [[ -n "$S_MAX_EXP" ]] && CMD+=(--max-exposure-pct "$S_MAX_EXP")
-  [[ -n "$S_MAX_LOSS" ]] && CMD+=(--max-loss-pct "$S_MAX_LOSS")
   [[ $S_NO_TRADER_MODEL -eq 1 ]] && CMD+=(--no-trader-model)
   [[ $S_REAL_LEDGER -eq 1 ]] && CMD+=(--real-ledger)
   [[ -n "$S_SAVE" ]] && CMD+=(--save "$S_SAVE")

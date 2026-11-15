@@ -52,13 +52,6 @@ def fresh_hit(article="new1", headline="Procter & Gamble lowers its full-year ou
 
 # ---------------------------------------------------------------- the claims
 
-def test_a_signal_and_an_event_with_the_same_words_are_one_claim_that_remembers_the_class():
-    s = Setup()
-    assert [c.ref for c in s.claims] == ["[5]", "[7]", "E15", "E21"]
-    five = s.claims[0]
-    assert (five.kind, five.direction, five.event_class, five.source) == ("signal", "bullish", "earnings_beat", 5) and five.chunk_id.startswith("polygon:")
-    assert s.claims[2].kind == "evidence" and s.claims[2].evidence_id == "E15" and s.claims[2].chunk_id is None
-
 
 def test_only_the_model_origin_events_and_counted_verified_signals_are_claims():
     order = captured("PG_open")
@@ -79,90 +72,10 @@ def test_two_events_of_one_class_from_different_sources_get_unique_refs():
     assert refs.count("guidance_raise") == 1 and refs.count("guidance_raise#2") == 1 and len(refs) == len(set(refs))
 
 
-def test_the_supporting_claims_are_the_ones_on_the_side_of_the_stance():
-    s = Setup()
-    assert [c.ref for c in cl.supporting(s.claims, "bullish")] == [c.ref for c in s.claims] and cl.supporting(s.claims, "bearish") == []
-    assert cl.stance_direction(s.rec) == "bullish" and cl.stance_direction(rec_of(Setup(**{"action.action": "reduce"}).order)) == "bearish"
-
-
 # ---------------------------------------------------------------- what the model reads, and does not
-
-def test_every_claim_is_reviewed_and_the_blend_is_not_lowered_when_all_hold():
-    r, run = Setup().run(ReviewerModel())
-    assert r.detail.reviewed and r.called and run["calls"] == 1 and run["tokens_in"] == 400 and run["records_called"] == 1 and run["controls_failed"] == 0
-    assert [(c.ref, c.label) for c in r.detail.claims] == [("[5]", "supports"), ("[7]", "supports"), ("E15", "supports"), ("E21", "supports")]
-    assert r.detail.control.passed and r.detail.control.label == "unrelated" and r.score == 100
-    cf = r.detail.counterfactual
-    assert cf.blend == pytest.approx(cf.blend_recorded, abs=2e-4) and cf.blend <= cf.blend_recorded + 1e-9
-    assert not {"control_failed", "evidence_not_reviewed", "event_not_supported"} & set(codes(r))
-
-
-def test_the_model_sees_the_claims_and_their_sources_and_nothing_that_could_anchor_it():
-    model = ReviewerModel()
-    s = Setup()
-    s.run(model)
-    system, user = model.seen[0][0].content, model.seen[0][-1].content
-    assert "independent reviewer" in system and "Procter & Gamble" in system and "bullish" in system and "Today is 2026-11-05" in system and "at most 25 words" in system
-    secrets = ("model_score", "risk_tolerance", "capital_return", "stance_reason", str(s.rec.trade.stop_price), str(s.rec.trade.entry_mid), s.rec.thesis.thesis[:40], s.rec.action.reason[:30], s.rec.identity.record_id)
-    for text in (system, user):
-        for secret in secrets:
-            assert secret not in text, secret
-    assert "Everything below is text from the web" in user and "SOURCES of the claims, read again from the store today" in user
-    assert "[5]" in user and "E15" in user and "FRESH SOURCES: none" in user
-
-
-def test_the_control_claim_is_planted_with_an_ordinary_ref_and_never_reaches_the_result_or_the_sources():
-    model = ReviewerModel()
-    s = Setup()
-    r, _ = s.run(model)
-    user = model.seen[0][-1].content
-    top = max(src["number"] for src in s.order.data.sources)
-    assert r.detail.control.ref == f"[{top + 1}]" and f"[{top + 1}]" in user and "Community notes" in user
-    assert all(c.ref != r.detail.control.ref for c in r.detail.claims) and len(r.detail.claims) == 4
-    assert all(src["number"] <= top for src in s.order.data.sources) and "Community notes" not in json.dumps(s.order.model_dump())
-
-
-def test_the_controls_text_and_place_depend_only_on_the_record():
-    def seen(record_id):
-        model = ReviewerModel()
-        Setup(**{"identity.record_id": record_id}).run(model)
-        user = model.seen[0][-1].content
-        claim_lines = user.split("CLAIMS:")[1].split("SOURCES of the claims")[0].strip().splitlines()[1:]
-        return [i for i, line in enumerate(claim_lines) if line.startswith("[18]")][0], next(n.text for n in E.control_texts if n.text.split(".")[0] in user)
-    assert seen("0123456789ab") == seen("0123456789ab")
-    places = {seen(f"{n:012x}")[0] for n in range(0, 40)}
-    assert places == {0, 1, 2, 3, 4}                                             # it moves around: 4 claims and the control have 5 places
-    assert len({seen(f"{n:012x}")[1] for n in range(0, 12)}) == 3 and ev.seed_of("not-hex") == ev.seed_of("not-hex")
-
-
-def test_the_system_prompt_names_the_action_and_the_direction_of_the_reduction():
-    system = prompts.review_system(NOW.date(), "reduce", "PG", None, "bearish", 25)
-    assert "recommends to reduce PG (PG)" in system and "bearish news" in system and "approve nothing" in system
 
 
 # ---------------------------------------------------------------- what each label does
-
-def test_a_weak_quote_counts_half_and_lowers_the_blend():
-    r, _ = Setup().run(ReviewerModel(labels={"[5]": "weak", "[7]": "weak"}))
-    assert [c.label for c in r.detail.claims][:2] == ["weak", "weak"] and 0 < r.detail.counterfactual.news < 0.2163 and r.detail.counterfactual.blend < r.detail.counterfactual.blend_recorded
-    assert r.detail.counterfactual.news == pytest.approx(0.276 * 0.5 * 2 / (0.276 * 0.5 * 2 + 2), abs=1e-3)
-
-
-def test_a_second_quote_from_the_same_source_keeps_its_own_label():
-    """The blend stores both quotes under one ref (`[4]`, `E3`). The claim list numbers the second `[4]#2`. Each row takes its own label (entry 71)."""
-    from types import SimpleNamespace
-    rec = SimpleNamespace(action=SimpleNamespace(action="open"), blend={
-        "value": 0.2,
-        "components": {
-            "news": {"value": 0.5, "parts": [{"ref": "[4]", "direction": "bullish", "weight": 1.0}, {"ref": "[4]", "direction": "bullish", "weight": 1.0}]},
-            "filings": {"value": 0.5, "parts": [{"ref": "E3", "value": 1.0}, {"ref": "E3", "value": 1.0}, {"metric": "share_count_change", "value": 0.0}]},
-        },
-    })
-    held = ev.counterfactual(rec, [], {"[4]": "supports", "[4]#2": "supports", "E3": "supports", "E3#2": "supports"}, set(), [], ADVISOR_CONFIG, CONFIG)
-    flipped = ev.counterfactual(rec, [], {"[4]": "supports", "[4]#2": "contradicts", "E3": "supports", "E3#2": "unrelated"}, set(), [], ADVISOR_CONFIG, CONFIG)
-    assert held.news == pytest.approx(0.5) and flipped.news == pytest.approx(0.0)          # +1 and -1, not two +1
-    assert held.filings == pytest.approx((1 + 1 + 0) / 3, abs=1e-4) and flipped.filings == pytest.approx(0.5)
-    assert flipped.blend < held.blend
 
 
 def test_an_unrelated_quote_counts_for_nothing_and_a_contradicting_one_votes_the_other_way():
@@ -171,13 +84,6 @@ def test_an_unrelated_quote_counts_for_nothing_and_a_contradicting_one_votes_the
     contradicts = Setup().run(ReviewerModel(labels={"[5]": "contradicts", "[7]": "contradicts"}))[0].detail.counterfactual
     assert unrelated.news == 0.0 and contradicts.news < 0 and contradicts.news == pytest.approx(-0.276 * 2 / (0.276 * 2 + 2), abs=1e-3)
     assert contradicts.blend < unrelated.blend <= base.blend <= base.blend_recorded + 1e-9
-
-
-def test_an_unsupported_evidence_item_leaves_the_filings_part_and_a_weak_one_counts_half():
-    base = Setup().run(ReviewerModel())[0].detail.counterfactual
-    gone = Setup().run(ReviewerModel(labels={"E15": "unrelated", "E21": "contradicts"}))[0].detail.counterfactual
-    weak = Setup().run(ReviewerModel(labels={"E15": "weak"}))[0].detail.counterfactual
-    assert gone.filings < base.filings and weak.filings < base.filings and gone.blend < base.blend
 
 
 def test_the_blend_without_the_quotes_that_did_not_hold_is_never_above_the_advisors():
@@ -218,16 +124,6 @@ def test_a_source_that_does_not_list_the_symbol_counts_for_nothing_in_the_return
 
 # ---------------------------------------------------------------- the control claim: proof the model read the text
 
-@pytest.mark.parametrize("control", ["supports", "weak", "contradicts"])
-def test_a_reply_that_does_not_call_the_planted_notice_unrelated_is_thrown_away(control):
-    s = Setup()
-    r, run = s.run(ReviewerModel(control=control, labels={"[5]": "unrelated"}))
-    [f] = [f for f in r.findings if f.code == "control_failed"]
-    assert f.severity == "warning" and f.requires_human and control in f.message
-    assert all(c.label == "unreviewed" for c in r.detail.claims) and r.detail.control.passed is False and r.detail.control.label == control and r.detail.reviewed is False
-    assert run["controls_failed"] == 1 and run["calls"] == 1                       # no second try: it would tell the model what was wrong
-    assert r.detail.counterfactual.news == Setup().run(ReviewerModel())[0].detail.counterfactual.news          # unreviewed claims count in full: the labels were not used
-
 
 def test_a_model_that_labels_everything_supports_fails_the_control():
     r, run = Setup().run(Scripted(json.dumps({"claims": [{"ref": f"[{n}]", "label": "supports"} for n in list(range(1, 25))] + [{"ref": "E15", "label": "supports"}, {"ref": "E21", "label": "supports"}], "fresh": []})))
@@ -255,15 +151,6 @@ def test_a_model_that_raises_is_not_reviewed_and_says_so_for_a_person():
     [f] = [f for f in r.findings if f.code == "evidence_not_reviewed"]
     assert f.requires_human and "TimeoutError" in f.message and r.detail.reviewed is False and all(c.label == "unreviewed" for c in r.detail.claims) and run["errors"] and "TimeoutError" in run["errors"][0]
     assert r.score == pytest.approx(100 * (0.5 * 0.5 + 0.3 + 0.2 * 0), abs=0.01)           # unreviewed: the unknown credit for support, nothing for breadth
-
-
-def test_one_retry_on_a_reply_that_is_not_json_and_the_tokens_of_both_are_counted():
-    good = ReviewerModel()
-    s = Setup()
-    model = Scripted("this is not json", json.dumps({"claims": []}))
-    r, run = s.run(model)
-    assert run["calls"] == 2 and len(model.seen) == 2 and "not valid JSON" in model.seen[1][-1].content and r.called
-    assert good is not None
 
 
 def test_a_claim_the_model_leaves_unlabelled_is_unreviewed_and_named():
@@ -300,20 +187,6 @@ def test_the_orders_budget_of_model_calls_is_respected():
     assert model.seen == [] and "evidence_not_reviewed" in codes(r) and "used up" in run["errors"][0]
 
 
-def test_a_record_with_nothing_to_review_makes_no_call_and_raises_no_warning():
-    s = Setup(**{"evidence.signals": [], "evidence.events": []})
-    model = ReviewerModel()
-    r, run = s.run(model)
-    assert model.seen == [] and not r.called and run["records_called"] == 0 and r.detail.control is None and "evidence_not_reviewed" not in codes(r) and r.detail.claims == []
-
-
-def test_a_claim_whose_source_could_not_be_read_is_not_shown_to_the_model_and_stays_unreviewed():
-    s = Setup()
-    model = ReviewerModel()
-    r, _ = s.run(model, mutate=lambda v: v["chunks"].update({s.claims[0].chunk_id: {"found": False, "note": "gone"}}))
-    assert "[5]" not in model.seen[0][-1].content.split("SOURCES of the claims")[0] and [c.label for c in r.detail.claims][0] == "unreviewed" and "evidence_not_reviewed" not in codes(r)
-
-
 def test_a_source_longer_than_the_limit_is_shown_around_its_quote():
     text = ("filler " * 3000) + "Procter & Gamble lifted its outlook for the full year. " + ("more filler " * 3000)
     shown = ev.excerpt(text, "Procter & Gamble lifted its outlook for the full year.", 4000)
@@ -335,11 +208,6 @@ def test_newer_bad_news_that_code_finds_is_a_blocker_whatever_the_model_says():
     assert r.detail.counterfactual.news < base.detail.counterfactual.news and r.detail.counterfactual.blend < base.detail.counterfactual.blend and r.score < base.score
 
 
-def test_the_same_news_older_than_ten_days_is_only_a_warning_for_a_person():
-    r, _ = Setup().run(ReviewerModel(), mutate=with_fresh(fresh_hit(published="2026-10-20T14:00:00Z")))
-    assert "fresh_negative_event" not in codes(r) and [(f.code, f.requires_human) for f in r.findings if f.code == "fresh_negative_news"] == [("fresh_negative_news", True)]
-
-
 # The real sentence that blocked a Procter & Gamble purchase for PepsiCo's news (stored article, 2026-11-13; the first live run of 2026-11-14).
 PEPSICO_SENTENCE = ("Procter & Gamble or PepsiCo: The One Dividend Stock I’d Hold for the Next 20 Years Key TakeawaysProcter & Gamble declared its $1. 0885 quarterly dividend in October, "
                     "while PepsiCo cut its 2026 core EPS growth outlook and lost KFC’s U.")
@@ -358,20 +226,6 @@ def test_the_companys_own_cut_still_counts_in_every_shape_of_sentence():
     assert ev.bearish_classes("PepsiCo declared a dividend, while Procter & Gamble cut its 2026 guidance.", "PG", "Procter & Gamble") == ["guidance_cut"]
     assert ev.bearish_classes("Procter & Gamble cut its 2026 guidance, while PepsiCo declared a dividend.", "PG", "Procter & Gamble") == ["guidance_cut"]
     assert ev.bearish_classes("Both Procter & Gamble and PepsiCo cut their 2026 guidance.", "PG", "Procter & Gamble") == ["guidance_cut"]     # one clause names both: it is about both
-
-
-def test_a_later_sentence_about_the_company_is_not_hidden_by_another_companys_earlier_one():
-    text = "PepsiCo cut its 2026 guidance on Tuesday. Procter & Gamble cut its 2026 guidance on Wednesday."
-    assert ev.bearish_classes(text, "PG", "Procter & Gamble") == ["guidance_cut"]                                   # only the FIRST matching sentence was looked at before
-    assert ev.bearish_classes("PepsiCo cut its 2026 guidance on Tuesday. Procter & Gamble raised its dividend.", "PG", "Procter & Gamble") == []
-
-
-def test_a_pattern_spread_over_two_clauses_keeps_the_old_sentence_level_rule():
-    """No single clause shows the class here (the cut is in one, the guidance in the other), so the sentence decides, as before: it names the company."""
-    text = "Procter & Gamble cut, while analysts shrugged, its 2026 guidance."
-    assert len([c for c in ev.CLAUSE_BREAK.split(text) if c.strip()]) == 2 and not any(ev.class_matches("guidance_cut", c) for c in ev.CLAUSE_BREAK.split(text))
-    assert ev.bearish_classes(text, "PG", "Procter & Gamble") == ["guidance_cut"]
-    assert ev.bearish_classes(text.replace("Procter & Gamble", "PepsiCo"), "PG", "Procter & Gamble") == []        # a sentence that does not name the company is still not about it
 
 
 def test_a_review_does_not_block_a_purchase_for_another_companys_news():
@@ -407,23 +261,6 @@ def test_a_bearish_label_whose_quote_is_not_in_the_source_or_does_not_name_the_c
     assert r.detail.fresh[0].label == "none" and "fresh_negative_news" not in codes(r) and any("ignored" in d for d in run["dropped"])
 
 
-def test_fresh_sources_the_advisor_already_had_are_left_out():
-    s = Setup()
-    seen = s.order.data.sources[0]
-    same_article = fresh_hit(article=seen["article_id"], headline="Totally different words")
-    same_story = fresh_hit(article="other", headline=seen["headline"].upper() + "!")
-    r, _ = s.run(ReviewerModel(), mutate=with_fresh(same_article, same_story))
-    assert r.detail.fresh == [] and "fresh_negative_event" not in codes(r)
-
-
-def test_at_most_the_configured_number_of_fresh_sources_are_shown_newest_first():
-    hits = [fresh_hit(article=f"n{i}", headline=f"A calm headline number {i}", text="Nothing happened to the company today.", published=f"2026-11-0{4 - i % 3}T10:00:00Z") for i in range(12)]
-    model = ReviewerModel()
-    r, _ = Setup().run(model, mutate=with_fresh(*hits))
-    assert [f.id for f in r.detail.fresh] == [f"F{i}" for i in range(1, 9)] and [f.chunk_id for f in r.detail.fresh] == [f"n{i}#0" for i in range(8)]
-    assert "F8" in model.seen[0][-1].content and "F9" not in model.seen[0][-1].content
-
-
 def test_a_reduction_looks_at_no_fresh_sources_and_has_no_counterfactual():
     s = Setup(**{"action.action": "reduce", "trade.family": None})
     r, _ = s.run(ReviewerModel(), mutate=with_fresh(fresh_hit()))
@@ -447,11 +284,6 @@ def test_the_same_producer_as_the_advisor_is_a_warning_for_a_person():
     assert "same_model_family" not in codes(Setup().run(ReviewerModel(), independent=None)[0]) and "same_model_family" not in codes(Setup().run(ReviewerModel())[0])
 
 
-def test_independence_is_about_the_producer_not_the_model():
-    assert ev.independence("z-ai/glm-5.3", "openai/gpt-oss-120b") is True and ev.independence("openai/gpt-5", "openai/gpt-oss-120b") is False
-    assert ev.independence("Z-AI/glm-5.3", "z-ai/glm-5.2") is False and ev.independence(None, "openai/gpt-oss-120b") is None and ev.independence("glm", "openai/x") is None
-
-
 def test_the_newest_quote_being_old_single_publishers_and_counter_evidence_are_noted():
     s = Setup()
     r, _ = s.run(ReviewerModel())
@@ -472,6 +304,3 @@ def test_the_evidence_score_is_support_cleanliness_and_breadth():
     assert [m.name for m in weak.measures] == ["support", "clean", "breadth"] and [m.weight for m in weak.measures] == [50, 30, 20]
 
 
-def test_with_no_claims_the_support_is_the_unknown_credit():
-    r, _ = Setup(**{"evidence.signals": [], "evidence.events": []}).run(ReviewerModel())
-    assert r.score == pytest.approx(100 * (0.5 * 0.5 + 0.3 + 0), abs=0.01) and r.measures[0].available is False

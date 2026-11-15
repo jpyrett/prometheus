@@ -80,7 +80,7 @@ Prereqs
 4) Pytest (FastMCP tools / quotes)
 ----------------------------------
   conda activate cmu
-  pytest tests/fastmcp_tools.py tests/fastmcp_quotes.py -q -k 'not forced_failure'
+  pytest tests/fastmcp_tools.py -q -k 'not forced_failure'
 
   # Intentional red demo (ignore):
   # pytest tests/fastmcp_tools.py -k forced_failure
@@ -154,7 +154,7 @@ Prereqs
   python labs/module3_rag/other/agent_reliability.py --as-order --only flying-car,memory-shortage   # the same, but as a search_news work order (request_data)
   python labs/module3_rag/other/injection_check.py     # a poisoned article in a scratch index: does the real model obey it? (3 styles x 8 runs)
   python labs/module3_rag/other/compare_models.py --agent   # the same model comparison, but inside the finished Data Clerk (108 runs, about 3 min, about 16 cents)
-  pytest tests/test_rag_loaders.py tests/test_rag_ingest.py tests/test_rag_retriever.py tests/test_rag_citations.py tests/test_data_clerk_tools.py tests/test_chat_model.py tests/test_compare_models.py tests/test_data_clerk_agent.py tests/test_work_order.py tests/test_advisor.py tests/test_advisor_with_without.py tests/test_mcp_data_clerk.py -q   # RAG, tools, agents, MCP tests (run from the repo root)
+  pytest tests/test_rag_loaders.py tests/test_rag_ingest.py tests/test_rag_retriever.py tests/test_rag_citations.py tests/test_data_clerk_tools.py tests/test_chat_model.py tests/test_data_clerk_agent.py tests/test_work_order.py tests/test_advisor.py tests/test_mcp_data_clerk.py -q   # RAG, tools, agents, MCP tests (run from the repo root)
 
 
 8b) Part 6: the Data Clerk's tools, citations and chat model -- how it works, how to run it
@@ -337,7 +337,7 @@ Prereqs
          Advisor().advise(order, use_evidence=False)  baseline: no sources.   bare=True: the ordinary "recommend as well as you can" prompt
 
   RUN IT IN THIS ORDER (repo root, conda env "cmu"; the index must exist)
-    1. pytest tests/test_mcp_data_clerk.py tests/test_work_order.py tests/test_advisor.py tests/test_advisor_with_without.py -q
+    1. pytest tests/test_mcp_data_clerk.py tests/test_work_order.py tests/test_advisor.py -q
          142 tests, no network, no key, no cost (the whole suite is 575). One test starts the real server over stdio.
     2. python labs/module3_rag/other/mcp_check.py
          Starts the real server as a subprocess, lists its 8 tools, calls retrieve_news on the real index (the MKBHD question: 0.73, 0.64, 0.57),
@@ -708,7 +708,7 @@ See also: README.md  |  design/session_notes.md
       from prometheus.agents.advisor.advisor import Advisor
       from prometheus.common.portfolio import load_portfolio
       order = Advisor().generate_recommendations(order, load_portfolio("configs/portfolios/jacob_pyrett.json"), case="funds", today=date.today())   # case: funds | theme ("market" is not built)
-    It needs daily bars through today (freshness gate) and 20+ sessions for the liquidity gate, 252+ for trend: the Data Clerk's refresh is a step BEFORE the Advisor in the graph.
+    It needs daily bars through today (freshness gate) and 252+ sessions for trend (there is no liquidity gate, entry 93): the Data Clerk's refresh is a step BEFORE the Advisor in the graph.
   REFRESH THE DATA (paid / network; each asks for --yes):
     python scripts/fetch_bars.py --symbols SNDK PG --days 400 --yes        # daily bars of the tickers, SPY and the 11 sector ETFs, Massive REST (17 calls) -> data/historical/ticker_bars_v1/
     python scripts/sync_day_aggs.py --from 2025-09 --to 2026-11 --yes      # the flat-file route (aws s3 sync of day_aggs_v1 only); needs flat-file keys in .aws/ (returned 403 on 2026-11-05)
@@ -767,15 +767,14 @@ PART 10. THE CRITIC (Critic v1: Week 5, part 6; design choices entries 56 to 59;
   READING THE REPORT: the CRITIC REVIEW section prints one card per recommendation (APPROVE or DENY, score, points of each dimension, warnings, blockers) and TRADE DECISIONS (yes (AUTO), yes (you approved), pending your answer (ASK),
     no (system denied) -- final: you are never asked to override a denial --, no (the approval ran out), no (no funds)). WITHOUT --trade NOTHING IS BOUGHT OR SOLD: the decision is the permission the Trader needs
     (work_order.verify_trade is its precondition; PART 12 is the Trader).
-  YOUR PROFILE: configs/profiles/jacob_pyrett.json (a SAMPLE: moderate, Ask, 10% a position, 1% a stop-out, 30% new exposure a review, no age; the real values are yours to give). The Critic sees only the risk tolerance, age, horizon, excluded symbols and sectors and the minimum price, never the mode, the size limits or the portfolio (`Critic.review_recommendations(order, risk, now)`); the Account Manager sizes by the limits.
+  YOUR PROFILE: configs/profiles/jacob_pyrett.json (a SAMPLE: moderate, Ask, no age; the real values are yours to give; the profile has NO size limit, entry 91). The Critic sees only the risk tolerance, age, horizon, excluded symbols and sectors and the minimum price, never the mode or the portfolio (`Critic.review_recommendations(order, risk, now)`); the Account Manager does no risk management: it only checks that your funds cover an order.
   NEEDS YOUR YES (AGENTS.md): a review calls Finnhub (metrics, quotes, symbol lookups) and the critic's model once per recommendation. Tests use fakes and are free:
     pytest tests/test_critic*.py tests/test_market_calendar.py tests/test_user_profile.py tests/test_account_manager_decisions.py tests/test_account_manager_sizing.py tests/test_desk_critic.py tests/test_recommendations_critic.py -q
   THE REVIEWS LEDGER: data/ledger/reviews.jsonl (append only, one line per review). Every threshold is in configs/critic_v1.json (the model never chooses one).
-  HOW MUCH TO BUY (entry 80): not the Advisor's and not the Critic's. The Account Manager sizes every approved purchase (prometheus/agents/account_manager/sizing.py, configs/account_manager_v1.json) from your cash, your
-    limits (10% of the account in one stock, 1% lost at a stop-out, 30% added by one review, an order limit if you set one), the stock's own liquidity (5% of its daily dollars) and what you said. AUTO mode with no
-    split asked spends the funds ROUND-ROBIN: a share of the first approved stock, a share of the next, and again, until the funds you asked to use (or every stock's limit) are used up; "split evenly" in your words gives
-    equal DOLLARS. ASK mode shows the largest order your limits allow (or the split you asked for) as the final proposal before it asks you Y/N about each trade. No cash is reserved: each purchase may use all the available
-    cash. The report names the limit that stopped each purchase and the flag that raises it. pytest tests/test_account_manager_sizing.py tests/test_account_manager_balance.py -q
+  HOW MUCH TO BUY (entry 80): not the Advisor's and not the Critic's. The Account Manager sizes every approved purchase (prometheus/agents/account_manager/sizing.py, configs/account_manager_v1.json) from your cash
+    and what you said: the ONLY check is that your funds cover the order (entry 91: no position, loss, order, exposure or liquidity limit exists). AUTO mode with no split asked spends the funds ROUND-ROBIN: a share of the
+    first approved stock, a share of the next, and again, until the funds you asked to use are used up; "split evenly" in your words gives equal DOLLARS. ASK mode shows the largest order your cash allows (or the split you
+    asked for) as the final proposal before it asks you Y/N about each trade. No cash is reserved: each purchase may use all the available cash. The report names what stopped each purchase (the cash, your budget, or the shares you asked for). pytest tests/test_account_manager_sizing.py tests/test_account_manager_balance.py -q
 
 
 PART 11. THE ACCOUNT BOOK (design choices entry 72)
@@ -859,16 +858,26 @@ PART 14. A USER SESSION END TO END (design choices entry 78)
          AUTO mode trades what the Critic approved at or above the mark and asks only about the rest, spending the funds round-robin when you asked for no split. No cash is reserved: each purchase may use all the available funds.
   ASK MODE ASKS HOW MUCH (entry 85): when your request does not say how much (no percentage, no dollar amount, no number of shares, no "as much as I can"), the Account Manager asks BEFORE it proposes the trades, up to three
          questions at the terminal: answer with a percentage of your account ("20%"), dollars ("$3,000"), shares ("10 shares of each") or "as much as I can", for each company or in total, and say "split evenly" if you want that.
-         Code checks your answer (the number must be one you typed; what you ask must not cost more than your cash) and your limits cut it; when your own position or exposure limit cuts it, you are asked ONCE whether to raise it
-         for this purchase only (your saved limits stay). A request that says how much, a budget, Auto mode, or no terminal: nothing is asked. A model that fails shows the default size and says so.
+         Code checks your answer (the number must be one you typed; what you ask must not cost more than your cash). A request that says how much, a budget, Auto mode, or no terminal: nothing is asked. A model that fails shows the default size and says so.
+  A TRADE YOU NAME YOURSELF (entry 87): a request that names the trade is a DIRECT ORDER and skips the research, the Advisor and the Critic (and the question "Place this trade?" in Ask mode):
+         ./test_prometheus.sh --session --name "Bill Gates" --age 70 --risk moderate --cash 30000 --mode ask --yes --prompt "Buy 50 shares of MSFT"        (PAID: the Account Manager's and the Trader's models; no fetch)
+         The Account Manager asks the Data Clerk for the price, the Trader places the trade, the report shows the order, the Trader's result and the portfolio before and after. Sells work the same way ("sell 10 shares of TSLA").
+         Say the number of SHARES and a TICKER or a COMPANY ("50 shares of MSFT", "50 shares of Microsoft"), or name the stock with NO number ("I want to buy MSFT", "Buy $5,000 of MSFT"; entry 98): that is a direct order too, and in Ask mode the Account Manager ASKS you how many (a percentage, dollars, shares or "as much as I can"), then shows the order for a yes; in Auto mode it spends what your words say (round-robin; one stock gets what the cash allows). Say "recommended" (or ask for advice or research) and it is a request for recommendations instead: "I want to buy MU, SNDK and AMD if the recommendations pass". A sale with no number is not placed: say how many. A company's name goes to the Data Clerk for its symbol (Ask mode: you confirm the symbol, the company, the shares and the amount; Auto mode: it is used without asking). No profile limit exists or applies;
+         the account is the limit, and an order is placed as typed or not at all: with $20,000 and MSFT near $524 it is refused whole and says the cash pays for 38 shares. No holding is sold to pay for it.
   FLAGS  --name --age --risk --cash --mode --account N|KEY --prompt --yes --no-fetch --no-trader-model --cleanup (delete the new account) --allow-no-trade --real-ledger --default-count N --model ID
-         --auto-min-score N  --max-position-pct X  --max-exposure-pct X  --max-loss-pct X  (limits for THIS session; the account book keeps its own)  --save FILE (what the desk made, as JSON)
+         --auto-min-score N  (the Critic's mark for THIS session; the account book keeps its own)  --save FILE (what the desk made, as JSON)
   COSTS: OpenRouter (the Account Manager's, the Advisor's, the Critic's GLM 5.3 and the Trader's models), Finnhub, and with a fetch the paid Massive and Finnhub APIs, which write files. It creates an account in the
   local Postgres (kept unless --cleanup; python -m prometheus.agents.account_manager.account_manager --account N shows it). Nothing is sent to a broker.
   EXIT CODE  0 the portfolio changed (or it was only a look)  1 it could not trade, with the reasons  2 a bad flag, or the account book, a key or the request could not be used.
-  WHY IT MAY NOT TRADE: in Auto mode an approval under the automatic-trading mark (80, or --auto-min-score) waits for the user; a company over the user's risk is denied; the profile limits one stock to 10% of
-  equity and one review to 30% (the Account Manager's sizing stops each purchase at its limit, so $15,000 does not all get spent; the report names the limit and the flag that raises it), and an even split gives every
-  purchase the same dollars, so a dearer stock gets fewer shares. The report names each of these.
-  TESTS  pytest tests/test_session_offline.py tests/test_session_replay.py tests/test_session_replay_round_robin.py tests/test_account_manager_clarify.py tests/test_account_manager_intent.py tests/test_account_manager_balance.py tests/test_account_manager_sizing.py   (real data, no stand-in agent)
+  WHY IT MAY NOT TRADE: in Auto mode an approval under the automatic-trading mark (80, or --auto-min-score) waits for the user; a company over the user's risk is denied; the Account Manager sizes
+  by your cash alone (no profile limit, entry 91), so a purchase stops only when the cash is spent, your budget or the shares you asked for are reached, and an even split gives every purchase the same dollars, so a dearer
+  stock gets fewer shares. A NEUTRAL score (the Advisor found no strategy) does not trade unless ALLOW_NEUTRAL_RECOMMENDATIONS=true is in .env (below). The report names each of these.
+  NEUTRAL RECOMMENDATIONS (entry 91): with ALLOW_NEUTRAL_RECOMMENDATIONS=true in .env (the Account Manager reads it; unset or false changes nothing), a company YOU NAMED that the Advisor scored NEUTRAL counts as approved:
+         the Account Manager decides a purchase of it (Auto: yes_auto, the money shared in equal dollars with no limit; Ask: it first ASKS YOU FOR THE NUMBER when your request had none, "I want to buy MU and AMD": a percentage, dollars, shares or "as much as I can" (entry 92), then asks Y/N about each), and the Trader buys it at the market. A Critic DENIAL is still final, a bearish
+         score, a failed gate and a company you did not name still trade nothing. Example (a real run, paid):
+         ./test_prometheus.sh --session --name "Pam Smith" --age 30 --risk aggressive --cash 50000 --mode auto --yes --prompt "Buy MU, SNDK and AMD if the recommendations pass. Go ahead and trade if the recommendations pass."
+         -> SNDK denied by the Critic; MU 32 and AMD 46 shares bought; $502.59 left.   pytest tests/test_neutral_recommendation.py -q (31 tests, real capture)
+  THE CRITIC'S RISK SCORE (entries 92 and 97) has five measures (volatility, drawdown, beta, ATR, flags); the stock's liquidity, its size (market cap) and the stop's distance are not measures. Weights: configs/critic_v1.json.
+  TESTS  pytest tests/test_direct_order.py tests/test_session_offline.py tests/test_session_replay.py tests/test_session_replay_round_robin.py tests/test_account_manager_clarify.py tests/test_account_manager_intent.py tests/test_account_manager_balance.py tests/test_account_manager_sizing.py   (real data, no stand-in agent)
          PROMETHEUS_LIVE_TESTS=1 pytest tests/test_end_to_end_live.py -q -s     (the real agents: a few cents and a few minutes; opt-in)
 

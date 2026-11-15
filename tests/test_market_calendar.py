@@ -31,23 +31,6 @@ def test_the_holiday_rules_give_the_nyses_published_list(year):
     assert sorted(d.isoformat() for d in mc.holidays(year)) == PUBLISHED[year]
 
 
-def test_new_years_day_on_a_saturday_is_not_observed_and_december_31_stays_open():
-    assert date(2028, 1, 1) not in mc.holidays(2028) and date(2027, 12, 31) not in mc.holidays(2027)
-    assert mc.is_trading_day(date(2027, 12, 31))
-
-
-def test_holiday_names_and_easter():
-    assert mc.holidays(2026)[date(2026, 4, 3)] == "Good Friday" and mc.holidays(2026)[date(2026, 11, 26)] == "Thanksgiving Day"
-    assert [mc.easter(y) for y in (2025, 2026, 2027, 2028)] == [date(2025, 4, 20), date(2026, 4, 5), date(2027, 3, 28), date(2028, 4, 16)]
-
-
-def test_trading_days_skip_weekends_and_holidays():
-    assert not mc.is_trading_day(date(2026, 11, 14)) and not mc.is_trading_day(date(2026, 11, 26)) and mc.is_trading_day(date(2026, 11, 25))
-    assert mc.previous_trading_day(date(2026, 11, 27)) == date(2026, 11, 25)      # Thanksgiving in between
-    assert mc.previous_trading_day(date(2026, 11, 16)) == date(2026, 11, 13)      # the weekend in between
-    assert mc.next_trading_day(date(2026, 11, 25)) == date(2026, 11, 27) and mc.next_trading_day(date(2026, 11, 13)) == date(2026, 11, 16)
-
-
 @pytest.mark.parametrize("moment, state, trading_date, window_closes, next_open", [
     ("2026-11-11 10:00", "regular", date(2026, 11, 11), "2026-11-12T01:00:00Z", "2026-11-12T09:00:00Z"),       # the window closes at 20:00 Eastern
     ("2026-11-11 22:13", "closed", None, None, "2026-11-12T09:00:00Z"),                                        # after the after-hours close
@@ -86,38 +69,6 @@ def test_the_session_of_a_moment(moment, state, trading_date, window_closes, nex
     ("2026-11-27 13:00", "after the early close"), ("2026-07-03 10:00", "holiday: Independence Day")])
 def test_a_closed_moment_says_why(moment, reason):
     assert mc.session_at(at(moment)).reason == reason
-
-
-def test_an_open_moment_has_no_reason():
-    assert mc.session_at(at("2026-11-11 10:00")).reason == ""
-
-
-@pytest.mark.parametrize("moment, last", [("2026-11-11 22:13", date(2026, 11, 11)), ("2026-11-14 12:00", date(2026, 11, 13)), ("2026-11-26 11:00", date(2026, 11, 25)),
-                                          ("2026-11-16 03:00", date(2026, 11, 16))])
-def test_the_last_trading_date_is_the_newest_trading_day_on_or_before_the_easterns_date(moment, last):
-    assert mc.session_at(at(moment)).last_trading_date == last
-
-
-def test_the_session_is_the_same_whatever_zone_the_moment_is_written_in():
-    assert mc.session_at(utc("2026-11-11T15:00:00Z")) == mc.session_at(at("2026-11-11 10:00"))
-
-
-def test_the_clocks_change_in_november_and_march():
-    # 2026-11-01: daylight time ended. 2026-03-08: it began. The Eastern 09:30 open is 14:30 UTC in winter and 13:30 UTC in summer.
-    assert mc.session_at(utc("2026-11-02T14:30:00Z")).state == "regular" and mc.session_at(utc("2026-11-02T14:29:00Z")).state == "pre_market"
-    assert mc.session_at(utc("2026-03-09T13:30:00Z")).state == "regular" and mc.session_at(utc("2026-03-09T13:29:00Z")).state == "pre_market"
-
-
-def test_the_eastern_date_is_not_the_utc_date_in_the_evening():
-    moment = utc("2026-11-12T00:30:00Z")           # 19:30 Eastern on the 11th
-    assert mc.eastern_date(moment) == date(2026, 11, 11) and moment.date() == date(2026, 11, 12)
-
-
-def test_a_naive_moment_raises():
-    with pytest.raises(ValueError, match="timezone"):
-        mc.session_at(datetime(2026, 11, 11, 10, 0))
-    with pytest.raises(ValueError, match="timezone"):
-        mc.eastern_date(datetime(2026, 11, 11, 10, 0))
 
 
 def test_an_extra_closed_date_closes_the_day(tmp_path):

@@ -56,7 +56,7 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 
 from prometheus.common.trading_clock import market_day, use_live_trading
-from prometheus.common.work_order import HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_request, verify_verification_request
+from prometheus.common.work_order import HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_request, verify_symbol_request, verify_verification_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.prompts.data_clerk import COMPANIES_RETRY, LAST_TURN, companies_prompt, repair_message, system_prompt
 from prometheus.rag.citations import SourceBook
@@ -357,6 +357,44 @@ class DataClerk:
         order.data = DataResult(answer=", ".join(f"{s} {q['price']:.2f}" for s, q in quotes.items()), quotes=quotes, problems=problems, tool_calls=calls,
                                 notes=[] if day is None else [f"USE_LIVE_TRADING=false: every price is the market close of {day}, from the stored daily bars (simulated); no live quote was asked for"],
                                 completed_utc=datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"))
+        order.errors = [*order.errors, *problems]
+        order.status = "data_failed" if problems else "data_ready"
+        return order
+
+    def request_symbols(self, order: WorkOrder) -> WorkOrder:
+        """The Data Clerk's agent call for a `lookup_symbol` order (design choices entry 88): for each stock in `order.subject` (a ticker in capitals, or a company name as the user typed it) it finds the COMPANY'S NAME and the
+        SYMBOL and APPENDS them to the work order's `data.companies` (one row each, the shape of `find_companies`: {brand: what was typed, parent, symbol, company, public, how, note}), and returns the SAME order, `data_ready`.
+        No model: the symbol directory (Finnhub's search) answers, with the EXACT matching of press releases and filings (entries 34 and 35, `symbols.resolve_target`): a ticker is the row whose symbol is it; a company name is
+        the row whose name has the same words, else the same words without the generic company words (Inc, Corp, Co, The, and ...), never a spelling that is only similar, US listings preferred, and a name that still fits
+        several listings is refused with the candidates, never guessed ("Microsoft" is "Microsoft Corporation", MSFT). A stock that is not found, is ambiguous or whose lookup fails (a rate limit, no key: never "not found") is named
+        in `order.errors` and the order is `data_failed`; the rows that were found stay on the order. An order that already has its data comes back unchanged."""
+        if order.status in HAS_DATA:
+            return order
+        reasons = verify_symbol_request(order)
+        if reasons:
+            order.status, order.errors = "data_failed", [*order.errors, *reasons]
+            return order
+        search = self._paced(self.symbol_search or symbols.search_finnhub)
+        wanted = [order.subject] if isinstance(order.subject, str) else list(order.subject)
+        found, calls, problems = [], [], []
+        for typed in dict.fromkeys(" ".join(n.split()) for n in wanted):
+            is_ticker = symbols.is_plain_ticker(typed)
+            try:
+                resolution = symbols.resolve_target(typed if is_ticker else None, None if is_ticker else typed, search)
+                found.append({"brand": typed, "parent": None, "symbol": resolution.symbol, "company": resolution.company, "public": True, "how": resolution.how, "note": ""})
+                calls.append({"name": "find_symbol" if is_ticker else "find_company", "args": {"symbol" if is_ticker else "company": typed}, "outcome": "ok"})
+            except symbols.TargetNotFound as error:   # not in the directory, or several listings fit: the message of the work order, and the candidates when there are some
+                calls.append({"name": "find_symbol" if is_ticker else "find_company", "args": {"symbol" if is_ticker else "company": typed}, "outcome": "error"})
+                problems.append(f"{typed}: {error}" + (f" ({error.detail})" if error.detail else ""))
+            except (symbols.SymbolLookupError, ValueError) as error:   # the lookup itself failed (a rate limit, no key): never "not found"
+                calls.append({"name": "find_symbol" if is_ticker else "find_company", "args": {"symbol" if is_ticker else "company": typed}, "outcome": "error"})
+                problems.append(f"{typed}: the symbol lookup failed ({getattr(error, 'reason', error)})")
+        data = order.data or DataResult()
+        data.companies = [*data.companies, *found]
+        data.problems, data.tool_calls = [*data.problems, *problems], [*data.tool_calls, *calls]
+        data.answer = "; ".join(f"{c['brand']}: {c['company']} ({c['symbol']})" for c in found)
+        data.completed_utc = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+        order.data = data
         order.errors = [*order.errors, *problems]
         order.status = "data_failed" if problems else "data_ready"
         return order

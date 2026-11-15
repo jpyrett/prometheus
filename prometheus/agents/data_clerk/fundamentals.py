@@ -86,24 +86,6 @@ def earnings_yield(pe_ratio: float | None) -> tuple[float, dict]:
 
 # ---------------------------------------------------------------- from the filing evidence
 
-def net_payout_yield_ttm(evidence: dict, market_cap: float | None) -> tuple[float, dict]:
-    """`(abs(repurchases) + abs(dividends paid) - proceeds from issuing common stock) / market_cap`, the year-to-date cash flows annualized by `12 / months`.
-    At least one of repurchases and dividends must be a row of the statement; a row that is absent counts as zero and is named in `absent` (the statement leaves out a line that is
-    nothing). Missing: no cash-flow rows, the months of the period unknown, or no market capitalization."""
-    months = evidence.get("period_months")
-    repurchases, dividends, proceeds = _action(evidence, "repurchases of common stock"), _action(evidence, "dividends paid"), _action(evidence, "proceeds from issuing common stock")
-    if repurchases is None and dividends is None:
-        raise Missing("no repurchases or dividends row in the stored cash-flow statement")
-    if not months:
-        raise Missing("the number of months the year-to-date cash flow covers is not stated")
-    if not market_cap or market_cap <= 0:
-        raise Missing("no market capitalization from Finnhub")
-    bought, paid, issued = (abs(_dollars(repurchases)) if repurchases else 0.0, abs(_dollars(dividends)) if dividends else 0.0, _dollars(proceeds) if proceeds else 0.0)
-    value = (bought + paid - issued) * 12 / months / market_cap
-    return value, {"repurchases": bought, "dividends": paid, "issued": issued, "months": months, "market_cap": market_cap,
-                   "absent": [n for n, a in (("repurchases", repurchases), ("dividends", dividends), ("proceeds from issuing common stock", proceeds)) if a is None]}
-
-
 def share_count_change(evidence: dict) -> tuple[float, dict]:
     """The change of the total shares issued and outstanding between the two balance sheets, as a fraction (`change_pct / 100`): -0.01 is one percent fewer shares."""
     sheet = evidence.get("balance_sheet")

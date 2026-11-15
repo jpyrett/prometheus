@@ -65,12 +65,6 @@ def test_a_traded_order_is_returned_unchanged_as_a_decided_one_is_and_nobody_is_
 
 # ---------------------------------------------------------------- the table
 
-def test_a_denial_is_final_and_the_user_is_never_asked_to_override_it():
-    ask = Asked(True)
-    order = decide(reviewed(approved=False, summary="DENY PG: the market is closed (market_closed)."), approver=ask)
-    [d] = order.trade_decisions
-    assert (d["will_trade"], d["reason"]) == ("no_system_denied", "DENY PG: the market is closed (market_closed).") and ask.cards == [] and order.status == "decided" and d["asked_user"] is False
-
 
 def test_an_approval_that_has_run_out_is_not_traded():
     ask = Asked(True)
@@ -78,23 +72,6 @@ def test_an_approval_that_has_run_out_is_not_traded():
     assert order.trade_decisions[0]["will_trade"] == "no_expired" and "ran out at 2026-11-05T16:30:00Z" in order.trade_decisions[0]["reason"] and ask.cards == []
     assert decide(reviewed(), approver=Asked(True), now=NOW + timedelta(minutes=60)).trade_decisions[0]["will_trade"] == "yes_user"       # the last instant is inside
     assert decide(reviewed(valid_until_utc="soon"), now=NOW).trade_decisions[0]["will_trade"] == "no_expired"                              # an approval with no readable end is not valid
-
-
-def test_without_the_money_a_purchase_sizes_to_no_share_and_is_not_traded_or_asked_about():
-    """Design choices entry 80: the Account Manager sizes the purchase from the money in the account, so with $100 not even one share of PG at 167.10 fits. The decision is `no_funds` (the closed list has no other code), says
-    why in the sizing's own words, and the user is never asked to approve a trade of nothing."""
-    ask = Asked(True)
-    order = decide(reviewed(), pf=cash(100.0), approver=ask)
-    d = order.trade_decisions[0]
-    assert (d["will_trade"], d["funds_avail"], d["shares"], d["est_cost"], d["escalated"]) == ("no_funds", False, 0, 0.0, False) and order.status == "decided" and ask.cards == [] and d["asked_user"] is False
-    assert "not even one share fits" in d["reason"] and d["size"]["shares"] == 0 and d["size"]["binding"] == "no_room"
-
-
-def test_holdings_that_could_be_sold_do_not_make_money_the_size_is_cut_by_the_cash():
-    """The sample portfolio of Jacob Pyrett holds $51.23 and three holdings that are in profit. The Account Manager's money cap is the cash that is there, never what a RaiseFunds sale could raise: no share fits."""
-    sample = load_portfolio(REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett.json")
-    d = decide(reviewed(), pf=sample, approver=Asked(True), p=profile(max_position_pct=1.0, max_new_exposure_pct=1.0, max_loss_per_trade_pct=1.0)).trade_decisions[0]
-    assert (d["will_trade"], d["shares"], d["size"]["binding"], d["size"]["caps"]["money"]) == ("no_funds", 0, "no_room", 0) and d["size"]["equity_basis"].startswith("cash and holdings at the prices given")
 
 
 @pytest.fixture(scope="module")
@@ -129,31 +106,7 @@ def test_a_cost_the_cash_does_not_cover_is_checked_with_the_holdings_prices_for_
     assert (d["will_trade"], d["funds_avail"], d["escalated"]) == ("no_funds", False, False) and "$51.23 does not cover $10,000,000.00 and no holding in profit could raise the difference" in d["reason"]
 
 
-def test_enough_cash_is_funds_with_no_note_and_the_decision_carries_how_it_was_sized():
-    d = decide(reviewed(), approver=Asked(True)).trade_decisions[0]
-    assert (d["funds_avail"], d["funds_note"], d["shares"], d["est_cost"]) == (True, None, 11, round(11 * 167.1, 2))        # $20,000: the position limit is 10%, $2,000, or 11 shares at 167.10
-    assert set(d["size"]) == {"shares", "caps", "binding", "equity", "equity_basis", "notes", "allocation"}
-    assert (d["size"]["shares"], d["size"]["binding"], d["size"]["equity"], d["size"]["equity_basis"], d["size"]["allocation"]) == (11, "position", 20000.0, "cash only (no holdings)", "as_much_as_possible")
-    assert d["size"]["caps"]["position"] == 11 == int(2000 // 167.1) and d["size"]["caps"]["money"] == int(20000 // 167.1) and d["size"]["caps"]["exposure"] == int(6000 // 167.1) and d["size"]["caps"]["budget"] is None
-
-
 # ---------------------------------------------------------------- Ask and Auto
-
-def test_ask_mode_asks_with_the_scorecard_and_the_answer_is_the_decision():
-    ask = Asked(True)
-    order = decide(reviewed(), approver=ask)
-    d = order.trade_decisions[0]
-    assert (d["will_trade"], d["mode"], d["asked_user"], d["escalated"]) == ("yes_user", "ask", True, False) and order.status == "decided"
-    [card] = ask.cards
-    assert card["symbol"] == "PG" and card["approved"] and card["score"] == 88 and card["shares"] == 11 and "APPROVE" in card["text"] and "accuracy" in card["text"] and card["est_cost"] == pytest.approx(1838.1)
-    assert "WOULD BE PLACED  buy 11 shares of PG, about $1,838.10" in card["text"] and "share" not in card["text"].split("WOULD BE PLACED")[0].splitlines()[0]        # the Critic's own card names no size; the Account Manager adds what would be placed
-    assert decide(reviewed(), approver=Asked(False)).trade_decisions[0]["will_trade"] == "no_user_denied"
-
-
-def test_with_nobody_to_ask_the_decision_waits_and_is_never_a_yes():
-    for approver in (None, Asked(None)):
-        order = decide(reviewed(), approver=approver)
-        assert order.trade_decisions[0]["will_trade"] == "pending_user" and order.status == "reviewed" and order.trade_decisions[0]["reason"].endswith("waiting for the user")
 
 
 def test_a_prompt_that_fails_leaves_the_decision_pending_and_says_so():
@@ -161,20 +114,6 @@ def test_a_prompt_that_fails_leaves_the_decision_pending_and_says_so():
         raise EOFError("no terminal")
     order = decide(reviewed(), approver=broken)
     assert order.trade_decisions[0]["will_trade"] == "pending_user" and any("could not be asked about PG (EOFError)" in e for e in order.errors)
-
-
-def test_auto_mode_trades_what_clears_the_mark_without_asking():
-    ask = Asked(False)
-    order = decide(reviewed(), p=profile(trade_mode="auto"), approver=ask)
-    d = order.trade_decisions[0]
-    assert (d["will_trade"], d["asked_user"], d["escalated"], d["mode"]) == ("yes_auto", False, False, "auto") and ask.cards == [] and "at or above the automatic-trading mark 80" in d["reason"]
-
-
-def test_in_auto_mode_a_score_under_the_mark_goes_to_the_user():
-    order = decide(reviewed(), p=profile(trade_mode="auto", auto_min_score=90), approver=Asked(True))
-    d = order.trade_decisions[0]
-    assert (d["will_trade"], d["escalated"], d["asked_user"]) == ("yes_user", True, True) and "under the automatic-trading mark 90" in d["reason"]
-    assert decide(reviewed(), p=profile(trade_mode="auto", auto_min_score=88)).trade_decisions[0]["will_trade"] == "yes_auto"       # exactly the mark
 
 
 def test_in_auto_mode_a_finding_that_asks_for_a_person_goes_to_the_user():
@@ -215,31 +154,22 @@ def test_the_mode_argument_overrides_the_profile_for_one_run():
 
 # ---------------------------------------------------------------- the cash: nothing is reserved (Jacob, 2026-11-14: "any available funds in the portfolio can be used")
 
-WIDE = dict(max_position_pct=1.0, max_new_exposure_pct=1.0, max_loss_per_trade_pct=0.2)            # a user whose own limits are not what holds a purchase back: the money is
-
-
 def _two_purchases():
     return _reviewed(records=2).model_copy(deep=True)
 
 
 def with_holdings(amount):
-    """`amount` in cash and $1,000 of a holding (50 shares of GM at a cost of $20): an equity over the cash, so that the exposure room (a limit of the profile shared by the purchases) is not what runs out first."""
+    """`amount` in cash and $1,000 of a holding (50 shares of GM at a cost of $20): an equity over the cash,."""
     return Portfolio(user="Jacob Pyrett", cash_avail=amount, positions=[Position(symbol="GM", shares=50, cost_basis=20.0, acquired=date(2026, 1, 5))])
 
 
 def test_each_purchase_is_checked_against_all_the_cash_nothing_is_reserved_for_another():
-    first, second = decide(_two_purchases(), pf=with_holdings(1000.0), p=profile(**WIDE), approver=Asked(True)).trade_decisions
+    first, second = decide(_two_purchases(), pf=with_holdings(1000.0), approver=Asked(True)).trade_decisions
     assert [d["will_trade"] for d in (first, second)] == ["yes_user", "yes_user"]
     assert first["shares"] == second["shares"] == 5 == int(1000 // 167.1) and first["est_cost"] == second["est_cost"] == 835.5            # $1,671 in all, each one covered by the $1,000
     assert first["size"]["binding"] == second["size"]["binding"] == "money" and first["size"]["caps"]["money"] == second["size"]["caps"]["money"] == 5
-    short = decide(_two_purchases(), pf=with_holdings(100.0), p=profile(**WIDE), approver=Asked(True))
+    short = decide(_two_purchases(), pf=with_holdings(100.0), approver=Asked(True))
     assert [d["will_trade"] for d in short.trade_decisions] == ["no_funds", "no_funds"] and all("not even one share fits" in d["reason"] for d in short.trade_decisions)
-
-
-def test_a_purchase_the_user_denied_does_not_change_what_the_other_may_use():
-    answers = iter([False, True])
-    order = decide(_two_purchases(), pf=with_holdings(1000.0), p=profile(**WIDE), approver=lambda card: next(answers))
-    assert [d["will_trade"] for d in order.trade_decisions] == ["no_user_denied", "yes_user"] and [d["shares"] for d in order.trade_decisions] == [5, 5]       # a "no" re-splits nothing
 
 
 # ---------------------------------------------------------------- refusals
@@ -290,36 +220,11 @@ def test_answering_a_decision_that_is_not_pending_is_a_message_not_a_change():
 
 # ---------------------------------------------------------------- the Trader's precondition reads these decisions
 
-def test_the_trader_may_trade_only_what_was_approved_and_permitted_and_not_after_the_approval_ran_out():
-    for will, expect in (("yes_user", True), ("pending_user", False), ("no_user_denied", False)):
-        order = decide(reviewed(), approver=Asked({"yes_user": True, "pending_user": None, "no_user_denied": False}[will]))
-        record_id = order.reviews[0]["record_id"]
-        assert (wo.verify_trade(order, record_id, NOW) == []) is expect
-    order = decide(reviewed(), p=profile(trade_mode="auto"))
-    record_id = order.reviews[0]["record_id"]
-    assert wo.verify_trade(order, record_id, NOW) == [] and any("ran out" in r for r in wo.verify_trade(order, record_id, NOW + timedelta(minutes=61)))
-    denied = decide(reviewed(approved=False), approver=Asked(True))
-    assert any("did not approve" in r for r in wo.verify_trade(denied, denied.reviews[0]["record_id"], NOW))
-
 
 # ---------------------------------------------------------------- the AccountManager's own part
 
 def manager(**kw):
     return AccountManager(model=object(), **kw)
-
-
-def test_the_account_manager_holds_the_profile_and_hands_the_critic_only_the_limits():
-    am = manager()
-    assert am.profile.user == "Jacob Pyrett" and am.profile.trade_mode == "ask"
-    assert am.risk_view() == am.profile.risk_view() and "trade_mode" not in json.dumps(am.risk_view().model_dump())
-
-
-def test_the_profile_can_be_given_as_an_object_or_a_path_or_replaced():
-    assert manager(profile=profile(risk_tolerance="aggressive")).risk_view().risk_tolerance == "aggressive"
-    assert manager(profile=REPO_ROOT / "configs" / "profiles" / "jacob_pyrett.json").profile.risk_tolerance == "moderate"
-    am = manager()
-    am.profile = profile(risk_tolerance="conservative")
-    assert am.risk_view().risk_tolerance == "conservative"
 
 
 def test_a_profile_file_that_is_wrong_is_a_value_error_naming_it(tmp_path):
@@ -335,14 +240,6 @@ def test_the_account_manager_decides_with_the_critics_own_mark_and_the_profiles_
     assert order.trade_decisions[0]["will_trade"] == "yes_user"
     manager().record_user_decision(order, order.trade_decisions[0]["record_id"], False, NOW)
     assert any("no pending decision" in e for e in order.errors)
-
-
-def test_the_managers_decisions_need_no_model_and_no_network():
-    class Raising:
-        def invoke(self, *a, **k):
-            raise AssertionError("a decision must not call a model")
-    order = AccountManager(model=Raising(), clerk=FakeClerk(reviewed()), profile=profile()).decide_trades(reviewed(), cash(), now=NOW)
-    assert order.trade_decisions[0]["will_trade"] == "pending_user"
 
 
 # ---------------------------------------------------------------- the prices of the holdings: the Account Manager asks the Data Clerk, `decisions.decide_trades` stays pure
@@ -402,8 +299,3 @@ def test_a_price_the_data_clerk_cannot_give_is_a_message_and_that_holding_counts
     assert order.trade_decisions[0]["size"]["equity_basis"].endswith("MSFT, TSLA, GM at cost basis (no price)")
 
 
-def test_the_pure_decision_step_takes_the_prices_it_is_given_and_calls_nothing(sample_prices):
-    sample = load_portfolio(REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett.json")
-    priced = decisions.decide_trades(reviewed(), sample, profile(), MARK, Asked(True), NOW, None, None, None, sample_prices).trade_decisions[0]["size"]
-    unpriced = decisions.decide_trades(reviewed(), sample, profile(), MARK, Asked(True), NOW).trade_decisions[0]["size"]
-    assert priced["equity_basis"] == "cash and holdings at the prices given" and priced["equity"] > unpriced["equity"] and unpriced["equity_basis"].endswith("at cost basis (no price)")

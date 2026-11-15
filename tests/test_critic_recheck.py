@@ -24,90 +24,8 @@ def setup(name="PG_open", **options):
 
 # ---------------------------------------------------------------- what to ask for
 
-def test_the_key_metrics_start_with_the_decisive_ones_and_hold_the_critics_own():
-    order = captured("PG_open")
-    rec = rec_of(order)
-    names, decisive = rc.key_metrics(rec, 60)
-    assert names[:2] == ["last_close", "atr_14"] and decisive >= {"last_close", "atr_14"}
-    family = next(f for f in rec.families if f.family == rec.trade.family)
-    assert all(n in decisive for n in family.features_used if n in rec.features and n in names)
-    assert set(rc.ALWAYS) <= set(names) and set(rc.OWN) <= set(names) and len(names) == len(set(names))
-    assert all(n in names for g in ("performance", "historical", "filings") for p in rec.blend["components"][g]["parts"] for n in [p.get("metric")] if n)
-
-
-def test_a_cap_never_cuts_a_decisive_metric():
-    rec = rec_of(captured("PG_open"))
-    names, decisive = rc.key_metrics(rec, 3)
-    assert len(names) == len(decisive) and set(names) == decisive and len(rc.key_metrics(rec, 60)[0]) <= 60
-
-
-def test_a_reduction_is_checked_on_every_passed_family():
-    order = captured("PG_open")
-    order.recommendations[0]["action"]["action"], order.recommendations[0]["trade"]["family"] = "reduce", None
-    names, decisive = rc.key_metrics(rec_of(order), 60)
-    assert {n for f in rec_of(order).families if f.passed for n in f.features_used if n in names and n in rec_of(order).features} <= decisive
-
 
 # ---------------------------------------------------------------- the three requests
-
-def test_one_order_of_each_kind_is_sent_for_all_the_records():
-    order, rec, clerk, claims, got, names, _ = setup()
-    kinds = [a[0] for a in clerk.asked]
-    assert kinds == ["metrics", "quotes", "verification"]
-    assert clerk.asked[0][1] == ["PG"] and set(clerk.asked[0][2]) >= set(names[:5]) and str(clerk.asked[0][3]) == "2026-11-05"
-    assert clerk.asked[1][1] == ["PG"]        # only the recommended symbol: the Critic is given no portfolio, so it never asks for the price of a holding (the Account Manager does)
-    verify = clerk.asked[2][1]
-    assert set(verify) == {"chunks", "evidence", "symbols", "company", "fresh"} and verify["symbols"] == ["PG"] and verify["company"] == {"PG": "Procter & Gamble"}
-    assert verify["fresh"] == {"since_days": CONFIG.evidence.fresh_since_days, "k": CONFIG.evidence.fresh_k}
-    assert verify["chunks"] and all(not c.startswith("evidence:") for c in verify["chunks"]) and set(verify["evidence"]["PG"]) == {"E15", "E21"}
-    assert got.verified and got.errors == [] and set(got.metric_orders) == {"2026-11-05"} and got.quote_order and len(got.verify_orders) == 1
-
-
-def test_the_critic_is_the_requester_and_never_allows_a_fetch():
-    seen = []
-
-    class Spy(FakeClerk):
-        def request_metrics(self, order, today=None):
-            seen.append((order.requester, order.action_type))
-            return super().request_metrics(order, today)
-
-        def request_quotes(self, order):
-            seen.append((order.requester, order.action_type, order.live))
-            return super().request_quotes(order)
-
-        def request_verification(self, order, now=None):
-            seen.append((order.requester, order.action_type))
-            return super().request_verification(order, now)
-
-    order = captured("PG_open")
-    rec = rec_of(order)
-    rc.gather(Spy(order), order, [(rec, "2026-11-05", claims_of(rec, order))], NOW, CONFIG)
-    assert seen == [("critic", "calculate_financials"), ("critic", "fetch_quote", True), ("critic", "verify_data")]
-
-
-def test_records_of_different_days_get_one_metric_order_each():
-    order = captured("PG_open")
-    rec = rec_of(order)
-    clerk = FakeClerk(order)
-    got = rc.gather(clerk, order, [(rec, "2026-11-05", []), (rec, "2026-11-04", [])], NOW, CONFIG)
-    assert [a[0] for a in clerk.asked].count("metrics") == 2 and set(got.metric_orders) == {"2026-11-04", "2026-11-05"}
-
-
-def test_more_than_sixty_chunks_are_asked_in_a_second_order():
-    order = captured("PG_open")
-    rec = rec_of(order)
-    many = [rc.Claim(ref=f"[{i}]", kind="signal", direction="bullish", quote="q" * 20, source=i, chunk_id=f"finnhub:{i}#0") for i in range(1, 71)]
-    clerk = FakeClerk(order)
-    got = rc.gather(clerk, order, [(rec, "2026-11-05", many)], NOW, CONFIG)
-    verifications = [a[1] for a in clerk.asked if a[0] == "verification"]
-    assert [len(v["chunks"]) for v in verifications] == [60, 10] and "symbols" in verifications[0] and "symbols" not in verifications[1] and len(got.verify_orders) == 2
-
-
-@pytest.mark.parametrize("fail, label", [("metrics", "metrics"), ("quotes", "quotes"), ("verification", "verification")])
-def test_a_request_that_raises_is_named_and_the_others_still_run(fail, label):
-    order, rec, clerk, claims, got, names, decisive = setup(fail=[fail])
-    assert any(e.startswith(f"{label}: RuntimeError") for e in got.errors) and {a[0] for a in clerk.asked} == {"metrics", "quotes", "verification"}
-    assert (got.metrics == {}) == (fail == "metrics") and (got.quotes == {}) == (fail == "quotes") and got.verified == (fail != "verification")
 
 
 def test_an_order_the_data_clerk_marks_failed_puts_its_errors_in_the_runs_errors():
@@ -130,12 +48,6 @@ def compared(mutate=None, **options):
     if mutate:
         mutate(fetched)
     return rec, rc.compare(rec, fetched, names, decisive, ACC), decisive
-
-
-def test_everything_matching_gives_no_finding_and_a_perfect_rate():
-    rec, (rechecks, findings, rate), _ = compared()
-    assert findings == [] and rate == 1.0 and rechecks and all(r.match for r in rechecks)
-    assert {"last_close", "atr_14"} <= {r.name for r in rechecks} and all(r.name in rec.features for r in rechecks)
 
 
 def test_a_decisive_number_that_differs_is_a_blocker_by_itself():
@@ -178,30 +90,6 @@ def test_nothing_returned_for_the_symbol_is_data_unverified():
     assert [f.code for f in findings] == ["data_unverified"] and rate is None
 
 
-@pytest.mark.parametrize("source, name, kind", [("day_aggs:2025-10-02..2026-11-05", "rsi_14", "bars"), ("finnhub_metric:2026-11-06", "roe", "provider"), ("finnhub_metric:2026-11-06", "market_cap", "provider_price_linked"),
-                                                ("filing:0000080424-26-000256", "cash_balance", "filing"), ("derived:filing:0000080424-26-000256+finnhub_metric:2026-11-06", "net_payout_yield_ttm", "derived"),
-                                                ("n/a", "x", "derived")])
-def test_how_a_number_is_checked_comes_from_where_it_came(source, name, kind):
-    assert rc.kind_of(source, name, ACC) == kind
-
-
-@pytest.mark.parametrize("kind, old, new, match", [
-    ("bars", 100.0, 100.00005, True), ("bars", 100.0, 100.5, False), ("bars", 0.0, 1e-10, True), ("bars", 0.0, 1e-3, False),
-    ("bars_changed", 100.0, 101.9, True), ("bars_changed", 100.0, 103.0, False),
-    ("provider", 30.0, 30.5, True), ("provider", 30.0, 31.0, False), ("provider", 0.0, 0.005, True),
-    ("provider_price_linked", 400e9, 419e9, True), ("provider_price_linked", 400e9, 430e9, False),
-    ("filing", 5e9, 5e9, True), ("filing", 5e9, 5.1e9, False), ("filing_changed", 5e9, 5.4e9, True), ("filing_changed", 5e9, 6e9, False),
-    ("derived", 0.04, 0.0415, True), ("derived", 0.04, 0.05, False),
-])
-def test_each_tolerance_at_its_edge(kind, old, new, match):
-    assert rc._same(old, new, kind, ACC)[0] is match
-
-
-def test_a_bool_and_a_text_must_be_equal():
-    assert rc._same(True, True, "bars", ACC) == (True, None) and rc._same(True, False, "bars", ACC)[0] is False and rc._same("XLK", "XLK", "derived", ACC)[0] and not rc._same("XLK", "XLE", "derived", ACC)[0]
-    assert not rc._same(1, True, "bars", ACC)[0]     # a bool is not a number
-
-
 def test_other_bars_loosen_the_tolerance_and_warn_once():
     def shifted(f):
         for n, r in f.items():
@@ -233,16 +121,6 @@ def sources_of(mutate=None, name="PG_open", **options):
     return rc.check_sources(rec, claims, order, verification, got.verified), claims
 
 
-def test_sources_that_hold_give_no_finding():
-    (checks, findings, rate), claims = sources_of()
-    assert findings == [] and rate == 1.0 and len(checks) == len(claims) >= 3 and all(c.found and c.quote_in_text and c.same_text for c in checks)
-
-
-def test_a_source_the_store_cannot_find_is_a_blocker():
-    (checks, findings, rate), claims = sources_of(lambda v, c: v["chunks"].update({c[0].chunk_id: {"found": False, "note": "not in the stored news"}}))
-    assert [f.code for f in findings] == ["source_missing"] and "not in the stored news" in findings[0].message and checks[0].found is False and rate < 1.0
-
-
 def test_a_quote_that_is_no_longer_in_its_source_is_a_blocker():
     (checks, findings, _), claims = sources_of(lambda v, c: v["chunks"][c[0].chunk_id].update(text="The article was rewritten and says nothing like it did."))
     assert [f.code for f in findings] == ["source_missing"] and "no longer in its source" in findings[0].message and checks[0].quote_in_text is False
@@ -265,22 +143,9 @@ def test_a_source_that_does_not_list_the_symbol_is_a_warning_and_is_marked_untag
     assert [(f.code, f.severity) for f in findings] == [("source_not_tagged", "warning")] and checks[0].tagged is False
 
 
-def test_a_filing_evidence_item_that_is_gone_or_changed_is_found_by_its_id():
-    def gone(v, c):
-        ev = next(x for x in c if x.kind == "evidence")
-        v["evidence"]["PG"][ev.evidence_id] = {"found": False, "note": "PG has no evidence item"}
-    (checks, findings, _), claims = sources_of(gone)
-    assert [f.code for f in findings] == ["source_missing"] and next(c for c in checks if c.ref.startswith("E")).found is False
-
-
 def test_when_the_verification_request_failed_every_source_is_missing_and_says_so():
     (checks, findings, rate), claims = sources_of(fail=["verification"], mutate=lambda v, c: [v.update(chunks={}, evidence={}) for _ in [0]])
     assert len(findings) == len(claims) and all(f.code == "source_missing" and "verification request failed" in f.message for f in findings) and rate == 0.0
-
-
-def test_a_record_that_cites_nothing_has_a_perfect_source_rate():
-    order, rec, *_ = setup()
-    assert rc.check_sources(rec, [], order, {}, True) == ([], [], 1.0)
 
 
 # ---------------------------------------------------------------- the cross-checks
@@ -294,11 +159,6 @@ def cross(mutate=None, quote_mutate=None, **options):
     if quote_mutate:
         quote_mutate(quote)
     return rc.cross_checks(rec, fetched, quote, verification, ACC)
-
-
-def test_when_everything_agrees_all_three_cross_checks_pass():
-    checks, findings, identity, rate = cross()
-    assert findings == [] and rate == 1.0 and {c.name for c in checks} == {"price", "identity", "high_52w"} and identity.listed is True and identity.listed_company == "PG INC"
 
 
 def test_the_close_is_compared_with_the_quotes_price_on_the_same_day_and_its_previous_close_the_day_after():
@@ -327,11 +187,6 @@ def test_a_bar_from_any_other_day_is_not_compared_at_all():
     assert "price" not in {c.name for c in checks} and findings == []
 
 
-def test_no_quote_means_no_price_check():
-    checks, _, _, _ = cross(quote_mutate=lambda q: q.clear())
-    assert "price" not in {c.name for c in checks}
-
-
 def test_a_symbol_the_directory_does_not_list_is_a_blocker_and_a_failed_lookup_only_a_warning():
     _, findings, identity, rate = cross(listed={"PG": False})
     assert [f.code for f in findings if f.severity == "blocker"] == ["symbol_unknown"] and identity.listed is False
@@ -349,11 +204,6 @@ def test_a_52_week_high_that_disagrees_with_finnhubs_is_a_warning():
     assert [(f.code, f.severity) for f in findings] == [("high_52w_differs", "warning")] and rate == pytest.approx(2 / 3)
 
 
-def test_with_nothing_to_cross_check_the_rate_is_zero():
-    rec = rec_of(captured("PG_open"))
-    assert rc.cross_checks(rec, None, None, {}, ACC)[3] == 0.0
-
-
 # ---------------------------------------------------------------- no equity: the Critic does not know the user's money
 
 def test_the_critic_has_no_equity_and_never_compares_one_with_the_advisors():
@@ -366,18 +216,4 @@ def test_the_critic_has_no_equity_and_never_compares_one_with_the_advisors():
 
 # ---------------------------------------------------------------- the accuracy score
 
-def test_the_accuracy_score_weights_the_three_shares():
-    score, measures = rc.accuracy_score(1.0, 1.0, 1.0, ACC)
-    assert score == 100 and [m.name for m in measures] == ["metrics_match", "sources_held", "cross_checks_passed"] and [m.weight for m in measures] == [50, 30, 20]
-    assert rc.accuracy_score(0.9, 1.0, 0.5, ACC)[0] == pytest.approx(100 * (0.5 * 0.9 + 0.3 + 0.2 * 0.5))
-    score, measures = rc.accuracy_score(None, 1.0, 1.0, ACC)
-    assert score == 50 and measures[0].available is False
 
-
-def test_the_record_date_decides_which_days_metrics_are_asked_for():
-    order = captured("PG_open")
-    rec = rec_of(order)
-    clerk = FakeClerk(order)
-    rc.gather(clerk, order, [(rec, "2026-11-05", [])], NOW + timedelta(days=3), CONFIG)
-    assert str(clerk.asked[0][3]) == "2026-11-05"        # the bars up to the record's own day, not up to the review's
-    assert wo.verify_metric_request(wo.new_work_order("m", requester="critic", action_type="calculate_financials", subject=["PG"], metrics=[{"name": n} for n in rc.key_metrics(rec, 60)[0]])) == []

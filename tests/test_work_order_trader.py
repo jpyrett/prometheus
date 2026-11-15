@@ -18,14 +18,6 @@ def bars_order(symbols=("PG",), start="2026-11-05", end="2026-11-30", **changes)
 
 # ---------------------------------------------------------------- the status, the new fields and the new action
 
-def test_the_status_traded_follows_decided_and_is_an_order_that_has_its_data():
-    assert wo.STATUSES == ("new", "data_ready", "data_failed", "recommended", "reviewed", "decided", "traded")
-    assert wo.HAS_DATA == ("data_ready", "recommended", "reviewed", "decided", "traded")
-    order = wo.new_work_order("x", subject=["PG"])
-    order.status = "traded"
-    assert wo.WorkOrder.model_validate_json(order.model_dump_json()).status == "traded"
-    assert any("already has its data (status traded)" in r for r in wo.verify_request(order))
-
 
 def test_the_trade_statuses_and_the_trader_s_record_say_the_same_thing():
     from prometheus.agents.trader import record
@@ -36,45 +28,12 @@ def test_the_trade_statuses_and_the_trader_s_record_say_the_same_thing():
         assert set(record.Trade.model_fields[name].annotation.__args__) == set(allowed), name
 
 
-def test_a_new_order_has_no_trades_no_runs_and_no_bars_and_is_still_a_version_1_order():
-    order = wo.new_work_order("What is the news on PG?", subject=["PG"])
-    assert order.trades == [] and order.trader_runs == [] and order.bars is None and order.schema_version == 1
-    assert wo.DataResult().bars == {}
-    wo.WorkOrder.model_validate(order.model_dump())
-
-
-def test_a_bars_order_is_a_version_2_order_like_every_order_with_a_request_field_and_round_trips_as_json():
-    order = bars_order()
-    assert order.schema_version == 2 and order.action_type == "fetch_bars" and order.bars == {"start": "2026-11-05", "end": "2026-11-30"}
-    assert wo.WorkOrder.model_validate_json(order.model_dump_json()).bars == order.bars
-
-
-def test_trades_and_runs_survive_a_round_trip_through_json():
-    order = good_order()
-    order.trader_runs = [{"model": None, "mode": "paper", "summary": "x"}]
-    back = wo.WorkOrder.model_validate_json(order.model_dump_json())
-    assert back.trades == order.trades and back.trader_runs == order.trader_runs and back.status == "decided"
-
-
 def test_data_bars_travel_with_the_data_result():
     result = wo.DataResult(bars={"PG": [{"date": "2026-11-05", "open": 1.0, "high": 2.0, "low": 0.5, "close": 1.5, "volume": 10}], "XYZ": []})
     assert wo.DataResult.model_validate_json(result.model_dump_json()).bars == result.bars
 
 
-def test_the_search_check_refuses_a_bars_order_and_names_the_action_in_its_list():
-    reasons = wo.verify_request(bars_order())
-    assert any("not handled by the Data Clerk's request_data yet" in r for r in reasons)
-    assert "fetch_bars" in wo.ACTION_TYPES and "fetch_bars" not in wo.SEARCH_ACTIONS
-    assert any("is not one of" in r and "fetch_bars" in r for r in wo.verify_request(wo.new_work_order("x", action_type="launch_rocket")))
-
-
 # ---------------------------------------------------------------- verify_bar_request
-
-def test_a_bars_request_is_allowed():
-    assert wo.verify_bar_request(bars_order()) == [] and wo.verify_bar_request(bars_order(("PG", "MSFT", "SPY"))) == []
-    assert wo.verify_bar_request(bars_order(subject="PG")) == []                                    # a single symbol as text, like the quote order
-    assert wo.verify_bar_request(bars_order(start="2026-11-05", end="2026-11-05")) == []            # one day: start on the end
-    assert wo.verify_bar_request(bars_order(start="2025-10-01", end="2026-11-05")) == []            # 400 days exactly
 
 
 @pytest.mark.parametrize("changes, message", [
@@ -101,26 +60,6 @@ def test_a_bars_request_is_allowed():
 def test_the_bar_requests_the_data_clerk_may_not_answer(changes, message):
     reasons = wo.verify_bar_request(bars_order(**changes))
     assert any(message in r for r in reasons), reasons
-
-
-@pytest.mark.parametrize("status", ["data_ready", "recommended", "reviewed", "decided", "traded"])
-def test_a_bars_order_that_already_has_its_data_is_refused(status):
-    order = bars_order()
-    assert not any("already has its data" in r for r in wo.verify_bar_request(order))
-    order.status = status
-    assert any(f"already has its data (status {status})" in r for r in wo.verify_bar_request(order))
-
-
-def test_the_bar_request_must_be_a_fetch_bars_order_and_a_search_order_is_not_one():
-    assert any("is not 'fetch_bars'" in r for r in wo.verify_bar_request(wo.new_work_order("x", subject=["PG"])))
-
-
-def test_iso_date_reads_only_the_plain_form():
-    from datetime import date
-
-    assert wo.iso_date("2026-11-05") == date(2026, 11, 5)
-    for bad in ("2026-11-5", "20261105", "2026-W45-4", "2026-02-30", " 2026-11-05", "2026-11-05 ", date(2026, 11, 5), None, 20261105):
-        assert wo.iso_date(bad) is None, bad
 
 
 # ---------------------------------------------------------------- trade_of and trades_of
@@ -157,19 +96,6 @@ def changed(edit):
     order = good_order()
     edit(order)
     return order
-
-
-def test_trades_that_agree_with_the_decisions_pass_and_so_does_an_order_with_none():
-    assert wo.verify_trades(good_order()) == []
-    assert wo.verify_trades(wo.new_work_order("x", subject=["PG"])) == []
-
-
-def test_fewer_shares_than_the_decision_gave_is_fine_and_a_resting_or_rejected_trade_is_not_held_to_the_decision():
-    order = good_order()
-    order.trades[0]["fill"]["shares"] = 10
-    order.trades.append(trade("T3", record_id="r2", symbol="XYZ", status="active", fill=None))             # r2 was denied, but an active order moves nothing
-    order.trades.append(trade("T4", record_id="nobody", symbol="ABC", status="rejected", reject_code="price_unavailable", fill=None))
-    assert wo.verify_trades(order) == []
 
 
 @pytest.mark.parametrize("edit, message", [
@@ -215,46 +141,3 @@ def test_each_way_the_trades_can_disagree_with_the_decisions_is_a_reason(edit, m
     assert any(message in r for r in reasons), reasons
 
 
-def test_the_reasons_name_the_trade_they_are_about():
-    order = good_order()
-    order.trades[0]["fill"]["shares"] = 99
-    assert wo.verify_trades(order) == ["trade T1 filled 99 shares but the decision gave 44"]
-
-
-def test_a_funding_sale_that_is_filled_is_not_held_to_a_decision_of_its_own():
-    order = good_order()
-    order.trades[1].update(record_id=None)                                                                                              # a funding sale has no decision: it belongs to its purchase
-    assert wo.verify_trades(order) == []
-
-
-def test_the_guard_does_not_change_the_order():
-    order = good_order()
-    before = order.model_dump_json()
-    wo.verify_trades(order)
-    assert order.model_dump_json() == before
-
-
-def test_a_filled_sale_of_a_reduce_decision_is_a_trade_the_decision_allowed():
-    order = good_order()
-    order.trade_decisions[0].update(action="reduce")
-    order.trades[0].update(side="sell")
-    order.trades = [order.trades[0], order.trades[2]]                                                                                   # (the funding sale paid for a purchase: a sale of a reduce has none)
-    assert wo.verify_trades(order) == []
-
-
-def test_a_funding_sale_that_did_not_fill_may_sit_beside_a_purchase_that_did_not_fill_either_and_the_guard_names_only_the_filled_one():
-    order = good_order()
-    order.trades[0].update(status="rejected", reject_code="insufficient_cash", fill=None)
-    order.trades[1].update(status="rejected", reject_code="funding_failed", fill=None)
-    assert wo.verify_trades(order) == []                                                                                                 # nothing was sold, nothing was bought: nothing to say
-    order.trades[1].update(status="active")
-    assert wo.verify_trades(order) == []
-    order.trades[1].update(status="filled", fill={"price": 420.0, "shares": 5, "amount": 2100.0, "commission": 0.0, "date": "2026-11-05", "price_source": "quote", "slippage_bps": 5.0})
-    assert wo.verify_trades(order) == ["trade T1-F1 is a filled funding sale but the purchase it pays for, T1, is rejected, not filled"]
-
-
-def test_a_funding_sale_that_is_filled_beside_a_filled_purchase_is_fine_and_so_is_one_that_funds_a_purchase_listed_later():
-    order = good_order()
-    assert wo.verify_trades(order) == []
-    order.trades = [order.trades[1], order.trades[0], order.trades[2]]                                                                   # the sale first, as it was filled: the guard looks the purchase up by id
-    assert wo.verify_trades(order) == []

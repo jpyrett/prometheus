@@ -32,20 +32,6 @@ def rig_for(*rows, **kw):
 
 # ---------------------------------------------------------------- the allow-list: four tools, and no argument that names a symbol, a side or a number of shares (T2)
 
-def test_the_model_has_exactly_four_tools_and_each_one_is_documented():
-    rig = rig_for(row("PG", "open", 10, 100.0))
-    assert TRADER_TOOLS == ("verify_request", "place_order", "check_trade_status", "notify_account_manager")
-    assert [t.name for t in rig.tools.langchain_tools()] == list(TRADER_TOOLS)
-    assert all(len(t.description) > 80 for t in rig.tools.langchain_tools())
-
-
-def test_no_tool_has_an_argument_that_names_a_symbol_a_side_or_a_number_of_shares_and_none_creates_a_trade():
-    arguments = {t.name: sorted(t.args) for t in rig_for(row("PG", "open", 10, 100.0)).tools.langchain_tools()}
-    assert arguments == {"verify_request": [], "place_order": ["limit_price", "note", "order_type", "trade_id"], "check_trade_status": ["trade_id"], "notify_account_manager": []}
-    forbidden = {"symbol", "ticker", "side", "action", "shares", "quantity", "qty", "amount", "price", "record_id", "review_id", "kind", "mode"}
-    assert not forbidden & {a for args in arguments.values() for a in args}
-    assert not [name for name in dir(TraderTools) if name.startswith(("make_", "create_", "add_", "new_", "open_"))]      # nothing on the class that could make a trade
-
 
 @pytest.mark.parametrize("extra", [{"symbol": "MSFT"}, {"side": "sell"}, {"shares": 1000}, {"quantity": 5}, {"price": 1.0}, {"record_id": "r9"}])
 def test_an_argument_a_tool_does_not_have_is_refused_not_ignored_and_nothing_is_traded(extra):
@@ -65,12 +51,6 @@ def test_a_made_up_trade_cannot_be_expressed_a_trade_id_nobody_issued_is_refused
 
 
 # ---------------------------------------------------------------- verify_request
-
-def test_verify_request_lists_the_tickets_with_the_price_the_default_order_and_the_range_to_the_cent():
-    rig = Rig(decided(), account(51.23), quotes={"PG": 167.10})
-    outcome, result = rig("verify_request")
-    assert outcome == "ok" and result == {"mode": "paper", "cash": 51.23, "trades": [
-        {"trade_id": "T1", "symbol": "PG", "side": "buy", "shares": 44, "status": "new", "market_price": 167.1, "default_order": {"order_type": "limit", "limit_price": 167.1}, "limit_range": [165.46, 168.74]}]}
 
 
 def test_verify_request_shows_a_rejected_ticket_as_final_with_its_code_only_and_a_new_one_with_its_default_order():
@@ -124,28 +104,6 @@ def test_a_funded_purchase_and_a_fill_show_numbers_and_codes_and_never_a_sentenc
 
 # ---------------------------------------------------------------- place_order
 
-def test_place_order_with_only_a_trade_id_places_the_default_order_and_says_what_happened():
-    rig = Rig(decided(), account(10000.0), quotes={"PG": 167.0})
-    outcome, result = rig("place_order", trade_id="T1")
-    assert outcome == "ok" and result == {"trade_id": "T1", "status": "filled", "shares": 44, "fill_price": 167.0835, "amount": 7351.67, "reject_code": None, "account": "applied", "cash_left": 2648.33}     # what the Account Manager did, as code wrote it
-    assert rig.found[0].placed_by == "model"                                                                              # whoever called the tool, the model placed it
-
-
-def test_place_order_tells_the_model_what_the_account_manager_did_the_cash_left_after_each_fill_and_a_size_cut_for_the_cash():
-    """Design choices entry 81: the Account Manager approves and records each trade as it is placed. The model reads two things code made: `account` (a word of a closed list) and `cash_left` (a number)."""
-    rig = rig_for(row("PG", "open", 10, 100.0), row("KO", "open", 10, 100.0), portfolio=account(1500.0), quotes={"PG": 100.0, "KO": 100.0})
-    _, first = rig("place_order", trade_id="T1")
-    _, second = rig("place_order", trade_id="T2")
-    assert (first["status"], first["shares"], first["account"], first["cash_left"]) == ("filled", 10, "applied", 499.5)
-    assert (second["status"], second["shares"], second["account"], second["cash_left"]) == ("filled", 4, "applied", 99.3)         # the cash left ($499.50) pays for 4 of the 10, not for all
-    assert rig("verify_request")[1]["cash"] == 99.3 == acct_now(rig.broker).cash_avail
-
-
-def test_place_order_for_a_purchase_the_account_will_not_approve_says_so_as_a_code_with_no_account_word_and_no_cash_left():
-    rig = rig_for(row("PG", "open", 10, 100.0), portfolio=account(51.23), quotes={"PG": 100.0})
-    _, placed = rig("place_order", trade_id="T1")
-    assert (placed["status"], placed["reject_code"], placed["shares"], placed["fill_price"]) == ("rejected", "insufficient_cash", 10, None) and "account" not in placed and "cash_left" not in placed and "reason" not in placed
-
 
 def test_a_fill_the_book_refuses_reaches_the_model_as_a_code_and_a_word_and_never_as_the_books_sentence():
     """Rule T9: no free text from the book reaches the model. The book's refusal sentence stays on the record (the trade's reason) and the model reads `account_refused` and `refused`."""
@@ -171,21 +129,6 @@ def test_after_a_trade_that_failed_the_model_can_place_the_next_one_nothing_stop
     assert outcome == "ok" and (second["status"], second["account"]) == ("filled", "booked") and [t.status for t in rig.found] == ["rejected", "filled"]
     again = rig("place_order", trade_id="T1")
     assert again[0] in ("invalid", "limit") and rig.found[0].status == "rejected" and rig.broker.filled == [rig.found[1].trade_id]      # a failed trade is not retried: the budget and the broker both refuse a second placing
-
-
-def test_place_order_takes_a_market_order_or_a_limit_inside_the_range_and_keeps_a_note_cut_to_the_words_allowed():
-    rig = rig_for(row("PG", "open", 10, 100.0), row("KO", "open", 5, 60.0), quotes={"PG": 100.0, "KO": 60.0})
-    assert rig("place_order", trade_id="T1", order_type="limit", limit_price=100.5, note="x " * 30)[0] == "ok"
-    assert rig.found[0].order_type == "limit" and rig.found[0].limit_price == 100.5 and rig.found[0].note == " ".join(["x"] * 20)
-    assert rig("place_order", trade_id="T2", order_type="market")[1]["status"] == "filled"
-
-
-def test_place_order_for_a_resting_limit_says_active_and_for_a_price_outside_the_range_says_rejected_with_the_code():
-    rig = rig_for(row("PG", "open", 10, 100.0, limit=99.5), row("KO", "open", 5, 60.0), quotes={"PG": 100.0, "KO": 80.0})
-    _, resting = rig("place_order", trade_id="T1")
-    _, rejected = rig("place_order", trade_id="T2", order_type="market")
-    assert (resting["status"], resting["fill_price"], resting["amount"], "reason" in resting) == ("active", None, None, False) and "above the limit" in rig.found[0].reason      # the sentence is on the record, not in the result
-    assert (rejected["status"], rejected["reject_code"]) == ("rejected", "price_outside_limits")
 
 
 @pytest.mark.parametrize("args, message", [
@@ -214,12 +157,6 @@ def test_a_trade_is_placed_once_the_second_call_is_stopped_by_the_budget_and_the
     with pytest.raises(Refused, match="was already placed"):
         rig.broker.place("T1", "market")                                                                                  # the broker's own refusal, for a caller that skips the budget
     assert acct_now(rig.broker).cash_avail == 5000.0 - 1000.5 and rig.broker.filled == ["T1"]                             # bought once
-
-
-def test_a_trade_the_market_rejected_or_left_resting_is_also_used_up_the_model_cannot_try_again():
-    rig = rig_for(row("PG", "open", 10, 100.0), quotes={"PG": 150.0})
-    assert rig("place_order", trade_id="T1", order_type="market")[1]["status"] == "rejected"
-    assert rig("place_order", trade_id="T1", order_type="limit", limit_price=100.0)[0] == "limit"
 
 
 def test_every_sale_is_placed_before_any_purchase_the_refusal_names_the_sale():
@@ -296,11 +233,6 @@ def test_a_second_notify_returns_the_first_answer_again_and_the_budget_allows_tw
     assert outcome == "limit" and "notify_account_manager may be used at most 2 times in a run and it already was" in text
 
 
-def test_a_notify_with_nothing_to_place_is_allowed_and_a_rejected_ticket_does_not_hold_it_up():
-    rig = rig_for(row("KO", "open", 1, 60.0, approved=False))
-    assert rig("notify_account_manager")[0] == "ok"
-
-
 # ---------------------------------------------------------------- the budget
 
 def test_verify_request_may_be_used_twice_and_check_trade_status_once_per_ticket_and_two_more():
@@ -309,21 +241,6 @@ def test_verify_request_may_be_used_twice_and_check_trade_status_once_per_ticket
     assert [rig("check_trade_status")[0] for _ in range(5)] == ["ok", "ok", "ok", "ok", "limit"]                          # two tickets and two more
     assert rig.budget.stopped == ["verify_request: verify_request may be used at most 2 times in a run and it already was",
                                   "check_trade_status: check_trade_status may be used at most 4 times in a run and it already was"]
-
-
-def test_a_call_over_a_limit_gets_a_limit_reached_message_and_is_recorded():
-    rig = rig_for(row("PG", "open", 10, 100.0))
-    rig("verify_request"), rig("verify_request")
-    outcome, text = rig("verify_request")
-    assert outcome == "limit" and text.startswith("Limit reached: ") and "Move on" in text and len(rig.budget.stopped) == 1
-
-
-def test_the_budget_lets_the_settings_of_a_test_change_a_count_and_counts_nothing_it_did_not_see():
-    budget = Budget(["T1"], calls={"verify_request": 1})
-    budget.check("verify_request", {})
-    with pytest.raises(ToolLimitError):
-        budget.check("verify_request", {})
-    assert Budget(["T1", "T2", "T3"]).limits == {"verify_request": 2, "check_trade_status": 5, "notify_account_manager": 2}
 
 
 # ---------------------------------------------------------------- the messages

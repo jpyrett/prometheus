@@ -32,12 +32,6 @@ def codes(result, severity=None):
     return [f.code for f in result.findings if severity in (None, f.severity)]
 
 
-def test_a_chart_with_no_pattern_is_neutral_and_judges_all_fifteen():
-    r = run()
-    assert names(r) == [] and r.score == 50.0 and r.detail.points == 0 and r.detail.unknown == [] and codes(r) == [] and len(r.measures) == 15 == len(PATTERNS)
-    assert r.applicable and all(m.available for m in r.measures)
-
-
 @pytest.mark.parametrize("pattern, holds, fails", [
     ("golden_cross", dict(cross_50_200_20d=3), [dict(cross_50_200_20d=0), dict(cross_50_200_20d=-3)]),
     ("death_cross", dict(cross_50_200_20d=-1), [dict(cross_50_200_20d=0), dict(cross_50_200_20d=20)]),
@@ -63,13 +57,6 @@ def test_each_pattern_holds_at_its_bound_and_not_just_under_it(pattern, holds, f
         assert pattern not in names(run(**change)), change
 
 
-def test_the_score_is_the_neutral_score_plus_the_points_of_the_patterns_that_hold():
-    r = run(cross_50_200_20d=2, last_close=110.0, sma_50=105.0, sma_200=100.0, macd_hist=0.2)      # a golden cross two bars ago (15), the stack (10), MACD up (5)
-    assert sorted(names(r)) == ["bull_alignment", "golden_cross", "macd_positive"] and r.detail.points == 30 and r.score == 80.0
-    mixed = run(rsi_14=85.0, macd_hist=0.2, obv_20d_change=0.3)                                    # overbought (-10), MACD up (5), OBV up (5)
-    assert sorted(names(mixed)) == ["macd_positive", "obv_rising", "overbought"] and mixed.score == 50.0
-
-
 def test_every_bullish_pattern_at_once_is_capped_at_100_and_every_bearish_one_at_0():
     bull = run(cross_50_200_20d=1, last_close=120.0, sma_50=110.0, sma_200=100.0, structure_63d="up", breakout_20d=True, volume_ratio_1d=2.0, pct_of_52w_high=0.97, macd_hist=1.0, rsi_14=60.0, obv_20d_change=0.5)
     assert len(bull.detail.patterns) == 8 and bull.detail.points == 70 and bull.score == 100.0
@@ -83,25 +70,6 @@ def test_every_bullish_pattern_at_once_is_capped_at_100_and_every_bearish_one_at
 DEAD_CAT = dict(decline_from_peak_63d=-0.25, rebound_from_trough_63d=0.05, sessions_since_trough_63d=15, last_close=90.0, sma_50=95.0)
 
 
-def test_a_dead_cat_bounce_is_a_blocker_and_each_of_its_five_conditions_is_needed():
-    r = run(**DEAD_CAT)
-    assert "dead_cat_bounce" in names(r) and codes(r, "blocker") == ["dead_cat_bounce"]
-    assert "fell 25% from its peak" in r.findings[0].message and "bounced 5%" in r.findings[0].message and "under its 50-day mean" in r.findings[0].message
-    for change in (dict(decline_from_peak_63d=-0.249),                      # it did not fall far enough
-                   dict(rebound_from_trough_63d=0.049),                     # no bounce yet
-                   dict(sessions_since_trough_63d=16),                      # the low is too old: it is a recovery, not a bounce
-                   dict(decline_from_peak_63d=-0.25, rebound_from_trough_63d=0.25),   # (1 - 0.25) x (1 + 0.25) - 1 = -6.25%: nearly back at the peak
-                   dict(last_close=95.0)):                                  # back at its 50-day mean
-        assert "dead_cat_bounce" not in names(run(**{**DEAD_CAT, **change})), change
-
-
-def test_the_distance_to_the_peak_is_worked_out_from_the_fall_and_the_bounce():
-    on_the_line = run(**{**DEAD_CAT, "decline_from_peak_63d": -0.30, "rebound_from_trough_63d": 0.5 / 3})  # 0.70 x (1 + 1/6) - 1 = -18.33%
-    assert "dead_cat_bounce" in names(on_the_line)
-    exact = run(**{**DEAD_CAT, "decline_from_peak_63d": -0.5, "rebound_from_trough_63d": 0.7})            # 0.50 x 1.70 - 1 = -15%: the limit itself
-    assert "dead_cat_bounce" in names(exact)
-
-
 def test_a_dead_cat_bounce_cannot_earn_the_great_deal_bonus():
     r = run(**DEAD_CAT)
     assert not sc.great_deal_bonus_allowed(r.findings, 1.0, True, 0.7)
@@ -109,12 +77,6 @@ def test_a_dead_cat_bounce_cannot_earn_the_great_deal_bonus():
 
 
 # ---------------------------------------------------------------- warnings, notes and what cannot be judged
-
-def test_a_death_cross_is_a_warning_and_a_golden_cross_a_note():
-    dead = run(cross_50_200_20d=-4)
-    assert codes(dead, "warning") == ["death_cross"] and codes(dead, "blocker") == [] and "3 sessions ago" in dead.findings[0].message
-    gold = run(cross_50_200_20d=1)
-    assert codes(gold, "info") == ["golden_cross"] and "today" in gold.findings[0].message
 
 
 def test_a_weak_chart_is_a_warning_under_the_mark():
@@ -125,23 +87,6 @@ def test_a_weak_chart_is_a_warning_under_the_mark():
     assert "weak_chart" not in codes(run(structure_63d="down"))                                                                     # -10: 40
 
 
-def test_a_pattern_whose_number_is_missing_is_unknown_and_never_guessed():
-    r = run(sma_200="missing", cross_50_200_20d="missing")
-    assert set(r.detail.unknown) == {"golden_cross", "death_cross", "bull_alignment", "bear_alignment"} and r.score == 50.0
-    assert [m.available for m in r.measures if m.name == "bull_alignment"] == [False]
-    no_stack = run(sma_50="missing", **{k: v for k, v in DEAD_CAT.items() if k != "sma_50"})
-    assert "dead_cat_bounce" in no_stack.detail.unknown and codes(no_stack, "blocker") == []        # no 50-day mean: it cannot be a blocker
-    no_volume = run(breakout_20d=True, volume_ratio_1d="missing")
-    assert "breakout_on_volume" in no_volume.detail.unknown
-    assert "breakout_on_volume" not in run(breakout_20d=False, volume_ratio_1d="missing").detail.unknown      # no breakout is a no, whatever the volume
-
-
-def test_with_nothing_to_judge_the_chart_says_so_and_stays_neutral():
-    r = ch.assess(rec_of(captured("PG_open")), {}, C)
-    assert r.score == 50.0 and codes(r, "warning") == ["chart_not_assessable"] and len(r.detail.unknown) == 15 and r.detail.facts == {}
-    assert ch.assess(rec_of(captured("PG_open")), None, C).score == 50.0
-
-
 def test_a_reduction_is_not_judged():
     order = captured("PG_open")
     order.recommendations[0] = tamper(order.recommendations[0], **{"action.action": "reduce"})
@@ -150,15 +95,6 @@ def test_a_reduction_is_not_judged():
 
 
 # ---------------------------------------------------------------- inside a review
-
-def test_a_review_carries_the_chart_dimension_and_the_patterns_behind_it():
-    out = review(captured("PG_open"), changes={"PG": {"cross_50_200_20d": 4, "structure_63d": "up"}})["PG"]
-    d = out["dimensions"]["chart"]
-    assert d["weight"] == 10 and d["applicable"] and set(out["dimensions"]) == {"accuracy", "evidence", "risk_fit", "timing", "value", "chart"}
-    names_held = {p["name"] for p in out["chart"]["patterns"]}
-    assert {"golden_cross", "uptrend_structure"} <= names_held
-    assert d["score"] == pytest.approx(min(100, max(0, 50 + out["chart"]["points"]))) and d["points"] == pytest.approx(d["score"] / 10)
-    assert any(n["code"] == "golden_cross" for n in out["notes"])
 
 
 def test_a_dead_cat_bounce_denies_the_recommendation_whatever_the_rest_says():

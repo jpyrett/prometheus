@@ -1,0 +1,99 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to seven requests, five of which name a trade, recorded on 2026-11-15 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py after design choices entry 88: an order names the stock by `symbol` or by `company`). 'replies' is what the model answered, in order. Nothing here is edited. The tests give these replies back to the real Account Manager, whose code checks every field against the user's own words.",
+ "model": "openai/gpt-oss-120b",
+ "requests": {
+  "Buy 50 shares of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 50}]}"
+   ]
+  },
+  "please purchase 25 shares of Microsoft Corp (MSFT) for me": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"buy\", \"company\": \"Microsoft Corp\", \"shares\": 25}]}"
+   ]
+  },
+  "Sell 10 shares of TSLA and buy 5 shares of GM": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"sell\", \"symbol\": \"TSLA\", \"shares\": 10}, {\"side\": \"buy\", \"symbol\": \"GM\", \"shares\": 5}]}"
+   ]
+  },
+  "Buy $5,000 of MSFT": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":5000,\"orders\":[{\"side\":\"buy\",\"symbol\":\"MSFT\",\"shares\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MSFT (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked)"
+   }
+  },
+  "I want to buy oil stocks. Buy the 3 most recommended companies.": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"orders\": []}"
+   ]
+  },
+  "buy 50 shares of Microsoft": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"buy\", \"company\": \"Microsoft\", \"shares\": 50}]}"
+   ]
+  },
+  "Buy 20 shares of Procter & Gamble and sell 10 shares of Tesla": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"buy\", \"company\": \"Procter & Gamble\", \"shares\": 20}, {\"side\": \"sell\", \"company\": \"Tesla\", \"shares\": 10}]}"
+   ]
+  },
+  "I want to buy MSFT": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"orders\":[{\"side\":\"buy\",\"symbol\":\"MSFT\",\"shares\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MSFT (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked)"
+   }
+  },
+  "Buy Microsoft": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"orders\":[{\"side\":\"buy\",\"company\":\"Microsoft\",\"shares\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy Microsoft (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked)"
+   }
+  },
+  "sell MSFT": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"orders\":[{\"side\":\"sell\",\"symbol\":\"MSFT\",\"shares\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell MSFT (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked)"
+   }
+  },
+  "I want to buy MU, SNDK and AMD if the recommendations pass": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [\"MU\", \"SNDK\", \"AMD\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended MU, SNDK, AMD; spending as much as the account allows"
+   }
+  },
+  "I want to buy the three most recommended oil stocks": {
+   "replies": [
+    "{\"action\":\"buy\",\"topic\":\"oil\",\"symbols\":[],\"companies\":[],\"count\":3,\"allocation\":\"default\",\"budget\":null,\"orders\":[]}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'oil' companies; spending as much as the account allows"
+   }
+  },
+  "I want to buy MSFT and TSLA and spend $6,000": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [\"MSFT\", \"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": 6000, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended MSFT, TSLA; spending at most $6,000.00"
+   }
+  }
+ }
+}

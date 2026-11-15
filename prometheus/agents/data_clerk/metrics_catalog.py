@@ -9,10 +9,10 @@ THE RESULT OF ONE METRIC (spec 4.2), the same shape for all:
     {"value": float | bool | str | None (a list for `recent_bars`), "unit": str, "as_of": "YYYY-MM-DD" | None, "window": str, "source": str, "inputs_summary": dict, "note": str | None}
 
   * `source` says where the number came from: `day_aggs:<first date>..<last date>` (the stored bars), `finnhub_metric:<date>`, `filing:<accession>`, or `derived:<the inputs joined by +>`;
-  * `inputs_summary` holds what a reader needs to recompute the number (for RSI the bars used and the last close; for a payout yield the dollars of each cash flow);
+  * `inputs_summary` holds what a reader needs to recompute the number (for RSI the bars used and the last close; for a cash flow the dollars of each row);
   * `note` is a gap in words, never a judgement. `value: None` always has a note.
 
-A metric that cannot be computed is `value: None` with the reason (`needs 30 bars, 17 stored`, `no sector ETF given`, `no market capitalization from Finnhub`): it is a result, not an
+A metric that cannot be computed is `value: None` with the reason (`needs 30 bars, 17 stored`, `no sector ETF given`, `no Finnhub metric payload`): it is a result, not an
 error. A test walks every result and refuses the keys score, stance, sentiment, recommendation, rating and verdict.
 """
 import functools
@@ -156,12 +156,6 @@ def _finnhub_value(c: Context, name: str) -> float | None:
     return ((c.financials or {}).get("metrics", {}).get(name) or {}).get("value")
 
 
-def _need_evidence(c: Context) -> dict:
-    if c.evidence is None:
-        raise Missing(f"no stored filings of {c.symbol} (fetch_filings has not been run for it)")
-    return c.evidence
-
-
 def _sector_etf(c: Context):
     if not c.sector_etf:
         raise Missing("no sector ETF given for this symbol (WorkOrder.sector)")
@@ -174,16 +168,11 @@ def _earnings_yield(c: Context):
     return fund.earnings_yield(_finnhub_value(c, "pe_ratio"))
 
 
-def _net_payout(c: Context):
-    return fund.net_payout_yield_ttm(_need_evidence(c), _finnhub_value(c, "market_cap"))
-
-
 UNAVAILABLE = {  # names the strategies read but that this build cannot compute yet, each with the reason: they are in the catalogue so that a gap is a visible result, not a missing key
     "sue_4q": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)",
     "eps_surprise_last": "earnings history is not available: it needs the Finnhub earnings endpoints (not added yet)",
     "days_to_next_earnings": "the earnings calendar is not available: it needs the Finnhub earnings endpoints (not added yet)",
     "earnings_move_abs": "the earnings dates are not available: it needs the Finnhub earnings endpoints (not added yet)",
-    "median_spread_bps_1d": "intraday quotes are not read in this build (spec 5.6, phase 10)",
     "breadth_200": "needs an index universe (configs/universe_sp500.json), which does not exist yet",
     "risk_factor_change": "not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)",
 }
@@ -236,7 +225,6 @@ def _build() -> dict[str, MetricSpec]:
         _bar_spec("max_drawdown_63d", "risk", "fraction", _simple(tech.max_drawdown_63d), "deepest fall from a running peak in the last 63 bars (negative)"),
         _bar_spec("beta_63d", "risk", "ratio", _beta(0), "OLS slope of the daily returns on SPY's, last 63 returns"),
         _bar_spec("corr_63d_spy", "risk", "ratio", _beta(1), "correlation of the same daily returns with SPY's"),
-        _bar_spec("adv_20d_dollars", "risk", "USD", _simple(tech.adv_20d_dollars), "mean of close x volume over 20 bars"),
         _bar_spec("volume_ratio_1d", "risk", "ratio", _simple(tech.volume_ratio_1d), "today's volume over the mean of the 20 sessions before"),
         # the sector ETF and the market (SPY)
         MetricSpec("sector_etf", "market", ("bars",), "ticker", 0, "the sector ETF the work order gave for this symbol", _sector_etf, "n/a"),
@@ -257,8 +245,6 @@ def _build() -> dict[str, MetricSpec]:
     specs += [
         MetricSpec("earnings_yield", "fundamentals", ("financials",), "fraction", 0, "1 / pe_ratio when the P/E is positive",
                    _earnings_yield, "TTM"),
-        MetricSpec("net_payout_yield_ttm", "filings", ("evidence", "financials"), "fraction", 0, "(buybacks + dividends - stock issued) / market cap, annualized",
-                   _net_payout, "year to date, annualized"),
         MetricSpec("cash_balance", "filings", ("evidence",), "USD", 0, "cash and cash equivalents of the latest stored balance sheet, in dollars", _evidence(fund.cash_balance), "latest balance sheet"),
         MetricSpec("share_count_change", "filings", ("evidence",), "fraction", 0, "change of the shares outstanding between the two stored balance sheets", _evidence(fund.share_count_change), "latest balance sheet vs the earlier one"),
         MetricSpec("payout_coverage", "filings", ("evidence",), "ratio", 0, "dividends paid / net income, year to date", _evidence(fund.payout_coverage), "year to date"),

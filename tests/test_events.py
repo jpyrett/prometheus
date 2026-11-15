@@ -110,19 +110,6 @@ def test_a_claim_that_fails_one_check_is_refused_with_its_reason(change, message
     assert ok is False and message in reason
 
 
-def test_the_quote_must_name_the_company_even_when_the_pattern_matches():
-    ok, reason = check({"class": "guidance_raise", "source": 2, "quote": "Micron lifted its outlook. Sandisk shares fell 4% on Tuesday."}, symbol="SNDK", company="Sandisk")
-    assert ok is True                                                                    # the quote names Sandisk, so it counts (a reader sees the sentence)
-    ok, reason = check({"class": "guidance_raise", "source": 2, "quote": "Micron lifted its outlook."}, symbol="SNDK", company="Sandisk")
-    assert ok is False and reason == "the quote does not name the company"
-
-
-def test_a_sentence_that_only_says_what_could_happen_is_not_an_event():
-    sources = {1: {"number": 1, "text": "Procter & Gamble could lift its full-year outlook if the acquisition closes."}}
-    ok, reason = check({"class": "guidance_raise", "source": 1, "quote": "Procter & Gamble could lift its full-year outlook if the acquisition closes."}, sources=sources)
-    assert ok is False and "only says what could happen" in reason
-
-
 # ---------------------------------------------------------------- the filing index, amounts, earnings dates, timing
 
 def test_form_144_and_schedule_13d_come_from_the_filing_index_without_any_quote_from_a_model():

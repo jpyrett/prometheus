@@ -8,7 +8,7 @@ ONE work order in (status `data_ready`), the SAME work order out (status `recomm
      2  candidates          who to look at (candidates.py)
      3  PLAN call           MODEL call 1: signals, events and a drop cause, with exact quotes; every quote checked by code (v0's verify_signal, events.verify_event)
      4  metrics             ONE `calculate_financials` order to the Data Clerk for every number every strategy, gate and the plan will read (DataClerk.request_metrics)
-     5  gates               liquidity, freshness, red flags, event risk (gates.py): a failure is recorded, never silent
+     5  gates               freshness, red flags, event risk (gates.py; no liquidity gate, entry 93): a failure is recorded, never silent
      6  families            five strategy families, each one score from fixed rules (families.py)
      7  quality             the haircut multiplier (quality.py)
      8  rank                composite edge, cost, stance, the blended score that ranks, the regime (ranking.py)
@@ -48,9 +48,9 @@ from prometheus.prompts.advisor_v1 import RETRY_PLAN, plan_message, plan_system
 from prometheus.prompts.advisor import evidence_text, kinds_text, user_message
 from prometheus.rag.loaders import check_symbol
 
-GATE_METRICS = ("adv_20d_dollars", "last_close", "median_spread_bps_1d", "days_to_next_earnings", "debt_to_equity", "negative_equity", "current_ratio", "cfo_negative_with_profit")
+GATE_METRICS = ("last_close", "days_to_next_earnings", "debt_to_equity", "negative_equity", "current_ratio", "cfo_negative_with_profit")
 PLAN_METRICS = ("atr_14", "sma_50", "above_sma_200", "earnings_move_abs")
-RISK_METRICS = ("vol_63d_ann", "atr_pct", "beta_63d", "max_drawdown_63d", "adv_20d_dollars")
+RISK_METRICS = ("vol_63d_ann", "atr_pct", "beta_63d", "max_drawdown_63d")
 REGIME_METRICS = ("spy_above_sma_200", "spy_vol_21d_ann", "spy_drawdown_63d", "spy_ret_21d", "breadth_200")
 EVIDENCE_FIELDS = ("value", "unit", "as_of", "source")
 
@@ -182,7 +182,7 @@ def _features(metrics: dict | None) -> dict[str, dict]:
 
 def _risk(s: rk.Scored, plan) -> Risk:
     flags = next((g.value for g in s.gates.gates if g.gate == "red_flag"), None) or []
-    return Risk(**{n: value(s.metrics, n) for n in ("vol_63d_ann", "atr_pct", "beta_63d", "max_drawdown_63d", "adv_20d_dollars", "median_spread_bps_1d", "days_to_next_earnings", "earnings_move_abs")},
+    return Risk(**{n: value(s.metrics, n) for n in ("vol_63d_ann", "atr_pct", "beta_63d", "max_drawdown_63d", "days_to_next_earnings", "earnings_move_abs")},
                 gap_risk=plan.gap_risk, red_flags=list(flags))
 
 
@@ -196,7 +196,7 @@ def _record(s: rk.Scored, checked: Checked | None, family, action: str, reason: 
         bullish_signals=v0.get("bullish_signals", 0), bearish_signals=v0.get("bearish_signals", 0), signals_claimed=v0.get("signals_claimed", 0), signals_verified=v0.get("signals_verified", 0),
         signals_counted=v0.get("signals_counted", 0), signals=v0.get("signals", []), advisor={"model": run_ids["model"], "version": "v1", "proposed_archetypes": checked.archetypes if checked else []},
         identity=Identity(record_id=uuid.uuid4().hex[:12], request_id=ident["request_id"], case=ident["case"], sleeve=config.sleeves[ident["case"]].sleeve, as_of_utc=ident["as_of_utc"],
-                          sector_etf=s.sector_etf, market_cap=value(s.metrics, "market_cap"), regime=regime[0], regime_note=regime[1]),
+                          sector_etf=s.sector_etf, regime=regime[0], regime_note=regime[1]),
         action=Action(action=action, reason=reason, held_shares=s.held_shares, cost_basis=s.cost_basis, unrealized_pct=round(price / s.cost_basis - 1, 4) if price and s.cost_basis else None, cooldown_of=cooldown),
         families=s.families, quality=s.quality, evidence=_evidence(s, direction, items), features=_features(s.metrics),
         agreement=Agreement(agreement=round(s.agreement, 4), evidence_n=s.evidence_n, completeness=s.passed()[0].completeness if s.passed() else None, confidence=round(s.confidence, 4)),
@@ -277,7 +277,7 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
         events = _timed([*(chk.events if chk else []), *filing_index_events(symbol, filing_sources)], m, config)
         signals = chk.v0["signals"] if chk and chk.v0 else []
         quality = quality_multiplier(m, today, config.quality)
-        gates = run_gates(m, events, c["held"], today, config.gates, last_earnings_release(symbol, press_sources))
+        gates = run_gates(m, events, today, config.gates, last_earnings_release(symbol, press_sources))
         recent = value(m, "recent_bars") or []
         recent_company = sum(1 for src in sources.values() if symbol in (src.get("tickers") or []) and names_company(src.get("text") or "", symbol, c.get("company"))
                              and (timing(src.get("published_utc"), recent) or {}).get("age_bars", 99) <= config.families.reversion.cause_lookback_bars)

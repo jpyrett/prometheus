@@ -71,7 +71,7 @@ FOUND = [{"brand": "Domino's", "parent": "Domino's Pizza", "symbol": "DPZ", "com
          {"brand": "Pizza Hut", "parent": "Yum! Brands", "symbol": "YUM", "company": "Yum! Brands, Inc.", "public": True, "how": "company name", "note": None},
          {"brand": "Little Caesars", "parent": None, "symbol": None, "company": None, "public": False, "how": None, "note": "privately held, or not known to be listed: not scored"},
          {"brand": "Donatos", "parent": None, "symbol": None, "company": None, "public": False, "how": None, "note": "privately held, or not known to be listed: not scored"}]
-METRICS = {"DPZ": full_metrics(net_payout_yield_ttm=0.07), "PZZA": full_metrics(net_payout_yield_ttm=0.045), "YUM": full_metrics(net_payout_yield_ttm=0.06, share_count_change=-0.004)}
+METRICS = {"DPZ": full_metrics(), "PZZA": full_metrics(share_count_change=-0.008), "YUM": full_metrics(share_count_change=-0.006)}
 
 
 class Clerk(FakeClerk):
@@ -186,12 +186,12 @@ def test_the_report_shows_the_companies_the_ranking_best_to_worst_and_each_recom
 
 
 def test_a_company_that_is_not_recommended_is_in_the_ranking_with_its_reason_and_a_gate_failure_is_ranked_last():
-    metrics = {**METRICS, "YUM": full_metrics(net_payout_yield_ttm=0.08, adv_20d_dollars=1000.0), "PZZA": full_metrics(earnings_yield=0.0, net_payout_yield_ttm=0.035, share_count_change=-0.006)}
+    metrics = {**METRICS, "YUM": full_metrics(cfo_negative_with_profit=True), "PZZA": full_metrics(earnings_yield=0.0, share_count_change=-0.006)}
     result, _, _ = go("Pizza", clerk=Clerk(metrics), replies=(plan_reply(), theses("DPZ")))
     text = rec.report(result)
     rows = rec.ranking_rows(result)
-    assert [(r["rank"], r["symbol"], r["status"]) for r in rows] == [(1, "DPZ", "RECOMMENDED"), (2, "PZZA", "not recommended"), (3, "YUM", "not recommended")]    # YUM has the best numbers but fails liquidity: last
-    assert "no: gate liquidity failed" in text and "no: stance neutral (no family passed)" in text
+    assert [(r["rank"], r["symbol"], r["status"]) for r in rows] == [(1, "DPZ", "RECOMMENDED"), (2, "PZZA", "not recommended"), (3, "YUM", "not recommended")]    # YUM has the best numbers but fails the red_flag gate: last
+    assert "no: gate red_flag failed" in text and "no: stance neutral (no family passed)" in text
     assert "RECOMMENDATIONS  (1 of the top 5 asked for; the others did not pass" in text
 
 
@@ -404,17 +404,17 @@ def test_a_run_ranks_only_the_named_companies_even_when_the_news_names_others():
 
 
 def test_the_report_has_a_table_of_key_numbers_and_says_why_each_company_was_not_recommended():
-    metrics = {**METRICS, "YUM": full_metrics(net_payout_yield_ttm=0.08, adv_20d_dollars=1000.0), "PZZA": full_metrics(earnings_yield=0.0, net_payout_yield_ttm=0.035, share_count_change=-0.006)}
+    metrics = {**METRICS, "YUM": full_metrics(cfo_negative_with_profit=True), "PZZA": full_metrics(earnings_yield=0.0, share_count_change=-0.006)}
     result, _, _ = go("DPZ PZZA YUM", clerk=Clerk(metrics), replies=(plan_reply(), theses("DPZ")))
     text = rec.report(result)
     table = text[text.index("KEY NUMBERS"):text.index("WHY NOT RECOMMENDED")]
-    assert "DPZ" in table and "PZZA" in table and "YUM" in table and "Last close" in table and "Market cap" in table and "Debt / equity" in table and "$100.00" in table
+    assert "DPZ" in table and "PZZA" in table and "YUM" in table and "Last close" in table and "Debt / equity" in table and "$100.00" in table
     why = text[text.index("WHY NOT RECOMMENDED"):text.index("RECOMMENDATIONS  (")]
-    assert "PZZA" in why and "YUM" in why and "DPZ" not in why.split("\n")[1] and "trend" in why and "capital_return" in why and "gate liquidity failed" in why
+    assert "PZZA" in why and "YUM" in why and "DPZ" not in why.split("\n")[1] and "trend" in why and "capital_return" in why and "gate red_flag failed" in why
 
 
 def test_key_numbers_formats_each_kind_and_leaves_out_a_row_nobody_has():
-    assert [rec._number(v, k) for v, k in ((None, "frac"), (0.1234, "frac"), (278.044, "usd"), (198.3e9, "big"), (225e6, "big"), (31.85, "num1"), (3.514, "num2"))] == ["n/a", "12.3%", "$278.04", "$198.3B", "$225M", "31.9", "3.51"]
+    assert [rec._number(v, k) for v, k in ((None, "frac"), (0.1234, "frac"), (278.044, "usd"), (31.85, "num1"), (3.514, "num2"))] == ["n/a", "12.3%", "$278.04", "31.9", "3.51"]
     result, _, _ = go("DPZ PZZA YUM", replies=(plan_reply(), theses("DPZ", "PZZA", "YUM")))
     rows = rec.key_numbers(result, ["DPZ", "PZZA", "YUM"])
     assert rows[0].split() == ["DPZ", "PZZA", "YUM"] and rows[1].startswith("  Last close") and rows[1].split()[-3:] == ["$100.00"] * 3
@@ -425,8 +425,8 @@ def test_key_numbers_formats_each_kind_and_leaves_out_a_row_nobody_has():
 # ---------------------------------------------------------------- negative equity is marked everywhere in the results (entry 54)
 
 def deficit_run(**kw):
-    metrics = {"DPZ": full_metrics(net_payout_yield_ttm=0.07, debt_to_equity=None, negative_equity=True), "PZZA": full_metrics(net_payout_yield_ttm=0.045, debt_to_equity=33.6, negative_equity=True),
-               "YUM": full_metrics(net_payout_yield_ttm=0.06, debt_to_equity=31.0, current_ratio=0.9, negative_equity=False)}
+    metrics = {"DPZ": full_metrics(debt_to_equity=None, negative_equity=True), "PZZA": full_metrics(debt_to_equity=33.6, negative_equity=True),
+               "YUM": full_metrics(debt_to_equity=31.0, current_ratio=0.9, negative_equity=False)}
     return go("DPZ PZZA YUM", clerk=Clerk(metrics), replies=(plan_reply(), theses("DPZ", "PZZA", "YUM")), find=5, **kw)
 
 

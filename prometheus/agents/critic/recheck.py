@@ -32,7 +32,7 @@ from prometheus.common.work_order import MAX_QUOTE_SYMBOLS, MAX_VERIFY_CHUNKS, W
 
 REQUESTER = "critic"
 DECISIVE = ("last_close", "atr_14")
-ALWAYS = ("sma_50", "adv_20d_dollars", "vol_63d_ann", "beta_63d", "max_drawdown_63d", "atr_pct", "ret_21d", "market_cap", "earnings_yield", "negative_equity")
+ALWAYS = ("sma_50", "vol_63d_ann", "beta_63d", "max_drawdown_63d", "atr_pct", "ret_21d", "earnings_yield", "negative_equity")
 OWN = ("sma_126", "high_126d", "low_126d", "eps", "ps_ratio", "high_52w", "pct_of_52w_high", *CHART_METRICS)   # not on the record (nothing to compare): the Critic's own judgements of risk, value and chart read them
 BLEND_GROUPS = ("performance", "historical", "filings")
 

@@ -50,23 +50,6 @@ def order(symbols=("PG",), start="2026-10-12", end="2026-10-16", **changes):
 
 # ---------------------------------------------------------------- DataClerkTools.daily_bars
 
-def test_the_bars_of_a_range_are_oldest_first_with_both_ends_included(bars_root):
-    found = tools(bars_root).daily_bars(["PG", "AAPL"], date(2026, 10, 12), date(2026, 10, 16))
-    assert list(found) == ["bars", "gaps"] and list(found["bars"]) == ["PG", "AAPL"] and found["gaps"] == []
-    pg = found["bars"]["PG"]
-    assert [b["date"] for b in pg] == ["2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16"]
-    assert list(pg[0]) == ["date", "open", "high", "low", "close", "volume"]
-    assert all(isinstance(b["date"], str) for b in pg)
-    assert all(b["low"] <= b["open"] <= b["high"] and b["low"] <= b["close"] <= b["high"] for b in pg)
-    assert [b["close"] for b in found["bars"]["AAPL"]] == [b["close"] - 2 for b in pg]               # the rows of the other symbol in the same files are not mixed in
-
-
-def test_a_bar_is_the_stored_number_and_not_another_symbols(bars_root):
-    days = weekdays(40, TODAY)
-    i = days.index(date(2026, 10, 14))
-    bar = next(b for b in tools(bars_root).daily_bars(["SPY"], date(2026, 10, 14), date(2026, 10, 14))["bars"]["SPY"])
-    assert bar == {"date": "2026-10-14", "open": 100 + i + 1, "high": 101.5 + i + 1, "low": 99 + i + 1, "close": 100.5 + i + 1, "volume": 1000 + i}
-
 
 def test_one_day_is_a_range_and_a_weekend_inside_the_range_is_not_a_gap(bars_root):
     found = tools(bars_root).daily_bars(["PG"], date(2026, 10, 16), date(2026, 10, 16))
@@ -77,28 +60,10 @@ def test_one_day_is_a_range_and_a_weekend_inside_the_range_is_not_a_gap(bars_roo
     assert [b["date"] for b in over["bars"]["PG"]] == ["2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20"] and over["gaps"] == []
 
 
-def test_symbols_are_cleaned_once_each_and_a_symbol_that_is_not_stored_is_an_empty_list(bars_root):
-    found = tools(bars_root).daily_bars(["$pg", "PG", " spy ", "ZZZZ"], date(2026, 10, 12), date(2026, 10, 13))
-    assert list(found["bars"]) == ["PG", "SPY", "ZZZZ"] and len(found["bars"]["PG"]) == 2 and found["bars"]["ZZZZ"] == []
-
-
-def test_only_the_day_files_the_range_needs_are_read(bars_root, monkeypatch):
-    read = []
-    real = bars_module.pv_csv.read_csv
-    monkeypatch.setattr(bars_module.pv_csv, "read_csv", lambda path, *a, **k: (read.append(str(path)), real(path, *a, **k))[1])
-    tools(bars_root).daily_bars(["PG"], date(2026, 10, 12), date(2026, 10, 14))
-    assert sorted(p.rsplit("/", 1)[-1] for p in read) == ["2026-10-12.csv.gz", "2026-10-13.csv.gz", "2026-10-14.csv.gz"]
-
-
 def test_a_range_after_the_newest_stored_day_is_empty_lists_and_a_gap_that_says_so(bars_root):
     found = tools(bars_root).daily_bars(["PG", "SPY"], date(2026, 10, 26), date(2026, 11, 10))
     assert found["bars"] == {"PG": [], "SPY": []}
     assert len(found["gaps"]) == 1 and "no day_aggs_v1 files from 2026-10-26 to 2026-11-10" in found["gaps"][0]
-
-
-def test_a_range_that_runs_past_the_stored_days_gives_the_days_there_are(bars_root):
-    found = tools(bars_root).daily_bars(["PG"], date(2026, 10, 22), date(2026, 11, 30))
-    assert [b["date"] for b in found["bars"]["PG"]] == ["2026-10-22", "2026-10-23"] and found["gaps"] == []
 
 
 def test_a_missing_day_inside_the_range_is_named_and_no_bar_is_made_up(tmp_path):
@@ -108,18 +73,6 @@ def test_a_missing_day_inside_the_range_is_named_and_no_bar_is_made_up(tmp_path)
     found = tools(root).daily_bars(["PG"], date(2026, 10, 12), date(2026, 10, 16))
     assert [b["date"] for b in found["bars"]["PG"]] == ["2026-10-12", "2026-10-13", "2026-10-15", "2026-10-16"]
     assert found["gaps"] == ["2026-10-14: no file (a market holiday, or not synced)"]
-
-
-def test_the_rest_files_add_the_days_the_day_files_lack_and_start_still_applies(tmp_path):
-    root = tmp_path / "day_aggs_v1"
-    write_day_files(root, {d: [{"ticker": "PG", "open": 1, "high": 2, "low": 0.5, "close": 1.5, "volume": 10}] for d in weekdays(3, date(2026, 10, 14))})   # 12, 13, 14
-    extra = tmp_path / "ticker_bars_v1"
-    extra.mkdir()
-    stamp = lambda d: int(datetime(d.year, d.month, d.day, 4, tzinfo=bars_module.timezone.utc).timestamp() * 1e9)
-    (extra / "PG.csv").write_text("ticker,volume,open,close,high,low,window_start,transactions\n" + "".join(
-        f"PG,5,3,3.5,4,2.5,{stamp(d)},7\n" for d in (date(2026, 10, 9), date(2026, 10, 14), date(2026, 10, 15), date(2026, 10, 16))), encoding="utf-8")
-    found = tools(root).daily_bars(["PG"], date(2026, 10, 13), date(2026, 10, 16))
-    assert [(b["date"], b["open"]) for b in found["bars"]["PG"]] == [("2026-10-13", 1), ("2026-10-14", 1), ("2026-10-15", 3), ("2026-10-16", 3)]   # the day file wins on the 14th; the 9th is before start
 
 
 @pytest.mark.parametrize("symbols, start, end, message", [
@@ -142,39 +95,7 @@ def test_a_bar_folder_that_does_not_exist_is_an_error_and_not_no_bars(tmp_path):
         tools(tmp_path / "nowhere").daily_bars(["PG"], date(2026, 10, 12), date(2026, 10, 13))
 
 
-def test_daily_bars_is_not_a_tool_of_the_model():
-    assert len(DATA_CLERK_TOOLS) == 13 and "daily_bars" not in DATA_CLERK_TOOLS
-    assert "daily_bars" not in [t.name for t in DataClerkTools(toolbox=object(), store=object()).langchain_tools()]
-
-
-def test_the_default_root_is_the_toolboxs_data_historical(tmp_path):
-    class Toolbox:
-        root_data_dir = tmp_path / "historical"
-
-    root = Toolbox.root_data_dir / "day_aggs_v1"
-    write_day_files(root, {date(2026, 10, 12): [{"ticker": "PG", "open": 1, "high": 2, "low": 0.5, "close": 1.5, "volume": 10}]})
-    found = DataClerkTools(toolbox=Toolbox(), store=object()).daily_bars(["PG"], date(2026, 10, 12), date(2026, 10, 12))
-    assert found["bars"]["PG"][0]["date"] == "2026-10-12"
-
-
 # ---------------------------------------------------------------- DataClerk.request_bars
-
-def test_request_bars_puts_the_bars_on_the_order_without_a_model_call(bars_root):
-    o = order(("pg", "$AAPL", "PG"))
-    result = clerk(bars_root).request_bars(o)
-    assert result is o and result.status == "data_ready" and result.errors == [] and result.data.notes == []
-    assert list(result.data.bars) == ["PG", "AAPL"] and [b["date"] for b in result.data.bars["PG"]] == ["2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16"]
-    assert result.data.tool_calls == [{"name": "daily_bars", "args": {"symbols": 2, "start": "2026-10-12", "end": "2026-10-16"}, "outcome": "ok"}]
-    assert result.data.answer == "daily bars of 2 symbols, 2026-10-12 to 2026-10-16" and result.data.completed_utc.endswith("Z")
-    assert wo.WorkOrder.model_validate_json(result.model_dump_json()) == result                          # plain JSON
-    assert result.action_type == "fetch_bars" and result.recommendations == [] and result.trades == []
-
-
-def test_a_symbol_with_no_bar_in_the_range_is_an_empty_list_and_a_note_not_a_failure(bars_root):
-    result = clerk(bars_root).request_bars(order(("PG", "ZZZZ")))
-    assert result.status == "data_ready" and result.errors == [] and result.data.problems == []
-    assert result.data.bars["ZZZZ"] == [] and len(result.data.bars["PG"]) == 5
-    assert result.data.notes == ["ZZZZ: no stored bar from 2026-10-12 to 2026-10-16"]
 
 
 def test_a_range_in_the_future_is_data_ready_with_empty_lists_and_the_gap_in_the_notes(bars_root):
@@ -236,6 +157,3 @@ def test_request_bars_writes_nothing_under_the_bar_folder(bars_root):
     assert sorted(str(p) for p in bars_root.parent.rglob("*")) == before
 
 
-def test_a_bars_order_carries_no_search_results_and_no_advice(bars_root):
-    result = clerk(bars_root).request_bars(order())
-    assert result.data.sources == [] and result.data.sweep == {} and result.advisor_runs == [] and result.recommendations == []

@@ -1,14 +1,15 @@
 """The gates: a symbol that fails one is not recommended, and the failure is RECORDED, never silent (Advisor v1 spec section 9.1, design choices entry 51).
 
-    result = run_gates(metrics, events, held=False, today=today, config=config.gates, last_earnings_release="2026-07-29")
-    result.failed            # ["liquidity"]
+    result = run_gates(metrics, events, today=today, config=config.gates, last_earnings_release="2026-07-29")
+    result.failed            # ["freshness"]
     result.blocks("trend")   # True
 
 A gate is arithmetic over the Data Clerk's metrics and the checked events: plain Python, no model. A gate whose INPUT is missing FAILS, with the missing input named (`not computable: ...`):
-an illiquid stock must not be recommended because its volume could not be read, and the fix is more data, not a guess. (With only 17 stored sessions `adv_20d_dollars` needs 20, so every new
-idea fails `liquidity` until more day files are synced: that is the honest answer today, and it is why this build asks for them.)
+a stock must not be recommended because its bars could not be read, and the fix is more data, not a guess.
 
-    liquidity   new ideas   ADV in dollars, the price, the spread (the spread when available: intraday quotes are not read in this build)
+THERE IS NO LIQUIDITY GATE (design choices entries 93 to 95; Jacob, 2026-11-15: "There are no liquidity gates at all for the Advisor"): nothing about how much a stock trades decides anything here, and no such number is asked for.
+The user's own minimum price is the Critic's (`RiskView.min_price`), not a gate.
+
     freshness   all         the newest stored bar is within `max_bar_age_sessions` weekdays of today; the Finnhub figures are not older than `max_fundamentals_age_days`
     red_flag    all         a going-concern, material-weakness or restatement event in the last 60 bars; debt over 4x equity with a current ratio under 1;
                             cash from operations negative while profit is positive. A HELD symbol that fails it is still reviewed (the holdings pass may say `reduce`)
@@ -71,29 +72,14 @@ class GateResult:
         return not (family == "event" and set(failed) == {"event_risk"})
 
 
-def run_gates(metrics: dict | None, events: list[dict], held: bool, today: date, config: GateConfig, last_earnings_release: str | None = None) -> GateResult:
+def run_gates(metrics: dict | None, events: list[dict], today: date, config: GateConfig, last_earnings_release: str | None = None) -> GateResult:
     """Every gate for one symbol. `metrics` is `data.metrics[symbol]` (None or empty: the `no_metrics` gate fails and the rest are not run), `events` the checked events with their
-    `age_bars`, `held` whether the symbol is in the portfolio (a holding is not tested for liquidity)."""
+    `age_bars`."""
     result = GateResult()
     if not metrics:
         result.gates.append(Gate(gate="no_metrics", passed=False, value=None, threshold="a result for the symbol", note="the Data Clerk returned no metrics for it"))
         return result
     result.gates.append(Gate(gate="no_metrics", passed=True))
-
-    # liquidity
-    if held:
-        result.gates.append(Gate(gate="liquidity", passed=True, note="not applied to a holding"))
-    else:
-        adv, last, spread = value(metrics, "adv_20d_dollars"), value(metrics, "last_close"), value(metrics, "median_spread_bps_1d")
-        if adv is None or last is None:
-            missing = "adv_20d_dollars" if adv is None else "last_close"
-            result.gates.append(Gate(gate="liquidity", passed=False, value=None, threshold={"min_adv_dollars": config.min_adv_dollars, "min_price": config.min_price},
-                                     note=f"not computable: {note(metrics, missing)}"))
-        else:
-            reasons = [r for r, bad in ((f"ADV ${adv:,.0f} is under ${config.min_adv_dollars:,.0f}", adv < config.min_adv_dollars), (f"the price {last:.2f} is under {config.min_price:g}", last < config.min_price),
-                                        (f"the spread {spread} bps is over {config.max_spread_bps:g}", spread is not None and spread > config.max_spread_bps)) if bad]
-            result.gates.append(Gate(gate="liquidity", passed=not reasons, value={"adv_20d_dollars": adv, "last_close": last, "median_spread_bps_1d": spread},
-                                     threshold={"min_adv_dollars": config.min_adv_dollars, "min_price": config.min_price, "max_spread_bps": config.max_spread_bps}, note="; ".join(reasons) or None))
 
     # freshness
     as_of = ((metrics.get("last_close") or {}).get("as_of"))
@@ -101,7 +87,7 @@ def run_gates(metrics: dict | None, events: list[dict], held: bool, today: date,
         result.gates.append(Gate(gate="freshness", passed=False, value=None, threshold=f"newest bar within {config.max_bar_age_sessions} session(s) of today", note=f"no bars: {note(metrics, 'last_close')}"))
     else:
         behind = sessions_between(date.fromisoformat(as_of), today)
-        fundamentals = next((metrics[n]["as_of"] for n in ("market_cap", "roe", "pe_ratio") if (metrics.get(n) or {}).get("as_of")), None)
+        fundamentals = next((metrics[n]["as_of"] for n in ("roe", "pe_ratio") if (metrics.get(n) or {}).get("as_of")), None)
         old = fundamentals and (today - date.fromisoformat(fundamentals)).days > config.max_fundamentals_age_days
         reasons = [r for r, bad in ((f"the newest bar is {as_of}, {behind} sessions before {today}", behind > config.max_bar_age_sessions),
                                     (f"the Finnhub figures are from {fundamentals}", bool(old))) if bad]

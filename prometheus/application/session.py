@@ -15,6 +15,9 @@ What happens, in the order a real user would meet it:
                  SIMULATED broker. Every fill is booked in the account. This module only starts the graph, shows each node as it finishes, and prints.
   4. REPORTS     the status of the recommendations, the Trader's results, and the account's portfolio before and after.
 
+A request that NAMES THE TRADE ("Buy 50 shares of <a ticker>", design choices entry 87) is a DIRECT ORDER: the desk skips the research, the Advisor and the Critic (Account Manager -> Account Manager's direct decision -> Trader), nothing
+is recommended and the user is not asked a second time; the report shows the order, the Trader's result and the portfolio before and after.
+
 Nothing here knows a sector, a company or a ticker: it is the same for any request the form can hold. Nothing is sent to a broker. A session that was meant to trade but left the portfolio as it was is a FAILED
 check (exit 1) with the reasons, because a sanity check that cannot trade has found something; `--allow-no-trade` accepts that.
 
@@ -28,6 +31,8 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Callable
 
+from prometheus.agents.account_manager.direct import direct_section
+from prometheus.agents.account_manager.neutral import neutral_lines
 from prometheus.common.portfolio import Portfolio
 from prometheus.common.trading_clock import clock_note
 from prometheus.common.user_account import clean_age, clean_display_name, clean_risk_level, clean_trade_mode, parse_money
@@ -66,15 +71,12 @@ def build_parser() -> argparse.ArgumentParser:
     desk.add_argument("--model", default="openai/gpt-oss-120b", help="the Advisor's OpenRouter model id (default openai/gpt-oss-120b)")
     desk.add_argument("--no-trader-model", action="store_true", help="the Trader without a model: the program places the default orders")
     desk.add_argument("--real-ledger", action="store_true", help="use the real ledgers (data/ledger/): a company recommended before is then hidden by its cooldown. The default is throwaway ledgers, so a session can be repeated")
-    limits = parser.add_argument_group("overrides of the profile's limits, for this session only (the account book keeps its own)")
-    limits.add_argument("--auto-min-score", type=int, help="Auto mode: the lowest Critic score that trades without asking (the profile's own, else the Critic's 80)")
-    limits.add_argument("--max-position-pct", type=float, help="the most one stock may be of the account's equity, 0 to 1 (the profile's 0.10)")
-    limits.add_argument("--max-exposure-pct", type=float, help="the most all the purchases of one review may add, of equity, 0 to 1 (the profile's 0.30)")
-    limits.add_argument("--max-loss-pct", type=float, help="the most a stop-out of one trade may lose, of equity, 0 to 1 (the profile's 0.01)")
+    mark = parser.add_argument_group("the Critic's mark, for this session only (the account book keeps its own)")
+    mark.add_argument("--auto-min-score", type=int, help="Auto mode: the lowest Critic score that trades without asking (the profile's own, else the Critic's 80)")
     run = parser.add_argument_group("the session")
     run.add_argument("--yes", "-y", action="store_true", help="do not ask to confirm what was understood (in Ask mode you are STILL asked to approve each trade: --yes never approves a trade)")
     run.add_argument("--allow-no-trade", action="store_true", help="exit 0 even when the portfolio did not change")
-    run.add_argument("--save", metavar="FILE", help="write what the desk made (the request, what was understood, and the work order without its data: recommendations, reviews, decisions, trades) to this JSON file: a real capture")
+    run.add_argument("--save", metavar="FILE", help="write what the desk made (the request, what was understood, and the work order without its data: recommendations, reviews, decisions, trades; a direct order keeps its data: the company names and symbols the Data Clerk found) to this JSON file: a real capture")
     run.add_argument("--cleanup", action="store_true", help="delete the new account at the end (a sample or an --account account is never deleted)")
     return parser
 
@@ -93,10 +95,6 @@ def check_args(parser: argparse.ArgumentParser, args: argparse.Namespace) -> dic
             person = {"name": clean_display_name(args.name), "age": clean_age(args.age), "risk": clean_risk_level(args.risk), "cash": parse_money(args.cash), "mode": clean_trade_mode(args.mode)}
         if not 1 <= args.default_count <= 10:
             parser.error("--default-count must be from 1 to 10")
-        for name in ("max_position_pct", "max_exposure_pct", "max_loss_pct"):
-            value = getattr(args, name)
-            if value is not None and not 0 < value <= 1:
-                parser.error(f"--{name.replace('_', '-')} must be above 0 and at most 1")
         if args.auto_min_score is not None and not 0 <= args.auto_min_score <= 100:
             parser.error("--auto-min-score must be from 0 to 100")
     except ValueError as error:
@@ -135,10 +133,9 @@ def open_account(parts: Parts, args: argparse.Namespace, person: dict) -> int:
     return account_id
 
 
-def with_limits(profile, args: argparse.Namespace):
-    """The profile with this session's overrides (the account book is not changed)."""
-    changes = {k: v for k, v in (("auto_min_score", args.auto_min_score), ("max_position_pct", args.max_position_pct), ("max_new_exposure_pct", args.max_exposure_pct), ("max_loss_per_trade_pct", args.max_loss_pct)) if v is not None}
-    return profile.model_copy(update=changes) if changes else profile
+def with_overrides(profile, args: argparse.Namespace):
+    """The profile with this session's override of the Critic's mark (the account book is not changed)."""
+    return profile.model_copy(update={"auto_min_score": args.auto_min_score}) if args.auto_min_score is not None else profile
 
 
 # ---------------------------------------------------------------- the reports
@@ -166,8 +163,7 @@ def changed(before: Portfolio, after: Portfolio) -> bool:
 
 def account_block(title: str, holder, portfolio: Portfolio, profile) -> list[str]:
     risk = f"{holder.risk_tolerance}" + (f", age {holder.age}" if holder.age else "")
-    return [RULE, title, RULE, f"  account {holder.account_number}: {holder.display_name} | {risk} | trade mode {holder.trade_mode.upper()} | "
-            f"limits: {profile.max_position_pct:.0%} of equity in one stock, {profile.max_new_exposure_pct:.0%} added by one review", *portfolio_lines(portfolio)]
+    return [RULE, title, RULE, f"  account {holder.account_number}: {holder.display_name} | {risk} | trade mode {holder.trade_mode.upper()}", *portfolio_lines(portfolio)]
 
 
 def status_lines(result, intent, find: int) -> list[str]:
@@ -206,63 +202,46 @@ def status_lines(result, intent, find: int) -> list[str]:
                 lines.append(f"{'':>8}{decision['reason']}")
     balanced = [d for d in order.trade_decisions if d.get("balance")]
     if balanced:
-        lines.append(f"  balanced evenly: about {money(balanced[0]['balance']['target_dollars'])} for each of {balanced[0]['balance']['of']} purchases (never more than a company's own limits allow)")
+        lines.append(f"  balanced evenly: about {money(balanced[0]['balance']['target_dollars'])} for each of {balanced[0]['balance']['of']} purchases")
     others = [row for row in ranking_rows(result) if row["status"] != "RECOMMENDED"]
     if others:
         lines.append("  scored, not recommended: " + "; ".join(f"{row['symbol']} ({(row['reason'] or '')[:48]})" for row in others[:6]) + ("; ..." if len(others) > 6 else ""))
     return lines
 
 
-LIMIT_WORDS = {"position": ("the position limit ({position:.0%} of equity in one stock)", "--max-position-pct"),
-               "loss": ("the loss limit (a stop-out may lose {loss:.1%} of equity)", "--max-loss-pct"),
-               "exposure": ("the exposure limit ({exposure:.0%} of equity added by one review)", "--max-exposure-pct"),
-               "order": ("the order cap", None),
-               "liquidity": ("the liquidity cap (a share of the stock's average daily dollar volume)", None)}
-POOL_WORDS = {"money": "the money: the cash had no room for another share", "budget": "the amount you asked to spend: it had no room for another share",
-              "even_split": "the even split: the same dollars for every company, and another company's limit set the amount"}
+POOL_WORDS = {"money": "the cash: it had no room for another share", "budget": "the amount you asked to spend: it had no room for another share",
+              "even_split": "the even split: the same dollars for every company, and another company's smaller amount set it"}
 
 
-def use_of_money_lines(order, before: Portfolio, after: Portfolio, profile) -> list[str]:
-    """How much of the money was used, and what held each purchase back. The Account Manager sized every purchase (`decision["size"]`: the shares, every cap, and `binding`, what decided the number), so each line says
-    which limit of the profile stopped it, and which flag raises that limit for the next session; the other things that can decide it (the cash, the amount asked for, the even split) are said in words. In Auto mode
-    the funds were spent round-robin, a share of each stock in turn, and the report says so. Plain text from the records: nothing is guessed, and the Critic and the Advisor are not credited with a size."""
+def use_of_money_lines(order, before: Portfolio, after: Portfolio) -> list[str]:
+    """How much of the money was used, and what stopped each purchase. The Account Manager sized every purchase (`decision["size"]`: the shares, the caps and `binding`, what decided the number). THE ONLY CHECK IS THAT THE
+    FUNDS COVER THE ORDER (design choices entry 91): no limit of the profile exists, so what ends a purchase is the cash, the amount the user asked to spend or buy, or the even split. In Auto mode the funds were spent
+    round-robin, a share of each stock in turn, and the report says so. Plain text from the records: nothing is guessed, and the Critic and the Advisor are not credited with a size."""
     spent = before.cash_avail - after.cash_avail
     lines = [RULE, f"HOW MUCH WAS BOUGHT  spent {money(spent)} of {money(before.cash_avail)} ({spent / before.cash_avail:.0%} of the money)" if before.cash_avail else "HOW MUCH WAS BOUGHT", RULE]
-    words = {"position": profile.max_position_pct, "loss": profile.max_loss_per_trade_pct, "exposure": profile.max_new_exposure_pct}
-    binding, sized_n, ways = set(), 0, set()
+    ways = set()
     for review in order.reviews:
         decision = next((d for d in order.trade_decisions if d["record_id"] == review["record_id"]), None)
         size = (decision or {}).get("size")
         if not review["approved"] or size is None:
             continue
-        sized_n += 1
         ways.add(size["allocation"])
         if not decision["shares"]:
             lines.append(f"  {review['symbol']:<6} no share was bought: {decision['reason']}")
             continue
         text = f"  {review['symbol']:<6} {decision['shares']} share{'s' if decision['shares'] != 1 else ''} ({money(decision['est_cost'])}) of the {money(before.cash_avail)}"
         name = size["binding"]
-        if name in LIMIT_WORDS:                                             # a limit of the profile (or of the Account Manager) is what stopped it
-            binding.add(name)
-            text += ": held back by " + LIMIT_WORDS[name][0].format(**words)
-        elif name == "asked":                                               # nothing held it back: the user asked for this much, and the limits and the money would have allowed more
-            allowed = min((n for n in size["caps"].values() if n is not None), default=None)
-            text += ": the amount you asked for" + (f" (your limits would have allowed up to {allowed} shares)" if allowed is not None and allowed > decision["shares"] else "")
+        if name == "asked":                                                 # nothing held it back: the user asked for this much
+            text += ": the amount you asked for"
         elif name in POOL_WORDS:
-            text += ": held back by " + POOL_WORDS[name]
+            text += ": stopped by " + POOL_WORDS[name]
         if decision["will_trade"] not in ("yes_auto", "yes_user"):
             text += f"; not traded ({decision['will_trade']})"
         lines.append(text)
     if "round_robin" in ways:
-        lines.append("  Auto mode spent the funds round-robin: one share of the first stock, one of the next, and so on in rank order, until the money (or every stock's limits) ran out.")
+        lines.append("  Auto mode spent the funds round-robin: one share of the first stock, one of the next, and so on in rank order, until the money ran out.")
     if "even" in ways:
         lines.append("  The money was split evenly: the same dollars for every company, in whole shares.")
-    flags = [LIMIT_WORDS[n][1] for n in ("position", "exposure", "loss") if n in binding and LIMIT_WORDS[n][1]]
-    if flags and sized_n:
-        share = min(1.0, round(1 / sized_n, 2))
-        lines.append("  To buy more, raise the limits for the next session (the account book keeps its own): " + " ".join(f"{f} {1.0 if f == '--max-exposure-pct' else share if f == '--max-position-pct' else min(1.0, profile.max_loss_per_trade_pct * 2):g}" for f in flags))
-    elif spent and sized_n:
-        lines.append("  No limit of the profile held these purchases back; the money, the amount asked for and whole shares did.")
     return lines
 
 
@@ -281,12 +260,12 @@ def trade_lines(order) -> list[str]:
 
 def why_not(result, order) -> list[str]:
     """Why the portfolio did not change, from what the run recorded."""
-    reasons = [n for n in result.notes if "did not run" not in n][:3]
+    reasons = [n for n in result.notes if "did not run" not in n][:3] if result is not None else []      # no `result` for a direct order: nothing was searched
     if order is None:
         return reasons or ["no work order was made"]
     if order.status in ("new", "data_failed"):
         reasons.append(f"the Data Clerk's work order is {order.status}" + (": " + "; ".join(order.errors)[:300] if order.errors else ""))
-    elif not order.recommendations:
+    elif not order.recommendations and not order.direct_orders:
         reasons.append("the Advisor recommended none of the companies (each failed a gate or a strategy: see the ranking)")
     denied = [r for r in order.reviews if not r["approved"]]
     if denied:
@@ -294,7 +273,7 @@ def why_not(result, order) -> list[str]:
     for d in order.trade_decisions:
         if d["will_trade"] == "pending_user":
             reasons.append(f"{d['symbol']} waits for the user's answer ({d['reason']})")
-        elif d["will_trade"] in ("no_funds", "no_expired", "no_user_denied"):
+        elif d["will_trade"] in ("no_funds", "no_expired", "no_user_denied") or (d.get("origin") == "direct" and d["will_trade"] == "no_system_denied"):
             reasons.append(f"{d['symbol']}: {d['reason']}")
     for t in order.trades:
         if t["status"] == "rejected":
@@ -308,6 +287,7 @@ def why_not(result, order) -> list[str]:
 
 NODE_WORDS = {"account_manager": "the Account Manager read the request and made the work order", "data_clerk": "the Data Clerk found the companies and answered the work order",
               "advisor": "the Advisor ranked the companies", "critic": "the Critic reviewed each recommendation against the profile", "account_manager_decision": "the Account Manager decided what may trade",
+              "account_manager_direct": "the Account Manager priced the trades you named and decided them (no recommendation, no Critic review)",
               "trader": "the Trader executed the permitted trades (simulated: nothing is sent to a broker)"}
 
 
@@ -354,7 +334,7 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
         manager = parts.new_manager()
         manager.connect(parts.store, account_id)
         holder = manager.users.get()
-        profile = with_limits(manager.profile, args)               # the overrides are for this session only: the account book keeps its own
+        profile = with_overrides(manager.profile, args)           # the override is for this session only: the account book keeps its own
         before = manager.list_portfolio()
     except ValueError as error:   # our own checks and the account book's refusals: the message is for the user
         say(f"ERROR: the account could not be opened: {error}")
@@ -392,7 +372,7 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
     graph = build_desk(clerk_factory=lambda order: parts.clerk, advisor_factory=lambda order: parts.advisor, funds_factory=new_manager, with_critic=True, critic_factory=lambda order: parts.critic,
                        with_trader=True, trader_factory=lambda order: parts.trader, approver=approver_for(parts.approver, ask, out), store_factory=lambda: parts.store, confirm=confirm, clarify=clarifier_for(ask, out))
     request = {"ask": {"text": args.prompt, "default_count": args.default_count, "fetch": args.fetch}, "account": {"account": account_id, "profile": profile}, "trade": {"mode": "paper", "book": True, "model": not args.no_trader_model}}
-    say("", RULE, "THE DESK  (LangGraph: Account Manager -> Data Clerk -> Advisor -> Critic -> Account Manager's decision -> Trader)", RULE)
+    say("", RULE, "THE DESK  (LangGraph: Account Manager -> Data Clerk -> Advisor -> Critic -> Account Manager's decision -> Trader; a trade you name yourself goes from the Account Manager straight to its decision and the Trader)", RULE)
     final, shown = None, 0
     for state in graph.stream({"request": request, "order": None, "errors": [], "resolution": None, "funds": None, "path": [], "seconds": {}, "with_trader": True, "plan": None}, stream_mode="values"):
         final = state
@@ -400,24 +380,33 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
             say(f"  .. {NODE_WORDS.get(name, name)} ({state['seconds'].get(name, 0):.1f} s)")
             if name == "account_manager_decision" and state.get("order") is not None and state["order"].trade_decisions:
                 say(*decision_lines(state["order"], profile.trade_mode))
+            if name == "account_manager" and (state.get("plan") or {}).get("direct") and state.get("order") is not None and state["order"].data is not None:
+                say(*[f"      the Data Clerk found: you typed {row['brand']!r}: {row['company']} ({row['symbol']}), appended to the work order" for row in state["order"].data.companies])
+            if name == "account_manager_direct" and state.get("order") is not None:
+                say(*[f"      {line}" for line in direct_section(state["order"])])
         shown = len(state["path"])
     order, plan = final["order"], final.get("plan")
     if order is None or plan is None:   # the request could not be read, was not confirmed, or the account could not be used: the desk stopped at its first node
         say("", "  " + ("; ".join(final["errors"]) or "the desk did not start"))
         return 2
-    intent, find, result = plan["intent"], plan["find"], plan["result"]
-    result.order = order
+    intent, direct = plan["intent"], bool(plan.get("direct"))
+    find, result = (None, None) if direct else (plan["find"], plan["result"])
+    if result is not None:
+        result.order = order
     if args.save:
         Path(args.save).parent.mkdir(parents=True, exist_ok=True)
-        Path(args.save).write_text(json.dumps({"request": " ".join(args.prompt.split()), "intent": intent.model_dump(), "path": final["path"], "order": json.loads(order.model_dump_json(exclude={"data"}))}, indent=1), encoding="utf-8")
+        Path(args.save).write_text(json.dumps({"request": " ".join(args.prompt.split()), "intent": intent.model_dump(), "path": final["path"], "order": json.loads(order.model_dump_json(exclude=set() if plan.get("direct") else {"data"}))}, indent=1), encoding="utf-8")      # a direct order's `data` is only what the Data Clerk found (the company name and the symbol of each stock): it is kept; a research order's is large and is left out
         say(f"  (what the desk made is saved in {args.save})")
-    buying = intent.action == "buy"
-    say("", *status_lines(result, intent, find))
+    buying = intent.action in ("buy", "order")
+    if not direct:
+        say("", *status_lines(result, intent, find))
+    if neutral_lines(order):
+        say("", RULE, *neutral_lines(order), RULE)
     if buying:
         say("", *trade_lines(order))
     after = manager.list_portfolio()
-    if buying and order.reviews:
-        say("", *use_of_money_lines(order, before, after, profile))
+    if buying and order.reviews and not direct:
+        say("", *use_of_money_lines(order, before, after))
     say("", *account_block("ACCOUNT  after the session", holder, after, profile))
 
     # ---- the verdict

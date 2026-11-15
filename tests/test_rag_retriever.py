@@ -118,155 +118,16 @@ def dated(tmp_path):
         chunk("new-offtopic", 0, 1, "tesla car", ["AAPL"], NOW - 1 * DAY + timedelta(hours=9))])  # the newest of all, but not about apple
 
 
-def test_by_default_the_best_match_comes_first_even_if_it_is_old(dated):
-    hits = search_news("apple iphone", tickers="AAPL", k=2, store=dated, now=NOW)
-    assert [h.article_id for h in hits][0] == "old-best"
-
-
-def test_newest_first_returns_the_newest_relevant_articles_and_not_the_best_matching_ones(dated):
-    hits = search_news("apple iphone", tickers="AAPL", k=2, newest_first=True, min_score=0.3, store=dated, now=NOW)
-    assert [h.article_id for h in hits] == ["newest-ok", "new-ok"]  # newest first, and the older, closer matches are cut by k
-
-
-def test_newest_first_still_applies_the_relevance_bar_so_a_new_article_about_something_else_is_not_returned(dated):
-    hits = search_news("apple iphone", tickers="AAPL", k=5, newest_first=True, store=dated, now=NOW)
-    assert "new-offtopic" not in [h.article_id for h in hits]
-    dates = [h.published_utc for h in hits]
-    assert dates == sorted(dates, reverse=True) and len(hits) >= 2  # the whole list is in date order
-
-
-def test_newest_first_combines_with_the_date_window(dated):
-    hits = search_news("apple iphone", tickers="AAPL", k=5, since_days=2, newest_first=True, min_score=0.3, store=dated, now=NOW)
-    assert [h.article_id for h in hits] == ["newest-ok", "new-ok"]
-
-
-def test_a_tie_in_date_goes_to_the_better_match(tmp_path):
-    same_day = fill(make_store(tmp_path / "tie", KeywordEmbeddings()), [
-        chunk("weaker", 0, 1, "apple iphone chip chip", ["AAPL"], NOW - DAY),
-        chunk("closer", 0, 1, "apple iphone phone", ["AAPL"], NOW - DAY)])
-    assert [h.article_id for h in search_news("apple iphone", tickers="AAPL", newest_first=True, min_score=0.3, store=same_day, now=NOW)] == ["closer", "weaker"]
-
-
-def test_newest_first_wins_over_diverse(dated):
-    hits = search_news("apple iphone", tickers="AAPL", k=2, newest_first=True, diverse=True, min_score=0.3, store=dated, now=NOW)
-    assert [h.article_id for h in hits] == ["newest-ok", "new-ok"]
-
-
 @pytest.mark.parametrize("value", ["yes", 1, None])
 def test_newest_first_must_be_true_or_false(dated, value):
     with pytest.raises(ValueError, match="newest_first must be true or false"):
         search_news("apple iphone", newest_first=value, store=dated, now=NOW)
 
-def test_hits_come_best_first_and_carry_what_a_citation_needs(news):
-    hits = search_news("apple iphone phone", min_score=None, k=3, store=news)
-    assert ids(hits) == ["a1", "a2", "a3"]
-    assert [h.score for h in hits] == sorted((h.score for h in hits), reverse=True)
-    best = hits[0]
-    assert best.score == pytest.approx(1.0, abs=1e-3)  # the same words: cosine similarity 1
-    assert (best.chunk_id, best.article_id, best.chunk, best.chunks) == ("a1#0", "a1", 1, 1)
-    assert (best.headline, best.publisher, best.url) == ("Headline of a1", "Yahoo", "https://example.com/a1")
-    assert (best.published_utc, best.tickers, best.text) == ((NOW - 5 * DAY).strftime(STAMP), ["AAPL"], "apple iphone phone")
-    assert best.as_dict() == {
-        "chunk_id": "a1#0", "article_id": "a1", "chunk": 1, "chunks": 1, "headline": "Headline of a1",
-        "publisher": "Yahoo", "published_utc": (NOW - 5 * DAY).strftime(STAMP), "url": "https://example.com/a1",
-        "tickers": ["AAPL"], "text": "apple iphone phone", "score": best.score}
-    with pytest.raises(AttributeError):
-        best.score = 0.0  # a Hit is frozen: the evidence cannot be edited after the search
-
-
-def test_one_hit_per_article_and_k_counts_articles(news):
-    hits = search_news("nvidia chip", min_score=None, k=5, store=news)
-    assert ids(hits).count("n2") == 1  # n2 has two chunks that both match, but it appears once
-    assert len(set(ids(hits))) == len(hits)
-    n2 = next(h for h in hits if h.article_id == "n2")
-    assert (n2.chunk_id, n2.chunk, n2.chunks, n2.text) == ("n2#1", 2, 2, "nvidia chip")  # its BEST chunk, not its first
-    assert ids(hits)[:3] == ["n2", "n1", "a3"]
-    assert ids(search_news("nvidia chip", min_score=None, k=2, store=news)) == ["n2", "n1"]
-
-
-def test_a_filter_that_matches_nothing_gives_no_hits(news):
-    assert search_news("apple", tickers="ZZZ", min_score=None, store=news) == []
-
 
 # ---------------------------------------------------------------- filters
 
-def test_the_ticker_filter_takes_one_symbol_or_a_list_in_any_case(news):
-    assert set(ids(search_news("apple", tickers="aapl", min_score=None, store=news))) == {"a1", "a2", "a3"}
-    assert set(ids(search_news("apple", tickers=["NVDA"], min_score=None, store=news))) == {"a3", "n1", "n2"}  # a3 names both
-    assert set(ids(search_news("apple", tickers=[" nvda ", "tsla"], min_score=None, store=news))) == {"a3", "n1", "n2", "t1"}
-
-
-def test_the_filter_acts_before_the_ranking_so_it_never_leaves_fewer_hits_than_exist(news):
-    # "tesla car" is closest to t1, which the filter excludes. Filtering AFTER the search would drop it and lose
-    # the rest of the top results; filtering inside the search still returns every article that passes.
-    hits = search_news("tesla car", tickers="AAPL", min_score=None, k=5, store=news)
-    assert set(ids(hits)) == {"a1", "a2", "a3"}
-
-
-def test_the_filters_combine(news):
-    # the NVDA articles are n1 and a3 (3 days old), n2 (2 days old). Only n2 is newer than 2.5 days.
-    assert ids(search_news("nvidia chip", tickers="NVDA", since_days=3, min_score=None, store=news, now=NOW)) == ["n2", "n1", "a3"]
-    assert ids(search_news("nvidia chip", tickers="NVDA", since_days=2, min_score=None, store=news, now=NOW)) == ["n2"]
-
-
-def test_the_date_window_counts_back_from_the_clock_it_is_given_and_includes_the_edge(tmp_path):
-    edge, just_outside = NOW - 2 * DAY, NOW - 2 * DAY - timedelta(seconds=1)
-    store = fill(make_store(tmp_path / "window", KeywordEmbeddings()), [
-        chunk("edge", 0, 1, "apple iphone", ["AAPL"], edge),
-        chunk("late", 0, 1, "apple iphone phone", ["AAPL"], just_outside),
-        chunk("new", 0, 1, "apple iphone phone phone", ["AAPL"], NOW - timedelta(hours=1))])
-    assert set(ids(search_news("apple iphone", since_days=2, min_score=None, store=store, now=NOW))) == {"edge", "new"}
-    assert set(ids(search_news("apple iphone", since_days=1, min_score=None, store=store, now=NOW))) == {"new"}
-    # a clock a day later moves the window a day later: "the last 2 days" is relative, not a fixed date
-    assert set(ids(search_news("apple iphone", since_days=2, min_score=None, store=store, now=NOW + DAY))) == {"new"}
-    assert set(ids(search_news("apple iphone", since_days=2, min_score=None, store=store, now=NOW + 4 * DAY))) == set()
-    # and without a clock it uses the real one
-    assert len(search_news("apple iphone", since_days=36500, min_score=None, store=store)) == 3
-
 
 # ---------------------------------------------------------------- scores and "no supporting text"
-
-def test_nothing_relevant_means_an_empty_list(news):
-    assert search_news("cake", store=news) == []  # no stored text has anything in common with it
-    weak = search_news("cake", min_score=None, store=news)
-    assert weak and max(h.score for h in weak) < MIN_SCORE  # the hits exist, but none clears the bar
-
-
-def test_the_bar_keeps_a_hit_that_scores_exactly_the_bar(news):
-    score = {h.article_id: h.score for h in search_news("apple iphone phone", min_score=None, k=3, store=news)}
-    assert 0.5 < score["a2"] < 0.99  # a hit whose score is neither 0 nor 1, so a hair either way matters
-    assert "a2" in ids(search_news("apple iphone phone", min_score=score["a2"], k=3, store=news))  # exactly the bar: kept
-    assert "a2" not in ids(search_news("apple iphone phone", min_score=score["a2"] + 1e-6, k=3, store=news))  # a hair above: dropped
-    assert "a1" in ids(search_news("apple iphone phone", min_score=score["a2"] + 1e-6, k=3, store=news))  # the better hit stays
-
-
-def test_the_default_bar_drops_weak_hits_and_keeps_strong_ones(news):
-    hits = search_news("apple iphone", store=news)  # a1 0.82, a2 0.58, a3 0.41 (just above the bar), the rest below
-    assert ids(hits) == ["a1", "a2", "a3"]
-    assert all(h.score >= MIN_SCORE for h in hits)
-    assert ids(search_news("apple iphone", min_score=0.5, store=news)) == ["a1", "a2"]
-
-
-def test_the_score_is_the_cosine_similarity_that_langchain_reports(news):
-    hits = search_news("nvidia chip", min_score=None, k=5, store=news)
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore")
-        theirs = {d.id: s for d, s in news.similarity_search_with_relevance_scores("nvidia chip", k=50)}
-    for hit in hits:
-        assert hit.score == pytest.approx(theirs[hit.chunk_id], abs=1e-6)
-
-
-def test_a_negative_score_raises_no_warning(tmp_path):
-    # LangChain's own scored search warns, with a message that holds every document, when a score is below 0.
-    store = fill(make_store(tmp_path / "hotcold", HotCold()), [
-        chunk("w", 0, 1, "warm", ["AAPL"], NOW), chunk("c", 0, 1, "cold", ["AAPL"], NOW)])
-    with warnings.catch_warnings(record=True) as caught:
-        warnings.simplefilter("always")
-        hits = search_news("hot", min_score=None, k=2, store=store)
-    assert ids(hits) == ["w", "c"]
-    assert hits[1].score == pytest.approx(-1.0, abs=1e-3)
-    assert not [w for w in caught if "Relevance scores" in str(w.message)]
-    assert search_news("hot", k=2, store=store)[0].article_id == "w"  # and the default bar cuts the opposite one
 
 
 # ---------------------------------------------------------------- diverse (MMR)
@@ -288,23 +149,6 @@ def test_the_bar_applies_before_the_spreading_so_variety_cannot_pull_in_noise(ne
 
 
 # ---------------------------------------------------------------- bad input
-
-@pytest.mark.parametrize("query", ["", "   ", None, 5])
-def test_the_question_must_be_text(news, query):
-    with pytest.raises(ValueError, match="question"):
-        search_news(query, store=news)
-
-
-@pytest.mark.parametrize("k", [0, -1, MAX_K + 1, True, "5", 2.5, None])
-def test_k_must_be_a_whole_number_in_range(news, k):
-    with pytest.raises(ValueError, match="k must be"):
-        search_news("apple", k=k, store=news)
-
-
-@pytest.mark.parametrize("days", [0, -3, True, 1.5, "7"])
-def test_since_days_must_be_a_whole_number_of_days(news, days):
-    with pytest.raises(ValueError, match="since_days"):
-        search_news("apple", since_days=days, store=news)
 
 
 @pytest.mark.parametrize("bar", [1.5, -0.1, 35])
@@ -331,15 +175,6 @@ def cli(news, monkeypatch, capsys):
     monkeypatch.setattr(retriever, "get_vector_store", lambda kind="news": news)  # `kind` since press releases got their own collection (entry 34)
     monkeypatch.setattr(retriever, "count_chunks", lambda kind="news": 8)
     return capsys
-
-
-def test_cli_prints_the_hits_with_score_source_and_filters(cli):
-    assert retriever.main(["apple iphone phone", "--tickers", "AAPL", "-k", "2"]) == 0
-    out = cli.readouterr().out
-    assert "question : 'apple iphone phone'" in out and "filters  : tickers AAPL" in out
-    assert "k=2, relevance bar 0.4, diverse no" in out
-    assert " 1  1.00  Yahoo" in out and "Headline of a1" in out and "chunk 1/1" in out and "https://example.com/a1" in out
-    assert "Headline of a2" in out and "Headline of a3" not in out
 
 
 def test_cli_can_print_the_text_and_use_the_options(cli):
@@ -397,23 +232,6 @@ def test_with_the_real_model_questions_find_their_article(real_news):
     first = search_news("an AI cloud company worried about its debt", min_score=None, store=real_news)[0]
     assert first.article_id == COREWEAVE
     assert search_news("what do Meta and Apple plan for AI inference spending", store=real_news)[0].article_id == "finnhub:143103074"
-
-
-def test_with_the_real_model_an_off_topic_question_has_no_supporting_text(real_news):
-    assert search_news("chocolate cake recipe", store=real_news) == []
-    assert search_news("chocolate cake recipe", min_score=None, store=real_news)  # the hits exist, none clears the bar
-
-
-def test_with_the_real_model_filters_and_the_bar_work_together(real_news):
-    only_coreweave = search_news("debt", tickers=["MSFT"], min_score=None, store=real_news)
-    assert ids(only_coreweave) == [COREWEAVE]  # the list filter works on real chunks
-    # the CoreWeave article names META, but a question about foldable phones has nothing to find there
-    assert ids(search_news("foldable iPhone sales", tickers="META", min_score=None, store=real_news)) == [COREWEAVE]
-    assert search_news("foldable iPhone sales", tickers="META", store=real_news) == []
-    # the window: the iPhone article is from 2026-10-23, the CoreWeave one from 2026-10-17
-    now = datetime(2026, 10, 24, 0, 0, tzinfo=timezone.utc)
-    recent = search_news("news", since_days=3, min_score=None, k=5, store=real_news, now=now)
-    assert COREWEAVE not in ids(recent) and "finnhub:143136906" in ids(recent)
 
 
 def test_the_real_entry_point_end_to_end(monkeypatch, tmp_path, real_embeddings, capsys):

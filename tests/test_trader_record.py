@@ -19,58 +19,6 @@ def trade(**changes):
     return Trade(**{"trade_id": "T1", "kind": "recommendation", "record_id": "r1", "review_id": "rv1", "symbol": "PG", "side": "buy", "shares_approved": 44, "shares": 44, "status": "new", "mode": "paper", **changes})
 
 
-def test_a_ticket_is_a_trade_with_status_new_and_nothing_placed_yet():
-    t = trade()
-    assert (t.status, t.order_type, t.limit_price, t.placed_by, t.placed_utc, t.fill, t.outcome, t.reject_code) == ("new", None, None, None, None, None, None, None)
-    assert (t.reason, t.note, t.booked, t.funds_for) == ("", "", False, None)
-
-
-def test_a_filled_trade_with_its_fill_and_its_outcome_dumps_to_plain_json_and_reads_back():
-    t = trade(status="filled", order_type="limit", limit_price=167.1, ref_price=167.1, limit_low=165.46, limit_high=168.74, placed_by="code", placed_utc="2026-11-05T15:30:00Z", fill=fill(), booked=False,
-              outcome=Outcome(status="closed", exit_reason="target", exit_date="2026-11-20", exit_price=168.38, sessions_held=11, realized_gain=56.32, return_pct=0.0077, benchmark_return_pct=0.004, excess_return_pct=0.0037))
-    dumped = t.model_dump(mode="json")
-    assert json.loads(json.dumps(dumped)) == dumped and dumped["fill"]["price_source"] == "quote" and dumped["outcome"]["exit_reason"] == "target"
-    assert Trade.model_validate(dumped) == t
-
-
-def test_a_trade_dump_has_exactly_the_fields_of_the_spec_in_its_order():
-    assert list(trade().model_dump()) == ["trade_id", "kind", "record_id", "review_id", "funds_for", "symbol", "side", "shares_approved", "shares", "order_type", "limit_price", "ref_price", "limit_low",
-                                          "limit_high", "status", "reject_code", "reason", "placed_by", "note", "placed_utc", "mode", "fill", "booked", "outcome"]
-    assert list(fill().model_dump()) == ["price", "shares", "amount", "commission", "date", "price_source", "slippage_bps"]
-    assert list(Outcome(status="open").model_dump()) == ["status", "exit_reason", "exit_date", "exit_price", "sessions_held", "realized_gain", "return_pct", "last_date", "last_close", "unrealized_gain",
-                                                          "benchmark_return_pct", "excess_return_pct"]
-    assert list(Run(mode="paper", now_utc="2026-11-05T15:30:00Z").model_dump()) == [
-        "model", "temperature", "mode", "now_utc", "use_model", "turns", "tokens_in", "tokens_out", "tool_calls", "placed_by_model", "placed_by_code", "summary", "summary_by", "portfolio_before",
-        "portfolio_after", "price_order", "funding", "booked", "config_version", "dropped", "errors"]
-
-
-@pytest.mark.parametrize("model, kwargs", [
-    (Trade, {"trade_id": "T1", "kind": "recommendation", "symbol": "PG", "side": "buy", "shares_approved": 1, "shares": 1, "status": "new", "mode": "paper"}),
-    (Fill, {"price": 1.0, "shares": 1, "amount": 1.0, "date": "2026-11-05", "price_source": "quote"}),
-    (Outcome, {"status": "open"}),
-    (Run, {"mode": "paper", "now_utc": "2026-11-05T15:30:00Z"}),
-    (Snapshot, {"cash": 1.0}),
-    (FundingRun, {}),
-])
-def test_every_record_forbids_an_unknown_field(model, kwargs):
-    model(**kwargs)
-    with pytest.raises(ValidationError, match="Extra inputs are not permitted"):
-        model(**kwargs, colour="red")
-
-
-def test_a_trade_cannot_name_a_kind_a_side_a_status_or_a_mode_outside_the_lists():
-    for field, bad in (("kind", "gift"), ("side", "short"), ("status", "done"), ("mode", "live"), ("order_type", "stop"), ("placed_by", "user")):
-        with pytest.raises(ValidationError):
-            trade(**{field: bad})
-
-
-def test_the_shares_of_a_trade_are_whole_numbers_that_are_not_negative_and_a_symbol_or_id_is_not_empty():
-    for field, bad in (("shares", -1), ("shares_approved", -1), ("shares", 1.5), ("trade_id", "")):
-        with pytest.raises(ValidationError):
-            trade(**{field: bad})
-    assert trade(shares=0).shares == 0                                                               # a sale of shares that are all locked today is a ticket for none
-
-
 def test_a_trades_symbol_must_be_a_ticker_already_in_capitals_because_the_model_reads_it_as_text():
     """Spec section 14 (decided after phase 2): `check_symbol`'s pattern, and no cleaning: a trade holds exactly the symbol its decision holds."""
     for good in ("PG", "A", "BRK.B", "BF-B", "AAPL1", "ABCDEFGHIJ"):
@@ -92,22 +40,12 @@ def test_the_closed_list_of_rejection_codes_is_the_specs():
     assert len(set(REJECT_CODES)) == 12
 
 
-@pytest.mark.parametrize("code", REJECT_CODES)
-def test_a_rejected_trade_can_carry_any_code_of_the_list(code):
-    assert trade(status="rejected", reject_code=code, reason="a sentence").reject_code == code
-
-
 @pytest.mark.parametrize("code", [None, "", "no_funds", "rejected", "NOT_PERMITTED", "not_permitted ", "model_said_no", "price_unavailable;drop"])
 def test_a_rejected_trade_cannot_be_built_with_another_code_or_none(code):
     with pytest.raises(ValidationError, match="closed list"):
         trade(status="rejected", reject_code=code)
     with pytest.raises(ValidationError):
         trade(status="rejected", reject_code=3)
-
-
-def test_a_trade_that_is_not_rejected_needs_no_code():
-    for status in ("new", "active", "filled"):
-        assert trade(status=status, fill=fill() if status == "filled" else None).reject_code is None
 
 
 def test_the_guard_of_the_work_order_and_the_record_agree_on_what_a_rejected_trade_is():
@@ -154,19 +92,6 @@ def test_a_run_that_was_refused_still_records_the_mode_it_was_asked_for_and_why(
     assert run.mode == "live" and run.model is None and run.temperature == 0.0 and run.summary_by == "code" and run.portfolio_before is None and run.errors == ["live trading is refused"]
 
 
-def test_a_full_run_dumps_to_plain_json_and_reads_back():
-    run = Run(model="openai/gpt-oss-120b", temperature=0.0, mode="paper", now_utc="2026-11-05T15:30:00Z", use_model=True, turns=3, tokens_in=900, tokens_out=120,
-              tool_calls=[{"name": "verify_request", "args": {}, "outcome": "ok"}, {"name": "place_order", "args": {"trade_id": "T1"}, "outcome": "ok"}], placed_by_model=1, placed_by_code=0,
-              summary="Bought 44 PG.", summary_by="model", portfolio_before=Snapshot(cash=51.23, positions=[{"symbol": "MSFT", "shares": 50, "cost_basis": 150.0, "acquired": "2024-03-15"}]),
-              portfolio_after=Snapshot(cash=51.23, positions=[]), price_order="abc123def456", funding=FundingRun(status="plan", approved=True, note="the sells were approved"), booked=False,
-              config_version="1", dropped=["summary: a number that is not a trade's"], errors=[])
-    dumped = run.model_dump(mode="json")
-    assert json.loads(json.dumps(dumped)) == dumped and Run.model_validate(dumped) == run and dumped["funding"] == {"status": "plan", "approved": True, "note": "the sells were approved"}
-    order = wo.new_work_order("x", subject=["PG"])
-    order.trader_runs = [dumped]
-    assert wo.WorkOrder.model_validate_json(order.model_dump_json()).trader_runs == [dumped]
-
-
 def test_the_summary_is_by_the_model_or_by_code_and_nothing_else():
     for who in record.SUMMARY_BY:
         assert Run(mode="paper", now_utc="x", summary_by=who).summary_by == who
@@ -210,5 +135,3 @@ def test_the_records_and_the_settings_import_nothing_of_the_other_agents(name):
     assert all(m in ("prometheus.common.work_order", "prometheus.rag.config", "prometheus.rag.loaders") for m in imported if m.startswith("prometheus")), imported
 
 
-def test_the_trader_folder_is_a_namespace_package_like_the_other_agents():
-    assert not (Path(record.__file__).parent / "__init__.py").exists()

@@ -26,7 +26,7 @@ from prometheus.persistence.accounts import Booked
 REPO = Path(__file__).resolve().parents[1]
 RUN_DESK = desk.run_desk          # a test of the command line replaces `desk.run_desk`; `run` below must still reach the real one
 QUOTES = {"PG": 167.10, "MSFT": 420.0}
-RICH = Portfolio(user="Jacob Pyrett", cash_avail=10000.0)      # the Account Manager sizes the purchase for this portfolio (10% of $10,000 is 5 shares of PG at 167.10); the cash pays for it, so no funding is needed
+RICH = Portfolio(user="Jacob Pyrett", cash_avail=10000.0)      # the Account Manager sizes the purchase for this portfolio ($10,000 buys 59 shares of PG at 167.10); the cash pays for it, so no funding is needed
 
 
 class FundsManager(Manager):
@@ -129,30 +129,34 @@ def test_a_trader_without_the_critic_is_refused_whatever_else_is_asked_for():
 
 def test_the_trader_node_follows_the_decision_and_the_graph_ends_after_it():
     nodes, found = edges(with_critic=True, with_trader=True)
-    assert nodes == {START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader", END}
+    assert nodes == {START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "trader", END}
     assert found == {(START, "account_manager", False), ("account_manager", "data_clerk", True), ("account_manager", END, True), ("data_clerk", "advisor", True), ("data_clerk", END, True),
                      ("advisor", "critic", True), ("advisor", END, True), ("critic", "account_manager_decision", False),
-                     ("account_manager_decision", "trader", True), ("account_manager_decision", END, True), ("trader", END, False)}
+                     ("account_manager_decision", "trader", True), ("account_manager_decision", END, True), ("trader", END, False),
+                     ("account_manager", "account_manager_direct", True), ("account_manager_direct", "trader", True), ("account_manager_direct", END, True),
+                     ("advisor", "account_manager_decision", True)}      # the last four: a company the Advisor scored neutral counts as approved when nothing is left for the Critic (entry 91); and a trade the user names goes from the Account Manager's reading to its decision and on to the Trader (entry 87)
 
 
 def test_with_the_funds_node_the_funds_node_runs_first_and_its_answer_goes_on_to_the_trader():
     nodes, found = edges(with_critic=True, with_funds=True, with_trader=True)
-    assert nodes == {START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_funds", "trader", END}
+    assert nodes == {START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "account_manager_funds", "trader", END}
+    assert ("account_manager", "account_manager_direct", True) in found and ("account_manager_direct", "trader", True) in found and ("account_manager_direct", "account_manager_funds", True) not in found      # a direct order is never funded (entry 87)
     assert ("account_manager_decision", "account_manager_funds", True) in found and ("account_manager_decision", END, True) in found
     assert ("account_manager_funds", "trader", True) in found and ("account_manager_funds", END, True) in found and ("trader", END, False) in found
     assert ("account_manager_decision", "trader", True) not in found and ("account_manager_funds", END, False) not in found       # the funds node does not end the graph by itself any more
 
 
 def test_without_the_trader_the_graph_is_exactly_what_it_was_in_all_four_shapes():
-    """The shapes of the desk before the Trader existed (Critic v1 and entry 42): the nodes and every edge, pinned."""
+    """The shapes of the desk before the Trader existed (Critic v1 and entry 42): the nodes and every edge, pinned (the Critic's desks also have the direct-order node of entry 87)."""
     base = {("account_manager", "data_clerk", True), ("account_manager", END, True), ("data_clerk", "advisor", True), ("data_clerk", END, True), (START, "account_manager", False)}
     assert edges() == ({START, "account_manager", "data_clerk", "advisor", END}, base | {("advisor", END, False)})
     assert edges(with_funds=True) == ({START, "account_manager", "data_clerk", "advisor", "account_manager_funds", END},
                                       base | {("advisor", "account_manager_funds", True), ("advisor", END, True), ("account_manager_funds", END, False)})
-    critic = base | {("advisor", "critic", True), ("advisor", END, True), ("critic", "account_manager_decision", False)}
-    assert edges(with_critic=True) == ({START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", END}, critic | {("account_manager_decision", END, False)})
-    assert edges(with_critic=True, with_funds=True) == ({START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_funds", END},
-                                                        critic | {("account_manager_decision", "account_manager_funds", True), ("account_manager_decision", END, True), ("account_manager_funds", END, False)})
+    critic = base | {("advisor", "critic", True), ("advisor", END, True), ("critic", "account_manager_decision", False), ("advisor", "account_manager_decision", True)}      # the last: a neutral company the user named counts as approved (entry 91)
+    direct = {("account_manager", "account_manager_direct", True), ("account_manager_direct", END, True)}      # entry 87: the one thing the Critic's desks have since: a trade the user names goes from the Account Manager's reading to its direct decision (and, with the Trader, on to it)
+    assert edges(with_critic=True) == ({START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", END}, critic | direct | {("account_manager_decision", END, False)})
+    assert edges(with_critic=True, with_funds=True) == ({START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "account_manager_funds", END},
+                                                        critic | direct | {("account_manager_decision", "account_manager_funds", True), ("account_manager_decision", END, True), ("account_manager_funds", END, False)})
 
 
 # ---------------------------------------------------------------- one order through the whole desk
@@ -163,7 +167,7 @@ def test_one_work_order_travels_to_the_trader_and_comes_out_traded_with_the_fill
     order = state["order"]
     assert state["path"] == ["account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader"] and state["errors"] == [] and order.errors == []
     assert order.status == "traded" and order.schema_version == 4 and [(t["symbol"], t["side"], t["status"], t["mode"], t["placed_by"], t["booked"]) for t in order.trades] == [("PG", "buy", "filled", "paper", "code", False)]
-    assert order.trades[0]["shares"] == order.trade_decisions[0]["shares"] == 5 == int(1000 // 167.1) and "approved_shares" not in order.reviews[0] and set(state["seconds"]) == {"account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader"}
+    assert order.trades[0]["shares"] == order.trade_decisions[0]["shares"] == 59 == int(10000 // 167.1) and "approved_shares" not in order.reviews[0] and set(state["seconds"]) == {"account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader"}
     run_ = order.trader_runs[0]
     assert run_["use_model"] is False and run_["mode"] == "paper" and run_["booked"] is False and run_["portfolio_before"]["cash"] == 10000.0 and run_["portfolio_after"]["cash"] < 10000.0
     assert [r["trade_id"] for r in factory.ledgers[0].records] == ["T1"]                                                     # the trades ledger of THIS Trader (a test never writes the real one)
@@ -313,10 +317,10 @@ def test_an_account_number_is_used_as_it_is_without_the_sample_lookup():
 def test_a_profile_that_was_given_is_set_after_connect_and_replaces_the_accounts_row():
     """`connect` forgets a profile read from the default file and keeps one that was given: the desk connects first and sets the profile after, so the given one wins and the row is never read."""
     store, clerk = BookStore(), MarketClerk(QUOTES)
-    request = {"symbol": "PG", "fetch": False, "account": {"account": "jacob_sample", "profile": profile(max_position_pct=0.30)}}
+    request = {"symbol": "PG", "fetch": False, "account": {"account": "jacob_sample", "profile": profile(trade_mode="auto")}}
     order = run(request, store_factory=lambda: store, funds_factory=lambda: Manager(clerk=clerk))["order"]
     assert not any(c[0] == "load_profile" for c in store.calls) and ("list_portfolio", 7) in store.calls
-    assert order.trade_decisions[0]["shares"] > book_run(BookStore())["order"].trade_decisions[0]["shares"]               # the 30% limit of the given profile, not the row's 10%
+    assert order.trade_decisions[0]["mode"] == "auto" and book_run(BookStore())["order"].trade_decisions[0]["mode"] != "auto"                  # the given profile's mode, not the row's
 
 
 def test_with_the_book_flag_the_fills_are_saved_in_the_account_and_the_trade_says_so():

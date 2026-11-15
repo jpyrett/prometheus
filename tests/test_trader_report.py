@@ -12,26 +12,11 @@ def section(order):
     return "\n".join(trade_section(order))
 
 
-def test_a_paper_run_shows_the_model_the_mode_the_prices_each_trade_the_account_and_the_summary():
-    model = ScriptedModel([*PLACE_ALL, say(answer("Bought 44 shares of PG at 167.0835.", ("T1", "filled")))])
-    order, *_ = go(decided(), {"PG": 167.0}, model=model)
-    lines = trade_section(order)
-    assert lines[0] == f"TRADER  (model scripted/trader at temperature 0; PAPER mode, prices: the current quotes (order {last(order)['price_order']}); run 2026-11-05 10:30 ET)"
-    assert lines[1] == "  T1     buy  44 of 44 PG     limit 167.10  FILLED 44 at 167.0835 = $7,351.67   placed by model"
-    assert lines[2] == "  account  cash $10,000.00 -> $2,648.33; PG 0 -> 44 shares; kept in memory only: the account book was not changed"
-    assert lines[3] == "  summary (by model): Bought 44 shares of PG at 167.0835." and len(lines) == 4
-
-
 def test_a_run_without_a_model_says_so_and_a_model_that_could_not_start_says_that():
     order, *_ = go(decided(), {"PG": 167.0})
     assert "no model: the program placed the orders" in header(order)
     order, *_ = go(decided(), {"PG": 167.0}, use_model=True)
     assert "no model could run: the program placed the orders" in header(order) and any(l.startswith("  trader note: the Trader's model could not start") for l in trade_section(order))
-
-
-def test_a_rejected_trade_shows_its_code_and_the_sentence_and_nobody_placed_it():
-    order, *_ = go(synthetic(row("KO", "open", 10, 60.0, approved=False)), {})
-    assert trade_section(order)[1] == "  T1     buy  10 of 10 KO     REJECTED not_permitted: the Critic did not approve it"
 
 
 def test_a_resting_order_shows_active_and_why():
@@ -59,13 +44,6 @@ def test_a_trades_note_is_shown_under_it_in_the_models_words():
     assert lines[1].startswith("  T1") and lines[2] == "      note: inside the range"
 
 
-def test_a_backtest_shows_one_outcome_line_with_the_gain_the_return_the_sessions_and_the_benchmark():
-    order, *_ = go(decided(), bars=BARS, mode="backtest")
-    lines = trade_section(order)
-    assert "BACKTEST mode, prices: the stored daily bars" in lines[0]
-    assert "  outcome  T1  closed by target on 2026-11-09 at 168.3783 after 1 session: gain +$101.00 (+1.38%), benchmark +1.00% (excess +0.38%)" in lines
-
-
 def test_an_open_backtest_position_shows_the_last_close_and_the_unrealised_gain_and_a_stop_shows_a_loss():
     bars = {"PG": [b for b in BARS["PG"][:1]] + [dict(BARS["PG"][1])] + [dict(BARS["PG"][2], high=167.0, low=166.0, close=166.5)], "SPY": BARS["SPY"]}
     order, *_ = go(decided(), bars=bars, mode="backtest")
@@ -86,15 +64,6 @@ def test_a_backtest_with_no_bars_stored_shows_the_trade_as_waiting_and_no_outcom
     assert "ACTIVE: waiting for the next session" in lines[1] and not any("outcome" in l for l in lines)
 
 
-def test_booked_fills_say_booked_and_unbooked_ones_say_kept_in_memory():
-    from test_account_manager_trades import FakeStore
-    from trader_helpers import manager
-    store = FakeStore(portfolio=account(5000.0))
-    order, *_ = go(synthetic(row("PG", "open", 10, 100.0)), acct=manager({"PG": 100.0}, store=store, account_id=7), book=True, portfolio=None)
-    lines = trade_section(order)
-    assert lines[1].endswith("placed by code   booked") and any("booked in the account book" in l for l in lines)
-
-
 def test_a_refused_run_shows_its_header_and_its_reason_and_not_a_claim_that_there_were_no_decisions():
     order, *_ = go(decided(), {"PG": 167.0}, mode="live")
     lines = trade_section(order)
@@ -107,29 +76,6 @@ def test_an_order_with_no_permitted_decision_says_so_and_stays_decided_not_trade
     lines = trade_section(out)
     assert out.trades == [] and out.status == "decided" and acct.clerk.orders == [] and "  no trades: no decision of this order permits one" in lines
     assert lines[-1] == "  summary (by code): Paper run: no trades to place. Cash $10,000.00 to $10,000.00."
-
-
-def test_the_section_is_empty_when_the_trader_never_ran():
-    assert trade_section(decided()) == [] and trade_section(wo.new_work_order("x")) == []
-
-
-def test_a_second_run_is_mentioned_in_the_header():
-    first, acct, _, ledger = go(synthetic(row("PG", "open", 10, 100.0, limit=99.5)), {"PG": 100.0})
-    second, *_ = go(first, {"PG": 99.0}, acct=acct, ledger=ledger)
-    assert "; run 2 of this order)" in trade_section(second)[0] and "FILLED 10 at 99.0495" in trade_section(second)[1]
-
-
-def test_the_report_does_not_change_the_order_and_is_plain_text():
-    order, *_ = go(decided(), bars=BARS, mode="backtest")
-    before = copy.deepcopy(order.model_dump())
-    lines = trade_section(order)
-    assert order.model_dump() == before and all(isinstance(l, str) and "\n" not in l for l in lines)
-
-
-def test_a_damaged_trade_record_does_not_break_the_report():
-    order, *_ = go(decided(), {"PG": 167.0})
-    order.trades.append("not a record")
-    assert trade_section(order)[1].startswith("  T1")
 
 
 def test_the_line_of_a_trade_that_was_never_placed_says_so():

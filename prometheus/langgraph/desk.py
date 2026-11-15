@@ -12,6 +12,9 @@ The graph:
                    |                +-- the data is not ready (failed, or no search was made) --> END
                    +-- the request is not valid --> END
 
+    A NEUTRAL RECOMMENDATION IS APPROVED (entry 91; `ALLOW_NEUTRAL_RECOMMENDATIONS=true`): when the Advisor recommended nothing for the Critic to review but scored a company the user named NEUTRAL, the graph goes from the advisor
+    straight to account_manager_decision (advisor -> account_manager_decision -> trader), where the Account Manager treats the neutral company as approved and decides it.
+
     with_critic=True (Critic v1, entries 56 to 59; `--critic`):
     START -> account_manager -> data_clerk -> advisor -> critic -> account_manager_decision -> END     (or -> account_manager_funds -> END with with_funds)
                                                   |
@@ -21,6 +24,10 @@ The graph:
     ... -> critic -> account_manager_decision -> trader -> END            (with_funds: ... -> account_manager_decision -> account_manager_funds -> trader -> END)
                                   |                                       The trader node runs only when at least one decision says yes_auto or yes_user; otherwise the graph ends before it.
                                   +-- nothing is permitted --> END
+
+    A DIRECT ORDER (entries 87 and 88: the user names the trade, "Buy 50 shares of MSFT" or "of Microsoft"; only with the Critic's desk, `with_critic=True`, which is the one that decides and trades) skips the research, the Advisor and the Critic:
+    START -> account_manager -> account_manager_direct -> trader -> END                (the trader node runs only when the decision says yes_user; the Data Clerk's node, the Advisor and the Critic are never run: the Account Manager asks the Data Clerk for each
+                                                                                       company name and symbol itself and appends them to the work order when it makes it)
 
 Each node is one agent of the week 2 design, reduced to what exists today, and each one reads and updates the SAME work order, which is the
 state of the graph (the design: "the saved WORK_ORDER is the same object every agent reads"):
@@ -37,6 +44,11 @@ state of the graph (the design: "the saved WORK_ORDER is the same object every a
                    buy or sell (`decisions.decide_trades`, `sizing.py`: from the user's money and limits; Auto spends the funds round-robin).
   account_manager_funds  (only with `build_desk(with_funds=True)`, entry 42) the Account Manager's RaiseFunds: it takes the best recommendation (or the stock the user named), asks the Data Clerk for the
                    current prices, and runs a Tree of Thought for what to sell from the user's portfolio to buy it. Its answer is `state["funds"]`; the work order is not changed.
+  account_manager_direct  (only with the Critic's desk, entries 87 and 88) a DIRECT ORDER: the user named the trade, so no recommendation is made and the Critic is not asked, and the Data Clerk's NODE is skipped too:
+                   the `account_manager` node itself asked the Data Clerk for the company name and the symbol of each stock the user named (a ticker or a company's name) and APPENDED them to the work order
+                   (`AccountManager.name_the_stocks`: `data.companies` and the user's own orders in `direct_orders`). This node asks the Data Clerk for the current price of each symbol, decides each order
+                   (`AccountManager.decide_direct`: the user's own order is the approval, `yes_user`, `origin: "direct"`; for a company the user NAMED, Ask mode asks them to confirm the symbol, the company, the shares and the amount, and Auto mode
+                   does not ask; it is placed as typed or not at all; the profile's limits never apply) and the order goes on to the Trader.
   trader           (only with `build_desk(with_trader=True)`, Trader v1, entries 73 to 75) the Account Manager hands the decided order to the Trader (`AccountManager.perform_trades`): it executes the permitted trades against a
                    SIMULATED broker, on paper (the current quote) or as a backtest (the stored bars), and the Account Manager approves each trade against the funds it holds and records each fill as it happens, one trade at a time (entry 81: the Trader holds no cash). With the funds node the RaiseFunds plan arrives as the funding
                    plan (its sells need the user's yes). It never raises, and it never edits the Advisor's records, the Critic's reviews or the decisions; it writes `order.trades` and `order.trader_runs` and sets `traded`.
@@ -79,6 +91,8 @@ from typing import Annotated, Callable, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
+from prometheus.agents.account_manager import direct as direct_order
+from prometheus.agents.account_manager import neutral as neutral_names
 from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO, DEFAULT_PROFILE, AccountManager, report as funds_report, top_recommendation
 from prometheus.agents.account_manager.decisions import terminal_approver
 from prometheus.agents.advisor.advisor import Advisor
@@ -133,6 +147,8 @@ def reached_its_end(state: DeskState) -> bool:
     if order.status == "traded" or "trader" in path:
         return True
     trader_built = bool(state.get("with_trader")) or (state.get("request") or {}).get("trade") is not None   # `trade` is in the request when `--trade` was typed
+    if "account_manager_direct" in path:   # a direct order (entry 87) ends at the Account Manager's decision, as the Critic's path does; a decided order the Trader had nothing to do with did not reach it
+        return not trader_built and order.status == "decided"
     if "critic" in path:
         return not trader_built and order.status in CRITIC_ENDS
     return order.status == "recommended"
@@ -247,7 +263,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     given the form: True to go on, anything else stops the desk with no work done) shows it to the user, and the work order is made. The Data Clerk node then finds the companies of a theme, a list of names or tickers
     (`recommendations.find_companies_of`, the runner's own step), refreshes their data when asked, and answers the work order; the Advisor node ranks them and keeps the top N (`generate_recommendations`, case industry
     for a theme, funds for tickers); a request only to LOOK ends there; otherwise the Critic reviews each recommendation against the profile, the decision node applies the user's "split it evenly" and "spend this much"
-    (`decide_trades(balance, budget)`) and the Trader executes. `state["plan"]` carries the form, the companies and a `Result` (the runner's own record, so its reports read it). Nothing here names a sector or a company."""
+    (`decide_trades(balance, budget)`) and the Trader executes. A request that NAMES THE TRADE ("Buy 50 shares of MSFT", entry 87) is a DIRECT ORDER: `state["plan"]["direct"]` is set, the graph goes from the
+    `account_manager` node to `account_manager_direct` and then to the Trader, and the Data Clerk, the Advisor and the Critic are skipped; it needs `with_critic` (the desk that decides and trades). `state["plan"]` carries the form, the companies and a `Result` (the runner's own record, so its reports read it). Nothing here names a sector or a company."""
     if with_trader and not with_critic:
         raise ValueError("with_trader needs with_critic: the Trader executes the trades the Critic reviewed and the Account Manager decided on")
     clerk_factory = clerk_factory or (lambda order: DataClerk(allow_fetch=order.live))
@@ -294,11 +311,18 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         try:
             manager, _ = account(state)
             intent = manager.understand_request(ask.get("text"))
-            asked = classify(*intent.as_request())
+            if intent.action == "order" and not with_critic:
+                raise ValueError("a direct order needs the desk that decides and trades (with the Critic's desk, build_desk(with_critic=True))")
+            asked = None if intent.action == "order" else classify(*intent.as_request())
         except (ValueError, RuntimeError, OSError) as error:
             return {"order": None, "errors": [str(error)], "plan": None}
         if confirm is not None and confirm(intent) is not True:
             return {"order": None, "errors": ["stopped: what was understood was not confirmed, so nothing was done"], "plan": None}
+        if intent.action == "order":      # the user named the trade (entries 87 and 88): the work order holds the user's own orders, and there is nothing to search, recommend or review
+            order = new_work_order(intent.request, requester=state["request"].get("requester", REQUESTER), action_type="trade", source=DEFAULT_SOURCE)
+            reasons = manager.name_the_stocks(order, intent.orders, intent.request, clock())    # this path skips the Data Clerk's node: the Account Manager asks the Data Clerk for each company name and symbol and appends them to the work order
+            order.errors = [*order.errors, *reasons]
+            return {"order": order, "errors": reasons, "plan": {"intent": intent, "direct": True, "action": "order", "request_text": intent.request}}
         find, days, fetch = intent.count or ask.get("default_count", 3), ask.get("news_days", ASK_NEWS_DAYS), bool(ask.get("fetch"))
         case = ask.get("case") or ("industry" if asked.kind in ("phrase", "list") else "funds")
         order = new_work_order(f"What do the stored news, press releases and filings say about {intent.what()}?", requester=state["request"].get("requester", REQUESTER), subject=asked.symbols or asked.phrase or asked.text, source=DEFAULT_SOURCE,
@@ -399,6 +423,20 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         return {"order": manager.decide_trades(order, portfolio, approver, clock(), (state["request"].get("account") or {}).get("mode"), plan.get("balance"), plan.get("budget"),
                                                clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "")}
 
+    def account_manager_direct(state: DeskState) -> dict:
+        """A DIRECT ORDER (entry 87): the Account Manager prices the trades the user named (it asks the Data Clerk for the quotes) and decides them: the user's own order is the approval, so there is no recommendation, no
+        Critic review and no second question, in Ask mode too. Never raises: an account that cannot be opened is a message on the order."""
+        order = state["order"]
+        try:
+            manager, portfolio = account(state)
+        except (RuntimeError, ValueError, OSError) as error:
+            order.errors = [*order.errors, f"the Account Manager could not decide: {error}"]
+            return {"order": order}
+        plan = state.get("plan") or {}
+        intent = plan.get("intent")
+        return {"order": manager.decide_direct(order, portfolio, clock(), (state["request"].get("account") or {}).get("mode"), approver, clarify=clarify, said_how_much=intent.said_how_much() if intent else True,
+                                               request_text=plan.get("request_text") or "", balance="even" if intent and intent.allocation == "even" else None, budget=intent.budget if intent else None)}
+
     def trader(state: DeskState) -> dict:
         """The Account Manager hands the decided order to the Trader, which executes what is permitted against the simulated broker (paper or backtest): never raises, and never edits what the other agents wrote. The
         RaiseFunds answer of the funds node (`state["funds"]`) is the funding plan; `approver` is asked whether the funding sells may be made (a sale is never automatic)."""
@@ -438,7 +476,12 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         if with_critic:
             if (state.get("plan") or {}).get("action") == "research":   # the user asked only to look: nothing is reviewed, decided or traded
                 return END
-            return "critic" if state["order"].status == "recommended" and state["order"].recommendations else END
+            order = state["order"]
+            if order.status != "recommended":
+                return END
+            if order.recommendations:
+                return "critic"
+            return "account_manager_decision" if neutral_names.neutral_candidates(order) else END       # nothing for the Critic to review, but a company the user named that the Advisor scored neutral counts as approved (entry 91)
         return "account_manager_funds" if with_funds and state["order"].status == "recommended" else END
 
     def permitted(order: WorkOrder) -> bool:
@@ -454,7 +497,12 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         return "trader" if with_trader and permitted(state["order"]) else END
 
     def after_account_manager(state: DeskState) -> str:
-        return "data_clerk" if state.get("order") is not None and not state.get("errors") else END
+        if state.get("order") is None or state.get("errors"):
+            return END
+        return "account_manager_direct" if (state.get("plan") or {}).get("direct") and with_critic else "data_clerk"      # a direct order skips the research, the Advisor and the Critic (entry 87)
+
+    def after_direct(state: DeskState) -> str:
+        return "trader" if with_trader and permitted(state["order"]) else END
 
     def after_data_clerk(state: DeskState) -> str:
         return "advisor" if with_advisor and state["order"].status == "data_ready" else END
@@ -471,10 +519,15 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     if with_trader:
         graph.add_node("trader", _timed("trader", trader))
     graph.add_edge(START, "account_manager")
-    graph.add_conditional_edges("account_manager", after_account_manager, {"data_clerk": "data_clerk", END: END})
+    if with_critic:   # the desk that decides and trades can take a direct order: account_manager -> account_manager_direct -> trader
+        graph.add_node("account_manager_direct", _timed("account_manager_direct", account_manager_direct))
+        graph.add_conditional_edges("account_manager", after_account_manager, {"data_clerk": "data_clerk", "account_manager_direct": "account_manager_direct", END: END})
+        graph.add_conditional_edges("account_manager_direct", after_direct, {"trader": "trader", END: END} if with_trader else {END: END})
+    else:
+        graph.add_conditional_edges("account_manager", after_account_manager, {"data_clerk": "data_clerk", END: END})
     graph.add_conditional_edges("data_clerk", after_data_clerk, {"advisor": "advisor", END: END})
     if with_critic:
-        graph.add_conditional_edges("advisor", after_advisor, {"critic": "critic", END: END})
+        graph.add_conditional_edges("advisor", after_advisor, {"critic": "critic", "account_manager_decision": "account_manager_decision", END: END})
         graph.add_edge("critic", "account_manager_decision")
         if with_funds:
             graph.add_conditional_edges("account_manager_decision", after_decision, {"account_manager_funds": "account_manager_funds", END: END})
@@ -568,13 +621,19 @@ def report(state: DeskState, total_seconds: float | None = None) -> str:
     review = review_section(order)
     if review:
         lines.append("\n" + "\n".join(review))
+    neutral = neutral_names.neutral_lines(order)
+    if neutral:
+        lines.append("\n" + "\n".join(neutral))
     if state.get("funds"):
         lines.append("\nACCOUNT MANAGER: RAISE FUNDS (a Tree of Thought, entry 42)\n" + funds_report(state["funds"]))
+    direct = direct_order.direct_section(order)
+    if direct:
+        lines.append("\n" + "\n".join(direct))
     trades = trade_section(order)
     if trades:
         lines.append("\n" + "\n".join(trades))
     seconds = state.get("seconds", {})
-    parts = "  ".join(f"{name} {seconds[name]:.1f}" for name in ("account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_funds", "trader") if name in seconds)
+    parts = "  ".join(f"{name} {seconds[name]:.1f}" for name in ("account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "account_manager_funds", "trader") if name in seconds)
     lines.append(f"\nTIMING (seconds)  {parts}" + (f"  | total {total_seconds:.1f}" if total_seconds is not None else ""))
     return "\n".join(lines)
 

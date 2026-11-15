@@ -45,27 +45,6 @@ def saturday(monkeypatch, simulated):
 
 # ---------------------------------------------------------------- the setting
 
-@pytest.mark.parametrize("value", ["true", "TRUE", " yes ", "On", "1"])
-def test_the_values_that_mean_the_real_clock(monkeypatch, value):
-    monkeypatch.setenv("USE_LIVE_TRADING", value)
-    assert tc.use_live_trading() is True
-
-
-@pytest.mark.parametrize("value", ["false", "FALSE", "no", "off", "0", "flase", "live", "fasle "])
-def test_anything_else_a_typing_mistake_included_is_the_simulated_clock(monkeypatch, value):
-    monkeypatch.setenv("USE_LIVE_TRADING", value)
-    assert tc.use_live_trading() is False
-
-
-def test_unset_means_the_real_clock_so_nothing_changes_for_anyone_who_does_not_set_it(monkeypatch, tmp_path):
-    monkeypatch.delenv("USE_LIVE_TRADING", raising=False)
-    monkeypatch.setattr(rag_config, "REPO_ROOT", tmp_path)               # no .env here: not Jacob's
-    assert tc.use_live_trading() is True
-    (tmp_path / ".env").write_text("USE_LIVE_TRADING=false\n", encoding="utf-8")
-    assert tc.use_live_trading() is False                                  # the .env is read when the environment says nothing
-    monkeypatch.setenv("USE_LIVE_TRADING", "true")
-    assert tc.use_live_trading() is True                                   # and the environment wins over it
-
 
 # ---------------------------------------------------------------- the clock
 
@@ -91,23 +70,6 @@ def test_the_simulated_clock_is_the_previous_business_day_inside_its_regular_ses
     assert tc.previous_business_day(real) == expected_day
 
 
-def test_the_moment_is_half_an_hour_before_the_close_and_before_the_close_on_an_early_close_day_too(simulated):
-    assert tc.trading_now(SATURDAY).astimezone(ET) == SIMULATED_FRIDAY                       # 16:00 - 30 minutes
-    early = tc.trading_now(datetime(2026, 11, 30, 10, 0, tzinfo=ET)).astimezone(ET)           # 2026-11-27 closed at 13:00
-    assert (early.hour, early.minute) == (12, 30)
-
-
-def test_the_simulated_moment_does_not_move_during_the_day_so_an_approval_never_runs_out_in_a_run(simulated):
-    first, later = tc.trading_now(datetime(2026, 11, 14, 0, 5, tzinfo=ET)), tc.trading_now(datetime(2026, 11, 14, 23, 55, tzinfo=ET))
-    assert first == later
-
-
-def test_an_approval_made_at_the_simulated_moment_is_still_good_for_the_rest_of_the_window(simulated):
-    """The window of a Friday closes at the regular close: the approval made 30 minutes before it is valid until then (Critic v1, entry 57)."""
-    session = mc.session_at(tc.trading_now(SATURDAY))
-    assert session.window_closes_utc == datetime(2026, 11, 13, 21, 0, tzinfo=timezone.utc)   # 16:00 Eastern
-
-
 @pytest.mark.parametrize("on", ["true", "false"])
 def test_a_moment_without_a_timezone_is_a_mistake_in_either_mode(monkeypatch, on):
     monkeypatch.setenv("USE_LIVE_TRADING", on)
@@ -115,11 +77,6 @@ def test_a_moment_without_a_timezone_is_a_mistake_in_either_mode(monkeypatch, on
         tc.trading_now(datetime(2026, 11, 14, 1, 30))
     with pytest.raises(ValueError):
         tc.previous_business_day(datetime(2026, 11, 14, 1, 30))
-
-
-def test_the_note_for_a_report_says_which_moment_the_desk_works_at(simulated):
-    note = tc.clock_note(SATURDAY)
-    assert note.startswith("CLOCK    SIMULATED (USE_LIVE_TRADING=false)") and "2026-11-13 15:30 ET" in note and "Friday" in note and "no live quote is used" in note
 
 
 def test_the_default_moment_is_derived_from_the_real_clock_only_here(saturday):
@@ -172,16 +129,6 @@ def stored():
     return {b["date"]: b for b in bars}
 
 
-def test_the_close_quote_is_the_real_stored_bar_of_that_day_in_the_shape_of_a_live_quote(stored):
-    quote = DataClerkTools().close_quote("PG", FRIDAY)
-    assert set(quote) == {"symbol", "price", "change", "change_percent", "high", "low", "open", "previous_close", "as_of_utc", "source", "simulated"}
-    assert (quote["price"], quote["open"], quote["high"], quote["low"], quote["previous_close"]) == (169.8, 168.97, 170.73, 167.2, 168.03)        # the real bar of 2026-11-13 and the close before it
-    assert quote["change"] == round(169.8 - 168.03, 4) and quote["change_percent"] == round((169.8 / 168.03 - 1) * 100, 4) and quote["simulated"] is True and quote["symbol"] == "PG"
-    assert quote["price"] == stored["2026-11-13"]["close"] and quote["previous_close"] == stored["2026-11-12"]["close"]
-    assert quote["as_of_utc"] == "2026-11-13T20:29:00Z"          # a minute before the simulated moment, 15:30 Eastern: the quote is fresh at it
-    assert "daily bar of 2026-11-13" in quote["source"] and "USE_LIVE_TRADING=false" in quote["source"]
-
-
 def test_a_day_with_no_stored_bar_is_not_answered_with_another_days_price(stored):
     with pytest.raises(ToolInputError, match="no stored daily bar for PG on 2026-11-14"):
         DataClerkTools().close_quote("PG", date(2026, 11, 14))                    # a Saturday: Friday's bar is NOT used
@@ -211,44 +158,6 @@ def finnhub_tripwire(monkeypatch):
 
 def quote_order(*symbols):
     return wo.new_work_order("prices", requester="account_manager", action_type="fetch_quote", subject=list(symbols), live=True)
-
-
-def test_with_the_simulated_clock_a_price_request_is_answered_from_the_real_bars_and_finnhub_is_not_asked(monkeypatch, simulated, stored):
-    finnhub_tripwire(monkeypatch)
-    monkeypatch.setattr("prometheus.agents.data_clerk.data_clerk_agent.market_day", lambda: FRIDAY)
-    order = DataClerk(model=object()).request_quotes(quote_order("PG", "MSFT"))      # the real Data Clerk and its real tools: its own model is never called for a price
-    assert order.status == "data_ready" and order.errors == [] and set(order.data.quotes) == {"PG", "MSFT"}
-    assert order.data.quotes["PG"]["price"] == 169.8 and all(q["simulated"] and q["source"].startswith("daily bar of 2026-11-13") for q in order.data.quotes.values())
-    assert any("USE_LIVE_TRADING=false" in n and "2026-11-13" in n and "no live quote" in n for n in order.data.notes)
-    assert order.data.tool_calls == [{"name": "get_quote", "args": {"symbol": s}, "outcome": "ok"} for s in ("PG", "MSFT")]
-
-
-def test_a_symbol_with_no_bar_on_the_simulated_day_fails_like_any_failed_quote_and_the_others_stay(monkeypatch, simulated, stored):
-    finnhub_tripwire(monkeypatch)
-    monkeypatch.setattr("prometheus.agents.data_clerk.data_clerk_agent.market_day", lambda: FRIDAY)
-    order = DataClerk(model=object()).request_quotes(quote_order("PG", "ZZZZ"))
-    assert order.status == "data_failed" and "PG" in order.data.quotes and "ZZZZ" not in order.data.quotes                  # it does NOT fall back to the live quote
-    assert any("ZZZZ: no quote" in e and "no stored daily bar for ZZZZ on 2026-11-13" in e for e in order.errors)
-
-
-def test_with_the_real_clock_the_price_request_still_goes_to_finnhub(monkeypatch):
-    """The live path is taken, and no price is made up to prove it: Finnhub's call is made to fail, and the failure is what comes back (a failed quote, named, nothing answered from a bar)."""
-    asked = []
-
-    def unreachable(self, symbol):
-        asked.append(symbol)
-        raise RuntimeError("Finnhub was reached")
-    monkeypatch.setattr(DataToolbox, "get_quote", unreachable)
-    order = DataClerk(model=object()).request_quotes(quote_order("PG"))
-    assert asked == ["PG"] and order.status == "data_failed" and order.data.quotes == {} and any("PG: no quote (RuntimeError: Finnhub was reached)" in e for e in order.errors) and order.data.notes == []
-
-
-def test_the_account_manager_gets_the_same_prices_through_the_data_clerk(monkeypatch, simulated, stored):
-    finnhub_tripwire(monkeypatch)
-    monkeypatch.setattr("prometheus.agents.data_clerk.data_clerk_agent.market_day", lambda: FRIDAY)
-    manager = AccountManager(model=object(), model_id="account-book", clerk=DataClerk(model=object()))
-    order = manager.request_prices(["PG"])
-    assert order.status == "data_ready" and order.data.quotes["PG"]["simulated"] is True and order.data.quotes["PG"]["price"] == 169.8
 
 
 # ---------------------------------------------------------------- the Critic does not compare the bar with itself

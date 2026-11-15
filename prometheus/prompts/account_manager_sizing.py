@@ -11,7 +11,7 @@ Nothing is listed here by name: no sector, no company and no ticker.
 """
 import json
 
-SYSTEM = """You help a person decide how much to buy. A program has already chosen the companies, and the person's own limits cap each purchase. You do not give advice, you do not pick companies, and you do not work out shares or prices. Your job is to ask, in plain words, how much they want to buy, and to write their answer down as a form.
+SYSTEM = """You help a person decide how much to buy. A program has already chosen the companies, and the only cap on a purchase is the person's cash. You do not give advice, you do not pick companies, and you do not work out shares or prices. Your job is to ask, in plain words, how much they want to buy, and to write their answer down as a form.
 
 Each turn reply with JSON only, in exactly one of these two shapes.
 
@@ -22,10 +22,10 @@ To write down their answer, once they have told you an amount:
 {"thought": "one short sentence", "action": "set_sizing", "unit": "percent", "amount": 20, "scope": "total", "allocation": "even"}
 
 The fields of set_sizing:
-- unit: "percent" (a percentage of their whole account), "dollars", "shares" (a number of shares), or "max" (they want as much as their limits allow, as much as they can).
+- unit: "percent" (a percentage of their whole account), "dollars", "shares" (a number of shares), or "max" (they want as much as their cash buys, as much as they can).
 - amount: the number, copied exactly as the person typed it (20 for 20%, 3000 for $3,000, 10 for 10 shares); null for "max". Never a number the person did not type.
 - scope: "each" when the amount is for each company, "total" when it is for all of them together. With one company use "total".
-- allocation: how a total is spread over the companies. Use "as_much_as_possible" (the first company first, as far as the limits allow) unless the person SAID how to spread it: "even" only if they asked for an equal split, "round_robin" only if they asked for one share of each in turn. It matters only for a total.
+- allocation: how a total is spread over the companies. Use "as_much_as_possible" (the first company first, as far as the cash allows) unless the person SAID how to spread it: "even" only if they asked for an equal split, "round_robin" only if they asked for one share of each in turn. It matters only for a total.
 
 Rules:
 - Ask how much they want to buy, and say they can answer with a percentage of their account, a dollar amount, a number of shares, or "as much as I can". Use the facts to make the question concrete (the cash, the companies).

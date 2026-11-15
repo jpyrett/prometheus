@@ -1,12 +1,13 @@
 """The Account Manager's thresholds: `configs/account_manager_v1.json`, read and checked ONCE (design/sizing_in_account_manager_spec.md).
 
     config = load_config()                  # the file, validated: a missing key, an unknown key or a wrong type is an error NOW, not halfway through a purchase
-    config.sizing.max_adv_pct               # 0.05
+    config.sizing.float_guard               # 1e-9
     config.clarify.max_questions            # 3: the Ask-mode questions about how much to buy (entry 85)
+    config.direct.valid_minutes             # 30: how long the price of a trade the user named stays good (entry 87)
 
-Every threshold of the Account Manager's sizing is in that file and nowhere else. The user's OWN limits (how much of the account one stock may be, how much one stop-out may lose, how much one review may add,
-the most for one order) are not here: they belong to the user and are in the profile (`UserProfile.sizing_limits()`). A model never chooses a threshold and the code never writes one. `extra="forbid"` means a typo in
-the JSON fails when the file is loaded, instead of being ignored while the code uses a default (the same rule as the Critic's and the Advisor's `config.py`).
+Every threshold of the Account Manager's sizing is in that file and nowhere else. There is no size limit of the user's any more (design choices entry 91: the only check is that the funds cover the order). A model never
+chooses a threshold and the code never writes one. `extra="forbid"` means a typo in the JSON fails when the file is loaded, instead of being ignored while the code uses a default (the same rule as the Critic's and the
+Advisor's `config.py`).
 
 `load_config()` keeps what it read: asking again for the same file returns the same object (the sections are frozen), until the file changes on disk.
 """
@@ -26,7 +27,6 @@ class _Section(BaseModel):
 
 
 class Sizing(_Section):
-    max_adv_pct: float = Field(gt=0, le=1)          # the most of a stock's average daily dollar volume (20 days) one purchase may be: the liquidity cap
     float_guard: float = Field(gt=0, lt=1e-6)       # added before a share count is rounded down, so that 2.9999999999999996 shares of arithmetic is the 3 shares it is
 
 
@@ -37,10 +37,20 @@ class Clarify(_Section):
     max_answer_chars: int = Field(ge=20, le=1000)    # the user's answer is cut to this before the model reads it
 
 
+class Direct(_Section):
+    valid_minutes: int = Field(ge=1, le=240)         # a trade the user named has no review and so no `valid_until_utc` of the Critic's: the price the Account Manager asked of the Data Clerk is good for this long (entry 87)
+
+
+class Neutral(_Section):
+    valid_minutes: int = Field(ge=1, le=240)         # a neutral recommendation has no review and so no `valid_until_utc` of the Critic's: the price the Account Manager asked of the Data Clerk is good for this long (entry 91)
+
+
 class AccountManagerConfig(_Section):
     config_version: str = Field(min_length=1)
     sizing: Sizing
     clarify: Clarify
+    direct: Direct
+    neutral: Neutral
 
 
 @functools.cache

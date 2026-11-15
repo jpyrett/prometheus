@@ -1,0 +1,231 @@
+{
+ "request": "buy 50 shares of Microsoft",
+ "intent": {
+  "request": "buy 50 shares of Microsoft",
+  "action": "order",
+  "topic": null,
+  "symbols": [],
+  "companies": [],
+  "count": null,
+  "allocation": "default",
+  "budget": null,
+  "orders": [
+   {
+    "side": "buy",
+    "symbol": null,
+    "company": "Microsoft",
+    "shares": 50
+   }
+  ]
+ },
+ "path": [
+  "account_manager",
+  "account_manager_direct",
+  "trader"
+ ],
+ "order": {
+  "schema_version": 4,
+  "request_id": "cf6dfc0aa511",
+  "requester": "desk",
+  "created_utc": "2026-11-15T17:38:28Z",
+  "query": "buy 50 shares of Microsoft",
+  "action_type": "trade",
+  "subject": [
+   "MSFT"
+  ],
+  "company": null,
+  "source": "news",
+  "time_period": null,
+  "since_days": null,
+  "live": false,
+  "top_k": 5,
+  "criteria": null,
+  "status": "traded",
+  "resolved": null,
+  "data": {
+   "answer": "Microsoft: Microsoft Corporation (MSFT)",
+   "references": [],
+   "sources": [],
+   "sweep": {},
+   "results": {},
+   "filing_evidence": {},
+   "metrics": {},
+   "companies": [
+    {
+     "brand": "Microsoft",
+     "parent": null,
+     "symbol": "MSFT",
+     "company": "Microsoft Corporation",
+     "public": true,
+     "how": "name",
+     "note": ""
+    }
+   ],
+   "market_brief": {},
+   "verification": {},
+   "quotes": {},
+   "bars": {},
+   "problems": [],
+   "notes": [],
+   "no_supporting_text": false,
+   "tool_calls": [
+    {
+     "name": "find_company",
+     "args": {
+      "company": "Microsoft"
+     },
+     "outcome": "ok"
+    }
+   ],
+   "turns": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "completed_utc": "2026-11-15T17:38:28Z"
+  },
+  "recommendations": [],
+  "advisor_runs": [],
+  "errors": [],
+  "metrics": null,
+  "case": null,
+  "sector": null,
+  "candidates": [],
+  "verify": null,
+  "reviews": [],
+  "critic_runs": [],
+  "trade_decisions": [
+   {
+    "record_id": "direct-cf6dfc0aa511-1",
+    "review_id": null,
+    "symbol": "MSFT",
+    "action": "open",
+    "shares": 50,
+    "est_cost": 26194.0,
+    "mode": "auto",
+    "will_trade": "yes_user",
+    "funds_avail": true,
+    "funds_note": null,
+    "asked_user": false,
+    "escalated": false,
+    "reason": "the user approved: you named this trade yourself (buy 50 shares of MSFT): no recommendation was made and the Critic was not asked; auto mode: the symbol the Data Clerk found for the company you named, 'Microsoft' -> Microsoft Corporation (MSFT), was used without asking",
+    "decided_utc": "2026-11-13T20:30:00Z",
+    "size": null,
+    "origin": "direct",
+    "company": "Microsoft Corporation",
+    "price": 523.88,
+    "valid_until_utc": "2026-11-13T21:00:00Z"
+   }
+  ],
+  "bars": null,
+  "trades": [
+   {
+    "trade_id": "T1",
+    "kind": "recommendation",
+    "record_id": "direct-cf6dfc0aa511-1",
+    "review_id": null,
+    "funds_for": null,
+    "symbol": "MSFT",
+    "side": "buy",
+    "shares_approved": 50,
+    "shares": 50,
+    "order_type": "market",
+    "limit_price": null,
+    "ref_price": 523.88,
+    "limit_low": 508.1636,
+    "limit_high": 529.1188,
+    "status": "filled",
+    "reject_code": null,
+    "reason": "market order filled at the quote 523.8800 with 5 bps of slippage",
+    "placed_by": "model",
+    "note": "",
+    "placed_utc": "2026-11-13T20:30:00Z",
+    "mode": "paper",
+    "fill": {
+     "price": 524.1419,
+     "shares": 50,
+     "amount": 26207.1,
+     "commission": 0.0,
+     "date": "2026-11-13",
+     "price_source": "quote",
+     "slippage_bps": 5.0
+    },
+    "booked": true,
+    "outcome": null
+   }
+  ],
+  "trader_runs": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0.0,
+    "mode": "paper",
+    "now_utc": "2026-11-13T20:30:00Z",
+    "use_model": true,
+    "turns": 5,
+    "tokens_in": 7874,
+    "tokens_out": 200,
+    "tool_calls": [
+     {
+      "name": "verify_request",
+      "args": {},
+      "outcome": "ok"
+     },
+     {
+      "name": "place_order",
+      "args": {
+       "trade_id": "T1"
+      },
+      "outcome": "ok"
+     },
+     {
+      "name": "check_trade_status",
+      "args": {
+       "trade_id": "T1"
+      },
+      "outcome": "ok"
+     },
+     {
+      "name": "notify_account_manager",
+      "args": {},
+      "outcome": "ok"
+     }
+    ],
+    "placed_by_model": 1,
+    "placed_by_code": 0,
+    "summary": "Filled 50 shares of T1 at 524.1419, cash left 3792.9; no rejections.",
+    "summary_by": "model",
+    "portfolio_before": {
+     "cash": 30000.0,
+     "positions": []
+    },
+    "portfolio_after": {
+     "cash": 3792.9,
+     "positions": [
+      {
+       "symbol": "MSFT",
+       "shares": 50,
+       "cost_basis": 524.1419,
+       "acquired": "2026-11-13"
+      }
+     ]
+    },
+    "price_order": "561a2723b2c7",
+    "funding": null,
+    "booked": true,
+    "config_version": "1",
+    "dropped": [],
+    "errors": []
+   }
+  ],
+  "direct_orders": [
+   {
+    "record_id": "direct-cf6dfc0aa511-1",
+    "side": "buy",
+    "symbol": "MSFT",
+    "company": "Microsoft Corporation",
+    "shares": 50,
+    "request": "buy 50 shares of Microsoft",
+    "requested_utc": "2026-11-13T20:30:00Z",
+    "typed_company": "Microsoft"
+   }
+  ]
+ }
+}

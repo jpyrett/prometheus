@@ -14,7 +14,7 @@ def codes(r, kind="blockers"):
 def test_sndk_is_denied_for_its_risk_and_because_a_collapse_is_not_a_discount():
     r = review(captured("SNDK"), own={})["SNDK"]
     assert not r["approved"] and {"risk_above_profile", "falling_knife"} <= set(codes(r)) and r["score"] <= 49 < r["score_before_blockers"]
-    assert (r["risk"]["risk_score"], r["risk"]["risk_level"]) == (77.8, "very_high") and r["risk"]["allowed_level"] == "medium"
+    assert (r["risk"]["risk_score"], r["risk"]["risk_level"]) == (92.2, "very_high") and r["risk"]["allowed_level"] == "medium"     # 38.5 + 23.1 + 15.3 + 15.3: volatility, drawdown, beta and ATR all at the top; no stop, size or liquidity measure (entries 92 and 97)
     assert "fell 52% in 21 sessions" in next(b["message"] for b in r["blockers"] if b["code"] == "falling_knife")
     assert r["summary"].startswith("DENY SNDK: ") and "approved_shares" not in r and r["valid_until_utc"] is None
 
@@ -27,11 +27,11 @@ def test_pg_on_conviction_is_approved():
 
 
 def test_a_conviction_recommendation_is_denied_when_the_quotes_it_stands_on_do_not_hold():
-    """The conviction family stands on the blend. When the model says every quote says the opposite, the news part turns negative (-0.58) and the blend falls from 0.55 to 0.09, under the 0.30 mark
+    """The conviction family stands on the blend. When the model says every quote says the opposite, the news part turns negative (-0.58) and the blend falls from 0.57 to 0.11, under the 0.30 mark
     the strategy needs: `blend_not_supported`."""
     r = review(captured("PG"), model=ReviewerModel(default="contradicts"))["PG"]
     c = r["evidence"]["counterfactual"]
-    assert c["blend"] == 0.0887 and c["blend_recorded"] == 0.5501
+    assert c["blend"] == 0.1111 and c["blend_recorded"] == 0.5725
     assert not r["approved"] and "blend_not_supported" in codes(r)
 
 
@@ -39,13 +39,12 @@ def test_pg_open_passes_every_check_and_is_approved_without_a_six_month_average_
     r = review(captured("PG_open"), own={})["PG"]
     assert r["approved"] and r["blockers"] == [] and not {"approved_shares", "suggested_shares"} & set(r) and r["value"]["deal"] == "unknown"
     assert "value_not_assessable" in codes(r, "warnings") and r["requires_human"] and r["requires_human_reasons"] == ["value_not_assessable"]
-    assert r["risk"]["risk_score"] == 5.2 and r["risk"]["risk_level"] == "low" and r["dimensions"]["accuracy"]["score"] == 100
+    assert r["risk"]["risk_score"] == 6.5 and r["risk"]["risk_level"] == "low" and r["dimensions"]["accuracy"]["score"] == 100
 
 
 def test_the_same_three_with_a_six_month_average_four_percent_under_the_price():
-    reviews = {name: next(iter(review(captured(name)).values())) for name in ("SNDK", "PG", "PG_open")}
-    assert not reviews["SNDK"]["approved"] and reviews["PG"]["approved"] and codes(reviews["PG"]) == []
-    assert not reviews["SNDK"]["approved"] and {"risk_above_profile", "falling_knife"} <= set(codes(reviews["SNDK"]))
+    reviews = {name: next(iter(review(captured(name)).values())) for name in ("PG", "PG_open")}       # SNDK's denial is the first test of this file (its own real numbers)
+    assert reviews["PG"]["approved"] and codes(reviews["PG"]) == []
     assert reviews["PG_open"]["approved"] and reviews["PG_open"]["value"]["deal"] == "fair" and reviews["PG_open"]["requires_human"] is False
 
 
@@ -59,4 +58,4 @@ def test_at_night_or_at_the_weekend_all_three_are_denied_and_say_what_the_score_
 def test_an_aggressive_user_still_cannot_have_sndk_at_very_high_risk_and_a_conservative_one_may_have_pg_open():
     assert "risk_above_profile" in codes(review(captured("SNDK"), view_=view(risk_tolerance="aggressive"), own={})["SNDK"])
     r = review(captured("PG_open"), view_=view(risk_tolerance="conservative"), own={})["PG"]
-    assert r["risk"]["allowed_level"] == "low" and r["risk"]["risk_level"] == "low" and r["approved"]                # PG_open's 5.2 is low risk: a conservative user may have it
+    assert r["risk"]["allowed_level"] == "low" and r["risk"]["risk_level"] == "low" and r["approved"]                # PG_open's 6.5 is low risk: a conservative user may have it

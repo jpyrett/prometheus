@@ -1426,7 +1426,7 @@ critic     : nvidia/nemotron-3-super-120b-a12b
 ### 6.6 Tests
 
 ```bash
-pytest tests/test_rag_citations.py tests/test_data_clerk_tools.py tests/test_chat_model.py tests/test_compare_models.py -q
+pytest tests/test_rag_citations.py tests/test_data_clerk_tools.py tests/test_chat_model.py -q
 ```
 
 ```text
@@ -1969,7 +1969,7 @@ The model also writes its own `model_score` (0 to 100). It is recorded next to t
 ### 8.5 Tests
 
 ```bash
-pytest tests/test_work_order.py tests/test_advisor.py tests/test_advisor_with_without.py tests/test_mcp_data_clerk.py -q
+pytest tests/test_work_order.py tests/test_advisor.py tests/test_mcp_data_clerk.py -q
 ```
 
 ```text

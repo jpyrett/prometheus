@@ -33,7 +33,7 @@
 # plan call and a thesis call). FETCHING (the default unless you answer n or pass --no-fetch; --fetch says it outright and --yes answers the question: both skip it) refreshes each company's daily bars (Massive), news, press releases and SEC filings (Finnhub and
 # Massive; the 10-Q text from sec.gov) and WRITES news/, data/press_releases/, data/filings/ and data/historical/ticker_bars_v1/. You are asked first; --yes skips the question. If there is nobody
 # to ask (the input ended) and --yes was not given, the answer is NO: a script that is not being watched must not spend the paid APIs. Without a fetch the stored data is used, and a company with no
-# stored bars fails the Advisor's freshness and liquidity gates (the report says so).
+# stored bars fails the Advisor's freshness gate (the report says so).
 #
 # THE CRITIC (Critic v1, design choices entries 56 to 59). IGNORE_MARKET_HOURS=true in .env skips the closed-market denial (entry 69); a recommendation from an earlier trading day is still expired.
 # After the Advisor ranks the companies, the CRITIC reviews every recommendation: it asks the Data Clerk again for the key numbers, a current quote and the

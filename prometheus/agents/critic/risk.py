@@ -6,12 +6,11 @@ The Critic measures the risk ITSELF, from the numbers it just had the Data Clerk
 risk tolerance (age and horizon included), never how much to buy: it does not know the user's money, and the size of a purchase is the Account Manager's (agents/account_manager/sizing.py).
 
     effective tolerance   the lowest of the stated one, the cap for the user's age and the cap for their horizon
-    risk score            0 to 100 (higher is riskier): eight measures, each `clip((x - safe) / (risky - safe), 0, 1)` times its weight; a measure that could not be made counts `unknown_points`
+    risk score            0 to 100 (higher is riskier): five measures (volatility, drawdown, beta, ATR and the flags; the company's size, its liquidity and the stop's distance are NOT measures: design choices entries 92 and 97), each `clip((x - safe) / (risky - safe), 0, 1)` times its weight; a measure that could not be made counts `unknown_points`
     risk level            low, medium, high or very_high from the score; very_high is allowed to nobody
 
 A recommendation is denied when its level is above what the effective tolerance allows, or when the profile excludes the symbol, its sector or its price. A SELL (`reduce`) lowers risk and is not judged here.
 """
-import math
 from dataclasses import dataclass, field
 
 from prometheus.agents.advisor.record import Recommendation
@@ -54,19 +53,14 @@ def level_of(score: float, config: Risk) -> str:
 
 
 def measure_points(measure: RiskMeasure, x: float | None, unknown: float) -> tuple[float, bool]:
-    """(points 0 to 1, whether the measure could be made). `flags` is already a share; every other measure is `clip((x - safe) / (risky - safe))`, of the absolute value or of log10 when it says so."""
+    """(points 0 to 1, whether the measure could be made). `flags` is already a share; every other measure is `clip((x - safe) / (risky - safe))`, of the absolute value when it says so."""
     if x is None:
         return unknown, False
     if measure.name == "flags":
         return clip(x), True
     if measure.abs:
         x = abs(x)
-    safe, risky = measure.safe, measure.risky
-    if measure.log:
-        if x <= 0:
-            return unknown, False
-        x, safe, risky = math.log10(x), math.log10(safe), math.log10(risky)
-    return clip((x - safe) / (risky - safe)), True
+    return clip((x - measure.safe) / (measure.risky - measure.safe)), True
 
 
 def flags_of(rec: Recommendation, fetched: dict | None, config: Risk) -> list[str]:
@@ -92,7 +86,7 @@ def assess(rec: Recommendation, view: RiskView, fetched: dict | None, price: flo
     effective, why = effective_tolerance(view, config)
     allowed = config.allowed[effective]
     out.detail = RiskDetail(tolerance_stated=stated, tolerance_effective=effective, allowed_level=allowed)
-    action, trade = rec.action.action, rec.trade
+    action = rec.action.action
     if action not in ("open", "add"):
         out.applicable = False
         return out
@@ -109,10 +103,7 @@ def assess(rec: Recommendation, view: RiskView, fetched: dict | None, price: flo
 
     # the risk score
     flags = flags_of(rec, fetched, config)
-    inputs = {
-        "stop_loss_pct": trade.stop_distance / trade.entry_mid if trade.stop_distance and trade.entry_mid else None,
-        "flags": min(1.0, config.flag_step * len(flags)),
-    }
+    inputs = {"flags": min(1.0, config.flag_step * len(flags))}
     total = 0.0
     for m in config.measures:
         x = inputs[m.name] if m.name in inputs else metric_value(fetched, m.name)

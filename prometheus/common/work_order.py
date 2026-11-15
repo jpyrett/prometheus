@@ -56,7 +56,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
-ACTION_TYPES = ("trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars")
+ACTION_TYPES = ("trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars", "lookup_symbol")
 SEARCH_ACTIONS = ("search_news", "search_filing")   # what the Data Clerk's request_data handles today: a search of stored text (the other actions are refused by verify_request)
 ACTION_SOURCE = {"search_filing": "filings"}       # an action that belongs to one source, and the source that has only that action: both directions are checked (entry 37)
 SOURCE_ACTION = {source: action for action, source in ACTION_SOURCE.items()}
@@ -142,7 +142,7 @@ class WorkOrder(BaseModel):
     requester: str = "user"
     created_utc: str
     query: str                                  # the request in the user's own words: the Data Clerk's question
-    action_type: Literal["trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars"] = "search_news"
+    action_type: Literal["trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars", "lookup_symbol"] = "search_news"
     subject: str | list[str] | None = None      # a symbol, a list of symbols, or a term such as "memory stocks". Press releases and filings: ARGUMENT #1, the symbol (one)
     company: str | None = None                  # the company's name: for news, when the symbol was looked up from a name ("Procter & Gamble Co"), so that the Data Clerk can use it.
                                                 # Press releases and filings: ARGUMENT #2, the name to look up when the symbol is not given or not found
@@ -173,6 +173,9 @@ class WorkOrder(BaseModel):
     bars: dict | None = None                    # a `fetch_bars` order: the range to read, {"start": "YYYY-MM-DD", "end": "YYYY-MM-DD"} (`verify_bar_request` says what is allowed)
     trades: list[dict] = Field(default_factory=list)       # the Trader: one trade per ticket (prometheus/agents/trader/record.py `Trade`), each joined to a decision by `record_id`; `TRADE_STATUSES`
     trader_runs: list[dict] = Field(default_factory=list)  # one record per Trader run: the model, the mode, the tool calls, the summary, the account before and after, what was dropped, errors
+    # A DIRECT ORDER (design choices entry 87): the user named the trade ("Buy 50 shares of MSFT"), so there is no recommendation and no review. The Account Manager writes one record per trade here (`DIRECT_KEYS`) and
+    # its decision for it carries `origin: "direct"`; `verify_trade` accepts such a decision only while the order holds the user's matching record.
+    direct_orders: list[dict] = Field(default_factory=list)
 
 
 def new_work_order(query: str, *, requester: str = "user", action_type: str = "search_news", subject=None, source: str = "news",
@@ -185,7 +188,7 @@ def new_work_order(query: str, *, requester: str = "user", action_type: str = "s
         schema_version=2 if (metrics is not None or case is not None or sector is not None or verify is not None or bars is not None) else 1, request_id=uuid.uuid4().hex[:12], requester=requester, created_utc=_now(), query=query, action_type=action_type,
         subject=subject, company=company, source=source, time_period=time_period, since_days=since_days, live=live, top_k=top_k, criteria=criteria,
         status="new", resolved=None, data=None, recommendations=[], advisor_runs=[], errors=[], metrics=metrics, case=case, sector=sector, candidates=[], verify=verify,
-        reviews=[], critic_runs=[], trade_decisions=[], bars=bars, trades=[], trader_runs=[])
+        reviews=[], critic_runs=[], trade_decisions=[], bars=bars, trades=[], trader_runs=[], direct_orders=[])
 
 
 def verify_request(order: WorkOrder) -> list[str]:
@@ -240,6 +243,26 @@ def verify_quote_request(order: WorkOrder) -> list[str]:
         reasons.append("a quote request needs one or more ticker symbols as its subject")
     elif len(symbols) > MAX_QUOTE_SYMBOLS:
         reasons.append(f"a quote request is for at most {MAX_QUOTE_SYMBOLS} symbols at a time")
+    if order.status in HAS_DATA:
+        reasons.append(f"the order already has its data (status {order.status})")
+    return reasons
+
+
+SYMBOL_ACTION = "lookup_symbol"
+MAX_LOOKUP_NAMES = 10     # the company names of one direct request (`MAX_COUNT` of the intent form): one Finnhub search each, paced
+
+
+def verify_symbol_request(order: WorkOrder) -> list[str]:
+    """Why the Data Clerk may NOT answer this `lookup_symbol` order (`DataClerk.request_symbols`, design choices entry 88); an empty list means it may. The subject is a list of 1 to `MAX_LOOKUP_NAMES` stocks as
+    the user typed them, each a ticker (in capitals) or a company name: text of letters, digits, spaces and & . , ' - / ( ) !, at most 60 characters. Its own check, as the quote order's: `verify_request` is the check of a SEARCH."""
+    reasons = []
+    if order.action_type != SYMBOL_ACTION:
+        reasons.append(f"action_type {order.action_type!r} is not {SYMBOL_ACTION!r}")
+    names = [order.subject] if isinstance(order.subject, str) else list(order.subject or [])
+    if not names or not all(isinstance(n, str) and n.strip() and len(n.strip()) <= 60 and re.fullmatch(r"[A-Za-z0-9 &.,'\u2019\-/()!]+", n.strip()) for n in names):
+        reasons.append("a symbol lookup needs one or more tickers or company names as its subject (letters, digits, spaces and & . , ' - / ( ) !, at most 60 characters each)")
+    elif len(names) > MAX_LOOKUP_NAMES:
+        reasons.append(f"a symbol lookup is for at most {MAX_LOOKUP_NAMES} stocks at a time")
     if order.status in HAS_DATA:
         reasons.append(f"the order already has its data (status {order.status})")
     return reasons
@@ -391,6 +414,12 @@ VERIFY_KEYS = ("chunks", "evidence", "symbols", "company", "fresh")
 EVIDENCE_ID = re.compile(r"E\d+")
 WILL_TRADE = ("yes_auto", "yes_user", "pending_user", "no_system_denied", "no_expired", "no_funds", "no_user_denied")  # the week 5 design's WillTrade: Yes (user approved), No (system denied), No (no funds), No (user denied)
 TRADING = ("yes_auto", "yes_user")                  # the only two decisions that let the Trader trade
+NEUTRAL = "neutral"                                 # the `origin` of a decision for a company the Advisor scored NEUTRAL while ALLOW_NEUTRAL_RECOMMENDATIONS is on (entry 91): no review and no plan; the Advisor's own `order.candidates` record is its permission
+DIRECT = "direct"                                   # the `origin` of a decision made for a trade the USER named (entry 87): no recommendation, no Critic review; the order's `direct_orders` is its permission
+DIRECT_SIDES = ("buy", "sell")
+DIRECT_KEYS = ("record_id", "side", "symbol", "company", "shares", "request", "requested_utc")   # what a record of `order.direct_orders` holds: `company` is the company's name as the data source gives it (entry 88)
+DIRECT_OPTIONAL = ("typed_company", "how_many")              # entry 88: what the user typed when they named a COMPANY and not a ticker (the `symbol` is then the Data Clerk's); None when they typed the ticker
+MAX_DIRECT_SHARES = 1_000_000                       # a typing mistake, not a limit of the account: the cash and the holdings are what limit a trade
 
 
 def verify_verification_request(order: WorkOrder) -> list[str]:
@@ -467,15 +496,101 @@ def parse_utc(text) -> datetime | None:
 EXPIRY_PREFIX = "the approval ran out"      # how `verify_trade` starts the sentence about an approval whose time is over: the Trader's `tickets.permission` and the Account Manager's `approve_trade` both turn a verdict whose ONLY reason is this into `approval_expired`
 
 
+def is_neutral_candidate(candidate) -> bool:
+    """Whether this record of `order.candidates` is a company the user NAMED that the Advisor scored NEUTRAL (no strategy passed, or no edge) and that no gate stopped and that is not already held (entry 91): the only
+    kind a neutral decision may be for. A gate that failed (stale data, a red flag, an earnings report days away) is a refusal that has nothing to do with the stance, so it is never turned into an approval."""
+    return (isinstance(candidate, dict) and candidate.get("stance") == "neutral" and candidate.get("gate") is None and candidate.get("origin") == "subject" and not candidate.get("held")
+            and isinstance(candidate.get("symbol"), str))
+
+
+def neutral_candidate_of(order: WorkOrder, symbol: str) -> dict | None:
+    """The Advisor's neutral candidate record for this symbol (`is_neutral_candidate`), or None."""
+    return next((c for c in order.candidates if is_neutral_candidate(c) and c["symbol"] == symbol), None)
+
+
+def direct_order_of(order: WorkOrder, record_id: str) -> dict | None:
+    """The user's own direct order (entry 87) that a decision answers, by `record_id`, or None."""
+    return next((d for d in order.direct_orders if isinstance(d, dict) and d.get("record_id") == record_id), None)
+
+
+def verify_direct_orders(entries: list) -> list[str]:
+    """Why these records of `order.direct_orders` are not the user's orders as the Account Manager writes them; empty means they are: each is a record with the keys of `DIRECT_KEYS` (and optionally `DIRECT_OPTIONAL`), a
+    `record_id` that is text of at most 80 characters and appears once, a side of `DIRECT_SIDES`, a checked ticker AND the company's name (the two the Data Clerk found and the Account Manager appended to the work order when
+    it made it: entry 88), a whole number of shares from 1 to `MAX_DIRECT_SHARES`, and the user's own words."""
+    from prometheus.rag.loaders import check_symbol  # imported here: the order is plain data
+
+    if not isinstance(entries, list) or not entries:
+        return ["a direct order needs at least one trade the user named"]
+    reasons, seen = [], set()
+    for index, entry in enumerate(entries, 1):
+        label = f"direct order #{index}"
+        if not isinstance(entry, dict) or not set(DIRECT_KEYS) <= set(entry) <= set(DIRECT_KEYS) | set(DIRECT_OPTIONAL):
+            reasons.append(f"{label} is not a record with the keys {', '.join(DIRECT_KEYS)} (and, optionally, {', '.join(DIRECT_OPTIONAL)})")
+            continue
+        if not isinstance(entry["record_id"], str) or not 0 < len(entry["record_id"].strip()) <= 80 or entry["record_id"] in seen:
+            reasons.append(f"{label} needs a record_id that is text of at most 80 characters and is not used twice")
+        seen.add(entry["record_id"])
+        if entry["side"] not in DIRECT_SIDES:
+            reasons.append(f"{label}: the side must be one of {', '.join(DIRECT_SIDES)}")
+        try:
+            if not isinstance(entry["symbol"], str) or check_symbol(entry["symbol"]) != entry["symbol"]:
+                raise ValueError
+        except ValueError:
+            reasons.append(f"{label}: the symbol is not a checked ticker")
+        if not (isinstance(entry.get("company"), str) and entry["company"].strip()):
+            reasons.append(f"{label}: the work order has no company name for it (the Data Clerk finds it and the Account Manager appends it)")
+        if entry.get("typed_company") is not None and (not isinstance(entry["typed_company"], str) or not entry["typed_company"].strip()):
+            reasons.append(f"{label}: typed_company is text, or None when the user typed the ticker")
+        shares = entry["shares"]
+        if shares is not None and (not isinstance(shares, int) or isinstance(shares, bool) or not 1 <= shares <= MAX_DIRECT_SHARES):
+            reasons.append(f"{label}: the shares must be a whole number from 1 to {MAX_DIRECT_SHARES:,}, or None while the user has given no number and the Account Manager has not sized the order (design choices entry 98)")
+        if entry.get("how_many") not in (None, "typed", "asked", "cash", "budget"):
+            reasons.append(f"{label}: how_many is typed, asked, cash or budget (where the number of shares came from), or None")
+        if not isinstance(entry["request"], str) or not entry["request"].strip():
+            reasons.append(f"{label} carries no words of the user's")
+    return reasons
+
+
 def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
     """Why the Trader may NOT trade this recommendation; an empty list means it may. This is the Trader's precondition (rule T1 of design/trader_v1_final_spec.md): `tickets.permission` asks it when a ticket is built and
     `PaperBroker.place` asks it again for every trade it places (the model's `place_order`, the sweep, and a resting order judged again), so that no code path can trade without a verdict and a permission. A trade needs ALL of: a review of the recommendation that approved it; a decision that says `yes_auto` or `yes_user`; an approval that has not run out (`valid_until_utc`:
-    the price check is old after it); at least one share. The number of shares is the Account Manager's (the decision's): the Critic approves a recommendation and no size, so there is no review number to compare it with."""
+    the price check is old after it); at least one share. The number of shares is the Account Manager's (the decision's): the Critic approves a recommendation and no size, so there is no review number to compare it with.
+
+    A DIRECT ORDER (design choices entry 87) is the one other way to a trade: the user named it, so there is no recommendation and no review, and the user's own order is the approval. A decision with `origin` "direct"
+    needs, instead of the review, the user's record on `order.direct_orders` (the same `record_id`, symbol and side: a buy or a sell) and not more shares than the user typed; its approval runs out at the decision's own
+    `valid_until_utc`. A decision that says it is direct and finds no such record on the order is refused, so the word alone permits nothing.
+
+    A NEUTRAL RECOMMENDATION (design choices entry 91) is the third way: while the Account Manager's setting ALLOW_NEUTRAL_RECOMMENDATIONS is on, a company the user named that the Advisor scored neutral counts as approved.
+    A decision with `origin` "neutral" needs, instead of the review, the Advisor's own neutral record of that symbol on `order.candidates` (`is_neutral_candidate`), is only a purchase, has no review beside it, and runs out at
+    its own `valid_until_utc`. The word alone permits nothing here either, and a Critic denial is never turned into this: a denied recommendation has a review, and a neutral candidate never had one."""
     if not isinstance(now, datetime) or now.tzinfo is None:
         raise ValueError("now must be a datetime with a timezone")
     review, decision = review_of(order, record_id), decision_of(order, record_id)
+    direct = direct_order_of(order, record_id) if decision is not None and decision.get("origin") == DIRECT else None
+    neutral = decision is not None and decision.get("origin") == NEUTRAL
     reasons = []
-    if review is None:
+    if neutral:
+        # a company the Advisor scored neutral, while the Account Manager's setting treats that as approved (entry 91): the Advisor's own record on the order is the permission, and no review stands in for it
+        if neutral_candidate_of(order, decision.get("symbol")) is None:
+            reasons.append(f"the decision for {record_id} says it is a neutral recommendation, but the work order holds no neutral score of the Advisor's for {decision.get('symbol')!r}")
+        if decision.get("action") not in ("open", "add"):
+            reasons.append("a neutral recommendation is only a purchase")
+        if review is not None:
+            reasons.append("a neutral recommendation has no Critic review: the work order holds one for it")
+    elif decision is not None and decision.get("origin") == DIRECT:
+        if direct is None:
+            reasons.append(f"the decision for {record_id} says it is the user's direct order, but the work order holds no such order of the user's")
+        else:
+            if decision.get("symbol") != direct["symbol"] or ("sell" if decision.get("action") == "reduce" else "buy") != direct["side"]:
+                reasons.append(f"the decision is not the user's order: the user typed {direct['side']} {direct['symbol']}")
+            if direct["shares"] is None:
+                reasons.append("the user's order holds no number of shares: the Account Manager has not sized it (the user wrote none)")
+            elif isinstance(decision.get("shares"), int) and decision["shares"] > direct["shares"]:
+                reasons.append(f"the decision gives {decision['shares']} shares but the user typed {direct['shares']}" if direct.get("how_many") in (None, "typed")
+                               else f"the decision gives {decision['shares']} shares but the user's order holds {direct['shares']} ({direct['how_many']})")
+        if review is not None:
+            reasons.append("a direct order has no Critic review: the work order holds one for it")
+    elif review is None:
         reasons.append(f"there is no Critic review of recommendation {record_id}")
     elif not review.get("approved"):
         reasons.append("the Critic did not approve it")
@@ -483,12 +598,13 @@ def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
         reasons.append(f"there is no trade decision for recommendation {record_id}")
     elif decision.get("will_trade") not in TRADING:
         reasons.append(f"the trade decision is {decision.get('will_trade')!r}, not one of {', '.join(TRADING)}")
-    if review is not None and review.get("approved"):
-        until = parse_utc(review.get("valid_until_utc"))
+    approval = decision if direct is not None or neutral else review if review is not None and review.get("approved") else None
+    if approval is not None:
+        until = parse_utc(approval.get("valid_until_utc"))
         if until is None:
             reasons.append("the approval has no valid_until_utc")
         elif now > until:
-            reasons.append(f"{EXPIRY_PREFIX} at {review['valid_until_utc']}: the price must be checked again")
+            reasons.append(f"{EXPIRY_PREFIX} at {approval['valid_until_utc']}: the price must be checked again")
     if decision is not None and decision.get("will_trade") in TRADING:
         shares = decision.get("shares")
         if not isinstance(shares, int) or isinstance(shares, bool) or shares < 1:

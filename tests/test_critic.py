@@ -55,7 +55,7 @@ def test_a_healthy_recommendation_is_approved_for_an_hour_and_the_review_carries
     assert r["approved"] and r["blockers"] == [] and r["valid_until_utc"] == "2026-11-05T16:30:00Z"
     assert not {"approved_shares", "suggested_shares"} & set(r) and not {"equity", "equity_basis", "caps", "allowed_shares"} & set(r["risk"]) and "size_reduced" not in [w["code"] for w in r["warnings"]]
     assert (r["score"], r["grade"]) == (88, "B") and r["summary"].startswith("APPROVE PG: score 88 (B)") and "share" not in r["summary"]
-    assert {n: d["points"] for n, d in r["dimensions"].items()} == {"accuracy": 30.0, "evidence": 15.0, "risk_fit": 18.84, "timing": 10.0, "value": 6.58, "chart": 7.5}
+    assert {n: d["points"] for n, d in r["dimensions"].items()} == {"accuracy": 30.0, "evidence": 15.0, "risk_fit": 18.56, "timing": 10.0, "value": 6.58, "chart": 7.5}
 
 
 def test_every_check_runs_for_every_record_even_when_the_first_blocker_is_found():
@@ -231,15 +231,7 @@ def test_the_same_recommendation_is_judged_by_the_users_profile():
     assert r["risk"]["tolerance_effective"] == "conservative" and r["risk"]["allowed_level"] == "low"
 
 
-def test_the_users_size_limits_are_not_the_critics_so_no_limit_can_change_a_review():
-    """The profile's four size limits (position, loss, new exposure, order dollars) are the Account Manager's: `risk_view()` leaves them out, so the strictest of profiles gives the same review as the default."""
-    strip = lambda r: {k: v for k, v in r.items() if k not in ("review_id", "audit")}
-    plain = review(captured("PG_open"))["PG"]
-    strict = review(captured("PG_open"), view_=view(max_position_pct=0.001, max_loss_per_trade_pct=0.0001, max_new_exposure_pct=0.001, max_order_dollars=1.0))["PG"]
-    assert strip(strict) == strip(plain) and strict["approved"]
-
-
-def test_the_critic_sees_the_limits_never_the_mode_so_the_verdict_cannot_depend_on_ask_or_auto():
+def test_the_critic_never_sees_the_mode_so_the_verdict_cannot_depend_on_ask_or_auto():
     ask = review(captured("PG_open"), view_=profile(trade_mode="ask").risk_view())["PG"]
     auto = review(captured("PG_open"), view_=profile(trade_mode="auto", auto_min_score=10).risk_view())["PG"]
     strip = lambda r: {k: v for k, v in r.items() if k not in ("review_id", "audit")}
@@ -260,9 +252,6 @@ def test_each_recommendation_is_reviewed_on_its_own_there_is_no_running_exposure
     first, second = order.reviews
     assert first["approved"] and second["approved"] and first["blockers"] == second["blockers"] == []
     assert not any(w["code"] == "size_reduced" for r in order.reviews for w in r["warnings"]) and not any("exposure" in b["code"] for r in order.reviews for b in r["blockers"])
-    crowded = two_records()
-    make_critic(crowded).review_recommendations(crowded, view(max_new_exposure_pct=0.0001), NOW)
-    assert [r["approved"] for r in crowded.reviews] == [True, True] and [r["score"] for r in crowded.reviews] == [first["score"], second["score"]]
 
 
 # ---------------------------------------------------------------- value: the deal and the bonus

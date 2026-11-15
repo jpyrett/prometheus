@@ -15,34 +15,20 @@ def profile(**kw) -> UserProfile:
     return UserProfile(**{"user": "T", "risk_tolerance": "moderate", **kw})
 
 
-def test_the_sample_profile_loads_and_matches_the_sample_portfolio_user():
-    p = load_profile(SAMPLE)
-    assert (p.risk_tolerance, p.trade_mode, p.age, p.investment_horizon_years) == ("moderate", "ask", None, None)
-    assert (p.max_position_pct, p.max_loss_per_trade_pct, p.max_new_exposure_pct, p.min_price) == (0.10, 0.01, 0.30, 5.0)
-    assert p.user == load_portfolio(REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett.json").user
-
-
 def test_the_tolerances_run_from_the_least_risk_to_the_most():
     assert TOLERANCES == ("conservative", "moderate", "aggressive")
 
 
 @pytest.mark.parametrize("field, bad", [
-    ("age", 17), ("age", 121), ("investment_horizon_years", 0), ("auto_min_score", -1), ("auto_min_score", 101), ("max_position_pct", 0), ("max_position_pct", 1.01),
-    ("max_loss_per_trade_pct", 0), ("max_new_exposure_pct", 1.5), ("max_order_dollars", 0), ("min_price", -1), ("risk_tolerance", "reckless"), ("trade_mode", "manual"), ("user", "")])
+    ("age", 17), ("age", 121), ("investment_horizon_years", 0), ("auto_min_score", -1), ("auto_min_score", 101), ("min_price", -1), ("risk_tolerance", "reckless"), ("trade_mode", "manual"), ("user", "")])
 def test_each_bound_is_checked(field, bad):
     with pytest.raises(ValidationError):
         profile(**{field: bad})
 
 
-@pytest.mark.parametrize("field, ok", [("age", 18), ("age", 120), ("max_position_pct", 1), ("max_loss_per_trade_pct", 1), ("min_price", 0), ("auto_min_score", 0), ("auto_min_score", 100)])
+@pytest.mark.parametrize("field, ok", [("age", 18), ("age", 120), ("min_price", 0), ("auto_min_score", 0), ("auto_min_score", 100)])
 def test_each_bound_is_inclusive_where_the_spec_says_so(field, ok):
     assert getattr(profile(**{field: ok}), field) == ok
-
-
-def test_excluded_symbols_are_cleaned_and_a_bad_one_is_refused():
-    assert profile(excluded_symbols=["$tsla".upper(), "GM", "GM"]).excluded_symbols == ["TSLA", "GM"]
-    with pytest.raises(ValidationError):
-        profile(excluded_symbols=["../etc"])
 
 
 def test_excluded_sectors_must_be_sector_etfs():
@@ -56,31 +42,6 @@ def test_an_unknown_field_is_an_error_not_ignored():
         profile(risk_toleranse="high")
 
 
-def test_the_risk_view_has_what_a_company_is_judged_by_and_neither_the_name_nor_the_mode_nor_any_size_limit():
-    """Design choices entry 80: the Critic only deals with recommendations, so its view of the user holds no size limit (the user's money is the Account Manager's, `SizingLimits`)."""
-    view = profile(age=65, investment_horizon_years=2.5, trade_mode="auto", auto_min_score=90, max_order_dollars=5000, excluded_symbols=["GM"], excluded_sectors=["XLE"]).risk_view()
-    assert isinstance(view, RiskView)
-    assert set(RiskView.model_fields) == {"risk_tolerance", "age", "investment_horizon_years", "min_price", "excluded_symbols", "excluded_sectors"}
-    dumped = json.dumps(view.model_dump())
-    assert "trade_mode" not in dumped and "auto_min_score" not in dumped and '"user"' not in dumped and "max_" not in dumped and "5000" not in dumped
-    assert (view.age, view.investment_horizon_years, view.excluded_symbols, view.excluded_sectors) == (65, 2.5, ("GM",), ("XLE",))
-
-
-def test_the_risk_view_cannot_hold_a_size_limit_so_the_critic_cannot_know_the_users_money():
-    """`extra="forbid"`: this is structural, not a convention. Each of the four limits the view used to carry is refused, and the profile still has them for the Account Manager's `sizing_limits()`."""
-    for name, value in (("max_position_pct", 0.1), ("max_loss_per_trade_pct", 0.01), ("max_new_exposure_pct", 0.3), ("max_order_dollars", 5000.0)):
-        with pytest.raises(ValidationError):
-            RiskView(risk_tolerance="moderate", min_price=5.0, **{name: value})
-        assert not hasattr(profile().risk_view(), name) and getattr(profile(), name, "missing") != "missing"
-    limits = profile(max_position_pct=0.2, max_order_dollars=5000).sizing_limits()
-    assert (limits.max_position_pct, limits.max_order_dollars) == (0.2, 5000)
-
-
-def test_the_risk_view_cannot_be_changed():
-    with pytest.raises(ValidationError):
-        profile().risk_view().min_price = 1.0
-
-
 def test_a_bad_file_is_reported_with_its_name(tmp_path):
     for name, text, message in [("none.json", None, "does not exist"), ("bad.json", "{", "not valid JSON"), ("wrong.json", '{"user": "T"}', "risk_tolerance")]:
         path = tmp_path / name
@@ -89,3 +50,11 @@ def test_a_bad_file_is_reported_with_its_name(tmp_path):
         with pytest.raises(ValueError, match=message) as error:
             load_profile(path)
         assert name in str(error.value)
+
+
+@pytest.mark.parametrize("field", ["max_position_pct", "max_loss_per_trade_pct", "max_new_exposure_pct", "max_order_dollars"])
+def test_the_profile_has_no_size_limit_and_one_in_a_file_is_refused_not_ignored(field):
+    """Design choices entry 91 (Jacob, 2026-11-15: "I do not want any of these limits"): the four size limits are not part of the profile. A profile file that still names one is an error, so no old file silently keeps a limit that nothing applies."""
+    assert field not in UserProfile.model_fields and not hasattr(profile(), "sizing_limits")
+    with pytest.raises(ValidationError, match=field):
+        profile(**{field: 0.1})

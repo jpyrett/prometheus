@@ -2,8 +2,8 @@
 
     order = decide_trades(order, portfolio, profile, auto_min_score, approver, now, mode, balance, budget, prices)        # status "reviewed" -> "decided" (or stays "reviewed" while a user's answer is pending); a "decided" or "traded" order comes back unchanged
 
-The Advisor writes recommendations and the Critic approves or denies each one; NEITHER decides how much to buy or sell. That is decided here, from the user's money, the user's limits and what the user said
-(`sizing.size_purchases`: the position, loss, order and liquidity limits, the exposure room, the cash and the budget). For each review, in order, the FIRST row that fits (`will_trade` is the week 5 design's WillTrade):
+The Advisor writes recommendations and the Critic approves or denies each one; NEITHER decides how much to buy or sell. That is decided here, from the user's money and what the user said
+(`sizing.size_purchases`: the cash, the budget and the amount asked for: THE ONLY CHECK IS THAT THE FUNDS COVER THE ORDER, design choices entry 91; no limit of the profile applies). For each review, in order, the FIRST row that fits (`will_trade` is the week 5 design's WillTrade):
 
     not approved                                              no_system_denied   final: the user is never asked to override a denial
     approved, but `now` is after `valid_until_utc`            no_expired         the price check is old
@@ -16,17 +16,16 @@ is the WHOLE HOLDING of the symbol (from the portfolio). NO CASH IS RESERVED (Ja
 cash again when it places each order.
 
 THE SIZE (entry 80). After the rows above, EVERY approved, unexpired purchase (an `open` or an `add`: those that will trade on their own and those that wait for the user) is sized in ONE call of `sizing.size_purchases`,
-so that the user is shown the FINAL shares and cost. The price is the Critic's deal price (else the plan's entry mid); the stop distance and the rank come from the Advisor's record; the average daily dollars from its
-risk numbers; the shares already held from the PORTFOLIO (the Account Manager's own knowledge); the equity from the portfolio and `prices` (the current prices of the symbols it holds: `sizing.equity_of`). The
-ALLOCATION, that is how the money is spread over the purchases:
+so that the user is shown the FINAL shares and cost. The price is the Critic's deal price (else the plan's entry mid) and the rank comes from the Advisor's record; the equity (for the record and for "20% of my account") comes from the portfolio and `prices` (the current prices of
+the symbols it holds: `sizing.equity_of`). Nothing else bounds a purchase: no limit of the profile, no stop, no volume (entry 91). The ALLOCATION, that is how the money is spread over the purchases:
 
     `balance="even"`          equal DOLLARS for every purchase (the user said "split it evenly"); each decision carries `balance` {mode, target_dollars, of}
     `balance="round_robin"`   one share of each purchase at a time, in rank order, until the funds are used (what Auto mode does when nothing was asked)
     no `balance`, Auto mode   round robin: "take the available funds, buy a share of the first stock, a share of the next, until the requested funds are used up" (Jacob, 2026-11-14)
-    no `balance`, Ask mode    as much as the user's limits allow, in rank order (the user sees the largest order and decides)
+    no `balance`, Ask mode    as much as the cash allows, in rank order (the user sees the largest order and decides)
 
 `budget` is the funds requested (dollars; the cash when left out, and never more than the cash): the pot of the round robin and of the even split. A purchase that sizes to no share becomes `no_funds` with the sizing's reason
-and is not asked about. Each sized purchase carries `decision["size"]`: shares, the caps of every limit, `binding` (what decided the number), the equity and what it was worked out from, the notes, and the allocation.
+and is not asked about. Each sized purchase carries `decision["size"]`: shares, the caps (the cash and the budget), `binding` (what decided the number), the equity and what it was worked out from, the notes, and the allocation.
 `sizing.funds_check` then asks whether the cost could exist (cash, or RaiseFunds from holdings in profit).
 
 The Trader (Trader v1, `prometheus/agents/trader/`) reads these decisions: it makes one ticket for each that says `yes_auto` or `yes_user` and nothing for any other, and every trade it places passes
@@ -35,7 +34,7 @@ The Trader also asks the user, through the same `approver`, whether the sells th
 trades nothing, and calls no API or model: the prices are given.
 
 HOW MUCH, FROM THE USER (entry 85). In Ask mode the Account Manager first asks the user how much to buy when the request did not say (`clarify.py`, a bounded ReAct loop): what comes out is `balance`, `budget`, `wanted` (the
-shares the user's words came to for each purchase) and `limit_overrides` (a limit the user raised for this purchase), and this module sizes under them like any other request: the purchase never gets more than `wanted`.
+shares the user's words came to for each purchase) and this module sizes under them like any other request: the purchase never gets more than `wanted`.
 
 ASK (entry 79): the user approves the order that WILL be placed, not a draft of it. The sizes are made first, over every purchase that may trade (those that trade on their own and those that wait for the user); only
 then is the user asked, one purchase at a time, each card showing the final shares and cost and the whole proposal (`terminal_approver` prints it before the first question). A "no" leaves the other purchases at the
@@ -55,7 +54,7 @@ from prometheus.common.trading_clock import trading_now
 from prometheus.common.work_order import WorkOrder, decision_of, parse_utc, review_of
 
 MODES = ("ask", "auto")
-BALANCES = ("even", "round_robin")      # what the user may ask for; the third way (as much as the limits allow) is what Ask mode does when nothing is asked
+BALANCES = ("even", "round_robin")      # what the user may ask for; the third way (as much as the cash allows) is what Ask mode does when nothing is asked
 
 
 def _aware(now: datetime | None) -> datetime:
@@ -159,22 +158,20 @@ def _ask_the_user(order: WorkOrder, to_ask: list, approver, cash: float) -> None
 
 
 def _purchase(review: dict, record: dict, portfolio: Portfolio, rank_after: int) -> sizing.Purchase:
-    """One approved purchase as the plain numbers the sizing takes: the price, the plan's stop distance, the Advisor's average daily dollars and its rank come from the record and the Critic's review; the shares already
-    held come from the PORTFOLIO (the Account Manager's own knowledge, never the record's)."""
+    """One approved purchase as the plain numbers the sizing takes: the price (the Critic's deal price, else the plan's entry mid) and the rank of the recommendation. Nothing else: the funds are the only check (entry 91)."""
     trade, rank = record.get("trade") or {}, (record.get("ranking") or {}).get("rank")
-    held = portfolio.position(review["symbol"])
-    return sizing.Purchase(record_id=review["record_id"], symbol=review["symbol"], action=review["action"], price=review["timing"].get("deal_price") or trade.get("entry_mid"), stop_distance=trade.get("stop_distance"),
-                           held_shares=held.shares if held else 0, adv_20d_dollars=(record.get("risk") or {}).get("adv_20d_dollars"), rank=rank if isinstance(rank, int) and rank >= 0 else rank_after)
+    return sizing.Purchase(record_id=review["record_id"], symbol=review["symbol"], action=review["action"], price=review["timing"].get("deal_price") or trade.get("entry_mid"),
+                           rank=rank if isinstance(rank, int) and rank >= 0 else rank_after)
 
 
 def _size(order: WorkOrder, buying: list[dict], context: dict, portfolio: Portfolio, profile: UserProfile, prices: dict[str, float], allocation: str | None, budget: float | None, now: datetime,
-          wanted: dict[str, int] | None = None, limit_overrides: dict | None = None) -> None:
+          wanted: dict[str, int] | None = None) -> None:
     """Size every purchase in `buying` (decisions, changed in place) in ONE call of `sizing.size_purchases` (see the module text): the shares, the cost, `size`, and for an even split `balance`. A purchase that sizes to no share
     becomes `no_funds` with the sizing's reason; one that is sized goes through the funds check."""
     equity, basis = sizing.equity_of(portfolio, prices)
     try:
-        results = sizing.size_purchases([_purchase(context[d["record_id"]][0], context[d["record_id"]][1], portfolio, len(order.reviews)) for d in buying], equity, portfolio.cash_avail, profile.sizing_limits(),
-                                        allocation=allocation, budget=budget, wanted=wanted, limit_overrides=limit_overrides)
+        results = sizing.size_purchases([_purchase(context[d["record_id"]][0], context[d["record_id"]][1], portfolio, len(order.reviews)) for d in buying], portfolio.cash_avail,
+                                        allocation=allocation, budget=budget, wanted=wanted)
     except ValueError as error:  # only a program gets these wrong (two records with one id, a price that is not a number): a message on the order, and nothing is bought
         order.errors = [*order.errors, f"the purchases could not be sized: {error}"]
         results = None
@@ -193,14 +190,13 @@ def _size(order: WorkOrder, buying: list[dict], context: dict, portfolio: Portfo
 
 
 def decide_trades(order: WorkOrder, portfolio: Portfolio, profile: UserProfile, auto_min_score: int, approver=None, now: datetime | None = None, mode: str | None = None,
-                  balance: str | None = None, budget: float | None = None, prices: dict[str, float] | None = None, wanted: dict[str, int] | None = None,
-                  limit_overrides: dict | None = None) -> WorkOrder:
+                  balance: str | None = None, budget: float | None = None, prices: dict[str, float] | None = None, wanted: dict[str, int] | None = None) -> WorkOrder:
     """Turn every review into a trade decision, and size it (see the module text); return the SAME order. `auto_min_score` is the Critic's own mark for trading without asking; the profile's
     `auto_min_score` replaces it when it has one. `approver` is called with the scorecard (a dict with `text`) of each recommendation that needs the user and returns True, False, or None (no answer);
     without one the decision is `pending_user`. `mode` overrides the profile's `trade_mode` for this run. `balance` ("even" or "round_robin") says how the money is spread over the purchases, and `budget` is the funds
-    requested (dollars; the cash when left out). With no `balance` Auto mode spends round-robin and Ask mode gives as much as the limits allow. `prices` is {symbol: the current price} of the symbols the portfolio HOLDS, for the
+    requested (dollars; the cash when left out). With no `balance` Auto mode spends round-robin and Ask mode gives as much as the cash allows. `prices` is {symbol: the current price} of the symbols the portfolio HOLDS, for the
     equity and the funds check (a holding with no price counts at its cost basis): this function calls no API, the Account Manager fetches them. `wanted` ({record_id: whole shares}) is how many shares the user's own
-    words came to for each purchase (entry 85: the Account Manager's questions about how much; the purchase never gets more) and `limit_overrides` the limits the user raised for this call (`sizing.size_purchases`).
+    words came to for each purchase (entry 85: the Account Manager's questions about how much; the purchase never gets more).
     Never raises for the user's side of things: a refusal is a message on the order."""
     now = _aware(now)
     if order.status in ("decided", "traded"):   # decided already; or decided and then traded by the Trader (Trader v1): neither is decided again
@@ -250,7 +246,7 @@ def decide_trades(order: WorkOrder, portfolio: Portfolio, profile: UserProfile, 
                 to_ask.append((decision, review, record, why_user))
         decisions.append(decision)
     if buying:      # over what trades on its own AND what waits for the user, so that the user is shown the size that will be placed
-        _size(order, buying, context, portfolio, profile, prices or {}, balance or ("round_robin" if mode == "auto" else None), budget, now, wanted, limit_overrides)
+        _size(order, buying, context, portfolio, profile, prices or {}, balance or ("round_robin" if mode == "auto" else None), budget, now, wanted)
     order.trade_decisions = decisions
     _ask_the_user(order, to_ask, approver, cash)
     feedback.attach_decisions(order)

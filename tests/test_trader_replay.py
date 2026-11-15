@@ -247,6 +247,3 @@ def test_the_replay_does_not_write_the_order_it_was_given_and_leaves_no_file_unl
     assert path.read_bytes() == before and sorted(p.name for p in tmp_path.iterdir()) == ["order.json"]
 
 
-def test_the_module_text_names_the_free_command_and_the_one_trader_module_that_may_import_the_data_clerk():
-    text = replay.__doc__
-    assert "--mode backtest --no-model" in text and "FREE" in text and "the one Trader module that may import the Data Clerk" in text

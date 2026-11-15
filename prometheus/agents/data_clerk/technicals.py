@@ -19,7 +19,7 @@ MIN_BARS = {
     "breakout_20d": 21, "gap_1d": 2, "candle_reversal_1d": 2,
     "rsi_14": 30, "macd_hist": 60, "bollinger_pct_b": 20, "zscore_21d": 21, "adx_14": 40, "atr_14": 20, "atr_pct": 20, "obv_20d_change": 21, "stoch_k_14": 14,
     "vol_21d_ann": 22, "vol_63d_ann": 64, "max_drawdown_63d": 63, "beta_63d": 64, "corr_63d_spy": 64,
-    "adv_20d_dollars": 20, "volume_ratio_1d": 21,
+    "volume_ratio_1d": 21,
     "sma_50_vs_200": 200, "cross_50_200_20d": 220, "structure_63d": 63,   # chart patterns the Critic reads (Critic v1 Amendment 1, design choices entry 62)
     "decline_from_peak_63d": 63, "rebound_from_trough_63d": 63, "sessions_since_trough_63d": 63,
     "sma_126": 126, "high_126d": 126, "low_126d": 126,   # the six-month average, high and low: what the Critic judges a price against (Critic v1 spec 5.1)
@@ -303,7 +303,7 @@ def stoch_k_14(bars: list[Bar]) -> float | None:
     return None if high == low else (bars[-1].close - low) / (high - low) * 100
 
 
-# ---------------------------------------------------------------- volatility, risk, liquidity
+# ---------------------------------------------------------------- volatility and risk
 
 def vol_ann(bars: list[Bar], n: int) -> float | None:
     """The sample standard deviation of the last n daily LOG returns times the square root of 252."""
@@ -344,13 +344,6 @@ def beta_and_corr(bars: list[Bar], spy: list[Bar], n: int = 63) -> tuple[float |
     beta = None if var_market == 0 else cov / var_market
     corr = None if var_market == 0 or var_own == 0 else cov / math.sqrt(var_market * var_own)
     return beta, corr
-
-
-def adv_20d_dollars(bars: list[Bar]) -> float | None:
-    """The mean of `close * volume` over the last 20 bars."""
-    if not _enough(bars, "adv_20d_dollars"):
-        return None
-    return fmean([b.close * b.volume for b in bars[-20:]])
 
 
 def volume_ratio_1d(bars: list[Bar]) -> float | None:

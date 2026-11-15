@@ -10,7 +10,7 @@ deal price) and the Advisor's trade plan (`recommendation["trade"]`: the entry z
     side             `sell` when the decision's action is `reduce`, else `buy`: there is no short sale
     shares_approved  the decision's shares: the Trader never trades more
     shares           a sale: min(shares_approved, the shares sellable today: the T+1 rule). A purchase: shares_approved, cut for cash when it is placed
-    ref_price        the review's `timing.deal_price`, else the plan's `entry_mid`
+    ref_price        the review's `timing.deal_price`, else the plan's `entry_mid`, else (a direct order, entry 87: no review, no plan) the decision's own `price`
     limits, a buy    high = min(the entry zone's top, ref (1 + max_chase_pct)), low = max(the zone's bottom, ref (1 - limit_band_pct)); without a zone only the percentages apply
     limits, a sale   low = ref (1 - max_chase_pct), high = ref (1 + limit_band_pct)
     default order    the Advisor's own plan: a limit at the plan's `limit_price`, moved inside the limits; a market order when the plan has no limit price (a limit at the reference price when market orders are off)
@@ -125,7 +125,7 @@ def build_tickets(order: WorkOrder, portfolio: Portfolio, now: datetime, config:
         base = dict(trade_id=f"T{number}", kind="recommendation", record_id=record_id, review_id=review.get("review_id") or decision.get("review_id"), symbol=symbol, side=side, shares_approved=approved, mode=mode)
         number += 1
         ref = (review.get("timing") or {}).get("deal_price")
-        ref = float(ref) if usable(ref) else float(plan["entry_mid"]) if usable(plan.get("entry_mid")) else None
+        ref = float(ref) if usable(ref) else float(plan["entry_mid"]) if usable(plan.get("entry_mid")) else float(decision["price"]) if usable(decision.get("price")) else None   # a direct order (entry 87) has no review and no plan: the quote the Account Manager priced it at is on its decision
         code, reason = permission(order, record_id, now)
         if side == "sell":
             position = portfolio.position(symbol)
@@ -139,6 +139,9 @@ def build_tickets(order: WorkOrder, portfolio: Portfolio, now: datetime, config:
             tickets.append(Trade(**base, shares=0, ref_price=ref, status="rejected", reject_code="not_held", reason=f"the portfolio does not hold {symbol}, and there is no short sale"))
         elif side == "sell" and shares == 0:
             tickets.append(Trade(**base, shares=0, ref_price=ref, status="rejected", reject_code="not_sellable_today", reason=f"every share of {symbol} was bought today, and a share cannot be sold the day it was bought (T+1)"))
+        elif side == "sell" and decision.get("origin") == "direct" and shares < approved:      # the user named this sale (entry 87): it is placed as typed or not at all, never cut to the shares sellable today
+            tickets.append(Trade(**base, shares=shares, ref_price=ref, status="rejected", reject_code="not_sellable_today",
+                                 reason=f"you asked to sell {approved} shares of {symbol} and only {shares} can be sold today (a share cannot be sold the day it was bought: T+1): the order is placed as you typed it or not at all"))
         elif ref is None:
             tickets.append(Trade(**base, shares=shares, status="rejected", reject_code="price_unavailable", reason="there is no price to judge the trade by: neither the Critic's deal price nor the plan's entry price"))
         elif (limits := limit_range(side, ref, plan.get("entry_zone"), config)) is None:

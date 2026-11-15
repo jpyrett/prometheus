@@ -13,7 +13,7 @@ THE FIXTURE WAS MIGRATED (design choices entry 80). It is the real record of a r
 fields the Critic no longer has were stripped one time (`approved_shares`, `suggested_shares` and the equity, equity basis, caps and `allowed_shares` of each review's `risk`, the `size_reduced` warnings, the
 `size` of each recommendation's `critic` block, and the size wording of an approval's summary sentence). Every score, price, dimension, decision and fill is as it was recorded. Its `risk` scores still include the
 old position measure and its `accuracy.integrity.checked` still names the old size checks: they ran in that run. The shares of 8 and 8 that the Account Manager decides now are the same as the live run's, worked out
-again by the Account Manager's own sizing from the record's own numbers (the deal price, the plan's stop distance, the Advisor's average daily dollars and the account's money).
+again by the Account Manager's own sizing from the record's own numbers (the deal price, the plan's stop distance and the account's money).
 
 IT WAS MIGRATED A SECOND TIME (design choices entry 80, step 3: the Advisor stops sizing). Its three recommendations were written under the OLD Advisor, whose trade plan carried a size (XOM 17 shares, APA 61,
 EOG 18, each cut by a 20% position cap and a 1% risk budget of the $15,000), so the fields the Advisor's record no longer has were stripped one time from each record: `trade.equity`, `equity_basis`,
@@ -56,15 +56,17 @@ def reviewed(capture) -> wo.WorkOrder:
 
 
 BOB = Portfolio(user="Bob Jones", cash_avail=15000.0)
+BUDGET = 2800.0     # THE LIVE RUN WAS SIZED UNDER THE OLD 10%-OF-THE-ACCOUNT POSITION LIMIT (XOM 8, EOG 8). Since design choices entry 91 nothing limits a purchase but the cash, so a replay that wants those sizes gives the same request an
+                    # amount to spend, which the user could have said: $2,800 split evenly is $1,400 each, which buys 8 XOM ($1,364.72) and 8 EOG ($1,266.56), as the live run did.
 PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="auto", auto_min_score=70)     # the account's own row, and the mark of the run
 
 
-def decide(capture, balance="even", budget=None, now=MOMENT, order=None, mode="auto"):
+def decide(capture, balance="even", budget=BUDGET, now=MOMENT, order=None, mode="auto"):
     return decisions.decide_trades(order or reviewed(capture), BOB, PROFILE, 80, None, now, mode, balance, budget)
 
 
 def kept(decision):
-    return {k: decision[k] for k in ("record_id", "symbol", "action", "shares", "est_cost", "mode", "will_trade", "funds_avail", "balance") if k in decision}
+    return {k: decision[k] for k in ("record_id", "symbol", "action", "shares", "est_cost", "mode", "will_trade", "funds_avail") if k in decision}
 
 
 # ---------------------------------------------------------------- what the real run was
@@ -101,17 +103,15 @@ def test_the_decisions_the_live_run_made_are_reproduced_from_the_real_reviews(ca
     assert [d["will_trade"] for d in again.trade_decisions] == ["yes_auto", "no_system_denied", "yes_auto"] or {d["will_trade"] for d in again.trade_decisions} <= {"yes_auto", "no_system_denied"}
 
 
-def test_the_even_split_gave_the_two_approved_companies_the_same_dollars_and_cut_the_dearer_one(capture):
+def test_the_even_split_gave_the_two_approved_companies_the_same_dollars(capture):
     reviews = {r["record_id"]: r for r in capture["order"]["reviews"]}
     decided = [d for d in decide(capture).trade_decisions if d["will_trade"] == "yes_auto"]
     prices = {d["record_id"]: reviews[d["record_id"]]["timing"]["deal_price"] for d in decided}
-    own = {d["record_id"]: math.floor(0.10 * 15000.0 / prices[d["record_id"]]) for d in decided}                           # the profile's 10% position limit, in whole shares: what each could be on its own
-    target = min(own[r] * prices[r] for r in own)
-    assert len(decided) == 2 and {d["balance"]["target_dollars"] for d in decided} == {round(target, 2)} and all(d["balance"]["of"] == 2 for d in decided)
+    assert len(decided) == 2 and {d["balance"]["target_dollars"] for d in decided} == {BUDGET / 2} and all(d["balance"]["of"] == 2 for d in decided)         # nothing but the money to divide: $1,400 each
     for d in decided:
         price = prices[d["record_id"]]
-        assert d["shares"] == math.floor(target / price + 1e-9) <= own[d["record_id"]] and target - d["est_cost"] < price
-    assert [own[d["record_id"]] for d in decided] == [8, 9] and [d["shares"] for d in decided] == [8, 8]                     # the real run cut EOG from 9 shares to 8
+        assert d["shares"] == math.floor(BUDGET / 2 / price + 1e-9) and BUDGET / 2 - d["est_cost"] < price
+    assert [d["shares"] for d in decided] == [8, 8]                                                                                  # what the live run placed
 
 
 def test_the_denied_company_stays_denied_and_is_not_part_of_the_split(capture):
@@ -120,14 +120,14 @@ def test_the_denied_company_stays_denied_and_is_not_part_of_the_split(capture):
     assert denied["shares"] == 0 and "balance" not in denied and denied["symbol"] == next(r["symbol"] for r in capture["order"]["reviews"] if not r["approved"])
 
 
-def test_in_auto_mode_with_no_split_asked_the_funds_are_spent_round_robin_and_each_purchase_is_what_its_own_limits_allow(capture):
+def test_in_auto_mode_with_no_split_asked_the_funds_are_spent_round_robin_until_the_money_is_used(capture):
     plain = decide(capture, balance=None).trade_decisions
     bought = [d for d in plain if d["will_trade"] == "yes_auto"]
-    assert [(d["symbol"], d["shares"], d["size"]["binding"], d["size"]["allocation"]) for d in bought] == [("XOM", 8, "position", "round_robin"), ("EOG", 9, "position", "round_robin")] and not any("balance" in d for d in plain)
-    assert all("spent round-robin" in d["reason"] for d in bought)                                                           # both reached their own position limit before the $15,000 ran out
+    assert [(d["symbol"], d["shares"], d["size"]["binding"], d["size"]["allocation"]) for d in bought] == [("XOM", 8, "budget", "round_robin"), ("EOG", 9, "budget", "round_robin")] and not any("balance" in d for d in plain)
+    assert all("spent round-robin" in d["reason"] for d in bought)                                                           # a share of each in turn: XOM 8 ($1,364.72), EOG 9 ($1,424.88): $2,789.60 of the $2,800
 
 
-def test_in_auto_mode_a_pot_smaller_than_the_limits_is_spent_a_share_at_a_time_where_the_default_gives_it_all_to_the_first(capture):
+def test_in_auto_mode_a_small_pot_is_spent_a_share_at_a_time_where_the_default_gives_it_all_to_the_first(capture):
     """A budget of $400 against XOM (170.59, rank 1) and EOG (158.32, rank 2), the real deal prices. Round robin: XOM 170.59, EOG 328.91, then 499.50 is over $400: one share of each, closed by the budget. Ask mode's
     default would take XOM's two shares (341.18) and leave $58.82, under the price of EOG: none."""
     robin = [d for d in decide(capture, balance=None, budget=400.0).trade_decisions if d["will_trade"] == "yes_auto"]
@@ -156,7 +156,7 @@ def test_a_budget_in_the_users_words_caps_the_split_by_the_real_prices(capture):
 
 def test_the_account_manager_passes_the_split_on(capture):
     manager = AccountManager(model=object(), model_id="account-book", profile=PROFILE)
-    out = manager.decide_trades(reviewed(capture), BOB, None, MOMENT, "auto", "even", None)
+    out = manager.decide_trades(reviewed(capture), BOB, None, MOMENT, "auto", "even", BUDGET)
     assert [kept(d) for d in out.trade_decisions] == [kept(d) for d in capture["order"]["trade_decisions"]]
 
 
@@ -175,7 +175,7 @@ def test_a_review_that_needs_a_person_goes_to_the_user_and_is_part_of_the_split_
 ASK = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="ask", auto_min_score=70)
 
 
-def ask_session(capture, answers, balance="even", budget=None, profile=ASK, mode="ask", order=None):
+def ask_session(capture, answers, balance="even", budget=BUDGET, profile=ASK, mode="ask", order=None):
     """`decide_trades` over the real reviews with a user who gives `answers` in turn; returns the order and the cards the user was shown."""
     cards = []
 
@@ -213,7 +213,7 @@ def test_a_no_leaves_the_other_purchase_at_the_size_the_user_saw_nothing_is_spli
 
 
 def test_with_nobody_to_ask_the_purchases_wait_at_their_final_size_and_nothing_trades(capture):
-    out = decisions.decide_trades(reviewed(capture), BOB, ASK, 80, None, MOMENT, "ask", "even", None)
+    out = decisions.decide_trades(reviewed(capture), BOB, ASK, 80, None, MOMENT, "ask", "even", BUDGET)
     assert [(d["symbol"], d["will_trade"], d["shares"], d["asked_user"]) for d in out.trade_decisions if d["will_trade"] != "no_system_denied"] == [("XOM", "pending_user", 8, False), ("EOG", "pending_user", 8, False)]
     assert out.status == "reviewed" and not any(d["will_trade"] in wo.TRADING for d in out.trade_decisions)
     out, cards = ask_session(capture, [None, None])                                                                         # the approver gave no answer (EOF): the same
@@ -221,12 +221,11 @@ def test_with_nobody_to_ask_the_purchases_wait_at_their_final_size_and_nothing_t
 
 
 def test_no_cash_is_reserved_each_purchase_may_use_all_the_funds_in_the_portfolio(capture):
-    """$2,000 in cash and $5,000 of a holding (100 shares of GM at a cost of $50): an equity of $7,000, and a user whose own limits are wide. XOM takes 11 shares ($1,876.49) and EOG 12 ($1,899.84): $3,776.33 in all, each
+    """$2,000 in cash and $5,000 of a holding (100 shares of GM at a cost of $50): an equity of $7,000. XOM takes 11 shares ($1,876.49) and EOG 12 ($1,899.84): $3,776.33 in all, each
     one inside the $2,000, none of it reserved."""
     poorer = Portfolio(user="Bob Jones", cash_avail=2000.0, positions=[Position(symbol="GM", shares=100, cost_basis=50.0, acquired=MOMENT.date())])
-    wide = ASK.model_copy(update={"max_position_pct": 1.0, "max_new_exposure_pct": 1.0, "max_loss_per_trade_pct": 0.05})
     asked = []
-    out = decisions.decide_trades(reviewed(capture), poorer, wide, 80, lambda card: asked.append(card["symbol"]) or True, MOMENT, "ask", None, None)
+    out = decisions.decide_trades(reviewed(capture), poorer, ASK, 80, lambda card: asked.append(card["symbol"]) or True, MOMENT, "ask", None, None)
     assert asked == ["XOM", "EOG"] and [d["will_trade"] for d in out.trade_decisions] == ["yes_user", "no_system_denied", "yes_user"]
     assert [d["shares"] for d in out.trade_decisions if d["will_trade"] == "yes_user"] == [math.floor(2000 / 170.59), math.floor(2000 / 158.32)] == [11, 12]
     assert sum(d["est_cost"] for d in out.trade_decisions) > poorer.cash_avail and all(d["est_cost"] <= poorer.cash_avail for d in out.trade_decisions if d["will_trade"] == "yes_user")
@@ -237,9 +236,11 @@ def test_a_purchase_the_even_split_drops_is_never_asked_about(capture):
     assert cards == [] and [d["will_trade"] for d in out.trade_decisions] == ["no_funds", "no_system_denied", "no_funds"] and out.status == "decided"
 
 
-def test_without_a_split_in_ask_mode_the_user_is_shown_what_the_limits_allow(capture):
+def test_without_a_split_in_ask_mode_the_user_is_shown_what_the_money_allows_in_rank_order(capture):
     out, cards = ask_session(capture, [True, True], balance=None)
-    assert [(c["symbol"], c["shares"]) for c in cards] == [("XOM", 8), ("EOG", 9)] and all("balance" not in d for d in out.trade_decisions)
+    first = math.floor(BUDGET / 170.59)
+    assert [(c["symbol"], c["shares"]) for c in cards] == [("XOM", first)] and all("balance" not in d for d in out.trade_decisions)                  # the first takes what the $2,800 buys; what is left buys no share of EOG
+    assert next(d for d in out.trade_decisions if d["symbol"] == "EOG")["will_trade"] == "no_funds"
 
 
 def test_in_auto_mode_a_review_that_needs_a_person_is_asked_about_at_its_final_size_and_the_rest_trade_on_their_own(capture):
@@ -269,7 +270,7 @@ class Terminal:
 
 def test_the_terminal_shows_the_whole_proposal_once_and_then_asks_about_each_trade_with_its_final_size(capture):
     terminal = Terminal("y", "n")
-    out = decisions.decide_trades(reviewed(capture), BOB, ASK, 80, decisions.terminal_approver(ask=terminal.ask, show=terminal.show, interactive=True), MOMENT, "ask", "even", None)
+    out = decisions.decide_trades(reviewed(capture), BOB, ASK, 80, decisions.terminal_approver(ask=terminal.ask, show=terminal.show, interactive=True), MOMENT, "ask", "even", BUDGET)
     text = "\n".join(terminal.shown)
     assert text.count("ASK MODE  nothing is traded without your yes. The Account Manager proposes 2 trades:") == 1 and text.index("ASK MODE") < text.index("#1  XOM")
     assert "XOM    buy 8 shares, about $1,364.72" in text and "EOG    buy 8 shares, about $1,266.56" in text and "about $2,631.28 of $15,000.00 in cash" in text
@@ -280,7 +281,7 @@ def test_the_terminal_shows_the_whole_proposal_once_and_then_asks_about_each_tra
 
 def test_a_terminal_nobody_is_at_asks_nothing_shows_nothing_and_leaves_every_trade_pending(capture):
     terminal = Terminal("y", "y")
-    out = decisions.decide_trades(reviewed(capture), BOB, ASK, 80, decisions.terminal_approver(ask=terminal.ask, show=terminal.show, interactive=False), MOMENT, "ask", "even", None)
+    out = decisions.decide_trades(reviewed(capture), BOB, ASK, 80, decisions.terminal_approver(ask=terminal.ask, show=terminal.show, interactive=False), MOMENT, "ask", "even", BUDGET)
     assert terminal.asked == [] and terminal.shown == [] and [d["will_trade"] for d in out.trade_decisions] == ["pending_user", "no_system_denied", "pending_user"]
 
 
@@ -299,7 +300,7 @@ def test_the_session_says_what_goes_on_to_the_trader_and_who_is_still_to_answer(
     yes, _ = ask_session(capture, [True, False])
     lines = "\n".join(ss.decision_lines(yes, "ask"))
     assert "XOM    yes (you approved)  8 shares, about $1,364.72" in lines and "EOG    no (you denied)" in lines and "-> 1 approved trade go on to the Trader." in lines and "still wait" not in lines
-    waiting = decisions.decide_trades(reviewed(capture), BOB, ASK, 80, None, MOMENT, "ask", "even", None)
+    waiting = decisions.decide_trades(reviewed(capture), BOB, ASK, 80, None, MOMENT, "ask", "even", BUDGET)
     lines = "\n".join(ss.decision_lines(waiting, "ask"))
     assert "-> nothing was approved to trade: the Trader will not run." in lines and "XOM, EOG still wait for your answer: nobody was at the terminal to ask (Ask mode needs a person at the keyboard" in lines and "--mode auto" in lines
     assert "nobody answered" in "\n".join(ss.decision_lines(waiting, "auto"))
@@ -346,32 +347,30 @@ def test_the_real_fills_move_the_account_exactly_as_the_account_books_arithmetic
 
 # ---------------------------------------------------------------- what the real session printed about how much was bought
 
-def test_the_how_much_was_bought_report_says_what_held_each_purchase_back_from_the_accounts_own_decisions(capture):
+def test_the_how_much_was_bought_report_says_what_stopped_each_purchase_from_the_accounts_own_decisions(capture):
     from prometheus.application import session as ss
-    out = decide(capture)                                                                                           # the Account Manager's decisions over the real reviews: XOM 8, EOG 8, an even split
+    out = decide(capture)                                                                                           # the Account Manager's decisions over the real reviews: XOM 8, EOG 8, an even split of $2,800
     after = BOB
     for trade in capture["order"]["trades"]:
         after = apply_fill(after, trade["symbol"], trade["side"], trade["fill"]["shares"], trade["fill"]["price"], MOMENT.date())
-    text = "\n".join(ss.use_of_money_lines(out, BOB, after, PROFILE))
+    text = "\n".join(ss.use_of_money_lines(out, BOB, after))
     assert "HOW MUCH WAS BOUGHT  spent $2,632.59 of $15,000.00 (18% of the money)" in text                      # the real fills: 8 XOM at 170.6753 and 8 EOG at 158.3992
-    assert "XOM    8 shares ($1,364.72) of the $15,000.00: held back by the position limit (10% of equity in one stock)" in text
-    assert "EOG    8 shares ($1,266.56) of the $15,000.00: held back by the even split: the same dollars for every company, and another company's limit set the amount" in text
-    assert "the exposure limit" not in text.split("To buy more")[0] and "the loss limit" not in text and "the Critic allowed" not in text
+    assert "XOM    8 shares ($1,364.72) of the $15,000.00: stopped by the amount you asked to spend: it had no room for another share" in text
     assert "The money was split evenly: the same dollars for every company, in whole shares." in text
-    assert "To buy more, raise the limits for the next session (the account book keeps its own): --max-position-pct 0.5" in text
+    assert "limit" not in text and "--max-" not in text and "To buy more" not in text                                # there is no limit to name and no flag to raise one
     assert "Advisor" not in text.replace("which recommends", "") and "Critic" not in text                       # no size is credited to the Advisor or the Critic
 
 
 def test_the_report_says_the_funds_were_spent_round_robin_in_auto_mode_and_what_closed_each_purchase(capture):
     from prometheus.application import session as ss
     out = decide(capture, balance=None, budget=400.0)
-    text = "\n".join(ss.use_of_money_lines(out, BOB, BOB, PROFILE))
-    assert "XOM    1 share ($170.59) of the $15,000.00: held back by the amount you asked to spend: it had no room for another share" in text and "EOG    1 share ($158.32)" in text
-    assert "Auto mode spent the funds round-robin: one share of the first stock, one of the next, and so on in rank order, until the money (or every stock's limits) ran out." in text
-    full = "\n".join(ss.use_of_money_lines(decide(capture, balance=None), BOB, BOB, PROFILE))
-    assert "XOM    8 shares" in full and "EOG    9 shares" in full and full.count("the position limit (10% of equity in one stock)") == 2 and "round-robin" in full
+    text = "\n".join(ss.use_of_money_lines(out, BOB, BOB))
+    assert "XOM    1 share ($170.59) of the $15,000.00: stopped by the amount you asked to spend: it had no room for another share" in text and "EOG    1 share ($158.32)" in text
+    assert "Auto mode spent the funds round-robin: one share of the first stock, one of the next, and so on in rank order, until the money ran out." in text
+    full = "\n".join(ss.use_of_money_lines(decide(capture, balance=None, budget=None), BOB, BOB))                 # no amount to spend: the whole $15,000, a share of each in turn
+    assert "round-robin" in full and "XOM    " in full and "EOG    " in full and "limit" not in full
     nothing = decide(capture, balance=None, budget=100.0)                                                           # $100 buys no share of either
-    assert "XOM    no share was bought: " in "\n".join(ss.use_of_money_lines(nothing, BOB, BOB, PROFILE))
+    assert "XOM    no share was bought: " in "\n".join(ss.use_of_money_lines(nothing, BOB, BOB))
 
 
 # ---------------------------------------------------------------- the Advisor's record holds no size (entry 80)

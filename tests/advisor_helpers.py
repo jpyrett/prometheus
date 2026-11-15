@@ -22,9 +22,9 @@ def metrics_of(**values) -> dict:
 
 def healthy(**override) -> dict:
     """A symbol with every number the gates and quality checks read, all fine; `override` changes some (None makes it missing)."""
-    base = dict(adv_20d_dollars=50e6, last_close=100.0, roe=20.0, operating_margin=15.0, revenue_growth=5.0, debt_to_equity=0.8, current_ratio=1.5, share_count_change=-0.01,
+    base = dict(last_close=100.0, roe=20.0, operating_margin=15.0, revenue_growth=5.0, debt_to_equity=0.8, current_ratio=1.5, share_count_change=-0.01,
                 sbc_to_revenue=0.03, accrual_ratio=0.02, receivables_vs_sales=2.0, inventory_vs_sales=1.0, cfo_negative_with_profit=False,
-                risk_factor_change=0.1, market_cap=500e9, days_to_next_earnings=None)
+                risk_factor_change=0.1, days_to_next_earnings=None)
     base.update(override)
     return metrics_of(**base)
 
@@ -49,7 +49,7 @@ def scored(symbol="AAA", families=(), metrics=None, votes=(), events=(), signals
     from prometheus.agents.advisor.ranking import Scored, rank_symbol
     from prometheus.agents.advisor.record import Quality
     metrics = healthy() if metrics is None else metrics
-    s = Scored(symbol=symbol, company=None, origin=kw.pop("origin", "subject"), held=held, metrics=metrics, gates=gates or run_gates(metrics, list(events), held, TODAY, CONFIG.gates), quality=quality or Quality(multiplier=1.0),
+    s = Scored(symbol=symbol, company=None, origin=kw.pop("origin", "subject"), held=held, metrics=metrics, gates=gates or run_gates(metrics, list(events), TODAY, CONFIG.gates), quality=quality or Quality(multiplier=1.0),
                families=list(families), events=list(events), signals=list(signals), votes=list(votes), sector_etf=sector, **kw)
     return rank_symbol(s) if rank else s
 
@@ -78,9 +78,9 @@ def flat_bars(n=35, close=100.0, volume=1000.0, end="2026-10-23"):
 
 def full_metrics(**override) -> dict:
     """Every metric the Advisor asks for, for a stock that passes the gates and the capital_return family; `override` changes some (None makes it missing)."""
-    base = dict(adv_20d_dollars=50e6, last_close=100.0, atr_14=4.0, atr_pct=0.04, ret_1d=0.001, ret_5d=0.01, ret_21d=0.02, volume_ratio_1d=1.1, sma_50=98.0, above_sma_200=True, above_sma_50=True,
-                roe=20.0, operating_margin=15.0, revenue_growth=5.0, debt_to_equity=0.8, current_ratio=1.5, share_count_change=-0.02, net_payout_yield_ttm=0.05, earnings_yield=0.04,
-                payout_coverage=0.6, market_cap=300e9, cash_balance=10e9, vol_63d_ann=0.25, beta_63d=0.7, max_drawdown_63d=-0.05, sbc_to_revenue=0.02,
+    base = dict(last_close=100.0, atr_14=4.0, atr_pct=0.04, ret_1d=0.001, ret_5d=0.01, ret_21d=0.02, volume_ratio_1d=1.1, sma_50=98.0, above_sma_200=True, above_sma_50=True,
+                roe=20.0, operating_margin=15.0, revenue_growth=5.0, debt_to_equity=0.8, current_ratio=1.5, share_count_change=-0.02, earnings_yield=0.04,
+                payout_coverage=0.6, cash_balance=10e9, vol_63d_ann=0.25, beta_63d=0.7, max_drawdown_63d=-0.05, sbc_to_revenue=0.02,
                 accrual_ratio=0.01, receivables_vs_sales=1.0, inventory_vs_sales=1.0, cfo_negative_with_profit=False,
                 spy_above_sma_200=True, spy_vol_21d_ann=0.15, spy_drawdown_63d=-0.03, spy_ret_21d=0.02, spy_ret_5d=0.0)
     base.update(override)

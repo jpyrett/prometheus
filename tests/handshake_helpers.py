@@ -30,15 +30,16 @@ CAPTURE = Path(__file__).parent / "fixtures" / "session_real" / "bob_jones_oil.j
 MOMENT = datetime(2026, 11, 13, 20, 30, tzinfo=timezone.utc)          # 15:30 Eastern on Friday 2026-11-13: the moment of the real session
 FRIDAY = date(2026, 11, 13)
 BOB = Portfolio(user="Bob Jones", cash_avail=15000.0)                  # the account the real session was for
+BUDGET = 2800.0     # the live session was sized under the old 10% limit (XOM 8, EOG 8); with only the cash to stop it (design choices entry 91) the same request, given an amount to spend, an even $1,400 each, buys the same 8 and 8
 PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="auto", auto_min_score=70)
 
 
 def real_order() -> wo.WorkOrder:
-    """The real session's order, decided again: the real recommendations and reviews, the Account Manager's decision step (the same call as `tests/test_session_replay.py`): XOM 8 and EOG 8 shares, `yes_auto`."""
+    """The real session's order, decided again: the real recommendations and reviews, the Account Manager's decision step (the same call as `tests/test_session_replay.py`, over $2,800 split evenly): XOM 8 and EOG 8 shares, `yes_auto`."""
     capture = json.loads(CAPTURE.read_text(encoding="utf-8"))
     order = wo.WorkOrder.model_validate(copy.deepcopy(capture["order"]))
     order.status, order.trade_decisions, order.trades, order.trader_runs = "reviewed", [], [], []
-    return decisions.decide_trades(order, BOB, PROFILE, 80, None, MOMENT, "auto", "even", None)
+    return decisions.decide_trades(order, BOB, PROFILE, 80, None, MOMENT, "auto", "even", BUDGET)
 
 
 def jacob_as_bob() -> Portfolio:

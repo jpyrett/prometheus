@@ -1,0 +1,342 @@
+{
+ "_note": "REAL answers of Finnhub's symbol search (https://finnhub.io/api/v1/search) recorded on 2026-11-15 by DataClerk.request_symbols for ten stocks (tickers and company names; design choices entry 88). The key is the query the search was asked; the value the rows it returned, unedited. Tests replay them as the Data Clerk's symbol directory.",
+ "queries": {
+  "MSFT": [
+   {
+    "description": "MICROSOFT CORP",
+    "displaySymbol": "MSFT",
+    "symbol": "MSFT",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MICROSOFT CORP-CDR",
+    "displaySymbol": "MSFT.TO",
+    "symbol": "MSFT.TO",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "MICROSOFT CORP-CDR",
+    "displaySymbol": "MSFT.NE",
+    "symbol": "MSFT.NE",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "LS 1X MSFT",
+    "displaySymbol": "MSFT.L",
+    "symbol": "MSFT.L",
+    "type": "ETP"
+   },
+   {
+    "description": "LS 1X MSFT",
+    "displaySymbol": "MSFT.AS",
+    "symbol": "MSFT.AS",
+    "type": "ETP"
+   },
+   {
+    "description": "MICROSOFT CORP",
+    "displaySymbol": "MSFT.MX",
+    "symbol": "MSFT.MX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MICROSOFT CORP",
+    "displaySymbol": "MSFT.RO",
+    "symbol": "MSFT.RO",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MICROSOFT CORP",
+    "displaySymbol": "MSFT.SW",
+    "symbol": "MSFT.SW",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MICROSOFT CORP",
+    "displaySymbol": "MSFT.VI",
+    "symbol": "MSFT.VI",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MICROSOFT CORP",
+    "displaySymbol": "MSFT.WA",
+    "symbol": "MSFT.WA",
+    "type": "Common Stock"
+   }
+  ],
+  "TSLA": [
+   {
+    "description": "TESLA INC",
+    "displaySymbol": "TSLA",
+    "symbol": "TSLA",
+    "type": "Common Stock"
+   },
+   {
+    "description": "TESLA INC - CDR",
+    "displaySymbol": "TSLA.TO",
+    "symbol": "TSLA.TO",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "TESLA INC - CDR",
+    "displaySymbol": "TSLA.NE",
+    "symbol": "TSLA.NE",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "LS 1X TSLA",
+    "displaySymbol": "TSLA.L",
+    "symbol": "TSLA.L",
+    "type": "ETP"
+   },
+   {
+    "description": "LS 1X TSLA",
+    "displaySymbol": "TSLA.AS",
+    "symbol": "TSLA.AS",
+    "type": "ETP"
+   },
+   {
+    "description": "TESLA INC",
+    "displaySymbol": "TSLA.MX",
+    "symbol": "TSLA.MX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "TRANSILVANIA LEASING IFN SA",
+    "displaySymbol": "TSLA.RO",
+    "symbol": "TSLA.RO",
+    "type": "Common Stock"
+   },
+   {
+    "description": "TESLA INC",
+    "displaySymbol": "TSLA.SW",
+    "symbol": "TSLA.SW",
+    "type": "Common Stock"
+   },
+   {
+    "description": "TESLA INC",
+    "displaySymbol": "TSLA.VI",
+    "symbol": "TSLA.VI",
+    "type": "Common Stock"
+   },
+   {
+    "description": "TESLA INC",
+    "displaySymbol": "TSLA.WA",
+    "symbol": "TSLA.WA",
+    "type": "Common Stock"
+   }
+  ],
+  "GM": [
+   {
+    "description": "GENERAL MOTORS CO",
+    "displaySymbol": "GM",
+    "symbol": "GM",
+    "type": "Common Stock"
+   },
+   {
+    "description": "GENTILI MOSCONI SPA",
+    "displaySymbol": "GM.MI",
+    "symbol": "GM.MI",
+    "type": "Common Stock"
+   },
+   {
+    "description": "GENERAL MOTORS CO",
+    "displaySymbol": "GM.MX",
+    "symbol": "GM.MX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "TransDigm Group Incorporated",
+    "displaySymbol": "TDG",
+    "symbol": "TDG",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Sigma Healthcare Ltd",
+    "displaySymbol": "SIG.AX",
+    "symbol": "SIG.AX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "GMK Noril'skiy Nikel' PAO",
+    "displaySymbol": "GMKN.ME",
+    "symbol": "GMKN.ME",
+    "type": "Common Stock"
+   },
+   {
+    "description": "DWS Group GmbH & Co KgaA",
+    "displaySymbol": "DWS.DE",
+    "symbol": "DWS.DE",
+    "type": "Common Stock"
+   },
+   {
+    "description": "IGM Financial Inc",
+    "displaySymbol": "IGM.TO",
+    "symbol": "IGM.TO",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Figma, Inc.",
+    "displaySymbol": "FIG",
+    "symbol": "FIG",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MGM Resorts International",
+    "displaySymbol": "MGM",
+    "symbol": "MGM",
+    "type": "Common Stock"
+   },
+   {
+    "description": "GMexico Transportes SAB de CV",
+    "displaySymbol": "GMXT.MX",
+    "symbol": "GMXT.MX",
+    "type": "Common Stock"
+   }
+  ],
+  "IBM": [
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM",
+    "symbol": "IBM",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES C-CDR",
+    "displaySymbol": "IBM.TO",
+    "symbol": "IBM.TO",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES C-CDR",
+    "displaySymbol": "IBM.NE",
+    "symbol": "IBM.NE",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.DE",
+    "symbol": "IBM.DE",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.DU",
+    "symbol": "IBM.DU",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.F",
+    "symbol": "IBM.F",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.HM",
+    "symbol": "IBM.HM",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.MU",
+    "symbol": "IBM.MU",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.MX",
+    "symbol": "IBM.MX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.SG",
+    "symbol": "IBM.SG",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.VI",
+    "symbol": "IBM.VI",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.HA",
+    "symbol": "IBM.HA",
+    "type": "Common Stock"
+   },
+   {
+    "description": "INTL BUSINESS MACHINES CORP",
+    "displaySymbol": "IBM.TG",
+    "symbol": "IBM.TG",
+    "type": "Common Stock"
+   }
+  ],
+  "ZZZZ": [],
+  "Microsoft Corp": [
+   {
+    "description": "Microsoft Corporation",
+    "displaySymbol": "MSFT",
+    "symbol": "MSFT",
+    "type": "Common Stock"
+   }
+  ],
+  "Microsoft": [
+   {
+    "description": "Microsoft Corporation",
+    "displaySymbol": "MSFT",
+    "symbol": "MSFT",
+    "type": "Common Stock"
+   }
+  ],
+  "Procter & Gamble": [
+   {
+    "description": "The Procter & Gamble Company",
+    "displaySymbol": "PG",
+    "symbol": "PG",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Procter & Gamble Hygiene and Health Care Ltd",
+    "displaySymbol": "PGHH.NS",
+    "symbol": "PGHH.NS",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Procter & Gamble Health Ltd",
+    "displaySymbol": "PGHL.NS",
+    "symbol": "PGHL.NS",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Strats (SM) Trust for Procter & Gamble Securities Series 2006-1",
+    "displaySymbol": "GJR",
+    "symbol": "GJR",
+    "type": "Common Stock"
+   }
+  ],
+  "Tesla": [
+   {
+    "description": "Tesla Inc",
+    "displaySymbol": "TSLA",
+    "symbol": "TSLA",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Tesla Energy Storage ED",
+    "displaySymbol": "TES.MC",
+    "symbol": "TES.MC",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Tesla Exploration Ltd",
+    "displaySymbol": "TXLZF",
+    "symbol": "TXLZF",
+    "type": "Common Stock"
+   }
+  ],
+  "Zzyzx Holdings": [],
+  "Zzyzx": []
+ }
+}

@@ -19,6 +19,7 @@ from prometheus.common.work_order import WorkOrder
 
 FEATURE_KEYS = ("value", "unit", "as_of", "source")
 BLEND_PARTS = ("news", "performance", "historical", "filings")
+GATES = ("no_metrics", "freshness", "red_flag", "event_risk")           # the gates of the Advisor's record that a new position must pass. A gate record of any other name (an old capture still holds a `liquidity` one, made before design choices entry 94) decides nothing here
 SOURCE_PREFIXES = ("day_aggs", "finnhub")      # the features that must be recent; a filing's own date is its statement's (quarters old is normal)
 
 
@@ -139,7 +140,7 @@ def check(rec: Recommendation, order: WorkOrder, advisor: AdvisorConfig, duplica
 
     # ---- gates, thesis, audit
     if opening:
-        failed_gates = [g.gate for g in rec.gates if not g.passed]
+        failed_gates = [g.gate for g in rec.gates if not g.passed and g.gate in GATES]
         r.check("gates", not failed_gates, "a gate failed for a new position: " + ", ".join(failed_gates))
     thesis = rec.thesis
     r.no_thesis = not (thesis.thesis or thesis.thesis_error)

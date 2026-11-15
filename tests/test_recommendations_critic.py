@@ -79,8 +79,8 @@ def test_the_mode_is_the_profiles_unless_the_run_overrides_it_and_ask_mode_asks(
     asked = []
     result, _, _ = go("DPZ PZZA YUM", approver=lambda card: asked.append(card["symbol"]) or True)
     approved = [r for r in result.order.reviews if r["approved"]]
-    sized = [d for d in result.order.trade_decisions if d["shares"]]               # the Account Manager sizes each approval (entry 80): one that sizes to no share (here DPZ, over the $1,000's 10% limit) is `no_funds` and is not asked about
-    assert len(asked) == len(sized) < len(approved) and all(d["mode"] == "ask" for d in result.order.trade_decisions)
+    sized = [d for d in result.order.trade_decisions if d["shares"]]               # the Account Manager sizes each approval (entries 80 and 91): the cash is the only check, so every approval is sized (10 shares of the $1,000) and asked about
+    assert len(asked) == len(sized) == len(approved) and all(d["mode"] == "ask" for d in result.order.trade_decisions)
     trusting = AccountManager(model=object(), profile=profile(user="t", trade_mode="ask", auto_min_score=60))      # the profile says Ask; the mark of 60 is under what the fake data scores
     result, _, _ = go("DPZ PZZA YUM", manager=trusting, mode="auto", approver=lambda card: pytest.fail("auto mode must not ask what clears the mark"))
     assert all(d["mode"] == "auto" for d in result.order.trade_decisions) and "yes_auto" in [d["will_trade"] for d in result.order.trade_decisions]

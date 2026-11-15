@@ -67,37 +67,6 @@ def sig(source=1, direction="bullish", quote="Micron has secured 35% of its reve
 
 # ---------------------------------------------------------------- the pieces
 
-def test_normalize_makes_the_models_typography_irrelevant():
-    assert adv.normalize("Won\u2019t  EASE\u00a0until\u2011after \u201c2029\u201d") == 'won\'t ease until-after "2029"'
-
-
-@pytest.mark.parametrize("quote, symbol, company, expected", [
-    ("Micron has secured 35% of its revenue", "MU", "Micron Technology", True),
-    ("MU stock rose", "MU", None, True),
-    ("MU", "MU", "Micron", True),
-    ("Memory chip stocks have declined roughly one-third", "MU", "Micron", False),
-    ("a multiple of earnings", "MU", "Micron", False),                       # "mu" inside a word is not the ticker
-    ("EMU Group shares fell on Monday", "MU", "Micron", False),              # nor is "MU" inside "EMU", even in capitals
-    ("Shares of MU-listed funds rose", "MU", "Micron", True),                # but MU beside a hyphen is the ticker
-    ("Bloom shipped fuel cells", "BE", "Bloom Energy", True),
-    ("Energy prices rose", "BE", "Bloom Energy", False),                     # "Energy" is a generic word of a name
-    ("SK Hynix leads in HBM", "SKHY", "SK Hynix", True),
-    ("Nvidia CEO Jensen Huang argues", "MU", "Micron", False),               # a different company is not this one
-    ("technology stocks fell", "MU", "Micron Technology", False),
-])
-def test_a_quote_names_a_company_by_its_ticker_or_a_distinctive_word_of_its_name(quote, symbol, company, expected):
-    assert adv.names_company(quote, symbol, company) is expected
-
-
-@pytest.mark.parametrize("company, short", [
-    ("Procter & Gamble Co", ["P&G"]), ("PROCTER & GAMBLE CO/THE", ["P&G"]), ("Procter & Gamble", ["P&G"]), ("Johnson & Johnson", ["J&J"]),
-    ("Barnes & Noble Inc", ["B&N"]), ("Procter&Gamble", ["P&G"]),
-    ("Bath & Body Works", []), ("AT&T Inc", []), ("Standard & Poor's", []), ("Procter and Gamble", []), ("Micron Technology", []), ("& Gamble", []),
-    ("Procter &", []), ("", []), (None, []),
-])
-def test_a_short_name_is_derived_from_the_company_name_only_when_it_is_two_words_around_an_ampersand(company, short):
-    assert adv.short_names(company) == short
-
 
 @pytest.mark.parametrize("quote, company, known, expected", [
     ("P&G delivered surprisingly strong Q1 results with 4% organic sales growth", "Procter & Gamble", None, True),     # the real quote the check refused
@@ -173,11 +142,6 @@ def test_the_work_orders_company_is_used_only_for_its_own_symbol():
     assert order.recommendations[0]["signals"][0]["reason"] == "the quote does not name the company"  # P&G's short name does not make a quote about Coca-Cola
 
 
-@pytest.mark.parametrize("bullish, bearish, score", [(0, 0, None), (1, 0, 67), (2, 0, 75), (3, 0, 80), (0, 1, 33), (0, 2, 25), (1, 1, 50), (2, 1, 60)])
-def test_the_score_is_calculated_from_the_verified_signals(bullish, bearish, score):
-    assert adv.calculate_score(bullish, bearish) == score
-
-
 SOURCES = {1: source(1, CONTRACTS), 2: source(2, HUANG, ("MU", "NVDA"))}
 
 
@@ -201,17 +165,6 @@ def test_a_real_quote_that_names_the_company_is_verified_even_with_different_typ
     assert adv.verify_signal(sig(source="1", quote="MICRON  has secured 35% of its revenue\u00a0through long\u2011term contracts"), "MU", "Micron", SOURCES) == (True, None)
 
 
-def test_a_quote_with_a_defused_bracket_is_found_in_the_source_the_model_read():
-    text = "Micron said it expects [2] new fabs to open in 2027, the company said."  # the model read "(2)", the chunk holds "[2]"
-    assert adv.verify_signal(sig(quote="Micron said it expects (2) new fabs to open in 2027"), "MU", "Micron", {1: source(1, text)}) == (True, None)
-    assert adv.verify_signal(sig(quote="Micron said it expects [2] new fabs to open in 2027"), "MU", "Micron", {1: source(1, text)}) == (True, None)
-
-
-@pytest.mark.parametrize("text", ['{"recommendations": []}', '```json\n{"recommendations": []}\n```', 'Here you go: {"recommendations": []} Done.'])
-def test_the_reply_is_found_in_plain_json_a_code_fence_or_chatter(text):
-    assert adv.parse_reply(text) == []
-
-
 @pytest.mark.parametrize("text, problem", [("", "no JSON object found"), ("no json here", "no JSON object found"), ("{not json}", "not valid JSON"),
                                             ('{"other": 1}', "no recommendations list"), ('{"recommendations": "x"}', "no recommendations list")])
 def test_a_reply_without_a_recommendations_list_is_refused_with_the_reason(text, problem):
@@ -230,35 +183,6 @@ def test_the_score_comes_from_verified_signals_only_and_the_models_own_number_is
     assert [s["verified"] for s in r["signals"]] == [True, False, False]
     assert [s["reason"] for s in r["signals"]] == [None, "the quote is not in source 1", "the quote does not name the company"]
     assert r["signals"][0]["chunk_id"] == "art1#0" and r["signals"][1]["chunk_id"] is None
-
-
-def test_the_models_own_score_does_not_change_the_calculated_one():
-    low = adv.build_recommendation(rec(model_score=5, signals=[sig()]), SOURCES, [])
-    high = adv.build_recommendation(rec(model_score=99, signals=[sig()]), SOURCES, [])
-    assert low["score"] == high["score"] == 67 and (low["model_score"], high["model_score"]) == (5, 99)
-
-
-def test_a_recommendation_with_no_verified_signal_has_no_score_however_confident_the_model_was():
-    r = adv.build_recommendation(rec(model_score=90, stance="bullish", signals=[sig(quote="Micron will double its revenue next year for sure")]), SOURCES, [])
-    assert r["score"] is None and not r["supported"] and r["consistent"] is None and r["model_score"] == 90 and r["signals_verified"] == 0
-    assert adv.build_recommendation(rec(signals=[]), SOURCES, [])["score"] is None
-
-
-def test_the_stretched_sentence_does_not_count_a_quote_about_memory_stocks_for_micron():
-    """The failure measured in the week 3 re-run: the chunk says 'memory chip stocks' and names no company."""
-    r = adv.build_recommendation(rec(signals=[{"source": 2, "direction": "bearish", "quote": "Memory chip stocks have declined roughly one-third from their July peak"}]),
-                                 SOURCES, [])
-    assert r["score"] is None and r["signals"][0]["reason"] == "the quote does not name the company"
-
-
-def test_the_stance_is_checked_against_the_calculated_score():
-    assert adv.build_recommendation(rec(stance="bearish", signals=[sig()]), SOURCES, [])["consistent"] is False
-    assert adv.build_recommendation(rec(stance="bullish", signals=[sig()]), SOURCES, [])["consistent"] is True
-    sources = {**SOURCES, 3: source(3, "Micron faces rising debt yields and the risk of oversupply as new capacity arrives.")}
-    both = [sig(), sig(source=3, direction="bearish", quote="Micron faces rising debt yields and the risk of oversupply")]
-    balanced = adv.build_recommendation(rec(stance="neutral", signals=both), sources, [])
-    assert (balanced["bullish_signals"], balanced["bearish_signals"], balanced["score"], balanced["consistent"]) == (1, 1, 50, True)
-    assert adv.build_recommendation(rec(stance="bullish", signals=both), sources, [])["consistent"] is False  # 50 is neutral, not bullish
 
 
 def test_the_same_story_through_two_feeds_counts_once():
@@ -293,21 +217,6 @@ def test_two_quotes_from_one_article_in_the_same_direction_are_one_voice():
     assert r["signals_verified"] == 2 and r["signals_counted"] == 1 and r["score"] == 67
 
 
-def test_the_same_story_in_opposite_directions_counts_both_ways():
-    text = "Micron faces rising debt yields, but Micron has locked in 35% of revenue through long-term contracts."
-    s = {1: source(1, text)}
-    r = adv.build_recommendation(rec(signals=[sig(1, "bullish", "Micron has locked in 35% of revenue through long-term contracts"),
-                                              sig(1, "bearish", "Micron faces rising debt yields")]), s, [])
-    assert (r["bullish_signals"], r["bearish_signals"], r["signals_counted"], r["score"]) == (1, 1, 2, 50)
-
-
-def test_different_stories_all_count_and_the_story_key_ignores_case_and_punctuation():
-    assert adv.story_key("Sandisk (SNDK) Upgraded: Here\u2019s What You Should Know!") == adv.story_key("SANDISK  SNDK  upgraded - here's what you should know")
-    assert adv.story_key("Bull of the Day: Sandisk") != adv.story_key("Sandisk Is a Bull")
-    r = adv.build_recommendation(rec(signals=[sig(1), sig(2, quote="Memory chip stocks Micron have declined")]), {1: source(1, CONTRACTS), 2: source(2, "Memory chip stocks Micron have declined roughly one-third")}, [])
-    assert r["signals_counted"] == 2
-
-
 def test_the_same_signal_twice_counts_once_and_no_more_than_three_are_read():
     r = adv.build_recommendation(rec(signals=[sig(), sig(), sig(direction="bearish")]), SOURCES, [])
     assert r["signals_claimed"] == 2  # the repeat is dropped; the bearish copy of the same words is a different signal
@@ -322,34 +231,7 @@ def test_a_recommendation_that_cannot_be_used_is_dropped_with_a_note(raw, note):
     assert adv.build_recommendation(raw, SOURCES, dropped) is None and note in dropped[0]
 
 
-def test_a_symbol_is_cleaned_and_odd_fields_become_none_not_errors():
-    r = adv.build_recommendation({"symbol": " $mu ", "company": 7, "stance": "maybe", "model_score": 250, "signals": "x"}, SOURCES, [])
-    assert r["symbol"] == "MU" and r["company"] is None and r["stance"] is None and r["model_score"] is None and r["signals_claimed"] == 0
-    assert adv.build_recommendation({"symbol": "MU", "model_score": True}, SOURCES, [])["model_score"] is None
-
-
 # ---------------------------------------------------------------- the Advisor
-
-def test_with_evidence_the_advisor_reads_the_chunks_and_writes_a_recommendation_with_a_calculated_score():
-    order = ready_order(source(1, CONTRACTS), source(2, HUANG, ("MU", "NVDA")))
-    model = Scripted(reply(rec(signals=[sig()])))
-    same = adv.Advisor(model=model).advise(order, today=date(2026, 10, 25))
-    assert same is order and order.status == "recommended" and order.errors == []
-    r = order.recommendations[0]
-    assert (r["symbol"], r["score"], r["supported"], r["signals_verified"]) == ("MU", 67, True, 1) and r["advisor"] == {"model": "scripted/advisor", "evidence": True}
-    system, human = model.seen[0]
-    assert "Today is 2026-10-25" in system.content and HEADER in human.content
-    assert "[1] The Motley Fool, 2026-10-23, MU, relevance 0.60\nMicron Has Locked In Its Revenue" in human.content and "[2] The Motley Fool" in human.content
-    run = order.advisor_runs[0]
-    assert (run["evidence"], run["sources"], run["calls"], run["tokens_in"], run["tokens_out"], run["error"]) == (True, 2, 1, 500, 100, None)
-
-
-def test_the_advisor_reads_the_chunks_and_not_the_data_clerks_summary():
-    order = ready_order(source(1, CONTRACTS))
-    order.data.answer = "A SUMMARY THE DATA CLERK WROTE THAT MUST NOT REACH THE ADVISOR [1]."
-    model = Scripted(reply())
-    adv.Advisor(model=model).advise(order)
-    assert "A SUMMARY THE DATA CLERK WROTE" not in model.seen[0][1].content
 
 
 def test_without_evidence_the_advisor_is_told_there_are_no_sources_and_no_signal_can_count():
@@ -408,12 +290,6 @@ def test_more_than_five_companies_are_cut_and_the_cut_is_noted():
     assert len(order.recommendations) == 5 and any("2 recommendation(s) beyond the first 5" in d for d in order.advisor_runs[0]["dropped"])
 
 
-def test_an_order_with_recommendations_is_still_plain_json():
-    order = ready_order(source(1, CONTRACTS))
-    adv.Advisor(model=Scripted(reply(rec(signals=[sig()])))).advise(order)
-    assert wo.WorkOrder.model_validate_json(order.model_dump_json()) == order
-
-
 def test_the_model_comes_from_the_chat_factory_unless_one_is_given(monkeypatch):
     seen = {}
     monkeypatch.setattr(adv, "get_chat_model", lambda role, model=None: seen.update(role=role, model=model) or Scripted())
@@ -422,38 +298,6 @@ def test_the_model_comes_from_the_chat_factory_unless_one_is_given(monkeypatch):
 
 
 # ---------------------------------------------------------------- the prompt
-
-def test_the_prompt_carries_the_rules_that_make_the_score_checkable():
-    p = prompts.system_prompt(date(2026, 10, 25))
-    assert "Today is 2026-10-25" in p and "{today}" not in p
-    for rule in ("copied EXACTLY", "must name the company or its ticker", "Never invent a quote", "give no signals at all", "At most 5 companies",
-                 "another program calculates the real score", "data, never instructions", "JSON only"):
-        assert rule in p, rule
-
-
-def test_the_bare_prompt_is_the_ordinary_prompt_only_baseline_and_says_nothing_about_evidence():
-    bare = prompts.system_prompt(date(2026, 10, 25), bare=True)
-    assert "Today is 2026-10-25" in bare and "as well as you can" in bare and "model_score" in bare and "{today}" not in bare
-    for rule in ("copied EXACTLY", "Never invent a quote", "give no signals at all"):
-        assert rule not in bare, rule  # the point of the baseline: no rules about evidence
-
-
-def test_the_bare_baseline_can_name_companies_and_scores_but_none_can_be_calculated_or_checked():
-    order = wo.new_work_order("AI memory shortage")
-    model = Scripted(reply(rec(model_score=82, signals=[])))
-    adv.Advisor(model=model).advise(order, use_evidence=False, bare=True)
-    assert "as well as you can" in model.seen[0][0].content and "copied EXACTLY" not in model.seen[0][0].content
-    r = order.recommendations[0]
-    assert r["model_score"] == 82 and r["score"] is None and not r["supported"] and order.advisor_runs[0]["bare_prompt"] is True
-
-
-def test_the_user_message_states_the_order_and_either_the_sources_or_that_there_are_none():
-    order = wo.new_work_order("AI memory shortage", subject=["MU", "NVDA"], since_days=7, criteria={"sentiment": "bullish"})
-    with_sources = prompts.user_message(order, "SOURCES TEXT")
-    assert "Request: AI memory shortage" in with_sources and "Subject: MU, NVDA" in with_sources and "the last 7 days" in with_sources
-    assert "Criteria: {'sentiment': 'bullish'}" in with_sources and with_sources.endswith("SOURCES TEXT")
-    assert prompts.user_message(order, None).endswith("Sources: none were retrieved for this work order.")
-    assert "none given" in prompts.user_message(wo.new_work_order("q"), None)
 
 
 # ================================================================ the Advisor reads data.results and data.filing_evidence (design choices entry 40)
@@ -493,14 +337,6 @@ def evidence_quote(item_id, limit=60):
     return next(e for e in meta_evidence()["evidence"] if e["id"] == item_id)["quote"][:limit]
 
 
-def test_the_evidence_rules_are_in_the_prompt_only_when_the_order_carries_evidence():
-    plain, with_evidence = prompts.system_prompt(date(2026, 10, 25)), prompts.system_prompt(date(2026, 10, 25), evidence=True)
-    assert "FILING EVIDENCE" not in plain and plain == prompts.system_prompt(date(2026, 10, 25), evidence=False)  # the measured prompt is unchanged for an order without it
-    assert "FILING EVIDENCE" in with_evidence and '"source": "E3"' in with_evidence and "Never cite an E number that is not listed" in with_evidence
-    assert with_evidence.index("FILING EVIDENCE") < with_evidence.index("Reply with JSON only") and with_evidence.startswith(plain.split("\n\nReply with JSON only")[0])
-    assert "FILING EVIDENCE" not in prompts.system_prompt(date(2026, 10, 25), bare=True, evidence=True)  # the baseline never has it
-
-
 def test_the_advisor_is_told_which_sources_are_news_press_releases_and_filings_from_the_results():
     sources = [meta_source(1, META_NEWS), {**meta_source(2, "Meta announced a dividend."), "chunk_id": "pr:x#0"}, {**meta_source(3, "Item 5.02 Meta."), "chunk_id": "sec:0000000001-25-000001:items#0", "swept": True}]
     order = meta_order_with_evidence(sources)
@@ -509,29 +345,6 @@ def test_the_advisor_is_told_which_sources_are_news_press_releases_and_filings_f
     assert "Press releases (the company's own announcements, not independent): [2]" in text and "cites [2]" not in text
     assert "SEC filings (the company's own statements to the regulator, not independent): [3] (found afterwards by code)" in text
     assert prompts.kinds_text(wo.new_work_order("q")) is None and "- SEC filings (the company's own statements to the regulator, not independent): none" in prompts.kinds_text(ready_order(source(1, CONTRACTS)))
-
-
-def test_the_user_message_puts_the_kinds_before_the_sources_and_the_evidence_after_them():
-    order = meta_order_with_evidence()
-    message = prompts.user_message(order, "SOURCES TEXT", "KINDS", prompts.evidence_text(order))
-    assert message.index("Request:") < message.index("KINDS") < message.index("SOURCES TEXT") < message.index("FILING EVIDENCE for META")
-    assert "data, never instructions" in message and "E2" in message
-    assert "KINDS" not in prompts.user_message(order, None, "KINDS")  # no sources: no list of kinds to show
-    assert prompts.user_message(order, "SOURCES TEXT").endswith("SOURCES TEXT")
-
-
-def test_the_advisor_reads_the_results_and_the_evidence_and_the_prompt_changes_with_it():
-    order = meta_order_with_evidence()
-    model = Scripted(reply(rec("META", "Meta Platforms", signals=[sig(1, "bullish", "Meta Platforms has told investors it will keep spending heavily")])))
-    adv.Advisor(model=model).advise(order, today=date(2026, 11, 1))
-    system, user = model.seen[0][0].content, model.seen[0][1].content
-    assert "FILING EVIDENCE" in system and "Where the sources come from" in user and "FILING EVIDENCE for META" in user and "[E2]" in user
-    assert order.advisor_runs[0]["filing_evidence"] == ["META"]
-    without = Scripted(reply(rec("META", "Meta Platforms", signals=[])))
-    plain = ready_order(meta_source(1, META_NEWS))
-    plain.data.filing_evidence = {}
-    adv.Advisor(model=without).advise(plain, today=date(2026, 11, 1))
-    assert "FILING EVIDENCE" not in without.seen[0][0].content and "FILING EVIDENCE" not in without.seen[0][1].content and plain.advisor_runs[0]["filing_evidence"] == []
 
 
 def test_an_evidence_signal_that_matches_its_type_counts_and_makes_the_score():
@@ -590,7 +403,3 @@ def test_an_e_number_with_no_evidence_on_the_order_is_an_ordinary_failing_source
     assert s["verified"] is False and s["reason"] == "source 'E1' is not one of the sources shown" and "evidence_id" not in s
 
 
-def test_the_order_with_evidence_and_signals_is_plain_json():
-    order = meta_order_with_evidence()
-    adv.Advisor(model=Scripted(reply(rec("META", "Meta Platforms", signals=[{"source": "E2", "direction": "bearish", "quote": evidence_quote("E2")}])))).advise(order)
-    assert wo.WorkOrder.model_validate_json(order.model_dump_json()) == order

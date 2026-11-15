@@ -34,7 +34,7 @@ def test_the_whole_step_on_the_fixture_universe(tmp_path):
     assert record.ranking.rank == 1 and record.ranking.concentrated is True and record.stance == "bullish" and record.supported is True and 50 < record.score <= 100
     assert [f.family for f in record.families if f.passed] == ["event", "capital_return", "conviction"] and record.trade.family == "conviction" and record.trade.stop_price is not None and record.trade.order_style == "limit"
     assert record.thesis.thesis.startswith("Open Procter") and record.thesis.thesis_error is None
-    assert [g.gate for g in record.gates] == ["no_metrics", "liquidity", "freshness", "red_flag", "event_risk"] and all(g.passed for g in record.gates)
+    assert [g.gate for g in record.gates] == ["no_metrics", "freshness", "red_flag", "event_risk"] and all(g.passed for g in record.gates)
     assert record.audit.config_version == "1" and record.audit.metric_order == out.advisor_runs[0]["metric_order"] and record.audit.plan_run["calls"] == 1 and record.audit.thesis_run["calls"] == 1
     assert [(r["stage"], r["calls"], r["error"]) for r in out.advisor_runs] == [("plan", 1, None), ("thesis", 1, None)] and len(model.seen) == 2     # the model is called exactly twice
     assert len(advisor.ledger.records) == 1 and advisor.ledger.records[0]["identity"]["record_id"] == record.identity.record_id and out.candidates == []
@@ -49,7 +49,7 @@ def test_the_record_carries_everything_the_critic_needs():
     assert record["agreement"]["evidence_n"] == 1 and record["agreement"]["confidence"] == pytest.approx((1 + record["blend"]["value"]) / 2, abs=1e-4)   # entry 55: the blend, not the agreement of the text alone
     assert record["blend"]["score"] == round(50 + 50 * record["blend"]["value"]) and set(record["blend"]["components"]) == {"news", "performance", "historical", "filings"}
     capital = next(f for f in record["families"] if f["family"] == "capital_return")
-    assert capital["features_used"]["net_payout_yield_ttm"] == 0.05 and capital["basis"] == "prior" and capital["basis_ref"] == "boudoukh_et_al_2007"
+    assert capital["features_used"]["share_count_change"] == -0.02 and capital["basis"] == "prior" and capital["basis_ref"] == "boudoukh_et_al_2007"
     trend = next(f for f in record["families"] if f["family"] == "trend")
     assert trend["computable"] is False and "mom_12_1" in trend["missing"]                  # a family that could not run says what it needed
     json.dumps(record)                                                                      # plain JSON: store it, log it, hand it to the Critic
@@ -76,8 +76,8 @@ def test_no_field_of_the_record_comes_from_the_model_except_the_ones_listed():
 
 
 def test_a_model_score_of_100_does_not_make_a_symbol_pass_a_gate_or_a_family():
-    out = run(plan_reply(company(model_score=100, signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply(), metrics={"PG": full_metrics(adv_20d_dollars=1.0)})[0]
-    assert out.recommendations == [] and out.candidates[0]["symbol"] == "PG" and out.candidates[0]["gate"] == "liquidity"
+    out = run(plan_reply(company(model_score=100, signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply(), metrics={"PG": full_metrics(cfo_negative_with_profit=True)})[0]
+    assert out.recommendations == [] and out.candidates[0]["symbol"] == "PG" and out.candidates[0]["gate"] == "red_flag"
 
 
 # ---------------------------------------------------------------- preconditions
@@ -115,7 +115,7 @@ def test_one_metrics_order_asks_for_every_number_for_every_candidate_with_the_se
     out, advisor, _ = run(*GOOD, order=order)
     kind, symbols, names, sector = advisor.clerk.asked[0]
     assert kind == "metrics" and symbols == ["PG"] and sector == {"PG": "XLP"} and len([a for a in advisor.clerk.asked if a[0] == "metrics"]) == 1
-    assert {"rsi_14", "mom_12_1", "net_payout_yield_ttm", "recent_bars", "adv_20d_dollars", "atr_14", "spy_above_sma_200", "sector_etf", "roe", "risk_factor_change"} <= set(names) and len(names) == len(set(names))
+    assert {"rsi_14", "mom_12_1", "share_count_change", "recent_bars", "atr_14", "spy_above_sma_200", "sector_etf", "roe", "risk_factor_change"} <= set(names) and len(names) == len(set(names))
     assert "metrics" in out.data.model_fields_set or out.data.metrics                  # the numbers are on the order for the next agent
 
 
@@ -137,7 +137,7 @@ def test_without_the_plan_call_there_are_no_text_signals_but_the_families_that_n
     out, _, _ = run(RuntimeError("provider down"), thesis_reply(), order=ready_order())
     assert out.status == "recommended" and out.advisor_runs[0]["error"] == "the plan model call failed (RuntimeError)" and out.errors == ["the plan model call failed (RuntimeError)"]
     record = out.recommendations[0]
-    assert record["symbol"] == "PG" and record["signals"] == [] and record["agreement"]["evidence_n"] == 0 and [f["family"] for f in record["families"] if f["passed"]] == ["capital_return"]
+    assert record["symbol"] == "PG" and record["signals"] == [] and record["agreement"]["evidence_n"] == 0 and [f["family"] for f in record["families"] if f["passed"]] == ["capital_return", "conviction"]
 
 
 def test_an_invented_quote_an_invented_event_and_an_event_the_text_does_not_show_are_dropped_with_reasons():
@@ -169,11 +169,11 @@ def test_a_thesis_that_fails_twice_leaves_null_and_the_reason_and_the_record_is_
 def test_the_rejects_are_candidates_with_the_gate_or_the_rank_that_stopped_them():
     sources = [(1, "PG", "Procter & Gamble (PG) lifted its full-year sales growth outlook to reflect an acquisition, while the company reported Q1 earnings.", "2026-10-22T13:00:43Z"),
                (2, "MU", "Micron (MU) shares rallied on Tuesday after the quarterly report.", "2026-10-22T10:00:00Z")]
-    metrics = {"PG": full_metrics(), "MU": full_metrics(adv_20d_dollars=1000.0)}
+    metrics = {"PG": full_metrics(), "MU": full_metrics(cfo_negative_with_profit=True)}
     out, _, _ = run(plan_reply(company(signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply(), order=ready_order(subject=("PG", "MU"), sources=sources), metrics=metrics)
     assert [r["symbol"] for r in out.recommendations] == ["PG"]
     reject = Candidate.model_validate(out.candidates[0])
-    assert reject.symbol == "MU" and reject.gate == "liquidity" and reject.origin == "subject" and "gate liquidity failed" in reject.reason and reject.gate_value["adv_20d_dollars"] == 1000.0
+    assert reject.symbol == "MU" and reject.gate == "red_flag" and reject.origin == "subject" and "gate red_flag failed" in reject.reason and reject.gate_value == ["cfo_negative_with_profit"]
 
 
 def test_the_stale_bars_of_today_fail_freshness_and_say_how_stale(monkeypatch):
@@ -221,7 +221,7 @@ def test_version_0_still_advises_on_the_same_kind_of_order_and_top_recommendatio
     out, _, _ = run(*GOOD)
     assert top_recommendation(out) == "PG"                                                                                           # supported, and its v1 score is above 50
     both = ready_order(subject=("PG", "MU"), sources=[(1, "PG", "Procter & Gamble (PG) lifted its full-year sales growth outlook to reflect an acquisition, while the company reported Q1 earnings.", "2026-10-22T13:00:43Z")])
-    out2, _, _ = run(plan_reply(company(signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply(), thesis_reply(symbol="MU"), order=both, metrics={"PG": full_metrics(), "MU": full_metrics(roe=30.0, net_payout_yield_ttm=0.08, share_count_change=-0.05)})
+    out2, _, _ = run(plan_reply(company(signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply(), thesis_reply(symbol="MU"), order=both, metrics={"PG": full_metrics(), "MU": full_metrics(roe=30.0, share_count_change=-0.05)})
     assert {r["symbol"] for r in out2.recommendations} == {"PG", "MU"} and top_recommendation(out2) == max(out2.recommendations, key=lambda r: r["score"])["symbol"]
 
 
@@ -256,8 +256,8 @@ def theses_reply(*symbols):
 def industry_run(top_k=None, **kw):
     texts = [(1, "AAA", "AAA (AAA) is the largest chain in the industry.", "2026-10-22T10:00:00Z"), (2, "BBB", "BBB (BBB) is the second largest chain.", "2026-10-22T10:00:00Z"),
              (3, "CCC", "CCC (CCC) is a smaller chain.", "2026-10-22T10:00:00Z"), (4, "DDD", "DDD (DDD) is a chain with thin trading.", "2026-10-22T10:00:00Z")]
-    metrics = {"AAA": full_metrics(net_payout_yield_ttm=0.07, share_count_change=-0.03, ret_21d=0.30), "BBB": full_metrics(net_payout_yield_ttm=0.05), "CCC": full_metrics(net_payout_yield_ttm=0.06, share_count_change=-0.006),
-               "DDD": full_metrics(net_payout_yield_ttm=0.08, adv_20d_dollars=1000.0)}          # DDD has the best numbers and fails the liquidity gate
+    metrics = {"AAA": full_metrics(share_count_change=-0.03, ret_21d=0.30), "BBB": full_metrics(), "CCC": full_metrics(share_count_change=-0.006),
+               "DDD": full_metrics(cfo_negative_with_profit=True)}          # DDD has the best numbers and fails the red_flag gate
     order = ready_order(subject=("AAA", "BBB", "CCC", "DDD"), sources=texts, case="industry")
     advisor, model = advisor_with(plan_reply(), theses_reply("AAA", "BBB", "CCC"), metrics=metrics)
     out = advisor.generate_recommendations(order, EMPTY_PORTFOLIO, "industry", TODAY, top_k)
@@ -276,8 +276,8 @@ def test_the_industry_case_ranks_the_leaders_best_to_worst_and_a_large_leader_is
 def test_every_company_evaluated_has_a_score_and_a_rank_and_one_that_failed_a_gate_is_ranked_after_those_that_did_not():
     out, _, _ = industry_run()
     candidate = out.candidates[0]
-    assert candidate["symbol"] == "DDD" and candidate["rank"] == 4 and candidate["gate"] == "liquidity" and candidate["stance"] == "bullish" and candidate["score"] > 50     # the best numbers, ranked last: it cannot be bought
-    assert "gate liquidity failed" in candidate["reason"]
+    assert candidate["symbol"] == "DDD" and candidate["rank"] == 4 and candidate["gate"] == "red_flag" and candidate["stance"] == "bullish" and candidate["score"] > 50     # the best numbers, ranked last: it cannot be bought
+    assert "gate red_flag failed" in candidate["reason"]
 
 
 def test_top_k_replaces_the_number_of_new_ideas_and_the_rest_are_ranked_candidates():

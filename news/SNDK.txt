@@ -9107,3 +9107,4677 @@ METAM | positive | Company announced first-ever stock split to improve accessibi
 SNDK | neutral | While the company shows exceptional growth (6,000% rally, 85% gross margin, EPS projected to jump from <$10 to ~$228), the article warns of significant cyclical risks in memory/storage markets and potential AI bubble concerns. Strong near-term demand offset by long-term uncertainty.
 WDC | neutral | Mentioned as parent company of Sandisk spinoff in February 2025. No specific performance details or sentiment drivers provided in the article.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143617015
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T17:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b8bea66c6ab8fed942f389dbbc127646cba68ac45be18790471f1c9ba7639a9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron and Sandisk Lead the Memory Market. 1 Stock Has Far Greater Upside.
+<<<SUMMARY>>>
+SK Hynix is a clear leader in the memory market, and its latest quarterly results indicate a bright future.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616890
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T16:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7bedc41f495b86c1e762898a2b487fd84955a9426566f0f1b41039381bc41359
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: AI Stocks Are Falling; Bitcoin Is Holding Ground. Here's What Could Come Next.
+<<<SUMMARY>>>
+Bitcoin's relative stability amid market turbulence portends well for its future.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639848
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T16:35:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ca0778437ee89cd072603c8572d39e896a5b3cb00f154494bb502cd810fce9f4
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/07/Micron.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: DRAM ETF: Why It’s Falling, and Outflows Are Rising Despite Strong Micron, SanDisk and Samsung Earnings
+<<<SUMMARY>>>
+DRAM ETF outflows are accelerating, while the price is falling despite the recent strong earnings by Micron and SanDisk
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639849
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T16:25:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d5d6d63bd8e8d1a491e45a7c40f40676e6ae1865bc7d773a2889726bca9c85a6
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/07/Sandisk-Company-Logo---EK.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk Stock Drops Ahead of Split as Wall Street Analysts Weigh In
+<<<SUMMARY>>>
+SanDisk stock has been in a freefall and has reached its lowest level since April 9, and analysts remain optimistic about the company
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640279
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T14:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d47b15e5bfe65d7edb06886c162c5ea99bf0687d3e70a585c40e17d717c84897
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Shares Are Oversold: Bargain or Value Trap?
+<<<SUMMARY>>>
+SanDisk shares fell more than 22% on Nov. 5 despite strong earnings, as investors questioned whether its record margins and NAND pricing strength can persist amid an AI-driven sell-off.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143617383
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T13:52:30Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=d1a05031a2d22fc11eba330ca7a7b0693f124707f8056933fd735769f647f79b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1473220501/image_1473220501.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: The AI Selloff Just Got Messy. Here's 3 Ways It Can Resolve
+<<<SUMMARY>>>
+AI stock selloff: macro fears, AI credit risk and data center delaysânot fundamentalsâdrive discounts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614562
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T13:11:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=70769b3692c742f8eb11cb89a033dc40386130feee8193af8ad270e1cdf0f480
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Marvell and Western Digital Just Had Their Worst Week Since 2001
+<<<SUMMARY>>>
+Both chipmakers raised guidance, yet investors dumped them like a crisis was underway. One election, one record-setting selloff, and one looming merger now separate a sturdier bet from a riskier one.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616245
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T11:00:43Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=d3cd5db3d429a0a005d4a5a8821335daef9b3eabaae694f7bc54bc6455a99364
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2272099114/image_2272099114.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Down Isn't Cheap: How Far Can The AI Trade Still Fall?
+<<<SUMMARY>>>
+The current AI trade pullback is the deepest since the bull run began, distinct from prior macro-driven corrections. Discover more in the article.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614307
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:30:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9df883e7f113e79e4237507dd259690424ca9dda318b623a79d328583037ddcf
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/07/NYSE.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: TSLA, AMD, MU and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week
+<<<SUMMARY>>>
+Retail investors talked up 5 hot stocks during the week (Nov. 2 to Nov. 6) on X and Reddit&#39;s r/WallStreetBets: AMD, INTC, TSLA, NVDA, MU.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143615271
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:15:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=61b0d206af31483b92261085081306c619082a2a074346c79149b589d43fd620
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2183146598/image_2183146598.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Your Covered Call ETF Is Secretly An AI Bet: How I'm Playing The Plunge
+<<<SUMMARY>>>
+AI covered call ETFs face hidden risks as AI falls and rebounds. The real danger isn't the sell-off. Read here for a detailed analysis.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614257
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:00:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8faf68204a7a19a7fa720080299f760b8d11a4e098f2dd98ad88cf4d506c1a76
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/07/Bulls-and-Bears-1.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Benzinga Bulls and Bears: Palantir, IonQ, DraftKings
+<<<SUMMARY>>>
+Benzinga examined the prospects for many investors’ favorite stocks over the last week — here’s a look at some of our top stories.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143613879
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=9a4d068974fac512b1c9b57f3b8e927182691a1feea4a5c60b03d5a5a06c5ad9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1577578942/image_1577578942.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk: Generational Buying Opportunity - Bullish AI Tailwinds Through 2030
+<<<SUMMARY>>>
+Buy Sandisk Corporation for AI-driven growth: supply deals, pricing power, strong cash flow, and deep-value upside after a 60%+ drawdown. Click for a SNDK update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143595727
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T05:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=64854e96293f09cece475195caa0bb832e3038bd3fdaea749c488e19e49037c3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Better Stock Split to Buy: Meta Platforms vs. Sandisk
+<<<SUMMARY>>>
+Sandisk and Meta's stock splits are being done in two different manners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592880
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T00:31:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dea0fa89be3bf49c87649b2d40092e13e4e089ffce4f386637c7374251b8563c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 5 Best Memory Stocks to Buy According to Billionaires
+<<<SUMMARY>>>
+In the first half of the year, memory was the hottest AI trade. Hyperscalers poured billions of dollars into data centers where high-bandwidth memory was one of the tightest bottlenecks in the supply chain. Most of the memory stocks rallied as a result, though the returns have been muted in the second half of the […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591568
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T21:45:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4ee5b6a059dd5bd95c396ca8a8e637a13a1ca1ef4f6606dee11cee58ecacdd36
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures: Market Needs Repair But Sandisk, Micron Broken; Apple, Amazon, Microsoft Strong
+<<<SUMMARY>>>
+The stock market needs repair while Sandisk and Micron seem broken. Apple, Amazon and Microsoft are holding up. Berkshire earnings loom.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591595
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T21:07:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=267aaef33202b106d4b64b52978221544b12493b688ac9e1f69940958f38857d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stock Has Lost About 64% Since June. Here's the Price at Which I'd Buy It.
+<<<SUMMARY>>>
+How many years of boom-time profits should a buyer be willing to pay for?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590823
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:20:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6f641ff01d1e6498be33dc3f519c23ddc9fb977d1a96964605736eadf05dcd6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Intel and AMD in Focus as Tech Stocks Seek Rebound
+<<<SUMMARY>>>
+Investors weighed a possible technology recovery ahead of the October U.S. jobs report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590762
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:18:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ff2ed5c5d44eccee32f2a100979194645338376190ca424b9c2e859f00dfc3c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Investing.com’s stocks of the week
+<<<SUMMARY>>>
+Investing.com -- Democratic wins in both chambers of Congress eventually triggered a heavy sell-off across AI and chip names, while deal news drove sharp moves in both directions elsewhere.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590757
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2e0ec145c4de8d367d41920a4d3359d930dd27834e02855831e17f6c9b74ed8a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stock is Falling Sharply. Here's the Price at Which I'd Buy.
+<<<SUMMARY>>>
+The flash memory maker's stock has plunged more than 60% from its all-time high.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592592
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:10:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c7b6c75c168ed93832eef1ecf7cd5b76d8460ecd86fd5da248568a28e38ba4ba
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2218739654/image_2218739654.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Tech Stocks Rebound But Nasdaq Is Still In Correction Territory
+<<<SUMMARY>>>
+Nvidia, Micron lead tech recovery. Jobs report comes in better than expected
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590921
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:05:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=74243f074ea9c302e93ba66e537a66108f8b2a691c3e7baa793c330587755ead
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk Stocks Rebound 5.82% After 22% Crash as 8-for-1 Split Nears
+<<<SUMMARY>>>
+SanDisk's data center revenue jumped 61% last quarter, and split-adjusted trading begins November 20.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590817
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=501267df3219549cc707b013c2a1b6edb152549e3dd0e55345fbb45f9fdfb73f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: The Chip Stock Bloodbath Is a Case Study in the Risks of Leveraged ETFs
+<<<SUMMARY>>>
+Leveraged single-stock ETFs tracking chip makers plunged on Thursday as underlying stocks tumbled.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590822
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:59:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0c8cbcc588facc3f4c7bdc5387e7297ac80531c75d695db10b10ee3f15f03843
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Update: Wall Street Rises as Tech Stocks Rebound
+<<<SUMMARY>>>
+(Updates with latest market prices and developments.) US benchmark equity indexes rose intraday a
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589873
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:48:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6ae8b30d29fe3ecbda9cfa87464dccb4f9e3b5a066ba2eca07ba0ddf761c515
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why You Should Think About SanDisk Differently Now
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590826
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2480405a1cce846a97720bc8c938ac402e4170a6e2d73d97494757da4d3a6d54
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, Intel, Tesla, AMD, Coherent, Lam Research, Moderna, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia trades higher Friday after recording its second-largest one-day market cap decline on record on Thursday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589719
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:03:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ac30997430a215043ebd992883df443c749b81d73797d7cd6b64fda5ff89887
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why Micron’s Supply Deals Are “Basically Meaningless” Once Prices Fall
+<<<SUMMARY>>>
+Key TakeawaysMicron fell 17% on Nov. 5 as memory stocks sold off.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614051
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:00:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3697d245065dce629740e8f7b3fcfe06fa354064b6da3693c726a4966dc133d7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Stressed-Business-Man-Crypto-Trader-Brok.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Nasdaq 100 Has Worst Day Since 2020, Jobs Beat Keeps Fed Hike Alive: This Week on Wall Street
+<<<SUMMARY>>>
+Democrats’ midterm sweep turned a four-week slide in AI stocks into the Nasdaq 100’s worst day since March 2020, while a 165,000-job October report kept a December Fed rate hike in play.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589651
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e73f208ac045bbe87f2467e5af7ea1942a3096001d9ba9477f297b374e0d915
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Bitcoin rebounds after sell-off, and the White House gets crypto broker rules
+<<<SUMMARY>>>
+Scott Melker discusses bitcoin (BTC-USD) erasing its losses from a sell-off, Trump Media  (DJT)moves bitcoin, and the SEC crypto broker rules hitting the White House. "The Daily Wolf with Scott Melker" airs every day at 12:00 p.m. Tune in for your daily dose of all things crypto. Make sure to also check out Yahoo Finance's new crypto hub to find the latest crypto-related news.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589726
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:48:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=343e688b7cd5725550b3c2fa70ca1fd295f3ac3d28ac6716caf8239adaff8872
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why Sandisk Stock Bounced Back Friday
+<<<SUMMARY>>>
+At 4x forward earnings, Sandisk stock is too cheap to sell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591346
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:50:45Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=d950581603106fe78be3383793ff57e2bd97273c22ad5c5aa79b62b927ff9372
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/172220437/image_172220437.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron: The Story Is Far From Being Over (Rating Upgrade)
+<<<SUMMARY>>>
+Micron is now rated a Strong Buy at ~$688, as the recent sell-off is seen as exaggerated and presents a compelling entry point. Click here for more on MU stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589724
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:48:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5742d077ded6a381b13c6cab6c2d0dee7186feec5b6f6c40e2df2e806550c527
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: The Cheapest AI Stocks to Buy Now
+<<<SUMMARY>>>
+Is the AI trade over? These companies have double digit growth and are dirt cheap.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588339
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:45:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5aca9b01144e12f21ab10f48d29ba5e721b044bae7c40fb70fabaf766be60131
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk Just Crashed 22% On Midterms, Down 43% Over 3 Months: One Of The Highest Ranked Sell Side Analysts Just Doubled Down That It Will Nearly Quadruple
+<<<SUMMARY>>>
+SanDisk posted record results, yet the stock keeps sinking as Texas threatens data center moratoria. One of Wall Street's top-ranked analysts says the market has this wrong, and his reasoning hinges on three pillars.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589735
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4ea7342dc0a56a7dfd62d77772e76e8efb8adf01b2ceaa58981c2bdf3ea96ed2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk, AMD, Coherent, Lam Research, Airbnb, Moderna, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Coherent and Advanced Micro Devices are the best performers in the S&P 500 as AI-related stocks stage a comeback after the previous session’s brutal selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588242
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:22:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d6ffd4a3a2f92d970d4e18dd49542c0889ea648b6f140f18c30d2d9d92e01b26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Soars 7% After Thursday’s 22% Crash as Chip Stocks Rebound
+<<<SUMMARY>>>
+Key TakeawaysSandisk stock jumped 7% today as chip stocks bounced back from Thursday’s selloff. IREN’s strong AI-cloud report eased fears about data-center spending, but Sandisk’s worries about flash prices and Chinese supply remain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588243
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=484c151a61317e92f510f6ce9d0cd3559f5718abba1a667515a0cdaf2e4306e5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Stock-Split Watch: Is Micron (MU) Next?
+<<<SUMMARY>>>
+Micron stock has handily outperformed the S&P 500 and Nasdaq throughout 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589878
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:17:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bf78085e85a0c427fba866e5d8c9aef39f0e3c31d6b4155fd33791102bf2d7f8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Chip Bounce Back. They're Still Trading at a Discount.
+<<<SUMMARY>>>
+Chip stocks rose, but were still on pace for double-digit losses for the week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588501
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:16:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a5fd055476e030e03cfc0dbe32f479430ba77f6961ee706239779290b262649
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stock Has The AI Infrastructure Case Changed After Regulatory Fears
+<<<SUMMARY>>>
+Sandisk reported fiscal Q1 2027 sales of US$11,031 million and net income of US$8,101 million, issued Q2 revenue guidance of US$12,200 million to US$12,600 million, and announced an 8-for-1 stock split. These developments come against a backdrop of heavy reliance on data center and AI infrastructure demand. The business now has US$93.9b in minimum revenue commitments from eight long-term data center and edge contracts, providing multi year volume visibility even as political debate around AI...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588334
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:02:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=95197cce7e73fbd7a8bf043a459b35cba834be259a857d11b9fbffbb6a11bd27
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Is Splitting Its Stock 8-for-1. Is Micron Technology Next?
+<<<SUMMARY>>>
+Micron Technology may become the next memory stock to announce a stock split.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588345
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:56:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=68f47abe7e35c3af7088391e8b35d1d040c0fde06d4bfd6169b113eb2dfd3714
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: $3 trillion was wiped off the S&P 500 — but it ain't doomsday
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi comforts investors after a record-setting market beatdown and notes that the S&P 500 (^GSPC) has historically gained after such volatility spikes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588408
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:47:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=65878f72aab0459a17ae6b9a5624fc77eeaea185bc0b59967cebcbb4d1a8685d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Oversold AI and chip stocks after the Nasdaq’s worst day since 2020
+<<<SUMMARY>>>
+Investing.com -- Thursday’s selloff hit technology stocks hard. The Nasdaq 100 fell 6.4%, its worst day since 2020. The S&P 500 lost 4.4%, and the Philadelphia Semiconductor Index dropped more than 12%. The trigger was Democratic midterm wins in key data-center states, which stoked fears of tougher AI regulation and a slower data-center buildout. Jefferies called it "reactionary, not a fundamental reset" (Nov 6, 2026).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588336
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:08:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d5d61ca51992519b81e4b586a6f73a8d44b1ba0a918bd767a173d67d8ed90f7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk Surges 10%, Micron and Western Digital Jump 8% as Memory and Storage Stocks Rebound From AI Sell-Off
+<<<SUMMARY>>>
+Chip stocks just survived one of their ugliest sessions in years, and the trigger was politics, not earnings. Why are memory bulls still cautious, and which new threat could send the selloff roaring back?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584412
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:43:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fcafb421bf37c7d10fecc4053acb34663475c6f3cbab26bb12a437d2f946f831
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, AMD, and Micron stocks lead chip sector higher following worst sell-off since 2020
+<<<SUMMARY>>>
+Nvida, AMD, Micron and Sandisk rebounded on Friday after the chip sector suffered its worst daily drop since 2020.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584590
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:39:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d04987023e8184a01b214aa8e29646bfe887de91cd17e91a7d47cb75635084ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: AI semiconductor rout may be buying opportunity, LYNX Equity says: ’Dip a toe in’
+<<<SUMMARY>>>
+Investing.com -- Lam Research (NASDAQ:LRCX) shares rebounded sharply in premarket trading Friday after the semiconductor equipment maker announced a $25 billion share repurchase authorization, offering a potential signal of corporate confidence following one of the technology sector’s worst trading sessions in years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584076
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:36:06Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=3ddd5756ebb49544a30f152edd7763c7482f382d299c3762604eac63883a5699
+image_url: https://www.chartmill.com/images/uploads/CM_Premarket_Movers_Small_free_90289f6b81.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Premarket Movers: Tech and Semiconductor Stocks Lead Gainers as AXON and ROL Fall
+<<<SUMMARY>>>
+S&P 500 premarket movers: ABNB, LRCX, LITE, SNDK and COHR lead gainers; AXON, ROL, CHTR, MNST and J lead losers, with prices and performance details.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614105
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:35:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=52e97901db37e517ffdedb99c9132ce64b2c214867a2d090099006b9df8b35f8
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/aggregated_options_1.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: 10 Information Technology Stocks Whale Activity In Today’s Session
+<<<SUMMARY>>>
+This whale alert can help traders discover the next big trading opportunities.
+Whales are entities with large sums of money and we track their transactions here at Benzinga on our options activity scanner.
+Traders often
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584418
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:20:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=48d52960d5c39d8c6f0353758ff89e885412457451a5df7ae006add5d23166af
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Equity Futures Mostly Point Higher Following Tech-Led Selloff
+<<<SUMMARY>>>
+US stock futures were mostly tracking higher Friday after Wall Street suffered its biggest one-day d
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140012114
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:17:53Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0076b293edd76ae2db432bca78cc90c051efe5d6f72e788a8c8efdfa98978b96
+image_url: 
+category: company
+tickers: SNDK
+keywords: 
+headline: Silicon Motion Technology shares are trading higher after the company reported better-than-expected Q1 financial results and issued Q2 sales guidance above estimates.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614037
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:06:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b9aa37844199f0c2add5c78d237a387c164e00b8d0823dae78dc0a154a7bd959
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/In-This-Photo-Illustration--The-Coreweav.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: EXCLUSIVE: Nasdaq 100 Suffers Worst Day Since 2020, but Credit Markets Aren't Panicking, Says S&P Global Analyst
+<<<SUMMARY>>>
+The Nasdaq 100 had its worst day since 2020, but credit barely moved. S&amp;P Global&#39;s Gavan Nolan tells Benzinga why three stocks stand out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583010
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:49:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=95b59bd8f47de260d46738b64c90e844408c54863d178e678537dbd953e4560b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures Fall, AI Stocks Nvidia, Sandisk, CoreWeave, SpaceX Bounce After Nasdaq Dives 5.5%
+<<<SUMMARY>>>
+Nvidia, CoreWeave, SpaceX plunged, but the stock market sell-off spread far beyond AI. The October jobs report looms.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583021
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:45:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d45bbdfe0391faae9c7c75d4fa92e5fc5cfc83019261f95a6195a2d86cdf3e1f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Asia’s Chip Stocks Crashed Overnight, With SK Hynix Down 11.7% And Taiwan Off More Than 8%. Now Nasdaq Futures Are Pointing Higher
+<<<SUMMARY>>>
+SK Hynix supplies the memory that sits on the world’s top AI chips, and it lost more than a tenth of its value before most Americans woke up. The stock fell 11.7% in Seoul on Friday, Fox Business reported, citing Reuters. In the same Fox Business report, Samsung Electronics fell nearly 10%, SoftBank Group sank […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589156
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:43:09Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=9c91d648144b28af2730071ca38bbc63ea72f3750a24007416d205e69b3e8267
+image_url: 
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk: 3.5x P/E And Robotics Potential Changed My Mind (Rating Upgrade)
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589158
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:42:22Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5d2807cf8b7ce5c7920c0c31a159831c2956333a584e0950d2e030bb2dc8bcc3
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2259148968/image_2259148968.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: DRAM: Post-Election Crash Is An Opportunity
+<<<SUMMARY>>>
+Roundhill Memory ETF offers exposure to memory stocks amid a politically driven selloff. Read what investors should know about DRAM during the recent sell-off.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584606
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1e1a9eb4630d396a06e9d4d03b5b41ed1dc89b4593f0f25c761d8520c9108f13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Intel, Sandisk, AMD, Airbnb, Monster, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Beaten-down AI stocks like Intel and Marvell come roaring back, while Airbnb surges thanks to strong travel demand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143580154
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:12:55Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=865640e021ce729c1ab1a87f93ad8da3ffcb7ee10bce52465015433377e19fa9
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_41_00922f16cf.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: Stock Market Today: Nasdaq Crashes 5.5% as Midterm Fallout Turns Into a Brutal AI Chip Selloff
+<<<SUMMARY>>>
+The Nasdaq fell 5.5% in its worst day since April 2025 as investors dumped AI chip stocks on fears of tighter regulation after the Democratic midterm win. AppLovin soared, Airbnb beat after the bell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584491
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:54:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1923eecdf365dd54436b4785681e5c133bf87aaa82108ea266d86744eab098bd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: U.S. chip stocks rebound sharply after Thursday’s brutal selloff
+<<<SUMMARY>>>
+Investing.com -- U.S. chip stocks rebounded in premarket trading Friday, recovering some ground after a sweeping AI-driven selloff Thursday that followed the Democrats’ midterm election victory earlier this week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143580441
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:38:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6eb136344d4aa25d7d492fb55422d2f02c6a1f36563456292d0b27422d4eb5c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Shares Suffer Brutal 17% Rout as Chip Selloff Deepens
+<<<SUMMARY>>>
+Micron Faces Double Blow as Taiwan Factory Delays Add to AI Chip Selloff
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143578769
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:37:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=edc336c99b23a30a63771c0d5ae276abf16404496569ff1417091a1cb2b618da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nasdaq Suffers Worst AI Panic in Years as Nvidia, SanDisk, and Western Digital Sink
+<<<SUMMARY>>>
+Midterm Election Shock Sends Nasdaq Into Correction as AI Stocks Face Regulatory Fears
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587016
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:36:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6c41c1a7793fcef8f40a0de1cc334985ba356ba280e66929c7ed80e1fe622681
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Contemporary-Business-Collage-Of-Speaker.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron, AMD, SanDisk Lead AI Stock Bounce as Investors Buy the Dip
+<<<SUMMARY>>>
+Chip stocks rebound in Friday’s premarket, led by SanDisk, Micron and AMD, recovering only part of Thursday’s losses amid AI sector fears.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587533
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:27:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ef7b94b96c420047c18c8cbf850e89e616e3c1dc0d09b42139346fe50127e841
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Blocks-Of-Computer-Memory-Sit-On-Top-Of-.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: $7 Billion Gone: DRAM ETF Investors Crushed As Memory Chip Mania Unravels
+<<<SUMMARY>>>
+DRAM ETF investors face $7 billion in estimated losses as a 40% plunge rattles the artificial intelligence memory chip trade.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585665
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:05:48Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=370229f52df29b055482f797009ca36175be117a9142097b7d55e22cf34642a4
+image_url: 
+category: company
+tickers: SNDK
+keywords: 
+headline: 'TSMC Weighs Making Advanced Memory Chips to Capture More AI Spending' - The Information
+<<<SUMMARY>>>
+https://www.theinformation.com/articles/tsmc-weighs-making-advanced-memory-chips-capture-ai-spending
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584404
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:33:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a27c98b4daacb89552c28ac0be6e3fbbb3fad88a263d68c207e460e90297c60e
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/SanDisk-Bangkok--Thailand---February-05-.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk Surges 10% Following Post-Midterm Crash as Wall Street Debates Chip Demand
+<<<SUMMARY>>>
+SanDisk stock rebounded about 10% in Friday premarket trading after a 22% plunge. Analysts debate whether the post-midterm memory selloff is a buying window.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584762
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:19:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7cd99449e8281355e4d373db1f00225c0036e27e272d86c9d61a223d3d14f5d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Stock market today: Nasdaq futures rebound after brutal sell-off, Dow and S&P 500 wobble as US adds 165K jobs
+<<<SUMMARY>>>
+Stocks are poised for steep weekly losses as a post-election rally turned into an artificial intelligence trade meltdown, sending tremors through markets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143574297
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:19:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e6700c53dd62e20816aeaa7398d4f915e9258667172d5078945ae86617bbf5e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Stock market today: Dow, S&P 500, Nasdaq futures wobble after brutal sell-off, with key jobs report on deck
+<<<SUMMARY>>>
+Stocks are poised for steep weekly losses as a post-election rally turned into an artificial intelligence trade meltdown, sending tremors through markets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143586322
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:18:58Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e87b797f639d2ca2fdc551c8121a771e29b5cfe43887a258324d194e36c7ee96
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2297324455/image_2297324455.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk: Cheap, But Cheap For A Reason
+<<<SUMMARY>>>
+Sandisk Corporation is rated Hold after a 56% decline, trading at under 5x earnings but facing deteriorating fundamentals. Read more on SNDK stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583911
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T06:56:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d2762e7ea4320ba39d1c9a4e7b04eb926296e260bca00d667cadedf3a71a6b12
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Hand-Bursting-Ai-Tech-Bubble-Vector-Conc.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: AI Bubble About to Burst? Top Tech Investor Warns Most Neocloud Players Could Go to Zero
+<<<SUMMARY>>>
+Midterm results trigger a $3.2T tech market selloff. Analysts assess the fallout for NVIDIA, hyperscalers, and neocloud infrastructure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584406
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:13:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e44dc397691f4e2cbb39cb107bc79166cd80975885e30f65564357a1cad8d4ee
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Downward-Red-Business-Chart-On-Blurry-Ba.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk Leads Memory Stocks Lower: A Look Inside the Rout
+<<<SUMMARY>>>
+SanDisk plunged nearly 20% as AI and memory stocks sold off after election results raised fears of data-center delays and weaker chip demand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584026
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:13:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=537100faf1fd4dea1c1b8744b6d27c404eb9132e94b90cdb6228525aca115298
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Nvidia-AMD-shuttersotck.png?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: VIX Spikes 39% as AI Tech Rout Wipes Out $2.2 Trillion: Stock Market Today
+<<<SUMMARY>>>
+The AI sell-off deepens after the Democratic midterm sweep, sending the S&amp;P 500 toward its worst day since April 2025 as Nvidia, AMD and Micron sank.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584408
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:26:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=722130a659e715643b4d8a37ad8dee2abee523ca8b094db7360f76c11a2d06a4
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Sandisk-Company-Logo---EK.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk Bears Hit Jackpot: Short ETF Rockets 35%, Bullish Funds Bite the Dust
+<<<SUMMARY>>>
+SanDisk’s 17% plunge sent the 2x inverse SNDQ ETF up about 35%, while four leveraged long SNDK funds fell about 34%. Here’s what’s behind the divide.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583983
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:01:46Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=63534558fe81f05bb3482571e7fdb77aceae77f66bef12a62f7b21341b0124f8
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Jakarta--September-07-2024-Nvidia-Corpor.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, Micron, 8 Other AI Stocks Just Broke Below a Key Technical Support
+<<<SUMMARY>>>
+Nvidia, Micron and eight other AI stocks fell below their 200-day moving average this week as the midterm vote hit AI spending bets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584410
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:16:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a0ef6ebeb4dfe71ea73352f435650c00667e873940808c9789828a220c61bb28
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Benzinga-Quick-Spark.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: QUICK SPARK: SanDisk Stock RSI Hits Most Oversold Level Since April 2025
+<<<SUMMARY>>>
+SanDisk&#39;s 14-day RSI fell to 26.6 Thursday, its most oversold reading since April 2025, as shares slid 13% and extended a 34% weekly drop.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807376
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T19:23:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=331089d666bff097ff41b091d20a8a3aec486bf7f5c6fe3b6210db8f04fb135c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 5 AI Infrastructure Stocks to Watch After CoreWeave’s Earnings
+<<<SUMMARY>>>
+Why Are AI Infrastructure Stocks Under Pressure? AI infrastructure stocks have faced considerable selling pressure in recent weeks, as concerns over data center expansion, rising borrowing costs, and regulatory uncertainty have weighed on investor sentiment. According to Bloomberg, hedge funds sold global technology shares during the week ending November 6 at a pace approaching the […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807334
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T19:05:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32956ad26326a160cade0982096b2994add313424f230f83d28e042bf76c2615
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk’s Stock Split Takes Effect Nov. 19. Should You Buy It Now?
+<<<SUMMARY>>>
+Investors have better reasons to buy the stock than a stock split.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840078
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62e4db146fcba5e9f023fa036b8c1e0a196b730580f64b40ce9c29fad5ef84b9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: MarketBeat Week in Review – 11/9 - 11/13
+<<<SUMMARY>>>
+NVIDIA's Jensen Huang resigned amid scandal, rattling the AI trade, as inflation data disappointed. MarketBeat recaps this week's top analyst coverage on NVIDIA, Anthropic's IPO, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806184
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T11:50:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5545d217893c4d0146ccdaad95766e3eb9c969c21c6a713253a96222a07ebea9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: A $2.8 Billion Fund Dumps These 3 Stocks
+<<<SUMMARY>>>
+Key TakeawaysBIT Capital’s 13F for the quarter ended Sept. 30 shows it sold all of its Sandisk, Ciena and Nokia shares, while adding to Amazon and NVIDIA.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840114
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T08:37:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27394fe742088f9b7ef1c368b64e0edffd5ceaf77e78ab9c82f9ffda1613f552
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Is Up 273% in 2026, but Down 62% From Its June High. Take Profits, or Buy More?
+<<<SUMMARY>>>
+Key TakeawaysSandisk stock is up 273% in 2026 on a flash shortage and AI data-center demand, but it’s 62% below its June high, and Micron has fallen on the same worries. Sandisk’s revenue kept climbing as the stock fell, to $11.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805519
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T23:37:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a57498c628cb0032fa23fde9cc67d798216302eb02d785bc035063d0c7dc67d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stock Fell Back Under $900 on Friday. I'd Start With a Small Position.
+<<<SUMMARY>>>
+The flash memory company's outlook hasn't shifted since Oct. 29. Its stock price has.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805292
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T21:32:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3119f9d3c7b56b7f881bae02501d4065366b2cebc3aa053009d80800f96d9167
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 5 Multibagger Stocks to Buy According to Wall Street
+<<<SUMMARY>>>
+Wall Street’s AI trade just had one of its worst weeks in years. Politics and inflation hit it at the same time. The Nasdaq Composite posted its deepest one-day drop since April 2025 last week, after Democrats swept the midterm elections and investors began weighing tougher scrutiny of AI and limits on data center construction. […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805372
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T21:29:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fedc345d5a9911d54981b0ee1c01884bb9b2f3876bf9c89af2cf65ecb2d130ae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 5 Stocks With Insane Upside According to Reddit
+<<<SUMMARY>>>
+US stocks edged lower Thursday, snapping a rebound that had lifted the S&P 500 1.3% a day earlier. The S&P 500 fell 0.35% to 7,592.40, the Dow Jones Industrial Average slipped 0.36% to 52,297.09, and the Nasdaq Composite lost 0.39% to 25,366.09, Yahoo Finance reported, as bond yields rose. Traders weighed hot inflation data, the […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805901
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T20:05:54Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=be3fdb8d07915e0be2cd4515b98267b2b4974a4811a7553772ecbabacec06658
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Top Movers for Nov. 13, 2026: Charter Communications Leads Gainers, AMD Leads Losers
+<<<SUMMARY>>>
+S&P 500 top movers on Nov. 13, 2026: Charter Communications led gainers at 4.58%, while Advanced Micro Devices led losers at -9.42%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804988
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=592f39abc7118c9d59891fd0acfcb0fc8ab4dc39d393e37cbdbb769fdbd05c21
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Chart of the Day: Sandisk Stock Looks Ready to Bounce Back
+<<<SUMMARY>>>
+Sandisk stock has faced considerable selling pressure and is trading 64% below its 52-week high.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805216
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bafaa8aff5484348ed06807c69cc4b12d17bf7f3b7189d0c9e24a2f68f622087
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Beat Value Traps: 4 Stocks With Attractive PEG Ratios to Buy Now
+<<<SUMMARY>>>
+Discover four stocks with attractive PEG ratios, strong earnings growth prospects and favorable value scores that could help investors avoid value traps.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805076
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T18:40:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c37d0ad257cb022f661da3b5a039b9dc953572dcd910a4627806f3cd824d2991
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why Sandisk Stock Is Falling Today
+<<<SUMMARY>>>
+Sandisk is falling for a second day as the fallout from Nvidia's CEO exit hits AI hardware stocks, even though its latest quarter was huge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804987
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:59:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e47ff78588b1c0ab5ac2e7ec444369fea2d0e96a93f3d489c87f71b3675e99bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Stocks Fall 3.96% as Nvidia CEO Exit Drags Memory Shares Lower
+<<<SUMMARY>>>
+The memory giant slid with the chip sector even though its latest guide called for about $61.5 billion in quarterly revenue.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804545
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:52:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2f6e442700b4b6c763617a8d627901bb0363bc78682a7e3f9614440504c3c6f8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Is Down 20% in a Month. What Will It Take to Get MU Stock Back to $1,000?
+<<<SUMMARY>>>
+The AI memory trade that lifted chip stocks through much of 2026 is cooling fast, with Micron Technology (NASDAQ:MU) right in the middle of it. Micron stock is down 20% over the past month to $760.11 in afternoon trading. That’s a sharp turn from the $953.03 the shares fetched on October 13. Within the past […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805896
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:35:57Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=efc0c08c5a5019a16ad710e064b263e08fed80d34e428ee716c24e13eaa6035e
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Top Movers: Today's US Session Gainers and Losers
+<<<SUMMARY>>>
+S&P 500 top movers for today's US session: Charter Communications and Texas Pacific Land lead gainers, while Advanced Micro Devices and Dell lead decliners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804458
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:34:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c98299682238d8dce43776844c4f0d6a90e9af500914004a7cf4e122a609688a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stocks Fall 7.2% as Chip Selloff Hits Days Before 8-for-1 Split
+<<<SUMMARY>>>
+The flash memory maker slid with the chip sector even after reporting 378% revenue growth and an 85% gross margin.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804548
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0875cda3b85a8bdb69b936ed446a094ece11e1b96e3c7f1e2f559bb0c29572b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 3 Unstoppable Memory Stocks to Buy Hand Over Fist in 2027
+<<<SUMMARY>>>
+The surging demand for memory chips likely won't cool for a few more years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805894
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:36:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=ebe545aa5ebce7afb67bfb2416115341c53558ac02b667d06d0b106099a69eae
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Gap-Down Stocks in the Nov. 13 Session
+<<<SUMMARY>>>
+Nov. 13 S&P 500 gap-down stocks include AMD, Coherent, Dell, Sandisk, Marvell, Lumentum and others, with session losses and several double-digit gaps.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803862
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:48:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0a2a9f94f50740df67af6aa7b59c629171e690351230cffe43f53060e5e4b4d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia stock slips as investors digest CEO exit, broader chip sector falls
+<<<SUMMARY>>>
+Nvidia stock declined on Friday as the rest of the chip sector also fell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139937539
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:38:35Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7b3249c123e8a1414e089244baf5c987d262e55c1b5daa296c3a93d96b49e51b
+image_url: 
+category: company
+tickers: SNDK
+keywords: 
+headline: Quantum shares are trading higher after Lake Street assumed the company with a Buy rating and announced a price target of $8.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804077
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:04:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e72c7d2ac777a17e2d0071c4d07116c4c51f3c29b5e6e617e040cd7a4e82bcda
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Evercore Doubled Down On Sandisk Stock Target Despite Slide
+<<<SUMMARY>>>
+Long-term customer commitments could soften the next memory downturn.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806203
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:44:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fbbeb0b3166a257e993289e5c6120248bb0bacf55c3d8a356df46123186943f2
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/13/Milpitas--Ca---Feb--12--2017-Sandisk---A.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: What Is Going on With SanDisk Stock on Friday?
+<<<SUMMARY>>>
+Sandisk (SNDK) stock fell nearly 9% Friday amid a broader tech selloff, Nvidia leadership turmoil, and rising NAND competition. See what Wall Street experts say next.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806204
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:35:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=10e06cb251d3b29dbd6e2512c450f70dcf259c7cdcd8017f8ded3c4d8313b92a
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/aggregated_options_3.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: 10 Information Technology Stocks Whale Activity In Today’s Session
+<<<SUMMARY>>>
+This whale alert can help traders discover the next big trading opportunities.
+Whales are entities with large sums of money and we track their transactions here at Benzinga on our options activity scanner.
+Traders will
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802234
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:12:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=82a83d232c584215adab0118bccd283130e1000c36414a613b46c9c4396f59ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk Stock At $937: Why So Cheap?
+<<<SUMMARY>>>
+More on the AI trade: our AI storyline page collects our pieces on AI stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801667
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T09:09:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a2e8496cc7a198e20a9735ec42a09470e5b8bb5e7fa400a5cc13935299390a32
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 167% Upside for Sandisk? Evercore ISI Thinks So, and Here’s How
+<<<SUMMARY>>>
+Key TakeawaysSandisk is 60% below its June high. On Nov.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143774923
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T00:01:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fc43a983655cb7b421bcae3c20a7056a06fd0fc8637a502b090c508ebf980d8a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stock Is Back Above the $900 Price I Set for Buying It. Here's Why I'm Holding Off.
+<<<SUMMARY>>>
+Should a quick bounce change what I'm willing to pay for the same guided profits?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143774353
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T23:14:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d38c33807c1e8c5d79e51ca69dfb0d22ba7f506ffa05081b4f0b6ae2aec52a00
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 5 Best AI Stocks to Buy After Wells Fargo’s Outlook Upgrade
+<<<SUMMARY>>>
+Wells Fargo is no longer telling investors to stay away from the AI infrastructure trade. In a new note, analysts led by Ohsung Kwon raised the firm’s view on US AI infrastructure to neutral from negative. The change follows a deep selloff. Semiconductor shares trade about 38% below their June highs, and the multiples investors […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773961
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:06:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=6df1ed164784a9c1004bf9ddc8ddd88b274e7ab7b23b279e74cc42528d0f86ff
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Top Movers for Nov. 12, 2026: AMD and AVGO Gain, GPN and NVDA Fall
+<<<SUMMARY>>>
+S&P 500 top movers on Nov. 12, 2026 included AMD, AVGO, ANET, VLO and MPC among gainers, while GPN, SMCI, KDP, MRNA and NVDA led declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772019
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:44:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4bfd6dcf2c028f3e33acc9906c7845ae367c10646fe11e184a620117805ce2ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stocks Slide 7.83% as NVIDIA Exit Hits Storage a Week Before 8-for-1 Split
+<<<SUMMARY>>>
+Sandisk gives back most of Wednesday's 13.69% jump, with split-adjusted trading set to begin November 20.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772113
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T18:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=781b0cdf5752e4692c859dacf632e378d70ef67f46628c28a796d001b5509a59
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron, Other Memory Chip Stocks Fall on Nvidia Shakeup. Why They’re at Risk.
+<<<SUMMARY>>>
+Shares of Micron, SK Hynix, and Sandisk were all down.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802450
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T18:12:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e7a70c41acb075714a751c03d1343d94f6f4655f50548f83400cd80e14f8a544
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Jay-Woods-Freedom-Capital.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: EXCLUSIVE: Jay Woods Names ‘Stock to Watch in 2027’ Amid Potential Democratic Big Tech Breakups
+<<<SUMMARY>>>
+Market expert Jay Woods makes a pick for the top stock to watch in 2027 based on the 2026 midterm elections.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773956
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:36:17Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=8d72580f24855ff04af7f0752cd818ab15909885e271639988acb5b9006eddb8
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Top Movers: Gainers and Losers on Nov. 12, 2026
+<<<SUMMARY>>>
+S&P 500 top movers for Nov. 12, 2026: AVGO, AMD, SWKS and energy names gained, while SMCI, GPN, NVDA and other technology shares declined.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770793
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:56:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4f123c4876b6247e8fe02d41b80c176a73a8970b571792239acc8d3500c666b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk, Micron, and SK Hynix Slide 3% as NVIDIA Shake-Up Hits Memory Stocks
+<<<SUMMARY>>>
+When the AI industry's biggest name loses its chief executive, the chips that feed it feel the tremor first. Memory makers are sliding while tech climbs, and one of them has a surprisingly low multiple that cuts both ways.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770959
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:34:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb0b4f6783a995fbce49febb803fc2c1dd29fd2df7f71014cf08e33b2dcd5dc7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why Sandisk Stock Dropped on Thursday
+<<<SUMMARY>>>
+Nvidia just lost its CEO, and its stock is falling -- but why is Sandisk stock down, too?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770958
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:00:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a4b628c8f13a88bdc8d8843e25224f885e1cd0093b7bdd561132cfc950a02483
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: What Is Going on With Sandisk Stock on Thursday?
+<<<SUMMARY>>>
+Sandisk Corp. (NASDAQ:SNDK) stock fell about 5% Thursday as investors reduced exposure to AI-linked hardware names following a major leadership change at NVIDIA Corp. (NASDAQ:NVDA) and a softer broader market backdrop. The move came as S&P 500 futures fell 0.3%, while NVIDIA stock dropped sharply after the company announced an immediate CEO transition. Nvidia Leadership Change Pressures AI Hardware Names NVIDIA said co-founder Jensen Huang resigned as president, CEO and a board member, effective
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770488
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:36:11Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2ef40b84167174ff1479ae550e9e637737b39a805ba99494a4e4d8c7707b855f
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Gap-Down Stocks in the Nov. 12, 2026 Session
+<<<SUMMARY>>>
+S&P 500 gap-down stocks on Nov. 12, 2026, including SMCI, KDP, NVDA, MOS, RDDT, SNDK, PANW, COIN, DELL, and BE, with session moves and gap details.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769348
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=70f13ef23f96413dc789a38f244a443b04be18620e75dc257d47ff4199bb9927
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, AMD, CoreWeave, Nebius, Tesla, Strategy, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia stock tumbles after CEO Jensen Huang resigns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769617
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=840509d3a1d84b731b1620e4c726e61da1018596889d97bdf58bc04e936cb60f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia Sinks 11% on Report Board Will Oust Jensen Huang; Bernstein Downgrades: “We’ve Had Enough”
+<<<SUMMARY>>>
+Key TakeawaysNVIDIA stock fell 11% on a report that its board is preparing to oust CEO Jensen Huang, and Bernstein, Evercore ISI and William Blair downgraded it. Super Micro Computer, Dell, Sandisk and Astera Labs fell with it, though the news says nothing about AI demand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767408
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:56:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2f10baa63a5165fbe44a26d5b34ac272fcb8ff323b113325e98fc143573ec735
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Is Back Above $800 After Its Best Day Since July
+<<<SUMMARY>>>
+A memory maker briefly outranked the biggest US bank, but only until the closing bell. One week after a brutal selloff, Micron's rebound faces a test that has nothing to do with a single strong day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766684
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:39:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ef5febc8c9cb747c318d90dddd877b79555c46df480d44a386a5ab7e7f0bf1d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia stock tumbles as CEO Jensen Huang steps down, dragging down other AI names
+<<<SUMMARY>>>
+Chip giants Broadcom and AMD rose on the back of Nvidia's recent woes. Other AI trade-related names didn't fare as well.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766233
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:36:15Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=3f33f491be80749530f51a99b1852409e51b7caf1d171fffed8d28a424928eb2
+image_url: https://www.chartmill.com/images/uploads/CM_Premarket_Movers_Small_free_90289f6b81.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Premarket Losers Led by NVIDIA, Sandisk, and Super Micro on Nov. 12
+<<<SUMMARY>>>
+S&P 500 premarket losers on Nov. 12 were led by NVIDIA, Sandisk, and Super Micro Computer as shares fell sharply before the opening bell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766814
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:19:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5fc43a6e1eaa99a62dde58067ef8655d831b41345b15dfab820fe297eaa8247f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures Fall, Techs Tumble As Nvidia Board Mulls Ousting CEO Jensen Huang; CoreWeave Rival Nebius Dives On Results
+<<<SUMMARY>>>
+Futures fell as Nvidia dived on news that the board may oust CEO Huang. CoreWeave rival Nebius beat views but sold off.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803082
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:53:53Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=06ac4f8d2c45a2d51016b4028bd97a00e0fe0928ed92641667d634c31d7f497a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Ai-Chips--Ai-Microprocessor--Artificial-.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk, Western Digital Are Down 60% — Are Memory Investors Getting a Second Chance?
+<<<SUMMARY>>>
+SanDisk and Western Digital are down roughly 60%. Do their low P/E ratios and technical signals point to a buying opportunity?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766826
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:44:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1550aff2aa0ceab7dc43e4ddfe644b3449c52af9afe13c403c001d78abefaa97
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Zacks.com featured highlights include Micron, NVIDIA and Sandisk
+<<<SUMMARY>>>
+MU, NVDA and SNDK stand out as profitable stocks, boasting net profit margins above 63% and strong expected earnings growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143764942
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:52:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=115e1d4bb0f4ce443fda8f7dad6e09cab5193b536c24c3d6a9e0591eca37de48
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures: Techs Fall As Nvidia Board Mulls Ousting CEO Jensen Huang
+<<<SUMMARY>>>
+Techs fell as Nvidia dived on news that it may oust CEO Jensen Huang. AMD extended gains. Will the Nvidia woes sink the new market rally?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765207
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=478b909e2ef279b2e4d2bc63ffa3a58d03f056d279407eac5fbc7883c5ece194
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 2 Memory Stocks to Buy and Hold Through 2030
+<<<SUMMARY>>>
+Memory chip stocks were hot in 2026, but they will continue to be top picks through 2030.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143764944
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0eaefc71f2790e079e92514ad21c87a8095b7b18841531ba7a8308c402955ede
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, Dell, Super Micro, Sandisk, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia and other stocks tumble as reports of a leadership crisis at the chip maker dent the AI trade.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765081
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:12:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1e8598b696bbda7251d6ae175a9ee68997818cf4df011f84e5ca6494f570a8de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron and Sandisk surge as AI triggers a memory-chip shortage
+<<<SUMMARY>>>
+Micron and Sandisk have emerged as major beneficiaries of rising memory prices, although their businesses serve different parts of the market.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765082
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:04:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0722bb9e5a9062dd9a2c444f35c046d076f4a6bf231580245400d7710559745b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: What Avantis U.S. Large Cap Value ETF (AVLV) Bought: AT&T Leads on Tuesday
+<<<SUMMARY>>>
+The fund bought $424.8 million of stock and sold none, lifting 161 positions and trimming none.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143763021
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T09:42:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=956a514cba33182d739a332880b932d3b90bbd7af69372cb3c9fe079bb6d9dd2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Applied Materials Stock At $395: Can It Do What CoreWeave Did?
+<<<SUMMARY>>>
+More on the AI trade: our AI storyline page collects our pieces on AI stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766670
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T08:57:59Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=950e0ea739f43e57918d3e4a0ea4f86f80bb386b3b5dcdf1284a6b5bd5547713
+image_url: 
+category: company
+tickers: SNDK
+keywords: 
+headline: DRAM: Down ~32% Since My Hold, Still Not Cheap, But Better Positioned
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143761514
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T07:51:46Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=be813dc75e05c53c78c607bd19f1247dd4df8998b9c835176607ad77de1bf268
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_46_ac2c0eec52.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: Stock Market Today: CoreWeave (CRWV) Reignites the AI Trade, Then Nvidia’s (NVDA) Boardroom Takes Over the Story
+<<<SUMMARY>>>
+CoreWeave’s strong quarter sent AI and chip stocks sharply higher, but a report that Nvidia’s board is preparing to remove CEO Jensen Huang hit the stock after hours. Plus: Fed hike odds, oil, and Cisco reports tonight.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765967
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T07:45:02Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=57cdcb8bdfa614388f304b370bef6620dd79cd57e42323055827b0b3daae8726
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2300625045/image_2300625045.jpg?io=getty-c-og
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk: The Next NAND Downturn Could Prove Bulls Right
+<<<SUMMARY>>>
+Sandisk Corporation's 3.4x forward earnings look cheap as data center revenue rose 61% sequentially to $4.8B. Click here for this latest analysis of SNDK stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143751717
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T05:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a305241aaf9ec325c1d4f13ad060c39741177cb6ced98c018f53ac713f4cc2f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron vs. Sandisk: The AI Memory Supercycle Is Big Enough for Both, but Here's the Better Buy.
+<<<SUMMARY>>>
+Micron and Sandisk are both riding the powerful memory wave.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143749500
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T03:49:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a21756ac6ed967ae106cb7837c5e5183410ca5d54340801f8811cc3adff02857
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures Rise, Techs Fall As Nvidia May Oust CEO Huang After CoreWave Leads Rally
+<<<SUMMARY>>>
+Techs fell as Nvidia dived on news that it may oust CEO Jensen Huang. AMD extended gains. Will that spoil Wednesday's rally?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143745654
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T00:22:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d7e64c7d1c923e54529848fa5f0a9c68b37f6ea780e8006c16005e87309242b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nasdaq 100 Futures Drop As Reports Relating To Jensen Huang’s Ousting Outweigh CoreWeave’s Strong Outlook — NVDA, TSLA, SNDK, CAPR, CRWV In Focus
+<<<SUMMARY>>>
+Nvidia’s board is preparing to meet as soon as today to determine Jensen Huang’s future as the chipmaker’s chief executive, WSJ reported.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741266
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T23:48:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=999ed9adfd53008a0f30252393df8c949ff7c3ca3fdfad8c9128ced5564281b0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures: Techs Tumble Late As Nvidia May Oust CEO Huang; AI Stocks Slide, But Not AMD
+<<<SUMMARY>>>
+Techs fell as Nvidia dived on news that it may oust CEO Jensen Huang. AMD extended gains. Will that spoil Wednesday's rally?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741496
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T23:28:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e3235b9b7a6ef67d1a7254fe9ec87523d75e978cf886d1f16511f6a70b0b982
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Analyst Says Sandisk Corp. (SNDK) Offers More Than 100% Upside. Should You Buy?
+<<<SUMMARY>>>
+Sandisk Corp. (NASDAQ:SNDK) is on the AI Stocks Dominating List of Biggest Winners. Sandisk saw its share price climb by 13.69 percent on Wednesday to end at $977.69 apiece, after an analyst reiterated its bullish rating and a price target with over 150 percent upside potential. In its market note, investment firm Evercore ISI reiterated […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741312
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T22:07:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b357db596a5071e2dd541a8a3fd2ad7b227fa3b55b5357822ec675b8aeae8e76
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Jim Cramer Says Micron Isn’t Going Away. Here’s Why He Picks It Over Sandisk
+<<<SUMMARY>>>
+Memory stocks just ripped higher, yet both names remain deep in the red for the month. Cramer sees one clear winner in the group, but the bull case for its rival is stronger than his pick suggests.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740184
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T21:57:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=51cc2c44b2755273f7f750a9bc9320e07404f1210a6d377d3890b281ac6acb17
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures: CoreWeave, Sandisk, Nvidia, AMD, Nebius Lead Bullish Market Move; What To Do Now
+<<<SUMMARY>>>
+CoreWeave fueled big AI gains for the new market rally Wednesday, with Nebius, Sandisk, Nvidia, Bloom Energy and AMD key movers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740253
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T21:25:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0ba9109ad174864a24b6a9e2eb5ba9e86ec2f39134b3ce93f7525fc6dc2dd04f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron, Sandisk Soar as CoreWeave CEO Says AI Demand Outpaces World's Capacity
+<<<SUMMARY>>>
+Memory and storage stocks surged Wednesday after CoreWeave (NASDAQ:CRWV) reported blockbuster earnings, with CEO Michael Intrator dismissing fears that the artificial intelligence infrastructure boom was slowing. Sandisk (NASDAQ:SNDK) jumped nearly 17%, while Micron Technology (NASDAQ:MU) gained almost 14%. Seagate Technology...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766393
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T21:15:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d93315a539af24a64032cc5c94dbb348ce3e8b36767537870418622541d2162d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Jakarta--September-07-2024-Nvidia-Corpor.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, AMD, SanDisk, Broadcom and Apple: Why These 5 Stocks Are on Investors' Radars Today
+<<<SUMMARY>>>
+Major U.S. indices closed higher on Wednesday, with the Dow Jones Industrial Average rising 0.49% to 52,486.49.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740999
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T20:06:06Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=b6edd76c9f28a0250a1d0e93dd4e23366891419b67e1158365a3fb327561a645
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Top Movers: Nov. 11, 2026 Session Gainers and Losers
+<<<SUMMARY>>>
+S&P 500 top movers for the Nov. 11, 2026 US session, including gainers SNDK, BE, MU, DELL and STX, and losers BF.B, ABNB, CLX, MSFT and LDOS.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739301
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:01:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1dd7915d708f30f8720eb600d7f004cadc13cc0dea3d8ccacb29c50a0019d6f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Marvell Technology Stocks Surge 12.22% as AI Optics Rally Eases Lumentum Deal Doubts
+<<<SUMMARY>>>
+Marvell shares recover part of their post-deal slide as investors revisit the $115 billion AI connectivity bet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739308
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:56:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6f34fd909ff0e4cd8d4b414888fd68c196470b8d2d9761ef787b20b2a963b054
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Credo Technology Stocks Climb 10.8% as AI Connectivity Names Rally
+<<<SUMMARY>>>
+Credo guided October-quarter revenue to $525 million to $535 million after a 115% jump in its previous quarter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739310
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:53:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5022580106f3bf64774f713062e0ec50fd89d5266a8b07cf0e28d616de7ab791
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Coherent Stocks Climb 11.5% as Datacenter Optics Demand Lifts AI Suppliers
+<<<SUMMARY>>>
+Coherent's datacenter and communications sales jumped to $1.95 billion, and guidance points to up to $2.75 billion next quarter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739305
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:47:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dba3f029fd38261593a66e7302a85e5d3464a2e3cf967bbe64051eb2798b9f79
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stocks Jump 16% as Storage Rally Returns Ahead of 8-for-1 Split
+<<<SUMMARY>>>
+Sandisk rebounds after a roughly 41% monthly drop, backed by guidance of up to $12.6 billion in quarterly revenue.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739306
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e9c15c3def9d2c29e13817ae8e8c79b025430591a1e18ce6256a1f6b7afc3bee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: History Says This Is What Will Happen to Sandisk Stock After Its 8-for-1 Split
+<<<SUMMARY>>>
+Sandisk recently announced an 8-for-1 stock split.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739307
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:18:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=068e180ebdb605b8b040a823271f576f6982e1d450572ad9f874e897f4229330
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: SNDK Stock Set For Best Day In Nearly Four Months: Evercore ISI Forecasts Stable Demand For NAND Storage Amid AI Spending
+<<<SUMMARY>>>
+Evercore ISI kept a $2,500 price target on SanDisk stock, implying a potential surge of almost 200% from Tuesday's closing price.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738091
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2212157fc65aa12e532337d0920f21b244e145d69b5a62bae67e0116db6e3a6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Is the Micron Sell-Off a Buying Opportunity or a Falling Knife?
+<<<SUMMARY>>>
+The memory hardware industry is cyclical, and there are concerns that the cycle may be at its peak.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740993
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:36:23Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2b884a383f63ba74edf4a45050a46bf32c23166fd573ba68c9077445c2089631
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Top Movers Today: Double-Digit Gainers Lead, Declines Stay Smaller
+<<<SUMMARY>>>
+S&P 500 top movers for today's session: Bloom Energy and Sandisk led double-digit gainers, while Clorox and Lululemon paced much smaller declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737947
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:03:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db7f477bb2d563a1c104562c9296c65f3c9da61e85249cbbdf0e66bfcdbd3348
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Prediction: This Could Be the Biggest AI Stock You’re Not Talking About
+<<<SUMMARY>>>
+Micron just shed 30% in a single week, yet it posted record revenue and a gross margin of 87%. So why does the market price it like a fading cyclical, and what would it take to prove the sell-off wrong?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737259
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:02:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f8cc7501da7430ed3888187dc36f75ffed5b5126774b14c0cd5030cc5492236f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why Micron Stock Popped Today
+<<<SUMMARY>>>
+CoreWeave's good earnings report is great news for Micron stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737260
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:01:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91fd804092f8833f316cb837576f85346ddc626e2b7fedf0108dfdea926d102e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Stock Surges After CoreWeave's AI Earnings Surprise
+<<<SUMMARY>>>
+Wall Street's biggest technology concern faces an unexpected reality check.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738095
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:57:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bab3c1e66b7d651d14b1ebf7758ec54d91f26b2e8ecf8a1ab434e7266c251226
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Seagate Expands Storage Portfolio With FireCuda Forge Launch
+<<<SUMMARY>>>
+STX expands its storage portfolio with FireCuda Forge, combining SSD speed and HDD capacity as demand for high-capacity storage solutions continues to grow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737339
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:56:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cff45522d0c34cba5c645df0739ee594b2561484512c0f49c134182f064beea3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Evercore defends Sandisk stock after selloff
+<<<SUMMARY>>>
+Investing.com -- Evercore ISI reiterated its Outperform rating and $2,500 price target on SanDisk (NASDAQ: SNDK) in a note on Wednesday, arguing that investors are underestimating structural changes to the memory chipmaker’s business.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143736782
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:51:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50034b11e6fe0222407d58a4cb92167bb2f6b22e449ebbecb6898cad13432ef2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why Sandisk Stock Popped Today
+<<<SUMMARY>>>
+CoreWeave's good earnings report is great news for Sandisk stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143736867
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:22:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=007b62fb796ca4565d3d76fce730b2a15446c25474b8393c9f829f6f82a5fdff
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Soars 10%, SK hynix Up 9% as CoreWeave Raises Outlook on “A Breakout Quarter”
+<<<SUMMARY>>>
+Key TakeawaysMicron shares jumped 10% today, along with SK hynix, Sandisk, Nebius and Marvell, after CoreWeave raised its 2026 revenue outlook. CoreWeave’s $132.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737969
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c672d2603083da02b58e180f0dbb79d849e17a6410d189aeedff2e7bb94deeb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, CoreWeave, Teradyne, Rigetti, Applied Aerospace, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia rises following a rebound in shares of AI companies even as Baird calls for Nvidia CEO Jensen Huang to step down.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143736873
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T14:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e22524f96e0d3d1019ad36df85fd938ff3c01d098f3823ce21cb6117729f9fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: CoreWeave Boosts AI Trade. Bloom Energy, Other Power Stocks Are Big Winners.
+<<<SUMMARY>>>
+The cloud computing company’s earnings have reignited AI stocks—some more than others.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766285
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T14:15:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fdb876a13e970406e1f4b18caf5b32098b28fc882aae9866374900376df55b08
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Benzinga-Quick-Spark.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: QUICK SPARK: CoreWeave, 16 Other AI Stocks Are Up More Than 10% on Wednesday
+<<<SUMMARY>>>
+CoreWeave Inc. (NASDAQ: CRWV) jumped 23% after a third-quarter beat, lifting 16 other AI stocks above 10% and pushing the SOXL ETF up 19% Wednesday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143736869
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T14:08:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b8fab3fd19ac94c0efe7399538580c6ff9f0d73fe13d5ceadf0e6a733ea05096
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Seagate Spikes 9%, Sandisk Surges 8% as CoreWeave’s Results Revive AI Trade; Micron Climbs 7%
+<<<SUMMARY>>>
+After a brutal month of losses, memory and storage stocks are snapping back on one cloud provider's financing plan. Analysts disagree on whether the bounce has legs, and the answer hinges on how AI buildouts get paid for.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766286
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:53:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3a0395adf98eaf32c6ee6b24375361edb01d822489cebec8317aaa5e60c2f216
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/CoreWeaveApex--North-Carolina---April-2-.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Nasdaq 100 Jumps 2.8% as CoreWeave, Nvidia Climb: Stock Market Today
+<<<SUMMARY>>>
+CoreWeave&#39;s 25.1% surge revived the AI trade, lifting chipmakers, memory and power stocks, while Nvidia shrugged off a Baird downgrade.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734034
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:36:12Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=0218f22724d9afec1d16c9c7b82b38e00deb15f27da4d17f2a66eeda38bb8166
+image_url: https://www.chartmill.com/images/uploads/CM_Premarket_Movers_Small_free_90289f6b81.webp
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500 Premarket Movers: Gainers and Losers Ahead of the Open
+<<<SUMMARY>>>
+S&P 500 premarket movers: COHR, LITE, STX, MRVL and WDC lead gainers, while ACGL, CLX, ABNB and REGN slip ahead of the opening bell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143736875
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1031d7e3ad79a286240f7e42b122a011d1659f4472815430527c276353763a87
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why Sandisk and Lumentum Are Leading the AI Comeback
+<<<SUMMARY>>>
+The memory-card supplier surges as part of a broad AI revival, bolstering hopes it could be about to end a dismal recent run.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734619
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:09:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=26f51588edd8b61eda7c433d95dae83e3b7b4cdc7d47772f4c8df57460973286
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Top 3 Value Stocks To Watch In November 2026
+<<<SUMMARY>>>
+Energy has moved back to center stage. A new Federal Reserve study argues that swings in oil prices now feed more strongly and persistently into core inflation, which keeps pressure on interest rates and investors’ nerves. When markets worry about inflation, dependable cash generation and disciplined pricing matter more. This article walks through three stocks that screen as potentially mispriced relative to their cash flow strength. The three stocks covered below are only a sample, since the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734653
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b1dcd1efc02669f11b2a9f00a92328500c38cfd15d36028df1f46cd6eb97054d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: AI Villain Turns Hero but Stock Market Chaos Is Just Getting Started
+<<<SUMMARY>>>
+All the news you need to start your day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734640
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ec1dacc8d5881f4038d90a2d78938793e6306154f9fa0a40d5d9198bd89f4165
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Leads Memory Stock Rally. The AI Recovery Has Far to Go.
+<<<SUMMARY>>>
+The memory-card supplier surges as part of a broad AI revival, bolstering hopes it could be about to end a dismal recent run.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737568
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:10:34Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=76ad3d7b5ed3781791f10ee3f794ce0e45676b5741c69930eb03a89f9ae7b1c5
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2279241831/image_2279241831.jpg?io=getty-c-og
+category: company
+tickers: SNDK
+keywords: 
+headline: AMD: It's Cheaper Than Before, But Not Cheap Enough
+<<<SUMMARY>>>
+Advanced Micro Devices, Inc. remains a Hold, as shares are still expensive despite recent corrections and strong data center growth. Learn more about AMD stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766287
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:00:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=79541fc85d8a4aa27503b0a9fb8cb86d0519efdef1d519d22e7ea18ab2ca963e
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/In-This-Photo-Illustration--The-Coreweav.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Tech Stocks Add Over $500 Billion as CoreWeave's Blockbuster Results Rescue AI Rally
+<<<SUMMARY>>>
+CoreWeave (CRWV) jumped after third-quarter margins beat and a lighter funding plan, sparking a $500 billion rally in AI chip, memory and power stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766288
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:49:47Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5f94f8c7320a4e8aa40b1b3e84a2bf2a80f5a6e162691f7f15d90d37859ed2ff
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Konskie--Poland---November-21--2024-Micr.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Riskified, CoreWeave, Micron And Other Big Stocks Moving Higher On Wednesday
+<<<SUMMARY>>>
+U.S. stocks mixed; Riskified surged 27.7% on strong Q3 results and raised FY26 guidance. Gevo, Fossil, PepGen and tech stocks also rallied.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734642
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20185ba45817e6c99a284c170f8957f7c2e283f6d22ab6a08f2d67f14dfca64f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: CoreWeave Boosts the AI Trade. These Power Stocks Are the Big Winners.
+<<<SUMMARY>>>
+The cloud computing company’s earnings have reignited AI stocks—some more than others.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738097
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:31:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3dd10863804afdce8def6eadbbaf3a9e9cb73bf78d648d8ae121e5cb30f5afda
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nasdaq Futures Rally as CoreWeave and Anthropic Fuel AI Optimism
+<<<SUMMARY>>>
+December Nasdaq 100 E-Mini futures (NQZ26) are up +2.00% this morning as upbeat results and guidance from CoreWeave and growing excitement around Anthropic PBC’s initial public offering fueled investor appetite for the AI trade.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734652
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=076f2f2aa7efc721f63efc9677573f65e1c93587863bb23e56b5bac0239675d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, CoreWeave, Marvell, Dell, Costco, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia shares get boosted by an AI rebound, while CoreWeave soars thanks to better-than-expected third-quarter results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143733438
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:11:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=57d6c857d1f62902e4127b5020541f140e2dc6fdadc3c831f9b0e06585191a86
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk (SNDK) Dropped, So What Is Behind Its Latest Move?
+<<<SUMMARY>>>
+Sandisk (SNDK) just posted first quarter earnings that sharply reshaped the story around the stock, reporting revenue of US$11.0b and net income of US$8.1b, along with fresh guidance for early 2027. Despite Sandisk’s huge 216.66% total shareholder return over the past year, momentum has reversed sharply. The stock is down 45.63% on a 30 day share price return as regulatory worries, AI demand uncertainty and competitive pressure reset expectations around how sustainable recent earnings power...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143728265
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T10:04:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7dae009f0b59837fd0d3afe19f0e474f88e283b6f2df72b2b2b0f6e3258e7ca1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: 1 Stock-Split AI Stock to Buy Before It Soars 328%, According to a Wall Street Analyst
+<<<SUMMARY>>>
+Wall Street says this semiconductor stock is headed much higher in the next year, and historical data supports that possibility.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143735114
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T09:59:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7ea12452ab7b23dff8cfef9fe65da9b8e294e098adba770919d4c37086440ce9
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/SanDisk-Bangkok--Thailand---February-05-.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: What's Going On With Sandisk Stock Wednesday?
+<<<SUMMARY>>>
+Sandisk (SNDK) jumped 9% premarket Wednesday as tech stocks rebounded. Read the latest price action, analyst targets, and key levels.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734453
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T03:42:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9fc3ec7badbafa8dc7155c94503ecd308285ba50c4a0e50521d49daa8e97ab24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Sinks 24% in a Week on “Industry-Wide Memory Dynamics”: Time to Sell, or Load Up?
+<<<SUMMARY>>>
+Key TakeawaysSandisk fell 24% in a week after the midterms and a Qualcomm warning on memory costs, and Micron and SK hynix fell too. Sandisk’s own quarter held up, but its flash price gains are slowing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143695062
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T21:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e2acf5c3c31cd04c666b21959362bd49ffe5142741794e9943b9336734c00d02
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Got $10,000? 3 Hot Stocks to Buy That Could Make You a Fortune
+<<<SUMMARY>>>
+Grail, Agility Robotics, and Sandisk could deliver multibagger gains in the future.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694924
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T20:02:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4775bbb296910e8dbcbb09aeed8c0337bdbce4550cd7fd2f908fecf591ae4bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: SQC Expands Executive Team With Appointment of Chief Manufacturing Officer
+<<<SUMMARY>>>
+Silicon Quantum Computing (SQC), a pioneer in quantum computing and atomic-precision manufacturing, today announced the appointment of W.H. Teh as Chief Manufacturing Officer, effective October 2026. Teh will oversee the scale-up of SQC's atomic semiconductor manufacturing technology as the company advances its roadmap to universal, fault-tolerant quantum systems.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693866
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=309f8800809943fdc5df9e2716fbea64402c777316ef8d73246a2cdd6e18bcd8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron & 2 Profitable Stocks to Buy Now for Explosive Upside
+<<<SUMMARY>>>
+Micron, NVIDIA and Sandisk stand out as profitable stocks, combining net profit margins above 63% with strong expected earnings growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692793
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:46:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=389cae2f32fdafcb2599c112d9650bccc1f030b9220df60001b4915a328bf9da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Why Sandisk Stock Dropped Again on Tuesday
+<<<SUMMARY>>>
+Sandisk lost some market share and a Chinese NAND company gained some. Is it time to panic?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691605
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:16:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=936eaa01be4f766329f8716c2c1d73179dac57086ccba08fa20d2553d6fb77b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Leopold Aschenbrenner Bought Sandisk Before It Fell 63%. Is He Wrong, or Early?
+<<<SUMMARY>>>
+Key TakeawaysLeopold Aschenbrenner’s Situational Awareness had 28. 1% of its 13F stocks in Sandisk on June 30, and the stock has fallen 63% since.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691721
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:47:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ca4c4c112ad3372dee04bd21e04be4646b678eb00b029a20c49da9385c1a628
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Leopold Aschenbrenner and 10 Other Big Funds Bought Sandisk. It’s Down 54% Since. Time to Buy?
+<<<SUMMARY>>>
+Key TakeawaysLeopold Aschenbrenner’s Situational Awareness made Sandisk its biggest holding by June 30, and 10 other big funds took new or bigger positions in it, but the stock is down 54% since. Higher flash prices drove Sandisk’s surge in profits, and those price gains are slowing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691722
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:21:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b47d3190bd202b7ed41d329ec98605a060665870f669c42807f9ca2ab87f99c0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Corporation (SNDK) Secured Billions in Contracted Revenue: Is the Memory Boom Just Getting Started?
+<<<SUMMARY>>>
+Liontrust Investment Partners recently released its “Global Innovation Fund” Q3 2026 investor letter. A copy of the letter can be downloaded here. The Fund returned -1.6% in the third quarter of 2026, compared with gains of 0.4% for the IA Global sector average and 1.5% for the MSCI AC World Index. Despite the quarterly decline, […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690320
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:45:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a3448b85571083b81e0a971adbb5b0567f1dce57fa1d6a0f46484ecdaa93259d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Cratered Losing 30% in 1 Month: 240% Gains Lie Ahead According to This Wall Street Pro
+<<<SUMMARY>>>
+Micron posted record revenue and beat every estimate, yet its stock still shed nearly a third of its value in a month. One analyst says the panic is mispriced, and the market's forward earnings math is hard to ignore.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693129
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:10:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=dddd59443028b8b87a35c716ffb9bc011c097bc36695d38b9e8cdc5ae59ab3ae
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1992892010/image_1992892010.jpg?io=getty-c-og
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk: This Is Only Fear; Panic And Capitulation Are Still To Come
+<<<SUMMARY>>>
+After Sandisk's 50% drop since prior coverage, headwinds still point to a significant downside, and the stock should be avoided. Click for this SNDK update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690329
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:36:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3110b05e94589956289d030466a702a64bffbf7ac5cc3a757d3ab7e8912b73c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: What Has Changed About Owning SanDisk Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687411
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e048bec6748747860eb30171a5ecc4f79f4355567cda60e155a3224820ce3ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Stock Has Collapsed by 65%, but It's Still Undergoing an 8-for-1 Stock Split on Nov. 19. Here's Why I'm Still Not Buying Shares Amidst This Nasdaq Market Slump.
+<<<SUMMARY>>>
+P/E ratios can play tricks on investors when it comes to highly cyclical companies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687207
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:35:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=de8f155bdc8c2c6cee0eaa1f51aaec7d072900ff33f6fad4438a23b680ab4a5d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: S&P 500: Just Three Of Nov. 5's 20 Biggest Losers Have Recovered Their Losses
+<<<SUMMARY>>>
+Sandisk led the S&P 500's biggest Nov. 5 losers. But it's still down over 10% since Nov. 4. AMD and Applied Materials have regained their losses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687413
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7fdeeccf24ea67672c66d651688601a204effbee6b1da949e5803483008fa37f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Appears a Highly Lucrative Investment After Recent AI Meltdown
+<<<SUMMARY>>>
+SNDK's AI-driven storage demand, soaring revenues, robust technology pipeline and attractive valuation make it a compelling investment opportunity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143685928
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:36:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=480796c6a022cd797fa25450b24a0cf5015d266ab35ac5b55498ae1289e91fe2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Social Buzz: Wallstreetbets Stocks Mixed Pre-Bell Tuesday; Rocket Lab, AMD to Open Lower
+<<<SUMMARY>>>
+The most-talked-about stocks in the Reddit subforum Wallstreetbets were mixed hours before Tuesday's
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143669248
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T06:13:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=67a7f65a20a006cccb1b75cbe5c83b5291b962daf7d1b309627edb266bfd51d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk And 2 Cash Flow Stocks To Watch
+<<<SUMMARY>>>
+China plans to spend about US$940b on energy transition in 2026, with heavy investment in grids and low carbon power. That much long term capital searching for reliable returns can highlight businesses that quietly generate cash yet still trade cheaply. This article looks at three such stocks identified by our cash flow based value screen and explains why patient investors are watching them closely now. The stocks below are only a small sample of what shows up when cash flow strength meets...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687263
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T04:50:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7d390d4d938a35290e67d49ef956aa2de7c2404400701db6eba4740da04a16f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Seagate Dropped 15% in a Week: Morgan Stanley Says It Could Double in the Next 12 Months
+<<<SUMMARY>>>
+Key TakeawaysSeagate shares fell 15% in the past week as Sandisk, Micron and other storage stocks sold off after the midterms. Seagate had no bad news of its own: a week earlier, it posted record profit and guided December-quarter revenue to $4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143663100
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T00:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ce97a38b540ea39e288094d14f25e3c78ed4c77fc1e2721f190743ef66835891
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Review & Preview: Dip Buyers Unite
+<<<SUMMARY>>>
+Indexes popped as investors bought the dip, fueling a rebound rally on Wall Street.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659983
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T19:16:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=993052d9af4369f07dbe0704b502ddd57463ef8f8a542a1be596432e6eae35d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk (SNDK) Stock Looks Reasonable On Its 212% One Year Run
+<<<SUMMARY>>>
+Sandisk has surged 211.6% over the past year, yet the stock has recently swung sharply lower. This puts a spotlight on whether the current share price still lines up with the cash flows the business is expected to generate. The 211.6% 1 year gain has radically changed the stakes for anyone considering Sandisk today, because the stock is now pricing in a very different cash flow story than it was a year ago. Recent swings driven by regulatory worries around data centers and changing...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659984
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T19:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=07dce57d8291aa840beca0696e4352abe426b67e03c802fdbb1fae188cf33f25
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: SanDisk's 64% collapse: another leg down or buying opportunity?
+<<<SUMMARY>>>
+SanDisk’s steep decline has investors weighing whether the worst is over or another selloff lies ahead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659883
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:52:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff43eedb1f52cba7c523d4dd6822d131ac9f747e18d1b9f25f54e81391faa0d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Rises 6% as Bulls Tout Its Bargain Valuation and Buyback Firepower; Seagate and Western Digital Jump 11%
+<<<SUMMARY>>>
+Micron trades at a single-digit earnings multiple while sitting on a huge buyback authorization, yet the hard drive makers are rallying even harder. Is the memory giant a bargain, or is a cheap multiple warning that peak earnings are near?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661034
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:46:57Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=743e616531836db15a3ec1e1be5abd3e3abd12e2dfdc176ee6c199cc95eafe52
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/471505909/image_471505909.jpg?io=getty-c-og
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk: Following A 60% Decline It's Too Cheap To Ignore (Rating Upgrade)
+<<<SUMMARY>>>
+Sandisk Corporation stock fell despite strong Q1 results, AI-driven growth, and buybacks. Click for this SNDK earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659788
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:50:42Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=fd2b8abcccf70a7da9790ec5ed8b9e2ad1e9c8e73308e6ec0d946a1108722f3d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/471505909/image_471505909.jpg?io=getty-c-og
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk: The Mirage Of A 2.9x Forward 2028 P/E
+<<<SUMMARY>>>
+Sandisk may look cheap amid NAND shortages, but rising YMTC competition and cyclical risks could crush earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657514
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:47:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=135ff513b66c036e5881dacb2659e54fb2a9e67b2b0ff897de9cd3e340fbe047
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Intel took 25 years to get back to its dot-com peak — and lost it in 6 months: Chart of the Day
+<<<SUMMARY>>>
+Half off sounds like a deal. On Wall Street, it can be the start of a much bigger sale.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657464
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:49:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=df4ae887cc7b016b4b827242c67462e0ce46d0f2138d0b119ab52fb1077de05f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia, AMD, CoreWeave, Ionis, DraftKings, and More Stocks That Explain Today’s Market
+<<<SUMMARY>>>
+Nvidia falls after the chip maker’s board launches an investigation into reports that CEO Jensen Huang was targeted by a suspected Chinese spy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143655109
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:47:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=adf5b37d00f0b8787019aa73817d9664bd2d521b1fd7f0707aacd2cd0cb707e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron Has Lost Over 40% Since June. Where Does Its Price Target Stand Now?
+<<<SUMMARY>>>
+Micron just guided to the biggest quarter in its history, yet the market is treating the memory boom like it already peaked. Does one brutal chip selloff reveal a real warning, or a rare mismatch between fear and fundamentals?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143653943
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:03:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8ef755cc961129df2efee7d1aaea6fc9fb3dc2c7db82a031607fa631d5374c24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Nvidia stock sinks 5% as chipmaker investigates CEO Jensen Huang's relationship with alleged Chinese spy
+<<<SUMMARY>>>
+Nvidia sank 5% on Monday, while the rest of the chip sector mostly rose.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654462
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=13529f2671582b6b4b900a765930aebe554e41c78f889eddd34b5a05121e8979
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron's 26 SCAs: Can Take-or-Pay Deals Boost Earnings Stability?
+<<<SUMMARY>>>
+MU's 26 take-or-pay agreements are likely to reshape earnings stability, backed by $32B in customer commitments and long-term pricing protections through 2030.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143656667
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T10:33:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5b278f09036e2b59a9d96ec5a09fa684a47e99ed8c14a07a62948cd72d70383b
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/Semiconductor-stocks.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Chip Stocks Are 38% Off Their Peak: 'Time to Buy the Dip,' Analysts Say
+<<<SUMMARY>>>
+Cantor Fitzgerald and HSBC say the chip stock selloff is overdone, with the SOX at 9x 2028 earnings. Top picks include NVDA, MU, SNDK, ASML and AMAT.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658820
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T10:33:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c64d37d37da95a421f519041e607bdc1ee9268bd5babf2edfacde99c31440613
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Is Wall Street Bullish or Bearish on Sandisk Stock?
+<<<SUMMARY>>>
+Sandisk has massively outperformed the broader market over the past year, and analysts are highly optimistic about the stock’s prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652427
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T09:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6a005f98c65c87b27ae29e256541be5d44a838d4d095967c85b951ba727e561
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Zacks Value Investor Highlights: MU, SNDK, SANM, STRL and FIX
+<<<SUMMARY>>>
+AI stocks have plunged despite strong earnings and rising forecasts. Discover five beaten-down companies trading at attractive valuations, including MU and SNDK.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654236
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T08:26:18Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=aed3f95630e83ed67502bef87a401e474c6b8023147957f41313c07226d8a1a0
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/471505909/image_471505909.jpg?io=getty-c-og
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk: This Is Not Over (Rating Upgrade)
+<<<SUMMARY>>>
+Sandisk Corporation looks undervalued after a 65% drop. Click for why strong revenue growth, cash, margins, and buybacks make SNDK a compelling Buy now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143656668
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T07:03:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e958050be8ba5cdcc1cf38850c939900b447d02202b1186fe95fedd479969e52
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/SanDisk-Bangkok--Thailand---February-05-.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: What's Going On With Sandisk Stock Monday?
+<<<SUMMARY>>>
+Sandisk stock flashes oversold signals as shares sink below key moving averages amid mounting AI and competition fears.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143646468
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T03:48:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3e3a97d3bac28ab36d53664bdf62dd73cbdc5e9125de67bf6ce9c654de924f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow, S&P 500, Nasdaq Futures Rebound After Sharp AI Selloff Last Week: NVDA, AMD, VIR, SNDK In Focus
+<<<SUMMARY>>>
+Last week, markets were dominated by the outcome of the November midterm election results, with the Democrats sweeping both the Senate and the House.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143645711
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T01:48:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=04a7dd33eb3cf13ca260eab0dace655d42439996b88c021315dcb14d7a5c1de4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures Rise As Nvidia Probes CEO Jensen Huang Spying Case
+<<<SUMMARY>>>
+Futures rose after Nvidia's board said it's probing CEO Jensen Huang's foreign espionage case.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143643428
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T23:46:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=24653445a5a0e34e7dfc21bd125509eb61f0d042362e1adaf459de03fb6b6055
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures Rise, Techs Slide A Nvidia Probes CEO Jensen Huang Spying Case
+<<<SUMMARY>>>
+The stock market is damaged but Apple, Amazon and Microsoft are holding up. Nvidia is probing CEO Jensen Huang's spy case.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143643449
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T22:40:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=10fa7341af6a49b7bdf4732ddc2b8a99a17c6d65dbeeae26aa9cf19518da2696
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Could HBF be the solution to the Memory bottleneck?
+<<<SUMMARY>>>
+Investing.com -- The rapid expansion of artificial intelligence workloads is creating a growing demand for memory capacity and bandwidth, opening the door for a new storage technology that could ease infrastructure constraints while providing a fresh growth opportunity for the NAND flash industry, Bernstein said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642652
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T20:59:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8432097bdc5d2dbe697e688e62d296bcf48847c2e6221ee0c196e19f4c16b2cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures Loom For Damaged Market; Nvidia Probes Huang Spying Case
+<<<SUMMARY>>>
+The stock market is damaged but Apple, Amazon and Microsoft are holding up. Nvidia is probing CEO Jensen Huang's spy case.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640222
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T14:14:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1975ae0423862c182127b64aac2632039a64f7506c285b0d590ba5393378ea97
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Dow Jones Futures Loom With Market Damaged, Big Winners Broken; Apple, Amazon, Microsoft Strong
+<<<SUMMARY>>>
+The stock market needs repair while Sandisk and Micron seem broken. Apple, Amazon and Microsoft are holding up. Berkshire earnings fell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639809
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T09:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=3570289be8278da0c82a92633381b2f08747f1380d4ffde5bee3c06783d8783b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2258269533/image_2258269533.jpg?io=getty-c-og
+category: company
+tickers: SNDK
+keywords: 
+headline: Micron: Why I Added $5,000 Worth Of Shares During The Selloff (Rating Downgrade)
+<<<SUMMARY>>>
+Chip stocks fell on data center fears, but Micron Technology, Inc. fundamentals remain strong. Click for more on MU stock prospects in this update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639845
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T09:00:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0209d4c3517174ac5739861a479146b0c4cc2dddbc9042bf7eab02b036248fb9
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/08/Apple-Expands-Rapidly-In-India.jpg?width=2048&height=1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Analysts Question AAPL's Valuation, Apple's Margin Pressure and More: This Week in Appleverse
+<<<SUMMARY>>>
+Apple earnings, valuation concerns and memory chip opportunities dominate this week’s market recap, alongside Amazon, Qualcomm and 3M.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143637278
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T08:13:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30f2497a0ebdb5a5eeaf7218458b52e8b7fbbc0d0a223245ce8e46ec39b7cdf3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SNDK
+keywords: 
+headline: Sandisk Lost 51% in a Month. Bernstein Sees 259% Upside From Here
+<<<SUMMARY>>>
+Key TakeawaysSandisk stock is down 51% in a month, including a 22% crash on Nov. 5, despite a record quarter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143637603
+symbol: SNDK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T05:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=10fac645bccaafa83471b3f57bc08b44931132311f0df2509714d92ea342a382
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2165485835/image_2165485835.jpg?io=getty-c-w1536
+category: company
+tickers: SNDK
+keywords: 
+headline: Do. Not. Panic.
+<<<SUMMARY>>>
+Steve Cress advises investors to stay calm amid market volatility. The absence of a systemic debt crisis makes this correction a potential buying opportunity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:37292314e4dcfbcbb76b9ffa41d4c7ba81ce43f2adc29c1ab075d05bdfcfde75
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T14:42:01Z
+publisher: The Motley Fool
+author: Harsh Chauhan
+url: https://www.fool.com/investing/2026/11/06/sandisk-is-splitting-its-stock-8-for-1-is-micron-technology-next/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F97f8c67aaa2c6639fefc6baf6615c24b3138d26f-4001x2667.jpg&w=1200&op=resize
+category: 
+tickers: SNDK, MU
+keywords: stock split, memory chips, NAND flash storage, DRAM, AI demand, semiconductor, earnings growth
+headline: Sandisk Is Splitting Its Stock 8-for-1. Is Micron Technology Next?
+<<<SUMMARY>>>
+Sandisk announced an 8-for-1 stock split effective November 20, 2026, to make shares more accessible to retail investors following strong Q1 fiscal 2027 results. The article speculates that Micron Technology may follow suit when it reports December results, as both memory chip manufacturers have seen significant stock appreciation driven by AI-fueled demand for DRAM and NAND flash storage.
+<<<INSIGHTS>>>
+SNDK | positive | Company reported stunning Q1 results exceeding expectations with revenue jumping 5x YoY to $11B and EPS up 40x to $49.51. Strong forward guidance suggests sustainable favorable business conditions. Stock split announcement aims to increase accessibility and demand from retail investors.
+MU | positive | Delivered exceptional growth with fiscal 2026 revenue up 256% YoY to $133.2B and adjusted EPS up 9x to $75.52. Trading at attractive 4.6x forward earnings versus S&P 500's 19x multiple. Expected tighter memory supply conditions in fiscal 2027-2028 support continued earnings growth. Stock split speculation could trigger additional upside.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6468e6bfd3ca97d54e7128ea8bc66952b15e8f343dd829d587be391bfe042348
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T15:48:00Z
+publisher: Zacks Investment Research
+author: Tracey Ryniec
+url: https://www.zacks.com/stock/news/3025775/the-cheapest-ai-stocks-to-buy-now?cid=CS-ZC-FT-value_investor-3025775
+image_url: https://staticx-tuner.zacks.com/images/articles/main/0f/148478.webp
+category: 
+tickers: MU, SNDK, SANM, STRL, FIX
+keywords: AI stocks, sell-off, valuation, P/E ratio, semiconductor, data centers, value investing
+headline: The Cheapest AI Stocks to Buy Now
+<<<SUMMARY>>>
+Following an AI stock sell-off in October-November 2026, several semiconductor and infrastructure companies are trading at historically low valuations despite beating earnings and raising guidance. Micron, Sandisk, Sanmina, Sterling Infrastructure, and Comfort Systems USA are highlighted as potential value opportunities with strong growth forecasts and low P/E ratios, though continued market pessimism about the AI trade persists.
+<<<INSIGHTS>>>
+MU | positive | Down 38.3% in one month with forward P/E of 3.7 (extremely undervalued), Zacks Rank #2 (Buy), top 'A' scores for Value and Growth, earnings expected to rise 133% in fiscal 2027
+SNDK | positive | Down 52% in one month with forward P/E of 3.6 and PEG ratio of 0.08 (rare value-growth combination), Zacks Rank #2 (Buy), 'A' scores for Value/Growth/Momentum, earnings expected to rise 217% in fiscal 2027
+SANM | positive | Down 42% in one month with forward P/E of 10.7, Zacks Rank #2 (Buy), 'A' scores for Value/Growth/Momentum, full year earnings forecast to rise 100%
+STRL | positive | Down 70% in six months and 53% in one month with forward P/E of 13.9, Zacks Rank #2 (Buy), recently beat earnings and raised guidance, earnings expected to rise 84%
+FIX | positive | Down 43.7% in one month with forward P/E of 21.8, Zacks Rank #1 (Strong Buy), beat earnings and raised guidance, earnings expected to rise 73.8% in 2026
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ee6d86cbbfe3da50371d479dc21976a7ff6a1e3907454923aeda4ee77e2cef7c
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T17:08:00Z
+publisher: Zacks Investment Research
+author: Andrew Rocco
+url: https://www.zacks.com/stock/news/3025881/q4-qqq-roadmap-navigating-ai-turbulence-market-headwinds?cid=CS-ZC-FT-weekend_wisdom-3025881
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ce/193337.webp
+category: 
+tickers: QQQ, SNDK, MRVL, ARM, MU, CRWV
+keywords: Nasdaq 100, AI infrastructure, tech sector, interest rates, political gridlock, technical pullback, midterm seasonality
+headline: Q4 QQQ Roadmap: Navigating AI Turbulence & Market Headwinds
+<<<SUMMARY>>>
+The Nasdaq 100 has experienced significant pullback due to inflation concerns, political headwinds around AI regulation, AI infrastructure funding fears, and technical profit-taking. However, the article argues the market is well-positioned for recovery based on favorable post-midterm seasonality, historical performance during rate-hiking cycles, and technical support levels offering attractive entry points for extended tech leaders.
+<<<INSIGHTS>>>
+QQQ | neutral | Currently facing headwinds with worst three-day drop since 'Liberation Day' and tech momentum at dot-com bust levels, but article presents bullish case for recovery based on technical support levels and favorable seasonality patterns.
+SNDK | neutral | Experienced extreme overextension (4,000% surge, 264% above 200-day moving average) and is now undergoing necessary technical reset to support levels, presenting potential entry opportunity.
+MRVL | neutral | Experiencing standard pullback to test major moving averages after overextension, which historically offers good risk-reward entry points.
+ARM | neutral | Undergoing technical reset similar to other extended tech leaders, testing key support levels.
+MU | neutral | Experiencing pullback to major moving averages as part of broader tech sector reset.
+CRWV | positive | Bankruptcy concerns have significantly diminished from 50% probability in September to 12% currently, indicating improved financial stability and recovery from distressed bond yield levels.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d4e0ac11884c1355d90936fa46e0dbedc6f6fec77a7ce48a133343c9b0e19ce2
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T20:47:19Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/06/sandisk-stock-has-lost-about-64-since-june-here-s-the-price-at-which-i-d-buy-it/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F7ba3852cc66285c42917077e0ddb38dc7d88d12e-1200x800.jpg&w=1200&op=resize
+category: 
+tickers: SNDK
+keywords: flash memory, data center, earnings growth, stock valuation, cyclical stocks, stock split, AI demand
+headline: Sandisk Stock Has Lost About 64% Since June. Here's the Price at Which I'd Buy It.
+<<<SUMMARY>>>
+Sandisk stock has plummeted 64% from its June peak of $2,335 to around $806, driven by AI data center stock sell-offs following the November 3 midterm elections. Despite the sharp decline, the company's earnings continue to grow—adjusted EPS reached $49.51 in fiscal Q1 2027 with guidance for $55-$57 in Q2, though growth rates are slowing. The analyst suggests the stock is now fairly valued at current levels, trading at less than 4 times annualized earnings, and would consider buying at around $900 per share (or $112 post-split), viewing the current price as reasonable for a cyclical memory company.
+<<<INSIGHTS>>>
+SNDK | neutral | While the stock has experienced a severe 64% decline, the analyst views the current price as fairly valued and a potential buying opportunity. Earnings continue to grow despite slowing growth rates, and the valuation at under 4x annualized earnings is considered reasonable. However, concerns about cyclical memory pricing and potential earnings deterioration prevent a positive rating.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e48c9e6fda9b454040343110cd6495cce6fc49ebfc0465c0a576b8e6a830f6f8
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T16:31:00Z
+publisher: The Motley Fool
+author: Alex Carchidi
+url: https://www.fool.com/investing/2026/11/07/ai-stocks-are-falling-bitcoin-is-holding-ground/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893232%2Finvestor-ponders-phone-and-laptop-stock-charts.jpg&w=1200&op=resize
+category: 
+tickers: INTC, ORCL, ORCLpD, MU, SNDK
+keywords: AI stocks decline, Bitcoin resilience, market volatility, cryptocurrency, geopolitical uncertainty, Federal Reserve, crypto exchange hack, tech stocks
+headline: AI Stocks Are Falling; Bitcoin Is Holding Ground. Here's What Could Come Next.
+<<<SUMMARY>>>
+While AI-related stocks like Intel, Oracle, Micron Technology, and SanDisk have declined 20-62% since June, Bitcoin has remained relatively resilient, holding 33.7% above bear market lows despite facing multiple headwinds including geopolitical uncertainty, Fed rate concerns, a major crypto exchange hack, and upcoming Democratic control of Congress. Bitcoin's ability to resist selling pressure amid bad news suggests potential for price appreciation once market headlines ease.
+<<<INSIGHTS>>>
+INTC | negative | Down 20-62% since late June amid broader AI stock selloff. Faces headwinds from questionable future demand for its technologies and macroeconomic uncertainty.
+ORCL | negative | Down 20-62% since late June. Failed to impress market with earnings reports and future projections in October, contributing to broader AI value-chain stock decline.
+ORCLpD | negative | Down 20-62% since late June. Failed to impress market with earnings reports and future projections in October, contributing to broader AI value-chain stock decline.
+MU | negative | Down 20-62% since late June as part of the AI stock selloff, facing uncertainty about future demand for semiconductor technologies.
+SNDK | negative | Down 20-62% since late June alongside other AI value-chain stocks experiencing broad market decline.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:863a539ebe4184f18240a2dd0c77ca01d2a23536fe42f96836974534665ffc6b
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T09:07:00Z
+publisher: Zacks Investment Research
+author: Tracey Ryniec
+url: https://www.zacks.com/stock/news/3026017/zacks-value-investor-highlights-mu-sndk-sanm-strl-and-fix?cid=CS-ZC-FT-press_releases-3026017
+image_url: https://staticx-tuner.zacks.com/images/articles/main/0b/1508.jpg
+category: 
+tickers: MU, SNDK, SANM, STRL, FIX
+keywords: AI stocks, sell-off, valuation, earnings growth, PEG ratio, value investing, data centers
+headline: Zacks Value Investor Highlights: MU, SNDK, SANM, STRL and FIX
+<<<SUMMARY>>>
+AI stocks have experienced significant sell-offs in October and November 2026 despite strong earnings reports and raised guidance. Despite fears that the AI trade is over, several AI-related companies now trade at historically low valuations with strong growth prospects, presenting potential buying opportunities for value investors.
+<<<INSIGHTS>>>
+MU | positive | Down 38.3% in one month with forward P/E of 3.7 (extremely undervalued), Zacks Rank #2 (Buy), top 'A' scores for Value and Growth, and expected 133% earnings growth in fiscal 2027.
+SNDK | positive | Down 52% in one month with forward P/E of 3.6 and PEG ratio of 0.08 (rare value-growth combination), Zacks Rank #2 (Buy), 'A' scores across Value/Growth/Momentum, 217% expected earnings growth, and upcoming 8-for-1 stock split.
+SANM | positive | Down 42% in one month despite 100% expected full-year earnings growth, forward P/E of 10.7, Zacks Rank #2 (Buy), and 'A' scores for Value/Growth/Momentum.
+STRL | positive | Down 70% over six months and 53% in one month, but recently beat earnings and raised guidance with 84% expected earnings growth, Zacks Rank #2 (Buy), and improved forward P/E from 17.3 to 13.9.
+FIX | positive | Down 43.7% in one month despite beating Q3 earnings and raising guidance, Zacks Rank #1 (Strong Buy), 73.8% expected earnings growth, and forward P/E improved from 24 to 21.8.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:abb2fec957b037a4846f4aa41f86b808eac01e7cdfa8b6a4b2b554292afe1b9c
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T12:18:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027011/sandisk-appears-a-highly-lucrative-investment-after-recent-ai-meltdown?cid=CS-ZC-FT-analyst_blog|investment_ideas-3027011
+image_url: https://staticx-tuner.zacks.com/images/articles/main/eb/200.jpg
+category: 
+tickers: SNDK, META, METAM, DELL, SNX
+keywords: AI storage demand, datacenter growth, NAND flash memory, enterprise SSDs, valuation discount, earnings growth, semiconductor
+headline: Sandisk Appears a Highly Lucrative Investment After Recent AI Meltdown
+<<<SUMMARY>>>
+Sandisk (SNDK) has emerged as an attractive investment opportunity following recent market volatility. The company reported exceptional Q1 fiscal 2027 results with revenues surging 378% year-over-year, driven by AI-driven storage demand. Datacenter revenues jumped 61% sequentially to $4.8 billion, while the company projects 40% datacenter bit-demand growth in 2027. Trading at a significant discount to its 52-week high with a forward P/E of 3.67X versus industry average of 10.83X, analysts see substantial upside potential with price targets ranging from $1,300-$3,000.
+<<<INSIGHTS>>>
+SNDK | positive | Exceptional revenue growth of 378% YoY, strong datacenter and edge segment performance, robust product pipeline (BiCS8-10), significant valuation discount to industry peers (P/E 3.67X vs 10.83X), analyst price targets indicating 132% upside, and confident management outlook on AI-driven storage demand.
+META | neutral | Mentioned as a key business partner/customer of Sandisk with important business agreements, but no specific performance data or sentiment indicators provided in the article.
+METAM | neutral | Mentioned as a key business partner/customer of Sandisk with important business agreements, but no specific performance data or sentiment indicators provided in the article.
+DELL | neutral | Mentioned as a key business partner/customer of Sandisk with important business agreements, but no specific performance data or sentiment indicators provided in the article.
+SNX | neutral | Mentioned as a key business partner/customer of Sandisk with important business agreements, but no specific performance data or sentiment indicators provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ea10a99db45d34d883596ebf41958d71c787408af8ad2772026b0a3317e7499d
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T12:20:00Z
+publisher: The Motley Fool
+author: Brett Schafer
+url: https://www.fool.com/investing/2026/11/10/sandisk-stock-has-collapsed-65-and-is-undergoing-a/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893798%2Fsemiconductors.jpg&w=1200&op=resize
+category: 
+tickers: SNDK, WDC
+keywords: stock split, memory chips, AI infrastructure, cyclical downturn, price-to-earnings ratio, supply and demand, earnings collapse, valuation trap
+headline: Sandisk Stock Has Collapsed by 65%, but It's Still Undergoing an 8-for-1 Stock Split on Nov. 19. Here's Why I'm Still Not Buying Shares Amidst This Nasdaq Market Slump.
+<<<SUMMARY>>>
+SanDisk stock has plummeted 65% from its June peak despite strong current financials driven by AI infrastructure demand and memory chip shortages. While the stock appears cheap at a P/E of 3.5, the author warns investors to avoid buying ahead of the November 19 stock split, citing the cyclical nature of the memory chip market. The author projects that when supply normalizes and pricing power diminishes, SanDisk's earnings could collapse significantly, making the stock potentially overvalued at current levels.
+<<<INSIGHTS>>>
+SNDK | negative | Despite current strong financials and AI-driven demand, the author warns against buying due to the cyclical nature of memory chip markets. The stock's cheap P/E ratio is misleading as it doesn't account for inevitable future downturns when supply normalizes and pricing power diminishes, potentially making it a value trap.
+WDC | neutral | Mentioned as the parent company that spun off SanDisk in 2025. No direct investment thesis or sentiment is provided about Western Digital itself in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a3bc0e216ee038fcf722920f18ce9cf8fceb18bcac6266cd440eed62f3f58d31
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T13:31:01Z
+publisher: The Motley Fool
+author: Parkev Tatevosian, Cfa
+url: https://www.fool.com/investing/2026/11/10/why-is-sandisk-stock-crashing-and-is-it-a-generational-buying-opportunity/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb679012f401f2641d354e20ee13a6589c1901f49-1280x720.jpg&w=1200&op=resize
+category: 
+tickers: SNDK
+keywords: SanDisk stock crash, regulatory risk, stock split, buying opportunity, value trap, market decline
+headline: Why Is SanDisk Stock Crashing, and is it a Generational Buying Opportunity?
+<<<SUMMARY>>>
+SanDisk stock has collapsed by approximately 64-65% since June 2026, primarily due to increasing regulatory risk that spooked investors. The company is undergoing an 8-for-1 stock split on November 19, 2026. Despite the sharp decline, there is debate among analysts about whether this represents a generational buying opportunity or a value trap.
+<<<INSIGHTS>>>
+SNDK | negative | Stock has collapsed 64-65% since June 2026 due to increasing regulatory risk concerns. Despite an upcoming 8-for-1 stock split, multiple analysts remain cautious about the investment, suggesting uncertainty about whether the decline represents a genuine opportunity or a deeper value trap.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:38c19ee30f2289a1e0e64fd8e576df39e7108c16407417231aa4b272acf17978
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T19:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027467/micron-2-profitable-stocks-to-buy-now-for-explosive-upside?cid=CS-ZC-FT-analyst_blog|rw-3027467
+image_url: https://staticx-tuner.zacks.com/images/articles/main/83/1947.jpg
+category: 
+tickers: MU, NVDA, SNDK
+keywords: semiconductor stocks, net profit margin, earnings growth, profitability ratios, Zacks Rank, AI infrastructure
+headline: Micron & 2 Profitable Stocks to Buy Now for Explosive Upside
+<<<SUMMARY>>>
+Three semiconductor companies—Micron Technology, NVIDIA, and Sandisk—have been identified as notable profitable stocks based on strong net income margins and expected earnings growth. Micron shows a 63.8% net profit margin with 133.1% expected earnings growth, NVIDIA has a 63.7% margin with 95% expected growth, and Sandisk leads with a 67% margin and 221.4% expected growth. All three hold Zacks Rank #2 (Buy) ratings.
+<<<INSIGHTS>>>
+MU | positive | Strong profitability with 63.8% net profit margin, exceptional 133.1% expected earnings growth, and Zacks Rank #2 (Buy) rating indicate solid investment potential.
+NVDA | positive | Leading AI infrastructure company with 63.7% net profit margin, nearly 95% expected earnings growth, and Zacks Rank #2 (Buy) rating demonstrate strong market position and growth prospects.
+SNDK | positive | Highest net profit margin at 67% and exceptional 221.4% expected earnings growth with Zacks Rank #2 (Buy) rating make it the strongest performer among the three highlighted stocks.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f2df4a1d43dfc89d9733ad8049738792975e72e61efe0205dcee7655b3c27b12
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T20:51:00Z
+publisher: The Motley Fool
+author: Marc Guberti
+url: https://www.fool.com/investing/2026/11/10/3-ai-stocks-to-buy-now-that-midterms-are-over/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893892%2Fdigital-brain-getty-images-938378852.jpg&w=1200&op=resize
+category: 
+tickers: PENG, SNDK, GOOG, GOOGL, GOOGM, GOOGN
+keywords: AI stocks, midterm elections, data centers, memory products, NAND flash memory, AI infrastructure, hyperscalers, neoclouds
+headline: 3 AI Stocks to Buy Now That Midterms Are Over
+<<<SUMMARY>>>
+Following the midterm elections, concerns about the AI trade have eased, particularly in Texas where data center construction pipelines remain safe through 2027-2028. Three AI stocks are positioned to benefit: Penguin Solutions, which specializes in memory products for data centers with 68% YoY revenue growth; Sandisk, whose NAND flash memory chips are essential for AI infrastructure with 378% YoY revenue growth; and Alphabet, which is advancing AI through Gemini and Waymo while Google Cloud revenue more than doubled YoY.
+<<<INSIGHTS>>>
+PENG | positive | Strong 68% YoY revenue growth, winning six new AI infrastructure customers including neocloud providers, appealing 19 P/E ratio after correction, and positioned to benefit from expanding hyperscaler and neocloud budgets.
+SNDK | positive | Exceptional 378% YoY revenue growth, 73% net profit margin, strong pricing power for essential NAND memory chips, announced 8-for-1 stock split, and $5 billion stock buyback demonstrating shareholder value focus.
+GOOG | positive | 25% YoY revenue growth, Google Cloud revenue more than doubled YoY representing 20% of total sales, Gemini reached 1 billion users rapidly, Waymo advancing in self-driving robotaxi market, and attractive 15 P/E ratio despite temporary negative free cash flow from AI infrastructure investments.
+GOOGL | positive | 25% YoY revenue growth, Google Cloud revenue more than doubled YoY representing 20% of total sales, Gemini reached 1 billion users rapidly, Waymo advancing in self-driving robotaxi market, and attractive 15 P/E ratio despite temporary negative free cash flow from AI infrastructure investments.
+GOOGM | positive | 25% YoY revenue growth, Google Cloud revenue more than doubled YoY representing 20% of total sales, Gemini reached 1 billion users rapidly, Waymo advancing in self-driving robotaxi market, and attractive 15 P/E ratio despite temporary negative free cash flow from AI infrastructure investments.
+GOOGN | positive | 25% YoY revenue growth, Google Cloud revenue more than doubled YoY representing 20% of total sales, Gemini reached 1 billion users rapidly, Waymo advancing in self-driving robotaxi market, and attractive 15 P/E ratio despite temporary negative free cash flow from AI infrastructure investments.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b6168968c90d8895888b16418151f65a45fe59a26cc4b1606f86eac812721e97
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T09:44:02Z
+publisher: The Motley Fool
+author: Trevor Jennewine
+url: https://www.fool.com/investing/2026/11/11/1-stock-split-ai-stock-buy-before-soar-328-wall-street/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F3752b0b6d888857fdb7abbe082176585d6437a7a-4000x2667.jpg&w=1200&op=resize
+category: 
+tickers: SNDK, MU
+keywords: stock split, semiconductor, NAND flash memory, AI infrastructure, memory chips, supply shortage, competitive advantage, earnings forecast
+headline: 1 Stock-Split AI Stock to Buy Before It Soars 328%, According to a Wall Street Analyst
+<<<SUMMARY>>>
+SanDisk, a semiconductor company benefiting from AI-driven memory chip demand, announced an 8-for-1 stock split. Wall Street analysts are bullish with median price targets implying 150% upside, though the company faces risks from industry cyclicality, commoditized competition, and potential future supply gluts that could sharply reduce earnings.
+<<<INSIGHTS>>>
+SNDK | neutral | While the company shows strong near-term fundamentals with 378% revenue growth and long-term supply contracts supporting AI demand, the author expresses caution due to lack of durable competitive advantage, commoditized industry dynamics, and vulnerability to future supply gluts that could sharply reduce earnings. The stock is cheap but carries significant cyclical risk.
+MU | neutral | Identified as a major competitor with 15% NAND flash market share and stronger market position than SanDisk, but no specific analysis or recommendation provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:75dc83e564e503002f6a3deede0f138600695bd19bc0cc40de5265ca37e75fc5
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T15:31:53Z
+publisher: The Motley Fool
+author: Rich Smith
+url: https://www.fool.com/investing/2026/11/11/why-sandisk-stock-popped-today/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F041c447253face4b583b320f9d942c0d09765b9d-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: CRWV, SNDK
+keywords: AI data centers, memory chips, earnings beat, capital investment, valuation, stock split
+headline: Why Sandisk Stock Popped Today
+<<<SUMMARY>>>
+Sandisk stock surged 14.63% following CoreWeave's strong Q3 earnings report. CoreWeave, which builds AI data centers and purchases memory chips from Sandisk, beat analyst expectations on revenue and earnings while raising full-year 2026 guidance and committing $37-39 billion in capital investment. Analysts view Sandisk as undervalued at less than 7x trailing earnings and under 4x forward earnings.
+<<<INSIGHTS>>>
+CRWV | positive | Company beat Q3 earnings expectations with lower-than-feared losses ($1.27 per share) and higher-than-expected revenue ($3.66 billion). Raised full-year 2026 revenue guidance to $13.0-13.3 billion and committed to significant capital investment of $37-39 billion, demonstrating strong financial health and growth trajectory.
+SNDK | positive | Stock popped 14.63% on CoreWeave's strong earnings and increased capital spending guidance, which directly benefits Sandisk as a supplier of memory chips to CoreWeave's data centers. Stock is trading at attractive valuations (less than 7x trailing earnings and under 4x forward earnings), presenting a potential buying opportunity.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8079482bbc3433ca573fea97814bade2fe60e575963d23d64e5890a696eaf875
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T15:57:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027787/seagate-expands-storage-portfolio-with-firecuda-forge-launch?cid=CS-ZC-FT-analyst_blog|quick_take-3027787
+image_url: https://staticx-tuner.zacks.com/images/articles/main/75/2558.jpg
+category: 
+tickers: STX, WDC, SNDK
+keywords: storage technology, hybrid storage, Edge IoT, data center, HDD, SSD, Mozaic 4, HAMR technology
+headline: Seagate Expands Storage Portfolio With FireCuda Forge Launch
+<<<SUMMARY>>>
+Seagate Technology (STX) launched FireCuda Forge, a hybrid storage drive combining SSD speed and HDD capacity, offering up to 2,500 MB/s read speeds in 8TB and 20TB configurations. The company's Edge IoT business surged 52% year-over-year to $784 million in Q1 fiscal 2027, while data center revenues grew 63% year-over-year to $3.4 billion, driven by cloud customer demand and Mozaic 4 production ramp.
+<<<INSIGHTS>>>
+STX | positive | Strong revenue growth across multiple segments (Edge IoT +52% YoY, data center +63% YoY), successful product innovation with FireCuda Forge launch, and positive analyst revisions (earnings estimates up 7.4% over 60 days). Zacks Rank #2 Buy rating supports positive outlook.
+WDC | positive | Strong performance with Client revenues up 119% YoY and Consumer revenues up 19% YoY. Strategic positioning with ePMR platform expected to capture significant nearline exabyte shipments (30% in Q2, 50% in Q3 fiscal 2027).
+SNDK | neutral | Mixed performance with Consumer revenues declining 29% sequentially due to customer price adjustments, though Edge revenues grew 7% sequentially and data center revenues surged 61% sequentially. Strong brand presence and distribution network provide support.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3bc90764e9009561d65b0a78ee6d38cc89e6a69a7295c559524dff3d0bd5f3fb
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T12:44:00Z
+publisher: Zacks Investment Research
+author: Zacks
+url: https://www.zacks.com/stock/news/3028439/zacks-com-featured-highlights-include-micron-nvidia-and-sandisk?cid=CS-ZC-FT-press_releases-3028439
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a6/97.jpg
+category: 
+tickers: MU, NVDA, SNDK
+keywords: profitable stocks, net income ratio, semiconductor, earnings growth, investment screening
+headline: Zacks.com featured highlights include Micron, NVIDIA and Sandisk
+<<<SUMMARY>>>
+Zacks highlights three profitable semiconductor and storage companies as investment opportunities based on strong net income margins and earnings growth potential. Micron Technology, NVIDIA, and Sandisk are identified as stocks with Zacks Rank #2 ratings, featuring net profit margins between 63.7% and 67%, and expected earnings growth rates ranging from 95% to 221.4%.
+<<<INSIGHTS>>>
+MU | positive | Highlighted as a profitable stock with 63.8% net profit margin and strong expected earnings growth of 133.1% for the current year, with Zacks Rank #2 rating
+NVDA | positive | Identified as a leading AI infrastructure company with 63.7% net profit margin and expected earnings growth of 95% for the current year, with Zacks Rank #2 rating
+SNDK | positive | Featured as a profitable NAND flash storage solutions provider with the highest net profit margin at 67% and exceptional expected earnings growth of 221.4%, with Zacks Rank #2 rating
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7586ebf89ab35b496b8450d974d8d16585ee39773332186f826522d5b828659f
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T23:41:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/12/sandisk-stock-is-back-above-the-usd900-price-i-set-for-buying-it-here-s-why-i-m-holding-off/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fe5bfc9644f59e616703fef487d9e7ee68f2c410e-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: SNDK, CRWV
+keywords: stock valuation, price target, earnings guidance, flash memory, stock split, AI cloud provider, semiconductor
+headline: Sandisk Stock Is Back Above the $900 Price I Set for Buying It. Here's Why I'm Holding Off.
+<<<SUMMARY>>>
+Sandisk stock has surged to ~$990, up 23% since Nov. 5, following CoreWeave's positive revenue forecast. However, analyst Daniel Sparks maintains his $900 price target and is holding off on buying, as the stock now trades at 4.4 years of guided earnings rather than his preferred 4 years. He emphasizes that nothing has fundamentally changed except the price, and he prefers to wait for either a price drop below $900 or higher guidance from management before reconsidering.
+<<<INSIGHTS>>>
+SNDK | neutral | While the company continues to beat earnings guidance and shows strong profit growth (adjusted EPS up from $1.22 to $49.51 year-over-year), the analyst maintains a neutral stance because the stock's recent 23% rally has pushed valuation above his target. The fundamentals remain solid but unchanged, making the current price unjustified relative to guided earnings.
+CRWV | positive | CoreWeave's decision to lift its 2026 revenue forecast triggered Sandisk's stock surge on Nov. 11, indicating positive momentum in the AI cloud provider sector that benefits memory chip suppliers.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e986cc7679e7e9722d3c52ccf28a914aab2a2b45a2d08d62622c598578745620
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T11:23:00Z
+publisher: Zacks Investment Research
+author: Not Specified
+url: https://www.zacks.com/stock/news/3029255/will-the-us-blue-wave-wash-out-semiconductors-judging-through-the-etf-lens?cid=CS-ZC-FT-etf_news_and_commentary-3029255
+image_url: https://staticx-tuner.zacks.com/images/articles/main/49/2653.jpg
+category: 
+tickers: AMD, NVDA, QCOM, SNDK, SOXX, FTXL, SOXQ, SHOC
+keywords: semiconductors, Blue Wave, Democratic Congress, AI data centers, DRAM prices, long-term contracts, semiconductor ETFs, regulatory pressure
+headline: Will the US Blue Wave Wash Out Semiconductors? Judging Through the ETF Lens
+<<<SUMMARY>>>
+The Philadelphia Semiconductor Index plunged over 12% following Democratic control of Congress, as investors feared regulatory pressure on AI data-center expansion. However, strong structural demand persists with DRAM prices up 484% year-over-year and major chipmakers securing long-term contracts with hyperscalers. Despite short-term political headwinds, semiconductor fundamentals remain intact, presenting potential buying opportunities through diversified ETF exposure.
+<<<INSIGHTS>>>
+AMD | positive | Top holding (10.23%) in SOXX ETF, which is recommended as a strong buy opportunity; benefits from semiconductor industry growth and AI infrastructure investments
+NVDA | neutral | Top holding in SOXQ and SHOC ETFs; noted for recent volatility and idiosyncratic risk, though included in recommended ETFs for diversified exposure
+QCOM | positive | Top holding (8.73%) in FTXL ETF, which is recommended as a strong buy opportunity with 61% year-to-date gains
+SNDK | positive | Locked 50% of 2027 NAND output under multi-year contracts, demonstrating strong demand and revenue security
+SOXX | positive | Recommended as strong buy with $44.74B in assets, 54.4% YTD gains, Zacks ETF Rank #1, and diversified exposure across semiconductor value chain
+FTXL | positive | Recommended as strong buy with 61% YTD gains, Zacks ETF Rank #1, and exposure to 37 U.S. semiconductor companies
+SOXQ | positive | Recommended as strong buy with 48.3% YTD gains, Zacks ETF Rank #1, lowest fees at 19 bps, and exposure to 31 semiconductor companies
+SHOC | positive | Recommended as strong buy with 32.3% YTD gains and Zacks ETF Rank #1, offering U.S.-listed semiconductor sector exposure
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:900d314198b07e5685dcb158bc6a79bcbced152c2b0eef5156d2c13b1c464b5f
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T18:20:02Z
+publisher: The Motley Fool
+author: Johnny Rice
+url: https://www.fool.com/investing/2026/11/13/why-sandisk-stock-is-falling-today/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd51daf71331412c99dc960114301091d7806b1e5-1290x860.png&w=1200&op=resize
+category: 
+tickers: SNDK, NVDA
+keywords: Sandisk stock decline, Nvidia CEO resignation, AI hardware sell-off, memory shortage, supply chain concerns, boom-and-bust cycle
+headline: Why Sandisk Stock Is Falling Today
+<<<SUMMARY>>>
+Sandisk stock fell 8.2% on November 13, 2026, as a broader sell-off in AI hardware stocks spread following Nvidia CEO Jensen Huang's resignation due to personal scandals involving alleged affairs and national security concerns. Despite Sandisk reporting strong fiscal Q1 results with $11 billion in sales (up 378% year-over-year) and 85.1% gross margins, investors worry the memory shortage could reverse as supply catches up or AI innovations reduce demand for expensive memory.
+<<<INSIGHTS>>>
+SNDK | negative | Stock down 8.2% due to spillover effects from Nvidia CEO scandal affecting AI hardware sector. Despite strong Q1 earnings, investors fear the memory shortage could reverse and demand may cool from AI slowdown or technical innovations reducing memory needs.
+NVDA | negative | CEO Jensen Huang resigned following reports of affairs and alleged connections to Chinese spy, raising national security concerns and questions about export controls on chips to China. This triggered broader AI hardware sector sell-off.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:176f24b2cb81e347bf2a40a8ef03109fc015e5dd4f2fe73309665cac36e33a7d
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T19:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029812/beat-value-traps-4-stocks-with-attractive-peg-ratios-to-buy-now?cid=CS-ZC-FT-analyst_blog|rw-3029812
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f5/189070.webp
+category: 
+tickers: OMCL, SNDK, AVT, MPC
+keywords: PEG ratio, value investing, earnings growth, stock screening, discounted valuations, Zacks Rank
+headline: Beat Value Traps: 4 Stocks With Attractive PEG Ratios to Buy Now
+<<<SUMMARY>>>
+The article identifies four stocks that qualify as attractive PEG-driven value investment picks based on discounted valuations combined with strong earnings growth prospects. Using screening criteria including PEG ratio, P/E ratio, Zacks Rank, and Value Score, the selected stocks are positioned to offer upside potential for value investors seeking to avoid value traps.
+<<<INSIGHTS>>>
+OMCL | positive | Zacks Rank #1 (Strong Buy), Value Score of B, impressive five-year expected growth rate of 24.4%, and discounted PEG and P/E valuations make it an attractive value pick.
+SNDK | positive | Zacks Rank #2 (Buy), Value Score of A, and the highest five-year expected growth rate of 57% among the four picks, combined with discounted valuations, make it a strong candidate.
+AVT | positive | Zacks Rank #1 (Strong Buy), Value Score of B, long-term expected growth rate of 31.3%, and discounted PEG and P/E ratios support its selection as a value investment.
+MPC | positive | Zacks Rank #2 (Buy), Value Score of A, and impressive five-year expected growth rate of 59.5% combined with discounted valuations make it an attractive PEG-driven value pick.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a88370f06e50b43755f938d6906ff1ee0e79d21ea5eb21e2333034d8f4ebd75b
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T23:17:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/13/sandisk-stock-fell-back-under-usd900-on-friday-i-d-start-with-a-small-position/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F041c447253face4b583b320f9d942c0d09765b9d-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: SNDK, MU, WDC
+keywords: flash memory, stock split, earnings guidance, AI demand, memory pricing, data center revenue, valuation, tech sell-off
+headline: Sandisk Stock Fell Back Under $900 on Friday. I'd Start With a Small Position.
+<<<SUMMARY>>>
+Sandisk stock dropped about 8% on Friday to roughly $860, falling back below the analyst's $900 buy price target. Despite the price decline, the company's guidance remains unchanged from its October 29 earnings report, with strong fiscal Q2 2027 projections showing revenue of $12.2-$12.6 billion and adjusted earnings of $55-$57 per share. The analyst recommends starting with a small position, cautioning that the stock's valuation depends heavily on sustained flash memory pricing driven by AI demand, which could be at risk if supply catches up.
+<<<INSIGHTS>>>
+SNDK | positive | Despite recent price decline, company guidance is strong with 378% YoY revenue growth and 9x earnings growth. Stock is trading below analyst's calculated fair value of $900 (4 years of earnings). Main risk is flash memory pricing sustainability, but current valuation offers margin of safety for investors willing to start small.
+MU | neutral | Mentioned as a comparable memory chipmaker that also declined ~4% on Friday as part of broader tech sector sell-off. No specific company news or guidance changes reported.
+WDC | neutral | Hard drive maker mentioned as declining ~7% on Friday as part of broader tech sector weakness. No company-specific catalysts or news reported.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b03e77aca54c187a84f2067155566b9ecc4821cb50b709406ea7b30e2dbc7fc6
+symbol: SNDK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T18:45:02Z
+publisher: The Motley Fool
+author: Keithen Drury
+url: https://www.fool.com/investing/2026/11/14/sandisks-stock-split-takes-effect-nov-19-should-you-buy-it-now/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd51daf71331412c99dc960114301091d7806b1e5-1290x860.png&w=1200&op=resize
+category: 
+tickers: SNDK
+keywords: stock split, NAND memory, AI demand, gross margins, share repurchase, forward earnings, memory chips, supply shortage
+headline: Sandisk’s Stock Split Takes Effect Nov. 19. Should You Buy It Now?
+<<<SUMMARY>>>
+Sandisk is capitalizing on strong AI demand for NAND memory and storage devices, with the company entering into new 'New Business Model' agreements that provide more stable, long-term customer relationships. The stock has risen nearly 300% in 2026 and trades at less than 4x forward earnings, suggesting significant upside potential from share repurchases and sustained demand in 2027, despite recent weakness.
+<<<INSIGHTS>>>
+SNDK | positive | Strong fundamentals driven by AI-driven demand for NAND memory, improved profit margins, new stable business model agreements with customers, attractive valuation at <4x forward earnings, and potential for significant share repurchase-driven growth in 2027. The stock has already gained 300% in 2026 with potential for further upside.
+<<<END>>>

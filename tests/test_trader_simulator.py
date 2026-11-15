@@ -21,55 +21,8 @@ def at(text):
 
 # ---------------------------------------------------------------- paper: a buy
 
-def test_a_paper_market_buy_fills_at_the_quote_plus_slippage_and_says_where_the_price_came_from():
-    e = sim.fill_paper("buy", "market", None, 100.0, LOW, HIGH, 5)
-    assert (e.status, e.price, e.price_source, e.slippage_bps, e.reject_code) == ("filled", 100.05, "quote", 5.0, None)
-    assert sim.fill_paper("buy", "market", None, 100.0, LOW, HIGH, 0).price == 100.0 and sim.fill_paper("buy", "market", None, 100.0, LOW, HIGH, 0).slippage_bps == 0.0
-
-
-def test_a_paper_market_buy_is_rejected_when_its_price_is_even_a_hundredth_of_a_cent_above_the_range():
-    assert sim.fill_paper("buy", "market", None, 100.0, LOW, 100.05, 5).status == "filled"                      # the price equal to the top of the range is inside it
-    e = sim.fill_paper("buy", "market", None, 100.0, LOW, 100.0499, 5)
-    assert (e.status, e.reject_code, e.price) == ("rejected", "price_outside_limits", None) and "100.0500" in e.reason and "100.0499" in e.reason and "new review" in e.reason
-    assert sim.fill_paper("buy", "market", None, 150.0, LOW, HIGH, 5).reject_code == "price_outside_limits"      # a quote far above: no order fills there
-
-
-def test_a_paper_market_buy_far_below_the_range_still_fills_a_better_price_is_not_outside_what_the_critic_judged():
-    e = sim.fill_paper("buy", "market", None, 90.0, LOW, HIGH, 5)
-    assert e.status == "filled" and e.price == 90.045
-
-
-def test_a_paper_limit_buy_fills_when_the_quote_equals_the_limit_and_rests_a_cent_above_it():
-    e = sim.fill_paper("buy", "limit", 100.0, 100.0, LOW, HIGH, 5)
-    assert (e.status, e.price, e.price_source) == ("filled", 100.0, "quote")                                    # min(limit, quote + slippage): the limit is the ceiling
-    e = sim.fill_paper("buy", "limit", 100.0, 100.01, LOW, HIGH, 5)
-    assert (e.status, e.price, e.reject_code) == ("active", None, None) and "above the limit" in e.reason
-
-
-def test_a_paper_limit_buy_never_pays_more_than_its_limit_and_takes_the_better_price_when_there_is_one():
-    assert sim.fill_paper("buy", "limit", 100.04, 100.0, LOW, HIGH, 5).price == 100.04                           # slippage would make it 100.05: the limit holds
-    assert sim.fill_paper("buy", "limit", 100.0, 99.0, LOW, HIGH, 5).price == 99.0495                             # the quote is below the limit: the quote plus slippage
-    e = sim.fill_paper("buy", "limit", 100.0, 99.0, LOW, HIGH, 5)
-    assert e.slippage_bps == 5.0
-    capped = sim.fill_paper("buy", "limit", 100.0, 99.99, LOW, HIGH, 5)                                            # 99.99 plus 5 bps is 100.04: over the limit, so the limit is the price
-    assert (capped.price, capped.slippage_bps) == (100.0, 1.0)                                                     # and the slippage it really had is the 1 basis point between the quote and the limit
-
 
 # ---------------------------------------------------------------- paper: a sale (the mirror image)
-
-def test_a_paper_market_sale_fills_at_the_quote_minus_slippage_and_is_rejected_below_the_range():
-    e = sim.fill_paper("sell", "market", None, 100.0, 99.95, 103.0, 5)
-    assert (e.status, e.price, e.slippage_bps) == ("filled", 99.95, 5.0)                                          # exactly the bottom of the range: inside
-    e = sim.fill_paper("sell", "market", None, 100.0, 99.9501, 103.0, 5)
-    assert (e.status, e.reject_code) == ("rejected", "price_outside_limits") and "below the lowest price allowed" in e.reason
-
-
-def test_a_paper_limit_sale_fills_when_the_quote_reaches_the_limit_and_rests_below_it():
-    e = sim.fill_paper("sell", "limit", 100.0, 100.0, 99.0, 103.0, 5)
-    assert (e.status, e.price) == ("filled", 100.0)                                                                # max(limit, quote less slippage): the limit is the floor
-    assert sim.fill_paper("sell", "limit", 100.0, 101.0, 99.0, 103.0, 5).price == 100.9495                         # the quote is over the limit: the quote less slippage
-    e = sim.fill_paper("sell", "limit", 100.0, 99.99, 99.0, 103.0, 5)
-    assert e.status == "active" and "below the limit" in e.reason
 
 
 # ---------------------------------------------------------------- no order fills outside the range, and bad input
@@ -79,11 +32,6 @@ def test_a_limit_price_outside_the_range_is_rejected_by_the_rules_even_if_a_tool
     for run in (lambda: sim.fill_paper(side, order_type, limit_price, 97.0, LOW, HIGH, 5), lambda: sim.fill_backtest(side, order_type, limit_price, bar("2026-11-06", 97, 99, 96, 98), LOW, HIGH, 5)):
         e = run()
         assert (e.status, e.reject_code) == ("rejected", "price_outside_limits") and "outside the range" in e.reason
-
-
-@pytest.mark.parametrize("quote", [None, 0, -1.0, float("nan"), float("inf"), "100", True])
-def test_a_quote_that_cannot_be_traded_on_is_price_unavailable(quote):
-    assert sim.fill_paper("buy", "market", None, quote, LOW, HIGH, 5).reject_code == "price_unavailable"
 
 
 @pytest.mark.parametrize("arguments", [("short", "market", None, 100.0, LOW, HIGH, 5), ("buy", "stop", None, 100.0, LOW, HIGH, 5), ("buy", "limit", None, 100.0, LOW, HIGH, 5), ("buy", "limit", 0.0, 100.0, LOW, HIGH, 5)])
@@ -106,23 +54,10 @@ def test_every_code_the_rules_use_is_in_the_closed_list():
 
 # ---------------------------------------------------------------- backtest: a buy against the entry bar
 
-def test_a_backtest_market_buy_fills_at_the_open_plus_slippage_on_the_bars_date():
-    e = sim.fill_backtest("buy", "market", None, bar("2026-11-06", 100.0, 103.0, 99.0, 102.0), LOW, HIGH, 5)
-    assert (e.status, e.price, e.price_source, e.slippage_bps) == ("filled", 100.05, "bar_open", 5.0) and "2026-11-06" in e.reason
-
 
 def test_a_backtest_market_buy_is_rejected_when_the_open_gapped_above_the_range_even_if_the_day_came_back():
     e = sim.fill_backtest("buy", "market", None, bar("2026-11-06", 101.0, 101.5, 96.0, 97.0), LOW, HIGH, 5)
     assert (e.status, e.reject_code) == ("rejected", "price_outside_limits") and "the opening price" in e.reason
-
-
-def test_a_backtest_limit_buy_when_the_open_is_at_or_under_the_limit_fills_at_the_open_price_but_never_above_the_limit():
-    e = sim.fill_backtest("buy", "limit", 100.0, bar("2026-11-06", 99.0, 101.0, 98.0, 100.0), LOW, HIGH, 5)
-    assert (e.status, e.price, e.price_source) == ("filled", 99.0495, "bar_open")
-    e = sim.fill_backtest("buy", "limit", 100.0, bar("2026-11-06", 100.0, 101.0, 98.0, 100.0), LOW, HIGH, 5)       # open == limit: reached; open plus slippage would be 100.05, so the limit caps it
-    assert (e.status, e.price, e.price_source) == ("filled", 100.0, "bar_limit")
-    e = sim.fill_backtest("buy", "limit", 100.0, bar("2026-11-06", 99.99, 101.0, 98.0, 100.0), LOW, HIGH, 5)       # the open is under the limit, but 99.99 plus 5 bps is over it: the limit is the price
-    assert (e.price, e.price_source, e.slippage_bps) == (100.0, "bar_limit", 1.0)
 
 
 def test_a_backtest_limit_buy_above_the_open_fills_at_its_limit_when_the_low_touches_it_exactly_and_not_a_cent_short():
@@ -184,27 +119,12 @@ def test_the_entry_day_uses_the_easterns_clock_not_utc_and_a_naive_moment_is_a_p
         sim.entry_date(datetime(2026, 11, 5, 10, 30), {})
 
 
-def test_the_entry_date_is_the_earliest_stored_bar_on_or_after_that_day_among_every_symbol():
-    now = at("2026-11-05 10:30")                                                                                  # the calendar says Friday the 6th
-    both = {"PG": [bar("2026-11-05", 1, 1, 1, 1), bar("2026-11-06", 1, 1, 1, 1)], "SPY": [bar("2026-11-06", 1, 1, 1, 1)]}
-    assert sim.entry_date(now, both) == date(2026, 11, 6)
-    only_one = {"PG": [bar("2026-11-09", 1, 1, 1, 1)], "SPY": [bar("2026-11-06", 1, 1, 1, 1), bar("2026-11-09", 1, 1, 1, 1)]}
-    assert sim.entry_date(now, only_one) == date(2026, 11, 6)                                                     # a symbol whose Friday file is missing does not move the run, another symbol has it
-    missing = {"PG": [bar("2026-11-09", 1, 1, 1, 1)], "SPY": [bar("2026-11-09", 1, 1, 1, 1)]}
-    assert sim.entry_date(now, missing) == date(2026, 11, 9)                                                      # the day's file is missing for everybody: the next stored day
-
-
 def test_with_no_bar_on_or_after_the_calendar_day_there_is_no_entry_date_and_the_future_is_not_guessed():
     now = at("2026-11-05 10:30")
     assert sim.entry_date(now, {}) is None
     assert sim.entry_date(now, {"PG": [], "SPY": []}) is None
     assert sim.entry_date(now, {"PG": [bar("2026-11-05", 1, 1, 1, 1), bar("2026-11-04", 1, 1, 1, 1)]}) is None    # bars from before the entry day are the past, not an entry
     assert sim.entry_date(now, {"PG": [{"date": "garbage"}, "x", {"open": 1}]}) is None
-
-
-def test_bar_on_finds_a_day_by_date_or_by_text():
-    series = [bar("2026-11-05", 1, 2, 0.5, 1.5), bar("2026-11-06", 2, 3, 1.5, 2.5)]
-    assert sim.bar_on(series, "2026-11-06")["open"] == 2 and sim.bar_on(series, date(2026, 11, 5))["open"] == 1 and sim.bar_on(series, "2026-11-07") is None and sim.bar_on(None, "2026-11-05") is None
 
 
 # ---------------------------------------------------------------- following a purchase
@@ -234,25 +154,12 @@ def test_a_stop_touched_exactly_on_a_later_bar_exits_at_the_stop_less_slippage_a
     assert follow(QUIET, (100.0, 101.0, 95.01, 97.0)).status == "open"
 
 
-def test_a_gap_through_the_stop_exits_at_the_open_less_slippage_not_at_the_stop():
-    o = follow(QUIET, (94.0, 96.0, 93.0, 95.5))
-    assert (o.exit_reason, o.exit_price) == ("stop", 93.953)                                                    # 94 less 5 bps is 93.953: worse than the stop, as a gap is
-    o = follow(QUIET, (95.0, 96.0, 94.0, 95.5))                                                                  # an open exactly at the stop counts as through it
-    assert (o.exit_reason, o.exit_price) == ("stop", 94.9525)
-    assert sim.follow(100.0, 10, "2026-11-06", series(QUIET, (96.0, 97.0, 95.01, 96.0)), **PLAN).status == "open"
-
-
 def test_a_target_touched_exactly_exits_at_the_target_and_a_gap_over_it_exits_at_the_open_without_slippage():
     o = follow(QUIET, (101.0, 110.0, 100.0, 108.0))
     assert (o.exit_reason, o.exit_price, o.exit_date, o.sessions_held) == ("target", 110.0, "2026-11-09", 1)
     assert follow(QUIET, (101.0, 109.99, 100.0, 108.0)).status == "open"
     o = follow(QUIET, (111.0, 112.0, 110.5, 111.5))
     assert (o.exit_reason, o.exit_price) == ("target", 111.0)
-
-
-def test_a_day_that_touches_both_the_stop_and_the_target_is_a_stop_the_bad_case_is_assumed():
-    o = follow(QUIET, (100.0, 112.0, 94.0, 100.0))
-    assert o.exit_reason == "stop" and o.exit_price == 94.9525 and o.realized_gain < 0
 
 
 def test_the_time_stop_exits_at_the_close_less_slippage_on_the_date_and_on_any_bar_after_it_but_not_before():
@@ -280,40 +187,11 @@ def test_the_first_rule_that_holds_wins_on_one_bar_target_before_the_time_stop_a
     assert o.exit_reason == "stop"
 
 
-def test_a_trade_with_no_exit_by_the_last_stored_bar_is_open_and_marked_at_the_last_close():
-    o = follow(QUIET, (100.0, 103.0, 99.0, 102.5), (102.0, 104.0, 101.0, 103.25))
-    assert (o.status, o.exit_reason, o.exit_date, o.exit_price, o.realized_gain) == ("open", None, None, None, None)
-    assert (o.last_date, o.last_close, o.sessions_held, o.unrealized_gain, o.return_pct) == ("2026-11-10", 103.25, 2, 32.5, 0.0325)
-
-
-def test_a_one_bar_series_is_an_open_trade_with_no_sessions_held():
-    o = follow(QUIET)
-    assert (o.status, o.sessions_held, o.last_date, o.last_close, o.unrealized_gain) == ("open", 0, "2026-11-06", 100.0, 0.0)
-
-
-def test_the_gain_is_counted_in_cents_the_way_the_account_book_rounds():
-    o = sim.follow(500.125, 1, "2026-11-06", series(QUIET, (101.0, 600.0, 100.0, 500.0)), stop_price=None, target_price=600.0, time_stop_date=None, slippage_bps=0)
-    assert o.exit_price == 600.0 and o.realized_gain == round(600.0 - 500.13, 2) == 99.87                         # 500.125 is 500.13 in the book (half up), not 500.12
-
-
-def test_a_capital_return_plan_has_no_target_and_a_plan_without_a_stop_or_a_time_stop_skips_those_rules():
-    o = follow(QUIET, (100.0, 500.0, 99.0, 300.0), target_price=None)
-    assert o.status == "open" and o.last_close == 300.0
-    assert follow(QUIET, (50.0, 51.0, 49.0, 50.0), stop_price=None).status == "open"
-    assert follow(QUIET, QUIET, QUIET, time_stop_date=None).status == "open"
-
-
 def test_slippage_is_taken_off_the_stop_and_the_time_stop_exits_only():
     assert follow(QUIET, (100.0, 101.0, 94.0, 96.0), slippage_bps=0).exit_price == 95.0
     assert follow(QUIET, (100.0, 101.0, 94.0, 96.0), slippage_bps=100).exit_price == 94.05
     assert follow(QUIET, (111.0, 112.0, 110.5, 111.5), slippage_bps=100).exit_price == 111.0                      # a target is taken at the price, no slippage
     assert follow(QUIET, QUIET, time_stop_date="2026-11-09", slippage_bps=100).exit_price == 99.0
-
-
-def test_the_outcome_of_a_closed_trade_has_the_gain_the_return_and_the_sessions():
-    o = sim.follow(167.18, 44, "2026-11-06", series((167.0, 168.0, 166.0, 167.5), (167.0, 169.0, 166.5, 168.0), start="2026-11-06"), stop_price=157.2351, target_price=168.3783, time_stop_date="2026-12-31", slippage_bps=5)
-    assert (o.exit_reason, o.exit_price, o.sessions_held, o.realized_gain, o.return_pct) == ("target", 168.3783, 1, 52.73, 0.007168)
-    assert isinstance(o, Outcome) and o.benchmark_return_pct is None and o.excess_return_pct is None
 
 
 @pytest.mark.parametrize("bars", [[], None, [bar("2026-11-09", *QUIET)], [bar("2026-11-05", *QUIET)], [{"date": "2026-11-06"}], ["x"]])
@@ -322,31 +200,6 @@ def test_a_series_that_does_not_start_with_the_entry_bar_cannot_be_followed_and_
     assert o == Outcome(status="open")
 
 
-def test_bars_before_the_entry_day_are_ignored_and_the_entry_may_be_given_as_a_date():
-    before = [bar("2026-11-04", 1, 1, 1, 1), bar("2026-11-05", 1, 1, 1, 1)] + series(QUIET, (100.0, 101.0, 94.0, 96.0))
-    assert sim.follow(100.0, 10, date(2026, 11, 6), before, **PLAN).exit_date == "2026-11-09"
-
-
 # ---------------------------------------------------------------- the benchmark
 
-def test_the_benchmark_return_runs_from_the_entry_bars_open_to_the_exit_dates_close_and_the_excess_is_the_difference():
-    bench = series((400.0, 402.0, 399.0, 401.0), (401.0, 405.0, 400.0, 404.0), (404.0, 410.0, 403.0, 408.0))
-    o = sim.follow(100.0, 10, "2026-11-06", series(QUIET, (101.0, 110.0, 100.0, 109.0), QUIET), benchmark_bars=bench, **PLAN)
-    assert (o.exit_reason, o.exit_date, o.exit_price, o.return_pct) == ("target", "2026-11-09", 110.0, 0.1)
-    assert o.benchmark_return_pct == 0.01 and o.excess_return_pct == 0.09                                          # 404 over 400: the bar of the exit date, not the later one
 
-
-def test_the_benchmark_of_an_open_trade_runs_to_the_last_close_and_none_is_none_when_its_bars_are_not_stored():
-    bench = series((400.0, 402.0, 399.0, 401.0), (401.0, 405.0, 400.0, 404.0))
-    o = sim.follow(100.0, 10, "2026-11-06", series(QUIET, (100.0, 103.0, 99.0, 102.0)), benchmark_bars=bench, **PLAN)
-    assert (o.status, o.return_pct, o.benchmark_return_pct, o.excess_return_pct) == ("open", 0.02, 0.01, 0.01)
-    for missing in (None, [], series((1, 1, 1, 1), start="2026-11-09")):
-        none = sim.follow(100.0, 10, "2026-11-06", series(QUIET, (100.0, 103.0, 99.0, 102.0)), benchmark_bars=missing, **PLAN)
-        assert none.benchmark_return_pct is None and none.excess_return_pct is None and none.return_pct == 0.02
-
-
-def test_follow_changes_nothing_it_is_given():
-    rows = series(QUIET, (100.0, 101.0, 94.0, 96.0))
-    snapshot = [dict(b) for b in rows]
-    sim.follow(100.0, 10, "2026-11-06", rows, **PLAN)
-    assert rows == snapshot

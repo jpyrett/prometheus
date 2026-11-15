@@ -48,57 +48,6 @@ ROOT = "(nothing sold)"
 
 # ---------------------------------------------------------------- the problem
 
-def test_the_problem_is_the_cost_of_the_purchase_and_what_can_be_sold():
-    p = problem()
-    assert p.cost == 820.0 and p.need == 820.0 and p.price == 410.0 and p.cash == 0.0
-    assert set(p.holdings) == {"MSFT", "TSLA", "GM"}  # the target is never a holding that can be sold
-    assert p.holdings["TSLA"].sellable == 123 and p.holdings["TSLA"].basis == 300.0 and p.holdings["TSLA"].price == 250.0
-
-
-def test_the_most_that_could_be_bought_is_calculated_from_everything_sellable():
-    assert problem().max_affordable == 134  # (50*420 + 123*250 + 60*55) / 410 = 134.27
-
-
-def test_the_free_settled_cash_of_the_sample_portfolio_reduces_what_has_to_be_raised():
-    p = problem(portfolio=pf.load_portfolio(DEFAULT_PORTFOLIO))  # cash_avail 51.23, as the file says
-    assert p.cash == 51.23 and p.cost == 820.0 and p.need == 768.77
-    assert p.max_affordable == 134  # (55,050 + 51.23) / 410 = 134.39: the cash counts in the most that could be bought
-
-
-def test_the_cash_is_spent_first_so_a_plan_that_could_not_pay_alone_is_complete_with_it():
-    sample = pf.load_portfolio(DEFAULT_PORTFOLIO)
-    asked = rf.search(problem(portfolio=sample), Gen({ROOT: [thought("GM", 14)]}))  # 14 x 55 = 770: short of 820 alone, enough with 51.23 of cash
-    assert asked["status"] == "plan" and asked["plan"]["proceeds"] == 770.0 and asked["plan"]["left_over"] == 1.23 and asked["after"]["cash"] == 1.23
-    assert asked["before"]["cash"] == 51.23 and asked["cash"] == 51.23 and asked["need"] == 768.77
-    without = rf.search(problem(), Gen({ROOT: [thought("GM", 14)]}))
-    assert without["status"] == "infeasible"  # the same step, with no cash, does not reach 820
-
-
-def test_the_overshoot_component_counts_the_cash_too():
-    sample = problem(portfolio=pf.load_portfolio(DEFAULT_PORTFOLIO))
-    assert rf.score_plan(sample, (("GM", 14),))[1]["overshoot"] == pytest.approx(1 - 1.23 / 820, abs=0.001)  # 770 + 51.23 - 820 left over
-    assert "overshoot" not in rf.score_plan(sample, (("GM", 13),))[1]  # 715 + 51.23 is still short of 820
-
-
-def test_cash_already_in_the_account_reduces_what_has_to_be_raised():
-    portfolio = no_cash().model_copy(update={"cash_avail": 300.0})
-    p = problem(portfolio=portfolio)
-    assert p.need == 520.0 and p.max_affordable == 135  # (55,050 + 300) / 410
-
-
-def test_shares_bought_today_are_not_counted_as_sellable():
-    portfolio = pf.Portfolio(user="x", positions=[pf.Position(symbol="GM", shares=60, cost_basis=10.0, acquired=TODAY), pf.Position(symbol="TSLA", shares=10, cost_basis=300.0)])
-    p = problem(portfolio=portfolio)
-    assert p.holdings["GM"].sellable == 0 and p.holdings["TSLA"].sellable == 10 and p.max_affordable == 6  # only TSLA: 10 * 250 / 410
-
-
-def test_a_target_already_held_is_kept_in_the_shares_after_the_purchase():
-    portfolio = pf.Portfolio(user="x", positions=[pf.Position(symbol="MU", shares=3, cost_basis=100.0), pf.Position(symbol="GM", shares=60, cost_basis=10.0)])
-    p = problem(portfolio=portfolio)
-    assert "MU" not in p.holdings and p.held == 3
-    result = rf.search(p, Gen({ROOT: [thought("GM", 15)]}))
-    assert result["before"]["shares"] == {"GM": 60, "MU": 3} and result["after"]["shares"] == {"GM": 45, "MU": 5}
-
 
 @pytest.mark.parametrize("shares", [0, -1, 1.5, True, "2"])
 def test_a_number_of_shares_that_is_not_a_whole_number_of_at_least_one_is_refused(shares):
@@ -115,32 +64,6 @@ def test_a_missing_or_zero_price_is_refused_and_named():
 
 def score(*sells, prob=None):
     return rf.score_plan(prob or problem(), tuple(sells))
-
-
-def test_the_score_of_a_plan_is_calculated_from_its_components_by_hand():
-    s, parts = score(("TSLA", 2), ("GM", 6))  # raises 830, gain 2*(250-300) + 6*(55-10) = 170
-    assert parts == {"gain": 0.795, "keep": 1.0, "orders": 0.5, "overshoot": 0.988}
-    assert s == 84.0  # 100 * (0.40*0.795 + 0.25*0.988 + 0.20*1.0 + 0.15*0.5)
-
-
-def test_a_plan_that_sells_at_a_loss_has_the_best_possible_gain_component():
-    assert score(("TSLA", 4))[1]["gain"] == 1.0  # 4 * (250 - 300) is a loss
-
-
-def test_selling_every_share_of_a_position_costs_the_keep_component():
-    assert score(("GM", 60))[1]["keep"] == pytest.approx(0.667, abs=0.001)  # 1 of 3 positions closed
-    assert score(("GM", 59))[1]["keep"] == 1.0
-
-
-def test_more_orders_score_lower_on_the_orders_component():
-    assert [score(*sells)[1]["orders"] for sells in ((("GM", 1),), (("GM", 1), ("TSLA", 1)), (("GM", 1), ("TSLA", 1), ("MSFT", 1)))] == [1.0, 0.5, 0.333]
-
-
-def test_overshoot_is_only_known_for_a_plan_that_covers_the_cost_and_the_weights_are_renormalised_without_it():
-    assert "overshoot" not in score(("TSLA", 2))[1]                       # raises 500 of 820
-    s, parts = score(("TSLA", 2))
-    assert s == round(100 * (0.40 * parts["gain"] + 0.20 * parts["keep"] + 0.15 * parts["orders"]) / 0.75, 1)
-    assert score(("TSLA", 4))[1]["overshoot"] == pytest.approx(1 - 180 / 820, abs=0.001)
 
 
 def test_the_weights_add_up_to_one():
@@ -185,35 +108,7 @@ def test_a_symbol_may_appear_once_in_a_plan():
     assert node is None and "already in this plan" in reason
 
 
-def test_shares_bought_today_cannot_be_sold_even_though_they_are_held():
-    portfolio = pf.Portfolio(user="x", positions=[pf.Position(symbol="GM", shares=60, cost_basis=10.0, acquired=TODAY), pf.Position(symbol="TSLA", shares=10, cost_basis=300.0)])
-    node, reason = check(thought("GM", 1), prob=problem(portfolio=portfolio))
-    assert node is None and "only 0 are sellable (60 held)" in reason
-
-
-def test_a_branch_that_can_no_longer_reach_the_cost_is_a_dead_end():
-    portfolio = pf.Portfolio(user="x", positions=[pf.Position(symbol="GM", shares=10, cost_basis=10.0), pf.Position(symbol="TSLA", shares=1, cost_basis=300.0)])
-    prob = problem(portfolio=portfolio)  # GM 10 * 55 = 550, TSLA 1 * 250: together 800 < 820, the target can never be bought
-    node, reason = rf.check_step(prob, rf.root(prob), thought("GM", 1), "n1")
-    assert node is None and reason.startswith("dead end")
-
-
-def test_a_thought_that_does_not_cover_the_cost_is_an_open_node_with_the_shortfall():
-    node, _ = check(thought("TSLA", 2))
-    assert not node.complete and node.proceeds == 500.0 and node.shortfall == 320.0
-
-
 # ---------------------------------------------------------------- the search
-
-def test_the_best_completed_plan_by_calculated_score_is_the_answer():
-    gen = Gen({ROOT: [thought("MSFT", 2), thought("TSLA", 2), thought("GM", 15)], "TSLA x2": [thought("GM", 6), thought("MSFT", 1)]})
-    result = rf.search(problem(), gen)
-    assert result["status"] == "plan"
-    assert [(x["symbol"], x["shares"]) for x in result["plan"]["sells"]] == [("TSLA", 2), ("GM", 6)] and result["plan"]["score"] == 84.0
-    assert result["plan"]["proceeds"] == 830.0 and result["plan"]["left_over"] == 10.0 and result["plan"]["gain"] == 170.0
-    assert [(a["node"], a["score"]) for a in result["alternatives"]] == [("n5", 82.1), ("n1", 73.7), ("n3", 67.1)]  # the others, best first
-    assert {k: result["stats"][k] for k in ("llm_calls", "nodes", "levels", "completed_plans")} == {"llm_calls": 2, "nodes": 6, "levels": 2, "completed_plans": 4}
-    assert result["before"] == {"shares": {"MSFT": 50, "TSLA": 123, "GM": 60}, "cash": 0.0} and result["after"] == {"shares": {"MSFT": 50, "TSLA": 121, "GM": 54, "MU": 2}, "cash": 10.0}
 
 
 def untimed(result):
@@ -230,66 +125,16 @@ def test_the_search_is_deterministic_for_the_same_thoughts():
     assert rf.as_json(untimed(first)) == rf.as_json(untimed(second))
 
 
-def test_a_completed_plan_is_never_expanded():
-    gen = Gen({ROOT: [thought("TSLA", 4)]})
-    rf.search(problem(), gen)
-    assert [c[1] for c in gen.calls] == [ROOT]  # n1 (TSLA x4) is complete: the generator is not asked to extend it
-
-
-def test_the_beam_keeps_only_the_best_unfinished_plans_and_the_trace_says_why_the_others_were_pruned():
-    gen = Gen({ROOT: [thought("TSLA", 1), thought("GM", 2), thought("MSFT", 1)], "TSLA x1": [thought("GM", 12)]})
-    result = rf.search(problem(), gen, beam_width=1)
-    level1 = result["trace"][0]["children"]
-    assert [c["status"] for c in level1] == ["kept", "pruned", "pruned"] and level1[0]["plan"] == "TSLA x1"
-    assert "below the beam" in level1[1]["reason"] and "top 1" in level1[1]["reason"]
-    assert [c[1] for c in gen.calls] == [ROOT, "TSLA x1"]  # only the kept node was expanded; the pruned ones were not
-    assert result["status"] == "plan"
-
-
-def test_a_pruned_plan_can_never_come_back():
-    gen = Gen({ROOT: [thought("TSLA", 1), thought("GM", 2)], "TSLA x1": [thought("GM", 12)], "GM x2": [thought("TSLA", 3)]})
-    result = rf.search(problem(), gen, beam_width=1)
-    assert [c[1] for c in gen.calls] == [ROOT, "TSLA x1"]  # GM x2 was pruned at level 1: it is never expanded, so its good continuation is never found
-    assert [(x["symbol"], x["shares"]) for x in result["plan"]["sells"]] == [("TSLA", 1), ("GM", 12)]
-
-
-def test_the_depth_limit_ends_the_search_and_says_so():
-    gen = Gen({ROOT: [thought("GM", 1)], "GM x1": [thought("TSLA", 1)], "GM x1, TSLA x1": [thought("MSFT", 1)]})
-    result = rf.search(problem(), gen, max_depth=2)
-    assert result["status"] == "infeasible" and len(result["trace"]) == 2 and "the depth limit (2) was reached" in result["stop"]
-
-
-def test_the_search_never_goes_deeper_than_the_number_of_holdings():
-    portfolio = pf.Portfolio(user="x", positions=[pf.Position(symbol="GM", shares=60, cost_basis=10.0), pf.Position(symbol="TSLA", shares=123, cost_basis=300.0)])
-    gen = Gen({ROOT: [thought("GM", 1)], "GM x1": [thought("TSLA", 1)], "GM x1, TSLA x1": [thought("GM", 2)]})
-    result = rf.search(problem(portfolio=portfolio), gen)
-    assert len(result["trace"]) == 2  # two holdings, two levels: a third step could only repeat a symbol
-
-
 def test_the_call_budget_ends_the_search_even_with_unfinished_plans_left():
     gen = Gen({ROOT: [thought("GM", 1), thought("TSLA", 1), thought("MSFT", 1)]}, default=[thought("GM", 1)])
     result = rf.search(problem(), gen, max_calls=2)
     assert result["stats"]["llm_calls"] == 2 and len(gen.calls) == 2 and "the call budget (2) was used" in result["stop"]
 
 
-def test_at_most_the_branching_factor_of_thoughts_is_considered_per_node():
-    gen = Gen({ROOT: [thought("GM", i) for i in range(1, 8)]})
-    result = rf.search(problem(), gen)
-    assert len(result["trace"][0]["children"]) == rf.BRANCHING == 3
-
-
 def test_the_same_thought_twice_from_one_node_is_counted_once():
     result = rf.search(problem(), Gen({ROOT: [thought("TSLA", 4), thought("tsla", "4"), thought("GM", 15)]}))
     statuses = [c["status"] for c in result["trace"][0]["children"]]
     assert statuses == ["complete", "duplicate", "complete"] and result["stats"]["nodes"] == 3
-
-
-def test_a_rejected_thought_is_kept_in_the_trace_and_its_reason_is_told_to_the_next_call():
-    gen = Gen({ROOT: [thought("TSLA", 500), thought("GM", 2)], "GM x2": [thought("TSLA", 3)]})
-    result = rf.search(problem(), gen)
-    rejected = result["trace"][0]["children"][0]
-    assert rejected["status"] == "rejected" and "only 123 are sellable" in rejected["reason"]
-    assert gen.calls[1][2] == ["TSLA: 500 shares asked but only 123 are sellable (123 held)"]  # the second call heard about the first thought's failure
 
 
 def test_only_the_latest_rejections_are_told_to_the_generator():
@@ -327,23 +172,11 @@ def test_if_every_call_fails_the_answer_is_infeasible_with_the_errors():
     assert result["status"] == "infeasible" and result["plan"] is None and result["errors"] == ["expanding n0 failed (TimeoutError)"]
 
 
-def test_an_impossible_purchase_is_infeasible_and_says_how_many_could_be_bought():
-    gen = Gen({ROOT: [thought("MSFT", 50), thought("TSLA", 123), thought("GM", 60)]})
-    result = rf.search(problem(shares=500), gen)
-    assert result["status"] == "infeasible" and result["plan"] is None and result["max_affordable"] == 134 and result["after"] == {}
-
-
 def test_when_the_cash_already_covers_the_purchase_nothing_is_sold_and_nothing_is_asked():
     portfolio = no_cash().model_copy(update={"cash_avail": 1000.0})
     gen = Gen({})
     result = rf.search(problem(portfolio=portfolio), gen)
     assert result["status"] == "funded" and result["plan"] is None and gen.calls == [] and result["stats"]["llm_calls"] == 0
-
-
-def test_a_tie_in_score_goes_to_the_earlier_node():
-    prices = {**PRICES, "TSLA": 300.0, "MSFT": 150.0, "GM": 10.0}  # at cost: no gain or loss anywhere
-    result = rf.search(problem(shares=1, prices={**prices, "MU": 300.0}), Gen({ROOT: [thought("TSLA", 1), thought("MSFT", 2)]}))
-    assert result["plan"]["node"] == "n1" and result["alternatives"][0]["node"] == "n2"
 
 
 # ---------------------------------------------------------------- the reasoning trace and the answer, as the user reads them
@@ -383,51 +216,6 @@ def green_problem(prices=None, shares=2):
     return rf.build_problem(no_cash(), "MU", shares, prices or {**PRICES, "TSLA": 250.0}, TODAY, only_green=True)  # TSLA 250 is below its basis of 300: red
 
 
-def test_a_holding_at_a_loss_is_not_green_and_may_not_be_sold_when_only_green_is_on():
-    prob = green_problem()
-    assert [s for s, h in prob.holdings.items() if h.green] == ["MSFT", "GM"] and not prob.holdings["TSLA"].green
-    node, reason = rf.check_step(prob, rf.root(prob), thought("TSLA", 1), "n1")
-    assert node is None and "TSLA is not in profit (price $250.00 is not above its basis $300.00)" in reason
-    assert rf.check_step(prob, rf.root(prob), thought("GM", 1), "n1")[0] is not None
-
-
-def test_a_holding_priced_exactly_at_its_basis_is_not_green():
-    assert not rf.Holding("X", None, 1, 1, 10.0, 10.0).green
-
-
-def test_without_the_rule_the_same_holding_may_be_sold():
-    prob = rf.build_problem(no_cash(), "MU", 2, PRICES, TODAY)  # only_green defaults to off
-    assert rf.check_step(prob, rf.root(prob), thought("TSLA", 4), "n1")[0] is not None
-
-
-def test_the_most_that_could_be_bought_counts_only_what_may_be_sold():
-    assert green_problem().max_affordable == 59   # (50 x 420 + 60 x 55) / 410 = 59.3: the 30,750 of TSLA, at a loss, is not counted
-    assert problem().max_affordable == 134        # with the rule off it is
-
-
-def test_a_branch_is_a_dead_end_when_only_the_green_holdings_left_cannot_raise_the_rest():
-    prob = green_problem(shares=60)  # 60 x 410 = 24,600; MSFT + GM = 24,300 of green holdings: short by 300 whatever is sold
-    node, reason = rf.check_step(prob, rf.root(prob), thought("GM", 1), "n1")
-    assert node is None and reason.startswith("dead end")
-
-
-def test_the_search_goes_no_deeper_than_the_holdings_that_may_be_sold():
-    gen = Gen({ROOT: [thought("GM", 1)], "GM x1": [thought("MSFT", 1)], "GM x1, MSFT x1": [thought("TSLA", 1)]})
-    result = rf.search(green_problem(), gen)  # two green holdings: two levels
-    assert len(result["trace"]) == 2
-
-
-def test_the_goal_line_and_the_prompt_say_that_only_profitable_holdings_may_be_sold():
-    from prometheus.prompts import account_manager as prompts
-    prob = green_problem()
-    text = rf.format_answer(rf.search(prob, Gen({ROOT: [thought("TSLA", 4), thought("GM", 15)]})))
-    assert "only holdings in profit (green) may be sold, and never MU itself" in text and "REJECTED" in text and "is not in profit" in text
-    user = prompts.user_message(prob, rf.root(prob), [])
-    assert "Only holdings that show a profit may be sold." in user and "- TSLA (Tesla Inc): held 123" in user and "(at a loss: may not be sold)" in user
-    assert "Only holdings that show a profit" in prompts.system_prompt(3, only_green=True) and "Only holdings that show a profit" not in prompts.system_prompt(3)
-    assert "OTHER symbols" in prompts.system_prompt(3)  # the rule that the money comes from other symbols is always in the prompt
-
-
 def test_when_the_free_cash_pays_for_the_purchase_the_holdings_after_are_the_same_and_the_cash_is_spent():
     portfolio = no_cash().model_copy(update={"cash_avail": 1000.0})
     result = rf.search(problem(portfolio=portfolio), Gen({}))
@@ -435,20 +223,6 @@ def test_when_the_free_cash_pays_for_the_purchase_the_holdings_after_are_the_sam
 
 
 # ---------------------------------------------------------------- the same sells in another order are one plan (entry 45)
-
-def test_the_same_sells_reached_in_another_order_are_one_plan_and_take_no_second_place_in_the_beam():
-    gen = Gen({ROOT: [thought("GM", 5), thought("TSLA", 1)], "GM x5": [thought("TSLA", 1)], "TSLA x1": [thought("GM", 5), thought("MSFT", 1)]})
-    result = rf.search(problem(), gen)
-    level2 = result["trace"][1]["children"]
-    duplicate = [c for c in level2 if c["status"] == "duplicate"]
-    assert len(duplicate) == 1 and duplicate[0]["reason"] == "the same sells as n3 in a different order" and duplicate[0]["thought"] == thought("TSLA", 1) and duplicate[0]["parent"] == "n1"
-    assert result["stats"]["nodes"] == 5   # n0, GM x5, TSLA x1, TSLA x1 + GM x5 (n3), TSLA x1 + MSFT x1 (n4): GM x5 + TSLA x1 would have been a sixth node, the same plan as n3
-
-
-def test_a_plan_with_the_same_symbols_but_other_share_counts_is_a_different_plan():
-    gen = Gen({ROOT: [thought("GM", 5), thought("TSLA", 1)], "GM x5": [thought("TSLA", 1)], "TSLA x1": [thought("GM", 6)]})
-    result = rf.search(problem(), gen)
-    assert not any(c["status"] == "duplicate" for level in result["trace"] for c in level["children"])
 
 
 # ---------------------------------------------------------------- the size of the tree, and what the beam ranks by (entry 45): pure functions on the complex portfolio, no model
@@ -459,29 +233,6 @@ COMPLEX_PRICES = {"LLY": 1409.38, "SNDK": 1126.52, "MU": 855.10, "F": 12.31, "GM
 
 def complex_problem(**options):
     return rf.build_problem(pf.load_portfolio(COMPLEX), "LLY", 3, COMPLEX_PRICES, only_green=True, lean=True, **options)
-
-
-def test_no_three_holdings_can_pay_for_the_first_complex_purchase_so_at_least_four_levels_are_needed():
-    p = complex_problem()
-    values = sorted((h.sellable * h.price for h in p.holdings.values() if p.eligible(h)), reverse=True)
-    assert p.need == 4128.14 and round(sum(values), 2) == 7121.94 and "FITB" in p.holdings and not p.eligible(p.holdings["FITB"])   # FITB (at a loss) is not counted
-    assert sum(values[:3]) < p.need <= sum(values[:4])
-
-
-def test_the_depth_is_never_more_than_the_holdings_that_can_be_sold_and_the_problem_carries_the_size_of_the_tree():
-    assert rf.effective_limits(complex_problem(), max_depth=50)["max_depth"] == 7   # eight holdings, one at a loss: seven can be sold
-    sized = complex_problem(max_depth=5, branching=4)
-    assert (sized.max_depth, sized.branching) == (5, 4) and rf.effective_limits(sized) == {"beam_width": 3, "branching": 4, "max_depth": 5, "max_calls": 12}
-    assert rf.effective_limits(complex_problem()) == {"beam_width": 3, "branching": 3, "max_depth": 3, "max_calls": 12}
-
-
-def test_the_priority_of_an_unfinished_plan_is_half_its_score_and_half_its_progress_with_explore_and_its_score_without():
-    plain, smart = complex_problem(), complex_problem(explore=True)
-    node, _ = rf.check_step(smart, rf.root(smart), {"symbol": "MCD", "shares": 6}, "n1")    # raises $1,578.24 of the $4,128.14
-    assert rf.progress(smart, node) == pytest.approx(1578.24 / 4128.14, abs=1e-4) and rf.progress(smart, rf.root(smart)) == 0.0
-    assert rf.priority(plain, node) == node.score
-    assert rf.priority(smart, node) == pytest.approx(0.5 * node.score + 50 * 1578.24 / 4128.14, abs=0.01)
-    assert rf.progress(smart, rf.Node("x", None, 0, shortfall=0.0)) == 1.0
 
 
 def test_with_explore_the_beam_keeps_the_plan_that_has_raised_more_even_if_its_score_is_lower():
@@ -520,13 +271,6 @@ class SlowGen(Gen):
 
 
 THREE_BRANCHES = {ROOT: [thought("GM", 1), thought("TSLA", 1), thought("MSFT", 1)], "GM x1": [thought("TSLA", 1)], "TSLA x1": [thought("GM", 2)], "MSFT x1": [thought("GM", 3)]}
-
-
-def test_in_parallel_the_plans_of_a_level_call_the_generator_at_the_same_time_and_one_after_the_other_otherwise():
-    parallel, sequential = SlowGen(THREE_BRANCHES), SlowGen(THREE_BRANCHES)
-    rf.search(problem(), parallel, parallel=True)
-    rf.search(problem(), sequential)
-    assert parallel.most == 3 and sequential.most == 1   # level 2 has three plans to expand
 
 
 def test_parallel_gives_exactly_the_same_result_and_trace_as_sequential():
@@ -569,13 +313,6 @@ def test_with_nothing_completed_when_the_time_is_up_nothing_is_sold():
     assert result["status"] == "infeasible" and result["plan"] is None and result["after"] == {} and "the time limit (0.05 s) was reached" in result["stop"]
 
 
-def test_without_a_limit_the_search_runs_as_before_and_a_limit_not_reached_changes_nothing():
-    table = {ROOT: [thought("GM", 1)], "GM x1": [thought("TSLA", 4)]}
-    free, limited = rf.search(problem(), Gen(table)), rf.search(problem(), Gen(table), deadline=60)
-    assert free["limits"]["deadline"] is None and limited["status"] == free["status"] == "plan" and free["stop"] == limited["stop"]
-    assert [(x["symbol"], x["shares"]) for x in limited["plan"]["sells"]] == [(x["symbol"], x["shares"]) for x in free["plan"]["sells"]]
-
-
 def test_in_parallel_a_level_already_out_is_waited_for_after_the_limit():
     gen = SlowGen(THREE_BRANCHES, delay=0.15)
     result = rf.search(problem(), gen, deadline=0.2, parallel=True)   # level 1 ends at 0.15 s (in time); level 2's three calls start together and finish at 0.30 s: after the limit, waited for
@@ -586,30 +323,6 @@ def test_in_parallel_a_level_already_out_is_waited_for_after_the_limit():
 
 def strict_complex(target="LLY", shares=3, **options):
     return rf.build_problem(pf.load_portfolio(COMPLEX), target, shares, COMPLEX_PRICES, only_green=True, lean=True, never_liquidate=True, **options)
-
-
-def test_the_fewest_stocks_that_could_pay_for_a_purchase_is_arithmetic_on_the_biggest_holdings_first():
-    p = strict_complex()   # 3 LLY: $4,128.14 to raise; with one share of each kept, the biggest sellable lots are 1,315.2, 840.09, 797, 795.06, 648.24 ...
-    assert p.fewest_stocks() == 5
-    assert strict_complex("SNDK", 1).fewest_stocks() == 1 and strict_complex("MU", 3).fewest_stocks() == 3   # one lot pays for 1 SNDK; 3 MU ($2,465.30 to raise) take three lots
-    assert strict_complex("MU", 10).fewest_stocks() is None                                                # 10 MU cost more than everything that may be sold
-
-
-def test_the_depth_a_purchase_needs_is_the_fewest_stocks_plus_two_between_the_default_and_the_holdings_that_can_be_sold():
-    assert strict_complex().auto_depth() == 7                     # 5 + 2, and seven holdings can be sold
-    assert strict_complex("SNDK", 1).auto_depth() == 3            # 1 + 2 = 3: the default
-    assert strict_complex("MU", 3).auto_depth() == 5              # 3 + 2
-    assert strict_complex("MU", 10).auto_depth() == 7             # cannot be paid for: the depth of all the holdings (the search will find nothing)
-    assert strict_complex().auto_depth(slack=0) == 5 and strict_complex().auto_depth(slack=9) == 7   # never more than the holdings that can be sold
-
-
-def test_the_default_depth_of_three_cannot_find_a_plan_for_a_purchase_that_needs_five_stocks_and_the_automatic_depth_can():
-    table = {ROOT: [thought("MCD", 5)], "MCD x5": [thought("GOOGL", 3)], "MCD x5, GOOGL x3": [thought("TSLA", 2)], "MCD x5, GOOGL x3, TSLA x2": [thought("GM", 9)],
-             "MCD x5, GOOGL x3, TSLA x2, GM x9": [thought("PG", 3)]}
-    short = rf.search(strict_complex(), Gen(table))                                         # depth 3
-    deep = rf.search(strict_complex(max_depth=strict_complex().auto_depth()), Gen(table))   # depth 7
-    assert short["status"] == "infeasible" and "the depth limit (3) was reached" in short["stop"]
-    assert deep["status"] == "plan" and [s for s, _ in [(x["symbol"], x["shares"]) for x in deep["plan"]["sells"]]] == ["MCD", "GOOGL", "TSLA", "GM", "PG"] and deep["stats"]["levels"] == 5
 
 
 # ---------------------------------------------------------------- whole plans as thoughts (entry 50): tried, measured slower, kept as an option

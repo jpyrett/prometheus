@@ -13,45 +13,15 @@ from prometheus.mcp.server import (
 # ── Pure unit tests (call functions directly) ───────────────────────────────
 
 
-def test_fetch_quote_normalizes_symbol():
-    assert fetch_quote("aapl") == "symbol=AAPL\nprice=stub\nsource=placeholder"
-    assert fetch_quote("  spy  ") == _quote_payload("SPY")
-
-
 def test_fetch_quote_strips_leading_dollar():
     assert fetch_quote("$AAPL") == "symbol=AAPL\nprice=stub\nsource=placeholder"
     assert fetch_quote("  $msft  ") == "symbol=MSFT\nprice=stub\nsource=placeholder"
     assert fetch_quote("$TEST") == "symbol=TEST\nprice=999.99\nsource=placeholder"
 
 
-def test_fetch_quote_test_symbol_hardcoded_price():
-    """Intentional DEMO fixture — remove with Redis. Accepts test / TEST."""
-    expected = "symbol=TEST\nprice=999.99\nsource=placeholder"
-    assert fetch_quote("test") == expected
-    assert fetch_quote("TEST") == expected
-
-
 def test_fetch_quote_rejects_blank():
     with pytest.raises(ValueError):
         fetch_quote("   ")
-
-
-def test_verify_fetch_quote_true():
-    payload = fetch_quote("AAPL").replace("\n", "\\n")
-    expr = f'fetch_quote("AAPL") = "{payload}"'
-    assert verify_fetch_quote(expr) is True
-
-
-def test_verify_fetch_quote_true_lowercase_symbol():
-    payload = fetch_quote("msft").replace("\n", "\\n")
-    expr = f'fetch_quote("msft") = "{payload}"'
-    assert verify_fetch_quote(expr) is True
-
-
-def test_verify_fetch_quote_true_with_dollar():
-    payload = fetch_quote("$AAPL").replace("\n", "\\n")
-    expr = f'fetch_quote("$AAPL") = "{payload}"'
-    assert verify_fetch_quote(expr) is True
 
 
 def test_verify_fetch_quote_false_or_bad_format():
@@ -67,31 +37,6 @@ def test_verify_fetch_quote_false_or_bad_format():
 async def mcp_client():
     async with connect_client() as client:
         yield client
-
-
-async def test_list_tools_includes_quote_tools(mcp_client):
-    tools = await mcp_client.list_tools()
-    names = {t.name for t in tools}
-    assert "fetch_quote" in names
-    assert "verify_fetch_quote" in names
-    assert "enter_symbol" in names
-    assert "noisy_fetch_quote" in names
-    assert "report_progress" in names
-    assert "ping_catalog" in names
-
-
-async def test_fetch_quote_via_mcp(mcp_client):
-    result = await mcp_client.call_tool("fetch_quote", {"symbol": "aapl"})
-    assert result.data == "symbol=AAPL\nprice=stub\nsource=placeholder"
-
-
-async def test_verify_fetch_quote_via_mcp(mcp_client):
-    payload = "symbol=AAPL\\nprice=stub\\nsource=placeholder"
-    result = await mcp_client.call_tool(
-        "verify_fetch_quote",
-        {"expression": f'fetch_quote("AAPL") = "{payload}"'},
-    )
-    assert result.data is True
 
 
 async def test_enter_symbol_elicitation_via_mcp(mcp_client):

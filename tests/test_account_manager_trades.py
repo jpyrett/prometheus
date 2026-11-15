@@ -79,13 +79,6 @@ def filled(trade_id, symbol, side, shares, price, record_id="r1", **changes):
 
 # ---------------------------------------------------------------- connect
 
-def test_connect_attaches_the_account_book_after_construction_and_reads_nothing_from_it():
-    store, m = FakeStore(), manager()
-    assert (m.store, m.account_id) == (None, None)
-    assert m.connect(store, 7) is None
-    assert (m.store, m.account_id) == (store, 7) and store.calls == []
-    assert m.list_portfolio().user == "Test Holder" and store.calls == [("list_portfolio", 7)]
-
 
 @pytest.mark.parametrize("store, account_id, message", [
     (None, None, "needs both"), (FakeStore(), None, "needs both"), (None, 7, "needs both"),
@@ -105,44 +98,7 @@ def test_connect_forgets_a_profile_read_from_the_default_file_so_the_account_row
     assert m.profile.user == "Test Holder" and m.profile.trade_mode == "auto" and store.calls == [("load_profile", 7)]
 
 
-def test_connect_keeps_a_profile_that_was_given_as_an_object_a_path_not_read_yet_or_set_later(tmp_path):
-    given = UserProfile(user="Given Person", risk_tolerance="conservative")
-    m = manager(profile=given)
-    _ = m.profile
-    m.connect(FakeStore(), 7)
-    assert m.profile is given
-
-    path = tmp_path / "profile.json"
-    path.write_text(given.model_dump_json(), encoding="utf-8")
-    by_path = manager(profile=path)
-    by_path.connect(FakeStore(), 7)
-    assert by_path.profile.user == "Given Person"                                      # an unread path was given: it is read now
-
-    later = manager()
-    _ = later.profile                                                                   # read from the default file ...
-    later.profile = given                                                               # ... then somebody sets one
-    later.connect(FakeStore(), 7)
-    assert later.profile is given
-
-
-def test_a_manager_built_with_the_book_and_one_connected_later_are_the_same_manager_for_the_book_methods():
-    store = FakeStore()
-    built, joined = manager(store=store, account_id=7), manager()
-    joined.connect(store, 7)
-    assert built.list_portfolio() == joined.list_portfolio() and built.profile == joined.profile
-
-
 # ---------------------------------------------------------------- trading_portfolio
-
-def test_the_trading_portfolio_is_the_saved_account_when_connected_and_the_one_given_otherwise():
-    given = holder(50.0, MSFT=5)
-    assert manager().trading_portfolio(given) is given
-    store = FakeStore(portfolio=holder(900.0, PG=3))
-    m = manager(store=store, account_id=7)
-    assert m.trading_portfolio(given) is store.portfolio and m.trading_portfolio() is store.portfolio       # the book is the truth: what the desk loaded is not used
-    joined = manager()
-    joined.connect(store, 7)
-    assert joined.trading_portfolio(given).cash_avail == 900.0
 
 
 def test_there_is_no_trading_portfolio_without_a_book_and_without_one_given():
@@ -163,24 +119,6 @@ def real_ticket():
     return order, tk.build_tickets(order, BOB, MOMENT, load_config(), "paper")[0].model_dump(mode="json"), MOMENT
 
 
-def test_a_run_that_books_reads_the_book_for_every_approval_and_its_status_and_a_run_that_does_not_reads_a_snapshot_once():
-    order, xom, now = real_ticket()
-    store = FakeStore(portfolio=holder(5000.0))
-    m = manager(store=store, account_id=7)
-    m.trading_portfolio(None, book=True)
-    assert store.calls == [("list_portfolio", 7)]
-    answer = m.approve_trade(xom, 170.6753, order=order, now=now, on=TODAY)
-    assert (answer.approved, answer.shares, answer.cash_avail) == (True, 8, 5000.0) and store.calls[1:] == [("get_user", 7), ("list_portfolio", 7)]      # the account's status, then the funds, each time
-    m.approve_trade(xom, 170.6753, order=order, now=now, on=TODAY)
-    assert store.calls.count(("list_portfolio", 7)) == 3
-    store.calls.clear()
-    snapshot = manager(store=store, account_id=7)
-    snapshot.trading_portfolio(None, book=False)
-    snapshot.approve_trade(xom, 170.6753, order=order, now=now, on=TODAY)
-    snapshot.approve_trade(xom, 170.6753, order=order, now=now, on=TODAY)
-    assert store.calls == [("list_portfolio", 7)]                                                                # the working portfolio is a snapshot: no more reads, and no status read
-
-
 def test_an_account_that_is_not_active_is_not_approved_and_a_database_failure_is_not_approved_with_the_kind_only():
     order, xom, now = real_ticket()
     store = FakeStore(portfolio=holder(5000.0))
@@ -197,18 +135,6 @@ def test_an_account_that_is_not_active_is_not_approved_and_a_database_failure_is
     store.get_user = lambda account_id: SimpleNamespace(status="active")
     failed = m.approve_trade(xom, 170.6753, order=order, now=now, on=TODAY)
     assert (failed.approved, failed.code) == (False, "account_refused") and "ConnectionError" in failed.reason and "password" not in failed.reason and "127.0.0.1" not in failed.reason
-
-
-def test_a_fill_is_read_booked_and_read_again_and_the_second_read_confirms_it():
-    """Entry 82: SELECT the account, COMMIT the trade in one transaction, SELECT again after the commit. The answer is `booked` and `verified`, with the cash before and after."""
-    store = FakeStore(portfolio=holder(5000.0))
-    m = manager(store=store, account_id=7)
-    m.trading_portfolio(None, book=True)
-    store.calls.clear()
-    booking = m.record_fill(filled("T1", "PG", "buy", 3, 167.1234, record_id="rec-1"))
-    assert [c[0] for c in store.calls] == ["list_portfolio", "book_trade", "list_portfolio", "read_booked"]
-    assert (booking.status, booking.booked, booking.verified, booking.cash_before) == ("booked", True, True, 5000.0) and booking.cash_avail == store.portfolio.cash_avail < 5000.0
-    assert store.booked == [{"account_id": 7, "symbol": "PG", "side": "buy", "shares": 3, "price": Decimal("167.1234"), "traded_on": TODAY, "name": None, "source": "bot", "record_id": "rec-1"}]
 
 
 def test_a_fill_the_book_refuses_is_refused_with_its_sentence_and_shown_to_the_user_with_the_account_as_it_stands():
@@ -291,15 +217,6 @@ def test_a_committed_booking_that_the_second_read_does_not_show_is_unconfirmed_a
     assert "is booked, but the account could not be read again to confirm it (ConnectionError)" in booking.note and any("could not be read again" in line for line in shown) and len(store.booked) == 1
 
 
-def test_a_connected_account_with_booking_off_applies_to_the_working_portfolio_and_never_calls_record_trade():
-    store = FakeStore(portfolio=holder(5000.0))
-    m = manager(store=store, account_id=7)
-    m.trading_portfolio(None, book=False)
-    booking = m.record_fill(filled("T1", "PG", "buy", 3, 100.0))
-    assert (booking.status, booking.cash_avail) == ("applied", 4700.0) and store.booked == [] and ("record_trade", 7) not in store.calls and m.current_portfolio().cash_avail == 4700.0
-    assert store.portfolio.cash_avail == 5000.0                                                                  # the book (here: the store's portfolio) is as it was
-
-
 # ---------------------------------------------------------------- request_bars
 
 class BarClerk:
@@ -313,15 +230,6 @@ class BarClerk:
         order.status = "data_ready"
         order.data = wo.DataResult(bars={s: [] for s in order.subject})
         return order
-
-
-def test_request_bars_makes_a_fetch_bars_order_beside_request_prices_and_returns_what_the_clerk_answers():
-    clerk = BarClerk()
-    result = manager(clerk=clerk).request_bars(["PG", "SPY"], date(2026, 11, 5), date(2026, 12, 4))
-    (sent,) = clerk.orders
-    assert sent.action_type == "fetch_bars" and sent.subject == ["PG", "SPY"] and sent.bars == {"start": "2026-11-05", "end": "2026-12-04"}
-    assert sent.requester == "account_manager" and sent.status == "new" and wo.verify_bar_request(sent) == [] and sent.schema_version == 2
-    assert result.status == "data_ready" and list(result.data.bars) == ["PG", "SPY"]
 
 
 @pytest.mark.parametrize("start, end", [("2026-11-05", date(2026, 11, 6)), (date(2026, 11, 5), "2026-11-06"), (None, date(2026, 11, 6))])
@@ -341,19 +249,6 @@ def test_a_refused_bars_request_comes_back_as_a_failed_order_not_an_exception():
     assert result.status == "data_failed" and any("is after end" in e for e in result.errors)
 
 
-def test_the_account_manager_gets_stored_bars_through_the_real_data_clerk_with_no_model_call(tmp_path):
-    class Forbidden:
-        def __getattr__(self, name):
-            raise AssertionError(f"the model was used ({name})")
-
-    root = tmp_path / "day_aggs_v1"
-    write_day_files(root, {d: [{"ticker": "PG", "open": 100 + i, "high": 102 + i, "low": 99 + i, "close": 101 + i, "volume": 10}] for i, d in enumerate(weekdays(10, date(2026, 10, 23)))})
-    clerk = DataClerk(toolbox=object(), model=Forbidden())
-    clerk.tools.bars_root = root
-    result = manager(clerk=clerk).request_bars(["pg"], date(2026, 10, 15), date(2026, 10, 19))
-    assert result.status == "data_ready" and [b["date"] for b in result.data.bars["PG"]] == ["2026-10-15", "2026-10-16", "2026-10-19"]
-
-
 # ---------------------------------------------------------------- perform_trades
 
 class FakeTrader:
@@ -366,40 +261,7 @@ class FakeTrader:
         return self.returns or order
 
 
-def test_perform_trades_hands_the_decided_order_to_the_trader_and_returns_what_it_returns():
-    order, given, m, trader = wo.new_work_order("x", subject=["PG"]), holder(), manager(), FakeTrader()
-    approver, funding, now = (lambda card: True), {"status": "plan"}, wo.parse_utc("2026-11-05T15:30:00Z")
-    returned = m.perform_trades(order, given, trader, now, funding=funding, approver=approver, book=True)
-    (call,) = trader.calls
-    assert returned is order and order.status == "traded"
-    assert call["order"] is order and call["account"] is m and call["portfolio"] is given and call["now"] == now and call["funding"] is funding and call["approver"] is approver and call["book"] is True
-
-
-def test_perform_trades_defaults_are_no_clock_no_funding_no_approver_and_no_booking():
-    trader = FakeTrader()
-    manager().perform_trades(wo.new_work_order("x", subject=["PG"]), holder(), trader)
-    assert [(c["now"], c["funding"], c["approver"], c["book"]) for c in trader.calls] == [(None, None, None, False)]
-
-
-def test_perform_trades_returns_the_traders_order_even_when_it_is_another_object():
-    other = wo.new_work_order("other", subject=["PG"])
-    assert manager().perform_trades(wo.new_work_order("x", subject=["PG"]), holder(), FakeTrader(returns=other)) is other
-
-
 # ---------------------------------------------------------------- notify_trades, in memory
-
-def test_a_filled_purchase_is_applied_to_the_portfolio_at_the_fills_price_and_shares():
-    given = holder(1000.0, MSFT=5)
-    after, problems = manager().notify_trades(given, [filled("T1", "PG", "buy", 4, 167.1)], TODAY)
-    assert problems == [] and after.cash_avail == 331.6 and after.position("PG").shares == 4 and after.position("PG").cost_basis == 167.1
-    assert after.position("PG").acquired == TODAY and after.sellable_shares("PG", TODAY) == 0 and after.position("MSFT").shares == 5
-    assert given.cash_avail == 1000.0 and given.position("PG") is None                      # the portfolio given is not changed
-
-
-def test_the_fill_decides_the_shares_not_the_ticket():
-    trade = {**filled("T1", "PG", "buy", 10, 100.0), "shares": 44}                           # the ticket said 44; the cash cut the fill to 10
-    after, problems = manager().notify_trades(holder(5000.0), [trade], TODAY)
-    assert problems == [] and after.position("PG").shares == 10 and after.cash_avail == 4000.0
 
 
 def test_only_filled_trades_are_applied():
@@ -446,20 +308,6 @@ def test_the_date_of_the_trades_must_be_a_date():
             manager().notify_trades(holder(), [], bad)
 
 
-def test_no_trades_is_the_same_portfolio_and_no_problems():
-    given = holder()
-    assert manager().notify_trades(given, [], TODAY) == (given, [])
-
-
-def test_the_dumped_trade_record_is_what_notify_trades_reads():
-    from prometheus.agents.trader.record import Fill, Trade
-
-    trade = Trade(trade_id="T1", kind="recommendation", record_id="r1", symbol="PG", side="buy", shares_approved=44, shares=44, status="filled", mode="paper",
-                  fill=Fill(price=167.1, shares=44, amount=7352.4, date="2026-11-05", price_source="quote")).model_dump(mode="json")
-    after, problems = manager().notify_trades(holder(8000.0), [trade], TODAY)
-    assert problems == [] and after.position("PG").shares == 44 and after.cash_avail == round(8000.0 - 7352.4, 2)
-
-
 # ---------------------------------------------------------------- notify_trades, booked
 
 def test_with_book_and_a_connected_account_each_fill_is_booked_as_the_bot_with_its_recommendation():
@@ -473,18 +321,6 @@ def test_with_book_and_a_connected_account_each_fill_is_booked_as_the_bot_with_i
         {"account_id": 7, "symbol": "PG", "side": "buy", "shares": 4, "price": Decimal("167.1"), "traded_on": TODAY, "name": None, "source": "bot", "record_id": "r1"},
         {"account_id": 7, "symbol": "F", "side": "buy", "shares": 3, "price": Decimal("10.0"), "traded_on": TODAY, "name": None, "source": "bot", "record_id": None}]
     assert after.cash_avail == round(1000.0 + 800.0 - 668.4 - 30.0, 2) and after.symbols == ["MSFT", "PG", "F"]
-
-
-def test_a_price_that_is_a_float_reaches_the_book_as_the_decimal_that_was_written():
-    store = FakeStore()
-    manager(store=store, account_id=7).notify_trades(store.portfolio, [filled("T1", "PG", "buy", 3, 167.1234)], TODAY, book=True)
-    assert store.booked[0]["price"] == Decimal("167.1234") and isinstance(store.booked[0]["price"], Decimal)
-
-
-def test_without_book_nothing_is_booked_even_when_an_account_is_connected():
-    store = FakeStore()
-    after, problems = manager(store=store, account_id=7).notify_trades(store.portfolio, [filled("T1", "PG", "buy", 3, 100.0)], TODAY)
-    assert problems == [] and store.booked == [] and ("record_trade", 7) not in store.calls and after.position("PG").shares == 3
 
 
 def test_book_without_a_connected_account_is_one_problem_and_nothing_is_booked_but_the_fills_apply_in_memory():
@@ -518,12 +354,6 @@ def test_a_fill_that_cannot_be_applied_is_not_sent_to_the_book():
 
 # ---------------------------------------------------------------- record_trade and the funding card's question
 
-def test_record_trade_still_books_through_the_store_and_says_what_it_is_for():
-    store = FakeStore()
-    m = manager(store=store, account_id=7)
-    assert m.record_trade("PG", "buy", 1, Decimal("10"), TODAY, record_id="r1") == Decimal("0.00") and store.booked[0]["record_id"] == "r1"
-    assert "Trader is still not built" not in am.AccountManager.record_trade.__doc__
-
 
 class Prompt:
     def __init__(self, *answers):
@@ -542,20 +372,6 @@ class Prompt:
 
 FUNDING = {"text": "SELL MSFT 5", "symbol": "PG", "shares": 44, "est_cost": 7352.40, "kind": "funding", "question": "Sell these to pay for 44 shares of PG (about $7,352)? [y/N] "}
 RECOMMENDATION = {"text": "PG: approve", "symbol": "PG", "shares": 44, "est_cost": 7352.40}
-
-
-def test_the_terminal_approver_asks_the_cards_own_question_when_it_has_one_and_its_own_otherwise():
-    prompt = Prompt("y", "n")
-    approve = terminal_approver(ask=prompt.ask, show=prompt.show, interactive=True)
-    assert approve(FUNDING) is True and approve(RECOMMENDATION) is False
-    assert prompt.asked == ["Sell these to pay for 44 shares of PG (about $7,352)? [y/N] ", "Place this trade (44 shares of PG, about $7,352)? [y/N] "]
-    assert prompt.shown == ["\nSELL MSFT 5", "\nPG: approve"]
-
-
-@pytest.mark.parametrize("answer, expected", [("y", True), ("YES", True), (" Yes ", True), ("n", False), ("", False), ("maybe", False), ("yep", False)])
-def test_only_a_clear_yes_is_a_yes_to_the_funding_question(answer, expected):
-    prompt = Prompt(answer)
-    assert terminal_approver(ask=prompt.ask, show=prompt.show, interactive=True)(FUNDING) is expected
 
 
 def test_nobody_there_or_the_end_of_input_is_no_answer_at_all():

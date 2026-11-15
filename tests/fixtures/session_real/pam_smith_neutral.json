@@ -1,0 +1,3234 @@
+{
+ "request": "Buy MU, SNDK and AMD if the recommendations pass. Go ahead and trade if the recommendations pass.",
+ "intent": {
+  "request": "Buy MU, SNDK and AMD if the recommendations pass. Go ahead and trade if the recommendations pass.",
+  "action": "buy",
+  "topic": null,
+  "symbols": [
+   "MU",
+   "SNDK",
+   "AMD"
+  ],
+  "companies": [],
+  "count": null,
+  "allocation": "default",
+  "budget": null,
+  "orders": []
+ },
+ "path": [
+  "account_manager",
+  "data_clerk",
+  "advisor",
+  "critic",
+  "account_manager_decision",
+  "trader"
+ ],
+ "order": {
+  "schema_version": 4,
+  "request_id": "d76d39703eed",
+  "requester": "desk",
+  "created_utc": "2026-11-15T18:26:26Z",
+  "query": "What do the stored news, press releases and filings say about MU, SNDK, AMD?",
+  "action_type": "search_news",
+  "subject": [
+   "MU",
+   "SNDK",
+   "AMD"
+  ],
+  "company": null,
+  "source": "news",
+  "time_period": "last 14 days",
+  "since_days": 14,
+  "live": true,
+  "top_k": 10,
+  "criteria": {
+   "sentiment": "bullish or bearish"
+  },
+  "status": "traded",
+  "resolved": null,
+  "recommendations": [
+   {
+    "symbol": "SNDK",
+    "company": "SanDisk",
+    "stance": "bullish",
+    "model_score": 50,
+    "score": 46,
+    "supported": true,
+    "consistent": null,
+    "bullish_signals": 0,
+    "bearish_signals": 2,
+    "signals_claimed": 2,
+    "signals_verified": 2,
+    "signals_counted": 2,
+    "signals": [
+     {
+      "source": 7,
+      "chunk_id": "polygon:900d314198b07e5685dcb158bc6a79bcbced152c2b0eef5156d2c13b1c464b5f#1",
+      "direction": "bearish",
+      "quote": "SNDK | negative | Stock down 8.2% due to spillover effects from Nvidia CEO scandal affecting AI hardware sector.",
+      "verified": true,
+      "reason": null,
+      "counted": true
+     },
+     {
+      "source": 9,
+      "chunk_id": "finnhub:143806203#0",
+      "direction": "bearish",
+      "quote": "Sandisk (SNDK) stock fell nearly 9% Friday amid a broader tech selloff, Nvidia leadership turmoil, and rising NAND competition.",
+      "verified": true,
+      "reason": null,
+      "counted": true
+     }
+    ],
+    "advisor": {
+     "model": "openai/gpt-oss-120b",
+     "version": "v1",
+     "proposed_archetypes": [
+      "event",
+      "capital_return",
+      "reversion"
+     ]
+    },
+    "blend": {
+     "value": -0.0824,
+     "score": 46,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": -0.5,
+       "available": true,
+       "n": 2,
+       "contribution": -0.2,
+       "parts": [
+        {
+         "ref": "[7]",
+         "kind": "news",
+         "direction": "bearish",
+         "age_days": 0,
+         "recency": 1.0,
+         "weight": 1.0
+        },
+        {
+         "ref": "[9]",
+         "kind": "news",
+         "direction": "bearish",
+         "age_days": 0,
+         "recency": 1.0,
+         "weight": 1.0
+        }
+       ]
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": -0.5,
+       "available": true,
+       "n": 4,
+       "contribution": -0.15,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 4.334401,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.365507,
+         "value": -1.0
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.375898,
+         "value": -1.0
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": false,
+         "value": -1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.9167,
+       "available": true,
+       "n": 6,
+       "contribution": 0.1833,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.154231,
+         "value": 1.0
+        },
+        {
+         "metric": "roe",
+         "raw": 134.27,
+         "value": 1.0
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 272.38,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 72.46,
+         "value": 1.0
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 2.5797,
+         "value": 1.0
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.0,
+         "value": 0.5
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.8425,
+       "available": true,
+       "n": 2,
+       "contribution": 0.0843,
+       "parts": [
+        {
+         "metric": "net_payout_yield_ttm",
+         "raw": 0.158822,
+         "value": 1.0
+        },
+        {
+         "metric": "share_count_change",
+         "raw": -0.0137,
+         "value": 0.685
+        }
+       ]
+      }
+     }
+    },
+    "negative_equity": false,
+    "identity": {
+     "schema_version": 2,
+     "record_id": "816aea79fcda",
+     "request_id": "d76d39703eed",
+     "case": "funds",
+     "sleeve": "preserve",
+     "as_of_utc": "2026-11-13T00:00:00Z",
+     "sector_etf": null,
+     "market_cap": 125927500000.0,
+     "regime": "trend",
+     "regime_note": null
+    },
+    "action": {
+     "action": "open",
+     "reason": "capital_return: blended score 46 (news, performance, history and filings together)",
+     "held_shares": 0,
+     "cost_basis": null,
+     "unrealized_pct": null,
+     "cooldown_of": null
+    },
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.875,
+      "features_used": {
+       "mom_12_1": 4.334400788274418,
+       "pct_of_52w_high": 0.37589780690105745,
+       "above_sma_200": false,
+       "ret_21d": -0.36550690765182847,
+       "rsi_14": 33.92597391194995,
+       "atr_pct": 0.12067598968501392,
+       "above_sma_50": false,
+       "macd_hist": -10.30002472594441,
+       "adx_14": 38.00530274020715,
+       "obv_20d_change": -0.2005666069113051,
+       "vol_63d_ann": 0.9405950389443845,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.20474993728258603
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.376 is under 0.9",
+       "the price is not above its 200-day mean"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.5,
+      "features_used": {
+       "atr_pct": 0.12067598968501392,
+       "ret_1d": -0.05594905382629667,
+       "volume_ratio_1d": 1.0437702316010735,
+       "gap_1d": -0.0230409830819448,
+       "market_cap": 125927500000.0
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.8,
+      "features_used": {
+       "ret_5d": 0.05981606112135651,
+       "zscore_21d": -1.2009842085932663,
+       "rsi_14": 33.92597391194995,
+       "atr_pct": 0.12067598968501392,
+       "roe": 134.27,
+       "debt_to_equity": 0.0,
+       "current_ratio": 2.5797,
+       "revenue_growth": 272.38,
+       "spy_ret_5d": 0.025948945314093752,
+       "above_sma_200": false,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.20474993728258603,
+       "volume_ratio_1d": 1.0437702316010735,
+       "gap_1d": -0.0230409830819448,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 13.406646381338682
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not oversold: ret_5d 0.060, zscore_21d -1.20, rsi_14 33.9",
+       "not idiosyncratic: ret_5d 0.060 with SPY at 0.026",
+       "not in an uptrend: below the 200-day mean",
+       "company-specific news in the last 5 bars (2) and no neutral cause was given"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": true,
+      "passed": true,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": 0.9,
+      "direction": "bullish",
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": 0.0027,
+      "completeness": 0.8571,
+      "features_used": {
+       "earnings_yield": 0.15423054381689752,
+       "debt_to_equity": 0.0,
+       "revenue_growth": 272.38,
+       "net_payout_yield_ttm": 0.1588215441424629,
+       "share_count_change": -0.0137,
+       "sbc_to_revenue": 0.008249478741727857,
+       "market_cap": 125927500000.0,
+       "cash_balance": 5136000000.0
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": []
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 33.92597391194995
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend -0.082 is under 0.3",
+       "the news part is -0.500, under 0.0"
+      ]
+     }
+    ],
+    "quality": {
+     "multiplier": 1.0,
+     "haircuts": [],
+     "haircuts_skipped": [
+      "risk_factor_change: not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+     ],
+     "turned_off": []
+    },
+    "modifiers": [],
+    "evidence": {
+     "signals": [
+      {
+       "source": 7,
+       "chunk_id": "polygon:900d314198b07e5685dcb158bc6a79bcbced152c2b0eef5156d2c13b1c464b5f#1",
+       "direction": "bearish",
+       "quote": "SNDK | negative | Stock down 8.2% due to spillover effects from Nvidia CEO scandal affecting AI hardware sector.",
+       "verified": true,
+       "reason": null,
+       "counted": true
+      },
+      {
+       "source": 9,
+       "chunk_id": "finnhub:143806203#0",
+       "direction": "bearish",
+       "quote": "Sandisk (SNDK) stock fell nearly 9% Friday amid a broader tech selloff, Nvidia leadership turmoil, and rising NAND competition.",
+       "verified": true,
+       "reason": null,
+       "counted": true
+      }
+     ],
+     "e_items": [],
+     "events": [],
+     "counter_evidence": [
+      {
+       "ref": "[7]",
+       "direction": "bearish",
+       "quote": "SNDK | negative | Stock down 8.2% due to spillover effects from Nvidia CEO scandal affecting AI hardware sector."
+      },
+      {
+       "ref": "[9]",
+       "direction": "bearish",
+       "quote": "Sandisk (SNDK) stock fell nearly 9% Friday amid a broader tech selloff, Nvidia leadership turmoil, and rising NAND competition."
+      }
+     ],
+     "contradictions": []
+    },
+    "features": {
+     "mom_12_1": {
+      "value": 4.334400788274418,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "pct_of_52w_high": {
+      "value": 0.37589780690105745,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "above_sma_200": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "ret_21d": {
+      "value": -0.36550690765182847,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "rsi_14": {
+      "value": 33.92597391194995,
+      "unit": "0-100",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "atr_pct": {
+      "value": 0.12067598968501392,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "above_sma_50": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "macd_hist": {
+      "value": -10.30002472594441,
+      "unit": "USD",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "adx_14": {
+      "value": 38.00530274020715,
+      "unit": "0-100",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "obv_20d_change": {
+      "value": -0.2005666069113051,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "vol_63d_ann": {
+      "value": 0.9405950389443845,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "breakout_20d": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "bollinger_pct_b": {
+      "value": 0.20474993728258603,
+      "unit": "ratio",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "ret_1d": {
+      "value": -0.05594905382629667,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "volume_ratio_1d": {
+      "value": 1.0437702316010735,
+      "unit": "ratio",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "gap_1d": {
+      "value": -0.0230409830819448,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "market_cap": {
+      "value": 125927500000.0,
+      "unit": "USD",
+      "as_of": "2026-11-15",
+      "source": "finnhub_metric:2026-11-15"
+     },
+     "ret_5d": {
+      "value": 0.05981606112135651,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "zscore_21d": {
+      "value": -1.2009842085932663,
+      "unit": "std",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "roe": {
+      "value": 134.27,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "source": "finnhub_metric:2026-11-15"
+     },
+     "debt_to_equity": {
+      "value": 0.0,
+      "unit": "ratio",
+      "as_of": "2026-11-15",
+      "source": "finnhub_metric:2026-11-15"
+     },
+     "current_ratio": {
+      "value": 2.5797,
+      "unit": "x",
+      "as_of": "2026-11-15",
+      "source": "finnhub_metric:2026-11-15"
+     },
+     "revenue_growth": {
+      "value": 272.38,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "source": "finnhub_metric:2026-11-15"
+     },
+     "spy_ret_5d": {
+      "value": 0.025948945314093752,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "candle_reversal_1d": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "stoch_k_14": {
+      "value": 13.406646381338682,
+      "unit": "0-100",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "earnings_yield": {
+      "value": 0.15423054381689752,
+      "unit": "fraction",
+      "as_of": "2026-11-15",
+      "source": "finnhub_metric:2026-11-15"
+     },
+     "net_payout_yield_ttm": {
+      "value": 0.1588215441424629,
+      "unit": "fraction",
+      "as_of": "2026-11-15",
+      "source": "derived:filing:0001628280-26-068601+finnhub_metric:2026-11-15"
+     },
+     "share_count_change": {
+      "value": -0.0137,
+      "unit": "fraction",
+      "as_of": "2026-10-30",
+      "source": "filing:0001628280-26-068601"
+     },
+     "sbc_to_revenue": {
+      "value": 0.008249478741727857,
+      "unit": "fraction",
+      "as_of": "2026-10-30",
+      "source": "filing:0001628280-26-068601"
+     },
+     "cash_balance": {
+      "value": 5136000000.0,
+      "unit": "USD",
+      "as_of": "2026-10-30",
+      "source": "filing:0001628280-26-068601"
+     },
+     "operating_margin": {
+      "value": 72.46,
+      "unit": "%",
+      "as_of": "2026-11-15",
+      "source": "finnhub_metric:2026-11-15"
+     },
+     "recent_bars": {
+      "value": [
+       [
+        "2026-09-28",
+        1712.89,
+        6662150.22687
+       ],
+       [
+        "2026-09-29",
+        1729.76,
+        5962973.46285
+       ],
+       [
+        "2026-09-30",
+        1739.89,
+        6052425.711983
+       ],
+       [
+        "2026-10-01",
+        1787.69,
+        9218050.638755
+       ],
+       [
+        "2026-10-02",
+        1719.99,
+        8191520.34528
+       ],
+       [
+        "2026-10-05",
+        1704.16,
+        6502465.995903
+       ],
+       [
+        "2026-10-06",
+        1660.46,
+        6529678.882246
+       ],
+       [
+        "2026-10-07",
+        1692.42,
+        9166860.012234
+       ],
+       [
+        "2026-10-08",
+        1609.46,
+        9357012.285525
+       ],
+       [
+        "2026-10-09",
+        1581.82,
+        5606795.60015
+       ],
+       [
+        "2026-10-12",
+        1487.33,
+        8803866.125015
+       ],
+       [
+        "2026-10-13",
+        1482.33,
+        8400262.015294
+       ],
+       [
+        "2026-10-14",
+        1403.34,
+        7458803.953596
+       ],
+       [
+        "2026-10-15",
+        1394.83,
+        13279791.031833
+       ],
+       [
+        "2026-10-16",
+        1299.3,
+        8954661.543119
+       ],
+       [
+        "2026-10-19",
+        1371.12,
+        8535353.345092
+       ],
+       [
+        "2026-10-20",
+        1365.38,
+        6579861.406698
+       ],
+       [
+        "2026-10-21",
+        1378.22,
+        6964081.790409
+       ],
+       [
+        "2026-10-22",
+        1260.93,
+        10414775.240077
+       ],
+       [
+        "2026-10-23",
+        1238.03,
+        7923529.013683
+       ],
+       [
+        "2026-10-26",
+        1255.58,
+        6713868.472254
+       ],
+       [
+        "2026-10-27",
+        1304.84,
+        7061906.468299
+       ],
+       [
+        "2026-10-28",
+        1404.77,
+        9261242.67159
+       ],
+       [
+        "2026-10-29",
+        1330.05,
+        8483554.79098
+       ],
+       [
+        "2026-10-30",
+        1150.89,
+        17469621.863334
+       ],
+       [
+        "2026-11-02",
+        1075.08,
+        10569949.444899
+       ],
+       [
+        "2026-11-03",
+        1126.52,
+        8550423.270359
+       ],
+       [
+        "2026-11-04",
+        1037.4,
+        11540982.959119
+       ],
+       [
+        "2026-11-05",
+        806.43,
+        30722648.237972
+       ],
+       [
+        "2026-11-06",
+        835.06,
+        17763666.801654
+       ],
+       [
+        "2026-11-09",
+        886.51,
+        13983787.922413
+       ],
+       [
+        "2026-11-10",
+        859.99,
+        13796437.52964
+       ],
+       [
+        "2026-11-11",
+        977.69,
+        16403530.579867
+       ],
+       [
+        "2026-11-12",
+        937.46,
+        13262176.558373
+       ],
+       [
+        "2026-11-13",
+        885.01,
+        12262007.053408
+       ]
+      ],
+      "unit": "[date, close, volume]",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "adv_20d_dollars": {
+      "value": 12571605716.040844,
+      "unit": "USD",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "last_close": {
+      "value": 885.01,
+      "unit": "USD",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "negative_equity": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-10-30",
+      "source": "filing:0001628280-26-068601"
+     },
+     "cfo_negative_with_profit": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-10-30",
+      "source": "filing:0001628280-26-068601"
+     },
+     "atr_14": {
+      "value": 106.79945763113416,
+      "unit": "USD",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "sma_50": {
+      "value": 1441.4293,
+      "unit": "USD",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "beta_63d": {
+      "value": 3.6748032888591573,
+      "unit": "ratio",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "max_drawdown_63d": {
+      "value": -0.5726481685602849,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "spy_above_sma_200": {
+      "value": true,
+      "unit": "bool",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "spy_vol_21d_ann": {
+      "value": 0.220348640679837,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "spy_drawdown_63d": {
+      "value": -0.059158762145580135,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "spy_ret_21d": {
+      "value": -0.022570906593762485,
+      "unit": "fraction",
+      "as_of": "2026-11-13",
+      "source": "day_aggs:2025-09-08..2026-11-13"
+     },
+     "accrual_ratio": {
+      "value": 0.06738262319233901,
+      "unit": "ratio",
+      "as_of": "2026-10-30",
+      "source": "filing:0001628280-26-068601"
+     },
+     "receivables_vs_sales": {
+      "value": -338.07627383015597,
+      "unit": "points",
+      "as_of": "2026-10-30",
+      "source": "filing:0001628280-26-068601"
+     },
+     "inventory_vs_sales": {
+      "value": -366.15627383015595,
+      "unit": "points",
+      "as_of": "2026-10-30",
+      "source": "filing:0001628280-26-068601"
+     }
+    },
+    "agreement": {
+     "agreement": 0.25,
+     "evidence_n": 2,
+     "completeness": 0.8571,
+     "confidence": 0.4588
+    },
+    "ranking": {
+     "composite": 0.0027,
+     "conflict": false,
+     "stance": "bullish",
+     "stance_reason": null,
+     "rank": 1,
+     "universe_rank": 3,
+     "diversity_adjustment": false,
+     "displaced_by": null,
+     "concentrated": true
+    },
+    "trade": {
+     "family": "capital_return",
+     "entry_basis": "last_close",
+     "entry_zone": [
+      831.6103,
+      938.4097
+     ],
+     "entry_mid": 885.01,
+     "stop_distance": 320.3984,
+     "stop_price": 564.6116,
+     "target_price": null,
+     "horizon_bars": 126,
+     "time_stop_date": "2027-05-10",
+     "time_stop_note": "weekdays only: holidays of the coming weeks are not known",
+     "gap_risk": false,
+     "order_style": "limit",
+     "limit_price": 885.01,
+     "invalidation": [
+      {
+       "kind": "price_below",
+       "value": 564.6116
+      },
+      {
+       "kind": "days_elapsed",
+       "value": 126
+      },
+      {
+       "kind": "event_class",
+       "value": [
+        "guidance_cut",
+        "earnings_miss",
+        "dividend_cut",
+        "dilution_offering",
+        "ceo_departure_unplanned",
+        "material_weakness",
+        "restatement",
+        "going_concern",
+        "form_144_sale_notice"
+       ]
+      }
+     ],
+     "notes": [
+      "entry zone = last +- 0.5 x atr_14; stop = 3 x atr_14 (atr_14 = 106.80)"
+     ]
+    },
+    "risk": {
+     "vol_63d_ann": 0.9405950389443845,
+     "atr_pct": 0.12067598968501392,
+     "beta_63d": 3.6748032888591573,
+     "max_drawdown_63d": -0.5726481685602849,
+     "adv_20d_dollars": 12571605716.040844,
+     "median_spread_bps_1d": null,
+     "days_to_next_earnings": null,
+     "earnings_move_abs": null,
+     "gap_risk": false,
+     "red_flags": []
+    },
+    "portfolio_fit": {
+     "sector_weight_after": null,
+     "correlation_to_portfolio_63d": null,
+     "note": null
+    },
+    "gates": [
+     {
+      "gate": "no_metrics",
+      "passed": true,
+      "value": null,
+      "threshold": null,
+      "note": null
+     },
+     {
+      "gate": "liquidity",
+      "passed": true,
+      "value": {
+       "adv_20d_dollars": 12571605716.040844,
+       "last_close": 885.01,
+       "median_spread_bps_1d": null
+      },
+      "threshold": {
+       "min_adv_dollars": 5000000.0,
+       "min_price": 5.0,
+       "max_spread_bps": 20.0
+      },
+      "note": null
+     },
+     {
+      "gate": "freshness",
+      "passed": true,
+      "value": {
+       "newest_bar": "2026-11-13",
+       "sessions_behind": 0,
+       "fundamentals_as_of": "2026-11-15"
+      },
+      "threshold": {
+       "max_bar_age_sessions": 1,
+       "max_fundamentals_age_days": 100
+      },
+      "note": null
+     },
+     {
+      "gate": "red_flag",
+      "passed": true,
+      "value": [],
+      "threshold": "none",
+      "note": null
+     },
+     {
+      "gate": "event_risk",
+      "passed": true,
+      "value": null,
+      "threshold": null,
+      "note": "no earnings date known: the calendar is not available and no results press release is stored"
+     }
+    ],
+    "thesis": {
+     "thesis": "Open SNDK with a capital_return strategy because the blended score is 46 and the family capital_return metric is bullish with a score of 0.9; it would be wrong if the underlying bullish metrics were not met.",
+     "bull_case": [
+      {
+       "text": "blended score 46 of 100 indicates overall bullish sentiment",
+       "ref": "earnings_yield"
+      },
+      {
+       "text": "family capital_return passed with a bullish score of 0.9",
+       "ref": "revenue_growth"
+      }
+     ],
+     "bear_case": [
+      {
+       "text": "Evidence [7] shows a negative impact from Nvidia CEO scandal affecting AI hardware sector",
+       "ref": "[7]"
+      },
+      {
+       "text": "rsi_14 is 33.9, indicating the stock is not oversold",
+       "ref": "rsi_14"
+      }
+     ],
+     "thesis_error": null
+    },
+    "audit": {
+     "metric_order": "0952981c1b93",
+     "plan_run": {
+      "model": "openai/gpt-oss-120b",
+      "tokens_in": 11889,
+      "tokens_out": 1342,
+      "calls": 1,
+      "error": null
+     },
+     "thesis_run": {
+      "model": "openai/gpt-oss-120b",
+      "tokens_in": 2672,
+      "tokens_out": 1274,
+      "calls": 2,
+      "error": null
+     },
+     "config_version": "1",
+     "family_versions": {
+      "trend": "v1",
+      "event": "v1",
+      "reversion": "v1",
+      "capital_return": "v1",
+      "theme": "v1",
+      "conviction": "v1"
+     }
+    },
+    "critic": {
+     "schema": 1,
+     "review_id": "8dba487dea51",
+     "reviewed_utc": "2026-11-13T20:30:00Z",
+     "valid_until_utc": null,
+     "verdict": {
+      "approved": false,
+      "decision": "deny",
+      "score": 49,
+      "grade": "F",
+      "band": "weak",
+      "summary": "DENY SNDK: The risk is very_high (77.8), above the high level a aggressive profile accepts (risk_above_profile); It fell 37% in 21 sessions and it is 57% below its 63-session peak: a collapse is not a discount (falling_knife); and 1 more."
+     },
+     "gate": {
+      "formula": "score = min(100, round(sum(weight x dimension score) / sum(weights that apply) + bonus)); a blocker caps it; approved = no blocker and score >= the mark",
+      "base_score": 63.0,
+      "bonus": 0.0,
+      "weight_total": 100.0,
+      "score_before_blockers": 63,
+      "score": 49,
+      "approve_min_score": 70,
+      "auto_min_score": 80,
+      "blocked_score_cap": 49,
+      "passed_score": false,
+      "blocked": true,
+      "blocked_by": [
+       "risk_above_profile",
+       "falling_knife",
+       "dead_cat_bounce"
+      ],
+      "denial_reasons": [
+       "risk_above_profile",
+       "falling_knife",
+       "dead_cat_bounce"
+      ],
+      "margin": -21
+     },
+     "dimensions": [
+      {
+       "name": "accuracy",
+       "title": "Accuracy",
+       "applicable": true,
+       "weight": 30.0,
+       "score": 100.0,
+       "points": 30.0,
+       "share": 1.0,
+       "weight_share": 0.3,
+       "band": "strong",
+       "headline": "29 of 29 values match what was fetched again; 2 of 2 sources read again; the symbol is in the directory; the 52-week high agrees with Finnhub's"
+      },
+      {
+       "name": "evidence",
+       "title": "Evidence",
+       "applicable": true,
+       "weight": 15.0,
+       "score": 40.0,
+       "points": 6.0,
+       "share": 0.4,
+       "weight_share": 0.15,
+       "band": "weak",
+       "headline": "no quotes to review; 1 newer item(s) look bad"
+      },
+      {
+       "name": "risk_fit",
+       "title": "Risk fit",
+       "applicable": true,
+       "weight": 20.0,
+       "score": 0.0,
+       "points": 0.0,
+       "share": 0.0,
+       "weight_share": 0.2,
+       "band": "weak",
+       "headline": "risk very_high (77.8), your limit is high"
+      },
+      {
+       "name": "timing",
+       "title": "Timing",
+       "applicable": true,
+       "weight": 10.0,
+       "score": 100.0,
+       "points": 10.0,
+       "share": 1.0,
+       "weight_share": 0.1,
+       "band": "strong",
+       "headline": "regular session; 885.01 is inside the entry zone 831.61 to 938.41"
+      },
+      {
+       "name": "value",
+       "title": "Value",
+       "applicable": true,
+       "weight": 15.0,
+       "score": 100.0,
+       "points": 15.0,
+       "share": 1.0,
+       "weight_share": 0.15,
+       "band": "strong",
+       "headline": "FALLING: 43.0% under its 6-month average of 1552.71"
+      },
+      {
+       "name": "chart",
+       "title": "Chart",
+       "applicable": true,
+       "weight": 10.0,
+       "score": 20.0,
+       "points": 2.0,
+       "share": 0.2,
+       "weight_share": 0.1,
+       "band": "weak",
+       "headline": "bearish: dead cat bounce, macd negative, obv falling"
+      }
+     ],
+     "patterns": {
+      "holding": [
+       {
+        "name": "dead_cat_bounce",
+        "direction": "bearish",
+        "points": -20.0,
+        "evidence": "it fell 57% from its peak, bounced 10% off the low 6 sessions ago, is still 53% under the peak and under its 50-day mean"
+       },
+       {
+        "name": "macd_negative",
+        "direction": "bearish",
+        "points": -5.0,
+        "evidence": "the MACD histogram is -10.300"
+       },
+       {
+        "name": "obv_falling",
+        "direction": "bearish",
+        "points": -5.0,
+        "evidence": "on-balance volume changed -0.20 of the 20-session volume"
+       }
+      ],
+      "unknown": [],
+      "points": -30.0
+     },
+     "findings": {
+      "blockers": [
+       {
+        "code": "risk_above_profile",
+        "dimension": "risk_fit",
+        "message": "The risk is very_high (77.8), above the high level a aggressive profile accepts.",
+        "requires_human": false
+       },
+       {
+        "code": "falling_knife",
+        "dimension": "value",
+        "message": "It fell 37% in 21 sessions and it is 57% below its 63-session peak: a collapse is not a discount.",
+        "requires_human": false
+       },
+       {
+        "code": "dead_cat_bounce",
+        "dimension": "chart",
+        "message": "A dead cat bounce: it fell 57% from its peak, bounced 10% off the low 6 sessions ago, is still 53% under the peak and under its 50-day mean.",
+        "requires_human": false
+       }
+      ],
+      "warnings": [
+       {
+        "code": "fresh_negative_news",
+        "dimension": "evidence",
+        "message": "Newer stored text the Advisor did not see (F7, published 2026-11-12) looks bad for SNDK: Sandisk Stocks Slide 7.83% as NVIDIA Exit Hits Storage a Week Before 8-for-1 Split.",
+        "requires_human": true
+       },
+       {
+        "code": "weak_chart",
+        "dimension": "chart",
+        "message": "The chart is weak: dead cat bounce, macd negative, obv falling (score 20, under 35).",
+        "requires_human": false
+       }
+      ],
+      "notes": [
+       {
+        "code": "counter_evidence",
+        "dimension": "evidence",
+        "message": "The record lists counter-evidence: [7], [9].",
+        "requires_human": false
+       }
+      ]
+     },
+     "risk": {
+      "level": "very_high",
+      "score": 77.8,
+      "allowed_level": "high"
+     },
+     "value": {
+      "deal": "falling",
+      "premium": -0.430022,
+      "discount": 0.430022,
+      "reward_to_risk": 4.5861024899000755
+     },
+     "needs_human": {
+      "required": true,
+      "reasons": [
+       "fresh_negative_news"
+      ]
+     },
+     "audit": {
+      "critic_model": "z-ai/glm-5.3",
+      "independent_model": true,
+      "config_version": "1"
+     },
+     "decision": {
+      "will_trade": "no_system_denied",
+      "mode": "auto",
+      "shares": 0,
+      "est_cost": 0.0,
+      "asked_user": false,
+      "escalated": false,
+      "reason": "DENY SNDK: The risk is very_high (77.8), above the high level a aggressive profile accepts (risk_above_profile); It fell 37% in 21 sessions and it is 57% below its 63-session peak: a collapse is not a discount (falling_knife); and 1 more.",
+      "decided_utc": "2026-11-13T20:30:00Z"
+     }
+    }
+   }
+  ],
+  "advisor_runs": [
+   {
+    "stage": "plan",
+    "model": "openai/gpt-oss-120b",
+    "tokens_in": 11889,
+    "tokens_out": 1342,
+    "calls": 1,
+    "dropped": [
+     "AMD: event 'buyback_authorization' dropped: source 'E16' is not one of the sources shown",
+     "AMD: drop_cause dropped: the quote does not show sector_sympathy (its words are not there, or it only says what could happen)",
+     "SNDK: event 'buyback_authorization' dropped: source 'E16' is not one of the sources shown",
+     "SNDK: drop_cause dropped: the quote does not show sector_sympathy (its words are not there, or it only says what could happen)",
+     "MU: event 'buyback_authorization' dropped: source 'E16' is not one of the sources shown"
+    ],
+    "error": null,
+    "metric_order": "0952981c1b93"
+   },
+   {
+    "stage": "thesis",
+    "model": "openai/gpt-oss-120b",
+    "tokens_in": 2672,
+    "tokens_out": 1274,
+    "calls": 2,
+    "dropped": [],
+    "error": null
+   }
+  ],
+  "errors": [],
+  "metrics": null,
+  "case": "funds",
+  "sector": null,
+  "candidates": [
+   {
+    "symbol": "MU",
+    "company": "Micron Technology",
+    "origin": "subject",
+    "held": false,
+    "gate": null,
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.875,
+      "features_used": {
+       "mom_12_1": 2.7089681367377088,
+       "pct_of_52w_high": 0.6201673306772908,
+       "above_sma_200": true,
+       "ret_21d": -0.16422189768480744,
+       "rsi_14": 42.45153865906586,
+       "atr_pct": 0.07576612287715864,
+       "above_sma_50": false,
+       "macd_hist": -1.4072561261497611,
+       "adx_14": 34.48655575135899,
+       "obv_20d_change": -0.0873491826869543,
+       "vol_63d_ann": 0.7203865255558758,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.3260490839437016
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.620 is under 0.9"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.5,
+      "features_used": {
+       "atr_pct": 0.07576612287715864,
+       "ret_1d": -0.025211662742347762,
+       "volume_ratio_1d": 0.9067660109765427,
+       "gap_1d": -0.019732227844296513,
+       "market_cap": 880598000000.0
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.8,
+      "features_used": {
+       "ret_5d": 0.1279855072463767,
+       "zscore_21d": -0.71462770283276,
+       "rsi_14": 42.45153865906586,
+       "atr_pct": 0.07576612287715864,
+       "roe": 91.77,
+       "debt_to_equity": 0.0374,
+       "current_ratio": 3.3138,
+       "revenue_growth": 256.33,
+       "spy_ret_5d": 0.025948945314093752,
+       "above_sma_200": true,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.3260490839437016,
+       "volume_ratio_1d": 0.9067660109765427,
+       "gap_1d": -0.019732227844296513,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 37.738235294117636
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not oversold: ret_5d 0.128, zscore_21d -0.71, rsi_14 42.5",
+       "not idiosyncratic: ret_5d 0.128 with SPY at 0.026",
+       "company-specific news in the last 5 bars (1) and no neutral cause was given"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.8571,
+      "features_used": {
+       "earnings_yield": 0.09648970454852468,
+       "debt_to_equity": 0.0374,
+       "payout_coverage": 0.009245155284759245,
+       "revenue_growth": 256.33,
+       "net_payout_yield_ttm": 0.0018154329974252347,
+       "sbc_to_revenue": 0.01208221988627009,
+       "market_cap": 880598000000.0,
+       "cash_balance": 24995000000.0
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "net_payout_yield_ttm 0.0018 is under 0.03"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 42.45153865906586
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.241 is under 0.3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.2406,
+     "score": 62,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.1202,
+       "available": true,
+       "n": 4,
+       "contribution": 0.0361,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 2.708968,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.164222,
+         "value": -1.0
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.620167,
+         "value": -0.5193
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": true,
+         "value": 1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.9135,
+       "available": true,
+       "n": 6,
+       "contribution": 0.1827,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.09649,
+         "value": 1.0
+        },
+        {
+         "metric": "roe",
+         "raw": 91.77,
+         "value": 1.0
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 256.33,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 74.59,
+         "value": 1.0
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 3.3138,
+         "value": 1.0
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.0374,
+         "value": 0.4813
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.2182,
+       "available": true,
+       "n": 2,
+       "contribution": 0.0218,
+       "parts": [
+        {
+         "metric": "net_payout_yield_ttm",
+         "raw": 0.001815,
+         "value": -0.5637
+        },
+        {
+         "metric": "payout_coverage",
+         "raw": 0.009245,
+         "value": 1.0
+        }
+       ]
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 62,
+    "stance": "neutral",
+    "rank": 1,
+    "reason": "stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null
+   },
+   {
+    "symbol": "AMD",
+    "company": "Advanced Micro Devices",
+    "origin": "subject",
+    "held": false,
+    "gate": null,
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.875,
+      "features_used": {
+       "mom_12_1": 1.132400387159219,
+       "pct_of_52w_high": 0.8110004251958938,
+       "above_sma_200": true,
+       "ret_21d": -0.05010404994397322,
+       "rsi_14": 50.3561484616882,
+       "atr_pct": 0.07852078755892862,
+       "above_sma_50": false,
+       "macd_hist": 7.546900224790079,
+       "adx_14": 19.73349401762229,
+       "obv_20d_change": 0.27209419078800023,
+       "vol_63d_ann": 0.8087481228356301,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.5856871427024808
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.811 is under 0.9"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.5,
+      "features_used": {
+       "atr_pct": 0.07852078755892862,
+       "ret_1d": -0.08754484879548952,
+       "volume_ratio_1d": 1.480788244643719,
+       "gap_1d": -0.031633350418588724,
+       "market_cap": 875905000000.0
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.8,
+      "features_used": {
+       "ret_5d": 0.189337252805986,
+       "zscore_21d": 0.33180222661209835,
+       "rsi_14": 50.3561484616882,
+       "atr_pct": 0.07852078755892862,
+       "roe": 11.58,
+       "debt_to_equity": 0.1035,
+       "current_ratio": 2.7248,
+       "revenue_growth": 41.87,
+       "spy_ret_5d": 0.025948945314093752,
+       "above_sma_200": true,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.5856871427024808,
+       "volume_ratio_1d": 1.480788244643719,
+       "gap_1d": -0.031633350418588724,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 68.764981761334
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not oversold: ret_5d 0.189, zscore_21d 0.33, rsi_14 50.4",
+       "not idiosyncratic: ret_5d 0.189 with SPY at 0.026",
+       "company-specific news in the last 5 bars (8) and no neutral cause was given"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.7143,
+      "features_used": {
+       "earnings_yield": 0.008698435673328508,
+       "debt_to_equity": 0.1035,
+       "revenue_growth": 41.87,
+       "net_payout_yield_ttm": 0.00033641395661249417,
+       "sbc_to_revenue": 0.04302451231302963,
+       "market_cap": 875905000000.0,
+       "cash_balance": 7404000000.0
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "net_payout_yield_ttm 0.0003 is under 0.03"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 50.3561484616882
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend -0.033 is under 0.3",
+       "the news part is -0.500, under 0.0"
+      ]
+     }
+    ],
+    "blend": {
+     "value": -0.0332,
+     "score": 48,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": -0.5,
+       "available": true,
+       "n": 2,
+       "contribution": -0.2,
+       "parts": [
+        {
+         "ref": "[1]",
+         "kind": "news",
+         "direction": "bearish",
+         "age_days": 0,
+         "recency": 1.0,
+         "weight": 1.0
+        },
+        {
+         "ref": "[5]",
+         "kind": "news",
+         "direction": "bearish",
+         "age_days": 0,
+         "recency": 1.0,
+         "weight": 1.0
+        }
+       ]
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.4775,
+       "available": true,
+       "n": 4,
+       "contribution": 0.1432,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 1.1324,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.050104,
+         "value": -0.334
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.811,
+         "value": 0.244
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": true,
+         "value": 1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.4145,
+       "available": true,
+       "n": 6,
+       "contribution": 0.0829,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.008698,
+         "value": -0.426
+        },
+        {
+         "metric": "roe",
+         "raw": 11.58,
+         "value": 0.079
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 41.87,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 17.72,
+         "value": 0.386
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 2.7248,
+         "value": 1.0
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.1035,
+         "value": 0.4482
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": -0.5933,
+       "available": true,
+       "n": 1,
+       "contribution": -0.0593,
+       "parts": [
+        {
+         "metric": "net_payout_yield_ttm",
+         "raw": 0.000336,
+         "value": -0.5933
+        }
+       ]
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 48,
+    "stance": "neutral",
+    "rank": 2,
+    "reason": "stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null
+   }
+  ],
+  "verify": null,
+  "reviews": [
+   {
+    "schema_version": 1,
+    "review_id": "8dba487dea51",
+    "record_id": "816aea79fcda",
+    "request_id": "d76d39703eed",
+    "symbol": "SNDK",
+    "action": "open",
+    "reviewed_utc": "2026-11-13T20:30:00Z",
+    "valid_until_utc": null,
+    "approved": false,
+    "score": 49,
+    "score_before_blockers": 63,
+    "grade": "F",
+    "bonus": 0.0,
+    "requires_human": true,
+    "requires_human_reasons": [
+     "fresh_negative_news"
+    ],
+    "denial_reasons": [
+     "risk_above_profile",
+     "falling_knife",
+     "dead_cat_bounce"
+    ],
+    "summary": "DENY SNDK: The risk is very_high (77.8), above the high level a aggressive profile accepts (risk_above_profile); It fell 37% in 21 sessions and it is 57% below its 63-session peak: a collapse is not a discount (falling_knife); and 1 more.",
+    "blockers": [
+     {
+      "code": "risk_above_profile",
+      "dimension": "risk_fit",
+      "severity": "blocker",
+      "message": "The risk is very_high (77.8), above the high level a aggressive profile accepts.",
+      "value": 77.8,
+      "threshold": 70.0,
+      "requires_human": false
+     },
+     {
+      "code": "falling_knife",
+      "dimension": "value",
+      "severity": "blocker",
+      "message": "It fell 37% in 21 sessions and it is 57% below its 63-session peak: a collapse is not a discount.",
+      "value": [
+       -0.36550690765182847,
+       -0.5726481685602849
+      ],
+      "threshold": null,
+      "requires_human": false
+     },
+     {
+      "code": "dead_cat_bounce",
+      "dimension": "chart",
+      "severity": "blocker",
+      "message": "A dead cat bounce: it fell 57% from its peak, bounced 10% off the low 6 sessions ago, is still 53% under the peak and under its 50-day mean.",
+      "value": [
+       -0.5726481685602849,
+       0.09744181144054664
+      ],
+      "threshold": [
+       -0.25,
+       0.05
+      ],
+      "requires_human": false
+     }
+    ],
+    "warnings": [
+     {
+      "code": "fresh_negative_news",
+      "dimension": "evidence",
+      "severity": "warning",
+      "message": "Newer stored text the Advisor did not see (F7, published 2026-11-12) looks bad for SNDK: Sandisk Stocks Slide 7.83% as NVIDIA Exit Hits Storage a Week Before 8-for-1 Split.",
+      "value": "bearish",
+      "threshold": null,
+      "requires_human": true
+     },
+     {
+      "code": "weak_chart",
+      "dimension": "chart",
+      "severity": "warning",
+      "message": "The chart is weak: dead cat bounce, macd negative, obv falling (score 20, under 35).",
+      "value": 20.0,
+      "threshold": 35.0,
+      "requires_human": false
+     }
+    ],
+    "notes": [
+     {
+      "code": "counter_evidence",
+      "dimension": "evidence",
+      "severity": "info",
+      "message": "The record lists counter-evidence: [7], [9].",
+      "value": 2,
+      "threshold": null,
+      "requires_human": false
+     }
+    ],
+    "dimensions": {
+     "accuracy": {
+      "weight": 30.0,
+      "score": 100.0,
+      "points": 30.0,
+      "applicable": true,
+      "measures": [
+       {
+        "name": "metrics_match",
+        "x": 1.0,
+        "value": 1.0,
+        "weight": 50.0,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "sources_held",
+        "x": 1.0,
+        "value": 1.0,
+        "weight": 30.0,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "cross_checks_passed",
+        "x": 1.0,
+        "value": 1.0,
+        "weight": 20.0,
+        "available": true,
+        "note": null
+       }
+      ]
+     },
+     "evidence": {
+      "weight": 15.0,
+      "score": 40.0,
+      "points": 6.0,
+      "applicable": true,
+      "measures": [
+       {
+        "name": "support",
+        "x": 0.5,
+        "value": 0.5,
+        "weight": 50.0,
+        "available": false,
+        "note": null
+       },
+       {
+        "name": "clean",
+        "x": 1,
+        "value": 0.5,
+        "weight": 30.0,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "breadth",
+        "x": 0,
+        "value": 0.0,
+        "weight": 20.0,
+        "available": true,
+        "note": null
+       }
+      ]
+     },
+     "risk_fit": {
+      "weight": 20.0,
+      "score": 0.0,
+      "points": 0.0,
+      "applicable": true,
+      "measures": [
+       {
+        "name": "vol_63d_ann",
+        "x": 0.940595,
+        "value": 1.0,
+        "weight": 27.8,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "max_drawdown_63d",
+        "x": -0.572648,
+        "value": 1.0,
+        "weight": 16.7,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "beta_63d",
+        "x": 3.674803,
+        "value": 1.0,
+        "weight": 11.1,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "atr_pct",
+        "x": 0.120676,
+        "value": 1.0,
+        "weight": 11.1,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "stop_loss_pct",
+        "x": 0.362028,
+        "value": 1.0,
+        "weight": 11.1,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "market_cap",
+        "x": 125927500000.0,
+        "value": 0.0,
+        "weight": 11.1,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "adv_20d_dollars",
+        "x": 12571605716.040844,
+        "value": 0.0,
+        "weight": 5.6,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "flags",
+        "x": 0.0,
+        "value": 0.0,
+        "weight": 5.5,
+        "available": true,
+        "note": null
+       }
+      ]
+     },
+     "timing": {
+      "weight": 10.0,
+      "score": 100.0,
+      "points": 10.0,
+      "applicable": true,
+      "measures": [
+       {
+        "name": "session",
+        "x": "regular",
+        "value": 1.0,
+        "weight": 50.0,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "zone",
+        "x": 0.5,
+        "value": 1.0,
+        "weight": 50.0,
+        "available": true,
+        "note": null
+       }
+      ]
+     },
+     "value": {
+      "weight": 15.0,
+      "score": 100.0,
+      "points": 15.0,
+      "applicable": true,
+      "measures": [
+       {
+        "name": "discount_to_avg_6m",
+        "x": 0.430022,
+        "value": 1.0,
+        "weight": 50.0,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "reward_to_risk",
+        "x": 4.586102,
+        "value": 1.0,
+        "weight": 30.0,
+        "available": true,
+        "note": null
+       },
+       {
+        "name": "earnings_yield",
+        "x": 0.154231,
+        "value": 1.0,
+        "weight": 20.0,
+        "available": true,
+        "note": null
+       }
+      ]
+     },
+     "chart": {
+      "weight": 10.0,
+      "score": 20.0,
+      "points": 2.0,
+      "applicable": true,
+      "measures": [
+       {
+        "name": "golden_cross",
+        "x": 15.0,
+        "value": 0.0,
+        "weight": 15.0,
+        "available": true,
+        "note": "no crossing of the 50- and 200-day means in the last 20 sessions"
+       },
+       {
+        "name": "bull_alignment",
+        "x": 10.0,
+        "value": 0.0,
+        "weight": 10.0,
+        "available": true,
+        "note": "close 885.01, 50-day mean 1441.43, 200-day mean 1282.43"
+       },
+       {
+        "name": "uptrend_structure",
+        "x": 10.0,
+        "value": 0.0,
+        "weight": 10.0,
+        "available": true,
+        "note": "the last three windows of 21 sessions show no clear rise or fall"
+       },
+       {
+        "name": "breakout_on_volume",
+        "x": 10.0,
+        "value": 0.0,
+        "weight": 10.0,
+        "available": true,
+        "note": "the close is not above the highest high of the 20 sessions before"
+       },
+       {
+        "name": "near_high",
+        "x": 10.0,
+        "value": 0.0,
+        "weight": 10.0,
+        "available": true,
+        "note": "38% of the 52-week high (it takes 90%)"
+       },
+       {
+        "name": "macd_positive",
+        "x": 5.0,
+        "value": 0.0,
+        "weight": 5.0,
+        "available": true,
+        "note": "the MACD histogram is -10.300"
+       },
+       {
+        "name": "healthy_rsi",
+        "x": 5.0,
+        "value": 0.0,
+        "weight": 5.0,
+        "available": true,
+        "note": "RSI 33.9 (healthy is 50 to 70)"
+       },
+       {
+        "name": "obv_rising",
+        "x": 5.0,
+        "value": 0.0,
+        "weight": 5.0,
+        "available": true,
+        "note": "on-balance volume changed -0.20 of the 20-session volume"
+       },
+       {
+        "name": "death_cross",
+        "x": -15.0,
+        "value": 0.0,
+        "weight": 15.0,
+        "available": true,
+        "note": "no crossing of the 50- and 200-day means in the last 20 sessions"
+       },
+       {
+        "name": "bear_alignment",
+        "x": -10.0,
+        "value": 0.0,
+        "weight": 10.0,
+        "available": true,
+        "note": "close 885.01, 50-day mean 1441.43, 200-day mean 1282.43"
+       },
+       {
+        "name": "downtrend_structure",
+        "x": -10.0,
+        "value": 0.0,
+        "weight": 10.0,
+        "available": true,
+        "note": "the last three windows of 21 sessions show no clear rise or fall"
+       },
+       {
+        "name": "dead_cat_bounce",
+        "x": -20.0,
+        "value": 1.0,
+        "weight": 20.0,
+        "available": true,
+        "note": "it fell 57% from its peak, bounced 10% off the low 6 sessions ago, is still 53% under the peak and under its 50-day mean"
+       },
+       {
+        "name": "overbought",
+        "x": -10.0,
+        "value": 0.0,
+        "weight": 10.0,
+        "available": true,
+        "note": "RSI 33.9 (overbought from 80)"
+       },
+       {
+        "name": "macd_negative",
+        "x": -5.0,
+        "value": 1.0,
+        "weight": 5.0,
+        "available": true,
+        "note": "the MACD histogram is -10.300"
+       },
+       {
+        "name": "obv_falling",
+        "x": -5.0,
+        "value": 1.0,
+        "weight": 5.0,
+        "available": true,
+        "note": "on-balance volume changed -0.20 of the 20-session volume"
+       }
+      ]
+     }
+    },
+    "accuracy": {
+     "integrity": {
+      "checked": [
+       "complete.features",
+       "complete.families",
+       "identity.request",
+       "config.version",
+       "stance.action",
+       "order.unique",
+       "trade.entry",
+       "trade.stop",
+       "trade.time_stop",
+       "trade.order_style",
+       "trade.invalidation",
+       "recompute.stop",
+       "recompute.composite",
+       "blend.present",
+       "blend.weights",
+       "blend.half_life",
+       "blend.recency",
+       "blend.news",
+       "blend.performance",
+       "blend.historical",
+       "blend.filings",
+       "blend.value",
+       "blend.score",
+       "recompute.confidence",
+       "recompute.score",
+       "evidence.quote",
+       "evidence.quote",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.used",
+       "features.fresh",
+       "gates",
+       "thesis.refs",
+       "audit"
+      ],
+      "failed": []
+     },
+     "rechecked": [
+      {
+       "name": "last_close",
+       "kind": "bars",
+       "recorded": 885.01,
+       "fetched": 885.01,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "atr_14",
+       "kind": "bars",
+       "recorded": 106.79945763113416,
+       "fetched": 106.79945763113416,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "earnings_yield",
+       "kind": "provider_price_linked",
+       "recorded": 0.15423054381689752,
+       "fetched": 0.15423054381689752,
+       "tolerance": 0.05,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "debt_to_equity",
+       "kind": "provider",
+       "recorded": 0.0,
+       "fetched": 0.0,
+       "tolerance": 0.02,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "revenue_growth",
+       "kind": "provider",
+       "recorded": 272.38,
+       "fetched": 272.38,
+       "tolerance": 0.02,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "net_payout_yield_ttm",
+       "kind": "derived",
+       "recorded": 0.1588215441424629,
+       "fetched": 0.1588215441424629,
+       "tolerance": 0.05,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "share_count_change",
+       "kind": "filing",
+       "recorded": -0.0137,
+       "fetched": -0.0137,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "sbc_to_revenue",
+       "kind": "filing",
+       "recorded": 0.008249478741727857,
+       "fetched": 0.008249478741727857,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "market_cap",
+       "kind": "provider_price_linked",
+       "recorded": 125927500000.0,
+       "fetched": 125927500000.0,
+       "tolerance": 0.05,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "cash_balance",
+       "kind": "filing",
+       "recorded": 5136000000.0,
+       "fetched": 5136000000.0,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": true,
+       "note": null
+      },
+      {
+       "name": "sma_50",
+       "kind": "bars",
+       "recorded": 1441.4293,
+       "fetched": 1441.4293,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "adv_20d_dollars",
+       "kind": "bars",
+       "recorded": 12571605716.040844,
+       "fetched": 12571605716.040844,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "vol_63d_ann",
+       "kind": "bars",
+       "recorded": 0.9405950389443845,
+       "fetched": 0.9405950389443845,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "beta_63d",
+       "kind": "bars",
+       "recorded": 3.6748032888591573,
+       "fetched": 3.6748032888591573,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "max_drawdown_63d",
+       "kind": "bars",
+       "recorded": -0.5726481685602849,
+       "fetched": -0.5726481685602849,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "atr_pct",
+       "kind": "bars",
+       "recorded": 0.12067598968501392,
+       "fetched": 0.12067598968501392,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "ret_21d",
+       "kind": "bars",
+       "recorded": -0.36550690765182847,
+       "fetched": -0.36550690765182847,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "negative_equity",
+       "kind": "filing",
+       "recorded": false,
+       "fetched": false,
+       "tolerance": null,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "mom_12_1",
+       "kind": "bars",
+       "recorded": 4.334400788274418,
+       "fetched": 4.334400788274418,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "pct_of_52w_high",
+       "kind": "bars",
+       "recorded": 0.37589780690105745,
+       "fetched": 0.37589780690105745,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "above_sma_200",
+       "kind": "bars",
+       "recorded": false,
+       "fetched": false,
+       "tolerance": null,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "roe",
+       "kind": "provider",
+       "recorded": 134.27,
+       "fetched": 134.27,
+       "tolerance": 0.02,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "operating_margin",
+       "kind": "provider",
+       "recorded": 72.46,
+       "fetched": 72.46,
+       "tolerance": 0.02,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "current_ratio",
+       "kind": "provider",
+       "recorded": 2.5797,
+       "fetched": 2.5797,
+       "tolerance": 0.02,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "breakout_20d",
+       "kind": "bars",
+       "recorded": false,
+       "fetched": false,
+       "tolerance": null,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "volume_ratio_1d",
+       "kind": "bars",
+       "recorded": 1.0437702316010735,
+       "fetched": 1.0437702316010735,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "macd_hist",
+       "kind": "bars",
+       "recorded": -10.30002472594441,
+       "fetched": -10.30002472594441,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "rsi_14",
+       "kind": "bars",
+       "recorded": 33.92597391194995,
+       "fetched": 33.92597391194995,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      },
+      {
+       "name": "obv_20d_change",
+       "kind": "bars",
+       "recorded": -0.2005666069113051,
+       "fetched": -0.2005666069113051,
+       "tolerance": 1e-06,
+       "match": true,
+       "decisive": false,
+       "note": null
+      }
+     ],
+     "sources": [
+      {
+       "ref": "[7]",
+       "chunk_id": "polygon:900d314198b07e5685dcb158bc6a79bcbced152c2b0eef5156d2c13b1c464b5f#1",
+       "found": true,
+       "quote_in_text": true,
+       "same_text": true,
+       "tagged": true,
+       "note": null
+      },
+      {
+       "ref": "[9]",
+       "chunk_id": "finnhub:143806203#0",
+       "found": true,
+       "quote_in_text": true,
+       "same_text": true,
+       "tagged": true,
+       "note": null
+      }
+     ],
+     "cross": [
+      {
+       "name": "identity",
+       "a": "SanDisk",
+       "b": "Sandisk Corp",
+       "tolerance": null,
+       "passed": true,
+       "note": null
+      },
+      {
+       "name": "high_52w",
+       "a": 2354.3899,
+       "b": 2354.39,
+       "tolerance": 0.03,
+       "passed": true,
+       "note": null
+      }
+     ],
+     "identity": {
+      "listed": true,
+      "listed_company": "Sandisk Corp",
+      "company": "SanDisk"
+     },
+     "match_rate": 1.0
+    },
+    "evidence": {
+     "reviewed": true,
+     "claims": [],
+     "control": {
+      "ref": "[21]",
+      "expected": "unrelated",
+      "label": "unrelated",
+      "passed": true
+     },
+     "fresh": [
+      {
+       "id": "F1",
+       "chunk_id": "finnhub:143807334#0",
+       "headline": "Sandisk\u2019s Stock Split Takes Effect Nov. 19. Should You Buy It Now?",
+       "published_utc": "2026-11-14T19:05:02Z",
+       "corpus": "news",
+       "classes": [],
+       "label": "none",
+       "quote": null
+      },
+      {
+       "id": "F2",
+       "chunk_id": "polygon:b03e77aca54c187a84f2067155566b9ecc4821cb50b709406ea7b30e2dbc7fc6#1",
+       "headline": "Sandisk\u2019s Stock Split Takes Effect Nov. 19. Should You Buy It Now?",
+       "published_utc": "2026-11-14T18:45:02Z",
+       "corpus": "news",
+       "classes": [],
+       "label": "none",
+       "quote": null
+      },
+      {
+       "id": "F3",
+       "chunk_id": "finnhub:143840114#0",
+       "headline": "Sandisk Is Up 273% in 2026, but Down 62% From Its June High. Take Profits, or Buy More?",
+       "published_utc": "2026-11-14T08:37:36Z",
+       "corpus": "news",
+       "classes": [],
+       "label": "none",
+       "quote": null
+      },
+      {
+       "id": "F4",
+       "chunk_id": "finnhub:143805519#0",
+       "headline": "Sandisk Stock Fell Back Under $900 on Friday. I'd Start With a Small Position.",
+       "published_utc": "2026-11-13T23:37:02Z",
+       "corpus": "news",
+       "classes": [],
+       "label": "none",
+       "quote": null
+      },
+      {
+       "id": "F5",
+       "chunk_id": "polygon:a88370f06e50b43755f938d6906ff1ee0e79d21ea5eb21e2333034d8f4ebd75b#0",
+       "headline": "Sandisk Stock Fell Back Under $900 on Friday. I'd Start With a Small Position.",
+       "published_utc": "2026-11-13T23:17:02Z",
+       "corpus": "news",
+       "classes": [],
+       "label": "none",
+       "quote": null
+      },
+      {
+       "id": "F6",
+       "chunk_id": "polygon:7586ebf89ab35b496b8450d974d8d16585ee39773332186f826522d5b828659f#1",
+       "headline": "Sandisk Stock Is Back Above the $900 Price I Set for Buying It. Here's Why I'm Holding Off.",
+       "published_utc": "2026-11-12T23:41:02Z",
+       "corpus": "news",
+       "classes": [],
+       "label": "none",
+       "quote": null
+      },
+      {
+       "id": "F7",
+       "chunk_id": "finnhub:143772019#0",
+       "headline": "Sandisk Stocks Slide 7.83% as NVIDIA Exit Hits Storage a Week Before 8-for-1 Split",
+       "published_utc": "2026-11-12T19:44:01Z",
+       "corpus": "news",
+       "classes": [],
+       "label": "bearish",
+       "quote": "Sandisk Stocks Slide 7.83% as NVIDIA Exit Hits Storage a Week Before 8-for-1 Split"
+      }
+     ],
+     "counterfactual": {
+      "news": -0.5923,
+      "filings": 0.8425,
+      "blend": -0.1193,
+      "blend_recorded": -0.0824
+     }
+    },
+    "timing": {
+     "session": "regular",
+     "trading_date": "2026-11-13",
+     "session_reason": "",
+     "window_closes_utc": "2026-11-13T21:00:00Z",
+     "next_open_utc": "2026-11-16T09:00:00Z",
+     "record_date": "2026-11-13",
+     "quote_price": 885.01,
+     "quote_as_of_utc": "2026-11-13T20:29:00Z",
+     "deal_price": 885.01,
+     "price_basis": "quote",
+     "zone_position": 0.5
+    },
+    "risk": {
+     "tolerance_stated": "aggressive",
+     "tolerance_effective": "aggressive",
+     "allowed_level": "high",
+     "risk_score": 77.8,
+     "risk_level": "very_high",
+     "flags": []
+    },
+    "value": {
+     "deal": "falling",
+     "avg_6m": 1552.7088492063492,
+     "high_6m": 2354.3899,
+     "low_6m": 803.97,
+     "premium": -0.430022,
+     "discount": 0.430022,
+     "reward_to_risk": 4.5861024899000755,
+     "earnings_yield": 0.15423054381689752,
+     "bonus": 0.0
+    },
+    "chart": {
+     "patterns": [
+      {
+       "name": "dead_cat_bounce",
+       "direction": "bearish",
+       "points": -20.0,
+       "evidence": "it fell 57% from its peak, bounced 10% off the low 6 sessions ago, is still 53% under the peak and under its 50-day mean"
+      },
+      {
+       "name": "macd_negative",
+       "direction": "bearish",
+       "points": -5.0,
+       "evidence": "the MACD histogram is -10.300"
+      },
+      {
+       "name": "obv_falling",
+       "direction": "bearish",
+       "points": -5.0,
+       "evidence": "on-balance volume changed -0.20 of the 20-session volume"
+      }
+     ],
+     "unknown": [],
+     "points": -30.0,
+     "facts": {
+      "last_close": 885.01,
+      "sma_50": 1441.4293,
+      "pct_of_52w_high": 0.37589780690105745,
+      "sma_200": 1282.433875,
+      "sma_50_vs_200": 0.12397943324758165,
+      "cross_50_200_20d": 0,
+      "structure_63d": "mixed",
+      "breakout_20d": false,
+      "volume_ratio_1d": 1.0437702316010735,
+      "macd_hist": -10.30002472594441,
+      "rsi_14": 33.92597391194995,
+      "obv_20d_change": -0.2005666069113051,
+      "decline_from_peak_63d": -0.5726481685602849,
+      "rebound_from_trough_63d": 0.09744181144054664,
+      "sessions_since_trough_63d": 6
+     }
+    },
+    "audit": {
+     "critic_model": "z-ai/glm-5.3",
+     "advisor_model": "openai/gpt-oss-120b",
+     "independent_model": true,
+     "config_version": "1",
+     "metric_order": "ebc47164621f",
+     "quote_order": "fbbdd0dfa06c",
+     "verify_order": "b6abaf4006ba",
+     "run": {
+      "model": "z-ai/glm-5.3",
+      "calls": 1,
+      "tokens_in": 1405,
+      "tokens_out": 332,
+      "records_called": 1,
+      "controls_failed": 0
+     }
+    }
+   }
+  ],
+  "critic_runs": [
+   {
+    "stage": "review",
+    "model": "z-ai/glm-5.3",
+    "tokens_in": 1405,
+    "tokens_out": 332,
+    "calls": 1,
+    "dropped": [],
+    "error": null,
+    "errors": [],
+    "records": 1,
+    "records_called": 1,
+    "controls_failed": 0,
+    "metric_order": "ebc47164621f",
+    "quote_order": "fbbdd0dfa06c",
+    "verify_order": "b6abaf4006ba",
+    "independent_model": true,
+    "advisor_model": "openai/gpt-oss-120b",
+    "seconds": 5.6,
+    "tolerance": "aggressive",
+    "now_et": "2026-11-13 15:30 ET",
+    "session": "regular",
+    "ignore_market_hours": true
+   }
+  ],
+  "trade_decisions": [
+   {
+    "record_id": "816aea79fcda",
+    "review_id": "8dba487dea51",
+    "symbol": "SNDK",
+    "action": "open",
+    "shares": 0,
+    "est_cost": 0.0,
+    "mode": "auto",
+    "will_trade": "no_system_denied",
+    "funds_avail": null,
+    "funds_note": null,
+    "asked_user": false,
+    "escalated": false,
+    "reason": "DENY SNDK: The risk is very_high (77.8), above the high level a aggressive profile accepts (risk_above_profile); It fell 37% in 21 sessions and it is 57% below its 63-session peak: a collapse is not a discount (falling_knife); and 1 more.",
+    "decided_utc": "2026-11-13T20:30:00Z",
+    "size": null
+   },
+   {
+    "record_id": "neutral-d76d39703eed-0",
+    "review_id": null,
+    "symbol": "MU",
+    "action": "open",
+    "shares": 32,
+    "est_cost": 24905.92,
+    "mode": "auto",
+    "will_trade": "yes_auto",
+    "funds_avail": true,
+    "funds_note": null,
+    "asked_user": false,
+    "escalated": false,
+    "reason": "the Advisor scored MU NEUTRAL (score 62: stance neutral (no family passed)); ALLOW_NEUTRAL_RECOMMENDATIONS is on, so a neutral recommendation counts as approved; equal dollars with the other neutral companies, about $25,000.00 each, no profile limit",
+    "decided_utc": "2026-11-13T20:30:00Z",
+    "size": {
+     "shares": 32,
+     "caps": {
+      "money": 64,
+      "budget": null
+     },
+     "binding": "money",
+     "notes": [
+      "even split: about $25,000.00 for each of 2 purchases"
+     ],
+     "allocation": "even"
+    },
+    "origin": "neutral",
+    "company": "Micron Technology",
+    "price": 778.31,
+    "valid_until_utc": "2026-11-13T21:00:00Z",
+    "balance": {
+     "mode": "even",
+     "target_dollars": 25000.0,
+     "of": 2
+    }
+   },
+   {
+    "record_id": "neutral-d76d39703eed-1",
+    "review_id": null,
+    "symbol": "AMD",
+    "action": "open",
+    "shares": 46,
+    "est_cost": 24566.76,
+    "mode": "auto",
+    "will_trade": "yes_auto",
+    "funds_avail": true,
+    "funds_note": null,
+    "asked_user": false,
+    "escalated": false,
+    "reason": "the Advisor scored AMD NEUTRAL (score 48: stance neutral (no family passed)); ALLOW_NEUTRAL_RECOMMENDATIONS is on, so a neutral recommendation counts as approved; equal dollars with the other neutral companies, about $25,000.00 each, no profile limit",
+    "decided_utc": "2026-11-13T20:30:00Z",
+    "size": {
+     "shares": 46,
+     "caps": {
+      "money": 93,
+      "budget": null
+     },
+     "binding": "money",
+     "notes": [
+      "even split: about $25,000.00 for each of 2 purchases"
+     ],
+     "allocation": "even"
+    },
+    "origin": "neutral",
+    "company": "Advanced Micro Devices",
+    "price": 534.06,
+    "valid_until_utc": "2026-11-13T21:00:00Z",
+    "balance": {
+     "mode": "even",
+     "target_dollars": 25000.0,
+     "of": 2
+    }
+   }
+  ],
+  "bars": null,
+  "trades": [
+   {
+    "trade_id": "T1",
+    "kind": "recommendation",
+    "record_id": "neutral-d76d39703eed-0",
+    "review_id": null,
+    "funds_for": null,
+    "symbol": "MU",
+    "side": "buy",
+    "shares_approved": 32,
+    "shares": 32,
+    "order_type": "market",
+    "limit_price": null,
+    "ref_price": 778.31,
+    "limit_low": 754.9607,
+    "limit_high": 786.0931,
+    "status": "filled",
+    "reject_code": null,
+    "reason": "market order filled at the quote 778.3100 with 5 bps of slippage",
+    "placed_by": "model",
+    "note": "",
+    "placed_utc": "2026-11-13T20:30:00Z",
+    "mode": "paper",
+    "fill": {
+     "price": 778.6992,
+     "shares": 32,
+     "amount": 24918.37,
+     "commission": 0.0,
+     "date": "2026-11-13",
+     "price_source": "quote",
+     "slippage_bps": 5.0
+    },
+    "booked": true,
+    "outcome": null
+   },
+   {
+    "trade_id": "T2",
+    "kind": "recommendation",
+    "record_id": "neutral-d76d39703eed-1",
+    "review_id": null,
+    "funds_for": null,
+    "symbol": "AMD",
+    "side": "buy",
+    "shares_approved": 46,
+    "shares": 46,
+    "order_type": "market",
+    "limit_price": null,
+    "ref_price": 534.06,
+    "limit_low": 518.0382,
+    "limit_high": 539.4006,
+    "status": "filled",
+    "reject_code": null,
+    "reason": "market order filled at the quote 534.0600 with 5 bps of slippage",
+    "placed_by": "model",
+    "note": "",
+    "placed_utc": "2026-11-13T20:30:00Z",
+    "mode": "paper",
+    "fill": {
+     "price": 534.327,
+     "shares": 46,
+     "amount": 24579.04,
+     "commission": 0.0,
+     "date": "2026-11-13",
+     "price_source": "quote",
+     "slippage_bps": 5.0
+    },
+    "booked": true,
+    "outcome": null
+   }
+  ],
+  "trader_runs": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0.0,
+    "mode": "paper",
+    "now_utc": "2026-11-13T20:30:00Z",
+    "use_model": true,
+    "turns": 6,
+    "tokens_in": 10005,
+    "tokens_out": 247,
+    "tool_calls": [
+     {
+      "name": "verify_request",
+      "args": {},
+      "outcome": "ok"
+     },
+     {
+      "name": "place_order",
+      "args": {
+       "trade_id": "T1"
+      },
+      "outcome": "ok"
+     },
+     {
+      "name": "place_order",
+      "args": {
+       "trade_id": "T2"
+      },
+      "outcome": "ok"
+     },
+     {
+      "name": "check_trade_status",
+      "args": {
+       "trade_id": ""
+      },
+      "outcome": "ok"
+     },
+     {
+      "name": "notify_account_manager",
+      "args": {},
+      "outcome": "ok"
+     }
+    ],
+    "placed_by_model": 2,
+    "placed_by_code": 0,
+    "summary": "Both trades filled: T1 bought 32 MU at 778.6992, T2 bought 46 AMD at 534.327, cash left 502.59.",
+    "summary_by": "model",
+    "portfolio_before": {
+     "cash": 50000.0,
+     "positions": []
+    },
+    "portfolio_after": {
+     "cash": 502.59,
+     "positions": [
+      {
+       "symbol": "AMD",
+       "shares": 46,
+       "cost_basis": 534.327,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "MU",
+       "shares": 32,
+       "cost_basis": 778.6992,
+       "acquired": "2026-11-13"
+      }
+     ]
+    },
+    "price_order": "d032fbc98246",
+    "funding": null,
+    "booked": true,
+    "config_version": "1",
+    "dropped": [],
+    "errors": []
+   }
+  ],
+  "direct_orders": []
+ }
+}

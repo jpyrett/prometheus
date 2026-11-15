@@ -28,7 +28,7 @@ WHAT IT DOES, in order (each step is one call the LangGraph will make later):
   9. REPORT (`report`): the companies found, the data refresh, the ranking best to worst with each company's reason, and for each recommendation its strategy, plan and thesis, then the CRITIC REVIEW and the TRADER section.
 
 The case is `industry` for a phrase (leaders ranked best to worst: a large leader is not excluded) and `funds` for symbols and companies (the "here is money" case); `--case` overrides it. Without `--fetch` nothing
-is fetched: the stored data is used, and a company with no stored bars fails the Advisor's freshness and liquidity gates with that said.
+is fetched: the stored data is used, and a company with no stored bars fails the Advisor's freshness gate with that said.
 
 Every run appends its recommendations to the ledger (data/ledger/recommendations.jsonl), and the ledger's cooldown then hides the same strategy's recommendation for the same company on a later run.
 `--no-ledger` is for exploring: a throwaway ledger, so nothing is read from or written to the real one (the Advisor's and the Critic's, and with `--trade paper` the Trader's trades ledger).
@@ -321,9 +321,9 @@ def ranking_rows(result: Result) -> list[dict]:
 
 
 KEY_NUMBERS = [  # (label, metric, kind): the numbers a comparison of companies looks at, all calculated by code (bars, Finnhub metrics, the filings)
-    ("Last close", "last_close", "usd"), ("Market cap", "market_cap", "big"), ("Avg daily $ volume", "adv_20d_dollars", "big"), ("12-1 month momentum", "mom_12_1", "frac"), ("1-month return", "ret_21d", "frac"),
+    ("Last close", "last_close", "usd"), ("12-1 month momentum", "mom_12_1", "frac"), ("1-month return", "ret_21d", "frac"),
     ("Of 52-week high", "pct_of_52w_high", "frac"), ("RSI 14", "rsi_14", "num1"), ("Volatility (annual)", "vol_ann", "frac"), ("Earnings yield", "earnings_yield", "frac"),
-    ("Net payout yield (TTM)", "net_payout_yield_ttm", "frac"), ("Return on equity %", "roe", "num1"), ("Revenue growth %", "revenue_growth", "num1"), ("Debt / equity", "debt_to_equity", "num2"),
+    ("Return on equity %", "roe", "num1"), ("Revenue growth %", "revenue_growth", "num1"), ("Debt / equity", "debt_to_equity", "num2"),
     ("Current ratio", "current_ratio", "num2")]
 
 
@@ -334,8 +334,6 @@ def _number(value, kind: str) -> str:
         return f"{value * 100:.1f}%"
     if kind == "usd":
         return f"${value:,.2f}"
-    if kind == "big":
-        return f"${value / 1e9:,.1f}B" if abs(value) >= 1e9 else f"${value / 1e6:,.0f}M"
     return f"{value:.{1 if kind == 'num1' else 2}f}"
 
 

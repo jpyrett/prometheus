@@ -14,7 +14,7 @@ from prometheus.common import work_order as wo
 from prometheus.tools.data_clerk import DATA_CLERK_TOOLS, DataClerkTools, ToolInputError
 
 TODAY = date(2026, 10, 23)
-FINNHUB = {"peTTM": 25.0, "roeTTM": 30.0, "marketCapitalization": 4_000_000.0}
+FINNHUB = {"peTTM": 25.0, "roeTTM": 30.0}
 
 
 class Financials:
@@ -61,15 +61,15 @@ def order(symbols, *names, **kw):
 
 def test_the_data_clerk_puts_the_metrics_of_every_symbol_on_the_order_without_a_model_call(bars_root, filings):
     toolbox = Toolbox()
-    result = clerk(bars_root, toolbox).request_metrics(order(["aapl", "$PG", "AAPL"], "ret_5d", "pe_ratio", "market_cap", "share_count_change", "net_payout_yield_ttm", "rsi_14"), today=TODAY)
+    result = clerk(bars_root, toolbox).request_metrics(order(["aapl", "$PG", "AAPL"], "ret_5d", "pe_ratio", "share_count_change", "rsi_14"), today=TODAY)
     assert result.status == "data_ready" and result.errors == [] and toolbox.financials.asked == ["AAPL", "PG"]      # cleaned, once each
     m = result.data.metrics
-    assert list(m) == ["AAPL", "PG"] and list(m["AAPL"]) == ["ret_5d", "pe_ratio", "market_cap", "share_count_change", "net_payout_yield_ttm", "rsi_14"]
+    assert list(m) == ["AAPL", "PG"] and list(m["AAPL"]) == ["ret_5d", "pe_ratio", "share_count_change", "rsi_14"]
     assert m["AAPL"]["ret_5d"]["value"] == pytest.approx(139.5 / 134.5 - 1) and m["AAPL"]["pe_ratio"]["value"] == 25.0
-    assert m["AAPL"]["share_count_change"]["value"] < 0 and m["AAPL"]["net_payout_yield_ttm"]["value"] == pytest.approx((24701e6 + 3921e6) * 4 / 4.0e12)
+    assert m["AAPL"]["share_count_change"]["value"] < 0
     assert m["AAPL"]["rsi_14"]["value"] == 100.0
     assert m["PG"]["share_count_change"]["value"] is None and m["PG"]["share_count_change"]["note"] == "no stored filings of PG (fetch_filings has not been run for it)"
-    assert result.data.tool_calls == [{"name": "calculate_metrics", "args": {"symbols": 2, "metrics": 6}, "outcome": "ok"}]
+    assert result.data.tool_calls == [{"name": "calculate_metrics", "args": {"symbols": 2, "metrics": 4}, "outcome": "ok"}]
     assert any(n.startswith("PG: no filings are stored") for n in result.data.notes)                                  # what could not be read for PG is a note, not a failure
     assert wo.WorkOrder.model_validate_json(result.model_dump_json()) == result                                       # plain JSON
 

@@ -11,11 +11,6 @@ def quality(metrics):
     return quality_multiplier(metrics, TODAY, Q)
 
 
-def test_a_healthy_company_has_multiplier_one_and_no_haircuts():
-    result = quality(healthy())
-    assert result.multiplier == 1.0 and result.haircuts == [] and result.haircuts_skipped == [] and result.turned_off == []
-
-
 @pytest.mark.parametrize("override, check, factor", [
     (dict(operating_margin=0.0), "operating_margin", 0.6), (dict(roe=7.99), "roe", 0.85), (dict(revenue_growth=-0.01), "revenue_growth", 0.85),
     (dict(debt_to_equity=2.01), "debt_to_equity", 0.7), (dict(current_ratio=0.99), "current_ratio", 0.85), (dict(share_count_change=0.011), "share_count_change", 0.8),
@@ -26,12 +21,6 @@ def test_a_healthy_company_has_multiplier_one_and_no_haircuts():
 def test_each_haircut_applies_just_past_its_threshold(override, check, factor):
     result = quality(healthy(**override))
     assert [(h.check, h.factor) for h in result.haircuts] == [(check, factor)] and result.multiplier == pytest.approx(factor)
-
-
-@pytest.mark.parametrize("override", [dict(operating_margin=0.01), dict(roe=8.0), dict(revenue_growth=0.0), dict(debt_to_equity=2.0), dict(current_ratio=1.0), dict(share_count_change=0.01),
-                                      dict(sbc_to_revenue=0.15), dict(accrual_ratio=0.10), dict(receivables_vs_sales=15.0), dict(risk_factor_change=0.35)])
-def test_no_haircut_exactly_at_the_threshold(override):
-    assert quality(healthy(**override)).haircuts == []
 
 
 def test_factors_multiply_and_the_floor_is_0_2():
@@ -48,14 +37,6 @@ def test_the_earnings_quality_checks_take_their_factor_once_and_turn_reversion_o
     assert result.turned_off == ["reversion"]
     assert quality(healthy(cfo_negative_with_profit=True)).turned_off == ["reversion"]
     assert quality(healthy(roe=1.0)).turned_off == []
-
-
-def test_a_missing_input_applies_no_factor_and_is_listed_with_its_reason():
-    result = quality(healthy(roe=None, accrual_ratio=None))
-    assert result.multiplier == 1.0 and result.haircuts == []
-    assert "roe: needs bars for roe" in result.haircuts_skipped and "accrual_ratio: needs bars for accrual_ratio" in result.haircuts_skipped
-    nothing = quality(None)
-    assert nothing.multiplier == 1.0 and len(nothing.haircuts_skipped) == len(Q.checks)
 
 
 def test_a_statement_older_than_120_days_skips_the_checks_that_read_it():

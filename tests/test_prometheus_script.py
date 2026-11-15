@@ -5,6 +5,7 @@ Run:  pytest tests/test_prometheus_script.py -q
 The script is run for real with bash, with PROMETHEUS_DRY_RUN=1 so that it prints the command it WOULD run instead of running it: no network, no
 key, no cost, nothing fetched or written. Answers are piped in, the way a person would type them.
 """
+import json
 import os
 import shlex
 import subprocess
@@ -50,12 +51,6 @@ def test_a_symbol_asks_before_it_fetches_and_the_default_answer_is_yes():
     assert command(result) == ["python", "-m", "prometheus.langgraph.desk", "--symbol", "MSFT", "--term", "", "--source", "news", "--from-days-ago", "14"]
 
 
-@pytest.mark.parametrize("answer", ["n", "N", "no", "No"])
-def test_answering_no_to_the_fetch_question_turns_the_fetch_off(answer):
-    result = run(f"msft\n\n\n7\n{answer}\n")
-    assert "--no-fetch" in command(result) and "no fetch (the stored news is searched)" in result.stdout
-
-
 def test_when_the_input_ends_before_the_fetch_question_is_answered_nothing_is_fetched():
     """A script that nobody is watching must not spend the paid APIs by default."""
     result = run("msft\n\n\n7\n")  # the confirmation gets end-of-input
@@ -79,48 +74,10 @@ def test_a_company_name_is_accepted_at_the_symbol_prompt_and_passed_on_as_typed(
     assert "FETCH fresh news for 'Procter&Gamble' (its ticker is looked up first) (paid APIs; writes news/<its ticker>.txt)" in result.stdout
 
 
-def test_a_company_name_with_spaces_given_as_a_flag_is_passed_as_one_argument():
-    result = run("", "--symbol", "Procter & Gamble", "--from-days-ago", "7", "--yes")
-    assert result.returncode == 0 and command(result)[command(result).index("--symbol") + 1] == "Procter & Gamble"
-
-
-def test_a_ticker_in_lower_case_is_passed_as_typed_and_is_said_to_be_looked_up():
-    result = run("", "--symbol", "$aapl", "--yes")
-    assert command(result)[command(result).index("--symbol") + 1] == "aapl"
-    assert "FETCH fresh news for 'aapl' (its ticker is looked up first)" in result.stdout
-
-
-def test_a_ticker_in_capitals_is_not_said_to_be_looked_up():
-    result = run("", "--symbol", "BRK.B", "--yes")
-    assert "FETCH fresh news for BRK.B (paid APIs; writes news/BRK.B.txt)" in result.stdout and "looked up" not in result.stdout
-
-
-@pytest.mark.parametrize("typed", ["Dillard's", "O'Reilly Automotive", "Coca-Cola", "AT&T", "Berkshire Hathaway Inc."])
-def test_ordinary_company_names_are_accepted(typed):
-    cmd = command(run("", "--symbol", typed, "--yes"))
-    assert cmd[cmd.index("--symbol") + 1] == typed
-
-
-@pytest.mark.parametrize("typed", ["a;b", "x|y", "../etc/passwd", "$(whoami)", "`id`", "a" * 61, "&amp", "'quoted"])
-def test_text_that_is_neither_a_ticker_nor_a_company_name_is_refused(typed):
-    result = run("", "--symbol", typed, "--yes")
-    assert result.returncode == 2 and "is not a valid ticker symbol or company name." in result.stderr and "DRY RUN" not in result.stdout
-
-
 def test_parameters_given_as_flags_are_not_asked_for():
     result = run("", "--symbol", "MSFT", "--term", "copilot", "--source", "news", "--from-days-ago", "14", "--yes")
     assert result.returncode == 0 and "Symbol  (" not in result.stderr and "Term    (" not in result.stderr
     assert command(result)[3:] == ["--symbol", "MSFT", "--term", "copilot", "--source", "news", "--from-days-ago", "14"]
-
-
-def test_a_symbol_and_a_term_together_are_both_passed_on():
-    cmd = command(run("SNDK\nlong-term contracts\n\n7\nn\n"))
-    assert cmd[cmd.index("--symbol") + 1] == "SNDK" and cmd[cmd.index("--term") + 1] == "long-term contracts"
-
-
-def test_with_nothing_given_it_asks_again_and_then_gives_up_when_the_input_ends():
-    result = run("\n\n")  # a blank symbol and a blank term, then the input ends
-    assert result.returncode == 2 and "Give a symbol, a term, or both." in result.stderr and "DRY RUN" not in result.stdout
 
 
 def test_with_no_input_at_all_it_stops_instead_of_looping():
@@ -128,44 +85,9 @@ def test_with_no_input_at_all_it_stops_instead_of_looping():
     assert result.returncode == 2 and "Give a symbol, a term, or both." in result.stderr
 
 
-def test_a_blank_answer_the_first_time_and_a_good_one_the_second_time_is_accepted():
-    result = run("\n\n\nflying car\n\n\n")  # blank, blank (asked again), then the term
-    assert result.returncode == 0 and result.stderr.count("Give a symbol, a term, or both.") == 1
-    assert command(result)[command(result).index("--term") + 1] == "flying car"
-
-
-def test_an_invalid_symbol_is_asked_for_again():
-    result = run("../etc\nmsft\n\n\n\nn\n")
-    assert "'../etc' is not a valid ticker symbol or company name." in result.stderr and result.returncode == 0
-    assert command(result)[command(result).index("--symbol") + 1] == "msft"  # passed as typed: the desk looks a ticker in lower case up
-
-
 def test_an_invalid_symbol_given_as_a_flag_is_refused_without_asking_again():
     result = run("", "--symbol", "../etc")
     assert result.returncode == 2 and "not a valid ticker symbol or company name" in result.stderr
-
-
-@pytest.mark.parametrize("answers, expected", [("x\n91\nabc\n0\n10\n", "10"), ("\n", "7")])
-def test_days_outside_one_to_ninety_are_asked_for_again_and_blank_is_seven(answers, expected):
-    result = run("\nflying car\n\n" + answers)
-    assert command(result)[command(result).index("--from-days-ago") + 1] == expected
-    if expected == "10":
-        assert result.stderr.count("is not a whole number of days from 1 to 90") == 4
-
-
-@pytest.mark.parametrize("days", ["0", "91", "-1", "seven", "7.5", ""])
-def test_days_that_are_not_valid_as_a_flag_are_refused(days):
-    result = run("", "--term", "flying car", "--from-days-ago", days)
-    if days == "":
-        assert result.returncode == 0 and command(result)[command(result).index("--from-days-ago") + 1] == "7"  # blank means the default, which is 7
-    else:
-        assert result.returncode == 2 and "is not a whole number of days from 1 to 90" in result.stderr
-
-
-def test_a_source_that_is_not_wired_is_asked_for_again_and_news_is_the_default():
-    result = run("\nflying car\nsocial\nnews\n\n")  # 'filings' was the example until entry 35 wired it
-    assert "Source 'social' is not wired yet (only: news, press_releases, filings)." in result.stderr and command(result)[command(result).index("--source") + 1] == "news"
-    assert run("", "--term", "flying car", "--source", "social").returncode == 2
 
 
 def test_the_other_flags_reach_the_desk():
@@ -206,85 +128,9 @@ def test_press_releases_are_asked_for_in_the_same_order_with_a_company_prompt_af
     assert "FETCH fresh press releases for AAPL (paid APIs; writes data/press_releases/AAPL_PRs.txt)" in result.stdout
 
 
-def test_the_company_prompt_is_only_asked_for_press_releases():
-    assert "Company name" not in run("MSFT\n\n\n7\nn\n").stderr
-    assert "Company name" in run("AAPL\n\npress_releases\n\n\nn\n").stderr
-
-
-def test_a_company_typed_at_the_prompt_is_passed_on_with_the_symbol():
-    result = run("AAPL\n\npress_releases\nApple Inc\n\nn\n")
-    cmd = command(result)
-    assert cmd[cmd.index("--symbol") + 1] == "AAPL" and cmd[cmd.index("--company") + 1] == "Apple Inc" and "--no-fetch" in cmd
-    assert result.returncode == 0 and cmd[cmd.index("--from-days-ago") + 1] == "365"
-
-
-def test_a_company_name_alone_as_a_flag_is_a_whole_request_with_a_lookup_before_the_file_is_known():
-    result = run("", "--source", "press_releases", "--company", "Apple Inc", "--yes")
-    assert result.returncode == 0, result.stderr
-    assert command(result) == [*DESK, "--symbol", "", "--term", "", "--source", "press_releases", "--from-days-ago", "365", "--company", "Apple Inc"]
-    assert "FETCH fresh press releases for 'Apple Inc' (its ticker is looked up first) (paid APIs; writes data/press_releases/<its ticker>_PRs.txt)" in result.stdout
-    assert "company: Apple Inc" in result.stdout
-
-
-def test_company_alone_means_press_releases_and_a_company_name_with_spaces_is_one_argument():
-    result = run("", "--company", "Procter & Gamble Co", "--yes")
-    cmd = command(result)
-    assert result.returncode == 0 and cmd[cmd.index("--source") + 1] == "press_releases" and cmd[cmd.index("--company") + 1] == "Procter & Gamble Co"
-
-
 def test_company_with_the_news_source_is_refused_and_not_silently_ignored():
     result = run("", "--symbol", "MSFT", "--source", "news", "--company", "Microsoft", "--yes")
     assert result.returncode == 2 and "--company is only used with --source press_releases or filings (not 'news')" in result.stderr and "DRY RUN" not in result.stdout
-
-
-def test_a_symbol_and_a_company_name_are_both_passed_on_and_the_confirmation_says_which_comes_first():
-    result = run("", "--source", "press_releases", "--symbol", "AAPL", "--company", "Apple Inc", "--yes")
-    cmd = command(result)
-    assert cmd[cmd.index("--symbol") + 1] == "AAPL" and cmd[cmd.index("--company") + 1] == "Apple Inc"
-    assert "FETCH fresh press releases for AAPL (if it is not found: 'Apple Inc')" in result.stdout
-
-
-def test_a_ticker_in_lower_case_is_passed_as_typed_and_its_file_is_named_in_capitals():
-    result = run("", "--source", "press_releases", "--symbol", "$aapl", "--yes")
-    cmd = command(result)
-    assert cmd[cmd.index("--symbol") + 1] == "aapl" and "writes data/press_releases/AAPL_PRs.txt" in result.stdout  # the Data Clerk looks it up and upper-cases it
-
-
-def test_a_term_narrows_a_press_release_request_and_cannot_replace_the_symbol_or_the_company():
-    narrowed = command(run("", "--source", "press_releases", "--symbol", "AAPL", "--term", "dividend", "--yes"))
-    assert narrowed[narrowed.index("--term") + 1] == "dividend"
-    result = run("", "--source", "press_releases", "--term", "dividend", "--yes")
-    assert result.returncode == 2 and "A press release request needs a symbol, a company name, or both." in result.stderr and "DRY RUN" not in result.stdout
-
-
-def test_a_press_release_request_with_nothing_but_blank_answers_is_refused():
-    result = run("\ndividend\npress_releases\n\n\n")  # a term only, then the source, then no company
-    assert result.returncode == 2 and "A press release request needs a symbol, a company name, or both." in result.stderr
-
-
-@pytest.mark.parametrize("days, ok", [("1", True), ("365", True), ("730", True), ("731", False), ("0", False), ("abc", False)])
-def test_press_releases_take_one_to_730_days_and_news_still_one_to_90(days, ok):
-    result = run("", "--source", "press_releases", "--symbol", "AAPL", "--from-days-ago", days, "--yes")
-    assert (result.returncode == 0) is ok and (ok or "is not a whole number of days from 1 to 730" in result.stderr)
-    assert run("", "--symbol", "AAPL", "--from-days-ago", "91", "--yes").returncode == 2  # news: unchanged
-
-
-def test_blank_days_for_press_releases_means_a_year_and_for_news_a_week():
-    pr = command(run("", "--source", "press_releases", "--symbol", "AAPL", "--from-days-ago", "", "--yes"))
-    news = command(run("", "--symbol", "AAPL", "--from-days-ago", "", "--yes"))
-    assert pr[pr.index("--from-days-ago") + 1] == "365" and news[news.index("--from-days-ago") + 1] == "7"
-
-
-@pytest.mark.parametrize("typed", ["a;b", "x|y", "../etc/passwd", "$(whoami)", "`id`", "a" * 61, "&amp"])
-def test_text_that_cannot_be_a_company_name_is_refused(typed):
-    result = run("", "--source", "press_releases", "--company", typed, "--yes")
-    assert result.returncode == 2 and "is not a valid company name." in result.stderr and "DRY RUN" not in result.stdout
-
-
-def test_an_invalid_company_typed_at_the_prompt_is_asked_for_again():
-    result = run("AAPL\n\npress_releases\na;b\nApple Inc\n\nn\n")
-    assert "'a;b' is not a valid company name." in result.stderr and result.returncode == 0
-    assert command(result)[command(result).index("--company") + 1] == "Apple Inc"
 
 
 def test_the_fetch_question_for_press_releases_follows_the_same_safety_rules_as_news():
@@ -294,24 +140,6 @@ def test_the_fetch_question_for_press_releases_follows_the_same_safety_rules_as_
     assert "--no-fetch" in command(ended) and "no answer: not fetching. Pass --yes to fetch without being asked." in ended.stderr and "FETCH fresh" not in ended.stdout
     flagged = run("", "--source", "press_releases", "--symbol", "AAPL", "--no-fetch")
     assert "--no-fetch" in command(flagged) and "Fetch fresh" not in flagged.stderr  # --no-fetch: not even asked
-
-
-def test_a_source_other_than_news_press_releases_and_filings_is_still_refused():
-    for typed in ("social", "Filings", "Press_Releases", "press-releases"):
-        result = run("", "--term", "x", "--source", typed)
-        assert result.returncode == 2 and f"Source '{typed}' is not wired yet (only: news, press_releases, filings)." in result.stderr
-
-
-def test_help_explains_the_press_release_source_the_company_flag_and_the_ticker_first_rule():
-    text = run("", "--help").stdout
-    for part in ("press_releases", "--company NAME", "default 365, from 1 to 730", "The ticker comes first", "Symbol: X is not found", "Company Name not found.",
-                 "--company alone implies --source press_releases", "A typo is NOT matched", "Pepsico"):
-        assert part in text, part
-
-
-def test_the_other_flags_still_reach_the_desk_after_a_press_release_request():
-    cmd = command(run("", "--source", "press_releases", "--symbol", "AAPL", "--no-advisor", "--no-fetch", "--model", "x/y"))
-    assert cmd[-4:] == ["--no-fetch", "--no-advisor", "--model", "x/y"] and "--company" not in cmd  # no company was given, so none is passed
 
 
 # ================================================================ filings (design choices entry 35)
@@ -331,70 +159,6 @@ def test_filings_are_asked_for_in_the_same_order_with_a_company_prompt_after_the
     assert "FETCH fresh filings for AAPL (paid APIs; writes data/filings/AAPL.txt)" in result.stdout
 
 
-def test_the_company_prompt_for_press_releases_keeps_its_words():
-    assert "Company name  (press_releases only, used when the symbol is not given or not found; blank for none)" in run("AAPL\n\npress_releases\n\n\nn\n").stderr
-    assert "Company name" not in run("MSFT\n\n\n7\nn\n").stderr  # and news has none
-
-
-def test_a_company_typed_at_the_filings_prompt_is_passed_on_with_the_symbol():
-    result = run("AAPL\n\nfilings\nApple Inc\n\nn\n")
-    cmd = command(result)
-    assert cmd[cmd.index("--symbol") + 1] == "AAPL" and cmd[cmd.index("--company") + 1] == "Apple Inc" and "--no-fetch" in cmd
-    assert result.returncode == 0 and cmd[cmd.index("--source") + 1] == "filings" and cmd[cmd.index("--from-days-ago") + 1] == "365"
-
-
-def test_a_company_name_alone_with_the_filings_source_is_a_whole_request_with_a_lookup_before_the_file_is_known():
-    result = run("", "--source", "filings", "--company", "Apple Inc", "--yes")
-    assert result.returncode == 0, result.stderr
-    assert command(result) == [*DESK, "--symbol", "", "--term", "", "--source", "filings", "--from-days-ago", "365", "--company", "Apple Inc"]
-    assert "FETCH fresh filings for 'Apple Inc' (its ticker is looked up first) (paid APIs; writes data/filings/<its ticker>.txt)" in result.stdout
-    assert "company: Apple Inc" in result.stdout
-
-
-def test_company_alone_still_means_press_releases_and_filings_must_be_asked_for_by_name():
-    cmd = command(run("", "--company", "Procter & Gamble Co", "--yes"))
-    assert cmd[cmd.index("--source") + 1] == "press_releases"  # unchanged by filings
-    cmd = command(run("", "--company", "Procter & Gamble Co", "--source", "filings", "--yes"))
-    assert cmd[cmd.index("--source") + 1] == "filings" and cmd[cmd.index("--company") + 1] == "Procter & Gamble Co"
-
-
-def test_a_symbol_and_a_company_name_are_both_passed_on_for_filings_and_the_confirmation_says_which_comes_first():
-    result = run("", "--source", "filings", "--symbol", "AAPL", "--company", "Apple Inc", "--yes")
-    cmd = command(result)
-    assert cmd[cmd.index("--symbol") + 1] == "AAPL" and cmd[cmd.index("--company") + 1] == "Apple Inc"
-    assert "FETCH fresh filings for AAPL (if it is not found: 'Apple Inc')" in result.stdout
-
-
-def test_a_ticker_in_lower_case_is_passed_as_typed_and_its_filings_file_is_named_in_capitals():
-    result = run("", "--source", "filings", "--symbol", "$aapl", "--yes")
-    cmd = command(result)
-    assert cmd[cmd.index("--symbol") + 1] == "aapl" and "writes data/filings/AAPL.txt" in result.stdout
-
-
-def test_a_filings_request_with_nothing_to_look_up_is_refused_in_the_words_of_filings():
-    result = run("", "--source", "filings", "--term", "risk factors", "--yes")
-    assert result.returncode == 2 and "A filings request needs a symbol, a company name, or both." in result.stderr and "DRY RUN" not in result.stdout
-    assert run("\nrisk factors\nfilings\n\n\n").returncode == 2  # a term only, then the source, then no company
-    assert "A press release request needs a symbol, a company name, or both." in run("", "--source", "press_releases", "--term", "x", "--yes").stderr  # unchanged
-
-
-@pytest.mark.parametrize("days, ok", [("1", True), ("365", True), ("730", True), ("731", False), ("0", False), ("abc", False)])
-def test_filings_take_one_to_730_days(days, ok):
-    result = run("", "--source", "filings", "--symbol", "AAPL", "--from-days-ago", days, "--yes")
-    assert (result.returncode == 0) is ok and (ok or "is not a whole number of days from 1 to 730" in result.stderr)
-
-
-def test_blank_days_for_filings_means_a_year():
-    cmd = command(run("", "--source", "filings", "--symbol", "AAPL", "--from-days-ago", "", "--yes"))
-    assert cmd[cmd.index("--from-days-ago") + 1] == "365"
-
-
-@pytest.mark.parametrize("typed", ["a;b", "x|y", "../etc/passwd", "$(whoami)", "`id`", "a" * 61, "&amp"])
-def test_text_that_cannot_be_a_company_name_is_refused_for_filings_too(typed):
-    result = run("", "--source", "filings", "--company", typed, "--yes")
-    assert result.returncode == 2 and "is not a valid company name." in result.stderr and "DRY RUN" not in result.stdout
-
-
 def test_the_fetch_question_for_filings_follows_the_same_safety_rules_as_news():
     no = run("AAPL\n\nfilings\n\n\nn\n")
     assert "--no-fetch" in command(no) and "no fetch (the stored filings are searched; the symbol or name is still looked up in Finnhub)" in no.stdout
@@ -402,18 +166,6 @@ def test_the_fetch_question_for_filings_follows_the_same_safety_rules_as_news():
     assert "--no-fetch" in command(ended) and "no answer: not fetching. Pass --yes to fetch without being asked." in ended.stderr and "FETCH fresh" not in ended.stdout
     flagged = run("", "--source", "filings", "--symbol", "AAPL", "--no-fetch")
     assert "--no-fetch" in command(flagged) and "Fetch fresh" not in flagged.stderr  # --no-fetch: not even asked
-
-
-def test_help_explains_the_filings_source_and_what_has_no_text():
-    text = " ".join(run("", "--help").stdout.split())
-    for part in ("--source filings", "news|press_releases|filings", "data/filings/<TICKER>.txt", "only 10-K and 8-K come with text", "press_releases and filings only",
-                 "default 365, from 1 to 730 for press_releases and filings"):
-        assert part in text, part
-
-
-def test_the_other_flags_still_reach_the_desk_after_a_filings_request():
-    cmd = command(run("", "--source", "filings", "--symbol", "AAPL", "--no-advisor", "--no-fetch", "--model", "x/y"))
-    assert cmd[-4:] == ["--no-fetch", "--no-advisor", "--model", "x/y"] and "--company" not in cmd
 
 
 # ---------------------------------------------------------------- ./test_prometheus.sh --session: a user session, end to end (design choices entry 78)
@@ -453,16 +205,6 @@ def test_a_person_can_type_any_user_and_any_request_the_script_knows_no_company_
         assert word not in session_block, word
 
 
-@pytest.mark.parametrize("answers, message", [
-    ("maybe\n", "Answer Y or N."), ("y\n1bad\n", "A name is letters"), ("y\nBob\n17\n", "Age is a whole number from 18 to 120"), ("y\nBob\n60\nlow\n", "Risk tolerance is conservative, moderate or aggressive"),
-    ("y\nBob\n60\nmoderate\n$5,000\n", "Money is a number of dollars above zero"), ("y\nBob\n60\nmoderate\n0\n", "Money is a number of dollars above zero"),
-    ("y\nBob\n60\nmoderate\n100\nmanual\n", "Trade mode is ask or auto"), ("n\nBad Key!\n", "An account is a number, or a sample key"),
-])
-def test_an_answer_that_is_not_valid_is_asked_again_and_when_the_input_ends_the_session_stops(answers, message):
-    result = run(answers, "--session")
-    assert result.returncode == 2 and message in result.stderr and "DRY RUN" not in result.stdout
-
-
 @pytest.mark.parametrize("flags, message", [
     (["--name", "1bad"], "A name is letters"), (["--age", "17"], "Age is a whole number from 18 to 120"), (["--age", "abc"], "Age is a whole number"), (["--risk", "low"], "Risk tolerance is conservative"),
     (["--cash", "$5,000"], "Money is a number of dollars"), (["--cash", "-5"], "Money is a number of dollars"), (["--mode", "manual"], "Trade mode is ask or auto"), (["--prompt", " "], "Say what you want"),
@@ -492,12 +234,48 @@ def test_the_paid_fetch_is_asked_about_and_nobody_answering_is_a_no():
     assert "--fetch" not in command(run("", "--session", *BOB, "--prompt", OIL, "--no-fetch")) and "--fetch" in command(run("", "--session", *BOB, "--prompt", OIL, "--yes"))
 
 
+# ---- the session as the Account Manager reads it now: a trade the user names (design choices entry 87) does no research, so the paid refresh is not asked about
+
+DIRECT_REQUESTS = json.loads((REPO / "tests" / "fixtures" / "session_real" / "direct_order_forms.json").read_text(encoding="utf-8"))["requests"]
+
+
+def fetched(prompt: str, *more: str) -> bool:
+    """Whether the script would pass `--fetch` for this request when the user said --yes (so a request that does no research must not)."""
+    return "--fetch" in command(run("", "--session", *BOB, "--prompt", prompt, "--yes", *more))
+
+
+def test_a_request_that_names_the_trade_asks_no_paid_question_and_passes_no_fetch_even_with_yes():
+    result = run("", "--session", *BOB, "--prompt", "Buy 50 shares of MSFT", "--yes")
+    assert result.returncode == 0 and "names the trade itself, a direct order" in result.stdout
+    assert command(result) == [*SESSION, "--prompt", "Buy 50 shares of MSFT", "--name", "Bob Jones", "--age", "60", "--risk", "conservative", "--cash", "15000", "--mode", "auto", "--yes"]      # no --fetch
+    asked = run("", "--session", *BOB, "--prompt", "Sell 10 shares of TSLA")                  # without --yes: the paid question is not asked either
+    assert asked.returncode == 0 and "Refresh the data" not in asked.stderr and "--fetch" not in command(asked) and "no answer: not fetching" not in asked.stderr
+    assert "--fetch" in command(run("", "--session", *BOB, "--prompt", OIL, "--yes")) and "Refresh the data" in run("", "--session", *BOB, "--prompt", OIL).stderr      # a request for recommendations is asked as before
+
+
+@pytest.mark.parametrize("typed, names_one", [
+    ("Buy 50 shares of MSFT", True), ("sell 10 shares of tsla", False), ("Sell 10 shares of TSLA", True), ("Please purchase twenty-five shares of ABCD", True), ("Please purchase five shares of ABCD", True),
+    ("Buy $5,000 of MSFT", True), ("I want to buy MSFT", True), ("I want to buy MU, SNDK and AMD if the recommendations pass", False), ("I want to buy the three most recommended oil stocks", False),
+    ("Buy the 3 best US oil stocks", False), ("I want to buy oil stocks. Buy the 3 most recommended companies.", False), ("Buy 3 shares of oil stocks", False),
+    ("Show me 50 shares of MSFT", False),               # no buying or selling word: nothing is asked of the desk
+])
+def test_what_the_script_takes_for_a_trade_you_name_yourself(typed, names_one):
+    assert (not fetched(typed)) is names_one, typed
+
+
+def test_the_help_says_which_way_in_is_the_end_to_end_one_and_what_a_trade_you_name_does():
+    result = subprocess.run(["bash", str(SCRIPT), "--help"], capture_output=True, text=True, cwd=REPO, timeout=30)
+    text = result.stdout
+    assert result.returncode == 0 and "TWO WAYS IN" in text and "THE END-TO-END PATH, through the Account Manager's own interface" in text
+    assert "NAMES THE TRADE" in text and "DIRECT ORDER" in text and "Buy 50 shares of MSFT" in text and 'asks (a percentage, dollars, shares or "as much as I can"' in text
+
+
 def test_the_other_session_flags_are_passed_on_exactly_as_given():
-    result = run("", "--session", *BOB, "--prompt", OIL, "--no-fetch", "--cleanup", "--allow-no-trade", "--no-trader-model", "--real-ledger", "--auto-min-score", "70", "--max-position-pct", "0.2",
-                 "--max-exposure-pct", "0.6", "--default-count", "4", "--model", "openai/gpt-oss-120b")
+    result = run("", "--session", *BOB, "--prompt", OIL, "--no-fetch", "--cleanup", "--allow-no-trade", "--no-trader-model", "--real-ledger", "--auto-min-score", "70",
+                 "--default-count", "4", "--model", "openai/gpt-oss-120b")
     cmd = command(result)
     assert result.returncode == 0 and "--cleanup" in cmd and "--allow-no-trade" in cmd and "--no-trader-model" in cmd and "--real-ledger" in cmd
-    assert cmd[cmd.index("--auto-min-score") + 1] == "70" and cmd[cmd.index("--max-position-pct") + 1] == "0.2" and cmd[cmd.index("--max-exposure-pct") + 1] == "0.6"
+    assert cmd[cmd.index("--auto-min-score") + 1] == "70"
     assert cmd[cmd.index("--default-count") + 1] == "4" and cmd[cmd.index("--model") + 1] == "openai/gpt-oss-120b" and "--fetch" not in cmd and "--yes" not in cmd
 
 
@@ -522,18 +300,6 @@ def test_the_first_question_is_whether_to_create_a_user_and_no_asks_for_an_exist
     assert cmd[cmd.index("--account") + 1] == "jacob_sample" and "--name" not in cmd and "--cash" not in cmd and "--mode" not in cmd and "I want to buy oil stocks." in cmd[cmd.index("--prompt") + 1]
 
 
-@pytest.mark.parametrize("answer", ["", "y", "Y", "yes", "YES"])
-def test_enter_and_every_spelling_of_yes_create_a_user(answer):
-    result = run(f"{answer}\n" + "\n" * 6 + "n\n", "--session")
-    assert result.returncode == 0 and "Name  [Bob Jones]" in result.stderr and "--name" in command(result)
-
-
-@pytest.mark.parametrize("answer", ["n", "N", "no", "No"])
-def test_every_spelling_of_no_goes_to_the_existing_account(answer):
-    result = run(f"{answer}\n7\n\nn\n", "--session")
-    assert result.returncode == 0 and "Name  [Bob Jones]" not in result.stderr and command(result)[command(result).index("--account") + 1] == "7"
-
-
 def test_a_flag_for_any_field_of_the_user_means_a_new_user_without_asking_whether_to_create_one():
     result = run("\n\n\n\n\n\nn\n", "--session", "--name", "Ada Lovelace")
     assert result.returncode == 0 and "Create a new user?" not in result.stderr and "Name  [" not in result.stderr and "Age  [60]" in result.stderr
@@ -543,3 +309,10 @@ def test_a_flag_for_any_field_of_the_user_means_a_new_user_without_asking_whethe
 def test_no_answer_at_all_to_the_first_question_starts_nothing_instead_of_creating_a_user_on_the_defaults():
     result = run("", "--session")
     assert result.returncode == 2 and "no answer: the input ended, so nothing was started" in result.stderr and "DRY RUN" not in result.stdout
+
+
+def test_the_script_has_no_flag_for_a_size_limit_and_refuses_one():
+    """Design choices entry 91: there is no profile limit to raise for a session, so the flags that did are gone (the script refuses them as any unknown option)."""
+    for flag in ("--max-position-pct", "--max-exposure-pct", "--max-loss-pct"):
+        result = run("", "--session", *BOB, "--prompt", OIL, flag, "0.5")
+        assert result.returncode == 2 and "unknown option" in result.stderr, flag

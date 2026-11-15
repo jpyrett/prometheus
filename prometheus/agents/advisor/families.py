@@ -41,13 +41,13 @@ REQUIRED = {
 }
 OPTIONAL = {
     "trend": ("above_sma_50", "residual_mom_12_1", "macd_hist", "adx_14", "obv_20d_change", "vol_63d_ann", "breakout_20d", "bollinger_pct_b"),
-    "event": ("gap_1d", "sue_4q", "eps_surprise_last", "market_cap"),
+    "event": ("gap_1d", "sue_4q", "eps_surprise_last"),
     "reversion": ("residual_5d", "sector_ret_5d", "spy_ret_5d", "above_sma_200", "above_sma_50", "bollinger_pct_b", "volume_ratio_1d", "gap_1d", "candle_reversal_1d", "stoch_k_14"),
-    "capital_return": ("payout_coverage", "revenue_growth", "net_payout_yield_ttm", "share_count_change", "sbc_to_revenue", "market_cap", "cash_balance"),
+    "capital_return": ("payout_coverage", "revenue_growth", "share_count_change", "sbc_to_revenue", "cash_balance"),
     "theme": ("residual_21d", "volume_ratio_1d", "roe", "operating_margin"),
     "conviction": ("rsi_14",),
 }
-ANY_OF = {"capital_return": ("share_count_change", "net_payout_yield_ttm")}   # at least one of these must be present
+ANY_OF = {"capital_return": ("share_count_change",)}   # at least one of these must be present
 EXTRA_REQUIRED = {"recent_bars": "dates the events and measures their reaction"}  # asked for every candidate (the Advisor times events with it), not a family's own input
 FAMILIES = tuple(REQUIRED)
 
@@ -93,11 +93,11 @@ def _start(family: str, inp: FamilyInput) -> FamilyResult:
         waived=waived, notes=[*([WAIVED_NOTE] if waived else []), *(f"{n}: {note_of(inp.metrics, n)}" for n in missing if n in inp.metrics)])
 
 
-def _finish(result: FamilyResult, inp: FamilyInput, score: float, direction: str, prior: float | None = None, haircut: float = 1.0) -> FamilyResult:
-    """The family passed: set its score, direction and edge. `edge_20d = prior x regime x score x quality (x haircut)`, negative when bearish."""
+def _finish(result: FamilyResult, inp: FamilyInput, score: float, direction: str, prior: float | None = None) -> FamilyResult:
+    """The family passed: set its score, direction and edge. `edge_20d = prior x regime x score x quality`, negative when bearish."""
     if prior is not None:
         result.prior_20d = prior
-    result.passed, result.direction, result.score = True, direction, round(max(0.0, min(1.0, score * haircut)), 4)
+    result.passed, result.direction, result.score = True, direction, round(max(0.0, min(1.0, score)), 4)
     sign = 1.0 if direction == "bullish" else -1.0
     result.edge_20d = round(sign * abs(result.prior_20d) * result.regime_multiplier * result.score * inp.quality.multiplier, 8)
     return result
@@ -187,11 +187,7 @@ def event(inp: FamilyInput) -> FamilyResult:
         return _fail(result, [f"{chosen['class']}: {why}"])
     volume = chosen.get("event_volume_ratio")
     score = cfg.base + cfg.w_unpriced * (1 - _clip((reaction_atr or 0.0) / cfg.max_reaction_atr)) + cfg.w_volume * (volume is not None and volume >= cfg.volume_ratio_min)
-    cap = inp.v("market_cap")
-    haircut = cfg.large_cap_factor if cap is not None and cap > cfg.large_cap else 1.0
-    if haircut != 1.0:
-        result.notes.append(f"score halved: market cap ${cap:,.0f} is over ${cfg.large_cap:,.0f}")
-    return _finish(result, inp, score, chosen["direction"], prior=cfg.prior_event, haircut=haircut)
+    return _finish(result, inp, score, chosen["direction"], prior=cfg.prior_event)
 
 
 # ---------------------------------------------------------------- reversion
@@ -251,21 +247,20 @@ def reversion(inp: FamilyInput) -> FamilyResult:
 # ---------------------------------------------------------------- capital_return
 
 def capital_return(inp: FamilyInput) -> FamilyResult:
-    """A company that returns cash. Pass when ALL: the net payout yield (buybacks + dividends - stock issued, over market cap) is at least 3% (or, when it cannot be
-    computed, the share count fell at least 0.5%); the share count did not rise; debt to equity <= 2; earnings yield > 0; dividends are covered
+    """A company that returns cash by buying its shares back. Pass when ALL: the share count fell at least 0.5%; debt to equity <= 2; earnings yield > 0; dividends are covered
     (payout coverage < 1) and revenue is not falling more than 5%, when known.
-    Score = 0.40 + 0.30 x clip(payout yield / 8%) + 0.10 if the share count fell more than 1% + 0.10 for a buyback authorization or dividend raise in the last 60 bars (halved when the
-    authorization is larger than the company's cash) + 0.10 for revenue growth. Without the payout yield the 0.30 term is 0.15 if the share count fell more than 1%.
-    Issuance is not a separate rule: `dilution_current` is not computed and does not vote (design choices entry 70). A rising share count is still `share_count_change`."""
+    Score = 0.40 + 0.15 + 0.10 if the share count fell more than 1% + 0.10 for a buyback authorization or dividend raise in the last 60 bars (halved when the
+    authorization is larger than the company's cash) + 0.10 for revenue growth.
+    THERE IS NO PAYOUT YIELD (design choices entry 97; Jacob, 2026-11-15: no market capitalization anywhere, and the yield's denominator was the market capitalization): the share count
+    stands in for it, which is what this family did when the yield could not be computed. Issuance is not a separate rule: `dilution_current` is not computed and does not vote
+    (design choices entry 70). A rising share count is still `share_count_change`."""
     result, cfg = _start("capital_return", inp), inp.config.families.capital_return
     if not result.computable:
         return result
-    npy, shares, growth = inp.v("net_payout_yield_ttm"), inp.v("share_count_change"), inp.v("revenue_growth")
+    shares, growth = inp.v("share_count_change"), inp.v("revenue_growth")
     failures = []
-    if npy is not None and npy < cfg.min_net_payout_yield:
-        failures.append(f"net_payout_yield_ttm {npy:.4f} is under {cfg.min_net_payout_yield}")
-    if npy is None and not (shares is not None and shares <= cfg.min_share_count_change):
-        failures.append(f"net_payout_yield_ttm is missing and share_count_change {shares} is not at or under {cfg.min_share_count_change}")
+    if not (shares is not None and shares <= cfg.min_share_count_change):
+        failures.append(f"share_count_change {shares} is not at or under {cfg.min_share_count_change}")
     if shares is not None and shares > 0:
         failures.append(f"share_count_change {shares:.4f}: the share count rose")
     if "debt_to_equity" not in result.waived and inp.v("debt_to_equity") > cfg.max_debt_to_equity:
@@ -288,10 +283,7 @@ def capital_return(inp: FamilyInput) -> FamilyResult:
             result.notes.append(f"authorization exceeds cash: ${amount:,.0f} against ${cash:,.0f}")
     if fresh:
         result.evidence_ids = [f"[{fresh['source']}]" if isinstance(fresh.get("source"), int) else str(fresh.get("source"))]
-    payout_term = cfg.w_payout * _clip(npy / cfg.payout_scale) if npy is not None else cfg.w_missing_payout * (shares is not None and shares < cfg.shares_bonus)
-    if npy is None:
-        result.notes.append("net payout yield not computable: the share count stands in for it and completeness is lower")
-    score = cfg.base + payout_term + cfg.w_shares * (shares is not None and shares < cfg.shares_bonus) + event_term + cfg.w_growth * (growth is not None and growth > 0)
+    score = cfg.base + cfg.w_buyback * (shares is not None and shares < cfg.shares_bonus) + cfg.w_shares * (shares is not None and shares < cfg.shares_bonus) + event_term + cfg.w_growth * (growth is not None and growth > 0)
     return _finish(result, inp, score, "bullish")
 
 

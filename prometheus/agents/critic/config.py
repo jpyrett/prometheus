@@ -148,7 +148,6 @@ class RiskMeasure(_Section):
     risky: float | None = None
     weight: float = Field(gt=0)
     abs: bool = False          # of the absolute value
-    log: bool = False          # of log10 (the bounds as well)
 
 
 class Risk(_Section):
@@ -174,8 +173,6 @@ class Risk(_Section):
         for m in self.measures:
             if m.name != "flags" and (m.safe is None or m.risky is None or m.safe == m.risky):
                 raise ValueError(f"risk measure {m.name} needs different safe and risky bounds")
-            if m.log and not (m.safe and m.safe > 0 and m.risky and m.risky > 0):
-                raise ValueError(f"risk measure {m.name} is logarithmic: its bounds must be positive")
         return self
 
 

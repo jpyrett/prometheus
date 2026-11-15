@@ -67,10 +67,6 @@ CREATE TABLE IF NOT EXISTS trading.accounts (
   investment_horizon_years  numeric(6, 2) CHECK (investment_horizon_years IS NULL OR investment_horizon_years > 0),
   trade_mode                text NOT NULL DEFAULT 'ask' CHECK (trade_mode IN ('ask', 'auto')),
   auto_min_score            integer CHECK (auto_min_score IS NULL OR auto_min_score BETWEEN 0 AND 100),
-  max_position_pct          numeric(6, 4) NOT NULL DEFAULT 0.1000 CHECK (max_position_pct > 0 AND max_position_pct <= 1),
-  max_loss_per_trade_pct    numeric(6, 4) NOT NULL DEFAULT 0.0100 CHECK (max_loss_per_trade_pct > 0 AND max_loss_per_trade_pct <= 1),
-  max_new_exposure_pct      numeric(6, 4) NOT NULL DEFAULT 0.3000 CHECK (max_new_exposure_pct > 0 AND max_new_exposure_pct <= 1),
-  max_order_dollars         numeric(14, 2) CHECK (max_order_dollars IS NULL OR max_order_dollars > 0),
   min_price                 numeric(14, 4) NOT NULL DEFAULT 5 CHECK (min_price >= 0),
   excluded_symbols          text[] NOT NULL DEFAULT '{}',
   excluded_sectors          text[] NOT NULL DEFAULT '{}',
@@ -79,6 +75,13 @@ CREATE TABLE IF NOT EXISTS trading.accounts (
   created_at                timestamptz NOT NULL DEFAULT now(),
   updated_at                timestamptz NOT NULL DEFAULT now()
 );
+
+-- Design choices entry 91 (Jacob, 2026-11-15): no profile limit applies to any order, so the four size limits are not stored any more. An account book made before that has the columns: drop them (idempotent).
+ALTER TABLE trading.accounts
+  DROP COLUMN IF EXISTS max_position_pct,
+  DROP COLUMN IF EXISTS max_loss_per_trade_pct,
+  DROP COLUMN IF EXISTS max_new_exposure_pct,
+  DROP COLUMN IF EXISTS max_order_dollars;
 
 CREATE TABLE IF NOT EXISTS trading.cash_ledger (
   entry_id      bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,

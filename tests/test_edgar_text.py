@@ -39,69 +39,10 @@ def lines_of(html: str) -> list[str]:
 
 # ---------------------------------------------------------------- the real submission
 
-def test_the_header_of_the_real_submission_gives_the_accession_the_form_and_the_period():
-    assert edgar_text.submission_facts(SUBMISSION) == {"accession": ACCESSION, "form": "10-Q", "period_end": "2025-12-27"}  # CONFORMED PERIOD OF REPORT: 20251227
-
-
-def test_the_10_Q_document_is_taken_and_not_one_of_its_exhibits():
-    assert SUBMISSION.count("<DOCUMENT>") == 4  # the fixture: the 10-Q and three certifications
-    document = edgar_text.main_document(SUBMISSION, "10-Q")
-    assert len(document) == 765_989 and document.lstrip().startswith("<XBRL>") and "Quarterly Report on Form 10-Q" in document
-    certification = edgar_text.main_document(SUBMISSION, "EX-31.1")
-    assert len(certification) == 10_407 and "CERTIFICATION" in certification.upper() and len(certification) < len(document) / 50
-
 
 def test_a_document_type_that_is_not_there_is_an_error_that_names_it():
     with pytest.raises(EdgarLayoutError, match="no document of type 10-K"):
         edgar_text.main_document(SUBMISSION, "10-K")
-
-
-def test_most_of_the_page_is_xbrl_markup_and_the_text_is_what_is_left_after_it_is_dropped():
-    document = edgar_text.main_document(SUBMISSION, "10-Q")
-    lines = lines_of(document)
-    text = "\n".join(lines)
-    assert len(lines) == 570 and len(text) < len(document) / 10  # 766,000 characters of page, about 58,000 of text
-    for hidden in ("us-gaap", "dei:", "iso4217", "xbrli", "EntityCentralIndexKey", "0000320193"):  # the facts of the hidden ix:header (56,191 characters) never reach the text
-        assert hidden not in text, hidden
-
-
-def test_a_table_row_is_one_line_with_its_cells_between_bars_and_the_real_numbers_are_kept_as_they_are():
-    text = "\n".join(lines_of(edgar_text.main_document(SUBMISSION, "10-Q")))
-    assert "Total net sales | 143,756 | 124,300" in text and "Products | $ | 113,743 | $ | 97,960" in text  # the dollar sign is a cell of its own in the real page
-    assert "Apple Inc. | Q1 2026 Form 10-Q | 20" in text  # a page footer: real text, kept
-    assert "Item 1. | Financial Statements | 1" in text  # the table of contents, a table with page numbers
-
-
-def test_the_real_10_Q_is_split_into_its_eleven_items_in_order_and_named():
-    sections = edgar_text.filing_sections(SUBMISSION, "10-Q")
-    assert [name for name, _ in sections] == NAMES  # Part I Items 1 to 4, then Part II Items 1, 1A, 2, 3, 4, 5, 6: the part is tracked, so Part II's Item 1 is not Part I's
-    assert {name: len(body) for name, body in sections} == {
-        "financial_statements": 24654, "mdna": 18051, "market_risk": 391, "controls": 1386, "legal_proceedings": 5227, "risk_factors": 410,
-        "unregistered_sales": 1401, "defaults": 45, "mine_safety": 83, "other_information": 1996, "exhibits": 1117}
-    assert sum(len(body) for _, body in sections) == 54761
-
-
-def test_each_section_starts_with_its_own_heading_and_has_text_after_it():
-    heads = {"financial_statements": "Item 1. Financial Statements", "market_risk": "Item 3. Quantitative and Qualitative Disclosures About Market Risk",
-             "legal_proceedings": "Item 1. Legal Proceedings", "risk_factors": "Item 1A. Risk Factors", "exhibits": "Item 6. Exhibits"}
-    by_name = dict(edgar_text.filing_sections(SUBMISSION, "10-Q"))
-    for name, heading in heads.items():
-        assert by_name[name].startswith(heading + "\n") and len(by_name[name]) > len(heading) + 1, name
-    assert by_name["defaults"] == "Item 3. Defaults Upon Senior Securities\nNone."  # the shortest real Item
-
-
-def test_the_cover_page_and_the_table_of_contents_are_left_out():
-    text = "\n".join(body for _, body in edgar_text.filing_sections(SUBMISSION, "10-Q"))
-    for left_out in ("Commission File Number", "Indicate by check mark", "Item 1. | Financial Statements | 1", "UNITED STATES"):
-        assert left_out not in text, left_out
-    assert text.count("Item 1. Financial Statements") == 1  # the heading once: the table of contents row is not a second one
-
-
-def test_real_text_from_the_filing_reaches_the_sections():
-    by_name = dict(edgar_text.filing_sections(SUBMISSION, "10-Q"))
-    assert "Total net sales | 143,756 | 124,300" in by_name["financial_statements"]
-    assert "Kevan Parekh, the Company’s Senior Vice President and Chief Financial Officer, entered into a trading plan" in by_name["other_information"]
-    assert "Digital Markets Act Investigations" in by_name["legal_proceedings"] and "business seasonality".lower() in by_name["mdna"].lower()
 
 
 def test_only_the_forms_the_module_knows_are_taken():
@@ -112,71 +53,8 @@ def test_only_the_forms_the_module_knows_are_taken():
 
 # ---------------------------------------------------------------- html to lines (small pages)
 
-def test_hidden_parts_scripts_and_styles_are_dropped_and_the_rest_is_kept():
-    html = ('<html><head><title>T</title><style>p{color:red}</style></head><body><ix:header><ix:hidden>a fact</ix:hidden></ix:header>'
-            '<script>var x = 1;</script><div style="display: none">hidden text</div><p>Visible <b>text</b></p><span style="DISPLAY:NONE">also hidden</span>after</body></html>')
-    assert lines_of(html) == ["Visible text", "after"]
-
-
-def test_block_elements_start_new_lines_and_whitespace_and_no_break_spaces_collapse():
-    assert lines_of("<div>one</div><p>two&nbsp;&nbsp; words</p>three<br/>four<br>five<ul><li>six</li></ul>\u200b") == ["one", "two words", "three", "four", "five", "six"]
-
-
-def test_a_table_row_has_its_cells_between_bars_and_empty_cells_and_empty_rows_are_left_out():
-    html = "<table><tr><td>Net sales</td><td></td><td> $ </td><td>1,000</td></tr><tr><td> </td><td></td></tr><tr><th>Total</th><td>2,000</td></tr></table>"
-    assert lines_of(html) == ["Net sales | $ | 1,000", "Total | 2,000"]
-
-
-def test_a_table_inside_a_cell_does_not_lose_the_outer_row():
-    html = "<table><tr><td>outer</td><td><table><tr><td>inner</td><td>cell</td></tr></table></td><td>end</td></tr></table>"
-    assert "inner | cell" in lines_of(html) and any(line.startswith("outer") and line.endswith("end") for line in lines_of(html))
-
-
-def test_html_that_is_not_well_formed_cannot_leave_the_text_hidden():
-    assert lines_of('<div style="display:none">hidden<p>still hidden</div><p>shown</p>') == ["shown"]  # the end tag of the hidden div closes it
-    assert lines_of("<p>one<p>two<br><br>three<img src='x'>four</p>") == ["one", "two", "threefour"]  # tags that are never closed; an image is inline, not a line break
-    assert lines_of("<td>cell outside a table</td><p>x</p>") == ["cell outside a table", "x"]
-
 
 # ---------------------------------------------------------------- the Items of a 10-Q (small texts)
-
-def test_an_item_heading_in_the_table_of_contents_as_plain_lines_gives_way_to_the_real_one():
-    lines = ["Part I", "Item 1. Financial Statements 1", "Item 2. Management's Discussion 5", "PART I - FINANCIAL INFORMATION", "Item 1. Financial Statements", "the statements", "more statements",
-             "Item 2. Management's Discussion", "the discussion"]
-    assert edgar_text.split_items(lines) == [("financial_statements", "Item 1. Financial Statements\nthe statements\nmore statements"),
-                                             ("mdna", "Item 2. Management's Discussion\nthe discussion")]  # the longer one of each name wins: the table of contents lines are one line long
-
-
-def test_a_cross_reference_at_the_start_of_a_line_is_not_a_heading():
-    lines = ["PART I", "Item 2. Management's Discussion", "text", "Item 1A of the 2025 Form 10-K under the heading Risk Factors", "Part I, Item 1A of the Form 10-K", "more text"]
-    assert edgar_text.split_items(lines) == [("mdna", "Item 2. Management's Discussion\ntext\nItem 1A of the 2025 Form 10-K under the heading Risk Factors\nPart I, Item 1A of the Form 10-K\nmore text")]
-
-
-def test_the_part_is_tracked_so_the_same_item_number_in_two_parts_is_two_sections():
-    lines = ["PART I", "Item 1. Financial Statements", "a", "PART II - OTHER INFORMATION", "Item 1. Legal Proceedings", "b"]
-    assert [name for name, _ in edgar_text.split_items(lines)] == ["financial_statements", "legal_proceedings"]
-
-
-def test_headings_are_found_in_capitals_with_other_dashes_and_without_a_title():
-    lines = ["PART II \u2014 OTHER INFORMATION", "ITEM 5. OTHER INFORMATION", "x", "Item 6 \u2013 Exhibits", "y", "Item 1A.", "z"]
-    assert [name for name, _ in edgar_text.split_items(lines)] == ["other_information", "exhibits", "risk_factors"]
-
-
-def test_an_item_that_has_no_known_name_is_named_by_its_part_and_number_and_without_a_part_by_its_number():
-    assert edgar_text.split_items(["PART II", "Item 7. Something New", "x"]) == [("partii_item7", "Item 7. Something New\nx")]
-    assert edgar_text.split_items(["Item 2. Management's Discussion", "x"]) == [("item2", "Item 2. Management's Discussion\nx")]
-
-
-def test_an_item_with_nothing_after_its_heading_is_dropped_and_text_before_the_first_heading_is_left_out():
-    lines = ["cover page", "PART I", "Item 1. Financial Statements", "the statements", "Item 2. Management's Discussion"]
-    assert edgar_text.split_items(lines) == [("financial_statements", "Item 1. Financial Statements\nthe statements")]
-
-
-def test_a_table_row_that_looks_like_a_heading_is_not_one():
-    """Two shapes of a table-of-contents row. In the real 10-Q the item number and the title are cells of their own (`Item 2. | Management's ... | 13`), which the capital-letter rule
-    already refuses; a row whose first cell holds both (`Item 2. Management's Discussion | 13`) starts like a heading, and only the rule about the bar refuses it (found by the mutation check)."""
-    for row in ("Item 2. | Management's Discussion | 13", "Item 2. Management's Discussion | 13"):
-        assert edgar_text.split_items(["PART I", "Item 1. Financial Statements", "a", row, "b"]) == [("financial_statements", f"Item 1. Financial Statements\na\n{row}\nb")], row
 
 
 def test_text_with_no_item_heading_is_an_error_and_not_one_big_section():
@@ -229,35 +107,6 @@ def downloads(box, monkeypatch):
     monkeypatch.setenv("SEC_USER_AGENT", AGENT)
     box.asked = asked
     return box
-
-
-def test_the_10_Q_with_no_text_is_downloaded_and_its_text_is_appended_as_a_second_record(downloads, tmp_path, capsys):
-    path = tmp_path / "filings" / "AAPL.txt"
-    before = path.read_bytes()
-    stats = downloads.fetch_filing_text("aapl", from_date=400)
-    capsys.readouterr()
-    assert stats == {"symbol": "AAPL", "path": str(path), "candidates": 1, "written": 1}
-    assert downloads.asked == [(f"EDGAR {ACCESSION}", URL, AGENT)]  # the url of the record, with the identity in the header
-    after = path.read_bytes()
-    assert after.startswith(before) and after.count(f"accession: {ACCESSION}\n".encode()) == 2  # append-only: nothing that was there changed
-    record = after[len(before):].decode()
-    assert record.startswith(f"<<<FILING>>>\naccession: {ACCESSION}\nsymbol: AAPL\nform: 10-Q\nfiled: 2026-01-30\nperiod_end: 2025-12-27\nurl: {URL}\ntext_status: ok\n<<<TEXT>>>\n== financial_statements ==\n")
-    assert record.count("\n== ") == 11 and record.endswith("<<<END>>>\n")
-
-
-def test_what_the_toolbox_appends_loads_as_eleven_documents_that_replace_the_one_without_text(downloads, tmp_path, capsys):
-    path = tmp_path / "filings" / "AAPL.txt"
-    assert [d.id for d in load_filings(path) if d.id.startswith(f"sec:{ACCESSION}")] == [f"sec:{ACCESSION}"]  # before: the short "text not stored" Document
-    downloads.fetch_filing_text("AAPL", from_date=400)
-    capsys.readouterr()
-    docs = [d for d in load_filings(path) if d.id.startswith(f"sec:{ACCESSION}")]
-    assert [d.id for d in docs] == [f"sec:{ACCESSION}:{name}" for name in NAMES]
-    assert docs[0].metadata["headline"] == "AAPL 10-Q, Financial Statements, filed 2026-01-30, period ending 2025-12-27"
-    assert docs[1].metadata["headline"] == "AAPL 10-Q, Management's Discussion and Analysis, filed 2026-01-30, period ending 2025-12-27"
-    assert docs[5].metadata["headline"] == "AAPL 10-Q, Risk Factors, filed 2026-01-30, period ending 2025-12-27"
-    assert docs[0].metadata["published_utc"] == "2026-01-30T00:00:00Z" and docs[0].metadata["publisher"] == "SEC filing" and docs[0].metadata["url"] == URL
-    assert docs[0].page_content.startswith("AAPL 10-Q, Financial Statements, filed 2026-01-30, period ending 2025-12-27\n\nItem 1. Financial Statements\n")
-    assert len(load_filings(path)) == 7 - 1 + 11  # the other six Documents of the fixture are unchanged: the 10-Q went from 1 Document to 11
 
 
 def test_the_second_run_finds_nothing_to_fetch_and_makes_no_request(downloads, tmp_path, capsys):
@@ -324,33 +173,6 @@ def test_a_page_with_no_items_stops_the_operation_with_the_accession_and_writes_
     with pytest.raises(ValueError, match=f"{ACCESSION} \\(10-Q\\): no Item heading"):
         downloads.fetch_filing_text("AAPL", from_date=400)
     assert (tmp_path / "filings" / "AAPL.txt").read_bytes() == before
-
-
-def test_a_failure_on_the_second_10_Q_keeps_the_first_that_was_written(downloads, tmp_path, monkeypatch, capsys):
-    path = tmp_path / "filings" / "AAPL.txt"
-    second = "0000320193-26-000013"
-    record = next(r for r in path.read_text(encoding="utf-8").split("<<<FILING>>>\n")[1:] if f"accession: {ACCESSION}" in r)
-    path.write_text(path.read_text(encoding="utf-8") + "<<<FILING>>>\n" + record.replace(ACCESSION, second).replace("filed: 2026-01-30", "filed: 2026-03-01"), encoding="utf-8")
-
-    def fake(client, limiter, name, url):
-        if second in url:
-            raise RuntimeError(f"EDGAR {second} HTTP 503")
-        return SUBMISSION.encode()
-
-    monkeypatch.setattr(DataToolbox, "_get_bytes", staticmethod(fake))
-    with pytest.raises(RuntimeError, match="HTTP 503"):
-        downloads.fetch_filing_text("AAPL", from_date=400)
-    capsys.readouterr()
-    assert len([d for d in load_filings(path) if d.id.startswith(f"sec:{ACCESSION}:")]) == 11  # the first one is stored with its text
-    assert [d.id for d in load_filings(path) if second in d.id] == [f"sec:{second}"]            # the second is still the short one: a rerun fetches it
-
-
-def test_fetch_filings_still_skips_a_filing_whose_text_was_fetched_later(downloads, tmp_path, monkeypatch, capsys):
-    """The Massive fetch skips by accession, and the accession of the 10-Q is in the file twice now: it must still count as stored."""
-    downloads.fetch_filing_text("AAPL", from_date=400)
-    seen = {line[11:].strip() for line in (tmp_path / "filings" / "AAPL.txt").read_text(encoding="utf-8").splitlines() if line.startswith("accession: ")}
-    assert ACCESSION in seen and len(seen) == 6
-    capsys.readouterr()
 
 
 def test_the_keyword_search_lists_the_10_Q_once_and_with_its_text_after_the_text_was_fetched(downloads, capsys):

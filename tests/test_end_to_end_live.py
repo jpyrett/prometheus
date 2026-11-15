@@ -28,7 +28,7 @@ pytestmark = [pytest.mark.live, pytest.mark.skipif(os.environ.get("PROMETHEUS_LI
 
 SENTENCE = ("I want to buy oil stocks. Buy the most amount of oil stocks shares from the 3 most recommended companies. "
             "Balance the purchased stocks evenly among the 3 recommended companies.")
-STORED = "I want to buy PG, MSFT and GM. Buy the most shares of the three and split the money evenly among them."      # real tickers whose data are stored
+STORED = "I want to buy PG, MSFT and GM if they are recommended. Buy the most shares of the three and split the money evenly among them."      # real tickers whose data are stored; it asks for recommendations (a named stock with no such word is a direct order: entry 98)
 YEAR = (date(2026, 1, 1), date(2026, 12, 31))
 NODES = ["account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader"]
 CREATED: list[int] = []
@@ -155,6 +155,25 @@ def test_in_ask_mode_a_request_that_does_not_say_how_much_is_asked_how_much_and_
             assert position.shares * position.cost_basis <= 0.05 * 15000.0 + max(p.cost_basis for p in after.positions), position      # at most 5% of the account in each (one share of slack for the fill price)
     else:
         assert code == 1 and "nothing was approved to trade" in text                                                                        # the Critic approved none, so there was nothing to size
+
+
+def test_a_stock_named_with_no_number_is_a_direct_order_in_ask_mode_the_user_is_asked_how_many_and_what_they_say_is_bought(book):
+    """Design choices entry 98 (Jacob, 2026-11-15): "I want to buy MSFT" is a direct order, not a request to recommend: no research, no Advisor, no Critic. In Ask mode the real Account Manager asks how many, the real model
+    words the question and reads the answer, code checks it, and the user is then shown the order and says yes."""
+    seen: list[str] = []
+
+    def ask(prompt):
+        seen.append(prompt)
+        if "(question" in prompt:
+            return "3 shares"
+        if prompt.startswith("Is this the order you meant"):
+            return "y"
+        pytest.fail(f"an unexpected question: {prompt!r}")
+
+    code, text, account_id = session("--prompt", "I want to buy MSFT", *ASK_USER, ask=ask)
+    after = book.list_portfolio(account_id)
+    assert code == 0 and account_id and any("(question" in prompt for prompt in seen) and "DIRECT ORDER" in text and "the Advisor ranked" not in text, text
+    assert [(p.symbol, p.shares) for p in after.positions] == [("MSFT", 3)] and "FILLED 3" in text
 
 
 def test_in_ask_mode_a_no_to_every_trade_buys_nothing_and_the_trader_does_not_run(book):

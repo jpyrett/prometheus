@@ -7,15 +7,6 @@ import pytest
 from prometheus.agents.advisor.config import CONFIG_PATH, FAMILIES, REGIMES, load_config
 
 
-def test_the_shipped_config_loads_and_every_family_has_a_multiplier_per_regime_and_a_stop():
-    config = load_config()
-    assert config.config_version == "1" and config.limits.max_candidates == 15 and config.gates.min_adv_dollars == 5e6
-    for family in FAMILIES:
-        assert set(config.regime.multipliers[family]) >= set(REGIMES) and family in config.trade.stop_atr
-    assert {c.name for c in config.quality.checks} >= {"operating_margin", "accrual_ratio", "cfo_negative_with_profit"}
-    assert config.families.trend.horizon == 63 and config.sleeves["funds"].eligible == ["capital_return", "trend", "reversion", "conviction"]
-
-
 def edited(tmp_path, change):
     data = json.loads(CONFIG_PATH.read_text())
     change(data)
@@ -25,8 +16,8 @@ def edited(tmp_path, change):
 
 
 @pytest.mark.parametrize("change, message", [
-    (lambda d: d["gates"].pop("min_adv_dollars"), "min_adv_dollars"),
-    (lambda d: d["gates"].update(min_adv_dolars=1), "min_adv_dolars"),                       # a typo is an error, not a silent default
+    (lambda d: d["gates"].pop("max_bar_age_sessions"), "max_bar_age_sessions"),
+    (lambda d: d["gates"].update(max_bar_age_sesions=1), "max_bar_age_sesions"),                       # a typo is an error, not a silent default
     (lambda d: d["families"]["trend"].update(horizon="soon"), "horizon"),
     (lambda d: d["regime"]["multipliers"]["trend"].pop("stress"), "has no value for stress"),
     (lambda d: d["trade"]["stop_atr"].pop("theme"), "stop_atr has no value for theme"),

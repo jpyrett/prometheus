@@ -141,9 +141,6 @@ class AccountStore:
             user=row["display_name"], risk_tolerance=row["risk_tolerance"], age=row["age"],
             investment_horizon_years=None if row["investment_horizon_years"] is None else float(row["investment_horizon_years"]),
             trade_mode=row["trade_mode"], auto_min_score=row["auto_min_score"],
-            max_position_pct=float(row["max_position_pct"]), max_loss_per_trade_pct=float(row["max_loss_per_trade_pct"]),
-            max_new_exposure_pct=float(row["max_new_exposure_pct"]),
-            max_order_dollars=None if row["max_order_dollars"] is None else float(row["max_order_dollars"]),
             min_price=float(row["min_price"]), excluded_symbols=list(row["excluded_symbols"]), excluded_sectors=list(row["excluded_sectors"]),
             note=row["note"])
 

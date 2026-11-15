@@ -1,0 +1,133 @@
+{
+ "request": "Buy 50 shares of MSFT",
+ "intent": {
+  "request": "Buy 50 shares of MSFT",
+  "action": "order",
+  "topic": null,
+  "symbols": [],
+  "companies": [],
+  "count": null,
+  "allocation": "default",
+  "budget": null,
+  "orders": [
+   {
+    "side": "buy",
+    "symbol": "MSFT",
+    "company": null,
+    "shares": 50
+   }
+  ]
+ },
+ "path": [
+  "account_manager",
+  "account_manager_direct"
+ ],
+ "order": {
+  "schema_version": 1,
+  "request_id": "542330fa0196",
+  "requester": "desk",
+  "created_utc": "2026-11-15T17:38:13Z",
+  "query": "Buy 50 shares of MSFT",
+  "action_type": "trade",
+  "subject": [
+   "MSFT"
+  ],
+  "company": null,
+  "source": "news",
+  "time_period": null,
+  "since_days": null,
+  "live": false,
+  "top_k": 5,
+  "criteria": null,
+  "status": "decided",
+  "resolved": null,
+  "data": {
+   "answer": "MSFT: Microsoft Corp (MSFT)",
+   "references": [],
+   "sources": [],
+   "sweep": {},
+   "results": {},
+   "filing_evidence": {},
+   "metrics": {},
+   "companies": [
+    {
+     "brand": "MSFT",
+     "parent": null,
+     "symbol": "MSFT",
+     "company": "Microsoft Corp",
+     "public": true,
+     "how": "ticker",
+     "note": ""
+    }
+   ],
+   "market_brief": {},
+   "verification": {},
+   "quotes": {},
+   "bars": {},
+   "problems": [],
+   "notes": [],
+   "no_supporting_text": false,
+   "tool_calls": [
+    {
+     "name": "find_symbol",
+     "args": {
+      "symbol": "MSFT"
+     },
+     "outcome": "ok"
+    }
+   ],
+   "turns": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "completed_utc": "2026-11-15T17:38:13Z"
+  },
+  "recommendations": [],
+  "advisor_runs": [],
+  "errors": [],
+  "metrics": null,
+  "case": null,
+  "sector": null,
+  "candidates": [],
+  "verify": null,
+  "reviews": [],
+  "critic_runs": [],
+  "trade_decisions": [
+   {
+    "record_id": "direct-542330fa0196-1",
+    "review_id": null,
+    "symbol": "MSFT",
+    "action": "open",
+    "shares": 50,
+    "est_cost": 26194.0,
+    "mode": "ask",
+    "will_trade": "no_funds",
+    "funds_avail": false,
+    "funds_note": null,
+    "asked_user": false,
+    "escalated": false,
+    "reason": "the cash $20,000.00 does not pay for 50 shares of MSFT at $523.88 ($26,194.00); the most it pays for is 38 shares: the order is placed as you typed it or not at all",
+    "decided_utc": "2026-11-13T20:30:00Z",
+    "size": null,
+    "origin": "direct",
+    "company": "Microsoft Corp",
+    "price": 523.88,
+    "valid_until_utc": "2026-11-13T21:00:00Z"
+   }
+  ],
+  "bars": null,
+  "trades": [],
+  "trader_runs": [],
+  "direct_orders": [
+   {
+    "record_id": "direct-542330fa0196-1",
+    "side": "buy",
+    "symbol": "MSFT",
+    "company": "Microsoft Corp",
+    "shares": 50,
+    "request": "Buy 50 shares of MSFT",
+    "requested_utc": "2026-11-13T20:30:00Z",
+    "typed_company": null
+   }
+  ]
+ }
+}

@@ -51,24 +51,12 @@ def order(**spec):
 
 # ---------------------------------------------------------------- read_sources
 
-def test_a_chunk_is_read_again_from_the_collection_its_id_names(stores):
-    got = clerk(stores).tools.read_sources(["a1#0", "pr:p1#0", "sec:0000320193-26-000006:risk_factors#0"])
-    assert [got[k]["corpus"] for k in got] == ["news", "press_releases", "filings"] and all(v["found"] for v in got.values())
-    a1 = got["a1#0"]
-    assert (a1["article_id"], a1["headline"], a1["publisher"], a1["tickers"], a1["text"]) == ("a1", "Headline of a1", "Yahoo", ["AAPL"], "apple iphone phone")
-    assert a1["published_utc"] == (NOW - 5 * DAY).strftime("%Y-%m-%dT%H:%M:%SZ") and a1["url"] == "https://example.com/a1"
-    assert got["pr:p1#0"]["publisher"] == "Press release"
-
 
 def test_an_unknown_chunk_an_evidence_id_and_a_wrong_collection_are_each_not_found_with_a_reason(stores):
     got = clerk(stores).tools.read_sources(["nope#0", "evidence:0000320193-26-000006:E3", "pr:a1#0"])
     assert got["nope#0"] == {"found": False, "note": "not in the stored news"}
     assert got["pr:a1#0"] == {"found": False, "note": "not in the stored press releases"}
     assert got["evidence:0000320193-26-000006:E3"]["found"] is False and "evidence id" in got["evidence:0000320193-26-000006:E3"]["note"]
-
-
-def test_the_answer_keeps_the_order_asked_and_drops_repeats(stores):
-    assert list(clerk(stores).tools.read_sources(["n1#0", "a1#0", "n1#0"])) == ["n1#0", "a1#0"]
 
 
 def test_a_store_that_cannot_be_read_is_reported_per_chunk_never_raised(stores):

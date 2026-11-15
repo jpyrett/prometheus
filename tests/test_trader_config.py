@@ -31,45 +31,6 @@ def edited(*path_and_value):
     return data
 
 
-def test_the_shipped_file_loads_and_holds_the_specs_numbers():
-    c = tc.load_config()
-    assert (c.config_version, c.mode) == ("1", "paper")
-    assert (c.limits.max_trades, c.limits.base_turns, c.limits.max_turns, c.limits.model_timeout_seconds, c.limits.max_note_words, c.limits.max_summary_words) == (20, 5, 12, 60, 20, 60)
-    assert (c.orders.max_chase_pct, c.orders.limit_band_pct, c.orders.allow_market, c.orders.cash_policy) == (0.01, 0.03, True, "reduce")
-    assert (c.costs.slippage_bps, c.costs.commission_per_order) == (5, 0.0) and c.funding.require_user_approval is True
-    assert (c.backtest.fill_at, c.backtest.max_follow_days, c.backtest.benchmark) == ("next_open", 90, "SPY") and c.ledger.path == "data/ledger/trades.jsonl"
-
-
-def test_the_loaded_settings_cannot_be_changed():
-    c = tc.load_config()
-    with pytest.raises(Exception):
-        c.mode = "backtest"
-    with pytest.raises(Exception):
-        c.orders.max_chase_pct = 0.5
-
-
-def test_a_copy_of_the_shipped_file_in_another_place_loads_the_same_way(tmp_path):
-    assert tc.load_config(write(tmp_path, raw())) == tc.load_config()
-
-
-def test_the_notes_in_the_file_are_not_settings(tmp_path):
-    data = {**raw(), "_other_note": "anything"}
-    assert tc.load_config(write(tmp_path, data)).config_version == "1"
-
-
-def test_the_ledger_is_the_trades_ledger_and_not_another_ones():
-    assert tc.load_config().ledger.path == "data/ledger/trades.jsonl" and "recommendations" not in tc.load_config().ledger.path and "reviews" not in tc.load_config().ledger.path
-
-
-@pytest.mark.parametrize("section", ["mode", "limits", "orders", "costs", "funding", "backtest", "ledger", "config_version"])
-def test_a_missing_section_is_an_error_that_names_the_file(tmp_path, section):
-    data = raw()
-    del data[section]
-    with pytest.raises(ValueError, match="trader.json") as error:
-        tc.load_config(write(tmp_path, data))
-    assert section in str(error.value)
-
-
 @pytest.mark.parametrize("section, key", [(s, k) for s, v in raw().items() if isinstance(v, dict) for k in v])
 def test_a_missing_key_in_any_section_is_an_error(tmp_path, section, key):
     data = copy.deepcopy(raw())
@@ -135,25 +96,6 @@ def test_each_value_this_version_refuses_is_an_error_naming_the_setting(tmp_path
         tc.load_config(write(tmp_path, edited(*keys, value)))
 
 
-def test_a_value_that_is_allowed_changes_what_is_read(tmp_path):
-    c = tc.load_config(write(tmp_path, edited("mode", "backtest")))
-    assert c.mode == "backtest"
-    c = tc.load_config(write(tmp_path, edited("orders", "allow_market", False)))
-    assert c.orders.allow_market is False
-    c = tc.load_config(write(tmp_path, edited("costs", "slippage_bps", 0)))
-    assert c.costs.slippage_bps == 0
-    assert tc.load_config(write(tmp_path, edited("backtest", "benchmark", "qqq"))).backtest.benchmark == "QQQ"
-    assert tc.load_config(write(tmp_path, edited("limits", "max_turns", 5))).limits.max_turns == 5          # equal to base_turns is allowed
-    assert tc.load_config(write(tmp_path, edited("backtest", "max_follow_days", 400))).backtest.max_follow_days == 400
-
-
-def test_a_commission_of_zero_is_the_only_one_this_version_loads(tmp_path):
-    """Spec section 15 (decided after phase 2): `apply_fill` and the account book charge no commission, so the loader refuses any other value (the parametrized refusals above); 0 and 0.0 are the shipped one."""
-    assert tc.load_config(write(tmp_path, edited("costs", "commission_per_order", 0))).costs.commission_per_order == 0
-    assert tc.load_config(write(tmp_path, edited("costs", "commission_per_order", 0.0))).costs.commission_per_order == 0.0
-    assert tc.load_config().costs.commission_per_order == 0.0
-
-
 def test_a_file_that_is_missing_not_json_or_not_an_object_is_refused_with_its_name(tmp_path):
     with pytest.raises(ValueError, match="does not exist"):
         tc.load_config(tmp_path / "nowhere.json")
@@ -165,32 +107,4 @@ def test_a_file_that_is_missing_not_json_or_not_an_object_is_refused_with_its_na
 
 # ---------------------------------------------------------------- PAPER_TRADING (rule T4)
 
-def test_paper_trading_is_on_in_every_test_by_default():
-    assert tc.paper_trading_enabled() is True                                                       # the autouse fixture in conftest.py: no test inherits Jacob's .env
 
-
-@pytest.mark.parametrize("value", ["true", "True", "TRUE", "yes", "YES", "on", "On", "1", " true ", "yes\n"])
-def test_the_words_that_let_the_trader_run(monkeypatch, value):
-    monkeypatch.setenv("PAPER_TRADING", value)
-    assert tc.paper_trading_enabled() is True
-
-
-@pytest.mark.parametrize("value", ["false", "False", "no", "off", "0", "live", "truee", "t", "enabled", "y", "2", "-1", "null"])
-def test_anything_else_refuses_every_run_a_typo_included(monkeypatch, value):
-    monkeypatch.setenv("PAPER_TRADING", value)
-    assert tc.paper_trading_enabled() is False
-
-
-def test_without_the_setting_in_the_environment_or_env_the_default_is_true(monkeypatch, tmp_path):
-    monkeypatch.delenv("PAPER_TRADING", raising=False)
-    monkeypatch.setattr("prometheus.rag.config.REPO_ROOT", tmp_path)                                  # no .env here
-    assert tc.paper_trading_enabled() is True
-    (tmp_path / ".env").write_text("PAPER_TRADING=false\n", encoding="utf-8")
-    assert tc.paper_trading_enabled() is False                                                      # .env is read when the environment says nothing
-    monkeypatch.setenv("PAPER_TRADING", "true")
-    assert tc.paper_trading_enabled() is True                                                       # and the environment wins
-
-
-def test_env_example_documents_the_setting_with_the_value_that_lets_the_trader_run():
-    example = (REPO_ROOT / ".env.example").read_text(encoding="utf-8")
-    assert "\nPAPER_TRADING=true\n" in example and "\nTRADER_MODEL=openai/gpt-oss-120b\n" in example

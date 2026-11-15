@@ -8,7 +8,8 @@ spending the funds round-robin (no split was asked for), and after the Trader an
 Nothing in it was migrated: it was written by the code as it is.
 
 What the real run showed: CVX and EOG were approved (Critic 87 and 77), PSX was denied for `risk_above_profile` (Bob is conservative); the round-robin spend bought one share of CVX, one of EOG, and so on until each
-reached the profile's limit of 10% of the $15,000 (CVX 6 shares, EOG 9), which is $2,745 of the money; the Trader placed both and each was booked.
+reached the profile's limit of 10% of the $15,000 (CVX 6 shares, EOG 9), which is $2,745 of the money; the Trader placed both and each was booked. THAT LIMIT NO LONGER EXISTS (design choices entry 91): the capture is the
+record of a real run under the old rule, so the fills and the Trader's work are checked as they were, and the Account Manager's decision step is re-run under the new one (the cash is the only check), over the same real reviews.
 
 The tests re-run the DECISION step over the real reviews and must reproduce what the live run decided, and check the real fills against the real decisions and the account's own arithmetic. No stand-in agent, nothing invented.
 """
@@ -65,22 +66,32 @@ def test_the_real_reviews_are_two_approvals_and_a_denial_for_risk_and_the_adviso
         assert not {"approved_shares", "suggested_shares", "allowed_shares", "caps", "equity"} & (set(review) | set(review["risk"]))     # and neither does the Critic
 
 
-def test_the_decisions_of_the_live_run_are_reproduced_from_the_real_reviews_round_robin_each_stopped_by_its_own_position_limit(capture):
-    live = [kept(d) for d in capture["order"]["trade_decisions"]]
+def robin(prices, pot):
+    """The round robin worked out by hand, in cents: one share of each in turn while the share fits what is left of the pot; a stock that cannot take another share is closed."""
+    from decimal import Decimal
+
+    from prometheus.common.portfolio import trade_amount
+    shares, spent, open_ = [0] * len(prices), Decimal(0), list(range(len(prices)))
+    while open_:
+        for i in list(open_):
+            step = Decimal(str(trade_amount(shares[i] + 1, prices[i]))) - Decimal(str(trade_amount(shares[i], prices[i])))
+            if spent + step <= Decimal(str(pot)):
+                shares[i], spent = shares[i] + 1, spent + step
+            else:
+                open_.remove(i)
+    return shares
+
+
+def test_the_decisions_are_reproduced_from_the_real_reviews_by_the_round_robin_with_only_the_cash_to_stop_it(capture):
+    live = {d["symbol"]: d for d in capture["order"]["trade_decisions"]}
     again = decisions.decide_trades(reviewed(capture), BOB, PROFILE, 80, None, MOMENT, "auto", None, None)
-    assert again.status == "decided" and again.errors == [] and [kept(d) for d in again.trade_decisions] == live
+    assert again.status == "decided" and again.errors == [] and [(d["symbol"], d["will_trade"]) for d in again.trade_decisions] == [(d["symbol"], d["will_trade"]) for d in capture["order"]["trade_decisions"]]
     bought = [d for d in again.trade_decisions if d["will_trade"] == "yes_auto"]
-    assert [(d["symbol"], d["shares"], d["size"]["binding"], d["size"]["allocation"]) for d in bought] == [("CVX", 6, "position", "round_robin"), ("EOG", 9, "position", "round_robin")]
+    prices = [next(r["timing"]["deal_price"] for r in capture["order"]["reviews"] if r["symbol"] == d["symbol"]) for d in bought]
+    assert [d["shares"] for d in bought] == robin(prices, 15000.0) and [(d["symbol"], d["size"]["binding"], d["size"]["allocation"]) for d in bought] == [("CVX", "money", "round_robin"), ("EOG", "money", "round_robin")]
     assert all("spent round-robin" in d["reason"] for d in bought) and not any("balance" in d for d in bought)                          # no split was asked: not an even split
-    assert [d["will_trade"] for d in again.trade_decisions if d["symbol"] == "PSX"] == ["no_system_denied"]
-
-
-def test_each_purchase_is_the_most_its_own_limit_allows_and_one_share_more_would_have_broken_it(capture):
-    """The profile's limit is 10% of the $15,000 in one stock: 6 CVX and 9 EOG are the most whole shares at the real deal prices, and every decision's cost is below the limit."""
-    prices = {r["symbol"]: r["timing"]["deal_price"] for r in capture["order"]["reviews"]}
-    for d in capture["order"]["trade_decisions"]:
-        if d["will_trade"] == "yes_auto":
-            assert d["est_cost"] <= 1500.0 < d["est_cost"] + prices[d["symbol"]] and d["shares"] == int(1500.0 // prices[d["symbol"]])
+    assert sum(d["est_cost"] for d in bought) <= 15000.0 and 15000.0 - sum(d["est_cost"] for d in bought) < min(prices)               # the money is used until it buys no share of either
+    assert [d["will_trade"] for d in again.trade_decisions if d["symbol"] == "PSX"] == ["no_system_denied"] and live["PSX"]["will_trade"] == "no_system_denied"
 
 
 def test_the_real_fills_agree_with_the_decisions_pass_the_output_guard_and_the_account_arithmetic_adds_up(capture):
@@ -95,8 +106,8 @@ def test_the_real_fills_agree_with_the_decisions_pass_the_output_guard_and_the_a
     assert after["cash"] == round(15000.0 - spent, 2) == 12254.41 and {p["symbol"]: p["shares"] for p in after["positions"]} == {"CVX": 6, "EOG": 9}
 
 
-def test_the_session_is_the_new_flow_the_handshake_booked_each_fill_and_nothing_was_spent_above_the_limit(capture):
+def test_the_session_is_the_new_flow_the_handshake_booked_each_fill(capture):
     run = capture["order"]["trader_runs"][0]
     assert run["booked"] is True and run["placed_by_model"] + run["placed_by_code"] == 2
     cash_before = run["portfolio_before"]["cash"]
-    assert cash_before == 15000.0 and run["portfolio_after"]["cash"] >= 15000.0 - 2 * 1500.0                                         # no purchase above the 10% limit, and nothing reserved
+    assert cash_before == 15000.0 and run["portfolio_after"]["cash"] == 12254.41                                                     # as the live run left it (it was sized under the old limit)
