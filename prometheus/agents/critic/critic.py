@@ -1,7 +1,7 @@
 """The Critic: an independent reviewer that approves or denies each recommendation of the Advisor (Critic v1 spec, design choices entries 56 to 59).
 
     critic = Critic()                                                       # Z.ai GLM 5.3 through OpenRouter (the `critic` role: CRITIC_MODEL), the real Data Clerk
-    order = critic.review_recommendations(order, view, portfolio, now)      # status "recommended" -> "reviewed"; one review per recommendation on `order.reviews`
+    order = critic.review_recommendations(order, view, now)                 # status "recommended" -> "reviewed"; one review per recommendation on `order.reviews`
 
     python -m prometheus.application.recommendations MCD --no-fetch --no-ledger          # the whole desk, Critic included (paid: Finnhub and the critic's model)
 
@@ -14,12 +14,14 @@ current price, and to read the cited sources again from the store; it compares t
 value from the numbers IT asked for. It uses a model of a different producer than the Advisor's, for the one thing code cannot do: say whether a quote really is good news for the company, with a
 control claim planted in every call to prove the model read the text. The model never decides anything: the verdict is arithmetic over findings, and every label the model gives can only lower a result.
 
+THE CRITIC ONLY DEALS WITH RECOMMENDATIONS. It approves or denies a company's recommendation (accuracy, evidence, the company's risk against the user's tolerance, timing, value, chart). It does not know the user's money and it
+sizes nothing: how much to buy or sell is the Account Manager's (agents/account_manager/sizing.py), made after the review, from the user's money and limits.
+
 THE CRITIC NEVER TRADES AND NEVER FETCHES (spec P8): its Data Clerk requests read stored data and Finnhub's quote, metric and symbol-search endpoints; it never sets `allow_fetch`.
 """
 from prometheus.agents.advisor.config import load_config as load_advisor_config
 from prometheus.agents.critic.config import CriticConfig, load_config
 from prometheus.agents.critic.review import review_order
-from prometheus.common.portfolio import Portfolio
 from prometheus.common.user_profile import RiskView
 from prometheus.common.work_order import WorkOrder
 
@@ -98,8 +100,8 @@ class Critic:
             self._ledger = Ledger(self.config.ledger.path)
         return self._ledger
 
-    def review_recommendations(self, order: WorkOrder, risk: RiskView, portfolio: Portfolio, now=None) -> WorkOrder:
+    def review_recommendations(self, order: WorkOrder, risk: RiskView, now=None) -> WorkOrder:
         """Approve or deny each recommendation on the order (see `review.py` for the nine steps) and return the SAME order with `status == "reviewed"`, `reviews` (one per recommendation, in the same
-        order, joined by `record_id`) and `critic_runs`. `risk` is the user's limits (`UserProfile.risk_view()`: never the whole profile), `portfolio` the user's cash and holdings, `now` an aware
-        datetime (the real clock when left out). Never raises for a data, API or model failure: what could not be checked is a finding, and is not approved."""
-        return review_order(self, order, risk, portfolio, now)
+        order, joined by `record_id`) and `critic_runs`. `risk` is what the user accepts (`UserProfile.risk_view()`: the tolerance, age, horizon and exclusions, never the whole profile and no size limit), `now` an aware
+        datetime (the real clock when left out). The Critic is given no portfolio and no money: how much to buy is the Account Manager's. Never raises for a data, API or model failure: what could not be checked is a finding, and is not approved."""
+        return review_order(self, order, risk, now)

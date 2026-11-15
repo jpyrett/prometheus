@@ -14,16 +14,16 @@ def codes(r, kind="blockers"):
 def test_sndk_is_denied_for_its_risk_and_because_a_collapse_is_not_a_discount():
     r = review(captured("SNDK"), own={})["SNDK"]
     assert not r["approved"] and {"risk_above_profile", "falling_knife"} <= set(codes(r)) and r["score"] <= 49 < r["score_before_blockers"]
-    assert (r["risk"]["risk_score"], r["risk"]["risk_level"]) == (70.0, "very_high") and r["risk"]["allowed_level"] == "medium"
+    assert (r["risk"]["risk_score"], r["risk"]["risk_level"]) == (77.8, "very_high") and r["risk"]["allowed_level"] == "medium"
     assert "fell 52% in 21 sessions" in next(b["message"] for b in r["blockers"] if b["code"] == "falling_knife")
-    assert r["summary"].startswith("DENY SNDK: ") and r["approved_shares"] == 0 and r["valid_until_utc"] is None
+    assert r["summary"].startswith("DENY SNDK: ") and "approved_shares" not in r and r["valid_until_utc"] is None
 
 
 def test_pg_on_conviction_is_approved():
     """Before Amendment 5 this capture was not a recommendation (no strategy fired); with the `conviction` family its blend (78) makes it one, and since Amendment 3 the Critic no longer has a profit-potential
     rule (a profit floor and a thin-edge warning on the expected excess return after cost were removed: they misled about a company like Procter & Gamble)."""
     r = review(captured("PG"), own={})["PG"]
-    assert r["approved"] and codes(r) == [] and r["approved_shares"] == 44 and "thin_edge" not in codes(r, "warnings") and "excess_reviewed" not in r["value"]
+    assert r["approved"] and codes(r) == [] and "approved_shares" not in r and "thin_edge" not in codes(r, "warnings") and "excess_reviewed" not in r["value"]
 
 
 def test_a_conviction_recommendation_is_denied_when_the_quotes_it_stands_on_do_not_hold():
@@ -35,11 +35,11 @@ def test_a_conviction_recommendation_is_denied_when_the_quotes_it_stands_on_do_n
     assert not r["approved"] and "blend_not_supported" in codes(r)
 
 
-def test_pg_open_passes_every_check_and_is_approved_at_44_shares_without_a_six_month_average():
+def test_pg_open_passes_every_check_and_is_approved_without_a_six_month_average_and_with_no_size():
     r = review(captured("PG_open"), own={})["PG"]
-    assert r["approved"] and r["blockers"] == [] and r["approved_shares"] == 44 and r["value"]["deal"] == "unknown"
+    assert r["approved"] and r["blockers"] == [] and not {"approved_shares", "suggested_shares"} & set(r) and r["value"]["deal"] == "unknown"
     assert "value_not_assessable" in codes(r, "warnings") and r["requires_human"] and r["requires_human_reasons"] == ["value_not_assessable"]
-    assert r["risk"]["risk_score"] == 7.1 and r["risk"]["risk_level"] == "low" and r["dimensions"]["accuracy"]["score"] == 100
+    assert r["risk"]["risk_score"] == 5.2 and r["risk"]["risk_level"] == "low" and r["dimensions"]["accuracy"]["score"] == 100
 
 
 def test_the_same_three_with_a_six_month_average_four_percent_under_the_price():
@@ -56,7 +56,7 @@ def test_at_night_or_at_the_weekend_all_three_are_denied_and_say_what_the_score_
             assert not r["approved"] and "market_closed" in codes(r) and r["score"] <= 49
 
 
-def test_an_aggressive_user_still_cannot_have_sndk_at_very_high_risk_but_a_conservative_one_is_denied_pg_open_at_its_size():
+def test_an_aggressive_user_still_cannot_have_sndk_at_very_high_risk_and_a_conservative_one_may_have_pg_open():
     assert "risk_above_profile" in codes(review(captured("SNDK"), view_=view(risk_tolerance="aggressive"), own={})["SNDK"])
     r = review(captured("PG_open"), view_=view(risk_tolerance="conservative"), own={})["PG"]
-    assert r["risk"]["allowed_level"] == "low" and r["risk"]["risk_level"] == "low" and r["approved"]                # PG_open's 7.1 is low risk: a conservative user may have it
+    assert r["risk"]["allowed_level"] == "low" and r["risk"]["risk_level"] == "low" and r["approved"]                # PG_open's 5.2 is low risk: a conservative user may have it

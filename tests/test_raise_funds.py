@@ -555,18 +555,7 @@ def test_a_plan_that_fails_in_parallel_is_recorded_in_its_place_and_the_others_s
     assert result["errors"] == ["expanding n2 failed (TimeoutError)"] and len(result["trace"][1]["expanded"]) == 2 and "secret" not in rf.as_json(result)
 
 
-# ---------------------------------------------------------------- a search a person is waiting for: the time limit (entry 48)
-
-def test_the_search_records_the_seconds_at_the_end_of_each_level_and_when_the_first_plan_completed():
-    gen = SlowGen({ROOT: [thought("GM", 1)], "GM x1": [thought("TSLA", 4)]}, delay=0.03)   # level 1: an open plan; level 2: TSLA x4 completes it
-    result = rf.search(problem(), gen)
-    seconds = [level["seconds"] for level in result["trace"]]
-    assert len(seconds) == 2 and 0.03 <= seconds[0] < seconds[1] and result["stats"]["first_plan_seconds"] == seconds[1] and result["stats"]["seconds"] >= seconds[1]
-
-
-def test_with_no_plan_completed_the_first_plan_time_is_none():
-    assert rf.search(problem(), Gen({ROOT: [thought("GM", 1)]}))["stats"]["first_plan_seconds"] is None
-
+# ---------------------------------------------------------------- the time limit (entry 48): what is sold when it passes (the tests that only measured seconds were deleted, entry 86)
 
 def test_once_the_time_limit_has_passed_no_new_level_starts_and_the_best_completed_plan_so_far_is_the_answer():
     gen = SlowGen({ROOT: [thought("TSLA", 4), thought("GM", 1)], "GM x1": [thought("MSFT", 2)]}, delay=0.1)

@@ -47,6 +47,7 @@ class CalendarConfig(BaseModel):
     after_hours_close: time
     early_close: time
     after_hours_before_closed_day: bool
+    simulated_minutes_before_close: int       # USE_LIVE_TRADING=false: the moment the desk works at is this many minutes before the regular close of the day it simulates (`simulated_moment`)
     early_close_dates: frozenset[date]
     extra_closed_dates: dict[date, str]
 
@@ -59,6 +60,9 @@ class CalendarConfig(BaseModel):
     def model_post_init(self, _) -> None:
         if not self.pre_market_open < self.regular_open < self.early_close < self.regular_close < self.after_hours_close:
             raise ValueError("the times must run pre_market_open < regular_open < early_close < regular_close < after_hours_close")
+        shortest = (self.early_close.hour - self.regular_open.hour) * 60 + (self.early_close.minute - self.regular_open.minute)   # the regular session of an early-close day
+        if not 0 < self.simulated_minutes_before_close < shortest:
+            raise ValueError(f"simulated_minutes_before_close must be from 1 to {shortest - 1}, so that the simulated moment is inside the regular session of every day, early-close days included")
 
 
 @functools.lru_cache(maxsize=None)
@@ -200,6 +204,17 @@ def eastern_date(now: datetime, config: CalendarConfig | None = None) -> date:
     """The calendar date of a moment in the market's own time zone (US Eastern): the date a recommendation is made on. NEVER the UTC date: between 19:00 and 20:00 Eastern the UTC date is
     already tomorrow."""
     return _aware(now).astimezone(_zone(config or load_calendar())).date()
+
+
+def simulated_moment(day: date, config: CalendarConfig | None = None) -> datetime:
+    """The moment the desk works at when it SIMULATES the market being open on `day` (`USE_LIVE_TRADING=false`, `common/trading_clock.py`): `simulated_minutes_before_close` before that day's regular close (16:00,
+    or 13:00 on an early-close day), as an aware UTC datetime. It is always inside the regular session, so a recommendation made then is for `day`, the market is "open" and an approval has time left (until the
+    window closes, or an hour). Raises ValueError for a day that is not a trading day: nothing happened on it."""
+    config = config or load_calendar()
+    if not is_trading_day(day, config):
+        raise ValueError(f"{day} is not a trading day ({closed_reason(day, config)}): there is no market to simulate")
+    close = config.early_close if day in config.early_close_dates else config.regular_close
+    return (datetime.combine(day, close, tzinfo=_zone(config)) - timedelta(minutes=config.simulated_minutes_before_close)).astimezone(timezone.utc)
 
 
 def window_end(day: date, config: CalendarConfig | None = None) -> time:

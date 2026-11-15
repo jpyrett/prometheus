@@ -44,7 +44,7 @@
                "capital_return": {"trend": 1.0, "narrow": 1.0, "stress": 1.0, "recovering": 1.0, "unknown": 1.0},
                "theme":      {"trend": 1.0, "narrow": 1.0, "stress": 1.0, "recovering": 1.0, "unknown": 1.0},
                "conviction": {"trend": 1.0, "narrow": 0.5, "stress": 0.5, "recovering": 0.5, "unknown": 1.0}}},
-  "ranking": {"diversity_within": 0.8, "add_max_position_pct": 0.20, "oversized_pct": 0.20},
+  "ranking": {"diversity_within": 0.8},
   "blend": {
     "weights": {"news": 0.40, "performance": 0.30, "historical": 0.20, "filings": 0.10},
     "half_life_days": 7, "news_prior_n": 2, "press_release_weight": 0.5,
@@ -71,7 +71,6 @@
     "industry": {"sleeve": "industry", "top_k": 5, "eligible": ["event", "trend", "capital_return", "reversion", "conviction"], "veto_only": []},
     "market": {"sleeve": "tape", "top_k": 5, "eligible": ["event", "trend", "capital_return", "reversion", "conviction"], "veto_only": []}
   },
-  "trade": {"entry_atr": 0.5, "stop_atr": {"reversion": 2, "event": 2, "trend": 3, "capital_return": 3, "theme": 3, "conviction": 3}, "target_edge_multiple": 1.5, "risk_pct": 0.01, "risk_pct_stress": 0.005,
-            "max_position_pct": 0.20, "max_adv_pct": 0.05, "limit_spread_bps": 10, "trend_limit_atr": 0.25, "event_limit_reaction_atr": 1},
+  "trade": {"entry_atr": 0.5, "stop_atr": {"reversion": 2, "event": 2, "trend": 3, "capital_return": 3, "theme": 3, "conviction": 3}, "target_edge_multiple": 1.5, "limit_spread_bps": 10, "trend_limit_atr": 0.25, "event_limit_reaction_atr": 1},
   "ledger": {"path": "data/ledger/recommendations.jsonl"}
 }

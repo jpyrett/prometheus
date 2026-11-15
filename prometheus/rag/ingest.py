@@ -6,6 +6,9 @@
     python -m prometheus.rag.ingest --press-releases AAPL   the same for <SYMBOL>_PRs.txt, into the press release collection (entry 34)
     python -m prometheus.rag.ingest --filings AAPL          the same for the SEC filings file <SYMBOL>.txt in the filings folder, into the filings collection (entry 35)
 
+A record that fails to load (a broken article or press release) is DISCARDED, not stored and not an error (design choices entry 83): the stats say how many (`skipped`, a list of `Skipped`) and the
+command prints them; the others are ingested as usual. A chunk that was stored before the record broke is left as it was: `--rebuild` clears it.
+
 It is safe to run again. A chunk that has not changed is skipped (it is not encoded again), a changed
 chunk is overwritten, a chunk that no longer exists is deleted, and an article that is stored a second
 time (the same article sits in more than one symbol's file) gets its `tickers` lists merged.
@@ -21,7 +24,7 @@ from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from prometheus.rag.config import filings_dir, news_dir, press_releases_dir
-from prometheus.rag.loaders import (PRESS_RELEASES_SUFFIX, filing_file, load_filings, load_news, load_press_releases, news_file,
+from prometheus.rag.loaders import (PRESS_RELEASES_SUFFIX, Skipped, filing_file, load_filings, load_news, load_press_releases, news_file,
                                     press_release_file)
 from prometheus.rag.store import count_chunks, count_too_long, get_vector_store, reset_collection
 
@@ -133,9 +136,10 @@ def ingest_symbol(symbol: str, store: Chroma | None = None) -> dict:
     """Ingest news/<SYMBOL>.txt. With no store given it uses the real one (and checks chunk lengths
     against the real embedding model); a test passes its own store."""
     path = news_file(symbol)
-    stats = ingest_documents(load_news(path), store or get_vector_store(),
+    skipped: list[Skipped] = []
+    stats = ingest_documents(load_news(path, skipped), store or get_vector_store(),
                              too_long=count_too_long if store is None else None)
-    return {"symbol": symbol.strip().upper(), "path": str(path), **stats}
+    return {"symbol": symbol.strip().upper(), "path": str(path), **stats, "skipped": skipped}
 
 
 def ingest_press_releases(symbol: str, store: Chroma | None = None) -> dict:
@@ -143,9 +147,10 @@ def ingest_press_releases(symbol: str, store: Chroma | None = None) -> dict:
     (`ingest_documents`: the same chunk size, the same headline in front of a later chunk, the same safe re-runs) with another loader and another
     store. With no store given it uses the real one; a test passes its own."""
     path = press_release_file(symbol)
-    stats = ingest_documents(load_press_releases(path), store or get_vector_store("press_releases"),
+    skipped: list[Skipped] = []
+    stats = ingest_documents(load_press_releases(path, skipped), store or get_vector_store("press_releases"),
                              too_long=count_too_long if store is None else None)
-    return {"symbol": symbol.strip().upper(), "path": str(path), **stats}
+    return {"symbol": symbol.strip().upper(), "path": str(path), **stats, "skipped": skipped}
 
 
 def ingest_filings(symbol: str, store: Chroma | None = None) -> dict:
@@ -194,6 +199,9 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{s['symbol']}: {s['articles']} {noun} -> {s['chunks']} chunks | added {s['added']}, "
                   f"updated {s['updated']}, unchanged {s['unchanged']}, deleted {s['deleted']} | "
                   f"chunks over the embedder's limit: {s['over_limit']} | {time.monotonic() - started:.1f} s")
+            if s.get("skipped"):  # a failed record is discarded: never stored, never found, never scored (entry 83); a person looks at the file
+                print(f"  discarded {len(s['skipped'])} failed record{'s' if len(s['skipped']) != 1 else ''} (not stored): "
+                      + "; ".join(f"{item.where}: {item.reason}" for item in s["skipped"][:5]) + (" ..." if len(s["skipped"]) > 5 else ""))
             if s["over_limit"]:  # silent but harmful: the model ignores the end of such a chunk
                 print(f"WARNING: {s['symbol']}: {s['over_limit']} chunks are longer than the embedder reads, so the end "
                       f"of their text cannot be found by search (design choices entry 19)", file=sys.stderr)

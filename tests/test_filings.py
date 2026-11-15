@@ -299,11 +299,11 @@ def test_a_missing_file_is_a_file_not_found_error(tmp_path):
 
 
 def test_the_press_release_loader_still_refuses_a_filing_record_and_still_reads_its_own(tmp_path):
-    """The shared record parser takes the start marker as an argument: one format is never read as the other, in either direction."""
+    """The shared record parser takes the start marker as an argument: one format is never read as the other, in either direction (the filing loader still refuses a release with an error; the press release loader discards a filing record, entry 83)."""
     path = tmp_path / "x.txt"
     path.write_text(GOOD, encoding="utf-8")
-    with pytest.raises(ValueError, match="unknown marker '<<<FILING>>>'|text outside a record"):
-        load_press_releases(path)
+    skipped = []
+    assert load_press_releases(path, skipped) == [] and skipped and "text outside a record" in skipped[0].reason      # entry 83: not read as a release, and discarded rather than an error
     assert len(load_press_releases(Path(__file__).parent / "fixtures" / "press_releases_sample.txt")) == 3
 
 

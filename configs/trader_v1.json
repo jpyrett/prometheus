@@ -1,0 +1,11 @@
+{
+  "config_version": "1",
+  "_note": "Every threshold of the Trader (design/trader_v1_final_spec.md). Read once; a missing or unknown key is an error. The model never chooses one.",
+  "mode": "paper",
+  "limits": {"max_trades": 20, "base_turns": 5, "max_turns": 12, "model_timeout_seconds": 60, "max_note_words": 20, "max_summary_words": 60},
+  "orders": {"max_chase_pct": 0.01, "limit_band_pct": 0.03, "allow_market": true, "cash_policy": "reduce"},
+  "costs": {"slippage_bps": 5, "commission_per_order": 0.0},
+  "funding": {"require_user_approval": true},
+  "backtest": {"fill_at": "next_open", "max_follow_days": 90, "benchmark": "SPY"},
+  "ledger": {"path": "data/ledger/trades.jsonl"}
+}

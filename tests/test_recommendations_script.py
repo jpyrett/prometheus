@@ -53,6 +53,25 @@ def test_a_script_nobody_is_watching_never_spends_the_paid_apis_by_default():
     assert "--fetch" not in command(run("", "Pizza", "--find", "5", "--no-fetch", "--yes")) and "--fetch" in command(run("", "Pizza", "--find", "5", "--yes"))   # --no-fetch wins
 
 
+def test_fetch_is_the_default_said_outright_and_it_is_the_users_yes_so_nothing_is_asked():
+    """The script used to refuse `--fetch` ("unknown option") although it fetches by default and the Python module takes the flag: it is accepted now (2026-11-14). Typing it is the yes to the paid fetch, like `--yes`."""
+    result = run("", "Pizza", "--find", "5", "--fetch")           # no input at all: without the flag the answer would be "no" and the fetch would not happen
+    assert result.returncode == 0, result.stderr
+    assert "--fetch" in command(result) and "no answer: not fetching" not in result.stderr and "FETCH the companies' data" in result.stdout
+    assert command(result) == command(run("", "Pizza", "--find", "5", "--yes"))                     # the same command as --yes
+
+
+def test_fetch_and_no_fetch_contradict_each_other_and_are_refused_before_anything_runs():
+    result = run("", "Pizza", "--fetch", "--no-fetch")
+    assert result.returncode == 2 and "--fetch and --no-fetch contradict each other" in result.stderr and "DRY RUN" not in result.stdout
+    assert run("", "Pizza", "--no-fetch", "--fetch").returncode == 2                                  # in either order
+
+
+def test_fetch_is_in_the_help_and_the_usage_examples():
+    text = subprocess.run(["bash", str(SCRIPT), "--help"], capture_output=True, text=True, cwd=REPO).stdout
+    assert '--fetch' in text and "typing --fetch is the yes" in text
+
+
 def test_a_blank_request_is_asked_again_and_when_the_input_ends_it_stops():
     result = run("\n\nDPZ\n5\nn\n")
     assert result.returncode == 0 and result.stderr.count("What to look at") == 3 and "Give a symbol, a list of symbols, a company name or a search phrase." in result.stderr
@@ -148,3 +167,43 @@ def test_bad_critic_options_are_refused_with_the_reason(args, message):
 def test_help_documents_the_critic_and_what_it_costs():
     out = run("", "--help").stdout
     assert "THE CRITIC" in out and "z-ai/glm-5.3" in out and "--no-critic" in out and "NOTHING IS BOUGHT OR SOLD" in out and "ASK mode" in out
+
+
+# ---------------------------------------------------------------- the Trader's flags (Trader v1, entries 73 to 75)
+
+def test_trade_alone_is_paper_and_a_mode_after_it_is_passed_on_and_nothing_is_added_without_it():
+    assert "--trade" not in command(run("", "PG", "--yes", "--no-fetch")) and "--no-trader-model" not in command(run("", "PG", "--yes", "--no-fetch"))
+    assert command(run("", "PG", "--no-fetch", "--trade"))[-2:] == ["--trade", "paper"]                                          # a bare --trade is always passed on with its mode: the request after it is not mistaken for one
+    assert command(run("", "PG", "--no-fetch", "--trade", "paper"))[-2:] == ["--trade", "paper"]
+    assert command(run("", "PG", "--no-fetch", "--trade", "backtest", "--no-trader-model"))[-3:] == ["--trade", "backtest", "--no-trader-model"]
+
+
+def test_the_word_after_trade_is_the_mode_only_when_it_is_paper_or_backtest_so_a_request_can_follow_it():
+    result = run("", "--trade", "PG", "--no-fetch")
+    assert result.returncode == 0 and command(result) == [*MODULE, "PG", "--find", "5", *OSS, "--trade", "paper"]
+    result = run("", "--trade", "Pizza", "--no-fetch")
+    assert command(result)[3] == "Pizza" and command(result)[-2:] == ["--trade", "paper"]
+    assert command(run("", "--trade", "backtest", "DPZ", "--no-fetch"))[3] == "DPZ"
+
+
+def test_the_trader_flags_come_after_every_other_flag_and_the_critics_own_still_reach_the_command():
+    result = run("", "PG", "--no-fetch", "--no-ledger", "--mode", "auto", "--now", "2026-11-05 10:30", "--no-ask", "--trade", "backtest", "--no-trader-model")
+    assert command(result) == [*MODULE, "PG", "--find", "5", *OSS, "--no-ledger", "--mode", "auto", "--now", "2026-11-05 10:30", "--no-ask", "--trade", "backtest", "--no-trader-model"]
+    assert "Trader: backtest, no model (the program places the orders), SIMULATED: nothing is sent to a broker" in result.stdout and "the Trader executes (simulated)" in result.stdout
+    paper = run("", "PG", "--no-fetch", "--trade").stdout
+    assert "Trader: paper, model TRADER_MODEL of .env (openai/gpt-oss-120b), SIMULATED" in paper
+    assert "Trader" not in run("", "PG", "--no-fetch").stdout.split("DRY RUN")[0].split("== Recommendations")[1]                  # without --trade the banner says nothing of a Trader
+
+
+@pytest.mark.parametrize("args, message", [
+    (("--trade", "live"), "--trade is paper or backtest: there is no live trading"), (("--no-critic", "--trade"), "--trade needs the Critic"), (("--no-critic", "--trade", "backtest"), "--trade needs the Critic"),
+    (("--no-trader-model",), "--no-trader-model goes with --trade"), (("--no-critic", "--no-trader-model"), "--no-trader-model goes with --trade")])
+def test_bad_trader_options_are_refused_with_the_reason_before_anything_is_run(args, message):
+    result = run("", "PG", "--yes", "--no-fetch", *args)
+    assert result.returncode == 2 and message in result.stderr and "DRY RUN" not in result.stdout
+
+
+def test_help_documents_the_trader_what_it_costs_and_that_it_is_simulated():
+    out = run("", "--help").stdout
+    for needle in ("THE TRADER", "SIMULATED", "--trade [paper|backtest]", "--no-trader-model", "TRADER_MODEL", "Finnhub quote per symbol", "WITHOUT --trade NOTHING IS BOUGHT OR SOLD", "no live trading", "data/ledger/trades.jsonl"):
+        assert needle in out, needle

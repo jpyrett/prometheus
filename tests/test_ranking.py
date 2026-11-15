@@ -150,8 +150,8 @@ def test_the_cooldown_holds_until_the_time_stop_and_ends_when_an_invalidation_ru
     assert rk.cooldown_of(s, "trend", [], "2026-10-23") is None
 
 
-def hold(s, records=(), oversized=False, after=0.05, floor=None):
-    return rk.holding_action(s, list(records), oversized, after, floor, CONFIG)
+def hold(s, records=(), floor=None):
+    return rk.holding_action(s, list(records), floor)
 
 
 def test_the_holdings_pass_reduces_on_a_red_flag_a_bearish_event_an_invalidation_or_a_family_that_stopped_passing():
@@ -168,10 +168,13 @@ def test_the_holdings_pass_reduces_on_a_red_flag_a_bearish_event_an_invalidation
     assert hold(bearish, [record()])[0] == "reduce"
 
 
-def test_the_holdings_pass_adds_only_a_bullish_not_oversized_name_that_would_have_made_the_list_and_fits_the_limit():
+def test_the_holdings_pass_adds_only_a_bullish_name_that_would_have_made_the_list():
+    """Entry 80: the pass used to ask also that the plan was not "oversized" and that the position after adding stayed within 20% of the equity. Both needed a size and the user's money, which the Advisor
+    does not use; whether the user's limits leave room to add is the Account Manager's (`sizing.size_purchases` counts the shares held against the position limit). What is left is the stance and the blend."""
     good = scored(families=[fr(edge=0.01)], held=True)
     assert hold(good)[0] == "add" and hold(good, floor=rk.rank_value(good))[0] == "add" and hold(good, floor=rk.rank_value(good) + 0.001)[0] == "hold"
-    assert hold(good, oversized=True)[0] == "hold" and hold(good, after=0.2001)[0] == "hold" and hold(good, after=0.20)[0] == "add" and hold(good, after=None)[0] == "hold"
+    assert "position after" not in hold(good)[1] and "below this run's new ideas" in hold(good, floor=rk.rank_value(good) + 0.001)[1]
+    assert not {"oversized_pct", "add_max_position_pct"} & set(type(CONFIG.ranking).model_fields)                        # the two size thresholds left the settings with the rule that read them
     assert hold(scored(families=[fr(passed=False)], held=True))[0] == "hold"
     assert hold(scored(families=[fr("trend", passed=True, edge=0.01)], held=True), [record()])[0] == "add"      # the family that recommended it still passes
 

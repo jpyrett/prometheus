@@ -25,7 +25,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from prometheus.agents.advisor.advisor import names_company, story_key
 from prometheus.agents.advisor.calls import ask_object, new_run
 from prometheus.agents.advisor.config import AdvisorConfig
-from prometheus.agents.advisor.events import BEARISH, match_events
+from prometheus.agents.advisor.events import BEARISH, SENTENCE as EVENT_SENTENCE, TEXT_CLASSES, class_matches   # the Advisor's own splitter, so a sentence is cut exactly where the event matcher cut it (this module's `SENTENCE` below is another, simpler one)
 from prometheus.agents.advisor.record import Recommendation
 from prometheus.agents.critic.claims import Claim, stance_direction, supporting
 from prometheus.agents.critic.common import blocker, info, producer, quote_in_text, warning
@@ -84,9 +84,27 @@ def fresh_candidates(rec: Recommendation, order: WorkOrder, verification: dict, 
     return new[:config.limits.max_fresh]
 
 
+# One company, one clause: "Procter & Gamble declared its dividend, while PepsiCo cut its outlook" says P&G declared a dividend and PepsiCo cut its outlook. A sentence is cut at these words.
+CLAUSE_BREAK = re.compile(r",?\s+(?:while|whereas|but|although|though)\s+|;\s*", re.I)
+
+
+def about_the_company(name: str, sentence: str, symbol: str, company: str | None) -> bool:
+    """Whether a bearish class that matches `sentence` is about THIS company. `names_company` alone only says the company is somewhere in the sentence, and a sentence about two companies names both: "Procter & Gamble
+    declared its dividend, while PepsiCo cut its 2026 outlook" matched `guidance_cut` and blocked a Procter & Gamble purchase for PepsiCo's news (found in the first live run of 2026-11-14). So when the sentence has
+    more than one clause, the clause that SHOWS the class must name the company. When no single clause shows it (the words of the pattern are spread over several), the old rule stands: the sentence names the company."""
+    clauses = [c.strip() for c in CLAUSE_BREAK.split(sentence) if c.strip()]
+    if len(clauses) > 1:
+        shown = [c for c in clauses if class_matches(name, c)]
+        if shown:
+            return any(names_company(c, symbol, company) for c in shown)
+    return names_company(sentence, symbol, company)
+
+
 def bearish_classes(text: str, symbol: str, company: str | None) -> list[str]:
-    """The bearish event classes CODE finds in a text, in a sentence that names the company (`events.match_events`: the same patterns the Advisor's event check uses)."""
-    return [m["class"] for m in match_events(text) if m["class"] in BEARISH and names_company(m["quote"], symbol, company)]
+    """The bearish event classes CODE finds in a text, in a sentence that names the company and is about it (`about_the_company`; the patterns are the Advisor's: `events.class_matches`). Every sentence is
+    looked at, not only the first one that matches a class: a cut by another company in the first sentence must not hide this company's own cut in a later one. In the order of the taxonomy."""
+    sentences = [s.strip() for s in EVENT_SENTENCE.split(" ".join(text.split())) if s.strip()]
+    return [name for name in TEXT_CLASSES if name in BEARISH and any(class_matches(name, s) and about_the_company(name, s, symbol, company) for s in sentences)]
 
 
 # ---------------------------------------------------------------- reading the reply

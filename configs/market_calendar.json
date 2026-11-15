@@ -6,6 +6,7 @@
   "after_hours_close": "20:00",
   "early_close": "13:00",
   "after_hours_before_closed_day": false,
+  "simulated_minutes_before_close": 30,
   "early_close_dates": ["2026-11-27", "2026-12-24", "2027-11-26", "2028-07-03", "2028-11-24"],
   "extra_closed_dates": {}
 }

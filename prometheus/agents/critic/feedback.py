@@ -6,7 +6,7 @@
 The block is for TWO readers who do not read the whole review: the person who is told why a recommendation was approved or denied, and a screen that draws it (bars for the dimensions, a gauge
 for the score, a list of chart patterns, a badge for the verdict). So it is flat, ordered, JSON, and carries what a picture needs: the dimensions in a fixed order with their weight, score,
 points, share of the weight earned and a `band` (strong, ok, weak) for a colour; the FINAL GATE spelled out (the blended score, the mark, the cap, what blocked it); the patterns; the findings; the
-sizes; the decision. The full review stays on `order.reviews` and is linked by `review_id`.
+decision (and no size: how much to buy is the Account Manager's, which writes it in the decision). The full review stays on `order.reviews` and is linked by `review_id`.
 
 THE FINAL GATE. A recommendation is approved when it has no blocker and its BLENDED score reaches the mark:
 
@@ -60,7 +60,6 @@ def feedback(review: dict, record: dict | None, config: CriticConfig) -> dict:
         "dimensions": rows,
         "patterns": {"holding": review["chart"]["patterns"], "unknown": review["chart"]["unknown"], "points": review["chart"]["points"]},
         "findings": {"blockers": blockers, "warnings": [_finding(f) for f in review["warnings"]], "notes": [_finding(f) for f in review["notes"]]},
-        "size": {"suggested_shares": review["suggested_shares"], "approved_shares": review["approved_shares"], "allowed_shares": review["risk"].get("allowed_shares")},
         "risk": {"level": review["risk"].get("risk_level"), "score": review["risk"].get("risk_score"), "allowed_level": review["risk"].get("allowed_level")},
         "value": {"deal": review["value"].get("deal"), "premium": review["value"].get("premium"), "discount": review["value"].get("discount"), "reward_to_risk": review["value"].get("reward_to_risk")},
         "needs_human": {"required": review["requires_human"], "reasons": review["requires_human_reasons"]},

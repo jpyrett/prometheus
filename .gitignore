@@ -236,3 +236,6 @@ __marimo__/
 .aws/   
 # local-only notes (bill/dashboard links); not shared
 design/check_bills.txt
+
+# Local Postgres passwords (scripts/setup_postgres.sh). Never commit.
+secrets/

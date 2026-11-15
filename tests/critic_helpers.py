@@ -6,7 +6,7 @@ healthy day gives), and each test changes ONE thing (a number, a quote, the cloc
 
     order, fx = replay("PG_open")                       # the Advisor's step on the captured data (offline, free)
     critic = make_critic(order)                         # a Critic with a FakeClerk and a ReviewerModel
-    critic.review_recommendations(order, view(), portfolio, NOW)
+    critic.review_recommendations(order, view(), NOW)               # the Critic is given no portfolio and no money: sizing is the Account Manager's
 """
 import copy
 import json
@@ -170,10 +170,10 @@ def make_critic(order, model=None, clerk=None, ledger=None, history=None, **cler
     return Critic(model=model or ReviewerModel(), clerk=clerk or FakeClerk(order, **clerk_options), ledger=ledger if ledger is not None else MemoryLedger(), history=history)
 
 
-def review(order, critic=None, view_=None, portfolio_=None, now=NOW, **options):
+def review(order, critic=None, view_=None, now=NOW, **options):
     """Review an order with a default Critic; returns the reviews as dicts keyed by symbol."""
     critic = critic or make_critic(order, **options)
-    critic.review_recommendations(order, view_ or view(), portfolio_ or portfolio(), now)
+    critic.review_recommendations(order, view_ or view(), now)
     return {r["symbol"]: r for r in order.reviews}
 
 

@@ -3,7 +3,7 @@ import copy
 from datetime import timedelta
 
 import pytest
-from critic_helpers import CONFIG, NOW, FakeClerk, captured, portfolio, rec_of
+from critic_helpers import CONFIG, NOW, FakeClerk, captured, rec_of
 
 from prometheus.agents.critic import recheck as rc
 from prometheus.agents.critic.claims import claims_of
@@ -17,7 +17,7 @@ def setup(name="PG_open", **options):
     rec = rec_of(order)
     clerk = FakeClerk(order, **options)
     claims = claims_of(rec, order)
-    got = rc.gather(clerk, order, [(rec, "2026-11-05", claims)], portfolio(), NOW, CONFIG)
+    got = rc.gather(clerk, order, [(rec, "2026-11-05", claims)], NOW, CONFIG)
     names, decisive = rc.key_metrics(rec, CONFIG.limits.max_metrics)
     return order, rec, clerk, claims, got, names, decisive
 
@@ -55,7 +55,7 @@ def test_one_order_of_each_kind_is_sent_for_all_the_records():
     kinds = [a[0] for a in clerk.asked]
     assert kinds == ["metrics", "quotes", "verification"]
     assert clerk.asked[0][1] == ["PG"] and set(clerk.asked[0][2]) >= set(names[:5]) and str(clerk.asked[0][3]) == "2026-11-05"
-    assert clerk.asked[1][1][0] == "PG" and set(clerk.asked[1][1]) == {"PG", "MSFT", "TSLA", "GM"}        # the recommended symbol, then the holdings
+    assert clerk.asked[1][1] == ["PG"]        # only the recommended symbol: the Critic is given no portfolio, so it never asks for the price of a holding (the Account Manager does)
     verify = clerk.asked[2][1]
     assert set(verify) == {"chunks", "evidence", "symbols", "company", "fresh"} and verify["symbols"] == ["PG"] and verify["company"] == {"PG": "Procter & Gamble"}
     assert verify["fresh"] == {"since_days": CONFIG.evidence.fresh_since_days, "k": CONFIG.evidence.fresh_k}
@@ -81,7 +81,7 @@ def test_the_critic_is_the_requester_and_never_allows_a_fetch():
 
     order = captured("PG_open")
     rec = rec_of(order)
-    rc.gather(Spy(order), order, [(rec, "2026-11-05", claims_of(rec, order))], portfolio(), NOW, CONFIG)
+    rc.gather(Spy(order), order, [(rec, "2026-11-05", claims_of(rec, order))], NOW, CONFIG)
     assert seen == [("critic", "calculate_financials"), ("critic", "fetch_quote", True), ("critic", "verify_data")]
 
 
@@ -89,7 +89,7 @@ def test_records_of_different_days_get_one_metric_order_each():
     order = captured("PG_open")
     rec = rec_of(order)
     clerk = FakeClerk(order)
-    got = rc.gather(clerk, order, [(rec, "2026-11-05", []), (rec, "2026-11-04", [])], portfolio(), NOW, CONFIG)
+    got = rc.gather(clerk, order, [(rec, "2026-11-05", []), (rec, "2026-11-04", [])], NOW, CONFIG)
     assert [a[0] for a in clerk.asked].count("metrics") == 2 and set(got.metric_orders) == {"2026-11-04", "2026-11-05"}
 
 
@@ -98,7 +98,7 @@ def test_more_than_sixty_chunks_are_asked_in_a_second_order():
     rec = rec_of(order)
     many = [rc.Claim(ref=f"[{i}]", kind="signal", direction="bullish", quote="q" * 20, source=i, chunk_id=f"finnhub:{i}#0") for i in range(1, 71)]
     clerk = FakeClerk(order)
-    got = rc.gather(clerk, order, [(rec, "2026-11-05", many)], portfolio(), NOW, CONFIG)
+    got = rc.gather(clerk, order, [(rec, "2026-11-05", many)], NOW, CONFIG)
     verifications = [a[1] for a in clerk.asked if a[0] == "verification"]
     assert [len(v["chunks"]) for v in verifications] == [60, 10] and "symbols" in verifications[0] and "symbols" not in verifications[1] and len(got.verify_orders) == 2
 
@@ -118,7 +118,7 @@ def test_an_order_the_data_clerk_marks_failed_puts_its_errors_in_the_runs_errors
 
     order = captured("PG_open")
     rec = rec_of(order)
-    got = rc.gather(Refusing(order), order, [(rec, "2026-11-05", [])], portfolio(), NOW, CONFIG)
+    got = rc.gather(Refusing(order), order, [(rec, "2026-11-05", [])], NOW, CONFIG)
     assert any("quotes: PG: no quote" in e for e in got.errors) and got.quotes == {}
 
 
@@ -354,25 +354,14 @@ def test_with_nothing_to_cross_check_the_rate_is_zero():
     assert rc.cross_checks(rec, None, None, {}, ACC)[3] == 0.0
 
 
-# ---------------------------------------------------------------- equity
+# ---------------------------------------------------------------- no equity: the Critic does not know the user's money
 
-def test_the_critics_own_equity_is_cash_plus_the_holdings_at_the_quotes():
-    quotes = {p.symbol: {"price": 100.0} for p in portfolio().positions}
-    equity, basis = rc.own_equity(portfolio(), quotes)
-    assert equity == pytest.approx(portfolio().cash_avail + 100.0 * sum(p.shares for p in portfolio().positions)) and "quotes" in basis
-
-
-def test_a_holding_without_a_quote_means_the_equity_is_not_guessed():
-    equity, basis = rc.own_equity(portfolio(), {"MSFT": {"price": 1.0}})
-    assert equity is None and "TSLA" in basis and "GM" in basis
-
-
-def test_equity_that_differs_from_the_advisors_is_a_warning_and_unknown_equity_another():
-    rec = rec_of(captured("PG_open"))
-    assert rc.equity_check(rec, rec.trade.equity, "x", ACC) == [] and rc.equity_check(rec, rec.trade.equity * 1.04, "x", ACC) == []
-    [finding] = rc.equity_check(rec, rec.trade.equity * 1.10, "x", ACC)
-    assert (finding.code, finding.severity) == ("equity_differs", "warning")
-    assert [f.code for f in rc.equity_check(rec, None, "no quote for GM", ACC)] == ["equity_unverified"]
+def test_the_critic_has_no_equity_and_never_compares_one_with_the_advisors():
+    """Design choices entry 80: `own_equity` (the portfolio at the quotes of the review) and `equity_check` (the `equity_differs` and `equity_unverified` warnings) were only for the position size, which is the Account
+    Manager's now. Nothing of the Critic takes a portfolio, and its settings have no `equity_rel`."""
+    assert not hasattr(rc, "own_equity") and not hasattr(rc, "equity_check") and "equity_rel" not in type(ACC).model_fields
+    import inspect
+    assert "portfolio" not in inspect.signature(rc.gather).parameters
 
 
 # ---------------------------------------------------------------- the accuracy score
@@ -389,6 +378,6 @@ def test_the_record_date_decides_which_days_metrics_are_asked_for():
     order = captured("PG_open")
     rec = rec_of(order)
     clerk = FakeClerk(order)
-    rc.gather(clerk, order, [(rec, "2026-11-05", [])], portfolio(), NOW + timedelta(days=3), CONFIG)
+    rc.gather(clerk, order, [(rec, "2026-11-05", [])], NOW + timedelta(days=3), CONFIG)
     assert str(clerk.asked[0][3]) == "2026-11-05"        # the bars up to the record's own day, not up to the review's
     assert wo.verify_metric_request(wo.new_work_order("m", requester="critic", action_type="calculate_financials", subject=["PG"], metrics=[{"name": n} for n in rc.key_metrics(rec, 60)[0]])) == []

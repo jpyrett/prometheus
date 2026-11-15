@@ -1,22 +1,21 @@
 """Risk fit: does the risk of this position match the user's profile? (Critic v1 spec section 8.4, step 7). No network, no model.
 
-    result = assess(rec, view, fetched, price, equity, basis, config.risk)
+    result = assess(rec, view, fetched, price, config.risk)
 
-The Critic measures the risk ITSELF, from the numbers it just had the Data Clerk calculate (spec P2), the plan's stop and the size the profile would allow, and compares it with what the user accepts:
+The Critic measures the risk ITSELF, from the numbers it just had the Data Clerk calculate (spec P2) and the plan's stop, and compares it with what the user accepts. It judges the COMPANY against the user's
+risk tolerance (age and horizon included), never how much to buy: it does not know the user's money, and the size of a purchase is the Account Manager's (agents/account_manager/sizing.py).
 
     effective tolerance   the lowest of the stated one, the cap for the user's age and the cap for their horizon
-    approved shares       min(what the Advisor suggested, what the position limit, the loss-per-trade limit and the order limit allow): the Critic may CUT a size, never raise it
-    risk score            0 to 100 (higher is riskier): nine measures, each `clip((x - safe) / (risky - safe), 0, 1)` times its weight; a measure that could not be made counts `unknown_points`
+    risk score            0 to 100 (higher is riskier): eight measures, each `clip((x - safe) / (risky - safe), 0, 1)` times its weight; a measure that could not be made counts `unknown_points`
     risk level            low, medium, high or very_high from the score; very_high is allowed to nobody
 
-A recommendation is denied when its level is above what the effective tolerance allows, when not even one share fits the profile's limits, or when the profile excludes the symbol, its sector or
-its price. A SELL (`reduce`) lowers risk and is not judged here.
+A recommendation is denied when its level is above what the effective tolerance allows, or when the profile excludes the symbol, its sector or its price. A SELL (`reduce`) lowers risk and is not judged here.
 """
 import math
 from dataclasses import dataclass, field
 
 from prometheus.agents.advisor.record import Recommendation
-from prometheus.agents.critic.common import blocker, clip, info, metric_value, warning
+from prometheus.agents.critic.common import blocker, clip, info, metric_value
 from prometheus.agents.critic.config import LEVELS, Risk, RiskMeasure
 from prometheus.agents.critic.record import Finding, Measure, RiskDetail
 from prometheus.common.user_profile import TOLERANCES, RiskView
@@ -28,9 +27,7 @@ class RiskResult:
     score: float = 0.0                         # risk fit, 0 to 100
     measures: list[Measure] = field(default_factory=list)
     detail: RiskDetail = field(default_factory=RiskDetail)
-    approved_shares: int = 0
     applicable: bool = True
-    price: float | None = None
 
 
 def effective_tolerance(view: RiskView, config: Risk) -> tuple[str, str | None]:
@@ -88,32 +85,16 @@ def flags_of(rec: Recommendation, fetched: dict | None, config: Risk) -> list[st
     return flags
 
 
-def size_caps(rec: Recommendation, view: RiskView, price: float | None, equity: float | None) -> dict[str, int | None]:
-    """The most shares each limit of the profile allows, None for a limit that cannot be worked out (no price, no equity, no stop distance). The exposure cap is filled in by the review, over all its records."""
-    caps: dict[str, int | None] = {"position": None, "loss": None, "order": None, "exposure": None}
-    if not price or price <= 0:
-        return caps
-    held_value = rec.action.held_shares * price
-    if equity:
-        caps["position"] = max(0, math.floor((view.max_position_pct * equity - held_value) / price))
-        if rec.trade.stop_distance and rec.trade.stop_distance > 0:
-            caps["loss"] = max(0, math.floor(view.max_loss_per_trade_pct * equity / rec.trade.stop_distance))
-    if view.max_order_dollars:
-        caps["order"] = math.floor(view.max_order_dollars / price)
-    return caps
-
-
-def assess(rec: Recommendation, view: RiskView, fetched: dict | None, price: float | None, equity: float | None, equity_basis: str, config: Risk) -> RiskResult:
-    """The risk findings of one record, its size under the profile, the risk score and level, and the risk-fit score."""
-    out = RiskResult(price=price)
+def assess(rec: Recommendation, view: RiskView, fetched: dict | None, price: float | None, config: Risk) -> RiskResult:
+    """The risk findings of one record, the risk score and level, and the risk-fit score."""
+    out = RiskResult()
     stated = view.risk_tolerance
     effective, why = effective_tolerance(view, config)
     allowed = config.allowed[effective]
-    out.detail = RiskDetail(tolerance_stated=stated, tolerance_effective=effective, allowed_level=allowed, equity=equity, equity_basis=equity_basis)
+    out.detail = RiskDetail(tolerance_stated=stated, tolerance_effective=effective, allowed_level=allowed)
     action, trade = rec.action.action, rec.trade
     if action not in ("open", "add"):
         out.applicable = False
-        out.approved_shares = trade.suggested_shares or rec.action.held_shares
         return out
     if why:
         out.findings.append(info("risk_fit", "tolerance_capped", f"Risk tolerance {stated} is lowered to {effective} by {why}.", value=effective))
@@ -126,29 +107,10 @@ def assess(rec: Recommendation, view: RiskView, fetched: dict | None, price: flo
     if price is not None and price < view.min_price:
         out.findings.append(blocker("risk_fit", "price_below_profile_min", f"The price {price:.2f} is under the user's minimum of {view.min_price:g}.", value=price, threshold=view.min_price))
 
-    # the size the profile allows
-    caps = size_caps(rec, view, price, equity)
-    known = {name: n for name, n in caps.items() if n is not None}
-    needed_missing = price is None or equity is None or trade.stop_distance is None
-    out.approved_shares = 0 if needed_missing else max(0, min([trade.suggested_shares, *known.values()]))
-    out.detail.caps, out.detail.allowed_shares = caps, out.approved_shares
-    if needed_missing:
-        out.findings.append(blocker("risk_fit", "size_above_profile", "The position cannot be sized under the profile: " + ", ".join(
-            reason for reason, missing in (("there is no price", price is None), ("the equity is unknown", equity is None), ("the plan has no stop distance", trade.stop_distance is None)) if missing) + "."))
-    elif out.approved_shares == 0:
-        limits = ", ".join(f"{name} {n}" for name, n in known.items())
-        out.findings.append(blocker("risk_fit", "size_above_profile", f"Not even one share fits the user's limits (shares allowed: {limits}).", value=caps, threshold=1))
-    elif out.approved_shares < trade.suggested_shares:
-        tightest = min(known, key=known.get)
-        out.findings.append(warning("risk_fit", "size_reduced", f"The size is cut from {trade.suggested_shares} to {out.approved_shares} shares by the user's {tightest} limit.",
-                                    value=out.approved_shares, threshold=trade.suggested_shares))
-
     # the risk score
-    held_value = rec.action.held_shares * (price or 0.0)
     flags = flags_of(rec, fetched, config)
     inputs = {
         "stop_loss_pct": trade.stop_distance / trade.entry_mid if trade.stop_distance and trade.entry_mid else None,
-        "position_pct": (held_value + out.approved_shares * price) / equity if price and equity else None,
         "flags": min(1.0, config.flag_step * len(flags)),
     }
     total = 0.0
@@ -166,10 +128,3 @@ def assess(rec: Recommendation, view: RiskView, fetched: dict | None, price: flo
     blocked = any(f.severity == "blocker" for f in out.findings)
     out.score = 0.0 if blocked else round(clip(100 * (1 - 0.5 * score / config.levels[allowed]), 0.0, 100.0), 2)
     return out
-
-
-def exposure_cap(running_dollars: float, price: float | None, equity: float | None, limit_pct: float) -> int | None:
-    """The most shares that still fit under the user's limit on what ONE review may add, given what the earlier approvals of the same review already add. None when it cannot be worked out."""
-    if not price or not equity:
-        return None
-    return max(0, math.floor((limit_pct * equity - running_dollars) / price))

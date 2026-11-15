@@ -1,9 +1,10 @@
 """What the user reads: the Critic's scorecard (Critic v1 spec section 13.3). Plain text from a review's own numbers: no model writes a line.
 
     card = scorecard(review, record)        # {"text": the lines, ...}: the Ask prompt shows it, and so does the report
-    lines = review_section(order)           # the whole CRITIC REVIEW section of a report, and the TRADE DECISIONS line
+    lines = review_section(order)           # the whole CRITIC REVIEW section of a report, and the TRADE DECISIONS line (with the size the Account Manager decided)
 
-`review` is a review as it lives on `order.reviews` (a dict); `record` is the recommendation it reviews (a dict of `order.recommendations`: the card quotes its rank, company and entry zone).
+`review` is a review as it lives on `order.reviews` (a dict); `record` is the recommendation it reviews (a dict of `order.recommendations`: the card quotes its rank, company and entry zone). The card has no
+size: the Critic does not decide how much to buy (the Account Manager does, and adds what it would place to the card it shows the user: `decisions._card`).
 """
 from prometheus.agents.critic.common import EASTERN, pct
 from prometheus.common.work_order import parse_utc
@@ -61,9 +62,6 @@ def _risk(review: dict) -> str:
     text = f"risk {r['risk_level']} ({r['risk_score']:g}), your limit is {r['allowed_level']}"
     if r["tolerance_effective"] != r["tolerance_stated"]:
         text += f" (tolerance lowered to {r['tolerance_effective']})"
-    allowed = r["allowed_shares"]
-    if allowed is not None and allowed < review["suggested_shares"]:
-        text += f"; size cut from {review['suggested_shares']} to {allowed} shares" if allowed else f"; not even one share fits your limits (the Advisor suggested {review['suggested_shares']})"
     return text
 
 
@@ -100,16 +98,14 @@ def _chart(review: dict) -> str:
 
 
 def scorecard(review: dict, record: dict | None = None) -> dict:
-    """The card of one review: {"text", "symbol", "approved", "score", "grade", "shares", "est_cost", "summary"}. `text` is the lines of the spec's example."""
+    """The card of one review: {"text", "symbol", "approved", "score", "grade", "summary"}. `text` is the lines of the spec's example. It names no number of shares and no cost: that is the Account Manager's."""
     record = record or {}
-    approved, price = review["approved"], review["timing"]["deal_price"] or ((record.get("trade") or {}).get("entry_mid"))
-    shares, suggested = review["approved_shares"], review["suggested_shares"]
-    cost = shares * price if price else None
+    approved = review["approved"]
     rank = (record.get("ranking") or {}).get("rank")
     head = f"  #{rank if rank is not None else '-'}  {review['symbol']:<6} {(record.get('company') or '')[:22]:<22} {'APPROVE' if approved else 'DENY   '} score {review['score']}/100 ({review['grade']})"
     if approved:
-        what = "the holding" if review["action"] == "reduce" else f"{shares} shares" if shares == suggested else f"{shares} of {suggested} shares"
-        head += f"      {'add ' if review['action'] == 'add' else ''}{what}" + (f", about ${cost:,.0f}" if cost else "") + f"      valid until {_et(review['valid_until_utc'])}"
+        what = "sell the holding" if review["action"] == "reduce" else "add to the position" if review["action"] == "add" else "open a position"
+        head += f"      {what}      valid until {_et(review['valid_until_utc'])}"
     elif review["score_before_blockers"] > review["score"]:
         head += f"      would have been {review['score_before_blockers']} without the blockers"
     lines = [head]
@@ -129,7 +125,7 @@ def scorecard(review: dict, record: dict | None = None) -> dict:
         lines.append("      BLOCKER score_below_minimum: the score is under the mark for approval")
     if review["requires_human"]:
         lines.append("      needs your eyes before any trade: " + ", ".join(review["requires_human_reasons"]))
-    return {"text": "\n".join(lines), "symbol": review["symbol"], "approved": approved, "score": review["score"], "grade": review["grade"], "shares": shares, "est_cost": cost, "summary": review["summary"]}
+    return {"text": "\n".join(lines), "symbol": review["symbol"], "approved": approved, "score": review["score"], "grade": review["grade"], "summary": review["summary"]}
 
 
 def header(order) -> str:
@@ -141,8 +137,16 @@ def header(order) -> str:
             f"reviewed {run.get('now_et') or '?'}, {str(run.get('session') or '?').replace('_', '-')} session" + ("; IGNORE_MARKET_HOURS: a closed market does not deny" if run.get("ignore_market_hours") else "") + ")")
 
 
+def _decided_size(decision: dict) -> str:
+    """What the Account Manager decided to buy or sell, for the line of decisions (the Critic's card has no size): ", 44 shares, about $7,352", or ", the whole holding (60 shares)"; nothing when no share was decided."""
+    if not decision.get("shares"):
+        return ""
+    return f", the whole holding ({decision['shares']} shares)" if decision["action"] == "reduce" else f", {decision['shares']} shares, about ${decision['est_cost']:,.0f}"
+
+
 def decisions_line(order) -> str:
-    return "TRADE DECISIONS  " + "    ".join(f"{d['symbol']}: {DECISION_WORDS.get(d['will_trade'], d['will_trade'])}" for d in order.trade_decisions) if order.trade_decisions else ""
+    """The Account Manager's decisions on one line: each symbol, the decision, and the size it decided."""
+    return "TRADE DECISIONS  " + "    ".join(f"{d['symbol']}: {DECISION_WORDS.get(d['will_trade'], d['will_trade'])}{_decided_size(d)}" for d in order.trade_decisions) if order.trade_decisions else ""
 
 
 def review_section(order) -> list[str]:

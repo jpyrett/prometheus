@@ -37,6 +37,28 @@ def test_the_weights_of_each_score_add_up_to_what_they_must():
     assert c.evidence.parts.support + c.evidence.parts.clean + c.evidence.parts.breadth == pytest.approx(1.0)
 
 
+def test_the_risk_measures_have_no_position_size_and_their_weights_are_the_earlier_ones_scaled_so_that_they_add_up_to_exactly_100():
+    """Design choices entry 80: the Critic sizes nothing, so the `position_pct` measure (weight 10 of 100) is gone; the other eight weights (25, 15, 10, 10, 10, 10, 5, 5) are scaled by 100/90, to one decimal, with the
+    rounding fixed (the largest remainders get the extra tenths) so that the total is exactly 100."""
+    from decimal import Decimal
+    c = cc.load_config()
+    earlier = {"vol_63d_ann": 25, "max_drawdown_63d": 15, "beta_63d": 10, "atr_pct": 10, "stop_loss_pct": 10, "market_cap": 10, "adv_20d_dollars": 5, "flags": 5}
+    assert [m.name for m in c.risk.measures] == list(earlier) and "position_pct" not in {m.name for m in c.risk.measures}
+    assert {m.name: m.weight for m in c.risk.measures} == {"vol_63d_ann": 27.8, "max_drawdown_63d": 16.7, "beta_63d": 11.1, "atr_pct": 11.1, "stop_loss_pct": 11.1, "market_cap": 11.1, "adv_20d_dollars": 5.6, "flags": 5.5}
+    assert sum(Decimal(str(m.weight)) for m in c.risk.measures) == 100                                          # exactly, not within a float's error
+    assert all(abs(m.weight - earlier[m.name] * 100 / 90) < 0.1 for m in c.risk.measures)                      # each is its earlier weight scaled, to within the tenth the rounding moves it
+    assert c.risk.levels == {"low": 20, "medium": 45, "high": 70}                                               # the scale of the risk score, and so the cut-offs, is kept
+
+
+def test_the_critics_blocker_codes_have_no_size_and_the_review_has_no_field_for_one():
+    from prometheus.agents.critic.record import Review, RiskDetail
+    codes = {code for codes in BLOCKER_CODES.values() for code in codes}
+    assert not {"size_above_profile", "exposure_limit"} & codes
+    assert not {"approved_shares", "suggested_shares"} & set(Review.model_fields) and not {"equity", "equity_basis", "caps", "allowed_shares"} & set(RiskDetail.model_fields)
+    with pytest.raises(ValueError):
+        RiskDetail(caps={"position": 8})                                                                         # `extra="forbid"`: a size cannot be put back by accident
+
+
 def test_a_blocked_score_can_never_reach_the_approval_mark():
     assert cc.load_config().verdict.blocked_score_cap < cc.load_config().verdict.approve_min_score
 
@@ -97,5 +119,5 @@ def test_the_note_key_is_ignored_and_the_config_cannot_be_changed():
 
 
 def test_the_closed_list_of_blocker_codes_has_every_code_once():
-    assert len(BLOCKER_ORDER) == len(set(BLOCKER_ORDER)) == 29
+    assert len(BLOCKER_ORDER) == len(set(BLOCKER_ORDER)) == 27
     assert set(BLOCKER_CODES) == set(cc.DIMENSIONS) and BLOCKER_ORDER[0] == "record_not_reviewable" and BLOCKER_ORDER[-1] == "fresh_negative_event"

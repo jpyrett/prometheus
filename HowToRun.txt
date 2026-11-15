@@ -443,7 +443,7 @@ Prereqs
     REQUEST, PATH (the nodes that ran; "(stopped here)" if it stopped early), ORDER (id, status, live or not, window, subject), QUERY, TOOLS (every call
     with its arguments), DATA CLERK ANSWER with its sources, ADVISOR RECOMMENDATIONS with every signal (OK = counted, SAME = verified but the same story
     counted once, FAIL = not verified, with the reason), and TIMING per node. The order is saved to data/processed/desk_<symbol>_<term>.json.
-    Exit code 0 = finished (a recommendation, or data ready with --no-advisor); 1 = refused or stopped early; 2 = a bad flag or no input.
+    Exit code 0 = finished (a recommendation, or data ready with --no-advisor; with --critic, the Critic's decisions made: the order is decided, or reviewed while a decision waits for you); 1 = refused or stopped early; 2 = a bad flag or no input.
 
   REAL RUNS (the real script, the answers typed in, timed; guide 9.6)
     term "flying car"                      43 s    brought back TSLA and the flying Roadster article
@@ -674,7 +674,7 @@ Prereqs
     SPEED (entry 46): the plans of a level call the model at the same time by default (--sequential turns it off); --effort low shortens a thinking model's calls (gpt-oss-120b: 357 s to 75 s, same answer;
         it does NOT help qwen3-30b: slower and worse); --model qwen/qwen3-30b-a3b runs the smaller model (170 s, sometimes a different, worse plan).
     REAL TIME (entry 48): --deadline SECONDS  after that time no new level starts and the best plan COMPLETED so far is the answer (none yet: nothing is sold). Measured: a first valid plan in 15 to 22 s, an answer in 30 to 45 s.
-    PROMETHEUS_LIVE_TESTS=1 pytest tests/test_realtime_live.py -q -s    # LIVE (paid, about 3 minutes): the portfolio of "claude" (configs/portfolios/claude.json), 4 purchases, 3 sessions: limit 30 s / no limit / limit 1 s (about 2 minutes with the fast providers)
+    PROMETHEUS_LIVE_TESTS=1 pytest tests/test_realtime_live.py -q -s    # LIVE (paid, a few minutes): the portfolio of "claude" (configs/portfolios/claude.json), 4 purchases, 2 sessions (limit 30 s, limit 1 s): are the plans RIGHT (no test measures how long a session takes: entry 86)
     python -m prometheus.agents.account_manager.account_manager --portfolio configs/portfolios/claude.json --buy NFLX:10 --buy COST:9 --buy AVGO:10 --buy NVDA:40 --explore --green-first --lean \
         --max-depth 6 --branching 3 --beam 3 --max-calls 40 --effort low --deadline 30         # LIVE: about 110 seconds for the four purchases
     THE EVALUATOR (entry 47): only holdings in profit are sold (no loss) and one share of every holding is kept (no position sold out), ON by default; --allow-loss and --allow-liquidate turn them off.
@@ -701,7 +701,8 @@ See also: README.md  |  design/session_notes.md
 -----------------------------------------------------------------------------------------------
   Guide (read this to learn how it was built, step by step): design/week5_advisor_implementation.md.   Decisions: docs/design_choices.md entries 51 and 52.
   What it is: Advisor.generate_recommendations(order, portfolio, case, today). One work order whose data is ready goes in, the SAME order comes out with status "recommended",
-    `recommendations` (a reduction first, then additions, then new ideas by rank), `candidates` (looked at, not returned, with the reason) and `advisor_runs`. The model is called TWICE
+    `recommendations` (a reduction first, then additions, then new ideas by rank), `candidates` (looked at, not returned, with the reason) and `advisor_runs`. The portfolio is read ONLY for the holdings (which
+    symbols, their shares and cost basis): the Advisor recommends no amount and never reads the cash or the equity (entry 80). The model is called TWICE
     (a plan call and a thesis call) and writes no number that is used; the Data Clerk calculates every number (DataClerk.request_metrics); thresholds are in configs/advisor_v1.json.
       from datetime import date
       from prometheus.agents.advisor.advisor import Advisor
@@ -715,12 +716,13 @@ See also: README.md  |  design/session_notes.md
   TESTS (no network, no cost):
     pytest tests/test_bars.py tests/test_technicals.py tests/test_fundamentals.py tests/test_metrics_catalog.py tests/test_data_clerk_metrics.py -q          # the Data Clerk's numbers
     pytest tests/test_events.py tests/test_gates.py tests/test_quality.py tests/test_families.py tests/test_ranking.py tests/test_trade_plan.py tests/test_ledger.py -q   # the Advisor's parts
+    pytest tests/test_trade_plan_real.py tests/test_advisor_no_size.py -q   # the plan's prices against 208 real plans, and the Advisor holds no size and never reads the user's money (entry 80)
     pytest tests/test_candidates.py tests/test_thesis.py tests/test_advisor_v1.py tests/test_advisor_config.py -q                                                # the whole step on fakes
     pytest tests/test_advisor_sndk_pg.py -q     # SNDK and PG on REAL captured data (tests/fixtures/advisor_real/), judged by a simple Critic (tests/simple_critic.py)
   CAPTURE A NEW REAL RUN (LIVE, paid: the Data Clerk's model, Finnhub, the Advisor's model; about 1 minute; reads the stored text and bars, fetches nothing):
     python scripts/capture_advisor_fixture.py --symbol SNDK --company Sandisk --sector XLK --today 2026-11-05 --yes     # writes tests/fixtures/advisor_real/SNDK.json (--name PG_open for a second capture)
-  WHAT TO LOOK AT in a record: families (computable? passed? the notes say which rule failed and with what value), ranking (composite, cost, stance; the score is the blend; the excess after cost is kept for the record's arithmetic only), trade (entry, stop, size,
-    invalidation rules), gates, evidence (verified quotes, events, counter-evidence), features (every number with unit, date and source), thesis (checked by code), audit.
+  WHAT TO LOOK AT in a record: families (computable? passed? the notes say which rule failed and with what value), ranking (composite, cost, stance; the score is the blend; the excess after cost is kept for the record's arithmetic only), trade (entry zone, stop, target, time stop, order style,
+    invalidation rules: prices and dates, NO size: how much to buy is the Account Manager's, entry 80), gates, evidence (verified quotes, events, counter-evidence), features (every number with unit, date and source), thesis (checked by code), audit.
 
 
 PART 9. RECOMMENDATIONS, END TO END (Week 5, part 3; design choices entry 53)
@@ -729,11 +731,11 @@ PART 9. RECOMMENDATIONS, END TO END (Week 5, part 3; design choices entry 53)
   ./test_recommendations.sh DPZ                                   one symbol           ./test_recommendations.sh "DPZ PZZA YUM"      a list of symbols
   ./test_recommendations.sh "Domino's Pizza"                      a company name       ./test_recommendations.sh 'MCD, YUM, "Burger King"'   COMPARE a list (a brand's listed owner is found: QSR)
   ./test_recommendations.sh 'MCD, YUM, "Burger King"' --find 3 --no-fetch      use the data already stored (no paid data calls; the two model calls still cost a cent or two)
-  --list / --symbols / --company / --phrase force the kind; --cash 1000 sizes for $1,000 instead of the sample portfolio; --help has everything.
+  --list / --symbols / --company / --phrase force the kind; --cash 1000 uses an empty portfolio with $1,000 instead of the sample (the Account Manager sizes any purchase by it; the Advisor never reads it); --help has everything.
   MODEL: the Advisor uses openai/gpt-oss-120b here on Cerebras then Groq at reasoning effort low (2 s for the plan call); --model ID picks another, --model advisor the ADVISOR_MODEL of .env.
   NEEDS YOUR YES (AGENTS.md): without --no-fetch it refreshes bars, news, press releases and filings with the paid APIs (and 10-Q text from sec.gov) and writes files; the script asks first and never fetches when
-    nobody can answer. Finding the companies of a phrase or a brand calls the Data Clerk's model and Finnhub's symbol search either way.
-  READING THE REPORT: RANKING (best to worst, every company scored; 47 = no strategy fired), KEY NUMBERS side by side, WHY NOT RECOMMENDED (what each strategy family found), RECOMMENDATIONS (plan, size, thesis),
+    nobody can answer, unless you pass --yes (answers the question) or --fetch (the default said outright: typing it is the yes; it contradicts --no-fetch, which is refused). Finding the companies of a phrase or a brand calls the Data Clerk's model and Finnhub's symbol search either way.
+  READING THE REPORT: RANKING (best to worst, every company scored; 47 = no strategy fired), KEY NUMBERS side by side, WHY NOT RECOMMENDED (what each strategy family found), RECOMMENDATIONS (plan, thesis: no size, the Account Manager decides how much),
     YOUR HOLDINGS. "no listed company" = private (Little Caesars, Donatos). A franchisor with negative equity fails the leverage rules (entry 53).
   Code: prometheus/application/recommendations.py.  Tests: pytest tests/test_recommendations.py tests/test_recommendations_script.py -q
   NEGATIVE EQUITY (entry 54, spec Amendment 1): for a company with a stockholders' deficit (Domino's, Papa John's, Yum, McDonald's) the four debt/equity rules are not applied, and the report marks it: * on the ranking,
@@ -758,15 +760,115 @@ PART 10. THE CRITIC (Critic v1: Week 5, part 6; design choices entries 56 to 59;
   WHAT IT CHECKS, in this order (every check runs; a "blocker" denies, a "warning" is shown):
     ACCURACY (30 points)   the Advisor's own arithmetic worked again; the Data Clerk is asked AGAIN for the key numbers, a current quote and the cited sources, and old and new must match; the symbol must be listed
     EVIDENCE (15)          a model of another producer (GLM 5.3) reads each quote in its source and says supports / weak / unrelated / contradicts; a planted control claim proves it read the text; newer stored news is read too
-    RISK FIT (20)          the position's risk score (0-100) against YOUR profile (conservative low, moderate medium, aggressive high; age and horizon lower it); the Critic may CUT the size, never raise it
+    RISK FIT (20)          the COMPANY's risk score (0-100) against YOUR profile (conservative low, moderate medium, aggressive high; age and horizon lower it); the Critic never sizes: how much to buy is the Account Manager's
     TIMING (10)            the market must be open (pre-market 04:00, regular 09:30-16:00, after-hours to 20:00 only when the next day trades: nothing after 4 PM on a Friday, at weekends or on holidays) and the record from that day
     VALUE (25)             the price against its six-month average (overpriced = 30% above), valuation, a collapsing stock is not a discount, and a profit left after cost; a price 3% to 15% under the average earns up to +10
     Approve = no blocker and a score of 70 or more. A blocked recommendation never shows more than 49. An approval lasts until the window closes or an hour, whichever is first.
   READING THE REPORT: the CRITIC REVIEW section prints one card per recommendation (APPROVE or DENY, score, points of each dimension, warnings, blockers) and TRADE DECISIONS (yes (AUTO), yes (you approved), pending your answer (ASK),
-    no (system denied) -- final: you are never asked to override a denial --, no (the approval ran out), no (no funds)). NOTHING IS BOUGHT OR SOLD: the Trader is not built; the decision is the permission it will need
-    (work_order.verify_trade is its precondition).
-  YOUR PROFILE: configs/profiles/jacob_pyrett.json (a SAMPLE: moderate, Ask, 10% a position, 1% a stop-out, 30% new exposure a review, no age; the real values are yours to give). The Critic sees only the limits, never the mode.
+    no (system denied) -- final: you are never asked to override a denial --, no (the approval ran out), no (no funds)). WITHOUT --trade NOTHING IS BOUGHT OR SOLD: the decision is the permission the Trader needs
+    (work_order.verify_trade is its precondition; PART 12 is the Trader).
+  YOUR PROFILE: configs/profiles/jacob_pyrett.json (a SAMPLE: moderate, Ask, 10% a position, 1% a stop-out, 30% new exposure a review, no age; the real values are yours to give). The Critic sees only the risk tolerance, age, horizon, excluded symbols and sectors and the minimum price, never the mode, the size limits or the portfolio (`Critic.review_recommendations(order, risk, now)`); the Account Manager sizes by the limits.
   NEEDS YOUR YES (AGENTS.md): a review calls Finnhub (metrics, quotes, symbol lookups) and the critic's model once per recommendation. Tests use fakes and are free:
-    pytest tests/test_critic*.py tests/test_market_calendar.py tests/test_user_profile.py tests/test_account_manager_decisions.py tests/test_desk_critic.py tests/test_recommendations_critic.py -q
+    pytest tests/test_critic*.py tests/test_market_calendar.py tests/test_user_profile.py tests/test_account_manager_decisions.py tests/test_account_manager_sizing.py tests/test_desk_critic.py tests/test_recommendations_critic.py -q
   THE REVIEWS LEDGER: data/ledger/reviews.jsonl (append only, one line per review). Every threshold is in configs/critic_v1.json (the model never chooses one).
+  HOW MUCH TO BUY (entry 80): not the Advisor's and not the Critic's. The Account Manager sizes every approved purchase (prometheus/agents/account_manager/sizing.py, configs/account_manager_v1.json) from your cash, your
+    limits (10% of the account in one stock, 1% lost at a stop-out, 30% added by one review, an order limit if you set one), the stock's own liquidity (5% of its daily dollars) and what you said. AUTO mode with no
+    split asked spends the funds ROUND-ROBIN: a share of the first approved stock, a share of the next, and again, until the funds you asked to use (or every stock's limit) are used up; "split evenly" in your words gives
+    equal DOLLARS. ASK mode shows the largest order your limits allow (or the split you asked for) as the final proposal before it asks you Y/N about each trade. No cash is reserved: each purchase may use all the available
+    cash. The report names the limit that stopped each purchase and the flag that raises it. pytest tests/test_account_manager_sizing.py tests/test_account_manager_balance.py -q
+
+
+PART 11. THE ACCOUNT BOOK (design choices entry 72)
+  Postgres 18 in a container, localhost only. The schema is sql/prometheus_accounts.sql (roles, grants, the cash trigger, row scope). The three samples are sql/seed_test_users.sql.
+  Passwords are NOT in the SQL and NOT in .env. scripts/setup_postgres.sh writes them to secrets/postgres_local.txt (gitignored) the first time and reuses them after that.
+    bash scripts/setup_postgres.sh                 # start the container, apply the schema, load the samples if they are missing
+    bash scripts/setup_postgres.sh --reseed        # replace the three samples (jacob_sample, avery_chen, blake_okonkwo). Other accounts are kept.
+  The container is prometheus-postgres, published on 127.0.0.1:5432, restart unless-stopped. sql/docker-entrypoint-ssl.sh turns SSL on (the key stays in the data volume). The application role is not a superuser and cannot change the cash balance except by a ledger row.
+  PRINT one saved account (no quote, no model):
+    python -m prometheus.agents.account_manager.account_manager --account jacob_sample
+    python -m prometheus.agents.account_manager.account_manager --account avery_chen --from 2026-01-01 --to 2026-12-31
+    python -m prometheus.agents.account_manager.account_manager --account blake_okonkwo
+  Avery's 2026 realized gain is -27.50 (two sells). Jacob's cash is 51.23 and his three holdings match the JSON sample. Blake is aggressive, Auto, cash 1,800.00.
+  A throwaway deposit, buy, sell, then delete, and the three samples printed again:
+    python scripts/account_book_demo.py
+  TESTS (no paid API):
+    pytest tests/test_account_book.py tests/test_account_manager.py tests/test_account_manager_decisions.py -q
+  The desk reads the JSON profile and portfolio unless you give it an account: python -m prometheus.langgraph.desk --symbol PG --critic --account NAME_OR_NUMBER (PART 12). The book methods are the Postgres path. Risk levels you can set: conservative, moderate, aggressive.
+  Realized gain counts sells only. A deposit is not a gain, and shares still held are not marked to a price.
+
+
+
+PART 12. THE TRADER (Trader v1: design choices entries 73 to 75; spec design/trader_v1_final_spec.md; the build notes design/how_to_code_trader.md)
+  What it is: the fifth agent. After the Account Manager decides, the TRADER executes the trades that were permitted (a decision of yes_auto or yes_user) against a SIMULATED broker, one trade at a time, and the Account Manager owns the money (design choices entry 81).
+  There is no live trading and no real money: PAPER trading fills at the current quote, BACKTEST fills at the next session's open from the stored daily bars. PAPER_TRADING in .env must be true (it is, by default); anything else refuses every run.
+  THE HANDSHAKE (entry 81): the Trader holds no cash and no portfolio. For EVERY trade: the Account Manager reads the funds as they are now and approves the shares (a purchase is cut to the shares the cash pays for, a sale to the shares held and sellable under T+1); the Trader fills at most those and reports the fill AT ONCE (the Account Manager applies it and, with --book on a saved account, SELECTs the account, books it in ONE Postgres transaction under row-level locks on the whole portfolio, and SELECTs the account AGAIN to confirm that the trade is in and the totals are different: entry 82); only then does the next trade start. So a purchase can never overdraw the account, two runs on one account cannot spend the same cash (the book refuses the second), and nothing is reserved. A trade that fails (the book refuses it, the booking is rolled back or cannot be confirmed) is not committed, is shown to you by the Account Manager with the account as it stands, is NEVER retried, and is REJECTED account_refused; the run goes on to the next trade (nothing halts it). The handshake never waits for a next trade: it is asked only for a trade about to be placed, a trade that is refused, rejected or resting is never booked, and after the last trade the run goes straight to its report (with nothing to place there is no handshake at all). With no saved account, or without --book, the Account Manager keeps the account in its own memory and nothing is written.
+  Its model (openai/gpt-oss-120b, OpenRouter, TRADER_MODEL of .env, temperature 0) has four tools and cannot name a symbol, a side or a number of shares; code places whatever the model leaves. Temperature 0 makes a run repeatable; the tools are what stop a made-up trade.
+
+  FREE (stored bars, no model, nothing written; you may run it, AGENTS.md):
+    python -m prometheus.agents.trader.replay --order FILE --mode backtest --no-model --cash 10000       replay a saved, decided work order (the desk's saved JSON, which has an "order" key, or a bare order) as a backtest
+    --portfolio FILE | --cash N   --profile FILE   --now "YYYY-MM-DD HH:MM" (US Eastern; default: the moment the permission was given)   --yes-funding (answer yes to the funding question)   --json   --save FILE
+    --fresh (ignore the trades the order already carries: replay a desk run that already traded)   --no-ledger (paper only)
+    --show-graph and --help are free too:   python -m prometheus.langgraph.desk --show-graph --critic --trade      (with --raise-funds the funds node is drawn before the trader)
+  PAID (ask Jacob first, AGENTS.md): a model run calls OpenRouter; paper mode calls Finnhub for a quote per symbol; a desk or runner run also pays for everything before the Trader (news, the Advisor, the Critic).
+    python -m prometheus.langgraph.desk --symbol PG --critic --trade                                  paper, in memory (the fills stay on the work order). You are asked about the trade, then, if it needs RaiseFunds, about the sells
+    python -m prometheus.langgraph.desk --symbol PG --critic --trade --no-trader-model                no model for the Trader: the program places the default orders (a paper run still asks Finnhub for the quotes)
+    python -m prometheus.langgraph.desk --symbol PG --critic --raise-funds --trade                    with the funding sells: the funds node plans them, the Trader asks you before it sells anything (Ask and Auto alike)
+    python -m prometheus.langgraph.desk --symbol PG --critic --trade backtest                         the stored bars; made at the time of the decision the next session's bar is usually not stored yet, so the orders wait (ACTIVE)
+    python -m prometheus.langgraph.desk --symbol PG --critic --trade --account NAME --book            use a SAVED account (PART 11) for the profile and the portfolio, and save the fills in it (paper only; --book needs --account and --trade paper)
+    ./test_recommendations.sh PG --no-fetch --no-ledger --mode auto --trade                           the runner: ... -> Critic -> decisions -> Trader (paper); --trade backtest --now "2026-11-05 10:30" replays; --no-trader-model; --no-ledger keeps data/ledger/trades.jsonl out
+    python -m prometheus.agents.trader.replay --order FILE --mode paper                               the replay in paper mode (Finnhub quotes) or without --no-model (OpenRouter)
+  FLAGS of the desk: --trade [paper|backtest] (needs --critic; alone it is paper)   --no-trader-model (needs --trade)   --account NAME_OR_NUMBER (needs --critic; a sample key such as jacob_sample, or an account number)   --book (needs --account and --trade paper)
+    --profile FILE (with --account it replaces the account's own row)   --portfolio is for the JSON files and is not used with --account.   FLAGS of the runner: --trade [paper|backtest]  --no-trader-model (both need the Critic).
+  THE SAVED ACCOUNT, TWO WARNINGS: (1) --account also saves the Account Manager's DECISIONS in that account, with or without --book (design choices entry 72: the approved and denied counts). tests/test_account_book.py pins the three samples' counts, so a live
+    run on jacob_sample breaks that test: use a throwaway account (python scripts/account_book_demo.py shows how one is made and deleted) or run `bash scripts/setup_postgres.sh --reseed` afterwards. (2) --book changes the cash and the holdings in the book.
+    The local Postgres must be up (`bash scripts/setup_postgres.sh`); if it is not, the desk says "the account book could not be read (<kind of error>)" and never prints the connection details.
+  READING THE TRADER SECTION OF THE REPORT:  TRADER (model, mode, where the prices came from) / one line per trade: id, side, shares FILLED of APPROVED, the order, FILLED at a price and amount, ACTIVE (a resting order), or REJECTED with its code and its sentence, and who
+    placed it (the model or the program's sweep) / the funding sells under their purchase / "account  cash A -> B" (the Account Manager's figures: before the run, and when it was closed) and whether the fills were kept in memory or booked / in a backtest one OUTCOME line per purchase (the exit, the gain, the return, the benchmark) / the summary and
+    whose it is (the model's when code could check every number in it, else code's) / "trader note:" lines for what went wrong. The codes: not_permitted, approval_expired, price_unavailable, price_outside_limits, limit_not_reached, insufficient_cash, not_held, not_sellable_today,
+    funding_failed, not_attempted, account_refused, internal_error. The order is "traded" when every permitted decision was filled or rejected; with a decision still pending or an order resting it stays what it was and a later call carries on.
+  THE LEDGER: data/ledger/trades.jsonl (append only, one line per trade that became filled or rejected, PAPER mode only). A backtest is a replay and writes none. Every threshold is in configs/trader_v1.json (the model never chooses one).
+  EXIT CODE of the desk with --trade: 0 for an order that is traded, decided or reviewed, else 1. (A --critic run without --trade now counts the same way: decided or reviewed is finished. Until 2026-11-14 it exited 1 and printed "(stopped here)" for every good run; it is also not finished, exit 1, when the Critic ran and the order was never reviewed, for example when the Critic could not start.)
+  TESTS (no paid API, no model):  pytest tests/test_trader*.py tests/test_desk_trader.py tests/test_recommendations_trader.py tests/test_work_order_trader.py tests/test_data_clerk_bars.py tests/test_account_manager_trades.py tests/test_account_manager_handshake.py -q
+    (the handshake tests use the REAL session order, the stored daily bars and the real Postgres on throwaway accounts: they skip when the bars or the database are not there)
+    and, against the local Postgres (skipped when secrets/postgres_local.txt is absent):  pytest tests/test_account_book.py tests/test_trader_handshake.py tests/test_account_booking_real.py -q
+  A NEWS ARTICLE OR PRESS RELEASE THAT FAILS (a broken record, a bad time) is skipped and discarded completely (entry 83): python -m prometheus.rag.loaders AAPL lists what was discarded, python -m prometheus.rag.ingest prints it, and tests/test_failed_articles.py covers the fetch side.
+
+
+PART 13. THE SIMULATED CLOCK: USE_LIVE_TRADING (design choices entry 76)
+  USE_LIVE_TRADING=false in .env: the desk works at the PREVIOUS BUSINESS DAY's close, 30 minutes before it (15:30 Eastern; 12:30 on an early-close day), as if the market were open. It runs at night, at the weekend and on a holiday.
+    Friday, Saturday-Monday morning -> Friday's close | a Tuesday -> Monday's close | the day after Thanksgiving -> Wednesday's close.   The moment is the same for every agent and does not move, so an approval never runs out in a run.
+  A price is the stored daily bar of that day (no Finnhub call: it costs nothing and needs no key), marked "simulated". A symbol with no stored bar on that day fails; it is never priced from another day or from the live quote.
+  true, or not set: the real clock and Finnhub's live quote, as before. A typing mistake in the value is read as false (the simulation). It is NOT live trading: there is none, and PAPER_TRADING is a separate setting.
+  Every report starts with a CLOCK line saying which moment the run works at. An explicit --now (the runner) or --today is a replay on purpose and wins. The stored bars must reach the simulated day (the Advisor's freshness gate says so when not).
+    ./test_recommendations.sh PG --no-fetch --no-ledger --mode auto --no-ask --cash 10000 --trade       works on a Saturday with no --today and no --now
+  The Critic does not run its second-provider price check while the clock is simulated (the price is the stored bar itself).
+
+
+PART 14. A USER SESSION END TO END (design choices entry 78)
+  ./test_prometheus.sh --session
+      Create a new user? [Y/n]   Y: name, age, risk tolerance, money to add, trade mode (ask, the default, or auto).   N: an existing account (a number or a sample key).
+      Tell me what you want to do?   your request in your own words, for example: I want to buy oil stocks. Use as much of the money in my account as you can to buy shares of the 3 most recommended oil
+      companies, and split the money evenly among the 3.     (Enter takes that sample request)
+      Refresh the data of the companies with the PAID APIs? [Y/n]   (the default; --no-fetch skips it, --yes answers yes; with no input at all the answer is no)
+  Then, with the REAL agents and the real stored data (nothing is faked): the Account Manager reads the request and shows what it understood (Go ahead? [Y/n]), the Data Clerk finds the companies, the Advisor ranks
+  them, the Critic reviews each against the profile, the Account Manager decides and sizes (Auto: round-robin, a share of each approved stock in turn; "split evenly" in your words: equal dollars) and the Trader executes, simulated, and books the fills in the account. These are the nodes of the
+  LangGraph desk (langgraph/desk.py). It prints the status of the recommendations, HOW MUCH WAS BOUGHT (what limited each purchase and the flag that raises it), the Trader's results and the portfolio before and after.
+  ./test_prometheus.sh --session --name "Bob Jones" --age 60 --risk conservative --cash 15000 --mode auto --yes --no-fetch --auto-min-score 70 --prompt "..."          no questions at all
+  ASK MODE (the default): after the Critic the Account Manager prints the trades it proposes (final shares and cost: sized by the Account Manager, the largest order your limits allow or the split you asked for) and asks "Place this trade 1 of N (...)? [y/N]" about each;
+         only the ones you approve go on to the Trader, exactly as shown (a "no" changes none of the others). --yes does NOT approve trades. With no terminal (piped input) nothing trades and the report says why.
+         AUTO mode trades what the Critic approved at or above the mark and asks only about the rest, spending the funds round-robin when you asked for no split. No cash is reserved: each purchase may use all the available funds.
+  ASK MODE ASKS HOW MUCH (entry 85): when your request does not say how much (no percentage, no dollar amount, no number of shares, no "as much as I can"), the Account Manager asks BEFORE it proposes the trades, up to three
+         questions at the terminal: answer with a percentage of your account ("20%"), dollars ("$3,000"), shares ("10 shares of each") or "as much as I can", for each company or in total, and say "split evenly" if you want that.
+         Code checks your answer (the number must be one you typed; what you ask must not cost more than your cash) and your limits cut it; when your own position or exposure limit cuts it, you are asked ONCE whether to raise it
+         for this purchase only (your saved limits stay). A request that says how much, a budget, Auto mode, or no terminal: nothing is asked. A model that fails shows the default size and says so.
+  FLAGS  --name --age --risk --cash --mode --account N|KEY --prompt --yes --no-fetch --no-trader-model --cleanup (delete the new account) --allow-no-trade --real-ledger --default-count N --model ID
+         --auto-min-score N  --max-position-pct X  --max-exposure-pct X  --max-loss-pct X  (limits for THIS session; the account book keeps its own)  --save FILE (what the desk made, as JSON)
+  COSTS: OpenRouter (the Account Manager's, the Advisor's, the Critic's GLM 5.3 and the Trader's models), Finnhub, and with a fetch the paid Massive and Finnhub APIs, which write files. It creates an account in the
+  local Postgres (kept unless --cleanup; python -m prometheus.agents.account_manager.account_manager --account N shows it). Nothing is sent to a broker.
+  EXIT CODE  0 the portfolio changed (or it was only a look)  1 it could not trade, with the reasons  2 a bad flag, or the account book, a key or the request could not be used.
+  WHY IT MAY NOT TRADE: in Auto mode an approval under the automatic-trading mark (80, or --auto-min-score) waits for the user; a company over the user's risk is denied; the profile limits one stock to 10% of
+  equity and one review to 30% (the Account Manager's sizing stops each purchase at its limit, so $15,000 does not all get spent; the report names the limit and the flag that raises it), and an even split gives every
+  purchase the same dollars, so a dearer stock gets fewer shares. The report names each of these.
+  TESTS  pytest tests/test_session_offline.py tests/test_session_replay.py tests/test_session_replay_round_robin.py tests/test_account_manager_clarify.py tests/test_account_manager_intent.py tests/test_account_manager_balance.py tests/test_account_manager_sizing.py   (real data, no stand-in agent)
+         PROMETHEUS_LIVE_TESTS=1 pytest tests/test_end_to_end_live.py -q -s     (the real agents: a few cents and a few minutes; opt-in)
 

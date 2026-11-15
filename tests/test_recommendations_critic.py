@@ -79,7 +79,8 @@ def test_the_mode_is_the_profiles_unless_the_run_overrides_it_and_ask_mode_asks(
     asked = []
     result, _, _ = go("DPZ PZZA YUM", approver=lambda card: asked.append(card["symbol"]) or True)
     approved = [r for r in result.order.reviews if r["approved"]]
-    assert len(asked) == len(approved) and all(d["mode"] == "ask" for d in result.order.trade_decisions)
+    sized = [d for d in result.order.trade_decisions if d["shares"]]               # the Account Manager sizes each approval (entry 80): one that sizes to no share (here DPZ, over the $1,000's 10% limit) is `no_funds` and is not asked about
+    assert len(asked) == len(sized) < len(approved) and all(d["mode"] == "ask" for d in result.order.trade_decisions)
     trusting = AccountManager(model=object(), profile=profile(user="t", trade_mode="ask", auto_min_score=60))      # the profile says Ask; the mark of 60 is under what the fake data scores
     result, _, _ = go("DPZ PZZA YUM", manager=trusting, mode="auto", approver=lambda card: pytest.fail("auto mode must not ask what clears the mark"))
     assert all(d["mode"] == "auto" for d in result.order.trade_decisions) and "yes_auto" in [d["will_trade"] for d in result.order.trade_decisions]
@@ -155,10 +156,3 @@ def test_the_default_date_is_the_easterns_date_of_the_review_and_a_different_one
     assert "as of 2026-10-23" in out.out and "Eastern date" not in out.out
     code, out, _ = fake_main(monkeypatch, capsys, "DPZ PZZA YUM", "--no-ledger", "--cash", "1000", "--now", "2026-10-23 10:30", "--today", "2026-10-22")
     assert "is not the Eastern date of the review (2026-10-23)" in out.out
-
-
-def test_the_report_does_not_crash_when_the_equity_and_so_the_position_size_are_unknown():
-    result, _, _ = go("DPZ PZZA YUM", critic=False)
-    for r in result.order.recommendations:
-        r["trade"]["position_pct"] = None
-    assert "= n/a of equity" in rec.report(result)

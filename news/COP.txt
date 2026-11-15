@@ -1,0 +1,3232 @@
+<<<ARTICLE>>>
+id: finnhub:143695000
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T21:55:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3888e597ac1225d88e2e891d8fefeafbb7c602d50d0fdaeabe80d63c0bf426d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Better Dividend Stock: Exxon vs. ConocoPhillips
+<<<SUMMARY>>>
+Key TakeawaysConocoPhillips raised its quarterly dividend 11% to $0. 93 a share on Nov.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592225
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:30:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=179932ced585c47b91f7c497290f9405d62b1ac2a2bf533cfb1fe4d053589441
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-w1536
+category: company
+tickers: COP
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week of November 8
+<<<SUMMARY>>>
+Get the latest dividend activity for Dividend Champions, Contenders, and Challengers. Read this week's list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589871
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:47:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b697033561c859f0895bb06273479d04be966b483d695f2df4861451cd848a0e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Just Raised Its Dividend 11%. Is It a Better Buy Than Murphy Oil?
+<<<SUMMARY>>>
+Two oil producers just posted strong quarters, but only one turned its cash flow into a payout that can survive a price slump. For income investors, the gap between a bigger yield and a safer check may surprise you.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588241
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:25:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c59e2a613c0a936c42005e71f0fe8a9035428710f377060f02143c91bbab99e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Is ConocoPhillips a Buy After Its Latest Earnings Report?
+<<<SUMMARY>>>
+The oil giant delivered strong earnings and raised its dividend, but its biggest cash-flow growth could still be ahead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588497
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8152419060c14693b816930dc546b333c8cc9246724ca3fabdba77d0244470b7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: COP Q3 Earnings Call Highlights Cash Flow Growth and Lower Spending
+<<<SUMMARY>>>
+ConocoPhillips targets $7B in free cash flow improvement by 2029, with lower capital spending, growing production and higher shareholder returns driving its outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590918
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:33:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3a886db775c395c79c0e1057ec71e85b044e03f6368995bf5c195cb96900e8e5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Do Wall Street Analysts Like ConocoPhillips Stock?
+<<<SUMMARY>>>
+ConocoPhillips has outpaced the broader market over the past year, with Wall Street analysts maintaining a cautiously optimistic outlook on the stock's future prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584752
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=df989163ed21c9ba457cc770b98adabb43d32bb7d41d31634ab1b5d582ad2dc9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Q3 Earnings Beat Estimates on Higher Commodity Prices
+<<<SUMMARY>>>
+COP's Q3 2026 earnings more than doubled as higher realized prices boosted revenues, cash flow and shareholder returns despite lower production.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143580154
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:12:55Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=865640e021ce729c1ab1a87f93ad8da3ffcb7ee10bce52465015433377e19fa9
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_41_00922f16cf.webp
+category: company
+tickers: COP
+keywords: 
+headline: Stock Market Today: Nasdaq Crashes 5.5% as Midterm Fallout Turns Into a Brutal AI Chip Selloff
+<<<SUMMARY>>>
+The Nasdaq fell 5.5% in its worst day since April 2025 as investors dumped AI chip stocks on fears of tighter regulation after the Democratic midterm win. AppLovin soared, Airbnb beat after the bell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143581366
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:05:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6913c95d307c49ebfeea07be218bb74ed4691fffb2f46bb15f548eb7f5d8f56a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: State Street Energy SPDR (XLE) Sells $75.9 Million of Exxon on Nov. 4
+<<<SUMMARY>>>
+The fund sold $312.6 million of stock and bought nothing on Wednesday, cutting all 21 of its positions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583234
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:03:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=03223309f88a025ed6c31f0d1b97eae0122744374fec304470811f1b2c10ea0e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ETFs Are Net Sellers of ConocoPhillips (COP) on Nov. 4
+<<<SUMMARY>>>
+ConocoPhillips saw $22.9 million in net ETF selling on Nov. 4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614846
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:29:47Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=aa8ad8356363f8e22cda1b29bd8e4ca44bb2abddc5e5a0654091bc7f4b7953c5
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Wells Fargo Maintains Overweight on ConocoPhillips, Lowers Price Target to $185
+<<<SUMMARY>>>
+Wells Fargo  analyst Sam Margolin   maintains ConocoPhillips (NYSE:COP) with a Overweight and lowers the price target from $189 to $185.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584991
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T08:50:44Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f3d92148db901a4ae88f6e90533c609f784c1d3cd961b88d27d5b174ceb5a7aa
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/London--United-Kingdom---February-26--20.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Morgan Stanley, Chubb and CF Industries: CNBC’s ‘Final Trades’
+<<<SUMMARY>>>
+CNBC traders picked CF Industries, Morgan Stanley, Chubb and ConocoPhillips as final trades, citing strong earnings and outlooks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143555455
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T03:17:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2f6346f0a9dba173a17ebb24884c028b7822ee356b04e5b3dd896bdb8b10fe3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (COP) (Q3 2026) Earnings Call Highlights: $4 Billion Free Cash Flow, 11% ...
+<<<SUMMARY>>>
+ConocoPhillips (COP) beat Q3 2026 expectations with $7.2 billion in cash from operations, returned $3.4 billion to shareholders, and outlined a path to roughly double 2025 free cash flow by 2029.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543019
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T23:36:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cc5616c231d444a7b8b85c2bfea848b49ed415acf3f61bbb78b8dc6b1b6bab8e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of ConocoPhillips's Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143638946
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:11:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=372fac4370fe134bdaf000aa3459e02ea3736d1448576649f909a061c3b916a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Morning Movers: AppLovin surges following third quarter results
+<<<SUMMARY>>>
+Stock futures are mixed Thursday as investors rotate away from technology and AI-related shares following Wednesday’s post-election rally. The Dow is positioned to extend its rally after jumping nearly 1,570 points Wednesday, while weakness in semiconductor stocks weighs on the Nasdaq. The rotation extends beyond technology, with investors moving into other sectors following Wednesday’s broad rally. Oil prices rebound modestly after plunging more than 8% Wednesday on optimism that the election r
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541977
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:35:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e17fed33e2e4c6bcd280a32274dd57de7d1ff923d0a30f37ec2b6b6870aef86
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (COP) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Dividend rises 11% as Willow nears first oil on schedule.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541680
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:12:22Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=50ca85e095a85b4cfcb04491efdbbc064a211695124e4f83295475969a28364a
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Announces third-quarter 2026 Results and Increases Quarterly Ordinary Dividend by 11%
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541242
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:12:08Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7cecaf6d998be2918108737a2b0222bad8bb2ce0b1dfa897e3770803638886ca
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2156714333/image_2156714333.jpg?io=getty-c-w1536
+category: company
+tickers: COP
+keywords: 
+headline: Stocks To Consider Ahead Of The Upcoming October 2026 CPI Report
+<<<SUMMARY>>>
+Federal Reserve held rates at 3.75%-4.00% amid elevated inflation and resilient domestic spending, with a 25 bps hike next month. Read full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537932
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:11:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87ba8e782f9ec1a0402930ade4ddedf1e9c05df022bcb1c19057f7767f602de8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Reports Higher Q3 Earnings as Oil Prices Support Profit Growth
+<<<SUMMARY>>>
+ConocoPhillips (NYSE:COP) reported third-quarter 2026 adjusted earnings of $3. 27 per share, exceeding analysts’ expectations of $2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537933
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:47:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=030c4da48fda12a89f24def57f2672150bb9d6eb9127dcec92c770a6719fe1d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Just Raised Its Dividend 11%. Is the Stock a Buy?
+<<<SUMMARY>>>
+The bigger payout arrives December 1, but the cash behind it came from a war-driven oil spike while production actually fell. One part of ConocoPhillips' shareholder returns is built to absorb the shock when crude cools, and it is not the dividend.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537938
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=791b4df0961a72381e7ed3d0736ef6b9668ff57d65e2f3ff38763932545555b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Great Jobless Claims & Productivity Keep Dow Alight
+<<<SUMMARY>>>
+Initial Jobless Claims sank back to post-Covid lows, with +189K matching the mid-July low.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584992
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:12:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6ef3614e57c9d00579c014f93c902168edae3f59168338d1d6066d9e605c6d39
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+ConocoPhillips (NYSE:COP) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139929663
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:01:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=26edce21f252bbb13f88dbc375a0e8112f2e51077367c4d8dd9baa018cd04d5e
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Magic Formula Investing Year in Review
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537934
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=88336c508c3f36511d26a7af433ea4dd61e59a255e783fee7ea5a86547b4b5b9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (COP) Reports Q3 Earnings: What Key Metrics Have to Say
+<<<SUMMARY>>>
+Although the revenue and EPS for ConocoPhillips (COP) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533912
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:48:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=68e5eb896c4c73b73fb05d02c5ebf6a8ee3303e5e517a626ecdb5e9c613f631b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Update: US Equity Futures Mixed Pre-Bell as AI Stocks Dip Following Democrats' Midterm Win
+<<<SUMMARY>>>
+(Updates with economic data, recent oil price movement, world markets' overview and corporate stock
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533913
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:48:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3abe5de201aca4300045c5747cfea96b24404e5fbd4d084778aabed11285963
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Par Pacific makes EVP shift
+<<<SUMMARY>>>
+Jerry Stumbo succeeds Richard Creamer as executive vice president for refining and logistics at the energy and retail company.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537935
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:35:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5f20977241f994aee28b365a45866e5fa6ccbbfd2c0a18946eed442a5dbcceee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (COP) Surpasses Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+ConocoPhillips (COP) delivered earnings and revenue surprises of +6.86% and +9.10%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537936
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=862b97d52febcbb72556ff0892c3eb8add9f167935b8bcd1fcfa57152d6386e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Wall Street Bulls Look Optimistic About ConocoPhillips (COP): Should You Buy?
+<<<SUMMARY>>>
+According to the average brokerage recommendation (ABR), one should invest in ConocoPhillips (COP). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589381
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:22:37Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=7f80a4f2de9e5a2c954a7c79f7812b990e92ba7b4b64930ea436fd68a84f144f
+image_url: https://image.cnbcfm.com/api/v1/image/108527158-17939018151793901813-49455945521-1080pnbcnews.jpg?v=1793901815&w=1920&h=1080
+category: company
+tickers: COP
+keywords: 
+headline: Final Trades: CF Industries, Morgan Stanley, Chubb Limited and ConocoPhillips
+<<<SUMMARY>>>
+The Investment Committee gives you its top stocks to watch for the second half.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533907
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:59:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9108f595792fff6cea42bef059676242474e37584f94f402ccf35752de8ecd0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: US Equity Futures Mixed Pre-Bell as AI Stocks Dip Following Democrats' Midterm Win
+<<<SUMMARY>>>
+US equity futures were mixed pre-bell Thursday as traders observed artificial intelligence and data
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584994
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:45:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1be61668deb18c84141f9909b091f680d8e5082f41761191fdde89cf8573142e
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/ConocoPhillips.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Targets $7 Billion Free Cash Flow Inflection by 2029, Raises Dividend 11%
+<<<SUMMARY>>>
+ConocoPhillips raises its quarterly dividend 11% to $0.93 per share after generating $7.2 billion in operating cash flow during Q3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533908
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:42:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3939ddcd62ccdfd971ed6c6d318400299325d552ef5e20a3209b03a6234fd4e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (NYSE:COP) delivers impressive Q3 2026
+<<<SUMMARY>>>
+Oil and gas producer ConocoPhillips (NYSE:COP) reported Q3 2026 results beating Wall Street’s revenue expectations, with revenue up 29.2% year on year to $20.06 billion. Its GAAP profit of $3.34 per share was 11% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533909
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:42:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=315b97e4e58a742b3e013f6a1325710da0182fad8ed5ddddb9678dd13ac98718
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips beats third-quarter profit estimates
+<<<SUMMARY>>>
+Investing.com -- ConocoPhillips (NYSE: COP) shares are trading more than 1% higher in premarket trading on Thursday after the company reported third-quarter adjusted earnings per share of $3.27, beating the analyst estimate of $2.97 by $0.30.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539092
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:31:14Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=467cc18f8048af66948266b39915d4878cebd40f225fe436b3aafbb6dc58f85a
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-05. The following slide deck was published by ConocoPhillips in conjunction with their 2026 Q3 earnings call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533910
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:10:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d34a37cfd02693d3d4c3a8935178eabf4c2e42b5c5ae2581ca2beb9bddf08abc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+HOUSTON (AP) — HOUSTON (AP) — ConocoPhillips (COP) on Thursday reported third-quarter net income of $4 billion.On a per-share basis, the Houston-based company said it had profit of $3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584029
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:00:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9ce4e9e86cb402377a38029a275831210efafdbabaf281d7c2af669242938dbf
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Defensives Lead Sectors Thursday As Growth Sectors Trail
+<<<SUMMARY>>>
+Four sectors are higher and seven are lower in Thursday’s regular session, with defensive sectors holding two of the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143530325
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T10:36:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e0d14baabd0beba9d53b54bd7b72803172009ad595b82595c8bae8be9b59994
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Is Exxon Mobil Stock Still Worth Owning After Its Quarter?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143535603
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T08:04:28Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3d91b7967d310400de2d36bde0573ad4e1ea76407241393c42816ef8bf510f3e
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Increases Quarterly Dividend by 11% to $0.93 Per Share
+<<<SUMMARY>>>
+Effective with the fourth-quarter dividend, payable Dec. 1, 2026, to stockholders of record at the close of business on Nov. 16, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143523301
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T07:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7083b464ef50de30da8c6ad6ef66d13944c99dc824a68ab8b5069071626ec525
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Zacks.com featured highlights include Cinemark, ConocoPhillips, Pebblebrook Hotel Trust and Chord Energy
+<<<SUMMARY>>>
+Cinemark, ConocoPhillips, Pebblebrook Hotel Trust and Chord Energy are trading near 52-week highs or showing momentum, with business catalysts supporting potential further gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143517934
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T06:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b2d9813ad1b0559e058d8754b0e3affe4948d0bbbbaebd1ed79f2a826219c21f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: The Zacks Analyst Blog Highlights ConocoPhillips, Viper Energy, TotalEnergies, Suncor Energy and Ecopetrol
+<<<SUMMARY>>>
+Amid Wall Street volatility, five low-beta, high-yielding energy stocks offer compelling growth prospects, rising earnings estimates and dividend income.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143535604
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T03:15:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ffab7a6ea60ffadc23bc81ce2e6eede5729e5fe274fbfe7a986becf3a0b51b68
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/ConocoPhillips.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Gears Up For Q3 Print; Here Are The Recent Forecast Changes From Wall Street's Most Accurate Analysts
+<<<SUMMARY>>>
+ConocoPhillips reports Q3 earnings Nov. 5; analysts expect EPS of $3.05 and revenue of $18.83B, up from last year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532960
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T02:34:09Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=679125377217c6854e7d6d0d2825883cb70101b202de14b3b3ec1853ea063b9a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Stock-S-And-P-500-Index-Fund-Symbol-Is-O.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Stock Market: Will S&P 500 Open Up or Down Today?
+<<<SUMMARY>>>
+Will S&amp;P 500 open higher? Polymarket odds dip to 41% as Wall Street digests post-midterm gridlock, AI regulations, and market tailwinds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143501093
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T01:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3a9a655f0477927efc2c1326d07d8dc18fc75defccff08aa9a6a2fab5795008
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Mortgage rate update, jobless claims data, and COP earnings: What to Watch
+<<<SUMMARY>>>
+Yahoo Finance Breaking Business News Reporter Jake Conley takes a closer look at the top stories for investors to watch for Thursday, Nov. 5, including COP (COP) earnings, a mortgage rate update, and jobless claims data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494711
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T20:37:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae4add0e56b97e51df3378547181cfe5375c63ecd8b14925fdd7995286ce5d8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: EOG Resources Earnings Ahead: What Past Reactions Say About The Stock
+<<<SUMMARY>>>
+EOG Resources (NYSE:EOG) is scheduled to report its earnings on Thursday, November 5, 2026. The company has a market value of about $81.6 billion. Over the last twelve months it generated $26.6 billion in revenue and $9.4 billion in operating profit, with net income of $6.9 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532755
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:31:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=556485568e8138e2aaae636bf628537078f73f20c08f9e3ac7d9d1bb877060c7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/earnings-scheduled-1.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Toyota, ConocoPhillips On Deck Thursday As Auto Demand, Oil Prices Face Test
+<<<SUMMARY>>>
+Toyota Motor headlines Thursday’s reports, with investors weighing the automaker’s earnings outlook against a stock still well below its 52-week high. ConocoPhillips, Sony Group, Parker Hannifin and Canadian Natural
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490959
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=68b69909fd53684145a943a13302a0b76178b2bded453f559545334c129908ee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Buy 5 Low-Beta High-Yielding Stocks Amid Recent Wall Street Volatility
+<<<SUMMARY>>>
+COP, VNOM, TTE, SU and EC are five low-beta, high-yielding energy stocks, backed by improving earnings estimates, growth prospects and attractive dividends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490960
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86e3924e01160503cd9ace27a76cfaa354a5a79f075152f976cdb2183fdf59cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: 4 Stocks Trading Near 52-Week High With More Upside Potential
+<<<SUMMARY>>>
+Stocks like CNK, COP, PEB and CHRD are seeing price strength and have a high chance of carrying the momentum forward.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487564
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:32:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=69b6303d2a1ce5a518851c13b302ec1c8cf33ea5c44e1fa2c8198e0282dbe730
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips and Devon Energy Earnings Previews: What Shareholders Should Watch
+<<<SUMMARY>>>
+ConocoPhillips and Devon Energy both beat estimates last quarter, but swinging oil prices and activist pressure now threaten the generous payouts each company promised shareholders. Here is what the Nov. 5 reports need to show for those commitments to hold.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490961
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ab8b9d5776c11cb236e297301f39c39b8a09ed6889bf09c9028641d0610a9a45
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What's in Store for These 4 Energy Stocks in Q3 Earnings?
+<<<SUMMARY>>>
+Canadian Natural, ConocoPhillips, TC Energy and Targa Resources are set to report their third-quarter earnings tomorrow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532883
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:00:34Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f679e2656ec804ede4bc1beedd9f1070ea0b4ae0790da5ffd52534d70d29ea56
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: 8 Of 11 Sectors Rise Wednesday As Growth Leads
+<<<SUMMARY>>>
+Eight of 11 sectors are higher in Wednesday’s regular session, with growth sectors holding two of the top three positions and Consumer Staples completing the leading group. Energy sits well clear of the rest, separated from the next-weakest sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490962
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:58:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=998aa18de1738c5bd9ca323c4d2a5e4decb86922fb62d5efa327680d01435910
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: 6 Big Funds Bought Devon Energy. Is It a Buy Before Earnings?
+<<<SUMMARY>>>
+Key TakeawaysSix funds managing $2 billion to $6 billion each in US stocks reported new stakes in Devon Energy (DVN:NYSE) in their 13Fs for the quarter ended June 30, and the stock is up 15% since. Analysts’ average target sits 27% above Devon’s price, while ConocoPhillips (COP:NYSE), EOG Resources (EOG:NYSE) and Canadian Natural Resources (CNQ) all trade near or above their own targets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143485970
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:05:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9004b872a75668fac62b4f889de87a6096932610550820e47d40e3624dbbef0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What State Street Energy Select Sector SPDR ETF (XLE) Sold: Exxon Leads on Monday
+<<<SUMMARY>>>
+The fund sold $171.3 million of stock on Monday, Nov. 2, cutting all 21 of its positions and buying nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447215
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=60550e7a8f02b3dfee90237f12ee27c315551adb1dea8a05842444c55da7122b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: 4 Energy Stocks That Could Surpass Q3 Earnings Estimates
+<<<SUMMARY>>>
+Energy sector earnings are set to surge 133.9% in Q3 2026. Discover why COP, EOG, TRGP and CLMT could beat earnings estimates amid stronger oil prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445832
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e7e926237f1c8c119c919b23c7dce2fd70016d9b6046b66d96072fd534aaa8dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Insights Into ConocoPhillips (COP) Q3: Wall Street Projections for Key Metrics
+<<<SUMMARY>>>
+Beyond analysts' top-and-bottom-line estimates for ConocoPhillips (COP), evaluate projections for some of its key metrics to gain a better insight into how the business might have performed for the quarter ended September 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401327
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T21:28:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f405697ffef04bc26d1932b0481443c990f3546dc8912e24331cbdc1c2fc1ab2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Earnings live updates: Roku posts earnings beat ahead of acquisition by Fox
+<<<SUMMARY>>>
+The third quarter earnings season is over halfway done, and the reports continue to pour in.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401478
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T20:21:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dbff8fcad78d6c8812a1437da33a4bfeb13800d2369d1b2f0cf9b3e54fb4d7c0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Top Stock Reports for Seagate, Chubb & Intercontinental
+<<<SUMMARY>>>
+Seagate, Chubb and Intercontinental lead today's featured stock research, with Seagate's robust sales, Chubb's earnings resilience and Intercontinental's data growth in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400930
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T18:33:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e1366cb3a1c059c23f9523fdd117d5fa6e9b9cf7f41ba2c2f01953aad5e4eb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Chevron Is Up 59% This Year and Trades Above Its Price Target. Time to Take Profits?
+<<<SUMMARY>>>
+Chevron just blew past every analyst price target on the street after a blowout quarter fueled by record refining profits, but one model is flashing a sell signal with unusual conviction. Here is what the bulls are missing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400254
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:10:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=72ca8fa49d69f3fcbf39b1322d950e7412d1be117d8e5688c6cc03da34329606
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: How Investors Are Reacting To ConocoPhillips Stock Ahead Of Earnings
+<<<SUMMARY>>>
+ConocoPhillips is set to report third quarter results on 5 November under new CEO Andy O'Brien, with the update arriving as crude prices remain elevated and the producer continues to focus on upstream oil and gas operations. The combination of anticipated earnings strength, a supportive oil pricing backdrop and fresh ETF buying highlights how ConocoPhillips' operating profile and capital discipline are drawing renewed attention as leadership changes at the top. We will now look at how...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400417
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c95ffe5b474ee63b01bbd2ad557c8d2a98ee7eca26ddc2e3340e756f82b581e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Murphy Oil to Report Q3 Earnings: What's in the Cards for the Stock?
+<<<SUMMARY>>>
+MUR expects strong Q3 earnings and revenue growth, fueled by higher production, but rising exploration costs could pressure profitability.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400255
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a37308d516187edac88643fa8f6552c811f192030262ca450666faf43f5ccf41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Talos Energy Q3 Earnings on Deck: What's in Store for the Stock?
+<<<SUMMARY>>>
+TALO's Q3 earnings outlook signals strong revenue and profit growth, as rising crude prices offer support while cost inflation poses challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398825
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a3f3432d2dd6fd733e580c12355c801094f5925be275a3ce0c4b7c6fe864637
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Chord Energy's Q3 Earnings on Deck: Should You Bet on the Stock?
+<<<SUMMARY>>>
+CHRD Q3 earnings outlook signals strong growth, fueled by higher oil prices and production volumes. Is the stock a smart buy ahead of results?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398826
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ddc41ff0b8b72e0155fe14ed2b32a389f0521838f8780f34342fffdb5c15532
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Occidental Petroleum (OXY) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Occidental (OXY) possesses the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143496980
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78e2816ded750151d8ee5239730dd0d5f2fa48be08e1409287e91fd1d4ddb64d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Oil Enters November With OPEC+ Holding Steady and Five Producers Set to Report
+<<<SUMMARY>>>
+Oil Market Daily News Commentary - The first week of November brings a run of oil company earnings, fresh U.S. inventory data and a jobs report, all landing a day after a key group of OPEC+ producers left its supply plan unchanged. Meeting virtually on Sunday, seven OPEC+ countries chose to hold required production for December 2026 at the September 2026 level. The latest U.S. Energy Information Administration figures put the Brent spot price at $123.10 a barrel and West Texas Intermediate at $1
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143395205
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:17:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3f68132ff20b0303ee00ebc29846bc703ffbf92a4b572092251f1197e094976
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Exxon Is Up 59% This Year After Another Beat. This Is How High It Can Go.
+<<<SUMMARY>>>
+Exxon just crushed earnings again and hit a new 52-week high, yet analysts are divided on whether the historic rally still has room to run or has already priced in every piece of good news.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143441968
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:00:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a2220f001bd42eaba791db61df194e577f612208d641a7515c667cb45b04184e
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/02/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Growth And Cyclical Sectors Lead Monday Trading
+<<<SUMMARY>>>
+Seven sectors are higher and four are lower in Monday’s regular session, with growth and cyclical sectors splitting the top of the table. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393362
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:35:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cef85ff0937c7ac1cb4d2d41b349f1b8b3d40b853689a124eadd8ab27530af3b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Tech Rebound, Crude Slide Lift Wall Street Pre-Bell; Asia Mixed, Europe Up
+<<<SUMMARY>>>
+Wall Street futures pointed moderately higher pre-bell Monday as traders waded back into tech shares
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393488
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:05:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=99978f9e5cf70773f12c0c8db95ec3558eed9699ce48716869645e2fd5cb4d21
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: State Street Energy Select Sector SPDR (XLE) Adds Exxon and Chevron on Oct. 29
+<<<SUMMARY>>>
+The fund bought $257.7 million of stock, lifting all 21 positions and selling nothing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143393612
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:02:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6755d41e31cfcda2aa48a037c3d87ae3cca2e13fd0c27bbc66e5e47244563683
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ETFs Are Buying ConocoPhillips (COP) on Thursday
+<<<SUMMARY>>>
+ETFs bought $23.2 million of ConocoPhillips stock on Thursday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143395423
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T09:36:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=72e0cb6d045333418ee38e00f485953ed411745a8a9f8c7f01b0a82cf96a60f8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ‘Long gone are the days where we just provided numbers’: The CFO-to-CEO pipeline is growing but does a finance background always make a good leader?
+<<<SUMMARY>>>
+One in five new CEOs at Europe's largest listed companies came from finance last year. But the transition from managing the numbers to running the business requires a broader set of skills.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143392844
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T08:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f728d40be3c616739fe1a3d7b355428fc64fc4407d159fd5c80fd81d21acb070
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Zacks.com featured highlights include BP, ExxonMobil, ConocoPhillips and Eni
+<<<SUMMARY>>>
+BP, XOM, COP and E offer investors potential opportunities to navigate market volatility, supported by low-beta profiles and strong upstream portfolios.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143397003
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T08:30:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e77e43c1a1a5581c246e6f57896c7ccf50fdecf5e373644143922253a2091e21
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/02/Quarterly-Results-Sales-Profits-Earnings.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings
+<<<SUMMARY>>>
+Shopify leads the Q3 2026 earnings volatility watchlist with a 12.08% implied move, followed by Cloudflare at 12.07%, as traders brace for earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143374329
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T06:04:46Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5e8a66c2ae9627fb2b37b602e1abc9cb2514651b3b144ae478cdac85043c7610
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/177313078/image_177313078.jpg?io=getty-c-w1536
+category: company
+tickers: COP
+keywords: 
+headline: Wall Street Week Ahead
+<<<SUMMARY>>>
+Wall Streetâs big week: midterm elections, October jobs report and key earnings from Apple, AMD and Uber.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143370353
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T21:38:41Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=f70e342250174f88051b34e3ae019b370b384dd1f77cce71f814d562b2b386b5
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1466574639/image_1466574639.jpg?io=getty-c-w1536
+category: company
+tickers: COP
+keywords: 
+headline: Emerson Among 14 Dividend Growth Companies To Announce Annual Dividend Increases In First Half Of November
+<<<SUMMARY>>>
+Emerson may extend its 70-year dividend growth streak as earnings rebound.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143364757
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T11:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=830af5c87daf35a8f602c2ec6680ca3553df23bdc7beabc0bcac73d5ef2dce14
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: COP
+keywords: 
+headline: Apple Leads Packed Earnings Calendar As Investors Eye Tech, Pharma Results
+<<<SUMMARY>>>
+Preview next weekâs market movers: jobs data, PMI reports, major earnings from Apple and AMD, and IPO buzz. Read here for more details.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143364143
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T10:23:05Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=cf07a09077e1d605b73d1b532aee07c01030369e22eb99ff3d15cad13ffa98ff
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/183582556/image_183582556.jpg?io=getty-c-w1536
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips: Drilling Toward Greater Returns
+<<<SUMMARY>>>
+ConocoPhillips looks like a buy before Q3 earnings, as production growth, free cash flow, and LNG expansion support upside. Discover more on COP here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805313
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:48:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d21a198555d1de88e64c2dc5049a243c0c4b9a287cb7294bbda2c2f85ab935a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Why You Need To Pay Attention To Occidental Petroleum Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804673
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:30:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a0f6abb18f0ab4e024286ead189d1da93dd8d17e3aaad569568981973ae36fc8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: A December Rate Hike Looks Likely: Buy These 3 Energy and Materials Dividend Stocks Before the Fed Moves
+<<<SUMMARY>>>
+Rate hikes usually punish income stocks that lean on cheap debt, but some dividend payers earn their cash from oil wells, pipelines, and copper mines. Three of them cover their payouts in very different ways, and one carries a risk its holders can't hedge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805006
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c517775e6e59724d441dd5cf02a8d96808c5aa60f8201b2599d2a9d2282b680f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips' Lower 48 and Willow Assets: Key to Long-Term Growth?
+<<<SUMMARY>>>
+COP's deep Lower 48 inventory, Willow project and LNG expansion underpin its long-term growth strategy and $7 billion cash flow inflection target by 2029.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803829
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:42:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6f34f7046b877328cf8f8b673b1d40083633cd6adc843d710bb997fd557c0eb9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Amazon Joins Goldman Sachs’ Conviction List Alongside 4 Other Stock Picks
+<<<SUMMARY>>>
+Goldman Sachs just overhauled its Conviction List with five new additions, and the upside targets on some of these picks will raise eyebrows. One hyperscaler alone carries a 51% potential gain, but it is far from the biggest number on the list.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803926
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:20:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9673e588ae87151994ab86f51299bcb0210e5e1dd01aa6d529d8590c8b1bc366
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What Would Cheaper Fuel Mean For Exxon Mobil Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804058
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a54def27bc574da72951ce14698e9d81050ef627e3c88218646aad62e7deecb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: 3 Stocks to Buy That Announced Dividend Hikes Amid Market Volatility
+<<<SUMMARY>>>
+COP, NNI and ADP announced dividend hikes amid market volatility, offering investors income opportunities through regular payouts and a history of dividend growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802253
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cfe2f6fe72c62d38b426b17398e8997797d0aae09a9b8e9ad23fa76cd20cba1a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Oil Staying Above $85: A Growth Catalyst for EOG Resources?
+<<<SUMMARY>>>
+Oil above $85 boosts EOG Resources' growth prospects, backed by vast reserves, strong cash flow potential and an attractive valuation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802347
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20f70050e94e96b7499de6707e265a1ccd010c0950c949534cafb3fafd02e147
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Oil Above $85, Chord Energy Up 58% in a Year: Is It Still a Buy?
+<<<SUMMARY>>>
+CHRD's 57.9% rally, higher oil prices, rising production and attractive valuation signal further upside potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802257
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:12:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=926f5ff26c6fe17c765fc1ac208697ab7b914486e7c780ad6f28958d4c303943
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: How Has Chevron's Story Changed For Shareholders?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801889
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T03:02:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ef31a15e30f5818a83ad8623c095eb2512de57370d84d66844eddf80da03dcd8
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/13/Governor-Gavin-Newsom-Speaking.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Gavin Newsom Calls Trump ‘Wholly Owned Subsidiary of Big Oil’ as Iran Tensions Rattle Oil Markets: Says President’s ‘Head Is Stuck in Sand Soaked With Oil’
+<<<SUMMARY>>>
+Newsom attacks Trump&#39;s Big Oil ties and fossil-fuel policies; GasBuddy analyst warns Iran tensions may lift oil markets as gas prices fall.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143781368
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T01:49:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ea56ea14faedd43d7e22970df85d8ac52de0646d91adae6703f3a47c2bdda6d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: XOM, CVX, COP: This Analyst Trims Price Targets, Warns Oil Stocks May 'Struggle To Appreciate'
+<<<SUMMARY>>>
+Bernstein cut the price targets on ExxonMobil, Chevron and Conoco Phillips following the midterm elections.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143776611
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T00:38:41Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=742652ea2fa7f635d00bf0ef6bd8f846b3b68673c26aa0e34ee8479f58ad6cf2
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Bernstein Downgrades ConocoPhillips to Market Perform from Outperform
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772209
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:12:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8bfe80f8cbac5df1ecfafb4b690c50d248623a8df553d288316c27e4516182c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (COP) Stock Looks Like A Bargain After Fresh Results
+<<<SUMMARY>>>
+ConocoPhillips has delivered a powerful run in recent years, and with earnings in focus after fresh results and a higher dividend, the key question is whether the current share price still lines up with what the business is earning. Over the past 5 years the stock has gained 127.4%, which puts real pressure on the idea that its earnings can comfortably carry today's valuation. The recent decision to raise the dividend by 11% and return large amounts of cash through buybacks may support the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140284468
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:44:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b54ab9e2524d3ab07e65488e36a4d660947f471af488ed94cd704d5f76f32c24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: AMD, Under Armour downgraded: Wall Street's top analyst calls
+<<<SUMMARY>>>
+AMD, Under Armour downgraded: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769416
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0aa46968aa40acbfcebeabd0694e6a25850bbf085500f0b05c1c547fc7d479cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Oil Price is Still High: Boon for ExxonMobil's Upstream Business?
+<<<SUMMARY>>>
+Oil above $85 per barrel boosts XOM's upstream outlook, backed by low-cost Permian and Guyana assets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766836
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:41:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=49ab416c0dc269043e0d8392e07612d18ab0e84f7d9190d042c1cec342309604
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Can Occidental Petroleum Stock Fall 30%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766956
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:29:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f5c2d185c9c6196aeef1e65116f5fc2f73562dcd8c21b37b5cd33dada7759af6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Bernstein cuts ConocoPhillips and Diamondback ratings as Iran de-escalation looms
+<<<SUMMARY>>>
+Investing.com -- Bernstein downgraded ConocoPhillips (NYSE: COP), Diamondback Energy (NASDAQ: FANG) and Devon Energy (NYSE: DVN) to Market-Perform, saying oil stocks may struggle as tensions between the U.S. and Iran ease after the midterm elections.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766810
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:07:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cd404529de068b17d7d91e440410e77efe0d9dc9e150f28db3cf2dbb5b8903e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Buy, Sell, or Hold? Thursday’s Top Upgrades and Downgrades: Advanced Micro Devices, Alibaba Group, Cleveland-Cliffs, Conoco Phillips, Diamondback Energy, General Mills, NVIDIA, Toyota, Wendy’s and More
+<<<SUMMARY>>>
+Bernstein and Oppenheimer both just soured on NVIDIA, with one analyst saying "we've had enough," while a CEO shake-up rumor rattles futures and a blockbuster AI IPO draws a frenzy of orders. Which stocks did analysts upgrade instead?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765647
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:03:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84a083e3f4c74c3a6e00a54eb6834718388ca2b54610012fd546b919110aa581
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Your $300,000 in XLE Holds $116,286 in Just Two Oil Companies
+<<<SUMMARY>>>
+You think a sector ETF spreads your risk across the whole energy industry. A look inside XLE's filing shows how much of your money rides on just two names, and why a rock-bottom fee hides the real price.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801852
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:00:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9f0b4b5c9edd829fa5e5a059b587c4718291378058032fe071d76edfd141e60a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Energy Leads Sectors In Thursday Trading As Materials Trail
+<<<SUMMARY>>>
+Five sectors are higher and six are lower in Thursday’s regular session, with cyclical, defensive and growth sectors split across the top three positions. The leaders are separated rather than clustered, with Energy clearly ahead of the next group.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765095
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:05:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c86c6d048ffbe4a0a31ed77bfea590501644b0296adf622657241cd5d1225003
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What iShares Global Energy ETF (IXC) Sold: Exxon Mobil Leads on Nov. 10
+<<<SUMMARY>>>
+The fund sold $130.9 million of stock, cutting 26 positions and adding none, with Exxon Mobil and Chevron the largest reductions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767946
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T08:32:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5062c35a725093217f8f1a93143dbaea4fd663c1a767e90a241974e5ca93c307
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Bernstein Downgrades ConocoPhillips to Market Perform, Lowers Price Target to $122
+<<<SUMMARY>>>
+Bernstein  analyst Bob Brackett   downgrades ConocoPhillips (NYSE:COP) from Outperform to Market Perform and lowers the price target from $129 to $122.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748047
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c79933322b131570dedb8fcf5a735893c64261868369b2eb9e643fa2e42e2f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Should You Pick Occidental Stock Over Its Competitors?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767947
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:13:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1bb97e4c74e3148ce798990dcddeebf2a4eaa94f1aa0999b24d7e9ef740d2e3f
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Freedom Broker Downgrades ConocoPhillips to Hold, Raises Price Target to $138
+<<<SUMMARY>>>
+Freedom Broker  analyst Sergey Pigarev   downgrades ConocoPhillips (NYSE:COP) from Buy to Hold and raises the price target from $132 to $138.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770554
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T14:29:50Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=4e35415e910263e82317ad749a6502c74b0bb0fd26134c8c6a355b2e1cb20095
+image_url: https://image.cnbcfm.com/api/v1/image/108549296-17944246651794424662-49577560997-1080pnbcnews.jpg?v=1794424664&w=1920&h=1080
+category: company
+tickers: COP
+keywords: 
+headline: Calls of the day: ConocoPhillips, Devon Energy, Corning, Amgen
+<<<SUMMARY>>>
+The Investment Committee discusses some of the biggest calls of the day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734693
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:37:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0d95d4ac18e841fbb85e6698970df8e5436f9abab2805a0355f85914522003b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: 4 Dividend Stocks Just Gave Shareholders a Raise. One Hiked Its Payout 17.5%
+<<<SUMMARY>>>
+A consulting firm, a student-loan servicer, a grocery-anchored REIT, and an oil giant all raised payouts in the same week. Each looks safe on paper, but every one carries a risk that could test the next increase.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734694
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T01:53:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86c60ff289c11dd4b2bc56ca4bb2a8f8c82c477347b24166cee512d64eebee75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Venture Global, Inc. Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Venture Global, Inc.'s Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143718652
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T00:30:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d42bf1750bfc2641df4e51e09ad6e951460e1f35e47fb3b1d9be7ad91a9ffb99
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: This Energy Stock Just Raised Its Dividend by More Than 10%
+<<<SUMMARY>>>
+ConocoPhillips raised its quarterly base dividend by more than 10% to $0.93 per share after Q3 net earnings rose to $4 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692692
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:05:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0aaebe2619886165b49294cf68b8d2c2a7f8b11571a445703be7217fe08817d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Is Chevron Stock A Real Bargain?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690488
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:58:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6cc99c678f682ea0c6ae6adf98b76f37164f06e9a3ab7889d52b7a7859df8310
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Just Raised Its Dividend 10.7%. Does Its Free Cash Flow Cover the 2.5% Yield?
+<<<SUMMARY>>>
+Key TakeawaysConocoPhillips raised its quarterly dividend 10. 7% to $0.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690489
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:13:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c958b85291747b4361974b59d9c450b6a7c57b0728d01a101644956af1f2d9be
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: COP Q3 2026 deep dive: capital discipline and portfolio efficiency offset production decline
+<<<SUMMARY>>>
+Oil and gas producer ConocoPhillips (NYSE:COP) reported revenue ahead of Wall Street’s expectations in Q3 2026, with sales up 29.2% year on year to $20.06 billion. Its non-GAAP profit of $3.27 per share was 7.3% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687276
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:05:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89e6a1f494e6b88797f67589ba44571ce7fdae91c50359cac46db0296e5f53d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Should You Buy Exxon Mobil Stock For Its Cash?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687380
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b70d95ca6513f274db70c20a9b2f8dcc56536e27d8ab69151eda7f0a2d843b3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Can ConocoPhillips Sustain Future Production Growth With Lower CapEx?
+<<<SUMMARY>>>
+COP plans modestly lower 2027 capital spending while growing production through low-cost resources and efficiency gains to strengthen long-term cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687123
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T09:56:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cc647e1dba66159905d928994af70a1e19c2bed21c4d17c2823aec449d2f0f9d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/10/Milan--Italy-2026--15-Ago-Closeup-Of-Ven.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Venture Global Eyes AI Power Gold Rush, Raises 2026 Profit Outlook
+<<<SUMMARY>>>
+Venture Global beats Q3 earnings estimates, raises its 2026 profit forecast and explores new opportunities in AI data center power.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143669135
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T00:30:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8023c596284af0c81934a1d1bb8426d09ae38209fe68da493568feebd4afcd32
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Diamondback Just Hiked Its Dividend by Over 7%. If You Buy the Stock Here, Keep a Close Eye on Oil Prices.
+<<<SUMMARY>>>
+Diamondback raised its quarterly base dividend by 7.3% to $1.18 per share after third-quarter revenue rose 38% to $5.43 billion and free cash flow stayed strong.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659962
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2385160493d8e4f7aa2160ec018894c6f23a0f6ed04102a54e779dd0dd2cc8fe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Trades at a Premium: Is It the Right Time to Buy?
+<<<SUMMARY>>>
+COP's 54.4% stock rally, low-cost assets, LNG expansion and Willow project fuel optimism, but its premium valuation raises concerns for investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658687
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c34103684845d936d59a3f01b8a42a45c00384cdaba695ab2290cd7cd5d754c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Seven OPEC+ Producers Keep December Output Unchanged While Crude Opens Lower
+<<<SUMMARY>>>
+Crude oil futures were lower on Monday morning. As of 9:47 a.m. ET, the December NYMEX West Texas Intermediate contract was at $87.43 a barrel, down $3.40 or 3.74% from Friday's settlement of $90.83, while the January ICE Brent contract was at $93.96, down $4.36 or 4.43% from its $98.32 settlement. Third-quarter results from large producers, refiners and liquefied natural gas exporters were released over the past two weeks. Active Companies from around the markets with current developments this
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143676244
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e03f711007361011874d2da94b345d35f17235a9b5fb689b0532050bfc27870e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Which USA Oil Major Produced the Most in Q3 2026?
+<<<SUMMARY>>>
+Which U.S. oil major produced the most in the third quarter of 2026 - ExxonMobil, Chevron, or ConocoPhillips?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658774
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c00405272c19f4430862a2b6d23182b8331de091fbeeb446b461395bda019ca1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: COP vs. WHD: Which Stock Is the Better Value Option?
+<<<SUMMARY>>>
+COP vs. WHD: Which Stock Is the Better Value Option?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657610
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:37:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ae1997d60bfa703458feb58d2795a289c962abbf479b1c1ec27fb85d060a67d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: 5 Oil Stocks Could Turn $500,000 Into $14,000 a Year in Dividend Income
+<<<SUMMARY>>>
+Five oil producers got hammered in one week, with the worst losing more than 15%. Yet three of them quietly raised their dividends anyway. Which ones rewarded shareholders during the sell-off, and what risk does each payout hide?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659667
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:33:31Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=b9c43bda062cdce1ec2f8fe1915d2c3d19b87b8155513c5bbe6aed12ec4724da
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2259148968/image_2259148968.jpg?io=getty-c-og
+category: company
+tickers: COP
+keywords: 
+headline: PEO: A Real Discount But A Thin Margin Of Safety
+<<<SUMMARY>>>
+Adams Natural Resources Fund looks overvalued after the energy rally.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657609
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=958917dfcd674b001523a92870e2966b90052e83ea11fbddc9f786740164c8f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Is ConocoPhillips (COP) Stock Outpacing Its Oils-Energy Peers This Year?
+<<<SUMMARY>>>
+Here is how ConocoPhillips (COP) and Vaalco Energy (EGY) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654046
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:46:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3ada1a20784edb1a5be5d92d47a0602236b3548c6a4962fc260b8fbf482db59
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What Mattered Most In Chevron's Latest Quarter?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686716
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:00:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0ae16468fb2d0b7cab7abf03424bf96c001876248f24bcc858b43baf9aed5a1a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: 11 Of 11 Sectors Rise Monday As Growth Leads
+<<<SUMMARY>>>
+All 11 sectors are higher in Monday’s regular session, with growth sectors holding two of the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652437
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:06:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c31a431081189057ad99d912cd0560ae000f21cdd81bcfc5b7ec5ac41eb32320
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What iShares Global Energy ETF (IXC) Sold: Exxon Mobil Leads on Nov. 5
+<<<SUMMARY>>>
+The fund sold $168.8 million of stock on Thursday, with no buys, cutting 26 positions and adding none.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143653775
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T10:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20038631044610e45eded67cae37e35d485499161c3390aadaeedb54d65e1249
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: The Oil Slump Has Gone Too Far. Where Prices Could Go Next.
+<<<SUMMARY>>>
+Traders are betting on a quick end to the war. We wouldn’t be so sure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657026
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T09:25:54Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d6807f34b88b4b12a6e16552b4cec16082b27122e3456bc36f7097e257bd6508
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Truist Securities Maintains Hold on ConocoPhillips, Raises Price Target to $142
+<<<SUMMARY>>>
+Truist Securities  analyst Gabe Daoud   maintains ConocoPhillips (NYSE:COP) with a Hold and raises the price target from $136 to $142.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143645041
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T20:05:30Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1dd09dc7ff5068d7c04b0d06a48a13150347567f1bacbdfc8fb715d22a228100
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Dividend Announcements: October 31-November 6, 2026 (Part 2 Of 2)
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639404
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=802198bd39df3e444fce4fb3963ccd3e3b543de31ee62f590a00231c47472ca6
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1781217755/image_1781217755.jpg?io=getty-c-og
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips: A Crude Awakening Is Coming (Rating Downgrade)
+<<<SUMMARY>>>
+ConocoPhillips faces oil price risk as 66% of reserves are liquids. Click for this COP earnings update and see why I am downgrading the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143607446
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:13:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f450f7711fc0c4f2e6df68c61934f054efd261a20b77613b6b191bf8f760218e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: 3 Oil Stocks Trading At Least 43% Below Future Cash Flow Value
+<<<SUMMARY>>>
+Energy markets are jumpy again as the Iran conflict keeps oil supplies in focus and pushes fuel and heating costs higher for households. When everyday bills feel this sensitive to crude prices, investors often start paying closer attention to large oil and gas producers. This article walks through three of the strongest candidates from a global oil and gas screen and explains what makes each worth a closer look. The three stocks highlighted below are a small sample, and the full screen...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143596658
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T04:14:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=77838b487a24aa647ce53b07500e146767613c0bc5de8f2e9aa04a7dacdd7bdc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What ConocoPhillips (COP) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+ConocoPhillips (NYSE:COP) reported third-quarter adjusted earnings of $3.27 per share and $7.2 billion in cash from operations, while raising its quarterly dividend by 11% and outlining plans for lower capital spending in 2027. The company produced 2.302 million barrels of oil equivalent per day du
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592925
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T01:11:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44b87e25ee72f138c3873cb1d2119e245dff5f12ede6f08ead8b2d69c84174f4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (COP) Earnings Beat And Dividend Hike Put Valuation Back In Focus
+<<<SUMMARY>>>
+ConocoPhillips (COP) just put fresh numbers on the table with its third quarter 2026 earnings, pairing higher reported revenue and net income with updated production guidance and an 11% dividend increase. That backdrop has kept ConocoPhillips in focus, with the share price up 15.9% over the past 90 days and 40.9% year to date, even though the 7 day share price return declined 11.5% and short term momentum cooled ahead of this earnings release. Scan more oil and gas opportunities moving on...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:838cbe60275296cc178fc7a68d5b44d865d57a26ac0b4358f4be33f15df82a73
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T08:41:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3020183/zacks-com-featured-highlights-include-bp-exxonmobil-conocophillips-and-eni?cid=CS-ZC-FT-press_releases-3020183
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/431.jpg
+category: 
+tickers: BP, COP, E
+keywords: energy stocks, oil prices, low-beta stocks, market volatility, upstream portfolio, crude oil, Middle East tensions
+headline: Zacks.com featured highlights include BP, ExxonMobil, ConocoPhillips and Eni
+<<<SUMMARY>>>
+Amid market uncertainty driven by high oil prices and Middle East tensions, Zacks recommends four energy stocks with low-beta characteristics: BP, ExxonMobil, ConocoPhillips, and Eni. These companies are well-positioned to benefit from elevated crude oil prices and their strong upstream portfolios and production capabilities.
+<<<INSIGHTS>>>
+BP | positive | Strong upstream portfolio with long-term growth potential, major project ramp-ups, increased U.S. onshore production, and expansion opportunities in Trinidad and Tobago, Venezuela, and Gulf of America.
+COP | positive | Major upstream energy company with strong presence in prolific U.S. plays (Delaware Basin, Midland Basin, Eagle Ford, Bakken) positioned to capitalize on high crude pricing environment.
+E | positive | Well-positioned for long-term growth with expanding upstream portfolio, promising exploration prospects, development projects across Africa/Asia/Mediterranean, and growing LNG operations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:853e3bd330d168fa41de375cad025dfcd0ed83267500e6ca05abf92f446aede2
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T13:00:01Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3020396/this-top-oils-and-energy-stock-is-a-1-strong-buy-why-it-should-be-on-your-radar?cid=CS-ZC-FT-fundamental_analysis|zacks_education_zacks_rank-3020396
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default127.jpg
+category: 
+tickers: COP
+keywords: oil and gas, energy stocks, strong buy, earnings estimate revisions, Zacks Rank, institutional investors
+headline: This Top Oils and Energy Stock is a #1 (Strong Buy): Why It Should Be on Your Radar
+<<<SUMMARY>>>
+ConocoPhillips (COP) has been added to the Zacks Rank #1 (Strong Buy) list as of October 7, 2026. The oil and gas exploration and production company saw five analysts revise earnings estimates higher in the last 60 days, with consensus estimates increasing to $11.41 per share. The company is expected to see 85.2% earnings growth and 16.8% revenue growth for the current fiscal year, and has gained 21.5% in value over the past four weeks.
+<<<INSIGHTS>>>
+COP | positive | Strong Buy rating from Zacks Rank with five analyst upgrades in 60 days, consensus estimate increase of $0.86, expected 85.2% earnings growth and 16.8% revenue growth, positive earnings surprise history (7% average), and strong recent price performance (+21.5% in 4 weeks).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:121431c6d7142f6fce0786751a3006ea0993fb0dd4ca14d08542c89b42e93800
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T14:00:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3020667/occidental-petroleum-oxy-earnings-expected-to-grow-what-to-know-ahead-of-next-week-s-release?cid=CS-ZC-FT-fundamental_analysis|yseop_template_9-3020667
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default260.jpg
+category: 
+tickers: OXY, OXY.WS, COP
+keywords: earnings report, Q3 2026, earnings beat, Earnings ESP, Zacks Rank, oil and gas, year-over-year growth
+headline: Occidental Petroleum (OXY) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Occidental Petroleum is expected to report Q3 2026 earnings of $1.43 per share, representing a 123.4% year-over-year increase, with revenues expected at $6.73 billion. The company has a positive Earnings ESP of +4.14% combined with a Zacks Rank #2 (Buy), suggesting a likely earnings beat. Occidental has beaten consensus EPS estimates in all four of the last quarters.
+<<<INSIGHTS>>>
+OXY | positive | Positive Earnings ESP of +4.14% combined with Zacks Rank #2 (Buy) indicates high likelihood of beating consensus EPS estimates. Expected 123.4% YoY earnings growth and consistent history of beating estimates (4 out of 4 last quarters) support bullish outlook.
+OXY.WS | positive | Positive Earnings ESP of +4.14% combined with Zacks Rank #2 (Buy) indicates high likelihood of beating consensus EPS estimates. Expected 123.4% YoY earnings growth and consistent history of beating estimates (4 out of 4 last quarters) support bullish outlook.
+COP | positive | Expected earnings of $2.95 per share with 83.2% YoY growth. Positive Earnings ESP of +3.74% combined with Zacks Rank #1 (Strong Buy) suggests likely earnings beat. Revenues expected to grow 18% YoY, and company beat estimates in 3 of last 4 quarters.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bfffaa921f13995d0cdbc916334a18e8e0aba815b910f8ae94b0b5228ed756f7
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T14:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020704/chord-energy-s-q3-earnings-on-deck-should-you-bet-on-the-stock?cid=CS-ZC-FT-analyst_blog|earnings_preview-3020704
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: CHRD, COP, EOG
+keywords: Q3 earnings, oil prices, exploration and production, valuation, debt exposure, WTI crude, production volumes
+headline: Chord Energy's Q3 Earnings on Deck: Should You Bet on the Stock?
+<<<SUMMARY>>>
+Chord Energy (CHRD) is expected to report Q3 2026 earnings surging 150.6% with revenues rising 5.3%, driven by higher oil prices near $100/barrel and strong well performance. The company has gained 72.7% over the past year and trades at a significant discount (EV/EBITDA of 3.52x vs. industry average of 11.92x) with low debt exposure, making it an attractive investment opportunity.
+<<<INSIGHTS>>>
+CHRD | positive | Expected 150.6% earnings surge, 5.3% revenue growth, strong production performance (165.4-165.6 MBbl/D), attractive valuation at 3.52x EV/EBITDA (vs. industry 11.92x), low debt-to-capitalization ratio of 15.06% (vs. industry 48.35%), and 72.7% one-year stock gain. Zacks Rank #1 rating supports positive outlook.
+COP | positive | Benefiting from constructive oil-price backdrop driven by Middle East tensions, with 73.9% one-year stock gain outperforming industry average. However, valued higher at 7.11x EV/EBITDA compared to CHRD.
+EOG | positive | Benefiting from high oil prices and favorable energy environment similar to peers, with 56.7% one-year stock gain. Valued at 6.38x EV/EBITDA, lower than COP but higher than CHRD.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c647be6e44617b7f29afb3b41b4662436726beaa111e1a2849b986825018472d
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T16:22:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020921/talos-energy-q3-earnings-on-deck-what-s-in-store-for-the-stock?cid=CS-ZC-FT-analyst_blog|earnings_preview-3020921
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b5/159583.webp
+category: 
+tickers: TALO, COP, EOG, OXY, OXY.WS
+keywords: Q3 2026 earnings, upstream energy, crude oil prices, WTI, Gulf of Mexico, exploration and production
+headline: Talos Energy Q3 Earnings on Deck: What's in Store for the Stock?
+<<<SUMMARY>>>
+Talos Energy is set to report Q3 2026 earnings on November 3, with revenues projected to rise 26% to $567.1 million and EPS expected to surge 352.6% year-over-year. Favorable WTI crude oil prices averaging $80-97 per barrel should support profitability, though cost inflation may present headwinds. The company's Earnings ESP of 0.00% and Zacks Rank #3 suggest limited predictability of an earnings beat.
+<<<INSIGHTS>>>
+TALO | neutral | While revenue and EPS growth projections are strong (26% and 352.6% respectively) and supported by favorable crude oil prices, the 0.00% Earnings ESP and Zacks Rank #3 indicate limited confidence in beating consensus estimates. Cost inflation presents a counterbalancing risk to profitability.
+COP | positive | Strong Earnings ESP of +3.74% combined with Zacks Rank #1 (Strong Buy) suggests high probability of earnings beat. Consensus EPS estimate shows 83.2% year-over-year increase, indicating robust expected performance.
+EOG | positive | Positive Earnings ESP of +0.79% with Zacks Rank #2 (Buy) indicates favorable conditions for earnings beat. Consensus EPS estimate reflects 64.2% improvement year-over-year.
+OXY | positive | Highest Earnings ESP among peers at +4.14% combined with Zacks Rank #2 (Buy) suggests strong likelihood of earnings beat. Consensus EPS estimate shows 123.4% year-over-year increase, the highest among the three comparison companies.
+OXY.WS | positive | Highest Earnings ESP among peers at +4.14% combined with Zacks Rank #2 (Buy) suggests strong likelihood of earnings beat. Consensus EPS estimate shows 123.4% year-over-year increase, the highest among the three comparison companies.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ebe938797bfbd6678b3ac0912319c895d9c1ee7ce9111fb1ad7e437fcd3b061b
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T16:55:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020970/murphy-oil-to-report-q3-earnings-what-s-in-the-cards-for-the-stock?cid=CS-ZC-FT-analyst_blog|earnings_preview-3020970
+image_url: https://staticx-tuner.zacks.com/images/articles/main/69/9991.jpg
+category: 
+tickers: MUR, CLMT, OXY, OXY.WS, COP
+keywords: Q3 2026 earnings, Murphy Oil, production growth, Tupper Montney, Eagle Ford, capital expenditures, cash flow, oil and gas
+headline: Murphy Oil to Report Q3 Earnings: What's in the Cards for the Stock?
+<<<SUMMARY>>>
+Murphy Oil (MUR) is expected to report Q3 2026 earnings on November 4, with revenues projected to rise 25.33% YoY to $871M and earnings surging 459.26% to $1.51 per share. The company projects production of 171,000-179,000 BOEPD, boosted by increased output from Tupper Montney and Eagle Ford assets. However, elevated capital expenditures ($380-460M) and exploration costs ($135M) may constrain near-term cash flow, though MUR's $2.48B liquidity provides financial flexibility.
+<<<INSIGHTS>>>
+MUR | positive | Strong expected earnings growth (459.26% YoY), revenue increase (25.33% YoY), and rising production volumes across key assets (Tupper Montney and Eagle Ford) support positive outlook. Solid Q2 performance and substantial liquidity position ($2.48B) provide financial flexibility, though elevated capital spending and exploration costs present near-term headwinds.
+CLMT | neutral | Mentioned as a comparable company with positive earnings surprise indicators (Earnings ESP of +48.76% and Zacks Rank #2), but no specific operational or financial details provided about the company itself.
+OXY | neutral | Mentioned as a comparable company with modest positive earnings surprise indicators (Earnings ESP of +4.14% and Zacks Rank #2), but no specific operational or financial details provided about the company itself.
+OXY.WS | neutral | Mentioned as a comparable company with modest positive earnings surprise indicators (Earnings ESP of +4.14% and Zacks Rank #2), but no specific operational or financial details provided about the company itself.
+COP | neutral | Mentioned as a comparable company with modest positive earnings surprise indicators (Earnings ESP of +3.74% and Zacks Rank #2), but no specific operational or financial details provided about the company itself.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:34263e4d5e633e0031f8165efc06c44369c81d3c1d97e5fe16042ccfa77eea11
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T20:21:00Z
+publisher: Zacks Investment Research
+author: Mark Vickery
+url: https://www.zacks.com/commentary/3020405/top-stock-reports-for-seagate-chubb-intercontinental?cid=CS-ZC-FT-research_daily-3020405
+image_url: https://staticx-tuner.zacks.com/images/articles/main/d9/202.jpg
+category: 
+tickers: STX, CB, ICE, MDRR, COP, AEP, J, SW, BG, IART
+keywords: stock research, earnings analysis, technology stocks, insurance sector, financial exchanges, energy sector, microcap stocks
+headline: Top Stock Reports for Seagate, Chubb & Intercontinental
+<<<SUMMARY>>>
+Zacks analysts published research on 16 major stocks on November 2, 2026. Seagate benefits from strong demand and HAMR technology but faces manufacturing risks. Chubb shows resilience but faces pricing pressures and catastrophe risks. Intercontinental Exchange benefits from risk management demand but faces mature market competition. Additional coverage includes ConocoPhillips' low-cost assets, American Electric Power's contracted load growth, and concerns about Smurfit Westrock's freight costs and weak volumes.
+<<<INSIGHTS>>>
+STX | positive | Strong fiscal Q1 performance with sustained demand, pricing strength, and robust sales. HAMR-based Mozaic roadmap supports higher capacities. Disciplined production and favorable product mix are lifting margins and cash generation. Stock outperformed industry YTD (+125% vs +98.1%).
+CB | neutral | Outperformed industry YTD (+18.1% vs +8%) with strong global reach and earnings resilience. However, commercial pricing is softening, premium growth is constrained, and catastrophe losses create uncertainty. Competitive underwriting cycle limits upside.
+ICE | neutral | Outperformed industry YTD (+5.9% vs +4.4%) with benefits from rising risk management demand and proprietary data. However, mature exchange franchise faces competition, Mortgage Technology exposed to weak origination demand, and MarketAxess acquisition adds integration costs.
+MDRR | neutral | Underperformed industry YTD (-1.9% vs +13.8%) with weak operating cash flows and uncertain dividend coverage. However, transition to asset-light DST model presents opportunities, strategic asset disposals improved liquidity, and valuation suggests potential upside.
+COP | positive | Deep inventory of low-cost assets in the Lower 48 and expanding global LNG portfolio support production growth and long-term cash flow diversification.
+AEP | positive | Benefiting from rising electricity demand with contracted load expected to reach 84 GW by 2031. Plans to invest $100B capital through 2031, supporting long-term growth.
+J | neutral | Growing exposure to AI-driven data centers, semiconductors and power infrastructure is encouraging. However, integration costs and competitive pressures raise concerns.
+SW | negative | Continues to struggle with escalating freight costs, subdued corrugated volumes and weak cash generation, putting further pressure on margins.
+BG | negative | Faces uneven segment performance, rising financing costs, elevated working capital needs and heavy investments, straining cash flows and limiting financial flexibility.
+IART | negative | Uneven Tissue Reconstruction portfolio recovery amid ongoing pressure in MicroMatrix. Tariffs and other macroeconomic issues pose additional risks.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:861216507deb993e7529f89c0be32dc7f3c547d4a66d4d20872e3b4e7cbdcee3
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T13:45:01Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021778/why-conocophillips-cop-is-a-top-growth-stock-for-the-long-term?cid=CS-ZC-FT-fundamental_analysis|zacks_education_growth_score-3021778
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default114.jpg
+category: 
+tickers: COP
+keywords: ConocoPhillips, oil and gas, Strong Buy, earnings growth, Zacks Rank, Style Scores
+headline: Why ConocoPhillips (COP) is a Top Growth Stock for the Long-Term
+<<<SUMMARY>>>
+ConocoPhillips (COP) is highlighted as a Strong Buy (#1 Zacks Rank) with a B VGM Score. The oil and gas exploration and production company shows strong growth prospects with forecasted 89% year-over-year earnings growth for fiscal 2026, supported by six upward earnings estimate revisions in the last 60 days.
+<<<INSIGHTS>>>
+COP | positive | ConocoPhillips received a #1 Strong Buy rating from Zacks Rank with a B VGM Score. The company demonstrates strong fundamentals including 89% forecasted year-over-year earnings growth for fiscal 2026, six upward earnings estimate revisions in the last 60 days, and a solid average earnings surprise of +7%. These factors indicate positive momentum and growth potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4b7ab714196ec7e91ad975197de4ab22d8ff237bc9ec4bfc4ccbf46bab0924ee
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T15:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022020/4-energy-stocks-that-could-surpass-q3-earnings-estimates?cid=CS-ZC-FT-analyst_blog|earnings_preview_esp-3022020
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ad/30383.jpg
+category: 
+tickers: COP, EOG, TRGP, CLMT
+keywords: energy sector, Q3 2026 earnings, oil prices, earnings surprise, Earnings ESP, midstream services, exploration and production
+headline: 4 Energy Stocks That Could Surpass Q3 Earnings Estimates
+<<<SUMMARY>>>
+The energy sector is projected to deliver 133.9% earnings growth in Q3 2026, driven by higher oil prices and improved refining margins. Four stocks with positive Earnings ESP—ConocoPhillips, EOG Resources, Targa Resources, and Calumet—are highlighted as potential outperformers ahead of their November earnings announcements.
+<<<INSIGHTS>>>
+COP | positive | Positive Earnings ESP of +3.74% with Zacks Rank #1 (Strong Buy). Company beat consensus estimates in 3 of last 4 quarters. Scheduled to report Nov. 5 with strong sector tailwinds from higher oil prices.
+EOG | positive | Positive Earnings ESP of +0.79% with Zacks Rank #2 (Buy). Beat earnings estimates in all trailing four quarters. Positioned to benefit from crude oil strength and improved E&P fundamentals.
+TRGP | positive | Positive Earnings ESP of +2.05% with Zacks Rank #3 (Hold). Midstream infrastructure company benefiting from sector's 133.9% projected earnings growth. Beat estimates in 2 of last 4 quarters.
+CLMT | positive | Strongest Earnings ESP at +48.76% with Zacks Rank #2 (Buy). Beat consensus estimates in 3 of last 4 quarters. Specialty products and renewable fuels exposure aligns with sector strength.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d1be1d8d6a59b5dd6df852c0db0c3c700b84aa95a82925ece4251ae57bc1dcfe
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T14:30:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023159/4-stocks-trading-near-52-week-high-with-more-upside-potential?cid=CS-ZC-FT-analyst_blog|rw-3023159
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f9/191749.webp
+category: 
+tickers: CNK, COP, PEB, PEBpE, PEBpF, PEBpG, PEBpH, CHRD
+keywords: 52-week high, momentum investing, earnings growth, price momentum, undervalued stocks, Zacks Rank
+headline: 4 Stocks Trading Near 52-Week High With More Upside Potential
+<<<SUMMARY>>>
+The article identifies four stocks trading near their 52-week highs with strong earnings growth and positive momentum: Cinemark (CNK), ConocoPhillips (COP), Pebblebrook Hotel Trust (PEB), and Chord Energy Corporation (CHRD). Using a screening strategy that combines momentum investing principles with undervalued metrics, these stocks demonstrate potential for continued rallies despite trading at elevated price levels.
+<<<INSIGHTS>>>
+CNK | positive | Strong near-term setup supported by content-heavy holiday calendar, improved balance sheet with $555.5M cash, premium format growth (XD at 13% of box office), and Movie Club membership base of 1.5M+. Stock surged 42.6% over six months despite 7.36% average earnings surprise.
+COP | positive | Positive momentum with 17.1% return over six months. Supported by $1B capital reduction target, $7B free cash flow increase expected by 2029, 45% of operating cash flow earmarked for shareholders, and portfolio expansion through Kirkuk interest and LNG offtake. 7.04% average earnings surprise.
+PEB | positive | Strongest performer with 53.3% return over six months and highest earnings surprise at 20.72%. Raised 2026 guidance with adjusted FFO of $1.88-$1.92 per share, improved balance sheet (net debt-to-EBITDA at 5.1x), and favorable 2027 convention calendars. Capital discipline demonstrated through asset sales and preferred repurchases.
+PEBpE | positive | Strongest performer with 53.3% return over six months and highest earnings surprise at 20.72%. Raised 2026 guidance with adjusted FFO of $1.88-$1.92 per share, improved balance sheet (net debt-to-EBITDA at 5.1x), and favorable 2027 convention calendars. Capital discipline demonstrated through asset sales and preferred repurchases.
+PEBpF | positive | Strongest performer with 53.3% return over six months and highest earnings surprise at 20.72%. Raised 2026 guidance with adjusted FFO of $1.88-$1.92 per share, improved balance sheet (net debt-to-EBITDA at 5.1x), and favorable 2027 convention calendars. Capital discipline demonstrated through asset sales and preferred repurchases.
+PEBpG | positive | Strongest performer with 53.3% return over six months and highest earnings surprise at 20.72%. Raised 2026 guidance with adjusted FFO of $1.88-$1.92 per share, improved balance sheet (net debt-to-EBITDA at 5.1x), and favorable 2027 convention calendars. Capital discipline demonstrated through asset sales and preferred repurchases.
+PEBpH | positive | Strongest performer with 53.3% return over six months and highest earnings surprise at 20.72%. Raised 2026 guidance with adjusted FFO of $1.88-$1.92 per share, improved balance sheet (net debt-to-EBITDA at 5.1x), and favorable 2027 convention calendars. Capital discipline demonstrated through asset sales and preferred repurchases.
+CHRD | positive | Strategic focus sharpening through $550M Marcellus asset sale to increase oil weighting by 4-5 percentage points and reduce capital spending. Strong cash position of $804.7M supports buybacks, new CEO signals continuity, and preliminary Q3 volumes beat guidance. 11.7% average earnings surprise despite 3.6% decline over six months.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7b864e0a8ac62ffab334d655e06a282e7eb9edf443a82a1184fb26e7e203c00a
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T14:41:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3023167/buy-5-low-beta-high-yielding-stocks-amid-recent-wall-street-volatility?cid=CS-ZC-FT-analyst_blog|investment_ideas-3023167
+image_url: https://staticx-tuner.zacks.com/images/articles/main/c5/1724.jpg
+category: 
+tickers: COP, VNOM, TTE, SU, EC
+keywords: low-beta stocks, high-dividend yield, Wall Street volatility, energy sector, Zacks Rank #1, defensive investing, oil prices
+headline: Buy 5 Low-Beta High-Yielding Stocks Amid Recent Wall Street Volatility
+<<<SUMMARY>>>
+Amid recent Wall Street volatility driven by Middle East tensions, rising oil prices, and inflation concerns, Zacks recommends five low-beta, high-dividend-yielding stocks with Strong Buy ratings: ConocoPhillips, Viper Energy, TotalEnergies, Suncor Energy, and Ecopetrol. These energy sector stocks offer defensive characteristics with attractive yields ranging from 2.29% to 4.34% and strong earnings growth expectations.
+<<<INSIGHTS>>>
+COP | positive | Strong Buy rating with low beta (0.16), attractive dividend yield (2.29%), expected revenue growth of 17.7% and earnings growth of 89%, improved consensus estimates, and strategic projects like Willow and LNG expansion supporting durable returns.
+VNOM | positive | Strong Buy rating with low beta (0.49), solid dividend yield (3.32%), exceptional earnings growth over 100%, capital-light royalty model, and improved consensus estimates (3.3% over 30 days).
+TTE | positive | Strong Buy rating with very low beta (0.14), attractive dividend yield (4.34%), expected revenue growth of 17.7% and earnings growth of 84.3%, improved consensus estimates (9.1% over 30 days), and diversified global portfolio with low-carbon transition investments.
+SU | positive | Strong Buy rating with low beta (0.22), dividend yield of 2.30%, exceptional earnings growth over 100%, expected revenue growth of 29.6%, significantly improved consensus estimates (18.5% over 30 days), and integrated upstream/downstream operations providing volatility protection.
+EC | positive | Strong Buy rating with low beta (0.45), attractive dividend yield (4.02%), expected revenue growth of 31.1% and earnings growth of 99.2%, and substantially improved consensus estimates (20.7% over 30 days).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6cc46cfb108e4f63adb66931dfef55b2d5c0d9f09c78b4b2cefa59b7ef68944d
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T22:30:00Z
+publisher: The Motley Fool
+author: Ben Gran
+url: https://www.fool.com/investing/2026/11/04/history-says-this-etf-is-a-fantastic-buy-and-hold/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892980%2Fgettyimages-1324119709-1281x819-a201dd6.jpg&w=1200&op=resize
+category: 
+tickers: SCHD, COP, CVX, UNH, MRK, PG, KO
+keywords: dividend ETF, SCHD, buy-and-hold investment, diversification, AI stocks, long-term investing, index fund, compound returns
+headline: History Says This ETF Is a Fantastic Buy-and-Hold Investment -- and It Could Turn $100 per Month Into $359,492
+<<<SUMMARY>>>
+The Schwab U.S. Dividend Equity ETF (SCHD) is highlighted as a strong buy-and-hold investment with a 15-year annualized return of 13.11%. The article suggests that $100 monthly investments could grow to $359,492 over 30 years. SCHD offers diversification away from AI stocks with holdings in energy, healthcare, and consumer staples sectors, making it potentially attractive for investors concerned about tech stock volatility.
+<<<INSIGHTS>>>
+SCHD | positive | The article presents SCHD as a fantastic buy-and-hold investment with strong 15-year historical returns of 13.11% annualized, low expense ratio of 0.06%, and effective diversification away from AI stocks. The projection of $359,492 from $100 monthly investments over 30 years is presented as an attractive opportunity.
+COP | neutral | Mentioned as a top holding in SCHD portfolio representing energy sector diversification. No specific positive or negative commentary provided about the company itself.
+CVX | neutral | Listed as a top holding in SCHD representing energy sector exposure. Included as part of the diversified portfolio without specific performance commentary.
+UNH | neutral | Mentioned as a healthcare stock holding in SCHD. Included as part of the diversified portfolio without specific analysis or commentary.
+MRK | neutral | Listed as a healthcare stock holding in SCHD representing sector diversification. No specific performance or outlook commentary provided.
+PG | neutral | Mentioned as a consumer staples giant holding in SCHD. Included as part of the diversified portfolio without specific analysis.
+KO | neutral | Listed as a consumer staples giant holding in SCHD. Mentioned as part of the diversified portfolio without specific commentary.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1bfe6e7478e312ba887afb630797826d51baae61c7f003ed6475ab797ec9e9db
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T06:38:00Z
+publisher: Zacks Investment Research
+author: Zacks Investment Research
+url: https://www.zacks.com/stock/news/3023777/the-zacks-analyst-blog-highlights-conocophillips-viper-energy-totalenergies-suncor-energy-and-ecopetrol?cid=CS-ZC-FT-press_releases-3023777
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b1/2697.jpg
+category: 
+tickers: COP, VNOM, TTE, EC
+keywords: energy stocks, low-beta stocks, dividend yield, market volatility, oil prices, Zacks Rank #1, defensive investing
+headline: The Zacks Analyst Blog Highlights ConocoPhillips, Viper Energy, TotalEnergies, Suncor Energy and Ecopetrol
+<<<SUMMARY>>>
+Zacks analysts recommend five low-beta, high-dividend yielding energy stocks as defensive plays amid market volatility caused by Middle East tensions, rising oil prices, and inflation concerns. All five stocks carry Zacks Rank #1 (Strong Buy) ratings and offer attractive dividend yields ranging from 2.29% to 4.34%, with strong expected earnings growth rates.
+<<<INSIGHTS>>>
+COP | positive | Strong Buy rating with attractive long-term profile, record Permian output, expanding LNG exposure, expected 89% earnings growth, low beta of 0.16, and 2.29% dividend yield. Consensus estimates improved 8.6% in last 30 days.
+VNOM | positive | Strong Buy rating with capital-light royalty model, over 100% expected earnings growth, deep inventory supporting production growth, 3.32% dividend yield, and low beta of 0.49. Consensus estimates improved 3.3% in last 30 days.
+TTE | positive | Strong Buy rating with expanding global portfolio, resilient production, exposure to global LNG value chain, expected 84.3% earnings growth, low beta of 0.14, and 4.34% dividend yield. Consensus estimates improved 9.1% in last 30 days.
+EC | positive | Strong Buy rating with diversified operations across exploration, refining, and logistics, expected 99.2% earnings growth, 4.02% dividend yield, and low beta of 0.45. Consensus estimates improved 20.7% in last 30 days.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0b26e0306868c29777e95aecd0b6596417a092fcacd349ccb8e35004682c6a5f
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T07:24:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3023794/zacks-com-featured-highlights-include-cinemark-conocophillips-pebblebrook-hotel-trust-and-chord-energy?cid=CS-ZC-FT-press_releases-3023794
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f7/105032.jpg
+category: 
+tickers: CNK, COP, PEB, PEBpE, PEBpF, PEBpG, PEBpH, CHRD
+keywords: 52-week high, momentum investing, stock screening, capital returns, free cash flow, balance sheet strength
+headline: Zacks.com featured highlights include Cinemark, ConocoPhillips, Pebblebrook Hotel Trust and Chord Energy
+<<<SUMMARY>>>
+Zacks highlights four stocks trading near 52-week highs that are expected to maintain momentum: Cinemark benefits from a content-heavy holiday slate and stronger balance sheet; ConocoPhillips focuses on free cash flow growth and capital returns; Pebblebrook Hotel Trust raised 2026 outlook with improved balance sheet metrics; Chord Energy is streamlining operations through asset sales and maintaining buyback programs.
+<<<INSIGHTS>>>
+CNK | positive | Strong near-term setup supported by content-heavy holiday calendar, improved balance sheet with $555.5M cash, strategic initiatives including premium formats and Movie Club membership (1.5M+ members), and 42.6% six-month gain.
+COP | positive | Positive momentum with 17.1% six-month return, guided production increases, $1B cost reduction target, $7B free cash flow increase expected by 2029, and 45% of operating cash flow earmarked for shareholder returns.
+PEB | positive | Raised 2026 outlook with adjusted FFO guidance of $1.88-$1.92 per share, strengthened balance sheet with net debt-to-EBITDA at 5.1x, 53.3% six-month return, and strong trailing four-quarter earnings surprise of 20.72%.
+PEBpE | positive | Raised 2026 outlook with adjusted FFO guidance of $1.88-$1.92 per share, strengthened balance sheet with net debt-to-EBITDA at 5.1x, 53.3% six-month return, and strong trailing four-quarter earnings surprise of 20.72%.
+PEBpF | positive | Raised 2026 outlook with adjusted FFO guidance of $1.88-$1.92 per share, strengthened balance sheet with net debt-to-EBITDA at 5.1x, 53.3% six-month return, and strong trailing four-quarter earnings surprise of 20.72%.
+PEBpG | positive | Raised 2026 outlook with adjusted FFO guidance of $1.88-$1.92 per share, strengthened balance sheet with net debt-to-EBITDA at 5.1x, 53.3% six-month return, and strong trailing four-quarter earnings surprise of 20.72%.
+PEBpH | positive | Raised 2026 outlook with adjusted FFO guidance of $1.88-$1.92 per share, strengthened balance sheet with net debt-to-EBITDA at 5.1x, 53.3% six-month return, and strong trailing four-quarter earnings surprise of 20.72%.
+CHRD | neutral | Mixed signals with 3.6% six-month decline offset by strategic asset sale ($550M Marcellus divestiture), improved oil weighting, continued buyback program ($44.3M repurchased in Q4), and new CEO signaling continuity, but recent underperformance relative to peers.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f52c6e8343242d9a5d48d3710ed4d61d9857be1029a7b22815760f9bf6337dd7
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T10:20:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023821/should-you-invest-in-the-ishares-u-s-energy-etf-iye?cid=CS-ZC-FT-sector_etf-3023821
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default81.jpg
+category: 
+tickers: IYE, CVX, COP, VDE, XLE
+keywords: energy ETF, passive management, sector exposure, dividend yield, expense ratio, performance
+headline: Should You Invest in the iShares U.S. Energy ETF (IYE)?
+<<<SUMMARY>>>
+The iShares U.S. Energy ETF (IYE) is a passively managed fund with $1.76 billion in assets, offering broad exposure to the energy sector with a low expense ratio of 0.37%. The fund has performed strongly, gaining 43.44% year-to-date and 47.77% over the past year, but carries higher risk with a standard deviation of 21.28%. Top holdings include ExxonMobil (23.59%), Chevron, and ConocoPhillips. The fund received a Zacks ETF Rank of 3 (Hold), with alternatives like Vanguard Energy Index Fund (VDE) and State Street Energy Select Sector SPDR (XLE) offering lower expense ratios.
+<<<INSIGHTS>>>
+IYE | neutral | The fund shows strong recent performance (43.44% YTD, 47.77% 1-year) and low costs (0.37% expense ratio), but received a Hold rating. High concentration risk (top 10 holdings = 71.63% of assets) and elevated volatility (21.28% standard deviation) offset positive returns.
+CVX | neutral | Second-largest holding in IYE. No independent analysis or sentiment indicators provided in the article.
+COP | neutral | Third-largest holding in IYE. No independent analysis or sentiment indicators provided in the article.
+VDE | positive | Presented as an alternative with significantly lower expense ratio (0.09% vs IYE's 0.37%) and substantially larger asset base ($10.60 billion), making it a more cost-efficient option for energy sector exposure.
+XLE | positive | Presented as an alternative with the lowest expense ratio (0.08%) and the largest asset base ($41.87 billion) among the three compared funds, offering superior cost efficiency and liquidity.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1d2a8d0fac76f3cd98091fa2ef7b273f1925c7cd9fa74fdf4710fce92a021bfb
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T14:00:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3024451/conocophillips-cop-reports-q3-earnings-what-key-metrics-have-to-say?cid=CS-ZC-FT-fundamental_analysis|nfm-3024451
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default168.jpg
+category: 
+tickers: COP
+keywords: Q3 earnings, revenue beat, EPS surprise, oil production, natural gas, regional performance, stock rating
+headline: ConocoPhillips (COP) Reports Q3 Earnings: What Key Metrics Have to Say
+<<<SUMMARY>>>
+ConocoPhillips reported Q3 2026 revenue of $20.06 billion, up 29.2% year-over-year, beating consensus estimates by 9.1%. EPS of $3.27 exceeded expectations of $3.06 by 6.86%. The company demonstrated strong performance across key production metrics and regional revenues, with natural gas prices significantly outperforming analyst estimates. The stock has gained 5.5% over the past month and holds a Zacks Rank #1 (Strong Buy) rating.
+<<<INSIGHTS>>>
+COP | positive | ConocoPhillips significantly exceeded both revenue and EPS expectations, with revenue beating consensus by 9.1% and EPS by 6.86%. Strong year-over-year growth of 29.2% in revenue, outperformance in natural gas pricing ($5.70 vs $4.64 estimate), and solid regional revenue performance across all segments (Alaska +23.5%, EMEA +62.5%, Lower 48 +25.6%) demonstrate operational strength. The Zacks Rank #1 (Strong Buy) rating and recent stock performance of +5.5% over the past month further support positive sentiment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:54229b838d63c2719e42b589d29067ffd3dcbcb316412fb28300fb9bdf1d2625
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T14:37:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024498/great-jobless-claims-productivity-keep-dow-alight?cid=CS-ZC-FT-ahead_of_wall_street-3024498
+image_url: https://staticx-tuner.zacks.com/images/articles/main/bd/334.jpg
+category: 
+tickers: COP, TRIP, PLNT, SO, SOJC, SOJD, SOJE, SOJF, SOMN
+keywords: jobless claims, productivity, earnings, market rally, labor costs, midterm elections
+headline: Great Jobless Claims & Productivity Keep Dow Alight
+<<<SUMMARY>>>
+Markets rally following a 3% Dow gain as midterm election uncertainty clears. Jobless claims hit post-Covid lows at 189K, and Q3 productivity surpasses expectations at 3.6% while unit labor costs decline. Mixed earnings results: ConocoPhillips and Southern Company beat estimates, Planet Fitness shows modest improvement, while TripAdvisor misses expectations significantly.
+<<<INSIGHTS>>>
+COP | positive | Beat earnings estimates by 6.36% ($3.27 vs consensus), stock up 1.2% on news with strong year-to-date gains of 46%
+TRIP | negative | Missed earnings estimates significantly by 28.85% ($0.37 vs $0.52 expected), stock down 20.9% on news and down 20.9% year-to-date
+PLNT | neutral | Beat earnings by 4 cents to $0.83 per share with stock up 1.3%, but still down 47% year-to-date indicating ongoing recovery phase
+SO | positive | Outperformed bottom-line estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of 6.8%
+SOJC | positive | Outperformed bottom-line estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of 6.8%
+SOJD | positive | Outperformed bottom-line estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of 6.8%
+SOJE | positive | Outperformed bottom-line estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of 6.8%
+SOJF | positive | Outperformed bottom-line estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of 6.8%
+SOMN | positive | Outperformed bottom-line estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of 6.8%
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:be11a08d348cc6e3d31fb21edad5c5ebd39c96a09e6fcf7125782bbf9f64f082
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T15:08:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024542/jobless-claims-hit-1968-lows-as-productivity-surges?cid=CS-ZC-FT-economic_highlights-3024542
+image_url: https://staticx-tuner.zacks.com/images/articles/main/16/2092.jpg
+category: 
+tickers: COP, TRIP, PLNT, SO, SOJC, SOJD, SOJE, SOJF, SOMN
+keywords: jobless claims, productivity, earnings, market rally, divided government, labor market, bond yields
+headline: Jobless Claims Hit 1968 Lows as Productivity Surges
+<<<SUMMARY>>>
+Markets surged on Wednesday with the Dow up 3% and S&P 500/Nasdaq up ~1.5% following midterm election results that produced a divided government. Initial jobless claims hit post-Covid lows at 189K, while Q3 productivity jumped to 3.6%, exceeding expectations. Mixed earnings results came in from energy, travel, and fitness sectors.
+<<<INSIGHTS>>>
+COP | positive | Beat earnings expectations by 6.36% ($3.27 vs consensus), stock up 1.2% on news with strong year-to-date gains of +46%
+TRIP | negative | Missed earnings estimates significantly ($0.37 vs $0.52 expected, -28.85% surprise), stock down 20.9% on news and down 20.9% year-to-date
+PLNT | neutral | Beat earnings by 4 cents ($0.83 per share), stock up 1.3%, but remains down 47% year-to-date indicating ongoing recovery challenges
+SO | positive | Outperformed earnings estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of +6.8%
+SOJC | positive | Outperformed earnings estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of +6.8%
+SOJD | positive | Outperformed earnings estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of +6.8%
+SOJE | positive | Outperformed earnings estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of +6.8%
+SOJF | positive | Outperformed earnings estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of +6.8%
+SOMN | positive | Outperformed earnings estimates by 13.45% ($1.94 vs $1.71 expected), stock up 1.2% on news with modest year-to-date gains of +6.8%
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3125dc1658a73a2bb0daebf2b36ec54d6ca0948e065520f5c9371b2f3237fc09
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T11:26:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025227/conocophillips-q3-earnings-beat-estimates-on-higher-commodity-prices?cid=CS-ZC-FT-analyst_blog|earnings_article-3025227
+image_url: https://staticx-tuner.zacks.com/images/articles/main/30/172914.webp
+category: 
+tickers: COP, RRC, EQNR, E
+keywords: Q3 2026 earnings, commodity prices, free cash flow, shareholder returns, dividend increase, production volumes, oil and gas
+headline: ConocoPhillips Q3 Earnings Beat Estimates on Higher Commodity Prices
+<<<SUMMARY>>>
+ConocoPhillips (COP) reported Q3 2026 adjusted earnings of $3.27 per share, up 103.1% year-over-year and beating consensus estimates by 6.9%. The strong results were driven by a 32% increase in average realized prices to $61.40 per Boe, which offset a 4% decline in production volumes. The company generated $4.04 billion in free cash flow and returned $3.4 billion to shareholders, while increasing its quarterly dividend by 11%.
+<<<INSIGHTS>>>
+COP | positive | Strong earnings beat (6.9% above consensus), significant year-over-year EPS growth (103.1%), robust free cash flow generation ($4.04B), increased dividend (11%), and maintained 2026 guidance. Higher commodity prices more than offset production declines.
+RRC | positive | Q3 2026 adjusted earnings of $0.81 per share exceeded Zacks Consensus Estimate of $0.70 per share, demonstrating solid operational performance.
+EQNR | negative | Q3 2026 adjusted earnings of $1.20 per share missed the Zacks Consensus Estimate of $1.38 per share, indicating underperformance relative to expectations.
+E | positive | Q3 2026 adjusted earnings of $2.13 per share surpassed the Zacks Consensus Estimate of $1.92 per share, demonstrating better-than-expected performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:44458243e0f33a3b8b08350334f9240034f302ed8e83ff5cdfee4224da359c89
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T14:04:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025597/cop-q3-earnings-call-highlights-cash-flow-growth-and-lower-spending?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3025597
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default253.jpg
+category: 
+tickers: COP
+keywords: free cash flow, capital expenditure, shareholder returns, dividend increase, Willow project, LNG expansion, Lower 48 production, earnings beat
+headline: COP Q3 Earnings Call Highlights Cash Flow Growth and Lower Spending
+<<<SUMMARY>>>
+ConocoPhillips reported Q3 2026 earnings beating estimates with adjusted EPS of $3.27 vs. consensus of $3.06. The company targets $7B in free cash flow improvement by 2029 through lower capital spending and sustained production growth. COP returned $3.4B to shareholders in Q3, raised its quarterly dividend 11% to 93 cents, and expanded its LNG portfolio to 13M tons annually. The Willow project remains on track for early 2029 production.
+<<<INSIGHTS>>>
+COP | positive | Company exceeded earnings estimates, demonstrated strong operational performance with record Permian completion metrics, committed to substantial shareholder returns (45% of operating cash flow), increased dividend by 11%, and maintains clear path to $7B free cash flow improvement by 2029 with disciplined capital allocation and production growth initiatives.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aa9db20725bee4b2ee4cc56dc2d0e17f4840cb32d325ed67b6da501a9326d320
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T15:40:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026591/cop-vs-whd-which-stock-is-the-better-value-option?cid=CS-ZC-FT-fundamental_analysis|yseop_template_3-3026591
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default63.jpg
+category: 
+tickers: COP, WHD
+keywords: value investing, valuation metrics, P/E ratio, earnings estimates, oil and gas sector
+headline: COP vs. WHD: Which Stock Is the Better Value Option?
+<<<SUMMARY>>>
+In a value comparison of two Oil and Gas - Integrated stocks, ConocoPhillips (COP) emerges as the superior value opportunity over Cactus, Inc. (WHD). COP holds a Zacks Rank of #1 (Strong Buy) with improving earnings outlook, while WHD has a Zacks Rank of #3 (Hold). COP's valuation metrics are more attractive, featuring a forward P/E of 11.51 versus WHD's 18.04, a PEG ratio of 1.28 versus 1.48, and a P/B ratio of 2.48 versus 3.04. COP earned a Value grade of B compared to WHD's C grade.
+<<<INSIGHTS>>>
+COP | positive | Strong Buy rating (#1 Zacks Rank), improving earnings outlook, superior valuation metrics (lower P/E, PEG, and P/B ratios), and higher Value grade (B) make it the preferred value investment choice.
+WHD | neutral | Hold rating (#3 Zacks Rank) with less attractive valuation metrics compared to COP, including higher P/E ratio (18.04), higher PEG ratio (1.48), higher P/B ratio (3.04), and lower Value grade (C).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9c27e5d0772ef2231205a001ba5c8fc7166cd0cf8a3d584f7ff8351bee80b8d1
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T17:03:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026693/conocophillips-trades-at-a-premium-is-it-the-right-time-to-buy?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3026693
+image_url: https://staticx-tuner.zacks.com/images/articles/main/87/146286.webp
+category: 
+tickers: COP, EOG, FANG
+keywords: ConocoPhillips, upstream energy, LNG expansion, Willow project, shale assets, free cash flow, oil prices, Alaska production
+headline: ConocoPhillips Trades at a Premium: Is It the Right Time to Buy?
+<<<SUMMARY>>>
+ConocoPhillips (COP) has rallied 54.4% over the past year, outpacing its industry peers, supported by low-cost shale assets, favorable oil prices, and expanding LNG operations. The company targets $7 billion in free cash flow improvement by 2029, driven by LNG investments and the Willow project in Alaska expected to begin production in early 2029. Despite trading at a premium valuation, analysts rate COP as a Strong Buy based on its diversified asset portfolio and positive long-term outlook.
+<<<INSIGHTS>>>
+COP | positive | Strong stock performance (54.4% annual gain), diversified low-cost asset portfolio, favorable commodity pricing environment, strategic LNG expansion with 13 MTPA contracted capacity, on-track Willow project expected to deliver $7B free cash flow improvement by 2029, and Zacks Rank #1 Strong Buy rating support positive outlook despite premium valuation.
+EOG | neutral | Mentioned as a peer company with solid 38.1% annual stock performance, but no specific analysis or commentary provided regarding its fundamentals or outlook.
+FANG | neutral | Mentioned as a peer company with 23.6% annual stock performance, but no specific analysis or commentary provided regarding its fundamentals or outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8b9d4f54ef7eb49d903fa9e6d574d937d34d2665e87bfd10561a687b1e796b3b
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T12:41:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027035/can-conocophillips-sustain-future-production-growth-with-lower-capex?cid=CS-ZC-FT-analyst_blog|quick_take-3027035
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b5/163437.webp
+category: 
+tickers: COP, EOG, FANG
+keywords: capital expenditure reduction, production growth, Permian Basin, operational efficiency, free cash flow, cost optimization, drilling techniques, capital discipline
+headline: Can ConocoPhillips Sustain Future Production Growth With Lower CapEx?
+<<<SUMMARY>>>
+ConocoPhillips plans to achieve low-single-digit production growth in 2027 while reducing capital spending, leveraging operational efficiencies in its Permian Basin assets and recently commissioned Canadian operations. The company targets a $7 billion free cash flow improvement by 2029 through cost reductions and efficiency gains, despite inflationary pressures on fuel, logistics, and chemicals.
+<<<INSIGHTS>>>
+COP | positive | Company demonstrates strong capital discipline with plans for modest CapEx reduction while maintaining low-single-digit production growth. Operational improvements, extensive resource portfolio, and a targeted $7 billion free cash flow improvement by 2029 support positive outlook. Stock has outperformed industry peers with 52.4% gain over the past year and holds a Zacks Rank #1 (Strong Buy) rating.
+EOG | positive | Company achieved record oil, natural gas liquids, and natural gas production in Q3 2026 while maintaining per-unit cash operating costs below guidance midpoint. Focus on disciplined investments and high-return assets demonstrates effective capital efficiency and operational excellence.
+FANG | positive | Company is improving drilling and completion efficiency through five electric simul-frac fleets planned for consistent 2027 operation. Disciplined spending approach and focus on development cost optimization position the company well for capital-efficient production growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:32ff14e7e5edd2237bc331cdc6bfd8cdd0474039873ab7dc4e16a258c2897b04
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T14:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027716/vg-q3-earnings-call-highlights-higher-outlook-and-ai-power-plans?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3027716
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default170.jpg
+category: 
+tickers: VG, COP, CGHLY
+keywords: LNG production, EBITDA guidance raise, Q3 earnings beat, AI data center infrastructure, CP2 project acceleration, long-term offtake commitments, liquefaction fees, energy infrastructure
+headline: VG Q3 Earnings Call Highlights Higher Outlook and AI Power Plans
+<<<SUMMARY>>>
+Venture Global (VG) raised its 2026 EBITDA guidance to $10-$10.3 billion from $8.7-$9.1 billion following a strong Q3 earnings beat. The company reported EPS of 96 cents versus 53 cents estimate and revenues of $4.76 billion. VG accelerated CP2's first LNG production target to July 2027 and increased 2026 cargo outlook to 509-518. Additionally, the company outlined plans to develop 5 GW of AI compute capacity by 2031 using existing power infrastructure, with initial capacity expected in late 2028 or early 2029.
+<<<INSIGHTS>>>
+VG | positive | Company significantly exceeded Q3 earnings expectations (96 cents vs 53 cents estimate), raised full-year EBITDA guidance substantially, accelerated CP2 production timeline, secured new long-term customer commitments, and is expanding into high-growth AI infrastructure sector while maintaining strong operational execution and financial flexibility.
+COP | neutral | Mentioned only as a customer securing a new 20-year LNG offtake commitment with Venture Global; no direct impact on ConocoPhillips' operations or financial performance disclosed.
+CGHLY | neutral | Mentioned only as a customer securing a new or expanded 20-year LNG offtake commitment with Venture Global; no direct impact on company performance disclosed.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:976acf0a85d30e556ffba098ceb585ee9c042e4e66aaa53846374cf80b43e078
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T14:09:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028744/oil-price-is-still-high-boon-for-exxonmobil-s-upstream-business?cid=CS-ZC-FT-analyst_blog|quick_take-3028744
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: CVX, COP
+keywords: oil prices, ExxonMobil, Permian, Guyana, upstream production, energy sector, stock performance, valuation
+headline: Oil Price is Still High: Boon for ExxonMobil's Upstream Business?
+<<<SUMMARY>>>
+ExxonMobil (XOM) is well-positioned to benefit from oil prices above $85/barrel, with low-cost production from its Permian and Guyana assets driving earnings growth. XOM shares gained 40.4% over the past year, outperforming the industry average of 34.9%. However, the stock trades at a premium valuation (EV/EBITDA of 7.87X vs. industry average of 5.96X), and recent earnings estimates for 2026 have been revised downward.
+<<<INSIGHTS>>>
+CVX | positive | Benefits from high oil prices and production growth in the Permian, positioning the company well to capitalize on current favorable commodity pricing environment.
+COP | positive | Significant revenue generation from crude oil and low-cost drilling opportunities across Permian, Eagle Ford, and Bakken provide bright upstream outlook in high oil price environment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:06491be62514e880d8216f20e6138def44b25bc559355c054e33bcab5dd6c17c
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T12:43:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029308/oil-above-85-chord-energy-up-58-in-a-year-is-it-still-a-buy?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3029308
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: CHRD, COP, EOG
+keywords: oil production, upstream operations, Bakken region, free cash flow returns, shareholder returns, valuation discount, debt-to-capitalization, WTI crude prices
+headline: Oil Above $85, Chord Energy Up 58% in a Year: Is It Still a Buy?
+<<<SUMMARY>>>
+Chord Energy (CHRD) has jumped 57.9% over the past year, outpacing industry growth and peers. The company raised its 2026 oil production guidance to 162,500 barrels per day, benefits from elevated WTI crude prices above $85/barrel, maintains a strong balance sheet with low debt exposure, and commits to returning at least 75% of free cash flow to shareholders. Trading at 2.73x EV/EBITDA, CHRD appears undervalued compared to industry average of 8.72x, earning a Zacks Rank #1 (Strong Buy) rating.
+<<<INSIGHTS>>>
+CHRD | positive | Strong year-over-year stock performance (57.9%), raised production guidance, low debt exposure (15.2% debt-to-capitalization), attractive valuation at 2.73x EV/EBITDA vs. industry 8.72x, strong shareholder commitment with 75%+ free cash flow returns, and Zacks Rank #1 (Strong Buy) rating.
+COP | neutral | Mentioned as an industry peer with solid 53.3% year-over-year gains and higher valuation at 5.87x EV/EBITDA, but no specific analysis or commentary provided regarding its fundamentals or outlook.
+EOG | neutral | Mentioned as an industry peer with 41% year-over-year gains and valuation at 5.34x EV/EBITDA, but no specific analysis or commentary provided regarding its fundamentals or outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:068c2c24024e2dc286803cc190ab905b8060943a2b22cffc1b380ffaef14a46f
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T12:51:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029316/oil-staying-above-85-a-growth-catalyst-for-eog-resources?cid=CS-ZC-FT-analyst_blog|quick_take-3029316
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: EOG, COP
+keywords: oil prices, natural gas, LNG exports, AI data centers, energy sector, crude oil, Permian Basin
+headline: Oil Staying Above $85: A Growth Catalyst for EOG Resources?
+<<<SUMMARY>>>
+EOG Resources is positioned to benefit from WTI crude trading above $85/barrel and rising LNG exports and AI-driven power demand. The company's 12 billion BOE resource base and diversified portfolio support strong cash flow generation. EOG shares gained 41% over the past year and trade at 5.34X EV/EBITDA, below the industry average of 8.72X. ConocoPhillips and Exxon Mobil are also well-positioned in the favorable crude pricing environment.
+<<<INSIGHTS>>>
+EOG | positive | Company benefits from high oil prices above $85/barrel, has a large 12 billion BOE resource base, is well-positioned for rising LNG exports and AI-driven power demand, shares gained 41% in the past year, trades below industry average valuation at 5.34X EV/EBITDA, and carries a Zacks Rank #2 (Buy) rating with upward earnings revisions.
+COP | positive | Benefits from favorable crude pricing environment and has low-cost drilling opportunities across major basins (Permian, Eagle Ford, Bakken) that could be profitably developed over two decades.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5c30d03fe8670b7cd4bfbe7031979417bfc30dbe08b34223a8e4eb47a4cddb8f
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T14:05:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029577/3-stocks-to-buy-that-announced-dividend-hikes-amid-market-volatility?cid=CS-ZC-FT-analyst_blog|investment_ideas-3029577
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f2/1790.jpg
+category: 
+tickers: COP, NNI, ADP
+keywords: dividend stocks, market volatility, AI spending concerns, inflation, dividend yield, conservative investing
+headline: 3 Stocks to Buy That Announced Dividend Hikes Amid Market Volatility
+<<<SUMMARY>>>
+Amid market volatility driven by AI spending concerns, geopolitical tensions, and inflation worries, three dividend-paying stocks are highlighted as attractive for conservative investors: ConocoPhillips announced a $0.93 dividend with 2.4% yield and 12 hikes in five years; Nelnet declared a $0.36 dividend with 1.04% yield and six hikes in five years; and Automatic Data Processing announced a $1.90 dividend with 2.22% yield and six hikes in five years.
+<<<INSIGHTS>>>
+COP | positive | Strong dividend history with 12 increases over five years, attractive 2.4% yield, low payout ratio of 36%, and Zacks Rank #1 (Strong Buy) rating indicate solid fundamentals and growth potential.
+NNI | positive | Consistent dividend growth with six increases over five years, conservative payout ratio of 18% indicating room for future growth, and Zacks Rank #2 (Buy) rating support its attractiveness.
+ADP | positive | Regular dividend increases over five years, solid 2.22% yield, and Zacks Rank #2 (Buy) rating make it appealing; however, higher payout ratio of 59% suggests less room for dividend growth compared to peers.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:340beb72c1cdfb1baac65b5dca1eefb85c7b7e8dd67ed9339f6a34b633a9208f
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T17:11:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029773/conocophillips-lower-48-and-willow-assets-key-to-long-term-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3029773
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: COP, EOG
+keywords: upstream energy, oil and gas, cash flow growth, Willow project, LNG expansion, balance sheet strength, low-cost assets, Permian Basin, Guyana
+headline: ConocoPhillips' Lower 48 and Willow Assets: Key to Long-Term Growth?
+<<<SUMMARY>>>
+ConocoPhillips (COP) is highlighted as a leading upstream energy company with diversified global assets and a $7 billion cash flow inflection target by 2029, supported by Lower 48 inventory, the Willow project, and LNG expansion. The company benefits from $10.4 billion in liquidity and unhedged oil exposure. EOG Resources and ExxonMobil are also noted for their low-cost, high-quality upstream assets and strong balance sheets with low debt-to-capitalization ratios.
+<<<INSIGHTS>>>
+COP | positive | Strong asset portfolio with 20+ years of low-cost inventory in Lower 48, Willow project startup, $7B cash flow inflection target by 2029, $10.4B liquidity, unhedged oil exposure upside, and Zacks Rank #1 Strong Buy rating. Stock up 56.7% over past year.
+EOG | positive | Leading independent E&P company with prolific U.S. acres and international operations, low-cost high-quality assets, and debt-to-capitalization ratio of 19.31% significantly below industry average.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7cfa0e2cc05a03677a5af2c014b31b9053ae47ebd5125c36a725bb1c429666a1
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T20:21:00Z
+publisher: GlobeNewswire Inc.
+author: Hmg Strategy
+url: https://www.globenewswire.com/news-release/2026/11/13/3402940/0/en/houston-s-technology-leaders-move-from-ai-experimentation-to-enterprise-execution-at-hmg-strategy-s-16th-annual-houston-c-level-technology-leadership-summit.html
+image_url: https://ml.globenewswire.com/Resource/Download/06e8b38a-a498-4151-b194-7720bca68ed4
+category: 
+tickers: COP, OII, MCDIF
+keywords: AI integration, enterprise execution, cybersecurity, data modernization, CIO leadership, digital transformation, technology investment
+headline: Houston’s Technology Leaders Move from AI Experimentation to Enterprise Execution at HMG Strategy’s 16th Annual Houston C-Level Technology Leadership Summit
+<<<SUMMARY>>>
+Houston's CIOs, CISOs, and senior technology executives from energy, healthcare, manufacturing, and financial services sectors are gathering November 19, 2026, to address enterprise AI integration, cybersecurity, and data modernization. Participating executives report significant capital commitments ranging from $1-10 million to over $10 million for AI, machine learning, and cybersecurity initiatives, signaling a shift from AI experimentation to production-scale deployment.
+<<<INSIGHTS>>>
+COP | positive | Featured as a participating enterprise with executive speaker (Pragati Mathur, Chief Digital and Information Officer), indicating active engagement in enterprise AI and digital transformation initiatives
+OII | positive | Participating company with featured CITO speaker (Maria O'Neill), indicating active investment in technology modernization and digital initiatives
+MCDIF | positive | Featured with global CIO speaker (Vagesh Dave), indicating significant investment in enterprise AI and digital transformation initiatives
+<<<END>>>

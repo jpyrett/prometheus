@@ -32,7 +32,7 @@ def test_the_whole_step_on_the_fixture_universe(tmp_path):
     record = Recommendation.model_validate(out.recommendations[0])                          # the record validates against schema 2
     assert record.action.action == "open" and record.identity.case == "funds" and record.identity.sleeve == "preserve" and record.identity.regime == "trend" and record.identity.as_of_utc == "2026-10-23T00:00:00Z"
     assert record.ranking.rank == 1 and record.ranking.concentrated is True and record.stance == "bullish" and record.supported is True and 50 < record.score <= 100
-    assert [f.family for f in record.families if f.passed] == ["event", "capital_return", "conviction"] and record.trade.family == "conviction" and record.trade.suggested_shares >= 1
+    assert [f.family for f in record.families if f.passed] == ["event", "capital_return", "conviction"] and record.trade.family == "conviction" and record.trade.stop_price is not None and record.trade.order_style == "limit"
     assert record.thesis.thesis.startswith("Open Procter") and record.thesis.thesis_error is None
     assert [g.gate for g in record.gates] == ["no_metrics", "liquidity", "freshness", "red_flag", "event_risk"] and all(g.passed for g in record.gates)
     assert record.audit.config_version == "1" and record.audit.metric_order == out.advisor_runs[0]["metric_order"] and record.audit.plan_run["calls"] == 1 and record.audit.thesis_run["calls"] == 1
@@ -202,7 +202,7 @@ def test_a_holding_with_a_red_flag_is_a_reduce_returned_above_every_open():
     assert [(r["symbol"], r["action"]["action"]) for r in out.recommendations] == [("MCD", "reduce"), ("PG", "open")]
     reduce = out.recommendations[0]
     assert reduce["action"]["held_shares"] == 10 and reduce["action"]["unrealized_pct"] == pytest.approx(300 / 40 - 1, abs=1e-4) and "red_flag gate failed" in reduce["action"]["reason"]
-    assert reduce["trade"]["suggested_shares"] == 0 and reduce["ranking"]["rank"] == 1 and out.recommendations[1]["ranking"]["rank"] == 2          # a reduction has no invented size
+    assert reduce["trade"]["entry_zone"] and reduce["trade"]["stop_price"] is None and reduce["trade"]["family"] is None and reduce["ranking"]["rank"] == 1 and out.recommendations[1]["ranking"]["rank"] == 2   # a reduction has an entry zone and no amount
 
 
 def test_a_holding_with_nothing_to_say_is_a_hold_candidate_not_a_recommendation():

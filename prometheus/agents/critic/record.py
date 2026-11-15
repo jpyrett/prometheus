@@ -8,7 +8,7 @@ A review answers the questions a person asks of a recommendation, in the order t
     accuracy                 what was fetched again and whether it matched; the sources read again; the cross-checks
     evidence                 what the model said about each quote (labels only), the control claim, newer sources, what the expected return is WITHOUT the quotes that did not hold
     timing                   the session, the record's date, the price and where it sits in the entry zone
-    risk                     the tolerance, the risk score and level, the size the profile allows
+    risk                     the tolerance, the risk score and level (never a size: how much to buy is the Account Manager's)
     value                    the price against the six-month average, the profit potential, the bonus
     chart                    the chart patterns that hold (golden cross, dead cat bounce, ...) and the numbers behind them
     audit                    which model, which config, which Data Clerk orders
@@ -20,7 +20,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 1      # kept at 1 through the amendments (entries 62, 65), as the Critic's feedback block is: a field that goes is simply gone (the models forbid extras). A review carries NO SIZE any more (sizing is the Account Manager's); reviews stored before that still hold one
 SEVERITIES = ("blocker", "warning", "info")
 # The ONLY places a model's words reach a review (spec 10): the labels and reasons of the claims, the control's label, and the label and quote of a fresh source.
 MODEL_FIELDS = ("evidence.claims[*].label", "evidence.claims[*].reason", "evidence.control.label", "evidence.fresh[*].label", "evidence.fresh[*].quote")
@@ -29,7 +29,7 @@ MODEL_FIELDS = ("evidence.claims[*].label", "evidence.claims[*].reason", "eviden
 BLOCKER_CODES: dict[str, tuple[str, ...]] = {
     "accuracy": ("record_not_reviewable", "record_defect", "data_unverified", "data_mismatch", "source_missing", "source_altered", "symbol_unknown", "price_mismatch"),
     "timing": ("market_closed", "record_expired", "time_stop_passed", "bars_stale", "no_live_price", "quote_stale", "price_left_zone", "stop_already_hit"),
-    "risk_fit": ("risk_above_profile", "size_above_profile", "exposure_limit", "symbol_excluded", "sector_excluded", "price_below_profile_min"),
+    "risk_fit": ("risk_above_profile", "symbol_excluded", "sector_excluded", "price_below_profile_min"),
     "value": ("overpriced", "valuation_extreme", "falling_knife"),
     "chart": ("dead_cat_bounce",),
     "evidence": ("event_not_supported", "blend_not_supported", "fresh_negative_event"),
@@ -187,10 +187,6 @@ class RiskDetail(_Model):
     allowed_level: str | None = None
     risk_score: float | None = None
     risk_level: str | None = None
-    equity: float | None = None
-    equity_basis: str | None = None
-    caps: dict[str, int | None] = Field(default_factory=dict)   # position, loss, order, exposure: the most shares each limit allows
-    allowed_shares: int | None = None                           # the shares the profile allows (the Advisor's size cut by the limits), whatever the verdict
     flags: list[str] = Field(default_factory=list)
 
 
@@ -246,8 +242,6 @@ class Review(_Model):
     score_before_blockers: int
     grade: str
     bonus: float = 0.0
-    approved_shares: int = 0
-    suggested_shares: int = 0
     requires_human: bool = False
     requires_human_reasons: list[str] = Field(default_factory=list)
     denial_reasons: list[str] = Field(default_factory=list)

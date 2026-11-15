@@ -25,6 +25,7 @@ from prometheus.common.portfolio import load_portfolio
 from prometheus.rag.config import REPO_ROOT
 
 FIXTURES = Path(__file__).parent / "fixtures" / "advisor_real"
+SIZE_FIELDS = {"equity", "equity_basis", "risk_budget", "suggested_shares", "position_pct", "oversized", "size_note", "funds_feasible", "funds_note"}     # what the plan had before entry 80 removed the size
 
 
 class RecordedClerk:
@@ -129,7 +130,7 @@ def test_sndks_trade_plan_is_checkable_by_hand(sndk):
     t = sndk[0].recommendations[0]["trade"]
     assert t["family"] == "capital_return" and t["target_price"] is None and t["entry_zone"][0] < t["entry_mid"] < t["entry_zone"][1] and t["entry_mid"] == 806.43
     assert t["stop_price"] == pytest.approx(t["entry_mid"] - t["stop_distance"], abs=0.01) and t["stop_distance"] == pytest.approx(3 * 108.6778, rel=1e-3)   # 3 ATR of the real ATR
-    assert t["suggested_shares"] >= 1 and t["oversized"] is False and t["funds_feasible"] is True and t["time_stop_date"] == "2027-04-30"
+    assert t["time_stop_date"] == "2027-04-30" and t["order_style"] == "limit" and not SIZE_FIELDS & set(t)                          # prices and dates: the record says nothing of how much (entry 80)
 
 
 def test_the_holdings_of_the_sample_portfolio_were_reviewed_and_left_alone(sndk):
@@ -181,7 +182,7 @@ def test_pg_in_the_other_capture_is_a_recommendation_and_the_critic_finds_it_com
     families = {f["family"]: f for f in record["families"]}
     assert families["capital_return"]["passed"] and families["capital_return"]["direction"] == "bullish" and families["trend"]["computable"] and not families["trend"]["passed"]
     t = record["trade"]
-    assert t["entry_mid"] == 167.1 and t["stop_price"] == pytest.approx(t["entry_mid"] - t["stop_distance"], abs=0.01) and t["suggested_shares"] >= 1 and t["funds_feasible"] is True
+    assert t["entry_mid"] == 167.1 and t["stop_price"] == pytest.approx(t["entry_mid"] - t["stop_distance"], abs=0.01) and not SIZE_FIELDS & set(t)
 
 
 def test_a_dilution_passage_of_the_10q_does_not_turn_pgs_capital_return_bearish(pg_open):
@@ -200,10 +201,10 @@ def test_the_simple_critic_catches_each_kind_of_defect(sndk):
     assert critic.critique(good, order).failures == []
     quote = good["evidence"]["signals"][0]
     cases = [
-        ({"trade.stop_price": 900.0}, "trade.stop"), ({"trade.stop_price": 400.0}, "recompute.stop"), ({"trade.entry_zone": None}, "trade.entry"), ({"trade.suggested_shares": 0}, "trade.size"),
+        ({"trade.stop_price": 900.0}, "trade.stop"), ({"trade.stop_price": 400.0}, "recompute.stop"), ({"trade.entry_zone": None}, "trade.entry"), ({"trade.order_style": None}, "trade.order_style"),
         ({"trade.invalidation": []}, "trade.invalidation"), ({"trade.time_stop_date": "2026-11-01"}, "trade.time_stop"), ({"score": 99}, "recompute.score"),
         ({"ranking.composite": 0.5}, "recompute.composite"), ({"agreement.confidence": 0.99}, "recompute.confidence"),
-        ({"trade.position_pct": 0.9}, "recompute.position"), ({"gates": [{"gate": "liquidity", "passed": False}]}, "gates"), ({"audit.metric_order": None}, "audit"),
+        ({"gates": [{"gate": "liquidity", "passed": False}]}, "gates"), ({"audit.metric_order": None}, "audit"),
         ({"thesis.bull_case": [{"text": "x", "ref": "made_up"}]}, "thesis.refs"),
         ({"features.roe.unit": None}, "complete.features"), ({"risk": None}, "complete"), ({"features.rsi_14.as_of": "2026-10-01"}, "features.fresh"),
     ]
@@ -216,11 +217,28 @@ def test_the_simple_critic_catches_each_kind_of_defect(sndk):
     assert any(f.startswith("features.used") for f in critic.critique(used, order).failures)
 
 
+def of(order, symbol):
+    return next(r for r in order.recommendations if r["symbol"] == symbol)
+
+
 def test_the_replay_is_deterministic_and_the_model_owns_only_its_own_fields(sndk):
     again, _ = replay("SNDK")
     assert scrub(again.recommendations[0]) == scrub(sndk[0].recommendations[0])
     changed, _ = replay("SNDK", plan_reply=json.dumps({"companies": []}))                        # a model that says nothing: the numbers of the record are the same, the text evidence is not
-    one, two = scrub(sndk[0].recommendations[0]), scrub(changed.recommendations[0])
+    one, two = scrub(of(sndk[0], "SNDK")), scrub(of(changed, "SNDK"))                            # (by symbol: a held name can be recommended too, see the next test)
     for section in ("features", "gates", "quality", "risk", "identity"):
         assert one[section] == two[section]
     assert two["signals"] == [] and one["signals_verified"] >= 1 and two["trade"]["stop_price"] == one["trade"]["stop_price"]
+
+
+def test_a_held_name_as_good_as_the_new_ideas_is_an_add_with_no_amount_and_the_user_limits_are_the_account_managers(sndk):
+    """Entry 80: the holdings pass no longer asks whether the position after adding stays within 20% of the equity (it needed a size and the user's money). With the model saying nothing (no text evidence, so
+    SNDK's blend falls to 56 and the bar for an add with it), the held GM, bullish at 60, is an `add` on the REAL capture; with the model's evidence (SNDK 60) GM is below the new idea and stays a hold.
+    The `add` carries a plan of prices and no amount. Whether the user's own limits leave room for more GM is decided by `sizing.size_purchases`, which counts the shares held against the position limit."""
+    base_gm = next(c for c in sndk[0].candidates if c["symbol"] == "GM")
+    assert base_gm["held"] and base_gm["reason"] == "hold: bullish, but below this run's new ideas"
+    changed, _ = replay("SNDK", plan_reply=json.dumps({"companies": []}))
+    gm = of(changed, "GM")
+    assert gm["action"]["action"] == "add" and gm["action"]["held_shares"] > 0 and "as good as this run's new ideas" in gm["action"]["reason"] and gm["score"] == 60
+    assert gm["trade"]["family"] and gm["trade"]["stop_price"] and not SIZE_FIELDS & set(gm["trade"]) and "position_pct_after" not in gm["portfolio_fit"]
+    Recommendation.model_validate(gm)

@@ -15,8 +15,12 @@ The DataToolbox writes news/<SYMBOL>.txt as a series of records (format: docs/Da
 
 This module turns each record into one Document. It never imports the DataToolbox: the file format is
 the contract between them. The one change it makes to the text is to decode HTML entities (`Procter &amp; Gamble` becomes
-`Procter & Gamble`, `Nvidia&#39;s` becomes `Nvidia's`): see decode_entities and design choices entry 18. A record the DataToolbox would not have written stops the load with a
-ValueError that names the file and the line.
+`Procter & Gamble`, `Nvidia&#39;s` becomes `Nvidia's`): see decode_entities and design choices entry 18.
+
+A NEWS ARTICLE (or press release) THAT FAILS IS DISCARDED (Jacob, 2026-11-15, design choices entry 83): a record the DataToolbox would not have written (a header line with no colon, an unknown marker, no
+<<<END>>>, bad UTF-8, a field that is missing, a time that is not a time, no ticker) is SKIPPED, completely: it becomes no Document, so it is never chunked, never stored in the RAG, never found by a search, and never
+reaches the Advisor's scoring or any other result. The records before and after it still load. `load_news(path, skipped=[...])` lists each skipped record (`Skipped`: the file and line, and why) for a person to look
+at; nothing else is told. SEC filings are not news and keep the strict rule: a filing the toolbox would not have written stops the load with a ValueError that names the file and the line.
 
 Look at the result:   python -m prometheus.rag.loaders AAPL
 
@@ -34,6 +38,7 @@ import unicodedata
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import NamedTuple
 
 from langchain_core.documents import Document
 
@@ -96,54 +101,99 @@ def press_release_file(symbol: str) -> Path:
     return press_releases_dir() / f"{check_symbol(symbol)}{PRESS_RELEASES_SUFFIX}"
 
 
-def load_news(path: Path | str) -> list[Document]:
-    """Read one news file. Returns one Document per article, in file order."""
+class Skipped(NamedTuple):
+    """A record that failed and was discarded (design choices entry 83): `where` is "<file>:<first line>", `reason` says why in one sentence."""
+    where: str
+    reason: str
+
+
+def load_news(path: Path | str, skipped: list | None = None) -> list[Document]:
+    """Read one news file. Returns one Document per article, in file order. A record that fails is SKIPPED and ignored completely (see the module text): the others still load. `skipped`, when given, receives one
+    `Skipped` for each record that was discarded."""
     path = Path(path)
-    return [_to_document(path, *record) for record in _records(path)]
+    docs = []
+    for record in _records(path):
+        if isinstance(record, Skipped):
+            if skipped is not None:
+                skipped.append(record)
+            continue
+        where = f"{path}:{record[0]}"
+        try:
+            docs.append(_to_document(path, *record))
+        except (ValueError, OverflowError) as e:   # a field that is missing, a time that is not a time, no ticker: the article failed
+            if skipped is not None:
+                skipped.append(Skipped(where, str(e).removeprefix(f"{where}: ")))
+    return docs
 
 
 def _records(path: Path):
-    """Yield (first line number, header fields, summary text, insights text) for each record.
-
-    Raises ValueError, naming the file and line, for anything the DataToolbox would not have written."""
+    """Yield, for each record, (first line number, header fields, summary text, insights text), or a `Skipped` when the record is broken: a header line without a colon, an unknown marker, bad UTF-8, a record that
+    starts before the last one ended or has no <<<END>>>. A broken record is read to its end (or to the next <<<ARTICLE>>>) and discarded, so the next record is read as it should be. Text between records is
+    reported once per run of lines and ignored. A record that ended and is followed by text that is not a record (an unescaped <<<END>>> inside its text, say) was cut short, so it is discarded too: a record is
+    given only when the next thing in the file is another record, a blank line or the end of the file."""
     state = start = None  # state: None between records, else "head", "summary" or "insights"
     head: dict[str, str] = {}
     summary: list[str] = []
     insights: list[str] = []
-    with open(path, "rb") as f:  # read bytes and decode line by line, so an error can name its line
+    broken = ""           # why the record in progress failed; "" while it is fine
+    junk = False          # a run of text between records was already reported
+    pending = None        # the record that just ended: given when the next thing is a record, a blank line or the end of the file
+    with open(path, "rb") as f:  # read bytes and decode line by line, so a failure can name its line
         for number, raw in enumerate(f, 1):
             try:  # line 1 may start with a byte order mark (BOM); "utf-8-sig" removes it
                 line = raw.decode("utf-8-sig" if number == 1 else "utf-8").rstrip("\r\n")
             except UnicodeDecodeError as e:
-                raise ValueError(f"{path}:{number}: not valid UTF-8 ({e.reason}, at byte {e.start} of the line)") from None
+                if state is None:
+                    if pending is not None:
+                        yield Skipped(f"{path}:{pending[0]}", f"text follows its {ARTICLE_END} (line {number}: not valid UTF-8), so the record was cut short")
+                        pending, junk = None, True
+                    elif not junk:
+                        yield Skipped(f"{path}:{number}", f"text outside a record: not valid UTF-8 ({e.reason})")
+                        junk = True
+                else:
+                    broken = broken or f"line {number}: not valid UTF-8 ({e.reason}, at byte {e.start} of the line)"
+                continue
             if line == ARTICLE_START:
+                if pending is not None:
+                    yield pending
+                    pending = None
                 if state is not None:
-                    raise ValueError(f"{path}:{number}: a new record starts before the one at line "
-                                     f"{start} ended (it has no {ARTICLE_END})")
-                state, start, head, summary, insights = "head", number, {}, [], []
+                    yield Skipped(f"{path}:{start}", broken or f"the record has no {ARTICLE_END} (a new record starts at line {number})")
+                state, start, head, summary, insights, broken, junk = "head", number, {}, [], [], "", False
             elif state is None:
                 if line.strip():
-                    raise ValueError(f"{path}:{number}: text outside a record: {line[:40]!r}")
+                    if pending is not None:
+                        yield Skipped(f"{path}:{pending[0]}", f"text follows its {ARTICLE_END} (line {number}: {line[:40]!r}), so the record was cut short")
+                        pending, junk = None, True
+                    elif not junk:
+                        yield Skipped(f"{path}:{number}", f"text outside a record: {line[:40]!r}")
+                        junk = True
             elif line == SUMMARY_START:
                 state = "summary"
             elif line == INSIGHTS_START:
                 state = "insights"
             elif line == ARTICLE_END:
-                yield start, head, "\n".join(summary).strip(), "\n".join(insights).strip()
-                state = None
+                if broken:
+                    yield Skipped(f"{path}:{start}", broken)
+                else:
+                    pending = (start, head, "\n".join(summary).strip(), "\n".join(insights).strip())
+                state, junk = None, False
             elif line.startswith("<<<"):
-                raise ValueError(f"{path}:{number}: unknown marker {line!r}")
+                broken = broken or f"line {number}: unknown marker {line!r}"
             elif state == "head":
                 name, colon, value = line.partition(":")  # split on the FIRST colon: headlines contain colons
                 if not colon:
-                    raise ValueError(f"{path}:{number}: header line without a colon: {line[:40]!r}")
-                head[name.strip()] = value.strip()
+                    broken = broken or f"line {number}: header line without a colon: {line[:40]!r}"
+                else:
+                    head[name.strip()] = value.strip()
             elif state == "summary":
                 summary.append(line)
             else:
                 insights.append(line)
+    if pending is not None:
+        yield pending
     if state is not None:
-        raise ValueError(f"{path}:{start}: the record has no {ARTICLE_END}")
+        yield Skipped(f"{path}:{start}", broken or f"the record has no {ARTICLE_END}")
 
 
 def _to_document(path: Path, start: int, head: dict[str, str], summary: str, insights: str) -> Document:
@@ -179,58 +229,118 @@ def _to_document(path: Path, start: int, head: dict[str, str], summary: str, ins
     )
 
 
-def load_press_releases(path: Path | str) -> list[Document]:
-    """Read one press release file (<SYMBOL>_PRs.txt). Returns one Document per release, in file order.
+def load_press_releases(path: Path | str, skipped: list | None = None) -> list[Document]:
+    """Read one press release file (<SYMBOL>_PRs.txt). Returns one Document per release, in file order. A release that fails is SKIPPED and ignored completely, as a news article is (see the module text; `skipped`
+    receives one `Skipped` for each).
 
     The Documents have the SAME metadata keys as the news Documents (article_id, headline, tickers, published_utc, published_ts, publisher, api, url),
-    so that chunking, storing, searching and citing treat them alike. The text is the headline, a blank line and the release's text, with HTML entities decoded.
-    Raises ValueError, naming the file and line, for anything the DataToolbox would not have written."""
+    so that chunking, storing, searching and citing treat them alike. The text is the headline, a blank line and the release's text, with HTML entities decoded."""
     path = Path(path)
-    return [_press_release_to_document(path, *record) for record in _press_release_records(path)]
+    docs = []
+    for record in _press_release_records(path):
+        if isinstance(record, Skipped):
+            if skipped is not None:
+                skipped.append(record)
+            continue
+        where = f"{path}:{record[0]}"
+        try:
+            docs.append(_press_release_to_document(path, *record))
+        except (ValueError, OverflowError) as e:
+            if skipped is not None:
+                skipped.append(Skipped(where, str(e).removeprefix(f"{where}: ")))
+    return docs
 
 
 def _press_release_records(path: Path):
     """Yield (first line number, header fields, text) for each press release: `_text_records` with the press release marker."""
-    yield from _text_records(path, PRESS_RELEASE_START)
+    yield from _text_records(path, PRESS_RELEASE_START, lenient=True)
 
 
-def _text_records(path: Path, start_marker: str):
+def _text_records(path: Path, start_marker: str, lenient: bool = False):
     """Yield (first line number, header fields, text) for each record of a file whose records are `start_marker`, "name: value" header lines, <<<TEXT>>>, the text,
     <<<END>>> (press releases and filings). Same rules as `_records`: a record that starts before the last one ended, text outside a record, an unknown marker, a
     header line without a colon, bad UTF-8 and a missing <<<END>>> are all errors that name the line. Each format calls this with its own start marker, so a record
-    of one format is an "unknown marker" in the other's file and one format cannot be read as the other."""
+    of one format is an "unknown marker" in the other's file and one format cannot be read as the other.
+
+    `lenient` False (filings): the first of those errors raises. `lenient` True (press releases, design choices entry 83): a broken record is read to its end (or to the next start marker), discarded and
+    yielded as a `Skipped`, and the next record is read as it should be; text between records is reported once per run of lines and ignored, and a record that ended and is followed by such text was cut short
+    and is discarded too (see `_records`)."""
     state = start = None  # state: None between records, else "head" or "text"
     head: dict[str, str] = {}
     text: list[str] = []
+    broken = ""           # lenient: why the record in progress failed; "" while it is fine
+    junk = False          # lenient: a run of text between records was already reported
+    pending = None        # lenient: the record that just ended, given when the next thing is a record, a blank line or the end of the file
+
+    def fail(number: int, reason: str) -> None:
+        nonlocal broken
+        if not lenient:
+            raise ValueError(f"{path}:{number}: {reason}")
+        broken = broken or f"line {number}: {reason}"
+
     with open(path, "rb") as f:
         for number, raw in enumerate(f, 1):
             try:
                 line = raw.decode("utf-8-sig" if number == 1 else "utf-8").rstrip("\r\n")
             except UnicodeDecodeError as e:
-                raise ValueError(f"{path}:{number}: not valid UTF-8 ({e.reason}, at byte {e.start} of the line)") from None
+                reason = f"not valid UTF-8 ({e.reason}, at byte {e.start} of the line)"
+                if not lenient:
+                    raise ValueError(f"{path}:{number}: {reason}") from None
+                if state is None:
+                    if pending is not None:
+                        yield Skipped(f"{path}:{pending[0]}", f"text follows its {PRESS_RELEASE_END} (line {number}: {reason}), so the record was cut short")
+                        pending, junk = None, True
+                    elif not junk:
+                        yield Skipped(f"{path}:{number}", f"text outside a record: {reason}")
+                        junk = True
+                else:
+                    fail(number, reason)
+                continue
             if line == start_marker:
+                if pending is not None:
+                    yield pending
+                    pending = None
                 if state is not None:
-                    raise ValueError(f"{path}:{number}: a new record starts before the one at line {start} ended (it has no {PRESS_RELEASE_END})")
-                state, start, head, text = "head", number, {}, []
+                    if not lenient:
+                        raise ValueError(f"{path}:{number}: a new record starts before the one at line {start} ended (it has no {PRESS_RELEASE_END})")
+                    yield Skipped(f"{path}:{start}", broken or f"the record has no {PRESS_RELEASE_END} (a new record starts at line {number})")
+                state, start, head, text, broken, junk = "head", number, {}, [], "", False
             elif state is None:
                 if line.strip():
-                    raise ValueError(f"{path}:{number}: text outside a record: {line[:40]!r}")
+                    if not lenient:
+                        raise ValueError(f"{path}:{number}: text outside a record: {line[:40]!r}")
+                    if pending is not None:
+                        yield Skipped(f"{path}:{pending[0]}", f"text follows its {PRESS_RELEASE_END} (line {number}: {line[:40]!r}), so the record was cut short")
+                        pending, junk = None, True
+                    elif not junk:
+                        yield Skipped(f"{path}:{number}", f"text outside a record: {line[:40]!r}")
+                        junk = True
             elif line == PRESS_TEXT_START:
                 state = "text"
             elif line == PRESS_RELEASE_END:
-                yield start, head, "\n".join(text).strip()
-                state = None
+                if broken:
+                    yield Skipped(f"{path}:{start}", broken)
+                elif lenient:
+                    pending = (start, head, "\n".join(text).strip())
+                else:
+                    yield start, head, "\n".join(text).strip()
+                state, junk = None, False
             elif line.startswith("<<<"):
-                raise ValueError(f"{path}:{number}: unknown marker {line!r}")
+                fail(number, f"unknown marker {line!r}")
             elif state == "head":
                 name, colon, value = line.partition(":")  # the FIRST colon: headlines and urls contain colons
                 if not colon:
-                    raise ValueError(f"{path}:{number}: header line without a colon: {line[:40]!r}")
-                head[name.strip()] = value.strip()
+                    fail(number, f"header line without a colon: {line[:40]!r}")
+                else:
+                    head[name.strip()] = value.strip()
             else:
                 text.append(line)
+    if pending is not None:
+        yield pending
     if state is not None:
-        raise ValueError(f"{path}:{start}: the record has no {PRESS_RELEASE_END}")
+        if not lenient:
+            raise ValueError(f"{path}:{start}: the record has no {PRESS_RELEASE_END}")
+        yield Skipped(f"{path}:{start}", broken or f"the record has no {PRESS_RELEASE_END}")
 
 
 def _press_release_to_document(path: Path, start: int, head: dict[str, str], text: str) -> Document:
@@ -432,21 +542,26 @@ def main(argv: list[str] | None = None) -> int:
     which.add_argument("--press-releases", action="store_true", help="read <SYMBOL>_PRs.txt (press releases) instead of the news file")
     which.add_argument("--filings", action="store_true", help="read <SYMBOL>.txt in the filings folder (SEC filings) instead of the news file")
     args = parser.parse_args(argv)
+    skipped: list[Skipped] = []
     try:
         is_path = "/" in args.target or args.target.endswith(".txt")
         if args.press_releases:
             path = Path(args.target) if is_path else press_release_file(args.target)
-            docs = load_press_releases(path)
+            docs = load_press_releases(path, skipped)
         elif args.filings:
             path = Path(args.target) if is_path else filing_file(args.target)
             docs = load_filings(path)
         else:
             path = Path(args.target) if is_path else news_file(args.target)
-            docs = load_news(path)
+            docs = load_news(path, skipped)
     except (ValueError, FileNotFoundError) as e:
         print(f"ERROR: {e}", file=sys.stderr)
         return 1
     print(path)
+    if skipped:
+        print(f"{len(skipped)} record{'s' if len(skipped) != 1 else ''} failed and {'were' if len(skipped) != 1 else 'was'} discarded (never loaded):")
+        for item in skipped[:10]:
+            print(f"  {item.where}: {item.reason}")
     kind = "press releases" if args.press_releases else "filing documents" if args.filings else "articles"
     if not docs:
         print("no press releases" if args.press_releases else "no filings" if args.filings else "no articles")

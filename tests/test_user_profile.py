@@ -56,19 +56,29 @@ def test_an_unknown_field_is_an_error_not_ignored():
         profile(risk_toleranse="high")
 
 
-def test_the_risk_view_has_exactly_the_limits_and_neither_the_name_nor_the_mode():
+def test_the_risk_view_has_what_a_company_is_judged_by_and_neither_the_name_nor_the_mode_nor_any_size_limit():
+    """Design choices entry 80: the Critic only deals with recommendations, so its view of the user holds no size limit (the user's money is the Account Manager's, `SizingLimits`)."""
     view = profile(age=65, investment_horizon_years=2.5, trade_mode="auto", auto_min_score=90, max_order_dollars=5000, excluded_symbols=["GM"], excluded_sectors=["XLE"]).risk_view()
     assert isinstance(view, RiskView)
-    assert set(RiskView.model_fields) == {"risk_tolerance", "age", "investment_horizon_years", "max_position_pct", "max_loss_per_trade_pct", "max_new_exposure_pct", "max_order_dollars",
-                                          "min_price", "excluded_symbols", "excluded_sectors"}
+    assert set(RiskView.model_fields) == {"risk_tolerance", "age", "investment_horizon_years", "min_price", "excluded_symbols", "excluded_sectors"}
     dumped = json.dumps(view.model_dump())
-    assert "trade_mode" not in dumped and "auto_min_score" not in dumped and '"user"' not in dumped
-    assert (view.age, view.investment_horizon_years, view.max_order_dollars, view.excluded_symbols, view.excluded_sectors) == (65, 2.5, 5000, ("GM",), ("XLE",))
+    assert "trade_mode" not in dumped and "auto_min_score" not in dumped and '"user"' not in dumped and "max_" not in dumped and "5000" not in dumped
+    assert (view.age, view.investment_horizon_years, view.excluded_symbols, view.excluded_sectors) == (65, 2.5, ("GM",), ("XLE",))
+
+
+def test_the_risk_view_cannot_hold_a_size_limit_so_the_critic_cannot_know_the_users_money():
+    """`extra="forbid"`: this is structural, not a convention. Each of the four limits the view used to carry is refused, and the profile still has them for the Account Manager's `sizing_limits()`."""
+    for name, value in (("max_position_pct", 0.1), ("max_loss_per_trade_pct", 0.01), ("max_new_exposure_pct", 0.3), ("max_order_dollars", 5000.0)):
+        with pytest.raises(ValidationError):
+            RiskView(risk_tolerance="moderate", min_price=5.0, **{name: value})
+        assert not hasattr(profile().risk_view(), name) and getattr(profile(), name, "missing") != "missing"
+    limits = profile(max_position_pct=0.2, max_order_dollars=5000).sizing_limits()
+    assert (limits.max_position_pct, limits.max_order_dollars) == (0.2, 5000)
 
 
 def test_the_risk_view_cannot_be_changed():
     with pytest.raises(ValidationError):
-        profile().risk_view().max_position_pct = 1.0
+        profile().risk_view().min_price = 1.0
 
 
 def test_a_bad_file_is_reported_with_its_name(tmp_path):

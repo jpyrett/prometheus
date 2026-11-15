@@ -19,14 +19,19 @@ WHAT IT DOES, in order (each step is one call the LangGraph will make later):
   6. CHECK RELEVANCE (phrase only): the best similarity between the phrase and each company's stored news and press releases (ChromaDB, the RAG index): is its text about the phrase? Shown, never
      used to rank: the ranking is about trades, the relevance is about the question.
   7. REVIEW (Critic v1, with a `critic`; `--no-critic` leaves it out): the Critic asks the Data Clerk again for the numbers, a quote and the sources, and approves or denies each recommendation against the
-     user's profile, the market's trading window and the price (`Critic.review_recommendations`); then the Account Manager decides what may trade (`decide_trades`: Ask or Auto, a denial is final).
-  8. REPORT (`report`): the companies found, the data refresh, the ranking best to worst with each company's reason, and for each recommendation its strategy, plan and thesis, then the CRITIC REVIEW.
+     user's risk profile, the market's trading window and the price (`Critic.review_recommendations`: it sees no portfolio and sizes nothing); then the Account Manager decides what may trade and HOW MUCH
+     (`decide_trades`: Ask or Auto, a denial is final; Auto spends the funds round-robin, a share of each approved stock in turn).
+  8. TRADE (Trader v1, with a `trader`; `--trade [paper|backtest]`, which needs the Critic): the Account Manager hands the decided order to the Trader (`AccountManager.perform_trades`), which executes the trades that were
+     permitted against a SIMULATED broker: on paper at the current quote (Finnhub), or as a backtest at the next session's open from the stored daily bars. Nothing is sent to a real broker. The fills are kept on the
+     work order only (`--save` writes it): this command holds no saved account, so nothing is booked, and `--no-ledger` also keeps the trades out of `data/ledger/trades.jsonl`. `--no-trader-model` leaves the model out
+     (the program places the default orders).
+  9. REPORT (`report`): the companies found, the data refresh, the ranking best to worst with each company's reason, and for each recommendation its strategy, plan and thesis, then the CRITIC REVIEW and the TRADER section.
 
 The case is `industry` for a phrase (leaders ranked best to worst: a large leader is not excluded) and `funds` for symbols and companies (the "here is money" case); `--case` overrides it. Without `--fetch` nothing
 is fetched: the stored data is used, and a company with no stored bars fails the Advisor's freshness and liquidity gates with that said.
 
 Every run appends its recommendations to the ledger (data/ledger/recommendations.jsonl), and the ledger's cooldown then hides the same strategy's recommendation for the same company on a later run.
-`--no-ledger` is for exploring: a throwaway ledger, so nothing is read from or written to the real one.
+`--no-ledger` is for exploring: a throwaway ledger, so nothing is read from or written to the real one (the Advisor's and the Critic's, and with `--trade paper` the Trader's trades ledger).
 """
 import argparse
 import json
@@ -34,15 +39,17 @@ import re
 import sys
 import time
 from dataclasses import dataclass, field
-from datetime import date, datetime, timezone
+from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from prometheus.agents.advisor.gates import WAIVED_NOTE
 from prometheus.agents.critic.report import review_section
+from prometheus.agents.trader.report import trade_section
 from prometheus.common import work_order as wo
 from prometheus.common.market_calendar import eastern_date
 from prometheus.common.portfolio import Portfolio, load_portfolio
+from prometheus.common.trading_clock import clock_note, trading_now
 from prometheus.rag.config import REPO_ROOT
 from prometheus.rag.loaders import check_symbol
 from prometheus.tools import symbols as symbol_tools
@@ -176,14 +183,48 @@ def _list_companies(request: Request, clerk, today: date, result: Result) -> lis
     return out
 
 
+MAX_SCORED = 15   # the Advisor's `max_candidates` and the Data Clerk's `MAX_REFRESH_SYMBOLS`: a theme that finds more listed companies than this scores the first ones found (a test pins the three numbers together)
+
+
+def scored_symbols(result: Result) -> list[str]:
+    """The listed companies the desk scores: the first `MAX_SCORED` found, in the order found. A broad theme finds more (an "oil" request found 18 listed companies in the first live session, and the paid refresh
+    accepts 15), so the rest are named in a note and left out: never a crash, and never silently."""
+    listed = [c["symbol"] for c in result.companies if c.get("symbol")]
+    if len(listed) > MAX_SCORED:
+        result.notes.append(f"{len(listed)} listed companies were found: the first {MAX_SCORED} are scored (the Advisor's limit); not scored: {', '.join(listed[MAX_SCORED:])}")
+    return listed[:MAX_SCORED]
+
+
+def find_companies_of(request: Request, clerk, today: date, find: int, result: Result) -> list[dict]:
+    """Step 2, shared by the runner and the LangGraph desk's Data Clerk node (`langgraph/desk.py`): the companies a request is about. A phrase goes to `DataClerk.find_companies` (its model proposes brands and
+    owners, code confirms each ticker in Finnhub); a list is looked up item by item (`_list_companies`); symbols and a company are themselves. `result` takes the sector ETF the Data Clerk suggests (unless one
+    was given) and the notes. Returns the companies as dicts ({brand, parent, symbol, company, public, how, note}); one with no `symbol` is not listed and is not scored."""
+    if request.kind == "phrase":
+        found = clerk.find_companies(request.phrase, count=max(10, find * 2), today=today)
+        result.sector = result.sector or found.get("sector_etf")
+        result.notes.extend(found["notes"])
+        return found["companies"]
+    if request.kind == "list":
+        return _list_companies(request, clerk, today, result)
+    return [{"brand": s, "parent": None, "symbol": s, "company": request.company if request.kind == "company" else None, "public": True,
+             "how": "company name" if request.kind == "company" else "symbol as typed", "note": None} for s in request.symbols]
+
+
 def run(request: Request, *, clerk, advisor, portfolio: Portfolio, today: date, find: int = 5, case: str | None = None, sector: str | None = None, fetch: bool = False,
-        news_days: int = 14, filings_days: int = 365, relevance_searches=None, log=None, critic=None, manager=None, now: datetime | None = None, approver=None, mode: str | None = None) -> Result:
-    """Steps 2 to 7 for one request. `clerk` is the Data Clerk and `advisor` the Advisor (fakes in tests). Nothing is raised for a failed step: it is in `result.notes`, and the run goes as far as it can.
+        news_days: int = 14, filings_days: int = 365, relevance_searches=None, log=None, critic=None, manager=None, now: datetime | None = None, approver=None, mode: str | None = None,
+        trader=None, funding: dict | None = None, book: bool = False, balance: str | None = None, budget: float | None = None) -> Result:
+    """Steps 2 to 8 for one request. `clerk` is the Data Clerk and `advisor` the Advisor (fakes in tests). Nothing is raised for a failed step: it is in `result.notes`, and the run goes as far as it can.
 
     `critic` (Critic v1): with one, the recommendations are reviewed and the Account Manager decides what may trade; without it the run is exactly what it was. `manager` is the Account Manager that holds
     the user's profile (`AccountManager(model=object())` over the sample profile when left out: its decisions need no model), `now` the aware moment the review is made at (the real clock by default),
     `approver` is asked about each approved recommendation that needs the user (Ask mode) and `mode` overrides the profile's. `today` is the date of the run: when it is not the Eastern date of `now`
-    every recommendation is expired (a replay, not a trade), and the run says so."""
+    every recommendation is expired (a replay, not a trade), and the run says so.
+
+    `trader` (Trader v1): with one, and with the Critic, the Account Manager hands the decided order to it (`manager.perform_trades`) when at least one decision says `yes_auto` or `yes_user`: the permitted trades are
+    executed against a simulated broker and the order carries `trades` and `trader_runs` (status `traded` when every permitted decision was filled or rejected). `funding` is a RaiseFunds answer for the Trader (None: this runner has no
+    funds node, so none is made), `approver` is also asked whether the funding sells may be made, and `book` asks for the fills to be saved in the account book (the runner holds no saved account, so it is a message
+    unless the `manager` is connected to one). Without a `trader` the run is exactly what it was. `balance` ("even" or "round_robin") and `budget` (dollars) are the user's words "split it evenly" and "spend this much":
+    the Account Manager's sizing applies them (`sizing.size_purchases`, entries 78 and 80)."""
     log = log or (lambda text: None)
     case = case or ("industry" if request.kind in ("phrase", "list") else "funds")
     result = Result(request, case, today, find, sector=sector)
@@ -198,16 +239,10 @@ def run(request: Request, *, clerk, advisor, portfolio: Portfolio, today: date, 
     # 2. the companies
     if request.kind == "phrase":
         log(f"Finding the companies of {request.phrase!r} (the Data Clerk's model proposes, Finnhub's directory confirms)...")
-        found = timed("find", lambda: clerk.find_companies(request.phrase, count=max(10, find * 2), today=today))
-        result.companies, result.sector = found["companies"], sector or found.get("sector_etf")
-        result.notes.extend(found["notes"])
     elif request.kind == "list":
         log(f"Looking up the {len(request.items)} items of the list (the Data Clerk finds the listed owner of a brand)...")
-        result.companies = timed("find", lambda: _list_companies(request, clerk, today, result))
-    else:
-        result.companies = [{"brand": s, "parent": None, "symbol": s, "company": request.company if request.kind == "company" else None, "public": True,
-                             "how": "company name" if request.kind == "company" else "symbol as typed", "note": None} for s in request.symbols]
-    symbols = [c["symbol"] for c in result.companies if c.get("symbol")]
+    result.companies = timed("find", lambda: find_companies_of(request, clerk, today, find, result))
+    symbols = scored_symbols(result)
     if not symbols:
         result.notes.append("no listed company was found to score")
         return result
@@ -232,15 +267,21 @@ def run(request: Request, *, clerk, advisor, portfolio: Portfolio, today: date, 
     # 5b. the Critic and the Account Manager's decisions
     if critic is not None and order.status == "recommended" and order.recommendations:
         from prometheus.agents.account_manager.account_manager import AccountManager
-        manager = manager or AccountManager(model=object())
-        result.now = now or datetime.now(timezone.utc)
+        manager = manager or AccountManager(model=object(), clerk=clerk)     # the decisions need no model; the clerk is the one the Trader's quotes and bars come through
+        result.now = now or trading_now()   # the real clock, or the simulated one when USE_LIVE_TRADING=false (entry 76)
         if today != eastern_date(result.now):
             result.notes.append(f"the run date {today} is not the Eastern date of the review ({eastern_date(result.now)}): every recommendation is expired. This is a replay, not a trade")
         log(f"The Critic reviews {len(order.recommendations)} recommendation(s) (it asks the Data Clerk again for the numbers, a quote and the sources)...")
-        timed("critic", lambda: critic.review_recommendations(order, manager.risk_view(), portfolio, result.now))
+        timed("critic", lambda: critic.review_recommendations(order, manager.risk_view(), result.now))
         if order.status == "reviewed":
             log("The Account Manager decides what may trade...")
-            timed("decide", lambda: manager.decide_trades(order, portfolio, approver, result.now, mode))
+            timed("decide", lambda: manager.decide_trades(order, portfolio, approver, result.now, mode, balance, budget))
+        # 5c. the Trader: only for a decision that permits a trade (a decision still waiting for the user's answer is not one)
+        if trader is not None and order.status in ("decided", "reviewed") and any(d.get("will_trade") in wo.TRADING for d in order.trade_decisions):
+            log("The Trader executes the permitted trades (simulated: nothing is sent to a broker)...")
+            timed("trade", lambda: manager.perform_trades(order, portfolio, trader, result.now, funding=funding, approver=approver, book=book))
+    if trader is not None and not order.trader_runs:   # said, so that a run with --trade that traded nothing does not look as if the flag was ignored
+        result.notes.append("the Trader did not run: " + ("no decision of this order permits a trade (a trade needs a yes: Auto mode, or your answer in Ask mode)" if order.trade_decisions else "no recommendation was reviewed and decided on"))
     # 6. relevance
     if request.kind == "phrase":
         result.relevance = timed("relevance", lambda: phrase_relevance(request.phrase, symbols, relevance_searches))
@@ -376,7 +417,7 @@ def report(result: Result) -> str:
         ok = sum(r["outcome"] == "ok" for r in result.refresh)
         line()
         line(f"DATA REFRESH: {ok} of {len(result.refresh)} steps ok" + ("" if ok == len(result.refresh) else " -- failed: " + "; ".join(f"{r['step']} {r['symbol'] or ''}: {_cut(str(r['detail']), 70)}" for r in result.refresh if r["outcome"] != "ok")))
-    if order is None or order.status not in ("recommended", "reviewed", "decided"):
+    if order is None or order.status not in ("recommended", "reviewed", "decided", "traded"):
         line()
         line("NO RECOMMENDATIONS: " + ("; ".join(result.notes) or "the Advisor did not run") + (f" | order errors: {'; '.join(order.errors)}" if order and order.errors else ""))
         return "\n".join(out)
@@ -431,7 +472,6 @@ def report(result: Result) -> str:
         if t.get("entry_zone"):
             line(f"      plan    : entry {t['entry_zone'][0]:.2f} to {t['entry_zone'][1]:.2f} ({t['order_style']}" + (f" at {t['limit_price']:.2f}" if t.get("limit_price") else "") + f"), stop {_money(t['stop_price'])}, "
                  f"target {_money(t['target_price']) if t.get('target_price') else 'none (held for the payout)'}, time stop {t['time_stop_date']}")
-            line(f"      size    : {t['suggested_shares']} share(s) = {'n/a' if t['position_pct'] is None else format(t['position_pct'] * 100, '.1f') + '%'} of equity {_money(t['equity'])}" + (f" ({t['size_note']})" if t.get("oversized") else "") + f"; funds feasible: {t['funds_feasible']}")
         out.extend(blend_lines(r.get("blend")))
         for e in r["evidence"]["events"][:2]:
             line(f"      event   : {e['class']} ({e['direction']}, {e.get('age_bars')} bars ago): {_cut(e['quote'], 90)}")
@@ -456,6 +496,10 @@ def report(result: Result) -> str:
     if review:
         line()
         out.extend(review)
+    trades = trade_section(order)
+    if trades:
+        line()
+        out.extend(trades)
     held = [r for r in order.recommendations if r["action"]["action"] in ("reduce", "add")] + [c for c in order.candidates if c.get("held")]
     if held:
         line()
@@ -476,8 +520,10 @@ def report(result: Result) -> str:
         line("NOTES AND ERRORS:")
         for p in problems:
             line(f"  - {_cut(str(p), 150)}")
-    line("Nothing here is bought or sold. The numbers are calculated by code; the model only proposed the companies, found the quotes and wrote the thesis, and every quote, number and reference in it was checked."
-         + (" The Critic's verdict is arithmetic over what the Data Clerk returned again; its model only labelled quotes." if order.reviews else ""))
+    line(("The trades above are SIMULATED (paper or backtest): no order was sent to a broker and no money moved. " if order.trader_runs else "Nothing here is bought or sold. ")
+         + "The numbers are calculated by code; the model only proposed the companies, found the quotes and wrote the thesis, and every quote, number and reference in it was checked."
+         + (" The Critic's verdict is arithmetic over what the Data Clerk returned again; its model only labelled quotes." if order.reviews else "")
+         + (" The Trader can only place trades the Account Manager decided on, inside limits code computed; code checks every fill." if order.trader_runs else ""))
     return "\n".join(out)
 
 
@@ -513,12 +559,17 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--save", help="write the finished work order (JSON) to this file")
     critic_group = parser.add_argument_group("the Critic (Critic v1, entries 56 to 59): it reviews each recommendation, then the Account Manager decides what may trade. It costs Finnhub calls and the critic's model")
     critic_group.add_argument("--no-critic", action="store_true", help="leave the Critic out: the run ends at the Advisor's report, as before")
-    critic_group.add_argument("--profile", default=str(DEFAULT_PROFILE), help=f"the user's profile (risk tolerance, Ask or Auto, the size limits; default {DEFAULT_PROFILE})")
+    critic_group.add_argument("--profile", default=str(DEFAULT_PROFILE), help=f"the user's profile (risk tolerance, Ask or Auto, the size limits the Account Manager sizes by; default {DEFAULT_PROFILE})")
     critic_group.add_argument("--mode", choices=("ask", "auto"), help="override the profile's trade mode: ask (you approve each trade) or auto (what the Critic approves with a high score is decided 'trade' without asking)")
     critic_group.add_argument("--now", help='review as if it were this US Eastern moment, "YYYY-MM-DD HH:MM" (default: now). A recommendation is only valid in the trading window of the day it was made')
     critic_group.add_argument("--critic-model", help="the critic's OpenRouter model id (default: CRITIC_MODEL of .env, z-ai/glm-5.3)")
     critic_group.add_argument("--critic-effort", choices=("low", "high", "max"), help="the critic's reasoning effort (default: the model's own, max for GLM 5.3: do not lower it to save time)")
     critic_group.add_argument("--no-ask", action="store_true", help="never prompt: an Ask-mode decision stays 'pending' (the default when nobody is at the terminal)")
+    trader_group = parser.add_argument_group("the Trader (Trader v1, entries 73 to 75): after the decisions it executes what was permitted against a SIMULATED broker; there is no live trading. It needs the Critic")
+    trader_group.add_argument("--trade", nargs="?", const="paper", choices=("paper", "backtest"), metavar="{paper,backtest}",
+                              help="execute the permitted trades. paper (the default when only --trade is given): at the current quote, which COSTS (Finnhub); backtest: at the next session's open from the stored daily bars, then the "
+                              "trade is followed to its stop, target or time stop. The Trader's model (gpt-oss-120b, OpenRouter) is PAID. The fills are kept in the report and in --save: nothing is booked")
+    trader_group.add_argument("--no-trader-model", action="store_true", help="no model for the Trader: the program places the default orders (the free, repeatable way; a paper run still asks Finnhub for the quotes)")
     args = parser.parse_args(argv)
     given = [(k, v) for k, v in (("symbols", args.symbols), ("company", args.company), ("phrase", args.phrase), ("list", args.items)) if v]
     if len(given) > 1 or (given and args.what):
@@ -530,7 +581,7 @@ def main(argv: list[str] | None = None) -> int:
         parser.error("--from-days-ago must be from 1 to 90")
     try:
         request = classify(text, kind)
-        now = datetime.strptime(args.now, "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("America/New_York")) if args.now else datetime.now(timezone.utc)
+        now = datetime.strptime(args.now, "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("America/New_York")) if args.now else trading_now()   # --now wins; else the desk's clock: real, or the simulated previous business day's close (USE_LIVE_TRADING=false, entry 76)
         today = date.fromisoformat(args.today) if args.today else eastern_date(now)
         portfolio = Portfolio(user="cash", cash_avail=args.cash) if args.cash is not None else load_portfolio(REPO_ROOT / args.portfolio)
     except ValueError as error:
@@ -538,6 +589,10 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     if args.no_critic and (args.mode or args.now or args.critic_model or args.critic_effort or args.no_ask):
         parser.error("the Critic options (--mode, --now, --critic-model, --critic-effort, --no-ask) go with the Critic: drop --no-critic")
+    if args.trade and args.no_critic:
+        parser.error("--trade needs the Critic (the Trader executes what the Critic reviewed and the Account Manager decided on): drop --no-critic")
+    if args.no_trader_model and not args.trade:
+        parser.error("--no-trader-model goes with --trade")
     from prometheus.agents.advisor.advisor import Advisor
     from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
     try:
@@ -554,7 +609,7 @@ def main(argv: list[str] | None = None) -> int:
         from prometheus.agents.account_manager.decisions import terminal_approver
         from prometheus.agents.critic.critic import Critic
         try:
-            manager = AccountManager(model=object(), profile=args.profile)   # the profile and the decisions need no model
+            manager = AccountManager(model=object(), clerk=clerk, profile=args.profile)   # the profile and the decisions need no model; the clerk is the one the Trader's quotes and bars come through
             _ = manager.profile  # read now: a profile that is not valid stops the run before anything is paid for
             if args.cash is not None:   # "here is $1,000": the cash belongs to the profile's user, or the Account Manager would refuse to decide for a stranger's portfolio
                 portfolio = portfolio.model_copy(update={"user": manager.profile.user})
@@ -563,16 +618,22 @@ def main(argv: list[str] | None = None) -> int:
             print(f"ERROR: {error}", file=sys.stderr)
             return 2
         approver = terminal_approver(interactive=False if args.no_ask else None)
+    trader = None
+    if args.trade:
+        from prometheus.agents.trader.trader import NullLedger, Trader
+        trader = Trader(mode=args.trade, use_model=not args.no_trader_model, ledger=NullLedger() if args.no_ledger else None)   # it needs no key to be built: its model starts when first used, and a model that cannot start is a note on the run
+    if not args.now and clock_note():   # USE_LIVE_TRADING=false: say which moment the run works at (an explicit --now is a replay on purpose and needs no note)
+        print(clock_note(), flush=True)
     started = time.monotonic()
     result = run(request, clerk=clerk, advisor=advisor, portfolio=portfolio, today=today, find=args.find, case=args.case, sector=args.sector, fetch=args.fetch,
-                 news_days=args.from_days_ago, log=lambda text: print(f"  .. {text}", flush=True), critic=critic, manager=manager, now=now, approver=approver, mode=args.mode)
+                 news_days=args.from_days_ago, log=lambda text: print(f"  .. {text}", flush=True), critic=critic, manager=manager, now=now, approver=approver, mode=args.mode, trader=trader)
     print()
     print(report(result))
     if args.save and result.order is not None:
         Path(args.save).write_text(result.order.model_dump_json(indent=1), encoding="utf-8")
         print(f"(work order saved to {args.save})")
     print(f"\nfinished in {time.monotonic() - started:.0f} s")
-    ok = result.order is not None and result.order.status in ("recommended", "reviewed", "decided")
+    ok = result.order is not None and result.order.status in ("recommended", "reviewed", "decided", "traded")
     return 0 if ok else 1
 
 

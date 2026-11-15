@@ -6,6 +6,7 @@
 python-dotenv>=1.0
 httpx>=0.28
 pydantic>=2.0
+psycopg[binary]>=3.2,<4          # Account Manager account book: Postgres 18 in docker-compose.yml (design choices entry 72)
 PyYAML>=6.0
 rich>=13.0
 

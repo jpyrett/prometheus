@@ -414,3 +414,132 @@ def test_help_explains_the_filings_source_and_what_has_no_text():
 def test_the_other_flags_still_reach_the_desk_after_a_filings_request():
     cmd = command(run("", "--source", "filings", "--symbol", "AAPL", "--no-advisor", "--no-fetch", "--model", "x/y"))
     assert cmd[-4:] == ["--no-fetch", "--no-advisor", "--model", "x/y"] and "--company" not in cmd
+
+
+# ---------------------------------------------------------------- ./test_prometheus.sh --session: a user session, end to end (design choices entry 78)
+
+BOB = ["--name", "Bob Jones", "--age", "60", "--risk", "conservative", "--cash", "15000", "--mode", "auto"]
+OIL = "I want to buy oil stocks. Buy the most amount of oil stocks shares from the 3 most recommended companies. Balance the purchased stocks evenly among the 3 recommended companies."
+SESSION = ["python", "-m", "prometheus.application.session"]
+
+
+def test_a_session_with_every_answer_given_builds_the_command_for_the_python_session():
+    result = run("", "--session", *BOB, "--prompt", OIL, "--yes")
+    assert result.returncode == 0, result.stderr
+    assert command(result) == [*SESSION, "--prompt", OIL, "--name", "Bob Jones", "--age", "60", "--risk", "conservative", "--cash", "15000", "--mode", "auto", "--fetch", "--yes"]
+
+
+def test_a_session_asks_for_the_user_and_the_request_in_order_and_enter_takes_each_default():
+    result = run("\n\n\n\n\n\n\nn\n", "--session")                       # create a user? (Enter is yes), name, age, risk, money, mode, the request: Enter each; then no to the paid fetch
+    assert result.returncode == 0, result.stderr
+    prompts = result.stderr
+    order = [prompts.index(p) for p in ("Create a new user?", "Name", "Age", "Risk tolerance", "Money to add", "Trade mode", "Tell me what you want to do?:", "Refresh the data")]
+    assert order == sorted(order) and "-- the new user (an account is created in the Postgres account book, and the money is added to it) --" in result.stdout and "-- the request --" in result.stdout
+    cmd = command(result)
+    assert cmd[:3] == SESSION and cmd[cmd.index("--name") + 1] == "Bob Jones" and cmd[cmd.index("--age") + 1] == "60" and cmd[cmd.index("--risk") + 1] == "conservative"
+    assert cmd[cmd.index("--cash") + 1] == "15000" and cmd[cmd.index("--mode") + 1] == "ask" and "I want to buy oil stocks." in cmd[cmd.index("--prompt") + 1]      # Ask is the default: a person approves each trade
+    assert "--fetch" not in cmd and "--yes" not in cmd                       # the answer to the fetch question was no
+
+
+def test_a_person_can_type_any_user_and_any_request_the_script_knows_no_company_or_sector():
+    result = run("y\nAda Lovelace\n41\naggressive\n2500.50\nask\nShow me the best semiconductor companies, I might buy 2 of them.\ny\n", "--session")
+    assert result.returncode == 0, result.stderr
+    cmd = command(result)
+    assert cmd[cmd.index("--name") + 1] == "Ada Lovelace" and cmd[cmd.index("--risk") + 1] == "aggressive" and cmd[cmd.index("--cash") + 1] == "2500.50" and cmd[cmd.index("--mode") + 1] == "ask"
+    assert cmd[cmd.index("--prompt") + 1] == "Show me the best semiconductor companies, I might buy 2 of them." and "--fetch" in cmd
+    source = SCRIPT.read_text(encoding="utf-8")
+    session_block = source[source.index("if [[ $SESSION -eq 1 ]]; then"):source.index("if [[ $SKIP_INSPECT -eq 0")]
+    for word in ("XOM", "CVX", "Chevron", "Exxon", "AAPL", "MSFT"):
+        assert word not in session_block, word
+
+
+@pytest.mark.parametrize("answers, message", [
+    ("maybe\n", "Answer Y or N."), ("y\n1bad\n", "A name is letters"), ("y\nBob\n17\n", "Age is a whole number from 18 to 120"), ("y\nBob\n60\nlow\n", "Risk tolerance is conservative, moderate or aggressive"),
+    ("y\nBob\n60\nmoderate\n$5,000\n", "Money is a number of dollars above zero"), ("y\nBob\n60\nmoderate\n0\n", "Money is a number of dollars above zero"),
+    ("y\nBob\n60\nmoderate\n100\nmanual\n", "Trade mode is ask or auto"), ("n\nBad Key!\n", "An account is a number, or a sample key"),
+])
+def test_an_answer_that_is_not_valid_is_asked_again_and_when_the_input_ends_the_session_stops(answers, message):
+    result = run(answers, "--session")
+    assert result.returncode == 2 and message in result.stderr and "DRY RUN" not in result.stdout
+
+
+@pytest.mark.parametrize("flags, message", [
+    (["--name", "1bad"], "A name is letters"), (["--age", "17"], "Age is a whole number from 18 to 120"), (["--age", "abc"], "Age is a whole number"), (["--risk", "low"], "Risk tolerance is conservative"),
+    (["--cash", "$5,000"], "Money is a number of dollars"), (["--cash", "-5"], "Money is a number of dollars"), (["--mode", "manual"], "Trade mode is ask or auto"), (["--prompt", " "], "Say what you want"),
+])
+def test_a_flag_that_is_not_valid_is_refused_once_and_never_asked_again(flags, message):
+    given = {"--name": "Bob Jones", "--age": "60", "--risk": "conservative", "--cash": "15000", "--mode": "auto", "--prompt": OIL}
+    for key, value in zip(flags[::2], flags[1::2]):
+        given[key] = value
+    result = run("", "--session", *[x for kv in given.items() for x in kv])
+    assert result.returncode == 2 and message in result.stderr and "DRY RUN" not in result.stdout
+
+
+def test_an_existing_account_takes_no_user_and_a_new_user_flag_with_it_is_a_mistake():
+    result = run("", "--session", "--account", "7", "--prompt", OIL, "--yes")
+    assert result.returncode == 0 and command(result) == [*SESSION, "--prompt", OIL, "--account", "7", "--fetch", "--yes"] and "-- an existing account (no user is created and no money is added) --" in result.stdout
+    assert "Create a new user?" not in result.stderr                         # the flag settled it
+    clash = run("", "--session", "--account", "7", "--name", "Bob Jones", "--prompt", OIL)
+    assert clash.returncode == 2 and "do not give --name, --age, --risk, --cash or --mode" in clash.stderr
+
+
+def test_the_paid_fetch_is_asked_about_and_nobody_answering_is_a_no():
+    asked = run("", "--session", *BOB, "--prompt", OIL)                       # nothing to read: the question gets no answer
+    assert asked.returncode == 0 and "no answer: not fetching" in asked.stderr and "--fetch" not in command(asked)
+    assert "Refresh the data of the companies" in asked.stderr and "PAID APIs" in asked.stderr and "data/historical/ticker_bars_v1/" in asked.stderr
+    assert "--fetch" in command(run("y\n", "--session", *BOB, "--prompt", OIL)) and "--fetch" in command(run("\n", "--session", *BOB, "--prompt", OIL))   # Enter is yes
+    assert "--fetch" not in command(run("n\n", "--session", *BOB, "--prompt", OIL))
+    assert "--fetch" not in command(run("", "--session", *BOB, "--prompt", OIL, "--no-fetch")) and "--fetch" in command(run("", "--session", *BOB, "--prompt", OIL, "--yes"))
+
+
+def test_the_other_session_flags_are_passed_on_exactly_as_given():
+    result = run("", "--session", *BOB, "--prompt", OIL, "--no-fetch", "--cleanup", "--allow-no-trade", "--no-trader-model", "--real-ledger", "--auto-min-score", "70", "--max-position-pct", "0.2",
+                 "--max-exposure-pct", "0.6", "--default-count", "4", "--model", "openai/gpt-oss-120b")
+    cmd = command(result)
+    assert result.returncode == 0 and "--cleanup" in cmd and "--allow-no-trade" in cmd and "--no-trader-model" in cmd and "--real-ledger" in cmd
+    assert cmd[cmd.index("--auto-min-score") + 1] == "70" and cmd[cmd.index("--max-position-pct") + 1] == "0.2" and cmd[cmd.index("--max-exposure-pct") + 1] == "0.6"
+    assert cmd[cmd.index("--default-count") + 1] == "4" and cmd[cmd.index("--model") + 1] == "openai/gpt-oss-120b" and "--fetch" not in cmd and "--yes" not in cmd
+
+
+def test_the_session_flags_without_session_are_refused_not_ignored():
+    for flags in (["--name", "Bob"], ["--prompt", "x"], ["--cleanup"], ["--account", "5"], ["--allow-no-trade"]):
+        result = run("", "--symbol", "MSFT", "--no-fetch", *flags)
+        assert result.returncode == 2 and "go with --session" in result.stderr, flags
+
+
+def test_the_old_modes_are_exactly_what_they_were():
+    result = run("\nflying car\n\n\n")
+    assert result.returncode == 0 and command(result)[:3] == ["python", "-m", "prometheus.langgraph.desk"] and "Symbol" in result.stderr
+
+
+def test_the_first_question_is_whether_to_create_a_user_and_no_asks_for_an_existing_account_instead():
+    result = run("n\njacob_sample\n\nn\n", "--session")                      # no, the account, the request (Enter: the sample), no to the paid fetch
+    assert result.returncode == 0, result.stderr
+    prompts = result.stderr
+    order = [prompts.index(p) for p in ("Create a new user?", "Account number, or a sample key", "Tell me what you want to do?:", "Refresh the data")]
+    assert order == sorted(order) and "Name" not in prompts and "Money to add" not in prompts                        # no user fields were asked
+    cmd = command(result)
+    assert cmd[cmd.index("--account") + 1] == "jacob_sample" and "--name" not in cmd and "--cash" not in cmd and "--mode" not in cmd and "I want to buy oil stocks." in cmd[cmd.index("--prompt") + 1]
+
+
+@pytest.mark.parametrize("answer", ["", "y", "Y", "yes", "YES"])
+def test_enter_and_every_spelling_of_yes_create_a_user(answer):
+    result = run(f"{answer}\n" + "\n" * 6 + "n\n", "--session")
+    assert result.returncode == 0 and "Name  [Bob Jones]" in result.stderr and "--name" in command(result)
+
+
+@pytest.mark.parametrize("answer", ["n", "N", "no", "No"])
+def test_every_spelling_of_no_goes_to_the_existing_account(answer):
+    result = run(f"{answer}\n7\n\nn\n", "--session")
+    assert result.returncode == 0 and "Name  [Bob Jones]" not in result.stderr and command(result)[command(result).index("--account") + 1] == "7"
+
+
+def test_a_flag_for_any_field_of_the_user_means_a_new_user_without_asking_whether_to_create_one():
+    result = run("\n\n\n\n\n\nn\n", "--session", "--name", "Ada Lovelace")
+    assert result.returncode == 0 and "Create a new user?" not in result.stderr and "Name  [" not in result.stderr and "Age  [60]" in result.stderr
+    assert command(result)[command(result).index("--name") + 1] == "Ada Lovelace"
+
+
+def test_no_answer_at_all_to_the_first_question_starts_nothing_instead_of_creating_a_user_on_the_defaults():
+    result = run("", "--session")
+    assert result.returncode == 2 and "no answer: the input ended, so nothing was started" in result.stderr and "DRY RUN" not in result.stdout

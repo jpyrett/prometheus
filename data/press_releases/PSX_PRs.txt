@@ -1,0 +1,261 @@
+<<<PRESS_RELEASE>>>
+id: ee177242350fa552
+symbol: PSX
+published_utc: 2025-12-01T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-completes-sale-majority-interest-germany-and-austria-retail-marketing
+headline: Phillips 66 completes sale of majority interest in Germany and Austria retail marketing business
+<<<TEXT>>>
+Phillips 66 today announced it has closed the sale of a 65 percent interest in its Germany and Austria retail marketing business to a consortium owned by subsidiaries of Energy Equation Partners and Stonepeak. Phillips 66 will retain a 35 percent non-operated interest in the new joint venture company which will hold the retail marketing business.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2d67a9dcd3a2804c
+symbol: PSX
+published_utc: 2025-12-01T07:05:00Z
+url: https://www.nasdaq.com/press-release/stonepeak-and-energy-equation-partners-complete-acquisition-majority-interest-jet
+headline: Stonepeak and Energy Equation Partners Complete Acquisition of Majority Interest in JET
+<<<TEXT>>>
+LONDON& HOUSTON---- Stonepeak, a leading alternative investment firm specializing in infrastructure and real assets, and Energy Equation Partners, an investment firm with significant expertise in fuel retail, today announced the completion of their previously announced acquisition of a 65% interest in JET Tankstellen Deutschland GmbH, a leading fuel...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fc9bb27ba0c8c1f4
+symbol: PSX
+published_utc: 2025-12-05T18:02:00Z
+url: https://www.nasdaq.com/press-release/cyclum-nextgen-travel-centers-continues-phillips-66-historic-snowball-derby-2025-12
+headline: Cyclum NextGen Travel Centers Continues with Phillips 66 for Historic Snowball Derby
+<<<TEXT>>>
+Cyclum NextGen Travel Centers is proud to return to the historic Snowball Derby at Five Flags Speedway with its driver Kole Raz for the most iconic Super Late Model race in the country. Kole Raz practicing December 4, 2025 for the 2025 Snowball Derby at Five Flags Speedway in Pensacola, FL.. Driver Kole Raz will proudly represent both brands as he takes on one of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5d97c8d61078c147
+symbol: PSX
+published_utc: 2025-12-15T08:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announces-2026-capital-budget-2025-12-15
+headline: Phillips 66 announces 2026 capital budget
+<<<TEXT>>>
+Phillips 66 today announced its 2026 capital budget of $2.4 billion, including $1.1 billion for sustaining capital and $1.3 billion for growth capital. We are investing growth capital in our NGL value chain and high-return Refining projects, while also investing sustaining capital to support safe and reliable operations," said Mark Lashier, chairman and CEO...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 908fa05e9aa8fc45
+symbol: PSX
+published_utc: 2025-12-17T16:30:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announce-fourth-quarter-and-full-year-financial-results-2025-12-17
+headline: Phillips 66 to announce fourth-quarter and full-year financial results
+<<<TEXT>>>
+Phillips 66 executive management will host a webcast at noon ET on Wednesday, Feb. 4, 2026, to discuss the company’ s fourth-quarter and full-year 2025 financial results, which will be released earlier that day. Phillips 66 is a leading integrated downstream energy provider that manufactures, transports and markets products that drive the global economy.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3d5301e9b732b0cf
+symbol: PSX
+published_utc: 2025-12-18T16:30:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-speak-goldman-sachs-energy-cleantech-utilities-conference-2025-12-18
+headline: Phillips 66 to speak at Goldman Sachs Energy, CleanTech & Utilities Conference
+<<<TEXT>>>
+Mark Lashier, chairman and CEO of Phillips 66, will participate in a fireside chat at the Goldman Sachs Energy, CleanTech& Utilities Conference at 10:20 a.m. ET on Tuesday, Jan. 6, 2026. Phillips 66 is a leading integrated downstream energy provider that manufactures, transports and markets products that drive the global economy. Headquartered in Houston, TX,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 093bd89b8d459a10
+symbol: PSX
+published_utc: 2025-12-22T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-and-kinder-morgan-inc-announce-close-initial-open-season-and-launch
+headline: Phillips 66 and Kinder Morgan, Inc. Announce Close of Initial Open Season and Launch of Subsequent Open Season for Capacity to Los Angeles, California Markets
+<<<TEXT>>>
+Phillips 66 and Kinder Morgan, Inc. today announced that Western Gateway has received significant interest, including shipper commitments, and has closed the initial open season for transportation service on the Western Gateway Pipeline, a newly proposed refined products pipeline system. Based on shipper interest, Phillips 66 and Kinder Morgan will...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2d8d7ba34f87bbe9
+symbol: PSX
+published_utc: 2026-01-05T07:01:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-limited-agrees-acquire-lindsey-oil-refinery-assets-2026-01-05
+headline: Phillips 66 Limited agrees to acquire Lindsey Oil Refinery assets
+<<<TEXT>>>
+Phillips 66 Limited has agreed to acquire Lindsey Oil Refinery assets and associated infrastructure pending completion subject to satisfaction of closing conditions, including customary regulatory clearances. "Agreeing to acquire Lindsey Oil Refinery assets and associated infrastructure marks an important step for Phillips 66 Limited as we...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7717434e5bf3e38d
+symbol: PSX
+published_utc: 2026-01-16T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-and-kinder-morgan-inc-announce-launch-subsequent-open-season-remaining
+headline: Phillips 66 and Kinder Morgan, Inc. Announce Launch of Subsequent Open Season for Remaining Western Gateway Capacity and Expanded Origins and Destinations
+<<<TEXT>>>
+Phillips 66 and Kinder Morgan, Inc. today announced the launch of the second open season for the Western Gateway Pipeline, a newly proposed refined products pipeline system. The Western Gateway Pipeline will consist of a new-build pipeline from Borger, Texas to Phoenix, Arizona, combined with Kinder Morgan’ s existing SFPP, L.P. pipeline from Colton, California...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4d8057df593ef2d4
+symbol: PSX
+published_utc: 2026-02-04T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-delivers-strong-4q-operating-results-while-enhancing-portfolio-2026-02-04
+headline: Phillips 66 Delivers Strong 4Q Operating Results While Enhancing Portfolio
+<<<TEXT>>>
+Phillips 66 announced fourth-quarter earnings. "2025 was a transformative year for Phillips 66. We sold the majority of our European retail business, acquired the remaining 50% interest in WRB, and improved our Midstream competitive position with the acquisition of Coastal Bend and expansion of Dos Picos II," said Mark Lashier, chairman and CEO of Phillips 66.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5bbfedc168c88f85
+symbol: PSX
+published_utc: 2026-02-11T11:30:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announces-increase-quarterly-dividend-2026-02-11
+headline: Phillips 66 Announces Increase in Quarterly Dividend
+<<<TEXT>>>
+The board of directors of Phillips 66 has declared a quarterly dividend of $1.27 per share on Phillips 66 common stock, representing a $0.07 increase. "We are increasing the dividend this quarter, reflecting our confidence in our ability to generate through-cycle cash flows," said Mark Lashier, chairman and CEO of Phillips 66. Phillips 66 is a leading integrated...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b4da86e2bba78bcd
+symbol: PSX
+published_utc: 2026-03-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-speak-morgan-stanley-energy-power-conference-2026-03-02
+headline: Phillips 66 to speak at Morgan Stanley Energy & Power Conference
+<<<TEXT>>>
+Mark Lashier, chairman and CEO of Phillips 66, will participate in a fireside chat at the Morgan Stanley Energy& Power Conference at 11:45 a.m. ET on Wednesday, March 4, 2026. Phillips 66 is a leading integrated downstream energy provider that manufactures, transports and markets products that drive the global economy. Headquartered in Houston, Texas, Phillips...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cc26d90906f800f9
+symbol: PSX
+published_utc: 2026-03-08T13:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-appoints-howard-ungerleider-and-kevin-meyers-board-directors-2026-03-08
+headline: Phillips 66 Appoints Howard Ungerleider and Kevin Meyers to Board of Directors
+<<<TEXT>>>
+Phillips 66 today announced that it has appointed Howard Ungerleider and Kevin Meyers to serve on the Company’ s Board of Directors, effective immediately.  "Phillips 66 is pleased to welcome Howard and Kevin to our board," said Mark Lashier, Chairman and Chief Executive Officer of Phillips 66. "We are pleased with the additions of Howard and Kevin to the Phillips 66...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6630af97afe036f4
+symbol: PSX
+published_utc: 2026-03-12T16:30:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-speak-piper-sandler-26th-annual-energy-conference-2026-03-12
+headline: Phillips 66 to speak at Piper Sandler 26th Annual Energy Conference
+<<<TEXT>>>
+Phillips 66 executives will participate in a fireside chat at the Piper Sandler 26th Annual Energy Conference at 1:30 p.m. ET on Tuesday, March 17, 2026. Phillips 66 is a leading integrated downstream energy provider that manufactures, transports and markets products that drive the global economy. Headquartered in Houston, Texas, Phillips 66 has employees...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b14160794dac6fb0
+symbol: PSX
+published_utc: 2026-03-23T08:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announce-first-quarter-financial-results-2026-03-23
+headline: Phillips 66 to announce first-quarter financial results
+<<<TEXT>>>
+Phillips 66 executive management will host a webcast at noon ET on Wednesday, April 29, 2026, to discuss the company’ s first-quarter 2026 financial results, which will be released earlier that day. Phillips 66 is a leading integrated downstream energy provider that manufactures, transports and markets products that drive the global economy.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3c4ec447aa0abb76
+symbol: PSX
+published_utc: 2026-04-17T18:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announces-quarterly-dividend-2026-04-17
+headline: Phillips 66 Announces Quarterly Dividend
+<<<TEXT>>>
+The board of directors of Phillips 66 has declared a quarterly dividend of $1.27 per share on Phillips 66 common stock. Phillips 66 is a leading integrated downstream energy provider that manufactures, transports and markets products that drive the global economy. Headquartered in Houston, TX, Phillips 66 has employees around the globe who are committed to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 43011325d1280185
+symbol: PSX
+published_utc: 2026-04-20T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-and-kinder-morgan-advance-western-gateway-pipeline-project-following
+headline: Phillips 66 and Kinder Morgan Advance Western Gateway Pipeline Project Following Successful Open Season
+<<<TEXT>>>
+Phillips 66 and Kinder Morgan, Inc. today announced the advancement of the Western Gateway Pipeline, a proposed refined products pipeline system, following a successful second open season that secured long-term shipper commitments sufficient to move the project forward, subject to the execution of definitive transportation service agreements, joint...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 777b933037d9b740
+symbol: PSX
+published_utc: 2026-04-22T08:00:00Z
+url: https://www.nasdaq.com/press-release/points-light-celebrates-global-volunteer-month-and-launches-mobilizing-millions
+headline: Points of Light Celebrates Global Volunteer Month and Launches Mobilizing Millions Campaign, Empowering Volunteers to Drive a Nationwide Movement of Service
+<<<TEXT>>>
+The nonprofit also announced a new campaign, Mobilizing Millions, in partnership with national energy leader Phillips 66 to expand volunteer engagement and strengthen nonprofit capacity nationwide. Phillips 66 will serve as a key partner in Points of Light's Mobilizing Millions campaign, a nationwide effort designed to inspire and connect millions of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e325bf7b59cd11ce
+symbol: PSX
+published_utc: 2026-04-28T03:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-limited-completes-acquisition-lindsey-oil-refinery-assets-2026-04-28
+headline: Phillips 66 Limited completes acquisition of Lindsey Oil Refinery assets
+<<<TEXT>>>
+"Completing this transaction allows Phillips 66 to play an even stronger role in supporting the UK’ s fuel supply and the resilience of this critical energy infrastructure," said Paul Fursey, Phillips 66 Limited UK lead executive." This strategic move will unlock new growth opportunities for traditional and renewable fuels and help protect UK energy security...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 99213a1087b70510
+symbol: PSX
+published_utc: 2026-04-29T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-reports-first-quarter-results-expanded-capacity-and-continued-strong
+headline: Phillips 66 Reports First-Quarter Results: Expanded Capacity and Continued Strong Operations
+<<<TEXT>>>
+Phillips 66 announced first-quarter earnings. Backed by disciplined execution and strong operating performance, we remain well positioned to provide energy to the global market," said Mark Lashier, chairman and CEO of Phillips 66. Recently announced advancement of Western Gateway Pipeline following a successful second open season securing long-term...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7db9fe2a6a329b31
+symbol: PSX
+published_utc: 2026-05-04T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-host-annual-meeting-shareholders-2026-05-04
+headline: Phillips 66 to Host Annual Meeting of Shareholders
+<<<TEXT>>>
+Phillips 66 will host its 2026 Annual Meeting of Shareholders on Wednesday, May 13 at 8 a.m. CT in a virtual-only format via audio webcast. Phillips 66 is a leading integrated downstream energy provider that manufactures, transports and markets products that drive the global economy. Headquartered in Houston, TX, Phillips 66 has employees around the globe who...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 82a6c6e9ef0c2220
+symbol: PSX
+published_utc: 2026-05-13T13:11:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-appoints-greg-hayes-lead-independent-director-2026-05-13
+headline: Phillips 66 Appoints Greg Hayes as Lead Independent Director
+<<<TEXT>>>
+Phillips 66 today announced that the Board of Directors has appointed Greg Hayes to serve as lead independent director, effective immediately. "We are pleased to have Greg step into the role of Lead Independent Director, "said Mark Lashier, Chairman and Chief Executive Officer of Phillips 66." His distinguished leadership experience and deep knowledge of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7303aa79b6acfaa9
+symbol: PSX
+published_utc: 2026-05-18T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announces-zeus-gas-plant-and-third-coastal-bend-fractionator-advancing
+headline: Phillips 66 announces Zeus Gas Plant and a third Coastal Bend Fractionator, advancing integrated wellhead-to-market strategy in the Permian and on the Gulf Coast
+<<<TEXT>>>
+Phillips 66 today announced it is moving forward with the Zeus Gas Plant and a third Coastal Bend Fractionator, two projects that will advance its integrated wellhead-to-market strategy, thereby expanding gas processing capacity in the Permian and NGL fractionation capabilities on the Gulf Coast.  "Zeus Gas Plant and a third Coastal Bend Fractionator will...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 31cd941ef2176c62
+symbol: PSX
+published_utc: 2026-06-09T16:30:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-speak-jp-morgan-2026-energy-power-renewables-mining-conference-2026-06-09
+headline: Phillips 66 to Speak at J.P. Morgan 2026 Energy, Power, Renewables & Mining Conference
+<<<TEXT>>>
+Mark Lashier, chairman and CEO of Phillips 66, will participate in a fireside chat at the J.P. Morgan 2026 Energy, Power, Renewables& Mining Conference at 8:00 a.m. ET on Tuesday, June 23, 2026. Also in attendance will be Kevin Mitchell, executive vice president and CFO, and Sean Maher, vice president of Investor Relations and Chief Economist.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b0d0deb92a5688a2
+symbol: PSX
+published_utc: 2026-06-23T07:00:00Z
+url: https://www.nasdaq.com/press-release/kanin-energy-develops-7-mw-waste-heat-power-project-colorado-gas-plant-2026-06-23
+headline: Kanin Energy Develops 7 MW Waste Heat to Power Project at Colorado Gas Plant
+<<<TEXT>>>
+--Kanin Energy today announced plans to develop a 7- megawatt waste heat to power facility at the Phillips 66 Mewbourn natural gas processing complex in Platteville, Colorado. Under the project structure, Kanin Energy will develop, own, and operate the WHP facility, delivering a turnkey solution that enables Phillips 66 to unlock the value of its waste heat...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: de0182c28d9bf352
+symbol: PSX
+published_utc: 2026-06-24T16:30:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announce-second-quarter-financial-results-2026-06-24
+headline: Phillips 66 to announce second-quarter financial results
+<<<TEXT>>>
+Phillips 66 executive management will host a webcast at noon ET on Wednesday, Aug. 5, 2026, to discuss the company’ s second-quarter 2026 financial results, which will be released earlier that day. To access the webcast, go to the Events and Presentations section of the Phillips 66 Investors site, phillips66.com/investors. A replay of the webcast and a transcript...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7c0504ec3af038e9
+symbol: PSX
+published_utc: 2026-07-09T12:30:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announces-quarterly-dividend-2026-07-09
+headline: Phillips 66 Announces Quarterly Dividend
+<<<TEXT>>>
+The board of directors of Phillips 66 has declared a quarterly dividend of $1.27 per share on Phillips 66 common stock. The dividend is payable on Sept. 1, 2026, to shareholders of record as of the close of business on Aug. 18, 2026. Phillips 66 is a leading integrated downstream energy provider that manufactures, transports and markets products that drive the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4bbd7f1f7dc26537
+symbol: PSX
+published_utc: 2026-07-31T07:15:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-announces-additional-share-repurchase-authorization-2026-07-31
+headline: Phillips 66 announces additional share repurchase authorization
+<<<TEXT>>>
+Phillips 66 announced that the board of directors has approved a $10 billion increase to the share repurchase authorization. The remaining authorization under the current program was approaching its limit. "Our capital allocation approach remains the same," said Mark Lashier, Phillips 66 chairman and CEO." The increased share repurchase authorization...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d7817b81f28acee1
+symbol: PSX
+published_utc: 2026-08-05T07:00:00Z
+url: https://www.nasdaq.com/press-release/phillips-66-delivers-strong-second-quarter-results-and-operating-performance-2026-08
+headline: Phillips 66 Delivers Strong Second-Quarter Results and Operating Performance
+<<<TEXT>>>
+Phillips 66 announced second-quarter earnings. "Second quarter results reflect the strength of our operations and value of our integrated portfolio," said Mark Lashier, chairman and CEO of Phillips 66." We remain committed to our strategic priorities and continuous improvement. Achieved full production at Dos Picos II, a 220 million cubic feet per day gas plant...
+<<<END>>>

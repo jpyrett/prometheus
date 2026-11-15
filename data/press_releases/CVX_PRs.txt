@@ -1,0 +1,270 @@
+<<<PRESS_RELEASE>>>
+id: b9d176602adb9504
+symbol: CVX
+published_utc: 2025-12-03T18:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-announces-2026-capex-budget-18-19-billion-2025-12-03
+headline: Chevron Announces 2026 Capex Budget of $18 to $19 Billion
+<<<TEXT>>>
+Chevron Corporation today announced an organic capital expenditure range of $18 to $19 billion for consolidated subsidiaries for 2026, at the low-end of the long-term guidance range of $18 to $21 billion. Nearly $6.0 billion is expected for U.S. shale& tight assets that include Permian, DJ and Bakken, underpinning anticipated U.S. production of more than two...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8d6b514ad7dda347
+symbol: CVX
+published_utc: 2026-01-05T08:00:00Z
+url: https://www.nasdaq.com/press-release/advisory-chevron-corporations-4q-2025-earnings-conference-call-and-webcast-2026-01-05
+headline: Advisory: Chevron Corporation’s 4Q 2025 Earnings Conference Call and Webcast
+<<<TEXT>>>
+Chevron Corporation, one of the world's leading energy companies, will hold its quarterly earnings conference call on Friday, January 30, 2026 at 11:00 a.m. ET. Conference Call Information: Date: Friday, January 30, 2026 Time: 11:00 a.m. ET/ 10:00 a.m. CT Dial-in#: 800-918-2066 Conference ID#: 1407833. Speakers: Mike Wirth– Chairman of the Board& Chief Executive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c573239e39ddbea0
+symbol: CVX
+published_utc: 2026-01-16T01:20:00Z
+url: https://www.nasdaq.com/press-release/chevron-takes-final-investment-decision-leviathan-gas-expansion-2026-01-16
+headline: Chevron Takes Final Investment Decision on Leviathan Gas Expansion
+<<<TEXT>>>
+Chevron Corporation by its subsidiary, Chevron Mediterranean Limited, and the working interest owners of the Leviathan natural gas reservoir have reached a Final Investment Decision to expand the production capacity of the strategic Leviathan production platform located offshore Israel. Pragmatic U.S. and regional energy policies are helping to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ba8a9fdb98b2ca0c
+symbol: CVX
+published_utc: 2026-01-27T16:15:00Z
+url: https://www.nasdaq.com/press-release/thomas-w-horton-joins-chevrons-board-directors-2026-01-27
+headline: Thomas W. Horton joins Chevron’s Board of Directors
+<<<TEXT>>>
+Chevron Corporation today announced Thomas W. Horton has joined the company’ s Board of Directors as an Independent Director and has been appointed to the Board Audit Committee. Horton, 64, is a partner at Global Infrastructure Partners, a global infrastructure-investment firm, and was a senior advisor at private-equity investor Warburg Pincus.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 508d9f2b6f09f9f8
+symbol: CVX
+published_utc: 2026-01-30T06:15:00Z
+url: https://www.nasdaq.com/press-release/chevron-reports-fourth-quarter-2025-results-2026-01-30
+headline: Chevron Reports Fourth Quarter 2025 Results
+<<<TEXT>>>
+Chevron Corporation reported earnings of $2.8 billion for fourth quarter 2025, compared with $3.2 billion in fourth quarter 2024. We successfully integrated Hess, started-up major projects, delivered record production and reorganized our business. In Kazakhstan, the company’ s 50 percent owned affiliate, Tengizchevroil, started up the Future Growth...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0aca466248031bb7
+symbol: CVX
+published_utc: 2026-02-05T08:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-announces-senior-leadership-changes-2026-02-05
+headline: Chevron Announces Senior Leadership Changes
+<<<TEXT>>>
+Chevron Corporation today announced several senior leadership changes. Frank Mount, President, Corporate Business Development, will retire from Chevron in November 2026 after 33 years of service. Jeanine Wai will become Director of Investor Relations, effective April 1, 2026.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4285e091785027f7
+symbol: CVX
+published_utc: 2026-02-11T09:15:00Z
+url: https://www.nasdaq.com/press-release/chevron-enters-libya-new-block-award-part-broader-exploration-growth-strategy-2026-02
+headline: Chevron Enters Libya With New Block Award as Part of Broader Exploration Growth Strategy
+<<<TEXT>>>
+Chevron Corporation by its subsidiary Chevron Business Development EMEA Ltd., has entered Libya after it was designated as a winning bidder in the 2025 Libyan Bid Round. On January 24, 2026 Chevron separately signed an MoU with NOC in Tripoli to evaluate the development and exploration potential onshore Libya. "Chevron is excited to enter Libya with the award...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4b9c629747290008
+symbol: CVX
+published_utc: 2026-02-16T07:05:00Z
+url: https://www.nasdaq.com/press-release/chevron-awarded-four-offshore-leases-greece-exploration-blocks-2026-02-16
+headline: Chevron Awarded Four Offshore Leases for Greece Exploration Blocks
+<<<TEXT>>>
+Chevron Corporation, via its four Dutch subsidiaries, together with HELLENiQ ENERGY has today signed Lease Agreements with the Hellenic Republic which will enable exploration of four blocks offshore Greece. "We look forward to working with our partners HELLENiQ ENERGY and the Hellenic Republic to evaluate the hydrocarbon potential of these frontier...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bde5d2ce1221a9fd
+symbol: CVX
+published_utc: 2026-03-31T09:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-announces-senior-leadership-changes-2026-03-31
+headline: Chevron Announces Senior Leadership Changes
+<<<TEXT>>>
+Chevron Corporation today announced leadership updates that reflect the company’ s continued focus on strong operational performance and safety. Chevron has appointed Daniel Woodall as Chief Health, Safety and Environment Officer, effective May 1, 2026. Additionally, Chevron announced that current Chief HSE Officer Marissa Badenhorst has been...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1c17c0f02211f895
+symbol: CVX
+published_utc: 2026-04-02T08:30:00Z
+url: https://www.nasdaq.com/press-release/advisory-chevron-corporations-1q-2026-earnings-conference-call-and-webcast-2026-04-02
+headline: Advisory: Chevron Corporation’s 1Q 2026 Earnings Conference Call and Webcast
+<<<TEXT>>>
+Chevron Corporation, one of the world's leading energy companies, will hold its quarterly earnings conference call on Friday, May 1, 2026 at 11:00 a.m. ET. Conference Call Information: Date: Friday, May 1, 2026 Time: 11:00 a.m. ET/ 10:00 a.m. CT Dial-in#: 800-918-2066 Conference ID#: 3173069. Speakers: Mike Wirth– Chairman of the Board& Chief Executive Officer Eimear...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9f9eaaf031b2292c
+symbol: CVX
+published_utc: 2026-04-09T07:30:00Z
+url: https://www.nasdaq.com/press-release/chevron-confirms-oil-discovery-bandit-prospect-gulf-america-2026-04-09
+headline: Chevron Confirms Oil Discovery at Bandit Prospect in Gulf of America
+<<<TEXT>>>
+Chevron Corporation today confirmed an oil discovery at the Bandit prospect in the Gulf of America, as announced by operator Occidental. The exploration well is located in Green Canyon Block 680, about 125 miles south of the Louisiana coast. Bandit is operated by Occidental, which holds a 45.375 percent working interest, and is co-owned by Chevron subsidiary...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a59ddcdbe46993a2
+symbol: CVX
+published_utc: 2026-04-13T16:57:00Z
+url: https://www.nasdaq.com/press-release/chevron-consolidates-venezuela-heavy-oil-position-asset-swap-2026-04-13
+headline: Chevron Consolidates Venezuela Heavy Oil Position in Asset Swap
+<<<TEXT>>>
+Chevron Corporation announced today it has, through its subsidiaries with interests in Venezuela, agreed to an asset swap with Petroleos de Venezuela, S. A. and subsidiaries of PDVSA in a mutually beneficial agreement which will consolidate all parties’ focus on strategic assets in the country. In addition, Petropiar, S.A. joint venture, in which Chevron’ s...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3c6a0ca4e0ed037f
+symbol: CVX
+published_utc: 2026-05-01T06:15:00Z
+url: https://www.nasdaq.com/press-release/chevron-reports-first-quarter-2026-results-2026-05-01
+headline: Chevron Reports First Quarter 2026 Results
+<<<TEXT>>>
+Chevron Corporation reported earnings of $2.2 billion for first quarter 2026, compared with $3.5 billion in first quarter 2025. "Despite heightened geopolitical volatility and related supply disruptions, Chevron delivered solid first quarter performance, underscoring the resilience of our portfolio and the value of disciplined execution," said Mike...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 774e5693020c43fc
+symbol: CVX
+published_utc: 2026-05-12T08:00:00Z
+url: https://www.nasdaq.com/press-release/adl-and-jlens-urge-chevron-shareholders-vote-against-proposal-6-annual-meeting
+headline: ADL and JLens Urge Chevron Shareholders to Vote AGAINST Proposal 6 at the Annual Meeting of Shareholders on May 27, 2026
+<<<TEXT>>>
+JLens, a Registered Investment Advisor that empowers investors to align their capital with Jewish values, along with ADL, are urging shareholders of Chevron Corporation to vote AGAINST a shareholder proposal that they say is aligned with a Boycott, Divestment, and Sanctions campaign targeting Chevron's Israel- related operations. These gas fields supply...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: eb4385c3f4059f9e
+symbol: CVX
+published_utc: 2026-05-21T08:30:00Z
+url: https://www.nasdaq.com/press-release/advisory-chevron-participate-fireside-qa-bernstein-42nd-annual-strategic-decisions
+headline: Advisory: Chevron to Participate in Fireside Q&A at Bernstein 42nd Annual Strategic Decisions Conference
+<<<TEXT>>>
+Mike Wirth, Chairman and CEO of Chevron Corporation, will participate in a fireside chat at the Bernstein 42 nd Annual Strategic Decisions Conference on Thursday, May 28, 2026, at 11:00 AM ET. Please visit www.chevron.com/investors to view a live webcast of the conversation and Q&A session. A replay will be available on the website after the event for those...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 13de8119405ab90d
+symbol: CVX
+published_utc: 2026-05-21T09:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-introduces-next-gen-techron-us-chevron-and-texaco-gasolines-2026-05-21
+headline: Chevron Introduces Next-gen Techron in U.S. Chevron and Texaco Gasolines
+<<<TEXT>>>
+Chevron U.S.A. Inc., a subsidiary of Chevron Corporation, today announced the introduction of next-generation Techron ®, a reformulated version of its proprietary gasoline additive designed to provide greater protection for engines from harmful deposits caused by lower quality fuels, supporting long-term engine performance. Techron has been trusted...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cd97a652289009a5
+symbol: CVX
+published_utc: 2026-05-27T10:50:00Z
+url: https://www.nasdaq.com/press-release/chevron-updates-stockholders-annual-meeting-2026-05-27
+headline: Chevron Updates Stockholders at Annual Meeting
+<<<TEXT>>>
+Chevron Corporation today provided an overview of the company’ s business performance and plans at its Annual Meeting of Stockholders. "Recent events remind us of the importance of energy," said Mike Wirth, Chevron’ s chairman and chief executive officer." Oil and natural gas remain vital to people, economies, and global energy security. Item 1: An average of 97% of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1f9604fdf8a9bd35
+symbol: CVX
+published_utc: 2026-05-29T09:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-names-new-general-counsel-2026-05-29
+headline: Chevron Names New General Counsel
+<<<TEXT>>>
+Chevron Corporation today announced the appointment of Scott A. Keller as general counsel. He is the only practicing lawyer to have argued more than ten cases at both the U.S. Supreme Court and the Texas Supreme Court. He holds a bachelor’ s degree from Purdue University and a juris doctor from the University of Texas School of Law.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 60417238dedda70c
+symbol: CVX
+published_utc: 2026-06-08T11:00:00Z
+url: https://www.nasdaq.com/press-release/engineered-mineral-hydrogen-emerges-next-major-energy-disruption-opportunity-amid
+headline: Engineered Mineral Hydrogen Emerges as Next Major Energy Disruption Opportunity Amid Explosive Global Demand
+<<<TEXT>>>
+Recent industry advancements, like new partnerships and trial projects in Newfoundland and North America, signify a shift from research to commercial deployment. Active Companies mentioned in the article includes: First Atlantic Nickel Corp., Total Energy Services Inc., Exxon Mobil Corporation, Chevron Corporation, Brookfield Renewable Partners L.P..
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 852003a90080ac7a
+symbol: CVX
+published_utc: 2026-06-19T08:30:00Z
+url: https://www.nasdaq.com/press-release/chevron-participate-fireside-chat-jpmorgan-natural-resources-conference-2026-06-19
+headline: Chevron to Participate in a Fireside Chat at the J.P.Morgan Natural Resources Conference
+<<<TEXT>>>
+Jeff Gustavson, President- New Energies of Chevron Corporation, will participate in a fireside chat at the J.P. Morgan Natural Resources Conference on Tuesday, June 23, 2026, at 10:20 AM ET. Please visit www.chevron.com/investors to view a live webcast of the conversation and Q&A session.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f52ed4ebae8b2e3b
+symbol: CVX
+published_utc: 2026-06-22T08:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-signs-20-year-power-agreement-microsoft-west-texas-data-center-2026-06-22
+headline: Chevron Signs 20-Year Power Agreement with Microsoft for West Texas Data Center
+<<<TEXT>>>
+Chevron Corporation today announced that Energy Forge One LLC, a wholly owned subsidiary, has signed an agreement with Microsoft Corp. to develop a co-located power facility in West Texas that will provide dedicated electricity to a Microsoft- operated data center under a 20- year power purchase agreement. Chevron and Engine No. 1 have been collaborating on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c22842d2a457ecdb
+symbol: CVX
+published_utc: 2026-06-23T09:33:00Z
+url: https://www.nasdaq.com/press-release/texas-pacific-land-corporation-announces-agreement-provide-land-and-water-solutions
+headline: Texas Pacific Land Corporation Announces Agreement to Provide Land and Water Solutions to Chevron for a Large-Scale Power Project
+<<<TEXT>>>
+Texas Pacific Land Corporation today announced an agreement with Chevron U.S.A. Inc., a subsidiary of Chevron Corporation to provide land and brackish water resources for Chevron’ s recently announced development known as Project Kilby, involving a large-scale power generation facility Chevron is developing to support a customer data center in Reeves...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 36507b2adbb6320d
+symbol: CVX
+published_utc: 2026-06-25T09:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-next-generation-techronr-fuels-americas-250th-summer-road-trips-2026-06-25-0
+headline: Chevron With Next-Generation Techron® Fuels America’s 250th Summer Road Trips
+<<<TEXT>>>
+Chevron U.S.A. Inc., a subsidiary of Chevron Corporation, calls on drivers to gear up for summer with newly reformulated Chevron with Techron, helping them fuel their road trips and protect engines for the long haul. With America’ s 250th anniversary and summer travel season on the horizon, there's never been a better time to explore iconic destinations, hidden...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 668f0089a3e2be8a
+symbol: CVX
+published_utc: 2026-06-25T09:00:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-chevron-2026-06-25
+headline: /C O R R E C T I O N -- Chevron/
+<<<TEXT>>>
+--Chevron U.S.A. Inc., a subsidiary of Chevron Corporation, calls on drivers to gear up for summer with newly reformulated Chevron with Techron, helping them fuel their road trips and protect engines for the long haul. Travel and lifestyle influencer Dean Bell is working with Chevron to share his road-trip journey on social channels and inspire others to get out...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 568290e61b0d69cb
+symbol: CVX
+published_utc: 2026-06-26T16:27:00Z
+url: https://www.nasdaq.com/press-release/chevron-commits-1-million-support-earthquake-relief-venezuela-2026-06-26
+headline: Chevron Commits $1 Million to Support Earthquake Relief in Venezuela
+<<<TEXT>>>
+Chevron Corporation today announced a commitment of $1 million to support immediate humanitarian relief efforts following the devastating earthquakes that struck Venezuela on June 24. "Families and communities across Venezuela are facing real loss right now. Our thoughts are with our employees, impacted communities, and the first responders working...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5effde5b9037cf76
+symbol: CVX
+published_utc: 2026-07-02T08:30:00Z
+url: https://www.nasdaq.com/press-release/advisory-chevron-corporations-2q-2026-earnings-conference-call-and-webcast-2026-07-02
+headline: Advisory: Chevron Corporation’s 2Q 2026 Earnings Conference Call and Webcast
+<<<TEXT>>>
+Chevron Corporation, one of the world's leading energy companies, will hold its quarterly earnings conference call on Friday, July 31, 2026 at 11:00 a.m. ET. Conference Call Information: Date: Friday, July 31, 2026 Time: 11:00 a.m. ET/ 10:00 a.m. CT Dial-in#: 800-918-2066 Conference ID#: 3870797. Speakers: Mike Wirth– Chairman of the Board& Chief Executive Officer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 33a070c28fcbb57c
+symbol: CVX
+published_utc: 2026-07-08T09:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-and-zl-chemicals-announce-technology-licensing-agreement-advanced-chemical
+headline: Chevron and ZL Chemicals Announce Technology Licensing Agreement for Advanced Chemical Surfactant Technology
+<<<TEXT>>>
+Chevron Technical Center, a division of Chevron U.S.A. Inc., a subsidiary of Chevron Corporation, and ZL Chemicals Ltd today announced a technology licensing agreement under which ZL may commercialize Chevron- developed chemical surfactant technology. "Technology creates more value when it can be applied broadly," said Ryder Booth, chief technology and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ed2a976efea0cf1b
+symbol: CVX
+published_utc: 2026-07-31T06:15:00Z
+url: https://www.nasdaq.com/press-release/chevron-reports-second-quarter-2026-results-2026-07-31
+headline: Chevron Reports Second Quarter 2026 Results
+<<<TEXT>>>
+Chevron Corporation reported earnings of $12.1 billion for second quarter 2026. Included in the quarter were an asset sale gain of $230 million and pension settlement costs of $86 million. "Faced with geopolitical uncertainty and market volatility, Chevron’ s people remain focused on safely delivering the reliable energy the world needs," said Mike Wirth,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e399067938c6fcf
+symbol: CVX
+published_utc: 2026-08-03T07:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-strengthens-north-american-base-oils-distribution-network-2026-08-03
+headline: Chevron Strengthens North American Base Oils Distribution Network
+<<<TEXT>>>
+Chevron Products Company, a division of Chevron U.S.A. Inc., will expand its North American base oils distribution network, strengthening customer access to premium base oils and process oils through complementary distribution agreements with HF Sinclair Lubricants& Specialties and Renkert Oil. Effective May 1, 2027, HF Sinclair Lubricants& Specialties...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 824e299fd527baec
+symbol: CVX
+published_utc: 2026-08-12T15:00:00Z
+url: https://www.nasdaq.com/press-release/chevron-announces-leadership-changes-2026-08-12
+headline: Chevron Announces Leadership Changes
+<<<TEXT>>>
+As Treasurer, Oseguera will lead Chevron's treasury organization, including capital markets, corporate finance, insurance, credit and risk management activities. Coupled with strong relationships across the enterprise and sound judgment, Ose is exceptionally well positioned to advance Chevron's strong financial position and long-term value.".
+<<<END>>>

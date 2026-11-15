@@ -176,13 +176,16 @@ def cooldown_of(s: Scored, family: str | None, records: list[dict], today_iso: s
 
 # ---------------------------------------------------------------- holdings
 
-def holding_action(s: Scored, records: list[dict], plan_oversized: bool, position_pct_after: float | None, add_floor: float | None, config: AdvisorConfig) -> tuple[str, str]:
+def holding_action(s: Scored, records: list[dict], add_floor: float | None) -> tuple[str, str]:
     """(action, reason) for a symbol the portfolio holds: the first rule that matches.
     reduce  a red_flag gate failed; or a bearish class event of the last 10 bars; or an earlier recommendation's invalidation rule fired; or the family that recommended it before
             no longer passes (None or bearish);
-    add     the stance is bullish, it is not oversized, its blend would have made this run's list (`add_floor`: the lowest blend among the new ideas picked; None when there are
-            none), and the position after adding stays within the limit;
-    hold    everything else."""
+    add     the stance is bullish and its blend would have made this run's list (`add_floor`: the lowest blend among the new ideas picked; None when there are none);
+    hold    everything else.
+    THE ADVISOR KNOWS NO POSITION SIZE (design choices entry 80). This rule used to ask also that one share was not too big for the account and that the position after adding stayed within 20% of the
+    user's total money: both needed a size and the user's money. They are gone. Whether the user's own limits leave room to add is the Account Manager's: `sizing.size_purchases` counts the shares already held
+    against the position limit, and an `add` that no limit leaves room for becomes `no_funds` with the reason, never a trade. A `reduce` carries no amount either: the Account Manager decides how
+    much to sell."""
     gate = next((g for g in s.gates.gates if g.gate == "red_flag" and not g.passed), None)
     if gate:
         return "reduce", f"red_flag gate failed: {gate.note}"
@@ -200,9 +203,9 @@ def holding_action(s: Scored, records: list[dict], plan_oversized: bool, positio
         if original is not None and original.computable and (not original.passed or original.direction == "bearish"):
             return "reduce", f"the family that recommended it ({original.family}) no longer passes"
         break
-    if s.stance == "bullish" and not plan_oversized and (add_floor is None or rank_value(s) >= add_floor) and position_pct_after is not None and position_pct_after <= config.ranking.add_max_position_pct:
-        return "add", f"bullish, blended score {s.score}, position after adding {position_pct_after:.0%}"
-    return "hold", "no reason to change the position" if s.stance != "bullish" else "bullish, but not enough to add (oversized, limit, or below this run's new ideas)"
+    if s.stance == "bullish" and (add_floor is None or rank_value(s) >= add_floor):
+        return "add", f"bullish, blended score {s.score}, as good as this run's new ideas"
+    return "hold", "no reason to change the position" if s.stance != "bullish" else "bullish, but below this run's new ideas"
 
 
 # ---------------------------------------------------------------- the sleeve

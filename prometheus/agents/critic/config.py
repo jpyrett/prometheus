@@ -80,7 +80,6 @@ class Accuracy(_Section):
     price_linked: list[str]
     cross_price_rel: float = Field(gt=0)
     cross_high_52w_rel: float = Field(gt=0)
-    equity_rel: float = Field(gt=0)
     max_feature_age_days: int = Field(ge=0)
 
     @model_validator(mode="after")

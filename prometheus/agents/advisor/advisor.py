@@ -291,7 +291,8 @@ class Advisor:
         the SAME order with `status == "recommended"`, `recommendations` (a reduction first, then additions, then new ideas by rank), `candidates` (what was looked at and not returned, with the
         reason) and `advisor_runs` (the plan call and the thesis call).
 
-        `portfolio` is the user's `Portfolio` (cash and holdings: the size of every position is worked from it). `case` is "funds" (symbols, here is money), "theme" (a term: companies
+        `portfolio` is the user's `Portfolio`, read ONLY for the symbols it holds, the shares and the cost basis of each (the holdings pass: a holding in the red, a bearish event, an `add`), never for its cash:
+        the Advisor recommends no amount and does not use the user's money (design choices entry 80). `case` is "funds" (symbols), "theme" (a term: companies
         exposed to it); left out, the order's own `case`, else inferred. `today` is the date everything is counted from. `only_subject=True` looks only at the order's own symbols (and the holdings): a comparison of named companies. `advise` (version 0) is untouched and still works on the same order."""
         from prometheus.agents.advisor.recommend import generate  # imported here: recommend.py imports this module
         return generate(self, order, portfolio, case, today, top_k, only_subject)

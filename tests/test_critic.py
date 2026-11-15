@@ -29,7 +29,7 @@ def test_the_order_comes_back_reviewed_with_one_review_per_recommendation_joined
     order = captured("PG_open")
     before = dump(order)
     ledger = MemoryLedger()
-    returned = make_critic(order, ledger=ledger).review_recommendations(order, view(), portfolio(), NOW)
+    returned = make_critic(order, ledger=ledger).review_recommendations(order, view(), NOW)
     assert returned is order and order.status == "reviewed" and order.schema_version == 3
     assert [r["record_id"] for r in order.reviews] == [r["identity"]["record_id"] for r in order.recommendations] and len(order.reviews) == 1
     assert dump(order) == before                                         # P5: the Advisor's own fields are never touched, byte for byte (the only addition is the `critic` block)
@@ -41,7 +41,7 @@ def test_the_order_comes_back_reviewed_with_one_review_per_recommendation_joined
 def test_the_run_is_recorded_on_the_order():
     order = captured("PG_open")
     model = ReviewerModel()
-    make_critic(order, model=model).review_recommendations(order, view(), portfolio(), NOW)
+    make_critic(order, model=model).review_recommendations(order, view(), NOW)
     [run] = order.critic_runs
     assert (run["stage"], run["model"], run["records"], run["calls"], run["records_called"], run["controls_failed"], run["error"]) == ("review", "z-ai/glm-5.3", 1, 1, 1, 0, None)
     assert run["tokens_in"] == 400 and run["tokens_out"] == 80 and run["independent_model"] is True and run["advisor_model"] and run["tolerance"] == "moderate"
@@ -49,16 +49,18 @@ def test_the_run_is_recorded_on_the_order():
     assert order.reviews[0]["audit"]["critic_model"] == "z-ai/glm-5.3" and order.reviews[0]["audit"]["config_version"] == CONFIG.config_version and order.reviews[0]["audit"]["verify_order"] == run["verify_order"]
 
 
-def test_a_healthy_recommendation_is_approved_for_an_hour_at_the_size_the_profile_allows():
+def test_a_healthy_recommendation_is_approved_for_an_hour_and_the_review_carries_no_size():
+    """Design choices entry 80: the Critic approves a recommendation, not a number of shares. The risk-fit points are 100 x (1 - 0.5 x 5.2 / 45) = 94.22 of 20 = 18.84 (PG's risk score is 5.2 by hand: tests/test_critic_risk.py)."""
     r = review(captured("PG_open"))["PG"]
-    assert r["approved"] and r["blockers"] == [] and r["approved_shares"] == 44 and r["suggested_shares"] == 75 and r["valid_until_utc"] == "2026-11-05T16:30:00Z"
-    assert (r["score"], r["grade"]) == (88, "B") and r["summary"].startswith("APPROVE 44 of 75 shares of PG: score 88 (B)")
-    assert {n: d["points"] for n, d in r["dimensions"].items()} == {"accuracy": 30.0, "evidence": 15.0, "risk_fit": 18.42, "timing": 10.0, "value": 6.58, "chart": 7.5}
+    assert r["approved"] and r["blockers"] == [] and r["valid_until_utc"] == "2026-11-05T16:30:00Z"
+    assert not {"approved_shares", "suggested_shares"} & set(r) and not {"equity", "equity_basis", "caps", "allowed_shares"} & set(r["risk"]) and "size_reduced" not in [w["code"] for w in r["warnings"]]
+    assert (r["score"], r["grade"]) == (88, "B") and r["summary"].startswith("APPROVE PG: score 88 (B)") and "share" not in r["summary"]
+    assert {n: d["points"] for n, d in r["dimensions"].items()} == {"accuracy": 30.0, "evidence": 15.0, "risk_fit": 18.84, "timing": 10.0, "value": 6.58, "chart": 7.5}
 
 
 def test_every_check_runs_for_every_record_even_when_the_first_blocker_is_found():
     r = review(captured("PG_open"), now=at("2026-11-07 12:00"))["PG"]                 # a Saturday
-    assert not r["approved"] and {"market_closed", "record_expired"} <= {b["code"] for b in r["blockers"]} and r["valid_until_utc"] is None and r["approved_shares"] == 0
+    assert not r["approved"] and {"market_closed", "record_expired"} <= {b["code"] for b in r["blockers"]} and r["valid_until_utc"] is None and "approved_shares" not in r
     assert set(r["dimensions"]) == {"accuracy", "evidence", "risk_fit", "timing", "value", "chart"} and r["dimensions"]["accuracy"]["score"] == 100 and r["dimensions"]["risk_fit"]["score"] > 0
     assert r["score"] == 49 and r["score_before_blockers"] > 49 and r["grade"] == "F" and r["timing"]["session"] == "closed"
     assert "market_closed" in r["denial_reasons"] and r["summary"].startswith("DENY PG: ")
@@ -67,7 +69,7 @@ def test_every_check_runs_for_every_record_even_when_the_first_blocker_is_found(
 def test_ignore_market_hours_drops_the_closed_market_blocker_from_the_review(monkeypatch):
     monkeypatch.setenv("IGNORE_MARKET_HOURS", "true")
     order = captured("PG_open")
-    make_critic(order).review_recommendations(order, view(), portfolio(), at("2026-11-07 12:00"))
+    make_critic(order).review_recommendations(order, view(), at("2026-11-07 12:00"))
     r = order.reviews[0]
     assert "market_closed" not in {b["code"] for b in r["blockers"]} and any(n["code"] == "market_hours_ignored" for n in r["notes"])
     assert "record_expired" in {b["code"] for b in r["blockers"]} and order.critic_runs[-1]["ignore_market_hours"] is True
@@ -79,19 +81,30 @@ def test_a_review_twice_is_the_same_review():
     order = captured("PG_open")
     ledger = MemoryLedger()
     critic = make_critic(order, ledger=ledger)
-    critic.review_recommendations(order, view(), portfolio(), NOW)
+    critic.review_recommendations(order, view(), NOW)
     first = copy.deepcopy(order.reviews)
-    critic.review_recommendations(order, view(), portfolio(), NOW)
+    critic.review_recommendations(order, view(), NOW)
     assert order.reviews == first and len(order.critic_runs) == 1 and len(ledger.records) == 1
     order.status = "decided"
-    assert critic.review_recommendations(order, view(), portfolio(), NOW).reviews == first
+    assert critic.review_recommendations(order, view(), NOW).reviews == first
+
+
+def test_a_traded_order_comes_back_from_the_critic_unchanged_and_without_a_message():
+    """Trader v1 spec section 11 (phase 3): `traded` follows `decided`; the Critic hands such an order back as it does a `reviewed` or a `decided` one, not with "needs an order with recommendations"."""
+    order = captured("PG_open")
+    critic = make_critic(order)
+    critic.review_recommendations(order, view(), NOW)
+    order.status = "traded"
+    before, errors, asked = copy.deepcopy(order.model_dump()), list(order.errors), list(critic.clerk.asked)
+    out = critic.review_recommendations(order, view(), NOW)
+    assert out is order and out.status == "traded" and out.errors == errors == [] and out.model_dump() == before and critic.clerk.asked == asked
 
 
 def test_an_order_that_is_not_recommended_is_refused_with_a_message_and_nothing_else_happens():
     order = captured("PG_open")
     order.status = "data_ready"
     clerk = FakeClerk(order)
-    Critic(model=ReviewerModel(), clerk=clerk, ledger=MemoryLedger()).review_recommendations(order, view(), portfolio(), NOW)
+    Critic(model=ReviewerModel(), clerk=clerk, ledger=MemoryLedger()).review_recommendations(order, view(), NOW)
     assert order.status == "data_ready" and order.reviews == [] and "the Critic needs an order with recommendations (status data_ready)" in order.errors and clerk.asked == []
 
 
@@ -99,14 +112,14 @@ def test_no_recommendations_is_a_result_not_a_failure():
     order = captured("PG_open")
     order.recommendations = []
     clerk = FakeClerk(order)
-    Critic(model=ReviewerModel(), clerk=clerk, ledger=MemoryLedger()).review_recommendations(order, view(), portfolio(), NOW)
+    Critic(model=ReviewerModel(), clerk=clerk, ledger=MemoryLedger()).review_recommendations(order, view(), NOW)
     assert order.status == "reviewed" and order.reviews == [] and clerk.asked == [] and order.errors == [] and order.critic_runs[0]["records"] == 0
 
 
 def test_a_clock_without_a_timezone_is_a_programming_mistake():
     order = captured("PG_open")
     with pytest.raises(ValueError, match="timezone"):
-        make_critic(order).review_recommendations(order, view(), portfolio(), datetime(2026, 11, 5, 10, 30))
+        make_critic(order).review_recommendations(order, view(), datetime(2026, 11, 5, 10, 30))
     assert order.status == "recommended"
 
 
@@ -116,7 +129,7 @@ def test_an_advisor_version_0_record_gets_one_blocker_and_no_other_check():
     order = captured("PG_open")
     order.recommendations = [{"symbol": "PG", "company": "Procter & Gamble", "stance": "bullish", "score": 67, "supported": True, "signals": []}]
     clerk = FakeClerk(order)
-    Critic(model=ReviewerModel(), clerk=clerk, ledger=MemoryLedger()).review_recommendations(order, view(), portfolio(), NOW)
+    Critic(model=ReviewerModel(), clerk=clerk, ledger=MemoryLedger()).review_recommendations(order, view(), NOW)
     [r] = order.reviews
     assert [b["code"] for b in r["blockers"]] == ["record_not_reviewable"] and "version 0" in r["blockers"][0]["message"] and not r["approved"] and clerk.asked == [] and r["score"] == 0
     Review.model_validate(r)
@@ -127,6 +140,14 @@ def test_a_record_that_does_not_match_the_schema_is_a_defect():
     order.recommendations[0]["surprise"] = "a field the Advisor never writes"
     r = review(order)["PG"]
     assert r["blockers"][0]["code"] == "record_defect" and "does not match the Advisor's schema 2" in r["blockers"][0]["message"] and not r["approved"]
+
+
+def test_an_old_record_that_still_carries_the_advisors_size_is_a_defect_because_the_record_has_no_size_now():
+    """Entry 80: the Advisor's record has no `suggested_shares` or `position_pct` any more (the schema version stays 2, as when Amendment 7 took a field out). A work order saved before that and reviewed again is
+    refused by the schema, and says which field: the models forbid unknown fields."""
+    order = tamper_order("PG_open", **{"trade.suggested_shares": 7, "trade.position_pct": 0.1})
+    r = review(order)["PG"]
+    assert r["blockers"][0]["code"] == "record_defect" and "does not match the Advisor's schema 2" in r["blockers"][0]["message"] and "suggested_shares" in r["blockers"][0]["message"] and not r["approved"]
 
 
 def test_a_record_that_fails_an_integrity_check_is_denied_with_the_check_named():
@@ -147,7 +168,7 @@ def test_records_beyond_the_limit_are_not_reviewed_and_say_so(tmp_path):
     order = captured("PG_open")
     second = tamper(order.recommendations[0], **{"identity.record_id": "second000001", "action.action": "add"})
     order.recommendations.append(second)
-    Critic(model=ReviewerModel(), clerk=FakeClerk(order), ledger=MemoryLedger(), config_path=path).review_recommendations(order, view(), portfolio(), NOW)
+    Critic(model=ReviewerModel(), clerk=FakeClerk(order), ledger=MemoryLedger(), config_path=path).review_recommendations(order, view(), NOW)
     assert [r["approved"] for r in order.reviews] == [True, False] and [b["code"] for b in order.reviews[1]["blockers"]] == ["record_not_reviewable"] and "first 1 recommendations" in order.reviews[1]["blockers"][0]["message"]
 
 
@@ -204,11 +225,18 @@ def test_a_symbol_the_directory_does_not_list_denies_it():
 # ---------------------------------------------------------------- the profile
 
 def test_the_same_recommendation_is_judged_by_the_users_profile():
-    assert review(captured("PG_open"), view_=view(max_position_pct=0.20))["PG"]["approved_shares"] == 75
     r = review(captured("PG_open"), view_=view(excluded_symbols=["PG"]))["PG"]
     assert "symbol_excluded" in [b["code"] for b in r["blockers"]] and not r["approved"]
-    r = review(captured("PG_open"), view_=view(max_loss_per_trade_pct=0.0001))["PG"]
-    assert "size_above_profile" in [b["code"] for b in r["blockers"]]
+    r = review(captured("PG_open"), view_=view(risk_tolerance="conservative", age=72))["PG"]
+    assert r["risk"]["tolerance_effective"] == "conservative" and r["risk"]["allowed_level"] == "low"
+
+
+def test_the_users_size_limits_are_not_the_critics_so_no_limit_can_change_a_review():
+    """The profile's four size limits (position, loss, new exposure, order dollars) are the Account Manager's: `risk_view()` leaves them out, so the strictest of profiles gives the same review as the default."""
+    strip = lambda r: {k: v for k, v in r.items() if k not in ("review_id", "audit")}
+    plain = review(captured("PG_open"))["PG"]
+    strict = review(captured("PG_open"), view_=view(max_position_pct=0.001, max_loss_per_trade_pct=0.0001, max_new_exposure_pct=0.001, max_order_dollars=1.0))["PG"]
+    assert strip(strict) == strip(plain) and strict["approved"]
 
 
 def test_the_critic_sees_the_limits_never_the_mode_so_the_verdict_cannot_depend_on_ask_or_auto():
@@ -225,27 +253,16 @@ def two_records():
     return order
 
 
-def test_the_exposure_limit_cuts_the_second_recommendation():
+def test_each_recommendation_is_reviewed_on_its_own_there_is_no_running_exposure_across_the_review():
+    """Design choices entry 80: the Critic's old step 9 (a running exposure across the review: `exposure_limit`, `size_reduced`) is gone with the size. Two records of one stock are two verdicts, each of its own merits."""
     order = two_records()
-    make_critic(order).review_recommendations(order, view(max_new_exposure_pct=0.15), portfolio(), NOW)
+    make_critic(order).review_recommendations(order, view(), NOW)
     first, second = order.reviews
-    assert first["approved_shares"] == 44 and second["approved_shares"] == 22 and second["approved"]                # 44 shares are 9.9% of equity; 15% leaves room for 22 more
-    cuts = [w["message"] for w in second["warnings"] if w["code"] == "size_reduced"]
-    assert len(cuts) == 2 and "position limit" in cuts[0] and "from 44 to 22 shares" in cuts[1] and "15%" in cuts[1] and second["risk"]["caps"]["exposure"] == 22
-
-
-def test_the_exposure_limit_denies_what_no_longer_fits_at_all():
-    order = two_records()
-    make_critic(order).review_recommendations(order, view(max_new_exposure_pct=0.10), portfolio(), NOW)
-    first, second = order.reviews
-    assert first["approved_shares"] == 44 and [b["code"] for b in second["blockers"]] == ["exposure_limit"] and not second["approved"] and second["risk"]["caps"]["exposure"] == 0
-
-
-def test_a_blocked_recommendation_adds_nothing_to_the_exposure():
-    order = two_records()
-    order.recommendations[0] = tamper(order.recommendations[0], **{"trade.suggested_shares": 75})
-    make_critic(order).review_recommendations(order, view(max_new_exposure_pct=0.10, excluded_symbols=["PG"]), portfolio(), NOW)
-    assert all("exposure_limit" not in [b["code"] for b in r["blockers"]] for r in order.reviews)
+    assert first["approved"] and second["approved"] and first["blockers"] == second["blockers"] == []
+    assert not any(w["code"] == "size_reduced" for r in order.reviews for w in r["warnings"]) and not any("exposure" in b["code"] for r in order.reviews for b in r["blockers"])
+    crowded = two_records()
+    make_critic(crowded).review_recommendations(crowded, view(max_new_exposure_pct=0.0001), NOW)
+    assert [r["approved"] for r in crowded.reviews] == [True, True] and [r["score"] for r in crowded.reviews] == [first["score"], second["score"]]
 
 
 # ---------------------------------------------------------------- value: the deal and the bonus
@@ -322,6 +339,34 @@ def test_p1_the_critic_imports_nothing_of_the_advisors_scoring_code():
                 assert set(names) <= ADVISOR_ALLOWED[leaf], (name, module, names)
 
 
+def test_the_critic_is_never_given_the_portfolio_or_the_users_money():
+    """Design choices entry 80: the Advisor and the Critic only deal with recommendations. `review_recommendations(order, risk, now)` has no portfolio argument (a fourth argument is a TypeError), `review_order` and the
+    Data Clerk requests of `recheck.gather` have none either, and nothing in the Critic's package imports the portfolio, the Account Manager or the account book."""
+    import inspect
+
+    from prometheus.agents.critic import recheck
+    from prometheus.agents.critic.review import review_order
+    assert list(inspect.signature(Critic.review_recommendations).parameters) == ["self", "order", "risk", "now"]
+    assert list(inspect.signature(review_order).parameters) == ["critic", "order", "view", "now"]
+    assert list(inspect.signature(recheck.gather).parameters) == ["clerk", "order", "items", "now", "config"]
+    order = captured("PG_open")
+    with pytest.raises(TypeError):
+        make_critic(order).review_recommendations(order, view(), portfolio(), NOW)
+    assert order.status == "recommended" and order.reviews == []                  # nothing was reviewed: the call was refused before it started
+    for path in sorted(CRITIC_DIR.glob("*.py")):
+        for node in ast.walk(ast.parse(path.read_text())):
+            names = [node.module or ""] + [f"{node.module}.{a.name}" for a in node.names] if isinstance(node, ast.ImportFrom) else [a.name for a in node.names] if isinstance(node, ast.Import) else []
+            assert not [n for n in names if n.startswith(("prometheus.common.portfolio", "prometheus.agents.account_manager", "prometheus.persistence"))], (path.name, names)
+
+
+def test_the_critics_requests_to_the_data_clerk_name_only_the_recommended_symbols():
+    """With no portfolio the Critic has no holdings to price: its quote order holds the recommended symbols and nothing else (the Account Manager asks for the holdings' prices itself)."""
+    order = captured("PG_open")
+    clerk = FakeClerk(order)
+    make_critic(order, clerk=clerk).review_recommendations(order, view(), NOW)
+    assert [a[1] for a in clerk.asked if a[0] == "quotes"] == [["PG"]] and all(a[1] == ["PG"] for a in clerk.asked if a[0] == "metrics")
+
+
 def test_p8_the_critic_never_allows_a_fetch_and_its_clerk_has_no_model_of_its_own_to_call():
     clerk = Critic().clerk
     assert clerk.allow_fetch is False
@@ -333,7 +378,7 @@ def test_a_critic_that_cannot_start_its_model_says_so_and_still_reviews_without_
     order = captured("PG_open")
     critic = Critic(clerk=FakeClerk(order), ledger=MemoryLedger())
     assert critic.model is None and critic.model_name is None and "OPENROUTER_API_KEY is not set" in critic.errors[0]
-    critic.review_recommendations(order, view(), portfolio(), NOW)
+    critic.review_recommendations(order, view(), NOW)
     r = order.reviews[0]
     assert "evidence_not_reviewed" in [w["code"] for w in r["warnings"]] and r["requires_human"] and "OPENROUTER_API_KEY is not set" in order.critic_runs[0]["errors"][0]
     assert "VALUE" not in json.dumps(order.critic_runs)
@@ -366,7 +411,7 @@ def test_every_review_is_appended_as_one_line_to_the_reviews_ledger_and_the_file
     ledger = Ledger(tmp_path / "ledger" / "reviews.jsonl")          # the folder does not exist yet: the first write creates it
     for _ in range(2):
         order = captured("PG_open")
-        make_critic(order, ledger=ledger).review_recommendations(order, view(), portfolio(), NOW)
+        make_critic(order, ledger=ledger).review_recommendations(order, view(), NOW)
     lines = [json.loads(line) for line in ledger.path.read_text(encoding="utf-8").splitlines()]
     assert len(lines) == 2 and lines[0]["symbol"] == "PG" and lines[0]["review_id"] != lines[1]["review_id"] and lines[1] == json.loads(json.dumps(order.reviews[0]))
     Review.model_validate(lines[0])

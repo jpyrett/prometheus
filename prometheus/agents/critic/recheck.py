@@ -3,14 +3,14 @@
 The Critic does not recalculate the Advisor's work. It asks the Data Clerk, directly, for the few numbers and sources the recommendation rests on, and checks that the old and the new values
 match. A Data Clerk or an Advisor that invented a number, a quote or a company cannot make a second, independent request agree with it.
 
-    gathered = gather(clerk, order, items, portfolio, now, config)            # THREE kinds of request to the Data Clerk, all code, no model
+    gathered = gather(clerk, order, items, now, config)                       # THREE kinds of request to the Data Clerk, all code, no model
     rechecks, findings = compare(rec, gathered.metrics_for(rec), names, decisive, config.accuracy)
     sources, findings = check_sources(rec, claims, order, gathered.verification, config.accuracy)
 
 The three requests (one of each for ALL the records of a review, as the Advisor asks once for all its candidates):
 
     calculate_financials   `DataClerk.request_metrics`      the key metrics, recomputed from the stored bars and the Finnhub payload of today
-    fetch_quote            `DataClerk.request_quotes`       the current price of every recommended and every held symbol
+    fetch_quote            `DataClerk.request_quotes`       the current price of every recommended symbol
     verify_data            `DataClerk.request_verification` the cited chunks and evidence items read again, the symbols looked up, the newest stored text
 
 A request that fails is a FINDING, not a crash and not a pass (spec P3, P7): its results are simply empty, and the checks that needed them say so.
@@ -28,7 +28,6 @@ from prometheus.agents.critic.config import Accuracy, CriticConfig
 from prometheus.agents.critic.record import CrossCheck, Finding, Identity, Measure, Recheck, SourceCheck
 from prometheus.agents.data_clerk.metrics_catalog import METRIC_NAMES
 from prometheus.common.market_calendar import eastern_date, is_trading_day, load_calendar, previous_trading_day
-from prometheus.common.portfolio import Portfolio
 from prometheus.common.work_order import MAX_QUOTE_SYMBOLS, MAX_VERIFY_CHUNKS, WorkOrder, new_work_order, parse_utc
 
 REQUESTER = "critic"
@@ -76,7 +75,7 @@ def _attempt(label: str, errors: list[str], call):
         return None
 
 
-def gather(clerk, order: WorkOrder, items: list[tuple[Recommendation, str, list[Claim]]], portfolio: Portfolio, now: datetime, config: CriticConfig) -> Gathered:
+def gather(clerk, order: WorkOrder, items: list[tuple[Recommendation, str, list[Claim]]], now: datetime, config: CriticConfig) -> Gathered:
     """The three requests. `items` is [(record, record date "YYYY-MM-DD", its claims)] for the records that are being reviewed."""
     got = Gathered()
     by_date: dict[str, list[tuple[Recommendation, list[str]]]] = {}
@@ -96,8 +95,7 @@ def gather(clerk, order: WorkOrder, items: list[tuple[Recommendation, str, list[
             got.metrics[(day, symbol)] = results
 
     recommended = list(dict.fromkeys(rec.symbol for rec, _, _ in items))
-    quote_symbols = list(dict.fromkeys([*recommended, *portfolio.symbols]))[:MAX_QUOTE_SYMBOLS]
-    quote_order = new_work_order("current prices to check the recommendations", requester=REQUESTER, action_type="fetch_quote", subject=quote_symbols, live=True)
+    quote_order = new_work_order("current prices to check the recommendations", requester=REQUESTER, action_type="fetch_quote", subject=recommended[:MAX_QUOTE_SYMBOLS], live=True)
     _attempt("quotes", got.errors, lambda: clerk.request_quotes(quote_order))
     got.quote_order = quote_order.request_id
     got.quotes = dict(quote_order.data.quotes) if quote_order.data else {}
@@ -246,7 +244,7 @@ def check_sources(rec: Recommendation, claims: list[Claim], order: WorkOrder, ve
     return checks, findings, rate
 
 
-# ---------------------------------------------------------------- cross-checks against a second provider, the directory and the portfolio
+# ---------------------------------------------------------------- cross-checks against a second provider and the directory
 
 def _regular_session_print(moment: datetime) -> bool:
     """True when `moment` is a trade in the regular session, including the closing print at the close itself. A pre-market or after-hours print is not the daily bar's close (the bar is the regular-session close)."""
@@ -280,7 +278,7 @@ def cross_checks(rec: Recommendation, fetched: dict | None, quote: dict | None, 
     findings: list[Finding] = []
     checks: list[CrossCheck] = []
     last, high = (fetched or {}).get("last_close") or {}, (fetched or {}).get("high_52w") or {}
-    if last.get("value") is not None and quote and quote.get("price"):
+    if last.get("value") is not None and quote and quote.get("price") and not quote.get("simulated"):   # a SIMULATED quote (USE_LIVE_TRADING=false, entry 76) is made from the stored bar: not a second provider
         bar_day = date.fromisoformat(last["as_of"]) if last.get("as_of") else None
         against = _close_from_quote(quote, bar_day) if bar_day is not None else None
         if against:
@@ -312,25 +310,6 @@ def cross_checks(rec: Recommendation, fetched: dict | None, quote: dict | None, 
             findings.append(warning("accuracy", "high_52w_differs", f"The 52-week high from the bars ({from_bars:.2f}) and Finnhub's ({high['value']:.2f}) differ by more than {config.cross_high_52w_rel:.0%} (a split?)."))
     rate = sum(c.passed for c in checks) / len(checks) if checks else 0.0
     return checks, findings, identity, rate
-
-
-def own_equity(portfolio: Portfolio, quotes: dict[str, dict]) -> tuple[float | None, str]:
-    """(the portfolio's value at the quotes just fetched, how it was worked out). None when a holding has no quote: the size of a position is never computed from a guess."""
-    missing = [p.symbol for p in portfolio.positions if not (quotes.get(p.symbol) or {}).get("price")]
-    if missing:
-        return None, f"no quote for {', '.join(missing)}"
-    return portfolio.cash_avail + sum(p.shares * quotes[p.symbol]["price"] for p in portfolio.positions), "cash and the holdings at the quotes of this review"
-
-
-def equity_check(rec: Recommendation, equity: float | None, basis: str, config: Accuracy) -> list[Finding]:
-    """Compare the Critic's own equity with the one the Advisor sized the position from."""
-    recorded = rec.trade.equity
-    if equity is None:
-        return [warning("accuracy", "equity_unverified", f"The equity could not be worked out again ({basis}): the Advisor's own figure is used.")]
-    if recorded and abs(equity - recorded) > config.equity_rel * max(equity, recorded):
-        return [warning("accuracy", "equity_differs", f"The equity is {equity:,.2f} at the quotes of this review and was {recorded:,.2f} when the position was sized (more than {config.equity_rel:.0%} apart).",
-                        value=[recorded, equity], threshold=config.equity_rel)]
-    return []
 
 
 def accuracy_score(match_rate: float | None, source_rate: float, cross_rate: float, config: Accuracy) -> tuple[float, list[Measure]]:

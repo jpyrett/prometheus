@@ -2,8 +2,9 @@
 
     theses = write_theses(model, records, run)         # {symbol: Thesis}: the model's three sentences and bullets, or None and the reason
 
-By the time the model is asked, the program has already decided everything: the action, the strategy, the expected return after cost, the stop, the size. The model's job is only to
-EXPLAIN that in words, so it is given the record as a fixed-wording digest (`digest`, a template filled from the record, like `filing_signals.digest`) and may use nothing else.
+By the time the model is asked, the program has already decided everything: the action, the strategy, the stop, the target, the time stop. It has decided no amount: how much to buy or sell is the
+Account Manager's (entry 80), so the record the model reads has no size and the numbers the check allows have none. The model's job is only to EXPLAIN that in words, so it is given the record as a
+fixed-wording digest (`digest`, a template filled from the record, like `filing_signals.digest`) and may use nothing else.
 `model_score` is not in the digest: the model does not see its own earlier number again.
 
 Code then checks the reply (`check`) and a thesis that fails is not shown:
@@ -27,7 +28,7 @@ from prometheus.agents.advisor.record import Thesis
 from prometheus.prompts.advisor_v1 import RETRY_PLAN, RETRY_THESIS, THESIS_SYSTEM, thesis_message
 
 MAX_SENTENCES = 3
-ALWAYS_ALLOWED = (20.0,)   # the 20-day window the expected return is quoted over
+ALWAYS_ALLOWED = (20.0,)   # the 20-day window of a strategy's edge
 NUMBER = re.compile(r"(?<![\w.])\$?(-?\d[\d,]*(?:\.\d+)?)\s?(%|trillion|billion|million)?", re.I)
 DATE = re.compile(r"\b\d{4}-\d{2}-\d{2}\b")
 REFERENCE = re.compile(r"\[\d+\]|\bE\d+\b")
@@ -75,8 +76,7 @@ def digest(record: dict) -> str:
     lines.append(f"Score: {record['score']} of 100 (the blend of news, performance, historical metrics and filings), stance {ranking['stance']}. No return is promised: the record has no expected return.")
     if trade.get("entry_zone"):
         lines.append(f"Trade: strategy {trade['family'] or 'none'}; entry zone {trade['entry_zone'][0]} to {trade['entry_zone'][1]} ({trade['entry_basis']}); stop {_num(trade['stop_price'])}; target {_num(trade['target_price'])}; "
-                     f"time stop {trade['time_stop_date'] or 'none'}; suggested shares {trade['suggested_shares']}" + (f" (oversized: {trade['size_note']})" if trade.get("oversized") else "")
-                     + (f"; position {trade['position_pct']:.1%} of equity" if trade.get("position_pct") is not None else "") + f"; order {trade['order_style'] or 'none'}.")
+                     f"time stop {trade['time_stop_date'] or 'none'}; order {trade['order_style'] or 'none'}.")
     for f in record["families"]:
         if f["passed"]:
             lines.append(f"Family {f['family']}: passed, {f['direction']}, score {_num(f['score'])}, expected 20-day edge {_pct(f['edge_20d'])}, horizon {f['horizon_bars']} bars; used " + ", ".join(f"{k}={_num(v)}" for k, v in f["features_used"].items() if isinstance(v, (int, float, bool))) + ".")

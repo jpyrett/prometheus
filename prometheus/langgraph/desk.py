@@ -17,6 +17,11 @@ The graph:
                                                   |
                                                   +-- no recommendations --> END
 
+    with_trader=True (Trader v1, entries 73 to 75; `--trade`; needs the Critic):
+    ... -> critic -> account_manager_decision -> trader -> END            (with_funds: ... -> account_manager_decision -> account_manager_funds -> trader -> END)
+                                  |                                       The trader node runs only when at least one decision says yes_auto or yes_user; otherwise the graph ends before it.
+                                  +-- nothing is permitted --> END
+
 Each node is one agent of the week 2 design, reduced to what exists today, and each one reads and updates the SAME work order, which is the
 state of the graph (the design: "the saved WORK_ORDER is the same object every agent reads"):
 
@@ -26,10 +31,15 @@ state of the graph (the design: "the saved WORK_ORDER is the same object every a
                    evidence, so the order carries all three; puts the data and the sources on the order.
   advisor          `Advisor.advise(order)`: reads the chunks, `data.results` and `data.filing_evidence` on the order and appends recommendations with a calculated score.
   critic           (only with `build_desk(with_critic=True)`, entries 56 to 59) the Advisor then runs `generate_recommendations` (the Critic reads schema 2 records) and the Critic approves or denies each one: it asks the
-                   Data Clerk for the numbers, a quote and the sources again, judges risk against the user's profile, timing and value, and puts a review beside each recommendation (`order.reviews`).
-  account_manager_decision  (only with the Critic) the Account Manager turns each verdict into a trade decision (`order.trade_decisions`): trade on its own (Auto), ask the user (Ask), or not at all.
+                   Data Clerk for the numbers, a quote and the sources again, judges the company's risk against the user's risk tolerance, timing and value, and puts a review beside each recommendation (`order.reviews`).
+                   It is given the profile's `RiskView` and no portfolio and no money: it sizes nothing (entry 80).
+  account_manager_decision  (only with the Critic) the Account Manager turns each verdict into a trade decision (`order.trade_decisions`): trade on its own (Auto), ask the user (Ask), or not at all, and decides HOW MUCH to
+                   buy or sell (`decisions.decide_trades`, `sizing.py`: from the user's money and limits; Auto spends the funds round-robin).
   account_manager_funds  (only with `build_desk(with_funds=True)`, entry 42) the Account Manager's RaiseFunds: it takes the best recommendation (or the stock the user named), asks the Data Clerk for the
                    current prices, and runs a Tree of Thought for what to sell from the user's portfolio to buy it. Its answer is `state["funds"]`; the work order is not changed.
+  trader           (only with `build_desk(with_trader=True)`, Trader v1, entries 73 to 75) the Account Manager hands the decided order to the Trader (`AccountManager.perform_trades`): it executes the permitted trades against a
+                   SIMULATED broker, on paper (the current quote) or as a backtest (the stored bars), and the Account Manager approves each trade against the funds it holds and records each fill as it happens, one trade at a time (entry 81: the Trader holds no cash). With the funds node the RaiseFunds plan arrives as the funding
+                   plan (its sells need the user's yes). It never raises, and it never edits the Advisor's records, the Critic's reviews or the decisions; it writes `order.trades` and `order.trader_runs` and sets `traded`.
 
 THE FOUR PARAMETERS (what the user types, and what each becomes):
 
@@ -63,7 +73,7 @@ import json
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from typing import Annotated, Callable, TypedDict
 
@@ -75,8 +85,12 @@ from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.critic.critic import Critic
 from prometheus.agents.critic.report import review_section
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
+from prometheus.agents.trader.report import trade_section
+from prometheus.agents.trader.trader import Trader
+from prometheus.application.recommendations import Request, Result, classify, find_companies_of, scored_symbols
 from prometheus.common.market_calendar import eastern_date
-from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, WIRED_SOURCES, WorkOrder, new_work_order, verify_request
+from prometheus.common.trading_clock import clock_note, trading_now
+from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, TRADING, WIRED_SOURCES, WorkOrder, new_work_order, verify_request
 from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.rag.loaders import check_symbol
 from prometheus.tools import symbols
@@ -85,6 +99,7 @@ DEFAULT_SOURCE = WIRED_SOURCES[0]
 DEFAULT_DAYS = 7
 DEFAULT_DAYS_BY_SOURCE = {"news": 7, "press_releases": 365, "filings": 365}  # a company issues a few press releases or filings a month: a week would usually find none (entries 34, 35)
 TOP_K = 10
+ASK_NEWS_DAYS = 14   # a request in the user's own words looks at two weeks of news unless it says otherwise (the runner's own default)
 MAX_TERM = 200
 REQUESTER = "desk"
 OUT_DIR = Path(__file__).resolve().parents[2] / "data" / "processed"  # where a finished order is saved (tests point it elsewhere)
@@ -98,6 +113,29 @@ class DeskState(TypedDict, total=False):
     funds: dict | None                                         # the Account Manager's RaiseFunds answer (only when the desk is built with funds, entry 42)
     path: Annotated[list[str], lambda old, new: old + new]     # the nodes that ran, in order
     seconds: Annotated[dict, lambda old, new: {**old, **new}]  # how long each node took
+    with_trader: bool                                          # the desk was built with the Trader: its path ends at the trader node, and not at the decision (`run_desk` sets it)
+    plan: dict | None                                          # a request in the user's own words (`request["ask"]`): what the Account Manager understood and the companies the Data Clerk found (entry 78)
+
+
+CRITIC_ENDS = ("reviewed", "decided")   # where a run with the Critic and without the Trader ends: `decided`, or `reviewed` while a decision waits for the user's answer
+
+
+def reached_its_end(state: DeskState) -> bool:
+    """Whether the run went as far as the desk it was built as goes: what the report calls a finished PATH and what the exit code of a run without `--trade` means (the exit code of a run with `--trade` is its own, in `main`).
+
+    Without the Critic the path ends at the Advisor, `recommended`. With the Critic and no Trader it ends at the Account Manager's decision: `decided`, or `reviewed` while a decision waits for the user (it is the Critic path's
+    normal end, not a stop). With the Trader it ends at the Trader (`traded`; a run of the Trader that left a trade resting or a decision pending also ran to its node); a decided order the Trader had nothing to do with did
+    not reach it. When the Advisor recommended nothing the Critic is never asked, the order stays `recommended` and the path is finished. An order that stays `recommended` AFTER the Critic ran (it could not start, say) is
+    not finished: the verdicts and the decisions are missing."""
+    order, path = state.get("order"), state.get("path", [])
+    if order is None:
+        return False
+    if order.status == "traded" or "trader" in path:
+        return True
+    trader_built = bool(state.get("with_trader")) or (state.get("request") or {}).get("trade") is not None   # `trade` is in the request when `--trade` was typed
+    if "critic" in path:
+        return not trader_built and order.status in CRITIC_ENDS
+    return order.status == "recommended"
 
 
 def order_from_request(request: dict) -> WorkOrder:
@@ -168,38 +206,114 @@ def _timed(name: str, step: Callable[[DeskState], dict]) -> Callable[[DeskState]
     return node
 
 
+def open_book():
+    """The Postgres account book of the local container (`secrets/postgres_local.txt`). Imported here and not at the top of the file, so that a desk that never uses a saved account never loads the Postgres driver."""
+    from prometheus.persistence.accounts import open_account_store
+    return open_account_store()
+
+
 def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, advisor_factory: Callable[[WorkOrder], Advisor] | None = None,
                with_advisor: bool = True, resolver: Callable[[str], symbols.Resolution] | None = None,
                with_funds: bool = False, funds_factory: Callable[[], AccountManager] | None = None,
                with_critic: bool = False, critic_factory: Callable[[WorkOrder], Critic] | None = None, approver: Callable[[dict], bool | None] | None = None,
-               clock: Callable[[], datetime] | None = None):
+               clock: Callable[[], datetime] | None = None,
+               with_trader: bool = False, trader_factory: Callable[[WorkOrder], Trader] | None = None, store_factory: Callable[[], object] | None = None,
+               confirm: Callable[[object], bool | None] | None = None, clarify: Callable[[dict], str | None] | None = None):
     """The compiled graph. The factories make the agents for an order (fakes in tests); by default the Data Clerk may fetch only if the order is
     live, and the Advisor uses the advisor role's model. `resolver` turns a company name into a ticker (a fake in tests; the Finnhub lookup of
     prometheus/tools/symbols.py by default, found when it is called). `with_funds` adds the `account_manager_funds` node after the Advisor (entry 42); `funds_factory` makes its
     AccountManager (a fake model in tests). The request then carries `funds`: {"portfolio": a file path or a Portfolio, "shares": how many to buy, "buy": the symbol, optional}.
 
+    `clarify` (design choices entry 85) is the channel to the user for the Account Manager's questions about how much to buy: a callable that takes a card (the question, which one it is, the facts for the first)
+    and returns what the user typed, or None. In Ask mode, when the request did not already say how much, the decision node asks (`AccountManager.decide_trades`) BEFORE it sizes; Auto mode never asks, and with no
+    `clarify` nothing is asked.
+
     `with_critic` (Critic v1, entries 56 to 59) puts two nodes after the Advisor, `critic` and `account_manager_decision`, and makes the Advisor run `generate_recommendations` instead of `advise` (the Critic
     reads schema 2 records). The request then carries `account`: {"portfolio": a path or a Portfolio, "profile": a path or a UserProfile, "mode": "ask" or "auto", all optional: the sample files and the
     profile's own mode}. `critic_factory` makes the Critic for an order (fakes in tests), `approver` is asked about each recommendation that needs the user (Ask mode; None: it stays pending), and `clock`
-    returns the aware moment everything is dated and judged at (a fake in tests; the real clock by default). The date a recommendation is made on is the US EASTERN date of that moment, never the UTC one."""
+    returns the aware moment everything is dated and judged at (a fake in tests; the real clock by default). The date a recommendation is made on is the US EASTERN date of that moment, never the UTC one.
+
+    `with_trader` (Trader v1, entries 73 to 75) adds the `trader` node after the decisions (after the funds node with `with_funds`): the Trader executes what is permitted against a simulated broker. It needs `with_critic`
+    (it trades what the Critic reviewed and the Account Manager decided on) and raises ValueError without it. The node runs only when at least one decision says `yes_auto` or `yes_user`. The request then carries
+    `trade`: {"mode": "paper" or "backtest", "book": True to save the fills in the account, "model": False for no model (the sweep places the default orders), all optional}. `trader_factory` makes the Trader for an
+    order (a fake or a Trader over a memory ledger in tests; used as it is); without one the node builds `Trader(mode=..., use_model=...)` from the request.
+
+    The request's `account` may also carry `account`: a sample key or an account number of the Postgres account book (`--account`). The profile, the portfolio and the booking then come from that account, not from the JSON
+    files: the manager is connected to it first (`AccountManager.connect`), a profile that was given is set after, and the portfolio is the saved one. `store_factory` makes the store (`open_book`, the local
+    container, by default; a fake in tests). A database problem is a RuntimeError that names the kind of failure and never a connection detail, so each node reports it as it reports a bad profile file.
+
+    A REQUEST IN THE USER'S OWN WORDS (design choices entry 78). `request["ask"]` = {"text": what the user typed, "default_count": how many companies when the text does not say, "fetch": refresh the data with the PAID
+    APIs, "news_days": 14} starts the SAME graph with the Account Manager reading the text: its model fills in a form (`AccountManager.understand_request`) that code checks against the words, `confirm` (a callable
+    given the form: True to go on, anything else stops the desk with no work done) shows it to the user, and the work order is made. The Data Clerk node then finds the companies of a theme, a list of names or tickers
+    (`recommendations.find_companies_of`, the runner's own step), refreshes their data when asked, and answers the work order; the Advisor node ranks them and keeps the top N (`generate_recommendations`, case industry
+    for a theme, funds for tickers); a request only to LOOK ends there; otherwise the Critic reviews each recommendation against the profile, the decision node applies the user's "split it evenly" and "spend this much"
+    (`decide_trades(balance, budget)`) and the Trader executes. `state["plan"]` carries the form, the companies and a `Result` (the runner's own record, so its reports read it). Nothing here names a sector or a company."""
+    if with_trader and not with_critic:
+        raise ValueError("with_trader needs with_critic: the Trader executes the trades the Critic reviewed and the Account Manager decided on")
     clerk_factory = clerk_factory or (lambda order: DataClerk(allow_fetch=order.live))
     advisor_factory = advisor_factory or (lambda order: Advisor())
     funds_factory = funds_factory or (lambda: AccountManager())
     critic_factory = critic_factory or (lambda order: Critic())
-    clock = clock or (lambda: datetime.now(timezone.utc))
+    clock = clock or trading_now   # the real clock, or the simulated one (the previous business day's close) when USE_LIVE_TRADING=false: entry 76
+
+    def saved_account(manager: AccountManager, who, profile) -> Portfolio:
+        """Connect `manager` to the saved account `who` (a sample key such as jacob_sample, or an account number), set the profile that was given (AFTER `connect`, which forgets a profile read from the default file), and
+        return the saved portfolio. A ValueError (no such account, a bad profile file) or RuntimeError keeps its message, which names the thing and never a value; any other failure (the database is down, the password
+        is refused) becomes a RuntimeError that names the KIND of failure only: a connection error can carry the host, the user and more."""
+        try:
+            store = (store_factory or open_book)()
+            who = str(who).strip()
+            manager.connect(store, int(who) if who.isdigit() else store.account_id_for_seed(who))
+            if profile:
+                manager.profile = profile
+            _ = manager.profile                # the account's own row when no profile was given: read now, so a failure is reported here
+            return manager.list_portfolio()
+        except (ValueError, RuntimeError):
+            raise
+        except FileNotFoundError:
+            raise RuntimeError("the account book is not set up: the file with its password is missing (run scripts/setup_postgres.sh)") from None
+        except Exception as error:
+            raise RuntimeError(f"the account book could not be read ({type(error).__name__})") from None
 
     def account(state: DeskState) -> tuple[AccountManager, Portfolio]:
-        """The Account Manager with the user's profile, and the user's portfolio, from `request["account"]` (the sample files when it says nothing). Raises ValueError or RuntimeError, with a message
-        that names the setting and never a value."""
+        """The Account Manager with the user's profile, and the user's portfolio, from `request["account"]` (the sample files when it says nothing; the saved account when it names one: `saved_account`).
+        Raises ValueError or RuntimeError, with a message that names the setting and never a value."""
         spec = state["request"].get("account") or {}
-        portfolio = spec.get("portfolio", DEFAULT_PORTFOLIO)
         manager = funds_factory()
+        if spec.get("account") is not None:
+            return manager, saved_account(manager, spec["account"], spec.get("profile"))
+        portfolio = spec.get("portfolio", DEFAULT_PORTFOLIO)
         manager.profile = spec.get("profile") or DEFAULT_PROFILE
         _ = manager.profile                    # read it now: a profile that is not valid is an error HERE, where a node can report it, and not later inside the Critic's call
         return manager, portfolio if isinstance(portfolio, Portfolio) else load_portfolio(portfolio)
 
+    def read_request(state: DeskState) -> dict:
+        """The Account Manager reads what the user typed (`request["ask"]`), shows it for a yes (`confirm`), and makes the work order. Never raises: a request it cannot read, a profile or account that cannot be opened,
+        or a user who says no is a message in `errors`, and the desk stops here."""
+        ask = state["request"]["ask"]
+        try:
+            manager, _ = account(state)
+            intent = manager.understand_request(ask.get("text"))
+            asked = classify(*intent.as_request())
+        except (ValueError, RuntimeError, OSError) as error:
+            return {"order": None, "errors": [str(error)], "plan": None}
+        if confirm is not None and confirm(intent) is not True:
+            return {"order": None, "errors": ["stopped: what was understood was not confirmed, so nothing was done"], "plan": None}
+        find, days, fetch = intent.count or ask.get("default_count", 3), ask.get("news_days", ASK_NEWS_DAYS), bool(ask.get("fetch"))
+        case = ask.get("case") or ("industry" if asked.kind in ("phrase", "list") else "funds")
+        order = new_work_order(f"What do the stored news, press releases and filings say about {intent.what()}?", requester=state["request"].get("requester", REQUESTER), subject=asked.symbols or asked.phrase or asked.text, source=DEFAULT_SOURCE,
+                               time_period=f"last {days} days", since_days=days, top_k=TOP_K, live=fetch, case=case, criteria={"sentiment": "bullish or bearish"})
+        reasons = verify_request(order)
+        order.errors = [*order.errors, *reasons]
+        plan = {"intent": intent, "request": asked, "find": find, "case": case, "action": intent.action, "balance": "even" if intent.allocation == "even" else None, "budget": intent.budget,
+                "said_how_much": intent.said_how_much(), "request_text": intent.request, "fetch": fetch,
+                "news_days": days, "result": Result(asked, case, eastern_date(clock()), find)}
+        return {"order": order, "errors": reasons, "plan": plan}
+
     def account_manager(state: DeskState) -> dict:
         request, resolution = state["request"], None
+        if request.get("ask") is not None:
+            return read_request(state)
         typed = request.get("symbol")
         if (request.get("source") not in LOOKUP_SOURCES and isinstance(typed, str) and typed.strip()
                 and not symbols.is_plain_ticker(typed)):  # a name, or a ticker in lower case: look it up, never guess. (Press releases and filings have their own exact lookup, in the Data Clerk)
@@ -224,46 +338,85 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         except (RuntimeError, ValueError) as error:  # for example a missing key: the message names the setting, never a value
             order.status, order.errors = "data_failed", [*order.errors, f"the Data Clerk could not start: {error}"]
             return {"order": order}
-        return {"order": clerk.request_data(order)}
+        plan = state.get("plan")
+        if plan is None:
+            return {"order": clerk.request_data(order)}
+        # a request in the user's own words: the companies first (a theme or a list of names is not a symbol yet), then their data, then the work order is answered
+        result, today = plan["result"], eastern_date(clock())
+        try:
+            result.companies = find_companies_of(plan["request"], clerk, today, plan["find"], result)
+            listed = scored_symbols(result)
+            if not listed:
+                result.notes.append("no listed company was found to score")
+                order.status, order.errors = "data_failed", [*order.errors, "no listed company was found to score"]
+                return {"order": order}
+            if plan["fetch"]:
+                held = [p.symbol for p in account(state)[1].positions]
+                result.refresh = clerk.refresh_data(listed, news_days=plan["news_days"], filings_days=365, bars_for=held)
+        except (RuntimeError, ValueError, OSError) as error:
+            order.status, order.errors = "data_failed", [*order.errors, f"the Data Clerk could not prepare the data: {error}"]
+            return {"order": order}
+        order.subject, order.sector = listed, result.sector
+        order.query = f"What do the stored news, press releases and filings say about {', '.join(listed)}?"
+        return {"order": clerk.request_data(order, today)}
 
     def advisor(state: DeskState) -> dict:
         order = state["order"]
         try:
             agent = advisor_factory(order)
-            portfolio = account(state)[1] if with_critic else None
+            portfolio = account(state)[1] if (with_critic or state.get("plan")) else None
         except (RuntimeError, ValueError, OSError) as error:
             order.errors = [*order.errors, f"the Advisor could not start: {error}"]
             return {"order": order}
+        if state.get("plan"):   # a request in the user's own words: the top N of the companies the Data Clerk found, the user's own holdings reviewed first
+            plan = state["plan"]
+            return {"order": agent.generate_recommendations(order, portfolio, plan["case"], eastern_date(clock()), top_k=plan["find"], only_subject=True)}
         if with_critic:   # version 1: the Critic reads schema 2 records. The case is the order's own, else inferred from its subject
             return {"order": agent.generate_recommendations(order, portfolio, today=eastern_date(clock()))}
         return {"order": agent.advise(order)}
 
     def critic(state: DeskState) -> dict:
-        """The Critic approves or denies each recommendation: never raises, and never changes a recommendation."""
+        """The Critic approves or denies each recommendation: never raises, and never changes a recommendation. It is given the profile's risk view and the clock: no portfolio, no money, no size."""
         order = state["order"]
         try:
-            manager, portfolio = account(state)
+            manager, _ = account(state)      # the Account Manager holds the profile; the portfolio is the Account Manager's business, not the Critic's
             agent = critic_factory(order)
         except (RuntimeError, ValueError, OSError) as error:
             order.errors = [*order.errors, f"the Critic could not start: {error}"]
             return {"order": order}
-        return {"order": agent.review_recommendations(order, manager.risk_view(), portfolio, clock())}
+        return {"order": agent.review_recommendations(order, manager.risk_view(), clock())}
 
     def account_manager_decision(state: DeskState) -> dict:
-        """The Account Manager turns each review into a trade decision: Auto trades, Ask asks the user, a denial is final."""
+        """The Account Manager turns each review into a trade decision and sizes it: Auto trades (round-robin, unless the user asked for another split), Ask asks the user, a denial is final. It asks the Data Clerk for the
+        holdings' current prices itself, when it needs them (`AccountManager.decide_trades`)."""
         order = state["order"]
         try:
             manager, portfolio = account(state)
         except (RuntimeError, ValueError, OSError) as error:
             order.errors = [*order.errors, f"the Account Manager could not decide: {error}"]
             return {"order": order}
-        return {"order": manager.decide_trades(order, portfolio, approver, clock(), (state["request"].get("account") or {}).get("mode"))}
+        plan = state.get("plan") or {}
+        return {"order": manager.decide_trades(order, portfolio, approver, clock(), (state["request"].get("account") or {}).get("mode"), plan.get("balance"), plan.get("budget"),
+                                               clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "")}
+
+    def trader(state: DeskState) -> dict:
+        """The Account Manager hands the decided order to the Trader, which executes what is permitted against the simulated broker (paper or backtest): never raises, and never edits what the other agents wrote. The
+        RaiseFunds answer of the funds node (`state["funds"]`) is the funding plan; `approver` is asked whether the funding sells may be made (a sale is never automatic)."""
+        order = state["order"]
+        spec = state["request"].get("trade") or {}
+        try:
+            manager, portfolio = account(state)
+            agent = trader_factory(order) if trader_factory else Trader(mode=spec.get("mode"), use_model=spec.get("model", True) is not False)
+        except (RuntimeError, ValueError, OSError) as error:
+            order.errors = [*order.errors, f"the Trader could not start: {error}"]
+            return {"order": order}
+        return {"order": manager.perform_trades(order, portfolio, agent, clock(), funding=state.get("funds"), approver=approver, book=bool(spec.get("book")))}
 
     def account_manager_funds(state: DeskState) -> dict:
         """RaiseFunds for the best recommendation: never raises, and never changes the work order."""
         spec = state["request"].get("funds") or {}
         order = state["order"]
-        trades = [d for d in order.trade_decisions if d["will_trade"] in ("yes_auto", "yes_user") and d["action"] != "reduce"]   # with the Critic: what it approved and the user or Auto allowed
+        trades = [d for d in order.trade_decisions if d["will_trade"] in ("yes_auto", "yes_user") and d["action"] != "reduce"]   # with the Critic: what it approved, the Account Manager sized (the shares it asks RaiseFunds for are the decision's) and the user or Auto allowed
         target = spec.get("buy") or (trades[0]["symbol"] if trades else None if with_critic else top_recommendation(order))
         if not spec.get("shares") and trades and trades[0]["symbol"] == target:
             spec = {**spec, "shares": trades[0]["shares"]}
@@ -271,20 +424,34 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             return {"funds": {"status": "refused", "errors": ["the Critic approved no purchase that was allowed to trade, and no symbol was given" if with_critic else
                                                               "the Advisor made no recommendation with a verified bullish score to buy, and no symbol was given"], "quotes": {}, "run": {}}}
         try:
-            chosen = spec["portfolio"] if "portfolio" in spec or not with_critic else (state["request"].get("account") or {}).get("portfolio", DEFAULT_PORTFOLIO)   # with the Critic: the user's own portfolio
-            portfolio = chosen if not isinstance(chosen, (str, Path)) else load_portfolio(chosen)
-            manager = funds_factory()
+            if with_critic and (state["request"].get("account") or {}).get("account") is not None:   # a saved account: the plan is made for ITS holdings, the ones the Trader will trade (the funds' own portfolio is not used)
+                manager, portfolio = account(state)
+            else:
+                chosen = spec["portfolio"] if "portfolio" in spec or not with_critic else (state["request"].get("account") or {}).get("portfolio", DEFAULT_PORTFOLIO)   # with the Critic: the user's own portfolio
+                portfolio = chosen if not isinstance(chosen, (str, Path)) else load_portfolio(chosen)
+                manager = funds_factory()
         except (KeyError, ValueError, OSError, RuntimeError) as error:  # no portfolio, a bad portfolio file, or a missing key: the message names the setting, never a value
             return {"funds": {"status": "refused", "errors": [f"the Account Manager could not start: {error}"], "quotes": {}, "run": {}}}
         return {"funds": manager.raise_funds(portfolio, target, spec.get("shares", 1))}
 
     def after_advisor(state: DeskState) -> str:
         if with_critic:
+            if (state.get("plan") or {}).get("action") == "research":   # the user asked only to look: nothing is reviewed, decided or traded
+                return END
             return "critic" if state["order"].status == "recommended" and state["order"].recommendations else END
         return "account_manager_funds" if with_funds and state["order"].status == "recommended" else END
 
+    def permitted(order: WorkOrder) -> bool:
+        """Whether the Trader has anything to do: the order is decided or waiting for a user's answer, and at least one decision says yes_auto or yes_user."""
+        return order.status in ("decided", "reviewed") and any(d.get("will_trade") in TRADING for d in order.trade_decisions)
+
     def after_decision(state: DeskState) -> str:
-        return "account_manager_funds" if with_funds and state["order"].status in ("decided", "reviewed") else END
+        if with_funds:
+            return "account_manager_funds" if state["order"].status in ("decided", "reviewed") else END
+        return "trader" if with_trader and permitted(state["order"]) else END
+
+    def after_funds(state: DeskState) -> str:
+        return "trader" if with_trader and permitted(state["order"]) else END
 
     def after_account_manager(state: DeskState) -> str:
         return "data_clerk" if state.get("order") is not None and not state.get("errors") else END
@@ -301,6 +468,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         graph.add_node("account_manager_decision", _timed("account_manager_decision", account_manager_decision))
     if with_funds:
         graph.add_node("account_manager_funds", _timed("account_manager_funds", account_manager_funds))
+    if with_trader:
+        graph.add_node("trader", _timed("trader", trader))
     graph.add_edge(START, "account_manager")
     graph.add_conditional_edges("account_manager", after_account_manager, {"data_clerk": "data_clerk", END: END})
     graph.add_conditional_edges("data_clerk", after_data_clerk, {"advisor": "advisor", END: END})
@@ -309,9 +478,16 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         graph.add_edge("critic", "account_manager_decision")
         if with_funds:
             graph.add_conditional_edges("account_manager_decision", after_decision, {"account_manager_funds": "account_manager_funds", END: END})
-            graph.add_edge("account_manager_funds", END)
+            if with_trader:   # the funds node runs first and its answer is the Trader's funding plan
+                graph.add_conditional_edges("account_manager_funds", after_funds, {"trader": "trader", END: END})
+            else:
+                graph.add_edge("account_manager_funds", END)
+        elif with_trader:
+            graph.add_conditional_edges("account_manager_decision", after_decision, {"trader": "trader", END: END})
         else:
             graph.add_edge("account_manager_decision", END)
+        if with_trader:
+            graph.add_edge("trader", END)
     elif with_funds:
         graph.add_conditional_edges("advisor", after_advisor, {"account_manager_funds": "account_manager_funds", END: END})
         graph.add_edge("account_manager_funds", END)
@@ -323,7 +499,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
 def run_desk(request: dict, **options) -> DeskState:
     """Run one request through the desk. `options` are those of `build_desk`. Returns the final state: the order, why a request was refused, the
     path through the graph and the seconds each node took."""
-    return build_desk(**options).invoke({"request": request, "order": None, "errors": [], "resolution": None, "funds": None, "path": [], "seconds": {}})
+    return build_desk(**options).invoke({"request": request, "order": None, "errors": [], "resolution": None, "funds": None, "path": [], "seconds": {}, "with_trader": bool(options.get("with_trader")), "plan": None})
 
 
 def report(state: DeskState, total_seconds: float | None = None) -> str:
@@ -334,10 +510,20 @@ def report(state: DeskState, total_seconds: float | None = None) -> str:
     lines.append(f"REQUEST  symbol {request.get('symbol') or '-'} | term {request.get('term') or '-'} | source {source} "
                  f"| from {request.get('from_days_ago') or DEFAULT_DAYS_BY_SOURCE.get(source, DEFAULT_DAYS)} days ago"
                  + (f" | company {request['company']}" if request.get("company") else ""))
+    if (request.get("ask") or {}).get("text"):   # a request in the user's own words: what the Account Manager understood of it
+        plan = state.get("plan")
+        lines.append("ASK      " + " ".join(str(request["ask"]["text"]).split())[:200] + (f"\nUNDERSTOOD  {plan['intent'].describe()}" if plan else ""))
+    if clock_note():   # USE_LIVE_TRADING=false: the desk works at a simulated moment, and the report says so
+        lines.append(clock_note())
     if state.get("resolution"):
         r = state["resolution"]
         lines.append(f"RESOLVED {r['typed']!r} -> {r['symbol']} ({r['company']}), looked up and matched as a {r['how']}")
-    lines.append("PATH     " + " -> ".join(state.get("path", [])) + ("" if order is not None and order.status == "recommended" else "  (stopped here)"))
+    saved = (request.get("account") or {}).get("account")
+    if saved is not None:   # a saved account WRITES: the decisions always (entry 72), the fills only with --book. Said in the report so that nobody is surprised
+        lines.append(f"ACCOUNT  saved account {str(saved)[:40]} (the Postgres account book): the Account Manager's decisions are saved in it; "
+                     + ("the Trader's fills are booked in it" if (request.get("trade") or {}).get("book") else "no fill is booked in it"))
+    path = state.get("path", [])
+    lines.append("PATH     " + " -> ".join(path) + ("" if reached_its_end(state) else "  (stopped here)"))   # see `reached_its_end`: a Critic run ends at the decision, a Trader run at the trader node
     if order is None or state.get("errors"):
         lines.append("\nREFUSED  " + "; ".join(state.get("errors") or ["no work order could be built"]))
         return "\n".join(lines)
@@ -384,8 +570,11 @@ def report(state: DeskState, total_seconds: float | None = None) -> str:
         lines.append("\n" + "\n".join(review))
     if state.get("funds"):
         lines.append("\nACCOUNT MANAGER: RAISE FUNDS (a Tree of Thought, entry 42)\n" + funds_report(state["funds"]))
+    trades = trade_section(order)
+    if trades:
+        lines.append("\n" + "\n".join(trades))
     seconds = state.get("seconds", {})
-    parts = "  ".join(f"{name} {seconds[name]:.1f}" for name in ("account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_funds") if name in seconds)
+    parts = "  ".join(f"{name} {seconds[name]:.1f}" for name in ("account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_funds", "trader") if name in seconds)
     lines.append(f"\nTIMING (seconds)  {parts}" + (f"  | total {total_seconds:.1f}" if total_seconds is not None else ""))
     return "\n".join(lines)
 
@@ -410,13 +599,30 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--buy", default="", help="--raise-funds: buy this symbol instead of the Advisor's best recommendation")
     parser.add_argument("--critic", action="store_true", help="after the Advisor (version 1: ranked, audited recommendations), the Critic approves or denies each one and the Account Manager decides what to trade "
                         "(Critic v1, entries 56 to 59; it calls Finnhub for numbers and quotes and OpenRouter for the critic's model: PAID)")
-    parser.add_argument("--profile", default=str(DEFAULT_PROFILE), help="--critic: the user's profile JSON file (risk tolerance, Ask or Auto, the size limits; default: the sample profile of Jacob Pyrett)")
-    parser.add_argument("--mode", choices=("ask", "auto"), help="--critic: override the profile's trade mode for this run (ask: you approve each trade; auto: what the Critic approves with a high score trades)")
+    parser.add_argument("--profile", default=None, help="--critic: the user's profile JSON file (risk tolerance, Ask or Auto, the size limits the Account Manager sizes by; default: the sample profile of Jacob Pyrett, or the saved account's own row with --account)")
+    parser.add_argument("--mode", choices=("ask", "auto"), help="--critic: override the profile's trade mode for this run (ask: you approve each trade; auto: what the Critic approves with a high score trades, and the funds are spent round-robin)")
+    parser.add_argument("--trade", nargs="?", const="paper", choices=("paper", "backtest"), metavar="{paper,backtest}",
+                        help="--critic: after the decisions, the TRADER executes what is permitted against a SIMULATED broker (Trader v1, entries 73 to 75; there is no live trading). paper (the default when only --trade is given): at the "
+                        "current quote, which COSTS (Finnhub); backtest: at the next session's open from the stored daily bars. The model (gpt-oss-120b, OpenRouter) is PAID. Fills stay in memory unless --book")
+    parser.add_argument("--no-trader-model", action="store_true", help="--trade: no model for the Trader: the program places the default orders (the free, repeatable way; a paper run still asks Finnhub for quotes)")
+    parser.add_argument("--account", help="--critic: use a saved account of the Postgres account book (a sample key such as jacob_sample, or an account number) for the profile and the portfolio, instead of the JSON files. "
+                        "It also saves the Account Manager's decisions in that account (entry 72)")
+    parser.add_argument("--book", action="store_true", help="--trade paper and --account: save the fills in that account (the cash and the holdings change in the book)")
     parser.add_argument("--json", action="store_true", help="print the finished work order as JSON instead of the report")
     parser.add_argument("--show-graph", action="store_true", help="print the graph as a Mermaid diagram and stop")
     args = parser.parse_args(argv)
+    if args.trade and not args.critic:
+        parser.error("--trade needs --critic: the Trader executes the trades the Critic reviewed and the Account Manager decided on")
+    if (args.no_trader_model or args.book) and not args.trade:
+        parser.error("--no-trader-model and --book go with --trade")
+    if args.book and not args.account:
+        parser.error("--book needs --account: the fills are saved in a saved account")
+    if args.book and args.trade != "paper":
+        parser.error("--book goes with --trade paper: a backtest is a replay and never writes the account book")
+    if args.account and not args.critic:
+        parser.error("--account goes with --critic: the profile and the portfolio of the account are read for the Critic's review and the decisions")
     if args.show_graph:
-        print(build_desk(clerk_factory=lambda order: None, advisor_factory=lambda order: None, with_funds=args.raise_funds, with_critic=args.critic).get_graph().draw_mermaid())
+        print(build_desk(clerk_factory=lambda order: None, advisor_factory=lambda order: None, with_funds=args.raise_funds, with_critic=args.critic, with_trader=bool(args.trade)).get_graph().draw_mermaid())
         return 0
     days = args.from_days_ago if args.from_days_ago is not None else str(DEFAULT_DAYS_BY_SOURCE.get(args.source, DEFAULT_DAYS))
     request = {"symbol": args.symbol, "term": args.term, "source": args.source, "from_days_ago": days, "fetch": not args.no_fetch}
@@ -425,11 +631,17 @@ def main(argv: list[str] | None = None) -> int:
     options = {"with_advisor": not args.no_advisor}
     if args.raise_funds:
         options["with_funds"] = True
-        request["funds"] = {"portfolio": args.portfolio, "shares": args.buy_shares, **({"buy": args.buy} if args.buy else {})}
+        request["funds"] = {"shares": args.buy_shares, **({"buy": args.buy} if args.buy else {})} if args.account else {"portfolio": args.portfolio, "shares": args.buy_shares, **({"buy": args.buy} if args.buy else {})}   # a saved account's plan is made for ITS holdings
     if args.critic:
         options["with_critic"] = True
-        request["account"] = {"portfolio": args.portfolio, "profile": args.profile, **({"mode": args.mode} if args.mode else {})}
+        if args.account:   # the account's own row is the profile unless --profile gives one; its holdings are the portfolio (--portfolio is for the JSON files)
+            request["account"] = {"account": args.account, **({"profile": args.profile} if args.profile else {}), **({"mode": args.mode} if args.mode else {})}
+        else:
+            request["account"] = {"portfolio": args.portfolio, "profile": args.profile or str(DEFAULT_PROFILE), **({"mode": args.mode} if args.mode else {})}
         options["approver"] = terminal_approver()   # Ask mode at a terminal: you are asked; with nobody there the decision stays pending, never a yes
+    if args.trade:
+        options["with_trader"] = True
+        request["trade"] = {"mode": args.trade, "book": args.book, "model": not args.no_trader_model}
     if args.model:
         options["advisor_factory"] = lambda order: Advisor(model_id=args.model)
     state = run_desk(request, **options)
@@ -451,7 +663,12 @@ def main(argv: list[str] | None = None) -> int:
                        encoding="utf-8")
         if not args.json:
             print(f"saved: {out.relative_to(OUT_DIR.parents[1]) if out.is_relative_to(OUT_DIR.parents[1]) else out}")
-    done = order is not None and not state.get("errors") and order.status == ("data_ready" if args.no_advisor else "recommended")
+    if args.trade:   # the Trader's own end: a trade that was made, a decision still waiting for you, or an order that was only decided (nothing to trade)
+        done = order is not None and not state.get("errors") and order.status in ("traded", "decided", "reviewed")
+    elif args.no_advisor:
+        done = order is not None and not state.get("errors") and order.status == "data_ready"
+    else:   # the Critic path ends decided (or reviewed, a decision waiting for you), not recommended: `reached_its_end` says which end counts
+        done = not state.get("errors") and reached_its_end({**state, "request": request})
     return 0 if done else 1
 
 

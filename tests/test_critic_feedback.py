@@ -3,17 +3,18 @@ import copy
 import json
 
 import pytest
-from critic_helpers import CONFIG, NOW, at, captured, make_critic, portfolio, profile, review, tamper, view
+from critic_helpers import CONFIG, NOW, at, captured, make_critic, profile, review, tamper, view
 
 from prometheus.agents.account_manager.decisions import decide_trades, record_user_decision
 from prometheus.agents.advisor.record import Recommendation
 from prometheus.agents.critic import feedback as fb
 from prometheus.agents.critic.config import DIMENSIONS
+from prometheus.common.portfolio import Portfolio
 
 
 def reviewed(name="PG_open", now=NOW, **options):
     order = captured(name)
-    make_critic(order, **options).review_recommendations(order, view(), portfolio(), now)
+    make_critic(order, **options).review_recommendations(order, view(), now)
     return order
 
 
@@ -34,14 +35,14 @@ def test_the_dimensions_are_in_a_fixed_order_and_their_points_add_up_to_the_blen
     assert [r["name"] for r in rows] == list(DIMENSIONS) and [r["title"] for r in rows] == ["Accuracy", "Evidence", "Risk fit", "Timing", "Value", "Chart"]
     assert [r["weight"] for r in rows] == [30, 15, 20, 10, 15, 10] and sum(r["weight"] for r in rows) == 100
     assert all(r["applicable"] and r["headline"] and 0 <= r["share"] <= 1 for r in rows)
-    assert sum(r["points"] for r in rows) == pytest.approx(87.5, abs=0.02)                # 30 + 15 + 18.42 + 10 + 6.58 + 7.5
+    assert sum(r["points"] for r in rows) == pytest.approx(87.92, abs=0.02)               # 30 + 15 + 18.84 + 10 + 6.58 + 7.5
     assert sum(r["weight_share"] for r in rows) == pytest.approx(1.0, abs=1e-3)
     assert {r["name"]: r["band"] for r in rows} == {"accuracy": "strong", "evidence": "strong", "risk_fit": "strong", "timing": "strong", "value": "weak", "chart": "ok"}
 
 
 def test_the_final_gate_is_spelled_out():
     gate = reviewed().recommendations[0]["critic"]["gate"]
-    assert gate["base_score"] == pytest.approx(87.5, abs=0.02) and gate["bonus"] == 0 and gate["weight_total"] == 100 and gate["score"] == 88 == gate["score_before_blockers"]
+    assert gate["base_score"] == pytest.approx(87.92, abs=0.02) and gate["bonus"] == 0 and gate["weight_total"] == 100 and gate["score"] == 88 == gate["score_before_blockers"]
     assert (gate["approve_min_score"], gate["auto_min_score"], gate["blocked_score_cap"]) == (70, 80, 49)
     assert gate["passed_score"] is True and gate["blocked"] is False and gate["blocked_by"] == [] and gate["denial_reasons"] == [] and gate["margin"] == 18
     assert "sum(weight x dimension score)" in gate["formula"]
@@ -55,7 +56,7 @@ def test_a_blocker_shows_as_what_blocked_and_the_score_it_would_have_had():
     assert gate["blocked"] and "market_closed" in gate["blocked_by"] and gate["passed_score"] is True and gate["score_before_blockers"] > 49 and gate["margin"] == 49 - 70
     codes = [b["code"] for b in block["findings"]["blockers"]]
     assert codes == gate["blocked_by"] and all(b["message"] and b["dimension"] for b in block["findings"]["blockers"])
-    assert block["size"]["approved_shares"] == 0 and block["size"]["suggested_shares"] == 75
+    assert "size" not in block and "size" not in json.dumps(block["risk"])                    # the Critic's block has no size, approved or not: how much to buy is the Account Manager's
 
 
 def test_the_warnings_and_the_need_for_a_person_are_in_the_block():
@@ -74,7 +75,7 @@ def test_the_patterns_the_chart_found_are_in_the_block():
 def test_a_reduction_has_rows_that_do_not_apply():
     order = captured("PG_open")
     order.recommendations[0] = tamper(order.recommendations[0], **{"action.action": "reduce"})
-    make_critic(order).review_recommendations(order, view(), portfolio(), NOW)
+    make_critic(order).review_recommendations(order, view(), NOW)
     rows = {r["name"]: r for r in order.recommendations[0]["critic"]["dimensions"]}
     assert [n for n, r in rows.items() if not r["applicable"]] == ["risk_fit", "value", "chart"]
     assert rows["value"]["score"] is None and rows["value"]["points"] is None and rows["value"]["band"] is None and rows["value"]["headline"] == "not judged for a reduction"
@@ -83,13 +84,15 @@ def test_a_reduction_has_rows_that_do_not_apply():
 
 def test_the_account_managers_decision_is_added_to_the_block_and_follows_the_users_answer():
     order = reviewed()
-    decide_trades(order, portfolio(), profile(), 80, now=NOW)                               # Ask mode, nobody to ask: pending
+    funds = Portfolio(user="Jacob Pyrett", cash_avail=20000.0)                              # the user's money, which only the Account Manager is given
+    decide_trades(order, funds, profile(), 80, now=NOW)                                     # Ask mode, nobody to ask: pending
     block = order.recommendations[0]["critic"]
-    assert block["decision"]["will_trade"] == "pending_user" and block["decision"]["mode"] == "ask" and block["decision"]["shares"] == 44 and block["decision"]["asked_user"] is False
+    assert block["decision"]["will_trade"] == "pending_user" and block["decision"]["mode"] == "ask" and block["decision"]["asked_user"] is False
+    assert block["decision"]["shares"] == 11 == int(0.10 * 20000 // 167.1)                  # the Account Manager's own size: the position limit, 10% of $20,000 over the price of 167.10 (the Critic wrote none)
     record_user_decision(order, order.recommendations[0]["identity"]["record_id"], True, now=NOW)
     assert order.recommendations[0]["critic"]["decision"]["will_trade"] == "yes_user" and order.recommendations[0]["critic"]["decision"]["asked_user"] is True
     denied = reviewed(now=at("2026-11-07 12:00"))
-    decide_trades(denied, portfolio(), profile(), 80, now=at("2026-11-07 12:00"))
+    decide_trades(denied, funds, profile(), 80, now=at("2026-11-07 12:00"))
     assert denied.recommendations[0]["critic"]["decision"]["will_trade"] == "no_system_denied"
 
 
@@ -97,7 +100,7 @@ def test_the_advisors_own_fields_are_untouched_and_a_record_that_was_not_reviewe
     order = captured("PG_open")
     before = copy.deepcopy(order.recommendations)
     assert all(r.get("critic") is None for r in order.recommendations)
-    make_critic(order).review_recommendations(order, view(), portfolio(), NOW)
+    make_critic(order).review_recommendations(order, view(), NOW)
     assert [{k: v for k, v in r.items() if k != "critic"} for r in order.recommendations] == [{k: v for k, v in r.items() if k != "critic"} for r in before]
     assert Recommendation.model_validate(before[0]).critic is None
 

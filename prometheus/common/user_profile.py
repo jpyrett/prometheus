@@ -3,13 +3,15 @@
     profile = load_profile("configs/profiles/jacob_pyrett.json")
     profile.risk_tolerance            # "moderate"
     profile.trade_mode                # "ask": the user approves each trade; "auto": the desk trades what the Critic approves
-    view = profile.risk_view()        # what the Critic may see
+    view = profile.risk_view()        # what the Critic may see: the tolerance, age, horizon, exclusions and minimum price, and no size limit and no money
+    limits = profile.sizing_limits()  # the four size limits the Account Manager sizes a purchase by (agents/account_manager/sizing.py)
 
-It is a static JSON file for now, shaped like `common/portfolio.py` (the week 2 design keeps both in Postgres; the same classes are what the database rows would be loaded into). Nothing here
+The JSON files are still what the desk loads by default. The account book (design choices entry 72) loads this same class from Postgres: the risk levels it can set are `TOLERANCES` below. Nothing here
 calls an API or a model.
 
-THE CRITIC SEES A `RiskView`, NOT THE PROFILE. The view holds the limits (tolerance, age, horizon, the size limits, the exclusions) and leaves out the name, the mode and the automatic-trading
-mark: whether the desk asks or trades on its own is the Account Manager's business, and a Critic's verdict must not depend on it (a recommendation is as good or as bad in Ask mode as in Auto).
+THE CRITIC SEES A `RiskView`, NOT THE PROFILE. The view holds what the Critic needs to judge a COMPANY for this user (tolerance, age, horizon, the exclusions and the minimum price) and leaves out the name, the mode, the
+automatic-trading mark and every SIZE limit: whether the desk asks or trades on its own is the Account Manager's business, and a Critic's verdict must not depend on it (a recommendation is as good or as bad in Ask mode
+as in Auto). How much to buy is the Account Manager's too (`SizingLimits`): `RiskView` forbids extra fields, so a size limit cannot even be put into it, and the Critic cannot know the user's money.
 """
 import json
 from pathlib import Path
@@ -24,19 +26,29 @@ Tolerance = Literal["conservative", "moderate", "aggressive"]
 
 
 class RiskView(BaseModel):
-    """What the Critic is allowed to know about the user: only limits, never the name or the trading mode."""
+    """What the Critic is allowed to know about the user: what it needs to judge a company's risk, never the name, the trading mode or a size limit (how much to buy is the Account Manager's: `SizingLimits`)."""
     model_config = ConfigDict(frozen=True, extra="forbid")
 
     risk_tolerance: Tolerance
     age: int | None = None
     investment_horizon_years: float | None = None
-    max_position_pct: float
-    max_loss_per_trade_pct: float
-    max_new_exposure_pct: float
-    max_order_dollars: float | None = None
     min_price: float
     excluded_symbols: tuple[str, ...] = ()
     excluded_sectors: tuple[str, ...] = ()
+
+
+class SizingLimits(BaseModel):
+    """The user's size limits, which the Account Manager reads to work out how many shares to buy (`agents/account_manager/sizing.py`): the four numbers the profile holds. The Critic's `RiskView` has none of them."""
+    model_config = ConfigDict(frozen=True, extra="forbid")
+
+    max_position_pct: float = Field(gt=0, le=1)                      # the most one stock may be of equity, after the purchase
+    max_loss_per_trade_pct: float = Field(gt=0, le=1)                # the most a stop-out may lose, of equity
+    max_new_exposure_pct: float = Field(gt=0, le=1)                  # the most all the purchases of ONE run may add, of equity
+    max_order_dollars: float | None = Field(default=None, gt=0)      # a cap on one order; None: no cap
+
+    def changed(self, changes: dict) -> "SizingLimits":
+        """These limits with `changes` ({limit name: new value}) applied, checked the same way: for a limit the user raised or lowered for ONE purchase. A name that is not one of the four, or a value outside its range, is a ValueError."""
+        return type(self).model_validate({**self.model_dump(), **changes})
 
 
 class UserProfile(BaseModel):
@@ -74,10 +86,14 @@ class UserProfile(BaseModel):
         return clean
 
     def risk_view(self) -> RiskView:
-        """The limits the Critic may see (see the module text)."""
-        return RiskView(risk_tolerance=self.risk_tolerance, age=self.age, investment_horizon_years=self.investment_horizon_years, max_position_pct=self.max_position_pct,
-                        max_loss_per_trade_pct=self.max_loss_per_trade_pct, max_new_exposure_pct=self.max_new_exposure_pct, max_order_dollars=self.max_order_dollars,
-                        min_price=self.min_price, excluded_symbols=tuple(self.excluded_symbols), excluded_sectors=tuple(self.excluded_sectors))
+        """What the Critic may see (see the module text): no size limit."""
+        return RiskView(risk_tolerance=self.risk_tolerance, age=self.age, investment_horizon_years=self.investment_horizon_years, min_price=self.min_price,
+                        excluded_symbols=tuple(self.excluded_symbols), excluded_sectors=tuple(self.excluded_sectors))
+
+    def sizing_limits(self) -> SizingLimits:
+        """The four size limits, for the Account Manager's sizing (see `SizingLimits`)."""
+        return SizingLimits(max_position_pct=self.max_position_pct, max_loss_per_trade_pct=self.max_loss_per_trade_pct, max_new_exposure_pct=self.max_new_exposure_pct,
+                            max_order_dollars=self.max_order_dollars)
 
 
 def load_profile(path: str | Path) -> UserProfile:

@@ -78,6 +78,11 @@ ARROW_TYPES = {
 #   <<<INSIGHTS>>>       one line per ticker: "TICKER | sentiment | reasoning" (Polygon only; may be empty)
 #   <<<END>>>
 # Any line inside text that begins with "<<<" is prefixed with a space, so markers are unambiguous.
+# AN ARTICLE THAT FAILS IS DISCARDED (Jacob, 2026-11-15, design choices entry 83): an item an API gave that cannot be turned into an article (a time that is not a time, a field of the wrong kind), a line of
+# the market-news store that is not a whole article, a press release that cannot be read: it is skipped and ignored completely, counted in `failed` where a count is returned, and the rest goes on. A failed
+# article is never written, never searched and never reaches the Advisor.
+ARTICLE_FAILURES = (KeyError, TypeError, ValueError, AttributeError, OverflowError, OSError)   # what a malformed item raises while it is being made into an article
+MARKET_REQUIRED = ("url", "headline", "published", "api", "summary", "tickers", "keywords", "insights")
 ARTICLE_START, SUMMARY_START, INSIGHTS_START, ARTICLE_END = (
     "<<<ARTICLE>>>", "<<<SUMMARY>>>", "<<<INSIGHTS>>>", "<<<END>>>")
 FINNHUB_NEWS_URL = "https://finnhub.io/api/v1/company-news"
@@ -502,7 +507,8 @@ class DataToolbox:
         out_path.parent.mkdir(parents=True, exist_ok=True)
         seen = self._read_seen_urls(out_path)
         stats = {"symbol": symbol, "path": str(out_path), "fetched": 0, "matched": 0,
-                 "written": 0, "duplicates": 0}
+                 "written": 0, "duplicates": 0, "failed": 0}
+        self.articles_failed = 0
 
         print(f"News {symbol}: last {from_date} days ({start:%Y-%m-%d} -> {now:%Y-%m-%d})")
         with httpx.Client(timeout=httpx.Timeout(30.0)) as api, open(out_path, "a", encoding="utf-8") as out:
@@ -514,23 +520,29 @@ class DataToolbox:
                 for page in source:
                     for art in page:
                         stats["fetched"] += 1
-                        if art["published"] < start:
-                            continue
-                        if not self._matches(self._match_text(art), company, keywords):
+                        try:
+                            if art["published"] < start:
+                                continue
+                            if not self._matches(self._match_text(art), company, keywords):
+                                continue
+                            record = self._format_article(art, symbol, company)
+                            key = self._url_key(art["url"])
+                        except ARTICLE_FAILURES:   # an article that cannot be matched or written is discarded (entry 83): never written
+                            self.articles_failed += 1
                             continue
                         stats["matched"] += 1
-                        key = self._url_key(art["url"])
                         if key in seen:
                             stats["duplicates"] += 1
                             continue
                         seen.add(key)
-                        out.write(self._format_article(art, symbol, company))
+                        out.write(record)
                         out.flush()
                         stats["written"] += 1
                     sys.stdout.write(f"\r  fetched {stats['fetched']}  matched {stats['matched']}  "
                                      f"written {stats['written']}\033[K")
                     sys.stdout.flush()
-        print(f"\nNews {symbol}: wrote {stats['written']} articles -> {out_path}")
+        stats["failed"] = self.articles_failed
+        print(f"\nNews {symbol}: wrote {stats['written']} articles -> {out_path}" + (f" ({stats['failed']} failed and were discarded)" if stats["failed"] else ""))
         return stats
 
     def get_quote(self, symbol: str) -> dict:
@@ -576,7 +588,7 @@ class DataToolbox:
         if out_path.exists():
             with open(out_path, encoding="utf-8") as f:
                 seen = {line[4:].strip() for line in f if line.startswith("id: ")}
-        stats = {"symbol": symbol, "path": str(out_path), "fetched": 0, "written": 0, "duplicates": 0}
+        stats = {"symbol": symbol, "path": str(out_path), "fetched": 0, "written": 0, "duplicates": 0, "failed": 0}
 
         print(f"Press releases {symbol}: last {from_date} days ({start:%Y-%m-%d} -> {now:%Y-%m-%d})")
         with httpx.Client(timeout=httpx.Timeout(30.0)) as api:
@@ -587,14 +599,19 @@ class DataToolbox:
         items = data.get("majorDevelopment", []) if isinstance(data, dict) else data
         releases = []
         for it in items:
-            if not it.get("headline") or not it.get("datetime"):
+            try:
+                if not it.get("headline") or not it.get("datetime"):
+                    continue
+                ts = it["datetime"]
+                published = (datetime.fromtimestamp(ts, tz=timezone.utc) if isinstance(ts, (int, float))
+                             else datetime.fromisoformat(str(ts).replace("Z", "+00:00").replace(" ", "T")))
+                if published.tzinfo is None:
+                    published = published.replace(tzinfo=timezone.utc)
+                rid = hashlib.sha1(f"{symbol}|{published.isoformat()}|{it['headline']}".encode()).hexdigest()[:16]
+                self._one_line(it["headline"]), self._one_line(it.get("url")), self._block(it.get("description"))   # the pieces the record is made of: one that cannot be made fails here, before anything is written
+            except ARTICLE_FAILURES:   # a release that cannot be read is discarded (entry 83)
+                stats["failed"] += 1
                 continue
-            ts = it["datetime"]
-            published = (datetime.fromtimestamp(ts, tz=timezone.utc) if isinstance(ts, (int, float))
-                         else datetime.fromisoformat(str(ts).replace("Z", "+00:00").replace(" ", "T")))
-            if published.tzinfo is None:
-                published = published.replace(tzinfo=timezone.utc)
-            rid = hashlib.sha1(f"{symbol}|{published.isoformat()}|{it['headline']}".encode()).hexdigest()[:16]
             releases.append((published, rid, it))
         with open(out_path, "a", encoding="utf-8") as out:
             for published, rid, it in sorted(releases, key=lambda r: r[0]):
@@ -609,7 +626,7 @@ class DataToolbox:
                           f"headline: {self._one_line(it['headline'])}\n<<<TEXT>>>\n{text}\n<<<END>>>\n")
                 stats["written"] += 1
         print(f"Press releases {symbol}: {stats['fetched']} fetched, {stats['written']} written, "
-              f"{stats['duplicates']} duplicates -> {out_path}")
+              f"{stats['duplicates']} duplicates" + (f", {stats['failed']} failed and were discarded" if stats["failed"] else "") + f" -> {out_path}")
         return stats
 
     def fetch_filings(self, symbol: str, from_date: int = 365, forms: tuple[str, ...] = FILING_FORMS) -> dict:
@@ -908,17 +925,37 @@ class DataToolbox:
               f"{stats['duplicates']} duplicates -> {store}")
         return stats
 
+    articles_failed = 0   # the items the last news fetch discarded because they could not be made into an article (entry 83)
+
     @staticmethod
     def _market_files(store: Path, start: datetime) -> list[Path]:
         first = f"{start:%Y-%m-%d}"
         return sorted(p for p in store.glob("????-??-??.jsonl") if p.stem >= first)
 
+    def _market_articles(self, path: Path):
+        """Yield the articles of one market-news day file (JSON lines). A line that is not a whole article (not JSON, a field missing or of the wrong kind, a time that is not a time) is DISCARDED and ignored
+        completely (entry 83): it is never matched, counted or shown. `published` stays the text the file has."""
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                try:
+                    art = json.loads(line)
+                    if not isinstance(art, dict) or any(art.get(k) is None for k in MARKET_REQUIRED):
+                        continue
+                    datetime.fromisoformat(art["published"])
+                    if not isinstance(art["tickers"], list) or not isinstance(art["keywords"], list) or not isinstance(art["insights"], list) or not all(isinstance(i, dict) for i in art["insights"]):
+                        continue
+                    self._url_key(art["url"])
+                except ARTICLE_FAILURES:   # includes json.JSONDecodeError (a ValueError)
+                    continue
+                yield art
+
     def _market_seen(self, store: Path, start: datetime) -> set[str]:
         seen: set[str] = set()
         for path in self._market_files(store, start):
-            with open(path, encoding="utf-8") as f:
-                for line in f:
-                    seen.add(self._url_key(json.loads(line)["url"]))
+            for art in self._market_articles(path):
+                seen.add(self._url_key(art["url"]))
         return seen
 
     def _market_write(self, store: Path, page: list[dict], seen: set[str], stats: dict) -> None:
@@ -965,26 +1002,28 @@ class DataToolbox:
         scanned = matched = 0
         t0 = time.monotonic()
         for n, path in enumerate(files, 1):
-            with open(path, encoding="utf-8") as f:
-                for line in f:
-                    art = json.loads(line)
+            for art in self._market_articles(path):
+                try:
                     art["published"] = datetime.fromisoformat(art["published"])
-                    scanned += 1
-                    if art["published"] < start or not self._matches(self._match_text(art), phrase, []):
-                        continue
-                    matched += 1
                     sentiments = {i["ticker"].upper(): (i.get("sentiment") or "").lower()
                                   for i in art["insights"] if i.get("ticker")}
-                    for sym in set(sentiments) or {t.upper() for t in art["tickers"]}:
-                        rec = found.setdefault(sym, {"symbol": sym, "articles": 0, "positive": 0,
-                                                     "neutral": 0, "negative": 0,
-                                                     "providers": set(), "headlines": []})
-                        rec["articles"] += 1
-                        if sentiments.get(sym) in ("positive", "neutral", "negative"):
-                            rec[sentiments[sym]] += 1
-                        rec["providers"].add(art["api"])
-                        if len(rec["headlines"]) < 3:
-                            rec["headlines"].append(art["headline"])
+                    syms = set(sentiments) or {t.upper() for t in art["tickers"]}
+                except ARTICLE_FAILURES:   # an article that cannot be read is discarded (entry 83): not scanned, not matched, not counted
+                    continue
+                scanned += 1
+                if art["published"] < start or not self._matches(self._match_text(art), phrase, []):
+                    continue
+                matched += 1
+                for sym in syms:
+                    rec = found.setdefault(sym, {"symbol": sym, "articles": 0, "positive": 0,
+                                                 "neutral": 0, "negative": 0,
+                                                 "providers": set(), "headlines": []})
+                    rec["articles"] += 1
+                    if sentiments.get(sym) in ("positive", "neutral", "negative"):
+                        rec[sentiments[sym]] += 1
+                    rec["providers"].add(art["api"])
+                    if len(rec["headlines"]) < 3:
+                        rec["headlines"].append(art["headline"])
             self._progress("Searching", n / len(files), f"{n}/{len(files)} days  {scanned:,} scanned  {matched} matched", t0)
 
         ranked = sorted(found.values(), key=lambda r: (-r["articles"], r["symbol"]))[:top]
@@ -1026,8 +1065,7 @@ class DataToolbox:
                 news.append({"published": head["published_utc"], "publisher": head.get("publisher", ""),
                              "headline": head.get("headline", ""), "url": head.get("url", "")})
         for path in self._market_files(self._news_dir() / MARKET_DIR, start):
-            for line in path.read_text(encoding="utf-8").splitlines():
-                art = json.loads(line)
+            for art in self._market_articles(path):
                 if art["api"] == "cnbc-rss" and self._matches(f"{art['headline']}\n{art['summary']}", None, terms):
                     when = datetime.fromisoformat(art["published"])
                     if when >= start:
@@ -1144,17 +1182,12 @@ class DataToolbox:
             )
             page = []
             for it in items:
-                if not it.get("url") or not it.get("headline") or not it.get("datetime"):
-                    continue
-                page.append({
-                    "id": f"finnhub:{it.get('id', '')}", "api": "finnhub", "type": "news",
-                    "published": datetime.fromtimestamp(it["datetime"], tz=timezone.utc),
-                    "publisher": it.get("source", ""), "author": "", "url": it["url"],
-                    "headline": it["headline"], "summary": it.get("summary", ""),
-                    "category": it.get("category", ""), "image_url": it.get("image", ""),
-                    "tickers": [t.strip() for t in str(it.get("related", "")).split(",") if t.strip()],
-                    "keywords": [], "insights": [],
-                })
+                try:
+                    if not it.get("url") or not it.get("headline") or not it.get("datetime"):
+                        continue
+                    page.append(self._finnhub_article(it))
+                except ARTICLE_FAILURES:   # an item that cannot be made into an article is discarded (entry 83)
+                    self.articles_failed += 1
             yield page
             win_start = win_end + timedelta(days=1)
 
@@ -1165,18 +1198,26 @@ class DataToolbox:
                                {"category": category}, headers={"X-Finnhub-Token": api_key})
         page = []
         for it in items:
-            if not it.get("url") or not it.get("headline") or not it.get("datetime"):
-                continue
-            page.append({
-                "id": f"finnhub:{it.get('id', '')}", "api": "finnhub", "type": "news",
-                "published": datetime.fromtimestamp(it["datetime"], tz=timezone.utc),
-                "publisher": it.get("source", ""), "author": "", "url": it["url"],
-                "headline": it["headline"], "summary": it.get("summary", ""),
-                "category": it.get("category", ""), "image_url": it.get("image", ""),
-                "tickers": [t.strip() for t in str(it.get("related", "")).split(",") if t.strip()],
-                "keywords": [], "insights": [],
-            })
+            try:
+                if not it.get("url") or not it.get("headline") or not it.get("datetime"):
+                    continue
+                page.append(self._finnhub_article(it))
+            except ARTICLE_FAILURES:   # discarded (entry 83)
+                self.articles_failed += 1
         yield page
+
+    @staticmethod
+    def _finnhub_article(it: dict) -> dict:
+        """One Finnhub item as an article dict. Raises (`ARTICLE_FAILURES`) when it cannot be made into one: the caller discards it."""
+        return {
+            "id": f"finnhub:{it.get('id', '')}", "api": "finnhub", "type": "news",
+            "published": datetime.fromtimestamp(it["datetime"], tz=timezone.utc),
+            "publisher": it.get("source", ""), "author": "", "url": it["url"],
+            "headline": it["headline"], "summary": it.get("summary", ""),
+            "category": it.get("category", ""), "image_url": it.get("image", ""),
+            "tickers": [t.strip() for t in str(it.get("related", "")).split(",") if t.strip()],
+            "keywords": [], "insights": [],
+        }
 
     def _iter_polygon(self, client, api_key, symbol, start, end):
         """Pages oldest to newest by moving the published_utc.gte bound forward (Polygon's next_url
@@ -1193,23 +1234,28 @@ class DataToolbox:
                 params["ticker"] = symbol
             results = self._get_json(client, limiter, "Polygon", POLYGON_NEWS_URL, params).get("results", [])
             page = []
+            failed = 0
             for it in results:
-                if it.get("id") in seen_ids:
-                    continue
-                seen_ids.add(it.get("id"))
-                if not it.get("article_url") or not it.get("title") or not it.get("published_utc"):
-                    continue
-                page.append({
-                    "id": f"polygon:{it.get('id', '')}", "api": "polygon", "type": "news",
-                    "published": datetime.fromisoformat(it["published_utc"].replace("Z", "+00:00")),
-                    "publisher": (it.get("publisher") or {}).get("name", ""),
-                    "author": it.get("author", "") or "", "url": it["article_url"],
-                    "headline": it["title"], "summary": it.get("description", "") or "",
-                    "category": "", "image_url": it.get("image_url", "") or "",
-                    "tickers": it.get("tickers") or [], "keywords": it.get("keywords") or [],
-                    "insights": it.get("insights") or [],
-                })
-            new_count = len(page)
+                try:
+                    if it.get("id") in seen_ids:
+                        continue
+                    seen_ids.add(it.get("id"))
+                    if not it.get("article_url") or not it.get("title") or not it.get("published_utc"):
+                        continue
+                    page.append({
+                        "id": f"polygon:{it.get('id', '')}", "api": "polygon", "type": "news",
+                        "published": datetime.fromisoformat(it["published_utc"].replace("Z", "+00:00")),
+                        "publisher": (it.get("publisher") or {}).get("name", ""),
+                        "author": it.get("author", "") or "", "url": it["article_url"],
+                        "headline": it["title"], "summary": it.get("description", "") or "",
+                        "category": "", "image_url": it.get("image_url", "") or "",
+                        "tickers": it.get("tickers") or [], "keywords": it.get("keywords") or [],
+                        "insights": it.get("insights") or [],
+                    })
+                except ARTICLE_FAILURES:   # an item that cannot be made into an article is discarded (entry 83); it still counts as seen, so the paging moves on
+                    self.articles_failed += 1
+                    failed += 1
+            new_count = len(page) + failed
             if results:
                 yield page
             if len(results) < POLYGON_PAGE_SIZE:

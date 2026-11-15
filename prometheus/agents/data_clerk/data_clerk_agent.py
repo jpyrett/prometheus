@@ -7,6 +7,7 @@
     python -m prometheus.agents.data_clerk.data_clerk_agent "What did MKBHD say about Apple's foldable iPhone?"
 
     DataClerk().request_data(work_order)     # the agent call the other agents make: a work order in, the same order out, with its data
+    DataClerk().request_bars(work_order)     # a `fetch_bars` order (Trader v1, asked by the Account Manager): the stored daily bars of a date range, no model call
 
 NOT to be confused with `data_toolbox.py` in this folder, which is the Data Clerk's TOOLBOX (the DataToolbox: plain Python,
 no LLM, no loop). This file is the agent. It receives its toolbox, so a test can hand it a fake one.
@@ -54,7 +55,8 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 
-from prometheus.common.work_order import HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, sector_map, verify_metric_request, verify_quote_request, verify_request, verify_verification_request
+from prometheus.common.trading_clock import market_day, use_live_trading
+from prometheus.common.work_order import HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_request, verify_verification_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.prompts.data_clerk import COMPANIES_RETRY, LAST_TURN, companies_prompt, repair_message, system_prompt
 from prometheus.rag.citations import SourceBook
@@ -332,7 +334,10 @@ class DataClerk:
 
         There is no model call: a price is one lookup, so the Data Clerk calls its own `get_quote` tool (`DataClerkTools.get_quote`, the tool the model is also offered and the MCP
         server serves) once per symbol, in code. A symbol that fails (not a ticker, unknown to Finnhub, the API down) is named in `order.errors` and the order is `data_failed`;
-        the quotes that did come back stay on the order, so a caller can see what it has. An order that already has its data comes back unchanged."""
+        the quotes that did come back stay on the order, so a caller can see what it has. An order that already has its data comes back unchanged.
+
+        With `USE_LIVE_TRADING=false` (design choices entry 76) the price is the market close of the simulated day (`common/trading_clock.market_day`: the previous business day) read from the stored daily bars
+        (`DataClerkTools.close_quote`), marked `simulated`, and Finnhub is not called; a symbol with no stored bar on that day is a failed quote like any other."""
         if order.status in HAS_DATA:
             return order
         reasons = verify_quote_request(order)
@@ -341,17 +346,54 @@ class DataClerk:
             return order
         wanted = [order.subject] if isinstance(order.subject, str) else list(order.subject)
         quotes, calls, problems = {}, [], []
+        day = None if use_live_trading() else market_day()   # USE_LIVE_TRADING=false (entry 76): every price is the market close of the simulated day, from the stored bars, and Finnhub is not asked
         for raw in dict.fromkeys(s.strip().lstrip("$").upper() for s in wanted):
             try:
-                quotes[raw] = self.tools.get_quote(raw)
+                quotes[raw] = self.tools.get_quote(raw) if day is None else self.tools.close_quote(raw, day)
                 calls.append({"name": "get_quote", "args": {"symbol": raw}, "outcome": "ok"})
             except Exception as error:  # a bad ticker, an unknown symbol, a missing key or an API failure: say which symbol and what kind, never request details
                 calls.append({"name": "get_quote", "args": {"symbol": raw}, "outcome": "error"})
                 problems.append(f"{raw}: no quote ({type(error).__name__}: {' '.join(str(error).split())[:160]})")
         order.data = DataResult(answer=", ".join(f"{s} {q['price']:.2f}" for s, q in quotes.items()), quotes=quotes, problems=problems, tool_calls=calls,
+                                notes=[] if day is None else [f"USE_LIVE_TRADING=false: every price is the market close of {day}, from the stored daily bars (simulated); no live quote was asked for"],
                                 completed_utc=datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"))
         order.errors = [*order.errors, *problems]
         order.status = "data_failed" if problems else "data_ready"
+        return order
+
+    def request_bars(self, order: WorkOrder) -> WorkOrder:
+        """The Data Clerk's agent call for a `fetch_bars` order (Trader v1 spec section 12): the stored daily bars of every symbol of `order.subject` from `order.bars["start"]` to `order.bars["end"]`,
+        put on `order.data.bars` as {symbol: [bar, ...]} (oldest first, each {"date", "open", "high", "low", "close", "volume"}), and the SAME order returned. The Account Manager asks, for the Trader's backtest;
+        the Trader never calls the Data Clerk.
+
+        There is no model call: a bar is a stored number, so the Data Clerk calls its own tool code (`DataClerkTools.daily_bars`) in code. Nothing is fetched and nothing is written under `data/historical`. A symbol
+        with no stored bar in the range is an empty list and a note in `data.notes`: that is a RESULT (the future may not be stored yet), not a failure. The order is `data_failed` only when the request is refused
+        (`verify_bar_request`, or a symbol that is not a ticker) or the store could not be read; the reason is in `order.errors`. An order that already has its data comes back unchanged."""
+        if order.status in HAS_DATA:
+            return order
+        reasons = verify_bar_request(order)
+        if reasons:
+            order.status, order.errors = "data_failed", [*order.errors, *reasons]
+            return order
+        wanted = [order.subject] if isinstance(order.subject, str) else list(order.subject)
+        try:
+            symbols = list(dict.fromkeys(check_symbol(s.strip().lstrip("$")) for s in wanted))
+        except ValueError as error:  # not a ticker symbol: refused before anything is read
+            order.status, order.errors = "data_failed", [*order.errors, str(error)]
+            return order
+        start, end = iso_date(order.bars["start"]), iso_date(order.bars["end"])
+        args = {"symbols": len(symbols), "start": order.bars["start"], "end": order.bars["end"]}
+        try:
+            found = self.tools.daily_bars(symbols, start, end)
+        except Exception as error:  # the bar folder is missing or unreadable, or a bug: say the kind, never details
+            order.status, order.errors = "data_failed", [*order.errors, f"the stored bars could not be read ({type(error).__name__}: {' '.join(str(error).split())[:160]})"]
+            order.data = DataResult(tool_calls=[{"name": "daily_bars", "args": args, "outcome": "error"}], completed_utc=_utc_now())
+            return order
+        bars = {s: found["bars"].get(s, []) for s in symbols}
+        notes = [f"{s}: no stored bar from {order.bars['start']} to {order.bars['end']}" for s in symbols if not bars[s]] + [f"bars: {gap}" for gap in found["gaps"]]
+        order.data = DataResult(answer=f"daily bars of {len(symbols)} symbols, {order.bars['start']} to {order.bars['end']}", bars=bars, notes=notes,
+                                tool_calls=[{"name": "daily_bars", "args": args, "outcome": "ok"}], completed_utc=_utc_now())
+        order.status = "data_ready"
         return order
 
     def request_metrics(self, order: WorkOrder, today: date | None = None) -> WorkOrder:

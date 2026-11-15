@@ -7,12 +7,15 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 from advisor_helpers import MemoryLedger
-from critic_helpers import NOW, FakeClerk as CriticClerk, ReviewerModel, captured, portfolio, profile, tamper
+from critic_helpers import NOW, FakeClerk as CriticClerk, ReviewerModel, captured, profile, tamper
 from test_desk_graph import FakeClerk as DeskClerk, FakeResolver
 
 from prometheus.agents.account_manager.account_manager import AccountManager
 from prometheus.agents.critic.critic import Critic
+from prometheus.common.portfolio import Portfolio
 from prometheus.langgraph import desk
+
+RICH = Portfolio(user="Jacob Pyrett", cash_avail=74481.40)      # what the sample portfolio is worth at the capture's prices: the Account Manager's 10% position limit buys 44 shares of PG at 167.10 (the sample's own $51.23 buys none)
 
 
 class CapturedAdvisor:
@@ -51,7 +54,7 @@ def critic_for(name="PG_open", **options):
 
 def run(request=None, name="PG_open", approver=None, critic=None, manager=None, **options):
     CapturedAdvisor.seen = None
-    return desk.run_desk(request or {"symbol": "PG", "from_days_ago": 14, "fetch": False}, clerk_factory=lambda order: DeskClerk(), advisor_factory=lambda order: CapturedAdvisor(name),
+    return desk.run_desk(request or {"symbol": "PG", "from_days_ago": 14, "fetch": False, "account": {"portfolio": RICH}}, clerk_factory=lambda order: DeskClerk(), advisor_factory=lambda order: CapturedAdvisor(name),
                          resolver=FakeResolver(), with_critic=True, critic_factory=critic or critic_for(name), funds_factory=(lambda: manager) if manager else (lambda: Manager(profile=profile())),
                          approver=approver, clock=lambda: NOW, **options)
 
@@ -81,7 +84,7 @@ def test_one_work_order_travels_through_the_critic_and_the_decision_and_comes_ou
 
 def test_the_advisor_runs_version_1_with_the_portfolio_and_the_easterns_date_of_the_clock():
     late = datetime(2026, 11, 5, 19, 30, tzinfo=timezone(timedelta(hours=-5)))        # 19:30 Eastern: the UTC date is already the 6th
-    run_late = lambda: desk.run_desk({"symbol": "PG", "fetch": False}, clerk_factory=lambda o: DeskClerk(), advisor_factory=lambda o: CapturedAdvisor(), resolver=FakeResolver(), with_critic=True,
+    run_late = lambda: desk.run_desk({"symbol": "PG", "fetch": False, "account": {"portfolio": RICH}}, clerk_factory=lambda o: DeskClerk(), advisor_factory=lambda o: CapturedAdvisor(), resolver=FakeResolver(), with_critic=True,
                                      critic_factory=critic_for(), funds_factory=lambda: Manager(profile=profile()), clock=lambda: late)
     run_late()
     order, portfolio_, today = CapturedAdvisor.seen
@@ -95,15 +98,19 @@ def test_without_an_answer_the_decision_waits_and_the_order_stays_reviewed():
 
 def test_in_auto_mode_the_critics_approval_trades_without_asking():
     asked = []
-    state = run({"symbol": "PG", "fetch": False, "account": {"mode": "auto"}}, approver=lambda card: asked.append(card))
+    state = run({"symbol": "PG", "fetch": False, "account": {"mode": "auto", "portfolio": RICH}}, approver=lambda card: asked.append(card))
     assert state["order"].trade_decisions[0]["will_trade"] == "yes_auto" and asked == [] and state["order"].status == "decided"
 
 
 def test_the_request_can_give_the_portfolio_and_the_profile_as_objects_or_files():
-    request = {"symbol": "PG", "fetch": False, "account": {"portfolio": portfolio(), "profile": profile(max_position_pct=0.20)}}
-    assert run(request)["order"].reviews[0]["approved_shares"] == 75
+    """The Account Manager sizes the purchase from the profile's limits and the portfolio's money (the Critic sees neither): a 20% position limit on $74,481.40 allows 89 shares, the loss limit (1% of equity over the
+    plan's stop distance of 9.8649) 75: the smaller is the size. A portfolio given as a FILE is read too: the sample's $51.23 buys no share of PG."""
+    request = {"symbol": "PG", "fetch": False, "account": {"portfolio": RICH, "profile": profile(max_position_pct=0.20)}}
+    d = run(request)["order"].trade_decisions[0]
+    assert (d["shares"], d["size"]["binding"], d["size"]["caps"]["position"], d["size"]["caps"]["loss"]) == (75, "loss", 89, 75)
     request = {"symbol": "PG", "fetch": False, "account": {"portfolio": "configs/portfolios/jacob_pyrett.json".replace("configs", str(desk.DEFAULT_PORTFOLIO.parents[1])), "profile": str(desk.DEFAULT_PROFILE)}}
-    assert run(request)["order"].reviews[0]["approved_shares"] == 44
+    d = run(request)["order"].trade_decisions[0]
+    assert (d["will_trade"], d["shares"], d["size"]["caps"]["money"]) == ("no_funds", 0, 0) and d["size"]["equity_basis"].startswith("cash and holdings")      # the file's own portfolio: $51.23 and three holdings
 
 
 def test_a_denied_recommendation_is_final_and_with_nothing_approved_the_funds_node_refuses():
@@ -113,15 +120,15 @@ def test_a_denied_recommendation_is_final_and_with_nothing_approved_the_funds_no
     assert state["funds"]["status"] == "refused" and "Critic approved no purchase" in state["funds"]["errors"][0]
 
 
-def test_raise_funds_buys_what_the_critic_approved_and_the_user_allowed_with_its_size():
+def test_raise_funds_buys_what_the_critic_approved_and_the_user_allowed_with_the_account_managers_size():
     manager = Manager(profile=profile())
-    state = run({"symbol": "PG", "fetch": False, "funds": {}}, approver=lambda card: True, with_funds=True, manager=manager)
+    state = run({"symbol": "PG", "fetch": False, "funds": {}, "account": {"portfolio": RICH}}, approver=lambda card: True, with_funds=True, manager=manager)
     assert manager.raised == [("PG", 44)] and state["funds"]["status"] == "funded"
     manager = Manager(profile=profile())
-    run({"symbol": "PG", "fetch": False, "funds": {"shares": 3}}, approver=lambda card: True, with_funds=True, manager=manager)
+    run({"symbol": "PG", "fetch": False, "funds": {"shares": 3}, "account": {"portfolio": RICH}}, approver=lambda card: True, with_funds=True, manager=manager)
     assert manager.raised == [("PG", 3)]
     manager = Manager(profile=profile())
-    run({"symbol": "PG", "fetch": False, "funds": {"buy": "MU", "shares": 2}}, with_funds=True, manager=manager)      # an explicit symbol is the user's own request
+    run({"symbol": "PG", "fetch": False, "funds": {"buy": "MU", "shares": 2}, "account": {"portfolio": RICH}}, with_funds=True, manager=manager)      # an explicit symbol is the user's own request
     assert manager.raised == [("MU", 2)]
 
 
@@ -151,8 +158,39 @@ def test_a_bad_profile_or_portfolio_file_is_a_message_on_the_order():
 def test_the_report_has_the_critic_section_with_the_scorecard_and_the_decision():
     state = run(approver=lambda card: True)
     text = desk.report(state, 1.0)
-    assert "CRITIC REVIEW  (model z-ai/glm-5.3" in text and "APPROVE" in text and "44 of 75 shares" in text and "TRADE DECISIONS  PG: yes (you approved)" in text
+    assert "CRITIC REVIEW  (model z-ai/glm-5.3" in text and "APPROVE" in text and "open a position      valid until 11:30 ET" in text and "TRADE DECISIONS  PG: yes (you approved)" in text
+    assert "44 of 75 shares" not in text and "size cut" not in text                                    # the Critic's scorecard names no size
     assert "critic" in text.split("TIMING")[1] and "account_manager_decision" in text.split("TIMING")[1]
+
+
+def test_a_critic_run_without_the_trader_ends_at_the_decision_and_that_path_is_finished():
+    """It printed "(stopped here)" for every good run, because only `recommended` counted as an end and a Critic run ends `decided` (fixed 2026-11-14)."""
+    text = desk.report(run(approver=lambda card: True), 1.0)
+    path_line = next(l for l in text.splitlines() if l.startswith("PATH"))
+    assert path_line == "PATH     account_manager -> data_clerk -> advisor -> critic -> account_manager_decision" and "(stopped here)" not in text
+
+
+def test_a_decision_that_waits_for_the_user_is_the_end_of_the_critic_path_not_a_stop():
+    state = run()                                                                  # Ask mode, nobody to answer
+    assert state["order"].status == "reviewed" and desk.reached_its_end(state) and "(stopped here)" not in desk.report(state, 1.0)
+
+
+def test_an_order_the_critic_never_reviewed_is_a_path_that_stopped():
+    def broken(order):
+        raise RuntimeError("OPENROUTER_API_KEY is not set (put it in .env; see .env.example)")
+    state = run(critic=broken)                                                     # the Critic ran as a node, could not start, and left the order `recommended`
+    assert state["order"].status == "recommended" and "critic" in state["path"] and not desk.reached_its_end(state)
+    assert "(stopped here)" in desk.report(state, 1.0)
+
+
+def test_when_nothing_was_recommended_the_critic_is_never_asked_and_the_path_is_finished():
+    class Nothing(CapturedAdvisor):
+        def generate_recommendations(self, order, portfolio_, case=None, today=None, **kw):
+            order.status = "recommended"
+            return order
+    state = desk.run_desk({"symbol": "PG", "fetch": False}, clerk_factory=lambda o: DeskClerk(), advisor_factory=lambda o: Nothing(), resolver=FakeResolver(), with_critic=True, critic_factory=critic_for(),
+                          funds_factory=lambda: Manager(profile=profile()), clock=lambda: NOW)
+    assert state["path"] == ["account_manager", "data_clerk", "advisor"] and desk.reached_its_end(state) and "(stopped here)" not in desk.report(state, 1.0)
 
 
 def test_the_command_line_knows_the_new_flags(monkeypatch, capsys):

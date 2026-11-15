@@ -81,26 +81,27 @@ def test_a_blocker_must_have_a_code_of_the_closed_list_of_its_dimension():
     with pytest.raises(ValidationError):
         Finding(code="made_up", dimension="value", severity="blocker", message="x")
     assert Finding(code="made_up", dimension="value", severity="warning", message="x").severity == "warning"       # a warning may have any code
-    assert all(Finding(code=code, dimension=d, severity="blocker", message="x") for d, codes in BLOCKER_CODES.items() for code in codes) and len(BLOCKER_ORDER) == 29
+    assert all(Finding(code=code, dimension=d, severity="blocker", message="x") for d, codes in BLOCKER_CODES.items() for code in codes) and len(BLOCKER_ORDER) == 27
 
 
 # ---------------------------------------------------------------- the summary sentence
 
-def summarize(findings, shares=44, suggested=75, action="open", **kw):
+def summarize(findings, action="open", **kw):
     d = dims(**kw)
     v = sc.decide(findings, d, 0, CONFIG)
-    return sc.summarize("PG", action, v, findings, d, shares, suggested, 70)
+    return sc.summarize("PG", action, v, findings, d, 70)
 
 
-def test_an_approval_names_the_size_the_score_and_every_dimensions_points():
-    assert summarize([], accuracy=100, evidence=94, risk_fit=92, timing=100, value=37, chart=100) == "APPROVE 44 of 75 shares of PG: score 88 (B); accuracy 30/30, evidence 14/15, risk fit 18/20, timing 10/10, value 6/15, chart 10/10."
-    assert summarize([], shares=75).startswith("APPROVE 75 shares of PG: score 100 (A)")
-    assert summarize([], action="add", shares=10, suggested=10).startswith("APPROVE add 10 shares of PG")
-    assert summarize([], action="add", shares=5, suggested=10).startswith("APPROVE add 5 of 10 shares of PG")
+def test_an_approval_names_the_score_and_every_dimensions_points_and_no_size():
+    """Design choices entry 80: the Critic approves a recommendation, never a number of shares (that is the Account Manager's)."""
+    text = summarize([], accuracy=100, evidence=94, risk_fit=92, timing=100, value=37, chart=100)
+    assert text == "APPROVE PG: score 88 (B); accuracy 30/30, evidence 14/15, risk fit 18/20, timing 10/10, value 6/15, chart 10/10."
+    assert summarize([]).startswith("APPROVE PG: score 100 (A)") and summarize([], action="add").startswith("APPROVE add PG: score 100 (A)")
+    assert "share" not in text and "share" not in summarize([], action="add")
 
 
-def test_a_reduction_has_no_share_count_and_only_its_three_dimensions():
-    s = sc.summarize("PG", "reduce", sc.decide([], dims(reduce=True), 0, CONFIG), [], dims(reduce=True), 12, 12, 70)
+def test_a_reduction_has_only_its_three_dimensions():
+    s = sc.summarize("PG", "reduce", sc.decide([], dims(reduce=True), 0, CONFIG), [], dims(reduce=True), 70)
     assert s == "APPROVE reduction of PG: score 100 (A); accuracy 30/30, evidence 15/15, timing 10/10."
 
 

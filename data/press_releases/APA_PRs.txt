@@ -1,0 +1,153 @@
+<<<PRESS_RELEASE>>>
+id: 9db4fd45d0353342
+symbol: APA
+published_utc: 2025-12-09T16:16:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-declares-cash-dividend-common-shares-2025-12-09
+headline: APA Corporation Declares Cash Dividend on Common Shares
+<<<TEXT>>>
+--The board of directors of APA Corporation has declared a regular cash dividend on the company's common shares. The dividend on common shares is payable Feb. 23, 2026, to stockholders of record on Jan. 22, 2026, at a rate of 25 cents per share on the corporation’ s common stock. About APA APA Corporation owns consolidated subsidiaries that explore for and produce oil...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fbbd66a5ac7c838c
+symbol: APA
+published_utc: 2026-01-20T16:15:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-provides-fourth-quarter-2025-supplemental-information-and-schedules
+headline: APA Corporation Provides Fourth-Quarter 2025 Supplemental Information and Schedules Results Conference Call for Feb. 26 at 10 a.m. Central Time
+<<<TEXT>>>
+--APA Corporation today provided supplemental information regarding certain fourth-quarter 2025 financial and operational results. These costs primarily reflect expenses related to the early termination of office leases in the U.S. and U.K. and contract termination. APA curtailed approximately 91 MMcf/d of U.S. natural gas production and 7,600 barrels...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e43b845dfe124974
+symbol: APA
+published_utc: 2026-01-22T16:15:00Z
+url: https://www.nasdaq.com/press-release/kinetik-increases-quarterly-dividend-and-announces-financial-results-timing-2026-01
+headline: Kinetik Increases Quarterly Dividend and Announces Financial Results Timing
+<<<TEXT>>>
+HOUSTON& MIDLAND, Texas---- Kinetik Holdings Inc. today announced that its Board of Directors has declared an increase to its quarterly cash dividend to $0.81 per share, or $3.24 per share on an annualized basis. A complete description of the Plan is included in the Company’ s Form S-3 registration statement filed with the SEC on July 12, 2024 and is posted on the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e33a86ac72734e33
+symbol: APA
+published_utc: 2026-02-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-declares-cash-dividend-common-shares-2026-02-05
+headline: APA Corporation Declares Cash Dividend on Common Shares
+<<<TEXT>>>
+--The board of directors of APA Corporation has declared a regular cash dividend on the company's common shares. The dividend on common shares is payable on May 22, 2026, to stockholders of record on April 22, 2026, at a rate of 25 cents per share on the corporation’ s common stock. About APA APA Corporation owns consolidated subsidiaries that explore for and produce...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 95b32b5ebffe5c4b
+symbol: APA
+published_utc: 2026-02-25T16:15:00Z
+url: https://www.nasdaq.com/press-release/kinetik-reports-fourth-quarter-and-full-year-2025-financial-and-operating-results-and
+headline: Kinetik Reports Fourth Quarter and Full Year 2025 Financial and Operating Results and Provides 2026 Financial Guidance
+<<<TEXT>>>
+HOUSTON& MIDLAND, Texas---- Kinetik Holdings Inc. today reported financial results for the quarter ended December 31, 2025. Kinetik generated Adjusted EBITDA 1 of $252.1 million and $987.7 million, Distributable Cash Flow 1 of $151.7 million and $620.5 million, and Free Cash Flow 1 of$ million and $167.2 million for the three and twelve months ended December 31,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f48030c639e43b43
+symbol: APA
+published_utc: 2026-02-25T16:44:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-announces-fourth-quarter-and-full-year-2025-financial-and-operational
+headline: APA Corporation Announces Fourth-Quarter and Full-Year 2025 Financial and Operational Results
+<<<TEXT>>>
+--APA Corporation today announced fourth-quarter and full-year 2025 results. APA will host a conference call on Feb. 26 at 10 a.m. Central time via the webcast link available on the company website to discuss the results. APA Corporation owns consolidated subsidiaries that explore for and produce oil and natural gas in the United States, Egypt and the United...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d2902d4e9c509179
+symbol: APA
+published_utc: 2026-03-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-announces-dual-listing-nasdaq-texas-2026-03-05
+headline: APA Corporation Announces Dual Listing on Nasdaq Texas
+<<<TEXT>>>
+--APA Corporation today announced the dual listing of its common stock on Nasdaq Texas, a new dual listing venue headquartered in Dallas and designed to serve companies with strong ties to Texas. We are pleased to support the launch of Nasdaq Texas through this dual listing," said John J. Christmann IV, APA Corporation CEO." We believe the new venue will further...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bef78b0ebdb9c26c
+symbol: APA
+published_utc: 2026-04-14T16:15:00Z
+url: https://www.nasdaq.com/press-release/kinetik-announces-quarterly-dividend-and-financial-results-timing-2026-04-14
+headline: Kinetik Announces Quarterly Dividend and Financial Results Timing
+<<<TEXT>>>
+HOUSTON& MIDLAND, Texas---- Kinetik Holdings Inc. has declared a cash dividend of $0.81 per share, or $3.24 per share on an annualized basis. A complete description of the Plan is included in the Company’ s Form S-3 registration statement filed with the SEC on July 12, 2024 and is posted on the Company’ s website at www.kinetik.com. To participate, shareholders of record...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f3039d5d4605b0d4
+symbol: APA
+published_utc: 2026-04-14T16:58:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-provides-first-quarter-2026-supplemental-information-and-schedules
+headline: APA Corporation Provides First-Quarter 2026 Supplemental Information and Schedules Results Conference Call for May 7 at 10 a.m. Central Time
+<<<TEXT>>>
+--APA Corporation today provided supplemental information regarding certain first-quarter 2026 financial and operational results. APA curtailed approximately 88 MMcf/d of U.S. natural gas production and 6,800 barrels per day of U.S. natural gas liquids production in the first quarter in response to weak or negative Waha hub prices. APA will host a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0db91b75f2f6da78
+symbol: APA
+published_utc: 2026-05-06T16:15:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-announces-first-quarter-2026-financial-and-operational-results-2026
+headline: APA Corporation Announces First-Quarter 2026 Financial And Operational Results
+<<<TEXT>>>
+--APA Corporation today announced first-quarter 2026 results. APA will host a conference call on Thursday, May 7, at 10 a.m. Central time via the webcast link available on the company website to discuss the results. APA Corporation owns consolidated subsidiaries that explore for and produce oil and natural gas in the United States, Egypt and the United Kingdom and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cff62c7f9c646bc5
+symbol: APA
+published_utc: 2026-05-18T13:00:00Z
+url: https://www.nasdaq.com/press-release/apache-corporation-tree-grant-program-opens-us-applications-2026-2027-planting-season
+headline: Apache Corporation Tree Grant Program Opens U.S. Applications for 2026-2027 Planting Season
+<<<TEXT>>>
+--Apache Corporation, a subsidiary of APA Corporation, today announced the opening of applications in the U.S. for the Apache Corporation Tree Grant Program’ s 2026-2027 planting season. The program is open to U.S.-based nonprofit organizations and government agencies in Alaska, Louisiana and Texas, where Apache Corporation has operations.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6e0d9c6d956bfa9c
+symbol: APA
+published_utc: 2026-05-20T16:15:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-declares-cash-dividend-common-shares-2026-05-20
+headline: APA Corporation Declares Cash Dividend on Common Shares
+<<<TEXT>>>
+--The board of directors of APA Corporation has declared a regular cash dividend on the company's common shares. The dividend on common shares is payable Aug. 21, 2026, to stockholders of record on July 22, 2026, at a rate of 25 cents per share on the corporation’ s common stock. About APA APA Corporation owns consolidated subsidiaries that explore for and produce oil...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ac3529f7e58df7a1
+symbol: APA
+published_utc: 2026-06-10T07:00:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-advances-alaska-position-strategic-acquisition-2026-06-10
+headline: APA Corporation Advances Alaska Position with Strategic Acquisition
+<<<TEXT>>>
+--APA Corporation today announced an agreement to acquire Savant Alaska, LLC for approximately $70 million in upfront consideration prior to customary closing adjustments, plus additional contingent payments tied to future development of APA’ s eastern North Slope position. It also enhances APA’ s ability to appraise and potentially develop discoveries...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b96557312147df43
+symbol: APA
+published_utc: 2026-07-07T16:15:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-releases-2026-sustainability-progress-report-2026-07-07
+headline: APA Corporation Releases 2026 Sustainability Progress Report
+<<<TEXT>>>
+--APA Corporation today released its 2026 Sustainability Progress Report and accompanying disclosures, highlighting progress across its sustainability priorities during 2025. The report outlines APA’ s approach to sustainability management and provides updates on emissions performance, water stewardship, employee engagement and community...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7625a1afaf22162b
+symbol: APA
+published_utc: 2026-07-08T16:15:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-provides-second-quarter-2026-supplemental-information-and-schedules
+headline: APA Corporation provides second-quarter 2026 supplemental information and schedules results conference call for Aug. 6 at 10 a.m. Central time
+<<<TEXT>>>
+--APA Corporation today provided supplemental information regarding certain second-quarter 2026 financial and operational results. *Includes $109 million realized loss from commodity derivatives. APA curtailed approximately 137 MMcf/d of U.S. natural gas production and 12,300 barrels per day of U.S. natural gas liquids production in the second quarter...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ee9a3eedd7a9ba31
+symbol: APA
+published_utc: 2026-07-29T16:15:00Z
+url: https://www.nasdaq.com/press-release/kinetik-publishes-2025-sustainability-report-2026-07-29
+headline: Kinetik Publishes 2025 Sustainability Report
+<<<TEXT>>>
+HOUSTON& MIDLAND, Texas---- Kinetik Holdings Inc. today published its 2025 Sustainability Report, highlighting its sustainability initiatives, goals, and progress throughout 2025. Reduced Scope 1 and Scope 2 greenhouse gas and methane emissions intensities by approximately 19% and 50%, respectively, from the 2021 baseline Expanded our carbon management...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9e6ef2db4560043a
+symbol: APA
+published_utc: 2026-08-05T16:16:00Z
+url: https://www.nasdaq.com/press-release/apa-corporation-announces-second-quarter-2026-financial-and-operational-results-2026
+headline: APA Corporation announces second-quarter 2026 financial and operational results
+<<<TEXT>>>
+--APA Corporation today announced second-quarter 2026 results. Results can be found on the company’ s website by visiting www.apacorp.com or investor.apacorp.com. APA will host a conference call on Thursday, Aug. 6, at 10 a.m. Central time via the webcast link available on the company website to discuss the results.
+<<<END>>>

@@ -4,7 +4,7 @@ import json
 
 import pytest
 from advisor_helpers import Scripted
-from critic_helpers import ADVISOR_CONFIG, CONFIG, NOW, FakeClerk, ReviewerModel, captured, portfolio, rec_of, tamper
+from critic_helpers import ADVISOR_CONFIG, CONFIG, NOW, FakeClerk, ReviewerModel, captured, rec_of, tamper
 
 from prometheus.agents.critic import claims as cl
 from prometheus.agents.critic import evidence as ev
@@ -27,7 +27,7 @@ class Setup:
             self.order.recommendations[0] = tamper(self.order.recommendations[0], **changes)
         self.rec = rec_of(self.order)
         self.claims = cl.claims_of(self.rec, self.order)
-        got = rc.gather(FakeClerk(self.order), self.order, [(self.rec, "2026-11-05", self.claims)], portfolio(), NOW, CONFIG)
+        got = rc.gather(FakeClerk(self.order), self.order, [(self.rec, "2026-11-05", self.claims)], NOW, CONFIG)
         self.verification = copy.deepcopy(got.verification)
         self.verified = got.verified
 
@@ -338,6 +338,47 @@ def test_newer_bad_news_that_code_finds_is_a_blocker_whatever_the_model_says():
 def test_the_same_news_older_than_ten_days_is_only_a_warning_for_a_person():
     r, _ = Setup().run(ReviewerModel(), mutate=with_fresh(fresh_hit(published="2026-10-20T14:00:00Z")))
     assert "fresh_negative_event" not in codes(r) and [(f.code, f.requires_human) for f in r.findings if f.code == "fresh_negative_news"] == [("fresh_negative_news", True)]
+
+
+# The real sentence that blocked a Procter & Gamble purchase for PepsiCo's news (stored article, 2026-11-13; the first live run of 2026-11-14).
+PEPSICO_SENTENCE = ("Procter & Gamble or PepsiCo: The One Dividend Stock I’d Hold for the Next 20 Years Key TakeawaysProcter & Gamble declared its $1. 0885 quarterly dividend in October, "
+                    "while PepsiCo cut its 2026 core EPS growth outlook and lost KFC’s U.")
+
+
+def test_a_cut_by_another_company_in_the_same_sentence_is_not_this_companys_cut():
+    assert ev.bearish_classes(PEPSICO_SENTENCE, "PG", "Procter & Gamble") == []                                     # it was ["guidance_cut"] and blocked the purchase
+    assert ev.bearish_classes(PEPSICO_SENTENCE, "PEP", "PepsiCo") == ["guidance_cut"]                                # for PepsiCo the same sentence is a real finding
+    for joiner in (", while ", ", whereas ", ", but ", "; "):
+        text = f"Procter & Gamble declared its quarterly dividend{joiner}PepsiCo cut its 2026 guidance."
+        assert ev.bearish_classes(text, "PG", "Procter & Gamble") == [], joiner
+
+
+def test_the_companys_own_cut_still_counts_in_every_shape_of_sentence():
+    assert ev.bearish_classes("Procter & Gamble cut its 2026 core EPS growth outlook.", "PG", "Procter & Gamble") == ["guidance_cut"]
+    assert ev.bearish_classes("PepsiCo declared a dividend, while Procter & Gamble cut its 2026 guidance.", "PG", "Procter & Gamble") == ["guidance_cut"]
+    assert ev.bearish_classes("Procter & Gamble cut its 2026 guidance, while PepsiCo declared a dividend.", "PG", "Procter & Gamble") == ["guidance_cut"]
+    assert ev.bearish_classes("Both Procter & Gamble and PepsiCo cut their 2026 guidance.", "PG", "Procter & Gamble") == ["guidance_cut"]     # one clause names both: it is about both
+
+
+def test_a_later_sentence_about_the_company_is_not_hidden_by_another_companys_earlier_one():
+    text = "PepsiCo cut its 2026 guidance on Tuesday. Procter & Gamble cut its 2026 guidance on Wednesday."
+    assert ev.bearish_classes(text, "PG", "Procter & Gamble") == ["guidance_cut"]                                   # only the FIRST matching sentence was looked at before
+    assert ev.bearish_classes("PepsiCo cut its 2026 guidance on Tuesday. Procter & Gamble raised its dividend.", "PG", "Procter & Gamble") == []
+
+
+def test_a_pattern_spread_over_two_clauses_keeps_the_old_sentence_level_rule():
+    """No single clause shows the class here (the cut is in one, the guidance in the other), so the sentence decides, as before: it names the company."""
+    text = "Procter & Gamble cut, while analysts shrugged, its 2026 guidance."
+    assert len([c for c in ev.CLAUSE_BREAK.split(text) if c.strip()]) == 2 and not any(ev.class_matches("guidance_cut", c) for c in ev.CLAUSE_BREAK.split(text))
+    assert ev.bearish_classes(text, "PG", "Procter & Gamble") == ["guidance_cut"]
+    assert ev.bearish_classes(text.replace("Procter & Gamble", "PepsiCo"), "PG", "Procter & Gamble") == []        # a sentence that does not name the company is still not about it
+
+
+def test_a_review_does_not_block_a_purchase_for_another_companys_news():
+    """End to end through the review: the stored article says PepsiCo cut its outlook; the model labelled it `none`; the code no longer finds a class either, so there is no `fresh_negative_event`."""
+    hit = fresh_hit(text=PEPSICO_SENTENCE, headline="Procter & Gamble or PepsiCo: The One Dividend Stock I’d Hold for the Next 20 Years")
+    r, _ = Setup().run(ReviewerModel(), mutate=with_fresh(hit))
+    assert "fresh_negative_event" not in codes(r) and r.detail.fresh[0].classes == [] and r.detail.fresh[0].label == "none"
 
 
 def test_a_bad_class_that_is_not_in_the_blocking_list_is_a_warning():

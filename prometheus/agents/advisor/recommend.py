@@ -13,10 +13,13 @@ ONE work order in (status `data_ready`), the SAME work order out (status `recomm
      7  quality             the haircut multiplier (quality.py)
      8  rank                composite edge, cost, stance, the blended score that ranks, the regime (ranking.py)
      9  holdings + select   what to do about what is already held; the cooldown; the sleeve of the case picks the new ideas (ranking.py)
-    10  trade plan          entry, stop, target, whole-share size, order style, invalidation rules (trade_plan.py)
+    10  trade plan          entry, stop, target, time stop, order style, invalidation rules: prices and dates, NO size (trade_plan.py; how much is the Account Manager's, entry 80)
     11  THESIS call         MODEL call 2: three sentences and bullets from the FINISHED record, every number and ref checked by code (thesis.py)
     12  write out           records onto `order.recommendations` (a reduction first, then additions, then new ideas by rank), the rest onto `order.candidates`, the runs onto
                             `order.advisor_runs`, one line per record onto the ledger
+
+The Advisor does not use the user's money and recommends no amount (entry 80): `portfolio` is read only for WHICH symbols are held (the holdings pass and the names of the candidates), their shares
+and their cost basis (is a holding in profit, how much has it gained), never the cash or the equity. A reduction, like an opening, carries no number of shares.
 
 The model is called exactly twice. It writes no number that is used: the numbers come from the Data Clerk's metrics and from this module's arithmetic. A failed model call does not stop
 the step: without the plan call there are no text signals (the families that need none still run), without the thesis call a record carries `thesis: null` and says why.
@@ -188,10 +191,6 @@ def _record(s: rk.Scored, checked: Checked | None, family, action: str, reason: 
     extra = extra or {}
     v0 = (checked.v0 if checked and checked.v0 else {})
     direction = s.stance if s.stance in ("bullish", "bearish") else (family.direction if family else "bullish")
-    held_value = s.held_shares * price if price and s.held_shares else None
-    after = None
-    if plan.equity:
-        after = round(((held_value or 0.0) + (plan.suggested_shares * (plan.entry_mid or 0.0) if action in ("open", "add") else 0.0)) / plan.equity, 4)
     return Recommendation(
         symbol=s.symbol, company=s.company, negative_equity=negative_equity(s.metrics), blend=s.blend, stance=s.stance, model_score=checked.model_score if checked else None, score=s.score, supported=bool(s.passed()), consistent=None,
         bullish_signals=v0.get("bullish_signals", 0), bearish_signals=v0.get("bearish_signals", 0), signals_claimed=v0.get("signals_claimed", 0), signals_verified=v0.get("signals_verified", 0),
@@ -203,7 +202,7 @@ def _record(s: rk.Scored, checked: Checked | None, family, action: str, reason: 
         agreement=Agreement(agreement=round(s.agreement, 4), evidence_n=s.evidence_n, completeness=s.passed()[0].completeness if s.passed() else None, confidence=round(s.confidence, 4)),
         ranking=Ranking(composite=s.composite, conflict=s.conflict, stance=s.stance, stance_reason=s.stance_reason,
                         diversity_adjustment=extra.get("diversity_adjustment", False), displaced_by=extra.get("displaced_by")),
-        trade=plan, risk=_risk(s, plan), portfolio_fit=PortfolioFit(position_pct_after=after, funds_feasible=plan.funds_feasible, note=extra.get("portfolio_note")),
+        trade=plan, risk=_risk(s, plan), portfolio_fit=PortfolioFit(note=extra.get("portfolio_note")),
         gates=s.gates.gates, thesis=Thesis(thesis=None, thesis_error="not written yet"),
         audit=Audit(metric_order=run_ids.get("metric_order"), plan_run=run_ids.get("plan"), config_version=config.config_version, family_versions={f: "v1" for f in fam.FAMILIES}))
 
@@ -266,7 +265,6 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
     if order.data is not None:
         order.data.metrics = metrics
     quotes = order.data.quotes if order.data else {}
-    equity = tp.equity_of(portfolio, metrics, quotes)
     filing_sources = order.data.sources_of("filings") if order.data and order.data.results else []
     press_sources = order.data.sources_of("press_releases") if order.data and order.data.results else []
     regime_metrics = next((m for m in metrics.values() if m.get("spy_above_sma_200")), None)
@@ -322,22 +320,19 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
     for symbol, reason in why.items():
         rejected.setdefault(symbol, {"reason": reason})
     add_floor = min((rk.rank_value(s) for s, _, _ in picked), default=None)
-    prices = equity[2]
     records: list[tuple[str, Recommendation]] = []
     for s in (x for x in scored.values() if x.held):
         family = rk.open_family(s, case, regime[0], config) or next(iter(sorted(s.passed("bullish"), key=lambda f: -f.edge_20d)), None)
-        trial = tp.build(family, s.metrics, quotes.get(s.symbol), regime[0], equity, portfolio, today, config, s.symbol)
-        price = prices.get(s.symbol) or tp.price_of(s.symbol, s.metrics, quotes.get(s.symbol))[0]
-        after = ((s.held_shares * price + trial.suggested_shares * (trial.entry_mid or 0)) / equity[0]) if equity[0] and price else None
-        action, reason = rk.holding_action(s, ledger.recent(s.symbol), trial.oversized, after, add_floor, config)
+        price = tp.price_of(s.symbol, s.metrics, quotes.get(s.symbol))[0]
+        action, reason = rk.holding_action(s, ledger.recent(s.symbol), add_floor)
         if action == "hold":
             rejected[s.symbol] = {"reason": f"hold: {reason}"}
             continue
-        plan = trial if action == "add" else tp.build(None, s.metrics, quotes.get(s.symbol), regime[0], equity, portfolio, today, config, s.symbol)
+        plan = tp.build(family if action == "add" else None, s.metrics, quotes.get(s.symbol), today, config, s.symbol)      # a reduction has an entry zone and no amount, like every plan
         records.append((action, _record(s, checked.get(s.symbol), family if action == "add" else None, action, reason, plan, ident, run_ids, regime, evidence.get(s.symbol, {}), config, price)))
     # ---- 10 trade plans for the new ideas, then the records
     for position, (s, family, extra) in enumerate(picked, 1):
-        plan = tp.build(family, s.metrics, quotes.get(s.symbol), regime[0], equity, portfolio, today, config, s.symbol, reaction_atr=next((e.get("reaction_atr") for e in s.events if e["class"] == family.features_used.get("event_class")), None))
+        plan = tp.build(family, s.metrics, quotes.get(s.symbol), today, config, s.symbol, reaction_atr=next((e.get("reaction_atr") for e in s.events if e["class"] == family.features_used.get("event_class")), None))
         price = tp.price_of(s.symbol, s.metrics, quotes.get(s.symbol))[0]
         if case == "funds" and len(picked) > 1:
             extra = {**extra, "portfolio_note": f"{len(picked)} names are one bet: sectors {[p[0].sector_etf or 'unknown' for p in picked]}, betas {[value(p[0].metrics, 'beta_63d') for p in picked]}"}

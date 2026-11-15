@@ -1,6 +1,7 @@
 """Integrity: the record against itself and against the order (Critic spec 8.1). The three REAL captures must pass every check; each check must fail on its own tampering."""
 import pytest
 from critic_helpers import ADVISOR_CONFIG, captured, rec_of, tamper, tampered_order
+from pydantic import ValidationError
 
 from prometheus.agents.critic import integrity as ig
 
@@ -19,10 +20,9 @@ def test_a_real_record_passes_every_check(name):
 CASES = [
     ({"trade.stop_price": 1.0}, "recompute.stop"),
     ({"trade.stop_price": 1.0}, "trade.invalidation"),
-    ({"trade.suggested_shares": 1000}, "recompute.position"),
     ({"trade.entry_zone": [170.0, 171.0]}, "trade.entry"),
     ({"trade.time_stop_date": "2026-11-01"}, "trade.time_stop"),
-    ({"trade.order_style": None}, "trade.size"),
+    ({"trade.order_style": None}, "trade.order_style"),
     ({"trade.invalidation": []}, "trade.invalidation"),
     ({"ranking.composite": 0.05}, "recompute.composite"),
     ({"blend.value": 0.0}, "blend.value"),
@@ -51,6 +51,16 @@ CASES = [
 @pytest.mark.parametrize("changes, check", CASES, ids=[f"{list(c[0])[0]}->{c[1]}" for c in CASES])
 def test_each_check_fails_on_its_own_tampering(changes, check):
     assert check in run(tampered_order("PG_open", **changes)).failed
+
+
+def test_the_critic_has_no_advisor_size_to_check_and_a_record_that_carries_one_is_refused():
+    """Design choices entry 80: the Advisor's record has no `suggested_shares`, `position_pct` or `equity` any more, so no check of them exists (`trade.size` is now `trade.order_style`, and `recompute.position`
+    is gone) and a record that still carries one does not match the schema (the models forbid unknown fields): the Critic's own validation calls it a `record_defect`."""
+    plain = run(captured("PG_open"))
+    assert plain.failures == [] and "recompute.position" not in plain.checked and "trade.size" not in plain.checked and "trade.order_style" in plain.checked
+    for field, value in (("suggested_shares", 1000), ("position_pct", 0.99), ("equity", 1.0), ("size_note", "x"), ("funds_feasible", True)):
+        with pytest.raises(ValidationError):
+            run(tampered_order("PG_open", **{f"trade.{field}": value}))
 
 
 def test_a_feature_a_family_says_it_used_must_be_the_feature():

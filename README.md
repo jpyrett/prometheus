@@ -15,20 +15,24 @@ capstone/
 │   ├── agents/             # Data Clerk, Advisor, Critic, Account Manager, Trader
 │   │   ├── data_clerk/     # data_clerk_agent.py (DataClerk: the LLM agent; `request_metrics` calculates numbers), data_toolbox.py (DataToolbox: plain Python, no LLM), bars.py / technicals.py / fundamentals.py / metrics_catalog.py (the numbers)
 │   │   ├── critic/         # critic.py (Critic: approve or deny each recommendation), review.py (its nine steps), integrity/recheck/evidence/timing/risk/value/scoring/report.py, config.py, record.py (design choices entries 56 to 59)
+│   │   ├── trader/         # trader.py (Trader: executes the permitted trades against a SIMULATED broker, paper or backtest; a model with four guarded tools, then a code sweep), execute.py (its ten steps), tickets/broker/simulator/record/config/report.py, replay.py (the free replay command); design choices entries 73 to 75, design/trader_v1_final_spec.md
 │   │   ├── advisor/        # advisor.py (v0 `advise`: a score from checked quotes; v1 `generate_recommendations`: ranked, audited recommendations; recommend.py is its twelve steps, config/families/blend/gates/quality/ranking/trade_plan/events/thesis/record its parts; guide: design/week5_advisor_implementation.md)
-│   │   └── account_manager/ # account_manager.py (AccountManager: the LLM agent behind RaiseFunds, a Tree of Thought; holds the user's profile), decisions.py (the Critic's verdicts become trade decisions: Ask or Auto)
+│   │   └── account_manager/ # account_manager.py (AccountManager: the LLM agent behind RaiseFunds, a Tree of Thought; holds the user's profile; the Postgres account book: funds, holdings, risk, gain and counts), decisions.py (the Critic's verdicts become trade decisions: Ask or Auto), sizing.py (HOW MUCH to buy: the user's limits, the cash, round-robin in Auto, an even split or the largest order; design choices entry 80; every threshold in configs/account_manager_v1.json)
 │   ├── mcp/                # Local FastMCP servers (tools / resources / prompts)
 │   ├── rag/                # Embeddings, vector store, retrieval
 │   ├── reasoning/          # raise_funds.py: the Tree of Thought for what to sell to buy a stock (a LangGraph; design/week4_tot_guide.md)
 │   ├── prompts/            # Prompt templates (per agent / use case)
 │   ├── langchain/          # LangChain pieces you port from labs
-│   ├── langgraph/          # desk.py: the top-level graph, account_manager -> data_clerk -> advisor (-> critic -> account_manager_decision with --critic; -> account_manager_funds with --raise-funds)
+│   ├── langgraph/          # desk.py: the top-level graph, account_manager -> data_clerk -> advisor (-> critic -> account_manager_decision with --critic; -> account_manager_funds with --raise-funds; -> trader with --trade; --account uses a saved account)
 │   ├── tools/              # Local Python tools (calc, sentiment, search, …)
 │   ├── models/             # OpenRouter client wiring + domain JSON schemas
 │   ├── memory/             # Short / long-term memory (later modules)
 │   ├── evals/              # Hallucination, brittleness, cost/quality/latency
-│   └── common/             # Shared non-agent helpers (work_order.py: the work order every agent reads; user_profile.py: risk tolerance and Ask/Auto; market_calendar.py: trading days and the trading window)
-├── configs/                # Non-code config (portfolios/ and profiles/jacob_pyrett.json: the static sample portfolio and user profile; advisor_v1.json, critic_v1.json: every threshold; market_calendar.json)
+│   ├── persistence/        # accounts.py: the Postgres account book (cash, holdings, trades, recommendation counts)
+│   └── common/             # Shared non-agent helpers (work_order.py: the work order every agent reads; user_profile.py: risk tolerance and Ask/Auto; user_account.py: the holder's name, account number and screen fields; market_calendar.py: trading days and the trading window)
+├── configs/                # Non-code config (portfolios/ and profiles/jacob_pyrett.json: the static sample portfolio and user profile; advisor_v1.json, critic_v1.json, account_manager_v1.json (the sizing), trader_v1.json: every threshold; market_calendar.json)
+├── sql/                    # prometheus_accounts.sql and seed_test_users.sql (the account book), pg_hba.conf
+├── docker-compose.yml      # Postgres 18 for the account book, bound to 127.0.0.1 (scripts/setup_postgres.sh)
 ├── data/
 │   ├── samples/            # Small explainability samples for demos
 │   ├── raw/                # Downloaded / API dumps (local)
@@ -37,7 +41,8 @@ capstone/
 ├── tests/                  # pytest (FastMCP tools + later app tests)
 ├── main.py                 # App entry: LocalLLM + FastMCP smoke / HITL
 ├── test_prometheus.sh      # Main script: prompts for symbol / term / source / from_days_ago, runs the desk (a LangGraph passing one work order); pytest stays in tests/
-├── test_recommendations.sh # Recommendations end to end: a symbol, a list, a company, a brand or a phrase ("Pizza", 'MCD, YUM, "Burger King"') to a ranked report; Advisor on gpt-oss-120b (design choices entry 53)
+├── test_prometheus.sh      # the desk by parameters; `--session`: a user session end to end (create a user, add money, a request in your own words, the real agents on the LangGraph desk, the portfolio before and after: entry 78)
+├── test_recommendations.sh # Recommendations end to end: a symbol, a list, a company, a brand or a phrase ("Pizza", 'MCD, YUM, "Burger King"') to a ranked report; Advisor on gpt-oss-120b (design choices entry 53); with the Critic, and with --trade the Trader (simulated)
 ├── AGENTS.md               # Instructions for Cursor agents: how to run, where things are, what never to run unasked
 ├── HowToRun.txt            # Copy-paste shell commands
 ├── pytest.ini              # asyncio_mode=auto for FastMCP Client tests
@@ -182,10 +187,10 @@ Suggested growth order (manual coding):
 | Folder target        | Role |
 |----------------------|------|
 | `agents/data_clerk/` Data Clerk | Retrieve / filter / aggregate; call tools. `data_clerk_agent.py` is the agent; `data_toolbox.py` is its toolbox. Built (search news, press releases and filings) |
-| `agents/advisor/` Advisor | Recommend opportunities; memory + tools. Version 0 (`advise`) and version 1 (`generate_recommendations`, week 5) built |
-| `agents/critic/` Critic | Approve or deny each recommendation (Critic v1, `design/critic_v1_final_spec.md`, entries 56 to 59): asks the Data Clerk again for the numbers, a quote and the sources and compares; judges risk against the user's profile, expiry (the market's trading window) and value (against the six-month average); one model call per recommendation (Z.ai GLM 5.3) that only labels quotes; a score from 0 to 100. Built |
-| `agents/account_manager/` Account Manager | Cash, T+1, positions, approve trades. RaiseFunds, the user's profile and `decide_trades` (the Critic's verdicts become permissions: Ask or Auto) are built; as nodes in `langgraph/desk.py` |
-| `agents/` Trader     | Paper trade / backtest; future Alpaca. Not built |
+| `agents/advisor/` Advisor | Recommend opportunities; memory + tools. Version 0 (`advise`) and version 1 (`generate_recommendations`, week 5) built. It recommends companies and a plan of prices and dates; no amount, and it never reads the user's cash (entry 80) |
+| `agents/critic/` Critic | Approve or deny each recommendation (Critic v1, `design/critic_v1_final_spec.md`, entries 56 to 59): asks the Data Clerk again for the numbers, a quote and the sources and compares; judges the company's risk against the user's risk tolerance, expiry (the market's trading window) and value (against the six-month average); one model call per recommendation (Z.ai GLM 5.3) that only labels quotes; a score from 0 to 100. It does not size and is never given the portfolio (entry 80). Built |
+| `agents/account_manager/` Account Manager | Cash, T+1, positions, approve trades. RaiseFunds, the user's profile, `decide_trades` (the Critic's verdicts become permissions: Ask or Auto) and `sizing.py` (how much to buy or sell, from the user's money and limits; entry 80) are built; as nodes in `langgraph/desk.py`. The Postgres account book (funds, holdings, booked trades) and the Trader's only door: its prices, its portfolio, and the owner of the funds while it trades: it approves each trade and records each fill as it happens (`handshake.py`, entry 81): a SELECT, one transaction under row-level locks on the whole portfolio, a SELECT again, and a trade that fails is shown to the user and never retried (entry 82); in Ask mode it asks how much to buy when the request did not say (`clarify.py`, entry 85) |
+| `agents/trader/` Trader | Executes the permitted trades against a SIMULATED broker (Trader v1, `design/trader_v1_final_spec.md`, entries 73 to 75): `paper` fills at the current quote, `backtest` at the next session's open from the stored daily bars and follows each purchase to its stop, target or time stop. There is no live trading. A model (gpt-oss-120b, temperature 0) works through four tools that cannot name a symbol, a side or a number of shares; code places what it leaves and checks everything. Reaches the world only through the Account Manager and holds no cash of its own: every trade is approved and recorded by the Account Manager, one at a time (entry 81). `desk --critic --trade`, `./test_recommendations.sh --trade`, and the free replay `python -m prometheus.agents.trader.replay`. Built; no live run yet. Future Alpaca: not built |
 
 ## Intentional non-goals for this scaffold
 

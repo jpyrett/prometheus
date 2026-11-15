@@ -180,7 +180,8 @@ def test_the_report_shows_the_companies_the_ranking_best_to_worst_and_each_recom
     ranking = text[text.index("RANKING, best to worst"):text.index("RECOMMENDATIONS  (")]
     assert ranking.index("DPZ") < ranking.index("PZZA") < ranking.index("YUM") and "RECOMMENDED #1" in ranking and "on topic" in ranking and "weak" in ranking and "0.71" in ranking   # the relevance column
     assert "RECOMMENDATIONS  (3 of the top 5 asked for; the others did not pass: see the ranking above)" in text
-    assert "plan    : entry" in text and "stop $" in text and "size    : " in text and "thesis  : Open it on its capital return" in text and "market regime: trend" in text
+    assert "plan    : entry" in text and "stop $" in text and "thesis  : Open it on its capital return" in text and "market regime: trend" in text
+    assert "size    :" not in text and "of equity" not in text and "funds feasible" not in text and "share(s)" not in text          # entry 80: the Advisor's plan has no size, so the report shows none
     assert "MODEL CALLS (Advisor): plan: 1 call(s)" in text and "Nothing here is bought or sold" in text
 
 

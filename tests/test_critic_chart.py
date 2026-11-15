@@ -164,7 +164,7 @@ def test_a_review_carries_the_chart_dimension_and_the_patterns_behind_it():
 def test_a_dead_cat_bounce_denies_the_recommendation_whatever_the_rest_says():
     new = {k: v for k, v in DEAD_CAT.items() if k not in ("last_close", "sma_50")}     # SNDK's own close (806) is already under its 50-day mean (1517); only the new numbers are added
     out = review(captured("SNDK"), changes={"SNDK": new})["SNDK"]
-    assert not out["approved"] and "dead_cat_bounce" in out["denial_reasons"] and out["score"] <= 49 and out["bonus"] == 0 and out["approved_shares"] == 0
+    assert not out["approved"] and "dead_cat_bounce" in out["denial_reasons"] and out["score"] <= 49 and out["bonus"] == 0 and "approved_shares" not in out
     assert any(p["name"] == "dead_cat_bounce" for p in out["chart"]["patterns"]) and any(b["code"] == "dead_cat_bounce" and b["dimension"] == "chart" for b in out["blockers"])
     listed = [b["code"] for b in out["blockers"]]
     assert listed == sorted(listed, key=BLOCKER_ORDER.index) and listed.index("falling_knife") < listed.index("dead_cat_bounce")      # the closed order: value, then chart

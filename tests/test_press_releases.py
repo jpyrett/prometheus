@@ -92,31 +92,46 @@ def test_html_entities_are_decoded_like_in_news(tmp_path):
     assert doc.metadata["headline"] == "Procter & Gamble beats" and doc.page_content == "Procter & Gamble beats\n\nIt's up."
 
 
-# ---------------------------------------------------------------- the loader, on broken input (it names the file and line)
+# ---------------------------------------------------------------- the loader, on broken input: a release that fails is discarded (design choices entry 83)
 
-@pytest.mark.parametrize("text, message", [
-    (GOOD.replace("<<<END>>>\n", ""), "the record has no <<<END>>>"),
-    (GOOD + GOOD.replace("id: abc123", "id: abc124").replace("<<<END>>>\n", "") + GOOD, "a new record starts before the one at line"),
-    ("stray text\n" + GOOD, "text outside a record"),
-    (GOOD.replace("<<<TEXT>>>", "<<<BODY>>>"), "unknown marker '<<<BODY>>>'"),
-    (GOOD.replace("headline: A headline", "headline without a colon"), "header line without a colon"),
-    (GOOD.replace("id: abc123\n", ""), "the record is missing id"),
-    (GOOD.replace("symbol: AAPL\n", ""), "the record is missing symbol"),
-    (GOOD.replace("headline: A headline\n", ""), "the record is missing headline"),
-    (GOOD.replace("2026-10-23T19:03:00Z", "yesterday"), "bad published_utc 'yesterday'"),
-    (GOOD.replace("symbol: AAPL", "symbol: ../../.env"), "not a valid ticker symbol"),
-])
-def test_a_record_the_toolbox_would_not_have_written_stops_the_load_with_the_file_and_line(tmp_path, text, message):
-    with pytest.raises(ValueError, match=re.escape(message)) as error:
-        load_text(tmp_path, text)
-    assert "AAPL_PRs.txt:" in str(error.value)
-
-
-def test_bytes_that_are_not_utf8_name_the_line(tmp_path):
+def load_with_skips(tmp_path, text):
     path = tmp_path / "AAPL_PRs.txt"
-    path.write_bytes(GOOD.encode().replace(b"Some text.", b"Some \xff text."))
-    with pytest.raises(ValueError, match="AAPL_PRs.txt:8: not valid UTF-8"):
-        load_press_releases(path)
+    path.write_text(text, encoding="utf-8")
+    skipped = []
+    return load_press_releases(path, skipped), skipped
+
+
+@pytest.mark.parametrize("text, loaded, message", [
+    (GOOD.replace("<<<END>>>\n", ""), 0, "the record has no <<<END>>>"),
+    (GOOD + GOOD.replace("id: abc123", "id: abc124").replace("<<<END>>>\n", "") + GOOD, 2, "the record has no <<<END>>> (a new record starts at line"),
+    ("stray text\n" + GOOD, 1, "text outside a record"),
+    (GOOD + "stray text\n", 0, "text follows its <<<END>>>"),
+    (GOOD.replace("<<<TEXT>>>", "<<<BODY>>>"), 0, "unknown marker '<<<BODY>>>'"),
+    (GOOD.replace("headline: A headline", "headline without a colon"), 0, "header line without a colon"),
+    (GOOD.replace("id: abc123\n", ""), 0, "the record is missing id"),
+    (GOOD.replace("symbol: AAPL\n", ""), 0, "the record is missing symbol"),
+    (GOOD.replace("headline: A headline\n", ""), 0, "the record is missing headline"),
+    (GOOD.replace("2026-10-23T19:03:00Z", "yesterday"), 0, "bad published_utc 'yesterday'"),
+    (GOOD.replace("symbol: AAPL", "symbol: ../../.env"), 0, "not a valid ticker symbol"),
+])
+def test_a_release_the_toolbox_would_not_have_written_is_skipped_completely_and_says_where_and_why(tmp_path, text, loaded, message):
+    docs, skipped = load_with_skips(tmp_path, text)
+    assert len(docs) == loaded and skipped and message in skipped[0].reason and "AAPL_PRs.txt:" in skipped[0].where
+
+
+def test_a_real_release_that_fails_is_discarded_and_the_real_ones_around_it_still_load(tmp_path):
+    first, second, third = ("<<<PRESS_RELEASE>>>\n" + part for part in FIXTURE.read_text(encoding="utf-8").split("<<<PRESS_RELEASE>>>\n")[1:])
+    broken = second.replace("published_utc: 2025-12-01T17:10:00Z", "published_utc: Dec 1")
+    assert broken != second
+    docs, skipped = load_with_skips(tmp_path, first + broken + third)
+    assert [d.id for d in docs] == ["pr:44107d69ebe0e861", "pr:519ab77bd1631dd7"] and len(skipped) == 1 and skipped[0].where.endswith("AAPL_PRs.txt:10")
+
+
+def test_bytes_that_are_not_utf8_discard_that_release_and_name_the_line(tmp_path):
+    path = tmp_path / "AAPL_PRs.txt"
+    path.write_bytes(GOOD.encode().replace(b"Some text.", b"Some \xff text.") + GOOD.replace("abc123", "abc124").encode())
+    skipped = []
+    assert [d.id for d in load_press_releases(path, skipped)] == ["pr:abc124"] and len(skipped) == 1 and "line 8: not valid UTF-8" in skipped[0].reason
 
 
 def test_an_empty_file_is_no_press_releases_and_a_byte_order_mark_is_ignored(tmp_path):
@@ -159,12 +174,16 @@ def test_the_loader_command_line_shows_what_a_press_release_file_becomes(capsys)
     assert "Apple reports fourth quarter results" in out and "pr:44107d69ebe0e861" in out
 
 
-def test_the_loader_command_line_reports_a_broken_file_without_a_traceback(tmp_path, capsys):
+def test_the_loader_command_line_says_a_broken_release_was_discarded_without_a_traceback_and_a_filing_file_still_stops_it(tmp_path, capsys):
     bad = tmp_path / "AAPL_PRs.txt"
     bad.write_text(GOOD.replace("<<<END>>>\n", ""), encoding="utf-8")
-    assert loaders_main([str(bad), "--press-releases"]) == 1
+    assert loaders_main([str(bad), "--press-releases"]) == 0                                                  # entry 83: a failed release is discarded, not an error
     captured = capsys.readouterr()
-    assert "ERROR:" in captured.err and "Traceback" not in captured.err
+    assert "1 record failed and was discarded (never loaded)" in captured.out and "the record has no <<<END>>>" in captured.out and "Traceback" not in captured.err
+    filings = tmp_path / "AAPL.txt"
+    filings.write_text("<<<FILING>>>\naccession: 0000320193-25-000079\n", encoding="utf-8")                      # filings keep the strict rule: the file stops the load
+    assert loaders_main([str(filings), "--filings"]) == 1
+    assert "ERROR:" in capsys.readouterr().err
 
 
 # ---------------------------------------------------------------- two collections in one folder
@@ -356,7 +375,7 @@ def test_the_toolbox_appends_to_symbol_underscore_PRs_in_the_press_release_folde
     stats = toolbox.fetch_press_releases("aapl", from_date=400)
     capsys.readouterr()
     path = tmp_path / "prs" / "AAPL_PRs.txt"
-    assert stats == {"symbol": "AAPL", "path": str(path), "fetched": 3, "written": 3, "duplicates": 0} and path.exists()
+    assert stats == {"symbol": "AAPL", "path": str(path), "fetched": 3, "written": 3, "duplicates": 0, "failed": 0} and path.exists()
     assert not (tmp_path / "prs" / "AAPL.txt").exists() and not (tmp_path / "data" / "press_releases").exists()  # neither the old name nor the old folder
     name, url, params, headers = toolbox.asked[0]
     assert url == data_toolbox.FINNHUB_PRESS_URL and params["symbol"] == "AAPL" and headers == ["X-Finnhub-Token"] and "token" not in str(params)

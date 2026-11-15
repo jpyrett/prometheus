@@ -1,0 +1,90 @@
+<<<PRESS_RELEASE>>>
+id: d08a4e1f2130e595
+symbol: EOG
+published_utc: 2025-12-11T09:00:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-appoints-john-d-chandler-board-directors-2025-12-11
+headline: EOG Resources Appoints John D. Chandler to Board of Directors
+<<<TEXT>>>
+--EOG Resources, Inc. today announced the appointment of John D. Chandler to its Board of Directors, effective December 10, 2025. Chandler also serves as a director of Matrix Services Company and LSB Industries, Inc.. About EOG EOG Resources, Inc. is one of the largest crude oil and natural gas exploration and production companies in the United States with proved...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 43b9ffaf8acd3d21
+symbol: EOG
+published_utc: 2025-12-16T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-present-upcoming-conference-2025-12-16
+headline: EOG Resources to Present at Upcoming Conference
+<<<TEXT>>>
+--EOG Resources, Inc. is scheduled to present at the Goldman Sachs Energy, CleanTech and Utilities Conference at 9:15 a.m. Central time on Wednesday, January 7. Ann Janssen, Executive Vice President and Chief Financial Officer, will present on behalf of EOG. About EOG EOG Resources, Inc. is one of the largest crude oil and natural gas exploration and production...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 273bdd02adc3e7fe
+symbol: EOG
+published_utc: 2026-01-13T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-schedules-conference-call-and-webcast-fourth-quarter-and-full-year-2025
+headline: EOG Resources Schedules Conference Call and Webcast of Fourth Quarter and Full Year 2025 Results for February 25, 2026
+<<<TEXT>>>
+--EOG Resources, Inc. will host a conference call and webcast to discuss fourth quarter and full year 2025 results on Wednesday, February 25, 2026, at 9 a.m. Central time. If you have any questions, please contact Angie Lewis at 713-651-6722.. About EOG EOG Resources, Inc. is one of the largest crude oil and natural gas exploration and production companies in the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f760ddb1936d7492
+symbol: EOG
+published_utc: 2026-02-18T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-present-upcoming-conference-2026-02-18
+headline: EOG Resources to Present at Upcoming Conference
+<<<TEXT>>>
+--EOG Resources, Inc. is scheduled to present at the Raymond James 47 th Annual Institutional Investors Conference at 7:05 a.m. Central time on Tuesday, March 3. About EOG EOG Resources, Inc. is one of the largest crude oil and natural gas exploration and production companies in the United States with proved reserves in the United States and Trinidad.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 11c5b45e641aa32c
+symbol: EOG
+published_utc: 2026-03-24T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-schedules-conference-call-and-webcast-first-quarter-2026-results-may-6
+headline: EOG Resources Schedules Conference Call and Webcast of First Quarter 2026 Results for May 6, 2026
+<<<TEXT>>>
+--EOG Resources, Inc. will host a conference call and webcast to discuss first quarter 2026 results on Wednesday, May 6, 2026, at 9 a.m. Central time. If you have any questions, please contact Angie Lewis at 713-651-6722.. About EOG EOG Resources, Inc. is one of the largest crude oil and natural gas exploration and production companies in the United States with proved...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b3dcd98c2918a295
+symbol: EOG
+published_utc: 2026-05-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-reports-first-quarter-2026-results-2026-05-05
+headline: EOG Resources Reports First Quarter 2026 Results
+<<<TEXT>>>
+--EOG Resources, Inc. today reported first quarter 2026 results. Earned net income of $2.0 billion, or $3.70 per share, and adjusted net income of $1.8 billion, or $3.41 per share Delivered net cash provided by operating activities of $3.0 billion and Adjusted CFO 1 of $3.1 billion Generated $1.5 billion of free cash flow Declared regular quarterly dividend of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c895574ba9061143
+symbol: EOG
+published_utc: 2026-05-12T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-present-upcoming-conference-2026-05-12
+headline: EOG Resources to Present at Upcoming Conference
+<<<TEXT>>>
+--EOG Resources, Inc. is scheduled to present at the Bernstein Strategic Decisions Conference at 10:00 a.m. Central time on Wednesday, May 27. Ezra Y. Yacob, Chairman and Chief Executive Officer, will present on behalf of EOG. About EOG EOG Resources, Inc. is one of the largest crude oil and natural gas exploration and production companies in the United States with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 31a3a361ec4c91b7
+symbol: EOG
+published_utc: 2026-06-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-present-upcoming-conference-2026-06-03
+headline: EOG Resources to Present at Upcoming Conference
+<<<TEXT>>>
+--EOG Resources, Inc. is scheduled to present at the J.P. Morgan Energy, Power, Renewables and Mining Conference at 7:35 a.m. Central time on Tuesday, June 23. Jeffrey R. Leitzell, Executive Vice President and Chief Operating Officer, will present on behalf of EOG.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0bea24a71f60064d
+symbol: EOG
+published_utc: 2026-06-23T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-schedules-conference-call-and-webcast-second-quarter-2026-results
+headline: EOG Resources Schedules Conference Call and Webcast of Second Quarter 2026 Results for August 5, 2026
+<<<TEXT>>>
+--EOG Resources, Inc. will host a conference call and webcast to discuss second quarter 2026 results on Wednesday, August 5, 2026, at 9 a.m. Central time. Please visit the Investors/Events& Presentations page on the EOG website to access a live webcast of the conference call. If you have any questions, please contact Angie Lewis at 713-651-6722..
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8cf57fa5c01f752e
+symbol: EOG
+published_utc: 2026-08-04T16:15:00Z
+url: https://www.nasdaq.com/press-release/eog-resources-reports-second-quarter-2026-results-2026-08-04
+headline: EOG Resources Reports Second Quarter 2026 Results
+<<<TEXT>>>
+Earned net income of $2.72 billion, or $5.15 per share, and adjusted net income of $2.68 billion, or $5.07 per share Delivered net cash provided by operating activities of $4.7 billion and adjusted CFO 1 of $4. 4 billion Generated $2.8 billion of free cash flow Declared regular quarterly dividend of $1.02 per share Paid $540 million in regular dividends and...
+<<<END>>>

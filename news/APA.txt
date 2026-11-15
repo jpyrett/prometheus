@@ -1,0 +1,1229 @@
+<<<ARTICLE>>>
+id: finnhub:143590004
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=748d2e99527c597deb5e3c145b0d96e87ff37ef64472dc7be11d2b8d6cd7ed4f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Q3 Earnings Beat on Strong Oil Prices and U.S. Output
+<<<SUMMARY>>>
+APA's Q3 adjusted earnings more than doubled as higher oil prices and U.S. output lifted results, with 2026 free cash flow guidance raised $600M to $2.9B.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590056
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9b6d61b8df52fe847c81aebbc5131674a948cb90a8885c8c947a0d48cf177500
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Q3 Earnings Call Highlights Higher Cash Flow and 2027 Plans
+<<<SUMMARY>>>
+APA raises its 2026 free cash flow outlook to $2.9B, targets lower debt and plans higher 2027 spending to advance Suriname development and exploration projects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590086
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:01:39Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=96e2edb639c71c4239d3f8ec928b81dce9223353a2529d81127f78d77a209948
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corporation 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-06. The following slide deck was published by APA Corporation in conjunction with their 2026 Q3 earnings call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143542152
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:32:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed1f770d1421186189cbfb71a518a373f7cba1ee55a9e112f864605a8a09aaf6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corp (APA) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+GranMorgu's carry deal and a lighter debt load shaped APA's latest quarter
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541096
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c7752c38ea4815418099f3a440aad6c2550c1108d4ac99891334fbb500f9079
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: What APA (APA) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+APA (NASDAQ:APA) raised its 2026 free cash flow outlook to $2.9 billion and set a new target to reduce net debt to $2 billion, as stronger production and commodity prices supported third-quarter results and shareholder returns. The oil and gas producer reported net income attributable to common sto
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143542355
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:14:46Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=df6e9ab07b67bfac415e09482391689547bfe4324c3bd394f263df6449ece2f2
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corporation (APA) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+APA Corporation (APA) Q3 2026 Earnings Call November 5, 2026 11:00 AM ESTCompany ParticipantsStephane Aka - Managing Director of Investor RelationsJohn...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587984
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:08:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4e23522629d8308b484413d009393d44ffe46df726c4c1c1ecaab2161937224a
+image_url: 
+category: company
+tickers: APA
+keywords: 
+headline: Barclays Maintains Equal-Weight on APA, Raises Price Target to $44
+<<<SUMMARY>>>
+Barclays  analyst Betty Jiang   maintains APA (NASDAQ:APA) with a Equal-Weight and raises the price target from $40 to $44.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587985
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:10:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=94f2c6ff7af089f838595959d6342d90886391a57800c0181825647300fb3e64
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Stock-market-chart-with-green-candlestic.jpg?width=2048&height=1536
+category: company
+tickers: APA
+keywords: 
+headline: APA Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+APA (NASDAQ:APA) reported third-quarter financial results on Thursday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537437
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T10:42:38Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=13548ffbfc42a2e8266d4562a26d92379f9e467a42a06ab0b4deffac960b31c4
+image_url: 
+category: company
+tickers: APA
+keywords: 
+headline: Stephens & Co. Maintains Equal-Weight on APA, Raises Price Target to $51
+<<<SUMMARY>>>
+Stephens &amp; Co.  analyst Mike Scialla   maintains APA (NASDAQ:APA) with a Equal-Weight and raises the price target from $49 to $51.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537438
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T10:06:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8df6c3e26ce8c58fb1d32a981edb35f9d12c3038f8dfab5d97cdbf1b49aab5fd
+image_url: 
+category: company
+tickers: APA
+keywords: 
+headline: Evercore ISI Group Maintains In-Line on APA, Raises Price Target to $53
+<<<SUMMARY>>>
+Evercore ISI Group  analyst Stephen Richardson   maintains APA (NASDAQ:APA) with a In-Line and raises the price target from $40 to $53.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143496339
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T23:30:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=206f26fa5c23a384d99c2165f1c4bf2dd51022b18034205c60ecca93c29bbc36
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corporation (NASDAQ:APA) beats expectations in strong Q3 2026
+<<<SUMMARY>>>
+Oil and gas producer APA Corporation (NASDAQ:APA) reported Q3 2026 results exceeding the market’s revenue expectations, with revenue up 51% year on year to $2.77 billion. Its non-GAAP profit of $1.94 per share was 21.9% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143496340
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:50:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=383848391e9e952e285c4bd8a926810ad3f2e5bfcaff2f46fa27c8ba6a27c7fe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA (APA) Q3 Earnings and Revenues Beat Estimates
+<<<SUMMARY>>>
+APA (APA) delivered earnings and revenue surprises of +34.72% and +18.50%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494991
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:34:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2211cc7852cc0a5e17e558cda4509dc4292c26f9717306c9ca117600e3be46bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+HOUSTON (AP) — HOUSTON (AP) — APA Corporation (APA) on Wednesday reported third-quarter earnings of $698 million.On a per-share basis, the Houston-based company said it had profit of $2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494992
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T21:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=132b14afbed0095f627e086ba8a0396547d64683dc2dabfc3218902d3e0356cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corporation announces third-quarter 2026 financial and operational results
+<<<SUMMARY>>>
+HOUSTON, Nov. 04, 2026 (GLOBE NEWSWIRE) -- APA Corporation (Nasdaq: APA) today announced third-quarter 2026 results. Results can be found on the company’s website by visiting www.apacorp.com or investor.apacorp.com. APA will host a conference call on Thursday, Nov. 5, at 10 a.m. Central time via the webcast link available on the company website to discuss the results. Following the conference call, a replay will be available for one year on the “Investors” page of the company’s website. About AP
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494711
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T20:37:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae4add0e56b97e51df3378547181cfe5375c63ecd8b14925fdd7995286ce5d8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: EOG Resources Earnings Ahead: What Past Reactions Say About The Stock
+<<<SUMMARY>>>
+EOG Resources (NYSE:EOG) is scheduled to report its earnings on Thursday, November 5, 2026. The company has a market value of about $81.6 billion. Over the last twelve months it generated $26.6 billion in revenue and $9.4 billion in operating profit, with net income of $6.9 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537439
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:17:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=aae8889eea6a774fda2d65c5de983ea6ae511f1c7d9aa4a42316932573ff603b
+image_url: 
+category: company
+tickers: APA
+keywords: 
+headline: APA Q3 Adj. EPS $1.94 Beats $1.55 Estimate, Sales $2.812B Beat $2.503B Estimate
+<<<SUMMARY>>>
+APA (NASDAQ:APA) reported quarterly earnings of $1.94 per share which beat the analyst consensus estimate of $1.55 by 25.16 percent. This is a 108.6 percent increase over earnings of $0.93 per share from the same period
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143475728
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T07:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a0e44207d87a30e11a1054d0072a3c6519befe4b57c08e57c3148ce445cf4d9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Zacks.com featured highlights include APA, T-Mobile, BP and Centene
+<<<SUMMARY>>>
+As market volatility intensifies the value-versus-growth debate, APA and three other GARP stocks combine attractive valuations with sustainable earnings growth potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143450016
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:50:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0503b5e53ea2d0cf23a899e9e8c73ad47591545a7440357b8acdf8b228011e36
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: SM Energy (SM) Q3 Earnings Lag Estimates
+<<<SUMMARY>>>
+SM Energy (SM) delivered earnings and revenue surprises of -3.94% and +10.24%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448322
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:09:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c8f279d21a0b4f24254abfa37455c367c8dedad4632fb5eb4f721e84671ef6d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: What Just Happened To Devon Energy Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448375
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ccbcf470ae09037f9236115ee2cc82d967223ebe377446e6db5cbaf4cc64d9e7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: 4 GARP Stocks to Buy Now as Volatility Fuels Value vs. Growth Debate
+<<<SUMMARY>>>
+Discover four GARP stocks, APA, T-Mobile, BP and Centene, that combine attractive valuations with sustainable earnings growth potential amid market volatility.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449293
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:02:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=63b3c20ef8633eac644c2e39d6b617e3c23e56adab41b0a02ae4fd7069d4e34b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Are Wall Street Analysts Predicting APA Corporation Stock Will Climb or Sink?
+<<<SUMMARY>>>
+APA Corporation has significantly outperformed the broader market over the past year, and analysts are moderately optimistic about the stock’s prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446182
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:15:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d673c79f21fd84d61c8da36e47d2e77ff3a69817a0aea78f2ce2efa00b4dcb15
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: What Analyst Projections for Key Metrics Reveal About APA (APA) Q3 Earnings
+<<<SUMMARY>>>
+Get a deeper insight into the potential performance of APA (APA) for the quarter ended September 2026 by going beyond Wall Street's top-and-bottom-line estimates and examining the estimates for some of its key metrics.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143407199
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T00:25:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8c13496acaafd59ec11e37c6e539113dc9e6f0408c09961b5460cde6dc1e365c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Vitesse Energy (VTS) Q3 Earnings Meet Estimates
+<<<SUMMARY>>>
+Vitesse (VTS) delivered earnings and revenue surprises of 0.00% and -2.52%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401761
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T20:06:11Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a4c59774edb970ef6b281a1c9daf1f70bd641127a29446b83c1b12f15b06bd2c
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: APA
+keywords: 
+headline: S&P 500 Top Movers Today: IDXX Jumps 20.39%, LITE Drops 18.23%
+<<<SUMMARY>>>
+Today's S&P 500 top movers include IDEXX Laboratories up 20.39% and Lumentum down 18.23%, with other gainers above 5% and double-digit declines among several losers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401223
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T19:27:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b9a480ac8c344eaba13ea828cc9057a52b02361f60d26d368e3ca1579e6d4e26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corporation (APA) Contributed Positively to Clough Capital’s Portfolio in Q3 2026
+<<<SUMMARY>>>
+Clough Capital Partners L.P., an investment management company, recently released its Q3 2026 investor letter. A copy of the letter can be downloaded here. The letter reported that both the Clough Select Equity ETF (CBSE) and Clough Hedged Equity ETF (CBLS) maintained positive year-to-date returns despite a difficult quarter. CBSE, a long-only strategy, declined 11.25% […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401754
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:36:10Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=fd23378756810f40c443a38ba84b305fd24256ba6187059879bd5d960b0774e9
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: APA
+keywords: 
+headline: S&P 500 Top Movers for Nov. 2, 2026: IDXX Gains 19.59%, LITE Falls 13.94%
+<<<SUMMARY>>>
+S&P 500 top movers for Nov. 2, 2026: IDEXX Laboratories rose 19.59% and Lumentum fell 13.94% during the session, highlighting the index's largest gains and losses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143399831
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:36:07Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=dffeb66506c8e4f4184c586c014e360aabcbeb97a990f543be08080d39b02798
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: APA
+keywords: 
+headline: S&P 500 Opening Gap Movers for November 2, 2026
+<<<SUMMARY>>>
+S&P 500 stocks with notable opening gaps on November 2, 2026, including gap-up names such as IDXX, UAL and MAR, and gap-down names such as LITE, ORCL and MRVL.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143395730
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:36:46Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a735321edbdc2e86fd43a5e32feb00efbdf3249baf4931d8d352b9d161131edd
+image_url: https://www.chartmill.com/images/uploads/CM_Premarket_Movers_Small_free_90289f6b81.webp
+category: company
+tickers: APA
+keywords: 
+headline: S&P 500 Premarket Movers Nov. 2, 2026: IDEXX and Fox Gain, Lumentum and T-Mobile Fall
+<<<SUMMARY>>>
+IDEXX Laboratories and Fox Corp. led S&P 500 premarket gainers on Nov. 2, 2026, while Lumentum and T-Mobile led the decliners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143399166
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:15:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d9e8df3a5e0576ee1c2f12701c7540cd52d2b1adf94c7280731c471fe67c382
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corporation (APA) Hits Fresh High: Is There Still Room to Run?
+<<<SUMMARY>>>
+APA (APA) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804753
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T16:11:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87fe9f209e5fe19cfa970f9f92a3e901bc631844a1e5f3af4a087225b4bb780d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA (APA) Stock Gets Fair Value Bump After Q3 Update And Analyst Target Changes
+<<<SUMMARY>>>
+APA Corp.'s updated fair value estimate has moved from US$49.00 to US$50.00, giving you a fresh reference point for where some analysts think the stock could reasonably trade based on current assumptions. That change comes as research houses react to APA's Q3 2026 updates, refreshed oil and gas assumptions, and different views on how well the company can deliver on capital returns and longer dated projects such as Suriname and GranMorgu. In the sections that follow, you will see how this...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804574
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bd5146d54e82e656ab1c1185c43680219e3f717b4b36abac6e92bfad23471c9a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Can APA's High-Quality Portfolio Fuel Cash Flow and Future Growth?
+<<<SUMMARY>>>
+APA's Permian and Egypt production supports cash flow, while Suriname's on-track GranMorgu project and exploration prospects offer long-term growth potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804280
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d27d267c685b47d6d54e3d59000b5f1f7608f1737592099ec0fbf8642e2e5fcf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA (APA) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+<<<SUMMARY>>>
+Although the revenue and EPS for APA (APA) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804281
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:10:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2422dea77eb8ec05b22f3fb4d86e5f8a00e1148fc0b58b6b8ee52877200bae7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Is APA (APA) Still Below Fair Value Following Its Strong Q3 Earnings And Raised Output Guidance?
+<<<SUMMARY>>>
+APA (APA) hit investors’ radar after reporting significantly stronger third quarter earnings, with revenue of US$2.8b and net income of US$698m, while production topped guidance and full year U.S. oil output guidance was raised. The upbeat third quarter has landed in a period where APA’s share price has already been strong, with a 90 day share price return of 17.77% and an 87.93% year to date gain. The 1 year total shareholder return of 98.55% signals momentum that has been building rather...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804282
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:40:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15cbb1f228ea0293193ebfcd980f8a4b76b83f588019248180dabde04ba66c2b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Is Petroleo Brasileiro (PBR) Stock Outpacing Its Oils-Energy Peers This Year?
+<<<SUMMARY>>>
+Here is how Petrobras (PBR) and APA (APA) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802568
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:08:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f537367c2c0ae7f73f503a8aebed68ee00224d8c074f7dd1ee887f4d6ecd0cce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA (APA) Stock Still Looks Like A Bargain After A 102% Run
+<<<SUMMARY>>>
+APA Corporation has delivered a striking run over the past several years, and the rally puts a sharper spotlight on whether the current share price lines up with the cash it is expected to generate. With the story now heavily shaped by cash flow and production trends, the question is how solidly those fundamentals back up where APA trades today. Over the past 5 years, APA has returned 101.6%, which raises the question of how much future cash generation the current valuation already...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802569
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:11:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9bb10c5896e86e934c6a56c66e7191ba82aa14694e1788b43fee828360a187cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: How Investors May Respond To APA (APA) Earnings Beat
+<<<SUMMARY>>>
+APA Corporation reported third quarter 2026 revenue of US$2,812 million and net income of US$698 million, alongside production that exceeded guidance, and raised full year U.S. oil output expectations on the back of efficiency gains in the Permian. The mix shift in APA production, with total volumes lower year to date but U.S. oil and NGL performance supported by high uptime and earlier turn in lines, highlights how operational execution rather than sheer volume growth is shaping the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773961
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:06:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=6df1ed164784a9c1004bf9ddc8ddd88b274e7ab7b23b279e74cc42528d0f86ff
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: APA
+keywords: 
+headline: S&P 500 Top Movers for Nov. 12, 2026: AMD and AVGO Gain, GPN and NVDA Fall
+<<<SUMMARY>>>
+S&P 500 top movers on Nov. 12, 2026 included AMD, AVGO, ANET, VLO and MPC among gainers, while GPN, SMCI, KDP, MRNA and NVDA led declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143768701
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T08:54:30Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d93bc4b486b2b857c6cd37b147fa6482c437864101791d39a3217d14eb604d73
+image_url: 
+category: company
+tickers: APA
+keywords: 
+headline: Bernstein Maintains Market Perform on APA, Raises Price Target to $41
+<<<SUMMARY>>>
+Bernstein  analyst Bob Brackett   maintains APA (NASDAQ:APA) with a Market Perform and raises the price target from $37 to $41.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740498
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T20:08:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5066903b07124c963755e2d97b283735f5b1829632ae685b9c718c11e1767eb8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Should Value Investors Buy APA (APA) Stock?
+<<<SUMMARY>>>
+Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738105
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e954384fa04455b4c472dd22d96a9768de9ba5d95a46b2d839468e18bcf04e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Raises 2026 Free Cash Flow Forecast to $2.9B After Q3 Results
+<<<SUMMARY>>>
+APA raises its 2026 free cash flow outlook to $2.9 billion as stronger U.S. oil production, higher prices and cost controls boost shareholder returns and debt reduction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143735012
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86b5d77d61d1a53c929950879377b6f35a5e2a176353c3e948791ae83de6b647
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: EIA Sees Brent Near $100 for the Rest of the Year as Crude Futures Ease Again
+<<<SUMMARY>>>
+Oil Market Daily News Commentary - U.S. crude oil futures closed lower for a second straight session on Tuesday. The December NYMEX West Texas Intermediate contract settled at $86.04 a barrel, down 81 cents, or 0.93%, and the January ICE Brent contract settled at $91.49, down $1.08, or 1.17%. December WTI had settled at $104.12 on Oct. 30. Over the past two weeks, a producer, an oil sands company, a refiner, a gas processor and a tanker owner have each reported quarterly results from a different
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143732579
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T06:42:33Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=0199500d3d1402349bbebc2cece59c5d126c8885295381df14d2ee14093be7c6
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/657602692/image_657602692.jpg?io=getty-c-og
+category: company
+tickers: APA
+keywords: 
+headline: APA Corporation: Firing On All Cylinders As It Approaches FCF Inflection In Suriname
+<<<SUMMARY>>>
+APA Corp. is rated Buy: GranMorgu could lift production and free cash flow from 2028; shares trade at 3.5x mid-cycle EBITDA. See more on APA stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687749
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:10:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3b04689fd64a7e5c6a0c46f09625973891e2cf3ec7e4445614e28562c2145df2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Did APA's 88% Run Pass You By? What The Bulls Got Right
+<<<SUMMARY>>>
+If APA was on your watchlist instead of in your portfolio, the last twelve months may feel like a missed shot. Holding APA over the past year would have returned 88.2%, including dividends. That kind of move invites a hard question. What clues, available back on 9 November 2025, might have helped you treat its low cost, multi basin asset base as a potential margin story rather than just another cyclical producer? If the move has made APA harder to judge, start where the gap is still open and...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658960
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=98ae5b5139ffffbd2e26b12dd0d7566bc98d20c4d716067bae18c9193c3eb9d6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Beats Q3 Earnings: Can Strong Momentum Drive the Stock Higher?
+<<<SUMMARY>>>
+APA's Q3 earnings beat, higher U.S. oil guidance and a $2.9 billion free cash flow outlook underscore momentum. Can GranMorgu sustain the stock's rally?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143655427
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=316a88d5e3d739892219f8bff5b80f34306bce3f4a0befa640592b0ebcdbebb8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: Buy 5 Non-Tech Nasdaq Stocks to Enhance Your Portfolio Returns in Q4
+<<<SUMMARY>>>
+APA, CASY, EBAY, HAS and EQIX stand out for the rest of 2026, backed by improving earnings estimates and growth opportunities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143656456
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T09:22:46Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1f66b744243844367221afc5bbf8adcd50cbe544542bd679c7787241fc29ea8e
+image_url: 
+category: company
+tickers: APA
+keywords: 
+headline: Truist Securities Maintains Hold on APA, Raises Price Target to $50
+<<<SUMMARY>>>
+Truist Securities  analyst Gabe Daoud   maintains APA (NASDAQ:APA) with a Hold and raises the price target from $45 to $50.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143650647
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T07:03:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3cae84d9781d3a44437a35dcb166491e98e20598b31844c92a0128fccff3d2e5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corp (APA) (Q3 2026) Earnings Call Highlights: $699 Million Free Cash Flow, Raised Outlook ...
+<<<SUMMARY>>>
+APA Corp (APA) beat US production guidance, returned $537 million to shareholders, and accelerated its cost savings target by two years while setting a new net debt goal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143646533
+symbol: APA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T02:45:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=75789d42a2abaa4c78031a21a1400a55fb0c6b29153577844c3dbb93bd06464e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: APA
+keywords: 
+headline: APA Corporation’s Q3 2026 earnings call: our top 5 analyst questions
+<<<SUMMARY>>>
+APA delivered quarterly results that exceeded Wall Street’s expectations, driven by higher oil production and improved operational efficiency across its core assets. Management pointed to stronger-than-anticipated performance in both the Permian Basin and Egypt, where earlier turn-in-lines and resilient well productivity contributed to the output. CEO John Christmann emphasized that “more efficient development programs, a structurally lower cost base, and higher commodity prices are driving stro
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:81f043638c9550e4516f7a036c2b8039ec54efce29de4bf7f27ec9a870c9bda4
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T00:25:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021292/vitesse-energy-vts-q3-earnings-meet-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3021292
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default302.jpg
+category: 
+tickers: VTS, APA
+keywords: earnings report, revenue miss, oil and gas, exploration and production, earnings estimate revisions, Zacks Rank
+headline: Vitesse Energy (VTS) Q3 Earnings Meet Estimates
+<<<SUMMARY>>>
+Vitesse Energy (VTS) reported quarterly earnings of $0.01 per share, matching consensus estimates but missing revenue expectations at $82.95 million. The company has underperformed the S&P 500 by 15.7% year-to-date. Despite recent underperformance, VTS received a Zacks Rank #2 (Buy) rating based on favorable estimate revision trends. The Oil and Gas - Exploration and Production industry ranks in the top 11% of Zacks industries.
+<<<INSIGHTS>>>
+VTS | neutral | Company met EPS consensus but missed revenue estimates by 2.52%. Year-to-date underperformance of 5% versus S&P 500's 10.7% gain is negative, but favorable estimate revision trends and Zacks Rank #2 (Buy) rating provide some positive outlook for near-term performance.
+APA | positive | Expected to report strong earnings growth of +54.8% year-over-year with consensus EPS estimate revised 37% higher over the last 30 days. Revenue expected to grow 17.6% year-over-year, indicating positive momentum in the sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e16785ef9cefcdcc7225b8ffbde726fc26acac378cfac252c88c12d78b43c280
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T18:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022154/4-garp-stocks-to-buy-now-as-volatility-fuels-value-vs-growth-debate?cid=CS-ZC-FT-analyst_blog|rw-3022154
+image_url: https://staticx-tuner.zacks.com/images/articles/main/d8/160841.webp
+category: 
+tickers: APA, TMUS, TMUSI, TMUSL, TMUSZ, BP, CNC
+keywords: GARP investing, value investing, growth investing, PEG ratio, stock screening, earnings growth, valuation
+headline: 4 GARP Stocks to Buy Now as Volatility Fuels Value vs. Growth Debate
+<<<SUMMARY>>>
+The article discusses GARP (Growth at a Reasonable Price) investing as a hybrid strategy combining value and growth principles. Four stocks are highlighted as qualifying picks: APA Corporation with 31.4% historical growth, T-Mobile with 23.9% five-year growth, BP with 13.6% expected growth, and Centene with 32.7% projected long-term growth. All four stocks meet screening criteria including Zacks Rank #2, discounted valuations, and strong growth potential.
+<<<INSIGHTS>>>
+APA | positive | Zacks Rank #2 with Value Score A and Growth Score A; impressive 31.4% historical growth rate; discounted PEG and P/E ratios; strong upstream project potential in Permian Basin
+TMUS | positive | Zacks Rank #2 with Value Score A and Growth Score B; solid 23.9% five-year historical growth; expanding 5G and broadband services; strong cash generation supporting dividends and buybacks
+TMUSI | positive | Zacks Rank #2 with Value Score A and Growth Score B; solid 23.9% five-year historical growth; expanding 5G and broadband services; strong cash generation supporting dividends and buybacks
+TMUSL | positive | Zacks Rank #2 with Value Score A and Growth Score B; solid 23.9% five-year historical growth; expanding 5G and broadband services; strong cash generation supporting dividends and buybacks
+TMUSZ | positive | Zacks Rank #2 with Value Score A and Growth Score B; solid 23.9% five-year historical growth; expanding 5G and broadband services; strong cash generation supporting dividends and buybacks
+BP | positive | Zacks Rank #2 with Value Score A and Growth Score A; 13.6% expected long-term growth; improved balance sheet and cost discipline; structural improvements supporting cash generation
+CNC | positive | Zacks Rank #2 with Value Score A and Growth Score B; robust 32.7% projected long-term growth rate; serves 27.6 million members; growth drivers include geographic expansion and new contracts
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:965aca2f3451ae63e2427bdae5b453e791843cc39fd168d2fce3747f3c35b132
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T21:50:07Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022236/sm-energy-sm-q3-earnings-lag-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3022236
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default156.jpg
+category: 
+tickers: SM, APA
+keywords: earnings surprise, oil and gas, exploration and production, earnings estimates, revenue beat, Zacks Rank
+headline: SM Energy (SM) Q3 Earnings Lag Estimates
+<<<SUMMARY>>>
+SM Energy reported Q3 2026 earnings of $1.95 per share, missing consensus estimates of $2.03, representing a -3.94% surprise. However, the company exceeded revenue expectations with $2.17 billion, up significantly from $811.59 million year-ago. SM Energy shares have gained 100.2% year-to-date versus the S&P 500's 10.2% gain. The stock holds a Zacks Rank #2 (Buy) rating with favorable estimate revision trends. Meanwhile, peer APA is expected to report Q3 results on November 4 with anticipated earnings of $1.44 per share, up 54.8% year-over-year, with consensus estimates revised 37% higher over the last 30 days.
+<<<INSIGHTS>>>
+SM | neutral | Mixed results with EPS miss (-3.94%) offset by strong revenue beat (+10.24%) and exceptional year-to-date stock performance (+100.2%). Zacks Rank #2 (Buy) rating and favorable estimate revision trends provide positive outlook, but the earnings miss tempers immediate sentiment.
+APA | positive | Strong forward guidance with expected earnings up 54.8% year-over-year and consensus estimates revised 37% higher over the last 30 days. Revenue expected to grow 17.6% year-over-year, indicating positive momentum ahead of November 4 earnings release.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a5ba265dc239389379baf2b9289972cb0c6ed0a56820a8995dd5a694f118b8dc
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T07:54:00Z
+publisher: Zacks Investment Research
+author: Zacks Investment Research
+url: https://www.zacks.com/stock/news/3022502/zacks-com-featured-highlights-include-apa-t-mobile-bp-and-centene?cid=CS-ZC-FT-press_releases-3022502
+image_url: https://staticx-tuner.zacks.com/images/articles/main/e3/536.jpg
+category: 
+tickers: APA, TMUS, TMUSI, TMUSL, TMUSZ, BP, CNC
+keywords: GARP investing, value investing, growth investing, PEG ratio, market volatility, stock screening, Zacks Rank
+headline: Zacks.com featured highlights include APA, T-Mobile, BP and Centene
+<<<SUMMARY>>>
+Amid market volatility driven by inflation concerns, elevated Treasury yields, and geopolitical tensions, investors are advised to consider GARP (Growth at a Reasonable Price) investing strategy that combines value and growth principles. Four stocks meeting GARP criteria with Zacks Rank #2 ratings are highlighted: APA Corp., T-Mobile US, BP plc, and Centene, each offering discounted valuations with solid earnings growth potential.
+<<<INSIGHTS>>>
+APA | positive | Zacks Rank #2 with Value Score A and Growth Score A; discounted PEG and P/E ratios; impressive long-term historical growth rate of 31.4%; strong position in Permian Basin with future production growth potential.
+TMUS | positive | Zacks Rank #2 with Value Score A and Growth Score B; strong Q3 2026 results; expanding 5G and broadband services; five-year historical growth rate of 23.9%; robust cash generation supporting dividends and buybacks.
+TMUSI | positive | Zacks Rank #2 with Value Score A and Growth Score B; strong Q3 2026 results; expanding 5G and broadband services; five-year historical growth rate of 23.9%; robust cash generation supporting dividends and buybacks.
+TMUSL | positive | Zacks Rank #2 with Value Score A and Growth Score B; strong Q3 2026 results; expanding 5G and broadband services; five-year historical growth rate of 23.9%; robust cash generation supporting dividends and buybacks.
+TMUSZ | positive | Zacks Rank #2 with Value Score A and Growth Score B; strong Q3 2026 results; expanding 5G and broadband services; five-year historical growth rate of 23.9%; robust cash generation supporting dividends and buybacks.
+BP | positive | Zacks Rank #2 with Value Score A and Growth Score A; discounted PEG and P/E ratios; long-term expected growth rate of 13.6%; strategic focus on balance-sheet repair and cost discipline supporting cash generation.
+CNC | positive | Zacks Rank #2 with Value Score A and Growth Score B; discounted PEG and P/E ratios; solid long-term expected growth rate of 32.7%; serves 27.6 million members with growth through geographic expansion and acquisitions.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6ee1b95acfb65d1b59fed4ff206e534c4040a3f54758a9d2999946decd4565c6
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T21:50:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023534/apa-apa-q3-earnings-and-revenues-beat-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3023534
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default0.jpg
+category: 
+tickers: APA, GRNT
+keywords: earnings surprise, oil and gas, exploration and production, earnings beat, Zacks Rank, estimate revisions, revenue growth
+headline: APA (APA) Q3 Earnings and Revenues Beat Estimates
+<<<SUMMARY>>>
+Apache Corporation (APA) reported Q3 2026 earnings of $1.94 per share, beating consensus estimates of $1.44 by 34.72%, with revenues of $2.81 billion exceeding expectations by 18.50%. The stock has gained 95.3% year-to-date, significantly outperforming the S&P 500's 10.6% gain. APA holds a Zacks Rank #2 (Buy) rating with favorable estimate revision trends, while its industry (Oil and Gas - Exploration and Production - United States) ranks in the top 10% of Zacks industries.
+<<<INSIGHTS>>>
+APA | positive | Strong earnings beat of 34.72% above consensus, revenue beat of 18.50%, consistent outperformance of estimates over four quarters, significant year-to-date stock appreciation of 95.3%, and favorable estimate revision trends supporting a Zacks Rank #2 (Buy) rating.
+GRNT | neutral | Company has not yet reported Q3 2026 results (expected November 5). While forward guidance shows expected earnings growth of 44.4% and revenue growth of 40.4% year-over-year with recent positive estimate revisions, actual performance remains unknown.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:28aba17eb5e94f2da532b1c5d4f1d42e887f655c6ebcfadd5951b12d5b71e58a
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T15:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025680/apa-q3-earnings-call-highlights-higher-cash-flow-and-2027-plans?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3025680
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b5/159583.webp
+category: 
+tickers: APA
+keywords: free cash flow, oil production, debt reduction, Suriname development, Permian Basin, capital spending, shareholder returns, exploration
+headline: APA Q3 Earnings Call Highlights Higher Cash Flow and 2027 Plans
+<<<SUMMARY>>>
+APA Corporation raised its 2026 free cash flow forecast to $2.9 billion (up $600 million) and announced a new $2 billion net debt target. The company increased U.S. oil production guidance to 124,000 barrels daily, plans $2.5 billion in 2027 upstream spending, and reaffirmed the GranMorgu Suriname project remains on schedule for mid-2028 first oil. Management targets $500 million in annualized operating and capital savings by year-end 2026 while maintaining shareholder distributions.
+<<<INSIGHTS>>>
+APA | positive | APA demonstrated strong operational and financial performance with raised free cash flow guidance (+$600M), increased oil production guidance, exceeded earnings estimates ($1.94 vs $1.44 consensus), and announced aggressive debt reduction targets. The company is advancing major growth projects (GranMorgu) while maintaining shareholder distributions and achieving cost savings, indicating solid near-term and long-term prospects.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cce9039a85bddde15d879793215638f6c4225a37e40edea65017a05e0bea2d40
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T15:52:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025777/apa-q3-earnings-beat-on-strong-oil-prices-and-u-s-output?cid=CS-ZC-FT-analyst_blog|earnings_article-3025777
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a0/644.jpg
+category: 
+tickers: APA, LNG, CRGY, FANG
+keywords: Q3 earnings, free cash flow, oil prices, production, shareholder returns, debt reduction, Suriname development
+headline: APA Q3 Earnings Beat on Strong Oil Prices and U.S. Output
+<<<SUMMARY>>>
+APA Corporation delivered strong third-quarter results with adjusted EPS of $1.94, up 108.6% year-over-year and beating consensus by 34.72%. Revenues climbed 39.3% to $2.81 billion, driven by higher realized crude prices (+36.5%) and resilient U.S. production (+4.7%). The company raised its 2026 free cash flow outlook by $600 million to $2.9 billion and returned $537 million to shareholders. However, Egyptian and North Sea production declined, and the company targets reaching a new $2 billion net debt goal.
+<<<INSIGHTS>>>
+APA | positive | Strong earnings beat (108.6% EPS growth), revenue beat, raised 2026 free cash flow guidance by $600M, increased shareholder returns ($537M), and improved U.S. production. Positive momentum offset by declines in Egypt and North Sea operations.
+LNG | neutral | Mixed results with revenue beat (+14.85%) and record LNG cargo exports, but EPS missed consensus by 13.81%. Strong liquidity position ($1.66B cash) but high debt ($22.58B) limits upside.
+CRGY | positive | Strong earnings beat (30.5% above consensus), EPS growth of 113.9% year-over-year, revenue beat (+17.1%), and production growth (+29.6%). Solid liquidity and dividend declaration support positive outlook.
+FANG | positive | Significant earnings beat (19.1% above consensus), GAAP earnings up 62.1% year-over-year, revenue beat (+26.5%), strong free cash flow generation ($2.15B), and record production volumes.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e777eec5426ce80f26ecc21d09c621b3f9ae551ac4f8ee0d65b63638cda1b54f
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T12:56:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026194/buy-5-non-tech-nasdaq-stocks-to-enhance-your-portfolio-returns-in-q4?cid=CS-ZC-FT-analyst_blog|investment_ideas-3026194
+image_url: https://staticx-tuner.zacks.com/images/articles/main/bd/8226.jpg
+category: 
+tickers: APA, CASY, EBAY, HAS, EQIX
+keywords: Nasdaq stocks, non-tech stocks, AI infrastructure, Zacks Rank, stock performance, earnings growth
+headline: Buy 5 Non-Tech Nasdaq Stocks to Enhance Your Portfolio Returns in Q4
+<<<SUMMARY>>>
+While the Nasdaq rally has been primarily driven by AI technology stocks, five non-tech Nasdaq-listed companies with Zacks Rank #2 (Buy) ratings are positioned for growth. APA Corp benefits from cost savings and long-term projects, Casey's General Stores gains from inside sales momentum and fuel margins, eBay leverages marketplace innovation, Hasbro benefits from gaming demand, and Equinix capitalizes on AI infrastructure growth.
+<<<INSIGHTS>>>
+APA | positive | Expected 72.9% earnings growth, improved capital efficiency, cost savings, and long-term growth from GranMorgu project support positive outlook despite cyclical earnings and commodity price sensitivity.
+CASY | positive | Strong inside sales momentum, 22% revenue growth expected, 12.9% earnings growth, favorable margins, and CEFCO conversions driving expansion support positive sentiment.
+EBAY | positive | Diversified revenue streams, marketplace innovation through EBAY Live, Focus Categories, and Depop expansion support 13.8% revenue and 9.8% earnings growth expectations.
+HAS | positive | Strong MAGIC: The Gathering demand, successful product releases, 23.7% expected earnings growth, and raised 2026 guidance reflect positive momentum in gaming and consumer products.
+EQIX | positive | Key beneficiary of AI infrastructure and hybrid multicloud shift, strengthened Q2 2026 bookings and interconnections, raised guidance, and 14.5% expected earnings growth support positive outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4d12d442b4d0e38a133937007db0255be41945b4e85339ba1994b070f6f76ad7
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T15:25:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026568/apa-beats-q3-earnings-can-strong-momentum-drive-the-stock-higher?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3026568
+image_url: https://staticx-tuner.zacks.com/images/articles/main/bb/145653.webp
+category: 
+tickers: APA, MGY, VG
+keywords: Q3 earnings, oil production guidance, free cash flow, cost savings, Permian Basin, GranMorgu project, shareholder returns, debt reduction, capital efficiency
+headline: APA Beats Q3 Earnings: Can Strong Momentum Drive the Stock Higher?
+<<<SUMMARY>>>
+APA Corporation reported impressive Q3 2026 earnings with raised U.S. oil production guidance to 124,000 barrels per day and upgraded free cash flow outlook to $2.9 billion. The company achieved $500M in annualized cost savings ahead of schedule and expects the GranMorgu offshore Suriname project to begin production in mid-2028. APA returned $537M to shareholders in Q3 and reduced debt by $2.8B since year-end 2024, demonstrating strong operational momentum and disciplined capital allocation.
+<<<INSIGHTS>>>
+APA | positive | Strong Q3 earnings beat, raised production guidance, achieved cost savings ahead of schedule, upgraded free cash flow outlook to $2.9B, significant long-term growth potential from GranMorgu project, aggressive shareholder returns, substantial debt reduction, positive earnings estimate revisions (9.8% upward revision), and outperformance versus peers. Zacks Rank #2 (Buy) rating supports positive outlook.
+MGY | neutral | Mentioned as a peer comparison with 6.1% share price gain over the past year, significantly underperforming APA's 83.3% surge. No specific operational or financial details provided about the company itself.
+VG | neutral | Mentioned as a peer comparison with 35.8% share price gain over the past year, also underperforming APA's 83.3% surge. No specific operational or financial details provided about the company itself.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0e1d7ade22650a0f6cff95e0416fb74294cc142dc1fff7a56da48e6822ca2493
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T15:38:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027731/apa-raises-2026-free-cash-flow-forecast-to-2-9b-after-q3-results?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3027731
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: APA, MPC, DK, CNQ
+keywords: free cash flow, oil production, shareholder returns, debt reduction, Permian Basin, GranMorgu project, cost savings, commodity prices
+headline: APA Raises 2026 Free Cash Flow Forecast to $2.9B After Q3 Results
+<<<SUMMARY>>>
+APA Corporation raised its 2026 free cash flow forecast by $600 million to $2.9 billion, driven by stronger U.S. oil production (128,000 barrels per day), higher commodity prices, and cost controls. The company returned $537 million to shareholders in Q3 and reduced debt by $451 million. APA's stock has outperformed the broader oil-energy sector by 56.6% year-to-date. The company plans a $2.5 billion upstream capital budget for 2027, with significant investment in the GranMorgu project offshore Suriname.
+<<<INSIGHTS>>>
+APA | positive | APA significantly raised its 2026 free cash flow guidance by $600 million, beat Q3 earnings expectations, exceeded U.S. oil production guidance, increased shareholder returns, reduced debt substantially, and achieved strong year-to-date stock performance. The company also established a lower long-term net debt target and plans growth investments in the GranMorgu project.
+MPC | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+DK | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+CNQ | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:df7c04bb0b6d1c9326e0af7935170d9450b6c846bd74c148a78f3d696784c347
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T14:30:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3029614/apa-apa-q3-earnings-how-key-metrics-compare-to-wall-street-estimates?cid=CS-ZC-FT-fundamental_analysis|nfm-3029614
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default167.jpg
+category: 
+tickers: APA
+keywords: Q3 earnings, revenue beat, EPS surprise, production volumes, oil and gas, Apache Corporation
+headline: APA (APA) Q3 Earnings: How Key Metrics Compare to Wall Street Estimates
+<<<SUMMARY>>>
+Apache Corporation (APA) reported Q3 2026 revenue of $2.81 billion, up 39.4% year-over-year and beating Wall Street estimates by 18.5%. EPS came in at $1.94, significantly exceeding the consensus estimate of $1.44 by 34.72%. The company outperformed analyst expectations across most key production and revenue metrics, including oil, natural gas, and NGL production volumes, as well as revenues from its U.S., North Sea, and Egypt operations.
+<<<INSIGHTS>>>
+APA | positive | APA significantly exceeded Wall Street expectations on both revenue (+18.5% beat) and EPS (+34.72% beat). The company demonstrated strong year-over-year growth of 39.4% in revenue and outperformed analyst estimates across multiple key operational metrics including production volumes and regional revenues. The stock holds a Zacks Rank #2 (Buy) rating, indicating potential for near-term outperformance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:43752e63f0c16a152d22fcd66f67f8219b5c9bca2dbe906fde788889ac950b45
+symbol: APA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T15:17:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029651/can-apa-s-high-quality-portfolio-fuel-cash-flow-and-future-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3029651
+image_url: https://staticx-tuner.zacks.com/images/articles/main/58/39028.jpg
+category: 
+tickers: APA, CVX, XOM
+keywords: Permian Basin, offshore production, Suriname development, cash generation, oil production, capital deployment, energy sector
+headline: Can APA's High-Quality Portfolio Fuel Cash Flow and Future Growth?
+<<<SUMMARY>>>
+APA Corporation is leveraging stable production from the Permian Basin and Egypt while pursuing long-term offshore growth, particularly through the GranMorgu development in Suriname scheduled for mid-2028. The company exceeded Q3 U.S. oil production guidance and raised its 2026 outlook to 124,000 bpd. APA's stock has surged 99.5% over the past year, trading at a discount to industry averages with expected 78.3% year-over-year earnings growth.
+<<<INSIGHTS>>>
+APA | positive | Company exceeded production guidance, raised full-year outlook, has diversified asset base across multiple regions, and is positioned for long-term growth through offshore projects. Stock has significantly outperformed sector with strong earnings growth expected.
+CVX | positive | Maintains high-quality diversified portfolio with strong Q3 2026 production near 4 million boe/d, benefits from Hess acquisition expanding Guyana exposure, and has multiple growth avenues across deepwater and international assets.
+XOM | positive | Strong upstream portfolio with Q3 2026 production of approximately 4.5 million boe/d, expanding LNG positions in Papua and Mozambique, and diversified earnings through integrated refining and chemical operations supporting resilient cash generation.
+<<<END>>>

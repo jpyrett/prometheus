@@ -200,6 +200,24 @@ def test_the_fixture_goes_in_whole(store):
     assert meta["tickers"] == ["CRWV", "MSFT", "META", "NVDA"] and meta["chunk"] == 1 and meta["chunks"] == 2
 
 
+def test_an_article_that_fails_is_never_stored_never_found_and_the_others_are_ingested(monkeypatch, tmp_path, store):
+    """Jacob, 2026-11-15 (entry 83): a news article that cannot be processed is skipped and discarded completely. The middle REAL article of the fixture gets a time that is not a time: it is not in the store, no
+    search finds it (not by its own words, not by its ticker), and the ingest says it discarded one record; the first and third real articles are stored as usual."""
+    from prometheus.rag.retriever import search_news
+    first, second, third = ("<<<ARTICLE>>>\n" + part for part in FIXTURE.read_text(encoding="utf-8").split("<<<ARTICLE>>>\n")[1:])
+    news = tmp_path / "news"
+    news.mkdir()
+    (news / "AAPL.txt").write_text(first + second.replace("published_utc: 2026-10-17T21:30:00Z", "published_utc: 17 Oct 2026") + third, encoding="utf-8")
+    monkeypatch.setenv("NEWS_OUTPUT_DIR", str(news))
+    stats = ingest_symbol("AAPL", store)
+    assert stats["articles"] == 2 and len(stats["skipped"]) == 1 and stats["skipped"][0].where.endswith("AAPL.txt:21") and "bad published_utc" in stats["skipped"][0].reason
+    stored_ids = {meta["article_id"] for meta in store.get(include=["metadatas"])["metadatas"]}
+    assert stored_ids == {"finnhub:143136906", "finnhub:143103074"} and COREWEAVE not in stored_ids
+    for query in ("CoreWeave gross leverage ratio", "Neo cloud debt", "Nvidia"):
+        assert COREWEAVE not in [hit.article_id for hit in search_news(query, store=store, k=10, min_score=None)]
+        assert COREWEAVE not in [hit.article_id for hit in search_news(query, tickers=["NVDA", "CRWV", "AAPL"], store=store, k=10, min_score=None)]
+
+
 def test_ingest_symbol_reads_the_news_file_of_that_symbol(monkeypatch, tmp_path, store):
     news = tmp_path / "news"
     news.mkdir()

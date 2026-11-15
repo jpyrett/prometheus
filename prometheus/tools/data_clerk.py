@@ -13,6 +13,9 @@ one and run every tool with no network, no keys and no cost.
     ToolInputError         raised for arguments the model should fix and send again
     ToolLimitError         raised by the agent's budget when a limit on this question's tool use is reached
 
+Code paths that are NOT tools of the model, so not on the allow-list either: the Critic's `read_sources`, `read_evidence` and the like, and `daily_bars` (the stored bars of a date range, for the Account Manager's
+backtest through `DataClerk.request_bars`). A model has no use for them, and the 13-tool pin of the allow-list holds.
+
 Never on the allow-list, on purpose: init_aws_cli (installs software), fetch_historical_data (over 100 GB),
 convert_to_parquet (a long batch job), export_project (rsync to any destination), and the two scheduled
 refresh jobs sync_market_news and sync_cnbc_news.
@@ -21,7 +24,8 @@ See what the model sees:   python -m prometheus.tools.data_clerk
 """
 import functools
 import sys
-from datetime import date
+from datetime import date, timedelta
+from pathlib import Path
 
 from langchain_core.tools import BaseTool, StructuredTool, tool
 
@@ -455,6 +459,52 @@ class DataClerkTools:
         results = catalog.compute(symbols, requests, store, financials, evidence, today, sectors)
         return {"as_of": today.isoformat(), "results": results, "problems": problems, "gaps": store.gaps[:20],
                 "bars": {s: len(store.bars(s, end=today)) for s in symbols}}
+
+    def daily_bars(self, symbols: list[str], start: date, end: date) -> dict:
+        """The stored daily bars of each symbol from `start` to `end`, both included, oldest first: {"bars": {symbol: [{"date": "YYYY-MM-DD", "open", "high", "low", "close", "volume"}, ...]}, "gaps": [...]}.
+        The code path behind `DataClerk.request_bars` (Trader v1 spec section 12, the backtest's prices): NOT a tool of the model, so not in DATA_CLERK_TOOLS (a model has no use for it, and the 13-tool pin holds).
+        It reads the same `day_aggs_v1` files as `metrics_for` (the same root rule: `bars_root`, else the toolbox's own `data/historical`) and only as many day files as the range holds. Every symbol is a key; one with
+        no stored bar in the range is an empty list (the future may not be stored yet: a result, not an error). `gaps` says what the store could not read or is missing inside the range. Nothing is fetched and
+        nothing is written. Raises ToolInputError for symbols or dates that make no sense, FileNotFoundError when the bar folder does not exist at all (a store that cannot be read is not "no bars")."""
+        if not isinstance(symbols, list) or not symbols:
+            raise ToolInputError("symbols needs at least one ticker")
+        picked = list(dict.fromkeys(_symbol(s) for s in symbols))
+        if type(start) is not date or type(end) is not date:
+            raise ToolInputError("start and end must be dates")
+        if start > end:
+            raise ToolInputError("start must be on or before end")
+        from prometheus.agents.data_clerk.bars import BarStore
+        root = self.bars_root or getattr(self.toolbox, "root_data_dir", REPO_ROOT / "data" / "historical") / "day_aggs_v1"
+        if not Path(root).is_dir():
+            raise FileNotFoundError(f"the bar folder {root} does not exist")
+        store = BarStore(root).load(picked, end=end, start=start, max_bars=(end - start).days + 1)  # at most one file a day, so the range is never cut short
+        return {"bars": {s: [{"date": b.date.isoformat(), "open": b.open, "high": b.high, "low": b.low, "close": b.close, "volume": b.volume}
+                            for b in store.bars(s, end=end, max_bars=(end - start).days + 1) if b.date >= start] for s in picked},
+                "gaps": store.gaps[:20]}
+
+    def close_quote(self, symbol: str, day: date) -> dict:
+        """A quote made from the STORED daily bar of `day`, for the simulated clock (`USE_LIVE_TRADING=false`, `common/trading_clock.py`, design choices entry 76): the market close of that trading day instead of
+        Finnhub's live price. Same shape as `get_quote` ({symbol, price, change, change_percent, high, low, open, previous_close, as_of_utc, source}) plus `simulated: True`, so that a reader can tell it from a live
+        quote (the Critic's second-provider price check skips it: the same bar would be compared with itself). `price` is the day's close; `as_of_utc` is a minute before the simulated moment, so the quote is fresh at it.
+        Not a tool of the model (not in DATA_CLERK_TOOLS). Reads the same `day_aggs_v1` files as `daily_bars`; calls nothing and writes nothing. Raises ToolInputError for a symbol or a day that makes no sense or when
+        the symbol has no stored bar ON that day (the nearest earlier bar is NOT used: that would be another day's price), FileNotFoundError when the bar folder does not exist."""
+        from prometheus.agents.data_clerk.bars import BarStore
+        from prometheus.common.market_calendar import simulated_moment
+        if type(day) is not date:
+            raise ToolInputError("day must be a date")
+        symbol = _symbol(symbol)
+        root = self.bars_root or getattr(self.toolbox, "root_data_dir", REPO_ROOT / "data" / "historical") / "day_aggs_v1"
+        if not Path(root).is_dir():
+            raise FileNotFoundError(f"the bar folder {root} does not exist")
+        series = BarStore(root).load([symbol], end=day, max_bars=10).bars(symbol, end=day, max_bars=2)   # the day and the one before it: a few day files are enough
+        if not series or series[-1].date != day:
+            raise ToolInputError(f"no stored daily bar for {symbol} on {day}")
+        bar, before = series[-1], (series[-2] if len(series) > 1 else None)
+        previous = before.close if before else bar.close
+        moment = (simulated_moment(day) - timedelta(minutes=1)).isoformat(timespec="seconds").replace("+00:00", "Z")
+        return {"symbol": symbol, "price": round(float(bar.close), 4), "change": round(float(bar.close - previous), 4), "change_percent": round(float((bar.close / previous - 1) * 100), 4) if previous else 0.0,
+                "high": round(float(bar.high), 4), "low": round(float(bar.low), 4), "open": round(float(bar.open), 4), "previous_close": round(float(previous), 4), "as_of_utc": moment,
+                "source": f"daily bar of {day} (USE_LIVE_TRADING=false: the market close of the previous business day)", "simulated": True}
 
     # ---- the Critic's code path (Critic v1 spec 5.2): NOT tools of the model, so not in DATA_CLERK_TOOLS (a model has no use for them)
 

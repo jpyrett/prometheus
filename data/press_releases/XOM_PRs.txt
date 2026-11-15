@@ -1,0 +1,162 @@
+<<<PRESS_RELEASE>>>
+id: f8db4c56b0f6b7dd
+symbol: XOM
+published_utc: 2025-12-09T06:50:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-raises-its-2030-plan-transformation-delivering-higher-earnings-stronger
+headline: ExxonMobil Raises Its 2030 Plan – Transformation Delivering Higher Earnings, Stronger Cash Flow, and Greater Returns
+<<<TEXT>>>
+ExxonMobil today updated its Corporate Plan through 2030. Today, our transformation is driving industry-leading results," said Darren Woods, ExxonMobil chairman and CEO." With our updated Plan, we’ re extending that leadership position. "As I’ ve said many times, ExxonMobil is not defined by our products but by our capabilities.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 97fa2ce9660b6408
+symbol: XOM
+published_utc: 2026-01-13T14:46:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-release-fourth-quarter-2025-financial-results-2026-01-13
+headline: ExxonMobil to Release Fourth Quarter 2025 Financial Results
+<<<TEXT>>>
+Exxon Mobil Corporation will release its fourth quarter 2025 financial results on Friday, January 30, 2026. The company will issue a press release via Business Wire that will be available at 5:30 a.m. CT at investor.exxonmobil.com. Darren Woods, Chairman and Chief Executive Officer; Kathy Mikells, Senior Vice President and Chief Financial Officer; Neil...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 13bd50d1ae3616ed
+symbol: XOM
+published_utc: 2026-01-15T16:30:00Z
+url: https://www.nasdaq.com/press-release/imperial-hold-2025-fourth-quarter-earnings-call-2026-01-15
+headline: Imperial to hold 2025 Fourth Quarter Earnings Call
+<<<TEXT>>>
+John Whelan, chairman, president and chief executive officer, and Peter Shaw, vice-president, investor relations, Imperial Oil Limited, will host a 2025 Fourth Quarter Earnings Call on Friday, January 30, following the company’ s fourth quarter earnings release that morning. The event begins at 9 a.m. MT and will be accessible by webcast. During the call, Mr. Whelan...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a271c23377c71ba
+symbol: XOM
+published_utc: 2026-01-30T06:30:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-announces-2025-results-2026-01-30
+headline: ExxonMobil Announces 2025 Results
+<<<TEXT>>>
+Exxon Mobil Corporation today announced fourth-quarter 2025 earnings of $6.5 billion, or $1.53 per share. For the full-year 2025, the company reported earnings of $28.8 billion and distributed $37.2 billion to shareholders, including $17.2 billion of dividends and $20.0 billion of share repurchases, consistent with previously announced plans.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fc9193a2a397c7ba
+symbol: XOM
+published_utc: 2026-01-30T07:55:00Z
+url: https://www.nasdaq.com/press-release/imperial-declares-first-quarter-2026-dividend-2026-01-30
+headline: Imperial declares first quarter 2026 dividend
+<<<TEXT>>>
+Imperial Oil Limited today declared a quarterly dividend of 87 cents per share on the outstanding common shares of the company, payable on April 1, 2026, to shareholders of record at the close of business on March 5, 2026. This first quarter 2026 dividend compares with the fourth quarter 2025 dividend of 72 cents per share. Imperial has a long and successful...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ab5ad0468ce7ca2a
+symbol: XOM
+published_utc: 2026-01-30T07:55:00Z
+url: https://www.nasdaq.com/press-release/imperial-announces-fourth-quarter-2025-financial-and-operating-results-2026-01-30
+headline: Imperial announces fourth quarter 2025 financial and operating results
+<<<TEXT>>>
+Identified items 1 in the fourth quarter related to Norman Wells end of field life acceleration and a separate one-time charge associated with the optimization of materials and supplies inventory. Cash flows from operating activities excluding working capital 1 were $1,260 million– which included an unfavourable $325 million related to identified...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1304827b87fbade3
+symbol: XOM
+published_utc: 2026-02-10T07:00:00Z
+url: https://www.nasdaq.com/press-release/buffalo-potash-announces-seismic-program-and-assaying-legacy-potash-drill-cores
+headline: Buffalo Potash Announces Seismic Program and Assaying of Legacy Potash Drill Cores at Flagship Disley Project
+<<<TEXT>>>
+Buffalo Potash Corporation is pleased to announce that it has contracted a 3 D seismic program to begin at its flagship Disley Project in Saskatchewan in the middle of February, 2026 and concurrently is undertaking re-assaying of legacy potash drill cores from historical drill holes on the property. Mr. Halabura added: "Historic work completed by Imperial Oil...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b7f7508a36a74d03
+symbol: XOM
+published_utc: 2026-02-17T10:15:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-speak-morgan-stanley-energy-power-conference-2026-02-17
+headline: ExxonMobil to Speak at Morgan Stanley Energy & Power Conference
+<<<TEXT>>>
+Exxon Mobil Corporation today announced Jack Williams, Senior Vice President, will conduct a fireside chat at the Morgan Stanley Energy& Power Conference in New York on March 3, 2026, at 11:00 a.m. ET. An archived audio portion of the webcast will be available on the ExxonMobil website approximately 24 hours after the event. ExxonMobil, one of the largest...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 121c72f1980d5b40
+symbol: XOM
+published_utc: 2026-03-10T06:13:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-board-unanimously-recommends-redomiciling-company-new-jersey-texas-2026-03
+headline: ExxonMobil Board Unanimously Recommends Redomiciling the Company from New Jersey to Texas
+<<<TEXT>>>
+Exxon Mobil Corporation today announced its Board of Directors has unanimously recommended shareholders approve changing the company’ s legal domicile from New Jersey to Texas. In doing so, it has created a policy and regulatory environment that can allow the company to maximize shareholder value," said Darren Woods, ExxonMobil chairman and chief executive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1ff50579a3902e7a
+symbol: XOM
+published_utc: 2026-04-15T16:30:00Z
+url: https://www.nasdaq.com/press-release/imperial-hold-2026-first-quarter-earnings-call-2026-04-15
+headline: Imperial to hold 2026 First Quarter Earnings Call
+<<<TEXT>>>
+John Whelan, chairman, president and chief executive officer, and Peter Shaw, vice-president, investor relations, Imperial Oil Limited, will host a 2026 First Quarter Earnings Call on Friday, May 1, following the company’ s first quarter earnings release that morning. The event begins at 9 a.m. MT and will be accessible by webcast. During the call, Mr. Whelan will offer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 34efd31e356e4694
+symbol: XOM
+published_utc: 2026-04-16T10:00:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-release-first-quarter-2026-financial-results-2026-04-16
+headline: ExxonMobil to Release First Quarter 2026 Financial Results
+<<<TEXT>>>
+Exxon Mobil Corporation will release its first quarter 2026 financial results on Friday, May 1, 2026. The company will issue a press release via Business Wire that will be available at 5:30 a.m. CT at investor.exxonmobil.com. Darren Woods, Chairman and Chief Executive Officer; Neil Hansen, Senior Vice President and Chief Financial Officer; and Jim Chapman,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f6ed60d3b2022a43
+symbol: XOM
+published_utc: 2026-05-01T06:30:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-announces-first-quarter-2026-results-2026-05-01
+headline: ExxonMobil Announces First-Quarter 2026 Results
+<<<TEXT>>>
+Exxon Mobil Corporation today announced first-quarter 2026 earnings of $4.2 billion, or $1.00 per share assuming dilution. Earnings were $8.8 billion, or $2.09 per share, excluding identified items and unfavorable estimated timing effects that unwind in subsequent periods. 3 Cash flow from operating activities was $8.7 billion, or $13.8 billion excluding...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e09327b4b47f2bc5
+symbol: XOM
+published_utc: 2026-05-01T07:55:00Z
+url: https://www.nasdaq.com/press-release/imperial-declares-second-quarter-2026-dividend-2026-05-01
+headline: Imperial declares second quarter 2026 dividend
+<<<TEXT>>>
+Imperial Oil Limited today declared a quarterly dividend of 87 cents per share on the outstanding common shares of the company, payable on July 1, 2026, to shareholders of record at the close of business on June 4, 2026. This second quarter 2026 dividend compares with the first quarter 2026 dividend of 87 cents per share. Imperial has a long and successful history...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 507ade61fec55b6e
+symbol: XOM
+published_utc: 2026-05-01T07:55:00Z
+url: https://www.nasdaq.com/press-release/imperial-announces-first-quarter-2026-financial-and-operating-results-2026-05-01
+headline: Imperial announces first quarter 2026 financial and operating results
+<<<TEXT>>>
+Imperial reported estimated net income in the first quarter of $940 million, up from net income of $492 million in the fourth quarter of 2025, primarily driven by the absence of identified items 1 and by higher prices, partially offset by lower volumes. Quarterly cash flows from operating activities were $756 million, compared to $1,918 million generated in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f4ef0dca69b0366a
+symbol: XOM
+published_utc: 2026-05-14T09:00:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-speak-bernstein-42nd-annual-strategic-decisions-conference-2026-05-14
+headline: ExxonMobil to Speak at Bernstein 42nd Annual Strategic Decisions Conference
+<<<TEXT>>>
+Exxon Mobil Corporation today announced Neil Chapman, Senior Vice President, will conduct a fireside chat at the Bernstein 42 nd Annual Strategic Decisions Conference in New York on May 28, 2026, at 9:00 a.m. ET. An archived audio portion of the webcast will be available on the ExxonMobil website approximately 24 hours after the event. ExxonMobil, one of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ccd7d9edc8b670c5
+symbol: XOM
+published_utc: 2026-06-22T09:30:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-announces-planned-effective-date-move-texas-2026-06-22
+headline: ExxonMobil Announces Planned Effective Date for Move to Texas
+<<<TEXT>>>
+Exxon Mobil Corporation today announced that its redomiciliation from New Jersey to Texas is expected to become effective on July 1, 2026. As part of this change, ExxonMobil Holdings Corporation will become the publicly traded parent company, replacing Exxon Mobil Corporation of New Jersey. ExxonMobil expects to file a Form 8- K upon completion.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3a5aa2131c9ca2b8
+symbol: XOM
+published_utc: 2026-07-21T14:14:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-release-second-quarter-2026-financial-results-2026-07-21
+headline: ExxonMobil to Release Second Quarter 2026 Financial Results
+<<<TEXT>>>
+ExxonMobil Holdings Corporation will release its second quarter 2026 financial results on Friday, July 31, 2026. The company will issue a press release via Business Wire that will be available at 5:30 a.m. CT at investor.exxonmobil.com. Darren Woods, Chairman and Chief Executive Officer; Neil Hansen, Senior Vice President and Chief Financial Officer; and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b154d76d35855b4e
+symbol: XOM
+published_utc: 2026-07-31T06:30:00Z
+url: https://www.nasdaq.com/press-release/exxonmobil-announces-second-quarter-2026-results-2026-07-31
+headline: ExxonMobil Announces Second-Quarter 2026 Results
+<<<TEXT>>>
+ExxonMobil Holdings Corporation today announced second-quarter 2026 earnings of $14.5 billion, or $3.48 per share.  "The second quarter was shaped by disruption, but defined by execution," said Darren Woods, ExxonMobil chairman and chief executive officer." Markets were supportive, but our performance reflected the strength of the portfolio and operating...
+<<<END>>>

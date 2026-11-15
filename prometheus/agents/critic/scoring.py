@@ -71,12 +71,10 @@ def great_deal_bonus_allowed(findings: list[Finding], quality_multiplier: float,
     return not any(f.severity == "blocker" and f.dimension in ("accuracy", "value", "chart") for f in findings) and quality_multiplier >= min_quality and red_flag_passed
 
 
-def summarize(symbol: str, action: str, verdict: Verdict, findings: list[Finding], dimensions: dict[str, Dimension], approved_shares: int, suggested_shares: int, minimum: int) -> str:
-    """One sentence, from fixed wording: the verdict, the size, the score, and either the points of each dimension or the two heaviest blockers."""
+def summarize(symbol: str, action: str, verdict: Verdict, findings: list[Finding], dimensions: dict[str, Dimension], minimum: int) -> str:
+    """One sentence, from fixed wording: the verdict, the score, and either the points of each dimension or the two heaviest blockers."""
     if verdict.approved:
-        what = (f"reduction of {symbol}" if action == "reduce" else
-                f"{'add ' if action == 'add' else ''}{approved_shares} shares of {symbol}" if approved_shares == suggested_shares else
-                f"{'add ' if action == 'add' else ''}{approved_shares} of {suggested_shares} shares of {symbol}")
+        what = f"reduction of {symbol}" if action == "reduce" else f"{'add ' if action == 'add' else ''}{symbol}"
         parts = ", ".join(f"{LABEL[n]} {d.points:.0f}/{d.weight:g}" for n, d in dimensions.items() if d.applicable)
         return f"APPROVE {what}: score {verdict.score} ({verdict.grade}); {parts}."
     blockers = order_blockers(findings)

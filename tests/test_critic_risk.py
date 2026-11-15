@@ -1,23 +1,27 @@
-"""Risk fit: does the risk match the user's profile? (Critic spec 8.4 and Appendix B.2, worked from the real captures.)"""
+"""Risk fit: does the COMPANY'S risk match the user's profile? (Critic spec 8.4 and Appendix B.2, worked from the real captures.)
+
+Design choices entry 80: the Critic sizes nothing and does not know the user's money, so there is no position measure, no cap and no number of shares here: how much to buy is the Account Manager's, and the
+arithmetic of each cap is tested in tests/test_account_manager_sizing.py. The numbers below are worked by hand from the real captures' metrics and the risk measures' weights of configs/critic_v1.json.
+"""
 import math
 
 import pytest
 from critic_helpers import CONFIG, FakeClerk, captured, rec_of, tamper, view
+from pydantic import ValidationError
 
 from prometheus.agents.critic import risk as rk
 
 R = CONFIG.risk
-EQUITY = 74481.40       # cash and the holdings of configs/portfolios/jacob_pyrett.json at the capture's prices
 
 
-def case(name="PG_open", price=None, equity=EQUITY, v=None, **changes):
+def case(name="PG_open", price=None, v=None, **changes):
     order = captured(name)
     if changes:
         order.recommendations[0] = tamper(order.recommendations[0], **changes)
     rec = rec_of(order)
     fetched = FakeClerk(order).metrics[rec.symbol]
     price = price if price is not None else rec.trade.entry_mid
-    return rk.assess(rec, v or view(), fetched, price, equity, "test equity", R), rec
+    return rk.assess(rec, v or view(), fetched, price, R), rec
 
 
 def codes(result, severity=None):
@@ -26,25 +30,23 @@ def codes(result, severity=None):
 
 # ---------------------------------------------------------------- Appendix B.2
 
-def test_pg_at_the_moderate_cap_scores_7_1_and_is_low_risk():
+def test_pg_scores_5_2_and_is_low_risk_by_hand():
+    """PG's real numbers: vol_63d_ann 0.20697, atr_pct 0.019679, stop 9.8649 on 167.10 (5.9%), the rest of the measures are at their safe side. Each measure earns clip((x - safe) / (risky - safe)) of its weight."""
     r, rec = case()
-    assert r.approved_shares == 44 and r.detail.caps["position"] == 44 and r.detail.caps["loss"] == 75 and r.detail.allowed_shares == 44
-    assert (r.detail.risk_score, r.detail.risk_level, r.detail.allowed_level, r.detail.tolerance_effective) == (7.1, "low", "medium", "moderate")
+    vol, atr, stop = (0.20697 - 0.15) / (0.60 - 0.15) * 27.8, (0.019679 - 0.015) / (0.06 - 0.015) * 11.1, (9.8649 / 167.1 - 0.05) / (0.25 - 0.05) * 11.1
+    assert (vol, atr, stop) == pytest.approx((3.5195, 1.1541, 0.5015), abs=0.001)
     by = {m.name: m.value * m.weight for m in r.measures}
-    assert by["vol_63d_ann"] == pytest.approx(3.16, abs=0.01) and by["atr_pct"] == pytest.approx(1.04, abs=0.01) and by["stop_loss_pct"] == pytest.approx(0.45, abs=0.01) and by["position_pct"] == pytest.approx(2.44, abs=0.01)
+    assert by["vol_63d_ann"] == pytest.approx(vol, abs=0.01) and by["atr_pct"] == pytest.approx(atr, abs=0.01) and by["stop_loss_pct"] == pytest.approx(stop, abs=0.01)
     assert by["max_drawdown_63d"] == by["beta_63d"] == by["market_cap"] == by["adv_20d_dollars"] == by["flags"] == 0
-    assert r.score == pytest.approx(round(100 * (1 - 0.5 * 7.1 / 45), 2)) and codes(r) == ["size_reduced"]
-
-
-def test_pg_at_the_advisors_own_size_scores_10_6():
-    r, _ = case(v=view(max_position_pct=0.20))
-    assert r.approved_shares == 75 and r.detail.risk_score == 10.6 and codes(r) == []
+    assert (r.detail.risk_score, r.detail.risk_level, r.detail.allowed_level, r.detail.tolerance_effective) == (round(vol + atr + stop, 1), "low", "medium", "moderate") and r.detail.risk_score == 5.2
+    assert r.score == pytest.approx(round(100 * (1 - 0.5 * 5.2 / 45), 2)) == pytest.approx(94.22) and codes(r) == []
+    assert "position_pct" not in {m.name for m in r.measures}
 
 
 def test_sndk_is_very_high_risk_and_denied_for_a_moderate_profile():
     r, _ = case("SNDK")
-    assert (r.detail.risk_score, r.detail.risk_level) == (70.0, "very_high") and codes(r, "blocker") == ["risk_above_profile"] and r.score == 0
-    assert {m.name: m.value for m in r.measures if m.weight >= 10 and m.name != "position_pct" and m.name not in ("market_cap", "adv_20d_dollars")} == {"vol_63d_ann": 1.0, "max_drawdown_63d": 1.0, "beta_63d": 1.0, "atr_pct": 1.0, "stop_loss_pct": 1.0}
+    assert (r.detail.risk_score, r.detail.risk_level) == (77.8, "very_high") and codes(r, "blocker") == ["risk_above_profile"] and r.score == 0       # 27.8 + 16.7 + 11.1 + 11.1 + 11.1: five measures at their risky end
+    assert {m.name: m.value for m in r.measures if m.weight >= 10 and m.name not in ("market_cap", "adv_20d_dollars")} == {"vol_63d_ann": 1.0, "max_drawdown_63d": 1.0, "beta_63d": 1.0, "atr_pct": 1.0, "stop_loss_pct": 1.0}
 
 
 def test_very_high_risk_is_allowed_to_nobody_not_even_an_aggressive_user():
@@ -98,7 +100,7 @@ def test_a_measure_that_could_not_be_made_counts_the_unknown_points_and_says_so(
     order = captured("PG_open")
     fetched = FakeClerk(order).metrics["PG"]
     del fetched["vol_63d_ann"]
-    r = rk.assess(rec_of(order), view(), fetched, 167.1, EQUITY, "x", R)
+    r = rk.assess(rec_of(order), view(), fetched, 167.1, R)
     vol = next(m for m in r.measures if m.name == "vol_63d_ann")
     assert vol.available is False and vol.value == 0.5 and "unknown" in vol.note
 
@@ -106,59 +108,40 @@ def test_a_measure_that_could_not_be_made_counts_the_unknown_points_and_says_so(
 def test_the_flags_add_to_the_score():
     r, _ = case(**{"identity.regime": "stress", "ranking.conflict": True, "trade.gap_risk": True, "quality.multiplier": 0.5})
     assert r.detail.flags == ["market regime stress", "strategies disagree", "a report inside the horizon", "weak quality (0.50)"]
-    assert next(m for m in r.measures if m.name == "flags").value == pytest.approx(0.8) and r.detail.risk_score == pytest.approx(7.1 + 4.0)
+    assert next(m for m in r.measures if m.name == "flags").value == pytest.approx(0.8) and r.detail.risk_score == pytest.approx(5.2 + 0.8 * 5.5, abs=0.1)      # the base 5.2, and four flags of five: 0.8 of the flags' weight of 5.5
 
 
 def test_a_stockholders_deficit_is_a_flag_from_the_critics_own_numbers():
     order = captured("PG_open")
     fetched = FakeClerk(order).metrics["PG"]
     fetched["negative_equity"] = {**fetched.get("negative_equity", {"unit": "bool", "as_of": "2026-11-05", "source": "x", "window": "", "inputs_summary": {}, "note": None}), "value": True}
-    assert "stockholders' deficit" in rk.assess(rec_of(order), view(), fetched, 167.1, EQUITY, "x", R).detail.flags
+    assert "stockholders' deficit" in rk.assess(rec_of(order), view(), fetched, 167.1, R).detail.flags
 
 
-# ---------------------------------------------------------------- the size the profile allows
+# ---------------------------------------------------------------- no size, and no knowledge of the user's money
 
-def test_the_loss_limit_can_be_the_one_that_binds():
-    r, rec = case(v=view(max_position_pct=1.0, max_loss_per_trade_pct=0.002))
-    assert r.detail.caps["loss"] == math.floor(0.002 * EQUITY / rec.trade.stop_distance) == 15 and r.approved_shares == 15
-    assert "loss limit" in r.findings[0].message
-
-
-def test_an_order_dollar_cap_is_a_third_limit():
-    r, _ = case(v=view(max_order_dollars=2000))
-    assert r.detail.caps["order"] == math.floor(2000 / 167.1) == 11 and r.approved_shares == 11 and "order limit" in r.findings[0].message
+def test_the_assessment_holds_no_size_and_the_risk_detail_has_no_field_for_one():
+    r, _ = case()
+    assert set(rk.RiskDetail.model_fields) == {"tolerance_stated", "tolerance_effective", "allowed_level", "risk_score", "risk_level", "flags"}
+    assert not hasattr(r, "approved_shares") and not hasattr(r.detail, "caps") and not hasattr(r.detail, "allowed_shares") and not hasattr(rk, "size_caps") and not hasattr(rk, "exposure_cap")
+    assert not {"size_above_profile", "exposure_limit", "size_reduced"} & set(codes(r))
 
 
-def test_an_addition_counts_what_is_already_held():
-    r, rec = case(**{"action.action": "add", "action.held_shares": 30})
-    assert r.detail.caps["position"] == math.floor((0.10 * EQUITY - 30 * 167.1) / 167.1) == 14 and r.approved_shares == 14
+def test_the_critic_has_no_advisor_size_to_read_so_nothing_about_shares_changes_the_risk_assessment():
+    """Entry 80: the Advisor's record has no size any more (before it, this test put a wild `suggested_shares` in and showed the assessment did not move). What is left of the claim: the shares the user
+    holds change nothing, and a record that carries a size is not a record at all (the schema forbids the field), so a Critic could not read one."""
+    plain, _ = case()
+    held, _ = case(**{"action.held_shares": 7})
+    assert held.detail == plain.detail and held.score == plain.score and [(m.name, m.value) for m in held.measures] == [(m.name, m.value) for m in plain.measures] and codes(held) == codes(plain) == []
+    with pytest.raises(ValidationError):
+        case(**{"trade.suggested_shares": 100000})
 
 
-def test_the_critic_never_raises_a_size_only_cuts_it():
-    r, rec = case(v=view(max_position_pct=1.0, max_loss_per_trade_pct=1.0), **{"trade.suggested_shares": 3})
-    assert r.approved_shares == 3 and "size_reduced" not in codes(r)
-
-
-def test_not_even_one_share_fitting_is_a_blocker_that_lists_the_limits():
-    r, _ = case(v=view(max_loss_per_trade_pct=0.0001))
-    [f] = [f for f in r.findings if f.code == "size_above_profile"]
-    assert f.severity == "blocker" and r.approved_shares == 0 and "Not even one share" in f.message and "loss 0" in f.message and r.score == 0
-
-
-@pytest.mark.parametrize("kwargs, why", [({"price": 0.0}, "there is no price"), ({"equity": None}, "the equity is unknown"), ({"stop_distance_gone": True}, "no stop distance")])
-def test_a_position_that_cannot_be_sized_is_not_approved(kwargs, why):
-    order = captured("PG_open")
-    if kwargs.pop("stop_distance_gone", False):
-        order.recommendations[0] = tamper(order.recommendations[0], **{"trade.stop_distance": None})
-    rec = rec_of(order)
-    price = kwargs.pop("price", 167.1) or None
-    r = rk.assess(rec, view(), FakeClerk(order).metrics["PG"], price, kwargs.get("equity", EQUITY), "x", R)
-    assert "size_above_profile" in codes(r, "blocker") and r.approved_shares == 0 and why in r.findings[-1].message if "stop" not in why else "size_above_profile" in codes(r, "blocker")
-
-
-def test_the_exposure_cap_is_what_still_fits_under_the_reviews_limit():
-    assert rk.exposure_cap(0.0, 100.0, 10000.0, 0.30) == 30 and rk.exposure_cap(2500.0, 100.0, 10000.0, 0.30) == 5 and rk.exposure_cap(3000.0, 100.0, 10000.0, 0.30) == 0
-    assert rk.exposure_cap(9999.0, 100.0, 10000.0, 0.30) == 0 and rk.exposure_cap(0.0, None, 10000.0, 0.3) is None and rk.exposure_cap(0.0, 100.0, None, 0.3) is None
+def test_a_size_limit_of_the_users_profile_cannot_change_a_review_because_the_critic_is_never_given_it():
+    """The profile still carries the four size limits (the Account Manager's); `risk_view()` leaves them out, so the most restrictive profile gives the Critic exactly what the default one does."""
+    plain, _ = case()
+    strict, _ = case(v=view(max_position_pct=0.001, max_loss_per_trade_pct=0.0001, max_new_exposure_pct=0.001, max_order_dollars=1.0))
+    assert strict.detail == plain.detail and strict.score == plain.score and codes(strict) == [] and codes(strict, "blocker") == []
 
 
 # ---------------------------------------------------------------- the profile's own lists
@@ -174,8 +157,6 @@ def test_an_excluded_symbol_sector_or_price_is_a_blocker_each():
 
 # ---------------------------------------------------------------- a sale is not judged
 
-def test_a_reduction_is_not_judged_and_proposes_the_whole_holding_when_the_advisor_sized_none():
-    r, rec = case(**{"action.action": "reduce", "action.held_shares": 12, "trade.suggested_shares": 0, "trade.family": None, "trade.stop_price": None})
-    assert r.applicable is False and r.approved_shares == 12 and r.findings == [] and r.detail.risk_score is None
-    r, _ = case(**{"action.action": "reduce", "action.held_shares": 12, "trade.suggested_shares": 5, "trade.family": None})
-    assert r.approved_shares == 5
+def test_a_reduction_is_not_judged_and_proposes_no_size():
+    r, rec = case(**{"action.action": "reduce", "action.held_shares": 12, "trade.family": None, "trade.stop_price": None})
+    assert r.applicable is False and r.findings == [] and r.detail.risk_score is None and not hasattr(r, "approved_shares")

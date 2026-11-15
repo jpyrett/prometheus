@@ -5673,3 +5673,430 @@ JNJ | positive | 64-year dividend streak (longest in healthcare), diversified ac
 PEP | positive | 54-year dividend streak, highest dividend yield at 4.1% on the list, attractive for value investors despite lower organic sales growth of 3.1% versus Coca-Cola
 CL | positive | Reliable dividend history as Dividend King, reasonable organic sales growth of ~4%, direct competitor to P&G with similar performance metrics
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805325
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T21:09:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=be0250538eb2624a6660586511011825c765e21216038ce6fc1b3d2d0153df57
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble (PG), Why Is It Back In The Spotlight?
+<<<SUMMARY>>>
+Procter & Gamble (PG) has shuffled its leadership bench in India, elevating long-time insider Shalini Saraswat to Brand Director and Business Head for Pantene India after several roles across Tide and Head & Shoulders. For investors watching Procter & Gamble, that leadership change in India lands against a strong run in the shares, with a 30 day share price return of 9.79% and a 90 day move of 16.24% feeding into an 18.51% year to date gain. The 1 year total shareholder return of 16.86% and 5...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804942
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:42:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a204410d693e001c9f62f4f3bb37c05f1c65825e27b5fe55663f594896a82a70
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: If the Stock Market Crashes, These Are the First 3 Dividend Stocks I Want to Buy
+<<<SUMMARY>>>
+A stock market crash could provide an opportunity to buy these three high-quality dividend stocks at much more attractive valuations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804601
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:16:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1fca01b451a577017f1d7dd604adc4cd13c08dfe897ec4910a7031d8fcc943c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Is Procter & Gamble Stock Worth More Than Its Rivals?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804483
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:06:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1382072c7c879e60ab5f3dbafc74a681b6e0c2f639feb693b72115490a044350
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Amazon's secret AI plan could change how Americans shop
+<<<SUMMARY>>>
+Amazon is developing a project called World Product Graph to build a database of products sold across the internet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803960
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:17:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=01f27d753b648a3a3900ba77abc28bf2e166550ba61d52354d72c2facaab9169
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble or PepsiCo: The One Dividend Stock I’d Hold for the Next 20 Years
+<<<SUMMARY>>>
+Key TakeawaysProcter & Gamble declared its $1. 0885 quarterly dividend in October, while PepsiCo cut its 2026 core EPS growth outlook and lost KFC’s U.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802248
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:11:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1056be4d229a3c33397f8044752b3bd386e1f604be8504846a376ddfc9d1113a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 5 Dividend Aristocrats and Kings to Consider if the Stock Market Sells Off
+<<<SUMMARY>>>
+Market indicators are flashing red heading into October, and investors who wait too long to reposition may regret it. Five elite dividend stocks in healthcare, consumer staples, and utilities have weathered every major crash for decades, and they are still trading at compelling entry points right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802270
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:04:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6200c5f83a4846cabe6ecec8d663158a24fdc32c70a68dd758a6f5471bfbf1b2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Has Raised Its Dividend for 70 Straight Years. Where’s the Price Target Now?
+<<<SUMMARY>>>
+A strong October quarter sent P&G shares climbing toward a 52-week high, yet oil prices and shrinking margins threaten the rally. Can volume-led growth and a looming Investor Day outrun the commodity squeeze?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143774302
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T23:21:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8ff5c27e772e05a6ec76a078eb72598e02a611e0366dd71b90293d96131d01ba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble vs. Starbucks: Which Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Procter & Gamble's steady cash machine goes head-to-head with Starbucks' bid for a brand-led comeback, and the valuation gap may tip the scales.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802128
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:10:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b5bcaaf31e4523e0c6067d0518cd9afa4299283d05c3d4ca19cf176a8b810563
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Los-Angeles--California---July-6-2025-Nv.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Nvidia at 11X Earnings? One Wall Street Bull Says Investors Are Getting a Rare Bargain
+<<<SUMMARY>>>
+Nancy Tengler sees Nvidia as a bargain at 11X earnings, favoring the AI giant over Procter &amp; Gamble at 23X.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770816
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ce5dc50011fead6714c6ca9dc8d9571f1b7e39915f19b88d1cd60c618050ac04
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Pampers Partners with Witney Carson to Launch Baby Registry Sweepstakes
+<<<SUMMARY>>>
+CINCINNATI, November 12, 2026--Pampers, the #1 diaper brand in the U.S.1, announced a partnership with professional dancer and television personality Witney Carson to help expecting parents prepare for their newest arrivals. Through the Pampers Baby Registry Sweepstakes, 50 families will win $1,500 toward baby essentials when they add Pampers to their registries.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770815
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f5659692ab3d478a9ac0c91ae56d2aeb01294897e5a8b8e434eee2072ccd6b6e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: PG vs. CHD: Which Consumer Staples Giant Has the Competitive Edge?
+<<<SUMMARY>>>
+Procter & Gamble and Church & Dwight compete through brand strength, innovation and market share gains, but differ in growth trends and valuations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769413
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:51:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f1929cb826d675efd4013034468666243f9e4cdd28b4413415651a97e9fd6fcb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Johnson & Johnson vs. Procter & Gamble: 64 and 70 Straight Years of Raises. Which Dividend King Pays You More Over the Next Decade?
+<<<SUMMARY>>>
+Key TakeawaysProcter & Gamble yields 2. 7% and Johnson & Johnson 1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766855
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:14:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89870f57f6b55458d9f897bb8ea40670edf8b226bb3a9d583621912fdd42a7e1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Is Procter & Gamble (PG) Worth More Than Its Price Today?
+<<<SUMMARY>>>
+Procter & Gamble has delivered steady gains for long term holders, and the share price now puts a spotlight on a simple question for you as an investor. Is the current US$167.67 price tag reasonably aligned with the cash the business is expected to generate over time, based on a Discounted Cash Flow (DCF) view of its value? Over the past 5 years, Procter & Gamble has returned 29.7%, which puts real pressure on today’s valuation to be supported by future cash generation rather than just past...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765119
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T10:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a93a7dce5aa6489f7e1f64ea6f8dcee184332c3de0a4857e7ba2a9adb01dcbec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: The Ultimate Dividend Stock to Buy With $1,000 Right Now
+<<<SUMMARY>>>
+Past performance is no guarantee of future results, but it's a pretty good indication of what's likely for Procter & Gamble.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143757323
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T07:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14b9ae4766058c1f89fe2215fd04c3ea437fee8980919edf3e7d1c303e818d96
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble (PG) Has Raised Its Dividend for 70 Straight Years. Here's Why I'd Buy Before 2027.
+<<<SUMMARY>>>
+That kind of track record reflects a company you can count on for growing income over the years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766856
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=431661faf483e8455f53079a74bb748dd670a324f41a0aa47e52802d64108ea6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 3 Insider Selling Stories; 3 Different Signals for Investors
+<<<SUMMARY>>>
+Insiders at Liquidia, Brinker International and Procter & Gamble have been selling shares, but context like analyst targets, institutional ownership and earnings trends shows the signals differ by company.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766338
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b2893f36405b9b90f237df63e12ecab04af5e997b7fd2ebe357a34f9974022bb
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Cyclicals Lead Sectors In Wednesday Trading As Defensives Trail
+<<<SUMMARY>>>
+Five sectors are higher and six are lower in Wednesday&#39;s regular session, with cyclical sectors holding two of the top three positions. Technology sits well clear of the rest, separated from the next sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ec41a8ea57be25292e2619a7c12ecaf5ccca7ec7efdcead29f2fb37a889cb128
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T07:05:00Z
+publisher: The Motley Fool
+author: Selena Maranjian
+url: https://www.fool.com/investing/2026/11/12/procter-gamble-pg-has-raised-its-dividend-70-strai/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893081%2Fgetty-couple.jpg&w=1200&op=resize
+category: 
+tickers: PG
+keywords: dividend growth, dividend king, consumer staples, defensive stock, income investing, brand portfolio, economic resilience
+headline: Procter & Gamble (PG) Has Raised Its Dividend for 70 Straight Years. Here's Why I'd Buy Before 2027.
+<<<SUMMARY>>>
+Procter & Gamble is highlighted as a reliable dividend investment with 70 consecutive years of dividend increases and 136 years of continuous dividend payments. The company offers a 2.6% dividend yield with average annual growth of 4.6% over the past five years. With a strong portfolio of consumer staple brands and defensive characteristics during economic downturns, PG is positioned as a stable investment option, though shares are reasonably but not cheaply priced at a forward P/E ratio of 24.
+<<<INSIGHTS>>>
+PG | positive | The article presents PG as a highly reliable investment with an exceptional 70-year dividend increase streak, strong brand portfolio, consistent dividend growth averaging 4.6-5% annually, and defensive characteristics that perform well during economic downturns. The company's ability to maintain dividends through 26 recessions demonstrates financial stability and commitment to shareholders.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e0bbb61437c95ce6dc83b82d765201df3d0def6b935d3f67e717847bb76c0253
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T10:30:00Z
+publisher: The Motley Fool
+author: James Brumley
+url: https://www.fool.com/investing/2026/11/12/ultimate-dividend-stock-to-buy-1k-procter-pg/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893114%2Fshopping-for-paper-towels.jpg&w=1200&op=resize
+category: 
+tickers: PG
+keywords: dividend stock, Procter & Gamble, consumer staples, dividend growth, long-term investing, income investing, brand portfolio, market leadership
+headline: The Ultimate Dividend Stock to Buy With $1,000 Right Now
+<<<SUMMARY>>>
+Procter & Gamble is recommended as the ultimate dividend stock for income-focused investors, boasting 70 years of uninterrupted dividend growth and a dominant position in consumer staples. Despite a modest 2.6% yield and recent share price appreciation, the company's reliable business model, extensive brand portfolio, and consistent performance through multiple recessions make it suitable for long-term investors seeking steady income.
+<<<INSIGHTS>>>
+PG | positive | The article strongly endorses P&G as an exceptional dividend stock due to its 70-year track record of uninterrupted dividend increases, dominant market position with leading brands, strong financial performance ($87B in sales), competitive advantages through scale and advertising spend, and proven resilience through multiple recessions. The company's consistent execution and reliable business model are highlighted as key strengths.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2527fb0a1ae14dcf521c167e0c4822f80f677c9e0176740ed61412f335506292
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028811/pg-vs-chd-which-consumer-staples-giant-has-the-competitive-edge?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3028811
+image_url: https://staticx-tuner.zacks.com/images/articles/main/45/965.jpg
+category: 
+tickers: CHD, PG
+keywords: consumer staples, stock comparison, market share gains, organic growth, valuation, investment strategy, brand portfolio, innovation
+headline: PG vs. CHD: Which Consumer Staples Giant Has the Competitive Edge?
+<<<SUMMARY>>>
+Church & Dwight (CHD) and Procter & Gamble (PG) are compared as investment opportunities in the consumer staples sector. CHD has outperformed YTD with 33.6% gains versus PG's 17%, driven by stronger organic growth and market share gains. However, CHD trades at a higher forward P/E of 27.91X compared to PG's 23.47X. Both stocks carry a Zacks Rank #3 (Hold) rating, with CHD showing stronger operating momentum but elevated valuation risk, while PG offers defensive strengths with established market leadership.
+<<<INSIGHTS>>>
+CHD | positive | CHD demonstrates stronger YTD performance (+33.6%), robust organic sales growth (4.4% estimated), consistent market share gains, focused brand portfolio with innovation-led expansion, and growing international presence. However, the positive sentiment is tempered by elevated valuation (27.91X forward P/E) and persistent cost pressures that leave less room for execution setbacks.
+PG | neutral | PG maintains a formidable competitive position with global scale, diversified portfolio, and established market leadership, supporting its defensive appeal. However, modest YTD performance (+17%), slower estimated growth (3.2% sales, 1.5% EPS), and elevated input costs limiting near-term earnings upside result in a neutral outlook. The Hold rating reflects stable but unexciting prospects.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:648666314d584edf627cf49b1900b88be0a7a1d5e31052873f8e108bc6fdb1b7
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T22:33:38Z
+publisher: The Motley Fool
+author: Sara Appino
+url: https://www.fool.com/coverage/better-buy/2026/11/12/elf-beauty-vs-lululemon-athletica-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F497213577468110e4ae04f3160ed91a99378c474-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: ELF, LULU, TGT, WMT, AMZN, PG, UL
+keywords: cosmetics market, athletic apparel, valuation comparison, revenue growth, P/E ratio, consumer goods, retail investment
+headline: e.l.f. Beauty vs. lululemon athletica: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares e.l.f. Beauty and lululemon athletica as investment options for 2027. e.l.f. Beauty is highlighted as a high-growth cosmetics disruptor with 24.6% revenue growth and 31 consecutive quarters of sales increases, though it carries a high P/E ratio of 82.65. Lululemon athletica is presented as a more established, profitable player with a 14.2% net margin and lower valuation (P/E of 8.81), but faces slower 4.9% growth and business pressures. The analyst recommends e.l.f. Beauty for its sustained growth momentum despite higher valuation.
+<<<INSIGHTS>>>
+ELF | positive | Strong revenue growth of 24.6% YoY, 31 consecutive quarters of sales increases, recent Q2 2027 earnings beat with 51% sales growth, successful brand acquisition (rhode), and analyst recommendation for 2027 investment despite high valuation.
+LULU | neutral | Maintains strong profitability (14.2% net margin) and attractive valuation (P/E 8.81), but faces headwinds with slower growth (4.9% YoY), core business pressure, pending securities lawsuits, and uncertain turnaround prospects despite new CEO appointment.
+TGT | neutral | Mentioned as a key retail partner for e.l.f. Beauty distribution; no specific performance analysis provided.
+WMT | neutral | Mentioned as a key retail partner for e.l.f. Beauty distribution; no specific performance analysis provided.
+AMZN | neutral | Mentioned as a key retail partner for e.l.f. Beauty distribution; no specific performance analysis provided.
+PG | neutral | Identified as a competitive threat to e.l.f. Beauty in the cosmetics market; no performance analysis provided.
+UL | neutral | Identified as a competitive threat to e.l.f. Beauty in the cosmetics market; no performance analysis provided.
+<<<END>>>

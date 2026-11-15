@@ -21,18 +21,19 @@ def reasons_of(**spec):
 
 # ---------------------------------------------------------------- statuses and the order's new fields
 
-def test_the_statuses_run_on_to_reviewed_and_decided():
-    assert wo.STATUSES == ("new", "data_ready", "data_failed", "recommended", "reviewed", "decided")
-    assert wo.HAS_DATA == ("data_ready", "recommended", "reviewed", "decided")
+def test_the_statuses_run_on_to_reviewed_decided_and_traded():
+    assert wo.STATUSES == ("new", "data_ready", "data_failed", "recommended", "reviewed", "decided", "traded")
+    assert wo.HAS_DATA == ("data_ready", "recommended", "reviewed", "decided", "traded")
 
 
-@pytest.mark.parametrize("status", ["data_ready", "recommended", "reviewed", "decided"])
+@pytest.mark.parametrize("status", ["data_ready", "recommended", "reviewed", "decided", "traded"])
 def test_every_check_refuses_an_order_that_already_has_its_data(status):
     search = wo.new_work_order("x", subject=["PG"])
     quote = wo.new_work_order("q", action_type="fetch_quote", subject=["PG"])
     metric = wo.new_work_order("m", action_type="calculate_financials", subject=["PG"], metrics=[{"name": "rsi_14"}])
     verify = verify_order(symbols=["PG"])
-    for o, check in ((search, wo.verify_request), (quote, wo.verify_quote_request), (metric, wo.verify_metric_request), (verify, wo.verify_verification_request)):
+    bars = wo.new_work_order("b", action_type="fetch_bars", subject=["PG"], bars={"start": "2026-11-05", "end": "2026-11-06"})
+    for o, check in ((search, wo.verify_request), (quote, wo.verify_quote_request), (metric, wo.verify_metric_request), (verify, wo.verify_verification_request), (bars, wo.verify_bar_request)):
         assert not any("already has its data" in r for r in check(o))
         o.status = status
         assert any(f"already has its data (status {status})" in r for r in check(o))
@@ -41,6 +42,7 @@ def test_every_check_refuses_an_order_that_already_has_its_data(status):
 def test_a_v1_order_still_validates_and_the_new_fields_are_empty():
     order = wo.new_work_order("What is the news on PG?", subject=["PG"])
     assert order.schema_version == 1 and order.reviews == [] and order.critic_runs == [] and order.trade_decisions == [] and order.verify is None
+    assert order.trades == [] and order.trader_runs == [] and order.bars is None             # Trader v1 (spec section 11): the fields are there and empty
     wo.WorkOrder.model_validate(order.model_dump())
     assert wo.DataResult().verification == {}
 
@@ -128,10 +130,10 @@ def test_parse_utc(text, expected):
 
 # ---------------------------------------------------------------- verify_trade: the Trader's precondition
 
-def reviewed(will_trade="yes_user", approved=True, valid_until=None, shares=44, approved_shares=44):
+def reviewed(will_trade="yes_user", approved=True, valid_until=None, shares=44):
     order = wo.new_work_order("x", subject=["PG"])
     order.status = "decided"
-    order.reviews = [{"record_id": "r1", "approved": approved, "approved_shares": approved_shares, "valid_until_utc": valid_until or (NOW + timedelta(minutes=30)).isoformat().replace("+00:00", "Z")}]
+    order.reviews = [{"record_id": "r1", "approved": approved, "valid_until_utc": valid_until or (NOW + timedelta(minutes=30)).isoformat().replace("+00:00", "Z")}]
     order.trade_decisions = [{"record_id": "r1", "will_trade": will_trade, "shares": shares}]
     return order
 
@@ -155,8 +157,8 @@ def test_no_review_no_decision_a_denial_an_expired_approval_or_no_shares_each_st
     assert any("no valid_until_utc" in r for r in wo.verify_trade(reviewed(valid_until="soon"), "r1", NOW))
     assert any("whole number of shares" in r for r in wo.verify_trade(reviewed(shares=0), "r1", NOW))
     assert any("whole number of shares" in r for r in wo.verify_trade(reviewed(shares=True), "r1", NOW))
-    assert any("approved 44" in r for r in wo.verify_trade(reviewed(shares=45), "r1", NOW))
-    assert wo.verify_trade(reviewed(shares=10), "r1", NOW) == []                                         # fewer than approved is fine
+    assert any("whole number of shares" in r for r in wo.verify_trade(reviewed(shares=2.5), "r1", NOW))
+    assert wo.verify_trade(reviewed(shares=1), "r1", NOW) == [] and wo.verify_trade(reviewed(shares=45), "r1", NOW) == []      # the number of shares is the Account Manager's (the decision's): the Critic approves no size to compare it with
 
 
 def test_a_decision_without_a_matching_review_for_a_different_record_does_not_help():

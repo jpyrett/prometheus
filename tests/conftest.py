@@ -32,6 +32,19 @@ def market_hours_count(monkeypatch):
 
 
 @pytest.fixture(autouse=True)
+def paper_trading_on(monkeypatch):
+    """The Trader reads PAPER_TRADING from the environment, then from .env. A test must not inherit Jacob's .env (the same reason as `market_hours_count`): paper trading is on unless a test turns it off itself."""
+    monkeypatch.setenv("PAPER_TRADING", "true")
+
+
+@pytest.fixture(autouse=True)
+def live_clock_on(monkeypatch):
+    """The desk's clock reads USE_LIVE_TRADING from the environment, then from .env (design choices entry 76). A test must not inherit Jacob's .env, which says false (the simulated clock and the stored closing price):
+    the real clock is on unless a test turns it off itself."""
+    monkeypatch.setenv("USE_LIVE_TRADING", "true")
+
+
+@pytest.fixture(autouse=True)
 def no_writes_to_the_real_ledger(monkeypatch):
     """No test may append to the project's real ledgers (data/ledger/: the Advisor's recommendations and the Critic's reviews, which a real run reads and writes). A test passes its own ledger in a temporary folder."""
     from prometheus.memory.ledger import Ledger
@@ -44,3 +57,29 @@ def no_writes_to_the_real_ledger(monkeypatch):
         return original(self, record)
 
     monkeypatch.setattr(Ledger, "append", guarded)
+
+
+@pytest.fixture(autouse=True)
+def no_real_trader_model(monkeypatch):
+    """A Trader built without a model builds the real one (OpenRouter, paid) the first time it needs it. In a test that must never happen: here `get_chat_model` fails the way a missing key does, so a Trader with
+    no model of its own is a Trader whose model cannot start (the sweep still trades). A test of the model's own settings patches this name itself, with a fake that records what it is asked."""
+    def refuse(*args, **kwargs):
+        raise RuntimeError("OPENROUTER_API_KEY is not set (a test must not build a real model)")
+
+    monkeypatch.setattr("prometheus.agents.trader.trader.get_chat_model", refuse)
+
+
+@pytest.fixture(autouse=True)
+def no_real_quotes_for_the_holdings(monkeypatch):
+    """`AccountManager.decide_trades` asks the Data Clerk for the current price of the symbols the portfolio holds (`request_prices`, one quote order: Finnhub, paid). An Account Manager built with no Data Clerk would build the
+    real one. In a test that must never happen: here such a manager's quote request fails the way a missing key does, which `decide_trades` meets by counting the holdings at their cost basis. A manager that is given a clerk
+    (a test's own, over real recorded quotes) asks it as before."""
+    from prometheus.agents.account_manager.account_manager import AccountManager
+    original = AccountManager.request_prices
+
+    def guarded(self, symbols):
+        if self._clerk is None:
+            raise RuntimeError("a test must not build a real Data Clerk for quotes: give the Account Manager a clerk")
+        return original(self, symbols)
+
+    monkeypatch.setattr(AccountManager, "request_prices", guarded)

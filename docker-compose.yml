@@ -1,0 +1,57 @@
+# Prometheus account book only. Postgres 18, bound to localhost.
+# Start it with scripts/setup_postgres.sh, which writes secrets/ and applies sql/.
+# Passwords are not in this file. This project does not start any other compose project.
+
+name: prometheus
+
+services:
+  postgres:
+    image: postgres:18
+    container_name: prometheus-postgres
+    restart: unless-stopped
+    entrypoint: ["/bin/bash", "/sql/docker-entrypoint-ssl.sh"]
+    environment:
+      POSTGRES_USER: prometheus_admin
+      POSTGRES_DB: prometheus
+      POSTGRES_PASSWORD_FILE: /run/secrets/admin_password
+      POSTGRES_INITDB_ARGS: "--auth-local=scram-sha-256 --auth-host=scram-sha-256 --data-checksums"
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+    secrets:
+      - admin_password
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - prometheus_pgdata:/var/lib/postgresql
+      - ./sql:/sql:ro
+      - ./sql/pg_hba.conf:/etc/prometheus/pg_hba.conf:ro
+    command:
+      - postgres
+      - -c
+      - hba_file=/etc/prometheus/pg_hba.conf
+      - -c
+      - password_encryption=scram-sha-256
+      - -c
+      - listen_addresses=*
+      - -c
+      - log_connections=on
+      - -c
+      - log_disconnections=on
+      - -c
+      - log_statement=none
+    shm_size: 128mb
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U prometheus_admin -d prometheus"]
+      interval: 2s
+      timeout: 5s
+      retries: 40
+      start_period: 10s
+
+secrets:
+  admin_password:
+    file: ./secrets/postgres_admin_password.txt
+
+volumes:
+  prometheus_pgdata:
+    name: prometheus_pgdata

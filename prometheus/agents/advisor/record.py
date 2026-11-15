@@ -10,11 +10,12 @@ A record is the CONTRACT with the Critic: everything the Critic needs to judge a
     features        every metric used, as the Data Clerk gave it: {name: {value, unit, as_of, source}}
     agreement       how much the text agrees, how complete the inputs are, and the confidence that results
     ranking         the composite edge, the cost, the expected excess return after cost, the stance, the rank
-    trade           the plan: entry zone, stop, target, time stop, size, order style, invalidation rules
+    trade           the plan: entry zone, stop, target, time stop, order style, invalidation rules (prices and dates: NO size, how much is the Account Manager's, entry 80)
     risk, portfolio_fit, gates, thesis (the model's words, checked), audit (which model calls, which config)
 
 The v0 fields (`symbol, company, stance, model_score, score, supported, consistent, bullish_signals, bearish_signals, signals_claimed, signals_verified, signals_counted, signals, advisor`)
-keep their meaning, so `account_manager.top_recommendation` and the week 3 lab read a v1 record unchanged. `score` is `round(50 + 50 * the blend)` (Amendment 6); the expected excess return after cost was removed from the record (Amendment 7).
+keep their meaning, so `account_manager.top_recommendation` and the week 3 lab read a v1 record unchanged. `score` is `round(50 + 50 * the blend)` (Amendment 6); the expected excess return after cost was removed from the record (Amendment 7), and so were the size of the trade and the user's money (entry 80: the Advisor says which companies and at what
+prices, never how much).
 
 Every model here forbids unknown fields: a typo in the code that builds a record fails when the record is built, not when the Critic reads it. A test asserts that no field except the ones
 listed in `MODEL_FIELDS` originates from a model's reply.
@@ -23,7 +24,7 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 2   # kept at 2 through the amendments that took a field out (Amendment 7, entry 80), as the Critic's record keeps its version: a field that goes is simply gone (the models forbid extras). Records stored before entry 80 still hold a size
 # The ONLY places a model's words reach a record (spec 14): the model_score it gave, the thesis and bullets, the quotes of its signals and events, and the company name.
 MODEL_FIELDS = ("model_score", "thesis", "bull_case", "bear_case", "signals[*].quote", "events[*].quote", "company")
 
@@ -118,6 +119,7 @@ class Ranking(_Model):
 
 
 class TradePlan(_Model):
+    """The plan of one trade: prices and dates, no size (entry 80)."""
     family: str | None = None
     entry_basis: str
     entry_zone: list[float] | None = None
@@ -129,18 +131,9 @@ class TradePlan(_Model):
     time_stop_date: str | None = None
     time_stop_note: str | None = None
     gap_risk: bool = False
-    equity: float | None = None
-    equity_basis: str | None = None
-    risk_budget: float | None = None
-    suggested_shares: int = 0
-    position_pct: float | None = None
-    oversized: bool = False
-    size_note: str | None = None
     order_style: str | None = None
     limit_price: float | None = None
     invalidation: list[dict] = Field(default_factory=list)
-    funds_feasible: bool | None = None
-    funds_note: str | None = None
     notes: list[str] = Field(default_factory=list)
 
 
@@ -158,10 +151,8 @@ class Risk(_Model):
 
 
 class PortfolioFit(_Model):
-    position_pct_after: float | None = None
     sector_weight_after: float | None = None             # needs the sector of every holding: not computed in this build
     correlation_to_portfolio_63d: float | None = None    # needs the bars of every holding: not computed in this build
-    funds_feasible: bool | None = None
     note: str | None = None
 
 

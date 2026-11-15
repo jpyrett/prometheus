@@ -1,0 +1,6 @@
+{
+  "config_version": "1",
+  "_note": "Every threshold of the Account Manager's sizing (design/sizing_in_account_manager_spec.md): how many shares to buy. The user's own limits (position, loss per trade, new exposure, order dollars) are in the user's profile, not here. Read once; a missing or unknown key is an error. No model chooses one. clarify: the limits of the Ask-mode loop that asks the user how much to buy (design choices entry 85): at most max_questions questions, max_problems replies of the model or answers of the user that are refused before it gives up and the default size is shown.",
+  "sizing": {"max_adv_pct": 0.05, "float_guard": 1e-9},
+  "clarify": {"max_questions": 3, "max_problems": 2, "max_question_chars": 300, "max_answer_chars": 200}
+}

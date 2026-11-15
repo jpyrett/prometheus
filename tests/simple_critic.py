@@ -7,17 +7,17 @@ pair of eyes is for. It uses no model and imports nothing from the Advisor's mod
 
 HARD CHECKS (a failure is a defect of the record: `reject`)
   complete     every section of the schema is there and has what the Critic reads; every feature has value, unit, as_of and source
-  trade        an `open` or `add` has an entry zone, a stop under the entry, a time stop in the future, at least one share, an order style and the invalidation rules, and the price rule
-               says the stop price
-  recompute    stop = entry mid - stop distance; position = shares x entry mid / equity; composite, the blend (news with its recency weights, performance, historical, filings), the confidence and the score (the blend) from their own inputs
+  trade        an `open` or `add` has an entry zone, a stop under the entry, a time stop in the future, an order style and the invalidation rules, and the price rule
+               says the stop price (it checks NO size: the record has none, how much is the Account Manager's, entry 80)
+  recompute    stop = entry mid - stop distance; composite, the blend (news with its recency weights, performance, historical, filings), the confidence and the score (the blend) from their own inputs
   evidence     every verified quote is a substring of the source it names (the Critic reads the work order's sources itself); every filing item cited is in the order's evidence
   features     a number a family says it used is the number in `features`; no feature is older than 5 days at the run date
   gates        every gate passed for a new position
   thesis       there is one (or an error that says why); every ref it cites is in the record; it is a thesis, not a promise (Amendment 6 removed the "unmeasured" rule with the expected return)
   audit        the config version, the metric order and the plan run are named
 WARNINGS (a judgement of the position, not a defect: `review`)
-  the stock is far under its 52-week high or its 200-day mean, a 63-day drawdown worse than 30%, a stop more than 25% away, an oversized position, a thin edge (under 0.2% after cost), a
-  position over 20% of equity, counter-evidence on file, inputs under half complete, funds not feasible.
+  the stock is far under its 52-week high or its 200-day mean, a 63-day drawdown worse than 30%, a stop more than 25% away, a thin edge (under 0.2% after cost),
+  counter-evidence on file, inputs under half complete.
 """
 import json
 import re
@@ -75,13 +75,11 @@ def critique(record: dict, order) -> Critique:
         check("trade.entry", bool(zone) and len(zone) == 2 and zone[0] < mid < zone[1], "no entry zone around the entry mid")
         check("trade.stop", trade.get("stop_price") is not None and mid is not None and trade["stop_price"] < mid, "the stop is not under the entry")
         check("trade.time_stop", bool(trade.get("time_stop_date")) and date.fromisoformat(trade["time_stop_date"]) > as_of, "the time stop is not in the future")
-        check("trade.size", (trade.get("suggested_shares") or 0) >= 1 and bool(trade.get("order_style")), "no whole-share size or no order style")
+        check("trade.order_style", bool(trade.get("order_style")), "no order style")
         rules = {r["kind"]: r["value"] for r in trade.get("invalidation", [])}
         check("trade.invalidation", {"price_below", "days_elapsed", "event_class"} <= set(rules) and rules.get("price_below") == trade.get("stop_price"), "invalidation rules missing, or the price rule is not the stop")
         # ---- recompute
         check("recompute.stop", close(trade["stop_price"], trade["entry_mid"] - trade["stop_distance"], 0.011), "stop_price is not entry_mid - stop_distance")
-        if trade.get("equity"):
-            check("recompute.position", close(trade["position_pct"], trade["suggested_shares"] * trade["entry_mid"] / trade["equity"], 1e-3), "position_pct is not shares x entry / equity")
     passed = [f for f in record["families"] if f["passed"]]
     bulls = [f["edge_20d"] for f in passed if f["direction"] == "bullish"]
     bears = [abs(f["edge_20d"]) for f in passed if f["direction"] == "bearish"]
@@ -153,12 +151,6 @@ def critique(record: dict, order) -> Critique:
             c.warnings.append(f"a {feature('max_drawdown_63d'):.0%} drawdown in 63 days")
         if trade.get("stop_distance") and trade.get("entry_mid") and trade["stop_distance"] / trade["entry_mid"] > 0.25:
             c.warnings.append(f"the stop is {trade['stop_distance'] / trade['entry_mid']:.0%} away")
-        if trade.get("oversized"):
-            c.warnings.append("oversized: " + (trade.get("size_note") or ""))
-        if (trade.get("position_pct") or 0) > 0.20:
-            c.warnings.append(f"the position is {trade['position_pct']:.0%} of equity")
-        if trade.get("funds_feasible") is False:
-            c.warnings.append("the funds are not feasible")
         if agreement.get("completeness") is not None and agreement["completeness"] < 0.5:
             c.warnings.append(f"the inputs are {agreement['completeness']:.0%} complete")
     if record["evidence"]["counter_evidence"]:

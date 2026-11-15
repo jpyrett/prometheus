@@ -199,8 +199,6 @@ class Regime(_Section):
 
 class Ranking(_Section):
     diversity_within: float
-    add_max_position_pct: float
-    oversized_pct: float
 
 
 class BlendWeights(_Section):
@@ -245,10 +243,6 @@ class Trade(_Section):
     entry_atr: float
     stop_atr: dict[str, float]
     target_edge_multiple: float
-    risk_pct: float
-    risk_pct_stress: float
-    max_position_pct: float
-    max_adv_pct: float
     limit_spread_bps: float
     trend_limit_atr: float
     event_limit_reaction_atr: float

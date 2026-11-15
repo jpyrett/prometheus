@@ -1,0 +1,1371 @@
+<<<ARTICLE>>>
+id: finnhub:143559591
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T05:27:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a224b36cc4b4fa2fd57c0a5d88773cdda30dd930173c6953ad1e000facb2c42
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Clean Energy Fuels Corp (CLNE) (Q3 2026) Earnings Call Highlights: Raised Guidance, Surging RNG ...
+<<<SUMMARY>>>
+Clean Energy Fuels Corp (CLNE) lifted its 2026 adjusted EBITDA outlook to $75 million--$80 million as RNG volumes climbed 9% and dairy production jumped nearly fivefold.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143544887
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:13:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=61210233a9f0e6c00badac47651a9edc0118dac12c890d715dafe1fbc09d4572
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: 3 British Energy Stocks With Earnings Growth Over 60%
+<<<SUMMARY>>>
+Oil prices have started to pick up again as traders reassess Middle East supply risks and the prospects for a settlement in the Iran conflict. That shift keeps attention firmly on large UK based oil and gas producers, which still anchor much of the region’s energy exposure. This article walks through three of the strongest London listed oil and gas stocks from our filter and explains what makes each one worth a closer look. The three stocks highlighted below are just a starting sample, and...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143545878
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:02:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=40981c66110d4202323e1c26b373d14261e7576b9535e86662427f2a7af73a68
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Sector Update: Energy Stocks Drop Thursday
+<<<SUMMARY>>>
+Energy stocks declined Thursday with the NYSE Energy Sector Index dropping 2.1% and the State Street
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143545879
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:35:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=269aea63923309ebe7efbafdf2ec51da671db43ac8f8e2a3371b97065ae4d51f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Sector Update: Energy Stocks Lower Thursday Afternoon
+<<<SUMMARY>>>
+Energy stocks were lower Thursday afternoon, with the NYSE Energy Sector Index down 0.5% and the Sta
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541362
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:31:49Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=be72338a3480ea0b8c2061b8c997db40068f6139614c0375f34ccd84b53c86a5
+image_url: 
+category: company
+tickers: BP
+keywords: 
+headline: BP p.l.c. Sells 5% Stake in Aker BP for $1.06 billion
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541242
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:12:08Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7cecaf6d998be2918108737a2b0222bad8bb2ce0b1dfa897e3770803638886ca
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2156714333/image_2156714333.jpg?io=getty-c-w1536
+category: company
+tickers: BP
+keywords: 
+headline: Stocks To Consider Ahead Of The Upcoming October 2026 CPI Report
+<<<SUMMARY>>>
+Federal Reserve held rates at 3.75%-4.00% amid elevated inflation and resilient domestic spending, with a 25 bps hike next month. Read full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143545880
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:27:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=21b56661adac487f7be6c7638b72a800fa4faf4eba3b3d52a0df8fffce5c0814
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Reduces Stake in Norwegian Producer
+<<<SUMMARY>>>
+BP sold a five percent stake in Aker BP for around $1.06 billion, part of the British company's efforts to free up cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143535903
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T09:24:22Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=f1499fa54ebcf6bb9c3ea70c873a4fe3f3c9540e15334cbfaad456e88ebab9be
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2210145689/image_2210145689.jpg?io=getty-c-w1536
+category: company
+tickers: BP
+keywords: 
+headline: Kosmos Energy: Speculate To Accumulate
+<<<SUMMARY>>>
+Kosmos Energy is downgraded due to its high-upside LNG growth, debt risks, and crude price exposure. See if the speculative energy stock KOS fits your strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143527613
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T08:48:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe61aefdb0ad1c42962df6750543eb65204a9bc19dda84797cced6dd0c5b9cb1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP shares fall after $1.06 bln Aker BP stake sale
+<<<SUMMARY>>>
+Investing.com -- BP shares fell as much as 2.2% on Thursday before paring losses to trade down 0.11% after the British energy company raised about $1.06 billion through the sale of a 5% stake in Norwegian oil and gas producer Aker BP.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143525437
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T08:20:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=59069a31834b3588489be5a0f16f5cdb56c8b0802e3b080aa18b82a999150b6f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Raises $1.06 Billion From Aker BP Stake Sale
+<<<SUMMARY>>>
+The British energy major has reduced its ownership in Norway's Aker BP to strengthen its balance sheet and boost annual divestment proceeds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532794
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T06:43:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a0aa21f9dd989c86daf88c6e01d4f2333b8ba7d90d8f20819eeacc18a8654a93
+image_url: 
+category: company
+tickers: BP
+keywords: 
+headline: Reported Earlier, BP Sells 5% Of Its 15.9% Stake In The Aker BP JV For Gross Proceeds Of ~NOK9.83B (~$1.06B); Expects FY26 Asset Disposal Proceeds Of ~$9B, Which Is ~$1B Higher Than Previous Guidance
+<<<SUMMARY>>>
+bp has successfully executed the sale of 5% of its 15.9% shareholding in leading independent Norwegian oil and gas producer Aker BP at a price of NOK 311 per share, raising gross proceeds of approximately NOK 9.83
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492502
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:49:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=47e64e2a9545b1c568aeb9d5521f50a0a02be82230c87aff26484e44b2ca8df4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Stock Gains 40.6% in a Year: Should You Bet on the Stock Now?
+<<<SUMMARY>>>
+BP stock has surged 40.6% in a year, driven by strong earnings. Portfolio restructuring, cost reductions and exploration investments strengthen its growth outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143502654
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:16:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=21596c7f79ea5a42acd0bf91873bc21f0a6298051abbf225677fcc24527774ac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP (LSE:BP.) Completes 65% Castrol Stake Sale
+<<<SUMMARY>>>
+BP (LSE:BP.) has completed the sale of a 65% stake in its Castrol lubricants unit to infrastructure investor Stonepeak. The transaction gives BP cash proceeds that management plans to apply toward reducing the group’s outstanding debt. Castrol is set to operate as an independent business, with BP retaining a minority shareholding in the lubricants specialist. BP’s sale of most of Castrol and planned debt reduction is important, but investors should weigh other factors too. Check out 3...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143502647
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:40:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fcd56fb1786fa2dd478f958ecbc8ec1530813ab1803f617ec57f4d28bc803635
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Should Value Investors Buy BP (BP) Stock?
+<<<SUMMARY>>>
+Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143502648
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:30:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5beac4022bccacf549281913bd79a2b8303f31c8073fbb359a661d68acf51839
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Brokers Suggest Investing in BP (BP): Read This Before Placing a Bet
+<<<SUMMARY>>>
+The average brokerage recommendation (ABR) for BP (BP) is equivalent to a Buy. The overly optimistic recommendations of Wall Street analysts make the effectiveness of this highly sought-after metric questionable. So, is it worth buying the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490837
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:14:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92b1160a1ee56b70e84bb189b51a41b554972d7260415735b4abe49703b1025e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Shell Agrees to $1.45 Billion Sale of North West Shelf Stake
+<<<SUMMARY>>>
+SHEL exits North West Shelf with a $1.45 billion base deal, sharpening its portfolio focus without abandoning Australian LNG.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143502649
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d4e40256f69a8df11ee7d738f12cc38e201c665b030bea291822d640ea7be34
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP p.l.c. (BP) Is a Trending Stock: Facts to Know Before Betting on It
+<<<SUMMARY>>>
+BP (BP) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143480569
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T10:17:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d7fdb6ae88afcc5a1763f539a14051edd64f00cf8870257a6ec9697a1b2e3677
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Most Investors Own VEA. Few Know About This International Cash Cows ETF
+<<<SUMMARY>>>
+VEA dominates international portfolios, but a smaller rival fund uses a completely different logic to pick foreign stocks, and over the past five years it has quietly beaten the giant on both returns and income.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143476404
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T09:19:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bd0a6911ac84632f23443b3fd773562fdfa32f5b4fbc9141a6cf92961987ca59
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP hires Shell executive Emma Lewis to lead downstream unit
+<<<SUMMARY>>>
+Investing.com -- BP appointed Emma Lewis as head of its downstream business on Wednesday, bringing in the senior chemicals executive from Shell as CEO Meg O’Neill works to strengthen the oil company’s refining and fuels operations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143476192
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T08:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ea688ae5f837a973a5a95a2b7d7e5b46d28f0cdefca308ad358c60daadca860
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Appoints Former Shell Executive Emma Lewis to Lead Downstream Business
+<<<SUMMARY>>>
+BP names an experienced energy industry executive to lead its global downstream operations as it advances its corporate restructuring.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143475728
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T07:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a0e44207d87a30e11a1054d0072a3c6519befe4b57c08e57c3148ce445cf4d9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Zacks.com featured highlights include APA, T-Mobile, BP and Centene
+<<<SUMMARY>>>
+As market volatility intensifies the value-versus-growth debate, APA and three other GARP stocks combine attractive valuations with sustainable earnings growth potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449910
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T23:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=06bdc061fc35fca721027c746dcbaccf72ba7f01700d1812a8cb1d525d683c35
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Big Oil Puts Debt Reduction Ahead of New Investments
+<<<SUMMARY>>>
+Despite record profits, oil majors are prioritizing debt reduction, share buybacks and financial discipline rather than launching major new investment programs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448375
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ccbcf470ae09037f9236115ee2cc82d967223ebe377446e6db5cbaf4cc64d9e7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: 4 GARP Stocks to Buy Now as Volatility Fuels Value vs. Growth Debate
+<<<SUMMARY>>>
+Discover four GARP stocks, APA, T-Mobile, BP and Centene, that combine attractive valuations with sustainable earnings growth potential amid market volatility.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143451660
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0bdf802a1e829aa74750fb4662b6d7a0280c9e074b2f42823d323b11b112a126
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: How 3 energy companies are managing their c-store portfolios
+<<<SUMMARY>>>
+Shell, Sunoco and BP have all expanded their retail footprints, but now they’re running into the messy realities of corporate restructuring and declining trips.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445707
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7a4e27f246de08928a273e928d21aea8c3d043e35073fa8163534e6d24e31ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: ExxonMobil Stock Trades at a Premium: Is It Still Worth Buying?
+<<<SUMMARY>>>
+XOM trades at a premium valuation, but strong oil prices, Permian drilling advancements and refinery upgrades support its investment appeal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143428894
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T09:15:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4a0bfccece1aa1f4364c0f0d30120b145f8c33b5f6a8c050a217d15646671500
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Abu Dhabi’s XRG to acquire Shell’s stake in Australian LNG project
+<<<SUMMARY>>>
+Investing.com -- Abu Dhabi’s XRG will purchase Shell’s stake in the Woodside Energy-operated North West Shelf project for $1.45 billion, marking the ADNOC subsidiary’s first asset in Australia.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143412302
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T02:26:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b4db48096d0052710ec5ef26afe015066a946cbb5eb124fd149852d3f42c85df
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Completes $6 Billion Castrol Sale as Stonepeak Takes Control
+<<<SUMMARY>>>
+BP completes the sale of a controlling stake in Castrol, generating $6 billion to strengthen its balance sheet while retaining a minority interest.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401425
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T21:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=75a1d5fcfea9b6a400324bcb9c12a29984ee85527f688e3c3df24b41d490b698
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Lower Oil Prices Take Energy Stocks Down With Them
+<<<SUMMARY>>>
+Some energy stocks fell more than 6% on hopeful signals for a breakthrough in the Iran war.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401039
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T18:06:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=595b0b36262e89d0c5c3e9d7e2b5337bac4ea0ed570855f06683088acd804013
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Stock Gets Slew Of Price Target Hikes — But BofA Sees Limited Consensus Upside For Q4
+<<<SUMMARY>>>
+RBC Capital raised its BP price target to 720 GBp from 700 GBp and maintained an ‘Outperform’ rating, according to The Fly.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143403600
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:47:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1e5aceaacad6a95014920fbd4abff8f63633d212e90a91addbbe4482818e222
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: European Stocks Close Mostly Higher in Monday Trading; Oil Prices Fall on Hopes US-Iran Talks Resume
+<<<SUMMARY>>>
+European stock markets closed mostly higher in Monday trading as oil prices fell on hopes that the U
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143405518
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a6db969cc9460e47e71c528a5a1879ed6e908205838372e81bf46238f8c5b09
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Q3 Earnings Call Highlights Balance Sheet and Strategic Reset
+<<<SUMMARY>>>
+BP's Q3 earnings call highlights an $8.4B debt reduction, a $6B Castrol divestment and cost savings, even as liabilities and Q4 headwinds cloud its recovery.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143404432
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cd37ec3d3a118aba380bc433bc30fd8101a3b96bcf288cfc81520284848b47c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Is BP (BP) Stock Outpacing Its Oils-Energy Peers This Year?
+<<<SUMMARY>>>
+Here is how BP (BP) and Eni SpA (E) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143403155
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=53f7b943fc2ecc270e35a2ab77fc2f429274fd352375f65d357a1e1754855d73
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: OMV AG (OMVKY) Hit a 52 Week High, Can the Run Continue?
+<<<SUMMARY>>>
+OMV (OMVKY) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143394135
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9775d59a7440b91d7946cb51c9cf6c17afd76ed9f1238988da6fba076ed18340
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Stonepeak Completes Acquisition of Majority Controlling Interest in Castrol From bp
+<<<SUMMARY>>>
+LONDON & NEW YORK, November 02, 2026--Stonepeak, a leading alternative investment firm specialising in infrastructure, today announced it has completed the acquisition of a 65% stake in Castrol, a global leader in lubricants, from BP p.l.c. ("bp") (NYSE: BP) (LON: BP). bp will retain a 35% minority interest in Castrol.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442024
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:29:55Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=39435b0d9c2eb706a4e14c0d529eadc9d084c3df8e8a5c2f8a5aca6e9c63a9bc
+image_url: 
+category: company
+tickers: BP
+keywords: 
+headline: Shares of integrated oil and gas companies are trading lower amid energy price declines after Iran's foreign minister said that the government has agreed to an accelerated two-day timeline to reopen the Strait of Hormuz that could be enacted if the U.S. meets its demands.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398027
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T09:32:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b81b7edce6a5cc2910e639a6e2cbaf5d1d446fb4bf9c725b7bd58344cb01f4da
+image_url: 
+category: company
+tickers: BP
+keywords: 
+headline: Evercore ISI Group Maintains In-Line on BP, Raises Price Target to $55
+<<<SUMMARY>>>
+Evercore ISI Group  analyst Stephen Richardson   maintains BP (NYSE:BP) with a In-Line and raises the price target from $52 to $55.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143392712
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T09:30:56Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=ac74c923bc836b12253ce34d7d7c2d161c967b329a15a1334ca5f4abfe854070
+image_url: https://www.chartmill.com/images/uploads/thumbnail_article_navellier_3be8c6e05a.webp
+category: company
+tickers: BP
+keywords: 
+headline: BP PLC-SPONS ADR (NYSE:BP) Shows Accelerating Earnings, Sales, and Cash Flow Growth
+<<<SUMMARY>>>
+BP passes all eight Little Book growth screen rules, but outsized EPS and margin gains raise base-effect and cyclicality concerns for investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398028
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T09:28:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1ead4668a6780a79794c7af0d3798d8027766152964b185044601ae6d4aed7f2
+image_url: 
+category: company
+tickers: BP
+keywords: 
+headline: Wells Fargo Maintains Overweight on BP, Raises Price Target to $63
+<<<SUMMARY>>>
+Wells Fargo  analyst Sam Margolin   maintains BP (NYSE:BP) with a Overweight and raises the price target from $57 to $63.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143394136
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T08:54:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=34a86927e3f297698f24072c1b08273290000cc30d16e482e54513566e384888
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: FTSE 100 today: Stocks fall as crude slide drags oil majors lower
+<<<SUMMARY>>>
+Investing.com -- British stocks fell on Monday as a slide in crude on hopes of progress in indirect U.S.-Iran talks dragged down oil majors, weighing on the index.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143392844
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T08:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f728d40be3c616739fe1a3d7b355428fc64fc4407d159fd5c80fd81d21acb070
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Zacks.com featured highlights include BP, ExxonMobil, ConocoPhillips and Eni
+<<<SUMMARY>>>
+BP, XOM, COP and E offer investors potential opportunities to navigate market volatility, supported by low-beta profiles and strong upstream portfolios.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143394138
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T07:03:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5bd0be110ce1d35db975f8ae87e0d59f0bb18da714d15e5ae31e2d9edd9df58a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Gets $6 Billion to Pay Down Debt as Castrol Deal Closes
+<<<SUMMARY>>>
+BP Plc completed a deal to offload its Castrol lubricants business, giving the oil and gas major $6 billion to pay down debt as it works to repair the balance sheet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143365846
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=05eb41897a6905934b96caa4219bf54b87f794d44bec6bbf5b8fceaadd30b2e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Big Oil is grappling with how to spend its windfall profits
+<<<SUMMARY>>>
+Awash in cash after their third-highest quarterly earnings on record, the world's largest oil companies are uncharacteristically wary about how to spend it.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143363159
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T12:32:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=61058af338500c1630df430a650f8c532e55927a88065be78555acc59a5ee645
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Big Oil’s Iran War Windfall Is Nearly 3 Times Last Year’s Profits
+<<<SUMMARY>>>
+A war thousands of miles away quietly transformed six months of oil company earnings in ways that have left American families absorbing costs they may not fully see yet, and the next big shift could come the moment polls close on November 3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143361785
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T08:11:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6cf076c390e61de88beaa51ed88c8a48d506ecceee215e81ece1044acfd92062
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Chevron Stock And Refining Margins Are Now The Key Profit Story In Big Oil
+<<<SUMMARY>>>
+Refining has quietly moved from a sleepy corner of Big Oil to the main profit engine, as tight fuel supplies and elevated margins reshape the earnings mix for integrated giants like Shell, BP and ExxonMobil. That shift creates both opportunity and risk for investors who care where each dollar of profit is really coming from. This article unpacks the story behind the recent headlines and examines three stocks from our refining focused screener that appear positively exposed to the current news...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143780617
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T01:14:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cc824a9325df2827258da30291af9201ee4e5fe94bf6e2e8da17f10bceb43a17
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: What Does BP (LSE:BP.) Leaving Indonesia And Running Namibia Blocks Mean?
+<<<SUMMARY>>>
+BP (LSE:BP.) agreed to sell its interest in Indonesian fuel retail joint venture AKR as local fuel import rules shift. The group cited changes to Indonesia's fuel import requirements as a key driver for withdrawing from the AKR partnership. BP assumed operatorship of offshore Namibia licenses, increasing its role in exploration across the country’s deepwater acreage. The AKR exit and new Namibian operatorship reshape BP’s mix between Asian retail exposure and frontier offshore exploration...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143780618
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T00:17:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=43944c395d1278ca46be8fd6225a42255248fa6fa5e256b8bf66d9a3afc6a65e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP (LSE:BP.) Stock Could Trade At A Discount As Its 116% Run Continues
+<<<SUMMARY>>>
+BP has delivered a 115.9% share price gain over the past five years, and with fresh headlines around profits, asset sales and oil markets, the live question is whether that performance is properly backed by the cash the business can generate. With the stock last closing at £5.67, investors are increasingly asking how much of BP’s cash flow story is already reflected in that price. A 115.9% return over five years puts real weight on whether BP’s current valuation is still aligned with the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143774807
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T23:20:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ab7cfda93002eec9190f05958ce46bfcc667c6cc5c88bc33751d60f274d8fc1f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Seplat Energy And 2 British Energy Stocks To Watch
+<<<SUMMARY>>>
+The Strait of Hormuz shock earlier this year showed how quickly energy supply routes can be disrupted and how sharply oil markets can react. For UK investors, that kind of stress test highlights why large, globally active oil and gas groups can draw fresh attention as potential shock absorbers in a portfolio. This article walks through three of the strongest UK related stocks screened from this global energy universe. The stocks highlighted below are only a small sample of the idea, and the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143774808
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T23:18:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aee7134dbdd836712cbeda3e0551f16c8df5ad45c96b00904d392cdc5d560fa2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP (LSE:BP.) Reset Its Dividend And Guidance, Is It Still 14% Below Fair Value?
+<<<SUMMARY>>>
+Fresh guidance from BP (LSE:BP.) has put production and income back in focus for shareholders. The company paired updated 2026 upstream output targets with a new interim dividend, giving investors fresh numbers to weigh. Recent trading tells a mixed story for BP. The share price is around £5.67, with a 30-day share price return down about 7% after a strong year to date near 29% and a 5-year total shareholder return above 100%. This points to long term momentum but some cooling in the short...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770953
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:53:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ca581abaee9b03bd4abe098411470aeacc5cccfebcaa65b99c1d4fad34a2b35
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP or Bristol Myers Squibb: Only One Gets My Dividend Dollars for the Next 20 Years
+<<<SUMMARY>>>
+Key TakeawaysBP yields 4. 7% and Bristol Myers Squibb yields 4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770804
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:21:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2bed22c46ee5ff553cfafd343574e3bd27cfb1e5f1d6c946e66654ff9e846f34
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Eni Outperforms the Industry YTD: Should Investors Bet on the Stock?
+<<<SUMMARY>>>
+E rises 47.3% YTD, beating its industry. Strong production, rising oil prices and higher shareholder payouts bolster its investment appeal despite risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767712
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T07:11:01Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4ece0ca6ac38958ddf19b2d625141f7fdecc77ac9022c19bc25dcc9d366e6495
+image_url: 
+category: company
+tickers: BP
+keywords: 
+headline: Reported Earlier, 'BP in Talks to Sell Stake in Brazil Oil Discovery to Petrobras' - Bloomberg Exclusive
+<<<SUMMARY>>>
+https://www.bloomberg.com/news/articles/2026-11-12/bp-in-talks-to-sell-stake-in-brazil-oil-discovery-to-petrobras
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741659
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T08:42:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ef33bbfbded06984120152151680bd78a68415bd08668db619870b0b0b380ac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: FTSE 100 today: Stocks gain as oil rebounds; Spirax tops gainers
+<<<SUMMARY>>>
+Investing.com -- British stocks rose on Wednesday as a rebound in crude oil prices lifted energy heavyweights, with Spirax Group the top FTSE 100 gainer after a trading update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143685722
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T09:10:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ffda2dcf0951fa31f5d392a5613cd4181dbe0d197f6024755aa8bc529da297a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: FTSE 100 climbs as sinking crude boosts broader market but drags on energy majors
+<<<SUMMARY>>>
+Investing.com - London’s blue-chip shares advanced on Tuesday, with the benchmark FTSE 100 climbing 0.8% as a sustained collapse in global crude oil prices provided a broad deflationary lift to the index, though steep losses in heavyweight energy producers kept a firm lid on the day’s rally.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143676201
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T08:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b65669e01e4376aad76b2365b5c9cb671f50b391908652b3a8425b3518e3d803
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Eco (Atlantic) Oil and Gas Ltd. Announces Completion of Namibian Portfolio Farm-down to BP
+<<<SUMMARY>>>
+TORONTO, ON / ACCESS Newswire / November 10, 2026 / Eco (Atlantic) Oil & Gas Ltd.The Transaction now enables the Joint Venture ("JV") to embark on a comprehensive exploration work program under BP's operatorship, while substantially reducing Eco's funding exposure and retaining material upside across the three licenses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143665728
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5b9bd3b2e629a83ebaab4c6aadb1f53b866441bdbc9491a057fac0260b6aa440
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: BP Completes $6B Castrol Stake Sale: A Boost to Its Balance Sheet?
+<<<SUMMARY>>>
+BP's $6 billion Castrol stake sale advances its portfolio simplification strategy and provides funds to reduce financial obligations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652826
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7c19770c6b39343435143fdc85bcace975150f75826ef34ccbfba7c8d31f0db
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BP
+keywords: 
+headline: Take the Zacks Approach to Beat the Markets: Ulta Beauty, Accenture, HCA in Focus
+<<<SUMMARY>>>
+Zacks highlights how its research strategies have delivered strong returns, with ACN, HCA and ULTA among the standout performers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654520
+symbol: BP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T08:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=ce4beeee7382264b796500e4bebfbfceafc67d27c3f412dcacd6cfa846e6c7ff
+image_url: 
+category: company
+tickers: BP
+keywords: 
+headline: BP: Simpler, Stronger And More Valuable (Rating Upgrade)
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:838cbe60275296cc178fc7a68d5b44d865d57a26ac0b4358f4be33f15df82a73
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T08:41:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3020183/zacks-com-featured-highlights-include-bp-exxonmobil-conocophillips-and-eni?cid=CS-ZC-FT-press_releases-3020183
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/431.jpg
+category: 
+tickers: BP, COP, E
+keywords: energy stocks, oil prices, low-beta stocks, market volatility, upstream portfolio, crude oil, Middle East tensions
+headline: Zacks.com featured highlights include BP, ExxonMobil, ConocoPhillips and Eni
+<<<SUMMARY>>>
+Amid market uncertainty driven by high oil prices and Middle East tensions, Zacks recommends four energy stocks with low-beta characteristics: BP, ExxonMobil, ConocoPhillips, and Eni. These companies are well-positioned to benefit from elevated crude oil prices and their strong upstream portfolios and production capabilities.
+<<<INSIGHTS>>>
+BP | positive | Strong upstream portfolio with long-term growth potential, major project ramp-ups, increased U.S. onshore production, and expansion opportunities in Trinidad and Tobago, Venezuela, and Gulf of America.
+COP | positive | Major upstream energy company with strong presence in prolific U.S. plays (Delaware Basin, Midland Basin, Eagle Ford, Bakken) positioned to capitalize on high crude pricing environment.
+E | positive | Well-positioned for long-term growth with expanding upstream portfolio, promising exploration prospects, development projects across Africa/Asia/Mediterranean, and growing LNG operations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d665f8d24048edfad7356209505b64e46ac770761c5eee63682dc6539ba65a38
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T14:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020625/bp-q3-earnings-call-highlights-balance-sheet-and-strategic-reset?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3020625
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default288.jpg
+category: 
+tickers: BP
+keywords: BP earnings, debt reduction, Deepwater Horizon, portfolio divestment, Castrol sale, cost reductions, Q4 outlook, balance sheet, capital allocation, strategy update
+headline: BP Q3 Earnings Call Highlights Balance Sheet and Strategic Reset
+<<<SUMMARY>>>
+BP delivered Q3 2026 earnings of $3.26 EPS, beating consensus estimates, with net debt reduced to $13.9B. The company is prioritizing balance sheet strengthening through portfolio simplification, including a $6B Castrol divestment, while addressing remaining Deepwater Horizon liabilities. However, Q4 faces headwinds from softer commodity prices, higher capex, and $4B in impairments. Management will outline future financial priorities in a December strategy update.
+<<<INSIGHTS>>>
+BP | positive | BP exceeded earnings expectations with $3.26 EPS vs $2.66 consensus, reduced net debt by $8.4B, and is executing strategic portfolio simplification with $6B Castrol divestment. Strong operational metrics (96.5% refining availability, 2.2M boe/d production) and Zacks Rank #1 rating support positive outlook, though Q4 headwinds and $4B impairments present near-term challenges.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e16785ef9cefcdcc7225b8ffbde726fc26acac378cfac252c88c12d78b43c280
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T18:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022154/4-garp-stocks-to-buy-now-as-volatility-fuels-value-vs-growth-debate?cid=CS-ZC-FT-analyst_blog|rw-3022154
+image_url: https://staticx-tuner.zacks.com/images/articles/main/d8/160841.webp
+category: 
+tickers: APA, TMUS, TMUSI, TMUSL, TMUSZ, BP, CNC
+keywords: GARP investing, value investing, growth investing, PEG ratio, stock screening, earnings growth, valuation
+headline: 4 GARP Stocks to Buy Now as Volatility Fuels Value vs. Growth Debate
+<<<SUMMARY>>>
+The article discusses GARP (Growth at a Reasonable Price) investing as a hybrid strategy combining value and growth principles. Four stocks are highlighted as qualifying picks: APA Corporation with 31.4% historical growth, T-Mobile with 23.9% five-year growth, BP with 13.6% expected growth, and Centene with 32.7% projected long-term growth. All four stocks meet screening criteria including Zacks Rank #2, discounted valuations, and strong growth potential.
+<<<INSIGHTS>>>
+APA | positive | Zacks Rank #2 with Value Score A and Growth Score A; impressive 31.4% historical growth rate; discounted PEG and P/E ratios; strong upstream project potential in Permian Basin
+TMUS | positive | Zacks Rank #2 with Value Score A and Growth Score B; solid 23.9% five-year historical growth; expanding 5G and broadband services; strong cash generation supporting dividends and buybacks
+TMUSI | positive | Zacks Rank #2 with Value Score A and Growth Score B; solid 23.9% five-year historical growth; expanding 5G and broadband services; strong cash generation supporting dividends and buybacks
+TMUSL | positive | Zacks Rank #2 with Value Score A and Growth Score B; solid 23.9% five-year historical growth; expanding 5G and broadband services; strong cash generation supporting dividends and buybacks
+TMUSZ | positive | Zacks Rank #2 with Value Score A and Growth Score B; solid 23.9% five-year historical growth; expanding 5G and broadband services; strong cash generation supporting dividends and buybacks
+BP | positive | Zacks Rank #2 with Value Score A and Growth Score A; 13.6% expected long-term growth; improved balance sheet and cost discipline; structural improvements supporting cash generation
+CNC | positive | Zacks Rank #2 with Value Score A and Growth Score B; robust 32.7% projected long-term growth rate; serves 27.6 million members; growth drivers include geographic expansion and new contracts
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a5ba265dc239389379baf2b9289972cb0c6ed0a56820a8995dd5a694f118b8dc
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T07:54:00Z
+publisher: Zacks Investment Research
+author: Zacks Investment Research
+url: https://www.zacks.com/stock/news/3022502/zacks-com-featured-highlights-include-apa-t-mobile-bp-and-centene?cid=CS-ZC-FT-press_releases-3022502
+image_url: https://staticx-tuner.zacks.com/images/articles/main/e3/536.jpg
+category: 
+tickers: APA, TMUS, TMUSI, TMUSL, TMUSZ, BP, CNC
+keywords: GARP investing, value investing, growth investing, PEG ratio, market volatility, stock screening, Zacks Rank
+headline: Zacks.com featured highlights include APA, T-Mobile, BP and Centene
+<<<SUMMARY>>>
+Amid market volatility driven by inflation concerns, elevated Treasury yields, and geopolitical tensions, investors are advised to consider GARP (Growth at a Reasonable Price) investing strategy that combines value and growth principles. Four stocks meeting GARP criteria with Zacks Rank #2 ratings are highlighted: APA Corp., T-Mobile US, BP plc, and Centene, each offering discounted valuations with solid earnings growth potential.
+<<<INSIGHTS>>>
+APA | positive | Zacks Rank #2 with Value Score A and Growth Score A; discounted PEG and P/E ratios; impressive long-term historical growth rate of 31.4%; strong position in Permian Basin with future production growth potential.
+TMUS | positive | Zacks Rank #2 with Value Score A and Growth Score B; strong Q3 2026 results; expanding 5G and broadband services; five-year historical growth rate of 23.9%; robust cash generation supporting dividends and buybacks.
+TMUSI | positive | Zacks Rank #2 with Value Score A and Growth Score B; strong Q3 2026 results; expanding 5G and broadband services; five-year historical growth rate of 23.9%; robust cash generation supporting dividends and buybacks.
+TMUSL | positive | Zacks Rank #2 with Value Score A and Growth Score B; strong Q3 2026 results; expanding 5G and broadband services; five-year historical growth rate of 23.9%; robust cash generation supporting dividends and buybacks.
+TMUSZ | positive | Zacks Rank #2 with Value Score A and Growth Score B; strong Q3 2026 results; expanding 5G and broadband services; five-year historical growth rate of 23.9%; robust cash generation supporting dividends and buybacks.
+BP | positive | Zacks Rank #2 with Value Score A and Growth Score A; discounted PEG and P/E ratios; long-term expected growth rate of 13.6%; strategic focus on balance-sheet repair and cost discipline supporting cash generation.
+CNC | positive | Zacks Rank #2 with Value Score A and Growth Score B; discounted PEG and P/E ratios; solid long-term expected growth rate of 32.7%; serves 27.6 million members with growth through geographic expansion and acquisitions.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3e42d4bcfb5ba322a721d294aeb2cce198a679245292d741dfc7595fa8324d13
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T13:00:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3022770/bp-p-l-c-bp-is-a-trending-stock-facts-to-know-before-betting-on-it?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks_v1-3022770
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default191.jpg
+category: 
+tickers: BP
+keywords: BP, oil and gas, earnings growth, stock rating, valuation, revenue growth, earnings estimate revisions
+headline: BP p.l.c. (BP) Is a Trending Stock: Facts to Know Before Betting on It
+<<<SUMMARY>>>
+BP has gained 5.7% over the past month, outperforming the S&P 500. The company is rated Zacks Rank #2 (Buy) due to strong earnings estimate revisions, with current year earnings expected to grow 188.2% year-over-year. BP trades at a valuation discount to peers (Value Style Score A) and has consistently beaten consensus estimates. Revenue is projected to grow 27.8% for the current fiscal year.
+<<<INSIGHTS>>>
+BP | positive | BP received a Zacks Rank #2 (Buy) rating driven by strong earnings estimate revisions (+14% over 30 days for current fiscal year), exceptional earnings growth expectations (+188.2% year-over-year), consistent beat history on both EPS and revenue, attractive valuation (Grade A), and recent outperformance (+5.7% vs S&P 500's -2% over the past month).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ec46456b8f1d2da10dc0d7bad34af991322f036d1613b2acb05bf17117d73768
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T16:49:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3023329/bp-stock-gains-40-6-in-a-year-should-you-bet-on-the-stock-now?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3023329
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/431.jpg
+category: 
+tickers: BP, SHEL, CVX
+keywords: BP earnings, portfolio restructuring, cost reduction, upstream exploration, oil and gas, refining margins, valuation discount, shareholder value
+headline: BP Stock Gains 40.6% in a Year: Should You Bet on the Stock Now?
+<<<SUMMARY>>>
+BP shares gained 40.6% over the past year, with Q3 earnings surging 283.5% due to stronger trading and refining margins. The company is streamlining its portfolio, targeting an $18 billion cost base by 2027, and investing in upstream exploration across Brazil, the Gulf of America, Trinidad and Tobago, and Venezuela. Trading at a discount valuation (2.40X EV/EBITDA vs. industry average 6.38X), BP carries a Zacks Rank #2 (Buy) rating.
+<<<INSIGHTS>>>
+BP | positive | Strong Q3 earnings growth (283.5% YoY), strategic portfolio simplification, $4 billion in structural cost reductions achieved, ambitious $18 billion cost target by 2027, significant exploration opportunities in multiple regions, attractive valuation discount (2.40X EV/EBITDA), and Zacks Rank #2 (Buy) rating support positive outlook.
+SHEL | neutral | Mentioned as a peer comparison with 46% stock performance over the past year and 4.18X trailing EV/EBITDA valuation, but no specific company-related news or analysis provided.
+CVX | neutral | Mentioned as a peer comparison with 48.4% stock performance over the past year and 7.28X trailing EV/EBITDA valuation, but no specific company-related news or analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:05eec7f2c618916a0671e8c4816d374560be76ff92e43a5056bbdfe1095869e8
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T11:03:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3026068/take-the-zacks-approach-to-beat-the-markets-ulta-beauty-accenture-hca-in-focus?cid=CS-ZC-FT-analyst_blog|investment_ideas-3026068
+image_url: https://staticx-tuner.zacks.com/images/articles/main/86/1911.jpg
+category: 
+tickers: HCA, ULTA, ACN, FDS, HHH, TLS, CON, BP, PG, ADP, FCFS
+keywords: stock market decline, AI valuations, employment report, Zacks Rank, portfolio performance, dividend stocks, market uncertainty
+headline: Take the Zacks Approach to Beat the Markets: Ulta Beauty, Accenture, HCA in Focus
+<<<SUMMARY>>>
+Stock markets declined for the week ended November 6, with the Nasdaq, S&P 500, and Dow falling 3.4%, 2.7%, and 0.9% respectively, as investors reassessed AI valuations and infrastructure spending. A partial recovery on Friday was driven by stronger-than-expected October employment data, though concerns about potential Fed rate hikes persisted. Zacks highlighted several outperforming stocks across its various portfolios, including HCA Healthcare and Ulta Beauty from its Focus List, Accenture from its ECAP portfolio, and dividend stocks like Procter & Gamble and Automatic Data Processing.
+<<<INSIGHTS>>>
+HCA | positive | Stock gained 21.1% over the past 12 weeks, significantly outperforming the S&P 500's decline of 4.3% in the same period. Part of Zacks Focus List with strong long-term track record.
+ULTA | positive | Stock returned 19.7% over the past 12 weeks, substantially outperforming the S&P 500's 4.3% decline. Part of Zacks Focus List with consistent outperformance.
+ACN | positive | Stock surged 52.2% over the past 12 weeks, demonstrating exceptional performance. Component of Zacks Earnings Certain Admiral Portfolio (ECAP).
+FDS | positive | Stock delivered 19.4% return over 12 weeks, outperforming broader market. Part of ECAP portfolio.
+HHH | positive | Stock gained 26.31% since Zacks Rank upgrade to #1 (Strong Buy) on September 18, significantly outperforming S&P 500's 3.3% decline in the same period.
+TLS | positive | Stock returned 14% since Zacks Rank upgrade to #1 on September 16, outperforming S&P 500's 2.7% decline in the same period.
+CON | positive | Stock surged 23.2% since Zacks Recommendation upgrade to Outperform on August 31, significantly outperforming S&P 500's 4.4% decline.
+BP | neutral | Stock gained 1.6% since Zacks Recommendation upgrade to Outperform on September 8, modestly outperforming S&P 500's 4.6% decline but showing relatively weak absolute performance.
+PG | positive | Stock returned 12.5% over the past 12 weeks. Part of Zacks Earnings Certain Dividend Portfolio (ECDP) with strong dividend history and defensive characteristics.
+ADP | positive | Stock climbed 10.9% over the past 12 weeks. Part of ECDP portfolio with low beta and consistent dividend performance.
+FCFS | positive | Stock jumped 18.4% since January 5, 2026, outperforming S&P 500's 7.7% gain. Part of Zacks Top 10 Stocks for 2025.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:46b0bca9bfb36b6c14fa1255b8c460e01e737e9b096d4f776ae7e60b1d800fe5
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T12:55:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026193/bp-completes-6b-castrol-stake-sale-a-boost-to-its-balance-sheet?cid=CS-ZC-FT-analyst_blog|quick_take-3026193
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/431.jpg
+category: 
+tickers: BP, SHEL, TTE
+keywords: asset divestment, portfolio optimization, debt reduction, lubricants business, financial flexibility, capital allocation
+headline: BP Completes $6B Castrol Stake Sale: A Boost to Its Balance Sheet?
+<<<SUMMARY>>>
+BP completed the sale of a 65% stake in Castrol to Stonepeak for $6 billion in after-tax proceeds, reducing net debt to $13.9 billion. BP retained a 35% stake but expects no near-term earnings from it. Shell and TotalEnergies are also pursuing asset divestments to strengthen financial positions, with Shell generating $2.65 billion and TotalEnergies $1.75 billion in Q3 2026 divestment proceeds.
+<<<INSIGHTS>>>
+BP | positive | BP successfully reduced net debt from $22.3B to $13.9B, generated strong operating cash flow of $14.8B, and secured $6B in proceeds from Castrol sale to strengthen its balance sheet and financial flexibility.
+SHEL | positive | Shell generated $2.65B in divestment proceeds in Q3 2026 and agreed to sell Sprng Energy for $1.8B, demonstrating successful portfolio optimization and value unlocking from strategic asset disposals.
+TTE | positive | TotalEnergies recorded $1.75B in divestments and improved its gearing ratio from 13.1% to 9.1%, reflecting strengthened financial position and improved capital allocation through asset monetization.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5e06df5360e79b763c72df7e0031528479604f620150d1aced829e5dd440a295
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T00:30:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/11/3400409/0/en/lubricants-market-in-india-to-hit-6-9-bn-liters-by-2032-driven-by-vehicle-servicing-and-manufacturing-growth-reports-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: SHEL, BP, CVX
+keywords: lubricants market, India, vehicle servicing, manufacturing growth, synthetic oils, emission norms, industrial lubricants, electric mobility
+headline: Lubricants Market in India to Hit 6.9 Bn Liters by 2032 Driven by Vehicle Servicing and Manufacturing Growth, Reports Mordor Intelligence
+<<<SUMMARY>>>
+India's lubricants market is projected to grow from 5.77 billion liters in 2026 to 6.99 billion liters by 2032, with a CAGR of 3.28% during 2027-2032. Growth is driven by expanding vehicle base, manufacturing activities under Make in India initiative, and shift toward premium synthetic oils due to stricter emission norms. However, unpredictable input costs and electric mobility transition may limit profitability.
+<<<INSIGHTS>>>
+SHEL | positive | Global lubricant player with presence in India's growing market, benefiting from new blending investments in Western India and demand for premium, application-specific oils.
+BP | positive | International lubricant supplier positioned to benefit from India's expanding manufacturing base and shift toward advanced lubricant formulations.
+CVX | neutral | While present in the Indian lubricants market, faces headwinds from unpredictable input costs and gradual shift toward electric mobility that may limit demand capture.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3b6aebed01e4372f223d6c8038519d74029b5c128b6574850839fb89fbaea243
+symbol: BP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:21:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028821/eni-outperforms-the-industry-ytd-should-investors-bet-on-the-stock?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3028821
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6e/152233.webp
+category: 
+tickers: E, BP
+keywords: oil prices, energy company, cash flow guidance, refining margins, shareholder returns, upstream production, balance sheet strength
+headline: Eni Outperforms the Industry YTD: Should Investors Bet on the Stock?
+<<<SUMMARY>>>
+Eni S.p.A. (E) has outperformed its industry peers with a 47.3% year-to-date gain, driven by 4% production growth, elevated oil prices averaging $96/barrel, and strong refining margins at $28.10/barrel. The company raised its 2026 cash flow guidance to €16.5 billion and increased share buybacks to €3.8 billion, while maintaining disciplined capital spending and achieving record-low gearing of 9%. Despite premium valuation and commodity price volatility concerns, analysts rate the stock as a Buy given the favorable business environment.
+<<<INSIGHTS>>>
+E | positive | Strong operational performance with 4% production growth, significantly raised cash flow guidance (€16.5B), increased buybacks and dividends, record-low gearing of 9%, and outperformance versus industry peers. Favorable oil price environment and refining margins support near-term profitability. Zacks Rank #2 (Buy) rating reflects positive outlook.
+BP | neutral | Mentioned as a peer comparison with 30.4% YTD gains and 2.3X EV/EBITDA valuation. No specific operational or financial analysis provided; included only for relative performance context.
+<<<END>>>

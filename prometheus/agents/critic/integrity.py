@@ -3,7 +3,7 @@
     result = check(rec, order, advisor_config)        # an `IntegrityResult`: every check that ran and the ones that failed, each with its reason in words
 
 This is the port of the hard checks of `tests/simple_critic.py`, into the product: the Critic works every number of the record out again from the record's own inputs (the stop from the entry and
-the distance, the position from the shares, the composite edge from the passed families, the blend from its four parts and their recency weights, the scale factor, the excess after cost, the
+the distance, the composite edge from the passed families, the blend from its four parts and their recency weights, the scale factor, the excess after cost, the
 score) and looks every quote up in the work order's own sources. A record that does not add up was damaged or invented, whoever did it; it is a blocker (`record_defect`), not a warning.
 
 The constants of the Advisor's formulas (the 0.03 edge scale, the 40/30/20/10 weights, the half-life, the scale strength) are READ from the Advisor's config, never typed here: when Jacob changes
@@ -80,14 +80,12 @@ def check(rec: Recommendation, order: WorkOrder, advisor: AdvisorConfig, duplica
         r.check("trade.entry", bool(zone) and len(zone) == 2 and mid is not None and zone[0] < mid < zone[1], "there is no entry zone around the entry mid")
         r.check("trade.stop", trade.stop_price is not None and mid is not None and trade.stop_price < mid, "the stop is not under the entry")
         r.check("trade.time_stop", bool(trade.time_stop_date) and date.fromisoformat(trade.time_stop_date) > as_of, "the time stop is not in the future")
-        r.check("trade.size", trade.suggested_shares >= 1 and bool(trade.order_style), "there is no whole-share size or no order style")
+        r.check("trade.order_style", bool(trade.order_style), "there is no order style")
         rules = {rule["kind"]: rule["value"] for rule in trade.invalidation}
         r.check("trade.invalidation", {"price_below", "days_elapsed", "event_class"} <= set(rules) and rules.get("price_below") == trade.stop_price,
                 "the invalidation rules are missing, or the price rule is not the stop")
         r.check("recompute.stop", trade.stop_price is not None and trade.stop_distance is not None and mid is not None and close(trade.stop_price, mid - trade.stop_distance, 0.011),
                 "stop_price is not entry_mid - stop_distance")
-        if trade.equity:
-            r.check("recompute.position", mid is not None and close(trade.position_pct, trade.suggested_shares * mid / trade.equity, 1e-3), "position_pct is not shares x entry / equity")
 
     # ---- the composite edge, and the blend the score is made of
     expected = composite_of(rec.families)

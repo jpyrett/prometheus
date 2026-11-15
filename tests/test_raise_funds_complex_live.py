@@ -50,10 +50,13 @@ def raise_funds_complex(model_id: str | None = None, portfolio=None, purchases=P
 
 @pytest.fixture(scope="module")
 def runs() -> dict[str, dict]:
-    """Both models, run once, in parallel."""
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        futures = {kind: pool.submit(raise_funds_complex, model) for kind, model in MODELS.items()}
-        return {kind: future.result() for kind, future in futures.items()}
+    """Both models, run once, in parallel, on the REAL clock: this module-scoped fixture runs before conftest's per-test `live_clock_on`, so without this it would inherit Jacob's .env (USE_LIVE_TRADING=false:
+    the simulated clock and the stored close) and the quotes would not be Finnhub's."""
+    with pytest.MonkeyPatch.context() as live:
+        live.setenv("USE_LIVE_TRADING", "true")
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            futures = {kind: pool.submit(raise_funds_complex, model) for kind, model in MODELS.items()}
+            return {kind: future.result() for kind, future in futures.items()}
 
 
 @pytest.fixture(params=sorted(MODELS))

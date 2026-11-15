@@ -1,0 +1,1781 @@
+<<<ARTICLE>>>
+id: finnhub:143590980
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T19:32:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=877f1e8b7a60f47da2cc13c68261afe677622a1624dbe0e48757dca79b24dcc2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources (EOG) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Record output and an 8% dividend hike, plus new LNG-linked gas exposure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592225
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:30:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=179932ced585c47b91f7c497290f9405d62b1ac2a2bf533cfb1fe4d053589441
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-w1536
+category: company
+tickers: EOG
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week of November 8
+<<<SUMMARY>>>
+Get the latest dividend activity for Dividend Champions, Contenders, and Challengers. Read this week's list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590981
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6ba4a32c3919f44f63572743210e4c836c4ac2e45fe3e82403a37f4c45d9f57
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Q3 Earnings Beat Estimates on Record Production, Strong Pricing
+<<<SUMMARY>>>
+EOG Resources' Q3 earnings surged 79.7% on record production and higher commodity prices, driving robust cash flow and an 8% dividend hike.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589933
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5de9933086f8e39cbe2c32929d07c4e34a16920d8e3ab933c0dd0317e2c0d150
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: CRGY Stock After Q3 Earnings: Is More Upside on the Horizon?
+<<<SUMMARY>>>
+Crescent Energy's Q3 earnings beat, rising Permian synergies and planned Devon acquisition bolster its upside potential, though debt and commodity risks remain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590737
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:54:36Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=9f37512c6408376432b494dc94e6b0b75e20f006d276147a30f8fa17fdb608b7
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources, Inc. (EOG) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592419
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=756f22723ee165e10ab4d01d2a3d24caf9dcbb189c42c0e2175ec122c165d611
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources, Inc. Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of EOG Resources, Inc.'s Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143615144
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:12:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a046a604bfeac663d5e5801e4aa1c0813c55e057b16a986bf59477613b6beb5d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/06/Stock-market-chart-with-green-candlestic.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+EOG Resources (NYSE:EOG) reported third-quarter financial results on Friday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs. For
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143615145
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:09:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5620209eb687a98c4adf55a199b28b1d59619cb7393ccbae5e9298ac4c2b4d11
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: Barclays Maintains Equal-Weight on EOG Resources, Raises Price Target to $155
+<<<SUMMARY>>>
+Barclays  analyst Betty Jiang   maintains EOG Resources (NYSE:EOG) with a Equal-Weight and raises the price target from $147 to $155.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143615146
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:55:42Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fc2d1b883b35f99432a9f71ea5d83a191d9bb7b74a729f4d207f1fadeae22e27
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Plans About $200M Of CAPEX In 2027 For Janus Gas Plant Expansion; Says Open To Further International Pricing Exposure As U.S. LNG Projects Reach FID
+<<<SUMMARY>>>
+-Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143615147
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:47:47Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=65069b2106d86afeb380dd6e548385e8fd640ef9917f5b0c1e7da7abb8b04540
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Expects Low Single-Digit Well Cost Reduction In 2026 Despite Elevated Diesel, Steel Costs; Sees Higher Service, Steel And Diesel Costs Driving Inflationary Pressures In 2027
+<<<SUMMARY>>>
+-Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589210
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:45:44Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=9646eac28c0083edb17ae6291eb4fe93387ff2ec9d34fc826a0b733c279bd1fc
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources, Inc. 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-06. The following slide deck was published by EOG Resources, Inc.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143615148
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:34:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3c20d41d180daecfb3b99d66373140172db933b0dc2260c0a8b05e483bd51805
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Says Middle East Exports Have Recovered From Spring Lows, Though Recovery Remains Uneven; Sees Oil Prices Remaining Above Mid-Cycle Levels In The Near To Medium Term; Sees Low Single-Digit Oil Production Growth In 2027; Expects Janus Plant Expansion To Cost About $300M, With Completion In H2 2028
+<<<SUMMARY>>>
+-Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143555488
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T03:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=42ef558dfd74e044d7a56d13143ecb3ed40a9d8d8d960487e429a0e17d8110ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Time to Cash Out? 4 Energy Stocks I'd Sell Before It's Too Late
+<<<SUMMARY>>>
+If you are watching energy prices rise, remember that they also fall.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143555487
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T02:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=070a8b740a6ca0f96ba4813787c45a9882a2f92561ea4058ebd41589b4d5e2ee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Lifts Dividend 8% as Q3 Profit Surges 89%
+<<<SUMMARY>>>
+Record oil and gas production and stronger commodity prices drive a sharp increase in quarterly earnings and free cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143548680
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T23:37:55Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=569c6857249e9de2c9baf7b66201bfe2841c5268221cf635e05b516964be500d
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_16_065e226ebd.webp
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources (NYSE:EOG) Beats Q3 Estimates and Raises Dividend 8%
+<<<SUMMARY>>>
+EOG Resources beat Q3 2026 revenue and EPS estimates, raised its regular dividend 8%, but shares stayed flat after hours despite the strong results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543348
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=292d8dac461a9bd767f07f9153ea6c25b08e7fffa187449c9bc82b89083b4081
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Compared to Estimates, EOG Resources (EOG) Q3 Earnings: A Look at Key Metrics
+<<<SUMMARY>>>
+The headline numbers for EOG Resources (EOG) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543347
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:45:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d383f186dd42bf62606f55b11c570a5677e0c9831dc722f9116b3d8f2af78851
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources (EOG) Surpasses Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+EOG Resources (EOG) delivered earnings and revenue surprises of +9.44% and +13.43%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143542014
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:21:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7e00a1c97e41dac9b9542639e110eb366f00d7cc03a3cf55f062904a8ae02d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+HOUSTON (AP) — HOUSTON (AP) — EOG Resources Inc. (EOG) on Thursday reported third-quarter net income of $2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143586139
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:48:21Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=82db1cafdae7a416849d9aaa7573389cd813994dd2dbbc7f5ec48f88dee59c70
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Raises Quarterly Dividend From $1.02 To $1.10 Per Share
+<<<SUMMARY>>>
+EOG Resources, Inc. (EOG) today announced an Increased regular quarterly dividend by 8 percent to $1.10 per share, a $4.40 per share indicated annual rate.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143586140
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:19:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b3ec726dfb0807b1ba9a693b0b3fbaba7846cff454f8f664196419a27b3a596d
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Q3 Adj. EPS $4.87 Beats $4.46 Estimate, Sales $8.549B Beat $7.397B Estimate
+<<<SUMMARY>>>
+EOG Resources (NYSE:EOG) reported quarterly earnings of $4.87 per share which beat the analyst consensus estimate of $4.46 by 9.19 percent. This is a 79.7 percent increase over earnings of $2.71 per share from the same
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143538052
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5d396f0a8cd7c0079aa8d77c46e1b16d68ad2e2dd8c8f6bbc56de338242bb42a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Are Investors Undervaluing Devon Energy (DVN) Right Now?
+<<<SUMMARY>>>
+Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540879
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:05:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8041f752430b3fad8b50c51b8da8f5068503bfe6be61ce5873d798d19c6e8a7f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Stock: Analyst Estimates & Ratings
+<<<SUMMARY>>>
+Despite EOG Resources' outperformance relative to the S&P 500 Index over the past year, Wall Street analysts remain cautiously optimistic about the stock’s prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584029
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:00:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9ce4e9e86cb402377a38029a275831210efafdbabaf281d7c2af669242938dbf
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: Defensives Lead Sectors Thursday As Growth Sectors Trail
+<<<SUMMARY>>>
+Four sectors are higher and seven are lower in Thursday’s regular session, with defensive sectors holding two of the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143503750
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T23:45:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=48c93b103658ef27535c6d6496b16558c0f90cf896bfecdab64de7e4d07f38c6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Riley Exploration Permian, Inc. (REPX) Tops Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+Riley Exploration Permian (REPX) delivered earnings and revenue surprises of +58.16% and +11.97%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494711
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T20:37:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae4add0e56b97e51df3378547181cfe5375c63ecd8b14925fdd7995286ce5d8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Earnings Ahead: What Past Reactions Say About The Stock
+<<<SUMMARY>>>
+EOG Resources (NYSE:EOG) is scheduled to report its earnings on Thursday, November 5, 2026. The company has a market value of about $81.6 billion. Over the last twelve months it generated $26.6 billion in revenue and $9.4 billion in operating profit, with net income of $6.9 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492719
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:45:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d687e31bdcc25872935243b7ca6e791997c7ce9da724378ef41eab04177c5b87
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Looking for a Growth Stock? 3 Reasons Why EOG Resources (EOG) is a Solid Choice
+<<<SUMMARY>>>
+EOG Resources (EOG) possesses solid growth attributes, which could help it handily outperform the market.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532755
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:31:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=556485568e8138e2aaae636bf628537078f73f20c08f9e3ac7d9d1bb877060c7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/earnings-scheduled-1.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: Toyota, ConocoPhillips On Deck Thursday As Auto Demand, Oil Prices Face Test
+<<<SUMMARY>>>
+Toyota Motor headlines Thursday’s reports, with investors weighing the automaker’s earnings outlook against a stock still well below its 52-week high. ConocoPhillips, Sony Group, Parker Hannifin and Canadian Natural
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140016558
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:49:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ca36e4c4668724f71c983a61e3b39fbc90251892a4e2be1f5490130efa5a3d58
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: Nephila Capital Selects SEI As Global Strategic Partner To Support Back- And Middle-Office Operations
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532883
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:00:34Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f679e2656ec804ede4bc1beedd9f1070ea0b4ae0790da5ffd52534d70d29ea56
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: 8 Of 11 Sectors Rise Wednesday As Growth Leads
+<<<SUMMARY>>>
+Eight of 11 sectors are higher in Wednesday’s regular session, with growth sectors holding two of the top three positions and Consumer Staples completing the leading group. Energy sits well clear of the rest, separated from the next-weakest sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490962
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:58:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=998aa18de1738c5bd9ca323c4d2a5e4decb86922fb62d5efa327680d01435910
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: 6 Big Funds Bought Devon Energy. Is It a Buy Before Earnings?
+<<<SUMMARY>>>
+Key TakeawaysSix funds managing $2 billion to $6 billion each in US stocks reported new stakes in Devon Energy (DVN:NYSE) in their 13Fs for the quarter ended June 30, and the stock is up 15% since. Analysts’ average target sits 27% above Devon’s price, while ConocoPhillips (COP:NYSE), EOG Resources (EOG:NYSE) and Canadian Natural Resources (CNQ) all trade near or above their own targets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448322
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:09:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c8f279d21a0b4f24254abfa37455c367c8dedad4632fb5eb4f721e84671ef6d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: What Just Happened To Devon Energy Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447301
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=898a67f059372ddbfd10a6cc44c4ecabc6fc511c81e5c6639694e9f8f48ae922
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Devon Energy to Report Q3 Earnings: Buy, Sell or Hold the Stock?
+<<<SUMMARY>>>
+DVN heads into Q3 earnings with rising estimates, strong production prospects and Coterra merger synergies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447299
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:19:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ca4b94ca5054cfaaca7f5e90e7cefa4fb6cdf70d22c20b66d277e8d7e4a15e5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Is EOG Resources (EOG) Trading At A Discount To Its Cash Flow?
+<<<SUMMARY>>>
+EOG Resources has delivered a powerful run over the past five years, and recent news has kept the stock firmly on investors' radar. With that kind of share price history, the key question now is whether the current US$157.89 price can be backed up by the cash the business is expected to generate. EOG Resources has returned 106.6% over 5 years, which puts real pressure on the idea that its current valuation still lines up with the cash it can produce. Recent revenue strength and a long record...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447215
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=60550e7a8f02b3dfee90237f12ee27c315551adb1dea8a05842444c55da7122b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: 4 Energy Stocks That Could Surpass Q3 Earnings Estimates
+<<<SUMMARY>>>
+Energy sector earnings are set to surge 133.9% in Q3 2026. Discover why COP, EOG, TRGP and CLMT could beat earnings estimates amid stronger oil prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445970
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:14:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ffb15bc1a92a148bfbafc55691b566d16fee4a49e2ef1e56c95edc45c1d1c92a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Is EOG Resources (EOG) Cheap Following Its Recent Pullback?
+<<<SUMMARY>>>
+EOG Resources (EOG) has drawn fresh attention after recent trading left the shares down about 4.6% on the day and roughly 3.5% lower over the past week, despite gains over the past month. That pullback comes after a stretch of strong gains, with EOG Resources posting a year to date share price return of 47.19% and a 1 year total shareholder return of 54.22%. This points to momentum that has cooled in the very short term but remains firmly positive over a longer horizon. Scan past the short...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445971
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:15:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=146b248ca0c958d7abbbee448bbedfa7a6ba33587e7dcba32473342c1f7f967c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Curious about EOG Resources (EOG) Q3 Performance? Explore Wall Street Estimates for Key Metrics
+<<<SUMMARY>>>
+Get a deeper insight into the potential performance of EOG Resources (EOG) for the quarter ended September 2026 by going beyond Wall Street's top-and-bottom-line estimates and examining the estimates for some of its key metrics.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400255
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a37308d516187edac88643fa8f6552c811f192030262ca450666faf43f5ccf41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Talos Energy Q3 Earnings on Deck: What's in Store for the Stock?
+<<<SUMMARY>>>
+TALO's Q3 earnings outlook signals strong revenue and profit growth, as rising crude prices offer support while cost inflation poses challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400335
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=82ce6d5c065f7c00dcdbc0dd5a8c3e91844cc4be60f3338cdea21901cbbaf0c0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Eni Begins Maha Gas Production, Boosting Indonesia's Offshore Output
+<<<SUMMARY>>>
+E starts gas production at Indonesia's Maha field, adding 250 MMSCFD of capacity and strengthening its Southeast Asian growth prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140054935
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:37:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9cf6d72fdda64b32413aa6c2b2043f073fa1de2fa8bcae92e786055eb6a985cb
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: NextNRG shares are trading lower after the company reported worse-than-expected Q4 sales results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400336
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ed54e194d5b24e6b19a504addf152fa13cc46bf76a9cdd765dda2878a22f828
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Energy Transfer to Report Q3 Earnings: Buy, Sell or Hold the Stock?
+<<<SUMMARY>>>
+ET expects strong Q3 earnings growth, fueled by rising natural gas demand and pipeline expansions
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398825
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a3f3432d2dd6fd733e580c12355c801094f5925be275a3ce0c4b7c6fe864637
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Chord Energy's Q3 Earnings on Deck: Should You Bet on the Stock?
+<<<SUMMARY>>>
+CHRD Q3 earnings outlook signals strong growth, fueled by higher oil prices and production volumes. Is the stock a smart buy ahead of results?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143441968
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:00:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a2220f001bd42eaba791db61df194e577f612208d641a7515c667cb45b04184e
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/02/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: Growth And Cyclical Sectors Lead Monday Trading
+<<<SUMMARY>>>
+Seven sectors are higher and four are lower in Monday’s regular session, with growth and cyclical sectors splitting the top of the table. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143394457
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T11:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fafaf4584b2b037e303566ee81243b176c6fc28ffd265c600103603d592f1a01
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Enbridge Prepares to Report Q3 Earnings: What's in the Cards?
+<<<SUMMARY>>>
+ENB heads into Q3 2026 earnings with EPS estimates up 9.1% year over year, while higher financing costs may dampen profitability.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805313
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:48:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d21a198555d1de88e64c2dc5049a243c0c4b9a287cb7294bbda2c2f85ab935a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Why You Need To Pay Attention To Occidental Petroleum Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805006
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c517775e6e59724d441dd5cf02a8d96808c5aa60f8201b2599d2a9d2282b680f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: ConocoPhillips' Lower 48 and Willow Assets: Key to Long-Term Growth?
+<<<SUMMARY>>>
+COP's deep Lower 48 inventory, Willow project and LNG expansion underpin its long-term growth strategy and $7 billion cash flow inflection target by 2029.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804141
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c254bd4c4f9f22009f13cbeb05cb628af46f107053427a0471a95f929265d455
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Can CHRD's Four-Mile Laterals Unlock Cost Savings & Earnings Growth?
+<<<SUMMARY>>>
+Chord expands four-mile drilling in the Williston Basin, targeting lower breakeven costs, stronger well economics and improved free cash flow generation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802253
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cfe2f6fe72c62d38b426b17398e8997797d0aae09a9b8e9ad23fa76cd20cba1a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Oil Staying Above $85: A Growth Catalyst for EOG Resources?
+<<<SUMMARY>>>
+Oil above $85 boosts EOG Resources' growth prospects, backed by vast reserves, strong cash flow potential and an attractive valuation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802347
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20f70050e94e96b7499de6707e265a1ccd010c0950c949534cafb3fafd02e147
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Oil Above $85, Chord Energy Up 58% in a Year: Is It Still a Buy?
+<<<SUMMARY>>>
+CHRD's 57.9% rally, higher oil prices, rising production and attractive valuation signal further upside potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766836
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:41:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=49ab416c0dc269043e0d8392e07612d18ab0e84f7d9190d042c1cec342309604
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Can Occidental Petroleum Stock Fall 30%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769417
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3f2bb9b8855dd1b29ec043df460e767410966c4906151e3fec7dd2978f61563
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Oil Still Above $85, EOG Up 41% in a Year: Is the Stock Still a Buy?
+<<<SUMMARY>>>
+EOG Resources has surged 40.8% in a year. High oil prices, low debt, steady dividends and attractive valuation support its appeal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801852
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:00:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9f0b4b5c9edd829fa5e5a059b587c4718291378058032fe071d76edfd141e60a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: Energy Leads Sectors In Thursday Trading As Materials Trail
+<<<SUMMARY>>>
+Five sectors are higher and six are lower in Thursday’s regular session, with cyclical, defensive and growth sectors split across the top three positions. The leaders are separated rather than clustered, with Energy clearly ahead of the next group.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748047
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c79933322b131570dedb8fcf5a735893c64261868369b2eb9e643fa2e42e2f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Should You Pick Occidental Stock Over Its Competitors?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738142
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:17:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4730fe26e78c006028e9f45f5d09c789a955dd19e5f95483a87d07a2ba70cd4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG’s 8% Dividend Raise Is a Bet on Surviving Any Oil Cycle
+<<<SUMMARY>>>
+EOG just raised its dividend while oil trades near $100, and the CEO says it can survive any cycle. One unglamorous line in the earnings release shows whether that promise holds, and it is creeping in the wrong direction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766338
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b2893f36405b9b90f237df63e12ecab04af5e997b7fd2ebe357a34f9974022bb
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: Cyclicals Lead Sectors In Wednesday Trading As Defensives Trail
+<<<SUMMARY>>>
+Five sectors are higher and six are lower in Wednesday&#39;s regular session, with cyclical sectors holding two of the top three positions. Technology sits well clear of the rest, separated from the next sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690586
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:58:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84d0496ed31c4bf47d6bbb811cef235acbc2d215facb78dbbecf2de5ba7bba4e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Just Raised Its Dividend 7.8%. Does Its Free Cash Flow Cover the 2.8% Yield?
+<<<SUMMARY>>>
+Key TakeawaysEOG Resources raised its quarterly dividend 7. 8%, from $1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687380
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b70d95ca6513f274db70c20a9b2f8dcc56536e27d8ab69151eda7f0a2d843b3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Can ConocoPhillips Sustain Future Production Growth With Lower CapEx?
+<<<SUMMARY>>>
+COP plans modestly lower 2027 capital spending while growing production through low-cost resources and efficiency gains to strengthen long-term cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687133
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T09:06:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3df0cefe4d2e35935d7198909d62c384f73fd434f482d0f3b1d7c00e2deb6dc8
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: Susquehanna Maintains Positive on EOG Resources, Raises Price Target to $196
+<<<SUMMARY>>>
+Susquehanna  analyst Charles Minervino   maintains EOG Resources (NYSE:EOG) with a Positive and raises the price target from $187 to $196.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659962
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2385160493d8e4f7aa2160ec018894c6f23a0f6ed04102a54e779dd0dd2cc8fe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: ConocoPhillips Trades at a Premium: Is It the Right Time to Buy?
+<<<SUMMARY>>>
+COP's 54.4% stock rally, low-cost assets, LNG expansion and Willow project fuel optimism, but its premium valuation raises concerns for investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687134
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:01:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=12ff7d846aa2dd079abbab804a5f88c89c3f8e407b5490772ad319e2406315bb
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: UBS Maintains Buy on EOG Resources, Raises Price Target to $190
+<<<SUMMARY>>>
+UBS  analyst Josh Silverstein   maintains EOG Resources (NYSE:EOG) with a Buy and raises the price target from $186 to $190.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657610
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:37:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ae1997d60bfa703458feb58d2795a289c962abbf479b1c1ec27fb85d060a67d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: 5 Oil Stocks Could Turn $500,000 Into $14,000 a Year in Dividend Income
+<<<SUMMARY>>>
+Five oil producers got hammered in one week, with the worst losing more than 15%. Yet three of them quietly raised their dividends anyway. Which ones rewarded shareholders during the sell-off, and what risk does each payout hide?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686716
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:00:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0ae16468fb2d0b7cab7abf03424bf96c001876248f24bcc858b43baf9aed5a1a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: 11 Of 11 Sectors Rise Monday As Growth Leads
+<<<SUMMARY>>>
+All 11 sectors are higher in Monday’s regular session, with growth sectors holding two of the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143653775
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T10:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20038631044610e45eded67cae37e35d485499161c3390aadaeedb54d65e1249
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: The Oil Slump Has Gone Too Far. Where Prices Could Go Next.
+<<<SUMMARY>>>
+Traders are betting on a quick end to the war. We wouldn’t be so sure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687136
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T10:02:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9c0fe898e0c5c5f1ed7130c09f459eace1f2780f1d7c1beda2b8eaaa5bd1c483
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: Truist Securities Maintains Hold on EOG Resources, Raises Price Target to $166
+<<<SUMMARY>>>
+Truist Securities  analyst Gabe Daoud   maintains EOG Resources (NYSE:EOG) with a Hold and raises the price target from $160 to $166.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143645045
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T20:01:15Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=65f58143f680d1eb15dca89e068a59f8dc6c56ba21b384f50bc97941372fbf1c
+image_url: 
+category: company
+tickers: EOG
+keywords: 
+headline: Dividend Announcements: October 31-November 6, 2026 (Part 1 Of 2)
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143626599
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T01:12:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1640bd10e5e949d09127022aced9a3942a5fd4361693775913e38721198733f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: How Record Production Will Impact EOG Resources Stock Investors
+<<<SUMMARY>>>
+EOG Resources reported Q3 2026 revenue of US$8.549b and net income of US$2.781b, with higher oil, NGL and gas output plus an 8% increase in the regular dividend to US$4.40 per share on an annual basis. The business paired record production with a long term LNG linked gas agreement and a planned expansion of the Janus gas plant, tying current cash generation directly to future infrastructure and premium market exposure. Next, the focus shifts to how EOG Resources' record production and higher...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143618946
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T21:12:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=73361e47937e713d3579f0969eb924f142efd9c3f7d266ba4bbe2008bfbc4cb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources (EOG) Raised Its Regular Dividend By 8%
+<<<SUMMARY>>>
+EOG Resources (NYSE:EOG) reported record Q3 2026 production and strong earnings on 5 November 2026. The board approved an 8% increase to the regular dividend, adding more cash returns for shareholders. Management announced a new long term gas sales agreement alongside expansion plans for the Janus facility. Record output, a higher dividend and the Janus expansion only tell part of today's story for EOG. Our analysis turns up 3 warning signs (1 major) for EOG Resources as well. For readers...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143607598
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:13:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1941567c969ec89dee3e9ad145b6e68cb1f3ea7dee9824fdd3d62e87784422b9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Inc (EOG) (Q3 2026) Earnings Call Highlights: Record Production, Dividend Hike ...
+<<<SUMMARY>>>
+EOG Resources Inc (EOG) posted record oil, NGL and natural gas volumes, raised its dividend 8% and expanded premium LNG exposure while generating $2.2 billion in free cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616194
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T07:17:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ebd20abe77b5c2be0e9164246d7a5e43ad9f8f870f059a0eb1180e132bebe61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: EOG Resources Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+EOG Resources (NYSE:EOG) reported record oil, natural gas liquids and natural gas production in the third quarter of 2026 and raised its regular dividend by 8% for 2027, as executives outlined plans for modest oil growth and further investment in gas infrastructure. The company earned an adjusted $
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1fd25645fed34e86348b009966227313ccfdc3f26b7abb43ee462acdfa542730
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T11:38:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020262/enbridge-prepares-to-report-q3-earnings-what-s-in-the-cards?cid=CS-ZC-FT-analyst_blog|earnings_preview-3020262
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f8/169741.webp
+category: 
+tickers: ENB, TRGP, EOG, OXY, OXY.WS
+keywords: Q3 2026 earnings, energy infrastructure, financing costs, long-term contracts, earnings per share, commodity exposure
+headline: Enbridge Prepares to Report Q3 Earnings: What's in the Cards?
+<<<SUMMARY>>>
+Enbridge (ENB) is set to report Q3 2026 earnings on Nov. 6 with estimated EPS of 36 cents, up 9.1% year-over-year. While the company's long-term contracts and low commodity exposure support stable earnings, higher financing costs are expected to weigh on profitability. The stock has a negative Earnings ESP of -2.93% and Zacks Rank #4 (Sell), suggesting limited likelihood of an earnings beat.
+<<<INSIGHTS>>>
+ENB | negative | Despite stable business fundamentals from long-term contracts and low commodity exposure, ENB faces headwinds from higher financing costs impacting profitability. The negative Earnings ESP of -2.93% combined with a Zacks Rank #4 (Sell) rating indicates low probability of an earnings beat and suggests downside risk.
+TRGP | positive | TRGP has a positive Earnings ESP of +2.05% and Zacks Rank #3 (Hold), with Q3 earnings expected to show 24.6% year-over-year improvement, positioning it favorably for a potential earnings beat.
+EOG | positive | EOG has a positive Earnings ESP of +0.79% and Zacks Rank #2 (Buy), with Q3 earnings projected to surge 64.2% year-over-year, indicating strong earnings potential.
+OXY | positive | OXY has the strongest positive Earnings ESP of +4.14% and Zacks Rank #2 (Buy), with Q3 earnings expected to increase 123.4% year-over-year, suggesting high likelihood of an earnings beat.
+OXY.WS | positive | OXY has the strongest positive Earnings ESP of +4.14% and Zacks Rank #2 (Buy), with Q3 earnings expected to increase 123.4% year-over-year, suggesting high likelihood of an earnings beat.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c5306a567ce8eb221a4ad9ebfc27739918edb96d61b3a7dd750ef355c0a9f938
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T13:40:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020518/why-eog-resources-eog-is-a-top-value-stock-for-the-long-term?cid=CS-ZC-FT-fundamental_analysis|zacks_education_value_score-3020518
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default198.jpg
+category: 
+tickers: EOG
+keywords: Zacks Rank, Style Scores, stock rating system, investment research, earnings estimates, value investing, growth investing, momentum investing
+headline: Why EOG Resources (EOG) is a Top Value Stock for the Long-Term
+<<<SUMMARY>>>
+Zacks Premium offers investment research tools including the Zacks Rank stock-rating system and Style Scores to help investors identify high-performing stocks. The Zacks Rank #1 (Strong Buy) stocks have averaged +23.82% annual returns since 1988, more than double the S&P 500. EOG Resources is highlighted as a #2 (Buy) stock with strong value metrics and positive earnings estimate revisions.
+<<<INSIGHTS>>>
+EOG | positive | EOG Resources received a #2 (Buy) Zacks Rank with a VGM Score of A and Value Style Score of B. The company has attractive valuation metrics (forward P/E of 9.35), six analysts revised earnings estimates upward in the last 60 days, and the consensus estimate increased to $17.71 per share with a +6.7% average earnings surprise.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bfffaa921f13995d0cdbc916334a18e8e0aba815b910f8ae94b0b5228ed756f7
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T14:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020704/chord-energy-s-q3-earnings-on-deck-should-you-bet-on-the-stock?cid=CS-ZC-FT-analyst_blog|earnings_preview-3020704
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: CHRD, COP, EOG
+keywords: Q3 earnings, oil prices, exploration and production, valuation, debt exposure, WTI crude, production volumes
+headline: Chord Energy's Q3 Earnings on Deck: Should You Bet on the Stock?
+<<<SUMMARY>>>
+Chord Energy (CHRD) is expected to report Q3 2026 earnings surging 150.6% with revenues rising 5.3%, driven by higher oil prices near $100/barrel and strong well performance. The company has gained 72.7% over the past year and trades at a significant discount (EV/EBITDA of 3.52x vs. industry average of 11.92x) with low debt exposure, making it an attractive investment opportunity.
+<<<INSIGHTS>>>
+CHRD | positive | Expected 150.6% earnings surge, 5.3% revenue growth, strong production performance (165.4-165.6 MBbl/D), attractive valuation at 3.52x EV/EBITDA (vs. industry 11.92x), low debt-to-capitalization ratio of 15.06% (vs. industry 48.35%), and 72.7% one-year stock gain. Zacks Rank #1 rating supports positive outlook.
+COP | positive | Benefiting from constructive oil-price backdrop driven by Middle East tensions, with 73.9% one-year stock gain outperforming industry average. However, valued higher at 7.11x EV/EBITDA compared to CHRD.
+EOG | positive | Benefiting from high oil prices and favorable energy environment similar to peers, with 56.7% one-year stock gain. Valued at 6.38x EV/EBITDA, lower than COP but higher than CHRD.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d034974e5d518f4364432f358e0664c7c90303f59f9ecd56321d848d69b981b8
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T15:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020788/energy-transfer-to-report-q3-earnings-buy-sell-or-hold-the-stock?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3020788
+image_url: https://staticx-tuner.zacks.com/images/articles/main/12/13457.jpg
+category: 
+tickers: ET, PAA, CLMT, EOG
+keywords: Energy Transfer, Q3 2026 earnings, pipeline infrastructure, natural gas demand, Permian Basin, midstream, distribution growth, earnings beat
+headline: Energy Transfer to Report Q3 Earnings: Buy, Sell or Hold the Stock?
+<<<SUMMARY>>>
+Energy Transfer LP (ET) is projected to report strong Q3 2026 results with revenues surging 78.41% to $35.60 billion and earnings of 41 cents per unit. The company benefits from new pipeline capacity, rising Permian activity, and growing natural gas demand. ET trades at a valuation discount (9.47X EV/EBITDA vs. industry 11.77X) and targets 3-5% annual distribution growth, making it attractive for income-focused investors.
+<<<INSIGHTS>>>
+ET | positive | ET has a positive Earnings ESP of +8.46% with Zacks Rank #3, indicating an expected earnings beat. The company benefits from strong revenue growth (78.41%), expanding pipeline capacity, rising Permian activity, and growing natural gas demand. It trades at a valuation discount relative to peers and offers attractive distribution growth of 3-5% annually, supported by a fee-based business model providing earnings stability.
+PAA | positive | PAA is mentioned as a comparable company in the same sector with favorable earnings beat indicators, featuring an Earnings ESP of +11.94% and Zacks Rank #2, suggesting strong expected performance this earnings season.
+CLMT | positive | CLMT is highlighted as having the strongest Earnings ESP of +48.76% among peer companies mentioned, combined with Zacks Rank #2, indicating exceptional earnings beat potential.
+EOG | positive | EOG is noted as a sector peer with positive earnings beat indicators, featuring an Earnings ESP of +0.79% and Zacks Rank #2, suggesting favorable earnings performance expectations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c647be6e44617b7f29afb3b41b4662436726beaa111e1a2849b986825018472d
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T16:22:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020921/talos-energy-q3-earnings-on-deck-what-s-in-store-for-the-stock?cid=CS-ZC-FT-analyst_blog|earnings_preview-3020921
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b5/159583.webp
+category: 
+tickers: TALO, COP, EOG, OXY, OXY.WS
+keywords: Q3 2026 earnings, upstream energy, crude oil prices, WTI, Gulf of Mexico, exploration and production
+headline: Talos Energy Q3 Earnings on Deck: What's in Store for the Stock?
+<<<SUMMARY>>>
+Talos Energy is set to report Q3 2026 earnings on November 3, with revenues projected to rise 26% to $567.1 million and EPS expected to surge 352.6% year-over-year. Favorable WTI crude oil prices averaging $80-97 per barrel should support profitability, though cost inflation may present headwinds. The company's Earnings ESP of 0.00% and Zacks Rank #3 suggest limited predictability of an earnings beat.
+<<<INSIGHTS>>>
+TALO | neutral | While revenue and EPS growth projections are strong (26% and 352.6% respectively) and supported by favorable crude oil prices, the 0.00% Earnings ESP and Zacks Rank #3 indicate limited confidence in beating consensus estimates. Cost inflation presents a counterbalancing risk to profitability.
+COP | positive | Strong Earnings ESP of +3.74% combined with Zacks Rank #1 (Strong Buy) suggests high probability of earnings beat. Consensus EPS estimate shows 83.2% year-over-year increase, indicating robust expected performance.
+EOG | positive | Positive Earnings ESP of +0.79% with Zacks Rank #2 (Buy) indicates favorable conditions for earnings beat. Consensus EPS estimate reflects 64.2% improvement year-over-year.
+OXY | positive | Highest Earnings ESP among peers at +4.14% combined with Zacks Rank #2 (Buy) suggests strong likelihood of earnings beat. Consensus EPS estimate shows 123.4% year-over-year increase, the highest among the three comparison companies.
+OXY.WS | positive | Highest Earnings ESP among peers at +4.14% combined with Zacks Rank #2 (Buy) suggests strong likelihood of earnings beat. Consensus EPS estimate shows 123.4% year-over-year increase, the highest among the three comparison companies.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4b7ab714196ec7e91ad975197de4ab22d8ff237bc9ec4bfc4ccbf46bab0924ee
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T15:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022020/4-energy-stocks-that-could-surpass-q3-earnings-estimates?cid=CS-ZC-FT-analyst_blog|earnings_preview_esp-3022020
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ad/30383.jpg
+category: 
+tickers: COP, EOG, TRGP, CLMT
+keywords: energy sector, Q3 2026 earnings, oil prices, earnings surprise, Earnings ESP, midstream services, exploration and production
+headline: 4 Energy Stocks That Could Surpass Q3 Earnings Estimates
+<<<SUMMARY>>>
+The energy sector is projected to deliver 133.9% earnings growth in Q3 2026, driven by higher oil prices and improved refining margins. Four stocks with positive Earnings ESP—ConocoPhillips, EOG Resources, Targa Resources, and Calumet—are highlighted as potential outperformers ahead of their November earnings announcements.
+<<<INSIGHTS>>>
+COP | positive | Positive Earnings ESP of +3.74% with Zacks Rank #1 (Strong Buy). Company beat consensus estimates in 3 of last 4 quarters. Scheduled to report Nov. 5 with strong sector tailwinds from higher oil prices.
+EOG | positive | Positive Earnings ESP of +0.79% with Zacks Rank #2 (Buy). Beat earnings estimates in all trailing four quarters. Positioned to benefit from crude oil strength and improved E&P fundamentals.
+TRGP | positive | Positive Earnings ESP of +2.05% with Zacks Rank #3 (Hold). Midstream infrastructure company benefiting from sector's 133.9% projected earnings growth. Beat estimates in 2 of last 4 quarters.
+CLMT | positive | Strongest Earnings ESP at +48.76% with Zacks Rank #2 (Buy). Beat consensus estimates in 3 of last 4 quarters. Specialty products and renewable fuels exposure aligns with sector strength.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e9d9258547ffb6ea5eb60e2c8c83e0a7e6080b78fe48e53949e9393bf19d93fe
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T16:25:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022086/devon-energy-to-report-q3-earnings-buy-sell-or-hold-the-stock?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3022086
+image_url: https://staticx-tuner.zacks.com/images/articles/main/12/13457.jpg
+category: 
+tickers: DVN, EOG, EPM, OXY, OXY.WS
+keywords: Q3 earnings, Devon Energy, Coterra merger, Delaware Basin, production growth, cost efficiency, synergies, shareholder returns, valuation discount
+headline: Devon Energy to Report Q3 Earnings: Buy, Sell or Hold the Stock?
+<<<SUMMARY>>>
+Devon Energy (DVN) is set to report Q3 2026 earnings on November 5 with consensus estimates of $1.24 per share and $7.33B in revenues. The company is expected to beat estimates due to strong Delaware Basin production, full-quarter contributions from the Coterra merger, operational efficiencies, and over 350 identified synergy initiatives. DVN trades at a discount valuation of 8.98X forward earnings versus the industry average of 10.75X, with a strong balance sheet featuring only 21.43% debt-to-capital ratio.
+<<<INSIGHTS>>>
+DVN | positive | Company demonstrates strong fundamentals with expected earnings beat (Earnings ESP +5.07%, Zacks Rank #2), full-quarter Coterra merger contributions, robust production guidance (1.66-1.69M BOE/d), over 350 synergy initiatives targeting $1B+ annual pre-tax savings, attractive valuation discount (8.98X vs 10.75X industry), conservative debt levels (21.43% vs 48.35% industry), and shareholder-friendly capital allocation including $750M debt retirement and ongoing $8B buyback authorization.
+EOG | neutral | Mentioned as a peer company in the same sector with positive earnings indicators (Earnings ESP +0.79%, Zacks Rank #2) suggesting potential for earnings beat, but limited specific information provided about the company's fundamentals or outlook.
+EPM | neutral | Mentioned as a peer company with strong Earnings ESP of +200.00% and Zacks Rank #2, indicating potential for significant earnings beat, but lacks detailed company-specific analysis or context.
+OXY | neutral | Mentioned as a peer company with positive Earnings ESP of +4.14% and Zacks Rank #2, suggesting earnings beat potential, but no detailed company-specific information or analysis provided.
+OXY.WS | neutral | Mentioned as a peer company with positive Earnings ESP of +4.14% and Zacks Rank #2, suggesting earnings beat potential, but no detailed company-specific information or analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f724d707a098608ad6429803774b6c8b134a5c9ae364ce244cf7f4aebb5d8373
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T16:45:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3023323/looking-for-a-growth-stock-3-reasons-why-eog-resources-eog-is-a-solid-choice?cid=CS-ZC-FT-fundamental_analysis|yseop_template_11_growth-3023323
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default266.jpg
+category: 
+tickers: EOG
+keywords: growth stock, EOG Resources, earnings growth, asset utilization, earnings estimate revisions, Zacks Rank, oil and gas
+headline: Looking for a Growth Stock? 3 Reasons Why EOG Resources (EOG) is a Solid Choice
+<<<SUMMARY>>>
+EOG Resources is highlighted as a solid growth stock pick with a Zacks Growth Score of A and Zacks Rank #2 (Buy). The company demonstrates strong fundamentals including projected EPS growth of 74.3% (vs. industry average of 48.4%), efficient asset utilization with an S/TA ratio of 0.51 (vs. industry average of 0.39), and positive earnings estimate revisions with a 3.7% upward surge over the past month.
+<<<INSIGHTS>>>
+EOG | positive | EOG Resources receives a positive sentiment based on multiple strong growth indicators: projected EPS growth of 74.3% significantly exceeding industry average, superior asset utilization efficiency, expected sales growth of 35.6% versus industry average of 13.9%, upward earnings estimate revisions, and favorable Zacks Growth Score of A with Zacks Rank #2 (Buy) recommendation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:461206d61e7de13ce584a27cae8c8729f83a7a1f8837c9f565d18c9440413bf4
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T21:45:08Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024891/eog-resources-eog-surpasses-q3-earnings-and-revenue-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3024891
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default31.jpg
+category: 
+tickers: EOG, KGEI
+keywords: earnings surprise, oil and gas, exploration and production, earnings beat, revenue growth, industry outlook
+headline: EOG Resources (EOG) Surpasses Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+EOG Resources reported Q3 2026 earnings of $4.87 per share, beating consensus estimates of $4.45 and delivering a 9.44% earnings surprise. The company also exceeded revenue expectations with $8.55 billion versus estimates of $7.54 billion. With a Zacks Rank #2 (Buy) rating and the oil and gas exploration industry ranking in the top 10% of sectors, EOG shares have gained 40% year-to-date, significantly outperforming the S&P 500's 12.3% gain.
+<<<INSIGHTS>>>
+EOG | positive | Company beat both EPS ($4.87 vs $4.45 consensus) and revenue ($8.55B vs $7.54B consensus) expectations with a 9.44% earnings surprise. Stock has outperformed market significantly (40% YTD vs S&P 500's 12.3%), and received a Zacks Rank #2 (Buy) rating with favorable estimate revision trends.
+KGEI | neutral | Company has not yet reported Q3 2026 results (expected November 13). Forward guidance shows modest growth expectations (EPS up 36.4% YoY to $0.15, revenue up 13.6%), with recent consensus estimate revisions of +4.2%, but lacks actual performance data to assess.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8a278ab470123362bac9608eaf04b7a1185b053c178e0ba22891dc16d547f0c9
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T22:00:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3024956/compared-to-estimates-eog-resources-eog-q3-earnings-a-look-at-key-metrics?cid=CS-ZC-FT-fundamental_analysis|nfm-3024956
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default71.jpg
+category: 
+tickers: EOG
+keywords: Q3 earnings, revenue beat, EPS surprise, crude oil production, natural gas, commodity prices, year-over-year growth
+headline: Compared to Estimates, EOG Resources (EOG) Q3 Earnings: A Look at Key Metrics
+<<<SUMMARY>>>
+EOG Resources reported Q3 2026 revenue of $8.55 billion, up 46.2% year-over-year, beating consensus estimates by 13.43%. EPS of $4.87 exceeded estimates of $4.45 by 9.44%. The company outperformed on most production volumes and commodity prices, with strong performance across natural gas, crude oil, and natural gas liquids segments. EOG stock has a Zacks Rank #2 (Buy) rating.
+<<<INSIGHTS>>>
+EOG | positive | EOG significantly beat both revenue and EPS estimates, with revenue up 46.2% YoY and EPS up 79.7% YoY. The company outperformed on most key production metrics and commodity prices. The Zacks Rank #2 (Buy) rating and positive stock performance (+2% over past month) further support the positive outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0778724af9c16f69973a90398165a6346b66e9b7581ccbffc6bba2fbe75f8b65
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T03:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/05/time-to-cash-out-4-energy-stocks-id-sell-before-it/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892765%2F26_10_22-oil-drums-of-increasing-size-with-a-rising-line-above-them-_mf-dload-gettyimages-2264326377-1281x854-f43835d.jpg&w=1200&op=resize
+category: 
+tickers: DVN, FANG, EOG, PR, ENB, EPD, TTE
+keywords: energy stocks, commodity prices, geopolitical risk, oil prices, profit-taking, energy producers, pipeline stocks, market volatility
+headline: Time to Cash Out? 4 Energy Stocks I'd Sell Before It's Too Late
+<<<SUMMARY>>>
+The article recommends selling pure-play energy producer stocks (Devon Energy, Diamondback Energy, EOG Resources, and Permian Resources) while energy prices remain elevated due to Middle East geopolitical tensions. The author argues that commodity price volatility is the primary driver of these stocks' performance, and prices will eventually fall when the conflict resolves. He suggests shifting to diversified energy companies or pipeline stocks like Enbridge and Enterprise Products Partners to reduce commodity risk exposure.
+<<<INSIGHTS>>>
+DVN | negative | Recommended to sell due to high exposure to volatile commodity prices and geopolitical risk. Stock performance is heavily tied to oil prices which are likely to decline when Middle East conflict resolves.
+FANG | negative | Pure-play energy producer with significant downside risk as commodity prices are expected to fall. Author recommends selling to lock in current gains.
+EOG | negative | Identified as a pure-play producer vulnerable to commodity price declines. Recommended for sale before energy prices fall due to geopolitical resolution.
+PR | negative | Pure-play energy producer with high commodity price sensitivity. Author suggests selling to avoid losses when energy prices inevitably decline.
+ENB | positive | Recommended as a better alternative to pure-play producers. Pipeline company with diversified revenue streams and high yield that minimizes commodity price volatility impact.
+EPD | positive | Suggested as an alternative investment offering high yield and fee-driven revenue model, providing more stable returns than pure-play energy producers.
+TTE | positive | Integrated energy giant recommended by author as part of his portfolio to minimize impact of volatile energy prices compared to pure-play producers.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e3df930087cf3505d5d82501677c8d4cb7a4bff1e1041d9ce66ec8bf9f1e8364
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T15:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025776/crgy-stock-after-q3-earnings-is-more-upside-on-the-horizon?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3025776
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9b/170330.webp
+category: 
+tickers: CRGY, EOG, DVN
+keywords: Q3 2026 earnings, Permian synergies, Devon Energy acquisition, free cash flow, Eagle Ford, cost reductions, oil production, leverage targets
+headline: CRGY Stock After Q3 Earnings: Is More Upside on the Horizon?
+<<<SUMMARY>>>
+Crescent Energy delivered strong Q3 2026 results with earnings and revenue beating estimates, driven by higher production and improved oil realizations. The company raised its annual Permian synergy target above $300M with $295M already captured. The planned $3.85B Devon Energy Eagle Ford acquisition is expected to add 68,000 BOE/d and $140M in annual synergies, though rising acquisition debt remains a concern. CRGY trades at a discounted valuation relative to peers.
+<<<INSIGHTS>>>
+CRGY | positive | Strong Q3 earnings and revenue beat, significant cost reductions (20-25% in Permian, 25%+ in Eagle Ford), robust free cash flow generation ($367M levered FCF), accelerating synergies ($295M captured), strategic Devon acquisition expanding production scale, and attractive discounted valuation (0.82X P/S vs 3.27X industry average) support positive outlook despite acquisition-related debt concerns.
+EOG | neutral | Mentioned as an outperforming peer with 38% one-year share gains and trading at 2.66X P/S F-12M (premium to CRGY but below industry average). No specific operational or financial updates provided in the article.
+DVN | neutral | Mentioned only in context of the pending Eagle Ford asset sale to Crescent Energy. No operational or financial performance data provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:670421b169fb5152abc21f5e63865e97d4f15b19710cfea28adf90a2aa76c32f
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T17:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025899/eog-q3-earnings-beat-estimates-on-record-production-strong-pricing?cid=CS-ZC-FT-analyst_blog|earnings_article-3025899
+image_url: https://staticx-tuner.zacks.com/images/articles/main/8c/172505.webp
+category: 
+tickers: EOG, PBF, DINO, GLPEY
+keywords: Q3 2026 earnings, record production, free cash flow, dividend increase, share buyback, crude oil prices, energy sector
+headline: EOG Q3 Earnings Beat Estimates on Record Production, Strong Pricing
+<<<SUMMARY>>>
+EOG Resources delivered impressive third-quarter 2026 results with adjusted earnings of $4.87 per share (up 79.7% YoY) and revenues of $8.55 billion (up 46.2% YoY), both beating consensus estimates. Record production of 1,433.1 MBoe/d and higher crude oil prices drove performance. The company generated $2.18 billion in free cash flow, raised its dividend 8%, and repurchased $1 billion in shares.
+<<<INSIGHTS>>>
+EOG | positive | Strong earnings beat (9.4% above consensus), significant revenue growth (46.2% YoY), record production volumes, robust free cash flow generation ($2.18B), dividend increase (8%), and substantial share repurchases ($1B) all indicate excellent operational and financial performance.
+PBF | positive | Carries Zacks Rank #1 (Strong Buy) rating with geographically diverse refining network, large-scale processing capacity, and reported earnings beat in Q3.
+DINO | positive | Holds Zacks Rank #1 (Strong Buy) rating with robust refining network across multiple regions, constructive refining outlook, and beat Zacks Consensus Estimate by 43.8% in Q3.
+GLPEY | neutral | While carrying Zacks Rank #1 (Strong Buy) rating and having positive oil exploration results (Mopane discovery), the company missed Q3 earnings consensus estimate (16 cents vs. 52 cents expected), indicating mixed performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9c27e5d0772ef2231205a001ba5c8fc7166cd0cf8a3d584f7ff8351bee80b8d1
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T17:03:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026693/conocophillips-trades-at-a-premium-is-it-the-right-time-to-buy?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3026693
+image_url: https://staticx-tuner.zacks.com/images/articles/main/87/146286.webp
+category: 
+tickers: COP, EOG, FANG
+keywords: ConocoPhillips, upstream energy, LNG expansion, Willow project, shale assets, free cash flow, oil prices, Alaska production
+headline: ConocoPhillips Trades at a Premium: Is It the Right Time to Buy?
+<<<SUMMARY>>>
+ConocoPhillips (COP) has rallied 54.4% over the past year, outpacing its industry peers, supported by low-cost shale assets, favorable oil prices, and expanding LNG operations. The company targets $7 billion in free cash flow improvement by 2029, driven by LNG investments and the Willow project in Alaska expected to begin production in early 2029. Despite trading at a premium valuation, analysts rate COP as a Strong Buy based on its diversified asset portfolio and positive long-term outlook.
+<<<INSIGHTS>>>
+COP | positive | Strong stock performance (54.4% annual gain), diversified low-cost asset portfolio, favorable commodity pricing environment, strategic LNG expansion with 13 MTPA contracted capacity, on-track Willow project expected to deliver $7B free cash flow improvement by 2029, and Zacks Rank #1 Strong Buy rating support positive outlook despite premium valuation.
+EOG | neutral | Mentioned as a peer company with solid 38.1% annual stock performance, but no specific analysis or commentary provided regarding its fundamentals or outlook.
+FANG | neutral | Mentioned as a peer company with 23.6% annual stock performance, but no specific analysis or commentary provided regarding its fundamentals or outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8b9d4f54ef7eb49d903fa9e6d574d937d34d2665e87bfd10561a687b1e796b3b
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T12:41:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027035/can-conocophillips-sustain-future-production-growth-with-lower-capex?cid=CS-ZC-FT-analyst_blog|quick_take-3027035
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b5/163437.webp
+category: 
+tickers: COP, EOG, FANG
+keywords: capital expenditure reduction, production growth, Permian Basin, operational efficiency, free cash flow, cost optimization, drilling techniques, capital discipline
+headline: Can ConocoPhillips Sustain Future Production Growth With Lower CapEx?
+<<<SUMMARY>>>
+ConocoPhillips plans to achieve low-single-digit production growth in 2027 while reducing capital spending, leveraging operational efficiencies in its Permian Basin assets and recently commissioned Canadian operations. The company targets a $7 billion free cash flow improvement by 2029 through cost reductions and efficiency gains, despite inflationary pressures on fuel, logistics, and chemicals.
+<<<INSIGHTS>>>
+COP | positive | Company demonstrates strong capital discipline with plans for modest CapEx reduction while maintaining low-single-digit production growth. Operational improvements, extensive resource portfolio, and a targeted $7 billion free cash flow improvement by 2029 support positive outlook. Stock has outperformed industry peers with 52.4% gain over the past year and holds a Zacks Rank #1 (Strong Buy) rating.
+EOG | positive | Company achieved record oil, natural gas liquids, and natural gas production in Q3 2026 while maintaining per-unit cash operating costs below guidance midpoint. Focus on disciplined investments and high-return assets demonstrates effective capital efficiency and operational excellence.
+FANG | positive | Company is improving drilling and completion efficiency through five electric simul-frac fleets planned for consistent 2027 operation. Disciplined spending approach and focus on development cost optimization position the company well for capital-efficient production growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:414d35b36fb8219076893cf1be1732b1b8ccec1f1a3ce011fd6d85b7501c3be6
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T13:41:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028639/oil-still-above-85-eog-up-41-in-a-year-is-the-stock-still-a-buy?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3028639
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: EOG, CVX
+keywords: oil prices, energy sector, dividend stocks, valuation, upstream exploration, balance sheet strength
+headline: Oil Still Above $85, EOG Up 41% in a Year: Is the Stock Still a Buy?
+<<<SUMMARY>>>
+EOG Resources has gained 40.8% over the past year, outpacing industry peers and benefiting from high oil prices above $85/barrel. The company maintains a strong balance sheet with low debt (19.31% debt-to-capitalization), a 28-year dividend payment history with $2.3 billion planned for next year, and trades at a discount valuation of 5.27x EV/EBITDA compared to the industry average of 8.51x. EOG holds a Zacks Rank #2 (Buy) rating.
+<<<INSIGHTS>>>
+EOG | positive | Strong year-over-year performance (40.8% gain), favorable high oil price environment, low debt levels, consistent dividend history, attractive valuation discount relative to peers, and Zacks Rank #2 (Buy) rating support positive outlook.
+CVX | neutral | Peer company with 37.1% annual gain and exposure to favorable oil price environment, but trades at higher valuation (6.80x EV/EBITDA) than EOG, indicating less relative attractiveness.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:06491be62514e880d8216f20e6138def44b25bc559355c054e33bcab5dd6c17c
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T12:43:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029308/oil-above-85-chord-energy-up-58-in-a-year-is-it-still-a-buy?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3029308
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: CHRD, COP, EOG
+keywords: oil production, upstream operations, Bakken region, free cash flow returns, shareholder returns, valuation discount, debt-to-capitalization, WTI crude prices
+headline: Oil Above $85, Chord Energy Up 58% in a Year: Is It Still a Buy?
+<<<SUMMARY>>>
+Chord Energy (CHRD) has jumped 57.9% over the past year, outpacing industry growth and peers. The company raised its 2026 oil production guidance to 162,500 barrels per day, benefits from elevated WTI crude prices above $85/barrel, maintains a strong balance sheet with low debt exposure, and commits to returning at least 75% of free cash flow to shareholders. Trading at 2.73x EV/EBITDA, CHRD appears undervalued compared to industry average of 8.72x, earning a Zacks Rank #1 (Strong Buy) rating.
+<<<INSIGHTS>>>
+CHRD | positive | Strong year-over-year stock performance (57.9%), raised production guidance, low debt exposure (15.2% debt-to-capitalization), attractive valuation at 2.73x EV/EBITDA vs. industry 8.72x, strong shareholder commitment with 75%+ free cash flow returns, and Zacks Rank #1 (Strong Buy) rating.
+COP | neutral | Mentioned as an industry peer with solid 53.3% year-over-year gains and higher valuation at 5.87x EV/EBITDA, but no specific analysis or commentary provided regarding its fundamentals or outlook.
+EOG | neutral | Mentioned as an industry peer with 41% year-over-year gains and valuation at 5.34x EV/EBITDA, but no specific analysis or commentary provided regarding its fundamentals or outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:068c2c24024e2dc286803cc190ab905b8060943a2b22cffc1b380ffaef14a46f
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T12:51:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029316/oil-staying-above-85-a-growth-catalyst-for-eog-resources?cid=CS-ZC-FT-analyst_blog|quick_take-3029316
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: EOG, COP
+keywords: oil prices, natural gas, LNG exports, AI data centers, energy sector, crude oil, Permian Basin
+headline: Oil Staying Above $85: A Growth Catalyst for EOG Resources?
+<<<SUMMARY>>>
+EOG Resources is positioned to benefit from WTI crude trading above $85/barrel and rising LNG exports and AI-driven power demand. The company's 12 billion BOE resource base and diversified portfolio support strong cash flow generation. EOG shares gained 41% over the past year and trade at 5.34X EV/EBITDA, below the industry average of 8.72X. ConocoPhillips and Exxon Mobil are also well-positioned in the favorable crude pricing environment.
+<<<INSIGHTS>>>
+EOG | positive | Company benefits from high oil prices above $85/barrel, has a large 12 billion BOE resource base, is well-positioned for rising LNG exports and AI-driven power demand, shares gained 41% in the past year, trades below industry average valuation at 5.34X EV/EBITDA, and carries a Zacks Rank #2 (Buy) rating with upward earnings revisions.
+COP | positive | Benefits from favorable crude pricing environment and has low-cost drilling opportunities across major basins (Permian, Eagle Ford, Bakken) that could be profitably developed over two decades.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:340beb72c1cdfb1baac65b5dca1eefb85c7b7e8dd67ed9339f6a34b633a9208f
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T17:11:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029773/conocophillips-lower-48-and-willow-assets-key-to-long-term-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3029773
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: COP, EOG
+keywords: upstream energy, oil and gas, cash flow growth, Willow project, LNG expansion, balance sheet strength, low-cost assets, Permian Basin, Guyana
+headline: ConocoPhillips' Lower 48 and Willow Assets: Key to Long-Term Growth?
+<<<SUMMARY>>>
+ConocoPhillips (COP) is highlighted as a leading upstream energy company with diversified global assets and a $7 billion cash flow inflection target by 2029, supported by Lower 48 inventory, the Willow project, and LNG expansion. The company benefits from $10.4 billion in liquidity and unhedged oil exposure. EOG Resources and ExxonMobil are also noted for their low-cost, high-quality upstream assets and strong balance sheets with low debt-to-capitalization ratios.
+<<<INSIGHTS>>>
+COP | positive | Strong asset portfolio with 20+ years of low-cost inventory in Lower 48, Willow project startup, $7B cash flow inflection target by 2029, $10.4B liquidity, unhedged oil exposure upside, and Zacks Rank #1 Strong Buy rating. Stock up 56.7% over past year.
+EOG | positive | Leading independent E&P company with prolific U.S. acres and international operations, low-cost high-quality assets, and debt-to-capitalization ratio of 19.31% significantly below industry average.
+<<<END>>>

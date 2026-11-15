@@ -1,25 +1,26 @@
-"""Tests for prometheus.agents.advisor.trade_plan (Advisor v1 spec section 10, phase 5). The prices are literals that make the arithmetic checkable by hand; the portfolio is the real
-made-up one of the SNDK/MU test (configs/portfolios/jacob_pyrett_sndk_mu.json: PG 15 @ 60, MCD 120 @ 40, GOOGL 30 @ 100, LLY 25 @ 155, $200 cash)."""
+"""Tests for prometheus.agents.advisor.trade_plan (Advisor v1 spec section 10, phase 5; design choices entry 80). The prices are literals that make the arithmetic checkable by hand.
+
+The plan has NO SIZE since entry 80 (how much to buy or sell is the Account Manager's): the tests that were about the risk budget, the position and liquidity caps, the regime halving the budget,
+the account's equity and the funds check were removed with the code they tested. The arithmetic of every cap, of the equity and of the funds check is tested on the Account Manager's code
+(tests/test_account_manager_sizing.py); the prices of the plan against the real captures are tested in tests/test_trade_plan_real.py.
+"""
+import inspect
 from datetime import date
 
 import pytest
 from advisor_helpers import CONFIG, TODAY, fr, healthy, metric
+from pydantic import ValidationError
 
 from prometheus.agents.advisor import trade_plan as tp
-from prometheus.common.portfolio import Portfolio, load_portfolio
-from prometheus.rag.config import REPO_ROOT
-
-PORTFOLIO = load_portfolio(REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett_sndk_mu.json")
-EMPTY = Portfolio(user="t", cash_avail=1000.0)
-BIG = (100_000.0, "last_close", {})
+from prometheus.agents.advisor.record import TradePlan
 
 
 def metrics(**kw):
     return healthy(**{"atr_14": 4.0, "last_close": 100.0, "adv_20d_dollars": 10e6, **kw})
 
 
-def plan(family="capital_return", m=None, equity=(1000.0, "last_close", {}), portfolio=EMPTY, regime="trend", edge=0.004, horizon=126, quote=None, **kw):
-    return tp.build(fr(family, edge=edge, horizon_bars=horizon), m if m is not None else metrics(), quote, regime, equity, portfolio, TODAY, CONFIG, symbol="AAA", **kw)
+def plan(family="capital_return", m=None, edge=0.004, horizon=126, quote=None, **kw):
+    return tp.build(fr(family, edge=edge, horizon_bars=horizon), m if m is not None else metrics(), quote, TODAY, CONFIG, symbol="AAA", **kw)
 
 
 def test_the_entry_zone_and_the_stop_follow_the_atr_by_family():
@@ -51,28 +52,6 @@ def test_the_time_stop_counts_weekdays_from_today():
     assert plan("reversion", horizon=10).time_stop_date == "2026-11-06" and "holidays" in plan("reversion", horizon=10).time_stop_note
 
 
-def test_a_thousand_dollar_account_gets_one_share_and_the_plan_says_it_is_oversized():
-    p = plan("capital_return")                                                                   # risk budget $10, stop distance 12: floor(10 / 12) = 0 shares
-    assert p.risk_budget == 10.0 and p.suggested_shares == 1 and p.oversized is True and p.position_pct == pytest.approx(0.10)
-    assert p.size_note == "one share is 10% of equity; the 1.0% risk budget allows 0"
-
-
-def test_the_size_is_the_risk_budget_over_the_stop_distance_capped_by_equity_and_liquidity():
-    p = plan("capital_return", equity=BIG, portfolio=Portfolio(user="t", cash_avail=100_000.0))
-    assert p.risk_budget == 1000.0 and p.suggested_shares == 83 and p.oversized is False                         # floor(1000 / 12) = 83
-    thin = tp.build(fr("capital_return", horizon_bars=126), metrics(adv_20d_dollars=100_000.0), None, "trend", BIG, Portfolio(user="t", cash_avail=100_000.0), TODAY, CONFIG, symbol="AAA")
-    assert thin.suggested_shares == 50                                                                           # 5% of $100,000 ADV / $100 = 50
-    cheap = tp.build(fr("reversion", horizon_bars=10), metrics(atr_14=0.01, adv_20d_dollars=1e9), None, "trend", BIG, Portfolio(user="t", cash_avail=100_000.0), TODAY, CONFIG, symbol="AAA")
-    assert cheap.suggested_shares == 200                                                                         # 20% of equity / $100: the risk budget alone would allow 50,000
-
-
-def test_a_stress_or_unknown_regime_halves_the_risk_budget():
-    for regime in ("stress", "unknown"):
-        p = plan("capital_return", equity=BIG, portfolio=Portfolio(user="t", cash_avail=100_000.0), regime=regime)
-        assert p.risk_budget == 500.0 and p.suggested_shares == 41
-    assert plan("capital_return", equity=BIG, portfolio=Portfolio(user="t", cash_avail=100_000.0), regime="narrow").risk_budget == 1000.0
-
-
 def test_a_quote_is_the_entry_price_when_the_order_has_one():
     p = plan("reversion", horizon=10, quote={"price": 105.0})
     assert p.entry_basis == "quote" and p.entry_mid == 105.0 and p.entry_zone == [103.0, 107.0]
@@ -101,41 +80,22 @@ def test_the_invalidation_rules_by_family():
 
 def test_no_atr_or_no_price_means_no_plan_and_the_reason():
     p = plan("trend", m=healthy(atr_14=None, last_close=100.0), horizon=63)
-    assert p.entry_zone is None and p.stop_price is None and p.suggested_shares == 0 and "atr_14 is missing" in p.notes[0]
+    assert p.entry_zone is None and p.stop_price is None and "atr_14 is missing" in p.notes[0]
     assert "there is no price" in plan("trend", m=healthy(atr_14=4.0, last_close=None), horizon=63).notes[0]
 
 
-def test_unknown_equity_means_no_size_not_a_guess():
-    p = plan("capital_return", equity=(None, "no price for PG", {}))
-    assert p.suggested_shares == 0 and p.stop_price == 88.0 and any("equity is unknown (no price for PG)" in n for n in p.notes)
+def test_a_plan_has_no_size_and_build_is_given_no_money():
+    """Entry 80: the plan is prices and dates. No field of it is a number of shares, a risk budget or a share of the account, and `build` takes neither the portfolio nor the equity."""
+    p = plan("capital_return")
+    assert p.stop_price == 88.0 and p.stop_distance == 12.0 and p.entry_zone == [98.0, 102.0]                      # the same numbers with or without anyone's money: there is none to give
+    assert set(TradePlan.model_fields) == {"family", "entry_basis", "entry_zone", "entry_mid", "stop_distance", "stop_price", "target_price", "horizon_bars", "time_stop_date", "time_stop_note", "gap_risk",
+                                           "order_style", "limit_price", "invalidation", "notes"}
+    assert list(inspect.signature(tp.build).parameters) == ["family", "metrics", "quote", "today", "config", "symbol", "reaction_atr"]
+    assert not hasattr(tp, "equity_of") and not hasattr(tp, "funds_check")                                        # moved to account_manager/sizing.py
+    with pytest.raises(ValidationError):
+        TradePlan(entry_basis="last_close", suggested_shares=5)                                                   # a size is not a field the record accepts
 
 
-def test_a_reduction_has_an_entry_zone_and_no_size():
-    p = tp.build(None, metrics(), None, "trend", BIG, EMPTY, TODAY, CONFIG, symbol="AAA")
-    assert p.entry_zone == [98.0, 102.0] and p.family is None and p.suggested_shares == 0 and p.stop_price is None and p.invalidation == []
-
-
-def test_equity_is_cash_plus_the_holdings_at_their_price_and_never_a_guess():
-    by_symbol = {"PG": healthy(last_close=150.0), "MCD": healthy(last_close=300.0), "GOOGL": healthy(last_close=200.0), "LLY": healthy(last_close=900.0)}
-    equity, basis, prices = tp.equity_of(PORTFOLIO, by_symbol, {})
-    assert equity == pytest.approx(200 + 15 * 150 + 120 * 300 + 30 * 200 + 25 * 900) and basis == "last_close" and prices["LLY"] == 900.0
-    equity, basis, _ = tp.equity_of(PORTFOLIO, by_symbol, {"PG": {"price": 160.0}})
-    assert equity == pytest.approx(200 + 15 * 160 + 120 * 300 + 30 * 200 + 25 * 900) and basis == "last_close, quote"
-    without = dict(by_symbol)
-    del without["MCD"]
-    assert tp.equity_of(PORTFOLIO, without, {})[:2] == (None, "no price for MCD")
-    assert tp.equity_of(EMPTY, {}, {}) == (1000.0, "cash only", {})
-
-
-def test_funds_feasible_is_cash_or_what_the_sellable_holdings_in_profit_could_raise():
-    prices = {"PG": 150.0, "MCD": 300.0, "GOOGL": 200.0, "LLY": 900.0}
-    assert tp.funds_check(150.0, PORTFOLIO, prices, TODAY) == (True, "cash $200.00 covers $150.00")
-    ok, note = tp.funds_check(900.0, PORTFOLIO, prices, TODAY)               # short by $700; four holdings in profit, one share of each kept: far more than that
-    assert ok is True and note.startswith("short by $700.00; $") and "could be raised" in note
-    loss = {"PG": 50.0, "MCD": 30.0, "GOOGL": 90.0, "LLY": 100.0}             # every holding is below its cost basis: nothing may be sold
-    ok, note = tp.funds_check(900.0, PORTFOLIO, loss, TODAY)
-    assert ok is False and "$0.00 could be raised" in note
-    ok, _ = tp.funds_check(10**9, PORTFOLIO, prices, TODAY)
-    assert ok is False
-    today_buy = PORTFOLIO.model_copy(update={"positions": [p.model_copy(update={"acquired": TODAY}) for p in PORTFOLIO.positions]})
-    assert tp.funds_check(900.0, today_buy, prices, TODAY)[0] is False        # bought today: locked until tomorrow (T+1)
+def test_a_reduction_has_an_entry_zone_and_no_amount():
+    p = tp.build(None, metrics(), None, TODAY, CONFIG, symbol="AAA")
+    assert p.entry_zone == [98.0, 102.0] and p.family is None and p.stop_price is None and p.invalidation == [] and p.stop_distance is None and p.target_price is None

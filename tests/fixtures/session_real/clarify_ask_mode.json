@@ -1,0 +1,204 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to the Ask-mode questions about how much to buy (design choices entry 85), recorded on 2026-11-15 by running AccountManager.clarify_sizing on the REAL reviews of tests/fixtures/session_real/bob_jones_oil_round_robin.json (Bob Jones, $15,000 cash, conservative, Ask mode) with a request that does not say how much. 'answers' is what the user typed (in order), 'replies' the model's replies (in order), 'cards' what was shown to the user, 'plan' what the Account Manager worked out.",
+ "scenarios": {
+  "percent_total": {
+   "request": "I want to buy oil stocks. Buy from the 3 most recommended oil companies.",
+   "answers": [
+    "20% of my account in total"
+   ],
+   "replies": [
+    "{\"thought\":\"Need to ask the user how much they want to purchase\", \"action\":\"ask_user\", \"question\":\"How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \\\"as much as I can\\\".\"}",
+    "{\"thought\":\"User provided a total amount as a percentage\", \"action\":\"set_sizing\", \"unit\":\"percent\", \"amount\":20, \"scope\":\"total\", \"allocation\":\"as_much_as_possible\"}"
+   ],
+   "cards": [
+    {
+     "question": "How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \"as much as I can\".",
+     "n": 1,
+     "of": 3,
+     "kind": "how_much"
+    },
+    {
+     "question": "Your limits cut what you asked for: one stock may be at most 10% of your account (about $1,500.00). With them the Account Manager would buy CVX 6, EOG 9. Raise one stock to 20.0% for THIS purchase only (your saved limits stay as they are)? Say yes, a percentage of your account, or no.",
+     "n": 1,
+     "of": 1,
+     "kind": "raise_limit"
+    }
+   ],
+   "plan": {
+    "balance": null,
+    "budget": 3000.0,
+    "wanted": null,
+    "limit_overrides": null,
+    "text": "20% of your account ($3,000.00) in all, the first company first, as far as your limits allow",
+    "notes": []
+   },
+   "calls": 2,
+   "model": "openai/gpt-oss-120b"
+  },
+  "dollars_total_even": {
+   "request": "I want to buy oil stocks. Buy from the 3 most recommended oil companies.",
+   "answers": [
+    "$3,000 in total, split evenly"
+   ],
+   "replies": [
+    "{\"thought\":\"Need to know the amount they want to purchase\", \"action\":\"ask_user\", \"question\":\"How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \\\"as much as I can\\\".\"}",
+    "{\"thought\":\"User specified $3,000 total, split evenly\", \"action\":\"set_sizing\", \"unit\":\"dollars\", \"amount\":3000, \"scope\":\"total\", \"allocation\":\"even\"}"
+   ],
+   "cards": [
+    {
+     "question": "How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \"as much as I can\".",
+     "n": 1,
+     "of": 3,
+     "kind": "how_much"
+    }
+   ],
+   "plan": {
+    "balance": "even",
+    "budget": 3000.0,
+    "wanted": null,
+    "limit_overrides": null,
+    "text": "$3,000.00 in all, spread evenly",
+    "notes": []
+   },
+   "calls": 2,
+   "model": "openai/gpt-oss-120b"
+  },
+  "shares_each_raise_yes": {
+   "request": "I want to buy oil stocks. Buy from the 3 most recommended oil companies.",
+   "answers": [
+    "10 shares of each",
+    "yes"
+   ],
+   "replies": [
+    "{\"thought\":\"Need to ask the user how much they want to purchase\", \"action\":\"ask_user\", \"question\":\"How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \\\"as much as I can\\\".\"}",
+    "{\"thought\":\"User wants 10 shares for each company\", \"action\":\"set_sizing\", \"unit\":\"shares\", \"amount\":10, \"scope\":\"each\", \"allocation\":\"even\"}"
+   ],
+   "cards": [
+    {
+     "question": "How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \"as much as I can\".",
+     "n": 1,
+     "of": 3,
+     "kind": "how_much"
+    },
+    {
+     "question": "Your limits cut what you asked for: one stock may be at most 10% of your account (about $1,500.00). With them the Account Manager would buy CVX 6, EOG 9. Raise one stock to 14.7% for THIS purchase only (your saved limits stay as they are)? Say yes, a percentage of your account, or no.",
+     "n": 1,
+     "of": 1,
+     "kind": "raise_limit"
+    }
+   ],
+   "plan": {
+    "balance": null,
+    "budget": null,
+    "wanted": {
+     "f0e146ada0f7": 10,
+     "ad29c38b9f06": 10
+    },
+    "limit_overrides": {
+     "max_position_pct": 0.147
+    },
+    "text": "10 shares in each of the 2 companies",
+    "notes": [
+     "you raised your limit for this purchase: one stock up to 14.7% of your account"
+    ]
+   },
+   "calls": 2,
+   "model": "openai/gpt-oss-120b"
+  },
+  "percent_each_no_raise_needed": {
+   "request": "I want to buy oil stocks. Buy from the 3 most recommended oil companies.",
+   "answers": [
+    "5% of my account in each company"
+   ],
+   "replies": [
+    "{\"thought\":\"Need to know the amount they want to purchase\", \"action\":\"ask_user\", \"question\":\"How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \\\"as much as I can\\\".\"}",
+    "{\"thought\":\"User specified 5% for each company\", \"action\":\"set_sizing\", \"unit\":\"percent\", \"amount\":5, \"scope\":\"each\", \"allocation\":\"even\"}"
+   ],
+   "cards": [
+    {
+     "question": "How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \"as much as I can\".",
+     "n": 1,
+     "of": 3,
+     "kind": "how_much"
+    }
+   ],
+   "plan": {
+    "balance": null,
+    "budget": null,
+    "wanted": {
+     "f0e146ada0f7": 3,
+     "ad29c38b9f06": 4
+    },
+    "limit_overrides": null,
+    "text": "5% of your account in each of the 2 companies",
+    "notes": []
+   },
+   "calls": 2,
+   "model": "openai/gpt-oss-120b"
+  },
+  "as_much_as_i_can": {
+   "request": "I want to buy oil stocks. Buy from the 3 most recommended oil companies.",
+   "answers": [
+    "as much as I can"
+   ],
+   "replies": [
+    "{\"thought\":\"Need to know the amount they want to purchase\", \"action\":\"ask_user\", \"question\":\"How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \\\"as much as I can\\\".\"}",
+    "{\"thought\":\"User wants to buy the maximum allowed for each company\", \"action\":\"set_sizing\", \"unit\":\"max\", \"amount\":null, \"scope\":\"each\", \"allocation\":\"as_much_as_possible\"}"
+   ],
+   "cards": [
+    {
+     "question": "How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \"as much as I can\".",
+     "n": 1,
+     "of": 3,
+     "kind": "how_much"
+    }
+   ],
+   "plan": {
+    "balance": null,
+    "budget": null,
+    "wanted": null,
+    "limit_overrides": null,
+    "text": "as much as your limits allow, the first company first",
+    "notes": []
+   },
+   "calls": 2,
+   "model": "openai/gpt-oss-120b"
+  },
+  "vague_then_percent": {
+   "request": "I want to buy oil stocks. Buy from the 3 most recommended oil companies.",
+   "answers": [
+    "not sure, something reasonable",
+    "15 percent of my account in total"
+   ],
+   "replies": [
+    "{\"thought\":\"Need to know the amount they want to purchase\", \"action\":\"ask_user\", \"question\":\"How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \\\"as much as I can\\\".\"}",
+    "{\"thought\":\"Need a specific amount or guidance\", \"action\":\"ask_user\", \"question\":\"Could you specify an amount? For example, a percentage of your account, a dollar amount, a number of shares for each stock, or say \\\"as much as I can\\\".\"}",
+    "{\"thought\":\"User provided a total percentage\", \"action\":\"set_sizing\", \"unit\":\"percent\", \"amount\":15, \"scope\":\"total\", \"allocation\":\"as_much_as_possible\"}"
+   ],
+   "cards": [
+    {
+     "question": "How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \"as much as I can\".",
+     "n": 1,
+     "of": 3,
+     "kind": "how_much"
+    },
+    {
+     "question": "Could you specify an amount? For example, a percentage of your account, a dollar amount, a number of shares for each stock, or say \"as much as I can\".",
+     "n": 2,
+     "of": 3,
+     "kind": "how_much"
+    }
+   ],
+   "plan": {
+    "balance": null,
+    "budget": 2250.0,
+    "wanted": null,
+    "limit_overrides": null,
+    "text": "15% of your account ($2,250.00) in all, the first company first, as far as your limits allow",
+    "notes": []
+   },
+   "calls": 3,
+   "model": "openai/gpt-oss-120b"
+  }
+ }
+}

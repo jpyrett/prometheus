@@ -14,7 +14,7 @@ from prometheus.tools.data_clerk import DATA_CLERK_TOOLS, DataClerkTools
 
 FAKE_KEY = "sk-or-test-NOT-A-REAL-KEY-12345"
 SETTINGS = ["OPENROUTER_API_KEY", "OPENROUTER_BASE_URL", "OPENROUTER_HTTP_REFERER", "OPENROUTER_APP_TITLE",
-            "DEFAULT_MODEL", "FAST_MODEL", "ADVISOR_MODEL", "CRITIC_MODEL"]
+            "DEFAULT_MODEL", "FAST_MODEL", "ADVISOR_MODEL", "CRITIC_MODEL", "ACCOUNT_MANAGER_MODEL", "TRADER_MODEL"]
 
 
 @pytest.fixture(autouse=True)
@@ -34,7 +34,7 @@ def with_key(monkeypatch):
 def test_the_models_default_to_the_values_in_env_example():
     assert {role: chat.model_name(role) for role in chat.ROLES} == {
         "data_clerk": "openai/gpt-oss-120b", "fast": "qwen/qwen3-30b-a3b",
-        "advisor": "nvidia/nemotron-3-super-120b-a12b", "critic": "z-ai/glm-5.3", "account_manager": "openai/gpt-oss-120b"}
+        "advisor": "nvidia/nemotron-3-super-120b-a12b", "critic": "z-ai/glm-5.3", "account_manager": "openai/gpt-oss-120b", "trader": "openai/gpt-oss-120b"}
 
 
 def test_the_defaults_match_the_env_example_file():
@@ -51,8 +51,8 @@ def test_a_setting_in_the_environment_or_in_env_changes_the_model(monkeypatch, i
 
 
 def test_an_unknown_role_is_refused():
-    with pytest.raises(ValueError, match="unknown role 'trader'"):
-        chat.model_name("trader")
+    with pytest.raises(ValueError, match="unknown role 'janitor'"):
+        chat.model_name("janitor")
 
 
 def test_a_missing_key_names_the_setting_and_nothing_else():
@@ -74,7 +74,7 @@ def test_an_explicit_model_id_overrides_the_role_and_an_unknown_role_is_still_re
     assert chat.get_chat_model("critic", model="x/y").model_name == "x/y"
     assert chat.get_chat_model("critic").model_name == "z-ai/glm-5.3"  # without it the role decides
     with pytest.raises(ValueError, match="unknown role"):
-        chat.get_chat_model("trader", model="x/y")
+        chat.get_chat_model("janitor", model="x/y")
 
 
 def test_a_provider_rate_limit_is_told_apart_from_other_failures():
@@ -153,3 +153,22 @@ def test_the_critic_setting_overrides_the_default(with_key, monkeypatch):
 def test_the_client_timeout_is_60_seconds_unless_a_caller_asks_for_more(with_key):
     assert chat.get_chat_model().request_timeout == 60
     assert chat.get_chat_model("critic", timeout=240).request_timeout == 240
+
+
+def test_the_trader_is_a_role_with_its_own_setting_and_gpt_oss_120b_by_default(with_key, monkeypatch):
+    assert chat.ROLES["trader"] == ("TRADER_MODEL", "openai/gpt-oss-120b") and list(chat.ROLES)[-1] == "trader"
+    assert chat.model_name("trader") == "openai/gpt-oss-120b" and chat.get_chat_model("trader").model_name == "openai/gpt-oss-120b"
+    monkeypatch.setenv("TRADER_MODEL", "x/other-model")
+    assert chat.model_name("trader") == "x/other-model" and chat.get_chat_model("trader").model_name == "x/other-model"
+    assert chat.model_name("account_manager") == "openai/gpt-oss-120b"                  # the setting of one role does not move another's
+
+
+def test_the_trader_model_is_temperature_zero_unless_a_caller_says_otherwise_and_takes_the_extra_body_the_trader_asks_for(with_key):
+    extra = {"reasoning": {"effort": "low"}, "provider": {"order": ["cerebras", "groq"], "allow_fallbacks": True, "require_parameters": True}}
+    model = chat.get_chat_model("trader", temperature=0.0, timeout=60, extra_body=extra)
+    assert model.temperature == 0.0 and model.request_timeout == 60 and model.extra_body == extra
+
+
+def test_main_lists_the_trader_among_the_roles(capsys):
+    assert chat.main([]) == 0
+    assert "trader     : openai/gpt-oss-120b" in capsys.readouterr().out

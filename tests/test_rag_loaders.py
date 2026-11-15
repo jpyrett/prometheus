@@ -134,27 +134,77 @@ def test_missing_file_raises():
         load_news(Path("/nonexistent/AAPL.txt"))
 
 
-# ---------------------------------------------------------------- errors name the file and line
+# ---------------------------------------------------------------- an article that fails is discarded (Jacob, 2026-11-15, design choices entry 83)
 
-@pytest.mark.parametrize("text, expected", [
-    (GOOD.replace("<<<END>>>\n", ""), "AAPL.txt:1: the record has no <<<END>>>"),
-    (GOOD.replace("<<<END>>>\n", "") + GOOD, "AAPL.txt:14: a new record starts before the one at line 1 ended"),
-    (GOOD.replace("A summary.", "<<<FILING>>>"), "AAPL.txt:11: unknown marker '<<<FILING>>>'"),
-    (GOOD.replace("publisher: Yahoo", "publisher Yahoo"), "AAPL.txt:6: header line without a colon"),
-    (GOOD.replace("url: https://example.com/a\n", ""), "AAPL.txt:1: the record is missing url"),
-    (GOOD.replace("headline: A headline\n", ""), "AAPL.txt:1: the record is missing headline"),
-    (GOOD.replace("2026-10-23T19:03:00Z", "yesterday"), "AAPL.txt:1: bad published_utc 'yesterday'"),
-    (GOOD.replace("symbol: AAPL\n", "").replace("tickers: AAPL", "tickers: "),
-     "AAPL.txt:1: the record has neither tickers nor a symbol"),
-    ("some stray text\n" + GOOD, "AAPL.txt:1: text outside a record: 'some stray text'"),
-    (GOOD + "<<<SUMMARY>>>\n", "AAPL.txt:15: text outside a record"),
-    # text that contains a marker line WITHOUT the DataToolbox's escape: stops loudly, never half-loads
-    (GOOD.replace("A summary.", "A summary.\n<<<END>>>\nmore text"), "AAPL.txt:13: text outside a record: 'more text'"),
+def load_with_skips(tmp_path: Path, text: str):
+    path = tmp_path / "AAPL.txt"
+    path.write_text(text, encoding="utf-8")
+    skipped = []
+    return load_news(path, skipped), skipped
+
+
+@pytest.mark.parametrize("text, loaded, where, reason", [
+    (GOOD.replace("<<<END>>>\n", ""), 0, "AAPL.txt:1", "the record has no <<<END>>>"),
+    (GOOD.replace("<<<END>>>\n", "") + GOOD, 1, "AAPL.txt:1", "the record has no <<<END>>> (a new record starts at line 14)"),          # the next record is still read
+    (GOOD.replace("A summary.", "<<<FILING>>>"), 0, "AAPL.txt:1", "line 11: unknown marker '<<<FILING>>>'"),
+    (GOOD.replace("publisher: Yahoo", "publisher Yahoo"), 0, "AAPL.txt:1", "line 6: header line without a colon"),
+    (GOOD.replace("url: https://example.com/a\n", ""), 0, "AAPL.txt:1", "the record is missing url"),
+    (GOOD.replace("headline: A headline\n", ""), 0, "AAPL.txt:1", "the record is missing headline"),
+    (GOOD.replace("2026-10-23T19:03:00Z", "yesterday"), 0, "AAPL.txt:1", "bad published_utc 'yesterday'"),
+    (GOOD.replace("symbol: AAPL\n", "").replace("tickers: AAPL", "tickers: "), 0, "AAPL.txt:1", "the record has neither tickers nor a symbol"),
+    ("some stray text\n" + GOOD, 1, "AAPL.txt:1", "text outside a record: 'some stray text'"),
+    (GOOD + "<<<SUMMARY>>>\n", 0, "AAPL.txt:1", "text follows its <<<END>>> (line 15: '<<<SUMMARY>>>'), so the record was cut short"),
+    # text that contains a marker line WITHOUT the DataToolbox's escape: the record ended early and is cut short, so it is discarded, never half-loaded
+    (GOOD.replace("A summary.", "A summary.\n<<<END>>>\nmore text"), 0, "AAPL.txt:1", "text follows its <<<END>>> (line 13: 'more text'), so the record was cut short"),
 ])
-def test_bad_records_raise_with_file_and_line(tmp_path, text, expected):
-    with pytest.raises(ValueError) as error:
-        load_text(tmp_path, text)
-    assert expected in str(error.value)
+def test_a_record_that_fails_is_skipped_completely_and_says_where_and_why(tmp_path, text, loaded, where, reason):
+    docs, skipped = load_with_skips(tmp_path, text)
+    assert len(docs) == loaded and len(skipped) >= 1
+    assert skipped[0].where.endswith(where) and reason in skipped[0].reason
+    assert "x:1" not in [d.id for d in docs] or loaded == 1                                                  # a failed record is never among the Documents
+
+
+def test_the_load_does_not_need_a_skipped_list_and_a_failed_record_is_simply_not_there(tmp_path):
+    path = tmp_path / "AAPL.txt"
+    path.write_text(GOOD.replace("2026-10-23T19:03:00Z", "yesterday"), encoding="utf-8")
+    assert load_news(path) == []
+
+
+REAL = FIXTURE.read_text(encoding="utf-8")                      # three REAL records, copied verbatim from news/AAPL.txt and news/NVDA.txt
+REAL_SECOND = "polygon:287f3b5c2f0c59c2b903cd391bb97c0c090f48a25c64cdf5e7df1dab0e85382a"
+
+
+@pytest.mark.parametrize("damage", [
+    lambda t: t.replace("published_utc: 2026-10-17T21:30:00Z", "published_utc: 17 Oct 2026"),                                           # a time that is not a time
+    lambda t: t.replace("url: https://www.fool.com/", "url\nhttps://www.fool.com/"),                                                    # a header line with no colon
+    lambda t: t.replace("<<<INSIGHTS>>>", "<<<INSIGHT>>>"),                                                                                         # an unknown marker
+    lambda t: t.replace("<<<SUMMARY>>>", "<<<SUMMARY>>>\n<<<NEWS>>>"),                                                                                # another unknown marker, in the text
+])
+def test_a_real_article_that_fails_is_discarded_and_the_real_ones_around_it_still_load(tmp_path, damage):
+    first, second, third = REAL.split("<<<ARTICLE>>>\n")[1:]
+    first, second, third = ("<<<ARTICLE>>>\n" + part for part in (first, second, third))
+    broken = damage(second)
+    assert broken != second
+    docs, skipped = load_with_skips(tmp_path, first + broken + third)
+    assert [d.id for d in docs] == ["finnhub:143136906", "finnhub:143103074"] and REAL_SECOND not in [d.id for d in docs]
+    assert len(skipped) == 1 and skipped[0].where.endswith("AAPL.txt:21")
+
+
+def test_a_real_record_without_its_end_is_discarded_and_the_next_real_record_is_not_swallowed(tmp_path):
+    first, second, third = ("<<<ARTICLE>>>\n" + part for part in REAL.split("<<<ARTICLE>>>\n")[1:])
+    docs, skipped = load_with_skips(tmp_path, first + second.replace("<<<END>>>\n", "") + third)
+    assert [d.id for d in docs] == ["finnhub:143136906", "finnhub:143103074"] and len(skipped) == 1 and "has no <<<END>>>" in skipped[0].reason
+
+
+def test_every_real_record_of_every_real_news_file_loads_and_none_is_discarded():
+    """Nothing real is thrown away: the stored files were written by the toolbox, so no record of them fails."""
+    from prometheus.rag.config import news_dir
+    files = sorted(news_dir().glob("*.txt"))
+    if not files:
+        pytest.skip("no stored news files on this machine")
+    skipped = []
+    docs = [d for path in files for d in load_news(path, skipped)]
+    assert docs and skipped == []
 
 
 # ---------------------------------------------------------------- damaged or odd input (design choices entry 19)
@@ -173,11 +223,12 @@ def test_windows_line_endings_load(tmp_path):
     assert doc.page_content == "A headline\n\nA summary." and doc.metadata["url"] == "https://example.com/a"
 
 
-def test_a_byte_that_is_not_utf8_names_the_file_and_line(tmp_path):
+def test_a_byte_that_is_not_utf8_discards_that_record_and_names_the_file_and_line(tmp_path):
     path = tmp_path / "AAPL.txt"
-    path.write_bytes(GOOD.encode("utf-8").replace(b"A summary.", b"A summ\xffary."))
-    with pytest.raises(ValueError, match=r"AAPL\.txt:11: not valid UTF-8 \(invalid start byte, at byte 6 of the line\)"):
-        load_news(path)
+    path.write_bytes((GOOD.encode("utf-8").replace(b"A summary.", b"A summ\xffary.")) + GOOD.replace("x:1", "x:2").encode("utf-8"))
+    skipped = []
+    assert [d.id for d in load_news(path, skipped)] == ["x:2"]
+    assert len(skipped) == 1 and skipped[0].where.endswith("AAPL.txt:1") and "line 11: not valid UTF-8 (invalid start byte, at byte 6 of the line)" in skipped[0].reason
 
 
 @pytest.mark.parametrize("body", [

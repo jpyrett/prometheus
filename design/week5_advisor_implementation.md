@@ -456,3 +456,17 @@ News and press releases (40%): each verified quote counts 0.5^(age in days ÷ 7)
 Stock performance (30%): 12-1 month momentum, one-month return, distance from the 52-week high, and whether it is above the 200-day mean.
 Historical metrics (20%): earnings yield, return on equity, revenue growth, margin, current ratio, debt to equity (skipped for negative equity, as before).
 Filings (10%): payout yield, share-count change, payout coverage, dilution, cash flow against profit, plus the filing evidence items.
+
+
+---
+
+## Note of 2026-11-14 (design choices entry 80): sizing moved to the Account Manager
+
+The Advisor no longer sizes a trade and no longer uses the user's money. The text above is left as it was written; where it says otherwise, this note wins:
+
+- **Section 5, the regime**: it no longer halves a risk budget (there is none); it still scales the families and is in the record's identity.
+- **Section 5, the holdings pass**: `add` is a bullish stance whose blend is as good as this run's new ideas. "Not oversized" and "stays within 20% of equity" are gone (they needed a size and the user's money); whether the user's limits leave room is the Account Manager's sizing, which counts the shares held. `ranking.add_max_position_pct` and `ranking.oversized_pct` left the config. A `reduce` has no amount.
+- **Section 5, the trade plan**: entry zone, stop, target, time stop, order style and invalidation rules, the same numbers as before (`tests/test_trade_plan_real.py` checks 208 real plans against the old code's). The whole-share size, the risk budget, the caps, `oversized`, `equity`, `position_pct` and `funds_feasible` are gone, and so is "reading 1" of the two readings the spec leaves open (the share-count formula). `build` is given no portfolio, equity or regime. The sizing and `funds_check` are in `prometheus/agents/account_manager/sizing.py`.
+- **Section 5, the tests**: `test_trade_plan` has no `$1,000 account`, caps, stress, `equity_of` or `funds_feasible` test (the Account Manager's sizing tests cover them); `test_advisor_no_size` reads the Advisor's source for the user's cash, equity and every size name.
+- **Section 6 and the thesis**: the digest the model reads has no size line, and the prompt says the record has no amount to buy or sell.
+- **The record** keeps schema version 2 with the fields gone (as Amendment 7 did); older ledger lines still hold them.

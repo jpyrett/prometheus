@@ -63,12 +63,13 @@ class BarStore:
         self.gaps: list[str] = []
         self.loaded: set[str] = set()
 
-    def load(self, symbols, end: date | None = None, max_bars: int = MAX_BARS) -> "BarStore":
-        """Read the newest `max_bars` day files on or before `end` (default: the newest stored), keep only `symbols`. Returns self. Call it ONCE per run with every symbol needed."""
+    def load(self, symbols, end: date | None = None, max_bars: int = MAX_BARS, start: date | None = None) -> "BarStore":
+        """Read the newest `max_bars` day files on or before `end` (default: the newest stored), keep only `symbols`. Returns self. Call it ONCE per run with every symbol needed.
+        `start` (Trader v1: `DataClerkTools.daily_bars`) leaves out every day before it, files and REST bars alike, so a range is read and nothing older than it (left out: as before)."""
         wanted = {s.strip().upper() for s in symbols}
         self.loaded |= wanted
         files = _day_files(self.root)
-        days = sorted(d for d in files if end is None or d <= end)[-max_bars:]
+        days = sorted(d for d in files if (end is None or d <= end) and (start is None or d >= start))[-max_bars:]
         for day in days:
             try:
                 table = pv_csv.read_csv(files[day], convert_options=pv_csv.ConvertOptions(include_columns=list(COLUMNS)))
@@ -82,12 +83,13 @@ class BarStore:
         for symbol in sorted(wanted):  # the per-ticker REST files add the dates the day files lack
             have = {b.date for b in self._bars.get(symbol, [])}
             for bar in self._extra_bars(symbol):
-                if (end is None or bar.date <= end) and bar.date not in have:
+                if (end is None or bar.date <= end) and (start is None or bar.date >= start) and bar.date not in have:
                     self._bars.setdefault(symbol, []).append(bar)
                     seen.add(bar.date)
         self.dates = sorted(seen)[-max_bars:]
         if not self.dates:
-            self.gaps.append(f"no day_aggs_v1 files on or before {end or 'today'} under {self.root}")
+            self.gaps.append(f"no day_aggs_v1 files on or before {end or 'today'} under {self.root}" if start is None else
+                             f"no day_aggs_v1 files from {start} to {end or 'the newest'} under {self.root}")
             return self
         day = self.dates[0]
         while day <= self.dates[-1]:  # a weekday with no bar of any symbol between the first and last day read

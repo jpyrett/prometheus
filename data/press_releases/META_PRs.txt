@@ -1,0 +1,162 @@
+<<<PRESS_RELEASE>>>
+id: 06357bc7f7fb1bc2
+symbol: META
+published_utc: 2025-12-03T19:00:00Z
+url: https://www.nasdaq.com/press-release/meta-announces-quarterly-cash-dividend-2025-12-03
+headline: Meta Announces Quarterly Cash Dividend
+<<<TEXT>>>
+--The Meta Platforms, Inc. board of directors today declared a quarterly cash dividend of $0.525 per share of the company's outstanding Class A common stock and Class B common stock, payable on December 23, 2025 to stockholders of record as of the close of business on December 15, 2025. Investors: Kenneth Dorell investor@meta.com/ investor.atmeta.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9620526f6ac17cb5
+symbol: META
+published_utc: 2025-12-30T09:02:00Z
+url: https://www.nasdaq.com/press-release/tuttle-capital-management-launches-tuttle-capital-magnificent-7-income-blast-etf-mago
+headline: Tuttle Capital Management Launches the Tuttle Capital Magnificent 7 Income Blast ETF (MAGO)
+<<<TEXT>>>
+Tuttle Capital Management, a leading provider of thematic and alternatives ETFs, today announced the launch of the Tuttle Capital Magnificent 7 Income Blast ETF, now trading on the CBOE. MAGO is an actively managed exchange-traded fund that seeks to provide current income and exposure to the equity performance of the "Magnificent 7"- Alphabet, Amazon, Apple, Meta...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7d4196a135762d84
+symbol: META
+published_utc: 2026-01-09T06:00:00Z
+url: https://www.nasdaq.com/press-release/oklo-meta-announce-agreement-support-12-gw-nuclear-energy-development-southern-ohio
+headline: Oklo, Meta Announce Agreement in Support of 1.2 GW Nuclear Energy Development in Southern Ohio
+<<<TEXT>>>
+Oklo Inc., an advanced nuclear technology company, announced an agreement with Meta Platforms, Inc. that advances Oklo’ s plans to develop a 1.2 GW power campus in Pike County, Ohio, to support Meta’ s data centers in the region. Meta’ s commitment enables Oklo to pursue development in southern Ohio. Oklo seeks to develop the project on 206 acres of land in Pike County...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c1c3166facab70ba
+symbol: META
+published_utc: 2026-01-14T16:05:00Z
+url: https://www.nasdaq.com/press-release/meta-announce-fourth-quarter-and-full-year-2025-results-2026-01-14
+headline: Meta to Announce Fourth Quarter and Full Year 2025 Results
+<<<TEXT>>>
+Disclosure Information Meta uses the investor.atmeta.com and meta.com/news websites as well as Mark Zuckerberg's Facebook Page, Instagram account and Threads profile as means of disclosing material non-public information and for complying with its disclosure obligations under Regulation FD. About Meta Meta is building the future of human...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 546652675cf2761c
+symbol: META
+published_utc: 2026-01-23T13:35:00Z
+url: https://www.nasdaq.com/press-release/ai-energy-supercycle-striving-secure-24-7-power-infrastructure-2026-01-23
+headline: The AI Energy Supercycle: Striving to Secure 24/7 Power Infrastructure
+<<<TEXT>>>
+With the U.S. government committing billions to revive domestic uranium enrichment to fuel both current reactors and next-generation modular systems, the industry is seeing an unusual wave of activity as institutional capital is beginning to flow toward the companies anchoring this new energy foundation, including Spring Valley Acquisition Corp. II,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2667d87f0205eecf
+symbol: META
+published_utc: 2026-01-28T16:01:00Z
+url: https://www.nasdaq.com/press-release/meta-reports-fourth-quarter-and-full-year-2025-results-2026-01-28
+headline: Meta Reports Fourth Quarter and Full Year 2025 Results
+<<<TEXT>>>
+--Meta Platforms, Inc. today reported financial results for the quarter and full year ended December 31, 2025.  "We had strong business performance in 2025," said Mark Zuckerberg, Meta founder and CEO. Revenue on a constant currency basis would have increased 23% and 22% year-over-year for the fourth quarter and full year 2025, respectively. Costs and expenses–...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 890761258c648403
+symbol: META
+published_utc: 2026-02-12T16:05:00Z
+url: https://www.nasdaq.com/press-release/meta-announces-quarterly-cash-dividend-2026-02-12
+headline: Meta Announces Quarterly Cash Dividend
+<<<TEXT>>>
+--The Meta Platforms, Inc. board of directors today declared a quarterly cash dividend of $0.525 per share of the company's outstanding Class A common stock and Class B common stock, payable on March 26, 2026 to stockholders of record as of the close of business on March 16, 2026. Investors: Kenneth Dorell investor@meta.com/ investor.atmeta.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 199876d2e4718e05
+symbol: META
+published_utc: 2026-03-31T13:53:00Z
+url: https://www.nasdaq.com/press-release/corning-and-meta-celebrate-start-construction-cable-manufacturing-expansion-north
+headline: Corning and Meta Celebrate Start of Construction on Cable Manufacturing Expansion in North Carolina to Support AI Buildout
+<<<TEXT>>>
+Leaders from Corning, Meta, and state and local government break ground for Corning's new cable manufacturing facility in Hickory, NC. The groundbreaking marks a milestone in the multiyear, up to $6 billion agreement between Corning and Meta to accelerate the deployment of the most advanced data centers in the U.S. and to support Meta’ s apps, technologies, and AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f6853d92070ca338
+symbol: META
+published_utc: 2026-04-13T16:05:00Z
+url: https://www.nasdaq.com/press-release/meta-announce-first-quarter-2026-results-2026-04-13
+headline: Meta to Announce First Quarter 2026 Results
+<<<TEXT>>>
+Disclosure Information Meta uses the investor.atmeta.com and meta.com/news websites as well as Mark Zuckerberg's Facebook profile, Instagram account and Threads profile as means of disclosing material non-public information and for complying with its disclosure obligations under Regulation FD. About Meta Meta is building the future of human...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4f4894f98094c303
+symbol: META
+published_utc: 2026-04-29T16:01:00Z
+url: https://www.nasdaq.com/press-release/meta-reports-first-quarter-2026-results-2026-04-29
+headline: Meta Reports First Quarter 2026 Results
+<<<TEXT>>>
+--Meta Platforms, Inc. today reported financial results for the quarter ended March 31, 2026.  "We had a milestone quarter with strong momentum across our apps and the release of our first model from Meta Superintelligence Labs," said Mark Zuckerberg, Meta founder and CEO. The slight decline in DAP on a quarter-over-quarter basis was driven by internet disruptions...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c33d6c860bcb432b
+symbol: META
+published_utc: 2026-05-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/jlens-urges-meta-shareholders-vote-proposal-8-companys-annual-meeting-may-27-2026
+headline: JLens Urges Meta Shareholders to Vote FOR Proposal 8 at the Company’s Annual Meeting on May 27, 2026
+<<<TEXT>>>
+JLens, a Registered Investment Advisor that empowers investors to align their capital with Jewish values, is calling upon shareholders of Meta Platforms, Inc. to vote FOR Shareholder Proposal 8, which JLens has submitted for shareholder consideration at the Company’ s Annual Meeting, to be held on May 27, 2026. RESOLVED: Shareholders request that Meta...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dc661c02f70573de
+symbol: META
+published_utc: 2026-05-26T11:23:00Z
+url: https://www.nasdaq.com/press-release/jlens-urges-meta-shareholders-take-action-against-online-hate-and-vote-proposal-8
+headline: JLens Urges Meta Shareholders to Take Action Against Online Hate and Vote FOR Proposal 8 at the Annual Meeting on May 27, 2026
+<<<TEXT>>>
+JLens, a Registered Investment Advisor that empowers investors to align their capital with Jewish values, today reiterated its call for shareholders of Meta Platforms, Inc. to vote FOR Shareholder Proposal 8, which seeks greater accountability and transparency for Meta’ s content moderation practices. The proposal is on the ballot for Meta’ s annual...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a3a62da67d49a435
+symbol: META
+published_utc: 2026-05-28T08:00:00Z
+url: https://www.nasdaq.com/press-release/longpoint-adds-its-family-double-leveraged-single-stock-etfs-2026-05-28
+headline: LongPoint Adds to Its Family of Double Leveraged Single Stock ETFs
+<<<TEXT>>>
+LongPoint Asset Management Inc. is proud to announce the launch of three new Savvy Double Leveraged Single Stock ETFs on the Toronto Stock Exchange.  "LongPoint is proud to add to Canada's only double-leveraged single stock ETF family, providing 2 X and -2 X exposure to leading US and Canadian companies," said Steve Hawkins, CEO of LongPoint. "We recognize the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9992ada80daba8d2
+symbol: META
+published_utc: 2026-05-28T17:56:00Z
+url: https://www.nasdaq.com/press-release/meta-announces-quarterly-cash-dividend-2026-05-28
+headline: Meta Announces Quarterly Cash Dividend
+<<<TEXT>>>
+--The Meta Platforms, Inc. board of directors today declared a quarterly cash dividend of $0.525 per share of the company's outstanding Class A common stock and Class B common stock, payable on June 25, 2026 to stockholders of record as of the close of business on June 15, 2026. Meta is building the future of human connection, powered by artificial intelligence and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 15ac91b747ec6d0e
+symbol: META
+published_utc: 2026-06-02T10:31:00Z
+url: https://www.nasdaq.com/press-release/longpoint-asset-management-inc-opens-market-2026-06-02
+headline: LongPoint Asset Management Inc. Opens the Market
+<<<TEXT>>>
+Steve Hawkins, Chief Executive Officer, LongPoint Asset Management Inc., joined Graham MacKenzie, Managing Director, Exchange Traded Products, Toronto Stock Exchange, to open the market and celebrate the launch of their three new ETFs:. RBNU, METU and PLTU provide two times leveraged long exposure to Robinhood Markets, Inc., Meta Platforms, Inc., and Palantir...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e1c7951b313b17b5
+symbol: META
+published_utc: 2026-06-02T14:07:00Z
+url: https://www.nasdaq.com/press-release/max-power-mining-cse-maxx-otc-maxxf-advances-natural-hydrogen-strategy-ai-energy
+headline: MAX Power Mining (CSE: MAXX) (OTC: MAXXF) Advances Natural Hydrogen Strategy as AI Energy Demand Accelerates
+<<<TEXT>>>
+As data center electricity consumption is projected to rise sharply through 2030, MAX Power is positioning natural hydrogen as a potential scalable, domestically sourced energy solution for next-generation AI and distributed computing infrastructure. Beyond Lawson, MAX Power is pursuing a basin-scale exploration strategy across Saskatchewan's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9ec7d30b5386f835
+symbol: META
+published_utc: 2026-07-14T16:05:00Z
+url: https://www.nasdaq.com/press-release/meta-announce-second-quarter-2026-results-2026-07-14
+headline: Meta to Announce Second Quarter 2026 Results
+<<<TEXT>>>
+--Meta Platforms, Inc. announced today that the company's second quarter 2026 financial results will be released after market close on Wednesday, July 29th, 2026. Meta will host a conference call to discuss its results at 1:30 p.m. PT/ 4:30 p.m. ET the same day. Disclosure Information Meta uses the investor.atmeta.com and meta.com/news websites as well as Mark...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6e9388e5ce796d5b
+symbol: META
+published_utc: 2026-07-29T16:01:00Z
+url: https://www.nasdaq.com/press-release/meta-reports-second-quarter-2026-results-2026-07-29
+headline: Meta Reports Second Quarter 2026 Results
+<<<TEXT>>>
+--Meta Platforms, Inc. today reported financial results for the quarter ended June 30, 2026.  "AI is accelerating our core business today, powering our next generation of products, and opening the door to entirely new enterprise opportunities," said Mark Zuckerberg, Meta founder and CEO. This includes $2.40 billion of charges related to legal proceedings and $1.18...
+<<<END>>>
