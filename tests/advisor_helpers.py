@@ -43,13 +43,13 @@ def fr(family="trend", direction="bullish", edge=0.004, passed=True, **kw):
                         horizon_bars=kw.pop("horizon_bars", 63), prior_20d=kw.pop("prior_20d", 0.006), **kw)
 
 
-def scored(symbol="AAA", families=(), metrics=None, votes=(), events=(), signals=(), held=False, sector=None, quality=None, gates=None, regime="trend", rank=True, **kw):
+def scored(symbol="AAA", families=(), metrics=None, votes=(), events=(), signals=(), sector=None, quality=None, gates=None, regime="trend", rank=True, **kw):
     """A Scored symbol over healthy metrics and passed gates; `rank=True` fills its composite, excess, stance and score."""
     from prometheus.agents.advisor.gates import run_gates
     from prometheus.agents.advisor.ranking import Scored, rank_symbol
     from prometheus.agents.advisor.record import Quality
     metrics = healthy() if metrics is None else metrics
-    s = Scored(symbol=symbol, company=None, origin=kw.pop("origin", "subject"), held=held, metrics=metrics, gates=gates or run_gates(metrics, list(events), TODAY, CONFIG.gates), quality=quality or Quality(multiplier=1.0),
+    s = Scored(symbol=symbol, company=None, origin=kw.pop("origin", "subject"), metrics=metrics, gates=gates or run_gates(metrics, list(events), TODAY, CONFIG.gates), quality=quality or Quality(multiplier=1.0),
                families=list(families), events=list(events), signals=list(signals), votes=list(votes), sector_etf=sector, **kw)
     return rank_symbol(s) if rank else s
 

@@ -45,16 +45,28 @@ in groups of at most 30 symbols. An order that carries `bars` is `schema_version
 whose pending decision the user has answered since, a `decided` one with a resting order): a trade that is `filled` or `rejected` is final, the numbering of the tickets goes on, and `review_order` and `decide_trades` hand
 a `traded` order back unchanged, as they do a `reviewed` or a `decided` one. The Trader never edits `recommendations`, `reviews` or `trade_decisions`: they are the same bytes afterwards.
 
+THE POT AND DOLLARS (design choices entry 111; `design/dollar_orders_spec.md`): a decision the Account Manager sized from money carries `size.pot` (`decision_pot`), the money of the run, and may carry `dollars` (`decision_dollars`), an order in dollars whose `shares`
+are only the estimate. `verify_trade` checks the dollars (a number above zero to the cent, not above the pot, none for a direct order whose shares the user typed or for a sale), `verify_fill` checks the fill's AMOUNT against them (and the old check, more shares than the
+decision gave, for an order in shares), and `verify_trades` fails a work order whose purchases carry two pots or cost more than their pot (`pot_reasons`).
+
+DECIMAL MONEY (design choices entry 112; design/decimal_money_spec.md): the plain dicts of `trade_decisions`, `trades`, `trader_runs` and `direct_orders` hold the ACCOUNT's money, prices and share counts: a `Decimal` after the code that wrote them,
+a float or an int after `json` read them (a capture, a saved order). Every reader here goes through a door (`money.money`, `money.price`, `shares.quantity`) and compares as `Decimal`; the four fields are written as JSON NUMBERS by the one encoder
+(`money.Jsonable`: a whole value as an integer, any other by its own digits), never as strings. The Advisor's and the Critic's numbers on the same order (`recommendations`, `reviews`, `candidates`) are measurements and stay floats; a whole work
+order is never read with `parse_float=Decimal`.
+
 The chunks travel with the order (`data.sources` holds every chunk the model was shown, with its text) so the Critic and the audit
 log can check what a score was based on.
 """
-import math
 import re
 import uuid
 from datetime import date, datetime, timezone
-from typing import Literal
+from decimal import ROUND_DOWN, Decimal
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, Field
+
+from prometheus.common import shares as sh
+from prometheus.common.money import CENT, Jsonable, cents, digits, money, price
 
 ACTION_TYPES = ("trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars", "lookup_symbol")
 SEARCH_ACTIONS = ("search_news", "search_filing")   # what the Data Clerk's request_data handles today: a search of stored text (the other actions are refused by verify_request)
@@ -155,7 +167,7 @@ class WorkOrder(BaseModel):
     status: Literal["new", "data_ready", "data_failed", "recommended", "reviewed", "decided", "traded"] = "new"
     resolved: dict | None = None                # press releases and filings: what the lookup decided: typed_symbol, typed_company, symbol, company, how ("ticker" or "name")
     data: DataResult | None = None
-    recommendations: list[dict] = Field(default_factory=list)
+    recommendations: Annotated[list[dict], Jsonable] = Field(default_factory=list)      # the Advisor's records (floats: measurements); the Critic's block of each carries a copy of the Account Manager's decision (`feedback.attach_decisions`: shares, est_cost), which may hold Decimals: written as numbers
     advisor_runs: list[dict] = Field(default_factory=list)  # one record per Advisor call: model, whether it had evidence, tokens, what it dropped
     errors: list[str] = Field(default_factory=list)
     # Advisor v1 (entry 51). All optional: an order without them is a version 1 order and reads exactly as before; one that carries any of them is `schema_version` 2.
@@ -168,14 +180,14 @@ class WorkOrder(BaseModel):
     verify: dict | None = None                  # a `verify_data` order: what to read again (`verify_verification_request` says what is allowed)
     reviews: list[dict] = Field(default_factory=list)          # the Critic: one review per recommendation, in the same order, joined by `record_id` (prometheus/agents/critic/record.py)
     critic_runs: list[dict] = Field(default_factory=list)      # one record per Critic step: the model, the tokens, the Data Clerk orders it made, what it dropped, errors
-    trade_decisions: list[dict] = Field(default_factory=list)  # the Account Manager: one decision per review (will_trade, funds_avail, ...): the Trader's permission
+    trade_decisions: Annotated[list[dict], Jsonable] = Field(default_factory=list)  # the Account Manager: one decision per review (will_trade, funds_avail, ...): the Trader's permission
     # Trader v1 (design/trader_v1_final_spec.md). An order that carries trades is `schema_version` 4; a `fetch_bars` order carries `bars`.
     bars: dict | None = None                    # a `fetch_bars` order: the range to read, {"start": "YYYY-MM-DD", "end": "YYYY-MM-DD"} (`verify_bar_request` says what is allowed)
-    trades: list[dict] = Field(default_factory=list)       # the Trader: one trade per ticket (prometheus/agents/trader/record.py `Trade`), each joined to a decision by `record_id`; `TRADE_STATUSES`
-    trader_runs: list[dict] = Field(default_factory=list)  # one record per Trader run: the model, the mode, the tool calls, the summary, the account before and after, what was dropped, errors
+    trades: Annotated[list[dict], Jsonable] = Field(default_factory=list)       # the Trader: one trade per ticket (prometheus/agents/trader/record.py `Trade`), each joined to a decision by `record_id`; `TRADE_STATUSES`
+    trader_runs: Annotated[list[dict], Jsonable] = Field(default_factory=list)  # one record per Trader run: the model, the mode, the tool calls, the summary, the account before and after, what was dropped, errors
     # A DIRECT ORDER (design choices entry 87): the user named the trade ("Buy 50 shares of MSFT"), so there is no recommendation and no review. The Account Manager writes one record per trade here (`DIRECT_KEYS`) and
     # its decision for it carries `origin: "direct"`; `verify_trade` accepts such a decision only while the order holds the user's matching record.
-    direct_orders: list[dict] = Field(default_factory=list)
+    direct_orders: Annotated[list[dict], Jsonable] = Field(default_factory=list)
 
 
 def new_work_order(query: str, *, requester: str = "user", action_type: str = "search_news", subject=None, source: str = "news",
@@ -418,8 +430,8 @@ NEUTRAL = "neutral"                                 # the `origin` of a decision
 DIRECT = "direct"                                   # the `origin` of a decision made for a trade the USER named (entry 87): no recommendation, no Critic review; the order's `direct_orders` is its permission
 DIRECT_SIDES = ("buy", "sell")
 DIRECT_KEYS = ("record_id", "side", "symbol", "company", "shares", "request", "requested_utc")   # what a record of `order.direct_orders` holds: `company` is the company's name as the data source gives it (entry 88)
-DIRECT_OPTIONAL = ("typed_company", "how_many")              # entry 88: what the user typed when they named a COMPANY and not a ticker (the `symbol` is then the Data Clerk's); None when they typed the ticker
-MAX_DIRECT_SHARES = 1_000_000                       # a typing mistake, not a limit of the account: the cash and the holdings are what limit a trade
+DIRECT_OPTIONAL = ("typed_company", "how_many", "found_by")  # entry 88: what the user typed when they named a COMPANY and not a ticker (the `symbol` is then the Data Clerk's); None when they typed the ticker. `found_by` (entry 101): how the Data Clerk found it, "ticker", "name" or "brand" (the symbol is the LISTED OWNER's of what was typed: "Google" is Alphabet Inc.)
+MAX_DIRECT_SHARES = 1_000_000                       # a typing mistake, not a limit of the account: the cash and the holdings are what limit a trade. The number of shares may have a decimal part (entry 110)
 
 
 def verify_verification_request(order: WorkOrder) -> list[str]:
@@ -497,10 +509,11 @@ EXPIRY_PREFIX = "the approval ran out"      # how `verify_trade` starts the sent
 
 
 def is_neutral_candidate(candidate) -> bool:
-    """Whether this record of `order.candidates` is a company the user NAMED that the Advisor scored NEUTRAL (no strategy passed, or no edge) and that no gate stopped and that is not already held (entry 91): the only
-    kind a neutral decision may be for. A gate that failed (stale data, a red flag, an earnings report days away) is a refusal that has nothing to do with the stance, so it is never turned into an approval."""
-    return (isinstance(candidate, dict) and candidate.get("stance") == "neutral" and candidate.get("gate") is None and candidate.get("origin") == "subject" and not candidate.get("held")
-            and isinstance(candidate.get("symbol"), str))
+    """Whether this record of `order.candidates` is a company the Advisor scored NEUTRAL (no strategy passed, or no edge) and that no gate stopped (entries 91 and 107): the only kind a neutral decision may be for. WHOEVER
+    NAMED IT: the user's own list, a theme's companies found by the Data Clerk, a company the sources name: a neutral stance and no failed gate is all it needs (entry 107; it used to need `origin == "subject"`). A gate that
+    failed (stale data, a red flag, an earnings report days away) is a refusal that has nothing to do with the stance, so it is never turned into an approval, and a bearish stance trades nothing. Whether the user already holds
+    some of it does not matter and is not asked here (entry 105: the Advisor knows no holding; the Account Manager sizes the purchase and knows what is held)."""
+    return isinstance(candidate, dict) and candidate.get("stance") == "neutral" and candidate.get("gate") is None and isinstance(candidate.get("symbol"), str)
 
 
 def neutral_candidate_of(order: WorkOrder, symbol: str) -> dict | None:
@@ -516,7 +529,7 @@ def direct_order_of(order: WorkOrder, record_id: str) -> dict | None:
 def verify_direct_orders(entries: list) -> list[str]:
     """Why these records of `order.direct_orders` are not the user's orders as the Account Manager writes them; empty means they are: each is a record with the keys of `DIRECT_KEYS` (and optionally `DIRECT_OPTIONAL`), a
     `record_id` that is text of at most 80 characters and appears once, a side of `DIRECT_SIDES`, a checked ticker AND the company's name (the two the Data Clerk found and the Account Manager appended to the work order when
-    it made it: entry 88), a whole number of shares from 1 to `MAX_DIRECT_SHARES`, and the user's own words."""
+    it made it: entry 88), a number of shares above zero and at most `MAX_DIRECT_SHARES` (a whole number, or one with up to six decimals the user typed: entry 110), and the user's own words."""
     from prometheus.rag.loaders import check_symbol  # imported here: the order is plain data
 
     if not isinstance(entries, list) or not entries:
@@ -542,8 +555,10 @@ def verify_direct_orders(entries: list) -> list[str]:
         if entry.get("typed_company") is not None and (not isinstance(entry["typed_company"], str) or not entry["typed_company"].strip()):
             reasons.append(f"{label}: typed_company is text, or None when the user typed the ticker")
         shares = entry["shares"]
-        if shares is not None and (not isinstance(shares, int) or isinstance(shares, bool) or not 1 <= shares <= MAX_DIRECT_SHARES):
-            reasons.append(f"{label}: the shares must be a whole number from 1 to {MAX_DIRECT_SHARES:,}, or None while the user has given no number and the Account Manager has not sized the order (design choices entry 98)")
+        if shares is not None and not (0 < (_quantity(shares) or 0) <= MAX_DIRECT_SHARES):
+            reasons.append(f"{label}: the shares must be a number above zero and at most {MAX_DIRECT_SHARES:,} (a whole number, or one with up to {sh.PLACES} decimals), or None while the user has given no number and the Account Manager has not sized the order (design choices entry 98)")
+        if entry.get("found_by") not in (None, "ticker", "name", "brand"):
+            reasons.append(f"{label}: found_by is ticker, name or brand (how the Data Clerk found the symbol), or None")
         if entry.get("how_many") not in (None, "typed", "asked", "cash", "budget"):
             reasons.append(f"{label}: how_many is typed, asked, cash or budget (where the number of shares came from), or None")
         if not isinstance(entry["request"], str) or not entry["request"].strip():
@@ -554,13 +569,13 @@ def verify_direct_orders(entries: list) -> list[str]:
 def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
     """Why the Trader may NOT trade this recommendation; an empty list means it may. This is the Trader's precondition (rule T1 of design/trader_v1_final_spec.md): `tickets.permission` asks it when a ticket is built and
     `PaperBroker.place` asks it again for every trade it places (the model's `place_order`, the sweep, and a resting order judged again), so that no code path can trade without a verdict and a permission. A trade needs ALL of: a review of the recommendation that approved it; a decision that says `yes_auto` or `yes_user`; an approval that has not run out (`valid_until_utc`:
-    the price check is old after it); at least one share. The number of shares is the Account Manager's (the decision's): the Critic approves a recommendation and no size, so there is no review number to compare it with.
+    the price check is old after it); a number of shares above zero (a whole number, or one with a fraction of at most six decimals: design choices entry 110). The number of shares is the Account Manager's (the decision's): the Critic approves a recommendation and no size, so there is no review number to compare it with.
 
     A DIRECT ORDER (design choices entry 87) is the one other way to a trade: the user named it, so there is no recommendation and no review, and the user's own order is the approval. A decision with `origin` "direct"
     needs, instead of the review, the user's record on `order.direct_orders` (the same `record_id`, symbol and side: a buy or a sell) and not more shares than the user typed; its approval runs out at the decision's own
     `valid_until_utc`. A decision that says it is direct and finds no such record on the order is refused, so the word alone permits nothing.
 
-    A NEUTRAL RECOMMENDATION (design choices entry 91) is the third way: while the Account Manager's setting ALLOW_NEUTRAL_RECOMMENDATIONS is on, a company the user named that the Advisor scored neutral counts as approved.
+    A NEUTRAL RECOMMENDATION (design choices entries 91 and 107) is the third way: while the Account Manager's setting ALLOW_NEUTRAL_RECOMMENDATIONS is on, a company the Advisor scored neutral (whoever named it) counts as approved.
     A decision with `origin` "neutral" needs, instead of the review, the Advisor's own neutral record of that symbol on `order.candidates` (`is_neutral_candidate`), is only a purchase, has no review beside it, and runs out at
     its own `valid_until_utc`. The word alone permits nothing here either, and a Critic denial is never turned into this: a denied recommendation has a review, and a neutral candidate never had one."""
     if not isinstance(now, datetime) or now.tzinfo is None:
@@ -573,7 +588,7 @@ def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
         # a company the Advisor scored neutral, while the Account Manager's setting treats that as approved (entry 91): the Advisor's own record on the order is the permission, and no review stands in for it
         if neutral_candidate_of(order, decision.get("symbol")) is None:
             reasons.append(f"the decision for {record_id} says it is a neutral recommendation, but the work order holds no neutral score of the Advisor's for {decision.get('symbol')!r}")
-        if decision.get("action") not in ("open", "add"):
+        if decision.get("action") != "open":
             reasons.append("a neutral recommendation is only a purchase")
         if review is not None:
             reasons.append("a neutral recommendation has no Critic review: the work order holds one for it")
@@ -585,15 +600,17 @@ def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
                 reasons.append(f"the decision is not the user's order: the user typed {direct['side']} {direct['symbol']}")
             if direct["shares"] is None:
                 reasons.append("the user's order holds no number of shares: the Account Manager has not sized it (the user wrote none)")
-            elif isinstance(decision.get("shares"), int) and decision["shares"] > direct["shares"]:
-                reasons.append(f"the decision gives {decision['shares']} shares but the user typed {direct['shares']}" if direct.get("how_many") in (None, "typed")
-                               else f"the decision gives {decision['shares']} shares but the user's order holds {direct['shares']} ({direct['how_many']})")
+            elif (given := _quantity(decision.get("shares"))) is not None and (typed := _quantity(direct["shares"])) is not None and given > typed:       # for every quantity, a fraction too (entry 110: this guard once ran for an int only)
+                reasons.append(f"the decision gives {sh.text(given)} shares but the user typed {sh.text(typed)}" if direct.get("how_many") in (None, "typed")
+                               else f"the decision gives {sh.text(given)} shares but the user's order holds {sh.text(typed)} ({direct['how_many']})")
         if review is not None:
             reasons.append("a direct order has no Critic review: the work order holds one for it")
     elif review is None:
         reasons.append(f"there is no Critic review of recommendation {record_id}")
     elif not review.get("approved"):
         reasons.append("the Critic did not approve it")
+    if decision is not None and decision.get("origin") not in (DIRECT, NEUTRAL) and decision.get("action") != "open":
+        reasons.append(f"the decision's action is {decision.get('action')!r}: a recommendation is a purchase to open, and a sale never comes from a recommendation (it is the user's own direct order or RaiseFunds; entry 105)")
     if decision is None:
         reasons.append(f"there is no trade decision for recommendation {record_id}")
     elif decision.get("will_trade") not in TRADING:
@@ -606,9 +623,19 @@ def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
         elif now > until:
             reasons.append(f"{EXPIRY_PREFIX} at {approval['valid_until_utc']}: the price must be checked again")
     if decision is not None and decision.get("will_trade") in TRADING:
-        shares = decision.get("shares")
-        if not isinstance(shares, int) or isinstance(shares, bool) or shares < 1:
-            reasons.append("the decision has no whole number of shares to trade")
+        if not (_quantity(decision.get("shares")) or 0) > 0:
+            reasons.append("the decision needs a number of shares above zero to trade")
+        try:
+            dollars = decision_dollars(decision)
+        except ValueError as error:
+            reasons.append(str(error))
+        else:
+            if dollars is not None and (pot := decision_pot(decision)) is not None and dollars > pot:      # an order in dollars never passes the money of the request (M1 and M2)
+                reasons.append(f"the decision's dollars, ${dollars:,.2f}, are more than the money of the request, ${pot:,.2f}")
+            if dollars is not None and direct is not None and direct["shares"] is not None and direct.get("how_many") in (None, "typed"):
+                reasons.append("a direct order whose shares the user typed is an order in shares: it carries no dollars")
+            if dollars is not None and decision.get("action") == "reduce":
+                reasons.append("a sale is an order in shares: it carries no dollars")
     return reasons
 
 
@@ -630,7 +657,72 @@ def trades_of(order: WorkOrder, record_id: str) -> list[dict]:
 
 
 def _positive(value) -> bool:
-    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value) and value > 0
+    """Whether `value` is a number above zero (a Decimal, or the int or float a JSON file gave: read by the digits it is written with); a bool and a string are not."""
+    try:
+        return digits(value) > 0
+    except ValueError:
+        return False
+
+
+def _is_number(value) -> bool:
+    """Whether `value` is a number (a Decimal, an int or a float; a bool and a string are not)."""
+    try:
+        digits(value)
+        return True
+    except ValueError:
+        return False
+
+
+def _quantity(value) -> Decimal | None:
+    """`value` as a share quantity (`shares.quantity`: a Decimal, a fraction has at most six decimals), or None when it is not one: a bool, a string, a negative number, seven decimals. The guards on the
+    number of shares use it, so that each runs for a fraction as it does for a whole number (entry 110)."""
+    try:
+        return sh.quantity(value)
+    except ValueError:
+        return None
+
+
+def decision_dollars(decision) -> Decimal | None:
+    """The DOLLARS of a decision that is an order in dollars (design choices entry 111, M2): the most the purchase may cost, a number above zero to the cent; None for an order in shares (a decision with no `dollars`).
+    Raises ValueError when the decision carries a `dollars` that is not a number above zero to the cent: a bool, a string, nothing, a fraction of a cent."""
+    if not isinstance(decision, dict) or decision.get("dollars") is None:
+        return None
+    value = decision["dollars"]
+    try:
+        dollars = money(value)      # a Decimal, or the int or float a JSON file gave, by its digits; a bool, a string and a fraction of a cent are refused
+    except ValueError:
+        raise ValueError(f"the decision's dollars must be a number above zero to the cent, not {value!r}") from None
+    if dollars <= 0:
+        raise ValueError(f"the decision's dollars must be a number above zero to the cent, not {value!r}")
+    return dollars
+
+
+def decision_pot(decision) -> Decimal | None:
+    """The POT a decision was sized under (`decision["size"]["pot"]`: the budget the user gave, else the cash, never more than the cash, in dollars to the cent; design choices entry 111, M1), or None: a decision that was not sized
+    from money (a direct order whose shares the user typed, a sale, a RaiseFunds purchase) has none and its limit is the cash."""
+    pot = ((decision or {}).get("size") or {}).get("pot") if isinstance(decision, dict) else None
+    try:
+        value = digits(pot)
+    except ValueError:
+        return None
+    return value.quantize(CENT, rounding=ROUND_DOWN) if value >= 0 else None      # the pot is a CEILING: a number with a fraction of a cent (a defect: the sizing writes cents) counts rounded down
+
+
+def pot_reasons(order: WorkOrder) -> list[str]:
+    """Why the fills of this work order break its POT (M1: a run never spends more than its money); empty means they do not, or that no decision carries a pot. The decisions that permit a purchase and carry a pot must all carry the SAME
+    one (two different pots are a defect), and what the filled purchases of those decisions cost in all (the fills' amounts) is not above it. Checked by a program on the finished work order, whatever price each trade filled at."""
+    pots = {}
+    for decision in order.trade_decisions:
+        if isinstance(decision, dict) and decision.get("will_trade") in TRADING and decision.get("action") != "reduce" and decision_pot(decision) is not None:
+            pots[decision.get("record_id")] = decision_pot(decision)
+    if not pots:
+        return []
+    if len(set(pots.values())) > 1:
+        return [f"the purchases of this work order carry different pots: {', '.join(f'${p:,.2f}' for p in sorted(set(pots.values())))}: a run has one"]
+    pot = next(iter(pots.values()))
+    spent = sum((digits((t.get("fill") or {}).get("amount") or 0) for t in order.trades
+                 if isinstance(t, dict) and t.get("status") == "filled" and t.get("side") == "buy" and t.get("kind") != "funding" and t.get("record_id") in pots and isinstance(t.get("fill"), dict)), Decimal(0))
+    return [f"the fills of the purchases cost ${spent:,.2f}, more than the money of the request, ${pot:,.2f} (the pot): a run never spends more than its money"] if spent > pot else []
 
 
 def verify_trades(order: WorkOrder) -> list[str]:
@@ -638,21 +730,22 @@ def verify_trades(order: WorkOrder) -> list[str]:
     (design choices entry 81) each fill is checked one at a time before it is reported (`verify_fill`) and booked as it happens, so this is a REPORT: what was booked stays booked, it is the account book's.
     A reason for each of: a trade that is not a record at all, one whose `trade_id` is missing or appears twice, or whose status is not one of `TRADE_STATUSES`; a `rejected` trade with no code; a `filled`
     trade with no fill, or a fill whose price or share count is not positive; a funding trade that is not a sale, or whose `funds_for` names no purchase on the order; a `filled` funding sale whose purchase is not `filled` (holdings sold and nothing bought: the Trader's order of work prevents it, and this is the check behind that); and, for a `filled` trade of a
-    recommendation: a `record_id` with no decision that says `yes_auto` or `yes_user`, a symbol or a side that is not the decision's (a sale only for a `reduce`), more shares than the decision gave, and a
-    second filled trade for the same recommendation. A trade that is only `active` or `rejected` cannot move the account, so it is held to the shape above and not to the decision."""
+    recommendation: a `record_id` with no decision that says `yes_auto` or `yes_user`, a symbol or a side that is not the decision's (a sale only for a `reduce`), a SALE that is not the user's own direct order (a
+    sale tied to a recommendation: it never comes from one, entry 105), more shares than the decision gave, and a second filled trade for the same recommendation. A trade that is only `active` or `rejected` cannot move the account, so it is held to the shape above and not to the decision.
+    AND THE POT (design choices entry 111, M1; `pot_reasons`): the decisions of the purchases that carry a pot all carry the same one, and the fills of those purchases cost no more than it in all."""
     reasons: list[str] = []
     seen: set[str] = set()
     by_id = {t.get("trade_id"): t for t in order.trades if isinstance(t, dict)}
     filled_for: dict[str, str] = {}   # record_id -> the trade_id of the first filled recommendation trade
     for index, trade in enumerate(order.trades):
         reasons += _trade_reasons(order, trade, index, by_id, seen, filled_for, whole_run=True)
-    return reasons
+    return reasons + pot_reasons(order)      # and the pot (M1)
 
 
 def verify_fill(order: WorkOrder, trade: dict, others: list[dict]) -> list[str]:
     """The single-trade part of the output guard (design choices entry 81, amendment 2 of design/trader_handshake_spec.md): why ONE trade, as the Trader is about to report it to the Account Manager as filled, does not agree
     with the decisions; an empty list means it may be reported and booked. `others` are the other trades of the order (this one is left out if it is among them). It checks what `verify_trades` checks of one trade: its shape
-    (a trade_id that no other trade has, a status of the list, a fill with a positive price and a whole number of shares), the decision (it says `yes_auto` or `yes_user`, the symbol and the side are its, the shares are
+    (a trade_id that no other trade has, a status of the list, a fill with a positive price and a number of shares above zero), the decision (it says `yes_auto` or `yes_user`, the symbol and the side are its, the shares are
     not above its shares), that no other trade of the order is already filled for the same recommendation, and a funding sale's `funds_for` (a purchase on the order, and it is a sale). What it does NOT check is
     the one thing that cannot be known yet: that the purchase a funding sale pays for is filled (it is placed after its sales): the whole-run `verify_trades` reports that at the end."""
     me = trade.get("trade_id") if isinstance(trade, dict) else None
@@ -688,8 +781,8 @@ def _trade_reasons(order: WorkOrder, trade, index: int, by_id: dict, seen: set, 
     if status == "filled":
         if not isinstance(fill, dict):
             reasons.append(f"{label} is filled but has no fill")
-        elif not _positive(fill.get("price")) or not isinstance(fill.get("shares"), int) or isinstance(fill.get("shares"), bool) or fill["shares"] < 1:
-            reasons.append(f"{label}: the fill needs a price and a whole number of shares above zero")
+        elif not _positive(fill.get("price")) or not (_quantity(fill.get("shares")) or 0) > 0:
+            reasons.append(f"{label}: the fill needs a price and a number of shares above zero")
     if trade.get("kind") == "funding":
         parent = by_id.get(trade.get("funds_for"))
         if trade.get("side") != "sell":
@@ -709,9 +802,26 @@ def _trade_reasons(order: WorkOrder, trade, index: int, by_id: dict, seen: set, 
                 reasons.append(f"{label} is for {trade.get('symbol')!r} but the decision is for {decision.get('symbol')!r}")
             if trade.get("side") != ("sell" if decision.get("action") == "reduce" else "buy"):
                 reasons.append(f"{label} is a {trade.get('side')} but the decision's action is {decision.get('action')!r}")
-            shares = fill.get("shares") if isinstance(fill, dict) else None
-            if isinstance(shares, int) and not isinstance(shares, bool) and isinstance(decision.get("shares"), int) and shares > decision["shares"]:
-                reasons.append(f"{label} filled {shares} shares but the decision gave {decision['shares']}")
+            if trade.get("side") == "sell" and decision.get("origin") != DIRECT:
+                reasons.append(f"{label} is a sale tied to recommendation {record_id}: a sale comes only from the user's own direct order or from RaiseFunds (a funding sale), never from a recommendation")
+            shares = _quantity(fill.get("shares")) if isinstance(fill, dict) else None
+            try:
+                dollars = decision_dollars(decision)
+            except ValueError:
+                dollars = None       # `verify_trade` says what is wrong with the decision's dollars
+            if dollars is not None and trade.get("side") == "buy":
+                # an ORDER IN DOLLARS (entry 111, M2): its shares are an estimate, so what is checked is what the fill COST, worked out here from its shares and its price (and what the fill says it cost): never above the dollars
+                from prometheus.common.portfolio import trade_amount
+
+                cost = trade_amount(shares, price(fill["price"])) if shares is not None and isinstance(fill, dict) and _positive(fill.get("price")) else None
+                said = digits(fill["amount"]) if isinstance(fill, dict) and _is_number(fill.get("amount")) else None
+                for what, amount in (("cost", cost), ("says it cost", said)):
+                    if amount is not None and cents(amount) > dollars:
+                        reasons.append(f"{label} {what} ${amount:,.2f} but the decision's dollars are ${dollars:,.2f}")
+            else:
+                gave = _quantity(decision.get("shares"))
+                if shares is not None and gave is not None and shares > gave:                      # for every quantity, a fraction too (entry 110: this guard once ran when both were ints)
+                    reasons.append(f"{label} filled {sh.text(shares)} shares but the decision gave {sh.text(gave)}")
         if isinstance(record_id, str):
             if record_id in filled_for:
                 reasons.append(f"{label} is a second filled trade for recommendation {record_id} (the first is {filled_for[record_id]})")

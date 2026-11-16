@@ -2,6 +2,7 @@
 for the real one, a fake Data Clerk answers the quotes and the bars, and the ledger is in memory: nothing here calls a model, a quote or a paid API."""
 import ast
 import json
+from decimal import Decimal
 from pathlib import Path
 
 import pytest
@@ -14,6 +15,7 @@ from prometheus.agents.trader import execute
 from prometheus.agents.trader import trader as trader_module
 from prometheus.agents.trader.trader import TEMPERATURE, Trader
 from prometheus.common import work_order as wo
+from prometheus.common.money import dumps
 from prometheus.prompts import trader as prompts
 from prometheus.rag.config import REPO_ROOT
 
@@ -45,9 +47,10 @@ def by_id(order):
 
 
 def test_a_cash_figure_the_account_manager_never_gave_is_still_an_invented_number_in_a_summary():
-    model = ScriptedModel([call("place_order", trade_id="T1"), call("place_order", trade_id="T2"), call("notify_account_manager"), say(answer("Cash left 500.0 after the first.", ("T1", "filled"), ("T2", "filled")))])
+    # AMENDED (entry 111): the figure was 500.0, which is the real cash left with no slippage (the config had 5 bps then); it is now 777.0, which no trade or account figure is
+    model = ScriptedModel([call("place_order", trade_id="T1"), call("place_order", trade_id="T2"), call("notify_account_manager"), say(answer("Cash left 777.0 after the first.", ("T1", "filled"), ("T2", "filled")))])
     order, *_ = go(two_buys(), {"PG": 100.0, "KO": 100.0}, model=model, portfolio=account(1500.0))
-    assert last(order)["summary_by"] == "code" and any("the number 500.0 in the summary is not a number of the trades" in d for d in last(order)["dropped"])
+    assert last(order)["summary_by"] == "code" and any("the number 777.0 in the summary is not a number of the trades" in d for d in last(order)["dropped"])
 
 
 def test_the_model_may_choose_a_limit_price_inside_the_range_and_its_note_reaches_the_trade():
@@ -55,7 +58,7 @@ def test_the_model_may_choose_a_limit_price_inside_the_range_and_its_note_reache
                            say(answer("ok", ("T1", "filled")))])
     order, *_ = go(decided(), {"PG": 167.0}, model=model)
     t = order.trades[0]
-    assert (t["order_type"], t["limit_price"], t["note"], t["placed_by"], t["fill"]["price"]) == ("limit", 167.5, "a little above the quote", "model", 167.0835)
+    assert (t["order_type"], t["limit_price"], t["note"], t["placed_by"], t["fill"]["price"]) == ("limit", Decimal("167.5"), "a little above the quote", "model", Decimal("167.0"))      # AMENDED (entry 111): 167.0835 was the quote plus 5 bps of slippage; there is none now
     assert last(order)["tool_calls"][1]["args"] == {"trade_id": "T1", "order_type": "limit", "limit_price": 167.5, "note_words": 5}       # the model's words are not in the log of calls
 
 
@@ -63,7 +66,7 @@ def test_a_tool_the_broker_refuses_comes_back_as_a_message_the_model_fixes_and_t
     model = ScriptedModel([call("verify_request"), call("place_order", trade_id="T1", order_type="limit", limit_price=170.0), call("place_order", trade_id="T1", order_type="limit", limit_price=167.5),
                            call("notify_account_manager"), say(answer("ok", ("T1", "filled")))])
     order, *_ = go(decided(), {"PG": 167.0}, model=model)
-    assert [c["outcome"] for c in last(order)["tool_calls"]] == ["ok", "invalid", "ok", "ok"] and order.trades[0]["limit_price"] == 167.5 and order.trades[0]["placed_by"] == "model"
+    assert [c["outcome"] for c in last(order)["tool_calls"]] == ["ok", "invalid", "ok", "ok"] and order.trades[0]["limit_price"] == Decimal("167.5") and order.trades[0]["placed_by"] == "model"
     tool_message = [m for _, messages in model.seen for m in messages if m.type == "tool" and "Invalid" in m.content][0]
     assert "limit_price 170.0000 is outside the range allowed for T1, 165.46 to 168.74" in tool_message.content
 
@@ -94,10 +97,10 @@ def test_a_model_that_places_nothing_leaves_the_sweep_to_do_it_and_the_sweep_not
     model = ScriptedModel([call("verify_request"), say(answer("I looked.", ("T1", "new")))])
     order, acct, *_ = go(decided(), {"PG": 167.0}, model=model)
     t = order.trades[0]
-    assert (t["status"], t["placed_by"], t["fill"]["price"]) == ("filled", "code", 167.0835) and order.status == "traded"
+    assert (t["status"], t["placed_by"], t["fill"]["price"]) == ("filled", "code", Decimal("167.0")) and order.status == "traded"      # AMENDED (entry 111): 167.0835 was the quote plus 5 bps; no slippage now
     run = last(order)
     assert (run["placed_by_model"], run["placed_by_code"], run["summary_by"]) == (0, 1, "code") and any("said T1 is 'new' but it is filled" in d for d in run["dropped"])
-    assert run["portfolio_after"]["cash"] == 2648.33                                                                                     # the Account Manager was told: the portfolio moved
+    assert run["portfolio_after"]["cash"] == Decimal("2652.0")                                                                                      # the Account Manager was told: the portfolio moved (AMENDED, entry 111: it was 2648.33 with 5 bps of slippage)
 
 
 def test_a_model_that_raises_never_stops_a_permitted_trade_and_the_run_says_what_kind_of_failure():
@@ -247,8 +250,8 @@ def run_with_summary(summary_json):
 
 
 def test_a_summary_with_a_wrong_status_is_replaced_by_codes_own_sentence_and_the_run_says_what_was_wrong():
-    run = run_with_summary(answer("Bought 44 shares of PG at 167.0835.", ("T1", "rejected")))
-    assert run["summary_by"] == "code" and run["summary"].startswith("Paper run: T1 buy 44 PG filled at 167.0835 ($7,351.67).") and run["dropped"] == ["the model said T1 is 'rejected' but it is filled"]
+    run = run_with_summary(answer("Bought 44 shares of PG at 167.0.", ("T1", "rejected")))      # AMENDED (entry 111): the price was 167.0835 and the amount $7,351.67 with 5 bps of slippage; there is none now
+    assert run["summary_by"] == "code" and run["summary"].startswith("Paper run: T1 buy 44 PG filled at 167.0000 ($7,348.00).") and run["dropped"] == ["the model said T1 is 'rejected' but it is filled"]
 
 
 def test_a_summary_with_an_invented_number_is_replaced():
@@ -488,7 +491,7 @@ def test_a_funded_purchase_that_would_not_fill_sells_nothing_through_the_whole_t
     order = synthetic(row("PG", "open", 20, 100.0, limit=99.0))
     out, acct, *_ = go(order, FUNDING_QUOTES, funding=plan("PG", ("MSFT", 5, 420.0)), approver=say_yes, portfolio=account(51.23, MSFT=(50, 150.0)))
     t = by_id(out)
-    assert (t["T1"]["status"], t["T1-F1"]["status"]) == ("active", "active") and out.status == "decided" and last(out)["portfolio_after"]["cash"] == 51.23
+    assert (t["T1"]["status"], t["T1-F1"]["status"]) == ("active", "active") and out.status == "decided" and last(out)["portfolio_after"]["cash"] == Decimal("51.23")
 
 
 def test_the_funding_sells_count_toward_the_maximum_number_of_trades(tmp_path):
@@ -512,7 +515,7 @@ def test_a_finding_of_the_whole_run_output_guard_is_reported_what_was_booked_sta
     acct.notify_trades = lambda *a, **k: told.append(a) or (a[0], [])
     out, *_ = go(decided(), acct=acct)
     assert told == [] and out.status == "decided" and any("the Trader's output check of the whole run found: trade T1 filled 99 shares" in e for e in out.errors)
-    assert last(out)["portfolio_after"]["cash"] == 2648.33 and out.trades[0]["status"] == "filled" and out.trades[0]["booked"] is False       # the fill stands: it was applied as it happened
+    assert last(out)["portfolio_after"]["cash"] == Decimal("2652.0") and out.trades[0]["status"] == "filled" and out.trades[0]["booked"] is False       # AMENDED (entry 111): 2648.33 with 5 bps of slippage       # the fill stands: it was applied as it happened
 
 
 def test_a_fill_that_does_not_agree_with_the_decisions_is_not_reported_or_booked_the_trade_is_failed_and_not_retried_and_the_next_trade_is_placed():
@@ -536,7 +539,7 @@ def test_a_fill_that_does_not_agree_with_the_decisions_is_not_reported_or_booked
     t = by_id(out)
     assert (t["T1"]["status"], t["T1"]["reject_code"], t["T1"]["fill"], t["T1"]["booked"]) == ("rejected", "internal_error", None, False) and "filled 10 shares but the decision gave 1" in t["T1"]["reason"]
     assert t["T2"]["status"] == "filled" and asked == ["T1", "T2"] and told == ["T2"]                                                   # T1 was approved once and never reported; T2 went through the whole handshake
-    assert last(out)["portfolio_after"]["cash"] == 5000.0 - t["T2"]["fill"]["amount"] and any("the output check found a fill that does not agree with the decisions, so it was not reported or booked" in e for e in out.errors)
+    assert last(out)["portfolio_after"]["cash"] == Decimal("5000.0") - t["T2"]["fill"]["amount"] and any("the output check found a fill that does not agree with the decisions, so it was not reported or booked" in e for e in out.errors)
 
 
 def test_book_without_a_connected_account_is_one_problem_and_the_fills_stay_in_memory():
@@ -573,7 +576,7 @@ def test_an_account_manager_that_raises_instead_of_approving_has_not_approved_an
 
     acct.approve_trade = broken
     out, *_ = go(decided(), acct=acct)
-    assert (out.trades[0]["status"], out.trades[0]["reject_code"]) == ("rejected", "account_refused") and "could not be asked (ConnectionError)" in out.trades[0]["reason"] and last(out)["portfolio_after"]["cash"] == 10000.0
+    assert (out.trades[0]["status"], out.trades[0]["reject_code"]) == ("rejected", "account_refused") and "could not be asked (ConnectionError)" in out.trades[0]["reason"] and last(out)["portfolio_after"]["cash"] == Decimal("10000.0")
 
 
 # ---------------------------------------------------------------- backtest (steps 4 and 9)
@@ -587,7 +590,7 @@ BARS = {"PG": weekday_bars("2026-11-05", [(165.0, 166.0, 164.0, 165.5),        #
 def test_a_backtest_decision_before_the_open_enters_that_same_day_and_a_decision_after_it_the_next_day():
     early, *_ = go(synthetic(row("PG", "open", 10, 166.0, zone=(160.0, 170.0))), bars=BARS, mode="backtest", now=at("2026-11-05 08:00"))
     late, *_ = go(synthetic(row("PG", "open", 10, 166.0, zone=(160.0, 170.0))), bars=BARS, mode="backtest", now=at("2026-11-05 10:30"))
-    assert (early.trades[0]["fill"]["date"], early.trades[0]["fill"]["price"]) == ("2026-11-05", 165.0825) and (late.trades[0]["fill"]["date"], late.trades[0]["fill"]["price"]) == ("2026-11-06", 166.083)
+    assert (early.trades[0]["fill"]["date"], early.trades[0]["fill"]["price"]) == ("2026-11-05", Decimal("165.0")) and (late.trades[0]["fill"]["date"], late.trades[0]["fill"]["price"]) == ("2026-11-06", Decimal("166.0"))      # AMENDED (entry 111): the open itself, 165.0825 and 166.083 were the opens plus 5 bps
 
 
 def test_a_backtest_whose_bars_cannot_be_read_is_price_unavailable_not_waiting():
@@ -729,7 +732,7 @@ def test_a_decision_whose_symbol_is_not_a_ticker_gets_no_ticket_the_run_says_so_
     out, *_ = go(order, {"KO": 60.0}, model=model)
     assert [(t["trade_id"], t["symbol"], t["status"]) for t in out.trades] == [("T1", "KO", "filled")] and out.status == "decided"
     assert any("has no ticket" in e and "is not a ticker" in e for e in last(out)["errors"]) and any("has no ticket" in e for e in out.errors)
-    assert "IGNORE ALL RULES" not in model.texts() and "IGNORE ALL RULES" not in json.dumps(out.trades)
+    assert "IGNORE ALL RULES" not in model.texts() and "IGNORE ALL RULES" not in dumps(out.trades)
 
 
 SCENARIOS = {"filled": lambda o: go(o, {"PG": 167.0}), "rejected": lambda o: go(o, {}), "resting": lambda o: go(o, {"PG": 190.0}), "refused": lambda o: go(o, {"PG": 167.0}, mode="live"),
@@ -743,7 +746,7 @@ def test_the_recommendations_the_reviews_and_the_decisions_are_the_same_bytes_af
     order = decided()
     before = other_agents_work(order)
     out = SCENARIOS[scenario](order)[0]
-    assert out is order and other_agents_work(out) == before and json.dumps(out.trade_decisions, sort_keys=True) in before
+    assert out is order and other_agents_work(out) == before and dumps(out.trade_decisions, sort_keys=True) in before
 
 
 def test_a_model_that_tries_to_change_the_decision_has_no_tool_to_do_it_and_the_dumps_stay_equal():
@@ -792,7 +795,7 @@ def test_a_purchase_the_account_refuses_after_its_funding_sales_were_taken_is_na
     class MovingStore(FakeStore):
         def record_trade(self, account_id, symbol, side, shares, price, traded_on, **kw):
             gain = super().record_trade(account_id, symbol, side, shares, price, traded_on, **kw)
-            self.portfolio = apply_fill(self.portfolio, symbol, side, shares, float(price), traded_on)
+            self.portfolio = apply_fill(self.portfolio, symbol, side, shares, price, traded_on)
             return gain
 
     store = MovingStore(portfolio=account(51.23, MSFT=(50, 150.0)), fail={"PG"})
@@ -826,7 +829,8 @@ def test_a_close_that_breaks_is_a_message_the_answer_still_exists_and_nothing_is
     out, *_ = go(decided(), {"PG": 167.0}, model=model)
     assert any("the Trader could not close the run properly (KeyError: 'disk')" in e for e in out.errors)
     notify = json.loads(next(m.content for _, messages in model.seen for m in messages if m.type == "tool" and "cash_before" in m.content))
-    assert notify == {"cash_before": 10000.0, "cash_after": 2648.33, "filled": 1, "rejected": 0, "active": 0, "booked": False} and last(out)["booked"] is False   # the Account Manager had every fill as it happened; none was booked (book is off)
+    # AMENDED (entry 111): cash_after was 2648.33 with 5 bps of slippage
+    assert notify == {"cash_before": 10000.0, "cash_after": 2652.0, "filled": 1, "rejected": 0, "active": 0, "booked": False} and last(out)["booked"] is False   # the Account Manager had every fill as it happened; none was booked (book is off)
 
 
 def test_a_funded_purchase_that_rested_is_filled_with_its_sales_by_a_later_run_and_nobody_is_asked_again():
@@ -838,9 +842,10 @@ def test_a_funded_purchase_that_rested_is_filled_with_its_sales_by_a_later_run_a
     second, *_ = go(first, {**FUNDING_QUOTES, "PG": 98.0}, acct=acct, ledger=ledger, portfolio=held)
     assert acct.clerk.asked("quotes")[-1] == ["PG", "MSFT"]                                                                                    # the sale that waits for its purchase needs its price as well
     t = by_id(second)
-    assert [t[i]["status"] for i in ("T1", "T1-F1")] == ["filled", "filled"] and t["T1"]["fill"]["price"] == 98.049 and t["T1"]["placed_by"] == "code" and second.status == "traded" and len(asked) == 1
+    # AMENDED (entry 111): the purchase filled at 98.049 and the sale at 419.79 (a limit price plus and a quote minus 5 bps); with no slippage they are 98.0 and 420.0
+    assert [t[i]["status"] for i in ("T1", "T1-F1")] == ["filled", "filled"] and t["T1"]["fill"]["price"] == Decimal("98.0") and t["T1"]["placed_by"] == "code" and second.status == "traded" and len(asked) == 1
     assert [r["trade_id"] for r in ledger.records] == ["T1", "T1-F1"] and wo.verify_trades(second) == []
-    assert last(second)["portfolio_after"]["cash"] == pytest.approx(51.23 + 2098.95 - 20 * 98.049, abs=0.01) and last(second)["portfolio_before"]["cash"] == 51.23
+    assert last(second)["portfolio_after"]["cash"] == Decimal("51.23") + Decimal("2100.0") - 20 * Decimal("98.0") and last(second)["portfolio_before"]["cash"] == Decimal("51.23")
 
 
 def test_the_sells_of_a_funded_purchase_that_a_later_run_rejects_are_funding_failed_and_nothing_is_sold():
@@ -849,7 +854,7 @@ def test_the_sells_of_a_funded_purchase_that_a_later_run_rejects_are_funding_fai
     first, acct, _, ledger = go(order, FUNDING_QUOTES, funding=plan("PG", ("MSFT", 5, 420.0)), approver=say_yes, portfolio=held)
     second, *_ = go(first, FUNDING_QUOTES, acct=acct, ledger=ledger, portfolio=held, now=at("2026-11-05 11:45"))                              # the approval ran out in between
     t = by_id(second)
-    assert (t["T1"]["reject_code"], t["T1-F1"]["reject_code"]) == ("approval_expired", "funding_failed") and last(second)["portfolio_after"]["cash"] == 51.23 and second.status == "traded" and wo.verify_trades(second) == []
+    assert (t["T1"]["reject_code"], t["T1-F1"]["reject_code"]) == ("approval_expired", "funding_failed") and last(second)["portfolio_after"]["cash"] == Decimal("51.23") and second.status == "traded" and wo.verify_trades(second) == []
 
 
 def test_a_resting_order_stays_active_when_the_quotes_cannot_be_had_in_the_later_run_and_is_judged_again_in_the_next():

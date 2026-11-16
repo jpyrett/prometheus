@@ -1,7 +1,7 @@
 """A second real user session, replayed offline: the first one run through the whole NEW flow (design choices entries 80 to 83).
 
 `tests/fixtures/session_real/bob_jones_oil_round_robin.json` is a capture of
-`./test_prometheus.sh --session --name "Bob Jones" --age 60 --risk conservative --cash 15000 --mode auto --yes --no-fetch --auto-min-score 70 --cleanup --save ... --prompt "I want to buy oil stocks. Use as much of the
+`./test_prometheus.sh --session --name "Bob Jones" --age 60 --risk conservative --cash 15000 --mode auto --yes --no-fetch --cleanup --save ... --prompt "I want to buy oil stocks. Use as much of the
 money in my account as you can to buy shares of the 3 most recommended oil companies."` on 2026-11-15, with the real Account Manager, Data Clerk, Advisor, Critic (GLM 5.3) and Trader (gpt-oss-120b) on the real stored data,
 the simulated clock (the close of Friday 2026-11-13) and the real local Postgres account book. It is the first capture made AFTER the Advisor and the Critic stopped sizing (the Account Manager sizes), after Auto mode began
 spending the funds round-robin (no split was asked for), and after the Trader and the Account Manager began shaking hands on every trade (each fill SELECTed, booked in one locked transaction and SELECTed again).
@@ -16,20 +16,23 @@ The tests re-run the DECISION step over the real reviews and must reproduce what
 import copy
 import json
 from datetime import datetime, timezone
+from decimal import Decimal
 from pathlib import Path
 
 import pytest
 
 from prometheus.agents.account_manager import decisions
 from prometheus.common import work_order as wo
+from prometheus.common.money import money as money_door
+from prometheus.common.money import price as price_door
 from prometheus.common.portfolio import Portfolio
 from prometheus.common.user_profile import UserProfile
 
 CAPTURE = Path(__file__).parent / "fixtures" / "session_real" / "bob_jones_oil_round_robin.json"
 NODES = ["account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader"]
 MOMENT = datetime(2026, 11, 13, 20, 30, tzinfo=timezone.utc)
-BOB = Portfolio(user="Bob Jones", cash_avail=15000.0)
-PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="auto", auto_min_score=70)
+BOB = Portfolio(user="Bob Jones", cash_avail=Decimal("15000"))
+PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="auto")
 
 
 @pytest.fixture(scope="module")
@@ -68,14 +71,12 @@ def test_the_real_reviews_are_two_approvals_and_a_denial_for_risk_and_the_adviso
 
 def robin(prices, pot):
     """The round robin worked out by hand, in cents: one share of each in turn while the share fits what is left of the pot; a stock that cannot take another share is closed."""
-    from decimal import Decimal
-
     from prometheus.common.portfolio import trade_amount
     shares, spent, open_ = [0] * len(prices), Decimal(0), list(range(len(prices)))
     while open_:
         for i in list(open_):
-            step = Decimal(str(trade_amount(shares[i] + 1, prices[i]))) - Decimal(str(trade_amount(shares[i], prices[i])))
-            if spent + step <= Decimal(str(pot)):
+            step = trade_amount(shares[i] + 1, prices[i]) - trade_amount(shares[i], prices[i])
+            if spent + step <= pot:
                 shares[i], spent = shares[i] + 1, spent + step
             else:
                 open_.remove(i)
@@ -84,13 +85,13 @@ def robin(prices, pot):
 
 def test_the_decisions_are_reproduced_from_the_real_reviews_by_the_round_robin_with_only_the_cash_to_stop_it(capture):
     live = {d["symbol"]: d for d in capture["order"]["trade_decisions"]}
-    again = decisions.decide_trades(reviewed(capture), BOB, PROFILE, 80, None, MOMENT, "auto", None, None)
+    again = decisions.decide_trades(reviewed(capture), BOB, PROFILE, None, MOMENT, "auto", None, None)
     assert again.status == "decided" and again.errors == [] and [(d["symbol"], d["will_trade"]) for d in again.trade_decisions] == [(d["symbol"], d["will_trade"]) for d in capture["order"]["trade_decisions"]]
     bought = [d for d in again.trade_decisions if d["will_trade"] == "yes_auto"]
-    prices = [next(r["timing"]["deal_price"] for r in capture["order"]["reviews"] if r["symbol"] == d["symbol"]) for d in bought]
-    assert [d["shares"] for d in bought] == robin(prices, 15000.0) and [(d["symbol"], d["size"]["binding"], d["size"]["allocation"]) for d in bought] == [("CVX", "money", "round_robin"), ("EOG", "money", "round_robin")]
+    prices = [price_door(next(r["timing"]["deal_price"] for r in capture["order"]["reviews"] if r["symbol"] == d["symbol"])) for d in bought]      # the Critic's deal price is a float of the review: it comes into the account through the price door
+    assert [d["shares"] for d in bought] == robin(prices, Decimal("15000")) and [(d["symbol"], d["size"]["binding"], d["size"]["allocation"]) for d in bought] == [("CVX", "money", "round_robin"), ("EOG", "money", "round_robin")]
     assert all("spent round-robin" in d["reason"] for d in bought) and not any("balance" in d for d in bought)                          # no split was asked: not an even split
-    assert sum(d["est_cost"] for d in bought) <= 15000.0 and 15000.0 - sum(d["est_cost"] for d in bought) < min(prices)               # the money is used until it buys no share of either
+    assert sum(d["est_cost"] for d in bought) <= Decimal("15000") and Decimal("15000") - sum(d["est_cost"] for d in bought) < min(prices)               # the money is used until it buys no share of either
     assert [d["will_trade"] for d in again.trade_decisions if d["symbol"] == "PSX"] == ["no_system_denied"] and live["PSX"]["will_trade"] == "no_system_denied"
 
 
@@ -101,13 +102,13 @@ def test_the_real_fills_agree_with_the_decisions_pass_the_output_guard_and_the_a
     assert [(t["symbol"], t["shares"], t["status"]) for t in order.trades] == [("CVX", 6, "filled"), ("EOG", 9, "filled")]
     for trade in order.trades:
         assert trade["shares"] <= decided[trade["record_id"]]["shares"] and wo.verify_fill(order, trade, order.trades) == []
-    spent = round(sum(t["fill"]["amount"] for t in order.trades), 2)
+    spent = sum(money_door(t["fill"]["amount"]) for t in order.trades)
     after = order.trader_runs[0]["portfolio_after"]
-    assert after["cash"] == round(15000.0 - spent, 2) == 12254.41 and {p["symbol"]: p["shares"] for p in after["positions"]} == {"CVX": 6, "EOG": 9}
+    assert money_door(after["cash"]) == Decimal("15000") - spent == Decimal("12254.41") and {p["symbol"]: p["shares"] for p in after["positions"]} == {"CVX": 6, "EOG": 9}
 
 
 def test_the_session_is_the_new_flow_the_handshake_booked_each_fill(capture):
     run = capture["order"]["trader_runs"][0]
     assert run["booked"] is True and run["placed_by_model"] + run["placed_by_code"] == 2
     cash_before = run["portfolio_before"]["cash"]
-    assert cash_before == 15000.0 and run["portfolio_after"]["cash"] == 12254.41                                                     # as the live run left it (it was sized under the old limit)
+    assert money_door(cash_before) == Decimal("15000") and money_door(run["portfolio_after"]["cash"]) == Decimal("12254.41")                                                     # as the live run left it (it was sized under the old limit)

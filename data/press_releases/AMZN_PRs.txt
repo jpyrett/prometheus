@@ -1,0 +1,621 @@
+<<<PRESS_RELEASE>>>
+id: 851287e226ddebaf
+symbol: AMZN
+published_utc: 2025-11-19T13:38:00Z
+url: https://www.nasdaq.com/press-release/aws-and-humain-expand-partnership-nvidia-ai-infrastructure-and-aws-ai-chip-deal-drive
+headline: AWS and HUMAIN Expand Partnership with NVIDIA AI Infrastructure and AWS AI Chip Deal to Drive Global AI Innovation
+<<<TEXT>>>
+Amazon Web Services, Inc., an Amazon.com, Inc. company, and HUMAIN, a Public Investment Fund company delivering global full-stack AI solutions, announced today at the U.S.-Saudi Investment Forum their plans to provide, deploy and manage up to 150,000 AI accelerators in a data center facility known as an" AI Zone" in Riyadh. Tanuja Randery, Managing Director, Europe,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d27d887b843f53cb
+symbol: AMZN
+published_utc: 2025-12-01T09:00:00Z
+url: https://www.nasdaq.com/press-release/trane-technologies-and-aws-collaborate-accelerate-energy-efficiency-and-building
+headline: Trane Technologies and AWS Collaborate to Accelerate Energy Efficiency and Building Decarbonization across Amazon Grocery Fulfillment Centers in North America
+<<<TEXT>>>
+SWORDS, Ireland---- Trane Technologies, a global climate innovator, and Amazon announce groundbreaking results through advanced AI to improve energy efficiency and decarbonization in key real estate assets. Initial deployment at three pilot Amazon Grocery fulfillment facilities in North America exceeded expectations, achieving energy-use reductions of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a385efc4676077aa
+symbol: AMZN
+published_utc: 2025-12-01T15:06:00Z
+url: https://www.nasdaq.com/press-release/new-agentic-capabilities-aws-transform-enable-rapid-modernization-any-code-or
+headline: New Agentic Capabilities in AWS Transform Enable Rapid Modernization of Any Code or Application
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced new agentic AI capabilities in AWS Transform that broaden customers’ ability to rapidly modernize legacy applications and code at scale— to realize the full value of AI. To get the full story on the enhancements to AWS Transform, visit About Amazon. Amazon Web Services is guided...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da375c243b0d5d3a
+symbol: AMZN
+published_utc: 2025-12-02T10:35:00Z
+url: https://www.nasdaq.com/press-release/promino-resumes-trading-and-achieves-record-sales-growth-through-october-2025-2025-12
+headline: Promino Resumes Trading and Achieves Record Sales Growth Through October 2025
+<<<TEXT>>>
+Promino Nutritional Sciences Inc. is pleased to announce the resumption of trading on the Canadian Securities Exchange effective today. We took corrective action, including appointing Moira Ong as CFO to ensure financial and operational discipline and to improve internal controls in Promino. CFO appointment: Promino welcomed Moira Ong as Chief...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ea8a142e66d0ddbf
+symbol: AMZN
+published_utc: 2025-12-02T11:00:00Z
+url: https://www.nasdaq.com/press-release/aws-powers-sonys-enterprise-ai-and-engagement-platforms-2025-12-02
+headline: AWS Powers Sony's Enterprise AI and Engagement Platforms
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced that Sony Group Corporation is using AWS's comprehensive set of artificial intelligence services to accelerate its enterprise use of AI and to build Sony’ s Engagement Platform to create deeper connection between fans and content creators. Sony’ s internal enterprise AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a55092107c2a3a37
+symbol: AMZN
+published_utc: 2025-12-02T12:00:00Z
+url: https://www.nasdaq.com/press-release/writer-and-aws-team-make-enterprise-agents-more-scalable-and-secure-2025-12-02
+headline: WRITER and AWS Team Up to Make Enterprise Agents More Scalable and Secure
+<<<TEXT>>>
+WRITER announces new agent supervision suite and native integration with Amazon Bedrock to bring model flexibility and enhanced agent security to its platform. SAN FRANCISCO& LAS VEGAS---- At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced that WRITER, a leader in agentic AI for the enterprise, is providing customers with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1709138331c6f219
+symbol: AMZN
+published_utc: 2025-12-02T13:30:00Z
+url: https://www.nasdaq.com/press-release/aws-unveils-frontier-agents-new-class-ai-agents-work-extension-your-software
+headline: AWS Unveils Frontier Agents, a New Class of AI Agents That Work as an Extension of Your Software Development Team
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced three frontier agents: Kiro autonomous agent, AWS Security Agent, and AWS DevOps Agent. To get the full story on these new agents, visit About Amazon. Amazon.com, Inc. Media Hotline Amazon-pr@amazon.com www.amazon.com/pr.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 40751d1a4cf2380b
+symbol: AMZN
+published_utc: 2025-12-02T13:30:00Z
+url: https://www.nasdaq.com/press-release/amazon-introduces-four-new-frontier-nova-models-pioneering-nova-forge-service
+headline: Amazon Introduces Four New Frontier Nova Models, a Pioneering Nova Forge Service for Organizations to Build Their Own Models, and Nova Act for Building Reliable Browser Agents
+<<<TEXT>>>
+Nova 2 models deliver industry-leading price-performance across reasoning, multimodal processing, conversational AI, code generation, and agentic tasks. Nova Forge enables companies to build their own optimized variants of Nova by infusing their proprietary data early in the training process through Forge’ s unique "open training" approach. Nova Act...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2001f342139e843b
+symbol: AMZN
+published_utc: 2025-12-02T13:30:00Z
+url: https://www.nasdaq.com/press-release/trainium3-ultraservers-now-available-enabling-customers-train-and-deploy-ai-models
+headline: Trainium3 UltraServers Now Available: Enabling Customers to Train and Deploy AI Models Faster at Lower Cost
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced the general availability of Trainium3 UltraServers powered by the new Trainium3 chip. Trainium3 UltraServers deliver high performance for AI workloads with up to 4.4 x more compute performance, 4 x greater energy efficiency, and almost 4 x more memory bandwidth than...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0b777f2738cf2601
+symbol: AMZN
+published_utc: 2025-12-02T13:30:00Z
+url: https://www.nasdaq.com/press-release/new-amazon-bedrock-agentcore-capabilities-power-next-wave-agentic-ai-development-2025
+headline: New Amazon Bedrock AgentCore Capabilities Power the Next Wave of Agentic AI Development
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced new enhancements for Amazon Bedrock AgentCore. Policy in Amazon Bedrock AgentCore actively blocks unauthorized agent actions through real-time, deterministic controls that operate outside of the agent code. AgentCore Evaluations helps developers continuously...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 915252aad4156f8a
+symbol: AMZN
+published_utc: 2025-12-02T13:30:00Z
+url: https://www.nasdaq.com/press-release/new-aws-ai-factories-transform-customers-existing-infrastructure-high-performance-ai
+headline: New AWS AI Factories Transform Customers’ Existing Infrastructure Into High Performance AI Environments
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced AWS AI Factories. To get the full story on AWS AI Factories, visit About Amazon. Amazon.com, Inc. Media Hotline Amazon-pr@amazon.com www.amazon.com/pr.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a19fd8c477df7201
+symbol: AMZN
+published_utc: 2025-12-03T11:00:00Z
+url: https://www.nasdaq.com/press-release/supabase-and-aws-empower-app-developers-build-weekend-scale-millions-2025-12-03
+headline: Supabase and AWS Empower App Developers to Build in a Weekend, Scale to Millions
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, and Supabase, the Postgres development platform, today announced two new Amazon Simple Storage Service- based storage innovations and a new ETL 1 feature that make building generative artificial intelligence agents and apps easier. Built on Apache Iceberg and Amazon S3 Tables, Supabase...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4c6f9b85f56d103b
+symbol: AMZN
+published_utc: 2025-12-03T13:30:00Z
+url: https://www.nasdaq.com/press-release/aws-simplifies-model-customization-help-customers-build-faster-more-efficient-ai
+headline: AWS Simplifies Model Customization to Help Customers Build Faster, More Efficient AI Agents
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced new Amazon Bedrock and Amazon SageMaker AI capabilities: Reinforcement Fine Tuning in Amazon Bedrock and serverless model customization in Amazon SageMaker AI with reinforcement learning. New Amazon Bedrock and Amazon SageMaker AI capabilities give customers access...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8b1abaa7f0aced9b
+symbol: AMZN
+published_utc: 2025-12-04T13:30:00Z
+url: https://www.nasdaq.com/press-release/aws-introduces-graviton5-companys-most-powerful-and-efficient-cpu-2025-12-04
+headline: AWS Introduces Graviton5—the Company’s Most Powerful and Efficient CPU
+<<<TEXT>>>
+At AWS re: Invent, Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced Amazon EC2 M9g instances powered by the new Graviton5 chip. New AWS Graviton5-based Amazon EC2 M9g instances deliver up to 25% higher performance than the previous generation. With 192 cores per chip and 5 x larger cache, customers can scale up workloads and improve...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b33be96b015f345
+symbol: AMZN
+published_utc: 2025-12-04T15:04:00Z
+url: https://www.nasdaq.com/press-release/zilliz-selects-aws-its-strategic-cloud-provider-power-global-vector-database
+headline: Zilliz Selects AWS as its Strategic Cloud Provider to Power Global Vector Database Solutions
+<<<TEXT>>>
+Leading vector database provider uses Amazon Graviton to enhance performance and improve cost optimization by over 20%. REDWOOD CITY, Calif., Dec. 4, 2025/ PRNewswire/-- At AWS re: Invent, Amazon Web Services, an Amazon.com, Inc. company, today announced that Zilliz, the creator of the world's most widely adopted open-source vector database Milvus, has selected AWS as...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cfd4954a62a03e0a
+symbol: AMZN
+published_utc: 2025-12-08T12:00:00Z
+url: https://www.nasdaq.com/press-release/imdb-announces-most-popular-movies-shows-and-stars-2025-2025-12-08
+headline: IMDb Announces the Most Popular Movies, Shows, and Stars of 2025
+<<<TEXT>>>
+IMDb, the world’ s most popular and authoritative source for information on movies, TV shows, and celebrities, today unveiled the most popular stars, movies, and shows of 2025. Rather than base its annual rankings on small statistical samplings, reviews from professional critics, or box-office performance, IMDb determines its definitive year-end lists using...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7c2ddef9ecceef7b
+symbol: AMZN
+published_utc: 2025-12-15T10:00:00Z
+url: https://www.nasdaq.com/press-release/three-quarters-employers-improve-workplace-safety-scores-over-three-years-2025-12-15
+headline: Three-Quarters of Employers Improve Workplace Safety Scores Over Three Years
+<<<TEXT>>>
+--The National Safety Council released the 2024-2025 MSD Solutions Index Pledge Community Report, highlighting efforts to prevent musculoskeletal disorders, the most common workplace injury. Developed by the NSC MSD Solutions Lab, established in 2021 with funding from Amazon, the MSD Solutions Index evaluates how organizations address MSDs across three...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0b4cfa0516fe7844
+symbol: AMZN
+published_utc: 2025-12-16T06:03:00Z
+url: https://www.nasdaq.com/press-release/mill-and-amazon-team-launch-industry-first-food-waste-innovation-whole-foods-market
+headline: Mill and Amazon team up to launch industry-first food waste innovation at Whole Foods Market stores
+<<<TEXT>>>
+Amazon's Climate Pledge Fund is investing in Mill to build on its existing technology to develop a commercial device that will prevent food waste at scale, reduce costs, and enable operational efficiencies starting with Whole Foods Market. SEATTLE and SAN BRUNO, Calif., Dec. 16, 2025/ PRNewswire/-- Amazon and Mill Industries Inc. announced today that they're...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b6df3ba0cd4bb491
+symbol: AMZN
+published_utc: 2025-12-18T09:00:00Z
+url: https://www.nasdaq.com/press-release/amazon-business-prime-offers-small-and-midsize-businesses-even-more-value-new
+headline: Amazon Business Prime Offers Small and Midsize Businesses Even More Value with New Benefits from Intuit QuickBooks, CrowdStrike, and Gusto
+<<<TEXT>>>
+Today Amazon announced that Amazon Business has added even more value to the Business Prime membership program with benefits from Intuit QuickBooks, CrowdStrike, and Gusto that help small and midsize business customers save time and money. Amazon Business tailors the best of Amazon— everyday low prices, vast selection, and a convenient shopping and delivery...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ba3c992d4c97cc86
+symbol: AMZN
+published_utc: 2026-01-06T09:00:00Z
+url: https://www.nasdaq.com/press-release/ring-and-watch-duty-launch-new-feature-fire-watch-lifeline-communities-facing
+headline: Ring and Watch Duty Launch New Feature ‘Fire Watch’: A Lifeline for Communities Facing Wildfire and Smoke Danger
+<<<TEXT>>>
+Ring today announced Fire Watch, a groundbreaking safety feature in the Neighbors section of the Ring app designed to give communities and first responders real-time, ground-truth information during active fire events. In collaboration with Watch Duty, a non-profit dedicated to humanizing and accelerating emergency information, Fire Watch helps...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dac1a8dd7ea23fad
+symbol: AMZN
+published_utc: 2026-01-06T09:00:00Z
+url: https://www.nasdaq.com/press-release/aumovio-and-aws-join-forces-transform-autonomous-driving-development-2026-01-06
+headline: AUMOVIO and AWS Join Forces to Transform Autonomous Driving Development
+<<<TEXT>>>
+AUMOVIO, one of the leading technology and electronics companies, and Amazon Web Services, Inc., an Amazon.com, Inc. company, today announced a strategic agreement to help accelerate the development of safer, smarter self-driving vehicles, as well as establishing AWS as AUMOVIO's preferred cloud provider for autonomous driving development.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9705e271bbaa2ec5
+symbol: AMZN
+published_utc: 2026-01-06T12:00:00Z
+url: https://www.nasdaq.com/press-release/imdb-announces-most-anticipated-movies-and-series-2026-2026-01-06
+headline: IMDb Announces the Most Anticipated Movies and Series of 2026
+<<<TEXT>>>
+IMDb, the world’ s most popular and authoritative source for information on movies, TV shows, and celebrities, today unveiled the most anticipated movies and new series of 2026. Rather than base its annual rankings on small statistical samplings, IMDb determines its list of the most anticipated titles by the actual page views of the more than 250 million monthly...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0f5234b953297e20
+symbol: AMZN
+published_utc: 2026-01-09T09:05:00Z
+url: https://www.nasdaq.com/press-release/amazon-pharmacy-expands-access-new-wegovyr-pill-insurance-and-cash-pay-options-2026
+headline: Amazon Pharmacy Expands Access to New Wegovy® Pill with Insurance and Cash-Pay Options
+<<<TEXT>>>
+Amazon Pharmacy, a full-service digital pharmacy that delivers medications directly to customers' homes, now offers Novo Nordisk’ s Wegovy ® pill, the first and only FDA- approved oral GLP-1 for weight management, through many insurance plans as well as a transparent cash-pay option. Amazon Pharmacy provides fast, convenient home delivery of the Wegovy ® pill...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 20ef0b4e35770985
+symbol: AMZN
+published_utc: 2026-01-15T02:00:00Z
+url: https://www.nasdaq.com/press-release/aws-launches-aws-european-sovereign-cloud-and-announces-expansion-across-europe-2026
+headline: AWS Launches AWS European Sovereign Cloud and Announces Expansion Across Europe
+<<<TEXT>>>
+AWS announces the general availability of the AWS European Sovereign Cloud and plans to expand across Europe with new AWS Local Zones in Belgium, the Netherlands, and Portugal Amazon plans to invest more than €7.8 billion in the AWS European Sovereign Cloud in Germany and support an average of 2,800 full-time equivalent jobs annually.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8aef88df70ceaf7d
+symbol: AMZN
+published_utc: 2026-01-22T16:01:00Z
+url: https://www.nasdaq.com/press-release/amazoncom-webcast-fourth-quarter-2025-financial-results-conference-call-2026-01-22
+headline: Amazon.com to Webcast Fourth Quarter 2025 Financial Results Conference Call
+<<<TEXT>>>
+Amazon.com, Inc. announced today that it will hold a conference call to discuss its fourth quarter 2025 financial results on Thursday, February 5, 2026, at 2:00 p.m. PT/ 5:00 p.m. ET. The event will be webcast live, and the audio and associated slides will be available for at least three months thereafter at www.amazon.com/ir. View source version on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ef4c88efa48c06a6
+symbol: AMZN
+published_utc: 2026-01-31T08:00:00Z
+url: https://www.nasdaq.com/press-release/ring-habitat-humanity-and-paris-johnson-jr-foundation-team-bring-housing-support
+headline: Ring, Habitat for Humanity, and Paris Johnson Jr. Foundation Team Up to Bring Housing Support to Glendale Families
+<<<TEXT>>>
+"We are thrilled to see this kind of partnership in action- a generous supporter like Ring, a local fan favorite like Paris Johnson Jr., and something truly special for our Habitat homeowners," said Todd Rogers, President& CEO, Habitat for Humanity Central Arizona." We are deeply grateful to everyone involved for making a positive impact in our community.".
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2c5eacc10f60b182
+symbol: AMZN
+published_utc: 2026-02-03T07:00:00Z
+url: https://www.nasdaq.com/press-release/amazon-sets-new-prime-delivery-speed-record-2025-over-13-billion-items-arriving-same
+headline: Amazon Sets New Prime Delivery Speed Record in 2025 With Over 13 Billion Items Arriving the Same or Next Day Around the World
+<<<TEXT>>>
+Amazon.com, Inc. today announced it delivered to Prime members around the world at its fastest speeds ever in 2025 for a third consecutive year, with over 13 billion items arriving the same or next day globally. In the U.S., Prime members received over 8 billion items the same or next day, an over 30% increase compared to the prior year, with groceries and everyday...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c00bf552fa9849a6
+symbol: AMZN
+published_utc: 2026-02-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/att-aws-and-amazon-leo-collaborate-accelerate-modernization-nations-connectivity
+headline: AT&T, AWS, and Amazon Leo Collaborate to Accelerate Modernization of Nation's Connectivity Infrastructure
+<<<TEXT>>>
+New strategic agreements include migrating AT&T workloads to AWS, high-capacity fiber connectivity for data centers, and working with Amazon Leo to extend AT&T networks. DALLAS& SEATTLE---- AT&T, Amazon Web Services and Amazon Leo today announced work to modernize the nation’ s connectivity infrastructure and unlock the next wave of cloud driven innovation for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 333024e6bc5d01ef
+symbol: AMZN
+published_utc: 2026-02-05T16:01:00Z
+url: https://www.nasdaq.com/press-release/amazoncom-announces-fourth-quarter-results-2026-02-05
+headline: Amazon.com Announces Fourth Quarter Results
+<<<TEXT>>>
+Amazon.com, Inc. today announced financial results for its fourth quarter ended December 31, 2025. Excluding the $4.4 billion favorable impact from year-over-year changes in foreign exchange rates throughout the year, net sales increased 12% compared with 2024. North America segment sales increased 10% year-over-year to $426.3 billion. International...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8896818afb05b631
+symbol: AMZN
+published_utc: 2026-02-06T11:19:00Z
+url: https://www.nasdaq.com/press-release/clear-ads-publishes-implementation-guide-amazon-opens-ad-platform-ai-agents-2026-02
+headline: Clear Ads Publishes Implementation Guide as Amazon Opens Ad Platform to AI Agents
+<<<TEXT>>>
+Clear Ads, an advertising agency, released a step-by-step implementation guide for sellers looking to connect AI agents to Amazon's advertising platform through the newly launched Ads MCP Server open beta. Amazon announced the open beta of its Ads Model Context Protocol Server on February 2 at the IAB Annual Leadership Meeting. Amazon's MCP Server is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1cc1491c154e8beb
+symbol: AMZN
+published_utc: 2026-02-10T16:45:00Z
+url: https://www.nasdaq.com/press-release/amazon-one-medical-introduces-health-insights-help-patients-better-understand-their
+headline: Amazon One Medical Introduces Health Insights to Help Patients Better Understand Their Lab Results
+<<<TEXT>>>
+Amazon One Medical today announced the launch of Health Insights, a new beta feature that helps eligible members gain deeper understanding of their routine lab results through personalized analysis and evidence-based recommendations.  "We're always looking for ways to improve our members' ability to engage and be proactive with their health journey," said...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ec6d7ed89508e6ea
+symbol: AMZN
+published_utc: 2026-02-11T12:53:00Z
+url: https://www.nasdaq.com/press-release/amazon-pharmacy-will-expand-same-day-medication-delivery-nearly-4500-us-cities-and
+headline: Amazon Pharmacy Will Expand Same-Day Medication Delivery to Nearly 4,500 U.S. Cities and Towns by Year End
+<<<TEXT>>>
+Amazon Pharmacy today announced it will expand its Same-Day prescription delivery service to nearly 4,500 U.S. cities and towns by the end of 2026— adding nearly 2,000 new communities over the course of the year. Amazon Pharmacy's Same-Day prescription delivery expansion brings fast, reliable medication delivery to customers nationwide while providing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0ee2f8cf5c38155c
+symbol: AMZN
+published_utc: 2026-02-24T10:00:00Z
+url: https://www.nasdaq.com/press-release/national-safety-council-projects-12-decrease-us-traffic-fatalities-2025-2026-02-24
+headline: National Safety Council Projects 12% Decrease in U.S. Traffic Fatalities in 2025
+<<<TEXT>>>
+--Preliminary analysis from the National Safety Council estimates 37,810 motor vehicle crash deaths in the United States in 2025– a 12% decrease from 2024, even as overall miles driven increased by 0.9%. Nine states and the District of Columbia experienced decreases of more than 15%: D.C., California, Rhode Island, Iowa, Minnesota, Mississippi, New York,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 884697f8417fda3e
+symbol: AMZN
+published_utc: 2026-02-27T08:30:00Z
+url: https://www.nasdaq.com/press-release/openai-and-amazon-announce-strategic-partnership-2026-02-27
+headline: OpenAI and Amazon Announce Strategic Partnership
+<<<TEXT>>>
+Amazon Web Services and OpenAI will co-create a Stateful Runtime Environment powered by OpenAI models, available on Amazon Bedrock for AWS customers to build generative AI applications and agents at production scale. AWS will be the exclusive third-party cloud distribution provider for OpenAI Frontier, which enables organizations to build, deploy, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 43d304c0a9c6ed5c
+symbol: AMZN
+published_utc: 2026-03-09T07:32:00Z
+url: https://www.nasdaq.com/press-release/amazon-pharmacy-expands-access-eli-lillys-zepbound-kwikpen-weight-management-2026-03
+headline: Amazon Pharmacy Expands Access to Eli Lilly’s Zepbound KwikPen for Weight Management
+<<<TEXT>>>
+Amazon Pharmacy, a full-service digital pharmacy that delivers medications quickly and directly to customers' homes, today announced expanded access to the new Zepbound ® KwikPen ® through Amazon Pharmacy. With a valid prescription, customers can order Zepbound KwikPen through Amazon Pharmacy, see exactly how much the medication costs— starting at $299...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b6759d756c587aef
+symbol: AMZN
+published_utc: 2026-03-13T11:06:00Z
+url: https://www.nasdaq.com/press-release/aws-and-cerebras-collaboration-aims-set-new-standard-ai-inference-speed-and
+headline: AWS and Cerebras Collaboration Aims to Set a New Standard for AI Inference Speed and Performance in the Cloud
+<<<TEXT>>>
+Deployed in AWS data centers and accessed through Amazon Bedrock, AWS Trainium+ Cerebras CS-3 solution will accelerate inference speed. Fastest inference coming soon: AWS and Cerebras are partnering to deliver the fastest AI inference available through Amazon Bedrock, launching in the next couple of months. Industry-leading speed and performance: With AWS...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 90f19257063c1d7f
+symbol: AMZN
+published_utc: 2026-03-16T07:00:00Z
+url: https://www.nasdaq.com/press-release/promino-nutritional-sciences-inc-initiates-largest-production-run-company-history
+headline: Promino Nutritional Sciences Inc. Initiates Largest Production Run in Company History - Approximately 3.5 Million Servings of Rejuvenate Muscle Health(R)
+<<<TEXT>>>
+Promino Nutritional Sciences Inc. announces it has initiated production of approximately 3.5 million sticks of Rejuvenate Muscle Health ®, representing the largest single production run in the Company's history. Current demand for Rejuvenate is primarily driven by national retail distribution and Amazon. The Company is introducing a TikTok Shop USA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a92f1e1eceb2fc41
+symbol: AMZN
+published_utc: 2026-03-19T08:00:00Z
+url: https://www.nasdaq.com/press-release/hammacher-schlemmer-acquired-ex-woot-leadership-team-2026-03-19
+headline: Hammacher Schlemmer acquired by ex-Woot leadership team
+<<<TEXT>>>
+--Stores.com announced today it has acquired Hammacher Schlemmer, aiming to reclaim the 178- year-old brand's mantle as the place for curious shoppers to discover "The Best, The Only, and The Unexpected".  "Every Christmas season, there was one catalog I couldn't wait to get my hands on: Hammacher Schlemmer," says Matt Rutledge, CEO of Stores.com and founder and ex-CEO...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ba3b109e73083b42
+symbol: AMZN
+published_utc: 2026-03-25T11:30:00Z
+url: https://www.nasdaq.com/press-release/reframe-analysis-imdbpro-data-finds-rollback-gender-balanced-hiring-both-sides-camera
+headline: ReFrame Analysis of IMDbPro Data Finds Rollback in Gender-Balanced Hiring on Both Sides of the Camera in the Top Films of 2025
+<<<TEXT>>>
+ReFrame, the initiative launched in 2017 by Sundance Institute and WIF to advance gender equity in the screen industries, and IMDbPro, the essential resource for entertainment industry professionals, today announced that 26 of the IMDbPro 100 most popular films of 2025 will be awarded the ReFrame Stamp for gender-balanced production.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 41db420f0fbe94dd
+symbol: AMZN
+published_utc: 2026-03-30T13:00:00Z
+url: https://www.nasdaq.com/press-release/k-buddhism-ai-sage-can-ai-awaken-its-original-nature-2026-03-30
+headline: K-Buddhism: "AI Sage", Can an AI awaken to its Original Nature?
+<<<TEXT>>>
+--Moonzen Publishing announces the release of "AI Sage", a work by Nongseon Daewon Jeonbeopseonsa, a Korean Zen master in the direct Dharma lineage of the Buddha. For over 3,000 years, Buddhism has maintained the teaching:.  "Both sentient and non-sentient beings possess Buddha-nature".
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f45bd46849ef431d
+symbol: AMZN
+published_utc: 2026-03-31T09:00:00Z
+url: https://www.nasdaq.com/press-release/small-businesses-can-soon-enjoy-new-rewards-prime-business-and-amazon-business-credit
+headline: Small Businesses Can Soon Enjoy New Rewards With the Prime Business and Amazon Business Credit Cards
+<<<TEXT>>>
+Amazon today announced a new Prime Business Card and a new Amazon Business Card, coming this spring, offering U.S. customers more ways than ever to save along with a suite of new features designed for small business customers. Customers can choose between two options: the Prime Business Card, offering Prime members 5% back on Amazon purchases, or the Amazon...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7f9e5a440c386ef1
+symbol: AMZN
+published_utc: 2026-04-06T10:00:00Z
+url: https://www.nasdaq.com/press-release/nsc-study-highlights-benefits-workplace-injury-prevention-technology-2026-04-06
+headline: NSC Study Highlights Benefits of Workplace Injury Prevention Technology
+<<<TEXT>>>
+This conclusion comes from new National Safety Council research that puts worker experience at the center of the conversation. The report, Frontline Worker Perceptions of MSD Prevention Technology, draws on an MSD Solutions Lab survey of more than 400 non-managerial workers across diverse industries– including manufacturing, construction, health care...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 00be40db3458a275
+symbol: AMZN
+published_utc: 2026-04-09T07:49:00Z
+url: https://www.nasdaq.com/press-release/amazon-pharmacy-offer-eli-lilly-and-companys-new-glp-1-pill-foundayo-same-day
+headline: Amazon Pharmacy to Offer Eli Lilly and Company’s New GLP-1 Pill Foundayo via Same-Day Delivery
+<<<TEXT>>>
+Amazon Pharmacy, a full-service digital pharmacy that offers fast medication delivery directly to customers' homes, now offers Eli Lilly and Company’ s recently approved GLP-1 medication, Foundayo™, a once daily oral treatment for adults with obesity or overweight with weight-related medical problems. Customers with a valid prescription can order Foundayo...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 40915675928e655b
+symbol: AMZN
+published_utc: 2026-04-09T18:21:00Z
+url: https://www.nasdaq.com/press-release/amazons-ai-powered-tool-matches-dogs-and-cats-potential-adopters-2026-04-09
+headline: Amazon’s AI-Powered Tool Matches Dogs and Cats with Potential Adopters
+<<<TEXT>>>
+Amazon has launched its first-ever pet adoption experience, an AI-powered matching tool that helps people discover adoptable dogs and cats based on their lifestyle and preferences. The innovation was developed in collaboration with PetArmor, a leading brand of quality pet products, and Best Friends Animal Society, a leading national animal welfare...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d779279331131d67
+symbol: AMZN
+published_utc: 2026-04-15T16:01:00Z
+url: https://www.nasdaq.com/press-release/amazoncom-webcast-first-quarter-2026-financial-results-conference-call-2026-04-15
+headline: Amazon.com to Webcast First Quarter 2026 Financial Results Conference Call
+<<<TEXT>>>
+Amazon.com, Inc. announced today that it will hold a conference call to discuss its first quarter 2026 financial results on Wednesday, April 29, 2026, at 2:30 p.m. PT/ 5:30 p.m. ET. The event will be webcast live, and the audio and associated slides will be available for at least three months thereafter at www.amazon.com/ir. View source version on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 76e6b1aa11b96fc5
+symbol: AMZN
+published_utc: 2026-04-24T08:10:00Z
+url: https://www.nasdaq.com/press-release/meta-signs-agreement-aws-power-agentic-ai-aws-graviton-chips-2026-04-24
+headline: Meta Signs Agreement With AWS to Power Agentic AI on AWS Graviton Chips
+<<<TEXT>>>
+Meta has signed an agreement to deploy AWS Graviton processors at scale. The deal marks a significant expansion of a long-standing partnership between the two companies as Meta builds its next generation of AI. This press release features multimedia.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 898260b538d29c71
+symbol: AMZN
+published_utc: 2026-04-29T16:01:00Z
+url: https://www.nasdaq.com/press-release/amazoncom-announces-first-quarter-results-2026-04-29
+headline: Amazon.com Announces First Quarter Results
+<<<TEXT>>>
+Amazon.com, Inc. today announced financial results for its first quarter ended March 31, 2026. "We’ re making customers’ lives easier and better every day across all our businesses, and their response is driving significant growth," said Andy Jassy, President and CEO, Amazon." AWS is growing 28% on a very large base, our chips business topped a $20 billion revenue run...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4093e7f68e9f6782
+symbol: AMZN
+published_utc: 2026-04-30T10:07:00Z
+url: https://www.nasdaq.com/press-release/audible-opens-doors-first-ever-bookless-bookstore-2026-04-30
+headline: AUDIBLE OPENS DOORS TO FIRST-EVER BOOKLESS BOOKSTORE
+<<<TEXT>>>
+--Audible, the leading creator and provider of premium audio storytelling, will open the doors on May 1 to Audible Story House, the first-ever bookless bookstore— a listening lounge and community hub where audio storytelling comes to life, offering a physical way to experience audio content beyond digital listening. Audible Story House will also feature a café...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ce31adbbc27d374e
+symbol: AMZN
+published_utc: 2026-05-04T06:00:00Z
+url: https://www.nasdaq.com/press-release/amazon-launches-amazon-supply-chain-services-opening-its-logistics-network-all
+headline: Amazon Launches Amazon Supply Chain Services, Opening Its Logistics Network to All Businesses
+<<<TEXT>>>
+Amazon today announced the launch of Amazon Supply Chain Services, which extends the company’ s entire portfolio of freight, distribution, fulfillment, and parcel shipping solutions to businesses of all types and sizes. Over the past three years, hundreds of thousands of Amazon sellers have trusted the company’ s logistics network to move, store, and deliver...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dcb344c7e1ac4934
+symbol: AMZN
+published_utc: 2026-05-05T09:05:00Z
+url: https://www.nasdaq.com/press-release/businesses-across-country-can-now-add-fresh-groceries-their-amazon-business-orders
+headline: Businesses Across the Country Can Now Add Fresh Groceries to Their Amazon Business Orders in Over 2,300 Cities and Towns
+<<<TEXT>>>
+Amazon Business is bringing Same-Day Delivery of fresh, perishable groceries to business customers across the country, answering one of its customers' top requests. In more than 2,300 cities and towns across the U.S., thousands of fresh grocery items— including dairy, produce, baked goods, and frozen foods from national and local brands— are now available...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 01242c4457c959e9
+symbol: AMZN
+published_utc: 2026-05-05T10:07:00Z
+url: https://www.nasdaq.com/press-release/amazon-and-transaera-expand-use-high-efficiency-heat-pump-technology-2026-05-05
+headline: Amazon and Transaera to Expand Use of High-Efficiency Heat Pump Technology
+<<<TEXT>>>
+--Amazon and Transaera, a Boston- based innovator in next-generation cooling and dehumidification systems today announced a new collaboration following a successful six-month field trial of Transaera's rooftop-based cooling technology at an Amazon logistics facility. The successful trial paved the way for a broader multi-year commercial agreement to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 50b65d2cf789c2d9
+symbol: AMZN
+published_utc: 2026-05-07T07:03:00Z
+url: https://www.nasdaq.com/press-release/amazon-pharmacy-expands-access-new-ozempicr-pill-same-day-delivery-kiosks-2026-05-07
+headline: Amazon Pharmacy Expands Access to New Ozempic® Pill via Same-Day Delivery, Kiosks
+<<<TEXT>>>
+Amazon Pharmacy, a full-service digital pharmacy that delivers medications directly to customers' homes, is expanding access to Novo Nordisk's Ozempic ® pill, the only FDA- approved oral GLP-1 medication to treat type 2 diabetes. Amazon Pharmacy will offer Same-Day prescription delivery and pickup within minutes through in-office kiosk locations soon,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 98e903a7400214b8
+symbol: AMZN
+published_utc: 2026-05-07T10:00:00Z
+url: https://www.nasdaq.com/press-release/wnba-and-aws-announce-multi-year-partnership-drive-fan-engagement-innovation-and
+headline: WNBA and AWS Announce Multi-Year Partnership to Drive Fan Engagement, Innovation and Growth
+<<<TEXT>>>
+AWS will become the Official Cloud and Cloud AI Partner of the WNBA, in addition to joining the WNBA Changemakers Collective. "We view this partnership as integral to the next phase of growth for the WNBA," said WNBA Chief Growth Officer Colie Edison." From unlocking deeper insights to creating more immersive fan experiences and driving innovation, we are excited...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4b61203507c30e94
+symbol: AMZN
+published_utc: 2026-05-12T06:00:00Z
+url: https://www.nasdaq.com/press-release/amazon-rolls-out-amazon-now-dozens-cities-across-us-providing-30-minute-delivery
+headline: Amazon Rolls Out Amazon Now to Dozens of Cities Across the U.S., Providing 30-Minute Delivery to Millions of Customers
+<<<TEXT>>>
+Amazon.com, Inc. today announced the rollout of its ultra-fast delivery service Amazon Now to dozens of cities and millions of customers across the U.S. Amazon Now, which provides thousands of fresh groceries, everyday household essentials, and locally relevant items in about 30 minutes or less, is now widely available in Atlanta, Dallas-Fort Worth,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 20943492f26691a6
+symbol: AMZN
+published_utc: 2026-05-13T15:30:00Z
+url: https://www.nasdaq.com/press-release/whole-foods-market-bring-its-daily-shop-concept-three-new-us-markets-2026-05-13
+headline: Whole Foods Market to Bring its Daily Shop Concept to Three New U.S. Markets
+<<<TEXT>>>
+Whole Foods Market announced its smaller format store concept, Whole Foods Market Daily Shop, will open in Boston, Chicago and Philadelphia over the next two years, continuing the brand’ s expansion of the format into dense urban neighborhoods. "Daily Shop is an important part of how we’ re growing our physical store presence," said Christina Minardi, Vice President...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 688f16e51682bb93
+symbol: AMZN
+published_utc: 2026-05-27T11:00:00Z
+url: https://www.nasdaq.com/press-release/international-peace-stamp-issued-2026-05-27
+headline: International Peace Stamp Issued
+<<<TEXT>>>
+--The U.S. Postal Service issued its International Peace stamp today at the 2026 Boston World Exposition as part of the stamp show's international peace theme day. The stamp features an origami crane— a symbol of global peace— against a bright blue sky. The paper crane teaches us that transformation is possible, "said Steve Monteith, USPS chief customer and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b59d9e00ab359f10
+symbol: AMZN
+published_utc: 2026-06-02T01:04:00Z
+url: https://www.nasdaq.com/press-release/mark-your-calendars-amazon-announces-prime-day-event-june-23-26-millions-exclusive
+headline: Mark Your Calendars: Amazon Announces Prime Day Event from June 23–26, with Millions of Exclusive Deals for Prime Members
+<<<TEXT>>>
+Amazon today announced that Prime Day returns from June 23 at 12:01 a.m. PDT through June 26, kicking off summer with millions of deals exclusively for Prime members. New drops launch three times daily at 12 a.m., 8 a.m., and 1 p.m. PDT throughout the event on amazon.com/primeday and the Amazon Shopping app, each featuring five or more deals across categories...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f01440eed71ddf20
+symbol: AMZN
+published_utc: 2026-06-02T09:50:00Z
+url: https://www.nasdaq.com/press-release/whole-foods-market-opens-applications-its-2026-local-and-emerging-accelerator-program
+headline: Whole Foods Market Opens Applications for Its 2026 Local and Emerging Accelerator Program
+<<<TEXT>>>
+Whole Foods Market today opened applications for its 2026 Local and Emerging Accelerator Program, reinforcing the company’ s commitment to supporting innovative local and emerging brands. Launched in 2022, the program provides mentorship opportunities to a select group of brands not yet on the shelves of Whole Foods Market. "One of the most rewarding parts...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 87f91dad39147e93
+symbol: AMZN
+published_utc: 2026-06-10T00:57:00Z
+url: https://www.nasdaq.com/press-release/natalia-dyer-explores-korean-beauty-culture-unveiling-authentic-charm-set-2026-06-10
+headline: Natalia Dyer Explores Korean Beauty Culture, Unveiling Authentic Charm on Set
+<<<TEXT>>>
+--Natalia Dyer has recently developed a strong appreciation for Korean skincare and beauty culture. Demand for Korean skincare continues to expand in North America, particularly among consumers seeking ingredient-conscious and skin barrier-focused products. A representative from Purito Seoul stated, " Natalia Dyer strongly connected with K-beauty's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1d0d6b50437da511
+symbol: AMZN
+published_utc: 2026-06-10T06:00:00Z
+url: https://www.nasdaq.com/press-release/amazon-supply-chain-services-launches-less-truckload-freight-offering-all-businesses
+headline: Amazon Supply Chain Services Launches Less-Than-Truckload Freight Offering for All Businesses
+<<<TEXT>>>
+Amazon today announced the U.S. expansion of its less-than-truckload freight beyond its current inbound-to- Amazon offering, to any type of destination, including third-party warehouses, distribution centers, and retail partners, as part of the suite of offerings from Amazon Supply Chain Services. Since 2019, Amazon LTL has served tens of thousands of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8be71b59a493e935
+symbol: AMZN
+published_utc: 2026-06-10T09:15:00Z
+url: https://www.nasdaq.com/press-release/amazon-names-kin-tayari-jones-no-1-book-2026-so-far-2026-06-10
+headline: Amazon Names Kin by Tayari Jones the No. 1 Book of 2026 So Far
+<<<TEXT>>>
+Amazon today announced its Best Books of the Year So Far list, led by Tayari Jones’ s Kin as the No. 1 pick. Amazon Editor Erin Kodicek raves that the" sentences sing" in this novel about two motherless friends who come of age in the Jim Crow South. The Amazon Editors read thousands of books every year across genres to help connect readers with their next favorite book...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 79c672d814d79d4c
+symbol: AMZN
+published_utc: 2026-06-16T08:00:00Z
+url: https://www.nasdaq.com/press-release/pennymac-names-aws-preferred-cloud-provider-expanding-strategic-agreement-deploy
+headline: Pennymac Names AWS as Preferred Cloud Provider, Expanding Strategic Agreement to Deploy Enterprise-Grade AI and Commercialize its Servicing Platform
+<<<TEXT>>>
+PennyMac Financial Services, Inc., one of America's leading U.S. mortgage lenders and servicers, is expanding its strategic agreement with Amazon Web Services, Inc., an Amazon.com, Inc. company, to accelerate its transformation into an AI-driven mortgage technology leader. Building on years of successful collaboration, Pennymac is now leveraging AWS’...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 45cb99bcbd132932
+symbol: AMZN
+published_utc: 2026-06-30T06:00:00Z
+url: https://www.nasdaq.com/press-release/gas-pump-grill-prime-introduces-summer-savings-just-time-fourth-july-2026-06-30
+headline: From the Gas Pump to the Grill: Prime Introduces Summer Savings Just in Time for the Fourth of July
+<<<TEXT>>>
+Amazon today introduced new summer savings for Prime members just in time for the Fourth of July, including $0.50 per gallon fuel savings, timely savings on barbecue grocery items alongside free Same-Day Delivery in eligible areas, and an exclusive monthly grocery credit for Prime Access members. Prime, Prime Access, and Prime for Young Adults members can save...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 672a76ba229d9bb8
+symbol: AMZN
+published_utc: 2026-07-02T06:00:00Z
+url: https://www.nasdaq.com/press-release/restart-life-sciences-reports-record-breaking-june-revenue-holy-crap-foods-amazon
+headline: Restart Life Sciences Reports Record-Breaking June Revenue for Holy Crap Foods as Amazon Canada Sales Surge YoY
+<<<TEXT>>>
+Restart Life Sciences Corp. is pleased to report its preliminary, unaudited financial results for the month of June 2026 regarding its wholly owned subsidiary, Holy Crap Foods Inc., alongside an update on internal operational infrastructure and market expansion initiatives. Following the acquisition of Holy Crap Foods Inc. on February 27, 2026, the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 81be08970f869015
+symbol: AMZN
+published_utc: 2026-07-08T08:30:00Z
+url: https://www.nasdaq.com/press-release/amazon-supports-weekly-humanitarian-relief-flights-venezuela-first-its-kind
+headline: Amazon Supports Weekly Humanitarian Relief Flights to Venezuela in First-of-its-Kind Collaboration
+<<<TEXT>>>
+Amazon today announced it will support a seven-flight humanitarian air delivery operation into Caracas, Venezuela, in response to the devastating twin earthquakes that struck northern Venezuela on June 24, leaving more than 650,000 people in need of aid. The weekly flights are possible through a collaboration between Amazon, Airlink, the U.S. State...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4cbfce729f24c13a
+symbol: AMZN
+published_utc: 2026-07-16T16:01:00Z
+url: https://www.nasdaq.com/press-release/amazoncom-webcast-second-quarter-2026-financial-results-conference-call-2026-07-16
+headline: Amazon.com to Webcast Second Quarter 2026 Financial Results Conference Call
+<<<TEXT>>>
+Amazon.com, Inc. announced today that it will hold a conference call to discuss its second quarter 2026 financial results on Thursday, July 30, 2026, at 2:00 p.m. PT/ 5:00 p.m. ET. The event will be webcast live, and the audio and associated slides will be available for at least three months thereafter at www.amazon.com/ir. View source version on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 409bb9da0f193af3
+symbol: AMZN
+published_utc: 2026-07-21T09:00:00Z
+url: https://www.nasdaq.com/press-release/amazon-business-reaches-60-billion-annualized-gross-sales-serving-over-11-million
+headline: Amazon Business Reaches $60 Billion in Annualized Gross Sales, Serving Over 11 Million Organizations Worldwide
+<<<TEXT>>>
+Today, Amazon announced that Amazon Business reached $60 billion in annualized gross sales in Q2, helping over 11 million organizations worldwide simplify their business buying. Growing selection for every organization with Amazon Business. Since launching in the U.S. in 2015, Amazon Business has grown to serve organizations across 11 countries,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 118b957024d6ed98
+symbol: AMZN
+published_utc: 2026-07-30T16:01:00Z
+url: https://www.nasdaq.com/press-release/amazoncom-announces-second-quarter-results-2026-07-30
+headline: Amazon.com Announces Second Quarter Results
+<<<TEXT>>>
+Excluding the $0.1 billion favorable impact from year-over-year changes in foreign exchange rates throughout the quarter, net sales increased 20% compared with second quarter 2025. North America segment sales increased 16% year-over-year to $116.2 billion. International segment sales increased 15% year-over-year to $42.2 billion. AWS segment sales...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cdd06e77ea3d737b
+symbol: AMZN
+published_utc: 2026-08-03T13:00:00Z
+url: https://www.nasdaq.com/press-release/superblocks-and-aws-announce-strategic-collaboration-bring-secure-enterprise-ai-app
+headline: Superblocks and AWS Announce Strategic Collaboration to Bring Secure Enterprise AI App Development to Amazon Bedrock
+<<<TEXT>>>
+Superblocks, the enterprise vibe-coding platform for generating internal AI applications, and Amazon Web Services, an Amazon.com, Inc. company, today announced a multi-year collaboration to make Superblocks' generative AI platform available within customers' AWS environments, including Amazon Bedrock. Amazon Bedrock is a platform for building...
+<<<END>>>

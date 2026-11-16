@@ -751,3 +751,265 @@ Papa John's reported Q3 2026 revenue of $454.84 million, down 10.5% year-over-ye
 <<<INSIGHTS>>>
 PZZA | negative | Despite an EPS beat, Papa John's faced significant headwinds including a 10.5% year-over-year revenue decline, 22.1% drop in company-owned restaurant sales, declining franchise royalties (-8.4%), and negative international comparable sales growth (-1.8% vs. +0.5% estimate). The Zacks Rank #4 (Sell) rating and overall deteriorating operational metrics outweigh the EPS surprise.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143627926
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T23:14:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7f017590d2a8d0e4392d1de167b8b8211008b88779799d3dca8772af491d13cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: PAR Technology Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+PAR Technology (NYSE:PAR) raised its 2026 revenue and adjusted earnings outlook after reporting record third-quarter revenue, adjusted EBITDA and free cash flow, as demand for its restaurant and retail technology platform helped lift sales 15% from a year earlier. The company reported revenue of $1
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616784
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T12:34:38Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=549b64b2eb89c593d8262d47ed7e4b046a838949134ea75c1db9b0639ff17f80
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International, Inc. (PZZA) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Papa John's International, Inc. (PZZA) Q3 2026 Earnings Call November 5, 2026 8:00 AM ESTCompany ParticipantsTodd Penegor - President, CEO &...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143613874
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=612feb412a6a6eb0a4e933ae7ba4ba1a62e85759bb6b4276afb40ef64b22210d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/535109409/image_535109409.jpg?io=getty-c-w1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's: Paying The Price For Being Stuck In The Middle
+<<<SUMMARY>>>
+Papa John's International, Inc. faces a tough turnaround as sales slide and competition intensifies. Click for this PZZA stock earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143595903
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T04:32:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=647946d8645753e28e7e49b02068c9c877f22c682bec6b321a069e89b469c5f9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International, Inc. Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Papa John's International, Inc.'s Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143586240
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:28:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8cc5dd2ace4a17ea92c8c654e5e16ad9278ba438c13bb59efc5abf69afeedcc3
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/05/PapaJohns-storefront.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's Warns Cash-Strapped Consumers Are Ordering Less Pizza
+<<<SUMMARY>>>
+Papa John&#39;s stock fell after Q3 2026 earnings missed estimates and the company slashed its full-year sales and EBITDA outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804299
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:48:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6432bd854a4625dbcc1d5d0c8364fed5d262156342d50c463d587499f9ce8a80
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Domino's Strong Order Trends vs. Weak Ticket Growth: What Lies Ahead?
+<<<SUMMARY>>>
+DPZ's strong order growth is offset by declining ticket sizes as value-focused consumers reshape sales trends. Can promotions and new offerings drive stronger growth in 2027?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803311
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:08:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9e28899ffa30d3d5415bade3ee3b9e05fc4c12b6fac084a26ae4306677b152be
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: 'Papa John’s Franchisee Files for Bankruptcy in Pennsylvania' - Bloomberg
+<<<SUMMARY>>>
+https://www.bloomberg.com/news/articles/2026-11-12/papa-john-s-franchisee-files-for-bankruptcy-in-pennsylvania
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748382
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=658fc1cf8d301f3a9547e7f2334dbddb1b02ed28aa1ecbc74ac6bb8f52fd2b03
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Pizza franchisee files Chapter 11 bankruptcy, chain cut 239 units
+<<<SUMMARY>>>
+Papa John’s pizza chain will close hundreds of locations by the end of 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143700207
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:05:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d426906a3db3636e387444ffac14c67a3db4f109be078175892e8eff7268b9b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: PZZA Q3 2026 deep dive: management launches 'Unbox Better' amid continued sales pressure
+<<<SUMMARY>>>
+Fast-food pizza chain Papa John’s (NASDAQ:PZZA) missed Wall Street’s revenue expectations in Q3 2026, with sales falling 10.5% year on year to $454.8 million. Its non-GAAP profit of $0.16 per share was in line with analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143672070
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T02:45:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=2223f7a7261f97ea5d132a547758c7668f22a8712047fa6fc79504eba2ba1349
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1498123628/image_1498123628.jpg?io=getty-c-og
+category: company
+tickers: PZZA
+keywords: 
+headline: Earnings Breadth Hits Near-Record Highs, But Cracks Emerge At The Margins
+<<<SUMMARY>>>
+Nearly 2-to-1 EPS increases vs. decreases thus far in Q3, with 63% of reporting companies topping their prior EPS print, well above the 54% historical baseline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143667447
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T19:15:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=70bc6671da55903d2a53d539cdcb2213cba673925c8d609eb4760832b3289c94
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns (PZZA) Stock Fair Value Moves Lower After Analyst Target Cuts
+<<<SUMMARY>>>
+The latest update on Papa John's International centers on a lower Fair Value estimate, which moved from US$29.00 to US$23.50, a reduction of about 19%. Street research has been leaning more cautious, with several firms trimming price targets into the high teens and low twenties as they reassess North American same-store sales and earnings expectations. As you read on, you will see how this evolving analyst narrative may shape your view of Papa John’s and how to track further shifts from...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143667448
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7d955f8d512b1c9b25498eb90cbdf998e5bf10727c11ee3bad07fb58bb3ee710
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Snap a Pizza Pic, Get a FREE Pizza: Customers Help Papa Johns on Its Journey to Better
+<<<SUMMARY>>>
+ATLANTA, November 09, 2026--Papa Johns is inviting customers to put every slice to the test with the launch of Snap a Pizza, Get a Free Pizza. Starting today, the two-week promotion turns pizza night into an opportunity to be heard, encouraging customers to share photos and honest feedback about their orders. By tapping into the everyday ritual of "the phone eats first," Papa Johns is turning customer feedback into actionable insights that will help improve the customer experience, while rewardi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:415dbed7eddd02f34a178a0eb971dfa62bd5419eb104c3ecf9e3f6aaa470fc8d
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T14:48:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3029623/domino-s-strong-order-trends-vs-weak-ticket-growth-what-lies-ahead?cid=CS-ZC-FT-analyst_blog|quick_take-3029623
+image_url: https://staticx-tuner.zacks.com/images/articles/main/c1/2340.jpg
+category: 
+tickers: DPZ, PZZA, YUMC
+keywords: same-store sales, order growth, average ticket size, value promotions, consumer spending, Q3 2026 earnings, pizza industry competition
+headline: Domino's Strong Order Trends vs. Weak Ticket Growth: What Lies Ahead?
+<<<SUMMARY>>>
+Domino's Pizza reported Q3 2026 U.S. same-store sales growth of 0.3%, driven by strong order count increases that offset declining average ticket sizes due to consumer spending pressures. The company is implementing value promotions and new products like The Domino to boost ticket growth, while expecting continued order momentum in Q4 but sales near the lower end of guidance. Domino's shares have outperformed the broader market, trading at a lower valuation than industry peers.
+<<<INSIGHTS>>>
+DPZ | neutral | Mixed performance with positive order growth (+0.3% same-store sales) offset by declining ticket sizes and consumer spending pressure. Management expects Q4 order growth but sales guidance toward lower end of outlook. Stock has outperformed peers but carries a Hold rating.
+PZZA | negative | Reported 8.3% decline in North America comparable sales in Q3 2026, reflecting persistent competitive pressures despite transformation initiatives aimed at improving value and customer traffic.
+YUMC | neutral | Pizza Hut China showed 15 consecutive quarters of transaction growth (5% in Q3 2026) but faced 8% year-over-year average ticket decline due to value-oriented offerings, demonstrating traffic gains offset by lower spending per customer.
+<<<END>>>

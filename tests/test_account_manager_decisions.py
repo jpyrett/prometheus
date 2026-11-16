@@ -3,6 +3,7 @@ import copy
 import functools
 import json
 from datetime import date, timedelta
+from decimal import Decimal
 
 import pytest
 from critic_helpers import NOW, FakeClerk, captured, make_critic, profile, tamper, view
@@ -10,18 +11,18 @@ from critic_helpers import NOW, FakeClerk, captured, make_critic, profile, tampe
 from prometheus.agents.account_manager import decisions
 from prometheus.agents.account_manager.account_manager import AccountManager
 from prometheus.common import work_order as wo
+from prometheus.common.money import price as price_door
 from prometheus.common.portfolio import Portfolio, Position, load_portfolio
 from prometheus.rag.config import REPO_ROOT
-
-MARK = 80
 
 
 @functools.lru_cache(maxsize=None)
 def _reviewed(own_key="own", records=1):
     order = captured("PG_open")
-    for i in range(1, records):
-        order.recommendations.append(tamper(order.recommendations[0], **{"identity.record_id": f"extra{i:07d}", "action.action": "add"}))
-    make_critic(order, **({"own": {}} if own_key == "no_own" else {})).review_recommendations(order, view(), NOW)
+    make_critic(order, **({"listed": {"PG": None}} if own_key == "no_own" else {})).review_recommendations(order, view(), NOW)      # "no_own": the real review while the symbol directory cannot be read (`identity_unverified`, which asks for a person: entry 103; `value_not_assessable` no longer does)
+    for i in range(1, records):      # AMENDED (entry 105): these were second RECORDS of PG with the action `add`; the Critic reviews recommendations to buy only (and two records of one stock fail its integrity check), so the second purchase is a copy of the real PG record and its real review under another id: the decisions read the review and the record, nothing else
+        order.recommendations.append(tamper(order.recommendations[0], **{"identity.record_id": f"extra{i:07d}"}))
+        order.reviews.append(tamper(order.reviews[0], **{"record_id": f"extra{i:07d}", "review_id": f"review{i:07d}"}))
     return order
 
 
@@ -33,12 +34,12 @@ def reviewed(own_key="own", records=1, **changes):
     return order
 
 
-def cash(amount=20000.0):
+def cash(amount=Decimal("20000")):
     return Portfolio(user="Jacob Pyrett", cash_avail=amount)
 
 
-def decide(order, p=None, mode=None, approver=None, now=NOW, pf=None, mark=MARK):
-    return decisions.decide_trades(order, pf or cash(), p or profile(), mark, approver, now, mode)
+def decide(order, p=None, mode=None, approver=None, now=NOW, pf=None):
+    return decisions.decide_trades(order, pf or cash(), p or profile(), approver, now, mode)
 
 
 class Asked:
@@ -59,7 +60,7 @@ def test_a_traded_order_is_returned_unchanged_as_a_decided_one_is_and_nobody_is_
     assert order.status == "decided" and len(ask.cards) == 1
     order.status = "traded"
     before, again = json.dumps(order.model_dump(), sort_keys=True, default=str), Asked(False)
-    out = decide(order, approver=again, mode="auto", pf=cash(5.0))
+    out = decide(order, approver=again, mode="auto", pf=cash(Decimal("5")))
     assert out is order and out.status == "traded" and out.errors == [] and again.cards == [] and json.dumps(out.model_dump(), sort_keys=True, default=str) == before
 
 
@@ -85,7 +86,7 @@ def sample_prices():
         pytest.skip("the stored daily bars are not on this machine")
     if not all(found.get(s) for s in ("MSFT", "TSLA", "GM")):
         pytest.skip("the stored bars do not hold 2026-11-13 for MSFT, TSLA and GM")
-    return {s: found[s][-1]["close"] for s in found}
+    return {s: price_door(found[s][-1]["close"]) for s in found}                  # a stored bar is a float: it comes in through the price door, once
 
 
 def test_a_cost_the_cash_does_not_cover_is_checked_with_the_holdings_prices_for_raise_funds(sample_prices):
@@ -94,16 +95,16 @@ def test_a_cost_the_cash_does_not_cover_is_checked_with_the_holdings_prices_for_
     from datetime import date
     sample = load_portfolio(REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett.json")
     today = date(2026, 11, 13)
-    fresh = lambda: {"will_trade": "yes_user", "funds_avail": None, "funds_note": None, "escalated": True, "reason": "x"}
-    covered, d = 40.0, fresh()
+    fresh = lambda: {"will_trade": "yes_user", "funds_avail": None, "funds_note": None, "reason": "x"}
+    covered, d = Decimal("40"), fresh()
     decisions._funds(d, covered, sample, sample_prices, today)
     assert d == {**fresh(), "funds_avail": True}                                                      # $51.23 covers $40: yes, and no note
     d = fresh()
-    decisions._funds(d, 5000.0, sample, sample_prices, today)
+    decisions._funds(d, Decimal("5000"), sample, sample_prices, today)
     assert (d["will_trade"], d["funds_avail"]) == ("yes_user", True) and d["funds_note"].startswith("needs RaiseFunds: the cash does not cover it, but holdings in profit could (short by $4,948.77;")
     d = fresh()
-    decisions._funds(d, 10_000_000.0, sample, sample_prices, today)
-    assert (d["will_trade"], d["funds_avail"], d["escalated"]) == ("no_funds", False, False) and "$51.23 does not cover $10,000,000.00 and no holding in profit could raise the difference" in d["reason"]
+    decisions._funds(d, Decimal("10000000"), sample, sample_prices, today)
+    assert (d["will_trade"], d["funds_avail"]) == ("no_funds", False) and "$51.23 does not cover $10,000,000.00 and no holding in profit could raise the difference" in d["reason"]
 
 
 # ---------------------------------------------------------------- Ask and Auto
@@ -116,33 +117,42 @@ def test_a_prompt_that_fails_leaves_the_decision_pending_and_says_so():
     assert order.trade_decisions[0]["will_trade"] == "pending_user" and any("could not be asked about PG (EOFError)" in e for e in order.errors)
 
 
-def test_in_auto_mode_a_finding_that_asks_for_a_person_goes_to_the_user():
-    order = decide(reviewed("no_own"), p=profile(trade_mode="auto", auto_min_score=10), approver=Asked(None))
+def test_a_review_that_asked_for_a_person_is_denied_so_in_auto_mode_nobody_is_asked_and_nothing_is_traded():
+    """AMENDED (entry 104). Before, this review was APPROVED with a finding that asked for a person, and in Auto mode the Account Manager asked the user (`pending_user`, `escalated`). Now the Critic denies it
+    (`needs_human_review`, entry 103), and the Account Manager's row is `no_system_denied` whatever the mode: the reason is the Critic's own summary, and the approver is never called."""
+    asked = Asked(True)
+    order = decide(reviewed("no_own"), p=profile(trade_mode="auto"), approver=asked)
     d = order.trade_decisions[0]
-    assert d["will_trade"] == "pending_user" and d["escalated"] and "value_not_assessable" in d["reason"]
+    assert order.reviews[0]["denial_reasons"] == ["needs_human_review"] and d["will_trade"] == "no_system_denied" and not d["asked_user"] and asked.cards == []
+    assert d["reason"] == order.reviews[0]["summary"] and d["reason"].startswith("DENY PG: a person must look before this can trade: identity_unverified") and "escalated" not in d
+    ask_mode = Asked(True)
+    assert decide(reviewed("no_own"), p=profile(trade_mode="ask"), approver=ask_mode).trade_decisions[0]["will_trade"] == "no_system_denied" and ask_mode.cards == []      # in Ask mode too: a denial is final
 
 
-def test_a_sale_is_never_traded_automatically_and_is_the_whole_holding_of_the_real_sample_portfolio():
-    """The real sample portfolio of Jacob Pyrett holds 60 shares of GM. A recommendation to reduce GM is the whole holding (the Account Manager's own knowledge: the Critic and the Advisor size no sale), and it goes to
-    the user even in Auto mode with a mark of 0."""
+def test_in_auto_mode_an_approved_purchase_trades_with_the_critics_reason_and_nobody_is_asked_at_any_score():
+    """Entry 104: no second mark. Auto mode trades what the Critic approved, at the score it approved (PG_open's 88 here, and a review that approved at 70, the Critic's own mark, the same)."""
+    for changes in ({}, {"score": 70, "grade": "C"}):
+        asked = Asked(False)
+        d = decide(reviewed(**changes), p=profile(trade_mode="auto"), approver=asked).trade_decisions[0]
+        assert d["will_trade"] == "yes_auto" and not d["asked_user"] and asked.cards == [] and d["shares"] > 0
+        assert d["reason"].startswith(f"approved by the Critic (score {changes.get('score', 88)}): Auto mode trades what the Critic approves") and "escalated" not in d
+
+
+def test_a_recommendation_to_reduce_is_never_traded_or_asked_about_in_either_mode():
+    """AMENDED (entry 104; the sale rows of the old table are gone). The Advisor recommends purchases only and a sale never comes from a recommendation (Jacob: *"The Advisor never recommends reducing a holding"*): an
+    approved review whose action is `reduce` (a stored one, or a tampered one: this is the real PG_open review with the action changed) has nothing to trade. The sample portfolio holds 60 shares of GM and 123 of TSLA, and
+    neither is sold: no shares, no card, no `yes`."""
     sample = load_portfolio(REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett.json")
-    order = reviewed(action="reduce", symbol="GM")
-    d = decide(order, p=profile(trade_mode="auto", auto_min_score=0), approver=Asked(True), pf=sample).trade_decisions[0]
-    assert (d["will_trade"], d["escalated"], d["shares"], d["est_cost"], d["funds_avail"], d["size"]) == ("yes_user", True, 60, 0.0, True, None) and "never traded automatically" in d["reason"] and "whole holding" in d["reason"]
-    assert wo.verify_trade(order, d["record_id"], NOW) == []                                          # the Trader's precondition: a whole number of shares of at least 1, and the decision's own
+    for mode, symbol in (("auto", "GM"), ("ask", "TSLA")):
+        order, ask = reviewed(action="reduce", symbol=symbol), Asked(True)
+        d = decide(order, p=profile(trade_mode=mode), approver=ask, pf=sample).trade_decisions[0]
+        assert (d["will_trade"], d["shares"], d["est_cost"], d["funds_avail"], d["size"]) == ("no_funds", 0, 0, False, None) and ask.cards == []
+        assert "a reduce recommendation is not a purchase and is never traded" in d["reason"] and wo.verify_trade(order, d["record_id"], NOW) != []
 
 
-def test_the_card_of_a_sale_says_the_whole_holding_and_its_shares():
-    sample = load_portfolio(REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett.json")
-    ask = Asked(None)
-    decide(reviewed(action="reduce", symbol="TSLA"), approver=ask, pf=sample)
-    [card] = ask.cards
-    assert card["action"] == "reduce" and card["shares"] == 123 and "WOULD BE PLACED  sell the whole holding of TSLA (123 shares)" in card["text"]
-
-
-def test_a_sale_of_a_symbol_the_portfolio_does_not_hold_is_not_traded():
+def test_a_recommendation_to_reduce_a_symbol_the_portfolio_does_not_hold_is_not_traded_either():
     d = decide(reviewed(action="reduce"), approver=Asked(True)).trade_decisions[0]                   # PG, in a portfolio of cash only
-    assert (d["will_trade"], d["shares"], d["funds_avail"]) == ("no_funds", 0, False) and "the portfolio holds no PG: there is nothing to sell" in d["reason"]
+    assert (d["will_trade"], d["shares"], d["funds_avail"]) == ("no_funds", 0, False) and "is not a purchase and is never traded" in d["reason"]
 
 
 def test_the_mode_argument_overrides_the_profile_for_one_run():
@@ -160,15 +170,18 @@ def _two_purchases():
 
 def with_holdings(amount):
     """`amount` in cash and $1,000 of a holding (50 shares of GM at a cost of $20): an equity over the cash,."""
-    return Portfolio(user="Jacob Pyrett", cash_avail=amount, positions=[Position(symbol="GM", shares=50, cost_basis=20.0, acquired=date(2026, 1, 5))])
+    return Portfolio(user="Jacob Pyrett", cash_avail=amount, positions=[Position(symbol="GM", shares=50, cost_basis=Decimal("20.0"), acquired=date(2026, 1, 5))])
 
 
-def test_each_purchase_is_checked_against_all_the_cash_nothing_is_reserved_for_another():
-    first, second = decide(_two_purchases(), pf=with_holdings(1000.0), approver=Asked(True)).trade_decisions
+def test_two_purchases_share_the_cash_a_share_at_a_time_and_no_cash_is_reserved_for_either():
+    """AMENDED (entry 106). With no split asked each of the two purchases used to be sized against ALL the cash (5 shares each of the $1,000: $1,671 in all, more than the account holds) and the Trader met the cash at each trade.
+    The money is spread round-robin in both modes: one share of each in turn. By hand at 167.10: a round of both costs $334.20, two rounds $668.40, a third round $1,002.60 is over the $1,000, so the first
+    takes one more share and the split is 3 and 2 ($835.50 together). Nothing is reserved: each one's caps still say the cash alone would allow 5."""
+    first, second = decide(_two_purchases(), pf=with_holdings(Decimal("1000")), approver=Asked(True)).trade_decisions
     assert [d["will_trade"] for d in (first, second)] == ["yes_user", "yes_user"]
-    assert first["shares"] == second["shares"] == 5 == int(1000 // 167.1) and first["est_cost"] == second["est_cost"] == 835.5            # $1,671 in all, each one covered by the $1,000
-    assert first["size"]["binding"] == second["size"]["binding"] == "money" and first["size"]["caps"]["money"] == second["size"]["caps"]["money"] == 5
-    short = decide(_two_purchases(), pf=with_holdings(100.0), approver=Asked(True))
+    assert (first["shares"], second["shares"]) == (3, 2) and first["est_cost"] + second["est_cost"] == Decimal("835.50") <= Decimal("1000") and first["size"]["allocation"] == second["size"]["allocation"] == "round_robin"
+    assert first["size"]["caps"]["money"] == second["size"]["caps"]["money"] == 5 == Decimal("1000") // Decimal("167.1")
+    short = decide(_two_purchases(), pf=with_holdings(Decimal("100")), approver=Asked(True))
     assert [d["will_trade"] for d in short.trade_decisions] == ["no_funds", "no_funds"] and all("not even one share fits" in d["reason"] for d in short.trade_decisions)
 
 
@@ -196,7 +209,7 @@ def test_a_clock_without_a_timezone_is_refused():
 # ---------------------------------------------------------------- the user answers later
 
 def test_a_pending_decision_is_answered_later_and_the_order_is_decided_when_none_is_left():
-    order = decide(_reviewed(records=2).model_copy(deep=True), pf=cash(20000.0))
+    order = decide(_reviewed(records=2).model_copy(deep=True), pf=cash(Decimal("20000")))
     first, second = [d["record_id"] for d in order.trade_decisions]
     decisions.record_user_decision(order, first, True, NOW + timedelta(minutes=5))
     assert order.trade_decisions[0]["will_trade"] == "yes_user" and order.trade_decisions[0]["asked_user"] and order.status == "reviewed"
@@ -233,9 +246,10 @@ def test_a_profile_file_that_is_wrong_is_a_value_error_naming_it(tmp_path):
         manager(profile=tmp_path / "p.json").profile
 
 
-def test_the_account_manager_decides_with_the_critics_own_mark_and_the_profiles_when_it_has_one():
-    assert manager(profile=profile(trade_mode="auto")).decide_trades(reviewed(), cash(), now=NOW).trade_decisions[0]["will_trade"] == "yes_auto"          # the Critic's mark is 80, the score 88
-    assert manager(profile=profile(trade_mode="auto", auto_min_score=99)).decide_trades(reviewed(), cash(), now=NOW).trade_decisions[0]["will_trade"] == "pending_user"
+def test_the_account_manager_decides_from_the_critics_verdict_alone_with_no_mark_of_its_own():
+    """AMENDED (entry 104): the profile used to carry an automatic-trading mark (`auto_min_score`) that could make an Auto approval wait for the user; it is gone, and the verdict is the only thing the decision reads."""
+    assert manager(profile=profile(trade_mode="auto")).decide_trades(reviewed(), cash(), now=NOW).trade_decisions[0]["will_trade"] == "yes_auto"
+    assert manager(profile=profile(trade_mode="auto")).decide_trades(reviewed("no_own"), cash(), now=NOW).trade_decisions[0]["will_trade"] == "no_system_denied"
     order = manager().decide_trades(reviewed(), cash(), approver=Asked(True), now=NOW)
     assert order.trade_decisions[0]["will_trade"] == "yes_user"
     manager().record_user_decision(order, order.trade_decisions[0]["record_id"], False, NOW)
@@ -266,7 +280,7 @@ def test_the_account_manager_asks_the_data_clerk_once_for_the_prices_of_what_the
     order = manager(profile=profile(), clerk=clerk).decide_trades(reviewed(), sample, approver=Asked(True), now=NOW)
     assert asked == [("account_manager", "fetch_quote", ["MSFT", "TSLA", "GM"])] and order.errors == []                  # ONE quote order, for the holdings only (PG is not held)
     size = order.trade_decisions[0]["size"]
-    assert size["equity"] == pytest.approx(51.23 + 50 * sample_prices["MSFT"] + 123 * sample_prices["TSLA"] + 60 * sample_prices["GM"]) and size["equity_basis"] == "cash and holdings at the prices given"
+    assert size["equity"] == Decimal("51.23") + 50 * sample_prices["MSFT"] + 123 * sample_prices["TSLA"] + 60 * sample_prices["GM"] and size["equity_basis"] == "cash and holdings at the prices given"
     assert order.trade_decisions[0]["will_trade"] == "no_funds" and size["caps"]["money"] == 0                              # the real equity is large and the sample's $51.23 buys no share of PG
 
 
@@ -288,7 +302,7 @@ def test_a_manager_with_no_clerk_and_a_portfolio_with_holdings_counts_them_at_co
     order = manager(profile=profile()).decide_trades(reviewed(), sample, approver=Asked(True), now=NOW)
     assert any("the current prices of the holdings could not be had (RuntimeError)" in e and "cost basis" in e for e in order.errors)
     size = order.trade_decisions[0]["size"]
-    assert size["equity"] == pytest.approx(51.23 + 50 * 150.0 + 123 * 300.0 + 60 * 10.0) and size["equity_basis"].endswith("MSFT, TSLA, GM at cost basis (no price)") and order.status == "decided"
+    assert size["equity"] == Decimal("51.23") + 50 * Decimal("150") + 123 * Decimal("300") + 60 * Decimal("10") and size["equity_basis"].endswith("MSFT, TSLA, GM at cost basis (no price)") and order.status == "decided"
 
 
 def test_a_price_the_data_clerk_cannot_give_is_a_message_and_that_holding_counts_at_cost_basis(monkeypatch):

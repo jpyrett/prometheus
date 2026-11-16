@@ -21,7 +21,6 @@ from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.advisor.calls import parse_list
 from prometheus.agents.advisor.record import Recommendation
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import load_portfolio
 from prometheus.rag.config import REPO_ROOT
 
 FIXTURES = Path(__file__).parent / "fixtures" / "advisor_real"
@@ -47,7 +46,7 @@ def replay(name: str, plan_reply=None):
     order = wo.WorkOrder.model_validate(fx["order"])
     replies = fx["replies"] if plan_reply is None else [plan_reply, *(r for r in fx["replies"] if '"theses"' in r)]
     advisor = Advisor(model=Scripted(*replies), clerk=RecordedClerk(fx["metrics"]), ledger=MemoryLedger())
-    advisor.generate_recommendations(order, load_portfolio(REPO_ROOT / fx["portfolio"]), "funds", date.fromisoformat(fx["today"]))
+    advisor.generate_recommendations(order, "funds", date.fromisoformat(fx["today"]))      # the Advisor is given NO portfolio (entry 105). The captures were made with the sample portfolio (MSFT, TSLA, GM); replayed without it the GM `add` and the two `hold` candidates are gone (see `test_the_sample_portfolios_holdings_are_not_in_the_run_any_more`)
     return order, fx
 
 
@@ -132,10 +131,14 @@ def test_sndks_trade_plan_is_checkable_by_hand(sndk):
     assert t["time_stop_date"] == "2027-04-30" and t["order_style"] == "limit" and not SIZE_FIELDS & set(t)                          # prices and dates: the record says nothing of how much (entry 80)
 
 
-def test_the_holdings_of_the_sample_portfolio_were_reviewed_two_are_left_alone_and_gm_is_an_add(sndk):
-    held = {c["symbol"]: c for c in sndk[0].candidates}
-    assert set(held) >= {"MSFT", "TSLA"} and all(held[s]["held"] and held[s]["reason"].startswith("hold:") for s in ("MSFT", "TSLA"))
-    assert of(sndk[0], "GM")["action"]["action"] == "add"                                                  # bullish at 60, as good as the new idea (SNDK 59): see the last test
+def test_the_sample_portfolios_holdings_are_not_in_the_run_any_more():
+    """AMENDED (entry 105). The captures were made with the sample portfolio of Jacob Pyrett (MSFT, TSLA, GM held) and the holdings pass reviewed them: MSFT and TSLA were `hold` candidates with `held: true` and GM was an `add` (bullish
+    at 60, as good as the new idea SNDK at 59). The Advisor is given no portfolio now, so the SAME captured inputs replayed give ONLY SNDK: one record, `open`, and no candidate for MSFT, TSLA or GM."""
+    order, fx = replay("SNDK")
+    assert {c["symbol"] for c in order.candidates} & {"MSFT", "TSLA", "GM"} == set()
+    assert [(r["symbol"], r["action"]["action"]) for r in order.recommendations] == [("SNDK", "open")] and [c["symbol"] for c in order.candidates] == []
+    assert {"MSFT", "TSLA", "GM"} <= set(fx["metrics"])                                                      # the capture still holds their metrics (it was made with them held): nothing asks for them now
+    assert fx["portfolio"] == "configs/portfolios/jacob_pyrett.json"                                         # and still names the portfolio it was made with: the replay ignores it
 
 
 # ---------------------------------------------------------------- PG
@@ -225,16 +228,7 @@ def test_the_replay_is_deterministic_and_the_model_owns_only_its_own_fields(sndk
     again, _ = replay("SNDK")
     assert scrub(of(again, "SNDK")) == scrub(of(sndk[0], "SNDK"))
     changed, _ = replay("SNDK", plan_reply=json.dumps({"companies": []}))                        # a model that says nothing: the numbers of the record are the same, the text evidence is not
-    one, two = scrub(of(sndk[0], "SNDK")), scrub(of(changed, "SNDK"))                            # (by symbol: a held name can be recommended too, see the next test)
+    one, two = scrub(of(sndk[0], "SNDK")), scrub(of(changed, "SNDK"))                         
     for section in ("features", "gates", "quality", "risk", "identity"):
         assert one[section] == two[section]
     assert two["signals"] == [] and one["signals_verified"] >= 1 and two["trade"]["stop_price"] == one["trade"]["stop_price"]
-
-
-def test_a_held_name_as_good_as_the_new_ideas_is_an_add_with_no_amount_and_the_user_limits_are_the_account_managers(sndk):
-    """Entry 80: the holdings pass does not ask whether the position after adding stays within a share of the equity (it needed a size and the user's money; there is no such limit at all since entry 91).
-    The held GM, bullish at 60, is as good as the new idea (SNDK 59) on the REAL capture, so it is an `add`. The `add` carries a plan of prices and no amount."""
-    gm = of(sndk[0], "GM")
-    assert gm["action"]["action"] == "add" and gm["action"]["held_shares"] > 0 and "as good as this run's new ideas" in gm["action"]["reason"] and gm["score"] == 60
-    assert gm["trade"]["family"] and gm["trade"]["stop_price"] and not SIZE_FIELDS & set(gm["trade"]) and "position_pct_after" not in gm["portfolio_fit"]
-    Recommendation.model_validate(gm)

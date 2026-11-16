@@ -12,7 +12,7 @@ THE FINAL GATE. A recommendation is approved when it has no blocker and its BLEN
 
     base   = sum(weight x dimension score) / sum(weights of the dimensions that apply)          six dimensions: accuracy, evidence, risk fit, timing, value, chart
     score  = min(100, round(base + the great-deal bonus));  with a blocker, at most `blocked_score_cap` (49)
-    approved = no blocker and score >= `approve_min_score` (70)
+    approved = no blocker and score >= `approve_min_score` (70) and no finding that asks for a person to look (`needs_human_review`: a denial that does not cap the score; entry 103)
 """
 from prometheus.agents.critic import report
 from prometheus.agents.critic.config import DIMENSIONS, CriticConfig
@@ -21,7 +21,8 @@ SCHEMA = 1
 TITLES = {"accuracy": "Accuracy", "evidence": "Evidence", "risk_fit": "Risk fit", "timing": "Timing", "value": "Value", "chart": "Chart"}
 HEADLINES = {"accuracy": lambda review, record: report._accuracy(review), "evidence": lambda review, record: report._evidence(review), "risk_fit": lambda review, record: report._risk(review),
              "timing": report._timing, "value": lambda review, record: report._value(review), "chart": lambda review, record: report._chart(review)}
-FORMULA = "score = min(100, round(sum(weight x dimension score) / sum(weights that apply) + bonus)); a blocker caps it; approved = no blocker and score >= the mark"
+FORMULA = ("score = min(100, round(sum(weight x dimension score) / sum(weights that apply) + bonus)); a blocker caps it; "
+           "approved = no blocker and score >= the mark and no finding that asks for a person to look")
 
 
 def band(score: float, config: CriticConfig) -> str:
@@ -54,7 +55,7 @@ def feedback(review: dict, record: dict | None, config: CriticConfig) -> dict:
         "verdict": {"approved": review["approved"], "decision": "approve" if review["approved"] else "deny", "score": review["score"], "grade": review["grade"], "band": band(review["score"], config),
                     "summary": review["summary"]},
         "gate": {"formula": FORMULA, "base_score": base, "bonus": review["bonus"], "weight_total": weight_total, "score_before_blockers": review["score_before_blockers"], "score": review["score"],
-                 "approve_min_score": v.approve_min_score, "auto_min_score": v.auto_min_score, "blocked_score_cap": v.blocked_score_cap,
+                 "approve_min_score": v.approve_min_score, "blocked_score_cap": v.blocked_score_cap,
                  "passed_score": review["score_before_blockers"] >= v.approve_min_score, "blocked": bool(blockers), "blocked_by": [b["code"] for b in blockers],
                  "denial_reasons": review["denial_reasons"], "margin": review["score"] - v.approve_min_score},
         "dimensions": rows,
@@ -83,5 +84,5 @@ def attach_decisions(order) -> None:
     for d in order.trade_decisions:
         block = (records.get(d["record_id"]) or {}).get("critic")
         if block is not None:
-            block["decision"] = {"will_trade": d["will_trade"], "mode": d["mode"], "shares": d["shares"], "est_cost": d["est_cost"], "asked_user": d["asked_user"], "escalated": d["escalated"],
+            block["decision"] = {"will_trade": d["will_trade"], "mode": d["mode"], "shares": d["shares"], "est_cost": d["est_cost"], "asked_user": d["asked_user"],
                                  "reason": d["reason"], "decided_utc": d["decided_utc"]}

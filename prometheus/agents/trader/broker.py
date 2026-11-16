@@ -32,10 +32,18 @@ never reported: it moves nothing and waits for nothing. A refused approval has n
 asks for a "next" trade, polls, sleeps, times out or blocks in any way (every call is a plain call that returns; a test patches `time.sleep` to fail and reads this module's source for a wait). With no ticket to place there is
 no handshake at all.
 
+ORDERS IN DOLLARS AND NO SLIPPAGE (design choices entry 111). A trade whose `dollars` is set (copied from the decision) fills the shares the Account Manager APPROVED, not the smaller of the estimate and the approval: the Account Manager turned the dollars into shares at the price
+this trade fills at (fewer shares than the estimate when the price is higher, more when it is lower), and what is filled never costs more than the dollars. `costs.slippage_bps` is 0 in the shipped settings (Jacob: "Slippage is not allowed. This is real money"): a paper fill
+is at the quote, a backtest fill at the open; the simulator still takes the argument.
+
 CASH is therefore never worked out here: a purchase fills for the shares the Account Manager approved, at most the shares the decision gave (`orders.cash_policy: "reduce"`): fewer than approved is a fill whose `reason` says
 so, none is `insufficient_cash`. The one figure the broker reads is `cash_now()`, which asks the Account Manager (the model's `verify_request` shows it). What the Account Manager said about each trade is kept in `answers`
 (the word of the booking and the cash left, for the model's `place_order` answer): a report, never read for any arithmetic. The commission of an order (`costs.commission_per_order`, 0 in this version) is passed to the
 Account Manager as a setting.
+
+DECIMAL MONEY (design choices entry 112): the snapshot's quotes, a limit price, the proceeds of a sale, a fill's price, shares and amount are `Decimal`. The quotes were turned into Decimals by the price door when the Trader asked for them
+(`execute._prices`), a stored bar's prices cross it inside the fill rules (`simulator._bar_price`), and a limit price the model chose arrives through the tool as a Decimal. The trade dicts handed to the Account Manager and to `work_order.verify_fill` are
+`model_dump()` (Python mode: the Decimals stay Decimals); the one encoder writes them as numbers when they are saved.
 
 FUNDING (spec section 7). The sells that pay for a purchase are trades of their own (`funds_for`), placed WITH their purchase and never by the model, each through the same five steps. Placing a funded purchase does this in
 one go: check the purchase first (permission, and that it would fill now: a resting limit or a rejected price sells nothing); work out what the sells bring (the same fill rules on the same snapshot, so the estimate is
@@ -49,8 +57,12 @@ from typing import Callable
 
 from prometheus.agents.trader.config import TraderConfig
 from prometheus.agents.trader.record import Fill, Trade
-from prometheus.agents.trader.simulator import Execution, bar_on, fill_backtest, fill_paper, r4, usable
+from decimal import Decimal
+
+from prometheus.agents.trader.simulator import Execution, bar_on, fill_backtest, fill_paper, usable
 from prometheus.agents.trader.tickets import shown_range, utc_text
+from prometheus.common import shares as sh
+from prometheus.common.money import exact, price_scale
 from prometheus.common.portfolio import trade_amount
 from prometheus.common.work_order import WorkOrder, verify_fill
 
@@ -69,7 +81,7 @@ class Prices:
     not stored yet: orders wait)."""
     mode: str
     trade_date: date
-    quotes: dict[str, float] = field(default_factory=dict)
+    quotes: dict[str, Decimal] = field(default_factory=dict)
     bars: dict[str, list[dict]] = field(default_factory=dict)
     entry_date: date | None = None
     order_id: str | None = None                 # the request id of the quote or bars order the Account Manager made
@@ -90,9 +102,9 @@ class _Refusal:
     """What `_approval` stands in with when the Account Manager raised instead of answering (it is meant never to): not approved, `account_refused`, a sentence that names the kind of the error."""
     reason: str
     approved: bool = False
-    shares: int = 0
+    shares: Decimal = Decimal(0)
     code: str = "account_refused"
-    cash_avail: float | None = None
+    cash_avail: Decimal | None = None
 
 
 @dataclass(frozen=True)
@@ -100,7 +112,7 @@ class _Unconfirmed:
     """What `_fill` stands in with when the Account Manager raised instead of answering a `record_fill`: not a fill, nothing known; the trade is failed and the run goes on to the next trade."""
     reason: str
     status: str = "unconfirmed"
-    cash_avail: float | None = None
+    cash_avail: Decimal | None = None
     note: str = ""
     ok: bool = False
     booked: bool = False
@@ -151,7 +163,7 @@ class PaperBroker:
 
     # ---------------------------------------------------------------- placing
 
-    def place(self, trade_id, order_type: str = "", limit_price: float = 0.0, note: str = "", placed_by: str = "model") -> Trade:
+    def place(self, trade_id, order_type: str = "", limit_price: Decimal = Decimal(0), note: str = "", placed_by: str = "model") -> Trade:
         """Place one ticket (rules T1 to T3, see the module text). `order_type` "" is the default order the ticket carries; "limit" with a `limit_price` of 0 is the default limit price; "market" takes no price. Raises
         `Refused`, with the sentence to fix it, for: an unknown or funding trade id, a trade that is not `new`, a closed run, an order type that is not market or limit, `market` with market orders off, a limit price outside the
         range, and a purchase while a sale is still `new`. Anything the market does to the order is NOT a refusal: it is the trade's status. Returns the trade."""
@@ -169,11 +181,12 @@ class PaperBroker:
         self._place(trade, kind, price, cut_note(note, self.config.limits.max_note_words), placed_by)
         return trade
 
-    def _order(self, trade: Trade, order_type, limit_price) -> tuple[str, float | None]:
-        """The order to place: (type, limit price), checked. A caller that gives nothing gets the default order the ticket carries."""
-        price = limit_price if isinstance(limit_price, (int, float)) and not isinstance(limit_price, bool) else None
-        if price is None:
-            raise Refused("limit_price must be a number (0 for the default)")
+    def _order(self, trade: Trade, order_type, limit_price) -> tuple[str, Decimal | None]:
+        """The order to place: (type, limit price), checked. A caller that gives nothing gets the default order the ticket carries. The limit price is a Decimal (the tool turns the model's number into one at its door; a float here is a TypeError)."""
+        try:
+            price = exact(limit_price, "limit_price")
+        except ValueError:
+            raise Refused("limit_price must be a number (0 for the default)") from None
         if order_type in ("", None):
             if price:
                 raise Refused('give an order_type of "limit" with a limit_price, or leave both empty to place the default order')
@@ -191,7 +204,7 @@ class PaperBroker:
             raise Refused(f"{trade.trade_id} has no price range to place a limit order inside")
         if not price:
             price = trade.limit_price if trade.order_type == "limit" and trade.limit_price else min(max(trade.ref_price, low), high)
-        price = r4(price)
+        price = price_scale(price) if price > 0 else price
         if not usable(price) or not low <= price <= high:
             shown = shown_range(low, high)
             raise Refused(f"limit_price {price:,.4f} is outside the range allowed for {trade.trade_id}, {shown[0]:,.2f} to {shown[1]:,.2f}")
@@ -220,7 +233,7 @@ class PaperBroker:
             left.append(leg.trade_id)
         return left
 
-    def cash_now(self) -> float | None:
+    def cash_now(self) -> Decimal | None:
         """The cash the account has right now, as the Account Manager says it (a read of the book, or of its working portfolio): what the model's `verify_request` shows. None when it could not be read. The broker keeps
         no figure of its own: every call asks."""
         try:
@@ -282,7 +295,7 @@ class PaperBroker:
     def _fund(self, buy: Trade, buy_execution: Execution, legs: list[Trade]) -> None:
         """A funded purchase that WOULD fill now (spec section 7, steps 2 to 4): see the module text. The purchase is approved for real only AFTER the sales are filled and booked, so the approval reads the cash the book
         shows then; before that the Account Manager is only asked whether the estimated proceeds would pay for one share."""
-        price, plan, proceeds = buy_execution.price, [], 0.0
+        price, plan, proceeds = buy_execution.price, [], Decimal("0.00")
         for leg in legs:
             leg.placed_by, leg.placed_utc = buy.placed_by, buy.placed_utc
             execution = self._simulate(leg)
@@ -311,11 +324,11 @@ class PaperBroker:
 
     # ---------------------------------------------------------------- the handshake with the Account Manager
 
-    def _approval(self, trade: Trade, price: float, shares: int, preview: float | None = None):
+    def _approval(self, trade: Trade, price: Decimal, shares: Decimal, preview: Decimal | None = None):
         """Ask the Account Manager for the approval of this trade (step 1 of the handshake): the Trader's record of it, with the shares asked for, and the price it would fill at. `preview` None is the real approval
         (`approve_trade`); a number is a QUESTION about what it would say with that many more dollars available (`preview_trade`: nothing is approved, placed or reserved). Never raises: an Account Manager that cannot
         answer has not approved (`account_refused`)."""
-        asked = trade.model_copy(update={"shares": shares}).model_dump(mode="json")
+        asked = trade.model_copy(update={"shares": shares}).model_dump()
         where = dict(order=self.order, now=self.now, on=self.prices.trade_date, commission=self.config.costs.commission_per_order)
         try:
             if preview is None:
@@ -326,12 +339,12 @@ class PaperBroker:
         except Exception as error:   # the Account Manager is meant never to raise: if it does, nothing is approved
             return _Refusal(f"the Account Manager could not be asked ({type(error).__name__}): the trade is not approved")
 
-    def preview(self, trade: Trade, price: float, expected_proceeds: float = 0.0):
+    def preview(self, trade: Trade, price: Decimal, expected_proceeds: Decimal = Decimal(0)):
         """The Account Manager's answer to "would you approve this purchase, all of it, if `expected_proceeds` more were available?": a question for the funding pre-check and the user's consent (see `_fund` and execute's
         `_consent`). Nothing is placed or reserved. The Trader never works the funds out itself."""
         return self._approval(trade, price, trade.shares, preview=expected_proceeds)
 
-    def _fill(self, trade: Trade, execution: Execution, shares: int | None = None) -> None:
+    def _fill(self, trade: Trade, execution: Execution, shares: Decimal | None = None) -> None:
         """The handshake around a fill the price rules gave (see the module text): approval, the fill for at most the shares approved, the output check of that one fill, and its report to the Account Manager. Returns when the
         Account Manager has answered, so the next trade only starts after it. A trade the Account Manager does not approve is `rejected` with its code (a funding sale: `funding_failed`); a fill the book refuses, or
         could not confirm, is `rejected` `account_refused` and its `Fill` is not kept: it is not retried and the run goes on with the next trade (design choices entry 82)."""
@@ -341,20 +354,22 @@ class PaperBroker:
             if trade.kind == "funding":
                 return self.reject(trade, "funding_failed", f"the Account Manager did not approve the sale ({approval.code}): {approval.reason}")
             return self.reject(trade, approval.code, approval.reason + (f" ({self.cash_hint})" if approval.code == "insufficient_cash" and self.cash_hint else ""))
-        count = min(wanted, approval.shares)                         # never more than approved (the Account Manager never approves more than was asked)
-        cut = (f"; the size was cut from {trade.shares_approved} to {count} shares for the cash" if trade.side == "buy" and count < trade.shares_approved else
-               f"; the size was cut from {trade.shares_approved} to {count} shares: only that many were sellable" if trade.side == "sell" and count < trade.shares_approved else "")
+        count = approval.shares if trade.dollars is not None and trade.side == "buy" else min(wanted, approval.shares)      # never more than approved (the Account Manager never approves more than was asked). An order in DOLLARS (entry 111, M2) fills the shares its dollars pay for at this price: fewer than the estimate when the price is higher, more when it is lower
+        for_what = "the money of this request (its pot)" if "the money of this request" in approval.reason else "the cash"      # entry 111, M1: what the Account Manager's approval was held by
+        cut = (f"; an order of ${trade.dollars:,.2f}: {sh.text(count)} shares at {execution.price:,.4f} (the estimate was {sh.text(trade.shares_approved)})" + (f", held by {for_what}" if ", held by " in approval.reason else "") if trade.dollars is not None and trade.side == "buy" else
+               f"; the size was cut from {sh.text(trade.shares_approved)} to {sh.text(count)} shares for {for_what}" if trade.side == "buy" and count < trade.shares_approved else
+               f"; the size was cut from {sh.text(trade.shares_approved)} to {sh.text(count)} shares: only that many were sellable" if trade.side == "sell" and count < trade.shares_approved else "")
         commission = self.config.costs.commission_per_order
         fill = Fill(price=execution.price, shares=count, amount=trade_amount(count, execution.price), commission=commission, date=self.prices.trade_date.isoformat(), price_source=execution.price_source,
                     slippage_bps=execution.slippage_bps)
         done = trade.model_copy(update={"status": "filled", "reject_code": None, "shares": count, "fill": fill, "reason": execution.reason + cut})
-        findings = verify_fill(self.order, done.model_dump(mode="json"), [t.model_dump(mode="json") for t in self.trades.values()])
+        findings = verify_fill(self.order, done.model_dump(), [t.model_dump() for t in self.trades.values()])
         if findings:   # the fill disagrees with the decisions: it is not reported or booked (the trade is failed, and not retried); the next trade is placed as usual
             text = f"{trade.trade_id}: the output check found a fill that does not agree with the decisions, so it was not reported or booked: " + "; ".join(findings)
             self.notes.append(text)
             return self.reject(trade, "internal_error", text[:300])
         try:
-            booking = self.account.record_fill(done.model_dump(mode="json"))
+            booking = self.account.record_fill(done.model_dump())
         except AssertionError:
             raise
         except Exception as error:   # the Account Manager is meant never to raise: if it does, nobody knows whether the trade was booked, and it is never assumed that it was
@@ -366,10 +381,10 @@ class PaperBroker:
             trade.status, trade.reject_code, trade.shares, trade.fill, trade.reason, trade.booked = "filled", None, count, fill, done.reason, booking.booked
             self.filled.append(trade.trade_id)
         elif booking.status == "refused":
-            self.notes.append(f"{trade.trade_id}: {trade.side} {count} {trade.symbol} was not booked: {booking.reason}")
+            self.notes.append(f"{trade.trade_id}: {trade.side} {sh.text(count)} {trade.symbol} was not booked: {booking.reason}")
             self.reject(trade, "account_refused", booking.reason)
         else:   # unconfirmed: nobody knows whether it was booked, so it is not counted as a fill; the trade is failed and not retried, and the next trade is placed (its approval reads the account as the book has it)
-            self.notes.append(f"{trade.trade_id}: {trade.side} {count} {trade.symbol}: {booking.reason}")
+            self.notes.append(f"{trade.trade_id}: {trade.side} {sh.text(count)} {trade.symbol}: {booking.reason}")
             self.reject(trade, "account_refused", booking.reason)
 
     def _rest(self, trade: Trade, reason: str, placed: Trade | None = None) -> None:

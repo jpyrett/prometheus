@@ -1,5 +1,5 @@
 {
- "_note": "REAL answers of Finnhub's symbol search (https://finnhub.io/api/v1/search) recorded on 2026-11-15 by DataClerk.request_symbols for ten stocks (tickers and company names; design choices entry 88). The key is the query the search was asked; the value the rows it returned, unedited. Tests replay them as the Data Clerk's symbol directory.",
+ "_note": "REAL answers of Finnhub's symbol search (https://finnhub.io/api/v1/search) recorded on 2026-11-15 by DataClerk.request_symbols for ten stocks (tickers and company names; design choices entry 88). The key is the query the search was asked; the value the rows it returned, unedited. Tests replay them as the Data Clerk's symbol directory. On 2026-11-15, later, by DataClerk.request_symbols for Jacob's own request (F, GM, \"Procter and gamble\", Google, Chick-fil-a; design choices entries 101 and 102), seven more queries were added at the end, unedited: F, \"Procter and gamble\" and the two shorter searches the Data Clerk asks when the longer one finds no row (\"Procter and\", \"Procter\"), Google and Chick-fil-a (no row), and the owner of Google that the Data Clerk's model named, \"Alphabet Inc.\" (one row, GOOGL).",
  "queries": {
   "MSFT": [
    {
@@ -337,6 +337,112 @@
    }
   ],
   "Zzyzx Holdings": [],
-  "Zzyzx": []
+  "Zzyzx": [],
+  "F": [
+   {
+    "description": "FORD MOTOR CO",
+    "displaySymbol": "F",
+    "symbol": "F",
+    "type": "Common Stock"
+   },
+   {
+    "description": "FORD MOTOR CO",
+    "displaySymbol": "F.TO",
+    "symbol": "F.TO",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "FORD MOTOR CO",
+    "displaySymbol": "F.NE",
+    "symbol": "F.NE",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "FORD MOTOR CO",
+    "displaySymbol": "F.MX",
+    "symbol": "F.MX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Microsoft Corporation",
+    "displaySymbol": "MSFT",
+    "symbol": "MSFT",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Taiwan Semiconductor Manufacturing Co Ltd",
+    "displaySymbol": "2330.TW",
+    "symbol": "2330.TW",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Meta Platforms, Inc.",
+    "displaySymbol": "META",
+    "symbol": "META",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Mercantil Servicios Financieros CA",
+    "displaySymbol": "MVZ.B.CR",
+    "symbol": "MVZ.B.CR",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Industrial and Commercial Bank of China Ltd",
+    "displaySymbol": "601398.SS",
+    "symbol": "601398.SS",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Agricultural Bank of China Ltd",
+    "displaySymbol": "601288.SS",
+    "symbol": "601288.SS",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Bank of America Corporation",
+    "displaySymbol": "BAC",
+    "symbol": "BAC",
+    "type": "Common Stock"
+   }
+  ],
+  "Procter and gamble": [],
+  "Procter and": [],
+  "Procter": [
+   {
+    "description": "The Procter & Gamble Company",
+    "displaySymbol": "PG",
+    "symbol": "PG",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Procter & Gamble Hygiene and Health Care Ltd",
+    "displaySymbol": "PGHH.NS",
+    "symbol": "PGHH.NS",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Procter & Gamble Health Ltd",
+    "displaySymbol": "PGHL.NS",
+    "symbol": "PGHL.NS",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Strats (SM) Trust for Procter & Gamble Securities Series 2006-1",
+    "displaySymbol": "GJR",
+    "symbol": "GJR",
+    "type": "Common Stock"
+   }
+  ],
+  "Google": [],
+  "Alphabet Inc.": [
+   {
+    "description": "Alphabet Inc.",
+    "displaySymbol": "GOOGL",
+    "symbol": "GOOGL",
+    "type": "Common Stock"
+   }
+  ],
+  "Chick-fil-a": []
  }
 }

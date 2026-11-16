@@ -8,6 +8,9 @@ on the work order; a great deal earns a bonus on the score, in proportion to the
 
     premium  = deal_price / sma_126 - 1          discount = -premium
     label    falling | unknown | overpriced | rich | great | good | fair      (the first that fits)
+
+A company with fewer than 126 stored bars (a recent IPO) has no six-month average. That is a plain NOTE on the review (`value_not_assessable`, a warning), never a denial: it does not ask for a person (design choices entry 103,
+corrected: Jacob, 2026-11-15, "it eliminates IPOs from being traded and is a bad rule"), the measures that need the average count the unknown credit as they always did, and the other value rules still apply.
 """
 from dataclasses import dataclass, field
 from datetime import date, timedelta
@@ -54,11 +57,8 @@ def bonus_points(discount: float | None, config: Bonus) -> float:
 
 
 def assess(rec: Recommendation, fetched: dict | None, deal_price: float | None, config: Value, unknown_credit: float) -> ValueResult:
-    """The value findings of one record, its score (0 to 100), the label and the detail. A reduction is not judged."""
+    """The value findings of one record, its score (0 to 100), the label and the detail."""
     out = ValueResult()
-    if rec.action.action not in ("open", "add"):
-        out.applicable = False
-        return out
     avg, high, low = (metric_value(fetched, n) for n in ("sma_126", "high_126d", "low_126d"))
     ey, eps, ps = (metric_value(fetched, n) for n in ("earnings_yield", "eps", "ps_ratio"))
     ret_21, drawdown = metric_value(fetched, "ret_21d"), metric_value(fetched, "max_drawdown_63d")
@@ -84,7 +84,7 @@ def assess(rec: Recommendation, fetched: dict | None, deal_price: float | None, 
             moves.append(f"it is {abs(drawdown):.0%} below its 63-session peak")
         out.findings.append(blocker("value", "falling_knife", f"{' and '.join(moves).capitalize()}: a collapse is not a discount.", value=[ret_21, drawdown]))
     if avg is None:
-        out.findings.append(warning("value", "value_not_assessable", f"The price cannot be judged against a six-month average: {(fetched or {}).get('sma_126', {}).get('note') or 'no value'}.", requires_human=True))
+        out.findings.append(warning("value", "value_not_assessable", f"The price cannot be judged against a six-month average: {(fetched or {}).get('sma_126', {}).get('note') or 'no value'}."))
     elif label == "rich":
         out.findings.append(warning("value", "rich_price", f"The price is {pct(premium)} above its six-month average ({avg:.2f}).", value=premium, threshold=config.rich_premium))
 
@@ -106,12 +106,10 @@ def assess(rec: Recommendation, fetched: dict | None, deal_price: float | None, 
 
 def history_warnings(rec: Recommendation, deal_price: float | None, history, today: date, config: Value) -> list[Finding]:
     """`price_above_last_recommendation`: the same symbol was recommended in the last `last_recommendation_days` at an entry well under today's price (the Advisor's ledger, read only).
-    `adding_above_cost`: an addition to a position bought well under today's price. `history` is the Advisor's `Ledger` (or None)."""
+    `history` is the Advisor's `Ledger` (or None). (`adding_above_cost`, a warning that read the cost basis of the user's holding, is gone: the Critic never touches the holdings, entry 105.)"""
     out: list[Finding] = []
-    if deal_price is None or rec.action.action not in ("open", "add"):
+    if deal_price is None:
         return out
-    if rec.action.action == "add" and rec.action.cost_basis and deal_price > rec.action.cost_basis * (1 + config.add_above_cost):
-        out.append(warning("value", "adding_above_cost", f"This adds to a position bought at {rec.action.cost_basis:.2f} at a price {pct(deal_price / rec.action.cost_basis - 1)} higher.", value=deal_price, threshold=rec.action.cost_basis))
     if history is not None:
         earlier = [r for r in history.recent(rec.symbol, since=today - timedelta(days=config.last_recommendation_days))
                    if r.get("identity", {}).get("record_id") != rec.identity.record_id and (r.get("trade") or {}).get("entry_mid")]

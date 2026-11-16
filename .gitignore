@@ -242,3 +242,6 @@ secrets/
 
 # Local Postgres notes that include the role passwords (written beside secrets/postgres_local.txt). Never commit.
 design/accountmanager_postgres_notes.md
+
+# the web UI (ui/): installed packages
+ui/node_modules/

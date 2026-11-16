@@ -15,7 +15,11 @@ the job alone ("sell 5 TSLA", "sell 4 MSFT", "sell 19 GM"), so the tree never we
   * with a stock to fill, says that the cash left buys it automatically and that a step selling more shares than the shortfall needs is thrown away (lean).
 Nothing about the checks, the score or the pruning changed: the generator only proposes.
 """
-import math
+from decimal import Decimal
+
+from prometheus.common import shares as sh
+from prometheus.common.portfolio import trade_amount
+from prometheus.reasoning.raise_funds import ceil_div
 
 SYSTEM = """You are the Account Manager of a trading desk. The user wants to buy a stock but holds no cash, so something must be sold first. You build the plan one step at a time: every step is "sell n shares of one stock". You are given the holdings with their current prices, the plan built so far and the money still to raise.
 
@@ -87,16 +91,16 @@ def user_message(problem, node, rejected: list[str]) -> str:
     if problem.green_first:
         lines.insert(1, "Most in the green first (percent gain): " + ", ".join(f"{h.symbol} {h.price / h.basis - 1:+.0%}" for h in holdings))
     for h in holdings:
-        alone = math.ceil(round(node.shortfall / h.price, 6)) if node.shortfall > 0 else 0
+        alone = ceil_div(node.shortfall, h.price) if node.shortfall > 0 else 0
         flag = "  (already in the plan)" if h.symbol in used else "  (at a loss: may not be sold)" if problem.only_green and not h.green else ""
         can = (f"{alone} share(s) alone would raise the shortfall" if alone <= h.sellable else
-               f"cannot raise the shortfall alone: all {h.sellable} sellable shares are worth ${h.sellable * h.price:,.2f}, so it is a PARTIAL step")
-        lines.append(f"- {h.symbol} ({h.name or h.symbol}): held {h.shares}, sellable {h.sellable}, price ${h.price:,.2f}, basis ${h.basis:,.2f}, "
+               f"cannot raise the shortfall alone: all {h.sellable} sellable shares are worth ${trade_amount(h.sellable, h.price):,.2f}, so it is a PARTIAL step")
+        lines.append(f"- {h.symbol} ({h.name or h.symbol}): held {sh.text(h.shares)}, sellable {h.sellable}, price ${h.price:,.2f}, basis ${h.basis:,.2f}, "
                      f"{'gain' if h.price >= h.basis else 'loss'} ${abs(h.price - h.basis):,.2f} per share, {can}{flag}"
-                     + (f"; taxable share of what selling it raises: {max(0.0, (h.price - h.basis) / h.price):.0%}" if problem.explore and not problem.green_first else "")
+                     + (f"; taxable share of what selling it raises: {max(Decimal(0), (h.price - h.basis) / h.price):.0%}" if problem.explore and not problem.green_first else "")
                      + (f"; percent gain {h.price / h.basis - 1:+.0%}" if problem.green_first else ""))
     if problem.whole_plans:   # the money in each holding, so that the sums are easy to check
-        lines += ["", "What each holding can raise if all its sellable shares are sold: " + ", ".join(f"{h.symbol} ${h.sellable * h.price:,.2f} ({h.sellable} x ${h.price:,.2f})" for h in holdings
+        lines += ["", "What each holding can raise if all its sellable shares are sold: " + ", ".join(f"{h.symbol} ${trade_amount(h.sellable, h.price):,.2f} ({h.sellable} x ${h.price:,.2f})" for h in holdings
                                                                                             if h.symbol not in used and problem.eligible(h))]
     lines += ["", f"Plan so far: {node.plan()}" + (f" (raises ${node.proceeds:,.2f}, still short ${node.shortfall:,.2f})" if node.sells else f" (still short ${node.shortfall:,.2f})")]
     notes = [r[len("FEEDBACK: "):] for r in rejected if r.startswith("FEEDBACK: ")]

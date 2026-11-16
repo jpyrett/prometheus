@@ -1,0 +1,423 @@
+<<<PRESS_RELEASE>>>
+id: 97b027db5556868a
+symbol: PLTR
+published_utc: 2025-11-17T05:00:00Z
+url: https://www.nasdaq.com/press-release/multiverse-and-palantir-partner-launch-nhs-federated-data-platform-apprenticeship
+headline: Multiverse and Palantir Partner to Launch NHS Federated Data Platform Apprenticeship Programmes, Supporting the NHS’s Data and AI Transformation
+<<<TEXT>>>
+Multiverse, the AI upskilling platform, and Palantir Technologies Inc., a leading provider of AI-enabled software, are partnering to upskill staff on the use of the NHS Federated Data Platform across the NHS. The NHS FDP, which is supplied by Palantir, connects vital data which is currently stored in separate systems, enabling staff to access the information...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 353976044f07f417
+symbol: PLTR
+published_utc: 2025-11-17T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-and-ftai-aviation-enter-strategic-partnership-accelerate-transformation
+headline: Palantir and FTAI Aviation Enter Strategic Partnership to Accelerate the Transformation of Aircraft Engine Maintenance, Repair and Exchange
+<<<TEXT>>>
+DENVER& NEW YORK---- Palantir, a leading provider of AI software, and FTAI Aviation Ltd., a global leader in aircraft engine maintenance, today announced a multi-year strategic partnership, which will allow FTAI to leverage Palantir’ s Artificial Intelligence Platform across FTAI’ s global maintenance footprint.  "At FTAI, we have long prioritized technology as a key...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8112c9874b10956a
+symbol: PLTR
+published_utc: 2025-11-19T02:00:00Z
+url: https://www.nasdaq.com/press-release/palantir-and-pwc-uk-sign-multi-year-multi-million-pound-deal-accelerate-ai
+headline: Palantir and PwC UK Sign a Multi-Year, Multi-Million-Pound Deal to Accelerate AI Transformation as Preferred Partners in the UK
+<<<TEXT>>>
+PwC UK and Palantir Technologies Inc. today announced the expansion of their strategic alliance, underpinned by a multi-year, multi-million-pound investment by PwC. The expansion represents a clear commitment by both organisations to work together as preferred UK partners, aligning strategy and resources to deliver advanced AI and data solutions for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 85c0a44875c90104
+symbol: PLTR
+published_utc: 2025-11-20T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-achieves-information-security-registered-assessors-program-irap-protected
+headline: Palantir Achieves Information Security Registered Assessors Program (IRAP) PROTECTED Level, Unlocking New Opportunities in Australia
+<<<TEXT>>>
+Palantir Technologies Inc., a leading builder of secure, artificial intelligence software, today announced it has achieved the IRAP PROTECTED level under the Australian Information Security Registered Assessors Program, further enabling Australian government agencies and commercial organizations to leverage Palantir Foundry with confidence.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 91e32333da3c74a0
+symbol: PLTR
+published_utc: 2025-12-04T04:30:00Z
+url: https://www.nasdaq.com/press-release/palantir-launches-chain-reaction-build-american-ai-infrastructure-founding-partners
+headline: Palantir Launches Chain Reaction to Build American AI Infrastructure; Founding Partners Include CenterPoint Energy and NVIDIA
+<<<TEXT>>>
+Palantir Technologies Inc. today unveiled Chain Reaction, the operating system for American AI infrastructure. This press release features multimedia. "The energy infrastructure buildout is the industrial challenge of our generation," said Tristan Gruska, Palantir’ s Head of Energy and Infrastructure." But the software that the sector relies on was not built...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 27ccce85d69edb4b
+symbol: PLTR
+published_utc: 2025-12-04T16:00:00Z
+url: https://www.nasdaq.com/press-release/cubic-and-palantir-forge-alliance-accelerate-transformation-and-deliver-outcomes-us
+headline: Cubic and Palantir Forge Alliance to Accelerate Transformation and Deliver Outcomes for the U.S. Army
+<<<TEXT>>>
+SAN DIEGO, CA AND DENVER, CO/ ACCESS Newswire/ December 4, 2025/ Cubic Corporation and its DTECH Mission Solutions business unit, a recognized industry leader in providing trusted, scalable, and intuitive edge compute and networking platforms, today announced a strategic relationship with Palantir Technologies Inc., to drive large-scale internal...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 09be212de1ceeffd
+symbol: PLTR
+published_utc: 2025-12-04T16:01:00Z
+url: https://www.nasdaq.com/press-release/northslope-signs-large-scale-expansion-deployment-palantir-ai-fde-and-demonstrates
+headline: Northslope Signs Large-Scale Expansion for Deployment of Palantir AI FDE and Demonstrates Accelerated Growth; Palantir Recognizes Northslope as the First Partner of the Vanguard: Elite
+<<<TEXT>>>
+Collaboration underscores shared mission: enabling the world’ s leading organizations to dominate their domains on the Palantir operating system. DENVER& NEW YORK---- Northslope, the first and fastest growing Palantir- native applied AI company, today announced a deepened strategic partnership with Palantir. Founded by Palantir alumni in 2024, Northslope is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 059e88f99d7f09ac
+symbol: PLTR
+published_utc: 2025-12-05T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-and-twg-ai-team-nvidia-power-teton-ridges-push-enhance-rodeo-edge-ai-2025-12
+headline: Palantir and TWG AI Team with NVIDIA to Power Teton Ridge’s Push to Enhance Rodeo with Edge AI
+<<<TEXT>>>
+Palantir and TWG AI today announced a new effort with Teton Ridge, the western sports and entertainment company backed by TWG Global, to bring real-time AI and computer vision to rodeo— accelerating and elevating the sport experience for athletes, fans, and partners, in collaboration with NVIDIA. Working with Palantir and TWG AI through TWG Global, the company...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cdfb518c842bea92
+symbol: PLTR
+published_utc: 2025-12-10T06:59:00Z
+url: https://www.nasdaq.com/press-release/us-navy-partners-palantir-modernize-shipbuilding-supply-chain-and-accelerate
+headline: U.S. Navy Partners with Palantir to Modernize Shipbuilding Supply Chain and Accelerate Shipbuilding
+<<<TEXT>>>
+The United States Navy announced a groundbreaking partnership with Palantir Technologies Inc. to deploy Palantir’ s Foundry and Artificial Intelligence Platform across the nation’ s Maritime Industrial Base. The announcement was made during an industry event hosted by the Department of the Navy, where Secretary of the Navy John Phelan was joined by...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8babb9964046803f
+symbol: PLTR
+published_utc: 2025-12-15T03:00:00Z
+url: https://www.nasdaq.com/press-release/palantir-announces-renewal-multi-year-contract-dgsi-2025-12-15
+headline: Palantir Announces Renewal of Multi-Year Contract with the DGSI
+<<<TEXT>>>
+Palantir Technologies Inc. announces a three-year renewal of its contract with the DGSI, France's domestic intelligence agency, extending a partnership that has been ongoing for nearly a decade. Supported by a French team of employees with France- based leadership and governance, Palantir's solutions have supported the French internal intelligence...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8b6ef41ebd7048c2
+symbol: PLTR
+published_utc: 2025-12-30T06:30:00Z
+url: https://www.nasdaq.com/press-release/surf-air-mobility-advances-surfos-development-targets-commercial-software-rollout
+headline: Surf Air Mobility Advances SurfOS Development, Targets Commercial Software Rollout in 2026, and Reports Milestones
+<<<TEXT>>>
+Surf Air Mobility Inc., a leading air mobility platform, today provided an update on SurfOS, its AI-enabled software designed for the private aviation and air mobility industries. The Company also released today a presentation and a video with more information about SurfOS to the Events& Presentations page of the Surf Air Mobility investor website.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d304f75962e23a46
+symbol: PLTR
+published_utc: 2026-01-12T16:05:00Z
+url: https://www.nasdaq.com/press-release/palantir-announces-date-fourth-quarter-2025-earnings-release-and-webcast-2026-01-12
+headline: Palantir Announces Date of Fourth Quarter 2025 Earnings Release and Webcast
+<<<TEXT>>>
+Palantir Technologies Inc. announced today that results for its fourth quarter and fiscal year ended December 31, 2025 will be released on Monday, February 2, 2026, following the close of U.S. markets. Palantir will host a webcast to discuss its results at 3:00 PM MT/ 5:00 PM ET. A live webcast and replay will be available at investors.palantir.com, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cc0351ec6a88599c
+symbol: PLTR
+published_utc: 2026-01-20T06:00:00Z
+url: https://www.nasdaq.com/press-release/hd-hyundai-and-palantir-expand-group-wide-strategic-partnership-2026-01-20
+headline: HD Hyundai and Palantir Expand Group-Wide Strategic Partnership
+<<<TEXT>>>
+SEOUL, South Korea& DENVER---- HD Hyundai and Palantir Technologies Inc. have strengthened their alliance by reinforcing the strategic partnership. This alliance represents the largest and longest partnership of its kind for Palantir in Korea, significantly expanding the adoption of Palantir’ s Foundry and Artificial Intelligence Platform across the HD...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1497a3463f3c1dd0
+symbol: PLTR
+published_utc: 2026-02-02T16:05:00Z
+url: https://www.nasdaq.com/press-release/palantir-reports-q4-2025-us-comm-revenue-growth-137-y-y-and-revenue-growth-70-y-y
+headline: Palantir Reports Q4 2025 U.S. Comm Revenue Growth of 137% Y/Y and Revenue Growth of 70% Y/Y; Issues FY 2026 Revenue Guidance of 61% Y/Y and U.S. Comm Revenue Guidance of 115% Y/Y, Crushing Consensus Expectations
+<<<TEXT>>>
+Last quarter, our U.S. revenue grew 93% year-over-year and U.S. commercial revenue grew 137% year-over-year. U.S. revenue grew 93% year-over-year and 22% quarter-over-quarter to $1.076 billion U.S. commercial revenue grew 137% year-over-year and 28% quarter-over-quarter to $507 million U.S. government revenue grew 66% year-over-year and 17%...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 02612e7763e2e216
+symbol: PLTR
+published_utc: 2026-02-10T16:01:00Z
+url: https://www.nasdaq.com/press-release/palantir-and-airbus-extend-strategic-collaboration-2026-02-10
+headline: Palantir and Airbus Extend Strategic Collaboration
+<<<TEXT>>>
+Palantir Technologies is proud to announce the extension of its collaboration with Airbus through a multi-year agreement, confirming a relationship that has driven innovation across the aerospace industry for over a decade. Under this renewed contract, Airbus will continue to rely on Palantir for Skywise, its civil aviation open data platform.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bc22608d4e743769
+symbol: PLTR
+published_utc: 2026-02-12T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-receives-disa-authorization-pfcs-forward-extending-il5-and-il6-accreditation
+headline: Palantir Receives DISA Authorization for PFCS Forward, Extending IL5 and IL6 Accreditation to On-Premises and Edge Deployments
+<<<TEXT>>>
+Palantir Technologies Inc. today announced that the Defense Information Systems Agency has authorized Palantir Federal Cloud Service Forward, extending PFCS's existing Impact Level 5 and Impact Level 6 Provisional Authorizations to include on-premises and edge deployments. With this authorization, Palantir's technology stack, including its...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a692e0fe31b4f75e
+symbol: PLTR
+published_utc: 2026-02-17T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-wins-dresner-advisory-services-2025-technology-innovation-and-application
+headline: Palantir Wins Dresner Advisory Services 2025 Technology Innovation and Application Innovation Awards in Multiple Categories
+<<<TEXT>>>
+Palantir Technologies Inc., a leading provider of AI systems, today announced it has been recognized as a winner in 15 categories of the Dresner Advisory Services 2025 Technology Innovation Awards and 2025 Application Innovation Awards. Palantir was named a winner in the following categories:. "Our thematic reports focus on user priorities, current use, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f325a3de367a6fea
+symbol: PLTR
+published_utc: 2026-02-18T08:15:00Z
+url: https://www.nasdaq.com/press-release/rackspace-and-palantir-partner-run-foundry-and-aip-production-governed-managed-0
+headline: Rackspace and Palantir Partner to Run Foundry and AIP in Production with Governed Managed Operations
+<<<TEXT>>>
+--Rackspace Technology ®, a hybrid multicloud and AI solutions company, and Palantir Technologies Inc., a global leader in operational artificial intelligence platforms, today announced a strategic partnership to help enterprises rapidly deploy and operate Palantir’ s Foundry and Artificial Intelligence Platform in production to achieve measurable...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2de4ca75d483c368
+symbol: PLTR
+published_utc: 2026-03-02T09:00:00Z
+url: https://www.nasdaq.com/press-release/palantir-technologies-inc-investigated-portnoy-law-firm-2026-03-02
+headline: Palantir Technologies, Inc. Investigated by the Portnoy Law Firm
+<<<TEXT>>>
+--The Portnoy Law Firm advises Palantir Technologies, Inc., investors that the firm has initiated an investigation into possible securities fraud, and may file a class action on behalf of investors.. The Portnoy Law Firm can provide a complimentary case evaluation and discuss investors’ options for pursuing claims to recover their losses.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8110515de64a21d9
+symbol: PLTR
+published_utc: 2026-03-11T19:00:00Z
+url: https://www.nasdaq.com/press-release/lg-cns-and-palantir-announce-strategic-partnership-accelerate-ai-transformation-2026
+headline: LG CNS and Palantir Announce Strategic Partnership to Accelerate AI Transformation
+<<<TEXT>>>
+MIAMI& SEOUL, South Korea---- LG CNS Co., Ltd. and Palantir Technologies Inc., a leading provider of AI operating systems, today announced a deepened strategic partnership aimed at accelerating AI Transformation initiatives across LG Group. The partnership builds on a foundation established in late 2025, when Palantir software was first deployed within an...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 50c8a3aba5dddd29
+symbol: PLTR
+published_utc: 2026-03-12T06:30:00Z
+url: https://www.nasdaq.com/press-release/palantirs-newest-customers-reveal-secrets-behind-their-success-aipcon-9-2026-03-12
+headline: Palantir’s Newest Customers Reveal the Secrets Behind Their Success at AIPCon 9
+<<<TEXT>>>
+Palantir Technologies Inc. announced today that it will host its ninth AIPCon on Thursday, March 12th, 2026. Each customer will take the stage to show how they're deploying Palantir's Artificial Intelligence Platform, to tackle the defining challenges of our time— expanding AI-driven operations across the U.S. naval fleet, transforming aerospace...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9fbbf7791075ab37
+symbol: PLTR
+published_utc: 2026-03-12T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-and-nvidia-team-deliver-sovereign-ai-operating-system-reference-architecture
+headline: Palantir and NVIDIA Team to Deliver Sovereign AI Operating System Reference Architecture
+<<<TEXT>>>
+Palantir Technologies today announced its sovereign AI OS reference architecture with NVIDIA, which delivers customers a turnkey AI datacenter from hardware procurement to application deployment. It is based on NVIDIA Enterprise Reference Architectures, tested and qualified to run Palantir's complete software suite— including AIP, Foundry, Apollo,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0acf870cc72c5e23
+symbol: PLTR
+published_utc: 2026-03-12T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-partners-ondas-and-world-view-advance-next-generation-multi-domain
+headline: Palantir Partners with Ondas and World View to Advance Next Generation Multi-Domain Intelligence Platform
+<<<TEXT>>>
+Collaboration will deliver integrated intelligence and sensing solutions with unified command and control for persistent ISR missions. MIAMI& WEST PALM BEACH, Fla.& TUCSON, Ariz.---- Palantir Technologies Inc., a global leader in operational artificial intelligence platforms, today announced a strategic partnership with Ondas Inc., a leading provider of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1bd6f7b3ab84de46
+symbol: PLTR
+published_utc: 2026-03-17T12:02:00Z
+url: https://www.nasdaq.com/press-release/keel-joins-palantir-and-us-navy-shipos-initiative-accelerate-submarine-and-broader
+headline: Keel Joins Palantir and U.S. Navy in ShipOS Initiative to Accelerate Submarine and Broader Naval Production
+<<<TEXT>>>
+Keel Holdings, LLC, an advanced manufacturing leader for the U.S. Navy and broader defense applications for naval, land and space applications, in partnership with Palantir Technologies Inc., today announced a major collaboration supporting the United States Navy’ s ShipOS initiative, a program designed to transform America’ s Maritime Industrial Base...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 918eea1b0c98543e
+symbol: PLTR
+published_utc: 2026-03-19T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-and-moder-partner-transform-mortgage-industry-2026-03-19
+headline: Palantir and Moder Partner to Transform Mortgage Industry
+<<<TEXT>>>
+Moder and Palantir are co-building an AI-powered mortgage operations platform, with first pilot customer Freedom Mortgage, a new milestone toward empowering the dream of homeownership. MIAMI& BOCA RATON, Fla.---- Palantir Technologies Inc., a global leader in operational artificial intelligence platforms, and Moder, the fastest growing AI and technology...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e67530aaaf0a76fb
+symbol: PLTR
+published_utc: 2026-03-26T06:50:00Z
+url: https://www.nasdaq.com/press-release/bain-company-announces-expansion-lead-global-management-consulting-partnership
+headline: Bain & Company announces expansion of lead global management consulting partnership with Palantir to bring world industry-leading AI transformation capabilities to clients
+<<<TEXT>>>
+BOSTON and MIAMI, March 26, 2026/ PRNewswire/-- Bain& Company today announced an expansion of its lead management consulting partnership with Palantir, a global leader in advanced data analytics and artificial intelligence platforms. Palantir and Bain& Company have been collaborating intensively since forming a worldwide partnership arrangement in May...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6aea228103e87f65
+symbol: PLTR
+published_utc: 2026-03-30T03:00:00Z
+url: https://www.nasdaq.com/press-release/palantir-technologies-announces-renewal-and-expansion-its-partnership-stellantis
+headline: Palantir Technologies Announces the Renewal and Expansion of Its Partnership With Stellantis for an Additional Five Years
+<<<TEXT>>>
+Palantir Technologies Inc. today announced the renewal and expansion of its long‑ standing partnership with Stellantis. The new five‑ year agreement continues a collaboration that began in 2016, supporting Stellantis in the ongoing industrialization and secure use of data and artificial intelligence across the company. François Bohuon, General...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 195943277551f1a0
+symbol: PLTR
+published_utc: 2026-04-13T16:05:00Z
+url: https://www.nasdaq.com/press-release/palantir-announces-date-first-quarter-2026-earnings-release-and-webcast-2026-04-13
+headline: Palantir Announces Date of First Quarter 2026 Earnings Release and Webcast
+<<<TEXT>>>
+Palantir Technologies Inc. announced today that results for its first quarter ended March 31, 2026 will be released on Monday, May 4, 2026, following the close of U.S. markets. Palantir will host a webcast to discuss its results at 5:00 PM ET. A live webcast and replay will be available at investors.palantir.com, and participants can pre-register here.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7bfbec1d4b1651b1
+symbol: PLTR
+published_utc: 2026-04-22T06:59:00Z
+url: https://www.nasdaq.com/press-release/usda-and-palantir-launch-partnership-deliver-faster-modernized-support-farmers-2026
+headline: USDA and Palantir Launch Partnership to Deliver Faster, Modernized Support for Farmers
+<<<TEXT>>>
+The U.S. Department of Agriculture and Palantir Technologies Inc. announced the signing of a $300 million Blanket Purchase Agreement to support the National Farm Security Action Plan and modernize how USDA delivers services to America’ s farmers. Building on capabilities already in use at USDA, Palantir will provide operational software to enable USDA to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d3a30faa98693aa3
+symbol: PLTR
+published_utc: 2026-05-04T16:05:00Z
+url: https://www.nasdaq.com/press-release/palantir-reports-q1-2026-us-revenue-growth-104-y-y-and-revenue-growth-85-y-y-raises
+headline: Palantir Reports Q1 2026 U.S. Revenue Growth of 104% Y/Y and Revenue Growth of 85% Y/Y; Raises FY 2026 Revenue Guidance to 71% Y/Y Growth and U.S. Comm Revenue Guidance to 120% Y/Y, Crushing Consensus Expectations
+<<<TEXT>>>
+Palantir Technologies Inc. today announced financial results for the first quarter ended March 31, 2026. Momentum surged as we grew 85% last quarter— our highest-ever year-over-year growth rate— by more than doubling our U.S. business, and now we are raising our full-year revenue guidance to 71% growth, 10 points ahead of our guidance from last quarter, driven...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1f00da7a445f4a8a
+symbol: PLTR
+published_utc: 2026-05-06T16:01:00Z
+url: https://www.nasdaq.com/press-release/palantir-joins-us-army-and-industry-partners-right-integrate-hackathon-sprint-defense
+headline: Palantir Joins U.S. Army and Industry Partners for "Right to Integrate" Hackathon Sprint for Defense-wide Interoperability
+<<<TEXT>>>
+Palantir Technologies Inc. today announced its intention to join the U.S. Army’ s" sprint" to conduct a series of Army and Defense Industry-partnered hackathon events to integrate critical military technology systems. Palantir is proud to support the Army’ s" Right to Integrate" Hackathon and commends the Army’ s forward-looking approach to achieving...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b63ba5b1cef3a45b
+symbol: PLTR
+published_utc: 2026-06-04T06:59:00Z
+url: https://www.nasdaq.com/press-release/deleted-gnp-seguros-announces-enterprise-expansion-palantir-foundry-and-aip-across
+headline: DELETED: GNP Seguros Announces Enterprise Expansion of Palantir Foundry and AIP Across All Lines of Business
+<<<TEXT>>>
+This story has been deleted by the news provider.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 879dc9a2078c4989
+symbol: PLTR
+published_utc: 2026-06-04T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-and-kirkland-ellis-partner-transform-private-equity-fundraising-exclusive-ai
+headline: Palantir and Kirkland & Ellis Partner to Transform Private Equity Fundraising with Exclusive AI-Powered Fund Enterprise Platform
+<<<TEXT>>>
+MIAMI& CHICAGO---- Palantir Technologies Inc. and Kirkland& Ellis today announced the launch of a proprietary enterprise platform designed to transform private equity fundraising. Through its work with Palantir, Kirkland is building a new operating model for legal services: one that centralizes and compounds the expertise of its most senior lawyers, embeds...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 22f1fced591ed2fe
+symbol: PLTR
+published_utc: 2026-06-04T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-customers-reveal-how-ai-amplifies-their-tradecraft-aipcon-10-2026-06-04
+headline: Palantir Customers Reveal How AI Amplifies Their Tradecraft at AIPCon 10
+<<<TEXT>>>
+Palantir Technologies Inc. will host AIPCon 10 on Thursday, June 4, 2026, bringing AIPCon back for its tenth edition and spotlighting how AI amplifies the real-world tradecraft of Palantir customers. AIPCon 10 will feature customer-led demos of Foundry, AIP, Ontology, and Apollo in production across leading organizations— many of whom are sharing their work...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 30c9f22258bd5cbd
+symbol: PLTR
+published_utc: 2026-06-04T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-announces-availability-google-cloud-marketplace-including-two-way
+headline: Palantir Announces Availability on Google Cloud Marketplace, Including Two-Way Integrations between BigQuery and Foundry and Deep Connectivity between Gemini and AIP
+<<<TEXT>>>
+Palantir Technologies Inc. today announced a multi-tiered partnership with Google Cloud, enabling first-class integrations across Google Cloud platforms and making Palantir available on Google Cloud Marketplace. As part of this partnership, Palantir is addressing several foundational integrations for existing and new customers.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4f2a4a8b37f50c7e
+symbol: PLTR
+published_utc: 2026-06-04T06:59:00Z
+url: https://www.nasdaq.com/press-release/gnp-seguros-announces-enterprise-expansion-palantir-foundry-and-aip-across-all-lines
+headline: GNP Seguros Announces Enterprise Expansion of Palantir Foundry and AIP Across All Lines of Business
+<<<TEXT>>>
+Mexico's largest insurer leverages Palantir's AI platform to detect claims fraud, sharpen underwriting precision, process claims more effectively, and bring high-quality insurance coverage to people in Mexico.. MIAMI& MEXICO CITY---- GNP Seguros and Palantir Technologies Inc. today announced a multi-year, multi-million dollar enterprise expansion...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 21688302042188d2
+symbol: PLTR
+published_utc: 2026-06-04T06:59:00Z
+url: https://www.nasdaq.com/press-release/mccarthy-and-palantir-announce-strategic-partnership-bring-ai-construction-field-and
+headline: McCarthy and Palantir Announce Strategic Partnership to Bring AI to the Construction Field and Beyond
+<<<TEXT>>>
+ST. LOUIS& MIAMI---- McCarthy Building Companies Inc., one of America’ s oldest privately held national construction companies, and Palantir Technologies Inc., a global leader in artificial intelligence and data platforms, today announced a multi-year, multi-million dollar strategic partnership to enhance AI and data-driven decision-making across McCarthy’...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b37ee3bf59383e20
+symbol: PLTR
+published_utc: 2026-06-05T11:34:00Z
+url: https://www.nasdaq.com/press-release/futurecorp-launches-bring-frontier-economies-public-markets-2026-06-05
+headline: FutureCorp Launches to Bring Frontier Economies to Public Markets
+<<<TEXT>>>
+FutureCorp LLC, a new investment firm that seeks to connect frontier economies with public-market investors, has announced its launch. The firm's first vehicle is FutureCorp Space Acquisition 1, which priced its IPO with $200 million in gross proceeds yesterday and begins trading on the NYSE today. U.S. initial public offerings have declined approximately...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8202191e133a72ba
+symbol: PLTR
+published_utc: 2026-06-17T10:00:00Z
+url: https://www.nasdaq.com/press-release/playlist-appoints-david-glazer-chief-financial-officer-palantir-technologies-board
+headline: Playlist Appoints David Glazer, Chief Financial Officer of Palantir Technologies, to Board of Directors
+<<<TEXT>>>
+--Playlist, the parent company of Mindbody, ClassPass, Booker, EGYM, and Kite, today announced the appointment of David Glazer, Chief Financial Officer of Palantir Technologies, to its Board of Directors.  "David has spent more than a decade helping to scale Palantir into one of the most closely watched technology companies in the world, and his instincts on scale,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: aa6ff6521c1dc28e
+symbol: PLTR
+published_utc: 2026-06-18T09:00:00Z
+url: https://www.nasdaq.com/press-release/oligo-security-joins-palantirs-fedstart-program-accelerate-runtime-security-federal
+headline: Oligo Security Joins Palantir's FedStart Program to Accelerate Runtime Security for Federal Agencies
+<<<TEXT>>>
+Oligo Security, the runtime security company, today announced it has joined Palantir Technologies' FedStart program. Through FedStart, Oligo will leverage Palantir's established security infrastructure, cloud expertise, and deep government compliance experience to significantly reduce the time required to achieve Authority to Operate for federal...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d2cd8477fe60a27d
+symbol: PLTR
+published_utc: 2026-06-22T16:05:00Z
+url: https://www.nasdaq.com/press-release/palantir-secures-foundational-role-ngc2-data-layer-2026-06-22
+headline: Palantir Secures Foundational Role in NGC2 Data Layer
+<<<TEXT>>>
+Palantir Technologies Inc., a global leader in artificial intelligence and data platforms, today welcomed the U.S. Palantir is proud to support the Army, its commanders, and Soldiers as they modernize command and control with a data-driven approach built to scale across the force. Palantir has been a trusted technology partner on NGC2 since its earliest...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c92c90d84f60703c
+symbol: PLTR
+published_utc: 2026-06-29T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-launches-engine-deploying-nvidia-nemotron-open-models-sovereign-environments
+headline: Palantir Launches Engine for Deploying NVIDIA Nemotron Open Models in Sovereign Environments
+<<<TEXT>>>
+Palantir Technologies Inc. today announced a strategic initiative with NVIDIA to deliver an intelligent engine for running NVIDIA AI and Nemotron open models in sovereign environments, with a focus on United States government agencies and U.S. critical infrastructure, where open models are essential for national security, corporate sustainability, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 525aa99530294bdd
+symbol: PLTR
+published_utc: 2026-06-29T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-and-surf-air-mobility-expand-partnership-accelerate-commercialization
+headline: Palantir and Surf Air Mobility Expand Partnership to Accelerate Commercialization of OperatorOS, OwnerOS, and Enterprise Products
+<<<TEXT>>>
+Following the successful commercial launch of BrokerOS, Palantir and Surf Air Mobility are committing additional engineering and go-to-market resources to accelerate commercial expansion of OperatorOS, OwnerOS, and SurfOS Enterprise Solutions.. MIAMI& LOS ANGELES---- Palantir Technologies Inc. today announced an expansion of its partnership with Surf...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 58548b7d1ad4aa3c
+symbol: PLTR
+published_utc: 2026-07-07T06:59:00Z
+url: https://www.nasdaq.com/press-release/palantir-expands-its-presence-mexico-and-strengthens-its-ai-offering-insurance-sector
+headline: Palantir Expands Its Presence in Mexico and Strengthens Its AI Offering in the Insurance Sector with GNP Seguros
+<<<TEXT>>>
+Palantir Technologies Inc. announced today an enterprise expansion agreement with GNP Seguros, the largest insurer in Mexico and part of the prominent Grupo BAL consortium. This alliance marks a milestone for Palantir, as GNP Seguros becomes Palantir’ s first publicly announced commercial customer in Latin America. "GNP Seguros is one of Mexico’ s most...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 781021d170acb2b6
+symbol: PLTR
+published_utc: 2026-07-13T16:05:00Z
+url: https://www.nasdaq.com/press-release/palantir-announces-date-second-quarter-2026-earnings-release-and-webcast-2026-07-13
+headline: Palantir Announces Date of Second Quarter 2026 Earnings Release and Webcast
+<<<TEXT>>>
+Palantir Technologies Inc. announced today that results for its second quarter ended June 30, 2026 will be released on Monday, August 3, 2026, following the close of U.S. markets. Palantir will host a webcast to discuss its results at 5:00 PM ET. A live webcast and replay will be available at investors.palantir.com, and participants can pre-register here.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b84470c2292d24d6
+symbol: PLTR
+published_utc: 2026-08-03T08:30:00Z
+url: https://www.nasdaq.com/press-release/mercury-partners-palantir-enhance-factory-automation-and-accelerate-production
+headline: Mercury Partners with Palantir to Enhance Factory Automation and Accelerate Production Timelines
+<<<TEXT>>>
+--Mercury Systems, Inc., and Palantir, a leading provider of AI software bringing commercial approaches to aerospace and defense, today announced a strategic agreement to enhance the automation of material planning and factory operations to accelerate the delivery of processing technologies for U.S. military programs. In support of the U.S. Department of War,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8d1e803e2056a8d2
+symbol: PLTR
+published_utc: 2026-08-03T16:05:00Z
+url: https://www.nasdaq.com/press-release/palantir-reports-q2-2026-us-comm-revenue-growth-149-y-y-and-revenue-growth-93-y-y
+headline: Palantir Reports Q2 2026 U.S. Comm Revenue Growth of 149% Y/Y and Revenue Growth of 93% Y/Y; Raises FY 2026 Revenue Guidance to 82% Y/Y Growth and U.S. Comm Revenue Guidance to 134% Y/Y, Crushing Consensus Expectations
+<<<TEXT>>>
+Palantir Technologies Inc. today announced financial results for the second quarter ended June 30, 2026. And Palantir is the only company that has demonstrated it can transform tokens into actual economic value. U.S. revenue grew 115% year-over-year and 23% quarter-over-quarter to $1.573 billion U.S. commercial revenue grew 149% year-over-year and 28%...
+<<<END>>>

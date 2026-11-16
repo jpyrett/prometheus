@@ -13,9 +13,9 @@ WHAT IT DOES, in order (each step is one call the LangGraph will make later):
      a name that is exactly a listed company's name is a company; anything else is a phrase.
   2. FIND the companies (phrase only): `DataClerk.find_companies`. The Data Clerk's model proposes brands and the companies that own them; code looks every name up in Finnhub's directory. A company that
      is privately held (Little Caesars, Donatos) or has no listing is reported as not scored.
-  3. REFRESH the data (only with `--fetch`: paid APIs, writes files): `DataClerk.refresh_data` fetches the daily bars, news, press releases and SEC filings of each company (and the bars of the holdings).
+  3. REFRESH the data (only with `--fetch`: paid APIs, writes files): `DataClerk.refresh_data` fetches the daily bars, news, press releases and SEC filings of each company (and the bars of what the user holds: the Account Manager prices them, the Advisor is not told of them).
   4. ORDER: one work order for all the symbols; `DataClerk.request_data` fills it (the Data Clerk's model answers, then code searches all three corpora and reads each company's filing evidence).
-  5. RECOMMEND: `Advisor.generate_recommendations(order, portfolio, case, today, top_k=find)`: a ranked list of the best `find` companies, and a score and rank for every company evaluated.
+  5. RECOMMEND: `Advisor.generate_recommendations(order, case, today, top_k=find)` (it is given no portfolio, entry 105): a ranked list of the best `find` companies to buy, and a score and rank for every company evaluated.
   6. CHECK RELEVANCE (phrase only): the best similarity between the phrase and each company's stored news and press releases (ChromaDB, the RAG index): is its text about the phrase? Shown, never
      used to rank: the ranking is about trades, the relevance is about the question.
   7. REVIEW (Critic v1, with a `critic`; `--no-critic` leaves it out): the Critic asks the Data Clerk again for the numbers, a quote and the sources, and approves or denies each recommendation against the
@@ -40,6 +40,7 @@ import sys
 import time
 from dataclasses import dataclass, field
 from datetime import date, datetime
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -48,6 +49,7 @@ from prometheus.agents.critic.report import review_section
 from prometheus.agents.trader.report import trade_section
 from prometheus.common import work_order as wo
 from prometheus.common.market_calendar import eastern_date
+from prometheus.common.money import money
 from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.common.trading_clock import clock_note, trading_now
 from prometheus.rag.config import REPO_ROOT
@@ -212,7 +214,7 @@ def find_companies_of(request: Request, clerk, today: date, find: int, result: R
 
 def run(request: Request, *, clerk, advisor, portfolio: Portfolio, today: date, find: int = 5, case: str | None = None, sector: str | None = None, fetch: bool = False,
         news_days: int = 14, filings_days: int = 365, relevance_searches=None, log=None, critic=None, manager=None, now: datetime | None = None, approver=None, mode: str | None = None,
-        trader=None, funding: dict | None = None, book: bool = False, balance: str | None = None, budget: float | None = None) -> Result:
+        trader=None, funding: dict | None = None, book: bool = False, balance: str | None = None, budget: Decimal | None = None) -> Result:
     """Steps 2 to 8 for one request. `clerk` is the Data Clerk and `advisor` the Advisor (fakes in tests). Nothing is raised for a failed step: it is in `result.notes`, and the run goes as far as it can.
 
     `critic` (Critic v1): with one, the recommendations are reviewed and the Account Manager decides what may trade; without it the run is exactly what it was. `manager` is the Account Manager that holds
@@ -246,7 +248,7 @@ def run(request: Request, *, clerk, advisor, portfolio: Portfolio, today: date, 
     if not symbols:
         result.notes.append("no listed company was found to score")
         return result
-    held = [p.symbol for p in portfolio.positions]
+    held = [p.symbol for p in portfolio.positions]      # NOT for the Advisor (it is given no portfolio): the Account Manager prices what the user holds, so those bars are refreshed too
     # 3. the data
     if fetch:
         log(f"Refreshing the data of {', '.join(symbols)} (paid APIs: daily bars, news, press releases, filings)...")
@@ -263,7 +265,7 @@ def run(request: Request, *, clerk, advisor, portfolio: Portfolio, today: date, 
         return result
     # 5. the Advisor
     log(f"The Advisor scores and ranks {len(symbols)} companies (case {case}, top {find})...")
-    timed("advisor", lambda: advisor.generate_recommendations(order, portfolio, case, today, top_k=find, only_subject=True))
+    timed("advisor", lambda: advisor.generate_recommendations(order, case, today, top_k=find, only_subject=True))
     # 5b. the Critic and the Account Manager's decisions
     if critic is not None and order.status == "recommended" and order.recommendations:
         from prometheus.agents.account_manager.account_manager import AccountManager
@@ -304,8 +306,7 @@ def _cut(text: str, width: int) -> str:
 
 
 def ranking_rows(result: Result) -> list[dict]:
-    """Every NEW idea the Advisor evaluated, best to worst: {rank, symbol, company, score, stance, status, reason, record}. A recommendation is `RECOMMENDED`; the rest say why not. A symbol
-    the user holds is not here (it has its own section)."""
+    """Every company the Advisor evaluated, best to worst: {rank, symbol, company, score, stance, status, reason, record}. A recommendation is `RECOMMENDED`; the rest say why not."""
     order = result.order
     names = {c["symbol"]: c.get("company") for c in result.companies if c.get("symbol")}
     rows = []
@@ -314,7 +315,7 @@ def ranking_rows(result: Result) -> list[dict]:
             rows.append({"rank": r["ranking"]["universe_rank"], "symbol": r["symbol"], "company": r.get("company") or names.get(r["symbol"]), "score": r["score"], "stance": r["stance"],
                          "status": "RECOMMENDED", "reason": r["action"]["reason"], "record": r, "negative_equity": r.get("negative_equity", False), "blend": r.get("blend")})
     for c in order.candidates if order else []:
-        if c.get("rank") is not None and not c.get("held"):
+        if c.get("rank") is not None:
             rows.append({"rank": c["rank"], "symbol": c["symbol"], "company": c.get("company") or names.get(c["symbol"]), "score": c.get("score"), "stance": c.get("stance"),
                          "status": "not recommended", "reason": c["reason"], "record": None, "negative_equity": c.get("negative_equity", False), "blend": c.get("blend")})
     return sorted(rows, key=lambda row: row["rank"])
@@ -391,7 +392,7 @@ def blend_lines(blend: dict | None) -> list[str]:
 
 def report(result: Result) -> str:
     """The whole report as text (no model, no network): the request, the companies found, the data refresh, the ranking best to worst, the recommendations with their plans and theses, what was
-    not scored, the user's holdings, the model calls and every note and error."""
+    not scored, the model calls and every note and error."""
     out, order, req = [], result.order, result.request
     line = lambda text="": out.append(text)
     bar = "=" * 118
@@ -498,15 +499,6 @@ def report(result: Result) -> str:
     if trades:
         line()
         out.extend(trades)
-    held = [r for r in order.recommendations if r["action"]["action"] in ("reduce", "add")] + [c for c in order.candidates if c.get("held")]
-    if held:
-        line()
-        line("YOUR HOLDINGS (reviewed before the new ideas)")
-        for h in held:
-            if "action" in h:
-                line(f"  {h['symbol']:<7} {h['action']['action'].upper():<7} {_cut(h['action']['reason'], 90)}")
-            else:
-                line(f"  {h['symbol']:<7} {'HOLD':<7} {_cut(h['reason'].replace('hold: ', ''), 90)}")
     line()
     runs = "; ".join(f"{r['stage']}: {r['calls']} call(s), {r['tokens_in']} in / {r['tokens_out']} out" + (f", ERROR {r['error']}" if r.get("error") else "") for r in order.advisor_runs)
     line(f"MODEL CALLS (Advisor): {runs or 'none'}")
@@ -535,6 +527,14 @@ def throwaway_ledger():
     return Ledger(Path(tempfile.mkdtemp(prefix="prometheus_ledger_")) / "recommendations.jsonl")
 
 
+def _dollars(text: str) -> Decimal:
+    """argparse: the amount the user typed read into a Decimal of dollars ONCE, at the edge (`money.money`: at most two decimals, never a float)."""
+    try:
+        return money(Decimal(text.strip().replace(",", "")))
+    except (InvalidOperation, ValueError):
+        raise argparse.ArgumentTypeError(f"{text!r} is not an amount of dollars (a number with at most two decimals)") from None
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("what", nargs="?", default="", help='a symbol, a list of symbols, a company name or a search phrase, for example "Pizza"')
@@ -546,7 +546,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--case", choices=CASES, help="funds (the default for symbols and companies), industry (the default for a phrase: leaders ranked), theme (laggards of a positive theme)")
     parser.add_argument("--sector", help="the sector ETF (XLK, XLP, XLY ...); for a phrase the Data Clerk's model suggests one")
     parser.add_argument("--portfolio", default=DEFAULT_PORTFOLIO, help=f"a portfolio file (default {DEFAULT_PORTFOLIO})")
-    parser.add_argument("--cash", type=float, help="instead of a portfolio: an empty one with this much cash (the 'here is $1,000' case)")
+    parser.add_argument("--cash", type=_dollars, help="instead of a portfolio: an empty one with this much cash (the 'here is $1,000' case)")
     parser.add_argument("--from-days-ago", type=int, default=14, help="days of news (1 to 90; default 14)")
     parser.add_argument("--today", help="the run date, YYYY-MM-DD (default: the US Eastern date of the moment of the review: a recommendation is for the trading day it is made on)")
     parser.add_argument("--fetch", action="store_true", help="REFRESH the data with the PAID APIs first (bars, news, press releases, filings: writes files); without it the stored data is used")

@@ -24,8 +24,11 @@ THE HANDSHAKE IS INSIDE `place_order` (design choices entry 81). The Account Man
 reorder it. What it reads of the handshake is two things code made: `account`, one word of a closed list (`booked`, `applied`, `refused`, `unconfirmed`: what the Account Manager did with the fill) and `cash_left`, a number
 (the cash the Account Manager says the account has after it). A refusal reaches it as a reject_code (`insufficient_cash`, `account_refused`), never as the book's sentence: no free text from the book reaches the model.
 `notify_account_manager` no longer tells the Account Manager anything (each fill is already told): it closes the run and reads the account back.
+
+DECIMAL MONEY (design choices entry 112): the prices, shares, cash and amounts the tools show are `Decimal`s in the dicts they return and are written to the model as JSON NUMBERS by the one encoder (`tool_content`: `money.dumps`; a Decimal is never a string). The
+model's `limit_price` is the number it wrote in its tool call (a float at that door): `place_order` turns it into a Decimal through the price door before the broker sees it; a bool is refused.
 """
-import json
+from decimal import Decimal
 from typing import Callable
 
 from langchain_core.tools import BaseTool, StructuredTool, tool
@@ -35,6 +38,7 @@ from prometheus.agents.trader.broker import PaperBroker, Prices, Refused
 from prometheus.agents.trader.record import Trade
 from prometheus.agents.trader.simulator import bar_on
 from prometheus.agents.trader.tickets import shown_range
+from prometheus.common.money import dumps, price as price_door
 
 TRADER_TOOLS = ("verify_request", "place_order", "check_trade_status", "notify_account_manager")
 VERIFY_CALLS = 2            # verify_request: once to read the tickets, once more to read what became of them
@@ -153,12 +157,15 @@ def loggable(args) -> dict:
     return out
 
 
-def market_price(prices: Prices, symbol: str) -> float | None:
-    """The price the model is told a trade stands at: the quote (paper) or the open of the entry bar (backtest); None when there is none."""
+def market_price(prices: Prices, symbol: str) -> Decimal | None:
+    """The price the model is told a trade stands at: the quote (paper, a Decimal: it passed the price door when it was fetched) or the open of the entry bar (backtest: a stored bar's float, through the price door here); None when there is none."""
     if prices.mode == "paper":
         return prices.quotes.get(symbol)
     bar = bar_on(prices.bars.get(symbol), prices.entry_date) if prices.entry_date else None
-    return bar.get("open") if bar else None
+    try:
+        return price_door(bar.get("open")) if bar else None
+    except ValueError:
+        return None
 
 
 class TraderTools:
@@ -173,7 +180,7 @@ class TraderTools:
         out = {"trade_id": trade.trade_id, "symbol": trade.symbol, "side": trade.side, "shares": trade.shares, "status": trade.status}
         if trade.status == "new":
             price = market_price(self.broker.prices, trade.symbol)
-            out["market_price"] = None if price is None else round(float(price), 4)
+            out["market_price"] = price
             out["default_order"] = {"order_type": trade.order_type, "limit_price": trade.limit_price}
             out["limit_range"] = shown_range(trade.limit_low, trade.limit_high) if trade.limit_low is not None and trade.limit_high is not None else None
         elif trade.status == "filled" and trade.fill is not None:
@@ -200,9 +207,9 @@ class TraderTools:
         """
         broker = self.broker
         cash = broker.cash_now()       # the Account Manager's figure, read now: the Trader keeps none of its own
-        return {"mode": broker.mode, "cash": None if cash is None else round(cash, 2), "trades": [self._view(t) for t in broker.trades.values() if t.kind == "recommendation"]}
+        return {"mode": broker.mode, "cash": cash, "trades": [self._view(t) for t in broker.trades.values() if t.kind == "recommendation"]}
 
-    def place_order(self, trade_id: str, order_type: str = "", limit_price: float = 0.0, note: str = "") -> dict:
+    def place_order(self, trade_id: str, order_type: str = "", limit_price: float = 0.0, note: str = "") -> dict:      # `limit_price`: the number the model wrote in its tool call (a JSON number is a float here): it becomes a Decimal at the first line below, once
         """Place one trade that is "new". Give its trade_id and nothing else for the default order, which is almost always right.
 
         A trade is placed once: a second call for the same trade_id is refused. Every sale must be placed before any purchase. The price of a limit order must be inside the limit_range of verify_request; the program
@@ -216,9 +223,13 @@ class TraderTools:
             limit_price: The limit price, for a limit order, inside the limit_range. 0 means the default price. A market order takes no price.
             note: A few words on why, at most 20. Optional.
         """
-        trade = self.broker.place(trade_id, order_type, limit_price, note, placed_by="model")
+        try:
+            limit = Decimal(0) if limit_price == 0 and not isinstance(limit_price, bool) else price_door(limit_price)      # the model's number through THE price door (a bool is refused here; four places, half up)
+        except ValueError:
+            raise Refused("limit_price must be a number (0 for the default)") from None
+        trade = self.broker.place(trade_id, order_type, limit, note, placed_by="model")
         funded, told = self._funded(trade), self.broker.answers.get(trade.trade_id)
-        handshake = {"account": told["account"], **({"cash_left": round(told["cash_left"], 2)} if told["cash_left"] is not None else {})} if told else {}      # one word of a closed list and a number: what the Account Manager did, as code wrote it
+        handshake = {"account": told["account"], **({"cash_left": told["cash_left"]} if told["cash_left"] is not None else {})} if told else {}      # one word of a closed list and a number: what the Account Manager did, as code wrote it
         return {"trade_id": trade.trade_id, "status": trade.status, "shares": trade.fill.shares if trade.fill else trade.shares, "fill_price": trade.fill.price if trade.fill else None,
                 "amount": trade.fill.amount if trade.fill else None, "reject_code": trade.reject_code, **handshake, **({"funded_by": funded} if funded else {})}
 
@@ -264,4 +275,4 @@ class TraderTools:
 
 def tool_content(output) -> str:
     """What a tool result looks like to the model: compact JSON."""
-    return json.dumps(output, ensure_ascii=False, default=str, separators=(",", ":"))
+    return dumps(output, ensure_ascii=False, separators=(",", ":"))      # the one encoder: a Decimal is a number

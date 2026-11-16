@@ -1,6 +1,7 @@
 """The Trader's records (prometheus/agents/trader/record.py, Trader spec section 14): Trade, Fill, Outcome, Run, and the closed list of rejection codes. No network and no model."""
 import ast
 import json
+from decimal import Decimal
 from pathlib import Path
 
 import pytest
@@ -71,10 +72,25 @@ def test_a_good_flow_built_with_the_records_passes_the_output_guard():
 # ---------------------------------------------------------------- fills
 
 def test_a_fill_has_a_price_and_shares_above_zero_and_a_source_from_the_list():
-    for bad in ({"price": 0}, {"price": -1.0}, {"shares": 0}, {"shares": 1.5}, {"commission": -0.01}, {"slippage_bps": -1}, {"price_source": "guess"}):
+    # AMENDED (entry 110): {"shares": 1.5} became 0.1234567: 1.5 is a quantity now (a fill may have a fraction); seven decimals is still refused
+    for bad in ({"price": 0}, {"price": -1.0}, {"shares": 0}, {"shares": 0.1234567}, {"commission": -0.01}, {"slippage_bps": -1}, {"price_source": "guess"}):
         with pytest.raises(ValidationError):
             fill(**bad)
     assert {fill(price_source=s).price_source for s in record.PRICE_SOURCES} == {"quote", "bar_open", "bar_limit"}
+
+
+def test_the_money_and_the_shares_of_a_fill_and_a_trade_are_decimals_a_float_is_read_by_its_written_digits_and_json_gets_numbers():
+    """Entry 112: the price is a Decimal at four places (half up: a quote with five decimals is rounded once, here), the amount and the commission to the cent, the shares to six places; a bool, a string and an amount
+    with a fraction of a cent are refused, and what is written for JSON is a number."""
+    f = fill(price=167.12345)
+    assert (f.price, f.amount, f.shares, f.commission, f.slippage_bps) == (Decimal("167.1235"), Decimal("7352.40"), Decimal("44"), Decimal("0"), Decimal("5"))
+    assert all(isinstance(x, Decimal) for x in (f.price, f.amount, f.shares, f.commission, f.slippage_bps))
+    assert fill().model_dump(mode="json") == {"price": 167.1, "shares": 44, "amount": 7352.4, "commission": 0, "date": "2026-11-05", "price_source": "quote", "slippage_bps": 5}
+    for bad in ({"price": "167.1"}, {"shares": True}, {"amount": 7352.405}):
+        with pytest.raises(ValidationError):
+            fill(**bad)
+    t = trade(shares=0.5, limit_price=100.5, dollars=1000)
+    assert (t.shares, t.limit_price, t.dollars) == (Decimal("0.5"), Decimal("100.5"), Decimal("1000.00")) and Trade.model_validate(t.model_dump(mode="json")) == t
 
 
 def test_an_outcome_is_open_or_closed_and_an_exit_is_a_stop_a_target_or_the_time_stop():
@@ -131,7 +147,8 @@ def test_the_records_and_the_settings_import_nothing_of_the_other_agents(name):
         elif isinstance(node, ast.ImportFrom):
             imported.append(node.module or "")
     assert not [m for m in imported if m.startswith(FORBIDDEN)], imported
-    assert all(m.split(".")[0] in ("json", "pathlib", "typing", "pydantic", "prometheus") for m in imported), imported
-    assert all(m in ("prometheus.common.work_order", "prometheus.rag.config", "prometheus.rag.loaders") for m in imported if m.startswith("prometheus")), imported
+    assert all(m.split(".")[0] in ("json", "pathlib", "typing", "decimal", "pydantic", "prometheus") for m in imported), imported      # AMENDED (entry 112): `decimal` (the standard library: money and share counts are Decimals)
+    # AMENDED (entry 110): `prometheus.common.shares` (plain Python: the type of a share field) is allowed
+    assert all(m in ("prometheus.common.money", "prometheus.common.shares", "prometheus.common.work_order", "prometheus.rag.config", "prometheus.rag.loaders") for m in imported if m.startswith("prometheus")), imported      # AMENDED (entry 110): the record's share fields are `shares.Shares`, plain Python; AMENDED (entry 112): so are its money fields (`prometheus.common.money`: the types `Money`, `Price` and `Rate`, plain Python)
 
 

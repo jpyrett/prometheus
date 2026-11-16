@@ -7,6 +7,7 @@
 size: the Critic does not decide how much to buy (the Account Manager does, and adds what it would place to the card it shows the user: `decisions._card`).
 """
 from prometheus.agents.critic.common import EASTERN, pct
+from prometheus.common import shares as sh
 from prometheus.common.work_order import parse_utc
 
 DECISION_WORDS = {"yes_auto": "yes (AUTO)", "yes_user": "yes (you approved)", "pending_user": "pending your answer (ASK)", "no_system_denied": "no (system denied)",
@@ -58,7 +59,7 @@ def _evidence(review: dict) -> str:
 def _risk(review: dict) -> str:
     r = review["risk"]
     if r["risk_score"] is None:
-        return "not judged for a reduction" if review["action"] == "reduce" else "could not be judged"
+        return "could not be judged"
     text = f"risk {r['risk_level']} ({r['risk_score']:g}), your limit is {r['allowed_level']}"
     if r["tolerance_effective"] != r["tolerance_stated"]:
         text += f" (tolerance lowered to {r['tolerance_effective']})"
@@ -69,7 +70,7 @@ def _timing(review: dict, record: dict | None) -> str:
     t = review["timing"]
     text = f"{t['session'].replace('_', '-')} session" if t["session"] != "closed" else f"market closed ({t['session_reason']})"
     zone = ((record or {}).get("trade") or {}).get("entry_zone")
-    if t["deal_price"] is not None and zone and review["action"] in ("open", "add"):
+    if t["deal_price"] is not None and zone:
         place = "inside" if 0 <= (t["zone_position"] or 0) <= 1 else "above" if (t["zone_position"] or 0) > 1 else "under"
         text += f"; {t['deal_price']:.2f} is {place} the entry zone {zone[0]:.2f} to {zone[1]:.2f}"
     elif t["deal_price"] is None:
@@ -80,7 +81,7 @@ def _timing(review: dict, record: dict | None) -> str:
 def _value(review: dict) -> str:
     v = review["value"]
     if v["deal"] is None:
-        return "not judged for a reduction"
+        return "could not be judged"
     gap = (f"{pct(abs(v['premium']))} {'above' if v['premium'] > 0 else 'under'} its 6-month average of {v['avg_6m']:.2f}" if v["avg_6m"] is not None and v["premium"] is not None
            else "no six-month average to judge the price against")
     return f"{v['deal'].upper()}: {gap}"
@@ -88,8 +89,6 @@ def _value(review: dict) -> str:
 
 def _chart(review: dict) -> str:
     c = review["chart"]
-    if review["action"] == "reduce":
-        return "not judged for a reduction"
     if not c["facts"]:
         return "could not be judged"
     words = lambda side: ", ".join(p["name"].replace("_", " ") for p in c["patterns"] if p["direction"] == side)
@@ -104,8 +103,7 @@ def scorecard(review: dict, record: dict | None = None) -> dict:
     rank = (record.get("ranking") or {}).get("rank")
     head = f"  #{rank if rank is not None else '-'}  {review['symbol']:<6} {(record.get('company') or '')[:22]:<22} {'APPROVE' if approved else 'DENY   '} score {review['score']}/100 ({review['grade']})"
     if approved:
-        what = "sell the holding" if review["action"] == "reduce" else "add to the position" if review["action"] == "add" else "open a position"
-        head += f"      {what}      valid until {_et(review['valid_until_utc'])}"
+        head += f"      open a position      valid until {_et(review['valid_until_utc'])}"
     elif review["score_before_blockers"] > review["score"]:
         head += f"      would have been {review['score_before_blockers']} without the blockers"
     lines = [head]
@@ -123,8 +121,8 @@ def scorecard(review: dict, record: dict | None = None) -> dict:
         lines.append(f"      BLOCKER {b['code']}: {b['message']}")
     if review["denial_reasons"] and "score_below_minimum" in review["denial_reasons"]:
         lines.append("      BLOCKER score_below_minimum: the score is under the mark for approval")
-    if review["requires_human"]:
-        lines.append("      needs your eyes before any trade: " + ", ".join(review["requires_human_reasons"]))
+    if "needs_human_review" in review["denial_reasons"]:
+        lines.append("      DENIED needs_human_review: a person must look before this can trade: " + ", ".join(review["requires_human_reasons"]))
     return {"text": "\n".join(lines), "symbol": review["symbol"], "approved": approved, "score": review["score"], "grade": review["grade"], "summary": review["summary"]}
 
 
@@ -138,10 +136,12 @@ def header(order) -> str:
 
 
 def _decided_size(decision: dict) -> str:
-    """What the Account Manager decided to buy or sell, for the line of decisions (the Critic's card has no size): ", 44 shares, about $7,352", or ", the whole holding (60 shares)"; nothing when no share was decided."""
+    """What the Account Manager decided to buy, for the line of decisions (the Critic's card has no size): ", 44 shares, about $7,352"; nothing when no share was decided."""
     if not decision.get("shares"):
         return ""
-    return f", the whole holding ({decision['shares']} shares)" if decision["action"] == "reduce" else f", {decision['shares']} shares, about ${decision['est_cost']:,.0f}"
+    if decision.get("dollars"):      # an order in dollars (entry 111, M2): the dollars first, the shares an estimate
+        return f", ${decision['dollars']:,.0f}, about {sh.text(decision['shares'])} shares"
+    return f", {sh.text(decision['shares'])} shares, about ${decision['est_cost']:,.0f}"
 
 
 def decisions_line(order) -> str:

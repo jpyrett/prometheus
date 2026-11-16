@@ -4,7 +4,7 @@ The record under test is the one the whole step writes for PG with the fakes of 
 import json
 
 import pytest
-from advisor_helpers import EMPTY_PORTFOLIO, PG_EVENT, PG_SIGNAL, TODAY, Scripted, advisor_with, company, plan_reply, ready_order, thesis_reply
+from advisor_helpers import PG_EVENT, PG_SIGNAL, TODAY, Scripted, advisor_with, company, plan_reply, ready_order, thesis_reply
 
 from prometheus.agents.advisor import thesis as th
 from prometheus.agents.advisor.calls import new_run
@@ -13,7 +13,7 @@ from prometheus.agents.advisor.calls import new_run
 @pytest.fixture(scope="module")
 def record():
     advisor, _ = advisor_with(plan_reply(company(signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply())
-    order = advisor.generate_recommendations(ready_order(), EMPTY_PORTFOLIO, "funds", TODAY)
+    order = advisor.generate_recommendations(ready_order(), "funds", TODAY)
     return order.recommendations[0]
 
 

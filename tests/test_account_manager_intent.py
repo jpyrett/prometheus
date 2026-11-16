@@ -6,6 +6,9 @@ Reading a request with the real model is in `tests/test_end_to_end_live.py` (it 
 """
 import json
 import re
+from decimal import Decimal
+from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -113,8 +116,8 @@ def test_nothing_or_too_much_is_refused_before_the_model_is_asked(typed):
 
 
 def test_numbers_are_read_in_digits_thousands_millions_and_words():
-    assert 3.0 in it._numbers("the three best") and 7.0 in it._numbers("Seven of them")
-    assert 5000.0 in it._numbers("$5,000") and 5000.0 in it._numbers("5k") and 5000.0 in it._numbers("5 thousand") and 2_500_000.0 in it._numbers("2.5 million")
+    assert Decimal("3") in it._numbers("the three best") and Decimal("7") in it._numbers("Seven of them")
+    assert Decimal("5000") in it._numbers("$5,000") and Decimal("5000") in it._numbers("5k") and Decimal("5000") in it._numbers("5 thousand") and Decimal("2500000") in it._numbers("2.5 million")
     assert it._numbers("no numbers here") == set()
 
 
@@ -148,6 +151,33 @@ def test_nothing_or_too_much_never_reaches_the_model_so_no_connection_is_even_tr
     with pytest.raises(ValueError, match="nothing to understand|longer than"):
         m.understand_request(typed)
     assert m.intent_run == {}                                                               # the check is before the model is touched
+
+
+# ---------------------------------------------------------------- the page's own example, read by the real model (design choices entry 108)
+
+class Recorded:
+    """The Account Manager's model: its REAL recorded reply, given back (`tests/fixtures/session_real/page_default_request_form.json`)."""
+
+    model_name = "openai/gpt-oss-120b"
+
+    def __init__(self, replies):
+        self.replies, self.seen = list(replies), []
+
+    def invoke(self, messages):
+        self.seen.append(messages)
+        return SimpleNamespace(content=self.replies.pop(0), usage_metadata={"input_tokens": 814, "output_tokens": 98})
+
+
+def test_the_request_box_default_text_is_read_by_the_real_model_as_an_even_split_of_three_with_three_thousand_dollars():
+    """Part G: the page's own example ("Buy an even mixture of 3 most recommended stocks in the pizza restaurants using $3000 of my available money") must reach the Account Manager as `allocation: even`, not `default`. The model's REAL
+    reply (one call, no retry, 2026-11-15) is checked here by the real Account Manager against the user's words, as every reply is; the prompt did not need to change."""
+    from prometheus.application.web.app import DEFAULT_PROMPT
+    recorded = json.loads((Path(__file__).parent / "fixtures" / "session_real" / "page_default_request_form.json").read_text(encoding="utf-8"))
+    assert list(recorded["requests"]) == [DEFAULT_PROMPT]
+    model = Recorded(recorded["requests"][DEFAULT_PROMPT]["replies"])
+    intent = AccountManager(model=model, model_id="recorded").understand_request(DEFAULT_PROMPT)
+    assert (intent.action, intent.topic, intent.count, intent.allocation, intent.budget, intent.orders) == ("buy", "pizza restaurants", 3, "even", Decimal("3000"), []) and len(model.seen) == 1
+    assert model.seen[0][0].content == prompt.SYSTEM                                                                              # the Account Manager's own prompt, as it stands
 
 
 # ---------------------------------------------------------------- the prompt names nothing

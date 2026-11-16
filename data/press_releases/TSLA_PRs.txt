@@ -1,0 +1,81 @@
+<<<PRESS_RELEASE>>>
+id: 8f0ef90f97e95c27
+symbol: TSLA
+published_utc: 2025-12-18T16:30:00Z
+url: https://www.nasdaq.com/press-release/bitcoin-treasury-corporation-highlights-2025-milestones-and-outlines-long-term-growth
+headline: Bitcoin Treasury Corporation Highlights 2025 Milestones and Outlines Long-Term Growth Vision
+<<<TEXT>>>
+Bitcoin Treasury Corporation, a Canadian Bitcoin-native company building shareholder value in Bitcoin, today highlighted key milestones achieved in 2025, introduced its Bitcoin price risk management program and outlined its long-term strategy to build enduring shareholder value through disciplined execution and growth in Bitcoin Per Share.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5abc9244465bb6cb
+symbol: TSLA
+published_utc: 2026-01-02T09:07:00Z
+url: https://www.nasdaq.com/press-release/tesla-fourth-quarter-2025-production-deliveries-deployments-2026-01-02
+headline: Tesla Fourth Quarter 2025 Production, Deliveries & Deployments
+<<<TEXT>>>
+Tesla will post its financial results for the fourth quarter of 2025 after market close on Wednesday, January 28, 2026. Tesla management will hold a live question and answer webcast that day at 4:30 p.m. Central Time to discuss the Company’ s financial and business results and outlook. What: Tesla Q4 2025 Financial Results and Q&A Webcast When: Wednesday, January...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 13fe8c259c6953c3
+symbol: TSLA
+published_utc: 2026-01-09T16:49:00Z
+url: https://www.nasdaq.com/press-release/family-sues-tesla-after-autopilot-fails-detect-motorcycle-killing-28-year-old-rider
+headline: Family Sues Tesla After Autopilot Fails to Detect Motorcycle, Killing 28-Year-Old Rider says Law Firm Osborn Machler
+<<<TEXT>>>
+The family of a 28- year-old man has filed a wrongful death lawsuit against Tesla yesterday after a Tesla Model S operating on autopilot failed to detect his stopped motorcycle, striking him from behind, pinning him to the ground, and killing him. According to police reports, Jeffrey Nissen Jr. of Stanwood, Washington, was riding his motorcycle and stopped in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e809e234d40b78fb
+symbol: TSLA
+published_utc: 2026-01-28T16:07:00Z
+url: https://www.nasdaq.com/press-release/tesla-releases-fourth-quarter-and-full-year-2025-financial-results-2026-01-28
+headline: Tesla Releases Fourth Quarter and Full Year 2025 Financial Results
+<<<TEXT>>>
+Tesla has released its financial results for the fourth quarter and full year ended December 31, 2025 by posting an update on its Investor Relations website. As previously announced, Tesla management will host a live question and answer webcast at 4:30 p.m. Central Time to discuss the results and outlook. What: Tesla Fourth Quarter and Full Year 2025...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 74aada9ae840247c
+symbol: TSLA
+published_utc: 2026-04-02T09:03:00Z
+url: https://www.nasdaq.com/press-release/tesla-first-quarter-2026-production-deliveries-deployments-2026-04-02
+headline: Tesla First Quarter 2026 Production, Deliveries & Deployments
+<<<TEXT>>>
+Tesla will post its financial results for the first quarter of 2026 after market close on Wednesday, April 22, 2026. Tesla management will hold a live question and answer webcast that day at 4:30 p.m. Central Time to discuss the Company’ s financial and business results and outlook. What: Tesla Q1 2026 Financial Results and Q&A Webcast When: Wednesday, April 22,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 91de20625df87ede
+symbol: TSLA
+published_utc: 2026-04-22T16:07:00Z
+url: https://www.nasdaq.com/press-release/tesla-releases-first-quarter-2026-financial-results-2026-04-22
+headline: Tesla Releases First Quarter 2026 Financial Results
+<<<TEXT>>>
+Tesla has released its financial results for the first quarter of 2026 by posting an update on its Investor Relations website. As previously announced, Tesla management will host a live company update and question and answer webcast at 4:30 p.m. Central Time to discuss the results and outlook. What: Tesla First Quarter 2026 Financial Results Q&A Webcast When:...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8473050b4ad1acc6
+symbol: TSLA
+published_utc: 2026-05-06T08:30:00Z
+url: https://www.nasdaq.com/press-release/medalist-diversified-inc-nasdaq-mdrr-announces-dst-sponsor-platform-inaugural-tesla
+headline: Medalist Diversified, Inc. (NASDAQ: MDRR) Announces DST Sponsor Platform; Inaugural Tesla-Leased Offering Available to Accredited 1031 Investors
+<<<TEXT>>>
+Medalist Diversified, Inc. today announced its Delaware Statutory Trust sponsor platform, operated through its wholly-owned subsidiary, MDRR Sponsor TRS, LLC. The DST offering is structured around a single-tenant, net-leased sales, service and delivery facility in Pensacola, Florida, leased to Tesla, Inc.. "We believe that Medalist is building a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8e46e355d35ef984
+symbol: TSLA
+published_utc: 2026-07-02T09:05:00Z
+url: https://www.nasdaq.com/press-release/tesla-second-quarter-2026-production-deliveries-deployments-2026-07-02
+headline: Tesla Second Quarter 2026 Production, Deliveries & Deployments
+<<<TEXT>>>
+Tesla will post its financial results for the second quarter of 2026 after market close on Wednesday, July 22, 2026. Tesla management will hold a live question and answer webcast that day at 4:30 p.m. Central Time to discuss the Company’ s financial and business results and outlook. What: Tesla Q2 2026 Financial Results and Q&A Webcast When: Wednesday, July 22,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a78c6bb516baa31f
+symbol: TSLA
+published_utc: 2026-07-22T16:14:00Z
+url: https://www.nasdaq.com/press-release/tesla-releases-second-quarter-2026-financial-results-2026-07-22
+headline: Tesla Releases Second Quarter 2026 Financial Results
+<<<TEXT>>>
+Tesla has released its financial results for the second quarter of 2026 by posting an update on its Investor Relations website. As previously announced, Tesla management will host a live company update and question and answer webcast at 4:30 p.m. Central Time to discuss the results and outlook. What: Tesla Second Quarter 2026 Financial Results Q&A Webcast...
+<<<END>>>

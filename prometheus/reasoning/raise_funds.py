@@ -20,21 +20,32 @@ WHO DOES WHAT. The LLM only proposes thoughts (`generate`, supplied by the Accou
   the decision the completed plan with the highest score.
 The tree is a LangGraph (`build_graph`): expand -> evaluate -> prune -> (expand again | decide). The graph state IS the tree: the frontier, the completed plans, the trace.
 
+WHOLE SHARES ONLY (design choices entry 110). RaiseFunds plans WHOLE shares, as it always did: what the model may sell is "a whole number of at least 1", `Holding.sellable` is the WHOLE shares of what may be sold (the T+1 quantity
+and, with `never_liquidate`, the holding less one share, never below 0: a holding of one share or less is not sold from), and `Problem.shares` is a whole number (the desk hands over the purchase's quantity rounded UP to the next
+whole share, so that the plan raises at least enough). What changed is only that a holding it READS may have a fraction (`Holding.shares`, `held`, `fill_held`): a position is closed only when the plan sells exactly what is held.
+
+DECIMAL MONEY (design choices entry 112; Jacob, 2026-11-16: *"Need to always use decimal.Decimal type when dealing with money and share counts"*). The cash, the prices, the cost, the proceeds, the gains and the shortfall are `Decimal`
+(a price times shares is `trade_amount`, to the cent, half up; what is left is exact arithmetic on cents), and every number of shares is a whole `Decimal` quantity (the model's reply is read with a number that is not text or a bool). A float given to
+`build_problem` is a TypeError: it comes in through a door (the Account Manager's `_plan` turns a quote into a `Decimal` price before it gets here). What stays a float is the EVALUATOR'S SCORE and its components, the weights and the beam's priority: they are
+measurements of how good a plan is (0 to 100, fractions between 0 and 1), never added to money (design/decimal_money_spec.md section 3, last paragraph), and a ratio of two amounts is worked out from Decimals at the very end (`_ratio`), at that line.
+
 WHAT IT DOES NOT MODEL: fees, taxes beyond "how much of the proceeds is a gain", the T+1 settlement of the SALE proceeds (the plan treats them as available for the purchase; the Trader's
 settlement rules apply when the orders are placed), a limit order, or the price moving between the quote and the fill.
 """
 import json
-import math
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 from datetime import date
+from decimal import ROUND_CEILING, ROUND_DOWN, Decimal
 from typing import Annotated, Callable, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
-from prometheus.common.portfolio import Portfolio
+from prometheus.common import shares as sh
+from prometheus.common.money import json_default, exact
+from prometheus.common.portfolio import Portfolio, trade_amount
 from prometheus.tools import trading_math as tm
 
 BEAM_WIDTH = 3        # unfinished nodes kept (expanded) per level
@@ -54,14 +65,14 @@ MAX_IDEA = 160
 class Holding:
     symbol: str
     name: str | None
-    shares: int
-    sellable: int          # shares that may be sold today (T+1)
-    price: float           # the current quote, from the Data Clerk
-    basis: float           # average price paid per share
+    shares: Decimal        # what is held: a quantity, which may have a fraction (entry 110)
+    sellable: Decimal      # WHOLE shares that may be sold today (T+1; with `never_liquidate` one share of the holding is kept too)
+    price: Decimal         # the current quote, from the Data Clerk (a Decimal at four places: a quote passes the price door before it gets here)
+    basis: Decimal         # average price paid per share
 
     @property
-    def value(self) -> float:
-        return self.shares * self.price
+    def value(self) -> Decimal:
+        return trade_amount(self.shares, self.price)      # money from a count and a price is `trade_amount` (decimal, half up to the cent), never a float product (entry 111)
 
     @property
     def green(self) -> bool:
@@ -73,15 +84,15 @@ class Holding:
 class Problem:
     """What the search is about: buy `shares` of `target` at `price` with `cash`, selling from `holdings`."""
     target: str
-    shares: int
-    price: float
-    cash: float
+    shares: Decimal                # a whole number of shares
+    price: Decimal
+    cash: Decimal
     holdings: dict[str, Holding]   # everything held EXCEPT the target: only these can be sold
-    held: int = 0                  # shares of the target already held (the purchase adds to them)
+    held: Decimal = Decimal(0)     # shares of the target already held (the purchase adds to them): a quantity, which may have a fraction
     only_green: bool = False       # sell only holdings that show a profit (price above cost basis): a hard check
     fill: str | None = None        # a second stock to buy with whatever cash is LEFT after the purchase: as many shares as it affords (entry 44)
-    fill_price: float = 0.0
-    fill_held: int = 0             # shares of the fill stock already held
+    fill_price: Decimal = Decimal(0)
+    fill_held: Decimal = Decimal(0)  # shares of the fill stock already held (a quantity)
     lean: bool = False             # sell no more shares than the shortfall needs (a hard check): set with `fill`, "sell only as much as the purchase needs"
     max_depth: int = MAX_DEPTH     # steps in a plan (entry 45: a parameter; the prompt says it)
     branching: int = BRANCHING     # thoughts asked for per expanded node (the prompt says it)
@@ -98,27 +109,27 @@ class Problem:
         """The holdings that may be sold, as the plain dicts of `trading_math` (sellable shares, price, basis): the same arithmetic the tool does."""
         return [{"symbol": h.symbol, "shares": h.sellable, "price": h.price, "basis": h.basis} for h in self.holdings.values() if self.eligible(h)]
 
-    def fill_with(self, left: float) -> tuple[int, float]:
+    def fill_with(self, left: Decimal) -> tuple[Decimal, Decimal]:
         """(how many shares of the fill stock `left` buys, the cash that remains). (0, left) when there is no fill stock."""
         if not self.fill or left <= 0:
-            return 0, round(max(left, 0.0), 2)
-        n = math.floor(round(left, 6) / self.fill_price)
-        return n, round(left - n * self.fill_price, 2)
+            return Decimal(0), max(left, Decimal("0.00"))
+        n = left // self.fill_price                              # whole shares: the exact quotient, rounded down
+        return n, left - trade_amount(n, self.fill_price)
 
     def eligible(self, holding: "Holding") -> bool:
         """Whether a holding may be sold in this problem: it has sellable shares and, with `only_green`, it shows a profit."""
         return holding.sellable > 0 and (holding.green or not self.only_green)
 
     @property
-    def cost(self) -> float:
-        return round(self.shares * self.price, 2)
+    def cost(self) -> Decimal:
+        return trade_amount(self.shares, self.price)
 
     def fewest_stocks(self) -> int | None:
         """The fewest holdings that could raise the money to raise, the biggest first (arithmetic, nothing is searched): so a plan sells AT LEAST this many stocks. None when even all of them cannot."""
-        total = 0.0
-        for count, value in enumerate(sorted((h.sellable * h.price for h in self.holdings.values() if self.eligible(h)), reverse=True), 1):
+        total = Decimal("0.00")
+        for count, value in enumerate(sorted((trade_amount(h.sellable, h.price) for h in self.holdings.values() if self.eligible(h)), reverse=True), 1):
             total += value
-            if round(total, 2) >= self.need:
+            if total >= self.need:
                 return count
         return None
 
@@ -129,36 +140,57 @@ class Problem:
         return max(MAX_DEPTH, min((self.fewest_stocks() or eligible) + slack, eligible))
 
     @property
-    def need(self) -> float:
+    def need(self) -> Decimal:
         """The money to raise: the cost less the free settled cash (`cash_avail`) already there."""
-        return round(max(0.0, self.cost - self.cash), 2)
+        return max(Decimal("0.00"), self.cost - self.cash)
 
     @property
-    def max_affordable(self) -> int:
+    def max_affordable(self) -> Decimal:
         """The most shares of the target that selling every sellable share (and spending the cash) could buy: an upper bound, calculated, for 'how many can I buy'."""
-        return math.floor(round(self.cash + sum(h.sellable * h.price for h in self.holdings.values() if self.eligible(h)), 2) / self.price)
+        return (self.cash + sum((trade_amount(h.sellable, h.price) for h in self.holdings.values() if self.eligible(h)), Decimal("0.00"))) // self.price
 
 
-def build_problem(portfolio: Portfolio, target: str, shares: int, prices: dict[str, float], today: date | None = None, only_green: bool = False, fill: str | None = None,
+def ceil_div(amount: Decimal, price: Decimal) -> Decimal:
+    """The whole shares that `amount` dollars needs at `price`, rounded UP (a Decimal ceiling of the exact quotient)."""
+    return (amount / price).to_integral_value(rounding=ROUND_CEILING)
+
+
+def _ratio(part: Decimal, whole: Decimal) -> float:
+    """`part` as a fraction of `whole`, as a float: the evaluator's SCORES are measurements, never added to money (decimal_money_spec.md section 3, last paragraph), so a ratio of two Decimal amounts becomes a float here, at the very end."""
+    return float(part / whole)
+
+
+def _sellable(sellable_today: Decimal, held: Decimal, never_liquidate: bool) -> Decimal:
+    """The WHOLE shares of a holding that a plan may sell: the quantity sellable today (T+1) and, with `never_liquidate`, at most the holding less one share; rounded down, never below 0. A holding of one share or less is
+    not sold from (it has nothing to spare), and a fraction of a share is never planned (RaiseFunds sells whole shares only: design choices entry 110)."""
+    most = min(sellable_today, sh.difference(held, 1)) if never_liquidate else sellable_today
+    return max(Decimal(0), most.to_integral_value(rounding=ROUND_DOWN))
+
+
+def build_problem(portfolio: Portfolio, target: str, shares: Decimal, prices: dict[str, Decimal], today: date | None = None, only_green: bool = False, fill: str | None = None,
                   explore: bool = False, lean: bool = False, max_depth: int = MAX_DEPTH, branching: int = BRANCHING, green_first: bool = False, never_liquidate: bool = False, whole_plans: bool = False) -> Problem:
     """The portfolio and the quotes -> a Problem. `prices` must hold the target, the `fill` stock and every holding (the Data Clerk's quotes). `only_green`: only holdings that show a profit may
     be sold. `fill`: a second stock bought with the cash left after the purchase, as many shares as it affords; it is never sold, and the sells are then lean (no step sells more shares than
     the shortfall needs). `explore`: the generator must give both kinds of step (see `missing_kind`). `lean` (always on with a fill stock): no step sells more shares than the shortfall needs.
     `max_depth` and `branching`: the size of the tree, which the prompt tells the model. `green_first`: the score prefers selling the most profitable holdings first. `never_liquidate`: at least one share of every holding is kept, so at most
     held - 1 shares of it can be sold (and the shares that are locked by T+1 count among the ones kept). Raises ValueError otherwise."""
-    if not isinstance(shares, int) or isinstance(shares, bool) or shares < 1:
+    try:
+        shares = sh.quantity(shares)                      # a bool and a string are refused by the door (a numeric string such as "2" too: entry 111, M5)
+    except ValueError:
+        raise ValueError("the number of shares to buy must be a whole number of at least 1") from None
+    if not sh.whole(shares) or shares < 1:
         raise ValueError("the number of shares to buy must be a whole number of at least 1")
     if fill is not None and fill == target:
         raise ValueError("the stock to fill with must be another symbol than the stock to buy")
-    missing = [s for s in [target, *([fill] if fill else []), *portfolio.symbols] if not isinstance(prices.get(s), (int, float)) or prices[s] <= 0]
+    usable = lambda x: isinstance(x, (int, Decimal)) and not isinstance(x, bool) and x > 0      # a float is not tested here: `exact` below raises TypeError for it (it comes in through a door)
+    missing = [s for s in [target, *([fill] if fill else []), *portfolio.symbols] if prices.get(s) is None or not usable(exact(prices[s], "a price"))]
     if missing:
         raise ValueError("no price for " + ", ".join(missing))
-    holdings = {p.symbol: Holding(p.symbol, p.name, p.shares, min(portfolio.sellable_shares(p.symbol, today), p.shares - 1) if never_liquidate else portfolio.sellable_shares(p.symbol, today),
-                                  float(prices[p.symbol]), p.cost_basis)
+    holdings = {p.symbol: Holding(p.symbol, p.name, p.shares, _sellable(portfolio.sellable_shares(p.symbol, today), p.shares, never_liquidate), exact(prices[p.symbol], "a price"), p.cost_basis)
                 for p in portfolio.positions if p.symbol not in (target, fill)}
     already, filled = portfolio.position(target), portfolio.position(fill) if fill else None
-    return Problem(target, shares, float(prices[target]), portfolio.cash_avail, holdings, already.shares if already else 0, only_green,
-                   fill, float(prices[fill]) if fill else 0.0, filled.shares if filled else 0, lean=bool(fill) or lean, max_depth=max_depth, branching=branching, green_first=green_first, never_liquidate=never_liquidate, whole_plans=whole_plans, explore=explore)
+    return Problem(target, shares, exact(prices[target], "a price"), portfolio.cash_avail, holdings, already.shares if already else Decimal(0), only_green,
+                   fill, exact(prices[fill], "a price") if fill else Decimal(0), filled.shares if filled else Decimal(0), lean=bool(fill) or lean, max_depth=max_depth, branching=branching, green_first=green_first, never_liquidate=never_liquidate, whole_plans=whole_plans, explore=explore)
 
 
 # ---------------------------------------------------------------- a node: the plan so far
@@ -168,16 +200,16 @@ class Node:
     id: str
     parent: str | None
     depth: int
-    sells: tuple[tuple[str, int], ...] = ()   # ((symbol, shares), ...) from the root to this node
+    sells: tuple[tuple[str, Decimal], ...] = ()   # ((symbol, whole shares), ...) from the root to this node
     idea: str = ""                            # the words the LLM gave for the last step
-    proceeds: float = 0.0
-    shortfall: float = 0.0
-    gain: float = 0.0                         # realised gain (negative: a loss) if the plan were carried out
-    score: float = 0.0                        # 0 to 100, calculated
+    proceeds: Decimal = Decimal("0.00")
+    shortfall: Decimal = Decimal("0.00")
+    gain: Decimal = Decimal("0.00")           # realised gain (negative: a loss) if the plan were carried out, to the cent
+    score: float = 0.0                        # 0 to 100, calculated: a measurement, a float (see the module text)
     parts: dict = field(default_factory=dict)  # the components that exist for this node (0 to 1 each)
     complete: bool = False
-    fill_shares: int = 0                      # a complete plan: shares of the fill stock the cash left buys
-    left: float = 0.0                         # a complete plan: the cash that remains after the purchase and the fill shares
+    fill_shares: Decimal = Decimal(0)         # a complete plan: shares of the fill stock the cash left buys
+    left: Decimal = Decimal("0.00")           # a complete plan: the cash that remains after the purchase and the fill shares
 
     def plan(self) -> str:
         return ", ".join(f"{s} x{n}" for s, n in self.sells) or "(nothing sold)"
@@ -187,7 +219,7 @@ def root(problem: Problem) -> Node:
     return Node(id="n0", parent=None, depth=0, shortfall=problem.need, score=100.0, parts={})
 
 
-def score_plan(problem: Problem, sells: tuple[tuple[str, int], ...]) -> tuple[float, dict]:
+def score_plan(problem: Problem, sells: tuple[tuple[str, Decimal], ...]) -> tuple[float, dict]:
     """(score 0 to 100, the components) of a plan, calculated. Every component is 0 to 1, higher is better:
 
       gain       1 - (the realised gain / the proceeds), the gain clamped to 0..1. A plan that sells at a loss scores 1: the share of what you raise that is taxable gain.        weight 0.40
@@ -198,40 +230,38 @@ def score_plan(problem: Problem, sells: tuple[tuple[str, int], ...]) -> tuple[fl
       orders     1 / the number of sell orders. One order is 1, two 0.5, three 0.33.                                                                                           weight 0.15
 
     A plan that is not complete yet is scored on the components that exist (overshoot is missing) with the weights renormalised, so the beam can compare partial plans."""
-    proceeds = sum(n * problem.holdings[s].price for s, n in sells)
-    gain = sum(n * (problem.holdings[s].price - problem.holdings[s].basis) for s, n in sells)
-    closed = sum(n == problem.holdings[s].shares for s, n in sells)
-    first = ("green", green_component(problem, proceeds, gain)) if problem.green_first else ("gain", 1.0 - min(1.0, max(0.0, gain / proceeds)) if proceeds else 1.0)
+    proceeds = sum((trade_amount(n, problem.holdings[s].price) for s, n in sells), Decimal("0.00"))
+    gain = sum((trade_amount(n, problem.holdings[s].price) - trade_amount(n, problem.holdings[s].basis) for s, n in sells), Decimal("0.00"))      # the way the book works a sale's gain: proceeds less the cost basis of the shares, each to the cent
+    closed = sum(sh.same(n, problem.holdings[s].shares) for s, n in sells)
+    first = ("green", green_component(problem, proceeds, gain)) if problem.green_first else ("gain", 1.0 - min(1.0, max(0.0, _ratio(gain, proceeds))) if proceeds else 1.0)
     parts = {first[0]: first[1],
              "keep": 1.0 - closed / max(1, len(problem.holdings)),
              "orders": 1.0 / len(sells) if sells else 1.0}
     if proceeds + problem.cash >= problem.cost:
         wasted = problem.fill_with(proceeds + problem.cash - problem.cost)[1]  # the cash left that buys nothing: with a fill stock the cash it buys is not wasted
-        parts["overshoot"] = 1.0 - min(1.0, max(0.0, wasted / problem.cost))
+        parts["overshoot"] = 1.0 - min(1.0, max(0.0, _ratio(wasted, problem.cost)))
     weights = problem.weights
     total = sum(weights[k] for k in parts)
     return round(100 * sum(weights[k] * v for k, v in parts.items()) / total, 1), {k: round(v, 3) for k, v in parts.items()}
 
 
-def green_component(problem: Problem, proceeds: float, gain: float) -> float:
+def green_component(problem: Problem, proceeds: Decimal, gain: Decimal) -> float:
     """0 to 1: how close the plan's realised profit is to the most that selling the same amount could realise by selling the most profitable holdings first (`trading_math.profit_bounds`), between
     that and the least (the least profitable first). 1 is the green-first plan. 1 as well when there is nothing to choose between (all holdings at the same percent gain, or nothing sold)."""
     if proceeds <= 0:
         return 1.0
     best, worst = tm.profit_bounds(problem.holdings_list(), proceeds)
-    return 1.0 if best - worst < 1e-6 else min(1.0, max(0.0, (gain - worst) / (best - worst)))
+    return 1.0 if best <= worst else min(1.0, max(0.0, _ratio(gain - worst, best - worst)))      # the bounds are worked to four places: no difference is no choice
 
 
-def _clean(thought) -> tuple[str | None, int | None]:
-    """(symbol, shares) of a thought as the checks read them: the symbol stripped, without a leading $ and in capitals; the shares an int (a string of digits is accepted). Anything
-    else is None. Used by the checks and by the search to see that two thoughts are the same one."""
+def _clean(thought) -> tuple[str | None, Decimal | None]:
+    """(symbol, shares) of a thought as the checks read them: the symbol stripped, without a leading $ and in capitals; the shares a whole number (a Decimal made from the digits of the int the model wrote). A STRING is not a share count, "2" included, and neither is a bool (design choices
+    entry 111, M5: it was accepted as 2 until then); anything else is None. Used by the checks and by the search to see that two thoughts are the same one."""
     if not isinstance(thought, dict):
         return None, None
     symbol, shares = thought.get("symbol"), thought.get("shares")
     symbol = symbol.strip().lstrip("$").upper() if isinstance(symbol, str) else None
-    if isinstance(shares, str) and shares.strip().isdigit():
-        shares = int(shares.strip())
-    return symbol, shares if isinstance(shares, int) and not isinstance(shares, bool) else None
+    return symbol, Decimal(shares) if isinstance(shares, int) and not isinstance(shares, bool) else None
 
 
 def check_step(problem: Problem, parent: Node, thought, node_id: str) -> tuple[Node | None, str | None]:
@@ -262,7 +292,9 @@ def _check_one(problem: Problem, parent: Node, thought, node_id: str) -> tuple[N
         return None, "the thought is not an object with symbol and shares"
     symbol, shares = _clean(thought)
     if not symbol or shares is None or shares < 1:
-        return None, f"{symbol or 'a thought'}: shares must be a whole number of at least 1"
+        said = thought.get("shares")
+        why = " (a number, not text or true/false: write 2, not \"2\")" if isinstance(said, (str, bool)) else ""
+        return None, f"{symbol or 'a thought'}: shares must be a whole number of at least 1{why}"
     if symbol == problem.target:
         return None, f"{symbol} is the stock being bought: it cannot be sold to pay for itself"
     holding = problem.holdings.get(symbol)
@@ -273,21 +305,21 @@ def _check_one(problem: Problem, parent: Node, thought, node_id: str) -> tuple[N
     if problem.only_green and not holding.green:
         return None, f"{symbol} is not in profit (price ${holding.price:,.2f} is not above its basis ${holding.basis:,.2f}): only profitable holdings may be sold"
     if shares > holding.sellable:
-        return None, (f"{symbol}: {shares} shares asked but only {holding.sellable} are sellable ({holding.shares} held" + (", and one share of every holding is always kept: a position is never sold out)" if problem.never_liquidate else ")"))
-    if problem.lean and parent.shortfall > 0 and shares > math.ceil(round(parent.shortfall / holding.price, 6)):
-        enough = math.ceil(round(parent.shortfall / holding.price, 6))
+        return None, (f"{symbol}: {shares} shares asked but only {holding.sellable} are sellable ({sh.text(holding.shares)} held" + (", and one share of every holding is always kept: a position is never sold out)" if problem.never_liquidate else ")"))
+    if problem.lean and parent.shortfall > 0 and shares > ceil_div(parent.shortfall, holding.price):
+        enough = ceil_div(parent.shortfall, holding.price)
         return None, f"{symbol}: {shares} shares sells more than is needed: {enough} share(s) already cover the shortfall of ${parent.shortfall:,.2f} (the sells are lean)"
     sells = (*parent.sells, (symbol, shares))
-    proceeds = round(sum(n * problem.holdings[s].price for s, n in sells), 2)
-    shortfall = round(max(0.0, problem.need - proceeds), 2)
+    proceeds = sum((trade_amount(n, problem.holdings[s].price) for s, n in sells), Decimal("0.00"))
+    shortfall = max(Decimal("0.00"), problem.need - proceeds)
     if shortfall > 0:
-        left = sum(h.sellable * h.price for s, h in problem.holdings.items() if s not in {x for x, _ in sells} and problem.eligible(h))
+        left = sum((trade_amount(h.sellable, h.price) for s, h in problem.holdings.items() if s not in {x for x, _ in sells} and problem.eligible(h)), Decimal("0.00"))
         if left < shortfall:
             return None, f"dead end: after selling {symbol} x{shares} the shortfall is ${shortfall:,.2f} and the holdings left can raise only ${left:,.2f}"
     score, parts = score_plan(problem, sells)
-    gain = round(sum(n * (problem.holdings[s].price - problem.holdings[s].basis) for s, n in sells), 2)
+    gain = sum((trade_amount(n, problem.holdings[s].price) - trade_amount(n, problem.holdings[s].basis) for s, n in sells), Decimal("0.00"))
     idea = " ".join(str(thought.get("idea") or "").split())[:MAX_IDEA]
-    fill_shares, left = problem.fill_with(proceeds + problem.cash - problem.cost) if shortfall == 0 else (0, 0.0)
+    fill_shares, left = problem.fill_with(proceeds + problem.cash - problem.cost) if shortfall == 0 else (Decimal(0), Decimal("0.00"))
     return Node(id=node_id, parent=parent.id, depth=parent.depth + 1, sells=sells, idea=idea, proceeds=proceeds, shortfall=shortfall, gain=gain,
                 score=score, parts=parts, complete=shortfall == 0, fill_shares=fill_shares, left=left), None
 
@@ -296,7 +328,7 @@ def _check_one(problem: Problem, parent: Node, thought, node_id: str) -> tuple[N
 
 def progress(problem: Problem, node: Node) -> float:
     """How much of the money to raise the plan has raised so far, 0 to 1."""
-    return 1.0 if problem.need <= 0 else min(1.0, max(0.0, 1.0 - node.shortfall / problem.need))
+    return 1.0 if problem.need <= 0 else min(1.0, max(0.0, 1.0 - _ratio(node.shortfall, problem.need)))
 
 
 def priority(problem: Problem, node: Node) -> float:
@@ -327,7 +359,7 @@ def wanted_kinds(problem: Problem, node: Node, max_depth: int) -> tuple[list[Hol
     wanted when some unused, sellable holding is worth enough on its own, a PARTIAL one when two or more unused holdings can be sold and the plan has room for another step."""
     used = {s for s, _ in node.sells}
     free = [h for h in problem.holdings.values() if h.symbol not in used and problem.eligible(h)]
-    can_cover = [h for h in free if round(h.sellable * h.price, 2) >= node.shortfall]
+    can_cover = [h for h in free if trade_amount(h.sellable, h.price) >= node.shortfall]
     return can_cover, len(free) >= 2 and node.depth + 1 < max_depth and not problem.whole_plans   # with whole plans no partial step is wanted: each thought is meant to finish the plan
 
 
@@ -336,7 +368,7 @@ def missing_kind(problem: Problem, node: Node, thoughts: list, max_depth: int) -
     can_cover, partial_makes_sense = wanted_kinds(problem, node, max_depth)
     cover, partial = kinds_of(problem, node, thoughts)
     if can_cover and not cover:
-        names = ", ".join(f"{h.symbol} ({math.ceil(round(node.shortfall / h.price, 6))} shares)" for h in can_cover)
+        names = ", ".join(f"{h.symbol} ({ceil_div(node.shortfall, h.price)} shares)" for h in can_cover)
         return f"none of your steps finishes the plan, and {names} could finish it alone: give a COVER step with exactly that many shares"
     if partial_makes_sense and not partial:
         return "all your steps finish the plan in one step: give a PARTIAL step as well (some or all of a stock, not enough to finish) so that stocks can be combined"
@@ -560,10 +592,10 @@ def describe(problem: Problem, node: Node) -> dict:
     lines = []
     for symbol, n in node.sells:
         h = problem.holdings[symbol]
-        lines.append({"symbol": symbol, "shares": n, "price": h.price, "proceeds": round(n * h.price, 2), "basis": h.basis, "gain": round(n * (h.price - h.basis), 2),
-                      "closes_position": n == h.shares})
-    return {"node": node.id, "sells": lines, "proceeds": node.proceeds, "left_over": node.left if problem.fill else round(node.proceeds + problem.cash - problem.cost, 2), "gain": node.gain,
-            "fill_shares": node.fill_shares, "fill_cost": round(node.fill_shares * problem.fill_price, 2), "score": node.score, "parts": node.parts, "idea": node.idea}
+        lines.append({"symbol": symbol, "shares": n, "price": h.price, "proceeds": trade_amount(n, h.price), "basis": h.basis, "gain": trade_amount(n, h.price) - trade_amount(n, h.basis),
+                      "closes_position": sh.same(n, h.shares)})
+    return {"node": node.id, "sells": lines, "proceeds": node.proceeds, "left_over": node.left if problem.fill else node.proceeds + problem.cash - problem.cost, "gain": node.gain,
+            "fill_shares": node.fill_shares, "fill_cost": trade_amount(node.fill_shares, problem.fill_price), "score": node.score, "parts": node.parts, "idea": node.idea}
 
 
 def after(problem: Problem, node: Node | None) -> dict:
@@ -573,18 +605,18 @@ def after(problem: Problem, node: Node | None) -> dict:
         return {}
     shares = {s: h.shares for s, h in problem.holdings.items()}
     for symbol, n in (node.sells if node else ()):
-        shares[symbol] -= n
-    shares[problem.target] = problem.held + problem.shares
-    cash = round((node.proceeds if node else 0.0) + problem.cash - problem.cost, 2)
+        shares[symbol] = sh.minus(shares[symbol], n)
+    shares[problem.target] = sh.plus(problem.held, problem.shares)
+    cash = (node.proceeds if node else Decimal("0.00")) + problem.cash - problem.cost
     if problem.fill:
         bought, cash = problem.fill_with(cash)
-        shares[problem.fill] = problem.fill_held + bought
+        shares[problem.fill] = sh.plus(problem.fill_held, bought)
     return {"shares": {s: n for s, n in shares.items() if n > 0}, "cash": cash}
 
 
 # ---------------------------------------------------------------- what the user reads
 
-def _money(value: float) -> str:
+def _money(value: Decimal) -> str:
     return f"${value:,.2f}" if value >= 0 else f"-${-value:,.2f}"
 
 
@@ -709,5 +741,10 @@ def success(result: dict) -> dict:
     return {"profitable": profitable, "kept": kept, "asked": asked, "wanted": wanted, "bought": bought, "all_bought": all_bought, "ok": bool(done and profitable and kept and all_bought)}
 
 
+def _json_default(o):
+    """A dataclass as its dict, a Decimal as a JSON NUMBER (the one encoder: `money.json_default`), anything else as its text."""
+    return asdict(o) if hasattr(o, "__dataclass_fields__") else json_default(o)
+
+
 def as_json(result: dict) -> str:
-    return json.dumps(result, indent=1, default=lambda o: asdict(o) if hasattr(o, "__dataclass_fields__") else str(o))
+    return json.dumps(result, indent=1, default=_json_default)

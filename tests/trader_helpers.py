@@ -7,6 +7,7 @@
 
 Everything is a fake: no network, no model, no paid API. The numbers of `synthetic` and `bars` are INPUTS for testing a rule at its boundary (a price exactly on a limit), not market data.
 """
+from decimal import Decimal
 import json
 from datetime import date, datetime, timedelta
 from itertools import count
@@ -17,14 +18,15 @@ from langchain_core.messages import AIMessage
 
 from prometheus.agents.account_manager import decisions
 from prometheus.agents.account_manager.account_manager import AccountManager
-from prometheus.agents.critic.config import load_config as load_critic_config
 from prometheus.agents.trader import tickets as tk
 from prometheus.agents.trader.broker import PaperBroker, Prices
 from prometheus.agents.trader.config import TraderConfig, load_config
 from prometheus.agents.trader.simulator import entry_date
 from prometheus.common.market_calendar import eastern_date
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import Portfolio
+from prometheus.common import money
+from prometheus.common.money import price as price_door
+from prometheus.common.portfolio import Portfolio, trade_amount
 
 USER = "Jacob Pyrett"
 VALID_UNTIL = "2026-11-05T16:30:00Z"        # the approval of the captured PG_open review: 11:30 Eastern, an hour after NOW
@@ -203,7 +205,7 @@ def decided(name: str = "PG_open", answer: bool | None = True, mode: str | None 
     their OWN account (`account(51.23)`, the sample's cash, to prove the funding and the `insufficient_cash` rejection): the Trader checks the money again when it places each order, whatever the decision was sized for."""
     order = captured(name)
     make_critic(order).review_recommendations(order, view(), now)
-    return decisions.decide_trades(order, Portfolio(user=USER, cash_avail=74481.40), profile(), load_critic_config().verdict.auto_min_score, lambda card: answer, now, mode, None, 7400.0)
+    return decisions.decide_trades(order, Portfolio(user=USER, cash_avail=Decimal("74481.40")), profile(), lambda card: answer, now, mode, None, Decimal("7400.0"))
 
 
 def row(symbol="PG", action="open", shares=10, price=100.0, zone=None, limit=None, will_trade="yes_auto", approved=True, valid_until=VALID_UNTIL, stop=90.0, target=110.0, time_stop="2026-12-31", **extra) -> dict:
@@ -220,6 +222,12 @@ def synthetic(*rows, status="decided") -> wo.WorkOrder:
     order.schema_version = 3
     for n, r in enumerate(rows, 1):
         rid, buy = r.get("record_id", f"r{n}"), r["action"] != "reduce"
+        if not buy:      # AMENDED (entry 105): a sale never comes from a recommendation. A `reduce` row is the USER'S OWN direct order (`origin: "direct"`, the user's record on `direct_orders`, no recommendation and no review: the decision carries
+            # its own price and its own `valid_until_utc`, and `approved` has no meaning for it). It used to be a recommendation to reduce with a review.
+            order.direct_orders.append({"record_id": rid, "side": "sell", "symbol": r["symbol"], "company": f"{r['symbol']} Holdings", "shares": r["shares"], "request": f"Sell {r['shares']} shares of {r['symbol']}", "requested_utc": "2026-11-05T15:30:00Z"})
+            order.trade_decisions.append({"record_id": rid, "review_id": None, "symbol": r["symbol"], "action": "reduce", "shares": r["shares"], "est_cost": 0.0, "mode": "auto", "will_trade": r["will_trade"], "funds_avail": True,
+                                          "funds_note": None, "asked_user": False, "reason": "", "decided_utc": "2026-11-05T15:30:00Z", "origin": "direct", "price": r["price"], "valid_until_utc": r["valid_until"]})
+            continue
         zone = r["zone"] if r["zone"] is not None else [r["price"] - 1, r["price"] + 1] if buy else None
         order.recommendations.append({"symbol": r["symbol"], "company": f"{r['symbol']} Holdings", "identity": {"record_id": rid}, "action": r["action"],
                                       "trade": {"entry_zone": zone, "entry_mid": r["price"] if buy else None, "limit_price": r["limit"], "order_style": "limit" if r["limit"] else "market", "stop_price": r["stop"],
@@ -227,15 +235,16 @@ def synthetic(*rows, status="decided") -> wo.WorkOrder:
         order.reviews.append({"record_id": rid, "review_id": f"rv{n}", "symbol": r["symbol"], "action": r["action"], "approved": r["approved"], "valid_until_utc": r["valid_until"],
                               "timing": {"deal_price": r["price"], "price_basis": "quote"}})
         order.trade_decisions.append({"record_id": rid, "review_id": f"rv{n}", "symbol": r["symbol"], "action": r["action"], "shares": r["shares"], "est_cost": 0.0, "mode": "auto", "will_trade": r["will_trade"],
-                                      "funds_avail": True, "funds_note": None, "asked_user": False, "escalated": False, "reason": "", "decided_utc": "2026-11-05T15:30:00Z"})
+                                      "funds_avail": True, "funds_note": None, "asked_user": False, "reason": "", "decided_utc": "2026-11-05T15:30:00Z"})
     return order
 
 
 def plan(target="PG", *sells, status="plan") -> dict:
     """A RaiseFunds answer, as `AccountManager.raise_funds` gives it, with the fields the Trader reads: each sell is (symbol, shares, price)."""
-    proceeds = lambda n, p: round(n * p, 2) if isinstance(n, (int, float)) and isinstance(p, (int, float)) else None     # a test may give a sell a bad count or price on purpose
-    lines = [{"symbol": s, "shares": n, "price": p, "proceeds": proceeds(n, p), "basis": 100.0, "closes_position": False} for s, n, p in sells]
-    return {"status": status, "target": target, "shares": 0, "plan": {"sells": lines, "proceeds": sum(x["proceeds"] or 0 for x in lines)} if sells else None, "errors": []}
+    priced = lambda p: price_door(p) if isinstance(p, (int, float)) and not isinstance(p, bool) and p > 0 else p      # a price is a Decimal, as RaiseFunds gives it (entry 112); a test may give a sell a bad count or price on purpose, and that stays as it is
+    proceeds = lambda n, p: trade_amount(n, p) if isinstance(n, int) and not isinstance(n, bool) and n > 0 and isinstance(p, Decimal) else None
+    lines = [{"symbol": s, "shares": n, "price": priced(p), "proceeds": proceeds(n, priced(p)), "basis": Decimal("100.0"), "closes_position": False} for s, n, p in sells]
+    return {"status": status, "target": target, "shares": 0, "plan": {"sells": lines, "proceeds": sum((x["proceeds"] or Decimal(0) for x in lines), Decimal(0))} if sells else None, "errors": []}
 
 
 def say_yes(card):
@@ -249,14 +258,15 @@ def dumps(order: wo.WorkOrder) -> str:
 
 def other_agents_work(order: wo.WorkOrder) -> str:
     """The bytes of what the Advisor, the Critic and the Account Manager wrote (rule T10): the recommendations, the reviews and the decisions."""
-    return json.dumps({"recommendations": order.recommendations, "reviews": order.reviews, "trade_decisions": order.trade_decisions}, sort_keys=True, default=str)
+    return money.dumps({"recommendations": order.recommendations, "reviews": order.reviews, "trade_decisions": order.trade_decisions}, sort_keys=True)      # the one JSON encoder: a Decimal is a number, as it is in the saved order
 
 
 
 # ---------------------------------------------------------------- a broker, for the tests of the broker and the tools
 
 def paper_prices(quotes: dict, now: datetime = NOW) -> Prices:
-    return Prices("paper", eastern_date(now), quotes=dict(quotes))
+    """The snapshot of a paper run: the quotes as the Trader's step 4 makes them, each THROUGH THE PRICE DOOR (a quote is the Data Clerk's float; the snapshot holds a Decimal at four places: design choices entry 112)."""
+    return Prices("paper", eastern_date(now), quotes={symbol: price_door(price) for symbol, price in quotes.items()})
 
 
 def backtest_prices(bars: dict, now: datetime = NOW) -> Prices:

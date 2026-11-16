@@ -7,7 +7,8 @@ pair of eyes is for. It uses no model and imports nothing from the Advisor's mod
 
 HARD CHECKS (a failure is a defect of the record: `reject`)
   complete     every section of the schema is there and has what the Critic reads; every feature has value, unit, as_of and source
-  trade        an `open` or `add` has an entry zone, a stop under the entry, a time stop in the future, an order style and the invalidation rules, and the price rule
+  action       a record is a recommendation to BUY (`open`): the Advisor knows no holding, so there is no `add`, `hold`, `reduce` or `avoid` (entry 105)
+  trade        an `open` has an entry zone, a stop under the entry, a time stop in the future, an order style and the invalidation rules, and the price rule
                says the stop price (it checks NO size: the record has none, how much is the Account Manager's, entry 80)
   recompute    stop = entry mid - stop distance; composite, the blend (news with its recency weights, performance, historical, filings), the confidence and the score (the blend) from their own inputs
   evidence     every verified quote is a substring of the source it names (the Critic reads the work order's sources itself); every filing item cited is in the order's evidence
@@ -24,7 +25,7 @@ import re
 from dataclasses import dataclass, field
 from datetime import date
 
-REQUIRED_SECTIONS = ("identity", "action", "families", "quality", "evidence", "features", "agreement", "ranking", "trade", "risk", "portfolio_fit", "gates", "thesis", "audit")
+REQUIRED_SECTIONS = ("identity", "action", "families", "quality", "evidence", "features", "agreement", "ranking", "trade", "risk", "concentration", "gates", "thesis", "audit")      # entry 105: `concentration` replaced `portfolio_fit` (no portfolio information on a record)
 FEATURE_KEYS = ("value", "unit", "as_of", "source")
 MAX_FEATURE_AGE_DAYS = 5
 
@@ -67,7 +68,8 @@ def critique(record: dict, order) -> Critique:
     check("complete.families", bool(record["families"]) and all(f["basis_ref"] and f["horizon_bars"] for f in record["families"]), "a family has no basis_ref or horizon")
     action, trade, ranking, agreement = record["action"]["action"], record["trade"], record["ranking"], record["agreement"]
     as_of = date.fromisoformat(record["identity"]["as_of_utc"][:10])
-    opening = action in ("open", "add")
+    opening = action == "open"
+    check("action", opening, f"the record is not a recommendation to buy (its action is {action!r}): the Advisor records no holding or sale")
 
     # ---- trade
     if opening:

@@ -345,3 +345,375 @@ CMG | negative | Earnings missed consensus by 6.9% (27 cents vs. 29 cents estima
 SBUX | positive | Earnings beat consensus by 9.6% with 53.8% YoY growth. Global comparable coffeehouse sales increased 7.2% with North America comps up 7.9%. FY2027 guidance of $3.15-$3.25 EPS and ~4% North America comp growth shows confidence, though revenue missed slightly.
 DPZ | positive | Earnings beat consensus by 6.2% with 12.7% YoY growth. Revenue beat by 1.6% with supply chain revenues up 7.1%. Strong performance driven by higher order volumes and pricing power, though same-store sales remain sluggish.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143613874
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=612feb412a6a6eb0a4e933ae7ba4ba1a62e85759bb6b4276afb40ef64b22210d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/535109409/image_535109409.jpg?io=getty-c-w1536
+category: company
+tickers: DPZ
+keywords: 
+headline: Papa John's: Paying The Price For Being Stuck In The Middle
+<<<SUMMARY>>>
+Papa John's International, Inc. faces a tough turnaround as sales slide and competition intensifies. Click for this PZZA stock earnings update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588553
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=18eb837190e585d21e7efcf181fc3ee20eceecae711fde9f3df06faa65c6df3d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Bloomin' Brands Q3 Loss Narrower Than Expected, Revenues Rise Y/Y
+<<<SUMMARY>>>
+BLMN beats Q3 2026 earnings and revenue estimates as comparable sales improve, margins face cost pressures and management raises full-year earnings guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840201
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T18:01:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e55317326c6bdc776b7ac69f200f5b1f025f6568b1fb9fda977ed79e87618d8b
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/15/Palo-Alto-Networks-Inc.jpg?width=2048&height=1536
+category: company
+tickers: DPZ
+keywords: 
+headline: This Palo Alto Analyst Turns Bullish; Here Are Top 5 Upgrades For Friday
+<<<SUMMARY>>>
+Analysts upgraded Ecolab, Autodesk, Domino’s, Palo Alto Networks and Installed Building Products, raising ratings and price targets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805896
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:35:57Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=efc0c08c5a5019a16ad710e064b263e08fed80d34e428ee716c24e13eaa6035e
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: DPZ
+keywords: 
+headline: S&P 500 Top Movers: Today's US Session Gainers and Losers
+<<<SUMMARY>>>
+S&P 500 top movers for today's US session: Charter Communications and Texas Pacific Land lead gainers, while Advanced Micro Devices and Dell lead decliners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804298
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:12:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff2b291ba59b42e87fdad034c45b510a606bb6343c709be1a32d1644ae0a2f52
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Domino’s Pizza shares rise after Baird upgrades stock on improving sales outlook
+<<<SUMMARY>>>
+Investing.com -- Shares of Domino’s Pizza Inc (NASDAQ:DPZ) rose 2.5% in morning trade Friday after Baird upgraded the stock to Outperform from Neutral, with analyst Analyst Chris O’Cull citing what he called a "clearer path to better SSS performance and franchisee profitability". O’Cull lifted his price target to $400 from $320 following recent meetings with management, pointing to a more balanced promotional strategy that supports average ticket performance without disrupting transaction volume
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140919724
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:59:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=10d75e966d521449cb435e791208bb5a18a79c4ff41421920a9bd92a572ae747
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: SpaceX initiated, Lululemon downgraded: Wall Street's top analyst calls
+<<<SUMMARY>>>
+SpaceX initiated, Lululemon downgraded: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804299
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:48:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6432bd854a4625dbcc1d5d0c8364fed5d262156342d50c463d587499f9ce8a80
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Domino's Strong Order Trends vs. Weak Ticket Growth: What Lies Ahead?
+<<<SUMMARY>>>
+DPZ's strong order growth is offset by declining ticket sizes as value-focused consumers reshape sales trends. Can promotions and new offerings drive stronger growth in 2027?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804300
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:15:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eea335e44211376811b6924b9ac19e7e16b4a66a748da9d5f74287caf3fd8e2d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Domino’s Stock Gets Baird Upgrade As Analyst Sees ‘Clearer Path’ To Improved Sales
+<<<SUMMARY>>>
+Baird raised its rating on Domino's Pizza to 'Outperform' from 'Neutral' and increased its price target to $400 from $320, according to The Fly.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801817
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:36:22Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=09203bb194b481564c1c98458464545d818ab702b1d01de2b36ef8ddc668627f
+image_url: https://www.chartmill.com/images/uploads/CM_Premarket_Movers_Small_free_90289f6b81.webp
+category: company
+tickers: DPZ
+keywords: 
+headline: S&P 500 Premarket Movers: Travelers, Palo Alto Networks Gain; Cisco, AMD Fall
+<<<SUMMARY>>>
+S&P 500 premarket movers: Travelers, Palo Alto Networks and Domino's gain before the open, while Cisco and Advanced Micro Devices decline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803378
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T08:32:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2604c7c984f107ad09acaa36dd409f8d4a141a40ec9c9ec146274f60d6a7815a
+image_url: 
+category: company
+tickers: DPZ
+keywords: 
+headline: Baird Upgrades Domino's Pizza to Outperform, Raises Price Target to $400
+<<<SUMMARY>>>
+Baird  analyst Chris O&#39;Cull   upgrades Domino&#39;s Pizza (NASDAQ:DPZ) from Neutral to Outperform and raises the price target from $320 to $400.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143771184
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7658c649d79010bdd0356b75af5542e28f2efa3e01a457cd7b6e7a8443d27e95
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: Domino's Pizza (DPZ) Up 11.1% Since Last Earnings Report: Can It Continue?
+<<<SUMMARY>>>
+Domino's Pizza (DPZ) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769546
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e157fa36d60ee54e14d163f05843baaac311efec7c660d0ab9e30bc06e0cdda
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DPZ
+keywords: 
+headline: McDonald's Stock Up 17% in a Month: Is the Rally Built to Last?
+<<<SUMMARY>>>
+MCD stock jumps 17% as U.S. recovery and growth initiatives boost optimism, but rising costs and execution risks threaten momentum.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657160
+symbol: DPZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T10:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=9691e64cc2af996da8ea322e7237239b0e14822f8fbf68443c963e5aad095249
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2263251593/image_2263251593.jpg?io=getty-c-og
+category: company
+tickers: DPZ
+keywords: 
+headline: Domino's Pizza: A Capital-Light Business Model With A Steady Stream Of Royalty Revenue
+<<<SUMMARY>>>
+Dominoâs has increased its dividend for 14 consecutive years. Its 10-year dividend growth rate of 18.8% is blistering. See why I rate DPZ stock a buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:39b7c52c99b296266b8fdfea107262ce01e3af498b2f6e21064d9c8baa03ca76
+symbol: DPZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T14:46:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025671/bloomin-brands-q3-loss-narrower-than-expected-revenues-rise-y-y?cid=CS-ZC-FT-analyst_blog|earnings_article-3025671
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/2264.jpg
+category: 
+tickers: BLMN, CMG, SBUX, DPZ
+keywords: Q3 2026 earnings, comparable sales growth, restaurant traffic decline, margin pressure, pricing strategy, guidance raised, inflationary costs
+headline: Bloomin' Brands Q3 Loss Narrower Than Expected, Revenues Rise Y/Y
+<<<SUMMARY>>>
+Bloomin' Brands reported Q3 2026 revenues of $944.3 million, beating estimates, with U.S. comparable sales up 1.9%. However, adjusted losses widened due to inflationary pressures on commodities and labor. The company raised 2026 adjusted EPS guidance to 97 cents-$1.02 but narrowed full-year comparable sales growth outlook to 1-1.5%. Restaurant traffic declined 1.8% despite higher pricing offsetting weakness.
+<<<INSIGHTS>>>
+BLMN | neutral | Mixed results with revenue beat and raised EPS guidance offset by widened adjusted losses, declining traffic despite pricing gains, and narrowed sales outlook. Margin pressures from inflation and elevated costs indicate operational challenges despite near-term guidance improvements.
+CMG | neutral | Earnings missed consensus estimates (27 cents vs. 29 cents expected) with year-over-year earnings decline of 6.9%, though revenue slightly beat expectations and comparable sales grew 2.1% with strong digital sales contribution.
+SBUX | positive | Earnings significantly beat consensus (80 cents vs. 73 cents expected) with 53.8% year-over-year earnings growth. Global comparable sales increased 7.2% with North America up 7.9%, though reported revenues declined due to China business model shift.
+DPZ | positive | Earnings beat consensus by 6.2% ($4.60 vs. $4.33 expected) with 12.7% year-over-year earnings growth. Revenue topped expectations driven by supply-chain growth and franchise royalties, though same-store sales remained sluggish.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a4d2c81145afd271abe0c892db77e316e1dc90e77b5e04782e451d2e0b38fef4
+symbol: DPZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T13:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028697/mcdonald-s-stock-up-17-in-a-month-is-the-rally-built-to-last?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3028697
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6f/392.jpg
+category: 
+tickers: MCD, SBUX, DPZ, QSR
+keywords: McDonald's recovery, comparable sales growth, value menu initiatives, specialty beverages, food cost inflation, consumer pressures, franchise model, restaurant industry
+headline: McDonald's Stock Up 17% in a Month: Is the Rally Built to Last?
+<<<SUMMARY>>>
+McDonald's shares surged 17% in a month, outperforming peers and the S&P 500, driven by improving U.S. comparable sales, value menu initiatives, and specialty beverage growth. However, rising food costs, persistent consumer pressures, and execution risks could limit further upside. The stock carries a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+MCD | neutral | While the company shows improving U.S. business trends, resilient international operations, and strong specialty beverage growth, persistent headwinds including mid-single-digit food inflation in 2027, early-stage U.S. recovery, and execution risks warrant caution. The Zacks Rank #3 (Hold) reflects this balanced outlook.
+SBUX | positive | Starbucks outperformed McDonald's with a 19.5% gain over the past month, indicating strong investor sentiment and market performance relative to peers.
+DPZ | positive | Domino's gained 11% over the past month, outperforming the broader market and demonstrating solid performance among restaurant industry peers.
+QSR | positive | Restaurant Brands advanced 7.6% over the past month, showing positive momentum in the restaurant industry sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:74a8a971213f5f2d18e7eb5f86beae6951e820b81a1ccfe113bf4f51322cf1e0
+symbol: DPZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:30:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3028857/domino-s-pizza-dpz-up-11-1-since-last-earnings-report-can-it-continue?cid=CS-ZC-FT-realtime_blog-3028857
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default127.jpg
+category: 
+tickers: DPZ
+keywords: earnings report, supply chain strength, same-store sales slowdown, franchise expansion, estimate revisions, stock performance
+headline: Domino's Pizza (DPZ) Up 11.1% Since Last Earnings Report: Can It Continue?
+<<<SUMMARY>>>
+Domino's Pizza stock has gained 11.1% since its last earnings report, outperforming the S&P 500. Q3 2026 results beat estimates with earnings of $4.60 per share (vs. $4.33 consensus) and revenues of $1.19 billion, driven by strong supply chain performance and global franchise expansion. However, same-store sales growth slowed significantly in both U.S. and international markets. Analysts have revised estimates downward since the earnings release, and the stock carries a Zacks Rank #3 (Hold) rating, suggesting in-line returns ahead.
+<<<INSIGHTS>>>
+DPZ | neutral | While Q3 earnings beat estimates and the stock gained 11.1%, the company faces headwinds from sluggish same-store sales growth (U.S. up only 2.1%, franchise comps up just 0.3%), downward estimate revisions post-earnings, and a Hold rating. Strong supply chain and franchise royalty growth are offset by weakening comparable sales momentum, resulting in a mixed outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:415dbed7eddd02f34a178a0eb971dfa62bd5419eb104c3ecf9e3f6aaa470fc8d
+symbol: DPZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T14:48:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3029623/domino-s-strong-order-trends-vs-weak-ticket-growth-what-lies-ahead?cid=CS-ZC-FT-analyst_blog|quick_take-3029623
+image_url: https://staticx-tuner.zacks.com/images/articles/main/c1/2340.jpg
+category: 
+tickers: DPZ, PZZA, YUMC
+keywords: same-store sales, order growth, average ticket size, value promotions, consumer spending, Q3 2026 earnings, pizza industry competition
+headline: Domino's Strong Order Trends vs. Weak Ticket Growth: What Lies Ahead?
+<<<SUMMARY>>>
+Domino's Pizza reported Q3 2026 U.S. same-store sales growth of 0.3%, driven by strong order count increases that offset declining average ticket sizes due to consumer spending pressures. The company is implementing value promotions and new products like The Domino to boost ticket growth, while expecting continued order momentum in Q4 but sales near the lower end of guidance. Domino's shares have outperformed the broader market, trading at a lower valuation than industry peers.
+<<<INSIGHTS>>>
+DPZ | neutral | Mixed performance with positive order growth (+0.3% same-store sales) offset by declining ticket sizes and consumer spending pressure. Management expects Q4 order growth but sales guidance toward lower end of outlook. Stock has outperformed peers but carries a Hold rating.
+PZZA | negative | Reported 8.3% decline in North America comparable sales in Q3 2026, reflecting persistent competitive pressures despite transformation initiatives aimed at improving value and customer traffic.
+YUMC | neutral | Pizza Hut China showed 15 consecutive quarters of transaction growth (5% in Q3 2026) but faced 8% year-over-year average ticket decline due to value-oriented offerings, demonstrating traffic gains offset by lower spending per customer.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:844af709db43a0b9fc2d1e54f5166b70f409e37473bb742ad346b0bb2765dea9
+symbol: DPZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T19:30:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/13/3402928/0/en/quick-service-restaurant-market-to-reach-usd-1-87-trillion-by-2032-as-digital-ordering-and-drive-thru-access-expand-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: MCD, YUM, QSR, DPZ, SBUX
+keywords: quick-service restaurants, digital ordering, drive-thru, loyalty programs, market growth, omnichannel, franchise expansion, delivery services
+headline: Quick-Service Restaurant Market to Reach USD 1.87 Trillion by 2032 as Digital Ordering and Drive-Thru Access Expand - Mordor Intelligence
+<<<SUMMARY>>>
+The global QSR market is projected to grow from USD 1.16 trillion in 2026 to USD 1.87 trillion by 2032, at an 8.18% CAGR. Growth is driven by digital ordering, drive-thru formats, and loyalty programs, with North America leading the market. Major operators are expanding through omnichannel strategies and technology integration to maintain competitive positioning.
+<<<INSIGHTS>>>
+MCD | positive | Listed as a key company in the expanding QSR market benefiting from drive-thru formats, digital ordering capabilities, and loyalty programs that are driving industry growth at 8.18% CAGR.
+YUM | positive | Identified as a major QSR operator (KFC, Taco Bell, Pizza Hut) positioned to benefit from market expansion through digital channels, delivery options, and restaurant network growth.
+QSR | positive | Listed as a key competitor (Burger King, Popeyes, Tim Hortons) well-positioned to capitalize on growing demand for convenient dining formats and digital ordering capabilities.
+DPZ | positive | Specifically highlighted as a digital ordering leader with growing U.S. retail sales through digital channels, exemplifying successful omnichannel strategy in the expanding QSR market.
+SBUX | positive | Included as a key QSR operator positioned to benefit from digital ordering expansion, loyalty programs, and convenient service formats driving market growth.
+<<<END>>>

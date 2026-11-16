@@ -7,6 +7,7 @@ possible". WHAT TO SELL is still decided by the Tree of Thought: the arithmetic 
 is arithmetic (`Problem.max_affordable`), never a plan. The "LLM" is scripted, the prices are the recorded 2026-11-03 quotes, no network, no key, no cost.
 """
 import re
+from decimal import Decimal
 
 import pytest
 
@@ -37,9 +38,9 @@ def green_problem(start, **options):
 
 
 def test_when_nothing_is_sold_or_every_holding_has_the_same_percent_gain_the_component_is_one():
-    holdings = {"A": rf.Holding("A", None, 10, 10, 20.0, 10.0), "B": rf.Holding("B", None, 10, 10, 40.0, 20.0)}   # both +100%
-    p = rf.Problem("T", 1, 100.0, 0.0, holdings, green_first=True)
-    assert rf.green_component(p, 0.0, 0.0) == 1.0 and rf.green_component(p, 300.0, 150.0) == 1.0
+    holdings = {"A": rf.Holding("A", None, Decimal("10"), Decimal("10"), Decimal("20.0"), Decimal("10.0")), "B": rf.Holding("B", None, Decimal("10"), Decimal("10"), Decimal("40.0"), Decimal("20.0"))}   # both +100%
+    p = rf.Problem("T", 1, Decimal("100.0"), Decimal("0.0"), holdings, green_first=True)
+    assert rf.green_component(p, Decimal("0.0"), Decimal("0.0")) == 1.0 and rf.green_component(p, Decimal("300.0"), Decimal("150.0")) == 1.0
 
 
 # ---------------------------------------------------------------- the tree decides, with the new score
@@ -55,7 +56,7 @@ def test_the_tree_now_picks_the_most_profitable_holding_and_the_cash_left_buys_a
     manager = agent()
     result = manager.raise_funds(start, "SNDK", 3, fill="MU", explore=True, green_first=True)
     assert result["status"] == "plan" and [(x["symbol"], x["shares"]) for x in result["plan"]["sells"]] == [("LLY", 3)] and result["plan"]["score"] == 98.6
-    assert result["plan"]["fill_shares"] == 1 and result["plan"]["left_over"] == 193.48 and result["weights"]["green"] == 0.4 and result["green_first"] is True
+    assert result["plan"]["fill_shares"] == 1 and result["plan"]["left_over"] == Decimal("193.48") and result["weights"]["green"] == 0.4 and result["green_first"] is True
     assert result["after"]["shares"] == {"PG": 15, "MCD": 120, "GOOGL": 30, "LLY": 22, "SNDK": 3, "MU": 1}
     assert result["stats"]["levels"] == 3   # the same tree as before: it is the score that changed, and the answer with it
     text = am.report(result)
@@ -64,7 +65,7 @@ def test_the_tree_now_picks_the_most_profitable_holding_and_the_cash_left_buys_a
 
 # ---------------------------------------------------------------- how many shares: up to X, or as many as possible
 
-SMALL = pf.Portfolio(user="x", cash_avail=0.0, positions=[pf.Position(symbol="GM", shares=10, cost_basis=10.0), pf.Position(symbol="F", shares=40, cost_basis=2.0)])
+SMALL = pf.Portfolio(user="x", cash_avail=Decimal("0"), positions=[pf.Position(symbol="GM", shares=10, cost_basis=Decimal("10.0")), pf.Position(symbol="F", shares=40, cost_basis=Decimal("2.0"))])
 SMALL_PRICES = {"MU": 410.0, "GM": 55.0, "F": 12.0, "BIG": 5000.0}   # GM 10 x 55 = 550 and F 40 x 12 = 480: 1,030 in all, so 2 MU (820) and not 3 (1,230)
 
 
@@ -92,7 +93,7 @@ def test_up_to_x_buys_x_when_it_can_and_the_most_it_can_when_it_cannot():
     capped = big.raise_funds(SMALL, "MU", 5, up_to=True)   # 5 asked, 2 affordable
     assert capped["resolved_shares"] == 2 and capped["shares"] == 2 and capped["status"] == "plan" and "QUANTITY: up to 5 x MU; the portfolio can pay for at most 2, so 2 bought" in am.report(capped)
     one = small_agent({ROOT: [("GM", 8)]}).raise_funds(SMALL, "MU", 1, up_to=True)   # 1 asked and 1 affordable: 410 needs 8 GM (440)
-    assert one["resolved_shares"] == 1 and one["status"] == "plan" and one["plan"]["proceeds"] == 440.0
+    assert one["resolved_shares"] == 1 and one["status"] == "plan" and one["plan"]["proceeds"] == Decimal("440")
 
 
 def test_if_not_even_one_share_can_be_paid_for_nothing_is_sold_and_the_model_is_not_asked():

@@ -11,6 +11,15 @@ Shares still held are not marked to a market price, because that would need a pr
 
 The application role can read a row only after this process sets `trading.account_id` for the transaction.
 Sample accounts (a seed_key) are not deleted through this class.
+
+SHARES MAY HAVE A FRACTION (design choices entry 110). `trading.positions.shares`, `positions.recent_shares`, `trades.shares` and `recommendation_decisions.shares` are `numeric(18,6)` once `scripts/setup_postgres.sh` has applied
+sql/prometheus_accounts.sql (they were `integer`); `holds_fractions()` says which this database has. A share quantity comes into `book_trade` and `record_trade` as `shares.quantity` (a Decimal with at most six
+decimals) and is held as a `Decimal` at scale 6 (`shares.as_decimal`) from the door on; a quantity with a fraction on a book that does not hold fractions is refused before anything is written, with the fix named, and is
+never rounded into an integer column. What the book returns (`Booked`, `list_portfolio`) is a quantity again, in its canonical form (a whole number has no decimals).
+
+MONEY, PRICES AND SHARES ARE `decimal.Decimal` ALL THE WAY (design choices entry 112; design/decimal_money_spec.md): what the book reads from Postgres is a Decimal and stays one (`list_portfolio`, `account_balance`, `Booked`, the
+gain), and what it is given is a Decimal already: a price goes through `parse_price` (a float or a bool is refused, it comes in through a door once), an amount through `parse_money`, a quantity through `shares.quantity`. Nothing here turns a Decimal into an
+int or a float, and nothing here turns a float into a Decimal: the one exception is the profile's own years and minimum price (`load_profile`, `_user`), which are the Advisor's and the Critic's measurements (D6), not the account's money.
 """
 from dataclasses import dataclass
 from datetime import date
@@ -21,6 +30,8 @@ import psycopg
 from psycopg import errors
 from psycopg.rows import dict_row
 
+from prometheus.common import shares as sh
+from prometheus.common.money import EXACT
 from prometheus.common.portfolio import Portfolio
 from prometheus.common.user_account import (
     UserAccount,
@@ -47,6 +58,8 @@ from prometheus.rag.loaders import check_symbol
 REPO_ROOT = Path(__file__).resolve().parents[2]
 SECRETS = REPO_ROOT / "secrets" / "postgres_local.txt"
 _KEYS = ("host", "port", "database", "app_user", "app_password")
+FRACTION_REFUSED = ("this account book holds whole shares only, so a fraction of a share was not written: its share columns are still integer. Apply the new schema with `bash scripts/setup_postgres.sh` "
+                    "(it keeps every table and account), or trade whole shares")
 BOOKING_LOCK_SECONDS = 10      # how long a booking waits for the locks on the account's portfolio before it fails (nothing is committed); a stuck lock must not hang a run
 APPROVED_DECISIONS = ("yes_auto", "yes_user")
 DENIED_DECISIONS = ("no_system_denied", "no_user_denied", "no_expired", "no_funds")
@@ -99,9 +112,23 @@ class AccountStore:
             "application_name": "prometheus_account_manager",
             "options": "-c statement_timeout=10000 -c search_path=trading",
         }
+        self._fractions = False                    # `holds_fractions`: True once the share columns were seen to be numeric
 
     def __repr__(self) -> str:
         return f"AccountStore(host={self.config['host']!r}, database={self.config['database']!r}, user={self.config['app_user']!r})"
+
+    def holds_fractions(self) -> bool:
+        """Whether this account book can hold a fraction of a share: the type of `trading.positions.shares` is `numeric` (it is `integer` in a database that sql/prometheus_accounts.sql of before entry 110 made). Read from
+        `information_schema.columns`; a True is remembered (the type is never changed back), a False is read again next time, so that a server that was started before `bash scripts/setup_postgres.sh` sees the change."""
+        if self._fractions:
+            return True
+        def fn(cur):
+            cur.execute("""SELECT data_type FROM information_schema.columns
+                           WHERE table_schema = 'trading' AND table_name = 'positions' AND column_name = 'shares'""")
+            row = cur.fetchone()
+            return row is not None and row["data_type"] == "numeric"
+        self._fractions = bool(self._run(None, fn))
+        return self._fractions
 
     def ping(self) -> str:
         with self._connection() as conn:
@@ -140,7 +167,7 @@ class AccountStore:
         return UserProfile(
             user=row["display_name"], risk_tolerance=row["risk_tolerance"], age=row["age"],
             investment_horizon_years=None if row["investment_horizon_years"] is None else float(row["investment_horizon_years"]),
-            trade_mode=row["trade_mode"], auto_min_score=row["auto_min_score"],
+            trade_mode=row["trade_mode"],
             min_price=float(row["min_price"]), excluded_symbols=list(row["excluded_symbols"]), excluded_sectors=list(row["excluded_sectors"]),
             note=row["note"])
 
@@ -180,6 +207,23 @@ class AccountStore:
             return self._cash(cur, account_id)
         return self._run(account_id, fn)
 
+    def remove_funds(self, account_id: int, amount, when: date | None = None) -> Decimal:
+        """Take settled cash out of the account (a withdrawal): the account row is locked, must be active, and must hold the amount. One `cash_ledger` row of kind `withdrawal` with a negative amount and the balance that follows.
+        Returns the cash balance after it. This is the cash check the book already makes, not a limit on a trade (design choices entry 100)."""
+        money = parse_money(amount)
+        when = when or date.today()
+        if type(when) is not date:
+            raise ValueError("the withdrawal date must be a date")
+
+        def fn(cur):
+            row = self._lock(cur, account_id)
+            _require_active(row)
+            if money > row["cash_balance"]:
+                raise ValueError(f"the account has ${row['cash_balance']:,.2f} in cash: ${money:,.2f} cannot be removed")
+            self._ledger(cur, account_id, "withdrawal", -money, cents(row["cash_balance"] - money), when, "withdrawal")
+            return self._cash(cur, account_id)
+        return self._run(account_id, fn)
+
     def account_balance(self, account_id: int) -> Decimal:
         def fn(cur):
             return self._cash(cur, account_id)
@@ -198,24 +242,24 @@ class AccountStore:
             return Portfolio(user=account["display_name"], currency=account["currency"], cash_avail=account["cash_balance"], positions=positions, note=account["note"])
         return self._run(account_id, fn)
 
-    def record_trade(self, account_id: int, symbol: str, side: str, shares: int, price, traded_on: date, *,
+    def record_trade(self, account_id: int, symbol: str, side: str, shares: Decimal, price: Decimal, traded_on: date, *,
                      name: str | None = None, source: str = "bot", record_id: str | None = None) -> Decimal:
         """Book a filled trade. Returns that trade's realized gain (0 for a buy). Does not send an order to a broker. This is `book_trade` and its gain."""
         return self.book_trade(account_id, symbol, side, shares, price, traded_on, name=name, source=source, record_id=record_id).gain
 
-    def book_trade(self, account_id: int, symbol: str, side: str, shares: int, price, traded_on: date, *,
+    def book_trade(self, account_id: int, symbol: str, side: str, shares: Decimal, price: Decimal, traded_on: date, *,
                    name: str | None = None, source: str = "bot", record_id: str | None = None) -> "Booked":
         """Book a filled trade in ONE transaction and say what it did (`Booked`). The user's PORTFOLIO is locked first, with row-level locks held until the transaction ends: the account row (the cash) and EVERY position
         row of the account (FOR UPDATE, in symbol order so two bookings cannot deadlock), so no other booking can read or change the cash or a holding in between (a lock that is not had in `BOOKING_LOCK_SECONDS`
         fails the booking and nothing is committed). The account must be active, a purchase must be covered by the cash and a sale by the shares held; then the cash (through the ledger) and the position move together
         and the trade row is written, and BEFORE the transaction commits the account is read again inside it: the cash must be the cash before less the cost (or plus the proceeds), the shares of the symbol must be
         the shares before plus (or less) the trade, every other holding must be as it was, and the trade row must be there. Anything else raises `BookingCheckError` and the whole transaction is rolled back, so nothing
-        is committed (design choices entry 82). A refusal of the book raises ValueError with its sentence; nothing changed."""
+        is committed (design choices entry 82). A refusal of the book raises ValueError with its sentence; nothing changed. `shares` is a quantity above zero (`shares.quantity`: a whole number, or a number with up to six
+        decimals, a Decimal; a bool and a string are refused) and `price` a Decimal of at most four places (`parse_price`: a float is refused); one with a fraction is refused, before anything is written, by a book whose share columns are still `integer` (`holds_fractions`; design choices entry 110)."""
         symbol = check_symbol(symbol)
         if side not in ("buy", "sell"):
             raise ValueError("side must be buy or sell")
-        if isinstance(shares, bool) or not isinstance(shares, int) or shares < 1:
-            raise ValueError("shares must be a whole number of at least 1")
+        shares = self._count_of(shares)
         price = parse_price(price)
         if type(traded_on) is not date:
             raise ValueError("traded_on must be a date")
@@ -233,9 +277,9 @@ class AccountStore:
                            FROM trading.positions WHERE account_id = %s ORDER BY symbol FOR UPDATE""", (account_id,))   # EVERY position row of the portfolio: FOR UPDATE, until the commit
             holdings = {row["symbol"]: row for row in cur.fetchall()}
             position = holdings.get(symbol)
-            others_before = {name: row["shares"] for name, row in holdings.items() if name != symbol}
+            others_before = {name: sh.as_decimal(row["shares"]) for name, row in holdings.items() if name != symbol}
             cash = account["cash_balance"]
-            held = position["shares"] if position else 0
+            held = sh.as_decimal(position["shares"]) if position else Decimal(0)
             if side == "buy":
                 cost = cents(price * shares)
                 if cost <= 0:
@@ -244,17 +288,17 @@ class AccountStore:
                     raise ValueError(f"cash ${cash:,.2f} does not cover ${cost:,.2f}")
                 _buy_position(cur, account_id, symbol, shares, price, traded_on, held_name, position)
                 gain = Decimal("0.00")
-                self._ledger(cur, account_id, "buy", -cost, cents(cash - cost), traded_on, f"buy {shares} {symbol}")
+                self._ledger(cur, account_id, "buy", -cost, cents(cash - cost), traded_on, f"buy {sh.text(shares)} {symbol}")
                 want_cash, want_held = cents(cash - cost), held + shares
             else:
                 if position is None or shares > held:
-                    raise ValueError(f"cannot sell {shares} of {symbol}: the portfolio holds {held}")
+                    raise ValueError(f"cannot sell {sh.text(shares)} of {symbol}: the portfolio holds {sh.text(held)}")
                 proceeds = cents(price * shares)
                 if proceeds <= 0:
                     raise ValueError("the trade must move at least one cent")
                 gain = proceeds - cents(position["cost_basis"] * shares)
                 _sell_position(cur, account_id, symbol, shares, position)
-                self._ledger(cur, account_id, "sell", proceeds, cents(cash + proceeds), traded_on, f"sell {shares} {symbol}")
+                self._ledger(cur, account_id, "sell", proceeds, cents(cash + proceeds), traded_on, f"sell {sh.text(shares)} {symbol}")
                 want_cash, want_held = cents(cash + proceeds), held - shares
             cur.execute("""INSERT INTO trading.trades (account_id, symbol, side, shares, price, realized_gain, traded_on, record_id, source)
                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING trade_id""",
@@ -263,15 +307,29 @@ class AccountStore:
             # the check, inside the transaction and before it commits: read the account again and compare it with what the trade must have done
             now_cash = self._cash(cur, account_id)
             cur.execute("SELECT symbol, shares FROM trading.positions WHERE account_id = %s", (account_id,))
-            now_all = {r["symbol"]: r["shares"] for r in cur.fetchall()}
-            now_held = now_all.get(symbol, 0)
+            now_all = {r["symbol"]: sh.as_decimal(r["shares"]) for r in cur.fetchall()}
+            now_held = sh.as_decimal(now_all[symbol]) if symbol in now_all else Decimal(0)                       # compared at scale 6, exactly
             others_after = {name: n for name, n in now_all.items() if name != symbol}
             cur.execute("SELECT 1 FROM trading.trades WHERE trade_id = %s AND account_id = %s AND symbol = %s AND side = %s AND shares = %s", (row, account_id, symbol, side, shares))
             if now_cash != want_cash or now_held != want_held or others_after != others_before or cur.fetchone() is None:
-                raise BookingCheckError(f"the account did not show the {side} of {shares} {symbol} when it was read again before the commit (cash ${now_cash:,.2f}, expected ${want_cash:,.2f}; "
-                                        f"{now_held} shares, expected {want_held}{'' if others_after == others_before else '; another holding changed'}): the booking was rolled back and nothing was committed")
-            return Booked(trade_row=row, gain=gain, symbol=symbol, side=side, shares=shares, price=price, cash_before=cash, cash_after=now_cash, held_before=held, held_after=now_held)
+                raise BookingCheckError(f"the account did not show the {side} of {sh.text(shares)} {symbol} when it was read again before the commit (cash ${now_cash:,.2f}, expected ${want_cash:,.2f}; "
+                                        f"{sh.text(now_held)} shares, expected {sh.text(want_held)}{'' if others_after == others_before else '; another holding changed'}): the booking was rolled back and nothing was committed")
+            return Booked(trade_row=row, gain=gain, symbol=symbol, side=side, shares=sh.quantity(shares), price=price, cash_before=cash, cash_after=now_cash,
+                          held_before=sh.quantity(held), held_after=sh.quantity(now_held))
         return self._run(account_id, fn)
+
+    def _count_of(self, shares) -> Decimal:
+        """The shares of a trade as the Decimal at scale 6 the book works with. Raises ValueError, before anything is written, for a number that is not above zero or has more than six decimals, and for a quantity with
+        a fraction on a book whose share columns are still integer (`holds_fractions`): nothing is ever rounded into an integer column."""
+        try:
+            quantity = sh.quantity(shares)
+        except ValueError:
+            raise ValueError("shares must be a number above zero (a whole number, or one with at most 6 decimals)") from None
+        if quantity <= 0:
+            raise ValueError("shares must be a number above zero (a whole number, or one with at most 6 decimals)")
+        if not sh.whole(quantity) and not self.holds_fractions():
+            raise ValueError(FRACTION_REFUSED)
+        return sh.as_decimal(quantity)
 
     def read_booked(self, account_id: int, trade_row: int) -> dict | None:
         """Read one booked trade back from the book (a NEW connection and transaction: what the commit made durable): its row of `trading.trades` as a dict, or None when there is no such row. The Account Manager
@@ -305,6 +363,8 @@ class AccountStore:
         rows = [_decision_row(account_id, item) for item in decisions]
         if not rows:
             return
+        if any(not sh.whole(row[4]) for row in rows) and not self.holds_fractions():
+            raise ValueError(FRACTION_REFUSED)
 
         def fn(cur):
             self._lock(cur, account_id)
@@ -378,12 +438,12 @@ class Booked:
     gain: Decimal
     symbol: str
     side: str
-    shares: int
+    shares: Decimal                     # quantities: Decimals in their canonical form (a whole number has no decimals; entries 110 and 112)
     price: Decimal
     cash_before: Decimal
     cash_after: Decimal
-    held_before: int
-    held_after: int
+    held_before: Decimal
+    held_after: Decimal
 
 
 def _require_active(row: dict) -> None:
@@ -391,15 +451,16 @@ def _require_active(row: dict) -> None:
         raise ValueError(f"the account is {row['status']}: it cannot take funds or a trade")
 
 
-def _buy_position(cur, account_id: int, symbol: str, shares: int, price: Decimal, traded_on: date, name: str | None, position: dict | None) -> None:
+def _buy_position(cur, account_id: int, symbol: str, shares: Decimal, price: Decimal, traded_on: date, name: str | None, position: dict | None) -> None:
     if position is None:
         cur.execute("""INSERT INTO trading.positions (account_id, symbol, name, shares, cost_basis, acquired, recent_shares)
                        VALUES (%s, %s, %s, %s, %s, %s, %s)""", (account_id, symbol, name, shares, price, traded_on, shares))
         return
-    total = position["shares"] + shares
-    basis = price_scale((position["shares"] * position["cost_basis"] + shares * price) / Decimal(total))
+    before = sh.as_decimal(position["shares"])
+    total = before + shares
+    basis = price_scale(EXACT.divide(EXACT.add(EXACT.multiply(before, position["cost_basis"]), EXACT.multiply(shares, price)), total))
     if position["acquired"] is not None and position["acquired"] >= traded_on:
-        locked = None if position["recent_shares"] is None else position["recent_shares"] + shares
+        locked = None if position["recent_shares"] is None else sh.as_decimal(position["recent_shares"]) + shares
     else:
         locked = shares
     cur.execute("""UPDATE trading.positions
@@ -407,12 +468,12 @@ def _buy_position(cur, account_id: int, symbol: str, shares: int, price: Decimal
                    WHERE account_id = %s AND symbol = %s""", (name, total, basis, traded_on, locked, account_id, symbol))
 
 
-def _sell_position(cur, account_id: int, symbol: str, shares: int, position: dict) -> None:
-    left = position["shares"] - shares
-    if left == 0:
+def _sell_position(cur, account_id: int, symbol: str, shares: Decimal, position: dict) -> None:
+    left = sh.as_decimal(position["shares"]) - shares
+    if left == 0:                                                              # exactly 0 is left: the position row is gone
         cur.execute("DELETE FROM trading.positions WHERE account_id = %s AND symbol = %s", (account_id, symbol))
         return
-    recent = position["recent_shares"]
+    recent = None if position["recent_shares"] is None else sh.as_decimal(position["recent_shares"])
     if recent is not None:
         recent = min(recent, left) or None
     cur.execute("UPDATE trading.positions SET shares = %s, recent_shares = %s WHERE account_id = %s AND symbol = %s", (left, recent, account_id, symbol))
@@ -435,16 +496,17 @@ def _decision_row(account_id: int, decision: dict) -> tuple:
     action = decision.get("action")
     if not isinstance(action, str) or not action.isidentifier() or len(action) > 32:
         raise ValueError("a decision needs an action such as add or reduce")
-    shares = decision.get("shares")
-    if isinstance(shares, bool) or not isinstance(shares, int) or shares < 0:
-        raise ValueError("a decision needs a share count")
+    try:
+        shares = sh.quantity(decision.get("shares"))                           # zero or more: a decision that sized to nothing is saved with 0
+    except ValueError:
+        raise ValueError("a decision needs a share count (a number of shares, zero or more, with at most six decimals)") from None
     mode = decision.get("mode")
     if mode not in ("ask", "auto"):
         raise ValueError("a decision needs mode ask or auto")
     reason = decision.get("reason")
     if not isinstance(reason, str):
         raise ValueError("a decision needs a reason")
-    return (account_id, record_id.strip(), check_symbol(decision.get("symbol") or ""), action, shares, mode, will_trade, reason, decided_on)
+    return (account_id, record_id.strip(), check_symbol(decision.get("symbol") or ""), action, sh.as_decimal(shares), mode, will_trade, reason, decided_on)
 
 
 def _user(row: dict) -> UserAccount:

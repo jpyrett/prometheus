@@ -100,9 +100,9 @@ def test_the_account_manager_reads_the_account_books_the_trade_reads_the_account
     for name in ("list_portfolio", "book_trade", "read_booked"):
         real = getattr(db.store, name)
         monkeypatch.setattr(db.store, name, lambda *a, _n=name, _r=real, **k: log.append(_n) or _r(*a, **k))
-    booking = am.record_fill(filled("T1", "XOM", "buy", 4, 100.0, record_id="rec-1", fill={"price": 100.0, "shares": 4, "amount": 400.0, "date": DAY.isoformat()}))
+    booking = am.record_fill(filled("T1", "XOM", "buy", 4, Decimal("100.0"), record_id="rec-1", fill={"price": Decimal("100.0"), "shares": 4, "amount": Decimal("400.0"), "date": DAY.isoformat()}))
     assert log == ["list_portfolio", "book_trade", "list_portfolio", "read_booked"]                                    # SELECT, the one transaction, SELECT again, the trade row
-    assert (booking.status, booking.verified, booking.booked, booking.cash_before, booking.cash_avail) == ("booked", True, True, 1000.0, 600.0)
+    assert (booking.status, booking.verified, booking.booked, booking.cash_before, booking.cash_avail) == ("booked", True, True, Decimal("1000"), Decimal("600"))
     assert db.held(account_id) == {"XOM": 4} and db.store.account_balance(account_id) == Decimal("600.00") and db.trades(account_id) == 1
 
 
@@ -208,7 +208,7 @@ def test_the_account_manager_says_a_rolled_back_trade_is_refused_shows_the_user_
     calls = []
     real = db.store.book_trade
     monkeypatch.setattr(db.store, "book_trade", lambda *a, **k: calls.append(1) or real(*a, **k))
-    booking = am.record_fill(filled("T1", "XOM", "buy", 4, 100.0, fill={"price": 100.0, "shares": 4, "amount": 400.0, "date": DAY.isoformat()}))
+    booking = am.record_fill(filled("T1", "XOM", "buy", 4, Decimal("100.0"), fill={"price": Decimal("100.0"), "shares": 4, "amount": Decimal("400.0"), "date": DAY.isoformat()}))
     monkeypatch.undo()
     assert (booking.status, booking.ok, booking.verified) == ("refused", False, False) and "rolled back and nothing was committed" in booking.reason and len(calls) == 1
     said = "\n".join(shown)
@@ -220,6 +220,6 @@ def test_a_purchase_the_cash_does_not_cover_is_refused_with_the_books_sentence_a
     account_id = db.account("100.00")
     shown = []
     am = db.manager(account_id, screen=shown.append)
-    booking = am.record_fill(filled("T1", "XOM", "buy", 4, 100.0, fill={"price": 100.0, "shares": 4, "amount": 400.0, "date": DAY.isoformat()}))
-    assert (booking.status, booking.reason, booking.cash_before) == ("refused", "cash $100.00 does not cover $400.00", 100.0)
+    booking = am.record_fill(filled("T1", "XOM", "buy", 4, Decimal("100.0"), fill={"price": Decimal("100.0"), "shares": 4, "amount": Decimal("400.0"), "date": DAY.isoformat()}))
+    assert (booking.status, booking.reason, booking.cash_before) == ("refused", "cash $100.00 does not cover $400.00", Decimal("100"))
     assert "TRADE NOT DONE" in "\n".join(shown) and "cash $100.00 does not cover $400.00" in "\n".join(shown) and db.held(account_id) == {} and db.trades(account_id) == 0

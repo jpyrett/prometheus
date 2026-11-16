@@ -67,8 +67,7 @@ def assess(rec: Recommendation, now: datetime, quote: dict | None, last_close: d
     """Every timing finding of one record, the score, and the deal price. `quote` is the Data Clerk's quote (or None), `last_close` the re-fetched `last_close` metric result."""
     out = TimingResult()
     session = out.session = session_at(now, calendar)
-    action, trade = rec.action.action, rec.trade
-    opening = action in ("open", "add")
+    trade = rec.trade
     today = eastern_date(now, calendar)
     day = record_day(rec, now)
 
@@ -115,17 +114,17 @@ def assess(rec: Recommendation, now: datetime, quote: dict | None, last_close: d
     position = None
     if zone and price is not None and zone[1] > zone[0]:
         position = (price - zone[0]) / (zone[1] - zone[0])
-    if opening and price is not None and zone and price > zone[1]:
+    if price is not None and zone and price > zone[1]:
         out.findings.append(blocker("timing", "price_left_zone", f"The price {price:.2f} is above the top of the entry zone ({zone[1]:.2f}): buying now would be chasing it.", value=price, threshold=zone[1]))
     if trade.stop_price is not None and price is not None and price <= trade.stop_price:
         out.findings.append(blocker("timing", "stop_already_hit", f"The price {price:.2f} is at or under the stop ({trade.stop_price:.2f}): the idea is already wrong.", value=price, threshold=trade.stop_price))
-    elif opening and price is not None and zone and price < zone[0]:
+    elif price is not None and zone and price < zone[0]:
         out.findings.append(warning("timing", "price_below_zone", f"The price {price:.2f} is under the entry zone ({zone[0]:.2f} to {zone[1]:.2f}): it has fallen since the plan was made.", value=price, threshold=zone[0]))
 
     session_part = config.session_factor.get(session.state, 0.0)
-    zone_part = 1.0 if not opening else zone_factor(price, zone, trade.entry_mid, config)
+    zone_part = zone_factor(price, zone, trade.entry_mid, config)
     out.measures = [Measure(name="session", x=session.state, value=session_part, weight=50), Measure(name="zone", x=None if position is None else round(position, 4), value=round(zone_part, 4), weight=50,
-                                                                                                    available=not opening or price is not None)]
+                                                                                                    available=price is not None)]
     out.score = round(100 * (0.5 * session_part + 0.5 * zone_part), 2)
     out.detail = TimingDetail(session=session.state, trading_date=str(session.trading_date) if session.trading_date else None, session_reason=session.reason,
                               window_closes_utc=utc_text(session.window_closes_utc), next_open_utc=utc_text(session.next_open_utc), record_date=str(day) if day else None,

@@ -1,0 +1,792 @@
+<<<PRESS_RELEASE>>>
+id: 2c23db61c1a21aae
+symbol: IBM
+published_utc: 2025-11-19T15:30:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-university-dayton-announce-joint-research-collaboration-next-generation
+headline: IBM and University of Dayton Announce Joint Research Collaboration for Next-Generation Semiconductor Technologies
+<<<TEXT>>>
+YORKTOWN HEIGHTS, N.Y. and DAYTON, Ohio, Nov. 19, 2025/ PRNewswire/-- IBM and the University of Dayton today announced an agreement for the joint research and development of next-generation semiconductor technologies and materials. To support the collaboration, IBM will contribute state-of-the-art semiconductor equipment to the University of Dayton for a new...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 896da92e9bb02588
+symbol: IBM
+published_utc: 2025-11-20T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-cisco-announce-plans-build-network-large-scale-fault-tolerant-quantum
+headline: IBM and Cisco Announce Plans to Build a Network of Large-Scale, Fault-Tolerant Quantum Computers
+<<<TEXT>>>
+YORKTOWN HEIGHTS, N.Y. and SAN JOSE, Calif., Nov. 20, 2025/ PRNewswire/-- Today, IBM and Cisco announced an intention to collaborate on the groundwork for networked distributed quantum computing, to be realized as soon as the early 2030 s. By combining IBM's leadership in building useful quantum computers with Cisco' s quantum networking innovations, the companies...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1538af38c3f7a444
+symbol: IBM
+published_utc: 2025-12-05T05:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-designated-critical-third-party-provider-under-eu-dora-2025-12-05
+headline: IBM Designated as a Critical Third-Party Provider Under EU DORA
+<<<TEXT>>>
+IBM was recently designated by the European Supervisory Authorities as a critical ICT third-party provider under DORA. This designation reflects the essential role that technology providers like IBM play in supporting the resilience of Europe's financial sector. This designation places IBM in-scope for supervision by European Supervisory...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7409e0fcefcb860b
+symbol: IBM
+published_utc: 2025-12-08T00:01:00Z
+url: https://www.nasdaq.com/press-release/riyadh-air-and-ibm-partner-launch-worlds-first-ai-native-airline-2025-12-08
+headline: Riyadh Air and IBM Partner to Launch World's First AI-Native Airline
+<<<TEXT>>>
+RIYADH, Saudi Arabia and ARMONK, N.Y., Dec. 8, 2025/ PRNewswire/-- At IBM Think Riyadh 2025, IBM and Riyadh Air announced a major milestone in their collaboration, unveiling Riyadh Air as the world's first AI-native airline. Riyadh Air is leveraging IBM Consulting's deep industry and technical expertise, broad partner ecosystem, and IBM watsonx Orchestrate to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 84fd3f26ea2832e3
+symbol: IBM
+published_utc: 2025-12-11T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-pearson-collaborate-build-new-ai-powered-learning-tools-organizations-and
+headline: IBM and Pearson Collaborate to Build New AI-Powered Learning Tools for Organizations and Individuals Worldwide
+<<<TEXT>>>
+ARMONK, N.Y. and LONDON, Dec. 11, 2025/ PRNewswire/-- IBM and Pearson, the world's lifelong learning company, today announced a global partnership to build new personalized learning products powered by AI for businesses, public organizations, and educational institutions. IBM and Pearson aim to address these needs with AI-powered learning tools, built using...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 341a7d05e2ee0ec7
+symbol: IBM
+published_utc: 2026-01-06T07:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-announces-long-term-renewal-official-ai-cloud-and-digital-transformation-partner
+headline: IBM Announces Long-Term Renewal as the Official AI, Cloud and Digital Transformation Partner for The All England Lawn Tennis Club
+<<<TEXT>>>
+From the launch of the Wimbledon website in 1995 and the mobile application in 2009, to the first integration of enhanced AI-powered solutions in 2017, IBM and the All England Club have collaborated for 36 years to deepen global fan engagement across Wimbledon's world-class digital platforms. The successful partnership between IBM and the All England...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c1565f580a57b7c5
+symbol: IBM
+published_utc: 2026-01-07T10:57:00Z
+url: https://www.nasdaq.com/press-release/ibm-nrf-study-brands-and-retailers-navigate-new-reality-ai-shapes-consumer-decisions
+headline: IBM-NRF Study: Brands and Retailers Navigate a New Reality as AI Shapes Consumer Decisions Before Shopping Begins
+<<<TEXT>>>
+A new global study* from the IBM Institute for Business Value, in collaboration with the National Retail Federation, found that while nearly three-quarters of surveyed consumers still shop in stores, almost half turn to AI for help during their buying journeys.  "AI is changing how consumers shop, and every aspect throughout the shopping journey," notes Caroline...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ec55327ddb284629
+symbol: IBM
+published_utc: 2026-01-14T09:52:00Z
+url: https://www.nasdaq.com/press-release/ibm-announce-fourth-quarter-2025-financial-results-2026-01-14
+headline: IBM to Announce Fourth-Quarter 2025 Financial Results
+<<<TEXT>>>
+--IBM will hold its quarterly conference call to discuss its fourth-quarter 2025 financial results on Wednesday, January 28, 2026 at 5:00 p.m. ET. The live webcast of the earnings call can be accessed at www.ibm.com/investor. Contact: Timothy Davidson tfdavids@us.ibm.com 914-844-7847.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 24d23fd8ef0a9c20
+symbol: IBM
+published_utc: 2026-01-15T00:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-introduces-new-software-address-growing-digital-sovereignty-imperative-2026-01-15
+headline: IBM Introduces New Software to Address Growing Digital Sovereignty Imperative
+<<<TEXT>>>
+--IBM today announced IBM Sovereign Core, the industry's first AI-ready sovereign-enabled software for enterprises, governments and service providers to build, deploy and manage AI-ready sovereign environments. Organizations around the world are facing a growing imperative to exercise control over their technology infrastructure.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c286935e42836f8e
+symbol: IBM
+published_utc: 2026-01-19T00:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-study-ai-poised-drive-smarter-business-growth-through-2030-2026-01-19
+headline: IBM Study: AI Poised to Drive Smarter Business Growth Through 2030
+<<<TEXT>>>
+--New research from the IBM Institute for Business Value reveals that nearly eight in ten surveyed executives expect AI will significantly contribute to their revenue by 2030– up from 40% today– yet, few have a clear view of where that revenue will come from. Despite this uncertainty, investment is accelerating: respondents predict that AI investment will surge...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3a85ff3dc689ea04
+symbol: IBM
+published_utc: 2026-01-19T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-launches-enterprise-advantage-service-help-businesses-scale-agentic-ai-2026-01-19
+headline: IBM Launches Enterprise Advantage Service to Help Businesses Scale Agentic AI
+<<<TEXT>>>
+--IBM today announced IBM Enterprise Advantage, a first-of-its-kind asset-based consulting service that combines proven AI-tools and expertise to help clients quickly build, govern, and operate their own tailored internal AI platform at scale. Organizations can now use IBM Enterprise Advantage to redesign workflows, connect AI to existing systems, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6a396c77c4c16237
+symbol: IBM
+published_utc: 2026-01-19T07:30:00Z
+url: https://www.nasdaq.com/press-release/e-and-ibm-unveil-enterprise-grade-agentic-ai-transform-governance-and-compliance-2026
+headline: e& and IBM Unveil Enterprise-Grade Agentic AI to Transform Governance and Compliance
+<<<TEXT>>>
+Announced at the World Economic Forum in Davos, the deployment marks e&'s move beyond traditional chatbots to enterprise-grade agentic AI. Powered by IBM watsonx Orchestrate, agentic AI is embedded into mission-critical governance and compliance systems across e&.. DAVOS, Switzerland and DUBAI, UAE, Jan. 19, 2026/ PRNewswire/-- Global technology group e& and IBM...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a98f427e72afbe0
+symbol: IBM
+published_utc: 2026-01-20T12:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-recording-academy-strike-chord-release-new-watsonx-digital-experiences-fans
+headline: IBM and the Recording Academy Strike a Chord, Release New watsonx Digital Experiences for Fans and Members Around 2026 Grammy Awards®
+<<<TEXT>>>
+--IBM, the Official Artificial Intelligence& Cloud Partner of the Grammy Awards ® for nearly a decade, today announced the launch of GRAMMY ® IQ built with IBM watsonx. IBM plans to also continue to design AI-driven solutions that automate workflows and deliver more personalized and engaging digital experiences for Recording Academy members, potential new...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9c62ea2c5969a960
+symbol: IBM
+published_utc: 2026-01-28T16:08:00Z
+url: https://www.nasdaq.com/press-release/ibm-releases-fourth-quarter-results-2026-01-28
+headline: IBM RELEASES FOURTH-QUARTER RESULTS
+<<<TEXT>>>
+--IBM today announced fourth-quarter 2025 earnings results. This capped a strong 2025 for IBM where we exceeded expectations for revenue, profit and free cash flow, "said Arvind Krishna, IBM chairman, president and chief executive officer. Revenue- Revenue of $67.5 billion, up 8 percent, up 6 percent at constant currency- Software revenue up 11 percent, up 9 percent at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 920c91e8d1999cbe
+symbol: IBM
+published_utc: 2026-01-30T16:30:00Z
+url: https://www.nasdaq.com/press-release/ibm-elects-ramon-l-laguarta-its-board-directors-2026-01-30
+headline: IBM Elects Ramon L. Laguarta to its Board of Directors
+<<<TEXT>>>
+--The IBM board of directors has elected Ramon L. Laguarta to the board, effective March 1, 2026. Arvind Krishna, IBM chairman, president and chief executive officer, said: "We are pleased to have Ramon Laguarta join the IBM board of directors. Ramon's background, expertise and proven track record of leveraging technology to transform large organizations make him an...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0f68b29ed6ae2003
+symbol: IBM
+published_utc: 2026-02-02T05:00:00Z
+url: https://www.nasdaq.com/press-release/cybercatch-announces-acquisition-multi-authority-attributes-based-encryption-expands
+headline: CyberCatch Announces Acquisition of Multi-Authority Attributes-Based Encryption, Expands Product Offering to Boost Cybersecurity, Mitigate Risk From AI and Quantum Driven Cyber Attacks and Drive Large Cybersecurity Sales
+<<<TEXT>>>
+CyberCatch Holdings, Inc., a cybersecurity company offering a patented, AI-enabled platform solution for continuous compliance and cyber risk mitigation, is pleased to announce it has signed a definitive share exchange agreement to acquire Atriarch Inc. in order to obtain a multi-authority attributes-based encryption with revocation technology...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 62a86414eacb5f20
+symbol: IBM
+published_utc: 2026-02-04T04:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-opens-global-rfp-ai-driven-solutions-shaping-future-work-and-education-2026-02-04
+headline: IBM Opens Global RFP for AI-Driven Solutions Shaping the Future of Work and Education
+<<<TEXT>>>
+--IBM today announced a global request for proposals for the next cohort of the IBM Impact Accelerator focused on AI for transformative education and workforce development. The program invites nonprofits or government organizations, including academic institutions, to collaborate with IBM on developing solutions that help people learn more effectively,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fb1163833566203e
+symbol: IBM
+published_utc: 2026-02-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-support-missile-defense-agency-shield-contract-2026-02-05
+headline: IBM to Support Missile Defense Agency SHIELD Contract
+<<<TEXT>>>
+--IBM today announced it was selected to support the Missile Defense Agency's Scalable Homeland Innovative Enterprise Layered Defense program.  "IBM is proud to partner with the Missile Defense Agency to accelerate the delivery of advanced, mission-critical capabilities," said Susan Wedge, Managing Partner, U.S. Federal Market for IBM. About IBM IBM is a leading...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d61cb934d1d115eb
+symbol: IBM
+published_utc: 2026-02-10T07:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-introduces-autonomous-storage-new-flashsystem-portfolio-powered-agentic-ai-2026
+headline: IBM Introduces Autonomous Storage with New FlashSystem Portfolio Powered by Agentic AI
+<<<TEXT>>>
+ARMONK, N.Y. and WARSAW, Poland, Feb. 10, 2026/ PRNewswire/-- IBM today unveiled the next generation of IBM FlashSystem, co-run by agentic AI, ushering in a new era of autonomous storage. By enhancing FlashSystem's existing AI capabilities with agentic AI, IBM is redefining resilience through sustained protection, autonomous threat analysis, and customized...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: addbc5b3d8a40f65
+symbol: IBM
+published_utc: 2026-02-24T08:30:00Z
+url: https://www.nasdaq.com/press-release/deepgram-and-ibm-introduce-advanced-voice-capabilities-enterprise-ai-2026-02-24
+headline: Deepgram and IBM Introduce Advanced Voice Capabilities for Enterprise AI
+<<<TEXT>>>
+ARMONK, N.Y.& SAN FRANCISCO---- IBM and Deepgram today announced a collaboration to integrate Deepgram’ s industry-leading speech-to-text and text-to-speech capabilities into IBM’ s watsonx Orchestrate generative AI solution. Powered by Deepgram Billboard, San Francisco, CA. To address client needs for highly performant, enterprise-grade transcription and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bda2b2060602a044
+symbol: IBM
+published_utc: 2026-02-25T00:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-2026-x-force-threat-index-ai-driven-attacks-are-escalating-basic-security-gaps
+headline: IBM 2026 X-Force Threat Index: AI-Driven Attacks are Escalating as Basic Security Gaps Leave Enterprises Exposed
+<<<TEXT>>>
+--IBM today released the 2026 X-Force Threat Intelligence Index, revealing that cybercriminals are exploiting basic security gaps at dramatically higher rates, now accelerated by AI tools that help attackers identify weaknesses faster than ever. IBM X‑ Force observed a 44% increase in attacks that began with the exploitation of public-facing applications,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1041e368c6d020cf
+symbol: IBM
+published_utc: 2026-02-25T09:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-awarded-defense-commissary-agency-contract-modernize-electronic-shelf-label
+headline: IBM Awarded Defense Commissary Agency Contract to Modernize Electronic Shelf Label System
+<<<TEXT>>>
+--IBM has secured a contract with a ceiling value of $112 million for up to five years from the Department of War's Defense Commissary Agency to modernize pricing displays across commissaries worldwide, aimed to enhance operational efficiency and improve the shopping experience for military personnel and their families.  "IBM is proud to continue supporting...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1880feb8efcd15d2
+symbol: IBM
+published_utc: 2026-03-05T14:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-university-researchers-create-never-seen-molecule-and-prove-its-exotic-nature
+headline: IBM and University Researchers Create a Never-Before-Seen Molecule and Prove its Exotic Nature with Quantum Computing
+<<<TEXT>>>
+--An international team of scientists from IBM, The University of Manchester, Oxford University, ETH Zurich, EPFL and the University of Regensburg have created and characterized a molecule unlike any previously known— one whose electrons travel through its structure in a corkscrew-like pattern that fundamentally alters its chemical behavior.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 56cfe590edc1fa9d
+symbol: IBM
+published_utc: 2026-03-10T09:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-lam-research-announce-collaboration-advance-sub-1nm-logic-scaling-2026-03-10
+headline: IBM and Lam Research Announce Collaboration to Advance Sub-1nm Logic Scaling
+<<<TEXT>>>
+ALBANY, N.Y. and FREMONT, Calif., March 10, 2026/ PRNewswire/-- IBM and Lam Research Corp. today announced a collaboration aimed at developing new processes and materials to support sub-1nm logic scaling. Building on a long record of successful partnerships, the new agreement will focus on the joint development of novel materials, fabrication processes, and High NA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0fb3ed244fe855d2
+symbol: IBM
+published_utc: 2026-03-12T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-releases-new-blueprint-quantum-centric-supercomputing-2026-03-12
+headline: IBM Releases a New Blueprint for Quantum-Centric Supercomputing
+<<<TEXT>>>
+--IBM today unveiled the industry's first published quantum‑ centric supercomputing reference architecture, a new blueprint for integrating quantum computing into modern supercomputing environments. On top of this foundation, IBM's approach enables coordinated workflows that span quantum and classical computing.  "More than four decades ago, Richard...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c6d426ac49b6d5fa
+symbol: IBM
+published_utc: 2026-03-16T16:30:00Z
+url: https://www.nasdaq.com/press-release/ibm-announces-expanded-collaboration-nvidia-advance-ai-enterprise-2026-03-16
+headline: IBM Announces Expanded Collaboration with NVIDIA to Advance AI for the Enterprise
+<<<TEXT>>>
+Today's announcements from IBM and NVIDIA are designed to close these gaps.  "In the next wave of enterprise AI, the model layer will rely on the data, infrastructure, and orchestration layers– and on businesses that can bring all three together," said Arvind Krishna, Chairman and CEO, IBM.  "IBM pioneered enterprise computing and data processing six decades ago— and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5ee533c7df41f9a5
+symbol: IBM
+published_utc: 2026-03-17T09:05:00Z
+url: https://www.nasdaq.com/press-release/ibm-completes-acquisition-confluent-making-real-time-data-engine-enterprise-ai-and
+headline: IBM Completes Acquisition of Confluent, Making Real Time Data the Engine of Enterprise AI and Agents
+<<<TEXT>>>
+Together, IBM and Confluent deliver a smart data platform that gives every AI model, agent, and automated workflow the real-time, trusted data needed to operate across on-premises and hybrid cloud environments at scale. Together IBM and Confluent provide the fabric through which AI agents can access the information they need, with the controls, governance, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 982af12a0c124df1
+symbol: IBM
+published_utc: 2026-03-18T05:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-fellow-and-quantum-pioneer-charles-h-bennett-receives-am-turing-award-computings
+headline: IBM Fellow and Quantum Pioneer Charles H. Bennett Receives A.M. Turing Award, Computing's Highest Honor
+<<<TEXT>>>
+--Charles H. Bennett, a research scientist at IBM and IBM Fellow, has been named a co-recipient of the 2025 ACM A.M. Described by the ACM as the "Nobel Prize in computing," the award cites Bennett for contributions that helped spark a "quantum revolution," establish the field of quantum information science and reshape how researchers think about computation,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 03e4d23b2be605be
+symbol: IBM
+published_utc: 2026-03-23T10:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-debuts-new-ai-enabled-digital-experiences-90th-masters-tournament-2026-03-23
+headline: IBM Debuts New AI Enabled Digital Experiences for the 90th Masters Tournament
+<<<TEXT>>>
+--IBM and the Masters Tournament today announced new and enhanced digital fan features now available on the award-winning Masters digital platforms. The watsonx AI-powered capabilities– the latest in a 30- year collaboration between IBM and the Masters– are designed to bring the rich history and on-course excitement of the Tournament to life for millions of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5934c3c9a1bdd73c
+symbol: IBM
+published_utc: 2026-03-24T08:41:00Z
+url: https://www.nasdaq.com/press-release/tradr-launches-leveraged-etfs-amzn-aaoi-hl-and-ibm-2026-03-24
+headline: Tradr Launches Leveraged ETFs on AMZN, AAOI, HL and IBM
+<<<TEXT>>>
+Tradr 2 X Short AMZN Daily ETF– tracks Amazon.com Inc. Tradr 2 X Long AAOI Daily ETF– tracks Applied Optoelectronics Inc. Tradr 2 X Long HL Daily ETF– tracks Hecla Mining Co. Tradr 2 X Long IBM Daily ETF– tracks International Business Machines Corp..  "We are excited to finally give a couple of blue-chip stocks like Amazon and IBM the Tradr treatment," said Matt...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 26c4a5bf0b502d37
+symbol: IBM
+published_utc: 2026-03-25T08:30:00Z
+url: https://www.nasdaq.com/press-release/enterprise-ai-finds-its-voice-elevenlabs-and-ibm-bring-premium-voice-capabilities
+headline: Enterprise AI Finds its Voice: ElevenLabs and IBM Bring Premium Voice Capabilities to Agentic AI
+<<<TEXT>>>
+ElevenLabs integration with IBM watsonx Orchestrate will help clients to deliver natural, multilingual conversational experiences at scale. ARMONK, N.Y. and NEW YORK, March 25, 2026/ PRNewswire/-- ElevenLabs and IBM today announced they are collaborating to bring ElevenLabs Text to Speech and Speech to Text to IBM watsonx Orchestrate, an agentic AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2e72fbfc8a171f86
+symbol: IBM
+published_utc: 2026-03-26T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-quantum-computer-accurately-simulates-real-magnetic-materials-reproducing
+headline: IBM Quantum Computer Accurately Simulates Real Magnetic Materials, Reproducing National Laboratory Data
+<<<TEXT>>>
+--IBM today announced new results that its quantum computer can simulate real magnetic materials with results that match neutron scattering experiments, marking a significant step towards using quantum computers as reliable tools for scientific discovery. The work, reported in a pre-print, was conducted by scientists from the U.S. Department of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1b8caec200279209
+symbol: IBM
+published_utc: 2026-03-31T09:30:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-eth-zurich-join-forces-shape-future-algorithms-ai-and-quantum-era-2026-03-31
+headline: IBM and ETH Zurich join forces to shape the future of algorithms for the AI and quantum era
+<<<TEXT>>>
+--IBM and ETH Zurich announced today a 10- year collaboration to advance the next generation of algorithms at the intersection of AI and quantum computing. Over the next decade, IBM and ETH Zurich aim to create new classes of algorithms capable of bridging classical computing, machine learning, and quantum systems to address some of the today's critical...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: eb59a06c33e3c2b5
+symbol: IBM
+published_utc: 2026-04-01T08:30:00Z
+url: https://www.nasdaq.com/press-release/ibm-expands-fedramp-portfolio-authorization-11-software-solutions-including-watsonx
+headline: IBM Expands FedRAMP Portfolio with Authorization of 11 Software Solutions, Including watsonx
+<<<TEXT>>>
+--IBM today announced that 11 of its artificial intelligence and automation software solutions— including several products from the watsonx portfolio— have received Federal Risk and Authorization Management Program authorization. These authorizations were made possible through IBM's strategic collaboration agreement with Amazon Web Services, which...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 57dca049dc298e39
+symbol: IBM
+published_utc: 2026-04-02T00:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-announces-strategic-collaboration-arm-shape-future-enterprise-computing-2026-04
+headline: IBM Announces Strategic Collaboration with Arm to Shape the Future of Enterprise Computing
+<<<TEXT>>>
+--IBM today announced a strategic collaboration with Arm to develop new dual‑ architecture hardware that helps enterprises run future AI and data intensive workloads with greater flexibility, reliability, and security. IBM's leadership in system design, from silicon to software and security, has helped enterprises adopt emerging technologies with the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 626153d503a303b0
+symbol: IBM
+published_utc: 2026-04-02T12:28:00Z
+url: https://www.nasdaq.com/press-release/first-ever-masters-madison-square-park-watch-party-teed-april-9-12-2026-04-02
+headline: First-Ever 'Masters at Madison Square Park' Watch Party Tee'd Up for April 9-12
+<<<TEXT>>>
+--IBM will host the first-of-its-kind' Masters at Madison Square Park' immersive viewing experience for all four days of the Masters Tournament, Thursday, April 9– Sunday, April 12. IBM is also teaming up with Shake Shack to serve up limited quantities of three iconic Masters-inspired menu items– available exclusively at the Madison Square Park location–...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2fadca7436c86b65
+symbol: IBM
+published_utc: 2026-04-08T11:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-announce-first-quarter-2026-financial-results-2026-04-08
+headline: IBM to Announce First-Quarter 2026 Financial Results
+<<<TEXT>>>
+--IBM will hold its quarterly conference call to discuss its first-quarter 2026 financial results on Wednesday, April 22, 2026 at 5:00 p.m. ET. The live webcast of the earnings call can be accessed at www.ibm.com/investor. Please also visit the investor website for the earnings press release prior to the webcast.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9fe403d714906834
+symbol: IBM
+published_utc: 2026-04-09T17:44:00Z
+url: https://www.nasdaq.com/press-release/open-source-after-mythos-2026-04-09
+headline: Open Source, After Mythos
+<<<TEXT>>>
+--There is a pattern we keep seeing in technology. When software moves from product to platform and then from platform to infrastructure, the rules change. Anthropic's limited preview of Claude Mythos brings that reality into sharper focus.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dae84e34d50090b0
+symbol: IBM
+published_utc: 2026-04-15T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-announces-new-cybersecurity-measures-help-enterprises-confront-agentic-attacks
+headline: IBM Announces New Cybersecurity Measures to Help Enterprises Confront Agentic Attacks
+<<<TEXT>>>
+--IBM today announced new cybersecurity measures designed to help organizations counter a new generation of cyber threats as attackers begin weaponizing frontier AI models. To address this challenge, IBM Consulting is offering a new cybersecurity assessment to help enterprises evaluate their readiness for agentic enabled threats.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a38d4d5b459dc8ed
+symbol: IBM
+published_utc: 2026-04-16T11:11:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-university-illinois-urbana-champaign-expand-discovery-accelerator-institute
+headline: IBM and the University of Illinois Urbana-Champaign Expand Discovery Accelerator Institute to Advance AI and Quantum Computing
+<<<TEXT>>>
+The IBM-Illinois Discovery Accelerator Institute will launch research on new quantum-centric supercomputing architecture, which will integrate IBM quantum computers and high-performance computing from U. of I.' s National Center for Supercomputing Applications.. ARMONK, N.Y. and URBANA-- CHAMPAIGN, Ill., April 16, 2026/ PRNewswire/-- IBM and the Grainger...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 333dee7ef139105e
+symbol: IBM
+published_utc: 2026-04-16T14:25:00Z
+url: https://www.nasdaq.com/press-release/how-ibm-quantum-enabling-healthcare-and-biology-research-2026-04-16
+headline: How IBM Quantum is Enabling Healthcare and Biology Research
+<<<TEXT>>>
+The program launched in 2023 with twelve research teams from around the world receiving access to a combined $40 million in funding. By March 2026, that group had narrowed to six Phase III finalists. That ambition is evident in the Q4Bio challenge requirements: To be eligible for a $2 million Phase III award, participating teams needed to demonstrate algorithms...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 206e2139ebbd9189
+symbol: IBM
+published_utc: 2026-04-21T07:45:00Z
+url: https://www.nasdaq.com/press-release/ibm-introduces-industry-solutions-ai-powered-experience-orchestration-adobe-2026-04
+headline: IBM Introduces Industry Solutions for AI‑Powered Experience Orchestration with Adobe
+<<<TEXT>>>
+A Deeper Collaboration to Close the Gap with Adobe and IBM: Orchestrating the Moments That Matter. This is where IBM Consulting and Adobe are deepening our collaboration. Together, we're pairing Adobe's Customer Experience Orchestration capabilities, like Adobe Real-Time CDP, with IBM's agentic AI expertise, orchestration tools like Adobe Experience...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5879e5659f27317f
+symbol: IBM
+published_utc: 2026-04-22T16:08:00Z
+url: https://www.nasdaq.com/press-release/ibm-releases-first-quarter-results-2026-04-22
+headline: IBM RELEASES FIRST-QUARTER RESULTS
+<<<TEXT>>>
+--IBM today announced first-quarter 2026 earnings results. IBM products and services are helping clients orchestrate, deploy and govern AI across hybrid environments, "said Arvind Krishna, IBM chairman, president and chief executive officer.  "Our solid revenue growth, portfolio mix and productivity initiatives drove double-digit profit and free cash flow...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f9bda55597b6aeaa
+symbol: IBM
+published_utc: 2026-04-28T00:01:00Z
+url: https://www.nasdaq.com/press-release/introducing-ibm-bob-ai-development-partner-takes-enterprises-ai-assisted-coding
+headline: Introducing IBM Bob: AI Development Partner that Takes Enterprises from AI-Assisted Coding to Production-Ready Software
+<<<TEXT>>>
+--IBM today announced the global availability of IBM Bob, an AI-first development partner built for enterprise teams. Bob doesn't just help developers write code fast. It works across the full software development lifecycle, from planning and coding to testing, deployment, and modernization, with the governance and security controls enterprises need.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 51772e4672ad6a48
+symbol: IBM
+published_utc: 2026-04-29T07:00:00Z
+url: https://www.nasdaq.com/press-release/mit-ibm-computing-research-lab-launches-shape-future-ai-and-quantum-computing-2026-04
+headline: The MIT-IBM Computing Research Lab Launches to Shape the Future of AI and Quantum Computing
+<<<TEXT>>>
+Together, MIT and IBM aim to help lead research in AI and quantum and to redefine mathematical foundations across both domains.  "We expect the MIT-IBM Computing Research Lab to emerge as one of the world's premier academic and industrial hubs accelerating the future of computing," said Jay Gambetta, director of IBM Research and IBM Fellow, and IBM chair of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 96e1b576edcbe5ca
+symbol: IBM
+published_utc: 2026-04-30T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-dallara-advance-ai-and-quantum-powered-design-high-performance-vehicles-2026
+headline: IBM and Dallara to Advance AI and Quantum-Powered Design for High-Performance Vehicles
+<<<TEXT>>>
+IBM and Dallara are collaborating on the development of new physics-based AI foundation models. One early model was trained on Dallara's proprietary and validated aerodynamic data of a high-performance vehicle. Early results show the potential to reduce aerodynamics simulation time from many hours to few minutes and help engineers explore more design...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6ef0dd8bf3f12a62
+symbol: IBM
+published_utc: 2026-05-01T08:00:00Z
+url: https://www.nasdaq.com/press-release/private-equitys-ai-moment-greatest-value-lever-decades-and-hardest-pull-2026-05-01
+headline: Private Equity's AI Moment: The Greatest Value Lever in Decades -- and the Hardest to Pull
+<<<TEXT>>>
+--Next week at Think 2026, we'll outline the forces shaping the Enterprise AI Race, forces that apply with particular urgency to private equity. The organizations gaining ground today are not the ones betting on a single model. They are the ones redesigning how their businesses operate, building hybrid architectures that give them control, and deploying AI in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a63df74025a037a6
+symbol: IBM
+published_utc: 2026-05-01T09:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-debuts-new-ai-powered-features-scuderia-ferrari-app-2026-05-01
+headline: IBM Debuts New AI-Powered Features for the Scuderia Ferrari App
+<<<TEXT>>>
+Built with IBM watsonx, the enhanced AI Companion acts as a digital guide, helping fans uncover everything from race‑ week insights to Scuderia Ferrari HP history in a more intuitive and personalized way. The new unified Game Center is a dynamic destination where fans can participate in race predictors, quizzes and challenges tied to live Grand Prix moments.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6161338d222db452
+symbol: IBM
+published_utc: 2026-05-04T00:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-study-ceos-are-reshaping-c-suite-roles-ai-era-2026-05-04
+headline: IBM Study: CEOs are Reshaping C-suite Roles for the AI Era
+<<<TEXT>>>
+--A new global study from the IBM Institute for Business Value finds that the accelerating pace of AI is pushing CEOs to redesign how C-suite roles are structured to drive greater business impact across the enterprise. In the foreword of the study, IBM Vice Chairman Gary Cohn writes, "The CEO's role has always been to lead through disruption. The annual IBM CEO study,*...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f53372a20bfe2fc8
+symbol: IBM
+published_utc: 2026-05-04T11:52:00Z
+url: https://www.nasdaq.com/press-release/media-alert-ibm-ceo-arvind-krishna-open-ibm-think-2026-outlining-how-ai-and-quantum
+headline: MEDIA ALERT: IBM CEO ARVIND KRISHNA TO OPEN IBM THINK 2026, OUTLINING HOW AI AND QUANTUM WILL DEFINE THE ENTERPRISE
+<<<TEXT>>>
+--Tune in live Tuesday, May 5 at 8:30 a.m. ET as IBM CEO Arvind Krishna opens IBM Think 2026 and explains how AI is becoming the defining force in business, what it takes to lead, and how quantum computing is emerging as the next frontier. Serpil Erzurum, Executive Vice President, Chief Research and Academic Officer, Cleveland Clinic Ratnakar Lavu, Executive Vice...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 92477e46f8028799
+symbol: IBM
+published_utc: 2026-05-05T00:01:00Z
+url: https://www.nasdaq.com/press-release/cleveland-clinic-riken-and-ibm-model-12635-atom-protein-largest-known-be-simulated
+headline: Cleveland Clinic, RIKEN, and IBM Model a 12,635-Atom Protein - the Largest Known to Be Simulated with Quantum Computers
+<<<TEXT>>>
+Milestone simulation of biologically meaningful molecules expands quantum-centric supercomputing's role as a scientific tool. YORKTOWN HEIGHTS, N.Y. and CLEVELAND, May 5, 2026/ PRNewswire/-- Scientists at Cleveland Clinic, RIKEN, and IBM have used IBM quantum computers and two of the world's most powerful supercomputers to simulate protein complexes...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cb68eb89dfed0480
+symbol: IBM
+published_utc: 2026-05-05T00:01:00Z
+url: https://www.nasdaq.com/press-release/think-2026-ibm-makes-digital-sovereignty-operational-general-availability-ibm
+headline: Think 2026: IBM Makes Digital Sovereignty Operational with General Availability of IBM Sovereign Core
+<<<TEXT>>>
+--At Think 2026, IBM today announced the general availability of IBM Sovereign Core, a new software platform designed to help organizations build and operate AI-ready sovereign environments and verify their control— giving enterprises and governments an end-to-end approach to digital sovereignty. Defining Digital Sovereignty for the AI Era IBM defines...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 69460c8a97bdbdac
+symbol: IBM
+published_utc: 2026-05-05T00:01:00Z
+url: https://www.nasdaq.com/press-release/think-2026-ibm-delivers-blueprint-ai-operating-model-ai-divide-widens-2026-05-05
+headline: Think 2026: IBM Delivers the Blueprint for the AI Operating Model as the AI Divide Widens
+<<<TEXT>>>
+--Today, at its annual Think conference, IBM announced its most comprehensive expansion of enterprise AI and hybrid cloud management capabilities to date. Products and capabilities unveiled today include the next generation of IBM watsonx Orchestrate for multi-agent orchestration, IBM Confluent to bring real-time data to AI, IBM Concert platform for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fa7c327188d35406
+symbol: IBM
+published_utc: 2026-05-05T12:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-aramco-explore-collaboration-accelerate-ai-and-innovation-across-saudi-arabia
+headline: IBM and Aramco Explore Collaboration to Accelerate AI and Innovation Across Saudi Arabia
+<<<TEXT>>>
+--Aramco and IBM today announced their intended collaboration on opportunities to advance artificial intelligence, agentic AI, automation, material science and other mutually agreed domains in the industrial sector. The announcement was made at THINK Boston, IBM's global flagship event, in the presence of Arvind Krishna, Chairman and Chief Executive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 350b37c4810954d9
+symbol: IBM
+published_utc: 2026-05-06T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-consulting-expands-ai-capabilities-accelerate-enterprise-transformation-2026-05
+headline: IBM Consulting Expands AI Capabilities to Accelerate Enterprise Transformation
+<<<TEXT>>>
+--At Think 2026, IBM announced new capabilities delivered through IBM Enterprise Advantage, a first-of-its-kind asset-based consulting service that helps clients build and operate their own hybrid-AI platforms. IBM also introduced updates across IBM Consulting Advantage, its internal hybrid-AI platform for delivering consulting services to clients.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1682083a58e3e922
+symbol: IBM
+published_utc: 2026-05-12T08:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-announces-red-hat-ai-inference-and-red-hat-openshift-virtualization-service-ibm
+headline: IBM Announces Red Hat AI Inference and Red Hat OpenShift Virtualization Service on IBM Cloud
+<<<TEXT>>>
+--IBM today announced two new managed services– Red Hat AI Inference on IBM Cloud and Red Hat OpenShift Virtualization Service on IBM Cloud– to help enterprises accelerate AI adoption and run security-forward, scalable and predictable virtualization environments. With these new offerings, IBM continues to provide clients with the full spectrum of Red Hat...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 96d95140fbe5761a
+symbol: IBM
+published_utc: 2026-05-14T09:00:00Z
+url: https://www.nasdaq.com/press-release/new-way-make-ai-actually-work-real-world-2026-05-14
+headline: A New Way to Make AI Actually Work in the Real World
+<<<TEXT>>>
+--Enterprise AI is at a tipping point. The investment is massive and experimentation is everywhere but deploying quickly remains a challenge. The issue is not the vision nor the technology.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2ec2f1fe2ccff1b1
+symbol: IBM
+published_utc: 2026-05-19T11:44:00Z
+url: https://www.nasdaq.com/press-release/ibm-brings-its-most-advanced-ai-powered-security-portfolio-clients-and-strengthened
+headline: IBM Brings Its Most Advanced AI-Powered Security Portfolio to Clients, and is Strengthened by Ongoing Project Glasswing Work
+<<<TEXT>>>
+For decades, IBM has secured the systems the world depends on, from mainframes processing global financial transactions to the open-source platforms and hybrid cloud environments at the core of critical industries in more than 175 countries. As attackers use frontier AI to accelerate every phase of the attack lifecycle, from reconnaissance to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: aff67e2dc1a2018b
+symbol: IBM
+published_utc: 2026-05-21T06:45:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-us-department-commerce-announce-americas-first-purpose-built-quantum-foundry
+headline: IBM and U.S. Department of Commerce Announce America's First Purpose-Built Quantum Foundry, Supported by Proposed $1 Billion CHIPS Award
+<<<TEXT>>>
+Powered by IBM's decades-long quantum leadership, initiative will accelerate American quantum innovation and enable advanced quantum wafer production for a broad range of companies. WASHINGTON and ARMONK, N.Y., May 21, 2026/ PRNewswire/-- Today, IBM and the U.S. Department of Commerce announced a Letter of Intent to build an American quantum chip foundry,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 98bd2ec1e20b4d67
+symbol: IBM
+published_utc: 2026-05-26T04:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-abertis-are-driving-future-mobility-global-technology-modernization-agreement
+headline: IBM and Abertis are Driving the Future of Mobility with a Global Technology Modernization Agreement
+<<<TEXT>>>
+--IBM has announced a new five-year global agreement with Abertis, a leading infrastructure and mobility management group, to modernize Abertis's technological infrastructure. Abertis is one of the world's leading motorway operators, with a presence in Europe, the Americas and Asia. Under the agreement, IBM will support Abertis in modernizing its platform on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a78229636492f2fc
+symbol: IBM
+published_utc: 2026-05-28T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-red-hat-commit-5-billion-redefine-future-open-source-ai-era-2026-05-28
+headline: IBM and Red Hat Commit $5 Billion to Redefine the Future of Open Source in the AI Era
+<<<TEXT>>>
+--IBM and Red Hat today announced Project Lightwell, a $5 billion commitment backed by new frontier AI capabilities and a global force of more than 20,000 engineers to help enterprises secure open source software. Together, these investments establish a new model for enterprise use of open source software, from upstream development through production...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cd18e430f34a031d
+symbol: IBM
+published_utc: 2026-06-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-commits-more-10-billion-quantum-computing-funding-its-roadmap-todays-leading
+headline: IBM Commits More Than $10 Billion to Quantum Computing, Funding Its Roadmap from Today's Leading Systems to the World's First Fault-Tolerant Quantum Computers
+<<<TEXT>>>
+Five-year investment spans research and development, manufacturing, M&A and ecosystem expansion as IBM extends its global lead in quantum computing and advances U.S. leadership. Together, these areas are designed to accelerate IBM's quantum roadmap beyond delivering the world's first large-scale, fault-tolerant quantum computer in 2029, and advance...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c26a7a034c4714b9
+symbol: IBM
+published_utc: 2026-06-03T09:30:00Z
+url: https://www.nasdaq.com/press-release/ibm-launches-global-ai-builders-challenge-ibm-bob-university-students-expanding
+headline: IBM Launches Global AI Builders Challenge With IBM Bob for University Students, Expanding Availability of IBM Bob to 20,000 Post-Secondary Institutions Worldwide
+<<<TEXT>>>
+--IBM today announced the AI Builders Challenge, a global challenge with IBM Bob– IBM's new AI-powered development partner– that will help university students build practical AI and software development skills for the future of work. Announced during IBM's Future of AI in Higher Education Summit in New York City, the Challenge gives students a hands-on way to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8cab3306c3d40cb3
+symbol: IBM
+published_utc: 2026-06-04T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-google-cloud-announce-strategic-partnership-scale-ai-human-expertise-and-ai
+headline: IBM and Google Cloud Announce Strategic Partnership to Scale AI with Human Expertise and AI‑Powered Delivery
+<<<TEXT>>>
+Expands IBM Consulting Advantage, an AI‑ powered delivery platform, with industry‑ specific agents for Gemini Enterprise New global Google Cloud practice brings thousands of IBM consultants to help clients scale AI, and modernize core systems The practice represents a multi-billion-dollar opportunity in Google Cloud Services. The new practice combines...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ee403cb24819c690
+symbol: IBM
+published_utc: 2026-06-08T00:01:00Z
+url: https://www.nasdaq.com/press-release/new-ibm-study-finds-cios-and-ctos-face-growing-ai-control-gap-enterprise-deployment
+headline: New IBM Study Finds CIOs and CTOs Face Growing AI Control Gap as Enterprise Deployment Scales
+<<<TEXT>>>
+--A new IBM Institute for Business Value study reveals that as AI moves from experimentation to enterprise-wide deployment, two-thirds of surveyed CIOs and CTOs report being held accountable for AI systems they do not fully control, while governance struggles to keep pace at scale. The global study* of 2,000 C-level technology executives finds that the lack of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f51059c20cec92c9
+symbol: IBM
+published_utc: 2026-06-11T09:00:00Z
+url: https://www.nasdaq.com/press-release/servicenow-and-ibm-expand-collaboration-unlock-enterprise-data-ai-scale-2026-06-11
+headline: ServiceNow and IBM Expand Collaboration to Unlock Enterprise Data for AI at Scale
+<<<TEXT>>>
+ARMONK, N.Y.& SANTA CLARA, Calif.---- IBM and ServiceNow, the AI control tower for business reinvention, today announced an expanded collaboration to address two of the biggest barriers blocking enterprise AI at scale: the AI-ready data problem and the legacy application layer. IBM and ServiceNow will deliver joint solutions that modernize aging systems, extend...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 91ff2553265edfc9
+symbol: IBM
+published_utc: 2026-06-16T09:00:00Z
+url: https://www.nasdaq.com/press-release/apptio-unveils-conversational-insights-and-new-suite-ai-powered-capabilities
+headline: Apptio Unveils Conversational Insights and New Suite of AI-Powered Capabilities to Translate Complex Technology Spend into Measurable Business Outcomes
+<<<TEXT>>>
+--Today, Apptio, an IBM Company, announced significant updates to its solution suite— including the launch of its Conversational Insights, currently in preview, and new capabilities for hybrid IT cost management and cloud optimization— designed to turn technology investment into measurable business outcomes and establish best practices for the financial...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8463982f33efe91c
+symbol: IBM
+published_utc: 2026-06-17T00:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-study-limited-control-and-rising-dependencies-leave-enterprises-exposed-age-ai
+headline: IBM Study: Limited Control and Rising Dependencies Leave Enterprises Exposed in the Age of AI
+<<<TEXT>>>
+--A new global study by the IBM Institute for Business Value finds that as enterprises embed AI deeper into core business operations, most surveyed organizations remain locked into AI systems they cannot easily change, reinforcing the growing importance of AI sovereignty to maintain business continuity and performance. Based on insights from 1,000 senior...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4e73a817a7abe7c6
+symbol: IBM
+published_utc: 2026-06-19T06:00:00Z
+url: https://www.nasdaq.com/press-release/protecting-and-innovating-critical-infrastructure-through-new-security-landscapes
+headline: Protecting and Innovating Critical Infrastructure Through New Security Landscapes
+<<<TEXT>>>
+IBM is continuing to innovate mainframes to address and combat the technological challenges of the future. As a leading provider in hybrid cloud, AI and consulting expertise, IBM has developed decades of IBM Z Software to help clients protect themselves for what's ahead. In cybersecurity, IBM developed IBM Concert for Z last year for enterprises to discover...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 21632c9ae5a02914
+symbol: IBM
+published_utc: 2026-06-22T00:01:00Z
+url: https://www.nasdaq.com/press-release/wimbledon-and-ibm-introduce-new-ai-powered-fan-experiences-and-modernized-digital
+headline: Wimbledon and IBM Introduce New AI-Powered Fan Experiences and Modernized Digital Platforms for The Championships 2026
+<<<TEXT>>>
+WIMBLEDON, June 22, 2026/ PRNewswire/-- The All England Lawn Tennis Club and IBM today announced new and enhanced digital fan features coming to The Championships, Wimbledon in 2026. The watsonx AI-powered capabilities are available on the Wimbledon app and wimbledon.com, which have been fully modernised and redesigned to provide a seamless and personalised...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6c1bb22b27a29f4f
+symbol: IBM
+published_utc: 2026-06-22T16:28:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-openai-bring-frontier-ai-cyber-defense-helping-enterprises-keep-pace-machine
+headline: IBM and OpenAI Bring Frontier AI to Cyber Defense--Helping Enterprises Keep Pace with Machine-Speed Threats
+<<<TEXT>>>
+Building on the recently announced Project Lightwell, as part of this effort IBM has launched a new application security service that uses the cyber capabilities of OpenAI' s models to help organizations identify and validate software vulnerabilities with greater speed, and precision. Through this program, IBM is working with OpenAI to apply advanced AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8e15df6fb030f7f2
+symbol: IBM
+published_utc: 2026-06-25T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-debuts-worlds-first-sub-1-nanometer-chip-technology-2026-06-25
+headline: IBM Debuts World's First Sub-1 Nanometer Chip Technology
+<<<TEXT>>>
+--IBM today unveiled a major semiconductor breakthrough with the introduction of the world's first sub-1 nanometer chip technology, featuring a revolutionary transistor architecture at the 0.7 nm, or 7 angstrom node. IBM's new sub-1 nm chip packs nearly 100 billion transistors onto a chip the size of a fingernail, nearly twice the density of IBM's 2 nm chip,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 50f84ac94db536f9
+symbol: IBM
+published_utc: 2026-06-26T09:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-red-hat-and-deloitte-announce-lightwell-collaboration-help-strengthen-open-source
+headline: IBM, Red Hat, and Deloitte Announce Lightwell Collaboration to Help Strengthen Open Source Software Supply Chain Trust
+<<<TEXT>>>
+Deloitte collaborates with IBM and Red Hat to scale automated vulnerability patching across regulated software supply chains. NEW YORK, ARMONK, N.Y.& RALEIGH, N.C.---- Deloitte, IBM, and Red Hat today announced a collaboration to help protect the software supply chain against increasingly automated cyber threats. Deloitte joins the initiative as an integration...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b3990df144347270
+symbol: IBM
+published_utc: 2026-07-06T07:00:00Z
+url: https://www.nasdaq.com/press-release/oak-ridge-national-lab-cleveland-clinic-and-ibm-achieve-first-known-computations
+headline: Oak Ridge National Lab, Cleveland Clinic, and IBM Achieve First-Known Computations of Fusion Materials on a Quantum Computer
+<<<TEXT>>>
+--A team of scientists from Oak Ridge National Laboratory, Cleveland Clinic, and IBM, have calculated nine molecular configurations of a promising material to produce fuel for fusion energy– the first-known instance of such computations on quantum computers.  "In order to demonstrate the capabilities catalyzed by the Genesis Mission, we have built a team of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c6ac380a84f6c303
+symbol: IBM
+published_utc: 2026-07-07T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-launches-compact-z17-and-linuxone-systems-address-data-center-space-and-cost
+headline: IBM Launches Compact z17 and LinuxONE Systems to Address Data Center Space and Cost Constraints
+<<<TEXT>>>
+--IBM today announces new IBM z17 and IBM LinuxONE 5 configurations, marking the first time IBM is offering rack mount alongside single frame systems across its full Z and LinuxONE portfolio. Single processor capacity of IBM z17 ME2 provides full speed IBM z/OS configurations including 10% greater throughput per core than IBM z16 A02 with some variation based...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a278aa53b314868a
+symbol: IBM
+published_utc: 2026-07-08T09:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-red-hat-expand-lightwell-new-offerings-build-trust-infrastructure-ai-era-open
+headline: IBM and Red Hat Expand Lightwell with New Offerings to Build the Trust Infrastructure for AI-Era Open Source
+<<<TEXT>>>
+RALEIGH, N.C.& ARMONK, N.Y.---- IBM and Red Hat today announced the commercial launch of Lightwell, delivering automated vulnerability remediation at scale through two offerings: Lightwell Network and Lightwell Clearinghouse Premier. Today's launch builds on the $5 billion commitment to open source security that IBM and Red Hat announced in May 2026, backed by a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ab35d56bc67ceb9f
+symbol: IBM
+published_utc: 2026-07-08T11:12:00Z
+url: https://www.nasdaq.com/press-release/ibm-announce-second-quarter-2026-financial-results-2026-07-08
+headline: IBM to Announce Second-Quarter 2026 Financial Results
+<<<TEXT>>>
+--IBM will hold its quarterly conference call to discuss its second-quarter 2026 financial results on Wednesday, July 22, 2026 at 5:00 p.m. ET. The live webcast of the earnings call can be accessed at www.ibm.com/investor. Please also visit the investor website for the earnings press release prior to the webcast.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: def0577fddfa5c55
+symbol: IBM
+published_utc: 2026-07-09T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-advances-enterprise-ai-software-development-multi-agent-capabilities-and
+headline: IBM Advances Enterprise AI Software Development with Multi-Agent Capabilities and Specialized Modernization Workflows
+<<<TEXT>>>
+--Today, IBM announced major updates to IBM Bob, its agentic software development platform, including new multi-agent capabilities, built-in AI cost and use analytics, and pre-built, specialized workflows for modernizing enterprise systems.  "Using IBM Bob," explained Kevin Sligar, Chief Technical Architect at Jack Henry.  "Bob is the platform enterprise...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7e4f1bf711a2f349
+symbol: IBM
+published_utc: 2026-07-14T07:00:00Z
+url: https://www.nasdaq.com/press-release/arvind-krishnas-letter-ibm-investors-2026-07-14
+headline: Arvind Krishna's Letter to IBM Investors
+<<<TEXT>>>
+Revenue of $17.2 billion, up 1 percent Software revenue up 5 percent Consulting revenue flat, up 1 percent at constant currency Infrastructure revenue down 7 percent. Year to date, net cash from operating activities of $7.8 billion; free cash flow of $4.8 billion. Diluted Earnings Per Share: GAAP: $2.27, down 2 percent; Operating: $2.93, up 5 percent.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 19650b05273574fb
+symbol: IBM
+published_utc: 2026-07-15T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-launches-new-power-systems-and-software-built-enterprises-address-risk
+headline: IBM Launches New Power Systems and Software Built for Enterprises to Address Risk, Productivity, and Flexibility
+<<<TEXT>>>
+--IBM today announced IBM Power Autonomous Operations, an AI agent that can help continuously monitor Power systems and autonomously resolve issues to keep operations running smoothly. It complements the recently launched IBM Bob™ Premium Package for i, which brings agentic-driven software designed to accelerate application development on IBM i.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e49790421a623dfb
+symbol: IBM
+published_utc: 2026-07-22T16:08:00Z
+url: https://www.nasdaq.com/press-release/ibm-releases-second-quarter-results-2026-07-22
+headline: IBM RELEASES SECOND-QUARTER RESULTS
+<<<TEXT>>>
+--IBM today announced second-quarter 2026 earnings results.  "We are confident in IBM's strategy and portfolio, and in our ability to capture growth opportunities ahead. We fundamentally believe that we are in the early innings of a structural shift for business, and that our portfolio- across software, infrastructure, and consulting- is well-positioned to help...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f358e6c0381ea4cc
+symbol: IBM
+published_utc: 2026-07-23T07:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-acquire-hrl-laboratories-power-future-quantum-2026-07-23
+headline: IBM to Acquire HRL Laboratories to Power the Future of Quantum
+<<<TEXT>>>
+HRL's expertise in silicon-spin qubits and quantum sensing will strengthen and extend IBM's world-leading quantum computing mission. Both Boeing and GM will continue to partner with IBM on quantum applications and advanced technology development following the transaction.  "The HRL team will help IBM push even farther forward toward the frontiers of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4b3420de7b6f3f68
+symbol: IBM
+published_utc: 2026-07-29T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-study-one-four-malicious-breaches-are-ai-enabled-costing-companies-6-million
+headline: IBM Study: One in Four Malicious Breaches are AI-Enabled, Costing Companies $6 Million on Average
+<<<TEXT>>>
+--One in four malicious breaches were AI-enabled– a 56% increase over last year– and these breaches cost an average of $6 million, roughly $1 million more than the global breach average of $4.99 million, according to IBM's 2026 Cost of a Data Breach Report.. Companies that reported using AI and automation in security operations cut breach costs by an average of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c5f1d3c72640e7f7
+symbol: IBM
+published_utc: 2026-07-30T06:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-university-chicago-demonstrate-quantum-advantage-establishing-trusted-quantum
+headline: IBM and The University of Chicago Demonstrate Quantum Advantage, Establishing Trusted Quantum Computation on Logical Circuits
+<<<TEXT>>>
+Scientists used a new error correction method to encode 70 logical qubits and crack a classically intractable problem.. YORKTOWN HEIGHTS, N.Y. and CHICAGO, July 30, 2026/ PRNewswire/-- IBM and researchers from the University of Chicago today announced a demonstration in quantum computing that achieves the fundamental criteria for quantum advantage:...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 531e7baab98b443e
+symbol: IBM
+published_utc: 2026-07-30T06:01:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-qedma-demonstrate-quantum-advantage-modeling-physics-beyond-classical
+headline: IBM and Qedma Demonstrate Quantum Advantage, Modeling Physics Beyond Classical Capabilities Through Trusted Quantum Computation
+<<<TEXT>>>
+Qedma's quantum error reduction software, running on IBM quantum computers and tested against RIKEN and BlueQubit's supercomputing resources, has accurately resolved the dynamics of quantum materials unseen in classical simulation.. YORKTOWN HEIGHTS, N.Y. and TEL AVIV, Israel, July 30, 2026/ PRNewswire/-- Qedma Quantum Computing, a pioneer in quantum error...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3661abd139935521
+symbol: IBM
+published_utc: 2026-07-30T06:02:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-algorithmiq-demonstrate-quantum-advantage-establishing-framework-trusted
+headline: IBM and Algorithmiq Demonstrate Quantum Advantage, Establishing a Framework for Trusted Quantum Computation Beyond Classical Verification
+<<<TEXT>>>
+A quantum simulation of heterogeneous matter, designed by Algorithmiq and executed on IBM quantum computers, continues to compete with the world's leading classical simulation methods eight months after its debut on the Quantum Advantage Tracker.. YORKTOWN HEIGHTS, N.Y. and MILAN, July 30, 2026/ PRNewswire/-- Today, Algorithmiq and IBM announced a major...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e9ab57c3656a0579
+symbol: IBM
+published_utc: 2026-08-04T09:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-red-hat-offer-lightwell-no-charge-universities-ngos-and-think-tanks-2026-08
+headline: IBM and Red Hat Offer Lightwell at No Charge to Universities, NGOs and Think Tanks
+<<<TEXT>>>
+IBM and Red Hat will offer Lightwell at no charge to over 185 leading research universities and 100 major nongovernmental organizations and think tanks in the United States. Lightwell combines AI-driven automation with human engineering expertise to identify, validate and remediate open source software vulnerabilities. Participating institutions...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 66db6fe9fe88f68b
+symbol: IBM
+published_utc: 2026-08-11T08:00:00Z
+url: https://www.nasdaq.com/press-release/ibm-and-together-ai-sign-multi-year-agreement-scale-open-source-ai-inference-nvidia
+headline: IBM and Together AI Sign Multi-Year Agreement to Scale Open-Source AI Inference with NVIDIA AI Infrastructure on IBM Cloud
+<<<TEXT>>>
+ARMONK, N.Y. and SAN FRANCISCO, Aug. 11, 2026/ PRNewswire/-- IBM announced a collaboration with Together AI to deliver IBM and NVIDIA AI infrastructure. Under a multi-year $240 M agreement between IBM and Together AI, IBM is positioned to deploy a large cluster of NVIDIA HGX B300 systems on IBM Cloud with expected availability in Q1 2027. The company recently raised an...
+<<<END>>>

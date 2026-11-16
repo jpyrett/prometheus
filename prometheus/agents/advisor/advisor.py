@@ -286,16 +286,15 @@ class Advisor:
             self._ledger = Ledger(self.config.ledger.path)
         return self._ledger
 
-    def generate_recommendations(self, order: WorkOrder, portfolio, case: str | None = None, today: date | None = None, top_k: int | None = None, only_subject: bool = False) -> WorkOrder:
-        """Advisor v1 (design choices entry 51; the walk-through is design/week5_advisor_implementation.md): turn a work order whose data is ready into ranked, audited recommendations, and return
-        the SAME order with `status == "recommended"`, `recommendations` (a reduction first, then additions, then new ideas by rank), `candidates` (what was looked at and not returned, with the
-        reason) and `advisor_runs` (the plan call and the thesis call).
+    def generate_recommendations(self, order: WorkOrder, case: str | None = None, today: date | None = None, top_k: int | None = None, only_subject: bool = False) -> WorkOrder:
+        """Advisor v1 (design choices entry 51; the walk-through is design/week5_advisor_implementation.md): turn a work order whose data is ready into ranked, audited recommendations TO BUY, and return
+        the SAME order with `status == "recommended"`, `recommendations` (the new ideas by rank), `candidates` (what was looked at and not returned, with the reason) and `advisor_runs` (the plan call and the thesis call).
 
-        `portfolio` is the user's `Portfolio`, read ONLY for the symbols it holds, the shares and the cost basis of each (the holdings pass: a holding in the red, a bearish event, an `add`), never for its cash:
-        the Advisor recommends no amount and does not use the user's money (design choices entry 80). `case` is "funds" (symbols), "theme" (a term: companies
-        exposed to it); left out, the order's own `case`, else inferred. `today` is the date everything is counted from. `only_subject=True` looks only at the order's own symbols (and the holdings): a comparison of named companies. `advise` (version 0) is untouched and still works on the same order."""
+        THE ADVISOR IS GIVEN NO PORTFOLIO (design choices entry 105; Jacob, 2026-11-15: *"The Advisor never recommends reducing a holding or any other portfolio related matters"*): it does not know what the user holds,
+        recommends no sale, no addition to a position and no amount (entry 80), and a company the user already holds is an ordinary candidate. `case` is "funds" (symbols), "theme" (a term: companies
+        exposed to it); left out, the order's own `case`, else inferred. `today` is the date everything is counted from. `only_subject=True` looks only at the order's own symbols: a comparison of named companies. `advise` (version 0) is untouched and still works on the same order."""
         from prometheus.agents.advisor.recommend import generate  # imported here: recommend.py imports this module
-        return generate(self, order, portfolio, case, today, top_k, only_subject)
+        return generate(self, order, case, today, top_k, only_subject)
 
     @staticmethod
     def _evidence(order: WorkOrder) -> dict[str, dict[str, dict]]:

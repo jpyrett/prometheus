@@ -7,21 +7,20 @@ validate, the rejects are in `candidates` with their reasons, `advisor_runs` has
 import json
 
 import pytest
-from advisor_helpers import (EMPTY_PORTFOLIO, PG_EVENT, PG_QUOTE, PG_SIGNAL, TODAY, FakeClerk, MemoryLedger, Scripted, advisor_with, company, full_metrics, plan_reply, ready_order,
+from advisor_helpers import (PG_EVENT, PG_QUOTE, PG_SIGNAL, TODAY, FakeClerk, MemoryLedger, Scripted, advisor_with, company, full_metrics, plan_reply, ready_order,
                              thesis_reply)
 
 from prometheus.agents.account_manager.account_manager import top_recommendation
 from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.advisor.record import MODEL_FIELDS, Candidate, Recommendation
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import Portfolio, Position
 
 GOOD = (plan_reply(company(signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply())
 
 
-def run(*replies, order=None, portfolio=EMPTY_PORTFOLIO, case="funds", **kw):
+def run(*replies, order=None, case="funds", **kw):
     advisor, model = advisor_with(*replies, **kw)
-    out = advisor.generate_recommendations(order or ready_order(), portfolio, case, TODAY)
+    out = advisor.generate_recommendations(order or ready_order(), case, TODAY)
     return out, advisor, model
 
 
@@ -29,7 +28,7 @@ def test_the_whole_step_on_the_fixture_universe(tmp_path):
     out, advisor, model = run(*GOOD)
     assert out.status == "recommended" and out.errors == [] and out.schema_version == 2
     assert [r["symbol"] for r in out.recommendations] == ["PG"]
-    record = Recommendation.model_validate(out.recommendations[0])                          # the record validates against schema 2
+    record = Recommendation.model_validate(out.recommendations[0])                          # the record validates against the record schema (version 3: no holding, entry 105)
     assert record.action.action == "open" and record.identity.case == "funds" and record.identity.sleeve == "preserve" and record.identity.regime == "trend" and record.identity.as_of_utc == "2026-10-23T00:00:00Z"
     assert record.ranking.rank == 1 and record.ranking.concentrated is True and record.stance == "bullish" and record.supported is True and 50 < record.score <= 100
     assert [f.family for f in record.families if f.passed] == ["event", "capital_return", "conviction"] and record.trade.family == "conviction" and record.trade.stop_price is not None and record.trade.order_style == "limit"
@@ -42,7 +41,7 @@ def test_the_whole_step_on_the_fixture_universe(tmp_path):
 
 def test_the_record_carries_everything_the_critic_needs():
     record = run(*GOOD)[0].recommendations[0]
-    assert set(record) >= {"identity", "action", "families", "quality", "evidence", "features", "agreement", "ranking", "trade", "risk", "portfolio_fit", "gates", "thesis", "audit", "signals", "advisor"}
+    assert set(record) >= {"identity", "action", "families", "quality", "evidence", "features", "agreement", "ranking", "trade", "risk", "concentration", "gates", "thesis", "audit", "signals", "advisor"}
     assert record["evidence"]["events"][0]["class"] == "guidance_raise" and record["evidence"]["events"][0]["age_bars"] == 1 and record["evidence"]["signals"][0]["quote"].startswith("Procter")
     assert record["features"]["roe"] == {"value": 20.0, "unit": "x", "as_of": "2026-10-23", "source": "test"} and "recent_bars" in record["features"]
     assert record["trade"]["stop_price"] is not None and record["trade"]["invalidation"][0]["kind"] == "price_below" and record["trade"]["time_stop_date"] == "2026-12-18"
@@ -85,7 +84,7 @@ def test_a_model_score_of_100_does_not_make_a_symbol_pass_a_gate_or_a_family():
 def test_an_order_without_its_data_is_refused_in_v0s_words_and_nothing_is_called():
     order = wo.new_work_order("x", subject=["PG"])
     advisor, model = advisor_with()
-    out = advisor.generate_recommendations(order, EMPTY_PORTFOLIO, "funds", TODAY)
+    out = advisor.generate_recommendations(order, "funds", TODAY)
     assert out is order and out.errors == ["the Advisor needs an order whose data is ready (status new)"] and out.status == "new" and model.seen == [] and out.advisor_runs == []
 
 
@@ -104,7 +103,7 @@ def test_the_case_comes_from_the_argument_then_the_order_then_the_subject():
 
 def test_nothing_to_look_at_is_a_result_not_a_failure():
     order = ready_order(subject="a term with no companies", sources=[(1, "MU", "Memory chip stocks have declined roughly one-third from their July peak.", "2026-10-22T00:00:00Z")])
-    out, _, model = run(order=order, case="theme", portfolio=Portfolio(user="t"), metrics={})
+    out, _, model = run(order=order, case="theme", metrics={})
     assert out.status == "recommended" and out.recommendations == [] and model.seen == []
 
 
@@ -164,7 +163,7 @@ def test_a_thesis_that_fails_twice_leaves_null_and_the_reason_and_the_record_is_
     assert out.advisor_runs[1]["stage"] == "thesis" and out.advisor_runs[1]["calls"] == 2 and out.status == "recommended"
 
 
-# ---------------------------------------------------------------- candidates, gates, ledger, cooldown, holdings
+# ---------------------------------------------------------------- candidates, gates, ledger, cooldown
 
 def test_the_rejects_are_candidates_with_the_gate_or_the_rank_that_stopped_them():
     sources = [(1, "PG", "Procter & Gamble (PG) lifted its full-year sales growth outlook to reflect an acquisition, while the company reported Q1 earnings.", "2026-10-22T13:00:43Z"),
@@ -179,7 +178,7 @@ def test_the_rejects_are_candidates_with_the_gate_or_the_rank_that_stopped_them(
 def test_the_stale_bars_of_today_fail_freshness_and_say_how_stale(monkeypatch):
     advisor, _ = advisor_with(*GOOD)
     from datetime import date
-    out = advisor.generate_recommendations(ready_order(), EMPTY_PORTFOLIO, "funds", date(2026, 11, 5))     # the newest stored bar is 2026-10-23: nine sessions earlier
+    out = advisor.generate_recommendations(ready_order(), "funds", date(2026, 11, 5))     # the newest stored bar is 2026-10-23: nine sessions earlier
     assert out.recommendations == [] and out.candidates[0]["gate"] == "freshness" and "9 sessions before 2026-11-05" in out.candidates[0]["reason"]
 
 
@@ -195,21 +194,17 @@ def test_the_ledger_gets_one_line_per_record_and_a_cooldown_keeps_the_same_famil
     assert [r["symbol"] for r in free.recommendations] == ["PG"]
 
 
-def test_a_holding_with_a_red_flag_is_a_reduce_returned_above_every_open():
-    portfolio = Portfolio(user="t", cash_avail=500.0, positions=[Position(symbol="MCD", name="McDonald's Corp", shares=10, cost_basis=40.0)])
+def test_a_company_with_a_red_flag_is_a_candidate_with_the_gate_never_a_reduce_the_advisor_knows_no_holding():
+    """AMENDED (entry 105). This test gave the Advisor a portfolio holding MCD and a red flag on MCD, and the holdings pass wrote a `reduce` (10 shares held, the unrealised gain, an entry zone and no stop) returned above every
+    open; a holding with nothing to say was a `hold` candidate with `held: true`. The Advisor is given no portfolio: MCD is an ordinary candidate, a failed gate stops it with the gate and the reason, and the only action a
+    record has is `open`."""
     metrics = {"PG": full_metrics(), "MCD": full_metrics(cfo_negative_with_profit=True, last_close=300.0)}
-    out, _, _ = run(plan_reply(company(signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply(), thesis_reply(), order=ready_order(subject=("PG",)), portfolio=portfolio, metrics=metrics)
-    assert [(r["symbol"], r["action"]["action"]) for r in out.recommendations] == [("MCD", "reduce"), ("PG", "open")]
-    reduce = out.recommendations[0]
-    assert reduce["action"]["held_shares"] == 10 and reduce["action"]["unrealized_pct"] == pytest.approx(300 / 40 - 1, abs=1e-4) and "red_flag gate failed" in reduce["action"]["reason"]
-    assert reduce["trade"]["entry_zone"] and reduce["trade"]["stop_price"] is None and reduce["trade"]["family"] is None and reduce["ranking"]["rank"] == 1 and out.recommendations[1]["ranking"]["rank"] == 2   # a reduction has an entry zone and no amount
-
-
-def test_a_holding_with_nothing_to_say_is_a_hold_candidate_not_a_recommendation():
-    portfolio = Portfolio(user="t", cash_avail=500.0, positions=[Position(symbol="MCD", name="McDonald's Corp", shares=10, cost_basis=40.0)])
-    out, _, _ = run(*GOOD, order=ready_order(subject=("PG",)), portfolio=portfolio, metrics={"PG": full_metrics(), "MCD": full_metrics()})
-    held = next(c for c in out.candidates if c["symbol"] == "MCD")
-    assert held["held"] is True and held["origin"] == "held" and held["reason"].startswith("hold:")
+    out, _, _ = run(plan_reply(company(signals=[PG_SIGNAL], events=[PG_EVENT])), thesis_reply(), order=ready_order(subject=("PG", "MCD")), metrics=metrics)
+    assert [(r["symbol"], r["action"]["action"]) for r in out.recommendations] == [("PG", "open")]
+    mcd = next(c for c in out.candidates if c["symbol"] == "MCD")
+    assert mcd["gate"] == "red_flag" and mcd["origin"] == "subject" and "held" not in mcd and mcd["reason"].startswith("gate red_flag failed")
+    quiet, _, _ = run(*GOOD, order=ready_order(subject=("PG", "MCD")), metrics={"PG": full_metrics(), "MCD": full_metrics()})
+    assert {r["action"]["action"] for r in quiet.recommendations} == {"open"} and all("held" not in c for c in quiet.candidates) and all(c["origin"] != "held" for c in quiet.candidates)
 
 
 # ---------------------------------------------------------------- v0 and the Account Manager
@@ -240,7 +235,7 @@ def test_the_theme_case_discovers_the_basket_and_recommends_the_laggard():
     order = ready_order(subject="AI memory shortage", sources=[(1, "PG", "Procter & Gamble (PG) lifted its full-year sales growth outlook to reflect an acquisition, while the company reported Q1 earnings.", "2026-10-22T13:00:43Z"),
                                                                (2, "MU", micron, "2026-10-22T10:00:00Z")])
     mu = company("MU", "Micron", signals=[{"source": 2, "direction": "bullish", "quote": micron}])
-    out, advisor, _ = run(plan_reply(company(signals=[PG_SIGNAL]), mu), thesis_reply(), order=order, case="theme", portfolio=Portfolio(user="t", cash_avail=1000.0), metrics=metrics, discover=rows)
+    out, advisor, _ = run(plan_reply(company(signals=[PG_SIGNAL]), mu), thesis_reply(), order=order, case="theme", metrics=metrics, discover=rows)
     assert advisor.clerk.asked[0] == ("discover", "AI memory shortage")
     assert [r["symbol"] for r in out.recommendations] == ["PG"] and out.recommendations[0]["identity"]["sleeve"] == "theme" and out.recommendations[0]["trade"]["family"] in ("theme", "capital_return")
     leader = next(c for c in out.candidates if c["symbol"] == "MU")
@@ -260,7 +255,7 @@ def industry_run(top_k=None, **kw):
                "DDD": full_metrics(cfo_negative_with_profit=True)}          # DDD has the best numbers and fails the red_flag gate
     order = ready_order(subject=("AAA", "BBB", "CCC", "DDD"), sources=texts, case="industry")
     advisor, model = advisor_with(plan_reply(), theses_reply("AAA", "BBB", "CCC"), metrics=metrics)
-    out = advisor.generate_recommendations(order, EMPTY_PORTFOLIO, "industry", TODAY, top_k)
+    out = advisor.generate_recommendations(order, "industry", TODAY, top_k)
     return out, advisor, model
 
 
@@ -291,7 +286,7 @@ def test_top_k_replaces_the_number_of_new_ideas_and_the_rest_are_ranked_candidat
 @pytest.mark.parametrize("top_k", [0, 21, True, "5"])
 def test_a_bad_top_k_is_refused_and_nothing_is_called(top_k):
     advisor, model = advisor_with(metrics={})
-    out = advisor.generate_recommendations(ready_order(), EMPTY_PORTFOLIO, "industry", TODAY, top_k)
+    out = advisor.generate_recommendations(ready_order(), "industry", TODAY, top_k)
     assert out.status == "data_ready" and out.errors == ["top_k must be a whole number from 1 to 20"] and model.seen == []
 
 

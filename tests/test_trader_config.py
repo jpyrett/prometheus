@@ -1,6 +1,7 @@
 """The Trader's settings file (configs/trader_v1.json): read once, checked completely (Trader spec section 15), and the PAPER_TRADING switch (rule T4)."""
 import copy
 import json
+from decimal import Decimal
 
 import pytest
 
@@ -75,6 +76,8 @@ def test_an_unknown_key_is_an_error_and_not_ignored(tmp_path, where):
     (("limits", "max_summary_words"), 0, "max_summary_words"),
     (("orders", "max_chase_pct"), -0.01, "max_chase_pct"),
     (("orders", "max_chase_pct"), 1, "max_chase_pct"),
+    (("orders", "max_chase_pct"), True, "max_chase_pct"),                       # entry 112: a ratio is a number written in the file, never a bool or a string
+    (("orders", "limit_band_pct"), "0.03", "limit_band_pct"),
     (("orders", "limit_band_pct"), -0.01, "limit_band_pct"),
     (("orders", "limit_band_pct"), 1.5, "limit_band_pct"),
     (("orders", "allow_market"), "yes", "allow_market"),
@@ -103,6 +106,15 @@ def test_a_file_that_is_missing_not_json_or_not_an_object_is_refused_with_its_na
         tc.load_config(write(tmp_path, "{not json"))
     with pytest.raises(ValueError, match="must be a JSON object"):
         tc.load_config(write(tmp_path, "[1, 2]"))
+
+
+def test_the_ratios_that_multiply_a_price_are_decimals_of_the_digits_the_file_writes():
+    """Entry 112: `orders.max_chase_pct`, `orders.limit_band_pct`, `costs.slippage_bps` and `costs.commission_per_order` are `Decimal`, read from the digits of the shipped file (never a binary float)."""
+    written = json.loads(FILE.read_text(encoding="utf-8"), parse_float=Decimal)
+    config = tc.load_config()
+    for section, key in (("orders", "max_chase_pct"), ("orders", "limit_band_pct"), ("costs", "slippage_bps"), ("costs", "commission_per_order")):
+        value = getattr(getattr(config, section), key)
+        assert isinstance(value, Decimal) and value == Decimal(written[section][key]), (section, key)
 
 
 # ---------------------------------------------------------------- PAPER_TRADING (rule T4)

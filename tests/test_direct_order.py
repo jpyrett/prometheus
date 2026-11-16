@@ -11,6 +11,10 @@ What the tests pin: the form (a trade is read only when the user's words give it
 Trader's rule T1 (a decision is `direct` only while the order holds the user's own record, and it runs out), the decision (priced by the Data Clerk, the user's own order is the approval, a company the user named is confirmed in
 Ask mode and not in Auto mode, a purchase the cash does not pay for is refused with the shares it does pay for), that no profile limit ever applies, the handshake (placed as typed or not at all), and the graph and the session end
 to end.
+
+The last section is design choices entries 101 and 102 (a brand finds its listed owner; a list goes on without the stocks that were not found): the Finnhub directory is the recorded one, the Data Clerk's model is a REPLAY of its
+real replies about the listed owner of "Google" and "Chick-fil-a" and the Account Manager's model a replay of its real reading of Jacob's own request and its real wording of the question about Chick-fil-a
+(`tests/fixtures/session_real/direct_order_names.json`), and the sessions are the real code over the real Postgres on throwaway accounts.
 """
 import ast
 import copy
@@ -24,32 +28,39 @@ from types import SimpleNamespace
 
 import pytest
 from handshake_helpers import FRIDAY, MOMENT, Recorder, close_of, friday_close, jacob_as_bob, trader  # noqa: F401  (friday_close is a fixture)
-from test_account_manager_clarify import RECORDED
+from test_account_manager_clarify import RECORDED, Broken
 from test_account_manager_clarify import Replay as AskReplay
 from test_account_manager_clarify import channel_of
 
-from prometheus.agents.account_manager import direct
+from prometheus.agents.account_manager import direct, missing
 from prometheus.agents.account_manager import intent as it
 from prometheus.agents.account_manager.account_manager import AccountManager
+from prometheus.agents.account_manager.config import load_config as load_account_manager_config
+from prometheus.agents.account_manager.decisions import terminal_approver
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.agents.trader.report import trade_section
 from prometheus.application import session
+from prometheus.common import shares as sh
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import Portfolio, Position
+from prometheus.common.money import cents, dumps
+from prometheus.common.money import money as money_door
+from prometheus.common.money import price as price_door
+from prometheus.common.portfolio import Portfolio, Position, trade_amount
 from prometheus.common.user_profile import UserProfile
 from prometheus.langgraph import desk
 from prometheus.persistence.accounts import SECRETS, open_account_store
 from prometheus.prompts import account_manager_request as prompt
-from prometheus.tools.symbols import is_plain_ticker
+from prometheus.tools.symbols import SymbolLookupError, is_plain_ticker
 
 pytestmark = pytest.mark.usefixtures("friday_close")
 
 FIXTURES = Path(__file__).parent / "fixtures"
 FORMS = json.loads((FIXTURES / "session_real" / "direct_order_forms.json").read_text(encoding="utf-8"))["requests"]
 DIRECTORY = json.loads((FIXTURES / "finnhub_company_search.json").read_text(encoding="utf-8"))["queries"]
+NAMES = json.loads((FIXTURES / "session_real" / "direct_order_names.json").read_text(encoding="utf-8"))      # the real replies of the two models for Jacob's own request (entries 101 and 102)
 BUY_50 = "Buy 50 shares of MSFT"
 BUY_COMPANY = "buy 50 shares of Microsoft"
-BILL = Portfolio(user="Bill Gates", cash_avail=20000.0)
+BILL = Portfolio(user="Bill Gates", cash_avail=Decimal("20000"))
 BILL_PROFILE = UserProfile(user="Bill Gates", risk_tolerance="moderate", age=70, trade_mode="ask")
 BOB_PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="auto")
 YEAR = (date(2026, 1, 1), date(2026, 12, 31))
@@ -78,6 +89,23 @@ class Replay:
         return SimpleNamespace(content=self.replies.pop(0), usage_metadata={"input_tokens": 10, "output_tokens": 10})
 
 
+class OwnerReplay:
+    """The Data Clerk's model for entry 101: its REAL recorded replies about the listed owner of a name (`NAMES["owner_replies"]`), given back for the name it is asked about (`asked` keeps them). A name nobody recorded fails the
+    test: a ticker and a name the directory has must never reach the model."""
+
+    model_name = "openai/gpt-oss-120b"
+
+    def __init__(self):
+        self.asked = []
+
+    def invoke(self, messages):
+        name = messages[-1].content.removeprefix("Industry or theme: ")
+        self.asked.append(name)
+        if name not in NAMES["owner_replies"]:
+            raise AssertionError(f"the Data Clerk's model was asked about {name!r}, which nobody recorded")
+        return SimpleNamespace(content=NAMES["owner_replies"][name]["replies"][0], usage_metadata={"input_tokens": 10, "output_tokens": 10})
+
+
 def directory(query: str):
     """The symbol directory: Finnhub's REAL recorded answers. A query nobody recorded is a failure of the test, not an empty answer."""
     if query not in DIRECTORY:
@@ -85,15 +113,16 @@ def directory(query: str):
     return DIRECTORY[query]
 
 
-def clerk() -> DataClerk:
-    real = DataClerk(model=object(), symbol_search=directory)
+def clerk(model=None) -> DataClerk:
+    """The real Data Clerk over the recorded directory. Its model is `model`, or none at all (`object()`): a name the directory does not have then cannot be looked up for its listed owner, which is a lookup that failed (entry 101)."""
+    real = DataClerk(model=model or object(), symbol_search=directory)
     real.lookup_interval = 0
     return real
 
 
-def account(profile: UserProfile = BILL_PROFILE, **options) -> AccountManager:
+def account(profile: UserProfile = BILL_PROFILE, clerk_model=None, **options) -> AccountManager:
     """The real Account Manager over the real Data Clerk (its symbols from the recorded directory, its prices from the stored closes)."""
-    return AccountManager(model=object(), model_id="direct", clerk=clerk(), profile=profile, **options)
+    return AccountManager(model=object(), model_id="direct", clerk=clerk(clerk_model), profile=profile, **options)
 
 
 def reading_manager(typed: str, **options) -> AccountManager:
@@ -169,13 +198,13 @@ def test_the_account_manager_reads_a_company_named_order_with_one_call_of_the_mo
     (BUY_COMPANY, {"orders": [{"side": "buy", "company": "MSFT", "shares": 50}]}, "is a ticker: a ticker goes in symbol"),                    # a ticker in the name's place
     (BUY_COMPANY, {"orders": [{"side": "buy", "symbol": "MSFT", "company": "Microsoft", "shares": 50}]}, "orders must be a list"),           # both ways of naming one stock
     ("Buy $50 of Microsoft", {"orders": [{"side": "buy", "company": "Microsoft", "shares": 50}]}, "50 shares of Microsoft is not what you typed"),
-    ("Buy 50.5 shares of MSFT", {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 50}]}, "50 shares of MSFT is not what you typed"),     # a decimal is not a whole number of shares
+    ("Buy 50.5 shares of MSFT", {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 50}]}, "50 shares of MSFT is not what you typed"),     # AMENDED (entry 110): "Buy 50.5 shares of MSFT" is an order for 50.5 shares now (tests/test_fractional_direct_order.py); what is refused here is the model's 50, which is not what was typed
     ("Please purchase twenty-five shares of MSFT", {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 5}]}, "5 shares of MSFT is not what you typed"),    # "five" is the end of "twenty-five", not the number
     ("Buy 50 shares of MSFT and sell 10 shares of TSLA", {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 10}, {"side": "sell", "symbol": "TSLA", "shares": 50}]},
      "10 shares of MSFT is not what you typed"),                                                                                              # the two numbers swapped between the tickers
     ("Sell 10 shares of TSLA and buy 5 shares of GM", {"orders": [{"side": "buy", "symbol": "TSLA", "shares": 10}, {"side": "sell", "symbol": "GM", "shares": 5}]},
      "buy TSLA is not what you typed"),                                                                                                       # the two sides swapped between the tickers
-    (BUY_50, {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 0}]}, "greater than or equal to 1"),
+    (BUY_50, {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 0}]}, "a number of shares above zero is needed"),                                                # AMENDED (entry 110): the wording of the refusal; the number is checked by `shares.quantity` now, not by pydantic's `ge=1`
     (BUY_50, {"orders": [{"side": "buy", "symbol": "MSFT", "shares": True}]}, "orders must be a list"),
     (BUY_50, {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 50}, {"side": "buy", "symbol": "MSFT", "shares": 50}]}, "one trade for each stock"),
     (BUY_50, {"orders": []}, "a direct order has the action 'order' and at least one trade"),
@@ -221,10 +250,12 @@ def test_the_data_clerk_appends_to_what_the_order_already_has_and_leaves_an_answ
     assert clerk().request_symbols(again).model_dump() == found.model_dump()          # data_ready already: unchanged
 
 
-@pytest.mark.parametrize("subject, message", [(["Zzyzx Holdings"], "Zzyzx Holdings: Company Name not found."), (["ZZZZ"], "ZZZZ: Symbol: ZZZZ is not found")])
+@pytest.mark.parametrize("subject, message", [(["Chick-fil-a"], "Chick-fil-a: privately held, or not known to be listed"), (["ZZZZ"], "ZZZZ: Symbol: ZZZZ is not found")])
 def test_a_stock_the_directory_does_not_have_fails_the_order_with_the_data_clerks_own_message_and_the_others_stay(subject, message):
-    found = clerk().request_symbols(wo.new_work_order("lookup", action_type="lookup_symbol", subject=["Microsoft", *subject]))
-    assert found.status == "data_failed" and message in found.errors and [row["symbol"] for row in found.data.companies] == ["MSFT"]
+    # Amended for entry 101: a NAME the directory does not have used to be "Company Name not found." (and was "Zzyzx Holdings"); now the Data Clerk's model is asked for its listed owner first, and the real private
+    # company Chick-fil-a gets the Data Clerk's own reason. The stock the directory could not list now has a row of its own, with no symbol: that is how a company that is not listed is told from a lookup that failed.
+    found = clerk(OwnerReplay()).request_symbols(wo.new_work_order("lookup", action_type="lookup_symbol", subject=["Microsoft", *subject]))
+    assert found.status == "data_failed" and message in found.errors and [row["symbol"] for row in found.data.companies] == ["MSFT", None]
 
 
 def test_a_symbol_lookup_order_is_checked():
@@ -256,9 +287,10 @@ def test_a_ticker_the_user_typed_also_gets_its_company_name_on_the_work_order():
 
 
 def test_a_stock_nobody_can_find_makes_no_order_and_says_why_in_the_data_clerks_words():
-    for stock, message in (("Zzyzx Holdings", "Company Name not found."), ("ZZZZ", "Symbol: ZZZZ is not found")):
+    # Amended for entry 101, as the test above: "Zzyzx Holdings" (a name no model was ever asked about) is the real private company Chick-fil-a, whose reason is the Data Clerk's own.
+    for stock, message in (("Chick-fil-a", "privately held, or not known to be listed"), ("ZZZZ", "Symbol: ZZZZ is not found")):
         order = wo.new_work_order("x", requester="desk", action_type="trade")
-        problems = account().name_the_stocks(order, [wanted("buy", stock, 1)], typed_words("buy", stock, 1), MOMENT)
+        problems = account(clerk_model=OwnerReplay()).name_the_stocks(order, [wanted("buy", stock, 1)], typed_words("buy", stock, 1), MOMENT)
         assert any(message in p for p in problems) and order.direct_orders == [] and order.data is None, stock
 
 
@@ -337,7 +369,7 @@ def test_the_account_manager_prices_the_order_with_the_data_clerk_and_the_users_
     price, (d,) = close_of("MSFT"), order.trade_decisions
     assert order.status == "decided" and order.errors == [] and order.recommendations == [] and order.reviews == [] and order.critic_runs == [] and order.advisor_runs == []
     assert (d["will_trade"], d["origin"], d["action"], d["shares"], d["price"], d["mode"], d["asked_user"], d["review_id"], d["company"]) == ("yes_user", "direct", "open", 38, price, "ask", False, None, "Microsoft Corp")
-    assert d["est_cost"] == round(38 * price, 2) and d["funds_avail"] is True and d["size"] is None and "no recommendation was made and the Critic was not asked" in d["reason"]
+    assert d["est_cost"] == trade_amount(38, price) and d["funds_avail"] is True and d["size"] is None and "no recommendation was made and the Critic was not asked" in d["reason"]
     assert d["record_id"] == order.direct_orders[0]["record_id"] == f"direct-{order.request_id}-1"
     assert order.data.companies[0]["symbol"] == "MSFT" and order.data.sources == [] and order.data.references == []        # what the Data Clerk found, and nothing was searched
 
@@ -348,15 +380,15 @@ def test_fifty_shares_that_the_cash_does_not_pay_for_are_refused_with_the_shares
     fits = int(20000 // price)
     assert 50 * price > 20000 and fits < 50                                                  # the REAL stored close: Bill's $20,000 does not buy 50 shares of MSFT
     (d,) = order.trade_decisions
-    assert (d["will_trade"], d["shares"], d["funds_avail"], d["est_cost"]) == ("no_funds", 50, False, round(50 * price, 2))
+    assert (d["will_trade"], d["shares"], d["funds_avail"], d["est_cost"]) == ("no_funds", 50, False, trade_amount(50, price))
     assert f"the most it pays for is {fits} shares" in d["reason"] and "as you typed it or not at all" in d["reason"]
     assert order.status == "decided" and not any(t for t in order.trades)
 
 
 def test_with_more_cash_the_same_order_is_approved_and_money_is_left():
-    order, _ = direct_order(shares=50, portfolio=Portfolio(user="Bill Gates", cash_avail=30000.0))
+    order, _ = direct_order(shares=50, portfolio=Portfolio(user="Bill Gates", cash_avail=Decimal("30000")))
     (d,) = order.trade_decisions
-    assert d["will_trade"] == "yes_user" and d["est_cost"] == round(50 * close_of("MSFT"), 2) and 30000.0 - d["est_cost"] > 0
+    assert d["will_trade"] == "yes_user" and d["est_cost"] == trade_amount(50, close_of("MSFT")) and Decimal("30000") - d["est_cost"] > 0
 
 
 def test_a_sale_needs_the_shares_in_the_account_and_is_the_number_the_user_typed_not_the_whole_holding():
@@ -364,7 +396,7 @@ def test_a_sale_needs_the_shares_in_the_account_and_is_the_number_the_user_typed
     held = {p.symbol: p.shares for p in sample.positions}
     sell, _ = direct_order("sell", "MSFT", 10, sample, BOB_PROFILE)
     (d,) = sell.trade_decisions
-    assert (d["will_trade"], d["action"], d["shares"], d["est_cost"]) == ("yes_user", "reduce", 10, 0.0) and held["MSFT"] == 50
+    assert (d["will_trade"], d["action"], d["shares"], d["est_cost"]) == ("yes_user", "reduce", 10, 0) and held["MSFT"] == 50
     too_many, _ = direct_order("sell", "MSFT", 60, sample, BOB_PROFILE)
     assert too_many.trade_decisions[0]["will_trade"] == "no_funds" and "holds 50 shares of MSFT and you asked to sell 60" in too_many.trade_decisions[0]["reason"]
     none, _ = direct_order("sell", "TSLA", 1000, sample, BOB_PROFILE)
@@ -403,7 +435,7 @@ def test_no_profile_limit_exists_so_none_can_cut_or_refuse_a_direct_order_whatev
         for stock in ("MSFT", "Microsoft"):                                             # a ticker and a company's name
             order, _ = direct_order(stock=stock, shares=38, profile=odd, mode=mode, approver=lambda card: True)
             (d,) = order.trade_decisions
-            assert (d["will_trade"], d["shares"], d["est_cost"]) == ("yes_user", 38, round(38 * close_of("MSFT"), 2)), (mode, stock)
+            assert (d["will_trade"], d["shares"], d["est_cost"]) == ("yes_user", 38, trade_amount(38, close_of("MSFT"))), (mode, stock)
     sample = jacob_as_bob()
     sale, _ = direct_order("sell", "MSFT", 50, sample, BOB_PROFILE)
     assert sale.trade_decisions[0]["will_trade"] == "yes_user" and sale.trade_decisions[0]["shares"] == 50                      # the whole holding too: nothing cuts a sale either
@@ -498,9 +530,9 @@ def test_the_trader_places_the_users_own_order_one_trade_with_the_handshake_and_
     (t,) = order.trades
     assert rec.kinds() == ["place T1", "approve T1", "record T1"]
     assert (t["status"], t["side"], t["symbol"], t["shares"], t["record_id"], t["review_id"], t["fill"]["shares"]) == ("filled", "buy", "MSFT", 38, order.direct_orders[0]["record_id"], None, 38)
-    assert abs(t["fill"]["price"] / price - 1) < 0.002                                         # the simulated broker fills a market order at the quote and a few basis points of slippage
+    assert abs(t["fill"]["price"] / price - 1) < Decimal("0.002")                                         # the simulated broker fills a market order at the quote and a few basis points of slippage
     after = order.trader_runs[-1]["portfolio_after"]
-    assert order.status == "traded" and order.errors == [] and wo.verify_trades(order) == [] and after["cash"] == round(20000.0 - t["fill"]["amount"], 2) and after["cash"] < 100
+    assert order.status == "traded" and order.errors == [] and wo.verify_trades(order) == [] and after["cash"] == Decimal("20000") - t["fill"]["amount"] and after["cash"] < 100
     assert any("FILLED 38" in line for line in trade_section(order))
 
 
@@ -512,12 +544,12 @@ def test_a_company_the_user_named_is_traded_under_the_symbol_the_data_clerk_retu
 
 
 def test_fifty_shares_for_an_account_that_can_pay_are_placed_and_money_is_left():
-    rich = Portfolio(user="Bill Gates", cash_avail=30000.0)
+    rich = Portfolio(user="Bill Gates", cash_avail=Decimal("30000"))
     order, am = direct_order(shares=50, portfolio=rich)
     am.perform_trades(order, rich, trader(), MOMENT)
     price = close_of("MSFT")
     (t,) = order.trades
-    assert t["status"] == "filled" and t["fill"]["shares"] == 50 and order.trader_runs[-1]["portfolio_after"]["cash"] == round(30000.0 - t["fill"]["amount"], 2) > 3000 and abs(t["fill"]["price"] / price - 1) < 0.002
+    assert t["status"] == "filled" and t["fill"]["shares"] == 50 and order.trader_runs[-1]["portfolio_after"]["cash"] == Decimal("30000") - t["fill"]["amount"] > 3000 and abs(t["fill"]["price"] / price - 1) < Decimal("0.002")
 
 
 def test_a_refused_order_has_no_ticket_and_the_trader_never_asks_the_account_for_anything(monkeypatch):
@@ -530,18 +562,18 @@ def test_a_refused_order_has_no_ticket_and_the_trader_never_asks_the_account_for
 def test_when_the_cash_has_gone_since_the_decision_the_handshake_refuses_the_order_and_does_not_cut_it():
     """A decision for 38 shares was made against $20,000; the account now has $15,000. A recommended purchase would be cut to the shares the cash pays for; the user's own order is placed as typed or not at all."""
     order, am = direct_order(shares=38)
-    poorer = Portfolio(user="Bill Gates", cash_avail=15000.0)
+    poorer = Portfolio(user="Bill Gates", cash_avail=Decimal("15000"))
     am.perform_trades(order, poorer, trader(), MOMENT)
     (t,) = order.trades
     assert t["status"] == "rejected" and t["reject_code"] == "insufficient_cash" and "placed as you typed it or not at all" in t["reason"] and t["fill"] is None
-    assert order.trader_runs[-1]["portfolio_after"]["cash"] == 15000.0 and wo.verify_trades(order) == []
+    assert order.trader_runs[-1]["portfolio_after"]["cash"] == Decimal("15000") and wo.verify_trades(order) == []
 
 
 def test_a_recommended_purchase_is_still_cut_to_the_cash_that_rule_is_for_the_user_named_trades_only():
     """The same handshake for a trade that is not direct: the real session's recommendation, decided for 8 shares, meets $15,000 less than it needs and is CUT (entry 81), as before."""
     from handshake_helpers import manager, real_order
     order, am = real_order(), manager()
-    am.perform_trades(order, Portfolio(user="Bob Jones", cash_avail=close_of("XOM") * 3.5), trader(), MOMENT)
+    am.perform_trades(order, Portfolio(user="Bob Jones", cash_avail=cents(close_of("XOM") * Decimal("3.5"))), trader(), MOMENT)
     first = order.trades[0]
     assert first["status"] == "filled" and first["fill"]["shares"] == 3 and first["shares_approved"] == 8
 
@@ -553,18 +585,18 @@ def test_a_sale_the_user_names_is_the_shares_typed_not_the_whole_holding():
     price = close_of("MSFT")
     (t,) = order.trades
     after = order.trader_runs[-1]["portfolio_after"]
-    assert (t["status"], t["side"], t["shares"], t["fill"]["shares"]) == ("filled", "sell", 10, 10) and after["cash"] == round(sample.cash_avail + t["fill"]["amount"], 2) and abs(t["fill"]["price"] / price - 1) < 0.002
+    assert (t["status"], t["side"], t["shares"], t["fill"]["shares"]) == ("filled", "sell", 10, 10) and after["cash"] == sample.cash_avail + t["fill"]["amount"] and abs(t["fill"]["price"] / price - 1) < Decimal("0.002")
 
 
 def test_a_sale_of_shares_some_of_which_were_bought_today_is_refused_whole_and_not_cut_to_what_may_be_sold():
     """45 of Bob's 50 shares were bought on the day of the trade (T+1: not sellable). He asks to sell 10; 5 could be sold; the order is placed as typed or not at all."""
-    bought_today = Portfolio(user="Bob Jones", cash_avail=100.0, positions=[Position(symbol="MSFT", shares=50, cost_basis=close_of("MSFT") * 0.9, acquired=FRIDAY, recent_shares=45)])
+    bought_today = Portfolio(user="Bob Jones", cash_avail=Decimal("100"), positions=[Position(symbol="MSFT", shares=50, cost_basis=price_door(close_of("MSFT") * Decimal("0.9")), acquired=FRIDAY, recent_shares=45)])
     order, am = direct_order("sell", "MSFT", 10, bought_today, BOB_PROFILE)
     assert order.trade_decisions[0]["will_trade"] == "yes_user"            # the account holds them: the T+1 rule is the Trader's, at placement
     am.perform_trades(order, bought_today, trader(), MOMENT)
     (t,) = order.trades
     assert (t["status"], t["reject_code"], t["fill"]) == ("rejected", "not_sellable_today", None) and "only 5 can be sold today" in t["reason"] and "as you typed it or not at all" in t["reason"]
-    assert order.trader_runs[-1]["portfolio_after"]["cash"] == 100.0
+    assert order.trader_runs[-1]["portfolio_after"]["cash"] == Decimal("100")
 
 
 # ---------------------------------------------------------------- the two REAL sessions of 2026-11-15 (`--save` captures): Bill Gates
@@ -585,7 +617,7 @@ def test_the_real_session_with_twenty_thousand_dollars_was_refused_whole_at_the_
     assert order.recommendations == [] and order.reviews == [] and order.critic_runs == [] and order.advisor_runs == [] and order.errors == []
     assert order.data.sources == [] and [(r["symbol"], r["brand"]) for r in order.data.companies] == [("MSFT", "MSFT")] and order.data.companies[0]["company"].startswith("Microsoft")      # the Data Clerk's company name and symbol, on the work order
     (d,), (entry,) = order.trade_decisions, order.direct_orders
-    assert (d["will_trade"], d["origin"], d["shares"], d["price"], entry["symbol"], entry["company"]) == ("no_funds", "direct", 50, close_of("MSFT"), "MSFT", order.data.companies[0]["company"])
+    assert (d["will_trade"], d["origin"], d["shares"], price_door(d["price"]), entry["symbol"], entry["company"]) == ("no_funds", "direct", 50, close_of("MSFT"), "MSFT", order.data.companies[0]["company"])
     assert "the most it pays for is 38 shares" in d["reason"]
 
 
@@ -594,7 +626,7 @@ def test_the_real_session_with_thirty_thousand_dollars_placed_the_order_with_the
     assert c["path"] == ["account_manager", "account_manager_direct", "trader"] and order.status == "traded" and order.recommendations == [] and order.reviews == [] and order.errors == []
     (t,), (d,) = order.trades, order.trade_decisions
     assert (d["will_trade"], d["origin"], d["shares"]) == ("yes_user", "direct", 50) and (t["status"], t["placed_by"], t["review_id"], t["booked"], t["fill"]["shares"]) == ("filled", "model", None, True, 50)
-    assert wo.verify_trades(order) == [] and order.trader_runs[-1]["portfolio_after"]["cash"] == round(30000.0 - t["fill"]["amount"], 2) > 3000 and order.trader_runs[-1]["model"] == "openai/gpt-oss-120b"
+    assert wo.verify_trades(order) == [] and money_door(order.trader_runs[-1]["portfolio_after"]["cash"]) == Decimal("30000") - money_door(t["fill"]["amount"]) > 3000 and order.trader_runs[-1]["model"] == "openai/gpt-oss-120b"
 
 
 def test_the_real_session_that_named_a_company_in_auto_mode_used_the_symbol_the_data_clerk_returned_without_asking():
@@ -608,14 +640,14 @@ def test_the_real_session_that_named_a_company_in_auto_mode_used_the_symbol_the_
     assert (t["status"], t["symbol"], t["placed_by"], t["fill"]["shares"]) == ("filled", "MSFT", "model", 50) and wo.verify_trades(order) == []
 
 
-@pytest.mark.parametrize("name, cash", [("bill_gates_direct_order", 20000.0), ("bill_gates_direct_order_funded", 30000.0)])
+@pytest.mark.parametrize("name, cash", [("bill_gates_direct_order", Decimal("20000")), ("bill_gates_direct_order_funded", Decimal("30000"))])
 def test_the_account_managers_decision_of_each_real_run_is_reproduced_from_its_own_record(name, cash):
     """Decide the real run's order again from what it recorded (the user's order, with its company name and symbol) and the real stored close: the same decision, to the second."""
     recorded = captured_order(name)
     again = copy.deepcopy(recorded)
     again.status, again.trade_decisions, again.trades, again.trader_runs = "new", [], [], []
     again = direct.decide_direct(again, Portfolio(user="Bill Gates", cash_avail=cash), BILL_PROFILE, "ask", {"MSFT": close_of("MSFT")}, MOMENT, 30)
-    assert again.trade_decisions == recorded.trade_decisions
+    assert json.loads(dumps(again.trade_decisions)) == [{k: v for k, v in d.items() if k != "escalated"} for d in recorded.trade_decisions]      # AMENDED (entry 112): the decision holds Decimals, the capture the numbers json read: compared as the JSON numbers the decision is written as. AMENDED (entry 104): the capture holds the key `escalated: false` of the old decisions; a decision has no such key now, and the capture is not edited
     reasons = wo.verify_trade(recorded, recorded.direct_orders[0]["record_id"], MOMENT)
     assert reasons == [] if cash > 25000 else "not one of yes_auto, yes_user" in "; ".join(reasons)         # the funded order may trade; the refused one may not
 
@@ -709,8 +741,8 @@ def test_the_desk_takes_a_direct_order_from_the_account_manager_to_the_trader_an
     (t,) = order.trades
     assert (t["status"], t["fill"]["shares"], t["review_id"], t["booked"]) == ("filled", 50, None, True) and wo.verify_trades(order) == []
     held = {p.symbol: p.shares for p in db.store.list_portfolio(account_id).positions}
-    assert held == {"MSFT": 50} and db.store.account_balance(account_id) == Decimal("30000") - Decimal(str(t["fill"]["amount"])) and abs(t["fill"]["price"] / price - 1) < 0.002
-    assert float(db.store.account_balance(account_id)) > 3000                                                    # money is left
+    assert held == {"MSFT": 50} and db.store.account_balance(account_id) == Decimal("30000") - t["fill"]["amount"] and abs(t["fill"]["price"] / price - 1) < Decimal("0.002")
+    assert db.store.account_balance(account_id) > 3000                                                    # money is left
     assert db.store.number_trades(account_id, *YEAR) == 1 and db.store.number_approved_recommendations(account_id, *YEAR) == 1     # the decision is saved in the book as the user's yes
     assert desk.reached_its_end(state)
 
@@ -800,8 +832,8 @@ def test_the_session_of_the_user_story_creates_the_user_takes_the_direct_order_a
     assert code == 0 and "buy 50 shares of MSFT (your own order" in text and "the Data Clerk found: you typed 'MSFT': Microsoft Corp (MSFT), appended to the work order" in text
     assert "the Account Manager priced the trades you named" in text and "APPROVED: your own order" in text
     assert "RECOMMENDATIONS" not in text and not any(skipped in text for skipped in ("the Data Clerk found the companies", "the Advisor ranked", "the Critic reviewed", "the Account Manager decided what may trade"))      # none of the steps a direct order skips ran
-    left = float(db.store.account_balance(db.made[-1]))
-    assert "FILLED 50" in text and "ACCOUNT  after the session" in text and "MSFT" in text and f"${left:,.2f}" in text and left > 3000 and abs(left - (30000 - 50 * price)) < 30000 * 0.002 and "SESSION  PASSED" in text
+    left = db.store.account_balance(db.made[-1])
+    assert "FILLED 50" in text and "ACCOUNT  after the session" in text and "MSFT" in text and f"${left:,.2f}" in text and left > 3000 and abs(left - (30000 - 50 * price)) < 30000 * Decimal("0.002") and "SESSION  PASSED" in text
 
 
 def test_the_session_asks_the_user_to_confirm_a_company_they_named_in_ask_mode_and_places_it_on_a_yes(db):
@@ -887,7 +919,9 @@ def test_in_auto_mode_a_named_stock_with_no_number_gets_what_the_cash_allows_and
     order, _, _, cards = sized_order("I want to buy MSFT", mode="auto")
     (d,), (entry,) = order.trade_decisions, order.direct_orders
     price = close_of("MSFT")
-    assert (d["will_trade"], d["origin"], d["action"], d["price"]) == ("yes_user", "direct", "open", price) and d["shares"] == int(20000.0 // price) == entry["shares"] and entry["how_many"] == "cash" and cards == []
+    # AMENDED (entry 111, M3): the whole shares the cash pays for, 38, and a fraction of a share with what is left: the order is $20,000.00 in all, an order in dollars (it was 38 whole shares and $92.56 unspent)
+    assert (d["will_trade"], d["origin"], d["action"], d["price"]) == ("yes_user", "direct", "open", price) and d["shares"] == sh.buys(Decimal("20000"), price) == entry["shares"] and int(d["shares"]) == int(Decimal("20000") // price) == 38
+    assert (d["dollars"], d["est_cost"], d["size"]["pot"]) == (Decimal("20000"), Decimal("20000"), Decimal("20000")) and entry["how_many"] == "cash" and cards == []
     assert wo.verify_trade(order, d["record_id"], MOMENT) == [] and "as much as your cash allows" in d["reason"]                # the user's record holds the number the Account Manager worked out
     assert "no profile limit" not in d["reason"] and order.status == "decided" and order.errors == []
 
@@ -896,9 +930,11 @@ def test_in_auto_mode_the_dollars_the_user_said_are_the_budget_and_an_even_split
     order, _, _, _ = sized_order("I want to buy MSFT and TSLA and spend $6,000", mode="auto")
     msft, tsla = order.trade_decisions
     assert (msft["symbol"], tsla["symbol"]) == ("MSFT", "TSLA") and msft["shares"] >= 1 and tsla["shares"] >= 1       # a share of each in turn until the $6,000 is spent
-    assert msft["est_cost"] + tsla["est_cost"] <= 6000.0 and 6000.0 - (msft["est_cost"] + tsla["est_cost"]) < max(close_of("MSFT"), close_of("TSLA")) and {e["how_many"] for e in order.direct_orders} == {"budget"}
+    assert msft["est_cost"] + tsla["est_cost"] <= Decimal("6000") and Decimal("6000") - (msft["est_cost"] + tsla["est_cost"]) < max(close_of("MSFT"), close_of("TSLA")) and {e["how_many"] for e in order.direct_orders} == {"budget"}
     single, _, _, _ = sized_order("Buy $5,000 of MSFT", mode="auto")
-    assert single.trade_decisions[0]["shares"] == int(5000.0 // close_of("MSFT")) and single.direct_orders[0]["how_many"] == "budget"
+    # AMENDED (entry 111, M3): "Buy $5,000 of MSFT" is as many whole shares as $5,000 pays for (9) and a fraction of a share with the rest, $5,000.00 in all (it was 9 whole shares and $285.08 unspent)
+    one = single.trade_decisions[0]
+    assert one["shares"] == sh.buys(Decimal("5000"), close_of("MSFT")) == Decimal("9.54417") and int(one["shares"]) == int(Decimal("5000") // close_of("MSFT")) and (one["dollars"], one["est_cost"]) == (Decimal("5000"), Decimal("5000")) and single.direct_orders[0]["how_many"] == "budget"
 
 
 def test_in_ask_mode_the_user_is_asked_for_the_number_then_shown_the_order_and_says_yes():
@@ -922,11 +958,11 @@ def test_a_request_with_no_channel_to_the_user_in_ask_mode_proposes_what_the_cas
     am = account(BILL_PROFILE)
     assert am.name_the_stocks(order, intent.orders, "I want to buy MSFT", MOMENT) == []
     out = am.decide_direct(order, BILL, MOMENT, "ask", None, clarify=None, said_how_much=False, request_text="I want to buy MSFT")
-    assert out.trade_decisions[0]["will_trade"] == "pending_user" and out.trade_decisions[0]["shares"] == int(20000.0 // close_of("MSFT"))
+    assert out.trade_decisions[0]["will_trade"] == "pending_user" and out.trade_decisions[0]["shares"] == sh.buys(Decimal("20000"), close_of("MSFT")) and out.trade_decisions[0]["dollars"] == Decimal("20000")      # AMENDED (entry 111, M3): 38 whole shares and a fraction
 
 
 def test_a_sale_with_no_number_is_not_placed_and_says_to_name_how_many():
-    portfolio = Portfolio(user="Bill Gates", cash_avail=1000.0, positions=[Position(symbol="MSFT", shares=40, cost_basis=300.0, acquired=date(2025, 1, 2))])
+    portfolio = Portfolio(user="Bill Gates", cash_avail=Decimal("1000"), positions=[Position(symbol="MSFT", shares=40, cost_basis=Decimal("300"), acquired=date(2025, 1, 2))])
     order, *_ = sized_order("sell MSFT", portfolio=portfolio)
     d = order.trade_decisions[0]
     assert d["will_trade"] == "no_system_denied" and d["shares"] == 0 and "say how many to sell" in d["reason"] and "holds 40 shares of MSFT" in d["reason"] and order.direct_orders[0]["shares"] is None
@@ -944,4 +980,227 @@ def test_the_trader_buys_what_the_account_manager_worked_out_for_a_stock_named_w
     order, am, *_ = sized_order("I want to buy MSFT", mode="auto")
     am.perform_trades(order, BILL, trader(), MOMENT)
     (t,) = order.trades
-    assert order.status == "traded" and t["status"] == "filled" and t["side"] == "buy" and t["shares"] == order.direct_orders[0]["shares"] == int(20000.0 // close_of("MSFT")) and wo.verify_trades(order) == []
+    assert order.status == "traded" and t["status"] == "filled" and t["side"] == "buy" and t["shares"] == order.direct_orders[0]["shares"] == sh.buys(Decimal("20000"), close_of("MSFT")) and t["fill"]["amount"] == Decimal("20000") and wo.verify_trades(order) == []      # AMENDED (entry 111, M3): 38 whole shares and a fraction, $20,000.00 in all
+
+
+# ---------------------------------------------------------------- a brand finds its listed owner, and a list goes on without the stocks that were not found (design choices entries 101 and 102)
+# Jacob's own request, the first typed into the page: five stocks, two of which the directory does not list: "Google" (Finnhub lists Alphabet Inc.) and "Chick-fil-a" (privately held).
+
+JACOB = NAMES["request"]
+FORM = NAMES["forms"][JACOB]["replies"][0]                                  # the Account Manager's model's real reading of it
+WORDING = NAMES["wording"]["Chick-fil-a"]["replies"][0]                     # the Account Manager's model's real question about Chick-fil-a
+D_ASK = UserProfile(user="D Pyrett", risk_tolerance="moderate", age=40, trade_mode="ask")
+D_AUTO = UserProfile(user="D Pyrett", risk_tolerance="moderate", age=40, trade_mode="auto")
+D_CASH = Portfolio(user="D Pyrett", cash_avail=Decimal("10000"))
+LOST = "privately held, or not known to be listed"
+STAYS = ["F", "GM", "Procter and gamble", "Google"]
+CODE_SENTENCE = f"Chick-fil-a was not found: {LOST}. OK to continue without it? Your order would go on with F, GM, PG and GOOGL."
+
+
+def jacob_orders() -> list[it.DirectOrder]:
+    intent = it.parse_intent(FORM, JACOB)
+    assert [o.named for o in intent.orders] == [*STAYS, "Chick-fil-a"] and intent.budget == Decimal("10000")
+    return intent.orders
+
+
+def flaky(failing: dict):
+    """The recorded directory, except that the queries in `failing` answer as Finnhub does when it cannot ({query: an error, or the rows to give instead})."""
+    def search(query):
+        if query in failing:
+            if isinstance(failing[query], Exception):
+                raise failing[query]
+            return failing[query]
+        return directory(query)
+    return search
+
+
+def naming(profile=D_AUTO, wording=(), approver=None, orders=None, search=directory, mode=None):
+    """The real Account Manager names the stocks of Jacob's request: the real Data Clerk over the recorded directory (its model: the replay of its real replies about the owners) and the Account Manager's model the replay of
+    its real wording. Returns (the Naming, the work order, what the Account Manager said to the user, its model, the Data Clerk's model)."""
+    owner, model, said = OwnerReplay(), Replay(wording), []
+    real = DataClerk(model=owner, symbol_search=search)
+    real.lookup_interval = 0
+    order = wo.new_work_order(JACOB, requester="desk", action_type="trade")
+    am = AccountManager(model=model, model_id="recorded", clerk=real, profile=profile, screen=said.append)
+    return am.name_orders(order, orders or jacob_orders(), JACOB, MOMENT, approver, mode), order, said, model, owner
+
+
+def test_the_data_clerk_finds_the_listed_owner_of_a_brand_and_says_what_is_not_listed_and_only_those_two_names_reach_its_model():
+    owner = OwnerReplay()
+    found = clerk(owner).request_symbols(wo.new_work_order("lookup", action_type="lookup_symbol", subject=["F", "GM", "Procter and gamble", "Google", "Chick-fil-a"]))
+    assert found.status == "data_failed" and found.errors == [f"Chick-fil-a: {LOST}"]
+    assert found.data.companies == NAMES["outcome"]["rows"]                                          # the rows the live services gave, made again by the real code from the real replies
+    google = found.data.companies[3]
+    assert (google["brand"], google["parent"], google["symbol"], google["company"], google["how"]) == ("Google", "Alphabet Inc.", "GOOGL", "Alphabet Inc.", "brand") and google["symbol"] == DIRECTORY["Alphabet Inc."][0]["symbol"]
+    assert owner.asked == ["Google", "Chick-fil-a"]                                                  # F and GM are tickers the directory has and "Procter and gamble" a name it has: none of them reached the model
+    assert [c["args"]["company"] for c in found.data.tool_calls if c["name"] == "find_listed_owner"] == ["Google", "Chick-fil-a"] and found.data.tokens_in == 20
+
+
+def test_a_lookup_that_failed_is_never_a_company_that_is_not_listed_and_has_no_row():
+    subject = ["F", "Google"]
+    model_down = clerk().request_symbols(wo.new_work_order("lookup", action_type="lookup_symbol", subject=subject))                      # no model: the owner of Google cannot be asked for
+    assert [r["brand"] for r in model_down.data.companies] == ["F"] and model_down.errors[0].startswith("Google: the symbol lookup failed (") and model_down.status == "data_failed"
+    for failing in ({"Alphabet Inc.": SymbolLookupError("the symbol lookup failed (HTTP 429)", reason="the symbol lookup failed (HTTP 429)")}, {"F": SymbolLookupError("no key", reason="no key")}):
+        real = DataClerk(model=OwnerReplay(), symbol_search=flaky(failing))
+        real.lookup_interval = 0
+        down = real.request_symbols(wo.new_work_order("lookup", action_type="lookup_symbol", subject=subject))
+        assert len(down.data.companies) == 1 and len(down.errors) == 1 and "the symbol lookup failed" in down.errors[0] and down.status == "data_failed"
+    real = DataClerk(model=OwnerReplay(), symbol_search=flaky({"Alphabet Inc.": [], "Alphabet": []}))        # the directory answered (both searches the Data Clerk makes), and it has no company of the owner's name: a row with no symbol and the reason
+    real.lookup_interval = 0
+    absent = real.request_symbols(wo.new_work_order("lookup", action_type="lookup_symbol", subject=["Google"]))
+    assert absent.data.companies[0]["symbol"] is None and absent.errors == ["Google: no listed company named 'Alphabet Inc.' in Finnhub's directory"]
+
+
+def test_in_auto_mode_a_stock_that_is_not_listed_is_dropped_without_a_question_and_the_user_is_told():
+    named, order, said, model, owner = naming(D_AUTO, approver=lambda card: pytest.fail("Auto mode asks nothing"))
+    assert named.problems == [] and [o.named for o in named.orders] == STAYS and model.seen == []                          # no question, and the model that words questions was not called
+    assert named.dropped == [{"typed": "Chick-fil-a", "reason": LOST, "mode": "auto"}]
+    assert order.subject == ["F", "GM", "PG", "GOOGL"] and [e["symbol"] for e in order.direct_orders] == order.subject and wo.verify_direct_orders(order.direct_orders) == []
+    assert order.data.notes == [f"dropped in Auto mode: Chick-fil-a ({LOST})"] and [r["brand"] for r in order.data.companies][-1] == "Chick-fil-a"      # what was dropped stays on the record, with the Data Clerk's own row
+    assert said == [f"      Chick-fil-a was not found ({LOST}) and was left out (Auto mode asks nothing); the order goes on with F, GM, PG and GOOGL"]
+    google = order.direct_orders[3]
+    assert (google["typed_company"], google["company"], google["found_by"]) == ("Google", "Alphabet Inc.", "brand")
+
+
+def test_in_ask_mode_the_model_words_one_question_for_each_missing_stock_and_a_yes_drops_it():
+    cards = []
+    named, order, said, model, _ = naming(D_ASK, [WORDING], approver=lambda card: cards.append(card) or True)
+    (card,) = cards
+    assert named.problems == [] and [o.named for o in named.orders] == STAYS and named.dropped == [{"typed": "Chick-fil-a", "reason": LOST, "mode": "ask"}] and len(model.seen) == 1
+    asked = missing.check_wording(missing._question_of(WORDING), "Chick-fil-a", 400)
+    assert (card["kind"], card["n"], card["of"], card["typed"], card["reason"], card["wording"]) == ("missing_company", 1, 1, "Chick-fil-a", LOST, "model") and card["sentence"] == asked and card["question"] == asked + " [y/N] "
+    assert card["text"] == (f"      NOT FOUND   Chick-fil-a: {LOST}\n        still on your order   F: Ford Motor Co (F)\n                              GM: General Motors Co (GM)\n"
+                            "                              Procter and gamble: The Procter & Gamble Company (PG)\n                              Google: Alphabet Inc. (GOOGL), the listed owner of what you typed")
+    assert [k["symbol"] for k in card["kept"]] == ["F", "GM", "PG", "GOOGL"] and order.subject == ["F", "GM", "PG", "GOOGL"] and order.data.notes == [f"dropped at the user's word: Chick-fil-a ({LOST})"]
+    assert said == [f"      Chick-fil-a was not found ({LOST}) and was left out at your word; the order goes on with F, GM, PG and GOOGL"]
+
+
+@pytest.mark.parametrize("answer, asked_model, why", [(False, 1, "you said no to going on without Chick-fil-a"), (None, 1, "nobody answered whether to go on without Chick-fil-a"), ("no approver", 0, "Ask mode needs a person to answer"),
+                                                       ("nobody at the keyboard", 0, "Ask mode needs a person to answer")])
+def test_a_no_or_no_answer_stops_the_order_with_the_reasons_and_nothing_is_dropped_on_the_users_behalf(answer, asked_model, why):
+    approver = {"no approver": None, "nobody at the keyboard": terminal_approver(interactive=False)}.get(answer, lambda card: answer)
+    named, order, said, model, _ = naming(D_ASK, [WORDING], approver=approver)
+    assert named.problems[0] == f"Chick-fil-a: {LOST}" and named.problems[-1].startswith(why) and named.orders == [] and named.dropped == []
+    assert order.direct_orders == [] and order.data is None and order.subject is None and said == [] and len(model.seen) == asked_model       # a question nobody can answer is not worded by a model
+
+
+def test_two_missing_stocks_are_asked_about_in_the_order_typed_the_code_checks_the_wording_and_a_no_to_the_second_stops_the_order():
+    orders = [it.DirectOrder(side="buy", symbol="F"), it.DirectOrder(side="buy", company="Chick-fil-a"), it.DirectOrder(side="buy", symbol="ZZZZ")]
+    cards = []
+    named, order, said, model, _ = naming(D_ASK, [WORDING, WORDING, WORDING], approver=lambda card: cards.append(card) or True, orders=orders)
+    assert [(c["n"], c["of"], c["typed"], c["wording"]) for c in cards] == [(1, 2, "Chick-fil-a", "model"), (2, 2, "ZZZZ", "code")] and len(model.seen) == 3
+    assert cards[1]["sentence"] == "ZZZZ was not found: no such symbol in Finnhub's directory. OK to continue without it? Your order would go on with F."      # the model's words were about Chick-fil-a: refused twice, so the code's own sentence
+    assert named.problems == [] and order.subject == ["F"] and [d["typed"] for d in named.dropped] == ["Chick-fil-a", "ZZZZ"] and len(order.data.notes) == 2
+    answers = iter([True, False])
+    named, order, *_ = naming(D_ASK, [WORDING, WORDING, WORDING], approver=lambda card: next(answers), orders=orders)
+    assert named.problems[-1] == "you said no to going on without ZZZZ" and order.direct_orders == [] and order.data is None and named.dropped == []     # the first yes is not kept: the order stops whole
+
+
+@pytest.mark.parametrize("mode", ["auto", "ask"])
+def test_a_blocking_issue_stops_the_run_in_either_mode_and_nothing_is_asked(mode):
+    profile = D_AUTO if mode == "auto" else D_ASK
+    nothing = [it.DirectOrder(side="buy", company="Chick-fil-a"), it.DirectOrder(side="buy", symbol="ZZZZ")]                    # nothing the user named is listed
+    named, order, said, model, _ = naming(profile, [WORDING], approver=lambda card: pytest.fail("a blocking issue asks nothing"), orders=nothing)
+    assert named.problems == [f"Chick-fil-a: {LOST}", "ZZZZ: Symbol: ZZZZ is not found"] and order.direct_orders == [] and order.data is None and model.seen == []
+    named, order, said, model, _ = naming(profile, [WORDING], approver=lambda card: pytest.fail("a blocking issue asks nothing"), search=flaky({"F": SymbolLookupError("down", reason="the symbol lookup failed (HTTP 429)")}))
+    assert any(p.startswith("F: the symbol lookup failed (") for p in named.problems) and order.direct_orders == [] and order.data is None and model.seen == [] and named.dropped == []     # an outage is not a company to ignore
+
+
+def test_the_models_real_wording_passes_the_check_and_the_same_words_about_another_stock_or_too_long_do_not():
+    asked = missing._question_of(WORDING)
+    assert missing.check_wording(asked, "Chick-fil-a", 400) == asked and missing.check_wording(asked, "chick-fil-A", 400) == asked
+    for typed, limit, why in (("Google", 400, "does not name 'Google'"), ("Chick-fil-a", 60, "at most 60")):
+        with pytest.raises(ValueError, match=why):
+            missing.check_wording(asked, typed, limit)
+    facts = NAMES["wording"]["Chick-fil-a"]["facts"]
+    wording = missing.word_question(Replay([WORDING]), facts, load_account_manager_config())
+    assert (wording.source, wording.text, wording.calls, wording.why) == ("model", asked, 1, "")
+
+
+def test_without_a_model_or_with_one_that_fails_the_codes_own_sentence_is_shown_and_the_user_is_never_blocked():
+    facts = NAMES["wording"]["Chick-fil-a"]["facts"]
+    for model in (None, object(), Broken()):
+        wording = missing.word_question(model, facts, load_account_manager_config())
+        assert wording.source == "code" and wording.text == CODE_SENTENCE and "password" not in wording.why
+
+
+class JacobDesk:
+    """The REAL desk over Jacob's request, with no database: the real Account Manager (its model the replay of its real reading of the request, then of its real wording), the real Data Clerk's directory, the stored closes,
+    the real Trader with no model. The Data Clerk's node, the Advisor and the Critic fail the test if they are built."""
+
+    def __init__(self, mode, answers=(), wording=(WORDING,)):
+        self.cards, self.said, self.answers = [], [], iter(answers)
+        self.model = Replay([FORM, *wording])
+        owner = OwnerReplay()
+        request = {"ask": {"text": JACOB, "default_count": 3, "fetch": False}, "account": {"portfolio": D_CASH, "profile": D_AUTO if mode == "auto" else D_ASK, "mode": mode}, "trade": {"mode": "paper", "book": False, "model": False}}
+
+        def manager():
+            am = AccountManager(model=self.model, model_id="recorded", clerk=clerk(owner))
+            am.screen = self.said.append
+            return am
+
+        self.state = desk.run_desk(request, clerk_factory=never("Data Clerk's node"), advisor_factory=never("Advisor"), critic_factory=never("Critic"), funds_factory=manager, with_critic=True, with_trader=True,
+                                   trader_factory=lambda order: trader(), confirm=lambda intent: True, approver=self.approve)
+
+    def approve(self, card):
+        self.cards.append(card)
+        return next(self.answers, None)
+
+
+def test_in_auto_mode_the_desk_takes_jacobs_request_without_chick_fil_a_and_asks_nothing():
+    run = JacobDesk("auto")
+    state, order = run.state, run.state["order"]
+    assert state["path"] == ["account_manager", "account_manager_direct", "trader"] and state["errors"] == [] and order.errors == [] and order.status == "traded"
+    assert run.cards == [] and len(run.model.seen) == 1                                                                     # nothing was asked, and the model was used once: to read the request
+    assert order.subject == ["F", "GM", "PG", "GOOGL"] and [(d["symbol"], d["will_trade"], d["origin"]) for d in order.trade_decisions] == [(s, "yes_user", "direct") for s in order.subject]
+    assert [(t["symbol"], t["status"]) for t in order.trades] == [(s, "filled") for s in order.subject] and "Chick-fil-a" not in " ".join(d["symbol"] for d in order.trade_decisions)
+    assert state["plan"]["dropped"] == [{"typed": "Chick-fil-a", "reason": LOST, "mode": "auto"}] and [o.named for o in state["plan"]["intent"].orders] == STAYS and "Chick-fil-a" not in state["plan"]["intent"].describe()
+    assert order.data.notes == [f"dropped in Auto mode: Chick-fil-a ({LOST})"] and len(run.said) == 1 and run.said[0].lstrip().startswith("Chick-fil-a was not found")
+
+
+def test_in_ask_mode_the_desk_asks_about_chick_fil_a_and_a_yes_goes_on_to_the_direct_decision_and_the_trader():
+    """AMENDED (entry 106; Jacob: *"No. its suppose to be round-robin. Not all in one."*). Ask mode spent the dollars on the first stock (F 839 shares, GM, PG and GOOGL `no_funds`: the real `d_pyrett_names_ask.json`), so the user
+    was asked about F alone. The money is spread round-robin in BOTH modes now: the user is asked about each of the four, and F, GM, PG and GOOGL are 23, 19, 18 and 17 shares as in Auto mode."""
+    run = JacobDesk("ask", answers=[True, True, True, True, True])
+    state, order = run.state, run.state["order"]
+    assert [c.get("kind") for c in run.cards] == ["missing_company", None, None, None, None] and run.cards[0]["wording"] == "model" and state["path"] == ["account_manager", "account_manager_direct", "trader"] and state["errors"] == []
+    assert [(c["symbol"], c["shares"]) for c in run.cards[1:]] == [("F", 23), ("GM", 19), ("PG", 18), ("GOOGL", Decimal("17.025628"))]      # AMENDED (entry 111, M3): GOOGL, the stock with the fewest shares, takes a fraction of a share with the leftover
+    assert order.subject == ["F", "GM", "PG", "GOOGL"] and order.status == "traded" and [t["symbol"] for t in order.trades] == ["F", "GM", "PG", "GOOGL"] and order.data.notes == [f"dropped at the user's word: Chick-fil-a ({LOST})"]
+    assert state["plan"]["dropped"][0]["mode"] == "ask" and "Chick-fil-a" not in [d["symbol"] for d in order.trade_decisions]
+
+
+@pytest.mark.parametrize("answers, why", [([False], "you said no to going on without Chick-fil-a"), ([], "nobody answered whether to go on without Chick-fil-a")])
+def test_a_no_or_no_answer_ends_the_desk_at_its_first_node_with_the_reasons_and_asks_to_clarify(answers, why):
+    run = JacobDesk("ask", answers=answers)
+    state, order = run.state, run.state["order"]
+    assert state["path"] == ["account_manager"] and state["errors"][0] == f"Chick-fil-a: {LOST}" and state["errors"][-1].startswith(why) and state["clarify"] is True
+    assert order.status == "new" and order.direct_orders == [] and order.trade_decisions == [] and order.trades == [] and state["plan"]["dropped"] == [] and len(run.cards) == 1
+
+
+def jacob_session(db, mode, ask):
+    """The session of Jacob's request on a throwaway account of $10,000 with the real Postgres, as `session.run_session` runs it."""
+    owner = OwnerReplay()
+    parts = session.Parts(store=db.store, clerk=clerk(owner), advisor=Forbidden(), critic=Forbidden(), trader=trader(),
+                          new_manager=lambda: AccountManager(model=Replay([FORM, WORDING]), model_id="recorded", clerk=clerk(owner)))
+    args = session.build_parser().parse_args(["--name", "Direct Names Test", "--age", "40", "--risk", "moderate", "--cash", "10000", "--mode", mode, "--prompt", JACOB, "--yes"])
+    lines: list[str] = []
+    code = session.run_session(args, session.check_args(session.build_parser(), args), parts, ask=ask, out=lines.append)
+    return code, keep_track(db, lines)
+
+
+def test_the_session_in_ask_mode_shows_the_question_and_a_no_ends_with_the_reasons_and_the_request_to_clarify(db):
+    asked = []
+    code, text = jacob_session(db, "ask", lambda prompt: asked.append(prompt) or "n")
+    assert code == 1 and len(asked) == 1 and asked[0].startswith("Chick-fil-a was not found") and asked[0].endswith("[y/N] ")
+    assert f"NOT FOUND   Chick-fil-a: {LOST}" in text and "still on your order   F: Ford Motor Co (F)" in text and "the listed owner of what you typed" in text
+    assert "SESSION  nothing was placed" in text and "  - you said no to going on without Chick-fil-a" in text and direct.CLARIFY in text
+    assert "the Data Clerk's work order is new" not in text and "the Trader executed" not in text and "holdings  none" in text and "SESSION  PASSED" not in text
+
+
+def test_the_session_in_auto_mode_drops_chick_fil_a_tells_the_user_asks_nothing_and_places_the_four_orders(db):
+    code, text = jacob_session(db, "auto", lambda prompt: pytest.fail(f"Auto mode asks nothing, and it asked {prompt!r}"))
+    assert code == 0 and f"Chick-fil-a was not found ({LOST}) and was left out (Auto mode asks nothing); the order goes on with F, GM, PG and GOOGL" in text
+    assert f"the Data Clerk did not find: you typed 'Chick-fil-a': {LOST}" in text and "you typed 'Google': Alphabet Inc. (GOOGL), the listed owner of what you typed" in text
+    assert [symbol for symbol in ("F", "GM", "PG", "GOOGL") if f"{symbol} " in text.split("TRADER  results")[1]] == ["F", "GM", "PG", "GOOGL"] and "SESSION  PASSED" in text
+    held = {p.symbol for p in db.store.list_portfolio(db.made[-1]).positions}
+    assert held == {"F", "GM", "PG", "GOOGL"}

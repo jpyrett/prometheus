@@ -1,9 +1,9 @@
-"""The shapes the Advisor writes: the recommendation record (schema 2), the candidate that did not make the list, and the parts they are made of (Advisor v1 spec section 14).
+"""The shapes the Advisor writes: the recommendation record (schema 3), the candidate that did not make the list, and the parts they are made of (Advisor v1 spec section 14).
 
 A record is the CONTRACT with the Critic: everything the Critic needs to judge a recommendation without asking the Advisor anything is in it. Each section answers one question:
 
     identity        which request, which case, which regime, when
-    action          open | add | hold | reduce | avoid, and why; what is held
+    action          `open` (a recommendation to BUY: nothing else exists), and why
     families        which strategy families ran, whether they could be computed, what they scored, what they were scored FROM (`features_used`), the evidence ids
     quality         the haircut multiplier and every check that applied or was skipped
     evidence        the verified quotes (v0 shape), the filing-evidence items cited, the events, the counter-evidence, the contradictions
@@ -11,20 +11,28 @@ A record is the CONTRACT with the Critic: everything the Critic needs to judge a
     agreement       how much the text agrees, how complete the inputs are, and the confidence that results
     ranking         the composite edge, the cost, the expected excess return after cost, the stance, the rank
     trade           the plan: entry zone, stop, target, time stop, order style, invalidation rules (prices and dates: NO size, how much is the Account Manager's, entry 80)
-    risk, portfolio_fit, gates, thesis (the model's words, checked), audit (which model calls, which config)
+    risk, concentration, gates, thesis (the model's words, checked), audit (which model calls, which config)
 
 The v0 fields (`symbol, company, stance, model_score, score, supported, consistent, bullish_signals, bearish_signals, signals_claimed, signals_verified, signals_counted, signals, advisor`)
 keep their meaning, so `account_manager.top_recommendation` and the week 3 lab read a v1 record unchanged. `score` is `round(50 + 50 * the blend)` (Amendment 6); the expected excess return after cost was removed from the record (Amendment 7), and so were the size of the trade and the user's money (entry 80: the Advisor says which companies and at what
 prices, never how much).
+
+THE ADVISOR IS GIVEN NO PORTFOLIO, so a record carries nothing about the user's holdings (design choices entry 105; Jacob, 2026-11-15: *"never any portfolio related information"*): every record is a recommendation to
+buy, there is no `add`, `hold`, `reduce` or `avoid`, no number of shares held, no cost basis, no unrealized gain, no `held` flag on a candidate and no `portfolio_fit` (its two numbers were never computed; its note about how
+this run's own picks sit together is `concentration.note`). A sale never comes from the Advisor: it comes from the user's own order or from the Account Manager's RaiseFunds.
+
+SCHEMA 3 READS SCHEMA 2. A record made before that (the real captures of `tests/fixtures/session_real/` are version 2, every action `open`, nothing held) still loads: the retired keys are dropped when they hold the not-held
+values (`held_shares` 0, `cost_basis` and `unrealized_pct` null, the two `portfolio_fit` numbers null, `held` false) and `portfolio_fit.note` is read as `concentration.note`. A record that is NOT a purchase (its action is not `open`) or that says
+something is held is REFUSED, with the reason: it is not a recommendation the desk can use.
 
 Every model here forbids unknown fields: a typo in the code that builds a record fails when the record is built, not when the Critic reads it. A test asserts that no field except the ones
 listed in `MODEL_FIELDS` originates from a model's reply.
 """
 from typing import Any, Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-SCHEMA_VERSION = 2   # kept at 2 through the amendments that took a field out (Amendment 7, entry 80), as the Critic's record keeps its version: a field that goes is simply gone (the models forbid extras). Records stored before entry 80 still hold a size
+SCHEMA_VERSION = 3   # 3 since design choices entry 105: no holding of the user's is on a record (action `open` only, no `held_shares`, `cost_basis`, `unrealized_pct`, `held` or `portfolio_fit`). It was kept at 2 through the amendments that took a field out (Amendment 7, entry 80): a field that goes is simply gone (the models forbid extras). Records stored before entry 80 still hold a size
 # The ONLY places a model's words reach a record (spec 14): the model_score it gave, the thesis and bullets, the quotes of its signals and events, and the company name.
 MODEL_FIELDS = ("model_score", "thesis", "bull_case", "bear_case", "signals[*].quote", "events[*].quote", "company")
 
@@ -47,12 +55,25 @@ class Identity(_Model):
 
 
 class Action(_Model):
-    action: Literal["open", "add", "hold", "reduce", "avoid"]
+    """A recommendation is to BUY, and nothing else (entry 105). A version 2 record's retired keys are dropped when they say nothing is held; any other action, or a holding, is refused."""
+    action: Literal["open"]
     reason: str
-    held_shares: int = 0
-    cost_basis: float | None = None
-    unrealized_pct: float | None = None
     cooldown_of: str | None = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def _read_version_2(cls, data):
+        if not isinstance(data, dict):
+            return data
+        data = dict(data)
+        if data.get("action", "open") != "open":
+            raise ValueError(f"the action is {data['action']!r}: a recommendation is to buy (`open`) and the Advisor records no holding, sale, hold or addition (a sale comes from the user's own order or RaiseFunds)")
+        for key, empty in (("held_shares", 0), ("cost_basis", None), ("unrealized_pct", None)):
+            if key in data:
+                if data[key] not in (empty, None):
+                    raise ValueError(f"the record says something is held ({key} {data[key]!r}): the Advisor knows no holding of the user's")
+                del data[key]
+        return data
 
 
 class FamilyResult(_Model):
@@ -111,7 +132,7 @@ class Ranking(_Model):
     conflict: bool = False
     stance: Literal["bullish", "bearish", "neutral"] = "neutral"
     stance_reason: str | None = None
-    rank: int | None = None                # the place in the list this run returned (a reduction first)
+    rank: int | None = None                # the place in the list this run returned
     universe_rank: int | None = None       # the place among ALL the new ideas evaluated, best to worst (a symbol that failed a gate is ranked after those that did not)
     diversity_adjustment: bool = False
     displaced_by: str | None = None
@@ -149,9 +170,8 @@ class Risk(_Model):
     red_flags: list[str] = Field(default_factory=list)
 
 
-class PortfolioFit(_Model):
-    sector_weight_after: float | None = None             # needs the sector of every holding: not computed in this build
-    correlation_to_portfolio_63d: float | None = None    # needs the bars of every holding: not computed in this build
+class Concentration(_Model):
+    """How this run's OWN picks sit together ("three names are one bet"), worked out from the picks alone: nothing of the user's holdings is in it (entry 105; it was `portfolio_fit.note` in a version 2 record)."""
     note: str | None = None
 
 
@@ -208,11 +228,24 @@ class Recommendation(_Model):
     ranking: Ranking
     trade: TradePlan
     risk: Risk
-    portfolio_fit: PortfolioFit
+    concentration: Concentration
     gates: list[Gate] = Field(default_factory=list)
     thesis: Thesis = Field(default_factory=Thesis)
     audit: Audit
     critic: dict | None = None             # the Critic's feedback (`critic/feedback.py`), put here by the Critic after its review: the Advisor never writes it
+
+    @model_validator(mode="before")
+    @classmethod
+    def _read_version_2(cls, data):
+        """A version 2 record's `portfolio_fit` becomes `concentration` (its two numbers were never computed: any other value than null is refused, and so is a record that is not new enough to be read)."""
+        if not isinstance(data, dict) or "portfolio_fit" not in data:
+            return data
+        data = dict(data)
+        fit = data.pop("portfolio_fit")
+        if not isinstance(fit, dict) or any(fit.get(k) is not None for k in ("sector_weight_after", "correlation_to_portfolio_63d")) or set(fit) - {"sector_weight_after", "correlation_to_portfolio_63d", "note"}:
+            raise ValueError("the record carries portfolio information (`portfolio_fit`): the Advisor knows no portfolio")
+        data.setdefault("concentration", {"note": fit.get("note")})
+        return data
 
 
 class Candidate(_Model):
@@ -220,7 +253,6 @@ class Candidate(_Model):
     symbol: str
     company: str | None = None
     origin: str
-    held: bool = False
     gate: str | None = None
     gate_value: Any = None
     families: list[FamilyResult] = Field(default_factory=list)
@@ -232,3 +264,13 @@ class Candidate(_Model):
     reason: str
     cooldown_of: str | None = None
     theme_role: str | None = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def _read_version_2(cls, data):
+        """A version 2 candidate's `held: false` is dropped; `held: true` is refused (the Advisor knows no holding)."""
+        if isinstance(data, dict) and "held" in data:
+            data = dict(data)
+            if data.pop("held"):
+                raise ValueError("the candidate says it is held: the Advisor knows no holding of the user's")
+        return data

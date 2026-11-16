@@ -1,0 +1,669 @@
+{
+ "_note": "Recorded from the replay server over bill_gates_direct_order_funded.json by scripts/record_fixture.mjs (run 9d640567048f). Every event is exactly what the page received; nothing was edited.",
+ "source": "bill_gates_direct_order_funded.json",
+ "events": [
+  {
+   "seq": 1,
+   "type": "run_started",
+   "data": {
+    "run_id": "9d640567048f",
+    "mode": "replay",
+    "account_id": 0,
+    "prompt": "Buy 50 shares of MSFT",
+    "options": {
+     "strict": false,
+     "neutral": true,
+     "fetch": false
+    },
+    "trade_mode": "ask",
+    "started_utc": "2026-11-15T21:23:00Z",
+    "stages": [
+     {
+      "key": "work_order",
+      "label": "Create Work Order",
+      "agent": "account_manager",
+      "agent_label": "Account Manager"
+     },
+     {
+      "key": "gather",
+      "label": "Gather Data",
+      "agent": "data_clerk",
+      "agent_label": "Data Clerk"
+     },
+     {
+      "key": "recommend",
+      "label": "Create Recommendations",
+      "agent": "advisor",
+      "agent_label": "Advisor"
+     },
+     {
+      "key": "critique",
+      "label": "Critique · Approve / Deny",
+      "agent": "critic",
+      "agent_label": "Critic"
+     },
+     {
+      "key": "prepare",
+      "label": "Prepare Trading Order",
+      "agent": "account_manager",
+      "agent_label": "Account Manager"
+     },
+     {
+      "key": "trade",
+      "label": "Trade · Place Order",
+      "agent": "trader",
+      "agent_label": "Trader"
+     }
+    ],
+    "source": "bill_gates_direct_order_funded.json",
+    "ts": 1794777780.523
+   }
+  },
+  {
+   "seq": 2,
+   "type": "portfolio",
+   "data": {
+    "account": {
+     "id": 0,
+     "name": "Bill Gates",
+     "age": null,
+     "risk": "moderate",
+     "mode": "ask",
+     "sample": false,
+     "read_only": true
+    },
+    "positions": [],
+    "cash": 30000,
+    "invested": 0,
+    "total": 30000,
+    "as_of_utc": "2026-11-15T21:23:00Z",
+    "changes": {},
+    "cash_change": 0,
+    "cash_before": 30000,
+    "ts": 1794777780.523
+   }
+  },
+  {
+   "seq": 3,
+   "type": "log",
+   "data": {
+    "agent": "system",
+    "level": "info",
+    "text": "REPLAY of a recorded session (bill_gates_direct_order_funded.json): no model is called, no quote is read and no database is touched. The seconds shown are the replay's own pacing.",
+    "block": false,
+    "ts": 1794777780.523
+   }
+  },
+  {
+   "seq": 4,
+   "type": "log",
+   "data": {
+    "agent": "you",
+    "level": "info",
+    "text": "Buy 50 shares of MSFT",
+    "block": false,
+    "ts": 1794777780.523
+   }
+  },
+  {
+   "seq": 5,
+   "type": "log",
+   "data": {
+    "agent": "account_manager",
+    "level": "info",
+    "text": "understood: buy 50 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "block": false,
+    "ts": 1794777780.523
+   }
+  },
+  {
+   "seq": 6,
+   "type": "question",
+   "data": {
+    "question_id": "0f6a3c8237",
+    "kind": "confirm",
+    "title": "Confirm what was understood",
+    "text": "I understood: buy 50 shares of MSFT (your own order: no recommendation is made and the Critic is not asked). Go ahead?",
+    "ts": 1794777780.523
+   }
+  },
+  {
+   "seq": 7,
+   "type": "question_closed",
+   "data": {
+    "question_id": "0f6a3c8237",
+    "answer": true,
+    "by": "you",
+    "ts": 1794777780.527
+   }
+  },
+  {
+   "seq": 8,
+   "type": "log",
+   "data": {
+    "agent": "you",
+    "level": "info",
+    "text": "yes, go ahead",
+    "block": false,
+    "ts": 1794777780.527
+   }
+  },
+  {
+   "seq": 9,
+   "type": "log",
+   "data": {
+    "agent": "system",
+    "level": "info",
+    "text": "REPLAY: your answers are not applied. The recorded session goes on as it was.",
+    "block": false,
+    "ts": 1794777780.527
+   }
+  },
+  {
+   "seq": 10,
+   "type": "stage",
+   "data": {
+    "key": "work_order",
+    "state": "busy",
+    "node": "account_manager",
+    "seconds": 0,
+    "ts": 1794777780.527
+   }
+  },
+  {
+   "seq": 11,
+   "type": "log",
+   "data": {
+    "agent": "account_manager",
+    "level": "info",
+    "text": "read the request and made the work order (1.2 s)",
+    "block": false,
+    "ts": 1794777781.733
+   }
+  },
+  {
+   "seq": 12,
+   "type": "log",
+   "data": {
+    "agent": "data_clerk",
+    "level": "info",
+    "text": "found: you typed 'MSFT': Microsoft Corp (MSFT), appended to the work order",
+    "block": true,
+    "ts": 1794777781.733
+   }
+  },
+  {
+   "seq": 13,
+   "type": "work_order",
+   "data": {
+    "request_id": "2c071a8e5856",
+    "status": "new",
+    "kind": "direct",
+    "understood": "buy 50 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "rows": [
+     {
+      "key": "direct-2c071a8e5856-1",
+      "symbol": "MSFT",
+      "company": "Microsoft Corp",
+      "rank": null,
+      "group": "direct",
+      "advisor": null,
+      "critic": null,
+      "decision": null,
+      "trade": null,
+      "detail": {
+       "header": {
+        "score": null,
+        "stance": null,
+        "rank": null,
+        "of": null,
+        "strategy": null
+       },
+       "message": "Your own order: no recommendation is made and the Critic is not asked.",
+       "your_order": "buy 50 shares of MSFT",
+       "order": null
+      }
+     }
+    ],
+    "ts": 1794777781.733
+   }
+  },
+  {
+   "seq": 14,
+   "type": "stage",
+   "data": {
+    "key": "work_order",
+    "state": "done",
+    "node": "account_manager",
+    "seconds": 1.2,
+    "ts": 1794777781.733
+   }
+  },
+  {
+   "seq": 15,
+   "type": "stage",
+   "data": {
+    "key": "gather",
+    "state": "skipped",
+    "node": "data_clerk",
+    "seconds": 0,
+    "ts": 1794777781.733
+   }
+  },
+  {
+   "seq": 16,
+   "type": "stage",
+   "data": {
+    "key": "recommend",
+    "state": "skipped",
+    "node": "advisor",
+    "seconds": 0,
+    "ts": 1794777781.733
+   }
+  },
+  {
+   "seq": 17,
+   "type": "stage",
+   "data": {
+    "key": "critique",
+    "state": "skipped",
+    "node": "critic",
+    "seconds": 0,
+    "ts": 1794777781.733
+   }
+  },
+  {
+   "seq": 18,
+   "type": "stage",
+   "data": {
+    "key": "prepare",
+    "state": "busy",
+    "node": "account_manager_direct",
+    "seconds": 0,
+    "ts": 1794777781.733
+   }
+  },
+  {
+   "seq": 19,
+   "type": "log",
+   "data": {
+    "agent": "account_manager",
+    "level": "info",
+    "text": "priced the trades you named and decided them (no recommendation, no Critic review) (1.2 s)",
+    "block": false,
+    "ts": 1794777782.939
+   }
+  },
+  {
+   "seq": 20,
+   "type": "log",
+   "data": {
+    "agent": "account_manager",
+    "level": "info",
+    "text": "DIRECT ORDER  you named the trade yourself: no recommendation was made and the Critic was not asked\n  buy 50 shares of Microsoft Corp (MSFT) at $523.88 (about $26,194.00)   APPROVED: your own order, sent to the Trader",
+    "block": true,
+    "ts": 1794777782.939
+   }
+  },
+  {
+   "seq": 21,
+   "type": "work_order",
+   "data": {
+    "request_id": "2c071a8e5856",
+    "status": "decided",
+    "kind": "direct",
+    "understood": "buy 50 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "rows": [
+     {
+      "key": "direct-2c071a8e5856-1",
+      "symbol": "MSFT",
+      "company": "Microsoft Corp",
+      "rank": null,
+      "group": "direct",
+      "advisor": null,
+      "critic": null,
+      "decision": {
+       "will_trade": "yes_user",
+       "words": "yes (you approved)",
+       "action": "open",
+       "shares": 50,
+       "est_cost": 26194,
+       "origin": "direct"
+      },
+      "trade": null,
+      "detail": {
+       "header": {
+        "score": null,
+        "stance": null,
+        "rank": null,
+        "of": null,
+        "strategy": null
+       },
+       "message": "Your own order: no recommendation is made and the Critic is not asked.",
+       "your_order": "buy 50 shares of MSFT",
+       "order": {
+        "decision": {
+         "will_trade": "yes_user",
+         "words": "yes (you approved)",
+         "action": "open",
+         "shares": 50,
+         "est_cost": 26194,
+         "origin": "direct",
+         "reason": "the user approved: you named this trade yourself (buy 50 shares of MSFT): no recommendation was made and the Critic was not asked",
+         "mode": "ask",
+         "price": 523.88,
+         "balance": null,
+         "binding": null,
+         "allocation": null
+        }
+       }
+      }
+     }
+    ],
+    "ts": 1794777782.939
+   }
+  },
+  {
+   "seq": 22,
+   "type": "stage",
+   "data": {
+    "key": "prepare",
+    "state": "done",
+    "node": "account_manager_direct",
+    "seconds": 1.2,
+    "ts": 1794777782.939
+   }
+  },
+  {
+   "seq": 23,
+   "type": "stage",
+   "data": {
+    "key": "trade",
+    "state": "busy",
+    "node": "trader",
+    "seconds": 0,
+    "ts": 1794777782.939
+   }
+  },
+  {
+   "seq": 24,
+   "type": "work_order",
+   "data": {
+    "request_id": "2c071a8e5856",
+    "status": "decided",
+    "kind": "direct",
+    "understood": "buy 50 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "rows": [
+     {
+      "key": "direct-2c071a8e5856-1",
+      "symbol": "MSFT",
+      "company": "Microsoft Corp",
+      "rank": null,
+      "group": "direct",
+      "advisor": null,
+      "critic": null,
+      "decision": {
+       "will_trade": "yes_user",
+       "words": "yes (you approved)",
+       "action": "open",
+       "shares": 50,
+       "est_cost": 26194,
+       "origin": "direct"
+      },
+      "trade": {
+       "status": "filled",
+       "side": "buy",
+       "shares": 50,
+       "price": 524.1419,
+       "amount": 26207.1
+      },
+      "detail": {
+       "header": {
+        "score": null,
+        "stance": null,
+        "rank": null,
+        "of": null,
+        "strategy": null
+       },
+       "message": "Your own order: no recommendation is made and the Critic is not asked.",
+       "your_order": "buy 50 shares of MSFT",
+       "order": {
+        "decision": {
+         "will_trade": "yes_user",
+         "words": "yes (you approved)",
+         "action": "open",
+         "shares": 50,
+         "est_cost": 26194,
+         "origin": "direct",
+         "reason": "the user approved: you named this trade yourself (buy 50 shares of MSFT): no recommendation was made and the Critic was not asked",
+         "mode": "ask",
+         "price": 523.88,
+         "balance": null,
+         "binding": null,
+         "allocation": null
+        },
+        "trade": {
+         "status": "filled",
+         "side": "buy",
+         "shares": 50,
+         "price": 524.1419,
+         "amount": 26207.1,
+         "trade_id": "T1",
+         "reason": "market order filled at the quote 523.8800 with 5 bps of slippage",
+         "reject_code": null,
+         "order_type": "market",
+         "mode": "paper",
+         "slippage_bps": 5,
+         "price_source": "quote",
+         "booked": true
+        }
+       }
+      }
+     }
+    ],
+    "ts": 1794777785.15
+   }
+  },
+  {
+   "seq": 25,
+   "type": "portfolio",
+   "data": {
+    "account": {
+     "id": 0,
+     "name": "Bill Gates",
+     "age": null,
+     "risk": "moderate",
+     "mode": "ask",
+     "sample": false,
+     "read_only": true
+    },
+    "positions": [
+     {
+      "symbol": "MSFT",
+      "name": "Microsoft Corp",
+      "shares": 50,
+      "cost_basis": 524.1419,
+      "value": 26207.09
+     }
+    ],
+    "cash": 3792.9,
+    "invested": 26207.09,
+    "total": 29999.99,
+    "as_of_utc": "2026-11-15T21:23:05Z",
+    "changes": {
+     "MSFT": 50
+    },
+    "cash_change": -26207.1,
+    "cash_before": 30000,
+    "ts": 1794777785.151
+   }
+  },
+  {
+   "seq": 26,
+   "type": "log",
+   "data": {
+    "agent": "trader",
+    "level": "info",
+    "text": "T1 MSFT buy 50: market order filled at the quote 523.8800 with 5 bps of slippage",
+    "block": false,
+    "ts": 1794777785.151
+   }
+  },
+  {
+   "seq": 27,
+   "type": "log",
+   "data": {
+    "agent": "account_manager",
+    "level": "info",
+    "text": "booked T1 in the account: cash $3,792.90",
+    "block": false,
+    "ts": 1794777785.151
+   }
+  },
+  {
+   "seq": 28,
+   "type": "log",
+   "data": {
+    "agent": "trader",
+    "level": "info",
+    "text": "executed the permitted trades (simulated: nothing is sent to a broker) (1.2 s)",
+    "block": false,
+    "ts": 1794777785.151
+   }
+  },
+  {
+   "seq": 29,
+   "type": "work_order",
+   "data": {
+    "request_id": "2c071a8e5856",
+    "status": "traded",
+    "kind": "direct",
+    "understood": "buy 50 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "rows": [
+     {
+      "key": "direct-2c071a8e5856-1",
+      "symbol": "MSFT",
+      "company": "Microsoft Corp",
+      "rank": null,
+      "group": "direct",
+      "advisor": null,
+      "critic": null,
+      "decision": {
+       "will_trade": "yes_user",
+       "words": "yes (you approved)",
+       "action": "open",
+       "shares": 50,
+       "est_cost": 26194,
+       "origin": "direct"
+      },
+      "trade": {
+       "status": "filled",
+       "side": "buy",
+       "shares": 50,
+       "price": 524.1419,
+       "amount": 26207.1
+      },
+      "detail": {
+       "header": {
+        "score": null,
+        "stance": null,
+        "rank": null,
+        "of": null,
+        "strategy": null
+       },
+       "message": "Your own order: no recommendation is made and the Critic is not asked.",
+       "your_order": "buy 50 shares of MSFT",
+       "order": {
+        "decision": {
+         "will_trade": "yes_user",
+         "words": "yes (you approved)",
+         "action": "open",
+         "shares": 50,
+         "est_cost": 26194,
+         "origin": "direct",
+         "reason": "the user approved: you named this trade yourself (buy 50 shares of MSFT): no recommendation was made and the Critic was not asked",
+         "mode": "ask",
+         "price": 523.88,
+         "balance": null,
+         "binding": null,
+         "allocation": null
+        },
+        "trade": {
+         "status": "filled",
+         "side": "buy",
+         "shares": 50,
+         "price": 524.1419,
+         "amount": 26207.1,
+         "trade_id": "T1",
+         "reason": "market order filled at the quote 523.8800 with 5 bps of slippage",
+         "reject_code": null,
+         "order_type": "market",
+         "mode": "paper",
+         "slippage_bps": 5,
+         "price_source": "quote",
+         "booked": true
+        }
+       }
+      }
+     }
+    ],
+    "ts": 1794777785.151
+   }
+  },
+  {
+   "seq": 30,
+   "type": "stage",
+   "data": {
+    "key": "trade",
+    "state": "done",
+    "node": "trader",
+    "seconds": 1.2,
+    "ts": 1794777785.151
+   }
+  },
+  {
+   "seq": 31,
+   "type": "activity",
+   "data": {
+    "calls": 5,
+    "tokens_in": 7884,
+    "tokens_out": 176,
+    "model": "openai/gpt-oss-120b",
+    "node": "trader",
+    "ts": 1794777785.151
+   }
+  },
+  {
+   "seq": 32,
+   "type": "log",
+   "data": {
+    "agent": "trader",
+    "level": "info",
+    "text": "TRADER  results\nTRADER  (model openai/gpt-oss-120b at temperature 0; PAPER mode, prices: the current quotes (order b13379e349b3); run 2026-11-13 15:30 ET)\n  T1     buy  50 of 50 MSFT   market        FILLED 50 at 524.1419 = $26,207.10   placed by model   booked\n  account  cash $30,000.00 -> $3,792.90; MSFT 0 -> 50 shares; booked in the account book\n  summary (by model): Filled 1 trade for 50 shares at $524.1419, cash left $3792.9.",
+    "block": true,
+    "ts": 1794777785.151
+   }
+  },
+  {
+   "seq": 33,
+   "type": "run_finished",
+   "data": {
+    "status": "traded",
+    "headline": "The portfolio changed: +50 MSFT. Cash $30,000.00 → $3,792.90.",
+    "reasons": [],
+    "path": [
+     "account_manager",
+     "account_manager_direct",
+     "trader"
+    ],
+    "seconds": {
+     "account_manager": 1.2,
+     "account_manager_direct": 1.2,
+     "trader": 1.2
+    },
+    "total_seconds": 4.6,
+    "ts": 1794777785.151
+   }
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "_note": "The REAL reply of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to the request box's own default text on the web page, recorded on 2026-11-15 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py), one call, no retry (design choices entry 108, Part G). 'replies' is what the model answered, in order. Nothing here is edited. The test gives the reply back to the real Account Manager, whose code checks every field against the user's own words.",
+ "model": "openai/gpt-oss-120b",
+ "requests": {
+  "Buy an even mixture of 3 most recommended stocks in the pizza restaurants using $3000 of my available money": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"pizza restaurants\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"even\", \"budget\": 3000, \"orders\": []}"
+   ]
+  }
+ }
+}

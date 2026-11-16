@@ -11,6 +11,7 @@ import itertools
 import sys
 import time
 from datetime import date
+from decimal import Decimal
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -18,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from prometheus.common import portfolio as pf  # noqa: E402
 from prometheus.reasoning import raise_funds as rf  # noqa: E402
 
-PRICES = {"LLY": 1409.38, "SNDK": 1126.52, "MU": 855.10, "F": 12.31, "GM": 88.34, "FITB": 53.93, "PG": 162.06, "MCD": 263.04, "GOOGL": 280.03, "TSLA": 398.50, "MSFT": 520.99}
+PRICES = {symbol: Decimal(price) for symbol, price in {"LLY": "1409.38", "SNDK": "1126.52", "MU": "855.10", "F": "12.31", "GM": "88.34", "FITB": "53.93", "PG": "162.06", "MCD": "263.04", "GOOGL": "280.03", "TSLA": "398.50", "MSFT": "520.99"}.items()}      # the recorded 2026-11-03 closes, Decimals (design choices entry 112)
 TODAY = date(2026, 11, 3)
 SCENARIO = Path(__file__).resolve().parents[1] / "configs" / "portfolios" / "jacob_pyrett_complex.json"
 
@@ -29,11 +30,11 @@ def oracle(portfolio, target, shares, max_stocks, prices=PRICES, never_liquidate
     prob = rf.build_problem(portfolio, target, shares, prices, TODAY, only_green=True, lean=True, green_first=True, never_liquidate=never_liquidate)
     holdings = [h for h in prob.holdings.values() if prob.eligible(h)]
     need, best, count = prob.need, None, 0
-    for counts in itertools.product(*[range(h.sellable + 1) for h in holdings]):
+    for counts in itertools.product(*[range(int(h.sellable) + 1) for h in holdings]):
         k = sum(1 for c in counts if c)
         if k == 0 or k > max_stocks:
             continue
-        total = sum(c * h.price for c, h in zip(counts, holdings))
+        total = sum((c * h.price for c, h in zip(counts, holdings)), Decimal(0))
         if total < need or total - max(h.price for c, h in zip(counts, holdings) if c) >= need:   # short, or not lean: even the last step, of the dearest sold stock, could have sold a share fewer
             continue
         sells = tuple((h.symbol, c) for c, h in zip(counts, holdings) if c)
@@ -46,8 +47,8 @@ def oracle(portfolio, target, shares, max_stocks, prices=PRICES, never_liquidate
 
 def apply(portfolio, target, shares, sells, prices=PRICES):
     """The portfolio after a purchase paid for by `sells` ([(symbol, shares)])."""
-    proceeds = sum(k * prices[s] for s, k in sells)
-    return pf.after_purchase(portfolio, target, shares, prices[target], sells, round(portfolio.cash_avail + proceeds - shares * prices[target], 2), TODAY)
+    proceeds = sum((pf.trade_amount(k, prices[s]) for s, k in sells), Decimal(0))
+    return pf.after_purchase(portfolio, target, shares, prices[target], sells, portfolio.cash_avail + proceeds - pf.trade_amount(shares, prices[target]), TODAY)
 
 
 PURCHASES = [("LLY", 3), ("SNDK", 1), ("MU", 3)]

@@ -1,0 +1,51 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to nine requests, recorded on 2026-11-16 by AccountManager.understand_request with the Account Manager's own prompt AS CHANGED BY design choices entry 113 / design/request_reading_spec.md section 4 (the model is the reader: the keyword phrase kept word for word when quoted, the tickers in capitals, the companies written properly, the side whatever word was used): one call each, no retry, no fetch, no account. 'replies' is what the model answered, in order. Nothing here is edited. Requests 5 to 9 are the ones the old wording filters refused or could not read (an even split said as 'equal amounts', a lower-case ticker, a quoted company, 'get rid of', dollars). The tests give these replies back to the real parse_intent, whose code checks the form and the numbers.",
+ "model": "openai/gpt-oss-120b",
+ "requests": {
+  "I want to buy the best \"AI stocks\" as a theme. Buy $20000 worth of the top 3": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 20000, \"orders\": []}"
+   ]
+  },
+  "I want to buy the best AI stocks. Buy $20000 worth of the top 3": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 20000, \"orders\": []}"
+   ]
+  },
+  "Buy the 3 most recommended EV stocks with $5,000": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"EV\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 5000, \"orders\": []}"
+   ]
+  },
+  "Look at the best 5G companies": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"5G\", \"symbols\": [], \"companies\": [], \"count\": 5, \"allocation\": \"default\", \"budget\": null, \"orders\": []}"
+   ]
+  },
+  "Put $20,000 into the 3 best AI names, equal amounts": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"even\", \"budget\": 20000, \"orders\": []}"
+   ]
+  },
+  "buy 50 msft": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 50}]}"
+   ]
+  },
+  "buy 50 shares of \"Microsoft\"": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"buy\", \"company\": \"Microsoft\", \"shares\": 50}]}"
+   ]
+  },
+  "get rid of 10 shares of Tesla": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"sell\", \"company\": \"Tesla\", \"shares\": 10}]}"
+   ]
+  },
+  "Buy $5,000 of MSFT": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [\"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": 5000, \"orders\": []}"
+   ]
+  }
+ }
+}

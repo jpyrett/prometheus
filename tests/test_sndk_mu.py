@@ -10,6 +10,7 @@ No network, no key, no cost.
 
 The numbers: 3 SNDK cost $3,379.56, $3,179.56 to raise after the free cash. Whole shares, lean sells (no step sells more than the shortfall needs).
 """
+from decimal import Decimal
 import json
 import math
 import re
@@ -23,7 +24,7 @@ from prometheus.common import portfolio as pf
 from prometheus.reasoning import raise_funds as rf
 
 SCENARIO = am.DEFAULT_PORTFOLIO.parent / "jacob_pyrett_sndk_mu.json"
-PRICES = {"SNDK": 1126.52, "MU": 855.10, "PG": 162.06, "MCD": 263.04, "GOOGL": 280.03, "LLY": 1409.38}  # Finnhub /quote, the 2026-11-03 close (21:00 UTC)
+PRICES = {"SNDK": Decimal("1126.52"), "MU": Decimal("855.10"), "PG": Decimal("162.06"), "MCD": Decimal("263.04"), "GOOGL": Decimal("280.03"), "LLY": Decimal("1409.38")}  # Finnhub /quote, the 2026-11-03 close (21:00 UTC)
 
 
 class QuoteToolbox:
@@ -34,7 +35,7 @@ class QuoteToolbox:
         self.asked.append(symbol)
         if symbol not in self.prices:
             raise RuntimeError(f"No quote returned for {symbol}")
-        p = self.prices[symbol]
+        p = float(self.prices[symbol])      # the Data Clerk's quote is what Finnhub's JSON gives, a float: the Account Manager turns it into a Decimal price itself
         return {"symbol": symbol, "price": p, "change": 0.0, "change_percent": 0.0, "high": p, "low": p, "open": p, "previous_close": p,
                 "as_of_utc": "2026-11-03T21:00:00Z", "source": "Finnhub /quote (recorded)"}
 
@@ -86,26 +87,26 @@ def run(start, shares=3, table=None, **options):
 # ---------------------------------------------------------------- calculate first
 
 def test_the_made_up_portfolio_is_the_one_in_the_request(start):
-    assert [(p.symbol, p.shares, p.cost_basis) for p in start.positions] == [("PG", 15, 60.0), ("MCD", 120, 40.0), ("GOOGL", 30, 100.0), ("LLY", 25, 155.0)]
-    assert start.cash_avail == 200.0
+    assert [(p.symbol, p.shares, p.cost_basis) for p in start.positions] == [("PG", 15, Decimal("60.0")), ("MCD", 120, Decimal("40.0")), ("GOOGL", 30, Decimal("100.0")), ("LLY", 25, Decimal("155.0"))]
+    assert start.cash_avail == Decimal("200.00")
 
 
 def test_the_numbers_calculated_before_any_search(start):
     p = rf.build_problem(start, "SNDK", 3, PRICES, fill="MU")
-    assert p.cost == 3379.56 and p.need == 3179.56 and p.fill == "MU" and p.fill_price == 855.10 and p.lean
+    assert p.cost == Decimal("3379.56") and p.need == Decimal("3179.56") and p.fill == "MU" and p.fill_price == Decimal("855.10") and p.lean
     assert set(p.holdings) == {"PG", "MCD", "GOOGL", "LLY"}                        # neither SNDK nor MU can be sold to pay for itself
-    assert round(sum(h.value for h in p.holdings.values()) + p.cash, 2) == 77831.10  # everything, liquidated: far more than the 3 SNDK need
+    assert sum((h.value for h in p.holdings.values()), Decimal("0.00")) + p.cash == Decimal("77831.10")  # everything, liquidated: far more than the 3 SNDK need
     assert p.max_affordable == 69
     assert p.holdings["PG"].value < p.need  # PG alone cannot cover: its 15 shares are worth $2,430.90
 
 
 def best_by_enumeration(p):
     """The brute-force optimum: every lean plan of one or two sells (the first step any number of shares, the last the covering number), scored by the code's own score."""
-    cover = lambda short, h: math.ceil(round(short / h.price, 6))
+    cover = lambda short, h: math.ceil(short / h.price)
     plans = {}
     for a in p.holdings.values():
-        for n1 in range(1, a.sellable + 1):
-            short = round(p.need - n1 * a.price, 2)
+        for n1 in range(1, int(a.sellable) + 1):
+            short = p.need - n1 * a.price
             if short <= 0:
                 if n1 == cover(p.need, a):
                     plans[((a.symbol, n1),)] = rf.score_plan(p, ((a.symbol, n1),))[0]
@@ -151,7 +152,7 @@ def test_a_step_that_sells_more_than_the_shortfall_needs_is_rejected_as_not_lean
     node, reason = rf.check_step(p, rf.root(p), {"symbol": "GOOGL", "shares": 20, "idea": "x"}, "n1")
     assert node is None and "sells more than is needed: 12 share(s) already cover the shortfall of $3,179.56" in reason
     assert rf.check_step(p, rf.root(p), {"symbol": "GOOGL", "shares": 12}, "n1")[0].complete
-    assert rf.check_step(p, rf.root(p), {"symbol": "GOOGL", "shares": 11}, "n1")[0].shortfall == 99.23   # fewer: a partial step, allowed
+    assert rf.check_step(p, rf.root(p), {"symbol": "GOOGL", "shares": 11}, "n1")[0].shortfall == Decimal("99.23")   # fewer: a partial step, allowed
 
 
 def test_without_a_fill_stock_the_sells_are_not_lean_as_in_the_earlier_entries(start):
@@ -164,7 +165,7 @@ def test_without_a_fill_stock_the_sells_are_not_lean_as_in_the_earlier_entries(s
 def test_the_cash_left_after_the_winning_plan_buys_no_mu_and_the_report_says_why(start):
     _, result = run(start)
     plan = result["plan"]
-    assert plan["fill_shares"] == 0 and plan["left_over"] == 180.8 and result["after"]["cash"] == 180.8 and result["after"]["shares"]["GOOGL"] == 18
+    assert plan["fill_shares"] == 0 and plan["left_over"] == Decimal("180.80") and result["after"]["cash"] == Decimal("180.80") and result["after"]["shares"]["GOOGL"] == 18
     text = am.report(result)
     assert "the cash left, $180.80, buys 0 at $855.10: less than one share" in text
     assert re.search(r"\| MU +\| +0 \| +0 \|", text) and re.search(r"\| cash +\| +\$200\.00 \| +\$180\.80 \|", text)
@@ -174,9 +175,9 @@ def test_the_cash_left_after_the_winning_plan_buys_no_mu_and_the_report_says_why
 def test_a_plan_whose_leftover_buys_a_share_of_mu_buys_it_and_shows_the_order(start):
     _, result = run(start, table={ROOT: [("LLY", 3)]})   # 3 x 1,409.38 = 4,228.14: 1,048.58 left after SNDK, which buys 1 MU (855.10) and leaves 193.48
     plan = result["plan"]
-    assert plan["fill_shares"] == 1 and plan["fill_cost"] == 855.10 and plan["left_over"] == 193.48
-    assert result["after"]["shares"] == {"PG": 15, "MCD": 120, "GOOGL": 30, "LLY": 22, "SNDK": 3, "MU": 1} and result["after"]["cash"] == 193.48
-    assert round(200.0 + plan["proceeds"] - 3379.56 - plan["fill_cost"], 2) == 193.48   # every dollar accounted for
+    assert plan["fill_shares"] == 1 and plan["fill_cost"] == Decimal("855.10") and plan["left_over"] == Decimal("193.48")
+    assert result["after"]["shares"] == {"PG": 15, "MCD": 120, "GOOGL": 30, "LLY": 22, "SNDK": 3, "MU": 1} and result["after"]["cash"] == Decimal("193.48")
+    assert Decimal("200.00") + plan["proceeds"] - Decimal("3379.56") - plan["fill_cost"] == Decimal("193.48")   # every dollar accounted for, exactly
     text = am.report(result)
     assert "| BUY   | MU" in text and "with the cash left" in text and "MU bought" not in text.split("OTHER COMPLETED")[0]
 
@@ -184,7 +185,7 @@ def test_a_plan_whose_leftover_buys_a_share_of_mu_buys_it_and_shows_the_order(st
 def test_the_score_counts_only_the_cash_that_buys_nothing_as_left_over(start):
     p = rf.build_problem(start, "SNDK", 3, PRICES, fill="MU")
     assert rf.score_plan(p, (("LLY", 3),))[1]["overshoot"] == pytest.approx(1 - 193.48 / 3379.56, abs=0.001)  # not 1 - 1,048.58 / 3,379.56: the MU it buys is not waste
-    assert p.fill_with(1048.58) == (1, 193.48) and p.fill_with(180.8) == (0, 180.8) and p.fill_with(-5) == (0, 0.0)
+    assert p.fill_with(Decimal("1048.58")) == (1, Decimal("193.48")) and p.fill_with(Decimal("180.80")) == (0, Decimal("180.80")) and p.fill_with(Decimal("-5")) == (0, Decimal("0.00"))
 
 
 # ---------------------------------------------------------------- "if liquidating cannot pay for it, sell nothing"

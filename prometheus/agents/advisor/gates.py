@@ -12,7 +12,7 @@ The user's own minimum price is the Critic's (`RiskView.min_price`), not a gate.
 
     freshness   all         the newest stored bar is within `max_bar_age_sessions` weekdays of today; the Finnhub figures are not older than `max_fundamentals_age_days`
     red_flag    all         a going-concern, material-weakness or restatement event in the last 60 bars; debt over 4x equity with a current ratio under 1;
-                            cash from operations negative while profit is positive. A HELD symbol that fails it is still reviewed (the holdings pass may say `reduce`)
+                            cash from operations negative while profit is positive. A symbol that fails it is not recommended (a candidate with the gate and the reason)
     event_risk  all         the next earnings report is 3 days away or less; without the calendar, the last results press release is 85 to 95 days old (estimated, and the note says so).
                             It blocks every family EXCEPT `event` (an earnings event is what that family trades)
     no_metrics  all         the Data Clerk returned nothing for the symbol

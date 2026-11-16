@@ -12346,3 +12346,464 @@ A new way for traders to place leveraged bets on stock prices is growing in popu
 <<<INSIGHTS>>>
 
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143643428
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T23:46:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=24653445a5a0e34e7dfc21bd125509eb61f0d042362e1adaf459de03fb6b6055
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Dow Jones Futures Rise, Techs Slide A Nvidia Probes CEO Jensen Huang Spying Case
+<<<SUMMARY>>>
+The stock market is damaged but Apple, Amazon and Microsoft are holding up. Nvidia is probing CEO Jensen Huang's spy case.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143643462
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T22:07:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=74e4b38d9e8d21cf03198f1ccdd19973972a05bf3e7288e7984faf1791c2b650
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: 3 Growth Stocks With Earnings Growth Over 20%
+<<<SUMMARY>>>
+Voters just approved restrictions on new data centres across the US, which puts a question mark over how easy it will be for many AI hungry businesses to keep expanding. Growth does not disappear; it just becomes more selective. That is where financially sound companies with strong earnings potential can matter. This article walks through three high growth candidates from our screener that aim to balance ambition with balance sheet discipline. The three stocks highlighted here offer a...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642652
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T20:59:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8432097bdc5d2dbe697e688e62d296bcf48847c2e6221ee0c196e19f4c16b2cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Dow Jones Futures Loom For Damaged Market; Nvidia Probes Huang Spying Case
+<<<SUMMARY>>>
+The stock market is damaged but Apple, Amazon and Microsoft are holding up. Nvidia is probing CEO Jensen Huang's spy case.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143641790
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T19:06:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fee56efe9db6d3e16375d6aa9570e0afc0c822263755c1ce085bbc3b4dc3a0eb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: What Does Micron Technology (MU) Taiwan Plant Halt Mean For Its Capacity Plans?
+<<<SUMMARY>>>
+Micron Technology (NasdaqGS:MU) has halted construction of a new memory chip plant in Taiwan due to an escalating labor dispute. The pause is linked to unresolved contract negotiations with a local union representing construction and on site technical workers. The stoppage comes as chip stocks face pressure, tied to concerns about data center buildouts and post U.S. midterm regulatory scrutiny. Micron's Taiwan plant halt is important, but investors still need a broader view of the business...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640870
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T16:15:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9cc50155db1a3a7c3ae63ca64d9d1fc1ca2652bad546af0319939cbb62ac2282
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: America’s AI Spending Boom Just Crossed a Staggering $1 Trillion Milestone
+<<<SUMMARY>>>
+Record shipments of AI hardware are pouring into American data centers, yet NVIDIA's stock has dropped more than 21% in a month. What does the import data reveal that the share price refuses to show, and who else profits?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640222
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T14:14:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1975ae0423862c182127b64aac2632039a64f7506c285b0d590ba5393378ea97
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Dow Jones Futures Loom With Market Damaged, Big Winners Broken; Apple, Amazon, Microsoft Strong
+<<<SUMMARY>>>
+The stock market needs repair while Sandisk and Micron seem broken. Apple, Amazon and Microsoft are holding up. Berkshire earnings fell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639588
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T13:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9b57e76a7348adceea39f8a4cb6def553bffd5dc340006f11e6cfbdb1ed6d2d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Prediction: This Will Be the Best-Performing AI Stock of 2027
+<<<SUMMARY>>>
+Micron is well positioned to be a top 2027 stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143638949
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T11:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ad00916025c3bf42b4e63850adafc10519696704cfbe6d3f79a50da75ae79fd6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: 3 AI Chip Stocks to Buy in November After the October Sell-Off
+<<<SUMMARY>>>
+AI stocks are trading at some attractive price tags right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143638961
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T10:45:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a8a3167ecb4b1dcc2a4280b5931261e7cc0c1196dedbcac624983d164a558e4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Congressman Swaps One Chip Stock for Another: Here Are the Moves
+<<<SUMMARY>>>
+The trading activity of members of Congress continues to be closely followed by investors. A recent trade saw a congressman sell shares of one semiconductor-related stock for another one in the same sector. Here are the trades. Congressman Swaps Chip...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639809
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T09:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=3570289be8278da0c82a92633381b2f08747f1380d4ffde5bee3c06783d8783b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2258269533/image_2258269533.jpg?io=getty-c-og
+category: company
+tickers: MU
+keywords: 
+headline: Micron: Why I Added $5,000 Worth Of Shares During The Selloff (Rating Downgrade)
+<<<SUMMARY>>>
+Chip stocks fell on data center fears, but Micron Technology, Inc. fundamentals remain strong. Click for more on MU stock prospects in this update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639845
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T09:00:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0209d4c3517174ac5739861a479146b0c4cc2dddbc9042bf7eab02b036248fb9
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/08/Apple-Expands-Rapidly-In-India.jpg?width=2048&height=1536
+category: company
+tickers: MU
+keywords: 
+headline: Analysts Question AAPL's Valuation, Apple's Margin Pressure and More: This Week in Appleverse
+<<<SUMMARY>>>
+Apple earnings, valuation concerns and memory chip opportunities dominate this week’s market recap, alongside Amazon, Qualcomm and 3M.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143637266
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T08:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0167d6a446bcc0ba3f9c100a5bb12fd67d41f19d5d00cc68c713810388bbee41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Is Micron Stock a Buy Right Now?
+<<<SUMMARY>>>
+Micron shares are down 34% from their high, yet its memory chips are sold out years ahead, and its profits keep climbing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143637278
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T08:13:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30f2497a0ebdb5a5eeaf7218458b52e8b7fbbc0d0a223245ce8e46ec39b7cdf3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Sandisk Lost 51% in a Month. Bernstein Sees 259% Upside From Here
+<<<SUMMARY>>>
+Key TakeawaysSandisk stock is down 51% in a month, including a 22% crash on Nov. 5, despite a record quarter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143637603
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T05:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=10fac645bccaafa83471b3f57bc08b44931132311f0df2509714d92ea342a382
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2165485835/image_2165485835.jpg?io=getty-c-w1536
+category: company
+tickers: MU
+keywords: 
+headline: Do. Not. Panic.
+<<<SUMMARY>>>
+Steve Cress advises investors to stay calm amid market volatility. The absence of a systemic debt crisis makes this correction a potential buying opportunity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143634561
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T04:05:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b8ab3bc32bf92e5f71b1516685bf3d43179b5f269e037e36af17cebeb807442f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: AMD Is Up 110% in 2026, but Down Sharply From Its High. Time to Sell, or Load Up?
+<<<SUMMARY>>>
+Key TakeawaysAMD stock is up 110% in 2026 on surging data center sales, but it’s down 31% from its October closing high. Third-quarter Data Center sales rose 97% to $8.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840512
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T21:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5b67914b4c7c9c85a2ed59a646c36677419d4da68ffaf8462eaa6767a04a5e31
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Popular fund manager switches Nvidia shares for Micron amid Huang drama
+<<<SUMMARY>>>
+Hightower Advisors’ Stephanie Link gives reasons every investor should see for choosing Micron over Nvidia.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840518
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T20:50:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a6024cb7d2dd5b018bf03e046a2f58efdb93177703d8f0c0af5a5c0569a242d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Prediction: This Will Be Micron's Stock Price by Late 2027 (Hint: Wall Street Expects 106% Upside)
+<<<SUMMARY>>>
+Wall Street thinks Micron stock is deeply undervalued; the median analyst expects more than 100% upside in the next year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143845245
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T09:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ea7ff9fb634f80d44fbe5453c70288e61536ec0805fd69212c4e8aafc51a4a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Market Chatter: Micron, Samsung, SK Hynix Fail to Get DRAM Price-Fixing Lawsuit Dismissed
+<<<SUMMARY>>>
+A US judge has rejected a motion by Micron Technology (MU) Samsung Electronics and SK Hynix to dism
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143844043
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T07:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=454b863b39b5843fe2b731296aa4de6d806014d8fc5b0df5e0c3846e6dec4a4e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Walmart, Target, Amazon, Nvidia, Micron and Alphabet are part of Zacks Earnings Preview
+<<<SUMMARY>>>
+Walmart, Target, Amazon, Nvidia, Micron and Alphabet have been highlighted in this Earnings Preview article.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841649
+symbol: MU
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T01:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=745f13ed89698fc738f3c0e3ae28f43184d12190de964ef58d6446ba4660d5cc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MU
+keywords: 
+headline: Why Micron Stock Is a Screaming Buy Before Year-End
+<<<SUMMARY>>>
+Micron recently announced an expansion to its share buyback program.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f0d04ef74d847d5c0af34a52aaf9382b0ba4c42294fd429a0f65ad05d87e957a
+symbol: MU
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T18:45:02Z
+publisher: The Motley Fool
+author: Brett Schafer
+url: https://www.fool.com/investing/2026/11/15/investors-if-a-market-correction-is-coming-this-1-move-will-make-or-break-your-portfolio/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F53629edf6e5270db13f588c9845ed3ea81372686-2128x1413.jpg&w=1200&op=resize
+category: 
+tickers: NVDA, MU
+keywords: market correction, diversification, portfolio management, Nasdaq-100, AI stocks, risk mitigation, asset allocation
+headline: Investors: If a Market Correction Is Coming, This 1 Move Will Make or Break Your Portfolio
+<<<SUMMARY>>>
+As the Nasdaq-100 enters correction territory down 11% from highs, the article emphasizes that diversification is the critical strategy to mitigate portfolio pain during market downturns. Investors should maintain 20-50 stocks across different sectors, asset classes, and geographies rather than concentrating bets in high-risk areas like AI infrastructure stocks.
+<<<INSIGHTS>>>
+NVDA | negative | Mentioned as an example of an AI infrastructure stock that experienced massive drawdowns in 2026, illustrating concentration risk when a portfolio is overweighted in single positions.
+MU | negative | Referenced alongside Nvidia as an AI infrastructure stock that caused significant portfolio losses when held as a major position, demonstrating the dangers of over-concentration.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8101bf7766c79f24941b8b3b7b5a53e52738382adfef18c9e33ef42d17818f4d
+symbol: MU
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T20:30:02Z
+publisher: The Motley Fool
+author: Trevor Jennewine
+url: https://www.fool.com/investing/2026/11/15/this-will-be-microns-stock-price-late-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F3752b0b6d888857fdb7abbe082176585d6437a7a-4000x2667.jpg&w=1200&op=resize
+category: 
+tickers: MU
+keywords: Micron Technology, memory chips, DRAM, NAND flash, AI infrastructure, semiconductor, stock valuation, price target, memory cycle, supply contracts
+headline: Prediction: This Will Be Micron's Stock Price by Late 2027 (Hint: Wall Street Expects 106% Upside)
+<<<SUMMARY>>>
+Wall Street analysts have a median price target of $1,575 for Micron Technology, implying 107% upside from the current $760 share price. However, the author takes a more conservative stance, predicting the stock will reach $1,045 by late 2027 (37% upside). The bullish case is supported by strong AI infrastructure demand driving accelerating revenue growth for five consecutive quarters, while bears worry about the cyclical nature of the memory chip industry and potential margin compression in future downturns.
+<<<INSIGHTS>>>
+MU | positive | Strong AI-driven demand with five consecutive quarters of accelerating revenue growth, particularly in data center segment (>1000% sales growth). Long-term supply contracts with price floors provide revenue visibility and durability. However, sentiment is tempered by cyclical industry concerns and valuation risks if the memory cycle peaks, which is reflected in the author's more conservative 37% upside prediction versus Wall Street's 107% upside.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aa2eb82b55bfcceb0621fe16ba2bbadcaa4b8183d28a1f905f32204131704bee
+symbol: MU
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T10:12:02Z
+publisher: The Motley Fool
+author: Trevor Jennewine
+url: https://www.fool.com/investing/2026/11/16/buy-micron-stock-now-wall-street-has-clear-answer/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F67fd2117da2a0c9c38b6e8ab8dbc92d695e6cffb-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: MU
+keywords: Micron Technology, memory chips, DRAM, NAND flash, AI demand, semiconductor, cyclical stocks, supply shortage, valuation
+headline: Should You Really Buy Micron Stock Right Now? Wall Street Has a Clear Answer for Investors.
+<<<SUMMARY>>>
+Wall Street analysts see 107% upside potential for Micron Technology with a median target price of $1,575, citing strong AI-driven demand for memory chips. However, the article cautions that memory chip markets are cyclical and historically prone to oversupply, with the current cycle potentially peaking in early 2028. The author recommends a small position for risk-tolerant investors while acknowledging significant volatility risks.
+<<<INSIGHTS>>>
+MU | neutral | While Wall Street consensus is bullish with 107% upside potential and strong AI demand fundamentals, the article emphasizes significant cyclical risks. The stock may be overvalued if the memory chip cycle peaks in early 2028 as some analysts predict. The author recommends only a small position for risk-aware investors, reflecting balanced optimism tempered by historical cyclicality concerns.
+<<<END>>>

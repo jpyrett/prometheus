@@ -8,6 +8,7 @@ score it made up) and checks what the CODE does with it. No network, no key, no 
 The numbers used throughout (invented round prices, Jacob's real holdings): MSFT 50 @ 150 now 420, TSLA 123 @ 300 now 250, GM 60 @ 10 now 55; buy 2 MU at 410 = 820.
 """
 from datetime import date
+from decimal import Decimal
 
 import pytest
 
@@ -15,13 +16,13 @@ from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO
 from prometheus.common import portfolio as pf
 from prometheus.reasoning import raise_funds as rf
 
-PRICES = {"MSFT": 420.0, "TSLA": 250.0, "GM": 55.0, "MU": 410.0}
+PRICES = {"MSFT": Decimal("420.00"), "TSLA": Decimal("250.00"), "GM": Decimal("55.00"), "MU": Decimal("410.00")}
 TODAY = date(2026, 11, 3)
 
 
 def no_cash():
     """The sample portfolio with its free cash taken away, so that the numbers below are the round ones. The sample file itself has cash_avail 51.23 (tests further down)."""
-    return pf.load_portfolio(DEFAULT_PORTFOLIO).model_copy(update={"cash_avail": 0.0})
+    return pf.load_portfolio(DEFAULT_PORTFOLIO).model_copy(update={"cash_avail": Decimal("0.00")})
 
 
 def problem(shares=2, prices=None, portfolio=None, target="MU"):
@@ -49,7 +50,7 @@ ROOT = "(nothing sold)"
 # ---------------------------------------------------------------- the problem
 
 
-@pytest.mark.parametrize("shares", [0, -1, 1.5, True, "2"])
+@pytest.mark.parametrize("shares", [0, -1, Decimal("1.5"), True, "2"])
 def test_a_number_of_shares_that_is_not_a_whole_number_of_at_least_one_is_refused(shares):
     with pytest.raises(ValueError, match="whole number"):
         problem(shares=shares)
@@ -57,7 +58,7 @@ def test_a_number_of_shares_that_is_not_a_whole_number_of_at_least_one_is_refuse
 
 def test_a_missing_or_zero_price_is_refused_and_named():
     with pytest.raises(ValueError, match="no price for MU, GM"):
-        problem(prices={"MSFT": 420.0, "TSLA": 250.0, "GM": 0})
+        problem(prices={"MSFT": Decimal("420.00"), "TSLA": Decimal("250.00"), "GM": Decimal("0")})
 
 
 # ---------------------------------------------------------------- the score is calculated, from four components
@@ -78,9 +79,10 @@ def check(t, parent=None, prob=None):
 
 
 def test_a_good_thought_becomes_a_node_with_every_figure_calculated_by_code():
-    node, reason = check({"symbol": "tsla", "shares": "4", "idea": "x", "score": 999, "price": 1, "proceeds": 1e9})  # the model's own figures are ignored; "tsla" and "4" are cleaned
-    assert reason is None and node.sells == (("TSLA", 4),) and node.proceeds == 1000.0 and node.shortfall == 0.0 and node.complete
-    assert node.gain == -200.0 and node.score == rf.score_plan(problem(), node.sells)[0] != 999
+    # AMENDED (entry 111, M5): the shares were "4", a string that was cleaned into 4; a share count is a number and a string is an error now (below), so it is 4
+    node, reason = check({"symbol": "tsla", "shares": 4, "idea": "x", "score": 999, "price": 1, "proceeds": 1e9})  # the model's own figures are ignored; "tsla" is cleaned
+    assert reason is None and node.sells == (("TSLA", 4),) and node.proceeds == Decimal("1000.00") and node.shortfall == Decimal("0.00") and node.complete
+    assert node.gain == Decimal("-200.00") and node.score == rf.score_plan(problem(), node.sells)[0] != 999
 
 
 @pytest.mark.parametrize("t, message", [
@@ -132,7 +134,7 @@ def test_the_call_budget_ends_the_search_even_with_unfinished_plans_left():
 
 
 def test_the_same_thought_twice_from_one_node_is_counted_once():
-    result = rf.search(problem(), Gen({ROOT: [thought("TSLA", 4), thought("tsla", "4"), thought("GM", 15)]}))
+    result = rf.search(problem(), Gen({ROOT: [thought("TSLA", 4), thought("tsla", 4), thought("GM", 15)]}))      # AMENDED (entry 111, M5): the second one said "4" (a string); the same thought now differs only in the case of the symbol
     statuses = [c["status"] for c in result["trace"][0]["children"]]
     assert statuses == ["complete", "duplicate", "complete"] and result["stats"]["nodes"] == 3
 
@@ -173,7 +175,7 @@ def test_if_every_call_fails_the_answer_is_infeasible_with_the_errors():
 
 
 def test_when_the_cash_already_covers_the_purchase_nothing_is_sold_and_nothing_is_asked():
-    portfolio = no_cash().model_copy(update={"cash_avail": 1000.0})
+    portfolio = no_cash().model_copy(update={"cash_avail": Decimal("1000.00")})
     gen = Gen({})
     result = rf.search(problem(portfolio=portfolio), gen)
     assert result["status"] == "funded" and result["plan"] is None and gen.calls == [] and result["stats"]["llm_calls"] == 0
@@ -199,7 +201,7 @@ def test_the_answer_for_an_impossible_purchase_says_so_and_prints_no_orders():
 
 
 def test_the_answer_when_the_cash_covers_the_purchase():
-    portfolio = no_cash().model_copy(update={"cash_avail": 1000.0})
+    portfolio = no_cash().model_copy(update={"cash_avail": Decimal("1000.00")})
     text = rf.format_answer(rf.search(problem(portfolio=portfolio), Gen({})))
     assert "RESULT   funded" in text and "(no search: the free settled cash (cash_avail) already covers the purchase)" in text
 
@@ -213,13 +215,13 @@ def test_a_rejected_and_a_pruned_thought_are_shown_with_their_reasons():
 # ---------------------------------------------------------------- "sell only what is in profit" (green), and never the stock being bought
 
 def green_problem(prices=None, shares=2):
-    return rf.build_problem(no_cash(), "MU", shares, prices or {**PRICES, "TSLA": 250.0}, TODAY, only_green=True)  # TSLA 250 is below its basis of 300: red
+    return rf.build_problem(no_cash(), "MU", shares, prices or {**PRICES, "TSLA": Decimal("250.00")}, TODAY, only_green=True)  # TSLA 250 is below its basis of 300: red
 
 
 def test_when_the_free_cash_pays_for_the_purchase_the_holdings_after_are_the_same_and_the_cash_is_spent():
-    portfolio = no_cash().model_copy(update={"cash_avail": 1000.0})
+    portfolio = no_cash().model_copy(update={"cash_avail": Decimal("1000.00")})
     result = rf.search(problem(portfolio=portfolio), Gen({}))
-    assert result["status"] == "funded" and result["after"] == {"shares": {"MSFT": 50, "TSLA": 123, "GM": 60, "MU": 2}, "cash": 180.0}
+    assert result["status"] == "funded" and result["after"] == {"shares": {"MSFT": 50, "TSLA": 123, "GM": 60, "MU": 2}, "cash": Decimal("180.00")}
 
 
 # ---------------------------------------------------------------- the same sells in another order are one plan (entry 45)
@@ -228,7 +230,7 @@ def test_when_the_free_cash_pays_for_the_purchase_the_holdings_after_are_the_sam
 # ---------------------------------------------------------------- the size of the tree, and what the beam ranks by (entry 45): pure functions on the complex portfolio, no model
 
 COMPLEX = DEFAULT_PORTFOLIO.parent / "jacob_pyrett_complex.json"
-COMPLEX_PRICES = {"LLY": 1409.38, "SNDK": 1126.52, "MU": 855.10, "F": 12.31, "GM": 88.34, "FITB": 53.93, "PG": 162.06, "MCD": 263.04, "GOOGL": 280.03, "TSLA": 398.50, "MSFT": 520.99}  # the 2026-11-03 close
+COMPLEX_PRICES = {s: Decimal(p) for s, p in {"LLY": "1409.38", "SNDK": "1126.52", "MU": "855.10", "F": "12.31", "GM": "88.34", "FITB": "53.93", "PG": "162.06", "MCD": "263.04", "GOOGL": "280.03", "TSLA": "398.50", "MSFT": "520.99"}.items()}  # the 2026-11-03 close
 
 
 def complex_problem(**options):
@@ -338,7 +340,7 @@ def whole_problem(**options):
 def test_a_whole_plan_is_one_node_one_level_below_its_parent_with_every_sell_checked_in_order():
     p = whole_problem()
     node, reason = rf.check_step(p, rf.root(p), plan(("MSFT", 1), ("TSLA", 2)), "n1")   # 420, then 2 x 250 = 920 >= 820
-    assert reason is None and node.sells == (("MSFT", 1), ("TSLA", 2)) and node.depth == 1 and node.proceeds == 920.0 and node.complete and node.idea == "idea"
+    assert reason is None and node.sells == (("MSFT", 1), ("TSLA", 2)) and node.depth == 1 and node.proceeds == Decimal("920.00") and node.complete and node.idea == "idea"
     assert node.score == rf.score_plan(p, node.sells)[0]
 
 

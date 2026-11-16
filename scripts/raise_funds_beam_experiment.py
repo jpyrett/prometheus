@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from raise_funds_oracle import SCENARIO, TODAY, apply, oracle  # noqa: E402
+from prometheus.common.money import price as price_door  # noqa: E402
 
 from prometheus.agents.account_manager.account_manager import AccountManager  # noqa: E402
 from prometheus.common import portfolio as pf  # noqa: E402
@@ -29,7 +30,7 @@ def run_setting(beam: int, branching: int, max_depth: int = 5, model: str | None
     result = manager.raise_funds_many(start, PURCHASES,
                                       branching=branching, beam_width=beam, **({"max_depth": max_depth, "max_calls": 20 + 8 * beam * max(1, max_depth - 3)} if max_depth else {}))   # max_depth 0: chosen from each purchase (entry 49)
     seconds = time.perf_counter() - started
-    prices = {s: q["price"] for s, q in result["quotes"].items()}
+    prices = {s: price_door(q["price"]) for s, q in result["quotes"].items()}      # a quote is the Data Clerk's float: through the price door once (design choices entry 112)
     current, rows = start, []
     for p in result["purchases"]:
         if p["status"] != "plan":

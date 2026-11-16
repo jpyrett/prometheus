@@ -3443,3 +3443,14 @@ Sandeep Reddy
 Executive Vice President, Chief Financial Officer(Principal Financial Officer)
 35
 <<<END>>>
+<<<FILING>>>
+accession: 0001959173-26-007902
+symbol: DPZ
+form: 144
+filed: 2026-11-10
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1286681/0001959173-26-007902.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>

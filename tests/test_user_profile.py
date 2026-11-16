@@ -20,13 +20,13 @@ def test_the_tolerances_run_from_the_least_risk_to_the_most():
 
 
 @pytest.mark.parametrize("field, bad", [
-    ("age", 17), ("age", 121), ("investment_horizon_years", 0), ("auto_min_score", -1), ("auto_min_score", 101), ("min_price", -1), ("risk_tolerance", "reckless"), ("trade_mode", "manual"), ("user", "")])
+    ("age", 17), ("age", 121), ("investment_horizon_years", 0), ("min_price", -1), ("risk_tolerance", "reckless"), ("trade_mode", "manual"), ("user", "")])
 def test_each_bound_is_checked(field, bad):
     with pytest.raises(ValidationError):
         profile(**{field: bad})
 
 
-@pytest.mark.parametrize("field, ok", [("age", 18), ("age", 120), ("min_price", 0), ("auto_min_score", 0), ("auto_min_score", 100)])
+@pytest.mark.parametrize("field, ok", [("age", 18), ("age", 120), ("min_price", 0)])
 def test_each_bound_is_inclusive_where_the_spec_says_so(field, ok):
     assert getattr(profile(**{field: ok}), field) == ok
 
@@ -40,6 +40,8 @@ def test_excluded_sectors_must_be_sector_etfs():
 def test_an_unknown_field_is_an_error_not_ignored():
     with pytest.raises(ValidationError):
         profile(risk_toleranse="high")
+    with pytest.raises(ValidationError):
+        profile(auto_min_score=80)      # entry 104: the automatic-trading mark is gone from the profile, as the size limits went in entry 91
 
 
 def test_a_bad_file_is_reported_with_its_name(tmp_path):

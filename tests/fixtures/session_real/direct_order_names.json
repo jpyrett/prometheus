@@ -1,0 +1,111 @@
+{
+ "_note": "REAL replies of two models, recorded on 2026-11-15 for Jacob's own request (design choices entries 101 and 102) with the desk's own code (`DataClerk.request_symbols`, `missing.word_question`) and the real Finnhub directory: 'owner_replies' are the Data Clerk's model (openai/gpt-oss-120b on OpenRouter, the data_clerk role) asked for the listed owner of a name the exact lookup did not find (the proposal step of find_companies, one name): 'Google' (it named Alphabet Inc.) and 'Chick-fil-a' (it named no owner); 'wording' is the Account Manager's model (openai/gpt-oss-120b, the account_manager role) asked to word the Ask-mode question about Chick-fil-a, with the facts code gave it. 'replies' is what each model answered, unedited. The tests give these replies back to the real code, which checks them. The Finnhub rows are in tests/fixtures/finnhub_company_search.json. 'forms' is the Account Manager's model (the same one) reading Jacob's request into the form of an order (`AccountManager.understand_request`), recorded in the live Ask-mode session that was saved as d_pyrett_names_ask.json (a throwaway account, no fetch).",
+ "request": "I have 10000 to spend. Create a new user profile for me: name is D Pyrett. I am 40 with a moderate risk profile. Buy as much stock in: F, GM, Procter and gamble and Google. And Chick-fil-a.",
+ "forms": {
+  "I have 10000 to spend. Create a new user profile for me: name is D Pyrett. I am 40 with a moderate risk profile. Buy as much stock in: F, GM, Procter and gamble and Google. And Chick-fil-a.": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[\"F\",\"GM\"],\"companies\":[\"Procter and gamble\",\"Google\",\"Chick-fil-a\"],\"count\":null,\"allocation\":\"default\",\"budget\":10000,\"orders\":[{\"side\":\"buy\",\"symbol\":\"F\",\"shares\":null},{\"side\":\"buy\",\"symbol\":\"GM\",\"shares\":null},{\"side\":\"buy\",\"company\":\"Procter and gamble\",\"shares\":null},{\"side\":\"buy\",\"company\":\"Google\",\"shares\":null},{\"side\":\"buy\",\"company\":\"Chick-fil-a\",\"shares\":null}]}"
+   ]
+  }
+ },
+ "owner_replies": {
+  "Google": {
+   "replies": [
+    "{\"companies\": [{\"brand\": \"Google\", \"parent\": \"Alphabet Inc.\", \"ticker\": \"GOOGL\"}], \"sector_etf\": \"XLC\"}"
+   ]
+  },
+  "Chick-fil-a": {
+   "replies": [
+    "{\n  \"companies\": [\n    {\n      \"brand\": \"Chick-fil-A\",\n      \"parent\": null,\n      \"ticker\": null\n    }\n  ],\n  \"sector_etf\": \"XLY\"\n}"
+   ]
+  }
+ },
+ "wording": {
+  "Chick-fil-a": {
+   "facts": {
+    "typed": "Chick-fil-a",
+    "reason": "privately held, or not known to be listed",
+    "stays_on_the_order": [
+     {
+      "typed": "F",
+      "symbol": "F",
+      "company": "Ford Motor Co",
+      "how": "ticker"
+     },
+     {
+      "typed": "GM",
+      "symbol": "GM",
+      "company": "General Motors Co",
+      "how": "ticker"
+     },
+     {
+      "typed": "Procter and gamble",
+      "symbol": "PG",
+      "company": "The Procter & Gamble Company",
+      "how": "name"
+     },
+     {
+      "typed": "Google",
+      "symbol": "GOOGL",
+      "company": "Alphabet Inc.",
+      "how": "brand"
+     }
+    ],
+    "request": "I have 10000 to spend. Create a new user profile for me: name is D Pyrett. I am 40 with a moderate risk profile. Buy as much stock in: F, GM, Procter and gamble and Google. And Chick-fil-a."
+   },
+   "replies": [
+    "{\"question\":\"Chick-fil-a was not found because it is privately held, or not known to be listed; is it OK to continue without it, so the order will go on with F, GM, PG, GOOGL?\"}"
+   ]
+  }
+ },
+ "outcome": {
+  "rows": [
+   {
+    "brand": "F",
+    "parent": null,
+    "symbol": "F",
+    "company": "Ford Motor Co",
+    "public": true,
+    "how": "ticker",
+    "note": ""
+   },
+   {
+    "brand": "GM",
+    "parent": null,
+    "symbol": "GM",
+    "company": "General Motors Co",
+    "public": true,
+    "how": "ticker",
+    "note": ""
+   },
+   {
+    "brand": "Procter and gamble",
+    "parent": null,
+    "symbol": "PG",
+    "company": "The Procter & Gamble Company",
+    "public": true,
+    "how": "name",
+    "note": ""
+   },
+   {
+    "brand": "Google",
+    "parent": "Alphabet Inc.",
+    "symbol": "GOOGL",
+    "company": "Alphabet Inc.",
+    "public": true,
+    "how": "brand",
+    "note": "the listed owner of what you typed, named by the Data Clerk's model; the symbol is the directory's"
+   },
+   {
+    "brand": "Chick-fil-a",
+    "parent": null,
+    "symbol": null,
+    "company": null,
+    "public": false,
+    "how": null,
+    "note": "privately held, or not known to be listed"
+   }
+  ],
+  "wording_source": "model"
+ }
+}

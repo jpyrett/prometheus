@@ -57,7 +57,7 @@
 #        --model ID (Advisor model)  --skip-inspect (skip the fastmcp smoke check)  --legacy  --help
 # SESSION FLAGS (with --session; anything not given is asked)  --name N  --age N  --risk conservative|moderate|aggressive  --cash DOLLARS  --mode ask|auto  --prompt TEXT  --account N|KEY (an existing account: no
 #        user is created)  --yes (ask nothing: not the fetch, not the understanding; in Ask mode you are still asked to approve each trade)  --no-fetch  --no-trader-model  --cleanup (delete the new account at the end)  --allow-no-trade  --real-ledger
-#        --auto-min-score N  --default-count N  --model ID (the Advisor's)  --save FILE (what the desk made, as JSON: a real capture)
+#        --default-count N  --model ID (the Advisor's)  --save FILE (what the desk made, as JSON: a real capture)
 # PROMETHEUS_DRY_RUN=1 prints the command instead of running it (used by tests/test_prometheus_script.py).
 set -euo pipefail
 
@@ -68,7 +68,7 @@ usage() { sed -n '2,/^set -euo/p' "$0" | sed '$d' | sed 's/^# \{0,1\}//'; }
 SYMBOL=""; TERM_TEXT=""; SOURCE=""; DAYS=""; COMPANY=""; YES=0; NO_FETCH=0; NO_ADVISOR=0; MODEL=""; SKIP_INSPECT=0; LEGACY=0
 HAVE_SYMBOL=0; HAVE_TERM=0; HAVE_SOURCE=0; HAVE_DAYS=0; HAVE_COMPANY=0
 SESSION=0; S_NAME=""; S_AGE=""; S_RISK=""; S_CASH=""; S_MODE=""; S_PROMPT=""; S_ACCOUNT=""; S_CLEANUP=0; S_ALLOW_NO_TRADE=0; S_NO_TRADER_MODEL=0; S_REAL_LEDGER=0
-S_AUTO_MIN=""; S_COUNT=""; S_SAVE=""
+S_COUNT=""; S_SAVE=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -91,7 +91,6 @@ while [[ $# -gt 0 ]]; do
     --mode)           [[ $# -ge 2 ]] || { echo "ERROR: --mode needs a value" >&2; exit 2; }; S_MODE="$2"; shift 2 ;;
     --prompt)         [[ $# -ge 2 ]] || { echo "ERROR: --prompt needs a value" >&2; exit 2; }; S_PROMPT="$2"; shift 2 ;;
     --account)        [[ $# -ge 2 ]] || { echo "ERROR: --account needs a value" >&2; exit 2; }; S_ACCOUNT="$2"; shift 2 ;;
-    --auto-min-score) [[ $# -ge 2 ]] || { echo "ERROR: --auto-min-score needs a value" >&2; exit 2; }; S_AUTO_MIN="$2"; shift 2 ;;
     --default-count)  [[ $# -ge 2 ]] || { echo "ERROR: --default-count needs a value" >&2; exit 2; }; S_COUNT="$2"; shift 2 ;;
     --save)           [[ $# -ge 2 ]] || { echo "ERROR: --save needs a value" >&2; exit 2; }; S_SAVE="$2"; shift 2 ;;
     --cleanup)        S_CLEANUP=1; shift ;;
@@ -104,7 +103,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # The session flags belong to --session. Without it they are refused, not silently ignored.
-if [[ $SESSION -eq 0 ]] && [[ -n "$S_NAME$S_AGE$S_RISK$S_CASH$S_MODE$S_PROMPT$S_ACCOUNT$S_AUTO_MIN$S_COUNT$S_SAVE" || $S_CLEANUP -eq 1 || $S_ALLOW_NO_TRADE -eq 1 || $S_NO_TRADER_MODEL -eq 1 || $S_REAL_LEDGER -eq 1 ]]; then
+if [[ $SESSION -eq 0 ]] && [[ -n "$S_NAME$S_AGE$S_RISK$S_CASH$S_MODE$S_PROMPT$S_ACCOUNT$S_COUNT$S_SAVE" || $S_CLEANUP -eq 1 || $S_ALLOW_NO_TRADE -eq 1 || $S_NO_TRADER_MODEL -eq 1 || $S_REAL_LEDGER -eq 1 ]]; then
   echo "ERROR: --name, --age, --risk, --cash, --mode, --prompt, --account, --cleanup and the other session flags go with --session" >&2; exit 2
 fi
 # --company belongs to press releases. Alone it means that source; with another source it is a mistake, and it is refused, not silently ignored.
@@ -221,7 +220,6 @@ if [[ $SESSION -eq 1 ]]; then
   [[ $YES -eq 1 ]] && CMD+=(--yes)
   [[ -n "$MODEL" ]] && CMD+=(--model "$MODEL")
   [[ -n "$S_COUNT" ]] && CMD+=(--default-count "$S_COUNT")
-  [[ -n "$S_AUTO_MIN" ]] && CMD+=(--auto-min-score "$S_AUTO_MIN")
   [[ $S_NO_TRADER_MODEL -eq 1 ]] && CMD+=(--no-trader-model)
   [[ $S_REAL_LEDGER -eq 1 ]] && CMD+=(--real-ledger)
   [[ -n "$S_SAVE" ]] && CMD+=(--save "$S_SAVE")

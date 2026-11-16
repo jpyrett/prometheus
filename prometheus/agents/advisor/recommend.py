@@ -1,8 +1,8 @@
 """`Advisor.generate_recommendations`: the whole step, in order (Advisor v1 spec section 7, design choices entry 51; the walk-through is design/week5_advisor_implementation.md).
 
-    order = Advisor().generate_recommendations(order, portfolio, case="funds", today=date.today())
+    order = Advisor().generate_recommendations(order, case="funds", today=date.today())
 
-ONE work order in (status `data_ready`), the SAME work order out (status `recommended`). A LangGraph node is `lambda state: advisor.generate_recommendations(state["order"], portfolio, case)`. The twelve steps:
+ONE work order in (status `data_ready`), the SAME work order out (status `recommended`). A LangGraph node is `lambda state: advisor.generate_recommendations(state["order"], case)`. The twelve steps:
 
      1  preconditions       the order has its data; the case (funds, theme; `market` needs the market brief, which is not built); today
      2  candidates          who to look at (candidates.py)
@@ -12,14 +12,13 @@ ONE work order in (status `data_ready`), the SAME work order out (status `recomm
      6  families            five strategy families, each one score from fixed rules (families.py)
      7  quality             the haircut multiplier (quality.py)
      8  rank                composite edge, cost, stance, the blended score that ranks, the regime (ranking.py)
-     9  holdings + select   what to do about what is already held; the cooldown; the sleeve of the case picks the new ideas (ranking.py)
+     9  select              the cooldown; the sleeve of the case picks the new ideas (ranking.py)
     10  trade plan          entry, stop, target, time stop, order style, invalidation rules: prices and dates, NO size (trade_plan.py; how much is the Account Manager's, entry 80)
     11  THESIS call         MODEL call 2: three sentences and bullets from the FINISHED record, every number and ref checked by code (thesis.py)
-    12  write out           records onto `order.recommendations` (a reduction first, then additions, then new ideas by rank), the rest onto `order.candidates`, the runs onto
-                            `order.advisor_runs`, one line per record onto the ledger
+    12  write out           records onto `order.recommendations` (the new ideas by rank), the rest onto `order.candidates`, the runs onto `order.advisor_runs`, one line per record onto the ledger
 
-The Advisor does not use the user's money and recommends no amount (entry 80): `portfolio` is read only for WHICH symbols are held (the holdings pass and the names of the candidates), their shares
-and their cost basis (is a holding in profit, how much has it gained), never the cash or the equity. A reduction, like an opening, carries no number of shares.
+THE ADVISOR IS GIVEN NO PORTFOLIO (design choices entry 105): it does not know what the user holds, so it has no holdings pass, never writes a `reduce`, an `add` or a `hold`, and a company the user already holds is an
+ordinary candidate. It does not use the user's money and recommends no amount either (entry 80). Every record it writes is a recommendation to BUY.
 
 The model is called exactly twice. It writes no number that is used: the numbers come from the Data Clerk's metrics and from this module's arithmetic. A failed model call does not stop
 the step: without the plan call there are no text signals (the families that need none still run), without the thesis call a record carries `thesis: null` and says why.
@@ -40,9 +39,8 @@ from prometheus.agents.advisor.events import EVENT_CLASSES, filing_index_events,
 from prometheus.agents.advisor.blend import compute_blend
 from prometheus.agents.advisor.gates import negative_equity, run_gates, value
 from prometheus.agents.advisor.quality import quality_multiplier
-from prometheus.agents.advisor.record import Action, Agreement, Audit, Candidate, Evidence, Identity, PortfolioFit, Ranking, Recommendation, Risk, Thesis
+from prometheus.agents.advisor.record import Action, Agreement, Audit, Candidate, Concentration, Evidence, Identity, Ranking, Recommendation, Risk, Thesis
 from prometheus.agents.advisor.thesis import write_theses
-from prometheus.common.portfolio import Portfolio
 from prometheus.common.work_order import MAX_METRIC_SYMBOLS, WorkOrder, corpus_of, new_work_order, sector_map
 from prometheus.prompts.advisor_v1 import RETRY_PLAN, plan_message, plan_system
 from prometheus.prompts.advisor import evidence_text, kinds_text, user_message
@@ -186,30 +184,31 @@ def _risk(s: rk.Scored, plan) -> Risk:
                 gap_risk=plan.gap_risk, red_flags=list(flags))
 
 
-def _record(s: rk.Scored, checked: Checked | None, family, action: str, reason: str, plan, ident: dict, run_ids: dict, regime: tuple[str, str | None], items: dict, config, price: float | None,
+def _record(s: rk.Scored, checked: Checked | None, family, reason: str, plan, ident: dict, run_ids: dict, regime: tuple[str, str | None], items: dict, config,
             cooldown: str | None = None, extra: dict | None = None) -> Recommendation:
+    """The record of ONE recommendation to buy: its action is `open`, and it holds nothing of the user's holdings (entry 105)."""
     extra = extra or {}
     v0 = (checked.v0 if checked and checked.v0 else {})
-    direction = s.stance if s.stance in ("bullish", "bearish") else (family.direction if family else "bullish")
+    direction = s.stance if s.stance in ("bullish", "bearish") else family.direction
     return Recommendation(
         symbol=s.symbol, company=s.company, negative_equity=negative_equity(s.metrics), blend=s.blend, stance=s.stance, model_score=checked.model_score if checked else None, score=s.score, supported=bool(s.passed()), consistent=None,
         bullish_signals=v0.get("bullish_signals", 0), bearish_signals=v0.get("bearish_signals", 0), signals_claimed=v0.get("signals_claimed", 0), signals_verified=v0.get("signals_verified", 0),
         signals_counted=v0.get("signals_counted", 0), signals=v0.get("signals", []), advisor={"model": run_ids["model"], "version": "v1", "proposed_archetypes": checked.archetypes if checked else []},
         identity=Identity(record_id=uuid.uuid4().hex[:12], request_id=ident["request_id"], case=ident["case"], sleeve=config.sleeves[ident["case"]].sleeve, as_of_utc=ident["as_of_utc"],
                           sector_etf=s.sector_etf, regime=regime[0], regime_note=regime[1]),
-        action=Action(action=action, reason=reason, held_shares=s.held_shares, cost_basis=s.cost_basis, unrealized_pct=round(price / s.cost_basis - 1, 4) if price and s.cost_basis else None, cooldown_of=cooldown),
+        action=Action(action="open", reason=reason, cooldown_of=cooldown),
         families=s.families, quality=s.quality, evidence=_evidence(s, direction, items), features=_features(s.metrics),
         agreement=Agreement(agreement=round(s.agreement, 4), evidence_n=s.evidence_n, completeness=s.passed()[0].completeness if s.passed() else None, confidence=round(s.confidence, 4)),
         ranking=Ranking(composite=s.composite, conflict=s.conflict, stance=s.stance, stance_reason=s.stance_reason,
                         diversity_adjustment=extra.get("diversity_adjustment", False), displaced_by=extra.get("displaced_by")),
-        trade=plan, risk=_risk(s, plan), portfolio_fit=PortfolioFit(note=extra.get("portfolio_note")),
+        trade=plan, risk=_risk(s, plan), concentration=Concentration(note=extra.get("concentration_note")),
         gates=s.gates.gates, thesis=Thesis(thesis=None, thesis_error="not written yet"),
         audit=Audit(metric_order=run_ids.get("metric_order"), plan_run=run_ids.get("plan"), config_version=config.config_version, family_versions={f: "v1" for f in fam.FAMILIES}))
 
 
-def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str | None = None, today: date | None = None, top_k: int | None = None, only_subject: bool = False) -> WorkOrder:
-    """The twelve steps (see the module text). Returns the SAME order. `top_k` replaces the sleeve's number of new ideas (1 to 20). `only_subject`: look only at the order's own symbols and the
-    holdings (a comparison of named companies, entry 53): no symbol is added because the sources name it, the theme finds it or the model proposes it."""
+def generate(advisor: Advisor, order: WorkOrder, case: str | None = None, today: date | None = None, top_k: int | None = None, only_subject: bool = False) -> WorkOrder:
+    """The twelve steps (see the module text). Returns the SAME order. `top_k` replaces the sleeve's number of new ideas (1 to 20). `only_subject`: look only at the order's own symbols
+    (a comparison of named companies, entry 53): no symbol is added because the sources name it, the theme finds it or the model proposes it."""
     config, as_of = advisor.config, _now(today)
     today = today or date.today()
     # ---- 1 preconditions
@@ -235,19 +234,18 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
         except Exception as error:  # the stored market news cannot be read: the theme basket is empty, and the run says so
             theme_note = f"the theme's tickers could not be discovered ({type(error).__name__})"
             order.errors = [*order.errors, theme_note]
-    candidates, dropped = collect_candidates(order, portfolio, case, theme_rows, config.limits.max_candidates, config.limits.discover_min_articles, only_subject)
+    candidates, dropped = collect_candidates(order, case, theme_rows, config.limits.max_candidates, config.limits.discover_min_articles, only_subject)
     plan_run = new_run("plan", advisor.model)
     plan_run["dropped"].extend(dropped)
     order.advisor_runs = [*order.advisor_runs, plan_run]
     sources, sources_text = advisor._sources(order)
     evidence = advisor._evidence(order)
-    held = {p.symbol: p for p in portfolio.positions}
     known = {c["symbol"]: c["company"] for c in candidates if c.get("company")}
     # ---- 3 plan call
     checked = _plan_call(advisor, order, candidates, case, today, sources, sources_text, evidence, known, plan_run) if candidates else {}
     for symbol, chk in checked.items():
         if symbol not in {c["symbol"] for c in candidates} and not only_subject:
-            candidates.append({"symbol": symbol, "company": chk.company, "origin": "model", "held": symbol in held})
+            candidates.append({"symbol": symbol, "company": chk.company, "origin": "model"})
     if not candidates:
         order.status = "recommended"   # nothing to look at: a result, not a failure
         return order
@@ -291,19 +289,17 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
         inp = fam.FamilyInput(symbol=symbol, metrics=m or {}, events=events, signals=signals, quality=quality, regime=regime[0], config=config, today=today, drop_cause=chk.drop_cause if chk else None, blend=blend,
                               recent_company_sources=recent_company, theme=theme)
         results = [fam.evaluate(f, inp) for f in fam.FAMILIES if f != "theme" or case == "theme"]
-        position = held.get(symbol)
-        s = rk.Scored(symbol=symbol, company=c.get("company") or (chk.company if chk else None), origin=c["origin"], held=c["held"], metrics=m or {}, gates=gates, quality=quality, families=results,
-                      events=events, signals=signals, votes=_votes(signals, events, sources, config.families.event.max_age_bars), sector_etf=sectors.get(symbol),
-                      held_shares=position.shares if position else 0, cost_basis=position.cost_basis if position else None)
+        s = rk.Scored(symbol=symbol, company=c.get("company") or (chk.company if chk else None), origin=c["origin"], metrics=m or {}, gates=gates, quality=quality, families=results,
+                      events=events, signals=signals, votes=_votes(signals, events, sources, config.families.event.max_age_bars), sector_etf=sectors.get(symbol))
         theme_result = next((r for r in results if r.family == "theme"), None)
         s.theme_role = (theme_result.features_used.get("theme_role") if theme_result else None)
         s.blend = blend
         scored[symbol] = rk.rank_symbol(s)
-    # ---- 9 holdings, cooldown, select
+    # ---- 9 cooldown, select
     ledger = advisor.ledger
     ident = {"request_id": order.request_id, "case": case, "as_of_utc": as_of}
     run_ids = {"model": plan_run["model"], "metric_order": metric_order.request_id, "plan": {k: plan_run[k] for k in ("model", "tokens_in", "tokens_out", "calls", "error")}}
-    new_ideas = [s for s in scored.values() if not s.held]
+    new_ideas = list(scored.values())
     rejected: dict[str, dict] = {}
     cooling = {}
     eligible = []
@@ -319,44 +315,32 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
     universe = {s.symbol: n for n, s in enumerate(sorted(new_ideas, key=lambda s: (bool(s.gates.failed), *rk.sort_key(s))), 1)}   # every new idea, best to worst: those that passed every gate first
     for symbol, reason in why.items():
         rejected.setdefault(symbol, {"reason": reason})
-    add_floor = min((rk.rank_value(s) for s, _, _ in picked), default=None)
-    records: list[tuple[str, Recommendation]] = []
-    for s in (x for x in scored.values() if x.held):
-        family = rk.open_family(s, case, regime[0], config) or next(iter(sorted(s.passed("bullish"), key=lambda f: -f.edge_20d)), None)
-        price = tp.price_of(s.symbol, s.metrics, quotes.get(s.symbol))[0]
-        action, reason = rk.holding_action(s, ledger.recent(s.symbol), add_floor)
-        if action == "hold":
-            rejected[s.symbol] = {"reason": f"hold: {reason}"}
-            continue
-        plan = tp.build(family if action == "add" else None, s.metrics, quotes.get(s.symbol), today, config, s.symbol)      # a reduction has an entry zone and no amount, like every plan
-        records.append((action, _record(s, checked.get(s.symbol), family if action == "add" else None, action, reason, plan, ident, run_ids, regime, evidence.get(s.symbol, {}), config, price)))
+    records: list[Recommendation] = []
     # ---- 10 trade plans for the new ideas, then the records
-    for position, (s, family, extra) in enumerate(picked, 1):
+    for s, family, extra in picked:
         plan = tp.build(family, s.metrics, quotes.get(s.symbol), today, config, s.symbol, reaction_atr=next((e.get("reaction_atr") for e in s.events if e["class"] == family.features_used.get("event_class")), None))
-        price = tp.price_of(s.symbol, s.metrics, quotes.get(s.symbol))[0]
         if case == "funds" and len(picked) > 1:
-            extra = {**extra, "portfolio_note": f"{len(picked)} names are one bet: sectors {[p[0].sector_etf or 'unknown' for p in picked]}, betas {[value(p[0].metrics, 'beta_63d') for p in picked]}"}
-        rec = _record(s, checked.get(s.symbol), family, "open", f"{family.family}: blended score {s.score} (news, performance, history and filings together)", plan, ident, run_ids, regime, evidence.get(s.symbol, {}), config, price, extra=extra)
+            extra = {**extra, "concentration_note": f"{len(picked)} names are one bet: sectors {[p[0].sector_etf or 'unknown' for p in picked]}, betas {[value(p[0].metrics, 'beta_63d') for p in picked]}"}
+        rec = _record(s, checked.get(s.symbol), family, f"{family.family}: blended score {s.score} (news, performance, history and filings together)", plan, ident, run_ids, regime, evidence.get(s.symbol, {}), config, extra=extra)
         if case == "funds":
             rec.ranking.concentrated = True
         rec.ranking.universe_rank = universe.get(s.symbol)
-        records.append(("open", rec))
-    order_of = {"reduce": 0, "add": 1, "open": 2}
-    records.sort(key=lambda pair: (order_of[pair[0]], pair[1].score is None, -(pair[1].score or 0)))
-    for number, (_, rec) in enumerate(records, 1):
+        records.append(rec)
+    records.sort(key=lambda rec: (rec.score is None, -(rec.score or 0)))
+    for number, rec in enumerate(records, 1):
         rec.ranking.rank = number
     # ---- 11 thesis call
-    recorded = {rec.symbol for _, rec in records}
-    dumped = [rec.model_dump(mode="json") for _, rec in records]
+    recorded = {rec.symbol for rec in records}
+    dumped = [rec.model_dump(mode="json") for rec in records]
     thesis_run = new_run("thesis", advisor.model)
     if dumped:
         order.advisor_runs = [*order.advisor_runs, thesis_run]
         theses = write_theses(advisor.model, dumped, thesis_run)
-        for _, rec in records:
+        for rec in records:
             rec.thesis = theses[rec.symbol]
             rec.audit.thesis_run = {k: thesis_run[k] for k in ("model", "tokens_in", "tokens_out", "calls", "error")}
     # ---- 12 write out
-    final = [rec.model_dump(mode="json") for _, rec in records]
+    final = [rec.model_dump(mode="json") for rec in records]
     order.recommendations = [*order.recommendations, *final]
     leftovers = []
     for s in scored.values():
@@ -366,7 +350,7 @@ def generate(advisor: Advisor, order: WorkOrder, portfolio: Portfolio, case: str
         gate = s.gates.first_failed()
         parts = ([f"gate {gate.gate} failed" + (f": {gate.note}" if gate.note else "")] if gate else []) + ([info["reason"]] if info.get("reason") and not (gate and info["reason"].startswith("gate ")) else [])
         reason = "; ".join(parts) or "not selected"
-        leftovers.append(Candidate(symbol=s.symbol, company=s.company, origin=next(c["origin"] for c in candidates if c["symbol"] == s.symbol), held=s.held, gate=gate.gate if gate else None,
+        leftovers.append(Candidate(symbol=s.symbol, company=s.company, origin=next(c["origin"] for c in candidates if c["symbol"] == s.symbol), gate=gate.gate if gate else None,
                                    gate_value=gate.value if gate else None, families=s.families, negative_equity=negative_equity(s.metrics), blend=s.blend, score=s.score, stance=s.stance, rank=universe.get(s.symbol), reason=reason, cooldown_of=info.get("cooldown_of"),
                                    theme_role=s.theme_role))
     leftovers.sort(key=lambda c: (c.score is None, -(c.score or 0), c.symbol))

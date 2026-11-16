@@ -151,9 +151,9 @@ def _claim_key(base: str, index: int) -> str:
 def counterfactual(rec: Recommendation, claims: list[Claim], labels: dict[str, str], untagged: set[str], fresh_bearish: list[tuple[float, int]], advisor: AdvisorConfig,
                    config: CriticConfig) -> Counterfactual | None:
     """The record's blend, worked again from its own parts with the review's labels applied (spec 8.2 steps 1 to 5; Amendment 3 removed the expected return after cost). `labels` is {ref: label} of the
-    supporting claims; `untagged` the refs whose source does not list the symbol (they count for nothing); `fresh_bearish` is [(kind weight, age in days)] of the newer bad news. Only for an `open` or an `add`."""
+    supporting claims; `untagged` the refs whose source does not list the symbol (they count for nothing); `fresh_bearish` is [(kind weight, age in days)] of the newer bad news."""
     blend = rec.blend
-    if not blend or rec.action.action not in ("open", "add"):
+    if not blend:
         return None
     comps, cfg, weights = blend["components"], advisor.blend, advisor.blend.weights
     weight_of = config.evidence.label_weight
@@ -217,15 +217,15 @@ def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceC
     source checks of recheck (a claim whose source does not list the symbol counts for nothing). `run` is the review's `critic_runs` entry: tokens, calls and drops are added to it."""
     ev, out = config.evidence, EvidenceResult()
     today = eastern_date(now)
-    direction, opening = stance_direction(rec), rec.action.action in ("open", "add")
+    direction = stance_direction(rec)
     mine = supporting(claims, direction)
     by_ref = {c.ref: c for c in claims}
     check_of = {c.ref: c for c in checks}
     dropped: list[str] = []
 
-    # what the model reads: the claims whose source could be read again, the control, and the fresh sources (an addition or a new position only)
+    # what the model reads: the claims whose source could be read again, the control, and the fresh sources
     readable = [c for c in mine if (check_of.get(c.ref) and check_of[c.ref].found)]
-    fresh_hits = fresh_candidates(rec, order, verification, config) if opening else []
+    fresh_hits = fresh_candidates(rec, order, verification, config)
     fresh = {f"F{i}": h for i, h in enumerate(fresh_hits, 1)}
     need_call = bool(readable or fresh)
     labels: dict[str, tuple[str, str | None]] = {}
@@ -251,7 +251,7 @@ def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceC
                     found = (verification.get("chunks") or {}).get(c.chunk_id) or {}
                     sources.append((c.ref, _heading(found), excerpt(found.get("text") or "", c.quote, config.limits.max_source_chars)))
             fresh_block = [(k, f"{_heading(h)}: {h.get('headline') or ''}", excerpt(h.get("text") or "", "", config.limits.max_source_chars)) for k, h in fresh.items()]
-            messages = [SystemMessage(content=review_system(today, rec.action.action, rec.symbol, rec.company, direction, ev.max_reason_words)),
+            messages = [SystemMessage(content=review_system(today, rec.symbol, rec.company, direction, ev.max_reason_words)),
                         HumanMessage(content=review_message(rec.symbol, direction, [(c.ref, c.quote) for c in shown], sources, fresh_block))]
             record_run = new_run("review", model)
             reply = ask_object(model, messages, record_run, "claims", RETRY_REVIEW)

@@ -2,6 +2,7 @@
 import pytest
 from advisor_helpers import MemoryLedger
 from critic_helpers import CONFIG, NOW, captured, rec_of, tamper
+from pydantic import ValidationError
 
 from prometheus.agents.critic import scoring as sc
 from prometheus.agents.critic import value as vl
@@ -62,12 +63,14 @@ def test_a_rich_price_and_an_unassessable_deal_are_warnings():
     assert codes(run(price=115.0), "warning") == ["rich_price"] and run(price=115.0).detail.deal == "rich"
     r = run(fetched={**metrics(), "sma_126": {"value": None, "note": "needs 126 bars, 17 stored"}})
     [f] = [f for f in r.findings if f.code == "value_not_assessable"]
-    assert f.severity == "warning" and f.requires_human and "17 stored" in f.message and r.detail.deal == "unknown" and r.discount is None
+    assert f.severity == "warning" and not f.requires_human and "17 stored" in f.message and r.detail.deal == "unknown" and r.discount is None      # AMENDED (Part F, entry 103 corrected): a plain note, it asks for nobody
 
 
-def test_a_reduction_is_not_judged():
-    r = vl.assess(rec(**{"action.action": "reduce"}), metrics(), 88.0, V, CREDIT)
-    assert r.applicable is False and r.findings == []
+def test_a_reduction_is_not_a_record_so_value_never_judges_one():
+    """AMENDED (entry 105): value was "not judged" for a `reduce`. That record cannot be built now (the action must be `open`)."""
+    with pytest.raises(ValidationError, match="the action is 'reduce': a recommendation is to buy"):
+        rec(**{"action.action": "reduce"})
+    assert vl.assess(rec(), metrics(), 88.0, V, CREDIT).applicable is True
 
 
 # ---------------------------------------------------------------- the bonus conditions (scoring) and the history warnings
@@ -83,8 +86,11 @@ def test_a_recent_earlier_recommendation_at_a_much_lower_entry_is_a_warning():
     assert vl.history_warnings(r, 88.0, MemoryLedger([same]), NOW.date(), V) == [] and vl.history_warnings(r, 88.0, None, NOW.date(), V) == []
 
 
-def test_adding_far_above_what_was_paid_is_a_warning():
-    r = rec(**{"action.action": "add", "action.cost_basis": 70.0})
-    assert [f.code for f in vl.history_warnings(r, 88.0, None, NOW.date(), V)] == ["adding_above_cost"]
-    assert vl.history_warnings(rec(**{"action.action": "add", "action.cost_basis": 85.0}), 88.0, None, NOW.date(), V) == []
-    assert vl.history_warnings(r, None, None, NOW.date(), V) == []
+def test_the_critic_has_no_adding_above_cost_warning_it_never_reads_what_the_user_paid():
+    """AMENDED (entry 105): `adding_above_cost` warned that an `add` was priced 10% over the user's cost basis. The Critic never touches the holdings: there is no `add`, no cost basis on the record (a record that has
+    one is refused), no warning and no `value.add_above_cost` setting."""
+    with pytest.raises(ValidationError, match="the action is 'add': a recommendation is to buy"):
+        rec(**{"action.action": "add", "action.cost_basis": 70.0})
+    with pytest.raises(ValidationError, match="the record says something is held|Extra inputs"):
+        rec(**{"action.cost_basis": 70.0})
+    assert "add_above_cost" not in type(V).model_fields and vl.history_warnings(rec(), 88.0, None, NOW.date(), V) == [] and vl.history_warnings(rec(), None, None, NOW.date(), V) == []

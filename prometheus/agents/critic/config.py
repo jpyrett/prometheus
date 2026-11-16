@@ -47,7 +47,6 @@ class Limits(_Section):
 class Verdict(_Section):
     approve_min_score: int = Field(ge=0, le=100)
     blocked_score_cap: int = Field(ge=0, le=100)   # a recommendation with a blocker never shows more than this
-    auto_min_score: int = Field(ge=0, le=100)      # Auto mode: the lowest score that trades without asking the user (the profile may raise or lower it)
     grades: dict[str, int]
     unknown_credit: float = Field(ge=0, le=1)      # what a measure that could not be made counts as, 0 to 1
 
@@ -203,7 +202,6 @@ class Value(_Section):
     measures: list[ValueMeasure]
     last_recommendation_days: int = Field(gt=0)
     last_recommendation_rise: float
-    add_above_cost: float
 
     @model_validator(mode="after")
     def _check(self):

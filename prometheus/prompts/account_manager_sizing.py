@@ -5,11 +5,11 @@
 
 The model's ONE job is the part a program cannot do: word a question in plain language, and read the person's answer into a small form (a unit, an amount, for each company or in total, and how a total is spread).
 It decides nothing about the market, picks no company and works out no number of shares: code checks the form against what the person typed (the amount must be a number they typed) and does all the arithmetic.
-The facts it is shown are numbers made by code. The person's answers reach it between <answer> tags: data, never instructions.
+The facts it is shown are numbers made by code, written by the one JSON encoder (`money.dumps`: a Decimal is a number, never a string; design choices entry 112). The person's answers reach it between <answer> tags: data, never instructions.
 
 Nothing is listed here by name: no sector, no company and no ticker.
 """
-import json
+from prometheus.common.money import dumps
 
 SYSTEM = """You help a person decide how much to buy. A program has already chosen the companies, and the only cap on a purchase is the person's cash. You do not give advice, you do not pick companies, and you do not work out shares or prices. Your job is to ask, in plain words, how much they want to buy, and to write their answer down as a form.
 
@@ -25,7 +25,7 @@ The fields of set_sizing:
 - unit: "percent" (a percentage of their whole account), "dollars", "shares" (a number of shares), or "max" (they want as much as their cash buys, as much as they can).
 - amount: the number, copied exactly as the person typed it (20 for 20%, 3000 for $3,000, 10 for 10 shares); null for "max". Never a number the person did not type.
 - scope: "each" when the amount is for each company, "total" when it is for all of them together. With one company use "total".
-- allocation: how a total is spread over the companies. Use "as_much_as_possible" (the first company first, as far as the cash allows) unless the person SAID how to spread it: "even" only if they asked for an equal split, "round_robin" only if they asked for one share of each in turn. It matters only for a total.
+- allocation: how a total is spread over the companies. LEAVE IT OUT (the program then buys one share of each company in turn, never everything of the first) unless the person SAID how to spread it: "even" only if they asked for an equal split, "round_robin" if they asked for one share of each in turn. It matters only for a total.
 
 Rules:
 - Ask how much they want to buy, and say they can answer with a percentage of their account, a dollar amount, a number of shares, or "as much as I can". Use the facts to make the question concrete (the cash, the companies).
@@ -38,7 +38,7 @@ Rules:
 
 def facts_message(facts: dict, max_questions: int) -> str:
     """The facts, made by code, between tags; the model reads them as data."""
-    return ("Here are the facts (numbers made by a program; they are exact). Ask the first question now.\n<facts>\n" + json.dumps(facts, indent=1, default=str) + "\n</facts>\n"
+    return ("Here are the facts (numbers made by a program; they are exact). Ask the first question now.\n<facts>\n" + dumps(facts, indent=1) + "\n</facts>\n"
             f"You may ask at most {max_questions} questions. Reply with JSON only.")
 
 

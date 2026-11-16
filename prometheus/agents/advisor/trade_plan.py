@@ -7,15 +7,15 @@ All arithmetic, no model. The plan is the part of a recommendation a Critic can 
     entry_zone      the last price +- 0.5 ATR; the last price is the quote when the order has one, else the last stored close (`entry_basis` says which)
     stop_distance   2 ATR for reversion and event, 3 ATR for trend and capital_return (or the distance to the 50-day mean when that is nearer and below the price); at least the typical
                     earnings move when a report falls inside the horizon (`gap_risk`; the earnings dates are not available in this build, so it never fires)
-    stop_price      the entry mid minus the stop distance (long only: a bearish call on a name that is not held is `avoid`, not a short)
-    target_price    the entry mid x (1 + 1.5 x the family's edge at its horizon); none for capital_return (it is held for the payout, not for a target)
+    stop_price      the entry mid minus the stop distance (long only: a bearish call is not a recommendation, not a short)
+    target_price    the entry mid x (1 + 1.5 x the family's edge at its horizon); none for capital_return (it is bought for the payout, not for a target)
     time_stop_date  `horizon_bars` weekdays after today (the calendar of the future has no holidays in it: the note says so)
     order_style     limit at the entry mid for reversion, for capital_return, for an event that has moved less than one ATR; a marketable limit
                     at the last price + 0.25 ATR for trend while it is above its 200-day mean; a limit otherwise
     invalidation    the rules that say "this idea is wrong or finished": the price under the stop, the time stop, a bearish event, and the family's own condition
 
-THERE IS NO SIZE (entry 80). The Advisor says which companies, at what prices and until when; HOW MUCH to buy or sell is the Account Manager's (`account_manager/sizing.py`: the user's money and the
-user's limits). The plan therefore holds no number of shares, no risk budget and no share of the account, and `build` is given neither the portfolio nor the equity: the Advisor does not use the
+THERE IS NO SIZE (entry 80). The Advisor says which companies, at what prices and until when; HOW MUCH to buy is the Account Manager's (`account_manager/sizing.py`: the user's money). A plan is for a
+PURCHASE: there is no plan for a sale (the Advisor recommends none, entry 105). The plan therefore holds no number of shares, no risk budget and no share of the account, and `build` is given neither the portfolio nor the equity: the Advisor does not use the
 user's money. The stop DISTANCE stays in the plan because it is a price fact of the idea (the Account Manager's loss limit divides by it). The regime (stress or unknown) is still context for the
 families and the record's identity; it used to halve the risk budget, and with no budget it has no part in the plan, so `build` is not given it.
 
@@ -49,19 +49,17 @@ def price_of(symbol: str, metrics: dict | None, quote: dict | None) -> tuple[flo
     return (float(last), "last_close") if last else (None, "none")
 
 
-def build(family: FamilyResult | None, metrics: dict | None, quote: dict | None, today: date, config: AdvisorConfig, symbol: str = "", reaction_atr: float | None = None) -> TradePlan:
-    """The plan for one symbol on `family` (None for a name that is not being opened: a reduction or an avoidance has an entry zone and nothing more). No plan has a size (module text)."""
+def build(family: FamilyResult, metrics: dict | None, quote: dict | None, today: date, config: AdvisorConfig, symbol: str = "", reaction_atr: float | None = None) -> TradePlan:
+    """The plan for one symbol on `family`, the strategy it is bought on. No plan has a size (module text)."""
     tc = config.trade
     last, basis = price_of(symbol, metrics, quote)
     atr, sma50 = value(metrics, "atr_14"), value(metrics, "sma_50")
-    plan = TradePlan(family=family.family if family else None, entry_basis=basis, horizon_bars=family.horizon_bars if family else None)
+    plan = TradePlan(family=family.family, entry_basis=basis, horizon_bars=family.horizon_bars)
     if last is None or atr is None:
         plan.notes.append("no plan prices: " + ("there is no price" if last is None else "atr_14 is missing (needs 20 bars)"))
         return plan
     mid = last
     plan.entry_mid, plan.entry_zone = round(mid, 4), [round(last - tc.entry_atr * atr, 4), round(last + tc.entry_atr * atr, 4)]
-    if family is None:
-        return plan
     distance = tc.stop_atr[family.family] * atr
     if family.family in ("trend", "capital_return") and sma50 is not None and sma50 < mid and mid - sma50 < distance:
         distance = mid - sma50

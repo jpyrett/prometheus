@@ -1,8 +1,11 @@
 """The Trader's thresholds: `configs/trader_v1.json`, read and checked ONCE (Trader v1 spec section 15).
 
     config = load_config()                  # the file, validated: a missing key, an unknown key or a wrong type is an error NOW, not halfway through a run
-    config.orders.max_chase_pct             # 0.01
+    config.orders.max_chase_pct             # Decimal('0.01')
     paper_trading_enabled()                 # PAPER_TRADING from the environment, then .env: true, yes, on or 1 pass; anything else refuses every run
+
+The ratios that multiply a price or an amount (`orders.max_chase_pct`, `orders.limit_band_pct`, `costs.slippage_bps`, `costs.commission_per_order`) are `Decimal` (design choices entry 112): read from the digits the JSON file writes them with (`money.Rate`:
+a bool and a string are refused), never a binary float. `limits.model_timeout_seconds` is a timing and stays a float.
 
 Every threshold of the Trader is in that file and nowhere else. The model never chooses one and the code never writes one. `extra="forbid"` means a typo in the JSON fails when the file is loaded, instead of
 being ignored while the code uses a default (the same rule as the Critic's `config.py`). `mode` is `paper` or `backtest` and nothing else: live trading is refused here, in the loader, and again by the Trader.
@@ -11,10 +14,12 @@ behaviour the code does not have. (A commission is refused because `apply_fill` 
 would not be the cash the book holds. The broker and the simulator still carry the commission in their arithmetic, ready for the version that charges one; here it is always 0.)
 """
 import json
+from decimal import Decimal
 from pathlib import Path
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, field_validator, model_validator
 
+from prometheus.common.money import Rate
 from prometheus.rag.config import REPO_ROOT, setting
 from prometheus.rag.loaders import check_symbol
 
@@ -45,8 +50,8 @@ class Limits(_Section):
 
 
 class Orders(_Section):
-    max_chase_pct: float = Field(ge=0, lt=1)            # how far past the price the Critic judged an order may fill (a buy above it, a sale below it)
-    limit_band_pct: float = Field(ge=0, lt=1)           # how far the other way a limit price may be set
+    max_chase_pct: Rate = Field(ge=0, lt=1)             # how far past the price the Critic judged an order may fill (a buy above it, a sale below it): a Decimal of the digits the file writes
+    limit_band_pct: Rate = Field(ge=0, lt=1)            # how far the other way a limit price may be set
     allow_market: StrictBool                            # false: only limit orders
     cash_policy: str
 
@@ -59,12 +64,12 @@ class Orders(_Section):
 
 
 class Costs(_Section):
-    slippage_bps: float = Field(ge=0, le=1000)          # basis points: a buy fills this much above the price, a sale this much below
-    commission_per_order: float = Field(ge=0)           # dollars per filled order: must be 0 in this version (see the validator)
+    slippage_bps: Rate = Field(ge=0, le=1000)           # basis points: a buy fills this much above the price, a sale this much below. 0 in the shipped file (design choices entry 111: no slippage, a run never spends more than its money); the argument stays for the simulator
+    commission_per_order: Rate = Field(ge=0)            # dollars per filled order: must be 0 in this version (see the validator)
 
     @field_validator("commission_per_order")
     @classmethod
-    def _no_commission(cls, value: float) -> float:
+    def _no_commission(cls, value: Decimal) -> Decimal:
         if value != 0:
             raise ValueError("costs.commission_per_order must be 0 in this version: the portfolio's apply_fill and the account book charge no commission, so any other value would count cash "
                              f"the account never pays and the Trader's cash would not match the book's; got {value!r}")

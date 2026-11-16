@@ -1,0 +1,38 @@
+{
+ "_note": "GET /api/health and GET /api/accounts/0 of the replay server over bob_jones_oil.json, saved by scripts/record_fixture.mjs.",
+ "health": {
+  "ok": true,
+  "mode": "replay",
+  "book": "ok",
+  "clock_note": "CLOCK    SIMULATED (USE_LIVE_TRADING=false): the desk works at 2026-11-13 15:30 ET, in the regular session of Friday, 2026-11-13, with the market close of that day; no live quote is used. Nothing is sent to a broker either way.",
+  "clock_pill": "SIMULATED CLOCK · FRI NOV 13 CLOSE",
+  "defaults": {
+   "prompt": "Buy an even mixture of 3 most recommended stocks in the pizza restaurants using $3000 of my available money",
+   "strict": false,
+   "neutral": true,
+   "fetch": true
+  },
+  "limits": {
+   "prompt_chars": 600
+  },
+  "active_run": null,
+  "tracing": "off",
+  "replay_file": "bob_jones_oil.json"
+ },
+ "account": {
+  "account": {
+   "id": 0,
+   "name": "Bob Jones",
+   "age": null,
+   "risk": "conservative",
+   "mode": "auto",
+   "sample": false,
+   "read_only": true
+  },
+  "positions": [],
+  "cash": 15000,
+  "invested": 0,
+  "total": 15000,
+  "as_of_utc": "2026-11-16T00:23:18Z"
+ }
+}

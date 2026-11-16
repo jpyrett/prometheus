@@ -25,8 +25,8 @@ class CapturedAdvisor:
     def __init__(self, name="PG_open"):
         self.name = name
 
-    def generate_recommendations(self, order, portfolio_, case=None, today=None, **kw):
-        CapturedAdvisor.seen = (order, portfolio_, today)
+    def generate_recommendations(self, order, case=None, today=None, **kw):
+        CapturedAdvisor.seen = (order, today)
         source = captured(self.name)
         order.data = source.data
         named = set(order.subject or [])           # the captured SNDK run also holds GM; a request for SNDK is answered with SNDK's recommendation
@@ -83,13 +83,14 @@ def test_one_work_order_travels_through_the_critic_and_the_decision_and_comes_ou
     assert set(state["seconds"]) == {"account_manager", "data_clerk", "advisor", "critic", "account_manager_decision"}
 
 
-def test_the_advisor_runs_version_1_with_the_portfolio_and_the_easterns_date_of_the_clock():
+def test_the_advisor_runs_version_1_with_no_portfolio_and_the_easterns_date_of_the_clock():
+    """AMENDED (entry 105): the desk used to pass the user's portfolio to the Advisor; it passes none, and the Advisor's call has no such argument (the fake here has the real method's signature)."""
     late = datetime(2026, 11, 5, 19, 30, tzinfo=timezone(timedelta(hours=-5)))        # 19:30 Eastern: the UTC date is already the 6th
     run_late = lambda: desk.run_desk({"symbol": "PG", "fetch": False, "account": {"portfolio": RICH}}, clerk_factory=lambda o: DeskClerk(), advisor_factory=lambda o: CapturedAdvisor(), resolver=FakeResolver(), with_critic=True,
                                      critic_factory=critic_for(), funds_factory=lambda: Manager(profile=profile()), clock=lambda: late)
     run_late()
-    order, portfolio_, today = CapturedAdvisor.seen
-    assert str(today) == "2026-11-05" and portfolio_.user == "Jacob Pyrett" and order.reviews[0]["reviewed_utc"] == "2026-11-06T00:30:00Z"      # reviewed at the clock's moment, dated by the Eastern day
+    order, today = CapturedAdvisor.seen
+    assert str(today) == "2026-11-05" and order.reviews[0]["reviewed_utc"] == "2026-11-06T00:30:00Z"      # reviewed at the clock's moment, dated by the Eastern day
 
 
 def test_without_an_answer_the_decision_waits_and_the_order_stays_reviewed():
@@ -135,7 +136,7 @@ def test_raise_funds_buys_what_the_critic_approved_and_the_user_allowed_with_the
 
 def test_nothing_recommended_ends_the_desk_after_the_advisor():
     class Nothing(CapturedAdvisor):
-        def generate_recommendations(self, order, portfolio_, case=None, today=None, **kw):
+        def generate_recommendations(self, order, case=None, today=None, **kw):
             order.status = "recommended"
             return order
     state = desk.run_desk({"symbol": "PG", "fetch": False}, clerk_factory=lambda o: DeskClerk(), advisor_factory=lambda o: Nothing(), resolver=FakeResolver(), with_critic=True, critic_factory=critic_for(),
@@ -152,8 +153,10 @@ def test_a_critic_that_cannot_start_is_a_message_on_the_order_not_an_exception()
 
 
 def test_a_bad_profile_or_portfolio_file_is_a_message_on_the_order():
+    """AMENDED (entry 105): the Advisor was the first node to read the account (it was given the portfolio), so a bad profile file stopped the run at the Advisor and the order stayed `data_ready`. The Advisor is given no
+    portfolio and reads nothing of the account: it runs, the order is `recommended`, and the CRITIC is the first node to read the profile (for its risk view) and reports the file."""
     state = run({"symbol": "PG", "fetch": False, "account": {"profile": "/nonexistent/profile.json"}})
-    assert any("the profile file does not exist" in e for e in state["order"].errors) and state["order"].status == "data_ready"
+    assert any("the profile file does not exist" in e for e in state["order"].errors) and state["order"].status == "recommended" and state["order"].recommendations and state["order"].reviews == []
 
 
 def test_the_report_has_the_critic_section_with_the_scorecard_and_the_decision():
@@ -186,7 +189,7 @@ def test_an_order_the_critic_never_reviewed_is_a_path_that_stopped():
 
 def test_when_nothing_was_recommended_the_critic_is_never_asked_and_the_path_is_finished():
     class Nothing(CapturedAdvisor):
-        def generate_recommendations(self, order, portfolio_, case=None, today=None, **kw):
+        def generate_recommendations(self, order, case=None, today=None, **kw):
             order.status = "recommended"
             return order
     state = desk.run_desk({"symbol": "PG", "fetch": False}, clerk_factory=lambda o: DeskClerk(), advisor_factory=lambda o: Nothing(), resolver=FakeResolver(), with_critic=True, critic_factory=critic_for(),

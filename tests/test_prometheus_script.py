@@ -271,11 +271,11 @@ def test_the_help_says_which_way_in_is_the_end_to_end_one_and_what_a_trade_you_n
 
 
 def test_the_other_session_flags_are_passed_on_exactly_as_given():
-    result = run("", "--session", *BOB, "--prompt", OIL, "--no-fetch", "--cleanup", "--allow-no-trade", "--no-trader-model", "--real-ledger", "--auto-min-score", "70",
+    result = run("", "--session", *BOB, "--prompt", OIL, "--no-fetch", "--cleanup", "--allow-no-trade", "--no-trader-model", "--real-ledger",
                  "--default-count", "4", "--model", "openai/gpt-oss-120b")
     cmd = command(result)
     assert result.returncode == 0 and "--cleanup" in cmd and "--allow-no-trade" in cmd and "--no-trader-model" in cmd and "--real-ledger" in cmd
-    assert cmd[cmd.index("--auto-min-score") + 1] == "70"
+    assert "--auto-min-score" not in cmd      # entry 104: the second mark is gone
     assert cmd[cmd.index("--default-count") + 1] == "4" and cmd[cmd.index("--model") + 1] == "openai/gpt-oss-120b" and "--fetch" not in cmd and "--yes" not in cmd
 
 

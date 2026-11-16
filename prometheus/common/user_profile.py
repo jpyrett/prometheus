@@ -8,8 +8,7 @@
 The JSON files are still what the desk loads by default. The account book (design choices entry 72) loads this same class from Postgres: the risk levels it can set are `TOLERANCES` below. Nothing here
 calls an API or a model.
 
-THE CRITIC SEES A `RiskView`, NOT THE PROFILE. The view holds what the Critic needs to judge a COMPANY for this user (tolerance, age, horizon, the exclusions and the minimum price) and leaves out the name, the mode and the
-automatic-trading mark: whether the desk asks or trades on its own is the Account Manager's business, and a Critic's verdict must not depend on it (a recommendation is as good or as bad in Ask mode
+THE CRITIC SEES A `RiskView`, NOT THE PROFILE. The view holds what the Critic needs to judge a COMPANY for this user (tolerance, age, horizon, the exclusions and the minimum price) and leaves out the name and the mode: whether the desk asks or trades on its own is the Account Manager's business, and a Critic's verdict must not depend on it (a recommendation is as good or as bad in Ask mode
 as in Auto). How much to buy is the Account Manager's too (and no limit of the profile caps it: design choices entry 91): `RiskView` forbids extra fields, so nothing of the user's money can even be put into it, and the Critic cannot know it.
 """
 import json
@@ -45,7 +44,6 @@ class UserProfile(BaseModel):
     age: int | None = Field(default=None, ge=18, le=120)    # lowers the tolerance (Critic spec 8.4); None: no cap
     investment_horizon_years: float | None = Field(default=None, gt=0)
     trade_mode: Literal["ask", "auto"] = "ask"              # ask: the user approves each trade. auto: the desk trades what the Critic approves
-    auto_min_score: int | None = Field(default=None, ge=0, le=100)   # auto mode only: the lowest Critic score that trades without asking; None: the Critic's own `verdict.auto_min_score`
     min_price: float = Field(default=5.0, ge=0)                      # no stock under this price
     excluded_symbols: list[str] = Field(default_factory=list)
     excluded_sectors: list[str] = Field(default_factory=list)        # sector ETF tickers (the keys of configs/sector_etfs.json)

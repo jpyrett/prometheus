@@ -103,6 +103,27 @@ def test_the_sample_accounts_match_the_seed(store):
     assert jacob.account_balance() == Decimal("51.23")
 
 
+def test_funds_can_be_removed_down_to_zero_and_never_below_it(store):
+    """`remove_funds` (UI v1, design choices entry 100): a withdrawal is one negative ledger row, and the cash check the book already makes (the cash is the only thing it looks at) refuses more than the account holds."""
+    with book(store) as manager:
+        manager.add_funds(Decimal("500.00"), date(2026, 1, 15))
+        assert manager.remove_funds(Decimal("120.25"), date(2026, 1, 16)) == Decimal("379.75")
+        assert manager.remove_funds("379.75") == Decimal("0.00") and manager.account_balance() == Decimal("0.00")
+        with pytest.raises(ValueError, match=r"the account has \$0.00 in cash: \$0.01 cannot be removed"):
+            manager.remove_funds("0.01")
+        manager.add_funds("10.00")
+        for bad in (1.5, 0, -5, "0", "abc"):
+            with pytest.raises(ValueError):
+                manager.remove_funds(bad)
+        with pytest.raises(ValueError, match="cannot be removed"):
+            manager.remove_funds("10.01")
+        assert manager.account_balance() == Decimal("10.00")
+        with psycopg.connect(row_factory=psycopg.rows.dict_row, **store._connect) as conn:
+            conn.execute("SELECT set_config('trading.account_id', %s, true)", (str(manager.account_id),))
+            kinds = [(r["kind"], r["amount"], r["balance_after"]) for r in conn.execute("SELECT kind, amount, balance_after FROM trading.cash_ledger WHERE account_id = %s ORDER BY entry_id", (manager.account_id,)).fetchall()]
+        assert kinds == [("deposit", Decimal("500.00"), Decimal("500.00")), ("withdrawal", Decimal("-120.25"), Decimal("379.75")), ("withdrawal", Decimal("-379.75"), Decimal("0.00")), ("deposit", Decimal("10.00"), Decimal("10.00"))]
+
+
 def test_a_new_account_takes_funds_lists_holds_and_counts_the_gain(store):
     with book(store) as manager:
         assert manager.account_balance() == Decimal("0.00")
@@ -134,7 +155,7 @@ def test_a_new_account_takes_funds_lists_holds_and_counts_the_gain(store):
         assert manager.record_trade("F", "buy", 10, Decimal("12.50"), date(2026, 2, 2), name="Ford Motor Co") == Decimal("0.00")
         assert manager.account_balance() == Decimal("885.50")
         portfolio = manager.list_portfolio()
-        assert [(p.symbol, p.shares, p.cost_basis) for p in portfolio.positions] == [("F", 10, 12.5)]
+        assert [(p.symbol, p.shares, p.cost_basis) for p in portfolio.positions] == [("F", 10, Decimal("12.5"))]
         assert manager.record_trade("F", "sell", 4, Decimal("15"), date(2026, 5, 20)) == Decimal("10.00")
         assert manager.account_balance() == Decimal("945.50")
         assert manager.list_portfolio().position("F").shares == 6
@@ -171,29 +192,29 @@ def test_fills_the_trader_reports_are_booked_through_notify_trades_and_the_book_
     with book(store, name="Trader Holder") as manager:
         assert manager.add_funds(Decimal("2000.00"), bought_on) == Decimal("2000.00")
         portfolio = manager.trading_portfolio()                                                    # connected: the saved account, not a file
-        assert portfolio.user == "Trader Holder" and portfolio.cash_avail == 2000.0 and portfolio.positions == []
+        assert portfolio.user == "Trader Holder" and portfolio.cash_avail == Decimal("2000") and portfolio.positions == []
 
-        after_buy, problems = manager.notify_trades(portfolio, [filled("T1", "PG", "buy", 10, 150.25, record_id="rec-buy")], bought_on, book=True)
+        after_buy, problems = manager.notify_trades(portfolio, [filled("T1", "PG", "buy", 10, Decimal("150.25"), record_id="rec-buy")], bought_on, book=True)
         assert problems == [] and manager.account_balance() == Decimal("497.50")                   # 2000.00 - round(10 x 150.25, 2)
         saved = manager.list_portfolio()
-        assert [(p.symbol, p.shares, p.cost_basis, p.acquired) for p in saved.positions] == [("PG", 10, 150.25, bought_on)]
-        assert after_buy.cash_avail == 497.5 and after_buy.position("PG").shares == 10 and after_buy.position("PG").cost_basis == 150.25
+        assert [(p.symbol, p.shares, p.cost_basis, p.acquired) for p in saved.positions] == [("PG", 10, Decimal("150.25"), bought_on)]
+        assert after_buy.cash_avail == Decimal("497.5") and after_buy.position("PG").shares == 10 and after_buy.position("PG").cost_basis == Decimal("150.25")
         assert manager.calculate_total_gain(bought_on, sold_on) == Decimal("0.00") and manager.number_trades(bought_on, sold_on) == 1
 
-        after_sell, problems = manager.notify_trades(saved, [filled("T2", "PG", "sell", 4, 160.0, record_id="rec-sell")], sold_on, book=True)
+        after_sell, problems = manager.notify_trades(saved, [filled("T2", "PG", "sell", 4, Decimal("160.0"), record_id="rec-sell")], sold_on, book=True)
         assert problems == [] and manager.account_balance() == Decimal("1137.50")                  # 497.50 + 640.00
         saved = manager.list_portfolio()
-        assert [(p.symbol, p.shares, p.cost_basis) for p in saved.positions] == [("PG", 6, 150.25)]
+        assert [(p.symbol, p.shares, p.cost_basis) for p in saved.positions] == [("PG", 6, Decimal("150.25"))]
         assert manager.calculate_total_gain(bought_on, sold_on) == Decimal("39.00")                # 640.00 - round(4 x 150.25, 2) = 601.00
         assert manager.calculate_total_gain(bought_on, bought_on) == Decimal("0.00") and manager.number_trades(bought_on, sold_on) == 2
-        assert after_sell.cash_avail == float(manager.account_balance()) and after_sell.position("PG").shares == saved.position("PG").shares     # the portfolio returned is what the book holds
+        assert after_sell.cash_avail == manager.account_balance() and after_sell.position("PG").shares == saved.position("PG").shares     # the portfolio returned is what the book holds
 
-        stale = saved.model_copy(update={"cash_avail": 10000.0})                                    # a portfolio the book does not agree with: the book refuses what the cash cannot pay for
-        unchanged, problems = manager.notify_trades(stale, [filled("T3", "F", "buy", 20, 100.0, record_id="rec-big")], sold_on, book=True)
+        stale = saved.model_copy(update={"cash_avail": Decimal("10000")})                                    # a portfolio the book does not agree with: the book refuses what the cash cannot pay for
+        unchanged, problems = manager.notify_trades(stale, [filled("T3", "F", "buy", 20, Decimal("100.0"), record_id="rec-big")], sold_on, book=True)
         assert problems == ["T3: buy 20 F was not booked: cash $1,137.50 does not cover $2,000.00"] and unchanged == stale
         assert manager.account_balance() == Decimal("1137.50") and manager.number_trades(bought_on, sold_on) == 2 and manager.list_portfolio().position("F") is None
 
-        not_booked, problems = manager.notify_trades(saved, [filled("T4", "PG", "sell", 1, 170.0, record_id="rec-memory")], sold_on)       # no book=True: nothing is saved
+        not_booked, problems = manager.notify_trades(saved, [filled("T4", "PG", "sell", 1, Decimal("170.0"), record_id="rec-memory")], sold_on)       # no book=True: nothing is saved
         assert problems == [] and not_booked.position("PG").shares == 5 and manager.account_balance() == Decimal("1137.50") and manager.list_portfolio().position("PG").shares == 6
     assert sample_state() == before
 
@@ -223,30 +244,30 @@ def test_the_trader_in_paper_mode_books_its_fill_in_a_throwaway_account_and_the_
         manager.connect(store, holder.account_id)                                                          # the desk builds the manager first and learns the account afterwards
         order, ledger = decided(), MemoryLedger()
         trader = Trader(use_model=False, ledger=ledger)
-        assert manager.profile.user == "Trader Holder" and manager.trading_portfolio().cash_avail == 10000.0
+        assert manager.profile.user == "Trader Holder" and manager.trading_portfolio().cash_avail == Decimal("10000")
 
         trader.execute_trades(order, manager, None, NOW, book=True)                                          # paper mode (the default), the account's own portfolio, the fills saved
         [trade] = order.trades
         assert (trade["status"], trade["symbol"], trade["side"], trade["shares"], trade["booked"], trade["placed_by"]) == ("filled", "PG", "buy", 44, True, "code")
-        assert (trade["fill"]["price"], trade["fill"]["amount"], trade["fill"]["date"], trade["fill"]["price_source"]) == (167.1, 7352.4, "2026-11-05", "quote")
+        assert (trade["fill"]["price"], trade["fill"]["amount"], trade["fill"]["date"], trade["fill"]["price_source"]) == (Decimal("167.1"), Decimal("7352.4"), "2026-11-05", "quote")
         assert order.status == "traded" and order.errors == [] and order.trader_runs[0]["booked"] is True and order.trader_runs[0]["errors"] == []
 
         assert manager.account_balance() == Decimal("2647.60")                                               # 10000.00 - round(44 x 167.10, 2): the book holds the cash the Trader's run reported
-        assert order.trader_runs[0]["portfolio_after"]["cash"] == 2647.6 and order.trader_runs[0]["portfolio_before"]["cash"] == 10000.0
+        assert order.trader_runs[0]["portfolio_after"]["cash"] == Decimal("2647.6") and order.trader_runs[0]["portfolio_before"]["cash"] == Decimal("10000")
         saved = manager.list_portfolio()
-        assert [(p.symbol, p.shares, p.cost_basis, p.acquired) for p in saved.positions] == [("PG", 44, 167.1, day)] and saved.cash_avail == 2647.6
+        assert [(p.symbol, p.shares, p.cost_basis, p.acquired) for p in saved.positions] == [("PG", 44, Decimal("167.1"), day)] and saved.cash_avail == Decimal("2647.6")
         assert manager.number_trades(day, day) == 1 and manager.calculate_total_gain(day, day) == Decimal("0.00")
         assert [r["trade_id"] for r in ledger.records] == ["T1"]
 
         again = trader.execute_trades(order, manager, None, NOW, book=True)                                  # T3: a filled trade is final; nothing is bought twice
-        assert again is order and len(order.trades) == 1 and len(order.trader_runs) == 2 and order.trader_runs[1]["portfolio_after"]["cash"] == 2647.6
+        assert again is order and len(order.trades) == 1 and len(order.trader_runs) == 2 and order.trader_runs[1]["portfolio_after"]["cash"] == Decimal("2647.6")
         assert manager.account_balance() == Decimal("2647.60") and manager.number_trades(day, day) == 1 and manager.list_portfolio().position("PG").shares == 44
     assert sample_state() == before
 
 
 def _review(record_id, *, approved=True, score=90):
     return {
-        "record_id": record_id, "review_id": record_id + "-review", "symbol": "F", "action": "add", "approved": approved,
+        "record_id": record_id, "review_id": record_id + "-review", "symbol": "F", "action": "open", "approved": approved,
         "summary": "APPROVE F" if approved else "DENY F", "valid_until_utc": "2026-11-12T20:00:00Z",
         "score": score, "requires_human": False, "requires_human_reasons": [], "timing": {"deal_price": 10.0},
     }

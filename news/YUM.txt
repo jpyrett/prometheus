@@ -2213,3 +2213,176 @@ Papa John’s pizza chain will close hundreds of locations by the end of 2027.
 <<<INSIGHTS>>>
 
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807246
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T11:52:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=68bd17965b7bda5ddc0ceab72ecdedb91959d4e5309e7de5064e10096de7287d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: A $5.2 Billion Fund Dumps These 3 Stocks
+<<<SUMMARY>>>
+Key TakeawaysIlex Capital Partners, a fund with $5. 15 billion of US stocks, sold its whole stakes in Keurig Dr Pepper, Yum! Brands and Philip Morris International in the third quarter, its 13F shows.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805623
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T16:12:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=70c6557b69af5a23ad9c4f466a8688be03bbc69332e34ce35334b7fb7d08d4a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: What Are Wall Street Analysts’ Target Price for Yum! Brands Stock?
+<<<SUMMARY>>>
+Yum! Brands has posted gains over the past year, trailing the S&P 500 but outperforming sector peers. Analysts maintain a cautiously optimistic outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802429
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=63412412e9e79f5a1742cf9580394e3db1bc6505e130720d5663fd5b42d5e55b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Yum! Brands, Inc. Declares Quarterly Dividend of $0.75 Per Share
+<<<SUMMARY>>>
+LOUISVILLE, Ky., November 13, 2026--Yum! Brands, Inc. Declares Quarterly Dividend of $0.75 Per Share
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806359
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:44:51Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f39836ea7696bff7b3b7257428d34f2ae23661c1783e87f77aff68d747c08c27
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/13/13-11-2026-11249-thebambooworks-com.jpg?width=2048&height=1536
+category: company
+tickers: YUM
+keywords: 
+headline: Yum China Doubles Restaurant Count To 20K+ In Just 6 Years
+<<<SUMMARY>>>
+The operator of the KFC and Pizza Hut chains reached its latest milestone just six years after opening its 10,000th store in 2020
+
+
+
+Key Takeaways:
+
+
+
+
+Yum China has opened its 20,000th store in China, with plans to add
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801687
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:03:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=449f9bbbd5c890a05bf312a4020f455dbf59275e9e5823721bf1783ce9110e0c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: What JPMorgan Active Value ETF (JAVA) Bought: HCA Leads on Nov. 11
+<<<SUMMARY>>>
+The fund bought $20.0 million of HCA and $15.8 million of Becton Dickinson while selling $22.4 million of Wells Fargo.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802365
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:36:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83b5808cf8f19cd360a53a467bf1d1a14371970249afb75c71def6a11b876d90
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: Starbucks CEO Brian Niccol focused on 'being Starbucks' but leaves door open for future restaurant acquisitions
+<<<SUMMARY>>>
+Starbucks CEO Brian Niccol doesn't rule out building a restaurant empire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143844242
+symbol: YUM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T08:08:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a36147361480274e2f9a84c4310dd538ad6b10211e974d574e1c696b1fd0959
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: YUM
+keywords: 
+headline: What Could Stop Chipotle Stock Over The Next Six Months?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:844af709db43a0b9fc2d1e54f5166b70f409e37473bb742ad346b0bb2765dea9
+symbol: YUM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T19:30:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/13/3402928/0/en/quick-service-restaurant-market-to-reach-usd-1-87-trillion-by-2032-as-digital-ordering-and-drive-thru-access-expand-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: MCD, YUM, QSR, DPZ, SBUX
+keywords: quick-service restaurants, digital ordering, drive-thru, loyalty programs, market growth, omnichannel, franchise expansion, delivery services
+headline: Quick-Service Restaurant Market to Reach USD 1.87 Trillion by 2032 as Digital Ordering and Drive-Thru Access Expand - Mordor Intelligence
+<<<SUMMARY>>>
+The global QSR market is projected to grow from USD 1.16 trillion in 2026 to USD 1.87 trillion by 2032, at an 8.18% CAGR. Growth is driven by digital ordering, drive-thru formats, and loyalty programs, with North America leading the market. Major operators are expanding through omnichannel strategies and technology integration to maintain competitive positioning.
+<<<INSIGHTS>>>
+MCD | positive | Listed as a key company in the expanding QSR market benefiting from drive-thru formats, digital ordering capabilities, and loyalty programs that are driving industry growth at 8.18% CAGR.
+YUM | positive | Identified as a major QSR operator (KFC, Taco Bell, Pizza Hut) positioned to benefit from market expansion through digital channels, delivery options, and restaurant network growth.
+QSR | positive | Listed as a key competitor (Burger King, Popeyes, Tim Hortons) well-positioned to capitalize on growing demand for convenient dining formats and digital ordering capabilities.
+DPZ | positive | Specifically highlighted as a digital ordering leader with growing U.S. retail sales through digital channels, exemplifying successful omnichannel strategy in the expanding QSR market.
+SBUX | positive | Included as a key QSR operator positioned to benefit from digital ordering expansion, loyalty programs, and convenient service formats driving market growth.
+<<<END>>>

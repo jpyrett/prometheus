@@ -11,15 +11,20 @@ What happens, in the order a real user would meet it:
                  every field against the user's own words, and the person is shown what was understood before anything runs.
   3. THE DESK    the LangGraph workflow of `prometheus/langgraph/desk.py`, started with the user's words: Account Manager -> Data Clerk -> Advisor -> Critic -> Account Manager's decision -> Trader, on ONE
                  work order. The Account Manager node reads the request; the Data Clerk node finds the companies and (with `--fetch`: PAID) refreshes their data; the Advisor node ranks them; the Critic reviews each
-                 recommendation against the profile; the decision node trades what the Critic approves above the mark (Auto) or asks (Ask) and spreads the money evenly when asked; the Trader executes against a
+                 recommendation against the profile; the decision node trades what the Critic approves (Auto: nothing is asked; Ask: you approve each trade), returns what the Critic denied to you with its reason, and spreads the money evenly when asked; the Trader executes against a
                  SIMULATED broker. Every fill is booked in the account. This module only starts the graph, shows each node as it finishes, and prints.
   4. REPORTS     the status of the recommendations, the Trader's results, and the account's portfolio before and after.
 
 A request that NAMES THE TRADE ("Buy 50 shares of <a ticker>", design choices entry 87) is a DIRECT ORDER: the desk skips the research, the Advisor and the Critic (Account Manager -> Account Manager's direct decision -> Trader), nothing
-is recommended and the user is not asked a second time; the report shows the order, the Trader's result and the portfolio before and after.
+is recommended and the user is not asked a second time; the report shows the order, the Trader's result and the portfolio before and after. A stock the Data Clerk did not find (design choices entries 101 and 102: "Google" is found as Alphabet
+Inc., "Chick-fil-a" is not listed) is left out without a question in Auto mode and asked about in Ask mode (the question is the approver's, so `--yes` does not answer it); when the order cannot be made (nothing found, a lookup that failed, a no,
+no answer) the session says what was missing and why and asks the user to clarify the request and send it again (`direct.CLARIFY`), and exits 1.
 
 Nothing here knows a sector, a company or a ticker: it is the same for any request the form can hold. Nothing is sent to a broker. A session that was meant to trade but left the portfolio as it was is a FAILED
 check (exit 1) with the reasons, because a sanity check that cannot trade has found something; `--allow-no-trade` accepts that.
+
+MONEY IS `decimal.Decimal` (design choices entry 112): the cash a user starts with is `parse_money`'s Decimal, the report's amounts are exact (`spent / cash` is a Decimal ratio, printed as a percentage), and the saved session (`--save`) is written by the one encoder
+(`money.dumps`): a Decimal is a JSON number, a whole value an integer, never a string; a capture made before this change loads as it is.
 
 EXIT CODES: 0 the session did what was asked (the portfolio changed, or it was only a look); 1 it could not trade (the reasons are printed); 2 a bad flag, or the account book, the keys or the request could not be used.
 """
@@ -31,9 +36,11 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Callable
 
-from prometheus.agents.account_manager.direct import direct_section
+from prometheus.agents.account_manager.direct import CLARIFY, data_clerk_lines, direct_section
 from prometheus.agents.account_manager.neutral import neutral_lines
-from prometheus.common.portfolio import Portfolio
+from prometheus.common import shares as sh
+from prometheus.common.money import dumps
+from prometheus.common.portfolio import Portfolio, trade_amount
 from prometheus.common.trading_clock import clock_note
 from prometheus.common.user_account import clean_age, clean_display_name, clean_risk_level, clean_trade_mode, parse_money
 from prometheus.common.user_profile import TOLERANCES
@@ -52,7 +59,7 @@ class Parts:
     critic: object
     trader: object
     new_manager: Callable               # () -> an AccountManager that is not connected to an account: the desk connects it, and the session connects its own to create the account
-    approver: Callable | None = None    # asked about a trade that needs the user (Ask mode, an Auto approval under the mark, the sells of a funding plan); None: the session's own, which asks at the terminal (`approver_for`)
+    approver: Callable | None = None    # asked about a trade that needs the user (Ask mode, the sells of a funding plan); never in Auto mode, which asks nothing; None: the session's own, which asks at the terminal (`approver_for`)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -62,7 +69,7 @@ def build_parser() -> argparse.ArgumentParser:
     who.add_argument("--age", type=int, help="the user's age (18 to 120): older users are held to a lower risk by the Critic")
     who.add_argument("--risk", choices=TOLERANCES, help="the risk tolerance: conservative, moderate or aggressive")
     who.add_argument("--cash", help="dollars to add to the new account, for example 15000")
-    who.add_argument("--mode", choices=("ask", "auto"), help="ask: the user approves each trade. auto: the desk trades what the Critic approves with a high score")
+    who.add_argument("--mode", choices=("ask", "auto"), help="ask: the user approves each trade. auto: the desk trades what the Critic approves and asks nothing")
     who.add_argument("--account", help="use an EXISTING account (an account number or a sample key) instead of creating one: no user is created and no money is added")
     parser.add_argument("--prompt", required=True, help="what the user wants, in their own words")
     desk = parser.add_argument_group("the desk")
@@ -71,8 +78,6 @@ def build_parser() -> argparse.ArgumentParser:
     desk.add_argument("--model", default="openai/gpt-oss-120b", help="the Advisor's OpenRouter model id (default openai/gpt-oss-120b)")
     desk.add_argument("--no-trader-model", action="store_true", help="the Trader without a model: the program places the default orders")
     desk.add_argument("--real-ledger", action="store_true", help="use the real ledgers (data/ledger/): a company recommended before is then hidden by its cooldown. The default is throwaway ledgers, so a session can be repeated")
-    mark = parser.add_argument_group("the Critic's mark, for this session only (the account book keeps its own)")
-    mark.add_argument("--auto-min-score", type=int, help="Auto mode: the lowest Critic score that trades without asking (the profile's own, else the Critic's 80)")
     run = parser.add_argument_group("the session")
     run.add_argument("--yes", "-y", action="store_true", help="do not ask to confirm what was understood (in Ask mode you are STILL asked to approve each trade: --yes never approves a trade)")
     run.add_argument("--allow-no-trade", action="store_true", help="exit 0 even when the portfolio did not change")
@@ -95,8 +100,6 @@ def check_args(parser: argparse.ArgumentParser, args: argparse.Namespace) -> dic
             person = {"name": clean_display_name(args.name), "age": clean_age(args.age), "risk": clean_risk_level(args.risk), "cash": parse_money(args.cash), "mode": clean_trade_mode(args.mode)}
         if not 1 <= args.default_count <= 10:
             parser.error("--default-count must be from 1 to 10")
-        if args.auto_min_score is not None and not 0 <= args.auto_min_score <= 100:
-            parser.error("--auto-min-score must be from 0 to 100")
     except ValueError as error:
         parser.error(str(error))
     return person
@@ -129,36 +132,32 @@ def open_account(parts: Parts, args: argparse.Namespace, person: dict) -> int:
     account_id = parts.store.create_account(person["name"], person["risk"], trade_mode=person["mode"], age=person["age"])
     banker = parts.new_manager()
     banker.connect(parts.store, account_id)
-    banker.add_funds(Decimal(person["cash"]))
+    banker.add_funds(person["cash"])      # `parse_money` already made it a Decimal to the cent
     return account_id
-
-
-def with_overrides(profile, args: argparse.Namespace):
-    """The profile with this session's override of the Critic's mark (the account book is not changed)."""
-    return profile.model_copy(update={"auto_min_score": args.auto_min_score}) if args.auto_min_score is not None else profile
 
 
 # ---------------------------------------------------------------- the reports
 
 def money(value) -> str:
-    return "n/a" if value is None else f"${float(value):,.2f}"
+    return "n/a" if value is None else f"${value:,.2f}"
 
 
 def portfolio_lines(portfolio: Portfolio) -> list[str]:
     lines = [f"  cash      {money(portfolio.cash_avail):>14}"]
     if not portfolio.positions:
         lines.append("  holdings  none")
+    width = max(6, *(len(sh.text(p.shares)) for p in portfolio.positions)) if portfolio.positions else 6                    # a quantity with a fraction is wider (entry 110)
     for p in portfolio.positions:
-        lines.append(f"  {p.symbol:<9} {p.shares:>6} shares at an average cost of {money(p.cost_basis):>10}  = {money(p.shares * p.cost_basis):>12}" + (f"   (latest purchase {p.acquired})" if p.acquired else ""))
+        lines.append(f"  {p.symbol:<9} {sh.text(p.shares):>{width}} shares at an average cost of {money(p.cost_basis):>10}  = {money(trade_amount(p.shares, p.cost_basis)):>12}" + (f"   (latest purchase {p.acquired})" if p.acquired else ""))
     return lines
 
 
-def holdings_of(portfolio: Portfolio) -> dict[str, int]:
+def holdings_of(portfolio: Portfolio) -> dict[str, Decimal]:
     return {p.symbol: p.shares for p in portfolio.positions}
 
 
 def changed(before: Portfolio, after: Portfolio) -> bool:
-    return round(before.cash_avail, 2) != round(after.cash_avail, 2) or holdings_of(before) != holdings_of(after)
+    return before.cash_avail != after.cash_avail or holdings_of(before) != holdings_of(after)
 
 
 def account_block(title: str, holder, portfolio: Portfolio, profile) -> list[str]:
@@ -192,11 +191,12 @@ def status_lines(result, intent, find: int) -> list[str]:
             continue
         verdict = f"Critic {'APPROVE' if review['approved'] else 'DENY   '} {review['score']:>3}"
         if not review["approved"]:
-            why = ", ".join(b["code"] for b in review["blockers"]) or ", ".join(review["denial_reasons"]) or review["summary"]
+            why = ", ".join(review["denial_reasons"]) or ", ".join(b["code"] for b in review["blockers"]) or review["summary"]      # the blockers, the score under the mark, and a person who must look (`needs_human_review`)
             lines.append(f"{head}  {verdict}  ({why})")
         else:
             words = DECISION_WORDS.get(decision["will_trade"], decision["will_trade"]) if decision else "no decision"
-            what = f"{decision['shares']} shares, about {money(decision['est_cost'])}" if decision and decision["shares"] else ""
+            what = (f"{money(decision['dollars'])}, about {sh.text(decision['shares'])} shares" + (f" at {money(decision['price'])}" if decision.get("price") else "") if decision and decision.get("dollars") else
+                    f"{sh.text(decision['shares'])} shares, about {money(decision['est_cost'])}" if decision and decision["shares"] else "")      # an order in dollars says its dollars first (entry 111, M2)
             lines.append(f"{head}  {verdict}  decision: {words}" + (f"  {what}" if what else ""))
             if decision and decision["will_trade"] in ("no_funds", "no_expired", "pending_user"):
                 lines.append(f"{'':>8}{decision['reason']}")
@@ -211,6 +211,7 @@ def status_lines(result, intent, find: int) -> list[str]:
 
 POOL_WORDS = {"money": "the cash: it had no room for another share", "budget": "the amount you asked to spend: it had no room for another share",
               "even_split": "the even split: the same dollars for every company, and another company's smaller amount set it"}
+FRACTION_WORDS = {"money": "the cash: its equal share was spent to the cent", "budget": "the amount you asked to spend: its equal share was spent to the cent"}      # a fractional even split (entry 110) has no "next share" that did not fit
 
 
 def use_of_money_lines(order, before: Portfolio, after: Portfolio) -> list[str]:
@@ -229,10 +230,16 @@ def use_of_money_lines(order, before: Portfolio, after: Portfolio) -> list[str]:
         if not decision["shares"]:
             lines.append(f"  {review['symbol']:<6} no share was bought: {decision['reason']}")
             continue
-        text = f"  {review['symbol']:<6} {decision['shares']} share{'s' if decision['shares'] != 1 else ''} ({money(decision['est_cost'])}) of the {money(before.cash_avail)}"
+        if decision.get("dollars"):      # an order in dollars (entry 111, M2): the dollars first, and the shares as the estimate at the price it was sized at
+            text = f"  {review['symbol']:<6} {money(decision['dollars'])} (about {sh.text(decision['shares'])} {sh.noun(decision['shares'])} at {money(decision['price'])}) of the {money(before.cash_avail)}" if decision.get("price") else \
+                f"  {review['symbol']:<6} {money(decision['dollars'])} (about {sh.text(decision['shares'])} {sh.noun(decision['shares'])}) of the {money(before.cash_avail)}"
+        else:
+            text = f"  {review['symbol']:<6} {sh.text(decision['shares'])} {sh.noun(decision['shares'])} ({money(decision['est_cost'])}) of the {money(before.cash_avail)}"
         name = size["binding"]
         if name == "asked":                                                 # nothing held it back: the user asked for this much
             text += ": the amount you asked for"
+        elif name in FRACTION_WORDS and size.get("fractional"):
+            text += ": stopped by " + FRACTION_WORDS[name]
         elif name in POOL_WORDS:
             text += ": stopped by " + POOL_WORDS[name]
         if decision["will_trade"] not in ("yes_auto", "yes_user"):
@@ -241,7 +248,10 @@ def use_of_money_lines(order, before: Portfolio, after: Portfolio) -> list[str]:
     if "round_robin" in ways:
         lines.append("  Auto mode spent the funds round-robin: one share of the first stock, one of the next, and so on in rank order, until the money ran out.")
     if "even" in ways:
-        lines.append("  The money was split evenly: the same dollars for every company, in whole shares.")
+        if any((d.get("size") or {}).get("fractional") for d in order.trade_decisions):      # which split it was (entry 110): in fractions it is equal to the cent
+            lines.append("  The money was split evenly: the same dollars for every company, equal to the cent, by buying a fraction of a share where it takes one (the cents the equal amounts leave over go one at a time to the first companies in rank order).")
+        else:
+            lines.append("  The money was split evenly: the same dollars for every company as far as whole shares allow (what the equal amounts leave over buys more shares, the smallest amount first).")
     return lines
 
 
@@ -269,7 +279,11 @@ def why_not(result, order) -> list[str]:
         reasons.append("the Advisor recommended none of the companies (each failed a gate or a strategy: see the ranking)")
     denied = [r for r in order.reviews if not r["approved"]]
     if denied:
-        reasons.append(f"the Critic denied {len(denied)} of {len(order.reviews)}: " + "; ".join(f"{r['symbol']} ({', '.join(b['code'] for b in r['blockers']) or 'score under the mark'})" for r in denied[:5]))
+        everything = len(denied) == len(order.reviews)
+        listed = "; ".join(f"{r['symbol']} ({', '.join(r['denial_reasons']) or r['summary']})" for r in denied[:5])
+        text = (f"the Critic denied {'the recommendation' if len(denied) == 1 else f'all {len(denied)} recommendations'} and approved none: {listed}" if everything
+                else f"the Critic denied {len(denied)} of {len(order.reviews)}: {listed}")
+        reasons.insert(0, text) if everything else reasons.append(text)       # a run where everything was denied says so first
     for d in order.trade_decisions:
         if d["will_trade"] == "pending_user":
             reasons.append(f"{d['symbol']} waits for the user's answer ({d['reason']})")
@@ -308,15 +322,18 @@ def clarifier_for(ask=input, out=print) -> Callable:
 
 
 def decision_lines(order, mode: str) -> list[str]:
-    """What the Account Manager decided, right after it did: each purchase with its final size and who said yes, and whether anything goes on to the Trader. In Ask mode this is the answer to "what happens now?"."""
+    """What the Account Manager decided, right after it did: each purchase with its final size and who said yes, the recommendations the Critic DENIED (returned to the user with the Critic's reason, design choices entry
+    104: `decisions.denied_lines`), and whether anything goes on to the Trader. In Ask mode this is the answer to "what happens now?"."""
+    from prometheus.agents.account_manager.decisions import denied_lines
     from prometheus.agents.critic.report import DECISION_WORDS
 
     lines, going = [], 0
     for d in order.trade_decisions:
-        if d["action"] != "reduce" or d["will_trade"] in ("yes_auto", "yes_user"):
-            what = f"{d['shares']} shares, about {money(d['est_cost'])}" if d["shares"] and d["est_cost"] else f"the whole holding ({d['shares']} shares)" if d["action"] == "reduce" and d["shares"] else ""
-            lines.append(f"      {d['symbol']:<6} {DECISION_WORDS.get(d['will_trade'], d['will_trade'])}" + (f"  {what}" if what else ""))
+        what = (f"{money(d['dollars'])}, about {sh.text(d['shares'])} shares" + (f" at {money(d['price'])}" if d.get("price") else "") if d.get("dollars") else
+                f"{sh.text(d['shares'])} shares, about {money(d['est_cost'])}" if d["shares"] and d["est_cost"] else "")
+        lines.append(f"      {d['symbol']:<6} {DECISION_WORDS.get(d['will_trade'], d['will_trade'])}" + (f"  {what}" if what else ""))
         going += d["will_trade"] in ("yes_auto", "yes_user")
+    lines += denied_lines(order)
     waiting = [d["symbol"] for d in order.trade_decisions if d["will_trade"] == "pending_user"]
     if going:
         lines.append(f"      -> {going} approved trade{'s' if going != 1 else ''} go on to the Trader.")
@@ -334,7 +351,7 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
         manager = parts.new_manager()
         manager.connect(parts.store, account_id)
         holder = manager.users.get()
-        profile = with_overrides(manager.profile, args)           # the override is for this session only: the account book keeps its own
+        profile = manager.profile
         before = manager.list_portfolio()
     except ValueError as error:   # our own checks and the account book's refusals: the message is for the user
         say(f"ERROR: the account could not be opened: {error}")
@@ -381,13 +398,13 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
             if name == "account_manager_decision" and state.get("order") is not None and state["order"].trade_decisions:
                 say(*decision_lines(state["order"], profile.trade_mode))
             if name == "account_manager" and (state.get("plan") or {}).get("direct") and state.get("order") is not None and state["order"].data is not None:
-                say(*[f"      the Data Clerk found: you typed {row['brand']!r}: {row['company']} ({row['symbol']}), appended to the work order" for row in state["order"].data.companies])
+                say(*[f"      {line}" for line in data_clerk_lines(state["order"], "the Data Clerk found", "the Data Clerk did not find")])
             if name == "account_manager_direct" and state.get("order") is not None:
                 say(*[f"      {line}" for line in direct_section(state["order"])])
         shown = len(state["path"])
     order, plan = final["order"], final.get("plan")
     if order is None or plan is None:   # the request could not be read, was not confirmed, or the account could not be used: the desk stopped at its first node
-        say("", "  " + ("; ".join(final["errors"]) or "the desk did not start"))
+        say("", "  " + ("; ".join(final["errors"]) or "the desk did not start"), *([f"  {CLARIFY}"] if final.get("clarify") else []))
         return 2
     intent, direct = plan["intent"], bool(plan.get("direct"))
     find, result = (None, None) if direct else (plan["find"], plan["result"])
@@ -395,14 +412,15 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
         result.order = order
     if args.save:
         Path(args.save).parent.mkdir(parents=True, exist_ok=True)
-        Path(args.save).write_text(json.dumps({"request": " ".join(args.prompt.split()), "intent": intent.model_dump(), "path": final["path"], "order": json.loads(order.model_dump_json(exclude=set() if plan.get("direct") else {"data"}))}, indent=1), encoding="utf-8")      # a direct order's `data` is only what the Data Clerk found (the company name and the symbol of each stock): it is kept; a research order's is large and is left out
+        Path(args.save).write_text(dumps({"request": " ".join(args.prompt.split()), "intent": intent.model_dump(), "path": final["path"], "order": json.loads(order.model_dump_json(exclude=set() if plan.get("direct") else {"data"}))}, indent=1), encoding="utf-8")      # a direct order's `data` is only what the Data Clerk found (the company name and the symbol of each stock): it is kept; a research order's is large and is left out
         say(f"  (what the desk made is saved in {args.save})")
     buying = intent.action in ("buy", "order")
+    stopped = direct and bool(final.get("errors"))     # a direct order whose stocks could not be made (entry 102): the desk ended at its first node, and the user is told why and asked to clarify the request
     if not direct:
         say("", *status_lines(result, intent, find))
     if neutral_lines(order):
         say("", RULE, *neutral_lines(order), RULE)
-    if buying:
+    if buying and not stopped:
         say("", *trade_lines(order))
     after = manager.list_portfolio()
     if buying and order.reviews and not direct:
@@ -411,12 +429,15 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
 
     # ---- the verdict
     did = changed(before, after)
-    if not buying:
+    if stopped:
+        say("", RULE, "SESSION  nothing was placed: the order could not be made as you typed it. Why:", *[f"  - {reason}" for reason in final["errors"]], "", f"  {CLARIFY}", RULE)
+        ok = args.allow_no_trade
+    elif not buying:
         say("", RULE, "SESSION  a look only: nothing was to be bought. The portfolio is as it was.", RULE)
         ok = True
     elif did:
-        bought = [f"{shares - holdings_of(before).get(symbol, 0):+d} {symbol}" for symbol, shares in holdings_of(after).items() if shares != holdings_of(before).get(symbol, 0)]
-        sold = [f"{shares - holdings_of(after).get(symbol, 0):+d} {symbol}" for symbol, shares in holdings_of(before).items() if symbol not in holdings_of(after)]
+        bought = [f"{sh.signed(sh.difference(shares, holdings_of(before).get(symbol, 0)))} {symbol}" for symbol, shares in holdings_of(after).items() if not sh.same(shares, holdings_of(before).get(symbol, 0))]      # `+d` crashed on a fraction (entry 110)
+        sold = [f"{sh.signed(sh.difference(0, shares))} {symbol}" for symbol, shares in holdings_of(before).items() if symbol not in holdings_of(after)]
         say("", RULE, f"SESSION  PASSED: the portfolio changed ({', '.join(bought + sold)}); cash {money(before.cash_avail)} -> {money(after.cash_avail)}", RULE)
         ok = True
     else:

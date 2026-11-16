@@ -1,0 +1,27 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to four requests that name a trade with a DECIMAL number of shares (design choices entry 110), recorded on 2026-11-15 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py after the sentence about decimals was added): no fetch, no account. 'replies' is what the model answered, in order (a second reply is the answer to code's refusal of the first). Nothing here is edited. The tests give these replies back to the real Account Manager, whose code checks every field against the user's own words.",
+ "model": "openai/gpt-oss-120b",
+ "requests": {
+  "Sell 0.5 shares of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": 0.5}]}"
+   ]
+  },
+  "sell 81.004455 shares of DPZ": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"sell\", \"symbol\": \"DPZ\", \"shares\": 81.004455}]}"
+   ]
+  },
+  "Buy 2.25 shares of Microsoft Corp (MSFT) and sell 0.222222 shares of TSLA": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"buy\", \"company\": \"Microsoft Corp\", \"shares\": 2.25}, {\"side\": \"sell\", \"symbol\": \"TSLA\", \"shares\": 0.222222}]}"
+   ]
+  },
+  "Sell 0.1234567 shares of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": 0.1234567}]}",
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": 0.123457}]}"
+   ]
+  }
+ }
+}

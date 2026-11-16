@@ -42,7 +42,7 @@ BLEND_GROUPS = ("performance", "historical", "filings")
 def key_metrics(rec: Recommendation, cap: int) -> tuple[list[str], set[str]]:
     """(the metric names to fetch again, the DECISIVE ones among them). Decisive: the close, the ATR and every number the strategy that opened the position was scored from; a mismatch in one of
     them is a blocker by itself. The rest are the numbers the record's risk and blend lean on (the stock's own prices, its history, its filings) and the Critic's own (`OWN`)."""
-    used = [f for f in rec.families if (f.family == rec.trade.family if rec.trade.family else f.passed)]
+    used = [f for f in rec.families if f.family == rec.trade.family]
     decisive = [*DECISIVE, *(n for f in used for n in f.features_used if n in METRIC_NAMES and n in rec.features)]
     blend = [p["metric"] for g in BLEND_GROUPS for p in ((rec.blend or {}).get("components", {}).get(g, {}).get("parts", [])) if "metric" in p]
     decisive = list(dict.fromkeys(n for n in decisive if n in METRIC_NAMES))

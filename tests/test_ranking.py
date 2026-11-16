@@ -91,33 +91,14 @@ def test_the_cooldown_holds_until_the_time_stop_and_ends_when_an_invalidation_ru
     assert rk.cooldown_of(s, "trend", [], "2026-10-23") is None
 
 
-def hold(s, records=(), floor=None):
-    return rk.holding_action(s, list(records), floor)
-
-
-def test_the_holdings_pass_reduces_on_a_red_flag_a_bearish_event_an_invalidation_or_a_family_that_stopped_passing():
-    assert hold(scored(metrics=healthy(cfo_negative_with_profit=True), held=True))[0] == "reduce"
-    action, reason = hold(scored(events=[{"class": "guidance_cut", "direction": "bearish", "age_bars": 3}], held=True))
-    assert action == "reduce" and "guidance_cut" in reason
-    assert hold(scored(events=[{"class": "guidance_cut", "direction": "bearish", "age_bars": 11}], held=True))[0] == "hold"
-    action, reason = hold(scored(metrics=healthy(last_close=80.0), held=True), [record()])
-    assert action == "reduce" and "abc123" in reason and "price_below" in reason
-    stopped = scored(families=[fr("trend", passed=False)], held=True)
-    action, reason = hold(stopped, [record()])
-    assert action == "reduce" and "the family that recommended it (trend) no longer passes" in reason
-    bearish = scored(families=[fr("trend", "bearish", edge=-0.002)], held=True)
-    assert hold(bearish, [record()])[0] == "reduce"
-
-
-def test_the_holdings_pass_adds_only_a_bullish_name_that_would_have_made_the_list():
-    """Entry 80: the pass used to ask also that the plan was not "oversized" and that the position after adding stayed within 20% of the equity. Both needed a size and the user's money, which the Advisor
-    does not use; whether the user's limits leave room to add is the Account Manager's (`sizing.size_purchases` counts the shares held against the position limit). What is left is the stance and the blend."""
-    good = scored(families=[fr(edge=0.01)], held=True)
-    assert hold(good)[0] == "add" and hold(good, floor=rk.rank_value(good))[0] == "add" and hold(good, floor=rk.rank_value(good) + 0.001)[0] == "hold"
-    assert "position after" not in hold(good)[1] and "below this run's new ideas" in hold(good, floor=rk.rank_value(good) + 0.001)[1]
-    assert not {"oversized_pct", "add_max_position_pct"} & set(type(CONFIG.ranking).model_fields)                        # the two size thresholds left the settings with the rule that read them
-    assert hold(scored(families=[fr(passed=False)], held=True))[0] == "hold"
-    assert hold(scored(families=[fr("trend", passed=True, edge=0.01)], held=True), [record()])[0] == "add"      # the family that recommended it still passes
+def test_the_advisor_has_no_holdings_pass_it_knows_no_holding_so_it_never_reduces_adds_to_or_holds_one():
+    """AMENDED (entry 105; Jacob, 2026-11-15: *"The Advisor never recommends reducing a holding or any other portfolio related matters"*). This file tested `holding_action`, the holdings pass: a held name was reduced on a red
+    flag, a bearish event, an invalidated earlier recommendation or a family that stopped passing, and was added to when it was bullish and as good as the new ideas. The Advisor is given no portfolio any more, so the
+    pass is gone, and so is what it read: no `holding_action`, no `held`, `held_shares` or `cost_basis` on a ranked symbol. A name that failed a gate is a candidate with the gate (never a `reduce`)."""
+    assert not hasattr(rk, "holding_action")
+    assert not {"held", "held_shares", "cost_basis"} & set(rk.Scored.__dataclass_fields__)
+    failed = scored(metrics=healthy(cfo_negative_with_profit=True))
+    assert failed.gates.first_failed().gate == "red_flag" and rk.open_family(failed, "funds", "trend", CONFIG) is None
 
 
 # ---------------------------------------------------------------- the sleeves

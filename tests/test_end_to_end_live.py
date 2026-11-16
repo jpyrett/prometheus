@@ -63,7 +63,7 @@ def session(*argv, ask=None):
     return code, text, int(made.group(1)) if made else None
 
 
-USER = ["--name", "Ada Lovelace", "--age", "41", "--risk", "moderate", "--cash", "15000", "--mode", "auto", "--auto-min-score", "60", "--yes"]
+USER = ["--name", "Ada Lovelace", "--age", "41", "--risk", "moderate", "--cash", "15000", "--mode", "auto", "--yes"]
 
 
 def test_the_real_model_reads_the_sentence_as_a_theme_a_count_and_an_even_split():

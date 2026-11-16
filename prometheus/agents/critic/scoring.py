@@ -2,9 +2,12 @@
 
     score  = min(100, round(sum(weight x dimension score) / sum(weights of the applicable dimensions) + the great-deal bonus))
     score  = min(score, blocked_score_cap)   when any blocker exists
-    approved = no blocker and score >= approve_min_score
+    approved = no blocker and score >= approve_min_score and no finding that asks for a person to look
 
 The cap means one number tells the whole story: a recommendation with a blocker never shows 85. The score before the cap is kept (`score_before_blockers`), so the report can say "would have been 77".
+A finding that asks for a person to look (`requires_human`) DENIES the recommendation (`needs_human_review`; design choices entry 103, Jacob 2026-11-15: *"if the Critic wants a person to review, then the Critic needs to Deny
+the recommendation and return the reason"*): there is no third state between approved and denied. That denial is NOT a blocker and does not cap the score: it says the review could not be trusted without a person, not that
+the recommendation is bad, so the score stays what the dimensions gave. `requires_human` and `requires_human_reasons` stay on the review: they name the finding.
 The summary sentence is built from fixed wording and the findings' own messages: a model never writes a line the user reads.
 """
 from dataclasses import dataclass, field
@@ -23,8 +26,8 @@ class Verdict:
     score_before_blockers: int
     grade: str
     denial_reasons: list[str] = field(default_factory=list)
-    requires_human: bool = False
-    requires_human_reasons: list[str] = field(default_factory=list)
+    requires_human: bool = False                                        # a finding asked for a person to look: the recommendation is denied (`needs_human_review`)
+    requires_human_reasons: list[str] = field(default_factory=list)     # the codes of those findings
 
 
 def make_dimension(name: str, config: CriticConfig, score: float, applicable: bool = True, measures: list[Measure] | None = None) -> Dimension:
@@ -54,15 +57,27 @@ def order_blockers(findings: list[Finding]) -> list[Finding]:
     return sorted((f for f in findings if f.severity == "blocker"), key=lambda f: BLOCKER_ORDER.index(f.code))
 
 
+def needs_a_person(findings: list[Finding]) -> list[Finding]:
+    """The findings that ask for a person to look, one for each code (the first of a code), in the order they were raised."""
+    first: dict[str, Finding] = {}
+    for f in findings:
+        if f.requires_human:
+            first.setdefault(f.code, f)
+    return list(first.values())
+
+
 def decide(findings: list[Finding], dimensions: dict[str, Dimension], bonus: float, config: CriticConfig) -> Verdict:
-    """The verdict of one review. A blocker denies whatever the score; with none, the score must reach `approve_min_score`."""
+    """The verdict of one review: approved or denied, nothing in between. A blocker denies whatever the score; with none, the score must reach `approve_min_score`; and a finding that asks for a person to
+    look denies it too (`needs_human_review`, last in `denial_reasons`), with the score left as the dimensions gave it (only a blocker caps it)."""
     before = weighted_score(dimensions, bonus)
     blockers = order_blockers(findings)
     score = min(before, config.verdict.blocked_score_cap) if blockers else before
     reasons = [f.code for f in blockers]
     if not blockers and score < config.verdict.approve_min_score:
         reasons.append("score_below_minimum")
-    human = list(dict.fromkeys(f.code for f in findings if f.requires_human))
+    human = [f.code for f in needs_a_person(findings)]
+    if human:
+        reasons.append("needs_human_review")
     return Verdict(approved=not reasons, score=score, score_before_blockers=before, grade=grade_of(score, config), denial_reasons=reasons, requires_human=bool(human), requires_human_reasons=human)
 
 
@@ -71,17 +86,23 @@ def great_deal_bonus_allowed(findings: list[Finding], quality_multiplier: float,
     return not any(f.severity == "blocker" and f.dimension in ("accuracy", "value", "chart") for f in findings) and quality_multiplier >= min_quality and red_flag_passed
 
 
-def summarize(symbol: str, action: str, verdict: Verdict, findings: list[Finding], dimensions: dict[str, Dimension], minimum: int) -> str:
-    """One sentence, from fixed wording: the verdict, the score, and either the points of each dimension or the two heaviest blockers."""
+def summarize(symbol: str, verdict: Verdict, findings: list[Finding], dimensions: dict[str, Dimension], minimum: int) -> str:
+    """One sentence, from fixed wording: the verdict, the score, and either the points of each dimension or the reasons it was denied: the two heaviest blockers, the score under the mark, and a person who must look
+    (`DENY YUM: a person must look before this can trade: evidence_not_reviewed (The quotes could not be reviewed by the model: ...).`)."""
     if verdict.approved:
-        what = f"reduction of {symbol}" if action == "reduce" else f"{'add ' if action == 'add' else ''}{symbol}"
         parts = ", ".join(f"{LABEL[n]} {d.points:.0f}/{d.weight:g}" for n, d in dimensions.items() if d.applicable)
-        return f"APPROVE {what}: score {verdict.score} ({verdict.grade}); {parts}."
+        return f"APPROVE {symbol}: score {verdict.score} ({verdict.grade}); {parts}."
     blockers = order_blockers(findings)
-    if not blockers:
-        return f"DENY {symbol}: score {verdict.score} ({verdict.grade}) is under the {minimum} needed."
-    heavy = "; ".join(f"{f.message.rstrip('.')} ({f.code})" for f in blockers[:2])
-    return f"DENY {symbol}: {heavy}" + (f"; and {len(blockers) - 2} more." if len(blockers) > 2 else ".")
+    reasons = []
+    if blockers:
+        heavy = "; ".join(f"{f.message.rstrip('.')} ({f.code})" for f in blockers[:2])
+        reasons.append(heavy + (f"; and {len(blockers) - 2} more" if len(blockers) > 2 else ""))
+    elif "score_below_minimum" in verdict.denial_reasons:
+        reasons.append(f"score {verdict.score} ({verdict.grade}) is under the {minimum} needed")
+    people = needs_a_person(findings)
+    if people:
+        reasons.append("a person must look before this can trade: " + ", ".join(f"{f.code} ({f.message.rstrip('.')})" for f in people[:2]) + (f", and {len(people) - 2} more" if len(people) > 2 else ""))
+    return f"DENY {symbol}: " + "; ".join(reasons) + "."
 
 
 assert set(LABEL) == set(DIMENSIONS)

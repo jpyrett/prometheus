@@ -18,11 +18,15 @@ never books). Everything else costs: a run with the model calls OpenRouter, and 
 THIS IS WIRING, so it is the one Trader module that may import the Data Clerk (rule T5 and its test cover every other). It builds the Account Manager with `clerk=DataClerk(model=object())`: the bars and the quotes are
 code, that Data Clerk's own model is never called and no key is needed for it. The Account Manager's own model is `object()` as well: the Trader only uses its portfolio, price and notify methods. The Trader reaches the
 Data Clerk through the Account Manager, as it does in the desk.
+
+MONEY IS `decimal.Decimal` (design choices entry 112): `--cash` is the dollars you typed read into a Decimal to the cent once, at the edge (more than two decimals is refused), the order read from a saved file keeps the numbers `json` gave (floats; every reader goes
+through a door), and `--json` and `--save` write the one encoder's numbers.
 """
 import argparse
 import json
 import sys
 from datetime import datetime
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -30,6 +34,7 @@ from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO,
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.agents.trader.report import trade_section
 from prometheus.agents.trader.trader import NullLedger, Trader
+from prometheus.common.money import dumps, money
 from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.common.user_profile import load_profile
 from prometheus.common.work_order import TRADING, WorkOrder, parse_utc
@@ -78,13 +83,21 @@ def start_fresh(order: WorkOrder) -> WorkOrder:
     return order
 
 
+def _dollars(text: str) -> Decimal:
+    """argparse: the amount the user typed read into a Decimal of dollars ONCE, at the edge (`money.money`: at most two decimals, never a float)."""
+    try:
+        return money(Decimal(text.strip().replace(",", "")))
+    except (InvalidOperation, ValueError):
+        raise argparse.ArgumentTypeError(f"{text!r} is not an amount of dollars (a number with at most two decimals)") from None
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="python -m prometheus.agents.trader.replay", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--order", required=True, help='a saved work order: the desk\'s saved JSON (it has an "order" key) or a bare order')
     parser.add_argument("--mode", choices=("paper", "backtest"), default="backtest", help="backtest (default): the stored daily bars, free. paper: the current quotes, which COSTS (Finnhub)")
     where = parser.add_mutually_exclusive_group()
     where.add_argument("--portfolio", help=f"the portfolio JSON file (default: {DEFAULT_PORTFOLIO.name} of configs/portfolios)")
-    where.add_argument("--cash", type=float, help="a portfolio with no holdings and this much cash")
+    where.add_argument("--cash", type=_dollars, help="a portfolio with no holdings and this much cash (dollars, at most two decimals)")
     parser.add_argument("--profile", help=f"the user's profile JSON file (default: {DEFAULT_PROFILE.name} of configs/profiles)")
     parser.add_argument("--now", help='the moment of the run, US Eastern: "YYYY-MM-DD HH:MM" (default: the latest decided_utc of the permitted decisions)')
     parser.add_argument("--no-model", action="store_true", help="no model at all: the program places the default orders (free in backtest mode)")
@@ -116,9 +129,9 @@ def main(argv: list[str] | None = None, clerk=None, trader=None, out=None) -> in
     approver = (lambda card: True) if args.yes_funding else None
     order = manager.perform_trades(order, portfolio, trader, now, funding=funding, approver=approver, book=False)
     if args.save:
-        Path(args.save).write_text(json.dumps({"order": order.model_dump(mode="json"), "funds": funding}, indent=1, default=str), encoding="utf-8")
+        Path(args.save).write_text(dumps({"order": order.model_dump(mode="json"), "funds": funding}, indent=1), encoding="utf-8")
     if args.json:
-        say(json.dumps({"order": order.model_dump(mode="json"), "funds": funding}, indent=1, default=str))
+        say(dumps({"order": order.model_dump(mode="json"), "funds": funding}, indent=1))
     else:
         say("\n".join(trade_section(order)))
     run = order.trader_runs[-1] if order.trader_runs else None

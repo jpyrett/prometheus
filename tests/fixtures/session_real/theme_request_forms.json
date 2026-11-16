@@ -1,0 +1,26 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to four requests for a THEME made of short words (AI, EV, 5G), recorded on 2026-11-16 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py, unchanged), one call each, no retry (design choices entry 113): no fetch, no account. 'replies' is what the model answered, in order. Nothing here is edited. The model leaves the word 'stocks' out of the topic as its prompt says, so a theme of short words came back as AI, EV and 5G: the tests give these replies back to the real Account Manager, whose code checks every field against the user's own words.",
+ "model": "openai/gpt-oss-120b",
+ "requests": {
+  "I want to buy the best \"AI stocks\" as a theme. Buy $20000 worth of the top 3": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 20000, \"orders\": []}"
+   ]
+  },
+  "I want to buy the best AI stocks. Buy $20000 worth of the top 3": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 20000, \"orders\": []}"
+   ]
+  },
+  "Buy the 3 most recommended EV stocks with $5,000": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"EV\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 5000, \"orders\": []}"
+   ]
+  },
+  "Look at the best 5G companies": {
+   "replies": [
+    "{\"action\": \"research\", \"topic\": \"5G\", \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"orders\": []}"
+   ]
+  }
+ }
+}

@@ -470,3 +470,10 @@ The Advisor no longer sizes a trade and no longer uses the user's money. The tex
 - **Section 5, the tests**: `test_trade_plan` has no `$1,000 account`, caps, stress, `equity_of` or `funds_feasible` test (the Account Manager's sizing tests cover them); `test_advisor_no_size` reads the Advisor's source for the user's cash, equity and every size name.
 - **Section 6 and the thesis**: the digest the model reads has no size line, and the prompt says the record has no amount to buy or sell.
 - **The record** keeps schema version 2 with the fields gone (as Amendment 7 did); older ledger lines still hold them.
+
+## Amendment (2026-11-15, design choices entry 105): no holdings pass, and no portfolio for the Advisor
+
+Jacob (2026-11-15): *"The Advisor never recommends reducing a holding or any other portfolio related matters."* The text above is left as it was written; where it describes step 9's holdings pass, a `reduce`, an `add` or a `hold`, the portfolio as an input of the Advisor, or the plan of a reduction, this note wins.
+- **Step 2 (candidates)** has no held candidates and no `held` tag; **step 9** is the cooldown and the selection of the new ideas only (`ranking.holding_action` and `add_floor` are removed); **step 10** builds a plan only for a purchase (`trade_plan.build` needs a family); **step 11**'s digest says `Decision: buy` and the prompts say nothing about a holding or a sale; **step 12** writes `schema_version: 3` records whose only action is `open`, with no `held_shares`, `cost_basis`, `unrealized_pct`, `held` or `portfolio_fit` (the note of how this run's own picks sit together is `concentration.note`).
+- `Advisor.generate_recommendations(order, case, today, top_k, only_subject)` takes no portfolio; neither does `recommend.generate` or `collect_candidates`.
+- The Advisor's replays of the real captures (made with the sample portfolio MSFT, TSLA, GM) give, with no portfolio: SNDK alone for the SNDK capture (before: GM `add` at 60 as rank 1 and SNDK at 59 as rank 2, MSFT and TSLA `hold`), PG alone with the ADDYY candidate for the PG capture, and PG alone for PG_open. Every number of the SNDK and PG records is unchanged.

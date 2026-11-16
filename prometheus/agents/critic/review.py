@@ -12,9 +12,9 @@ ONE work order in (status `recommended`), the SAME work order out (status `revie
     6  timing           the market's session, the record's date, the price against the entry zone (timing.py)
     7  risk fit         the risk against the user's profile: the company's risk, never how much to buy (risk.py)
     8  value            the price against its six-month average, the valuation (value.py); then the chart patterns: crosses, structure, dead cat bounce (chart.py)
-    9  verdict          the six scores, the bonus, the blockers, the score, the verdict, the summary (scoring.py); write out
+    9  verdict          the six scores, the bonus, the blockers, the score, the verdict (APPROVED or DENIED, nothing between: a finding that asks for a person to look denies it too, `needs_human_review`, entry 103), the summary (scoring.py); write out
 
-The Critic only deals with recommendations: it does not know the user's money (it is given the profile's `RiskView`, which holds no size limit, and no portfolio), and it sizes nothing. How much to buy is the Account Manager's (agents/account_manager/sizing.py).
+The Critic only deals with recommendations TO BUY (entry 105: a record that is not one, or that says something is held, is a `record_defect` and is not reviewed): it does not know the user's money (it is given the profile's `RiskView`, which holds no size limit, and no portfolio), and it sizes nothing. How much to buy is the Account Manager's (agents/account_manager/sizing.py).
 
 (In the code, timing runs before the evidence: the evidence step does not need it, but the risk and the value steps need the deal price it finds.) Every check runs for every record (spec P6):
 the user reads the whole scorecard. Nothing raises for a data, API or model failure (P7): a failed step is a finding, and what could not be checked is not approved (P3). The Advisor's records are
@@ -69,16 +69,21 @@ def _schema_problem(error: ValidationError) -> str:
 
 def _classify(w: Work, limit: int) -> bool:
     """Whether the record can be reviewed at all. One that cannot gets a blocker that says why and no other check: it is beyond the review's limit, an Advisor version 0 record (no schema 2
-    sections), or it does not match the schema."""
+    sections), it is not a recommendation to BUY (the Critic judges nothing else: a holding, a sale, a hold; design choices entry 105), or it does not match the schema (a record that says something is held
+    does not: the models refuse it)."""
     if w.index >= limit:
         w.findings.append(blocker("accuracy", "record_not_reviewable", f"The review covers the first {limit} recommendations; this one is beyond them."))
     elif not isinstance(w.raw.get("identity"), dict):
         w.findings.append(blocker("accuracy", "record_not_reviewable", "The record has no schema 2 sections (an Advisor version 0 record): there is nothing the Critic can check it against."))
     else:
-        try:
-            w.rec = Recommendation.model_validate(w.raw)
-        except ValidationError as error:
-            w.findings.append(blocker("accuracy", "record_defect", f"The record does not match the Advisor's schema 2: {_schema_problem(error)}."))
+        action = w.raw["action"].get("action") if isinstance(w.raw.get("action"), dict) else None
+        if isinstance(action, str) and action != "open":
+            w.findings.append(blocker("accuracy", "record_defect", f"The record is not a recommendation to buy (its action is {action!r}): the Critic does not judge a holding or a sale."))
+        else:
+            try:
+                w.rec = Recommendation.model_validate(w.raw)
+            except ValidationError as error:
+                w.findings.append(blocker("accuracy", "record_defect", f"The record does not match the Advisor's record schema: {_schema_problem(error)}."))
     return w.rec is not None
 
 
@@ -103,15 +108,14 @@ def review_order(critic, order: WorkOrder, view: RiskView, now: datetime | None 
 
     # ---- 2 integrity (no network)
     valid = [w for w in works if _classify(w, config.limits.max_records)]
-    pairs: dict[tuple[str, str], int] = {}
+    pairs: dict[str, int] = {}
     for w in valid:
-        key = (w.rec.symbol, w.rec.action.action)
-        pairs[key] = pairs.get(key, 0) + 1
+        pairs[w.rec.symbol] = pairs.get(w.rec.symbol, 0) + 1
     reviewable = []
     for w in valid:
         try:
             w.day = timing.record_day(w.rec, now)
-            w.integrity_result = integrity.check(w.rec, order, advisor, duplicate=pairs[(w.rec.symbol, w.rec.action.action)] > 1, max_feature_age_days=config.accuracy.max_feature_age_days)
+            w.integrity_result = integrity.check(w.rec, order, advisor, duplicate=pairs[w.rec.symbol] > 1, max_feature_age_days=config.accuracy.max_feature_age_days)
             w.claims = claims_of(w.rec, order)
         except Exception as error:  # a record so damaged that its checks could not run: that is a defect of the record, said plainly
             w.findings.append(blocker("accuracy", "record_defect", f"The record could not be checked ({type(error).__name__}): it is damaged."))
@@ -216,7 +220,7 @@ def _build(w: Work, critic, order: WorkOrder, now: datetime, gathered: recheck.G
         review_id=uuid.uuid4().hex[:12], record_id=identity.get("record_id") or f"record-{w.index}", request_id=identity.get("request_id") or order.request_id, symbol=raw.get("symbol", "?"), action=action,
         reviewed_utc=utc_text(now), valid_until_utc=until, approved=verdict.approved, score=verdict.score, score_before_blockers=verdict.score_before_blockers, grade=verdict.grade, bonus=bonus,
         requires_human=verdict.requires_human, requires_human_reasons=verdict.requires_human_reasons, denial_reasons=verdict.denial_reasons,
-        summary=scoring.summarize(raw.get("symbol", "?"), action, verdict, w.findings, w.dimensions, config.verdict.approve_min_score),
+        summary=scoring.summarize(raw.get("symbol", "?"), verdict, w.findings, w.dimensions, config.verdict.approve_min_score),
         blockers=scoring.order_blockers(w.findings), warnings=[f for f in w.findings if f.severity == "warning"], notes=[f for f in w.findings if f.severity == "info"], dimensions=w.dimensions,
         accuracy=_accuracy_detail(w), evidence=w.evidence_result.detail if w.evidence_result else ev.EvidenceResult().detail,
         timing=w.timing_result.detail if w.timing_result and w.timing_result.detail else _closed_timing(now), risk=w.risk_result.detail if w.risk_result else RiskDetail(),

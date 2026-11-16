@@ -15,6 +15,10 @@ Manager (`broker.py`), and steps 2 and 8 changed (see the amendment at the end o
      9 outcomes           backtest only: each filled purchase is followed through the later bars (simulator.follow)
     10 records            `order.trades`, one more entry on `order.trader_runs`, the trades ledger (paper mode only), the status
 
+DECIMAL MONEY (design choices entry 112): the account's figures here (the cash before and after, a snapshot, a ticket's prices, a fill) are `Decimal`. The prices the Account Manager asks the Data Clerk for come back as the floats of the quote
+or the bar and cross the price door ONCE: a quote in `_prices` (a `Decimal` price in the snapshot), a stored bar's prices inside the fill rules (`simulator.bar_price`). The trades and the runs are written to the order with `model_dump()` (Python mode: the
+Decimals stay Decimals) and to the trades ledger with `model_dump(mode="json")` (numbers, by the one encoder).
+
 A failed precondition is ONE message on `order.errors` and a `trader_runs` entry, and nothing else changes. After that nothing here raises for a data, model or account failure: a trade that cannot be executed is `rejected`
 with a code and a sentence, anything else is a message on the order and on the run. A `now` without a timezone raises ValueError before anything is done, as everywhere else.
 
@@ -25,13 +29,16 @@ its own (a test reads the source). It never edits what the Advisor, the Critic a
 import re
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
+from decimal import ROUND_HALF_UP, Decimal
 
 from prometheus.agents.advisor.calls import parse_object
 from prometheus.agents.trader import simulator, tickets
 from prometheus.agents.trader.broker import CASH_HINT, PaperBroker, Prices, Refused
 from prometheus.agents.trader.config import paper_trading_enabled
 from prometheus.agents.trader.record import MODES, FundingRun, Run, Snapshot, Trade
+from prometheus.common import shares as sh
 from prometheus.common.market_calendar import eastern_date
+from prometheus.common.money import digits, price as price_door, price_scale
 from prometheus.common.portfolio import Portfolio, trade_amount
 from prometheus.common.trading_clock import trading_now
 from prometheus.common.work_order import MAX_BAR_SYMBOLS, MAX_QUOTE_SYMBOLS, TRADING, WorkOrder, verify_trades
@@ -87,14 +94,14 @@ def all_trades(ctx: Context) -> list[Trade]:
 
 
 def write_trades(ctx: Context) -> None:
-    ctx.order.trades = [t.model_dump(mode="json") for t in all_trades(ctx)]
+    ctx.order.trades = [t.model_dump() for t in all_trades(ctx)]
 
 
 def message(error: Exception) -> str:
     return f"{type(error).__name__}: {' '.join(str(error).split())[:160]}"
 
 
-def money(x: float) -> str:
+def money(x: Decimal) -> str:
     return f"${x:,.2f}"
 
 
@@ -157,7 +164,7 @@ class Notifier:
 
     def _answer(self) -> dict:
         ctx = self.ctx
-        return {"cash_before": round(ctx.start.cash_avail, 2), "cash_after": None if ctx.after is None else round(ctx.after.cash_avail, 2), **counts(all_trades(ctx)), "booked": ctx.run.booked}
+        return {"cash_before": ctx.start.cash_avail, "cash_after": None if ctx.after is None else ctx.after.cash_avail, **counts(all_trades(ctx)), "booked": ctx.run.booked}
 
     def _say(self, text: str) -> None:
         if text in self.ctx.run.errors:
@@ -177,18 +184,18 @@ def numbers_of(text: str) -> list[str]:
     return [m.group(1).rstrip(",").replace(",", "") for m in NUMBER.finditer(TRADE_REF.sub(" ", text))]
 
 
-def allowed_numbers(ctx: Context, trades: list[Trade]) -> list[float]:
-    """Every number a summary may use: a number of the trades (share counts, prices, amounts, limits), the prices the model was shown, the cash before and after, and the counts of trades."""
-    out: list[float] = []
+def allowed_numbers(ctx: Context, trades: list[Trade]) -> list[Decimal]:
+    """Every number a summary may use: a number of the trades (share counts, prices, amounts, limits), the prices the model was shown, the cash before and after, and the counts of trades. All of them Decimals."""
+    out: list = []
     for t in trades:
-        out += [t.shares, t.shares_approved, t.limit_price, t.ref_price, t.limit_low, t.limit_high]
+        out += [t.shares, t.shares_approved, t.dollars, t.limit_price, t.ref_price, t.limit_low, t.limit_high]      # `dollars`: an order in dollars (entry 111) may be named in a summary
         if t.limit_low is not None and t.limit_high is not None:
             out += tickets.shown_range(t.limit_low, t.limit_high)
         if t.fill:
             out += [t.fill.price, t.fill.shares, t.fill.amount, t.fill.commission]
     prices = ctx.prices
     if prices:
-        out += list(prices.quotes.values()) + [b["open"] for b in (simulator.bar_on(series, prices.entry_date) for series in prices.bars.values()) if b]
+        out += list(prices.quotes.values()) + [simulator.bar_price(b, "open") for b in (simulator.bar_on(series, prices.entry_date) for series in prices.bars.values()) if b]
     if ctx.start is not None:
         out.append(ctx.start.cash_avail)
     if ctx.after is not None:
@@ -197,7 +204,7 @@ def allowed_numbers(ctx: Context, trades: list[Trade]) -> list[float]:
         out += [told["cash_left"] for told in ctx.broker.answers.values() if told.get("cash_left") is not None]      # the cash the model was told after each fill (place_order's `cash_left`): the Account Manager's own figures
     own = counts(trades)
     out += [len(trades), len([t for t in trades if t.kind == "recommendation"]), len([t for t in trades if t.kind == "funding"]), *own.values(), len([t for t in trades if t.placed_by == "model"]), len([t for t in trades if t.placed_by == "code"])]
-    return [float(x) for x in out if isinstance(x, (int, float)) and not isinstance(x, bool)]
+    return [digits(x) for x in out if isinstance(x, (int, Decimal)) and not isinstance(x, bool)]
 
 
 def check_summary(text: str, ctx: Context, trades: list[Trade]) -> tuple[str | None, list[str]]:
@@ -225,7 +232,7 @@ def check_summary(text: str, ctx: Context, trades: list[Trade]) -> tuple[str | N
     allowed = allowed_numbers(ctx, trades)
     for written in dict.fromkeys(numbers_of(summary)):
         places = len(written.split(".")[1]) if "." in written else 0
-        if not any(round(a, places) == float(written) for a in allowed):
+        if not any(a.quantize(Decimal(1).scaleb(-places), rounding=ROUND_HALF_UP) == Decimal(written) for a in allowed):      # the number as written: the allowed number rounded to the places the text gives it
             dropped.append(f"the number {written} in the summary is not a number of the trades")
     return (None, dropped) if dropped or not summary else (" ".join(summary.split()), [])
 
@@ -234,7 +241,7 @@ def code_summary(ctx: Context, trades: list[Trade]) -> str:
     """Code's own sentence: what happened to each trade, and the cash."""
     parts = []
     for t in (x for x in trades if x.kind == "recommendation"):
-        clause = f"{t.trade_id} {t.side} {t.shares_approved if t.status == 'rejected' and not t.shares else t.shares} {t.symbol} {t.status}"
+        clause = f"{t.trade_id} {t.side} {sh.text(t.shares_approved if t.status == 'rejected' and not t.shares else t.shares)} {t.symbol} {t.status}"
         if t.status == "filled" and t.fill:
             clause += f" at {t.fill.price:,.4f} ({money(t.fill.amount)})"
         elif t.status == "rejected":
@@ -250,7 +257,7 @@ def refuse(order: WorkOrder, run: Run, text: str) -> WorkOrder:
     """A failed precondition: one message on the order, one entry on `trader_runs`, nothing else changes."""
     run.errors.append(text)
     order.errors = [*order.errors, text]
-    order.trader_runs = [*order.trader_runs, run.model_dump(mode="json")]
+    order.trader_runs = [*order.trader_runs, run.model_dump()]
     return order
 
 
@@ -295,7 +302,7 @@ def execute(trader, order: WorkOrder, account, portfolio, now, funding, approver
         order.errors = [*order.errors, text]
         if (ctx.notifier is not None and ctx.notifier.done) or (ctx.broker is not None and ctx.broker.filled):   # a fill is booked the moment it happens (entry 81): once any trade filled, the order must say so, whatever stopped the run
             write_trades(ctx)
-        order.trader_runs = [*order.trader_runs, run.model_dump(mode="json")]
+        order.trader_runs = [*order.trader_runs, run.model_dump()]
         return order
 
 
@@ -320,7 +327,7 @@ def _steps(ctx: Context, portfolio, funding, approver) -> WorkOrder:
     except Exception as error:
         return refuse(order, run, f"the trades already on the order could not be read ({type(error).__name__})")
     ctx.final_before = {t.trade_id for t in existing if t.status in ("filled", "rejected")}
-    unbooked = [t.model_dump(mode="json") for t in existing if t.status == "filled" and not t.booked]
+    unbooked = [t.model_dump() for t in existing if t.status == "filled" and not t.booked]
     problems, ctx.start = [], base                       # the portfolio the Account Manager just gave IS the account at the start: nothing is read again unless an earlier run's fill has to be put into it
     if unbooked:
         try:
@@ -413,7 +420,7 @@ def _prices(ctx: Context, symbols: list[str], now: datetime) -> Prices:
                 why[tuple(group)] = f"the quotes could not be fetched ({type(error).__name__})"
                 continue
             ids.append(answer.request_id)
-            found = {s: float(q["price"]) for s, q in (answer.data.quotes if answer.data else {}).items() if isinstance(q, dict) and simulator.usable(q.get("price"))}
+            found = {s: _quoted(q) for s, q in (answer.data.quotes if answer.data else {}).items() if isinstance(q, dict) and _quoted(q) is not None}      # a quote is the Data Clerk's float: it becomes a Decimal price here, once
             quotes.update(found)
             for text in (answer.data.problems if answer.data else answer.errors):
                 run.errors.append(str(text)[:200])
@@ -438,6 +445,14 @@ def _prices(ctx: Context, symbols: list[str], now: datetime) -> Prices:
     run.price_order = ", ".join(ids) or None
     entry = simulator.entry_date(now, bars)
     return _snapshot(ctx, Prices(mode, entry or today, bars=bars, entry_date=entry, order_id=run.price_order), why, answered=len(why) < len(groups(wanted, MAX_BAR_SYMBOLS)))
+
+
+def _quoted(quote: dict) -> Decimal | None:
+    """The price of one quote (a dict with the `price` the API client gave) through THE price door: a Decimal at four places above zero, or None."""
+    try:
+        return price_door(quote.get("price"))
+    except ValueError:
+        return None
 
 
 def _snapshot(ctx: Context, prices: Prices, why: dict[tuple[str, ...], str], answered: bool) -> Prices:
@@ -478,7 +493,7 @@ def _consent(ctx: Context, funding, target: Trade, legs: list[dict], approver, f
         run.funding.note = f"{target.trade_id} was rejected ({target.reject_code}) before any sale: the funding sells are not used"
         return
     price = market_price(ctx.prices, target.symbol) or target.ref_price
-    paid = simulator.r4(price * (1 + config.costs.slippage_bps / 10000))
+    paid = price_scale(price * (1 + config.costs.slippage_bps / 10000))
     cost = trade_amount(target.shares, paid) + config.costs.commission_per_order
     question = broker.preview(target, paid)
     if question.approved and question.shares >= target.shares:
@@ -508,18 +523,27 @@ def _consent(ctx: Context, funding, target: Trade, legs: list[dict], approver, f
         broker.add(tickets.funding_trades(target, legs, config, ctx.mode))
 
 
-def funding_card(ctx: Context, target: Trade, legs: list[dict], cost: float, cash: float | None) -> dict:
+def funding_card(ctx: Context, target: Trade, legs: list[dict], cost: Decimal, cash: Decimal | None) -> dict:
     """What the user is asked (spec section 7): the sells, one per line (symbol, shares, about the proceeds, the gain), and the question. `cash` is what the Account Manager said the account has (None: not known)."""
-    held, lines, proceeds = ctx.start, [], 0.0
+    held, lines, proceeds = ctx.start, [], Decimal("0.00")
     for leg in legs:
         price = market_price(ctx.prices, leg["symbol"]) or leg["price"]
         position = held.position(leg["symbol"])
-        amount, gain = leg["shares"] * float(price), leg["shares"] * (float(price) - (position.cost_basis if position else float(price)))
+        amount = trade_amount(leg["shares"], price)                                                          # decimal, half up to the cent, the way the book works a sale (entries 111 and 112)
+        gain = amount - trade_amount(leg["shares"], position.cost_basis if position else price)
         proceeds += amount
-        lines.append(f"  sell {leg['shares']} {leg['symbol']}: about {money(amount)}, a gain of {money(gain) if gain >= 0 else '-' + money(-gain)}")
-    text = "\n".join([f"To buy {target.shares} shares of {target.symbol} (about {money(cost)}) with cash of {money(ctx.start.cash_avail if cash is None else cash)}, these holdings would be sold:", *lines, f"  together about {money(proceeds)}"])
-    return {"text": text, "symbol": target.symbol, "shares": target.shares, "est_cost": round(cost, 2),
-            "question": f"Sell these to pay for {target.shares} shares of {target.symbol} (about ${cost:,.0f})? [y/N] ", "kind": "funding"}
+        lines.append(f"  sell {sh.text(leg['shares'])} {leg['symbol']}: about {money(amount)}, a gain of {money(gain) if gain >= 0 else '-' + money(-gain)}")
+    text = "\n".join([f"To buy {sh.text(target.shares)} shares of {target.symbol} (about {money(cost)}) with cash of {money(ctx.start.cash_avail if cash is None else cash)}, these holdings would be sold:", *lines, f"  together about {money(proceeds)}"])
+    return {"text": text, "symbol": target.symbol, "shares": target.shares, "est_cost": cost,
+            "question": f"Sell these to pay for {sh.text(target.shares)} shares of {target.symbol} (about ${cost:,.0f})? [y/N] ", "kind": "funding"}
+
+
+def _plan_price(measured) -> Decimal | None:
+    """The Advisor's stop or target (its float) through THE price door, once; None when the plan has none (a capital-return plan has no target)."""
+    try:
+        return price_door(measured)
+    except ValueError:
+        return None
 
 
 def _outcomes(ctx: Context) -> None:
@@ -531,7 +555,7 @@ def _outcomes(ctx: Context) -> None:
             continue
         try:
             plan = next((r.get("trade") for r in order.recommendations if isinstance(r, dict) and (r.get("identity") or {}).get("record_id") == trade.record_id), None) or {}
-            trade.outcome = simulator.follow(trade.fill.price, trade.fill.shares, trade.fill.date, prices.bars.get(trade.symbol, []), plan.get("stop_price"), plan.get("target_price"), plan.get("time_stop_date"),
+            trade.outcome = simulator.follow(trade.fill.price, trade.fill.shares, trade.fill.date, prices.bars.get(trade.symbol, []), _plan_price(plan.get("stop_price")), _plan_price(plan.get("target_price")), plan.get("time_stop_date"),
                                              config.costs.slippage_bps, benchmark)
         except Exception as error:   # an outcome is a nicety: the fills stand
             run.errors.append(f"{trade.trade_id}: the outcome could not be followed ({message(error)})")
@@ -558,7 +582,7 @@ def _records(ctx: Context, loop: dict) -> WorkOrder:
         order.schema_version = 4
     if order.status == "decided" and done and not findings:
         order.status = "traded"
-    order.trader_runs = [*order.trader_runs, run.model_dump(mode="json")]
+    order.trader_runs = [*order.trader_runs, run.model_dump()]
     return order
 
 

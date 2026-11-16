@@ -2,9 +2,10 @@
 metrics, the real replies of the real Advisor model) run through the real Advisor code, and the real session capture `tests/fixtures/session_real/bob_jones_oil.json`.
 
     STRUCTURE   the Advisor's source (the package, its two prompt files and its settings) names no cash, no equity, no number of shares, no risk budget and no position percentage, imports nothing of the user's
-                profile, the Account Manager or the account book, and reads of the portfolio nothing but the positions: a test, like the project's import tests, so it fails when someone puts one back
-    BEHAVIOUR   the same records come out whatever the user holds in cash, a record has no size field, a reduction carries no amount, and the real thesis replies of the real model pass the program's checks
-                on a record that has no size (the digest the model reads has none, and the numbers the check allows have none)
+                profile, the Account Manager or the account book, and IS GIVEN NO PORTFOLIO (entry 105: it imports no `Portfolio`, takes none, and names no holding): a test, like the project's import tests, so it
+                fails when someone puts one back
+    BEHAVIOUR   a record has no size field and no holding field, the real thesis replies of the real model pass the program's checks on a record that has no size (the digest the model reads has none, and the
+                numbers the check allows have none), and no word of what the model is told is about a holding or a sale
 """
 import ast
 import copy
@@ -20,9 +21,8 @@ from prometheus.agents.advisor import thesis as th
 from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.advisor.calls import parse_list
 from prometheus.agents.advisor.config import AdvisorConfig
-from prometheus.agents.advisor.record import PortfolioFit, Recommendation, TradePlan
+from prometheus.agents.advisor.record import Concentration, Recommendation, TradePlan
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import load_portfolio
 from prometheus.rag.config import REPO_ROOT
 
 ADVISOR_DIR = REPO_ROOT / "prometheus" / "agents" / "advisor"
@@ -77,13 +77,41 @@ def test_the_advisors_source_names_no_cash_no_equity_no_share_count_no_budget_an
     assert problems == []
 
 
-def test_the_advisor_reads_nothing_of_the_portfolio_but_its_positions():
-    seen = set()
+def test_the_advisor_is_given_no_portfolio_it_imports_none_takes_none_and_names_no_holding():
+    """AMENDED (entry 105). This test said the Advisor reads nothing of the portfolio but its `positions`. It is given no portfolio at all: no import of `Portfolio` or of `prometheus.common.portfolio`, no name `portfolio`
+    or `positions` anywhere in the code (an argument, a variable, an attribute), none of the names the holdings pass used (`holding_action`, `add_floor`), and no string constant that is an action of a holding
+    (`reduce`, `hold`, `avoid`). The retired KEYS of a version 2 record (`held`, `held_shares`, `cost_basis`, `unrealized_pct`, `portfolio_fit`) are named in `record.py` alone: its readers of version 2 drop them
+    (`add` is read in `ranking.cooldown_of` too: an OLD ledger line is about what was recommended before, not about what is held)."""
+    banned_names = {"portfolio", "Portfolio", "PortfolioFit", "load_portfolio", "positions", "holding_action", "add_floor"}
+    retired = {"held", "held_shares", "cost_basis", "unrealized_pct", "portfolio_fit"}
+    problems = []
     for path in ADVISOR_FILES:
-        for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
-            if isinstance(node, ast.Attribute) and isinstance(node.value, ast.Name) and node.value.id == "portfolio":
-                seen.add(node.attr)
-    assert seen == {"positions"}, seen
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+        names = identifiers(tree)
+        problems += [f"{path.name}: the name {n!r}" for n in names if n in banned_names]
+        problems += [f"{path.name}: the retired key {n!r}" for n in names if n in retired and path.name != "record.py"]
+        skip = docstring_nodes(tree)
+        strings = [node.value for node in ast.walk(tree) if isinstance(node, ast.Constant) and isinstance(node.value, str) and id(node) not in skip]
+        problems += [f"{path.name}: the string {n!r}" for n in strings if n in {"reduce", "hold", "avoid"}]
+        problems += [f"{path.name}: the string 'add'" for n in strings if n == "add" and path.name != "ranking.py"]
+        for node in ast.walk(tree):
+            names_in = [node.module or "", *(f"{node.module}.{a.name}" for a in node.names)] if isinstance(node, ast.ImportFrom) else [a.name for a in node.names] if isinstance(node, ast.Import) else []
+            problems += [f"{path.name}: imports {n}" for n in names_in if "portfolio" in n.lower()]
+    assert problems == []
+
+
+def test_what_the_advisors_model_is_told_has_no_holding_no_sale_and_no_portfolio():
+    """The plan prompt, the thesis prompt and the candidate lines (what the model is shown), and the digest of a REAL record, say nothing of a holding, a sale, a reduction or a portfolio (entry 105)."""
+    import re
+
+    from prometheus.prompts import advisor_v1 as prompts
+    words = re.compile(r"\b(held|holds|holding|holdings|sell|sells|sold|selling|reduce|reduction|portfolio|hold)\b", re.I)
+    fixed = [prompts.plan_system(date(2026, 11, 5), 10, 5, evidence=True), prompts.plan_system(date(2026, 11, 5), 10, 5, evidence=False), prompts.THESIS_SYSTEM, prompts.RETRY_PLAN, prompts.RETRY_THESIS,
+             prompts.candidates_text([{"symbol": "PG", "company": "Procter & Gamble", "origin": origin} for origin in ("subject", "sources", "discover", "model")])]
+    assert [m.group(0) for text in fixed for m in words.finditer(text.replace("the company sells new shares or convertible debt", ""))] == []      # an event class, the COMPANY's dilution: not the user's sale
+    order, _ = run("PG_open")
+    digest = th.digest(order.recommendations[0])
+    assert digest.splitlines()[1].startswith("Decision: buy (") and not [m.group(0) for line in digest.splitlines() if not line.startswith(("Evidence", "Event")) for m in words.finditer(line)]
 
 
 def test_the_advisor_imports_nothing_of_the_users_profile_the_account_manager_or_the_account_book():
@@ -104,8 +132,7 @@ def test_the_advisors_settings_hold_no_size_and_the_loader_expects_none():
 
 
 def test_the_record_has_no_field_for_a_size_a_budget_or_the_users_money():
-    assert not SIZE_FIELDS & set(TradePlan.model_fields) and not {"position_pct_after", "funds_feasible"} & set(PortfolioFit.model_fields)
-    assert set(PortfolioFit.model_fields) == {"sector_weight_after", "correlation_to_portfolio_63d", "note"}
+    assert not SIZE_FIELDS & set(TradePlan.model_fields) and set(Concentration.model_fields) == {"note"}        # entry 105: `portfolio_fit` and its two numbers that were never computed are gone
     for field, value in (("suggested_shares", 5), ("equity", 1000.0), ("position_pct", 0.1), ("risk_budget", 10.0), ("funds_feasible", True)):
         with pytest.raises(ValidationError, match="Extra inputs are not permitted"):
             TradePlan(entry_basis="last_close", **{field: value})
@@ -117,18 +144,15 @@ def capture(name: str) -> dict:
     return json.loads((FIXTURES / f"{name}.json").read_text(encoding="utf-8"))
 
 
-def run(name: str, cash=None, plan_reply=None, changes=None):
-    """The Advisor on the captured inputs, as `test_advisor_sndk_pg.replay` does it, with the user's cash set to `cash` (the capture's own portfolio when None) and, for a test that needs it, ONE real metric changed."""
+def run(name: str, plan_reply=None, changes=None):
+    """The Advisor on the captured inputs, as `test_advisor_sndk_pg.replay` does it (no portfolio is given), and, for a test that needs it, ONE real metric changed."""
     fx = capture(name)
     metrics = copy.deepcopy(fx["metrics"])
     for (symbol, metric), value in (changes or {}).items():
         metrics[symbol][metric]["value"] = value
-    portfolio = load_portfolio(REPO_ROOT / fx["portfolio"])
-    if cash is not None:
-        portfolio = portfolio.model_copy(update={"cash_avail": cash})
     replies = fx["replies"] if plan_reply is None else [plan_reply, *(r for r in fx["replies"] if '"theses"' in r)]
     order = wo.WorkOrder.model_validate(fx["order"])
-    Advisor(model=Scripted(*replies), clerk=RecordedClerk(metrics), ledger=MemoryLedger()).generate_recommendations(order, portfolio, "funds", date.fromisoformat(fx["today"]))
+    Advisor(model=Scripted(*replies), clerk=RecordedClerk(metrics), ledger=MemoryLedger()).generate_recommendations(order, "funds", date.fromisoformat(fx["today"]))
     return order, fx
 
 
@@ -139,20 +163,16 @@ def test_no_real_record_holds_a_size_and_each_validates_as_a_record(name):
     for record in order.recommendations:
         Recommendation.model_validate(record)
         assert set(record["trade"]) == set(TradePlan.model_fields) and not SIZE_FIELDS & set(record["trade"])
-        assert set(record["portfolio_fit"]) == set(PortfolioFit.model_fields)
+        assert set(record["concentration"]) == set(Concentration.model_fields) and "portfolio_fit" not in record
         assert "suggested_shares" not in json.dumps(record) and "position_pct" not in json.dumps(record) and "risk_budget" not in json.dumps(record)       # not in any section, not even as text
 
 
-def test_a_reduction_has_an_entry_zone_and_no_amount_on_the_real_capture():
-    """The real held GM with ONE real number changed (its cash flow is negative while it shows a profit: a red flag): the holdings pass reduces it. The record is a reduction with a price zone and nothing about how much."""
-    order, fx = run("SNDK", changes={("GM", "cfo_negative_with_profit"): True})
-    gm = next(r for r in order.recommendations if r["symbol"] == "GM")
-    assert gm["action"]["action"] == "reduce" and "red_flag gate failed" in gm["action"]["reason"] and gm["action"]["held_shares"] == 60 and order.recommendations[0]["symbol"] == "GM"   # a reduction first
-    Recommendation.model_validate(gm)
-    t = gm["trade"]
-    assert t["entry_zone"] and t["entry_mid"] and t["family"] is None and t["stop_price"] is None and t["stop_distance"] is None and t["target_price"] is None and t["invalidation"] == []
-    assert not SIZE_FIELDS & set(t) and "held_shares" in gm["action"] and set(t) == set(TradePlan.model_fields)
-    assert all(not SIZE_FIELDS & set(r["trade"]) for r in order.recommendations)
+def test_a_red_flag_on_the_real_captured_company_stops_it_as_a_candidate_there_is_no_reduction():
+    """AMENDED (entry 105). This test changed ONE real number of the held GM (its cash flow is negative while it shows a profit: a red flag) and the holdings pass wrote a `reduce` with an entry zone and no amount. The Advisor
+    knows no holding: the same change to the company the capture is about (SNDK) stops it at the red_flag gate, it is a candidate with the reason, and there is no record, so nothing is recommended to buy or to sell."""
+    order, _ = run("SNDK", changes={("SNDK", "cfo_negative_with_profit"): True})
+    assert order.recommendations == [] and [(c["symbol"], c["gate"]) for c in order.candidates] == [("SNDK", "red_flag")]
+    assert "held" not in order.candidates[0] and order.candidates[0]["reason"].startswith("gate red_flag failed")
 
 
 # ---------------------------------------------------------------- the thesis
@@ -190,7 +210,7 @@ def test_the_thesis_may_not_name_a_number_the_record_does_not_have_so_it_cannot_
 def test_the_thesis_prompt_tells_the_model_there_is_no_amount_and_the_system_text_names_no_size():
     from prometheus.prompts.advisor_v1 import THESIS_SYSTEM
 
-    assert "no amount to buy or sell" in THESIS_SYSTEM and "do not say how many shares or how much money" in THESIS_SYSTEM
+    assert "no amount to buy either" in THESIS_SYSTEM and "do not say how many shares or how much money" in THESIS_SYSTEM
     assert "suggested" not in THESIS_SYSTEM.lower() and "position size" not in THESIS_SYSTEM.lower()
 
 

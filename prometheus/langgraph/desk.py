@@ -12,8 +12,9 @@ The graph:
                    |                +-- the data is not ready (failed, or no search was made) --> END
                    +-- the request is not valid --> END
 
-    A NEUTRAL RECOMMENDATION IS APPROVED (entry 91; `ALLOW_NEUTRAL_RECOMMENDATIONS=true`): when the Advisor recommended nothing for the Critic to review but scored a company the user named NEUTRAL, the graph goes from the advisor
-    straight to account_manager_decision (advisor -> account_manager_decision -> trader), where the Account Manager treats the neutral company as approved and decides it.
+    A NEUTRAL RECOMMENDATION IS AN APPROVAL (entries 91 and 107; `ALLOW_NEUTRAL_RECOMMENDATIONS=true`): when the Advisor recommended nothing for the Critic to review but scored a company NEUTRAL (whoever named it), the graph goes from the
+    advisor straight to account_manager_decision (advisor -> account_manager_decision -> trader), where the Account Manager treats the neutral company as approved and decides it; the node passes the number of companies the request asked for
+    (`plan["count"]`, None when it gave none) and the Account Manager buys at most that many, the Critic's approved ones first.
 
     with_critic=True (Critic v1, entries 56 to 59; `--critic`):
     START -> account_manager -> data_clerk -> advisor -> critic -> account_manager_decision -> END     (or -> account_manager_funds -> END with with_funds)
@@ -28,6 +29,9 @@ The graph:
     A DIRECT ORDER (entries 87 and 88: the user names the trade, "Buy 50 shares of MSFT" or "of Microsoft"; only with the Critic's desk, `with_critic=True`, which is the one that decides and trades) skips the research, the Advisor and the Critic:
     START -> account_manager -> account_manager_direct -> trader -> END                (the trader node runs only when the decision says yes_user; the Data Clerk's node, the Advisor and the Critic are never run: the Account Manager asks the Data Clerk for each
                                                                                        company name and symbol itself and appends them to the work order when it makes it)
+    A STOCK THE DATA CLERK DID NOT FIND (entries 101 and 102): "Google" is found as its listed owner (Alphabet Inc., GOOGL); a name that is not listed ("Chick-fil-a": privately held) is, when others were found, DROPPED from the order
+    without a question in AUTO mode and asked about one by one in ASK mode (the `approver` carries the question; the Account Manager's model words it, code checks it and reads the yes or no); a blocking issue (nothing found, a lookup that
+    failed, two orders for one stock), a no, or no answer ends the run at the first node with the reasons, and its last message asks the user to clarify the request (`direct_order.CLARIFY`).
 
 Each node is one agent of the week 2 design, reduced to what exists today, and each one reads and updates the SAME work order, which is the
 state of the graph (the design: "the saved WORK_ORDER is the same object every agent reads"):
@@ -37,11 +41,12 @@ state of the graph (the design: "the saved WORK_ORDER is the same object every a
   data_clerk       `DataClerk.request_data(order)`: fetches if the order is live, searches, answers, then (entry 40) searches the stored sources the model did not search and reads the filing
                    evidence, so the order carries all three; puts the data and the sources on the order.
   advisor          `Advisor.advise(order)`: reads the chunks, `data.results` and `data.filing_evidence` on the order and appends recommendations with a calculated score.
-  critic           (only with `build_desk(with_critic=True)`, entries 56 to 59) the Advisor then runs `generate_recommendations` (the Critic reads schema 2 records) and the Critic approves or denies each one: it asks the
+  critic           (only with `build_desk(with_critic=True)`, entries 56 to 59) the Advisor then runs `generate_recommendations` (given NO portfolio: it recommends purchases only, entry 105) and the Critic approves or denies each one (a review that
+                   wants a person to look is DENIED, entry 103; it judges recommendations to buy and nothing about the holdings): it asks the
                    Data Clerk for the numbers, a quote and the sources again, judges the company's risk against the user's risk tolerance, timing and value, and puts a review beside each recommendation (`order.reviews`).
                    It is given the profile's `RiskView` and no portfolio and no money: it sizes nothing (entry 80).
-  account_manager_decision  (only with the Critic) the Account Manager turns each verdict into a trade decision (`order.trade_decisions`): trade on its own (Auto), ask the user (Ask), or not at all, and decides HOW MUCH to
-                   buy or sell (`decisions.decide_trades`, `sizing.py`: from the user's money and limits; Auto spends the funds round-robin).
+  account_manager_decision  (only with the Critic) the Account Manager turns each verdict into a trade decision (`order.trade_decisions`): an APPROVED recommendation trades on its own in Auto mode (nothing is asked) or is asked about in
+                   Ask mode, a DENIED one is not traded and is returned to the user with the Critic's reason, and it decides HOW MUCH to buy (`decisions.decide_trades`, `sizing.py`: from the user's money; Auto spends the funds round-robin; entry 104).
   account_manager_funds  (only with `build_desk(with_funds=True)`, entry 42) the Account Manager's RaiseFunds: it takes the best recommendation (or the stock the user named), asks the Data Clerk for the
                    current prices, and runs a Tree of Thought for what to sell from the user's portfolio to buy it. Its answer is `state["funds"]`; the work order is not changed.
   account_manager_direct  (only with the Critic's desk, entries 87 and 88) a DIRECT ORDER: the user named the trade, so no recommendation is made and the Critic is not asked, and the Data Clerk's NODE is skipped too:
@@ -79,6 +84,9 @@ FILINGS (`--source filings`, entry 35) are asked for in exactly the same way (a 
 is built by the same branch of `order_from_request`: only the corpus the Data Clerk searches is different.
     python -m prometheus.langgraph.desk --source filings --symbol AAPL
     python -m prometheus.langgraph.desk --source filings --company "Apple Inc" --no-fetch
+
+MONEY IS `decimal.Decimal` (design choices entry 112): the plan's budget is the `Money` the user's words gave (`intent.budget`), the funds node hands RaiseFunds a whole `Decimal` number of shares (`shares.ceil` of a fractional purchase), and what `--json` and the saved
+order write is written by the one encoder (`money.dumps`): a Decimal is a JSON number, never a string.
 """
 import argparse
 import json
@@ -102,7 +110,9 @@ from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.agents.trader.report import trade_section
 from prometheus.agents.trader.trader import Trader
 from prometheus.application.recommendations import Request, Result, classify, find_companies_of, scored_symbols
+from prometheus.common import shares as sh
 from prometheus.common.market_calendar import eastern_date
+from prometheus.common.money import dumps
 from prometheus.common.trading_clock import clock_note, trading_now
 from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, TRADING, WIRED_SOURCES, WorkOrder, new_work_order, verify_request
 from prometheus.common.portfolio import Portfolio, load_portfolio
@@ -128,6 +138,7 @@ class DeskState(TypedDict, total=False):
     path: Annotated[list[str], lambda old, new: old + new]     # the nodes that ran, in order
     seconds: Annotated[dict, lambda old, new: {**old, **new}]  # how long each node took
     with_trader: bool                                          # the desk was built with the Trader: its path ends at the trader node, and not at the decision (`run_desk` sets it)
+    clarify: bool                                              # the run stopped because the request could not be read or its stocks could not be made (entry 102): its last message asks the user to clarify it (`direct.CLARIFY`)
     plan: dict | None                                          # a request in the user's own words (`request["ask"]`): what the Account Manager understood and the companies the Data Clerk found (entry 78)
 
 
@@ -310,19 +321,24 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         ask = state["request"]["ask"]
         try:
             manager, _ = account(state)
-            intent = manager.understand_request(ask.get("text"))
-            if intent.action == "order" and not with_critic:
-                raise ValueError("a direct order needs the desk that decides and trades (with the Critic's desk, build_desk(with_critic=True))")
-            asked = None if intent.action == "order" else classify(*intent.as_request())
         except (ValueError, RuntimeError, OSError) as error:
             return {"order": None, "errors": [str(error)], "plan": None}
+        try:
+            intent = manager.understand_request(ask.get("text"))
+            asked = None if intent.action == "order" else classify(*intent.as_request())
+        except (ValueError, RuntimeError, OSError) as error:        # the request could not be read: the run's last message asks the user to clarify it (entry 102)
+            return {"order": None, "errors": [str(error)], "plan": None, "clarify": True}
+        if intent.action == "order" and not with_critic:
+            return {"order": None, "errors": ["a direct order needs the desk that decides and trades (with the Critic's desk, build_desk(with_critic=True))"], "plan": None}
         if confirm is not None and confirm(intent) is not True:
             return {"order": None, "errors": ["stopped: what was understood was not confirmed, so nothing was done"], "plan": None}
         if intent.action == "order":      # the user named the trade (entries 87 and 88): the work order holds the user's own orders, and there is nothing to search, recommend or review
             order = new_work_order(intent.request, requester=state["request"].get("requester", REQUESTER), action_type="trade", source=DEFAULT_SOURCE)
-            reasons = manager.name_the_stocks(order, intent.orders, intent.request, clock())    # this path skips the Data Clerk's node: the Account Manager asks the Data Clerk for each company name and symbol and appends them to the work order
-            order.errors = [*order.errors, *reasons]
-            return {"order": order, "errors": reasons, "plan": {"intent": intent, "direct": True, "action": "order", "request_text": intent.request}}
+            mode = (state["request"].get("account") or {}).get("mode") or manager.profile.trade_mode      # the run's own mode, the one `decide_direct` uses
+            named = manager.name_orders(order, intent.orders, intent.request, clock(), approver, mode)    # this path skips the Data Clerk's node: the Account Manager asks the Data Clerk for each company name and symbol and appends them to the work order
+            order.errors = [*order.errors, *named.problems]       # entry 102: a stock that is not listed is dropped (Auto mode) or asked about (Ask mode); a blocking issue stops the run here and its last message asks the user to clarify
+            kept = intent.model_copy(update={"orders": named.orders}) if named.dropped else intent      # the plan's intent holds only the stocks that stay
+            return {"order": order, "errors": named.problems, "plan": {"intent": kept, "direct": True, "action": "order", "request_text": intent.request, "dropped": named.dropped}, "clarify": bool(named.problems)}
         find, days, fetch = intent.count or ask.get("default_count", 3), ask.get("news_days", ASK_NEWS_DAYS), bool(ask.get("fetch"))
         case = ask.get("case") or ("industry" if asked.kind in ("phrase", "list") else "funds")
         order = new_work_order(f"What do the stored news, press releases and filings say about {intent.what()}?", requester=state["request"].get("requester", REQUESTER), subject=asked.symbols or asked.phrase or asked.text, source=DEFAULT_SOURCE,
@@ -330,6 +346,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         reasons = verify_request(order)
         order.errors = [*order.errors, *reasons]
         plan = {"intent": intent, "request": asked, "find": find, "case": case, "action": intent.action, "balance": "even" if intent.allocation == "even" else None, "budget": intent.budget,
+                "count": intent.count,      # the number of companies the request asked for, or None: `find` falls back to a default of 3 for the Advisor and that default must not cut anything (entry 107)
                 "said_how_much": intent.said_how_much(), "request_text": intent.request, "fetch": fetch,
                 "news_days": days, "result": Result(asked, case, eastern_date(clock()), find)}
         return {"order": order, "errors": reasons, "plan": plan}
@@ -375,7 +392,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
                 order.status, order.errors = "data_failed", [*order.errors, "no listed company was found to score"]
                 return {"order": order}
             if plan["fetch"]:
-                held = [p.symbol for p in account(state)[1].positions]
+                held = [p.symbol for p in account(state)[1].positions]      # NOT for the Advisor (it is given no portfolio): the Account Manager prices what the user holds (`DataClerk.request_quotes`; the simulated clock prices a holding from its stored bar), so those bars are refreshed too
                 result.refresh = clerk.refresh_data(listed, news_days=plan["news_days"], filings_days=365, bars_for=held)
         except (RuntimeError, ValueError, OSError) as error:
             order.status, order.errors = "data_failed", [*order.errors, f"the Data Clerk could not prepare the data: {error}"]
@@ -387,16 +404,15 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     def advisor(state: DeskState) -> dict:
         order = state["order"]
         try:
-            agent = advisor_factory(order)
-            portfolio = account(state)[1] if (with_critic or state.get("plan")) else None
+            agent = advisor_factory(order)      # the Advisor is given NO portfolio (entry 105): it recommends purchases and does not know what the user holds
         except (RuntimeError, ValueError, OSError) as error:
             order.errors = [*order.errors, f"the Advisor could not start: {error}"]
             return {"order": order}
-        if state.get("plan"):   # a request in the user's own words: the top N of the companies the Data Clerk found, the user's own holdings reviewed first
+        if state.get("plan"):   # a request in the user's own words: the top N of the companies the Data Clerk found
             plan = state["plan"]
-            return {"order": agent.generate_recommendations(order, portfolio, plan["case"], eastern_date(clock()), top_k=plan["find"], only_subject=True)}
-        if with_critic:   # version 1: the Critic reads schema 2 records. The case is the order's own, else inferred from its subject
-            return {"order": agent.generate_recommendations(order, portfolio, today=eastern_date(clock()))}
+            return {"order": agent.generate_recommendations(order, plan["case"], eastern_date(clock()), top_k=plan["find"], only_subject=True)}
+        if with_critic:   # version 1: the Critic reads the records of recommendations to buy. The case is the order's own, else inferred from its subject
+            return {"order": agent.generate_recommendations(order, today=eastern_date(clock()))}
         return {"order": agent.advise(order)}
 
     def critic(state: DeskState) -> dict:
@@ -421,7 +437,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             return {"order": order}
         plan = state.get("plan") or {}
         return {"order": manager.decide_trades(order, portfolio, approver, clock(), (state["request"].get("account") or {}).get("mode"), plan.get("balance"), plan.get("budget"),
-                                               clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "")}
+                                               clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "", count=plan.get("count"))}
 
     def account_manager_direct(state: DeskState) -> dict:
         """A DIRECT ORDER (entry 87): the Account Manager prices the trades the user named (it asks the Data Clerk for the quotes) and decides them: the user's own order is the approval, so there is no recommendation, no
@@ -457,7 +473,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         trades = [d for d in order.trade_decisions if d["will_trade"] in ("yes_auto", "yes_user") and d["action"] != "reduce"]   # with the Critic: what it approved, the Account Manager sized (the shares it asks RaiseFunds for are the decision's) and the user or Auto allowed
         target = spec.get("buy") or (trades[0]["symbol"] if trades else None if with_critic else top_recommendation(order))
         if not spec.get("shares") and trades and trades[0]["symbol"] == target:
-            spec = {**spec, "shares": trades[0]["shares"]}
+            spec = {**spec, "shares": sh.ceil(trades[0]["shares"])}      # RaiseFunds plans WHOLE shares (entry 110): a purchase of a fraction is raised for the next whole share, so that the plan raises at least enough
         if not target:
             return {"funds": {"status": "refused", "errors": ["the Critic approved no purchase that was allowed to trade, and no symbol was given" if with_critic else
                                                               "the Advisor made no recommendation with a verified bullish score to buy, and no symbol was given"], "quotes": {}, "run": {}}}
@@ -707,8 +723,8 @@ def main(argv: list[str] | None = None) -> int:
     total = time.perf_counter() - started
     order = state.get("order")
     if args.json:
-        print(json.dumps({"request": request, "resolution": state.get("resolution"), "errors": state.get("errors"), "path": state.get("path"), "seconds": state.get("seconds"),
-                          "funds": state.get("funds"), "decisions": order.trade_decisions if order else None, "order": order.model_dump() if order else None}, indent=1, default=str))
+        print(dumps({"request": request, "resolution": state.get("resolution"), "errors": state.get("errors"), "path": state.get("path"), "seconds": state.get("seconds"),
+                     "funds": state.get("funds"), "decisions": order.trade_decisions if order else None, "order": order.model_dump() if order else None}, indent=1))      # the one encoder: a Decimal is a number (entry 112)
     else:
         print(report(state, total))
     if order is not None and not state.get("errors"):
@@ -718,7 +734,7 @@ def main(argv: list[str] | None = None) -> int:
         label = "_".join(re.sub(r"[^A-Za-z0-9]+", "_", part.strip().lstrip("$")).strip("_") for part in parts if part.strip()) or "order"
         out = OUT_DIR / f"desk_{label}.json"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(json.dumps({"request": request, "resolution": state.get("resolution"), "path": state.get("path"), "seconds": state.get("seconds"), "funds": state.get("funds"), "order": order.model_dump()}, indent=1, default=str),
+        out.write_text(dumps({"request": request, "resolution": state.get("resolution"), "path": state.get("path"), "seconds": state.get("seconds"), "funds": state.get("funds"), "order": order.model_dump()}, indent=1),
                        encoding="utf-8")
         if not args.json:
             print(f"saved: {out.relative_to(OUT_DIR.parents[1]) if out.is_relative_to(OUT_DIR.parents[1]) else out}")

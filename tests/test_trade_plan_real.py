@@ -8,6 +8,9 @@ every field except the nine size fields it removed. The old code's plans did not
 What these tests prove: removing the risk budget, the position and liquidity caps, the equity and the funds check from `build` changed NO price, no date, no note and no rule of the plan: the entry zone, the entry
 mid, the stop distance and price, the target, the time stop, the order style, the limit price, the invalidation rules, the gap risk and the notes are the same for every one of the 208. The only note that went is the
 one that said the size could not be worked out ("no size: equity is unknown"); no real capture had it. Nothing here is invented: the quote, when there is one, is the symbol's own last close.
+
+AMENDED (design choices entry 105): the file's 26 plans for a `reduce` (a plan with an entry zone and nothing else, the family None) are the plans of a sale the Advisor no longer recommends: `build` needs a family now, and
+those 26 are not compared. The other 182 are, unchanged. The file is a capture and is not edited.
 """
 import json
 from datetime import date
@@ -27,8 +30,14 @@ FAMILIES = ("trend", "event", "reversion", "capital_return", "theme", "convictio
 
 
 @pytest.fixture(scope="module")
-def golden():
+def everything():
     return json.loads((FIXTURES / "plans_before_size_removal.json").read_text(encoding="utf-8"))["plans"]
+
+
+@pytest.fixture(scope="module")
+def golden(everything):
+    """The 182 plans of a purchase: the file less its 26 plans for a `reduce` (entry 105: the Advisor recommends no sale)."""
+    return {k: v for k, v in everything.items() if k.split("|")[2] != "reduce"}
 
 
 @pytest.fixture(scope="module")
@@ -36,10 +45,8 @@ def captures():
     return {name: json.loads((FIXTURES / f"{name}.json").read_text(encoding="utf-8")) for name in ("SNDK", "PG", "PG_open")}
 
 
-def family_of(name: str) -> FamilyResult | None:
+def family_of(name: str) -> FamilyResult:
     """The family the file was made with: its own horizon from the settings and its own prior as the edge (the same inputs the old code was given)."""
-    if name == "reduce":
-        return None
     c = getattr(CONFIG.families, name)
     prior = getattr(c, "prior_20d", None) or getattr(c, "prior_event", 0.008)
     return FamilyResult(family=name, computable=True, passed=True, direction="bullish", horizon_bars=c.horizon, prior_20d=prior, edge_20d=prior)
@@ -53,16 +60,16 @@ def new_plan(key: str, captures: dict):
     return tp.build(family_of(family), metrics, {"price": last} if quote == "quote_at_last_close" and last else None, date.fromisoformat(fx["today"]), CONFIG, symbol, reaction_atr=None if reaction == "None" else float(reaction))
 
 
-def test_the_file_covers_every_family_both_entry_prices_and_the_rules_that_change_a_plan(golden):
-    keys = [k.split("|") for k in golden]
-    assert len(golden) == 208 and {k[2] for k in keys} == {*FAMILIES, "reduce"} and {k[3] for k in keys} == {"no_quote", "quote_at_last_close"} and {k[0] for k in keys} == {"SNDK", "PG", "PG_open"}
+def test_the_file_covers_every_family_both_entry_prices_and_the_rules_that_change_a_plan(everything, golden):
+    keys = [k.split("|") for k in everything]
+    assert len(everything) == 208 and len(golden) == 182 and sum(1 for k in keys if k[2] == "reduce") == 26 and {k[2] for k in keys} == {*FAMILIES, "reduce"} and {k[3] for k in keys} == {"no_quote", "quote_at_last_close"} and {k[0] for k in keys} == {"SNDK", "PG", "PG_open"}
     assert {k[1] for k in keys} >= {"SNDK", "PG", "MSFT", "TSLA", "GM"} and {v["entry_basis"] for v in golden.values()} == {"last_close", "quote", "none"}
     assert {v["order_style"] for v in golden.values()} == {None, "limit", "marketable_limit"} and any(v["target_price"] is None and v["stop_price"] for v in golden.values())
     assert any("the stop is the 50-day mean" in n for v in golden.values() for n in v["notes"]) and any("one ATR or more" in n for v in golden.values() for n in v["notes"])
     assert not any(GONE & set(v) for v in golden.values())                                                          # the file holds no size
 
 
-def test_every_non_size_number_of_the_plan_is_what_the_old_code_made_for_all_208_real_plans(golden, captures):
+def test_every_non_size_number_of_the_plan_is_what_the_old_code_made_for_all_182_real_plans_of_a_purchase(golden, captures):
     different = []
     for key, old in golden.items():
         new = new_plan(key, captures).model_dump(mode="json")
@@ -74,6 +81,13 @@ def test_every_non_size_number_of_the_plan_is_what_the_old_code_made_for_all_208
 def test_the_new_plans_carry_exactly_the_fields_the_old_ones_had_less_the_size(golden, captures):
     for key in golden:
         assert set(new_plan(key, captures).model_dump(mode="json")) == set(next(iter(golden.values())))
+
+
+def test_there_is_no_plan_for_a_reduction_any_more_build_needs_the_strategy_a_purchase_is_made_on():
+    import inspect
+    assert "None" not in str(inspect.signature(tp.build).parameters["family"].annotation)
+    with pytest.raises(AttributeError):                                                  # a plan with no family (the old `reduce` plan) cannot be built
+        tp.build(None, {"last_close": {"value": 10.0}, "atr_14": {"value": 1.0}}, None, date(2026, 11, 5), CONFIG, "X")
 
 
 def test_a_real_plan_checked_by_hand(captures):

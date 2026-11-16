@@ -1,0 +1,3190 @@
+<<<ARTICLE>>>
+id: finnhub:143654948
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T20:36:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7b6de63d69c8a1de6fa93e7fc5afe7ceff79487d388705b685406161ac1a1f1f
+image_url: 
+category: company
+tickers: IBM
+keywords: 
+headline: President Trump, In CBS 60 Minutes Interview Sunday, Said AI Risks Can Be Managed, But Doesn't Mind Guardrails
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640955
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T17:32:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2936d4875ccbc5ef5f9fd119fa440cb01199f0bdc2b1dfdcc5d416cbaf83629
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM (IBM): Software Is Speeding Up, Yet Analysts’ Average Upside Is 5%
+<<<SUMMARY>>>
+We just published the list of the 10 Worst Dow Stocks To Buy, and IBM (NYSE:IBM) ranks 9th on this list. Yahoo Finance reported on November 5 that the Dow Jones Industrial Average tumbled 3.4%, or more than 1,800 points, while the S&P 500 fell 4.4% and the Nasdaq Composite sank 5.5% into correction territory. […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640540
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T11:50:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6998041f29395a90ade0c04af9f841ecf4f6dbd6b62c3b0db5dbd80e00593c80
+image_url: 
+category: company
+tickers: IBM
+keywords: 
+headline: Wall Street Brunch: Anthropic IPO Goes On The Road
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143618928
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T20:39:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=647ef40510db5d6dd4c1b2de867e73321273a5f9be35f7226cbaef49c4bf62c5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: He Inherited 8,000 IBM Shares Worth Nearly $2 Million at 52. The Often Overlooked IRS Rule That Decides Whether Most of It Is Taxed as Income or a Capital Gain
+<<<SUMMARY>>>
+Inheriting a 401(k) stuffed with company stock sounds like a windfall until the standard rollover form arrives. One signature can decide whether nearly $2 million gets taxed at the highest rates, and most heirs only learn the alternative after it's too late.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616247
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T11:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=f191515b97fdcac2987802edb0d6b323d6b7758989dd5c8a5bce51f79c987849
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: IBM
+keywords: 
+headline: Anthropic IPO Roadshow Takes Center Stage As Earnings Take A Breather
+<<<SUMMARY>>>
+Preview next week's market movers: Fed speeches, inflation data, earnings, IPOs, and volatility trends. Read here for more details.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592365
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T23:41:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c340ecc9b489965f724f0db282da8975e206c1c143c518acbceac62e0c2455ec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: What Just Happened To Accenture Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592366
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T22:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=10859721ac7947e8ff210c4251ed5fd31a253683a1f4765ac7e74eb30482282b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: How Quantinuum Plans to Win Quantum Computing’s Long Game, According to Its CEO
+<<<SUMMARY>>>
+Rajeeb Hazra is betting on bigger customer deals, new machines, and software that keeps developers building as quantum hardware advances.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592348
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T22:13:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=33d0b4ee639f2b58ecc88c842e4e42117fd83d8e849500169b1dd7f50ef93160
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Why Did International Business Machines (IBM) Move Today?
+<<<SUMMARY>>>
+International Business Machines (IBM) has put quantum error correction in the spotlight by launching a co-design platform with Oak Ridge National Laboratory and AMD that tightly links its quantum processors with high performance classical computing. IBM’s recent quantum and AI announcements have landed against a mixed share price backdrop, with the stock at US$247.11 after a 1-month share price return of 11.67%, but a year-to-date share price decline of 15.23% and a 1-year total shareholder...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639616
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T21:53:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=025095b28954ac57a3cd545eaac9c2ec46e5432e9eeb0ca45dab56a74496a743
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Better Dividend Stock: Cisco vs. IBM
+<<<SUMMARY>>>
+Key TakeawaysIBM yields 2. 7%, against 1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591652
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T21:18:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9050315a6dab6cbace31aef6c0c917a75f479cb38607ffead6470acb88efab6e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Advanced Micro Devices (AMD) Joined A Quantum Error Correction Platform Launch
+<<<SUMMARY>>>
+Advanced Micro Devices (NasdaqGS:AMD) joined IBM and Oak Ridge National Laboratory to launch a new quantum error correction co-design platform. The effort links IBM quantum hardware with AMD high performance classical processors inside Oak Ridge National Laboratory’s research environment. The collaboration aligns with the U.S. Department of Energy’s Quantum Genesis Mission and focuses on hybrid quantum classical computing research. The new AMD role in quantum error correction research is...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591704
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T20:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a04d46c02de0e03b9efc6753f9801e6ce31b34c5e3bba043cb0420d119b9514d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: How Quantinuum’s CEO Rajeeb Hazra Plans to Win Quantum Computing’s Long Game
+<<<SUMMARY>>>
+Rajeeb Hazra is betting on bigger customer deals, new machines, and software that keeps developers building as quantum hardware advances.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657551
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T20:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d4cb7de20a96f5799a39d1c83d388f3428bdda197183715c961de0606c2c9ee4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Unveils Its Most Advanced Quantum Computer in Chicago, Marking a Milestone for Illinois's Quantum Future
+<<<SUMMARY>>>
+IBM (NYSE: IBM), the University of Chicago, the State of Illinois, and Illinois Quantum and Microelectronics Park (IQMP) today unveiled an IBM Quantum System Two in Chicago, IBM's first quantum computer in Illinois and the company's most advanced system available. Initially located at Hyde Park Labs and hosted by the University of Chicago, the system is fueled by IBM Quantum Nighthawk, the most powerful quantum chip IBM has ever built.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592225
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:30:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=179932ced585c47b91f7c497290f9405d62b1ac2a2bf533cfb1fe4d053589441
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-w1536
+category: company
+tickers: IBM
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week of November 8
+<<<SUMMARY>>>
+Get the latest dividend activity for Dividend Champions, Contenders, and Challengers. Read this week's list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614817
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:16:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=47bc52dd5a5caae8c6337f4ccc261a621a1fe6e27b624aa37d6adf75702e4d80
+image_url: 
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Demonstrates Quantum Computer IBM Quantum System Two In Chicago
+<<<SUMMARY>>>
+IBM (NYSE:IBM), the University of Chicago, the State of Illinois, and Illinois Quantum and Microelectronics Park (IQMP) today unveiled an IBM Quantum System Two in Chicago, IBM&#39;s first quantum computer in Illinois
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589631
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:06:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=be754b801918401d1bd6b6762023cb8cc46415fc757d0eedc0e323e24f7470f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Oracle beats Microsoft and Amazon on a key Wall Street metric
+<<<SUMMARY>>>
+Oracle received the strongest valuation grade among seven major technology companies following Thursday's sector selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589831
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15a69792fda7f8098e9223e674f36a78dbc23e6a8da916d7b78f790323ca2826
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Stock Could Be More Than a ‘Safe Haven.’ Quantum Computing Is a Big Reason.
+<<<SUMMARY>>>
+Evercore’s sum-of-the-parts analysis values IBM at $290 a share, above its $275 price target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584620
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:32:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef8f6aba59bc2da9db99d6c7aa2f9ed4b819ff2b961e3899f4197cea8dce742d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: 5 High-Yield Dividend Stocks That Could Hold Up When the Market Falls
+<<<SUMMARY>>>
+Drugs, software, cereal, and electricity keep selling when the economy stalls. Five dividend payers pass a coverage test, but one carries a payout stretched thin and another faces a regulatory hearing that could change its income story.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588456
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=54c112568a649dc1b7bbb5c6e0120cf454383c7ddab967e58e3528896ab5ed4c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Is Most-Watched Stock International Business Machines Corporation (IBM) Worth Betting on Now?
+<<<SUMMARY>>>
+IBM (IBM) has received quite a bit of attention from Zacks.com users lately. Therefore, it is wise to be aware of the facts that can impact the stock's prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584477
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T12:21:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=973b21b857b61f5f4e291b1fc2d978ac15321ef98f35acda092c9a224131d7bd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: How Much Could You Lose In Rigetti Computing Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543048
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=248e738a2a54ec1d1ec1bde6983bf1280bc0ee08a0fb20eca10604b64ef923cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Quantinuum’s Revenue Triples. What It Really Wants Is Quantum for the Masses.
+<<<SUMMARY>>>
+Quantinuum’s revenue more than tripled to $9.1 million, ahead of the $8.1 million analysts had expected.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543166
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:09:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c7daa81f8a71ad4053eb3b8646a74a4577c7daf3a133535dcbdac8d435a35e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM (IBM) Stock Could Trade At A Discount After Quantum Computing News
+<<<SUMMARY>>>
+International Business Machines has delivered a 5 year share price that puts a lot of history into today’s US$254.32 quote, which raises a simple but hard question for investors: Is the current valuation of IBM really in step with the cash the business is expected to generate over time? Over the past 5 years, International Business Machines has returned 152.8%, which puts a spotlight on whether the cash flow profile has evolved enough to carry that kind of move. Fresh announcements around...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143548636
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T22:06:16Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=c8baf959ed6ac7e6a8a6c13e13dd7b2a5e7d98ce47ba0c504559205276777cab
+image_url: https://www.chartmill.com/images/uploads/CM_Aftermarket_Movers_Small_free_e077945a19.webp
+category: company
+tickers: IBM
+keywords: 
+headline: S&P 500 After-Hours Movers: ABNB and SNDK Gain, AXON and SOLV Fall
+<<<SUMMARY>>>
+S&P 500 after-hours movers after today's U.S. session included ABNB up 10.68%, SNDK up 3.17%, AXON down 12.14% and SOLV down 7.03%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143541950
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T21:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=801472162e7dcedadc6c566c6cc02905963077b972099b220d14d441e21198fe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IonQ Wants to Be the Nvidia of Quantum. Its Latest Numbers Back Up the Swagger.
+<<<SUMMARY>>>
+IonQ CEO Niccolo de Masi envisions the company as a cornerstone of U.S. dominance in quantum technology.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143540781
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:45:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ce5e8ed5babf47943a25938d8924d7b872571a3441ad493918d68ed1261ec411
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Nvidia Stock Tumbles. IBM and Supermicro AI Deal Delivers 56x Speed Boost
+<<<SUMMARY>>>
+Nvidia Teams Up With IBM and Supermicro to Tackle a Major AI Bottleneck
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143548627
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:40:58Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=bca9bab912b06b644012893fe79cb00049c0cb09be1ca4f07764b2db90628931
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: IBM
+keywords: 
+headline: Dow Biggest Decliners in the November 5, 2026 US Session
+<<<SUMMARY>>>
+Dow's biggest decliners on November 5, 2026 include NVIDIA, Goldman Sachs, Cisco, Honeywell, Caterpillar, Boeing, Sherwin-Williams, JPMorgan, IBM and Nike.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539393
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:54:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=313fe7481b519a02c0c2013ec41eb081136c29f7ec6ccf7dfcf414e81f615a82
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: D-Wave Sinks 8%, Rigetti Down 8%, IonQ Down 8% as Quantum Stocks Slide Again
+<<<SUMMARY>>>
+Key TakeawaysD-Wave Quantum shares fell 18% today alongside Rigetti Computing and IonQ, with no D-Wave news behind the drop. Quantum stocks are trading as high-beta bets on tech risk, and Wednesday’s chip selloff carried into Thursday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537957
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=451c6697f2ff519b811f893dd2a41491f032a31f8b0142184b35d07309a8e52e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Digital Transformation in BFSI - Global Strategic Business Report: Secure Your Share of US$220.2 Billion by 2030 as Accenture, AWS, IBM, Microsoft, and Oracle Accelerate AI-Led Disruption
+<<<SUMMARY>>>
+Cloud, AI, APIs and automation cut costs, strengthen compliance and accelerate personalized services, while fintech partnerships unlock new revenue opportunities.Dublin, Nov. 05, 2026 (GLOBE NEWSWIRE) -- "Digital Transformation in BFSI - Global Strategic Business Report" has been added to ResearchAndMarkets.com's offering. The global digital transformation in Banking, Financial Services and Insurance (BFSI) market was valued at US$88.2 billion in 2024 and is projected to reach US$220.2 billion b
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537879
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:49:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=adcb7d4c8cbe4d83eabc92dd5cfc81282332e7498e88a75e9a59d6179cd3387f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Digital Transformation in BPO - Global Strategic Business Report: Capitalize on a US$263.9 Billion Market by 2030 as Accenture, Capgemini, Cognizant, Genpact and IBM Accelerate AI-Led Disruption
+<<<SUMMARY>>>
+Boost BPO ROI with AI, automation, cloud and analytics to cut costs, improve accuracy, scale delivery and create higher-value, personalized services.Dublin, Nov. 05, 2026 (GLOBE NEWSWIRE) -- "Digital Transformation in BPO - Global Strategic Business Report" has been added to ResearchAndMarkets.com's offering. The global digital transformation in Business Process Outsourcing (BPO) market was valued at US$88.6 billion in 2024 and is projected to reach US$263.9 billion by 2030, expanding at a compo
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537880
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=961fc501ea816dfaee99e65a6f709f7bf7bbab7cd622e1e85dd302462d401f3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Algorhythm Appoints New CEO and Engineering Executive to Accelerate Renewable Power Development
+<<<SUMMARY>>>
+Former IBM DP Executive Greg Smith Named CEO; 40-Year Power Generation Veteran Kevin Tangen Appointed EVP of Engineering and Technology Fort Lauderdale, FL, Nov. 05, 2026 (GLOBE NEWSWIRE) -- Algorhythm Holdings, Inc. (the “Company”) (NASDAQ: RIME), a diversified holding company that owns and operates Azure Energy (“Azure”), a strategic advisor to renewable power plant developers, and SemiCab Holdings, an AI-enabled logistics and distribution company, today announced that its Board of Directors h
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537798
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T14:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9db566822ccb93ba18ba6cec2675cf7f7a8e31b5e654ce962c9207f508afbb25
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Supermicro Launches KV Cache Solution with IBM and NVIDIA Demonstrating Significant Inference Performance Benefits
+<<<SUMMARY>>>
+Supermicro, Inc. (NASDAQ: SMCI), an AI, Enterprise, Storage, and 5G/Edge Total IT Solution Provider featuring Data Center Building Block Solutions® (DCBBS), today announced a new KV cache storage solution with IBM and NVIDIA. The joint solution integrates Supermicro Petascale all-flash storage servers using AMD EPYC 9005 Series processors ("Turin"), IBM Storage Scale software, along with NVIDIA Dynamo inference framework software and Spectrum-X Ethernet networking.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533583
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:12:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=408c028942178277f6198705217d2b1799e556e0fa044fd3db5673cc91fd283f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Can D-Wave Quantum Stock Fall 50%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143537878
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=35f5d875330cb7bcd54c1246550b7825e77cd886d1f4c04ee6dbde49dcf4eee0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Oak Ridge National Laboratory, IBM, and AMD Launch New Co-Design Platform for Quantum Error Correction
+<<<SUMMARY>>>
+IBM (NYSE: IBM), the U.S. Department of Energy-funded Quantum Science Center (QSC) at Oak Ridge National Laboratory (ORNL), and AMD (NASDAQ: AMD) today unveiled a new co-design platform for quantum error correction, integrating quantum and high-performance computing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533587
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:06:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c34c309c7f80a885109033b08853360cd0a97a3194205aae2cf62bee455d0d58
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: How Long Will Strategy's Cash Last?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533590
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:06:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6cfcf982126a6de640944657c906be5d8295e43a03113e13c7a23c2421b87421
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Is Palantir Stock Ready For Slower Growth?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533625
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b49d716c6db08bd7d2e84de02e7e9466662a6a90f84f24c6871c65b82f4d0127
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: How Quantinuum Is Taking Aim at a Quantum Computing Bottleneck
+<<<SUMMARY>>>
+Quantinuum is striving to automate quantum error correction as part of its push toward fault-tolerant computing by 2029.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143529673
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T10:36:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d46b0f9bd58c85d6f5db81ec622a28cd0e9f6ce3b4310190f10b56b76b7c2693
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Can Dell Stock Hit $560?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143531589
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T10:09:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c014de4634d2280e9eb759b11113ef459e0e008d50a0169d96439ba03e279138
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Confluent launches Streamhouse architecture to support real-time AI
+<<<SUMMARY>>>
+The Streamhouse architecture aims to deliver up-to-date business data for enterprise AI, analytics, and decision-making.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533061
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T08:45:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=41e8a0cb6dd5b1b04d1ef011514d5f89f24d5416080ff462ca2ece24654e07d4
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1363546516/image_1363546516.jpg?io=getty-c-w1536
+category: company
+tickers: IBM
+keywords: 
+headline: Updating The Non-Correlateds: Boeing And IBM Trying To Become Relevant Again
+<<<SUMMARY>>>
+After an 18-year secular bull market, holding a stock that is down 62% from its early 2019 high of $446 should help assuage the potential of BA falling much further after its drop in 2019.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143520256
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T03:27:32Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=484bb8e21c56c0d84bb927c8c541a4679a370dc7d8910049577d54861797414b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/627966690/image_627966690.jpg?io=getty-c-w1536
+category: company
+tickers: IBM
+keywords: 
+headline: VIG Vs. DIVB: Two Dividend ETFs, One Pick For A Skeptical Market
+<<<SUMMARY>>>
+As capital rotates away from AI CapEx spending, VIG and DIVB ETFs can benefit without giving up all of their technology exposure. Read more on VIG and DIVB here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143501137
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T00:46:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6516e7d5fa21f453163b07db0ef78377f38052017fbf5ad973c6538a86461799
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Did IBM Just Tell the Truth About AI?
+<<<SUMMARY>>>
+Lam Research is a semiconductor machine business that’s breaking records, but its stock price has been cut nearly in half from highs in 2026. Is it a good stock to buy right now?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493681
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:11:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d717bcc9fb804d06eeedea96ae333878dbbc503cf97427b44f0e5150030ed628
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: International Business Machines (IBM) Puts Quantum Encryption To Work On Heron R2
+<<<SUMMARY>>>
+International Business Machines (NYSE:IBM) supported Quantum X Labs in running an advanced quantum encryption trial on its Quantum Heron r2 processor. The Quantum X Labs experiment used IBM hardware to test an information theoretic security protocol for quantum secured communications in commercial settings. The project positions IBM's quantum infrastructure as a practical platform for companies seeking quantum grade protection for sensitive data flows. This quantum encryption work on IBM's...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493682
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T19:01:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0aa059648c558e7f2b53c941dab4864de231b9301ec62e78d1de01ef033a2632
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Lockheed Will Pay $29.5 Million Over Claims It Discriminated Against White Employees
+<<<SUMMARY>>>
+A whistleblower lawsuit, a federal contractor certification, and a compensation program that allegedly used race to clear statistical flags pushed Lockheed Martin into a settlement that stretches far beyond a simple discrimination case.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493683
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T18:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=80d93a1391fa30a344983f6147d24cf31ea637fa2f94cdba6cc9ad6f0b6cb9a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Confluent Introduces Its Streamhouse Architecture to Power AI With Real-Time Business Context
+<<<SUMMARY>>>
+SAN FRANCISCO, November 04, 2026--Confluent, an IBM company, today announced new capabilities for building a Streamhouse, a new type of data architecture that keeps business context current for AI agents, applications and analytics as they make decisions and take action. With Lightning Tables now generally available on AWS, Confluent completes its five-pillar Data Streaming Platform, bringing capabilities to Stream, Connect, Process, Govern and now Query data together in a unified platform for b
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492510
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:27:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=df9509994e7a60edb988460e112a78321413fa90bd7e3ba2aeb8501f65c92573
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Does The Move In Hewlett Packard Enterprise Stock Change Anything?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490903
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=95ffa6fcc1be0bbf353dcb808f091ee6c821690c83be520c5978d7281e9a61bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Rimini Street Awarded CANUT Third-Party Maintenance Framework Agreement
+<<<SUMMARY>>>
+LAS VEGAS, November 04, 2026--Rimini Street, Inc. (Nasdaq: RMNI), the Software Support and Agentic AI ERP Company™ and the leading third-party support provider for Oracle, SAP and VMware software, today announced that it had been selected as the awardee of the third-party support service lots (TMA) by CANUT, the French public purchasing center specializing in digital technology and telecommunications.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490902
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff54269657e087f937a7db779fd8c32b1be9fb13eb159a3f7605da55ecac0a57
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Plummets 18.5% in the Past Year: Time to Reassess the Stock?
+<<<SUMMARY>>>
+IBM's 18.5% stock decline reflects AI disruption fears, margin pressures and stiff competition, even as hybrid cloud demand and rising earnings estimates offer hope.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143493207
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:45:19Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=cb98228031e8a6fea53fbb9cb40fa5c599d2bf35275db097a026963f72a51fc9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1438003347/image_1438003347.jpg?io=getty-c-w1536
+category: company
+tickers: IBM
+keywords: 
+headline: November Dogs Of The Dow: No Buys, Yet 5 Are Worth Watching
+<<<SUMMARY>>>
+Dow Dogs November update: see which stocks look safer on free cash flow, projected gains through 2027, and where yield investors may find entry points. Read the full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487540
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:59:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0ca85b54cfd86d2cb8abbbf14f81103039395a6a9ea59276d6352d1185a26023
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Should You Buy, Hold or Sell Quantum Stock Before Q2 Earnings Release?
+<<<SUMMARY>>>
+QMCO's Q2 earnings outlook reflects strong storage demand and rising revenues, but supply shortages and higher costs raise questions after a 115.5% stock rally.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143487282
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:53:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d6a8191aad8f5d7cfca16d0d5c4b30ea53b939a4d2305916567d7f44a03d4001
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Why Every IBM Investor Is Looking At This One Number
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143485683
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:06:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7245bc13b1e202fdd1d67edb9e2693e3fa81733b04913f0b69aa6bc20bd952a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Can Accenture Stock Jump 30%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143477266
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T09:04:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=df8e6d2e60c48166f9507a7f4902b0d27470abeab4e09626055df31057cd117a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Ross Perot Left IBM in 1962 and Started a Company With $1,000. In 1984, General Motors Bought It for $2.5 Billion
+<<<SUMMARY>>>
+IBM capped his commissions, so Ross Perot quit with a borrowed $1,000 and a pitch his former employer had already rejected. What he built from that rejection forced one of America's largest corporations to come to him decades later.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143471086
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T05:57:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c7cdcb0549dfd7693b4bdb33379b9dd11c94786c360dfea932c568d58b9c34fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Acuity Analytics appoints Jon O'Donnell as Chief Executive to lead next phase of AI-enabled expansion
+<<<SUMMARY>>>
+Acuity Analytics has appointed Jon O'Donnell as Chief Executive Officer, effective immediately, as the Permira-backed financial services specialist expands its AI, Data and Digital capabilities through acquisitions and organic investment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143462787
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T05:12:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f327a72b1f0e2a6b773f534765f2a3a9e77ac0f326a6e131dce90e5811b8408
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Should Earnings Beat Require Action From Procore Technologies (PCOR) Investors?
+<<<SUMMARY>>>
+Procore Technologies reported Q3 2026 sales of US$402.31 million with a net loss of US$4.59 million. For the first nine months of 2026 it recorded sales of US$1.14b and net income of US$3.24 million, alongside earnings per share moving from a loss a year earlier to a small profit. The rollout of Procore AI digital coworkers, the Procore AI Go voice app, and new collaborations such as the IBM Maximo integration signal that Procore Technologies is tying its construction platform more tightly...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143449096
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:43:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9fec38c438c95317c6f021897ca083eb70ec2fe1fa323932d08d3904424666d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Salesforce vs. IBM: Comparing Consistent Revenue Expansion Against Slow Sales Growth
+<<<SUMMARY>>>
+IBM's revenue towers over Salesforce's, but a closer look at quarterly patterns reveals which company offers more predictable growth for long-term investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448265
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2433efbf0a343b5a00c38fe25f36b7234ca3b787a91ff9e3c92adb04154ae4e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Mace Consult appoints new Chief Financial Officer
+<<<SUMMARY>>>
+Mace Consult has appointed Shaun Hughes as its Chief Financial Officer (CFO). Overseeing financial strategy and performance, Hughes will play a central role supporting the company's long-term growth setting new standards delivering the world's most impactful infrastructure and capital projects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143448264
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T18:11:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=080769e61f540a59659f133abd889b642cc74676d1c1e8abf2ba79157ad370e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: 3 AI Stocks With Up To 47% Earnings Growth
+<<<SUMMARY>>>
+AI spending is now big enough to move interest rates. Australia’s central bank just lifted its cash rate to 4.85%, explicitly citing AI related investment as one of the forces keeping inflation above target. When central banks pay attention, capital is already moving in size. This article walks through three large scale AI infrastructure stocks from leading US cloud and platform providers that sit at the center of that flow. The three stocks highlighted below are just a sample of the biggest...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447023
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=472cec4f2d3a370a9763055ffbe7b8da2a536536ecb6edf6d91123e4bc481385
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: LicenseFortress Raises Client Satisfaction Score to 88.6% as Client Base and Licensing Complexity Grow
+<<<SUMMARY>>>
+LOS ANGELES, November 03, 2026--LicenseFortress, an independent software asset management and licensing advisory firm, today announced a Net Promoter Score® (NPS) of 88.6% in its October 2026 client survey, independently conducted by ClearlyRated. The score increased 5.3 points from 2025 and exceeds the national IT services benchmark of 55% by 33.6 points, reflecting continued client confidence as the company helps a growing client base navigate complex licensing requirements across Oracle, Micr
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445548
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0238590c20efffb70974b72b5bcf273d18619191f146196c93b355294006405d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Next Generation Computing - Global Strategic Business Report 2026-2032: Capitalize on 19% CAGR, Featuring Intelligence on NVIDIA, IBM, Google, Microsoft, and AWS
+<<<SUMMARY>>>
+Dublin, Nov. 03, 2026 (GLOBE NEWSWIRE) -- "Next Generation Computing - Global Strategic Business Report 2026" has been added to ResearchAndMarkets.com's offering. The global Next Generation Computing Market was valued at US$147.6 billion in 2025 and is projected to reach US$497.3 billion by 2032, expanding at a compound annual growth rate (CAGR) of 19% during the forecast period. Growth is being supported by rising demand for high-performance computing, quantum computing, edge infrastructure, cl
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445572
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:48:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78f3cec0d963a420c1525148995654c5903065b5bdf0cf9156e36198d914720e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: How NetApp Stock Is Engineered To Make Money For You
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442731
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d34c63e69d20e596f210fbb5fa5c15a086c00746e893a4a775ae99d5c2b0de45
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Gix Internet: Quantum X Labs Announces Cyber Quantum Encryption Breakthrough in Demonstration with IBM Quantum Processor, Heron r2
+<<<SUMMARY>>>
+In its first run on a real quantum processor, Quantum X Labs’ Qatacomb scheme successfully recovered an encrypted image using a 156-qubit machine, while an adversary without the key gained no usable information in the demonstration, illustrating a privacy guarantee designed to hold regardless of an adversary’s computing power TEL AVIV, Israel, Nov. 03, 2026 (GLOBE NEWSWIRE) -- Gix Internet Ltd. (Nasdaq: GIXI; TASE: GIX) (“Gix” or the “Company”), a dual-listed technology company, today announced
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143442732
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4650d98fb89be0760afb0faa17ce2f858e0d383c4ae870f901cc8c10cf538171
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Should You Trade SIMO Stock With Caution Despite Q3 Earnings Beat?
+<<<SUMMARY>>>
+Silicon Motion's Q3 earnings beat and surging SSD demand signal strong growth, but stiff competition, high R&D costs and geopolitical risks warrant caution.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143438033
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T10:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=437b56a1eee1f08f612c9a5cbb251b321d9ef35acd0301d1050a6c5da73e1059
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IonQ vs. Rigetti Computing: Which Is the Better Quantum Computing Stock to Own for the Next 5 Years
+<<<SUMMARY>>>
+These pure plays are making important progress toward their goals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400229
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:12:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a05bc88d9f9f436baca79f6133bb33a913919733b3affea860bb032d832b025c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: How Investors Are Reacting To IBM (IBM) AI Product Launches
+<<<SUMMARY>>>
+International Business Machines renewed its role as the US Open's Official AI and Cloud Partner through 2031 and rolled out new AI agent, security and infrastructure tools alongside reported third quarter 2026 revenue of US$17,103 million and net income of US$2,190 million. IBM is being profiled in fast growing quantum computing and small language model markets while tightening control over AI agents through products like watsonx Orchestrate and HashiCorp Vault integrations, which ties...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400052
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:57:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ffe49e7c874a4eaa3fd5c3325c1b374c98cf01f9fcca5cdc55a3651633f5e7fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: International Business Machines vs. Synopsys: Which Technology Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+IBM trades at a lower valuation but carries heavier debt, while Synopsys boasts stronger margins and a cleaner balance sheet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398580
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86921b2107233ada3e84c3a51d72f3f5da2adbed9f9eaf8a3793469f5ecb9c9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Global Small Language Models (SLM) Market Size, Share, and Growth Forecast, 2026-2036 | Agentic and On-Device AI Fuel 23.5% CAGR to USD 25.59 Billion
+<<<SUMMARY>>>
+Boost AI ROI with hybrid routing, on-device deployment, and specialized small models that cut inference costs and unlock tooling and managed services opportunities.Dublin, Nov. 02, 2026 (GLOBE NEWSWIRE) -- "Small Language Models (SLM) Market Size, Share, and Industry Analysis - Global Forecast to 2036" has been added to ResearchAndMarkets.com's offering. The global small language models market was valued at USD 2.35 billion in 2025 and is estimated to reach USD 3.10 billion in 2026. Revenue is p
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398619
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=793e9751e8c72ed5e4d2c832ba6762ec4ce274df05cf60a68c4ec61c513f08ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Global Superconducting Quantum Computing Market Report 2026: Size, Trends, and Forecast | Capitalize on the $6.57 Billion Market by 2030 with Google, IBM, Intel, and Fujitsu
+<<<SUMMARY>>>
+Boost ROI via R&D, cloud-based QCaaS, scalable qubits, error correction, optimized controls and acquisitions that expand access and accelerate commercialization.Dublin, Nov. 02, 2026 (GLOBE NEWSWIRE) -- "Superconducting Quantum Computing Market Global Report 2026" has been added to ResearchAndMarkets.com's offering. The global superconducting quantum computing market is experiencing exponential growth as governments, technology companies, research institutions, and investors expand their commitm
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398789
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=34be0d7e2d4c31375bbd553800d89726640b84f960e8884651703bceb5a4b42b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Quantum Computing and Communications Market Global Report 2026 | Capitalize on 35.2% CAGR Through 2030 as IBM, Quantinuum, IonQ and PsiQuantum Scale Secure Quantum Networks
+<<<SUMMARY>>>
+IBM, Quantinuum, IonQ, PsiQuantum and Quantum Brilliance are profiled, covering their quantum computing and communications offerings.Dublin, Nov. 02, 2026 (GLOBE NEWSWIRE) -- "Quantum Computing And Communications Market Global Report 2026" has been added to ResearchAndMarkets.com's offering. Quantum Computing and Communications Market to Reach $6.93 Billion by 2030 The global quantum computing and communications market is experiencing exponential growth as governments, research institutions and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398790
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T13:38:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b0f709e153920595b66827861f77cdec2c21190b5bcdbfacbd8eeedb2eeb0513
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Quantum X Labs Tests Qatacomb Encryption on IBM Quantum Processor
+<<<SUMMARY>>>
+Quantum X Labs Inc. (NASDAQ:QXL) has completed its first demonstration of its Qatacomb quantum encryption technology on commercial quantum computing hardware, using IBM’s 156-qubit Heron r2 processor and the open-source Qiskit framework.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143395235
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3add1a642a0c6223f6283112a382cdaa48867a8604b655f7f9965bcbc1e21a83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Quantum X Labs Announces Cyber Quantum Encryption Breakthrough in Demonstration with IBM Quantum Processor, Heron r2
+<<<SUMMARY>>>
+In its first run on a real quantum processor, Quantum X Labs’ Qatacomb scheme successfully recovered an encrypted image using a 156-qubit machine, while an adversary without the key gained no usable information in the demonstration, illustrating a privacy guarantee designed to hold regardless of an adversary’s computing power TEL AVIV, Israel, Nov. 02, 2026 (GLOBE NEWSWIRE) -- Quantum X Labs Inc. (NASDAQ: QXL) (“Quantum X Labs” or the “Company”), a quantum technology company developing quantum c
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143395233
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=733937026c28efcc19df1963bd7d6d369f3ea64058e9b31a631fe35a9456b056
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Why AI going rogue is just the beginning: You.com CEO
+<<<SUMMARY>>>
+You.com and Recursive CEO Richard Socher sits with Yahoo Finance Executive Editor Brian Sozzi to break down the highly publicized Hugging Face security incident, and debunks the viral myth that an AI model "escaped" its sandbox.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143836913
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T10:37:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=43eae52b78370e01fdf65730ad7782a01ab0a6142125130865746cf3c005ccaa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Micron, Amazon, and IBM: My 3 Favorite Stocks to Buy and Hold Through 2030
+<<<SUMMARY>>>
+Why would a cheap chip stock, a massive AI spender, and a business that has paid dividends since 1916 make a good team?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807253
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T17:01:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c1b78376db3ef2b47c013a76c8e42c4827049f0c525af57b31490cbd86a75bf4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Arista Networks vs. IBM: Which Technology Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Arista's margins are running hot, but IBM's steady software pivot and far lower valuation make the 2027 choice closer than the price tags suggest.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806176
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T12:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ad8c4b1fa79400aca453c76e80fd8bfe270b0c040c2bb8c831e020913223f327
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Why a Rising TSMC Challenger Could Reshape the Chip Foundry Landscape
+<<<SUMMARY>>>
+Japan's state-backed Rapidus is promising cheaper 2-nanometer chips, but it still has to prove that it can manufacture them.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805916
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T09:12:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d45072aa0cf40883943d0b73068b0b077e69b83c4cba69be39c55228a24fa791
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Cadence Stock And 2 AI Software Names With Stronger Governance Profiles
+<<<SUMMARY>>>
+Jensen Huang’s abrupt exit from Nvidia throws a harsh spotlight on how much faith investors place in a single leader, and it ripples across every stock tied to the AI story. Leadership risk suddenly feels very real, which creates room for both overreactions and mispricing. This article walks through 3 stocks from our Governance-Resilient Large-Cap AI and Tech Leaders screener that appear better positioned in this moment, and explains why their governance profile might matter more than...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805572
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T23:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=208d5bb7cfade96a195d9211d10ad6d78dd0f1c6c7b9b0b90805373403545169
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM’s cybersecurity move raises new questions for investors
+<<<SUMMARY>>>
+IBM is buying a startup it has quietly backed for years. What it plans to do with it says a lot about where corporate risk is heading.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805266
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:53:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6a570608cc5d5bbffa31b2d0167a6e2288b61ef069ad400f37ee536375f3696
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Anthropic’s Best Financial Metric Is Also Its Biggest Risk
+<<<SUMMARY>>>
+Pricing power is one of its greatest strengths. Preserving it may be it’s toughest test.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804930
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:47:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=60e32da17490c3c81d5f9c63ecd983fed8cc6644527ebecea04efe065921e400
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Can Dell Stock Fall 40%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804049
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:21:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=33b90cc7f575b6d564a4016b2f1b14af2b39512bd6d4ccd5ae253684279881cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Anthropic’s Toughest Challenge: Maintaining Its Massive Margins
+<<<SUMMARY>>>
+Anthropic’s pricing power is one of its greatest strengths. Preserving it may be it’s toughest test.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803966
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:53:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3bf3abb4a1d22b5b3efbcf54aebddd8c1702effcca04077f4ec98577b5a93b95
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Grid Resilience Analytics Market Global Report 2026 | Capitalize on 19.6% CAGR Through 2030
+<<<SUMMARY>>>
+Siemens, Accenture, IBM, General Electric and Oracle are profiled, covering their grid resilience analytics offerings and competitive positioningDublin, Nov. 13, 2026 (GLOBE NEWSWIRE) -- "Grid Resilience Analytics Market Report 2026" has been added to ResearchAndMarkets.com's offering. The global grid resilience analytics market is experiencing rapid growth as utilities, governments, and energy providers seek advanced tools to strengthen electricity infrastructure against extreme weather, equipm
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804014
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7548730af0b8d9f6b9d5290d090323296ee1d9fd775197ddcd24cd2b94a3e328
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Global Managed Learning Services Market Report 2026 | Capitalize on AI Reskilling as Market Hits $14.65B by 2030; Accenture, Deloitte, IBM, Capgemini and NIIT Scale AI Learning
+<<<SUMMARY>>>
+Dublin, Nov. 13, 2026 (GLOBE NEWSWIRE) -- "Managed Learning Services Market Global Report 2026" has been added to ResearchAndMarkets.com's offering. The global managed learning services market is experiencing rapid growth as organizations seek scalable, cost-effective solutions for workforce training, employee development, and learning administration. The market is projected to increase from $9.05 billion in 2025 to $9.99 billion in 2026, representing a compound annual growth rate (CAGR) of 10.5
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804015
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:23:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=42ce58dcde4a113baf468a2294a38765f4e284750cc20bd8d625da4e71ea79e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Better Dividend Stock for Retirees: IBM vs. ADP
+<<<SUMMARY>>>
+Key TakeawaysADP raised its quarterly dividend 12% on Nov. 11, its 52nd consecutive year of increases, while IBM declared its regular $1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143786860
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T05:15:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=70ea0d5bca517a57ba0c7843531756bc3703f1e93b4c0f19651a8fe114d4177d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Microsoft (MSFT) Unveiled An Enterprise AI Agent Platform
+<<<SUMMARY>>>
+Microsoft (NasdaqGS:MSFT) and IBM launched the Imagine Enterprise AI agent platform for sector specific deployments in regulated industries. The Imagine Enterprise platform is designed to embed governance, security and compliance controls directly into enterprise AI agent workflows. A recent global Microsoft outage disrupted Outlook, Teams, Microsoft 365, Copilot and the Microsoft Store for more than 130,000 users. The Imagine Enterprise launch and the large scale outage highlight how...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773206
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:27:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=31167faa3b25e611f1a17c2fdce76ba761b0c031a10404c50b36b95344afed70
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Should You Buy HubSpot Stock For Its Cash?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772185
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T18:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=585a91da07234507658a6dc13a411299beff302671c79334e44430081cad9c0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Disrupting AI Infrastructure: Vedant Dwivedi Makes the Case for Sovereign AI
+<<<SUMMARY>>>
+As companies incorporate artificial intelligence (AI) into core operations, many are becoming dependent on vendors they may struggle to replace. A 2026 IBM Institute for Business Value study of 1,000 senior executives found that 71% say switching their primary AI vendor or model would be difficult, while 91% do not fully understand their dependencies across vendors, models and infrastructure. Such limitations can leave businesses unprepared when providers change their models or services.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772059
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:50:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bffac9a6aa20e7e695b2f958a79c5c3c24418b2b459110a57ac74d12fa571e0a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: What Happened With Rigetti Computing Stock Yesterday?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770880
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:13:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cfd53cb9fb6baba05d71831242756cb2af3de38dc7527a55e82f6636417247bd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Why Is IBM (IBM) Warning Enterprises About AI Sovereignty Gaps?
+<<<SUMMARY>>>
+IBM (NYSE:IBM) released a new Digital Sovereignty Index highlighting how enterprises handle control over data and AI systems. The index reports most organizations struggle to provide evidence of sovereign control over their technology despite confidence in their capabilities. Findings point to an "overconfidence gap" that could affect business continuity and resilience as AI adoption and regulation expand. IBM's Digital Sovereignty Index is important context, but investors should weigh it...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770822
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:10:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=99dca929f24d3f5fc9721044a270090bbe8d5b3cf005b248eb237dac2cde93d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: How Risky Is Hewlett Packard Enterprise Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770881
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:58:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d29f3e10821f98067651472388c5085330e0868e12e8bd1b829d87b8f0b385da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Better Dividend Stock for Retirees: IBM vs. Microchip
+<<<SUMMARY>>>
+Key TakeawaysMicrochip yields 3. 1% to IBM’s 2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770007
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:54:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cfd2336e05b848462ac4d6bd667aec4958adae8fa1d7eaa60b8969d39d76e4cc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Is Accenture's Next Big Thing Already Here?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769445
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba843467caf7aa075291710623f715423d94070c5ecce0207b6f0860bd082f10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Digital Grid Solutions Market Report 2026: Size, Share, Trends, and Forecast to 2030 | Accelerate AI, Cloud, and Renewable Integration with Siemens, Hitachi Energy, IBM, and Cisco
+<<<SUMMARY>>>
+Boost ROI with cloud-native platforms, AI analytics, predictive maintenance, renewable integration, real-time asset control and localized hardware production to reduce tariff exposure.Dublin, Nov. 12, 2026 (GLOBE NEWSWIRE) -- "Digital Grid Solutions Market Report 2026" has been added to ResearchAndMarkets.com's offering. The global digital grid solutions market is experiencing rapid growth as utilities and energy providers modernize electricity networks, integrate renewable power sources and imp
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769283
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:19:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4900d0a695547f272e8ed42548361c9c6cbde88fb180573bdc70f91f928a8b55
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Was The Run In Dell Stock Hiding In Plain Sight?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769305
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=782e0e54ed7b070ff9869abcf1389b2d9d41708d32c86c5721fc80246e65e904
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: AI in IT Operations Global Market Report 2026 | Capitalize on 22.3% CAGR with Microsoft, Cisco, IBM, and ServiceNow
+<<<SUMMARY>>>
+Boost ROI with pay-as-you-go cloud infrastructure, AI monitoring, predictive maintenance, automated incident response and intelligent resource optimizationDublin, Nov. 12, 2026 (GLOBE NEWSWIRE) -- "Artificial Intelligence (AI) In Information Technology (IT) Operations Market Global Report 2026" has been added to ResearchAndMarkets.com's offering. The global artificial intelligence (AI) in information technology (IT) operations market is experiencing exponential growth as organizations adopt inte
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769528
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c3a4861b3afc30dcccd831430339619eca9c1e5fe94bb4ba5ac02e70665049a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: WEKA Names Nic Morales as First Chief Customer Officer
+<<<SUMMARY>>>
+WEKA, the AI data and memory infrastructure company, today announced the appointment of technology veteran Nic Morales as its first Chief Customer Officer. Reporting to co-founder and CEO Liran Zvibel, Morales will lead WEKA's global customer success organization during rapid growth, as existing customers expand deployments and new customers adopt the platform to run production AI and agentic inference at scale.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766908
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30dcd2493af55def855400901593315ccddd2e8b2b63a112a108a76e21fc4f4b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: RemoteThreat Adds Three of Offensive Security's Most Respected Practitioners
+<<<SUMMARY>>>
+RemoteThreat, the AI-enabled offensive cyber operations company, today announced that Ads Dawson, Bobby Cooke, and Dave Cossa have joined the company as Founding AI Security Researcher, Head of Capability Research and Development, and Research Engineer, respectively. The three are among the most widely recognized practitioners in offensive security, with dozens of public tools and exploits, and research presented at Black Hat, DEF CON, OAIC, and RSA Conference. They join a team founded by Chris
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766909
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e94e39756f8c96eebe8c69167bef29f96d812c21f36208755549c30e4c829ef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: LTM Brings AI-Powered Quantum Error Mitigation to IBM Quantum Functions Catalog
+<<<SUMMARY>>>
+MUMBAI, India, November 12, 2026--LTM today announced that AI-QEM, its AI-powered Quantum Error Mitigation capability, is now available in the IBM Quantum Functions Catalog.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766910
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=97947412a8ab612bd41dfd6358cf83dcb8618c8f0afe40d5ad1daee4175d7029
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Can IonQ's Latest Carahsoft Deal Accelerate Federal Quantum Adoption?
+<<<SUMMARY>>>
+IONQ's Carahsoft partnership aims to expand federal access to quantum computing, networking, sensing and security as government commitment to quantum innovation grows.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801839
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T10:45:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=aeb4cd612c0b650649d35ad58a85d71ec3b5a0e6cc3637514d999a7762a3f927
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_2.jpg?width=2048&height=1536
+category: company
+tickers: IBM
+keywords: 
+headline: $100 Invested In IBM 5 Years Ago Would Be Worth This Much Today
+<<<SUMMARY>>>
+IBM (NYSE:IBM) has outperformed the market over the past 5 years by 5.97% on an annualized basis producing an average annual return of 15.92%. Currently, IBM has a market capitalization of $234.60 billion. 
+Buying $100
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143762669
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T09:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c19dcaf1b099f29827b2c61e7e59c66c35895e513201905d407def39220b9835
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: 2 Quantum Computing Stocks That Could Help Set You Up for Life
+<<<SUMMARY>>>
+IBM and Quantinuum are publicly arguing about how quantum computing will be won, and I think a lifetime investor should own both sides of that argument.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143763435
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T07:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=296cf1ccd95178876ec938d502bad1eb7574ae7b1596c997eee3c4ad5b0e68a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Announces Winner of Sports Tech Startup Prize Challenge at Web Summit Lisbon 2026
+<<<SUMMARY>>>
+IBM (NYSE: IBM) today announced LivXP as the winner of the IBM Sports Tech Startup Prize Challenge at Web Summit Lisbon, recognizing the company for its innovative use of agentic AI to transform how fans engage with their favorite teams, organizations, and leagues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143757410
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T07:14:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b684eabaa646d1cb4607047dbcddc420689b5b86a23c13875f9ff76909cfc0d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: AI stocks are sinking: Why is smart money buying IBM instead?
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740162
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T20:49:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=825afe4818a1adcb767552dc041f4b23716414a3d3407e5e949b66fb6aa3f5f0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Is Dell Stock Priced Right Against Its Peers?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740307
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T20:39:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7d5b515d293a1e181ab3b1f549bbdca48f1413cc5c09e03559dfa99330cb1190
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: What Will Decide Accenture Stock Over The Next Six Months?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739262
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=374a61ec746a9174aa409232ff8b9cdcf5e36d40c3dadc4a86b2b60914c21a1e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Unveils Next-Gen Quantum Chip. Useful Systems Are Years, Not Decades, Away.
+<<<SUMMARY>>>
+Packing 520 qubits and chip-to-chip couplers, IBM’s latest quantum processor targets utility-scale computing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767246
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:35:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fb3006007a53e91d443263f110987bccafef48a57873cb16b47d89855e4cd6b8
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/aggregated_options_3.jpg?width=2048&height=1536
+category: company
+tickers: IBM
+keywords: 
+headline: 10 Information Technology Stocks Whale Activity In Today’s Session
+<<<SUMMARY>>>
+This whale alert can help traders discover the next big trading opportunities.
+Whales are entities with large sums of money and we track their transactions here at Benzinga on our options activity scanner.
+Traders will
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734677
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c126e658ae581ec125085efc13c90a51fc252fbb65d1186b229f58b62f3a7d2e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Digital Sovereignty Index: In the AI Era, Control Is No Longer Enough. Enterprises Must Prove it.
+<<<SUMMARY>>>
+A new report from IBM (NYSE: IBM), Proof, Not Promises: The Digital Sovereignty Index, reveals an "overconfidence gap": leaders believe they can prove sovereign control of their technology, but the evidence often falls short of the Index's highest standards. As AI adoption accelerates, that gap is becoming a business risk.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769531
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a67fd3de520865f0d50f8b46d295df48e89bfc92507f10bb88fa7c97e772ab2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Quantum Nighthawk Demonstrates New Levels of Speed and Quality, with Plans to Scale Beyond 1,000 Qubits in 2027
+<<<SUMMARY>>>
+IBM (NYSE: IBM) today announced IBM Quantum Nighthawk r3, its next-generation processor, will be built to accurately execute 10,000 quantum operations across 520 qubits to tackle larger, more complex problems while maintaining the speed and quality demonstrated by the current generation Nighthawk available today.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143708238
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T02:24:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=638ff0858742b70ab222edf32725728ce5b74806ad11e16a33bab42a840e9854
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Quantum Computing’s Next Winners May Not Be Quantum Stocks
+<<<SUMMARY>>>
+Quantum processors keep getting better, yet the companies building them keep bleeding cash and shareholders. Behind the earnings misses, a quieter group of giants may be positioning to collect the profits no matter which qubit design prevails.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143700693
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T00:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d9a02a9e75929a4b9f1e639aaae6709f7727e64ff3c430d57a87858fe827c5c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Rigetti Computing CEO Says Focus on Quantum Milestones, Not Sales Numbers
+<<<SUMMARY>>>
+As Rigetti Computing posts just $1.4 million in quarterly revenue, CEO Subodh Kulkarni says focusing on sales growth is “premature.”
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694059
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T21:51:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2604f3053c9d1e4fceac555d14df96d35f077298ee8e96d5b8e2b7889a33440
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Is Accenture Stock Becoming A Different Bet?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692594
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:06:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fc4bd7a73ed4e0a8f4f2f47202a696104a152e1d281b6cb4e4939277a36e2deb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Microsoft and IBM Unite for a Giant AI Agent Push
+<<<SUMMARY>>>
+Corporate America's next technology spending wave is taking shape.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692745
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e918b7e3b86d935d4de6c76809aa12f5be30aa3ad62304fb81a6c774f3e7d5e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: D-Wave Stock Sinks as Earnings Lay Bare Quantum’s Commercial Growing Pains
+<<<SUMMARY>>>
+D-Wave Quantum tops revenue estimates for the third quarter, but a drop in system sales and widening losses send the stock tumbling,
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690434
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:59:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a1e0d86b51b97692adfef08cc5daf44a01bca453f0fbf8b828649ca97271f572
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Life Science Analytics - Global Strategic Business Report 2026: Capitalize on a US$6.6 Billion Revenue Surge to 2032 as IBM, Oracle, Accenture, SAS, and Cognizant Disrupt Data-Driven Healthcare
+<<<SUMMARY>>>
+Boost ROI with AI, machine learning and cloud analytics to accelerate drug development, personalize care, optimize trials and uncover new revenue opportunities.Dublin, Nov. 10, 2026 (GLOBE NEWSWIRE) -- "Life Science Analytics - Global Strategic Business Report 2026" has been added to ResearchAndMarkets.com's offering. The global life science analytics market was valued at US$11 billion in 2025 and is projected to reach US$17.6 billion by 2032, expanding at a compound annual growth rate (CAGR) of
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691668
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ef49d8581b00aeed11625623ba4fce379ca7ebe591954f0b8f05f8117d8364f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: D-Wave Earnings Lay Bare Quantum’s Commercial Growing Pains
+<<<SUMMARY>>>
+D-Wave Quantum tops revenue estimates for the third quarter, but a drop in system sales and widening losses send the stock tumbling,
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690233
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:13:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ead8c1c02de0768c1279597531009efd69d25837fbcab41834bf334b5aa7522c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Microsoft and IBM Team Up for Governed AI Agents
+<<<SUMMARY>>>
+IBM Microsoft move to bring order to chaotic enterprise AI agent rollouts
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690436
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c74bf41f9a4651eabffe77343c55ff47c51f6798e61ca99a287d6ce4aba8df84
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Siemens, Asset Management Software, Strengthens Executive Leadership to Advance Strategy and Customer Outcomes
+<<<SUMMARY>>>
+RALEIGH, N.C., November 10, 2026--Siemens, Asset Management Software, formerly Brightly Software, today announced Candi Robison as Chief Strategy Officer and Will Mathewson as Senior Vice President and Head of Services and Support. These appointments expand the company’s executive leadership team as it advances strategic priorities, scales global service delivery and helps organizations get more value from the assets their operations and communities depend on.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687200
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44f7938701329896b84cb3e3de36c087100db8ec53ceabece240a578d035b35f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: APME FX: AI, Oil and Chips Lead Its Investment Research
+<<<SUMMARY>>>
+LIMASSOL, Cyprus, Nov. 10, 2026 (GLOBE NEWSWIRE) -- Three years of APME FX analyses show artificial intelligence and energy dominate the investment firm’s research coverage Artificial intelligence, oil, and semiconductors are the industries APME FX analysts have covered most frequently. This follows from a review of all analytical outputs by APME FX between August 2023 and October 2026. More than half of the analyses (56%) focused on a specific industry or listed company. Another 34% dealt with
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687202
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=def141123efebf17789b832fd12f5d8d871ff3c9f651e9e939baa5c85ecde35a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Gix Internet: Quantum X Labs Expands AI-Powered Quantum Error Correction Program to Three IBM Quantum Processors
+<<<SUMMARY>>>
+Quantum X Labs has expanded its AI-powered quantum error correction program across three IBM quantum processors, building on its earlier work using datasets generated by Google quantum hardware and advancing its hardware-agnostic decoding technology TEL AVIV, Israel, Nov. 10, 2026 (GLOBE NEWSWIRE) -- Gix Internet Ltd. (Nasdaq: GIXI; TASE: GIX) (“Gix” or the “Company”), a dual-listed technology company, today announced that Quantum X Labs Inc. (Nasdaq: QXL) (“Quantum X Labs” or “QXL”), in which G
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687177
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:11:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f64b9c1780aeb80a78391add2ce7556e82ec62975b4756abb24eba94c2ac07f0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: What Is Driving Palantir Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687169
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1e3560dc9b4af311da0e58dc537d5827f9ceb9f156d100375875949b3e57b905
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Microsoft, IBM team up on AI agent platform
+<<<SUMMARY>>>
+Imagine Enterprise will let businesses tap into more than 6,000 pre-built AI agents to accomplish industry-specific processes, the companies said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687168
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dfd8eec44f166df4ee766ed7d1dcc3d51910d5422b6ae06e7072dfc6c32d3741
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM and Microsoft Announce a New AI Agent Platform Designed for Industry-Specific Transformation
+<<<SUMMARY>>>
+IBM (NYSE: IBM) and Microsoft (NASDAQ: MSFT) today announced Imagine Enterprise, an agentic platform designed to help enterprises build, run, and govern AI agents that help people execute industry-specific processes. IBM Consulting and Microsoft have combined their technologies and expertise with forward-deployed engineering support for qualifying engagements to help enterprises accelerate AI deployment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687350
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f81f1f3a2b68bcff0142cf7d8d4666e4bf24d808c9a89b1cd2c331809b6dd4cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: RemoteThreat and Hack The Box Partner to Advance Realistic Evaluation for Human-AI Cyber Operations
+<<<SUMMARY>>>
+RemoteThreat, the Offensive Cyber Operations platform, and Hack The Box (HTB), the leading cyber readiness platform for the human-AI cyber workforce, today announced a strategic partnership focused on advancing operational discipline, human-AI teaming, and the realistic evaluation of offensive AI and autonomous cyber capabilities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687347
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=21eb8bc86f55042ab3e540dd4cf5e46d27fa0086fddf029454a65deb4aa79cfe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Impact Accelerator Brings AI and Quantum to the Future of Learning and Work
+<<<SUMMARY>>>
+IBM (NYSE: IBM) today announced four organizations selected for the new education and workforce development cohort of the IBM Impact Accelerator, a pro bono social innovation program that provides grants of IBM technology and expertise to help nonprofit and government organizations to design, develop and scale technology-enabled solutions to challenges facing communities around the world.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143735856
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:20:29Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0767d4f3706bfb00d66d4bf46791adb6ef93d2ae0d8a7b6937f4843e71200a65
+image_url: 
+category: company
+tickers: IBM
+keywords: 
+headline: 'IBM To End Immigration Sponsorships For Roles In Largest Unit' - Bloomberg News
+<<<SUMMARY>>>
+- Bloomberg
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687856
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T09:09:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4dfba0d1550cf169b02e01b262589e842a907814cd90840fa55f1a1fde2f5002
+image_url: 
+category: company
+tickers: IBM
+keywords: 
+headline: IBM, Microsoft Roll Out Agentic Platform Imagine Enterprise
+<<<SUMMARY>>>
+IBM (NYSE: IBM) and Microsoft (NASDAQ:MSFT) today announced Imagine Enterprise, an agentic platform designed to help enterprises build, run, and govern AI agents that help people execute industry-specific processes. IBM
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659824
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T19:17:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=94497843c528b867a1e071fbacb3490507d32ef7ac73742db85bcabe76c3eacd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: $300,000 in Cisco, IBM and Microsoft Could Pay You $5,150 a Year
+<<<SUMMARY>>>
+The tech stocks your portfolio treats as growth bets also mail checks every quarter. One pays the least yet raises fastest, another has paid since 1916, and each carries a hidden risk that could squeeze that income.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658729
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:19:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=677d90376c406524776c478c0437f35fb58a1be47ade0e70cede62b6909d2c09
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: What Is IBM (IBM) Signaling With Its Quantum System Two Launch In Chicago?
+<<<SUMMARY>>>
+International Business Machines (NYSE:IBM) has deployed its Quantum System Two computer in Chicago at the Illinois Quantum and Microelectronics Park. The new installation connects IBM with Illinois research universities, state agencies, and corporate partners focused on quantum information science. State officials describe the project as a cornerstone for positioning Illinois as a global hub for quantum technology and microelectronics. The Quantum System Two launch in Chicago is important,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657546
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:02:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3db5ff10ba74072e9f7b9cb8b81c742bf792427abd452db3436e94dce4b985bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Update: Market Chatter: IBM Among Companies Sued by EU Over Delays in Border System Rollout
+<<<SUMMARY>>>
+(Updates with EU-Lisa response in the final paragraph.) IBM (IBM), Atos and Leonardo are facing a
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657547
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:50:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e19f7077a55ef69e7f764d83542f9b1dddcae08d45760c0251007ba035e681bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: EU sues IBM over airport border delays
+<<<SUMMARY>>>
+The EU is suing IBM and two major European tech firms over the troubled rollout of the bloc’s new smart border system.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143656049
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:02:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9f0a3bdde737357dc51b16c6526c70cc0cf85140def9eb8935d0235d5a092328
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Quantum X Labs Expands AI-Powered Quantum Error Correction Program to Three IBM Quantum Processors, Demonstrating Up to 20% Fewer Logical Decoding Failures
+<<<SUMMARY>>>
+The Company has expanded its AI-powered quantum error correction program across three IBM quantum processors, building on its earlier work using datasets generated by Google quantum hardware and advancing its hardware-agnostic decoding technology. TEL AVIV, Israel, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Quantum X Labs Inc. (NASDAQ: QXL) (“Quantum X Labs” or the “Company”), a quantum technology company developing quantum computing, quantum sensing, quantum error correction and quantum applications tec
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657549
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aaecc037170712affc143daed78bf98d7ce47db6439a1d39344003dab220747c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Apptio Expands Portfolio to Help Enterprises Connect AI Spending to Business Value
+<<<SUMMARY>>>
+Apptio, an IBM company (NYSE: IBM), today is announcing new connections for leading frontier AI systems to help enterprises track AI costs and usage alongside their broader technology spending. The connections accompany expanded AI cost-management capabilities across its portfolio to help organizations forecast spending, evaluate costs against business results and decide which AI investments to scale.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657532
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2bcbe3142dc43c11c16166ac86aead9e1f273657ec08e7607cdbcfdfce37a829
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Torq Appoints Enterprise Technology Visionary Peter Polizzi as President and COO to Lead Next Phase of Enterprise Hypergrowth
+<<<SUMMARY>>>
+NEW YORK, November 09, 2026--Torq, the established agentic security operations leader, today announced the appointment of Peter Polizzi as President and Chief Operating Officer (COO), adding one of enterprise technology’s most accomplished transformation and growth executives to its leadership team as the company accelerates its position in the AI SOC market. Polizzi brings 28 years of enterprise software leadership, including senior roles at HashiCorp, Splunk, and Palo Alto Networks, and was ke
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657372
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44f73d7b94e152abff5bd221bf594bbf1827ea62553280b18d4ce4b7da2cdb6a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Can IBM's Latest Quantum System Boost Illinois' Innovation Future?
+<<<SUMMARY>>>
+IBM has launched its first quantum computer in Illinois, advancing research partnerships, industry applications and plans to create 750 technology jobs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658548
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:51:58Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e9fec6a6e36ee6f13e7ff8d3033dc440ef3bb7af24c5ef8b29ea24eca0dc0850
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2279854517/image_2279854517.jpg?io=getty-c-og
+category: company
+tickers: IBM
+keywords: 
+headline: IBM: A Full Enterprise AI Stack, But Rivals Keep It A Hold
+<<<SUMMARY>>>
+Explore why IBM is positioned for enterprise AI growth, with Red Hat momentum, new security offerings, and valuation insightsâclick to read the analysis.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143655666
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T09:04:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3571a701f956787799ce489d6d9c7838ec7d0f5cab439a548dd8797d935c34a7
+image_url: 
+category: company
+tickers: IBM
+keywords: 
+headline: IBM Announces Offering Of Multiple Series Of Yen-Denominated Notes
+<<<SUMMARY>>>
+https://www.sec.gov/Archives/edgar/data/51143/000110465926124179/tm2628653-1_424b3.htm
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143655667
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T03:17:36Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=953abe6a5c5774adf498e07b0caa9de65b300579cddaf440c81b02e398189e85
+image_url: 
+category: company
+tickers: IBM
+keywords: 
+headline: 'EU Sues IBM and Partners Over Troubled Border System' - FT
+<<<SUMMARY>>>
+https://www.ft.com/content/eacea609-d571-4725-b795-a1afd5c3c301?syn-25a6b1a6=1
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143645498
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T01:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b5c043ce5af1a0433e3986f4a3a91fa99404c58a184ff064aae4bf182266cbfe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Spiking Joins IBM Z Day 2026 Asia Pacific Special Edition Track as a Friend of the IBM Z Community
+<<<SUMMARY>>>
+Singapore AI fintech company to speak live at the 2nd day of the free virtual conference on November 19, 2026, where it will unveil a new initiative with the IBM Z and LinuxONE ecosystemSingapore, Singapore--(Newsfile Corp. - November 8, 2026) - Spiking, a Singapore-based AI fintech platform that tracks institutional money flows and options trading, today announced its participation in the IBM Z Day 2026 Asia Pacific Special Edition (SE) Track, a free, one-day virtual conference taking place on.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840993
+symbol: IBM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T00:19:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9aabbd691b5ca47f9702e7a456943c01180587204c8e7fd4d51b4cb76eeb2f02
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: IBM
+keywords: 
+headline: Advanced Micro Devices (AMD) Deepens Quantum Push With New Research And Commercial Ties
+<<<SUMMARY>>>
+Advanced Micro Devices (NasdaqGS:AMD) expanded its quantum computing work through new and extended partnerships with PsiQuantum, IBM and Oak Ridge National Laboratory. The collaboration with PsiQuantum focuses on applying hybrid quantum and classical computing to commercial use cases that include drug discovery. AMD is working with IBM and Oak Ridge National Laboratory on a co-design approach aimed at practical quantum error correction for future fault-tolerant systems. AMD's deeper ties...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:987178debc102774a226d8f18817b9799c88e79992388c1425a15369ba99ad4f
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T09:50:00Z
+publisher: The Motley Fool
+author: Adria Cimino
+url: https://www.fool.com/investing/2026/11/03/ionq-vs-rigetti-computing-which-is-the-better-quan/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892837%2Fgettyimages-investor-smiles-while-looking-at-smartphone.jpg&w=1200&op=resize
+category: 
+tickers: IONQ, RGTI, RGTIW, GOOG, GOOGL, GOOGM, GOOGN, IBM
+keywords: quantum computing, trapped ion technology, superconducting technology, qubit fidelity, quantum error correction, revenue growth, stock comparison
+headline: IonQ vs. Rigetti Computing: Which Is the Better Quantum Computing Stock to Own for the Next 5 Years
+<<<SUMMARY>>>
+IonQ and Rigetti Computing are two pure-play quantum computing companies that have seen stock prices tumble over 30% this year. IonQ uses trapped ion technology and achieved record 99.99% two-qubit gate fidelity with 287% revenue growth, while Rigetti uses superconducting technology with faster gate speeds but lower accuracy. IonQ is recommended as the better buy for the next five years due to lower risk, stronger growth, and a solid $3 billion cash balance.
+<<<INSIGHTS>>>
+IONQ | positive | Company demonstrates strong fundamentals with 287% revenue growth, achieved world-record 99.99% two-qubit gate fidelity, unveiled 256-qubit computer with 2030 goal of 2 million qubits, maintains $3 billion cash balance, and is recommended as the better investment choice due to lower risk profile and impressive growth trajectory.
+RGTI | neutral | Company shows solid 185% revenue growth and technological strengths in speed (60-nanosecond gate speed) with vertical integration advantages, but faces significant risks including much lower revenue (~$5 billion vs IonQ's $80 million quarterly), over 90% revenue concentration from government contracts, and lower accuracy compared to competitors. Not recommended as the better choice for next five years.
+RGTIW | neutral | Company shows solid 185% revenue growth and technological strengths in speed (60-nanosecond gate speed) with vertical integration advantages, but faces significant risks including much lower revenue (~$5 billion vs IonQ's $80 million quarterly), over 90% revenue concentration from government contracts, and lower accuracy compared to competitors. Not recommended as the better choice for next five years.
+GOOG | neutral | Mentioned as a tech giant involved in the quantum computing race but no specific analysis or performance metrics provided in the article.
+GOOGL | neutral | Mentioned as a tech giant involved in the quantum computing race but no specific analysis or performance metrics provided in the article.
+GOOGM | neutral | Mentioned as a tech giant involved in the quantum computing race but no specific analysis or performance metrics provided in the article.
+GOOGN | neutral | Mentioned as a tech giant involved in the quantum computing race but no specific analysis or performance metrics provided in the article.
+IBM | neutral | Mentioned as a tech giant involved in the quantum computing race but no specific analysis or performance metrics provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:905b5a1bc8c7c76fea9f99528aaac5c0886ee5f5b4f553d0a769a191efb99f5b
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T11:24:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021400/should-you-trade-simo-stock-with-caution-despite-q3-earnings-beat?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3021400
+image_url: https://staticx-tuner.zacks.com/images/articles/main/47/576.jpg
+category: 
+tickers: SIMO, AMD, IBM
+keywords: Q3 2026 earnings, SSD controllers, fabless semiconductor, AI and cloud computing, automotive storage, geopolitical risk, Taiwan-China tensions
+headline: Should You Trade SIMO Stock With Caution Despite Q3 Earnings Beat?
+<<<SUMMARY>>>
+Silicon Motion Technology Corporation (SIMO) reported Q3 2026 earnings that surged 335% year-over-year with revenues jumping 131% to $560 million, driven by strong SSD controller demand and rapid growth in Ferri & Boot Drive solutions. The company benefits from a fabless business model and exposure to AI, cloud, and automotive markets. However, stiff competition, high R&D costs, and geopolitical risks warrant caution, resulting in a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+SIMO | neutral | While SIMO demonstrates strong financial performance with 335% earnings growth and 131% revenue increase, supported by robust demand in SSD controllers and emerging markets like AI and automotive, the company faces significant headwinds including intense competition from Micron, Microchip, Marvell and ON Semiconductor, high R&D costs impacting margins, and geopolitical risks from Taiwan-China tensions. The Zacks Rank #3 (Hold) rating reflects this balanced risk-reward profile.
+AMD | neutral | AMD is mentioned as a peer comparison, having gained 86.7% over the past year, underperforming SIMO's 103.6% gain. No specific analysis or sentiment is provided regarding AMD itself.
+IBM | neutral | IBM is mentioned as a peer comparison, having declined 16.1% over the past year. No specific analysis or sentiment is provided regarding IBM itself.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:44a261a6bb052a954cda28996b9214d04a17292a1c650db7ac555129db868562
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T14:31:00Z
+publisher: The Motley Fool
+author: Will Ebiefung
+url: https://www.fool.com/investing/2026/11/03/prediction-this-will-be-d-wave-quantums-stock-pric/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893215%2Fgettyimages-2156615862.jpg&w=1200&op=resize
+category: 
+tickers: QBTS, IBM, GOOG, GOOGL, GOOGM, GOOGN
+keywords: quantum computing, D-Wave Quantum, quantum annealing, stock valuation, commercialization, technology risk, bookings growth
+headline: Prediction: This Will Be D-Wave Quantum's Stock Price by the End of 2030
+<<<SUMMARY>>>
+D-Wave Quantum, a pure-play quantum computing company, is unlikely to gain value by 2030 despite strong booking growth. Trading at a P/S multiple of 307 versus the S&P 500's average of 3.7, the stock is highly speculative. While the company shows promise with its Advantage2 quantum annealing device and 1,120% booking growth, experts believe commercially viable quantum computers are years or decades away. The analyst predicts the stock will remain around $10.65 by end of 2030, advising optimistic investors to wait for a better entry point.
+<<<INSIGHTS>>>
+QBTS | negative | Despite strong booking growth (1,120%), the analyst predicts no stock value gain through 2030. The company trades at an extremely high P/S multiple of 307, faces significant cash burn, competes against larger rivals like IBM and Alphabet, and quantum computing remains years/decades from commercial viability. The analyst explicitly recommends waiting for a better entry point.
+IBM | neutral | IBM is mentioned as an industry leader with a more established position in quantum computing, targeting fault-tolerant devices by 2029. However, it is presented as a larger, more-established competitor to D-Wave rather than being the focus of analysis.
+GOOG | neutral | Alphabet is mentioned as a larger, more-established rival in quantum computing but receives no specific analysis or sentiment regarding its quantum efforts or stock performance.
+GOOGL | neutral | Alphabet is mentioned as a larger, more-established rival in quantum computing but receives no specific analysis or sentiment regarding its quantum efforts or stock performance.
+GOOGM | neutral | Alphabet is mentioned as a larger, more-established rival in quantum computing but receives no specific analysis or sentiment regarding its quantum efforts or stock performance.
+GOOGN | neutral | Alphabet is mentioned as a larger, more-established rival in quantum computing but receives no specific analysis or sentiment regarding its quantum efforts or stock performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d48bf8eb27a57b7b041f3df223e34e7d67f0f0027e67b1ba0a66ca4a837b1831
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T11:59:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3022657/should-you-buy-hold-or-sell-quantum-stock-before-q2-earnings-release?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3022657
+image_url: https://staticx-tuner.zacks.com/images/articles/main/46/91388.jpg
+category: 
+tickers: QMCO, DELL, NTAP, IBM
+keywords: Q2 earnings, ActiveScale, tape storage, supply chain constraints, enterprise demand, revenue growth, gross margins
+headline: Should You Buy, Hold or Sell Quantum Stock Before Q2 Earnings Release?
+<<<SUMMARY>>>
+Quantum Corporation (QMCO) is expected to report Q2 fiscal 2027 earnings on November 9, with consensus estimates of $82 million in revenue (up 31% YoY) and 13 cents EPS. Strong demand for ActiveScale and tape storage solutions, along with large enterprise deals, could drive performance, but supply chain constraints on tape drives and disk drives remain significant headwinds. The stock has surged 115.5% over the past year. Existing investors should hold while prospective investors should wait for a better entry point.
+<<<INSIGHTS>>>
+QMCO | neutral | Mixed outlook with strong revenue growth expectations (31% YoY) and solid enterprise demand for ActiveScale and tape storage solutions, but significant headwinds from persistent supply chain constraints on tape and disk drives that limit fulfillment capabilities. Higher operating expenses and component pricing volatility also pose profitability risks. The Zacks Rank #3 (Hold) rating and recommendation to hold for existing investors while waiting for better entry points reflects this balanced risk-reward profile.
+DELL | positive | Mentioned as a peer comparison with strong stock performance, gaining 177.3% over the past year, outperforming both QMCO and the broader market.
+NTAP | positive | Mentioned as a peer comparison with solid stock performance, gaining 64.9% over the past year, though underperforming DELL but still outperforming QMCO.
+IBM | negative | Mentioned as a peer comparison with negative stock performance, declining 18.5% over the past year.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f3185fd1e2558ab794c1d2ac505850ed28da15269ac559e5f9ad0bf74415de11
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T13:46:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022991/ibm-plummets-18-5-in-the-past-year-time-to-reassess-the-stock?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3022991
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3a/521.jpg
+category: 
+tickers: IBM, MSFT, AMZN
+keywords: IBM, artificial intelligence, legacy systems, COBOL, hybrid cloud, mainframe, Claude Code, watsonx, HashiCorp, stock performance
+headline: IBM Plummets 18.5% in the Past Year: Time to Reassess the Stock?
+<<<SUMMARY>>>
+IBM shares have declined 18.5% over the past year, significantly underperforming the industry's 81.3% growth. The company faces threats from Anthropic's Claude Code tool, which could automate legacy COBOL modernization and erode IBM's consulting margins. However, IBM's hybrid cloud solutions, HashiCorp acquisition, and watsonx AI platform offer growth opportunities. With improving earnings estimates but persistent profitability challenges, IBM holds a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+IBM | neutral | IBM faces significant headwinds from AI-driven threats to its legacy COBOL business and margin compression from cloud competition, but is supported by growing demand for hybrid cloud solutions and its watsonx AI platform. Positive earnings estimate revisions suggest cautious optimism, warranting a neutral Hold rating.
+MSFT | positive | Microsoft has outperformed IBM with a 2.2% gain over the past year and benefits from cloud competition, positioning it favorably in the hybrid cloud and AI markets where IBM is struggling.
+AMZN | positive | Amazon Web Services competes with IBM in cloud infrastructure, contributing to pricing pressures on IBM's margins while benefiting from the shift toward cloud-native workloads and multi-cloud strategies.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:470dd590240f40a1e6682a061036e9c21970f334259e2c5b333bdcf20ebbbe5b
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T00:26:39Z
+publisher: The Motley Fool
+author: Motley Fool Staff
+url: https://www.fool.com/investing/2026/11/04/did-ibm-just-tell-the-truth-about-ai/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F1b1433b366b8f5250add14cb0c298a70fd445ee0-1280x720.jpg&w=1200&op=resize
+category: 
+tickers: LRCX, IBM, ASML, AMAT, NVDA
+keywords: AI spending slowdown, semiconductor equipment, enterprise AI ROI concerns, advanced packaging, geopolitical supply chain disruption, helium shortage, agricultural cost inflation
+headline: Did IBM Just Tell the Truth About AI?
+<<<SUMMARY>>>
+Lam Research reported strong quarterly results with 22% revenue growth and record services revenue, but stock fell 9% amid cyclicality concerns. IBM beat expectations with 5% revenue growth and strong cash flow, but CEO comments suggest enterprise customers are increasingly focused on AI ROI, indicating potential slowdown in spending. Geopolitical tensions affecting helium and fertilizer supplies add economic headwinds. Analysts debate whether semiconductor oversupply could benefit enterprise AI consulting.
+<<<INSIGHTS>>>
+LRCX | neutral | Strong operational results (22% revenue growth, 40% operating margin, record services revenue) offset by stock decline due to cyclicality concerns, China business weakness, and supply constraints. Valuation at 22x forward earnings is reasonable for 75% earnings growth, but upside visibility is limited.
+IBM | positive | Beat revenue expectations with 5% growth and strong $7.8B free cash flow. CEO's candid comments about customer ROI focus suggest honest assessment of market conditions. Software business rebounded strongly. Trading at 21x earnings with hidden value, though Q4 guidance concerns suggest lumpy revenue.
+ASML | neutral | Mentioned as competitor to Lam Research in semiconductor equipment space. Benefits from advanced packaging demand but faces same cyclicality and geopolitical risks as peers.
+AMAT | neutral | Semiconductor equipment competitor to Lam Research. Benefits from equipment spending growth (150B to 200B+) but faces cyclicality concerns and supply chain constraints.
+NVDA | neutral | Mentioned as hyperscaler with unlimited resources and pricing power. CEO claims AGI arrived, but IBM's comments suggest enterprise customers questioning AI ROI, potentially limiting demand growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:64c165e50d342c3d9bf5fe3453f05f61a2b4e6e09e448fe6f092e3f2fe34db27
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T13:00:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3025333/is-most-watched-stock-international-business-machines-corporation-ibm-worth-betting-on-now?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks-3025333
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default90.jpg
+category: 
+tickers: IBM
+keywords: IBM, earnings estimates, revenue growth, valuation, Zacks Rank, stock rating, technology sector
+headline: Is Most-Watched Stock International Business Machines Corporation (IBM) Worth Betting on Now?
+<<<SUMMARY>>>
+IBM has outperformed the broader market over the past month (+9.1% vs S&P 500's -5.4%), though it lags its industry peers significantly (-34.2%). The company shows modest earnings growth expectations (+7.1% for current fiscal year) with stable revenue projections (+4.4%). However, IBM carries a Zacks Rank #3 (Hold) rating and trades at a premium valuation (Grade D), suggesting it may perform in line with the broader market in the near term.
+<<<INSIGHTS>>>
+IBM | neutral | IBM received a Zacks Rank #3 (Hold) rating, indicating expected market-level performance. While the company shows positive earnings growth (+7.1% current year) and beat consensus estimates recently, it trades at a premium valuation (Grade D) relative to peers. Recent stock performance (+9.1% in one month) is offset by industry underperformance (-34.2%), and modest estimate revisions suggest limited near-term upside catalysts.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:538163edcf1fbadce841269a31b9c1fdf5eb53840b0ec9f9d61610d28047ec97
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T15:59:00Z
+publisher: GlobeNewswire Inc.
+author: Researchandmarkets.Com
+url: https://www.globenewswire.com/news-release/2026/11/06/3397721/28124/en/medical-imaging-workstations-market-size-share-trends-and-forecast-analysis-global-forecast-to-2036-ai-cloud-and-enterprise-imaging-drive-7-3-cagr-and-usd-12-55-billion-opportunity.html
+image_url: https://ml.globenewswire.com/Resource/Download/908fb457-7f8e-4a08-9081-5565e3dfb3d7
+category: 
+tickers: GEHC, PHG, FUJIY, SCTAY, IBM, SMMNY
+keywords: medical imaging workstations, diagnostic imaging, artificial intelligence, cloud computing, enterprise imaging, PACS, CT/MRI, healthcare technology, market forecast 2036
+headline: Medical Imaging Workstations Market Size, Share, Trends, and Forecast Analysis - Global Forecast to 2036 | AI, Cloud, and Enterprise Imaging Drive 7.3% CAGR and USD 12.55 Billion Opportunity
+<<<SUMMARY>>>
+The global medical imaging workstations market is estimated at USD 6.20 billion in 2026 and projected to reach USD 12.55 billion by 2036, expanding at a CAGR of 7.3%. Growth is driven by rising chronic disease prevalence, digital imaging infrastructure investments, AI integration, and enterprise imaging adoption. Key challenges include high costs, cybersecurity risks, and radiologist shortages, while opportunities exist in cloud-based solutions and emerging markets.
+<<<INSIGHTS>>>
+GEHC | positive | Listed as a leading participant in the medical imaging workstations market with strong positioning in AI-enabled healthcare solutions and enterprise imaging platforms, benefiting from the projected 7.3% CAGR market growth.
+PHG | positive | Recognized as a leading participant with competitive positioning in medical imaging workstations, benefiting from growing demand for advanced visualization and enterprise imaging solutions.
+FUJIY | positive | Included as a key market player positioned to benefit from healthcare infrastructure development and increasing diagnostic imaging investments globally.
+SCTAY | positive | Listed among leading participants with competitive positioning in enterprise imaging and PACS solutions, benefiting from the shift toward cloud-based and integrated diagnostic workflows.
+IBM | positive | Listed as a key player in the medical imaging workstations market through its Merge Healthcare subsidiary, benefiting from enterprise imaging and healthcare IT integration opportunities.
+SMMNY | positive | Identified as a key market leader leveraging cloud computing, advanced visualization, and AI technologies to enhance clinical performance and strengthen market position in the expanding diagnostic imaging sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cba68696478dfee50f98c638b4c1e52a01449eee6c4a7af7c5c518aa496a081b
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T10:05:00Z
+publisher: The Motley Fool
+author: Adria Cimino
+url: https://www.fool.com/investing/2026/11/08/not-ionq-not-d-wave-this-boring-blue-chip-stock-is/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892592%2Fgettyimages-2211412680-1201x633-65d4be6-1.jpg&w=1200&op=resize
+category: 
+tickers: IBM, IONQ, QBTS
+keywords: quantum computing, IBM, quantum advantage, qubits, quantum processors, technology investment, revenue growth
+headline: Not IonQ. Not D-Wave. This "Boring" Blue Chip Stock Is Quietly Leading in Quantum Computing
+<<<SUMMARY>>>
+IBM is positioned as a quiet leader in quantum computing despite being a traditional blue-chip company. With a $10 billion commitment to its quantum roadmap, the world's largest fleet of quantum computers (90+ deployed), and its latest Nighthawk r2 processor offering 25x throughput improvements, IBM is expected to see measurable revenue impact by 2028-2029. CEO Arvind Krishna projects quantum computing could represent a trillion-dollar opportunity by the end of the 2030s.
+<<<INSIGHTS>>>
+IBM | positive | IBM is highlighted as the leading player in quantum computing with significant competitive advantages including the largest fleet of quantum computers, substantial $10 billion investment commitment, advanced processor technology (Nighthawk r2), and CEO guidance indicating measurable revenue impact by 2028-2029 with trillion-dollar potential by 2030s.
+IONQ | neutral | IonQ is mentioned as a pure-play quantum computing innovator that has attracted investor attention, but the article suggests that specialized companies like IonQ may not be the biggest winners compared to established tech giants like IBM.
+QBTS | neutral | D-Wave is referenced as a pure-play quantum computing company with investor interest, but similarly positioned as potentially not being among the principal winners compared to IBM's more comprehensive approach and resources.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ef7700902dfccdebfe0524d44616cdaf675f938a45e9345ccd30a9190d29f776
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T14:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027283/qmco-q2-earnings-call-centers-on-tape-demand-and-supply-limits?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3027283
+image_url: https://staticx-tuner.zacks.com/images/articles/main/cb/577.jpg
+category: 
+tickers: QMCO, IBM, FUJIY
+keywords: tape storage, hyperscale demand, supply chain constraints, data center infrastructure, cold storage, component availability, gross margin expansion
+headline: QMCO Q2 Earnings Call Centers on Tape Demand and Supply Limits
+<<<SUMMARY>>>
+Quantum Corporation (QMCO) reported hyperscale tape demand surged 2.6x year-over-year with a record ~$100M backlog, driven by AI-related data growth and infrastructure cost control needs. However, component availability remains a bottleneck limiting revenue upside. Q3 guidance of $91M (+22% YoY) depends on tape drive supply recovery, with IBM doubling production and Fujifilm expanding capacity. The company maintains a 43% gross margin target over 18 months while managing divergent customer trends across mid-market, enterprise, and hyperscale segments.
+<<<INSIGHTS>>>
+QMCO | positive | Strong demand fundamentals with 2.6x hyperscale growth, record backlog approaching $100M, Q2 revenue beat (42.9% YoY growth), and major customer wins (Scalar i7 RAPTOR). However, sentiment is tempered by supply chain uncertainties and component availability risks that could limit near-term revenue realization.
+IBM | neutral | Mentioned as a tape drive supplier planning to double production year-over-year, but timing of supply increases remains uncertain. No direct financial impact disclosed, serving as a supporting supplier to QMCO's growth.
+FUJIY | positive | Investing to quintuple tape media production capacity, expected to benefit QMCO's supply chain and revenue growth starting next year or so.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9ee82e5e5e352efcf72de894f513fd2cd903e31c8c827632fdd6ea0b1f2fca41
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T04:05:33Z
+publisher: The Motley Fool
+author: Joe Tenebruso
+url: https://www.fool.com/investing/2026/11/11/why-coreweave-stock-skyrocketed-today/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Feeba1127acb656b78dc0fc6b01650d1a862af2cb-3840x2160.jpg&w=1200&op=resize
+category: 
+tickers: CRWV, NVDA, MSFT, IBM
+keywords: CoreWeave, AI infrastructure, neocloud, Q3 earnings, financing strategy, revenue growth, customer contracts
+headline: Why CoreWeave Stock Skyrocketed Today
+<<<SUMMARY>>>
+CoreWeave stock surged nearly 25% after reporting strong Q3 2026 results with 168% year-over-year revenue growth to $3.66 billion and adjusted operating margins reaching double digits. The company announced a new financing strategy using delayed draw term loans backed by customer contracts to reduce expansion costs, and raised full-year 2026 revenue guidance to $13.3 billion.
+<<<INSIGHTS>>>
+CRWV | positive | Strong Q3 results with 168% YoY revenue growth, double-digit adjusted operating margins achieved ahead of schedule, raised full-year guidance, and new cost-effective financing strategy to support continued expansion. Stock rallied 24.71%.
+NVDA | positive | CoreWeave's strong growth and expansion plans depend on acquiring advanced AI infrastructure from Nvidia, indicating sustained demand for Nvidia's products.
+MSFT | neutral | Mentioned as a customer of CoreWeave's AI infrastructure services, but no specific impact or sentiment indicators provided in the article.
+IBM | neutral | Mentioned as a customer of CoreWeave's AI infrastructure services, but no specific impact or sentiment indicators provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e50da033ce3789ca3905e9b99bf934ffff01c7cd39baba6011e48948360a912d
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T09:14:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/12/quantum-computing-stocks-help-set-up-ibm-qnt/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892866%2Fgettyimages-1361008761-1401x800-b458c65.jpg&w=1200&op=resize
+category: 
+tickers: IBM, QNT, AMD, GM, IONQ
+keywords: quantum computing, logical qubits, error correction, quantum hardware, Department of Energy competition, trapped-ion machines, quantum software platforms
+headline: 2 Quantum Computing Stocks That Could Help Set You Up for Life
+<<<SUMMARY>>>
+IBM and Quantinuum represent two competing approaches to winning the quantum computing race. IBM prioritizes speed with its Nighthawk chip and offers dividend income, while Quantinuum focuses on accuracy with its Helios system. A Department of Energy competition offering $100 million to achieve 100 logical qubits by 2028 provides a public benchmark for both strategies. The author recommends owning both stocks as a long-term investment, with IBM as the core holding and Quantinuum as a smaller, higher-risk position.
+<<<INSIGHTS>>>
+IBM | positive | IBM is positioned as the lower-stress, core holding with strong fundamentals: $7.8B free cash flow, 2.7% dividend yield, 100,000 circuits per second on Nighthawk chip, 16 enterprise quantum engagements, and a partnership with AMD for error-correction platform launching in 2029.
+QNT | positive | Quantinuum demonstrates technical leadership with 99.9995% logical fidelity (100x better than competitors), raised 2026 revenue outlook, and has a clear roadmap with Sol machine targeting 100 logical qubits in late 2027. However, sentiment is tempered by high valuation risk and execution dependency.
+AMD | neutral | AMD is mentioned as a partner with IBM on the error-correction platform and supercomputer integration, but plays a supporting role rather than being a primary quantum computing player.
+GM | neutral | GM is mentioned as one of IBM's 16 enterprise quantum engagements but receives no detailed analysis or investment recommendation.
+IONQ | negative | IonQ is explicitly rejected as an investment choice because nearly half of its Q3 sales came from its SkyWater chip foundry acquisition rather than quantum computing operations, making it less pure-play quantum exposure.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9251df0cbeb84b4c45865b52388e81c5f2c9b79b7f581f66df98b59e671773c4
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T11:11:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3028334/can-ionq-s-latest-carahsoft-deal-accelerate-federal-quantum-adoption?cid=CS-ZC-FT-analyst_blog|quick_take-3028334
+image_url: https://staticx-tuner.zacks.com/images/articles/main/47/576.jpg
+category: 
+tickers: IONQ, QBTS, IBM, MSFT
+keywords: quantum computing, federal procurement, Carahsoft partnership, DARPA benchmarking, quantum technology, government agencies
+headline: Can IonQ's Latest Carahsoft Deal Accelerate Federal Quantum Adoption?
+<<<SUMMARY>>>
+IonQ has partnered with Carahsoft Technology Corp. to expand quantum computing, networking, sensing and security adoption across Federal agencies. The deal streamlines procurement through reseller networks and aligns with Executive Order 14413 on quantum innovation. IonQ has also advanced to DARPA's final benchmarking stage and delivered a quantum network with the Air Force Research Laboratory.
+<<<INSIGHTS>>>
+IONQ | neutral | While the Carahsoft partnership and DARPA advancement are positive developments, the article notes IONQ stock has declined 38.4% over six months, trades at a high P/S ratio of 19.70X vs. 3.38X industry average, and carries a Zacks Rank #5 (Strong Sell) rating, offsetting the positive business news.
+QBTS | positive | D-Wave announced performance enhancements to its Stride hybrid solver with significant speed improvements (15 seconds vs. 120 seconds) and launched new training courses to accelerate adoption of quantum optimization solutions.
+IBM | positive | IBM collaborated with Microsoft to launch Imagine Enterprise, an agentic AI platform designed to help enterprises build and govern AI agents with industry-specific frameworks and forward-deployed engineering support.
+MSFT | positive | Microsoft collaborated with IBM on the Imagine Enterprise platform, combining technologies and expertise to help enterprises accelerate AI deployment across multiple industries.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9b3f339c35bf02e51916d7b461035c28e81ac2d51cc6789fd66e1cde3cbb3def
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T11:15:00Z
+publisher: The Motley Fool
+author: Will Healy
+url: https://www.fool.com/investing/2026/11/12/where-will-ionq-stock-be-in-5-years/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892857%2Fionq.png&w=1200&op=resize
+category: 
+tickers: IONQ, MSFT, AMZN, GOOG, GOOGL, GOOGM, GOOGN, NVDA, IBM
+keywords: quantum computing, IonQ, trapped-ion architecture, revenue growth, valuation, partnerships, profitability, capital markets
+headline: Where Will IonQ Stock Be in 5 Years?
+<<<SUMMARY>>>
+IonQ shows promise in the quantum computing industry with strong partnerships and trapped-ion technology advantages, but faces profitability challenges and high valuation concerns. The company's rapid revenue growth and falling price-to-sales ratio could drive stock appreciation over five years, though significant uncertainty and likely future capital raises present risks for investors.
+<<<INSIGHTS>>>
+IONQ | positive | Strong competitive advantages through trapped-ion technology, key partnerships with Microsoft, Amazon, Google, and Nvidia, and exceptional revenue growth (293% forecasted). Falling price-to-sales ratio and potential for low single-digit sales multiples by 2031 suggest upside potential despite current profitability challenges.
+MSFT | positive | Strategic partnership with IonQ through Azure integration, positioning Microsoft as a key player in quantum computing infrastructure and cloud services.
+AMZN | positive | AWS partnership with IonQ for quantum-as-a-service integration, expanding Amazon's quantum computing offerings and cloud capabilities.
+GOOG | positive | Google Cloud partnership with IonQ and parent company's quantum computing initiatives position Alphabet as a major player in the emerging quantum industry.
+GOOGL | positive | Google Cloud partnership with IonQ and parent company's quantum computing initiatives position Alphabet as a major player in the emerging quantum industry.
+GOOGM | positive | Google Cloud partnership with IonQ and parent company's quantum computing initiatives position Alphabet as a major player in the emerging quantum industry.
+GOOGN | positive | Google Cloud partnership with IonQ and parent company's quantum computing initiatives position Alphabet as a major player in the emerging quantum industry.
+NVDA | positive | Critical partnership with IonQ through Superion 256 integration with Nvidia's supercomputing infrastructure and CUDA-Q software, demonstrating Nvidia's expanding role in quantum computing ecosystems.
+IBM | neutral | Mentioned as a larger competitor in quantum computing but without specific positive or negative developments highlighted in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c0d00237b8103dce225fa4e6feb5d8374d225d125f20d55c44293f76e1d182ac
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T11:44:00Z
+publisher: The Motley Fool
+author: Patrick Sanders
+url: https://www.fool.com/investing/2026/11/14/why-a-rising-tsmc-challenger-could-reshape-the-chi/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F879117%2Ftaiwan-semiconductor-tsmc-building-with-tsmc-logo-in-front_tsmc-1-1.jpg&w=1200&op=resize
+category: 
+tickers: TSM, INTC, IBM
+keywords: chip foundry, 2-nanometer chips, semiconductor manufacturing, TSMC competition, Rapidus, advanced chipmaking
+headline: Why a Rising TSMC Challenger Could Reshape the Chip Foundry Landscape
+<<<SUMMARY>>>
+Japan's state-backed Rapidus aims to challenge TSMC's dominance in advanced chipmaking by promising cheaper 2-nanometer chips at $21,000 per wafer versus TSMC's $30,000. However, Rapidus faces significant technical hurdles, hasn't achieved commercial production yet, and is reportedly struggling to meet milestones. TSMC maintains a commanding 73% market share and is already generating revenue from 2nm production, making it unlikely that Rapidus will pose a near-term threat to TSMC's leadership.
+<<<INSIGHTS>>>
+TSM | positive | TSMC maintains dominant market position with 73% foundry market share, strong Q3 revenue of $46.7B (up 41.2% YoY), healthy 66.4% gross margins, and is already generating meaningful revenue from 2nm production. The article suggests TSMC will continue to strengthen its lead while competitors struggle to catch up.
+INTC | negative | Mentioned as another company learning that starting a foundry business is 'hard and expensive,' implying Intel's foundry efforts are struggling and unlikely to succeed against established competitors like TSMC.
+IBM | neutral | IBM is mentioned as a partner working with Rapidus on 2-nanometer chip development, but the article provides no specific commentary on IBM's role or performance in this collaboration.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4c45ae6f7c24861103ed78fcdb343725e4e1181c45bf29a177f179aa203e1e5c
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T12:45:00Z
+publisher: The Motley Fool
+author: Marc Guberti
+url: https://www.fool.com/investing/2026/11/14/the-blockchain-boom-is-still-happening-behind-the/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893983%2Fgettyimages-1096888822-1200x800-5b2df79.jpg&w=1200&op=resize
+category: 
+tickers: XYZ, IBM, AMZN
+keywords: blockchain technology, growth stocks, fintech, cloud computing, enterprise blockchain, cryptocurrency, AWS, supply chain
+headline: The Blockchain Boom Is Still Happening Behind the Scenes. These 3 Growth Stocks Will Benefit.
+<<<SUMMARY>>>
+Blockchain technology is being integrated silently into mainstream products and services rather than being promoted as a standalone technology. Three growth stocks are well-positioned to benefit from blockchain expansion: Block (formerly Square) is pioneering blockchain-enabled fintech services, IBM's enterprise blockchain platform is solving real-world problems in supply chain and food safety, and Amazon Web Services powers most public blockchains and is experiencing accelerating cloud growth.
+<<<INSIGHTS>>>
+XYZ | positive | Company is a pioneer in blockchain technology integration, expanding crypto and stablecoin support, gaining market share in small-business services, and projecting 69% year-over-year adjusted operating income growth for fiscal 2027.
+IBM | positive | IBM Blockchain Platform is enterprise-grade software with proven real-world applications (food waste reduction, outbreak tracking), company achieved 5% year-over-year revenue growth with upward trends across all segments, and CEO highlighted AI-driven transformations.
+AMZN | positive | AWS powers most public blockchains and is experiencing strong reacceleration with 39% year-over-year sales growth, highest growth rate in nearly five years, $184 billion annualized revenue, higher margins than e-commerce, and positioned to benefit from projected 88.2% CAGR blockchain growth through 2033.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:71c5d27ff254b6906515332f3191bf9ed1e60a989edfb56501f9a31fefbd86aa
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T16:41:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/14/arista-networks-vs-ibm-which-technology-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F5cfa189cec34288ffafa83d152a780d26e364e6c-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: ANET, IBM, GOOG, GOOGL, GOOGM, GOOGN, ORCL, ORCLpD, SAP
+keywords: AI infrastructure, cloud networking, data centers, hybrid cloud, enterprise software, valuation comparison, growth vs. value
+headline: Arista Networks vs. IBM: Which Technology Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Arista Networks and IBM as investment choices for 2027. Arista offers high growth (41% revenue growth, 40% net margin) driven by AI and cloud infrastructure demand, but trades at a premium valuation (P/E 52.97). IBM provides steady returns with lower valuation (P/E 21.08) and a 2.73% dividend yield, but faces sluggish 6.8% revenue growth. The analyst recommends Arista for 2027 despite its higher price, citing superior growth prospects in the AI-driven cloud networking market.
+<<<INSIGHTS>>>
+ANET | positive | Strong 41% revenue growth, exceptional 40% net margin, zero debt, robust free cash flow of $4.3B, and significant beneficiary of cloud titan spending increases. Recommended as the better buy for 2027 despite premium valuation due to superior growth prospects in AI-driven networking.
+IBM | neutral | Modest 6.8% revenue growth with declining net income projections, but offers attractive valuation (P/E 21.08 vs. Arista's 52.97), strong free cash flow of $12.1B, and 2.73% dividend yield. Successfully pivoting to hybrid cloud and AI, but growth concerns limit upside potential relative to Arista.
+GOOG | neutral | Mentioned as a competitive threat to IBM in the software and cloud solutions market, representing competitive pressure on IBM's market share.
+GOOGL | neutral | Mentioned as a competitive threat to IBM in the software and cloud solutions market, representing competitive pressure on IBM's market share.
+GOOGM | neutral | Mentioned as a competitive threat to IBM in the software and cloud solutions market, representing competitive pressure on IBM's market share.
+GOOGN | neutral | Mentioned as a competitive threat to IBM in the software and cloud solutions market, representing competitive pressure on IBM's market share.
+ORCL | neutral | Mentioned as a strategic partner in IBM's ecosystem for delivering enterprise solutions, indicating collaborative relationship.
+ORCLpD | neutral | Mentioned as a strategic partner in IBM's ecosystem for delivering enterprise solutions, indicating collaborative relationship.
+SAP | neutral | Mentioned as a strategic partner in IBM's ecosystem for delivering end-to-end enterprise solutions.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d72a5e7e9c5422c4f18da09d1dd362cdd38d7f8a65a52d2c7c2a05be85e75c89
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T10:17:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/15/micron-amazon-and-ibm-my-3-favorite-stocks-to-buy-and-hold-through-2030/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F59e23b8f0dc40d0512aaa076c320625007375020-2000x1200.jpg&w=1200&op=resize
+category: 
+tickers: MU, AMZN, IBM, MSFT
+keywords: long-term investing, semiconductor stocks, cloud computing, AI spending, dividend stocks, portfolio diversification, valuation, strategic contracts
+headline: Micron, Amazon, and IBM: My 3 Favorite Stocks to Buy and Hold Through 2030
+<<<SUMMARY>>>
+An analyst recommends holding Micron, Amazon, and IBM through 2030 as a diversified portfolio. Micron trades at a cheap valuation despite strong growth and has over a third of revenue locked in through strategic customer agreements. Amazon's AWS business is growing rapidly with a $578 billion backlog and potential for 40%+ growth in 2027-2028. IBM, the slowest grower, offers stability and dividends while partnering with Microsoft on an AI agents platform.
+<<<INSIGHTS>>>
+MU | positive | Stock trades at under 5x forward earnings despite tripling revenue to $133.2B in fiscal 2026. Over a third of revenue through 2030 is locked in via strategic customer agreements with set pricing terms, reducing cyclical risk. Author recommends it as smallest position due to historical profit volatility.
+AMZN | positive | AWS segment growing 39% YoY with $578B backlog (3+ years of revenue). CEO projects 40%+ growth in 2027-2028 and potential trillion-dollar revenue business within 5-10 years. AWS generates 63% of operating income on 23% of sales, providing strong profitability despite heavy capital expenditures.
+IBM | positive | Provides portfolio stability with consistent 2.8% dividend yield and 107-year dividend payment history. New Imagine Enterprise AI platform partnership with Microsoft addresses weak consulting segment growth. Stock valued at 18x forward earnings, positioned between Micron and Amazon valuations.
+MSFT | neutral | Mentioned as partner in IBM's new Imagine Enterprise AI platform launched Nov. 10, providing underlying AI and cloud technology. Not a primary recommendation but noted as beneficiary of enterprise AI adoption.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:29cce4fa069ff304470fd960dd6203470bdafdca748be7ad19d61504d561674a
+symbol: IBM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T21:40:02Z
+publisher: The Motley Fool
+author: Keithen Drury
+url: https://www.fool.com/investing/2026/11/15/should-you-buy-nvidia-stock-now-that-jensen-huang-has-resigned-here-s-what-i-m-doing/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd1656e920c9f8584ee7df2009f5ca4a5e16755e7-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: NVDA, INTC, IBM
+keywords: Jensen Huang resignation, Nvidia stock decline, AI spending, data center capex, CEO leadership transition, valuation opportunity
+headline: Should You Buy Nvidia Stock Now That Jensen Huang Has Resigned? Here’s What I’m Doing.
+<<<SUMMARY>>>
+Nvidia CEO Jensen Huang resigned following news of an affair with an alleged Chinese spy, causing the stock to fall 30% from its all-time high. However, the article argues Nvidia's core business remains strong with 70% projected revenue growth in 2027 and AI hyperscaler spending expected to reach $1.3 trillion. Trading at just 10.6x forward earnings, the author views Nvidia as a strong buy despite leadership uncertainty, though warns that hiring a finance-background CEO could be problematic.
+<<<INSIGHTS>>>
+NVDA | positive | Despite near-term negative headlines around CEO resignation and alleged security concerns, the underlying business fundamentals remain strong with 70% projected revenue growth, massive AI capex spending from hyperscalers, and attractive valuation at 10.6x forward earnings. The author recommends buying the stock as a long-term opportunity.
+INTC | negative | Mentioned as a cautionary example of a tech company harmed by hiring a finance-background CEO, used to illustrate risks if Nvidia makes similar leadership decisions.
+IBM | negative | Referenced alongside Intel as another tech company negatively impacted by finance-background CEO leadership, serving as a warning for Nvidia's board.
+<<<END>>>

@@ -15,21 +15,25 @@ model or the program's sweep). The funding sells are listed under the purchase t
 filled purchase has an OUTCOME line (the exit, the gain, the return, the sessions held, the benchmark). The summary says whose it is: the model's when code kept it, code's own otherwise.
 """
 from datetime import datetime
+from decimal import Decimal
 from zoneinfo import ZoneInfo
+
+from prometheus.common import shares as sh
 
 EASTERN = ZoneInfo("America/New_York")      # only for the words of a message
 PRICE_WORDS = {"paper": "the current quotes", "backtest": "the stored daily bars"}
 
 
-def _money(x: float) -> str:
+def _money(x: Decimal) -> str:
     return f"${x:,.2f}" if x >= 0 else f"-${-x:,.2f}"
 
 
-def _signed(x: float) -> str:
+def _signed(x: Decimal) -> str:
     return f"+{_money(x)}" if x >= 0 else _money(x)
 
 
 def _pct(x: float | None) -> str:
+    """A RETURN as a percentage (a fraction, a float: a measurement, design/decimal_money_spec.md section 3)."""
     return "n/a" if x is None else f"{x * 100:+.2f}%"
 
 
@@ -42,7 +46,7 @@ def _et(text: str | None) -> str:
 
 def _order(trade: dict) -> str:
     kind, price = trade.get("order_type"), trade.get("limit_price")
-    return "market" if kind == "market" else f"limit {price:,.2f}" if kind == "limit" and isinstance(price, (int, float)) else "no order"
+    return "market" if kind == "market" else f"limit {price:,.2f}" if kind == "limit" and price is not None else "no order"
 
 
 def header(order) -> str:
@@ -58,10 +62,11 @@ def trade_line(trade: dict) -> str:
     """One line for one trade (see the module text)."""
     shares = trade.get("shares", 0)
     approved = trade.get("shares_approved", shares)
-    left = f"{trade['trade_id']:<6} {trade['side']:<4} {shares} of {approved} {trade['symbol']:<5}"
+    left = (f"{trade['trade_id']:<6} {trade['side']:<4} ${trade['dollars']:,.2f} of {trade['symbol']:<5}" if trade.get("dollars") else             # an order in dollars (entry 111, M2) says its dollars; the fill says the shares and the amount
+            f"{trade['trade_id']:<6} {trade['side']:<4} {sh.text(shares)} of {sh.text(approved)} {trade['symbol']:<5}")
     status, fill = trade.get("status"), trade.get("fill") or {}
     if status == "filled" and fill:
-        right = f"{_order(trade):<13} FILLED {fill['shares']} at {fill['price']:,.4f} = {_money(fill['amount'])}"
+        right = f"{_order(trade):<13} FILLED {sh.text(fill['shares'])} at {fill['price']:,.4f} = {_money(fill['amount'])}"
     elif status == "active":
         right = f"{_order(trade):<13} ACTIVE: {trade.get('reason') or 'a resting order'}"
     elif status == "rejected":
@@ -73,7 +78,7 @@ def trade_line(trade: dict) -> str:
     return f"  {left}  {right}{by}{booked}"
 
 
-def _positions(snapshot: dict | None) -> dict[str, int]:
+def _positions(snapshot: dict | None) -> dict[str, Decimal]:
     return {p["symbol"]: p["shares"] for p in (snapshot or {}).get("positions", [])}
 
 
@@ -83,7 +88,7 @@ def account_line(run: dict) -> str | None:
     if not before or not after:
         return None
     was, now = _positions(before), _positions(after)
-    moved = [f"{s} {was.get(s, 0)} -> {now.get(s, 0)} shares" for s in dict.fromkeys([*was, *now]) if was.get(s, 0) != now.get(s, 0)]
+    moved = [f"{s} {sh.text(was.get(s, 0))} -> {sh.text(now.get(s, 0))} shares" for s in dict.fromkeys([*was, *now]) if not sh.same(was.get(s, 0), now.get(s, 0))]      # compared as quantities: a float != would report float noise as a change
     kept = "booked in the account book" if run.get("booked") else "kept in memory only: the account book was not changed"
     return f"  account  cash {_money(before['cash'])} -> {_money(after['cash'])}" + "".join(f"; {m}" for m in moved) + f"; {kept}"
 

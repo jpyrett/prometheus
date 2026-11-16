@@ -6,6 +6,7 @@ risk), sized by the real `decisions` and `sizing` code. The model's part is a RE
 openai/gpt-oss-120b on OpenRouter, the `account_manager` role, six kinds of answers): the loop, the validator, the arithmetic and the sizing are the real code, and a model that fails or invents something is made
 from those same real replies with ONE field changed (an amount nobody typed, a split nobody asked for, a guess before the first answer). No stand-in agent. The live test (opt-in, paid) is in `test_end_to_end_live.py`.
 """
+from decimal import Decimal
 import copy
 import math
 import json
@@ -27,10 +28,11 @@ FIXTURES = Path(__file__).parent / "fixtures" / "session_real"
 CAPTURE = json.loads((FIXTURES / "bob_jones_oil_round_robin.json").read_text(encoding="utf-8"))
 RECORDED = json.loads((FIXTURES / "clarify_ask_mode.json").read_text(encoding="utf-8"))["scenarios"]
 NOW = datetime(2026, 11, 13, 20, 30, tzinfo=timezone.utc)
-BOB = Portfolio(user="Bob Jones", cash_avail=15000.0)
-PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="ask", auto_min_score=70)
+BOB = Portfolio(user="Bob Jones", cash_avail=Decimal("15000"))
+PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="ask")
 CONFIG = load_config()
-EQUITY = 15000.0
+CASH = Decimal("15000")
+EQUITY = Decimal("15000")
 REQUEST = RECORDED["percent_total"]["request"]
 
 
@@ -83,7 +85,7 @@ def channel_of(answers):
 
 
 def facts():
-    return clarify.facts_for(PURCHASES, sizing.size_purchases(PURCHASES, 15000.0, CONFIG), 15000.0, EQUITY, REQUEST, None, CONFIG)
+    return clarify.facts_for(PURCHASES, sizing.size_purchases(PURCHASES, Decimal("15000.0"), CONFIG), Decimal("15000.0"), EQUITY, REQUEST, None, CONFIG)
 
 
 def manager(model, screen=None):
@@ -114,16 +116,17 @@ def test_the_account_manager_asks_how_much_only_when_the_request_did_not_say(req
 
 
 def test_a_budget_the_model_read_is_a_dollar_amount_the_user_said():
-    assert TradeIntent(request="buy PG", action="buy", symbols=["PG"], budget=5000.0).said_how_much() is True
+    assert TradeIntent(request="buy PG", action="buy", symbols=["PG"], budget=Decimal("5000")).said_how_much() is True
 
 
 # ---------------------------------------------------------------- the amount the user asked for, in the sizing
 
 def sized(**kw):
-    return {s.symbol: s for s in sizing.size_purchases(PURCHASES, 15000.0, CONFIG, **kw)}
+    return {s.symbol: s for s in sizing.size_purchases(PURCHASES, CASH, CONFIG, **kw)}
 
 
-@pytest.mark.parametrize("wanted", [{"nobody": 3}, {CVX.record_id: -1}, {CVX.record_id: 2.5}, {CVX.record_id: True}])
+# AMENDED (entry 111, M3): 2.5 is a quantity now (what the user's dollars for each stock of a direct order buy: `wanted` may have a fraction); seven decimals and a string are still a programming error
+@pytest.mark.parametrize("wanted", [{"nobody": 3}, {CVX.record_id: -1}, {CVX.record_id: 0.1234567}, {CVX.record_id: True}, {CVX.record_id: "2"}])
 def test_a_wanted_that_is_not_whole_shares_of_a_purchase_is_a_programming_error(wanted):
     with pytest.raises(ValueError):
         sized(wanted=wanted)
@@ -131,7 +134,7 @@ def test_a_wanted_that_is_not_whole_shares_of_a_purchase_is_a_programming_error(
 
 # ---------------------------------------------------------------- the check of the model's form against what the user typed (code)
 
-def check(choice, said, purchases=PURCHASES, cash=15000.0, equity=EQUITY, prior=None):
+def check(choice, said, purchases=PURCHASES, cash=CASH, equity=EQUITY, prior=None):
     clarify.check_choice(choice, said, purchases, cash, equity, prior)
 
 
@@ -165,7 +168,6 @@ def test_a_choice_the_users_own_words_support_is_accepted(choice, said):
     (clarify.SizingChoice(unit="percent", amount=60, scope="each"), "60% each", "ask for less"),                    # 60% of the account in each of two companies
     (clarify.SizingChoice(unit="shares", amount=500, scope="each"), "500 shares each", "ask for less"),
     (clarify.SizingChoice(unit="percent", amount=20, allocation="even"), "20% of my account", "did not ask for an even split"),
-    (clarify.SizingChoice(unit="dollars", amount=3000, allocation="round_robin"), "$3,000", "did not ask for one share of each in turn"),
     (clarify.SizingChoice(unit="max", amount=5), "as much as I can", "takes no amount"),
 ])
 def test_a_choice_the_users_words_do_not_support_or_the_account_cannot_pay_is_refused_with_the_reason(choice, said, why):
@@ -179,6 +181,30 @@ def test_a_split_the_user_asked_for_in_the_request_is_not_a_split_the_model_inve
         check(clarify.SizingChoice(unit="dollars", amount=3000, allocation="even"), "$3,000", prior="round_robin")
 
 
+def test_round_robin_is_the_default_so_it_needs_no_word_from_the_user_but_it_cannot_overrule_a_split_the_request_asked_for():
+    """AMENDED (entry 106). A choice of `round_robin` was refused unless the user said "round robin" or "in turn" ("use as_much_as_possible unless they said how to spread it"). Round-robin is the default now, whatever the mode:
+    it is accepted with no cue, and so is a choice that leaves the allocation out (the model's way of saying the user did not say). What stays refused: round-robin over a split the REQUEST already asked for."""
+    check(clarify.SizingChoice(unit="dollars", amount=3000, allocation="round_robin"), "$3,000")
+    check(clarify.SizingChoice(unit="dollars", amount=3000), "$3,000")
+    check(clarify.SizingChoice(unit="dollars", amount=3000, allocation="round_robin"), "$3,000 one share of each in turn", prior="even")
+    with pytest.raises(ValueError, match="already asked for an even split"):
+        check(clarify.SizingChoice(unit="dollars", amount=3000, allocation="round_robin"), "$3,000", prior="even")
+
+
+def test_the_retired_word_of_the_real_replies_is_read_as_the_user_did_not_say_how_to_spread_it_which_is_round_robin():
+    """The REAL replies recorded before entry 106 (`clarify_ask_mode.json`, not edited) say `"allocation": "as_much_as_possible"`. They are still read, as "the user did not say how to spread it" (None), and the plan then
+    leaves the split to the sizing's default, round-robin: the same two purchases come out a share of each in turn, and not the first company first."""
+    texts = [r for s in RECORDED.values() for r in s["replies"] if "as_much_as_possible" in r]
+    assert len(texts) == 3
+    for text in texts:
+        assert clarify.SizingChoice(**{k: v for k, v in json.loads(text).items() if k in ("unit", "amount", "scope", "allocation")}).allocation is None
+    p = plan(clarify.SizingChoice(unit="percent", amount=20, scope="total", allocation="as_much_as_possible"))
+    got = sized(allocation=p.balance, budget=p.budget, wanted=p.wanted)
+    assert p.balance is None and p.budget == Decimal("3000") and "a share of each company in turn" in p.text
+    assert got["CVX"].allocation == got["EOG"].allocation == "round_robin" and got["CVX"].shares >= 1 and got["EOG"].shares >= 1 and got["CVX"].est_cost + got["EOG"].est_cost <= Decimal("3000")
+    assert got["CVX"].shares < math.floor(3000 / CVX.price) + 1 and got["EOG"].shares >= math.floor(3000 / (CVX.price + EOG.price))           # neither took the whole $3,000 before the other had its share
+
+
 def test_the_percentage_of_an_account_with_no_value_cannot_be_worked_out():
     with pytest.raises(ValueError, match="value of the account is not known"):
         check(clarify.SizingChoice(unit="percent", amount=20), "20%", equity=None)
@@ -187,7 +213,7 @@ def test_the_percentage_of_an_account_with_no_value_cannot_be_worked_out():
 # ---------------------------------------------------------------- the arithmetic (code), with the real prices
 
 def plan(choice, prior=None):
-    return clarify.plan_choice(choice, PURCHASES, EQUITY, 15000.0, prior)
+    return clarify.plan_choice(choice, PURCHASES, EQUITY, Decimal("15000.0"), prior)
 
 
 def test_a_number_of_shares_in_all_is_shared_out_in_rank_order():
@@ -195,15 +221,19 @@ def test_a_number_of_shares_in_all_is_shared_out_in_rank_order():
     assert plan(clarify.SizingChoice(unit="shares", amount=6, scope="total")).wanted == {CVX.record_id: 3, EOG.record_id: 3}
 
 
+# By hand, at the real prices (CVX 219.89, EOG 158.32): one share of each costs 378.21, so 39 rounds cost 14,750.19; $249.81 are left, and the 40th round buys a CVX (219.89, $29.92 left) and cannot buy an EOG (158.32).
+ROUND_ROBIN_OF_ALL_THE_CASH = (40, 39)      # AMENDED (entry 106): "as much as I can" over two companies was (68, 94), each taking ALL the $15,000; the default is the round robin, which they share a share at a time
+
+
 def test_what_is_worked_out_is_what_the_sizing_buys():
     for choice, shares in ((clarify.SizingChoice(unit="percent", amount=5, scope="each"), (3, 4)), (clarify.SizingChoice(unit="shares", amount=10, scope="each"), (10, 10)),
-                           (clarify.SizingChoice(unit="shares", amount=7, scope="total"), (4, 3)), (clarify.SizingChoice(unit="max"), (math.floor(15000 / CVX.price), math.floor(15000 / EOG.price)))):
+                           (clarify.SizingChoice(unit="shares", amount=7, scope="total"), (4, 3)), (clarify.SizingChoice(unit="max"), ROUND_ROBIN_OF_ALL_THE_CASH)):
         p = plan(choice)
         got = sized(allocation=p.balance, budget=p.budget, wanted=p.wanted)
         assert (got["CVX"].shares, got["EOG"].shares) == shares, choice
     budget = plan(clarify.SizingChoice(unit="dollars", amount=1000, scope="total"))
     got = sized(allocation=budget.balance, budget=budget.budget)
-    assert got["CVX"].est_cost + got["EOG"].est_cost <= 1000.0                                                      # a total is never exceeded
+    assert got["CVX"].est_cost + got["EOG"].est_cost <= Decimal("1000")                                                      # a total is never exceeded
 
 
 # ---------------------------------------------------------------- the loop, with the model's real recorded replies
@@ -212,12 +242,12 @@ def test_what_is_worked_out_is_what_the_sizing_buys():
 def test_the_loop_over_the_real_replies_asks_what_it_asked_and_reads_the_answer_into_the_recorded_plan(name):
     model, answers = scenario(name)
     channel = channel_of(answers)
-    outcome = clarify.run_loop(model, facts(), PURCHASES, 15000.0, EQUITY, channel, CONFIG)
+    outcome = clarify.run_loop(model, facts(), PURCHASES, CASH, EQUITY, channel, CONFIG)
     recorded = RECORDED[name]
     assert outcome.choice is not None and outcome.problems == [] and model.replies == [] and outcome.calls == recorded["calls"]
     asked = [c for c in recorded["cards"] if c["kind"] == "how_much"]
     assert [c["question"] for c in channel.cards] == [c["question"] for c in asked] and outcome.answers == [a for a in recorded["answers"]][:len(asked)]
-    again = clarify.plan_choice(outcome.choice, PURCHASES, EQUITY, 15000.0)
+    again = clarify.plan_choice(outcome.choice, PURCHASES, EQUITY, CASH)
     assert again.model_dump(exclude={"notes", "text"}) == {k: v for k, v in recorded["plan"].items() if k not in ("limit_overrides", "notes", "text")}
 
 
@@ -230,7 +260,7 @@ def test_a_number_the_user_never_typed_is_refused_and_after_the_allowed_refusals
     ask = RECORDED["percent_total"]["replies"][0]
     assert invented != RECORDED["percent_total"]["replies"][1]
     model = Replay([ask, invented], repeat=True)
-    outcome = clarify.run_loop(model, facts(), PURCHASES, 15000.0, EQUITY, channel_of(["20% of my account in total"]), CONFIG)
+    outcome = clarify.run_loop(model, facts(), PURCHASES, CASH, EQUITY, channel_of(["20% of my account in total"]), CONFIG)
     assert outcome.choice is None and len(outcome.problems) == CONFIG.clarify.max_problems + 1 and all("25 is not in anything the user typed" in p for p in outcome.problems)
     assert "could not be read into an amount" in outcome.why and outcome.calls == 1 + CONFIG.clarify.max_problems + 1
 
@@ -239,38 +269,38 @@ def test_a_split_the_model_chose_and_the_user_never_asked_for_is_refused_then_ac
     ask, final = RECORDED["percent_total"]["replies"]
     invented = final.replace("as_much_as_possible", "even")
     assert invented != final
-    outcome = clarify.run_loop(Replay([ask, invented, final]), facts(), PURCHASES, 15000.0, EQUITY, channel_of(["20% of my account in total"]), CONFIG)
-    assert len(outcome.problems) == 1 and "did not ask for an even split" in outcome.problems[0] and outcome.choice.allocation == "as_much_as_possible"
+    outcome = clarify.run_loop(Replay([ask, invented, final]), facts(), PURCHASES, CASH, EQUITY, channel_of(["20% of my account in total"]), CONFIG)
+    assert len(outcome.problems) == 1 and "did not ask for an even split" in outcome.problems[0] and outcome.choice.allocation is None      # AMENDED (entry 106): the real reply's `as_much_as_possible` is read as "did not say how to spread it": None
 
 
 def test_a_guess_before_the_first_answer_is_refused_and_the_model_then_asks():
     ask, final = RECORDED["as_much_as_i_can"]["replies"]
-    outcome = clarify.run_loop(Replay([final, ask, final]), facts(), PURCHASES, 15000.0, EQUITY, channel_of(["as much as I can"]), CONFIG)      # the real model did this once, when the request already said "as much as I can"
+    outcome = clarify.run_loop(Replay([final, ask, final]), facts(), PURCHASES, CASH, EQUITY, channel_of(["as much as I can"]), CONFIG)      # the real model did this once, when the request already said "as much as I can"
     assert len(outcome.problems) == 1 and "did not say they want as much as they can" in outcome.problems[0] and outcome.choice.unit == "max" and len(outcome.questions) == 1
 
 
 def test_no_more_than_three_questions_are_put_to_the_user():
     ask = RECORDED["percent_total"]["replies"][0]
     channel = channel_of(["hmm", "not sure", "maybe", "I don't know"])
-    outcome = clarify.run_loop(Replay([ask], repeat=True), facts(), PURCHASES, 15000.0, EQUITY, channel, CONFIG)
+    outcome = clarify.run_loop(Replay([ask], repeat=True), facts(), PURCHASES, CASH, EQUITY, channel, CONFIG)
     assert len(channel.cards) == 3 == len(outcome.questions) and outcome.choice is None and any("no questions are left" in p for p in outcome.problems)
 
 
 def test_a_reply_that_is_not_the_form_is_refused_each_time_and_the_loop_gives_up():
-    outcome = clarify.run_loop(Replay(["I think about 20 percent would be fine."], repeat=True), facts(), PURCHASES, 15000.0, EQUITY, channel_of([]), CONFIG)
+    outcome = clarify.run_loop(Replay(["I think about 20 percent would be fine."], repeat=True), facts(), PURCHASES, CASH, EQUITY, channel_of([]), CONFIG)
     assert outcome.choice is None and outcome.problems and all("no JSON object" in p for p in outcome.problems) and outcome.questions == []
     for bad in ('{"action": "buy", "shares": 100}', '{"action": "ask_user"}', '{"action": "set_sizing", "unit": "percent", "amount": 20, "shares": 3}', "[1, 2]", '{"action": "ask_user", "question": "q", "x": 1}'):
-        assert clarify.run_loop(Replay([bad], repeat=True), facts(), PURCHASES, 15000.0, EQUITY, channel_of([]), CONFIG).choice is None
+        assert clarify.run_loop(Replay([bad], repeat=True), facts(), PURCHASES, CASH, EQUITY, channel_of([]), CONFIG).choice is None
 
 
 def test_a_model_that_cannot_be_reached_ends_the_loop_with_the_kind_of_the_failure_only():
-    outcome = clarify.run_loop(Broken(), facts(), PURCHASES, 15000.0, EQUITY, channel_of([]), CONFIG)
+    outcome = clarify.run_loop(Broken(), facts(), PURCHASES, CASH, EQUITY, channel_of([]), CONFIG)
     assert outcome.choice is None and outcome.why == "the Account Manager's model could not be reached (ConnectionError)" and "127.0.0.1" not in outcome.why and "password" not in outcome.why
 
 
 def test_a_user_who_does_not_answer_ends_the_loop():
     model, _ = scenario("percent_total")
-    outcome = clarify.run_loop(model, facts(), PURCHASES, 15000.0, EQUITY, channel_of([]), CONFIG)
+    outcome = clarify.run_loop(model, facts(), PURCHASES, CASH, EQUITY, channel_of([]), CONFIG)
     assert outcome.choice is None and outcome.why == "nobody answered the question" and len(outcome.questions) == 1
 
 
@@ -291,15 +321,18 @@ def test_an_answer_in_dollars_spread_evenly_sizes_the_purchases_to_the_equal_dol
     model, answers = scenario("dollars_total_even")
     order = ask_mode(manager(model), clarify=channel_of(answers), request_text=REQUEST)
     got = rows(order)
-    assert got["CVX"]["balance"]["mode"] == "even" and got["CVX"]["balance"]["of"] == 2 and got["CVX"]["est_cost"] + got["EOG"]["est_cost"] <= 3000.0
+    assert got["CVX"]["balance"]["mode"] == "even" and got["CVX"]["balance"]["of"] == 2 and got["CVX"]["est_cost"] + got["EOG"]["est_cost"] <= Decimal("3000")
     assert abs(got["CVX"]["est_cost"] - got["EOG"]["est_cost"]) < 220
 
 
-def test_as_much_as_i_can_is_the_default_size_the_most_the_cash_buys():
+def test_as_much_as_i_can_is_the_default_size_all_the_cash_a_share_of_each_company_in_turn():
+    """AMENDED (entry 106). "As much as I can" over two companies was the default size "the most the cash buys" of EACH (CVX 68, EOG 94: the first took what it could and the second saw all the cash again). It is the default
+    size, the round robin, now: CVX 40 and EOG 39, together within the $15,000."""
     model, answers = scenario("as_much_as_i_can")
     asked = ask_mode(manager(model), clarify=channel_of(answers), request_text=REQUEST)
     default = ask_mode(manager(Broken()))
-    assert [(d["symbol"], d["shares"]) for d in asked.trade_decisions] == [(d["symbol"], d["shares"]) for d in default.trade_decisions] and rows(asked)["CVX"]["shares"] == math.floor(15000 / CVX.price)
+    assert [(d["symbol"], d["shares"]) for d in asked.trade_decisions] == [(d["symbol"], d["shares"]) for d in default.trade_decisions] and (rows(asked)["CVX"]["shares"], rows(asked)["EOG"]["shares"]) == ROUND_ROBIN_OF_ALL_THE_CASH
+    assert rows(asked)["CVX"]["est_cost"] + rows(asked)["EOG"]["est_cost"] <= CASH and {d["size"]["allocation"] for d in asked.trade_decisions if d["size"]} == {"round_robin"}
 
 
 
@@ -307,17 +340,17 @@ def test_a_model_that_cannot_be_reached_leaves_the_default_size_and_says_so_to_t
     shown = []
     order = ask_mode(manager(Broken(), shown.append), clarify=channel_of(["20%"]), request_text=REQUEST)
     got = rows(order)
-    assert (got["CVX"]["shares"], got["EOG"]["shares"]) == (math.floor(15000 / CVX.price), math.floor(15000 / EOG.price)) and got["CVX"]["will_trade"] == "pending_user"
+    assert (got["CVX"]["shares"], got["EOG"]["shares"]) == ROUND_ROBIN_OF_ALL_THE_CASH and got["CVX"]["will_trade"] == "pending_user"      # AMENDED (entry 106): the default size is the round robin
     assert any("how much to buy could not be worked out with you (the Account Manager's model could not be reached (ConnectionError))" in e for e in order.errors)
     said = "\n".join(shown)
-    assert "I could not work out how much you want" in said and "The most your cash buys is shown" in said and "password" not in said and "127.0.0.1" not in said
+    assert "I could not work out how much you want" in said and "The default size is shown" in said and "password" not in said and "127.0.0.1" not in said
 
 
 def test_a_user_who_does_not_answer_leaves_the_default_size_and_says_so():
     model, _ = scenario("percent_total")
     shown = []
     order = ask_mode(manager(model, shown.append), clarify=channel_of([]), request_text=REQUEST)
-    assert (rows(order)["CVX"]["shares"], rows(order)["EOG"]["shares"]) == (math.floor(15000 / CVX.price), math.floor(15000 / EOG.price)) and any("nobody answered the question" in e for e in order.errors)
+    assert (rows(order)["CVX"]["shares"], rows(order)["EOG"]["shares"]) == ROUND_ROBIN_OF_ALL_THE_CASH and any("nobody answered the question" in e for e in order.errors)      # AMENDED (entry 106): the default size is the round robin
 
 
 # ---------------------------------------------------------------- the terminal, the session and the desk
@@ -362,7 +395,7 @@ def test_the_report_says_a_purchase_the_user_sized_is_what_they_asked_for_and_ne
     from prometheus.application.session import use_of_money_lines
     model, answers = scenario("percent_each_no_raise_needed")
     order = ask_mode(manager(model), clarify=channel_of(answers), request_text=REQUEST)
-    after = BOB.model_copy(update={"cash_avail": 15000.0 - 3 * 219.89 - 4 * 158.32})
+    after = BOB.model_copy(update={"cash_avail": CASH - 3 * Decimal("219.89") - 4 * Decimal("158.32")})
     for d in order.trade_decisions:
         if d["will_trade"] == "pending_user":
             d["will_trade"] = "yes_user"

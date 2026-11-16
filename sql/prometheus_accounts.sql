@@ -66,7 +66,6 @@ CREATE TABLE IF NOT EXISTS trading.accounts (
   age                       integer CHECK (age IS NULL OR age BETWEEN 18 AND 120),
   investment_horizon_years  numeric(6, 2) CHECK (investment_horizon_years IS NULL OR investment_horizon_years > 0),
   trade_mode                text NOT NULL DEFAULT 'ask' CHECK (trade_mode IN ('ask', 'auto')),
-  auto_min_score            integer CHECK (auto_min_score IS NULL OR auto_min_score BETWEEN 0 AND 100),
   min_price                 numeric(14, 4) NOT NULL DEFAULT 5 CHECK (min_price >= 0),
   excluded_symbols          text[] NOT NULL DEFAULT '{}',
   excluded_sectors          text[] NOT NULL DEFAULT '{}',
@@ -82,6 +81,10 @@ ALTER TABLE trading.accounts
   DROP COLUMN IF EXISTS max_loss_per_trade_pct,
   DROP COLUMN IF EXISTS max_new_exposure_pct,
   DROP COLUMN IF EXISTS max_order_dollars;
+
+-- Design choices entry 104 (Jacob, 2026-11-15): there is no second, automatic-trading mark: Auto mode trades what the Critic approves. An account book made before that has the column: drop it (idempotent).
+ALTER TABLE trading.accounts
+  DROP COLUMN IF EXISTS auto_min_score;
 
 CREATE TABLE IF NOT EXISTS trading.cash_ledger (
   entry_id      bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -182,10 +185,10 @@ CREATE TABLE IF NOT EXISTS trading.positions (
   account_id    bigint NOT NULL REFERENCES trading.accounts (account_id) ON DELETE CASCADE,
   symbol        text NOT NULL CHECK (symbol ~ '^[A-Z0-9.-]{1,10}$'),
   name          text CHECK (name IS NULL OR char_length(name) BETWEEN 1 AND 200),
-  shares        integer NOT NULL CHECK (shares > 0),
+  shares        numeric(18, 6) NOT NULL CHECK (shares > 0),
   cost_basis    numeric(14, 4) NOT NULL CHECK (cost_basis > 0),
   acquired      date,
-  recent_shares integer CHECK (recent_shares IS NULL OR (recent_shares > 0 AND recent_shares <= shares)),
+  recent_shares numeric(18, 6) CHECK (recent_shares IS NULL OR (recent_shares > 0 AND recent_shares <= shares)),
   PRIMARY KEY (account_id, symbol)
 );
 
@@ -194,7 +197,7 @@ CREATE TABLE IF NOT EXISTS trading.trades (
   account_id    bigint NOT NULL REFERENCES trading.accounts (account_id) ON DELETE CASCADE,
   symbol        text NOT NULL CHECK (symbol ~ '^[A-Z0-9.-]{1,10}$'),
   side          text NOT NULL CHECK (side IN ('buy', 'sell')),
-  shares        integer NOT NULL CHECK (shares > 0),
+  shares        numeric(18, 6) NOT NULL CHECK (shares > 0),
   price         numeric(14, 4) NOT NULL CHECK (price > 0),
   realized_gain numeric(14, 2) NOT NULL DEFAULT 0,
   traded_on     date NOT NULL,
@@ -215,7 +218,7 @@ CREATE TABLE IF NOT EXISTS trading.recommendation_decisions (
   record_id   text NOT NULL CHECK (char_length(record_id) BETWEEN 1 AND 80),
   symbol      text NOT NULL CHECK (symbol ~ '^[A-Z0-9.-]{1,10}$'),
   action      text NOT NULL CHECK (action ~ '^[a-z_]{1,32}$'),
-  shares      integer NOT NULL CHECK (shares >= 0),
+  shares      numeric(18, 6) NOT NULL CHECK (shares >= 0),
   mode        text NOT NULL CHECK (mode IN ('ask', 'auto')),
   will_trade  text NOT NULL CHECK (will_trade IN (
     'yes_auto', 'yes_user', 'pending_user',
@@ -226,6 +229,17 @@ CREATE TABLE IF NOT EXISTS trading.recommendation_decisions (
 );
 
 CREATE INDEX IF NOT EXISTS decisions_account_day ON trading.recommendation_decisions (account_id, decided_on);
+
+-- Design choices entry 110 (Jacob, 2026-11-15): a share quantity may have a fraction (an even split buys the same DOLLARS of each stock), at most six decimals (prometheus/common/shares.py: PLACES). An account book made before
+-- that has these four columns as integer: change them to numeric(18, 6) (idempotent: a column that already has the type is left as it is; every whole number keeps its value, and no table or account is dropped). The CHECKs stay as
+-- they are. No trigger, function or view holds a share count.
+ALTER TABLE trading.positions
+  ALTER COLUMN shares TYPE numeric(18, 6),
+  ALTER COLUMN recent_shares TYPE numeric(18, 6);
+ALTER TABLE trading.trades
+  ALTER COLUMN shares TYPE numeric(18, 6);
+ALTER TABLE trading.recommendation_decisions
+  ALTER COLUMN shares TYPE numeric(18, 6);
 
 CREATE OR REPLACE FUNCTION trading.create_account(
   p_display_name text,

@@ -72,7 +72,7 @@ class Dimension(_Model):
     weight: float
     score: float                      # 0 to 100
     points: float                     # score x weight / 100: what the scorecard prints ("accuracy 27/30")
-    applicable: bool = True           # False: not part of the total (risk fit and value do not apply to a reduction)
+    applicable: bool = True           # False: not part of the total. Every dimension applies to a recommendation to buy and no check sets it False now (entry 105); stored reviews carry it
     measures: list[Measure] = Field(default_factory=list)
 
 

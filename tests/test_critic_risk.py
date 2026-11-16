@@ -107,6 +107,12 @@ def test_an_excluded_symbol_sector_or_price_is_a_blocker_each():
 
 # ---------------------------------------------------------------- a sale is not judged
 
-def test_a_reduction_is_not_judged_and_proposes_no_size():
-    r, rec = case(**{"action.action": "reduce", "action.held_shares": 12, "trade.family": None, "trade.stop_price": None})
-    assert r.applicable is False and r.findings == [] and r.detail.risk_score is None and not hasattr(r, "approved_shares")
+def test_a_reduction_or_a_holding_is_not_a_record_so_the_risk_of_one_is_never_judged():
+    """AMENDED (entry 105): a `reduce` with 12 shares held was "not judged" for risk and proposed no size. The record models refuse such a record (the action is not `open`, and a record that says something is held is
+    refused too), and the risk step has no skip for it."""
+    with pytest.raises(ValidationError, match="the action is 'reduce': a recommendation is to buy"):
+        case(**{"action.action": "reduce", "action.held_shares": 12, "trade.family": None, "trade.stop_price": None})
+    with pytest.raises(ValidationError, match="the record says something is held"):
+        case(**{"action.held_shares": 12})
+    r, _ = case()
+    assert r.applicable is True and r.detail.risk_score is not None and not hasattr(r, "approved_shares")

@@ -1,5 +1,6 @@
 """The Trader's four tools (prometheus/tools/trader.py, Trader spec section 8): each refusal of each tool, the budget, sells before buys, and nothing after the notify. The tools are called the way the loop's tools node calls
 them: through the budget, with the model's arguments, and a refusal comes back as the message the model reads. No network, no model."""
+from decimal import Decimal
 import json
 
 import pytest
@@ -38,7 +39,7 @@ def test_an_argument_a_tool_does_not_have_is_refused_not_ignored_and_nothing_is_
     rig = rig_for(row("PG", "open", 10, 100.0))
     outcome, message = rig("place_order", trade_id="T1", **extra)
     assert outcome == "invalid" and message.startswith("Invalid arguments: place_order has no argument") and "not yours to set" in message
-    assert rig.found[0].status == "new" and rig.broker.filled == [] and acct_now(rig.broker).cash_avail == 5000.0
+    assert rig.found[0].status == "new" and rig.broker.filled == [] and acct_now(rig.broker).cash_avail == Decimal("5000.0")
     assert rig("place_order", trade_id="T1")[0] == "ok"                                                                   # the refusal did not use the trade's one placing
 
 
@@ -77,7 +78,7 @@ def test_verify_request_shows_no_price_when_there_is_none_and_the_cash_it_shows_
     assert rig("verify_request")[1]["trades"][0]["market_price"] is None
     rig = rig_for(row("PG", "open", 10, 100.0))
     rig("place_order", trade_id="T1")
-    assert rig("verify_request")[1]["cash"] == 5000.0 - 1000.5
+    assert rig("verify_request")[1]["cash"] == Decimal("5000.0") - Decimal("1000.0")      # AMENDED (entry 111): 1000.5 was ten shares at the quote plus 5 bps of slippage
 
 
 # ---------------------------------------------------------------- no tool result carries a trade's `reason` (rule T9, decided after phase 2)
@@ -146,7 +147,7 @@ def test_each_refusal_of_place_order_comes_back_as_a_message_that_says_how_to_fi
     rig = rig_for(row("PG", "open", 10, 100.0))
     outcome, text = rig("place_order", **args)
     assert outcome == "invalid" and text.startswith("Invalid arguments: ") and message in text and text.endswith("Fix the arguments and call the tool again.")
-    assert (rig.found[0].status, rig.broker.placed, acct_now(rig.broker).cash_avail) == ("new", [], 5000.0)
+    assert (rig.found[0].status, rig.broker.placed, acct_now(rig.broker).cash_avail) == ("new", [], Decimal("5000.0"))
 
 
 def test_a_trade_is_placed_once_the_second_call_is_stopped_by_the_budget_and_the_broker_would_refuse_it_too():
@@ -156,7 +157,7 @@ def test_a_trade_is_placed_once_the_second_call_is_stopped_by_the_budget_and_the
     assert outcome == "limit" and text.startswith("Limit reached: place_order was already used for T1: a trade is placed once")
     with pytest.raises(Refused, match="was already placed"):
         rig.broker.place("T1", "market")                                                                                  # the broker's own refusal, for a caller that skips the budget
-    assert acct_now(rig.broker).cash_avail == 5000.0 - 1000.5 and rig.broker.filled == ["T1"]                             # bought once
+    assert acct_now(rig.broker).cash_avail == Decimal("5000.0") - Decimal("1000.0") and rig.broker.filled == ["T1"]                             # bought once (AMENDED, entry 111: 1000.5 was with 5 bps of slippage)
 
 
 def test_every_sale_is_placed_before_any_purchase_the_refusal_names_the_sale():
@@ -203,7 +204,7 @@ def test_check_trade_status_reads_one_trade_or_all_and_never_looks_at_the_market
 def test_check_trade_status_gives_the_fill_of_a_filled_trade_and_refuses_an_unknown_id():
     rig = rig_for(row("PG", "open", 10, 100.0))
     rig("place_order", trade_id="T1", order_type="market")
-    assert rig("check_trade_status", trade_id="T1")[1] == {"trades": [{"trade_id": "T1", "status": "filled", "fill_price": 100.05, "fill_shares": 10}]}
+    assert rig("check_trade_status", trade_id="T1")[1] == {"trades": [{"trade_id": "T1", "status": "filled", "fill_price": Decimal("100.0"), "fill_shares": 10}]}      # AMENDED (entry 111): 100.05 was the quote plus 5 bps
     outcome, text = rig("check_trade_status", trade_id="T7")
     assert outcome == "invalid" and "there is no trade 'T7'" in text
 

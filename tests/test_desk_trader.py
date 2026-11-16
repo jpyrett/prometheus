@@ -80,10 +80,10 @@ class BookStore:
         self._check("book_trade", account_id)
         before = self.held
         held_before = before.position(symbol).shares if before.position(symbol) else 0
-        self.held = apply_fill(before, symbol, side, shares, float(price), traded_on)
+        self.held = apply_fill(before, symbol, side, shares, price, traded_on)                                                                # the price is the Decimal the Account Manager booked at
         self.booked.append({"account_id": account_id, "symbol": symbol, "side": side, "shares": shares, "price": price, "traded_on": traded_on, "source": source, "record_id": record_id})
-        return Booked(trade_row=len(self.booked), gain=Decimal("0.00"), symbol=symbol, side=side, shares=shares, price=price, cash_before=Decimal(str(before.cash_avail)),
-                      cash_after=Decimal(str(self.held.cash_avail)), held_before=held_before, held_after=self.held.position(symbol).shares if self.held.position(symbol) else 0)
+        return Booked(trade_row=len(self.booked), gain=Decimal("0.00"), symbol=symbol, side=side, shares=shares, price=price, cash_before=before.cash_avail,
+                      cash_after=self.held.cash_avail, held_before=held_before, held_after=self.held.position(symbol).shares if self.held.position(symbol) else 0)
 
     def read_booked(self, account_id, trade_row):
         self._check("read_booked", account_id)
@@ -167,9 +167,9 @@ def test_one_work_order_travels_to_the_trader_and_comes_out_traded_with_the_fill
     order = state["order"]
     assert state["path"] == ["account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader"] and state["errors"] == [] and order.errors == []
     assert order.status == "traded" and order.schema_version == 4 and [(t["symbol"], t["side"], t["status"], t["mode"], t["placed_by"], t["booked"]) for t in order.trades] == [("PG", "buy", "filled", "paper", "code", False)]
-    assert order.trades[0]["shares"] == order.trade_decisions[0]["shares"] == 59 == int(10000 // 167.1) and "approved_shares" not in order.reviews[0] and set(state["seconds"]) == {"account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader"}
+    assert order.trades[0]["shares"] == order.trade_decisions[0]["shares"] == 59 == Decimal("10000") // Decimal("167.1") and "approved_shares" not in order.reviews[0] and set(state["seconds"]) == {"account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "trader"}
     run_ = order.trader_runs[0]
-    assert run_["use_model"] is False and run_["mode"] == "paper" and run_["booked"] is False and run_["portfolio_before"]["cash"] == 10000.0 and run_["portfolio_after"]["cash"] < 10000.0
+    assert run_["use_model"] is False and run_["mode"] == "paper" and run_["booked"] is False and run_["portfolio_before"]["cash"] == Decimal("10000.0") and run_["portfolio_after"]["cash"] < Decimal("10000.0")
     assert [r["trade_id"] for r in factory.ledgers[0].records] == ["T1"]                                                     # the trades ledger of THIS Trader (a test never writes the real one)
 
 
@@ -296,7 +296,7 @@ def test_a_saved_account_gives_the_profile_and_the_portfolio_and_the_run_is_conn
     order = state["order"]
     assert state["errors"] == [] and order.status == "traded" and ("seed", "jacob_sample") in store.calls and ("list_portfolio", 7) in store.calls
     assert ("load_profile", 7) in store.calls                                                                               # the profile is the account's own row: nothing was given
-    assert order.trader_runs[0]["portfolio_before"]["cash"] == 10000.0 and store.booked == []                                   # no --book: the fills stay in memory
+    assert order.trader_runs[0]["portfolio_before"]["cash"] == Decimal("10000.0") and store.booked == []                                   # no --book: the fills stay in memory
     assert [d["will_trade"] for d in store.saved] == ["yes_user"]                                                           # a connected manager saves its decisions (entry 72): --account does it with or without --book
 
 
@@ -344,13 +344,13 @@ def test_a_database_failure_is_a_message_that_names_the_kind_and_never_the_conne
     state = book_run(store)
     order = state["order"]
     said = " ".join(order.errors)
-    assert "the Advisor could not start: the account book could not be read (ConnectionError)" in said and order.recommendations == [] and order.trades == []
+    assert "the Critic could not start: the account book could not be read (ConnectionError)" in said and order.reviews == [] and order.trades == []      # AMENDED (entry 105): the Advisor reads no account, so the Critic is the first node to report it
     for secret in ("127.0.0.1", "5432", "password", "hunter2", "prometheus_app"):
         assert secret not in said and secret not in json.dumps(order.model_dump(), default=str), secret
 
 
 def test_each_node_reports_the_database_failure_as_it_reports_a_bad_profile_file():
-    """The Advisor is the first node that reads the account; with a good first read and a failing later one, each of the others reports it too."""
+    """The Critic is the first node that reads the account (the Advisor is given no portfolio, entry 105); with a good first read and a failing later one, each of the others reports it too."""
     class Dies(BookStore):
         def __init__(self, after, **kw):
             super().__init__(**kw)
@@ -362,7 +362,7 @@ def test_each_node_reports_the_database_failure_as_it_reports_a_bad_profile_file
                 raise TimeoutError("could not connect to 10.0.0.9: password=secret")
             return super().list_portfolio(account_id)
 
-    for after, node in ((1, "the Critic could not start"), (2, "the Account Manager could not decide"), (3, "the Trader could not start")):
+    for after, node in ((0, "the Critic could not start"), (1, "the Account Manager could not decide"), (2, "the Trader could not start")):
         order = book_run(Dies(after))["order"]
         said = " ".join(order.errors)
         assert f"{node}: the account book could not be read (TimeoutError)" in said and "10.0.0.9" not in said and "secret" not in said, node
@@ -393,7 +393,7 @@ def test_the_funds_node_plans_for_the_saved_accounts_holdings_not_for_the_json_f
     manager.raise_funds = lambda portfolio_, target, shares, **kw: seen.append((portfolio_.symbols, portfolio_.cash_avail)) or {"status": "funded", "quotes": {}, "run": {}, "plan": None, "errors": [], "target": target, "shares": shares}
     store = BookStore(held=held)
     run({"symbol": "PG", "fetch": False, "funds": {"shares": 1, "buy": "PG"}, "account": {"account": "jacob_sample"}}, store_factory=lambda: store, manager=manager, with_funds=True)      # the user's own symbol: with $10 no purchase is permitted
-    assert seen == [(["KO"], 10.0)]
+    assert seen == [(["KO"], Decimal("10.0"))]
 
 
 # ---------------------------------------------------------------- the report

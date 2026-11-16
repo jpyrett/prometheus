@@ -13259,3 +13259,1697 @@ GOOGL | negative | Similar to Meta, Alphabet is borrowing to fund expensive data
 GOOGM | negative | Similar to Meta, Alphabet is borrowing to fund expensive data center expansion for AI infrastructure. Rising interest rates would negatively impact the economics of these debt-financed projects.
 GOOGN | negative | Similar to Meta, Alphabet is borrowing to fund expensive data center expansion for AI infrastructure. Rising interest rates would negatively impact the economics of these debt-financed projects.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143643449
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T22:40:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=10fa7341af6a49b7bdf4732ddc2b8a99a17c6d65dbeeae26aa9cf19518da2696
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Could HBF be the solution to the Memory bottleneck?
+<<<SUMMARY>>>
+Investing.com -- The rapid expansion of artificial intelligence workloads is creating a growing demand for memory capacity and bandwidth, opening the door for a new storage technology that could ease infrastructure constraints while providing a fresh growth opportunity for the NAND flash industry, Bernstein said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143643451
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T22:06:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f8f4ac784be758266254436840fe11617d7ffddeebbb34942bb16ecd5347602d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: What Is Meta Platforms (META) Facing As Legal Risks Rise And AI Deals Expand?
+<<<SUMMARY>>>
+Meta Platforms (NasdaqGS:META) joined Google and TikTok in suing California to block a new youth social media law targeting users under 16. Police in India registered a First Information Report against Meta after complaints over alleged child sexual abuse material on Instagram and Facebook. AMD disclosed agreements under which Meta may gain rights to about 320 million AMD shares as part of AI chip related deals. These parallel lawsuits, criminal allegations and AI equity rights only capture...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642668
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T20:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3668e9c835343307dc8b74d0181ffe572397d84ba423f5665b87653aa38b347f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Should You Buy Meta Platforms Before Its Stock Split?
+<<<SUMMARY>>>
+Meta Platforms is creating a new share class as part of its upcoming stock split.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654948
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T20:36:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7b6de63d69c8a1de6fa93e7fc5afe7ceff79487d388705b685406161ac1a1f1f
+image_url: 
+category: company
+tickers: META
+keywords: 
+headline: President Trump, In CBS 60 Minutes Interview Sunday, Said AI Risks Can Be Managed, But Doesn't Mind Guardrails
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642653
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T19:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d48e3a793e3b8cd9704132729a6cda17a0b4740df050cb1c993eeb8ba36152e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: This Is the Best-Performing Magnificent Seven Stock of 2026. Is It Still a Buy?
+<<<SUMMARY>>>
+Apple has crushed other members of the Magnificent Seven in 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654973
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T18:50:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0c6f210f6c2b57b4ee2caff92539fbe9f77480b8e124579061a0ecd700f5d394
+image_url: 
+category: company
+tickers: META
+keywords: 
+headline: UK Sunday Times Reported Meta Preparing To Launch Muse AI Assistant In UK
+<<<SUMMARY>>>
+https://www.thetimes.com/business/technology/article/mark-zuckerbergs-muse-ai-assistant-uk-launch-c5srqnkb8?eafs_enabled=false
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143644915
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T18:15:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=05cf0a9ed3da567ebc054ead51e3b1e9a96e7424db2265ef71f9778e390bb1de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: As Meta Platforms Buys Conductor, Here’s How to Play META Stock
+<<<SUMMARY>>>
+Meta is reportedly acquiring AI coding startup Conductor as it expands its artificial intelligence capabilities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143641771
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T18:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=785b51a23a857c469b3ddfaf14dc4060002763c17eeb79315093a4c7615388f9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Not Bloom Energy. Not Vistra. This AI Power Stock Just Posted a 96% Jump in Orders.
+<<<SUMMARY>>>
+The impending change in the political backdrop isn't apt to actually affect the growing demand for its equipment, either.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640857
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T17:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb9a0a6ea53b4ea4bb74e173b4e192a07c82181c4b15b031e9c94f5e5c114a9e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Democrats prepare to go after Apple, Meta and Elon Musk companies
+<<<SUMMARY>>>
+The midterm results handed Congress new investigative powers, and some of the biggest names in tech are already on the list.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640879
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T16:47:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=def6c476f008a9b78908b5b02e978248f5cc2da1f287f9861587749aeb5fea8a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: How sustainable is the AI investment boom after Thursday’s selloff?
+<<<SUMMARY>>>
+Investing.com -- The artificial intelligence investment boom is becoming increasingly difficult to sustain at its current pace as technology companies pour billions of dollars into infrastructure without a corresponding acceleration in revenues, raising the risk of an eventual spending slowdown that could weigh on economic growth, Capital Economics said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640901
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T16:44:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b05caebe2e15e5da2fc5beadf99eae61de25efdf37171e3022c38c54b5215b41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: America’s Productivity Just Surged 3.6% — Is AI Finally Delivering on Its Promise?
+<<<SUMMARY>>>
+Companies produced a full quarter of growth without hiring, and the profits are piling up fast. Workers, meanwhile, are watching their slice of the economy hit a record low, and one number in the next two reports could change that.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642688
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T14:31:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=79bdb21e2dcc19b16d483c161741b7e75ceb3339f7da5217bc03b3c6eebdbf77
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta Stock Dips Towards $600 But Don’t Load Up Just Yet
+<<<SUMMARY>>>
+Meta Platforms stock has dipped to near $600 amid the tech rout. The stock has started to look somewhat attractive here, but don't go overboard in buying the dip.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654974
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T13:30:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=72ae6d453a498f1b1a868bb6cb3af46c5d9ad79221701d514a578f1355fb874f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/08/Konskie--Poland---May-03--2025-Nebius-Gr.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Nebius Stock Ahead of Earnings: Options Traders Brace for a Big Move
+<<<SUMMARY>>>
+Nebius stock has slumped sharply as investors sell neocloud companies, with options traders bracing for a big move.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143638963
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T11:31:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d1eb1f468488ef11e9e8e3861a64fe80f38489fc8711f13b3afa1b0aed0bf16f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Here's how bro scaled from $10K to $60K/month with 1 creator 🤯
+<<<SUMMARY>>>
+He cut every influencer deal and went all-in on Meta ads, then scaled from $10K to $60K/month.Lino (18 years old, built AbMaxx in Rork with zero coding experience) realized his UGC and big influencer deals were killing margins at 5-10%. So he killed them all.What was actually working? Meta ads at 2-2.5X ROAS with one equity-partner creator making content.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639887
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T10:30:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ec1338be3aebd5819f0885edec9c8dbc4bbd179f681c4e8187e4050fc245cade
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/08/AI-technology-bubble-concept.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Consumer Tech (Oct 2-6): Big Earnings Dominate Headline, Meta, Google Face Political And Regulatory Pressure Over AI Expansion & More
+<<<SUMMARY>>>
+Meta faces political pressure over data center development, while Google encounters criticism over AI in schools and major technology stocks report quarterly results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143634559
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T06:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a95966616a52ed31524900c2825600235721a823afc31f63296f919f2943450d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Banks ban AI from accounts over fears of rogue agents
+<<<SUMMARY>>>
+Britain’s biggest banks have banned AI agents from accessing customer accounts over fears that personal finance bots will go rogue.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143624708
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T00:22:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2feeb59a3593a2e49392d3bbdba7d98f35e095d2460fe313666ae3b79fb0972f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: TSMC Stock And 2 AI Infrastructure Shares Riding The AGI Spending Wave
+<<<SUMMARY>>>
+Artificial intelligence arms races rarely move in straight lines. The latest spending plans from Meta, OpenAI partners and Anthropic are pouring billions into chips, cloud and power, and that flood of capital can lift some stocks while squeezing others that misjudge demand or pricing. Investors watching this AGI push risk missing the early read through. This article walks through 3 stocks exposed to that news and how the story might matter for your portfolio. The stocks covered next are just...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143619618
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T23:12:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f228c96c1a8cf5faa617067ba7968b3f4633d6316908a7a1ca070d366fd436e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: NVIDIA And 2 Other AI Stocks To Watch
+<<<SUMMARY>>>
+AI-focused companies are under fresh scrutiny after Meta’s large bond sale showed that investors now want clear paths to real profits, not just big promises. That is where profitable users of artificial intelligence start to look interesting. Rather than funding endless experiments, these businesses are already turning heavy AI spending into earnings. This article highlights three such stocks that filter through that lens. The three profitable AI stocks in this article are just a sample, and...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143618883
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T20:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c06917f1eea66e9cdfe75e3a62dcbb26447e40bee21b926bd33e5a8252574a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta’s Bond Sale Shows New Reality for Tech Debt
+<<<SUMMARY>>>
+Selling billions of dollars of corporate bonds on Election Day seemed like a real gamble.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143618861
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T19:30:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d5aef9ce9d96aaf41a0674794fec5046d8ebcc9e345de38fbda5d56e326f573
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Republican Senator Who Won Reelection Is Selling Magnificent Seven Stocks: Here Are the Trades
+<<<SUMMARY>>>
+Sen. Shelley Moore Capito (R-W.Va.) was among the Republicans who held onto their seats in the 2026 midterm elections. Weeks before the election, Capito sold shares of three Magnificent Seven stocks. Capito Sells Magnificent Seven Stocks Capito sold four stocks...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143617914
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T18:14:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a1dd13ce46f370f2a23056d7c0a62d732b3fce0937680c632ce232154beba5c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Oklo Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+Oklo (NYSE:OKLO) is building in additional time for commissioning and startup of its first Aurora powerhouse in Idaho, with its filing indicating the plant could come online in 2028 or 2029, executives said during the company’s third-quarter 2026 earnings call. CEO Jake DeWitte said lessons from Ok
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616866
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T17:01:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ceca23beb1416d552b3ee4a5a04b40eb978bede81ef8f0570bdf3f2ed7f3a114
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Apple Completes the Set: Every Magnificent Seven Stock Opts Out of OKX-ICE Venue
+<<<SUMMARY>>>
+Apple and Meta’s objections mean all seven of the biggest U.S. tech companies have now asked to keep their shares off the planned OKX-ICE venue.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639839
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T16:50:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=91984de96cc9cadded37305b6ea92938945591164adfeaffd1ab035f32e289d0
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/07/CoreWeave--Inc.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: CoreWeave and IREN Stocks Face Pressure as Microsoft Reassesses Its Computing Deals
+<<<SUMMARY>>>
+CoreWeave, IREN, and other neocloud companies are at risk of further downside as Microsoft starts to reassess their computing deals
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616911
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T16:06:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bc846f5e4d2fdd0095cbd6be3d709be6d337e8feb25c35b4c9a3c0b09763e5a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Snap Will Stop Reporting Daily Users in 2027. Its 92 Million North Americans Explain Why
+<<<SUMMARY>>>
+Key TakeawaysSnap will switch its main audience metric from daily to monthly users in 2027, after third-quarter daily users of 495 million missed estimates. Revenue rose 14% to $1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616895
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T15:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=174929522c25ab1889259f93f164d38283188ecee20e75bde4c417a5ef1506c3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: AI Stocks Diverge as Democratic Election Victory Sparks Rotation Into Cloud Giants
+<<<SUMMARY>>>
+US technology stocks experienced a significant shift in investor positioning on Wednesday, as the Democratic Party’s election victory raised concerns about potential restrictions on new data centre developments. Investors moved toward established cloud computing companies while reducing exposure to semiconductor manufacturers and AI infrastructure developers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143618876
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T15:30:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4ce812490718222c280e3ff9a5d4ef0e0fdd5c2214c00c50f5377d53c344aa0e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Why AGI’s Fuzzy Definition Matters for Investors Betting on Google, Meta, and Microsoft
+<<<SUMMARY>>>
+OpenAI, Anthropic, Google, Microsoft, and Meta define AGI in five different ways. Here’s what each is building and where investors can profit.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143617383
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T13:52:30Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=d1a05031a2d22fc11eba330ca7a7b0693f124707f8056933fd735769f647f79b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1473220501/image_1473220501.jpg?io=getty-c-w1536
+category: company
+tickers: META
+keywords: 
+headline: The AI Selloff Just Got Messy. Here's 3 Ways It Can Resolve
+<<<SUMMARY>>>
+AI stock selloff: macro fears, AI credit risk and data center delaysânot fundamentalsâdrive discounts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143617260
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T13:35:26Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7783bdf845b17db22569c6ed1f51f28948bf07f19d6b641587f85dd87209b374
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2171263147/image_2171263147.jpg?io=getty-c-w1536
+category: company
+tickers: META
+keywords: 
+headline: Don't Let The Blue Wave Scare You Out Of Chips
+<<<SUMMARY>>>
+Tech selloff after Democratic gains may be a buying chance: semis, chipmakers, and data centers look resilient.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640734
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T12:51:16Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=6e1c8c133af1b6634b36fb682432f8588d93ec1763011bc87a7e4289feb081a3
+image_url: https://image.cnbcfm.com/api/v1/image/108544587-1794070170749-gettyimages-1529862577-ALLEN__CO_2023.jpeg?v=1794070180&w=1920&h=1080
+category: company
+tickers: META
+keywords: 
+headline: Meta chief strategy officer Dave Wehner leaves to join AI infrastructure startup Fireworks as CFO
+<<<SUMMARY>>>
+Dave Wehner, Meta’s chief strategy officer, is leaving the company to become CFO of Fireworks, the AI infrastructure startup valued at $17.5 billion in July.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616096
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T12:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7b995c8431779e76eb0e1607244f58a75a91cfd0c8373275d88c129ce9bce509
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Big Tech’s AI race will save small business owners time. It won’t find them customers
+<<<SUMMARY>>>
+The next customer is one introduction away.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614384
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T12:06:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=654493aac01699eca0f7649fbee25bdaf50c025d61dd2a0ab14fb9ea0bd79136
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Dan Ives: Big Tech Free Cash Flow “Will Trough in 1H2027” as Capex Growth Peaks Early
+<<<SUMMARY>>>
+Key TakeawaysDan Ives of Yorkville Ives & Co. now expects Big Tech’s capex growth to peak in 2027, and free cash flow at Microsoft, Meta, Alphabet and Amazon to bottom in the first half of that year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639586
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8374a8eaf2e3855e96c32ee45b20424a417901caa56175b2cab23ffb8ce68d1f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: MarketBeat Week in Review – 11/2 - 11/6
+<<<SUMMARY>>>
+Market volatility persists on data center regulation concerns and rate expectations, as MarketBeat writers analyze earnings from AbbVie, Apple, Amazon, Palantir, Meta, Cameco, and other companies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614382
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T11:48:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44cc5152a9a0a82b7495fa6619cdbae08be92a09e9394ae887dfd1910e3a8848
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Citi Raises AI Revenue Forecasts Through 2028 as Cloud Demand Accelerates
+<<<SUMMARY>>>
+Citi has increased its artificial intelligence service revenue forecasts for 2026 through 2028, citing sustained demand for AI services and stronger monetisation across major cloud computing providers. The investment bank raised its AI revenue estimates by 9% for 2026, 7% for 2027 and 17% for 2028, reflecting expectations for continued expansion in AI-related cloud services.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143613358
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T10:51:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=613c2faf75b37b41f48cd58d629507239e0c54e65a89856ed3992b655163241c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Big Tech’s $1 Trillion Rally Bets Regulation Won’t Touch “the Profits of the Tech Companies”
+<<<SUMMARY>>>
+Key TakeawaysApple, Alphabet, Amazon, Microsoft and Meta were on pace to add nearly $1 trillion on Wednesday after Democrats won Congress. On Thursday, the four hyperscalers gave back 2% to 4%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614397
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a51e42fd64cc7510e8b7d245c5c92dd69378072a668f06165269ee2b36f20b0b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Mark Zuckerberg’s fortune tops $200 billion. His 3 daughters won’t inherit most of it
+<<<SUMMARY>>>
+The Meta CEO and Priscilla Chan pledged 99% of their shares in a 2015 letter to their newborn. Those shares were worth $45 billion then; his fortune now tops $200 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143607408
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:19:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=35b1c611cdc836d00729484a58d072947389a6eb08d01138d7d589d75cfbc751
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Is Booking Holdings Stock Worth More Than Its Competitors?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143607380
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:14:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bbe4b6cd4b56bf5079738f962db58660f06c3380e41127f934f06f41b0110016
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: The S&P 500 Is Up 75% In 3 Years. Priced In Gold, It Is Down 14%. Which Is Real?
+<<<SUMMARY>>>
+Part of our series on building a mix that lasts. Start here: is 60/40 dead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143606011
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:13:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=07c6ebb17ff6665543b4da20be33a1a5c9106ac5f5977d39963f23f63c7d79bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Where Will Your Portfolio Be In 2031, Not Tomorrow?
+<<<SUMMARY>>>
+Follow the whole story: every piece in this series is on our AI storyline page.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143613876
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=90418d0426e900e15479a41a6baf3c4057401cd8757234f754330366dfb2e12b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2167861901/image_2167861901.jpg?io=getty-c-w1536
+category: company
+tickers: META
+keywords: 
+headline: Reddit: It's A Steal, I'm Upgrading To Strong Buy
+<<<SUMMARY>>>
+Reddit stock fell on weak DAUq and Google Search changes, but strong revenue, profit, and low capex may signal deep value. Click for this RDDT stock update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616672
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T07:00:01Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=f4aa87c585bf8f440b85830eb1cd63311175ff825589bab996d5fa927a492402
+image_url: https://image.cnbcfm.com/api/v1/image/108000870-1719930897606-gettyimages-2159334713-AA_30062024_1752759.jpeg?v=1737096574&w=1920&h=1080
+category: company
+tickers: META
+keywords: 
+headline: Tech companies face mounting child safety lawsuits while pushing AI into schools
+<<<SUMMARY>>>
+Lawsuits against Snap, Meta and Google are creating headwinds for tech companies just as artificial intelligence tools expand into classrooms.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143595727
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T05:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=64854e96293f09cece475195caa0bb832e3038bd3fdaea749c488e19e49037c3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Better Stock Split to Buy: Meta Platforms vs. Sandisk
+<<<SUMMARY>>>
+Sandisk and Meta's stock splits are being done in two different manners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614505
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T00:36:33Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1b98dfbabf6d5aa61534d2b3b8d208f848339d11a020bcaf911f28c4e7af6240
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/07/The-Sam-Altman-Openai-And-Chatgpt-Logos-.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: OpenAI CFO Sarah Friar Isn't Letting Midterm Voter Backlash Derail AI Data Center Spending, Says Company Will ‘Build Trust’ With Communities
+<<<SUMMARY>>>
+OpenAI CFO Sarah Friar vowed to continue data center investments despite voter backlash and political opposition.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840369
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T15:50:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4cbc0adef751322c1f07a2adc687e93c5b5b346499e48b76c98df1643800ba9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: By The Way: Headlines You May Have Missed
+<<<SUMMARY>>>
+AI bots using credit cards, Meta and TikTok's confidential payments to teens, how the wealthy are trying to keep kids at home, and a fundraising drunk raccoon: Join Lisa Mateo, David Gura and Christina Ruffini for a roundup of headlines you may have missed, but gotta see.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840289
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T13:53:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a498936e53ea3ed4fdca6a85bd53253ce2a008e36c1be9adb80bf7e4f5e2ebb7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Italy Fines Meta €805 Million. Why the Legal Route Matters More Than the Money
+<<<SUMMARY>>>
+Key TakeawaysItaly fined Meta €805 million (about $887 million) over a Facebook Android feature that accessed users’ photo galleries without specific consent. Meta must switch it off by default within 60 days, and it plans to appeal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840111
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T13:06:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fad859429428149cf5d992f71ad5b79bbb0b6c98a3ab4207d2d90e88a85d6776
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta (META) Faces $880 Million Italy Fine Over User Photo Access
+<<<SUMMARY>>>
+Meta Platforms (NasdaqGS:META) faces a proposed €880 million fine in Italy over alleged misuse of users' photos and metadata. Italy's data protection authority targets Facebook's Gallery Suggestions feature for accessing and processing images without explicit, informed consent. Meta has stated it plans to appeal the Italian regulator's decision through available legal channels. The Italian fine over Gallery Suggestions arrives as regulators intensify scrutiny of how Meta handles user data...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143838996
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T10:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e5b720f279df0127736356af2ee90d09fd1b9c002427e1a3ad6a0703b899bdb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: From Dodge to Anthropic: The Century-Old Playbook Taking Over Tech IPOs
+<<<SUMMARY>>>
+Many of the hottest companies now use dual-share structures in which in insiders hold most of the voting stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143815815
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T02:08:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4a9579523dc0fb515797608dd9ce6c27c2be6f6f845c74081026cc33c6a362b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Evercore explains why Apple has the right assets to win the personal agents race
+<<<SUMMARY>>>
+Investing.com -- Apple Inc (NASDAQ:AAPL) has the technology, user base, and payment infrastructure to become a leading player in personal AI agents, potentially generating billions in new revenue, according to Evercore ISI analyst Amit Daryanani.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840183
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T00:32:38Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=32bc6a3361fae5eaa41eac30e204c069cdd9649a6539bdfc7325323f72bb6707
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/15/New-York--Usa---14-December-2024-Meta-Pl.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Meta Faces $887 Million Fine in Italy as Regulator Says Facebook Accessed Users’ Photos Without Consent
+<<<SUMMARY>>>
+Italy fines Meta €805 million ($887.3 million) over alleged unauthorized access to Android users’ photos and videos without proper consent.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807420
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T20:12:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=71584a7b325e4a72729af38bc023175a2c0223e2e87e5c26ac9a6717853562a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Italy fines Meta $880 mn over photo privacy: authority
+<<<SUMMARY>>>
+Italian regulators fined Facebook parent company Meta 805 million euros ($880 million) for accessing users' photos without their "specific" consent, the country's data protection authority said on Saturday.Through the Facebook application for Android devices, Meta accessed photographs, videos and related metadata belonging to Italian users "without obtaining specific consent and without properly informing them", the authority said in a statement.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807347
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T18:33:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ec856b5c1ab9a81c4c7e843d35b917e6adaced108f649513f024f965ae0f6a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Italy fines Meta $880 million over accessing users' photos
+<<<SUMMARY>>>
+The country's data protection authority said Meta accessed users' photos without their "specific" consent.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807126
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T15:29:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27d6a8138035c95c92057b34e2a57e51c011bbbf3b90becf843fb4f59c572279
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Italy fines Meta €805 million over access to Android users’ photos
+<<<SUMMARY>>>
+Investing.com -- Italy's data protection authority has fined Meta Platforms Inc (NASDAQ:META) €805 million ($887 million) after finding that the company accessed photographs and videos stored on Android users' devices without obtaining their permission or adequately informing them.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807109
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T15:05:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d65d8020216f5e6d7add2864d5dd9203bafa39994057094f042e2e3f025f73ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Billionaire Bill Ackman Says There’s a Huge Disconnect in Wall Street’s Expectations for Amazon, Microsoft, Meta, and Alphabet
+<<<SUMMARY>>>
+Wall Street expects the hyperscalers to keep up their heavy capital expenditures, but it's worried that the revenue growth they are expecting to result from that spending might not show up.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807128
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T14:22:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d18e49e0a131b9b6d4fbc4baca2ef2eb2f258d2ae9a9545846e1e048d2d97a23
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta Is Testing a Prediction-Market App With Its Employees
+<<<SUMMARY>>>
+Meta employees are betting fake points on Jeopardy! winners inside a secret app that has already worn three names. Can a free game succeed where the company's 2020 attempt failed, and why would an ad giant want it?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806183
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T13:16:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a0262600a3f13c19395e9d9f56a1282468bc302d95063775760b30fdd7672bc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: SpaceX Hollows Out Its AI Video Division. Elon Musk Now Has Different Priorities
+<<<SUMMARY>>>
+A quiet round of layoffs just gutted one of Elon Musk's flashiest AI products, months after he vowed to double down on it. The retreat could hand a rival with deep pockets and a giant video platform exactly the opening it needs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840100
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T13:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=93c59a185cf737cdbe0d38b9a890deaeee4684ee8e98120ccc9c03a3a3062821
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Cerebras Q3 Results: How Much More Proof Does Wall Street Need?
+<<<SUMMARY>>>
+Cerebras Systems beat Q3 estimates with 70% core revenue growth and a large backlog, driven by hyperscaler demand, including a newly revealed Microsoft partnership, though analysts flag execution risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806186
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T12:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=176409d018e3ec8c5a1b2b956060c7e9f8aeb3e4043cc1be5bf2a033777fbd79
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Jamie Dimon Just Said 5 Words Blocking Outside AI Agents From JPMorgan Accounts: "You Don't Want Rogue Agents." Here's Why That Security Stance Matters for JPM and Its Tech Rivals.
+<<<SUMMARY>>>
+The CEO of JPMorgan Chase isn't going to open his customers' accounts to "just any" AI agents from third parties.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807236
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T11:49:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=321f202b14fa587e24e8f144ae8b9c333e9a2c0066a3ba0fea67d32f6f724a3a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: A $13 Billion Hedge Fund Dumps These 3 Stocks
+<<<SUMMARY>>>
+Key TakeawaysWhale Rock Capital, a hedge fund firm managing nearly $13 billion, sold all its Astera Labs, Carvana and Western Digital stock in the third quarter while building up Meta and SiTime. Astera Labs and Western Digital are each down 54% since June 30, the last date the fund reported owning them, while Carvana is up 10%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805872
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T06:17:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3bfce9314cac4e25d5b137ff6c1e892b86a197db0c748209d8c49b8e518106f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Centrus Energy (LEU) Lands Multiyear HALEU Deal Backed By Customer Prepayments
+<<<SUMMARY>>>
+Centrus Energy (NYSE:LEU) and Oklo signed definitive multi year HALEU supply contracts to support Aurora power projects in Ohio. Meta is providing prepayments that back the fuel agreements, linking the tech group directly to future Oklo power output. The contracts are tied to new enrichment capacity at Centrus' American Centrifuge Plant and expand a reported US$5.4b backlog. These Meta backed HALEU deals between Centrus and Oklo deserve to be weighed against the rest of our Centrus findings...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806295
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T22:34:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=39b2e33eec3d61058b9518eb7c6a8d585b0d9fce010637ce7ff2d37687e4882c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/14/The-Sam-Altman-Openai-And-Chatgpt-Logos-.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: ChatGPT Wallet Lets OpenAI's Dots AI Agents Shop On Your Behalf Without Accessing Actual Card Details
+<<<SUMMARY>>>
+OpenAI unveiled ChatGPT Wallet, a new payment capability that allows its “dots” AI agents to complete purchases for users&#39; behalf.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806635
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:51:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5cb5fcc1f0e61f623c0b770e5d7c9b0cb120b8fa6081a449e77738f8052cd9eb
+image_url: 
+category: company
+tickers: META
+keywords: 
+headline: 'Meta Testing New Prediction-Market App With Employees'- WSJ
+<<<SUMMARY>>>
+https://www.wsj.com/tech/meta-testing-new-prediction-market-app-with-employees-bf7bacb2
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806215
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:28:33Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=afb526bc7b4b2370542f7aad5f6f70967429745f0029f334748e106bd01b0bf5
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/13/AMD.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: AMD Benefits From Nvidia's Troubles, Smart Money Sells Nvidia; Cooler PPI; Bitcoin Below $70K
+<<<SUMMARY>>>
+AMD To Benefit
+
+
+
+Please click here for an enlarged chart of Advanced Micro Devices Inc (NASDAQ:AMD).
+
+
+
+Note the following:
+
+
+
+
+This article is about the big picture, not an individual stock.  The chart of AMD
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806074
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:00:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7f9779f971d8dc620fdc3b643c358ba3269c83c2baf60f55c16be9d284c4d18d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/13/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Consumer Staples Leads Sectors As Technology Trails
+<<<SUMMARY>>>
+Six sectors are higher and five are lower in Friday&#39;s regular session, with the top three split across defensive, growth and cyclical groups. Consumer Staples sits well clear of the rest, separated by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806638
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T10:38:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=24bf7715eb1414a1c4fb36148504827d8bd410da6ce241db4312551c9038b53b
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/13/Hand-Holding-Phone-With-The-Tiktok-Logo-.jpg?width=2048&height=1536
+category: company
+tickers: META
+keywords: 
+headline: Meta’s TikTok Threat Just Became Bigger Than Oracle
+<<<SUMMARY>>>
+Meta faces a $400 billion TikTok rival as ByteDance&#39;s valuation surpasses Oracle&#39;s market cap following a $6 billion share buyback.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143845011
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T09:37:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=950c4cb797b1674af6c493083d383d0869c81e890659b1e1e59773273dc42045
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Meta Fined $887.3 Million by Italy for Accessing Android Users' Photos Without Specific Consent
+<<<SUMMARY>>>
+Meta Platforms (META) was fined 805 million euros ($887.3 million) by Italy's data protection author
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143843604
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T07:46:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f32140d466536638fc7873c97de37c8e361045337d321591a5ad01a7602e3772
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: AAPL Stock Posted Best Week In 4 Months Amid Nvidia Disruption: Apple Reportedly Plans Smart Glasses To Rival Meta Next Year
+<<<SUMMARY>>>
+Apple’s rumoured smart glasses will debut at WWDC 2027, Bloomberg reported.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143843627
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T02:20:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=601b9c19bd74fa44095376c7da4c3834461661ac3bf6748d1425e278b5e6bc1e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: AMD Is Up 115% in a Year. One Investor’s Math Says a Great 2027 Is Already in the Price
+<<<SUMMARY>>>
+Key TakeawaysAMD is up 115% over the past 12 months while NVIDIA is down 13%, and AMD closed at $534. 06 on Nov.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143843437
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T02:13:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c128d8efce1f5ce780df278873e97c1224d5ea27bf9bedc16fa4b37c78e4e6ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Microsoft Is the Only Tech Giant Not “Highly Reliant on Advertising” as AI Upends Search
+<<<SUMMARY>>>
+Key TakeawaysMicrosoft briefly passed NVIDIA in market value on November 10, and both ended November 13 near $3. 9 trillion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841655
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T01:24:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ff5f12b78809a3a19aa0ede6444bea981fab8003994de12c8bd167418132ba5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Anthropic's record IPO faces some big questions
+<<<SUMMARY>>>
+No startup has ever grown so fast.Investors have already grown nervous.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840752
+symbol: META
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T00:07:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ee11a9635a2aa7f23d040350f3cc2a4fec0562fff367523c05755eec154a892
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: META
+keywords: 
+headline: Is Meta Stock Still a Buy After Borrowing About $25 Billion This Month?
+<<<SUMMARY>>>
+The social media giant's new bonds pay up to 7.5% a year. Should shareholders worry?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6ceca5213eeebfea1483aeed6269cdda9a5179716e94b40f556d03ebbb7ce467
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T07:31:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/11/14/anthropic-s-s-1-says-natural-gas-not-chips-is-ai-s-biggest-bottleneck-here-s-the-stock-that-sells-the-engines/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F98c4ccef9eacd8dcb5edbdac15d5c02a6e3a0663-1280x720.png&w=1200&op=resize
+category: 
+tickers: ET, ORCL, ORCLpD, META, METAM
+keywords: natural gas, AI data centers, energy infrastructure, pipeline capacity, power bottleneck, energy demand
+headline: Anthropic’s S-1 Says Natural Gas, Not Chips, Is AI’s Biggest Bottleneck. Here’s the Stock That Sells the Engines.
+<<<SUMMARY>>>
+Anthropic's S-1 filing reveals that natural gas supply and pipeline capacity are critical bottlenecks for AI data centers, with the company mentioning natural gas five times in a single paragraph. Energy Transfer, which operates over 140,000 miles of pipelines across 44 states, is positioned to benefit from increased demand for natural gas from AI companies. The company has already signed agreements with Oracle and other data center operators, and its adjusted EBITDA grew 31% in Q3 2026, though high debt of $68.8 billion remains a concern.
+<<<INSIGHTS>>>
+ET | positive | Company is well-positioned to capitalize on growing natural gas demand from AI data centers, has secured major contracts with Oracle and other operators, demonstrated 31% EBITDA growth in Q3 2026, maintains a 7% dividend yield with 20 consecutive quarterly increases, and analysts project 28.6% upside potential.
+ORCL | neutral | Mentioned as a customer signing agreements with Energy Transfer for natural gas supply to data centers, indicating expansion of AI infrastructure but no direct investment thesis presented.
+ORCLpD | neutral | Mentioned as a customer signing agreements with Energy Transfer for natural gas supply to data centers, indicating expansion of AI infrastructure but no direct investment thesis presented.
+META | neutral | Indirectly connected through partnership with Entergy Louisiana for data center power, but mentioned only as context for Energy Transfer's business opportunities rather than as a primary investment focus.
+METAM | neutral | Indirectly connected through partnership with Entergy Louisiana for data center power, but mentioned only as context for Energy Transfer's business opportunities rather than as a primary investment focus.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4fa62c454b0e0f7738064f67d097ca82943cb8b1c042b3d12e43064917ea2f4f
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T09:05:00Z
+publisher: The Motley Fool
+author: Geoffrey Seiler
+url: https://www.fool.com/investing/2026/11/14/prediction-2-stocks-that-will-be-worth-more-than-s/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891553%2Fgettyimages-2078917109.jpg&w=1200&op=resize
+category: 
+tickers: META, METAM, AVGO, SPCX, NVDA, GOOG, GOOGL, GOOGM, GOOGN
+keywords: AI chips, custom silicon, data centers, e-commerce, hyperscalers, market valuation, stock prediction
+headline: Prediction: 2 Stocks That Will Be Worth More Than SpaceX 5 Years From Now
+<<<SUMMARY>>>
+The article predicts that Meta Platforms and Broadcom could surpass SpaceX in market value within five years. SpaceX faces potential headwinds from political opposition to data center growth and declining compute rental rates. Meta is positioned to benefit from AI-driven advertising growth and its new Muse AI agents for e-commerce. Broadcom is expected to lead in custom AI chip development as hyperscalers diversify away from Nvidia.
+<<<INSIGHTS>>>
+META | positive | Strong AI-driven advertising growth with 14% increase in average ad prices. Muse AI agents present a significant new revenue stream through agentic commerce. Trading at attractive forward P/E of 17.5x with room for growth and multiple expansion.
+METAM | positive | Strong AI-driven advertising growth with 14% increase in average ad prices. Muse AI agents present a significant new revenue stream through agentic commerce. Trading at attractive forward P/E of 17.5x with room for growth and multiple expansion.
+AVGO | positive | Leading position in custom AI chip development (ASICs) with major customers including Alphabet, Meta, and OpenAI. Expected to benefit from hyperscalers diversifying away from Nvidia. Projected AI chip revenue growth from $57.5B to $230B by fiscal 2028. Trading at low forward P/E of 12x with explosive growth prospects.
+SPCX | negative | Faces political headwinds from midterm election results opposing data center growth. Capital-intensive business vulnerable to delays. Risk of declining compute rental rates as capacity increases, which could hurt revenue growth and profitability.
+NVDA | negative | Experiencing recent troubles that are driving hyperscalers to develop custom AI chips with competitors like Broadcom, reducing reliance on Nvidia's GPUs.
+GOOG | neutral | Mentioned as developer of Tensor Processing Units (TPUs) with Broadcom's assistance. TPUs becoming a growth driver but company is not the primary focus of the article.
+GOOGL | neutral | Mentioned as developer of Tensor Processing Units (TPUs) with Broadcom's assistance. TPUs becoming a growth driver but company is not the primary focus of the article.
+GOOGM | neutral | Mentioned as developer of Tensor Processing Units (TPUs) with Broadcom's assistance. TPUs becoming a growth driver but company is not the primary focus of the article.
+GOOGN | neutral | Mentioned as developer of Tensor Processing Units (TPUs) with Broadcom's assistance. TPUs becoming a growth driver but company is not the primary focus of the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c24305fd7067e884345d45bbf865b65b9e7a665d47d4afb23a087cfc20e90b91
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T09:06:02Z
+publisher: The Motley Fool
+author: Sean Williams
+url: https://www.fool.com/investing/2026/11/14/new-inflation-data-offers-terrible-news-donald-trump-economy-and-ai-driven-bull-market/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F967ce5a4f096d8dadf12d42c060bc8ce96357293-2048x1365.jpg&w=1200&op=resize
+category: 
+tickers: NVDA, AAPL, AMZN, MSFT, META, METAM, TSLA
+keywords: inflation, PCE, tariffs, AI infrastructure, Trumpflation, Federal Reserve, interest rates, supply chain, semiconductors
+headline: New Inflation Data Offers Terrible News for President Donald Trump's Economy and the AI-Driven Bull Market
+<<<SUMMARY>>>
+New inflation data from the Cleveland Federal Reserve shows consumer prices are rising faster than expected, with PCE inflation projected to reach 3.82% by November and Core PCE at 3.31%. Two major factors are driving inflation: 'Trumpflation' from tariffs and the Iran war disrupting energy supplies, and AI infrastructure build-out straining semiconductor and electronics supply chains. The Federal Reserve faces a dilemma—raising interest rates to combat inflation could devastate the stock market and economic growth, while doing nothing allows inflation to worsen.
+<<<INSIGHTS>>>
+NVDA | negative | As a major AI hardware supplier, Nvidia benefits from AI infrastructure build-out but faces headwinds from potential Fed rate hikes that could slow AI investment spending
+AAPL | negative | Consumer electronics prices are rising due to AI-driven semiconductor shortages; higher inflation and rates could reduce consumer demand for expensive devices
+AMZN | negative | Major AI infrastructure investor facing higher costs from supply chain inflation; rate hikes could reduce consumer spending and slow cloud/AI investment
+MSFT | negative | Heavy AI infrastructure investor facing cost pressures; potential Fed rate hikes could slow AI spending and impact cloud business growth
+META | negative | Significant AI infrastructure investor; rising costs and potential rate hikes threaten profitability and growth prospects
+METAM | negative | Significant AI infrastructure investor; rising costs and potential rate hikes threaten profitability and growth prospects
+TSLA | negative | Exposed to tariff-driven inflation on imported components and energy costs; rate hikes would reduce consumer demand for expensive vehicles
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:efb0500fc153d6f604e1b874707415d8fbf318a4b516656e91260618b3351e58
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T12:30:02Z
+publisher: The Motley Fool
+author: Tmf Breakfast News
+url: https://www.fool.com/investing/breakfast-news/2026/11/14/breakfast-news/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fmisc-assets%2Foptions-selling-put-example1126.png&w=1200&op=resize
+category: 
+tickers: AAPL, AMZN, GOOG, GOOGL, GOOGM, GOOGN, META, METAM, MSFT, NVDA, TSLA
+keywords: options trading, market volatility, artificial intelligence investments, selling puts, covered calls, protective puts, portfolio management, risk management
+headline: Breakfast News: 3 Options Moves for a Jumpy Market
+<<<SUMMARY>>>
+The article explains three options strategies to navigate market volatility caused by investor doubts about AI investments by major tech companies. It covers selling puts (get paid to wait for a target price), selling covered calls (collect rent on oversized positions), and buying protective puts (insure against significant drops). The article emphasizes understanding these strategies before executing trades.
+<<<INSIGHTS>>>
+AAPL | neutral | Up 0.4% (+$1.39), showing modest resilience despite broader market concerns
+AMZN | negative | Down 0.3% (-$0.78), reflecting concerns about AI investment returns among major tech companies
+GOOG | negative | Down 1.0% (-$2.83), showing weakness as one of the major AI-investing companies facing investor doubts
+GOOGL | negative | Down 1.0% (-$2.83), showing weakness as one of the major AI-investing companies facing investor doubts
+GOOGM | negative | Down 1.0% (-$2.83), showing weakness as one of the major AI-investing companies facing investor doubts
+GOOGN | negative | Down 1.0% (-$2.83), showing weakness as one of the major AI-investing companies facing investor doubts
+META | positive | Up 2.9% (+$18.08), outperforming despite market volatility and AI investment concerns
+METAM | positive | Up 2.9% (+$18.08), outperforming despite market volatility and AI investment concerns
+MSFT | neutral | Up 0.2% (+$0.88), showing relative stability among major AI investors
+NVDA | negative | Down 2.0% (-$3.34), reflecting concerns about AI investment payoff affecting semiconductor demand
+TSLA | negative | Down 1.8% (-$7.23), showing weakness among major portfolio holdings during market volatility
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f1b8c490a96550b7acd22cd0feebec9609ac92978cf85ec5d0cae848df71c266
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T12:34:00Z
+publisher: The Motley Fool
+author: Ben Gran
+url: https://www.fool.com/investing/2026/11/14/jamie-dimon-just-said-5-words-blocking-outside-ai/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F891832%2Fjamie-dimon_jpmorgan-chase_jpm_chairman-ceo_imagesource_jpmorgan-chase-co3.jpg&w=1200&op=resize
+category: 
+tickers: AMJB, JPM, JPMpC, JPMpD, JPMpJ, JPMpK, JPMpL, JPMpM, VYLD, META, METAM, UAL
+keywords: AI agents, cybersecurity, banking regulation, agentic AI, third-party access, Know Your Customer compliance, financial risk
+headline: Jamie Dimon Just Said 5 Words Blocking Outside AI Agents From JPMorgan Accounts: "You Don't Want Rogue Agents." Here's Why That Security Stance Matters for JPM and Its Tech Rivals.
+<<<SUMMARY>>>
+JPMorgan Chase CEO Jamie Dimon warned against allowing third-party AI agents like Meta's Muse to access customer accounts, citing security and regulatory risks including potential unauthorized transactions and compliance violations. United Airlines similarly announced restrictions on third-party AI agents for bookings, signaling that heavily regulated industries are taking a cautious stance on agentic AI integration.
+<<<INSIGHTS>>>
+AMJB | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+JPM | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+JPMpC | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+JPMpD | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+JPMpJ | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+JPMpK | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+JPMpL | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+JPMpM | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+VYLD | neutral | JPMorgan Chase is taking a defensive, security-focused stance by blocking third-party AI agents. While this protects the bank from liability and regulatory risks, it limits innovation and customer convenience. The stance is prudent but not growth-oriented.
+META | negative | Meta's Muse AI agent faces significant barriers to adoption in regulated industries like banking and airlines. Major financial institutions blocking access limits the product's utility and market potential, which could impact Meta's agentic AI business expansion.
+METAM | negative | Meta's Muse AI agent faces significant barriers to adoption in regulated industries like banking and airlines. Major financial institutions blocking access limits the product's utility and market potential, which could impact Meta's agentic AI business expansion.
+UAL | neutral | United Airlines is taking a similar cautious approach to JPMorgan Chase by restricting third-party AI agents. This is a defensive measure to prevent unauthorized bookings and regulatory violations, reflecting industry-wide caution rather than a negative business development.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:84398a50201a612394f8967dfa394bdfdec2a397aae65cbaf7425e3dc86da4c7
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T14:45:02Z
+publisher: The Motley Fool
+author: Adam Levy
+url: https://www.fool.com/investing/2026/11/14/bill-ackman-huge-disconnect-wall-street-expectations-for-hyperscalers/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0e408c08a1cfd33013206c1210bcdad661648846-1290x860.png&w=1200&op=resize
+category: 
+tickers: AMZN, MSFT, META, METAM, GOOG, GOOGL, GOOGM, GOOGN
+keywords: AI data centers, capital expenditure, return on invested capital, hyperscalers, revenue growth, valuation disconnect, cloud computing
+headline: Billionaire Bill Ackman Says There’s a Huge Disconnect in Wall Street’s Expectations for Amazon, Microsoft, Meta, and Alphabet
+<<<SUMMARY>>>
+Bill Ackman argues that Wall Street analysts are underestimating the revenue growth potential from the massive capital expenditures being made by Amazon, Microsoft, Meta, and Alphabet in AI data centers. He estimates these companies can generate 15-25% returns on invested capital from their data center buildouts, suggesting consensus estimates for minimal revenue growth are too pessimistic. At current valuations of 21-28x forward earnings, all four companies appear undervalued, with Alphabet and Meta being particularly attractive.
+<<<INSIGHTS>>>
+AMZN | positive | Ackman believes Amazon's massive data center capex will generate strong future revenue and earnings growth exceeding analyst expectations. The company is experiencing accelerating cloud revenue growth with sustained growth expected. Current valuation of 21-28x forward earnings is considered attractive.
+MSFT | positive | Similar to Amazon, Microsoft is experiencing accelerating cloud revenue growth with expectations for sustained growth near or above current levels. Ackman's analysis suggests the company's capex investments will yield outsized returns, making it undervalued at current multiples.
+META | positive | Meta is highlighted as particularly appealing at current valuations. The company has shown accelerating advertising growth alongside increased capex and has multiple monetization opportunities through Muse agentic AI, business messaging, and LLM licensing. Ackman considers it especially attractive among the four hyperscalers.
+METAM | positive | Meta is highlighted as particularly appealing at current valuations. The company has shown accelerating advertising growth alongside increased capex and has multiple monetization opportunities through Muse agentic AI, business messaging, and LLM licensing. Ackman considers it especially attractive among the four hyperscalers.
+GOOG | positive | Alphabet's Google Cloud revenue has more than doubled year-over-year in its most recent quarter, demonstrating strong acceleration. Ackman identifies it as especially appealing at current valuations, suggesting significant upside potential from data center investments that Wall Street is underappreciating.
+GOOGL | positive | Alphabet's Google Cloud revenue has more than doubled year-over-year in its most recent quarter, demonstrating strong acceleration. Ackman identifies it as especially appealing at current valuations, suggesting significant upside potential from data center investments that Wall Street is underappreciating.
+GOOGM | positive | Alphabet's Google Cloud revenue has more than doubled year-over-year in its most recent quarter, demonstrating strong acceleration. Ackman identifies it as especially appealing at current valuations, suggesting significant upside potential from data center investments that Wall Street is underappreciating.
+GOOGN | positive | Alphabet's Google Cloud revenue has more than doubled year-over-year in its most recent quarter, demonstrating strong acceleration. Ackman identifies it as especially appealing at current valuations, suggesting significant upside potential from data center investments that Wall Street is underappreciating.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0942b18c1d6e91133bd466d2c3cfe5f57773e447c93cee0eecd2a1c0db67b4dd
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T13:25:02Z
+publisher: The Motley Fool
+author: Harsh Chauhan
+url: https://www.fool.com/investing/2026/11/15/the-evidence-is-piling-up-amd-could-be-the-best-artificial-intelligence-ai-stock-to-buy-amid-the-sell-off/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F7d13e5847eae660cd0e58140a4d22933fe5cd419-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AMD, GOOG, GOOGL, GOOGM, GOOGN, META, METAM, MSFT
+keywords: AMD, artificial intelligence, semiconductor, data center, server CPU, Google Cloud, Epyc processors, stock valuation, earnings growth
+headline: The Evidence Is Piling Up: AMD Could Be the Best Artificial Intelligence (AI) Stock to Buy Amid the Sell-Off
+<<<SUMMARY>>>
+AMD is positioned as an attractive AI stock opportunity amid semiconductor sector weakness. The company's data center revenue surged 97% year-over-year, driven by strong demand for its Epyc server CPUs. An expanded partnership with Google Cloud and a projected $220 billion server CPU market by 2030 support AMD's forecasted 80%+ revenue growth in 2027. With analysts expecting 70% annual EPS growth and the stock trading at 33x forward earnings, the article suggests AMD could double to $1,150 by 2030.
+<<<INSIGHTS>>>
+AMD | positive | Strong fundamentals with 97% YoY data center revenue growth, major partnership expansion with Google, forecasted 80%+ revenue growth in 2027, and attractive valuation at 33x forward earnings with significant upside potential to $1,150 by 2030.
+GOOG | positive | Expanded partnership with AMD for cloud infrastructure, massive $561 billion backlog expected to be recognized over two years, and aggressive capital expenditure plans position Google as a major beneficiary of AI infrastructure spending.
+GOOGL | positive | Expanded partnership with AMD for cloud infrastructure, massive $561 billion backlog expected to be recognized over two years, and aggressive capital expenditure plans position Google as a major beneficiary of AI infrastructure spending.
+GOOGM | positive | Expanded partnership with AMD for cloud infrastructure, massive $561 billion backlog expected to be recognized over two years, and aggressive capital expenditure plans position Google as a major beneficiary of AI infrastructure spending.
+GOOGN | positive | Expanded partnership with AMD for cloud infrastructure, massive $561 billion backlog expected to be recognized over two years, and aggressive capital expenditure plans position Google as a major beneficiary of AI infrastructure spending.
+META | neutral | Mentioned as one of AMD's key data center customers/partners, but no specific details provided about the partnership or impact.
+METAM | neutral | Mentioned as one of AMD's key data center customers/partners, but no specific details provided about the partnership or impact.
+MSFT | neutral | Listed as one of AMD's hyperscaler partners in the data center segment, but no specific details or analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:850ee37eb8c9f5311292165c11c9131cc498dc57ecd5e0b452a0baa38a63099d
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T13:37:01Z
+publisher: The Motley Fool
+author: Anders Bylund
+url: https://www.fool.com/investing/2026/11/15/is-credo-technology-a-better-ai-networking-buy-than-broadcom/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F8b4f2e74e225ae84551b6d2b4f43ac845f21e1fe-1200x800.png&w=1200&op=resize
+category: 
+tickers: AVGO, CRDO, GOOG, GOOGL, GOOGM, GOOGN, META, METAM
+keywords: AI networking, semiconductor, data center, optical connectivity, SerDes modules, growth vs stability, high-growth tech
+headline: Is Credo Technology a Better AI Networking Buy Than Broadcom?
+<<<SUMMARY>>>
+The article compares Broadcom and Credo Technology as AI networking investments. Broadcom, a $1.7T chip giant, offers stability with projected AI revenue reaching $230B by 2028 and pays a dividend. Credo Technology, a smaller $25B networking specialist, delivers triple-digit revenue growth and focuses on optical and copper connectivity for data centers. The choice depends on investor risk tolerance: Broadcom suits conservative investors seeking stability, while Credo appeals to growth-focused investors willing to accept volatility.
+<<<INSIGHTS>>>
+AVGO | positive | Broadcom is positioned as a foundational AI play with massive scale ($1.7T market cap), strong visibility with AI revenue projected to reach $230B by 2028, a reliable dividend (0.75% yield), and established relationships across the tech sector. Described as 'the clear choice for conservative investors.'
+CRDO | positive | Credo demonstrates exceptional growth with seven consecutive quarters of triple-digit revenue growth and trailing sales up 869% over three years. Its specialized technology in optical and copper connectivity addresses hyperscaler needs for power efficiency. Recommended as 'a compelling case' and 'top pick for growth-focused portfolios' despite higher volatility.
+GOOG | neutral | Mentioned as a frontier lab co-developing custom AI accelerators with Broadcom, indicating partnership relevance to AI infrastructure but not a primary focus of the comparison.
+GOOGL | neutral | Mentioned as a frontier lab co-developing custom AI accelerators with Broadcom, indicating partnership relevance to AI infrastructure but not a primary focus of the comparison.
+GOOGM | neutral | Mentioned as a frontier lab co-developing custom AI accelerators with Broadcom, indicating partnership relevance to AI infrastructure but not a primary focus of the comparison.
+GOOGN | neutral | Mentioned as a frontier lab co-developing custom AI accelerators with Broadcom, indicating partnership relevance to AI infrastructure but not a primary focus of the comparison.
+META | neutral | Mentioned as a frontier lab co-developing custom AI accelerators with Broadcom, indicating partnership relevance to AI infrastructure but not a primary focus of the comparison.
+METAM | neutral | Mentioned as a frontier lab co-developing custom AI accelerators with Broadcom, indicating partnership relevance to AI infrastructure but not a primary focus of the comparison.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:241f3748798513bed52cc7a75653908d8d6b2aa19da1afa22d2496776528b117
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T16:30:00Z
+publisher: The Motley Fool
+author: Patrick Sanders
+url: https://www.fool.com/investing/2026/11/15/mark-cuban-says-learn-ai-or-become-a-dinosaur-with/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F881317%2Fgettyimages-2163090448.jpg&w=1200&op=resize
+category: 
+tickers: QQQ, AAPL, NVDA, MSFT, GOOG, GOOGL, GOOGM, GOOGN, AMZN, META, METAM, TSLA, AMD, MU
+keywords: artificial intelligence, AI investment, tech stocks, ETF, Magnificent Seven, technology sector, index fund
+headline: Mark Cuban Says Learn AI or Become "a Dinosaur Within 3 Years." Here's What That Means for Your Portfolio.
+<<<SUMMARY>>>
+Mark Cuban's 2017 warning about learning AI to avoid becoming obsolete has proven prescient as AI has transformed industries. The article recommends the Invesco QQQ Trust ETF as an accessible way to invest in multiple AI-focused companies, highlighting its low expense ratio of 0.18% and substantial holdings in major tech firms driving the AI economy.
+<<<INSIGHTS>>>
+QQQ | positive | Recommended as an excellent vehicle for AI exposure with low fees (0.18%), diversified holdings across major AI companies, and strong historical performance potential in the tech sector.
+AAPL | positive | Listed as a leading AI developer and top holding in QQQ (8.43%), part of the Magnificent Seven driving market growth.
+NVDA | positive | Highlighted as a major AI infrastructure player and significant QQQ holding (6.80%), central to the AI economy build-out.
+MSFT | positive | Identified as a leading AI platform developer and top QQQ holding, part of the Magnificent Seven.
+GOOG | positive | Recognized as a major AI developer and significant QQQ holding, part of the Magnificent Seven.
+GOOGL | positive | Recognized as a major AI developer and significant QQQ holding, part of the Magnificent Seven.
+GOOGM | positive | Recognized as a major AI developer and significant QQQ holding, part of the Magnificent Seven.
+GOOGN | positive | Recognized as a major AI developer and significant QQQ holding, part of the Magnificent Seven.
+AMZN | positive | Listed as a leading AI company and top QQQ holding, part of the Magnificent Seven.
+META | positive | Identified as a leading AI developer and significant QQQ holding, part of the Magnificent Seven.
+METAM | positive | Identified as a leading AI developer and significant QQQ holding, part of the Magnificent Seven.
+TSLA | positive | Recognized as a leading AI developer and part of the Magnificent Seven driving market growth.
+AMD | positive | Mentioned as an Nvidia competitor in AI chipmaking with representation in QQQ holdings.
+MU | positive | Listed as a storage chipmaker with QQQ holdings, benefiting from AI infrastructure build-out.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:59581144e32e21bcd0d02794e6b7eb686256f60d762fd1b68e85639aaa4363cc
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T23:47:01Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/15/is-meta-stock-still-a-buy-after-borrowing-about-usd25-billion-this-month/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F339edd7617b5441ca816fb09c3a1cc8b1ead38c4-2560x1918.jpg&w=1200&op=resize
+category: 
+tickers: META, METAM
+keywords: debt issuance, capital expenditure, free cash flow, interest rates, AI infrastructure spending, bond offering, valuation
+headline: Is Meta Stock Still a Buy After Borrowing About $25 Billion This Month?
+<<<SUMMARY>>>
+Meta raised approximately $25 billion in bonds this month with interest rates up to 7.5%, adding to its $109 billion total debt. The company is aggressively spending on capital infrastructure, with Q3 free cash flow turning negative at -$2.1 billion as spending climbed to $34.9 billion. Despite higher borrowing costs and massive capex plans for 2026-2027, the analyst maintains Meta is still a buy at $640, trading at a market-average 18x forward earnings while growing revenue over 20%, though he wants to see free cash flow return to positive territory.
+<<<INSIGHTS>>>
+META | positive | Despite concerns about rising debt ($109 billion) and negative free cash flow (-$2.1B in Q3), the analyst rates the stock as a buy. Meta's strong revenue growth (26% YoY), reasonable valuation (18x forward earnings), substantial operating income ($22.9B in Q3), and investment-grade credit rating (Aa3 stable outlook from Moody's) support the positive outlook. The borrowing is viewed as a fair cost for aggressive growth in AI infrastructure.
+METAM | positive | Despite concerns about rising debt ($109 billion) and negative free cash flow (-$2.1B in Q3), the analyst rates the stock as a buy. Meta's strong revenue growth (26% YoY), reasonable valuation (18x forward earnings), substantial operating income ($22.9B in Q3), and investment-grade credit rating (Aa3 stable outlook from Moody's) support the positive outlook. The borrowing is viewed as a fair cost for aggressive growth in AI infrastructure.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:32f7efd8b100f0750dc16276812fc7657635b2f1eaacf35c940db95bec8f3321
+symbol: META
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T08:10:02Z
+publisher: The Motley Fool
+author: Ben Gran
+url: https://www.fool.com/investing/2026/11/16/fed-governor-michelle-bowman-risk-of-large-correction-in-stocks-if-ai-doesn-t-pan-out/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F78ecc17dde105bf95d5fd5e42ebe0bb984273d64-3824x2944.jpg&w=1200&op=resize
+category: 
+tickers: NVDA, MSFT, AMZN, META, METAM, AAPL, QQQ, VOO
+keywords: AI investment risk, stock market correction, capital expenditures, tech stocks, Federal Reserve, circular financing, consumer spending, wealth effect
+headline: Fed Gov. Michelle Bowman: Risk of "Large Correction" in Stocks if AI Doesn't Pan Out
+<<<SUMMARY>>>
+Federal Reserve Governor Michelle Bowman warned of a potential "large correction" in stock prices if the hundreds of billions of dollars invested in AI capital expenditures fail to deliver adequate returns. She highlighted risks including over $800 billion in AI capex financed through corporate bonds and potential "circular financing" among AI companies. A tech stock decline could trigger a broader economic slowdown through reduced consumer spending.
+<<<INSIGHTS>>>
+NVDA | negative | Major AI stock at risk from potential correction if AI investments fail to deliver returns; included in tech-heavy portfolios vulnerable to the warned correction
+MSFT | negative | Leading AI company exposed to the same risks as other AI hyperscalers; part of the circular financing web mentioned by Bowman
+AMZN | negative | Major AI investor and hyperscaler exposed to capex risks and potential circular financing concerns highlighted by the Fed governor
+META | negative | Significant AI investor among hyperscalers at risk from the warned correction if AI investments don't pan out
+METAM | negative | Significant AI investor among hyperscalers at risk from the warned correction if AI investments don't pan out
+AAPL | negative | Large tech holding in both QQQ and S&P 500; would be affected by broader tech sector correction
+QQQ | negative | Tech-heavy ETF concentrated in AI stocks; most vulnerable to the large correction warned about by Bowman
+VOO | neutral | More diversified across sectors; would decline alongside tech but offers better protection than QQQ in a tech-focused correction
+<<<END>>>

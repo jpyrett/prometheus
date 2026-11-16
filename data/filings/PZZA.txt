@@ -4039,3 +4039,1085 @@ Chris Collins
 Principal Financial and Accounting Officer
 49
 <<<END>>>
+<<<FILING>>>
+accession: 0001628280-26-070538
+symbol: PZZA
+form: 8-K
+filed: 2026-11-05
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/901491/0001628280-26-070538.txt
+text_status: ok
+<<<TEXT>>>
+== items ==
+Item 2.02 Results of Operations and Financial Condition
+On November 5, 2026, Papa John's International, Inc. issued a press release announcing third quarter 2026 financial results.
+Section 9 – Financial Statements and Exhibits
+Item 9.01 Financial Statements and Exhibits
+(d)     Exhibits
+Exhibit
+Number    Description
+99.1        Papa John's International, Inc. press release dated November 5, 2026.
+104        Cover Page Interactive Data File (embedded within the Inline XBRL document)
+<<<END>>>
+<<<FILING>>>
+accession: 0001628280-26-070540
+symbol: PZZA
+form: 10-Q
+filed: 2026-11-05
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/901491/0001628280-26-070540.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001418660-26-000037
+symbol: PZZA
+form: SCHEDULE 13G/A
+filed: 2026-11-13
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/901491/0001418660-26-000037.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001628280-26-070540
+symbol: PZZA
+form: 10-Q
+filed: 2026-11-05
+period_end: 2026-09-27
+url: https://www.sec.gov/Archives/edgar/data/901491/0001628280-26-070540.txt
+text_status: ok
+<<<TEXT>>>
+== financial_statements ==
+Item 1. Financial Statements
+Papa John’s International, Inc. and Subsidiaries
+Condensed Consolidated Balance Sheets
+(In thousands, except per share amounts) | September 27,2026 | December 28,2025
+(Unaudited)
+Assets
+Current assets:
+Cash, cash equivalents, and restricted cash | $ | 26,760 | $ | 36,950
+Accounts receivable, net | 93,511 | 103,068
+Notes receivable, current portion | 1,551 | 3,387
+Income tax receivable | 2,764 | 6,189
+Inventories | 31,966 | 34,336
+Prepaid expenses and other current assets | 50,966 | 48,895
+Assets held for sale | — | 4,607
+Total current assets | 207,518 | 237,432
+Property and equipment, net | 238,429 | 251,312
+Finance lease right-of-use assets, net | 33,264 | 39,039
+Operating lease right-of-use assets, net | 149,320 | 161,606
+Notes receivable, less current portion, net | 3,832 | 3,262
+Goodwill | 65,054 | 67,576
+Other assets | 75,401 | 77,281
+Total assets | $ | 772,818 | $ | 837,508
+Liabilities, Redeemable noncontrolling interests and Stockholders’ deficit
+Current liabilities:
+Accounts payable | $ | 67,239 | $ | 61,218
+Income and other taxes payable | 9,325 | 8,941
+Accrued expenses and other current liabilities | 137,414 | 169,015
+Current deferred revenue | 9,187 | 13,096
+Current finance lease liabilities | 10,044 | 9,999
+Current operating lease liabilities | 23,461 | 23,725
+Current portion of long-term debt | 11,247 | 4,997
+Total current liabilities | 267,917 | 290,991
+Deferred revenue | 16,826 | 19,294
+Long-term finance lease liabilities | 25,241 | 30,804
+Long-term operating lease liabilities | 143,832 | 156,405
+Long-term debt, less current portion, net | 700,138 | 710,436
+Other long-term liabilities | 56,464 | 62,264
+Total liabilities | 1,210,418 | 1,270,194
+Redeemable noncontrolling interests | 943 | 980
+Stockholders’ deficit:
+Common stock ($0.01 par value per share; issued 49,303 at September 27, 2026 and 49,303 at December 28, 2025) | 493 | 493
+Additional paid-in capital | 457,499 | 457,112
+Accumulated other comprehensive loss | (4,884) | (6,452)
+Retained earnings | 198,681 | 210,763
+Treasury stock (16,363 shares at September 27, 2026 and 16,502 shares at December 28, 2025, at cost) | (1,097,395) | (1,106,666)
+Total stockholders’ deficit | (445,606) | (444,750)
+Noncontrolling interests in subsidiaries | 7,063 | 11,084
+Total Stockholders’ deficit | (438,543) | (433,666)
+Total Liabilities, Redeemable noncontrolling interests and Stockholders’ deficit | $ | 772,818 | $ | 837,508
+See accompanying notes.
+1
+Papa John’s International, Inc. and Subsidiaries
+Condensed Consolidated Statements of Operations
+(Unaudited)
+Three Months Ended | Nine Months Ended
+(In thousands, except per share amounts) | September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025
+Revenues:
+Company-owned restaurant sales | $ | 131,284 | $ | 168,421 | $ | 416,600 | $ | 521,291
+Franchise royalties and fees | 43,106 | 47,051 | 137,269 | 143,409
+Commissary revenues | 222,480 | 229,581 | 675,939 | 693,098
+Other revenues | 21,322 | 21,424 | 64,569 | 68,317
+Advertising funds revenue | 36,651 | 41,677 | 121,472 | 129,514
+Total revenues | 454,843 | 508,154 | 1,415,849 | 1,555,629
+Costs and expenses:
+Cost of sales | 328,598 | 369,130 | 1,008,515 | 1,107,342
+General and administrative expenses | 55,840 | 56,478 | 170,790 | 191,763
+Depreciation and amortization | 19,236 | 24,914 | 56,213 | 62,076
+Advertising funds expense | 36,936 | 41,461 | 122,153 | 129,822
+Total costs and expenses | 440,610 | 491,983 | 1,357,671 | 1,491,003
+Operating income | 14,233 | 16,171 | 58,178 | 64,626
+Net interest expense | (9,396) | (9,945) | (28,595) | (30,608)
+Income before income taxes | 4,837 | 6,226 | 29,583 | 34,018
+Income tax expense | (1,556) | (1,753) | (10,664) | (10,531)
+Net income | 3,281 | 4,473 | 18,919 | 23,487
+Net (income) loss attributable to noncontrolling interests | (144) | 234 | 6 | (27)
+Net income attributable to the Company | $ | 3,137 | $ | 4,707 | $ | 18,925 | $ | 23,460
+Net income attributable to common shareholders | $ | 3,137 | $ | 4,447 | $ | 18,200 | $ | 22,742
+Basic earnings per common share | $ | 0.09 | $ | 0.14 | $ | 0.55 | $ | 0.69
+Diluted earnings per common share | $ | 0.09 | $ | 0.13 | $ | 0.55 | $ | 0.69
+Basic weighted average common shares outstanding | 33,055 | 32,889 | 33,002 | 32,834
+Diluted weighted average common shares outstanding | 33,129 | 33,043 | 33,085 | 32,962
+See accompanying notes.
+2
+Papa John’s International, Inc. and Subsidiaries
+Condensed Consolidated Statements of Comprehensive Income
+(Unaudited)
+Three Months Ended | Nine Months Ended
+(In thousands) | September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025
+Net income | $ | 3,281 | $ | 4,473 | $ | 18,919 | $ | 23,487
+Other comprehensive income (loss), before tax:
+Foreign currency translation adjustments | 22 | (908) | (461) | 2,720
+Interest rate swaps (a) | 1,063 | (84) | 2,369 | (547)
+Other comprehensive income (loss), before tax | 1,085 | (992) | 1,908 | 2,173
+Income tax effect:
+Foreign currency translation adjustments | (6) | 207 | 209 | (574)
+Interest rate swaps (b) | (246) | 19 | (549) | 124
+Income tax effect | (252) | 226 | (340) | (450)
+Other comprehensive income (loss), net of tax | 833 | (766) | 1,568 | 1,723
+Comprehensive income before attribution to noncontrolling interests | 4,114 | 3,707 | 20,487 | 25,210
+Less: comprehensive (income) loss, redeemable noncontrolling interests | (27) | (32) | (164) | (84)
+Less: comprehensive (income) loss, nonredeemable noncontrolling interests | (117) | 266 | 170 | 57
+Comprehensive income attributable to the Company | $ | 3,970 | $ | 3,941 | $ | 20,493 | $ | 25,183
+___________________________________
+(a) Amounts reclassified out of accumulated other comprehensive loss into net interest expense include $15 and $50 for the three and nine months ended September 27, 2026, respectively and $158 and $117 for the three and nine months ended September 28, 2025, respectively.
+(b) The income tax benefit (expense) effects of amounts reclassified out of accumulated other comprehensive loss were $(4) and $(12) for the three and nine months ended September 27, 2026 and $(35) and $(26) for the three and nine months ended September 28, 2025, respectively.
+See accompanying notes.
+3
+Papa John’s International, Inc. and Subsidiaries
+Condensed Consolidated Statements of Stockholders’ Deficit
+(Unaudited)
+Papa John’s International, Inc.
+(In thousands) | CommonStockSharesOutstanding | CommonStock | AdditionalPaid-InCapital | AccumulatedOtherComprehensiveLoss (b) | RetainedEarnings | TreasuryStock | NoncontrollingInterests inSubsidiaries | TotalStockholders’Deficit
+For the three months ended September 27, 2026
+Balance at June 28, 2026 | 32,918 | $ | 493 | $ | 455,708 | $ | (5,717) | $ | 195,297 | $ | (1,098,835) | $ | 10,780 | $ | (442,274)
+Net income (loss) (a) | — | — | — | — | 3,137 | — | 117 | 3,254
+Other comprehensive income (loss), net of tax | — | — | — | 833 | — | — | — | 833
+Dividends on common stock ($0.00 per share) | — | — | — | — | 247 | — | — | 247
+Stock-based compensation expense | — | — | 3,797 | — | — | — | — | 3,797
+Issuance of restricted stock | 30 | — | (1,181) | — | — | 1,180 | — | (1)
+Tax effect of restricted stock awards | (11) | — | (334) | — | — | — | — | (334)
+Distributions to noncontrolling interests | — | — | — | — | — | — | (3,834) | (3,834)
+Other | 3 | — | (491) | — | — | 260 | — | (231)
+Balance at September 27, 2026 | 32,940 | $ | 493 | $ | 457,499 | $ | (4,884) | $ | 198,681 | $ | (1,097,395) | $ | 7,063 | $ | (438,543)
+For the nine months ended September 27, 2026
+Balance at December 28, 2025 | 32,801 | $ | 493 | $ | 457,112 | $ | (6,452) | $ | 210,763 | $ | (1,106,666) | $ | 11,084 | $ | (433,666)
+Net income (loss) (a) | — | — | — | — | 18,925 | — | (170) | 18,755
+Other comprehensive income (loss), net of tax | — | — | — | 1,568 | — | — | — | 1,568
+Dividends on common stock ($0.92 per share) | — | — | 34 | — | (31,007) | — | — | (30,973)
+Stock-based compensation expense | — | — | 11,263 | — | — | — | — | 11,263
+Issuance of restricted stock | 182 | — | (8,062) | — | — | 8,063 | — | 1
+Tax effect of restricted stock awards | (61) | — | (1,918) | — | — | — | — | (1,918)
+Distributions to noncontrolling interests | — | — | — | — | — | — | (3,851) | (3,851)
+Other | 18 | — | (930) | — | — | 1,208 | — | 278
+Balance at September 27, 2026 | 32,940 | $ | 493 | $ | 457,499 | $ | (4,884) | $ | 198,681 | $ | (1,097,395) | $ | 7,063 | $ | (438,543)
+(a) Net income to the Company for the three and nine months ended September 27, 2026 excludes $27 and $164 allocable to the redeemable noncontrolling interests for our joint venture arrangements.
+(b) At September 27, 2026, the accumulated other comprehensive loss of $4,884 was comprised of net unrealized foreign currency translation loss of $6,079 and net unrealized gain on the interest rate swap agreements of $1,195.
+See accompanying notes.
+4
+Papa John’s International, Inc. and Subsidiaries
+Condensed Consolidated Statements of Stockholders’ Deficit (continued)
+(Unaudited)
+Papa John’s International, Inc.
+(In thousands) | CommonStockSharesOutstanding | CommonStock | AdditionalPaid-InCapital | AccumulatedOtherComprehensiveLoss (b) | RetainedEarnings | TreasuryStock | NoncontrollingInterests inSubsidiaries | TotalStockholders’Deficit
+For the three months ended September 28, 2025
+Balance at June 29, 2025 | 32,753 | $ | 493 | $ | 452,787 | $ | (5,967) | $ | 229,868 | $ | (1,109,178) | $ | 15,243 | $ | (416,754)
+Net income (loss) (a) | — | — | — | — | 4,707 | — | (266) | 4,441
+Other comprehensive income (loss), net of tax | — | — | — | (766) | — | — | — | (766)
+Dividends on common stock ($0.46 per share) | — | — | 23 | — | (15,534) | — | — | (15,511)
+Stock-based compensation expense | — | — | 4,639 | — | — | — | — | 4,639
+Issuance of restricted stock | 43 | — | (1,770) | — | — | 1,769 | — | (1)
+Tax effect of restricted stock awards | (13) | — | (583) | — | — | — | — | (583)
+Distributions to noncontrolling interests | — | — | — | — | — | — | (48) | (48)
+Other | 3 | — | 3 | — | — | 204 | — | 207
+Balance at September 28, 2025 | 32,786 | $ | 493 | $ | 455,099 | $ | (6,733) | $ | 219,041 | $ | (1,107,205) | $ | 14,929 | $ | (424,376)
+For the nine months ended September 28, 2025
+Balance at December 29, 2024 | 32,646 | $ | 493 | $ | 452,449 | $ | (8,456) | $ | 241,717 | $ | (1,115,729) | $ | 15,310 | $ | (414,216)
+Net income (loss) (a) | — | — | — | — | 23,460 | — | (57) | 23,403
+Other comprehensive income (loss), net of tax | — | — | — | 1,723 | — | — | — | 1,723
+Dividends on common stock ($1.38 per share) | — | — | 76 | — | (46,136) | — | — | (46,060)
+Exercise of stock options | 9 | — | 397 | — | — | — | — | 397
+Stock-based compensation expense | — | — | 12,132 | — | — | — | — | 12,132
+Issuance of restricted stock | 153 | — | (7,376) | — | — | 7,360 | — | (16)
+Tax effect of restricted stock awards | (40) | — | (1,791) | — | — | — | — | (1,791)
+Distributions to noncontrolling interests | — | — | — | — | — | — | (324) | (324)
+Other | 18 | — | (788) | — | — | 1,164 | — | 376
+Balance at September 28, 2025 | 32,786 | $ | 493 | $ | 455,099 | $ | (6,733) | $ | 219,041 | $ | (1,107,205) | $ | 14,929 | $ | (424,376)
+(a) Net income to the Company for the three and nine months ended September 28, 2025 excludes $32 and $84 allocable to the redeemable noncontrolling interests for our joint venture arrangements.
+(b) At September 28, 2025, the accumulated other comprehensive loss of $6,733 was comprised of net unrealized foreign currency translation loss of $6,187 and net unrealized loss on the interest rate swap agreements of $546.
+See accompanying notes.
+5
+Papa John’s International, Inc. and Subsidiaries
+Condensed Consolidated Statements of Cash Flows
+Nine Months Ended
+(In thousands, unaudited) | September 27,2026 | September 28,2025
+Operating activities
+Net income | $ | 18,919 | $ | 23,487
+Adjustments to reconcile net income to net cash provided by operating activities:
+Provision for allowance for credit losses on accounts and notes receivable | 7,053 | 5,669
+Depreciation and amortization | 56,213 | 62,076
+Deferred income taxes | 557 | 1,731
+Stock-based compensation expense | 11,263 | 12,132
+Refranchising and impairment (gain) loss | (3,053) | 1,733
+Loss on disposal of property and equipment | 690 | 2,771
+Gain on insurance recoveries | (1,175) | —
+Other | 1,924 | 1,082
+Changes in operating assets and liabilities, net of acquisitions:
+Accounts receivable | 3,435 | (3,045)
+Income tax receivable | 3,425 | (1,412)
+Inventories | 2,130 | (1,544)
+Prepaid expenses and other current assets | (607) | 1,426
+Other assets and liabilities | (10,159) | (972)
+Accounts payable | 5,572 | 8,134
+Income and other taxes payable | 424 | (2,399)
+Accrued expenses and other current liabilities | (28,817) | (2,087)
+Deferred revenue | (6,370) | (4,739)
+Advertising fund assets and liabilities | (2,915) | 2,149
+Net cash provided by operating activities | 58,509 | 106,192
+Investing activities
+Purchases of property and equipment | (39,307) | (47,002)
+Purchases of property and equipment related to damages from natural disasters | (2,646) | (5,121)
+Insurance proceeds related to damages from natural disasters | 850 | 3,300
+Repayments of notes issued | 1,703 | 5,703
+Proceeds from dispositions and refranchising, net of cash transferred | 15,993 | 831
+Proceeds from investments | 4,582 | 4,739
+Other | — | (68)
+Net cash used in investing activities | (18,825) | (37,618)
+Financing activities
+Net proceeds (repayments) of revolving credit facilities | (2,811) | (210,042)
+Payments on term loan | (2,500) | —
+Proceeds from term loan | — | 200,000
+Debt issuance costs | — | (3,223)
+Proceeds from exercise of stock options | — | 397
+Dividends paid to common stockholders | (30,864) | (45,817)
+Tax payments for equity award issuances | (1,918) | (1,791)
+Distributions to noncontrolling interests | (4,052) | (387)
+Principal payments on finance leases | (7,719) | (7,455)
+Other | 196 | 110
+Net cash used in financing activities | (49,668) | (68,208)
+Effect of exchange rate changes on cash, cash equivalents, and restricted cash | (206) | 651
+Change in cash, cash equivalents, and restricted cash | (10,190) | 1,017
+Cash, cash equivalents, and restricted cash at beginning of period | 36,950 | 37,955
+Cash, cash equivalents, and restricted cash at end of period | $ | 26,760 | $ | 38,972
+See accompanying notes.
+6
+Papa John’s International, Inc. and Subsidiaries
+Notes to Condensed Consolidated Financial Statements (Unaudited)
+September 27, 2026
+1. Basis of Presentation
+The accompanying unaudited Condensed Consolidated Financial Statements have been prepared in accordance with accounting principles generally accepted in the United States (“GAAP” or “U.S. GAAP”) for interim financial information and with the instructions to Form 10-Q and Article 10 of Regulation S-X. Accordingly, they do not include all of the information and footnotes required by GAAP for complete annual financial statements. In the opinion of management, all adjustments, consisting of normal recurring accruals, considered necessary for a fair presentation have been included. Operating results for the three and nine months ended September 27, 2026 are not necessarily indicative of the results that may be expected for the fiscal year ending December 27, 2026. For further information, refer to the Consolidated Financial Statements and footnotes thereto included in the Annual Report on Form 10-K for Papa John’s International, Inc. (referred to as the “Company,” “Papa John’s,” “Papa Johns” or in the first-person notations of “we,” “us” and “our”) for the year ended December 28, 2025.
+In discussions of our business, “Domestic” is defined as within the contiguous United States, “North America” includes Domestic and Canada, and “International” includes the rest of the world other than North America.
+2. Significant Accounting Policies
+Principles of Consolidation
+The accompanying Condensed Consolidated Financial Statements include the accounts of Papa John’s International, Inc. and its subsidiaries. All intercompany balances and transactions have been eliminated. Certain prior year amounts herein have been reclassified to conform to the current year presentation.
+Variable Interest Entity
+Papa Johns Domestic restaurants, both Company-owned and franchised, participate in Papa John’s Marketing Fund, Inc. (“PJMF”), a nonstock corporation designed to operate at break-even as it spends all annual contributions received from the system. PJMF collects a percentage of revenues from Company-owned and franchised restaurants in the United States for the purpose of designing and administering advertising and promotional programs. PJMF is a variable interest entity (“VIE”) that funds its operations with ongoing financial support and contributions from the Domestic restaurants and does not have sufficient equity to fund its operations without these ongoing financial contributions. Based on an assessment of the governance structure and operating procedures of PJMF, the Company determined it has the power to control certain significant activities of PJMF, and therefore, is the primary beneficiary.
+Use of Estimates
+The preparation of condensed consolidated financial statements in conformity with GAAP requires management to make estimates and assumptions that affect the amounts reported in the Condensed Consolidated Financial Statements and accompanying notes. Significant items that are subject to such estimates and assumptions include the allowance for credit losses on accounts and notes receivable, property and equipment, net and impairment of long-lived assets, and insurance reserves. Although management bases its estimates on historical experience and assumptions that are believed to be reasonable under the circumstances, actual results could significantly differ from these estimates.
+Noncontrolling Interests
+Papa Johns has joint venture arrangements in which there are noncontrolling interests held by third parties that included 13 and 98 restaurants at September 27, 2026 and September 28, 2025, respectively. Consolidated net income is required to be reported separately at amounts attributable to both the Company and the noncontrolling interests held by third parties.
+7
+Net income (loss) attributable to these joint ventures for the three and nine months ended September 27, 2026 and September 28, 2025 was as follows:
+Three Months Ended | Nine Months Ended
+(In thousands) | September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025
+Papa John’s International, Inc. | $ | 334 | $ | (544) | $ | (10) | $ | 58
+Redeemable noncontrolling interests | 27 | 32 | 164 | 84
+Nonredeemable noncontrolling interests | 117 | (266) | (170) | (57)
+Total net income (loss) | $ | 478 | $ | (778) | $ | (16) | $ | 85
+The following summarizes the redemption feature, location and related accounting within the Condensed Consolidated Balance Sheets for these joint venture arrangements:
+Type of Joint Venture Arrangement | Location within the Condensed Consolidated Balance Sheets | Recorded Value
+Joint ventures with no redemption feature | Permanent equity | Carrying value
+Joint ventures with option to require the Company to purchase the noncontrolling interest - not currently redeemable or redemption not probable | Temporary equity | Carrying value
+Deferred Income Tax Accounts and Tax Reserves
+We are subject to income taxes in the United States and several foreign jurisdictions. Management judgment is required in determining the provision for income taxes and the related assets and liabilities. The provision for income taxes includes income taxes paid, currently payable or receivable and those deferred. We use an estimated annual effective rate based on expected annual income to determine our quarterly provision for income taxes. The effective income tax rate includes the estimated domestic state effective income tax rate and applicable foreign income tax rates. The effective income tax rate is also impacted by various permanent items and credits, net of any related valuation allowances, and can vary based on changes in estimated annual income. Discrete items are recorded in the quarter in which they occur. Our effective income tax rate was 32.2% and 36.0% for the three and nine months ended September 27, 2026, respectively, as compared to 28.2% and 31.0% for the prior year comparable periods, respectively. The higher effective tax rates during the three and nine months ended September 27, 2026 were primarily due to a shift in income between jurisdictions, tax shortfall generated by vesting of restricted shares, and lower projected income tax credits.
+Deferred tax assets and liabilities are determined based on differences between financial reporting and tax basis of assets and liabilities and are measured using enacted tax rates and laws that are expected to be in effect when the differences reverse. Deferred tax assets and liabilities are netted by tax jurisdiction. Deferred tax assets are also recognized for the estimated future effects of tax attribute carryforwards (e.g., net operating losses, capital losses, and foreign tax credits). The effect on deferred taxes due to changes in tax rates is recognized in the period in which the new tax rate is enacted. Valuation allowances are established when necessary on a jurisdictional basis to reduce deferred tax assets to the amounts we expect to realize. Deferred tax assets and liabilities are recorded within Other assets and Other long-term liabilities on the Condensed Consolidated Balance Sheets.
+Tax authorities periodically audit the Company. We record reserves and related interest and penalties for identified exposures as income tax expense. We evaluate these issues on a quarterly basis to adjust for events, such as statute of limitations expirations, court rulings or audit settlements, which may impact our ultimate payment for such exposures.
+Fair Value Measurements and Disclosures
+The Company determines the fair value of financial assets and liabilities based on the price that would be received to sell the asset or paid to transfer the liability to a market participant. Certain assets and liabilities are measured at fair value on a recurring basis and are required to be classified and disclosed in one of the following three categories:
+•Level 1: Quoted market prices in active markets for identical assets or liabilities.
+•Level 2: Observable market-based inputs or unobservable inputs that are corroborated by market data.
+•Level 3: Unobservable inputs that are not corroborated by market data.
+8
+Fair value is a market-based measurement, not an entity-specific measurement. Considerable judgment is required to interpret market data to estimate fair value; accordingly, the fair values presented do not necessarily indicate what the Company or its debtholders could realize in a current market exchange.
+Our financial assets and liabilities that were measured at fair value on a recurring basis as of September 27, 2026 and December 28, 2025 are as follows:
+Fair Value Measurements
+(In thousands) | CarryingValue | Level 1 | Level 2 | Level 3
+September 27, 2026
+Financial assets:
+Cash surrender value of life insurance policies (a) | $ | 27,153 | $ | 27,153 | $ | — | $ | —
+Interest rate swaps (b) | $ | 1,562 | $ | — | $ | 1,562 | $ | —
+December 28, 2025
+Financial assets:
+Cash surrender value of life insurance policies (a) | $ | 29,432 | $ | 29,432 | $ | — | $ | —
+Financial liabilities:
+Interest rate swaps (b) | $ | 807 | $ | — | $ | 807 | $ | —
+___________________________________
+(a)Represents life insurance policies held in our non-qualified deferred compensation plan, which are classified as Other assets on the Condensed Consolidated Balance Sheets
+(b)The fair value of our interest rate swaps is based on the sum of all future net present value cash flows. The future cash flows are derived based on the terms of our interest rate swaps, as well as considering published discount factors, and projected Secured Overnight Financing Rates (“SOFR”). See “Note 8. Debt” for further discussion.
+There were no transfers among levels within the fair value hierarchy during the three and nine months ended September 27, 2026 or fiscal year 2025.
+The fair value of certain assets and liabilities approximates carrying value because of the short-term nature of the accounts, including cash and cash equivalents, accounts receivable, net of allowances, and accounts payable. The carrying value of notes receivable, net of allowances, also approximates fair value. The Company’s revolving credit facilities and term loan borrowings under the Company’s credit agreement approximate carrying value due to their variable market-based interest rate. The Company’s 3.875% senior notes are classified as a Level 2 fair value measurement since the Company estimates the fair value by using recent trading transactions, and have the following estimated fair values and carrying values (excluding the impact of unamortized debt issuance costs) as of September 27, 2026 and December 28, 2025:
+September 27, 2026 | December 28, 2025
+(In thousands) | CarryingValue | FairValue | CarryingValue | FairValue
+3.875% Senior Notes | $ | 400,000 | $ | 357,000 | $ | 400,000 | $ | 380,000
+Allowance for Credit Losses
+Estimates of expected credit losses, even if remote, are based upon historical account write-off trends, facts about the current financial condition of the debtor, forecasts of future operating results based upon current trends of select operating metrics, and macroeconomic factors. Credit quality is monitored through the timing of payments compared to the prescribed payment terms and known facts regarding the financial condition of the franchisee or customer. Account and note balances are charged against the allowance after recovery efforts have ceased.
+9
+The following table summarizes changes in our allowances for credit losses for accounts receivable and notes receivable:
+(In thousands) | Accounts Receivable | Notes Receivable
+Balance at December 28, 2025 | $ | 12,129 | $ | 17,777
+Current period provision for expected credit losses, net | 7,157 | (104)
+Write-offs charged against the allowance | (3,100) | (575)
+Balance at September 27, 2026 | $ | 16,186 | $ | 17,098
+Impairment of Long-lived Assets
+The Company evaluates its property and equipment and other long-lived assets for potential indicators of impairment at least annually, or as facts and circumstances arise that indicate the carrying value of the asset group may not be recoverable. For Domestic Company-owned restaurants, the evaluation is performed at the operating market level while International Company-owned restaurants are evaluated at the restaurant level as these respective levels represent the lowest level for which identifiable cash flows are largely independent of the cash flows of other assets and liabilities. If the carrying amount of the long-lived asset group exceeds the amount of estimated future undiscounted cash flows, the fair value of the asset group is estimated and an impairment loss is recorded if the carrying value exceeds the estimated fair value. The assumptions used in the undiscounted cash flow calculation related to future growth are subjective and may be negatively impacted by future changes in operating performance or economic conditions.
+In situations in which no impairment indicators are identified at the applicable asset‑group level but certain assets within the asset group are expected to be used for a shorter period than previously estimated, the Company revises the remaining useful lives of those assets and prospectively records accelerated depreciation over the shortened period. We incurred approximately $1.1 million and $2.0 million of accelerated depreciation expense during the three and nine months ended September 27, 2026, respectively, primarily related to the planned retirement of our current point-of-sale system and revisions to the useful lives of certain legacy technology assets associated with investments in our legacy omnichannel platforms. During the three months ended September 28, 2025, we incurred approximately $6.1 million of accelerated depreciation expense related to shortened useful life of legacy capitalized software assets in connection with the development and deployment of our new omnichannel platforms and other technology improvements. We also incurred $0.7 million and $1.4 million of accelerated depreciation expense during the three and nine months ended September 27, 2026, respectively, related to the closure or approved closure of 26 Company-owned restaurants under our Enterprise Transformation Plan (as defined and discussed in further detail in “Note 9. Restructuring”).
+Tornado Impact
+During 2025, tornadoes caused real and personal property damage to the Company’s leased Quality Control Center (“QC Center”) in Grand Prairie, Texas and to the Company’s restaurant support center and QC Center in Louisville, Kentucky. Neither of the tornadoes had a significant impact on our operations, as our other QC Centers were able to ensure that restaurants were adequately supplied. The Company recorded pre-tax expenses of $5.2 million during the nine months ended September 28, 2025 related to these damages, which primarily reflect asset impairment charges and other operating expenses, and which were mostly offset by anticipated insurance recoveries for losses considered probable of recovery under its insurance policies. Expenses incurred and the related anticipated insurance proceeds were recorded within General and administrative expenses in the Condensed Consolidated Statements of Operations.
+During the three months ended September 27, 2026, $1.2 million of realizable insurance proceeds exceeding losses recognized in the financial statements were recognized as a gain within General and administrative expenses in the Condensed Consolidated Statements of Operations. To the extent that proceeds received from our insurer in future periods exceed losses recognized in the financial statements, we may record income within our Condensed Consolidated Statements of Operations once such insurance proceeds are realized or realizable.
+The Company received $1.0 million and $4.0 million of insurance proceeds related to the two incidents during the nine months ended September 27, 2026 and September 28, 2025, respectively. For the nine months ended September 27, 2026, $0.9 million of these proceeds were classified as cash inflows from investing activities and $0.1 million were classified as cash inflows from operating activities. For the nine months ended September 28, 2025, $3.3 million of the proceeds were classified as cash inflows from investing activities and $0.7 million were classified as cash inflows from operating
+10
+activities. These amounts were presented in the Condensed Consolidated Statements of Cash Flows based on the nature of the underlying losses and expected use of the proceeds.
+Recent Accounting Pronouncements
+Accounting Standards Not Yet Adopted
+In November 2024, the FASB issued ASU No. 2024-03, “Income Statement-Reporting Comprehensive Income-Expense Disaggregation Disclosures (Subtopic 220-40): Disaggregation of Income Statement Expenses.” The ASU includes required disclosures in the notes to the consolidated financial statements of specific information about certain costs and expenses. The amendments are effective for fiscal years beginning after December 15, 2026, and interim periods within fiscal years beginning after December 15, 2027. Early adoption is permitted and the standard may be applied either prospectively or retrospectively. The Company is in the process of assessing the impact of the new standard, including an evaluation of the Company’s financial systems and availability of data to meet the requirements.
+In September 2025, the FASB issued ASU 2025-06, “Intangibles-Goodwill and Other-Internal-Use Software (Subtopic 350-40): Targeted Improvements to the Accounting for Internal-Use Software”. The ASU modernizes the accounting guidance for costs incurred to develop software for internal use by removing references to project stages of a software development project, which better aligns with current software development methods. Under the new standard, entities will commence capitalizing eligible costs when management has authorized and committed to funding the software project, and when it is probable that the project will be completed and the software will be used to perform the function intended. The amendments are effective for annual periods beginning after December 15, 2027, and interim periods within those fiscal years. The guidance can be applied using a prospective, retrospective, or modified transition approach. The Company is currently evaluating the impact of this accounting standard to its consolidated financial statements.
+3. Leases
+Lessor Operating Leases
+The Company subleases certain retail space to our franchisees in the UK, which are primarily operating leases. At September 27, 2026, we leased and subleased approximately 325 Papa Johns restaurants to franchisees in the UK. The initial lease terms on the franchised sites in the UK are generally 15 years. The Company has the option to negotiate an extension toward the end of the lease term at the landlord’s discretion. The initial lease terms of the franchisee subleases are generally five to ten years. Rental income, primarily derived from properties leased and subleased to franchisees in the UK, is recognized on a straight-line basis over the respective operating lease terms. The Company recognized total sublease income of $2.8 million and $8.3 million for the three and nine months ended September 27, 2026, respectively, and $2.4 million and $7.8 million for the three and nine months ended September 28, 2025, respectively, within Other revenues in the Condensed Consolidated Statements of Operations.
+Lease Guarantees
+As a result of assigning our interest in obligations under property leases as a condition of the refranchising of certain restaurants, we are contingently liable for payment of approximately 90 Domestic leases. These leases have varying terms, the latest of which expires in 2040. As of September 27, 2026, the estimated maximum amount of undiscounted payments the Company could be required to make in the event of nonpayment by the primary lessees was approximately $17.0 million. This contingent liability is not included in the Condensed Consolidated Balance Sheets as it is not probable to occur. The Company does not believe these arrangements are likely to have a material effect on its results of operations, financial condition, revenues, expenses or liquidity.
+11
+Supplemental Cash Flow & Other Information
+Supplemental cash flow information related to leases for the periods reported is as follows:
+Nine Months Ended
+(In thousands) | September 27, 2026 | September 28, 2025
+Cash paid for amounts included in the measurement of lease liabilities:
+Operating cash flows from finance leases | $ | 1,542 | $ | 1,626
+Financing cash flows from finance leases | 7,719 | 7,455
+Operating cash flows from operating leases (a) | 30,165 | 31,593
+Right-of-use assets obtained in exchange for new finance lease liabilities | 2,521 | 15,738
+Right-of-use assets obtained in exchange for new operating lease liabilities | 12,183 | 17,785
+Cash received from sublease income | 8,040 | 7,768
+___________________________________
+(a) Included within the change in Other assets and liabilities within the Condensed Consolidated Statements of Cash Flows offset by non-cash operating lease right-of-use asset amortization and lease liability accretion.
+4. Papa John’s Marketing Fund, Inc.
+PJMF collects a percentage of revenues from Company-owned and franchised restaurants in the United States for the purpose of designing and administering advertising and promotional programs for all participating Domestic restaurants. Contributions and expenditures are reported on a gross basis in the Condensed Consolidated Statements of Operations within Advertising funds revenue and Advertising funds expense, respectively. PJMF also has a wholly-owned subsidiary, Papa Card, Inc., which administers the Company’s gift card programs.
+The assets and liabilities of PJMF, which are utilized solely for the Company’s advertising and promotional programs, were as follows in the Condensed Consolidated Balance Sheets:
+(In thousands) | September 27,2026 | December 28,2025
+Assets
+Current assets:
+Cash and cash equivalents | $ | 3,921 | $ | 7,759
+Accounts receivable, net | 16,198 | 15,077
+Income tax receivable | 354 | 275
+Prepaid expenses and other current assets | 6,834 | 3,278
+Total current assets | 27,307 | 26,389
+Deferred income taxes | 570 | 570
+Other assets | 67 | 106
+Total assets | $ | 27,944 | $ | 27,065
+Liabilities
+Current liabilities:
+Accrued expenses and other current liabilities | $ | 32,788 | $ | 31,082
+Current deferred revenue | 4,278 | 5,000
+Total current liabilities | 37,066 | 36,082
+Deferred revenue | 2,170 | 2,742
+Total liabilities | $ | 39,236 | $ | 38,824
+12
+5. Revenue Recognition
+Contract Balances
+Our contract liabilities primarily relate to franchise fees, unredeemed gift card liabilities, and loyalty program obligations, which we classify within Current deferred revenue and Deferred revenue on the Condensed Consolidated Balance Sheets. The Company recognized deferred revenue of $4.2 million and $21.3 million during the three and nine months ended September 27, 2026, respectively, and $8.2 million and $25.9 million during the three and nine months ended September 28, 2025, respectively.
+The following table includes a breakout of contract liability balances:
+(In thousands) | September 27, 2026 | December 28, 2025 | Change
+Unearned franchise fees and royalties | $ | 17,620 | $ | 19,678 | $ | (2,058)
+Unredeemed gift card liabilities | 6,448 | 7,742 | (1,294)
+Customer loyalty program obligations | 1,945 | 4,970 | (3,025)
+Total contract liabilities | $ | 26,013 | $ | 32,390 | $ | (6,377)
+Our contract assets consist primarily of equipment incentives provided to franchisees. Equipment incentives are related to the future value of commissary revenue the Company will receive over the term of the incentive agreement. Contract assets were approximately $13.8 million and $19.1 million at September 27, 2026 and December 28, 2025, respectively. Revenue was reduced by approximately $1.8 million and $5.4 million for the three and nine months ended September 27, 2026, respectively, and approximately $2.1 million and $5.5 million for the three and nine months ended September 28, 2025, respectively, for the amortization of contract assets over the applicable contract terms. Contract assets are included in Prepaid expenses and other current assets and Other assets on the Condensed Consolidated Balance Sheets.
+Transaction Price Allocated to the Remaining Performance Obligations
+The following table includes estimated revenue expected to be recognized in the future related to performance obligations that are unsatisfied at the end of the reporting period:
+Performance Obligations by Period
+(In thousands) | Less than 1 Year | 1-2 Years | 2-3 Years | 3-4 Years | 4-5 Years | Thereafter | Total
+Unearned franchise fees and royalties | $ | 2,950 | $ | 2,645 | $ | 2,428 | $ | 2,222 | $ | 2,031 | $ | 2,484 | $ | 14,760
+At September 27, 2026, approximately $2.8 million of area development fees related to unopened restaurants and International unearned franchise fees were included in Deferred revenue. Timing of revenue recognition is dependent upon the timing of restaurant openings and franchisees’ revenues. Unredeemed gift card liabilities, which are included in Deferred revenue, will be recognized in Company-owned restaurant sales when gift cards are redeemed. The Company will recognize redemption fee revenue in Other revenues when cards are redeemed at franchised restaurant locations.
+6. Common Stock
+Shares Authorized and Outstanding
+The Company has authorized 100.0 million shares of common stock as of September 27, 2026 and December 28, 2025. The Company’s outstanding shares of common stock, net of repurchased shares of common stock held as treasury stock, were 32.9 million shares at September 27, 2026, compared to 32.8 million shares at December 28, 2025.
+Share Repurchase Program
+On October 28, 2021, our Board of Directors approved a share repurchase program with an indefinite duration for up to $425.0 million of the Company’s common stock. There was no share repurchase activity during the three and nine months ended September 27, 2026 or September 28, 2025. Approximately $90.2 million remained available under the Company’s share repurchase program as of September 27, 2026.
+13
+The timing and volume of share repurchases under the Company’s share repurchase program may be executed at the discretion of management on an opportunistic basis, subject to market and business conditions, regulatory requirements and other factors, or pursuant to trading plans or other arrangements. Repurchases under the program may be made through open market, block, and privately negotiated transactions, including Rule 10b5-1 plans, at times and in such amounts as management deems appropriate. Repurchases under the Company’s share repurchase program may be commenced or suspended from time to time at the Company’s discretion without prior notice. Funding for the share repurchase program will be provided through our credit facility, cash generated by operations and from asset sales, and cash and cash equivalents.
+Dividends
+Beginning with our third quarter dividend in August 2026, the Company’s Board of Directors voted to suspend the quarterly dividend. The declaration and payment of any future dividends will be at the discretion of our Board of Directors. During the nine months ended September 27, 2026 and September 28, 2025, the Company paid aggregate cash dividends of approximately $30.9 million ($0.92 per share) and $45.8 million ($1.38 per share), respectively.
+7. Earnings per Share
+We compute earnings per share using the two-class method. The two-class method requires an earnings allocation formula that determines earnings per share for common shareholders and participating security holders according to dividends declared and participating rights in undistributed earnings. Time-based restricted stock awards are participating securities because holders of such unvested shares have rights to receive non-forfeitable dividends. Under the two-class method, total dividends provided to the holders of participating securities are subtracted from net income attributable to the Company to determine net income attributable to common shareholders. The Company may, at its sole discretion, require any dividends paid on the unvested restricted stock awards to be paid in shares rather than in cash, which could then be forfeited if the employee forfeits the underlying awards.
+Basic earnings per common share are computed by dividing net income attributable to common shareholders by the weighted-average common shares outstanding. Diluted earnings per common share are computed by dividing the net income attributable to common shareholders by the diluted weighted average common shares outstanding. Diluted weighted average common shares outstanding consist of basic weighted average common shares outstanding plus weighted average awards outstanding under our equity compensation plans, which are dilutive securities.
+14
+The calculations of basic and diluted earnings per common share are as follows:
+Three Months Ended | Nine Months Ended
+(In thousands, except per share data) | September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025
+Calculation of net income attributable to common shareholders
+Net income attributable to the Company | $ | 3,137 | $ | 4,707 | $ | 18,925 | $ | 23,460
+Dividends paid to participating securities | — | (260) | (725) | (718)
+Net income attributable to common shareholders | $ | 3,137 | $ | 4,447 | $ | 18,200 | $ | 22,742
+Basic earnings per common share
+Basic weighted average common shares outstanding | 33,055 | 32,889 | 33,002 | 32,834
+Basic earnings per common share | $ | 0.09 | $ | 0.14 | $ | 0.55 | $ | 0.69
+Diluted earnings per common share
+Weighted average common shares outstanding | 33,055 | 32,889 | 33,002 | 32,834
+Dilutive effect of outstanding equity awards (a) | 74 | 154 | 83 | 128
+Diluted weighted average common shares outstanding | 33,129 | 33,043 | 33,085 | 32,962
+Diluted earnings per common share | $ | 0.09 | $ | 0.13 | $ | 0.55 | $ | 0.69
+___________________________________
+(a) Excludes 313,000 and 305,000 shares underlying equity awards for the three and nine months ended September 27, 2026, respectively, and 85,000 and 259,000 shares underlying equity awards for the three and nine months ended September 28, 2025, respectively, as the effect of including such awards would have been anti-dilutive.
+8. Debt
+Long-term debt, net, consists of the following:
+(In thousands) | September 27,2026 | December 28,2025
+Senior notes | $ | 400,000 | $ | 400,000
+Term loan | 197,500 | 200,000
+Revolving facilities | 119,446 | 122,257
+Outstanding debt | $ | 716,946 | $ | 722,257
+Unamortized debt issuance costs | (5,561) | (6,824)
+Current portion of long-term debt | (11,247) | (4,997)
+Total long-term debt, net | $ | 700,138 | $ | 710,436
+Senior Notes
+On September 14, 2021, the Company issued $400.0 million of 3.875% Senior Notes (the “Notes”) which mature on September 15, 2029. Interest on the Notes is payable semi-annually in cash in arrears on March 15 and September 15 of each year at a fixed interest rate of 3.875% per annum. Refer to Note 12 of the consolidated financial statements in our Annual Report on Form 10-K for the year ended December 28, 2025 for further description of the provisions and covenant requirements under the Senior Notes.
+Term Loan and Revolving Facilities
+On March 26, 2025, the Company amended and restated the Amended and Restated Credit Agreement, dated as of September 14, 2021 and amended May 30, 2023 (together, the “Previous Credit Agreement”) pursuant to the Second Amended and Restated Credit Agreement dated as of March 26, 2025 (the “Second Amended and Restated Credit Agreement”). The Second Amended and Restated Credit Agreement provides for a senior secured term loan in a principal amount of $200.0 million (the “Term Loan”) and a senior secured revolving credit facility in an aggregate available principal amount of $600.0 million (the “PJI Revolving Facility” together with the Term Loan, the “PJI Credit Facilities”),
+15
+of which up to $40.0 million is available as swingline loans and up to $80.0 million is available as letters of credit. The PJI Credit Facilities will mature on March 26, 2030 (the “Maturity Date”) with term loans amortizing in quarterly installments that commenced on June 30, 2026 in amounts as set forth in the Second Amended and Restated Credit Agreement and the unpaid balance maturing on the Maturity Date. The remaining availability under the PJI Revolving Facility was approximately $480.5 million as of September 27, 2026.
+PJMF Revolving Facility
+PJMF has a $30.0 million revolving line of credit (the “PJMF Revolving Facility”) pursuant to a Revolving Loan Agreement, dated September 30, 2015, and most recently amended on September 30, 2026. The PJMF Revolving Facility is secured by substantially all assets of PJMF. The PJMF Revolving Facility matures on September 30, 2027, but is subject to annual renewals. The borrowings under the PJMF Revolving Facility accrue interest at a variable rate of a one-month SOFR plus 1.975%. There was no debt outstanding under the PJMF Revolving Facility as of September 27, 2026 or December 28, 2025. The PJMF operating results and the related debt outstanding do not impact the financial covenants under the Company’s Second Amended and Restated Credit Agreement.
+Derivative Financial Instruments
+The Company has historically entered into interest rate swaps with the objective of mitigating the Company’s exposure to the impact of interest rate changes associated with our variable rate debt under the PJI Credit Facilities. As of September 27, 2026, we had the following interest rate swap agreements:
+Effective Dates | Floating Rate Debt | Fixed Rates
+April 29, 2025 through April 25, 2028 | $ | 50 million | 3.49%
+June 30, 2025 through June 30, 2028 | $ | 50 million | 3.72%
+We have designated the interest rate swaps as cash flow hedges and assess hedge effectiveness on a quarterly basis. The interest rate swaps are recorded at fair value at each reporting date, and any unrealized gains or losses are included in Accumulated other comprehensive loss in the Condensed Consolidated Balance Sheets and reclassified to Net interest expense in the Condensed Consolidated Statements of Operations in the same period or periods during which the hedged transaction affect earnings.
+The following table provides information on the location and amounts of our current swaps in the accompanying Condensed Consolidated Balance Sheets:
+Interest Rate Swap Derivatives
+(In thousands) | Fair ValueSeptember 27,2026 | Fair ValueDecember 28,2025
+Prepaid expenses and other current assets | $ | 792 | $ | —
+Other assets | $ | 770 | $ | —
+Accrued expenses and other current liabilities | $ | — | $ | 193
+Other long-term liabilities | $ | — | $ | 614
+16
+The effect of derivative instruments on the accompanying Condensed Consolidated Financial Statements is as follows (in thousands):
+Derivatives - Cash FlowHedgingRelationships | Amount of Gain or(Loss) Recognizedin AOCLon Derivative | Location of (Loss)or GainReclassified fromAOCL intoIncome | Amount of (Loss) or GainReclassified fromAOCL intoIncome | Net Interest Expenseon Condensed Consolidated Statementsof Operations
+Interest rate swaps for the three months ended:
+September 27, 2026 | $ | 817 | Interest expense | $ | 15 | $ | (9,396)
+September 28, 2025 | $ | (65) | Interest expense | $ | 158 | $ | (9,945)
+Interest rate swaps for the nine months ended:
+September 27, 2026 | $ | 1,820 | Interest expense | $ | 50 | $ | (28,595)
+September 28, 2025 | $ | (423) | Interest expense | $ | 117 | $ | (30,608)
+Net interest paid, including payments made or received under the swaps, was $12.7 million and $30.4 million for the three and nine months ended September 27, 2026, respectively, and $11.4 million and $34.6 million for the three and nine months ended September 28, 2025, respectively.
+9. Restructuring
+Enterprise Transformation Plan
+In December 2025, the Company’s Board of Directors approved, and the Company commenced, the first phase of a new business transformation program (the “Enterprise Transformation Plan”) designed to improve organizational effectiveness, reduce overhead duplication and non-consumer-facing spending, and improve Domestic market and franchisee health. In February 2026, the Company’s Board of Directors approved the second phase of the Enterprise Transformation Plan, which focuses on optimizing our restaurant portfolio and improving restaurant-level profitability in the Domestic market. During the nine months ended September 27, 2026, the Company closed 146 restaurants across North America as part of the ongoing assessment of our restaurant portfolio, of which 17 were Company-owned. As of September 27, 2026, the Company had approved the closure of nine additional Company-owned restaurants, the majority of which we expect to close by the end of 2026. We are continuing to evaluate our Domestic restaurant portfolio, which we anticipate will result in additional strategic restaurant closures and restructuring charges, although the amounts and nature of future expenses relating to any actions yet to be determined or approved by management or our Board of Directors are currently not estimable.
+In connection with the foregoing approved initiatives, the Company incurred restructuring related costs of $1.2 million and $9.9 million during the three and nine months ended September 27, 2026, respectively, primarily related to professional services, accelerated depreciation expense and other costs associated with the closure or approved closure of restaurants mentioned above, and a loss on sale related to the completed sale of the building occupied by our former print and promotions business in Louisville, Kentucky which did not support our core operations. These costs were included primarily within General and administrative expenses in the Condensed Consolidated Statements of Operations and primarily within Unallocated corporate expenses.
+The following table summarizes restructuring costs related to the Enterprise Transformation Plan recorded for the three and nine months ended September 27, 2026:
+17
+Three Months Ended | Nine Months Ended
+(In thousands) | September 27,2026 | September 27,2026
+Professional services and other related costs | $ | 351 | $ | 6,956
+Accelerated depreciation expense | 747 | 1,436
+Loss on disposal of property and equipment | — | 631
+Other closure related costs | 229 | 594
+Total Enterprise Transformation Plan costs | $ | 1,327 | $ | 9,617
+Stock-based compensation expense, net of forfeitures on unvested awards | (118) | 298
+Total costs, net of stock-based award expense/forfeitures on unvested awards | $ | 1,209 | $ | 9,915
+The following table presents changes in the liabilities relating to approved initiatives, which are recorded in Accrued expenses and other current liabilities and Accounts payable in the Condensed Consolidated Balance Sheets:
+(In thousands) | Employee termination costs | Professional services and other related costs | Total
+Balance as of December 28, 2025 | $ | 5,389 | $ | 1,380 | $ | 6,769
+Charges | — | 6,956 | 6,956
+Payments | (3,821) | (8,045) | (11,866)
+Balance as of September 27, 2026 | $ | 1,568 | $ | 291 | $ | 1,859
+The Company has incurred total restructuring related costs of $17.6 million since commencement of the Enterprise Transformation Plan. The Company expects to incur total restructuring related charges of approximately $24 million to $31 million (inclusive of the $17.6 million incurred since commencement) related to all currently approved actions under the Enterprise Transformation Plan, which we estimate will be recognized during 2026 and 2027 primarily within Unallocated corporate expenses. Actual charges incurred may differ from this estimate due to various factors.
+International Transformation Plan
+In December 2023, the Company announced international transformation initiatives (the “International Transformation Plan”) designed to evolve our business structure to deliver an enhanced value proposition to our International customers and franchisees, ensure targeted investments and efficient resource management, and better position our largest markets, including the UK, for long-term profitable growth and brand strength. The Company completed its international transformation initiatives as of December 28, 2025. Since inception of the International Transformation Plan, the Company incurred total restructuring related costs of $34.4 million, all of which was recognized within General and administrative expenses in the Condensed Consolidated Statements of Operations within our International segment.
+During the three and nine months ended September 28, 2025, the Company recorded total costs of $0.2 million and $4.8 million, respectively, related to the International Transformation Plan. These costs consisted primarily of professional services and other related costs and losses on franchisee notes receivable. No expenses were recorded during the three and nine months ended September 27, 2026.
+10. Litigation, Commitments and Contingencies
+Litigation
+The Company is involved in a number of lawsuits, claims, investigations and proceedings, including those specifically identified below, consisting of intellectual property, employment, consumer, commercial and other matters arising in the ordinary course of business. The Company has made accruals with respect to those matters for which a loss is determined to be probable and reasonably estimable. We review these provisions at least quarterly and adjust these provisions to reflect the impact of negotiations, settlements, rulings, advice of legal counsel and other information and events pertaining to a particular case.
+18
+In re Papa John’s Employee & Franchise Employee Antitrust Litigation was a putative class action filed in December 2018 in the United States District Court for the Western District of Kentucky. The lawsuit alleged that the “no-poaching” provision previously contained in the Company’s franchise agreement constituted an unlawful agreement or conspiracy in restraint of trade and commerce in violation of Section 1 of the Sherman Antitrust Act. The Company denied any liability or wrongdoing. On April 14, 2022, the parties reached a settlement in principle, under which the Company agreed to pay an aggregate settlement amount of $5.0 million and provide certain non-monetary consideration in exchange for the dismissal of all claims, termination of the litigation and a release in favor of the Company. The settlement amount was recorded in General and administrative expenses in the Condensed Consolidated Statements of Operations in 2022. The District Court granted preliminary approval of the proposed settlement on August 2, 2025, and the Company paid $2.5 million toward the settlement on September 5, 2025. The Court issued its final order approving the settlement on August 14, 2026. As of September 27, 2026, the remaining $2.5 million was accrued within Accrued expenses and other current liabilities in the Condensed Consolidated Balance Sheets and is due to be paid by November 12, 2026.
+Personal Injury Matters
+Rivera v. JNE, et al. is a personal injury action arising from a 2021 automobile accident involving a delivery driver employed by one of the Company’s franchisees in the state of Florida. The Company’s franchisor entity, Papa John’s Franchising, LLC, is named as a defendant in the action under a theory of vicarious liability. In May 2026, a jury returned an adverse verdict on liability against the Company’s franchisor entity; however, no damages have been awarded, and a separate damages trial is currently expected to occur in 2027. The Company believes there are substantial grounds to challenge the verdict and intends to continue vigorously defending the matter. Due to the current procedural posture of the case, the absence of a damages award, and uncertainty regarding the application of franchisor-liability principles, the Company is unable to reasonably estimate the possible loss or range of loss at this time. The Company continues to deny liability and intends to vigorously defend against the claims asserted in the lawsuit.
+Drummer v. Pizzerias, LLC et al. is a personal injury action arising from a 2023 automobile accident involving a delivery driver employed by one of the Company's franchisees in the state of Florida. The Company's franchisor entity, Papa John's Franchising, LLC, is named as a defendant under a theory of vicarious liability. In September 2026, the court denied the Company's motion for summary judgment, and the matter is currently scheduled to proceed to trial in February 2027. The Company denies liability and intends to vigorously defend against the claims asserted in the lawsuit.
+Based on the Company’s assessment of the facts and circumstances currently known for these personal injury matters, it does not believe that a loss is probable and, accordingly, has not recorded an accrual related to these matters. However, litigation is inherently uncertain, and an adverse outcome is possible. At this stage of the proceedings, the Company is unable to reasonably estimate a possible loss or range of loss, if any, that may result from these matters due to uncertainties regarding liability, the ultimate outcome of the trial, and the amount of any potential damages that may be awarded.
+Commitments
+In the first quarter of 2026, the Company entered into a multi-year agreement for point‑of‑sale and restaurant operations software services which will expire on December 23, 2034, with a one year extension option. The agreement includes deployment requirements that specify a minimum number of Company‑owned and franchised restaurants to be installed and activated on the software platform by November 30, 2026 and by November 30, 2027. The total estimated contractual commitment for software services is approximately $125 million to $140 million over the term of the agreement, contingent upon variable components such as the timing of the deployment schedule and associated contractual credits. These amounts are expected to be largely recovered through technology fees charged to our franchisees over the term of the agreement. As of September 27, 2026, the Company is on track to meet the deployment requirements stipulated by the agreement and recognized expense of $0.7 million for services received under the agreement during the third quarter.
+Refer to Note 18 of the consolidated financial statements in our Annual Report on Form 10-K for the year ended December 28, 2025 for additional information on our commitments and contingencies.
+11. Divestitures
+2026 Refranchising Transaction
+On August 24, 2026, the Company completed the refranchising of 28 Domestic Company-owned restaurants located in the Orlando metropolitan area for approximately $11.0 million to an existing third-party franchisee. In connection with the divestiture, the Company recorded a pre-tax gain on sale of $1.4 million, net of transaction costs of $0.3 million during the three months ended September 27, 2026. These amounts were recorded within General and administrative expenses in the
+19
+Condensed Consolidated Statements of Operations and are subject to change based on the future settlement of certain post-closing adjustments. Goodwill of $2.1 million was allocated to the disposal group based on the relative fair value of the disposal group to the Domestic Company-owned restaurants reporting unit. Proceeds received from refranchising during the three months ended September 27, 2026 were reflected within investing activities in the Condensed Consolidated Statements of Cash Flows.
+2025 Refranchising Transaction
+On November 24, 2025, the Company completed the refranchising of 85 Domestic Company-owned restaurants previously owned and operated by Colonel’s Limited, LLC, a consolidated joint venture, to Pie Investments, an existing third-party franchisee (“Buyer”), for total proceeds of $35.7 million. Colonel’s Limited, LLC also entered into a Master Service Agreement effective November 24, 2025 with the Buyer for the performance by the Buyer of certain management, supervisory, and administrative services with respect to any identified remaining restaurants for which the parties have not yet obtained landlord consent to transfer the leases pursuant to the Purchase Agreement (the “Retained Restaurants”).
+During the nine months ended September 27, 2026, the parties obtained landlord consent to transfer the remaining leases related to the Retained Restaurants. The Company recorded corresponding gains of $1.3 million during the three and nine months ended September 27, 2026, respectively, which were recorded in General and administrative expenses in the Condensed Consolidated Statements of Operations. We received $1.2 million of proceeds from the sale upon completion of the lease assignments for the Retained Restaurants and resolution of certain post-closing adjustments, which were classified as investing activities within the Condensed Consolidated Statements of Cash Flows.
+Refer to Note 21 of the consolidated financial statements in our Annual Report on Form 10-K for the year ended December 28, 2025 for further description of the transaction.
+Sale of Print and Promotions Building
+On February 18, 2026, we finalized the sale of a building occupied by our former print and promotions business in Louisville, Kentucky and received net proceeds of $3.5 million, which were classified as investing activities within the Condensed Consolidated Statements of Cash Flows. We recognized a loss on sale of approximately $0.3 million during the nine months ended September 27, 2026, which was recorded in General and administrative expenses in the Condensed Consolidated Statements of Operations.
+20
+12. Segment Information
+We have four reportable segments: Domestic Company-owned restaurants, North America franchising, North America commissaries, and International operations. The Domestic Company-owned restaurants segment consists of the operations of all Domestic Company-owned restaurants and principally generates revenues from retail sales of pizza and other food and beverage products. The North America franchising segment consists of our franchise sales and support activities and derives its revenues from sales of franchise and development rights and the collection of royalties from our franchisees located in the United States and Canada. The North America commissaries segment consists of the operations of our regional dough production and product distribution centers in the United States and Canada and derives its revenues principally from the sale and distribution of food and paper products to Domestic Company-owned and franchised restaurants in the United States and Canada. The International segment consists of distribution sales to franchised Papa Johns restaurants located in the UK and our franchise sales and support activities, which derive revenues from sales of franchise and development rights and the collection of royalties from our International franchisees, as well as the operations of all Company-owned restaurants located in the UK. International franchisees are defined as all franchise operations outside of the United States and Canada. Our reportable segments are distinct business units that provide different products or services. Separate management of each segment is required because each business unit is subject to different operational issues and strategies. Certain administrative and capital costs are allocated to each of our segments based upon predetermined rates or estimated resource usage.
+All other business units that do not meet the quantitative or qualitative thresholds for determining reportable segments, which are not operating segments, we refer to as “All Other”. These consist of operations that derive revenues from franchise contributions to marketing funds and information systems and related services used in restaurant operations, including our point-of-sale system, online and other technology-based ordering platforms.
+Our chief operating decision maker (“CODM”) is the Chief Executive Officer. The CODM evaluates performance of and allocates resources to our segments based on segment adjusted EBITDA. Segment adjusted EBITDA represents Net income before Net interest expense, Income tax expense, Depreciation and amortization, Stock-based compensation expense, and other adjustments that vary from period to period, including certain general and administrative expenses and other items that do not reflect normal, recurring expenses necessary to operate our business. During the annual budget and forecasting process, the CODM uses segment adjusted EBITDA to allocate resources (including employees, property, and financial or capital resources) to the segments. The CODM regularly reviews trends in segment adjusted EBITDA on at least a quarterly basis to evaluate the profitability of the segments and to make resource allocation decisions. When our CODM reviews balance sheet information, it is at a consolidated level.
+Segment Results
+The tables below present our operating results by segment. The significant expense categories and amounts presented in the tables below align with the segment-level information that is regularly provided to the CODM. A reconciliation to Company results is included in the following section.
+Three Months Ended September 27, 2026
+(In thousands) | Domestic Company-Owned Restaurants | North America Franchising | North America Commissaries | International | Total
+Revenues from external customers | $ | 128,049 | $ | 29,984 | $ | 202,335 | $ | 44,996 | $ | 405,364
+Intersegment revenues | — | 216 | 41,724 | — | 41,940
+Segment revenue | $ | 128,049 | $ | 30,200 | $ | 244,059 | $ | 44,996 | $ | 447,304
+Less segment expenses (a):
+COS - Product Costs | $ | 41,085 | $ | — | $ | 163,563 | $ | 12,977 | $ | 217,625
+COS - Salaries & Benefits | 42,413 | — | 32,422 | 2,209 | 77,044
+COS - Other (b,c) | 34,722 | — | 20,438 | 8,144 | 63,304
+General & Administrative | 8,748 | 9,955 | 7,718 | 8,805 | 35,226
+Other Segment Expenses (d) | — | — | — | 5,194 | 5,194
+Segment adjusted EBITDA | $ | 1,081 | $ | 20,245 | $ | 19,918 | $ | 7,667 | $ | 48,911
+21
+Three Months Ended September 28, 2025
+(In thousands) | Domestic Company-Owned Restaurants | North America Franchising | North America Commissaries | International | Total
+Revenues from external customers | $ | 165,194 | $ | 33,797 | $ | 209,403 | $ | 44,721 | $ | 453,115
+Intersegment revenues | — | 1,161 | 50,086 | — | 51,247
+Segment revenue | $ | 165,194 | $ | 34,958 | $ | 259,489 | $ | 44,721 | $ | 504,362
+Less segment expenses (a):
+COS - Product Costs | $ | 49,836 | $ | — | $ | 186,617 | $ | 13,426 | $ | 249,879
+COS - Salaries & Benefits | 55,124 | — | 31,052 | 1,941 | 88,117
+COS - Other (b,c) | 45,957 | — | 16,779 | 8,677 | 71,413
+General & Administrative | 10,335 | 9,452 | 5,839 | 10,858 | 36,484
+Other Segment Expenses (d) | — | — | — | 4,519 | 4,519
+Segment adjusted EBITDA | $ | 3,942 | $ | 25,506 | $ | 19,202 | $ | 5,300 | $ | 53,950
+22
+Nine Months Ended September 27, 2026
+(In thousands) | Domestic Company-Owned Restaurants | North America Franchising | North America Commissaries | International | Total
+Revenues from external customers | $ | 406,656 | $ | 97,474 | $ | 617,956 | $ | 133,263 | $ | 1,255,349
+Intersegment revenues | — | 681 | 128,686 | — | 129,367
+Segment revenue | $ | 406,656 | $ | 98,155 | $ | 746,642 | $ | 133,263 | $ | 1,384,716
+Less segment expenses (a):
+COS - Product Costs | $ | 126,902 | $ | — | $ | 510,201 | $ | 37,455 | $ | 674,558
+COS - Salaries & Benefits | 134,591 | — | 96,787 | 6,642 | 238,020
+COS - Other (b,c) | 103,158 | — | 59,721 | 25,021 | 187,900
+General & Administrative | 26,404 | 28,817 | 25,234 | 25,305 | 105,760
+Other Segment Expenses (d) | — | — | — | 15,659 | 15,659
+Segment adjusted EBITDA | $ | 15,601 | $ | 69,338 | $ | 54,699 | $ | 23,181 | $ | 162,819
+Nine Months Ended September 28, 2025
+(In thousands) | Domestic Company-Owned Restaurants | North America Franchising | North America Commissaries | International | Total
+Revenues from external customers | $ | 511,786 | $ | 104,708 | $ | 637,168 | $ | 128,016 | $ | 1,381,678
+Intersegment revenues | — | 3,664 | 154,356 | — | 158,020
+Segment revenue | $ | 511,786 | $ | 108,372 | $ | 791,524 | $ | 128,016 | $ | 1,539,698
+Less segment expenses (a):
+COS - Product Costs | $ | 155,169 | $ | — | $ | 566,640 | $ | 37,645 | $ | 759,454
+COS - Salaries & Benefits | 170,305 | — | 91,095 | 5,473 | 266,873
+COS - Other (b,c) | 136,441 | — | 49,439 | 25,116 | 210,996
+General & Administrative | 31,033 | 28,776 | 26,145 | 28,983 | 114,937
+Other Segment Expenses (d) | — | — | — | 14,479 | 14,479
+Segment adjusted EBITDA | $ | 18,838 | $ | 79,596 | $ | 58,205 | $ | 16,320 | $ | 172,959
+___________________________________
+(a) Segment expenses exclude depreciation and amortization, stock-based compensation expense, and certain general and administrative expenses and other items that do not reflect normal, recurring expenses necessary to operate our business (see reconciliation that follows).
+(b) During the current year, the Company updated its internal cost allocation methodology for certain centrally incurred costs. As a result, a portion of costs previously allocated to the Domestic Company‑owned restaurants segment is now reflected within Unallocated corporate expenses and the North America commissaries segment. The change is prospective and does not affect total reported expenses. Prior period segment information has not been recast. For the three months ended September 27, 2026, this allocation methodology update resulted in a $2.1 million decrease in COS - Other for our Domestic Company-owned restaurants, a $0.6 million increase in COS - Other for our North America commissaries segment and a $1.5 million increase in Unallocated corporate expenses as compared to the prior year comparable period. For the nine months ended September 27, 2026, this allocation methodology update resulted in a $6.3 million decrease in COS - Other for our Domestic Company-owned restaurants, a $1.9 million increase in COS - Other for our North America commissaries segment and a $4.4 million increase in Unallocated corporate expenses as compared to the prior year comparable period.
+(c) The segment expense category “COS - Other” includes delivery expenses, Company-owned restaurant advertising costs, occupancy costs, technology costs, aggregator fees, insurance, and other costs of sales.
+(d) Other Segment Expenses represent all operating expenses that are not included in the segment significant expense categories. Other Segment Expenses include advertising fund expenses and other operating expenses.
+23
+Reconciliation of Segment Results to Company Results
+The following table reconciles total revenue from our segments to total Company revenues and total adjusted EBITDA from our segments to Income before income taxes:
+Three Months Ended | Nine Months Ended
+(In thousands) | September 27, 2026 | September 28, 2025 | September 27, 2026 | September 28, 2025
+Total Segment revenue | $ | 447,304 | $ | 504,362 | $ | 1,384,716 | $ | 1,539,698
+All Other Revenue (a) | 73,425 | 68,866 | 209,367 | 216,958
+Elimination of intersegment revenue | (65,886) | (65,074) | (178,234) | (201,027)
+Total revenues | $ | 454,843 | $ | 508,154 | $ | 1,415,849 | $ | 1,555,629
+Three Months Ended | Nine Months Ended
+(In thousands) | September 27, 2026 | September 28, 2025 | September 27, 2026 | September 28, 2025
+Total Segment adjusted EBITDA | $ | 48,911 | $ | 53,950 | $ | 162,819 | $ | 172,959
+All Other adjusted EBITDA (a) | 3,553 | 4,498 | 10,526 | 23,896
+Unallocated corporate expenses, adjusted (b) | (14,379) | (10,689) | (34,778) | (46,857)
+Other income/(expense) adjustments to reconcile to income before income taxes (c) | (23,852) | (31,588) | (80,389) | (85,372)
+Net interest expense | (9,396) | (9,945) | (28,595) | (30,608)
+Income before income taxes | $ | 4,837 | $ | 6,226 | $ | 29,583 | $ | 34,018
+___________________________________
+(a) As noted in the commentary above, All Other revenue and All Other adjusted EBITDA is derived from business units that do not meet the quantitative or qualitative thresholds for determining reportable segments. These business units consist of operations that derive revenues from franchise contributions to marketing funds and from franchise contributions to information systems and related services used in restaurant operations, including our point-of-sale system, online and other technology-based ordering platforms. Our largest marketing fund is PJMF, which is designed to operate at break-even for the purpose of designing and administering advertising and promotional programs for all participating Domestic restaurants. Technology-based franchisee fees are meant to offset the costs of building, operating, and depreciating technology that supports franchisee operations. As such, these fees may vary from period to period, as they are designed to operate near break-even over time when including the impact of depreciation.
+(b) Unallocated corporate expenses represent administrative fees incurred by the restaurant support centers, including information systems and related services, corporate salaries and bonuses, and other corporate costs. These expenses are adjusted for depreciation and amortization, stock-based compensation expense, and certain general and administrative expenses and other items that do not reflect normal, recurring expenses necessary to operate our business.
+(c) Other (income)/expense adjustments represent depreciation and amortization, stock-based compensation expense, and certain general and administrative expenses and other items that do not reflect normal, recurring expenses necessary to operate our business. As such, management excludes these items from the evaluation of segment adjusted EBITDA. For the periods above, the adjustments include:
+24
+Three Months Ended | Nine Months Ended
+(In thousands) | September 27, 2026 | September 28, 2025 | September 27, 2026 | September 28, 2025
+Depreciation and amortization | $ | 19,236 | $ | 24,914 | $ | 56,213 | $ | 62,076
+Stock-based compensation expense | 3,797 | 4,639 | 11,263 | 12,132
+Technology Transformation costs | 739 | — | 739 | —
+Restructuring costs | 580 | 231 | 8,128 | 4,862
+Refranchising transaction (gain) expense, net | (1,743) | 483 | (2,551) | 513
+Other costs (a) | 1,243 | 1,321 | 6,597 | 5,789
+Other (income)/expense adjustments | $ | 23,852 | $ | 31,588 | $ | 80,389 | $ | 85,372
+___________________________________
+(a)For the three and nine months ended September 27, 2026, represents costs associated with project-based strategic initiatives not related to our ongoing operations as well as realizable insurance recoveries arising from tornadoes that damaged the Texas QC Center as well as the restaurant support center and QC Center in Louisville, Kentucky.
+For the three and nine months ended September 28, 2025, other costs were comprised of the following:
+i.Losses on disposal of equipment incurred in connection with the termination of a COVID-era program that pre-purchased store equipment due to supply chain challenges;
+ii.Costs associated with project-based strategic initiatives not related to our ongoing operations; and
+iii.Costs incurred, net of anticipated insurance recoveries, arising from tornadoes that damaged the Texas QC Center as well as the restaurant support center and QC Center in Louisville, Kentucky.
+25
+Disaggregation of Revenue
+Our segments earn revenue from both external and internal customers. No single external customer accounted for 10% or more of our total revenues. Our intersegment revenues primarily represent revenue earned by our QC Centers from the sale of food and paper products to our Company-owned restaurants and collection of technology fees and marketing fees from our Company-owned restaurants. We account for intercompany sales as if the sales were to third parties and subsequently eliminate the activity. The accounting policies of our segments are the same as those described in Note 2. Significant Accounting Policies.
+In the following tables, revenues are disaggregated by major product line. The tables also include a reconciliation of the disaggregated revenues by the reportable segment to total revenues:
+Three Months Ended September 27, 2026
+(In thousands) | Domestic Company-owned Restaurants | North America Franchising | North America Commissaries | International | All Other | Elimination of Intersegment Revenue | Total
+Company-owned restaurant sales | $ | 128,049 | $ | — | $ | — | $ | 3,235 | $ | — | $ | — | $ | 131,284
+Franchise royalties and fees | — | 30,200 | — | 13,122 | — | (216) | 43,106
+Commissary sales | — | — | 244,059 | 20,145 | — | (41,724) | 222,480
+Other revenues | — | — | — | 3,494 | 21,266 | (3,438) | 21,322
+Advertising funds revenue | — | — | — | 5,000 | 52,159 | (20,508) | 36,651
+Total revenues | $ | 128,049 | $ | 30,200 | $ | 244,059 | $ | 44,996 | $ | 73,425 | $ | (65,886) | $ | 454,843
+Three Months Ended September 28, 2025
+(In thousands) | Domestic Company-owned Restaurants | North America Franchising | North America Commissaries | International | All Other | Elimination of Intersegment Revenue | Total
+Company-owned restaurant sales | $ | 165,194 | $ | — | $ | — | $ | 3,227 | $ | — | $ | — | $ | 168,421
+Franchise royalties and fees | — | 34,958 | — | 13,254 | — | (1,161) | 47,051
+Commissary sales | — | — | 259,489 | 20,178 | — | (50,086) | 229,581
+Other revenues | — | — | — | 3,278 | 22,463 | (4,317) | 21,424
+Advertising funds revenue | — | — | — | 4,784 | 46,403 | (9,510) | 41,677
+Total revenues | $ | 165,194 | $ | 34,958 | $ | 259,489 | $ | 44,721 | $ | 68,866 | $ | (65,074) | $ | 508,154
+Nine Months Ended September 27, 2026
+(In thousands) | Domestic Company-owned Restaurants | North America Franchising | North America Commissaries | International | All Other | Elimination of Intersegment Revenue | Total
+Company-owned restaurant sales | $ | 406,656 | $ | — | $ | — | $ | 9,944 | $ | — | $ | — | $ | 416,600
+Franchise royalties and fees | — | 98,155 | — | 39,795 | — | (681) | 137,269
+Commissary sales | — | — | 746,642 | 57,983 | — | (128,686) | 675,939
+Other revenues | — | — | — | 10,481 | 64,763 | (10,675) | 64,569
+Advertising funds revenue | — | — | — | 15,060 | 144,604 | (38,192) | 121,472
+Total revenues | $ | 406,656 | $ | 98,155 | $ | 746,642 | $ | 133,263 | $ | 209,367 | $ | (178,234) | $ | 1,415,849
+26
+Nine Months Ended September 28, 2025
+(In thousands) | Domestic Company-owned Restaurants | North America Franchising | North America Commissaries | International | All Other | Elimination of Intersegment Revenue | Total
+Company-owned restaurant sales | $ | 511,786 | $ | — | $ | — | $ | 9,505 | $ | — | $ | — | $ | 521,291
+Franchise royalties and fees | — | 108,372 | — | 38,701 | — | (3,664) | 143,409
+Commissary sales | — | — | 791,524 | 55,930 | — | (154,356) | 693,098
+Other revenues | — | — | — | 9,971 | 71,842 | (13,496) | 68,317
+Advertising funds revenue | — | — | — | 13,909 | 145,116 | (29,511) | 129,514
+Total revenues | $ | 511,786 | $ | 108,372 | $ | 791,524 | $ | 128,016 | $ | 216,958 | $ | (201,027) | $ | 1,555,629
+27
+
+== mdna ==
+Item 2. Management’s Discussion and Analysis of Financial Condition and Results of Operations
+Overview
+Papa John’s International, Inc. (referred to as the “Company,” “Papa John’s,” “Papa Johns” or in the first-person notations of “we,” “us” and “our”) operates and franchises pizza delivery and carryout restaurants and, in certain international markets, dine-in and delivery restaurants under the trademark “Papa John’s”. Papa Johns began operations in 1984. At September 27, 2026, there were 5,969 Papa John’s restaurants in operation, consisting of 432 Company-owned and 5,537 franchised restaurants operating in 51 countries and territories. Our revenues are derived from retail sales of pizza and other food and beverage products to the general public by Company-owned restaurants, franchise royalties, and sales of franchise and development rights. Additionally, we derive revenues from sales to franchisees of various items including food and paper products from our North America Quality Control Centers (“QC Centers”) and operation of our International QC Center in the United Kingdom (“UK”), contributions received by Papa John’s Marketing Fund (“PJMF”) which is our national marketing fund, and fees related to the use of information systems equipment as well as software and related services. We believe that in addition to supporting profitability and growth of both Company-owned and franchised restaurants, these activities contribute to product quality and consistency throughout the Papa Johns system.
+In discussions of our business, “Domestic” is defined as within the contiguous United States, “North America” includes Domestic and Canada, and “International” includes the rest of the world other than North America.
+Recent Developments and Trends
+During the third quarter of 2026, we continued progressing on our business transformation initiatives as we position the business for long-term success amid a challenging and softer consumer environment in North America and a dynamic International market. We now organize these initiatives under “Unbox Better”, which is built on two priorities: strengthening our brand by giving customers compelling reasons to choose Papa Johns, and strengthening our system by consistently delivering on the expectations we create. Seven imperatives support these priorities, which we describe below.
+Strengthen our brand
+Reignite our food: We are recommitting across the system to the fundamentals of our food, including dough optimization, bake consistency and presentation. We continue to highlight our six simple ingredients and fresh, never frozen original dough, and we are layering in menu innovation, such as our new pan pizzas and oven-toasted sandwiches, to expand our addressable market.
+Bring our brand promise back to life: Through our mix of national and local advertising, we continue to emphasize the craftsmanship behind the products we serve and the product truths that we believe are key differentiators of our brand.
+Reset our value equation: We continued to sharpen our value perception with limited-time promotional offers while continuing to emphasize our Papa Pairings mix and match platform. We plan to maintain a compelling value proposition while staying true to our premium positioning, which we believe strengthens our barbell strategy.
+Deepen our customer connection: Most of our sales occur through digital channels, and we are making significant investments in our technology infrastructure to deliver a more seamless experience across our owned channels and better connect with customers. In 2025, we introduced our new omnichannel platform, releasing new mobile apps across both Android and iOS platforms as well as our refreshed website and mobile web experience, which we believe provides a streamlined ordering journey for our customers.
+Strengthen our system
+Deliver on every promise: We have initiated a multi-year transition to a new point-of-sale system across all U.S. Company-owned and franchised restaurants that we expect to replace our existing system. We currently expect to fully deploy the new system by the end of 2027. During the second quarter of 2026, we began pilot testing and, consequently, began accelerating the remaining useful lives of our existing point-of-sale software assets. Following the accelerated technological and digital development over 2025 and 2026, we are reducing our digital fee from 1.75% to 1.50%, effective in 2027, to balance supporting our franchisees and continued long-term development of our platform.
+Bring the brand to more guests: We partnered with our franchisees to re-establish our area advertising cooperative (“Co-op”) program, helping ensure a strong presence in key regional and local markets. As part of our new marketing framework, local Co-op spending will increase to 2% of sales and be required across the system beginning in 2027, in
+28
+addition to an adjusted 5% national advertising contribution. We also began work to refine our aggregator channel strategy, which remains an important component of customer acquisition, through a more targeted mix of promotional offers and an ongoing evaluation of our national and local third-party marketing investments. These efforts are intended to improve the efficiency of our spending and drive incremental customer trial. Development remains a key long-term growth driver. Our near-term North America plan focuses on priority markets and on improving the quality and profitability of our restaurant portfolio, with fewer new restaurant openings expected in 2026. Our near-term International development pipeline remains strong.
+Build a system where operators thrive: We are focused on the financial health of our franchisees. We expect to achieve at least $60 million in North America systemwide supply chain savings by the end of 2028, equating to meaningful restaurant-level margin improvement, while maintaining our commitment to product quality. We have captured approximately $23 million of cumulative benefits from these initiatives and are on track to realize at least $25 million of savings by the end of 2026. We also began franchisee incentive programs during the second quarter of 2026 tied to operational excellence and restaurant image improvements.
+We have agreed with franchisees that the fixed operating margin that Domestic QC Centers charge will be lowered to 4% beginning in 2027. We expect this change to improve franchisee restaurant-level margins by approximately 100 basis points and to reduce future North America Commissary revenues. This margin will step up to 4.5% in 2028 and 5% in 2029.
+Refranchising also supports this imperative by giving developing franchisees opportunities to expand and by providing additional means to reinvest in our transformation. In the third quarter of 2026, we completed the refranchising of 28 restaurants in Florida, and we continue to pursue opportunities to refranchise additional markets. We are also optimizing our restaurant portfolio through the Enterprise Transformation Plan described below.
+Enterprise Transformation Plan
+In December 2025, our Board of Directors approved a business transformation program (the “Enterprise Transformation Plan”) to create capacity to invest in our next phase of growth by reducing non-consumer-facing spending and optimizing our restaurant portfolio to improve unit economics. Actions under the plan resulted in the closure of 146 restaurants in North America during the nine months ended September 27, 2026, and a reduction of our corporate workforce by approximately 7%. As of September 27, 2026, we had also approved the closure of nine additional Company-owned restaurants, the majority of which we expect to close by the end of 2026.
+We incurred restructuring expenses of $1.2 million during the third quarter of 2026, consisting primarily of professional services fees and non-cash charges related to Company-owned restaurant closures. We currently estimate aggregate restructuring charges of approximately $24 million to $31 million for actions approved thus far, inclusive of the $17.6 million recognized during 2025 and the nine months ended September 27, 2026. We expect to recognize the remainder during 2026 and 2027. We have identified approximately $30 million of general and administrative expense savings, exclusive of marketing spend, to be actioned across fiscal years 2026 and 2027.
+The plan remains ongoing and may result in additional restructuring charges, although the amounts and nature of expenses related to actions not yet approved are currently not estimable. We expect elevated levels of restaurant closures in North America during 2026 and 2027 as we close underperforming restaurants that lack a path to sustainable financial improvement, allowing our franchisees to invest in their remaining restaurants to accelerate growth.
+Global Restaurant Sales and Unit Information
+“Comparable sales” represents sales for the same base of restaurants for the same fiscal periods. “Comparable sales growth (decline)” represents the change in year-over-year comparable sales. “Global system-wide restaurant sales” represents total restaurant sales for all Company-owned and franchised restaurants open during the comparable periods, and “Global system-wide restaurant sales growth (decline)” represents the change in global system-wide restaurant sales year-over-year. Comparable sales, Comparable sales growth (decline), Global system-wide restaurant sales and Global system-wide sales growth (decline) exclude franchisees for which we suspended corporate support.
+“Equivalent units” represents the number of restaurants open at the beginning of a given period, adjusted for restaurants opened, closed, acquired or sold during the period on a weighted average basis.
+We believe Domestic Company-owned, North America franchised, and International Comparable sales growth (decline) and Global system-wide restaurant sales information is useful in analyzing our results since our franchisees pay royalties
+29
+and marketing fund contributions that are based on a percentage of franchise sales. Comparable sales and Global system-wide restaurant sales results for restaurants operating outside of the United States are reported on a constant dollar basis, which excludes the impact of foreign currency translation. Franchise sales also generate commissary revenue in the United States and in certain international markets. Comparable sales growth (decline) and Global system-wide restaurant sales information is also useful for comparison to industry trends and evaluating the strength of our brand. Management believes the presentation of Global system-wide restaurant sales growth (decline), excluding the impact of foreign currency, provides investors with useful information regarding underlying sales trends and the impact of new unit changes without being impacted by swings in the external factor of foreign currency. Franchise restaurant sales are not included in the Company’s revenues.
+Three Months Ended | Nine Months Ended
+Growth rates below exclude the impact of foreign currency | September 27,2026 | September 28,2025 | September 27,2026 | September 28, 2025 (b)
+Comparable sales growth (decline):
+Domestic Company-owned restaurants (a) | (7.5)% | (3.1)% | (7.4)% | (2.5)%
+North America franchised restaurants (a) | (8.5)% | (2.6)% | (7.8)% | (1.3)%
+North America restaurants | (8.3)% | (2.7)% | (7.7)% | (1.5)%
+International restaurants | (1.8)% | 7.1% | 1.0% | 4.7%
+Total comparable sales growth (decline) | (6.5)% | (0.2)% | (5.4)% | 0.0%
+Global system-wide restaurant sales growth (decline):
+Domestic Company-owned restaurants (a) | (5.5)% | (2.1)% | (6.5)% | (1.2)%
+North America franchised restaurants (a) | (9.4)% | (0.8)% | (8.0)% | 0.5%
+North America restaurants | (8.8)% | (1.1)% | (7.8)% | 0.2%
+International restaurants | 2.8% | 10.3% | 4.6% | 7.5%
+Total global system-wide restaurant sales growth (decline) | (5.6)% | 1.8% | (4.6)% | 2.0%
+___________________________________
+(a)For the three and nine months ended September 27, 2026, comparable sales decline and system-wide restaurant sales decline for Domestic Company-owned restaurants and North America franchised restaurants were adjusted to exclude the impact of refranchising transactions that occurred in the fourth quarter of 2025 and the third quarter of 2026. See “Note 11. Divestitures” of “Notes to Condensed Consolidated Financial Statements” for additional information.
+(b)System-wide restaurant sales for the nine months ended September 28, 2025 have been adjusted to remove $11.8 million of North America franchised restaurant sales that were erroneously overstated.
+30
+Restaurant Progression | Three Months Ended | Nine Months Ended
+September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025
+North America Company-owned:
+Beginning of period | 456 | 541 | 462 | 539
+Opened | — | 4 | 2 | 7
+Closed | (9) | — | (17) | (1)
+Refranchised | (28) | — | (28) | —
+End of period | 419 | 545 | 419 | 545
+North America franchised:
+Beginning of period | 2,983 | 2,976 | 3,061 | 2,975
+Opened | 11 | 14 | 26 | 48
+Closed | (36) | (28) | (129) | (61)
+Refranchised | 28 | — | 28 | —
+End of period | 2,986 | 2,962 | 2,986 | 2,962
+International Company-owned:
+Beginning of period | 13 | 13 | 13 | 13
+End of period | 13 | 13 | 13 | 13
+International franchised:
+Beginning of period | 2,526 | 2,459 | 2,547 | 2,503
+Opened | 36 | 27 | 97 | 82
+Closed | (11) | (12) | (93) | (111)
+End of period | 2,551 | 2,474 | 2,551 | 2,474
+Total restaurants – end of period | 5,969 | 5,994 | 5,969 | 5,994
+Trailing four quarters net restaurant growth (decline) | (25) | 86 | (25) | 86
+Results of Operations
+Revenues
+The following table sets forth the various components of Revenues from the Condensed Consolidated Statements of Operations:
+Three Months Ended | Nine Months Ended | Increase(Decrease)
+(Dollars in thousands) | September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025 | QTD | YTD
+Revenues:
+Company-owned restaurant sales | $ | 131,284 | $ | 168,421 | $ | 416,600 | $ | 521,291 | (22.1) | % | (20.1) | %
+Franchise royalties and fees | 43,106 | 47,051 | 137,269 | 143,409 | (8.4) | % | (4.3) | %
+Commissary revenues | 222,480 | 229,581 | 675,939 | 693,098 | (3.1) | % | (2.5) | %
+Other revenues | 21,322 | 21,424 | 64,569 | 68,317 | (0.5) | % | (5.5) | %
+Advertising funds revenue | 36,651 | 41,677 | 121,472 | 129,514 | (12.1) | % | (6.2) | %
+Total revenues | $ | 454,843 | $ | 508,154 | $ | 1,415,849 | $ | 1,555,629 | (10.5) | % | (9.0) | %
+The comparability of 2026 and 2025 results is impacted by transactions that have changed the composition of our Domestic Company-owned restaurants and Domestic franchised restaurants. On November 24, 2025, the Company completed the refranchising of 85 Domestic Company-owned restaurants previously owned and operated by Colonel’s Limited, LLC, a consolidated joint venture. See “Note 21. Divestitures” of the “Notes to Consolidated Financial Statements” of our 2025
+31
+Annual Report on Form 10-K for additional information on the transaction. Additionally, on August 24, 2026, we completed the refranchising of 28 Domestic Company-owned restaurants located in the Orlando metropolitan area to an existing third-party franchisee. See “Note 11. Divestitures” of the “Notes to Condensed Consolidated Financial Statements” for additional information on the transaction. Upon closing of these transactions (collectively, “the Domestic Company-owned restaurant refranchising transactions”), the restaurants formerly owned by the Company converted to franchised locations.
+Total revenues decreased $53.3 million, or 10.5%, to $454.8 million for the three months ended September 27, 2026 and decreased $139.8 million, or 9.0%, to $1.4 billion for the nine months ended September 27, 2026, as compared to the prior year comparable periods. Changes in total revenues were impacted by the Domestic Company-owned restaurant refranchising transactions noted above and as detailed in the discussions below.
+Company-owned restaurant sales, which include sales from both Domestic and International Company-owned restaurants, decreased $37.1 million, or 22.1%, for the three months ended September 27, 2026 and decreased $104.7 million, or 20.1%, for the nine months ended September 27, 2026, as compared to the prior year comparable periods. The decreases for the three and nine month periods were primarily attributable to approximately $26 million and $76 million, respectively, in prior-period sales from the formerly-Company owned restaurants refranchised in the Domestic Company-owned restaurant refranchising transactions, as detailed above. The decreases were also due to lower comparable sales of 7.5% and 7.4% for our Domestic Company-owned restaurants for the three and nine months ended September 27, 2026, respectively, primarily due to lower transaction volumes.
+Franchise royalties and fees, which include revenues generated from both North America and International franchisees, decreased $3.9 million, or 8.4%, for the three months ended September 27, 2026 and decreased $6.1 million, or 4.3%, for the nine months ended September 27, 2026, as compared to the prior year comparable periods. The decreases for the three and nine month periods were due to lower royalties and fees from our North America franchisees primarily as a result of declines in comparable sales of 8.5% and 7.8% for the respective periods and due to the impact of franchisee incentive programs tied to operational performance that began during the second quarter of 2026. International franchise royalties and fees decreased $0.1 million and increased $1.1 million for the three and nine months ended September 27, 2026, respectively, due to International comparable sales of decline of 1.8% and growth of 1.0%, respectively. North America and International franchise restaurant growth also resulted in slight increases in royalty revenue for the periods compared.
+North America franchise restaurant sales are not included in Company revenues; however, our North America franchise royalty revenues are derived from these sales. North America franchise restaurant sales decreased 5.7% to $673.9 million and decreased 4.8% to $2.1 billion for the three and nine months ended September 27, 2026, respectively, compared to prior year comparable periods and excluding the impact of foreign currency fluctuations. The declines in franchise restaurant sales were primarily due to decreases in comparable sales of 8.5% and 7.8% for the three and nine months ended September 27, 2026, respectively, partially offset by an increase in North America franchised restaurants as a result of the Domestic Company-owned restaurant refranchising transactions. Franchise equivalent units increased 0.4% for the three months ended September 27, 2026 and increased 0.3% for the nine months ended September 27, 2026 compared to the prior year comparable periods.
+International franchise restaurant sales are also not included in Company revenues; however, our International franchise royalty revenue is derived from these sales. International franchise restaurant sales increased 2.8% to $340.4 million and increased 4.6% to $1.0 billion for the three and nine months ended September 27, 2026, respectively, compared to the prior year comparable periods and excluding the impact of foreign currency fluctuations. The increases were primarily due to growth in the number of International franchise restaurants over the comparable periods. International comparable sales decreased 1.8% and increased 1.0% for the three and nine months ended September 27, 2026, respectively.
+Commissary revenues, which includes sales from our North America and International QC Centers, decreased $7.1 million, or 3.1%, for the three months ended September 27, 2026 and decreased $17.2 million, or 2.5%, for the nine months ended September 27, 2026 as compared to the prior year comparable periods. The decreases were primarily due to lower transaction volumes, partially offset by higher prices. The decreases for the three and nine month periods were also partially offset by an increase in the number of franchised restaurants as a result of the Domestic Company-owned restaurant refranchising transactions discussed above, which contributed to increases of approximately $7 million and $21 million for the three and nine months ended September 27, 2026, respectively.
+Other revenues, which primarily includes revenues derived from our online and mobile ordering business, decreased $0.1 million, or 0.5%, and decreased $3.7 million, or 5.5%, for the three and nine months ended September 27, 2026, respectively, as compared to the prior year comparable periods. The decrease for the nine months ended September 27,
+32
+2026 was primarily due to lower revenues generated from technology services as a result of a reduction in the technology fee charged to franchisees that began in the second half of 2025. North America systemwide sales declines of 8.8% and 7.8% for the three and nine months ended September 27, 2026, respectively, also contributed to the decreases.
+Advertising funds revenue, which includes the operations of PJMF, as well as local and International marketing funds, decreased $5.0 million, or 12.1%, and decreased $8.0 million, or 6.2% for the three and nine months ended September 27, 2026, respectively, as compared to the prior year comparable periods. The decreases were primarily driven by global system-wide restaurant sales declines of 5.6% and 4.6% for the three and nine months ended September 27, 2026, respectively.
+Costs and Expenses
+The following table sets forth the various components of costs and expenses from the Condensed Consolidated Statements of Operations:
+(Dollars in thousands) | Three Months Ended | Nine Months Ended | Increase(Decrease)
+September 27, 2026 | September 28, 2025 | September 27, 2026 | September 28, 2025 | QTD | YTD
+Costs and expenses:
+Cost of sales | $ | 328,598 | $ | 369,130 | $ | 1,008,515 | $ | 1,107,342 | (11.0) | % | (8.9) | %
+General and administrative expenses | 55,840 | 56,478 | 170,790 | 191,763 | (1.1) | % | (10.9) | %
+Depreciation and amortization | 19,236 | 24,914 | 56,213 | 62,076 | (22.8) | % | (9.4) | %
+Advertising funds expense | 36,936 | 41,461 | 122,153 | 129,822 | (10.9) | % | (5.9) | %
+Total costs and expenses | $ | 440,610 | $ | 491,983 | $ | 1,357,671 | $ | 1,491,003 | (10.4) | % | (8.9) | %
+Total costs and expenses were $440.6 million, or 96.9% of total revenues, and $1.4 billion, or 95.9% of total revenues, for the three and nine months ended September 27, 2026, respectively, as compared to $492.0 million, or 96.8% of total revenues and $1.5 billion, or 95.8% of total revenues, for the prior year comparable periods, respectively.
+Cost of sales primarily consists of Company-owned restaurant and supply chain costs incurred to generate related revenues. Components of cost of sales include food and paper products, labor, freight and delivery, occupancy costs, local advertising costs, insurance expense, and other costs. Costs of sales by segment for the three and nine months ended September 27, 2026 and September 28, 2025 were as follows:
+Three Months Ended | Nine Months Ended | Increase(Decrease)
+(In thousands) | September 27, 2026 | September 28, 2025 | September 27, 2026 | September 28, 2025 | QTD | YTD
+Domestic Company-owned restaurants (a) | $ | 118,261 | $ | 151,160 | $ | 365,268 | $ | 462,649 | $ | (32,899) | $ | (97,381)
+North America commissaries (a) | 216,423 | 234,448 | 666,709 | 707,367 | (18,025) | (40,658)
+International (a) | 23,330 | 24,044 | 69,118 | 68,214 | (714) | 904
+Total cost of sales by segment (b) | 358,014 | 409,652 | 1,101,095 | 1,238,230 | (51,638) | (137,135)
+All Other (c) | 15,950 | 14,928 | 47,369 | 40,109 | 1,022 | 7,260
+Intersegment cost of sales | (45,366) | (55,450) | (139,949) | (170,997) | 10,084 | 31,048
+Total cost of sales | $ | 328,598 | $ | 369,130 | $ | 1,008,515 | $ | 1,107,342 | $ | (40,532) | $ | (98,827)
+___________________________________
+(a) Segment cost of sales in the table above include stock-based compensation expenses and other adjustments that are excluded from segment expenses in the segment footnote, which are presented on an adjusted basis (see “Note 12. Segment Information”).
+(b) The North America franchising segment does not incur costs of sales, and therefore is not included in total cost of sales by segment. The North America franchising segment consists of our franchise sales and support activities for our franchisees located in the United States and Canada.
+(c) “All Other” refers to all other business units that do not meet the quantitative or qualitative thresholds for determining reportable segments, and primarily includes our online and mobile ordering business and our marketing funds. These are not considered operating segments.
+33
+Cost of sales were $328.6 million and $1.0 billion for the three and nine months ended September 27, 2026, respectively, representing decreases of $40.5 million and $98.8 million, respectively, from the prior year comparable periods. The decreases in cost of sales were primarily from the Domestic Company-owned restaurant segment as a result of the Domestic Company-owned restaurant refranchising transactions, which resulted in decreases of approximately $25 million and $72 million in cost of sales for the Domestic Company-owned restaurant segment for the three and nine months ended September 27, 2026, respectively. The decreases in Domestic Company-owned restaurant segment cost of sales were also due to lower comparable sales, improved labor productivity, and lower local advertising costs. Cost of sales for the Domestic QC Centers decreased primarily due to lower transaction volumes as a result of lower North America comparable sales and due to savings resulting from our supply chain initiatives. These decreases were partially offset by increases in labor and technology costs for our online and mobile ordering business (“All Other”) and were further offset by decreases in intersegment cost of sales due to a decrease in the number of Domestic Company-owned restaurants as a result of the Domestic Company-owned restaurant refranchising transactions discussed above.
+General and administrative expenses (“G&A”) expenses were $55.8 million, or 12.3% of total revenues, and $170.8 million, or 12.1% of total revenues, for the three and nine months ended September 27, 2026, respectively, as compared to $56.5 million, or 11.1% of total revenues, and $191.8 million, or 12.3% of total revenues, for the prior year comparable periods, respectively. G&A expenses consisted of the following:
+Three Months Ended | Nine Months Ended
+(In thousands) | September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025
+Administrative and other general expenses (a) | $ | 55,763 | $ | 54,443 | $ | 158,317 | $ | 180,620
+Restructuring costs (b) | 577 | 231 | 8,426 | 4,841
+Refranchising transaction (gain) expense, net (c) | (1,743) | 483 | (2,550) | 513
+Other costs (d) | 1,243 | 1,321 | 6,597 | 5,789
+General and administrative expenses | $ | 55,840 | $ | 56,478 | $ | 170,790 | $ | 191,763
+___________________________________
+(a)Administrative and other general expenses increased by $1.3 million for the three months ended September 27, 2026 compared to the prior year comparable period primarily due to a $5.1 million increase in supplemental advertising costs, partially offset by a $4.3 million decrease in management and other compensation costs. Administrative and other general expenses decreased by $22.3 million for the nine months ended September 27, 2026 compared to the prior year comparable period. The decrease was primarily due to an $11.0 million decrease in management and other compensation costs, $4.5 million of expenses incurred in the first quarter of 2025 for our bi-annual franchise operating conference that did not recur in 2026, and a $3.0 million year-over-year reduction in supplemental advertising costs.
+(b)For the three and nine months ended September 27, 2026, represents costs associated with the Enterprise Transformation Plan. For the three and nine months ended September 28, 2025, represents costs associated with the International Transformation Plan. Refer to “Note 9. Restructuring” for additional details.
+(c)Represents refranchising transaction (gain) expense associated with the Domestic Company-owned restaurant refranchising transactions. See “Note 11. Divestitures” for additional details.
+(d)For the three and nine months ended September 27, 2026, represents costs associated with project-based strategic initiatives not related to our ongoing operations as well as realizable insurance recoveries arising from tornadoes that damaged the Texas QC Center as well as the restaurant support center and QC Center in Louisville, Kentucky.
+For the three and nine months ended September 28, 2025, other costs were comprised of the following:
+i.Losses on disposal of equipment incurred in connection with the termination of a COVID-era program that pre-purchased store equipment due to supply chain challenges;
+ii.Costs associated with project-based strategic initiatives not related to our ongoing operations; and
+iii.Costs incurred, net of anticipated insurance recoveries, arising from tornadoes that damaged the Texas QC Center as well as the restaurant support center and QC Center in Louisville, Kentucky.
+Depreciation and amortization expenses were $19.2 million, or 4.2% of total revenues, and $56.2 million, or 4.0% of total revenues, for the three and nine months ended September 27, 2026, respectively, as compared to $24.9 million, or 4.9% of total revenues, and $62.1 million, or 4.0% of total revenues, for the prior year comparable periods, respectively. The decreases in depreciation and amortization expense were primarily driven by lower accelerated depreciation expense from investments in our new point-of-sale system and omnichannel experience, partially offset by accelerated depreciation related to the closure or approved closure of 26 Company-owned restaurants under our Enterprise Transformation Plan during 2026. Accelerated depreciation expense totaled $1.8 million and $3.4 million during the three and nine months
+34
+ended September 27, 2026, respectively, compared to $6.1 million in the three and nine months ended September 28, 2025, respectively.
+Advertising funds expense was $36.9 million, or 100.8% of advertising funds revenue, and $122.2 million, or 100.6% of advertising funds revenue for the three and nine months ended September 27, 2026, respectively, compared to $41.5 million, or 99.5% of advertising funds revenue, and $129.8 million, or 100.2% of advertising funds revenue, for the prior year comparable periods, respectively. Advertising funds expense consists primarily of expenses incurred by PJMF, which is designed to operate at break-even as it spends all annual contributions received from the system. Advertising funds expense also contains expenses incurred through our international marketing funds to support our International segment, which may lead to Advertising funds expense being less than or in excess of Advertising funds revenue due to timing differences. The decrease in advertising funds expense for the three and nine months ended September 27, 2026 compared to the prior year comparable periods was primarily due to declines in global system-wide restaurant sales in 2026.
+Segment Financial Performance
+We evaluate the performance of our reportable segments and allocate resources to them based on earnings before interest, taxes, depreciation, amortization, stock-based compensation expense, and other adjustments, referred to as segment adjusted EBITDA. See “Note 12. Segment Information” for further information regarding the Company’s segments. Segment adjusted EBITDA for each of our reportable segments is summarized in the table below.
+Three Months Ended | Nine Months Ended | Increase(Decrease)
+(In thousands) | September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025 | QTD | YTD
+Domestic Company-owned restaurants | $ | 1,081 | $ | 3,942 | $ | 15,601 | $ | 18,838 | $ | (2,861) | $ | (3,237)
+North America franchising | 20,245 | 25,506 | 69,338 | 79,596 | (5,261) | (10,258)
+North America commissaries | 19,918 | 19,202 | 54,699 | 58,205 | 716 | (3,506)
+International | 7,667 | 5,300 | 23,181 | 16,320 | 2,367 | 6,861
+Domestic Company-owned restaurants segment adjusted EBITDA decreased $2.9 million for the three months ended September 27, 2026 and decreased $3.2 million for the nine months ended September 27, 2026 primarily due to comparable sales declines of 7.5% and 7.4%, respectively, and due to fewer Domestic Company-owned restaurants as a result of the Domestic Company-owned restaurant refranchising transactions. The decreases were partially offset by the impact of a prospective change in our internal cost allocation methodology in 2026 to refine internal allocations of certain operating costs to our segments. This change in allocation methodology resulted in increases of $2.1 million and $6.3 million in Domestic Company-owned restaurants segment adjusted EBITDA for the three and nine months ended September 27, 2026, respectively. Please see “4-wall EBITDA” below for a discussion of this change.
+North America franchising segment adjusted EBITDA decreased $5.3 million and $10.3 million for the three and nine months ended September 27, 2026, respectively, primarily due to comparable sales declines of 8.5% and 7.8%, respectively, and the impact of franchisee incentive programs tied to operational performance that began during the second quarter of 2026.
+North America commissaries segment adjusted EBITDA increased $0.7 million for the three months ended September 27, 2026 primarily due to higher prices and savings resulting from our supply chain initiatives, partially offset by lower transaction volumes. North America commissaries segment adjusted EBITDA decreased $3.5 million for the nine months ended September 27, 2026 primarily due to lower transaction volumes, franchisee food cost subsidies, and timing of planned pricing during the year, partially offset by savings resulting from our supply chain initiatives and commodity deflation compared to the prior period.
+International segment adjusted EBITDA increased $2.4 million for the three months ended September 27, 2026 primarily due to improved business performance in the UK, including lower bad debt expense, partially offset by a decrease in comparable sales of 1.8%. International segment adjusted EBITDA increased $6.9 million for the nine months ended September 27, 2026 primarily due to an increase in comparable sales of 1.0% and due to lower bad debt expense.
+35
+4-wall EBITDA
+4-wall EBITDA and 4-wall EBITDA margin are non-GAAP measures used to evaluate the performance of our Domestic Company-owned restaurants. See “Non-GAAP Measures” for the definition of 4-wall EBITDA and 4-wall EBITDA margin as well as a reconciliation to the most comparable U.S. GAAP measures.
+4-wall EBITDA and 4-wall EBITDA margin are presented in the table below. Segment revenue and segment cost of sales for our Domestic Company-owned restaurants in the table below are presented in the segment footnote to our Condensed Consolidated Financial Statements in accordance with Accounting Standards Codification 280. See “Note 12. Segment Information” of the “Notes to Condensed Consolidated Financial Statements,” for further information on our segments.
+(Dollars in thousands) | Three Months Ended
+September 27,2026 | % of Related Revenues | September 28,2025 | % of Related Revenues
+Segment revenue | $ | 128,049 | $ | 165,194
+Less segment cost of sales:
+COS - Product Costs | 41,085 | 32.1 | % | 49,836 | 30.2 | %
+COS - Salaries & Benefits | 42,413 | 33.1 | % | 55,124 | 33.4 | %
+COS - Other | 34,722 | 27.1 | % | 45,957 | 27.8 | %
+Cost Allocation Change - Domestic Company-owned restaurants (a) | — | — | % | (2,095) | (1.3) | %
+4-wall EBITDA | $ | 9,829 | $ | 16,372
+4-wall EBITDA margin | 7.7 | % | 9.9 | %
+(Dollars in thousands) | Nine Months Ended
+September 27,2026 | % of Related Revenues | September 28,2025 | % of Related Revenues
+Segment revenue | $ | 406,656 | $ | 511,786
+Less segment cost of sales:
+COS - Product Costs | 126,902 | 31.2 | % | 155,169 | 30.3 | %
+COS - Salaries & Benefits | 134,591 | 33.1 | % | 170,305 | 33.3 | %
+COS - Other | 103,158 | 25.4 | % | 136,441 | 26.7 | %
+Cost Allocation Change - Domestic Company-owned restaurants (a) | — | — | % | (6,285) | (1.2) | %
+4-wall EBITDA | $ | 42,005 | $ | 56,156
+4-wall EBITDA margin | 10.3 | % | 11.0 | %
+(a) During the current year, the Company updated its internal cost allocation methodology for certain centrally incurred costs. As a result, a portion of costs previously allocated to the Domestic Company‑owned restaurants segment is now reflected within Unallocated corporate expenses and the North America commissaries segment. The change is prospective and does not affect total reported expenses. We have adjusted for the change in cost allocation in the prior period when calculating 4-wall EBITDA to ensure comparability.
+4-wall EBITDA decreased $6.5 million to $9.8 million for the three months ended September 27, 2026 as compared to the prior year comparable period. The decrease was partially due to the Domestic Company-owned restaurant refranchising transactions, which contributed to a decrease of approximately $1 million due to fewer Domestic Company-owned restaurants. The decrease was also due to lower transaction volumes and higher food costs, partially offset by lower labor costs due to increased productivity and lower local advertising costs.
+4-wall EBITDA margin for the three months ended September 27, 2026 decreased 2.3% primarily due to lower transaction volumes and higher food costs, partially offset by lower labor costs due to increased productivity. This decrease was also partially offset by the impact of the Domestic Company-owned restaurant refranchising transactions, which drove a 1.0% margin increase over the comparable period.
+4-wall EBITDA decreased $14.2 million to $42.0 million for the nine months ended September 27, 2026, as compared to the prior year comparable period. The decrease was partially due to the Domestic Company-owned restaurant refranchising transactions, which contributed to a decrease of approximately $5 million. The decrease was also due to lower transaction
+36
+volumes and higher food costs, partially offset by lower labor costs due to increased productivity and lower local advertising costs.
+4-wall EBITDA margin for the nine months ended September 27, 2026 decreased 0.6% primarily due to lower transaction volumes and higher food costs, offset by commodity deflation, lower labor costs due to increased productivity, and the impact of the Domestic Company-owned restaurant refranchising transactions, which drove a 0.7% margin increase over the comparable periods.
+Items Below Operating Income
+The following table sets forth the various items below Operating income from the Condensed Consolidated Statements of Operations:
+Three Months Ended | Nine Months Ended | Increase (Decrease)
+(In thousands, except per share amounts) | September 27,2026 | September 28,2025 | September 27,2026 | September 28,2025 | QTD | YTD
+Operating income | $ | 14,233 | $ | 16,171 | $ | 58,178 | $ | 64,626 | $ | (1,938) | $ | (6,448)
+Net interest expense | (9,396) | (9,945) | (28,595) | (30,608) | (549) | (2,013)
+Income before income taxes | 4,837 | 6,226 | 29,583 | 34,018 | (1,389) | (4,435)
+Income tax expense | (1,556) | (1,753) | (10,664) | (10,531) | (197) | 133
+Net income | 3,281 | 4,473 | 18,919 | 23,487 | (1,192) | (4,568)
+Net (income) loss attributable to noncontrolling interests | (144) | 234 | 6 | (27) | 378 | (33)
+Net income attributable to the Company | $ | 3,137 | $ | 4,707 | $ | 18,925 | $ | 23,460 | $ | (1,570) | $ | (4,535)
+Basic earnings per common share | $ | 0.09 | $ | 0.14 | $ | 0.55 | $ | 0.69 | $ | (0.05) | $ | (0.14)
+Diluted earnings per common share | $ | 0.09 | $ | 0.13 | $ | 0.55 | $ | 0.69 | $ | (0.04) | $ | (0.14)
+Net Interest Expense
+Net interest expense decreased $0.5 million and $2.0 million for the three and nine months ended September 27, 2026, respectively, compared to prior year comparable periods, primarily due to lower average interest rates as well as lower outstanding debt balances.
+Income Tax Expense
+Our effective income tax rate was 32.2% and 36.0% for the three and nine months ended September 27, 2026, respectively, as compared to an effective income tax rate of 28.2% and 31.0% for the prior year comparable periods, respectively. The higher effective tax rate was primarily due to a shift in income between jurisdictions, tax shortfall generated by vesting of restricted shares, and lower projected income tax credits.
+Three Months Ended | Nine Months Ended
+(Dollars in thousands) | September 27, 2026 | September 28, 2025 | September 27, 2026 | September 28, 2025
+Income before income taxes | $ | 4,837 | $ | 6,226 | $ | 29,583 | $ | 34,018
+Income tax expense | $ | (1,556) | $ | (1,753) | $ | (10,664) | $ | (10,531)
+Effective tax rate | 32.2 | % | 28.2 | % | 36.0 | % | 31.0 | %
+37
+Net Income Attributable to Noncontrolling Interests
+Net income included income of $0.1 million and losses of less than $0.1 million attributable to noncontrolling interests for the three and nine months ended September 27, 2026, respectively, compared with losses of $0.2 million and income of less than $0.1 million, respectively, in the prior year comparable periods.
+Diluted Earnings Per Common Share
+Diluted earnings per common share were $0.09 and $0.55 for the three and nine months ended September 27, 2026, respectively, as compared to $0.13 and $0.69 for the prior year comparable periods, respectively, representing decreases of $0.04 and $0.14, respectively. Adjusted diluted earnings per common share, a non-GAAP measure, was $0.16 and $0.94 for the three and nine months ended September 27, 2026, respectively, as compared to adjusted diluted earnings per common share of $0.32 and $1.09 for the prior year comparable periods, respectively, representing a decrease of $0.16 and $0.15, respectively. See “Non-GAAP Measures” for additional information.
+Non-GAAP Measures
+In addition to the results provided in accordance with U.S. GAAP, we provide certain non-GAAP measures, which present results on an adjusted basis. These are supplemental measures of performance that are not required by or presented in accordance with U.S. GAAP and include the following: adjusted EBITDA, 4-wall EBITDA, 4-wall EBITDA margin, adjusted net income attributable to common shareholders, and adjusted diluted earnings per common share. We believe that our non-GAAP financial measures enable investors to assess the operating performance of our business relative to our performance based on U.S. GAAP results and relative to other companies. We believe that the disclosure of these non-GAAP measures is useful to investors as they reflect metrics that our management team and Board utilize to evaluate our operating performance, allocate resources and administer employee incentive plans. The most directly comparable U.S. GAAP measures to adjusted EBITDA, 4-wall EBITDA, adjusted net income attributable to common shareholders, and adjusted diluted earnings per common share are net income, segment adjusted EBITDA, net income attributable to common shareholders, and diluted earnings per common share, respectively. These non-GAAP measures should not be construed as a substitute for or a better indicator of the Company’s performance than the Company’s U.S. GAAP results.
+The table below reconciles our GAAP financial results to our non-GAAP financial measures.
+38
+Three Months Ended | Nine Months Ended
+(In thousands, except per share amounts) | September 27, 2026 | September 28, 2025 | September 27, 2026 | September 28, 2025
+Net income | $ | 3,281 | $ | 4,473 | $ | 18,919 | $ | 23,487
+Income tax expense | 1,556 | 1,753 | 10,664 | 10,531
+Net interest expense | 9,396 | 9,945 | 28,595 | 30,608
+Depreciation and amortization | 19,236 | 24,914 | 56,213 | 62,076
+Stock-based compensation expense | 3,797 | 4,639 | 11,263 | 12,132
+Restructuring costs (a) | 580 | 231 | 8,128 | 4,862
+Other costs (b) | 1,243 | 1,321 | 6,597 | 5,789
+Refranchising transaction (gain) expense, net (c) | (1,743) | 483 | (2,551) | 513
+Technology Transformation costs (d) | 739 | — | 739 | —
+Adjusted EBITDA | $ | 38,085 | $ | 47,759 | $ | 138,567 | $ | 149,998
+Segment adjusted EBITDA - Domestic Company-owned restaurants | $ | 1,081 | $ | 3,942 | $ | 15,601 | $ | 18,838
+General & Administrative - Domestic Company-owned restaurants | 8,748 | 10,335 | 26,404 | 31,033
+Cost Allocation Change - Domestic Company-owned restaurants (f) | — | 2,095 | — | 6,285
+4-wall EBITDA (g) | $ | 9,829 | $ | 16,372 | $ | 42,005 | $ | 56,156
+Segment revenue - Domestic Company-owned restaurants | $ | 128,049 | $ | 165,194 | $ | 406,656 | $ | 511,786
+4-wall EBITDA margin (g) | 7.7 | % | 9.9 | % | 10.3 | % | 11.0 | %
+Net income attributable to common shareholders | $ | 3,137 | $ | 4,447 | $ | 18,200 | $ | 22,742
+Restructuring costs (a) | 1,209 | 231 | 9,915 | 4,841
+Other costs (b) | 1,243 | 1,321 | 6,597 | 5,789
+Refranchising transaction (gain) expense, net (c) | (1,643) | 338 | (2,642) | 368
+Technology Transformation costs (d) | 1,834 | 6,091 | 2,744 | 6,091
+Tax effect of adjustments (e) | (613) | (1,812) | (3,795) | (3,879)
+Adjusted net income attributable to common shareholders | $ | 5,167 | $ | 10,616 | $ | 31,019 | $ | 35,952
+Diluted earnings per common share | $ | 0.09 | $ | 0.13 | $ | 0.55 | $ | 0.69
+Restructuring costs (a) | 0.04 | 0.01 | 0.30 | 0.15
+Other costs (b) | 0.04 | 0.04 | 0.20 | 0.18
+Refranchising transaction expense (gain), net (c) | (0.05) | 0.01 | (0.08) | 0.01
+Technology Transformation costs (d) | 0.06 | 0.18 | 0.08 | 0.18
+Tax effect of adjustments (e) | (0.02) | (0.05) | (0.11) | (0.12)
+Adjusted diluted earnings per common share | $ | 0.16 | $ | 0.32 | $ | 0.94 | $ | 1.09
+39
+___________________________________
+(a)For the three and nine months ended September 27, 2026, represents costs associated with the Enterprise Transformation Plan. These amounts are inclusive of $0.6 million and $1.8 million for the three and nine months ended September 27, 2026, respectively, of non-cash stock-based compensation and depreciation expenses, which are excluded from adjusted EBITDA above but are reflected as adjustments to non-GAAP diluted EPS. For the three and nine months ended September 28, 2025, represents costs associated with the International Transformation Plan. Refer to “Note 9. Restructuring” for additional details.
+(b)For the three and nine months ended September 27, 2026, represents costs associated with project-based strategic initiatives not related to our ongoing operations as well as realizable insurance recoveries arising from tornadoes that damaged the Texas QC Center as well as the restaurant support center and QC Center in Louisville, Kentucky.
+For the three and nine months ended September 28, 2025, other costs were comprised of the following:
+i.Losses on disposal of equipment incurred in connection with the termination of a COVID-era program that pre-purchased store equipment due to supply chain challenges;
+ii.Costs associated with project-based strategic initiatives not related to our ongoing operations; and
+iii.Costs incurred, net of anticipated insurance recoveries, arising from tornadoes that damaged the Texas QC Center as well as the restaurant support center and QC Center in Louisville, Kentucky.
+(c)Represents refranchising (gain) expense associated with refranchising transactions, including net (gain) loss attributable to noncontrolling interest of approximately ($0.1) and $0.3 million for the three and nine months ended September 27, 2026, respectively, and $0.1 million for both the three and nine months ended September 28, 2025. See “Note 11. Divestitures” for additional details.
+(d)Represents costs associated with the ongoing development and deployment of our new point-of-sale system and omnichannel platform. These amounts are inclusive of $1.1 million and $2.0 million of non-cash accelerated depreciation expense related to the shortened useful life of legacy capitalized software assets for the three and nine months ended September 27, 2026, respectively.
+(e)The tax effect on non-GAAP adjustments was calculated by applying the marginal tax rates of 23.2% for the three and nine months ended September 27, 2026, and 22.7% for the three and nine months ended September 28, 2025. For the nine months ended September 27, 2026, the income tax effect excludes $0.3 million of additional state income tax expense included as a separate non-GAAP adjustment that was classified within Income tax expense in the Condensed Consolidated Statements of Operations.
+(f)During the current year, the Company updated its internal cost allocation methodology for certain centrally incurred costs. As a result, a portion of costs previously allocated to the Domestic Company‑owned restaurants segment is now reflected within Unallocated corporate expenses and the North America commissaries segment. The change is prospective and does not affect total reported expenses. We have included a conforming adjustment in the historical period when reconciling segment adjusted EBITDA to 4-wall EBITDA to ensure comparability.
+(g)4-wall EBITDA is defined as Domestic Company-owned restaurants segment revenue less total Domestic Company-owned restaurants segment cost of sales. Domestic Company-owned restaurants cost of sales include expenses incurred by our Domestic Company-owned restaurants in generating revenue, including cost of food, paper, and cleaning products (‘COS – Product Costs’), cost of restaurant-level labor (‘COS – Salaries & Benefits’), and costs of delivery expenses, Company-owned restaurant advertising costs, insurance, rent, aggregator fees, and other costs (‘COS – Other’). 4-wall EBITDA margin is defined as 4-wall EBITDA divided by segment revenue for our Domestic Company-owned restaurants segment. We use 4-wall EBITDA for the purposes of internally evaluating the performance of our Domestic Company-owned restaurants, and we believe 4-wall EBITDA provides additional information to investors as to the unit economics and restaurant-level profitability of our Domestic Company-owned restaurants. The most directly comparable U.S. GAAP measure to 4-wall EBITDA is segment adjusted EBITDA, which is our segment performance measure as presented in the segment footnote to our Consolidated Financial Statements in accordance with Accounting Standards Codification 280. See “Note 12. Segment Information” of “Notes to Condensed Consolidated Financial Statements,” for further information regarding the Company’s segments.
+In addition, we present free cash flow in this report, which is a non-GAAP measure. Please see “Liquidity and Capital Resources – Free Cash Flow” for a discussion of why we believe free cash flow provides useful information regarding our financial condition and results of operations, and a reconciliation of free cash flow to the most directly comparable U.S. GAAP measure.
+40
+Liquidity and Capital Resources
+Our primary sources of liquidity and capital resources are cash flows from operations and borrowings under the revolving credit facility (the “PJI Revolving Facility”) that forms a part of our Second Amended and Restated Credit Agreement dated as of March 26, 2025 (the “Credit Agreement”). The Credit Agreement provides for a senior secured term loan in a principal amount of $200 million (the “Term Loan”) and a principal amount of $600 million available for borrowing under the PJI Revolving Facility.
+Our principal uses of cash are operating expenses, capital expenditures, and returning value to our shareholders in the form of cash dividends and share repurchases. Our capital priorities are:
+•investing for growth
+•maintaining a strong balance sheet, and
+•returning capital to shareholders
+In accordance with our capital allocation strategy, the Company’s Board of Directors voted to suspend the quarterly dividend beginning with our third quarter dividend in August 2026. This action will allow the Company to accelerate investment in its transformation strategy to drive our next phase of growth and increases our flexibility to make targeted investments in the organization.
+We believe that our balances of cash and cash equivalents and borrowing capacity, together with cash generated from operations and asset sales, will be sufficient to satisfy our operating requirements, capital expenditures, interest payments, and any future returns of capital to shareholders over the next twelve months and beyond.
+Cash Flows
+The table below summarizes our cash flows for the nine months ended September 27, 2026 and September 28, 2025:
+Nine Months Ended
+(In thousands) | September 27,2026 | September 28,2025
+Total cash provided by (used in):
+Operating activities | $ | 58,509 | $ | 106,192
+Investing activities | (18,825) | (37,618)
+Financing activities | (49,668) | (68,208)
+Effect of exchange rate changes on cash and cash equivalents | (206) | 651
+Change in cash, cash equivalents, and restricted cash | $ | (10,190) | $ | 1,017
+Operating Activities
+Total cash provided by operating activities was $58.5 million for the nine months ended September 27, 2026 compared to $106.2 million for the corresponding period of 2025. The decrease of $47.7 million primarily reflects the timing impact of compensation payments related to the prior year, payments related to the Company’s Enterprise Transformation Plan, the timing of cash payments for the National Marketing Fund, increased spend on software services, and lower net income. These factors were partially offset by enactment of the “One Big Beautiful Bill Act” in July 2025 that reduced cash taxes paid during 2026 due to the reinstatement of 100% bonus depreciation and full expensing for domestic research and development expenditures.
+Investing Activities
+Total cash used in investing activities was $18.8 million for the nine months ended September 27, 2026 compared to $37.6 million for the same period in 2025. Net cash used in investing activities during the nine months ended September 27, 2026 primarily reflects $42.0 million in capital expenditures, which includes $2.6 million of additional capital expenditures related to natural disasters. Primary sources of cash in investing activities included $16.0 million primarily from the Domestic Company-owned restaurant refranchising transactions and the sale of the building occupied by our former print and promotions business in Louisville, Kentucky as well as distributions of $4.6 million related to our deferred compensation plan. Net cash used in investing activities of $37.6 million for the nine months ended September 28, 2025 primarily reflects $52.1 million in capital expenditures, which includes $5.1 million of additional capital expenditures
+41
+related to natural disasters, partially offset by $3.3 million of related insurance proceeds, repayment of notes issued of $5.7 million, and distributions of $4.7 million related to our deferred compensation plan.
+Capital expenditures declined by $7.7 million compared to the prior year period due to fewer restaurant openings and remodels, as well as lower technology spending during the nine months of 2026. We estimate that our capital expenditures during 2026 will be approximately $70 million to $80 million, inclusive of software-as-a-service implementation costs related to our point-of-sale system, which will be classified as cash used in operating activities. This estimate includes capital outlays for improvements to existing Company-owned restaurants and for development of new restaurants as well as investments in technology platforms and our supply chain. We intend to fund these expenditures with cash generated by operations and borrowings under our PJI Revolving Facility, as necessary.
+Financing Activities
+Total cash used in financing activities was $49.7 million for the nine months ended September 27, 2026 compared to $68.2 million for the same period in 2025. The primary uses of cash in financing activities during the first nine months of 2026 were dividend payments of $30.9 million, payments related to finance leases of $7.7 million, net repayments of $5.3 million under the PJI Revolving Facility and Term Loan, and tax payments on equity award issuances of $1.9 million. We suspended our quarterly dividend beginning with the third quarter dividend in August 2026, leading to lower dividend payments compared to 2025.
+In the first nine months of 2025, the primary uses of cash for financing activities were $45.8 million in dividend payments, payments related to finance leases of $7.5 million, and tax payments on equity award issuances of $1.8 million. Cash used in financing activities also reflects the impact of net repayments of $13.3 million under the PJI Revolving Facility throughout the year, which includes the refinancing of our debt via the Second Amended and Restated Credit Agreement during the first quarter of 2025 that resulted in borrowings of $200.0 million under the new Term Loan, from which the proceeds were used to repay $196.8 million to the PJI Revolving Facility as well as $3.2 million in related issuance costs.
+There were no share repurchases in the first nine months of 2026 or 2025.
+Debt
+Our outstanding debt as of September 27, 2026 was $716.9 million, which was comprised of $400.0 million principal amount of our 3.875% senior notes (the “Notes”), $197.5 million of Term Loan borrowings, and $119.4 million outstanding under the PJI Revolving Facility. Remaining availability under the PJI Revolving Facility as of September 27, 2026 was approximately $480.5 million.
+The Credit Agreement contains customary affirmative and negative covenants that, among other things, require customary reporting obligations, and restrict, subject to certain exceptions, the incurrence of additional indebtedness and liens, the consummation of certain mergers, consolidations, sales of assets and similar transactions, the making of investments, equity distributions and other restricted payments, and transactions with affiliates. The Company is also subject to certain financial covenants, as shown in the following table, that could restrict or impose constraints on the liquidity of our business:
+Permitted Ratio | Actual Ratio as of September 27, 2026
+Leverage ratio | Not to exceed 5.25 to 1.0 | 3.3 to 1.0
+Interest coverage ratio | Not less than 2.00 to 1.0 | 3.3 to 1.0
+Our leverage ratio is defined as outstanding debt divided by Consolidated EBITDA (as defined in the Credit Agreement) for the most recent four fiscal quarters. Our interest coverage ratio is defined as the sum of Consolidated EBITDA and consolidated rental expense for the most recent four fiscal quarters divided by the sum of consolidated interest expense and consolidated rental expense for the most recent four fiscal quarters. We were in compliance with all financial covenants as of September 27, 2026.
+In addition, the Indenture governing the Notes contains customary covenants that, among other things and subject to certain exceptions, limit our ability and the ability of certain of our subsidiaries to: incur additional indebtedness and guarantee indebtedness; pay dividends or make other distributions or repurchase or redeem our capital stock; prepay, redeem or repurchase certain debt; issue certain preferred stock or similar equity securities; make loans and investments; sell assets;
+42
+incur liens; enter into transactions with affiliates; enter into agreements restricting our subsidiaries’ ability to pay dividends; and consolidate, merge or sell all or substantially all of our assets.
+PJMF has a $30.0 million revolving line of credit under the PJMF Revolving Facility, pursuant to a Revolving Loan Agreement dated September 30, 2015 and most recently amended on September 30, 2026. As of September 27, 2026, there was no debt outstanding under the PJMF Revolving Facility. The PJMF Revolving Facility is secured by substantially all assets of PJMF and matures on September 30, 2027, but is subject to annual renewals. The borrowings under the PJMF Revolving Facility accrue interest at a variable rate of a one-month SOFR plus 1.975%. The PJMF operating results and the related debt outstanding do not impact the financial covenants under the Credit Agreement.
+Refer to Note 12 of the consolidated financial statements in our Annual Report on Form 10-K for the year ended December 28, 2025 for additional information.
+Share Repurchases
+Share repurchases are part of our long-term growth and capital allocation strategy. On October 28, 2021, our Board of Directors approved a share repurchase program with an indefinite duration for up to $425.0 million of the Company’s common stock. There was no share repurchase activity during the three and nine months ended September 27, 2026 or September 28, 2025. Approximately $90.2 million remained available under the Company’s share repurchase program as of September 27, 2026.
+The Company utilizes a written trading plan under Rule 10b5-1 under the Securities Exchange Act of 1934, as amended, from time to time to facilitate the repurchase of shares of our common stock under this share repurchase program. There can be no assurance that we will repurchase shares of our common stock either through a Rule 10b5-1 trading plan or otherwise.
+Dividends
+Beginning with our third quarter dividend in August 2026, the Company’s Board of Directors voted to suspend the quarterly dividend. The declaration and payment of any future dividends will be at the discretion of our Board of Directors. The Company paid aggregate cash dividends to common stockholders of $30.9 million ($0.92 per share) and $45.8 million ($1.38 per share) for the nine months ended September 27, 2026 and September 28, 2025, respectively.
+Free Cash Flow
+Free cash flow, a non-GAAP measure, is defined as net cash provided by operating activities (from the Condensed Consolidated Statements of Cash Flows) less the purchases of property and equipment, excluding purchases of property and equipment related to damages from natural disasters. We view free cash flow as an important financial measure because it is one factor that management uses in determining the amount of cash available for discretionary investment. Free cash flow is not a term defined by GAAP, and as a result, our measure of free cash flow might not be comparable to similarly titled measures used by other companies. Free cash flow should not be construed as a substitute for or a better indicator of the Company’s performance than the Company’s GAAP measures.
+The Company’s free cash flow was as follows for the nine month periods of 2026 and 2025:
+Nine Months Ended
+(In thousands) | September 27,2026 | September 28,2025
+Net cash provided by operating activities | $ | 58,509 | $ | 106,192
+Purchases of property and equipment | (39,307) | (47,002)
+Free cash flow | $ | 19,202 | $ | 59,190
+Cash Requirements
+In the first quarter of 2026, the Company entered into a multi-year agreement for point‑of‑sale and restaurant operations software services which will expire on December 23, 2034, with a one year extension option. The agreement includes deployment requirements that specify a minimum number of Company‑owned and franchised restaurants to be installed and activated on the software platform by November 30, 2026 and by November 30, 2027. The total estimated contractual commitment for software services is approximately $125 million to $140 million over the term of the agreement,
+43
+contingent upon variable components such as the timing of the deployment schedule and associated contractual credits. These amounts are expected to be largely recovered through technology fees charged to our franchisees over the term of the agreement. The Company recognized expense of $0.7 million for services received under the agreement during the third quarter.
+Other than the contractual commitment discussed above, there have been no material changes in our cash requirements other than those incurred in the ordinary course of business since the end of 2025. Refer to “Contractual Obligations” presented within “Item 7. Management’s Discussion and Analysis of Financial Condition and Results of Operations” in our Annual Report on Form 10-K for the fiscal year ended December 28, 2025 for additional information regarding our cash requirements.
+Impact of Inflation and Macroeconomic Trends
+Inflationary pressures affect our profitability both directly, in our Company-owned restaurants and delivery mechanisms and through gross margins experienced by sales of food and supply items via our QC Centers, as well as indirectly, through higher food ingredient and paper and supply costs, rising fees from delivery aggregators driven by higher wage demands and increases in delivery costs that, once reflected in upward price adjustments on their fees, can exert downward pressure on unit sales, reducing royalty fees we realize from our Domestic and International franchisees. Compensating menu price increases are subject to competitive pressure in the markets in which we operate. Expense control measures are also deployed to offset higher costs when possible. Food costs, in particular the cost of cheese, are managed to an extent by pricing agreements with suppliers and forward purchase contracts we enter into, as discussed in “Item 3. Quantitative and Qualitative Disclosures About Market Risk.”
+While we continue to monitor the impact of current and potential tariffs and assess our ability to manage any impacts, tariffs have not had a material impact on our business to date, and we currently do not believe that tariffs imposed by the United States government will have a significant negative impact to our Domestic business, as a substantial proportion of our ingredients and supply items are sourced domestically. However, the extent to which tariffs may increase the price of other goods and services and how they may alter discretionary spending patterns by our customers or impact our franchisees’ profitability is currently unknown.
+Forward-Looking Statements
+Certain matters discussed in this Quarterly Report on Form 10-Q and other Company communications that are not statements of historical fact constitute forward-looking statements within the meaning of the federal securities laws. Generally, the use of words such as “expect,” “intend,” “estimate,” “believe,” “anticipate,” “will,” “forecast,” “outlook,” “plan,” “project,” or similar words identify forward-looking statements that we intend to be included within the safe harbor protections provided by the federal securities laws. Such forward-looking statements include or may relate to projections or guidance concerning business performance, revenue, earnings, cash flow, earnings per share, depreciation and amortization, interest expense, tax rates, system-wide sales, transformation plans, marketing and growth initiatives, restaurant portfolio optimization, restaurant operational improvements, supply chain and other cost savings initiatives, adjusted EBITDA, 4-wall EBITDA, outcomes from our new marketing framework, the current economic environment, industry trends, consumer behavior and preferences, commodity and labor costs, currency fluctuations, profit margins, supply chain operating margin, net unit growth, unit level performance, capital expenditures, restaurant and franchise development, franchisee profitability, restaurant acquisitions, restaurant closures, labor shortages, labor cost increases, changes in management, inflation, royalty relief, franchisee support and incentives, the effectiveness of our menu innovations and other business initiatives, investments in product, investments in digital, artificial intelligence and technology innovation, marketing efforts and investments, liquidity, compliance with debt covenants, impairments, strategic decisions and actions, changes to our national marketing fund, changes to our commissary model, capital allocation, dividends and changes thereto, share repurchases, effective tax rates, regulatory changes and impacts, impacts of tariffs, insurance recoveries for damages related to natural disasters, restructuring plans, including timing of completion, expected benefits and costs, adoption of new accounting standards, and other financial and operational measures. Such statements are not guarantees of future performance and involve certain risks, uncertainties and assumptions, which are difficult to predict and many of which are beyond our control. Therefore, actual outcomes and results may differ materially from those matters expressed or implied in such forward-looking statements. The risks, uncertainties and assumptions that are involved in our forward-looking statements include, but are not limited to:
+•economic conditions in the United States and international markets;
+44
+•changes in pricing or other marketing or promotional strategies by competitors, which has adversely affected, and may continue to adversely affect sales and profitability; and new product and concept developments by food industry competitors;
+•changes in consumer preferences or consumer buying habits, including the growing popularity of delivery aggregators, as well as changes in general economic conditions or other factors that may affect consumer confidence and discretionary spending, including higher unemployment;
+•increased risks associated with our International operations, including economic and political conditions, instability or uncertainty in our international markets, especially emerging markets, fluctuations in currency exchange rates, difficulty in meeting planned sales targets, regulatory changes, increased tariffs and other trade barriers, and new restaurant growth;
+•the adverse impact on the Company or our results caused by global health concerns, product recalls, food quality or safety issues, incidences of foodborne illness, food contamination and other general public health concerns about our Company-owned or franchised restaurants or others in the restaurant industry;
+•the ability of the Company to retain key management and manage staffing and labor shortages at Company and/or franchised restaurants and our Quality Control Centers;
+•increases in labor costs, food costs, fuel costs or sustained higher other operating costs, including as a result of supply chain disruption, inflation and related impacts, increased tariffs or other trade barriers, immigration policies, geopolitical conflicts or climate change;
+•the potential for delayed new restaurant openings, both domestically and internationally;
+•the increased risk of phishing, ransomware and other cyber-attacks;
+•risks to the global economy and our business related to geopolitical conflicts in areas in which we or our franchisees operate, including those in Ukraine and the Middle East;
+•increased costs for branding initiatives and launching new advertising and marketing campaigns and promotions to boost consumer sentiment and sales trends, and the risk that such initiatives will not be effective or that our franchisees will not execute them properly or be aligned with such initiatives;
+•risks related to US government shutdowns or possible economic slowdowns that could, among other things, reduce consumer spending or demand and result in changing consumer practices;
+•risks related to social media, including publicity adversely and rapidly impacting our brand and reputation;
+•the effectiveness of our technology investments and changes in unit-level operations;
+•the ability of the Company and its franchisees to meet planned growth targets and operate new and existing restaurants profitably, including difficulties finding qualified franchisees, restaurant level employees or suitable sites and the risk that any franchisee support or incentives will not be effective;
+•increases in insurance claims and related costs for programs funded by the Company up to certain retention limits, including medical, owned and non-owned vehicles, workers’ compensation, general liability and property;
+•disruption of our supply chain or commissary operations which could be caused by our sole source of supply of mozzarella cheese, desserts, garlic cups or limited source of suppliers for other key ingredients or more generally due to weather, natural disasters including drought, disease, or geopolitical or other disruptions beyond our control;
+•the impact of current or future claims and litigation and our ability to comply with current, proposed or future legislation that could impact our business;
+•risks related to our indebtedness and borrowing costs, including prolonged higher interest rates, and the current state of the credit markets;
+•the Company’s decision to pay or not pay dividends;
+•our ability to effectively operate and improve the performance of Company-owned restaurants;
+•disruption of critical business or information technology systems, or those of our suppliers, and risks associated with systems failures and data privacy and cybersecurity incidents, including theft of confidential Company, employee and customer information, including payment cards; and
+•changes in Federal or state income, general and other tax laws, rules and regulations and changes in generally accepted accounting principles.
+These and other risk factors are discussed in detail in “Part I. Item 1A. – Risk Factors” in our Annual Report on Form 10-K for the fiscal year ended December 28, 2025. We undertake no obligation to update publicly any forward-looking statements, whether as a result of future events, new information or otherwise, except as required by law.
+45
+
+== market_risk ==
+Item 3. Quantitative and Qualitative Disclosures About Market Risk
+Interest Rate Risk
+We are exposed to the impact of interest rate changes on our PJI Revolving Facility and PJMF Revolving Facility. We attempt to minimize interest rate risk exposure by fixing our interest rate through the utilization of interest rate swaps, which are derivative financial instruments. Our swaps are entered into with financial institutions that participate in the PJI Revolving Facility. By using a derivative instrument to hedge exposures to changes in interest rates, we expose ourselves to credit risk due to the possible failure of the counterparty to perform under the terms of the derivative contract. We do not enter into contracts for trading purposes and do not use leveraged instruments. The market risks associated with our debt obligations as of September 27, 2026 have not changed from those reported in “Part II. Item 7A. Quantitative and Qualitative Disclosure About Market Risk” in our Annual Report on Form 10-K for the fiscal year ended December 28, 2025. See “Note 8. Debt” of “Notes to Condensed Consolidated Financial Statements” for additional information on our debt obligations and derivative instruments.
+Foreign Currency Exchange Rate Risk
+We are exposed to foreign currency exchange rate fluctuations from our operations outside of the United States, which can adversely impact our revenues, net income and cash flows. Our International operations principally consist of distribution sales to franchised Papa Johns restaurants located in the UK, operation of Company-owned restaurants in the UK, and our franchise sales and support activities, which derive revenues from sales of franchise and development rights and the collection of royalties from our International franchisees. Approximately 9.9% and 9.4% of our revenues were derived from these operations for the three and nine months ended September 27, 2026, respectively, as compared to 8.8% and 8.2% for the prior year comparable periods, respectively.
+We have not historically hedged our exposure to foreign currency fluctuations. Foreign currency exchange rate fluctuations had a favorable impact of less than $0.1 million and a favorable impact of approximately $3.0 million on International revenues for the three and nine months ended September 27, 2026, respectively; and a favorable impact of $0.9 million and a favorable impact of approximately $1.5 million on International revenues for the three and nine months ended September 28, 2025, respectively. Foreign currency exchange rate fluctuations had a favorable impact of less than $0.1 million and a favorable impact of approximately $3.0 million on operating income for the three and nine months ended September 27, 2026, respectively; and a favorable impact of approximately $0.1 million and a favorable impact of approximately $0.2 million on operating income for the three and nine months ended September 28, 2025, respectively.
+Commodity Price Risk
+In the ordinary course of business, the food and paper products we purchase, including cheese (our largest ingredient cost), are subject to seasonal fluctuations, weather, availability, demand and other factors that are beyond our control. We have pricing agreements with some of our vendors, including forward pricing agreements for a portion of our cheese purchases for our Domestic Company-owned restaurants, which are accounted for as normal purchases; however, we still remain exposed to ongoing commodity volatility, and increases in commodity prices or food costs, including as a result of inflation, could negatively impact our business, financial condition or results of operations. We have not historically entered into other financial instruments that would be accounted for as hedging instruments to manage this risk.
+
+== controls ==
+Item 4. Controls and Procedures
+Under the supervision and with the participation of the Company’s management, including its Chief Executive Officer and Principal Financial and Accounting Officer, the Company has evaluated the effectiveness of the design and operation of its disclosure controls and procedures (as defined in Rules 13a-15(e) and 15d-15(e) under the Securities Exchange Act of 1934, as amended (the “Exchange Act”)). Based upon this evaluation, the Chief Executive Officer and Principal Financial and Accounting Officer have concluded that, as of the end of the period covered by this report, the Company’s disclosure controls and procedures were effective.
+Changes in Internal Control Over Financial Reporting
+During the most recently completed fiscal quarter, there was no change made in the Company’s internal control over financial reporting (as defined in Rules 13a-15(e) and 15d-15(e) under the Exchange Act) that has materially affected, or is reasonably likely to materially affect, the Company’s internal control over financial reporting.
+46
+
+== legal_proceedings ==
+Item 1. Legal Proceedings
+The Company is involved in a number of lawsuits, claims, investigations and proceedings consisting of intellectual property, employment, consumer, commercial and other matters arising in the ordinary course of business. In accordance with Financial Accounting Standards Board Accounting Standards Codification 450, “Contingencies”, the Company has made accruals with respect to these matters, where appropriate, which are reflected in the Company’s condensed consolidated financial statements. We review these provisions at least quarterly and adjust these provisions to reflect the impact of negotiations, settlements, rulings, advice of legal counsel and other information and events pertaining to a particular case. The legal proceedings described in “Note 10. Litigation, Commitments and Contingencies” of “Notes to Condensed Consolidated Financial Statements” within “Part I. Item 1. Financial Statements” of this Form 10-Q are incorporated herein by reference.
+
+== risk_factors ==
+Item 1A. Risk Factors
+There have been no material changes to the risk factors disclosed in the Company’s Annual Report on Form 10-K for the fiscal year ended December 28, 2025.
+
+== unregistered_sales ==
+Item 2. Unregistered Sales of Equity Securities and Use of Proceeds
+Repurchases of Stock for Tax Withholdings
+During the fiscal quarter ended September 27, 2026, the Company acquired approximately 11,000 shares of its common stock from employees to satisfy minimum tax withholding obligations that arose upon vesting of restricted stock granted pursuant to approved plans.
+
+== other_information ==
+Item 5. Other Information
+Director and Officer Trading Arrangements
+During the three months ended September 27, 2026, no director or officer of the Company adopted or terminated a “Rule 10b5-1 trading arrangement” or “non-Rule 10b5-1 trading arrangement”, as each term is defined in Item 408(a) of Regulation S-K.
+47
+
+== exhibits ==
+Item 6. Exhibits
+ExhibitNumber | Description
+31.1 | Certification of Chief Executive Officer Pursuant to Exchange Act Rule 13a-15(e), As Adopted Pursuant to Section 302 of the Sarbanes-Oxley Act of 2002.
+31.2 | Certification of Principal Financial and Accounting Officer Pursuant to Exchange Act Rule 13a-15(e), As Adopted Pursuant to Section 302 of the Sarbanes-Oxley Act of 2002.
+32.1 | Certification of Chief Executive Officer Pursuant to 18 U.S.C. Section 1350, As Adopted Pursuant to Section 906 of the Sarbanes-Oxley Act of 2002.
+32.2 | Certification of Principal Financial and Accounting Officer Pursuant to 18 U.S.C. Section 1350, As Adopted Pursuant to Section 906 of the Sarbanes-Oxley Act of 2002.
+101 | Financial statements from the quarterly report on Form 10-Q of Papa John’s International, Inc. for the quarter ended September 27, 2026, filed on November 5, 2026, formatted in iXBRL: (i) the Condensed Consolidated Balance Sheets, (ii) the Condensed Consolidated Statements of Operations, (iii) the Condensed Consolidated Statements of Comprehensive Income, (iv) the Condensed Consolidated Statements of Stockholders’ Deficit, (v) the Condensed Consolidated Statements of Cash Flows and (vi) the Notes to Condensed Consolidated Financial Statements.
+104 | Cover Page Interactive Data File (formatted as Inline XBRL and contained in Exhibit 101).
+48
+SIGNATURE
+Pursuant to the requirements of the Securities Exchange Act of 1934, the Registrant has duly caused this report to be signed on its behalf by the undersigned thereunto duly authorized.
+PAPA JOHN’S INTERNATIONAL, INC.
+(Registrant)
+Date: November 5, 2026 | /s/ Chris Collins
+Chris Collins
+Principal Financial and Accounting Officer
+49
+<<<END>>>

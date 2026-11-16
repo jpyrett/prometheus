@@ -1,0 +1,115 @@
+{
+ "confirm": {
+  "seq": 6,
+  "type": "question",
+  "data": {
+   "question_id": "0f6a3c8237",
+   "kind": "confirm",
+   "title": "Confirm what was understood",
+   "text": "I understood: buy 50 shares of MSFT (your own order: no recommendation is made and the Critic is not asked). Go ahead?",
+   "ts": 1794777780.523
+  }
+ },
+ "clarify": {
+  "seq": 0,
+  "type": "question",
+  "data": {
+   "question_id": "clarify0001",
+   "kind": "clarify",
+   "title": "How much?",
+   "text": "How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \"as much as I can\".",
+   "question": "How much would you like to buy? You can answer with a percentage of your account, a dollar amount, a number of shares, or say \"as much as I can\".",
+   "n": 1,
+   "of": 3,
+   "facts": [
+    "Cash $15,000.00, the whole account $15,000.00. Approved to buy:",
+    "  CVX    at $219.89: your cash buys up to 68 shares (about $14,952.52), held back by nothing",
+    "  EOG    at $158.32: your cash buys up to 94 shares (about $14,882.08), held back by nothing"
+   ],
+   "ts": 0
+  }
+ },
+ "approve": {
+  "seq": 0,
+  "type": "question",
+  "data": {
+   "question_id": "approve0001",
+   "kind": "approve",
+   "title": "Approve trade 1 of 2",
+   "text": "  #1  XOM    ExxonMobil             APPROVE score 86/100 (B)      open a position      valid until 16:00 ET\n      accuracy  30/30   29 of 29 values match what was fetched again; 2 of 2 sources read again; the symbol is in the directory; the 52-week high agrees with Finnhub's\n      evidence  12/15   1 of 2 quotes support the claim, 1 weak; no newer bad news in 6 fresh sources\n      risk fit  14/20   risk low (11.8), your limit is low\n      timing    10/10   regular session; 170.59 is inside the entry zone 168.44 to 172.74\n      value     12/15   FAIR: 7.7% above its 6-month average of 158.33\n      chart      8/10   bullish: bull alignment, uptrend structure, near high, obv rising; bearish: macd negative\n      bonus        +0   no discount to the 6-month average\n      warnings: source_not_tagged",
+   "symbol": "XOM",
+   "shares": 8,
+   "est_cost": 1364.72,
+   "action": "open",
+   "n": 1,
+   "of": 2,
+   "cash": 15000.0,
+   "proposal": [
+    {
+     "symbol": "XOM",
+     "action": "open",
+     "shares": 8,
+     "est_cost": 1364.72
+    },
+    {
+     "symbol": "EOG",
+     "action": "open",
+     "shares": 8,
+     "est_cost": 1266.56
+    }
+   ],
+   "scorecard": "  #1  XOM    ExxonMobil             APPROVE score 86/100 (B)      open a position      valid until 16:00 ET\n      accuracy  30/30   29 of 29 values match what was fetched again; 2 of 2 sources read again; the symbol is in the directory; the 52-week high agrees with Finnhub's\n      evidence  12/15   1 of 2 quotes support the claim, 1 weak; no newer bad news in 6 fresh sources\n      risk fit  14/20   risk low (11.8), your limit is low\n      timing    10/10   regular session; 170.59 is inside the entry zone 168.44 to 172.74\n      value     12/15   FAIR: 7.7% above its 6-month average of 158.33\n      chart      8/10   bullish: bull alignment, uptrend structure, near high, obv rising; bearish: macd negative\n      bonus        +0   no discount to the 6-month average\n      warnings: source_not_tagged",
+   "ts": 0
+  }
+ },
+ "missing": {
+  "seq": 0,
+  "type": "question",
+  "data": {
+   "question_id": "missing0001",
+   "kind": "missing_company",
+   "title": "Continue without Chick-fil-a?",
+   "text": "Chick-fil-a was not found because it is privately held, or not known to be listed; is it OK to continue without it, so the order will go on with F, GM, PG, GOOGL?",
+   "question": "Chick-fil-a was not found because it is privately held, or not known to be listed; is it OK to continue without it, so the order will go on with F, GM, PG, GOOGL?",
+   "typed": "Chick-fil-a",
+   "reason": "privately held, or not known to be listed",
+   "n": 1,
+   "of": 1,
+   "facts": [
+    "Still on your order:",
+    "  F: Ford Motor Co (F)",
+    "  GM: General Motors Co (GM)",
+    "  Procter and gamble: The Procter & Gamble Company (PG)",
+    "  Google: Alphabet Inc. (GOOGL), the listed owner of what you typed"
+   ],
+   "kept": [
+    {
+     "typed": "F",
+     "symbol": "F",
+     "company": "Ford Motor Co",
+     "how": "ticker"
+    },
+    {
+     "typed": "GM",
+     "symbol": "GM",
+     "company": "General Motors Co",
+     "how": "ticker"
+    },
+    {
+     "typed": "Procter and gamble",
+     "symbol": "PG",
+     "company": "The Procter & Gamble Company",
+     "how": "name"
+    },
+    {
+     "typed": "Google",
+     "symbol": "GOOGL",
+     "company": "Alphabet Inc.",
+     "how": "brand"
+    }
+   ],
+   "wording": "model",
+   "ts": 0
+  }
+ }
+}

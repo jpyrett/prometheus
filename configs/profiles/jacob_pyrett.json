@@ -5,7 +5,6 @@
   "age": null,
   "investment_horizon_years": null,
   "trade_mode": "ask",
-  "auto_min_score": null,
   "min_price": 5.0,
   "excluded_symbols": [],
   "excluded_sectors": [],

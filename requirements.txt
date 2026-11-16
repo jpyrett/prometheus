@@ -15,6 +15,7 @@ rich>=13.0
 mcp>=2
 fastmcp>=4
 uvicorn>=0.30
+fastapi>=0.115                    # the web UI's bridge (prometheus/application/web, design choices entry 99); starlette and pydantic come with the stack above
 
 # Local / DGX models (Lab 1.1 patterns) — install torch for the TARGET machine
 # Dev box (CUDA 13):  pip install torch --index-url https://download.pytorch.org/whl/cu130
@@ -43,3 +44,6 @@ langchain-openai>=1.7,<2           # chat-model client: OpenRouter now, a local 
 # Testing (FastMCP Client tests + unit tests)
 pytest>=8.0
 pytest-asyncio>=0.24
+
+# Optional tracing of the web UI's runs (prometheus/application/web/tracing.py imports it only when LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY are set): pip install "langfuse>=3"
+# langfuse>=3

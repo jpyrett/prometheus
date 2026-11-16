@@ -10,6 +10,7 @@ report are the real code. No network, no key, no cost.
 The made-up prices: MSFT 420 (basis 150, in profit), TSLA 250 (basis 300, AT A LOSS), GM 55 (basis 10), F 12 (basis 2), FITB 45 (basis 15).
 Purchase 1: 300 F = $3,600 (to raise $3,548.77 after the free cash).  Purchase 2: 40 FITB = $1,800.
 """
+from decimal import ROUND_HALF_UP, Decimal
 import json
 import re
 from datetime import date
@@ -22,7 +23,7 @@ from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.common import portfolio as pf
 
 SCENARIO = am.DEFAULT_PORTFOLIO.parent / "jacob_pyrett_f_fitb.json"
-PRICES = {"MSFT": 420.0, "TSLA": 250.0, "GM": 55.0, "F": 12.0, "FITB": 45.0}
+PRICES = {"MSFT": Decimal("420.00"), "TSLA": Decimal("250.00"), "GM": Decimal("55.00"), "F": Decimal("12.00"), "FITB": Decimal("45.00")}
 TODAY = date(2026, 11, 3)
 
 
@@ -34,7 +35,7 @@ class QuoteToolbox:
         self.asked.append(symbol)
         if symbol not in self.prices:
             raise RuntimeError(f"No quote returned for {symbol}")
-        p = self.prices[symbol]
+        p = float(self.prices[symbol])      # the Data Clerk's quote is what an API's JSON gives, a float: the Account Manager turns it into a Decimal price itself
         return {"symbol": symbol, "price": p, "change": 0.0, "change_percent": 0.0, "high": p, "low": p, "open": p, "previous_close": p,
                 "as_of_utc": "2026-11-03T21:00:00Z", "source": "MADE UP (test)"}
 
@@ -90,6 +91,11 @@ def run(start, purchases=(("F", 300), ("FITB", 40)), table=None, **options):
     return manager, result
 
 
+def final_of(result):
+    """The run's final portfolio as the typed doors read it (the JSON of `final` holds floats once `json` has read it)."""
+    return pf.Portfolio.model_validate(result["final"])
+
+
 def sold(purchase):
     return [(x["symbol"], x["shares"]) for x in purchase["plan"]["sells"]]
 
@@ -101,8 +107,8 @@ def rejected(purchase):
 # ---------------------------------------------------------------- the scenario file
 
 def test_the_made_up_portfolio_has_the_five_holdings_and_the_free_cash(start):
-    assert [(p.symbol, p.shares, p.cost_basis) for p in start.positions] == [("MSFT", 50, 150.0), ("TSLA", 123, 300.0), ("GM", 60, 10.0), ("F", 260, 2.0), ("FITB", 52, 15.0)]
-    assert start.cash_avail == 51.23
+    assert [(p.symbol, p.shares, p.cost_basis) for p in start.positions] == [("MSFT", 50, Decimal("150")), ("TSLA", 123, Decimal("300")), ("GM", 60, Decimal("10")), ("F", 260, Decimal("2")), ("FITB", 52, Decimal("15"))]
+    assert start.cash_avail == Decimal("51.23")
 
 
 # ---------------------------------------------------------------- purchase 1: buy 300 F, selling only what is in profit and never F
@@ -110,9 +116,9 @@ def test_the_made_up_portfolio_has_the_five_holdings_and_the_free_cash(start):
 def test_the_first_purchase_sells_other_symbols_in_profit_and_never_the_stock_it_buys(start):
     _, result = run(start)
     first = result["purchases"][0]
-    assert first["status"] == "plan" and first["target"] == "F" and first["cost"] == 3600.0 and first["need"] == 3548.77 and first["only_green"] is True
+    assert first["status"] == "plan" and first["target"] == "F" and first["cost"] == Decimal("3600.00") and first["need"] == Decimal("3548.77") and first["only_green"] is True
     assert sold(first) == [("MSFT", 8), ("FITB", 5)] and first["plan"]["score"] == 66.5   # 8 x 420 + 5 x 45 = 3,585; 3,585 + 51.23 - 3,600 = 36.23 left
-    assert first["plan"]["proceeds"] == 3585.0 and first["plan"]["left_over"] == 36.23 and first["after"]["cash"] == 36.23
+    assert first["plan"]["proceeds"] == Decimal("3585.00") and first["plan"]["left_over"] == Decimal("36.23") and first["after"]["cash"] == Decimal("36.23")
     assert all(symbol != "F" for symbol, _ in sold(first)) and all(symbol != "TSLA" for symbol, _ in sold(first))
 
 
@@ -128,7 +134,7 @@ def test_the_same_thought_without_the_green_rule_is_allowed_and_sells_at_a_loss(
     manager = agent({("F", ROOT): [("TSLA", 15)]})   # 15 x 250 = 3,750: covers the 3,548.77, at a loss of 15 x 50
     result = manager.raise_funds_many(start, [("F", 300)], today=TODAY, only_green=False)
     first = result["purchases"][0]
-    assert first["status"] == "plan" and sold(first) == [("TSLA", 15)] and first["plan"]["gain"] == -750.0
+    assert first["status"] == "plan" and sold(first) == [("TSLA", 15)] and first["plan"]["gain"] == Decimal("-750.00")
 
 
 def test_the_beam_prunes_the_weakest_partial_plan_and_the_trace_says_why(start):
@@ -155,7 +161,7 @@ def test_the_second_purchase_is_planned_against_the_portfolio_the_first_one_left
     assert "Free settled cash (spent first): $36.23. Money to raise: $1,763.77." in prompt     # the cash purchase 1 left, not the 51.23 of the file
     assert "- MSFT (Microsoft Corp): held 42, sellable 42" in prompt and "- FITB" not in prompt  # MSFT was sold down by 8; FITB is the stock being bought: not offered at all
     assert "- F (Ford Motor Co): held 560, sellable 260" in prompt                              # 260 old shares + 300 bought a minute ago, which are locked (T+1)
-    assert second["status"] == "plan" and second["cost"] == 1800.0 and second["need"] == 1763.77
+    assert second["status"] == "plan" and second["cost"] == Decimal("1800.00") and second["need"] == Decimal("1763.77")
 
 
 def test_the_shares_just_bought_cannot_be_sold_to_pay_for_the_next_purchase(start):
@@ -168,9 +174,9 @@ def test_the_shares_just_bought_cannot_be_sold_to_pay_for_the_next_purchase(star
 def test_the_second_purchase_sells_older_f_shares_that_are_in_profit_against_the_weighted_cost_basis(start):
     _, result = run(start)
     second = result["purchases"][1]
-    assert sold(second) == [("F", 150)] and second["plan"]["proceeds"] == 1800.0 and second["plan"]["score"] == 84.0
+    assert sold(second) == [("F", 150)] and second["plan"]["proceeds"] == Decimal("1800.00") and second["plan"]["score"] == 84.0
     f = second["plan"]["sells"][0]
-    assert f["basis"] == 7.3571 and f["gain"] == pytest.approx(150 * (12 - 7.3571), abs=0.01)  # (260 x 2 + 300 x 12) / 560: a profit, so F is green again
+    assert f["basis"] == Decimal("7.3571") and f["gain"] == pf.trade_amount(150, Decimal("12.00")) - pf.trade_amount(150, Decimal("7.3571"))  # (260 x 2 + 300 x 12) / 560: a profit, so F is green again
     assert {tuple(x["symbol"] for x in a["sells"]): a["score"] for a in second["alternatives"]} == {("GM",): 66.6}
 
 
@@ -178,12 +184,13 @@ def test_the_second_purchase_sells_older_f_shares_that_are_in_profit_against_the
 
 def test_the_final_portfolio_the_cash_and_the_conservation_of_money(start):
     _, result = run(start)
-    final = {p["symbol"]: (p["shares"], p["cost_basis"]) for p in result["final"]["positions"]}
-    assert final == {"MSFT": (42, 150.0), "TSLA": (123, 300.0), "GM": (60, 10.0), "F": (410, 7.3571), "FITB": (87, final["FITB"][1])}  # FITB: 52 - 5 + 40
-    assert result["final"]["cash_avail"] == 36.23
+    end = final_of(result)
+    final = {p.symbol: (p.shares, p.cost_basis) for p in end.positions}
+    assert final == {"MSFT": (42, Decimal("150")), "TSLA": (123, Decimal("300")), "GM": (60, Decimal("10")), "F": (410, Decimal("7.3571")), "FITB": (87, final["FITB"][1])}  # FITB: 52 - 5 + 40
+    assert end.cash_avail == Decimal("36.23")
     first, second = result["purchases"]
-    assert round(51.23 + first["plan"]["proceeds"] - first["cost"] + second["plan"]["proceeds"] - second["cost"], 2) == result["final"]["cash_avail"]  # every dollar accounted for
-    assert final["FITB"][1] == round((47 * 15.0 + 40 * 45.0) / 87, 4)  # the new FITB shares at 45 join the 47 older ones at 15
+    assert Decimal("51.23") + first["plan"]["proceeds"] - first["cost"] + second["plan"]["proceeds"] - second["cost"] == end.cash_avail  # every dollar accounted for, exactly
+    assert final["FITB"][1] == ((47 * Decimal("15") + 40 * Decimal("45")) / 87).quantize(Decimal("0.0001"), rounding=ROUND_HALF_UP)  # the new FITB shares at 45 join the 47 older ones at 15
 
 
 def test_the_prices_are_asked_of_the_data_clerk_once_for_both_purchases(start):
@@ -203,17 +210,17 @@ def test_a_purchase_that_cannot_be_paid_for_changes_nothing_and_the_next_one_is_
     _, result = run(start, purchases=(("F", 100000), ("FITB", 10)), table=table)
     first, second = result["purchases"]
     assert first["status"] == "infeasible" and first["plan"] is None and first["max_affordable"] < 100000 and first["after"] == {}
-    assert second["status"] == "plan" and sold(second) == [("GM", 9)] and second["need"] == 398.77
+    assert second["status"] == "plan" and sold(second) == [("GM", 9)] and second["need"] == Decimal("398.77")
     final = {p["symbol"]: p["shares"] for p in result["final"]["positions"]}
     assert final == {"MSFT": 50, "TSLA": 123, "GM": 51, "F": 260, "FITB": 62}  # only the second purchase happened: F is untouched
-    assert result["final"]["cash_avail"] == round(51.23 + 495.0 - 450.0, 2)
+    assert final_of(result).cash_avail == Decimal("51.23") + Decimal("495.00") - Decimal("450.00")
 
 
 def test_a_purchase_the_free_cash_alone_pays_for_sells_nothing_and_spends_the_cash(start):
     _, result = run(start, purchases=(("F", 4),))  # 4 x 12 = 48 <= 51.23
     only = result["purchases"][0]
-    assert only["status"] == "funded" and only["plan"] is None and only["after"]["cash"] == 3.23
-    assert result["final"]["cash_avail"] == 3.23 and {p["symbol"]: p["shares"] for p in result["final"]["positions"]}["F"] == 264
+    assert only["status"] == "funded" and only["plan"] is None and only["after"]["cash"] == Decimal("3.23")
+    assert final_of(result).cash_avail == Decimal("3.23") and {p["symbol"]: p["shares"] for p in result["final"]["positions"]}["F"] == 264
 
 
 def test_a_missing_quote_stops_everything_before_any_model_call(start):

@@ -80,6 +80,7 @@ JUDGES = re.compile(r"\b(?:bullish|bearish)\b", re.I)  # the words of the Adviso
 SWEEP_TOOLS = (("news", "retrieve_news"), ("press_releases", "retrieve_press_releases"), ("filings", "retrieve_filings"))  # the corpora every order carries (entry 40), and the search of each
 MAX_REFRESH_SYMBOLS = 15  # `refresh_data` fetches for at most this many symbols at a time
 MAX_EVIDENCE_SYMBOLS = 10  # the sweep reads the stored filing evidence of an order's symbols when it names at most this many
+NOT_LISTED = "privately held, or not known to be listed"   # the Data Clerk's words for a name whose listed owner its model could not give (entry 101)
 MAX_TURNS = 6  # model turns per question, including a correction; the last one is without tools
 
 
@@ -361,13 +362,20 @@ class DataClerk:
         order.status = "data_failed" if problems else "data_ready"
         return order
 
-    def request_symbols(self, order: WorkOrder) -> WorkOrder:
-        """The Data Clerk's agent call for a `lookup_symbol` order (design choices entry 88): for each stock in `order.subject` (a ticker in capitals, or a company name as the user typed it) it finds the COMPANY'S NAME and the
-        SYMBOL and APPENDS them to the work order's `data.companies` (one row each, the shape of `find_companies`: {brand: what was typed, parent, symbol, company, public, how, note}), and returns the SAME order, `data_ready`.
-        No model: the symbol directory (Finnhub's search) answers, with the EXACT matching of press releases and filings (entries 34 and 35, `symbols.resolve_target`): a ticker is the row whose symbol is it; a company name is
-        the row whose name has the same words, else the same words without the generic company words (Inc, Corp, Co, The, and ...), never a spelling that is only similar, US listings preferred, and a name that still fits
-        several listings is refused with the candidates, never guessed ("Microsoft" is "Microsoft Corporation", MSFT). A stock that is not found, is ambiguous or whose lookup fails (a rate limit, no key: never "not found") is named
-        in `order.errors` and the order is `data_failed`; the rows that were found stay on the order. An order that already has its data comes back unchanged."""
+    def request_symbols(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
+        """The Data Clerk's agent call for a `lookup_symbol` order (design choices entries 88 and 101): for each stock in `order.subject` (a ticker in capitals, or a company name as the user typed it) it finds the COMPANY'S NAME and the
+        SYMBOL and APPENDS them to the work order's `data.companies` (one row each, the shape of `find_companies`: {brand: what was typed, parent, symbol, company, public, how, note}), and returns the SAME order.
+
+        1. THE EXACT LOOKUP, no model (the symbol directory, Finnhub's search, with the EXACT matching of press releases and filings, entries 34 and 35, `symbols.resolve_target`): a ticker is the row whose symbol it is; a company
+        name is the row whose name has the same words, else the same words without the generic company words (Inc, Corp, Co, The, and ...), never a spelling that is only similar, US listings preferred. Most requests end here.
+        2. A NAME THE DIRECTORY DOES NOT HAVE (entry 101: "Google", which Finnhub lists as Alphabet Inc.): the Data Clerk asks its model for the LISTED OWNER of that name (the proposal step of `find_companies`, one name) and then
+        looks the OWNER'S NAME up with the same exact lookup (`symbols.find_company`). The model supplies a company name and nothing else that is used: the symbol is always the directory's, its ticker hint is not read, and
+        a name that only starts like a listing is not accepted. A ticker never reaches the model, and neither does a name that fits several listings (the directory already answered that one). Found: a row with `how: "brand"`.
+
+        Every stock gets a row when the directory ANSWERED, found or not: a stock that is not listed has `symbol: None` and the reason in `note` ("privately held, or not known to be listed", "no listed company named ... in Finnhub's
+        directory", the candidates of a name that fits several listings, "no such symbol in Finnhub's directory" for a ticker). A lookup that FAILED (a rate limit, no key, the model did not answer) is never "not found": it is named in
+        the order's errors and has NO row, which is how the caller tells a company that is not listed from a question that was not answered. The order is `data_failed` when any stock has no symbol, with the rows that were found on
+        it; `data_ready` when every stock has one. An order that already has its data comes back unchanged."""
         if order.status in HAS_DATA:
             return order
         reasons = verify_symbol_request(order)
@@ -376,28 +384,74 @@ class DataClerk:
             return order
         search = self._paced(self.symbol_search or symbols.search_finnhub)
         wanted = [order.subject] if isinstance(order.subject, str) else list(order.subject)
-        found, calls, problems = [], [], []
+        rows, calls, problems, tokens = [], [], [], {"in": 0, "out": 0}
         for typed in dict.fromkeys(" ".join(n.split()) for n in wanted):
             is_ticker = symbols.is_plain_ticker(typed)
+            call = {"name": "find_symbol" if is_ticker else "find_company", "args": {"symbol" if is_ticker else "company": typed}}
             try:
                 resolution = symbols.resolve_target(typed if is_ticker else None, None if is_ticker else typed, search)
-                found.append({"brand": typed, "parent": None, "symbol": resolution.symbol, "company": resolution.company, "public": True, "how": resolution.how, "note": ""})
-                calls.append({"name": "find_symbol" if is_ticker else "find_company", "args": {"symbol" if is_ticker else "company": typed}, "outcome": "ok"})
-            except symbols.TargetNotFound as error:   # not in the directory, or several listings fit: the message of the work order, and the candidates when there are some
-                calls.append({"name": "find_symbol" if is_ticker else "find_company", "args": {"symbol" if is_ticker else "company": typed}, "outcome": "error"})
-                problems.append(f"{typed}: {error}" + (f" ({error.detail})" if error.detail else ""))
-            except (symbols.SymbolLookupError, ValueError) as error:   # the lookup itself failed (a rate limit, no key): never "not found"
-                calls.append({"name": "find_symbol" if is_ticker else "find_company", "args": {"symbol" if is_ticker else "company": typed}, "outcome": "error"})
+                rows.append({"brand": typed, "parent": None, "symbol": resolution.symbol, "company": resolution.company, "public": True, "how": resolution.how, "note": ""})
+                calls.append({**call, "outcome": "ok"})
+            except symbols.TargetNotFound as error:   # the directory ANSWERED: not in it, or several listings fit
+                calls.append({**call, "outcome": "error"})
+                if is_ticker or error.detail:         # a ticker is the row whose symbol it is, and several listings are the directory's own answer: no model, never a guess
+                    rows.append(self._not_listed(typed, error.detail or "no such symbol in Finnhub's directory"))
+                    problems.append(f"{typed}: {error}" + (f" ({error.detail})" if error.detail else ""))
+                    continue
+                row, failure = self._listed_owner(typed, search, today, tokens, calls)
+                if failure:
+                    problems.append(f"{typed}: the symbol lookup failed ({failure})")
+                    continue
+                rows.append(row)
+                if row["symbol"] is None:
+                    problems.append(f"{typed}: {row['note']}")
+            except (symbols.SymbolLookupError, ValueError) as error:   # the lookup itself failed (a rate limit, no key): never "not found", and no row
+                calls.append({**call, "outcome": "error"})
                 problems.append(f"{typed}: the symbol lookup failed ({getattr(error, 'reason', error)})")
         data = order.data or DataResult()
-        data.companies = [*data.companies, *found]
+        data.companies = [*data.companies, *rows]
         data.problems, data.tool_calls = [*data.problems, *problems], [*data.tool_calls, *calls]
-        data.answer = "; ".join(f"{c['brand']}: {c['company']} ({c['symbol']})" for c in found)
+        data.tokens_in, data.tokens_out = data.tokens_in + tokens["in"], data.tokens_out + tokens["out"]
+        data.answer = "; ".join(f"{c['brand']}: {c['company']} ({c['symbol']})" for c in rows if c["symbol"])
         data.completed_utc = datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
         order.data = data
         order.errors = [*order.errors, *problems]
         order.status = "data_failed" if problems else "data_ready"
         return order
+
+    @staticmethod
+    def _not_listed(typed: str, note: str, parent: str | None = None) -> dict:
+        """The row of a stock the directory ANSWERED for and does not list: no symbol, and the reason in the Data Clerk's own words."""
+        return {"brand": typed, "parent": parent, "symbol": None, "company": None, "public": False, "how": None, "note": note}
+
+    def _listed_owner(self, typed: str, search, today: date | None, tokens: dict, calls: list) -> tuple[dict | None, str | None]:
+        """The row of a NAME the exact lookup did not find (entry 101): the model names the listed owner of what was typed, and the OWNER'S NAME is looked up by the exact words (`symbols.find_company`). Returns (the row, None), or
+        (None, why the question was not answered: the model did not reply, or the directory could not be asked). The row has a symbol only when the directory has a company of that name; its `note` says why not otherwise. The model's
+        ticker hint and the start of a listed name are NOT used here: they are fine for choosing companies to rank (`_resolve_proposal`), and a trade needs the exact words."""
+        from prometheus.agents.advisor.calls import new_run
+        run = new_run("owner", self.model)
+        reply = self._propose(typed, 1, today, run)
+        tokens["in"] += run["tokens_in"]
+        tokens["out"] += run["tokens_out"]
+        calls.append({"name": "find_listed_owner", "args": {"company": typed}, "outcome": "ok" if reply is not None else "error"})
+        if reply is None:
+            return None, run["error"] or "the model did not answer"
+        proposal = next((p for p in reply["companies"] if isinstance(p, dict)), {})
+        owner = " ".join(str(proposal.get("parent")).split()) if isinstance(proposal.get("parent"), str) and proposal["parent"].strip() else None
+        if not owner:
+            return self._not_listed(typed, NOT_LISTED), None
+        if len(owner) > 60 or not symbols.NAME_CHARS.fullmatch(owner):   # not a company's name: it is not echoed, and nothing is looked up
+            return self._not_listed(typed, "the Data Clerk's model gave no company name that can be looked up"), None
+        try:
+            found = symbols.find_company(owner, search)
+        except symbols.TargetNotFound as error:
+            return self._not_listed(typed, f"its owner {owner!r} matches several listings, so none is chosen ({error.detail[:120]})", owner), None
+        except (symbols.SymbolLookupError, ValueError) as error:
+            return None, str(getattr(error, "reason", error))
+        if found is None:
+            return self._not_listed(typed, f"no listed company named {owner!r} in Finnhub's directory", owner), None
+        return {"brand": typed, "parent": owner, "symbol": found.symbol, "company": found.company, "public": True, "how": "brand",
+                "note": "the listed owner of what you typed, named by the Data Clerk's model; the symbol is the directory's"}, None
 
     def request_bars(self, order: WorkOrder) -> WorkOrder:
         """The Data Clerk's agent call for a `fetch_bars` order (Trader v1 spec section 12): the stored daily bars of every symbol of `order.subject` from `order.bars["start"]` to `order.bars["end"]`,
@@ -544,7 +598,7 @@ class DataClerk:
         company words ignored: "Domino's Pizza" is "Domino's Pizza Inc"); the brand's name the same way; the start of a listed name when exactly one listing starts with it
         (`resolve_company`: "Papa John's" is "Papa John's International"); the model's ticker hint, only if Finnhub has that ticker AND every distinctive word of one of the two names is in the other. A proposal with no parent is private (or unsure): listed as not scored. Tickers the stored market news ties to the phrase (`discover_tickers`, free) are added.
         Returns {phrase, companies: [{brand, parent, symbol, company, public, how, note}], sector_etf (one of the 11, or None), notes, run}; never raises for a model or lookup failure: it is in `notes`."""
-        from prometheus.agents.advisor.calls import ask_object, new_run  # the one JSON-with-a-retry loop of the Advisor's calls
+        from prometheus.agents.advisor.calls import new_run
         from prometheus.agents.data_clerk.metrics_catalog import sector_etfs
         text = " ".join(phrase.split()) if isinstance(phrase, str) else ""
         if not text or len(text) > 60 or not re.fullmatch(r"[A-Za-z0-9 &.,'\u2019\-]+", text):
@@ -554,7 +608,7 @@ class DataClerk:
         self.symbol_search = self._paced(self.symbol_search or symbols.search_finnhub)
         run = new_run("companies", self.model)
         out = {"phrase": text, "companies": [], "sector_etf": None, "notes": [], "run": run}
-        reply = ask_object(self.model, [SystemMessage(content=companies_prompt(text, count, today)), HumanMessage(content=f"Industry or theme: {text}")], run, "companies", COMPANIES_RETRY)
+        reply = self._propose(text, count, today, run)
         if reply is None:
             out["notes"].append(run["error"])
         else:
@@ -572,6 +626,12 @@ class DataClerk:
         seen = set()
         out["companies"] = [c for c in out["companies"] if not (c["symbol"] and (c["symbol"] in seen or seen.add(c["symbol"])))]
         return out
+
+    def _propose(self, text: str, count: int, today: date | None, run: dict) -> dict | None:
+        """The proposal step: the Data Clerk's model names up to `count` companies for a phrase ({brand, parent, ticker} each, and a sector fund), in the one JSON-with-a-retry loop of the Advisor's calls
+        (`calls.ask_object`). Used by `find_companies` for an industry or a theme and by `_listed_owner` for one name. None when the model did not answer (`run["error"]` says why)."""
+        from prometheus.agents.advisor.calls import ask_object
+        return ask_object(self.model, [SystemMessage(content=companies_prompt(text, count, today)), HumanMessage(content=f"Industry or theme: {text}")], run, "companies", COMPANIES_RETRY)
 
     def _paced(self, search):
         """The symbol search, no faster than `lookup_interval` and with a pause and a second try when Finnhub answers 429 (a rate limit is not "not found"). Wrapped once."""

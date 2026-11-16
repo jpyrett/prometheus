@@ -1,0 +1,693 @@
+<<<PRESS_RELEASE>>>
+id: b649791d9d90cb2c
+symbol: CRWV
+published_utc: 2025-12-01T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-participate-upcoming-investor-conferences-2025-12-01
+headline: CoreWeave to Participate in Upcoming Investor Conferences
+<<<TEXT>>>
+CoreWeave Inc. today announced its participation in the following investor conferences. On Tuesday, December 2, 2025, Paul Yim, VP, Corporate Development, will present at the BofA Securities Leveraged Finance Conference in Boca Raton, FL. The discussion will begin at 4:50 p.m. Eastern Time. On Wednesday, December 3, 2025, Nick Robbins, VP, Corporate Development,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ed6e93a262f2180c
+symbol: CRWV
+published_utc: 2025-12-08T06:53:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-proposed-2-billion-convertible-senior-notes-offering-2025-12-08
+headline: CoreWeave Announces Proposed $2 Billion Convertible Senior Notes Offering
+<<<TEXT>>>
+CoreWeave, Inc. today announced its intention to offer, subject to market and other conditions, $2 billion aggregate principal amount of its convertible senior notes due 2031 in a private offering. CoreWeave also intends to grant the initial purchasers of the Notes an option to purchase, for settlement within a 13- day period beginning on, and including, the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d117cc9b68aa126e
+symbol: CRWV
+published_utc: 2025-12-09T06:45:00Z
+url: https://www.nasdaq.com/press-release/coreweave-prices-upsized-225-billion-convertible-senior-notes-offering-2025-12-09
+headline: CoreWeave Prices Upsized $2.25 Billion Convertible Senior Notes Offering
+<<<TEXT>>>
+CoreWeave, Inc. announced today the pricing of its private offering of $2.25 billion aggregate principal amount of its 1.75% convertible senior notes due 2031. The Notes will be jointly and severally, fully and unconditionally guaranteed by CoreWeave’ s wholly owned subsidiaries that guarantee its existing 9.250% Senior Notes due 2030 and 9.000% Senior...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 795e1c1b855c0f1d
+symbol: CRWV
+published_utc: 2025-12-09T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-expands-mission-control-accelerate-enterprise-ai-adoption-2025-12-09
+headline: CoreWeave Expands Mission Control to Accelerate Enterprise AI Adoption
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced expanded functionality for Mission Control, its unified operating standard used by enterprise technology teams to run large-scale AI workloads efficiently, securely, and reliably. Mission Control is the central orchestrator that monitors GPU fleets, manages node and fleet lifecycles, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2247400fd6bf077b
+symbol: CRWV
+published_utc: 2025-12-11T12:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-agreement-power-runways-next-generation-ai-video-models-2025-12
+headline: CoreWeave Announces Agreement to Power Runway’s Next Generation AI Video Models
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced that Runway, a global AI company building the next frontier of intelligence and human creativity, has signed a contract with CoreWeave to provide AI cloud solutions that will scale and accelerate its next generation video generation models. Runway selected CoreWeave for its purpose-built features...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2af37674aba5942d
+symbol: CRWV
+published_utc: 2025-12-18T17:32:00Z
+url: https://www.nasdaq.com/press-release/coreweave-joins-department-energys-genesis-mission-advance-us-research-and-innovation
+headline: CoreWeave Joins Department of Energy’s Genesis Mission to Advance U.S. Research and Innovation
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced it has joined the Genesis Mission, a Department of Energy initiative that brings together the nation’ s leading scientific institutions, supercomputing centers, AI platforms, and technology providers to accelerate discovery science, strengthen national security, and advance U.S. energy innovation.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b9286389e79f121a
+symbol: CRWV
+published_utc: 2026-01-05T18:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-extends-its-cloud-platform-nvidia-rubin-platform-2026-01-05
+headline: CoreWeave Extends Its Cloud Platform with NVIDIA Rubin Platform
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced it will add NVIDIA Rubin technology to its AI cloud platform, expanding the range of solutions available to its customers who are building and deploying agentic AI, reasoning, and large-scale inference workloads. CoreWeave is expected to be among the first cloud providers to deploy the NVIDIA Rubin...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 98c0f77450a3e942
+symbol: CRWV
+published_utc: 2026-01-19T13:30:00Z
+url: https://www.nasdaq.com/press-release/crwv-investor-notice-coreweave-inc-investors-substantial-losses-have-opportunity-lead
+headline: CRWV INVESTOR NOTICE: CoreWeave, Inc. Investors with Substantial Losses Have Opportunity to Lead the CoreWeave Class Action Lawsuit
+<<<TEXT>>>
+--A securities class action lawsuit has been filed against CoreWeave, Inc. and certain of its executives seeking to represent investors who purchased or otherwise acquired CoreWeave securities between March 28, 2025 and December 15, 2025. Class Period: Mar. 28, 2025– Dec. 15, 2025 Lead Plaintiff Deadline: Mar. 13, 2026 Visit:...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9e84d2899f9a9477
+symbol: CRWV
+published_utc: 2026-01-20T09:17:00Z
+url: https://www.nasdaq.com/press-release/crwv-investor-alert-coreweave-inc-investors-substantial-losses-have-opportunity-lead
+headline: CRWV INVESTOR ALERT: CoreWeave, Inc. Investors with Substantial Losses Have Opportunity to Lead Class Action Lawsuit
+<<<TEXT>>>
+--A securities class action lawsuit has been filed against CoreWeave, Inc. and certain of its executives seeking to represent investors who purchased or otherwise acquired CoreWeave securities between March 28, 2025 and December 15, 2025. Class Period: Mar. 28, 2025– Dec. 15, 2025 Lead Plaintiff Deadline: Mar. 13, 2026 Visit: www.hbsslaw.com/investor- fraud/...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 48749567b9298512
+symbol: CRWV
+published_utc: 2026-01-28T20:52:00Z
+url: https://www.nasdaq.com/press-release/investor-action-notice-moore-law-pllc-encourages-investors-coreweave-inc-crwv-contact
+headline: INVESTOR ACTION NOTICE: Moore Law PLLC Encourages Investors in CoreWeave, Inc. (CRWV) to Contact Law Firm
+<<<TEXT>>>
+CoreWeave, Inc. shareholders should email fletcher@fmoorelaw.com. On this news, CoreWeave's stock price fell $2.85, or 3.9%, to close at $69.50 per share on December 16, 2025. If you own CoreWeave, Inc., please contact Fletcher Moore at fletcher@fmoorelaw.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 650638a3b5a748d5
+symbol: CRWV
+published_utc: 2026-02-05T08:00:00Z
+url: https://www.nasdaq.com/press-release/introducing-coreweave-arena-new-lab-ai-production-readiness-2026-02-05
+headline: Introducing CoreWeave ARENA, New Lab for AI Production Readiness
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced CoreWeave ARENA, designed to help teams test workloads on purpose-built AI infrastructure and software that mirrors how AI actually runs in high-demand production settings. Replacing traditional sandbox or demo setups, the industry-leading CoreWeave ARENA pairs production-scale compute with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b9d936eff91b5329
+symbol: CRWV
+published_utc: 2026-02-05T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-date-fourth-quarter-and-fiscal-year-2025-financial-results-and
+headline: CoreWeave Announces Date of Fourth Quarter and Fiscal Year 2025 Financial Results and Conference Call
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, will hold its quarterly conference call to discuss fourth quarter and fiscal year 2025 financial results on Thursday, February 26, 2026 at 5:00 PM Eastern Time. The live webcast of the earnings conference call can be accessed at the CoreWeave Investor Relations website at investors.coreweave.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3573fb0ca466532b
+symbol: CRWV
+published_utc: 2026-02-06T08:30:00Z
+url: https://www.nasdaq.com/press-release/coreweave-introduces-new-brand-vision-cloud-built-moment-2026-02-08
+headline: CoreWeave Introduces a New Brand Vision As the Cloud Built for This Moment
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today debuted its first integrated brand campaign," Ready for Anything, Ready for AI." Featuring Chance the Rapper, the campaign marks a new brand vision centered on empowering pioneers investing in AI to push boundaries and accelerate breakthroughs in AI innovation. This press release features multimedia.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c4752985c91ce588
+symbol: CRWV
+published_utc: 2026-02-13T07:07:00Z
+url: https://www.nasdaq.com/press-release/coreweave-inc-nasdaq-crwv-accused-misleading-investors-securities-fraud-class-action
+headline: CoreWeave, Inc. (NASDAQ:CRWV) Accused of Misleading Investors in Securities Fraud Class Action – BFA Law Reminds Investors of March 13 Court Deadline
+<<<TEXT>>>
+--Leading securities law firm Bleichmar Fonti& Auld LLP announces that a class action lawsuit has been filed against CoreWeave, Inc. and certain of the Company’ s senior executives for securities fraud after significant stock drops resulting from the potential violations of the federal securities laws. The case is pending in the U.S. District Court for the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ca1ca7ba4893a202
+symbol: CRWV
+published_utc: 2026-02-13T13:21:00Z
+url: https://www.nasdaq.com/press-release/rosen-highly-ranked-investor-counsel-encourages-coreweave-inc-investors-secure
+headline: ROSEN, HIGHLY RANKED INVESTOR COUNSEL, Encourages CoreWeave, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - CRWV
+<<<TEXT>>>
+WHY: Rosen Law Firm, a global investor rights law firm, reminds purchasers of securities of CoreWeave, Inc. between March 28, 2025 and December 15, 2025, both dates inclusive, of the important March 13, 2026 lead plaintiff deadline. case_id= 50571 or call Phillip Kim, Esq. toll-free at 866-767-3653 or email case@rosenlegal.com for information on the class action.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b537a7174182c44a
+symbol: CRWV
+published_utc: 2026-02-13T17:21:00Z
+url: https://www.nasdaq.com/press-release/crwv-shareholder-notice-hagens-berman-investigating-claims-against-coreweave-inc-crwv
+headline: CRWV SHAREHOLDER NOTICE: Hagens Berman Investigating Claims Against CoreWeave, Inc. (CRWV) Over Alleged Data Center Delays and Concealed Infrastructure Risks
+<<<TEXT>>>
+National shareholder rights law firm Hagens Berman is alerting investors in CoreWeave, Inc. to a pending class action against the company and certain of its executives. Hagens Berman is investigating the alleged claims that CoreWeave overstated its capacity to satisfy "robust" customer demand and downplayed the severe operational risks posed by its heavy...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ad6bd7e46af52d50
+symbol: CRWV
+published_utc: 2026-02-13T22:13:00Z
+url: https://www.nasdaq.com/press-release/coreweave-inc-notice-march-13-2026-application-deadline-class-action-lawsuit-contact
+headline: CoreWeave, Inc. Notice of March 13, 2026 Application Deadline for Class Action Lawsuit - Contact Lewis Kahn, Esq. at Kahn Swick & Foti, LLC, Before Application Deadline
+<<<TEXT>>>
+NEW YORK and NEW ORLEANS, Feb. 13, 2026/ PRNewswire/-- Kahn Swick& Foti, LLC and KSF partner, former Attorney General of Louisiana, Charles C. Foti, Jr., notifies investors in CoreWeave, Inc. of a class action securities lawsuit. CoreWeave investors should contact KSF Managing Partner Lewis Kahn toll-free at 1-877-515-1850 or via email, or visit...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 72cd7c439d79941d
+symbol: CRWV
+published_utc: 2026-02-14T06:46:00Z
+url: https://www.nasdaq.com/press-release/crwv-shareholder-reminder-bfa-law-notifies-coreweave-inc-investors-pending-securities
+headline: $CRWV Shareholder Reminder: BFA Law Notifies CoreWeave, Inc. Investors of the Pending Securities Fraud Class Action and Imminent March 13 Legal Deadline
+<<<TEXT>>>
+Leading securities law firm Bleichmar Fonti& Auld LLP announces that a class action lawsuit has been filed against CoreWeave, Inc. and certain of the Company's senior executives for securities fraud after significant stock drops resulting from the potential violations of the federal securities laws. CoreWeave relies on multiple partners to develop its...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9fd0add011ec98c9
+symbol: CRWV
+published_utc: 2026-02-14T13:00:00Z
+url: https://www.nasdaq.com/press-release/rosen-top-ranked-law-firm-encourages-coreweave-inc-investors-secure-counsel-important
+headline: ROSEN, A TOP RANKED LAW FIRM, Encourages CoreWeave, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - CRWV
+<<<TEXT>>>
+WHY: Rosen Law Firm, a global investor rights law firm, reminds purchasers of securities of CoreWeave, Inc. between March 28, 2025 and December 15, 2025, both dates inclusive, of the important March 13, 2026 lead plaintiff deadline. case_id= 50571 or call Phillip Kim, Esq. toll-free at 866-767-3653 or email case@rosenlegal.com for information on the class action.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5596da89e33852c6
+symbol: CRWV
+published_utc: 2026-02-15T14:16:00Z
+url: https://www.nasdaq.com/press-release/rosen-leading-law-firm-encourages-coreweave-inc-investors-secure-counsel-important
+headline: ROSEN, A LEADING LAW FIRM, Encourages CoreWeave, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - CRWV
+<<<TEXT>>>
+WHY: Rosen Law Firm, a global investor rights law firm, reminds purchasers of securities of CoreWeave, Inc. between March 28, 2025 and December 15, 2025, both dates inclusive, of the important March 13, 2026 lead plaintiff deadline. case_id= 50571 or call Phillip Kim, Esq. toll-free at 866-767-3653 or email case@rosenlegal.com for information on the class action.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5fd2250367e4041f
+symbol: CRWV
+published_utc: 2026-02-16T06:36:00Z
+url: https://www.nasdaq.com/press-release/crwv-stock-announcement-coreweave-inc-investors-may-have-been-affected-fraud-and-are
+headline: $CRWV Stock Announcement: CoreWeave, Inc. Investors May Have Been Affected by Fraud and Are Urged to Contact BFA Law Before March 13 Class Action Deadline
+<<<TEXT>>>
+Leading securities law firm Bleichmar Fonti& Auld LLP announces that a class action lawsuit has been filed against CoreWeave, Inc. and certain of the Company's senior executives for securities fraud after significant stock drops resulting from the potential violations of the federal securities laws. CoreWeave relies on multiple partners to develop its...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 78d30f886278b59e
+symbol: CRWV
+published_utc: 2026-02-16T17:20:00Z
+url: https://www.nasdaq.com/press-release/coreweave-inc-crwv-investors-march-13-2026-filing-deadline-securities-class-action
+headline: CoreWeave, Inc. (CRWV) Investors: March 13, 2026 Filing Deadline in Securities Class Action - Contact Kessler Topaz Meltzer & Check, LLP
+<<<TEXT>>>
+--The law firm of Kessler Topaz Meltzer& Check, LLP informs investors that a securities fraud class action lawsuit has been filed against CoreWeave, Inc. on behalf of those who purchased or otherwise acquired CoreWeave securities between March 28, 2025, and December 15, 2025, inclusive. The lead plaintiff deadline is March 13, 2026.. Action: Securities fraud class...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: db564f43a28757aa
+symbol: CRWV
+published_utc: 2026-02-18T08:56:00Z
+url: https://www.nasdaq.com/press-release/hagens-berman-investigating-claims-against-coreweave-inc-crwv-over-alleged-data
+headline: Hagens Berman Investigating Claims Against CoreWeave, Inc. (CRWV) Over Alleged Data Center Delays and Concealed Infrastructure Risks
+<<<TEXT>>>
+--National shareholder rights law firm Hagens Berman is alerting investors in CoreWeave, Inc. to a pending class action against the company and certain of its executives. Following revelations that a critical Denton, Texas data center cluster was months behind schedule, CoreWeave's market capitalization plummeted by approximately $14 billion.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b47ca1bc6fd7cfd1
+symbol: CRWV
+published_utc: 2026-02-18T09:00:00Z
+url: https://www.nasdaq.com/press-release/march-13-2026-deadline-contact-levi-korsinsky-join-class-action-suit-against-crwv
+headline: March 13, 2026 Deadline: Contact Levi & Korsinsky to Join Class Action Suit Against CRWV
+<<<TEXT>>>
+--Levi& Korsinsky, LLP notifies investors in CoreWeave, Inc. of a class action securities lawsuit. CLASS DEFINITION: The lawsuit seeks to recover losses on behalf of CoreWeave, Inc. investors who were adversely affected by alleged securities fraud between March 28, 2025 and December 15, 2025. WHY LEVI& KORSINSKY: Over the past 20 years, the team at Levi& Korsinsky has...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3c6c4ef7c0b71e25
+symbol: CRWV
+published_utc: 2026-02-26T16:07:00Z
+url: https://www.nasdaq.com/press-release/coreweave-reports-strong-fourth-quarter-and-fiscal-year-2025-results-2026-02-26
+headline: CoreWeave Reports Strong Fourth Quarter and Fiscal Year 2025 Results
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today reported financial results for the fourth quarter and fiscal year ended December 31, 2025. Revenue backlog 1 was $66.8 billion as of December 31, 2025. Customer wins across AI labs, Hyperscalers and Enterprises Partner of choice for leading AI pioneers and enterprises including: Cognition, Crowdstrike, Cursor,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b901dc69e030704c
+symbol: CRWV
+published_utc: 2026-02-27T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-participate-upcoming-morgan-stanley-tmt-and-cantor-global-technology
+headline: CoreWeave to Participate in Upcoming Morgan Stanley TMT and Cantor Global Technology Investor Conferences
+<<<TEXT>>>
+CoreWeave Inc., The Essential Cloud for AI™, today announced its participation in the following investor conferences. On Wednesday, March 4, 2026, Brannin McBee, Co-Founder and Chief Development Officer, will present at the Morgan Stanley TMT Conference in San Francisco, CA. The discussion will begin at 4:05 p.m. Eastern Time. On Tuesday, March 10, 2026, Nick...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: db0b5873581609cd
+symbol: CRWV
+published_utc: 2026-03-02T11:43:00Z
+url: https://www.nasdaq.com/press-release/crwv-alert-hagens-berman-analyzes-coreweave-crwv-452m-q4-loss-and-soft-guidance-amid
+headline: CRWV Alert: Hagens Berman Analyzes CoreWeave (CRWV) $452M Q4 Loss and Soft Guidance Amid Ongoing Securities Fraud Litigation
+<<<TEXT>>>
+Hagens Berman is investigating the alleged claims in the pending suit. On February 26, 2026, CoreWeave reported a Q4 net loss of $452 million, or $0.89 per share— a staggering figure that nearly doubled the $0.49 loss per share anticipated by Wall Street analysts. "We are investigating whether the company overstated scaling capabilities and hid critical delays,"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c2c5701e006dbe9f
+symbol: CRWV
+published_utc: 2026-03-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-agreement-power-perplexitys-ai-inference-workloads-2026-03-04
+headline: CoreWeave Announces Agreement to Power Perplexity’s AI Inference Workloads
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced that it has entered into a multi-year strategic partnership with Perplexity to support its inference workloads on CoreWeave Cloud and pilot new services across both organizations. This press release features multimedia. View the full release here:...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8241daed5b02e450
+symbol: CRWV
+published_utc: 2026-03-04T13:08:00Z
+url: https://www.nasdaq.com/press-release/crwv-alert-hagens-berman-analyzes-coreweave-crwv-452m-q4-loss-and-soft-guidance-0
+headline: CRWV Alert: Hagens Berman Analyzes CoreWeave (CRWV) $452M Q4 Loss and Soft Guidance Amid Ongoing Securities Fraud Litigation
+<<<TEXT>>>
+--National shareholder rights law firm Hagens Berman provides an update to investors in CoreWeave, Inc. following the company’ s dismal fourth-quarter 2025 financial results. Hagens Berman is investigating the alleged claims in the pending suit. On February 26, 2026, CoreWeave reported a Q4 net loss of $452 million, or $0.89 per share— a staggering figure that...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c3f2e6796db9c941
+symbol: CRWV
+published_utc: 2026-03-06T13:48:00Z
+url: https://www.nasdaq.com/press-release/crwv-alert-hagens-berman-analyzes-coreweave-crwv-452m-q4-loss-and-soft-guidance-1
+headline: CRWV Alert: Hagens Berman Analyzes CoreWeave (CRWV) $452M Q4 Loss and Soft Guidance Amid Ongoing Securities Fraud Litigation
+<<<TEXT>>>
+--National shareholder rights law firm Hagens Berman provides an update to investors in CoreWeave, Inc. following the company’ s dismal fourth-quarter 2025 financial results. Hagens Berman is investigating the alleged claims in the pending suit. On February 26, 2026, CoreWeave reported a Q4 net loss of $452 million, or $0.89 per share— a staggering figure that...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f98b8ff3b7b26a00
+symbol: CRWV
+published_utc: 2026-03-09T11:12:00Z
+url: https://www.nasdaq.com/press-release/crwv-4-day-deadline-alert-hagens-berman-analyzes-coreweave-crwv-452m-q4-loss-and-soft
+headline: CRWV 4-DAY DEADLINE ALERT: Hagens Berman Analyzes CoreWeave (CRWV) $452M Q4 Loss and Soft Guidance Amid Ongoing Securities Fraud Litigation
+<<<TEXT>>>
+--National shareholder rights law firm Hagens Berman provides an update to investors in CoreWeave, Inc. following the company’ s dismal fourth-quarter 2025 financial results. Hagens Berman is investigating the alleged claims in the pending suit. On February 26, 2026, CoreWeave reported a Q4 net loss of $452 million, or $0.89 per share— a staggering figure that...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: efc1ad1bffc70707
+symbol: CRWV
+published_utc: 2026-03-10T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-introduces-flexible-capacity-plans-accelerate-ai-innovation-2026-03-10
+headline: CoreWeave Introduces Flexible Capacity Plans to Accelerate AI Innovation
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced CoreWeave Flexible Capacity Plans, including Flex Reservations and Spot, designed to match the dynamic reality of modern AI workloads. With Flex Reservations and Spot, CoreWeave enables customers to move beyond the binary choice of reserved capacity versus on-demand capacity.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9e3d0ee143733862
+symbol: CRWV
+published_utc: 2026-03-11T10:49:00Z
+url: https://www.nasdaq.com/press-release/crwv-2-day-deadline-alert-hagens-berman-analyzes-coreweave-crwv-452m-q4-loss-and-soft
+headline: CRWV 2-DAY DEADLINE ALERT: Hagens Berman Analyzes CoreWeave (CRWV) $452M Q4 Loss and Soft Guidance Amid Ongoing Securities Fraud Litigation
+<<<TEXT>>>
+Hagens Berman is investigating the alleged claims in the pending suit. On February 26, 2026, CoreWeave reported a Q4 net loss of $452 million, or $0.89 per share— a staggering figure that nearly doubled the $0.49 loss per share anticipated by Wall Street analysts. "We are investigating whether the company overstated scaling capabilities and hid critical delays,"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 896cf24028f11282
+symbol: CRWV
+published_utc: 2026-03-13T09:16:00Z
+url: https://www.nasdaq.com/press-release/crwv-deadline-alert-hagens-berman-alerts-coreweave-crwv-investors-todays-lead
+headline: CRWV DEADLINE ALERT: Hagens Berman Alerts CoreWeave (CRWV) Investors to Today’s Lead Plaintiff Deadline in Securities Fraud Litigation
+<<<TEXT>>>
+Hagens Berman is investigating the alleged claims in the pending suit. On February 26, 2026, CoreWeave reported a Q4 net loss of $452 million, or $0.89 per share— a staggering figure that nearly doubled the $0.49 loss per share anticipated by Wall Street analysts. "We are investigating whether the company overstated scaling capabilities and hid critical delays,"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f4f5c0445cb0422a
+symbol: CRWV
+published_utc: 2026-03-16T16:30:00Z
+url: https://www.nasdaq.com/press-release/coreweave-advances-ai-native-cloud-platform-next-phase-production-scale-ai-2026-03-16
+headline: CoreWeave Advances AI-Native Cloud Platform for the Next Phase of Production-Scale AI
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced an expansion of its purpose-built AI cloud platform at NVIDIA’ s GTC conference. The expansion brings NVIDIA HGX B300 to the CoreWeave Cloud, unlocking a new generation of performance for AI workloads, alongside new Weights& Biases capabilities that streamline reinforcement learning and agent...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e1e2a10a43a78082
+symbol: CRWV
+published_utc: 2026-03-17T09:00:00Z
+url: https://www.nasdaq.com/press-release/cline-selects-coreweave-power-high-performance-autonomous-engineering-2026-03-17
+headline: Cline Selects CoreWeave to Power High-Performance Autonomous Engineering
+<<<TEXT>>>
+Today, CoreWeave, Inc., The Essential Cloud for AI™, announced that Cline, The Open and Secure Coding Agent, will integrate CoreWeave’ s W&B Inference directly into the Cline ecosystem, enabling developers to build and run autonomous coding systems with greater performance, scalability, and operational simplicity. The integration gives Cline access to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b20c28a6e901e4bf
+symbol: CRWV
+published_utc: 2026-03-24T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-selected-zonos-power-cross-border-commerce-solutions-2026-03-24
+headline: CoreWeave Selected by Zonos to Power Cross-Border Commerce Solutions
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced that Zonos, a leader in cross-border commerce technology, selected the CoreWeave Cloud platform to power its AI-driven duty, tax, and international checkout systems, reducing latency and improving performance across its globally distributed products. Zonos helps global retailers and logistics...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 241586c22379a3b5
+symbol: CRWV
+published_utc: 2026-03-31T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-closes-landmark-85-billion-financing-facility-achieving-first-investment
+headline: CoreWeave Closes Landmark $8.5 Billion Financing Facility, Achieving First Investment-Grade Rated GPU-backed Financing
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced it has closed an $8.5 billion delayed draw term loan facility, supporting the continued expansion of its AI cloud platform. The structure enables CoreWeave to borrow up to approximately $7.5 billion initially, with the ability to increase total borrowing capacity to $8.5 billion as underlying...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d0a7d2eef1e4d9d0
+symbol: CRWV
+published_utc: 2026-04-01T11:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-delivers-leading-inference-performance-mlperfr-benchmark-2026-04-01
+headline: CoreWeave Delivers Leading Inference Performance in MLPerf® Benchmark
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced landmark results in the MLPerf ® Inference v6.0 benchmark suite. Participating in the Datacenter Closed division, CoreWeave leveraged NVIDIA’ s newest AI infrastructure, the NVIDIA GB200 NVL72 and NVIDIA GB300 NVL72. This press release features multimedia.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bce88e40f0aad5e0
+symbol: CRWV
+published_utc: 2026-04-09T07:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-and-meta-announce-21-billion-expanded-ai-infrastructure-agreement-2026-04
+headline: CoreWeave and Meta Announce $21 Billion Expanded AI Infrastructure Agreement
+<<<TEXT>>>
+CoreWeave, the Essential Cloud for AI™, today announced an expanded, long-term agreement with Meta Platforms, Inc. to provide AI cloud capacity through December 2032 for approximately $21 billion. With this deal, the two companies are continuing their existing relationship, increasing support for Meta’ s development and deployment of AI.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 895aae60bd969608
+symbol: CRWV
+published_utc: 2026-04-09T07:12:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-intention-offer-1250-million-senior-notes-2026-04-09
+headline: CoreWeave Announces Intention to Offer $1,250 million of Senior Notes
+<<<TEXT>>>
+CoreWeave, Inc. announced today that it intends, subject to market and other customary conditions, to offer $1,250 million aggregate principal amount of senior notes due 2031 in a private offering. The Notes will be guaranteed on a senior unsecured basis by certain wholly-owned subsidiaries of CoreWeave. The Notes and related guarantees have not been and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 444adc5044a3b839
+symbol: CRWV
+published_utc: 2026-04-09T07:37:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-proposed-30-billion-convertible-senior-notes-offering-2026-04-09
+headline: CoreWeave Announces Proposed $3.0 Billion Convertible Senior Notes Offering
+<<<TEXT>>>
+CoreWeave, Inc. today announced its intention to offer, subject to market and other conditions, $3.0 billion aggregate principal amount of its convertible senior notes due 2032 in a private offering. CoreWeave also intends to grant the initial purchasers of the Notes an option to purchase, for settlement within a 13- day period beginning on, and including, the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9b9511f60e5838b8
+symbol: CRWV
+published_utc: 2026-04-09T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-upsize-and-pricing-1750-million-senior-notes-2026-04-09
+headline: CoreWeave Announces Upsize and Pricing of $1,750 Million of Senior Notes
+<<<TEXT>>>
+CoreWeave, Inc. announced today that it priced a private offering of $1,750 million aggregate principal amount of 9.750% senior notes due 2031, which represents a $500 million increase from the previously announced size of the offering. The Notes will have a maturity date of October 1, 2031. The Notes and related guarantees have not been and will not be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 30d521bfd2628cb2
+symbol: CRWV
+published_utc: 2026-04-10T07:45:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-multi-year-agreement-anthropic-2026-04-10
+headline: CoreWeave Announces Multi-Year Agreement With Anthropic
+<<<TEXT>>>
+LIVINGSTON, N.J.& SAN FRANCISCO---- CoreWeave, Inc., The Essential Cloud for AI™, today announced an agreement with Anthropic, one of the world’ s leading AI research and development companies, to support the development and deployment of Anthropic’ s Claude family of AI models. With the addition of Anthropic, nine of the leading ten AI model providers now leverage...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6170318ee5164b5a
+symbol: CRWV
+published_utc: 2026-04-10T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-prices-upsized-35-billion-convertible-senior-notes-offering-2026-04-10
+headline: CoreWeave Prices Upsized $3.5 Billion Convertible Senior Notes Offering
+<<<TEXT>>>
+CoreWeave, Inc. announced today the pricing of its private offering of $3.5 billion aggregate principal amount of its 1.75% convertible senior notes due 2032. The Notes will be jointly and severally, fully and unconditionally guaranteed by CoreWeave’ s wholly owned subsidiaries that guarantee its existing 9.250% Senior Notes due 2030, 9.000% Senior Notes...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5eeb75c749c5a9a6
+symbol: CRWV
+published_utc: 2026-04-15T08:18:00Z
+url: https://www.nasdaq.com/press-release/jane-street-signs-6-billion-ai-cloud-agreement-coreweave-2026-04-15
+headline: Jane Street Signs $6 Billion AI Cloud Agreement With CoreWeave
+<<<TEXT>>>
+LIVINGSTON, N.J.& NEW YORK---- CoreWeave, Inc., the Essential Cloud for AI™, and Jane Street, a global technology-driven trading firm, today announced that Jane Street has committed approximately $6 billion to use CoreWeave’ s AI cloud platform. Under the new commitment which expands the existing relationship between the companies, CoreWeave will provide Jane Street...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 468284b0fc1fb730
+symbol: CRWV
+published_utc: 2026-04-16T07:15:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-intention-offer-1000-million-9750-senior-notes-due-2031-2026-04
+headline: CoreWeave Announces Intention to Offer $1,000 million of 9.750% Senior Notes due 2031
+<<<TEXT>>>
+CoreWeave, Inc. announced today that it intends, subject to market and other customary conditions, to offer $1,000 million aggregate principal amount of 9.750% senior notes due 2031 in a private offering. The Notes are being offered as additional notes under the Indenture, dated as of April 14, 2026, pursuant to which CoreWeave previously issued $1,750...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da48791b4f279c5f
+symbol: CRWV
+published_utc: 2026-04-16T13:16:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-pricing-1000-million-9750-senior-notes-due-2031-2026-04-16
+headline: CoreWeave Announces Pricing of $1,000 million of 9.750% Senior Notes due 2031
+<<<TEXT>>>
+CoreWeave, Inc. announced today that it priced a private offering of $1,000 million aggregate principal amount of 9.750% senior notes due 2031. The Notes are being offered as additional notes under the Indenture, dated as of April 14, 2026, pursuant to which CoreWeave previously issued $1,750 million in aggregate principal amount of 9.750% senior notes due...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e59711f32241aba3
+symbol: CRWV
+published_utc: 2026-04-30T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-sunk-expands-capabilities-bring-ai-workloads-online-faster-anywhere-2026-04
+headline: CoreWeave SUNK Expands Capabilities to Bring AI Workloads Online Faster – Anywhere
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today shared significant momentum in CoreWeave SUNK capabilities to enable AI research and platform teams to accelerate how clusters are set up and run across CoreWeave and multi-cloud environments. "As AI training footprints expand across clouds and customer-owned infrastructure, teams need speed to deploy...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 83d7656bd1a7ce72
+symbol: CRWV
+published_utc: 2026-05-07T16:07:00Z
+url: https://www.nasdaq.com/press-release/coreweave-reports-strong-first-quarter-2026-results-2026-05-07
+headline: CoreWeave Reports Strong First Quarter 2026 Results
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today reported financial results for the first quarter ended March 31, 2026. Revenue backlog 1 was $99.4 billion as of March 31, 2026. Customer Wins across AI Labs, Hyperscalers, and Enterprises Executed multiple new agreements with Meta, including a new $21 billion commitment signed in March Signed multi-year...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ab2a2e4dc67318c9
+symbol: CRWV
+published_utc: 2026-05-11T09:09:00Z
+url: https://www.nasdaq.com/press-release/coreweave-achieves-1-ranking-inference-speed-and-price-performance-moonshot-ais-kimi
+headline: CoreWeave Achieves #1 Ranking for Inference Speed and Price-Performance for Moonshot AI’s Kimi K2.6 Model in Independent Benchmark
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced it has achieved the strongest combination of speed and price-performance 1 for Moonshot AI’ s Kimi K2.6 in independ ent inference benc hmarking conducted by Artificial Analysis. CoreWeave ranked first in the most attractive quadrant for inference speed and price-performance on Kimi K2.6, as...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6b7df81199e3f5ec
+symbol: CRWV
+published_utc: 2026-05-13T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-participate-jp-morgan-global-technology-media-and-communications-conference
+headline: CoreWeave to Participate in the J.P. Morgan Global Technology, Media and Communications Conference
+<<<TEXT>>>
+CoreWeave Inc., The Essential Cloud for AI™, today announced that Brannin McBee, Co-Founder and Chief Development Officer, will present at the J.P. Morgan Global Technology, Media and Communications Conference in Boston, MA. The discussion will begin at 11:25 a.m. Eastern Time on May 19th. Accordingly, investors should monitor these channels, in addition to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 634c75e3744ad461
+symbol: CRWV
+published_utc: 2026-05-14T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-sandboxes-launches-accelerate-reinforcement-learning-agent-tool-use-and
+headline: CoreWeave Sandboxes Launches to Accelerate Reinforcement Learning, Agent Tool Use, and Model Evaluation
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced CoreWeave Sandboxes, an execution layer that gives AI researchers and platform teams secure, isolated environments for running reinforcement learning, agent tool use, and model evaluation. The new offering is available on a customer's own CoreWeave infrastructure or as a serverless runtime...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6c5ea3a43183c92f
+symbol: CRWV
+published_utc: 2026-05-18T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-closes-31-billion-loan-facility-expanding-access-public-markets-gpu-backed
+headline: CoreWeave Closes $3.1 Billion Loan Facility, Expanding Access to Public Markets for GPU-Backed Financing
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced it has closed its $3.1 billion delayed draw term loan facility, supporting continued expansion of its AI cloud platform and committed customer deployments. We believe this approach is becoming one of the defining investment categories of the next decade," said Brannin McBee, co-founder and chief...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cf820b827817b632
+symbol: CRWV
+published_utc: 2026-05-22T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-participate-jefferies-software-internet-and-ai-conference-2026-05-22
+headline: CoreWeave to Participate in the Jefferies Software, Internet, and AI Conference
+<<<TEXT>>>
+CoreWeave Inc., The Essential Cloud for AI™, today announced that Nitin Agrawal, CFO, will present at the Jefferies Software, Internet, and AI Conference in Newport, CA. The discussion will begin at 12:00 p.m. Eastern Time May 27th. Accordingly, investors should monitor these channels, in addition to following CoreWeave's press releases, Securities and Exchange...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5d5c277f703fd43a
+symbol: CRWV
+published_utc: 2026-05-28T08:10:00Z
+url: https://www.nasdaq.com/press-release/coreweave-closes-training-inference-gap-autonomous-agent-improvement-2026-05-28
+headline: CoreWeave Closes the Training-to-Inference Gap for Autonomous Agent Improvement
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced the launch of unified agentic AI capabilities that accelerate progress toward the superintelligence loop, a closed feedback loop between training and inference. With reinforcement learning, production inference, agent observability, and autonomous improvement working as one closed loop, agents...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1734146aef4b8930
+symbol: CRWV
+published_utc: 2026-05-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-participate-bofa-securities-global-technology-conference-2026-05-28
+headline: CoreWeave to Participate in the BofA Securities Global Technology Conference
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced that Nick Robbins, VP Corporate Development and Investor Relations, will present at the BofA Securities Global Technology Conference in San Francisco, CA. The discussion will begin at 10:40 a.m. Pacific Time on June 3rd. Accordingly, investors should monitor these channels, in addition to following...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bc93fb2de10db70d
+symbol: CRWV
+published_utc: 2026-06-01T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-completes-industry-first-bring-and-validation-nvidia-vera-rubin-nvl72-2026
+headline: CoreWeave Completes Industry-First Bring-Up and Validation of NVIDIA Vera Rubin NVL72
+<<<TEXT>>>
+Leveraging its purpose-built software and engineering solutions, CoreWeave is the first AI cloud provider to bring up Vera Rubin, extending the CoreWeave platform’ s support for NVIDIA hardware. With Vera Rubin, CoreWeave will deliver better results for customers.  "Their ability to deliver highly performant clusters with full cluster observability and a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5f8c02f2766808cd
+symbol: CRWV
+published_utc: 2026-06-11T03:14:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-intention-offer-35-billion-senior-notes-2026-06-11
+headline: CoreWeave Announces Intention to Offer $3.5 Billion of Senior Notes
+<<<TEXT>>>
+CoreWeave, Inc. announced today that it intends, subject to market and other customary conditions, to offer $3.5 billion in aggregate principal amount of dollar-denominated and euro-denominated senior notes due 2032 in a private offering. The Notes will be guaranteed on a senior unsecured basis by certain wholly-owned subsidiaries of CoreWeave.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 368799c894c71069
+symbol: CRWV
+published_utc: 2026-06-11T14:45:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-pricing-125-billion-senior-notes-and-eu2-billion-senior-notes
+headline: CoreWeave Announces Pricing of $1.25 Billion of Senior Notes and €2 Billion of Senior Notes
+<<<TEXT>>>
+CoreWeave, Inc. announced today that it priced a private offering of $1.25 billion aggregate principal amount of 9.625% senior notes due 2032 and €2 billion aggregate principal amount of 8.500% senior notes due 2032. The Notes will have a maturity date of July 15, 2032. The Notes and related guarantees have not been and will not be registered under the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f8699628c44729ba
+symbol: CRWV
+published_utc: 2026-06-12T10:55:00Z
+url: https://www.nasdaq.com/press-release/coreweave-join-nasdaq-100-index-2026-06-12
+headline: CoreWeave to Join Nasdaq-100 Index
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced it has been selected for inclusion to the Nasdaq-100 ® Index, and is expected to join the index prior to market open on June 22, 2026. The Nasdaq-100 Index includes 100 of the largest non-financial companies listed on the Nasdaq Stock Market and is one of the world’ s most widely followed indexes.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 012d2c1002df720c
+symbol: CRWV
+published_utc: 2026-06-23T08:35:00Z
+url: https://www.nasdaq.com/press-release/backblaze-announces-five-year-multi-exabyte-data-storage-agreement-coreweave-2026-06
+headline: Backblaze Announces Five-Year Multi-Exabyte Data Storage Agreement with CoreWeave
+<<<TEXT>>>
+Backblaze, Inc., the cloud storage platform for the AI era, today announced an agreement with CoreWeave, Inc., The Essential Cloud for AI™. Under the multi-exabyte, $335 million agreement, Backblaze will provide cost-efficient storage capacity that supports portions of CoreWeave’ s managed storage infrastructure, helping optimize placement of data across...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 68db3ff28d2ef112
+symbol: CRWV
+published_utc: 2026-06-23T09:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-named-official-ai-cloud-partner-battlebots-2026-06-23
+headline: CoreWeave Named Official AI Cloud Partner of BattleBots
+<<<TEXT>>>
+As a Platinum Sponsor and the Official AI Cloud Partner, CoreWeave is giving BattleBots teams access to its AI Cloud platform as they develop and train their robots for the 2027 Pro League season. In addition to CoreWeave branding throughout the BattleBots Arena in Las Vegas for the current 2026 Pro League season, including a CoreWeave Clock that marks pivotal...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8179e39218a3b56d
+symbol: CRWV
+published_utc: 2026-06-24T11:03:00Z
+url: https://www.nasdaq.com/press-release/coreweave-partners-conapto-expand-ai-cloud-capacity-sweden-powered-renewable-energy
+headline: CoreWeave Partners With Conapto to Expand AI Cloud Capacity in Sweden Powered by Renewable Energy
+<<<TEXT>>>
+The arrangement encompasses two campuses in Stockholm, with initial capacity already online at Stockholm 4 South. The Stockholm deployment will provide AI innovators with access to CoreWeave’ s AI cloud platform, designed specifically for the demands of modern AI workloads. The partnership extends CoreWeave’ s ability to serve customers across Europe and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8b2927d4928bb4b8
+symbol: CRWV
+published_utc: 2026-06-29T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-aria-launches-ai-research-and-iteration-agent-autonomous-research-and
+headline: CoreWeave ARIA Launches as an AI Research and Iteration Agent with autonomous research and collaborative intelligence
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced the launch of CoreWeave ARIA, an AI research agent built directly into Weights& Biases by CoreWeave that reads experiment data, uncovers hidden insights, and drives continuous model and agent improvement.  "ARIA has become a valuable part of my daily workflow," said Praneeth Gangavarapu, PhD Candidate, at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2c3e9326a5147143
+symbol: CRWV
+published_utc: 2026-07-09T11:54:00Z
+url: https://www.nasdaq.com/press-release/coreweave-named-visionary-2026-gartnerr-magic-quadranttm-cloud-ai-infrastructure-2026
+headline: CoreWeave Named a Visionary in the 2026 Gartner® Magic Quadrant™ for Cloud AI Infrastructure
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced that Gartner named it a Visionary in the 2026 Gartner ® Magic Quadrant™ for Cloud AI Infrastructure. From training the largest foundation models to inference, the gap between infrastructure built for AI and infrastructure retrofitted for AI has become the defining constraint for the teams pushing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2e839a747528abeb
+symbol: CRWV
+published_utc: 2026-07-22T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-cloud-powers-anams-real-time-photorealistic-ai-avatars-2026-07-22
+headline: CoreWeave Cloud Powers Anam’s Real-Time Photorealistic AI Avatars
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced Anam, the Interactive Avatar platform for adding a face to your agent, has selected CoreWeave Cloud to power the development of AI agents, combining photorealistic quality with sub-second response times and API-first deployment. Under the agreement, Anam will run inference workloads on NVIDIA RTX...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c43eed55b2cf10e7
+symbol: CRWV
+published_utc: 2026-07-27T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-announces-date-second-quarter-2026-financial-results-and-conference-call
+headline: CoreWeave Announces Date of Second Quarter 2026 Financial Results and Conference Call
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, will hold its quarterly conference call to discuss second quarter 2026 financial results on Tuesday, August 11, 2026 at 5:00 PM Eastern Time. The live webcast of the earnings conference call can be accessed at the CoreWeave Investor Relations website at investors.coreweave.com. A replay of the webcast will be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bf6e90bc5b05ff40
+symbol: CRWV
+published_utc: 2026-07-28T08:00:00Z
+url: https://www.nasdaq.com/press-release/flow-traders-selects-coreweave-power-foundation-model-training-ai-driven-quantitative
+headline: Flow Traders Selects CoreWeave to Power Foundation Model Training for AI-Driven Quantitative Trading
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced that Flow Traders, a leading global liquidity provider, selected CoreWeave as the primary AI cloud platform provider for its AI and deep learning division. "Tomorrow's innovations can't be built on yesterday's infrastructure," said Joshua Mathew, co-head of Flow Traders’ recently announced AI and deep...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a06d8d4c98b3e012
+symbol: CRWV
+published_utc: 2026-07-30T08:00:00Z
+url: https://www.nasdaq.com/press-release/leidos-and-coreweave-collaborate-accelerate-delivery-ai-capabilities-defense-0
+headline: Leidos and CoreWeave Collaborate to Accelerate Delivery of AI Capabilities for Defense, National Security and Intelligence Missions
+<<<TEXT>>>
+New collaboration to deliver secure, mission-ready AI capacity and services for national security CoreWeave to provide AI-native platform, Leidos to lead mission integration, secure architecture. RESTON, Va.& LIVINGSTON, N.J.---- Responding to the rapidly growing need for secure artificial intelligence technology dedicated to the U.S. Intelligence Community...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0bda8c08de5f7c96
+symbol: CRWV
+published_utc: 2026-07-30T08:04:00Z
+url: https://www.nasdaq.com/press-release/leidos-and-coreweave-collaborate-accelerate-delivery-ai-capabilities-defense-national
+headline: Leidos and CoreWeave collaborate to accelerate delivery of AI capabilities for defense, national security and intelligence missions
+<<<TEXT>>>
+New collaboration to deliver secure, mission-ready AI capacity and services for national security CoreWeave to provide AI-native platform, Leidos to lead mission integration, secure architecture. RESTON, Va. and LIVINGSTON, N.J., July 30, 2026/ PRNewswire/-- Responding to the rapidly growing need for secure artificial intelligence technology dedicated to the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 74c407c9a96b345a
+symbol: CRWV
+published_utc: 2026-08-04T07:40:00Z
+url: https://www.nasdaq.com/press-release/coreweave-expands-cloud-ai-platform-indonesia-marking-first-move-asia-pacific-region
+headline: CoreWeave Expands Cloud AI Platform to Indonesia, Marking First Move Into Asia-Pacific Region
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced its expansion into Indonesia, the company's first data center presence in the Asia-Pacific region. Across Asia, enterprises, AI-native companies, and governments increasingly need AI compute located close to their data and users, driven by both latency-sensitive workloads and data locality...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d78e1b7514aebc45
+symbol: CRWV
+published_utc: 2026-08-05T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-signs-multi-year-agreement-solidigm-strengthen-its-integrated-ai-cloud
+headline: CoreWeave Signs Multi-Year Agreement With Solidigm to Strengthen Its Integrated AI Cloud Platform
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced a multi-year strategic agreement with Solidigm, a pioneer in enterprise data storage and a leading supplier of high-capacity AI infrastructure storage solutions, for priority access to enterprise solid-state drive capacity supporting CoreWeave’ s AI cloud platform.  "CoreWeave was built to give AI...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7ece3fc15f0ab562
+symbol: CRWV
+published_utc: 2026-08-06T08:00:00Z
+url: https://www.nasdaq.com/press-release/imc-selects-coreweave-firm-deepens-research-investment-2026-08-06
+headline: IMC Selects CoreWeave As Firm Deepens Research Investment
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced that IMC, a global technology-driven trading firm, will significantly scale its use of CoreWeave' s AI cloud platform, including CKS, reflecting IMC’ s investment in research capabilities that underpin its trading strategies. "CoreWeave engages with us as a design partner, enabling IMC to influence the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3126151baef83ad7
+symbol: CRWV
+published_utc: 2026-08-10T16:05:00Z
+url: https://www.nasdaq.com/press-release/coreweave-closes-26-billion-loan-facility-expanding-financing-flexibility-ai
+headline: CoreWeave Closes $2.6 Billion Loan Facility, Expanding Financing Flexibility for AI Infrastructure
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced it has closed its $2.6 billion delayed draw term loan facility, supporting the continued expansion of its AI cloud platform and committed customer deployments. The DDTL 5.5 Facility extends CoreWeave’ s HPC infrastructure-backed financing platform by broadening the scope of customer contracts...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fdfe47dc34338b56
+symbol: CRWV
+published_utc: 2026-08-11T16:10:00Z
+url: https://www.nasdaq.com/press-release/coreweave-reports-strong-second-quarter-2026-results-2026-08-11
+headline: CoreWeave Reports Strong Second Quarter 2026 Results
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today reported financial results for the second quarter ended June 30, 2026. Revenue backlog 1 was approximately $104 billion as of June 30, 2026. Customer Wins across AI Labs, Hyperscalers, and Enterprises Partner of choice for leading enterprises and AI pioneers, including Bentley Systems, Caterpillar, Grammarly,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c995583074658c56
+symbol: CRWV
+published_utc: 2026-08-13T08:00:00Z
+url: https://www.nasdaq.com/press-release/coreweave-ai-cloud-platform-powers-masterclasss-ai-teaching-agents-2026-08-13
+headline: CoreWeave AI Cloud Platform Powers MasterClass's AI Teaching Agents
+<<<TEXT>>>
+CoreWeave, Inc., The Essential Cloud for AI™, today announced that MasterClass, the online personalized learning platform, selected CoreWeave Cloud to evaluate and improve the AI teaching agents that power its personalized instruction. MasterClass will use W&B Weave to evaluate how its AI teaching agents perform across conversations with learners, track...
+<<<END>>>

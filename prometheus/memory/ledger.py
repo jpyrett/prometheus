@@ -5,8 +5,8 @@
     ledger.recent("PG", family="capital_return", since=date(2026, 9, 1))      # the earlier records for the symbol, oldest first
     ledger.problems                                     # lines that could not be read, in words
 
-WHAT IT IS FOR. The Advisor reads it for two rules: the COOLDOWN (do not open the same symbol for the same family again while the first recommendation's time stop has not passed and its
-invalidation rules have not fired) and the HOLDINGS PASS (a held symbol whose earlier recommendation was invalidated is a `reduce`). It is also the first row of the long-term memory
+WHAT IT IS FOR. The Advisor reads it for one rule: the COOLDOWN (do not open the same symbol for the same family again while the first recommendation's time stop has not passed and its
+invalidation rules have not fired; an older line whose action is `add` still counts: it is about what was recommended, not what is held). (The holdings pass, which also read it, is gone: entry 105.) It is also the first row of the long-term memory
 the week 1 design promises: later, outcomes (the return after 5, 20 and 60 days against SPY, whether the stop was hit first) are added by a separate script from the bars, and
 `basis: measured` replaces `prior` once a family has 30 outcomes. The generate step only APPENDS.
 

@@ -7,13 +7,21 @@
 A ticket is a `Trade` with status `new`. Code makes it from what the other agents wrote, read as plain dicts: the decision (the symbol, the action, the shares the user or the desk allowed), the Critic's review (its
 deal price) and the Advisor's trade plan (`recommendation["trade"]`: the entry zone, the limit price). No model is involved, and nothing the model says can change a ticket (rule T2).
 
-    side             `sell` when the decision's action is `reduce`, else `buy`: there is no short sale
+    side             `sell` when the decision's action is `reduce`, else `buy`: there is no short sale. A decision to sell is only the USER'S OWN direct order (`origin: "direct"`): a sale never comes from a
+                     recommendation (entry 105), and `verify_trade` refuses a recommendation's decision whose action is not a purchase
     shares_approved  the decision's shares: the Trader never trades more
-    shares           a sale: min(shares_approved, the shares sellable today: the T+1 rule). A purchase: shares_approved, cut for cash when it is placed
+    dollars          an ORDER IN DOLLARS (design choices entry 111): copied from the decision, the most the purchase may cost; `shares_approved` and `shares` are then the ESTIMATE at the price the Account Manager sized at, and the Account Manager turns the dollars
+                     into shares at the fill price (`handshake.decide_approval`). None: an order in shares
+    shares           a sale: all the shares approved or none (a direct order is placed as typed, and the shares bought today cannot be sold: T+1). A purchase: shares_approved, cut for cash when it is placed. A quantity may have a
+                     fraction (the even split or a decimal the user typed: design choices entry 110); a funding sale is whole shares (RaiseFunds)
     ref_price        the review's `timing.deal_price`, else the plan's `entry_mid`, else (a direct order, entry 87: no review, no plan) the decision's own `price`
     limits, a buy    high = min(the entry zone's top, ref (1 + max_chase_pct)), low = max(the zone's bottom, ref (1 - limit_band_pct)); without a zone only the percentages apply
     limits, a sale   low = ref (1 - max_chase_pct), high = ref (1 + limit_band_pct)
     default order    the Advisor's own plan: a limit at the plan's `limit_price`, moved inside the limits; a market order when the plan has no limit price (a limit at the reference price when market orders are off)
+
+DECIMAL MONEY (design choices entry 112): a ticket's prices and shares are `Decimal`. The Critic's deal price, the Advisor's entry zone and limit price and a RaiseFunds plan's prices are numbers that come in from other agents (floats once `json` has read
+them, or Decimals from this process), and each crosses into the Trader through the price door ONCE (`_price`: four places, half up); the limit range is exact Decimal arithmetic on that price and the settings' ratios (`max_chase_pct`, `limit_band_pct`), rounded to
+four places by `price_scale`.
 
 A ticket that cannot be traded is built `rejected` at once, with a code of the closed list (`record.REJECT_CODES`): `not_permitted` (`verify_trade` gave reasons, which go in `reason`), `approval_expired` (the only reason is
 that the approval ran out), `not_held` and `not_sellable_today` (a sale of a stock the portfolio does not hold, or whose shares were all bought today), `price_unavailable` (no reference price), `price_outside_limits` (a
@@ -27,13 +35,15 @@ and carry the purchase's `record_id` and `review_id`; the model never places the
 """
 import re
 from datetime import date, datetime, timezone
+from decimal import ROUND_CEILING, ROUND_FLOOR, Decimal
 
 from prometheus.agents.trader.config import TraderConfig
 from prometheus.agents.trader.record import Trade, is_ticker
-from prometheus.agents.trader.simulator import r4, usable
 from prometheus.common.market_calendar import eastern_date
+from prometheus.common import shares as sh
+from prometheus.common.money import CENT, price as price_door, price_scale
 from prometheus.common.portfolio import Portfolio
-from prometheus.common.work_order import EXPIRY_PREFIX, TRADING, WorkOrder, review_of, verify_trade
+from prometheus.common.work_order import EXPIRY_PREFIX, TRADING, WorkOrder, decision_dollars, review_of, verify_trade
 
 TRADE_ID = re.compile(r"T(\d+)(?:-F\d+)?")
 EXPIRY_REASON = EXPIRY_PREFIX              # the start of the sentence `verify_trade` gives when the approval's time is over: a ticket whose only reason is this is `approval_expired`, not `not_permitted` (the Account Manager's `approve_trade` reads the same constant)
@@ -66,33 +76,44 @@ def permission(order: WorkOrder, record_id: str, now: datetime) -> tuple[str | N
     return "not_permitted", "; ".join(reasons)
 
 
-def limit_range(side: str, ref_price: float, entry_zone, config: TraderConfig) -> tuple[float, float] | None:
-    """The price range no order may leave, (low, high), 4 places; None when there is none (a purchase whose reference price sits so far under the entry zone that the zone's bottom is over the ceiling)."""
+def _price(measured) -> Decimal | None:
+    """A price that comes from another agent (the Critic's deal price, the Advisor's entry zone, limit price and entry mid, a RaiseFunds line's price) through THE price door, once (`money.price`: four places, half up); None when it is not a number above zero."""
+    try:
+        return price_door(measured)
+    except ValueError:
+        return None
+
+
+def limit_range(side: str, ref_price: Decimal, entry_zone, config: TraderConfig) -> tuple[Decimal, Decimal] | None:
+    """The price range no order may leave, (low, high), 4 places; None when there is none (a purchase whose reference price sits so far under the entry zone that the zone's bottom is over the ceiling). The entry zone is the Advisor's plan (two numbers
+    that cross the price door here)."""
     chase, band = config.orders.max_chase_pct, config.orders.limit_band_pct
     if side == "buy":
         high, low = ref_price * (1 + chase), ref_price * (1 - band)
-        if isinstance(entry_zone, (list, tuple)) and len(entry_zone) == 2 and all(usable(x) for x in entry_zone) and entry_zone[0] <= entry_zone[1]:
-            high, low = min(high, float(entry_zone[1])), max(low, float(entry_zone[0]))
+        zone = [_price(x) for x in entry_zone] if isinstance(entry_zone, (list, tuple)) and len(entry_zone) == 2 else []
+        if zone and all(x is not None for x in zone) and zone[0] <= zone[1]:
+            high, low = min(high, zone[1]), max(low, zone[0])
     else:
         low, high = ref_price * (1 - chase), ref_price * (1 + band)
-    low, high = r4(low), r4(high)
+    low, high = price_scale(low), price_scale(high)
     return (low, high) if low <= high else None
 
 
-def shown_range(low: float, high: float) -> list[float]:
-    """The range the model reads: rounded INWARD to the cent (the bottom up, the top down), so that any price inside what it reads is inside the real range. The real range, to 4 places, when no whole cent is inside it."""
-    cents_low, cents_high = -(-round(low * 100, 6) // 1) / 100, (round(high * 100, 6) // 1) / 100
+def shown_range(low: Decimal, high: Decimal) -> list[Decimal]:
+    """The range the model reads: rounded INWARD to the cent (the bottom up, the top down), so that any price inside what it reads is inside the real range. The real range, to 4 places, when no whole cent is inside it. (These are the two directed
+    roundings of a price shown to the model; the account's own roundings are `price_scale` and `trade_amount`.)"""
+    cents_low, cents_high = low.quantize(CENT, rounding=ROUND_CEILING), high.quantize(CENT, rounding=ROUND_FLOOR)
     return [cents_low, cents_high] if cents_low <= cents_high else [low, high]
 
 
-def default_order(side: str, plan_limit, ref_price: float, low: float, high: float, config: TraderConfig, funding: bool = False) -> tuple[str, float | None]:
+def default_order(side: str, plan_limit, ref_price: Decimal, low: Decimal, high: Decimal, config: TraderConfig, funding: bool = False) -> tuple[str, Decimal | None]:
     """The order a ticket carries until it is placed otherwise: (`limit`, the plan's limit price moved inside the range); a plan with no limit price gives `market`, or a limit at the reference price moved inside the
     range when `orders.allow_market` is false. A funding sale is a market order, or, with market orders off, a limit at the bottom of its range (it sells at once at any price the Critic's range allows)."""
-    clamp = lambda x: r4(min(max(x, low), high))
+    clamp = lambda x: price_scale(min(max(x, low), high))
     if funding:
         return ("market", None) if config.orders.allow_market else ("limit", low)
-    if usable(plan_limit):
-        return "limit", clamp(float(plan_limit))
+    if _price(plan_limit) is not None:
+        return "limit", clamp(_price(plan_limit))
     return ("market", None) if config.orders.allow_market else ("limit", clamp(ref_price))
 
 
@@ -100,8 +121,13 @@ def _record_of(order: WorkOrder, record_id: str) -> dict:
     return next((r for r in order.recommendations if isinstance(r, dict) and (r.get("identity") or {}).get("record_id") == record_id), {})
 
 
-def _whole(value) -> int:
-    return value if isinstance(value, int) and not isinstance(value, bool) and value > 0 else 0
+def _quantity(value) -> Decimal:
+    """The shares a decision approves: a quantity above zero (a Decimal: `shares.quantity`), else 0, which no trade can fill. It was `_whole` and turned every fraction into 0 (entry 110)."""
+    try:
+        quantity = sh.quantity(value)
+    except ValueError:
+        return Decimal(0)
+    return quantity if quantity > 0 else Decimal(0)
 
 
 def build_tickets(order: WorkOrder, portfolio: Portfolio, now: datetime, config: TraderConfig, mode: str, problems: list[str] | None = None) -> list[Trade]:
@@ -119,17 +145,18 @@ def build_tickets(order: WorkOrder, portfolio: Portfolio, now: datetime, config:
             if problems is not None:
                 problems.append(f"the decision for recommendation {str(record_id)[:24]} has no ticket: its symbol {str(decision.get('symbol'))[:20]!r} is not a ticker")
             continue
-        side, symbol, approved = side_of(decision), decision["symbol"], _whole(decision.get("shares"))
+        side, symbol, approved = side_of(decision), decision["symbol"], _quantity(decision.get("shares"))
+        try:
+            dollars = decision_dollars(decision) if side == "buy" else None      # an order in dollars (entry 111, M2); a decision whose dollars are not a number to the cent is refused by `verify_trade` below
+        except ValueError:
+            dollars = None
         review, plan = review_of(order, record_id) or {}, _record_of(order, record_id).get("trade") or {}
         shares = approved
-        base = dict(trade_id=f"T{number}", kind="recommendation", record_id=record_id, review_id=review.get("review_id") or decision.get("review_id"), symbol=symbol, side=side, shares_approved=approved, mode=mode)
+        base = dict(trade_id=f"T{number}", kind="recommendation", record_id=record_id, review_id=review.get("review_id") or decision.get("review_id"), symbol=symbol, side=side, shares_approved=approved, dollars=dollars, mode=mode)
         number += 1
-        ref = (review.get("timing") or {}).get("deal_price")
-        ref = float(ref) if usable(ref) else float(plan["entry_mid"]) if usable(plan.get("entry_mid")) else float(decision["price"]) if usable(decision.get("price")) else None   # a direct order (entry 87) has no review and no plan: the quote the Account Manager priced it at is on its decision
+        ref = _price((review.get("timing") or {}).get("deal_price")) or _price(plan.get("entry_mid")) or _price(decision.get("price"))   # a direct order (entry 87) has no review and no plan: the quote the Account Manager priced it at is on its decision
         code, reason = permission(order, record_id, now)
-        if side == "sell":
-            position = portfolio.position(symbol)
-            shares = min(approved, portfolio.sellable_shares(symbol, today)) if position else 0
+        sellable = portfolio.sellable_shares(symbol, today) if side == "sell" and portfolio.position(symbol) else 0      # a sale is the user's own order, all of it or none: it is never cut to this number
         if len(tickets) >= config.limits.max_trades:
             tickets.append(Trade(**base, shares=shares, status="rejected", reject_code="not_attempted",
                                  reason=f"the Trader places at most {config.limits.max_trades} trades in one run (limits.max_trades), and this is number {len(tickets) + 1}"))
@@ -137,11 +164,11 @@ def build_tickets(order: WorkOrder, portfolio: Portfolio, now: datetime, config:
             tickets.append(Trade(**base, shares=shares, ref_price=ref, status="rejected", reject_code=code, reason=reason))
         elif side == "sell" and portfolio.position(symbol) is None:
             tickets.append(Trade(**base, shares=0, ref_price=ref, status="rejected", reject_code="not_held", reason=f"the portfolio does not hold {symbol}, and there is no short sale"))
-        elif side == "sell" and shares == 0:
+        elif side == "sell" and sellable == 0:
             tickets.append(Trade(**base, shares=0, ref_price=ref, status="rejected", reject_code="not_sellable_today", reason=f"every share of {symbol} was bought today, and a share cannot be sold the day it was bought (T+1)"))
-        elif side == "sell" and decision.get("origin") == "direct" and shares < approved:      # the user named this sale (entry 87): it is placed as typed or not at all, never cut to the shares sellable today
-            tickets.append(Trade(**base, shares=shares, ref_price=ref, status="rejected", reject_code="not_sellable_today",
-                                 reason=f"you asked to sell {approved} shares of {symbol} and only {shares} can be sold today (a share cannot be sold the day it was bought: T+1): the order is placed as you typed it or not at all"))
+        elif side == "sell" and sellable < approved:      # the user named this sale (entry 87): it is placed as typed or not at all, never cut to the shares sellable today
+            tickets.append(Trade(**base, shares=sellable, ref_price=ref, status="rejected", reject_code="not_sellable_today",
+                                 reason=f"you asked to sell {sh.text(approved)} shares of {symbol} and only {sh.text(sellable)} can be sold today (a share cannot be sold the day it was bought: T+1): the order is placed as you typed it or not at all"))
         elif ref is None:
             tickets.append(Trade(**base, shares=shares, status="rejected", reject_code="price_unavailable", reason="there is no price to judge the trade by: neither the Critic's deal price nor the plan's entry price"))
         elif (limits := limit_range(side, ref, plan.get("entry_zone"), config)) is None:
@@ -180,15 +207,15 @@ def funding_legs(funding, tickets: list[Trade], portfolio: Portfolio, today: dat
             why = "is the stock being bought"
         elif symbol in seen:
             why = "appears twice in the plan"
-        elif not isinstance(shares, int) or isinstance(shares, bool) or shares < 1:
+        elif (count := _quantity(shares)) < 1 or not sh.whole(count):      # a bool and a string are no quantity at all (`shares.quantity`)
             why = "has no whole number of shares"
-        elif shares > portfolio.sellable_shares(symbol, today):
-            why = f"is for {shares} shares but only {portfolio.sellable_shares(symbol, today)} are sellable today"
-        elif not usable(price):
+        elif count > portfolio.sellable_shares(symbol, today):
+            why = f"is for {sh.text(count)} shares but only {sh.text(portfolio.sellable_shares(symbol, today))} are sellable today"
+        elif _price(price) is None:
             why = "has no price"
         else:
             seen.add(symbol)
-            legs.append({"symbol": symbol, "shares": shares, "price": float(price)})
+            legs.append({"symbol": symbol, "shares": count, "price": _price(price)})
             continue
         return None, [], f"the funding plan sells {str(symbol)[:12]}, which {why}: no holdings are sold"
     return target, legs, ""

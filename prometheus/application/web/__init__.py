@@ -1,0 +1,2 @@
+"""The web bridge of the desk (design choices entry 99; design/ui_v1_spec.md): a small FastAPI app that starts a run of the desk the way `prometheus/application/session.py` does and streams what happens to the page
+(`ui/`), as Server-Sent Events. `views.py` turns the work order into what the page shows; `replay.py` plays a real capture through the same events, with no model, no quote and no database."""

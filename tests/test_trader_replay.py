@@ -11,12 +11,13 @@ from trader_helpers import MarketClerk, ScriptedModel, account, answer, decided,
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.agents.trader import replay
 from prometheus.agents.trader.trader import Trader
+from prometheus.common.money import dumps
 
 
 def save(tmp_path, order, name="order.json", desk=True, funds=None):
     path = tmp_path / name
     body = {"request": {"symbol": "PG"}, "funds": funds, "path": ["account_manager"], "order": order.model_dump(mode="json")} if desk else order.model_dump(mode="json")
-    path.write_text(json.dumps(body), encoding="utf-8")
+    path.write_text(dumps(body), encoding="utf-8")                                                                      # the funding plan holds Decimals: the one encoder writes them as numbers
     return path
 
 
@@ -29,11 +30,13 @@ def run(tmp_path, *flags, order=None, clerk=None, desk=True, funds=None, **kw):
 
 # ---------------------------------------------------------------- the free command
 
+# AMENDED (entry 111): every price, amount and cash figure these tests pinned was the open (165.0, 166.0) or the quote (167.0) PLUS 5 bps of slippage (165.0825, 166.083, 167.0835, $7,307.65, $2,692.35 ...). There is no slippage now
+# (`configs/trader_v1.json`: costs.slippage_bps is 0): a fill is at the price itself, $7,304.00 for 44 at 166.00, and the cash left follows.
 def test_the_free_command_replays_a_saved_order_against_the_bars_with_no_model_and_prints_the_trader_section(tmp_path):
     code, text = run(tmp_path, "--mode", "backtest", "--no-model", "--cash", "10000")
     assert code == 0
     assert text.splitlines()[0].startswith("TRADER  (no model: the program placed the orders; BACKTEST mode, prices: the stored daily bars")
-    assert "FILLED 44 at 166.0830 = $7,307.65   placed by code" in text and "closed by target on 2026-11-09" in text and "account  cash $10,000.00 -> $2,692.35" in text
+    assert "FILLED 44 at 166.0000 = $7,304.00   placed by code" in text and "closed by target on 2026-11-09" in text and "account  cash $10,000.00 -> $2,696.00" in text
 
 
 def test_the_default_mode_is_backtest_and_a_bare_order_is_read_as_well_as_the_desks_saved_json(tmp_path):
@@ -48,9 +51,9 @@ def test_the_moment_is_the_latest_decided_time_of_the_permitted_decisions_unless
     order.trade_decisions.append({**order.trade_decisions[0], "record_id": "y", "decided_utc": "2026-11-06T09:00:00Z", "will_trade": "no_system_denied"})        # a denial is not a moment of permission
     assert replay.default_now(order).isoformat() == "2026-11-05T15:45:00+00:00"
     code, text = run(tmp_path, "--no-model", "--cash", "10000", "--now", "2026-11-05 08:00")
-    assert code == 0 and "FILLED 44 at 165.0825" in text and "run 2026-11-05 08:00 ET" in text                                                                      # before the open: that Thursday's bar
+    assert code == 0 and "FILLED 44 at 165.0000" in text and "run 2026-11-05 08:00 ET" in text                                                                      # before the open: that Thursday's bar
     code, text = run(tmp_path, "--no-model", "--cash", "10000")
-    assert "FILLED 44 at 166.0830" in text and "run 2026-11-05 10:30 ET" in text
+    assert "FILLED 44 at 166.0000" in text and "run 2026-11-05 10:30 ET" in text
 
 
 def test_a_decision_time_after_the_approval_ran_out_is_a_rejection_not_a_trade(tmp_path):
@@ -62,9 +65,9 @@ def test_the_portfolio_the_cash_and_the_profile_come_from_the_flags(tmp_path):
     folio = tmp_path / "portfolio.json"
     folio.write_text(account(9000.0, MSFT=(5, 300.0)).model_dump_json(), encoding="utf-8")
     code, text = run(tmp_path, "--no-model", "--portfolio", str(folio))
-    assert code == 0 and "cash $9,000.00 -> $1,692.35; MSFT" not in text and "account  cash $9,000.00 -> $1,692.35; PG 0 -> 44 shares" in text
+    assert code == 0 and "cash $9,000.00 -> $1,696.00; MSFT" not in text and "account  cash $9,000.00 -> $1,696.00; PG 0 -> 44 shares" in text
     code, text = run(tmp_path, "--no-model", "--cash", "5000")
-    assert "cash $5,000.00 ->" in text and "FILLED 43 at 166.0830" in text or "FILLED 30 at 166.0830" in text                                                      # a purchase the cash cannot cover is cut
+    assert "cash $5,000.00 ->" in text and "FILLED 43 at 166.0000" in text or "FILLED 30 at 166.0000" in text                                                      # a purchase the cash cannot cover is cut
     profile = tmp_path / "profile.json"
     profile.write_text(json.dumps({"user": "Somebody Else", "risk_tolerance": "moderate"}), encoding="utf-8")
     code, text = run(tmp_path, "--no-model", "--portfolio", str(folio), "--profile", str(profile))
@@ -120,22 +123,22 @@ def test_an_order_a_desk_run_already_traded_is_not_traded_again_unless_fresh_is_
     assert text.count("FILLED 44") == 1 and "run 2 of this order" in text and len(replay.load_order(saved)[0].trader_runs) == 1
     traded_in_paper, _ = replay.load_order(save(tmp_path, decided()))
     code, text = run(tmp_path, "--no-model", "--cash", "10000", "--mode", "paper", "--no-ledger", "--now", "2026-11-05 10:30", order=traded_in_paper)
-    assert code == 0 and "FILLED 44 at 167.0835" in text
+    assert code == 0 and "FILLED 44 at 167.0000" in text
     saved_paper = tmp_path / "paper.json"
     run(tmp_path, "--no-model", "--cash", "10000", "--mode", "paper", "--no-ledger", "--save", str(saved_paper), order=decided())
     paper_order, _ = replay.load_order(saved_paper)
     assert paper_order.status == "traded"
     code, text = run(tmp_path, "--no-model", "--cash", "10000", "--fresh", order=paper_order)
-    assert code == 0 and "BACKTEST mode" in text and "FILLED 44 at 166.0830" in text and "run 2 of this order" not in text
+    assert code == 0 and "BACKTEST mode" in text and "FILLED 44 at 166.0000" in text and "run 2 of this order" not in text
     assert replay.start_fresh(paper_order).status == "decided" and paper_order.trades == [] and paper_order.trader_runs == []
 
 
 # ---------------------------------------------------------------- the model and paper mode
 
 def test_a_run_with_the_model_uses_the_trader_it_is_given_and_a_run_with_no_model_available_still_trades(tmp_path):
-    model = ScriptedModel([*PLACE_ALL, say(answer("Bought 44 shares of PG at 166.083.", ("T1", "filled")))])
+    model = ScriptedModel([*PLACE_ALL, say(answer("Bought 44 shares of PG at 166.0.", ("T1", "filled")))])
     code, text = run(tmp_path, "--cash", "10000", trader=Trader(mode="backtest", model=model))
-    assert code == 0 and "model scripted/trader at temperature 0" in text and "placed by model" in text and "summary (by model): Bought 44 shares of PG at 166.083." in text
+    assert code == 0 and "model scripted/trader at temperature 0" in text and "placed by model" in text and "summary (by model): Bought 44 shares of PG at 166.0." in text
     code, text = run(tmp_path, "--cash", "10000")                                                                                                  # no model flag and none can be built (the autouse fixture)
     assert code == 0 and "no model could run" in text and "FILLED 44" in text and "the Trader's model could not start" in text
 
@@ -143,7 +146,7 @@ def test_a_run_with_the_model_uses_the_trader_it_is_given_and_a_run_with_no_mode
 def test_paper_mode_asks_for_quotes_and_the_no_ledger_flag_keeps_the_real_ledger_untouched(tmp_path):
     clerk = MarketClerk(quotes={"PG": 167.0}, bars=BARS)
     code, text = run(tmp_path, "--mode", "paper", "--no-model", "--cash", "10000", "--no-ledger", clerk=clerk)
-    assert code == 0 and "PAPER mode, prices: the current quotes" in text and "FILLED 44 at 167.0835" in text and clerk.asked("quotes") == [["PG"]] and clerk.asked("bars") == []
+    assert code == 0 and "PAPER mode, prices: the current quotes" in text and "FILLED 44 at 167.0000" in text and clerk.asked("quotes") == [["PG"]] and clerk.asked("bars") == []
     clerk = MarketClerk(quotes={"PG": 167.0}, bars=BARS)
     with pytest.raises(AssertionError, match="a test tried to write to the real ledger"):
         run(tmp_path, "--mode", "paper", "--no-model", "--cash", "10000", clerk=clerk)                                                              # without the flag the real ledger is the Trader's: the guard of the tests refuses to let it be written
@@ -171,7 +174,7 @@ def test_the_whole_replay_over_the_real_data_clerk_and_stored_day_files_calls_no
     real = DataClerk(toolbox=object(), model=ForbiddenModel())
     real.tools.bars_root = root
     code, text = run(tmp_path, "--no-model", "--cash", "10000", clerk=real)
-    assert code == 0 and "FILLED 44 at 166.0830 = $7,307.65" in text and "BACKTEST mode, prices: the stored daily bars" in text
+    assert code == 0 and "FILLED 44 at 166.0000 = $7,304.00" in text and "BACKTEST mode, prices: the stored daily bars" in text
 
 
 def test_without_a_clerk_the_replay_builds_the_bars_only_data_clerk_with_a_model_that_is_never_called(tmp_path, monkeypatch):

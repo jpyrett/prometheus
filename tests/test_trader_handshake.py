@@ -25,7 +25,8 @@ from trader_helpers import plan
 
 from prometheus.agents.trader.report import trade_section
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import Portfolio
+from prometheus.common.money import dumps, price_scale
+from prometheus.common.portfolio import Portfolio, trade_amount
 from prometheus.persistence.accounts import SECRETS, open_account_store
 from prometheus.rag.config import REPO_ROOT
 
@@ -44,7 +45,7 @@ def last(order):
 
 
 def amount(order, trade_id):
-    return Decimal(str(by_id(order)[trade_id]["fill"]["amount"]))
+    return by_id(order)[trade_id]["fill"]["amount"]
 
 
 # ---------------------------------------------------------------- the order of the handshake, with nothing booked (the Account Manager's working portfolio)
@@ -55,8 +56,8 @@ def test_the_order_of_calls_is_place_approve_record_for_every_trade_and_the_next
     am.perform_trades(order, BOB, trader(), MOMENT)
     assert rec.kinds() == ["place T1", "approve T1", "record T1", "place T2", "approve T2", "record T2"]
     answers = {(kind, trade_id): answer for kind, trade_id, answer in rec.answers}
-    assert answers["approve", "T1"].cash_avail == 15000.0 and answers["approve", "T1"].shares == 8
-    assert answers["approve", "T2"].cash_avail == answers["record", "T1"].cash_avail == round(15000.0 - float(amount(order, "T1")), 2)       # the second approval met the funds AFTER the first fill
+    assert answers["approve", "T1"].cash_avail == Decimal("15000.0") and answers["approve", "T1"].shares == 8
+    assert answers["approve", "T2"].cash_avail == answers["record", "T1"].cash_avail == Decimal("15000.0") - amount(order, "T1")       # the second approval met the funds AFTER the first fill
     assert [t["status"] for t in order.trades] == ["filled", "filled"] and order.status == "traded" and order.errors == [] and wo.verify_trades(order) == []
 
 
@@ -71,12 +72,12 @@ def test_every_sale_is_booked_before_the_purchase_it_pays_for_is_approved_and_th
     assert kinds == ["preview T1", "place T1", "preview T1", "approve T1-F1", "record T1-F1", "approve T1", "record T1", "place T2", "approve T2", "record T2"]      # the first preview is the consent step: does the cash cover it?
     assert kinds.index("record T1-F1") < kinds.index("approve T1")                                                      # booked before the purchase is approved
     answers = {(kind, trade_id): answer for kind, trade_id, answer in rec.answers}
-    sale = Decimal(str(by_id(order)["T1-F1"]["fill"]["amount"]))
-    assert answers["approve", "T1-F1"].cash_avail == 51.23 and answers["record", "T1-F1"].cash_avail == float(Decimal("51.23") + sale)
+    sale = by_id(order)["T1-F1"]["fill"]["amount"]
+    assert answers["approve", "T1-F1"].cash_avail == Decimal("51.23") and answers["record", "T1-F1"].cash_avail == Decimal("51.23") + sale
     assert not [a for k, i, a in rec.answers if k == "preview"][0].approved and [a for k, i, a in rec.answers if k == "preview"][1].approved and answers["approve", "T1"].cash_avail == answers["record", "T1-F1"].cash_avail    # the purchase was approved against the cash the sale left
     t = by_id(order)
     assert [t[i]["status"] for i in ("T1", "T1-F1", "T2")] == ["filled"] * 3 and t["T1"]["shares"] == 8 and wo.verify_trades(order) == []
-    assert last(order)["funding"]["approved"] is True and last(order)["portfolio_after"]["cash"] == float(answers["record", "T2"].cash_avail)
+    assert last(order)["funding"]["approved"] is True and last(order)["portfolio_after"]["cash"] == answers["record", "T2"].cash_avail
 
 
 def test_a_funded_purchase_the_sales_cannot_pay_for_asks_the_account_manager_first_and_sells_nothing(monkeypatch):
@@ -88,7 +89,7 @@ def test_a_funded_purchase_the_sales_cannot_pay_for_asks_the_account_manager_fir
     t = by_id(order)
     assert (t["T1"]["status"], t["T1"]["reject_code"], t["T1-F1"]["status"], t["T1-F1"]["reject_code"]) == ("rejected", "insufficient_cash", "rejected", "funding_failed")
     assert "nothing was sold" in t["T1"]["reason"] and "approve T1-F1" not in rec.kinds() and "record T1-F1" not in rec.kinds()
-    assert last(order)["portfolio_after"]["cash"] == 51.23 and wo.verify_trades(order) == []
+    assert last(order)["portfolio_after"]["cash"] == Decimal("51.23") and wo.verify_trades(order) == []
 
 
 def test_running_the_trader_twice_on_one_order_without_booking_does_not_spend_twice_and_does_not_place_a_filled_trade_again(monkeypatch):
@@ -96,21 +97,21 @@ def test_running_the_trader_twice_on_one_order_without_booking_does_not_spend_tw
     starts from the cash the first one left, even though the caller hands it the same fresh portfolio again; and a `filled` trade is final (rule T3)."""
     order, am = real_order(), manager()
     am.perform_trades(order, BOB, trader(), MOMENT)
-    trades_after_first = json.dumps(order.trades, sort_keys=True)
+    trades_after_first = dumps(order.trades, sort_keys=True)
     spent = last(order)["portfolio_after"]["cash"]
-    assert spent < 15000.0
+    assert spent < Decimal("15000.0")
     rec = Recorder(monkeypatch, am)
     am.perform_trades(order, BOB, trader(), MOMENT)                                                                     # the SAME portfolio object again: $15,000 on paper, but the account was spent
-    assert rec.events == [] and json.dumps(order.trades, sort_keys=True) == trades_after_first                           # nothing was placed, approved or recorded; the trades are untouched
+    assert rec.events == [] and dumps(order.trades, sort_keys=True) == trades_after_first                           # nothing was placed, approved or recorded; the trades are untouched
     assert last(order)["portfolio_before"]["cash"] == spent == last(order)["portfolio_after"]["cash"] and len(order.trader_runs) == 2
-    assert [p["symbol"] for p in last(order)["portfolio_after"]["positions"]] == ["XOM", "EOG"] and BOB.cash_avail == 15000.0
+    assert [p["symbol"] for p in last(order)["portfolio_after"]["positions"]] == ["XOM", "EOG"] and BOB.cash_avail == Decimal("15000.0")
 
 
 def test_a_purchase_cut_for_cash_by_the_first_run_is_final_and_a_second_run_starts_from_the_cash_that_is_left():
     """Two purchases, $2,000: the first run buys XOM (8 shares) and EOG is cut to what the rest pays for. A second run on the same order, handed the same $2,000 again, may not buy the 4 missing shares of EOG: the cut
     trade is final (rule T3), it places nothing, and it starts from the cash that is left."""
     order, am = real_order(), manager()
-    rich = BOB.model_copy(update={"cash_avail": 2000.0})
+    rich = BOB.model_copy(update={"cash_avail": Decimal("2000.0")})
     am.perform_trades(order, rich, trader(), MOMENT)
     t = by_id(order)
     assert (t["T1"]["shares"], t["T2"]["shares"]) == (8, 4) and "cut from 8 to 4 shares for the cash" in t["T2"]["reason"]
@@ -136,7 +137,7 @@ def fill_check(order, trade_id, edit=None, others_edit=None):
     """verify_fill of one real trade of the order after `edit` changed that trade (a copy) and `others_edit` the order."""
     if others_edit:
         others_edit(order)
-    trade = json.loads(json.dumps(wo.trade_of(order, trade_id)))
+    trade = json.loads(dumps(wo.trade_of(order, trade_id)))
     if edit:
         edit(trade)
     return wo.verify_fill(order, trade, order.trades)
@@ -157,8 +158,9 @@ def test_the_real_fills_of_a_real_run_pass_the_single_trade_check_each_alone_and
     (lambda t: t.update(record_id="nobody"), "recommendation nobody has no trade decision"),
     (lambda t: t.update(record_id=None), "recommendation None has no trade decision"),
     (lambda t: t.update(fill=None), "T1 is filled but has no fill"),
-    (lambda t: t["fill"].update(price=0), "the fill needs a price and a whole number of shares above zero"),
-    (lambda t: t["fill"].update(shares=2.5), "the fill needs a price and a whole number of shares above zero"),
+    # AMENDED (entry 110): the two rows said "whole number of shares", the reason now says "a number of shares above zero"; shares=2.5 became 0.1234567 (2.5 is a valid fill now, seven decimals is refused)
+    (lambda t: t["fill"].update(price=0), "the fill needs a price and a number of shares above zero"),
+    (lambda t: t["fill"].update(shares=0.1234567), "the fill needs a price and a number of shares above zero"),
     (lambda t: t.update(status="done"), "status 'done' is not one of new, active, filled, rejected"),
     (lambda t: t.update(trade_id=""), "has no trade_id"),
 ])
@@ -171,7 +173,7 @@ def test_a_decision_that_changed_after_the_ticket_is_a_finding_and_so_is_a_secon
     order = a_real_run()
     assert any("the decision 'no_user_denied'" in f for f in fill_check(order, "T1", others_edit=lambda o: o.trade_decisions[0].update(will_trade="no_user_denied")))
     order = a_real_run()
-    t2 = json.loads(json.dumps(wo.trade_of(order, "T2")))
+    t2 = json.loads(dumps(wo.trade_of(order, "T2")))
     t2.update(record_id=wo.trade_of(order, "T1")["record_id"], symbol="XOM")
     assert any("is a second filled trade for recommendation" in f and "(the first is T1)" in f for f in wo.verify_fill(order, t2, order.trades))
     denied = next(d["record_id"] for d in order.trade_decisions if d["will_trade"] == "no_system_denied")
@@ -182,7 +184,7 @@ def test_a_funding_sale_is_held_to_its_purchase_being_on_the_order_and_to_being_
     order = a_real_run(funded=True)
     assert any("T1-F1 funds 'T9', which is not a purchase on this order" in f for f in fill_check(order, "T1-F1", lambda t: t.update(funds_for="T9")))
     assert any("T1-F1 is a funding trade but is not a sale" in f for f in fill_check(order, "T1-F1", lambda t: t.update(side="buy")))
-    sale, purchase = json.loads(json.dumps(wo.trade_of(order, "T1-F1"))), json.loads(json.dumps(wo.trade_of(order, "T1")))
+    sale, purchase = json.loads(dumps(wo.trade_of(order, "T1-F1"))), json.loads(dumps(wo.trade_of(order, "T1")))
     purchase.update(status="new", fill=None)
     assert wo.verify_fill(order, sale, [purchase]) == []                                                                # the sale fills first and its purchase is placed after it: nothing to say yet ...
     order.trades = [purchase if t["trade_id"] == "T1" else t for t in order.trades]
@@ -233,9 +235,9 @@ def test_the_traders_code_holds_no_cash_and_changes_no_portfolio(path):
 def test_the_broker_has_no_portfolio_and_the_only_cash_it_ever_reads_is_asked_of_the_account_manager():
     from trader_helpers import account, config, decided, make_broker
     broker, _ = make_broker(decided(), account(10000.0), quotes={"PG": 167.0}, cfg=config())
-    assert not hasattr(broker, "portfolio") and not hasattr(broker, "cash") and broker.cash_now() == 10000.0
+    assert not hasattr(broker, "portfolio") and not hasattr(broker, "cash") and broker.cash_now() == Decimal("10000.0")
     broker.account.trading_portfolio(account(777.0))
-    assert broker.cash_now() == 777.0                                                                                   # it asks every time: there is no figure of its own to go stale
+    assert broker.cash_now() == Decimal("777.0")                                                                                   # it asks every time: there is no figure of its own to go stale
 
 
 def test_the_traders_modules_call_only_these_doors_of_the_account_manager():
@@ -309,7 +311,7 @@ class Book:
     def cash(self, account_id: int) -> Decimal:
         return self.store.account_balance(account_id)
 
-    def held(self, account_id: int) -> dict[str, int]:
+    def held(self, account_id: int) -> dict[str, Decimal]:
         return {p.symbol: p.shares for p in self.store.list_portfolio(account_id).positions}
 
 
@@ -343,11 +345,11 @@ def test_two_purchases_that_cost_more_than_the_cash_the_first_is_booked_and_the_
     t = by_id(order)
     first, second = amount(order, "T1"), amount(order, "T2")
     assert (t["T1"]["status"], t["T1"]["shares"], t["T1"]["booked"], t["T2"]["status"], t["T2"]["shares"], t["T2"]["booked"]) == ("filled", 8, True, "filled", 4, True)
-    assert "cut from 8 to 4 shares for the cash" in t["T2"]["reason"] and first + Decimal(str(round(8 * close_of("EOG"), 2))) > Decimal("2000")     # the decision's 8 EOG would have overdrawn it
+    assert "cut from 8 to 4 shares for the cash" in t["T2"]["reason"] and first + trade_amount(8, close_of("EOG")) > Decimal("2000")     # the decision's 8 EOG would have overdrawn it
     assert db.cash(account_id) == Decimal("2000.00") - first - second >= 0 and db.held(account_id) == {"XOM": 8, "EOG": 4}
     assert db.store.number_trades(account_id, *YEAR) == 2 and order.status == "traded" and order.errors == [] and last(order)["booked"] is True
     answers = {(kind, trade_id): answer for kind, trade_id, answer in rec.answers}
-    assert answers["approve", "T2"].cash_avail == float(Decimal("2000.00") - first)                                      # read from the BOOK after T1 was booked
+    assert answers["approve", "T2"].cash_avail == Decimal("2000.00") - first                                      # read from the BOOK after T1 was booked
     assert rec.kinds() == ["place T1", "approve T1", "record T1", "place T2", "approve T2", "record T2"] and [a.status for k, _, a in rec.answers if k == "record"] == ["booked", "booked"]
 
 
@@ -367,7 +369,7 @@ def test_after_a_run_the_book_and_the_runs_account_after_agree(db):
     am, order = db.manager(account_id), real_order()
     am.perform_trades(order, None, trader(), MOMENT, book=True)
     saved, run = db.store.list_portfolio(account_id), last(order)
-    assert run["portfolio_before"]["cash"] == 2000.0 and run["portfolio_after"]["cash"] == saved.cash_avail == float(db.cash(account_id))
+    assert run["portfolio_before"]["cash"] == Decimal("2000.0") and run["portfolio_after"]["cash"] == saved.cash_avail == db.cash(account_id)
     assert run["portfolio_after"]["positions"] == [{"symbol": p.symbol, "shares": p.shares, "cost_basis": p.cost_basis, "acquired": p.acquired.isoformat()} for p in saved.positions]
     assert [t["booked"] for t in order.trades] == [True, True] and run["booked"] is True and "booked in the account book" in "\n".join(trade_section(order))
 
@@ -380,7 +382,7 @@ def test_a_connected_account_with_book_off_is_traded_on_the_account_managers_wor
     assert db.cash(account_id) == Decimal("15000.00") and db.held(account_id) == {} and db.store.number_trades(account_id, *YEAR) == 0      # the book was never written
     assert [a.status for k, _, a in rec.answers if k == "record"] == ["applied", "applied"] and [t["booked"] for t in order.trades] == [False, False] and last(order)["booked"] is False
     answers = {(kind, trade_id): answer for kind, trade_id, answer in rec.answers}
-    assert answers["approve", "T2"].cash_avail == round(15000.0 - float(amount(order, "T1")), 2) and last(order)["portfolio_after"]["cash"] < 15000.0     # the second purchase still met the funds the first one left
+    assert answers["approve", "T2"].cash_avail == Decimal("15000.0") - amount(order, "T1") and last(order)["portfolio_after"]["cash"] < Decimal("15000.0")     # the second purchase still met the funds the first one left
     again = db.manager(account_id)
     again.perform_trades(order, None, trader(), MOMENT, book=True)                                                       # a later run that DOES book: the first run's fills were never in the book
     assert any("filled in an earlier run that did not book it, so it is not in the account book" in e for e in order.errors) and db.cash(account_id) == Decimal("15000.00") and db.held(account_id) == {}
@@ -393,7 +395,7 @@ def test_two_account_managers_racing_for_the_same_cash_the_book_accepts_one_purc
     account_id = db.account("1500.00")
     order = real_order()
     tickets = tickets_of(order, Portfolio(user="Trader Holder", cash_avail=1500.0))
-    prices = {"XOM": round(close_of("XOM") * 1.0005, 4), "EOG": round(close_of("EOG") * 1.0005, 4)}
+    prices = {"XOM": price_scale(close_of("XOM") * Decimal("1.0005")), "EOG": price_scale(close_of("EOG") * Decimal("1.0005"))}
     barrier, results, errors = threading.Barrier(2, timeout=30), {}, []
 
     def worker(symbol):
@@ -401,7 +403,7 @@ def test_two_account_managers_racing_for_the_same_cash_the_book_accepts_one_purc
             am = db.manager(account_id)
             am.trading_portfolio(None, book=True)
             approval = am.approve_trade(tickets[symbol], prices[symbol], order=order, now=MOMENT, on=FRIDAY)
-            assert approval.approved and approval.shares == 8 and approval.cash_avail == 1500.0, approval          # both saw all the cash
+            assert approval.approved and approval.shares == 8 and approval.cash_avail == Decimal("1500.0"), approval          # both saw all the cash
             barrier.wait()                                                                                           # now both are approved against the same funds: only the book can stop the second
             results[symbol] = am.record_fill(filled(tickets[symbol], prices[symbol], approval.shares))
         except BaseException as error:   # a thread's failure must fail the test
@@ -415,7 +417,7 @@ def test_two_account_managers_racing_for_the_same_cash_the_book_accepts_one_purc
     assert sorted(r.status for r in results.values()) == ["booked", "refused"]
     won = next(s for s, r in results.items() if r.booked)
     lost = next(r for r in results.values() if not r.booked)
-    cost = Decimal(str(round(prices[won] * 8, 2)))
+    cost = trade_amount(8, prices[won])
     assert lost.reason.startswith("cash $") and "does not cover" in lost.reason and lost.cash_avail is None
     assert db.cash(account_id) == Decimal("1500.00") - cost >= 0 and db.held(account_id) == {won: 8} and db.store.number_trades(account_id, *YEAR) == 1
 
@@ -454,7 +456,7 @@ def test_two_traders_racing_for_the_same_cash_one_purchase_is_booked_the_other_i
     won, lost = next(t for t in t1 if t["status"] == "filled"), next(t for t in t1 if t["status"] == "rejected")
     assert (won["booked"], lost["reject_code"], lost["fill"], lost["booked"]) == (True, "account_refused", None, False) and lost["reason"].startswith("cash $") and "does not cover" in lost["reason"]
     assert {by_id(o)["T2"]["reject_code"] for o in outcome.values()} == {"insufficient_cash"}                            # EOG: the book had $134.60 left, not the price of a share
-    cost = Decimal(str(won["fill"]["amount"]))
+    cost = won["fill"]["amount"]
     assert db.cash(account_id) == Decimal("1500.00") - cost >= 0 and db.held(account_id) == {"XOM": 8} and db.store.number_trades(account_id, *YEAR) == 1
 
 
@@ -477,10 +479,10 @@ def test_a_booking_the_book_refuses_makes_the_trade_rejected_account_refused_and
     am.perform_trades(order, None, trader(), MOMENT, book=True)
     t = by_id(order)
     assert (t["T1"]["status"], t["T1"]["reject_code"], t["T1"]["fill"], t["T1"]["booked"]) == ("rejected", "account_refused", None, False)
-    assert t["T1"]["reason"] == "cash $300.00 does not cover $1,365.40" and any(e == "T1: buy 8 XOM was not booked: cash $300.00 does not cover $1,365.40" for e in order.errors)
+    assert t["T1"]["reason"] == "cash $300.00 does not cover $1,364.72" and any(e == "T1: buy 8 XOM was not booked: cash $300.00 does not cover $1,364.72" for e in order.errors)      # AMENDED (entry 111): $1,365.40 was eight XOM at the close plus 5 bps; it is $1,364.72 with no slippage
     assert rec.kinds() == ["place T1", "approve T1", "record T1", "place T2", "approve T2", "record T2"]               # T2 was approved after T1's answer, not before it
     answers = {(kind, trade_id): answer for kind, trade_id, answer in rec.answers}
-    assert answers["record", "T1"].status == "refused" and answers["approve", "T2"].cash_avail == 300.0 and (t["T2"]["status"], t["T2"]["shares"], t["T2"]["booked"]) == ("filled", 1, True)
+    assert answers["record", "T1"].status == "refused" and answers["approve", "T2"].cash_avail == Decimal("300.0") and (t["T2"]["status"], t["T2"]["shares"], t["T2"]["booked"]) == ("filled", 1, True)
     assert db.held(account_id) == {"XOM": 10, "EOG": 1} and db.cash(account_id) == Decimal("300.00") - amount(order, "T2") >= 0 and db.store.number_trades(account_id, *YEAR) == 2
 
 
@@ -532,13 +534,13 @@ def test_the_book_is_read_for_every_approval_so_a_purchase_cannot_use_cash_the_b
     am, rival, order = db.manager(account_id), db.manager(account_id), real_order()
     xom = tickets_of(order)["XOM"]
     am.trading_portfolio(None, book=True)
-    ask = lambda: am.approve_trade(xom, 170.6753, order=order, now=MOMENT, on=FRIDAY)
-    assert (ask().shares, ask().cash_avail) == (5, 1000.0)
+    ask = lambda: am.approve_trade(xom, Decimal("170.6753"), order=order, now=MOMENT, on=FRIDAY)
+    assert (ask().shares, ask().cash_avail) == (5, Decimal("1000.0"))
     rival.add_funds(Decimal("500.00"), FRIDAY)
-    assert (ask().shares, ask().cash_avail) == (8, 1500.0)
+    assert (ask().shares, ask().cash_avail) == (8, Decimal("1500.0"))
     rival.record_trade("XOM", "buy", 8, Decimal("170.00"), FRIDAY, source="user")                                         # $1,360 of the $1,500
     answer = ask()
-    assert (answer.approved, answer.shares, answer.code, answer.cash_avail) == (False, 0, "insufficient_cash", 140.0)
+    assert (answer.approved, answer.shares, answer.code, answer.cash_avail) == (False, 0, "insufficient_cash", Decimal("140.0"))
 
 
 # ---------------------------------------------------------------- the handshake never waits for a next trade (Jacob, 2026-11-14: "The handshaking should not wait if there are no further trades to execute")
@@ -595,7 +597,7 @@ def test_a_single_trade_that_fills_is_one_approval_and_one_booking_and_the_run_g
     rec, reads = Recorder(monkeypatch, am), db.spy(monkeypatch)
     am.perform_trades(order, None, trader(), MOMENT, book=True)
     assert [t["trade_id"] for t in order.trades] == ["T1"] and rec.kinds() == ["place T1", "approve T1", "record T1"]
-    assert reads == [OPEN, *APPROVE, *RECORD, CLOSE] and order.status == "traded" and last(order)["portfolio_after"]["cash"] == float(db.cash(account_id))
+    assert reads == [OPEN, *APPROVE, *RECORD, CLOSE] and order.status == "traded" and last(order)["portfolio_after"]["cash"] == db.cash(account_id)
 
 
 def test_a_trade_the_account_manager_refuses_has_no_booking_and_nothing_is_asked_after_its_answer(db, monkeypatch, no_sleep):
@@ -627,7 +629,7 @@ def test_with_nothing_permitted_there_is_no_handshake_at_all_and_the_book_is_rea
     rec, reads = Recorder(monkeypatch, am), db.spy(monkeypatch)
     am.perform_trades(order, None, trader(), MOMENT, book=True)
     assert order.trades == [] and rec.events == [] and reads == [OPEN, CLOSE]                                             # no approval, no booking, no place; one read for portfolio_before, one for portfolio_after
-    assert last(order)["portfolio_before"]["cash"] == last(order)["portfolio_after"]["cash"] == 15000.0 and db.cash(account_id) == Decimal("15000.00")
+    assert last(order)["portfolio_before"]["cash"] == last(order)["portfolio_after"]["cash"] == Decimal("15000.0") and db.cash(account_id) == Decimal("15000.00")
 
 
 def test_with_everything_already_final_from_an_earlier_run_there_is_no_handshake_and_no_further_read(db, monkeypatch, no_sleep):
@@ -666,7 +668,7 @@ def test_a_resting_order_is_never_approved_or_booked_and_the_run_does_not_wait_f
     order, am = real_order(), manager()
     rec = Recorder(monkeypatch, am)
     am.perform_trades(order, BOB, trader(mode="backtest"), MOMENT)
-    assert [t["status"] for t in order.trades] == ["active", "active"] and handshake_calls(rec) == [] and last(order)["portfolio_after"]["cash"] == 15000.0
+    assert [t["status"] for t in order.trades] == ["active", "active"] and handshake_calls(rec) == [] and last(order)["portfolio_after"]["cash"] == Decimal("15000.0")
 
 
 def test_with_the_funding_precheck_nothing_is_approved_for_a_purchase_that_would_not_fill_and_no_approval_is_left_pending(monkeypatch, no_sleep):

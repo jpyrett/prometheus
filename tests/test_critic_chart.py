@@ -4,6 +4,7 @@ The numbers in these tests are INPUTS for the rules (a 50-day mean of 105 over a
 """
 import pytest
 from critic_helpers import CONFIG, captured, rec_of, review, tamper
+from pydantic import ValidationError
 
 from prometheus.agents.critic import chart as ch
 from prometheus.agents.critic import scoring as sc
@@ -87,11 +88,14 @@ def test_a_weak_chart_is_a_warning_under_the_mark():
     assert "weak_chart" not in codes(run(structure_63d="down"))                                                                     # -10: 40
 
 
-def test_a_reduction_is_not_judged():
+def test_a_reduction_is_not_a_record_so_the_chart_never_judges_one():
+    """AMENDED (entry 105): this test made the real PG_open record a `reduce` and the chart was "not judged" (`applicable` False). A record whose action is not `open` cannot be built at all now (the Advisor writes
+    purchases only and the Critic judges nothing else), so there is nothing for the chart to skip."""
     order = captured("PG_open")
     order.recommendations[0] = tamper(order.recommendations[0], **{"action.action": "reduce"})
-    r = ch.assess(rec_of(order), metrics(**DEAD_CAT), C)
-    assert not r.applicable and r.findings == [] and r.measures == []
+    with pytest.raises(ValidationError, match="the action is 'reduce': a recommendation is to buy"):
+        rec_of(order)
+    assert run().applicable is True
 
 
 # ---------------------------------------------------------------- inside a review
@@ -114,8 +118,10 @@ def test_the_scorecard_shows_the_chart_line():
     assert "golden cross" in chart_line and f"{out['dimensions']['chart']['points']:.0f}/10" in chart_line
 
 
-def test_a_reduction_has_no_chart_row_score():
+def test_a_reduction_is_denied_as_a_defect_it_has_no_chart_row_because_it_is_not_reviewed_at_all():
+    """AMENDED (entry 105): the chart row of a reduction was "not applicable". The Critic does not review a record that is not a recommendation to buy: it is a `record_defect`, denied, with no check made."""
     order = captured("PG_open")
     order.recommendations[0] = tamper(order.recommendations[0], **{"action.action": "reduce"})
     out = review(order)["PG"]
-    assert out["dimensions"]["chart"]["applicable"] is False
+    assert not out["approved"] and [b["code"] for b in out["blockers"]] == ["record_defect"] and "the Critic does not judge a holding or a sale" in out["blockers"][0]["message"]
+    assert out["chart"]["patterns"] == [] and out["action"] == "reduce"

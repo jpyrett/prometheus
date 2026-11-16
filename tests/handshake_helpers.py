@@ -14,6 +14,7 @@ Doubles are only ever a WRAP of the real thing that records what it was asked an
 import copy
 import json
 from datetime import date, datetime, timezone
+from decimal import Decimal
 from pathlib import Path
 
 import pytest
@@ -23,23 +24,26 @@ from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO,
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.agents.trader.trader import NullLedger, Trader
 from prometheus.common import work_order as wo
+from prometheus.common.money import price as price_door
 from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.common.user_profile import UserProfile
 
 CAPTURE = Path(__file__).parent / "fixtures" / "session_real" / "bob_jones_oil.json"
 MOMENT = datetime(2026, 11, 13, 20, 30, tzinfo=timezone.utc)          # 15:30 Eastern on Friday 2026-11-13: the moment of the real session
 FRIDAY = date(2026, 11, 13)
-BOB = Portfolio(user="Bob Jones", cash_avail=15000.0)                  # the account the real session was for
-BUDGET = 2800.0     # the live session was sized under the old 10% limit (XOM 8, EOG 8); with only the cash to stop it (design choices entry 91) the same request, given an amount to spend, an even $1,400 each, buys the same 8 and 8
-PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="auto", auto_min_score=70)
+BOB = Portfolio(user="Bob Jones", cash_avail=Decimal("15000.00"))                  # the account the real session was for
+BUDGET = Decimal("2750.00")     # the live session was sized under the old 10% limit (XOM 8, EOG 8); with only the cash to stop it (design choices entry 91) the same request, given an amount to spend, buys the same 8 and 8. AMENDED (entry 108): the
+                    # even split spends what is left over, and the $168.72 that $2,800 left bought EOG a ninth share (the handshake tests below are about the handshake, and need these two sizes): $2,750 is $1,375 each, XOM 8 ($1,364.72),
+                    # EOG 8 ($1,266.56), and the $118.72 left buys no share of either (EOG's next costs $158.32)
+PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="auto")
 
 
 def real_order() -> wo.WorkOrder:
-    """The real session's order, decided again: the real recommendations and reviews, the Account Manager's decision step (the same call as `tests/test_session_replay.py`, over $2,800 split evenly): XOM 8 and EOG 8 shares, `yes_auto`."""
+    """The real session's order, decided again: the real recommendations and reviews, the Account Manager's decision step (over $2,750 split evenly: `tests/test_session_replay.py` uses $2,800, which gives EOG a ninth share since entry 108): XOM 8 and EOG 8 shares, `yes_auto`."""
     capture = json.loads(CAPTURE.read_text(encoding="utf-8"))
     order = wo.WorkOrder.model_validate(copy.deepcopy(capture["order"]))
     order.status, order.trade_decisions, order.trades, order.trader_runs = "reviewed", [], [], []
-    return decisions.decide_trades(order, BOB, PROFILE, 80, None, MOMENT, "auto", "even", BUDGET)
+    return decisions.decide_trades(order, BOB, PROFILE, None, MOMENT, "auto", "even", BUDGET)
 
 
 def jacob_as_bob() -> Portfolio:
@@ -81,9 +85,9 @@ def friday_close(monkeypatch):
         pytest.skip("the stored daily bars of XOM and EOG for 2026-11-13 are not on this machine (data/historical/day_aggs_v1)")
 
 
-def close_of(symbol: str) -> float:
-    """The real stored close the Data Clerk quotes for `symbol` on the pinned Friday."""
-    return float(clerk().tools.close_quote(symbol, FRIDAY)["price"])
+def close_of(symbol: str) -> Decimal:
+    """The real stored close the Data Clerk quotes for `symbol` on the pinned Friday: the Data Clerk's float, through the price door (four places, half up), as the Account Manager takes a quote."""
+    return price_door(clerk().tools.close_quote(symbol, FRIDAY)["price"])
 
 
 class Recorder:

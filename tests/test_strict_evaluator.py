@@ -7,6 +7,7 @@ on shares when selling them." Two hard checks in code, ON BY DEFAULT in the Acco
 holding is kept: no position is sold out). A scripted model proposes thoughts that break them; the code rejects them. No network, no key.
 """
 from datetime import date
+from decimal import Decimal
 
 import pytest
 
@@ -16,9 +17,9 @@ from prometheus.common import portfolio as pf
 from prometheus.reasoning import raise_funds as rf
 from test_sndk_mu import ROOT, QuoteToolbox, ScriptedByPlan
 
-PRICES = {"MU": 410.0, "GM": 55.0, "F": 12.0, "TSLA": 250.0, "MSFT": 420.0}   # TSLA is below its basis of 300: a loss
-HELD = pf.Portfolio(user="x", cash_avail=0.0, positions=[pf.Position(symbol="GM", shares=10, cost_basis=10.0), pf.Position(symbol="F", shares=40, cost_basis=2.0),
-                                                       pf.Position(symbol="TSLA", shares=20, cost_basis=300.0), pf.Position(symbol="MSFT", shares=3, cost_basis=150.0)])
+PRICES = {"MU": Decimal("410.00"), "GM": Decimal("55.00"), "F": Decimal("12.00"), "TSLA": Decimal("250.00"), "MSFT": Decimal("420.00")}   # TSLA is below its basis of 300: a loss
+HELD = pf.Portfolio(user="x", cash_avail=Decimal("0.00"), positions=[pf.Position(symbol="GM", shares=10, cost_basis=Decimal("10")), pf.Position(symbol="F", shares=40, cost_basis=Decimal("2")),
+                                                       pf.Position(symbol="TSLA", shares=20, cost_basis=Decimal("300")), pf.Position(symbol="MSFT", shares=3, cost_basis=Decimal("150"))])
 TODAY = date(2026, 11, 3)
 
 
@@ -44,8 +45,8 @@ def rejected(result):
 
 # ---------------------------------------------------------------- the Account Manager chooses the depth a purchase needs (entry 49)
 
-BIG = pf.Portfolio(user="x", cash_avail=0.0, positions=[pf.Position(symbol=s, shares=n, cost_basis=1.0) for s, n in (("GM", 4), ("F", 40), ("MSFT", 3), ("TSLA", 6))])
-BIG_PRICES = {"MU": 600.0, "GM": 55.0, "F": 12.0, "MSFT": 420.0, "TSLA": 250.0}   # kept shares make: GM 3 x 55 = 165, F 39 x 12 = 468, MSFT 2 x 420 = 840, TSLA 5 x 250 = 1,250: 2,723 in all
+BIG = pf.Portfolio(user="x", cash_avail=Decimal("0.00"), positions=[pf.Position(symbol=s, shares=n, cost_basis=Decimal("1")) for s, n in (("GM", 4), ("F", 40), ("MSFT", 3), ("TSLA", 6))])
+BIG_PRICES = {"MU": Decimal("600.00"), "GM": Decimal("55.00"), "F": Decimal("12.00"), "MSFT": Decimal("420.00"), "TSLA": Decimal("250.00")}   # kept shares make: GM 3 x 55 = 165, F 39 x 12 = 468, MSFT 2 x 420 = 840, TSLA 5 x 250 = 1,250: 2,723 in all
 
 
 def big_agent(table, **options):

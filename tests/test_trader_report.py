@@ -29,7 +29,8 @@ def test_the_funding_sells_are_listed_under_their_purchase_with_the_answer_to_th
     lines = trade_section(order)
     assert lines[1].startswith("  T1     buy  20 of 20 PG") and lines[2].lstrip().startswith("T1-F1  sell 5 of 5 MSFT") and lines[2].endswith("(funds T1)") and lines[3].lstrip().startswith("T1-F2  sell 2 of 2 TSLA")
     assert "  funding  RaiseFunds said plan: the user approved the funding sells (you said yes)" in lines
-    assert any(l.startswith("  account  cash $51.23 -> $808.85; MSFT 50 -> 45 shares; TSLA 20 -> 18 shares; PG 0 -> 20 shares; kept in memory") for l in lines)
+    # AMENDED (entry 111): the cash was $808.85 with 5 bps of slippage on every fill; with none it is $811.23
+    assert any(l.startswith("  account  cash $51.23 -> $811.23; MSFT 50 -> 45 shares; TSLA 20 -> 18 shares; PG 0 -> 20 shares; kept in memory") for l in lines)
 
 
 def test_a_no_to_the_funding_question_is_shown_as_the_users_no():
@@ -47,7 +48,8 @@ def test_a_trades_note_is_shown_under_it_in_the_models_words():
 def test_an_open_backtest_position_shows_the_last_close_and_the_unrealised_gain_and_a_stop_shows_a_loss():
     bars = {"PG": [b for b in BARS["PG"][:1]] + [dict(BARS["PG"][1])] + [dict(BARS["PG"][2], high=167.0, low=166.0, close=166.5)], "SPY": BARS["SPY"]}
     order, *_ = go(decided(), bars=bars, mode="backtest")
-    assert "  outcome  T1  still open on 2026-11-09 at 166.5000 after 1 session: unrealised +$18.35 (+0.25%), benchmark +1.00% (excess -0.75%)" in trade_section(order)
+    # AMENDED (entry 111): the entry was the open plus 5 bps (unrealised +$18.35, +0.25%, excess -0.75%); it is the open itself now
+    assert "  outcome  T1  still open on 2026-11-09 at 166.5000 after 1 session: unrealised +$22.00 (+0.30%), benchmark +1.00% (excess -0.70%)" in trade_section(order)
     stopped = {"PG": [BARS["PG"][0], BARS["PG"][1], dict(BARS["PG"][2], open=160.0, high=161.0, low=150.0, close=152.0)], "SPY": BARS["SPY"]}
     order, *_ = go(decided(), bars=stopped, mode="backtest")
     line = next(l for l in trade_section(order) if "outcome" in l)

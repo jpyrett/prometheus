@@ -4,6 +4,7 @@ Run:  pytest tests/test_portfolio.py -q
 
 No network, no key, no cost.
 """
+from decimal import Decimal
 import json
 from datetime import date
 
@@ -33,7 +34,7 @@ def test_a_position_with_no_purchase_date_is_all_sellable_and_a_symbol_not_held_
 
 def test_market_value_uses_the_prices_given():
     p = make(positions=[{"symbol": "MSFT", "shares": 10, "cost_basis": 100.0}, {"symbol": "GM", "shares": 4, "cost_basis": 10.0}])
-    assert p.market_value({"MSFT": 400.0, "GM": 50.0}) == 4200.0
+    assert p.market_value({"MSFT": Decimal("400.0"), "GM": Decimal("50.0")}) == Decimal("4200.0")
 
 
 # ---------------------------------------------------------------- bad portfolios are refused
@@ -62,60 +63,60 @@ def base():
 
 
 def test_a_second_purchase_the_same_day_adds_to_the_locked_shares():
-    once = pf.after_purchase(base(), "F", 300, 12.0, [], 0.0, TODAY)
-    twice = pf.after_purchase(once, "F", 40, 10.0, [], 0.0, TODAY)
+    once = pf.after_purchase(base(), "F", 300, Decimal("12.00"), [], Decimal("0.00"), TODAY)
+    twice = pf.after_purchase(once, "F", 40, Decimal("10.00"), [], Decimal("0.00"), TODAY)
     assert twice.position("F").shares == 600 and twice.position("F").recent_shares == 340 and twice.sellable_shares("F", TODAY) == 260
 
 
 def test_buying_into_a_position_that_was_wholly_locked_keeps_it_wholly_locked():
     locked = make(positions=[{"symbol": "F", "shares": 5, "cost_basis": 1.0, "acquired": "2026-11-03"}])
-    assert pf.after_purchase(locked, "F", 5, 3.0, [], 0.0, TODAY).sellable_shares("F", TODAY) == 0
+    assert pf.after_purchase(locked, "F", 5, Decimal("3.00"), [], Decimal("0.00"), TODAY).sellable_shares("F", TODAY) == 0
 
 
 # ---------------------------------------------------------------- apply_fill: one filled trade (Trader v1 spec section 13)
 
 
 def test_a_second_buy_the_same_day_adds_to_the_locked_shares_and_a_wholly_locked_position_stays_locked():
-    rich = pf.Portfolio.model_validate({**base().model_dump(), "cash_avail": 10000.0})
-    twice = pf.apply_fill(pf.apply_fill(rich, "F", "buy", 300, 12.0, TODAY), "F", "buy", 40, 10.0, TODAY)
-    assert twice.position("F").shares == 600 and twice.position("F").recent_shares == 340 and twice.sellable_shares("F", TODAY) == 260 and twice.cash_avail == 10000.0 - 3600.0 - 400.0
+    rich = pf.Portfolio.model_validate({**base().model_dump(), "cash_avail": Decimal("10000.00")})
+    twice = pf.apply_fill(pf.apply_fill(rich, "F", "buy", 300, Decimal("12.00"), TODAY), "F", "buy", 40, Decimal("10.00"), TODAY)
+    assert twice.position("F").shares == 600 and twice.position("F").recent_shares == 340 and twice.sellable_shares("F", TODAY) == 260 and twice.cash_avail == Decimal("10000.00") - Decimal("3600.00") - Decimal("400.00")
     locked = make(cash_avail="100", positions=[{"symbol": "F", "shares": 5, "cost_basis": 1.0, "acquired": "2026-11-03"}])
-    assert pf.apply_fill(locked, "F", "buy", 5, 3.0, TODAY).sellable_shares("F", TODAY) == 0
+    assert pf.apply_fill(locked, "F", "buy", 5, Decimal("3.00"), TODAY).sellable_shares("F", TODAY) == 0
 
 
 def test_an_amount_is_rounded_half_up_to_the_cent_the_way_the_account_book_rounds_it():
-    assert round(500.125, 2) == 500.12 and pf.trade_amount(1, 500.125) == 500.13                    # Python's round goes to the even cent; the book (Decimal, ROUND_HALF_UP) does not
-    assert pf.trade_amount(3, 167.125) == 501.38 and pf.trade_amount(44, 167.1) == 7352.4 and pf.trade_amount(10, 150.25) == 1502.5 and pf.trade_amount(1, 0.004) == 0.0
-    assert pf.apply_fill(make(cash_avail="1000", positions=[]), "PG", "buy", 1, 500.125, TODAY).cash_avail == 499.87
+    assert round(Decimal("500.125"), 2) == Decimal("500.12") and pf.trade_amount(1, Decimal("500.125")) == Decimal("500.13")                    # Python's round goes to the even cent; the book (Decimal, ROUND_HALF_UP) does not
+    assert pf.trade_amount(3, Decimal("167.125")) == Decimal("501.38") and pf.trade_amount(44, Decimal("167.1")) == Decimal("7352.4") and pf.trade_amount(10, Decimal("150.25")) == Decimal("1502.5") and pf.trade_amount(1, Decimal("0.004")) == Decimal("0.0")
+    assert pf.apply_fill(make(cash_avail="1000", positions=[]), "PG", "buy", 1, Decimal("500.125"), TODAY).cash_avail == Decimal("499.87")
     sale = make(cash_avail="0", positions=[{"symbol": "PG", "shares": 1, "cost_basis": 1.0}])
-    assert pf.apply_fill(sale, "PG", "sell", 1, 500.125, TODAY).cash_avail == 500.13
+    assert pf.apply_fill(sale, "PG", "sell", 1, Decimal("500.125"), TODAY).cash_avail == Decimal("500.13")
 
 
 def test_a_name_is_kept_unless_a_new_one_is_given():
     named = make(cash_avail="1000", positions=[{"symbol": "PG", "name": "Procter & Gamble Co", "shares": 1, "cost_basis": 100.0}])
-    assert pf.apply_fill(named, "PG", "buy", 1, 100.0, TODAY).position("PG").name == "Procter & Gamble Co"
-    assert pf.apply_fill(named, "PG", "buy", 1, 100.0, TODAY, name="P&G").position("PG").name == "P&G"
-    assert pf.apply_fill(named, "PG", "sell", 1, 100.0, TODAY).position("PG") is None
+    assert pf.apply_fill(named, "PG", "buy", 1, Decimal("100.00"), TODAY).position("PG").name == "Procter & Gamble Co"
+    assert pf.apply_fill(named, "PG", "buy", 1, Decimal("100.00"), TODAY, name="P&G").position("PG").name == "P&G"
+    assert pf.apply_fill(named, "PG", "sell", 1, Decimal("100.00"), TODAY).position("PG") is None
 
 
 @pytest.mark.parametrize("args, message", [
-    (("MSFT", "hold", 1, 100.0), "side must be buy or sell"),
-    (("MSFT", "buy", 0, 100.0), "whole number of at least 1"),
-    (("MSFT", "buy", -2, 100.0), "whole number of at least 1"),
-    (("MSFT", "buy", 1.5, 100.0), "whole number of at least 1"),
-    (("MSFT", "buy", True, 100.0), "whole number of at least 1"),
+    (("MSFT", "hold", 1, Decimal("100.00")), "side must be buy or sell"),
+    (("MSFT", "buy", 0, Decimal("100.00")), "number above zero"),            # entry 110 amended these four: a quantity may have a fraction (1.5 is a quantity now, so the case is 7 decimals), and the message no longer says "whole"
+    (("MSFT", "buy", -2, Decimal("100.00")), "number above zero"),
+    (("MSFT", "buy", Decimal("0.1234567"), Decimal("100.00")), "number above zero"),
+    (("MSFT", "buy", True, Decimal("100.00")), "number above zero"),
     (("MSFT", "buy", 1, 0), "finite number above zero"),
-    (("MSFT", "buy", 1, -5.0), "finite number above zero"),
-    (("MSFT", "buy", 1, float("nan")), "finite number above zero"),
-    (("MSFT", "buy", 1, float("inf")), "finite number above zero"),
+    (("MSFT", "buy", 1, Decimal("-5.00")), "finite number above zero"),
+    (("MSFT", "buy", 1, Decimal("NaN")), "finite number above zero"),
+    (("MSFT", "buy", 1, Decimal("Infinity")), "finite number above zero"),
     (("MSFT", "buy", 1, "100"), "finite number above zero"),
     (("MSFT", "buy", 1, True), "finite number above zero"),
-    (("MSFT", "buy", 1, 0.001), "at least one cent"),
-    (("../x", "buy", 1, 100.0), "not a valid ticker symbol"),
-    ((7, "buy", 1, 100.0), "must be text"),
-    (("MSFT", "buy", 20, 100.0), r"cash \$1,000.00 does not cover \$2,000.00"),
-    (("NVDA", "sell", 1, 100.0), "cannot sell 1 of NVDA: the portfolio holds 0"),
-    (("MSFT", "sell", 11, 100.0), "cannot sell 11 of MSFT: the portfolio holds 10"),
+    (("MSFT", "buy", 1, Decimal("0.001")), "at least one cent"),
+    (("../x", "buy", 1, Decimal("100.00")), "not a valid ticker symbol"),
+    ((7, "buy", 1, Decimal("100.00")), "must be text"),
+    (("MSFT", "buy", 20, Decimal("100.00")), r"cash \$1,000.00 does not cover \$2,000.00"),
+    (("NVDA", "sell", 1, Decimal("100.00")), "cannot sell 1 of NVDA: the portfolio holds 0"),
+    (("MSFT", "sell", 11, Decimal("100.00")), "cannot sell 11 of MSFT: the portfolio holds 10"),
 ])
 def test_a_fill_the_portfolio_cannot_take_is_refused_with_the_reason(args, message):
     p = make(cash_avail="1000", positions=[{"symbol": "MSFT", "shares": 10, "cost_basis": 100.0}])
@@ -128,25 +129,26 @@ def test_the_date_of_a_fill_must_be_a_date():
 
     for bad in ("2026-11-03", datetime(2026, 11, 3, 10, 30), None):
         with pytest.raises(ValueError, match="today must be a date"):
-            pf.apply_fill(base(), "MSFT", "sell", 1, 100.0, bad)
+            pf.apply_fill(base(), "MSFT", "sell", 1, Decimal("100.00"), bad)
 
 
 # ---------------------------------------------------------------- the cash cut (moved here from test_trader_simulator.py: `affordable_shares` is the Account Manager's arithmetic since design choices entry 81)
 
 @pytest.mark.parametrize("cash, price, shares, commission, expected", [
-    (1000.0, 100.05, 44, 0.0, 9),                 # 9 x 100.05 = 900.45; 10 x 100.05 = 1000.50 is over
-    (1000.5, 100.05, 44, 0.0, 10),                # 10 x 100.05 = 1000.50: exactly the cash is enough
-    (1000.49, 100.05, 44, 0.0, 9),                # a cent short
-    (1000.0, 100.05, 5, 0.0, 5),                  # never more than the shares approved
-    (100.0, 100.05, 44, 0.0, 0),                  # not even one share
-    (100.05, 100.05, 44, 0.0, 1),
-    (101.05, 100.05, 44, 1.0, 1),                 # the commission is counted: 100.05 + 1.00
-    (101.04, 100.05, 44, 1.0, 0),
-    (500.13, 500.125, 3, 0.0, 1),                 # 500.125 is 500.13 in the account book (half up), and a cash of 500.13 pays for exactly one
-    (500.12, 500.125, 3, 0.0, 0),
-    (99.99, 33.33, 5, 0.0, 3),                    # 3 x 33.33 = 99.99: a quotient that floats to 2.9999999999999996 must not lose the third share
-    (0.0, 10.0, 5, 0.0, 0), (-5.0, 10.0, 5, 0.0, 0), (float("nan"), 10.0, 5, 0.0, 0),
-    (1000.0, 0.0, 5, 0.0, 0), (1000.0, None, 5, 0.0, 0), (1000.0, 10.0, 0, 0.0, 0), (1000.0, 10.0, 2.5, 0.0, 0),
+    (Decimal("1000.00"), Decimal("100.05"), 44, Decimal("0.00"), 9),                 # 9 x 100.05 = 900.45; 10 x 100.05 = 1000.50 is over
+    (Decimal("1000.50"), Decimal("100.05"), 44, Decimal("0.00"), 10),                # 10 x 100.05 = 1000.50: exactly the cash is enough
+    (Decimal("1000.49"), Decimal("100.05"), 44, Decimal("0.00"), 9),                 # a cent short
+    (Decimal("1000.00"), Decimal("100.05"), 5, Decimal("0.00"), 5),                  # never more than the shares approved
+    (Decimal("100.00"), Decimal("100.05"), 44, Decimal("0.00"), 0),                  # not even one share
+    (Decimal("100.05"), Decimal("100.05"), 44, Decimal("0.00"), 1),
+    (Decimal("101.05"), Decimal("100.05"), 44, Decimal("1.00"), 1),                  # the commission is counted: 100.05 + 1.00
+    (Decimal("101.04"), Decimal("100.05"), 44, Decimal("1.00"), 0),
+    (Decimal("500.13"), Decimal("500.125"), 3, Decimal("0.00"), 1),                  # 500.125 is 500.13 in the account book (half up), and a cash of 500.13 pays for exactly one
+    (Decimal("500.12"), Decimal("500.125"), 3, Decimal("0.00"), 0),
+    (Decimal("99.99"), Decimal("33.33"), 5, Decimal("0.00"), 3),                     # 3 x 33.33 = 99.99: a quotient that floats to 2.9999999999999996 must not lose the third share
+    (Decimal("0.00"), Decimal("10.00"), 5, Decimal("0.00"), 0), (Decimal("-5.00"), Decimal("10.00"), 5, Decimal("0.00"), 0),
+    (Decimal("1000.00"), Decimal("0.00"), 5, Decimal("0.00"), 0), (Decimal("1000.00"), Decimal("10.00"), 0, Decimal("0.00"), 0), (Decimal("1000.00"), Decimal("10.00"), Decimal("0.1234567"), Decimal("0.00"), 0),   # entry 110: 2.5 is a quantity now (a fractional order is cut to a fractional quantity); seven decimals is still refused
+    (Decimal("NaN"), Decimal("10.00"), 5, Decimal("0.00"), 0), (Decimal("1000.00"), None, 5, Decimal("0.00"), 0),
 ])
 def test_the_cash_pays_for_the_most_shares_that_fit_to_the_cent(cash, price, shares, commission, expected):
     assert pf.affordable_shares(cash, price, shares, commission) == expected

@@ -1,9 +1,10 @@
 """The Account Manager's thresholds: `configs/account_manager_v1.json`, read and checked ONCE (design/sizing_in_account_manager_spec.md).
 
     config = load_config()                  # the file, validated: a missing key, an unknown key or a wrong type is an error NOW, not halfway through a purchase
-    config.sizing.float_guard               # 1e-9
+    config.sizing.fractional_even_split     # true: an even split is in fractional shares (design choices entry 110); false: in whole shares
     config.clarify.max_questions            # 3: the Ask-mode questions about how much to buy (entry 85)
     config.direct.valid_minutes             # 30: how long the price of a trade the user named stays good (entry 87)
+    config.missing.max_prompts              # 5: the most Ask-mode questions about stocks the Data Clerk did not find (entry 102)
 
 Every threshold of the Account Manager's sizing is in that file and nowhere else. There is no size limit of the user's any more (design choices entry 91: the only check is that the funds cover the order). A model never
 chooses a threshold and the code never writes one. `extra="forbid"` means a typo in the JSON fails when the file is loaded, instead of being ignored while the code uses a default (the same rule as the Critic's and the
@@ -27,7 +28,7 @@ class _Section(BaseModel):
 
 
 class Sizing(_Section):
-    float_guard: float = Field(gt=0, lt=1e-6)       # added before a share count is rounded down, so that 2.9999999999999996 shares of arithmetic is the 3 shares it is
+    fractional_even_split: bool                      # design choices entry 110 (F9): True, a split evenly buys the same DOLLARS of each stock by buying a fraction of a share; False, the whole-share split of entry 108 (Part G). Round robin is whole shares either way
 
 
 class Clarify(_Section):
@@ -35,6 +36,13 @@ class Clarify(_Section):
     max_problems: int = Field(ge=0, le=5)            # the most replies of the model, or answers of the user, that code refuses (not JSON, an amount nobody typed, a number the account cannot pay) before the loop gives up and the default size is shown
     max_question_chars: int = Field(ge=40, le=1000)  # a question longer than this is cut (it is text from a model, shown to the user)
     max_answer_chars: int = Field(ge=20, le=1000)    # the user's answer is cut to this before the model reads it
+
+
+class Missing(_Section):
+    max_prompts: int = Field(ge=1, le=10)            # the most questions "OK to continue without it?" one order may need (one for each stock the Data Clerk did not find); more missing stocks than this is a request to clarify (entry 102)
+    max_question_chars: int = Field(ge=80, le=1000)  # the model's wording of one such question may be this long at most: a longer one is refused and the code's own sentence is shown
+    max_problems: int = Field(ge=0, le=3)            # the most times a wording that code refused is asked for again before the code's own sentence is shown
+    max_seconds: int = Field(ge=1, le=300)           # a model that takes longer than this to word one question is given up on: the code's own sentence is shown, and the user is never kept waiting for it
 
 
 class Direct(_Section):
@@ -49,6 +57,7 @@ class AccountManagerConfig(_Section):
     config_version: str = Field(min_length=1)
     sizing: Sizing
     clarify: Clarify
+    missing: Missing
     direct: Direct
     neutral: Neutral
 

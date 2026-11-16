@@ -1,0 +1,270 @@
+<<<PRESS_RELEASE>>>
+id: 219004469ae4cf92
+symbol: MSFT
+published_utc: 2025-12-02T17:56:00Z
+url: https://www.nasdaq.com/press-release/microsoft-announces-quarterly-dividend-2025-12-02
+headline: Microsoft announces quarterly dividend
+<<<TEXT>>>
+--Microsoft Corp. on Tuesday announced that its board of directors declared a quarterly dividend of $0.91 per share. The dividend is payable March 12, 2026, to shareholders of record on Feb. 19, 2026. Microsoft creates platforms and tools powered by AI to deliver innovative solutions that meet the evolving needs of our customers.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f46d6f45ef99d5c4
+symbol: MSFT
+published_utc: 2025-12-09T13:11:00Z
+url: https://www.nasdaq.com/press-release/jlens-and-adl-applaud-microsoft-shareholders-vote-reject-bds-aligned-proposal-9
+headline: JLens and ADL Applaud Microsoft Shareholders’ Vote to Reject BDS-Aligned Proposal 9 at Annual Meeting
+<<<TEXT>>>
+JLens, a Registered Investment Advisor affiliated with ADL, welcomes the vote by Microsoft Corporation shareholders AGAINST Proposal 9 at the Company’ s 2025 Annual Shareholder Meeting. This shareholder resolution, aligned with the Boycott, Divestment and Sanctions movement, called for conflict-specific human rights due diligence targeting Israel.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bd15d4029ccd1bb6
+symbol: MSFT
+published_utc: 2025-12-10T11:52:00Z
+url: https://www.nasdaq.com/press-release/lisa-rinna-celebrates-candy-crush-fans-and-their-sweetest-achievements-years-candy
+headline: Lisa Rinna Celebrates Candy Crush Fans and their Sweetest Achievements in this Year's Candy Unwrapped
+<<<TEXT>>>
+--Candy Crush ® is celebrating its sweetest year yet with Candy Unwrapped 2025, the annual moment that spotlights the players who make the game a global phenomenon and gives each fan a personalized recap of their Candy Crush journey. On Unwrapped launch day, December 8th, she cheered players on and hyped up their stats, turning their year-in- Candy Crush moments...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 511b13718df939cb
+symbol: MSFT
+published_utc: 2026-01-07T16:07:00Z
+url: https://www.nasdaq.com/press-release/microsoft-announces-quarterly-earnings-release-date-2026-01-07
+headline: Microsoft announces quarterly earnings release date
+<<<TEXT>>>
+--Microsoft Corp. will publish fiscal year 2026 second-quarter financial results after the close of the market on Wednesday, Jan. 28, 2026, on the Microsoft Investor Relations website at https://www.microsoft.com/en-us/Investor/. A live webcast of the earnings conference call will be made available at 2:30 p.m. Pacific Time. Microsoft creates platforms...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 325c62dd3ce4c47b
+symbol: MSFT
+published_utc: 2026-01-08T10:00:00Z
+url: https://www.nasdaq.com/press-release/microsoft-propels-retail-forward-agentic-ai-capabilities-power-intelligent-automation
+headline: Microsoft propels retail forward with agentic AI capabilities that power intelligent automation for every retail function
+<<<TEXT>>>
+Built for the full retail value chain, Microsoft' s agentic AI streamlines critical workflows to accelerate decisions and outcomes by augmenting human expertise across the enterprise. REDMOND, Wash., Jan. 8, 2026/ PRNewswire/-- Microsoft Corp. on Thursday announced agentic AI solutions designed to bring intelligent automation to every part of the retail...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 67a7c1b2e16eaf97
+symbol: MSFT
+published_utc: 2026-01-15T11:00:00Z
+url: https://www.nasdaq.com/press-release/microsoft-expands-its-commitment-education-elevate-educators-program-and-new-ai
+headline: Microsoft expands its commitment to education with Elevate for Educators Program and new AI-powered tools
+<<<TEXT>>>
+--Microsoft Corp. on Thursday announced Microsoft Elevate for Educators, a new comprehensive program connecting educators with community, resources and in-demand credentials and new AI-powered capabilities at no additional cost to help schools worldwide prepare educators and students for an AI-driven future. Today's announcements are aligned with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bf94fa12c76c29ea
+symbol: MSFT
+published_utc: 2026-01-22T03:01:00Z
+url: https://www.nasdaq.com/press-release/microsoft-and-mercedes-amg-petronas-f1-team-unite-drive-innovation-factory-circuit
+headline: Microsoft and Mercedes-AMG PETRONAS F1 Team unite to drive innovation from factory to circuit
+<<<TEXT>>>
+REDMOND, Wash. and BRACKLEY, United Kingdom, Jan. 22, 2026/ PRNewswire/-- Microsoft Corp. and the Mercedes-AMG PETRONAS F1 Team on Thursday announced a multiyear partnership that puts Microsoft' s technologies at the heart of race team operations. As the Mercedes-AMG PETRONAS F1 Team prepares for this transformation, it is partnering with Microsoft to harness the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cd8bcc1671b46178
+symbol: MSFT
+published_utc: 2026-01-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/microsoft-earnings-press-release-available-investor-relations-website-2026-01-28
+headline: Microsoft earnings press release available on Investor Relations website
+<<<TEXT>>>
+--Microsoft Corp. on Wednesday announced that fiscal year 2026 second-quarter financial results are available on its Investor Relations website. A live webcast of the call can be accessed on Microsoft' s Investor Relations website at https://www.microsoft.com/en-us/Investor/. Microsoft creates platforms and tools powered by AI to deliver innovative...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a0c63a449048367e
+symbol: MSFT
+published_utc: 2026-01-29T09:00:00Z
+url: https://www.nasdaq.com/press-release/candy-crush-launches-crushable-new-game-designed-everyday-play-exclusively-yahoo
+headline: Candy Crush Launches Crushable, a New Game Designed for Everyday Play, Exclusively on Yahoo Games
+<<<TEXT>>>
+--Candy Crush is expanding where and how people play with the launch of Candy Crush Crushable, a new daily puzzle game available exclusively on Yahoo Games in the US. Crushable celebrates the joy of daily play, rooted in the belief that small wins can lift you up no matter where you are. Developed by King, the makers of Candy Crush, today marks a significant moment with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 57fea0aedf2e60ae
+symbol: MSFT
+published_utc: 2026-02-17T06:00:00Z
+url: https://www.nasdaq.com/press-release/zillow-launches-zillow-warcraftr-new-way-explore-world-warcraftr-homes-2026-02-17
+headline: Zillow launches Zillow for Warcraft®, a new way to explore World of Warcraft® homes
+<<<TEXT>>>
+--As player housing goes live in World of Warcraft ®, Zillow ® has teamed up with Blizzard Entertainment ® to introduce Zillow for Warcraft ®, a custom microsite that allows anyone to browse a curated collection of in-game homes from Azeroth™. On the cusp of the game's next expansion, Midnight, which launches globally on March 2, players' dreams of homeownership...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 11737faf03536a54
+symbol: MSFT
+published_utc: 2026-02-18T12:20:00Z
+url: https://www.nasdaq.com/press-release/microsoft-and-crowdstrike-announce-falcon-platform-now-available-microsoft
+headline: Microsoft and CrowdStrike Announce the Falcon Platform Now Available on Microsoft Marketplace
+<<<TEXT>>>
+AUSTIN, Texas& REDMOND, Wash.---- CrowdStrike and Microsoft Corp. today announced an expansion of their strategic alliance that allows organizations of all sizes to purchase the CrowdStrike Falcon ® platform on Microsoft Marketplace using their existing Microsoft Azure Consumption Commitment. "Adversaries don’ t wait for budget cycles, and neither should...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0eae086b4db6a7ae
+symbol: MSFT
+published_utc: 2026-03-03T09:05:00Z
+url: https://www.nasdaq.com/press-release/microsoft-rural-health-resiliency-program-and-pivot-point-consulting-drive-ai-enabled
+headline: Microsoft Rural Health Resiliency Program and Pivot Point Consulting Drive AI-Enabled Innovation by Bringing Dragon Copilot to Rural Hospitals Nationwide
+<<<TEXT>>>
+--Pivot Point Consulting, a Best in KLAS healthcare IT consulting leader, today announced a new partnership with Microsoft' s Rural Health Resiliency Program to expand access to Microsoft Dragon Copilot, an enterprise– grade AI solution purpose– built for rural hospitals nationwide. As part of the program, Microsoft is offering a 60% discount off MSRP to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1784e9753711d75a
+symbol: MSFT
+published_utc: 2026-03-05T08:58:00Z
+url: https://www.nasdaq.com/press-release/1m-prize-pool-stake-candy-crush-all-stars-2026-kicks-marshawn-lynch-and-erin-andrews
+headline: $1M Prize Pool At Stake: Candy Crush All Stars 2026 Kicks Off with Marshawn Lynch and Erin Andrews as Tournament Hype Hosts
+<<<TEXT>>>
+This year, Candy Crush returned to Los Angeles, home of its live finals for the past two years to kick off the All Stars 2026 tournament and rally players everywhere to get in the game.  "For almost as long as I've had phones in hand, Candy Crush has been a staple on my devices," said Erin Andrews. The pair kept the excitement rolling with real-time analysis, coach-style...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 215d0f802ed31c6d
+symbol: MSFT
+published_utc: 2026-03-10T17:29:00Z
+url: https://www.nasdaq.com/press-release/microsoft-announces-quarterly-dividend-2026-03-10
+headline: Microsoft announces quarterly dividend
+<<<TEXT>>>
+--Microsoft Corp. on Tuesday announced that its board of directors declared a quarterly dividend of $0.91 per share. The dividend is payable June 11, 2026, to shareholders of record on May 21, 2026. Microsoft creates platforms and tools powered by AI to deliver innovative solutions that meet the evolving needs of our customers.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d390c99f5b50d5eb
+symbol: MSFT
+published_utc: 2026-04-08T16:05:00Z
+url: https://www.nasdaq.com/press-release/microsoft-announces-quarterly-earnings-release-date-2026-04-08
+headline: Microsoft announces quarterly earnings release date
+<<<TEXT>>>
+--Microsoft Corp. will publish fiscal year 2026 third-quarter financial results after the close of the market on Wednesday, April 29, 2026, on the Microsoft Investor Relations website at https://www.microsoft.com/en-us/Investor/. A live webcast of the earnings conference call will be made available at 2:30 p.m. Pacific Time. Microsoft creates platforms...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5cfc5d15563c301b
+symbol: MSFT
+published_utc: 2026-04-21T05:00:00Z
+url: https://www.nasdaq.com/press-release/nabtu-and-microsoft-expand-nationwide-initiative-strengthen-ai-training-and-career
+headline: NABTU and Microsoft expand nationwide initiative to strengthen AI training and career pathways across the skilled trades
+<<<TEXT>>>
+--North America's Building Trades Unions and Microsoft Corp. on Tuesday announced an expanded partnership to support a strong workforce pipeline and help workers across North America build the skills needed to succeed in an AI-powered economy. Building on a partnership that has already trained 1,500 instructors in hands-on training centers nationwide,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 07a0efa41c6e815a
+symbol: MSFT
+published_utc: 2026-04-29T16:11:00Z
+url: https://www.nasdaq.com/press-release/microsoft-earnings-press-release-available-investor-relations-website-2026-04-29
+headline: Microsoft earnings press release available on Investor Relations website
+<<<TEXT>>>
+--Microsoft Corp. on Wednesday announced that fiscal year 2026 third-quarter financial results are available on its Investor Relations website. A live webcast of the call can be accessed on Microsoft' s Investor Relations website at https://www.microsoft.com/en-us/Investor/. Microsoft creates platforms and tools powered by AI to deliver innovative...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a320099850e821f3
+symbol: MSFT
+published_utc: 2026-05-14T16:07:00Z
+url: https://www.nasdaq.com/press-release/microsoft-announces-appointment-carmine-di-sibio-board-directors-2026-05-14
+headline: Microsoft announces appointment of Carmine Di Sibio to board of directors
+<<<TEXT>>>
+REDMOND, Wash., May 14, 2026/ PRNewswire/-- Microsoft Corp. on Thursday announced the appointment of Carmine Di Sibio, former global chairman and CEO of EY, to the Microsoft board of directors. He will serve on both the Compensation Committee and Audit Committee, bringing expertise in financial services, risk oversight and global client leadership to meet the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 755f88e650d42378
+symbol: MSFT
+published_utc: 2026-06-02T15:01:00Z
+url: https://www.nasdaq.com/press-release/mayo-clinic-and-microsoft-collaborate-develop-frontier-ai-model-healthcare-2026-06-02
+headline: Mayo Clinic and Microsoft collaborate to develop a frontier AI model for healthcare
+<<<TEXT>>>
+Collaboration aims to expand access to Mayo Clinic's trusted healthcare expertise and improve patient and clinician experiences. ROCHESTER, Minn., and REDMOND, Wash., June 2, 2026/ PRNewswire/-- Mayo Clinic and Microsoft today announced a strategic collaboration to develop and deploy a frontier AI model designed specifically for healthcare, making Mayo...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: aa4dd09bb0c875fa
+symbol: MSFT
+published_utc: 2026-06-03T10:00:00Z
+url: https://www.nasdaq.com/press-release/pinecone-nexus-now-integrates-microsoft-onelake-bringing-ai-agents-directly
+headline: Pinecone Nexus Now Integrates with Microsoft OneLake, Bringing AI Agents Directly to Enterprise Data
+<<<TEXT>>>
+--Pinecone, trusted knowledge infrastructure for AI, today at Microsoft Build announced a new integration connecting Pinecone Nexus and Microsoft OneLake. This integration changes how enterprise AI agents get the information they need. It shifts the process from slow, expensive retrieval to fast, structured, cited responses built directly from data...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4b3a063ba03712a3
+symbol: MSFT
+published_utc: 2026-06-08T08:00:00Z
+url: https://www.nasdaq.com/press-release/nhs-england-accelerates-ai-adoption-microsoft-365-copilot-improve-service-delivery
+headline: NHS England accelerates AI adoption with Microsoft 365 Copilot to improve service delivery, reduce costs and create more time for care
+<<<TEXT>>>
+--NHS England on Sunday announced that it is significantly accelerating AI adoption across healthcare services by providing 505,000 clinicians and support staff with access to Microsoft 365 Copilot. Copilot helps users create, analyze and get work done faster. NHS England anticipates that Copilot will be harnessed in multiple ways across all aspects of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ef8d312a9b246c2c
+symbol: MSFT
+published_utc: 2026-06-10T16:05:00Z
+url: https://www.nasdaq.com/press-release/microsoft-announces-quarterly-dividend-2026-06-10
+headline: Microsoft announces quarterly dividend
+<<<TEXT>>>
+--Microsoft Corp. on Wednesday announced that its board of directors declared a quarterly dividend of $0.91 per share. The dividend is payable Sept. 10, 2026, to shareholders of record on Aug. 20, 2026. Microsoft creates platforms and tools powered by AI to deliver innovative solutions that meet the evolving needs of our customers.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 89e3bdcccaaae06c
+symbol: MSFT
+published_utc: 2026-06-12T10:00:00Z
+url: https://www.nasdaq.com/press-release/smartphone-podium-candy-crush-all-stars-crowns-its-2026-champion-following-months
+headline: FROM SMARTPHONE TO PODIUM: CANDY CRUSH ALL STARS CROWNS ITS 2026 CHAMPION FOLLOWING MONTHS OF COMPETITION
+<<<TEXT>>>
+--What started on a phone screen ended on a live stage in London. Luana from Bahia, Brazil claimed the title in the Live Final, after competing against millions of players from across the globe, emerging victorious at the tournament's biggest-ever Live Final in London. She takes home a share of $1 million and a custom Candy Crush- inspired championship ring from...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 38b954ed3b94c740
+symbol: MSFT
+published_utc: 2026-06-24T09:00:00Z
+url: https://www.nasdaq.com/press-release/microsofts-new-ai-education-report-highlights-widespread-adoption-and-increasing
+headline: Microsoft's New AI in Education Report highlights widespread adoption and increasing demand for support
+<<<TEXT>>>
+--Microsoft Corp. on Wednesday unveiled the third edition of its annual AI in Education Report 1 that reveals both the momentum behind AI adoption in education and the opportunity ahead: helping schools move from interest and experimentation to meaningful, responsible implementation. Microsoft also announced today a new wave of AI-powered teaching and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a9bbd99389e9acf0
+symbol: MSFT
+published_utc: 2026-06-29T11:00:00Z
+url: https://www.nasdaq.com/press-release/candy-crush-turns-nyc-one-big-pregame-free-candy-cabs-soccer-season-2026-2026-06-29
+headline: Candy Crush Turns NYC Into One Big Pregame with Free Candy Cabs for Soccer Season 2026
+<<<TEXT>>>
+--This Soccer Season, Candy Crush Saga ® is taking game day beyond the stadium and onto the streets of New York City. Launching June 30, Candy Cabs are a fleet of interactive rides designed to turn travel time into play time, giving fans the chance to unlock complimentary rides simply by beating a Candy Crush Saga level before they reach their destination.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0b7051db5abfca7d
+symbol: MSFT
+published_utc: 2026-07-08T16:05:00Z
+url: https://www.nasdaq.com/press-release/microsoft-announces-quarterly-earnings-release-date-2026-07-08
+headline: Microsoft announces quarterly earnings release date
+<<<TEXT>>>
+--Microsoft Corp. will publish fiscal year 2026 fourth-quarter financial results after the close of the market on Wednesday, July 29, 2026, on the Microsoft Investor Relations website at https://www.microsoft.com/en-us/Investor/. A live webcast of the earnings conference call will be made available at 2:30 p.m. Pacific Time. Microsoft creates platforms...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0fa52cde4d07ac04
+symbol: MSFT
+published_utc: 2026-07-21T08:30:00Z
+url: https://www.nasdaq.com/press-release/microsoft-and-mistral-expand-strategic-partnership-give-enterprises-and-regulated
+headline: Microsoft and Mistral expand strategic partnership to give enterprises and regulated industries frontier AI they can control
+<<<TEXT>>>
+As Mistral is expanding its AI compute capacity in Europe, the companies are expanding their strategic partnership with Microsoft' s commitment to leverage part of this capacity, bringing Mistral's frontier and efficient models across Microsoft' s AI platform and giving customers flexible deployment options from cloud to fully disconnected...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dfde80803a4750dd
+symbol: MSFT
+published_utc: 2026-07-23T11:00:00Z
+url: https://www.nasdaq.com/press-release/databricks-and-microsoft-expand-partnership-help-enterprises-bring-business-context
+headline: Databricks and Microsoft expand partnership to help enterprises bring business context to enterprise AI
+<<<TEXT>>>
+Databricks and Microsoft extend strategic partnership through the 2030 s to scale enterprise AI Databricks deepens its bet on Azure, growing its use of Azure Databricks to run its own core business operations and analytics, while both companies advance native integration across the Microsoft stack, including Databricks Genie and Microsoft 365...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 897a75397bc05b6d
+symbol: MSFT
+published_utc: 2026-07-29T09:30:00Z
+url: https://www.nasdaq.com/press-release/evinced-harnesses-agentic-coding-automatically-and-reliably-fix-accessibility
+headline: Evinced Harnesses Agentic Coding to Automatically and Reliably Fix Accessibility Problems
+<<<TEXT>>>
+--Evinced, the leading software company powering accessible web and mobile development, announced today at the Disability: IN conference the launch of its suite of agentic coding tools: Autopilot, Harness, and Resolve. These tools work directly with a customer's existing AI systems to safely and automatically provide important advances in the accessibility...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6595186e804e66da
+symbol: MSFT
+published_utc: 2026-07-29T16:05:00Z
+url: https://www.nasdaq.com/press-release/microsoft-earnings-press-release-available-investor-relations-website-2026-07-29
+headline: Microsoft earnings press release available on Investor Relations website
+<<<TEXT>>>
+--Microsoft Corp. on Wednesday announced that fiscal year 2026 fourth-quarter financial results are available on its Investor Relations website. A live webcast of the call can be accessed on Microsoft' s Investor Relations website at https://www.microsoft.com/en-us/Investor/. Microsoft creates platforms and tools powered by AI to deliver innovative...
+<<<END>>>

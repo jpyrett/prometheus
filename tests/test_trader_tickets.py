@@ -1,6 +1,7 @@
 """Decisions to tickets (prometheus/agents/trader/tickets.py, Trader spec sections 5 and 7): sides and sizes, the T+1 cut, the limits with and without an entry zone, each rejection code, and the funding plan: accepted, and each
 way it is refused. Code only: no network, no model."""
 from datetime import date, datetime, timedelta
+from decimal import Decimal
 
 import pytest
 from trader_helpers import NOW, account, at, config, decided, plan, row, synthetic
@@ -55,11 +56,11 @@ def test_building_tickets_changes_nothing_on_the_order_and_a_naive_clock_is_a_pr
 
 def test_the_reference_price_is_the_critics_deal_price_else_the_plans_entry_price():
     order = synthetic(row("PG", "open", 10, 100.0))
-    assert one(order).ref_price == 100.0
+    assert one(order).ref_price == Decimal("100.0")
     order.reviews[0]["timing"]["deal_price"] = 102.0
-    assert one(order).ref_price == 102.0                                                                          # the Critic's price wins over the plan's entry_mid (100)
+    assert one(order).ref_price == Decimal("102.0")                                                                          # the Critic's price wins over the plan's entry_mid (100)
     order.reviews[0]["timing"] = {}
-    assert one(order).ref_price == 100.0                                                                          # no deal price: the plan's entry price
+    assert one(order).ref_price == Decimal("100.0")                                                                          # no deal price: the plan's entry price
     order.recommendations[0]["trade"]["entry_mid"] = None
     t = one(order)
     assert (t.status, t.reject_code) == ("rejected", "price_unavailable") and "no price to judge the trade by" in t.reason
@@ -85,7 +86,8 @@ def test_a_missing_review_a_missing_decision_and_a_decision_that_is_not_a_yes_ar
     order = synthetic(row("PG", "open", 10, 100.0))
     order.trade_decisions[0]["shares"] = 0
     t = one(order)
-    assert t.reject_code == "not_permitted" and "no whole number of shares" in t.reason and t.shares_approved == 0
+    # AMENDED (entry 110): the reason says "a number of shares above zero", no longer "no whole number of shares"
+    assert t.reject_code == "not_permitted" and "a number of shares above zero" in t.reason and t.shares_approved == 0
 
 
 def test_an_approval_that_ran_out_is_approval_expired_but_only_when_that_is_the_one_reason():
@@ -96,7 +98,8 @@ def test_an_approval_that_ran_out_is_approval_expired_but_only_when_that_is_the_
     assert one(order, now=at("2026-11-05 11:30")).status == "new"                                                  # the very moment it runs out is still inside (the rule is `now > until`)
     order.trade_decisions[0]["shares"] = 0                                                                         # a second reason: the decision has no share to trade
     t = one(order, now=late)
-    assert t.reject_code == "not_permitted" and "the approval ran out" in t.reason and "no whole number of shares" in t.reason       # expiry together with another reason is not_permitted, and both are in the reason
+    # AMENDED (entry 110): the wording of the reason, as above
+    assert t.reject_code == "not_permitted" and "the approval ran out" in t.reason and "a number of shares above zero" in t.reason       # expiry together with another reason is not_permitted, and both are in the reason
     order = synthetic(row("PG", "open", 10, 100.0, approved=False))
     assert one(order, now=late).reject_code == "not_permitted"                                                     # not approved (and out of time as well)
 
@@ -139,8 +142,8 @@ def test_a_ticket_beyond_the_maximum_number_of_trades_is_not_attempted_and_the_r
 
 def test_every_rejection_a_ticket_can_be_built_with_is_in_the_closed_list():
     order = synthetic(row("A", "open", 1, 10.0, approved=False), row("B", "reduce", 1, 10.0), row("C", "open", 1, 10.0, zone=(20.0, 21.0)), row("D", "open", 1, 10.0))
-    order.recommendations[3]["trade"]["entry_mid"] = None
-    order.reviews[3]["timing"] = {}
+    order.recommendations[2]["trade"]["entry_mid"] = None      # AMENDED (entry 105): B, the sale, is the user's own direct order now and has no recommendation or review, so D is the third of each
+    order.reviews[2]["timing"] = {}
     codes = {t.reject_code for t in build(order, cfg=config(limits={"max_trades": 5}))} | {t.reject_code for t in build(order, cfg=config(limits={"max_trades": 1}))}
     assert codes - {None} == {"not_permitted", "not_held", "price_outside_limits", "price_unavailable", "not_attempted"} and codes - {None} <= set(REJECT_CODES)
 
@@ -219,7 +222,7 @@ def test_the_stock_being_bought_is_never_sold_to_pay_for_itself_even_when_it_is_
 def test_the_sells_are_limited_to_what_is_sellable_today_by_the_t_plus_1_rule():
     held = Portfolio(user="Jacob Pyrett", cash_avail=0.0, positions=[{"symbol": "MSFT", "shares": 50, "cost_basis": 150.0, "acquired": "2026-11-05", "recent_shares": 20}])
     found = tickets_for(row("PG", "open", 44, 167.1), portfolio=held)
-    assert legs(plan("PG", ("MSFT", 30, 420.0)), found, portfolio=held)[1] == [{"symbol": "MSFT", "shares": 30, "price": 420.0}]
+    assert legs(plan("PG", ("MSFT", 30, 420.0)), found, portfolio=held)[1] == [{"symbol": "MSFT", "shares": 30, "price": Decimal("420.0")}]
     assert "only 30 are sellable today" in legs(plan("PG", ("MSFT", 31, 420.0)), found, portfolio=held)[2]
 
 

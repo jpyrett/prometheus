@@ -10,7 +10,7 @@ arithmetic on those numbers and its thresholds are in `configs/critic_v1.json` (
 
 The dimension is a weaker voice than the others (10 of 100 points). One pattern is a BLOCKER: the dead cat bounce (a fall of at least 25% from a peak, a small bounce off the low in the last
 sessions, the price still far under the peak and under its 50-day mean) is the pattern that most often precedes a second leg down. The golden cross and the rest only add points; a death cross
-is a warning. A reduction is not judged.
+is a warning.
 """
 from dataclasses import dataclass, field
 
@@ -123,11 +123,8 @@ assert set(JUDGES) == set(PATTERNS)
 
 
 def assess(rec: Recommendation, fetched: dict | None, config: Chart) -> ChartResult:
-    """The chart findings of one record, its score (0 to 100) and the detail. A reduction is not judged."""
+    """The chart findings of one record, its score (0 to 100) and the detail."""
     out = ChartResult()
-    if rec.action.action not in ("open", "add"):
-        out.applicable = False
-        return out
     facts = {name: metric_value(fetched, name) for name in FACTS}
     hits, unknown, measures, total = [], [], [], 0.0
     for p in config.patterns:

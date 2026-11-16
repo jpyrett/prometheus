@@ -139,7 +139,7 @@ def test_a_record_that_does_not_match_the_schema_is_a_defect():
     order = captured("PG_open")
     order.recommendations[0]["surprise"] = "a field the Advisor never writes"
     r = review(order)["PG"]
-    assert r["blockers"][0]["code"] == "record_defect" and "does not match the Advisor's schema 2" in r["blockers"][0]["message"] and not r["approved"]
+    assert r["blockers"][0]["code"] == "record_defect" and "does not match the Advisor's record schema" in r["blockers"][0]["message"] and not r["approved"]      # AMENDED (entry 105): the record schema is version 3, and the message no longer names a number
 
 
 def test_an_old_record_that_still_carries_the_advisors_size_is_a_defect_because_the_record_has_no_size_now():
@@ -147,7 +147,7 @@ def test_an_old_record_that_still_carries_the_advisors_size_is_a_defect_because_
     refused by the schema, and says which field: the models forbid unknown fields."""
     order = tamper_order("PG_open", **{"trade.suggested_shares": 7, "trade.position_pct": 0.1})
     r = review(order)["PG"]
-    assert r["blockers"][0]["code"] == "record_defect" and "does not match the Advisor's schema 2" in r["blockers"][0]["message"] and "suggested_shares" in r["blockers"][0]["message"] and not r["approved"]
+    assert r["blockers"][0]["code"] == "record_defect" and "does not match the Advisor's record schema" in r["blockers"][0]["message"] and "suggested_shares" in r["blockers"][0]["message"] and not r["approved"]
 
 
 def test_a_record_that_fails_an_integrity_check_is_denied_with_the_check_named():
@@ -166,7 +166,7 @@ def test_records_beyond_the_limit_are_not_reviewed_and_say_so(tmp_path):
     path = tmp_path / "critic.json"
     path.write_text(json.dumps({**json.loads((REPO_ROOT / "configs" / "critic_v1.json").read_text()), "limits": {**CONFIG.limits.model_dump(), "max_records": 1}}), encoding="utf-8")
     order = captured("PG_open")
-    second = tamper(order.recommendations[0], **{"identity.record_id": "second000001", "action.action": "add"})
+    second = tamper(order.recommendations[0], **{"identity.record_id": "second000001"})
     order.recommendations.append(second)
     Critic(model=ReviewerModel(), clerk=FakeClerk(order), ledger=MemoryLedger(), config_path=path).review_recommendations(order, view(), NOW)
     assert [r["approved"] for r in order.reviews] == [True, False] and [b["code"] for b in order.reviews[1]["blockers"]] == ["record_not_reviewable"] and "first 1 recommendations" in order.reviews[1]["blockers"][0]["message"]
@@ -233,7 +233,7 @@ def test_the_same_recommendation_is_judged_by_the_users_profile():
 
 def test_the_critic_never_sees_the_mode_so_the_verdict_cannot_depend_on_ask_or_auto():
     ask = review(captured("PG_open"), view_=profile(trade_mode="ask").risk_view())["PG"]
-    auto = review(captured("PG_open"), view_=profile(trade_mode="auto", auto_min_score=10).risk_view())["PG"]
+    auto = review(captured("PG_open"), view_=profile(trade_mode="auto").risk_view())["PG"]
     strip = lambda r: {k: v for k, v in r.items() if k not in ("review_id", "audit")}
     assert strip(ask) == strip(auto)
 
@@ -241,16 +241,18 @@ def test_the_critic_never_sees_the_mode_so_the_verdict_cannot_depend_on_ask_or_a
 def two_records():
     """The captured PG_open order with a second recommendation of the same stock (an addition), so that the two together can pass the review's exposure limit."""
     order = captured("PG_open")
-    order.recommendations.append(tamper(order.recommendations[0], **{"identity.record_id": "extra0000001", "action.action": "add"}))
+    order.recommendations.append(tamper(order.recommendations[0], **{"identity.record_id": "extra0000001"}))
     return order
 
 
 def test_each_recommendation_is_reviewed_on_its_own_there_is_no_running_exposure_across_the_review():
-    """Design choices entry 80: the Critic's old step 9 (a running exposure across the review: `exposure_limit`, `size_reduced`) is gone with the size. Two records of one stock are two verdicts, each of its own merits."""
+    """Design choices entry 80: the Critic's old step 9 (a running exposure across the review: `exposure_limit`, `size_reduced`) is gone with the size. Two records of one stock are two verdicts.
+    AMENDED (entry 105): the second record was an `add` of the same stock and both were approved. There is no `add` now, and two records of one stock are a defect of the order (`order.unique`), so both are denied
+    for that and for nothing else: still two reviews, each of its own, and no exposure across them."""
     order = two_records()
     make_critic(order).review_recommendations(order, view(), NOW)
     first, second = order.reviews
-    assert first["approved"] and second["approved"] and first["blockers"] == second["blockers"] == []
+    assert [b["value"] for b in first["blockers"]] == [b["value"] for b in second["blockers"]] == ["order.unique"] and not first["approved"] and not second["approved"]
     assert not any(w["code"] == "size_reduced" for r in order.reviews for w in r["warnings"]) and not any("exposure" in b["code"] for r in order.reviews for b in r["blockers"])
 
 
@@ -268,9 +270,10 @@ def test_a_collapsing_stock_never_earns_the_bonus_however_cheap():
     assert r["bonus"] == 0 and "falling_knife" in [b["code"] for b in r["blockers"]]
 
 
-def test_without_a_six_month_average_the_deal_cannot_be_judged_and_a_person_must_look():
+def test_without_a_six_month_average_the_deal_cannot_be_judged_and_that_is_a_note_not_a_denial():
+    """AMENDED (Part F, entry 103 corrected: Jacob, 2026-11-15, a company with fewer than 126 bars must not be denied): the finding stays as a plain warning and asks for nobody."""
     r = review(captured("PG_open"), own={})["PG"]
-    assert r["value"]["deal"] == "unknown" and "value_not_assessable" in [w["code"] for w in r["warnings"]] and r["requires_human"] and "value_not_assessable" in r["requires_human_reasons"]
+    assert r["value"]["deal"] == "unknown" and "value_not_assessable" in [w["code"] for w in r["warnings"]] and not r["requires_human"] and r["requires_human_reasons"] == [] and r["approved"]
 
 
 # ---------------------------------------------------------------- the model's words and the principles
@@ -409,3 +412,54 @@ def test_every_review_is_appended_as_one_line_to_the_reviews_ledger_and_the_file
 def test_the_default_ledger_is_the_reviews_file_not_the_advisors_and_not_data_processed():
     path = Critic().ledger.path
     assert path == REPO_ROOT / "data" / "ledger" / "reviews.jsonl" and path.name != "recommendations.jsonl" and "processed" not in path.parts and "historical" not in path.parts
+
+
+# ---------------------------------------------------------------- the Critic judges recommendations to buy and nothing else (entry 105)
+
+def test_the_critic_refuses_to_review_a_record_that_is_not_a_purchase_and_asks_the_data_clerk_nothing():
+    """Jacob (2026-11-15): *"The Critic never will approve or deny (judge) such a decision that affects the User's holdings."* The real PG_open record made a `reduce`, an `add` and a `hold` is not reviewed: it is a
+    `record_defect` ("the Critic does not judge a holding or a sale"), denied, with no check made and no request to the Data Clerk."""
+    for action in ("reduce", "add", "hold", "avoid"):
+        order = tamper_order("PG_open", **{"action.action": action})
+        clerk = FakeClerk(order)
+        Critic(model=ReviewerModel(), clerk=clerk, ledger=MemoryLedger()).review_recommendations(order, view(), NOW)
+        [r] = order.reviews
+        assert not r["approved"] and r["action"] == action and [b["code"] for b in r["blockers"]] == ["record_defect"] and r["score"] == 0 and clerk.asked == []
+        assert f"The record is not a recommendation to buy (its action is '{action}'): the Critic does not judge a holding or a sale." == r["blockers"][0]["message"]
+        Review.model_validate(r)
+
+
+def test_a_record_that_says_something_is_held_is_refused_with_the_reason_and_a_version_2_record_is_read():
+    """A record that carries the user's holding (`held_shares`, `cost_basis`, `unrealized_pct`) is a defect: the record models refuse it. The same real record with the retired keys at their not-held values (what a version 2
+    record has: `held_shares` 0, null cost basis and gain, `portfolio_fit` with its two numbers null and its note) is read and reviewed as before."""
+    held = review(tamper_order("PG_open", **{"action.held_shares": 12, "action.cost_basis": 150.0}))["PG"]
+    assert not held["approved"] and held["blockers"][0]["code"] == "record_defect" and "the record says something is held (held_shares 12)" in held["blockers"][0]["message"]
+    order = captured("PG_open")
+    record = tamper(order.recommendations[0], **{"action.held_shares": 0, "action.cost_basis": None, "action.unrealized_pct": None})
+    record["portfolio_fit"] = {"sector_weight_after": None, "correlation_to_portfolio_63d": None, "note": "two names are one bet"}
+    record.pop("concentration")
+    order.recommendations[0] = record
+    old = review(order)["PG"]
+    assert old["approved"] and old["blockers"] == []
+    for bad in ({"sector_weight_after": 0.3, "correlation_to_portfolio_63d": None, "note": None}, "a note"):
+        order = captured("PG_open")
+        order.recommendations[0] = {**{k: v for k, v in order.recommendations[0].items() if k != "concentration"}, "portfolio_fit": bad}
+        r = review(order)["PG"]
+        assert not r["approved"] and "the record carries portfolio information" in r["blockers"][0]["message"]
+
+
+def test_no_module_of_the_critic_reads_what_the_user_holds_or_paid():
+    """The Critic's rule that it is never given the portfolio (below) now covers the record too: no Critic module names `held_shares`, `cost_basis`, `unrealized_pct`, `held` or `portfolio_fit`, and none switches on an
+    action other than `open`."""
+    names = {"held_shares", "cost_basis", "unrealized_pct", "held", "portfolio_fit", "holding_action", "reduce", "adding_above_cost", "add_above_cost"}
+    found = []
+    for path in sorted((REPO_ROOT / "prometheus" / "agents" / "critic").glob("*.py")) + [REPO_ROOT / "prometheus" / "prompts" / "critic.py"]:
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+        docs = {id(n.body[0].value) for n in ast.walk(tree) if isinstance(n, (ast.Module, ast.ClassDef, ast.FunctionDef)) and n.body and isinstance(n.body[0], ast.Expr) and isinstance(n.body[0].value, ast.Constant)}
+        for node in ast.walk(tree):
+            word = (node.id if isinstance(node, ast.Name) and node.id != "held" else node.attr if isinstance(node, ast.Attribute) else node.arg if isinstance(node, ast.arg) and node.arg != "held"
+                    else node.value if isinstance(node, ast.Constant) and isinstance(node.value, str) and id(node) not in docs else None)      # a local variable called `held` is chart.py's "the pattern held", not a holding
+            if word in names:
+                found.append((path.name, word))
+    assert found == []
+    assert "add_above_cost" not in json.loads((REPO_ROOT / "configs" / "critic_v1.json").read_text())["value"]

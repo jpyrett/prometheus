@@ -9,7 +9,7 @@ risk tolerance (age and horizon included), never how much to buy: it does not kn
     risk score            0 to 100 (higher is riskier): five measures (volatility, drawdown, beta, ATR and the flags; the company's size, its liquidity and the stop's distance are NOT measures: design choices entries 92 and 97), each `clip((x - safe) / (risky - safe), 0, 1)` times its weight; a measure that could not be made counts `unknown_points`
     risk level            low, medium, high or very_high from the score; very_high is allowed to nobody
 
-A recommendation is denied when its level is above what the effective tolerance allows, or when the profile excludes the symbol, its sector or its price. A SELL (`reduce`) lowers risk and is not judged here.
+A recommendation is denied when its level is above what the effective tolerance allows, or when the profile excludes the symbol, its sector or its price. (The Critic judges recommendations to buy and nothing else: entry 105.)
 """
 from dataclasses import dataclass, field
 
@@ -86,10 +86,6 @@ def assess(rec: Recommendation, view: RiskView, fetched: dict | None, price: flo
     effective, why = effective_tolerance(view, config)
     allowed = config.allowed[effective]
     out.detail = RiskDetail(tolerance_stated=stated, tolerance_effective=effective, allowed_level=allowed)
-    action = rec.action.action
-    if action not in ("open", "add"):
-        out.applicable = False
-        return out
     if why:
         out.findings.append(info("risk_fit", "tolerance_capped", f"Risk tolerance {stated} is lowered to {effective} by {why}.", value=effective))
 

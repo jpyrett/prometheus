@@ -1,0 +1,92 @@
+/* The tokens of design/ui_v1_mockup.html, unchanged. Ember (--brand) is for exactly two things: Go! and whatever is busy.
+   Green is good money and done; red a denial, a rejection, a loss; yellow only "this waits for you"; blue information; grey neutral.
+   One hue per agent, used as the small dot beside its name and for the Critic's bars. */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #080d18;
+  --bg-glow: radial-gradient(1100px 420px at 8% -8%, rgba(255, 107, 44, 0.11), transparent 60%), radial-gradient(900px 460px at 100% -5%, rgba(90, 162, 255, 0.09), transparent 60%);
+  --surface-1: #0f1726; /* cards */
+  --surface-2: #141e31; /* inputs, table heads, insets */
+  --surface-3: #1b2740; /* hover, selected */
+  --border: #1f2c44;
+  --border-strong: #2e4063;
+  --text: #e9eef7;
+  --text-2: #a7b4ca;
+  --text-3: #8390a7; /* the mockup's #6b7b96 is 4.2:1 on the card: lifted to pass AA for text (spec 5.5) */
+  --brand: #ff6b2c; /* ember: the one action colour (Go!, the busy stage) */
+  --brand-2: #ffb23f;
+  --brand-bg: rgba(255, 107, 44, 0.13);
+  --brand-glow: rgba(255, 107, 44, 0.35);
+  --on-brand: #1b0e05;
+  --on-pos: #04150e;
+  --pos: #22d39a;
+  --pos-bg: rgba(34, 211, 154, 0.13);
+  --neg: #ff5d6e;
+  --neg-bg: rgba(255, 93, 110, 0.13);
+  --warn: #ffc53d;
+  --warn-bg: rgba(255, 197, 61, 0.13); /* only "waiting for you" */
+  --info: #5aa2ff;
+  --info-bg: rgba(90, 162, 255, 0.13);
+  --neutral: #8e9bb3;
+  --neutral-bg: rgba(142, 155, 179, 0.15);
+  --pos-ink: var(--pos);
+  --neg-ink: var(--neg);
+  --warn-ink: var(--warn);
+  --info-ink: var(--info);
+  --brand-ink: var(--brand);
+  --neutral-ink: var(--neutral);
+  --am: #5aa2ff;
+  --clerk: #a78bfa;
+  --advisor: #2dd4da;
+  --critic: #f472b6;
+  --trader: #a3e635; /* one hue per agent */
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 10px 30px rgba(0, 0, 0, 0.28);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f3f5f9;
+  --bg-glow: radial-gradient(1100px 420px at 8% -8%, rgba(240, 90, 26, 0.07), transparent 60%), radial-gradient(900px 460px at 100% -5%, rgba(37, 99, 235, 0.06), transparent 60%);
+  --surface-1: #ffffff;
+  --surface-2: #f1f4f9;
+  --surface-3: #e6ecf5;
+  --border: #dde4ee;
+  --border-strong: #c3cedf;
+  --text: #0e1726;
+  --text-2: #45526a;
+  --text-3: #606b7b; /* the mockup's #7a879c is 3.6:1 on white: darkened to pass AA for text (spec 5.5) */
+  --brand: #ee5a17;
+  --brand-2: #f59a23;
+  --brand-bg: rgba(238, 90, 23, 0.11);
+  --brand-glow: rgba(238, 90, 23, 0.3);
+  --on-brand: #1b0e05; /* the mockup's white on ember is 3.4:1: the dark label of the dark theme passes AA */
+  --on-pos: #ffffff;
+  --pos: #0c9a6b;
+  --pos-bg: rgba(12, 154, 107, 0.11);
+  --neg: #d6334a;
+  --neg-bg: rgba(214, 51, 74, 0.1);
+  --warn: #b4740b;
+  --warn-bg: rgba(180, 116, 11, 0.12);
+  --info: #2563eb;
+  --info-bg: rgba(37, 99, 235, 0.1);
+  --neutral: #64728a;
+  --neutral-bg: rgba(100, 114, 138, 0.12);
+  /* the same colours as TEXT (badges, words): darker than the fills so they pass AA on white and on their own tint */
+  --pos-ink: #096f4d;
+  --neg-ink: #af2a3d;
+  --warn-ink: #855608;
+  --info-ink: #2056cc;
+  --brand-ink: #a73f10;
+  --neutral-ink: #546074;
+  --am: #2563eb;
+  --clerk: #7c3aed;
+  --advisor: #0891b2;
+  --critic: #db2777;
+  --trader: #4d7c0f;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 6px 20px rgba(16, 24, 40, 0.05);
+}

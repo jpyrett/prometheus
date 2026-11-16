@@ -60,8 +60,7 @@ def composite_of(families) -> float | None:
 def check(rec: Recommendation, order: WorkOrder, advisor: AdvisorConfig, duplicate: bool = False, max_feature_age_days: int = 5) -> IntegrityResult:
     """Every integrity check of one record. `duplicate` says the order holds another record of the same symbol and action."""
     r = IntegrityResult()
-    ident, action, trade, ranking, agreement, features = rec.identity, rec.action.action, rec.trade, rec.ranking, rec.agreement, rec.features
-    opening = action in ("open", "add")
+    ident, trade, ranking, agreement, features = rec.identity, rec.trade, rec.ranking, rec.agreement, rec.features
     as_of = date.fromisoformat(ident.as_of_utc[:10])
 
     # ---- complete
@@ -71,22 +70,21 @@ def check(rec: Recommendation, order: WorkOrder, advisor: AdvisorConfig, duplica
     r.check("identity.request", ident.request_id == order.request_id, f"the record is from request {ident.request_id}, not {order.request_id}")
     r.check("config.version", rec.audit.config_version == advisor.config_version,
             f"the record was written under Advisor config {rec.audit.config_version!r} and the Advisor's config is {advisor.config_version!r}: its numbers cannot be worked out again")
-    r.check("stance.action", not opening or (ranking.stance == "bullish" and ranking.composite is not None and ranking.composite > 0),
-            f"a new position or an addition needs a bullish stance from a strategy with an edge above 0 (stance {ranking.stance}, composite {ranking.composite})")
-    r.check("order.unique", not duplicate, f"the order holds two {action} records of {rec.symbol}")
+    r.check("stance.action", ranking.stance == "bullish" and ranking.composite is not None and ranking.composite > 0,
+            f"a recommendation to buy needs a bullish stance from a strategy with an edge above 0 (stance {ranking.stance}, composite {ranking.composite})")
+    r.check("order.unique", not duplicate, f"the order holds two records of {rec.symbol}")
 
     # ---- the plan
-    if opening:
-        zone, mid = trade.entry_zone, trade.entry_mid
-        r.check("trade.entry", bool(zone) and len(zone) == 2 and mid is not None and zone[0] < mid < zone[1], "there is no entry zone around the entry mid")
-        r.check("trade.stop", trade.stop_price is not None and mid is not None and trade.stop_price < mid, "the stop is not under the entry")
-        r.check("trade.time_stop", bool(trade.time_stop_date) and date.fromisoformat(trade.time_stop_date) > as_of, "the time stop is not in the future")
-        r.check("trade.order_style", bool(trade.order_style), "there is no order style")
-        rules = {rule["kind"]: rule["value"] for rule in trade.invalidation}
-        r.check("trade.invalidation", {"price_below", "days_elapsed", "event_class"} <= set(rules) and rules.get("price_below") == trade.stop_price,
-                "the invalidation rules are missing, or the price rule is not the stop")
-        r.check("recompute.stop", trade.stop_price is not None and trade.stop_distance is not None and mid is not None and close(trade.stop_price, mid - trade.stop_distance, 0.011),
-                "stop_price is not entry_mid - stop_distance")
+    zone, mid = trade.entry_zone, trade.entry_mid
+    r.check("trade.entry", bool(zone) and len(zone) == 2 and mid is not None and zone[0] < mid < zone[1], "there is no entry zone around the entry mid")
+    r.check("trade.stop", trade.stop_price is not None and mid is not None and trade.stop_price < mid, "the stop is not under the entry")
+    r.check("trade.time_stop", bool(trade.time_stop_date) and date.fromisoformat(trade.time_stop_date) > as_of, "the time stop is not in the future")
+    r.check("trade.order_style", bool(trade.order_style), "there is no order style")
+    rules = {rule["kind"]: rule["value"] for rule in trade.invalidation}
+    r.check("trade.invalidation", {"price_below", "days_elapsed", "event_class"} <= set(rules) and rules.get("price_below") == trade.stop_price,
+            "the invalidation rules are missing, or the price rule is not the stop")
+    r.check("recompute.stop", trade.stop_price is not None and trade.stop_distance is not None and mid is not None and close(trade.stop_price, mid - trade.stop_distance, 0.011),
+            "stop_price is not entry_mid - stop_distance")
 
     # ---- the composite edge, and the blend the score is made of
     expected = composite_of(rec.families)
@@ -139,9 +137,8 @@ def check(rec: Recommendation, order: WorkOrder, advisor: AdvisorConfig, duplica
     r.check("features.fresh", not stale, f"older than {max_feature_age_days} days at the run date: {stale[:4]}")
 
     # ---- gates, thesis, audit
-    if opening:
-        failed_gates = [g.gate for g in rec.gates if not g.passed and g.gate in GATES]
-        r.check("gates", not failed_gates, "a gate failed for a new position: " + ", ".join(failed_gates))
+    failed_gates = [g.gate for g in rec.gates if not g.passed and g.gate in GATES]
+    r.check("gates", not failed_gates, "a gate failed for a recommendation to buy: " + ", ".join(failed_gates))
     thesis = rec.thesis
     r.no_thesis = not (thesis.thesis or thesis.thesis_error)
     if thesis.thesis:

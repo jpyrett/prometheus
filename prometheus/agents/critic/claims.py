@@ -62,5 +62,5 @@ def supporting(claims: list[Claim], direction: str) -> list[Claim]:
 
 
 def stance_direction(rec: Recommendation) -> str:
-    """The direction the recommendation argues: a reduction argues bearish, everything else bullish (the Advisor is long only)."""
-    return "bearish" if rec.action.action == "reduce" else "bullish"
+    """The direction a recommendation argues: bullish, always (the Advisor recommends purchases only and the Critic judges nothing else: entry 105)."""
+    return "bullish"

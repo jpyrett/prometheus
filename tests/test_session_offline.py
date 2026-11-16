@@ -2,6 +2,7 @@
 many companies are scored, and the shape of the graph. Everything with agents is in `tests/test_end_to_end_live.py` (real agents, real data, opt-in); there is no stand-in agent and no invented price here.
 """
 import re
+from decimal import Decimal
 
 import pytest
 
@@ -64,7 +65,7 @@ def test_exactly_fifteen_is_not_a_cut():
     (["--prompt", "x", "--name", "A", "--age", "40", "--risk", "low", "--cash", "100", "--mode", "auto"], "invalid choice"),
     (["--prompt", "x", "--name", "A", "--age", "40", "--risk", "moderate", "--cash", "100", "--mode", "manual"], "invalid choice"),
     (["--prompt", "x", "--account", "5", "--name", "A"], "do not give --name"),
-    (["--prompt", "x", "--account", "5", "--auto-min-score", "101"], "--auto-min-score must be from 0 to 100"),
+    (["--prompt", "x", "--account", "5", "--auto-min-score", "70"], "unrecognized arguments: --auto-min-score"),      # entry 104: there is no second mark any more, so the flag is gone (it was refused outside 0 to 100)
     (["--prompt", "x", "--account", "5", "--default-count", "11"], "--default-count must be from 1 to 10"),
     ([], "--prompt"),
 ])
@@ -134,7 +135,7 @@ def test_a_request_whose_account_cannot_be_opened_stops_the_desk_at_its_first_no
     """The profile file is missing: the Account Manager node reports it before any model is asked or any data is read."""
     from prometheus.agents.account_manager.account_manager import AccountManager
     from prometheus.common.portfolio import Portfolio
-    state = desk.run_desk({"ask": {"text": "I want to buy oil stocks"}, "account": {"profile": "/nonexistent/profile.json", "portfolio": Portfolio(user="Jacob Pyrett", cash_avail=1.0)}},
+    state = desk.run_desk({"ask": {"text": "I want to buy oil stocks"}, "account": {"profile": "/nonexistent/profile.json", "portfolio": Portfolio(user="Jacob Pyrett", cash_avail=Decimal("1.0"))}},
                           clerk_factory=lambda order: None, advisor_factory=lambda order: None, with_critic=True, funds_factory=lambda: AccountManager(model=object(), model_id="account-book"))
     assert state["order"] is None and state["plan"] is None and state["path"] == ["account_manager"] and "the profile file does not exist" in state["errors"][0]
 

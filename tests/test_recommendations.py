@@ -1,6 +1,7 @@
 """Tests for prometheus.application.recommendations (design choices entry 53): classify a request, run the steps, print the report. The Data Clerk and the model are fakes; the Finnhub rows of the
 company lookups are REAL (tests/fixtures/finnhub_pizza_rows.json); the Advisor is the real one on fake numbers, so the ranking and the report are the real code's."""
 import json
+from decimal import Decimal
 from pathlib import Path
 
 import pytest
@@ -152,7 +153,7 @@ def test_symbols_company_and_phrase_use_the_right_case_and_only_a_phrase_calls_t
 def test_nothing_is_fetched_without_fetch_and_with_it_the_holdings_get_their_bars():
     quiet, clerk, _ = go("Pizza")
     assert quiet.refresh == [] and not any(a[0] == "refresh" for a in clerk.asked)
-    portfolio = Portfolio(user="t", cash_avail=500.0, positions=[Position(symbol="MCD", shares=3, cost_basis=100.0)])
+    portfolio = Portfolio(user="t", cash_avail=Decimal("500.00"), positions=[Position(symbol="MCD", shares=3, cost_basis=Decimal("100"))])
     fetched, clerk, _ = go("Pizza", fetch=True, portfolio=portfolio, news_days=10, filings_days=200, replies=(plan_reply(), theses("DPZ", "PZZA", "YUM")), clerk=Clerk({**METRICS, "MCD": full_metrics()}))
     call = next(a for a in clerk.asked if a[0] == "refresh")
     assert call[1] == ["DPZ", "PZZA", "YUM"] and call[2] == {"news_days": 10, "filings_days": 200, "bars_for": ["MCD"]} and len(fetched.refresh) == 2
@@ -195,11 +196,14 @@ def test_a_company_that_is_not_recommended_is_in_the_ranking_with_its_reason_and
     assert "RECOMMENDATIONS  (1 of the top 5 asked for; the others did not pass" in text
 
 
-def test_the_holdings_are_reviewed_in_their_own_section_and_are_not_ranked_with_the_new_ideas():
-    portfolio = Portfolio(user="t", cash_avail=500.0, positions=[Position(symbol="MCD", name="McDonald's Corp", shares=10, cost_basis=40.0)])
-    result, _, _ = go("Pizza", portfolio=portfolio, clerk=Clerk({**METRICS, "MCD": full_metrics(cfo_negative_with_profit=True, last_close=300.0)}), replies=(plan_reply(), theses("MCD", "DPZ", "PZZA", "YUM")))
+def test_a_company_the_user_holds_is_ranked_like_any_other_and_the_report_has_no_holdings_section():
+    """AMENDED (entry 105). This test gave the run a portfolio holding MCD, which the Advisor reviewed first (a `reduce`, shown in a section "YOUR HOLDINGS (reviewed before the new ideas)") and left out of the ranking.
+    The Advisor is given no portfolio: the report has no such section, the run's portfolio is for the Account Manager alone, and a held company named in the request is ranked as any other."""
+    portfolio = Portfolio(user="t", cash_avail=Decimal("500.00"), positions=[Position(symbol="MCD", name="McDonald's Corp", shares=10, cost_basis=Decimal("40"))])
+    result, _, _ = go("Pizza", portfolio=portfolio, clerk=Clerk({**METRICS, "MCD": full_metrics(cfo_negative_with_profit=True, last_close=300.0)}), replies=(plan_reply(), theses("DPZ", "PZZA", "YUM")))
     text = rec.report(result)
-    assert [r["symbol"] for r in rec.ranking_rows(result)] == ["DPZ", "PZZA", "YUM"] and "YOUR HOLDINGS (reviewed before the new ideas)" in text and "MCD     REDUCE" in text
+    assert [r["symbol"] for r in rec.ranking_rows(result)] == ["DPZ", "PZZA", "YUM"] and "YOUR HOLDINGS" not in text and "REDUCE" not in text and "MCD" not in text
+    assert {r["action"]["action"] for r in result.order.recommendations} == {"open"}
 
 
 def test_a_model_that_fails_leaves_the_numbers_and_says_the_thesis_is_not_written():
@@ -392,8 +396,8 @@ def test_a_model_call_that_answers_or_fails_in_time_behaves_as_before():
 def test_only_subject_leaves_out_the_symbols_the_sources_name_but_nobody_asked_for():
     from prometheus.agents.advisor.candidates import collect_candidates
     order = ready_order(subject=("DPZ",), sources=[(1, "DPZ", "Domino's Pizza (DPZ) lifted its outlook.", "2026-10-22T10:00:00Z"), (2, "WEN", "Wendy's (WEN) is another burger chain.", "2026-10-22T10:00:00Z")])
-    everyone, _ = collect_candidates(order, EMPTY_PORTFOLIO, "industry", None, 15, 3)
-    named, _ = collect_candidates(order, EMPTY_PORTFOLIO, "industry", None, 15, 3, only_subject=True)
+    everyone, _ = collect_candidates(order, "industry", None, 15, 3)
+    named, _ = collect_candidates(order, "industry", None, 15, 3, only_subject=True)
     assert [c["symbol"] for c in everyone] == ["DPZ", "WEN"] and [c["symbol"] for c in named] == ["DPZ"]
 
 

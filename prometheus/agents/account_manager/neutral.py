@@ -1,38 +1,49 @@
-"""A NEUTRAL RECOMMENDATION IS APPROVED (design choices entry 91; Jacob, 2026-11-15: *"A neutral recommendation is same as Approved"*, with `ALLOW_NEUTRAL_RECOMMENDATIONS=true` in `.env`).
+"""A NEUTRAL RECOMMENDATION IS AN APPROVAL (design choices entries 91 and 107; Jacob, 2026-11-15: *"A neutral recommendation is same as Approved"*, with `ALLOW_NEUTRAL_RECOMMENDATIONS=true`, which the page's "Neutral
+recommendations as passes" box sets for a run).
 
-    names = neutral_candidates(order)                                                              # the companies the user named that the Advisor scored NEUTRAL; empty unless the setting is on
-    decide_neutral(order, portfolio, names, mode, prices, now, valid_minutes, approver, budget)    # one trade decision for each, appended to `order.trade_decisions`
+Money is `decimal.Decimal` (design choices entry 112): the prices the sizing takes are Decimals (`purchases_for`), a decision's `shares` and `est_cost` start as Decimal zeros, and the Advisor's score, which only orders the companies, stays a float (a measurement).
+
+    names = neutral_candidates(order)                                            # every company the Advisor scored NEUTRAL, best score first; empty unless the setting is on
+    chosen, not_needed = choose(names, approved, count)                          # the number the user asked for is kept
+    purchases = purchases_for(order, chosen, prices, after_rank)                 # the plain numbers the sizing takes, ranked after the approved purchases
+    decision = decision_for(candidate, purchase, mode, now, valid_minutes)       # its trade decision, not sized yet: `decisions.decide_trades` sizes it WITH the approved purchases
 
 THE SETTING. `ALLOW_NEUTRAL_RECOMMENDATIONS` (the environment, then `.env`; true, yes, on or 1; unset or anything else is false: nothing changes for anyone who does not set it) is read by the ACCOUNT MANAGER when it works with
-the work order's recommendation result (`AccountManager.decide_trades`). When it is true, a company that the user NAMED and that the Advisor scored NEUTRAL (no strategy passed, or no edge: it is on `order.candidates` with `stance`
-"neutral", no failed gate and not already held, `work_order.is_neutral_candidate`) counts as approved, and the Account Manager gives the Trader permission to buy it: a trade decision with `origin: "neutral"`, which
-`work_order.verify_trade` accepts only while the work order holds that Advisor record. A neutral company has no entry plan, no stop and no Critic review, so the permission is the Advisor's own neutral score, nothing is
+the work order's recommendation result (`AccountManager.decide_trades`). When it is true, a company that the Advisor scored NEUTRAL (no strategy passed, or no edge: it is on `order.candidates` with `stance` "neutral" and no
+failed gate, `work_order.is_neutral_candidate`) counts as an APPROVAL, in both modes, WHOEVER NAMED THE COMPANY (entry 107: it used to be only a company the user typed; a theme's companies, found by the Data Clerk, did not count,
+or rather all counted as "named" and were bought in addition to the number asked for). The Account Manager gives the Trader permission to buy it: a trade decision with `origin: "neutral"`, which `work_order.verify_trade`
+accepts only while the work order holds that Advisor record and no Critic review beside it. A neutral company has no entry plan, no stop and no Critic review, so the permission is the Advisor's own neutral score, nothing is
 forged (no review is made up), and the trade is a MARKET purchase at the quote the Account Manager asked of the Data Clerk, like a direct order.
 
 WHAT STAYS. A BEARISH stance is not a recommendation and trades nothing. A Critic DENIAL is final: a bullish company whose review denied it (risk above the profile, a falling knife) is never turned into an approval by this
-setting, because only a company the Advisor did NOT recommend can be neutral. A gate that failed (stale data, a red flag) is not a stance and stops the company. Only companies the user named count (a theme is not bought
-blindly: a company the Advisor discovered is never bought as neutral).
+setting, because only a company the Advisor did NOT recommend can be neutral. A gate that failed (stale data, a red flag) is not a stance and stops the company.
 
-HOW MUCH (Jacob, 2026-11-15: no profile limit applies, split evenly). The only check is that the funds cover the order. The neutral companies share the money in EQUAL DOLLARS, in whole shares (`sizing.size_purchases(...,
-allocation="even")`, over the cash, or the budget the user gave): one neutral company gets all of it. No limit of the profile exists to cap it, and the Account Manager does no risk management: it asks the Data Clerk for the
-price, decides, and hands the order to the Trader, which meets the cash as it is at the time of the trade.
+THE NUMBER THE USER ASKED FOR IS KEPT (entry 107). When the request said how many companies ("the 3 most recommended": the form's `count`), at most that many are bought: the Critic's approved recommendations first, in rank
+order, then the neutral companies, the Advisor's best score first, until the number is reached. A denied recommendation does not count. A neutral company beyond the number gets NO decision, and the Account Manager tells the
+user it was neutral and not needed (`not_needed_line`). When the request gave no number, nothing is cut.
 
-ASK OR AUTO. In AUTO mode the decision is `yes_auto` (the setting is the user's policy) and nobody is asked how much. In ASK mode, when the request did not say how much ("I want to buy MU and AMD") and somebody is at the keyboard,
-the Account Manager first ASKS the user for the amount, BEFORE it sizes anything, with the same bounded ReAct questions as for every approved purchase (`agents/account_manager/clarify.py`, entry 85; ONE set of questions covers the
-Critic's approved purchases and these): a percentage of the account, dollars, a number of shares or "as much as I can"; the shares the user asks for are what is proposed (`wanted`: exactly those, the cash being the only thing
-that can cut them). It then asks about each neutral purchase, as about any purchase that waits for them (no answer: `pending_user`, not traded).
+HOW MUCH (Jacob, 2026-11-15: no profile limit applies). The only check is that the funds cover the order. A neutral purchase is the same thing as an approved one to the Account Manager: ONE call of `sizing.size_purchases`
+(in `decisions.decide_trades`) over the approved purchases and then the neutral ones, in that order, so "split it evenly among the 3" is three equal amounts (the even split spends what is left over, entry 108) and the default
+is one round-robin over all of them (entry 106), a run of neutral companies alone included (entry 109; entry 91 had given a run of neutral companies alone equal dollars, "Use 1", MU 32 shares and AMD 46 in the real session of
+`pam_smith_neutral.json`: Jacob, 2026-11-15: *"use round-robin for neutral-only runs too. Use split evenly if the user specifies it in the prompt"*). There is no default of the neutral kind. No limit of the profile exists to
+cap a purchase, and the Account Manager does no risk management: it asks the Data Clerk for the price, decides, and hands the order to the Trader, which meets the cash as it is at the time of the trade.
+
+ASK OR AUTO. In AUTO mode the decision is `yes_auto` (the setting is the user's policy) and nobody is asked how much. In ASK mode, when the request did not say how much ("I want to buy MU and AMD") and somebody is at the
+keyboard, the Account Manager first ASKS the user for the amount, BEFORE it sizes anything, with the same bounded ReAct questions as for every approved purchase (`agents/account_manager/clarify.py`, entry 85; ONE set of
+questions covers the Critic's approved purchases and these): a percentage of the account, dollars, a number of shares or "as much as I can"; the shares the user asks for are each company's own cap (`wanted`). It then asks
+about each purchase, approved or neutral, in one proposal (no answer: `pending_user`, not traded).
 Nothing here calls a model or an API: the prices are given.
 """
 from datetime import datetime, timedelta
+from decimal import Decimal
 
 from prometheus.agents.account_manager import sizing
 from prometheus.agents.critic.common import utc_text
-from prometheus.common.portfolio import Portfolio
+from prometheus.common import shares as sh
 from prometheus.common.work_order import NEUTRAL, WorkOrder, is_neutral_candidate
 from prometheus.rag.config import setting
 
 TRUE_WORDS = ("1", "true", "yes", "on")
-MODES = ("ask", "auto")
 
 
 def allow_neutral_recommendations() -> bool:
@@ -41,95 +52,82 @@ def allow_neutral_recommendations() -> bool:
 
 
 def neutral_candidates(order: WorkOrder) -> list[dict]:
-    """The Advisor's candidate records of the companies the user named that it scored neutral (`work_order.is_neutral_candidate`), best score first as the Advisor listed them; EMPTY when the setting is off. Only an order
-    the Advisor has answered (`recommended`, or `reviewed` by the Critic) has any."""
+    """The Advisor's candidate records of EVERY company it scored neutral, whoever named it (`work_order.is_neutral_candidate`), best score first (a tie keeps the Advisor's own order); EMPTY when the setting is off. Only an
+    order the Advisor has answered (`recommended`, or `reviewed` by the Critic) has any."""
     if not allow_neutral_recommendations() or order.status not in ("recommended", "reviewed"):
         return []
-    return [c for c in order.candidates if is_neutral_candidate(c)]
+    rows = [c for c in order.candidates if is_neutral_candidate(c)]
+    return sorted(rows, key=lambda c: -(c["score"] if isinstance(c.get("score"), (int, float)) and not isinstance(c.get("score"), bool) else -1))
+
+
+def choose(names: list[dict], approved: int, count: int | None) -> tuple[list[dict], list[dict]]:
+    """(the neutral companies that are bought, the ones that are not needed). `approved` is how many purchases the Critic's approvals already make (a denied recommendation is not one) and `count` the number of companies the
+    request asked for (the form's own, None when the request gave none: then nothing is cut). The neutral companies fill what is left of the number, the Advisor's best score first."""
+    if count is None:
+        return list(names), []
+    room = max(0, count - approved)
+    return names[:room], names[room:]
+
+
+def not_needed_line(candidate: dict, count: int) -> str:
+    """What the Account Manager tells the user about a neutral company that the number asked for did not need."""
+    return (f"{candidate['symbol']} was scored neutral by the Advisor (score {candidate.get('score', '-')}) and counts as approved, but it is not needed: {count} compan{'ies were' if count != 1 else 'y was'} asked for, "
+            f"and the approved ones and the better neutral ones make them")
 
 
 def record_id_of(order: WorkOrder, number: int) -> str:
     return f"neutral-{order.request_id}-{number}"
 
 
-def purchases_for(order: WorkOrder, names: list[dict], prices: dict[str, float]) -> list[sizing.Purchase]:
-    """The neutral companies as the plain numbers the sizing takes: one purchase for each of `names`, numbered from 1 in the Advisor's order (`record_id_of`), at the Data Clerk's price (None when it had none). The sizing
-    questions of Ask mode (`clarify.py`) and `decide_neutral` work over the SAME purchases, so the shares the user asks for land on the right company."""
-    return [sizing.Purchase(record_id=record_id_of(order, n), symbol=c["symbol"], action="open", price=prices.get(c["symbol"]), rank=n) for n, c in enumerate(names, 1)]
+def purchases_for(order: WorkOrder, names: list[dict], prices: dict[str, Decimal], after_rank: int = 0) -> list[sizing.Purchase]:
+    """The neutral companies as the plain numbers the sizing takes: one purchase for each of `names`, numbered from 1 in the order given (`record_id_of`), at the Data Clerk's price (None when it had none), RANKED AFTER the
+    approved purchases (`after_rank` is the highest rank of those: the sizing visits the purchases in rank order, so the approved ones come first and then the neutral ones, best score first). The sizing questions of Ask mode
+    (`clarify.py`) and `decisions.decide_trades` work over the SAME purchases, so the shares the user asks for land on the right company."""
+    return [sizing.Purchase(record_id=record_id_of(order, n), symbol=c["symbol"], action="open", price=prices.get(c["symbol"]), rank=after_rank + n) for n, c in enumerate(names, 1)]
 
 
-def _confirmation_card(candidate: dict, decision: dict, cash: float) -> dict:
+def confirmation_card(candidate: dict, decision: dict, cash: Decimal) -> dict:
+    """The card of a neutral purchase for the user (Ask mode): what the Advisor found and what would be placed."""
     text = "\n".join([f"      A NEUTRAL RECOMMENDATION, TREATED AS APPROVED (ALLOW_NEUTRAL_RECOMMENDATIONS): the Advisor found no strategy for {candidate['symbol']}",
                       f"        company     {candidate.get('company') or candidate['symbol']} ({candidate['symbol']}), Advisor score {candidate.get('score')}, stance neutral",
-                      f"        order       buy {decision['shares']:,} shares at ${decision['price']:,.2f} = about ${decision['est_cost']:,.2f}   (cash ${cash:,.2f})"])
-    return {"text": text, "symbol": candidate["symbol"], "shares": decision["shares"], "est_cost": decision["est_cost"], "action": decision["action"]}
+                      (f"        order       buy ${decision['dollars']:,.2f}: about {sh.text(decision['shares'])} shares at ${decision['price']:,.2f}   (cash ${cash:,.2f})" if decision.get("dollars") else
+                       f"        order       buy {sh.text(decision['shares'])} shares at ${decision['price']:,.2f} = about ${decision['est_cost']:,.2f}   (cash ${cash:,.2f})")])
+    return {"text": text, "symbol": candidate["symbol"], "shares": decision["shares"], "est_cost": decision["est_cost"], "dollars": decision.get("dollars"), "price": decision.get("price"), "action": decision["action"]}
 
 
-def decide_neutral(order: WorkOrder, portfolio: Portfolio, names: list[dict], mode: str, prices: dict[str, float], now: datetime, valid_minutes: int, approver=None, budget: float | None = None,
-                   wanted: dict[str, int] | None = None, allocation: str | None = None) -> list[dict]:
-    """One trade decision for each of `names` (see the module text), APPENDED to `order.trade_decisions`, and returned. `prices` is {symbol: the current price} from the Data Clerk. The neutral companies share the cash (or
-    `budget`) in equal dollars (`allocation` "even", or "round_robin" when the user asked for it), and, when the user named the shares they want in Ask mode (`wanted`, {record_id: whole shares}, from the Account
-    Manager's questions about how much, entry 85), exactly those shares (the cash is the only thing that can cut them) unless they also asked for a split. A company with no price is `no_system_denied`; one the even share cannot buy a share of is `no_funds`; anything else is `yes_auto` in Auto mode and, in Ask mode, what the user says
-    through `approver` (True `yes_user`, False `no_user_denied`, None `pending_user`). The profile is not read here and nothing limits a purchase but the cash."""
-    if mode not in MODES:
-        order.errors = [*order.errors, f"mode must be one of {', '.join(MODES)}"]
-        return []
-    purchases = purchases_for(order, names, prices)
-    try:
-        sized = sizing.size_purchases(purchases, portfolio.cash_avail, allocation=allocation or (None if wanted else "even"), budget=budget, wanted=wanted)
-    except ValueError as error:  # only a program gets these wrong: a message on the order, and nothing is bought
-        order.errors = [*order.errors, f"the neutral purchases could not be sized: {error}"]
-        return []
-    made = []
-    for candidate, purchase, size in zip(names, purchases, sized):
-        why = f"the Advisor scored {candidate['symbol']} NEUTRAL (score {candidate.get('score')}: {candidate.get('reason') or 'no strategy passed'}); ALLOW_NEUTRAL_RECOMMENDATIONS is on, so a neutral recommendation counts as approved"
-        decision = {"record_id": purchase.record_id, "review_id": None, "symbol": candidate["symbol"], "action": "open", "shares": 0, "est_cost": 0.0, "mode": mode, "will_trade": None, "funds_avail": None, "funds_note": None,
-                    "asked_user": False, "escalated": False, "reason": why, "decided_utc": utc_text(now), "size": None, "origin": NEUTRAL, "company": candidate.get("company"), "price": purchase.price,
-                    "valid_until_utc": utc_text(now + timedelta(minutes=valid_minutes))}
-        if purchase.price is None:
-            decision.update(will_trade="no_system_denied", funds_avail=False, reason=f"there is no current price for {candidate['symbol']}, so the order cannot be priced ({why})")
-        else:
-            decision["size"] = {"shares": size.shares, "caps": size.caps, "binding": size.binding, "notes": size.notes, "allocation": size.allocation, "asked": size.asked}
-            if size.shares < 1:
-                decision.update(will_trade="no_funds", funds_avail=False, reason=(size.notes[-1] if size.notes else "not even one share fits") + f" ({why})")
-            else:
-                how = (f"the {size.asked:,} shares the user asked for (at most)" if size.asked is not None else
-                       f"equal dollars with the other neutral companies, about ${size.target_dollars:,.2f} each" if size.allocation == "even" and size.target_dollars is not None else
-                       "a share of each neutral company in turn" if size.allocation == "round_robin" else "all the cash allows")
-                decision.update(shares=size.shares, est_cost=size.est_cost, funds_avail=True, balance={"mode": size.allocation, "target_dollars": size.target_dollars, "of": size.of},
-                                reason=why + f"; sized by {how}, no profile limit")
-                if mode == "auto":
-                    decision.update(will_trade="yes_auto")
-                else:
-                    decision["asked_user"] = approver is not None
-                    answer = None
-                    if approver is not None:
-                        try:
-                            answer = approver(_confirmation_card(candidate, decision, portfolio.cash_avail))
-                        except Exception as error:  # a prompt that failed: the user has not said yes
-                            order.errors = [*order.errors, f"the user could not be asked about {candidate['symbol']} ({type(error).__name__})"]
-                    decision.update(will_trade="yes_user" if answer is True else "no_user_denied" if answer is False else "pending_user",
-                                    reason=("the user approved: " if answer is True else "the user denied: " if answer is False else "waiting for the user: ") + decision["reason"])
-        made.append(decision)
-    order.trade_decisions = [*order.trade_decisions, *made]
-    return made
+def decision_for(candidate: dict, purchase: sizing.Purchase, mode: str, now: datetime, valid_minutes: int) -> dict:
+    """The trade decision of one neutral company, NOT SIZED YET (`decisions.decide_trades` sizes it with the approved purchases, in one call): `origin` "neutral", no review, its own `valid_until_utc`. A company with no price
+    is `no_system_denied` (nothing is bought that cannot be priced); any other is left for the decision table (`yes_auto` in Auto mode, the user's answer in Ask mode)."""
+    why = (f"the Advisor scored {candidate['symbol']} NEUTRAL (score {candidate.get('score')}: {candidate.get('reason') or 'no strategy passed'}); ALLOW_NEUTRAL_RECOMMENDATIONS is on, so a neutral recommendation counts as approved")
+    decision = {"record_id": purchase.record_id, "review_id": None, "symbol": candidate["symbol"], "action": "open", "shares": Decimal(0), "est_cost": Decimal("0.00"), "mode": mode, "will_trade": None, "funds_avail": None, "funds_note": None,
+                "asked_user": False, "reason": why + "; no profile limit applies", "decided_utc": utc_text(now), "size": None, "origin": NEUTRAL, "company": candidate.get("company"), "price": purchase.price,
+                "valid_until_utc": utc_text(now + timedelta(minutes=valid_minutes))}
+    if purchase.price is None:
+        decision.update(will_trade="no_system_denied", funds_avail=False, reason=f"there is no current price for {candidate['symbol']}, so the order cannot be priced ({why})")
+    return decision
 
 
 WORDS = {"yes_auto": "BUY (treated as approved, Auto)", "yes_user": "BUY (treated as approved, you said yes)", "pending_user": "WAITING for your yes", "no_user_denied": "NOT BOUGHT (you said no)",
          "no_funds": "NOT BOUGHT (no funds)", "no_system_denied": "NOT BOUGHT (no price)"}
 
 
+NOT_NEEDED = "neutral, not needed: "      # how a note on the work order's data begins when a neutral company was not needed (`not_needed_line`)
+
+
 def neutral_lines(order: WorkOrder) -> list[str]:
-    """The NEUTRAL section of a report (plain text from the records, no model): each company the Advisor scored neutral that the Account Manager treated as approved, with what it decided. Empty when there is none."""
+    """The NEUTRAL section of a report (plain text from the records, no model): each company the Advisor scored neutral that the Account Manager treated as approved, with what it decided, and the ones the number asked for did not
+    need (the notes the Account Manager left on the order's data). Empty when there is none."""
     rows = [d for d in order.trade_decisions if d.get("origin") == NEUTRAL]
-    if not rows:
+    unneeded = [n[len(NOT_NEEDED):] for n in (order.data.notes if order.data else []) if n.startswith(NOT_NEEDED)]
+    if not rows and not unneeded:
         return []
     by_symbol = {c["symbol"]: c for c in order.candidates if isinstance(c, dict)}
-    lines = ["NEUTRAL RECOMMENDATIONS  treated as approved (ALLOW_NEUTRAL_RECOMMENDATIONS is on): the Advisor found no strategy for them; equal dollars, no profile limit"]
+    lines = ["NEUTRAL RECOMMENDATIONS  treated as approved (ALLOW_NEUTRAL_RECOMMENDATIONS is on): the Advisor found no strategy for them; sized with the approved ones, no profile limit"]
     for d in rows:
         c = by_symbol.get(d["symbol"], {})
         lines.append(f"  {d['symbol']:<6} {(d.get('company') or c.get('company') or ''):<24} Advisor score {c.get('score', '-')} neutral   " + WORDS.get(d["will_trade"], d["will_trade"])
-                     + (f": {d['shares']:,} shares at ${d['price']:,.2f} = about ${d['est_cost']:,.2f}" if d["shares"] else ""))
+                     + ((f": ${d['dollars']:,.2f}, about {sh.text(d['shares'])} shares at ${d['price']:,.2f}" if d.get("dollars") else f": {sh.text(d['shares'])} shares at ${d['price']:,.2f} = about ${d['est_cost']:,.2f}") if d["shares"] else ""))
         if d["will_trade"] in ("no_funds", "no_system_denied"):
             lines.append(f"      {d['reason']}")
+    lines += [f"  {text}" for text in unneeded]
     return lines

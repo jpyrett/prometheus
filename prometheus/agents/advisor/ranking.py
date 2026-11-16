@@ -1,4 +1,4 @@
-"""From family scores to a ranked short list: the regime, the stance, the blend that ranks, the holdings pass, the cooldown, the sleeves and the diversity rule
+"""From family scores to a ranked short list: the regime, the stance, the blend that ranks, the cooldown, the sleeves and the diversity rule
 (Advisor v1 spec sections 9.5 to 9.8 and 12, design choices entry 51). Plain Python over numbers the families and the Data Clerk produced: nothing here calls a model.
 
 The chain for one symbol:
@@ -31,7 +31,6 @@ class Scored:
     symbol: str
     company: str | None
     origin: str
-    held: bool
     metrics: dict
     gates: GateResult
     quality: Quality
@@ -40,8 +39,6 @@ class Scored:
     signals: list[dict]
     votes: list[tuple[str, float]]                  # the text evidence: (direction, weight) per counted signal and event; a news item 1.0, a company's own words 0.5
     sector_etf: str | None = None
-    held_shares: int = 0
-    cost_basis: float | None = None
     theme_role: str | None = None
     # filled by rank_symbol
     composite: float | None = None
@@ -162,7 +159,8 @@ def invalidation_fired(rules: list[dict], metrics: dict | None, events: list[dic
 
 
 def cooldown_of(s: Scored, family: str | None, records: list[dict], today_iso: str) -> str | None:
-    """The record_id of an earlier recommendation that still stands: same symbol and family, its time stop not yet passed, and none of its invalidation rules fired. None when there is none."""
+    """The record_id of an earlier recommendation that still stands: same symbol and family, its time stop not yet passed, and none of its invalidation rules fired. None when there is none. (An older ledger line whose
+    action is `add` still counts: the ledger is about what was recommended before, not about what is held.)"""
     for record in reversed(records):
         trade = record.get("trade") or {}
         if family and trade.get("family") != family:
@@ -172,40 +170,6 @@ def cooldown_of(s: Scored, family: str | None, records: list[dict], today_iso: s
         if (trade.get("time_stop_date") or "") >= today_iso and not invalidation_fired(trade.get("invalidation") or [], s.metrics, s.events):
             return (record.get("identity") or {}).get("record_id")
     return None
-
-
-# ---------------------------------------------------------------- holdings
-
-def holding_action(s: Scored, records: list[dict], add_floor: float | None) -> tuple[str, str]:
-    """(action, reason) for a symbol the portfolio holds: the first rule that matches.
-    reduce  a red_flag gate failed; or a bearish class event of the last 10 bars; or an earlier recommendation's invalidation rule fired; or the family that recommended it before
-            no longer passes (None or bearish);
-    add     the stance is bullish and its blend would have made this run's list (`add_floor`: the lowest blend among the new ideas picked; None when there are none);
-    hold    everything else.
-    THE ADVISOR KNOWS NO POSITION SIZE (design choices entry 80). This rule used to ask also that one share was not too big for the account and that the position after adding stayed within 20% of the
-    user's total money: both needed a size and the user's money. They are gone. Whether the user's own limits leave room to add is the Account Manager's: `sizing.size_purchases` counts the shares already held
-    against the position limit, and an `add` that no limit leaves room for becomes `no_funds` with the reason, never a trade. A `reduce` carries no amount either: the Account Manager decides how
-    much to sell."""
-    gate = next((g for g in s.gates.gates if g.gate == "red_flag" and not g.passed), None)
-    if gate:
-        return "reduce", f"red_flag gate failed: {gate.note}"
-    bearish = next((e for e in s.events if e.get("direction") == "bearish" and e.get("age_bars") is not None and e["age_bars"] <= 10), None)
-    if bearish:
-        return "reduce", f"a bearish event in the last 10 bars: {bearish['class']}"
-    for record in reversed(records):
-        trade = record.get("trade") or {}
-        if (record.get("action") or {}).get("action") not in ("open", "add"):
-            continue
-        fired = invalidation_fired(trade.get("invalidation") or [], s.metrics, s.events)
-        if fired:
-            return "reduce", f"an earlier recommendation ({(record.get('identity') or {}).get('record_id')}) was invalidated: {', '.join(fired)}"
-        original = next((f for f in s.families if f.family == trade.get("family")), None)
-        if original is not None and original.computable and (not original.passed or original.direction == "bearish"):
-            return "reduce", f"the family that recommended it ({original.family}) no longer passes"
-        break
-    if s.stance == "bullish" and (add_floor is None or rank_value(s) >= add_floor):
-        return "add", f"bullish, blended score {s.score}, as good as this run's new ideas"
-    return "hold", "no reason to change the position" if s.stance != "bullish" else "bullish, but below this run's new ideas"
 
 
 # ---------------------------------------------------------------- the sleeve

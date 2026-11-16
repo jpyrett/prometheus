@@ -2,8 +2,8 @@
 
     theses = write_theses(model, records, run)         # {symbol: Thesis}: the model's three sentences and bullets, or None and the reason
 
-By the time the model is asked, the program has already decided everything: the action, the strategy, the stop, the target, the time stop. It has decided no amount: how much to buy or sell is the
-Account Manager's (entry 80), so the record the model reads has no size and the numbers the check allows have none. The model's job is only to EXPLAIN that in words, so it is given the record as a
+By the time the model is asked, the program has already decided everything: the strategy, the stop, the target, the time stop (every record is a recommendation to buy: the Advisor knows no holding, entry 105). It has decided no
+amount: how much to buy is the Account Manager's (entry 80), so the record the model reads has no size and the numbers the check allows have none. The model's job is only to EXPLAIN that in words, so it is given the record as a
 fixed-wording digest (`digest`, a template filled from the record, like `filing_signals.digest`) and may use nothing else.
 `model_score` is not in the digest: the model does not see its own earlier number again.
 
@@ -72,7 +72,7 @@ def digest(record: dict) -> str:
     """The record as fixed wording for the model (a template, no prose of a model): the decision, the numbers, the plan, what each family said, the evidence, and the refs it may cite."""
     ident, action, ranking, trade = record["identity"], record["action"], record["ranking"], record["trade"]
     lines = [f"RECORD {record['symbol']}" + (f" ({record['company']})" if record.get("company") else ""),
-             f"Decision: {action['action']} ({action['reason']}). Case {ident['case']}, regime {ident['regime']}" + (f" ({ident['regime_note']})" if ident.get("regime_note") else "") + "."]
+             f"Decision: buy ({action['reason']}). Case {ident['case']}, regime {ident['regime']}" + (f" ({ident['regime_note']})" if ident.get("regime_note") else "") + "."]
     lines.append(f"Score: {record['score']} of 100 (the blend of news, performance, historical metrics and filings), stance {ranking['stance']}. No return is promised: the record has no expected return.")
     if trade.get("entry_zone"):
         lines.append(f"Trade: strategy {trade['family'] or 'none'}; entry zone {trade['entry_zone'][0]} to {trade['entry_zone'][1]} ({trade['entry_basis']}); stop {_num(trade['stop_price'])}; target {_num(trade['target_price'])}; "

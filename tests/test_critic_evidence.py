@@ -261,10 +261,13 @@ def test_a_bearish_label_whose_quote_is_not_in_the_source_or_does_not_name_the_c
     assert r.detail.fresh[0].label == "none" and "fresh_negative_news" not in codes(r) and any("ignored" in d for d in run["dropped"])
 
 
-def test_a_reduction_looks_at_no_fresh_sources_and_has_no_counterfactual():
-    s = Setup(**{"action.action": "reduce", "trade.family": None})
-    r, _ = s.run(ReviewerModel(), mutate=with_fresh(fresh_hit()))
-    assert r.detail.fresh == [] and r.detail.counterfactual is None
+def test_a_reduction_is_not_a_record_so_the_evidence_step_never_sees_one_and_a_purchase_always_reads_the_fresh_sources():
+    """AMENDED (entry 105): a `reduce` looked at no fresh sources and had no counterfactual. Such a record cannot be built now, and every record is a purchase: the fresh sources are always read."""
+    from pydantic import ValidationError
+    with pytest.raises(ValidationError, match="the action is 'reduce': a recommendation is to buy"):
+        Setup(**{"action.action": "reduce"})
+    r, _ = Setup().run(ReviewerModel(), mutate=with_fresh(fresh_hit()))
+    assert r.detail.fresh and r.detail.counterfactual is not None
 
 
 def test_a_press_release_counts_for_less_than_an_article_in_the_return():

@@ -21,11 +21,13 @@ import os
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor
+from decimal import ROUND_HALF_UP, Decimal
 
 import pytest
 
 from prometheus.agents.account_manager import account_manager as am
 from prometheus.common import portfolio as pf
+from prometheus.common.money import money, price
 from prometheus.models import chat
 from prometheus.reasoning import raise_funds as rf
 
@@ -73,14 +75,20 @@ def sells(purchase):
 
 
 def prices_of(result):
-    return {symbol: quote["price"] for symbol, quote in result["quotes"].items()}
+    """The live quotes as prices: the Data Clerk's quote is a float (what Finnhub's JSON gives), and a price crosses into the account's code through the price door (entry 112)."""
+    return {symbol: price(quote["price"]) for symbol, quote in result["quotes"].items()}
+
+
+def cents(shares, each: Decimal) -> Decimal:
+    """What `shares` at `each` come to, in cents, half up: the independent calculation of the book's rounding, written here and not taken from the search."""
+    return (Decimal(shares) * each).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
 
 
 def fewest_stocks_needed(result) -> int:
     """From the live prices: how many of the biggest holdings in profit have to be sold to raise what the first purchase needs (calculated, not searched)."""
     start = pf.Portfolio.model_validate(result["start"])
     p = rf.build_problem(start, "LLY", 3, prices_of(result), only_green=True, lean=True, never_liquidate=True)
-    total, count = 0.0, 0
+    total, count = Decimal("0.00"), 0
     for value in sorted((h.sellable * h.price for h in p.holdings.values() if p.eligible(h)), reverse=True):
         total, count = total + value, count + 1
         if total >= p.need:
@@ -110,23 +118,23 @@ def test_the_first_purchase_is_paid_for_and_no_purchase_ended_in_an_error(run):
 
 def test_every_node_of_every_tree_is_valid_by_an_independent_calculation(run):
     """Recomputes proceeds, shortfall and every rule from the portfolio file and the live quotes, without the search's own functions."""
-    prices, holdings, cash = prices_of(run), {p["symbol"]: p for p in run["start"]["positions"]}, run["start"]["cash_avail"]
+    prices, holdings, cash = prices_of(run), {p["symbol"]: p for p in run["start"]["positions"]}, money(run["start"]["cash_avail"])      # the start is JSON: its numbers go through the doors
     for purchase in run["purchases"]:
         target, shares = purchase["target"], purchase["shares"]
-        cost = round(shares * prices[target], 2)
+        cost = cents(shares, prices[target])
         for n in nodes(purchase):
             plan = [(m.group(1), int(m.group(2))) for m in re.finditer(r"(\w+) x(\d+)", n["plan"])]
             symbols = [s for s, _ in plan]
             assert len(set(symbols)) == len(symbols) and target not in symbols and "FITB" not in symbols
-            assert all(k < holdings[s]["shares"] and prices[s] > holdings[s]["cost_basis"] for s, k in plan)   # one share of every holding kept, and every sale in profit
-            proceeds = round(sum(k * prices[s] for s, k in plan), 2)
-            assert proceeds == n["proceeds"] and round(max(0.0, cost - cash - proceeds), 2) == n["shortfall"]
+            assert all(k < holdings[s]["shares"] and prices[s] > price(holdings[s]["cost_basis"]) for s, k in plan)   # one share of every holding kept, and every sale in profit
+            proceeds = sum((cents(k, prices[s]) for s, k in plan), Decimal("0.00"))
+            assert proceeds == n["proceeds"] and max(Decimal("0.00"), cost - cash - proceeds) == n["shortfall"]
             if n["status"] == "complete":   # lean: the last step could not have sold one share fewer
-                assert round(proceeds - prices[plan[-1][0]] + cash, 2) < cost
+                assert proceeds - prices[plan[-1][0]] + cash < cost
         if purchase["plan"]:
             for symbol, n in sells(purchase):
                 holdings[symbol] = {**holdings[symbol], "shares": holdings[symbol]["shares"] - n}
-            cash = purchase["after"]["cash"]
+            cash = purchase["after"]["cash"]      # a Decimal
 
 
 def test_every_purchase_that_was_made_meets_the_success_measure(run):
@@ -148,14 +156,14 @@ def test_the_holding_at_a_loss_and_the_stock_being_bought_were_never_sold(run):
 def test_shares_and_dollars_add_up_across_the_three_purchases(run):
     final = {p["symbol"]: p["shares"] for p in run["final"]["positions"]}
     expected = {p["symbol"]: p["shares"] for p in run["start"]["positions"]}
-    cash = run["start"]["cash_avail"]
+    cash = money(run["start"]["cash_avail"])
     for purchase in run["purchases"]:
         if purchase["plan"]:
             for s, k in sells(purchase):
                 expected[s] -= k
             expected[purchase["target"]] = expected.get(purchase["target"], 0) + purchase["shares"]   # the shares BOUGHT: an 'up to 3' purchase may buy 2
-            cash = round(cash + purchase["plan"]["proceeds"] - purchase["cost"], 2)
-    assert final == {s: k for s, k in expected.items() if k > 0} and run["final"]["cash_avail"] == pytest.approx(cash, abs=0.01)
+            cash = cash + purchase["plan"]["proceeds"] - purchase["cost"]
+    assert final == {s: k for s, k in expected.items() if k > 0} and money(run["final"]["cash_avail"]) == cash      # exactly, to the cent: the sums are Decimal
     assert all(final[p["symbol"]] >= 1 for p in run["start"]["positions"])   # no position was sold out
 
 

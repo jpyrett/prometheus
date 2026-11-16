@@ -7,6 +7,7 @@ tool, the work order, the tree search and the report are the REAL code. No netwo
 """
 import json
 from datetime import date
+from decimal import Decimal
 
 import pytest
 from langchain_core.messages import AIMessage
@@ -20,7 +21,7 @@ from prometheus.prompts import account_manager as prompts
 from prometheus.reasoning import raise_funds as rf
 from test_desk_graph import FakeAdvisor, FakeClerk, FakeResolver
 
-PRICES = {"MSFT": 420.0, "TSLA": 250.0, "GM": 55.0, "MU": 410.0}
+PRICES = {"MSFT": Decimal("420.0"), "TSLA": Decimal("250.0"), "GM": Decimal("55.0"), "MU": Decimal("410.0")}
 TODAY = date(2026, 11, 3)
 
 
@@ -70,7 +71,7 @@ def manager(*replies, prices=None):
 @pytest.fixture
 def portfolio():
     """The sample portfolio with no free cash, so that the round numbers below hold; the tests that use its real cash_avail (51.23) load the file themselves."""
-    return pf.load_portfolio(am.DEFAULT_PORTFOLIO).model_copy(update={"cash_avail": 0.0})
+    return pf.load_portfolio(am.DEFAULT_PORTFOLIO).model_copy(update={"cash_avail": Decimal("0")})
 
 
 # ---------------------------------------------------------------- the Data Clerk answers a fetch_quote order
@@ -244,7 +245,7 @@ def test_the_reply_may_hold_whole_plans_under_plans():
 
 
 def test_the_prompt_for_whole_plans_asks_for_plans_lists_what_each_holding_can_raise_and_names_the_rules():
-    p = rf.build_problem(pf.load_portfolio(am.DEFAULT_PORTFOLIO).model_copy(update={"cash_avail": 0.0}), "MU", 2, PRICES, TODAY, only_green=True, never_liquidate=True, lean=True, whole_plans=True, green_first=True)
+    p = rf.build_problem(pf.load_portfolio(am.DEFAULT_PORTFOLIO).model_copy(update={"cash_avail": Decimal("0")}), "MU", 2, PRICES, TODAY, only_green=True, never_liquidate=True, lean=True, whole_plans=True, green_first=True)
     system, user = prompts.system_prompt(3, True, None, True, True, 3, True, True, True), prompts.user_message(p, rf.root(p), [])
     assert 'Reply with up to 3 DIFFERENT plans' in system and '"plans"' in system and "Only holdings that show a profit" in system and "Never sell a position out" in system
     assert "The LAST sell of a plan must not sell more shares than the money still needed requires" in system and "sell the MOST PROFITABLE holdings first" in system
@@ -253,7 +254,7 @@ def test_the_prompt_for_whole_plans_asks_for_plans_lists_what_each_holding_can_r
 
 def test_a_method_argument_overrides_the_default_and_the_default_deadline_and_parallel_reach_the_search():
     manager = am.AccountManager(model=Scripted(thoughts(("TSLA", 4))), clerk=clerk_with(QuoteToolbox()), only_green=False, never_liquidate=False)
-    result = manager.raise_funds(pf.load_portfolio(am.DEFAULT_PORTFOLIO).model_copy(update={"cash_avail": 0.0}), "MU", 2, today=TODAY, explore=False, green_first=False, lean=False, up_to=False)
+    result = manager.raise_funds(pf.load_portfolio(am.DEFAULT_PORTFOLIO).model_copy(update={"cash_avail": Decimal("0")}), "MU", 2, today=TODAY, explore=False, green_first=False, lean=False, up_to=False)
     assert result["limits"]["deadline"] == 90.0 and result["status"] == "plan" and result["green_first"] is False
     assert am.AccountManager(model=object(), clerk=object(), deadline=None).deadline is None
 

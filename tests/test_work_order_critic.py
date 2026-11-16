@@ -86,11 +86,11 @@ def test_a_verification_request_must_be_a_verify_order_with_a_verify_dict_and_no
 
 # ---------------------------------------------------------------- verify_trade: the Trader's precondition
 
-def reviewed(will_trade="yes_user", approved=True, valid_until=None, shares=44):
+def reviewed(will_trade="yes_user", approved=True, valid_until=None, shares=44, action="open"):
     order = wo.new_work_order("x", subject=["PG"])
     order.status = "decided"
     order.reviews = [{"record_id": "r1", "approved": approved, "valid_until_utc": valid_until or (NOW + timedelta(minutes=30)).isoformat().replace("+00:00", "Z")}]
-    order.trade_decisions = [{"record_id": "r1", "will_trade": will_trade, "shares": shares}]
+    order.trade_decisions = [{"record_id": "r1", "will_trade": will_trade, "shares": shares, "action": action}]      # AMENDED (entry 105): the decision of a recommendation says its action, and only `open` is a purchase a recommendation may be
     return order
 
 
@@ -102,10 +102,20 @@ def test_no_review_no_decision_a_denial_an_expired_approval_or_no_shares_each_st
     assert any("ran out" in r for r in wo.verify_trade(reviewed(), "r1", NOW + timedelta(minutes=31)))
     assert wo.verify_trade(reviewed(), "r1", NOW + timedelta(minutes=30)) == []                        # the last instant is still inside
     assert any("no valid_until_utc" in r for r in wo.verify_trade(reviewed(valid_until="soon"), "r1", NOW))
-    assert any("whole number of shares" in r for r in wo.verify_trade(reviewed(shares=0), "r1", NOW))
-    assert any("whole number of shares" in r for r in wo.verify_trade(reviewed(shares=True), "r1", NOW))
-    assert any("whole number of shares" in r for r in wo.verify_trade(reviewed(shares=2.5), "r1", NOW))
+    # AMENDED (entry 110): the reason says "a number of shares above zero" (not "whole"), and 2.5 is a quantity now (the decision of an even split may be a fraction): it became 0.1234567, seven decimals, still refused
+    assert any("a number of shares above zero" in r for r in wo.verify_trade(reviewed(shares=0), "r1", NOW))
+    assert any("a number of shares above zero" in r for r in wo.verify_trade(reviewed(shares=True), "r1", NOW))
+    assert any("a number of shares above zero" in r for r in wo.verify_trade(reviewed(shares=0.1234567), "r1", NOW)) and wo.verify_trade(reviewed(shares=2.5), "r1", NOW) == []
     assert wo.verify_trade(reviewed(shares=1), "r1", NOW) == [] and wo.verify_trade(reviewed(shares=45), "r1", NOW) == []      # the number of shares is the Account Manager's (the decision's): the Critic approves no size to compare it with
+
+
+def test_a_decision_tied_to_a_recommendation_that_is_not_a_purchase_to_open_is_refused_a_sale_never_comes_from_a_recommendation():
+    """Entry 105 (Jacob: *"Only the AccountManager can raise funds and recommend this"*): the Trader may sell for the user's own direct order or for a RaiseFunds plan, never because of a recommendation. A decision that
+    answers a Critic review and whose action is `reduce`, `add` or `hold` is refused by the Trader's precondition, however it is approved."""
+    for action in ("reduce", "add", "hold"):
+        reasons = wo.verify_trade(reviewed(action=action), "r1", NOW)
+        assert any(f"the decision's action is '{action}': a recommendation is a purchase to open, and a sale never comes from a recommendation" in r for r in reasons), (action, reasons)
+    assert wo.verify_trade(reviewed(action="open"), "r1", NOW) == []
 
 
 def test_verify_trade_refuses_a_naive_clock():
