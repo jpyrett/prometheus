@@ -1,0 +1,33 @@
+<<<FILING>>>
+accession: 0001422849-26-000012
+symbol: CVE
+form: SCHEDULE 13G/A
+filed: 2026-02-13
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1475260/0001422849-26-000012.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001422849-26-000050
+symbol: CVE
+form: SCHEDULE 13G/A
+filed: 2026-05-14
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1475260/0001422849-26-000050.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001422848-26-000095
+symbol: CVE
+form: SCHEDULE 13G/A
+filed: 2026-08-12
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1475260/0001422848-26-000095.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>

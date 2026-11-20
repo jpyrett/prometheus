@@ -27,6 +27,7 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 
 from prometheus.agents.trader.config import TraderConfig, load_config
+from prometheus.common.trace import traced
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.models.chat import model_name as chat_model_name
 from prometheus.prompts.trader import LAST_TURN, system_prompt, user_message
@@ -118,6 +119,7 @@ class Trader:
             self._ledger = Ledger(self.config.ledger.path)
         return self._ledger
 
+    @traced("trader.execute_trades")
     def execute_trades(self, order, account, portfolio=None, now=None, funding=None, approver=None, book: bool = False):
         """Execute the trades the Account Manager decided on (see `execute.py` for the ten steps) and return the SAME order with `trades`, one more entry on `trader_runs`, and `status == "traded"` once every permitted
         decision has a trade that is `filled` or `rejected`. `account` is the Account Manager (the Trader's only door: portfolio, prices, and for each trade its approval and its booking, entry 81). `portfolio` is what the desk loaded (the account's own when it is

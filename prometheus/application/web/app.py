@@ -27,6 +27,7 @@ from prometheus.common.market_calendar import load_calendar
 from prometheus.common.money import dumps, jsonable
 from prometheus.common.user_account import clean_trade_mode
 from prometheus.common.trading_clock import clock_note, trading_now, use_live_trading
+from prometheus.security.guard import Guard
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 UI_DIST = REPO_ROOT / "ui" / "dist"
@@ -49,11 +50,13 @@ def error(status: int, message: str) -> JSONResponse:
 
 
 def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None, manager: RunManager | None = None, dev: bool = False, question_timeout: float = 600.0,
-               live_target=None, static_dir: Path | None = UI_DIST) -> FastAPI:
-    """`live_target(run, params, accounts, question_timeout)` runs the live desk (`desk_run.run_live` by default, imported when first needed: it builds the real agents)."""
+               live_target=None, static_dir: Path | None = UI_DIST, guard: Guard | None = None) -> FastAPI:
+    """`live_target(run, params, accounts, question_timeout)` runs the live desk (`desk_run.run_live` by default, imported when first needed: it builds the real agents). `guard` (entry 116) counts the requests of `POST /api/runs`
+    against the account's rate limit (HTTP 429 with the policy's message); `Guard.code_only()` by default: the rate limit needs no model."""
     app = FastAPI(title="Prometheus desk", docs_url=None, redoc_url=None, openapi_url=None)
     runs, accounts = manager or RunManager(), accounts or Accounts()
-    app.state.runs, app.state.replay, app.state.accounts = runs, replay, accounts
+    guard = guard or Guard.code_only()
+    app.state.runs, app.state.replay, app.state.accounts, app.state.guard = runs, replay, accounts, guard
     if dev:
         app.add_middleware(CORSMiddleware, allow_origins=DEV_ORIGINS, allow_methods=["GET", "POST", "PATCH"], allow_headers=["*"])
 
@@ -110,6 +113,8 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
                 return error(422, "open an account first (account_id must be an account number)")
             mode = body.get("mode")
             mode = None if mode is None else clean_trade_mode(mode)         # a bad value is a 422 (the book's own check)
+            if (refused := guard.check_rate(account_id)) is not None:        # spam and SLA protection (entry 116): too many requests from one account in a minute or an hour, before the book is touched
+                return error(429, refused.message)
             holder = accounts.writable(account_id)
             if runs.active_id():                                              # refused BEFORE anything is saved: a run that is not going to start changes nothing
                 return error(409, "a run is already active: wait for it to finish, or stop it")

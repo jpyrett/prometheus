@@ -98,10 +98,12 @@ def test_a_lookup_that_keeps_failing_is_named_and_the_company_is_not_scored(monk
     assert out["companies"][0]["symbol"] is None and "lookup failed" in out["companies"][0]["note"] and any("the lookup failed" in n for n in out["notes"])
 
 
-def test_tickers_the_stored_market_news_ties_to_the_phrase_are_added_when_they_have_enough_articles():
+def test_a_ticker_the_stored_market_news_ties_to_the_phrase_is_never_added_unconfirmed():
+    # Entry 120 changed this test: it pinned that CAKE (5 articles) was ADDED to the list as soon as the news named it. A news ticker now joins only when the Data Clerk's model confirms it belongs and the symbol directory names it
+    # (the real replies are in tests/test_theme_members.py). Here the (recorded) pizza directory has no company of the symbol CAKE, so it is not sent and not added; WING has 2 articles and DPZ was proposed: no second model call.
     found = [{"symbol": "CAKE", "articles": 5}, {"symbol": "WING", "articles": 2}, {"symbol": "DPZ", "articles": 9}]
     out = clerk(proposal(PIZZA[0]), tools=Tools(found)).find_companies("Pizza")
-    assert [(c["symbol"], c["how"]) for c in out["companies"]][1:] == [("CAKE", "stored market news")] and out["companies"][0]["symbol"] == "DPZ"
+    assert [c["symbol"] for c in out["companies"]] == ["DPZ"] and out["membership"] is None and any(n.startswith("CAKE: ") and "no company of that symbol" in n for n in out["notes"])
     assert clerk(proposal(PIZZA[0]), tools=Tools(fail=True)).find_companies("Pizza")["notes"] == ["stored-news discovery failed (RuntimeError)"]
 
 

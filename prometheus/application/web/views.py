@@ -37,6 +37,11 @@ BAR_NAMES = {"news": "News", "performance": "Performance", "historical": "Histor
 ORDER_WORDS = {"marketable_limit": "Limit", "limit": "Limit", "market": "Market"}
 
 
+def screened(text: str, guard, account_id=None) -> str:
+    """A message the page is about to show, through the security layer (entry 116): a secret and another account's number are replaced by the policy's placeholder, the rest is shown as it is. With no guard (a replay of a capture) the text is as it was."""
+    return text if guard is None or not isinstance(text, str) else guard.screen_message(text, account_id=account_id).text
+
+
 def stage_list() -> list[dict]:
     """The stages for `run_started`: key, label, agent and the agent's name."""
     return [{k: s[k] for k in ("key", "label", "agent", "agent_label")} for s in STAGES]

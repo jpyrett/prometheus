@@ -26,15 +26,30 @@ a number of shares), and the last buying or selling word before it is the order'
 six decimals (`shares.PLACES`), and a number with more is refused with that reason, never rounded; without it a holding of less than one share, or the fraction left after a sale, could never be sold. A COMPANY's name is not turned into a ticker here: the Account Manager asks the Data Clerk for the symbol (`DataClerk.request_symbols`),
 and in Ask mode the user confirms what was found. A form that holds anything but the orders (a theme, a count, a budget) is refused.
 
+AN AMOUNT FOR EACH STOCK (design choices entry 122; design/direct_dollars_each_spec.md). A direct order has the number of SHARES the user wrote for it (`DirectOrder.shares`), or the DOLLARS they wrote for that stock (`DirectOrder.dollars`:
+"Buy $3,000 of XOM and $3,000 of MSFT" is two orders of $3,000), or neither, never both; ONE total for several stocks is the `budget` ("Buy $5,000 of MU and AMD"), and a request holds a budget or the dollars of its orders, not both.
+The model reads it; CODE checks the number (`check_dollars`): the dollars of an order must be an amount the user WROTE AS MONEY (`money_written`: `$3,000`, `3,000 dollars`, `3k`; a bare number, a number of shares and a
+percentage are not), positive and to the cent (`Money`: a bool and a string are refused), and an amount is the dollars of as many orders as it was WRITTEN for (`check_dollars_each`: "Buy $5,000 of MU and AMD"
+writes $5,000 once, so it is one total, never $5,000 for each: a number counted against a number). No word before or after the stock is looked at. And a request that wrote an amount of money with a `$` or the word dollars
+(`money_written(strict=True)`) but whose reading has no budget, no dollars and no shares on any order is refused (`check_amount_was_read`): the Account Manager never falls back to spending all the cash on a request that said an amount
+(the model is asked once more, and then the user is asked to clarify).
+
+"EACH" (design choices entry 125; design/dollars_each_word_spec.md). ONE amount the user wrote once may be the amount of EVERY stock, but only when they said so: `TradeIntent.each` is true when the model read that the amount applies to every stock
+individually ("Buy $3,000 each of XOM and MSFT", "$2,000 apiece", "$1,000 per stock"); with it the amount is the dollars (or the shares) of EVERY order, the same in each, and for the recommendation path ("the top 3 with $3,000 each") it is the
+`budget`, which then means the amount for EACH purchase, never a total (`TradeIntent.each_dollars`; `total_budget` is the one total). CODE checks it (`check_each`): a word that says each is in the user's text (`EACH_CUE`, a small closed list of whole words: it decides
+how much money is spent, so a program reads it, not the model), every order carries the same amount, and the amount was written as money (or, for shares, as a number of shares). `each` with no such word is a reading error, and without `each` the earlier rule
+stands: an amount written once for several stocks is ONE total (`check_dollars_each`).
+
 DECIMAL MONEY (design choices entry 112): `TradeIntent.budget` is a `Money` (a Decimal to the cent: the dollars the user typed, read from the DIGITS the model's JSON wrote, a bool and a string refused) and `DirectOrder.shares` a share quantity
 (a Decimal); the numbers of the user's own words (`numbers_in`) are Decimals read from their digits ("$5,000", "5k", "2.5 million", "three"), and the checker compares the form with them exactly: the amount is in the words or the form is refused.
 """
 import json
 import re
+from collections import Counter
 from decimal import Decimal
 from typing import Annotated, Literal
 
-from pydantic import AfterValidator, BaseModel, ConfigDict, Field, ValidationError, field_validator, model_validator
+from pydantic import AfterValidator, BaseModel, ConfigDict, Field, StrictBool, ValidationError, field_validator, model_validator
 
 from prometheus.common import shares as sh
 from prometheus.common.money import PositiveMoney, canonical
@@ -51,6 +66,7 @@ QUOTED = re.compile(r"[\"\u201c]([^\"\u201c\u201d]+)[\"\u201d]")      # a phrase
 THEME_NOUNS = ("stocks", "companies", "shares")      # a theme that already ends in one of these is not followed by "companies" (`TradeIntent.what`)
 NUMBER_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
 BUY_CUE = re.compile(r"\b(?:buy|buying|bought|purchase|purchasing|invest|investing|acquire|get|trade|trading|spend|spending|own|add|(?:put|place)\b[^.]{0,40}\binto|pick up|load up|go long)\b", re.I)
+EACH_CUE = re.compile(r"\b(?:each|apiece|a piece|per (?:stock|company|name|ticker|symbol)s?|for every (?:one|stock|company|name|ticker|symbol))\b", re.I)      # the words that say ONE amount is for every stock (entry 125): the only word list the money needs; it filters no stock, side or phrase
 PLAIN_TICKER = re.compile(r"\$?[A-Z0-9][A-Z0-9.\-]{0,9}")      # a ticker in capitals (the same shape as `symbols.is_plain_ticker`)
 SELL_CUE = re.compile(r"\b(?:sell|selling|sold|unload|dump|liquidate|trim|exit|get rid of)\b", re.I)
 EVEN_CUE = re.compile(r"\b(?:even|evenly|equal|equally|balanc\w*|split|divid\w*|same (?:amount|dollar\w*|money))\b", re.I)
@@ -77,13 +93,14 @@ Budget = Annotated[PositiveMoney, AfterValidator(_at_most_the_cap)]
 
 class DirectOrder(BaseModel):
     """One trade the user named: `buy` or `sell`, a number of shares (None when they wrote none: "I want to buy MSFT"; the Account Manager then asks them in Ask mode, or works it out, design choices entry 98; a whole number, or a
-    decimal of at most six places the user typed: entry 110), and the stock either as a ticker (`symbol`) or as a company's name (`company`; the Data Clerk finds its symbol: entry 88). Exactly one of the two."""
+    decimal of at most six places the user typed: entry 110) or the dollars they wrote for the stock (`dollars`, entry 122: "Buy $3,000 of XOM"; never both), and the stock either as a ticker (`symbol`) or as a company's name (`company`; the Data Clerk finds its symbol: entry 88). Exactly one of the two."""
     model_config = ConfigDict(extra="forbid")
 
     side: Literal["buy", "sell"]
     symbol: str | None = None
     company: str | None = None
     shares: sh.PositiveShares | None = None          # a Decimal: whole (no decimals) or with up to 6 decimals when the user typed a decimal
+    dollars: Budget | None = None                    # the money the user wrote for THIS stock ("Buy $3,000 of XOM"; entry 122): a Decimal to the cent, above zero and at most MAX_BUDGET; shares or dollars or neither, never both
 
     @field_validator("shares")
     @classmethod
@@ -113,6 +130,8 @@ class DirectOrder(BaseModel):
     def _one_way_to_name_the_stock(self):
         if (self.symbol is None) == (self.company is None):
             raise ValueError("an order names the stock by its ticker (symbol) or by its company name (company), one of them")
+        if self.shares is not None and self.dollars is not None:
+            raise ValueError("an order has a number of shares or an amount of dollars, never both: write the one the person wrote and null for the other")
         return self
 
     @property
@@ -121,6 +140,8 @@ class DirectOrder(BaseModel):
         return self.symbol or self.company
 
     def describe(self) -> str:
+        if self.dollars is not None:
+            return f"{self.side} ${self.dollars:,.2f} of {self.named}"
         if self.shares is None:
             return f"{self.side} {self.named} (you did not say how many shares)"
         return f"{self.side} {sh.text(self.shares)} share{'s' if sh.quantity(self.shares) != 1 else ''} of {self.named}"
@@ -137,17 +158,26 @@ class TradeIntent(BaseModel):
     companies: list[str] = Field(default_factory=list)
     count: int | None = Field(default=None, ge=1, le=MAX_COUNT)
     allocation: Literal["even", "default"] = "default"      # "even": the user asked to split the money equally; "default": no split was asked (the Account Manager's own way for the mode: round-robin in Auto, what the limits allow in Ask; it was called "advisor" before entry 80, when the Advisor sized)
-    budget: Budget | None = None      # the dollars the user typed, a Decimal to the cent, above zero and at most MAX_BUDGET
+    budget: Budget | None = None      # the dollars the user typed, a Decimal to the cent, above zero and at most MAX_BUDGET. With `each` it is the amount for EACH purchase (the recommendation path), not a total
+    each: StrictBool = False      # ONE amount written once is the amount of EVERY stock (entry 125: "$3,000 each of XOM and MSFT", "the top 3 with $3,000 each"); a bool, never a word. Code checks the user's words (`check_each`)
     orders: list[DirectOrder] = Field(default_factory=list, max_length=MAX_COUNT)      # only with action "order"
 
     @model_validator(mode="after")
     def _orders_go_with_the_order_action(self):
+        if self.each and self.action == "research":
+            raise ValueError("each: an amount for each stock goes with buying (nothing is bought when the person only wants to look)")
+        if self.each and self.action == "buy" and self.budget is None:
+            raise ValueError("each: the amount for each stock goes in budget (null here: say the amount the person wrote, or set each to false)")
+        if self.each and self.action == "order" and self.budget is not None:
+            raise ValueError("each: with orders the amount goes on EVERY order (dollars, or shares), the same in each, and the budget stays null")
         if (self.action == "order") != bool(self.orders):
             raise ValueError("orders: a direct order has the action 'order' and at least one trade, and no other action has any")
         if self.action == "order":
-            numbered = any(o.shares is not None for o in self.orders)
+            numbered = any(o.shares is not None or o.dollars is not None for o in self.orders)
+            if self.budget is not None and any(o.dollars is not None for o in self.orders):
+                raise ValueError("orders: one total (budget) and the dollars of a stock are two ways to say how much: put the dollars of each stock on its order and leave the budget null, or give one total and no dollars on the orders")
             if self.topic or self.symbols or self.companies or self.count is not None or ((self.budget is not None or self.allocation != "default") and numbered):
-                raise ValueError("orders: a direct order names the trades and nothing else (dollars to spend and an even split only go with a stock named without a number of shares): ask for recommendations in a separate request")
+                raise ValueError("orders: a direct order names the trades and nothing else (one total of dollars to spend and an even split only go with stocks named without a number of shares or dollars): ask for recommendations in a separate request")
             if len({o.named.casefold() for o in self.orders}) != len(self.orders):
                 raise ValueError("orders: one trade for each stock")
         return self
@@ -181,8 +211,18 @@ class TradeIntent(BaseModel):
         """Whether the user's own words already say how much to buy: a dollar amount (the budget), a percentage, a number of shares, or "as much as I can" and its kin. When they do not, the Account Manager asks in Ask
         mode (`clarify.py`). A check of the typed words by a program, with no model."""
         if self.action == "order":
-            return all(o.shares is not None for o in self.orders) or self.budget is not None or bool(AS_MUCH.search(self.request))      # an order with no number is asked about unless the user said dollars or "as much as I can"
+            return all(o.shares is not None or o.dollars is not None for o in self.orders) or self.budget is not None or bool(AS_MUCH.search(self.request))      # an order with no number is asked about unless the user said dollars (a total, or an amount for each stock: entry 122) or "as much as I can"
         return self.budget is not None or bool(HOW_MUCH.search(self.request))
+
+    @property
+    def total_budget(self) -> Decimal | None:
+        """The ONE total of dollars the user gave (`budget`), or None: with `each` the budget is an amount for each purchase, not a total."""
+        return None if self.each else self.budget
+
+    @property
+    def each_dollars(self) -> Decimal | None:
+        """The amount the user gave for EACH purchase of a request for recommendations ("the top 3 oil stocks with $3,000 each": 3000), or None. A direct order's amounts are on its orders (`DirectOrder.dollars`)."""
+        return self.budget if self.each and self.action != "order" else None
 
     def what(self) -> str:
         """What is to be bought or looked at, in words: the theme, or the names, or the tickers."""
@@ -197,11 +237,14 @@ class TradeIntent(BaseModel):
         """One plain sentence of what was understood, for the user to confirm before anything runs."""
         if self.action == "order":
             spend = f", spending ${self.budget:,.2f}" + (" spread evenly" if self.allocation == "even" else "") if self.budget else ""
+            if self.each:      # entry 125: one amount, written once, for every stock
+                one = self.orders[0]
+                spend = f", spending at most ${one.dollars:,.2f} on each stock" if one.dollars is not None else f", {sh.text(one.shares)} share{'s' if sh.quantity(one.shares) != 1 else ''} of each stock"
             return ", ".join(o.describe() for o in self.orders) + spend + " (your own order: no recommendation is made and the Critic is not asked)"
         verb = "buy" if self.action == "buy" else "look at (nothing will be bought)"
         count = f"the {self.count} most recommended " if self.count else "the most recommended "
-        spread = "; the money spread evenly over the companies that are approved" if self.allocation == "even" else ""
-        spend = f"; spending at most ${self.budget:,.2f}" if self.budget else "; spending as much as the account allows" if self.action == "buy" else ""
+        spread = "; the money spread evenly over the companies that are approved" if self.allocation == "even" and not self.each else ""
+        spend = (f"; spending at most ${self.budget:,.2f} on each stock" if self.each else f"; spending at most ${self.budget:,.2f}") if self.budget else "; spending as much as the account allows" if self.action == "buy" else ""
         return f"{verb} {count}{self.what()}{spread}{spend}"
 
     def as_request(self) -> tuple[str, str]:
@@ -239,6 +282,91 @@ RECOMMEND_CUE = re.compile(r"\b(?:recommend\w*|advi[cs]e\w*|research\w*|analy[sz
 
 
 numbers_in = _numbers      # the public name: `clarify.py` checks the amount of an answer against the numbers the user typed
+
+# A number the user WROTE AS MONEY (design choices entry 122): a `$` before it, the word dollars (bucks, USD) after it, or a unit of thousands or millions (3k, 2 million). A bare number is not money, and neither is a number written
+# as shares ("3,000 shares") or as a percentage.
+MONEY_WRITTEN = re.compile(r"(?P<sign>\$\s?)?(?P<n>\d[\d,]*(?:\.\d+)?)\s*(?P<unit>k\b|thousand\b|m\b|million\b)?(?P<word>\s*(?:dollars?|bucks|usd)\b)?", re.I)
+NOT_MONEY_AFTER = re.compile(r"\s*(?:shares?\b|%|percent\b|per cent\b)", re.I)
+
+
+def money_amounts(typed: str, strict: bool = False) -> list[Decimal]:
+    """Every amount the user's words write as money, each time it is written, in order, as a Decimal read from its digits ("$3,000", "3,000 dollars", "3k", "2.5 million"; a number written as shares or a percentage, and a bare number,
+    are not in it). With `strict` only an amount with a `$` or the word dollars (bucks, USD) counts: "3k" does not (it may be a count): the test that a request said an amount (`check_amount_was_read`). A program's check of the
+    user's own words, no model."""
+    found = []
+    for match in MONEY_WRITTEN.finditer(typed):
+        marked = bool(match["sign"] or match["word"]) or (bool(match["unit"]) and not strict)
+        if not marked or (not (match["sign"] or match["word"]) and NOT_MONEY_AFTER.match(typed, match.end())):
+            continue
+        unit = (match["unit"] or "").lower()
+        found.append(Decimal(match["n"].replace(",", "")) * (1000 if unit in ("k", "thousand") else 1_000_000 if unit in ("m", "million") else 1))
+    return found
+
+
+def money_written(typed: str, strict: bool = False) -> set[Decimal]:
+    """The amounts of `money_amounts`, each once."""
+    return set(money_amounts(typed, strict))
+
+
+def check_dollars(order: DirectOrder, typed: str) -> None:
+    """Raises ValueError, with the reason, unless the dollars of this order are an amount the user wrote as money (entry 122, rule D2): the number is checked, and no word around the stock is. An order with no dollars passes."""
+    if order.dollars is None or order.dollars in money_written(typed):
+        return
+    amount = f"{canonical(order.dollars):f}"
+    if order.dollars in _numbers(typed):
+        raise ValueError(f"the amount {amount} is in what you typed, but not as money (a dollar sign, the word dollars, k or million): it may be a number of shares or a percentage, which are not dollars")
+    raise ValueError(f"the amount {amount} is not in what you typed: the dollars of {order.named} must be an amount the person wrote as money")
+
+
+def check_dollars_each(intent: TradeIntent, typed: str) -> None:
+    """Raises ValueError, with the reason, when an amount is the dollars of more orders than the user wrote it for (entry 122): "Buy $5,000 of MU and AMD" writes $5,000 once, so it is ONE total to spend (the budget), not $5,000 for each
+    of two stocks, which would spend $10,000 on a request for $5,000. The amounts are counted, a number against a number; no word of the request is read. An order with no dollars passes."""
+    if intent.each:      # ONE amount for every stock, said so (entry 125): `check_each` has the words and the numbers
+        return
+    written = Counter(money_amounts(typed))
+    for amount, orders in Counter(o.dollars for o in intent.orders if o.dollars is not None).items():
+        if orders > written[amount]:
+            raise ValueError(f"the amount {canonical(amount):f} is the dollars of {orders} orders but you wrote it {written[amount]} time{'s' if written[amount] != 1 else ''}: an amount written once for several stocks is ONE total to spend (the budget, with no dollars on the orders); "
+                             "it is the dollars of a stock only when the person wrote an amount for that stock, or said each (each, apiece, per stock: then set each to true)")
+
+
+def shares_written(typed: str) -> set[Decimal]:
+    """Every number the user wrote as a number of SHARES ("10 shares", "0.5 shares", "three shares"), as a Decimal read from its digits: a number with more than six decimals is left out (it is not a quantity: `shares.PLACES`). A program's check of the user's own words."""
+    words = "|".join(NUMBER_WORDS)
+    found = set()
+    for match in re.finditer(rf"(?<![\w$.,%-])(\d[\d,]*(?:\.\d+)?|{words})(?![\d.,%])\s+shares?\b", typed, re.I):
+        word = match.group(1).lower()
+        written = str(NUMBER_WORDS[word]) if word in NUMBER_WORDS else word.replace(",", "")
+        if len(written.partition(".")[2]) <= sh.PLACES:
+            found.add(sh.quantity(Decimal(written)))
+    return found
+
+
+def check_each(intent: TradeIntent, typed: str) -> None:
+    """Raises ValueError, with the reason, unless an `each` the model read is what the user said (entry 125). ONE amount may be the amount of every stock only when (a) a word that says each is in the user's text (`EACH_CUE`: each,
+    apiece, a piece, per stock ...: a small closed list, because this decides how much money is spent), (b) every order carries that same amount, the dollars of every order or the shares of every order (the budget stays null), or, for
+    a request for recommendations, the budget is that amount, and (c) it is an amount the user wrote as money (shares are checked by `check_order` as a number of shares). Without `each` this does nothing."""
+    if not intent.each:
+        return
+    if not EACH_CUE.search(typed):
+        raise ValueError("each is true but nothing you typed says each (each, apiece, a piece, per stock, per company, for every one): an amount written once for several stocks is ONE total (the budget, each false)")
+    if intent.action == "order":
+        dollars, count = {o.dollars for o in intent.orders}, {o.shares for o in intent.orders}
+        if not ((None not in dollars and len(dollars) == 1 and count == {None}) or (None not in count and len(count) == 1 and dollars == {None})):
+            raise ValueError("each means ONE amount for every stock: put the same amount on EVERY order (the same dollars, or the same shares) and leave the budget null")
+        return
+    if intent.budget not in money_written(typed):
+        raise ValueError(f"the amount {canonical(intent.budget):f} for each stock is not in what you typed as money (a dollar sign, the word dollars, k or million)")
+
+
+def check_amount_was_read(intent: TradeIntent, typed: str) -> None:
+    """Raises ValueError, with the reason, when the user wrote an amount of money (a `$` or the word dollars) and the reading of a direct order has no budget, no dollars on any order and no shares on any order (entry 122, rule D5):
+    the Account Manager never falls back to spending all the cash on a request that said an amount. A request with no such amount keeps the older ways (Ask mode asks how much; Auto spends the cash round robin)."""
+    if intent.action != "order" or intent.budget is not None or any(o.dollars is not None or o.shares is not None for o in intent.orders):
+        return
+    amounts = sorted(money_written(typed, strict=True))
+    if amounts:
+        raise ValueError(f"you wrote an amount of money (${canonical(amounts[0]):,f}) but no amount was read for any stock: put the dollars of each stock on its order (dollars), or give one total to spend (budget)")
 
 
 def _words(text: str) -> set[str]:
@@ -305,9 +433,9 @@ def _order_phrases(typed: str, name: str, ticker: bool = True) -> list[tuple[int
     return found
 
 
-def check_order(order: DirectOrder, typed: str) -> None:
+def check_order(order: DirectOrder, typed: str, each: bool = False) -> None:
     """Raises ValueError, with the reason, unless the user's own words give this trade: the ticker as typed (or the company's name, case ignored), the shares as a number of shares right before it, and the side of the
-    buying or selling word before that."""
+    buying or selling word before that. With `each` (entry 125: "Buy 10 shares each of AAPL and MSFT") the shares may be a number of shares written ONCE for every stock: it is then checked as a number of shares anywhere in the text."""
     if order.symbol is not None:
         if not re.search(rf"(?<![A-Za-z0-9]){re.escape(order.symbol)}(?![A-Za-z0-9])", typed):
             raise ValueError(f"the ticker {order.symbol} is not in what you typed")
@@ -316,7 +444,7 @@ def check_order(order: DirectOrder, typed: str) -> None:
     if RECOMMEND_CUE.search(typed):
         raise ValueError("you asked for recommendations or advice (or made the trade depend on them): that is not a direct order, so it is a request to buy or research")
     if order.shares is None:
-        typed_numbers = _order_phrases(typed, order.named, ticker=order.symbol is not None)
+        typed_numbers = _order_phrases(typed, order.named, ticker=order.symbol is not None) if order.dollars is None else []      # dollars for the stock: the amount is checked as money (`check_dollars`), not as shares
         if typed_numbers:
             raise ValueError(f"you typed {sh.text(typed_numbers[0][0])} shares of {order.named}: put the number in shares, not null")
         position = next((m.start() for m in re.finditer(r"(?<![A-Za-z0-9])" + r"\s+".join(map(re.escape, order.named.split())) + r"(?![A-Za-z0-9])", typed, 0 if order.symbol else re.I)), None)
@@ -325,6 +453,12 @@ def check_order(order: DirectOrder, typed: str) -> None:
             raise ValueError(f"{order.side} {order.named} is not what you typed: the last word about buying or selling before {order.named} is not a {word}")
         return
     phrases = [at for shares, at in _order_phrases(typed, order.named, ticker=order.symbol is not None) if shares == order.shares]
+    if not phrases and each and order.shares in shares_written(typed):      # one number of shares for every stock, said so: the side is the last buying or selling word before the stock
+        position = next((m.start() for m in re.finditer(r"(?<![A-Za-z0-9])" + r"\s+".join(map(re.escape, order.named.split())) + r"(?![A-Za-z0-9])", typed, 0 if order.symbol else re.I)), None)
+        phrases = [] if position is None or _cue_before(typed, position) != order.side else [position]
+        if not phrases:
+            word = "buying word (buy, purchase, get ...)" if order.side == "buy" else "selling word (sell, unload, dump ...)"
+            raise ValueError(f"{order.side} {order.named} is not what you typed: the last word about buying or selling before {order.named} is not a {word}")
     if not phrases:
         raise ValueError(f"{sh.text(order.shares)} shares of {order.named} is not what you typed: say it as a number of shares, for example 'buy {sh.text(order.shares)} shares of {order.named}'")
     if not any(_cue_before(typed, at) == order.side for at in phrases):
@@ -355,13 +489,14 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
         raise ValueError("not valid JSON") from None
     if not isinstance(raw, dict):
         raise ValueError("not a JSON object")
-    known = {"action", "topic", "symbols", "companies", "count", "allocation", "budget", "orders"}
+    known = {"action", "topic", "symbols", "companies", "count", "allocation", "budget", "each", "orders"}
     if set(raw) - known:
         raise ValueError(f"unknown fields: {', '.join(sorted(map(str, set(raw) - known)))}")
     orders = raw.get("orders", [])
-    if not isinstance(orders, list) or not all(isinstance(o, dict) and {"side"} <= set(o) <= {"side", "symbol", "company", "shares"} and ("symbol" in o) != ("company" in o)
-                                                and all(isinstance(o[k], str) for k in ("symbol", "company") if k in o) and (o.get("shares") is None or (isinstance(o["shares"], (int, float)) and not isinstance(o["shares"], bool))) for o in orders):
-        raise ValueError('orders must be a list of {"side": "buy" or "sell", "symbol": a ticker in capitals, or "company": a company name, "shares": a number (a decimal such as 0.5 is allowed, with at most 6 decimals), or null when the person wrote no number of shares}')
+    if not isinstance(orders, list) or not all(isinstance(o, dict) and {"side"} <= set(o) <= {"side", "symbol", "company", "shares", "dollars"} and ("symbol" in o) != ("company" in o)
+                                                and all(isinstance(o[k], str) for k in ("symbol", "company") if k in o)
+                                                and all(o.get(k) is None or (isinstance(o[k], (int, float)) and not isinstance(o[k], bool)) for k in ("shares", "dollars")) for o in orders):
+        raise ValueError('orders must be a list of {"side": "buy" or "sell", "symbol": a ticker in capitals, or "company": a company name, "shares": a number (a decimal such as 0.5 is allowed, with at most 6 decimals), or null when the person wrote no number of shares, "dollars": a number, or null when the person wrote no amount of money for that stock}')
     for number, o in enumerate(orders):
         if "symbol" in o:
             try:
@@ -385,6 +520,10 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
             raise ValueError(f"{key} must be a list of text")
     if isinstance(raw.get("count"), bool) or isinstance(raw.get("budget"), bool):
         raise ValueError("count and budget must be numbers")
+    if raw.get("each") is None:      # a model that writes null for each means false
+        raw.pop("each", None)
+    elif not isinstance(raw["each"], bool):
+        raise ValueError("each must be true or false")
     if raw.get("action") in ("buy", "research") and not raw.get("symbols") and not raw.get("companies") and not orders:      # a phrase in quotes is the theme, word for word (entry 113)
         phrase = quoted_theme(raw.get("topic"), typed)
         if phrase is not None:
@@ -399,8 +538,12 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
     # every field must be in the user's own words
     lowered, numbers = typed.lower(), _numbers(typed)
     for order in intent.orders:
-        check_order(order, typed)
+        check_order(order, typed, intent.each)
+        check_dollars(order, typed)      # entry 122: the dollars of an order are an amount the user wrote as money
+    check_each(intent, typed)      # entry 125: ONE amount for every stock only when the user said each (a word that says it, the same amount on every order or as the budget)
+    check_dollars_each(intent, typed)      # ... and an amount is the dollars of as many orders as it was written for (once for several stocks: one total, never each, unless each was said)
     if intent.action == "order":
+        check_amount_was_read(intent, typed)      # entry 122: an amount of money in the words and none in the reading is refused, never turned into all the cash
         return intent
     if not (intent.topic or intent.symbols or intent.companies):
         raise ValueError("no theme, ticker or company: name what you want to buy or look at")
@@ -420,7 +563,13 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
         raise ValueError("an even split was not asked for in what you typed")
     if intent.action == "buy" and not BUY_CUE.search(typed):
         raise ValueError("buying was not asked for in what you typed")
-    return as_direct_order(intent, typed) or intent
+    direct = as_direct_order(intent, typed)
+    if direct is not None:
+        for order in direct.orders:
+            check_dollars(order, typed)      # the model read "buy" with the stocks named and an amount for each (entry 125): the orders are made here, and the checks of an order's dollars apply to them
+        check_dollars_each(direct, typed)
+        check_amount_was_read(direct, typed)
+    return direct or intent
 
 
 def as_direct_order(intent: TradeIntent, typed: str) -> TradeIntent | None:
@@ -431,10 +580,11 @@ def as_direct_order(intent: TradeIntent, typed: str) -> TradeIntent | None:
     if intent.action != "buy" or intent.topic or intent.count is not None or not (intent.symbols or intent.companies) or RECOMMEND_CUE.search(typed):
         return None
     try:
-        orders = [DirectOrder(side="buy", symbol=symbol) for symbol in intent.symbols] + [DirectOrder(side="buy", company=name) for name in intent.companies]
-        converted = TradeIntent(request=intent.request, action="order", orders=orders, budget=intent.budget, allocation=intent.allocation)
+        each = intent.each_dollars      # "Buy $3,000 each of XOM and MSFT" read as a purchase of named stocks with the amount for each as the budget (entry 125): the amount is the dollars of every order
+        orders = [DirectOrder(side="buy", symbol=symbol, dollars=each) for symbol in intent.symbols] + [DirectOrder(side="buy", company=name, dollars=each) for name in intent.companies]
+        converted = TradeIntent(request=intent.request, action="order", orders=orders, budget=intent.total_budget, allocation=intent.allocation, each=intent.each)
         for order in converted.orders:
-            check_order(order, typed)
+            check_order(order, typed, intent.each)
     except ValueError:      # includes a pydantic ValidationError
         return None
     return converted

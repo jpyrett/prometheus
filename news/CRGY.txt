@@ -1,0 +1,250 @@
+<<<ARTICLE>>>
+id: finnhub:143692883
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7396bca749d2d16c3dcb91196f4e712c0c13f9608d85a0c097619ee9821b138e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Is Crescent Energy's Royalty Business Its Next Big Growth Engine?
+<<<SUMMARY>>>
+CRGY's capital-light royalties business offers cash flow without drilling costs, while the Devon deal could bring a major boost in scale and output.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143697375
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:40:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2127c973b3c20a488e751e18d31baf5278336bb14b897de4b26f4a2215af4869
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Are Oils-Energy Stocks Lagging Crescent Energy Company (CRGY) This Year?
+<<<SUMMARY>>>
+Here is how Crescent Energy (CRGY) and Enlight Renewable Energy Ltd. (ENLT) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143616925
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T14:10:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=340b71a9a98c792a3c8c5845eb85b71bf8002580d656bad6b42f29c1f0addf3b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Will Revenue And Production Growth Change Crescent Energy's (CRGY) Narrative
+<<<SUMMARY>>>
+Crescent Energy reported third quarter 2026 results with revenue of US$1,351.21 million, a net loss of US$2.17 million, and affirmed a US$0.12 per share dividend payable on November 30, 2026. Even with a small loss in the latest quarter, Crescent Energy’s sharp year over year jump in revenue and higher production volumes highlight that the underlying asset base is being worked harder across oil, gas, and NGLs. This article reviews how Crescent Energy’s investment narrative is influenced by...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944725
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0700dfa326db5043fd96cc52ba1a74117bdcd25086a7bb7ccfdad564b5bc615b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: PR Q3 Earnings Beat on Higher Output and Stronger Pricing
+<<<SUMMARY>>>
+Permian Resources tops Q3 earnings and revenue estimates as higher production and oil prices lift results, prompting an increase in its 2026 oil output outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143919006
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=041bee17b1f9bcef3cee785593ac14ba4b3e60e04d2f86766d201487c6fb289e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: TRP Q3 Earnings Beat Estimates on Strong Pipeline Performance
+<<<SUMMARY>>>
+TC Energy beat Q3 earnings and revenue estimates as stronger pipelines lifted EBITDA 13.2%, with raised 2026 guidance and new growth projects in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143852567
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T00:30:38Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=0b2b8cafe2dbb1c4b1b1024a5c07fd24fc04cbe2919d5c59c2787febdad53cfb
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Seaport Global Upgrades Crescent Energy to Neutral from Sell
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143847793
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T09:25:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=59e11beb54967ca3d35ce3492a5dca7309296b39ae2fbbf5c7a5c39ca925d4d4
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Seaport Global Upgrades Crescent Energy to Neutral
+<<<SUMMARY>>>
+Seaport Global  analyst Vin Lovaglio   upgrades Crescent Energy (NYSE:CRGY) from Sell to Neutral.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802322
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1c863230e7c894bc625866abb8d0feb613f161cf5733b7e82130c86840793ce5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: GE Vernova Stock Surges 47.2% in a Year: Worth Investing Now?
+<<<SUMMARY>>>
+GEV's 47.2% gain reflects rising electricity demand, strong orders, a growing backlog and advances in hydrogen-ready turbines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:037d63a46ff132446a2245a54874170d1db4467bcff473b229034facb4a63f9d
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:13:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027406/is-crescent-energy-s-royalty-business-its-next-big-growth-engine?cid=CS-ZC-FT-analyst_blog|quick_take-3027406
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ea/574.jpg
+category: 
+tickers: CRGY, VNOM, TPL
+keywords: royalty business, capital-light model, Eagle Ford, EBITDA growth, IPO, mineral interests, cash flow generation
+headline: Is Crescent Energy's Royalty Business Its Next Big Growth Engine?
+<<<SUMMARY>>>
+Crescent Energy is expanding its capital-light royalties business, which generates revenues without drilling costs or operating expenses. The planned acquisition of Devon Energy's Eagle Ford assets is expected to boost annualized royalty EBITDA to approximately $250 million and production to nearly 15,000 barrels of oil equivalent per day. Additionally, Crescent Energy has submitted a draft registration statement for a potential IPO of its Crescent Royalties subsidiary to establish public market access and enhance shareholder value.
+<<<INSIGHTS>>>
+CRGY | positive | Company is expanding its high-margin royalties portfolio through strategic acquisition of Devon Energy assets, planning an IPO for its royalties subsidiary, and demonstrating strong growth prospects with expected EBITDA reaching $250 million. Stock has outperformed sector with 22.5% annual gain and trades at a valuation discount with 35% expected EPS growth in 2026.
+VNOM | positive | Operates a high-margin, capital-light royalty business in the Permian Basin with strong free cash flow generation. Recent acquisitions have strengthened acreage position and future production potential, supporting sustainable cash flow growth.
+TPL | positive | Generates high-margin royalty revenues from oil and gas production without bearing drilling costs. Benefits from increasing upstream activity in Permian Basin with rising rig counts and record drilling permits, positioning it for long-term cash flow growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:99c234b6a183677e3f6804de74b76a80129463b8ab55681040b1e354f1d4cb61
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T11:22:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029251/ge-vernova-stock-surges-47-2-in-a-year-worth-investing-now?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3029251
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b6/36351.jpg
+category: 
+tickers: GEV, CRGY, CEG
+keywords: GE Vernova, transformer expansion, hydrogen-ready turbines, electricity demand, grid modernization, backlog growth, offshore wind challenges, premium valuation, earnings growth
+headline: GE Vernova Stock Surges 47.2% in a Year: Worth Investing Now?
+<<<SUMMARY>>>
+GE Vernova (GEV) shares have risen 47.2% over the past year, outperforming its industry. The company is expanding transformer production capacity, advancing hydrogen-ready turbine technology, and has a strong $197 billion backlog. However, offshore wind segment challenges persist. With 79.48% expected EPS growth and a 46.5% ROE, GEV trades at a premium valuation of 30.56X forward P/E but analysts recommend adding it to portfolios.
+<<<INSIGHTS>>>
+GEV | positive | Strong 47.2% share price appreciation, significant order growth (96% increase), expanding $197 billion backlog, strategic investments in transformer manufacturing and hydrogen technology, high ROE of 46.5%, and strong earnings growth expectations (79.48% YoY). Offset partially by ongoing offshore wind segment losses, but overall momentum is positive.
+CRGY | neutral | Mixed performance with 31.4% share price gain over the past year, but mentioned only as a comparison point without detailed analysis. No specific positive or negative catalysts discussed.
+CEG | neutral | Underperformed with 16% share price decline over the past year and 29.8% expected EPS growth, which is lower than GEV's growth rate. Mentioned primarily as a comparative benchmark without detailed analysis.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2b9482e15d4c0eab97e2d3c5213cc37a9721ddedde0129a4de6f187db0ed3941
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:32:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032017/trp-q3-earnings-beat-estimates-on-strong-pipeline-performance?cid=CS-ZC-FT-analyst_blog|earnings_article-3032017
+image_url: https://staticx-tuner.zacks.com/images/articles/main/0c/364.jpg
+category: 
+tickers: TRP, LNG, CRGY, FANG
+keywords: Q3 earnings, pipeline operations, EBITDA growth, natural gas, capital expenditure, dividend, guidance raise
+headline: TRP Q3 Earnings Beat Estimates on Strong Pipeline Performance
+<<<SUMMARY>>>
+TC Energy (TRP) beat Q3 earnings estimates by 4.69% with adjusted EPS of 67 cents and revenues of $2.88B. Comparable EBITDA rose 13.2% to C$3B, driven by stronger pipeline performance, favorable settlements, and Bruce Power contributions. The company raised 2026 EBITDA guidance to C$11.8-C$12B and sanctioned approximately C$6B in projects year-to-date, with expectations for 5-7% annual EBITDA growth through 2031.
+<<<INSIGHTS>>>
+TRP | positive | Company beat earnings and revenue estimates, achieved 13.2% EBITDA growth, raised 2026 guidance, sanctioned C$6B in new projects, and projects 5-7% annual EBITDA growth through 2031. Strong operational execution across all business segments including Canadian pipelines, U.S. pipelines, Mexico operations, and Bruce Power.
+LNG | neutral | Mixed results with earnings miss (13.81% below estimate) but strong revenue beat (14.85% above estimate). Record LNG cargo exports and improved cash position, but earnings disappointment suggests operational challenges despite strong market conditions.
+CRGY | positive | Significant earnings beat of 30.5% above estimates with 113.9% year-over-year earnings growth. Revenue beat estimates by 17.1% with 55.9% year-over-year growth. Strong production increases and improved liquidity position support positive outlook.
+FANG | positive | Strong earnings beat of 19.1% above estimates with 62.1% year-over-year GAAP earnings growth. Revenue surged 38.4% year-over-year and beat estimates by 26.5%. Robust free cash flow generation of $2.15B demonstrates strong operational and financial performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6d853b20be51808a4523e78383116eee4953285de1e1181f79b0c6d2ace8150d
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:51:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032674/pr-q3-earnings-beat-on-higher-output-and-stronger-pricing?cid=CS-ZC-FT-analyst_blog|earnings_article-3032674
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a0/644.jpg
+category: 
+tickers: PR, LNG, CRGY, FANG
+keywords: Q3 earnings, oil production, cash flow, guidance raise, commodity prices, Permian Basin, energy sector, free cash flow, acquisitions
+headline: PR Q3 Earnings Beat on Higher Output and Stronger Pricing
+<<<SUMMARY>>>
+Permian Resources (PR) reported Q3 adjusted EPS of 69 cents, beating estimates by 15%, driven by 11.5% production growth to 457.5 MBoe/d and 32.4% higher realized oil prices at $85.73/barrel. The company raised 2026 oil production guidance and generated $845.6 million in adjusted free cash flow. Three peer companies also reported strong Q3 results with revenue beats, though Cheniere Energy missed on earnings.
+<<<INSIGHTS>>>
+PR | positive | Strong Q3 results with 86.5% EPS growth, 15% beat on earnings estimates, 11.5% production growth, raised 2026 guidance, record-low controllable cash costs of $7.05/Boe, and robust free cash flow generation of $845.6 million.
+LNG | neutral | Mixed results with 13.81% miss on adjusted EPS ($3.62 vs $4.20 estimate) despite strong revenue beat of 14.85% and record LNG cargo exports. Strong liquidity position of $8.08 billion partially offsets earnings miss.
+CRGY | positive | Strong Q3 performance with 30.5% EPS beat, 113.9% year-over-year earnings growth, 55.9% revenue increase, and production growth to 328 MBoe/d. Solid liquidity of $2 billion supports positive outlook.
+FANG | positive | Excellent Q3 results with 19.1% EPS beat, 62.1% GAAP earnings growth, 38.4% revenue surge, strong free cash flow of $2.15 billion, and record production of 1,033,967 BOE/d.
+<<<END>>>

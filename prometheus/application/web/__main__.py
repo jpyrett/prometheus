@@ -38,6 +38,8 @@ def main(argv: list[str] | None = None) -> int:
     app = create_app(replay=replay, dev=args.dev, question_timeout=args.question_timeout)
     note = f"REPLAY of {Path(args.replay).name}: no model, no quote, no database" if replay else "LIVE: pressing Go! is a PAID run (OpenRouter, Finnhub) that writes the UI's own account in Postgres"
     from prometheus.application.web import tracing
+    from prometheus.common import langsmith_tracing
+    print(langsmith_tracing.configure())   # LangSmith traces each run when LANGSMITH_API_KEY is set (entry 114)
     print(tracing.startup_line())
     print(f"Prometheus desk on http://{args.host}:{args.port}   [{note}]")
     uvicorn.run(app, host=args.host, port=args.port, log_level="warning", timeout_graceful_shutdown=2)

@@ -6,8 +6,9 @@
      wrong total: as the spec says, the counter is left out of a live run (`desk_run.COUNT_MODEL_CALLS`) and the replay shows the exact figures its capture recorded. The handler is kept, tested live, for the day the calls reach it;
   3. LANGFUSE, off unless `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY` are set (`LANGFUSE_HOST` for a server other than the cloud): `callbacks` then also returns Langfuse's LangChain handler (`langfuse.langchain.CallbackHandler`
      of the Langfuse Python SDK v3 and later), and the run's id is the trace's session with the tags `prometheus-ui`, the trade mode, `strict` and `neutral`. The keys are read with `rag.config.setting` (the environment, then the
-     repo's settings file through that function), never by opening a file here. With the keys missing, or the package not installed, there is no handler and `status()` says "off". LangSmith needs no code: LANGSMITH_TRACING=true
-     and LANGSMITH_API_KEY in the environment and LangGraph traces itself.
+     repo's settings file through that function), never by opening a file here. With the keys missing, or the package not installed, there is no handler and `status()` says "off". LangSmith: `prometheus/common/langsmith_tracing.configure()`
+     (entry 114) puts LANGSMITH_API_KEY and the agent address in the process environment and LangGraph traces itself. The Advisor's and the Critic's calls were missed because
+     `advisor.calls.invoke_with_limit` ran them in a thread without the caller's context; it copies the context now (entry 114).
 
 WITH TRACING ON, the prompts, the model replies and the account's figures of a run are sent to the Langfuse server.
 """

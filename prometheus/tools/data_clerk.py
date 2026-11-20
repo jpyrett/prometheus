@@ -138,7 +138,9 @@ class DataClerkTools:
     """The Data Clerk's tools. `toolbox` is the DataToolbox (a fake in tests), `store` the Chroma store of the news, `press_store`
     the one of the press releases and `filings_store` the one of the SEC filings (the real ones when left out)."""
 
-    def __init__(self, toolbox=None, store=None, press_store=None, filings_store=None, bars_root=None):
+    def __init__(self, toolbox=None, store=None, press_store=None, filings_store=None, bars_root=None, guard=None):
+        """`guard` (entry 116, design/agentic_security_spec.md): the security layer's door for documents. With one, every document a retrieval tool finds is screened by the code rules (no model call per document) and one that BLOCKs or is held for
+        review is dropped before anything reads it; the tool says which in `security_dropped`. None screens nothing (the tests of the tools, the MCP server); the session and the web page pass their guard."""
         if toolbox is None:
             from prometheus.agents.data_clerk.data_toolbox import DataToolbox  # imported here: it needs pyarrow and httpx
             toolbox = DataToolbox(base_dir=REPO_ROOT)  # the same root as rag/: news/ and .env are the ones rag/ reads
@@ -147,6 +149,7 @@ class DataClerkTools:
         self.store = store
         self.press_store = press_store
         self.filings_store = filings_store
+        self.guard = guard
         self.bars_root = bars_root  # where the day_aggs_v1 files are (a folder holding YYYY/MM/YYYY-MM-DD.csv.gz): the toolbox's own data/historical when left out; a test points it at a temporary folder
 
     # ---- search by meaning (rag/)
@@ -233,7 +236,12 @@ class DataClerkTools:
         try:
             hits = search(query, **flags, **options)
             if hits:
-                return {"found": True, "reason": None, "message": None, "hits": [h.as_dict() for h in hits]}
+                kept, dropped = self._screened(hits)
+                extra = {"security_dropped": dropped} if dropped else {}
+                if kept:
+                    return {"found": True, "reason": None, "message": None, "hits": [h.as_dict() for h in kept], **extra}
+                return {"found": False, "reason": "nothing_relevant", "hits": [], **extra,
+                        "message": f"No supporting text: every matching stored {words['item']} was held back by the security screen. Say that {words['not_covered']}. Do not answer from memory."}
             closest = search(query, k=1, min_score=None, **{key: v for key, v in options.items() if key != "k"})
         except ValueError as error:  # every ValueError from the search is a bad argument
             raise ToolInputError(str(error)) from None
@@ -253,6 +261,20 @@ class DataClerkTools:
                 message += (f" That is close to the bar, so if you believe {words['should_cover']}, search "
                             "once more with a clearer question that names the company and the topic.")
         return {"found": False, "reason": reason, "message": message, "hits": []}
+
+    def _screened(self, hits: list[Hit]) -> tuple[list[Hit], list[dict]]:
+        """The hits the security layer lets through, and a record of each one it dropped ({id, corpus, action, risk, rules}). With no guard nothing is dropped."""
+        if self.guard is None:
+            return hits, []
+        kept, dropped = [], []
+        for hit in hits:
+            corpus = corpus_of(hit.chunk_id)
+            verdict = self.guard.screen_document(hit.text, doc_id=hit.chunk_id, corpus=corpus)
+            if verdict.refused:
+                dropped.append({"id": hit.chunk_id, "corpus": corpus, "action": verdict.action, "risk": verdict.risk, "rules": list(verdict.rules)})
+            else:
+                kept.append(hit)
+        return kept, dropped
 
     # ---- fetch (the toolbox, which uses the paid APIs and writes the text files)
 
@@ -564,6 +586,9 @@ class DataClerkTools:
         options = dict(tickers=[symbol], since_days=since_days, k=k, min_score=None, newest_first=True, now=now)
         found = [(h, "news") for h in search_news(query, store=self.store, **options)] + [(h, "press_releases") for h in search_press_releases(query, store=self.press_store, **options)]
         found.sort(key=lambda pair: pair[0].published_utc, reverse=True)
+        if self.guard is not None:      # the Critic's fresh sources are evidence too: a document the security layer drops is not shown to it (it is logged, entry 116)
+            passed = {h.chunk_id for h in self._screened([h for h, _ in found])[0]}
+            found = [pair for pair in found if pair[0].chunk_id in passed]
         return [{**hit.as_dict(), "corpus": corpus} for hit, corpus in found[:k]]
 
     # ---- the LangChain edge
@@ -601,11 +626,12 @@ class DataClerkTools:
         def retrieve(*args, **kwargs):
             result = method(*args, **kwargs)
             hits = [Hit(**h) for h in result["hits"]]
+            extra = {"security_dropped": result["security_dropped"]} if result.get("security_dropped") else {}      # the documents the security layer dropped (entry 116), for the Data Clerk's result
             if not hits:
-                return result["message"], {"found": False, "reason": result["reason"], "hits": []}
+                return result["message"], {"found": False, "reason": result["reason"], "hits": [], **extra}
             text = book.add(hits)
             return text, {"found": True, "reason": None,
-                          "hits": [{"number": book.number_of(h), **h.as_dict()} for h in hits]}
+                          "hits": [{"number": book.number_of(h), **h.as_dict()} for h in hits], **extra}
 
         return StructuredTool.from_function(retrieve, name=method.__name__, parse_docstring=True,
                                             response_format="content_and_artifact")

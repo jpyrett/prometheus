@@ -163,6 +163,8 @@ def _stream(run, params, accounts, question_timeout, out, live, chosen, mode, pa
     except (OSError, RuntimeError, ValueError) as error:           # a missing key: the message names the setting, never a value
         raise RuntimeError(str(error) or f"the agents could not be started ({type(error).__name__})") from None
     out.log("system", f"the agents are ready ({time.perf_counter() - began:.1f} s)")
+    guard = getattr(parts, "guard", None)                  # the security layer's doors (entry 116): the request is counted against the rate limit at the page (`POST /api/runs`), so the desk's own door does not count it again
+    out.guard, out.account_id = guard, params["account_id"]
     manager = parts.new_manager()
     manager.connect(parts.store, params["account_id"])
     holder = manager.users.get()
@@ -179,7 +181,8 @@ def _stream(run, params, accounts, question_timeout, out, live, chosen, mode, pa
         return fresh
 
     graph = graph_builder(clerk_factory=lambda order: parts.clerk, advisor_factory=lambda order: parts.advisor, funds_factory=new_manager, with_critic=True, critic_factory=lambda order: parts.critic,
-                          with_trader=True, trader_factory=lambda order: parts.trader, approver=approver, store_factory=lambda: parts.store, confirm=confirm, clarify=clarifier)
+                          with_trader=True, trader_factory=lambda order: parts.trader, approver=approver, store_factory=lambda: parts.store, confirm=confirm, clarify=clarifier,
+                          **({"guard": guard.without_rate_limit()} if guard is not None else {}))
     request = {"ask": {"text": params["prompt"], "default_count": session.DEFAULT_COUNT, "fetch": params["fetch"]}, "account": {"account": params["account_id"], "profile": profile}, "trade": {"mode": "paper", "book": True, "model": True}}
     state0 = {**NO_RUN_STATE, "request": request}
     poller, final, shown = None, None, 0
@@ -261,7 +264,7 @@ def _finish(run: Run, params: dict, accounts, out: Emitter, live: Live, final: d
         out.block("trader", session.trade_lines(order))
     after_view = accounts.view(params["account_id"])
     before_view = out.before_account
-    if buying and order.reviews and not direct and before_view is not None:
+    if buying and session.sized_purchases(order) and not direct and before_view is not None:
         out.block("account_manager", session.use_of_money_lines(order, _portfolio_of(before_view), _portfolio_of(after_view)))
     out.portfolio(after_view)
     out.work_order(order, understood=_understood(plan), found=views.companies_found(order, plan))

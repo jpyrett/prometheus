@@ -41,6 +41,7 @@ from prometheus.agents.account_manager import sizing
 from prometheus.agents.critic.common import utc_text
 from prometheus.common import shares as sh
 from prometheus.common.work_order import NEUTRAL, WorkOrder, is_neutral_candidate
+from prometheus.common.trace import traced
 from prometheus.rag.config import setting
 
 TRUE_WORDS = ("1", "true", "yes", "on")
@@ -79,6 +80,7 @@ def record_id_of(order: WorkOrder, number: int) -> str:
     return f"neutral-{order.request_id}-{number}"
 
 
+@traced("account_manager.neutral_purchases")
 def purchases_for(order: WorkOrder, names: list[dict], prices: dict[str, Decimal], after_rank: int = 0) -> list[sizing.Purchase]:
     """The neutral companies as the plain numbers the sizing takes: one purchase for each of `names`, numbered from 1 in the order given (`record_id_of`), at the Data Clerk's price (None when it had none), RANKED AFTER the
     approved purchases (`after_rank` is the highest rank of those: the sizing visits the purchases in rank order, so the approved ones come first and then the neutral ones, best score first). The sizing questions of Ask mode

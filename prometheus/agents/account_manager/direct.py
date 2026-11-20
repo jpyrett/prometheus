@@ -40,6 +40,13 @@ and the decision carries `dollars` (the most it may cost: $5,000.00 for MSFT: 9 
 into shares at the fill price, so the purchase costs its dollars to the cent. Such an order is not "as typed": the user typed no number of shares. A direct order whose shares the user typed, an answer in shares, and every sale stay orders in shares, placed as typed
 or not at all. With fractions off (the switch, or an account book that cannot hold a fraction) the money is spent in whole shares as before, and no decision carries dollars.
 
+THE DOLLARS THE USER WROTE FOR A STOCK ARE THAT STOCK'S LIMIT (design choices entry 122; Jacob: *"It is impossible to spend more than the amount in the portfolio and budget"*). "Buy $3,000 of XOM and $3,000 of MSFT" is two orders with
+`dollars` (the intent form has one for each order, `intent.DirectOrder.dollars`, checked as money the user wrote), the user's record on `order.direct_orders` holds it (`dollars`, and `how_many: "dollars"` once sized), and
+`AccountManager._size_direct` sizes each as an amount for EACH stock: what its dollars buy (a fraction with an account book that holds one, else whole shares), as an order in dollars, with the POT of the run the sum of the dollars.
+A purchase with no number in a request where another purchase has one ("Buy $2,000 of AAPL and MSFT") is not given the cash: Ask mode asks about it, Auto mode does not place it and says "say how much of MSFT" (`how: "unsaid"`).
+A request that wrote an amount of money and whose reading has none is refused before this module is reached (`intent.check_amount_was_read`), never turned into all the cash. `work_order.verify_trade` refuses a decision whose dollars
+(or estimated cost) are above the user's own dollars for the stock.
+
 TODO (Jacob, 2026-11-15): LIMIT ORDERS. A direct order is a MARKET order: the Trader places it at the current quote (there is no slippage: entry 111) and it does not look at the market hours. A limit
 order ("buy 50 shares of MSFT at $500 or less"; "sell 10 shares of TSLA at $450 or more") is not built: the intent form has no price, the user's record has no limit, the decision does not carry one and the ticket takes its
 limit range from the quote. It needs the form (a price the user typed, checked against their words), a limit on the record and the decision, the ticket's range, and an order that may rest until the price is reached.
@@ -58,6 +65,7 @@ from prometheus.agents.critic.common import utc_text
 from prometheus.common import shares as sh
 from prometheus.common.money import digits, exact, price as price_door
 from prometheus.common.portfolio import Portfolio, affordable_shares, trade_amount
+from prometheus.common.trace import traced
 from prometheus.common.user_profile import UserProfile
 from prometheus.common.work_order import DIRECT, DataResult, WorkOrder, verify_direct_orders
 
@@ -133,7 +141,8 @@ def name_the_stocks(order: WorkOrder, orders, typed: str, now: datetime, found: 
     entries, problems = [], []
     for number, (wanted, row) in enumerate(sort.listed, 1):
         entries.append({"record_id": record_id_of(order.request_id, number), "side": wanted.side, "symbol": row["symbol"], "company": row["company"], "shares": wanted.shares, "request": typed,
-                        "requested_utc": utc_text(now), "typed_company": wanted.company, "how_many": "typed" if wanted.shares is not None else None, "found_by": row.get("how")})
+                        "requested_utc": utc_text(now), "typed_company": wanted.company, "how_many": "typed" if wanted.shares is not None else None, "found_by": row.get("how"),
+                        **({"dollars": wanted.dollars} if getattr(wanted, "dollars", None) is not None else {})})      # the user's own dollars for the stock (entry 122)
     if len({e["symbol"] for e in entries}) != len(entries):
         problems.append("two of your orders are for the same stock (a ticker and the company's name, for example): name each stock once")
     problems += verify_direct_orders(entries) if not problems else []
@@ -157,20 +166,27 @@ def _decision(entry: dict, mode: str, price, now: datetime, valid_minutes: int) 
             "origin": DIRECT, "company": entry["company"], "price": price, "valid_until_utc": utc_text(now + timedelta(minutes=valid_minutes))}
 
 
-HOW_WORDS = {"asked": "you gave when the Account Manager asked how many", "cash": "the Account Manager worked out: as much as your cash allows", "budget": "the Account Manager worked out from the dollars you gave"}
+HOW_WORDS = {"asked": "you gave when the Account Manager asked how many", "cash": "the Account Manager worked out: as much as your cash allows", "budget": "the Account Manager worked out from the dollars you gave",
+             "dollars": "the Account Manager worked out from the dollars you wrote for this stock"}
+SIZED = ("asked", "cash", "budget", "dollars")      # where the number of shares of a purchase can come from when the user typed none: the Account Manager sized it from the user's money (entries 98, 111 and 122)
 
 
-def _decide_unsized(entry: dict, portfolio: Portfolio, mode: str, price, now: datetime, valid_minutes: int) -> dict:
+def _decide_unsized(entry: dict, portfolio: Portfolio, mode: str, price, now: datetime, valid_minutes: int, unsaid: bool = False) -> dict:
     """An order of the user's that still has no number of shares when it is decided (design choices entry 98): a SALE (the Account Manager does not guess how much of a holding to sell: say how many), a purchase
-    with no price, or one that the cash cannot buy a single share of. Never traded."""
+    with no price, one that the cash (or the user's own dollars for it) cannot buy a single share of, or a purchase with no number in a request where another purchase has one (`unsaid`, entry 122: say how much of it; the cash is
+    never its default). Never traded."""
     decision = _decision(entry, mode, price if _usable(price) else None, now, valid_minutes)
     symbol = entry["symbol"]
     if entry["side"] == "sell":
         held = portfolio.position(symbol)
         decision.update(will_trade="no_system_denied", funds_avail=False, reason=("you named a sale and no number of shares: say how many to sell" + (f" (the account holds {sh.text(held.shares)} share{'s' if held.shares != 1 else ''} of {symbol})" if held else f" (the account holds no {symbol})")
-                                                                                   + "; the Account Manager does not choose how much of a holding to sell"))
+                                                                                   + "; the Account Manager does not choose how much of a holding to sell" + (f" (${entry['dollars']:,.2f} is not a number of shares to sell)" if entry.get("dollars") is not None else "")))
     elif not _usable(price):
         decision.update(will_trade="no_system_denied", funds_avail=False, reason=f"there is no current price for {symbol}, so the order cannot be sized or priced")
+    elif unsaid:
+        decision.update(will_trade="no_system_denied", funds_avail=False, reason=f"you gave an amount for another stock and none for {symbol}: say how much of {symbol} you want (the cash is not spent on it by default); nothing is placed")
+    elif entry.get("dollars") is not None:
+        decision.update(will_trade="no_funds", funds_avail=False, reason=f"your ${digits(entry['dollars']):,.2f} for {symbol} does not buy even one share at ${price:,.2f} (the cash is ${portfolio.cash_avail:,.2f}): nothing is placed")
     else:
         decision.update(will_trade="no_funds", funds_avail=False, reason=f"the cash ${portfolio.cash_avail:,.2f} does not buy even one share of {symbol} at ${price:,.2f}: nothing is placed")
     return decision
@@ -242,7 +258,7 @@ def confirmation_card(entry: dict, decision: dict, cash: Decimal) -> dict:
 def _confirm_looked_up(order: WorkOrder, entry: dict, decision: dict, mode: str, approver, cash: Decimal) -> None:
     """A company the user NAMED (the symbol is the Data Clerk's): in ASK mode the user confirms the symbol, the company, the shares and the amount before anything goes to the Trader (no answer, or nobody to ask: it stays
     `pending_user` and is not traded; no is `no_user_denied`); in AUTO mode the returned symbol is used without asking, and the reason says so. A decision that is not `yes_user` is not asked about."""
-    sized = entry.get("how_many") in ("asked", "cash", "budget")         # the user wrote no number of shares and the Account Manager worked one out (entry 98): the final proposal is shown in Ask mode
+    sized = entry.get("how_many") in SIZED         # the user wrote no number of shares and the Account Manager worked one out (entry 98): the final proposal is shown in Ask mode
     if (entry.get("typed_company") is None and not sized) or decision["will_trade"] != "yes_user":
         return
     named = f"{entry['typed_company']!r} -> {entry['company']} ({entry['symbol']})" if entry.get("typed_company") is not None else f"{entry['company']} ({entry['symbol']}), {sh.text(entry['shares'])} shares"
@@ -274,6 +290,7 @@ def _decide_whole_only(entry: dict, mode: str, price, now: datetime, valid_minut
     return decision
 
 
+@traced("account_manager.direct_decisions")
 def decide_direct(order: WorkOrder, portfolio: Portfolio, profile: UserProfile, mode: str | None, prices: dict[str, Decimal], now: datetime, valid_minutes: int, approver=None,
                   sized: dict[str, dict] | None = None, fractions: bool = True) -> WorkOrder:
     """One decision for each of `order.direct_orders` (see the module text); return the SAME order, `decided`, with `trade_decisions`. `prices` is {symbol: the current price} from the Data Clerk. `approver` is the callable
@@ -300,17 +317,19 @@ def decide_direct(order: WorkOrder, portfolio: Portfolio, profile: UserProfile, 
         order.errors = [*order.errors, f"mode must be one of {', '.join(MODES)}"]
         return order
     for entry in order.direct_orders:       # an order with no number of shares of the user's: the Account Manager's sizing gives it one (`sized`: {record_id: {"shares", "how"}}), written on the user's record
-        if entry["shares"] is None and (sized or {}).get(entry["record_id"]):
+        if entry["shares"] is None and (sized or {}).get(entry["record_id"]) and sized[entry["record_id"]]["shares"] is not None:
             entry["shares"], entry["how_many"] = sized[entry["record_id"]]["shares"], sized[entry["record_id"]]["how"]
     def decide(entry: dict) -> dict:
         if entry["shares"] is not None and not fractions and not sh.whole(entry["shares"]):
             return _decide_whole_only(entry, mode, prices.get(entry["symbol"]), now, valid_minutes)
-        return (_decide_one if entry["shares"] is not None else _decide_unsized)(entry, portfolio, mode, prices.get(entry["symbol"]), now, valid_minutes)
+        if entry["shares"] is None:
+            return _decide_unsized(entry, portfolio, mode, prices.get(entry["symbol"]), now, valid_minutes, unsaid=((sized or {}).get(entry["record_id"]) or {}).get("how") == "unsaid")
+        return _decide_one(entry, portfolio, mode, prices.get(entry["symbol"]), now, valid_minutes)
 
     order.trade_decisions = [decide(entry) for entry in order.direct_orders]
     for entry, decision in zip(order.direct_orders, order.trade_decisions):      # what the sizing says of a purchase it sized from the user's money (entry 111): the POT of the run (M1) and, for an ORDER IN DOLLARS, its dollars (M2); the shares and the estimate stay
         given = (sized or {}).get(entry["record_id"])
-        if given and entry.get("how_many") in ("asked", "cash", "budget"):
+        if given and given.get("shares") is not None and entry.get("how_many") in SIZED:
             decision["size"] = {"shares": entry["shares"], "pot": given.get("pot"), "allocation": given.get("allocation"), "binding": given.get("binding"), "how": entry["how_many"]}
             if given.get("dollars"):
                 decision["dollars"] = given["dollars"]
@@ -335,8 +354,11 @@ def direct_section(order: WorkOrder) -> list[str]:
         d = decisions.get(entry["record_id"])
         who = f"{entry.get('company') or entry['symbol']} ({entry['symbol']})" + (f" [the listed owner of {entry['typed_company']!r}, which you named]" if entry.get("typed_company") and entry.get("found_by") == "brand" else f" [you named the company as {entry['typed_company']!r}]" if entry.get("typed_company") else "")
         what = f"{entry['side']} {sh.text(entry['shares'])} share{'s' if entry['shares'] != 1 else ''} of {who}" if entry["shares"] is not None else f"{entry['side']} {who} (you wrote no number of shares)"
-        if d is not None and d.get("dollars"):      # an order in dollars (entry 111): the dollars first, the shares an estimate
-            what = f"{entry['side']} ${d['dollars']:,.2f} of {who} (about {sh.text(entry['shares'])} shares)"
+        written = (d or {}).get("dollars") or entry.get("dollars")      # an order in dollars (entries 111 and 122), or one the user gave dollars for: the dollars first, the shares an estimate
+        if written and entry["shares"] is not None:
+            what = f"{entry['side']} ${digits(written):,.2f} of {who} (about {sh.text(entry['shares'])} shares)"
+        elif entry.get("dollars") is not None and entry["shares"] is None:
+            what = f"{entry['side']} ${digits(entry['dollars']):,.2f} of {who}"
         if d is None:
             lines.append(f"  {what}: not decided")
             continue

@@ -7,7 +7,7 @@
 The model for each role comes from the settings in .env (the names are in .env.example), so changing a model is
 a settings change, not a code change:
 
-    data_clerk -> DEFAULT_MODEL     fast -> FAST_MODEL     advisor -> ADVISOR_MODEL     critic -> CRITIC_MODEL     account_manager -> ACCOUNT_MANAGER_MODEL     trader -> TRADER_MODEL
+    data_clerk -> DEFAULT_MODEL     fast -> FAST_MODEL     advisor -> ADVISOR_MODEL     critic -> CRITIC_MODEL     account_manager -> ACCOUNT_MANAGER_MODEL     trader -> TRADER_MODEL     guard -> GUARD_MODEL     judge -> JUDGE_MODEL
 
 `llm.py` (the local Hugging Face model from Lab 1.1) stays as it is. A local chat model for the agents is later work.
 The temperature is 0 by default: the Data Clerk should pick the same tool for the same question.
@@ -26,6 +26,8 @@ ROLES = {  # role -> (setting name, default). The defaults are the values in .en
     "critic": ("CRITIC_MODEL", "z-ai/glm-5.3"),  # Z.ai GLM 5.3: a different producer than the Advisor's models, so the reviewer does not agree with text a model of its own family wrote (Critic v1 spec 11.1)
     "account_manager": ("ACCOUNT_MANAGER_MODEL", "openai/gpt-oss-120b"),  # RaiseFunds, the Tree of Thought (entry 42): Jacob asked for gpt-oss-120b
     "trader": ("TRADER_MODEL", "openai/gpt-oss-120b"),  # the Trader (Trader v1, design/trader_v1_final_spec.md): a tool loop at temperature 0 over four guarded tools; code owns the symbol, the side, the shares and the price limits
+    "guard": ("GUARD_MODEL", "qwen/qwen3.8-max-0902"),  # the LLM Risk Scorer of the security layer (entry 116, design/agentic_security_spec.md): a large Qwen judge, a different producer from every agent it screens; it only labels, code takes the number
+    "judge": ("JUDGE_MODEL", "anthropic/claude-opus-5.5"),  # the offline evaluation's risk judge (entry 117, design/offline_evaluation_spec.md): Claude Opus on OpenRouter, the same rubric as the online judge on the LangSmith page; it only scores, code takes the action
 }
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
 

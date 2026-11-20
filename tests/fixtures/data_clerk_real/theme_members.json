@@ -1,0 +1,1416 @@
+{
+ "_note": "REAL replies of the Data Clerk's model (the data_clerk role, temperature 0) to the two questions of DataClerk.find_companies for 'oil' and 'cybersecurity', captured with scripts/capture_theme_members.py (design choices entry 120): the PROPOSAL (which companies belong to the phrase) and the MEMBERSHIP (does each ticker the stored market news names for the phrase belong to it). `discovered` is what the stored market news gave (discover_tickers, 30 days, top 10), `directory` every Finnhub symbol search that was made with its rows, `model_calls` the raw replies in the order they were asked, `result` what find_companies returned. Nothing is edited.",
+ "model": "openai/gpt-oss-120b",
+ "captured_utc": "2026-11-20T15:56:10Z",
+ "tokens_in": 2404,
+ "tokens_out": 2501,
+ "cases": {
+  "oil": {
+   "phrase": "oil",
+   "model": "openai/gpt-oss-120b",
+   "count": 10,
+   "today": "2026-11-20",
+   "discovered": {
+    "phrase": "oil",
+    "from_date": 30,
+    "top": 10,
+    "scanned": 2241,
+    "matched": 90,
+    "tickers": [
+     {
+      "symbol": "CVX",
+      "articles": 7,
+      "positive": 7,
+      "neutral": 0,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Oil Prices Climb: 3 Energy Stocks Poised to Benefit From the Rally",
+       "Chevron Eyes $1B Gulf Asset Sale to Focus on Growth Projects",
+       "Dollar General and Las Vegas Sands have been highlighted as Zacks Bull and Bear of the Day"
+      ]
+     },
+     {
+      "symbol": "VLO",
+      "articles": 7,
+      "positive": 7,
+      "neutral": 0,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Valero Energy (VLO) Q3 Earnings and Revenues Surpass Estimates",
+       "Inflamed Oil Prices Send Pre-Markets Lower",
+       "Pre-Markets in Red on Higher Crude Oil Prices"
+      ]
+     },
+     {
+      "symbol": "META",
+      "articles": 6,
+      "positive": 0,
+      "neutral": 0,
+      "negative": 6,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Why Micron Stock Dropped on Thursday",
+       "Why Intel Stock Fell Today",
+       "Why AMD Stock Fell on Thursday"
+      ]
+     },
+     {
+      "symbol": "CVE",
+      "articles": 5,
+      "positive": 4,
+      "neutral": 1,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Are You Looking for a Top Momentum Pick? Why Cenovus Energy (CVE) is a Great Choice",
+       "Equinor vs Cenovus: Which Energy Stock Is a Better Investment?",
+       "Why Cenovus Energy (CVE) is a Top Momentum Stock for the Long-Term"
+      ]
+     },
+     {
+      "symbol": "PBF",
+      "articles": 4,
+      "positive": 4,
+      "neutral": 0,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "PBF Energy (PBF) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
+       "Valero Energy Q3 Earnings Top Estimates on Refining Strength",
+       "With Diesel Margins Stretched, Production Is Underway at Nevada\u2019s Only Crude Oil Refinery"
+      ]
+     },
+     {
+      "symbol": "PG",
+      "articles": 4,
+      "positive": 4,
+      "neutral": 0,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Inflamed Oil Prices Send Pre-Markets Lower",
+       "Pre-Markets in Red on Higher Crude Oil Prices",
+       "Company News for Oct 23, 2026"
+      ]
+     },
+     {
+      "symbol": "APA",
+      "articles": 3,
+      "positive": 2,
+      "neutral": 0,
+      "negative": 1,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Oil Prices Climb: 3 Energy Stocks Poised to Benefit From the Rally",
+       "APA Plans to Keep Forties Charlie Operational Amid Strike Threat",
+       "Dollar General and Las Vegas Sands have been highlighted as Zacks Bull and Bear of the Day"
+      ]
+     },
+     {
+      "symbol": "BP",
+      "articles": 3,
+      "positive": 3,
+      "neutral": 0,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "TechnipFMC Signs MoU With BP to Support Deepwater Oil Projects",
+       "XOM vs. BP: Which Integrated Energy Giant Has the Edge?",
+       "Oil Stocks: Values or Traps?"
+      ]
+     },
+     {
+      "symbol": "CNQ",
+      "articles": 3,
+      "positive": 0,
+      "neutral": 3,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "APA Plans to Keep Forties Charlie Operational Amid Strike Threat",
+       "Chevron Eyes $1B Gulf Asset Sale to Focus on Growth Projects",
+       "Transocean Secures $550M in Gulf Contracts, Strengthens Backlog"
+      ]
+     },
+     {
+      "symbol": "CRGY",
+      "articles": 3,
+      "positive": 0,
+      "neutral": 3,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "APA Plans to Keep Forties Charlie Operational Amid Strike Threat",
+       "Chevron Eyes $1B Gulf Asset Sale to Focus on Growth Projects",
+       "Transocean Secures $550M in Gulf Contracts, Strengthens Backlog"
+      ]
+     }
+    ]
+   },
+   "directory": {
+    "Exxon Mobil Corp": [
+     {
+      "description": "Exxon Mobil Corp",
+      "displaySymbol": "XOM",
+      "symbol": "XOM",
+      "type": "Common Stock"
+     }
+    ],
+    "Chevron Corp": [
+     {
+      "description": "Chevron Corporation",
+      "displaySymbol": "CVX",
+      "symbol": "CVX",
+      "type": "Common Stock"
+     }
+    ],
+    "Shell plc": [
+     {
+      "description": "Shell PLC",
+      "displaySymbol": "SHEL.L",
+      "symbol": "SHEL.L",
+      "type": "Common Stock"
+     }
+    ],
+    "BP plc": [
+     {
+      "description": "BP PLC",
+      "displaySymbol": "BP.L",
+      "symbol": "BP.L",
+      "type": "Common Stock"
+     }
+    ],
+    "TotalEnergies SE": [
+     {
+      "description": "TotalEnergies SE",
+      "displaySymbol": "TTE.PA",
+      "symbol": "TTE.PA",
+      "type": "Common Stock"
+     }
+    ],
+    "ConocoPhillips": [
+     {
+      "description": "ConocoPhillips",
+      "displaySymbol": "COP",
+      "symbol": "COP",
+      "type": "Common Stock"
+     }
+    ],
+    "Occidental Petroleum": [
+     {
+      "description": "Occidental Petroleum Corp",
+      "displaySymbol": "OXY",
+      "symbol": "OXY",
+      "type": "Common Stock"
+     }
+    ],
+    "Phillips 66": [
+     {
+      "description": "Phillips 66",
+      "displaySymbol": "PSX",
+      "symbol": "PSX",
+      "type": "Common Stock"
+     }
+    ],
+    "Marathon Oil Corp": [
+     {
+      "description": "Marathon Oil Corp",
+      "displaySymbol": "MRO",
+      "symbol": "MRO",
+      "type": "Common Stock"
+     }
+    ],
+    "EOG Resources Inc": [],
+    "EOG Resources": [
+     {
+      "description": "EOG Resources, Inc.",
+      "displaySymbol": "EOG",
+      "symbol": "EOG",
+      "type": "Common Stock"
+     }
+    ],
+    "VLO": [
+     {
+      "description": "VALERO ENERGY CORP",
+      "displaySymbol": "VLO",
+      "symbol": "VLO",
+      "type": "Common Stock"
+     },
+     {
+      "description": "VALERO ENERGY CORP",
+      "displaySymbol": "VLO.TO",
+      "symbol": "VLO.TO",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "VALERO ENERGY CORP",
+      "displaySymbol": "VLO.NE",
+      "symbol": "VLO.NE",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "VALERO ENERGY CORP",
+      "displaySymbol": "VLO.MX",
+      "symbol": "VLO.MX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "VALERO ENERGY CORP",
+      "displaySymbol": "VLO.VI",
+      "symbol": "VLO.VI",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Pavlovskiy Avtobus PAO",
+      "displaySymbol": "PAZA.ME",
+      "symbol": "PAZA.ME",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Petropavlovsk PLC",
+      "displaySymbol": "POG.L",
+      "symbol": "POG.L",
+      "type": "Common Stock"
+     }
+    ],
+    "META": [
+     {
+      "description": "META PLATFORMS INC-CLASS A",
+      "displaySymbol": "META",
+      "symbol": "META",
+      "type": "Common Stock"
+     },
+     {
+      "description": "META PLATFORMS INC-CDR",
+      "displaySymbol": "META.TO",
+      "symbol": "META.TO",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "META PLATFORMS INC-CDR",
+      "displaySymbol": "META.NE",
+      "symbol": "META.NE",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "METACON AB",
+      "displaySymbol": "META.ST",
+      "symbol": "META.ST",
+      "type": "Common Stock"
+     },
+     {
+      "description": "WT INDUS METALS ENHANCED",
+      "displaySymbol": "META.L",
+      "symbol": "META.L",
+      "type": "ETP"
+     },
+     {
+      "description": "META CORP PCL",
+      "displaySymbol": "META.BK",
+      "symbol": "META.BK",
+      "type": "Common Stock"
+     },
+     {
+      "description": "NUSANTARA INFRASTRUCTURE TBK",
+      "displaySymbol": "META.JK",
+      "symbol": "META.JK",
+      "type": "Common Stock"
+     },
+     {
+      "description": "WT INDUS METALS ENHANCED",
+      "displaySymbol": "META.MI",
+      "symbol": "META.MI",
+      "type": "ETP"
+     },
+     {
+      "description": "META PLATFORMS INC-CLASS A",
+      "displaySymbol": "META.MX",
+      "symbol": "META.MX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "META PLATFORMS INC-CLASS A",
+      "displaySymbol": "META.WA",
+      "symbol": "META.WA",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Meta Platforms, Inc.",
+      "displaySymbol": "META",
+      "symbol": "META",
+      "type": "Common Stock"
+     }
+    ],
+    "CVE": [
+     {
+      "description": "CENOVUS ENERGY INC",
+      "displaySymbol": "CVE",
+      "symbol": "CVE",
+      "type": "Common Stock"
+     },
+     {
+      "description": "CENOVUS ENERGY INC",
+      "displaySymbol": "CVE.TO",
+      "symbol": "CVE.TO",
+      "type": "Common Stock"
+     },
+     {
+      "description": "CENOVUS ENERGY INC",
+      "displaySymbol": "CVE.NE",
+      "symbol": "CVE.NE",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Marcventures Holdings Inc",
+      "displaySymbol": "MARC.PM",
+      "symbol": "MARC.PM",
+      "type": "Common Stock"
+     }
+    ],
+    "PBF": [
+     {
+      "description": "PBF ENERGY INC-CLASS A",
+      "displaySymbol": "PBF",
+      "symbol": "PBF",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PLANET BASED FOODS GLOBAL IN",
+      "displaySymbol": "PBF.CN",
+      "symbol": "PBF.CN",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PLANET BASED FOODS GLOBAL IN",
+      "displaySymbol": "PBF.NE",
+      "symbol": "PBF.NE",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PICTET-BIOTECH-P USD",
+      "displaySymbol": "PBF.DU",
+      "symbol": "PBF.DU",
+      "type": "Open-End Fund"
+     },
+     {
+      "description": "PICTET-BIOTECH-P USD",
+      "displaySymbol": "PBF.HM",
+      "symbol": "PBF.HM",
+      "type": "Open-End Fund"
+     },
+     {
+      "description": "PICTET-BIOTECH-P USD",
+      "displaySymbol": "PBF.MU",
+      "symbol": "PBF.MU",
+      "type": "Open-End Fund"
+     },
+     {
+      "description": "PBF ENERGY INC-CLASS A",
+      "displaySymbol": "PBF.MX",
+      "symbol": "PBF.MX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PBS FINANSE SA",
+      "displaySymbol": "PBF.WA",
+      "symbol": "PBF.WA",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PICTET-BIOTECH-P USD",
+      "displaySymbol": "PBF.HA",
+      "symbol": "PBF.HA",
+      "type": "Open-End Fund"
+     },
+     {
+      "description": "PBF Energy Inc.",
+      "displaySymbol": "PBF",
+      "symbol": "PBF",
+      "type": "Common Stock"
+     }
+    ],
+    "PG": [
+     {
+      "description": "PROCTER & GAMBLE CO/THE",
+      "displaySymbol": "PG",
+      "symbol": "PG",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PROCTER & GAMBLE CO/THE-CDR",
+      "displaySymbol": "PG.TO",
+      "symbol": "PG.TO",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "PROCTER & GAMBLE CO/THE-CDR",
+      "displaySymbol": "PG.NE",
+      "symbol": "PG.NE",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "PEOPLE'S GARMENT PUB CO LTD",
+      "displaySymbol": "PG.BK",
+      "symbol": "PG.BK",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PG PLC",
+      "displaySymbol": "PG.MT",
+      "symbol": "PG.MT",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PROCTER & GAMBLE CO/THE",
+      "displaySymbol": "PG.MX",
+      "symbol": "PG.MX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PROCTER & GAMBLE CO/THE",
+      "displaySymbol": "PG.SW",
+      "symbol": "PG.SW",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PROCTER & GAMBLE CO/THE",
+      "displaySymbol": "PG.VI",
+      "symbol": "PG.VI",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PG&E Corp",
+      "displaySymbol": "PCG",
+      "symbol": "PCG",
+      "type": "Common Stock"
+     },
+     {
+      "description": "PPG Industries, Inc.",
+      "displaySymbol": "PPG",
+      "symbol": "PPG",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Capgemini SE",
+      "displaySymbol": "CAP.PA",
+      "symbol": "CAP.PA",
+      "type": "Common Stock"
+     }
+    ],
+    "APA": [
+     {
+      "description": "APA CORP",
+      "displaySymbol": "APA",
+      "symbol": "APA",
+      "type": "Common Stock"
+     },
+     {
+      "description": "APA GROUP",
+      "displaySymbol": "APA.AX",
+      "symbol": "APA.AX",
+      "type": "Stapled Security"
+     },
+     {
+      "description": "APA CORP",
+      "displaySymbol": "APA.MX",
+      "symbol": "APA.MX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "SMART ASIA PACIFIC ETF",
+      "displaySymbol": "APA.NZ",
+      "symbol": "APA.NZ",
+      "type": "ETP"
+     },
+     {
+      "description": "APANET SA",
+      "displaySymbol": "APA.WA",
+      "symbol": "APA.WA",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Japan Post Bank Co Ltd",
+      "displaySymbol": "7182.T",
+      "symbol": "7182.T",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Japan Tobacco Inc",
+      "displaySymbol": "2914.T",
+      "symbol": "2914.T",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Japan Post Holdings Co Ltd",
+      "displaySymbol": "6178.T",
+      "symbol": "6178.T",
+      "type": "Common Stock"
+     },
+     {
+      "description": "East Japan Railway Co",
+      "displaySymbol": "9020.T",
+      "symbol": "9020.T",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Central Japan Railway Co",
+      "displaySymbol": "9022.T",
+      "symbol": "9022.T",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Hapag-Lloyd AG",
+      "displaySymbol": "HLAG.DE",
+      "symbol": "HLAG.DE",
+      "type": "Common Stock"
+     }
+    ],
+    "BP": [
+     {
+      "description": "BP PLC-SPONS ADR",
+      "displaySymbol": "BP",
+      "symbol": "BP",
+      "type": "ADR"
+     },
+     {
+      "description": "BP PLC",
+      "displaySymbol": "BP.L",
+      "symbol": "BP.L",
+      "type": "Common Stock"
+     },
+     {
+      "description": "BP PLC",
+      "displaySymbol": "BP.L",
+      "symbol": "BP.L",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Nordea Bank Abp",
+      "displaySymbol": "NDA FI.HE",
+      "symbol": "NDA FI.HE",
+      "type": "Common Stock"
+     },
+     {
+      "description": "BPER Banca SpA",
+      "displaySymbol": "BPE.MI",
+      "symbol": "BPE.MI",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Banco BPM SpA",
+      "displaySymbol": "BAMI.MI",
+      "symbol": "BAMI.MI",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Aker BP ASA",
+      "displaySymbol": "AKRBP.OL",
+      "symbol": "AKRBP.OL",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Wartsila Oyj Abp",
+      "displaySymbol": "WRT1V.HE",
+      "symbol": "WRT1V.HE",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Indofood CBP Sukses Makmur Tbk PT",
+      "displaySymbol": "ICBP.JK",
+      "symbol": "ICBP.JK",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Fiskars Oyj Abp",
+      "displaySymbol": "FSKRS.HE",
+      "symbol": "FSKRS.HE",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Aktia Bank Abp",
+      "displaySymbol": "AKTIA.HE",
+      "symbol": "AKTIA.HE",
+      "type": "Common Stock"
+     }
+    ],
+    "CNQ": [
+     {
+      "description": "CANADIAN NATURAL RESOURCES",
+      "displaySymbol": "CNQ",
+      "symbol": "CNQ",
+      "type": "Common Stock"
+     },
+     {
+      "description": "CANADIAN NATURAL RESOURCES",
+      "displaySymbol": "CNQ.TO",
+      "symbol": "CNQ.TO",
+      "type": "Common Stock"
+     },
+     {
+      "description": "CANADIAN NATURAL RESOURCES",
+      "displaySymbol": "CNQ.NE",
+      "symbol": "CNQ.NE",
+      "type": "Common Stock"
+     },
+     {
+      "description": "CLEAN TEQ WATER LTD",
+      "displaySymbol": "CNQ.AX",
+      "symbol": "CNQ.AX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "CNQC International Holdings Ltd",
+      "displaySymbol": "1240.HK",
+      "symbol": "1240.HK",
+      "type": "Common Stock"
+     }
+    ],
+    "CRGY": [
+     {
+      "description": "CRESCENT ENERGY INC-A",
+      "displaySymbol": "CRGY",
+      "symbol": "CRGY",
+      "type": "Common Stock"
+     }
+    ]
+   },
+   "model_calls": [
+    {
+     "stage": "proposal",
+     "reply": "{\n  \"companies\": [\n    {\n      \"brand\": \"Exxon Mobil\",\n      \"parent\": \"Exxon Mobil Corp\",\n      \"ticker\": \"XOM\"\n    },\n    {\n      \"brand\": \"Chevron\",\n      \"parent\": \"Chevron Corp\",\n      \"ticker\": \"CVX\"\n    },\n    {\n      \"brand\": \"Shell\",\n      \"parent\": \"Shell plc\",\n      \"ticker\": \"SHEL\"\n    },\n    {\n      \"brand\": \"BP\",\n      \"parent\": \"BP plc\",\n      \"ticker\": \"BP\"\n    },\n    {\n      \"brand\": \"TotalEnergies\",\n      \"parent\": \"TotalEnergies SE\",\n      \"ticker\": \"TTE\"\n    },\n    {\n      \"brand\": \"ConocoPhillips\",\n      \"parent\": \"ConocoPhillips\",\n      \"ticker\": \"COP\"\n    },\n    {\n      \"brand\": \"Occidental Petroleum\",\n      \"parent\": \"Occidental Petroleum Corp\",\n      \"ticker\": \"OXY\"\n    },\n    {\n      \"brand\": \"Phillips 66\",\n      \"parent\": \"Phillips 66\",\n      \"ticker\": \"PSX\"\n    },\n    {\n      \"brand\": \"Marathon Oil\",\n      \"parent\": \"Marathon Oil Corp\",\n      \"ticker\": \"MRO\"\n    },\n    {\n      \"brand\": \"EOG Resources\",\n      \"parent\": \"EOG Resources Inc\",\n      \"ticker\": \"EOG\"\n    }\n  ],\n  \"sector_etf\": \"XLE\"\n}",
+     "tokens_in": 449,
+     "tokens_out": 820
+    },
+    {
+     "stage": "membership",
+     "reply": "{\n  \"members\": [\n    {\n      \"symbol\": \"VLO\",\n      \"belongs\": true,\n      \"reason\": \"Valero refines and markets petroleum products.\"\n    },\n    {\n      \"symbol\": \"META\",\n      \"belongs\": false,\n      \"reason\": \"Meta runs social media platforms, not oil operations.\"\n    },\n    {\n      \"symbol\": \"CVE\",\n      \"belongs\": true,\n      \"reason\": \"Cenovus produces and processes crude oil and petroleum.\"\n    },\n    {\n      \"symbol\": \"PBF\",\n      \"belongs\": true,\n      \"reason\": \"PBF Energy is an independent oil refiner and supplier.\"\n    },\n    {\n      \"symbol\": \"PG\",\n      \"belongs\": false,\n      \"reason\": \"Procter & Gamble makes consumer goods, unrelated to oil.\"\n    },\n    {\n      \"symbol\": \"APA\",\n      \"belongs\": true,\n      \"reason\": \"APA Corp explores and produces oil and natural gas.\"\n    },\n    {\n      \"symbol\": \"CNQ\",\n      \"belongs\": true,\n      \"reason\": \"Canadian Natural Resources extracts and sells crude oil.\"\n    },\n    {\n      \"symbol\": \"CRGY\",\n      \"belongs\": true,\n      \"reason\": \"Crescent Energy focuses on oil and gas exploration.\"\n    }\n  ]\n}",
+     "tokens_in": 843,
+     "tokens_out": 565
+    }
+   ],
+   "result": {
+    "phrase": "oil",
+    "companies": [
+     {
+      "brand": "Exxon Mobil",
+      "parent": "Exxon Mobil Corp",
+      "symbol": "XOM",
+      "company": "Exxon Mobil Corp",
+      "public": true,
+      "how": "company name \"Exxon Mobil Corp\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Chevron",
+      "parent": "Chevron Corp",
+      "symbol": "CVX",
+      "company": "Chevron Corporation",
+      "public": true,
+      "how": "company name \"Chevron Corp\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Shell",
+      "parent": "Shell plc",
+      "symbol": "SHEL.L",
+      "company": "Shell PLC",
+      "public": true,
+      "how": "company name \"Shell plc\": the same words as the listing",
+      "note": "the model guessed SHEL; the lookup says SHEL.L"
+     },
+     {
+      "brand": "BP",
+      "parent": "BP plc",
+      "symbol": "BP.L",
+      "company": "Bp Plc",
+      "public": true,
+      "how": "company name \"BP plc\": the same words as the listing",
+      "note": "the model guessed BP; the lookup says BP.L"
+     },
+     {
+      "brand": "TotalEnergies",
+      "parent": "TotalEnergies SE",
+      "symbol": "TTE.PA",
+      "company": "TotalEnergies SE",
+      "public": true,
+      "how": "company name \"TotalEnergies SE\": the same words as the listing",
+      "note": "the model guessed TTE; the lookup says TTE.PA"
+     },
+     {
+      "brand": "ConocoPhillips",
+      "parent": "ConocoPhillips",
+      "symbol": "COP",
+      "company": "ConocoPhillips",
+      "public": true,
+      "how": "company name \"ConocoPhillips\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Occidental Petroleum",
+      "parent": "Occidental Petroleum Corp",
+      "symbol": "OXY",
+      "company": "Occidental Petroleum Corp",
+      "public": true,
+      "how": "company name \"Occidental Petroleum Corp\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Phillips 66",
+      "parent": "Phillips 66",
+      "symbol": "PSX",
+      "company": "Phillips 66",
+      "public": true,
+      "how": "company name \"Phillips 66\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Marathon Oil",
+      "parent": "Marathon Oil Corp",
+      "symbol": "MRO",
+      "company": "Marathon Oil Corp",
+      "public": true,
+      "how": "company name \"Marathon Oil Corp\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "EOG Resources",
+      "parent": "EOG Resources Inc",
+      "symbol": "EOG",
+      "company": "EOG Resources, Inc.",
+      "public": true,
+      "how": "company name \"EOG Resources Inc\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "VLO",
+      "parent": null,
+      "symbol": "VLO",
+      "company": "Valero Energy Corp",
+      "public": true,
+      "how": "stored market news, confirmed by the Data Clerk's model",
+      "note": "7 stored articles; the model says it belongs: Valero refines and markets petroleum products."
+     },
+     {
+      "brand": "CVE",
+      "parent": null,
+      "symbol": "CVE",
+      "company": "Cenovus Energy Inc",
+      "public": true,
+      "how": "stored market news, confirmed by the Data Clerk's model",
+      "note": "5 stored articles; the model says it belongs: Cenovus produces and processes crude oil and petroleum."
+     },
+     {
+      "brand": "PBF",
+      "parent": null,
+      "symbol": "PBF",
+      "company": "Pbf Energy Inc-Class A",
+      "public": true,
+      "how": "stored market news, confirmed by the Data Clerk's model",
+      "note": "4 stored articles; the model says it belongs: PBF Energy is an independent oil refiner and supplier."
+     },
+     {
+      "brand": "APA",
+      "parent": null,
+      "symbol": "APA",
+      "company": "Apa Corp",
+      "public": true,
+      "how": "stored market news, confirmed by the Data Clerk's model",
+      "note": "3 stored articles; the model says it belongs: APA Corp explores and produces oil and natural gas."
+     },
+     {
+      "brand": "CNQ",
+      "parent": null,
+      "symbol": "CNQ",
+      "company": "Canadian Natural Resources",
+      "public": true,
+      "how": "stored market news, confirmed by the Data Clerk's model",
+      "note": "3 stored articles; the model says it belongs: Canadian Natural Resources extracts and sells crude oil."
+     },
+     {
+      "brand": "CRGY",
+      "parent": null,
+      "symbol": "CRGY",
+      "company": "Crescent Energy Inc-A",
+      "public": true,
+      "how": "stored market news, confirmed by the Data Clerk's model",
+      "note": "3 stored articles; the model says it belongs: Crescent Energy focuses on oil and gas exploration."
+     }
+    ],
+    "sector_etf": "XLE",
+    "notes": [
+     "BP: in the news for 'oil' but left out: no company of that symbol in Finnhub's directory",
+     "META (Meta Platforms Inc-Class A): in the news for 'oil' but not in the theme: Meta runs social media platforms, not oil operations.",
+     "PG (Procter & Gamble Co/The): in the news for 'oil' but not in the theme: Procter & Gamble makes consumer goods, unrelated to oil."
+    ],
+    "run": {
+     "stage": "companies",
+     "model": "openai/gpt-oss-120b",
+     "tokens_in": 449,
+     "tokens_out": 820,
+     "calls": 1,
+     "dropped": [],
+     "error": null
+    },
+    "membership": {
+     "stage": "theme_members",
+     "model": "openai/gpt-oss-120b",
+     "tokens_in": 843,
+     "tokens_out": 565,
+     "calls": 1,
+     "dropped": [],
+     "error": null
+    }
+   }
+  },
+  "cybersecurity": {
+   "phrase": "cybersecurity",
+   "model": "openai/gpt-oss-120b",
+   "count": 10,
+   "today": "2026-11-20",
+   "discovered": {
+    "phrase": "cybersecurity",
+    "from_date": 30,
+    "top": 10,
+    "scanned": 2241,
+    "matched": 14,
+    "tickers": [
+     {
+      "symbol": "CRWD",
+      "articles": 4,
+      "positive": 3,
+      "neutral": 1,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Arista Networks vs. CrowdStrike: Which Tech Stock Is a Better Buy in 2026?",
+       "CrowdStrike vs. SentinelOne: Which Cybersecurity Stock Is a Better Buy in 2026?",
+       "Tech Sell-Off: 2 Growth Stocks Investors Might Wish They'd Bought on the Dip"
+      ]
+     },
+     {
+      "symbol": "HONA",
+      "articles": 4,
+      "positive": 0,
+      "neutral": 0,
+      "negative": 4,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Bronstein, Gewirtz & Grossman LLC Urges Honeywell Aerospace, Inc. Investors to Act: Class Action Filed Alleging Investor Harm",
+       "Deadline Alert: Honeywell Aerospace, Inc. Investors Have Until November 23, 2026 to Seek Lead Plaintiff Role in Securities Fraud Class Action, Glancy Prongay Wolke & Rotter LLP Reminds",
+       "ROSEN, A LONGSTANDING FIRM, Encourages Honeywell Aerospace Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - HONA"
+      ]
+     },
+     {
+      "symbol": "AMZN",
+      "articles": 3,
+      "positive": 0,
+      "neutral": 3,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Arista Networks vs. CrowdStrike: Which Tech Stock Is a Better Buy in 2026?",
+       "CrowdStrike vs. SentinelOne: Which Cybersecurity Stock Is a Better Buy in 2026?",
+       "Adobe vs. CrowdStrike: Which Technology Stock Is a Better Buy in 2026?"
+      ]
+     },
+     {
+      "symbol": "NVDA",
+      "articles": 3,
+      "positive": 0,
+      "neutral": 3,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Arista Networks vs. CrowdStrike: Which Tech Stock Is a Better Buy in 2026?",
+       "CrowdStrike vs. SentinelOne: Which Cybersecurity Stock Is a Better Buy in 2026?",
+       "Adobe vs. CrowdStrike: Which Technology Stock Is a Better Buy in 2026?"
+      ]
+     },
+     {
+      "symbol": "S",
+      "articles": 2,
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "CrowdStrike vs. SentinelOne: Which Cybersecurity Stock Is a Better Buy in 2026?",
+       "Tech Sell-Off: 2 Growth Stocks Investors Might Wish They'd Bought on the Dip"
+      ]
+     },
+     {
+      "symbol": "ADBE",
+      "articles": 1,
+      "positive": 0,
+      "neutral": 0,
+      "negative": 1,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Adobe vs. CrowdStrike: Which Technology Stock Is a Better Buy in 2026?"
+      ]
+     },
+     {
+      "symbol": "ANET",
+      "articles": 1,
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Arista Networks vs. CrowdStrike: Which Tech Stock Is a Better Buy in 2026?"
+      ]
+     },
+     {
+      "symbol": "AVGO",
+      "articles": 1,
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "Arista Networks vs. CrowdStrike: Which Tech Stock Is a Better Buy in 2026?"
+      ]
+     },
+     {
+      "symbol": "BKYI",
+      "articles": 1,
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "BIO-key Secures Another Middle East Government Contract for its Passwordless, Biometric, Identity and Access Management Solutions"
+      ]
+     },
+     {
+      "symbol": "BULL",
+      "articles": 1,
+      "positive": 0,
+      "neutral": 0,
+      "negative": 1,
+      "providers": [
+       "polygon"
+      ],
+      "headlines": [
+       "ROSEN, A LONGSTANDING FIRM, Encourages Honeywell Aerospace Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - HONA"
+      ]
+     }
+    ]
+   },
+   "directory": {
+    "Palo Alto Networks": [
+     {
+      "description": "Palo Alto Networks, Inc.",
+      "displaySymbol": "PANW",
+      "symbol": "PANW",
+      "type": "Common Stock"
+     }
+    ],
+    "Fortinet": [
+     {
+      "description": "Fortinet, Inc.",
+      "displaySymbol": "FTNT",
+      "symbol": "FTNT",
+      "type": "Common Stock"
+     }
+    ],
+    "CrowdStrike Holdings": [
+     {
+      "description": "CrowdStrike Holdings, Inc.",
+      "displaySymbol": "CRWD",
+      "symbol": "CRWD",
+      "type": "Common Stock"
+     }
+    ],
+    "Zscaler": [
+     {
+      "description": "Zscaler, Inc.",
+      "displaySymbol": "ZS",
+      "symbol": "ZS",
+      "type": "Common Stock"
+     }
+    ],
+    "Check Point Software": [
+     {
+      "description": "Check Point Software Technologies Ltd.",
+      "displaySymbol": "CHKP",
+      "symbol": "CHKP",
+      "type": "Common Stock"
+     }
+    ],
+    "Okta, Inc.": [
+     {
+      "description": "Okta, Inc.",
+      "displaySymbol": "OKTA",
+      "symbol": "OKTA",
+      "type": "Common Stock"
+     }
+    ],
+    "SentinelOne, Inc.": [],
+    "SentinelOne,": [],
+    "SentinelOne": [
+     {
+      "description": "SentinelOne Inc",
+      "displaySymbol": "S",
+      "symbol": "S",
+      "type": "Common Stock"
+     }
+    ],
+    "CyberArk Software": [
+     {
+      "description": "Cyberark Software Ltd",
+      "displaySymbol": "CYBR",
+      "symbol": "CYBR",
+      "type": "Common Stock"
+     }
+    ],
+    "Gen Digital Inc.": [
+     {
+      "description": "Gen Digital Inc.",
+      "displaySymbol": "GEN",
+      "symbol": "GEN",
+      "type": "Common Stock"
+     }
+    ],
+    "Splunk Inc.": [],
+    "Splunk": [],
+    "SPLK": [],
+    "HONA": [
+     {
+      "description": "HONEYWELL AEROSPACE INC",
+      "displaySymbol": "HONA",
+      "symbol": "HONA",
+      "type": "Common Stock"
+     },
+     {
+      "description": "HONEYWELL AEROSPACE INC-CDR",
+      "displaySymbol": "HONA.TO",
+      "symbol": "HONA.TO",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "HONEYWELL AEROSPACE INC-CDR",
+      "displaySymbol": "HONA.NE",
+      "symbol": "HONA.NE",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "HONEYWELL AEROSPACE INC",
+      "displaySymbol": "HONA.MX",
+      "symbol": "HONA.MX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Honasa Consumer Ltd",
+      "displaySymbol": "HONASA.NS",
+      "symbol": "HONASA.NS",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Miahona Co SCJSC",
+      "displaySymbol": "2084.SR",
+      "symbol": "2084.SR",
+      "type": "Common Stock"
+     },
+     {
+      "description": "Honat Bancorp Inc",
+      "displaySymbol": "HONT",
+      "symbol": "HONT",
+      "type": "Common Stock"
+     }
+    ],
+    "AMZN": [
+     {
+      "description": "AMAZON.COM INC",
+      "displaySymbol": "AMZN",
+      "symbol": "AMZN",
+      "type": "Common Stock"
+     },
+     {
+      "description": "AMAZON.COM INC - CDR",
+      "displaySymbol": "AMZN.TO",
+      "symbol": "AMZN.TO",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "AMAZON.COM INC - CDR",
+      "displaySymbol": "AMZN.NE",
+      "symbol": "AMZN.NE",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "LS 1X AMZN",
+      "displaySymbol": "AMZN.L",
+      "symbol": "AMZN.L",
+      "type": "ETP"
+     },
+     {
+      "description": "LS 1X AMZN",
+      "displaySymbol": "AMZN.AS",
+      "symbol": "AMZN.AS",
+      "type": "ETP"
+     },
+     {
+      "description": "AMAZON.COM INC",
+      "displaySymbol": "AMZN.MX",
+      "symbol": "AMZN.MX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "AMAZON.COM INC",
+      "displaySymbol": "AMZN.SW",
+      "symbol": "AMZN.SW",
+      "type": "Common Stock"
+     },
+     {
+      "description": "AMAZON.COM INC",
+      "displaySymbol": "AMZN.VI",
+      "symbol": "AMZN.VI",
+      "type": "Common Stock"
+     },
+     {
+      "description": "AMAZON.COM INC",
+      "displaySymbol": "AMZN.WA",
+      "symbol": "AMZN.WA",
+      "type": "Common Stock"
+     }
+    ],
+    "NVDA": [
+     {
+      "description": "NVIDIA CORP",
+      "displaySymbol": "NVDA",
+      "symbol": "NVDA",
+      "type": "Common Stock"
+     },
+     {
+      "description": "NVIDIA CORP-CDR",
+      "displaySymbol": "NVDA.TO",
+      "symbol": "NVDA.TO",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "NVIDIA CORP-CDR",
+      "displaySymbol": "NVDA.NE",
+      "symbol": "NVDA.NE",
+      "type": "Canadian DR"
+     },
+     {
+      "description": "NVIDIA Corp",
+      "displaySymbol": "NVDA.DU",
+      "symbol": "NVDA.DU",
+      "type": ""
+     },
+     {
+      "description": "NVIDIA Corp",
+      "displaySymbol": "NVDA.MU",
+      "symbol": "NVDA.MU",
+      "type": ""
+     },
+     {
+      "description": "NVIDIA CORP",
+      "displaySymbol": "NVDA.MX",
+      "symbol": "NVDA.MX",
+      "type": "Common Stock"
+     },
+     {
+      "description": "NVIDIA CORP",
+      "displaySymbol": "NVDA.SN",
+      "symbol": "NVDA.SN",
+      "type": "Common Stock"
+     },
+     {
+      "description": "NVIDIA CORP",
+      "displaySymbol": "NVDA.SW",
+      "symbol": "NVDA.SW",
+      "type": "Common Stock"
+     },
+     {
+      "description": "NVIDIA CORP",
+      "displaySymbol": "NVDA.VI",
+      "symbol": "NVDA.VI",
+      "type": "Common Stock"
+     },
+     {
+      "description": "NVIDIA CORP",
+      "displaySymbol": "NVDA.WA",
+      "symbol": "NVDA.WA",
+      "type": "Common Stock"
+     }
+    ]
+   },
+   "model_calls": [
+    {
+     "stage": "proposal",
+     "reply": "{\n  \"companies\": [\n    {\n      \"brand\": \"Palo Alto Networks\",\n      \"parent\": \"Palo Alto Networks\",\n      \"ticker\": \"PANW\"\n    },\n    {\n      \"brand\": \"Fortinet\",\n      \"parent\": \"Fortinet\",\n      \"ticker\": \"FTNT\"\n    },\n    {\n      \"brand\": \"CrowdStrike\",\n      \"parent\": \"CrowdStrike Holdings\",\n      \"ticker\": \"CRWD\"\n    },\n    {\n      \"brand\": \"Zscaler\",\n      \"parent\": \"Zscaler\",\n      \"ticker\": \"ZS\"\n    },\n    {\n      \"brand\": \"Check Point Software Technologies\",\n      \"parent\": \"Check Point Software Technologies Ltd.\",\n      \"ticker\": \"CHKP\"\n    },\n    {\n      \"brand\": \"Okta\",\n      \"parent\": \"Okta, Inc.\",\n      \"ticker\": \"OKTA\"\n    },\n    {\n      \"brand\": \"SentinelOne\",\n      \"parent\": \"SentinelOne, Inc.\",\n      \"ticker\": \"S\"\n    },\n    {\n      \"brand\": \"CyberArk\",\n      \"parent\": \"CyberArk Software Ltd.\",\n      \"ticker\": \"CYBR\"\n    },\n    {\n      \"brand\": \"NortonLifeLock\",\n      \"parent\": \"Gen Digital Inc.\",\n      \"ticker\": \"GEN\"\n    },\n    {\n      \"brand\": \"Splunk\",\n      \"parent\": \"Splunk Inc.\",\n      \"ticker\": \"SPLK\"\n    }\n  ],\n  \"sector_etf\": \"XLK\"\n}",
+     "tokens_in": 449,
+     "tokens_out": 728
+    },
+    {
+     "stage": "membership",
+     "reply": "{\n  \"members\": [\n    {\n      \"symbol\": \"HONA\",\n      \"belongs\": false,\n      \"reason\": \"Manufactures aerospace systems; cybersecurity is not its core business.\"\n    },\n    {\n      \"symbol\": \"AMZN\",\n      \"belongs\": false,\n      \"reason\": \"Primarily an e\u2011commerce and cloud services company, not a dedicated cybersecurity provider.\"\n    },\n    {\n      \"symbol\": \"NVDA\",\n      \"belongs\": false,\n      \"reason\": \"Designs and sells graphics and AI chips; cybersecurity is not its main focus.\"\n    }\n  ]\n}",
+     "tokens_in": 663,
+     "tokens_out": 388
+    }
+   ],
+   "result": {
+    "phrase": "cybersecurity",
+    "companies": [
+     {
+      "brand": "Palo Alto Networks",
+      "parent": "Palo Alto Networks",
+      "symbol": "PANW",
+      "company": "Palo Alto Networks, Inc.",
+      "public": true,
+      "how": "company name \"Palo Alto Networks\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Fortinet",
+      "parent": "Fortinet",
+      "symbol": "FTNT",
+      "company": "Fortinet, Inc.",
+      "public": true,
+      "how": "company name \"Fortinet\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "CrowdStrike",
+      "parent": "CrowdStrike Holdings",
+      "symbol": "CRWD",
+      "company": "CrowdStrike Holdings, Inc.",
+      "public": true,
+      "how": "company name \"CrowdStrike Holdings\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Zscaler",
+      "parent": "Zscaler",
+      "symbol": "ZS",
+      "company": "Zscaler, Inc.",
+      "public": true,
+      "how": "company name \"Zscaler\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Check Point Software Technologies",
+      "parent": "Check Point Software Technologies Ltd.",
+      "symbol": "CHKP",
+      "company": "Check Point Software Technologies Ltd.",
+      "public": true,
+      "how": "company name \"Check Point Software Technologies Ltd.\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Okta",
+      "parent": "Okta, Inc.",
+      "symbol": "OKTA",
+      "company": "Okta, Inc.",
+      "public": true,
+      "how": "company name \"Okta, Inc.\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "SentinelOne",
+      "parent": "SentinelOne, Inc.",
+      "symbol": "S",
+      "company": "SentinelOne Inc",
+      "public": true,
+      "how": "company name \"SentinelOne\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "CyberArk",
+      "parent": "CyberArk Software Ltd.",
+      "symbol": "CYBR",
+      "company": "Cyberark Software Ltd",
+      "public": true,
+      "how": "company name \"CyberArk Software Ltd.\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "NortonLifeLock",
+      "parent": "Gen Digital Inc.",
+      "symbol": "GEN",
+      "company": "Gen Digital Inc.",
+      "public": true,
+      "how": "company name \"Gen Digital Inc.\": the same words as the listing",
+      "note": null
+     },
+     {
+      "brand": "Splunk",
+      "parent": "Splunk Inc.",
+      "symbol": null,
+      "company": null,
+      "public": false,
+      "how": null,
+      "note": "no listed company named 'Splunk Inc.' in Finnhub's directory: not scored"
+     }
+    ],
+    "sector_etf": "XLK",
+    "notes": [
+     "HONA (Honeywell Aerospace Inc): in the news for 'cybersecurity' but not in the theme: Manufactures aerospace systems; cybersecurity is not its core business.",
+     "AMZN (Amazon.Com Inc): in the news for 'cybersecurity' but not in the theme: Primarily an e\u2011commerce and cloud services company, not a dedicated cybersecurity provider.",
+     "NVDA (Nvidia Corp): in the news for 'cybersecurity' but not in the theme: Designs and sells graphics and AI chips; cybersecurity is not its main focus."
+    ],
+    "run": {
+     "stage": "companies",
+     "model": "openai/gpt-oss-120b",
+     "tokens_in": 449,
+     "tokens_out": 728,
+     "calls": 1,
+     "dropped": [],
+     "error": null
+    },
+    "membership": {
+     "stage": "theme_members",
+     "model": "openai/gpt-oss-120b",
+     "tokens_in": 663,
+     "tokens_out": 388,
+     "calls": 1,
+     "dropped": [],
+     "error": null
+    }
+   }
+  }
+ }
+}

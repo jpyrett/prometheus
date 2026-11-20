@@ -35,6 +35,7 @@ settlement rules apply when the orders are placed), a limit order, or the price 
 import json
 import threading
 import time
+import contextvars
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 from datetime import date
@@ -46,6 +47,7 @@ from langgraph.graph import END, START, StateGraph
 from prometheus.common import shares as sh
 from prometheus.common.money import json_default, exact
 from prometheus.common.portfolio import Portfolio, trade_amount
+from prometheus.common.trace import traced
 from prometheus.tools import trading_math as tm
 
 BEAM_WIDTH = 3        # unfinished nodes kept (expanded) per level
@@ -219,6 +221,7 @@ def root(problem: Problem) -> Node:
     return Node(id="n0", parent=None, depth=0, shortfall=problem.need, score=100.0, parts={})
 
 
+@traced("raise_funds.score_plan")
 def score_plan(problem: Problem, sells: tuple[tuple[str, Decimal], ...]) -> tuple[float, dict]:
     """(score 0 to 100, the components) of a plan, calculated. Every component is 0 to 1, higher is better:
 
@@ -375,6 +378,7 @@ def missing_kind(problem: Problem, node: Node, thoughts: list, max_depth: int) -
     return ""
 
 
+@traced("raise_funds.choose")
 def choose(problem: Problem, node: Node, thoughts: list, branching: int, max_depth: int) -> list:
     """From the first answer and the second one, at most `branching` distinct thoughts, keeping one of each wanted kind first (the first COVER, the first PARTIAL) and then the rest in order."""
     unique, seen = [], set()
@@ -465,7 +469,8 @@ def build_graph(problem: Problem, generate: Generate, beam_width: int | None = N
         frontier = state["frontier"]
         if parallel and len(frontier) > 1:
             with ThreadPoolExecutor(max_workers=len(frontier)) as pool:
-                results = list(pool.map(one, frontier))   # in the order of the frontier, whichever finishes first
+                contexts = [contextvars.copy_context() for _ in frontier]   # one copy of the caller's run per node, so each model call is traced under it (a Context is entered by one thread at a time)
+                results = list(pool.map(lambda context, node: context.run(one, node), contexts, frontier))   # in the order of the frontier, whichever finishes first
         else:
             results = [one(node) for node in frontier]
         raw, errors, reasked = [], list(state["errors"]), []
@@ -558,6 +563,7 @@ def build_graph(problem: Problem, generate: Generate, beam_width: int | None = N
     return graph.compile()
 
 
+@traced("raise_funds.search")
 def search(problem: Problem, generate: Generate, **limits) -> dict:
     """Run the tree search and return the answer (`answer`): status, the chosen plan, the alternatives, the whole trace and the numbers a reader needs.
     status is `funded` (the cash already covers the purchase: nothing to sell, no search), `plan` (a completed plan was found) or `infeasible` (none was)."""
@@ -572,6 +578,7 @@ def search(problem: Problem, generate: Generate, **limits) -> dict:
     return answer(problem, final["complete"], final, {**sizes, "deadline": deadline}, round(time.perf_counter() - started, 2))
 
 
+@traced("raise_funds.answer")
 def answer(problem: Problem, complete: list[Node], final: dict, limits: dict | None = None, seconds: float = 0.0) -> dict:
     ranked = sorted(complete, key=lambda n: (-n.score, len(n.sells), n.id))
     best = ranked[0] if ranked else None

@@ -42,6 +42,7 @@ from prometheus.agents.account_manager.intent import EVEN_CUE, numbers_in
 from prometheus.common import shares as sh
 from prometheus.common.money import Money, canonical, cents, digits, json_number
 from prometheus.common.portfolio import trade_amount
+from prometheus.common.trace import traced
 from prometheus.prompts import account_manager_sizing as prompt
 
 UNITS = ("percent", "dollars", "shares", "max")
@@ -233,6 +234,15 @@ def plan_choice(choice: SizingChoice, purchases: list[sizing.Purchase], equity: 
     return SizingPlan(balance=balance, budget=budget, text=(f"{unit_text} ({_money(budget)}) in all" if choice.unit == "percent" else f"{_money(budget)} in all") + (f", {how}" if k > 1 else ""))
 
 
+def plan_each_dollars(amount: Decimal, purchases: list[sizing.Purchase], cash: Decimal) -> SizingPlan:
+    """The plan of a request that SAID "$3,000 each" for the purchases the desk decides (design choices entry 125; no question is asked: the user already said). It is the plan of the answer "an amount for each company"
+    (`plan_choice` with scope `each`: each purchase's `wanted` is the whole shares its own dollars buy, which is its own cap), and the POT of the run is the amount times the number of purchases that can be sized (`sizing.pot_of`: never
+    above the cash), so a run never spends more than the amount for each stock. Nothing is spread evenly: every purchase has its own cap."""
+    plan = plan_choice(SizingChoice(unit="dollars", amount=amount, scope="each"), purchases, None, cash)
+    sized = sum(1 for p in purchases if p.price)
+    return plan.model_copy(update={"budget": sizing.pot_of(cash, amount * sized) if sized and cash > 0 else None})
+
+
 # ---------------------------------------------------------------- the facts the model is shown, and the loop
 
 def facts_for(purchases: list[sizing.Purchase], sized: list[sizing.Sized], cash: Decimal, equity: Decimal | None, request: str, prior_balance: str | None, config: AccountManagerConfig) -> dict:
@@ -283,6 +293,7 @@ def _action(raw: dict) -> tuple[str, dict]:
     raise ValueError("action must be ask_user or set_sizing")
 
 
+@traced("account_manager.clarify_loop")
 def run_loop(model, facts: dict, purchases: list[sizing.Purchase], cash: Decimal, equity: Decimal | None, channel: Channel, config: AccountManagerConfig, prior_balance: str | None = None) -> Outcome:
     """The ReAct loop (see the module text). Never raises: a model that fails, a reply that is nonsense three times, or a user who does not answer ends it with `choice` None and `why`."""
     cfg, out = config.clarify, Outcome()

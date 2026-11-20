@@ -7,12 +7,14 @@
 `run["error"]` (the kind of the failure, never request details) and the caller carries on without that call's output. The reply is parsed leniently (a fenced block, text around
 the JSON) but must contain an object whose `key` is a list; otherwise the model is told what was wrong, once.
 """
+import contextvars
 import json
 import re
 import threading
 
 from langchain_core.messages import AIMessage, HumanMessage
 
+from prometheus.common.trace import traced
 from prometheus.models.chat import is_rate_limited
 
 
@@ -30,7 +32,8 @@ def invoke_with_limit(model, messages: list, seconds: float | None = None):
         except BaseException as error:  # handed to the caller's thread
             box["error"] = error
 
-    worker = threading.Thread(target=call, daemon=True)
+    context = contextvars.copy_context()   # the caller's run (LangChain's callbacks and LangSmith's trace live in contextvars): without it the call is traced apart from its agent
+    worker = threading.Thread(target=context.run, args=(call,), daemon=True)
     worker.start()
     worker.join(seconds)
     if worker.is_alive():
@@ -70,6 +73,14 @@ def ask_json(model, messages: list, run: dict, key: str, retry: str) -> list | N
     return None if found is None else found[key]
 
 
+SPANS = {"plan": "advisor.plan", "thesis": "advisor.thesis", "review": "critic.evidence", "owner": "data_clerk.owner", "companies": "data_clerk.companies", "theme_members": "data_clerk.theme_members"}      # the span of a model step, by its stage (entry 115)
+
+
+def step_name(model, messages: list, run: dict, key: str, retry: str) -> str:
+    return SPANS.get(run["stage"], f"model.{run['stage']}")
+
+
+@traced(step_name)
 def ask_object(model, messages: list, run: dict, key: str, retry: str) -> dict | None:
     """The same, returning the WHOLE object (a reply that has other fields beside the list: the Data Clerk's company finder also gives a sector)."""
     for _ in range(2):

@@ -370,7 +370,8 @@ def test_the_sizing_imports_nothing_of_the_critic_the_advisor_a_model_or_the_net
     # AMENDED (entry 110): the fractional even split reads `shares.buys` and `shares.Shares` (plain Python, no model, no network), so `prometheus.common.shares` is one of the module's own imports
     assert own <= {"prometheus.agents.account_manager.config", "prometheus.agents.account_manager.config.AccountManagerConfig", "prometheus.agents.account_manager.config.load_config",
                    "prometheus.common", "prometheus.common.shares", "prometheus.common.money", "prometheus.common.money.CENT", "prometheus.common.money.NonNegativeMoney", "prometheus.common.money.Money",
-                   "prometheus.common.money.Price", "prometheus.common.money.exact", "prometheus.common.portfolio", "prometheus.common.portfolio.Portfolio", "prometheus.common.portfolio.trade_amount", "prometheus.tools", "prometheus.tools.trading_math"}, own
+                   "prometheus.common.money.Price", "prometheus.common.money.exact", "prometheus.common.portfolio", "prometheus.common.portfolio.Portfolio", "prometheus.common.portfolio.trade_amount", "prometheus.tools", "prometheus.tools.trading_math",
+                   "prometheus.common.trace", "prometheus.common.trace.traced"}, own      # AMENDED (entry 115): the span decorator `traced` (plain Python over `langsmith`: no model, no network of its own, and it makes no run unless a trace is open)
 
 
 def test_the_sizing_knows_no_limit_of_the_profile_and_no_stop():

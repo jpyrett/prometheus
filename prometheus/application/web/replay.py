@@ -24,7 +24,7 @@ from prometheus.agents.account_manager.intent import TradeIntent
 from prometheus.agents.account_manager.neutral import neutral_lines
 from prometheus.agents.critic.report import scorecard
 from prometheus.common import shares as sh
-from prometheus.application.session import decision_lines, trade_lines, use_of_money_lines
+from prometheus.application.session import decision_lines, sized_purchases, trade_lines, use_of_money_lines
 from prometheus.application.web import views
 from prometheus.application.web.emitter import AGENT_OF_NODE, Emitter, node_line, utc_now
 from prometheus.application.web.runs import Run
@@ -210,5 +210,5 @@ class Replay:
         out.block("account_manager", neutral_lines(order))
         if self.intent is None or self.intent.action in ("buy", "order"):
             out.block("trader", trade_lines(order))
-            if order.reviews and not order.direct_orders:
+            if sized_purchases(order) and not order.direct_orders:
                 out.block("account_manager", use_of_money_lines(order, self.before, self.after))

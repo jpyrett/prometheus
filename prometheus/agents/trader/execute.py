@@ -40,6 +40,7 @@ from prometheus.common import shares as sh
 from prometheus.common.market_calendar import eastern_date
 from prometheus.common.money import digits, price as price_door, price_scale
 from prometheus.common.portfolio import Portfolio, trade_amount
+from prometheus.common.trace import traced
 from prometheus.common.trading_clock import trading_now
 from prometheus.common.work_order import MAX_BAR_SYMBOLS, MAX_QUOTE_SYMBOLS, TRADING, WorkOrder, verify_trades
 from prometheus.tools.trader import market_price
@@ -110,6 +111,7 @@ def counts(trades: list[Trade]) -> dict[str, int]:
     return {"filled": sum(t.status == "filled" for t in own), "rejected": sum(t.status == "rejected" for t in own), "active": sum(t.status == "active" for t in own)}
 
 
+@traced("trader.fill_order")
 def fill_order(trades: list[Trade]) -> list[Trade]:
     """Trades in an order the account can take them in: every sale before any purchase (a funding sale before the purchase it pays for), otherwise as they are on the order. Used for the fills of an earlier run and
     for the active trades judged again."""
@@ -276,6 +278,7 @@ def preconditions(order: WorkOrder, mode: str, book: bool) -> str | None:
     return None
 
 
+@traced("trader.execute")
 def execute(trader, order: WorkOrder, account, portfolio, now, funding, approver, book: bool) -> WorkOrder:
     """The ten steps. See the module text."""
     now = now or trading_now()   # the real clock, or the simulated one when USE_LIVE_TRADING=false (entry 76)

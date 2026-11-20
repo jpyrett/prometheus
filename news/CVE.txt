@@ -1,0 +1,700 @@
+<<<ARTICLE>>>
+id: finnhub:143743149
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T23:21:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f29388e5b05d6e7d760a3b9b6355df919be544da9a9a5732f395a4d2856873b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: What Is Cenovus Energy (TSX:CVE) Signaling With Its Renewed Share Buyback Plan?
+<<<SUMMARY>>>
+Cenovus Energy (TSX:CVE) renewed its normal course issuer bid, authorizing repurchases of up to 126.5 million common shares. The company put an automatic share purchase plan in place so buybacks can continue during blackout periods tied to insider restrictions. Management framed the refreshed buyback and ASPP as part of a broader capital allocation approach focused on shareholder returns. The renewed NCIB and new automatic share purchase plan slot into a wider pattern our research has...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737961
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6838acf78758b8c8127572869a52123cad2ecfa4263365a93a74019e0ba0d141
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Imperial Oil Stock Rises 43% YTD: Time to Buy or Lock in Profits?
+<<<SUMMARY>>>
+IMO stock rallies 42.8% YTD. With rising production, favorable refining margins and strong cash flow, is the stock still worth buying?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694872
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T22:21:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bef11198454e0bb2ddb50e370a0c420f270ea55ec392209ff8cf1b973c6448c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: 5 Stocks Analysts Just Upgraded
+<<<SUMMARY>>>
+Wall Street spent last Thursday reminding investors how quickly a favorite theme can turn. Worries that Democratic midterm wins could bring tighter rules for artificial intelligence and data centers sent technology stocks sharply lower. The damage spread well beyond the group that was under the microscope. The Nasdaq Composite fell 5.52%, its biggest one-day drop […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143698070
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:59:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d3a834b7154edf21361c773b5ea14f22f2a34cee0af479bbcd66b81e011c538
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: CVE Outperforms Industry YTD: Should You Buy the Stock Now?
+<<<SUMMARY>>>
+Cenovus Energy's rising production, lower costs, strong cash flows and expansion projects support its growth outlook, while attractive valuation signals upside.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662010
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T18:58:19Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e381a06099c8c3e35daa246016ec1a6e854665ebcfb31f2702567eb86d61b771
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CVE
+keywords: 
+headline: Cenovus Energy Inc. 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-09. The following slide deck was published by Cenovus Energy Inc.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657645
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:48:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dc414eea498d374fb51e10679637a5547a74019975cd07df936415061a8c31be
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Can Cenovus Improve Refining Margins Through Market Expansion?
+<<<SUMMARY>>>
+CVE is expanding product-market access and optimizing refinery output to capture stronger pricing opportunities and improve downstream margins.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143653766
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ff73d46b30be6bca0f05be5312b2d51b02393b138a496e3a75923e3f7e2f7a7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Cenovus Energy Announces Renewal Of Normal Course Issuer Bid
+<<<SUMMARY>>>
+CALGARY, Alberta , Nov. 09, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) announced today that the Toronto Stock Exchange (“TSX”) has approved the renewal of the company’s normal course issuer bid (“NCIB”) to purchase up to 126,482,982 common shares during the 12-month period commencing November 11, 2026, and ending November 10, 2027. Cenovus may repurchase its common shares when it believes the market price represents an attractive investment opportunity and is in the best
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652753
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T09:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6097e8e1c0b5a7e5e2a77169e1d327cc1e72c1542b37d4c3e5ec77f5b5664db1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Zacks.com featured highlights include DMC Global, HF Sinclair, Cenovus Energy, ZIM Integrated Shipping and POSCO
+<<<SUMMARY>>>
+Discover five bargain stocks with attractive EV-to-EBITDA valuations, strong 2026 earnings growth prospects and sharply rising analyst estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143656133
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T07:06:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=645bedbc0cf1f4fe6e734a32d1fa10bc4e6c4578d2fd41b54d20f1e9aa4bc59d
+image_url: 
+category: company
+tickers: CVE
+keywords: 
+headline: Cenovus Energy Renews Normal Course Issuer Bid To Purchase Up To 126,482,982 Shares Through November 10, 2027
+<<<SUMMARY>>>
+Cenovus may repurchase its common shares when it believes the market price represents an attractive investment opportunity and is in the best interest of Cenovus and its shareholders.Cenovus’s prior NCIB for the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938127
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T11:49:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f91e9b7edc1a2a9bde823d99023916ebb9484a64faf3e6ee22a39217d1f4e94a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: 4 Value Stocks to Buy Amid Hot Inflation and a Hawkish Fed
+<<<SUMMARY>>>
+Hot inflation and hawkish Fed signals put value stocks in focus. CVE, SPT, AVT and HPE stand out for their strong earnings yields and growth prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922659
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:45:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d371dfc10883685ba1e970b0a37ba02e9cfd7eb2f2788bf9e81e0d3b67d1b57b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Here is Why Growth Investors Should Buy Cenovus (CVE) Now
+<<<SUMMARY>>>
+Cenovus (CVE) could produce exceptional returns because of its solid growth attributes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922660
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b4099176ca8149bdd337e0cee8ea35db1bee236adcb9c4153ef49957025c5174
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Suncor vs. Cenovus: Which Canadian Energy Stock Is the Better Buy?
+<<<SUMMARY>>>
+SU and CVE have delivered strong Q3 results, but differences in production growth, earnings outlook and valuation give one stock an edge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922662
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T13:40:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=885e746047bd29d6d45716cf96a5694aecbc5c02fb1add7c649a55dec68bf4d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Are Oils-Energy Stocks Lagging BP (BP) This Year?
+<<<SUMMARY>>>
+Here is how BP (BP) and Cenovus Energy (CVE) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922661
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T13:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a1a6e167c8de60fd8e7a0600e9a1ff7ef74994c8c688612dc0fd277f7a9802ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Should Value Investors Buy Cenovus Energy (CVE) Stock?
+<<<SUMMARY>>>
+Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140740145
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:40:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1330c2e97b76b4393550146450fe1b00805a15b4ea6dbe7b18d48fe7a418be5f
+image_url: 
+category: company
+tickers: CVE
+keywords: 
+headline: PowerBank shares are trading higher after the U.S. Department of Defense and the Department of the Army for the Armed Forces Reserve Center Farmingdale awarded the company's subsidiary, Abundant Solar Power, a $2,950,000 contract to construct a photovoltaic array, electric vehicle chargers and associated infrastructure for the U.S. Federal Government.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143941759
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T10:45:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1e06dd1fc067bb291bf5a6077eab548a5d249225005e76d5de523b6234089e5f
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_4.jpg?width=2048&height=1536
+category: company
+tickers: CVE
+keywords: 
+headline: If You Invested $100 In Cenovus Energy Stock 5 Years Ago, You Would Have This Much Today
+<<<SUMMARY>>>
+Cenovus Energy (NYSE:CVE) has outperformed the market over the past 5 years by 7.55% on an annualized basis producing an average annual return of 16.94%. Currently, Cenovus Energy has a market capitalization of $51.06
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143887216
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4bbb97775f98ae228c5af980dc1603b059d0a06c3622d1fce0afadfe93832479
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: New Discoveries and Project Ramp-Ups Boost Eni's Growth Prospects
+<<<SUMMARY>>>
+E's major oil and gas discoveries, rising production, new project developments and expanding resource base strengthen its long-term growth prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139985215
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:32:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cd66faf67f9da52f168f213f339f4c6af1262070fd76db7954a7e501be6b74c1
+image_url: 
+category: company
+tickers: CVE
+keywords: 
+headline: Abundia Global Impact Group shares are trading lower after the company announced the pricing of its $20 million registered direct offering of 5,934,718 shares.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805964
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T10:50:55Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=e7e9d248da5aa337550bc443cd0c328004fadf411e4a2fbd83a6ee7fc705c036
+image_url: https://www.chartmill.com/images/uploads/Undervalued_500_264px_webp_74997b3ff2.webp
+category: company
+tickers: CVE
+keywords: 
+headline: Cenovus Energy (NYSE:CVE) Screens as a Decent Value Stock
+<<<SUMMARY>>>
+Cenovus Energy fits a Decent Value screen with a 9/10 valuation and decent health, profitability and growth, but energy cyclicality is still a major risk.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143813759
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=464a88d8b00f61a411d766f9f2b60e57f761649c84fe72de08adad2eedf235a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Independent Proxy Advisory Firms Recommend Athabasca Shareholders Vote “FOR” the Proposed Arrangement with Cenovus
+<<<SUMMARY>>>
+CALGARY, Alberta, Nov. 13, 2026 (GLOBE NEWSWIRE) -- Athabasca Oil Corporation (TSX: ATH) (“Athabasca” or the “Corporation”) is pleased to announce that independent proxy advisory firms, including Institutional Shareholder Services (“ISS”), have recommended shareholders vote “FOR” the proposed plan of arrangement (the “Arrangement” or the “Transaction”) with Cenovus Energy Inc. (“Cenovus”). The Board of Directors of Athabasca (the “Athabasca Board”) unanimously recommends that shareholders vote F
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143810281
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:14:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1527cd09426332a5a1f8a830577bd5f30ce2eb2975ec80d5e420f2c3d67432c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Cenovus' Oil Sands Strength and Cost Discipline Support Growth
+<<<SUMMARY>>>
+CVE's expanding oil sands portfolio, declining operating costs and strategic growth projects strengthen its production outlook and long-term profitability.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143800943
+symbol: CVE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T09:12:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=27cdd444053faf91f018e950436bce44485afabac81ca8fcbe97757154d5b086
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVE
+keywords: 
+headline: Spartan Delta And 2 Canadian Energy Stocks To Own
+<<<SUMMARY>>>
+Rising oil prices linked to fresh Middle East conflict worries have pushed energy back to the front of global markets, and that puts large Canadian oil and gas exporters in sharp focus. When crude becomes more expensive, investors often recheck exposure to producers that supply world demand. This article walks through three of the strongest Canadian oil and gas stocks in the screener and explains what makes each one worth a closer look today. The three oil and gas stocks covered below are...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:438e68c0f97335d4326cd57d5389be758ea55c60c219a6b327a43d27ba794559
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T09:29:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3026022/zacks-com-featured-highlights-include-dmc-global-hf-sinclair-cenovus-energy-zim-integrated-shipping-and-posco?cid=CS-ZC-FT-press_releases-3026022
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/606.jpg
+category: 
+tickers: BOOM, DINO, CVE, ZIM, PKX
+keywords: EV-to-EBITDA ratio, valuation metrics, bargain stocks, earnings growth, Zacks Rank
+headline: Zacks.com featured highlights include DMC Global, HF Sinclair, Cenovus Energy, ZIM Integrated Shipping and POSCO
+<<<SUMMARY>>>
+Zacks highlights five stocks with attractive EV-to-EBITDA valuations as bargain opportunities. The article explains why EV-to-EBITDA is a superior valuation metric compared to P/E ratios, particularly for leveraged companies and loss-making firms. Featured stocks include DMC Global, HF Sinclair, Cenovus Energy, ZIM Integrated Shipping, and POSCO, all showing strong expected earnings growth for 2026.
+<<<INSIGHTS>>>
+BOOM | positive | Zacks Rank #1 with Value Score A, 200% expected YoY earnings growth for 2026, and 266.7% upward revision of consensus estimates over 60 days
+DINO | positive | Zacks Rank #1 with Value Score A, 341.1% expected YoY earnings growth for 2026, and 88.4% upward revision of consensus estimates over 60 days
+CVE | positive | Zacks Rank #1 with Value Score A, 167.5% expected YoY earnings growth for 2026, and 20.5% upward revision of consensus estimates over 60 days
+ZIM | positive | Zacks Rank #1 with Value Score A, 187.6% expected YoY earnings growth for 2026, and 181.3% upward revision of consensus estimates over 60 days
+PKX | positive | Zacks Rank #2 with Value Score A, 258% expected YoY earnings growth for 2026, though consensus estimate revision of only 4.3% is modest
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8d1bba86bc7780540a041d506adfb6798f40e762857ff8f818ee3745cc2bb2f7
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T11:00:00Z
+publisher: GlobeNewswire Inc.
+author: Na
+url: https://www.globenewswire.com/news-release/2026/11/09/3398160/0/en/cenovus-energy-announces-renewal-of-normal-course-issuer-bid.html
+image_url: https://ml.globenewswire.com/Resource/Download/35017d14-2493-4040-bea9-58d73a2c5afe
+category: 
+tickers: CVE
+keywords: share buyback, NCIB, normal course issuer bid, share repurchase, TSX approval, capital allocation
+headline: Cenovus Energy Announces Renewal Of Normal Course Issuer Bid
+<<<SUMMARY>>>
+Cenovus Energy Inc. announced the Toronto Stock Exchange has approved the renewal of its normal course issuer bid (NCIB) to repurchase up to 126,482,982 common shares over a 12-month period starting November 11, 2026. The company repurchased 88.3 million shares under its prior NCIB at a weighted-average price of $38.35 per share. All shares acquired under the renewed NCIB will be cancelled.
+<<<INSIGHTS>>>
+CVE | positive | The company's approval to repurchase up to 126.5 million shares (10% of public float) demonstrates management confidence in the stock's valuation and commitment to returning capital to shareholders. The renewal of the NCIB with an increased authorization compared to the prior bid (126.5M vs 120.3M shares) suggests positive outlook and financial strength.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:577edb0abad55267d24a10fa7c7b29eea6d901f182b4fa81be8874711e93bb68
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T14:48:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026541/can-cenovus-improve-refining-margins-through-market-expansion?cid=CS-ZC-FT-analyst_blog|quick_take-3026541
+image_url: https://staticx-tuner.zacks.com/images/articles/main/fe/157221.webp
+category: 
+tickers: CVE, MPC, PSX
+keywords: refining margins, market access, Laurel pipeline, distillate yields, refining optimization, infrastructure investments
+headline: Can Cenovus Improve Refining Margins Through Market Expansion?
+<<<SUMMARY>>>
+Cenovus Energy is strengthening refining margins through expanded market access via the Laurel pipeline and Toledo dock investments. The company achieved an 88% adjusted market capture rate in Q3 2026. Marathon Petroleum and Phillips 66 are also pursuing refining optimization and infrastructure investments to improve profitability and access higher-value markets.
+<<<INSIGHTS>>>
+CVE | positive | Company is successfully implementing margin expansion strategies through pipeline access, achieving strong 88% market capture rate in Q3 2026, and evaluating additional infrastructure investments. Shares gained 53.6% over the past year and stock holds Zacks Rank #1 (Strong Buy) with upward earnings revisions.
+MPC | positive | Company is investing in refinery upgrades and strategic projects (Galveston Bay distillate hydrotreater, Garyville export flexibility) designed to increase production flexibility and access higher-value markets, positioning it for improved refining margins.
+PSX | positive | Company achieved record 41% distillate yield in Q3 2026 and is advancing infrastructure investments and operational improvements. Focus on higher-value product yields and expanded transportation infrastructure supports future downstream profitability.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e09742c9ac5f3b12f3915beabc13420c6bbc04b40a2e0f42d2ccd76874b3b3d1
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:59:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027463/cve-outperforms-industry-ytd-should-you-buy-the-stock-now?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3027463
+image_url: https://staticx-tuner.zacks.com/images/articles/main/74/780.jpg
+category: 
+tickers: CVE, IMO, SU
+keywords: oil sands production, cost efficiency, earnings revisions, expansion projects, valuation discount, cash flow generation
+headline: CVE Outperforms Industry YTD: Should You Buy the Stock Now?
+<<<SUMMARY>>>
+Cenovus Energy (CVE) has outperformed peers and the S&P 500 with a 63.1% year-to-date gain, driven by 23% production growth, declining operating costs, and multiple expansion projects targeting 1.1 million BOE/d by 2028. Analysts have raised 2026 earnings estimates by 21.35% and 2027 estimates by 47.78%, while the stock trades at a valuation discount (4.04X EV/EBITDA) compared to industry peers.
+<<<INSIGHTS>>>
+CVE | positive | Strong YTD performance (63.1%), significant production growth (23% YoY), declining operating costs (5% sequential decline), multiple growth projects through 2028, upward earnings revisions (21.35% for 2026, 47.78% for 2027), and attractive valuation discount relative to peers support positive outlook.
+IMO | neutral | Mentioned as a peer comparison with 43.1% YTD performance and higher valuation multiple (7.77X EV/EBITDA), indicating it has underperformed CVE despite industry growth.
+SU | neutral | Mentioned as a peer comparison with 52% YTD performance and similar valuation multiple (4.42X EV/EBITDA) to CVE, indicating comparable but not superior performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9faa1603626cc200f362a957d43aea3af6d1b62381d6a98a2a740b87a251e118
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T16:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027829/imperial-oil-stock-rises-43-ytd-time-to-buy-or-lock-in-profits?cid=CS-ZC-FT-analyst_blog|rank_focused-3027829
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: IMO, SU, CVE
+keywords: Imperial Oil, energy sector, oil sands, upstream expansion, refining margins, dividend growth, cash flow, renewable diesel
+headline: Imperial Oil Stock Rises 43% YTD: Time to Buy or Lock in Profits?
+<<<SUMMARY>>>
+Imperial Oil (IMO) has gained 42.8% year-to-date, outperforming the broader energy sector. The company is positioned for long-term growth through higher production targets at Kearl (300,000 bpd by 2028) and Cold Lake (165,000 bpd), lower operating costs, favorable refining margins, and expanding renewable diesel operations. With C$3.2B in Q3 operating cash flow, 32 consecutive years of dividend growth, and strong shareholder returns, IMO is rated a Zacks Rank #2 (Buy) with 2026 earnings estimates showing 100.8% year-over-year growth.
+<<<INSIGHTS>>>
+IMO | positive | Strong operational fundamentals with higher production targets, lower operating costs, robust cash generation (C$3.2B Q3), favorable refining margins, 32 years of consecutive dividend growth, and positive earnings estimates (100.8% YoY growth for 2026). Zacks Rank #2 (Buy) rating reflects confidence in near-term and long-term prospects.
+SU | neutral | Mentioned as a peer company that has outperformed IMO year-to-date (52.8% gain vs IMO's 42.8%), with positive earnings growth estimates for 2026, but no specific operational details or analysis provided in the article.
+CVE | neutral | Mentioned as a peer company that has significantly outperformed IMO year-to-date (63.7% gain vs IMO's 42.8%), with positive earnings growth estimates for 2026, but no specific operational details or analysis provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5e91649f83e468ccc852fa292cc79b811a2a865b8e61f25a8d8583beaaa6b4a6
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T17:14:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029776/cenovus-oil-sands-strength-and-cost-discipline-support-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3029776
+image_url: https://staticx-tuner.zacks.com/images/articles/main/cd/186949.webp
+category: 
+tickers: CVE, SU, CNQ
+keywords: oil sands, production growth, cost discipline, energy sector, Canadian energy, acquisition, valuation
+headline: Cenovus' Oil Sands Strength and Cost Discipline Support Growth
+<<<SUMMARY>>>
+Cenovus Energy (CVE) is well-positioned for long-term growth supported by its expanding oil sands operations with declining unit costs and ambitious production targets. The company aims to reach 1.1 million barrels of oil equivalent per day by 2028, driven by projects like the Christina Lake North expansion. CVE trades at a valuation discount to industry peers and has received upward earnings revisions.
+<<<INSIGHTS>>>
+CVE | positive | Strong operational performance with declining oil sands costs ($10.23/barrel in Q3 2026 vs $11.21 prior year), ambitious production growth targets of 1.1 million boe/d by 2028, strategic Athabasca Oil acquisition, valuation discount to industry peers (4.23X EV/EBITDA vs 4.80X industry average), and Zacks Rank #1 Strong Buy rating with upward earnings revisions.
+SU | positive | Integrated business model spanning upstream oil sands and downstream refining operations provides resilience across commodity cycles, diversified crude processing capabilities, and Zacks Rank #1 Strong Buy rating supporting profitability and cash flow generation.
+CNQ | positive | Large independent energy company with diversified portfolio including oil sands mining, thermal production, conventional oil, and offshore assets. Diversification helps balance production and direct capital toward higher-return opportunities, with Zacks Rank #1 Strong Buy rating benefiting from current oil price strength.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:62aceae7cc63e98caa98249b56ce50934165579e9395239da33ca466e0d300a7
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T13:45:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030261/why-cenovus-energy-cve-is-a-top-growth-stock-for-the-long-term?cid=CS-ZC-FT-fundamental_analysis|zacks_education_growth_score-3030261
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default72.jpg
+category: 
+tickers: CVE
+keywords: Zacks Rank, Style Scores, stock rating system, earnings estimate revisions, investment strategy, growth investing, value investing, momentum investing
+headline: Why Cenovus Energy (CVE) is a Top Growth Stock for the Long-Term
+<<<SUMMARY>>>
+Zacks presents its investment rating system combining the Zacks Rank with Style Scores (Value, Growth, Momentum, and VGM) to help investors identify stocks with the best performance potential. The article highlights Cenovus Energy as a featured stock pick with a #1 Strong Buy rank and Grade A VGM Score, citing strong growth forecasts and positive earnings revisions.
+<<<INSIGHTS>>>
+CVE | positive | Company received a #1 Strong Buy Zacks Rank with Grade A VGM Score and Grade A Growth Style Score. Three analysts revised earnings estimates higher in the last 60 days, with consensus estimate increasing to $4.31 per share. Forecasted year-over-year earnings growth of 179.9% and average earnings surprise of +11.4% support the positive outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8e2b27c6435d5ccf95ad6dc881c61b12732f2e8b79f4552556390744edbd0d5f
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T17:07:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031399/new-discoveries-and-project-ramp-ups-boost-eni-s-growth-prospects?cid=CS-ZC-FT-analyst_blog|quick_take-3031399
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: E, BP, CVE
+keywords: oil discovery, production growth, resource additions, upstream projects, energy sector, exploration success
+headline: New Discoveries and Project Ramp-Ups Boost Eni's Growth Prospects
+<<<SUMMARY>>>
+Italian energy company Eni discovered over 1.2 billion barrels of oil equivalent in the first nine months of 2026, with Q3 production rising 4% to 1.83 million boe/d. The company raised full-year production guidance by 6-7% and secured access to 4.6 billion boe of additional equity resources, supported by new developments across Congo, Libya, Ghana, Mexico, and Indonesia. Eni took final investment decisions on key projects including Baleine Phase 3 and the Greater PAJ offshore project.
+<<<INSIGHTS>>>
+E | positive | Eni demonstrated strong exploration success with 1.2 billion barrels discovered, 4% production growth, raised full-year guidance by 6-7%, and secured 4.6 billion boe of additional resources. Multiple FIDs on major projects and new agreements in Venezuela indicate robust growth pipeline and long-term production outlook.
+BP | neutral | BP is mentioned as focusing on resource additions and exploration successes with a multi-year upstream project pipeline across Brazil, Gulf of America, Trinidad and Tobago, and Venezuela. However, no specific recent achievements or financial metrics are provided to warrant a more positive assessment.
+CVE | positive | Cenovus completed the MEG Energy acquisition in November 2025 with the Christina Lake North asset as a growth driver, and announced the acquisition of Athabasca Oil Corporation expected to close in December 2026. These strategic acquisitions expand thermal oil development inventory and support future production growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2af4712c12d2d0606d2d189c51a590239b6a864a6738654e76ffcc1de7046ac6
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T13:40:04Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031702/are-oils-energy-stocks-lagging-bp-bp-this-year?cid=CS-ZC-FT-fundamental_analysis|yseop_template_1-3031702
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default362.jpg
+category: 
+tickers: BP, CVE
+keywords: Oils-Energy sector, year-to-date performance, earnings estimates, Zacks Rank, stock comparison
+headline: Are Oils-Energy Stocks Lagging BP (BP) This Year?
+<<<SUMMARY>>>
+BP has gained 29.1% year-to-date, outperforming its sector average of 27.7%, with a Zacks Rank #2 (Buy) rating and a 43.5% increase in consensus earnings estimates over the past quarter. However, Cenovus Energy has significantly outperformed with a 67% year-to-date return and a Zacks Rank #1 (Strong Buy) rating, with a 26.2% increase in EPS estimates.
+<<<INSIGHTS>>>
+BP | positive | BP has outperformed its sector with 29.1% year-to-date gains versus 27.7% sector average, holds a Zacks Rank #2 (Buy), and analyst sentiment has improved with a 43.5% increase in consensus earnings estimates over the past quarter.
+CVE | positive | Cenovus Energy significantly outperformed the sector with 67% year-to-date returns, holds a Zacks Rank #1 (Strong Buy), and has a 26.2% increase in consensus EPS estimates over the past three months.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5de89910d408531daa20530d1a737cb15091beba8b9f4ec007f5ba1b18c6fe6b
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T14:19:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031861/suncor-vs-cenovus-which-canadian-energy-stock-is-the-better-buy?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3031861
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: CVE, SU
+keywords: Canadian energy, oil sands, integrated energy operations, free cash flow, production records, valuation comparison, shareholder returns, dividend increases
+headline: Suncor vs. Cenovus: Which Canadian Energy Stock Is the Better Buy?
+<<<SUMMARY>>>
+Cenovus Energy (CVE) holds a slight edge over Suncor Energy (SU) in a comparison of Canada's two major integrated energy companies. While Suncor generated stronger absolute free cash flow of C$5.2 billion in Q3 2026 and maintains a superior integrated business model, Cenovus outperformed with 66.9% YTD gains versus SU's 53.9%, achieved record production of 1.024 million BOE/d, and trades at a lower forward P/E of 6.14x compared to SU's 7.52x. Both stocks carry Zacks Rank #1 (Strong Buy) ratings.
+<<<INSIGHTS>>>
+CVE | positive | Record production of 1.024 million BOE/d, declining operating costs to C$10.23/barrel, stronger YTD performance (+66.9%), lower forward P/E valuation (6.14x), stronger 2027 earnings estimate revisions (+50.65%), and strategic acquisition of Athabasca Oil to expand production.
+SU | positive | Record adjusted funds from operations of C$6.7 billion in Q3, superior free cash flow generation (C$5.2 billion), strong integrated refining operations with 95% utilization, significant debt reduction (C$1.8 billion from C$7.1 billion), 10% dividend increase, and 50% increase in monthly share repurchases.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0ef6bfec0c165c8876f0c17154e2e54cad505996cf27aa3027308dc97875de44
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:45:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032041/here-is-why-growth-investors-should-buy-cenovus-cve-now?cid=CS-ZC-FT-fundamental_analysis|yseop_template_11_growth-3032041
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default264.jpg
+category: 
+tickers: CVE
+keywords: growth stocks, earnings growth, cash flow growth, earnings estimate revisions, Zacks Rank, oil company, investment strategy
+headline: Here is Why Growth Investors Should Buy Cenovus (CVE) Now
+<<<SUMMARY>>>
+Cenovus Energy (CVE) is identified as a top growth stock pick with a Zacks Growth Score of A and Zacks Rank #1 (Strong Buy). The oil company demonstrates exceptional earnings growth of 180% expected this year, strong cash flow growth of 11.6% year-over-year, and positive earnings estimate revisions of 4.7% over the past month, positioning it well for outperformance.
+<<<INSIGHTS>>>
+CVE | positive | Cenovus Energy receives a positive sentiment due to its exceptional projected earnings growth of 180% (crushing industry average of 140.4%), strong year-over-year cash flow growth of 11.6% (vs. industry average of 3.8%), positive earnings estimate revisions of 4.7% over the past month, and top ratings including a Growth Score of A and Zacks Rank #1 (Strong Buy), all indicating strong growth prospects and outperformance potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:20a6d8779f9413d363167414f27a4726e2209767ace540ca98974bcf8688d9ce
+symbol: CVE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T11:49:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032229/4-value-stocks-to-buy-amid-hot-inflation-and-a-hawkish-fed?cid=CS-ZC-FT-analyst_blog|rw-3032229
+image_url: https://staticx-tuner.zacks.com/images/articles/main/8b/157158.webp
+category: 
+tickers: CVE, SPT, AVT, HPE, HPEpC
+keywords: value investing, earnings yield, inflation, interest rates, EPS growth, AI demand, technology stocks
+headline: 4 Value Stocks to Buy Amid Hot Inflation and a Hawkish Fed
+<<<SUMMARY>>>
+With inflation remaining elevated and the Federal Reserve signaling potential rate hikes, value investing emerges as an attractive strategy. Four stocks with high earnings yields and strong EPS growth prospects are highlighted: Cenovus Energy, Sprout Social, Avnet, and Hewlett Packard Enterprise, all benefiting from robust demand and upward earnings revisions.
+<<<INSIGHTS>>>
+CVE | positive | Strong production and lower operating costs with 180% EPS growth expected for 2026. Zacks Rank #1 with Value Score A and upward EPS estimate revisions of 19 cents and 63 cents over past 30 days.
+SPT | positive | Expanding focus on large enterprises with 60% and 38% EPS growth expected for 2026 and 2027. Zacks Rank #1 with upward EPS estimate revisions of 22 cents and 28 cents over past 30 days.
+AVT | positive | Global technology distributor benefiting from semiconductor and component demand with 141% EPS growth expected for fiscal 2027. Zacks Rank #1 with significant upward EPS estimate revisions of $1.08 and 83 cents.
+HPE | positive | Benefiting from AI server demand and cloud modernization with 97% and 23% EPS growth expected for fiscal 2026 and 2027. Zacks Rank #2 with Value Score A.
+HPEpC | positive | Benefiting from AI server demand and cloud modernization with 97% and 23% EPS growth expected for fiscal 2026 and 2027. Zacks Rank #2 with Value Score A.
+<<<END>>>

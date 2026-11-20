@@ -51,6 +51,7 @@ from pydantic import BaseModel, ConfigDict, model_validator
 from prometheus.common import shares as sh
 from prometheus.common.money import NonNegativeMoney, exact, price as price_door
 from prometheus.common.portfolio import Portfolio, affordable_shares
+from prometheus.common.trace import traced
 from prometheus.common.work_order import EXPIRY_PREFIX, iso_date
 
 # The reasons the Account Manager does not approve a trade. They are words of the Trader's closed list of reject codes (`agents/trader/record.py: REJECT_CODES`; a test asserts it): the Trader makes the trade
@@ -145,6 +146,7 @@ def permission_code(reasons: list[str]) -> str:
     return "approval_expired" if len(reasons) == 1 and reasons[0].startswith(EXPIRY_PREFIX) else "not_permitted"
 
 
+@traced("account_manager.decide_approval")
 def decide_approval(portfolio: Portfolio, trade: dict, price: Decimal, on: date, commission: Decimal = Decimal(0), expected_proceeds: Decimal = Decimal(0), spendable: Decimal | None = None, pot: Decimal | None = None,
                     dollars: Decimal | None = None) -> Approval:
     """What the account can take of this trade, from the portfolio as it is NOW (pure: no database, no clock). `trade` is the Trader's record of it as a dict (`symbol`, `side`, `shares`: what is asked, and

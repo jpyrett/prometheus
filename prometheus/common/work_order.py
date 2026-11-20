@@ -67,6 +67,7 @@ from pydantic import BaseModel, Field
 
 from prometheus.common import shares as sh
 from prometheus.common.money import CENT, Jsonable, cents, digits, money, price
+from prometheus.common.trace import traced
 
 ACTION_TYPES = ("trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars", "lookup_symbol")
 SEARCH_ACTIONS = ("search_news", "search_filing")   # what the Data Clerk's request_data handles today: a search of stored text (the other actions are refused by verify_request)
@@ -129,6 +130,7 @@ class DataResult(BaseModel):
     verification: dict = Field(default_factory=dict)  # the answer to a `verify_data` order (Critic v1): the chunks and filing-evidence items read again from the store, the symbols checked against the directory, the newest stored text; empty on any other order
     quotes: dict[str, dict] = Field(default_factory=dict)  # per symbol: the current quote (price, change, high, low, open, previous close, as_of_utc, source) of a `fetch_quote` order (entry 42); empty on any other order
     bars: dict[str, list[dict]] = Field(default_factory=dict)  # per symbol: the stored daily bars of a `fetch_bars` order, oldest first, each {"date": "YYYY-MM-DD", "open", "high", "low", "close", "volume"}; a symbol with none in the range is an empty list. Empty on any other order
+    security_dropped: list[dict] = Field(default_factory=list)  # the documents the security layer dropped from the evidence before anything read them: {id, corpus, action, risk, rules} (entry 116); empty when none was
     problems: list[str] = Field(default_factory=list)
     notes: list[str] = Field(default_factory=list)
     no_supporting_text: bool = False
@@ -430,7 +432,7 @@ NEUTRAL = "neutral"                                 # the `origin` of a decision
 DIRECT = "direct"                                   # the `origin` of a decision made for a trade the USER named (entry 87): no recommendation, no Critic review; the order's `direct_orders` is its permission
 DIRECT_SIDES = ("buy", "sell")
 DIRECT_KEYS = ("record_id", "side", "symbol", "company", "shares", "request", "requested_utc")   # what a record of `order.direct_orders` holds: `company` is the company's name as the data source gives it (entry 88)
-DIRECT_OPTIONAL = ("typed_company", "how_many", "found_by")  # entry 88: what the user typed when they named a COMPANY and not a ticker (the `symbol` is then the Data Clerk's); None when they typed the ticker. `found_by` (entry 101): how the Data Clerk found it, "ticker", "name" or "brand" (the symbol is the LISTED OWNER's of what was typed: "Google" is Alphabet Inc.)
+DIRECT_OPTIONAL = ("typed_company", "how_many", "found_by", "dollars")  # `dollars` (entry 122): the money the user wrote for THIS stock ("Buy $3,000 of XOM"), a number above zero to the cent; the order then has no shares until the Account Manager sizes it (`how_many` "dollars"). entry 88: what the user typed when they named a COMPANY and not a ticker (the `symbol` is then the Data Clerk's); None when they typed the ticker. `found_by` (entry 101): how the Data Clerk found it, "ticker", "name" or "brand" (the symbol is the LISTED OWNER's of what was typed: "Google" is Alphabet Inc.)
 MAX_DIRECT_SHARES = 1_000_000                       # a typing mistake, not a limit of the account: the cash and the holdings are what limit a trade. The number of shares may have a decimal part (entry 110)
 
 
@@ -559,8 +561,17 @@ def verify_direct_orders(entries: list) -> list[str]:
             reasons.append(f"{label}: the shares must be a number above zero and at most {MAX_DIRECT_SHARES:,} (a whole number, or one with up to {sh.PLACES} decimals), or None while the user has given no number and the Account Manager has not sized the order (design choices entry 98)")
         if entry.get("found_by") not in (None, "ticker", "name", "brand"):
             reasons.append(f"{label}: found_by is ticker, name or brand (how the Data Clerk found the symbol), or None")
-        if entry.get("how_many") not in (None, "typed", "asked", "cash", "budget"):
-            reasons.append(f"{label}: how_many is typed, asked, cash or budget (where the number of shares came from), or None")
+        if entry.get("how_many") not in (None, "typed", "asked", "cash", "budget", "dollars"):
+            reasons.append(f"{label}: how_many is typed, asked, cash, budget or dollars (where the number of shares came from), or None")
+        if entry.get("dollars") is not None:
+            try:
+                if money(entry["dollars"]) <= 0:
+                    raise ValueError
+            except ValueError:
+                reasons.append(f"{label}: dollars is a number above zero to the cent (what the user wrote for this stock), or left out")
+            else:
+                if entry["shares"] is not None and entry.get("how_many") in (None, "typed"):
+                    reasons.append(f"{label}: an order has shares or dollars, never both: the user typed both")
         if not isinstance(entry["request"], str) or not entry["request"].strip():
             reasons.append(f"{label} carries no words of the user's")
     return reasons
@@ -634,6 +645,14 @@ def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
                 reasons.append(f"the decision's dollars, ${dollars:,.2f}, are more than the money of the request, ${pot:,.2f}")
             if dollars is not None and direct is not None and direct["shares"] is not None and direct.get("how_many") in (None, "typed"):
                 reasons.append("a direct order whose shares the user typed is an order in shares: it carries no dollars")
+            if direct is not None and direct.get("dollars") is not None and decision.get("action") != "reduce":      # the user's own dollars for THIS stock are its limit (entry 122): the decision's dollars, or its estimated cost, never pass them
+                try:
+                    own = money(direct["dollars"])
+                except ValueError:
+                    own = None
+                spend = dollars if dollars is not None else _money_or_none(decision.get("est_cost"))
+                if own is None or spend is None or spend > own:
+                    reasons.append(f"the user wrote ${own:,.2f} for this stock" + (f" and the decision's {'dollars' if dollars is not None else 'estimated cost'} are ${spend:,.2f}" if own is not None and spend is not None else " and the decision does not say what it costs") + ": the user's dollars are the most it may cost")
             if dollars is not None and decision.get("action") == "reduce":
                 reasons.append("a sale is an order in shares: it carries no dollars")
     return reasons
@@ -682,6 +701,14 @@ def _quantity(value) -> Decimal | None:
         return None
 
 
+def _money_or_none(value) -> Decimal | None:
+    """`value` as dollars to the cent (the number a decision's `est_cost` holds), or None when it is not one."""
+    try:
+        return money(value)
+    except ValueError:
+        return None
+
+
 def decision_dollars(decision) -> Decimal | None:
     """The DOLLARS of a decision that is an order in dollars (design choices entry 111, M2): the most the purchase may cost, a number above zero to the cent; None for an order in shares (a decision with no `dollars`).
     Raises ValueError when the decision carries a `dollars` that is not a number above zero to the cent: a bool, a string, nothing, a fraction of a cent."""
@@ -725,6 +752,7 @@ def pot_reasons(order: WorkOrder) -> list[str]:
     return [f"the fills of the purchases cost ${spent:,.2f}, more than the money of the request, ${pot:,.2f} (the pot): a run never spends more than its money"] if spent > pot else []
 
 
+@traced("trader.verify_trades")
 def verify_trades(order: WorkOrder) -> list[str]:
     """The Trader's OUTPUT guard over the WHOLE run (rule T10 and step 8 of the spec): why these trades do NOT agree with the Account Manager's decisions; an empty list means they do. Since the per-trade handshake
     (design choices entry 81) each fill is checked one at a time before it is reported (`verify_fill`) and booked as it happens, so this is a REPORT: what was booked stays booked, it is the account book's.
@@ -742,6 +770,7 @@ def verify_trades(order: WorkOrder) -> list[str]:
     return reasons + pot_reasons(order)      # and the pot (M1)
 
 
+@traced("trader.verify_fill")
 def verify_fill(order: WorkOrder, trade: dict, others: list[dict]) -> list[str]:
     """The single-trade part of the output guard (design choices entry 81, amendment 2 of design/trader_handshake_spec.md): why ONE trade, as the Trader is about to report it to the Account Manager as filled, does not agree
     with the decisions; an empty list means it may be reported and booked. `others` are the other trades of the order (this one is left out if it is among them). It checks what `verify_trades` checks of one trade: its shape

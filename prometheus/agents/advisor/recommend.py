@@ -41,6 +41,7 @@ from prometheus.agents.advisor.gates import negative_equity, run_gates, value
 from prometheus.agents.advisor.quality import quality_multiplier
 from prometheus.agents.advisor.record import Action, Agreement, Audit, Candidate, Concentration, Evidence, Identity, Ranking, Recommendation, Risk, Thesis
 from prometheus.agents.advisor.thesis import write_theses
+from prometheus.common.trace import traced
 from prometheus.common.work_order import MAX_METRIC_SYMBOLS, WorkOrder, corpus_of, new_work_order, sector_map
 from prometheus.prompts.advisor_v1 import RETRY_PLAN, plan_message, plan_system
 from prometheus.prompts.advisor import evidence_text, kinds_text, user_message
@@ -206,6 +207,7 @@ def _record(s: rk.Scored, checked: Checked | None, family, reason: str, plan, id
         audit=Audit(metric_order=run_ids.get("metric_order"), plan_run=run_ids.get("plan"), config_version=config.config_version, family_versions={f: "v1" for f in fam.FAMILIES}))
 
 
+@traced("advisor.recommend")
 def generate(advisor: Advisor, order: WorkOrder, case: str | None = None, today: date | None = None, top_k: int | None = None, only_subject: bool = False) -> WorkOrder:
     """The twelve steps (see the module text). Returns the SAME order. `top_k` replaces the sleeve's number of new ideas (1 to 20). `only_subject`: look only at the order's own symbols
     (a comparison of named companies, entry 53): no symbol is added because the sources name it, the theme finds it or the model proposes it."""

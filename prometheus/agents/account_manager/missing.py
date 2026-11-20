@@ -25,6 +25,7 @@ from dataclasses import dataclass, field
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 from prometheus.agents.account_manager.config import AccountManagerConfig
+from prometheus.common.trace import traced
 from prometheus.prompts import account_manager_missing as prompt
 
 KIND = "missing_company"      # the `kind` of the card the approver is given (the Trader's funding card has its own)
@@ -142,6 +143,7 @@ def card_for(typed: str, reason: str, kept: list[dict], n: int, of: int, wording
     return {"kind": KIND, "n": n, "of": of, "typed": typed, "reason": reason, "text": "\n".join(lines), "question": wording.text + " [y/N] ", "sentence": wording.text, "kept": kept, "wording": wording.source, "request": request}
 
 
+@traced("account_manager.ask_about_missing")
 def ask_about_each(model, missing: list, kept: list[dict], request: str, approver, config: AccountManagerConfig) -> Asked:
     """ASK mode: one question for each stock the Data Clerk did not find, in the order the user typed them (see the module text). `missing` is [(DirectOrder, row)] and `kept` what stays on the order (`kept_of`).
     `approver` is the yes/no channel of the desk (a card in, True, False or None out; `available()` False, as the terminal's with nobody there, means nobody is asked). A yes drops that stock and the next is asked about; a no, or no

@@ -1,0 +1,737 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to requests that give an amount of money, recorded on 2026-11-20 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py after design choices entry 125: the form has `each`): the eight requests of design/dollars_each_word_spec.md (the five that say each, and the three whose reading must not change), then every request of direct_dollars_forms.json again (the prompt changed). 'replies' is what the model answered, in order (a second reply is the answer to code's refusal of the first); 'outcome' what parse_intent made of it. Nothing here is edited. The tests give these replies back to the real Account Manager, whose code checks every field against the user's own words.",
+ "model": "openai/gpt-oss-120b",
+ "tokens_in": 47380,
+ "tokens_out": 5079,
+ "requests": {
+  "Buy $3,000 each of XOM and MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"XOM\", \"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"XOM\", \"shares\": null, \"dollars\": 3000}, {\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": 3000}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $3,000.00 of XOM, buy $3,000.00 of MSFT, spending at most $3,000.00 on each stock (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": true,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "XOM",
+      "company": null,
+      "shares": null,
+      "dollars": 3000
+     },
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": 3000
+     }
+    ]
+   },
+   "tokens_in": 1427,
+   "tokens_out": 148
+  },
+  "Buy $3,000 of XOM and MSFT each": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"XOM\", \"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"XOM\", \"shares\": null, \"dollars\": 3000}, {\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": 3000}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $3,000.00 of XOM, buy $3,000.00 of MSFT, spending at most $3,000.00 on each stock (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": true,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "XOM",
+      "company": null,
+      "shares": null,
+      "dollars": 3000
+     },
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": 3000
+     }
+    ]
+   },
+   "tokens_in": 1427,
+   "tokens_out": 148
+  },
+  "Put $2,000 apiece into NVDA and AMD": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[\"NVDA\",\"AMD\"],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":true,\"orders\":[{\"side\":\"buy\",\"symbol\":\"NVDA\",\"shares\":null,\"dollars\":2000},{\"side\":\"buy\",\"symbol\":\"AMD\",\"shares\":null,\"dollars\":2000}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $2,000.00 of NVDA, buy $2,000.00 of AMD, spending at most $2,000.00 on each stock (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": true,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "NVDA",
+      "company": null,
+      "shares": null,
+      "dollars": 2000
+     },
+     {
+      "side": "buy",
+      "symbol": "AMD",
+      "company": null,
+      "shares": null,
+      "dollars": 2000
+     }
+    ]
+   },
+   "tokens_in": 1427,
+   "tokens_out": 159
+  },
+  "Buy 10 shares each of AAPL and MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"AAPL\", \"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"AAPL\", \"shares\": 10, \"dollars\": null}, {\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 10 shares of AAPL, buy 10 shares of MSFT, 10 shares of each stock (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": true,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "AAPL",
+      "company": null,
+      "shares": 10,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 10,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1426,
+   "tokens_out": 154
+  },
+  "Buy the top 3 oil stocks with $3,000 each": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 3000, \"each\": true, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'oil' companies; spending at most $3,000.00 on each stock",
+    "budget": 3000,
+    "each": true,
+    "count": 3,
+    "orders": []
+   },
+   "tokens_in": 1428,
+   "tokens_out": 113
+  },
+  "Buy $5,000 of MU and AMD": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[\"MU\",\"AMD\"],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":5000,\"each\":false,\"orders\":[{\"side\":\"buy\",\"symbol\":\"MU\",\"shares\":null,\"dollars\":null},{\"side\":\"buy\",\"symbol\":\"AMD\",\"shares\":null,\"dollars\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MU (you did not say how many shares), buy AMD (you did not say how many shares), spending $5,000.00 (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": 5000,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": null,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "AMD",
+      "company": null,
+      "shares": null,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1424,
+   "tokens_out": 210
+  },
+  "Buy $3,000 of XOM and $3,000 of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"XOM\", \"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"XOM\", \"shares\": null, \"dollars\": 3000}, {\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": 3000}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $3,000.00 of XOM, buy $3,000.00 of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "XOM",
+      "company": null,
+      "shares": null,
+      "dollars": 3000
+     },
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": 3000
+     }
+    ]
+   },
+   "tokens_in": 1431,
+   "tokens_out": 206
+  },
+  "Buy the 3 most recommended EV stocks with $5,000": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"EV\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 5000, \"each\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'EV' companies; spending at most $5,000.00",
+    "budget": 5000,
+    "each": false,
+    "count": 3,
+    "orders": []
+   },
+   "tokens_in": 1428,
+   "tokens_out": 92
+  },
+  "Buy $5,000 of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": 5000}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $5,000.00 of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": 5000
+     }
+    ]
+   },
+   "tokens_in": 1423,
+   "tokens_out": 168
+  },
+  "Buy $2,000 of AAPL and 10 shares of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"AAPL\", \"shares\": null, \"dollars\": 2000}, {\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $2,000.00 of AAPL, buy 10 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "AAPL",
+      "company": null,
+      "shares": null,
+      "dollars": 2000
+     },
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 10,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1430,
+   "tokens_out": 219
+  },
+  "Put $1,500 into NVDA and $500 into AMD": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[\"NVDA\",\"AMD\"],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"orders\":[{\"side\":\"buy\",\"symbol\":\"NVDA\",\"shares\":null,\"dollars\":1500},{\"side\":\"buy\",\"symbol\":\"AMD\",\"shares\":null,\"dollars\":500}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $1,500.00 of NVDA, buy $500.00 of AMD (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "NVDA",
+      "company": null,
+      "shares": null,
+      "dollars": 1500
+     },
+     {
+      "side": "buy",
+      "symbol": "AMD",
+      "company": null,
+      "shares": null,
+      "dollars": 500
+     }
+    ]
+   },
+   "tokens_in": 1428,
+   "tokens_out": 176
+  },
+  "Buy $2,000 of AAPL and MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"AAPL\", \"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": 2000, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"AAPL\", \"shares\": null, \"dollars\": null}, {\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy AAPL (you did not say how many shares), buy MSFT (you did not say how many shares), spending $2,000.00 (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": 2000,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "AAPL",
+      "company": null,
+      "shares": null,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1426,
+   "tokens_out": 305
+  },
+  "Buy 50 shares of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 50, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 50 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 50,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1422,
+   "tokens_out": 109
+  },
+  "please purchase 25 shares of Microsoft Corp (MSFT) for me": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 25, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 25 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 25,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1429,
+   "tokens_out": 138
+  },
+  "Sell 10 shares of TSLA and buy 5 shares of GM": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"TSLA\", \"GM\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"TSLA\", \"shares\": 10, \"dollars\": null}, {\"side\": \"buy\", \"symbol\": \"GM\", \"shares\": 5, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 10 shares of TSLA, buy 5 shares of GM (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "TSLA",
+      "company": null,
+      "shares": 10,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "GM",
+      "company": null,
+      "shares": 5,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1429,
+   "tokens_out": 155
+  },
+  "I want to buy oil stocks. Buy the 3 most recommended companies.": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'oil' companies; spending as much as the account allows",
+    "budget": null,
+    "each": false,
+    "count": 3,
+    "orders": []
+   },
+   "tokens_in": 1429,
+   "tokens_out": 90
+  },
+  "buy 50 shares of Microsoft": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"orders\":[{\"side\":\"buy\",\"company\":\"Microsoft\",\"shares\":50,\"dollars\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 50 shares of Microsoft (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": null,
+      "company": "Microsoft",
+      "shares": 50,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1421,
+   "tokens_out": 120
+  },
+  "Buy 20 shares of Procter & Gamble and sell 10 shares of Tesla": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"orders\":[{\"side\":\"buy\",\"company\":\"Procter & Gamble\",\"shares\":20,\"dollars\":null},{\"side\":\"sell\",\"company\":\"Tesla\",\"shares\":10,\"dollars\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 20 shares of Procter & Gamble, sell 10 shares of Tesla (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": null,
+      "company": "Procter & Gamble",
+      "shares": 20,
+      "dollars": null
+     },
+     {
+      "side": "sell",
+      "symbol": null,
+      "company": "Tesla",
+      "shares": 10,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1431,
+   "tokens_out": 181
+  },
+  "I want to buy MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MSFT (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1421,
+   "tokens_out": 134
+  },
+  "Buy Microsoft": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"buy\", \"company\": \"Microsoft\", \"shares\": null, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy Microsoft (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": null,
+      "company": "Microsoft",
+      "shares": null,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1417,
+   "tokens_out": 186
+  },
+  "sell MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell MSFT (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1418,
+   "tokens_out": 106
+  },
+  "I want to buy MU, SNDK and AMD if the recommendations pass": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [\"MU\", \"SNDK\", \"AMD\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended MU, SNDK, AMD; spending as much as the account allows",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": []
+   },
+   "tokens_in": 1430,
+   "tokens_out": 196
+  },
+  "I want to buy the three most recommended oil stocks": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'oil' companies; spending as much as the account allows",
+    "budget": null,
+    "each": false,
+    "count": 3,
+    "orders": []
+   },
+   "tokens_in": 1425,
+   "tokens_out": 98
+  },
+  "I want to buy MSFT and TSLA and spend $6,000": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": 6000, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": null}, {\"side\": \"buy\", \"symbol\": \"TSLA\", \"shares\": null, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MSFT (you did not say how many shares), buy TSLA (you did not say how many shares), spending $6,000.00 (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": 6000,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "TSLA",
+      "company": null,
+      "shares": null,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1430,
+   "tokens_out": 295
+  },
+  "Sell 0.5 shares of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": 0.5, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 0.5 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 0.5,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1424,
+   "tokens_out": 113
+  },
+  "sell 81.004455 shares of DPZ": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"DPZ\", \"shares\": 81.004455, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 81.004455 shares of DPZ (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "DPZ",
+      "company": null,
+      "shares": 81.004455,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1425,
+   "tokens_out": 115
+  },
+  "Buy 2.25 shares of Microsoft Corp (MSFT) and sell 0.222222 shares of TSLA": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 2.25, \"dollars\": null}, {\"side\": \"sell\", \"symbol\": \"TSLA\", \"shares\": 0.222222, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2.25 shares of MSFT, sell 0.222222 shares of TSLA (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 2.25,
+      "dollars": null
+     },
+     {
+      "side": "sell",
+      "symbol": "TSLA",
+      "company": null,
+      "shares": 0.222222,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 1439,
+   "tokens_out": 179
+  },
+  "Sell 0.1234567 shares of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": 0.1234567, \"dollars\": null}]}",
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": 0.123457, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "refused": "I could not understand the request (0.1234567 shares of MSFT has more than 6 decimals: a number of shares has at most 6 (0.000001 is the smallest)). Say what you want as a theme, as tickers or as company names, and how many you want to buy from."
+   },
+   "tokens_in": 3021,
+   "tokens_out": 262
+  },
+  "I want to buy the best \"AI stocks\" as a theme. Buy $20000 worth of the top 3": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 20000, \"each\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'AI stocks'; spending at most $20,000.00",
+    "budget": 20000,
+    "each": false,
+    "count": 3,
+    "orders": []
+   },
+   "tokens_in": 1439,
+   "tokens_out": 110
+  },
+  "I want to buy the best AI stocks. Buy $20000 worth of the top 3": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": 20000, \"each\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'AI' companies; spending at most $20,000.00",
+    "budget": 20000,
+    "each": false,
+    "count": 3,
+    "orders": []
+   },
+   "tokens_in": 1434,
+   "tokens_out": 88
+  },
+  "Look at the best 5G companies": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"5G\", \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": []}",
+    "{\"action\": \"research\", \"topic\": \"5G\", \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "research",
+    "describe": "look at (nothing will be bought) the most recommended '5G' companies",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "orders": []
+   },
+   "tokens_in": 2971,
+   "tokens_out": 306
+  }
+ }
+}

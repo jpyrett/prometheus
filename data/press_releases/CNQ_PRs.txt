@@ -1,0 +1,135 @@
+<<<PRESS_RELEASE>>>
+id: 11ef192b9122cbf7
+symbol: CNQ
+published_utc: 2025-12-04T22:54:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/5023747712230591
+headline: Canadian Natural Resources Limited Prices C$1,650 Million in 3, 5 and 10 Year Medium-Term Notes
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - December 4, 2025) - Canadian Natural Resources Limited (TSX: ...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6939a456eb8fbb39
+symbol: CNQ
+published_utc: 2025-12-16T05:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/8807572910435557
+headline: Canadian Natural Resources Limited Announces 2026 Budget
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - December 16, 2025) - Canadian Natural's (TSX: CNQ) (NYSE: CNQ...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 295f1d1a1031f39d
+symbol: CNQ
+published_utc: 2026-03-05T05:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/6294140448980747
+headline: Canadian Natural Resources Limited Announces Quarterly Dividend
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - March 5, 2026) - Canadian Natural Resources Limited (TSX: CNQ...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7ef6198dd5e6b30c
+symbol: CNQ
+published_utc: 2026-03-05T05:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/8907543266965424
+headline: Canadian Natural Resources Limited Announces 2025 Fourth Quarter and Year End Results
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - March 5, 2026) - Canadian Natural's (TSX: CNQ) (NYSE: CNQ) Pr...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4c48091f1762a939
+symbol: CNQ
+published_utc: 2026-03-10T18:45:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/6606305810003161
+headline: Canadian Natural Resources Limited Announces Normal Course Issuer Bid
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - March 10, 2026) - Canadian Natural Resources Limited (TSX: CN...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a9080561fd4e72d9
+symbol: CNQ
+published_utc: 2026-05-07T05:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/8002602413789875
+headline: Canadian Natural Resources Limited Announces Quarterly Dividend
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - May 7, 2026) - Canadian Natural Resources Limited (TSX: CNQ) ...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e6e77656c03bba4f
+symbol: CNQ
+published_utc: 2026-05-07T05:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/8069967127803493
+headline: Canadian Natural Resources Limited Announces 2026 First Quarter Results
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - May 7, 2026) - Canadian Natural's (TSX: CNQ) (NYSE: CNQ) Pres...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 48069dc10abaf889
+symbol: CNQ
+published_utc: 2026-05-08T16:37:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/6535321404248777
+headline: Canadian Natural Resources Limited Reports Voting Results at Annual Meeting
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - May 8, 2026) - Canadian Natural held its Annual Meeting of Sh...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ca426ab0bc2be409
+symbol: CNQ
+published_utc: 2026-05-11T23:23:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/8749857508331617
+headline: Amending and Replacing - Canadian Natural Resources Limited Announces Quarterly Dividend - May 7, 2026
+<<<TEXT>>>
+The dividend record date is being amended to the close of business on June 23, 2026 (instead of t...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f951413f6e24f401
+symbol: CNQ
+published_utc: 2026-08-06T05:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/6983826338504690
+headline: Canadian Natural Resources Limited Announces Quarterly Dividend
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - August 6, 2026) - Canadian Natural Resources Limited (TSX: CN...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 75893f79158eee33
+symbol: CNQ
+published_utc: 2026-08-06T05:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/4632152782041953
+headline: Canadian Natural Resources Limited Announces 2026 Second Quarter Results
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - August 6, 2026) - Canadian Natural's (TSX: CNQ) (NYSE: CNQ) P...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b6643853dcf654bb
+symbol: CNQ
+published_utc: 2026-11-05T04:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/6165338379470792
+headline: Canadian Natural Resources Limited Announces Quarterly Dividend
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - November 5, 2026) - Canadian Natural Resources Limited&#xA0;(...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a531d638d5bfba25
+symbol: CNQ
+published_utc: 2026-11-05T04:00:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/8234305722255473
+headline: Canadian Natural Resources Limited Announces 2026 Third Quarter Results
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - November 5, 2026) - Canadian Natural's (TSX: CNQ) (NYSE: CNQ)...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 33f85a8546b22763
+symbol: CNQ
+published_utc: 2026-11-16T04:30:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/7348728995635848
+headline: Canadian Natural Resources Limited Enters into Agreement to Acquire Advantage Energy Ltd.
+<<<TEXT>>>
+Calgary, Alberta--(Newsfile Corp. - November 16, 2026) - Canadian Natural Resources Limited&#xA0;...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6549c8055439546d
+symbol: CNQ
+published_utc: 2026-11-16T17:05:00Z
+url: https://money.tmx.com/en/quote/CNQ/news/4726904724228503
+headline: On Monday in Oil and Gas, Federal Hormuz Data Lands as Two Acquisitions Are Announced
+<<<TEXT>>>
+On Monday in Oil and Gas, Federal Hormuz Data Lands as Two Acquisitions Are Announced         Can...
+<<<END>>>

@@ -1,0 +1,117 @@
+<<<PRESS_RELEASE>>>
+id: 5489eb9341b24640
+symbol: CRGY
+published_utc: 2025-12-01T08:00:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-announces-exchange-offers-and-consent-solicitations-vital-energy-incs
+headline: Crescent Energy Announces Exchange Offers and Consent Solicitations for Vital Energy, Inc.’s 7.75% Senior Notes due 2029 and 9.750% Senior Notes due 2030
+<<<TEXT>>>
+Crescent Energy Finance LLC, a wholly owned subsidiary of Crescent Energy Company announced today that it has commenced an offer to exchange any and all 7.75% Senior Notes due 2029 issued by Vital Energy, Inc. that are held by Eligible Holders for up to $298,214,000 aggregate principal amount of new 7.75% Senior Notes due 2029 issued by CE Finance and an offer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a8cd887b4774618b
+symbol: CRGY
+published_utc: 2025-12-03T16:20:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-provides-update-successful-non-core-divestiture-program-over-900
+headline: Crescent Energy Provides Update on Successful Non-Core Divestiture Program with Over $900 Million Signed Year to Date
+<<<TEXT>>>
+Crescent Energy Company, today announced the sale of its non-operated DJ Basin assets to a private buyer for $90 million in cash, subject to customary post-closing purchase price adjustments. The assets, primarily located in Weld County, Colorado, have current production of approximately 7 Mboe/d. Our successful non-core divestiture program enhances our...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5fa074df6f144692
+symbol: CRGY
+published_utc: 2025-12-12T16:20:00Z
+url: https://www.nasdaq.com/press-release/crescent-stockholders-overwhelmingly-approve-merger-vital-energy-2025-12-12
+headline: Crescent Stockholders Overwhelmingly Approve Merger with Vital Energy
+<<<TEXT>>>
+Crescent Energy Company, today announced it received overwhelming stockholder approval for the issuance of Crescent Class A common stock in connection with its proposed merger with Vital Energy, Inc. at a special meeting of stockholders held today. With approval secured, we are prepared to move quickly toward closing and continue creating meaningful,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5b4511e1f14da99c
+symbol: CRGY
+published_utc: 2025-12-12T18:25:00Z
+url: https://www.nasdaq.com/press-release/results-early-participation-crescent-energys-exchange-offers-and-consent
+headline: Results of Early Participation in Crescent Energy’s Exchange Offers and Consent Solicitations for Vital Energy, Inc.’s 7.75% Senior Notes due 2029 and 9.750% Senior Notes due 2030
+<<<TEXT>>>
+Crescent Energy Finance LLC, a wholly owned subsidiary of Crescent Energy Company announced today the early results of the previously announced offer to exchange any and all 7.75% Senior Notes due 2029 issued by Vital Energy, Inc. that are held by Eligible Holders for up to $298,214,000 aggregate principal amount of new 7.75% Senior Notes due 2029 issued by...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 57ceb6c6c954acaf
+symbol: CRGY
+published_utc: 2025-12-15T08:50:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-closes-transformative-acquisition-vital-energy-2025-12-15
+headline: Crescent Energy Closes Transformative Acquisition of Vital Energy
+<<<TEXT>>>
+Crescent Energy Company today announced the closing of its previously announced acquisition of Vital Energy, Inc., creating a leading, returns-driven independent E&P company. "Our combination with Vital Energy significantly enhances Crescent’ s free cash flow profile, operational scale and opportunity set," said David Rockecharlie, Crescent’ s CEO." Through...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 872491d8ab02877a
+symbol: CRGY
+published_utc: 2026-01-12T16:30:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-schedules-fourth-quarter-and-full-year-2025-earnings-release-and
+headline: Crescent Energy Schedules Fourth Quarter and Full Year 2025 Earnings Release and Conference Call
+<<<TEXT>>>
+Crescent Energy Company today announced plans to host a conference call and webcast at 10 a.m. CT, on Thursday, February 26, 2026, to discuss its fourth quarter and full year 2025 financial and operating results, as well as its outlook for 2026. Time: 10 a.m. CT Date: Thursday, February 26, 2026 Conference Dial-In: 877-407-0989/ 201-389-0921 Webcast Link:...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 547ec22c60e7a5a8
+symbol: CRGY
+published_utc: 2026-02-25T16:37:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-reports-fourth-quarter-and-full-year-2025-results-2026-02-25
+headline: Crescent Energy Reports Fourth Quarter and Full Year 2025 Results
+<<<TEXT>>>
+Crescent Energy Company today announced financial and operating results for the fourth quarter and full year 2025. The Company’ s fourth quarter and full year 2025 conference call is planned for 10 a.m. CT on Thursday, February 26, 2026. Our activities are focused in the Eagle Ford, Permian and Uinta Basins, and we own minerals and royalty interests across premier...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b9dded89fbbc80c5
+symbol: CRGY
+published_utc: 2026-03-02T16:05:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-announces-offering-400-million-private-placement-convertible-senior
+headline: Crescent Energy Announces Offering of $400 Million Private Placement of Convertible Senior Notes Due 2031
+<<<TEXT>>>
+Crescent Energy Company announced today that, subject to market and other conditions, it intends to offer for sale in a private placement to persons reasonably believed to be qualified institutional buyers pursuant to Rule 144 A under the Securities Act of 1933, as amended $400 million aggregate principal amount of Convertible Senior Notes due 2031.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a6c0dc4c2620866f
+symbol: CRGY
+published_utc: 2026-03-03T23:55:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-announces-pricing-upsized-600-million-private-placement-275
+headline: Crescent Energy Announces Pricing of Upsized $600 Million Private Placement of 2.75% Convertible Senior Notes Due 2031
+<<<TEXT>>>
+Crescent Energy Company announced today that it has priced its previously announced private placement offering to persons reasonably believed to be qualified institutional buyers pursuant to Rule 144 A under the Securities Act of 1933, as amended of $600 million aggregate principal amount of 2.75% Convertible Senior Notes due 2031.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 49981c35eb6304df
+symbol: CRGY
+published_utc: 2026-04-09T16:30:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-schedules-first-quarter-2026-earnings-release-and-conference-call
+headline: Crescent Energy Schedules First Quarter 2026 Earnings Release and Conference Call
+<<<TEXT>>>
+Crescent Energy Company today announced plans to host a conference call and webcast at 10 a.m. CT, on Tuesday, May 5, 2026, to discuss its first quarter 2026 financial and operating results. Time: 10 a.m. CT Date: Tuesday, May 5, 2026 Conference Dial-In: 877-407-0989/ 201-389-0921 Webcast Link: www.crescentenergyco.com. Our activities are focused in the Eagle Ford,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 71b857e439f393d4
+symbol: CRGY
+published_utc: 2026-05-04T16:15:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-reports-first-quarter-2026-results-2026-05-04
+headline: Crescent Energy Reports First Quarter 2026 Results
+<<<TEXT>>>
+Crescent Energy Company today announced financial and operating results for the first quarter 2026. The Company’ s first quarter 2026 conference call is planned for 10 a.m. CT on Tuesday, May 5, 2026. Our activities are focused in the Eagle Ford, Permian and Uinta Basins, and we own minerals and royalty interests across premier U.S. oil and natural gas basins,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c3c2afc049392b88
+symbol: CRGY
+published_utc: 2026-07-08T16:30:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-schedules-second-quarter-2026-earnings-release-and-conference-call
+headline: Crescent Energy Schedules Second Quarter 2026 Earnings Release and Conference Call
+<<<TEXT>>>
+Crescent Energy Company today announced plans to host a conference call and webcast at 10 a.m. CT, on Tuesday, August 4, 2026, to discuss its second quarter 2026 financial and operating results. The Company plans to release results after market close on Monday, August 3, 2026. Time: 10 a.m. CT Date: Tuesday, August 4, 2026 Conference Dial-In: 833-461-5787/ 585-542-9983...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6c8b119cbb897b49
+symbol: CRGY
+published_utc: 2026-08-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/crescent-energy-reports-second-quarter-2026-results-2026-08-03
+headline: Crescent Energy Reports Second Quarter 2026 Results
+<<<TEXT>>>
+Crescent Energy Company today announced financial and operating results for the second quarter of 2026. Crescent’ s earnings release and supplemental earnings presentation can be found at www.crescentenergyco.com. The Company’ s second quarter 2026 conference call is planned for 10 a.m. CT on Tuesday, August 4, 2026.
+<<<END>>>

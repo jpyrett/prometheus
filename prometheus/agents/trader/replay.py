@@ -38,6 +38,7 @@ from prometheus.common.money import dumps, money
 from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.common.user_profile import load_profile
 from prometheus.common.work_order import TRADING, WorkOrder, parse_utc
+from prometheus.common import langsmith_tracing
 
 EASTERN = ZoneInfo("America/New_York")
 
@@ -114,6 +115,7 @@ def main(argv: list[str] | None = None, clerk=None, trader=None, out=None) -> in
     describe (tests), `out` a writer (print when left out). Returns 0 when the Trader ran (the order is `traded`, `decided` or `reviewed`), 1 when it refused to, 2 for an argument or a file that is not usable."""
     say = out or print
     args = build_parser().parse_args(argv)
+    langsmith_tracing.start()   # LangSmith traces the run when LANGSMITH_API_KEY is set (entry 114)
     try:
         order, funding = load_order(args.order)
         profile = load_profile(args.profile) if args.profile else None

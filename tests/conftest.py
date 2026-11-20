@@ -38,6 +38,12 @@ def neutral_recommendations_off(monkeypatch):
 
 
 @pytest.fixture(autouse=True)
+def langsmith_tracing_off(monkeypatch):
+    """LangSmith traces a command's run when LANGSMITH_API_KEY is set (entry 114, `prometheus/common/langsmith_tracing.py`). A test must not inherit Jacob's .env: no test run is ever sent."""
+    monkeypatch.setenv("LANGSMITH_TRACING", "false")
+
+
+@pytest.fixture(autouse=True)
 def paper_trading_on(monkeypatch):
     """The Trader reads PAPER_TRADING from the environment, then from .env. A test must not inherit Jacob's .env (the same reason as `market_hours_count`): paper trading is on unless a test turns it off itself."""
     monkeypatch.setenv("PAPER_TRADING", "true")
@@ -89,3 +95,19 @@ def no_real_quotes_for_the_holdings(monkeypatch):
         return original(self, symbols)
 
     monkeypatch.setattr(AccountManager, "request_prices", guarded)
+
+
+@pytest.fixture(autouse=True)
+def security_audit_off(monkeypatch):
+    """The security layer's audit log (`logs/security_audit.jsonl`, entry 116) is written when PROMETHEUS_AUDIT is not false, from the environment then `.env`. No test writes the real log: a test of the log gives it a path of its own and `enabled=True`."""
+    monkeypatch.setenv("PROMETHEUS_AUDIT", "false")
+
+
+@pytest.fixture(autouse=True)
+def no_real_guard_model(monkeypatch):
+    """A guard built `with_scorer()` and given no model builds the real one (OpenRouter, paid) the first time it screens a request. In a test that must never happen: here `get_chat_model` fails the way a missing key does, so a scorer
+    with no model of its own is a scorer that cannot start, which the guard meets by holding the request for review (fail closed, S5). A test that gives the scorer a model of its own is not affected."""
+    def refuse(*args, **kwargs):
+        raise RuntimeError("OPENROUTER_API_KEY is not set (a test must not build a real model)")
+
+    monkeypatch.setattr("prometheus.security.scorer.get_chat_model", refuse)

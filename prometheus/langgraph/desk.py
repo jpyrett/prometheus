@@ -118,6 +118,8 @@ from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, TRADING,
 from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.rag.loaders import check_symbol
 from prometheus.tools import symbols
+from prometheus.common import langsmith_tracing
+from prometheus.security.guard import Guard
 
 DEFAULT_SOURCE = WIRED_SOURCES[0]
 DEFAULT_DAYS = 7
@@ -140,6 +142,7 @@ class DeskState(TypedDict, total=False):
     with_trader: bool                                          # the desk was built with the Trader: its path ends at the trader node, and not at the decision (`run_desk` sets it)
     clarify: bool                                              # the run stopped because the request could not be read or its stocks could not be made (entry 102): its last message asks the user to clarify it (`direct.CLARIFY`)
     plan: dict | None                                          # a request in the user's own words (`request["ask"]`): what the Account Manager understood and the companies the Data Clerk found (entry 78)
+    security: dict | None                                      # the security layer's verdict on the user's request when it was refused or flagged (entry 116): the action, the risk, the rules; an ALLOW leaves it out
 
 
 CRITIC_ENDS = ("reviewed", "decided")   # where a run with the Critic and without the Trader ends: `decided`, or `reviewed` while a decision waits for the user's answer
@@ -245,7 +248,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
                with_critic: bool = False, critic_factory: Callable[[WorkOrder], Critic] | None = None, approver: Callable[[dict], bool | None] | None = None,
                clock: Callable[[], datetime] | None = None,
                with_trader: bool = False, trader_factory: Callable[[WorkOrder], Trader] | None = None, store_factory: Callable[[], object] | None = None,
-               confirm: Callable[[object], bool | None] | None = None, clarify: Callable[[dict], str | None] | None = None):
+               confirm: Callable[[object], bool | None] | None = None, clarify: Callable[[dict], str | None] | None = None, guard: Guard | None = None):
     """The compiled graph. The factories make the agents for an order (fakes in tests); by default the Data Clerk may fetch only if the order is
     live, and the Advisor uses the advisor role's model. `resolver` turns a company name into a ticker (a fake in tests; the Finnhub lookup of
     prometheus/tools/symbols.py by default, found when it is called). `with_funds` adds the `account_manager_funds` node after the Advisor (entry 42); `funds_factory` makes its
@@ -259,6 +262,11 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     reads schema 2 records). The request then carries `account`: {"portfolio": a path or a Portfolio, "profile": a path or a UserProfile, "mode": "ask" or "auto", all optional: the sample files and the
     profile's own mode}. `critic_factory` makes the Critic for an order (fakes in tests), `approver` is asked about each recommendation that needs the user (Ask mode; None: it stays pending), and `clock`
     returns the aware moment everything is dated and judged at (a fake in tests; the real clock by default). The date a recommendation is made on is the US EASTERN date of that moment, never the UTC one.
+
+    `guard` (entry 116, design/agentic_security_spec.md) is the security layer's door for the user's own words: the `account_manager` node screens `request["ask"]["text"]` BEFORE the Account Manager's model reads it (the rate limit first,
+    then the code rules and, for the real parts, the LLM Risk Scorer). A BLOCK or a REDACT_OR_REVIEW (held for review: it fails closed in both modes) ends the run at the first node with the policy's message in `errors`, no model called and
+    `state["security"]` set; a request that screens ALLOW or ALLOW_AND_FLAG runs exactly as before. None is `Guard.code_only()` (rules and router, no model call); the session and the web page pass `Guard.with_scorer()`.
+    The Trust Score of each recommendation (`guard.trust`) is worked out after the Critic's reviews: recorded and traced, it changes nothing.
 
     `with_trader` (Trader v1, entries 73 to 75) adds the `trader` node after the decisions (after the funds node with `with_funds`): the Trader executes what is permitted against a simulated broker. It needs `with_critic`
     (it trades what the Critic reviewed and the Account Manager decided on) and raises ValueError without it. The node runs only when at least one decision says `yes_auto` or `yes_user`. The request then carries
@@ -282,6 +290,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     advisor_factory = advisor_factory or (lambda order: Advisor())
     funds_factory = funds_factory or (lambda: AccountManager())
     critic_factory = critic_factory or (lambda order: Critic())
+    guard = guard or Guard.code_only()
     clock = clock or trading_now   # the real clock, or the simulated one (the previous business day's close) when USE_LIVE_TRADING=false: entry 76
 
     def saved_account(manager: AccountManager, who, profile) -> Portfolio:
@@ -316,6 +325,16 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         return manager, portfolio if isinstance(portfolio, Portfolio) else load_portfolio(portfolio)
 
     def read_request(state: DeskState) -> dict:
+        """The security layer screens what the user typed (entry 116), then the Account Manager reads it (`read_text`). A request that is BLOCKed or held for REVIEW stops the desk here: the policy's message is the error, no model is called
+        and nothing is done. ALLOW and ALLOW_AND_FLAG go on exactly as before (a flag is also put in `state["security"]`)."""
+        ask = state["request"]["ask"]
+        verdict = guard.screen_request(ask.get("text"), account_id=(state["request"].get("account") or {}).get("account"))
+        if verdict.refused:
+            return {"order": None, "errors": [verdict.message], "plan": None, "clarify": False, "security": verdict.as_dict()}
+        update = read_text(state)
+        return {**update, "security": verdict.as_dict()} if verdict.action != "ALLOW" else update
+
+    def read_text(state: DeskState) -> dict:
         """The Account Manager reads what the user typed (`request["ask"]`), shows it for a yes (`confirm`), and makes the work order. Never raises: a request it cannot read, a profile or account that cannot be opened,
         or a user who says no is a message in `errors`, and the desk stops here."""
         ask = state["request"]["ask"]
@@ -345,7 +364,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
                                time_period=f"last {days} days", since_days=days, top_k=TOP_K, live=fetch, case=case, criteria={"sentiment": "bullish or bearish"})
         reasons = verify_request(order)
         order.errors = [*order.errors, *reasons]
-        plan = {"intent": intent, "request": asked, "find": find, "case": case, "action": intent.action, "balance": "even" if intent.allocation == "even" else None, "budget": intent.budget,
+        plan = {"intent": intent, "request": asked, "find": find, "case": case, "action": intent.action, "balance": "even" if intent.allocation == "even" else None, "budget": intent.total_budget,
+                "each": intent.each_dollars,      # "the top 3 with $3,000 each" (entry 125): the amount for EACH purchase, never a total
                 "count": intent.count,      # the number of companies the request asked for, or None: `find` falls back to a default of 3 for the Advisor and that default must not cut anything (entry 107)
                 "said_how_much": intent.said_how_much(), "request_text": intent.request, "fetch": fetch,
                 "news_days": days, "result": Result(asked, case, eastern_date(clock()), find)}
@@ -424,7 +444,9 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         except (RuntimeError, ValueError, OSError) as error:
             order.errors = [*order.errors, f"the Critic could not start: {error}"]
             return {"order": order}
-        return {"order": agent.review_recommendations(order, manager.risk_view(), clock())}
+        reviewed = agent.review_recommendations(order, manager.risk_view(), clock())
+        guard.trust(reviewed)      # the Trust Score of each recommendation (entry 116): reliability, recorded and traced, changes no decision
+        return {"order": reviewed}
 
     def account_manager_decision(state: DeskState) -> dict:
         """The Account Manager turns each review into a trade decision and sizes it: Auto trades (round-robin, unless the user asked for another split), Ask asks the user, a denial is final. It asks the Data Clerk for the
@@ -437,7 +459,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             return {"order": order}
         plan = state.get("plan") or {}
         return {"order": manager.decide_trades(order, portfolio, approver, clock(), (state["request"].get("account") or {}).get("mode"), plan.get("balance"), plan.get("budget"),
-                                               clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "", count=plan.get("count"))}
+                                               clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "", count=plan.get("count"), each=plan.get("each"))}
 
     def account_manager_direct(state: DeskState) -> dict:
         """A DIRECT ORDER (entry 87): the Account Manager prices the trades the user named (it asks the Data Clerk for the quotes) and decides them: the user's own order is the approval, so there is no recommendation, no
@@ -451,7 +473,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         plan = state.get("plan") or {}
         intent = plan.get("intent")
         return {"order": manager.decide_direct(order, portfolio, clock(), (state["request"].get("account") or {}).get("mode"), approver, clarify=clarify, said_how_much=intent.said_how_much() if intent else True,
-                                               request_text=plan.get("request_text") or "", balance="even" if intent and intent.allocation == "even" else None, budget=intent.budget if intent else None)}
+                                               request_text=plan.get("request_text") or "", balance="even" if intent and intent.allocation == "even" else None, budget=intent.total_budget if intent else None)}
 
     def trader(state: DeskState) -> dict:
         """The Account Manager hands the decided order to the Trader, which executes what is permitted against the simulated broker (paper or backtest): never raises, and never edits what the other agents wrote. The
@@ -686,6 +708,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--json", action="store_true", help="print the finished work order as JSON instead of the report")
     parser.add_argument("--show-graph", action="store_true", help="print the graph as a Mermaid diagram and stop")
     args = parser.parse_args(argv)
+    langsmith_tracing.start()   # LangSmith traces the run when LANGSMITH_API_KEY is set (entry 114)
     if args.trade and not args.critic:
         parser.error("--trade needs --critic: the Trader executes the trades the Critic reviewed and the Account Manager decided on")
     if (args.no_trader_model or args.book) and not args.trade:

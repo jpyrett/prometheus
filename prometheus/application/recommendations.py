@@ -55,6 +55,7 @@ from prometheus.common.trading_clock import clock_note, trading_now
 from prometheus.rag.config import REPO_ROOT
 from prometheus.rag.loaders import check_symbol
 from prometheus.tools import symbols as symbol_tools
+from prometheus.common import langsmith_tracing
 
 TICKER = re.compile(r"\$?[A-Z0-9][A-Z0-9.\-]{0,9}")
 MAX_SYMBOLS = 15
@@ -172,7 +173,7 @@ def _list_companies(request: Request, clerk, today: date, result: Result) -> lis
         else:
             reply = clerk.find_companies(item, count=1, today=today)
             result.notes.extend(reply["notes"])
-            found = [c for c in reply["companies"] if c.get("how") != "stored market news"][:1]
+            found = [c for c in reply["companies"] if not str(c.get("how")).startswith("stored market news")][:1]
             if not found:
                 found = [{"brand": item, "parent": None, "symbol": None, "company": None, "public": False, "how": None, "note": "no listed company found for this name: not scored"}]
             if result.sector is None:
@@ -569,6 +570,7 @@ def main(argv: list[str] | None = None) -> int:
                               "trade is followed to its stop, target or time stop. The Trader's model (gpt-oss-120b, OpenRouter) is PAID. The fills are kept in the report and in --save: nothing is booked")
     trader_group.add_argument("--no-trader-model", action="store_true", help="no model for the Trader: the program places the default orders (the free, repeatable way; a paper run still asks Finnhub for the quotes)")
     args = parser.parse_args(argv)
+    langsmith_tracing.start()   # LangSmith traces the run when LANGSMITH_API_KEY is set (entry 114)
     given = [(k, v) for k, v in (("symbols", args.symbols), ("company", args.company), ("phrase", args.phrase), ("list", args.items)) if v]
     if len(given) > 1 or (given and args.what):
         parser.error("give the request once: the text, or one of --symbols, --company, --phrase, --list")

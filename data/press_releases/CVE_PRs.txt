@@ -1,0 +1,153 @@
+<<<PRESS_RELEASE>>>
+id: 21d4209589c49b43
+symbol: CVE
+published_utc: 2025-11-20T10:16:09Z
+url: https://money.tmx.com/en/quote/CVE/news/6967563222182118
+headline: Cenovus announces closing of $2.6 billion offering of senior notes and redemption of select notes
+<<<TEXT>>>
+CALGARY, Alberta, Nov. 20, 2025 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) ha...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7f3a972a3cf6324d
+symbol: CVE
+published_utc: 2025-12-11T06:00:00Z
+url: https://money.tmx.com/en/quote/CVE/news/8337810491287802
+headline: Cenovus announces 2026 capital budget and corporate guidance
+<<<TEXT>>>
+CALGARY, Alberta, Dec. 11, 2025 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d9140f541fbb9b7e
+symbol: CVE
+published_utc: 2026-01-02T12:19:00Z
+url: https://money.tmx.com/en/quote/CVE/news/8219735237855434
+headline: Canadian Investment Regulatory Organization Trading Halt - CVE.WT
+<<<TEXT>>>
+Canadian Investment Regulatory Organization Trading Halt - CVE.WT         Canada NewsWire        ...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 408fd0b5d4536b0b
+symbol: CVE
+published_utc: 2026-01-23T17:15:00Z
+url: https://money.tmx.com/en/quote/CVE/news/8696951251045643
+headline: S&P Dow Jones Indices Announces Changes to the S&P/TSX Canadian Dividend Aristocrats Index
+<<<TEXT>>>
+S&amp;P Dow Jones Indices Announces Changes to the S&amp;P/TSX Canadian Dividend Aristocrats Inde...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0219e78db0abe915
+symbol: CVE
+published_utc: 2026-02-12T16:30:00Z
+url: https://money.tmx.com/en/quote/CVE/news/7441231293019061
+headline: Cenovus to hold fourth-quarter and full-year 2025 conference call and webcast on February 19
+<<<TEXT>>>
+CALGARY, Alberta, Feb. 12, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX:CVE) (NYSE:CVE) will...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 091f6c855a730926
+symbol: CVE
+published_utc: 2026-02-19T06:00:00Z
+url: https://money.tmx.com/en/quote/CVE/news/5164336434041586
+headline: Cenovus announces fourth-quarter and full-year 2025 results
+<<<TEXT>>>
+CALGARY, Alberta, Feb. 19, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bff5abf0eb6cee13
+symbol: CVE
+published_utc: 2026-02-26T06:00:00Z
+url: https://money.tmx.com/en/quote/CVE/news/4979393530959428
+headline: Cenovus Energy announces redemption of Series 1 & 2 Preferred Shares
+<<<TEXT>>>
+CALGARY, Alberta, Feb. 26, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f356efd9ff234985
+symbol: CVE
+published_utc: 2026-04-29T17:08:59Z
+url: https://money.tmx.com/en/quote/CVE/news/6383609546199787
+headline: Cenovus to hold first-quarter 2026 conference call and webcast and 2026 Annual Meeting of Shareholders on May 6
+<<<TEXT>>>
+CALGARY, Alberta, April 29, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX:CVE) (NYSE:CVE) wil...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 64924271043cdb0d
+symbol: CVE
+published_utc: 2026-05-06T06:00:00Z
+url: https://money.tmx.com/en/quote/CVE/news/8264415231703091
+headline: Cenovus announces first-quarter 2026 results
+<<<TEXT>>>
+CALGARY, Alberta, May 06, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) tod...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2e3c2d95fc54c2a7
+symbol: CVE
+published_utc: 2026-05-06T18:16:21Z
+url: https://money.tmx.com/en/quote/CVE/news/5449639682638293
+headline: Cenovus reports voting results of annual meeting of shareholders
+<<<TEXT>>>
+CALGARY, Alberta, May 06, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) hel...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e1ff2378fc86de2f
+symbol: CVE
+published_utc: 2026-07-22T17:39:47Z
+url: https://money.tmx.com/en/quote/CVE/news/7097354552020279
+headline: Cenovus to hold second-quarter 2026 conference call and webcast on July 29
+<<<TEXT>>>
+CALGARY, Alberta, July 22, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX:CVE) (NYSE:CVE) will...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0f1c1dc8f3073e59
+symbol: CVE
+published_utc: 2026-07-29T06:00:00Z
+url: https://money.tmx.com/en/quote/CVE/news/4999912414675073
+headline: Cenovus announces second-quarter 2026 results
+<<<TEXT>>>
+CALGARY, Alberta, July 29, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a5d005397a945b95
+symbol: CVE
+published_utc: 2026-10-05T06:00:00Z
+url: https://money.tmx.com/en/quote/CVE/news/6230912739059336
+headline: Cenovus announces agreement to acquire Athabasca Oil Corporation
+<<<TEXT>>>
+CALGARY, Alberta, Oct. 05, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 196eb66c63626c8b
+symbol: CVE
+published_utc: 2026-10-28T16:57:53Z
+url: https://money.tmx.com/en/quote/CVE/news/8681463816124453
+headline: Cenovus to hold third-quarter 2026 conference call and webcast on November 4
+<<<TEXT>>>
+CALGARY, Alberta, Oct. 28, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX:CVE) (NYSE:CVE) will...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: efa56be15a8a4631
+symbol: CVE
+published_utc: 2026-11-02T07:50:00Z
+url: https://money.tmx.com/en/quote/CVE/news/6308883410663545
+headline: Oil Enters November With OPEC+ Holding Steady and Five Producers Set to Report
+<<<TEXT>>>
+Oil Enters November With OPEC+ Holding Steady and Five Producers Set to Report         Canada New...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b9a0c51f84f03586
+symbol: CVE
+published_utc: 2026-11-04T06:00:00Z
+url: https://money.tmx.com/en/quote/CVE/news/8183441210833872
+headline: Cenovus announces third-quarter 2026 results
+<<<TEXT>>>
+CALGARY, Alberta, Nov. 04, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 37f4b9b16a4d8193
+symbol: CVE
+published_utc: 2026-11-09T06:00:00Z
+url: https://money.tmx.com/en/quote/CVE/news/5341873475587067
+headline: Cenovus Energy Announces Renewal Of Normal Course Issuer Bid
+<<<TEXT>>>
+CALGARY, Alberta , Nov. 09, 2026 (GLOBE NEWSWIRE) -- Cenovus Energy Inc. (TSX: CVE) (NYSE: CVE) a...
+<<<END>>>

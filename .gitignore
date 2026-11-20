@@ -245,3 +245,9 @@ design/accountmanager_postgres_notes.md
 
 # the web UI (ui/): installed packages
 ui/node_modules/
+
+# A LangSmith API key Jacob saved in design/. Never commit.
+design/langsmith_api_key.txt
+
+# The security layer's audit log (design choices entry 116): one JSON line per screened input. Local only.
+logs/

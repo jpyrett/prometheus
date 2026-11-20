@@ -1,0 +1,66 @@
+<<<FILING>>>
+accession: 0001422848-26-000007
+symbol: CNQ
+form: SCHEDULE 13G/A
+filed: 2026-02-12
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1017413/0001422848-26-000007.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001950047-26-003045
+symbol: CNQ
+form: 144
+filed: 2026-03-27
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1017413/0001950047-26-003045.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0002012383-26-002144
+symbol: CNQ
+form: SCHEDULE 13G
+filed: 2026-07-27
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1017413/0002012383-26-002144.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001422848-26-000096
+symbol: CNQ
+form: SCHEDULE 13G/A
+filed: 2026-08-12
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1017413/0001422848-26-000096.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001422848-26-000131
+symbol: CNQ
+form: SCHEDULE 13G/A
+filed: 2026-11-13
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1017413/0001422848-26-000131.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001422849-26-000172
+symbol: CNQ
+form: SCHEDULE 13G/A
+filed: 2026-11-13
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1017413/0001422849-26-000172.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>

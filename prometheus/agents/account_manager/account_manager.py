@@ -66,7 +66,7 @@ from prometheus.agents.critic import feedback
 from prometheus.agents.account_manager.config import load_config as load_account_manager_config
 from prometheus.agents.account_manager.intent import TradeIntent, check_typed, parse_intent
 from prometheus.common import shares as sh
-from prometheus.common.money import digits, price as price_door
+from prometheus.common.money import digits, money as money_door, price as price_door
 from prometheus.common.portfolio import Portfolio, after_purchase, apply_fill, load_portfolio
 from prometheus.common.trading_clock import trading_now
 from prometheus.common.user_account import UserDirectory
@@ -78,6 +78,9 @@ from prometheus.prompts import account_manager_request as request_prompt
 from prometheus.prompts.account_manager import RETRY, system_prompt, user_message
 from prometheus.rag.loaders import check_symbol
 from prometheus.reasoning import raise_funds as rf
+from prometheus.common import langsmith_tracing
+from prometheus.common.trace import traced
+from prometheus.security.guard import Guard
 
 DEFAULT_PORTFOLIO = Path(__file__).resolve().parents[3] / "configs" / "portfolios" / "jacob_pyrett.json"
 DEFAULT_PROFILE = Path(__file__).resolve().parents[3] / "configs" / "profiles" / "jacob_pyrett.json"
@@ -115,7 +118,7 @@ class AccountManager:
     def __init__(self, model=None, model_id: str | None = None, clerk=None, effort: str | None = "auto", only_green: bool = True, never_liquidate: bool = True, green_first: bool = True,
                  explore: bool = True, lean: bool = True, whole_plans: bool = False, parallel: bool = True, up_to: bool = True, deadline: float | None = 90.0,
                  providers: tuple[str, ...] | str | None = "auto", profile: UserProfile | str | Path | None = None, store=None, account_id: int | None = None, screen=None,
-                 fractional_even_split: bool | None = None):
+                 fractional_even_split: bool | None = None, guard: Guard | None = None):
         """model: a chat model (anything with `invoke`; a scripted one in tests); otherwise OpenRouter through `get_chat_model` with the model of the `account_manager` role
         (ACCOUNT_MANAGER_MODEL), or `model_id`. clerk: the Data Clerk that is asked for prices (anything with `request_quotes`; a fake in tests); built when first needed.
         effort (entry 46): "low", "medium" or "high", OpenRouter's `reasoning` effort for a model that thinks before it answers (gpt-oss-120b does): a thought is three short JSON steps and most of a
@@ -145,7 +148,10 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
         fractional_even_split (entry 110): whether "split it evenly" buys equal DOLLARS of each stock by buying a fraction of a share. None (the default) is the switch `sizing.fractional_even_split` of `configs/account_manager_v1.json`;
         True or False overrides it for this manager (False is the whole-share split of entry 108, which the tests of that entry use). Either way a connected account book that cannot hold a fraction (`AccountStore.holds_fractions`)
-        gets the whole-share split, and the user is told why."""
+        gets the whole-share split, and the user is told why.
+
+        guard (entry 116): the security layer's door for what the Account Manager says to the user (`tell_user`): each line is screened and a secret or another account's number in it is redacted in place. None is `Guard.code_only()`, made when first
+        needed: the redaction is code and needs no model."""
         self._check_book(store, account_id)
         self.fractional_even_split = fractional_even_split
         is_oss = "gpt-oss" in (model_id or chat_model_name("account_manager"))
@@ -160,6 +166,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         self._profile_from_file = False  # True once `profile` has read a file that nobody gave (the default JSON file, or a path not read until then): `connect` forgets such a profile
         self.store = store
         self.account_id = account_id
+        self._guard = guard
         self.screen = screen                       # the user's screen: a callable that takes one line of text (the session gives its own `out`). The user talks to the Account Manager and to nobody else, so what the Trader
                                                    # cannot say to the user (a trade that failed) the Account Manager says (`tell_user`, `show_portfolio`); None says nothing (the same text is on the order and in the reports)
         self.only_green, self.never_liquidate = only_green, never_liquidate
@@ -228,8 +235,9 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         except Exception:
             return False
 
+    @traced("account_manager.decide_trades")
     def decide_trades(self, order: WorkOrder, portfolio: Portfolio, approver=None, now=None, mode: str | None = None, balance: str | None = None, budget: Decimal | None = None,
-                      clarify=None, said_how_much: bool = False, request_text: str = "", count: int | None = None) -> WorkOrder:
+                      clarify=None, said_how_much: bool = False, request_text: str = "", count: int | None = None, each: Decimal | None = None) -> WorkOrder:
         """The Critic's verdicts become trade decisions (`order.trade_decisions`, one per review; see `decisions.py` for the rules), and the Account Manager decides HOW MUCH (design choices entry 80: the Advisor and the
         Critic only deal with recommendations): a denial is final, an approval that ran out is not traded, every approved purchase is sized from the user's money (`sizing.py`: the only check is that the funds cover the order), and an approved recommendation
         is traded in Auto mode, where NOTHING is asked (design choices entry 104: there is no second mark and a review that wants a person was already denied by the Critic); in Ask mode it goes to the user, through `approver`
@@ -248,8 +256,15 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         none, and then nothing is cut): the Critic's approved recommendations come first, then the neutral companies, the Advisor's best score first, until it is reached; a denied recommendation does not count; a neutral company
         beyond it gets NO decision and the user is told it was neutral and not needed.
 
+        `each` (design choices entry 125; "buy the top 3 oil stocks with $3,000 each") is the amount the user said for EACH purchase this run decides, the Critic's approved ones and the neutral ones alike: every purchase is limited to its own
+        amount (the plan of the answer "an amount for each company", `clarify.plan_each_dollars`; whole shares, the leftover stays cash) and the POT of the run is the amount times the number of purchases that can be sized, never above the
+        cash. Nothing is asked in either mode (the user already said how much), and no split is made (`balance` is dropped: every purchase has its own cap). It is one way to say how much, so it does not go with a `budget`.
+
         Returns the SAME order, `decided` unless an answer is pending. Refuses (a message on the order) a profile that is not the portfolio's user's."""
-        from prometheus.agents.account_manager import decisions
+        from prometheus.agents.account_manager import clarify as clarifying, decisions
+        if each is not None and budget is not None:
+            order.errors = [*order.errors, "an amount for each stock and one total (a budget) are two ways to say how much: give one of them"]
+            return order
         approved = decisions.purchases_to_size(order, portfolio, now)      # the purchases the Critic's approvals make (a denied recommendation is not one): [] unless the order is `reviewed`
         chosen, unneeded = neutral.choose(neutral.neutral_candidates(order), len(approved), count)        # every neutral company counts as approved (entry 107), up to the number the request asked for
         self._not_needed(order, unneeded, count)
@@ -258,7 +273,12 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         extra = [p for p in neutral_purchases if p.price is not None]      # asked about with the approved ones: ONE set of questions, over everything that is to be bought
         prices = self._held_prices(order, portfolio, now, bool(extra))
         wanted = None
-        if (clarify is not None and getattr(clarify, "available", lambda: True)() and (mode or self.profile.trade_mode) == "ask" and budget is None and not said_how_much
+        if each is not None:      # the user said the amount of EACH stock (entry 125): the plan of the answer "an amount for each company", with no question
+            if approved or extra:
+                plan = clarifying.plan_each_dollars(each, [*approved, *extra], portfolio.cash_avail)
+                balance, budget, wanted = None, plan.budget, plan.wanted
+                self.tell_user("", f"  How much: {plan.text}.")
+        elif (clarify is not None and getattr(clarify, "available", lambda: True)() and (mode or self.profile.trade_mode) == "ask" and budget is None and not said_how_much
                 and (decisions.has_purchase_to_size(order, now) or extra)):
             plan = self.clarify_sizing(order, portfolio, prices, clarify, now, balance, request_text, extra)
             if plan is not None:
@@ -286,6 +306,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             if order.data is not None:
                 order.data.notes = [*order.data.notes, neutral.NOT_NEEDED + line]
 
+    @traced("account_manager.request_symbols")
     def request_symbols(self, stocks: list[str]):
         """Ask the Data Clerk for the company name and the symbol of each stock (a ticker in capitals, or a company's name as the user typed it): a `lookup_symbol` work order, answered by `DataClerk.request_symbols`
         (the symbol directory, with exact matching, never a guess; for a NAME the directory does not have, the Data Clerk's model names its listed owner and the directory gives the symbol: entry 101). Returns the order,
@@ -293,6 +314,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         order = new_work_order(f"Company names and symbols of {', '.join(stocks)}", requester=REQUESTER, action_type="lookup_symbol", subject=list(stocks))
         return self.clerk.request_symbols(order)
 
+    @traced("account_manager.name_orders")
     def name_orders(self, order: WorkOrder, orders, typed: str, now=None, approver=None, mode: str | None = None) -> "direct.Naming":
         """A DIRECT ORDER skips the Data Clerk's node, so the Account Manager gets the company name and the symbol of each stock the user named itself (design choices entries 88 and 101): it asks the Data Clerk
         (`request_symbols`) and APPENDS the answer to the work order (`direct.name_the_stocks`: `data.companies`, the symbols as the subject, and the user's own orders in `direct_orders`). `orders` are the form's
@@ -334,10 +356,12 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             self.tell_user(f"      {d['typed']} was not found ({d['reason']}) and was left out" + (" (Auto mode asks nothing)" if d["mode"] == "auto" else " at your word") + f"; the order goes on with {goes_on}")
         return direct.Naming(orders=stays, dropped=dropped)
 
+    @traced("account_manager.name_the_stocks")
     def name_the_stocks(self, order: WorkOrder, orders, typed: str, now=None, approver=None, mode: str | None = None) -> list[str]:
         """`name_orders`, answering only with its problems (empty when the work order now holds every stock that stays): the older call, for a caller that does not need to know which stocks were left out."""
         return self.name_orders(order, orders, typed, now, approver, mode).problems
 
+    @traced("account_manager.decide_direct")
     def decide_direct(self, order: WorkOrder, portfolio: Portfolio, now=None, mode: str | None = None, approver=None, clarify=None, said_how_much: bool = False, request_text: str = "",
                       balance: str | None = None, budget: Decimal | None = None) -> WorkOrder:
         """The trade decisions for a DIRECT ORDER (design choices entries 87 and 88): the user named the trades, so no recommendation was made and the Critic was not asked (`direct.py`). The current price of each symbol is
@@ -349,7 +373,10 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
         A PURCHASE THE USER NAMED WITH NO NUMBER ("I want to buy MSFT", design choices entry 98) is still a direct order: no recommendation. In ASK mode, with `clarify` (the channel to the user) and no dollars or "as much as I can" in
         the request (`said_how_much`), the Account Manager first ASKS for the number with the same bounded questions as for any purchase (`clarify_sizing`); then it shows the order (the shares and the amount) and the user says yes
-        or no. In AUTO mode nothing is asked: the funds are spent as the user's words say (`balance`, `budget`; round-robin by default: one stock gets what the cash allows). A SALE with no number is not placed: say how many."""
+        or no. In AUTO mode nothing is asked: the funds are spent as the user's words say (`balance`, `budget`; round-robin by default: one stock gets what the cash allows). A SALE with no number is not placed: say how many.
+
+        THE DOLLARS THE USER WROTE FOR A STOCK ARE ITS LIMIT (design choices entry 122: "Buy $3,000 of XOM and $3,000 of MSFT" spends $3,000 on each and $6,000 in all, never the whole cash): see `_size_direct`. A purchase with no number
+        in a request where another purchase has one is asked about in Ask mode and is not placed in Auto mode (the cash is never its default)."""
         from prometheus.agents.account_manager import direct
         now = now or trading_now()
         prices = self._direct_prices(order)
@@ -359,19 +386,63 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         return order
 
     def _size_direct(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, Decimal], now, mode: str | None, clarify, said_how_much: bool, request_text: str, balance: str | None, budget: Decimal | None) -> dict[str, dict]:
-        """The number of shares of each PURCHASE the user named with no number (entry 98): {record_id: {"shares", "how"}} ("asked": the user answered the Account Manager's questions; "budget": the dollars they said; "cash":
-        all the cash, spread round-robin over the stocks named: entry 106). Nothing else bounds it (no limit of any profile). Never raises: whatever fails leaves the order unsized, and `direct.decide_direct` refuses it with the reason."""
+        """The number of shares of each PURCHASE the user named with no number of shares: {record_id: {"shares", "how", "pot", "dollars", ...}} ("dollars": the money the user wrote for THAT stock, entry 122; "asked": the user answered
+        the Account Manager's questions; "budget": the one total the user gave; "cash": all the cash, spread round-robin over the stocks named: entry 106; "unsaid": see below, with no shares). Nothing else bounds it (no limit of any
+        profile). Never raises: whatever fails leaves the order unsized, and `direct.decide_direct` refuses it with the reason.
+
+        THE USER'S OWN DOLLARS FOR A STOCK ARE ITS LIMIT (entry 122; "Buy $3,000 of XOM and $3,000 of MSFT"). A purchase with `dollars` is sized as an amount for EACH stock, exactly as the answer "$3,000 in each" of entry 111, M3: `wanted` is
+        what its dollars buy (a fraction when the account book holds one, else the whole shares), and it is an order in dollars (`dollars` on the decision: the handshake re-sizes it at the fill price and never past it). The POT of the
+        run is the sum of those dollars (never above the cash). The cash is the only other limit.
+
+        A PURCHASE WITH NO NUMBER IN A REQUEST WHERE ANOTHER PURCHASE HAS ONE ("Buy $2,000 of AAPL and MSFT", with no total and no "as much as I can"; entry 122, D6) is never given the cash by default: in Ask mode the Account Manager asks
+        how much of it (`clarify_sizing`, about that purchase alone) and the answer is its size; with no answer, and in Auto mode, it is `unsaid` and `direct.decide_direct` does not place it ("say how much of MSFT"), the others go ahead.
+        When both kinds are sized, every decision carries the SAME pot (a run has one): the sum of the pots of the two."""
         entries = [e for e in order.direct_orders if isinstance(e, dict) and e.get("shares") is None and e.get("side") == "buy" and prices.get(e.get("symbol"))]
         if not entries:
             return {}
         mode = mode or self.profile.trade_mode
-        purchases = [sizing.Purchase(record_id=e["record_id"], symbol=e["symbol"], action="open", price=prices[e["symbol"]], rank=n) for n, e in enumerate(entries, 1)]
-        wanted, how, in_dollars = None, "budget" if budget is not None else "cash", True
+        purchases = {e["record_id"]: sizing.Purchase(record_id=e["record_id"], symbol=e["symbol"], action="open", price=prices[e["symbol"]], rank=n) for n, e in enumerate(entries, 1)}
         fractions = self.fractions_on("the money is spent in whole shares")      # entry 111, M3: whole shares, and a fraction of a share with what is left, when the account book can hold one
+        own, bare = [e for e in entries if e.get("dollars") is not None], [e for e in entries if e.get("dollars") is None]
+        anchored = bool(own) or any(e.get("side") == "buy" and e.get("shares") is not None for e in order.direct_orders if isinstance(e, dict))      # another purchase of the request carries the user's number
+        out: dict[str, dict] = {}
+        pots: list[Decimal] = []
+        if own:
+            given = self._size_dollars_each(order, portfolio, [purchases[e["record_id"]] for e in own], {e["record_id"]: e["dollars"] for e in own}, fractions)
+            out.update(given)
+            pots += [v["pot"] for v in given.values()][:1]
+        if bare:
+            given = self._size_unnumbered(order, portfolio, [purchases[e["record_id"]] for e in bare], now, mode, clarify, said_how_much, request_text, balance, budget, fractions, anchored)
+            out.update(given)
+            pots += [v["pot"] for v in given.values() if v.get("pot") is not None][:1]
+        if len(pots) > 1:      # two groups, one pot: a run has one (`work_order.pot_reasons`), and it is never above the cash
+            run_pot = sizing.pot_of(portfolio.cash_avail, sum(pots, Decimal("0.00")))
+            out = {record: {**v, "pot": run_pot} if v.get("pot") is not None else v for record, v in out.items()}
+        return out
+
+    def _size_dollars_each(self, order: WorkOrder, portfolio: Portfolio, purchases: list[sizing.Purchase], dollars: dict[str, Decimal], fractions: bool) -> dict[str, dict]:
+        """The purchases the user gave dollars for, each as an amount for EACH stock (entry 122, rule D3): `wanted` is `shares.buys(its dollars, its price)` with fractions, else the whole shares its dollars pay for; the budget of the
+        sizing is the sum of the dollars, so the pot is that sum (never above the cash). Every purchase that gets shares carries its dollars (with fractions: an order in dollars, `how: "dollars"`). Never raises (see `_size_direct`)."""
+        try:
+            amount = {p.record_id: money_door(dollars[p.record_id]) for p in purchases}
+            wanted = {p.record_id: (sh.buys(amount[p.record_id], p.price) if fractions else Decimal(int(amount[p.record_id] // p.price))) for p in purchases}
+            sized = sizing.size_purchases(purchases, portfolio.cash_avail, allocation="round_robin", budget=sum(amount.values(), Decimal("0.00")), wanted=wanted, fractional=fractions, fractional_leftover=fractions)
+        except ValueError as error:      # only a program gets these wrong: a message on the order, nothing is bought
+            order.errors = [*order.errors, f"the amounts you wrote could not be sized: {error}"]
+            return {}
+        return {p.record_id: {"shares": s.shares, "how": "dollars", "pot": s.pot, "dollars": s.dollars if fractions else None, "allocation": s.allocation, "binding": s.binding} for p, s in zip(purchases, sized) if s.shares > 0}
+
+    def _size_unnumbered(self, order: WorkOrder, portfolio: Portfolio, purchases: list[sizing.Purchase], now, mode: str, clarify, said_how_much: bool, request_text: str, balance: str | None, budget: Decimal | None,
+                         fractions: bool, anchored: bool) -> dict[str, dict]:
+        """The purchases the user named with no number and no dollars (entry 98): the one total they gave, all the cash (round robin), or what they answer when asked (Ask mode). When another purchase of the request carries a number
+        and there is no total and no "as much as I can" (`anchored`; entry 122, D6), the cash is not spent on it by default: it is only sized by an answer, and otherwise it is `unsaid`: {"shares": None, "how": "unsaid"}."""
+        wanted, how, in_dollars, answered = None, "budget" if budget is not None else "cash", True, False
         if mode == "ask" and clarify is not None and getattr(clarify, "available", lambda: True)() and budget is None and not said_how_much:
             plan = self.clarify_sizing(order, portfolio, self._held_prices(order, portfolio, now, True), clarify, now, balance, request_text, purchases, fractional=fractions)
             if plan is not None:
-                balance, budget, wanted, how, in_dollars = plan.balance, plan.budget, plan.wanted, "asked", wanted_in_dollars(plan)
+                balance, budget, wanted, how, in_dollars, answered = plan.balance, plan.budget, plan.wanted, "asked", wanted_in_dollars(plan), True
+        if anchored and budget is None and not answered and not said_how_much:
+            return {p.record_id: {"shares": None, "how": "unsaid", "pot": None, "dollars": None, "allocation": None, "binding": None} for p in purchases}
         try:
             sized = sizing.size_purchases(purchases, portfolio.cash_avail, allocation=balance or "round_robin", budget=budget, wanted=wanted, fractional=fractions, fractional_leftover=fractions)
         except ValueError as error:  # only a program gets these wrong: a message on the order, nothing is bought
@@ -399,6 +470,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             order.errors = [*order.errors, f"no current price for {', '.join(missing)}"]
         return prices
 
+    @traced("account_manager.clarify_sizing")
     def clarify_sizing(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, Decimal], channel, now=None, balance: str | None = None, request_text: str = "", extra: list[sizing.Purchase] | None = None,
                        fractional: bool = False):
         """Ask the user how much to buy (design choices entry 85, `clarify.py`): a bounded ReAct loop with this agent's model. It phrases at most three questions through `channel`, reads the user's answer (a percentage
@@ -542,13 +614,24 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
     # ---- what the user is shown (the user talks to the Account Manager only)
 
+    @property
+    def guard(self) -> Guard:
+        if self._guard is None:
+            self._guard = Guard.code_only()
+        return self._guard
+
+    @guard.setter
+    def guard(self, value: Guard | None) -> None:
+        self._guard = value
+
     def tell_user(self, *lines: str) -> None:
-        """Say these lines to the user on the Account Manager's screen, if it has one. Never raises: a screen that fails does not stop a trade."""
+        """Say these lines to the user on the Account Manager's screen, if it has one: each line goes through the security layer first (`guard.screen_message`, entry 116), which redacts a secret and another account's number in place and shows the
+        rest as it is. Never raises: a screen that fails does not stop a trade."""
         if self.screen is None:
             return
         try:
             for line in lines:
-                self.screen(line)
+                self.screen(self.guard.screen_message(line, account_id=self.account_id).text)
         except Exception:
             pass
 
@@ -594,6 +677,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
     # ---- the Trader (Trader v1, design/trader_v1_final_spec.md)
 
+    @traced("account_manager.trading_portfolio")
     def trading_portfolio(self, portfolio: Portfolio | None = None, book: bool = False) -> Portfolio:
         """Open a trading run and return the portfolio the Trader starts from: the saved account when this manager is connected (`list_portfolio`: the book is the truth), else the one given (the desk's JSON file).
         Raises ValueError when there is neither. This is also where the Account Manager takes the funds into its own hands for the per-trade handshake (design choices entry 81): with a saved account and `book` true every
@@ -633,6 +717,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             raise ValueError("no trading run is open: call trading_portfolio first")
         return self.list_portfolio() if self._booking else self._working
 
+    @traced("account_manager.apply_earlier_fills")
     def apply_earlier_fills(self, trades: list[dict]) -> list[str]:
         """Put into the working portfolio the fills of an EARLIER run that were never booked (the `filled` trades of `order.trades` with `booked` false: they live only on the order), sales first, with `apply_fill`
         and nothing booked, so that a second run of the same order sees the cash the first one spent and a `filled` trade stays final (rule T3). Call it after `trading_portfolio` and before the first approval. With a
@@ -655,6 +740,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
                 problems.append(f"{trade_id}: its earlier fill was not applied to the portfolio: {error}")
         return problems
 
+    @traced("account_manager.approve_trade")
     def approve_trade(self, trade: dict, price: Decimal, *, order: WorkOrder, now: datetime, on: date, commission: Decimal = Decimal(0)) -> handshake.Approval:
         """The first half of the per-trade handshake (design choices entry 81): may the Trader make THIS trade now, and for how many shares? Reads the funds and the holdings as they are at this moment (the book when the
         run books, else the working portfolio) and answers an `Approval`: for a purchase the decision's shares cut to what the available cash pays for at `price` (`affordable_shares`: whole shares for a whole order, a fractional
@@ -669,6 +755,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         (`shares.buys`): fewer than the decision's estimate when the price is higher, more when it is lower. A purchase with no pot (the shares of a direct order the user typed, a RaiseFunds purchase) is held by the cash only."""
         return self._approve(trade, price, order, now, on, commission, Decimal(0))
 
+    @traced("account_manager.preview_trade")
     def preview_trade(self, trade: dict, price: Decimal, *, order: WorkOrder, now: datetime, on: date, commission: Decimal = Decimal(0), expected_proceeds: Decimal = Decimal(0)) -> handshake.Approval:
         """A QUESTION, not an approval (nothing is placed, reserved or changed): what `approve_trade` would answer if `expected_proceeds` more dollars were available. The Trader asks it twice around a funded purchase
         (spec section 7), so that it never works out the funds itself: with 0 to know whether the cash covers the whole purchase (the user is only asked to approve the funding sales when it does not), and with the
@@ -703,6 +790,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             self.tell_user("", f"  !! TRADE NOT DONE: {trade.get('side')} of {sh.shown(trade.get('shares'))} {trade.get('symbol')}: {sentence}")
             return handshake.refusal("account_refused", sentence)
 
+    @traced("account_manager.record_fill")
     def record_fill(self, trade: dict) -> handshake.Booking:
         """The second half of the per-trade handshake (design choices entries 81 and 82): the Trader reports ONE trade as filled, at once, and waits for the answer before it asks for the next trade.
         A run that BOOKS (a saved account): the account is SELECTed, the fill is COMMITTED in ONE Postgres transaction (`AccountStore.book_trade`: the cash and the position move together, or neither, and the
@@ -794,6 +882,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         the decisions use, `book` asks for the fills to be saved in the account book."""
         return trader.execute_trades(order, self, portfolio, now, funding=funding, approver=approver, book=book)
 
+    @traced("account_manager.notify_trades")
     def notify_trades(self, portfolio: Portfolio, trades: list[dict], traded_on: date, book: bool = False) -> tuple[Portfolio, list[str]]:
         """The design's AccountManager.notify, for a caller that reports a LIST of fills to a portfolio it holds (the Trader does not use it any more: since design choices entry 81 it reports each fill AT ONCE with `record_fill`,
         and the Account Manager holds the funds). The trades are the plain dicts of `order.trades` (the dump of the Trader's `Trade` record), and this applies each one whose status is `filled`, in the order
@@ -843,6 +932,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
     # ---- the user's own words
 
+    @traced("account_manager.understand_request")
     def understand_request(self, text: str) -> TradeIntent:
         """Read what the user typed ("I want to buy ___ stocks. Buy the 3 most recommended ..., split the money evenly") into a `TradeIntent` (design choices entry 78). The model only maps the words to the form
         (`prompts/account_manager_request.py`); CODE accepts the form only when the user's own text supports every field (`intent.parse_intent`: every ticker, name, number and cue word must be in what was typed),
@@ -966,6 +1056,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             self.run["error"], self.run["rate_limited"] = f"the search failed ({type(error).__name__})", is_rate_limited(error)
             return {"status": "error", "errors": [self.run["error"]], "target": target, "shares": resolved, **info}
 
+    @traced("account_manager.raise_funds")
     def raise_funds(self, portfolio: Portfolio, target: str, shares: Decimal | None, today: date | None = None, only_green: bool | None = None, fill: str | None = None, explore: bool | None = None,
                     lean: bool | None = None, green_first: bool | None = None, up_to: bool | None = None, never_liquidate: bool | None = None, whole_plans: bool | None = None, **limits) -> dict:
         """Buy `shares` of `target`: find what to sell. Returns the answer of `reasoning.raise_funds.search` plus `quotes` (what the Data Clerk returned), `run` (the model, calls and
@@ -994,6 +1085,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         result = self._plan(portfolio, target, shares, quotes, today, only_green, fill, explore, lean, green_first, up_to, never_liquidate, whole_plans=whole_plans, **limits)
         return {**out, **result}
 
+    @traced("account_manager.raise_funds_many")
     def raise_funds_many(self, portfolio: Portfolio, purchases: list[tuple[str, Decimal | None]], today: date | None = None, only_green: bool | None = None, explore: bool | None = None, lean: bool | None = None,
                          green_first: bool | None = None, up_to: bool | None = None, never_liquidate: bool | None = None, whole_plans: bool | None = None, **limits) -> dict:
         """Several purchases, one after the other (entry 43): the Data Clerk is asked ONCE for every price (the targets and the holdings); each purchase is then planned against the portfolio
@@ -1172,6 +1264,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--model", help="an OpenRouter model id instead of ACCOUNT_MANAGER_MODEL")
     parser.add_argument("--json", action="store_true", help="print the whole result as JSON instead of the report")
     args = parser.parse_args(argv)
+    langsmith_tracing.start()   # LangSmith traces the run when LANGSMITH_API_KEY is set (entry 114)
     if args.account:
         if args.buy:
             print("ERROR: --account prints a saved account and does not place a purchase", file=sys.stderr)

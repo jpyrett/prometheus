@@ -40,10 +40,14 @@ langchain-huggingface>=1.2,<2      # HuggingFaceEmbeddings (runs sentence-transf
 langchain-chroma>=1.1,<2           # LangChain <-> Chroma bridge
 chromadb>=1.3.5,<2                 # the range langchain-chroma 1.1.0 allows; tested with 1.5.9
 langchain-openai>=1.7,<2           # chat-model client: OpenRouter now, a local OpenAI-compatible server later
+langchain-core>=1.8,<2             # imported directly (messages, prompts, tools); 1.8 is what openevals needs (Jacob, 2026-11-20: upgraded from 1.7.0, tested with 1.8.4)
 
 # Testing (FastMCP Client tests + unit tests)
 pytest>=8.0
 pytest-asyncio>=0.24
+
+langsmith>=0.14                    # tracing (entry 114): agent addressing (LANGSMITH_AGENT_ID / LANGSMITH_AGENT_ENVIRONMENT) needs 0.14; installed with langchain-core anyway
+openevals>=0.2                     # offline evaluation (entry 117, prometheus/evals): create_llm_as_judge, the Opus risk judge; it needs langchain-core>=1.8
 
 # Optional tracing of the web UI's runs (prometheus/application/web/tracing.py imports it only when LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY are set): pip install "langfuse>=3"
 # langfuse>=3

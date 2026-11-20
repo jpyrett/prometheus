@@ -20,7 +20,8 @@ the contract between them. The one change it makes to the text is to decode HTML
 A NEWS ARTICLE (or press release) THAT FAILS IS DISCARDED (Jacob, 2026-11-15, design choices entry 83): a record the DataToolbox would not have written (a header line with no colon, an unknown marker, no
 <<<END>>>, bad UTF-8, a field that is missing, a time that is not a time, no ticker) is SKIPPED, completely: it becomes no Document, so it is never chunked, never stored in the RAG, never found by a search, and never
 reaches the Advisor's scoring or any other result. The records before and after it still load. `load_news(path, skipped=[...])` lists each skipped record (`Skipped`: the file and line, and why) for a person to look
-at; nothing else is told. SEC filings are not news and keep the strict rule: a filing the toolbox would not have written stops the load with a ValueError that names the file and the line.
+at; nothing else is told. A news article or press release that the security layer's document rules refuse (a hidden instruction for an AI, a chat-template marker, an encoded message: design choices entry 116,
+`configs/security_v1.yaml`) is skipped in the same way, with the reason `security:<rule>`, so it is never stored. SEC filings are not news and keep the strict rule: a filing the toolbox would not have written stops the load with a ValueError that names the file and the line.
 
 Look at the result:   python -m prometheus.rag.loaders AAPL
 
@@ -43,6 +44,8 @@ from typing import NamedTuple
 from langchain_core.documents import Document
 
 from prometheus.rag.config import filings_dir, news_dir, press_releases_dir
+from prometheus.security import rules as security_rules
+from prometheus.security.policy import load_policy
 
 ARTICLE_START, SUMMARY_START, INSIGHTS_START, ARTICLE_END = (
     "<<<ARTICLE>>>", "<<<SUMMARY>>>", "<<<INSIGHTS>>>", "<<<END>>>")
@@ -107,6 +110,15 @@ class Skipped(NamedTuple):
     reason: str
 
 
+def security_reason(doc: Document) -> str | None:
+    """`security:<rule>` when the security layer's document rules refuse this document (BLOCK, or held for review: the same documents that are dropped at retrieval), else None. Code rules only: no model, no network, the same answer every time."""
+    policy = load_policy()
+    findings = security_rules.screen("document", doc.page_content, policy)
+    if security_rules.risk_of(findings) < policy.router.review:
+        return None
+    return "security:" + max(findings, key=lambda f: f.score).rule
+
+
 def load_news(path: Path | str, skipped: list | None = None) -> list[Document]:
     """Read one news file. Returns one Document per article, in file order. A record that fails is SKIPPED and ignored completely (see the module text): the others still load. `skipped`, when given, receives one
     `Skipped` for each record that was discarded."""
@@ -119,10 +131,16 @@ def load_news(path: Path | str, skipped: list | None = None) -> list[Document]:
             continue
         where = f"{path}:{record[0]}"
         try:
-            docs.append(_to_document(path, *record))
+            doc = _to_document(path, *record)
         except (ValueError, OverflowError) as e:   # a field that is missing, a time that is not a time, no ticker: the article failed
             if skipped is not None:
                 skipped.append(Skipped(where, str(e).removeprefix(f"{where}: ")))
+            continue
+        if (why := security_reason(doc)) is not None:      # a poisoned article is discarded like a broken one (entry 116)
+            if skipped is not None:
+                skipped.append(Skipped(where, why))
+            continue
+        docs.append(doc)
     return docs
 
 
@@ -244,10 +262,16 @@ def load_press_releases(path: Path | str, skipped: list | None = None) -> list[D
             continue
         where = f"{path}:{record[0]}"
         try:
-            docs.append(_press_release_to_document(path, *record))
+            doc = _press_release_to_document(path, *record)
         except (ValueError, OverflowError) as e:
             if skipped is not None:
                 skipped.append(Skipped(where, str(e).removeprefix(f"{where}: ")))
+            continue
+        if (why := security_reason(doc)) is not None:      # a poisoned press release is discarded like a broken one (entry 116)
+            if skipped is not None:
+                skipped.append(Skipped(where, why))
+            continue
+        docs.append(doc)
     return docs
 
 

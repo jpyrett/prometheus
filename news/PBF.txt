@@ -1,0 +1,751 @@
+<<<ARTICLE>>>
+id: finnhub:143769926
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92547874015be08b3374d6eefa5a64a1672ff0acd236ddf6807898cf3abbbe96
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: 3 Momentum Anomaly Stocks to Buy Amid Rate Hike Fears, NVIDIA Shock
+<<<SUMMARY>>>
+Rate hike fears and NVIDIA volatility rattle Wall Street, but Reliance, Arrow Electronics and PBF Energy emerge as momentum picks after recent pullbacks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739332
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7be7a829fc81c7a8e5a9caaeaa23c760a2aa865e0efe3fbe3101d10ae4466862
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Can HF Sinclair Capitalize on Tight Global Refined Product Supplies?
+<<<SUMMARY>>>
+DINO stands to benefit from tight global fuel supplies and strong refining margins, leveraging operational efficiency and its strategically located refineries.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739330
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a2ae3b07640205edddb55fe382a8567bc179f17f5f3e39dbdd9016a7754aeeb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Will Wider Heavy Crude Discounts Strengthen Phillips 66's Margins?
+<<<SUMMARY>>>
+PSX stands to benefit from widening heavy crude discounts, leveraging its vast processing capacity and pipeline network to boost margins and profitability.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738116
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c8f284dbeb31c38e56b67d4c6515d1c82e70f3d07ab6017d3ff9b525684fe46c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: PBF Energy Is Now Undervalued: Is This a Strong Entry Point?
+<<<SUMMARY>>>
+PBF trades at a steep discount to industry peers, while favorable refining margins, renewable diesel growth and a strong balance sheet bolster its outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738374
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=163c26aa0a0e4c0b15dd5287a4e0a1feeea72e5c6d277866838fd359e7c6b51b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Replenish Your Portfolio With These 5 Low Price-to-Sales Stocks
+<<<SUMMARY>>>
+Low P/S ratios, solid fundamentals and manageable debt can help uncover undervalued stocks with upside potential. Explore INVA, DINO, PARR, GPRE and PBF.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687428
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a52933202e68a18932985ec74d523ebffca788c4a0afed5ea94813aa3933670c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Can PBF's Chalmette Jet Fuel Expansion Drive Margin Growth?
+<<<SUMMARY>>>
+PBF plans to double Chalmette jet fuel output by 2027 through a sub-$20 million upgrade, targeting higher-value products and stronger refining margins.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686545
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=073345baf05684600795589991a526c0a8a271441fb80142e793419eaf605fbb
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2268232663/image_2268232663.jpg?io=getty-c-og
+category: company
+tickers: PBF
+keywords: 
+headline: Delek US Holdings Is Intriguing, But Not Compelling
+<<<SUMMARY>>>
+Delek US Holdings, Inc. looks cheap on EV/EBITDA, with SOTP upside and refinery margin catalystsâbut risks remain. Click for this earnings update of DK stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143655420
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7f456e494c33588bc75d1151f95483aa205f25f5c56cf0bf7fc7d10a8c07ebf1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Delek Targets Another $1 Per Barrel at El Dorado: Can Margins Climb?
+<<<SUMMARY>>>
+DK targets $30 million in annual refining-margin gains at El Dorado as optimization efforts, rising earnings estimates and valuation bolster its appeal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590981
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6ba4a32c3919f44f63572743210e4c836c4ac2e45fe3e82403a37f4c45d9f57
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: EOG Q3 Earnings Beat Estimates on Record Production, Strong Pricing
+<<<SUMMARY>>>
+EOG Resources' Q3 earnings surged 79.7% on record production and higher commodity prices, driving robust cash flow and an 8% dividend hike.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590170
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b2f8e01b9bd94c10d0e4d633694c71e78ea85a475016da0a7df309dd48b4b10c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Baker Hughes Sharpens Portfolio Focus With $1.45B Waygate Sale
+<<<SUMMARY>>>
+BKR is set to sell Waygate Technologies to Hexagon for $1.45 billion, sharpening its focus on core businesses and freeing up capital for growth investments.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590171
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T17:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d32c8cac6f008089949d2dd29c0089f58f53924e484aa2a46858bc45a3d2c372
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: NESR to Report Q3 Earnings: Here's What Investors Should Know
+<<<SUMMARY>>>
+National Energy Services gears up for Q3 earnings with strong revenue estimates, fueled by the Jafurah ramp-up, but geopolitical disruptions may weigh on results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589909
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:13:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1873dff4ac45f375f6365364be4c1cb3d06eb14ad5830f9626cd00be8190a2c3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Marathon Petroleum And 2 Top Pipeline Stocks
+<<<SUMMARY>>>
+Oil markets are again flashing signs of oversupply as high prices curb demand, yet the pipes, tanks and terminals that move hydrocarbons still sit at the center of global trade flows. That gap between softer crude prices and steady transport needs can create a window for investors who prefer toll-road style energy exposure. This article highlights three midstream pipeline operators that screen well on this theme. The three stocks in this article are just a starting sample, as the full...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947389
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T21:20:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e5dc75bda66e464fb2842dcf783798f5c16d5bff55e34fb22de3dd1fbe5bed2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: PBF Energy: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+Yield upgrades and tight global supplies position the company to expand margins without major capital outlays.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143945951
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=51a0e9b1fa94873d5f2a2da2499405e315759b33128802d8b9890e993abcf28c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Valero's Crude Flexibility & Gulf Coast Network Boost Prospects
+<<<SUMMARY>>>
+VLO benefits from strong refining margins, resilient fuel demand and crude-processing flexibility, though rising crude and freight costs pose risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938590
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:45:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1a409fd9dc5067ae499fda8ccad857700df1169ba8811da503ee48946c1e238b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: What Moved Marathon Petroleum Stock?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938332
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:41:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d00d0f5e5420cfa48a2be02989ef1a7a3385f4077b68e990ee24f28a35be2298
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: What Sent Valero Energy Stock Lower?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143919238
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:45:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14e1a2f012b3c26412b04d0487331fd4852ae83641b18139b8873d1b661c071e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Is PBF Energy (PBF) a Solid Growth Stock? 3 Reasons to Think "Yes"
+<<<SUMMARY>>>
+PBF Energy (PBF) could produce exceptional returns because of its solid growth attributes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807207
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T15:07:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=90234bd8dee7e6cd1fd79c1fb99d1ba26f089d18e14afdc4dbe85d379e24f376
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: 5 Toxic Energy Stocks to Sell Now That the Blue Wave is Here
+<<<SUMMARY>>>
+Energy stocks have enjoyed a strong rally this year, driven primarily by supply disruptions in the Middle East and the Russia-Ukraine war. The blockage on the Strait of Hormuz has choked around a third of the global crude oil and LNG supplies, pushing prices and margins to multi-year highs. As a result, the overall energy […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804591
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:10:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44310c43179d0d246162dc960907e67af07aafc42100a40337418966c5eff7a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: 3 Midstream Energy Stocks To Own In November 2026
+<<<SUMMARY>>>
+Energy has returned to the front page again after a jump in oil prices following President Trump’s renewed opposition to a deal with Iran, which raised the risk of a prolonged standoff. When energy supply looks fragile, the pipes, storage tanks and terminals that keep fuel flowing can move from background utility to center stage. This article highlights three midstream pipeline stocks from our US-focused infrastructure screener that investors are watching closely. The stocks below are just a...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801764
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:04:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e35920e18f1c4bff4db95d17b67b71cf05bd426d98e30153b42bca46df36bffb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: U.S. Targeted Value Portfolio (DFAT) Buys $3.7 Million More Coeur Mining on Wednesday
+<<<SUMMARY>>>
+The fund added $3.7 million of Coeur Mining and $2.4 million of Antero Resources while cutting $19.4 million of Option Care Health.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802461
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T09:59:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3e19b01d439bff726dfbb545f3e037b28422fdddd06e8cc9d78d19100ce4b5ab
+image_url: 
+category: company
+tickers: PBF
+keywords: 
+headline: Fed's Goolsbee Says Even If The Price Of Oil Drops Rapidly, Refining Capacity Remains 'Problematic' And Will Keep Diesel And Jet Fuel Prices Elevated
+<<<SUMMARY>>>
+– CNBC interview
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143793149
+symbol: PBF
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T06:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3fbdb997776ba9abf678efb9070095605ac02124f694b54534d997e8ee9681c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PBF
+keywords: 
+headline: Zacks.com featured highlights include Reliance, Arrow Electronics and PBF Energy
+<<<SUMMARY>>>
+RS, ARW and PBF showcase strong long-term momentum, with annual gains exceeding 55% despite recent pullbacks amid market volatility.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d49ff41b5c74a7baf57e3dcc55d7a244a8128e36b40509e56823516107145a1a
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T17:04:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025876/nesr-to-report-q3-earnings-here-s-what-investors-should-know?cid=CS-ZC-FT-analyst_blog|earnings_preview-3025876
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f8/169741.webp
+category: 
+tickers: NESR, PBF, DINO, GLPEY
+keywords: Q3 earnings, oilfield services, Jafurah project, Middle East, geopolitical risks, upstream activity
+headline: NESR to Report Q3 Earnings: Here's What Investors Should Know
+<<<SUMMARY>>>
+National Energy Services Reunited Corp. (NESR) is set to report Q3 2026 earnings on Nov. 9 with EPS estimated at 36 cents and revenues at $497.7 million. The Jafurah project ramp-up and strong conventional activity in the Middle East are expected to drive performance, but regional conflicts, slower upstream activity, and elevated freight costs may pressure profits. The Zacks model does not predict an earnings beat, with a -1.69% Earnings ESP and Zacks Rank #3.
+<<<INSIGHTS>>>
+NESR | neutral | Mixed outlook with positive drivers (Jafurah ramp-up, strong conventional activity) offset by headwinds (regional conflicts, higher logistics costs). Negative Earnings ESP (-1.69%) and Zacks Rank #3 suggest limited upside surprise potential despite historical earnings beat track record.
+PBF | positive | Zacks Rank #1 (Strong Buy) with geographically diverse refining network and recent Q3 earnings beat. Positioned as a better-ranked alternative in the energy sector.
+DINO | positive | Zacks Rank #1 (Strong Buy) with robust refining network and constructive outlook. Significantly beat Q3 consensus estimate by 43.8%, demonstrating strong operational performance.
+GLPEY | negative | Zacks Rank #1 (Strong Buy) rating contradicted by Q3 earnings miss (16 cents vs. 52 cents consensus estimate), indicating operational underperformance despite positive exploration results.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fdcd5bcaa9a645d0ac2366c44e9347860279345efe03279eeb70cde8ae78a33f
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T17:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025877/baker-hughes-sharpens-portfolio-focus-with-1-45b-waygate-sale?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3025877
+image_url: https://staticx-tuner.zacks.com/images/articles/main/2e/173166.webp
+category: 
+tickers: BKR, HXGBY, PBF, DINO, GLPEY
+keywords: divestment, portfolio optimization, inspection technologies, capital reallocation, energy services
+headline: Baker Hughes Sharpens Portfolio Focus With $1.45B Waygate Sale
+<<<SUMMARY>>>
+Baker Hughes announced the sale of Waygate Technologies to Hexagon for approximately $1.45 billion in an all-cash deal. The divestment is part of BKR's portfolio optimization strategy to focus on high-growth businesses and core operations. The deal, which includes inspection solutions, intellectual property, and operations, is expected to close in the second half of 2026.
+<<<INSIGHTS>>>
+BKR | neutral | The divestment is a strategic portfolio optimization move to free up capital for high-growth investments. While the sale itself is neutral, BKR's recent Q3 earnings beat and revenue growth provide some positive context, though the company carries a Hold rating.
+HXGBY | positive | Hexagon is acquiring Waygate Technologies' comprehensive inspection solutions portfolio, expanding its capabilities in industrial inspection and imaging technologies, which represents a strategic growth opportunity.
+PBF | positive | Rated Zacks Rank #1 (Strong Buy) with a geographically diverse refining network, large-scale processing capacity, and recent Q3 earnings beat, indicating strong operational performance.
+DINO | positive | Rated Zacks Rank #1 (Strong Buy) with a robust network of complex refineries and constructive refining outlook. The company beat consensus estimates by 43.8% in Q3.
+GLPEY | neutral | Rated Zacks Rank #1 (Strong Buy) but missed Q3 earnings estimates (16 cents vs. 52 cents consensus). Positive exploration results offset by earnings miss.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:670421b169fb5152abc21f5e63865e97d4f15b19710cfea28adf90a2aa76c32f
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T17:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025899/eog-q3-earnings-beat-estimates-on-record-production-strong-pricing?cid=CS-ZC-FT-analyst_blog|earnings_article-3025899
+image_url: https://staticx-tuner.zacks.com/images/articles/main/8c/172505.webp
+category: 
+tickers: EOG, PBF, DINO, GLPEY
+keywords: Q3 2026 earnings, record production, free cash flow, dividend increase, share buyback, crude oil prices, energy sector
+headline: EOG Q3 Earnings Beat Estimates on Record Production, Strong Pricing
+<<<SUMMARY>>>
+EOG Resources delivered impressive third-quarter 2026 results with adjusted earnings of $4.87 per share (up 79.7% YoY) and revenues of $8.55 billion (up 46.2% YoY), both beating consensus estimates. Record production of 1,433.1 MBoe/d and higher crude oil prices drove performance. The company generated $2.18 billion in free cash flow, raised its dividend 8%, and repurchased $1 billion in shares.
+<<<INSIGHTS>>>
+EOG | positive | Strong earnings beat (9.4% above consensus), significant revenue growth (46.2% YoY), record production volumes, robust free cash flow generation ($2.18B), dividend increase (8%), and substantial share repurchases ($1B) all indicate excellent operational and financial performance.
+PBF | positive | Carries Zacks Rank #1 (Strong Buy) rating with geographically diverse refining network, large-scale processing capacity, and reported earnings beat in Q3.
+DINO | positive | Holds Zacks Rank #1 (Strong Buy) rating with robust refining network across multiple regions, constructive refining outlook, and beat Zacks Consensus Estimate by 43.8% in Q3.
+GLPEY | neutral | While carrying Zacks Rank #1 (Strong Buy) rating and having positive oil exploration results (Mopane discovery), the company missed Q3 earnings consensus estimate (16 cents vs. 52 cents expected), indicating mixed performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:32cc67ed5fa9ff6039ca700c98543fa02546af179caadd4dc8ca390403b44104
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T12:54:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026183/delek-targets-another-1-per-barrel-at-el-dorado-can-margins-climb?cid=CS-ZC-FT-analyst_blog|quick_take-3026183
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6e/1693.jpg
+category: 
+tickers: DK, MPC, PBF
+keywords: refining margins, operational optimization, El Dorado refinery, margin improvement, earnings estimates, valuation
+headline: Delek Targets Another $1 Per Barrel at El Dorado: Can Margins Climb?
+<<<SUMMARY>>>
+Delek US Holdings (DK) is pursuing the next phase of its Enterprise Optimization Plan at its El Dorado refinery, targeting a $1-per-barrel margin improvement worth approximately $30 million annually. The initiative focuses on feedstock selection, product placement, and yield optimization. DK trades at a competitive 4.35x forward P/E, and analyst earnings estimates for 2026 and 2027 have surged 68.51% and 171.90% respectively, earning the stock a Zacks Rank #1 (Strong Buy) rating.
+<<<INSIGHTS>>>
+DK | positive | Company is executing margin-improvement initiatives with concrete targets ($30M annually), trades at attractive valuation (4.35x forward P/E), and has received significant upward earnings estimate revisions (68.51% for 2026, 171.90% for 2027), resulting in a Zacks Rank #1 Strong Buy rating.
+MPC | positive | Company is actively investing in refining efficiency and product flexibility with completed yield projects at multiple facilities, reported strong Q3 refining margins ($45.70/barrel vs $17.60 year-ago), and demonstrated 89.8% share price gain over 12 months.
+PBF | positive | Company is pursuing operational improvements through its Refinery Business Improvement initiative and reported significantly improved Q3 gross refining margins ($34.56/barrel vs $9.00 year-ago), with 68.9% share price gain over 12 months.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e60ccac4fc846c73d8a3e3037622dc71d6b85bccbdf04350db97e1729052b182
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T12:45:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027044/can-pbf-s-chalmette-jet-fuel-expansion-drive-margin-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3027044
+image_url: https://staticx-tuner.zacks.com/images/articles/main/10/190692.webp
+category: 
+tickers: PBF, MPC, PSX
+keywords: refinery optimization, jet fuel production, product yield improvement, refining margins, capital-efficient projects, distillate production
+headline: Can PBF's Chalmette Jet Fuel Expansion Drive Margin Growth?
+<<<SUMMARY>>>
+PBF Energy plans to double jet fuel capacity at its Chalmette refinery to 20,000 BPD by 2027 with less than $20 million investment, capitalizing on an $8-$9 per barrel premium of jet fuel over diesel. Marathon Petroleum and Phillips 66 are also pursuing refinery optimization projects to increase higher-value fuel production and improve profitability.
+<<<INSIGHTS>>>
+PBF | positive | Company is executing a capital-efficient project requiring <$20M to double jet fuel capacity, capturing attractive $8-$9/barrel margins. Trades at lower valuation (1.95X EV/EBITDA vs 4.50X industry average) with upward earnings revisions and Zacks Rank #1 rating.
+MPC | positive | Completed strategic refinery upgrades including Garyville jet fuel flexibility and Robinson product flexibility projects that enhance distillate optimization and higher-value fuel production capabilities.
+PSX | positive | Pursuing refinery optimization initiatives to maximize distillate production and jet fuel output, with favorable jet fuel pricing relative to diesel providing additional margin opportunities.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8a9ac5bf03b2c1920f1dff3ba253b5293fdc3678a89349e09b190078684adb27
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T15:37:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027729/replenish-your-portfolio-with-these-5-low-price-to-sales-stocks?cid=CS-ZC-FT-analyst_blog|rw-3027729
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f5/189070.webp
+category: 
+tickers: INVA, DINO, PARR, GPRE, PBF
+keywords: price-to-sales ratio, value investing, undervalued stocks, fundamental analysis, financial metrics, Zacks Rank
+headline: Replenish Your Portfolio With These 5 Low Price-to-Sales Stocks
+<<<SUMMARY>>>
+The article identifies five stocks with low price-to-sales ratios and strong fundamentals as potential value investments: Innoviva (INVA), HF Sinclair (DINO), Par Pacific (PARR), Green Plains (GPRE), and PBF Energy (PBF). All five companies demonstrate improving margins, solid business momentum, and favorable financial metrics, making them suitable candidates for value-focused investors seeking undervalued opportunities.
+<<<INSIGHTS>>>
+INVA | positive | Well-positioned biopharmaceutical company with diversified portfolio, steady royalty income, strong liquidity, and expanding specialty therapeutics business. Zacks Rank #2 (Buy) with Value Score A.
+DINO | positive | Independent energy company with complex refining operations, strategic investments in efficiency improvements, and growing renewable diesel platform. Zacks Rank #1 (Strong Buy) with Value Score A.
+PARR | positive | Integrated downstream platform with strong financial flexibility, record operational throughput, active share repurchase program, and long-term growth catalyst from renewable diesel expansion. Zacks Rank #1 with Value Score A.
+GPRE | positive | Returned to profitability with improved fundamentals, stronger ethanol economics, expanded margins, and healthier cash flow. Management focused on debt reduction and operational efficiency. Zacks Rank #1 with Value Score B.
+PBF | positive | Geographically diversified refining network with complex operations, conservative balance sheet, solid liquidity, and ongoing cost-reduction initiatives. Zacks Rank #1 with Value Score A.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:735f50cbde0f3b2e10a14bbaded5f870f8e4a7e33694000c8e0387a6fbc56486
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T16:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027830/pbf-energy-is-now-undervalued-is-this-a-strong-entry-point?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3027830
+image_url: https://staticx-tuner.zacks.com/images/articles/main/47/847.jpg
+category: 
+tickers: PBF, VLO, PSX
+keywords: refining margins, fuel shortage, renewable diesel, valuation discount, energy sector, balance sheet strength
+headline: PBF Energy Is Now Undervalued: Is This a Strong Entry Point?
+<<<SUMMARY>>>
+PBF Energy trades at a significant discount (1.91x EV/EBITDA vs. industry average of 4.60x) and is well-positioned to benefit from global fuel shortages, refinery shutdowns, and favorable refining margins. The company's renewable diesel business and strong balance sheet (20.85% debt-to-capitalization) further support its earnings outlook, earning it a Zacks Rank #1 (Strong Buy) rating.
+<<<INSIGHTS>>>
+PBF | positive | Trading at significant valuation discount (1.91x EV/EBITDA), positioned to benefit from global fuel shortages and high refining margins, diversified earnings through renewable diesel business, strong balance sheet with low debt, and rated Zacks Rank #1 (Strong Buy).
+VLO | neutral | Used as a peer comparison point; valued at 4.44x EV/EBITDA with 97.5% stock gain over the past year, but no specific analysis or recommendation provided in the article.
+PSX | neutral | Used as a peer comparison point; valued at 6.93x EV/EBITDA with 81.6% stock gain over the past year, but no specific analysis or recommendation provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:799bff489914438904de5551005288a813513a3b951ee041345b941039dcbf7d
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T17:17:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027991/will-wider-heavy-crude-discounts-strengthen-phillips-66-s-margins?cid=CS-ZC-FT-analyst_blog|quick_take-3027991
+image_url: https://staticx-tuner.zacks.com/images/articles/main/cd/415.jpg
+category: 
+tickers: PSX, VLO, PBF
+keywords: heavy crude discounts, refining margins, WCS-WTI differential, Canadian crude, downstream energy, crude sourcing, feedstock costs
+headline: Will Wider Heavy Crude Discounts Strengthen Phillips 66's Margins?
+<<<SUMMARY>>>
+Phillips 66, Valero Energy, and PBF Energy are positioned to benefit from widening discounts on heavy crude oil, particularly Western Canadian Select relative to West Texas Intermediate. These refiners' complex refining systems and pipeline connectivity enable them to process discounted heavy crude at lower feedstock costs, supporting improved refining margins. Phillips 66 stands out with the largest Canadian crude import capacity, gaining approximately $140 million in value for every $1-per-barrel widening in the WCS-WTI differential.
+<<<INSIGHTS>>>
+PSX | positive | Company has leading position in Canadian crude imports, extensive pipeline connectivity, and benefits significantly from widening heavy crude discounts ($140M per $1/barrel differential). Rated Zacks Rank #1 (Strong Buy) with recent upward earnings revisions.
+VLO | positive | Extensive Gulf Coast refining footprint provides access to discounted heavy and sour crude. Company is evaluating debottlenecking opportunities to increase heavy sour crude processing capacity, positioning it to capture additional benefits from favorable crude differentials.
+PBF | positive | Complex refining system enables substantial processing of discounted heavy crude across Gulf Coast and East Coast operations. Management expects favorable crude differentials to remain a tailwind supporting refining margins.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:001820337d754105fee6e53ec38d6c016db05eb3a01f1b717b60beb3579b80be
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T17:28:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028002/can-hf-sinclair-capitalize-on-tight-global-refined-product-supplies?cid=CS-ZC-FT-analyst_blog|quick_take-3028002
+image_url: https://staticx-tuner.zacks.com/images/articles/main/4a/2239.jpg
+category: 
+tickers: DINO, PSX, PBF
+keywords: refining margins, global fuel supplies, refining capacity constraints, crack spreads, distillate production, operational efficiency
+headline: Can HF Sinclair Capitalize on Tight Global Refined Product Supplies?
+<<<SUMMARY>>>
+HF Sinclair, Phillips 66, and PBF Energy are well-positioned to capitalize on tight global refined product supplies and elevated refining margins. Approximately 4-7 million barrels per day of refining capacity remain offline in the Middle East and Russia, with historically low inventories and elevated freight costs supporting favorable pricing conditions for U.S. refiners through 2027-2028.
+<<<INSIGHTS>>>
+DINO | positive | Company benefits from 4 MMBbl/d of offline global refining capacity, historically low inventories, and elevated crack spreads. Strategic refinery locations, operational improvements, and higher light-product yields position it to capture favorable margins. Zacks Rank #1 (Strong Buy) with upward earnings revisions.
+PSX | positive | Benefits from 7 MMBbl/d of constrained global refining capacity and stronger diesel margins. Management expects refining margins to remain strong through 2027, supported by limited product supplies and elevated freight costs. Focus on maximizing distillate production enhances competitive positioning.
+PBF | positive | Positioned to gain from more than 5 MMBbl/d of offline global capacity and product inventories 500 million barrels below prewar levels. Elevated freight costs and higher overseas natural gas prices strengthen competitive position of domestic refining operations. Coastal refinery locations provide strategic advantage.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:52eef87093d076357fd7f2c131c60ff31ef6929165c7f532e8d2be6817351592
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T14:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028640/3-momentum-anomaly-stocks-to-buy-amid-rate-hike-fears-nvidia-shock?cid=CS-ZC-FT-analyst_blog|rw-3028640
+image_url: https://staticx-tuner.zacks.com/images/articles/main/dd/299.jpg
+category: 
+tickers: ARW, PBF
+keywords: momentum investing, inflation, interest rate hikes, stock pullback, metals service center, electronics distribution, oil refining
+headline: 3 Momentum Anomaly Stocks to Buy Amid Rate Hike Fears, NVIDIA Shock
+<<<SUMMARY>>>
+Amid market volatility driven by inflation concerns and Fed rate hike expectations, momentum investing strategy highlights three stocks with strong 52-week gains but recent short-term pullbacks: Reliance (55.7% annual gain, -2.7% weekly), Arrow Electronics (78% annual gain, -2.3% weekly), and PBF Energy (80.1% annual gain, -4% weekly). All three stocks have Momentum Score A ratings and meet screening criteria for potential recovery.
+<<<INSIGHTS>>>
+ARW | positive | Exceptional 52-week gain (+78%) with Momentum Score A, minor weekly decline (-2.3%). Positioned as attractive momentum play with strong fundamentals and temporary pullback.
+PBF | positive | Outstanding 52-week performance (+80.1%) with Momentum Score A, despite larger weekly pullback (-4%). Identified as momentum pick benefiting from energy sector strength with potential recovery opportunity.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:328b43a2ddeaa5e8ef8a4ab72c3d4e625ddfa5402ee57431f4c0c90b87db0cb6
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T12:44:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030913/bet-on-winning-dupont-analysis-pick-5-top-stocks?cid=CS-ZC-FT-analyst_blog|rw-3030913
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default175.jpg
+category: 
+tickers: CASY, VLO, PSX, EXPD, PBF
+keywords: DuPont analysis, Return on Equity (ROE), profit margin, asset turnover, equity multiplier, stock screening, earnings surprise
+headline: Bet on Winning DuPont Analysis & Pick 5 Top Stocks
+<<<SUMMARY>>>
+Using DuPont analysis to evaluate Return on Equity (ROE), five stocks have been identified that excel in profitability, asset efficiency, and financial leverage. All five companies carry Zacks Rank #1 or #2 ratings and have demonstrated positive earnings surprises, making them attractive investment candidates.
+<<<INSIGHTS>>>
+CASY | positive | Zacks Rank #2 (Buy) with 17.52% average earnings surprise over past four quarters; meets DuPont screening criteria for profitability and asset efficiency
+VLO | positive | Zacks Rank #2 (Buy) with 23.86% average earnings surprise; qualifies as a strong performer under DuPont analysis framework
+PSX | positive | Zacks Rank #2 (Buy) with exceptional 61.58% average earnings surprise; demonstrates strong operational performance and financial metrics
+EXPD | positive | Zacks Rank #1 (Strong Buy) with 17.44% average earnings surprise; identified as leading third-party logistics provider meeting all screening criteria
+PBF | positive | Zacks Rank #1 (Strong Buy) with outstanding 120.39% average earnings surprise; demonstrates exceptional earnings performance and financial strength
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5807d5d08bf846dcc008d0947ded4ab823d2c8a960f7e7d3a71fa019ff22bdd1
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:45:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032040/is-pbf-energy-pbf-a-solid-growth-stock-3-reasons-to-think-yes?cid=CS-ZC-FT-fundamental_analysis|yseop_template_11_growth-3032040
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default267.jpg
+category: 
+tickers: PBF
+keywords: growth stocks, earnings growth, asset utilization, earnings estimate revisions, Zacks Rank, refiner stocks
+headline: Is PBF Energy (PBF) a Solid Growth Stock? 3 Reasons to Think "Yes"
+<<<SUMMARY>>>
+PBF Energy is highlighted as an attractive growth stock with a Zacks Growth Score of A and Zacks Rank #2 (Buy). The company demonstrates exceptional earnings growth of 756.2% expected this year, efficient asset utilization with an S/TA ratio of 2.6, and positive earnings estimate revisions with a 9.8% surge over the past month.
+<<<INSIGHTS>>>
+PBF | positive | The article presents PBF Energy as a compelling growth investment opportunity, citing exceptional projected EPS growth of 756.2% (vs. industry average of 282.4%), superior asset utilization efficiency (S/TA ratio of 2.6 vs. industry 1.92), strong sales growth expectations of 43%, and positive earnings estimate revisions with a 9.8% surge over the past month. The company received a Growth Score of A and Zacks Rank #2, positioning it well for outperformance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:567f8671aa166664e30107d52a22612ab9fa7638ce93d7c99d009d312e50f7f5
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T17:19:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032778/valero-s-crude-flexibility-gulf-coast-network-boost-prospects?cid=CS-ZC-FT-analyst_blog|quick_take-3032778
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f4/619.jpg
+category: 
+tickers: VLO, PARR, PBF
+keywords: refining margins, heavy-sour crude, transportation fuel demand, refining capacity, Gulf Coast refineries, feedstock flexibility
+headline: Valero's Crude Flexibility & Gulf Coast Network Boost Prospects
+<<<SUMMARY>>>
+Valero Energy (VLO), Par Pacific Holdings (PARR), and PBF Energy (PBF) are capitalizing on elevated refining margins, low product inventories, and resilient transportation fuel demand. VLO's Gulf Coast refineries benefit from processing discounted heavy-sour crude, while its complex refining network provides flexibility. However, rising crude oil and freight costs pose downside risks to profitability.
+<<<INSIGHTS>>>
+VLO | positive | VLO benefits from high refining margins, low global product inventories, and resilient fuel demand. Its Gulf Coast refineries can process discounted heavy-sour crude, optimizing costs and margins. The company is exploring debottlenecking opportunities to increase heavy-sour processing capabilities. However, sentiment is tempered by risks from rising crude and freight costs.
+PARR | positive | PARR operates an integrated downstream energy business with commercial flexibility across its refining and retail operations, allowing it to capitalize on elevated margin environments and changing market conditions.
+PBF | positive | PBF operates a geographically diverse refining network with large-scale capacity and complex refining systems across six refineries, providing exposure to multiple regional markets and supporting higher margins in the current elevated margin environment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:dd01a4a8f8a847249f4fa3a9697bf48604e5b232189c003b1e761f66923d76b1
+symbol: PBF
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T21:00:03Z
+publisher: The Motley Fool
+author: The Motley Fool Team
+url: https://www.fool.com/earnings/takeaways/2026/11/19/pbf-energy-3-key-takeaways-for-long-term-investors/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb4204f36ed605fc54d4ba32e2cb31d1dd892afd6-800x450.jpg&w=1200&op=resize
+category: 
+tickers: PBF
+keywords: debt reduction, dividend increase, refining margins, yield upgrades, global supply constraints, capital efficiency, interest expense reduction
+headline: PBF Energy: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+PBF Energy announced a net debt reduction of over $1.2 billion in Q3 2026, with management increasing the quarterly dividend by 18%. The company expects debt paydown to reduce 2027 interest expenses by $130 million. Through its Refining Business Improvement program, PBF is pursuing low-cost yield upgrades to expand margins without major capital expenditures. Global refining capacity constraints and tight product supplies position the coastal refiner favorably to maintain margins while focusing on operational execution and debt reduction.
+<<<INSIGHTS>>>
+PBF | positive | Strong financial discipline demonstrated through $1.2B+ quarterly debt reduction and $2B+ year-to-date debt elimination. Dividend increased 18%, interest expenses expected to drop $130M in 2027. Strategic focus on high-return yield upgrades without major capex, combined with favorable market conditions from global supply constraints, positions the company well for margin expansion and shareholder returns.
+<<<END>>>

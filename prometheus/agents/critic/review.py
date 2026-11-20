@@ -35,6 +35,7 @@ from prometheus.agents.critic.common import blocker, et_text, utc_text, warning
 from prometheus.agents.critic.record import AccuracyDetail, Audit, ChartDetail, Dimension, Finding, Integrity, Review, RiskDetail, TimingDetail, ValueDetail
 from prometheus.common.market_calendar import eastern_date, session_at
 from prometheus.common.user_profile import RiskView
+from prometheus.common.trace import traced
 from prometheus.common.trading_clock import trading_now
 from prometheus.common.work_order import WorkOrder
 
@@ -87,6 +88,7 @@ def _classify(w: Work, limit: int) -> bool:
     return w.rec is not None
 
 
+@traced("critic.review_order")
 def review_order(critic, order: WorkOrder, view: RiskView, now: datetime | None = None) -> WorkOrder:
     """The nine steps (see the module text). Returns the SAME order."""
     started = time.monotonic()

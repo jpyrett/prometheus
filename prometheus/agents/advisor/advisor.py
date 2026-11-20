@@ -41,6 +41,7 @@ from datetime import date
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
+from prometheus.common.trace import traced
 from prometheus.common.work_order import WorkOrder
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.prompts.advisor import RETRY, evidence_text, kinds_text, system_prompt, user_message
@@ -286,6 +287,7 @@ class Advisor:
             self._ledger = Ledger(self.config.ledger.path)
         return self._ledger
 
+    @traced("advisor.generate_recommendations")
     def generate_recommendations(self, order: WorkOrder, case: str | None = None, today: date | None = None, top_k: int | None = None, only_subject: bool = False) -> WorkOrder:
         """Advisor v1 (design choices entry 51; the walk-through is design/week5_advisor_implementation.md): turn a work order whose data is ready into ranked, audited recommendations TO BUY, and return
         the SAME order with `status == "recommended"`, `recommendations` (the new ideas by rank), `candidates` (what was looked at and not returned, with the reason) and `advisor_runs` (the plan call and the thesis call).

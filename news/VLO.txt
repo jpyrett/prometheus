@@ -1962,3 +1962,550 @@ VLO | positive | Zacks Rank #1, 39.1% earnings estimate increase over 60 days, 9
 PSX | positive | Zacks Rank #1, 38.1% earnings estimate increase over 60 days, 13.1% share gain over three months, A momentum score
 AAMI | positive | Zacks Rank #1, 13% earnings estimate increase over 60 days, 3.0% share gain over three months, A momentum score
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947027
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T19:58:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f910adc4556314ce0bb6fa3bec1fb49925a0cb9bc173d755d5b601acd8651745
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Trump Cheers the “Biggest Drop in Gasoline in 18 Years.” Not Good for Exxon and Chevron
+<<<SUMMARY>>>
+Key TakeawaysPresident Trump cheered gasoline’s biggest drop in 18 years, and Brent crude is down 22% in November. ExxonMobil and Chevron rode the Iran war’s spike in crude to a huge 2026, and that windfall is now reversing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143945951
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=51a0e9b1fa94873d5f2a2da2499405e315759b33128802d8b9890e993abcf28c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Valero's Crude Flexibility & Gulf Coast Network Boost Prospects
+<<<SUMMARY>>>
+VLO benefits from strong refining margins, resilient fuel demand and crude-processing flexibility, though rising crude and freight costs pose risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942839
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:13:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=35662103c5bd8be0ade90f27ab35e284609037112cae49683d396f368b046eb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Your Chevron Hedge Works Only While Oil Spikes
+<<<SUMMARY>>>
+Our Nov 18 look at Chevron found the stock moving on its own. Chevron gained 2.3% from November 10 to November 17, while the S&P 500 lost 2.4%. For the full record, see Is Chevron Stock Increasing Your Market Risk? The next question is whether Chevron protects a portfolio when oil prices jump.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943108
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T13:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=767bfe98073aed6103f21ad008e3e8a3fa69ab350a59cfd90cda0c4207a955e4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Here is What to Know Beyond Why Valero Energy Corporation (VLO) is a Trending Stock
+<<<SUMMARY>>>
+Valero Energy (VLO) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943109
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=969a673baaf84bde363973cbce046c2c604c79c29500ca917da58a1971cda35e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Valero Energy vs. Phillips 66: Which is the Stronger Refining Player?
+<<<SUMMARY>>>
+VLO's crude feedstock flexibility, stronger balance sheet and lower valuation give it an edge over PSX in the refining sector.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938590
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:45:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1a409fd9dc5067ae499fda8ccad857700df1169ba8811da503ee48946c1e238b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: What Moved Marathon Petroleum Stock?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938332
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:41:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d00d0f5e5420cfa48a2be02989ef1a7a3385f4077b68e990ee24f28a35be2298
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: What Sent Valero Energy Stock Lower?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143937916
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:16:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3e06cc17a3899bb7f10aba42bd9d6f80048d740d63383e3a656c3d3e9b4d71b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: 4 S&P 500 Stocks Paying Plump Dividends Double — And Don't Need AI
+<<<SUMMARY>>>
+Don't assume you need to take huge bets on AI to make money with S&P 500 stocks this year. Investors are hauling big profits on dividends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921848
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:06:30Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2e6841d668bd7987172d96ddce82144520110dcd11ddea7545baf024178ca6af
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: VLO
+keywords: 
+headline: S&P 500 Top Movers: Today's US Session Gainers and Losers
+<<<SUMMARY>>>
+S&P 500 top movers in today's US session, with OKTA, TJX and GNRC among the strongest gainers and HUM, UNH and ELV among the top losers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920071
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T18:03:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76e61233e5546301f549dcd9169950bf28eade9b79c7cbc04f127072a371d631
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Is Chevron Stock Increasing Your Market Risk?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921841
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:36:05Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2762468e9a959e70569b7eb87ad5a5aa10a627cb914859538027f8766c74e2ec
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: VLO
+keywords: 
+headline: S&P 500 Top Movers: Gainers and Losers in the Nov. 18, 2026 US Session
+<<<SUMMARY>>>
+S&P 500 top movers for Nov. 18, 2026: TJX led gainers at 10.74%, while UNH led losers at -8.55%, based on US session data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921839
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:36:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a2e0cd95505647eac675ffbdca34ed314294a1e55f55d4175a9457e5e90dd8a9
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: VLO
+keywords: 
+headline: S&P 500 Gap-Down Movers for Nov. 18 Session
+<<<SUMMARY>>>
+S&P 500 gap-down stocks on Nov. 18 included FCX, NEM, UNH, VLO and HUM, with the article tracking each stock's opening gap and move in today's session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917322
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:31:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50b39114701afe001f56d42265f6f3595aa0a26ec28fdb7bfaa7c856d816ca38
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Is Exxon Mobil Stock a Good Fit For Your Portfolio Risk?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140740145
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:40:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1330c2e97b76b4393550146450fe1b00805a15b4ea6dbe7b18d48fe7a418be5f
+image_url: 
+category: company
+tickers: VLO
+keywords: 
+headline: PowerBank shares are trading higher after the U.S. Department of Defense and the Department of the Army for the Armed Forces Reserve Center Farmingdale awarded the company's subsidiary, Abundant Solar Power, a $2,950,000 contract to construct a photovoltaic array, electric vehicle chargers and associated infrastructure for the U.S. Federal Government.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143893543
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T01:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=604b7c9d6b242c35b345a41ab4c1a82a30f7349579f33ed3ee1c59affb968031
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: 5 Oil and Gas Stocks That Crushed Third-Quarter Earnings Estimates
+<<<SUMMARY>>>
+Energy earnings jumped 151% in Q3 as ONEOK, Occidental, APA, Phillips 66 and Valero beat Wall Street estimates, with refiners posting the biggest gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881184
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:17:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ea2d243f6cc8a38b1fb160a1c8b62b6ebff4096f3511f56c89c0731d79c2f09
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Phillips 66 and Valero Are Turning Strong Refining Margins Into Bigger Dividends
+<<<SUMMARY>>>
+Refiners are sitting on a windfall that has nothing to do with the price of oil. Two of them are sharing it with shareholders, but only one dividend looks built to survive a weak year with room to spare.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880796
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=05f5eede190a0299d33dfdf7b7ad69de30681c9aa2109df9437059910c00eff1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Why Pay More For Exxon Mobil Stock Than Chevron?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143876091
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5a885d6234bb0e6d60bd14e1ef47aa4d38f949bc4e7e9f2786c4c52edb4cf46c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Is Chevron Stock Overpriced Versus Its Oil Rivals?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143874122
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T10:50:49Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=85eccba458143f02ff8e8d55ba1b25c19a069b9749ee83de67624adb086eee1a
+image_url: https://www.chartmill.com/images/uploads/thumbnail_article_navellier_3be8c6e05a.webp
+category: company
+tickers: VLO
+keywords: 
+headline: Valero Energy (NYSE:VLO): High Growth, Strong Cash Flow, and Improving Fundamentals
+<<<SUMMARY>>>
+Valero Energy passes Louis Navellier’s Little Book growth screen with strong earnings revisions, cash flow and ROE, though cyclical risks remain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143866950
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T07:57:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0b2367903816e8104e6d659972b3745b53b04d3cfdcd1fb225be43b3c6562a6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Trading at just 8x P/E with 464% EPS growth: Is Valero a bargain?
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850489
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:44:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7984343bd0d18f16f8f6d048676a46068f0799e2a8ee67a2991148ffce32a190
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Is Wall Street Bullish or Bearish on Valero Energy Stock?
+<<<SUMMARY>>>
+Valero Energy has significantly outperformed the broader market over the past year, and analysts are cautiously optimistic about the stock’s prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139985215
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:32:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cd66faf67f9da52f168f213f339f4c6af1262070fd76db7954a7e501be6b74c1
+image_url: 
+category: company
+tickers: VLO
+keywords: 
+headline: Abundia Global Impact Group shares are trading lower after the company announced the pricing of its $20 million registered direct offering of 5,934,718 shares.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143976700
+symbol: VLO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T09:07:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30e6ea684adef0a0a6bc4e13411d22a751a520044fe19654357e92cd8228318a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VLO
+keywords: 
+headline: Why Everyone Is Watching Valero Energy (VLO) Right Now
+<<<SUMMARY>>>
+Fresh earnings news put Valero Energy (VLO) back in focus after the refiner reported revenue and EPS above consensus estimates, prompting many investors to reassess what the recent share move really reflects. Recent trading tells a mixed story. Valero Energy’s share price has pulled back sharply, with a 1 day decline of 1.52% and a 30 day slide of 21.91%. However, the year to date share price return of 104.74% and 1 year total shareholder return of 101.07% still point to strong longer term...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:328b43a2ddeaa5e8ef8a4ab72c3d4e625ddfa5402ee57431f4c0c90b87db0cb6
+symbol: VLO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T12:44:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030913/bet-on-winning-dupont-analysis-pick-5-top-stocks?cid=CS-ZC-FT-analyst_blog|rw-3030913
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default175.jpg
+category: 
+tickers: CASY, VLO, PSX, EXPD, PBF
+keywords: DuPont analysis, Return on Equity (ROE), profit margin, asset turnover, equity multiplier, stock screening, earnings surprise
+headline: Bet on Winning DuPont Analysis & Pick 5 Top Stocks
+<<<SUMMARY>>>
+Using DuPont analysis to evaluate Return on Equity (ROE), five stocks have been identified that excel in profitability, asset efficiency, and financial leverage. All five companies carry Zacks Rank #1 or #2 ratings and have demonstrated positive earnings surprises, making them attractive investment candidates.
+<<<INSIGHTS>>>
+CASY | positive | Zacks Rank #2 (Buy) with 17.52% average earnings surprise over past four quarters; meets DuPont screening criteria for profitability and asset efficiency
+VLO | positive | Zacks Rank #2 (Buy) with 23.86% average earnings surprise; qualifies as a strong performer under DuPont analysis framework
+PSX | positive | Zacks Rank #2 (Buy) with exceptional 61.58% average earnings surprise; demonstrates strong operational performance and financial metrics
+EXPD | positive | Zacks Rank #1 (Strong Buy) with 17.44% average earnings surprise; identified as leading third-party logistics provider meeting all screening criteria
+PBF | positive | Zacks Rank #1 (Strong Buy) with outstanding 120.39% average earnings surprise; demonstrates exceptional earnings performance and financial strength
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7fc379257c4ded9f3f15888fef6c6fa42767bc151a95d521a88e6f4e2ab534b0
+symbol: VLO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T12:51:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3032277/valero-energy-vs-phillips-66-which-is-the-stronger-refining-player?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3032277
+image_url: https://staticx-tuner.zacks.com/images/articles/main/47/847.jpg
+category: 
+tickers: VLO, PSX
+keywords: refining, crude oil, balance sheet, valuation, feedstock costs, leverage, energy sector
+headline: Valero Energy vs. Phillips 66: Which is the Stronger Refining Player?
+<<<SUMMARY>>>
+Valero Energy (VLO) outperformed Phillips 66 (PSX) year-to-date with a 111.1% gain versus PSX's 89.7%. VLO demonstrates stronger fundamentals including a net cash position of $1.2 billion, lower leverage (4% net debt-to-capitalization), and greater flexibility in accessing discounted crude feedstocks. VLO trades at a lower valuation multiple (4.34x EV/EBITDA) compared to PSX (6.78x), making it appear undervalued despite its strong share price appreciation.
+<<<INSIGHTS>>>
+VLO | positive | VLO demonstrates superior financial strength with net cash position of $1.2B, low leverage ratio of 4%, strategic access to discounted crude grades (Venezuelan, Canadian, heavy-sour), and attractive valuation at 4.34x EV/EBITDA. Rated Zacks Rank #2 (Buy) with strong YTD performance of 111.1%.
+PSX | neutral | PSX shows solid YTD performance of 89.7% but carries higher leverage with $12.7B net debt and 26% net debt-to-capitalization ratio. Trades at higher valuation multiple of 6.78x EV/EBITDA. Rated Zacks Rank #3 (Hold), suitable for existing investors to retain but less attractive than VLO for new investment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:db29264a71e91355ddc4882d99744b1a7ac63b7cddca49074d1d8badc98e3252
+symbol: VLO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T13:00:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3032313/here-is-what-to-know-beyond-why-valero-energy-corporation-vlo-is-a-trending-stock?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks_v1-3032313
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default246.jpg
+category: 
+tickers: VLO
+keywords: oil refiner, earnings estimates, Zacks Rank, valuation, revenue growth, stock performance
+headline: Here is What to Know Beyond Why Valero Energy Corporation (VLO) is a Trending Stock
+<<<SUMMARY>>>
+Valero Energy (VLO), an oil refiner, is trending among investors despite a -21.3% monthly decline. The stock has received a Zacks Rank #2 (Buy) rating based on strong earnings estimate revisions. Current quarter earnings are expected at $19.32 per share (+405.8% YoY), with fiscal year 2026 earnings projected at $58.33 (+449.8% YoY). The company has consistently beaten consensus estimates over the trailing four quarters and is trading at a valuation discount to peers with an A grade on the Value Style Score.
+<<<INSIGHTS>>>
+VLO | positive | Despite recent -21.3% monthly decline, VLO received Zacks Rank #2 (Buy) rating. Strong fundamentals include: massive earnings growth (+405.8% current quarter, +449.8% fiscal year), consistent beat of consensus estimates over four quarters, positive earnings estimate revisions (+31.4% in last 30 days), revenue growth of +30.7% for current fiscal year, and attractive valuation (A grade) trading at discount to peers. These factors suggest near-term outperformance potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:567f8671aa166664e30107d52a22612ab9fa7638ce93d7c99d009d312e50f7f5
+symbol: VLO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T17:19:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032778/valero-s-crude-flexibility-gulf-coast-network-boost-prospects?cid=CS-ZC-FT-analyst_blog|quick_take-3032778
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f4/619.jpg
+category: 
+tickers: VLO, PARR, PBF
+keywords: refining margins, heavy-sour crude, transportation fuel demand, refining capacity, Gulf Coast refineries, feedstock flexibility
+headline: Valero's Crude Flexibility & Gulf Coast Network Boost Prospects
+<<<SUMMARY>>>
+Valero Energy (VLO), Par Pacific Holdings (PARR), and PBF Energy (PBF) are capitalizing on elevated refining margins, low product inventories, and resilient transportation fuel demand. VLO's Gulf Coast refineries benefit from processing discounted heavy-sour crude, while its complex refining network provides flexibility. However, rising crude oil and freight costs pose downside risks to profitability.
+<<<INSIGHTS>>>
+VLO | positive | VLO benefits from high refining margins, low global product inventories, and resilient fuel demand. Its Gulf Coast refineries can process discounted heavy-sour crude, optimizing costs and margins. The company is exploring debottlenecking opportunities to increase heavy-sour processing capabilities. However, sentiment is tempered by risks from rising crude and freight costs.
+PARR | positive | PARR operates an integrated downstream energy business with commercial flexibility across its refining and retail operations, allowing it to capitalize on elevated margin environments and changing market conditions.
+PBF | positive | PBF operates a geographically diverse refining network with large-scale capacity and complex refining systems across six refineries, providing exposure to multiple regional markets and supporting higher margins in the current elevated margin environment.
+<<<END>>>

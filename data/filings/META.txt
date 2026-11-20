@@ -7504,3 +7504,47 @@ Item 9.01Financial Statements and Exhibits.
 | 23.1 | Consent of Davis Polk & Wardwell LLP (included in Exhibit 5.1). |
 | 104 | Cover Page Interactive Data File (Embedded within the Inline XBRL document). |
 <<<END>>>
+<<<FILING>>>
+accession: 0001921094-26-001197
+symbol: META
+form: 144
+filed: 2026-11-16
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1326801/0001921094-26-001197.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001921094-26-001204
+symbol: META
+form: 144
+filed: 2026-11-17
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1326801/0001921094-26-001204.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001921094-26-001205
+symbol: META
+form: 144
+filed: 2026-11-17
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1326801/0001921094-26-001205.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001921094-26-001206
+symbol: META
+form: 144
+filed: 2026-11-17
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1326801/0001921094-26-001206.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>

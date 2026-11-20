@@ -1,0 +1,273 @@
+# Agentic security v1: the policy (design choices entry 116; design/agentic_security_spec.md; design/week6_submission.md sections 2, 4 and 5).
+#
+# EVERY threshold, pattern list and message of the security layer is here and nowhere else (`prometheus/security/policy.py` loads and checks it; a file that does not hold what it must is refused).
+# The "risk" of this file is SECURITY risk only (injection, leaks, abuse). It never refuses, cuts or resizes a trade: there is no size limit, liquidity rule or trade-risk rule here, and none may be added.
+#
+# HOW A PATTERN IS READ. Every pattern is a Python regular expression matched case-insensitively, with ^ and $ at every line. The text is first NORMALIZED for the rules (Unicode NFKC, zero-width and
+# bidi characters removed, runs of spaces made one), so "ig<zero-width>nore" is still seen; `hidden_text` reads the RAW text. Write each pattern in single quotes so a backslash stays a backslash.
+# A rule is a SCORE (0 to 1) given to a text when ANY of its patterns matches. `match` is how it reads a text: `patterns` (the default), `account_number` (an account number that is not the requester's) or `near`
+# (a word of list `a` within `window` characters of a word of list `b`).
+#
+# EXACT AND HINT (entry 121; design/request_rules_spec.md). Every rule of the REQUEST door says what it is worth in `kind`:
+#   exact   what a program checks exactly. It acts on its own score (0.9 is BLOCK; `hidden_text`, 0.6, is held for review), and when an exact rule already gives the block threshold the guard model is not called. They are: the chat-template control tokens, the hidden
+#           characters, an account number that is not the requester's, and SQL as a STATEMENT (DDL and DML keyword pairs such as DROP TABLE and DELETE FROM, UNION SELECT, a tautology, `;` and a comment).
+#   hint    every other word pattern (injection phrases, role play, other users, sending data out, SELECT ... FROM, a real broker, secrets, market abuse). A hint only POINTS at the text: with the guard model the risk is
+#           the highest of the exact rules and the model's, and a hint adds nothing to it; the hint is kept on the verdict as `hint:<id>` and in the audit log, and when it fired while the action stays ALLOW the action is
+#           raised to ALLOW_AND_FLAG (allowed, logged for a person to look at). The model reads the text alone: it is never told which hints fired. Its `score` counts only for a desk that has NO model to decide
+#           (`Guard.code_only()`), where a hint blocks as it always did.
+# The same `id` may be both an exact rule and a hint (`sql_or_ddl`: the statements, and the words). The documents and the messages have exact rules only (no `kind`, no hints: there is no model there to decide).
+# The risk of a text is the highest score of the rules that count (S2), and `router` says what each risk means (S3).
+
+version: 1
+
+router:                          # S3, the Module 6 class example: risk >= block BLOCK, >= review REDACT_OR_REVIEW, >= flag ALLOW_AND_FLAG, else ALLOW
+  block: 0.8
+  review: 0.5
+  flag: 0.2
+
+scorer:                          # S5 and S6, the LLM Risk Scorer (role `guard`, setting GUARD_MODEL)
+  failure_risk: 0.5              # scorer_failure_risk: the risk of an input when the scorer is configured and its call fails or its reply is not valid JSON in range after one retry (held for review)
+  off_topic_cap: 0.79            # off topic is REVIEW, never BLOCK: the model's off_topic number is capped just under `router.block`
+  retries: 1                     # the second try after a failed call or an invalid reply
+  max_chars: 4000                # at most this many characters of the text go to the model
+  reasoning_effort: low          # OpenRouter's `reasoning` effort for a model that thinks before it answers; null leaves the model's own default
+  max_tokens: 4000               # the longest reply asked for (a reasoning model spends tokens before its JSON)
+  timeout_seconds: 60
+
+rate:                            # S9: per account (or "cli"), in memory per process
+  max_requests_per_minute: 6
+  max_requests_per_hour: 60
+
+audit:                           # S8: one JSON line per screened input, append only; the folder is created when missing
+  path: logs/security_audit.jsonl
+  preview_chars: 200             # at most this much of the text, with every secret pattern redacted; never a whole document
+
+trust:                           # S7: trust = grounded_weight * grounded + other_weight * (source + confidence + history); it changes no decision
+  grounded_weight: 0.4
+  other_weight: 0.2
+  default_history: 0.5           # the ledger's past hit rate for the symbol when it has one, else this
+  registered_sources:            # a signal's chunk id starts with one of these when its text came from Finnhub, Massive (Polygon) or EDGAR (the loaders' own id prefixes)
+    - 'finnhub:'
+    - 'polygon:'
+    - 'massive:'
+    - 'pr:'
+    - 'sec:'
+    - 'evidence:'
+
+messages:                        # what the user is shown
+  block: "This request was blocked by the desk's security policy, so nothing was done. Ask about stocks, recommendations, or your own account."
+  review: "This request was held for review by the desk's security policy, so nothing was done. Ask about stocks, recommendations, or your own account."
+  rate: "Too many requests from this account in a short time, so this one was not run. Wait a minute and try again."
+  redacted: "[redacted]"
+
+rules:
+  # ------------------------------------------------------------------ a USER REQUEST (S10)
+  # `too_long` is NOT a rule here: a request over the request reader's limit (agents/account_manager/intent.py, MAX_TEXT) is refused by `check_typed` before any model call, and it stays there.
+  request:
+    # ---- EXACT: a program's own check; it blocks alone and the guard model is not called
+    - id: sql_or_ddl
+      kind: exact
+      score: 0.9
+      patterns:                      # SQL as a STATEMENT: a keyword pair that has no ordinary reading in a request about stocks
+        - '\bunion\s+(?:all\s+)?select\b'
+        - ';\s*--'
+        - "'\\s*(?:or|and)\\s+'?\\d+'?\\s*=\\s*'?\\d+"
+        - '\b(?:or|and)\s+1\s*=\s*1\b'
+        - '\binsert\s+into\s+[\w."]+\s*(?:\(|values\b|select\b)'
+        - '\bupdate\s+(?!(?:the|my|this|that|these|those|your|our|a|an|me|us|each|every|all|any|his|her|its|their)\b)[\w."]+\s+set\b'      # "update the set of my stocks" is English; "update accounts set" is not
+        - '\bdelete\s+from\s+(?:public\.|pg_\w+|information_schema|users?\b|accounts?\b|positions?\b|trades?\b|decisions?\b|work_?orders?\b|prometheus\w*|\w+\.\w+)'
+        - '\bdrop\s+(?:table|database|schema|view|function|extension|trigger)\b'
+        - '\balter\s+(?:table|database|schema|system|sequence)\b'
+        - '\btruncate\s+table\b|\btruncate\s+(?:public\.|pg_\w+|information_schema|users?\b|accounts?\b|positions?\b|trades?\b|decisions?\b|work_?orders?\b|prometheus\w*|\w+\.\w+)'
+        - '\bgrant\s+(?:all|superuser|select|insert|update|delete|usage|execute)\b.{0,60}\bto\b'
+    - id: prompt_injection
+      kind: exact
+      score: 0.9
+      patterns:                      # the chat template's control tokens: text that is not a person's words
+        - '<\|(?:im_start|im_end|system|assistant|user|endoftext)\|>'
+        - '\[/?INST\]|<<SYS>>'
+    - id: account_number
+      kind: exact
+      score: 0.9
+      match: account_number         # "account 7", "account number: 7", "acct #7": a number that is not the requester's (only when the requester's number is known)
+      patterns:
+        - '\b(?:account|acct|a/c)\s*(?:number|no\.?|num\.?|#|id)?\s*[:=#]?\s*(\d{1,12})\b'
+    - id: hidden_text
+      kind: exact
+      score: 0.6
+      raw: true                      # matched on the RAW text: the characters the other rules remove are what this one looks for
+      patterns:
+        - '[\u200b-\u200f\u202a-\u202e\u2060-\u2064\u2066-\u2069\ufeff\u00ad\U000e0000-\U000e007f]'
+        - '[A-Za-z0-9+/]{200,}={0,2}'
+
+    - id: secrets                    # entry 124: a credential VALUE pasted into the request (an API key, a token, a private key, a URL with a password): blocked before any model or log sees it
+      kind: exact
+      score: 0.9
+      patterns:
+        - '\blsv2_[A-Za-z0-9_]{8,}'
+        - '\bsk-[A-Za-z0-9_-]{16,}'
+        - '\bAKIA[0-9A-Z]{16}\b'
+        - '\bgh[pousr]_[A-Za-z0-9]{30,}'
+        - '\bxox[abprs]-[A-Za-z0-9-]{10,}'
+        - '\bAIza[0-9A-Za-z_-]{35}'
+        - '\beyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}'
+        - '-----BEGIN [A-Z ]*PRIVATE KEY-----'
+        - '\b[a-z][a-z0-9+.-]*://[^\s:/@]+:[^\s@/]+@\S+'
+        - '\bpostgres(?:ql)?://\S+'
+        - '\bpassword\s*[=:]\s*\S+'
+        - '\bapi[_-]?key\s*[=:]\s*\S{8,}'
+        - '\bBearer\s+[A-Za-z0-9._~+/=-]{20,}'
+
+    # ---- HINTS: a word pattern points at the text; the guard model decides (a desk with no model blocks on the score)
+    - id: sql_or_ddl
+      kind: hint
+      score: 0.9
+      patterns:
+        - '\bselect\s+\*'
+        - '\bselect\s+(?:distinct\s+)?[\w.",()* ]{1,80}\s+from\s+(?:public\.|pg_\w+|information_schema|users?\b|accounts?\b|positions?\b|trades?\b|decisions?\b|work_?orders?\b|prometheus\w*|\w+\.\w+)'
+        - '\bpg_sleep\s*\('
+        - '\bcopy\s+[\w."]+\s+(?:to|from)\s+(?:program|stdout|stdin|''/)'
+        - '\bpsql\b'
+        - '\bdrop\s+(?:user|role)\s+(?:if\s+exists\s+)?\w+\s*(?:;|$)'
+        - '\bdrop\s+index\s+(?:concurrently\s+|if\s+exists\s+)\w+|\bdrop\s+index\s+\w+\s+on\b'
+        - '\balter\s+(?:user|role)\s+\w+\s+(?:with|set|password|superuser|rename)\b'
+        - '\bcreate\s+(?:or\s+replace\s+)?(?:table|database|schema|function|extension|trigger)\b'
+        - '\bcreate\s+(?:user|role)\s+\w+\s+(?:with|password|login|superuser|createdb)\b'
+        - '\bcreate\s+(?:unique\s+)?index\s+\w+\s+on\b|\bcreate\s+(?:or\s+replace\s+)?view\s+\w+\s+as\b'
+    - id: prompt_injection
+      kind: hint
+      score: 0.9
+      patterns:
+        - '\b(?:ignore|disregard|forget|override|bypass|skip)\b(?:\s+(?:all|any|every|the|your|of|these|those|previous|prior|above|earlier|preceding|former))*\s+(?:instructions?|rules?|prompts?|guidelines?|directions?|constraints?|policies|restrictions?|safeguards?|guardrails?)\b'
+        - '\byou\s+are\s+now\b'
+        - '\bsystem\s+prompt\b'
+        - '\bdeveloper\s+mode\b'
+        - '\bjailbreak(?:s|ed|ing)?\b'
+        - '\bdo\s+anything\s+now\b'
+        - '^\s*#{2,}\s*(?:system|instructions?)\b'
+        - '^\s*(?:assistant|system)\s*:'
+        - '\b(?:pretend|act|behave)\s+(?:to\s+be|as\s+if\s+you|as\s+(?:an?\s+)?(?:unrestricted|unfiltered|different|new|evil)|like\s+(?:an?\s+)?(?:unrestricted|unfiltered|different|new|evil))\b'
+        - '\bnew\s+instructions?\s*:'
+        - '\bfrom\s+now\s+on\s+you\b'
+        - '\b(?:reveal|show|print|repeat|output|leak)\b.{0,30}\b(?:your|the)\s+(?:hidden\s+|initial\s+|original\s+)?(?:instructions|prompt|rules)\b'
+    - id: other_account
+      kind: hint
+      score: 0.9
+      patterns:
+        - '\banother\s+(?:user|customer|client|member|account\s*holder)(?:''s|s'')?(?:\W|$)'
+        - '\b(?:someone|somebody|anybody|anyone)\s+else(?:''s)?\s+(?:account|balance|portfolio|holdings?|positions?|work\s*orders?|funds|cash|profile|trades?)'
+        - '\b(?:all|every|each|other)\s+(?:the\s+)?(?:users?|customers?|clients?|accounts?|account\s*holders?|members)\b'
+        - '\blist\s+(?:all\s+)?(?:the\s+)?(?:users?|accounts?|customers?|clients?)\b'
+        - '\bdump\s+(?:the\s+|all\s+|every\s+|my\s+)?(?:database|db|tables?|users?|accounts?|schema|everything|memory|data)\b'
+        - '\bwork\s*orders?\s+(?:of|for|belonging\s+to)\s+(?:another|other|someone|user\b)'
+    - id: export
+      kind: hint
+      score: 0.8
+      patterns:
+        - '\be-?mail(?:ed|ing)?\s+(?:me|us|it|them|this|that|the|my|all|a|an|to)\b'
+        - '\b(?:send|forward|mail|ship|transmit)\b.{0,40}\be-?mail\b'
+        - '\bsend\s+(?:[\w'']+\s+){0,3}to\b'
+        - '\bupload\b'
+        - '\bexport\s+(?:the\s+|my\s+|all\s+|this\s+|these\s+|that\s+|it\b|them\b|data\b|everything\b|to\b|as\b|a\s+(?:csv|file|copy|report))'
+        - '\bwebhook\b'
+        - '\bhttps?://\S+'
+        - '\bwww\.\S+'
+        - '\b[\w.+-]+@[\w-]+\.[\w.-]+\b'
+        - '\b(?:curl|wget|ftp|sftp|scp|ssh|netcat)\b'
+    - id: live_trading
+      kind: hint
+      score: 0.9
+      patterns:
+        - '\breal\s+(?:money\s+)?broker(?:age)?\b'
+        - '\blive\s+(?:trading\s+)?account\b'
+        - '\b(?:disable|turn\s+off|switch\s+off|stop|bypass|remove)\s+(?:the\s+)?paper(?:\s+trading|\s+mode)?\b'
+        - 'PAPER_TRADING|USE_LIVE_TRADING'
+        - '\bpaper[\s_-]*trading\s*(?:=|to|is)\s*(?:false|off|no|0)\b'
+        - '\b(?:connect|link|route|send)\b.{0,30}\b(?:real|live)\s+(?:broker|brokerage|exchange|market)\b'
+        - '\b(?:with|using|for)\s+real\s+money\b'
+    - id: secrets
+      kind: hint
+      score: 0.9
+      patterns:
+        - '\b(?:show|print|display|reveal|give|tell|read|output|share|leak|expose|dump|list|cat|echo|send|what(?:''s|\s+is|\s+are))\b[^.?!]{0,40}\b(?:api[\s_-]?keys?\b|passwords?\b|passwd\b|(?:your|the|my|its|database|login|admin|user|users)\s+credentials\b|private\s+keys?\b|connection\s+strings?\b|(?:access|auth|bearer|session|oauth|secret|api)\s+tokens?\b|(?:your|its)\s+secrets\b|secret\s+(?:keys?|files?|values?|tokens?|folders?|stores?)\b)(?!\s*(?:manag|security|vault|protect|less))'
+        - '(?:^|[\s/"''])\.env\b'
+        - '\bsecrets/'
+        - '\b[A-Z][A-Z0-9]*(?:_[A-Z0-9]+)*_(?:API_KEY|SECRET|TOKEN|PASSWORD)\b'
+        - '\b(?:OPENROUTER|FINNHUB|MASSIVE|POLYGON|LANGSMITH|ANTHROPIC|OPENAI|POSTGRES)_[A-Z_]+\b'
+        - '/etc/passwd|/etc/shadow|\bid_rsa\b'
+    - id: market_abuse
+      kind: hint
+      score: 0.8
+      patterns:
+        - '\binsider\s+(?:information|info|tips?|trading|knowledge|dealing)\b'
+        - '\bmaterial\s+non-?public\b|\bMNPI\b'
+        - '\bpump\s*(?:and|&|n|\+|-)\s*dump\b'
+        - '\bspoof(?:ing|ed)?\b'
+        - '\bwash\s+trad(?:e|es|ed|ing)\b'
+        - '\bfront[\s-]?run(?:s|ning)?\b'
+        - '\bmanipulat(?:e|ing|ion)\s+(?:the\s+)?(?:market|prices?|stock|share\s+price)'
+        - '\bcorner\s+the\s+market\b'
+        - '\bartificially\s+(?:inflate|raise|pump|drive|depress)\b'
+
+  # ------------------------------------------------------------------ a DOCUMENT: news, press release, filing text (S10)
+  document:
+    - id: prompt_injection
+      score: 0.9
+      patterns:
+        - '\b(?:ignore|disregard|forget|override|bypass)\b(?:\s+(?:all|any|every|the|your|of|these|those|previous|prior|above|earlier|preceding|former))*\s+(?:instructions?|prompts?|guidelines?|directions?|safeguards?|guardrails?)\b'
+        - '<\|(?:im_start|im_end|system|assistant|user|endoftext)\|>'
+        - '\[/?INST\]|<<SYS>>'
+        - '^\s*#{2,}\s*(?:system|instructions?)\b'
+        - '\byou\s+are\s+now\s+(?:an?\s+|in\s+)?(?:\w+\s+){0,2}(?:ai|assistant|chatbot|jailbroken|unrestricted|dan)\b'
+        - '\bnew\s+instructions?\s*:'
+        - '\b(?:do\s+not|don''t|never)\s+(?:tell|inform|mention\s+this\s+to|reveal\s+this\s+to)\s+the\s+(?:user|reader)\b'
+    - id: addressed_to_ai
+      score: 0.8
+      match: near                    # an AI word within `window` characters of an imperative aimed at it
+      window: 120
+      a:
+        - '\bas\s+an\s+ai\b'
+        - '\blanguage\s+models?\b'
+        - '\bllms?\b'
+        - '\bai\s+assistants?\b'
+        - '\b(?:the|an)\s+assistant\b'
+      b:
+        - '\byou\s+must\b'
+        - '\byou\s+should\s+now\b'
+        - '\bshould\s+now\s+(?:recommend|buy|sell|rate|rank|score)\b'
+        - '\bmust\s+now\b'
+        - '\brecommend\s+(?:buying|selling)\b'
+        - '\b(?:always|only)\s+recommend\b'
+        - '\brate\s+(?:this|the)\s+(?:stock|company)\s+as\b'
+        - '\bgive\s+(?:this|it)\s+(?:stock\s+)?a\s+(?:strong\s+)?(?:buy|sell)\b'
+    - id: hidden_text
+      score: 0.6
+      raw: true
+      patterns:
+        - '[\u202a-\u202e\u2066-\u2069\U000e0000-\U000e007f]'          # a bidi override or isolate, a Unicode tag character: any
+        - '[\u200b-\u200f\u2060-\u2064]{4,}'          # zero-width characters in a RUN (an encoded message): the single zero-width space the stored news holds (4 of 19,400 records, read and judged innocent: a copy-paste leftover) is not a hit
+        - '[A-Za-z0-9+/]{200,}={0,2}'
+
+  # ------------------------------------------------------------------ a MESSAGE to the user (S4, S10): redacted in place
+  message:
+    - id: secrets                    # credential VALUES (the same shapes as the request's exact `secrets`, entry 124): redacted in a message and in every audit preview
+      score: 0.9
+      patterns:
+        - '\blsv2_[A-Za-z0-9_]{8,}'
+        - '\bsk-[A-Za-z0-9_-]{16,}'
+        - '\bAKIA[0-9A-Z]{16}\b'
+        - '\bgh[pousr]_[A-Za-z0-9]{30,}'
+        - '\bxox[abprs]-[A-Za-z0-9-]{10,}'
+        - '\bAIza[0-9A-Za-z_-]{35}'
+        - '\beyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}'
+        - '-----BEGIN [A-Z ]*PRIVATE KEY-----'
+        - '\b[a-z][a-z0-9+.-]*://[^\s:/@]+:[^\s@/]+@\S+'
+        - '\bpostgres(?:ql)?://\S+'
+        - '\bpassword\s*[=:]\s*\S+'
+        - '\bapi[_-]?key\s*[=:]\s*\S{8,}'
+        - '\bBearer\s+[A-Za-z0-9._~+/=-]{20,}'
+    - id: account_number
+      score: 0.9
+      match: account_number
+      patterns:
+        - '\b(?:account|acct|a/c)\s*(?:number|no\.?|num\.?|#|id)?\s*[:=#]?\s*(\d{1,12})\b'

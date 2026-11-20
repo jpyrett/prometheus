@@ -45,6 +45,7 @@ from prometheus.common.trading_clock import clock_note
 from prometheus.common.user_account import clean_age, clean_display_name, clean_risk_level, clean_trade_mode, parse_money
 from prometheus.common.user_profile import TOLERANCES
 from prometheus.langgraph.desk import build_desk
+from prometheus.common import langsmith_tracing
 
 DEFAULT_COUNT = 3
 RULE = "=" * 118
@@ -60,6 +61,7 @@ class Parts:
     trader: object
     new_manager: Callable               # () -> an AccountManager that is not connected to an account: the desk connects it, and the session connects its own to create the account
     approver: Callable | None = None    # asked about a trade that needs the user (Ask mode, the sells of a funding plan); never in Auto mode, which asks nothing; None: the session's own, which asks at the terminal (`approver_for`)
+    guard: object | None = None         # the security layer's doors (entry 116, `prometheus.security.guard.Guard`): the real parts build `Guard.with_scorer()` (rules + the LLM Risk Scorer + audit); None: the desk's own `Guard.code_only()`
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -116,13 +118,16 @@ def build_parts(args: argparse.Namespace) -> Parts:
     from prometheus.agents.trader.trader import NullLedger, Trader
     from prometheus.application.recommendations import throwaway_ledger
     from prometheus.persistence.accounts import open_account_store
+    from prometheus.security.guard import Guard
 
     store = open_account_store()
-    clerk = DataClerk(allow_fetch=args.fetch)
+    guard = Guard.with_scorer()         # entry 116: the request, the documents and the messages are screened; the model of the `guard` role is built when the first request is screened
+    clerk = DataClerk(allow_fetch=args.fetch, guard=guard)
     advisor = Advisor(model_id=args.model, clerk=clerk, ledger=None if args.real_ledger else throwaway_ledger(), effort="auto", providers="auto")
+    guard.ledger = advisor.ledger       # the Trust Score's history signal reads the same ledger the Advisor writes
     critic = Critic(clerk=clerk, ledger=None if args.real_ledger else throwaway_ledger(), history=advisor.ledger)
     trader = Trader(mode="paper", use_model=not args.no_trader_model, ledger=None if args.real_ledger else NullLedger())
-    return Parts(store=store, clerk=clerk, advisor=advisor, critic=critic, trader=trader, new_manager=lambda: AccountManager(clerk=clerk))      # the approver is made by `run_session`, from its own ask and out
+    return Parts(store=store, clerk=clerk, advisor=advisor, critic=critic, trader=trader, new_manager=lambda: AccountManager(clerk=clerk, guard=guard), guard=guard)      # the approver is made by `run_session`, from its own ask and out
 
 
 def open_account(parts: Parts, args: argparse.Namespace, person: dict) -> int:
@@ -214,6 +219,18 @@ POOL_WORDS = {"money": "the cash: it had no room for another share", "budget": "
 FRACTION_WORDS = {"money": "the cash: its equal share was spent to the cent", "budget": "the amount you asked to spend: its equal share was spent to the cent"}      # a fractional even split (entry 110) has no "next share" that did not fit
 
 
+def sized_purchases(order) -> list[tuple[str, dict]]:
+    """The purchases of the recommendation path that the Account Manager sized, in the order they were decided: each recommendation the Critic APPROVED, then each NEUTRAL recommendation counted as approved (entry 91, `origin:
+    "neutral"`; a run of neutral companies alone has no review at all, entry 123). [(symbol, decision)]; a purchase with no size (not decided as a trade) is left out."""
+    approved = {r["record_id"]: r["symbol"] for r in order.reviews if r["approved"]}
+    out = []
+    for decision in order.trade_decisions:
+        symbol = approved.get(decision.get("record_id")) or (decision.get("symbol") if decision.get("origin") == "neutral" else None)
+        if symbol and decision.get("size") is not None:
+            out.append((symbol, decision))
+    return out
+
+
 def use_of_money_lines(order, before: Portfolio, after: Portfolio) -> list[str]:
     """How much of the money was used, and what stopped each purchase. The Account Manager sized every purchase (`decision["size"]`: the shares, the caps and `binding`, what decided the number). THE ONLY CHECK IS THAT THE
     FUNDS COVER THE ORDER (design choices entry 91): no limit of the profile exists, so what ends a purchase is the cash, the amount the user asked to spend or buy, or the even split. In Auto mode the funds were spent
@@ -221,20 +238,17 @@ def use_of_money_lines(order, before: Portfolio, after: Portfolio) -> list[str]:
     spent = before.cash_avail - after.cash_avail
     lines = [RULE, f"HOW MUCH WAS BOUGHT  spent {money(spent)} of {money(before.cash_avail)} ({spent / before.cash_avail:.0%} of the money)" if before.cash_avail else "HOW MUCH WAS BOUGHT", RULE]
     ways = set()
-    for review in order.reviews:
-        decision = next((d for d in order.trade_decisions if d["record_id"] == review["record_id"]), None)
-        size = (decision or {}).get("size")
-        if not review["approved"] or size is None:
-            continue
+    for symbol, decision in sized_purchases(order):
+        size = decision["size"]
         ways.add(size["allocation"])
         if not decision["shares"]:
-            lines.append(f"  {review['symbol']:<6} no share was bought: {decision['reason']}")
+            lines.append(f"  {symbol:<6} no share was bought: {decision['reason']}")
             continue
         if decision.get("dollars"):      # an order in dollars (entry 111, M2): the dollars first, and the shares as the estimate at the price it was sized at
-            text = f"  {review['symbol']:<6} {money(decision['dollars'])} (about {sh.text(decision['shares'])} {sh.noun(decision['shares'])} at {money(decision['price'])}) of the {money(before.cash_avail)}" if decision.get("price") else \
-                f"  {review['symbol']:<6} {money(decision['dollars'])} (about {sh.text(decision['shares'])} {sh.noun(decision['shares'])}) of the {money(before.cash_avail)}"
+            text = f"  {symbol:<6} {money(decision['dollars'])} (about {sh.text(decision['shares'])} {sh.noun(decision['shares'])} at {money(decision['price'])}) of the {money(before.cash_avail)}" if decision.get("price") else \
+                f"  {symbol:<6} {money(decision['dollars'])} (about {sh.text(decision['shares'])} {sh.noun(decision['shares'])}) of the {money(before.cash_avail)}"
         else:
-            text = f"  {review['symbol']:<6} {sh.text(decision['shares'])} {sh.noun(decision['shares'])} ({money(decision['est_cost'])}) of the {money(before.cash_avail)}"
+            text = f"  {symbol:<6} {sh.text(decision['shares'])} {sh.noun(decision['shares'])} ({money(decision['est_cost'])}) of the {money(before.cash_avail)}"
         name = size["binding"]
         if name == "asked":                                                 # nothing held it back: the user asked for this much
             text += ": the amount you asked for"
@@ -344,6 +358,18 @@ def decision_lines(order, mode: str) -> list[str]:
     return lines
 
 
+def clean_up(args: argparse.Namespace, parts: Parts, account_id, created: bool, say) -> None:
+    """--cleanup deletes the account this session created (a sample or an --account account is never deleted); without it the account is kept and the user is told how to see it."""
+    if args.cleanup and created:
+        try:
+            parts.store.delete_account(account_id)
+            say(f"  (account {account_id} was deleted: --cleanup)")
+        except Exception as error:   # never hide the result for a clean-up that failed
+            say(f"  (account {account_id} could not be deleted: {type(error).__name__})")
+    elif created:
+        say(f"  account {account_id} is kept: python -m prometheus.agents.account_manager.account_manager --account {account_id}")
+
+
 def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input, out=print) -> int:
     say = lambda *lines: [out(line) for line in lines]
     try:
@@ -387,7 +413,8 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
         return manager
 
     graph = build_desk(clerk_factory=lambda order: parts.clerk, advisor_factory=lambda order: parts.advisor, funds_factory=new_manager, with_critic=True, critic_factory=lambda order: parts.critic,
-                       with_trader=True, trader_factory=lambda order: parts.trader, approver=approver_for(parts.approver, ask, out), store_factory=lambda: parts.store, confirm=confirm, clarify=clarifier_for(ask, out))
+                       with_trader=True, trader_factory=lambda order: parts.trader, approver=approver_for(parts.approver, ask, out), store_factory=lambda: parts.store, confirm=confirm, clarify=clarifier_for(ask, out),
+                       **({"guard": parts.guard} if parts.guard is not None else {}))
     request = {"ask": {"text": args.prompt, "default_count": args.default_count, "fetch": args.fetch}, "account": {"account": account_id, "profile": profile}, "trade": {"mode": "paper", "book": True, "model": not args.no_trader_model}}
     say("", RULE, "THE DESK  (LangGraph: Account Manager -> Data Clerk -> Advisor -> Critic -> Account Manager's decision -> Trader; a trade you name yourself goes from the Account Manager straight to its decision and the Trader)", RULE)
     final, shown = None, 0
@@ -405,6 +432,7 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
     order, plan = final["order"], final.get("plan")
     if order is None or plan is None:   # the request could not be read, was not confirmed, or the account could not be used: the desk stopped at its first node
         say("", "  " + ("; ".join(final["errors"]) or "the desk did not start"), *([f"  {CLARIFY}"] if final.get("clarify") else []))
+        clean_up(args, parts, account_id, created, say)      # a run that stopped at its first node (a request refused by the security policy, or one that could not be read) still honours --cleanup
         return 2
     intent, direct = plan["intent"], bool(plan.get("direct"))
     find, result = (None, None) if direct else (plan["find"], plan["result"])
@@ -423,7 +451,7 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
     if buying and not stopped:
         say("", *trade_lines(order))
     after = manager.list_portfolio()
-    if buying and order.reviews and not direct:
+    if buying and sized_purchases(order) and not direct:      # entry 123: a run of neutral companies alone has no review and still sized its purchases
         say("", *use_of_money_lines(order, before, after))
     say("", *account_block("ACCOUNT  after the session", holder, after, profile))
 
@@ -443,20 +471,14 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
     else:
         say("", RULE, "SESSION  the portfolio did NOT change. Why:", *[f"  - {reason}" for reason in why_not(result, order)], RULE)
         ok = args.allow_no_trade
-    if args.cleanup and created:
-        try:
-            parts.store.delete_account(account_id)
-            say(f"  (account {account_id} was deleted: --cleanup)")
-        except Exception as error:   # never hide the result for a clean-up that failed
-            say(f"  (account {account_id} could not be deleted: {type(error).__name__})")
-    elif created:
-        say(f"  account {account_id} is kept: python -m prometheus.agents.account_manager.account_manager --account {account_id}")
+    clean_up(args, parts, account_id, created, say)
     return 0 if ok else 1
 
 
 def main(argv: list[str] | None = None, parts: Parts | None = None, ask=input, out=print) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
+    langsmith_tracing.start()   # LangSmith traces the run when LANGSMITH_API_KEY is set (entry 114)
     person = check_args(parser, args)
     if parts is None:
         try:

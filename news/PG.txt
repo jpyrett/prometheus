@@ -7238,3 +7238,178 @@ PG | neutral | While PG raised reported sales guidance, the unchanged organic gr
 CL | neutral | Mentioned as a peer comparison showing 3.6% organic sales growth in Q3 2026, providing context for the broader consumer-health demand environment. No specific sentiment is implied.
 HLN | neutral | Referenced as a consumer-health peer with 2.6% organic revenue growth, used for comparative context only. No specific sentiment is implied.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143948145
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T22:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bd3441399f607192b154816bf393abe41550814dafcbb68a4c110706e957719c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble’s Job Cuts Come as Earnings Growth Gets Harder to Come By
+<<<SUMMARY>>>
+Some 15,000 workers could get the axe by 2030.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143987962
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:28:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=94b182e828851c89305a00f1ff77b26f0e91be54edefdff2f738338af0a5323f
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: 'P&G Aims to Reduce Manufacturing Workforce Up to 30% by 2030'- Bloomberg
+<<<SUMMARY>>>
+https://www.bloomberg.com/news/articles/2026-11-19/p-g-aims-to-reduce-manufacturing-workforce-up-to-30-by-2030?srnd=homepage-europe
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143987963
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:31:03Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5a43b54ab1c46e6857ab48074dd6006071b7d61fb994b30c0544a6047acf61a9
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble CFO Says Company Targets $10B In Productivity Savings From Fiscal 2027 To Fiscal 2030
+<<<SUMMARY>>>
+-Investor Day
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986117
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:02:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ee1e416565da11d21001a381a3cbb8ce3d518095f2c6ac861dc9ded62d31189
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Want Reliable Dividend Passive Income? These 5 Stocks Raise Their Payouts Year After Year
+<<<SUMMARY>>>
+Your dividends can buy more shares, but they also send a tax bill for cash you never touched. Two simple tools show whether your income is truly compounding, and five payers put them to the test.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986134
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:26:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=772531b137f8953bddee182255b9bfb5fa2e2ead04b6d3a2ce63154dcf94a212
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Plans up to 30% Supply Job Cuts by 2030, Aims for $10 Billion in Cost Savings
+<<<SUMMARY>>>
+Procter & Gamble Company (NYSE:PG) stock edged slightly higher during Friday’s premarket session after closing roughly 1.4% lower after the consumer goods giant’s investor day event held on Thursday. The company targets up to $10 billion in productivity savings between fiscal 2027 and 2030, building on savings of $2.8 billion in fiscal 2026. The initiative comes as P&G faces mounting pressure from higher raw material, energy and freight costs, which are expected to weigh on annual profitability
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143987960
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T10:43:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8f89528b11485ddc66444376cd042daa1839320d050b1c045d3cdcf25ef389c6
+image_url: 
+category: company
+tickers: PG
+keywords: 
+headline: TD Cowen Maintains Hold on Procter & Gamble, Raises Price Target to $180
+<<<SUMMARY>>>
+TD Cowen  analyst Robert Moskow   maintains Procter &amp; Gamble (NYSE:PG) with a Hold and raises the price target from $166 to $180.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143976610
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T08:12:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7fead0c85cda0fc162229113e879c6d9578213e980c6a051e377f97a64890660
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble Targets Up to $10 Billion in Savings With AI and Automation
+<<<SUMMARY>>>
+Procter & Gamble (NYSE:PG) announced a productivity target of up to $10 billion over four fiscal years as it outlined plans to use artificial intelligence, supply chain automation and product innovation to accelerate growth. At its 2026 Investor Day in Cincinnati, the consumer-products company
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0d8586ad5bd67eaeef4884e59dba24aaec4e8c00acf9b8a62d37159991d575ab
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T20:23:00Z
+publisher: Zacks Investment Research
+author: Mark Vickery
+url: https://www.zacks.com/commentary/3032173/top-analyst-reports-for-berkshire-hathaway-jpmorgan-procter-gamble?cid=CS-ZC-FT-research_daily-3032173
+image_url: https://staticx-tuner.zacks.com/images/articles/main/28/195819.webp
+category: 
+tickers: BRK.A, BRK.B, AMJB, JPM, JPMpC, JPMpD, JPMpJ, JPMpK, JPMpL, JPMpM, VYLD, PG, NPK, GSK, RSG, NOK
+keywords: analyst reports, stock ratings, Berkshire Hathaway, JPMorgan Chase, Procter & Gamble, National Presto Industries, earnings, capital allocation
+headline: Top Analyst Reports for Berkshire Hathaway, JPMorgan & Procter & Gamble
+<<<SUMMARY>>>
+Zacks published analyst reports on 16 major stocks on November 19, 2026. Berkshire Hathaway received a Neutral rating due to balanced strengths in diversified businesses and capital allocation offset by GEICO underwriting weakness and heavy capital spending demands. JPMorgan was highlighted for outperforming its industry with strong deposit base and earnings resilience, though uncertain market activity and high expenses pose challenges. Procter & Gamble showed encouraging growth prospects with strong brand performance but faces margin pressures from rising commodity and transportation costs.
+<<<INSIGHTS>>>
+BRK.A | neutral | Analyst cited balanced risk-reward profile with competing factors: positive diversified businesses, disciplined underwriting and ample liquidity offset by rising auto claim costs at GEICO, catastrophe exposure, lower investment income, and heavy capital spending demands. Neutral recommendation issued.
+BRK.B | neutral | Analyst cited balanced risk-reward profile with competing factors: positive diversified businesses, disciplined underwriting and ample liquidity offset by rising auto claim costs at GEICO, catastrophe exposure, lower investment income, and heavy capital spending demands. Neutral recommendation issued.
+AMJB | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+JPM | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+JPMpC | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+JPMpD | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+JPMpJ | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+JPMpK | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+JPMpL | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+JPMpM | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+VYLD | positive | Shares outperformed industry (+12.1% vs +8%), supported by diversified franchise, extensive deposit base, expected loan growth, strong net interest income prospects, and enhanced capital distributions. Concerns about uncertain market activity and high expenses are outweighed by positive fundamentals.
+PG | positive | Shares outperformed industry (+16.3% vs +16.1%) with encouraging growth prospects driven by broad-based organic sales momentum, strong brand performance (Tide, Gain, Pantene), premiumization strategy, and improved operational efficiency. Margin pressures from rising costs are secondary to growth strengths.
+NPK | positive | Significantly outperformed industry (+55.9% vs -6.5%) with strong $1.94 billion Defense backlog providing multi-year visibility, higher shipments, improved cash flow, and favorable U.S. defense spending trends. Housewares weakness and execution risks are offset by Defense segment strength.
+GSK | neutral | Specialty Medicines unit shows strength in HIV, respiratory and oncology sales, but generic pressures and pricing challenges weigh on GenMed revenues, creating mixed outlook.
+RSG | neutral | Prudent pricing and strong customer retention support organic growth, but persistent volume weakness could limit operating leverage gains.
+NOK | positive | 5G network upgrades and Network Infrastructure segment strength backed by growing AI networking demand expected to drive top-line growth.
+<<<END>>>

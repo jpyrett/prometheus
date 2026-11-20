@@ -22,6 +22,7 @@ THE CRITIC NEVER TRADES AND NEVER FETCHES (spec P8): its Data Clerk requests rea
 from prometheus.agents.advisor.config import load_config as load_advisor_config
 from prometheus.agents.critic.config import CriticConfig, load_config
 from prometheus.agents.critic.review import review_order
+from prometheus.common.trace import traced
 from prometheus.common.user_profile import RiskView
 from prometheus.common.work_order import WorkOrder
 
@@ -100,6 +101,7 @@ class Critic:
             self._ledger = Ledger(self.config.ledger.path)
         return self._ledger
 
+    @traced("critic.review_recommendations")
     def review_recommendations(self, order: WorkOrder, risk: RiskView, now=None) -> WorkOrder:
         """Approve or deny each recommendation on the order (see `review.py` for the nine steps) and return the SAME order with `status == "reviewed"`, `reviews` (one per recommendation, in the same
         order, joined by `record_id`) and `critic_runs`. `risk` is what the user accepts (`UserProfile.risk_view()`: the tolerance, age, horizon and exclusions, never the whole profile and no size limit), `now` an aware

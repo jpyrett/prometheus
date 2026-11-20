@@ -3230,3 +3230,768 @@ COP | positive | Featured as a participating enterprise with executive speaker (
 OII | positive | Participating company with featured CITO speaker (Maria O'Neill), indicating active investment in technology modernization and digital initiatives
 MCDIF | positive | Featured with global CIO speaker (Vagesh Dave), indicating significant investment in enterprise AI and digital transformation initiatives
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942839
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:13:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=35662103c5bd8be0ade90f27ab35e284609037112cae49683d396f368b046eb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Your Chevron Hedge Works Only While Oil Spikes
+<<<SUMMARY>>>
+Our Nov 18 look at Chevron found the stock moving on its own. Chevron gained 2.3% from November 10 to November 17, while the S&P 500 lost 2.4%. For the full record, see Is Chevron Stock Increasing Your Market Risk? The next question is whether Chevron protects a portfolio when oil prices jump.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942840
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ce91428cc1fedf104da8fd2574174749c3d5428944d0223dfdbb8b738604856
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Crude Gives Back Ground Midweek as Inventories Build and Surplus Talk Grows
+<<<SUMMARY>>>
+Oil Market Daily News Commentary - Crude oil heads into Thursday down for the week so far. Brent futures settled at $91.95 a barrel on Wednesday, down $1.19, or 1.28%, while U.S. West Texas Intermediate fell $2.75, or 3.2%, to $83.26, its lowest since August 26, according to Reuters. Measured from Friday's settlements of $95.84 for Brent and $88.56 for WTI, Brent is down $3.89, or 4.06%, and WTI is down $5.30, or 5.98%, for the week to date, by our arithmetic. Energy companies with developments
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936617
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T11:39:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a65650947140da9aac4235313d383ba008cbf4598af4c0852d774fd287792dca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Should You Buy Occidental Stock For Its Cash Flow?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947028
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6fff2086b954adfa53ab769171fbfb8b8f41faf627ca670dacf157dac0082eae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Drilling for Yield in the Gulf: Chevron Drops Anchor in Deepwater
+<<<SUMMARY>>>
+Chevron is reportedly nearing a deal for a majority stake in the Shenandoah oilfield from Beacon Offshore Energy, valued above $5 billion, as it bolsters Gulf deepwater production and cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920151
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T18:10:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f05612f1bc0652149c4e8abea51f2aee47e0c7b92bcffca1ecf85918cdfb46b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Learn Why The Bull Case For ConocoPhillips Stock Could Change Following Earnings And Dividend Hike
+<<<SUMMARY>>>
+ConocoPhillips reported third quarter 2026 revenue of US$20.1b and net income of US$4.0b, alongside an 11% lift in its regular quarterly dividend to US$0.93 per share. The mix of higher earnings, steady production from key Lower 48 assets, and a larger cash return commitment signals management confidence in the underlying cash generation profile. This article will examine how ConocoPhillips' investment narrative is affected by this stronger earnings result and higher ordinary dividend. Scan...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920071
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T18:03:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76e61233e5546301f549dcd9169950bf28eade9b79c7cbc04f127072a371d631
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Is Chevron Stock Increasing Your Market Risk?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918728
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:21:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7cd85366d9ce2509042a4085b28e2e7783fb16de66944a81eec99688e29fcfc0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Why You Should Think About Occidental Petroleum Differently Now
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917322
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:31:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50b39114701afe001f56d42265f6f3595aa0a26ec28fdb7bfaa7c856d816ca38
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Is Exxon Mobil Stock a Good Fit For Your Portfolio Risk?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917485
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:02:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=61db6cca1faf85a094766ed81ba7891a85c5ed8e07665a77c0fdad32935b742a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (COP) Soared on Higher Commodity Prices and Solid Quarterly Results
+<<<SUMMARY>>>
+Cooke & Bieler, an investment management firm, released its third-quarter investor letter for “All Cap Value Equity Strategy.” The letter can be downloaded here. US equity markets were mixed in the third quarter due to rising long-term interest rates, higher oil prices, and the ever-changing risks and opportunities presented by artificial intelligence. Cooke & Bieler’s […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143913025
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:48:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d5cb415558c408e0f74de0c224c45336eda319e22186f9d2871448b36758806f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Is Permian Resources Spending Too Much?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143939671
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:00:52Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d8be66ca1666cc7ea5db34f15835889e1bf485f6b257cb43fb2c146e4117a633
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Growth Leads Sectors In Wednesday Trading As Cyclicals Trail
+<<<SUMMARY>>>
+Five sectors are trading higher and six are lower in Wednesday&#39;s regular session, with growth sectors holding the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143941018
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:45:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ef5d7bc30c26cdbd1c0b2efe661d66ce2095f102c0beb1687d1cb57bb69af16f
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Morgan Stanley Maintains Overweight on ConocoPhillips, Raises Price Target to $160
+<<<SUMMARY>>>
+Morgan Stanley  analyst Devin McDermott   maintains ConocoPhillips (NYSE:COP) with a Overweight and raises the price target from $159 to $160.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911008
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:04:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0da1d3ca6c326d53632659373be00a67593741285a5c09ed4646e4a9d16ebbc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: State Street Energy Select SPDR (XLE) Sells $149.9 Million of Exxon on Monday
+<<<SUMMARY>>>
+The fund sold $626.1 million of stock and bought nothing, cutting all 21 of its positions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911007
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:03:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=697f53f9b53a7d440e0b73db75b0a3c30db89bbbf19a1c82ed6b05eafedad475
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ETFs Are Net Sellers of ConocoPhillips (COP) on Monday
+<<<SUMMARY>>>
+ConocoPhillips saw a net $17.3 million in ETF selling on Monday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143913894
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T03:05:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b3656c7647c974ec2e301e9e27a0e0477a358a0e4cd8ad7ad3bb791b723fa52a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/U-S--Sen--Elizabeth-Warren--D-Mass---mak.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Trump Reportedly Traded Over $97 Million Worth of Nvidia Stock in 2 Years — Elizabeth Warren Wants Congress to Force Him to ‘Divest’
+<<<SUMMARY>>>
+Elizabeth Warren urges Congress to force Trump to divest after reports he traded Nvidia, citing conflicts and calling for stock-trading bans.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883046
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c44eb0d33573d95eda3ee1a67bf1b804a64aaea661a5209a5f57341ed84b65f9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Two Days Left to Register: Houston CIOs and CISOs to Address AI, Cybersecurity and the New Leadership Mandate at HMG Strategy Summit
+<<<SUMMARY>>>
+Final opportunity for qualified technology executives to join leaders from ConocoPhillips, Texas Children’s Hospital, CITGO Petroleum, Motiva Enterprises, McDermott, Cargill and other leading organizations on November 19HOUSTON, Nov. 17, 2026 (GLOBE NEWSWIRE) -- With two days left to register, qualified CIOs, CISOs, CTOs, CDOs and senior technology executives have a final opportunity to join HMG Strategy’s 16th Annual Houston C-Level Technology Leadership Summit on Thursday, November 19, at the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881077
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe873a284268e5886a50b521198aff5f95446867ff23b998e8785f2cd25fb660
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: EOG vs. ConocoPhillips: The Better Bet as Oil Prices Stay Elevated
+<<<SUMMARY>>>
+EOG and COP gain from high oil prices, but COP's stronger cash-flow growth outlook gives it an edge despite its premium valuation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880797
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83628f093c60560652226a83616714d9d0c84516281037c1ca34c533ff238cef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What Occidental's Debt Cut Means For Its Stock
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880796
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=05f5eede190a0299d33dfdf7b7ad69de30681c9aa2109df9437059910c00eff1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Why Pay More For Exxon Mobil Stock Than Chevron?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884397
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6aa237638390bd1d9abed202e8774a648d459b36832876e6ce790cabab801683
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Shorting ConocoPhillips Puts and Put Credit Spreads Are Attractive Income Plays
+<<<SUMMARY>>>
+Last month, I discussed shorting the $127 ConocoPhillips put expiring Nov. 13, and a $120 put credit spread. Both worked out well. The same play this month with the COP $130 and $120 puts looks attractive.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143913895
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:00:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=250e9d6bf76a54b90d4037a02c39233dfd6a5759fd68b160226129ad30d27d31
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/17/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: 9 Of 11 Sectors Fall In Tuesday Trading As Cyclicals Lead
+<<<SUMMARY>>>
+Two sectors are higher and nine are lower in Tuesday&#39;s regular session, with cyclical sectors holding two of the top three positions. The leaders are separated rather than clustered, with Energy and Materials above the rest of the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143876091
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5a885d6234bb0e6d60bd14e1ef47aa4d38f949bc4e7e9f2786c4c52edb4cf46c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Is Chevron Stock Overpriced Versus Its Oil Rivals?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850423
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:55:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78fac812341e0daefdca8ac09d6d5a32edde32d72fde482ada83bb1a3bec8eb0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Could Occidental Petroleum Be The Value Stock For Your Portfolio?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857609
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:36:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c073735c337135254275f5275d9ff4c0cb3f56e0208a335369f819a0db8f5c97
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2199578213/image_2199578213.jpg?io=getty-c-og
+category: company
+tickers: COP
+keywords: 
+headline: The Winners Inside SCHD - November 2026
+<<<SUMMARY>>>
+The bull case for SCHD: 34 holdings screen at least 10% undervalued, with expected long-term returns above 10%; its YTD lead over SPY tops 20%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143847991
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T12:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=98c76770407fbc315faa33e11bc3724f1ff4b2946e3f187bcbae55572aaa8f30
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Sezzle and Kimball Electronics have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Sezzle and Kimball Electronics have been highlighted as Zacks Bull and Bear of the Day
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877613
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T12:00:35Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=20e79e96474f2023d052f0d112f1607ed69a99e19585180b84f2faa31a8df9bc
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Defensives Lead Sectors Monday As Growth Trails
+<<<SUMMARY>>>
+Four sectors are higher and seven are lower in Monday’s regular session, with defensive sectors holding the top three positions. The leaders are clustered rather than widely separated, with the top three staying within a narrow range of one another.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143847801
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T08:41:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e667c68f98cab7833443d22f60de161e884b881622effd768716595072347947
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Businessman-Is-Selecting-Dividends-On-Th.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Meet Wall Street’s New Dividend King: SCHD’s $27.5B Inflow Surge Signals Shift Away from AI
+<<<SUMMARY>>>
+Schwab U.S. Dividend Equity ETF (SCHD) is now America&#39;s largest dividend ETF, overtaking VIG. Is Wall Street changing its mind on AI?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841911
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T03:05:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=73a639ce2337edfabe5cab1972fcb2492c3044f594d2f3769b7bd7f5447dfc44
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: What Bernstein Sees Looming Over ConocoPhillips (COP)
+<<<SUMMARY>>>
+We just published a list of the Sell Alert: 10 Stocks Analysts Downgraded on Thursday and ConocoPhillips (NYSE:COP) ranked 7th on this list. Chip stocks took the hardest hit on November 5, when the Philadelphia Semiconductor Index slumped 12.2%, its biggest one-day drop since April 2025. The S&P 500 slid 4.4% and the Nasdaq Composite […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805999
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T10:11:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ceb0524ca56bce974dc7401b57697f3478291183e10e400723d5c96f2b5091dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Top 3 Energy Stocks To Watch In November 2026
+<<<SUMMARY>>>
+Inflation keeps running hotter than expected, and the latest October consumer price report shows price pressures are still broad. That environment keeps energy costs and interest rates in every conversation, and investors who want exposure to companies tied to real assets are watching closely. This article walks through three large oil and gas stocks from the global majors and explains what each brings to a portfolio right now. The stocks below are just a starting sample, and the full screen...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806972
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:22:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c8b7f8bcad01d4049fc5ac58d718b3263628598bb6bdf97361289cbb076da8ec
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: Barclays Maintains Overweight on ConocoPhillips, Raises Price Target to $165
+<<<SUMMARY>>>
+Barclays  analyst Betty Jiang   maintains ConocoPhillips (NYSE:COP) with a Overweight and raises the price target from $150 to $165.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143983925
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:03:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2577cd4af4d36f43cafd3232041dee92e984b3f2ce691671665da37256c137ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: State Street Energy SPDR (XLE) Sells $174.6 Million of Exxon on Wednesday
+<<<SUMMARY>>>
+The $39.74 billion fund sold $727.9 million of stock and bought nothing, cutting all 21 of its positions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:81d4a9353b5384f13b3edb29d4eb8c50ab131882b036b77e76f0f40575414632
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T12:46:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3030076/sezzle-and-kimball-electronics-have-been-highlighted-as-zacks-bull-and-bear-of-the-day?cid=CS-ZC-FT-press_releases-3030076
+image_url: https://staticx-tuner.zacks.com/images/articles/main/86/1526.jpg
+category: 
+tickers: SEZL, KE, COP, NNI, ADP
+keywords: buy now pay later, BNPL, earnings growth, contract manufacturing, analyst revisions, Zacks Rank
+headline: Sezzle and Kimball Electronics have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Sezzle (SEZL) was named Bull of the Day with strong earnings growth of 42.6% revenue increase and 84% EPS growth in Q3 2026, supported by positive analyst momentum. Kimball Electronics (KE) was named Bear of the Day due to negative earnings estimate revisions from analysts over the past 60 days, with consensus estimates declining for both current and next fiscal year.
+<<<INSIGHTS>>>
+SEZL | positive | Zacks Rank #1 (Strong Buy) with exceptional Q3 2026 results showing 42.6% revenue growth, 84% EPS growth, and strong earnings momentum. Management consistently raising guidance with 2026 adjusted EPS guidance increased from $4.70 to $5.45-$5.50, and consensus estimates up 4.53% in last four weeks.
+KE | negative | Zacks Rank #5 (Strong Sell) due to negative earnings estimate revisions from analysts over the past 60 days. Consensus estimates declined from $1.58 to $1.50 for current fiscal year and from $1.82 to $1.71 for next year, representing over 6% decline with no upward revisions.
+COP | positive | Zacks Rank #1 (Strong Buy) with recent dividend hike announcement of $0.93 per share. Strong dividend history with 12 increases over past five years and conservative 36% payout ratio, benefiting from elevated oil prices due to geopolitical tensions.
+NNI | positive | Zacks Rank #2 (Buy) with recent dividend increase to $0.36 per share. Six dividend increases over past five years with low 18% payout ratio, providing room for future growth in dividend payments.
+ADP | positive | Zacks Rank #2 (Buy) with recent dividend increase to $1.90 per share. Six dividend increases over past five years, though higher 59% payout ratio limits future dividend growth potential compared to peers.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f46a0778f7e4e7c366c6bb4964e35e3c56a128d5e06ac529c461f7bdf726798f
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T14:35:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031213/eog-vs-conocophillips-the-better-bet-as-oil-prices-stay-elevated?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3031213
+image_url: https://staticx-tuner.zacks.com/images/articles/main/52/300.jpg
+category: 
+tickers: EOG, COP
+keywords: energy sector, oil prices, upstream majors, cash flow growth, valuation comparison, WTI crude, Permian Basin
+headline: EOG vs. ConocoPhillips: The Better Bet as Oil Prices Stay Elevated
+<<<SUMMARY>>>
+Both EOG Resources and ConocoPhillips have delivered strong year-to-date gains (48.1% and 50.2% respectively) amid high oil prices above $85/barrel. While EOG offers lower leverage and cheaper valuation, ConocoPhillips provides a more clearly quantified long-term cash-flow growth target of $7 billion annually by 2029, which may justify its valuation premium. COP holds a Zacks Rank #1 (Strong Buy) versus EOG's Rank #2 (Buy).
+<<<INSIGHTS>>>
+EOG | positive | Strong YTD gains of 48.1%, diversified 12 billion barrel resource base, low debt-to-capitalization (19.31%), and cheaper valuation (5.27x EV/EBITDA) provide attractive entry point for value-conscious investors.
+COP | positive | Highest YTD gains at 50.2%, strong long-term cash-flow visibility with $7 billion annual increase target by 2029, large upstream footprint with 20+ years of drilling locations, and Zacks Rank #1 (Strong Buy) rating justify premium valuation despite higher leverage.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:75d06d8c3988e45824130545f12d5180323ab6c093214fe51513f5b5ad51d48f
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T13:45:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032445/here-s-why-conocophillips-cop-is-a-strong-growth-stock?cid=CS-ZC-FT-fundamental_analysis|zacks_education_growth_score-3032445
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default89.jpg
+category: 
+tickers: COP
+keywords: Zacks Rank, Style Scores, stock rating system, investment research, earnings estimate revisions, growth investing, value investing, momentum investing
+headline: Here's Why ConocoPhillips (COP) is a Strong Growth Stock
+<<<SUMMARY>>>
+Zacks Premium provides investment research tools including the Zacks Rank stock-rating system and Style Scores to help investors identify high-performing stocks. The system has historically outperformed the S&P 500 with an average annual return of +23.7% since 1988. ConocoPhillips (COP) is highlighted as a Strong Buy with strong growth prospects.
+<<<INSIGHTS>>>
+COP | positive | ConocoPhillips received a #1 (Strong Buy) Zacks Rank with a VGM Score of A. The company is forecasted to have 96.6% year-over-year earnings growth for the current fiscal year, with nine analysts revising earnings estimates upward in the last 60 days. The article explicitly recommends it as a top pick for investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988521
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1df0ac77db7456ada697afd35c36d45fae64ce654fe173c8792803d98e95bc4f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Venture Global Expands China Gas LNG Deal to Strengthen Future Sales
+<<<SUMMARY>>>
+VG doubles its LNG supply deal with China Gas to 1 MTPA for 20 years, strengthening revenue visibility and expanding its presence in Asian markets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988397
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=458eee3d001b8f17635cf614761e103bc21ddb7613652e7123c16cbf84536e79
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Oil Price is Still High: Boon for Chord Energy's Upstream Business?
+<<<SUMMARY>>>
+CHRD benefits from oil prices above $80 per barrel, higher production guidance and improved drilling efficiency, while trading below its industry average.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988523
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=505d1634d39c2a8af797cddd967d90296210c5d5d871154d0d0ce6f3a49c37b7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: 5 Relative Price Strength Stocks to Tap Amid S&P 500 Weakness
+<<<SUMMARY>>>
+PGNY, WWW, TDC, NUE and COP offer investors a way to tap relative price strength amid market volatility, backed by solid fundamentals and upbeat earnings prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988364
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T09:08:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f9192780c6b462cac4c35f5273ff4d3b4a2a5f81ce5ab441ea19bced31640cbf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ExxonMobil Sinks 11% in a Month as Oil Slides. Darren Woods Says Its Earnings Power Comes From “Lasting Improvements”
+<<<SUMMARY>>>
+Key TakeawaysExxonMobil shares are down 11% in the past month as oil prices fell on hopes for an end to the Iran war, alongside a broad market selloff. Refining earned more than half of Exxon’s third-quarter adjusted profit, and the market treats that kind of windfall as temporary.
+<<<INSIGHTS>>>
+
+<<<END>>>

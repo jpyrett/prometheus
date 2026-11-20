@@ -66,6 +66,7 @@ from prometheus.common.money import digits, exact, price as price_door
 from prometheus.common.portfolio import Portfolio
 from prometheus.common.user_profile import UserProfile
 from prometheus.common.trading_clock import trading_now
+from prometheus.common.trace import traced
 from prometheus.common.work_order import WorkOrder, decision_of, parse_utc, review_of
 
 MODES = ("ask", "auto")
@@ -214,6 +215,7 @@ def _size(order: WorkOrder, buying: list[tuple[dict, sizing.Purchase]], portfoli
         _funds(decision, sized.est_cost, portfolio, prices, eastern_date(now))
 
 
+@traced("account_manager.trade_decisions")
 def decide_trades(order: WorkOrder, portfolio: Portfolio, profile: UserProfile, approver=None, now: datetime | None = None, mode: str | None = None,
                   balance: str | None = None, budget: Decimal | None = None, prices: dict[str, Decimal] | None = None, wanted: dict[str, Decimal] | None = None,
                   neutral_purchases: list[tuple[dict, sizing.Purchase]] | None = None, fractional: bool = False) -> WorkOrder:

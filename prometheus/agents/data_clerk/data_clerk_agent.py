@@ -56,9 +56,10 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 
 from prometheus.common.trading_clock import market_day, use_live_trading
+from prometheus.common.trace import traced
 from prometheus.common.work_order import HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_request, verify_symbol_request, verify_verification_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
-from prometheus.prompts.data_clerk import COMPANIES_RETRY, LAST_TURN, companies_prompt, repair_message, system_prompt
+from prometheus.prompts.data_clerk import COMPANIES_RETRY, LAST_TURN, THEME_MEMBERS_RETRY, companies_prompt, repair_message, system_prompt, theme_members_prompt, theme_members_question
 from prometheus.rag.citations import SourceBook
 from prometheus.rag.loaders import check_symbol
 from prometheus.rag.retriever import Hit
@@ -80,6 +81,7 @@ JUDGES = re.compile(r"\b(?:bullish|bearish)\b", re.I)  # the words of the Adviso
 SWEEP_TOOLS = (("news", "retrieve_news"), ("press_releases", "retrieve_press_releases"), ("filings", "retrieve_filings"))  # the corpora every order carries (entry 40), and the search of each
 MAX_REFRESH_SYMBOLS = 15  # `refresh_data` fetches for at most this many symbols at a time
 MAX_EVIDENCE_SYMBOLS = 10  # the sweep reads the stored filing evidence of an order's symbols when it names at most this many
+NEWS_ADDED = "stored market news, confirmed by the Data Clerk's model"   # the `how` of a company the stored market news tied to a theme and the model confirmed belongs to it (entry 120)
 NOT_LISTED = "privately held, or not known to be listed"   # the Data Clerk's words for a name whose listed owner its model could not give (entry 101)
 MAX_TURNS = 6  # model turns per question, including a correction; the last one is without tools
 
@@ -176,6 +178,7 @@ class Result:
     has_citations: bool = False
     filing_evidence: dict = field(default_factory=dict)    # per symbol, the whole result of fetch_filings_recommendation when it was called and succeeded (entry 39), by the model or by the sweep
     sweep: dict = field(default_factory=dict)              # per corpus (news, press_releases, filings, filing_evidence): who searched it ("model" or "code"), how many sources it gave, and why none (entry 40)
+    security_dropped: list[dict] = field(default_factory=list)   # the documents the security layer dropped before anything read them ({id, corpus, action, risk, rules}; entry 116)
     error: str = ""             # the kind of model or network failure, if the call failed ("RateLimitError", ...)
     rate_limited: bool = False  # the failure was a provider's rate limit, not the model's doing
 
@@ -189,16 +192,19 @@ class Result:
 
 class DataClerk:
     def __init__(self, toolbox=None, store=None, model=None, model_id: str | None = None, allow_fetch: bool = False,
-                 max_turns: int = MAX_TURNS, calls: dict[str, int] | None = None, press_store=None, symbol_search=None, filings_store=None, sweep: bool = True):
+                 max_turns: int = MAX_TURNS, calls: dict[str, int] | None = None, press_store=None, symbol_search=None, filings_store=None, sweep: bool = True, guard=None):
         """toolbox: the DataToolbox (a fake in tests). store: the Chroma store of the news, press_store the one of the press releases and filings_store the one of
         the SEC filings (the real ones when left out). model: a chat model (anything with `bind_tools` and `invoke`; a fake in tests); otherwise OpenRouter
         through `get_chat_model` with the model of the `data_clerk` role, or `model_id`. allow_fetch: let the model use the fetch tools, which
         call paid APIs and write files; off unless you say so. symbol_search: the symbol directory a press release or filings order is checked against
         (Finnhub's search; a fake in tests, see prometheus/tools/symbols.py). sweep: after the model's loop, search the corpora it did not search and read the stored
-        filing evidence, so that an order carries all three sources (entry 40); `request_data` only, `ask` never sweeps."""
+        filing evidence, so that an order carries all three sources (entry 40); `request_data` only, `ask` never sweeps.
+
+        guard (entry 116): the security layer's door for documents. With one, each document a search finds is screened by the code rules and a poisoned one is dropped before the model or the Advisor sees it; `Result.security_dropped`
+        (and `order.data.security_dropped`) lists them. None screens nothing."""
         if max_turns < 2:
             raise ValueError("max_turns must be at least 2 (one turn to ask for a tool, one to answer)")
-        self.tools = DataClerkTools(toolbox, store, press_store, filings_store)
+        self.tools = DataClerkTools(toolbox, store, press_store, filings_store, guard=guard)
         self.model = model or get_chat_model("data_clerk", model=model_id)
         self.allow_fetch, self.max_turns, self.calls, self.symbol_search, self.sweep = allow_fetch, max_turns, calls, symbol_search, sweep
         self.lookup_interval = 0.3   # seconds between two symbol lookups of `find_companies` (Finnhub answered HTTP 429 to ten searches in two seconds); a test sets 0
@@ -293,6 +299,7 @@ class DataClerk:
                 result.sweep[corpus] = {"by": "code", "sources": 0, "note": f"the search failed ({type(error).__name__})"}
                 continue
             hits = [Hit(**h) for h in found["hits"]]
+            result.security_dropped.extend(d for d in found.get("security_dropped", []) if d not in result.security_dropped)
             if hits:
                 book.add(hits)
                 for hit in hits:
@@ -316,6 +323,7 @@ class DataClerk:
                     result.filing_evidence[evidence["symbol"]] = evidence
             result.sweep["filing_evidence"] = {"by": "code", "sources": sum(len(e["evidence"]) for e in result.filing_evidence.values()), "note": "; ".join(notes)}
 
+    @traced("data_clerk.request_data")
     def request_data(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
         """The Data Clerk's agent call (the design's `DataClerk.request_data`): check the work order, answer its query, put the
         result on the order, check that, and return the SAME order. An order that already has its data comes back unchanged. A request the Data Clerk should not
@@ -330,6 +338,7 @@ class DataClerk:
             return order  # the symbol or company name was not found: refused in code, before any model call and before anything is fetched
         return attach_result(order, self.ask(self._question(order), today, sweep=self._sweep_spec(order) if self.sweep else None))
 
+    @traced("data_clerk.request_quotes", run_type="tool")
     def request_quotes(self, order: WorkOrder) -> WorkOrder:
         """The Data Clerk's agent call for a `fetch_quote` order (entry 42): the current price of every symbol in `order.subject`, put on `order.data.quotes`, and the SAME order returned.
 
@@ -362,6 +371,7 @@ class DataClerk:
         order.status = "data_failed" if problems else "data_ready"
         return order
 
+    @traced("data_clerk.request_symbols", run_type="tool")
     def request_symbols(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
         """The Data Clerk's agent call for a `lookup_symbol` order (design choices entries 88 and 101): for each stock in `order.subject` (a ticker in capitals, or a company name as the user typed it) it finds the COMPANY'S NAME and the
         SYMBOL and APPENDS them to the work order's `data.companies` (one row each, the shape of `find_companies`: {brand: what was typed, parent, symbol, company, public, how, note}), and returns the SAME order.
@@ -453,6 +463,7 @@ class DataClerk:
         return {"brand": typed, "parent": owner, "symbol": found.symbol, "company": found.company, "public": True, "how": "brand",
                 "note": "the listed owner of what you typed, named by the Data Clerk's model; the symbol is the directory's"}, None
 
+    @traced("data_clerk.request_bars", run_type="tool")
     def request_bars(self, order: WorkOrder) -> WorkOrder:
         """The Data Clerk's agent call for a `fetch_bars` order (Trader v1 spec section 12): the stored daily bars of every symbol of `order.subject` from `order.bars["start"]` to `order.bars["end"]`,
         put on `order.data.bars` as {symbol: [bar, ...]} (oldest first, each {"date", "open", "high", "low", "close", "volume"}), and the SAME order returned. The Account Manager asks, for the Trader's backtest;
@@ -488,6 +499,7 @@ class DataClerk:
         order.status = "data_ready"
         return order
 
+    @traced("data_clerk.request_metrics")
     def request_metrics(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
         """The Data Clerk's agent call for a `calculate_financials` order (Advisor v1 spec section 4.1, entry 51): the metrics asked for, for every symbol of `order.subject`, put on
         `order.data.metrics` as {symbol: {metric: result}} (each result: value, unit, as_of, window, source, inputs_summary, note), and the SAME order returned.
@@ -523,6 +535,7 @@ class DataClerk:
         order.status = "data_failed" if failed else "data_ready"
         return order
 
+    @traced("data_clerk.request_verification", run_type="tool")
     def request_verification(self, order: WorkOrder, now: datetime | None = None) -> WorkOrder:
         """The Data Clerk's agent call for a `verify_data` order (Critic v1 spec section 5.2, design choices entry 58): read again, from the stores, what a recommendation rests on, and put the answer on
         `order.data.verification`; the SAME order is returned. `order.verify` says what (`verify_verification_request` is the check):
@@ -590,14 +603,16 @@ class DataClerk:
 
     # ---------------------------------------------------------------- a phrase to companies, and the data for them (design choices entry 53)
 
+    @traced("data_clerk.find_companies")
     def find_companies(self, phrase: str, count: int = 10, today: date | None = None) -> dict:
         """Which listed companies belong to an industry or a theme ("Pizza"): the Data Clerk's model PROPOSES brands and the companies that own them, and CODE turns every proposal into a real
         ticker or says it cannot. The model's memory is only the list of names; it supplies no ticker that is used, no number and no evidence (every score still comes from bars, filings and news).
 
         Each proposal ({brand, parent, ticker}) is resolved in this order, the first that works winning: the parent's name by `symbols.find_company` (the same words as a Finnhub listing, generic
         company words ignored: "Domino's Pizza" is "Domino's Pizza Inc"); the brand's name the same way; the start of a listed name when exactly one listing starts with it
-        (`resolve_company`: "Papa John's" is "Papa John's International"); the model's ticker hint, only if Finnhub has that ticker AND every distinctive word of one of the two names is in the other. A proposal with no parent is private (or unsure): listed as not scored. Tickers the stored market news ties to the phrase (`discover_tickers`, free) are added.
-        Returns {phrase, companies: [{brand, parent, symbol, company, public, how, note}], sector_etf (one of the 11, or None), notes, run}; never raises for a model or lookup failure: it is in `notes`."""
+        (`resolve_company`: "Papa John's" is "Papa John's International"); the model's ticker hint, only if Finnhub has that ticker AND every distinctive word of one of the two names is in the other. A proposal with no parent is private (or unsure): listed as not scored. Tickers the stored market news ties to the phrase (`discover_tickers`, free) with at least 3 articles are CANDIDATES, and a candidate the model did not propose is added only when the Data Clerk's model
+        confirms that the company belongs to the phrase (`_confirmed_by_news`, entry 120: one extra model call, fail closed; a company only mentioned next to the theme is left out, with its reason in `notes`).
+        Returns {phrase, companies: [{brand, parent, symbol, company, public, how, note}], sector_etf (one of the 11, or None), notes, run, membership (the run of the confirming call, None when there was none)}; never raises for a model or lookup failure: it is in `notes`."""
         from prometheus.agents.advisor.calls import new_run
         from prometheus.agents.data_clerk.metrics_catalog import sector_etfs
         text = " ".join(phrase.split()) if isinstance(phrase, str) else ""
@@ -607,7 +622,7 @@ class DataClerk:
             raise ValueError("count must be a whole number from 1 to 20")
         self.symbol_search = self._paced(self.symbol_search or symbols.search_finnhub)
         run = new_run("companies", self.model)
-        out = {"phrase": text, "companies": [], "sector_etf": None, "notes": [], "run": run}
+        out = {"phrase": text, "companies": [], "sector_etf": None, "notes": [], "run": run, "membership": None}
         reply = self._propose(text, count, today, run)
         if reply is None:
             out["notes"].append(run["error"])
@@ -618,14 +633,62 @@ class DataClerk:
                 if isinstance(proposal, dict):
                     out["companies"].append(self._resolve_proposal(proposal, out["notes"]))
         try:
-            for row in self.tools.discover_tickers(text, from_date=30, top=10)["tickers"]:
-                if row.get("articles", 0) >= 3 and row.get("symbol") not in {c["symbol"] for c in out["companies"]}:
-                    out["companies"].append({"brand": row["symbol"], "parent": None, "symbol": row["symbol"], "company": None, "public": True, "how": "stored market news", "note": f"{row['articles']} stored articles"})
+            proposed = {c["symbol"] for c in out["companies"]}
+            news = list({row["symbol"]: row for row in self.tools.discover_tickers(text, from_date=30, top=10)["tickers"] if row.get("articles", 0) >= 3 and row.get("symbol") not in proposed}.values())
         except Exception as error:  # the stored market news cannot be read: the model's list stands alone
             out["notes"].append(f"stored-news discovery failed ({type(error).__name__})")
+            news = []
+        if news:
+            out["companies"].extend(self._confirmed_by_news(text, news, today, out))
         seen = set()
         out["companies"] = [c for c in out["companies"] if not (c["symbol"] and (c["symbol"] in seen or seen.add(c["symbol"])))]
         return out
+
+    def _confirmed_by_news(self, text: str, news: list[dict], today: date | None, out: dict) -> list[dict]:
+        """The companies of the stored market news (`news`: the rows of `discover_tickers`, none of them proposed) that BELONG to the phrase (entry 120, design/theme_membership_spec.md). A news article names a company for many reasons
+        (a headline about oil prices names Procter & Gamble), so the Data Clerk's model is asked ONCE, for all of them: for each ticker, the directory's own name for the company and the top headline the discovery found; its answer is
+        {"members": [{symbol, belongs, reason}]} and CODE checks the form. FAIL CLOSED: a ticker the directory does not name is never sent; a symbol that was not sent is ignored; a ticker the answer leaves out, a `belongs` that is
+        not true or false, or no usable answer at all adds nothing (the model's own proposals stand alone), and `out["notes"]` says why. A company the model refuses is a note with its reason, never a candidate.
+        The call is `out["membership"]` (the run: model, tokens, error). Returns the rows to add: {brand, parent, symbol, company, public, how, note}."""
+        from prometheus.agents.advisor.calls import ask_object, new_run
+        notes = out["notes"]
+        asked = []
+        for row in news:
+            symbol = row["symbol"]
+            try:
+                listed = symbols.find_symbol(symbol, self.symbol_search)
+            except symbols.SymbolLookupError as error:
+                notes.append(f"{symbol}: in the news for {text!r} but left out: the symbol lookup failed ({getattr(error, 'reason', error)})")
+                continue
+            if listed is None:
+                notes.append(f"{symbol}: in the news for {text!r} but left out: no company of that symbol in Finnhub's directory")
+                continue
+            headlines = [h for h in row.get("headlines") or [] if isinstance(h, str) and h.strip()]
+            asked.append({"symbol": symbol, "company": " ".join(listed.company.split())[:80], "headline": " ".join(headlines[0].split())[:200] if headlines else ""})
+        if not asked:
+            return []
+        run = new_run("theme_members", self.model)
+        out["membership"] = run
+        reply = ask_object(self.model, [SystemMessage(content=theme_members_prompt(today)), HumanMessage(content=theme_members_question(text, asked))], run, "members", THEME_MEMBERS_RETRY)
+        if reply is None:
+            notes.append(f"the stored news names {', '.join(a['symbol'] for a in asked)} for {text!r}, but none was added: the model could not confirm that they belong ({run['error']})")
+            return []
+        verdicts = {}
+        for item in reply["members"]:
+            if isinstance(item, dict) and isinstance(item.get("symbol"), str) and item["symbol"].strip().upper() in {a["symbol"] for a in asked} and item["symbol"].strip().upper() not in verdicts:
+                verdicts[item["symbol"].strip().upper()] = item
+        added, count = [], {row["symbol"]: row["articles"] for row in news}
+        for entry in asked:
+            symbol, item = entry["symbol"], verdicts.get(entry["symbol"])
+            name = f"{symbol} ({entry['company']})"
+            reason = " ".join(item["reason"].split())[:200] if item is not None and isinstance(item.get("reason"), str) and item["reason"].strip() else "no reason given"
+            if item is None or not isinstance(item.get("belongs"), bool):
+                notes.append(f"{name}: in the news for {text!r} but left out: the model did not say whether it belongs")
+            elif not item["belongs"]:
+                notes.append(f"{name}: in the news for {text!r} but not in the theme: {reason}")
+            else:
+                added.append({"brand": symbol, "parent": None, "symbol": symbol, "company": entry["company"], "public": True, "how": NEWS_ADDED, "note": f"{count[symbol]} stored articles; the model says it belongs: {reason}"})
+        return added
 
     def _propose(self, text: str, count: int, today: date | None, run: dict) -> dict | None:
         """The proposal step: the Data Clerk's model names up to `count` companies for a phrase ({brand, parent, ticker} each, and a sector fund), in the one JSON-with-a-retry loop of the Advisor's calls
@@ -694,6 +757,7 @@ class DataClerk:
             row["note"] = f"the model guessed {hint}; the lookup says {found.symbol}"
         return row
 
+    @traced("data_clerk.refresh_data")
     def refresh_data(self, symbols_: list[str], news_days: int = 14, filings_days: int = 365, bars_days: int = 400, end: date | None = None, bars_for: list[str] | None = None) -> list[dict]:
         """Fetch what the Advisor needs for these symbols, with the PAID APIs, and say what happened to each step (only when the Data Clerk was built with `allow_fetch`: otherwise nothing is
         fetched and the one entry says so). For SPY, the 11 sector ETFs and every symbol: the daily bars (`DataToolbox.fetch_daily_bars`, one call each, Massive REST). For each symbol: its news
@@ -807,6 +871,8 @@ class DataClerk:
                 outcome[m.tool_call_id] = ("limit" if text.startswith("Limit reached") else "invalid" if text.startswith("Invalid arguments")
                                            else "error" if m.status == "error" else "ok")
                 hits = (m.artifact or {}).get("hits", []) if isinstance(m.artifact, dict) else []
+                if isinstance(m.artifact, dict):
+                    result.security_dropped.extend(d for d in m.artifact.get("security_dropped", []) if d not in result.security_dropped)
                 for h in hits:
                     if not any(s["chunk_id"] == h["chunk_id"] for s in result.sources):
                         result.sources.append(h)
@@ -835,6 +901,8 @@ class DataClerk:
             result.notes.append(f"a limit stopped {len(budget.stopped)} tool call(s): " + "; ".join(sorted(set(budget.stopped)))[:240])
         if forced:
             result.notes.append("the last turn was without tools")
+        if result.security_dropped:
+            result.notes.append(f"{len(result.security_dropped)} retrieved document(s) were held back by the security screen before anything read them")
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -36,8 +36,9 @@ def utc_now() -> str:
 
 
 class Emitter:
-    def __init__(self, run: Run):
+    def __init__(self, run: Run, guard=None, account_id=None):
         self.run = run
+        self.guard, self.account_id = guard, account_id         # the security layer's door for the run's last message (entry 116): None (a replay) shows the text as it is
         self.last_states: dict[str, tuple] = {}
         self.before_account: dict | None = None
         self.last_account: dict | None = None
@@ -90,7 +91,9 @@ class Emitter:
 
     def finished(self, status: str, headline: str, reasons: list[str], path: list[str], seconds: dict, total: float, agent: str = "account_manager") -> None:
         """The end of a run. The Activity feed gets its LAST LINE first: how the run ended and why (the headline, and under it every reason the headline does not already hold), so that the feed never just stops and
-        the user never has to guess (a refused order once ended with nothing in the feed). The user talks to the Account Manager, so the line is its own unless the caller says otherwise."""
+        the user never has to guess (a refused order once ended with nothing in the feed). The user talks to the Account Manager, so the line is its own unless the caller says otherwise. The headline and the reasons are the run's
+        FINAL MESSAGE: they go through the security layer first (`views.screened`), which redacts a secret and another account's number."""
+        headline, reasons = views.screened(headline, self.guard, self.account_id), [views.screened(reason, self.guard, self.account_id) for reason in reasons]
         more = [reason for reason in reasons if reason and reason not in headline]
         self.log(agent, "\n".join([headline, *[f"  - {reason}" for reason in more]]), LEVEL_OF_STATUS.get(status, "info"), block=bool(more))
         self.run.emit("run_finished", {"status": status, "headline": headline, "reasons": reasons, "path": path, "seconds": seconds, "total_seconds": round(total, 1)})

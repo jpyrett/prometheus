@@ -77,6 +77,7 @@ from prometheus.agents.account_manager.config import AccountManagerConfig, load_
 from prometheus.common import shares as sh
 from prometheus.common.money import CENT, NonNegativeMoney, Price, exact, Money
 from prometheus.common.portfolio import Portfolio, trade_amount
+from prometheus.common.trace import traced
 from prometheus.tools import trading_math as tm
 
 CAP_NAMES = ("money", "budget")                                    # the pools: the order is the order of a tie
@@ -149,6 +150,7 @@ def pot_of(cash, budget=None) -> Decimal:
     return pot.quantize(CENT, rounding=ROUND_DOWN)
 
 
+@traced("account_manager.size_purchases")
 def size_purchases(purchases: list[Purchase], cash: Decimal, config: AccountManagerConfig | None = None, allocation: str | None = None, budget: Decimal | None = None, wanted: dict[str, Decimal] | None = None,
                    fractional: bool = False, fractional_leftover: bool = False) -> list[Sized]:
     """The shares for each purchase (see the module text), one `Sized` for each, in the order given. `cash` is what may be spent in all (the free cash, or more when the caller has the money raised), `config` `load_config()`
@@ -370,6 +372,7 @@ def equity_of(portfolio: Portfolio, prices: dict[str, Decimal]) -> tuple[Decimal
     return (value if value > 0 else None), (basis if value > 0 else "the account holds no cash and no holdings")
 
 
+@traced("account_manager.funds_check")
 def funds_check(cost: Decimal, portfolio: Portfolio, prices: dict[str, Decimal], today: date) -> tuple[bool, str]:
     """Whether the money for `cost` exists: free cash, or free cash plus what could be sold from the holdings that are in profit and sellable today (RaiseFunds' default rules: only holdings in the green, and one share of
     every holding is kept). A FLAG for the Account Manager: it does not run the tree of thoughts and plans no sale. A holding with no price in `prices` cannot be known to be in profit and is not counted (the note names it).
