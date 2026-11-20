@@ -1,0 +1,270 @@
+<<<PRESS_RELEASE>>>
+id: 996e71b0b78c65ad
+symbol: KO
+published_utc: 2025-12-10T17:15:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-ceo-succession-plan-chief-operating-officer-henrique
+headline: The Coca-Cola Company Announces CEO Succession Plan; Chief Operating Officer Henrique Braun to Succeed James Quincey as CEO in 2026
+<<<TEXT>>>
+The Coca-Cola Company today announced that its board of directors has elected Executive Vice President and Chief Operating Officer Henrique Braun as CEO, effective March 31, 2026. Braun will succeed James Quincey, who will transition to Executive Chairman after serving as CEO for nine years. Henrique Braun has been elected to become the next CEO of The...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 299062e7dcb1c582
+symbol: KO
+published_utc: 2025-12-16T08:00:00Z
+url: https://www.nasdaq.com/press-release/fifa-world-cuptm-trophy-tour-coca-cola-begin-global-journey-ahead-fifa-world-cup
+headline: FIFA World Cup™ Trophy Tour by Coca-Cola to Begin Global Journey Ahead of FIFA World Cup 2026™
+<<<TEXT>>>
+The Coca-Cola Company and FIFA are kicking off the sixth FIFA World Cup™ Trophy Tour by Coca-Cola, giving thousands of fans across the globe the opportunity to see the original FIFA World Cup™ Trophy ahead of FIFA World Cup 2026™. FIFA World Cup 2026 is set to be the biggest yet— spanning three host nations, Canada, Mexico and the United States, with more teams, more...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 986186c72e72b54c
+symbol: KO
+published_utc: 2026-01-13T10:00:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-timing-fourth-quarter-and-full-year-2025-earnings-release
+headline: The Coca-Cola Company Announces Timing of Fourth Quarter and Full Year 2025 Earnings Release
+<<<TEXT>>>
+The Coca-Cola Company today announced it will release fourth quarter and full year 2025 financial results Feb. 10 before the New York Stock Exchange opens. The company also announced that its CEO-elect, Executive Vice President and Chief Operating Officer Henrique Braun, and President and Chief Financial Officer John Murphy will present at 10 a.m. ET Feb. 17 at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c94465fab5f0e0bd
+symbol: KO
+published_utc: 2026-01-14T06:55:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-changes-operational-leadership-and-creation-new
+headline: The Coca-Cola Company Announces Changes in Operational Leadership and Creation of New Enterprise Role to Accelerate Digital Transformation
+<<<TEXT>>>
+The Coca-Cola Company today announced a series of leadership changes designed to bring the business closer to consumers and enable faster technology adoption across the enterprise, unlocking future growth. As announced December 11, 2025, Henrique Braun, currently Executive Vice President and Chief Operating Officer, will become CEO effective March 31,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d8d6f317061bd4fa
+symbol: KO
+published_utc: 2026-02-10T06:55:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-reports-fourth-quarter-and-full-year-2025-results-2026-02-10
+headline: Coca-Cola Reports Fourth Quarter and Full Year 2025 Results
+<<<TEXT>>>
+The Coca-Cola Company today reported fourth quarter and full year 2025 results." I’ m encouraged by our performance in 2025 which showed both the resilience and momentum that define our business," said James Quincey, Chairman and CEO of The Coca-Cola Company." Looking ahead, we will focus on executing our strategy even better and positioning our system for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dec5a7c90d45e002
+symbol: KO
+published_utc: 2026-02-19T14:00:00Z
+url: https://www.nasdaq.com/press-release/board-directors-coca-cola-company-elects-new-officer-and-approves-64th-consecutive
+headline: Board of Directors of The Coca-Cola Company Elects New Officer and Approves 64th Consecutive Annual Dividend Increase
+<<<TEXT>>>
+The Board of Directors of The Coca-Cola Company today announced the election of a new company officer and the approval of the company’ s 64 th consecutive annual dividend increase. The company returned $8.8 billion in dividends to shareowners in 2025, bringing the total amount of dividends paid to shareowners since Jan. 1, 2010, to $101.9 billion.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d0667dff2fa17d85
+symbol: KO
+published_utc: 2026-02-25T10:00:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-participation-citi-2026-global-consumer-retail-conference
+headline: The Coca-Cola Company Announces Participation in Citi 2026 Global Consumer & Retail Conference
+<<<TEXT>>>
+The Coca-Cola Company announced today that John Murphy, President and Chief Financial Officer, will present at the Citi 2026 Global Consumer& Retail Conference March 9 at 8 a.m. ET. The Coca-Cola Company is a total beverage company with products sold in more than 200 countries and territories. Our water, sports, coffee and tea brands include Dasani, smartwater,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e8729715ce210123
+symbol: KO
+published_utc: 2026-02-26T11:10:00Z
+url: https://www.nasdaq.com/press-release/hard-rock-international-and-coca-cola-create-women-empower-series-celebrate
+headline: Hard Rock International and Coca-Cola Create 'Women Empower' Series, Celebrate International Women's Month with Special Performances and Offerings Through March
+<<<TEXT>>>
+--Hard Rock International and long-time partner Coca-Cola are championing women in music with a' Women Empower' content series and related activations throughout March as part of Hard Rock's annual International Women's Month celebrations.  "Music pulses through every guest experience at Hard Rock so we are happy to pull this thread through in this year's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2b3a6f156b4dd3e0
+symbol: KO
+published_utc: 2026-03-16T13:30:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-maria-elena-lagomasino-will-conclude-her-service-board
+headline: The Coca-Cola Company Announces Maria Elena Lagomasino Will Conclude Her Service on the Board of Directors
+<<<TEXT>>>
+The Coca-Cola Company today announced that, in accordance with the company’ s corporate governance guidelines, Maria Elena Lagomasino will not be renominated for election and will retire from the board in April after 18 years of service. "I know I speak for many people at our company in thanking Mel for her service to Coca-Cola," said James Quincey, Chairman and CEO...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3c7bd62abd32a56d
+symbol: KO
+published_utc: 2026-03-17T09:30:00Z
+url: https://www.nasdaq.com/press-release/nba-and-coca-cola-company-announce-multiyear-global-partnership-2026-03-17
+headline: NBA and The Coca-Cola Company Announce Multiyear Global Partnership
+<<<TEXT>>>
+The National Basketball Association and The Coca-Cola Company today announced a new global marketing partnership, bringing Sprite ® back as the league’ s Official Global Soft Drink Partner. The National Basketball Association and The Coca-Cola Company announce a new global marketing partnership, bringing Sprite ® back as the league’ s Official Global...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 959f88419af06ac9
+symbol: KO
+published_utc: 2026-03-27T13:00:00Z
+url: https://www.nasdaq.com/press-release/fifa-world-cup-2026tm-trophy-tour-coca-cola-arrive-kansas-city-missouri-2026-03-27
+headline: FIFA World Cup 2026™ Trophy Tour by Coca-Cola to Arrive in Kansas City, Missouri
+<<<TEXT>>>
+The Coca-Cola Company invites fans in Kansas City to see the most coveted Trophy in the world ahead of FIFA World Cup 2026™. The FIFA World Cup 2026™ Trophy Tour by Coca-Cola will be open to the public outside of the entrance to Kansas City Live! This year’ s tour offers fans an incredible opportunity to experience the thrill and connection of football up close," said...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 00334cc8999da990
+symbol: KO
+published_utc: 2026-03-27T13:00:00Z
+url: https://www.nasdaq.com/press-release/fifa-world-cup-2026tm-trophy-tour-coca-cola-arrive-st-louis-missouri-2026-03-27
+headline: FIFA World Cup 2026™ Trophy Tour by Coca-Cola to Arrive in St. Louis, Missouri
+<<<TEXT>>>
+The Coca-Cola Company invites fans in Kansas City to see the most coveted Trophy in the world ahead of FIFA World Cup 2026™. The FIFA World Cup 2026™ Trophy Tour by Coca-Cola will be open to the public at the Green Space at Westport Plaza April 17, 2026, for fans to experience fútbol's most desired prize, the FIFA World Cup™ Original Trophy. This year’ s tour offers fans...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f0f71040a6b03e25
+symbol: KO
+published_utc: 2026-03-31T10:00:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-timing-first-quarter-2026-earnings-release-2026-03-31
+headline: The Coca-Cola Company Announces Timing of First Quarter 2026 Earnings Release
+<<<TEXT>>>
+The Coca-Cola Company today announced it will release first quarter 2026 financial results April 28 before the New York Stock Exchange opens. The Coca-Cola Company is a total beverage company with products sold in more than 200 countries and territories. Our water, sports, coffee and tea brands include Dasani, smartwater, vitaminwater, Topo Chico, BODYARMOR,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9a72ead134f428f6
+symbol: KO
+published_utc: 2026-04-08T11:23:00Z
+url: https://www.nasdaq.com/press-release/fifa-world-cup-2026tm-trophy-tour-coca-cola-2026-04-08
+headline: The FIFA World Cup 2026™ Trophy Tour by Coca-Cola
+<<<TEXT>>>
+The FIFA World Cup™ Original Trophy Is Coming to St. Louis, Missouri. As a long-standing partner of FIFA, Coca-Cola is proud to give fans across the globe the once-in-a-lifetime opportunity to see the original FIFA World Cup Trophy, the most coveted trophy in the world, up close ahead of the highly anticipated FIFA World Cup 2026™. FIFA World Cup 2026™ is set to be the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6834ce5776ab61fc
+symbol: KO
+published_utc: 2026-04-14T06:55:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-selects-new-global-chief-people-officer-2026-04-14
+headline: The Coca-Cola Company Selects New Global Chief People Officer
+<<<TEXT>>>
+The Coca-Cola Company today announced that Tapaswee Chandele will become global chief people officer, succeeding Lisa Chang, who will step down after a seven-year tenure. Chandele serves on the board of Hindustan Coca-Cola Beverages in India. Chandele earned an MBA in human resources and industrial relations from Symbiosis Institute of Business...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f9ae8401eac08542
+symbol: KO
+published_utc: 2026-04-28T06:55:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-reports-first-quarter-2026-results-and-updates-full-year-guidance-2026-04
+headline: Coca-Cola Reports First Quarter 2026 Results and Updates Full Year Guidance
+<<<TEXT>>>
+The Coca-Cola Company today reported first quarter 2026 results." We’ ve had a strong start to the year," said Henrique Braun, CEO of The Coca-Cola Company." Our performance this quarter reflects our unwavering focus on staying close to the consumer, executing locally and managing complexity. Comparable operating margin expansion was driven by organic revenue...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5c42c3c36e7fcf10
+symbol: KO
+published_utc: 2026-04-30T14:00:00Z
+url: https://www.nasdaq.com/press-release/board-directors-coca-cola-company-elects-two-new-officers-and-declares-regular
+headline: Board of Directors of The Coca-Cola Company Elects Two New Officers and Declares Regular Quarterly Dividend
+<<<TEXT>>>
+The Board of Directors of The Coca-Cola Company today announced the election of two new company officers and the approval of the company’ s regular quarterly dividend. The company today declared a regular quarterly dividend of 53 cents per common share, payable July 1 to shareowners of record of the company as of the close of business June 15.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b864d8e080e33ac9
+symbol: KO
+published_utc: 2026-05-19T09:30:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-participation-dbaccess-global-consumer-conference-2026
+headline: The Coca-Cola Company Announces Participation in dbAccess Global Consumer Conference 2026
+<<<TEXT>>>
+The Coca-Cola Company announced today that John Murphy, President and Chief Financial Officer, will present at the dbAccess Global Consumer Conference June 4 at 11 a.m. CEST/ 5 a.m. ET. The Coca-Cola Company is a total beverage company with products sold in more than 200 countries and territories. Our water, sports, coffee and tea brands include Dasani, smartwater,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c5024538d42baf8e
+symbol: KO
+published_utc: 2026-06-01T19:00:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-exploring-potential-public-listing-india-hindustan-coca-cola
+headline: The Coca-Cola Company Exploring Potential Public Listing in India for Hindustan Coca-Cola Holdings Pvt. Ltd., Parent Company of its Largest Bottler in India
+<<<TEXT>>>
+The Coca-Cola Company announced today it is exploring a potential public listing in India of Hindustan Coca-Cola Holdings Pvt. Ltd., the parent company of the largest Coca-Cola bottler in India, Hindustan Coca-Cola Beverages Pvt. Ltd., in 2027, and the sale of a portion of its shareholding in HCCH in connection with the listing. In July 2025, The Coca-Cola...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 88228dcedf406512
+symbol: KO
+published_utc: 2026-06-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/smartwater-expands-wellness-footprint-official-hydration-partner-pvolve-2026-06-15
+headline: smartwater Expands Wellness Footprint as Official Hydration Partner of PVOLVE
+<<<TEXT>>>
+The collaboration reflects a more integrated approach to wellness where hydration is part of a routine— not an afterthought— and builds on smartwater's creative campaign starring Jennifer Aniston. Filmed inside PVOLVE's West Hollywood studio, the campaign captures Aniston in her real training environment alongside longtime coach and PVOLVE's VP of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f1e1ec1dd97827ca
+symbol: KO
+published_utc: 2026-06-25T16:15:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-leadership-transition-north-america-operating-unit-2026
+headline: The Coca-Cola Company Announces Leadership Transition for North America Operating Unit
+<<<TEXT>>>
+The Coca-Cola Company today announced that Jennifer Mann will step down from her role as EVP and President, North America Operating Unit effective Aug. 1, at which time John Murphy, President and Chief Financial Officer, will assume responsibility for the North America Operating Unit on an interim basis. "I am grateful to Jennifer for her tremendous...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 77ce41f984eb6a2c
+symbol: KO
+published_utc: 2026-06-29T11:00:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-timing-second-quarter-2026-earnings-release-2026-06-29
+headline: The Coca-Cola Company Announces Timing of Second Quarter 2026 Earnings Release
+<<<TEXT>>>
+The Coca-Cola Company today announced it will release second quarter 2026 financial results July 28 before the New York Stock Exchange opens. The release will be followed by an investor conference call at 8:30 a.m. ET to discuss the results. The company invites investors to join a webcast at www.cocacolacompany.com/investors.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 14fd580f396663d2
+symbol: KO
+published_utc: 2026-06-30T09:00:00Z
+url: https://www.nasdaq.com/press-release/coca-colar-announces-all-star-lineup-and-cultural-experiences-2026-essence-festival
+headline: Coca-Cola® Announces All-Star Lineup and Cultural Experiences for the 2026 Essence Festival of Culture®
+<<<TEXT>>>
+Coca-Cola ® today announced its entertainment lineup and cultural programming for the 2026 ESSENCE Festival of Culture ®, taking place July 3-5, 2026, in New Orleans. Celebrating its 31 st consecutive year as a festival partner, Coca-Cola will feature performances from rising R&B star, Destin Conrad, chart-topping performer, Coi Leray, and Grammy- nominated...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d659b2edf6e4f283
+symbol: KO
+published_utc: 2026-07-01T07:00:00Z
+url: https://www.nasdaq.com/press-release/iconic-pairing-marriott-international-and-coca-cola-company-come-together-strategic
+headline: An Iconic Pairing: Marriott International and The Coca‑Cola Company Come Together in Strategic Beverage Agreement
+<<<TEXT>>>
+BETHESDA, Md. and ATLANTA, July 1, 2026/ PRNewswire/-- Marriott International, Inc. and The Coca‑ Cola Company today announced a global agreement that will expand choice and elevate the guest experience across Marriott's portfolio, bringing The Coca‑ Cola Company's brands to hotels around the world.  "This agreement brings together two iconic brands with a shared...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4c6073cdbbb4551e
+symbol: KO
+published_utc: 2026-07-09T10:00:00Z
+url: https://www.nasdaq.com/press-release/my-code-and-vitaminwater-launch-neighborhue-still-color-celebrating-muralists-shaping
+headline: My Code and vitaminwater Launch Neighborhue: Still in Color, Celebrating the Muralists Shaping Community and Identity Across America
+<<<TEXT>>>
+From New York City to Orlando, Florida, the series spotlights muralists whose work transforms public spaces into cultural landmarks while reflecting the communities that shape them.  "We believe creativity is a powerful force for connection and self-expression, and the response to the first season of Neighborhue reinforced just how deeply people connect...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c52a8f03d7a14152
+symbol: KO
+published_utc: 2026-07-15T14:00:00Z
+url: https://www.nasdaq.com/press-release/board-directors-coca-cola-company-elects-new-officer-and-declares-regular-quarterly
+headline: Board of Directors of The Coca-Cola Company Elects New Officer and Declares Regular Quarterly Dividend
+<<<TEXT>>>
+The Board of Directors of The Coca-Cola Company today announced the election of a new company officer and the approval of the company’ s regular quarterly dividend. Hyldebrandt began his career as an auditor with KPMG in his native Denmark. The company today declared a regular quarterly dividend of 53 cents per common share, payable Oct. 1 to shareowners of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 22d3d6fae69a2059
+symbol: KO
+published_utc: 2026-07-16T16:15:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-technology-disruption-involving-fairlife-operations-2026
+headline: The Coca-Cola Company Announces Technology Disruption Involving fairlife Operations
+<<<TEXT>>>
+The Coca-Cola Company today announced that fairlife, LLC, a dairy company owned by Coca-Cola, identified unauthorized access by a third party to a portion of its systems, including its production-related systems, in connection with a ransomware event. After detecting the issue, the company promptly activated its incident response and business continuity...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5c8d462995d701ba
+symbol: KO
+published_utc: 2026-07-27T06:55:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-company-announces-significant-progress-restoring-fairlife-operations
+headline: The Coca-Cola Company Announces Significant Progress in Restoring fairlife Operations Following Technology Disruption
+<<<TEXT>>>
+The Coca-Cola Company today announced that fairlife, LLC, a dairy company owned by Coca-Cola, has resumed the majority of production at its four facilities in the United States. The company previously disclosed that fairlife experienced a ransomware event. This event involved access by an unauthorized third party to a portion of the company’ s systems and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4fa68f409dc5ef96
+symbol: KO
+published_utc: 2026-07-28T06:55:00Z
+url: https://www.nasdaq.com/press-release/coca-cola-reports-second-quarter-2026-results-and-raises-full-year-guidance-2026-07
+headline: Coca-Cola Reports Second Quarter 2026 Results and Raises Full Year Guidance
+<<<TEXT>>>
+The Coca-Cola Company today reported second quarter 2026 results." We delivered another strong quarter by staying close to the changing needs of our consumers and customers," said Henrique Braun, CEO of The Coca-Cola Company." While we continue to see a dynamic consumer landscape, we leveraged our powerful brands and system to gain value share, delivering...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a43c4801f7262800
+symbol: KO
+published_utc: 2026-07-28T08:29:00Z
+url: https://www.nasdaq.com/press-release/glenstar-provides-review-and-update-wildhorse-project-following-completion-phase-1
+headline: Glenstar Provides Review and Update of the Wildhorse Project Following Completion of Phase 1 Drill Program
+<<<TEXT>>>
+Glenstar Minerals Inc. is pleased to provide an update on the progress of exploration activities at its Wildhorse Project, located in Mineral County, Nevada. Glenstar initiated rock chip sampling and geological mapping of three zones of known outcropping mineralization at the Wildhorse Project in June 2025. The work builds upon the Company's previous...
+<<<END>>>

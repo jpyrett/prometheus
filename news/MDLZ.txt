@@ -1,0 +1,405 @@
+<<<ARTICLE>>>
+id: finnhub:143807382
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:54:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=40904f13dcbff3856d52c44aff394a2e0e3f6c299e9de5e4fe87ed42368614b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Albertsons names new CFO
+<<<SUMMARY>>>
+Andrew Murray will take over the position on Jan. 17
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693968
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T21:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd434ebfc1bc8c8dee5669aa31b25a18714e7bf73bad5a7850b1d54c3c9df920
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Albertsons® Companies Names Andrew Murray Chief Financial Officer
+<<<SUMMARY>>>
+BOISE, Idaho, November 10, 2026--Albertsons Companies announced that Andrew Murray will join the company as Chief Financial Officer, effective Jan. 17, 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692827
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:00:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=baa79f8b91fa2eb2eb1ec30c8e647959f7b405aa58148a64b2d2e8e0af454eaa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Better Dividend Stock: Hershey vs. Mondelez
+<<<SUMMARY>>>
+Key TakeawaysHershey yields 3. 4% and Mondelez 3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687383
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:11:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb824b9cb9a0e07a431bcf2fedd7fb511183fb6db4bb40f5e9920eb96242e79d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Accenture (ACN) Following WSIB Win Has An Undervalued Narrative To Defend
+<<<SUMMARY>>>
+Accenture (ACN) is back in focus after Ontario's Workplace Safety and Insurance Board reported that a multiyear, Accenture-led digital overhaul cut employer registration times from days to under ten minutes. Those wins with Ontario's WSIB and Mondelez come as Accenture's share price has pulled back 2.35% in the last day and 2.52% over the past week, following a sharp 30 day share price gain of 21.67% and a 90 day share price return of 41.46% that lifted momentum. At the same time, the 1 year...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686900
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:46:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4f689a410991929291ffff889dcdc809ac4e6bf154369c128da42fcd9fa4d9c8
+image_url: 
+category: company
+tickers: MDLZ
+keywords: 
+headline: 'The Trump Administration Proposed Narrowing Who’s Eligible To Receive Federal Food Assistance, A Change That Officials Estimate Could Block 6.3 Million People From Using The Supplemental Nutrition Assistance Program' - Bloomberg Law
+<<<SUMMARY>>>
+https://news.bloomberglaw.com/health-law-and-business/trump-plan-would-strip-food-aid-benefits-from-6-3-million-people
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592415
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T22:11:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8d3787cc7949dc3b7b1f865fe12d782eefd01bc979a1c559a7690a4fa31bcd55
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Why Is Everyone Ignoring Kraft Heinz Stock's High Cash Yield?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918857
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:54:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cf33e60f3f22f254186422d621265cd9f562221b6f049002fb51ae39d38f0b92
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Should You Buy Hershey Stock At This Price?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881036
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a8aebc348d36c4294ceb34656515bd60b0b2f8f81e88ab37cfb8da84c0e9b365
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Mondelez Grows 6%, Hormel Under 1%: Which To Own?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880867
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6345db0a8f24b589f3529df8480775f06bc2c3a2157ed45852836d3945c8a39
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Could PepsiCo Be The Value Stock For Your Portfolio?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882005
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:55:12Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=707c71a5df495a685ba0f7bab01cf455d0648aa9cba6f14c73e0f2177e23c319
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/458568285/image_458568285.jpg?io=getty-c-og
+category: company
+tickers: MDLZ
+keywords: 
+headline: Hershey: The Market Underestimates The Ongoing Recovery (Rating Upgrade)
+<<<SUMMARY>>>
+The bull case for Hershey: gross margins could recover if volumes stabilize in 2027, supporting a rating upgrade at a conservative valuation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878341
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:16:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=90bda6f2b35922cd96cad298b667eeb76f81b1d9619620eab712efa2862bc566
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Mondelez's Multi-Million Portfolio Shift: Unloads French Bakery and Cereal Bars Business
+<<<SUMMARY>>>
+Mondelez International, Inc. (NASDAQ:MDLZ) on Tuesday announced it would sell its French bread substitutes and cereal bars businesses to Princes Group PLC (OTC:PRNSY), an international platform in the U.K. and European food and beverage sector. The transaction involves four established French brands – Heudebert, Pelletier, Cracotte and Grany and three manufacturing facilities located in Granville, Vervins and Toulouse. The proposed acquisition strengthens Princes Group’s strategy to expand its E
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143876916
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:15:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ddf786748b624216952af333266cba4ed9cb8af3461d520756188dbfb20858e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Princes Group buys Mondelez assets in France
+<<<SUMMARY>>>
+The deal includes the Heudebert, Pelletier, Cracotte and Grany brands under which Mondelez markets products including crispbreads and cereal bars.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857694
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T02:07:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1dcb6d1bfb8dfcd4944f8c7f545676811604eb8a1557f520703f7ac8bffed29e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Accenture (ACN) Stock May Trade At A Discount On Fresh AI Outsourcing News
+<<<SUMMARY>>>
+Accenture has delivered a mixed ride for shareholders, with the stock down 24.6% over the past 5 years even as the company features heavily in headlines about AI driven consulting and digital transformation work. With the shares most recently closing at US$247.70, the key question is whether that market price lines up with what the business can generate in cash over time. A 24.6% decline over 5 years puts long term holders under pressure and makes the link between Accenture's market value...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143852434
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T23:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=856acf9edb69482f3fd09ea9ff79e4dad3a0428af8a3f80527363969c33d81d7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: 5 Consumer Staples Stocks Reaching New Highs as Markets Retreat
+<<<SUMMARY>>>
+Here are five consumer staples stocks reaching fresh 52-week highs as investors seek defensive safety and reliable dividends amid the broader market selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143847603
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T10:50:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bc389473edd041330e244f301f084f2ec0d6a47a7eb38e918248271bec568cc1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: How Many Shares of Hershey or Mondelez Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, $1,000 a month in dividends takes about 2,066 Hershey shares (about $360,000) or about 5,770 Mondelez shares (about $389,700). Hershey’s higher yield makes it about $29,700 cheaper, and its dividend used 53% of free cash flow over the last 12 months, against 70% at Mondelez.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805851
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T04:23:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d5ef87d3042a492d6c71a796060b7c86337f16b6ff6e5acbfa63ee229a3aff9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Why Mondelez Stock Stands Out As Rates Stay Higher For Longer
+<<<SUMMARY>>>
+Fed officials are again putting inflation and higher-for-longer rates at center stage, which forces every investor to rethink where reliable cash flows really matter. When borrowing costs stay elevated, companies with solid dividends and healthier balance sheets can look more attractive while weaker peers feel the squeeze. This article walks through three stocks from our U.S. Dividend and Value Stocks screener that appear closely tied to this rate story. The three stocks covered below are...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805545
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T22:16:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2585b87d3fcbac8b36a70e9ec2dca02257a102c03b2376a17198e97d71d6ea4a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: When It Comes To Oreos, Santa's Not Messing Around
+<<<SUMMARY>>>
+The Colin Jost-created spots mark the brand's first new holiday push in five years, featuring a Santa with a mean streak.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772199
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T18:06:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d8853f58a01d429d3ec39e4bb769d1c62e878acde28a4b9e395377d80eb64a8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Which Gives You More Of A Profit Rebound, Mondelez Or Hershey?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936408
+symbol: MDLZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T11:34:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=486e0fb19fd9c5404154d7e672bca9685f5eb145ec88316a06261caf798f160e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MDLZ
+keywords: 
+headline: Was Primo Brands' 50% Rebound Visible In Advance?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:28598b8ba3825b6d725c3a9a681016186d01bb170f802b95c7f809a3c22f63ff
+symbol: MDLZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T23:10:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3030705/5-consumer-staples-stocks-reaching-new-highs-as-markets-retreat?cid=CS-ZC-FT-investment_ideas-3030705
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default269.jpg
+category: 
+tickers: COST, KO, PG, MO, MDLZ, NVDA
+keywords: consumer staples, defensive stocks, market rotation, dividend stocks, tech selloff, 52-week highs
+headline: 5 Consumer Staples Stocks Reaching New Highs as Markets Retreat
+<<<SUMMARY>>>
+As technology stocks declined due to uncertainty surrounding Nvidia's earnings report and the upcoming Anthropic IPO, investors shifted toward defensive consumer staples stocks. Costco, Coca-Cola, Procter & Gamble, Altria, and Mondelez all reached fresh 52-week highs on Monday, driven by their stable demand, pricing power, and attractive dividend yields.
+<<<INSIGHTS>>>
+COST | positive | Reached 52-week high; benefits from loyal membership base and recurring revenue; announced $30-per-share special dividend ($13.3 billion) and $4 billion share repurchase program
+KO | positive | Reached 52-week high; recognized as classic defensive investment with pricing power, consistent cash flows, and 64-year dividend increase streak as a Dividend King
+PG | positive | Reached 52-week high; benefits from steady demand for essential household products; 70 consecutive years of dividend increases and 136 years of consecutive dividend payments
+MO | positive | Reached 52-week high; offers generous dividend yield over 5% with recent 4.7% quarterly payout increase; appeals to income-focused investors despite long-term volume challenges
+MDLZ | positive | Reached 52-week high; offers defensive exposure through diversified global snacking brands; dividend increased at annualized rate over 9% in last five years
+NVDA | negative | Uncertainty surrounding Q3 earnings report weighs on market sentiment; contributing to broader tech sector weakness and investor rotation away from technology stocks
+<<<END>>>

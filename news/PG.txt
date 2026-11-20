@@ -6100,3 +6100,1141 @@ AMZN | neutral | Mentioned as a key retail partner for e.l.f. Beauty distributio
 PG | neutral | Identified as a competitive threat to e.l.f. Beauty in the cosmetics market; no performance analysis provided.
 UL | neutral | Identified as a competitive threat to e.l.f. Beauty in the cosmetics market; no performance analysis provided.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922095
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T22:30:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=67a5d3be9d437380861d3d9e01fdb22a61927b759f97c5ff6f6c5a2c52f8b329
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Ken Griffin Dumps SpaceX, Amazon; Buys ARKK and Bets Big on Marvell
+<<<SUMMARY>>>
+Ken Griffin’s Citadel reshaped its $900 billion portfolio in the third quarter. It added 2,490 positions and fully exited 2,219 across 13,843 holdings, according to its latest 13F filing. The firm cut Space Exploration Technologies Corp. by 94%, Amazon.com Inc....
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918729
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:30:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=232b93b39d0b835facffdf150095a0dfb294d3444b0507510014be7e4784fe5e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Invest $25,000 in These 4 Dividend Stocks to Start Building Retirement Income
+<<<SUMMARY>>>
+Four companies with decades of dividend raises span healthcare, staples, energy and real estate, and one pays nearly triple the yield of the others. Which one carries the biggest paycheck, and what risk does each hide for new retirees?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917171
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:09:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=732a02f72e320f8710828f49c19356dfcb4b8049931ebb28494146af5f2c1e1e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Nvidia earnings call takeaways and 3 things explaining the stock's market moves
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917326
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:02:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db7f542c79c6f5d940990977ef21cbdff03c7625d7e0ef9afe2496d23c189451
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Here’s How Much Passive Income $50,000 Generates in These 4 Dividend Aristocrats
+<<<SUMMARY>>>
+Four household-name stocks have raised their dividends for 40 to 70 straight years, yet each one carries a risk that could threaten the streak. Which payout looks safest, and which check is biggest?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143914589
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T13:41:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e60b4b13100fcf5dd151608beb26bc247a580a592b2e058dcaef566231c979ec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Own P&G Stock For Safety? Watch Bond Yields
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882931
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=74bd964e88cca896180c2c7ccb56259189a1483bc8f0b48d1e701a47f686319e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Can PG's Health Care Segment Extend Its Sales Momentum Ahead?
+<<<SUMMARY>>>
+P&G's Health Care segment eyes sustained growth as improving cold and cough demand, product innovation and the Thorne acquisition create fresh opportunities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880855
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:47:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0bf17098b904e9fccce317f541c13e7b58d9a74fa20fb6213634b461d195073f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Charlie Bilello Calls Leveraged Single-Stock ETFs ‘One of the Worst Financial Innovations’
+<<<SUMMARY>>>
+More than 600 ETFs now bet on a single stock, and one market veteran says the people buying them are losing badly while the sponsors cash in. Why does a simple 10% swing quietly punish traders, and what do two Dividend Kings do differently?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880800
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:15:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef861551bd5105a1bd2927cf849864516304f8a31d7a51ed62d49cae14cc34c0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Forget SCHD: 4 Dividend Stocks Retirees Should Own Instead
+<<<SUMMARY>>>
+SCHD protects retirees from any single dividend cut, but its income has barely moved while living costs climb. Four blue-chip payers raise checks faster, and each one carries a risk that could undercut the pitch.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880857
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0f74549c3d3bb2f3c2f1e7df9a8a07cb5e6cad322942b6e3a4c4bb47f87d4469
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: From Lumberjacks to Jacked Snowmen, Old Spice Delivers 24/7 Holiday Freshness Across Six Limited Edition Holiday Scents
+<<<SUMMARY>>>
+CINCINNATI, November 17, 2026--Smellebrate the holidays with the Old Spice Holidudes Collection, a limited seasonal lineup of men’s deodorant, body wash, and 2-in-1 shampoo scents that brings the bold and unexpected spirit of winter to your grooming routine. Forget basic gingerbread and standard evergreen - Old Spice is sleighing the season with six high-performance long-lasting scents crafted to keep guys smelling legendary all season long. Designed to tackle sweater-weather sweat and odor, and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878030
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:31:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c0d82588da86f55d4f66346b00e09120e9e25692f97673db76391cf6e3490423
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 3 Bulletproof Passive Income Dividend Kings to Buy and Hold Forever
+<<<SUMMARY>>>
+Cancer drugs, detergent, and soda have funded more than 50 straight years of dividend hikes. But a talc settlement, a pending IRS ruling, and rising commodity costs test whether each payout can survive the next shock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878709
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T10:03:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ae8ab794ad5b08cd6f505408cf8cffd108ad7b477802317914bb1bcd6a939e5e
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/17/Marvell-Sign--Logo-On-Facade-Of-Marvell-.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Marvell Stock Rises as Citadel Discloses 729% Stake Boost, Slashes SpaceX, Amazon
+<<<SUMMARY>>>
+Marvell Technology shares are trading higher Tuesday after Ken Griffin’s Citadel Advisors disclosed a 729% increase in its stake in Q3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877764
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T09:51:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6054188fec1dbdcf5ba8505b603ec6f93a3f85c89020254c1c4dc0dfc54bdbe7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/17/Defensive-Stocks-Puzzle-Utilities-Health.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Wall Street Is Trading Chips for Chicken: Staples See Best Run Against Tech Since 2001
+<<<SUMMARY>>>
+Consumer staples fund XLP has beaten tech fund XLK by 39.5% in seven weeks, the widest gap since March 2001.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857675
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T02:08:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=16d7f0fc098ef229b5f77abbeb15fe9ff74c66941bc8a1a238c00e2bdec04bfa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Dividend Reliability Might Change The Case For Investing In Procter & Gamble Stock (PG)
+<<<SUMMARY>>>
+Procter & Gamble continues to draw attention for its long record of dividend reliability, with recent commentary highlighting a 70 year streak of dividend increases and a dividend that has historically been covered by free cash flow. Compared with peers facing acquisition related pressures and weaker dividend coverage, Procter & Gamble's role as a defensive household products supplier reinforces its appeal to investors focused on steady cash returns. We will now see how Procter & Gamble's...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143852434
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T23:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=856acf9edb69482f3fd09ea9ff79e4dad3a0428af8a3f80527363969c33d81d7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 5 Consumer Staples Stocks Reaching New Highs as Markets Retreat
+<<<SUMMARY>>>
+Here are five consumer staples stocks reaching fresh 52-week highs as investors seek defensive safety and reliable dividends amid the broader market selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850020
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T21:37:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d40ba7070c563d11f06cb9deafd5238cf61191eae3fafb1eec373c28c1f94130
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Stock Market Today: Dow Dives As Trump Says This On Huang; Victoria's Secret Flashes Sell Signal (Live Coverage)
+<<<SUMMARY>>>
+The Dow Jones index falls. President Trump speaks on Nvidia, Jensen Huang and Howard Lutnick. Chip plays skid.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857609
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:36:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c073735c337135254275f5275d9ff4c0cb3f56e0208a335369f819a0db8f5c97
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2199578213/image_2199578213.jpg?io=getty-c-og
+category: company
+tickers: PG
+keywords: 
+headline: The Winners Inside SCHD - November 2026
+<<<SUMMARY>>>
+The bull case for SCHD: 34 holdings screen at least 10% undervalued, with expected long-term returns above 10%; its YTD lead over SPY tops 20%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143847945
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eeda9a53afb32f15a56b35adcdbeb0d98d5c38ef70159c83072c3c28f2a9134a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Pittston Co-Packers Appoints Joseph Nickell Chief Executive Officer to Lead Next Phase of Operational Excellence and Strategic Growth
+<<<SUMMARY>>>
+Pittston Co-Packers, a U.S.-based beverage manufacturing and co-packing company, today announced the appointment of Joseph "Joey" Nickell as Chief Executive Officer, effective November 5, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877613
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T12:00:35Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=20e79e96474f2023d052f0d112f1607ed69a99e19585180b84f2faa31a8df9bc
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Defensives Lead Sectors Monday As Growth Trails
+<<<SUMMARY>>>
+Four sectors are higher and seven are lower in Monday’s regular session, with defensive sectors holding the top three positions. The leaders are clustered rather than widely separated, with the top three staying within a narrow range of one another.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840527
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T20:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ce0ee1c38ffdcc67d45007c8aa5d29591a541a4af1c90ffadded2d51e1d714ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Why Investors Should Own Businesses That Can Win Under Any Administration
+<<<SUMMARY>>>
+The United States holds elections every two years, which is too short a period to justify a long-term investment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840462
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T19:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=978cd1b6a9ccf71c5051798ba5607487ef2fea270cfd8803a15fb355241b1bae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: As Plastics, Package Makers Mark America Recycles Day, Hopes Run High for Action in Congress
+<<<SUMMARY>>>
+Industry groups are hoping new recycling rules make it through Congress. Critics say they’re trying to undermine state rules.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840294
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T15:00:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a418a0c6f7063cab27b7b4260af5647a80eb673317e83307635eedfc16bde675
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 4 Durable Dividend Stocks Retirees Can Count On for Passive Income
+<<<SUMMARY>>>
+One company has raised its dividend through seven decades of recessions, yet it is not the only name retirees should trust. Each of these four payers faces a real risk that could test the check, and the safest one may surprise you.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840298
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T13:50:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=90cf39df7cc4bcf98087c340fe0ac5acbebcaedb01ebcbe6898785bd50010eb8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: How Many Shares of Kimberly-Clark, Clorox or Procter & Gamble Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, a hypothetical retiree needs 2,400 Clorox shares (about $262,700), 2,344 Kimberly-Clark shares (about $256,500) or 2,759 Procter & Gamble shares (about $468,500) to collect $1,000 a month in dividends. Procter & Gamble’s check costs the most by far, but its dividend took just 67% of free cash flow over the 12 months to Sept.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840120
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4c8041df235134655254a205f529616a613247022407946faade1b0983d3f915
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Plastics, Package Makers Press Congress on Recycling Bills as Clock Ticks
+<<<SUMMARY>>>
+Industry groups are hoping new recycling rules make it through Congress. Critics say they’re trying to undermine state rules.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807425
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T21:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4b8ed5d29d778006f2cbd96b52858148266ffbc68a13170c582cb878b62a0456
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Coca-Cola and J&J Just Hit Record Highs. A 62-Year-Old Put $300,000 Into Them and Procter & Gamble in 2016. Here’s How Much the Now 72-Year-Old Gets Paid Every Single Month
+<<<SUMMARY>>>
+A 62-year-old split $300,000 across Johnson & Johnson, Procter & Gamble and Coca-Cola on Nov. 14, 2016. Ten years of dividend raises later, here is the monthly check at 72, the cash collected, what the shares are worth after Friday's record highs, the reinvested version, and the federal tax on the checks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807416
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T21:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=49f844373c18e0c81789413c860a46e23e018a1407eb78d42e64528a3f2aad3b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 5 Dividend Stocks to Buy and Hold Forever
+<<<SUMMARY>>>
+These five stocks have proven track records of dividend growth backed by attractive businesses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807149
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T14:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d771b5e388fa7f720c8571d4eac4e42b4e050ca493feb32ff9f87c7b788b250c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: 3 Consumer Compounders That Fit Warren Buffett's Playbook. I'd Hold Them Forever.
+<<<SUMMARY>>>
+Warren Buffett liked to buy and hold, which could be a good call with Coca-Cola, P&G, and, for the more aggressive, Kimberly Clark.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840461
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:41:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=461348cfd2111655d149b66cafbba5f63f119d5d53c2b0b35152dc09019272b9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Procter & Gamble vs. Genuine Parts: Both Have Raised Their Dividends 70 Years Straight. Which Would I Rather Own Now?
+<<<SUMMARY>>>
+Key TakeawaysGenuine Parts lowered its 2026 earnings guidance in October as fuel and freight costs rose, while Procter & Gamble kept its fiscal 2027 outlook after a 4% sales gain. Genuine Parts yields 3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807148
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:39:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c61a9560021c534ec799e4a7c7bf863ba1d9a961ca1143b328e9b9b5d3f11f44
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Better Dividend Stock for Retirees: Coca-Cola vs. Procter & Gamble
+<<<SUMMARY>>>
+Key TakeawaysCoca-Cola yields 2. 3% and Procter & Gamble yields 2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806074
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:00:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7f9779f971d8dc620fdc3b643c358ba3269c83c2baf60f55c16be9d284c4d18d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/13/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: PG
+keywords: 
+headline: Consumer Staples Leads Sectors As Technology Trails
+<<<SUMMARY>>>
+Six sectors are higher and five are lower in Friday&#39;s regular session, with the top three split across defensive, growth and cyclical groups. Consumer Staples sits well clear of the rest, separated by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882307
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T02:37:12Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=56993b1a21615b06ac3924d66e2e4043ef0d2708b9b4c3f99cd5fa8ae2f1f88d
+image_url: https://image.cnbcfm.com/api/v1/image/108550821-17945548481794554845-49608122090-1080pnbcnews.jpg?v=1794554847&w=1920&h=1080
+category: company
+tickers: PG
+keywords: 
+headline: Opportunities beyond the AI trade
+<<<SUMMARY>>>
+AI may still have room to run, but Will McGough, CIO of Prime Capital Financial says investors are increasingly asking about diversifying away the AI trade. He outlines some of the investment opportunities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947002
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=be95547f88c20c682a3b26b94c02418d57626889f77bfab94041a2bb521c7257
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Top Analyst Reports for Berkshire Hathaway, JPMorgan & Procter & Gamble
+<<<SUMMARY>>>
+Berkshire Hathaway, JPMorgan and Procter & Gamble benefit from strong business fundamentals, but rising costs and growth challenges create risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143945837
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T19:21:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef0120d75f7486097370e4a904999b1f055776e8a83147577176db9f52c835fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Meet Wall Street’s Safe Passive Income Dividend Stocks: 4 Companies That Keep Paying Through Downturns
+<<<SUMMARY>>>
+When recessions hit, some companies keep raising the check anyway. Three consumer giants and one regulated utility did it through 2008 and 2020, yet each carries a hidden risk that could change how safe your income really is.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143945776
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T18:00:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7142db15103cecd87c81a4ff56ae96bb9bef1a8dc3233e0102eea20c3c2bdd54
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: How Retirees Can Turn $1 Million Into Passive Income With These 5 Dividend Stocks
+<<<SUMMARY>>>
+A million dollars sounds like plenty until you need it to pay you every month. Five blue chips across five sectors split the load, but one of them carries far more weight than the rest, and that lopsidedness raises a fair question.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944459
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:06:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89e688e9bc0d91daf4526d04e3afffad7a14816adb2b12b22998270c8ceeeeae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Should You Buy Clorox Stock At This Price?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944456
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=01310c1abf7bac4b5e3caf11a977a00debb7ccb67b544901cede1aaf0e16a226
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: PG Raises Sales Outlook as Thorne Acquisition Adds Growth Potential
+<<<SUMMARY>>>
+PG raises its sales outlook following the Thorne acquisition, but unchanged organic growth guidance, rising financing costs and restructuring risks temper optimism.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944457
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:31:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ebf0b81c5e01f175e7d2664002673e09e2bf9056d675ae7dcb1d43586710c08
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Is PG Worth Buying as Growth Improves but Its Valuation Stays Rich?
+<<<SUMMARY>>>
+PG's improving organic sales, stronger volumes and healthy cash flow support growth, but premium valuation and rising costs warrant a cautious stance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944460
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0da7cc1264d15994e27ae53d5c32b7a747f1bbc859c0bbd689c5ed88e5cf45b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: KMB's Kenvue Deal: Could $2.1 Billion in Synergies Lift Earnings?
+<<<SUMMARY>>>
+Kimberly-Clark's Kenvue acquisition targets $2.1 billion in annual synergies, expanding its earnings potential, but integration costs and dilution pose near-term risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944461
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32af5a09a0b0b91d2758a6a9eb63aca9942658f33fb16a84169fd5287d149e33
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Is KMB Worth Buying as Low Valuation Meets Kenvue Integration Risk?
+<<<SUMMARY>>>
+Kimberly-Clark's discounted valuation and productivity gains offer support, but weak demand, earnings pressure and Kenvue integration risks favor a cautious stance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944458
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76cee0bdc4f9c6fe9d6ea86648a35d232b919196cc50cdef32ab97d5ffa017bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: PG Jumps 17.4% in Three Months as Investors Weigh What Comes Next
+<<<SUMMARY>>>
+PG's broad-based organic growth, strong segment performance and productivity gains fuel momentum, but cost pressures and premium valuation pose challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938764
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:47:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b8ec6fc171902043766c8fb8020c26ed7995b571c333371d0de3d5a38ed0e03
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Clorox Just Declared Another Dividend, but Its $5 Payout Faces a Debt Test
+<<<SUMMARY>>>
+Clorox keeps raising its dividend, but the cash behind it tells a different story. With new debt, a downgrade, and a leadership handoff looming, one number in the next report could reveal who is really paying for that payout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938761
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:17:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8e2b5f4f3174b5c3e37b7f98e20437efe8d93c474820eb12ef28d198b2e3dc43
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: What Is Procter & Gamble (PG) Signaling With Its Holiday Collection?
+<<<SUMMARY>>>
+Procter & Gamble (NYSE:PG) introduced a limited-edition Old Spice Holidudes Collection for the 2026 holiday season. The Holidudes range adds new seasonal scents and packaging to Old Spice products aimed at holiday shoppers. The collection is positioned as a time-limited release, designed to refresh Old Spice visibility on shelves during peak gifting months. The Old Spice Holidudes Collection launch comes against a broader backdrop of trends in P&G's men's grooming strategy that our research...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143937231
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:03:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f60a1f11fb22eba865ede618cc062f2a192a23a7d9386b8920cc6629b58efb4c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: Is P&G Stock A Bad Buy Near Its High?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936407
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T10:50:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d7b4ae0aff8a64a6e56d3613077ecccb876725b340902340758afc7d4a581046
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PG
+keywords: 
+headline: How Many Shares of Colgate-Palmolive or Procter & Gamble Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysCollecting $1,000 a month in dividends takes about 5,661 shares of Colgate-Palmolive, about $559,600 at today’s prices, or about 2,759 shares of Procter & Gamble, about $469,800. Procter & Gamble’s 2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938839
+symbol: PG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T08:25:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=bdaed39716c07cc233908365873fabea56ce83fabc7fbabf35c5a4f5b10add8b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2236859672/image_2236859672.jpg?io=getty-c-og
+category: company
+tickers: PG
+keywords: 
+headline: Safety Is Priced Like 1999, While Tech Sits At 17x
+<<<SUMMARY>>>
+Analyst sees the S&P 500 recovering to 7,600 by year-end as positioning drives the AI selloff, favoring healthcare at 19.8x as a hedge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4c55062c64b41768b214a68412fa3d0f34f543b5d547f67621c7433389760619
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T14:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/14/3-consumer-compounders-that-fit-warren-buffetts-pl/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893124%2F26_10_08-stacks-of-coins-leading-to-a-piggy-bank-_mf-dload-gettyimages-1463697016-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: KO, PG, KMB
+keywords: Warren Buffett, consumer staples, dividend stocks, Dividend Kings, long-term investing, pricing power, brand loyalty, organic sales growth
+headline: 3 Consumer Compounders That Fit Warren Buffett's Playbook. I'd Hold Them Forever.
+<<<SUMMARY>>>
+The article identifies Coca-Cola, Procter & Gamble, and Kimberly-Clark as consumer staple companies that align with Warren Buffett's investment philosophy of buying and holding quality businesses with strong pricing power, steady cash flow, and consistent dividend growth. All three are Dividend Kings with reliable earnings despite challenging consumer markets, though valuations and risk profiles vary.
+<<<INSIGHTS>>>
+KO | positive | Strong brand loyalty, impressive 7% organic sales growth despite budget-conscious consumers, Dividend King status with 50+ years of increases, and 2.2% yield. Valuation slightly elevated at 28x P/E but suitable for conservative dividend investors.
+PG | positive | Solid 4% organic sales growth, Dividend King status, 2.55% yield, and valuation at 25x P/E in line with five-year average. Differentiated by innovation-driven strategy allowing premium pricing despite tough consumer environment.
+KMB | positive | Recent Kenvue acquisition marks significant business transformation toward diversified consumer products, Dividend King with 55+ years of increases, attractive 4.66% yield, and lower 21x P/E valuation. Positioned as value option but carries higher risk due to integration uncertainty.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a5d6107d1ffda906f1ebfff1818bd810092a8f15f3a12e53e8a52868a43855a7
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T21:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/14/5-dividend-stocks-to-buy-and-hold-forever/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893431%2F26_10_08-a-wooden-percent-sign-next-to-a-hand-holding-money-_mf-dload-gettyimages-1642477285-1281x720-273823a.jpg&w=1200&op=resize
+category: 
+tickers: JNJ, MDT, PG, FRT, FRTpC, O
+keywords: dividend stocks, dividend kings, long-term investing, passive income, healthcare stocks, consumer staples, REITs, dividend yield
+headline: 5 Dividend Stocks to Buy and Hold Forever
+<<<SUMMARY>>>
+The article recommends five dividend stocks suitable for long-term buy-and-hold investors: Johnson & Johnson, Medtronic, Procter & Gamble, Federal Realty Investment Trust, and Realty Income. All five companies have strong dividend track records with at least 32 years of consecutive annual increases, combined with well-run underlying businesses that generate reliable income streams.
+<<<INSIGHTS>>>
+JNJ | positive | Dividend King with longest healthcare dividend streak, diversified business across pharmaceuticals and medical devices, recently increased full-year 2026 guidance, 1.9% yield above market average, suitable for risk-averse investors
+MDT | positive | 48 years of consecutive dividend increases approaching Dividend King status, emerging from business revamp with accelerating growth, 13.7% top-line growth in Q1 fiscal 2027, raised full-year guidance, 2.8% yield attractive for dividend investors
+PG | positive | Dividend King with 50+ annual increases, consumer staples giant with premium product positioning, demonstrated resilience against trade-down risk, 4% organic sales growth in Q1 fiscal 2027, innovation-driven business model, 2.6% yield suitable for conservative investors
+FRT | positive | Dividend King REIT with focused portfolio of 100 well-located strip malls and mixed-use properties, active asset development and redevelopment strategy, 4% yield, described as boring but reliable dividend investment
+FRTpC | positive | Dividend King REIT with focused portfolio of 100 well-located strip malls and mixed-use properties, active asset development and redevelopment strategy, 4% yield, described as boring but reliable dividend investment
+O | positive | 32 years of consecutive dividend increases, largest net lease REIT with 15,500+ globally diversified properties, net lease structure reduces expenses and risk, 5.5% yield provides high-yield foundation for passive income, growing business diversification supports future dividend growth
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ab42285a62968f30c7745e17d2ebc856dd6c8b0d86997ef3f7fc0c35f65855c5
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T20:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/15/why-investors-should-own-businesses-that-can-win-u/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893504%2F26_11_12-a-person-in-a-store-buying-paper-products-_mf-dload-gettyimages-2060276280-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: PG, FRT, FRTpC, NEE, NEEpN, NEEpS, NEEpT, NEEpU, NEEpV, NEEpW, BKH
+keywords: political cycle, long-term investing, consumer staples, REITs, utilities, dividend stocks, election cycle
+headline: Why Investors Should Own Businesses That Can Win Under Any Administration
+<<<SUMMARY>>>
+The article argues that long-term investors should focus on businesses resilient to political cycles rather than trying to time investments around elections. With U.S. elections every two years, political winds shift rapidly. The author recommends three stocks representing different sectors: Procter & Gamble (consumer staples), Federal Realty (REITs), and NextEra Energy (utilities)—all businesses whose demand remains stable regardless of which political party is in power.
+<<<INSIGHTS>>>
+PG | positive | Recommended as a Dividend King with 50+ annual dividend increases, 2.6% yield, and sells essential products (toilet paper, toothpaste) regardless of political administration. Strong organic sales growth (4%) despite consumer budget tightening demonstrates resilience and effective management.
+FRT | positive | Only Dividend King REIT with selective portfolio of ~100 premium strip-mall and mixed-use properties in wealthy areas. 4% dividend yield and long-term asset focus make it immune to short-term political cycles. Properties take years to develop, requiring multi-year planning horizons.
+FRTpC | positive | Only Dividend King REIT with selective portfolio of ~100 premium strip-mall and mixed-use properties in wealthy areas. 4% dividend yield and long-term asset focus make it immune to short-term political cycles. Properties take years to develop, requiring multi-year planning horizons.
+NEE | positive | Utility company with 31 years of consecutive dividend increases and 2.9% yield. Despite government regulation, all political parties need reliable electricity, ensuring stable relationships. Dual growth avenues in regulated and unregulated renewable power assets provide resilience.
+NEEpN | positive | Utility company with 31 years of consecutive dividend increases and 2.9% yield. Despite government regulation, all political parties need reliable electricity, ensuring stable relationships. Dual growth avenues in regulated and unregulated renewable power assets provide resilience.
+NEEpS | positive | Utility company with 31 years of consecutive dividend increases and 2.9% yield. Despite government regulation, all political parties need reliable electricity, ensuring stable relationships. Dual growth avenues in regulated and unregulated renewable power assets provide resilience.
+NEEpT | positive | Utility company with 31 years of consecutive dividend increases and 2.9% yield. Despite government regulation, all political parties need reliable electricity, ensuring stable relationships. Dual growth avenues in regulated and unregulated renewable power assets provide resilience.
+NEEpU | positive | Utility company with 31 years of consecutive dividend increases and 2.9% yield. Despite government regulation, all political parties need reliable electricity, ensuring stable relationships. Dual growth avenues in regulated and unregulated renewable power assets provide resilience.
+NEEpV | positive | Utility company with 31 years of consecutive dividend increases and 2.9% yield. Despite government regulation, all political parties need reliable electricity, ensuring stable relationships. Dual growth avenues in regulated and unregulated renewable power assets provide resilience.
+NEEpW | positive | Utility company with 31 years of consecutive dividend increases and 2.9% yield. Despite government regulation, all political parties need reliable electricity, ensuring stable relationships. Dual growth avenues in regulated and unregulated renewable power assets provide resilience.
+BKH | neutral | Mentioned as alternative Dividend King utility for investors seeking longest dividend records, but not the primary recommendation. Included for comparison rather than endorsement.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f5e74ff8c8c5094acb80ca5627f8b0b3bf93140c46aea652ab9c9d49ce520c5a
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T00:45:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/15/colgate-palmolive-vs-kimberly-clark-which-household-name-deserves-your-investment-dollars/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc6f88a5c7903b69a5aa230b4c28403d755e0066d-2410x1739.jpg&w=1200&op=resize
+category: 
+tickers: CL, KMB, WMT, PG
+keywords: dividend kings, consumer staples, valuation comparison, pet nutrition, acquisition integration, price-to-earnings ratio
+headline: Colgate-Palmolive vs. Kimberly-Clark: Which Household Name Deserves Your Investment Dollars?
+<<<SUMMARY>>>
+Colgate-Palmolive and Kimberly-Clark are both Dividend Kings with strong track records, but they differ in valuation and growth strategy. Colgate-Palmolive trades at a premium (24.3x forward P/E) with growth driven by its Hill's Pet Nutrition segment, while Kimberly-Clark offers a lower valuation (14.7x forward P/E) but faces integration challenges from its Kenvue acquisition. The choice depends on whether investors believe in Colgate's pet food expansion or Kimberly-Clark's expanded hygiene portfolio.
+<<<INSIGHTS>>>
+CL | positive | Strong global market leadership in oral care, successful Hill's Pet Nutrition segment generating $1.2B in Q3 2026 with 5.5% growth representing 22% of total sales, 64-year dividend increase streak, and diversified revenue streams position it as a reliable growth investment despite premium valuation.
+KMB | neutral | Offers attractive valuation at 14.7x forward P/E and 54-year dividend increase streak, but faces headwinds including 2.1% revenue decline in FY 2025, volatile raw material costs, and uncertainty around Kenvue acquisition synergies. The expanded product portfolio is promising but execution risk remains.
+WMT | neutral | Mentioned as a major customer for both Colgate-Palmolive (11% of net sales) and Kimberly-Clark (16% of net sales), representing significant customer concentration risk for both companies.
+PG | neutral | Identified as a constant competitive rival to Colgate-Palmolive in core markets, representing ongoing competitive pressure.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:28598b8ba3825b6d725c3a9a681016186d01bb170f802b95c7f809a3c22f63ff
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T23:10:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3030705/5-consumer-staples-stocks-reaching-new-highs-as-markets-retreat?cid=CS-ZC-FT-investment_ideas-3030705
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default269.jpg
+category: 
+tickers: COST, KO, PG, MO, MDLZ, NVDA
+keywords: consumer staples, defensive stocks, market rotation, dividend stocks, tech selloff, 52-week highs
+headline: 5 Consumer Staples Stocks Reaching New Highs as Markets Retreat
+<<<SUMMARY>>>
+As technology stocks declined due to uncertainty surrounding Nvidia's earnings report and the upcoming Anthropic IPO, investors shifted toward defensive consumer staples stocks. Costco, Coca-Cola, Procter & Gamble, Altria, and Mondelez all reached fresh 52-week highs on Monday, driven by their stable demand, pricing power, and attractive dividend yields.
+<<<INSIGHTS>>>
+COST | positive | Reached 52-week high; benefits from loyal membership base and recurring revenue; announced $30-per-share special dividend ($13.3 billion) and $4 billion share repurchase program
+KO | positive | Reached 52-week high; recognized as classic defensive investment with pricing power, consistent cash flows, and 64-year dividend increase streak as a Dividend King
+PG | positive | Reached 52-week high; benefits from steady demand for essential household products; 70 consecutive years of dividend increases and 136 years of consecutive dividend payments
+MO | positive | Reached 52-week high; offers generous dividend yield over 5% with recent 4.7% quarterly payout increase; appeals to income-focused investors despite long-term volume challenges
+MDLZ | positive | Reached 52-week high; offers defensive exposure through diversified global snacking brands; dividend increased at annualized rate over 9% in last five years
+NVDA | negative | Uncertainty surrounding Q3 earnings report weighs on market sentiment; contributing to broader tech sector weakness and investor rotation away from technology stocks
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:408e7606b8b703f7d56543ff1ade764e5858b2709eeef7e8bacf0f5a824e99e4
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T02:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/16/if-a-bear-market-is-coming-history-says-this-is-th/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893751%2F26_10_02-a-shadow-of-a-bear-looming-over-a-person-in-a-suit-_mf-dload-gettyimages-1391446079-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: O, PG, HSY, MO
+keywords: bear market, dividend investing, long-term investing, panic selling, value investing, portfolio construction, market downturns
+headline: If a Bear Market Is Coming, History Says This Is the Safest Investing Move You Can Make
+<<<SUMMARY>>>
+The article advises investors to prepare for inevitable bear markets by constructing a long-term investment plan that helps avoid panic selling. The author recommends a dividend-focused strategy with quality companies that have resilient businesses and consistent dividend growth, as this approach allows investors to focus on reliable income streams rather than volatile stock prices during downturns.
+<<<INSIGHTS>>>
+O | positive | Recommended as a core holding with a resilient business model, consistent dividend growth history, and attractive 5.52% dividend yield. Author expresses confidence in its long-term sustainability.
+PG | positive | Highlighted as a slow-and-steady business with consistent long-term growth and reliable dividend payments. Author views it as capable of overcoming business headwinds.
+HSY | positive | Included in author's portfolio as a stable, slow-and-steady business with long-term growth prospects and consistent dividend increases.
+MO | negative | Explicitly rejected multiple times due to declining core business (cigarette sales down 38% from 2021-2026). Author expresses concern about business sustainability and notes it would increase panic-selling risk during bear markets.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7b0bf10dbf5eacaa7f49dbf9067db61d2307ad4fb023f4aefa5498ab7546ff66
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T15:25:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031263/can-pg-s-health-care-segment-extend-its-sales-momentum-ahead?cid=CS-ZC-FT-analyst_blog|quick_take-3031263
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CHD, CL
+keywords: health care segment, organic sales growth, product innovation, portfolio expansion, cold and cough season, Thorne acquisition, affordability pressures, oral care, personal health care
+headline: Can PG's Health Care Segment Extend Its Sales Momentum Ahead?
+<<<SUMMARY>>>
+Procter & Gamble's Health Care segment is sustaining growth through innovation and portfolio expansion, with organic sales rising 4% in Q1 fiscal 2027. The company faces affordability pressures on premium brands but balances this with value offerings. A potential recovery in cold and cough season demand and the Thorne acquisition could provide additional growth catalysts. Competitors Church & Dwight and Colgate-Palmolive are also leveraging innovation and strong portfolios to drive health care growth.
+<<<INSIGHTS>>>
+PG | positive | P&G demonstrates resilience with 4% organic sales growth in Q1 fiscal 2027, strong innovation-led growth, and strategic acquisitions like Thorne. The company is well-positioned to benefit from potential recovery in seasonal demand and has a solid competitive positioning, though it faces affordability pressures on premium brands.
+CHD | positive | CHD is strengthening its health care presence through product innovation and portfolio optimization, with strong consumer demand for brands like THERABREATH and WATERPIK. The company's focus on distribution expansion and retail execution supports continued sales growth momentum.
+CL | positive | Colgate-Palmolive maintains global leadership in oral care with strong market shares (41.4% in toothpaste, 33.1% in manual toothbrushes). The company's emphasis on premium offerings, science-backed innovation, and emerging market opportunities support long-term sales growth prospects.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aa4b777a552066acf969c44c88220621415bf7284c566b7774e8f4abf24e95be
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032613/is-kmb-worth-buying-as-low-valuation-meets-kenvue-integration-risk?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032613
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3a/878.jpg
+category: 
+tickers: KMB, PG, HLN
+keywords: valuation discount, productivity gains, China disruption, pricing pressure, Kenvue acquisition, organic sales decline, margin compression, synergy execution
+headline: Is KMB Worth Buying as Low Valuation Meets Kenvue Integration Risk?
+<<<SUMMARY>>>
+Kimberly-Clark trades at a valuation discount (15.15X forward earnings) with strong productivity gains, but faces near-term challenges including China disruption, pricing pressure, and declining organic sales. The company's long-term prospects depend on successful Kenvue acquisition integration and synergy realization. Analysts recommend a wait-and-see approach with a Hold rating.
+<<<INSIGHTS>>>
+KMB | neutral | Mixed investment case with positive valuation support and productivity gains offset by near-term headwinds including 1.3% organic sales decline, China-related disruption (270 bps impact), margin compression, and weakening earnings estimates. Hold rating reflects dependency on Kenvue integration success and stabilization of demand trends.
+PG | neutral | Mentioned as a relevant branded-consumer competitor with similar portfolio exposure (baby, feminine, family and personal health care products). No specific analysis provided; included for competitive context.
+HLN | neutral | Referenced as a pure-play consumer health company illustrating the broader market that KMB is entering through Kenvue acquisition. Mentioned for market context rather than investment recommendation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e77598bc63affffe01c35c865f458ec8f7c2918f647858bbeb78dd515e616d8f
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032614/pg-jumps-17-4-in-three-months-as-investors-weigh-what-comes-next?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032614
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CL, KMB
+keywords: organic sales growth, margin pressures, valuation concerns, productivity savings, cost inflation, consumer staples, volume growth
+headline: PG Jumps 17.4% in Three Months as Investors Weigh What Comes Next
+<<<SUMMARY>>>
+Procter & Gamble (PG) shares gained 17.4% over three months, driven by broad-based 4% organic sales growth across all product categories and regions. However, rising input costs, margin pressures, and a premium valuation of 23.81X forward earnings raise concerns about sustainability. While productivity savings and innovation in key segments like Fabric Care and Beauty support the rally, weakness in Health Care and Grooming segments, along with $1.4 billion in expected cost pressures for fiscal 2027, temper the outlook.
+<<<INSIGHTS>>>
+PG | neutral | While PG demonstrated strong 4% organic sales growth and a 17.4% three-month share price gain, the neutral rating reflects offsetting concerns: positive factors include broad-based growth across categories/regions and productivity gains; negative factors include rising commodity/energy costs ($1.4B expected pressure), margin contraction, premium valuation (23.81X vs 21.05X sub-industry average), and weakness in select segments (Health Care, Grooming). The Zacks Rank #3 (Hold) rating supports a measured view.
+CL | positive | Colgate-Palmolive reported solid 3.6% organic sales growth and 7% Base Business EPS growth in Q3 2026, outperforming peer Kimberly-Clark's 1.3% organic sales decline, suggesting relative strength in the household and personal care sector.
+KMB | negative | Kimberly-Clark reported a 1.3% organic sales decline in Q3, underperforming peers like Colgate-Palmolive and Procter & Gamble, indicating weakness in the household and personal care segment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:259473711949c977d0a7816b655e550370363d8d1aded5af7b04d7e848c7c2f2
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:31:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032630/is-pg-worth-buying-as-growth-improves-but-its-valuation-stays-rich?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032630
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CL, KMB
+keywords: organic sales growth, volume gains, premium valuation, commodity costs, earnings growth, cash flow, consumer staples
+headline: Is PG Worth Buying as Growth Improves but Its Valuation Stays Rich?
+<<<SUMMARY>>>
+Procter & Gamble reported strong fiscal Q1 organic sales growth of 4%, driven by volume gains and broad-based growth across all product categories and regions. However, the company's premium valuation (23.81X forward earnings), rising commodity and energy costs ($1.4B headwind expected in fiscal 2027), and modest full-year earnings guidance of 0-3% growth limit near-term upside potential. Strong cash flow supports dividends and buybacks, but the investment case remains balanced.
+<<<INSIGHTS>>>
+PG | neutral | While PG demonstrated improving operational momentum with 4% organic sales growth and strong cash generation, the neutral sentiment reflects offsetting concerns: premium valuation at 23.81X forward earnings, significant cost headwinds ($1.4B expected in fiscal 2027), and modest earnings growth guidance of 0-3%. The Zacks Rank #3 (Hold) rating and poor VGM/Value/Momentum scores support a cautious, patient stance rather than a bullish outlook.
+CL | neutral | Mentioned as a peer comparison with 3.6% organic sales growth in Q3 2026, which is lower than PG's 4% growth, suggesting relatively weaker performance in the consumer staples sector.
+KMB | negative | Reported a 1.3% organic sales decline in Q3 2026, indicating weakness in the consumer staples sector and underperformance compared to PG's positive growth trajectory.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:83ad0b1cda162f91eca3614b569452f98ffa1a09a0cd07948b175e162c1df1a5
+symbol: PG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032627/pg-raises-sales-outlook-as-thorne-acquisition-adds-growth-potential?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032627
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CL, HLN
+keywords: Thorne acquisition, sales growth guidance, organic growth, financing costs, restructuring, earnings headwinds, integration risk
+headline: PG Raises Sales Outlook as Thorne Acquisition Adds Growth Potential
+<<<SUMMARY>>>
+Procter & Gamble raised its fiscal 2027 all-in sales growth guidance to 2-4% following the completion of the Thorne acquisition, but maintained unchanged organic sales growth at 1-3% and core earnings growth at 0-3%. The company faces headwinds from $300 million in higher financing costs, $1.4 billion in commodity pressures, and $2 billion in restructuring costs, which limit the acquisition's near-term earnings contribution.
+<<<INSIGHTS>>>
+PG | neutral | While PG raised reported sales guidance, the unchanged organic growth and core earnings guidance, combined with significant headwinds from financing costs ($300M), commodity pressures ($1.4B), and restructuring costs ($2B), suggest limited near-term earnings benefit. The Zacks Rank #3 (Hold) rating and poor VGM scores (Value D, Momentum D) support a measured outlook.
+CL | neutral | Mentioned as a peer comparison showing 3.6% organic sales growth in Q3 2026, providing context for the broader consumer-health demand environment. No specific sentiment is implied.
+HLN | neutral | Referenced as a consumer-health peer with 2.6% organic revenue growth, used for comparative context only. No specific sentiment is implied.
+<<<END>>>

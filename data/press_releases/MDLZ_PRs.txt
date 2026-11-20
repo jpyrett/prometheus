@@ -1,0 +1,369 @@
+<<<PRESS_RELEASE>>>
+id: 4e09aedee849c37a
+symbol: MDLZ
+published_utc: 2025-11-19T10:00:00Z
+url: https://www.nasdaq.com/press-release/ritzr-brand-confirms-salty-big-game-return-2026-2025-11-19
+headline: THE RITZ® BRAND CONFIRMS A SALTY BIG GAME RETURN IN 2026
+<<<TEXT>>>
+This will mark the third consecutive year that a Mondelēz International snack brand will make an ad-break appearance— because sometimes great things really do come in threes. The RITZ ® Brand made its first run at the Big Game in February 2025, debuting a vibrant spot that introduced the RITZ ® Salty Club. Created by The Martin Agency, the brand's new spot is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b0613156a41aff5c
+symbol: MDLZ
+published_utc: 2025-11-28T18:22:00Z
+url: https://www.nasdaq.com/press-release/mondelez-global-llc-conducts-limited-voluntary-recall-1-sku-ritz-peanut-butter
+headline: Mondelēz Global LLC Conducts Limited Voluntary Recall of 1 SKU of RITZ Peanut Butter Cracker Sandwiches in New York, New Jersey, Pennsylvania, Georgia, Arkansas, Missouri, Oklahoma, and Alabama
+<<<TEXT>>>
+--Mondelēz Global LLC announced today a voluntary recall of 70 cases of RITZ Peanut Butter Cracker Sandwiches and sold in the following U.S. states: New York, New Jersey, Pennsylvania, Georgia, Arkansas, Missouri, Oklahoma, and Alabama. The affected cartons include individually wrapped packs that may be incorrectly labeled as Cheese variety even though the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 50d246a6ed4bfe72
+symbol: MDLZ
+published_utc: 2025-12-11T13:30:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-declares-regular-quarterly-dividend-050-share-2025-12-11
+headline: Mondelēz International Declares Regular Quarterly Dividend of $0.50 per share
+<<<TEXT>>>
+--The Board of Directors of Mondelēz International, Inc. today declared a regular quarterly dividend of $0.50 per share of Class A common stock. About Mondelēz International Mondelēz International, Inc. empowers people to snack right in over 150 countries around the world. Mondelēz International is a proud member of the Dow Jones Best-in-Class North...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 86d6c455edbda52e
+symbol: MDLZ
+published_utc: 2025-12-24T14:00:00Z
+url: https://www.nasdaq.com/press-release/mondelez-global-llc-conducts-voluntary-recall-2-skus-chips-ahoy-baked-bites-brookie
+headline: Mondelēz Global LLC Conducts Voluntary Recall of 2 SKUs of CHIPS AHOY! Baked Bites Brookie in the US
+<<<TEXT>>>
+--Mondelēz Global LLC announced today a voluntary recall in the United States of CHIPS AHOY! or Mondelēz Global LLC products are included in, or affected by, this recall. There have been no reports of injury or illness reported to Mondelēz Global LLC to date related to this product, and we are issuing this recall out of an abundance of caution..
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3970821e4e02b3f7
+symbol: MDLZ
+published_utc: 2025-12-30T10:31:00Z
+url: https://www.nasdaq.com/press-release/mondelez-global-llc-expands-voluntary-recall-2-skus-chips-ahoy-baked-bites-brookie-us
+headline: Mondelēz Global LLC Expands Voluntary Recall of 2 SKUs of CHIPS AHOY! Baked Bites Brookie in the US
+<<<TEXT>>>
+--Mondelēz Global LLC announced today an expansion of its December 24, 2025 voluntary recall in the United States of CHIPS AHOY! or Mondelēz Global LLC products are included in, or affected by, this recall. There have been no reports of injury or illness reported to Mondelēz Global LLC to date related to this product, and we are issuing this recall out of an...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bc2ceeaacfa8595b
+symbol: MDLZ
+published_utc: 2026-01-13T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-report-q4-fy-2025-financial-results-february-03-2026-2026-01
+headline: Mondelēz International to Report Q4/FY 2025 Financial Results on February 03, 2026
+<<<TEXT>>>
+--Mondelēz International, Inc. will release its fourth quarter 2025 financial results on Tuesday, February 03, 2026, at 4:05 p.m. ET and will host a conference call at 5:00 p.m. ET that day. Investors and analysts may participate via phone by calling 800-245-3047 from the United States and 203-518-9765 from other locations. An archive of the webcast will be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 149501cb9e2cd41a
+symbol: MDLZ
+published_utc: 2026-01-21T09:00:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-mondelez-international-2026-01-21
+headline: /C O R R E C T I O N -- Mondelēz International/
+<<<TEXT>>>
+Now, it's carrying that same spirit of joy and togetherness to another dedicated fanbase as it launches the MARVEL OREO Stuf of Legends Cookies at retailers nationwide on February 2. Much like how Marvel fans treasure their comics and memorabilia, the MARVEL OREO Stuf of Legends Cookies feature four special-edition packs, illustrations by renowned Marvel...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6f3ff6ceb7165ee5
+symbol: MDLZ
+published_utc: 2026-01-22T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-internationals-global-rd-team-opens-applications-colab-tech-2026-2026-01-22
+headline: Mondelēz International’s Global R&D Team Opens Applications for CoLab Tech 2026
+<<<TEXT>>>
+--Mondelēz International, Inc. today opened applications for the 2026 class of CoLab Tech, the company’ s global R&D tech accelerator program. "As the maker of some of the world’ s most iconic and beloved snacks like Oreo, Ritz and Toblerone, we must constantly push the boundaries of what it takes to unlock better, faster and more responsible ways of delighting...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fcff630bb6b211e9
+symbol: MDLZ
+published_utc: 2026-01-27T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-present-cagny-conference-february-17-2026-01-27
+headline: Mondelēz International to Present at CAGNY Conference on February 17
+<<<TEXT>>>
+--Mondelēz International, Inc. announced that Dirk Van de Put, Chairman& CEO, and Luca Zaramella, EVP& Chief Financial Officer will present at the annual Consumer Analyst Group of New York Conference on February 17 at 2:00 p.m. ET. Mondelēz International, Inc. empowers people to snack right in over 150 countries around the world. Mondelēz International is a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e008e21b279f06ba
+symbol: MDLZ
+published_utc: 2026-01-29T16:45:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-names-luca-zaramella-executive-vice-president-chief-operating
+headline: Mondelēz International Names Luca Zaramella Executive Vice President, Chief Operating Officer and Chief Financial Officer
+<<<TEXT>>>
+--Mondelēz International today announced the appointment of Luca Zaramella to the role of Chief Operating Officer and Chief Financial Officer. Zaramella’ s appointment will be effective Feb. 1, and he will continue to report directly to Chair and Chief Executive Officer Dirk Van de Put. He is a global leader with extensive experience, previously holding...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a16219b9fce0cd30
+symbol: MDLZ
+published_utc: 2026-02-03T10:00:00Z
+url: https://www.nasdaq.com/press-release/ritzr-crackers-delivers-salty-slice-paradise-its-big-game-comeback-2026-02-03
+headline: RITZ® Crackers Delivers a Salty Slice of Paradise in Its Big Game Comeback
+<<<TEXT>>>
+--RITZ ® Crackers is back for the Big Game, expanding its salty universe with a new ad titled " RITZ Island" airing during the 3 rd quarter. Featuring a star-studded lineup of actor and producer Jon Hamm, comedic trailblazer Bowen Yang, and actor and producer Scarlett Johansson, RITZ ® Crackers brings everyone together for a celebration fit for football's biggest...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: add90dc47eba1969
+symbol: MDLZ
+published_utc: 2026-02-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-reports-q4-and-fy-2025-results-2026-02-03
+headline: Mondelēz International Reports Q4 and FY 2025 Results
+<<<TEXT>>>
+--Mondelēz International, Inc. today reported its fourth quarter and full year 2025 results. Adjusted Gross Profit decreased $1,565 million at constant currency and Adjusted Gross Profit margin decreased 580 basis points to 32.0 percent due primarily to higher raw material costs and unfavorable product mix, partially offset by higher pricing and lower...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 86bd24dfe5259e43
+symbol: MDLZ
+published_utc: 2026-02-12T12:30:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-declares-regular-quarterly-dividend-050-share-2026-02-12
+headline: Mondelēz International Declares Regular Quarterly Dividend of $0.50 per share
+<<<TEXT>>>
+--The Board of Directors of Mondelēz International, Inc. today declared a regular quarterly dividend of $0.50 per share of Class A common stock. About Mondelēz International Mondelēz International, Inc. empowers people to snack right in over 150 countries around the world. Mondelēz International is a proud member of the Dow Jones Best-in-Class North...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f220a765c3672e74
+symbol: MDLZ
+published_utc: 2026-02-17T09:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-showcases-structurally-stronger-business-and-confidence
+headline: Mondelēz International Showcases Structurally Stronger Business and Confidence in Reaccelerating Profitable Growth at 2026 CAGNY Conference
+<<<TEXT>>>
+--Mondelēz International, Inc. today will showcase its commitment to long-term value creation, driven by its global portfolio of iconic snack brands, at the 2026 Consumer Analyst Group of New York Conference. Delivering a Proven Growth Algorithm Mondelēz International will reaffirm its long-term growth algorithm of 3 to 5 percent organic net revenue...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6861006c6df31ed6
+symbol: MDLZ
+published_utc: 2026-02-19T10:00:00Z
+url: https://www.nasdaq.com/press-release/introducing-marvel-oreo-stuf-doom-cookies-culmination-marvel-and-oreo-brands-iconic
+headline: Introducing the MARVEL OREO Stuf of Doom Cookies: The Culmination of Marvel and the OREO Brand's Iconic Collaboration
+<<<TEXT>>>
+--When the OREO brand fuses its playful DNA with Marvel's epic storytelling, you get more than a product launch, you get an unforgettable experience that cements the OREO brand as a snacking powerhouse rooted in culture. The MARVEL OREO Stuf of Doom Cookies also feature Marvel Comic-style depictions of Doctor Doom, illustrated by renowned Marvel Comics artist...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e280e400ff9d9e1
+symbol: MDLZ
+published_utc: 2026-03-11T08:30:00Z
+url: https://www.nasdaq.com/press-release/chf-65-million-investment-2025-swiss-president-guy-parmelin-inaugurates-new-toblerone
+headline: CHF ~65 million investment in 2025: Swiss President Guy Parmelin inaugurates new Toblerone production line in Switzerland
+<<<TEXT>>>
+As one of the largest investments in Mondelēz International's chocolate production network in the last decade, a global "Center of Excellence" for the iconic Swiss brand Toblerone is being created in Bern. In his speech, he emphasized: "If there is one product that represents Switzerland worldwide, it is chocolate. As President of the Swiss Confederation and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 172b9e6a7d330d03
+symbol: MDLZ
+published_utc: 2026-03-18T08:00:00Z
+url: https://www.nasdaq.com/press-release/clif-brand-expands-energy-portfolio-new-energy-bites-and-limited-edition-chocolate
+headline: The CLIF Brand Expands Energy Portfolio with New Energy Bites and Limited-Edition Chocolate Berry Energy Bar
+<<<TEXT>>>
+--The CLIF brand today expanded its energy portfolio with the launch of CLIF Energy Bites and the limited-edition CLIF Chocolate Berry energy bar.  "With the CLIF brand, we're focused on helping fuel you to raise your bar by delivering products that fit your active, fast-paced lifestyle," said Coreen Bailor, Senior Brand Manager, CLIF brand at Mondelēz...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a11b53f77ac8175a
+symbol: MDLZ
+published_utc: 2026-04-08T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-report-q1-2026-financial-results-april-28-2026-2026-04-08
+headline: Mondelēz International to Report Q1 2026 Financial Results on April 28, 2026
+<<<TEXT>>>
+--Mondelēz International, Inc. will release its first quarter 2026 financial results on Tuesday, April 28, 2026, at 4:05 p.m. ET and will host a conference call at 5:00 p.m. ET that day.. An archive of the webcast will be available on the company's website. About Mondelēz International Mondelēz International, Inc. empowers people to snack right in over 150...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b8977ad200582033
+symbol: MDLZ
+published_utc: 2026-04-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-scores-soccer-superstars-christian-pulisic-alex-morgan-and
+headline: Mondelēz International Scores Soccer Superstars Christian Pulisic, Alex Morgan and Sophia Wilson, alongside Global Music Icon Pitbull for an All-Star Summer of Soccer Campaign
+<<<TEXT>>>
+--Mondelēz International is uniting some of America's most iconic snacks with the world's biggest soccer and entertainment stars— Christian Pulisic, Alex Morgan and Sophia Wilson and global music icon Pitbull, to celebrate a summer of soccer.  "National sporting occasions bring people together, and snacking is always at the center of the celebration," said Nick...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cecebf28a5c50cde
+symbol: MDLZ
+published_utc: 2026-04-15T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-announces-2025-sustainability-milestones1-2026-04-15
+headline: Mondelēz International Announces 2025 Sustainability Milestones(1)
+<<<TEXT>>>
+--Mondelēz International today released its 2025 sustainability progress report, Snacking Made Right, highlighting important achievements across its sustainable ingredient sourcing, climate action, and packaging innovation programs. Transforming the Cocoa Supply Chain In 2025, the Company achieved several milestones in scaling its sustainable...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a1d0b9057d3b78dc
+symbol: MDLZ
+published_utc: 2026-04-22T10:29:00Z
+url: https://www.nasdaq.com/press-release/nilla-wafers-release-special-edition-cookie-grogu-nilla-nummies-2026-04-22
+headline: Nilla Wafers to Release Special-Edition Cookie with Grogu Nilla Nummies
+<<<TEXT>>>
+--Calling all Star Wars™ fans across the galaxy: Nilla Wafers is releasing your new favorite cookie! Nilla is collaborating with Lucasfilm to introduce the special-edition Grogu Nilla Nummies, inspired by Grogu's™ unforgettable love of cookies.  "Nilla has been a beloved cookie across generations, creating joyful, shareable moments," said Caroline Suppiger, Brand...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 67bdfcc3d141ce08
+symbol: MDLZ
+published_utc: 2026-04-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-reports-q1-2026-results-2026-04-28
+headline: Mondelēz International Reports Q1 2026 Results
+<<<TEXT>>>
+--Mondelēz International, Inc. today reported its first quarter 2026 results. Adjusted Gross Profit decreased $168 million at constant currency and Adjusted Gross Profit margin decreased 270 basis points to 30.7 percent driven primarily by higher input cost inflation and unfavorable volume/mix, partially offset by higher pricing and lower...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 666f750c8fa2a3b1
+symbol: MDLZ
+published_utc: 2026-05-04T08:30:00Z
+url: https://www.nasdaq.com/press-release/luna-brand-debuts-new-easy-love-campaign-starring-jessica-alba-brand-fan-turned
+headline: The LUNA Brand Debuts New "Easy to Love" Campaign Starring Jessica Alba as Brand Fan Turned Ambassador
+<<<TEXT>>>
+--LUNA Bar, the gluten-free snack bar brand dedicated to helping consumers elevate the moment, today launched its new "Easy to Love" creative campaign, starring longtime brand fan Jessica Alba as its inaugural ambassador. For years, Jessica Alba has kept one thing constant in her bag and on set: a LUNA bar.  "When the LUNA Brand approached me to become their new Brand...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a55d6dda50fc32bb
+symbol: MDLZ
+published_utc: 2026-05-13T09:00:00Z
+url: https://www.nasdaq.com/press-release/zbar-brand-launches-new-zbar-oat-bites-and-zbar-protein-strawberries-n-creme-flavored
+headline: The Zbar Brand Launches New Zbar Oat Bites and Zbar Protein Strawberries 'n Creme Flavored Snack Bars to Help Fuel Adventures
+<<<TEXT>>>
+--The Zbar brand today announced the expansion of its kids snacking portfolio with the launch of Zbar Oat Bites and Zbar Protein Snack Bars in a Strawberries' n Creme flavor. Zbar Oat Bites come in two delicious varieties: Chocolate Chip and Iced Oatmeal Cookie, and are available at retailers nationwide with a suggested retail price of $6.49 per 6- pack.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 96aaf54b1abbfc7e
+symbol: MDLZ
+published_utc: 2026-05-19T10:17:00Z
+url: https://www.nasdaq.com/press-release/new-sour-patch-kids-chews-are-here-challenge-candy-status-quo-2026-05-19
+headline: New SOUR PATCH KIDS CHEWS are Here to Challenge the Candy Status Quo
+<<<TEXT>>>
+Soft& Chewy on the Outside, Sour on the Inside, SOUR PATCH KIDS CHEWS are Ready to Level Up Gaming Sessions. EAST HANOVER, N.J., May 19, 2026/ PRNewswire/-- SOUR PATCH KIDS is breaking all its own rules with the launch of new SOUR PATCH KIDS CHEWS.  "We know consumers want new textures and experiences when they're in the candy aisle 1, so we saw an opportunity to bring SOUR PATCH...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 65a007363e04d5ac
+symbol: MDLZ
+published_utc: 2026-05-20T10:01:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-declares-regular-quarterly-dividend-050-share-2026-05-20
+headline: Mondelēz International Declares Regular Quarterly Dividend of $0.50 per share
+<<<TEXT>>>
+--The Board of Directors of Mondelēz International, Inc. today declared a regular quarterly dividend of $0.50 per share of Class A common stock. About Mondelēz International Mondelēz International, Inc. empowers people to snack right in over 150 countries around the world. Mondelēz International is a proud member of the Dow Jones Best-in-Class North...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fe8565b74541d13d
+symbol: MDLZ
+published_utc: 2026-05-26T10:00:00Z
+url: https://www.nasdaq.com/press-release/oreo-brand-bts-movement-introducing-limited-edition-oreo-bts-cookies-2026-05-26
+headline: The OREO Brand & BTS Movement is On! Introducing the Limited Edition OREO & BTS Cookies
+<<<TEXT>>>
+--OREO and BTS fans, get ready for an OREO cookie BTS made just for you. That's right: RM, Jin, SUGA, j-hope, Jimin, V, and Jung Kook are joining forces with the world's #1 cookie to drop the Limited Edition OREO& BTS Cookies, a brown sugar pancake flavored OREO cookie created by BTS and dedicated to BTS fans. This collaboration will kick off a playful global movement across 80+...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0f86a0ef65c481d5
+symbol: MDLZ
+published_utc: 2026-05-28T10:59:00Z
+url: https://www.nasdaq.com/press-release/newtons-debuts-new-branding-and-packaging-introducing-iconic-bar-new-generation-2026
+headline: NEWTONS Debuts New Branding and Packaging, Introducing the Iconic Bar to a New Generation
+<<<TEXT>>>
+EAST HANOVER, N.J., May 28, 2026/ PRNewswire/-- NEWTONS, the Ooey Gooey, Rich and Chewy cookie bar made with real fig, is introducing a refreshed brand identity and updated packaging design. Rolling out nationwide in May 2026, the updated design brings a modern, vibrant expression to NEWTONS packaging while continuing to spotlight the fig cookie bar generations of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: de39fd4257ccc50b
+symbol: MDLZ
+published_utc: 2026-06-01T08:30:00Z
+url: https://www.nasdaq.com/press-release/clif-builders-brand-releases-new-white-fudge-oreo-flavored-protein-bar-2026-06-01
+headline: The CLIF BUILDERS Brand Releases New White Fudge OREO-Flavored Protein Bar
+<<<TEXT>>>
+--The CLIF BUILDERS brand today announced the launch of its new White Fudge OREO-flavored protein bar, expanding its high-protein bar portfolio designed to help athletes support their post-workout recovery.  "The BUILDERS brand is focused on crafting great-tasting, high protein bars that deliver what consumers really want: indulgence and taste," said Saurabh...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 07ac342af3096e65
+symbol: MDLZ
+published_utc: 2026-06-03T10:00:00Z
+url: https://www.nasdaq.com/press-release/oreo-cakesters-debuts-soft-life-nationwide-asmr-pop-engages-senses-2026-06-03
+headline: OREO CAKESTERS Debuts "The Soft Life," a Nationwide ASMR Pop-Up That Engages the Senses
+<<<TEXT>>>
+Starting in New York City's Meatpacking District on June 12– 13, 2026 before a nationwide tour, guests will be transported into a new reality with softness found at every turn:. A soft-baked bakery counter where guests order OREO CAKESTERS-to-go, presented like pastries. An interactive giveaway experience featuring numerous OREO CAKESTERS merch items. A...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4177db2e81e8b535
+symbol: MDLZ
+published_utc: 2026-06-08T12:11:00Z
+url: https://www.nasdaq.com/press-release/sour-patch-kidsr-besties-candy-meant-be-shared-2026-06-08
+headline: SOUR PATCH KIDS® BESTIES: A Candy Meant to Be Shared
+<<<TEXT>>>
+--SOUR PATCH KIDS is bringing friends together with the launch of SOUR PATCH KIDS BESTIES, a playful new candy format where four SOUR PATCH KIDS candies are linked "hand-in-hand" to form one connected candy chain. Combining the brand's signature SOUR THEN SWEET taste with a fun, interactive experience, SOUR PATCH KIDS BESTIES create a social eating adventure.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 180b21069ee154dd
+symbol: MDLZ
+published_utc: 2026-06-11T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-scales-human-rights-due-diligence-across-own-operations-and
+headline: Mondelēz International Scales Up Human Rights Due Diligence Across Own Operations and Supply Chain
+<<<TEXT>>>
+CHICAGO, June 11, 2026-- Mondelēz International, Inc. today, in observance of World Day Against Child Labor June 12, released its 2025 Human Rights Due Diligence and Modern Slavery Report, outlining the company’ s continued progress to help prevent, identify and address potential human rights and modern slavery risks across its operations and value chain.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 49c9ee1eebeadb4f
+symbol: MDLZ
+published_utc: 2026-06-15T16:45:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-names-amit-banati-executive-vice-president-and-chief-financial
+headline: Mondelēz International Names Amit Banati Executive Vice President and Chief Financial Officer
+<<<TEXT>>>
+--Mondelēz International today announced the appointment of Amit Banati as Executive Vice President and Chief Financial Officer, effective July 1, 2026. Banati most recently served as Chief Financial Officer of Kenvue, Inc. Prior to Kenvue, he served as Vice Chair and Chief Financial Officer of Kellanova, formerly Kellogg Company. He began his career at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 481d3328c732f767
+symbol: MDLZ
+published_utc: 2026-06-16T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-announces-nine-start-ups-chosen-participate-colab-tech-2026
+headline: Mondelēz International Announces Nine Start-Ups Chosen to Participate in CoLab Tech 2026 Program
+<<<TEXT>>>
+--Mondelēz International, Inc. today announced the nine companies selected for CoLab Tech 2026. "The consumer packaged goods industry is facing a confluence of transformations– from supply chain to AI," said Ian Noble, R&D Vice President for Research, Analytical Sciences& Cocoa at Mondelēz International." That’ s why CoLab Tech is such an important program for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5e876cd3eb70fade
+symbol: MDLZ
+published_utc: 2026-07-01T09:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-announces-toblerone-crystal-bar-crafted-swarovski-and-global
+headline: Mondelēz International Announces Toblerone Crystal Bar Crafted by Swarovski and Global Charity Auction
+<<<TEXT>>>
+--Mondelēz International, Inc. today announced The Ultimate Gift by its iconic triangular Toblerone brand- featuring the Toblerone Crystal Bar, an exclusive series crafted by Swarovski, renowned for creating the world's finest crystals. The campaign brings to life a limited series of hand-crafted crystal replicas of the original Toblerone chocolate bar.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 914d9dcc9c230833
+symbol: MDLZ
+published_utc: 2026-07-14T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-report-q2-2026-financial-results-july-28-2026-2026-07-14
+headline: Mondelēz International to Report Q2 2026 Financial Results on July 28, 2026
+<<<TEXT>>>
+--Mondelēz International, Inc. will release its second quarter 2026 financial results on Tuesday, July 28, 2026, at 4:05 p.m. ET and will host a conference call at 5:00 p.m. ET that day. An archive of the webcast will be available on the company's website. About Mondelēz International. Mondelēz International is a proud member of the Dow Jones Best-in-Class...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5d157edb96b82b05
+symbol: MDLZ
+published_utc: 2026-07-16T10:03:00Z
+url: https://www.nasdaq.com/press-release/zbar-brand-and-kaboom-extend-partnership-through-2028-and-celebrate-team-playground
+headline: The Zbar Brand and KABOOM! Extend Partnership Through 2028 and Celebrate with Team Playground Build in Oakland, California
+<<<TEXT>>>
+--T he Zbar brand, which crafts delicious snack bars and bites for active kids, today announces an extension of its two-year partnership with KABOOM! The partnership expansion was celebrated during the Zbar brand and KABOOM! ,the Zbar brand team, Mondelēz International, Oakland Unified School District, First 5 Alameda County and the local Oakland community came...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5745a31d450b83d9
+symbol: MDLZ
+published_utc: 2026-07-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/mondelez-international-reports-q2-2026-results-2026-07-28
+headline: Mondelēz International Reports Q2 2026 Results
+<<<TEXT>>>
+--Mondelēz International, Inc. today reported its second quarter 2026 results. In Europe, share dynamics are showing early positive trends, and we believe the business is well-positioned to build on that progress, "said Dirk Van de Put, Chair and Chief Executive Officer." Adjusted Gross Profit increased $92 million at constant currency and Adjusted Gross Profit...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fe80d7a9f81f8b8a
+symbol: MDLZ
+published_utc: 2026-07-29T09:13:00Z
+url: https://www.nasdaq.com/press-release/reeses-oreor-celebrates-one-year-turning-fan-favorite-one-candys-biggest-innovations
+headline: REESE'S OREO® Celebrates One Year of Turning a Fan Favorite into One of Candy's Biggest Innovations
+<<<TEXT>>>
+--One year after introducing the REESE'S OREO ® Cup, which brought together America's #1 Candy and #1 Cookie, the Reese's brand is celebrating with a new campaign featuring Lindsay Lohan, Amy Sedaris and Director Patricia Arquette. To mark the occasion, the Reese's brand partnered with Lindsay Lohan, Amy Sedaris and Patricia Arquette on a new creative campaign...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 456a0b96dc317556
+symbol: MDLZ
+published_utc: 2026-07-30T10:00:00Z
+url: https://www.nasdaq.com/press-release/chips-ahoy-brand-launches-first-ever-mystery-flavor-challenging-fans-solve-case-2026
+headline: The CHIPS AHOY! Brand Launches First-Ever Mystery Flavor, Challenging Fans to Solve the Case
+<<<TEXT>>>
+brand is turning snack time on its head for cookie lovers across the country with its latest, top-secret product offering: the limited-edition CHIPS AHOY! Designed to be decoded and ultimately devoured, the CHIPS AHOY! Mystery Cookie challenges everything fans think they know about the cookie and tasks them with solving the case.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7fc83998343499e3
+symbol: MDLZ
+published_utc: 2026-08-13T10:00:00Z
+url: https://www.nasdaq.com/press-release/first-time-ever-oreo-brand-lets-fans-determine-which-three-new-flavors-returns-twist
+headline: For the First Time Ever, the OREO Brand Lets Fans Determine Which of Three New Flavors Returns in "Twist, Lick, Vote" Campaign
+<<<TEXT>>>
+To make this launch even sweeter, the OREO brand is engaging fans directly to give OREO cookie lovers across the U.S. the ultimate power to decide the future of the cookie aisle.  "By dropping three incredibly distinct flavors at once, Banana Pudding, Deep Fried and Chicken& Waffles, we are giving our community true agency to help decide the future of our product...
+<<<END>>>

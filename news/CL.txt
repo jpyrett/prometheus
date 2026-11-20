@@ -1,0 +1,1656 @@
+<<<ARTICLE>>>
+id: finnhub:143748240
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T00:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=262aa993bf15928f78fd99a603941fccd99970a1c45d5bd660c528287a94311c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Colgate-Palmolive signals more price hikes as U.S. sales fall
+<<<SUMMARY>>>
+The maker of Colgate toothpaste and Softsoap is struggling with weaker demand in its home market.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739363
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:51:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8f6f794938f6ceed96c4cc1759b40775142353f1377df07f6e87f62f55da1023
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Kimberly-Clark vs. Colgate-Palmolive: Which Dividend Stock Pays You More in 10 Years?
+<<<SUMMARY>>>
+Key TakeawaysKimberly-Clark closed its Kenvue acquisition on Nov. 2, while Colgate-Palmolive raised its 2026 earnings outlook on Oct.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734675
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8d0ed9ec8ad8caf798c2dbe26ba1ece3201a81e19261f4a3f899ccc261652856
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Six Flags Names Adam Boal Chief Procurement Officer
+<<<SUMMARY>>>
+ARLINGTON, Texas, November 11, 2026--Six Flags Names Adam Boal Chief Procurement Officer
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143733635
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:20:41Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2f31e536c42d2238da04f2ad90d7ecfe83042c129e3453cb7a5bb96e2234c70e
+image_url: https://www.chartmill.com/images/uploads/CM_Breakout_Stocks_Small_free_bb09e243c7.webp
+category: company
+tickers: CL
+keywords: 
+headline: Colgate-Palmolive (NYSE:CL) Eyes Breakout With Strong Technical Setup
+<<<SUMMARY>>>
+Colgate-Palmolive (CL) scores 9/10 for technical strength and 8/10 for setup quality, with a breakout trigger at $99.14. See the key levels.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143725903
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T08:38:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d454c608cc457d76ce05c889f624e9cfde76303ed9d4bb64514b7c067eec63fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: European shares near record high as earnings absorb tech volatility
+<<<SUMMARY>>>
+Investing.com - European shares advanced on Wednesday, pushing the benchmark STOXX 600 within a whisker of a record high, as a resilient corporate earnings season and relief over strong U.S. artificial intelligence demand offset lingering anxiety over a hawkish repricing of Federal Reserve interest-rate expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143711317
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T04:46:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bc7ab5d25a327999855d6ef0658f3af134a17784b13fd33ac1f622b82f65ccaf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Eneos raises FY profit forecast by ~50% on stronger oil markets
+<<<SUMMARY>>>
+Investing.com-- Japan's Eneos Holdings (TYO:5020) raised its full-year profit forecast by nearly 50% on Wednesday, as stronger crude oil prices and favourable overseas petroleum product markets boosted earnings, offsetting impairment losses in its renewable energy business.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143711318
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T04:31:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b3edfad9acaaaf15bceba81823d50a6d4b32d500752b2ec40b8c92d09041f27b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Can Colgate-Palmolive (CL) Justify Its Price Following Raised 2026 Guidance?
+<<<SUMMARY>>>
+Colgate-Palmolive (CL) has paired a raised 2026 outlook with fresh third quarter numbers, giving investors updated visibility on expected net sales growth, margins and earnings per share this year. The raised 2026 guidance and third quarter update come on top of strong recent momentum, with Colgate-Palmolive’s share price up 11.12% over the past month and delivering a 26.26% year-to-date share price return, while the 5-year total shareholder return of 41.85% points to a steadier long-term...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143732713
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T02:45:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14dc053749ad9702cae10109a619ee1c3ef08edac2320b620e97df7f72194151
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Oil prices stabilize as Hormuz attacks dent Middle East peace hopes
+<<<SUMMARY>>>
+Investing.com - Oil prices steadied on Wednesday after crude slipped to a two-month low in the prior session, as attacks on tankers in the Strait of Hormuz dented emerging hopes for a de-escalation in the U.S.-Israeli war on Iran.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692834
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:31:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=af14496f9c3b644610e03a57f9ad9e3ee1d26574220dfde93e5ba261da2f9636
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Bank of Canada signals more rate hikes may come despite uncertainty
+<<<SUMMARY>>>
+Investing.com -- Bank of Canada officials indicated that uncertainties from higher oil prices and the trade war with the United States will not necessarily prevent additional interest rate increases, according to deliberations from their October meeting released Tuesday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692835
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:34:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b70232137bf62dca2ab9ebef960f7b1685f219c8ffe95e562fefe4106b50876
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: US oil output to reach record 13.9 million bpd in 2026
+<<<SUMMARY>>>
+Investing.com -- US crude production is projected to reach 13.9 million barrels per day in 2026, marking the fourth consecutive year of record output, the Energy Information Administration said Tuesday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686169
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:02:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6f400b775bb8e4cfc4fd53a9375a194495eff1c6e3746544c21525d2c1c842e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: European gas prices hit 1-month lows as Trump pauses Iran strikes
+<<<SUMMARY>>>
+Investing.com - European wholesale natural gas prices slipped to one-month lows on Tuesday, tracking a relentless deflationary wave across the broader energy complex as U.S. President Donald Trump dialed back the threat of further military strikes against Iran and brokered fresh peace talks between Russia and Ukraine.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143735415
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:02:03Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=928080046aa43b41624182bb99d6f02bf3e7bf5dd296b349e6a80336d7a650b8
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/insider_trade_3.jpg?width=2048&height=1536
+category: company
+tickers: CL
+keywords: 
+headline: Insider Move: LORRIE NORRINGTON Exercises Options, Realizing $108K At Colgate-Palmolive
+<<<SUMMARY>>>
+LORRIE NORRINGTON, Director at Colgate-Palmolive (NYSE:CL), reported a large exercise of company stock options on November 9, according to a new SEC filing.
+What Happened: A Form 4 filing with the U.S. Securities and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143679351
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T09:49:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b9e35c6d0de8f4a98e5da41040f1571f051e8c7748ab6dac2d4c767ee0613cee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Euro yields linger at 1-month lows as sinking oil calms inflation jitters
+<<<SUMMARY>>>
+Investing.com - Eurozone government bond yields traded flat on Tuesday, with benchmark German borrowing costs hovering near their lowest levels in over a month and a half, as a sustained collapse in global crude oil prices provided fixed-income desks with a powerful disinflationary buffer ahead of a critical U.S. inflation report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143679352
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T08:49:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef276f758db6d9bf94daeb67dd589f4c0290f31ef21200887411cf401c337d9c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: European shares inch toward record highs as sinking oil eases inflation anxiety
+<<<SUMMARY>>>
+Investing.com - European shares advanced on Tuesday, to inch toward a fresh record high, as a sustained collapse in global crude oil prices lifted margin pressures off continental balance sheets ahead of a highly anticipated U.S. inflation report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662639
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T00:33:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b658677cca8d56800f1d627104917d2a5917a4a0be6dfb6da36092d22df90ec3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Oil prices dip amid Iran peace hopes, improving supplies
+<<<SUMMARY>>>
+Investing.com-- Oil prices fell in early Asian trade on Tuesday after U.S. President Donald Trump said the Iran war was going to end soon, while other data pointed to improving supplies despite disruptions in the Middle East.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661939
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T22:18:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1018fabfaadb2ce317c6e1f6e16a27d1446f38285160c1fb5581f30236d266eb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Occidental beats Q3 forecasts as production offsets lower crude prices
+<<<SUMMARY>>>
+Investing.com -- Occidental Petroleum Corporation (NYSE:OXY) delivered a decisive third-quarter earnings beat on Monday, lifted by operational outperformance in its core shale basins and substantial debt-reduction progress. The Houston-based producer posted adjusted earnings of $1.91 per share, topping analyst expectations of $1.34 by $0.57, while revenue reached $6.77 billion against a projected $6.61 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143688043
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:26:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fafc31959c1c9b11fd95fed2eb0aef6327f9b1bf5220fd2651a878545a5c5a97
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/Broadcom-Irvine-Campus-Interior-Hallway-.jpg?width=2048&height=1536
+category: company
+tickers: CL
+keywords: 
+headline: Broadcom Stock Now Trades 32% Cheaper than a Toothpaste Company: HSBC, Cantor Say the Gap Won't Last
+<<<SUMMARY>>>
+Broadcom (AVGO) trades at 16.6x forward earnings to Colgate&#39;s 24.5x, a discount more than one standard deviation below its four-year average.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658706
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=51f2f8f958ff91f4abac0b716189e29532bb0dd66600b55edd0955709d47779c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Is Procter & Gamble's Beauty Momentum Enough to Lift Growth?
+<<<SUMMARY>>>
+PG's Beauty business posts 5% organic sales growth in Q1 FY27, fueled by Pantene and SK-II. Can this momentum boost overall growth?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657477
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:14:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=824d8c41137ff82c3c0d3fac7a72ccfa3ec113ca77bdd389bda3042f51de6387
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Colgate vs. Chipotle: Which Is the Better Buy for 2027?
+<<<SUMMARY>>>
+A defensive staple and a fast-casual growth name have both been overshadowed by tech’s run, but one looks poised for a comeback.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143653739
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:54:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6c3199899f33fd4032d98312ba785e430cea71cd14f53cacf706e5a7f234c154
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: U.S. consumer prices seen rising 3.8% year-on-year in October - Truflation
+<<<SUMMARY>>>
+Investing.com - U.S. consumer prices are estimated to have risen by 3.8% in the twelve months to October and 0.3% month-on-month, amid ongoing upward pressure from elevated energy costs caused by the Iran war, according to Truflation predictions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143651892
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T01:46:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=359e94292a97c9cad5e853977ec2a092659d557446c6c9f090f1f4c8f5d32d3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Gold rebounds as weaker dollar offsets bets on December Fed rate hike
+<<<SUMMARY>>>
+Investing.com -- Gold prices rose on Monday, with bullion approaching the $4,100-an-ounce mark as a weaker U.S. dollar provided support, while investors continued to assess the outlook for Federal Reserve policy following stronger-than-expected U.S. employment data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143631871
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T04:35:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d87cf7055c892c8228ced38754b388bede04a40812d7dbb21ddf38f43ea69cb0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Colgate-Palmolive vs. Kraft Heinz: With the Market Turmoil, Which Stock Is a Better Buy?
+<<<SUMMARY>>>
+Colgate-Palmolive's steady cash flow stands in sharp contrast to Kraft Heinz's costly portfolio overhaul, and the valuation gap between the two may be wider than you expect.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143617959
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T18:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=afa0c0a92fd2183a3db2554bcf7b8faf0cda9f4a3c9f699d041a267fe19ef447
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: How Investors May Respond To Colgate Palmolive Stock After An Earnings Beat
+<<<SUMMARY>>>
+Colgate-Palmolive reported Q3 2026 sales of US$5,369 million and net income of US$751 million, with both basic and diluted EPS from continuing operations at US$0.94. The company also raised full year 2026 guidance to 4% to 5% net sales growth, with higher gross margin expectations. The combination of higher quarterly revenue and earnings per share, alongside an outlook that now points to margin expansion, indicates that Colgate-Palmolive is relying on pricing, mix and cost efficiency rather...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143617026
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T16:43:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=abbbe0570a7ea41cb7e7923aa7ac6be33cda2431a42c08c2abf9c7a9d4b2bc19
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: ECB’s Lagarde says inflation to stay high, sees little reason to alter rate course
+<<<SUMMARY>>>
+Investing.com - Euro zone inflation will remain elevated over the coming quarters, European Central Bank President Christine Lagarde said, signaling that it would take "significant changes" to deter policymakers from raising interest rates again in December.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591748
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T20:39:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1dcd91b1780ddfaece68c58a73756d577ed2a2fba2b88d5d14c26bc89b10a9d9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Trump’s Iran dilemma: five options, no clear exit after the midterms
+<<<SUMMARY>>>
+Investing.com -- Brent crude has fallen 16.27% in a week to $98.48. The S&P 500 is at 7,407.94, and the VIX has dropped 14.25% on the day. Markets are betting the war’s political pressure is easing, even though the military situation hasn’t changed. (Prices as of Nov 6, 2026, 3:07 PM EST.) Bloomberg Economics’ Fault Lines newsletter argues the pressure is not yet a way out. After the Democratic sweep of Congress, it sees five options on the Resolute desk, and none of them delivers the "resoundin
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143592225
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T18:30:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=179932ced585c47b91f7c497290f9405d62b1ac2a2bf533cfb1fe4d053589441
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-w1536
+category: company
+tickers: CL
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week of November 8
+<<<SUMMARY>>>
+Get the latest dividend activity for Dividend Champions, Contenders, and Challengers. Read this week's list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143578754
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:26:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=85d5300f61023c0d9c3a081636974922c06800b909cf2bc6dbcf3e541a92f207
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: European gas tumbles to seal worst week since 2025, snaps five-week rally
+<<<SUMMARY>>>
+Investing.com - European wholesale natural gas prices fell sharply on Friday, sliding 3.5% on the day to seal their steepest weekly drop in more than a year and a half, as a relentless retreat across global crude benchmarks and the political fallout from the U.S. midterm elections abruptly dismantled a five-week winning streak.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587239
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:35:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8544bd5e50101d54620f2806534dc81e9dcd756bdb6963f9f17943b4a2a864be
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2230767136/image_2230767136.jpg?io=getty-c-w1536
+category: company
+tickers: CL
+keywords: 
+headline: Diamond Hill Large Cap Fund Q3 2026 Portfolio Update
+<<<SUMMARY>>>
+Diamond Hill Large Cap Fund returned 3.18% compared to a 2.61% return for the Russell 1000 Value Index. Read more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143572431
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T08:40:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2cc8dfdae91da2c0b348998c0098fc7c546642935ae9a225ca3bed50922645c3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Europe stocks drop on tech drag; STOXX 600 overtakes S&P 500 in YTD gains
+<<<SUMMARY>>>
+Investing.com - European shares slid 1% on Friday, dragged down by a sharp retreat across technology names following a violent overnight sell-off on Wall Street that plunged the Nasdaq into correction territory.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143567875
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T02:03:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=70b20cd5de96bcf3149dc65ff9f60a6da1dfbe973ebde56efd86af5c9f4aa707
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Gold falls below $4,050 as dollar rebounds after post-election rally
+<<<SUMMARY>>>
+Investing.com -- Gold prices prices retreated on Friday as the U.S. dollar regained ground, trimming bullion’s post-election rally. The metal, however, remained significantly higher following this week’s sharp gains driven by falling Treasury yields and changing expectations for U.S. fiscal policy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143553129
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T01:25:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dee0f663a655c959837c0fcd48584470aa2064e14629cf5610e35642bfaa1b5a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Oil rises on fresh tanker attacks, but heads for steep weekly loss
+<<<SUMMARY>>>
+Investing.com-- Oil prices extended gains in Asian trading Friday as fresh attacks on tankers in the Middle East heightened supply disruption concerns, although prices remained on course for sharp weekly losses as investors reassessed the outlook for the U.S.-Israeli war with Iran.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918915
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:21:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8ee470de8a9e5aca9d429f9f880d627933eee4e8b813ce8c5c3b1894951912c3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Oil slides on surplus outlook as Hormuz risk premium fades
+<<<SUMMARY>>>
+Investing.com -- Crude Oil WTI Futures (CL) was at $82.09 a barrel, down 3.02%, as of Nov 18, 11:50 AM EST. Brent Oil Futures (LCO) was at $91.41, down 1.86%, at the same time. The after-market print of 91.38 on WTI is stale (Nov 8) and should be ignored.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918914
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:33:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b53e3e35fb47e5c9960e604ef127bd85c3500b23f345e302a76417b5f6cca4de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: 2 Unstoppable Dividend Stocks I'd Buy With $1,000 Before the End of November
+<<<SUMMARY>>>
+One has paid a dividend every year since 1895. The other just joined the Dividend Kings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917638
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=728fd96773c7ebe666d36b1b66050a291c2175996c8a0dcb89276f2fa707a073
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Colgate-Palmolive Webcasts Fireside Chat at the Morgan Stanley Global Consumer & Retail Conference
+<<<SUMMARY>>>
+NEW YORK, November 18, 2026--Colgate-Palmolive (NYSE:CL) Chief Growth Officer, John Hazlin and Executive Vice President, Investor Relations, Claire Ross, will participate in a fireside chat at the Morgan Stanley Global Consumer & Retail Conference on Wednesday, December 2, 2026 at 8:00 a.m. ET.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143914589
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T13:41:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e60b4b13100fcf5dd151608beb26bc247a580a592b2e058dcaef566231c979ec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Own P&G Stock For Safety? Watch Bond Yields
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143903865
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T07:23:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b1c674c2630409fe257ae314ea46f4a922c32b8c29a0d39f2469a9c20a508cee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Oil prices slipped, yet this refiner surged 81% since selection
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882931
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=74bd964e88cca896180c2c7ccb56259189a1483bc8f0b48d1e701a47f686319e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Can PG's Health Care Segment Extend Its Sales Momentum Ahead?
+<<<SUMMARY>>>
+P&G's Health Care segment eyes sustained growth as improving cold and cough demand, product innovation and the Thorne acquisition create fresh opportunities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878346
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:24:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=385df03bb391f3978e3839684afb3d63e6aa3401e5b426e29380c0f81aebae16
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: US stocks with the highest debt-to-equity ratios: Birkenstock and peers
+<<<SUMMARY>>>
+Investing.com -- The US market’s highest-leverage names are posting debt-to-equity ratios from 1,000% to over 15,000%, with some carrying more debt than their entire market cap and holding less than 5% of capital in cash. That’s not just aggressive — it’s financial brinkmanship, and it puts these stocks in a league with Energizer and Birkenstock for capital structure risk.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877764
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T09:51:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6054188fec1dbdcf5ba8505b603ec6f93a3f85c89020254c1c4dc0dfc54bdbe7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/17/Defensive-Stocks-Puzzle-Utilities-Health.jpg?width=2048&height=1536
+category: company
+tickers: CL
+keywords: 
+headline: Wall Street Is Trading Chips for Chicken: Staples See Best Run Against Tech Since 2001
+<<<SUMMARY>>>
+Consumer staples fund XLP has beaten tech fund XLK by 39.5% in seven weeks, the widest gap since March 2001.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849024
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=699953b9ecb801e59c93e9e33afdeca16c0b5556fe5429f8ff5c83c2ee1991b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Beat the Market the Zacks Way: Vera Bradley, Herc, Visa in Focus
+<<<SUMMARY>>>
+Vera Bradley, Herc and Visa lead Zacks' latest market-beating performances, highlighting the gains delivered by its stock recommendations and investment portfolios.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143844815
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T08:46:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4ccd3c7996f5f1b495725a6b1764888f2d8be7e74af0b473a6aaf153b8842d28
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: FTSE 100 today: Stocks edge up as Iran tensions simmer
+<<<SUMMARY>>>
+Investing.com -- British stocks edged higher on Monday, reversing a slightly lower indicated open, even as Iran tensions and rate-hike worries lingered.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841387
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T01:05:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=161ec039476f95561863640ec222c352759f451fa6b4ddbc2207dfec458b93c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Colgate-Palmolive vs. Kimberly-Clark: Which Household Name Deserves Your Investment Dollars?
+<<<SUMMARY>>>
+Colgate-Palmolive carries a premium price tag, while Kimberly-Clark trades at a noticeably lower multiple, but the cheaper stock comes with its own set of challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848031
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T00:15:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c8c5a57d597871053c16d28aefc24a69017a7cf50cd60253027683f8630d757
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Oil prices choppy amid persistent Mideast tensions, improving supplies
+<<<SUMMARY>>>
+Investing.com - Oil prices oscillated around the flatline on Monday as investors weighed signs of improving global supplies against fears that hostilities in the Middle East could lead to more disruptions to crude flows out of the region.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143815828
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T03:32:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cdd4580c0f75614dfe77c5b6b901cb9cca26dd45286c9c6cee5e514d0d9ba228
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: U.S. diesel prices fall below $6 a gallon to two-month low
+<<<SUMMARY>>>
+Investing.com -- U.S. diesel prices fell below $6 a gallon on Saturday for the first time in more than two months, as declining crude oil prices and weaker seasonal demand eased pressure on fuel costs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805821
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T02:12:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=828801d16459478bcfc6f858ad0523632434ec5c385c90ef7a8a8a8d9681a0b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Colgate Palmolive (CL) Stock May Be 21% Below Fair Value Today
+<<<SUMMARY>>>
+Colgate-Palmolive has treated shareholders to solid gains in recent years, and that raises a simple but important question for anyone looking at the stock today. Do the cash flows the business can generate over time really line up with the current share price, or has sentiment moved ahead of the underlying economics? Over the past 5 years the stock has returned 45.4%, which puts real weight on whether those gains are grounded in cash flows that can support the present valuation. The...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805398
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T20:25:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a43dfb58705377ae3a9bee571f058fc6460640a40c444d67e7ebe628e95976ed
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Celsius vs. Colgate-Palmolive: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Celsius's hyper-growth and Pepsi partnership square off against Colgate-Palmolive's steady cash flow and defensive brands, and the answer depends on how much risk you can handle.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805104
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T18:59:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=664409091e118d44fe584bd119c299e9ec32847619cfa231ced850dcfae059c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: US energy rig count drops for first time in six weeks
+<<<SUMMARY>>>
+Investing.com -- US energy companies reduced the number of active drilling rigs this week, marking the first decline in six weeks, according to Baker Hughes Co. on Friday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804601
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:16:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1fca01b451a577017f1d7dd604adc4cd13c08dfe897ec4910a7031d8fcc943c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Is Procter & Gamble Stock Worth More Than Its Rivals?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802224
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:13:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=def7aa15bfcb0edb3deb88d938772a4da041c7fa2bbf2c858e5693aec5228e35
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: What If the Fed Doubles the Rate Hike in December? These 5 Dividend Stocks Could Prosper
+<<<SUMMARY>>>
+Markets say a quarter-point hike is nearly certain, but a hot inflation print could change that fast. Five dividend payers, from banks to an oil giant to a toothpaste maker, each win in a different way if the Fed gets aggressive.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802270
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:04:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6200c5f83a4846cabe6ecec8d663158a24fdc32c70a68dd758a6f5471bfbf1b2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Procter & Gamble Has Raised Its Dividend for 70 Straight Years. Where’s the Price Target Now?
+<<<SUMMARY>>>
+A strong October quarter sent P&G shares climbing toward a 52-week high, yet oil prices and shrinking margins threaten the rally. Can volume-led growth and a looming Investor Day outrun the commodity squeeze?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801630
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:10:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41cfcbb0ee436c078594fd1169c1f985202656182d0c3f5053d0b66732f934d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: BofA’s Hartnett says stay risk-off until yields fall below 4.5% and oil hits $70
+<<<SUMMARY>>>
+Investing.com -- Investors should stay risk-off until rate hikes end and financial conditions ease, with the dollar still pushing the wrong way, according to Bank of America strategists.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143799799
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T08:44:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23f6f7fc3b9d9ba098f05f6aacc83b8ce9aa93ad38a86515cc7bce30f3c55fcb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: European shares ease from record peaks but eye best week since June
+<<<SUMMARY>>>
+Investing.com - European shares retreated on Friday, snapping a four-session winning streak and easing from a record peak, as investors digested a rapidly hardening hawkish consensus for Federal Reserve interest rates and ongoing shockwaves from a leadership crisis at artificial intelligence bellwether Nvidia.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143793320
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T06:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ac15ad46b1e2b79d6ff962438a7dd206746a167dd6ebfe8f3d685a79dba6768
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Zacks Industry Outlook Highlights Colgate-Palmolive, Kimberly-Clark, BJ's Wholesale and Ollie's Bargain Outlet
+<<<SUMMARY>>>
+CL, KMB, BJ and OLLI face consumer spending pressures and rising costs, but strategic initiatives and value-focused offerings support growth prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143779282
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T00:41:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb6e80c0efca606394a30a94245f54db735d97b2bb65f62a5e5cef2db29c41f7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Oil prices hold gains as Trump sidelines Vance from Iran diplomacy
+<<<SUMMARY>>>
+Investing.com -- Oil prices held onto gains on Friday after U.S. President Donald Trump said Washington no longer needed a deal with Iran, weakening hopes for a diplomatic breakthrough to end the conflict and ease disruptions to Middle East energy supplies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143771015
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:40:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=40c45b2c9dc4dbb1130db5e9d1be3007a8b87cc8505c3fca39f199cdb45c2dc7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: BJ or CL: Which Is the Better Value Stock Right Now?
+<<<SUMMARY>>>
+BJ vs. CL: Which Stock Is the Better Value Option?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769698
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=45ccdce8262e707dd7f26f4dabb229c9148bd2e2df470a56a4a9c1ded75b4185
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: 4 Consumer Staples Stocks to Watch Amid Industry Headwinds
+<<<SUMMARY>>>
+Despite cost pressures and shifting consumer trends, CL, KMB, BJ and OLLI are leveraging strategic initiatives to support long-term growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765263
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T10:28:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b11c3e79a2a1886f0d8990405a0c34ea8575216bfd1f9a5a0fd3e1eda3262755
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: European gas extends rally to third day as near-term supply anxiety persists
+<<<SUMMARY>>>
+Investing.com - European wholesale natural gas prices climbed for a third consecutive session on Thursday, decoupling from a renewed sell-off in global crude markets, as traders weighed localized winter supply anxieties against a broader geopolitical de-escalation in Eastern Europe and the Middle East.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143762732
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T09:08:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f32f7e3691ba05878d6d004a43227abc55f17853001eb64b6f8218bd90368e10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Industry leaders back new packaging hub for unified recycling data
+<<<SUMMARY>>>
+Amcor and Colgate-Palmolive are among the initial corporate partners backing the initiative.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748016
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=58facd99869ab1fa943f556e75eba1b86f93cd90ed151d3c6fc0c84313be3d85
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: These 5 Dividend Aristocrats® Have Raised Payouts for Decades
+<<<SUMMARY>>>
+Investors worried about market turmoil may want to look at reliable dividend stocks, and these five stand out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947214
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:47:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=906e843228a954b59e26e86bc9b6ff4cfe1f612c8c165ebe0c0f6080515f9c61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Colgate Has Raised Its Dividend for 63 Years. These 3 Staples Stocks Offer Income
+<<<SUMMARY>>>
+Kenvue vanished from the stock market this month, and its Tylenol now pays out through a diaper maker. Three recession-proof dividend payers look steady, but only one of them has the cash to back up its streak.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947215
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:38:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32f4c0421b9fe92adf21f9920528b0caa0b6fae2c1d258583a18c26dbfc3d322
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Oil-market shock keeps costs high for US small businesses even as crude pulls back
+<<<SUMMARY>>>
+Investing.com -- The Bank of America Institute report shows costs staying high even though crude has pulled back. Crude Oil WTI (CL) was at $82.76 and Brent Oil (LCO) at $92.15 as of Nov 19, 3:06 PM EST. WTI is down about 16% over one month and 23% over six months. It is still up roughly 44% year to date and 39% over one year. The 52-week high for WTI was $117.63. Small-business costs therefore reflect a year-long climb, not just today’s price.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944459
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:06:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89e688e9bc0d91daf4526d04e3afffad7a14816adb2b12b22998270c8ceeeeae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Should You Buy Clorox Stock At This Price?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944456
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=01310c1abf7bac4b5e3caf11a977a00debb7ccb67b544901cede1aaf0e16a226
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: PG Raises Sales Outlook as Thorne Acquisition Adds Growth Potential
+<<<SUMMARY>>>
+PG raises its sales outlook following the Thorne acquisition, but unchanged organic growth guidance, rising financing costs and restructuring risks temper optimism.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944457
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:31:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ebf0b81c5e01f175e7d2664002673e09e2bf9056d675ae7dcb1d43586710c08
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Is PG Worth Buying as Growth Improves but Its Valuation Stays Rich?
+<<<SUMMARY>>>
+PG's improving organic sales, stronger volumes and healthy cash flow support growth, but premium valuation and rising costs warrant a cautious stance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944458
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76cee0bdc4f9c6fe9d6ea86648a35d232b919196cc50cdef32ab97d5ffa017bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: PG Jumps 17.4% in Three Months as Investors Weigh What Comes Next
+<<<SUMMARY>>>
+PG's broad-based organic growth, strong segment performance and productivity gains fuel momentum, but cost pressures and premium valuation pose challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143937231
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:03:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f60a1f11fb22eba865ede618cc062f2a192a23a7d9386b8920cc6629b58efb4c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: Is P&G Stock A Bad Buy Near Its High?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936407
+symbol: CL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T10:50:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d7b4ae0aff8a64a6e56d3613077ecccb876725b340902340758afc7d4a581046
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CL
+keywords: 
+headline: How Many Shares of Colgate-Palmolive or Procter & Gamble Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysCollecting $1,000 a month in dividends takes about 5,661 shares of Colgate-Palmolive, about $559,600 at today’s prices, or about 2,759 shares of Procter & Gamble, about $469,800. Procter & Gamble’s 2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4229f7a985b905a20fadbb13e90ad0aebca3acd0d7436d1035907238deccf177
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T04:15:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/07/colgate-palmolive-vs-kraft-heinz-with-the-market-turmoil-which-stock-is-a-better-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F75c39cd9f3d840a1de8ee65c8790b02b985cc6b6-1280x853.png&w=1200&op=resize
+category: 
+tickers: CL, KHC, WMT, SJM
+keywords: consumer staples, defensive stocks, dividend yield, Dividend King, market turmoil, valuation comparison, portfolio transformation, net margin, revenue growth
+headline: Colgate-Palmolive vs. Kraft Heinz: With the Market Turmoil, Which Stock Is a Better Buy?
+<<<SUMMARY>>>
+In comparing two consumer staples stocks during market turmoil, Colgate-Palmolive emerges as the better defensive choice over Kraft Heinz. While Kraft Heinz offers a higher dividend yield of 6.5%, Colgate-Palmolive demonstrates superior fundamentals with consistent revenue growth (4.6% in Q3), a 63-year dividend increase streak (Dividend King status), and a healthy 10.5% net margin. Kraft Heinz faces challenges with declining sales (-2% in Q3), a -23.4% net margin, and ongoing portfolio restructuring, despite trading at a lower valuation multiple.
+<<<INSIGHTS>>>
+CL | positive | Strong fundamentals including 4.6% Q3 sales growth, 10.5% net margin, Dividend King status with 63 consecutive years of dividend increases, dominant global market position, and consistent cash flow generation make it the preferred defensive investment.
+KHC | negative | Significant operational challenges including declining Q3 sales (-2%), substantial net loss (-$5.8B in FY2025), negative net margin (-23.4%), high customer concentration (Walmart 21% of sales), substantial debt, and ongoing portfolio restructuring despite lower valuation multiples.
+WMT | neutral | Mentioned as a major customer concentration risk for both Colgate-Palmolive (11% of sales) and Kraft Heinz (21% of sales), but no independent analysis or sentiment provided in the article.
+SJM | neutral | Mentioned only as a competitive brand in the context of Kraft Heinz's coffee business divestiture; no independent analysis or sentiment provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:dc879feac15ca812443e566b606f0018085598523e8905182acf41464bb515b0
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T12:49:02Z
+publisher: The Motley Fool
+author: David Jagielski, Cpa
+url: https://www.fool.com/investing/2026/11/09/could-kraft-heinz-s-latest-move-be-a-sign-that-a-dividend-cut-is-around-the-corner/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F8ac888a8a1388641669d4e6c6e8ed9692f05f34f-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: KHC, CL, PEP, KO
+keywords: dividend cut, debt reduction, coffee business divestment, financial strain, payout ratio, earnings decline, dividend sustainability
+headline: Could Kraft Heinz's Latest Move Be a Sign That a Dividend Cut Is Around the Corner?
+<<<SUMMARY>>>
+Kraft Heinz is selling its North American coffee business to One Rock Capital Partners for $500 million in net proceeds to pay down debt. The move signals financial strain, as the company's earnings have declined and its dividend payout ratio is high relative to earnings. With diluted per-share profit of $0.46 last quarter versus a quarterly dividend of $0.40, there is minimal buffer, raising concerns about the sustainability of the dividend and the possibility of a future dividend cut.
+<<<INSIGHTS>>>
+KHC | negative | The company is divesting a business unit to raise cash for debt repayment, indicating financial pressure. Declining earnings, a high payout ratio with minimal buffer between earnings and dividend payments, and a 35% stock decline over five years all suggest deteriorating financial health and increased risk of a dividend cut.
+CL | neutral | Mentioned only in a comparative article headline with no substantive analysis in the main article content.
+PEP | neutral | Mentioned only in a comparative article headline with no substantive analysis in the main article content.
+KO | neutral | Mentioned only in a comparative article headline with no substantive analysis in the main article content.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6dc88cacd8de844c44fc446bb7bf96048f9b93c1f5baa0027e32a328dda17648
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T13:54:02Z
+publisher: The Motley Fool
+author: John Ballard
+url: https://www.fool.com/coverage/better-buy/2026/11/09/colgate-vs-chipotle-which-is-the-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd1f17cfa526400d7190c6fd3b28b1042242aa231-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: CL, CMG, CAVA
+keywords: consumer staples, fast-casual dining, valuation comparison, sector rotation, growth strategy, dividend yield, financial metrics
+headline: Colgate vs. Chipotle: Which Is the Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Colgate-Palmolive, a defensive consumer staple with $21B in TTM revenue and a 2.19% dividend yield, against Chipotle Mexican Grill, a growth-focused fast-casual restaurant chain with $12.7B in TTM revenue. Despite Colgate's higher market cap and stable cash flows, the author recommends Chipotle for 2027, citing potential sector rotation away from tech, strong momentum from new menu innovations, and multiple growth catalysts including national catering expansion and international growth.
+<<<INSIGHTS>>>
+CL | neutral | Presented as a stable, defensive investment with consistent 6% revenue growth, strong free cash flow of $3.8B, and reliable dividend yield of 2.19%. However, faces headwinds from high debt-to-equity ratio (12x), talc litigation risks, and currency exposure. Not recommended by the author for growth-focused investors.
+CMG | positive | Recommended as the better buy for 2027 due to 8% revenue growth, strong guest response to new menu items (Chili Lime Chips), multiple growth catalysts including national catering launch and international expansion, and potential for sector rotation. Lower debt-to-equity ratio (2.3x) and strong free cash flow of $1.5B support the positive outlook.
+CAVA | neutral | Mentioned as an emerging competitor to Chipotle in the fresh-ingredient fast-casual segment, representing a competitive risk factor but not analyzed in detail.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:36c87d4e7684bb2c55452beb897af473edd3d9a782eb58d31c18aecae59a2201
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T15:33:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026583/is-procter-gamble-s-beauty-momentum-enough-to-lift-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3026583
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CHD, CL
+keywords: Beauty business growth, Organic sales growth, Product innovation, Pantene, SK-II, Consumer engagement, Premium offerings, Market share gains
+headline: Is Procter & Gamble's Beauty Momentum Enough to Lift Growth?
+<<<SUMMARY>>>
+Procter & Gamble's Beauty segment achieved 5% organic sales growth in Q1 FY27, driven by product innovation and stronger brand execution across Hair Care and Skin & Personal Care. Pantene gained U.S. market share while SK-II posted double-digit growth in Greater China. PG maintains its fiscal 2027 organic sales growth outlook of 1-3%, with management seeing further acceleration opportunities through innovation and retail execution.
+<<<INSIGHTS>>>
+PG | positive | PG's Beauty segment delivered strong 5% organic sales growth in Q1 FY27 with gains across all segments. Pantene achieved market share gains and SK-II posted double-digit growth in Greater China. The company maintains confidence in its 1-3% organic sales growth outlook for FY27, indicating positive momentum despite challenging market conditions.
+CHD | positive | CHD is leveraging product innovation and brand expansion in beauty and personal care, with its HERO acne-care brand benefiting from growing consumer demand. The company is expanding distribution and strengthening digital engagement, though competitive pressures remain a concern.
+CL | positive | CL is capitalizing on beauty growth through premiumization, science-backed innovation, and stronger brand investments. Its portfolio includes premium offerings like EltaMD and PCA SKIN, positioning the company to benefit from evolving consumer preferences, though consumer uncertainty and competition remain challenges.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:17bcc07ed332ee180ef8ce4a272bfaabd6e9a9e12369e5e038ef62a53bac0b4b
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T11:30:02Z
+publisher: The Motley Fool
+author: Parkev Tatevosian, Cfa
+url: https://www.fool.com/investing/2026/11/11/my-forever-portfolio-4-spectacular-stocks-you-can-buy-now-and-never-sell/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F6a2c5b12626f485ce42392477d05b0aa189cb728-1280x720.jpg&w=1200&op=resize
+category: 
+tickers: V, LLY, CL, KO
+keywords: forever portfolio, long-term investing, buy-and-hold strategy, stock selection
+headline: My Forever Portfolio: 4 Spectacular Stocks You Can Buy Now and Never Sell
+<<<SUMMARY>>>
+The article discusses a long-term investment strategy for building a 'forever portfolio' with stocks suitable for buy-and-hold investors. It emphasizes the importance of adopting a different mindset when investing for longer time horizons, though the specific stock recommendations are behind a paywall.
+<<<INSIGHTS>>>
+V | positive | Mentioned as a stock recommendation for long-term holding; author has a position in the company; highlighted for consistent earnings growth (17% annually over a decade)
+LLY | positive | Included in the forever portfolio recommendations; author has a disclosed position in the company
+CL | positive | Recommended as part of the forever portfolio strategy for long-term buy-and-hold investors
+KO | positive | Mentioned as a stock recommendation suitable for a forever portfolio strategy
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a9e6a8dc1d26e7ea9b8ce6a67181f444822c821e06abaeca06a7c04e530949bc
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T01:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/11/these-5-dividend-aristocrats-have-raised-payouts-f/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893162%2F26_10_01-a-money-roll-with-a-post-it-note-with-the-word-dividends-written-on-it-_mf-dload-getty-dividend-income-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: KO, PG, JNJ, PEP, CL
+keywords: dividend aristocrats, dividend kings, consumer staples, healthcare, recession-resistant, dividend yield, market volatility
+headline: These 5 Dividend Aristocrats® Have Raised Payouts for Decades
+<<<SUMMARY>>>
+Five Dividend King stocks—Coca-Cola, Procter & Gamble, Johnson & Johnson, PepsiCo, and Colgate-Palmolive—have each increased dividends for at least 50 consecutive years. These recession-resistant companies from consumer staples and healthcare sectors offer reliable income streams and resilience during market volatility, making them attractive for investors seeking stability.
+<<<INSIGHTS>>>
+KO | positive | Strong organic sales growth of 7% in Q3 2026, highest among beverage competitors, appeals to conservative investors willing to pay premium for high-performing businesses
+PG | positive | Longest dividend streak at 70 years, reasonable organic sales growth of ~4%, slightly higher yield at 2.5% compared to direct competitor, strong industry leadership
+JNJ | positive | 64-year dividend streak (longest in healthcare), diversified across pharmaceutical and medical device sectors, resilient business model, highest Moneyball Superscore at 83/100
+PEP | positive | 54-year dividend streak, highest dividend yield at 4.1% on the list, attractive for value investors despite lower organic sales growth of 3.1% versus Coca-Cola
+CL | positive | Reliable dividend history as Dividend King, reasonable organic sales growth of ~4%, direct competitor to P&G with similar performance metrics
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7e6babd2d3071efd98eb57dbc20e4dd2f35c522e0a3e063b60d41aba11adf4d5
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T14:15:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3028520/4-consumer-staples-stocks-to-watch-amid-industry-headwinds?cid=CS-ZC-FT-industry_outlook-3028520
+image_url: https://staticx-tuner.zacks.com/images/articles/main/45/965.jpg
+category: 
+tickers: BJ, CL, KMB, OLLI
+keywords: consumer staples, cost pressures, consumer spending volatility, price sensitivity, margin pressure, digital transformation, supply chain efficiency, currency fluctuations
+headline: 4 Consumer Staples Stocks to Watch Amid Industry Headwinds
+<<<SUMMARY>>>
+The Consumer Products-Staples industry is navigating a challenging environment marked by elevated raw material, labor, and transportation costs, alongside heightened consumer price sensitivity and spending volatility. Companies are pursuing cost optimization, digital investments, and portfolio optimization strategies. The industry carries a Zacks Industry Rank #194 (bottom 21%), reflecting negative earnings outliers, though it has outperformed the S&P 500 over the past year with a 10.4% gain.
+<<<INSIGHTS>>>
+BJ | positive | Zacks Rank #2 (Buy) with strong business model focused on membership growth, value-oriented offerings, and omnichannel expansion. Consensus EPS estimate of $4.70 indicates 6.8% growth year-over-year. Shares gained 18.2% in the past year.
+CL | positive | Zacks Rank #3 (Hold) with strong brand portfolio, effective pricing strategies, and ongoing productivity efforts. Consensus EPS estimate increased to $3.92, indicating 6.2% growth. Shares advanced 24.7% in the past year.
+KMB | neutral | Zacks Rank #3 (Hold) focused on innovation and operational efficiency. While consensus EPS increased to $6.93, this represents an 8% decline year-over-year. Shares gained only 4.5% in the past year, reflecting modest performance.
+OLLI | negative | Zacks Rank #3 (Hold) with value-focused model, but shares declined 25.9% in the past year despite 19.4% EPS growth projection. Significant stock underperformance suggests market concerns outweigh operational improvements.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8cc18d990a2029e4532b79cf4a71294a1493cec899e68e5e1be0df12e206ff93
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:40:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028865/bj-or-cl-which-is-the-better-value-stock-right-now?cid=CS-ZC-FT-fundamental_analysis|yseop_template_3-3028865
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default354.jpg
+category: 
+tickers: BJ, CL
+keywords: value investing, P/E ratio, PEG ratio, Zacks Rank, consumer staples, valuation metrics
+headline: BJ or CL: Which Is the Better Value Stock Right Now?
+<<<SUMMARY>>>
+In a comparison of two Consumer Products - Staples sector stocks, BJ's Wholesale Club emerges as the better value opportunity. BJ holds a Zacks Rank #2 (Buy) with a Value grade of B, featuring a forward P/E of 23.54 and PEG ratio of 3.25. Colgate-Palmolive has a Zacks Rank #3 (Hold) with a Value grade of D, showing a forward P/E of 25.02 and PEG ratio of 4.44. BJ's stronger earnings estimate revisions and more attractive valuation metrics make it the superior choice for value investors.
+<<<INSIGHTS>>>
+BJ | positive | BJ has a higher Zacks Rank (#2 Buy vs #3 Hold), better Value grade (B vs D), lower forward P/E ratio (23.54 vs 25.02), lower PEG ratio (3.25 vs 4.44), and significantly lower P/B ratio (6.36 vs 121.72), indicating stronger earnings estimate revisions and more attractive valuation metrics.
+CL | negative | CL has a lower Zacks Rank (#3 Hold), weaker Value grade (D), higher forward P/E ratio (25.02), higher PEG ratio (4.44), and extremely high P/B ratio (121.72), suggesting less attractive valuation and weaker earnings outlook compared to BJ.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:20101e37e48a0e783f0d340148fd3b89bed15ba3ed33ba5dd7ea627bef85f4bd
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T06:52:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3029171/zacks-industry-outlook-highlights-colgate-palmolive-kimberly-clark-bj-s-wholesale-and-ollie-s-bargain-outlet?cid=CS-ZC-FT-press_releases-3029171
+image_url: https://staticx-tuner.zacks.com/images/articles/main/46/1313.jpg
+category: 
+tickers: BJ, CL, KMB, OLLI
+keywords: consumer staples, cost pressures, consumer price sensitivity, margin pressure, supply chain efficiency, digital capabilities, currency fluctuations, value-seeking behavior
+headline: Zacks Industry Outlook Highlights Colgate-Palmolive, Kimberly-Clark, BJ's Wholesale and Ollie's Bargain Outlet
+<<<SUMMARY>>>
+The Consumer Products-Staples industry faces significant headwinds from elevated cost pressures, consumer price sensitivity, and currency fluctuations. Despite these challenges, four key companies are leveraging operational efficiencies and strategic initiatives to navigate the difficult environment. The industry carries a Zacks Industry Rank #194 (bottom 21%), reflecting negative earnings outlooks, though it has outperformed the S&P 500 over the past year.
+<<<INSIGHTS>>>
+BJ | positive | Zacks Rank #2 (Buy) with strong business model focused on membership growth, omnichannel expansion, and value-oriented offerings. EPS consensus estimate of $4.70 indicates 6.8% growth year-over-year. Shares gained 18.2% in the past year.
+CL | neutral | Zacks Rank #3 (Hold) with strong brand portfolio and effective pricing strategies, but facing industry headwinds. EPS consensus estimate increased slightly to $3.92 with 6.2% projected growth. Shares advanced 24.7% in the past year, though the company operates in a challenged industry environment.
+KMB | neutral | Zacks Rank #3 (Hold) focused on innovation and productivity, but facing headwinds. EPS consensus estimate of $6.93 suggests an 8% decline year-over-year, indicating earnings pressure. Shares gained only 4.5% in the past year, reflecting modest performance.
+OLLI | negative | Zacks Rank #3 (Hold) with value-focused model and 19.4% EPS growth projection, but shares declined 25.9% in the past year, indicating significant market concerns despite positive earnings growth expectations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f5e74ff8c8c5094acb80ca5627f8b0b3bf93140c46aea652ab9c9d49ce520c5a
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T00:45:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/15/colgate-palmolive-vs-kimberly-clark-which-household-name-deserves-your-investment-dollars/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc6f88a5c7903b69a5aa230b4c28403d755e0066d-2410x1739.jpg&w=1200&op=resize
+category: 
+tickers: CL, KMB, WMT, PG
+keywords: dividend kings, consumer staples, valuation comparison, pet nutrition, acquisition integration, price-to-earnings ratio
+headline: Colgate-Palmolive vs. Kimberly-Clark: Which Household Name Deserves Your Investment Dollars?
+<<<SUMMARY>>>
+Colgate-Palmolive and Kimberly-Clark are both Dividend Kings with strong track records, but they differ in valuation and growth strategy. Colgate-Palmolive trades at a premium (24.3x forward P/E) with growth driven by its Hill's Pet Nutrition segment, while Kimberly-Clark offers a lower valuation (14.7x forward P/E) but faces integration challenges from its Kenvue acquisition. The choice depends on whether investors believe in Colgate's pet food expansion or Kimberly-Clark's expanded hygiene portfolio.
+<<<INSIGHTS>>>
+CL | positive | Strong global market leadership in oral care, successful Hill's Pet Nutrition segment generating $1.2B in Q3 2026 with 5.5% growth representing 22% of total sales, 64-year dividend increase streak, and diversified revenue streams position it as a reliable growth investment despite premium valuation.
+KMB | neutral | Offers attractive valuation at 14.7x forward P/E and 54-year dividend increase streak, but faces headwinds including 2.1% revenue decline in FY 2025, volatile raw material costs, and uncertainty around Kenvue acquisition synergies. The expanded product portfolio is promising but execution risk remains.
+WMT | neutral | Mentioned as a major customer for both Colgate-Palmolive (11% of net sales) and Kimberly-Clark (16% of net sales), representing significant customer concentration risk for both companies.
+PG | neutral | Identified as a constant competitive rival to Colgate-Palmolive in core markets, representing ongoing competitive pressure.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7b0bf10dbf5eacaa7f49dbf9067db61d2307ad4fb023f4aefa5498ab7546ff66
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T15:25:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031263/can-pg-s-health-care-segment-extend-its-sales-momentum-ahead?cid=CS-ZC-FT-analyst_blog|quick_take-3031263
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CHD, CL
+keywords: health care segment, organic sales growth, product innovation, portfolio expansion, cold and cough season, Thorne acquisition, affordability pressures, oral care, personal health care
+headline: Can PG's Health Care Segment Extend Its Sales Momentum Ahead?
+<<<SUMMARY>>>
+Procter & Gamble's Health Care segment is sustaining growth through innovation and portfolio expansion, with organic sales rising 4% in Q1 fiscal 2027. The company faces affordability pressures on premium brands but balances this with value offerings. A potential recovery in cold and cough season demand and the Thorne acquisition could provide additional growth catalysts. Competitors Church & Dwight and Colgate-Palmolive are also leveraging innovation and strong portfolios to drive health care growth.
+<<<INSIGHTS>>>
+PG | positive | P&G demonstrates resilience with 4% organic sales growth in Q1 fiscal 2027, strong innovation-led growth, and strategic acquisitions like Thorne. The company is well-positioned to benefit from potential recovery in seasonal demand and has a solid competitive positioning, though it faces affordability pressures on premium brands.
+CHD | positive | CHD is strengthening its health care presence through product innovation and portfolio optimization, with strong consumer demand for brands like THERABREATH and WATERPIK. The company's focus on distribution expansion and retail execution supports continued sales growth momentum.
+CL | positive | Colgate-Palmolive maintains global leadership in oral care with strong market shares (41.4% in toothpaste, 33.1% in manual toothbrushes). The company's emphasis on premium offerings, science-backed innovation, and emerging market opportunities support long-term sales growth prospects.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e77598bc63affffe01c35c865f458ec8f7c2918f647858bbeb78dd515e616d8f
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032614/pg-jumps-17-4-in-three-months-as-investors-weigh-what-comes-next?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032614
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CL, KMB
+keywords: organic sales growth, margin pressures, valuation concerns, productivity savings, cost inflation, consumer staples, volume growth
+headline: PG Jumps 17.4% in Three Months as Investors Weigh What Comes Next
+<<<SUMMARY>>>
+Procter & Gamble (PG) shares gained 17.4% over three months, driven by broad-based 4% organic sales growth across all product categories and regions. However, rising input costs, margin pressures, and a premium valuation of 23.81X forward earnings raise concerns about sustainability. While productivity savings and innovation in key segments like Fabric Care and Beauty support the rally, weakness in Health Care and Grooming segments, along with $1.4 billion in expected cost pressures for fiscal 2027, temper the outlook.
+<<<INSIGHTS>>>
+PG | neutral | While PG demonstrated strong 4% organic sales growth and a 17.4% three-month share price gain, the neutral rating reflects offsetting concerns: positive factors include broad-based growth across categories/regions and productivity gains; negative factors include rising commodity/energy costs ($1.4B expected pressure), margin contraction, premium valuation (23.81X vs 21.05X sub-industry average), and weakness in select segments (Health Care, Grooming). The Zacks Rank #3 (Hold) rating supports a measured view.
+CL | positive | Colgate-Palmolive reported solid 3.6% organic sales growth and 7% Base Business EPS growth in Q3 2026, outperforming peer Kimberly-Clark's 1.3% organic sales decline, suggesting relative strength in the household and personal care sector.
+KMB | negative | Kimberly-Clark reported a 1.3% organic sales decline in Q3, underperforming peers like Colgate-Palmolive and Procter & Gamble, indicating weakness in the household and personal care segment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:259473711949c977d0a7816b655e550370363d8d1aded5af7b04d7e848c7c2f2
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:31:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032630/is-pg-worth-buying-as-growth-improves-but-its-valuation-stays-rich?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032630
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CL, KMB
+keywords: organic sales growth, volume gains, premium valuation, commodity costs, earnings growth, cash flow, consumer staples
+headline: Is PG Worth Buying as Growth Improves but Its Valuation Stays Rich?
+<<<SUMMARY>>>
+Procter & Gamble reported strong fiscal Q1 organic sales growth of 4%, driven by volume gains and broad-based growth across all product categories and regions. However, the company's premium valuation (23.81X forward earnings), rising commodity and energy costs ($1.4B headwind expected in fiscal 2027), and modest full-year earnings guidance of 0-3% growth limit near-term upside potential. Strong cash flow supports dividends and buybacks, but the investment case remains balanced.
+<<<INSIGHTS>>>
+PG | neutral | While PG demonstrated improving operational momentum with 4% organic sales growth and strong cash generation, the neutral sentiment reflects offsetting concerns: premium valuation at 23.81X forward earnings, significant cost headwinds ($1.4B expected in fiscal 2027), and modest earnings growth guidance of 0-3%. The Zacks Rank #3 (Hold) rating and poor VGM/Value/Momentum scores support a cautious, patient stance rather than a bullish outlook.
+CL | neutral | Mentioned as a peer comparison with 3.6% organic sales growth in Q3 2026, which is lower than PG's 4% growth, suggesting relatively weaker performance in the consumer staples sector.
+KMB | negative | Reported a 1.3% organic sales decline in Q3 2026, indicating weakness in the consumer staples sector and underperformance compared to PG's positive growth trajectory.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:83ad0b1cda162f91eca3614b569452f98ffa1a09a0cd07948b175e162c1df1a5
+symbol: CL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032627/pg-raises-sales-outlook-as-thorne-acquisition-adds-growth-potential?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032627
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CL, HLN
+keywords: Thorne acquisition, sales growth guidance, organic growth, financing costs, restructuring, earnings headwinds, integration risk
+headline: PG Raises Sales Outlook as Thorne Acquisition Adds Growth Potential
+<<<SUMMARY>>>
+Procter & Gamble raised its fiscal 2027 all-in sales growth guidance to 2-4% following the completion of the Thorne acquisition, but maintained unchanged organic sales growth at 1-3% and core earnings growth at 0-3%. The company faces headwinds from $300 million in higher financing costs, $1.4 billion in commodity pressures, and $2 billion in restructuring costs, which limit the acquisition's near-term earnings contribution.
+<<<INSIGHTS>>>
+PG | neutral | While PG raised reported sales guidance, the unchanged organic growth and core earnings guidance, combined with significant headwinds from financing costs ($300M), commodity pressures ($1.4B), and restructuring costs ($2B), suggest limited near-term earnings benefit. The Zacks Rank #3 (Hold) rating and poor VGM scores (Value D, Momentum D) support a measured outlook.
+CL | neutral | Mentioned as a peer comparison showing 3.6% organic sales growth in Q3 2026, providing context for the broader consumer-health demand environment. No specific sentiment is implied.
+HLN | neutral | Referenced as a consumer-health peer with 2.6% organic revenue growth, used for comparative context only. No specific sentiment is implied.
+<<<END>>>

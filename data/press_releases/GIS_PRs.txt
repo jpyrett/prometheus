@@ -1,0 +1,423 @@
+<<<PRESS_RELEASE>>>
+id: d7bb57e8a6061027
+symbol: GIS
+published_utc: 2025-11-19T08:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-webcast-fiscal-2026-second-quarter-earnings-results-dec-17-2025-2025-11
+headline: General Mills to Webcast Fiscal 2026 Second Quarter Earnings Results on Dec. 17, 2025
+<<<TEXT>>>
+General Mills, Inc. plans to report results for its fiscal 2026 second quarter on Dec. 17, 2025. Its portfolio of beloved brands includes household names like Cheerios, Nature Valley, Blue Buffalo, Häagen-Dazs, Old El Paso, Pillsbury, Betty Crocker, Totino’ s, Annie’ s, Wanchai Ferry, Yoki and more. General Mills generated fiscal 2025 net sales of U.S. $19 billion.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9abc7c97f578efba
+symbol: GIS
+published_utc: 2025-12-04T09:00:00Z
+url: https://www.nasdaq.com/press-release/first-time-ever-reeses-puffs-cereal-goes-dark-new-dark-chocolate-flavor-2025-12-04
+headline: For The First Time Ever, Reese’s Puffs Cereal Goes Dark With New Dark Chocolate Flavor
+<<<TEXT>>>
+Reese’ s Puffs cereal is entering a new era with its first new flavor combo since the cereal debuted in 1994. Reese’ s Puffs cereal Dark Chocolate Naturally Flavored is a richer, deeper take on the beloved peanut butter and chocolate combo, made with Hershey’ s cocoa, real Reese’ s Peanut Butter and the signature Reese’ s Puffs cereal crunch fans love.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 742c9c7bc5e77fd6
+symbol: GIS
+published_utc: 2025-12-08T11:00:00Z
+url: https://www.nasdaq.com/press-release/wheaties-makes-marty-supremes-dream-reality-limited-edition-marty-supreme-wheaties
+headline: Wheaties Makes Marty Supreme’s Dream a Reality with Limited-Edition Marty Supreme Wheaties Box
+<<<TEXT>>>
+Marty Mauser, an aspiring ping pong champion in the new movie Marty Supreme said, "It’ s only a matter of time before I’ m staring at you from the cover of a Wheaties box." Riding the internet-breaking Zoom meeting mania, where lead actor Timothée Chalamet made a call to the movie’ s marketing team to be on a Wheaties Box, fans can officially get their own limited-edition...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f9231982e3b0d568
+symbol: GIS
+published_utc: 2025-12-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-helps-fans-score-game-day-snacks-and-savings-new-playoff-campaign
+headline: General Mills Helps Fans Score Game Day Snacks and Savings in New Playoff Campaign with Justin Jefferson and Terry Crews
+<<<TEXT>>>
+As fans gear up for playoff season, General Mills is bringing families and friends together over the love of the game with its latest" Tastes Like a Touchdown" campaign starring Justin Jefferson and Terry Crews. Justin Jefferson and Terry Crews team up with General Mills to show fans that everyone can have a Game Day victory with bold flavors, big fun and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8b8839d77f36a68f
+symbol: GIS
+published_utc: 2025-12-17T07:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-reports-fiscal-2026-second-quarter-results-and-reaffirms-full-year
+headline: General Mills Reports Fiscal 2026 Second-quarter Results and Reaffirms Full-year Outlook
+<<<TEXT>>>
+General Mills, Inc. today reported results for its second quarter ended November 23, 2025. "Our team continued to execute exceptionally well in a volatile operating environment, delivering results ahead of our expectations in the second quarter," said General Mills Chairman and Chief Executive Officer Jeff Harmening." Our investments in remarkability are...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 81c909b5226e3132
+symbol: GIS
+published_utc: 2025-12-21T20:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-recalls-select-pillsbury-pizza-pops-products-dated-june-9-2026-june-14
+headline: General Mills Recalls Select Pillsbury Pizza Pops Products Dated June 9, 2026 to June 14, 2026
+<<<TEXT>>>
+This recall affects Pillsbury Pepperoni and Bacon Pizza Pops, Pillsbury Pepperoni and Bacon Pizza Pops, Pillsbury Frank’ s RedHot Pepperoni and Bacon Pizza Pops and Supremo Extreme Pepperoni and Bacon Pizza Pops with the below UPC codes and dates. Pillsbury Pepperoni and Bacon Pizza Pops Package UPC: 069052129619 Recalled Better if Used by Dates: 09 JN2026WN...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 830d2732b40481f4
+symbol: GIS
+published_utc: 2026-01-07T09:00:00Z
+url: https://www.nasdaq.com/press-release/donna-kelce-and-pillsbury-doughboy-reveal-53rd-pillsbury-bake-offr-contest-finalists
+headline: Donna Kelce and the Pillsbury Doughboy Reveal the 53rd Pillsbury Bake-Off® Contest Finalists Battling for Best Game Day Spread
+<<<TEXT>>>
+The Pillsbury Doughboy and America’ s favorite football mom Donna Kelce have huddled to reveal the four final contenders in the 53 rd Pillsbury Bake-Off ® Contest competing for $50,000 and bragging rights for their game day dishes. Pillsbury opens fan voting to choose the winner of the 53rd Pillsbury Bake-Off ® Contest, hosted in partnership with Donna...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c4c9427f78660e84
+symbol: GIS
+published_utc: 2026-01-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/inserting-and-replacing-progressotm-soup-drops-soup-you-can-suck-return-new-variety
+headline: INSERTING and REPLACING Progresso™ Soup Drops — the Soup You Can Suck On — Return in New Variety Can Featuring Chicken Noodle, Tomato Basil and Beef Pot Roast Flavors
+<<<TEXT>>>
+Insert at the end of fourth full paragraph, fourth sentence of release: with free shipping for Walmart+ members or on all orders from Walmart.com over $35. This press release features multimedia. View the full release here: https://www.businesswire.com/news/home/20260115213382/en/.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: eb56e6f1d79e606d
+symbol: GIS
+published_utc: 2026-01-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/progressotm-soup-drops-soup-you-can-suck-return-new-variety-can-featuring-chicken
+headline: Progresso™ Soup Drops — the Soup You Can Suck On — Return in New Variety Can Featuring Chicken Noodle, Tomato Basil and Beef Pot Roast Flavors
+<<<TEXT>>>
+Progresso Soup Drops are back just in time for cold and flu season— and for any day that just sucks. After selling out in just minutes last January, the soup you can suck on now debuts the first-ever Progresso Soup Drops Variety Can featuring three of Progresso’ s most iconic soup flavors. The limited-edition Progresso Soup Drops Variety Cans go on sale Thursday, Jan....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5b503fbfc0077a7e
+symbol: GIS
+published_utc: 2026-01-25T18:30:00Z
+url: https://www.nasdaq.com/press-release/general-mills-expands-dec-21-2025-voluntary-recall-select-pillsbury-pizza-pops
+headline: General Mills Expands Dec. 21, 2025, Voluntary Recall of Select Pillsbury Pizza Pops Products
+<<<TEXT>>>
+General Mills today expanded its Dec. 21, 2025, voluntary recall of select Pillsbury Pizza Pops products sold in Canada with" better if used by" dates of June 8, 2026 to June 21, 2026. This recall affects Pillsbury 3 Cheese Pizza Pops, Pillsbury Pepperoni Pizza Pops, Supremo Extreme Pepperoni and Bacon Pizza Pops, Pillsbury Pepperoni and Bacon Pizza Pops, Pillsbury...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fa58f151f06490be
+symbol: GIS
+published_utc: 2026-01-27T06:00:00Z
+url: https://www.nasdaq.com/press-release/violet-foods-llc-portfolio-company-amphora-equity-partners-announces-acquisition-muir
+headline: Violet Foods LLC, a Portfolio Company of Amphora Equity Partners, Announces the Acquisition of the Muir Glen Brand
+<<<TEXT>>>
+This acquisition marks a significant expansion for Violet Foods, which owns a portfolio of brands including Sclafani, Fattoria Fresca and Don Pepino-- the #1 pizza sauce brand in the Northeast. By integrating Muir Glen’ s nationally distributed organic tomato products with Violet Foods’ established position in fresh-pack tomato offerings, Violet Foods is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f17f333bfdf58097
+symbol: GIS
+published_utc: 2026-01-27T08:30:00Z
+url: https://www.nasdaq.com/press-release/general-mills-elects-joan-bottarini-its-board-directors-2026-01-27
+headline: General Mills Elects Joan Bottarini To Its Board of Directors
+<<<TEXT>>>
+General Mills, Inc. today announced the election of Joan Bottarini to its board of directors, effective Jan. 26, 2026. Before joining Hyatt, Bottarini served as the Controller– Development at Essex Property Trust and an Assurance Manager at KPMG LLP. In other action at its regularly scheduled meeting, the General Mills board of directors declared a quarterly...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5ed40c0de99b94ca
+symbol: GIS
+published_utc: 2026-01-29T10:00:00Z
+url: https://www.nasdaq.com/press-release/totinostm-pizza-rollstm-brings-back-fan-favorite-intergalactic-friend-chazmo-broadway
+headline: Totino’s™ Pizza Rolls™ Brings Back Fan-Favorite Intergalactic Friend Chazmo in Broadway-Inspired "CHAZMO: The Musical" Ahead of the Big Game
+<<<TEXT>>>
+After stealing the spotlight during Totino’ s Pizza Rolls’ first-ever Big Game commercial and becoming an instant icon, Chazmo— the out-of-this-world, pizza roll-obsessed visitor who bid a shocking and abrupt farewell last year— is getting his moment in the spotlight once more. Introducing" CHAZMO: The Musical"— a bold, Broadway- inspired production that explores...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 95f918417838f387
+symbol: GIS
+published_utc: 2026-02-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-webcast-presentation-cagny-conference-feb-17-2026-2026-02-02
+headline: General Mills to Webcast Presentation at CAGNY Conference on Feb. 17, 2026
+<<<TEXT>>>
+General Mills, Inc. announced today that Chairman and Chief Executive Officer Jeff Harmening, Chief Financial Officer Kofi Bruce, and Group President of North America Retail and North America Pet Dana McNabb will be featured speakers at the Consumer Analyst Group of New York Conference in Orlando, Florida, on Feb. 17, 2026. Its portfolio of beloved brands...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7a050177427fed5c
+symbol: GIS
+published_utc: 2026-02-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/ghostr-cinnamon-toast-crunchtm-and-lucky-charmstm-team-deliver-protein-packed-cereals
+headline: GHOST®, Cinnamon Toast Crunch™ and Lucky Charms™ Team Up to Deliver Protein-Packed Cereals
+<<<TEXT>>>
+Get ready to level up your breakfast game! General Mills, in continued collaboration with lifestyle and sports nutrition brand GHOST ®, is thrilled to announce the launch of two new crave-worthy, high-protein cereals: GHOST ® PROTEIN CEREAL x CINNAMON TOAST CRUNCH™ and GHOST ® PROTEIN CEREAL x LUCKY CHARMS™. "Cereal has been a big part of GHOST ® since the very...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 273ddd5db1270100
+symbol: GIS
+published_utc: 2026-02-11T09:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-recognized-newsweeks-americas-most-responsible-companies-2026-list-2026
+headline: General Mills Recognized on Newsweek's America's Most Responsible Companies 2026 List
+<<<TEXT>>>
+General Mills has been recognized by Newsweek as one of America’ s Most Responsible Companies 2026, securing placement on the list for the seventh consecutive year and ranking No. 2 in the Retail and Consumer Goods industry. This prestigious award is presented by Newsweek and Statista Inc., the world-leading statistics portal and industry ranking provider.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f4cba153df26e88c
+symbol: GIS
+published_utc: 2026-02-17T06:30:00Z
+url: https://www.nasdaq.com/press-release/general-mills-outlines-progress-accelerate-strategy-cagny-conference-2026-02-17
+headline: General Mills Outlines Progress on Accelerate Strategy at CAGNY Conference
+<<<TEXT>>>
+General Mills, Inc. will share an update on the company’ s Accelerate strategy and key initiatives at today’ s Consumer Analyst Group of New York Conference. Chairman and Chief Executive Officer Jeff Harmening, Chief Financial Officer Kofi Bruce, and Group President of North America Retail and North America Pet Dana McNabb will outline plans to drive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d59b30fdff415bf5
+symbol: GIS
+published_utc: 2026-03-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/all-general-mills-k-12-school-foods-now-made-without-certified-colors-2026-03-05
+headline: All General Mills K-12 School Foods Now Made without Certified Colors
+<<<TEXT>>>
+General Mills today announced that its entire portfolio of K-12 school foods is now made without certified colors, successfully achieving this milestone ahead of its summer 2026 commitment. "We are proud to have reached this important milestone," said Pankaj Sharma, segment president, North America Foodservice, General Mills." As a trusted partner to schools...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0b2228bb2ac1a1c5
+symbol: GIS
+published_utc: 2026-03-05T16:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-names-jonathan-ness-chief-supply-chain-officer-2026-03-05
+headline: General Mills Names Jonathan Ness Chief Supply Chain Officer
+<<<TEXT>>>
+General Mills today announced Jonathan Ness has been named Chief Supply Chain Officer, effective March 16, 2026. Jonathan Ness, chief supply chain officer, General Mills. Ness graduated from South Dakota State University with a bachelor’ s degree in economics and from the University of Oklahoma with a master’ s degree in public administration.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 81325d415c669979
+symbol: GIS
+published_utc: 2026-03-09T11:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-brings-whole-family-together-new-super-mario-galaxy-movie-themed-foods
+headline: General Mills Brings the Whole Family Together with New The Super Mario Galaxy Movie Themed Foods
+<<<TEXT>>>
+Just in time for the film’ s global release on April 1, fans can find a star-studded lineup of limited-edition products inspired by the film’ s iconic characters and out-of-this galaxy adventures. Nintendo and Illumination’ s The Super Mario Galaxy Movie arrives in theaters April 1, 2026. This Yoshi Egg-inspired cookie dough is the perfect whimsical treat for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7063d1285e975a5a
+symbol: GIS
+published_utc: 2026-03-16T12:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-reintroduces-beloved-la-tiara-brand-2026-03-16
+headline: General Mills Reintroduces Beloved La Tiara Brand
+<<<TEXT>>>
+General Mills today announced the highly anticipated return of La Tiara, a beloved brand of thin, crispy corn taco shells and taco seasoning that originated in the Kansas City, Mo., area. This exciting relaunch marks an investment in the Kansas City area's economy, creating over 100 jobs in the region, as the cherished regional brand goes national for the first time.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 33effa64f639497b
+symbol: GIS
+published_utc: 2026-03-17T07:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-sell-its-business-brazil-2026-03-17
+headline: General Mills to Sell its Business in Brazil
+<<<TEXT>>>
+General Mills, Inc. today announced it has entered into a definitive agreement to sell its business in Brazil to 3 corações. The divestiture encompasses General Mills’ business in Brazil, including supply chain facilities in Pouso Alegre and Campo Novo do Parecis. Collectively, the Brazil business contributed approximately $350 MM USD to General Mills’...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a806ef06887caa74
+symbol: GIS
+published_utc: 2026-03-18T07:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-reports-fiscal-2026-third-quarter-results-and-reaffirms-full-year
+headline: General Mills Reports Fiscal 2026 Third-quarter Results and Reaffirms Full-year Outlook
+<<<TEXT>>>
+General Mills, Inc. today reported results for its third quarter ended February 22, 2026. "We’ re reaffirming our fiscal 2026 guidance today, as our focus on executing our Remarkability playbook continued to deliver stronger competitiveness for our brands in the third quarter," said General Mills Chairman and Chief Executive Officer Jeff Harmening." We started...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a47a74179a487d13
+symbol: GIS
+published_utc: 2026-03-24T09:00:00Z
+url: https://www.nasdaq.com/press-release/blue-buffalotm-answers-requests-pet-related-tax-deductions-love-made-fresh-dog-tax
+headline: Blue Buffalo™ Answers Requests for Pet-Related Tax Deductions with "Love Made Fresh Dog Tax Credit"
+<<<TEXT>>>
+Dog parents can now" claim" their pup as a dog-pendent for the chance to receive a $1,000 credit via the Love Made Fresh Dog Tax Credit. That’ s why Blue Buffalo— the most loved and trusted natural pet food brand in the U.S.— is stepping in to launch the Love Made Fresh Dog Tax Credit, giving dog parents the chance to" write off" the cost of food, treats, toys and all the things...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 656201b21435c890
+symbol: GIS
+published_utc: 2026-03-26T09:00:00Z
+url: https://www.nasdaq.com/press-release/lucky-charms-and-trix-bring-bold-flavors-breakfast-table-through-new-cereals-made
+headline: Lucky Charms and Trix Bring Bold Flavors to the Breakfast Table Through New Cereals Made with Colors from Natural Sources
+<<<TEXT>>>
+This summer, fans can enjoy Lucky Charms Unicorn Cotton Candy cereal, featuring three new unicorn marshmallows, and Tropical Trix featuring Disney’ s Moana cereal, a special collaboration inspired by the fan-favorite film. Lucky Charms Unicorn Cotton Candy and Tropical Trix featuring Disney’ s Moana cereals add a playful twist to morning routines.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 95ed46242f9eacce
+symbol: GIS
+published_utc: 2026-04-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-reports-its-impact-2026-global-responsibility-report-2026-04-15
+headline: General Mills Reports its Impact in 2026 Global Responsibility Report
+<<<TEXT>>>
+General Mills today released its 2026 Global Responsibility Report, detailing progress the company made across three priority areas— Food, Planet and People— during its 2025 fiscal year, May 27, 2024, through May 25, 2025. The report marks General Mills’ 56 th year of reporting on its environmental and social impact, reinforces the company’ s commitment to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d40514e36b5864a6
+symbol: GIS
+published_utc: 2026-04-21T10:15:00Z
+url: https://www.nasdaq.com/press-release/cinco-de-mayo-and-taco-tuesday-fall-same-day-old-el-paso-celebrates-rare-taco
+headline: Cinco de Mayo and Taco Tuesday Fall on the Same Day as Old El Paso Celebrates Rare "Taco Totality" with Exclusive Merch and Tacos for Fans Nationwide
+<<<TEXT>>>
+Old El Paso ® celebrates the overlap of Cinco de Mayo and Taco Tuesday with an eclipse-themed Taco Totality Gear Box including new Old El Paso TABASCO ® Sauce flavored Taco Shells. To mark the historic crossover and to help fans fully experience Taco Totality, Old El Paso is dropping a limited-edition Taco Totality Gear Box packed with the new Old El Paso...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a3ae88af99bcf53f
+symbol: GIS
+published_utc: 2026-05-06T09:00:00Z
+url: https://www.nasdaq.com/press-release/sweet-sour-and-spicy-general-mills-taps-flavor-trends-new-gushers-fruit-foot-and
+headline: Sweet, Sour and Spicy: General Mills Taps into Flavor Trends with New Gushers, Fruit by the Foot and Fruit Roll-Ups Varieties
+<<<TEXT>>>
+General Mills is tapping into the season’ s hottest taste trends, unleashing an irresistible lineup up of new fruit snacks designed to thrill the taste buds and ignite social feeds. From viral sour challenges to sweet-and-spicy snack hacks trending across TikTok, fans have been remixing their favorite fruit snacks, and now General Mills is giving them exactly...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 44f9f33052fe0ba2
+symbol: GIS
+published_utc: 2026-05-06T17:15:00Z
+url: https://www.nasdaq.com/press-release/general-mills-names-dana-mcnabb-chief-operating-officer-2026-05-06
+headline: General Mills Names Dana McNabb Chief Operating Officer
+<<<TEXT>>>
+General Mills today announced Dana McNabb has been promoted to Chief Operating Officer, effective June 1, 2026. In addition to her current accountabilities leading North America Retail and North America Pet, McNabb will add responsibility for all General Mills’ operating segments and key operating functions, including the International and North America...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 03675b92ab21037e
+symbol: GIS
+published_utc: 2026-05-14T09:00:00Z
+url: https://www.nasdaq.com/press-release/finally-protein-bar-tastes-larabar-2026-05-14
+headline: Finally, a Protein Bar That Tastes Like LÄRABAR
+<<<TEXT>>>
+Known for its healthy and delicious ingredient philosophy, LÄRABAR is now bringing that same approach to protein. Say hello to LÄRABAR Protein, a bar that proves you don’ t have to choose between taste and the protein your body craves. This press release features multimedia.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 12c2a265e676d723
+symbol: GIS
+published_utc: 2026-05-20T08:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-webcast-remarks-dbaccess-global-consumer-conference-june-4-2026-2026-05
+headline: General Mills to Webcast Remarks at dbAccess Global Consumer Conference on June 4, 2026
+<<<TEXT>>>
+General Mills, Inc. announced that Chief Financial Officer Kofi Bruce and Chief Operating Officer Dana McNabb will be featured speakers at the dbAccess Global Consumer Conference on June 4, 2026. Its portfolio of beloved brands includes household names like Cheerios, Nature Valley, Blue Buffalo, Häagen-Dazs, Old El Paso, Pillsbury, Betty Crocker, Totino’ s,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b366bdfc188affe1
+symbol: GIS
+published_utc: 2026-05-28T10:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-and-its-iconic-brands-celebrate-americas-250th-birthday-79-themed
+headline: General Mills and its Iconic Brands Celebrate America’s 250th Birthday with 79 Themed Products
+<<<TEXT>>>
+As a company that has shaped the nation’ s culinary landscape for generations, General Mills is serving up even more ways to celebrate this summer with 79 limited-edition products inspired by America’ s 250th birthday. Across fan-favorite brands like Cheerios, Pillsbury, Betty Crocker and Fruit Roll-Ups, the lineup brings nostalgic flavors, red, white and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f77060fbecb8eb73
+symbol: GIS
+published_utc: 2026-06-01T19:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-sell-haagen-dazs-shops-mainland-china-investor-group-including-ningji
+headline: General Mills to Sell Häagen-Dazs Shops in Mainland China to Investor Group Including Ningji
+<<<TEXT>>>
+General Mills, Inc. today announced that it has entered into a definitive agreement to sell its Häagen-Dazs shops in Mainland China to an investor group including Ningji, a Chinese company that operates one of the fastest growing tea brands in China with a network of more than 3,000 premium quick-service retail tea shops. As part of the agreement, the buyer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 21f89dc934a0a0c4
+symbol: GIS
+published_utc: 2026-06-03T08:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-webcast-fiscal-2026-fourth-quarter-and-full-year-earnings-results-july
+headline: General Mills to Webcast Fiscal 2026 Fourth Quarter and Full Year Earnings Results on July 1, 2026
+<<<TEXT>>>
+General Mills, Inc. plans to report results for its fiscal 2026 fourth quarter and full year on July 1, 2026. A press release, pre-recorded management remarks and supporting slides will be issued that morning followed by a webcasted question and answer session on the results at 8 a.m. CT. Interested parties can access these materials and the webcast at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 175efffe1c0eeb80
+symbol: GIS
+published_utc: 2026-06-16T09:00:00Z
+url: https://www.nasdaq.com/press-release/wheaties-celebrates-wnba-star-aja-wilsons-full-court-impact-new-limited-edition-box
+headline: Wheaties Celebrates WNBA Star A’ja Wilson’s Full-Court Impact with New Limited-Edition Box
+<<<TEXT>>>
+Wheaties announced today that its newest champion to grace the cover of its iconic orange box will be 3 x WNBA Champion and the league’ s first-ever 4 x Kia WNBA MVP, A’ ja Wilson. From South Carolina standout to one of the most dominant players to ever step on the court, Wilson embodies what it means to be a Wheaties Champion— leading with excellence, making history and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 756446a66c2bae7a
+symbol: GIS
+published_utc: 2026-06-18T09:00:00Z
+url: https://www.nasdaq.com/press-release/sweetening-americas-250th-birthday-general-mills-gifts-1-million-free-betty-crocker
+headline: Sweetening America's 250th Birthday: General Mills Gifts 1 Million Free Betty Crocker Cakes
+<<<TEXT>>>
+Betty Crocker, America’ s favorite cake mix brand*, has helped families celebrate birthdays for generations and as the country prepares to blow out 250 candles, General Mills is giving away up to one million free cakes from the brand to mark the milestone birthday. Betty Crocker invites families nationwide to bake up sweet memories this summer with trusted...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4ff7461184109aed
+symbol: GIS
+published_utc: 2026-06-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/blue-buffalo-celebrates-americas-1750th-birthday-dog-years-dog-friendliest-fireworks
+headline: Blue Buffalo Celebrates America's 1750th Birthday (in Dog Years!) with the Dog-Friendliest Fireworks Show and Ways to Safely Include Your Pets in the Festivities
+<<<TEXT>>>
+"America's 250th birthday is a once-in-a-generation celebration, but while fireworks are fun for people, large booms and neighborhood firecrackers make this one of the most stressful times of the year for dogs," said Nicole Ayers, Business Unit Director for Growth Accelerators, North America Pet, General Mills." We know pets are family, and this year, we're helping...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e0417f4fa74625de
+symbol: GIS
+published_utc: 2026-06-23T09:00:00Z
+url: https://www.nasdaq.com/press-release/say-yes-new-honey-nut-cheerios-protein-cereal-limited-edition-buzz-worthy-blind-box
+headline: Say Yes to New Honey Nut Cheerios Protein Cereal with Limited-Edition Buzz-worthy Blind-Box Ring Collection
+<<<TEXT>>>
+Between short-lived flings and endless choices that don’ t fit their lifestyle, protein seekers have been stuck playing the field for far too long. 8 K O-fficial: This ring takes it straight to forever with an 8 K gold-plated design inspired by the cereal’ s 8 g of protein per serving. Little Spoon: A cute and cozy ode to the spoonful that started it all, this silver ring...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4fc885d0d795d6c9
+symbol: GIS
+published_utc: 2026-06-25T09:00:00Z
+url: https://www.nasdaq.com/press-release/reeses-puffs-and-glorilla-are-bringing-back-iconic-eat-em-rap-new-late-night-remix
+headline: Reese’s Puffs and GloRilla Are Bringing Back the Iconic "Eat ‘Em Up" Rap with New Late-Night Remix
+<<<TEXT>>>
+With her signature sound, GloRilla is bringing after hours energy and a bold vibe to a remix of the Reese’ s Puffs iconic" Eat’ Em Up" rap, dropping at midnight on June 26, via CMG/Interscope Records. "I grew up with the Reese’ s Puffs‘ Eat’ Em Up’ rap, so getting to put my own spin on it is a full-circle moment for me," said GloRilla." I wanted to keep that nostalgia people connect with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c563fe3d396a45ff
+symbol: GIS
+published_utc: 2026-07-01T07:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-reports-fiscal-2026-fourth-quarter-adjusted-results-line-company
+headline: General Mills Reports Fiscal 2026 Fourth-quarter Adjusted Results in Line with Company Expectations
+<<<TEXT>>>
+General Mills, Inc. today reported results for its fourth quarter and fiscal year ended May 31, 2026. "We finished fiscal 2026 on a positive note, delivering fourth-quarter adjusted results that met our expectations while continuing to strengthen our foundation to position General Mills for long-term success," said General Mills Chairman and Chief...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: df709e4d3a03b4d4
+symbol: GIS
+published_utc: 2026-07-09T09:00:00Z
+url: https://www.nasdaq.com/press-release/nature-valley-brings-americas-most-iconic-national-parks-life-through-commemorative
+headline: Nature Valley Brings America’s Most Iconic National Parks to Life Through Commemorative Packaging and Exclusive National Park Adventure Merch
+<<<TEXT>>>
+From Yellowstone's geysers to Yosemite's granite cliffs, Nature Valley is bringing some of America's most iconic landscapes to store shelves this summer— and inspiring outdoor enthusiasts to experience them in person. Inspired by fifteen years of impact, Nature Valley celebrates the iconic American landscapes in partnership with the National Park...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7ac32c9b43baca7e
+symbol: GIS
+published_utc: 2026-07-14T09:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-and-box-tops-education-reunite-saved-bell-cast-celebrate-30-years
+headline: General Mills and Box Tops for Education Reunite "Saved by the Bell" Cast to Celebrate 30 Years of Giving Back to Schools
+<<<TEXT>>>
+Box Tops for Education is heading back to Bayside High with the cast of" Saved by the Bell" to celebrate 30 years and nearly $1 billion raised for schools nationwide. General Mills, in partnership with Universal Products& Experiences, is reuniting the iconic cast for Saved by the Box Tops, a feel-good back-to-school campaign inspired by the beloved television...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 782241e4ed34c437
+symbol: GIS
+published_utc: 2026-07-15T09:03:00Z
+url: https://www.nasdaq.com/press-release/general-mills-adm-walmart-partner-accelerate-regenerative-agriculture-across-40000
+headline: General Mills, ADM, Walmart Partner to Accelerate Regenerative Agriculture Across 40,000 Midwest Wheat Acres
+<<<TEXT>>>
+MINNEAPOLIS, CHICAGO& BENTONVILLE, Ark.---- General Mills, ADM and Walmart today announced a strategic collaboration to accelerate regenerative agriculture across 40,000 Midwest wheat acres. Initial projects, with technical assistance from American Farmland Trust and Ducks Unlimited, will deliver demonstrable improvements in soil health, water quality and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3ccf9d0aa61520a1
+symbol: GIS
+published_utc: 2026-07-16T09:00:00Z
+url: https://www.nasdaq.com/press-release/totinostm-brings-fan-favorite-snack-hacks-life-new-pizza-rollstm-and-ultimate-pizzatm
+headline: Totino's™ Brings Fan-Favorite Snack Hacks to Life with New Pizza Rolls™ and Ultimate Pizza™ Flavors
+<<<TEXT>>>
+From Garlic Parm and Zesty Limón to Chicken Bacon Ranch and Mexican Style, the new flavors are rolling out nationwide this summer, delivering even more craveable ways to satisfy snack attacks. Blasted Garlic Parm Pizza Rolls: Pepperoni-filled Pizza Rolls coated in a garlic parmesan-seasoned crust for a seriously savory bite. Blasted Nacho Boom Pizza Rolls:...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 00f42ec0805a4f92
+symbol: GIS
+published_utc: 2026-07-21T09:00:00Z
+url: https://www.nasdaq.com/press-release/monsters-cereals-celebrate-55-years-halloween-memories-encore-collaboration
+headline: Monsters Cereals Celebrate 55 Years of Halloween Memories with an Encore Collaboration in Partnership with The Jim Henson Company
+<<<TEXT>>>
+This year marks the 55th anniversary of Count Chocula, Boo Berry and Franken Berry and to celebrate, the iconic cereals are returning with newly designed packaging and the reimagined puppets created by The Jim Henson Company, first introduced last year. "For 55 years, the Monsters have brought a smile, and a little thrill, to cereal bowls," said Megan Brooks, Business...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3b5de8f82f6be8a2
+symbol: GIS
+published_utc: 2026-07-23T09:00:00Z
+url: https://www.nasdaq.com/press-release/general-mills-brings-magic-harry-pottertm-home-new-treats-betty-crocker-and-pillsbury
+headline: General Mills Brings the Magic of Harry Potter™ Home with New Treats from Betty Crocker and Pillsbury
+<<<TEXT>>>
+Wizards, witches and Muggles alike can bring a little magic into their homes with new and returning Harry Potter- inspired products from Pillsbury and Betty Crocker. Arriving at retailers nationwide just in time for a season full of Harry Potter celebrations, this lineup is made for new ways to experience the beloved stories at home. Harry Potter- inspired...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 235856816019ca98
+symbol: GIS
+published_utc: 2026-08-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/shaquille-oneal-and-general-mills-search-americas-biggest-cereal-fans-offering-big
+headline: Shaquille O’Neal and General Mills Search for America’s Biggest Cereal Fans, Offering Big Prizes and Exclusive Merch
+<<<TEXT>>>
+From Cinnamon Toast Crunch loyalists to Lucky Charms obsessives, General Mills cereals have inspired devoted fans for generations. And now, those fans have something BIG to rally around. General Mills is passing the ball to sports legend and cereal superfan Shaquille O’ Neal, to bring his big personality and love of competition to the first ever Biggest Fan...
+<<<END>>>

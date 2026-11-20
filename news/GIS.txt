@@ -1,0 +1,1350 @@
+<<<ARTICLE>>>
+id: finnhub:143740464
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T20:00:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dbb4a11cfc52d434e4b637766d4fcbf7c6f9edf8678eb14cc5aca5b79435ff36
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: How Many Shares of General Mills, Hormel or Kraft Heinz Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, $1,000 a month in dividends takes 4,919 shares of General Mills (about $168,200), 7,500 shares of Kraft Heinz (about $181,900) or 10,257 shares of Hormel Foods (about $225,300). Kraft Heinz’s check is the one I’d want, since its dividend takes 50% of its free cash flow, though it paid $1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740993
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:36:23Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2b884a383f63ba74edf4a45050a46bf32c23166fd573ba68c9077445c2089631
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: GIS
+keywords: 
+headline: S&P 500 Top Movers Today: Double-Digit Gainers Lead, Declines Stay Smaller
+<<<SUMMARY>>>
+S&P 500 top movers for today's session: Bloom Energy and Sandisk led double-digit gainers, while Clorox and Lululemon paced much smaller declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739496
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:02:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1bea2f4b843e726379174a34f731a5d676c46eacdae098bf23213ec0e2e59eb6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Can General Mills' New Operating Model Drive Profitable Growth?
+<<<SUMMARY>>>
+GIS' new operating model aims to streamline operations, sharpen commercial execution and drive long-term profitable growth through greater efficiency.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766286
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:53:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3a0395adf98eaf32c6ee6b24375361edb01d822489cebec8317aaa5e60c2f216
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/CoreWeaveApex--North-Carolina---April-2-.jpg?width=2048&height=1536
+category: company
+tickers: GIS
+keywords: 
+headline: Nasdaq 100 Jumps 2.8% as CoreWeave, Nvidia Climb: Stock Market Today
+<<<SUMMARY>>>
+CoreWeave&#39;s 25.1% surge revived the AI trade, lifting chipmakers, memory and power stocks, while Nvidia shrugged off a Baird downgrade.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143726096
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T09:12:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=01f866fa010d959cdc5a5f7f9d25a5b4f77bb24075f4310ec1e6c861c08fe67d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills (GIS) Stock Could Be A Bargain After A 38% Fall
+<<<SUMMARY>>>
+General Mills has had a tough few years in the market, and the recent share price moves now put a sharper spotlight on what investors are really paying for its sales. With a new leadership structure planned for 2027, the question is whether the current US$34.60 price is in line with the revenue base behind this packaged food group. Over the past 3 years the stock has fallen 38.5%, which puts pressure on the case that the present valuation still lines up with the scale and quality of its...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143695755
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T22:09:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3b2e0c08bd66077f0577f26cba76cc8d5afd2b8716297d4a13761f8d1066e56c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills (GIS), What Is Behind The Fresh Attention?
+<<<SUMMARY>>>
+General Mills (GIS) just redrew its corporate map, unveiling a three segment model built around Cereal, Snacks & International, Meals & Baking Solutions, and Pet, along with a centralized Commercial unit spanning marketing and sales. General Mills shares trade at US$34.88 after a recent 1 month share price return of 8.02%. However, momentum looks weak overall, with the year to date share price down 23.71% and a 5 year total shareholder return decline of 32.73%, even as management rolls out...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692939
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:31:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=626030190a1940bb14bd5fdb0e387d5090a5957a37c73f4abba093e2c15af8f0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Cereal, Mac and Cheese and Bacon Are in Almost Every Pantry. $60,000 in Each of the Companies Behind Them Pays $11,282 a Year
+<<<SUMMARY>>>
+Cheerios, Kraft Mac & Cheese and Hormel bacon fill your cupboards, yet the stocks behind them have slumped and their yields have swelled. Which payout looks safest, and which risk could trip up a retiree counting on those checks?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693966
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:59:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f63dda94678656e63d560b3aedbc042d0f95f14dcf57522ecf609724dabe6017
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Better High-Yield Dividend Stock: General Mills vs. Comcast
+<<<SUMMARY>>>
+Key TakeawaysGeneral Mills yields 7. 0% and Comcast yields 5.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691846
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=385922f116f150f6c1e9723a605b6c83a33f385d4b87ae0f03f29ade3808f961
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Blue Buffalo’s Love Made Fresh Gives Dogs a Seat at the Thanksgiving Table with Limited-Edition Dinnerware Collection
+<<<SUMMARY>>>
+MINNEAPOLIS, November 10, 2026--Thanksgiving is all about gathering with the friends and family we love most — our pets included. With approximately 50% of dog owners purchasing holiday gifts and treats for their dogs, it's no surprise pet parents want them at the Thanksgiving table, too.1 That's why Love Made Fresh, Blue Buffalo's fresh dog food made with quality, natural ingredients, is saving a seat for four-legged family members with a limited-edition, dog-friendly dinnerware collection.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690716
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=98066781464d2dba7801d1a954623bee99bcd551061077baee2a48a13d48852e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills streamlines business structure amid CEO change
+<<<SUMMARY>>>
+The Cheerios maker is reorganizing into three operating segments as it looks to enhance its focus and accelerate growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690717
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:46:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b4473f551b879e7961132330e8d2c8c30402ae66d7bb8ca16a371c440542d75c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills Announces Three-Segment Operating Structure Effective January 2027
+<<<SUMMARY>>>
+General Mills (NYSE:GIS) announced plans to reorganise its operations into three business segments beginning January 1, 2027, as part of changes to its management structure and commercial operations. The Minneapolis-based food manufacturer will operate through Cereal, Snacks & International; Meals & Baking Solutions; and Pet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687746
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=510f4565650bac6bd0d0bdab2ee06ed0074919c3adfec2d2672b24eff90f0f81
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills Announces New Operating Model, Senior Leadership Appointments
+<<<SUMMARY>>>
+MINNEAPOLIS, November 10, 2026--General Mills today announced a new operating model designed to sharpen focus, advance strategic priorities and accelerate growth. Effective Jan. 1, 2027, General Mills will be organized into three segments — Cereal, Snacks & International; Meals & Baking Solutions; and Pet. In addition, a new Commercial function will combine marketing, sales, and consumer insights and analytics to strengthen omnichannel capabilities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143689191
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T09:27:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e180eb1abe63239e2b142756eab49456b8aaaea23f6c8601248bb4027dc6a20b
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/10/Apex--North-Carolina---April-5-2025-Pack.jpg?width=2048&height=1536
+category: company
+tickers: GIS
+keywords: 
+headline: Pillsbury, Betty Crocker Parent General Mills Announces Major Restructuring Ahead Of CEO Transition
+<<<SUMMARY>>>
+General Mills will reorganize into three segments, appoint new senior leaders and establish a commercial function starting January 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143689192
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T08:12:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=dc22e13b7360dc0aa110f327469093f8dd1bd378cbcbeb111254761592d5b4ea
+image_url: 
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills Unveils New Operating Model With Three Segments: Cereal, Snacks & International; Meals & Baking Solutions; And Pet, Effective January 1, 2027
+<<<SUMMARY>>>
+In addition, a new Commercial function will combine marketing, sales, and consumer insights and analytics to strengthen omnichannel capabilities. These changes represent another important step in General Mills’
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658750
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bf6f46cb749f9905b093d54661041f2110bac72c59500c1717a93b7997844f62
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: 3 Magnificent High-Yield Dividend Stocks to Buy Near Their 52-Week Lows
+<<<SUMMARY>>>
+High-yield dividend stocks can burn your portfolio, but these blue chip stocks stand out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658948
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=77e5ae81cb310d9e667f8f1b1c0b3d0ac2499afe248c0d2f38c69faf80d82f15
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills Has Paid Uninterrupted Dividends for 127 Years. Here's the Yearly Payout on $5,000.
+<<<SUMMARY>>>
+The yield grabs attention, but there's more to consider when evaluating General Mills as an investment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662427
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:36:28Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=d9200800176708874dd109c854e6615a2ba6f51cf2b81ae83fce100f0882c5b8
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: GIS
+keywords: 
+headline: S&P 500 Opening Gap Movers for Nov. 9, 2026
+<<<SUMMARY>>>
+S&P 500 opening gap movers for Nov. 9, 2026, including gap-up names such as FERG, AMD and NRG, and gap-down names including NVDA, HSY and FSLR.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686900
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:46:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4f689a410991929291ffff889dcdc809ac4e6bf154369c128da42fcd9fa4d9c8
+image_url: 
+category: company
+tickers: GIS
+keywords: 
+headline: 'The Trump Administration Proposed Narrowing Who’s Eligible To Receive Federal Food Assistance, A Change That Officials Estimate Could Block 6.3 Million People From Using The Supplemental Nutrition Assistance Program' - Bloomberg Law
+<<<SUMMARY>>>
+https://news.bloomberglaw.com/health-law-and-business/trump-plan-would-strip-food-aid-benefits-from-6-3-million-people
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657799
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=08f480806506e459a967b3a2ba168386c48bb53fafe038b9a6f4642933784755
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills wants a bigger bite of $32B salty snack space
+<<<SUMMARY>>>
+The cereal giant is intensifying the flavors and adding new packaging options for Chex Mix and its other snacks, aiming to boost its 1% share of the category.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143591791
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T20:17:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=072a9e94aa4eb9c7dc10ec7692eccfe8ea244590a54c196dbda72f31d2958af1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: 3 Beaten-Down Food Stocks With High Dividend Yields. Which Payouts Are Safe?
+<<<SUMMARY>>>
+Yields north of 6% look tempting while grocery giants bleed sales and write down brands. One of these three payouts was already slashed in half, so which dividend can income investors actually trust?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584620
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:32:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef8f6aba59bc2da9db99d6c7aa2f9ed4b819ff2b961e3899f4197cea8dce742d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: 5 High-Yield Dividend Stocks That Could Hold Up When the Market Falls
+<<<SUMMARY>>>
+Drugs, software, cereal, and electricity keep selling when the economy stalls. Five dividend payers pass a coverage test, but one carries a payout stretched thin and another faces a regulatory hearing that could change its income story.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587994
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=cd5280782e88bd36c8a2b3e80634759ea321aba0512712c145c12490097fa652
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1252670521/image_1252670521.jpg?io=getty-c-w1536
+category: company
+tickers: GIS
+keywords: 
+headline: November Buy: 6 IDEAL S&P 500 'Safer' Dividend Dogs
+<<<SUMMARY>>>
+Read here for six safer high-yield S&P 500 dividend stocks with strong free cash flow and buy signals; see top projected gains and act now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143575781
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:44:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3102d1f949ad9c983a6614e1a724e70889b805d1e5cfae1102bdda731c91ca0b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills ‘mulling future of Häagen-Dazs’
+<<<SUMMARY>>>
+The US food giant owns and operates the Häagen-Dazs brand outside North America.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587239
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:35:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8544bd5e50101d54620f2806534dc81e9dcd756bdb6963f9f17943b4a2a864be
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2230767136/image_2230767136.jpg?io=getty-c-w1536
+category: company
+tickers: GIS
+keywords: 
+headline: Diamond Hill Large Cap Fund Q3 2026 Portfolio Update
+<<<SUMMARY>>>
+Diamond Hill Large Cap Fund returned 3.18% compared to a 2.61% return for the Russell 1000 Value Index. Read more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921388
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:47:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da66e4f0f8b673491edb7f849405416407f31369c45e233a41c99e825633e58a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: 3 Food and Beverage Dividend Stocks to Buy in December for Reliable Income
+<<<SUMMARY>>>
+One grocery-aisle giant has mailed dividend checks for 127 straight years, while another has not given shareholders a raise since 2019. Before you lock in a December income pick, see which payout is safest and which one quietly erodes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921457
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:35:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6fe83c9d4be6d1cd4a61b6efe013a4390ffd74419687025c85cdaa91d63da88c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: A $400,000 Portfolio in General Mills, Plains All American and Kraft Heinz Pays $27,013 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA $400,000 portfolio split evenly across General Mills, Plains All American and Kraft Heinz pays about $27,000 a year in dividends at today’s prices, a 6. 8% yield.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143919055
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:36:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=37d563bf036f6d04a615f7e68f358307be9ee589669881ac066e7c2ccc570df6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Should You Pick McCormick Stock Over Its Competitors?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943308
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:02:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7940c9f99400a8e4102d556b4c0b96ab1b793aae4f80feb0a4f28c0f8e30538d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Enterprise Products or General Mills: I Can Only Pick One Dividend Stock for the Next 10 Years. Here’s Mine
+<<<SUMMARY>>>
+Key TakeawaysGeneral Mills yields 7. 2% and Enterprise Products Partners 6.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918857
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:54:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cf33e60f3f22f254186422d621265cd9f562221b6f049002fb51ae39d38f0b92
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Should You Buy Hershey Stock At This Price?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915169
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d7c1b02417405fc03ce73f7388226bdb78dee5339880a78f70c834e403702a75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: MD&M Midwest Wraps with Renewed Energy Surrounding AI, MedTech, and Packaging
+<<<SUMMARY>>>
+Manufacturing by Informa’s dedicated tentpole event in the region highlighted the innovations pushing the industry forwardMINNEAPOLIS, Nov. 18, 2026 (GLOBE NEWSWIRE) -- MD&M Midwest, the region’s largest event for the manufacturing industry, returned to Minneapolis Convention Center, Minneapolis, MN, October 28-29, with slate of education, keynotes, and show-floor activations covering five different sectors including MedTech, Automation, Design & Manufacturing, Plastics, and Packaging. Over thre
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881530
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:51:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2fe761d1195b0c65b580b7453dc1563500f5e50c443b1da78b0fdff5fcc44c64
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: A 63-Year-Old Swapped JEPI for GPIX in a $995,000 Portfolio. Here’s What Happened to Her $5,348 Monthly Paycheck
+<<<SUMMARY>>>
+One ETF swap made her monthly income jump, but it also loaded her portfolio with more megacap tech risk and left one holding quietly missing its dividend. Before you chase extra yield, see what she traded away and which number matters more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881036
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a8aebc348d36c4294ceb34656515bd60b0b2f8f81e88ab37cfb8da84c0e9b365
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Mondelez Grows 6%, Hormel Under 1%: Which To Own?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880867
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6345db0a8f24b589f3529df8480775f06bc2c3a2157ed45852836d3945c8a39
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Could PepsiCo Be The Value Stock For Your Portfolio?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877154
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:00:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d687cd34eed1ff610df78918e71a26a713498ecd7a61b7a7af906490a56a857b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: 4 Consumer Staples Stocks Yielding Over 3% That Retirees Can Rely On in Any Market
+<<<SUMMARY>>>
+One of these four dividend payers has raised its payout for 54 straight years, while another carries a yield so high that analysts warn a cut could be coming. Which staples belong in a retiree's paycheck, and which deserve suspicion?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143851171
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T22:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=be5a0e0b3ee134067181ccdcbbb313a10b45afdea93d11fe0ffc3afb84c85a47
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills Quarterly Dividend Declared
+<<<SUMMARY>>>
+MINNEAPOLIS, November 16, 2026--The General Mills Board of Directors has declared a quarterly dividend at the prevailing rate of $0.61 per share, payable Feb. 1, 2027, to shareholders of record as of Jan. 11, 2027. General Mills (NYSE: GIS) and its predecessor company have paid dividends without interruption for 128 years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857609
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:36:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c073735c337135254275f5275d9ff4c0cb3f56e0208a335369f819a0db8f5c97
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2199578213/image_2199578213.jpg?io=getty-c-og
+category: company
+tickers: GIS
+keywords: 
+headline: The Winners Inside SCHD - November 2026
+<<<SUMMARY>>>
+The bull case for SCHD: 34 holdings screen at least 10% undervalued, with expected long-term returns above 10%; its YTD lead over SPY tops 20%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850620
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:05:54Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=643fd1d4c5d1bf6eff8aea504dc0b40993044b4a0d5cfdb8e997baf62d02def9
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: GIS
+keywords: 
+headline: S&P 500 Top Movers: Gainers and Losers for Nov. 16, 2026
+<<<SUMMARY>>>
+S&P 500 top movers on Nov. 16, 2026 included TSN, CNC, TSCO, SNDK, LITE and CIEN, with sharp gains and declines across the index.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850614
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T17:36:11Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a2e236280063d46ee7cda89927cec9b802faa698e4aeed1dc459bd552cd43a9d
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: GIS
+keywords: 
+headline: Today's S&P 500 Top Movers: Tyson Foods Leads Gainers, Lumentum Leads Decliners
+<<<SUMMARY>>>
+Tyson Foods led S&P 500 gainers, up 7.41%, while Lumentum led decliners, down 7.5%; food and health-insurance stocks rose as semiconductor and data-center shares fell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841936
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T03:05:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=43b738179f4f3f9e388dcbf6d821cae6e230285e03157cd865dba1e557b56406
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Piper Sandler Flags a Risk at General Mills (GIS)
+<<<SUMMARY>>>
+We just published a list of the Sell Alert: 10 Stocks Analysts Downgraded on Thursday and General Mills (NYSE:GIS) ranked 8th on this list. Chip stocks took the hardest hit on November 5, when the Philadelphia Semiconductor Index slumped 12.2%, its biggest one-day drop since April 2025. The S&P 500 slid 4.4% and the Nasdaq […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143842580
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T22:06:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a2e0275e027866fc3a0f4a21557bdf39746faa40d740a03840250b178640330
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Are Wall Street Analysts Predicting General Mills Stock Will Climb or Sink?
+<<<SUMMARY>>>
+General Mills has significantly underperformed the broader market and consumer staples sector, amid declining earnings, cautious guidance, and increasingly bearish analyst sentiment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807299
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T16:50:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f32d1211b194ae43c1a9559b82249763204edaaf75f8426f7a11fab2db8d1509
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: A $1,200,000 Portfolio in General Mills, Plains All American and Kraft Heinz Pays $81,256 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA $1. 2 million portfolio split evenly across General Mills, Plains All American Pipeline and Kraft Heinz pays about $81,300 a year in dividends at today’s prices, or about $6,770 a month.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805771
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T01:13:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87d858295ecd178f40134fab512900d44391c1068bc5a1034f4eed089a9222a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: How Investors May Respond To General Mills (GIS) Dividend Cut Risk
+<<<SUMMARY>>>
+General Mills outlined a major reorganization effective January 2027, creating three reporting segments and a new Commercial function. The company is also partnering with Dunkin’ on limited-time cereal products and keeping its quarterly dividend at US$0.61 a share. The combination of a flat dividend, despite an estimated 85% free cash flow payout and above-target debt, has sharpened attention on General Mills’ capital allocation discipline and the potential trade off between balance sheet...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840528
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:41:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cf6211e431d18d43457b5c01771068ab7fa526caf3c4e203b5c3f04b497ff70a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills or Coca-Cola: I Can Only Pick One Dividend Stock for the Next 10 Years. Here’s Mine
+<<<SUMMARY>>>
+Key TakeawaysGeneral Mills yields 7% and held its quarterly dividend at $0. 61 on Sept.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804172
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:22:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b52a141e0726e89b9ff8222cd3bccd735ba0af251420d69b47d975e9690b53d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Better Dividend Stock for Retirees: General Mills vs. Kimberly-Clark
+<<<SUMMARY>>>
+Key TakeawaysGeneral Mills yields 7. 0% and Kimberly-Clark 4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804268
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:25:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8ca8d76b76db9eecaae0861bb166603dfe678f937bf687ced894dac7219df321
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Tesco joins platform to collect supplier emissions data
+<<<SUMMARY>>>
+The retailer will use OpenClimat to collect data from 400 suppliers across the UK and Ireland.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801489
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a92f7caa2662f197353789b1a71adb89637abebf9eb3c51ccca6dd9f5578a0cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: A Once-in-a-Decade Opportunity: 1 Magnificent Dividend Stock Down 30% to Buy Right Now
+<<<SUMMARY>>>
+Cheerios, Pillsbury, and Blue Buffalo aren't going anywhere, but General Mills stock is priced as if they might.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773351
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:50:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b8fa915ffc282aef76e952a83bdc1de6dd903df0ff2810fb8cd45397cddcff67
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Better High-Yield Dividend Stock: AT&T vs. General Mills
+<<<SUMMARY>>>
+Key TakeawaysAT&T yields 5. 2% and General Mills yields 7.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773460
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e115d4529db72b0511d312b6c62b81fe3e0dc2253e78181cb68a7efeddcd00bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills’ Hefty Dividend Could Be on the Chopping Block, Piper Sandler Warns
+<<<SUMMARY>>>
+Piper Sandler sees a potential 35% dividend reduction as the packaged-food maker works to reduce debt and fund growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772311
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T18:08:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2147219d8d983fe776c0a2c77d0499b459c4b0197b7278d5fce96623a2ccd758
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Is Piper Sandler Wrong to Give Up on General Mills? Wall Street Still Sees $37
+<<<SUMMARY>>>
+Key TakeawaysBy Nov. 12, Piper Sandler had downgraded General Mills to Neutral from Overweight and cut its price target to $35 from $41, citing risk to the dividend.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772199
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T18:06:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d8853f58a01d429d3ec39e4bb769d1c62e878acde28a4b9e395377d80eb64a8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Which Gives You More Of A Profit Rebound, Mondelez Or Hershey?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140284468
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:44:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b54ab9e2524d3ab07e65488e36a4d660947f471af488ed94cd704d5f76f32c24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: AMD, Under Armour downgraded: Wall Street's top analyst calls
+<<<SUMMARY>>>
+AMD, Under Armour downgraded: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769763
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=69062baedb1ca970976a022f26b329398fd642244665002d33d3c8c86bc2c362
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: BRBR Q4 Earnings on the Horizon: Essential Insights for Investors
+<<<SUMMARY>>>
+BRBR's fourth-quarter results are likely to reflect solid protein demand and product innovation, while elevated costs and promotional spending pressure margins.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766810
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:07:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cd404529de068b17d7d91e440410e77efe0d9dc9e150f28db3cf2dbb5b8903e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Buy, Sell, or Hold? Thursday’s Top Upgrades and Downgrades: Advanced Micro Devices, Alibaba Group, Cleveland-Cliffs, Conoco Phillips, Diamondback Energy, General Mills, NVIDIA, Toyota, Wendy’s and More
+<<<SUMMARY>>>
+Bernstein and Oppenheimer both just soured on NVIDIA, with one analyst saying "we've had enough," while a CEO shake-up rumor rattles futures and a blockbuster AI IPO draws a frenzy of orders. Which stocks did analysts upgrade instead?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766368
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T08:24:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b21e736055ea3c3d722c1c611cb0126b72ccbae4b03e21b226934d3b4ae38c8a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Nvidia.jpg?width=2048&height=1536
+category: company
+tickers: GIS
+keywords: 
+headline: This Nvidia Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Thursday
+<<<SUMMARY>>>
+Analysts downgraded General Mills, Redwood Trust, DoubleDown Interactive, EVgo and Nvidia; price targets fell for all except DoubleDown.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766369
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T08:07:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e1cbeaeec335c38074483788cca0f662566bc1db36f6a5bda6e33f6a4f71ec34
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Analyst-Woman-Working-With-Information-D.jpg?width=2048&height=1536
+category: company
+tickers: GIS
+keywords: 
+headline: NVIDIA To $186? Here Are 10 Top Analyst Forecasts For Thursday
+<<<SUMMARY>>>
+Analysts cut targets and ratings for General Mills, Redwood Trust and Evgo, while raising targets for Radcom, Royal Caribbean and others.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143768856
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T07:57:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cf85ab7fe1a4453c69c9a6caded679078a69af0a61142d271fe653f7db492f22
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Stuttgart--Germany---05-22-2021-Mobile-P.jpg?width=2048&height=1536
+category: company
+tickers: GIS
+keywords: 
+headline: What's Going On With General Mills Stock Thursday?
+<<<SUMMARY>>>
+General Mills stock slips after Piper Sandler downgrade and price target cut to $35 ahead of leadership change and restructuring.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143768857
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T05:19:11Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3e6de8cb4ad9c170dfee12052b93224d10fe32d7976922f5bed952044aade230
+image_url: 
+category: company
+tickers: GIS
+keywords: 
+headline: Piper Sandler Downgrades General Mills to Neutral, Lowers Price Target to $35
+<<<SUMMARY>>>
+Piper Sandler  analyst Michael Lavery   downgrades General Mills (NYSE:GIS) from Overweight to Neutral and lowers the price target from $41 to $35.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143940905
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c62096df4054df9b21f9dc2edfcd81ca7bebf6680dc77df587114ac576285a8a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills to Webcast Fiscal 2027 Second Quarter Earnings Results on December 17, 2026
+<<<SUMMARY>>>
+MINNEAPOLIS, November 19, 2026--General Mills, Inc. (NYSE: GIS) plans to report results for its fiscal 2027 second quarter on December 17, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936408
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T11:34:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=486e0fb19fd9c5404154d7e672bca9685f5eb145ec88316a06261caf798f160e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: Was Primo Brands' 50% Rebound Visible In Advance?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936776
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T09:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cbdbf137cff34d1734e1c4e2e92c57535ae243b0033a5f828101708dfee32536
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: 2 High-Yield Dividend Stocks Near Their 52-Week Lows That Income Investors Are Sleeping On
+<<<SUMMARY>>>
+These two stocks offer dividend yields well above the S&P 500.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143935769
+symbol: GIS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T08:12:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d5d6486c014cbf7cf3d329365195236bccd10399a795508bc0470d77c5fcac83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GIS
+keywords: 
+headline: General Mills (GIS) Reviews International Ice Cream Business Outside North America
+<<<SUMMARY>>>
+General Mills (NYSE:GIS) is reviewing options for its international Haagen-Dazs ice cream business outside North America. The review could include a sale, joint venture, or restructuring of Haagen-Dazs operations in markets such as Europe and Asia. Management has framed the process as part of a wider enterprise transformation initiative focused on reshaping the portfolio. The potential overhaul of Haagen-Dazs operations outside North America sits within broader shifts our research has...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a5910c4f5eac80be54a898a67552cf996b90d2d2c1d355f42514916b3b4c3372
+symbol: GIS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T15:45:00Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/11/09/general-mills-has-paid-uninterrupted-dividends-for/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893004%2Fgis.png&w=1200&op=resize
+category: 
+tickers: GIS, KMB, PG, KO
+keywords: dividend yield, consumer staples, food stocks, dividend aristocrats, revenue decline, stock performance
+headline: General Mills Has Paid Uninterrupted Dividends for 127 Years. Here's the Yearly Payout on $5,000.
+<<<SUMMARY>>>
+General Mills offers an attractive 6.8% dividend yield with 127 years of uninterrupted payouts, translating to roughly $334 annually on a $5,000 investment. However, the stock has declined 21% in 2026 due to slowing sales and the company's struggle to adapt to changing consumer preferences toward healthier options. The author recommends avoiding General Mills in favor of alternatives like Kimberly-Clark, Procter & Gamble, or Coca-Cola that offer both reliable dividends and better growth potential.
+<<<INSIGHTS>>>
+GIS | negative | Despite a high 6.8% dividend yield and 127 years of uninterrupted dividends, the company faces significant headwinds including a 21% stock decline in 2026, 5% revenue decline in fiscal 2026, and ongoing struggles to adapt to consumer preferences for healthier foods. The author explicitly recommends avoiding the stock.
+KMB | positive | Mentioned as a preferred alternative to General Mills, offering both reliable dividend payouts and positive stock price return potential.
+PG | positive | Recommended as a superior alternative to General Mills for investors seeking reliable dividends with better growth prospects.
+KO | positive | Suggested as a preferable dividend stock option compared to General Mills, implying stronger fundamentals and growth potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d7e896d5e6e7da93a3208c118d852bf0c3e3b1b178fe33ee9e5f9c41f1c54501
+symbol: GIS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T16:00:00Z
+publisher: The Motley Fool
+author: Justin Pope
+url: https://www.fool.com/investing/2026/11/09/3-magnificent-high-yield-dividend-stocks-to-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893116%2Fgreen-suitcase-22yield22-dividend-stock-alert.jpg&w=1200&op=resize
+category: 
+tickers: PEP, GIS, CLX
+keywords: high-yield dividend stocks, 52-week lows, dividend sustainability, consumer staples, valuation opportunity, business turnaround
+headline: 3 Magnificent High-Yield Dividend Stocks to Buy Near Their 52-Week Lows
+<<<SUMMARY>>>
+PepsiCo, General Mills, and Clorox are trading near 52-week lows with elevated dividend yields due to business challenges. Despite growth headwinds and operational issues, all three maintain viable dividends with solid fundamentals, offering potential value opportunities for dividend investors willing to accept higher risk.
+<<<INSIGHTS>>>
+PEP | neutral | Stock faces near-term growth challenges from pricing pressures and GLP-1 agonist competition, but maintains strong fundamentals as a Dividend King with 54 consecutive years of raises. Trading at attractive valuation (18x vs 10-year average of 25x) with sustainable 75% payout ratio offers value for patient investors.
+GIS | negative | Company faces significant growth challenges with flat organic sales and elevated 7.1% dividend yield signaling distress. While dividend remains viable at 85% payout ratio, the stock is riskier than typical dividend plays. Turnaround potential exists through cost-cutting and portfolio restructuring, but execution risk is high.
+CLX | neutral | Recent operational challenges (cybersecurity breach, ERP transition) have pressured the stock, but core business remains solid with category-leading products. GOJO acquisition provides growth opportunities. Currently spending over 100% of cash flow on dividends, but this appears temporary. Nearly a Dividend King with 49 consecutive years of raises.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e5761bd0241826d81ede7a6b32be1debbda2d15b897362c241d76e77f1f62adf
+symbol: GIS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T17:02:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027962/can-general-mills-new-operating-model-drive-profitable-growth?cid=CS-ZC-FT-analyst_blog|company_news_corporate_actions-3027962
+image_url: https://staticx-tuner.zacks.com/images/articles/main/82/1332.jpg
+category: 
+tickers: GIS, LW, LKNCY, SJM
+keywords: restructuring, operating segments, cost savings, operational efficiency, centralized commercial function, organic sales growth
+headline: Can General Mills' New Operating Model Drive Profitable Growth?
+<<<SUMMARY>>>
+General Mills announced a major restructuring effective January 1, 2027, consolidating operations into three segments: Cereal, Snacks & International; Meals & Baking Solutions; and Pet. The company will also establish a centralized commercial function to improve efficiency and decision-making. GIS targets $750 million in cost savings for fiscal 2027 and at least $3 billion by fiscal 2030, though recent performance showed flat organic sales and declining operating profit.
+<<<INSIGHTS>>>
+GIS | neutral | While the restructuring demonstrates management's commitment to improving efficiency and long-term profitability, recent financial results show flat organic sales and declining operating profit. The stock trades at a discount valuation (P/E 11.07 vs. industry 14.83), suggesting market skepticism. The restructuring is a positive strategic move, but execution risks and near-term headwinds warrant a neutral stance.
+LW | positive | Lamb Weston carries a Zacks Rank #1 (Strong Buy) with expected 7.6% earnings growth and a strong trailing four-quarter earnings surprise average of 22.1%, indicating consistent outperformance of expectations.
+LKNCY | positive | Luckin Coffee holds a Zacks Rank #1 with projected sales growth of 33.3% and earnings growth of 48.4%, demonstrating strong momentum and expansion potential in the Chinese beverage market.
+SJM | positive | Smucker carries a Zacks Rank #2 (Buy) with expected fiscal-year earnings growth of 17.1% and a solid trailing four-quarter earnings surprise average of 13.8%, indicating reliable performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:01fc9a82e5b5a10affddd581929d88adbea2c91ea89dd480f417eee05ef887ae
+symbol: GIS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T11:30:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/13/a-once-in-a-decade-opportunity-1-magnificent-divid/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893364%2Fgettyimages-1355276160-1215x810-8ae76b9.jpg&w=1200&op=resize
+category: 
+tickers: GIS
+keywords: dividend stock, General Mills, consumer staples, valuation opportunity, product innovation, dividend yield, food brands
+headline: A Once-in-a-Decade Opportunity: 1 Magnificent Dividend Stock Down 30% to Buy Right Now
+<<<SUMMARY>>>
+General Mills stock has fallen 30% from its 52-week high, offering a 7% dividend yield. Despite near-term challenges from consumer spending pressures and margin squeezes, the company is showing signs of recovery through new product innovations like protein cereals and dye-free options. With 128 years of uninterrupted dividend payments and new leadership taking over, the stock appears undervalued at 11x expected earnings.
+<<<INSIGHTS>>>
+GIS | positive | Stock is trading at a significant discount (30% below 52-week high) with an attractive 7% dividend yield. The company demonstrates resilience through successful product innovations (protein cereals growing double-digit, Lucky Charms recovery, Pillsbury reformulation), maintains a 128-year dividend payment history, and has a clear cost-reduction strategy ($3B by 2030). New CEO appointment and improving pet food segment add confidence, though near-term earnings pressure and margin challenges exist.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3cde91beb7bea1c8755f756407c2e03ded6656afeb9448c828987206a9e7240f
+symbol: GIS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T12:55:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3030091/these-2-consumer-staples-stocks-could-beat-earnings-why-they-should-be-on-your-radar?cid=CS-ZC-FT-fundamental_analysis|zacks_education_earnings_esp-3030091
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default22.jpg
+category: 
+tickers: GIS, KMB
+keywords: earnings surprise, consumer staples, Earnings ESP, quarterly earnings, stock analysis
+headline: These 2 Consumer Staples Stocks Could Beat Earnings: Why They Should Be on Your Radar
+<<<SUMMARY>>>
+Zacks identifies two consumer staples stocks with positive Earnings Surprise Prediction (ESP) metrics that could potentially beat upcoming earnings expectations. General Mills (GIS) has a +0.94% ESP ahead of its December 16, 2026 earnings report, while Kimberly-Clark (KMB) shows a +0.56% ESP before reporting on January 26, 2027. Both stocks hold a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+GIS | positive | Positive Earnings ESP of +0.94% indicates the Most Accurate Estimate ($0.97) exceeds the Zacks Consensus Estimate ($0.96), suggesting potential for an earnings beat. Historical data shows stocks with positive ESP produce positive surprises 70% of the time.
+KMB | positive | Positive Earnings ESP of +0.56% indicates the Most Accurate Estimate ($1.70) exceeds the Zacks Consensus Estimate ($1.69), suggesting potential for an earnings beat. The positive ESP metric aligns with the same predictive framework as GIS.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b6dfc9bada8ca31a89b0cf0306d419cb48d22707f5bc1050494be7158c8919aa
+symbol: GIS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T09:35:00Z
+publisher: The Motley Fool
+author: Lawrence Rothman, Cfa
+url: https://www.fool.com/investing/2026/11/19/2-high-yield-dividend-stocks-near-their-52-week-lo/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892996%2Fgettyimages-1553397789-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: GIS, O
+keywords: dividend stocks, high-yield dividends, 52-week lows, dividend coverage, REIT, income investing
+headline: 2 High-Yield Dividend Stocks Near Their 52-Week Lows That Income Investors Are Sleeping On
+<<<SUMMARY>>>
+General Mills and Realty Income are trading near 52-week lows, offering dividend yields of 7% and 5.7% respectively, well above the S&P 500 average of 1.1%. Despite General Mills facing sales challenges from price-conscious consumers, it maintains strong dividend coverage with 127 years of consecutive payments. Realty Income continues posting solid results with 99% occupancy rates and has raised dividends for 117 consecutive quarters.
+<<<INSIGHTS>>>
+GIS | positive | Despite a 25% decline over the past year and sales challenges, the stock offers an attractive 7% dividend yield with adequate free cash flow coverage ($1.6B FCF vs $1.3B dividends). Management is taking corrective actions with cost cuts and price adjustments, and the company has maintained 127 years of consecutive dividend payments.
+O | positive | Trading near 52-week lows with a solid 5.7% dividend yield. The REIT demonstrates strong operational metrics (99% occupancy, 3.5% lease growth) and AFFO growth of 3.7% year-over-year with dividends at only 73% of AFFO, indicating comfortable coverage. The company has an impressive 117-quarter dividend increase streak.
+<<<END>>>

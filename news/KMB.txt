@@ -1,0 +1,1794 @@
+<<<ARTICLE>>>
+id: finnhub:143741606
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T23:14:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4579ccae9e584c4b46fc8c8dfe58133910c78e2b1e0d20b261a33d467efbe0e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly Clark (KMB) Completes Kenvue Acquisition
+<<<SUMMARY>>>
+Kimberly-Clark (NasdaqGS:KMB) has closed its acquisition of Kenvue, bringing the consumer health business under its corporate umbrella. The board has been restructured, with new directors appointed and amended corporate by-laws adopted alongside the Kenvue deal. Kimberly-Clark has named a new Chief Marketing Officer as it starts the process of integrating Kenvue into its operations. The Kenvue acquisition and governance overhaul mark a major reset for Kimberly-Clark, but the story runs...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143741607
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T22:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f62471dd6a220abb8c283531c7f928228c7e3e6c85f2b2c2c3536a733c586cff
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark Declares Quarterly Dividend
+<<<SUMMARY>>>
+The board of directors of Kimberly-Clark Corporation (NASDAQ: KMB) has declared a regular quarterly dividend of $1.28 per share. The dividend is payable in cash on January 5, 2027, to stockholders of record at the close of business on December 4, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740999
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T20:06:06Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=b6edd76c9f28a0250a1d0e93dd4e23366891419b67e1158365a3fb327561a645
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: KMB
+keywords: 
+headline: S&P 500 Top Movers: Nov. 11, 2026 Session Gainers and Losers
+<<<SUMMARY>>>
+S&P 500 top movers for the Nov. 11, 2026 US session, including gainers SNDK, BE, MU, DELL and STX, and losers BF.B, ABNB, CLX, MSFT and LDOS.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739363
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:51:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8f6f794938f6ceed96c4cc1759b40775142353f1377df07f6e87f62f55da1023
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark vs. Colgate-Palmolive: Which Dividend Stock Pays You More in 10 Years?
+<<<SUMMARY>>>
+Key TakeawaysKimberly-Clark closed its Kenvue acquisition on Nov. 2, while Colgate-Palmolive raised its 2026 earnings outlook on Oct.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738156
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:51:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6cb980eb7bd0c7044a41412533d8838b8a6d8bd0cf27797b285dde5186dd8b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark's Kenvue Integration Could Exceed Synergy Targets, RBC Says
+<<<SUMMARY>>>
+Kimberly-Clark's (KMB) integration plans following its acquisition of Kenvue (KVUE) could generate c
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738157
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:53:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2372d2f45d45574cfdc59d98e5b3704e459d5d4583eb7c5c5dabd20e029175c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Jim Cramer’s Charitable Trust Added Kimberly-Clark. What Does the Kenvue Deal Mean for Its Dividend?
+<<<SUMMARY>>>
+We just published the list of Jim Cramer’s Top 10 Dividend Stocks for Safe, Consistent Returns and Kimberly-Clark Corporation (NASDAQ:KMB) ranked 10th on this list. From 2000 through 2009, dividends earned S&P 500 investors an annualized 1.8%, according to Hartford Funds. Even with those payments, the index posted a negative total return for the decade. […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740991
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:36:18Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=ff199ee58a9a3a48d9fa57923f914e3dae7d3343b43499c9b9f8d053dc623505
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: KMB
+keywords: 
+headline: S&P 500 Gap Movers in Today's Session
+<<<SUMMARY>>>
+S&P 500 gap movers in today's session include gap-up leaders BE, LITE, DELL, MU, STX and gap-down names TPR, ABNB, CLX, with price moves and recent performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737141
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T14:51:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dc46a68080cc7efbb18aca6300ad1ea7cc99b13bf0049fbcff805e0dbea6ccee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark Could Exceed Kenvue Deal Cost Synergy Target Amid Productivity Focus, RBC Says
+<<<SUMMARY>>>
+Kimberly-Clark (KMB) is likely to exceed its cost synergy target tied to its acquisition of consumer
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734441
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:51:01Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=97f32b9d82ee07ad88bc4c4244885debe15b0a297f0c8abddf4da287c62f18bc
+image_url: https://www.chartmill.com/images/uploads/CM_Breakout_Stocks_Small_free_bb09e243c7.webp
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark (NASDAQ:KMB) Sets Up for Breakout With Strong Technicals
+<<<SUMMARY>>>
+KMB scores 8 for Technical Rating and Setup Quality on ChartMill’s Technical Breakout Setups screen, signaling a healthy uptrend and breakout watch.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734864
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9ab47ba5cde705c910947d2ba2c4688289ab9d2154f4fd2b333b20c1caf7069
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: 5W Names Santos Goni Chief Financial Officer as It Approaches its 25th Anniversary and Emerges as the Leading Firm at Getting Clients Into the Chatbox
+<<<SUMMARY>>>
+5W, the independent PR, creative and AI Visibility agency, today announced the appointment of Santos Goni as Chief Financial Officer. Goni joins as the agency celebrates 25 years in business and as more brands turn to 5W to get them into the chatbox, the AI answers where customers now ask for recommendations. He brings more than two decades of financial and operational leadership experience across global media, communications, and multinational businesses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692579
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dcb0871039000cdc4966ff670bf4f47023596292113b99e82900376ce8048de2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark Has Raised Its Dividend for 55 Straight Years. Here's How Much $10,000 Invested Pays Annually.
+<<<SUMMARY>>>
+Putting $10,000 into Kimberly-Clark today will result in a solid income stream with significant growth potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143685837
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d87aeaecede692064123792e8b22b96891ff6836b5d428fd170410656d2f9395
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: What's Wrong With Kimberly-Clark Stock?
+<<<SUMMARY>>>
+Kimberly-Clark has been facing several challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687700
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:01:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5d7bc6a02a8accc0d35e58c3b1998e1156cc4aca9c370472bf77e9d68b3e19d6
+image_url: 
+category: company
+tickers: KMB
+keywords: 
+headline: BNP Paribas Maintains Neutral on Kimberly-Clark, Raises Price Target to $112
+<<<SUMMARY>>>
+BNP Paribas  analyst Kevin Grundy   maintains Kimberly-Clark (NASDAQ:KMB) with a Neutral and raises the price target from $110 to $112.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654616
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:18:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b84e7f7f4f09f9a9d5adc12637aa601b57fc9182b2fd350eb21e7a5680fce428
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: 3 Legacy Dividend Stocks That Never Go Out of Style
+<<<SUMMARY>>>
+Coke, Tide and Kleenex have sat in American homes for generations, and the companies behind them keep raising their payouts. But one of these three Dividend Kings carries a debt load that could test its streak.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143653790
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:45:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=65f6f5085025f651db86a5bd6c91465ff7f36265a1280ac8dfab97267f17ee2e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Should International Paper Stock Holders Look At Amcor Instead?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687701
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:40:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0ff100d37c1a1aeb6514faa9b65ee048bae59a79f8310b855b36f53dadbd3d85
+image_url: 
+category: company
+tickers: KMB
+keywords: 
+headline: Barclays Maintains Equal-Weight on Kimberly-Clark, Raises Price Target to $112
+<<<SUMMARY>>>
+Barclays  analyst Lauren Lieberman   maintains Kimberly-Clark (NASDAQ:KMB) with a Equal-Weight and raises the price target from $106 to $112.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143641826
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T19:07:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b3b1f4ea74d5660f353440772053a2bfc6a3c2e40a401937cda15e4096a8561c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark’s Dividend Is Up 392% Since 1999. Can Its $49 Billion Deal Put That at Risk?
+<<<SUMMARY>>>
+Kimberly-Clark has raised its payout for 54 straight years, yet last year's cash flow barely covered the check. With the Kenvue deal now closed and debt climbing, a few telltale signs will show whether the streak holds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639668
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T12:10:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ca42e5dce2b00fb4854529dda1f5512b9b89188a919cee74587285f6fccf49e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kenvue (KVUE) Stock Still Looks Cheap Despite Its 27% Run
+<<<SUMMARY>>>
+Kenvue has delivered a 26.9% gain over the past year, and after a string of mixed but steady business updates, the key issue now is how much of that share price move is backed by the cash the company can generate over time. With the stock last closing at US$19.31 and a takeover by Kimberly-Clark progressing, investors are increasingly asking whether the current valuation still lines up with the underlying cash flows of the business. The stock is up 26.9% over the past 12 months, which puts...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639749
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T09:15:44Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6ac797dbd9b47aeb29e9bb63ce4cf95645adcb21cb86b76cb4a805b8964318b6
+image_url: 
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark: Short-Term Worries Create A Buying Opportunity (Rating Upgrade)
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614609
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T13:37:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7b24a12825b47156433754171a51c63705c5d009310c25468b6b8726ecdb4ba9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: 4 Dividend Stocks Yielding Up to 4.8% That Just Raised Their Payouts
+<<<SUMMARY>>>
+Bond coupons never grow, but these four payers just handed shareholders a raise. One has a cash-rich balance sheet, one faces a $49 billion gamble, one is heading for a breakup, and one has a blemish on its record.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143597106
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T00:59:05Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c301931d4fea743067b09d7bb8767c10f4464c15b508b8f0d8484ce1e51a6b83
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2211485774/image_2211485774.jpg?io=getty-c-w1536
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark: Synergies May Improve Leverage Before Cash Flow Does
+<<<SUMMARY>>>
+Kimberly-Clark's Kenvue deal promises $2.1B in synergies, but integration costs and leverage risks limit upside. Read here for a detailed analysis of KMB stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734863
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T21:55:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb882129ca1c78239e941d3199073c59767289b5722012d8ee0b5cbc948542b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Better Dividend Stock for Retirees: Verizon vs. Kimberly-Clark
+<<<SUMMARY>>>
+Key TakeawaysVerizon yields 6. 1% and Kimberly-Clark yields 4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589951
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T16:05:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=12267df2780c31217c11f4330d1f5fd37d972f5933f020d9035a9c8f685c7fd4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Her Brokerage Can Stop Reinvesting Dividends on Some Holdings and Send Her the Cash Instead. It’s a Setting Most Retirees Never Change
+<<<SUMMARY>>>
+Every quarter, dividends quietly buy shares you never planned to own while your checking account sits untouched. One overlooked brokerage setting changes that, but the tax rules and the compounding trade-off might surprise you.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588652
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ea905a0e1de04268f743b6694911c975ac7c141de596446aef2a8705b51b67a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: KMB Q3 Earnings Call Focuses on Kenvue Integration and Growth
+<<<SUMMARY>>>
+Kimberly-Clark's Q3 earnings rose 17.2% despite softer sales, as Kenvue integration, $1.9B in synergies and inflation pressures shape its growth strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143580154
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:12:55Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=865640e021ce729c1ab1a87f93ad8da3ffcb7ee10bce52465015433377e19fa9
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_41_00922f16cf.webp
+category: company
+tickers: KMB
+keywords: 
+headline: Stock Market Today: Nasdaq Crashes 5.5% as Midterm Fallout Turns Into a Brutal AI Chip Selloff
+<<<SUMMARY>>>
+The Nasdaq fell 5.5% in its worst day since April 2025 as investors dumped AI chip stocks on fears of tighter regulation after the Democratic midterm win. AppLovin soared, Airbnb beat after the bell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143583292
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T11:02:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dbfcc1f7e8444671b23937a3b42b9c29edd00cacd53804edf7d80238be25101e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark (KMB) Sees $101.8 Million in Net ETF Selling on Nov. 4
+<<<SUMMARY>>>
+ETFs pulled $101.8 million from Kimberly-Clark on Wednesday, with 11 funds selling against 44 buying.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585605
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:13:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=02e3358d693fcd9e14629f9b509c0cf40627d60c48a2c3a5051c78d00aaa9e42
+image_url: 
+category: company
+tickers: KMB
+keywords: 
+headline: Piper Sandler Maintains Overweight on Kimberly-Clark, Raises Price Target to $137
+<<<SUMMARY>>>
+Piper Sandler  analyst Michael Lavery   maintains Kimberly-Clark (NASDAQ:KMB) with a Overweight and raises the price target from $118 to $137.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143585606
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T10:08:53Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=417489bd56f51c99dc127122255a96e04b297bba5b496cb2a8d4767e5ec5640e
+image_url: 
+category: company
+tickers: KMB
+keywords: 
+headline: Wells Fargo Maintains Equal-Weight on Kimberly-Clark, Raises Price Target to $110
+<<<SUMMARY>>>
+Wells Fargo  analyst Chris Carey   maintains Kimberly-Clark (NASDAQ:KMB) with a Equal-Weight and raises the price target from $100 to $110.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143587239
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:35:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8544bd5e50101d54620f2806534dc81e9dcd756bdb6963f9f17943b4a2a864be
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2230767136/image_2230767136.jpg?io=getty-c-w1536
+category: company
+tickers: KMB
+keywords: 
+headline: Diamond Hill Large Cap Fund Q3 2026 Portfolio Update
+<<<SUMMARY>>>
+Diamond Hill Large Cap Fund returned 3.18% compared to a 2.61% return for the Russell 1000 Value Index. Read more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143573918
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T09:12:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0260e85fffbfa3a1e1c8da8817183f1dd4b9f35e8e934f9350731244441ebb3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark Corp (KMB) (Q3 2026) Earnings Call Highlights: Kenvue Deal Closes as Cost ...
+<<<SUMMARY>>>
+Kimberly-Clark Corp (KMB) wraps its landmark Kenvue acquisition, targets ~$1.9 billion in cost synergies, and works to rebuild trust in China while navigating soft North America personal care.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143556924
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T04:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=59caa5d2e362726277f5bbcdcc499878503f5db49ce034c710b1b2e016f17141
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark vs. Lululemon Athletica: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+One trades at a cheaper valuation, while the other boasts stronger cash generation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543408
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T23:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=afa6d61e089e0030ac279b52eedabab306a02c34dae7cb5fa14feabfc9139207
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Suzano Reports 36% Increase in Third Quarter Net Revenue Following Consolidation of Arbex
+<<<SUMMARY>>>
+SAO PAULO, November 05, 2026--Suzano (B3: SUZB3 / NYSE: SUZ) , the world’s largest pulp producer, announces its results for the third quarter of 2026 (3Q26), which for the first time include Arbex, the joint venture between Suzano and Kimberly-Clark established in July this year. Driven primarily by the consolidation of Arbex’s contribution, Suzano reported net revenue of BRL16.5 billion, an increase of 36% on the same period last year and a new quarterly record in the company’s 102-year history
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943177
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:01:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b932dd531df4ef1b45cd50da40452c0ea1a7865040a73707afdc22491523b61e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: ONEOK or Kimberly-Clark: I Can Only Pick One Dividend Stock for the Next 20 Years. Here’s Mine
+<<<SUMMARY>>>
+Key TakeawaysONEOK closed a Permian acquisition worth about $4. 4 billion on Oct.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143912782
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:47:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1eae2e0069e49f54fe1a88c5a8e1dcc827fc98e595031c0f53032091ed670883
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: $400,000 in PepsiCo and Kimberly-Clark Pays $17,845 a Year in Dividends
+<<<SUMMARY>>>
+Two consumer staples giants have raised their dividends for 54 straight years, yet one is stalling in North America and the other just took on a mountain of Kenvue debt. Which risk should a retiree worry about more?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911278
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T10:50:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=65ec3107100a5f1e6ec968b75939701d012f3fcf73a54cdc9fa5ffe55d0b43dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: An $850,000 Portfolio in Agree Realty, Kimberly-Clark and Prudential Pays $39,728 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA hypothetical $850,000 portfolio split evenly across Agree Realty, Kimberly-Clark and Prudential Financial pays about $39,700 a year in dividends at today’s prices, or about $3,310 a month. Agree Realty and Prudential Financial both cover their dividends comfortably on the measures that fit their businesses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143885668
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:54:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9d82d48e315ca31cca860081ec02589e47dcf166685e4f44fd436ea569f93ff1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Are Wall Street Analysts Predicting Kimberly-Clark Stock Will Climb or Sink?
+<<<SUMMARY>>>
+Kimberly-Clark has underperformed the broader market over the past year, but analysts are cautiously optimistic about the stock’s prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140311870
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:34:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=25cb238052a122f9c90789c9b054531f9c43a396494cd4d612ff55f5a39d03e1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Cisco upgraded, Doximity downgraded: Wall Street's top analyst calls
+<<<SUMMARY>>>
+Cisco upgraded, Doximity downgraded: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878020
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:00:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d94b07eedefcd53695d5be3a24475bcdf50ada1c830b7858c4fb511604b6e042
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Analysts Expect 4 S&P 500 Stocks To Outgrow Nvidia Next Year
+<<<SUMMARY>>>
+There's no question: Nvidia's revenue growth has been impressive. But, it looks like the AI chipmaker will get some competition.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878344
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:47:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=925cf0790e1eb6e0e32ce83815e7e9bf3fe7ef3db3ea8824a7622f0cc689f192
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: 5 High-Yield Dividend Stocks to Buy in December With Yields Up to 7.3%
+<<<SUMMARY>>>
+Five dividend payers, five sectors, and one question after earnings season: whose payout is actually covered? One casino landlord, one fund manager, and a parcel carrier all face tests that the yield alone will not reveal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877154
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:00:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d687cd34eed1ff610df78918e71a26a713498ecd7a61b7a7af906490a56a857b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: 4 Consumer Staples Stocks Yielding Over 3% That Retirees Can Rely On in Any Market
+<<<SUMMARY>>>
+One of these four dividend payers has raised its payout for 54 straight years, while another carries a yield so high that analysts warn a cut could be coming. Which staples belong in a retiree's paycheck, and which deserve suspicion?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143876933
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:37:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23151e18319d259ac86f6388227300baeb956b8665260ba99fcf863de0b05679
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Hershey vs. Kimberly-Clark: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Hershey's sweets empire and Kimberly-Clark's household staples both promise steady demand, but only one trades at a notably lower forward earnings multiple.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143879769
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T09:02:33Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e5fea36c221f4c1054246f28be67580daebe824d72f18142793cf26130b340b6
+image_url: 
+category: company
+tickers: KMB
+keywords: 
+headline: JP Morgan Reinstates Neutral on Kimberly-Clark, Lowers Price Target to $113
+<<<SUMMARY>>>
+JP Morgan  analyst Andrea Teixeira   reinstates Kimberly-Clark (NASDAQ:KMB) with a Neutral and lowers the price target from $129 to $113.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857609
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:36:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c073735c337135254275f5275d9ff4c0cb3f56e0208a335369f819a0db8f5c97
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2199578213/image_2199578213.jpg?io=getty-c-og
+category: company
+tickers: KMB
+keywords: 
+headline: The Winners Inside SCHD - November 2026
+<<<SUMMARY>>>
+The bull case for SCHD: 34 holdings screen at least 10% undervalued, with expected long-term returns above 10%; its YTD lead over SPY tops 20%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841387
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T01:05:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=161ec039476f95561863640ec222c352759f451fa6b4ddbc2207dfec458b93c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Colgate-Palmolive vs. Kimberly-Clark: Which Household Name Deserves Your Investment Dollars?
+<<<SUMMARY>>>
+Colgate-Palmolive carries a premium price tag, while Kimberly-Clark trades at a noticeably lower multiple, but the cheaper stock comes with its own set of challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840298
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T13:50:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=90cf39df7cc4bcf98087c340fe0ac5acbebcaedb01ebcbe6898785bd50010eb8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: How Many Shares of Kimberly-Clark, Clorox or Procter & Gamble Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, a hypothetical retiree needs 2,400 Clorox shares (about $262,700), 2,344 Kimberly-Clark shares (about $256,500) or 2,759 Procter & Gamble shares (about $468,500) to collect $1,000 a month in dividends. Procter & Gamble’s check costs the most by far, but its dividend took just 67% of free cash flow over the 12 months to Sept.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143812943
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T00:16:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b613ec62c422e4f573bf55d4c582c0f28b2134e18f7ad3ba5d2b0f02999a1605
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly Clark (KMB) Stock Fair Value Edges Higher After Arbex Venture Update
+<<<SUMMARY>>>
+Kimberly-Clark’s fair value estimate has been adjusted upward, moving from about US$116.33 to about US$118.67 per share, which points to a modestly higher price target in current analyst models. This update sits alongside commentary that the company has restructured parts of its international family care and professional operations into the Arbex joint venture with Suzano, while maintaining 2026 guidance for mid single digit adjusted operating profit growth and high single digit adjusted EPS...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807149
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T14:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d771b5e388fa7f720c8571d4eac4e42b4e050ca493feb32ff9f87c7b788b250c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: 3 Consumer Compounders That Fit Warren Buffett's Playbook. I'd Hold Them Forever.
+<<<SUMMARY>>>
+Warren Buffett liked to buy and hold, which could be a good call with Coca-Cola, P&G, and, for the more aggressive, Kimberly Clark.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805879
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T07:08:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89c3e2f0862a8b5a4bdab96005560f59dff3cfe11189179cfe4fee96f6213602
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly Clark (KMB) Stock Looks Above Fair Value Following Its 11% Run
+<<<SUMMARY>>>
+Kimberly-Clark shares have quietly put together a solid run, and the business has been busy reshaping itself with a huge consumer health deal. With that mix of steady returns and heavy investment, the open question is whether the current price around its recent US$109 level still lines up with what the company actually earns. Over the past year the stock has returned 10.6%, which puts real pressure on the earnings story to keep justifying that kind of performance. The completed Kenvue...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805823
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T03:13:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0c5aa19343a621d171bf57acf543fce9c370a2b59abfc022ca51c33de2dac0e4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly Clark (KMB) Reaffirms Dividend Following Rally While Valuation Debate Builds
+<<<SUMMARY>>>
+Kimberly-Clark (KMB) has reaffirmed its regular quarterly dividend at $1.28 per share, payable on January 5, 2027. This maintains a 92-year dividend payment streak and a 54-year run of consecutive annual dividend increases. Kimberly-Clark’s reaffirmed payout lands at a time when the share price has picked up some momentum, with a 1-month share price return of 10.08% and a year-to-date share price gain of 7.92%, while the 1-year total shareholder return is 10.59%. Scan how Kimberly-Clark’s...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841390
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:41:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4b816a81a09fa11725657b3194bd16af99e8666b8cefa243b7368990296e581f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Better High-Yield Dividend Stock: Pfizer vs. Kimberly-Clark
+<<<SUMMARY>>>
+Key TakeawaysKimberly-Clark closed its Kenvue acquisition on Nov. 2, and Pfizer raised its 2026 revenue guidance by $1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804172
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:22:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b52a141e0726e89b9ff8222cd3bccd735ba0af251420d69b47d975e9690b53d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Better Dividend Stock for Retirees: General Mills vs. Kimberly-Clark
+<<<SUMMARY>>>
+Key TakeawaysGeneral Mills yields 7. 0% and Kimberly-Clark 4.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802270
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:04:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6200c5f83a4846cabe6ecec8d663158a24fdc32c70a68dd758a6f5471bfbf1b2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Procter & Gamble Has Raised Its Dividend for 70 Straight Years. Where’s the Price Target Now?
+<<<SUMMARY>>>
+A strong October quarter sent P&G shares climbing toward a 52-week high, yet oil prices and shrinking margins threaten the rally. Can volume-led growth and a looming Investor Day outrun the commodity squeeze?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143793320
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T06:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ac15ad46b1e2b79d6ff962438a7dd206746a167dd6ebfe8f3d685a79dba6768
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Zacks Industry Outlook Highlights Colgate-Palmolive, Kimberly-Clark, BJ's Wholesale and Ollie's Bargain Outlet
+<<<SUMMARY>>>
+CL, KMB, BJ and OLLI face consumer spending pressures and rising costs, but strategic initiatives and value-focused offerings support growth prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772197
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:35:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=af8d55b0bca1e26583a3e0d54bf7907968fc69357e2c34c5b35d92b324c55db7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: A $1,500,000 Portfolio in Clorox, Kimberly-Clark and PepsiCo Pays $67,627 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA $1. 5 million portfolio split evenly across Clorox, Kimberly-Clark and PepsiCo pays $67,627 a year in dividends at today’s prices, or about $5,640 a month.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772262
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:17:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=74e81c32f790561222897891275a12d46a9b873c61de7b5b7126d0a4e8f6ce8e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: A 65-Year-Old Converted $410,000 of His IRA to Roth Before RMDs Hit. Here’s What Happened to His Tax Bill and His $6,500 Monthly Paycheck
+<<<SUMMARY>>>
+Converting everything at once looks simple, but one lump-sum move can trigger a steep tax bracket and a Medicare surprise two years later. A smarter timing window before forced withdrawals begin changes the math, and the paycheck it funds may not be what you expect.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772263
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T18:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9d3ab1b6faa72b17500d0fa92a7c41e5821c0fc2bb95e3e74bb1b52639f5d2d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Huggies® Marks World Prematurity Day by Supporting NICU Little Fighters and Celebrating 10 Years of Partnership with Hand to Hold
+<<<SUMMARY>>>
+In recognition of World Prematurity Day on November 15, Huggies® is highlighting its commitment to providing NICU Little Fighters with the right equipment for their fight, from specialized diapers and educational resources for NICU nurses to emotional support for families through its 10-year partnership with Hand to Hold, a national nonprofit dedicated to supporting families navigating the neonatal intensive care unit (NICU). Huggies is also continuing its partnership with professional football
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143771032
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:24:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c5399b485098f973027cb981a2c5a63dbad336dcb8ab8f418a5637d7c0751f8a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Three Megamergers Closed This Year, and $120,000 Across the Combined Companies Pays $5,050 a Year
+<<<SUMMARY>>>
+Kimberly-Clark swallowed Kenvue, Public Storage absorbed National Storage Affiliates, and two apartment REITs fused into one. Now each board decides what shareholders get paid, and the integration costs, debt loads, and dilution warnings tell very different stories.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143771033
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=71ae0ae5a47a553fcc07ebe5532e78f3bcd29a1a39dd3df4c618acd513f660bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: My Forever Portfolio: 5 Dividend-Paying Value Stocks That Are Too Cheap to Ignore
+<<<SUMMARY>>>
+These five dividend payers sell things people don't stop buying, and the market is pricing them accordingly.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769508
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:12:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cb240b36c916eac50633ce420feb78bb595ab553d218dd6fa6ad0286a3d8b1ba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Jim Cramer Is Bullish on These 10 Stocks
+<<<SUMMARY>>>
+After years of unconditionally backing Jensen Huang and Nvidia (NASDAQ), Jim Cramer’s confidence in the chipmaker has been shaken by the controversy surrounding its chief executive. And the reasons are understandable. Cramer’s investment thesis on Nvidia has always been closely tied to Huang’s leadership. The CNBC host has repeatedly praised Huang as a visionary capable […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807386
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:11:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6bec98f5d58c5da744b0913bd91aa25f0e8a3921dd8812b385ff5f499a75042
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: A $750,000 Portfolio in ONEOK, Clorox and Kimberly-Clark Pays $35,490 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA $750,000 portfolio split evenly across ONEOK, Clorox and Kimberly-Clark pays about $35,500 a year in dividends at today’s prices, or about $2,960 a month. ONEOK’s dividend is the best covered of the three, with distributable cash flow at 2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772327
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:59:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8ed7fe066ebe133b23ae4b3291223a983181a5012f9fe138b2f4a0d21e5d4e6c
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/459006367/image_459006367.jpg?io=getty-c-og
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark: 2027 Recovery And Kenvue Synergies Make It A Buy
+<<<SUMMARY>>>
+Analyst rates Kimberly-Clark a Buy: the Kenvue deal targets $1.9 billion in annual run-rate synergies within three years; performance is set to improve.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769698
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=45ccdce8262e707dd7f26f4dabb229c9148bd2e2df470a56a4a9c1ded75b4185
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: 4 Consumer Staples Stocks to Watch Amid Industry Headwinds
+<<<SUMMARY>>>
+Despite cost pressures and shifting consumer trends, CL, KMB, BJ and OLLI are leveraging strategic initiatives to support long-term growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947225
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T21:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e9780297b6098c6547ef3d31693315b2f023676265b26558f30768f33eb861d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark to Webcast its Presentation at Morgan Stanley's Global Consumer & Retail Conference
+<<<SUMMARY>>>
+Mike Hsu, Chairman and CEO of Kimberly-Clark Corporation (NASDAQ: KMB), and Nelson Urdaneta, Chief Financial Officer, will be featured speakers at the Morgan Stanley Global Consumer & Retail Conference on Tuesday, December 1 at 8:00 a.m. ET.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947214
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:47:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=906e843228a954b59e26e86bc9b6ff4cfe1f612c8c165ebe0c0f6080515f9c61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Colgate Has Raised Its Dividend for 63 Years. These 3 Staples Stocks Offer Income
+<<<SUMMARY>>>
+Kenvue vanished from the stock market this month, and its Tylenol now pays out through a diaper maker. Three recession-proof dividend payers look steady, but only one of them has the cash to back up its streak.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944459
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:06:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89e688e9bc0d91daf4526d04e3afffad7a14816adb2b12b22998270c8ceeeeae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Should You Buy Clorox Stock At This Price?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944457
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:31:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ebf0b81c5e01f175e7d2664002673e09e2bf9056d675ae7dcb1d43586710c08
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Is PG Worth Buying as Growth Improves but Its Valuation Stays Rich?
+<<<SUMMARY>>>
+PG's improving organic sales, stronger volumes and healthy cash flow support growth, but premium valuation and rising costs warrant a cautious stance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944460
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0da7cc1264d15994e27ae53d5c32b7a747f1bbc859c0bbd689c5ed88e5cf45b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: KMB's Kenvue Deal: Could $2.1 Billion in Synergies Lift Earnings?
+<<<SUMMARY>>>
+Kimberly-Clark's Kenvue acquisition targets $2.1 billion in annual synergies, expanding its earnings potential, but integration costs and dilution pose near-term risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944461
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32af5a09a0b0b91d2758a6a9eb63aca9942658f33fb16a84169fd5287d149e33
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Is KMB Worth Buying as Low Valuation Meets Kenvue Integration Risk?
+<<<SUMMARY>>>
+Kimberly-Clark's discounted valuation and productivity gains offer support, but weak demand, earnings pressure and Kenvue integration risks favor a cautious stance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944458
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76cee0bdc4f9c6fe9d6ea86648a35d232b919196cc50cdef32ab97d5ffa017bf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: PG Jumps 17.4% in Three Months as Investors Weigh What Comes Next
+<<<SUMMARY>>>
+PG's broad-based organic growth, strong segment performance and productivity gains fuel momentum, but cost pressures and premium valuation pose challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938151
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c91fa548e4d78511aa81b5c7fdb905b729ad75b4c2552dc7c6b4aa8f59d89b2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Kimberly-Clark Announces Executive Leadership Appointments to Drive Growth
+<<<SUMMARY>>>
+Kimberly-Clark Corporation (NASDAQ: KMB) today announced two executive appointments to strengthen the company's focus on growth, innovation and commercial execution. Katie Devine has been appointed Chief Growth & Innovation Officer, and Brian Giroux will rejoin Kimberly-Clark as Chief Customer Officer. Both executives will join the company's Enterprise Leadership Team and report to Mike Hsu, Chairman and Chief Executive Officer of Kimberly-Clark.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143935222
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T07:15:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7688d1a6bb21c72415c72ca3806e582a02c7049a7e02c5a87dc39cc0eebcc2b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: What Kimberly Clark Shares Dividend Support Means For Shareholders
+<<<SUMMARY>>>
+Kimberly-Clark recently reported third quarter 2026 sales of US$4,134 million and net income of US$1,793 million, and affirmed a regular quarterly dividend of US$1.28 per share payable in early January 2027. The combination of higher earnings per share and a dividend track record stretching 92 consecutive years with 54 years of increases highlights how Kimberly-Clark is focusing on cash generation and shareholder returns while it works through the Kenvue integration. We will now examine how...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143927277
+symbol: KMB
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T01:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76da8ab8cb68b3a839fd18c74ba39cfd6a3928b57af8b0330dd9471517a15720
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KMB
+keywords: 
+headline: Dividend Stocks for 2027: Kimberly-Clark vs. McDonald's
+<<<SUMMARY>>>
+Kimberly-Clark trades at a noticeably lower multiple than McDonald's, but the franchise giant's richer price tag raises a question about which premium is justified.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e9c21e55a8cd26871fa3f544423667b3d35f62e3ef6431cc2a2bcd14fed07760
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T04:00:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/05/kimberly-clark-vs-lululemon-athletica-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fdd659229089be69e54e1e9bb015b3d264e8eee17-5616x3744.jpg&w=1200&op=resize
+category: 
+tickers: KMB, LULU, WMT
+keywords: dividend stocks, consumer goods, defensive investing, valuation comparison, athletic apparel, household essentials, 2027 outlook
+headline: Kimberly-Clark vs. Lululemon Athletica: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Kimberly-Clark and Lululemon Athletica as investment options for 2027. Kimberly-Clark is recommended as the better choice due to its defensive positioning with essential household brands, strong dividend history (54 consecutive years of increases), and 4.6% dividend yield. Lululemon, while trading at lower valuation multiples, faces headwinds with declining sales and recent CEO transition, making it less stable for the uncertain 2027 outlook.
+<<<INSIGHTS>>>
+KMB | positive | Recommended as the better buy for 2027 due to defensive positioning with essential brands (Kleenex, Huggies), strong cash generation ($3.3B operating cash flow), Dividend King status with 54 consecutive years of dividend increases, 4.6% dividend yield, and stability during uncertain economic times. However, concerns exist regarding Walmart concentration (16% of sales) and Kenvue acquisition integration risks.
+LULU | neutral | While trading at attractive valuations (10.2x forward P/E vs KMB's 14x), the company faces headwinds including declining sales, recent CEO change in September 2026, and vulnerability to supply chain disruptions and trade policy changes. The company is in transition and considered less stable than Kimberly-Clark for 2027 investment purposes.
+WMT | neutral | Mentioned as Kimberly-Clark's largest customer (16% of net sales), representing a concentration risk for KMB. No independent analysis provided on Walmart itself.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:17e178f3e858d0db1fc76f87695eec4e58e597715d06efccc8ef1c99a3cd98cb
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T14:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025586/kmb-q3-earnings-call-focuses-on-kenvue-integration-and-growth?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3025586
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default43.jpg
+category: 
+tickers: KMB
+keywords: Q3 earnings, Kenvue acquisition, cost synergies, China disruptions, margin contraction, integration strategy, inflation pressures
+headline: KMB Q3 Earnings Call Focuses on Kenvue Integration and Growth
+<<<SUMMARY>>>
+Kimberly-Clark (KMB) reported Q3 2026 adjusted earnings of $1.7 per share, beating estimates, though revenues declined 0.4% to $4.13B. The company completed its Kenvue acquisition and targets $1.9B in cost synergies. Management maintained its 2026 outlook despite headwinds from China disruptions, North American softness, and $250M in inflation. The company carries a Zacks Rank #5 (Strong Sell) rating.
+<<<INSIGHTS>>>
+KMB | negative | While KMB beat earnings estimates with 17.2% EPS growth, revenues missed expectations and declined year-over-year. Gross margins contracted significantly (130 basis points), and the company faces substantial headwinds including China business disruption, North American market-share losses, and $250M in inflationary pressures. The Zacks Rank #5 (Strong Sell) rating and weak Value Score (D) further indicate unfavorable near-term outlook despite successful acquisition completion.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:44cf96a3baee41276b8614a799b3fb1699c9fe1932e56b7c1c8e6abd5c9f177b
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T15:45:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/07/5-stocks-yielding-5x-the-nasdaq-100-to-buy-in-nov/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892643%2Fgettyimages-2247451196-1298x800-5858754.jpg&w=1200&op=resize
+category: 
+tickers: KMB, HSY, SJM, TAP, TAP.A, NOMD
+keywords: dividend yield, consumer stocks, income investing, Kenvue acquisition, cocoa prices, beer volumes, European grocers
+headline: 5 Stocks Yielding 5X the Nasdaq-100 to Buy in November
+<<<SUMMARY>>>
+The article highlights five consumer stocks offering dividend yields of 3.4% to 5.8%, significantly outpacing the Nasdaq-100's 0.6% yield. Kimberly-Clark recently completed its Kenvue acquisition adding major brands like Tylenol and Listerine. Hershey is recovering from cocoa price pressures with improving margins. J.M. Smucker raised its full-year outlook. Molson Coors faces declining beer volumes but offers high yield. Nomad Foods raised its 2026 outlook with strong dividend commitment. These stocks provide income stability independent of AI spending cycles.
+<<<INSIGHTS>>>
+KMB | positive | Completed Kenvue acquisition adding 10 billion-dollar brands with $2.1B annual synergy target. 92-year dividend history with 54 consecutive raises. However, offset by increased debt from $4.9B senior notes issuance.
+HSY | positive | Recovering from cocoa price pressures with 3% sales growth, 42.7% adjusted gross margin, and doubled adjusted EPS. Management raised dividend through difficult period, signaling confidence in recovery.
+SJM | positive | Raised full-year outlook with sales expected to decline only 1-2% instead of 3-4%. First-quarter sales rose 5%, and declared $1.12 quarterly dividend. Strong free cash flow guidance of ~$1.1B.
+TAP | negative | Declining beer volumes with second-quarter underlying earnings down 22.9%. Guided 2026 earnings down 11-15%. Described as 'riskiest name' with market pricing in continued beer business shrinkage despite high 4.8% yield.
+TAP.A | negative | Declining beer volumes with second-quarter underlying earnings down 22.9%. Guided 2026 earnings down 11-15%. Described as 'riskiest name' with market pricing in continued beer business shrinkage despite high 4.8% yield.
+NOMD | positive | Raised 2026 organic revenue outlook with expected return to growth in Q3. Productivity savings expected to exceed 200 million euro target. Committed to maintaining dividend with highest yield at 5.8%.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a5910c4f5eac80be54a898a67552cf996b90d2d2c1d355f42514916b3b4c3372
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T15:45:00Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/11/09/general-mills-has-paid-uninterrupted-dividends-for/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893004%2Fgis.png&w=1200&op=resize
+category: 
+tickers: GIS, KMB, PG, KO
+keywords: dividend yield, consumer staples, food stocks, dividend aristocrats, revenue decline, stock performance
+headline: General Mills Has Paid Uninterrupted Dividends for 127 Years. Here's the Yearly Payout on $5,000.
+<<<SUMMARY>>>
+General Mills offers an attractive 6.8% dividend yield with 127 years of uninterrupted payouts, translating to roughly $334 annually on a $5,000 investment. However, the stock has declined 21% in 2026 due to slowing sales and the company's struggle to adapt to changing consumer preferences toward healthier options. The author recommends avoiding General Mills in favor of alternatives like Kimberly-Clark, Procter & Gamble, or Coca-Cola that offer both reliable dividends and better growth potential.
+<<<INSIGHTS>>>
+GIS | negative | Despite a high 6.8% dividend yield and 127 years of uninterrupted dividends, the company faces significant headwinds including a 21% stock decline in 2026, 5% revenue decline in fiscal 2026, and ongoing struggles to adapt to consumer preferences for healthier foods. The author explicitly recommends avoiding the stock.
+KMB | positive | Mentioned as a preferred alternative to General Mills, offering both reliable dividend payouts and positive stock price return potential.
+PG | positive | Recommended as a superior alternative to General Mills for investors seeking reliable dividends with better growth prospects.
+KO | positive | Suggested as a preferable dividend stock option compared to General Mills, implying stronger fundamentals and growth potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b8282ed621d909c2e8fa94ddf7462bb8910a510e7ca4001e06c1f887c0c7d2ac
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T11:15:00Z
+publisher: The Motley Fool
+author: Lawrence Rothman, Cfa
+url: https://www.fool.com/investing/2026/11/10/whats-wrong-with-kimberly-clark-stock/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F889202%2Fgettyimages-2203591005-1280x800-141e56b.jpg&w=1200&op=resize
+category: 
+tickers: KMB
+keywords: sales decline, margin compression, Kenvue acquisition, pricing pressure, underperformance, integration risk
+headline: What's Wrong With Kimberly-Clark Stock?
+<<<SUMMARY>>>
+Kimberly-Clark's stock has significantly underperformed the S&P 500 over the past five years, dropping 16.5% while the index gained 56.5%. The company faces sluggish sales growth (1.7% on a comparable basis in 2025, declining further to -1.3% in Q3 2026), margin compression, and competitive pricing pressures. While the recent acquisition of Kenvue adds brands like Tylenol and Listerine, the integration risks are substantial given the company's already-challenged sales environment.
+<<<INSIGHTS>>>
+KMB | negative | The company faces declining sales growth (1.7% in 2025, -1.3% in Q3 2026), gross margin contraction, competitive pricing pressures, and significant integration risks from the large Kenvue acquisition. The stock has substantially underperformed the broader market over five years, and the analyst recommends passing on the shares despite the company's established brand portfolio.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:603f110df8b600251777c2af9dc7491f002d976b648d20ddf583e4015e2a5457
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:44:00Z
+publisher: The Motley Fool
+author: Todd Shriber
+url: https://www.fool.com/investing/2026/11/10/kimberly-clark-raised-dividend-55-years/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893359%2Ftissue-sad-crying-sneezing-sick.jpg&w=1200&op=resize
+category: 
+tickers: KMB
+keywords: dividend growth, Dividend King, consumer staples, Kenvue acquisition, dividend yield, cost efficiencies, consumer healthcare
+headline: Kimberly-Clark Has Raised Its Dividend for 55 Straight Years. Here's How Much $10,000 Invested Pays Annually.
+<<<SUMMARY>>>
+Kimberly-Clark, a Dividend King with 55 consecutive years of dividend increases, offers investors a $10,000 stake generating approximately $471 annually in dividends with growth potential. The company recently completed its $49 billion acquisition of Kenvue, adding major brands like Listerine and Tylenol while targeting $1.9 billion in cost efficiencies over three years. Consumer staples stocks like KMB are gaining favor as alternatives to the vulnerable AI trade.
+<<<INSIGHTS>>>
+KMB | positive | 55-year dividend increase streak demonstrates reliability and commitment to shareholders. Recent $49 billion Kenvue acquisition adds prestigious brands and expands into healthcare sector. Management efficiency and realistic cost-saving targets of $1.9 billion support future growth. Dividend safety scores well and provides inflation-beating potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7e6babd2d3071efd98eb57dbc20e4dd2f35c522e0a3e063b60d41aba11adf4d5
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T14:15:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3028520/4-consumer-staples-stocks-to-watch-amid-industry-headwinds?cid=CS-ZC-FT-industry_outlook-3028520
+image_url: https://staticx-tuner.zacks.com/images/articles/main/45/965.jpg
+category: 
+tickers: BJ, CL, KMB, OLLI
+keywords: consumer staples, cost pressures, consumer spending volatility, price sensitivity, margin pressure, digital transformation, supply chain efficiency, currency fluctuations
+headline: 4 Consumer Staples Stocks to Watch Amid Industry Headwinds
+<<<SUMMARY>>>
+The Consumer Products-Staples industry is navigating a challenging environment marked by elevated raw material, labor, and transportation costs, alongside heightened consumer price sensitivity and spending volatility. Companies are pursuing cost optimization, digital investments, and portfolio optimization strategies. The industry carries a Zacks Industry Rank #194 (bottom 21%), reflecting negative earnings outliers, though it has outperformed the S&P 500 over the past year with a 10.4% gain.
+<<<INSIGHTS>>>
+BJ | positive | Zacks Rank #2 (Buy) with strong business model focused on membership growth, value-oriented offerings, and omnichannel expansion. Consensus EPS estimate of $4.70 indicates 6.8% growth year-over-year. Shares gained 18.2% in the past year.
+CL | positive | Zacks Rank #3 (Hold) with strong brand portfolio, effective pricing strategies, and ongoing productivity efforts. Consensus EPS estimate increased to $3.92, indicating 6.2% growth. Shares advanced 24.7% in the past year.
+KMB | neutral | Zacks Rank #3 (Hold) focused on innovation and operational efficiency. While consensus EPS increased to $6.93, this represents an 8% decline year-over-year. Shares gained only 4.5% in the past year, reflecting modest performance.
+OLLI | negative | Zacks Rank #3 (Hold) with value-focused model, but shares declined 25.9% in the past year despite 19.4% EPS growth projection. Significant stock underperformance suggests market concerns outweigh operational improvements.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8019380150a1699958b81795d9fc97dea0dd20e7df4b0a2832c294b8aaf94ac6
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:45:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/12/my-forever-portfolio-5-dividend-paying-value-stock/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893360%2Fgettyimages-1924765911-1200x800-5b2df79-1.jpg&w=1200&op=resize
+category: 
+tickers: MKC, MKC.V, HRL, KMB, CLX, STZ
+keywords: dividend stocks, value investing, consumer staples, forever portfolio, dividend kings, undervalued stocks
+headline: My Forever Portfolio: 5 Dividend-Paying Value Stocks That Are Too Cheap to Ignore
+<<<SUMMARY>>>
+The article presents five consumer staples dividend-paying stocks trading at discounted valuations: McCormick, Hormel Foods, Kimberly-Clark, Clorox, and Constellation Brands. These companies sell essential products with consistent demand, have long histories of dividend increases, and are currently undervalued despite solid earnings. Recent leadership changes and strategic acquisitions position these stocks as attractive long-term holdings for patient investors.
+<<<INSIGHTS>>>
+MKC | positive | Trading at 15x P/E versus 24x five years ago despite similar earnings; 40-year dividend increase streak; CEO strategy of flavoring calories provides competitive moat; Unilever acquisition adds scale despite near-term concerns.
+MKC.V | positive | Trading at 15x P/E versus 24x five years ago despite similar earnings; 40-year dividend increase streak; CEO strategy of flavoring calories provides competitive moat; Unilever acquisition adds scale despite near-term concerns.
+HRL | positive | Down 38% over five years creating attractive 5.3% dividend yield; 60-year dividend increase streak (Dividend King status); new CEO with strong track record at Mondelez and Planters; restaurant sales growing for 12 consecutive quarters.
+KMB | positive | Flat stock price over five years with consistent 4.6% dividend yield; 54-year dividend increase streak; owns 10 billion-dollar brands including newly acquired Tylenol; expected double-digit earnings growth in 2028 post-acquisition integration.
+CLX | positive | Trading 23% below five-year price despite solid earnings expectations; new CEO (Fabian Garcia) brings fresh leadership and operational expertise from Unilever; represents a turnaround opportunity after systems integration challenges in 2026.
+STZ | positive | Trading at modest 12x forward earnings despite owning top-selling beer brand (Modelo) in U.S.; gaining market share faster than competitors; Pacifico growing 19%; positioned as portfolio's growth piece despite demographic headwinds.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:20101e37e48a0e783f0d340148fd3b89bed15ba3ed33ba5dd7ea627bef85f4bd
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T06:52:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3029171/zacks-industry-outlook-highlights-colgate-palmolive-kimberly-clark-bj-s-wholesale-and-ollie-s-bargain-outlet?cid=CS-ZC-FT-press_releases-3029171
+image_url: https://staticx-tuner.zacks.com/images/articles/main/46/1313.jpg
+category: 
+tickers: BJ, CL, KMB, OLLI
+keywords: consumer staples, cost pressures, consumer price sensitivity, margin pressure, supply chain efficiency, digital capabilities, currency fluctuations, value-seeking behavior
+headline: Zacks Industry Outlook Highlights Colgate-Palmolive, Kimberly-Clark, BJ's Wholesale and Ollie's Bargain Outlet
+<<<SUMMARY>>>
+The Consumer Products-Staples industry faces significant headwinds from elevated cost pressures, consumer price sensitivity, and currency fluctuations. Despite these challenges, four key companies are leveraging operational efficiencies and strategic initiatives to navigate the difficult environment. The industry carries a Zacks Industry Rank #194 (bottom 21%), reflecting negative earnings outlooks, though it has outperformed the S&P 500 over the past year.
+<<<INSIGHTS>>>
+BJ | positive | Zacks Rank #2 (Buy) with strong business model focused on membership growth, omnichannel expansion, and value-oriented offerings. EPS consensus estimate of $4.70 indicates 6.8% growth year-over-year. Shares gained 18.2% in the past year.
+CL | neutral | Zacks Rank #3 (Hold) with strong brand portfolio and effective pricing strategies, but facing industry headwinds. EPS consensus estimate increased slightly to $3.92 with 6.2% projected growth. Shares advanced 24.7% in the past year, though the company operates in a challenged industry environment.
+KMB | neutral | Zacks Rank #3 (Hold) focused on innovation and productivity, but facing headwinds. EPS consensus estimate of $6.93 suggests an 8% decline year-over-year, indicating earnings pressure. Shares gained only 4.5% in the past year, reflecting modest performance.
+OLLI | negative | Zacks Rank #3 (Hold) with value-focused model and 19.4% EPS growth projection, but shares declined 25.9% in the past year, indicating significant market concerns despite positive earnings growth expectations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4c55062c64b41768b214a68412fa3d0f34f543b5d547f67621c7433389760619
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T14:15:00Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/14/3-consumer-compounders-that-fit-warren-buffetts-pl/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893124%2F26_10_08-stacks-of-coins-leading-to-a-piggy-bank-_mf-dload-gettyimages-1463697016-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: KO, PG, KMB
+keywords: Warren Buffett, consumer staples, dividend stocks, Dividend Kings, long-term investing, pricing power, brand loyalty, organic sales growth
+headline: 3 Consumer Compounders That Fit Warren Buffett's Playbook. I'd Hold Them Forever.
+<<<SUMMARY>>>
+The article identifies Coca-Cola, Procter & Gamble, and Kimberly-Clark as consumer staple companies that align with Warren Buffett's investment philosophy of buying and holding quality businesses with strong pricing power, steady cash flow, and consistent dividend growth. All three are Dividend Kings with reliable earnings despite challenging consumer markets, though valuations and risk profiles vary.
+<<<INSIGHTS>>>
+KO | positive | Strong brand loyalty, impressive 7% organic sales growth despite budget-conscious consumers, Dividend King status with 50+ years of increases, and 2.2% yield. Valuation slightly elevated at 28x P/E but suitable for conservative dividend investors.
+PG | positive | Solid 4% organic sales growth, Dividend King status, 2.55% yield, and valuation at 25x P/E in line with five-year average. Differentiated by innovation-driven strategy allowing premium pricing despite tough consumer environment.
+KMB | positive | Recent Kenvue acquisition marks significant business transformation toward diversified consumer products, Dividend King with 55+ years of increases, attractive 4.66% yield, and lower 21x P/E valuation. Positioned as value option but carries higher risk due to integration uncertainty.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f5e74ff8c8c5094acb80ca5627f8b0b3bf93140c46aea652ab9c9d49ce520c5a
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T00:45:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/15/colgate-palmolive-vs-kimberly-clark-which-household-name-deserves-your-investment-dollars/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc6f88a5c7903b69a5aa230b4c28403d755e0066d-2410x1739.jpg&w=1200&op=resize
+category: 
+tickers: CL, KMB, WMT, PG
+keywords: dividend kings, consumer staples, valuation comparison, pet nutrition, acquisition integration, price-to-earnings ratio
+headline: Colgate-Palmolive vs. Kimberly-Clark: Which Household Name Deserves Your Investment Dollars?
+<<<SUMMARY>>>
+Colgate-Palmolive and Kimberly-Clark are both Dividend Kings with strong track records, but they differ in valuation and growth strategy. Colgate-Palmolive trades at a premium (24.3x forward P/E) with growth driven by its Hill's Pet Nutrition segment, while Kimberly-Clark offers a lower valuation (14.7x forward P/E) but faces integration challenges from its Kenvue acquisition. The choice depends on whether investors believe in Colgate's pet food expansion or Kimberly-Clark's expanded hygiene portfolio.
+<<<INSIGHTS>>>
+CL | positive | Strong global market leadership in oral care, successful Hill's Pet Nutrition segment generating $1.2B in Q3 2026 with 5.5% growth representing 22% of total sales, 64-year dividend increase streak, and diversified revenue streams position it as a reliable growth investment despite premium valuation.
+KMB | neutral | Offers attractive valuation at 14.7x forward P/E and 54-year dividend increase streak, but faces headwinds including 2.1% revenue decline in FY 2025, volatile raw material costs, and uncertainty around Kenvue acquisition synergies. The expanded product portfolio is promising but execution risk remains.
+WMT | neutral | Mentioned as a major customer for both Colgate-Palmolive (11% of net sales) and Kimberly-Clark (16% of net sales), representing significant customer concentration risk for both companies.
+PG | neutral | Identified as a constant competitive rival to Colgate-Palmolive in core markets, representing ongoing competitive pressure.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3cde91beb7bea1c8755f756407c2e03ded6656afeb9448c828987206a9e7240f
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T12:55:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3030091/these-2-consumer-staples-stocks-could-beat-earnings-why-they-should-be-on-your-radar?cid=CS-ZC-FT-fundamental_analysis|zacks_education_earnings_esp-3030091
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default22.jpg
+category: 
+tickers: GIS, KMB
+keywords: earnings surprise, consumer staples, Earnings ESP, quarterly earnings, stock analysis
+headline: These 2 Consumer Staples Stocks Could Beat Earnings: Why They Should Be on Your Radar
+<<<SUMMARY>>>
+Zacks identifies two consumer staples stocks with positive Earnings Surprise Prediction (ESP) metrics that could potentially beat upcoming earnings expectations. General Mills (GIS) has a +0.94% ESP ahead of its December 16, 2026 earnings report, while Kimberly-Clark (KMB) shows a +0.56% ESP before reporting on January 26, 2027. Both stocks hold a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+GIS | positive | Positive Earnings ESP of +0.94% indicates the Most Accurate Estimate ($0.97) exceeds the Zacks Consensus Estimate ($0.96), suggesting potential for an earnings beat. Historical data shows stocks with positive ESP produce positive surprises 70% of the time.
+KMB | positive | Positive Earnings ESP of +0.56% indicates the Most Accurate Estimate ($1.70) exceeds the Zacks Consensus Estimate ($1.69), suggesting potential for an earnings beat. The positive ESP metric aligns with the same predictive framework as GIS.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:03a4b0cc293f760c72ff5d00d0f1ccaf2143e4c514dea9f97b5bd52344fb0790
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T11:17:02Z
+publisher: The Motley Fool
+author: Josh Kohn-Lindquist
+url: https://www.fool.com/coverage/better-buy/2026/11/17/hershey-vs-kimberly-clark-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F9b9f5026bc3ef50e11774ad9b4330e9f01eb9cf9-1280x854.jpg&w=1200&op=resize
+category: 
+tickers: HSY, KMB
+keywords: consumer staples, dividend stocks, valuation comparison, balance sheet analysis, acquisition integration, snacking market, personal care products
+headline: Hershey vs. Kimberly-Clark: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Hershey and Kimberly-Clark as consumer staples investments for 2027. While Kimberly-Clark trades at a lower forward P/E ratio (16.3x vs 20.2x) and offers a higher dividend yield (4.6% vs 3.3%), the author recommends Hershey for its stronger balance sheet, better acquisition integration track record, and growth potential in salty snacks and international markets. Kimberly-Clark's significant debt from its $49 billion Kenvue acquisition presents both risk and upside potential.
+<<<INSIGHTS>>>
+HSY | positive | Recommended as the better buy for 2027 due to stronger balance sheet (1.2x debt-to-equity), better acquisition integration track record, growing salty snacks business, international expansion potential, and more room for dividend growth. Author views it as a reliable 'steady-Eddie' pick despite limited multibagger potential.
+KMB | neutral | Trades at more attractive valuation (16.3x forward P/E) with higher dividend yield (4.6%), but carries significant financial risk from $49 billion Kenvue acquisition debt (4.9x debt-to-equity ratio). Presents potential upside if integration succeeds, but characterized as a riskier 'swing-for-the-fences' investment compared to Hershey.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aa4b777a552066acf969c44c88220621415bf7284c566b7774e8f4abf24e95be
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032613/is-kmb-worth-buying-as-low-valuation-meets-kenvue-integration-risk?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032613
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3a/878.jpg
+category: 
+tickers: KMB, PG, HLN
+keywords: valuation discount, productivity gains, China disruption, pricing pressure, Kenvue acquisition, organic sales decline, margin compression, synergy execution
+headline: Is KMB Worth Buying as Low Valuation Meets Kenvue Integration Risk?
+<<<SUMMARY>>>
+Kimberly-Clark trades at a valuation discount (15.15X forward earnings) with strong productivity gains, but faces near-term challenges including China disruption, pricing pressure, and declining organic sales. The company's long-term prospects depend on successful Kenvue acquisition integration and synergy realization. Analysts recommend a wait-and-see approach with a Hold rating.
+<<<INSIGHTS>>>
+KMB | neutral | Mixed investment case with positive valuation support and productivity gains offset by near-term headwinds including 1.3% organic sales decline, China-related disruption (270 bps impact), margin compression, and weakening earnings estimates. Hold rating reflects dependency on Kenvue integration success and stabilization of demand trends.
+PG | neutral | Mentioned as a relevant branded-consumer competitor with similar portfolio exposure (baby, feminine, family and personal health care products). No specific analysis provided; included for competitive context.
+HLN | neutral | Referenced as a pure-play consumer health company illustrating the broader market that KMB is entering through Kenvue acquisition. Mentioned for market context rather than investment recommendation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e77598bc63affffe01c35c865f458ec8f7c2918f647858bbeb78dd515e616d8f
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:29:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032614/pg-jumps-17-4-in-three-months-as-investors-weigh-what-comes-next?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032614
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CL, KMB
+keywords: organic sales growth, margin pressures, valuation concerns, productivity savings, cost inflation, consumer staples, volume growth
+headline: PG Jumps 17.4% in Three Months as Investors Weigh What Comes Next
+<<<SUMMARY>>>
+Procter & Gamble (PG) shares gained 17.4% over three months, driven by broad-based 4% organic sales growth across all product categories and regions. However, rising input costs, margin pressures, and a premium valuation of 23.81X forward earnings raise concerns about sustainability. While productivity savings and innovation in key segments like Fabric Care and Beauty support the rally, weakness in Health Care and Grooming segments, along with $1.4 billion in expected cost pressures for fiscal 2027, temper the outlook.
+<<<INSIGHTS>>>
+PG | neutral | While PG demonstrated strong 4% organic sales growth and a 17.4% three-month share price gain, the neutral rating reflects offsetting concerns: positive factors include broad-based growth across categories/regions and productivity gains; negative factors include rising commodity/energy costs ($1.4B expected pressure), margin contraction, premium valuation (23.81X vs 21.05X sub-industry average), and weakness in select segments (Health Care, Grooming). The Zacks Rank #3 (Hold) rating supports a measured view.
+CL | positive | Colgate-Palmolive reported solid 3.6% organic sales growth and 7% Base Business EPS growth in Q3 2026, outperforming peer Kimberly-Clark's 1.3% organic sales decline, suggesting relative strength in the household and personal care sector.
+KMB | negative | Kimberly-Clark reported a 1.3% organic sales decline in Q3, underperforming peers like Colgate-Palmolive and Procter & Gamble, indicating weakness in the household and personal care segment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:259473711949c977d0a7816b655e550370363d8d1aded5af7b04d7e848c7c2f2
+symbol: KMB
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:31:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032630/is-pg-worth-buying-as-growth-improves-but-its-valuation-stays-rich?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3032630
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/451.jpg
+category: 
+tickers: PG, CL, KMB
+keywords: organic sales growth, volume gains, premium valuation, commodity costs, earnings growth, cash flow, consumer staples
+headline: Is PG Worth Buying as Growth Improves but Its Valuation Stays Rich?
+<<<SUMMARY>>>
+Procter & Gamble reported strong fiscal Q1 organic sales growth of 4%, driven by volume gains and broad-based growth across all product categories and regions. However, the company's premium valuation (23.81X forward earnings), rising commodity and energy costs ($1.4B headwind expected in fiscal 2027), and modest full-year earnings guidance of 0-3% growth limit near-term upside potential. Strong cash flow supports dividends and buybacks, but the investment case remains balanced.
+<<<INSIGHTS>>>
+PG | neutral | While PG demonstrated improving operational momentum with 4% organic sales growth and strong cash generation, the neutral sentiment reflects offsetting concerns: premium valuation at 23.81X forward earnings, significant cost headwinds ($1.4B expected in fiscal 2027), and modest earnings growth guidance of 0-3%. The Zacks Rank #3 (Hold) rating and poor VGM/Value/Momentum scores support a cautious, patient stance rather than a bullish outlook.
+CL | neutral | Mentioned as a peer comparison with 3.6% organic sales growth in Q3 2026, which is lower than PG's 4% growth, suggesting relatively weaker performance in the consumer staples sector.
+KMB | negative | Reported a 1.3% organic sales decline in Q3 2026, indicating weakness in the consumer staples sector and underperformance compared to PG's positive growth trajectory.
+<<<END>>>

@@ -1,0 +1,108 @@
+<<<PRESS_RELEASE>>>
+id: ac52331dbc8ff89f
+symbol: CL
+published_utc: 2025-12-10T16:35:00Z
+url: https://www.nasdaq.com/press-release/colgate-declares-regular-quarterly-dividend-2025-12-10
+headline: Colgate Declares Regular Quarterly Dividend
+<<<TEXT>>>
+The Board of Directors of Colgate-Palmolive Company today declared a quarterly cash dividend of $0.52 per common share, payable on February 13, 2026, to shareholders of record on January 21, 2026. Colgate-Palmolive Company is a caring, innovative growth company that is reimagining a healthier future for all people, their pets and our planet.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 29fb626bd213e037
+symbol: CL
+published_utc: 2026-01-16T09:30:00Z
+url: https://www.nasdaq.com/press-release/colgate-palmolive-webcasts-2025-fourth-quarter-full-year-earnings-conference-call
+headline: Colgate-Palmolive Webcasts 2025 Fourth Quarter & Full Year Earnings Conference Call January 30, 2026 – 8:30 a.m. ET
+<<<TEXT>>>
+Colgate-Palmolive Company will provide a live webcast of its 2025 fourth quarter and full year earnings conference call on Friday, January 30, 2026, at 8:30 a.m. ET. Colgate-Palmolive Company is a caring, innovative growth company that is reimagining a healthier future for all people, their pets and our planet. Focused on Oral Care, Personal Care, Home Care and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9becc22c52c91258
+symbol: CL
+published_utc: 2026-01-20T08:00:00Z
+url: https://www.nasdaq.com/press-release/colgate-palmolive-and-who-foundation-announce-global-partnership-oral-health-2026-01
+headline: Colgate-Palmolive and WHO Foundation Announce Global Partnership on Oral Health
+<<<TEXT>>>
+Today, Colgate-Palmolive announced a new multi-year collaboration with the WHO Foundation to support the World Health Organization's work on oral health. The four-year funding commitment will help expand oral health education, support integration of oral health into national health systems, and raise awareness of oral health as a public health priority.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b733de0a6c8c398b
+symbol: CL
+published_utc: 2026-01-30T06:55:00Z
+url: https://www.nasdaq.com/press-release/colgate-palmolive-company-announces-4th-quarter-and-full-year-2025-results-2026-01-30
+headline: Colgate-Palmolive Company Announces 4th Quarter and Full Year 2025 Results
+<<<TEXT>>>
+Net sales and Organic sales* increased 1.4%, including a 0.7% negative impact from lower private label pet volume GAAP EPS declined 25% to $2.63, driven by goodwill and intangible assets impairment charges related to the skin health business Base Business EPS* increased 3% to $3.69 Net cash provided by operations was a record $4,198 for the full year Returned...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ff4b07490a1ad064
+symbol: CL
+published_utc: 2026-03-12T16:30:00Z
+url: https://www.nasdaq.com/press-release/colgate-palmolive-announces-quarterly-dividend-increase-and-elects-christopher
+headline: Colgate-Palmolive Announces Quarterly Dividend Increase and Elects Christopher Boerner, Ph.D. to Board of Directors
+<<<TEXT>>>
+The Board of Directors of Colgate-Palmolive Company today announced an increase in the quarterly common stock cash dividend to $0.53 up from $0.52 per share. Separately, the Company also announced today that Christopher Boerner, Ph.D., Board Chair and Chief Executive Officer of Bristol-Myers Squibb Company, has been elected to Colgate-Palmolive's Board of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 308f76026df29d24
+symbol: CL
+published_utc: 2026-04-17T09:30:00Z
+url: https://www.nasdaq.com/press-release/colgate-palmolive-webcasts-2026-first-quarter-earnings-conference-call-may-1-2026-8
+headline: Colgate-Palmolive Webcasts 2026 First Quarter Earnings Conference Call May 1, 2026 – 8:30 a.m. ET
+<<<TEXT>>>
+Colgate-Palmolive Company will provide a live webcast of its 2026 first quarter earnings conference call on Friday, May 1, 2026, at 8:30 a.m. ET. Colgate-Palmolive Company is a caring, innovative growth company that is reimagining a healthier future for all people, their pets and our planet. Focused on Oral Care, Personal Care, Home Care and Pet Nutrition, we sell...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6338da5a9f1f2d24
+symbol: CL
+published_utc: 2026-04-27T15:44:00Z
+url: https://www.nasdaq.com/press-release/colgate-palmolive-announces-webcast-its-2026-first-quarter-earnings-conference-call
+headline: Colgate-Palmolive Announces Webcast of its 2026 First Quarter Earnings Conference Call May 1, 2026 - Now at 8:00 a.m. ET and its 2026 Annual Meeting of Stockholders on May 8, 2026 at 10:00 a.m. ET
+<<<TEXT>>>
+Due to a scheduling conflict, Colgate-Palmolive Company will now provide a live webcast of its 2026 first quarter earnings conference call on Friday, May 1, 2026, at 8:00 a.m. ET. Colgate-Palmolive Company is a caring, innovative growth company that is reimagining a healthier future for all people, their pets and our planet. Focused on Oral Care, Personal Care,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d91b9699e0f4f655
+symbol: CL
+published_utc: 2026-05-01T06:55:00Z
+url: https://www.nasdaq.com/press-release/colgate-announces-1st-quarter-2026-results-2026-05-01
+headline: Colgate Announces 1st Quarter 2026 Results
+<<<TEXT>>>
+Colgate-Palmolive Company today reported results for first quarter 2026. Noel Wallace, Chairman, President and Chief Executive Officer, commented on the Base Business first quarter results," We delivered a strong start to 2026, with broad-based top and bottom-line growth. Separately, building on the Company’ s successful implementation of the Strategic...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: df47cacdb6aacaaa
+symbol: CL
+published_utc: 2026-05-20T09:30:00Z
+url: https://www.nasdaq.com/press-release/colgate-palmolive-webcasts-fireside-chat-dbaccess-global-consumer-conference-2026-05
+headline: Colgate-Palmolive Webcasts Fireside Chat at the dbAccess Global Consumer Conference
+<<<TEXT>>>
+Colgate-Palmolive Chief Operating Officer, Americas, Shane Grant and Executive Vice President, M&A and Special Projects, John Faucher will participate in a fireside chat at the dbAccess Global Consumer Conference in Paris on Wednesday, June 3, 2026 at 8:45 am ET. Colgate-Palmolive Company is a caring, innovative growth company that is reimagining a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 843825ce198d5d57
+symbol: CL
+published_utc: 2026-06-11T16:35:00Z
+url: https://www.nasdaq.com/press-release/colgate-declares-regular-quarterly-dividend-2026-06-11
+headline: Colgate Declares Regular Quarterly Dividend
+<<<TEXT>>>
+The Board of Directors of Colgate-Palmolive Company today declared a quarterly cash dividend of $0.53 per common share, payable on August 14, 2026, to shareholders of record on July 20, 2026. Colgate-Palmolive Company is a caring, innovative growth company that is reimagining a healthier future for all people, their pets and our planet. Focused on Oral Care,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b7d420472085559
+symbol: CL
+published_utc: 2026-07-17T09:30:00Z
+url: https://www.nasdaq.com/press-release/colgate-palmolive-webcasts-2026-second-quarter-earnings-conference-call-july-31-2026
+headline: Colgate-Palmolive Webcasts 2026 Second Quarter Earnings Conference Call July 31, 2026 – 8:30 a.m. ET
+<<<TEXT>>>
+Colgate-Palmolive Company will provide a live webcast of its 2026 second quarter earnings conference call on Friday, July 31, 2026, at 8:30 a.m. ET. Colgate-Palmolive Company is a caring, innovative growth company that is reimagining a healthier future for all people, their pets and our planet. Focused on Oral Care, Personal Care, Home Care and Pet Nutrition, we...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a84ea186c200e9d8
+symbol: CL
+published_utc: 2026-07-31T06:55:00Z
+url: https://www.nasdaq.com/press-release/colgate-announces-2nd-quarter-2026-results-2026-07-31
+headline: Colgate Announces 2nd Quarter 2026 Results
+<<<TEXT>>>
+Net sales increased 4.9%; Organic sales* increased 2.4%, including a 0.4% negative impact from lower private label pet food sales GAAP EPS decreased 5% to $0.86; Base Business EPS* increased 8% to $0.99 GAAP Gross profit margin and Base Business Gross profit margin* increased 140 basis points to 61.5% Net cash provided by operations was $1,742 million for the...
+<<<END>>>

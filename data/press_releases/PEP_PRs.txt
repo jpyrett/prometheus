@@ -1,0 +1,216 @@
+<<<PRESS_RELEASE>>>
+id: 5aa3bc7e60d16848
+symbol: PEP
+published_utc: 2025-11-19T16:49:00Z
+url: https://www.nasdaq.com/press-release/pepsico-declares-quarterly-dividend-2025-11-19
+headline: PepsiCo Declares Quarterly Dividend
+<<<TEXT>>>
+--The Board of Directors of PepsiCo, Inc. today declared a quarterly dividend of $1.4225 per share of PepsiCo common stock, a 5 percent increase versus the comparable year-earlier period. PepsiCo generated nearly $92 billion in net revenue in 2024, driven by a complementary beverage and convenient foods portfolio that includes Lay's, Doritos, Cheetos,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 05cfe2989ec04ccb
+symbol: PEP
+published_utc: 2025-12-08T16:30:00Z
+url: https://www.nasdaq.com/press-release/pepsico-announces-priorities-enhance-shareholder-value-and-provides-preliminary-2026
+headline: PepsiCo Announces Priorities to Enhance Shareholder Value and Provides Preliminary 2026 Financial Outlook
+<<<TEXT>>>
+--PepsiCo, Inc. today announced certain commercial and financial priorities to enhance shareholder value, including a preliminary 2026 financial outlook.  "Today, we are announcing our plans and initiatives that aim to accelerate organic revenue growth, deliver record productivity savings and improve core operating margin– starting in 2026," said Ramon...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b9c5ad675547899e
+symbol: PEP
+published_utc: 2026-01-06T11:30:00Z
+url: https://www.nasdaq.com/press-release/pepsico-announces-industry-first-ai-and-digital-twin-collaboration-siemens-and-nvidia
+headline: PepsiCo Announces Industry-First AI and Digital Twin Collaboration with Siemens and NVIDIA
+<<<TEXT>>>
+LAS VEGAS and PURCHASE, N.Y., Jan. 6, 2026/ PRNewswire/-- At CES 2026, PepsiCo announced a multi-year, industry-first collaboration with Siemens and NVIDIA to transform plant and supply chain operations through advanced digital twin technology and AI. This collaboration marks a first-of-its-kind initiative for a global CPG company applying digital twins to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6534b2cc623ec08c
+symbol: PEP
+published_utc: 2026-02-04T16:20:00Z
+url: https://www.nasdaq.com/press-release/pepsico-declares-quarterly-dividend-2026-02-04
+headline: PepsiCo Declares Quarterly Dividend
+<<<TEXT>>>
+--The Board of Directors of PepsiCo, Inc. today declared a quarterly dividend of $1.4225 per share of PepsiCo common stock, a 5 percent increase versus the comparable year-earlier period. Today's action is consistent with PepsiCo's prior year, previously announced increase in its annualized dividend to $5.69 per share from $5.42 per share, which began with the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 538188de7e2076a3
+symbol: PEP
+published_utc: 2026-03-04T13:31:00Z
+url: https://www.nasdaq.com/press-release/gatorade-lower-sugar-brings-new-era-hydration-no-artificial-flavors-sweeteners-or
+headline: GATORADE LOWER SUGAR BRINGS A NEW ERA OF HYDRATION WITH NO ARTIFICIAL FLAVORS, SWEETENERS OR COLORS AND 75% LESS SUGAR THAN GATORADE THIRST QUENCHER
+<<<TEXT>>>
+"Gatorade Lower Sugar represents the Gatorade Sports Science Institute's latest innovation in hydration," said Dr. Matt Pahnke from the Gatorade Sports Science Institute. "It delivers science-backed hydration aligned with what today's active consumers are asking for." To mark the nationwide launch of Gatorade Lower Sugar, the brand is unveiling a marketing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0391d619c9964aa2
+symbol: PEP
+published_utc: 2026-03-17T08:00:00Z
+url: https://www.nasdaq.com/press-release/pepsico-announces-timing-and-availability-first-quarter-2026-financial-results-2026
+headline: PepsiCo Announces Timing and Availability of First-Quarter 2026 Financial Results
+<<<TEXT>>>
+--PepsiCo, Inc. today announced that it will issue its first-quarter 2026 financial results and other related information on Thursday, April 16, 2026 by posting the following materials and links on the company's website at: www.pepsico.com/investors. PepsiCo generated nearly $94 billion in net revenue in 2025, driven by a complementary beverage and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 43b97e99b1b416c9
+symbol: PEP
+published_utc: 2026-03-19T09:00:00Z
+url: https://www.nasdaq.com/press-release/pepsico-hits-dual-water-milestones-100-replenishment-and-adopting-aws-standard-across
+headline: PepsiCo Hits Dual Water Milestones: 100% Replenishment and Adopting the AWS Standard Across Company-Owned Facilities in High Water-Risk Areas
+<<<TEXT>>>
+--In the lead-up to World Water Day, PepsiCo, Inc. today announced it achieved two of its 2025 pep+ water goals:. Reaching 100% water replenishment means that for every liter of water PepsiCo uses at these facilities, we are restoring the equivalent amount or more back into natural water resources in that watershed through nature-based conservation and wetland...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 73446c01057d0e93
+symbol: PEP
+published_utc: 2026-03-24T07:00:00Z
+url: https://www.nasdaq.com/press-release/promino-advances-rejuvenate-platform-muscle-health-emerges-high-growth-functional
+headline: Promino Advances Rejuvenate Platform as Muscle Health Emerges as High-Growth Functional Beverage Category
+<<<TEXT>>>
+Promino Nutritional Sciences, Inc. today provided an update on its strategy to advance its Rejuvenate Muscle Health™ platform, as the muscle health category continues to gain momentum within the broader functional beverage market. A Platform Aligned with Major Health Trends. Approximately 10,000 retail doors across North America Ongoing growth in Amazon...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c8298fa8b4924821
+symbol: PEP
+published_utc: 2026-04-16T06:00:00Z
+url: https://www.nasdaq.com/press-release/150-million-americans-feel-dehydrated-gatorade-aims-change-how-people-think-about
+headline: 150 Million Americans Feel Dehydrated*. Gatorade Aims to Change How People Think About Hydration.
+<<<TEXT>>>
+--PepsiCo today announced a transformational new era for the Gatorade brand, expanding how its science-backed hydration expertise shows up beyond sport occasions. Built on 60 years of research studying hydration's effects on athlete performance, Gatorade remains committed to that purpose and is applying the same rigor to help people better understand and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8a0e980371f427cf
+symbol: PEP
+published_utc: 2026-04-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/pepsico-announces-webcast-annual-meeting-shareholders-2026-04-22
+headline: PepsiCo Announces Webcast of Annual Meeting of Shareholders
+<<<TEXT>>>
+--PepsiCo, Inc.' s virtual annual meeting of shareholders will be webcast live on Wednesday, May 6, 2026 at 9 a.m. Eastern Daylight Time. The virtual meeting and live audio webcast will be accessible at http://www.virtualshareholdermeeting.com/PEP2026 or through PepsiCo's website at www.pepsico.com in the "Investors" section under "Events& Presentations."
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 00f8ce9ff17dd3ee
+symbol: PEP
+published_utc: 2026-04-22T09:32:00Z
+url: https://www.nasdaq.com/press-release/pepsico-deepens-ai-capabilities-google-cloud-2026-04-22
+headline: PepsiCo Deepens AI Capabilities with Google Cloud
+<<<TEXT>>>
+--Cloud Next' 26-- PepsiCo today announced a strategic, multi-year collaboration with Google Cloud to strengthen its digital foundation and leverage Gemini Enterprise Agent Platform to help teams move from insight to action more quickly and consistently at scale.  "As market dynamics and customer expectations evolve, PepsiCo is re-examining how we bring...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b1231e6c8d8bf62e
+symbol: PEP
+published_utc: 2026-04-23T11:00:00Z
+url: https://www.nasdaq.com/press-release/gatorade-asserts-there-are-no-shortcuts-greatness-new-it-you-global-football-campaign
+headline: GATORADE ASSERTS THERE ARE NO SHORTCUTS TO GREATNESS IN NEW 'IS IT IN YOU?' GLOBAL FOOTBALL CAMPAIGN
+<<<TEXT>>>
+As Gatorade's world-class football roster– including Christian Pulisic, Vinícius Júnior, Julián Álvarez, Gilberto Mora, Luis Díaz and Tajon Buchanan– prepares to compete, the brand is launching a new global campaign,' Trust What's Inside.' The campaign, which marks the global reintroduction of Gatorade's' Is It In You? The film features the track "Beto's Horns"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5906a9b9422efb79
+symbol: PEP
+published_utc: 2026-04-28T09:00:00Z
+url: https://www.nasdaq.com/press-release/pepsico-givaudan-smurfit-westrock-and-statkraft-sign-10-year-renewable-energy
+headline: PepsiCo, Givaudan, Smurfit Westrock and Statkraft Sign 10‑Year Renewable Energy Agreement to Advance Value Chain Decarbonization Across Europe
+<<<TEXT>>>
+--PepsiCo, Givaudan, Smurfit WestRock and Statkraft have announced a 10‑ year Virtual Power Purchase Agreement with an underlying wind asset in Spain which is undergoing repowering. Under the pep+ REnew program, PepsiCo worked with SE Advisory Services, Schneider Electric's global consulting practice, to structure and deliver its second supply‑ chain VPPA...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 94e768e2970be52d
+symbol: PEP
+published_utc: 2026-05-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/gatorade-unveils-body-science-multi-year-research-commitment-help-close-gap-womens
+headline: Gatorade Unveils "Body of Science" - a Multi-Year Research Commitment to Help Close the Gap in Women's Hydration Science Across Life Stages
+<<<TEXT>>>
+--Gatorade today unveiled " Body of Science," a multi-year global research commitment to advance the science of women's hydration and nutrition. The work will be led by the Gatorade Sports Science Institute, the brand's research arm with four decades of expertise in human performance. Gatorade Sports Science Institute: Four Decades of Hydration and Nutrition...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1e9f41ef554b6372
+symbol: PEP
+published_utc: 2026-05-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/pepsico-and-talusag-announce-low-carbon-ammonia-attribute-agreement-help-accelerate
+headline: PepsiCo and TalusAg Announce Low-carbon Ammonia Attribute Agreement to Help Accelerate Fertilizer Decarbonization
+<<<TEXT>>>
+--PepsiCo today announced a new collaboration with agriculture technology company, TalusAg, that aims to advance fertilizer decarbonization across global agricultural supply chains through low-carbon ammonia environmental attributes, marking PepsiCo's first executed transactions of this kind. The initial agreements span PepsiCo's Europe, Sub...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4c9647e71fd54de8
+symbol: PEP
+published_utc: 2026-05-06T16:20:00Z
+url: https://www.nasdaq.com/press-release/pepsico-declares-quarterly-dividend-2026-05-06
+headline: PepsiCo Declares Quarterly Dividend
+<<<TEXT>>>
+--The Board of Directors of PepsiCo, Inc. today declared a quarterly dividend of $1.48 per share of PepsiCo common stock, a 4 percent increase versus the comparable year-earlier period. Today's action is consistent with PepsiCo's previously announced increase in its annualized dividend to $5.92 per share from $5.69 per share, which is expected to begin with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b73cbfaafa9ea76b
+symbol: PEP
+published_utc: 2026-05-28T09:00:00Z
+url: https://www.nasdaq.com/press-release/future-harvest-european-program-tackling-decline-generational-renewal-farming-2026-05
+headline: Future Harvest: The European program tackling the decline in generational renewal in farming
+<<<TEXT>>>
+--EIT Food and the PepsiCo Foundation today announced the launch of Future Harvest, a new European program designed to support young and next-generation farmers as they build viable, resilient, and future-ready farming operations. EIT Food is supported by the European Institute of Innovation and Technology, a body of the European Union. Funded by the PepsiCo...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f30aeb7cb70fdaa6
+symbol: PEP
+published_utc: 2026-06-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/pepsico-announces-timing-and-availability-second-quarter-2026-financial-results-2026
+headline: PepsiCo Announces Timing and Availability of Second-Quarter 2026 Financial Results
+<<<TEXT>>>
+--PepsiCo, Inc. today announced that it will issue its second-quarter 2026 financial results and other related information on Thursday, July 9, 2026 by posting the following materials and links on the company's website at: www.pepsico.com/investors. Form 10- Q, Press Release, Prepared Management Remarks at approximately 6:00 a.m. EDT Live question and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e542c21a8bc1e9be
+symbol: PEP
+published_utc: 2026-06-11T09:00:00Z
+url: https://www.nasdaq.com/press-release/compeer-financial-collaborates-pepsico-provide-strip-till-equipment-financing-2026-06
+headline: Compeer Financial Collaborates with PepsiCo to Provide Strip-Till Equipment Financing
+<<<TEXT>>>
+--Compeer Financial is teaming up with PepsiCo and other industry partners to offer a pilot leasing program for strip-till equipment, helping offset upfront financial costs for farmers implementing soil conservation practices on their farms. Through RegenLend, Compeer Financial will lease the equipment to farmers, and PepsiCo will cover two annual lease...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 56c7a28a0ef70ba8
+symbol: PEP
+published_utc: 2026-07-01T08:30:00Z
+url: https://www.nasdaq.com/press-release/pepsico-announces-progress-toward-2030-agriculture-goals-2026-07-01
+headline: PEPSICO ANNOUNCES PROGRESS TOWARD 2030 AGRICULTURE GOALS
+<<<TEXT>>>
+--PepsiCo today announced progress against its 2030 Positive Agriculture goals, highlighting gains in scaling regenerative agriculture, restorative and protective practices, advancing sustainable sourcing in accordance with its guidelines 1, and improvements in livelihoods through dedicated programs.  "As we continue work to help advance toward a more...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8e74f53612cc03f9
+symbol: PEP
+published_utc: 2026-07-15T22:17:00Z
+url: https://www.nasdaq.com/press-release/baseballs-grady-emerson-and-soccers-maddie-dimaria-named-gatorade-best-players-year
+headline: BASEBALL'S GRADY EMERSON AND SOCCER'S MADDIE DIMARIA NAMED GATORADE BEST PLAYERS OF THE YEAR
+<<<TEXT>>>
+--Tonight, Gatorade named Grady Emerson and Maddie DiMaria as the 2025-26 Best Male and Best Female Players of the Year, distinguishing the pair as the best high school athletes in the nation. Emerson receives this recognition on the heels of his second overall selection in the 2026 Major League Baseball Draft earlier this week, while DiMaria is committed to play...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b35110df33aa1b39
+symbol: PEP
+published_utc: 2026-07-17T16:20:00Z
+url: https://www.nasdaq.com/press-release/pepsico-declares-quarterly-dividend-2026-07-17
+headline: PepsiCo Declares Quarterly Dividend
+<<<TEXT>>>
+--The Board of Directors of PepsiCo, Inc. today declared a quarterly dividend of $1.48 per share of PepsiCo common stock, a 4 percent increase versus the comparable year-earlier period. Today's action is consistent with PepsiCo's previously announced increase in its annualized dividend to $5.92 per share from $5.69 per share, which began with the June 2026...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e5e4bc9d40f4624c
+symbol: PEP
+published_utc: 2026-07-21T09:00:00Z
+url: https://www.nasdaq.com/press-release/gatorades-first-body-science-study-reveals-disparities-womens-hydration-nutrition
+headline: Gatorade's First "Body of Science" Study Reveals Disparities in Women's Hydration & Nutrition Patterns
+<<<TEXT>>>
+--This weekend, the Gatorade Sports Science Institute, Gatorade's research arm with four decades of experience in hydration, nutrition, and human performance, is presenting the findings from its first "Body of Science" study 2. The findings will be presented at the American Society for Nutrition Annual Meeting on July 26. Establishing the Scientific Foundation...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0dbd78f1d149d856
+symbol: PEP
+published_utc: 2026-08-13T09:00:00Z
+url: https://www.nasdaq.com/press-release/pepsico-reports-latest-esg-performance-towards-pep-goals-2026-08-13
+headline: PepsiCo Reports on Latest ESG Performance Towards pep+ Goals
+<<<TEXT>>>
+--PepsiCo, Inc. on Thursday released its 2025 ESG Summary, web pages, and Leadership Message, updated ESG Topics A-Z pages and 2025 ESG Performance Metrics and Calculation Methodology, detailing progress against certain pep+ goals for 2030 and outlining continued effort in climate action, agriculture, and nutrition.  "Our sustainability agenda and portfolio...
+<<<END>>>

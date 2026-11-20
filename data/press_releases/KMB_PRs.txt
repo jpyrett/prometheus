@@ -1,0 +1,252 @@
+<<<PRESS_RELEASE>>>
+id: 302247dda8521741
+symbol: KMB
+published_utc: 2025-11-20T16:10:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-declares-quarterly-dividend-2025-11-20
+headline: Kimberly-Clark Declares Quarterly Dividend
+<<<TEXT>>>
+--The board of directors of Kimberly-Clark Corporation has declared a regular quarterly dividend of $1.26 per share. Kimberly-Clark has paid a dividend for 91 consecutive years and has increased its dividend for 53 consecutive years. Kimberly-Clark and its trusted brands are an indispensable part of life for people in more than 175 countries and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9903139d308b464d
+symbol: KMB
+published_utc: 2025-12-12T07:10:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-announce-fourth-quarter-and-full-year-2025-results-january-27-2026
+headline: Kimberly-Clark to Announce Fourth Quarter and Full Year 2025 Results on January 27, 2026
+<<<TEXT>>>
+--Kimberly-Clark will issue its fourth quarter and full year 2025 results on Tuesday, January 27, 2026. Kimberly-Clark management will then host a live Q&A session with analysts beginning at 8:00 a.m. EST. The earnings release, supplemental materials, and Kimberly-Clark's Q&A session can be accessed at Kimberly-Clark- Investor Relations.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5615217751c5bd44
+symbol: KMB
+published_utc: 2026-01-15T09:15:00Z
+url: https://www.nasdaq.com/press-release/huggies-donates-15-million-diapers-15-days-celebration-national-diaper-bank-networks
+headline: Huggies Donates 15 Million Diapers in 15 Days in Celebration of National Diaper Bank Network's 15th Anniversary
+<<<TEXT>>>
+--Huggies ®, a Kimberly-Clark brand, is teaming up with the National Diaper Bank Network to deliver 15 million donated Huggies diapers in 15 days to celebrate the 15- year anniversary of the national nonprofit. This donation also solidifies Kimberly-Clark as the largest donor in National Diaper Bank Network history.  "Huggies is committed to supporting...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f3e9d537f38bb25a
+symbol: KMB
+published_utc: 2026-01-27T06:30:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-reports-strong-finish-second-year-transformation-2026-01-27
+headline: Kimberly-Clark Reports Strong Finish to Second Year of Transformation
+<<<TEXT>>>
+--Kimberly-Clark Corporation today reported fourth quarter and full year 2025 results that reflect the momentum of its innovation-driven, volume-plus-mix led growth model.  "In 2025, we accelerated the largest transformation in Kimberly-Clark's more than 150- year history, delivering results that underscore the strength of our business and serve as a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 79942bef728158cc
+symbol: KMB
+published_utc: 2026-01-27T06:40:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-declares-dividend-increase-2026-01-27
+headline: Kimberly-Clark Declares Dividend Increase
+<<<TEXT>>>
+--The board of directors of Kimberly-Clark Corporation has declared an increase in its regular quarterly dividend to $1.28 per share, up from $1.26 previously. Kimberly-Clark has paid a dividend for 92 consecutive years, and this represents the 54th consecutive year that the company has increased its dividend to shareholders. Kimberly-Clark and its trusted...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 782ecf96e17f06c2
+symbol: KMB
+published_utc: 2026-02-19T11:00:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-highlights-generational-value-creation-opportunity-2026-cagny
+headline: Kimberly-Clark Highlights Generational Value Creation Opportunity at 2026 CAGNY Conference
+<<<TEXT>>>
+--Kimberly-Clark Corporation today presented at the 2026 Consumer Analyst Group of New York Conference, outlining how Kimberly-Clark's fast and agile operating model and differentiated capabilities position the company to benefit from growth trends in key cohorts, raise the standard of care and create generational value through its pending...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b81c812b0d42bf17
+symbol: KMB
+published_utc: 2026-03-06T08:00:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-appoints-francesco-tinto-chief-information-gbs-officer-2026-03-06
+headline: Kimberly-Clark Appoints Francesco Tinto as Chief Information & GBS Officer
+<<<TEXT>>>
+--Kimberly-Clark Corporation today announced the appointment of Francesco Tinto as Chief Information& Global Business Services Officer, effective March 9, 2026. Tinto will report to Russ Torres, President and Chief Operating Officer of Kimberly-Clark, and serve on the company's executive leadership team.  "His record of leading digital transformation and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bbd0e934d5639cda
+symbol: KMB
+published_utc: 2026-03-18T08:00:00Z
+url: https://www.nasdaq.com/press-release/ethisphere-names-kimberly-clark-one-2026-worlds-most-ethical-companiesr-2026-03-18
+headline: ETHISPHERE NAMES KIMBERLY-CLARK AS ONE OF THE 2026 WORLD'S MOST ETHICAL COMPANIES®
+<<<TEXT>>>
+--Kimberly-Clark Corporation, a global personal care leader, has been recognized as one of the 2026 World's Most Ethical Companies ® by Ethisphere, a global leader in defining and advancing the standards of ethical business practices. Kimberly-Clark has been awarded this prestigious recognition for eight consecutive years and eleven times overall.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b4d9de9b56353602
+symbol: KMB
+published_utc: 2026-04-02T10:05:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-kimberly-clark-corporation-2026-04-02
+headline: /C O R R E C T I O N -- Kimberly-Clark Corporation/
+<<<TEXT>>>
+--Today on World Autism Awareness Day 2026, Goodnites ®, the #1 Nighttime Underwear 1 brand, announced the launch of the Language of Bedwetting, the first complete Augmentative and Alternative Communication system specifically designed to help non-verbal and Autistic children express needs, wants and feelings around bedwetting. The free, downloadable...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bae23fb3f6922978
+symbol: KMB
+published_utc: 2026-04-02T10:05:00Z
+url: https://www.nasdaq.com/press-release/goodnitesr-launches-language-bedwetting-first-complete-language-designed-help
+headline: Goodnites® Launches "Language of Bedwetting," the First Complete Language Designed to Help Autistic Children Express Needs, Wants and Feelings Around Bedwetting
+<<<TEXT>>>
+--Today on World Autism Awareness Day 2026, Goodnites ®, the #1 Nighttime Underwear 1 brand, announced the launch of the Language of Bedwetting, the first complete Augmentative and Alternative Communication system specifically designed to help non-verbal and Autistic children express needs, wants and feelings around bedwetting. The free, downloadable...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5d60aa8847df72ea
+symbol: KMB
+published_utc: 2026-04-02T16:15:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-announce-first-quarter-2026-results-april-28-2026-2026-04-02
+headline: Kimberly-Clark to Announce First Quarter 2026 Results on April 28, 2026
+<<<TEXT>>>
+Kimberly-Clark management will then host a live Q&A session with analysts beginning at 8:00 a.m. EDT that same day. The earnings release, supplemental materials, and Kimberly-Clark's Q&A session can be accessed at Kimberly-Clark- Investor Relations. About Kimberly-Clark Kimberly-Clark and its trusted brands are an indispensable part of life for people...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8e190bdc9449003f
+symbol: KMB
+published_utc: 2026-04-08T08:05:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-statement-ontario-california-fire-distribution-center-operated-nfi
+headline: Kimberly-Clark Statement on Ontario, California Fire at Distribution Center Operated by NFI Industries
+<<<TEXT>>>
+Kimberly-Clark can confirm there were no reported injuries, and that all employees of the facility operator were safely evacuated. Kimberly-Clark extends its gratitude to local authorities and firefighters who responded to the incident. The building is leased by Kimberly-Clark and operated by NFI Industries. Kimberly-Clark has business interruption...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: deff744f47d54928
+symbol: KMB
+published_utc: 2026-04-28T06:30:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-announces-first-quarter-2026-results-reaffirms-2026-outlook-2026-04-28
+headline: Kimberly-Clark Announces First Quarter 2026 Results, Reaffirms 2026 Outlook
+<<<TEXT>>>
+--Kimberly-Clark Corporation today reported first quarter 2026 results driven by resilient consumer demand for the company's brands, the introduction of pioneering innovative new products, and leveraging sustained, industry-leading productivity. Hsu continued, "With our core business gaining momentum and one of the strongest innovation and commercial...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a8567564c83f9ff3
+symbol: KMB
+published_utc: 2026-04-29T16:30:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-webcast-its-presentation-barclays-18th-annual-americas-select
+headline: Kimberly-Clark to Webcast its Presentation at the Barclays 18th Annual Americas Select Conference 2026
+<<<TEXT>>>
+--Mike Hsu, Chairman and Chief Executive Officer of Kimberly-Clark Corporation, and Nelson Urdaneta, Chief Financial Officer, will be featured speakers at the Barclays 18 th Annual Americas Select Conference on Tuesday, May 5, at 1:30 p.m. BST/ 8:30 a.m. EDT. A link to the broadcast will be provided through the Investors section of Kimberly-Clark's website at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 446f27a857871945
+symbol: KMB
+published_utc: 2026-05-04T09:00:00Z
+url: https://www.nasdaq.com/press-release/kleenexr-just-reinvented-tissue-pack-meet-snap-gotm-2026-05-04
+headline: Kleenex® Just Reinvented the Tissue Pack: Meet Snap & Go™
+<<<TEXT>>>
+--Kleenex ® Brand, a trusted leader in facial tissue for more than a century, announced the launch of Kleenex ® Snap& Go™, a thoughtfully designed, on-the-go tissue pack created to meet the needs of life in motion. Featuring a secure lid that snaps shut, durable packaging, and 25 silky-soft hypoallergenic and allergist-approved Kleenex ® Ultra Soft™ tissues, Snap& Go™...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2974e0c2ff9ef290
+symbol: KMB
+published_utc: 2026-05-06T10:00:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-kimberly-clark-corporation-2026-05-13
+headline: /C O R R E C T I O N -- Kimberly-Clark Corporation/
+<<<TEXT>>>
+--Huggies ® today announced the launch of Natural Born Fighters, a new campaign recognizing the strength of NICU babies and supporting the families, nurses and caregivers who fight alongside them. At the heart of the campaign is the story of Stacy Gooden-Crandle and her son, Derick Hall. The campaign recognizes NICU babies as Little Fighters: Huggies is helping...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cdf90e1f58496b4b
+symbol: KMB
+published_utc: 2026-05-06T10:00:00Z
+url: https://www.nasdaq.com/press-release/huggiesr-launches-natural-born-fighters-celebrate-strength-and-spirit-nicu-babies-and
+headline: Huggies® Launches "Natural Born Fighters" to Celebrate the Strength and Spirit of NICU Babies and Families, and the Care that Supports Their Fight
+<<<TEXT>>>
+--Huggies ® today announced the launch of Natural Born Fighters, a new campaign recognizing the strength of NICU babies and supporting the families, nurses and caregivers who fight alongside them. At the heart of the campaign is the story of Stacy Gooden-Crandle and her son, Derick Hall. The campaign recognizes NICU babies as Little Fighters: Huggies is helping...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8eed11ddf1d63849
+symbol: KMB
+published_utc: 2026-05-14T16:15:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-declares-quarterly-dividend-2026-05-14
+headline: Kimberly-Clark Declares Quarterly Dividend
+<<<TEXT>>>
+--The board of directors of Kimberly-Clark Corporation has declared a regular quarterly dividend of $1.28 per share. Kimberly-Clark has paid a dividend for 92 consecutive years and has increased its dividend for 54 consecutive years. About Kimberly-Clark Kimberly-Clark and its trusted brands are an indispensable part of life for people in more than 175...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 721ae81478358140
+symbol: KMB
+published_utc: 2026-05-19T08:00:00Z
+url: https://www.nasdaq.com/press-release/pull-upsr-debuts-learning-layertm-technology-new-innovation-help-kids-learn
+headline: PULL-UPS® DEBUTS LEARNING LAYER™ TECHNOLOGY, A NEW INNOVATION TO HELP KIDS LEARN THE DIFFERENCE BETWEEN WET AND DRY
+<<<TEXT>>>
+--Pull-Ups ®, a trusted brand and leader in potty training for nearly four decades, is proud to introduce Learning Layer™ technology, a new innovation designed to support one of parenting's most unpredictable milestones. Many potty training methods either help kids notice accidents, or contain mess, but not both– and occasionally neither.  "The Pull-Ups Learning...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2dd6ee3aca789718
+symbol: KMB
+published_utc: 2026-05-28T16:15:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-webcast-its-presentation-deutsche-bank-dbaccess-global-consumer
+headline: Kimberly-Clark to Webcast its Presentation from the Deutsche Bank dbAccess Global Consumer Conference 2026
+<<<TEXT>>>
+--Mike Hsu, Chairman and Chief Executive Officer, and Nelson Urdaneta, Chief Financial Officer of Kimberly-Clark Corporation, will be featured speakers at the Deutsche Bank dbAccess Global Consumer Conference on Thursday, June 4, at 11:45 a.m. CEST/ 5:45 a.m. ET. A link to the broadcast will be provided through the Investors section of Kimberly-Clark's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a533230cbdc9db5e
+symbol: KMB
+published_utc: 2026-06-04T09:00:00Z
+url: https://www.nasdaq.com/press-release/goodnitesr-partners-us-pro-soccer-captain-tim-ream-help-destigmatize-childhood
+headline: Goodnites® Partners with U.S Pro Soccer Captain Tim Ream to Help Destigmatize Childhood Bedwetting
+<<<TEXT>>>
+--Tim Ream, U.S. pro soccer captain, has teamed up with Goodnites ®, the #1 Nighttime Underwear 1 brand to share, for the first time, his childhood experience with bedwetting. A respected leader on and off the field, Ream is also a dedicated father who is using his platform to help support families and children.  "I'm partnering with Goodnites because I know firsthand...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d52180c52f4027f2
+symbol: KMB
+published_utc: 2026-06-08T09:16:00Z
+url: https://www.nasdaq.com/press-release/pull-upsr-debuts-learning-layertm-technology-help-kids-learn-wet-dry-during-potty
+headline: Pull-Ups® Debuts Learning Layer™ Technology to Help Kids Learn Wet From Dry During Potty Training and Help Build Confidence
+<<<TEXT>>>
+Pull-Ups ®, a Kimberly-Clark brand, has introduced Learning Layer™ technology in Canada, addressing a common challenge in potty training: recognizing the difference between wet and dry. The training pant innovation is designed to help kids notice wetness during potty training while supporting independence and confidence during this key developmental...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d75410d593918468
+symbol: KMB
+published_utc: 2026-06-15T11:42:00Z
+url: https://www.nasdaq.com/press-release/dependr-and-deion-coach-prime-sanders-encourage-proactive-care-during-mens-health
+headline: DEPEND® AND DEION "COACH PRIME" SANDERS ENCOURAGE PROACTIVE CARE DURING MEN'S HEALTH MONTH
+<<<TEXT>>>
+Now through the end of the month, consumers can sign up to receive a video message from Coach Prime, delivered in his signature motivational style and centered on accountability, preparation, and confidence. After publicly sharing his bladder cancer diagnosis and recovery journey, Coach Prime knows firsthand how critical early detection can be.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 097b0a2274aa0bad
+symbol: KMB
+published_utc: 2026-07-07T16:15:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-announce-second-quarter-2026-results-august-4-2026-2026-07-07
+headline: Kimberly-Clark to Announce Second Quarter 2026 Results on August 4, 2026
+<<<TEXT>>>
+--Kimberly-Clark will issue its second quarter 2026 results on Tuesday, August 4. Kimberly-Clark management will then host a live Q&A session with analysts beginning at 8:00 a.m. EDT. The earnings release, supplemental materials, and Kimberly-Clark's Q&A session can be accessed at Kimberly-Clark- Investor Relations.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fbb7854088dec9de
+symbol: KMB
+published_utc: 2026-07-30T17:53:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-announces-10-million-commitment-support-wisconsins-fox-valley-tornado
+headline: Kimberly-Clark Announces $10 Million Commitment to Support Wisconsin's Fox Valley Tornado Relief and Recovery
+<<<TEXT>>>
+The commitment represents one of the largest community investments in the company's history and reflects Kimberly-Clark's enduring connection to Neenah where the company was founded in 1872..  "Neenah is our hometown," said Mike Hsu, Chairman and CEO of Kimberly-Clark.  "The people of the Fox Valley made Kimberly-Clark the company it is today.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 53170a2d3b07346f
+symbol: KMB
+published_utc: 2026-08-03T09:15:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-unveils-proprietary-alternative-natural-fiber-innovation-program
+headline: KIMBERLY-CLARK UNVEILS PROPRIETARY ALTERNATIVE NATURAL FIBER INNOVATION PROGRAM TO ADVANCE ITS "BETTER CARE FOR A BETTER WORLD" COMMITMENT
+<<<TEXT>>>
+--Kimberly-Clark Corporation today unveiled a proprietary innovation program focused on advancing alternative natural fibers as the foundation for a next-generation, high-performance, sustainable materials platform, furthering the Company's commitment to Better Care for a Better World. Company researchers and scientists developed a patented...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8ebe42f51275b19c
+symbol: KMB
+published_utc: 2026-08-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-declares-quarterly-dividend-2026-08-03
+headline: Kimberly-Clark Declares Quarterly Dividend
+<<<TEXT>>>
+--The board of directors of Kimberly-Clark Corporation has declared a regular quarterly dividend of $1.28 per share. The dividend is payable in cash on October 2, 2026, to stockholders of record at the close of business on September 4, 2026. Kimberly-Clark has paid a dividend for 92 consecutive years and has increased its dividend for 54 consecutive years.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 20d3bbff4792731c
+symbol: KMB
+published_utc: 2026-08-04T06:30:00Z
+url: https://www.nasdaq.com/press-release/kimberly-clark-announces-second-quarter-and-first-half-2026-results-updates-2026
+headline: Kimberly-Clark Announces Second Quarter and First Half 2026 Results, Updates 2026 Outlook
+<<<TEXT>>>
+--Kimberly-Clark Corporation today reported second quarter 2026 results reflecting sustained, innovation-driven volume-plus-mix gains and industry-leading productivity that more than offset several significant, discrete unfavorable impacts.  "Our achievements in the first half of the year show that Kimberly-Clark's durable operating model is...
+<<<END>>>
