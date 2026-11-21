@@ -54,14 +54,15 @@ def test_a_healthy_recommendation_is_approved_for_an_hour_and_the_review_carries
     r = review(captured("PG_open"))["PG"]
     assert r["approved"] and r["blockers"] == [] and r["valid_until_utc"] == "2026-11-05T16:30:00Z"
     assert not {"approved_shares", "suggested_shares"} & set(r) and not {"equity", "equity_basis", "caps", "allowed_shares"} & set(r["risk"]) and "size_reduced" not in [w["code"] for w in r["warnings"]]
-    assert (r["score"], r["grade"]) == (88, "B") and r["summary"].startswith("APPROVE PG: score 88 (B)") and "share" not in r["summary"]
-    assert {n: d["points"] for n, d in r["dimensions"].items()} == {"accuracy": 30.0, "evidence": 15.0, "risk_fit": 18.56, "timing": 10.0, "value": 6.58, "chart": 7.5}
+    assert (r["score"], r["grade"]) == (93, "A") and r["summary"].startswith("APPROVE PG: score 93 (A)") and "share" not in r["summary"]             # Critic v3: was 88 (B) under the weights 30/15/20/10/15/10; the weights are 25/15/15/10/15/10/10 and the analysts (no counts in this capture) are out of the average
+    assert {n: d["points"] for n, d in r["dimensions"].items()} == {"accuracy": 25.0, "evidence": 15.0, "risk_fit": 13.92, "timing": 10.0, "value": 6.58, "chart": 7.5, "analysts": 0.0}
+    assert r["dimensions"]["analysts"]["applicable"] is False and r["groups"] == {"news": [], "performance": [], "price": []} and r["chart"]["points"] == 25 and r["pattern_bonus"] == 6.25      # the net +25 chart points are also a bonus on the score (0.25 a point): 78.0 of 90 weight is 86.67, and 86.67 + 6.25 is 93
 
 
 def test_every_check_runs_for_every_record_even_when_the_first_blocker_is_found():
     r = review(captured("PG_open"), now=at("2026-11-07 12:00"))["PG"]                 # a Saturday
     assert not r["approved"] and {"market_closed", "record_expired"} <= {b["code"] for b in r["blockers"]} and r["valid_until_utc"] is None and "approved_shares" not in r
-    assert set(r["dimensions"]) == {"accuracy", "evidence", "risk_fit", "timing", "value", "chart"} and r["dimensions"]["accuracy"]["score"] == 100 and r["dimensions"]["risk_fit"]["score"] > 0
+    assert set(r["dimensions"]) == {"accuracy", "evidence", "risk_fit", "timing", "value", "chart", "analysts"} and r["dimensions"]["accuracy"]["score"] == 100 and r["dimensions"]["risk_fit"]["score"] > 0
     assert r["score"] == 49 and r["score_before_blockers"] > 49 and r["grade"] == "F" and r["timing"]["session"] == "closed"
     assert "market_closed" in r["denial_reasons"] and r["summary"].startswith("DENY PG: ")
 
@@ -201,13 +202,20 @@ def test_when_the_data_clerk_answers_nothing_nothing_is_approved_and_the_run_say
     order = captured("PG_open")
     r = review(order, fail=["metrics", "quotes", "verification"])["PG"]
     codes = {b["code"] for b in r["blockers"]}
-    assert not r["approved"] and {"data_unverified", "no_live_price", "source_missing"} <= codes and len(order.critic_runs[0]["errors"]) == 3
+    assert not r["approved"] and {"data_unreliable", "no_live_price", "source_missing"} <= codes and len(order.critic_runs[0]["errors"]) == 3      # Critic v3 (V7): no numbers at all is `data_unreliable` (a fault), it was `data_unverified`
     assert r["accuracy"]["sources"] and all(not s["found"] for s in r["accuracy"]["sources"])
 
 
-def test_a_number_that_does_not_match_a_new_calculation_denies_it():
+def test_a_number_that_does_not_match_a_new_calculation_is_a_warning_not_a_denial_but_the_price_denies():
+    """AMENDED (Critic v3, rule V7: no nitpicking on one financial metric): a decisive number (the ATR) that differs from a new calculation was a `data_mismatch` BLOCKER and denied; it is a WARNING now (the accuracy score still counts
+    it). The PRICE itself (`last_close`) not matching is the record's fault: `data_unreliable`, a blocker that denies alone."""
     r = review(captured("PG_open"), changes={"PG": {"atr_14": 9.0}})["PG"]
-    assert [b["code"] for b in r["blockers"]] == ["data_mismatch"] and "atr_14" in r["blockers"][0]["message"] and not r["approved"]
+    assert r["approved"] and r["blockers"] == [] and r["denial_reasons"] == [] and r["accuracy"]["match_rate"] < 1.0
+    [warn] = [w for w in r["warnings"] if w["code"] == "data_mismatch"]
+    assert "atr_14" in warn["message"] and "data_unreliable" not in [w["code"] for w in r["warnings"]]
+    assert r["dimensions"]["accuracy"]["score"] < 100
+    price = review(captured("PG_open"), changes={"PG": {"last_close": 150.0}})["PG"]
+    assert not price["approved"] and "data_unreliable" in price["denial_reasons"] and next(b for b in price["blockers"] if b["code"] == "data_unreliable")["message"].startswith("The price the recommendation was scored from does not match")
 
 
 def test_a_source_that_is_gone_from_the_store_denies_it():

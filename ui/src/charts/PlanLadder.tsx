@@ -7,6 +7,11 @@ import { ChartFrame, Key, type TableSpec } from "./ChartFrame";
 import { diamond } from "./path";
 import { extent, linear, shortDate } from "./scale";
 
+/** The stop in force: a trailing plan's is the server's `stop_now` (the plan's stop or the highest close less its distance, whichever is higher), any other plan's is its stop. */
+export function stopOf(p: LivePosition): number | null {
+  return (p.plan?.trailing ? p.plan.stop_now ?? p.plan.stop : p.plan?.stop) ?? null;
+}
+
 export const STATUS_WORDS: Record<LiveStatus, string> = {
   in_plan: "IN PLAN",
   stop_hit: "STOP HIT",
@@ -22,9 +27,9 @@ export function PlanLadder({ positions, fallbackWidth = 760 }: { positions: Live
     caption: "Open positions against their plans",
     columns: ["Symbol", "Shares", "Cost", "Price now", "Stop", "Target", "Value", "Gain", "Status"],
     numeric: [1, 2, 3, 4, 5, 6, 7],
-    rows: positions.map((p) => [p.symbol, shareText(p.shares), money(p.cost_basis), money(p.price), money(p.plan?.stop), money(p.plan?.target), money(p.value), p.gain_pct === null ? "—" : `${money(p.gain)} (${pct(p.gain_pct)})`, STATUS_WORDS[p.status]]),
+    rows: positions.map((p) => [p.symbol, shareText(p.shares), money(p.cost_basis), money(p.price), money(stopOf(p)), money(p.plan?.target), money(p.value), p.gain_pct === null ? "—" : `${money(p.gain)} (${pct(p.gain_pct)})`, STATUS_WORDS[p.status]]),
   };
-  const label = `Plan ladder. ${positions.length} open position${positions.length === 1 ? "" : "s"}. ${positions.map((p) => `${p.symbol}: ${p.price === null ? "no price" : money(p.price)}, ${p.plan?.stop ? `stop ${money(p.plan.stop)}, ` : ""}${p.plan?.target ? `target ${money(p.plan.target)}, ` : ""}${STATUS_WORDS[p.status].toLowerCase()}`).join("; ")}.`;
+  const label = `Plan ladder. ${positions.length} open position${positions.length === 1 ? "" : "s"}. ${positions.map((p) => `${p.symbol}: ${p.price === null ? "no price" : money(p.price)}, ${stopOf(p) ? `${p.plan?.trailing ? "trailing stop" : "stop"} ${money(stopOf(p))}, ` : ""}${p.plan?.target ? `target ${money(p.plan.target)}, ` : ""}${STATUS_WORDS[p.status].toLowerCase()}`).join("; ")}.`;
 
   return (
     <ChartFrame
@@ -55,7 +60,8 @@ export function PlanLadder({ positions, fallbackWidth = 760 }: { positions: Live
             {positions.map((p, i) => {
               const top = 4 + i * ROW_H;
               const mid = top + 40;
-              const stop = p.plan?.stop ?? null;
+              const stop = stopOf(p);
+              const trailing = p.plan?.trailing === true;
               const target = p.plan?.target ?? null;
               // with a plan the track is stop to target with room for the price beyond either end; without one it is centred on the cost, wide enough that a price a few cents off the cost sits beside it
               const span = extent([stop, target, p.cost_basis, p.price]) ?? [p.cost_basis, p.cost_basis];
@@ -97,7 +103,7 @@ export function PlanLadder({ positions, fallbackWidth = 760 }: { positions: Live
                       <rect x={trackL} y={mid - 2} width={Math.max(0, trackR - trackL)} height={4} rx={2} className="lad-bare" />
                       <line className="lad-cap stop" x1={x(stop)} x2={x(stop)} y1={mid - 11} y2={mid + 11} />
                       <text className="tick-label" x={x(stop)} y={mid + 25} textAnchor="middle">
-                        stop {money(stop)}
+                        {trailing ? "trailing stop" : "stop"} {money(stop)}
                       </text>
                       <text className="tick-label" x={trackR} y={mid + 25} textAnchor="end">
                         {p.plan?.time_stop_date ? `time stop ${shortDate(p.plan.time_stop_date)}, no target` : "no target"}

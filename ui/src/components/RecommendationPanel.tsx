@@ -222,6 +222,24 @@ function ReviewSection({ review }: { review: Review }) {
       {review.dimensions.map((x) => (
         <Meter key={x.name} label={x.label} fill={x.applicable && x.weight > 0 ? (x.points / x.weight) * 100 : 0} tone="critic" value={x.applicable ? `${Math.round(x.points)}/${x.weight}` : "—"} dim={!x.applicable} title={x.applicable ? undefined : "not applicable to this recommendation"} />
       ))}
+      {review.groups && review.groups.length > 0 && (
+        <div className="groups" role="group" aria-label="The three groups of judgment: a denial needs bad signs in two of them">
+          {review.groups.map((g) => (
+            <span className="group" key={g.name} title={g.bad ? g.codes.join(", ") : "no sign in this group"}>
+              <Badge tone={g.bad ? "neg" : "pos"}>
+                {g.label.toUpperCase()} {g.bad ? "BAD" : "CLEAN"}
+              </Badge>
+              {g.bad && <small className="muted"> {g.codes.join(", ")}</small>}
+            </span>
+          ))}
+        </div>
+      )}
+      {review.analysts && (
+        <div className="note analysts">
+          <Badge tone="info">ANALYSTS</Badge>
+          <span>{review.analysts}</span>
+        </div>
+      )}
       {review.blockers.map((b) => (
         <div className="note blocker" key={`b-${b.code}`}>
           <Badge tone="neg">BLOCKER</Badge>

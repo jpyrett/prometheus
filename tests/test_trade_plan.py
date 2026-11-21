@@ -46,6 +46,36 @@ def test_the_invalidation_rules_by_family():
     assert len(plan("event", horizon=40).invalidation) == 3
 
 
+def test_a_target_pays_at_least_two_for_one_and_the_edges_own_target_stands_when_it_is_higher():
+    """Advisor config version 3, rule E1 (design/advisor_exit_plan_spec.md): a conviction idea at 100 with an ATR of 4 has a stop 12 under the entry; the edge alone (0.6% a month for 40 sessions) put its target at 101.8, a reward of 0.15 for each unit risked. Now it is 124."""
+    p = plan("conviction", horizon=40, edge=0.006)
+    assert p.stop_distance == 12.0 and p.stop_price == 88.0 and p.target_price == 124.0 and p.trailing is False and p.trail_distance is None
+    assert any("2 x the stop distance above the entry (124.00)" in n and "the family's edge alone gave 101.80" in n for n in p.notes)
+    for family in ("event", "reversion", "theme"):
+        q = plan(family, horizon=40 if family != "reversion" else 10, edge=0.004)
+        assert q.target_price is not None and round((q.target_price - q.entry_mid) / q.stop_distance, 6) >= 2.0 and q.trailing is False, family
+    big = plan("event", horizon=40, edge=0.5)           # the edge's target (250) is farther than 2 for 1 (116): it stands, and no note says the floor moved it
+    assert big.target_price == 250.0 and not any(n.startswith("the target is ") for n in big.notes)
+
+
+def test_the_trend_family_has_no_target_and_a_trailing_stop_and_nothing_else_trails():
+    """Rule E2: the trend plan keeps its stop price as the STARTING stop, records the distance the stop trails the highest close by (the stop distance), and has no target; the time stop and the family's own invalidation stand. capital_return keeps no target and does not trail."""
+    t = plan("trend", m=metrics(above_sma_200=True), horizon=63)
+    assert t.target_price is None and t.trailing is True and t.trail_distance == t.stop_distance and t.stop_price == round(t.entry_mid - t.stop_distance, 4) and t.time_stop_date is not None
+    assert any(n.startswith("trailing stop, no target") for n in t.notes) and [r["kind"] for r in t.invalidation] == ["price_below", "days_elapsed", "event_class", "metric_crossed"]
+    for family in ("reversion", "event", "conviction", "theme", "capital_return"):
+        q = plan(family, horizon=40)
+        assert q.trailing is False and q.trail_distance is None, family
+    assert plan("capital_return").target_price is None
+    assert plan("trend", m=healthy(atr_14=None, last_close=100.0), horizon=63).trailing is False       # no prices, no plan: nothing trails
+
+
+def test_a_record_made_before_the_exit_conventions_has_a_fixed_stop_and_loads():
+    """A plan record of Advisor config version 2 (no `trailing`, no `trail_distance`) is read as a fixed-stop plan with its target: both new fields have their old-record defaults."""
+    old = TradePlan(entry_basis="last_close", family="trend", entry_mid=100.0, stop_distance=12.0, stop_price=88.0, target_price=101.8)
+    assert old.trailing is False and old.trail_distance is None and old.target_price == 101.8
+
+
 def test_no_atr_or_no_price_means_no_plan_and_the_reason():
     p = plan("trend", m=healthy(atr_14=None, last_close=100.0), horizon=63)
     assert p.entry_zone is None and p.stop_price is None and "atr_14 is missing" in p.notes[0]

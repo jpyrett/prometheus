@@ -20,6 +20,7 @@ function setup(over: Partial<RequestCardProps> = {}) {
 const strict = () => screen.getByLabelText("Strict recommendations") as HTMLInputElement;
 const neutral = () => screen.getByLabelText("Neutral recommendations as passes") as HTMLInputElement;
 const refresh = () => screen.getByLabelText("Refresh market data first (paid)") as HTMLInputElement;
+const raiseFunds = () => screen.getByLabelText("Always raise funds") as HTMLInputElement;
 const modeSwitch = () => screen.getByRole("switch") as HTMLButtonElement;
 
 describe("RequestCard", () => {
@@ -37,6 +38,15 @@ describe("RequestCard", () => {
     expect(document.querySelector("details")).toBeNull();                                       // no "More" fold any more
     expect(refresh().closest("label")?.getAttribute("title")).toBe("Fetches fresh bars, news and filings with the paid APIs and writes the data files. Untick to use the stored data.");
     expect(refresh().closest("label")?.querySelector(".paid")?.textContent).toBe("(paid)");
+  });
+
+  it("has the box Always raise funds OFF by default (entry 142, R12); ticking it sends raise_funds true, and it is locked while a run is active", () => {
+    const { onGo } = setup();
+    expect(raiseFunds().checked).toBe(false);
+    expect(raiseFunds().closest("label")?.getAttribute("title")).toContain("ALWAYS_RAISE_FUNDS");
+    fireEvent.click(raiseFunds());
+    fireEvent.click(screen.getByRole("button", { name: "Go!" }));
+    expect(onGo).toHaveBeenLastCalledWith(expect.objectContaining({ raise_funds: true }));
   });
 
   it("shows Refresh unticked and disabled in a recorded session, and Go! then sends fetch false", () => {
@@ -69,11 +79,11 @@ describe("RequestCard", () => {
   it("Go! posts {account_id, prompt, strict, neutral, fetch, mode}; Refresh goes as true unless unticked, and with Strict on neutral goes as false", () => {
     const { onGo } = setup();
     fireEvent.click(screen.getByRole("button", { name: "Go!" }));
-    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: false, neutral: true, fetch: true, mode: "ask" });
+    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: false, neutral: true, fetch: true, raise_funds: false, mode: "ask" });
     fireEvent.click(strict());
     fireEvent.click(refresh());
     fireEvent.click(screen.getByRole("button", { name: "Go!" }));
-    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: true, neutral: false, fetch: false, mode: "ask" });
+    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: true, neutral: false, fetch: false, raise_funds: false, mode: "ask" });
   });
 
   it("the Mode switch is off for Ask and on for Auto, with the chosen word bold, and flipping it saves {mode} at once and Go! then carries it", async () => {

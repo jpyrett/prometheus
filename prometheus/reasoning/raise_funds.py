@@ -102,6 +102,7 @@ class Problem:
     whole_plans: bool = False      # a thought is a WHOLE PLAN, a list of sells, not one sell (entry 50): a purchase is then planned in one to three rounds of the model instead of one round per stock sold
     green_first: bool = False      # score "sell the most profitable (most in the green) first" instead of "realise the least taxable gain" (entry 45)
     explore: bool = False          # make the generator give BOTH kinds of step, COVER and PARTIAL, and ask again when it does not (entry 44); off: the generator is asked once, as in entries 42 and 43
+    also: tuple[tuple[str, Decimal, Decimal, Decimal], ...] = ()   # OTHER purchases of the same run (entry 142, R10): (symbol, whole shares, price, shares already held) each. The plan raises the money for the target AND these in ONE plan, and none of these stocks is ever sold
 
     @property
     def weights(self) -> dict:
@@ -124,7 +125,13 @@ class Problem:
 
     @property
     def cost(self) -> Decimal:
-        return trade_amount(self.shares, self.price)
+        """The cost of everything the run buys: the target and, with `also` (entry 142, R10), the other purchases of the run: each is money from a count and a price, `trade_amount`."""
+        return trade_amount(self.shares, self.price) + sum((trade_amount(n, p) for _, n, p, _ in self.also), Decimal("0.00"))
+
+    @property
+    def bought(self) -> tuple[str, ...]:
+        """The symbols the run buys: the target and the `also` purchases. A stock being bought is never sold to pay for the purchases (the hard check of `_check_one`)."""
+        return (self.target, *(s for s, _, _, _ in self.also))
 
     def fewest_stocks(self) -> int | None:
         """The fewest holdings that could raise the money to raise, the biggest first (arithmetic, nothing is searched): so a plan sells AT LEAST this many stocks. None when even all of them cannot."""
@@ -170,12 +177,14 @@ def _sellable(sellable_today: Decimal, held: Decimal, never_liquidate: bool) -> 
 
 
 def build_problem(portfolio: Portfolio, target: str, shares: Decimal, prices: dict[str, Decimal], today: date | None = None, only_green: bool = False, fill: str | None = None,
-                  explore: bool = False, lean: bool = False, max_depth: int = MAX_DEPTH, branching: int = BRANCHING, green_first: bool = False, never_liquidate: bool = False, whole_plans: bool = False) -> Problem:
+                  explore: bool = False, lean: bool = False, max_depth: int = MAX_DEPTH, branching: int = BRANCHING, green_first: bool = False, never_liquidate: bool = False, whole_plans: bool = False,
+                  also: tuple[tuple[str, Decimal], ...] = ()) -> Problem:
     """The portfolio and the quotes -> a Problem. `prices` must hold the target, the `fill` stock and every holding (the Data Clerk's quotes). `only_green`: only holdings that show a profit may
     be sold. `fill`: a second stock bought with the cash left after the purchase, as many shares as it affords; it is never sold, and the sells are then lean (no step sells more shares than
     the shortfall needs). `explore`: the generator must give both kinds of step (see `missing_kind`). `lean` (always on with a fill stock): no step sells more shares than the shortfall needs.
     `max_depth` and `branching`: the size of the tree, which the prompt tells the model. `green_first`: the score prefers selling the most profitable holdings first. `never_liquidate`: at least one share of every holding is kept, so at most
-    held - 1 shares of it can be sold (and the shares that are locked by T+1 count among the ones kept). Raises ValueError otherwise."""
+    held - 1 shares of it can be sold (and the shares that are locked by T+1 count among the ones kept). `also` (entry 142, R10) are the other purchases of the same run, ((symbol, whole shares), ...): their cost is part of the money to raise,
+    their prices must be in `prices`, and none of them is ever sold. Raises ValueError otherwise."""
     try:
         shares = sh.quantity(shares)                      # a bool and a string are refused by the door (a numeric string such as "2" too: entry 111, M5)
     except ValueError:
@@ -184,15 +193,26 @@ def build_problem(portfolio: Portfolio, target: str, shares: Decimal, prices: di
         raise ValueError("the number of shares to buy must be a whole number of at least 1")
     if fill is not None and fill == target:
         raise ValueError("the stock to fill with must be another symbol than the stock to buy")
+    extra = []
+    for symbol, count in also:
+        try:
+            count = sh.quantity(count)
+        except ValueError:
+            raise ValueError("the number of shares of every purchase must be a whole number of at least 1") from None
+        if not sh.whole(count) or count < 1 or symbol == target or symbol == fill or any(symbol == x for x, _ in extra):
+            raise ValueError("every other purchase of the run is a different stock, a whole number of at least 1 share")
+        extra.append((symbol, count))
     usable = lambda x: isinstance(x, (int, Decimal)) and not isinstance(x, bool) and x > 0      # a float is not tested here: `exact` below raises TypeError for it (it comes in through a door)
-    missing = [s for s in [target, *([fill] if fill else []), *portfolio.symbols] if prices.get(s) is None or not usable(exact(prices[s], "a price"))]
+    missing = [s for s in [target, *([fill] if fill else []), *(x for x, _ in extra), *portfolio.symbols] if prices.get(s) is None or not usable(exact(prices[s], "a price"))]
     if missing:
         raise ValueError("no price for " + ", ".join(missing))
+    never_sold = {target, fill, *(x for x, _ in extra)}
     holdings = {p.symbol: Holding(p.symbol, p.name, p.shares, _sellable(portfolio.sellable_shares(p.symbol, today), p.shares, never_liquidate), exact(prices[p.symbol], "a price"), p.cost_basis)
-                for p in portfolio.positions if p.symbol not in (target, fill)}
+                for p in portfolio.positions if p.symbol not in never_sold}
     already, filled = portfolio.position(target), portfolio.position(fill) if fill else None
     return Problem(target, shares, exact(prices[target], "a price"), portfolio.cash_avail, holdings, already.shares if already else Decimal(0), only_green,
-                   fill, exact(prices[fill], "a price") if fill else Decimal(0), filled.shares if filled else Decimal(0), lean=bool(fill) or lean, max_depth=max_depth, branching=branching, green_first=green_first, never_liquidate=never_liquidate, whole_plans=whole_plans, explore=explore)
+                   fill, exact(prices[fill], "a price") if fill else Decimal(0), filled.shares if filled else Decimal(0), lean=bool(fill) or lean, max_depth=max_depth, branching=branching, green_first=green_first, never_liquidate=never_liquidate, whole_plans=whole_plans, explore=explore,
+                   also=tuple((x, n, exact(prices[x], "a price"), portfolio.position(x).shares if portfolio.position(x) else Decimal(0)) for x, n in extra))
 
 
 # ---------------------------------------------------------------- a node: the plan so far
@@ -298,8 +318,8 @@ def _check_one(problem: Problem, parent: Node, thought, node_id: str) -> tuple[N
         said = thought.get("shares")
         why = " (a number, not text or true/false: write 2, not \"2\")" if isinstance(said, (str, bool)) else ""
         return None, f"{symbol or 'a thought'}: shares must be a whole number of at least 1{why}"
-    if symbol == problem.target:
-        return None, f"{symbol} is the stock being bought: it cannot be sold to pay for itself"
+    if symbol in problem.bought:
+        return None, f"{symbol} is the stock being bought: it cannot be sold to pay for itself" if symbol == problem.target else f"{symbol} is another stock being bought in this run: it cannot be sold to pay for the purchases"
     holding = problem.holdings.get(symbol)
     if holding is None:
         return None, f"{symbol} is not in the portfolio"
@@ -583,7 +603,9 @@ def answer(problem: Problem, complete: list[Node], final: dict, limits: dict | N
     ranked = sorted(complete, key=lambda n: (-n.score, len(n.sells), n.id))
     best = ranked[0] if ranked else None
     status = "plan" if best else "funded" if problem.need == 0 else "infeasible"
-    return {"status": status, "target": problem.target, "shares": problem.shares, "price": problem.price, "cost": problem.cost, "cash": problem.cash, "need": problem.need, "only_green": problem.only_green, "never_liquidate": problem.never_liquidate, "whole_plans": problem.whole_plans, "fewest_stocks": problem.fewest_stocks(),
+    return {"status": status, "target": problem.target, "shares": problem.shares, "price": problem.price, "cost": problem.cost, "cash": problem.cash, "need": problem.need,
+            "also": [{"symbol": x, "shares": n, "price": p} for x, n, p, _ in problem.also],  # the other purchases of the run, paid for by the same plan (entry 142, R10)
+            "only_green": problem.only_green, "never_liquidate": problem.never_liquidate, "whole_plans": problem.whole_plans, "fewest_stocks": problem.fewest_stocks(),
             "fill": {"symbol": problem.fill, "price": problem.fill_price, "held": problem.fill_held} if problem.fill else None, "lean": problem.lean,
             "max_affordable": problem.max_affordable,
             "plan": describe(problem, best) if best else None,
@@ -591,7 +613,7 @@ def answer(problem: Problem, complete: list[Node], final: dict, limits: dict | N
             "trace": final["trace"], "stop": final["stop"], "errors": final["errors"],
             "weights": dict(problem.weights), "green_first": problem.green_first, "limits": limits or effective_limits(problem), "stats": {"llm_calls": final["calls"], "nodes": final["nodes"], "levels": len(final["trace"]), "completed_plans": len(ranked), "seconds": seconds,
                                                                                                                           "first_plan_seconds": next((lv.get("seconds") for lv in final["trace"] if any(c["status"] == "complete" for c in lv["children"])), None)},
-            "before": {"shares": {**{s: h.shares for s, h in problem.holdings.items()}, **({problem.target: problem.held} if problem.held else {}), **({problem.fill: problem.fill_held} if problem.fill and problem.fill_held else {})}, "cash": problem.cash},
+            "before": {"shares": {**{s: h.shares for s, h in problem.holdings.items()}, **({problem.target: problem.held} if problem.held else {}), **({problem.fill: problem.fill_held} if problem.fill and problem.fill_held else {}), **{x: held for x, _, _, held in problem.also if held}}, "cash": problem.cash},
             "after": after(problem, best)}
 
 
@@ -614,6 +636,8 @@ def after(problem: Problem, node: Node | None) -> dict:
     for symbol, n in (node.sells if node else ()):
         shares[symbol] = sh.minus(shares[symbol], n)
     shares[problem.target] = sh.plus(problem.held, problem.shares)
+    for symbol, n, _, held in problem.also:      # the other purchases of the run (entry 142, R10): their shares are added to what is held
+        shares[symbol] = sh.plus(held, n)
     cash = (node.proceeds if node else Decimal("0.00")) + problem.cash - problem.cost
     if problem.fill:
         bought, cash = problem.fill_with(cash)
@@ -673,9 +697,10 @@ def format_answer(result: dict, quotes: dict | None = None) -> str:
     """The final answer as text: the quotes, the trace, the order table, what was sold and bought, the score, and the portfolio before and after."""
     out = []
     t, s = result["target"], result["stats"]
-    out.append(f"GOAL     buy {result['shares']} x {t} at {_money(result['price'])} = {_money(result['cost'])} (free settled cash {_money(result['cash'])}, to raise {_money(result['need'])}); "
+    others = result.get("also") or []
+    out.append(f"GOAL     buy {result['shares']} x {t} at {_money(result['price'])}" + "".join(f", {o['shares']} x {o['symbol']} at {_money(o['price'])}" for o in others) + f" = {_money(result['cost'])} (free settled cash {_money(result['cash'])}, to raise {_money(result['need'])}); "
                f"at most {result['max_affordable']} share(s) of {t} are affordable by selling everything sellable"
-               + ("; only holdings in profit (green) may be sold, and never {t} itself".format(t=t) if result.get("only_green") else "; {t} itself is never sold".format(t=t)))
+               + ("; only holdings in profit (green) may be sold, and never {t} itself".format(t=", ".join([t, *(o["symbol"] for o in others)])) if result.get("only_green") else "; {t} itself is never sold".format(t=", ".join([t, *(o["symbol"] for o in others)]))))
     if result.get("requested") is None and "requested" in result:
         out.append(f"         QUANTITY: no number of shares was given, so as many as the portfolio can pay for: at most {result['most_affordable']} x {t} (cash plus everything that may be sold), "
                    f"{result['resolved_shares']} bought")

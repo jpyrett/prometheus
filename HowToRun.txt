@@ -1032,3 +1032,31 @@ PART 15. THE PROVING GROUND: BACKTESTING, THE TRACK RECORD AND THE LIVE MONITOR 
   Since entries 133 to 136: a trend recommendation in a stock that fell over the last five sessions is denied (trend_not_confirmed); "looks bad" news and an unsupported blend are warnings; the Critic keeps its labels
         (data/critic/labels: delete the folder to have every quote judged again); a neutral purchase has a stop (2 x ATR) and a 20-session time stop in a test and on the Live view, and is never sold by them in a live account;
         a bar is read only 90 minutes after its day's close.
+
+
+PART 16. CRITIC v3 AND READING THE NUMBERS OF A REQUEST (design choices entries 137 and 138)
+  Critic v3 (spec design/critic_v3_two_reasons_spec.md): a denial needs bad signs in TWO of news / performance / price; a fault (the data or the market) or "too risky for the profile" denies alone.
+        Every cached Time Machine day made with Critic version 2 is stale (the cache key holds the Critic's config version): the next test pays for its research again.
+    ./test_proving.sh critic-report                                       free: the Critic's rules, the groups, and "as_v3" (what v3 would have said about the older reviews)
+    python scripts/capture_finnhub_recommendations.py --yes               Finnhub (in the licence), writes ONLY tests/fixtures/finnhub_recommendation_trends.json
+        data/analysts/SYMBOL.json (gitignored) fills itself during a live review; nothing fills it for past days (a backfill is not built).
+  Numbers in a request (spec design/request_numbers_spec.md): "$1000 of MU", "1000 dollars of MU", "1000 bucks of MU" are money; "10 of MU" and "buy 1000 MU" are SHARES;
+        "spend 1000 on MU" is asked about (Ask) or stopped (Auto); "under $50 a share" is a price limit; "... and skip recommendations" makes a named stock a direct order.
+    python scripts/capture_request_numbers_forms.py                       says what it would do (no calls)
+    python scripts/capture_request_numbers_forms.py --yes                 PAID, cents: the Account Manager's model only; re-records tests/fixtures/session_real/request_numbers_forms.json
+    pytest tests/test_request_numbers.py tests/test_request_numbers_walk.py   free
+  The page's "Refresh market data first (paid)" box is now OFF by default (2026-11-20).
+  A floor, waiting orders, typed shares with a recommendation (entry 140, spec design/limit_orders_spec.md):
+        "over $20 a share" is a floor; "Sell 10 shares of MSFT at $600 or more" and "Buy 10 of MU at $90 or less" WAIT as day orders when the price is not there yet, with the cash or shares set aside;
+        "Buy 10 of MU if the recommendation passes" buys 10 if the Critic approves.
+    bash scripts/setup_postgres.sh                                        once: adds trading.open_orders (additive, keeps every account; already run 2026-11-21)
+    ./run_ui.sh                                                           the server's watcher checks waiting orders every 60 s in the regular session (Finnhub quotes); --no-watch turns it off
+    python -m prometheus.agents.account_manager.orders --account N            list (free)
+    python -m prometheus.agents.account_manager.orders --account N --cancel ID  cancel, the hold is released (free)
+    python -m prometheus.agents.account_manager.orders --account N --check      one check now: quotes (Finnhub), fills or expires
+  Raise funds for a purchase the cash does not cover (entry 142, spec design/direct_raise_funds_spec.md):
+        "Buy 2 shares of ANT and raise funds if needed": Ask mode shows RaiseFunds' plan and asks to approve each trade (sales first); Auto mode sells and buys.
+        Without those words Ask mode asks once ("Shall I raise the money by selling some of your holdings?"); Auto mode sells nothing and says what to add.
+        "Always raise funds" on the page (default off, one run) = ALWAYS_RAISE_FUNDS for that run; ./test_prometheus.sh --session ... --always-raise-funds for a session; "don't sell anything" in the words still wins.
+    pytest tests/test_raise_funds_intent.py tests/test_raise_funds_direct.py tests/test_raise_funds_recommendation.py tests/test_raise_funds_session.py -q     free (throwaway Postgres accounts)
+    python scripts/capture_raise_funds_account.py|capture_raise_funds_forms.py|capture_raise_funds_plans.py --yes                                        PAID, cents (never write account 6553)

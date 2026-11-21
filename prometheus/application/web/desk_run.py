@@ -6,7 +6,7 @@ THIS IS A PAID RUN (OpenRouter and Finnhub; with `fetch` also the paid data APIs
 run, the real LangGraph desk (`build_desk`, as the session does, with the Critic and the Trader) and streams it with `stream_mode=["tasks", "values"]`: `tasks` says a node started and ended, `values` is the state after each
 node (the work order, the path, the seconds). `desk.py` and `session.py` are not changed: this module imports their pieces and adds no rule about what may trade.
 
-The three callables the desk is given turn its questions into cards on the page: `confirm` (what was understood: asked in Ask mode, a yes in Auto mode, as the CLI's `--yes`), `approver` (each trade in Ask mode, and, in Ask mode, whether to go on without a stock the Data Clerk did not find: a card of kind `missing_company`, entry 102) and `clarifier` (how much, in Ask mode). No answer is never a yes: it is None, exactly what the terminal versions give when nobody is there.
+The three callables the desk is given turn its questions into cards on the page: `confirm` (what was understood: asked in Ask mode, a yes in Auto mode, as the CLI's `--yes`), `approver` (each trade in Ask mode, and, in Ask mode, whether to go on without a stock the Data Clerk did not find: a card of kind `missing_company`, entry 102; whether to raise funds, a card of kind `raise_funds`, and the plan RaiseFunds made, a card of kind `funding`, entry 142) and `clarifier` (how much, in Ask mode). No answer is never a yes: it is None, exactly what the terminal versions give when nobody is there.
 """
 import threading
 import time
@@ -54,6 +54,17 @@ def missing_payload(card: dict) -> dict:
             "facts": ["Still on your order:", *[f"  {kept_line(stock)}" for stock in kept]], "kept": kept, "wording": card.get("wording")}
 
 
+def raise_funds_payload(card: dict) -> dict:
+    """The question the page is asked when the cash does not cover what the user typed and nothing permits selling holdings (the card of `funding.ask_card`, entry 142, R3): the Account Manager's own sentence as `text` and `question`, the cash, what the purchases cost, how short it is, and the purchases."""
+    return {"title": "Raise funds?", "text": card.get("text", ""), "question": card.get("text", ""), "cash": card.get("cash"), "cost": card.get("cost"), "shortfall": card.get("shortfall"), "buys": card.get("buys")}
+
+
+def funding_payload(card: dict) -> dict:
+    """The plan RaiseFunds made, shown before anything is sold (the Trader's card of kind `funding`, entry 142, R4): which holdings, how many shares, at what price, the gain or loss on each, the purchases they pay for, the cash before and after."""
+    return {"title": "Approve the sales", "text": card.get("text", ""), "question": card.get("question"), "symbol": card.get("symbol"), "shares": card.get("shares"), "est_cost": card.get("est_cost"), "cash": card.get("cash"),
+            "cash_after": card.get("cash_after"), "legs": card.get("legs"), "buys": card.get("buys")}
+
+
 def callables(run: Run, live: Live, timeout: float, auto: bool):
     """The three callables of the desk: `confirm`, `approver` and `clarifier`. While a question is open the busy stage is `waiting`; when it closes it is `busy` again."""
     out = live.out
@@ -81,6 +92,14 @@ def callables(run: Run, live: Live, timeout: float, auto: bool):
             typed = card.get("typed")
             answer = ask("missing_company", missing_payload(card))
             out.log("you", f"continue without {typed}" if answer is True else f"stop the order: no to going on without {typed}" if answer is False else f"(no answer about {typed}: the order is not placed)", "info" if answer is True else "warn")
+            return answer if isinstance(answer, bool) else None
+        if card.get("kind") == "raise_funds":       # the cash does not cover what the user typed and nothing permits selling (Ask mode, entry 142, R3): ONE question for all the purchases
+            answer = ask("raise_funds", raise_funds_payload(card))
+            out.log("you", "yes: raise the money by selling holdings" if answer is True else "no: sell nothing" if answer is False else "(no answer: nothing is sold)", "info" if answer is True else "warn")
+            return answer if isinstance(answer, bool) else None
+        if card.get("kind") == "funding":       # the plan RaiseFunds made, shown before anything is sold (entry 142, R4): which holdings, how many shares, at what price, the gain or loss, the cash after
+            answer = ask("funding", funding_payload(card))
+            out.log("you", "approved the sales" if answer is True else "no: sell nothing" if answer is False else "(no answer: nothing is sold)", "info" if answer is True else "warn")
             return answer if isinstance(answer, bool) else None
         title = f"Approve trade {n} of {of}" if n and of and of > 1 else "Approve this trade"
         answer = ask("approve", {"title": title, "text": card.get("text", ""), "scorecard": card.get("text", ""), "symbol": card.get("symbol"), "shares": card.get("shares"), "est_cost": card.get("est_cost"), "dollars": card.get("dollars"), "price": card.get("price"),
@@ -122,7 +141,7 @@ class Poller(threading.Thread):
 def run_live(run: Run, params: dict, accounts, question_timeout: float = 600.0, *, parts_builder=None, graph_builder=build_desk) -> None:
     out, live, started = Emitter(run), None, time.perf_counter()
     live = Live(out)
-    chosen = run_settings_module.run_settings(params["strict"], params["neutral"])
+    chosen = run_settings_module.run_settings(params["strict"], params["neutral"], params.get("raise_funds", False))      # entry 142, R12: the box "Always raise funds" is ALWAYS_RAISE_FUNDS for this run (a missing value is false)
     account_id = params["account_id"]
     try:
         view = accounts.view(account_id)
@@ -130,7 +149,7 @@ def run_live(run: Run, params: dict, accounts, question_timeout: float = 600.0, 
         out.finished("failed", f"the account could not be read: {getattr(error, 'message', None) or type(error).__name__}", [], [], {}, 0)
         return
     mode = params.get("trade_mode") or view["account"]["mode"]
-    run.emit("run_started", {"run_id": run.id, "mode": "live", "account_id": account_id, "prompt": params["prompt"], "options": {"strict": params["strict"], "neutral": chosen.allow_neutral, "fetch": params["fetch"]},
+    run.emit("run_started", {"run_id": run.id, "mode": "live", "account_id": account_id, "prompt": params["prompt"], "options": {"strict": params["strict"], "neutral": chosen.allow_neutral, "fetch": params["fetch"], "raise_funds": chosen.always_raise_funds},
                              "trade_mode": mode, "started_utc": utc_now(), "stages": views.stage_list()})
     out.log("you", params["prompt"])
     final, poller, failure = None, None, None
@@ -284,4 +303,4 @@ def _portfolio_of(view: dict):
     """The Portfolio a report helper reads, from an account view (shares x average cost is what the page shows; the helper only needs the cash)."""
     from prometheus.common.portfolio import Portfolio
 
-    return Portfolio(user=view["account"]["name"], cash_avail=view["cash"], positions=[{"symbol": p["symbol"], "name": p["name"], "shares": p["shares"], "cost_basis": p["cost_basis"]} for p in view["positions"]])
+    return Portfolio(user=view["account"]["name"], cash_avail=view.get("available", view["cash"]), positions=[{"symbol": p["symbol"], "name": p["name"], "shares": p["shares"], "cost_basis": p["cost_basis"]} for p in view["positions"]])

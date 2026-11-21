@@ -28,6 +28,9 @@ then the earliest stored bar on or after that day among the bars of every symbol
 
 EXITS (`follow`): a filled purchase is followed through the bars after its entry by the Advisor's own plan (stop, target, time stop). On the entry bar only the stop can fire: the order of prices inside one day is not
 known, so the bad case is assumed. On each later bar the first rule that holds wins, and the stop is checked before the target, so a day that touches both is a stop. It is a SIMULATION: it is never booked.
+A TRAILING STOP (`trail_distance`, design/advisor_exit_plan_spec.md rule E4: the TREND family's plan, which has no target): the stop of bar i is the larger of the plan's stop and the HIGHEST CLOSE OF THE BARS BEFORE i (the entry bar's
+close counts for the bar after it) less `trail_distance`, so it only ever rises, and no bar's own prices move its own stop (no look-ahead inside a day). A stop that fired above the plan's own stop is the exit reason `trailing_stop`; at the plan's
+own stop it is `stop`. Without `trail_distance` nothing changes: a plan with a fixed stop is followed exactly as before.
 """
 from dataclasses import dataclass
 from datetime import date, datetime
@@ -218,26 +221,39 @@ def _return_difference(returned: float, bench: float | None) -> float | None:
     return float((Decimal(str(returned)) - Decimal(str(bench))).quantize(RETURN_STEP, rounding=ROUND_HALF_UP))
 
 
+def trailing_stop(stop_price: Decimal | None, highest_close: Decimal | None, trail_distance: Decimal | None) -> Decimal | None:
+    """The stop in force when the highest close so far is `highest_close`: the plan's `stop_price` or `highest_close - trail_distance` (the price door: four places, half up), whichever is higher. With no `trail_distance` it is the plan's stop as it
+    is (a fixed stop), and with no close yet it is the plan's stop. A Decimal, or None when there is neither a stop nor a trail to make one from. The ONE place the trail is worked out: `follow`, the Proving Ground's account and the Live view all call it."""
+    fixed = stop_price if usable(stop_price) else None
+    if not usable(trail_distance) or highest_close is None:
+        return fixed
+    level = price_scale(exact(highest_close) - exact(trail_distance))
+    return level if fixed is None else max(fixed, level)
+
+
 def follow(fill_price: Decimal, shares: Decimal, entry_day: date | str, bars: list[dict], stop_price: Decimal | None, target_price: Decimal | None, time_stop_date: str | None, slippage_bps: Decimal,
-           benchmark_bars: list[dict] | None = None) -> Outcome:
+           benchmark_bars: list[dict] | None = None, trail_distance: Decimal | None = None) -> Outcome:
     """How a filled purchase went: the Advisor's stop, target and time stop, followed through `bars` (the symbol's bars, oldest first, the entry bar first) from the entry bar to the last stored bar. The first rule that
     holds ends the trade (see the module text); with none by the last bar the trade is `open` and marked at the last close. `None` for `target_price` (a capital-return plan has none), `stop_price` or `time_stop_date`
     skips that rule. A series that does not start with the entry bar cannot be followed: the outcome is `open` with nothing in it. `benchmark_bars` (the benchmark symbol's bars over the same dates) gives the benchmark's
     return from the entry bar's open to the exit date's close (or the last close), and the excess return; None when they are not stored. Returns are fractions (0.0077 is 0.77%), floats worked out from Decimal prices at the very end.
-    Prices are Decimals (the plan's stop and target are the Advisor's floats and cross through the price door in the caller; a stored bar's prices cross here, `bar_price`). Pure: nothing is read or written."""
+    `trail_distance` (a Decimal price distance, None for a fixed stop) makes the stop a TRAILING one (see the module text). Prices are Decimals (the plan's stop and target are the Advisor's floats and cross through the price door in the caller; a stored bar's prices cross here, `bar_price`). Pure: nothing is read or written."""
     entry = entry_day.isoformat() if isinstance(entry_day, date) else str(entry_day)
     series = [b for b in bars or [] if isinstance(b, dict) and isinstance(b.get("date"), str) and b["date"] >= entry and all(bar_price(b, k) is not None for k in ("open", "high", "low", "close"))]
     if not series or series[0]["date"] != entry:
         return Outcome(status="open")
     slip = exact(slippage_bps, "the slippage") / 10000
+    highest = None                                                       # the highest close of the bars BEFORE the one being read (the trailing stop's base)
     for index, bar in enumerate(series):
         opened, high, low, close = (bar_price(bar, k) for k in ("open", "high", "low", "close"))
         exit_price = reason = None
-        if usable(stop_price):
-            if opened <= stop_price:
-                exit_price, reason = price_scale(opened * (1 - slip)), "stop"          # it gapped through the stop: sold at the open
-            elif low <= stop_price:
-                exit_price, reason = price_scale(stop_price * (1 - slip)), "stop"
+        stop = trailing_stop(stop_price, highest, trail_distance)
+        if usable(stop):
+            kind = "trailing_stop" if usable(trail_distance) and (not usable(stop_price) or stop > stop_price) else "stop"
+            if opened <= stop:
+                exit_price, reason = price_scale(opened * (1 - slip)), kind          # it gapped through the stop: sold at the open
+            elif low <= stop:
+                exit_price, reason = price_scale(stop * (1 - slip)), kind
         if reason is None and index > 0:                                    # on the entry bar only the stop can fire: the order of prices inside one day is not known, so the bad case is assumed
             if usable(target_price) and opened >= target_price:
                 exit_price, reason = price_scale(opened), "target"
@@ -251,6 +267,7 @@ def follow(fill_price: Decimal, shares: Decimal, entry_day: date | str, bars: li
             returned = _fraction(exit_price, fill_price)
             return Outcome(status="closed", exit_reason=reason, exit_date=bar["date"], exit_price=exit_price, sessions_held=index, realized_gain=gain, return_pct=returned,
                            benchmark_return_pct=bench, excess_return_pct=_return_difference(returned, bench))
+        highest = close if highest is None else max(highest, close)
     last = series[-1]
     last_close = price_scale(bar_price(last, "close"))
     returned = _fraction(last_close, fill_price)

@@ -18,9 +18,16 @@ fired (`open`; never a win). The day-by-day path is worked out separately from t
 exit rules. `result` is `won` only for a close ABOVE the entry price (a close at the entry price is `lost`, with a note: a gain of zero is not a win), `lost` below it. A return is `follow`'s (the exit price over the entry price); the
 benchmark's and the sector's run from the open of the entry bar to the close of the exit day (or the last bar), the way `follow` does it (`simulator._benchmark`: these three private helpers of the simulator, `_fraction`, `_benchmark` and
 `_return_difference`, are used so that a return is worked out in ONE place).
+A TRAILING plan (`plan.trailing`: the TREND family since Advisor config version 3, which has no target): `simulator.follow` is given `trail_distance` and the stop rises with the highest close (the exit reason `trailing_stop` when the stop that fired was above the
+plan's own). A plan with a fixed stop is followed exactly as before.
 HORIZONS: the position's return at each of 5, 10 and 20 sessions after the entry bar BY THE PLAN: a position that closed before then keeps its realized return (the benchmark read to the day it closed), one still open is marked at that session's
 close, and a horizon not yet reached while the position is open is None. `max_favorable_pct` and `max_adverse_pct` are the best and the worst CLOSE since the entry, against the entry price, and the price a closed position was sold at (so a target never reads as a gain larger than the best the position ever showed).
 
+THE FORWARD RETURN (`forward`, design/advisor_exit_plan_spec.md E5): independent of the plan, the entry order and the fill. From the CLOSE of the decision day (the last stored close on or before it; when the decision day is a trading day its own bar must be
+stored) to the close N sessions later, N from `config.forward_sessions` (5, 10, 20, 40), for the stock and for the benchmark on the same two dates, and the difference. It measures the PICK: `horizons` and the exit above measure where the plan put its stop and target, and
+a target 1% above the entry makes almost every idea a "win". The sessions are the stock's own stored bars after that day, and a price is never carried from another day: the benchmark must have a bar on both dates, and a horizon that the stored bars do not reach
+yet is None. Every outcome has the block, a `not_filled` or `no_data` one too (the pick is judged even when the order was not placed), and it is read in the share basis of the decision day like everything else here (the same split rules; a suspected split with no table
+makes the horizons that cross it None). Computed here, once (P12): the page computes nothing.
 SPLITS (P10). The stored bars are unadjusted, and the plan was made on the decision day, so EVERYTHING is read in the share basis of the DECISION DAY: with a split table (`splits=`) every bar after it is put into that basis (`splits.to_basis`: its
 prices multiplied by the factor of the splits since the decision day) before the entry and `follow` read it, so the plan's prices, the entry, the stop and the path all mean what they meant when the plan was made (a position entered ON the split
 day, from a decision the day before, included), and the outcome says so (`split_adjusted`, a note; the entry, the exit and the path are in that basis, and a real fill is brought into it). With NO table (`splits=None`: no file, or one that cannot be
@@ -38,12 +45,12 @@ from zoneinfo import ZoneInfo
 from prometheus.agents.trader import simulator, tickets
 from prometheus.agents.trader.config import TraderConfig, load_config as load_trader_config
 from prometheus.common import shares as sh
-from prometheus.common.market_calendar import load_calendar
+from prometheus.common.market_calendar import is_trading_day, load_calendar
 from prometheus.common.money import price_scale
 from prometheus.common.portfolio import trade_amount
 from prometheus.proving import splits as splits_mod
 from prometheus.proving.config import ProvingConfig, load_config
-from prometheus.proving.record import EntryView, ExitView, Horizon, Path, PlanView, RecOutcome
+from prometheus.proving.record import EntryView, ExitView, Forward, Horizon, Path, PlanView, RecOutcome
 
 
 @dataclass(frozen=True)
@@ -67,6 +74,36 @@ def _close_on_or_before(bars: list[dict], day: date) -> Decimal | None:
     """The close of the last stored bar on or before `day`, through the price door; None when there is none."""
     found = [b for b in bars if isinstance(b, dict) and isinstance(b.get("date"), str) and b["date"] <= day.isoformat() and simulator.bar_price(b, "close") is not None]
     return simulator.bar_price(max(found, key=lambda b: b["date"]), "close") if found else None
+
+
+def forward_of(bars: list[dict], benchmark_bars: list[dict] | None, decision_day: date, sessions: list[int], config: ProvingConfig, splits: splits_mod.SplitTable | None = None) -> list[Forward]:
+    """The `forward` block of an outcome (see THE FORWARD RETURN in the module text): one `Forward` for each of `sessions`, in order, None where it cannot be read. `bars` and `benchmark_bars` are the stored bars as the Data Clerk gives them (the stock's in
+    the share basis of the decision day is made here with `splits`); no plan, no fill and no entry order is involved."""
+    empty = [Forward(sessions=n) for n in sessions]
+    based = splits_mod.to_basis(bars, splits, decision_day)
+    closes = {b["date"]: simulator.bar_price(b, "close") for b in based if isinstance(b, dict) and isinstance(b.get("date"), str) and simulator.bar_price(b, "close") is not None}
+    before = sorted(d for d in closes if d <= decision_day.isoformat())
+    if not before or (is_trading_day(decision_day) and before[-1] != decision_day.isoformat()):
+        return empty                                    # no close to measure from (a trading day's own bar is not stored, or nothing is)
+    base_day = before[-1]
+    later = sorted(d for d in closes if d > base_day)
+    bench_by_day = {b["date"]: simulator.bar_price(b, "close") for b in benchmark_bars or [] if isinstance(b, dict) and isinstance(b.get("date"), str) and simulator.bar_price(b, "close") is not None}
+    bench_first = bench_by_day.get(base_day)
+    out = []
+    for n in sessions:
+        if len(later) < n:
+            out.append(Forward(sessions=n))
+            continue
+        end = later[n - 1]
+        if splits is None and splits_mod.suspect_move(bars, date.fromisoformat(base_day), date.fromisoformat(end), config.split_suspect_pct) is not None:
+            out.append(Forward(sessions=n))             # a split the stored table cannot adjust: the stock is not scored across it
+            continue
+        returned = simulator._fraction(closes[end], closes[base_day])
+        bench_last = bench_by_day.get(end)
+        usable = bench_first is not None and bench_last is not None and splits_mod.suspect_move(benchmark_bars or [], date.fromisoformat(base_day), date.fromisoformat(end), config.split_suspect_pct) is None
+        bench = simulator._fraction(bench_last, bench_first) if usable else None
+        out.append(Forward(sessions=n, return_pct=returned, benchmark_return_pct=bench, excess_return_pct=simulator._return_difference(returned, bench)))
+    return out
 
 
 def _ratio_text(split) -> str:
@@ -93,8 +130,10 @@ def score(plan: PlanView, bars: list[dict], benchmark_bars: list[dict] | None, s
     if traded:
         who["not_traded_reason"] = None
 
+    forward = forward_of(bars, benchmark_bars, entry_after, config.forward_sessions, config, splits)      # the pick's own return from the decision day's close, whatever the plan and the order do
+
     def finish(result: str, **more) -> RecOutcome:
-        return RecOutcome(**who, traded=traded, hypothetical=not traded, plan=plan, result=result, **more)
+        return RecOutcome(**who, traded=traded, hypothetical=not traded, plan=plan, result=result, forward=forward, **more)
 
     if not bars:
         return finish("no_data", notes=[f"no daily bar of {symbol} is stored"])
@@ -130,7 +169,8 @@ def score(plan: PlanView, bars: list[dict], benchmark_bars: list[dict] | None, s
     series = [b for b in based if isinstance(b, dict) and isinstance(b.get("date"), str) and b["date"] >= entry and all(simulator.bar_price(b, k) is not None for k in ("open", "high", "low", "close"))]
     if not series or series[0]["date"] != entry:
         return finish("no_data", notes=[f"{symbol} has no stored bar on {entry}, the day of the entry: it cannot be followed"])
-    outcome = simulator.follow(fill_price, shares, entry_day, based, plan.stop, plan.target, plan.time_stop_date.isoformat() if plan.time_stop_date else None, tcfg.costs.slippage_bps)
+    outcome = simulator.follow(fill_price, shares, entry_day, based, plan.stop, plan.target, plan.time_stop_date.isoformat() if plan.time_stop_date else None, tcfg.costs.slippage_bps,
+                               trail_distance=plan.trail_distance if plan.trailing else None)
     closed = outcome.status == "closed"
     end = outcome.exit_date if closed else outcome.last_date
     end_day = date.fromisoformat(end)

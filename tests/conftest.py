@@ -38,6 +38,12 @@ def neutral_recommendations_off(monkeypatch):
 
 
 @pytest.fixture(autouse=True)
+def always_raise_funds_off(monkeypatch):
+    """The Account Manager reads ALWAYS_RAISE_FUNDS from the environment, then from .env (entry 142, R12: through `rag.config.setting`, the same way as ALLOW_NEUTRAL_RECOMMENDATIONS). A test must not inherit Jacob's .env: holdings are sold to pay for a purchase only when the test's words say so (or a test sets the setting itself)."""
+    monkeypatch.setenv("ALWAYS_RAISE_FUNDS", "false")
+
+
+@pytest.fixture(autouse=True)
 def langsmith_tracing_off(monkeypatch):
     """LangSmith traces a command's run when LANGSMITH_API_KEY is set (entry 114, `prometheus/common/langsmith_tracing.py`). A test must not inherit Jacob's .env: no test run is ever sent."""
     monkeypatch.setenv("LANGSMITH_TRACING", "false")
@@ -162,3 +168,28 @@ def no_test_writes_the_label_store(monkeypatch):
         return put(self, key, value)
     monkeypatch.setattr(LabelStore, "put", guarded_put)
     monkeypatch.setattr("prometheus.agents.critic.critic.open_store", lambda folder: None)
+
+
+@pytest.fixture(autouse=True)
+def no_test_touches_the_analyst_store(monkeypatch):
+    """The Data Clerk keeps the analysts' recommendation counts in `data/analysts/` (Critic v3, `DataToolbox.fetch_analyst_ratings`: derived data, one file for each symbol, written after a paid Finnhub call). No test may read or write the
+    project's own store: a test of the store gives the toolbox a temporary base folder, and one that points it at the real folder fails here, loudly."""
+    from prometheus.agents.data_clerk.data_toolbox import DataToolbox
+    from prometheus.rag.config import REPO_ROOT
+    real = (REPO_ROOT / "data" / "analysts").resolve()
+    original = DataToolbox._analysts_file
+
+    def guarded(self, symbol, store):
+        path = original(self, symbol, store)
+        if real == path.parent.resolve() or real in path.resolve().parents:
+            raise AssertionError(f"a test tried to read or write the project's own analyst store {path.parent}: give the DataToolbox a temporary base_dir")
+        return path
+    monkeypatch.setattr(DataToolbox, "_analysts_file", guarded)
+
+
+@pytest.fixture(autouse=True)
+def waiting_orders_use_a_log_and_a_lock_of_their_own(monkeypatch, tmp_path_factory):
+    """The waiting limit orders (design choices entry 140) write an audit log (`logs/open_orders_audit.jsonl`) and the web server's watcher holds a Postgres advisory lock (`WATCHER_LOCK_KEY`, one watcher for each database). No test writes the real
+    log, and no test takes or looks at the lock a real server holds: the log is a temporary file and the lock key is a number of the tests' own."""
+    monkeypatch.setattr("prometheus.agents.account_manager.orders.AUDIT_PATH", tmp_path_factory.mktemp("orders_audit") / "open_orders_audit.jsonl")
+    monkeypatch.setattr("prometheus.persistence.accounts.WATCHER_LOCK_KEY", 1_150_920_114)

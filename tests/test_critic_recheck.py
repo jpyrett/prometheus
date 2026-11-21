@@ -50,23 +50,39 @@ def compared(mutate=None, **options):
     return rec, rc.compare(rec, fetched, names, decisive, ACC), decisive
 
 
-def test_a_decisive_number_that_differs_is_a_blocker_by_itself():
+def test_the_price_that_differs_makes_the_record_unreliable_by_itself():
+    """AMENDED (Critic v3, rule V7): a decisive number that differed was a `data_mismatch` blocker. The PRICE (`last_close`) not matching is the one case that still denies alone, as `data_unreliable` (a fault)."""
     def bad(f):
         f["last_close"]["value"] *= 1.10
     _, (rechecks, findings, rate), _ = compared(bad)
     [finding] = findings
-    assert (finding.code, finding.severity, finding.dimension) == ("data_mismatch", "blocker", "accuracy") and "last_close was" in finding.message
+    assert (finding.code, finding.severity, finding.dimension) == ("data_unreliable", "blocker", "accuracy") and "last_close was" in finding.message and "cannot be trusted" in finding.message
     assert next(r for r in rechecks if r.name == "last_close").match is False and next(r for r in rechecks if r.name == "last_close").decisive and rate < 1.0
 
 
-def test_a_decisive_number_that_cannot_be_calculated_again_is_a_mismatch_with_the_clerks_note():
+def test_another_decisive_number_that_differs_is_a_warning_about_one_metric_not_a_denial():
+    """Rule V7: the ATR (decisive, but not the price) that differs from a new calculation is a WARNING `data_mismatch`; the match rate (and so the accuracy score) still counts it."""
+    def bad(f):
+        f["atr_14"]["value"] *= 3
+    _, (rechecks, findings, rate), _ = compared(bad)
+    [finding] = findings
+    assert (finding.code, finding.severity, finding.dimension) == ("data_mismatch", "warning", "accuracy") and "atr_14 was" in finding.message and rate < 1.0
+    assert next(r for r in rechecks if r.name == "atr_14").match is False and next(r for r in rechecks if r.name == "atr_14").decisive
+
+
+def test_a_decisive_number_that_cannot_be_calculated_again_is_a_warning_with_the_clerks_note_and_the_price_that_cannot_is_a_fault():
     def gone(f):
         f["atr_14"] = {**f["atr_14"], "value": None, "note": "needs 20 bars, 17 stored"}
     _, (rechecks, findings, _), _ = compared(gone)
-    assert findings[0].code == "data_mismatch" and next(r for r in rechecks if r.name == "atr_14").note == "needs 20 bars, 17 stored"
+    assert [(f.code, f.severity) for f in findings] == [("data_unverified", "warning")] and next(r for r in rechecks if r.name == "atr_14").note == "needs 20 bars, 17 stored"      # AMENDED (V7): it was a `data_mismatch` blocker
+
+    def no_price(f):
+        f["last_close"] = {**f["last_close"], "value": None, "note": "needs 1 bars, 0 stored"}
+    _, (_, findings, _), _ = compared(no_price)
+    assert [(f.code, f.severity) for f in findings][0] == ("data_unreliable", "blocker") and "could not be calculated again" in findings[0].message
 
 
-def test_several_small_mismatches_among_the_other_numbers_trip_the_match_rate_floor():
+def test_several_small_mismatches_among_the_other_numbers_trip_the_match_rate_floor_and_the_record_is_unreliable():
     order, rec, clerk, claims, got, names, decisive = setup()
     fetched = copy.deepcopy(got.metrics_for(rec, "2026-11-05"))
     others = [r.name for r in rc.compare(rec, fetched, names, decisive, ACC)[0] if not r.decisive and isinstance(fetched[r.name]["value"], float)]
@@ -78,16 +94,17 @@ def test_several_small_mismatches_among_the_other_numbers_trip_the_match_rate_fl
         rechecks, findings, rate = rc.compare(rec, fetched, names, decisive, ACC)
         if rate < ACC.min_match_rate:
             break
-    assert findings and findings[0].code == "data_mismatch" and f"{rate:.0%}" in findings[0].message and rate == pytest.approx((total - wrong) / total) and wrong >= 2
+    assert findings and findings[0].code == "data_unreliable" and findings[0].severity == "blocker" and f"{rate:.0%}" in findings[0].message and rate == pytest.approx((total - wrong) / total) and wrong >= 2      # AMENDED (V7): the record as a whole cannot be trusted
 
 
-def test_nothing_returned_for_the_symbol_is_data_unverified():
+def test_nothing_returned_for_the_symbol_is_data_unreliable():
+    """AMENDED (V7): nothing to compare the record with was `data_unverified`, a blocker; it is `data_unreliable` now (a fault: the record cannot be checked at all). `data_unverified` is the warning for one metric."""
     order, rec, clerk, claims, got, names, decisive = setup()
     for empty in (None, {}):
         rechecks, findings, rate = rc.compare(rec, empty, names, decisive, ACC)
-        assert [f.code for f in findings] == ["data_unverified"] and rechecks == [] and rate is None
+        assert [(f.code, f.severity) for f in findings] == [("data_unreliable", "blocker")] and rechecks == [] and rate is None
     rechecks, findings, rate = rc.compare(rec, {"unrelated_metric": {"value": 1}}, ["unrelated_metric"], decisive, ACC)
-    assert [f.code for f in findings] == ["data_unverified"] and rate is None
+    assert [(f.code, f.severity) for f in findings] == [("data_unreliable", "blocker")] and rate is None
 
 
 def test_other_bars_loosen_the_tolerance_and_warn_once():

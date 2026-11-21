@@ -132,6 +132,28 @@ class Accounts:
             return self.view(account_id)
         return self._guard(move)
 
+    def orders(self, account_id: int) -> dict:
+        """The account's WAITING limit orders (design choices entry 140): `{orders: [...], reserved_cash, available, watching}`. `watching` says whether a watcher (a server) holds the advisory lock now: an order is watched only while the page's server runs."""
+        def read():
+            manager = self.manager(account_id)
+            held = manager.list_portfolio()
+            return {"orders": [o.as_dict() for o in manager.open_orders()], "reserved_cash": held.reserved_cash, "available": held.cash_avail, "watching": bool(self.store().watcher_running())}
+        return self._guard(read)
+
+    def cancel_order(self, order_id: int, when=None) -> dict:
+        """The user cancels a waiting order by its number: the account it belongs to is found by the book's own function (`account_of_open_order`), the account must be writable (a sample is read-only), and what the order set aside is available again.
+        Returns the cancelled order. 404 for an order that does not exist, 409 for one that is not open (filled, expired, cancelled or rejected)."""
+        def cancel():
+            account_id = self.store().account_of_open_order(order_id)
+            if account_id is None:
+                raise ServiceError(404, f"there is no order {order_id}")
+            manager = self._writable(account_id)
+            try:
+                return manager.cancel_open_order(order_id, when).as_dict()
+            except ValueError as error:
+                raise ServiceError(409, str(error)) from None
+        return self._guard(cancel)
+
     def writable(self, account_id: int):
         """The holder of an account a run may use. Raises ServiceError for an account that does not exist or is a sample (a run on one is refused the same way as a write)."""
         return self._guard(lambda: self._writable(account_id).users.get())

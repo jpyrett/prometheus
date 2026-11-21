@@ -3,6 +3,7 @@ import { api, ApiError } from "./api/client";
 import type { Health, TradeMode, WorkRow } from "./api/types";
 import { ActivityFeed } from "./components/ActivityFeed";
 import { Header } from "./components/Header";
+import { OpenOrdersCard } from "./components/OpenOrdersCard";
 import { Pipeline } from "./components/Pipeline";
 import { PortfolioCard } from "./components/PortfolioCard";
 import { ProfileCard } from "./components/ProfileCard";
@@ -16,6 +17,7 @@ import { ProvingGround } from "./proving/ProvingGround";
 import { useProving } from "./proving/useProving";
 import { ClockContext } from "./state/useNow";
 import { useAccount } from "./state/useAccount";
+import { useOrders } from "./state/useOrders";
 import { useRun } from "./state/useRun";
 import { useTheme } from "./state/useTheme";
 
@@ -133,6 +135,8 @@ export default function App() {
   const selectedRow = rows.find((r) => r.key === selected) ?? null;
   const view = account.view;
   const replay = health?.mode === "replay";
+  // the waiting limit orders (entry 140): read again when a run ends, and whenever the watcher says something
+  const orders = useOrders(view ? view.account.id : null, !replay && !fixtureParams, `${state.runId}:${state.phase}`);
   const readOnlyReason = replay ? "a recorded session: its account is read-only" : view?.account.sample ? "sample accounts are read-only here" : view?.account.read_only ? "this account is read-only" : null;
   const changed = state.portfolio ? { changes: state.portfolio.changes, cash_change: state.portfolio.cash_change, cash_before: state.portfolio.cash_before } : null;
 
@@ -173,6 +177,7 @@ export default function App() {
         <main className="grid">
           <div className="col">
             <PortfolioCard view={view} changed={changed} before={state.portfolioBefore} />
+            <OpenOrdersCard view={orders.view} notices={orders.notices} error={orders.error} cancelling={orders.cancelling} onCancel={(id) => void orders.cancel(id)} readOnlyReason={readOnlyReason} />
             <ProfileCard view={view} running={running} readOnlyReason={readOnlyReason} loadError={account.loadError} actions={accountActions} forceOpen={openNew} onCancel={() => setOpenNew(false)} newMode={mode} />
           </div>
           <div className="col">

@@ -22,6 +22,14 @@ THE CRITIC NEVER TRADES AND NEVER FETCHES (spec P8): its Data Clerk requests rea
 VERSION 2 (config_version "2", design/critic_v2_evidence_spec.md, design choices entry 133): A DENIAL REASON MUST EARN ITS PLACE. Each finding code is scored against the outcomes by a program (`proving/report_card.py`), and the reasons that denied winners
 were changed: `fresh_negative_news` and `blend_not_supported` inform and no longer deny (C2, C3: `evidence.py`), `company_mismatch` compares the names in `names.py` (C4), the new blocker `trend_not_confirmed` denies a trend recommendation whose
 stock fell over the last five sessions (C5: `chart.py`), and the model's labels are kept in a store so that the same quote gets the same label (C6: `labels.py`). It still sizes nothing, sees no portfolio and has no liquidity, stop-distance or market-cap rule (C7).
+
+VERSION 3 (config_version "3", design/critic_v3_two_reasons_spec.md, design choices entry 137): A DENIAL NEEDS TWO REASONS. Jacob: *"Critic shouldn't nitpick about individual financial metrics. There should be more than one reason for a denial."* Every finding
+that can deny belongs to ONE class of a closed table (`reasons.py`): a FAULT (the recommendation cannot be traded safely or cannot be checked) and a PROFILE finding (it is not for this user) deny ALONE; the judgment findings are SIGNS of three GROUPS, `news`,
+`performance` and `price`, and a review is denied when at least TWO groups are bad (or a finding asks for a person, entry 103); ONE bad group approves, and the summary names it. A mismatch of one financial metric is a warning (only the price itself, or a record
+whose values mostly do not match, is `data_unreliable`, a fault: `recheck.py`); the SCORE NO LONGER DENIES (`approve_min_score` is gone; it ranks and informs). Two new inputs: the analysts' recommendation counts from Finnhub's `/stock/recommendation`
+(`analysts.py`: a dimension and the news sign `analysts_bearish`, read through `DataClerk.request_analyst_ratings`, point in time) and eight chart patterns calculated in code from the stored closes (`patterns.py`: double top and bottom, head and
+shoulders and its inverse, the triangles, the 52-week breakout and breakdown; one counts only when it was COMPLETE within the last `chart.pattern_recent_sessions` sessions, and the closes are in the share basis of the last day: a stored split is applied by
+the Data Clerk's metric `close_history`), whose net points are also a bonus on the score (`chart.pattern_bonus`). The thresholds of the new rules are conventions chosen by reason, not tuned on the outcomes (V10).
 """
 from prometheus.agents.advisor.config import load_config as load_advisor_config
 from prometheus.agents.critic.config import CriticConfig, load_config
@@ -39,7 +47,7 @@ class Critic:
                  label_store: LabelStore | None | bool = True):
         """model: a chat model (anything with `invoke`; a scripted one in tests); otherwise OpenRouter through `get_chat_model` with the model of the `critic` role (CRITIC_MODEL, Z.ai GLM 5.3 by
         default), or `model_id`, built when first needed: a model that cannot start (a missing key) is a note on the review, never an exception. clerk: the Data Clerk that is asked for the numbers,
-        the quote and the sources (anything with `request_metrics`, `request_quotes` and `request_verification`; a fake in tests; the real one, with no model of its own to call, when left out).
+        the quote, the sources and the analysts' counts (anything with `request_metrics`, `request_quotes`, `request_verification` and `request_analyst_ratings`; a fake in tests; the real one, with no model of its own to call, when left out).
         config_path: the Critic's settings (configs/critic_v1.json). ledger: where the reviews are appended (data/ledger/reviews.jsonl; a test passes one in a temporary folder). history: the ADVISOR'S
         recommendation ledger, read only, for the two warnings about earlier recommendations of the same symbol (None skips them). advisor_config: the Advisor's settings, whose formulas the Critic
         works again (configs/advisor_v1.json when left out).

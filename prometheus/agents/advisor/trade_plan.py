@@ -8,7 +8,12 @@ All arithmetic, no model. The plan is the part of a recommendation a Critic can 
     stop_distance   2 ATR for reversion and event, 3 ATR for trend and capital_return (or the distance to the 50-day mean when that is nearer and below the price); at least the typical
                     earnings move when a report falls inside the horizon (`gap_risk`; the earnings dates are not available in this build, so it never fires)
     stop_price      the entry mid minus the stop distance (long only: a bearish call is not a recommendation, not a short)
-    target_price    the entry mid x (1 + 1.5 x the family's edge at its horizon); none for capital_return (it is bought for the payout, not for a target)
+    target_price    the entry mid x (1 + 1.5 x the family's edge at its horizon), and never less than `min_reward_to_risk` (2.0) times the stop distance above the entry mid (rule E1 of design/advisor_exit_plan_spec.md: the edge
+                    formula alone put a 40- to 63-session target 1 to 2 percent over the entry against a stop of 5 to 9 percent, a reward of 0.1 to 0.4 for each unit risked); none for capital_return (it is bought for the payout,
+                    not for a target) and none for a TRAILING family (`trailing_families`, trend: rule E2)
+    trailing        a trailing family is held to let its winners run (Jegadeesh and Titman 1993, the family's own basis): no target, `trailing` true and `trail_distance` = the stop distance, a price distance fixed now; the stop starts at
+                    `stop_price` and, at each close, rises to the highest close since the entry less that distance (never falls), the time stop stays. The plan only RECORDS this: the Trader places no stop order and the Proving
+                    Ground's follower (`simulator.follow(trail_distance=)`) and the Live view read it
     time_stop_date  `horizon_bars` weekdays after today (the calendar of the future has no holidays in it: the note says so)
     order_style     limit at the entry mid for reversion, for capital_return, for an event that has moved less than one ATR; a marketable limit
                     at the last price + 0.25 ATR for trend while it is above its 200-day mean; a limit otherwise
@@ -93,7 +98,17 @@ def build(family: FamilyResult, metrics: dict | None, quote: dict | None, today:
     plan.stop_distance, plan.stop_price = round(distance, 4), round(mid - distance, 4)
     plan.notes.append(f"entry zone = last +- {tc.entry_atr:g} x atr_14; stop = {tc.stop_atr[family.family]:g} x atr_14 (atr_14 = {atr:.2f})" + ("" if distance == tc.stop_atr[family.family] * atr else "; the stop distance was changed, see the notes"))
     edge = (family.edge_20d or 0.0) * max(1.0, family.horizon_bars / 20)
-    plan.target_price = None if family.family == "capital_return" else round(mid * (1 + tc.target_edge_multiple * edge), 4)
+    reach, floor = mid * (1 + tc.target_edge_multiple * edge), mid + tc.min_reward_to_risk * distance      # the edge's target, and the nearest target that pays `min_reward_to_risk` for the risk of the stop
+    plan.trailing = family.family in tc.trailing_families
+    if family.family == "capital_return" or plan.trailing:
+        plan.target_price = None
+    else:
+        plan.target_price = round(max(reach, floor), 4)
+        if floor > reach:
+            plan.notes.append(f"the target is {tc.min_reward_to_risk:g} x the stop distance above the entry ({plan.target_price:.2f}): the family's edge alone gave {round(reach, 4):.2f}, a reward of {(reach - mid) / distance if distance > 0 else 0.0:.2f} for each unit risked")
+    if plan.trailing:
+        plan.trail_distance = plan.stop_distance
+        plan.notes.append(f"trailing stop, no target: the stop starts at {plan.stop_price:.2f} and rises at each close to the highest close less {plan.stop_distance:.2f}, never falling; the time stop stands")
     plan.time_stop_date = add_weekdays(today, family.horizon_bars).isoformat()
     plan.time_stop_note = "weekdays only: holidays of the coming weeks are not known"
     style = "limit"

@@ -14,7 +14,7 @@ export interface RequestCardProps {
   accountId: number | null;
   running: boolean;
   starting: boolean;
-  defaults: { strict: boolean; neutral: boolean; fetch: boolean };
+  defaults: { strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean };
   onGo: (request: RunRequest) => void;
   onStop: () => void;
   error: string | null;
@@ -37,6 +37,7 @@ export function RequestCard({ prompt, onPrompt, maxChars, accountId, running, st
   const [strict, setStrict] = useState(defaults.strict);
   const [neutral, setNeutral] = useState(defaults.neutral);
   const [fetch, setFetch] = useState(defaults.fetch);
+  const [raiseFunds, setRaiseFunds] = useState(defaults.raise_funds ?? false);      // "Always raise funds" (entry 142, R12): off unless ticked
   const refresh = replay ? false : fetch;                  // a recorded session fetches nothing
   // The switch moves first; if the save is refused it moves back and the server's message shows under it.
   const [shown, setShown] = useState<TradeMode>(mode);
@@ -50,7 +51,7 @@ export function RequestCard({ prompt, onPrompt, maxChars, accountId, running, st
 
   const go = () => {
     if (!canGo || accountId === null) return;
-    onGo({ account_id: accountId, prompt, strict, neutral: effectiveNeutral, fetch: refresh, mode: shown });
+    onGo({ account_id: accountId, prompt, strict, neutral: effectiveNeutral, fetch: refresh, raise_funds: raiseFunds, mode: shown });
   };
 
   async function flip(on: boolean) {
@@ -103,6 +104,13 @@ export function RequestCard({ prompt, onPrompt, maxChars, accountId, running, st
               disabled={busy || strict}
               onChange={(e) => setNeutral(e.target.checked)}
               title={strict ? "Strict: only what the Critic approves trades" : "A company you named that the Advisor scored neutral counts as approved (ALLOW_NEUTRAL_RECOMMENDATIONS, for this run)"}
+            />
+            <Check
+              label="Always raise funds"
+              checked={raiseFunds}
+              disabled={busy}
+              onChange={(e) => setRaiseFunds(e.target.checked)}
+              title={'The same as saying "raise funds if needed" in every request (ALWAYS_RAISE_FUNDS, for this run): when the cash does not cover a purchase you typed, the Account Manager sells holdings to pay for it. Ask mode still shows you the plan and asks you to approve each trade; Auto mode sells and buys. "Don\'t sell anything" in your words still wins.'}
             />
             <Check
               label={

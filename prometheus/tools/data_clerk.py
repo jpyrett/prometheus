@@ -519,7 +519,18 @@ class DataClerkTools:
                     problems.setdefault(symbol, "no filings are stored for it")
                 except Exception as error:
                     problems.setdefault(symbol, f"reading the stored filings failed ({type(error).__name__})")
-        results = catalog.compute(symbols, requests, store, financials, evidence, today, sectors)
+        tables = {}
+        if "splits" in needs:     # the stored split tables (read only, `data/historical/splits_v1/`), by the Proving Ground's own reader: a table is only ever read for what the metric needs (`close_history`), and it adjusts nothing after `today`
+            from prometheus.agents.data_clerk.data_toolbox import SPLITS_DIR
+            from prometheus.proving import splits as splits_mod
+            for symbol in symbols:
+                try:
+                    table, _ = splits_mod.read(symbol, Path(root).parent / SPLITS_DIR)
+                except ValueError:      # not a ticker: no table (the callers check the symbols)
+                    table = None
+                if table is not None:
+                    tables[symbol] = table
+        results = catalog.compute(symbols, requests, store, financials, evidence, today, sectors, tables)
         return {"as_of": today.isoformat(), "results": results, "problems": problems, "gaps": store.gaps[:20],
                 "bars": {s: len(store.bars(s, end=today)) for s in symbols}}
 
@@ -544,6 +555,30 @@ class DataClerkTools:
         return {"bars": {s: [{"date": b.date.isoformat(), "open": b.open, "high": b.high, "low": b.low, "close": b.close, "volume": b.volume}
                             for b in store.bars(s, end=end, max_bars=(end - start).days + 1) if b.date >= start] for s in picked},
                 "gaps": store.gaps[:20]}
+
+    def analyst_ratings(self, symbols: list[str], store: str, today: date | None = None) -> dict:
+        """The code path behind `DataClerk.request_analyst_ratings` (Critic v3, design choices entry 137): NOT a tool of the model, so not in DATA_CLERK_TOOLS. For each symbol: ask Finnhub for its analyst recommendation trends
+        and keep the answer in the store (`DataToolbox.fetch_analyst_ratings`: one paid call each, never while a day is bound), then read the STORED periods the day could know (`read_analyst_ratings`: only periods on or before
+        `today`, cut to the bound day), newest first. A symbol whose call failed (no key, HTTP error) is a problem in words and is still answered with what is stored. Returns {"ratings": {symbol: {"periods": [...], "fetched":
+        bool, "note": str | None}}, "problems": [...]}: a symbol with nothing stored has an empty list and a note (a result, not an error)."""
+        picked = list(dict.fromkeys(_symbol(s) for s in symbols))
+        until = self._through(today)
+        bound = trading_clock.bound_day() is not None
+        ratings, problems = {}, []
+        for symbol in picked:
+            fetched, note = False, None
+            if not bound:
+                try:
+                    self.toolbox.fetch_analyst_ratings([symbol], store)
+                    fetched = True
+                except Exception as error:  # a missing key or an API failure: the kind and a short message, never request details; the stored periods are still read
+                    problems.append(f"{symbol}: the analyst ratings could not be fetched ({type(error).__name__}: {' '.join(str(error).split())[:160]})")
+                    note = "Finnhub could not be asked; the stored counts are used"
+            periods = self.toolbox.read_analyst_ratings(symbol, store, until)
+            if not periods:
+                note = "no stored analyst ratings the day could know" if note is None else note + ", and there are none stored"
+            ratings[symbol] = {"periods": periods, "fetched": fetched, "note": note}
+        return {"ratings": ratings, "problems": problems}
 
     def close_quote(self, symbol: str, day: date) -> dict:
         """A quote made from the STORED daily bar of `day`, for the simulated clock (`USE_LIVE_TRADING=false`, `common/trading_clock.py`, design choices entry 76): the market close of that trading day instead of

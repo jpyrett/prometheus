@@ -31,3 +31,15 @@ def test_a_reduction_is_denied_as_a_defect_and_the_status_on_the_recommendation_
     assert not any("reduction" in str(r["headline"]) for r in rows.values())
 
 
+
+
+def test_the_gate_of_a_version_3_review_has_no_mark_and_carries_the_pattern_bonus_and_the_groups():
+    """Critic v3: the score has no mark to reach, so the gate holds no `approve_min_score`, `passed_score` or `margin`; it holds the pattern bonus, the groups and the cap that a denial gets. The review's analysts row is a row of the card."""
+    order = reviewed()
+    block = order.recommendations[0]["critic"]
+    gate = block["gate"]
+    assert not {"approve_min_score", "passed_score", "margin"} & set(gate) and gate["blocked_score_cap"] == 49 and gate["pattern_bonus"] == order.reviews[0]["pattern_bonus"] == 6.25
+    assert gate["groups"] == {"news": [], "performance": [], "price": []} and gate["blocked"] is False and gate["denial_reasons"] == []
+    assert [r["name"] for r in block["dimensions"]] == list(DIMENSIONS) and DIMENSIONS[-1] == "analysts"
+    analysts = next(r for r in block["dimensions"] if r["name"] == "analysts")
+    assert analysts["applicable"] is False and analysts["title"] == "Analysts" and analysts["headline"] == "no analyst ratings the day could know" and gate["weight_total"] == 90

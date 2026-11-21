@@ -27,6 +27,8 @@ export function QuestionCard({ question, answer, row }: { question: QuestionData
       {question.kind === "clarify" && <Clarify question={question} locked={locked} send={send} first={first} />}
       {question.kind === "approve" && <Approve question={question} locked={locked} send={send} first={first} row={row} />}
       {question.kind === "missing_company" && <MissingCompany question={question} locked={locked} send={send} first={first} />}
+      {question.kind === "raise_funds" && <RaiseFunds question={question} locked={locked} send={send} first={first} />}
+      {question.kind === "funding" && <Funding question={question} locked={locked} send={send} first={first} />}
     </div>
   );
 }
@@ -116,6 +118,81 @@ function MissingCompany({ question, locked, send, first }: Inner) {
         </pre>
       )}
       <p className="cap">Nothing is left out without your yes. No answer means the order is not placed.</p>
+    </>
+  );
+}
+
+/** The cash does not cover what the user typed and nothing permits selling holdings (Ask mode, entry 142, R3): the Account Manager says how short it is and asks once, for all the purchases. Nothing is sold without a yes; no answer is a no. */
+function RaiseFunds({ question, locked, send, first }: Inner) {
+  const buys = question.buys ?? [];
+  return (
+    <>
+      <h3>
+        <Badge tone="warn">ACCOUNT MANAGER ASKS · RAISE FUNDS?</Badge>
+      </h3>
+      <p>{question.question ?? question.text}</p>
+      {buys.length > 0 && (
+        <ul className="proposal" aria-label="What would be bought">
+          {buys.map((b) => (
+            <li key={b.symbol}>
+              <span className="tick">{b.symbol}</span>
+              <span>{`Buy ${shareText(b.shares)}${b.price ? ` at ${money(b.price)}` : ""}`}</span>
+              <span className="num">{money(b.cost)}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      <div className="acts">
+        <Button variant="yes" disabled={locked} onClick={() => void send(true)} ref={(el) => void (first.current = el)}>
+          Yes, raise the money
+        </Button>
+        <Button variant="no" disabled={locked} onClick={() => void send(false)}>
+          No
+        </Button>
+      </div>
+      <p className="cap">Nothing is sold without your yes. No answer means no.</p>
+    </>
+  );
+}
+
+/** The plan RaiseFunds made, shown before anything is sold (Ask mode, entry 142, R4): which holdings, how many shares, at what price, the gain or loss on each, and the cash after. A no means nothing is sold and the purchase is placed only if the cash covers it. */
+function Funding({ question, locked, send, first }: Inner) {
+  const legs = question.legs ?? [];
+  const buys = question.buys ?? [];
+  return (
+    <>
+      <h3>
+        <Badge tone="warn">APPROVE THE SALES</Badge>
+      </h3>
+      <p>
+        <b style={{ color: "var(--text)" }}>
+          To buy {buys.map((b) => `${shareText(b.shares)} shares of ${b.symbol}`).join(" and ")}
+        </b>
+        {question.cash != null ? <>, with cash of <span className="num">{money(question.cash)}</span>,</> : ", "} these holdings would be sold first:
+      </p>
+      <ul className="proposal" aria-label="The holdings that would be sold">
+        {legs.map((l) => (
+          <li key={l.symbol}>
+            <span className="tick">{l.symbol}</span>
+            <span>{`Sell ${shareText(l.shares)}${l.price ? ` at ${money(l.price)}` : ""}`}</span>
+            <span className="num">{`${money(l.amount)}, ${l.gain >= 0 ? "gain" : "loss"} ${money(Math.abs(l.gain))}`}</span>
+          </li>
+        ))}
+      </ul>
+      {question.cash_after != null && (
+        <p className="cap">
+          The cash after the sales and the purchase would be about <span className="num">{money(question.cash_after)}</span>.
+        </p>
+      )}
+      <div className="acts">
+        <Button variant="yes" disabled={locked} onClick={() => void send(true)} ref={(el) => void (first.current = el)}>
+          Sell, then buy
+        </Button>
+        <Button variant="no" disabled={locked} onClick={() => void send(false)}>
+          No, sell nothing
+        </Button>
+      </div>
+      <p className="cap">Nothing is sold without a yes. No answer means no.</p>
     </>
   );
 }

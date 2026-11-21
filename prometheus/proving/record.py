@@ -4,7 +4,8 @@
     verdict = verdict_of(order, record_id)                  # approved | denied | neutral | unreviewed
     who = identity_of(order, recommendation, decision_day)   # key, symbol, company, record_id, review_id, advisor, critic, verdict: the identity fields of a `RecOutcome`
 
-    RecOutcome   one per recommendation, traded or not (8.1): the plan, the entry, the exit by the plan, the result (won | lost | open | not_filled | no_data), the returns against the benchmark and the sector, the day-by-day path
+    RecOutcome   one per recommendation, traded or not (8.1): the plan, the entry, the exit by the plan, the result (won | lost | open | not_filled | no_data), the returns against the benchmark and the sector, the day-by-day path, and the
+                 FORWARD returns (`forward`: the stock against the benchmark from the decision day's close to the close 5, 10, 20 and 40 sessions later, whatever the plan did: it measures the pick, not where the plan put its stop and target)
     EquityPoint  one day of the Time Machine's account (equity = cash + the positions at the close; `benchmark` and `drawdown_pct`)
     Event        a buy or an exit: the markers on the curve
     DecisionDay  what one decision day did
@@ -38,7 +39,7 @@ Measure = float      # a return, a drawdown, a rate, a mean or a timing: a measu
 
 Verdict = Literal["approved", "denied", "neutral", "unreviewed"]
 Result = Literal["won", "lost", "open", "not_filled", "no_data"]
-ExitReason = Literal["stop", "target", "time_stop"]
+ExitReason = Literal["stop", "trailing_stop", "target", "time_stop"]
 NotTradedReason = Literal["denied", "neutral_off", "beyond_count", "no_cash", "not_filled", "failed", "cooldown"]      # `cooldown`: the Advisor's own cooldown held it back (the engine applies it, spec 7.3)
 Speed = Literal["fast", "faithful"]
 OutcomeSource = Literal["run", "fixture", "time_machine"]      # where the outcome's recommendation came from: a saved live run, a recorded capture, or a Time Machine decision day
@@ -47,7 +48,7 @@ RunStatus = Literal["finished", "stopped", "failed"]
 DayStatus = Literal["traded", "no_trade", "failed", "cached"]
 Tone = Literal["pos", "neg", "neutral"]
 CaveatCode = Literal["fundamentals_not_point_in_time", "symbol_directory_is_todays", "price_returns_no_dividends", "fills_at_next_open_no_slippage", "daily_bars_stop_before_target", "news_coverage_thin",
-                     "small_sample", "open_positions_marked", "split_adjusted", "model_knowledge_cutoff", "fast_models"]
+                     "small_sample", "open_positions_marked", "split_adjusted", "model_knowledge_cutoff", "fast_models", "analysts_not_point_in_time"]
 
 # 8.4: the closed list of caveats. Code decides which apply; each has ONE sentence, and the page shows it as written (P3: never hidden).
 CAVEATS: dict[str, str] = {
@@ -61,6 +62,7 @@ CAVEATS: dict[str, str] = {
     "open_positions_marked": "A position that no rule has closed is open: it is marked at the last stored close and is never counted as a win.",
     "split_adjusted": "A position that crossed a stock split was adjusted on the split's date from the stored split table.",
     "model_knowledge_cutoff": "The models know the world only up to their own training cutoff, which can be later than a past decision day: they may remember what happened next.",
+    "analysts_not_point_in_time": "The analysts' recommendation counts are each month's last revision as stored, not the counts that were known on the decision day.",
     "fast_models": "The Advisor's model ran with its reasoning switched off and the Critic's at reduced reasoning effort to make this test fast; a faithful run uses the live settings and takes longer.",
 }
 assert set(get_args(CaveatCode)) == set(CAVEATS), "the Literal of caveat codes and the closed list of sentences must say the same"
@@ -91,6 +93,8 @@ class PlanView(_Model):
     time_stop_date: Date | None = None
     horizon_bars: int | None = None
     order_style: str | None = None
+    trailing: bool = False                  # the plan's stop TRAILS (the TREND family since Advisor config version 3, design/advisor_exit_plan_spec.md): no target, and the stop rises with the highest close; False for every plan made before
+    trail_distance: Price | None = None     # the distance under the highest close that the stop keeps, a price distance fixed at the decision
 
 
 class AdvisorCell(_Model):
@@ -111,6 +115,7 @@ class CriticCell(_Model):
     blockers: list[str] | None = None
     warnings: list[str] | None = None
     human: list[str] | None = None            # the codes of the findings that asked for a person (`requires_human_reasons`): a denial since entry 103, and a warning only since Critic version 2 for fresh_negative_news
+    groups: list[str] | None = None           # Critic version 3 (design/critic_v3_two_reasons_spec.md): the groups of judgment (news, performance, price) that had a bad sign; [] when all three were clean. None: a review of an earlier version, which has no groups
 
 
 class EntryView(_Model):
@@ -133,6 +138,16 @@ class Horizon(_Model):
     sessions: int
     return_pct: Measure | None = None
     benchmark_return_pct: Measure | None = None
+
+
+class Forward(_Model):
+    """The stock's return from the CLOSE of the decision day to the close `sessions` sessions later, with the benchmark's over the same two dates and the difference, whatever the plan did (design/advisor_exit_plan_spec.md E5): it measures
+    the pick, where `return_pct` and the plan's exit measure where the plan put its stop and its target. Sessions are the stock's own stored bars after the decision day's bar, and the benchmark is read on the same two DATES (a price
+    is never carried from another day). None for all three while the bars are not stored that far (the future is not stored yet), when the decision day has no bar of its own, or across a split the stored table cannot adjust."""
+    sessions: int
+    return_pct: Measure | None = None
+    benchmark_return_pct: Measure | None = None
+    excess_return_pct: Measure | None = None
 
 
 class Path(_Model):
@@ -169,6 +184,7 @@ class RecOutcome(_Model):
     sector_return_pct: Measure | None = None
     gain: Money | None = None                                # realized, or unrealized at the last close; None when hypothetical
     horizons: list[Horizon] = Field(default_factory=list)
+    forward: list[Forward] = Field(default_factory=list)       # the plan-independent forward return at each of the config's `forward_sessions`; [] in a run saved before it existed
     max_favorable_pct: Measure | None = None                   # the best close since the entry, against the entry price
     max_adverse_pct: Measure | None = None                     # the worst
     path: list[Path] = Field(default_factory=list)           # the entry day to the exit or the last bar
@@ -201,8 +217,9 @@ class Position(_Model):
     entry_date: Date
     record_id: str | None = None
     key: str | None = None
-    stop: Price | None = None
+    stop: Price | None = None               # the stop IN FORCE: a trailing plan's is the plan's stop or the highest close since the entry less its distance, whichever is higher, at the last mark
     target: Price | None = None
+    trailing: bool = False                  # `stop` trails the highest close (no target)
     time_stop_date: Date | None = None
     price: Price | None = None
     value: Money | None = None
@@ -287,6 +304,7 @@ class PortfolioStats(_Model):
 
 class Exits(_Model):
     stop: int = 0
+    trailing_stop: int = 0
     target: int = 0
     time_stop: int = 0
     open: int = 0
@@ -310,13 +328,25 @@ class OutcomeStats(_Model):
 
 
 class GroupStats(_Model):
-    """One group of outcomes (a verdict, a score bucket, a family): `n` is the outcomes that have a return and an excess over the benchmark (what the means rest on), `closed` those of them that closed (what the win rate rests on)."""
+    """One group of outcomes (a verdict, a score bucket, a family): `n` is the outcomes that have a return and an excess over the benchmark (what the means rest on), `closed` those of them that closed (what the win rate rests on). The returns,
+    the excess and the win rate here are BY THE PLAN: where the plan put its stop and its target decides them (a `win_rate` is "won by its plan"); the forward excess of a score bucket and of a family (`ForwardStats`) is the plan-independent one."""
     n: int
     closed: int
     mean_return_pct: Measure | None = None
     mean_excess_pct: Measure | None = None
     win_rate: Measure | None = None
     small_sample: bool
+
+
+class ForwardStats(_Model):
+    """The mean FORWARD excess of a group at one horizon (design/advisor_exit_plan_spec.md E5 and E6): `n` outcomes that have it, its mean, the standard error of that mean (`se_pct`: the sample variance over n, worked by `stats.spread`),
+    `inside_chance` (the mean is within `stats.CHANCE_BAND` standard errors of zero: chance alone gives a mean this size, so it must not be called good or bad; None with fewer than two outcomes) and `small_sample` (n under the minimum)."""
+    sessions: int
+    n: int
+    mean_excess_pct: Measure | None = None
+    se_pct: Measure | None = None
+    inside_chance: bool | None = None
+    small_sample: bool = True
 
 
 class VerdictStats(GroupStats):
@@ -326,10 +356,12 @@ class VerdictStats(GroupStats):
 class ScoreStats(GroupStats):
     low: int                                                 # the Advisor's score bucket [low, high)
     high: int
+    forward: list[ForwardStats] = Field(default_factory=list)      # the plan-independent excess of the strategy-family picks of the bucket (a neutral company is in the family table), one for each of the config's `forward_sessions`
 
 
 class FamilyStats(GroupStats):
-    family: str
+    family: str                                              # a strategy family, or "neutral" for a company the Advisor scored neutral (it has no family)
+    forward: list[ForwardStats] = Field(default_factory=list)      # the plan-independent excess of the family's picks, one for each of the config's `forward_sessions`
 
 
 class SymbolStats(_Model):
@@ -419,8 +451,9 @@ def plan_of(recommendation) -> PlanView:
     zone = plan.get("entry_zone")
     low, high = (_price(zone[0]), _price(zone[1])) if isinstance(zone, (list, tuple)) and len(zone) == 2 else (None, None)
     style = plan.get("order_style")
+    trail = _price(plan.get("trail_distance")) if plan.get("trailing") is True else None      # a plan that trails has a distance to trail by; one made before Advisor config version 3 has neither key
     return PlanView(entry_low=low, entry_high=high, entry_mid=_price(plan.get("entry_mid")), limit_price=_price(plan.get("limit_price")), stop=_price(plan.get("stop_price")), target=_price(plan.get("target_price")),
-                    time_stop_date=iso_date(plan.get("time_stop_date")), horizon_bars=_whole(plan.get("horizon_bars")), order_style=style if isinstance(style, str) else None)
+                    time_stop_date=iso_date(plan.get("time_stop_date")), horizon_bars=_whole(plan.get("horizon_bars")), order_style=style if isinstance(style, str) else None, trailing=trail is not None, trail_distance=trail)
 
 
 def verdict_of(order, record_id: str) -> str:
@@ -453,7 +486,9 @@ def critic_cell(review) -> CriticCell | None:
     codes = lambda key: [f["code"] for f in review.get(key) or [] if isinstance(f, dict) and isinstance(f.get("code"), str)] if isinstance(review.get(key), list) else None
     human = review.get("requires_human_reasons")
     version = (review.get("audit") or {}).get("config_version") if isinstance(review.get("audit"), dict) else None
-    return CriticCell(approved=review["approved"], score=score if isinstance(score, int) and not isinstance(score, bool) else None, grade=review.get("grade") if isinstance(review.get("grade"), str) else None,
+    grouped = review.get("groups")
+    bad = [g for g in ("news", "performance", "price") if grouped.get(g)] if isinstance(grouped, dict) and grouped else None
+    return CriticCell(approved=review["approved"], groups=bad, score=score if isinstance(score, int) and not isinstance(score, bool) else None, grade=review.get("grade") if isinstance(review.get("grade"), str) else None,
                       denial_reasons=[r for r in reasons if isinstance(r, str)] if isinstance(reasons, list) else [], config_version=version if isinstance(version, str) else None, blockers=codes("blockers"),
                       warnings=codes("warnings"), human=[r for r in human if isinstance(r, str)] if isinstance(human, list) else None)
 

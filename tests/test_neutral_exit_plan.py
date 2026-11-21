@@ -44,7 +44,7 @@ def test_the_stop_is_two_atr_under_the_last_close_and_the_time_stop_twenty_tradi
     assert blind.stop_price is None and blind.time_stop_date == "2026-12-04" and blind.basis.startswith("no stop: atr_14 is missing") and "time stop alone stands" in blind.basis
     tight = {**metrics, "atr_14": {**metrics["atr_14"], "value": 100.0}}                     # an ATR so large that 2 ATR is under zero: no stop above zero
     assert tp.neutral_exit_plan(tight, date(2026, 11, 5), CONFIG).stop_price is None
-    assert (CONFIG.config_version, CONFIG.neutral.stop_atr_multiple, CONFIG.neutral.horizon_bars) == ("2", 2.0, 20)
+    assert (CONFIG.config_version, CONFIG.neutral.stop_atr_multiple, CONFIG.neutral.horizon_bars) == ("3", 2.0, 20)      # config version 3 is the exit-plan version (targets pay 2 for 1, trend trails); the neutral exit plan is as version 2 made it
 
 
 def advised_neutral():

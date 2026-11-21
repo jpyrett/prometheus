@@ -37,9 +37,9 @@ def test_a_conviction_recommendation_whose_quotes_do_not_hold_is_approved_with_t
     c = r["evidence"]["counterfactual"]
     assert c["blend"] == 0.1111 and c["blend_recorded"] == 0.5725
     assert r["approved"] and codes(r) == [] and codes(r, "warnings") == ["blend_not_supported"] and r["denial_reasons"] == [] and r["requires_human"] is False
-    assert (r["score"], r["grade"]) == (77, "C") and (held["score"], held["grade"]) == (88, "B")                       # the lower evidence points are the whole cost: 15 of 15 became 4.5 of 15
+    assert (r["score"], r["grade"]) == (81, "B") and (held["score"], held["grade"]) == (93, "A")                       # Critic v3 (was 77 C and 88 B): the lower evidence points are the whole cost: 15 of 15 became 4.5 of 15
     assert (r["dimensions"]["evidence"]["points"], held["dimensions"]["evidence"]["points"]) == (4.5, 15.0)
-    assert r["summary"].startswith("APPROVE PG: score 77 (C)") and "evidence 4/15" in r["summary"] and r["summary"].endswith("under the 0.3 the conviction strategy needs (blend_not_supported).")      # the approval says why it is not an easy one
+    assert r["summary"].startswith("APPROVE PG: score 81 (B)") and "evidence 4/15" in r["summary"] and r["summary"].endswith("under the 0.3 the conviction strategy needs (blend_not_supported).")      # the approval says why it is not an easy one
     assert "blend_not_supported" not in held["summary"]
 
 
@@ -47,7 +47,7 @@ def test_pg_open_passes_every_check_and_is_approved_without_a_six_month_average_
     """AMENDED twice (entry 103). The warning `value_not_assessable` used to ask for a person (`requires_human`), and Part A of entry 103 made that a denial; Jacob then removed it ("it eliminates IPOs from being traded"):
     it is a plain note, it asks for nobody, and this review is approved at 89 again."""
     r = review(captured("PG_open"), own={})["PG"]
-    assert r["approved"] and r["blockers"] == [] and not {"approved_shares", "suggested_shares"} & set(r) and r["value"]["deal"] == "unknown" and r["score"] == 89 and r["valid_until_utc"]
+    assert r["approved"] and r["blockers"] == [] and not {"approved_shares", "suggested_shares"} & set(r) and r["value"]["deal"] == "unknown" and r["score"] == 94 and r["valid_until_utc"]      # Critic v3: 89 under the old weights (the analysts are out of the average, the net chart points are a bonus)
     assert "value_not_assessable" in codes(r, "warnings") and r["requires_human"] is False and r["requires_human_reasons"] == [] and r["denial_reasons"] == []
     assert r["risk"]["risk_score"] == 6.5 and r["risk"]["risk_level"] == "low" and r["dimensions"]["accuracy"]["score"] == 100
 
@@ -80,7 +80,7 @@ def test_a_review_that_asks_for_a_person_is_denied_with_that_reason_on_the_revie
 
     order = captured("PG_open")
     r = review(order, listed={"PG": None})["PG"]
-    assert (r["approved"], r["score"], r["score_before_blockers"], r["grade"], r["denial_reasons"], r["requires_human_reasons"]) == (False, 88, 88, "B", ["needs_human_review"], ["identity_unverified"])
+    assert (r["approved"], r["score"], r["score_before_blockers"], r["grade"], r["denial_reasons"], r["requires_human_reasons"]) == (False, 93, 93, "A", ["needs_human_review"], ["identity_unverified"])      # Critic v3: 88 B under the old weights
     assert r["blockers"] == [] and r["valid_until_utc"] is None and order.reviews[0]["review_id"] == r["review_id"]
     assert r["summary"] == "DENY PG: a person must look before this can trade: identity_unverified (PG could not be looked up in the symbol directory (the lookup failed (HTTP 429)))."
     block = next(x for x in order.recommendations if x["symbol"] == "PG")["critic"]                  # the recommendation's status

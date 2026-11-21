@@ -108,14 +108,18 @@ def within_pot(outputs: dict) -> dict:
     try:
         cash = money(outputs["cash_before"]) if outputs.get("cash_before") is not None else None
         budget = digits(outputs["budget"]) if outputs.get("budget") is not None else None
+        raised = sum((money(t.get("amount") or 0) for t in outputs.get("trades") or [] if isinstance(t, dict) and t.get("status") == "filled" and t.get("side") == "sell" and t.get("kind") == "funding"), Decimal(0))
     except ValueError as error:      # the cash or the budget is not a number (to the cent): that is itself the defect
         return _result("within_pot", False, f"an amount of the run is not money: {error}")
+    if cash is not None and raised:      # entry 142: holdings the user let the Account Manager sell to pay for the purchase are money of the run once the sales have FILLED: the cash it had and what they raised
+        cash += raised
+    cash_words = "the cash and what its funding sales raised" if raised else "the cash"
     if pot is not None:
         limit, basis = pot, "the pot"
     elif budget is not None:
-        limit, basis = (min(budget, cash) if cash is not None else budget), "the budget the user gave (never above the cash)"
+        limit, basis = (min(budget, cash) if cash is not None else budget), f"the budget the user gave (never above {cash_words})"
     else:
-        limit, basis = cash, "the cash"
+        limit, basis = cash, cash_words
     if not purchases:
         return _result("within_pot", True, "no purchase was filled: nothing was spent")
     if limit is None:

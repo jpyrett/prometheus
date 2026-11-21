@@ -89,7 +89,7 @@ def test_every_statistic_of_a_real_set_of_outcomes_is_what_a_hand_count_of_them_
         assert (row.n, row.closed, row.mean_return_pct, row.mean_excess_pct, row.win_rate, row.small_sample) == (len(group), len(done), mean(o.return_pct for o in group), mean(o.excess_return_pct for o in group),
                                                                                                                  ratio(sum(o.result == "won" for o in done), len(done)), len(group) < 20)
     assert [(r.verdict, r.n) for r in result.by_verdict] == [("approved", 12), ("denied", 12), ("neutral", 0), ("unreviewed", 4)]
-    assert [(r.low, r.high) for r in result.by_score] == [(0, 40), (40, 50), (50, 60), (60, 70), (70, 80), (80, 101)]
+    assert [(r.low, r.high) for r in result.by_score] == [(0, 60), (60, 65), (65, 70), (70, 75), (75, 101)]      # the config's buckets since the forward excess (<60, 60-65, 65-70, 70-75, 75+): they were (0, 40), (40, 50), (50, 60), (60, 70), (70, 80), (80, 101)
     for row in result.by_score:                                                                    # the Advisor's score in the buckets of the config: [low, high)
         group = [o for o in usable if o.advisor.score is not None and row.low <= o.advisor.score < row.high]
         done = [o for o in group if o.result in ("won", "lost")]

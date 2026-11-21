@@ -8,6 +8,7 @@ from decimal import Decimal
 from pathlib import Path
 
 import pytest
+from proving_helpers import as_before_the_forward_excess, outcomes_before_the_forward_return
 
 from prometheus.agents.account_manager.intent import TradeIntent
 from prometheus.common.work_order import WorkOrder
@@ -63,7 +64,8 @@ def test_the_walk_over_the_cached_research_is_the_saved_run_and_the_same_twice(s
     first = run(store)
     assert first.status == "finished" and [(d.day, d.status) for d in first.decision_days] == [(d.day, d.status) for d in SAVED.decision_days]
     assert [(o.key, o.result, o.return_pct) for o in first.outcomes] == [(o.key, o.result, o.return_pct) for o in SAVED.outcomes]
-    assert first.stats == SAVED.stats and [p.equity for p in first.equity] == [p.equity for p in SAVED.equity]
+    assert as_before_the_forward_excess(first.stats) == as_before_the_forward_excess(SAVED.stats) and [p.equity for p in first.equity] == [p.equity for p in SAVED.equity]      # the saved run (made before the forward excess) is reproduced in everything it recorded
+    assert outcomes_before_the_forward_return(first) == outcomes_before_the_forward_return(SAVED) and SAVED.outcomes[0].forward == [] and len(first.outcomes[0].forward) == 4      # E8: old records are followed exactly as before; only the new `forward` block is added
     assert first.coverage["timing"]["cached_days"] == len(first.decision_days)
     monkeypatch.setattr(engine, "engine_settings", lambda: {"parallel_days": 1, "retry_429": 0})
     second = run(store)

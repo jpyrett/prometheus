@@ -282,10 +282,10 @@ def test_a_press_release_counts_for_less_than_an_article_in_the_return():
 
 # ---------------------------------------------------------------- the findings about the claims themselves
 
-def test_the_same_producer_as_the_advisor_is_a_warning_for_a_person():
+def test_the_same_producer_as_the_advisor_is_a_warning_that_never_asks_for_a_person():   # Jacob 2026-11-21: CRITIC_MODEL is openai/gpt-oss-120b, like the Advisor; asking for a person would deny every review
     r, _ = Setup().run(ReviewerModel(), independent=False, critic_model="openai/gpt-oss-120b")
     [f] = [f for f in r.findings if f.code == "same_model_family"]
-    assert f.requires_human and "openai/gpt-oss-120b" in f.message
+    assert f.severity == "warning" and not f.requires_human and "openai/gpt-oss-120b" in f.message
     assert "same_model_family" not in codes(Setup().run(ReviewerModel(), independent=None)[0]) and "same_model_family" not in codes(Setup().run(ReviewerModel())[0])
 
 

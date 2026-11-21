@@ -10,6 +10,7 @@ the model worded its quotes. So there are two captures of PG, `PG.json` (neutral
 What is asked of each: does the symbol score as a recommendation, and does the record carry everything a Critic needs to judge it?
 """
 import json
+import tempfile
 from datetime import date
 from pathlib import Path
 
@@ -40,12 +41,31 @@ class RecordedClerk:
         return order
 
 
-def replay(name: str, plan_reply=None):
-    """The step on the captured inputs. `name` is the fixture (SNDK, PG, PG_open); `plan_reply` replaces the model's plan reply (the thesis replies stay)."""
+_RECORDED = tempfile.TemporaryDirectory(prefix="advisor_recorded_plan_")      # removed when the test run ends
+
+
+def recorded_plan_config() -> Path:
+    """The Advisor's settings with the TWO EXIT CONVENTIONS OF CONFIG VERSION 3 switched off (`trade.min_reward_to_risk` 0 and no `trailing_families`: the plan of config version 2, the target by the family's edge alone). The recorded model replies of the captures were
+    written when the digest the model reads held THAT plan, and its thesis may name the target; the program's number check refuses a thesis that names a number the record does not have. So `replay` (and every test that builds on it: the Critic's, the Trader's,
+    the Account Manager's) runs a recorded reply with the plan the reply was written for, the settings of one run changed and nothing else, and the target the tests pin (PG: 168.3783) is that plan's. The new plan is tested on the same captures in
+    `tests/test_trade_plan_real.py` and by `replay(name, config_path=REPOSITORY_CONFIG)` below. A new capture (`scripts/capture_advisor_fixture.py`, paid) would make this unnecessary."""
+    path = Path(_RECORDED.name) / "advisor_v1_recorded_plan.json"
+    if not path.exists():
+        settings = json.loads((REPO_ROOT / "configs" / "advisor_v1.json").read_text(encoding="utf-8"))
+        settings["trade"] = {**settings["trade"], "min_reward_to_risk": 0, "trailing_families": []}
+        path.write_text(json.dumps(settings), encoding="utf-8")
+    return path
+
+
+REPOSITORY_CONFIG = REPO_ROOT / "configs" / "advisor_v1.json"      # the Advisor's own settings: pass it to `replay` for the plan of the current config
+
+
+def replay(name: str, plan_reply=None, config_path=None):
+    """The step on the captured inputs. `name` is the fixture (SNDK, PG, PG_open); `plan_reply` replaces the model's plan reply (the thesis replies stay); `config_path` the Advisor's settings: when left out, the plan the recorded replies were written for (`recorded_plan_config`); `REPOSITORY_CONFIG` is the current one."""
     fx = json.loads((FIXTURES / f"{name}.json").read_text(encoding="utf-8"))
     order = wo.WorkOrder.model_validate(fx["order"])
     replies = fx["replies"] if plan_reply is None else [plan_reply, *(r for r in fx["replies"] if '"theses"' in r)]
-    advisor = Advisor(model=Scripted(*replies), clerk=RecordedClerk(fx["metrics"]), ledger=MemoryLedger())
+    advisor = Advisor(model=Scripted(*replies), clerk=RecordedClerk(fx["metrics"]), ledger=MemoryLedger(), config_path=config_path or recorded_plan_config())
     advisor.generate_recommendations(order, "funds", date.fromisoformat(fx["today"]))      # the Advisor is given NO portfolio (entry 105). The captures were made with the sample portfolio (MSFT, TSLA, GM); replayed without it the GM `add` and the two `hold` candidates are gone (see `test_the_sample_portfolios_holdings_are_not_in_the_run_any_more`)
     return order, fx
 
@@ -184,7 +204,20 @@ def test_pg_in_the_other_capture_is_a_recommendation_and_the_critic_finds_it_com
     families = {f["family"]: f for f in record["families"]}
     assert families["conviction"]["passed"] and families["trend"]["computable"] and not families["trend"]["passed"]
     t = record["trade"]
+    assert t["target_price"] == 168.3783      # the plan the recorded thesis was written for (`recorded_plan_config`)
     assert t["entry_mid"] == 167.1 and t["stop_price"] == pytest.approx(t["entry_mid"] - t["stop_distance"], abs=0.01) and not SIZE_FIELDS & set(t)
+
+
+def test_the_same_capture_with_the_current_exit_plan_pays_two_for_one_and_its_recorded_thesis_is_refused_for_the_old_target():
+    """Advisor config version 3 on the PG_open capture (`replay(..., config_path=REPOSITORY_CONFIG)`): the conviction plan's target is the entry mid plus 2 x the stop distance, not the edge's 168.3783 the tests pin with the plan the replies were written for, and the real
+    model's recorded thesis, which names 168.3783, is refused by the program's number check, which is why a replay of a recorded reply uses the plan it was written for (`recorded_plan_config`)."""
+    order, _ = replay("PG_open", config_path=REPOSITORY_CONFIG)
+    record = next(r for r in order.recommendations if r["symbol"] == "PG")
+    Recommendation.model_validate(record)
+    t = record["trade"]
+    assert t["family"] == "conviction" and t["trailing"] is False and t["trail_distance"] is None and t["target_price"] == round(t["entry_mid"] + 2 * t["stop_distance"], 4) and t["target_price"] > 168.3783
+    assert record["thesis"]["thesis"] is None and "168.3783" in record["thesis"]["thesis_error"]
+    assert record["audit"]["config_version"] == "3"
 
 
 def test_a_dilution_passage_of_the_10q_does_not_turn_any_family_of_pg_bearish(pg_open):

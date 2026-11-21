@@ -5,6 +5,7 @@
     config.clarify.max_questions            # 3: the Ask-mode questions about how much to buy (entry 85)
     config.direct.valid_minutes             # 30: how long the price of a trade the user named stays good (entry 87)
     config.missing.max_prompts              # 5: the most Ask-mode questions about stocks the Data Clerk did not find (entry 102)
+    config.orders.watch_seconds             # 60: how often the web server's watcher checks the waiting limit orders while the market is open (entry 140)
 
 Every threshold of the Account Manager's sizing is in that file and nowhere else. There is no size limit of the user's any more (design choices entry 91: the only check is that the funds cover the order). A model never
 chooses a threshold and the code never writes one. `extra="forbid"` means a typo in the JSON fails when the file is loaded, instead of being ignored while the code uses a default (the same rule as the Critic's and the
@@ -53,6 +54,10 @@ class Neutral(_Section):
     valid_minutes: int = Field(ge=1, le=240)         # a neutral recommendation has no review and so no `valid_until_utc` of the Critic's: the price the Account Manager asked of the Data Clerk is good for this long (entry 91)
 
 
+class Orders(_Section):
+    watch_seconds: int = Field(ge=5, le=3600)        # how often the watcher in the web server quotes the symbols of the waiting limit orders, DURING the regular session only (entry 140, W5): one Finnhub quote call for all of them, a convention of 60 seconds
+
+
 class AccountManagerConfig(_Section):
     config_version: str = Field(min_length=1)
     sizing: Sizing
@@ -60,6 +65,7 @@ class AccountManagerConfig(_Section):
     missing: Missing
     direct: Direct
     neutral: Neutral
+    orders: Orders
 
 
 @functools.cache

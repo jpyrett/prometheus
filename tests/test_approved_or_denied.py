@@ -113,7 +113,7 @@ def test_the_critics_feedback_on_a_recommendation_has_no_second_mark_and_no_esca
     out = decisions.decide_trades(reviewed(), BOB, AUTO, never_asked, MOMENT, "auto", None, None)
     new = next(r for r in out.recommendations if r["symbol"] == "XOM")["critic"]
     assert new["decision"]["will_trade"] == "yes_auto" and "escalated" not in new["decision"] and new["decision"]["reason"].startswith("approved by the Critic (score 86)")
-    assert feedback.FORMULA.endswith("no finding that asks for a person to look")
+    assert feedback.FORMULA.endswith("or a finding that asks for a person to look")      # Critic v3 (was "no finding that asks for a person to look"): the score has no mark; the REAL capture above is old and still holds `approve_min_score`
 
 
 # ---------------------------------------------------------------- Part C: the Advisor and the Critic never touch the holdings (entry 105)

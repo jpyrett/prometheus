@@ -170,8 +170,8 @@ def test_a_dollar_amount_is_not_a_number_of_shares_the_real_model_reads_it_as_a_
     typed = "Buy $5,000 of MSFT"
     intent = it.parse_intent(real_form(typed), typed)
     assert intent.action == "order" and [(o.side, o.symbol, o.shares) for o in intent.orders] == [("buy", "MSFT", None)] and intent.budget == 5000 and intent.said_how_much()       # design choices entry 98: no recommendation
-    with pytest.raises(ValueError, match="5,000 shares of MSFT is not what you typed"):
-        it.parse_intent(form(orders=[{"side": "buy", "symbol": "MSFT", "shares": 5000}]), typed)                          # even a model that said "order" cannot make the dollars shares
+    wrong = it.parse_intent(form(orders=[{"side": "buy", "symbol": "MSFT", "shares": 5000}]), typed)                       # AMENDED (entry 138): a model that said "order" with 5000 SHARES for "$5,000 of MSFT" was refused; the code's kind wins now: the $ makes it dollars
+    assert [(o.shares, o.dollars) for o in wrong.orders] == [(None, Decimal("5000"))] and "is money" in wrong.corrected[0]
 
 
 def test_a_request_for_recommendations_is_still_a_request_for_recommendations():
@@ -197,7 +197,7 @@ def test_the_account_manager_reads_a_company_named_order_with_one_call_of_the_mo
     (BUY_COMPANY, {"orders": [{"side": "buy", "symbol": "Microsoft", "shares": 50}]}, "not a ticker in capitals: a company's name goes in company"),     # a name in the ticker's place: the model is told where it goes
     (BUY_COMPANY, {"orders": [{"side": "buy", "company": "MSFT", "shares": 50}]}, "is a ticker: a ticker goes in symbol"),                    # a ticker in the name's place
     (BUY_COMPANY, {"orders": [{"side": "buy", "symbol": "MSFT", "company": "Microsoft", "shares": 50}]}, "orders must be a list"),           # both ways of naming one stock
-    ("Buy $50 of Microsoft", {"orders": [{"side": "buy", "company": "Microsoft", "shares": 50}]}, "50 shares of Microsoft is not what you typed"),
+    # ("Buy $50 of Microsoft" with the model's 50 SHARES was refused here; since entry 138 the $ makes it dollars and the reading is corrected: tests/test_request_numbers.py)
     ("Buy 50.5 shares of MSFT", {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 50}]}, "50 shares of MSFT is not what you typed"),     # AMENDED (entry 110): "Buy 50.5 shares of MSFT" is an order for 50.5 shares now (tests/test_fractional_direct_order.py); what is refused here is the model's 50, which is not what was typed
     ("Please purchase twenty-five shares of MSFT", {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 5}]}, "5 shares of MSFT is not what you typed"),    # "five" is the end of "twenty-five", not the number
     ("Buy 50 shares of MSFT and sell 10 shares of TSLA", {"orders": [{"side": "buy", "symbol": "MSFT", "shares": 10}, {"side": "sell", "symbol": "TSLA", "shares": 50}]},

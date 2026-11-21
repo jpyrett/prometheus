@@ -82,7 +82,8 @@ def system_prompt(branching: int, only_green: bool = False, fill: str | None = N
 
 def user_message(problem, node, rejected: list[str]) -> str:
     """The problem, the plan so far and what was rejected. Every figure is calculated by code from the quotes and the portfolio."""
-    lines = [f"Goal: buy {problem.shares} share(s) of {problem.target} at ${problem.price:,.2f} each = ${problem.cost:,.2f}. Free settled cash (spent first): ${problem.cash:,.2f}. "
+    others = "".join(f" and {n} share(s) of {x} at ${p:,.2f} each" for x, n, p, _ in problem.also)      # entry 142, R10: the other purchases of the same run, paid for by the same plan (none of these stocks may be sold)
+    lines = [f"Goal: buy {problem.shares} share(s) of {problem.target} at ${problem.price:,.2f} each{others} = ${problem.cost:,.2f}. Free settled cash (spent first): ${problem.cash:,.2f}. "
              f"Money to raise: ${problem.need:,.2f}." + (" Only holdings that show a profit may be sold." if problem.only_green else "") + (" One share of every holding is always kept." if problem.never_liquidate else "")
              + (f" The cash left after the purchase buys as many shares of {problem.fill} (${problem.fill_price:,.2f} each) as it can, automatically; sell no more shares than the shortfall needs."
                 if problem.fill else ""), "", "Holdings (symbol, shares held, sellable now, current price, cost basis per share, gain or loss per share, and whether it can raise the shortfall alone):"]

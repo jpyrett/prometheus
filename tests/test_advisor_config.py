@@ -21,6 +21,11 @@ def edited(tmp_path, change):
     (lambda d: d["families"]["trend"].update(horizon="soon"), "horizon"),
     (lambda d: d["regime"]["multipliers"]["trend"].pop("stress"), "has no value for stress"),
     (lambda d: d["trade"]["stop_atr"].pop("theme"), "stop_atr has no value for theme"),
+    (lambda d: d["trade"].pop("min_reward_to_risk"), "min_reward_to_risk"),                           # Advisor config version 3's two exit conventions are required, and checked
+    (lambda d: d["trade"].update(min_reward_to_risk=-1), "min_reward_to_risk"),
+    (lambda d: d["trade"].pop("trailing_families"), "trailing_families"),
+    (lambda d: d["trade"].update(trailing_families=["trend", "trend"]), "each strategy family once"),
+    (lambda d: d["trade"].update(trailing_families=["astrology"]), "each strategy family once"),
     (lambda d: d["quality"]["checks"][0].update(op="~"), "op"),
     (lambda d: d["quality"]["checks"][0].update(factor=0), "factor"),
     (lambda d: d["sleeves"].update(weekly={"sleeve": "x", "top_k": 1, "eligible": [], "veto_only": []}), "not a case"),

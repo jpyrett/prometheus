@@ -14,9 +14,9 @@ from prometheus.application.session import NODE_WORDS
 from prometheus.application.web import views
 from prometheus.application.web.runs import Run
 
-AGENT_OF_NODE = {"account_manager": "account_manager", "data_clerk": "data_clerk", "advisor": "advisor", "critic": "critic", "account_manager_decision": "account_manager", "account_manager_direct": "account_manager", "trader": "trader"}
+AGENT_OF_NODE = {"account_manager": "account_manager", "data_clerk": "data_clerk", "advisor": "advisor", "critic": "critic", "account_manager_decision": "account_manager", "account_manager_direct": "account_manager", "account_manager_funds": "account_manager", "trader": "trader"}
 AGENT_PREFIXES = ("the Account Manager ", "the Data Clerk ", "the Advisor ", "the Critic ", "the Trader ")      # the page shows the agent in its own column
-LEVEL_OF_STATUS = {"traded": "good", "looked": "info", "no_trade": "warn", "stopped": "warn", "failed": "error"}   # the colour of the feed's last line (`Emitter.finished`)
+LEVEL_OF_STATUS = {"traded": "good", "waiting": "good", "looked": "info", "no_trade": "warn", "stopped": "warn", "failed": "error"}   # the colour of the feed's last line (`Emitter.finished`)
 NOT_PLACED = "Nothing was placed: the order could not be made as you typed it."
 NOT_PLACED_HINT = CLARIFY       # entry 102: the run's last message asks the user to clarify the request and send it again, in the words the terminal session uses too (`direct.CLARIFY`)
 

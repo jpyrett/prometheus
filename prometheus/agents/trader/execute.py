@@ -251,7 +251,10 @@ def code_summary(ctx: Context, trades: list[Trade]) -> str:
             clause += f" ({t.reject_code})"
         parts.append(clause)
     cash = f"Cash {money(ctx.start.cash_avail)} to {money(ctx.after.cash_avail)}." if ctx.after is not None else f"Cash {money(ctx.start.cash_avail)} at the start; the account could not be read afterwards."
-    return f"{ctx.mode.capitalize()} run: " + ("; ".join(parts) if parts else "no trades to place") + f". {cash}"
+    by_id = {t.trade_id: t for t in trades}
+    stay = [t for t in trades if t.kind == "funding" and t.status == "filled" and t.fill is not None and (by_id.get(t.funds_for) is not None and by_id[t.funds_for].status != "filled")]      # entry 143, B1: sales that really filled and whose purchase was then refused
+    kept = (" The sales stay (they were booked): " + "; ".join(f"{t.trade_id} sell {sh.text(t.shares)} {t.symbol} at {t.fill.price:,.4f} ({money(t.fill.amount)})" for t in stay) + ".") if stay else ""
+    return f"{ctx.mode.capitalize()} run: " + ("; ".join(parts) if parts else "no trades to place") + f". {cash}" + kept
 
 
 # ---------------------------------------------------------------- the steps
@@ -436,9 +439,10 @@ def _consent(ctx: Context, funding, target: Trade, legs: list[dict], approver, f
         return
     price = ctx.venue.price_of(ctx.prices, target.symbol) or target.ref_price
     paid = price_scale(price * (1 + config.costs.slippage_bps / 10000))
+    basket = [t for t in fresh if t.status == "new" and t.side == "buy" and t.symbol in (funding.get("basket") or ())] if isinstance(funding, dict) and funding.get("basket") else []      # the purchases of the run the ONE plan pays for (entry 142, R10)
     cost = trade_amount(target.shares, paid) + config.costs.commission_per_order
     question = broker.preview(target, paid)
-    if question.approved and question.shares >= target.shares:
+    if not basket and question.approved and question.shares >= target.shares:      # one purchase: does the cash cover it? (a basket's shortfall is the Account Manager's own figure, made from the cash of the whole run)
         run.funding.note = "the cash covers the purchase: the funding sells are not used"
         return
     if not question.approved and question.code != "insufficient_cash":
@@ -447,8 +451,10 @@ def _consent(ctx: Context, funding, target: Trade, legs: list[dict], approver, f
     if len(fresh) + len(legs) > config.limits.max_trades:
         run.funding.note = f"the funding sells would take the run over limits.max_trades ({config.limits.max_trades}): they are not used"
         return
-    if config.funding.require_user_approval:
-        card = funding_card(ctx, target, legs, cost, question.cash_avail)
+    if isinstance(funding, dict) and funding.get("ask_user") is False:      # Auto mode with the user's own words (or the setting ALWAYS_RAISE_FUNDS): the permission to sell is theirs already, and Auto mode asks nothing (entries 104 and 142, R5)
+        run.funding.approved, run.funding.note = True, "the sells are used without asking: Auto mode, and you said to raise funds" + (" (the setting ALWAYS_RAISE_FUNDS)" if funding.get("by") == "setting" else "")
+    elif config.funding.require_user_approval:
+        card = funding_card(ctx, target, legs, cost, question.cash_avail, basket)
         answer = None
         if approver is not None:
             try:
@@ -463,21 +469,58 @@ def _consent(ctx: Context, funding, target: Trade, legs: list[dict], approver, f
         run.funding.approved, run.funding.note = True, "the funding sells are used without asking (funding.require_user_approval is false)"
     if run.funding.approved:
         broker.add(tickets.funding_trades(target, legs, config, ctx.mode))
+        if basket:      # the purchases of one funded run: the sales go first and then the purchase they are tied to, BEFORE any other purchase is placed (the model could place another first and use the cash): one trade at a time (entry 81)
+            _place_funded_first(ctx, target)
 
 
-def funding_card(ctx: Context, target: Trade, legs: list[dict], cost: Decimal, cash: Decimal | None) -> dict:
-    """What the user is asked (spec section 7): the sells, one per line (symbol, shares, about the proceeds, the gain), and the question. `cash` is what the Account Manager said the account has (None: not known)."""
-    held, lines, proceeds = ctx.start, [], Decimal("0.00")
+def _place_funded_first(ctx: Context, target: Trade) -> None:
+    """The user's own sales, then the funded purchase (its funding sales are filled and booked first, `broker._fund`), placed by code before the model's loop and the sweep. Every other purchase of the run is placed after, against the cash that is then in the account."""
+    broker, run = ctx.broker, ctx.run
+    for trade in broker.tickets("sell"):
+        try:
+            broker.place(trade.trade_id, placed_by="code")
+        except Refused as error:
+            run.errors.append(f"{trade.trade_id} was not placed by the program: {error}")
+    try:
+        broker.place(target.trade_id, placed_by="code")
+    except Refused as error:
+        run.errors.append(f"{target.trade_id} was not placed by the program: {error}")
+
+
+def funding_card(ctx: Context, target: Trade, legs: list[dict], cost: Decimal, cash: Decimal | None, basket: list[Trade] | None = None) -> dict:
+    """What the user is asked (spec section 7; entry 142, R4): the plan RaiseFunds made, one sell per line (symbol, shares, price, about the proceeds, the gain or loss), the purchases it pays for, the cash before and the cash after, and the
+    question. `cash` is what the Account Manager said the account has (None: not known); `basket` the purchases of the run that the one plan pays for (None: the target alone). The `legs` and `buys` are also in the card as records for the page."""
+    held, lines, rows, proceeds = ctx.start, [], [], Decimal("0.00")
     for leg in legs:
         price = ctx.venue.price_of(ctx.prices, leg["symbol"]) or leg["price"]
         position = held.position(leg["symbol"])
         amount = trade_amount(leg["shares"], price)                                                          # decimal, half up to the cent, the way the book works a sale (entries 111 and 112)
         gain = amount - trade_amount(leg["shares"], position.cost_basis if position else price)
         proceeds += amount
-        lines.append(f"  sell {sh.text(leg['shares'])} {leg['symbol']}: about {money(amount)}, a gain of {money(gain) if gain >= 0 else '-' + money(-gain)}")
-    text = "\n".join([f"To buy {sh.text(target.shares)} shares of {target.symbol} (about {money(cost)}) with cash of {money(ctx.start.cash_avail if cash is None else cash)}, these holdings would be sold:", *lines, f"  together about {money(proceeds)}"])
-    return {"text": text, "symbol": target.symbol, "shares": target.shares, "est_cost": cost,
-            "question": f"Sell these to pay for {sh.text(target.shares)} shares of {target.symbol} (about ${cost:,.0f})? [y/N] ", "kind": "funding"}
+        rows.append({"symbol": leg["symbol"], "shares": leg["shares"], "price": price, "amount": amount, "gain": gain})
+        lines.append(f"  sell {sh.text(leg['shares'])} {leg['symbol']} at {money(price)}: about {money(amount)}, a {'gain' if gain >= 0 else 'loss'} of {money(abs(gain))}")
+    buying = basket or [target]
+    buys, total = [], Decimal("0.00")
+    for trade in buying:
+        price = ctx.venue.price_of(ctx.prices, trade.symbol) or trade.ref_price
+        amount = trade_amount(trade.shares, price) if price else Decimal("0.00")
+        total += amount
+        buys.append({"symbol": trade.symbol, "shares": trade.shares, "price": price, "cost": amount})
+    own, own_total = [], Decimal("0.00")      # the user's own sales of the same request (entry 143, S2): placed first, so what they bring is cash before the funding sales begin
+    for trade in ctx.broker.tickets("sell"):
+        price = ctx.venue.price_of(ctx.prices, trade.symbol) or trade.ref_price
+        amount = trade_amount(trade.shares, price) if price else Decimal("0.00")
+        own_total += amount
+        own.append({"symbol": trade.symbol, "shares": trade.shares, "price": price, "amount": amount})
+    start = ctx.start.cash_avail if cash is None else cash
+    after = start + own_total + proceeds - total
+    what = " and ".join(f"{sh.text(b['shares'])} shares of {b['symbol']} (about {money(b['cost'])})" for b in buys)
+    mine = " and ".join(f"{sh.text(o['shares'])} {o['symbol']}" for o in own)
+    text = "\n".join([f"To buy {what} with cash of {money(start)}" + (f" and about {money(own_total)} from your own sale of {mine}" if own else "") + ", these holdings would be sold first:", *lines,
+                      f"  together about {money(proceeds)}; the cash after the sales and the purchase would be about {money(after)}"])
+    return {"text": text, "symbol": target.symbol, "shares": target.shares, "est_cost": total if basket else cost, "kind": "funding", "legs": rows, "buys": buys, "cash": start, "cash_after": after,
+            **({"own_sales": own, "own_sales_proceeds": own_total} if own else {}),
+            "question": "Sell these to pay for " + " and ".join(sh.text(b["shares"]) + " shares of " + b["symbol"] for b in buys) + f" (about ${(total if basket else cost):,.0f})? [y/N] "}
 
 
 def _outcomes(ctx: Context) -> None:

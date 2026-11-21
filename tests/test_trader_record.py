@@ -37,8 +37,8 @@ def test_a_trades_symbol_must_be_a_ticker_already_in_capitals_because_the_model_
 
 def test_the_closed_list_of_rejection_codes_is_the_specs():
     assert REJECT_CODES == ("not_permitted", "approval_expired", "price_unavailable", "price_outside_limits", "limit_not_reached", "insufficient_cash", "not_held", "not_sellable_today",
-                            "funding_failed", "not_attempted", "account_refused", "internal_error")
-    assert len(set(REJECT_CODES)) == 12
+                            "funding_failed", "not_attempted", "account_refused", "internal_error", "sales_fell_short")      # the last one is entry 143 (B1): the sales stay, the purchase is refused
+    assert len(set(REJECT_CODES)) == 13
 
 
 @pytest.mark.parametrize("code", [None, "", "no_funds", "rejected", "NOT_PERMITTED", "not_permitted ", "model_said_no", "price_unavailable;drop"])
@@ -93,12 +93,12 @@ def test_the_money_and_the_shares_of_a_fill_and_a_trade_are_decimals_a_float_is_
     assert (t.shares, t.limit_price, t.dollars) == (Decimal("0.5"), Decimal("100.5"), Decimal("1000.00")) and Trade.model_validate(t.model_dump(mode="json")) == t
 
 
-def test_an_outcome_is_open_or_closed_and_an_exit_is_a_stop_a_target_or_the_time_stop():
+def test_an_outcome_is_open_or_closed_and_an_exit_is_a_stop_a_trailing_stop_a_target_or_the_time_stop():
     assert Outcome(status="open", last_date="2026-11-30", last_close=170.0, unrealized_gain=125.6).exit_reason is None
     for bad in ({"status": "done"}, {"status": "closed", "exit_reason": "tired"}):
         with pytest.raises(ValidationError):
             Outcome(**bad)
-    assert {Outcome(status="closed", exit_reason=r).exit_reason for r in record.EXIT_REASONS} == {"stop", "target", "time_stop"}
+    assert {Outcome(status="closed", exit_reason=r).exit_reason for r in record.EXIT_REASONS} == {"stop", "trailing_stop", "target", "time_stop"}      # `trailing_stop` since the trend family's plan trails (design/advisor_exit_plan_spec.md E4)
 
 
 # ---------------------------------------------------------------- runs

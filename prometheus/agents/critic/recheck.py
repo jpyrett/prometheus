@@ -13,14 +13,20 @@ The three requests (one of each for ALL the records of a review, as the Advisor 
     fetch_quote            `DataClerk.request_quotes`       the current price of every recommended symbol
     verify_data            `DataClerk.request_verification` the cited chunks and evidence items read again, the symbols looked up, the newest stored text
 
-A request that fails is a FINDING, not a crash and not a pass (spec P3, P7): its results are simply empty, and the checks that needed them say so.
+Version 3 added a fourth, for the analysts' recommendation counts (`DataClerk.request_analyst_ratings`: Finnhub's `/stock/recommendation`, read point in time). A request that fails is a FINDING, not a crash and not a pass
+(spec P3, P7): its results are simply empty, and the checks that needed them say so (an analyst answer that is missing only takes the dimension `analysts` out of the average).
+
+    fetch_analyst_ratings  `DataClerk.request_analyst_ratings`  the analysts' monthly counts of every recommended symbol
+
+THE ACCURACY FINDINGS (Critic v3, rule V7: no nitpicking on one financial metric). `data_mismatch` and `data_unverified` about ONE metric are WARNINGS (the accuracy dimension still scores them). The record is a FAULT, `data_unreliable`,
+only when the PRICE itself (`last_close`) does not match or cannot be had, when the share of values that match is under `accuracy.min_match_rate` (the record as a whole cannot be trusted), or when nothing could be compared at all.
 """
 from dataclasses import dataclass, field
 from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
 from prometheus.agents.advisor.record import Recommendation
-from prometheus.agents.critic.chart import CHART_METRICS, TREND_METRICS
+from prometheus.agents.critic.chart import CHART_METRICS, PERFORMANCE_METRICS, TREND_METRICS
 from prometheus.agents.critic.claims import Claim
 from prometheus.agents.critic.common import blocker, metric_value, quote_in_text, warning
 from prometheus.agents.critic.config import Accuracy, CriticConfig
@@ -32,8 +38,9 @@ from prometheus.common.work_order import MAX_QUOTE_SYMBOLS, MAX_VERIFY_CHUNKS, W
 
 REQUESTER = "critic"
 DECISIVE = ("last_close", "atr_14")
+PRICE = "last_close"      # the one metric whose mismatch makes the record unreliable by itself (rule V7)
 ALWAYS = ("sma_50", "vol_63d_ann", "beta_63d", "max_drawdown_63d", "atr_pct", "ret_21d", "earnings_yield", "negative_equity")
-OWN = ("sma_126", "high_126d", "low_126d", "eps", "ps_ratio", "high_52w", "pct_of_52w_high", *CHART_METRICS)   # not on the record (nothing to compare): the Critic's own judgements of risk, value and chart read them
+OWN = ("sma_126", "high_126d", "low_126d", "eps", "ps_ratio", "high_52w", "pct_of_52w_high", *CHART_METRICS, *PERFORMANCE_METRICS)   # not on the record (nothing to compare): the Critic's own judgements of risk, value, chart and performance read them
 ASKED_ONLY = TREND_METRICS      # asked for with the review but never compared with the record's: the Critic's own reading (rule C5), which must change no accuracy number of any review (the share of values that matched)
 BLEND_GROUPS = ("performance", "historical", "filings")
 
@@ -60,6 +67,8 @@ class Gathered:
     metric_orders: dict[str, str] = field(default_factory=dict)            # record date -> the request id
     quote_order: str | None = None
     verify_orders: list[str] = field(default_factory=list)
+    analysts: dict[str, list[dict]] = field(default_factory=dict)          # symbol -> the analysts' monthly counts the day could know, newest first (Critic v3)
+    analysts_order: str | None = None
     errors: list[str] = field(default_factory=list)
     verified: bool = False                                                 # at least one verify order was answered
 
@@ -102,6 +111,14 @@ def gather(clerk, order: WorkOrder, items: list[tuple[Recommendation, str, list[
     got.quotes = dict(quote_order.data.quotes) if quote_order.data else {}
     if quote_order.status == "data_failed":
         got.errors.extend(f"quotes: {e}" for e in quote_order.errors)
+
+    if items:      # the analysts' counts: one request for every symbol, read as of the latest record day (point in time); a failure leaves the dimension out of the average, it denies nothing
+        ratings_order = new_work_order("analyst ratings to review the recommendations", requester=REQUESTER, action_type="fetch_analyst_ratings", subject=recommended[:MAX_QUOTE_SYMBOLS], ratings={"store": config.analysts.store})
+        _attempt("analysts", got.errors, lambda: clerk.request_analyst_ratings(ratings_order, max(date.fromisoformat(day) for _, day, _ in items)))
+        got.analysts_order = ratings_order.request_id
+        got.analysts = {symbol: list(result.get("periods") or []) for symbol, result in (ratings_order.data.analysts if ratings_order.data else {}).items()}
+        if ratings_order.status == "data_failed":
+            got.errors.extend(f"analysts: {e}" for e in ratings_order.errors)
 
     chunks = list(dict.fromkeys(c.chunk_id for _, _, claims in items for c in claims if c.chunk_id and c.kind != "evidence"))
     evidence: dict[str, list[str]] = {}
@@ -163,10 +180,12 @@ def _same(old, new, kind: str, config: Accuracy) -> tuple[bool, float | None]:
 
 def compare(rec: Recommendation, fetched: dict | None, names: list[str], decisive: set[str], config: Accuracy) -> tuple[list[Recheck], list[Finding], float | None]:
     """Compare every named value that the record holds with the one the Data Clerk just calculated. Returns (the comparisons, the findings, the share that matched or None when nothing could be
-    compared). See the spec's table for the findings: `data_unverified` and `data_mismatch` are blockers, `bars_changed` and `statements_changed` are warnings."""
+    compared). The findings (Critic v3, rule V7): `data_unreliable` (a BLOCKER, a fault: it denies alone) when the Data Clerk gave no numbers, none could be compared, the PRICE (`last_close`) does not match or could not
+    be had, or the share that matched is under `min_match_rate`; `data_mismatch` and `data_unverified` (WARNINGS) for a decisive value of any other metric that differs or could not be had: one metric is not a reason to deny.
+    `bars_changed` and `statements_changed` are warnings."""
     findings: list[Finding] = []
     if not fetched:
-        findings.append(blocker("accuracy", "data_unverified", f"The Data Clerk returned no numbers for {rec.symbol}, so none of the record's values could be checked."))
+        findings.append(blocker("accuracy", "data_unreliable", f"The Data Clerk returned no numbers for {rec.symbol}, so none of the record's values could be checked."))
         return [], findings, None
     rechecks, changed = [], set()
     for name in names:
@@ -186,16 +205,24 @@ def compare(rec: Recommendation, fetched: dict | None, names: list[str], decisiv
         match, tolerance = _same(old["value"], new["value"], kind, config)
         rechecks.append(Recheck(name=name, kind=kind, recorded=old["value"], fetched=new["value"], tolerance=tolerance, match=match, decisive=name in decisive))
     if not rechecks:
-        findings.append(blocker("accuracy", "data_unverified", f"None of {rec.symbol}'s recorded values could be compared with a new calculation."))
+        findings.append(blocker("accuracy", "data_unreliable", f"None of {rec.symbol}'s recorded values could be compared with a new calculation."))
         return rechecks, findings, None
     rate = sum(r.match for r in rechecks) / len(rechecks)
     bad = [r for r in rechecks if r.decisive and not r.match]
-    if bad:
-        findings.append(blocker("accuracy", "data_mismatch", "A number the recommendation was scored from does not match a new calculation: " +
-                                "; ".join(f"{r.name} was {_fmt(r.recorded)}, now {_fmt(r.fetched)}" for r in bad[:4]), value=[r.name for r in bad], threshold="the tolerance of its kind"))
+    price = [r for r in bad if r.name == PRICE]
+    other = [r for r in bad if r.name != PRICE]
+    said = lambda rs: "; ".join(f"{r.name} was {_fmt(r.recorded)}, " + (f"now {_fmt(r.fetched)}" if r.fetched is not None else "could not be calculated again") for r in rs[:4])
+    if price:
+        findings.append(blocker("accuracy", "data_unreliable", f"The price the recommendation was scored from does not match a new calculation, so the record cannot be trusted: {said(price)}", value=[r.name for r in price], threshold="the tolerance of its kind"))
     elif rate < config.min_match_rate:
-        findings.append(blocker("accuracy", "data_mismatch", f"Only {rate:.0%} of the recorded values match a new calculation (the floor is {config.min_match_rate:.0%}): " +
+        findings.append(blocker("accuracy", "data_unreliable", f"Only {rate:.0%} of the recorded values match a new calculation (the floor is {config.min_match_rate:.0%}), so the record as a whole cannot be trusted: " +
                                 ", ".join(r.name for r in rechecks if not r.match)[:200], value=rate, threshold=config.min_match_rate))
+    if other:     # one financial metric that differs is a warning, not a denial (rule V7): the accuracy score still counts it
+        mismatched, missing = [r for r in other if r.fetched is not None], [r for r in other if r.fetched is None]
+        if mismatched:
+            findings.append(warning("accuracy", "data_mismatch", "A number the recommendation was scored from does not match a new calculation: " + said(mismatched), value=[r.name for r in mismatched], threshold="the tolerance of its kind"))
+        if missing:
+            findings.append(warning("accuracy", "data_unverified", "A number the recommendation was scored from could not be calculated again: " + said(missing), value=[r.name for r in missing]))
     if "bars" in changed:
         findings.append(warning("accuracy", "bars_changed", "The stored price bars are not the ones the record was made from (another range of dates): a looser tolerance was used."))
     if "filing" in changed:

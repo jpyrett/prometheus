@@ -241,6 +241,72 @@ ALTER TABLE trading.trades
 ALTER TABLE trading.recommendation_decisions
   ALTER COLUMN shares TYPE numeric(18, 6);
 
+-- Design choices entry 140 (Jacob, 2026-11-21): a direct order whose limit price is not met WAITS as a DAY order on the paper broker, with its cash (a purchase) or its shares (a sale) SET ASIDE. One row for each order.
+-- `reserved_cash` and `reserved_shares` are what the order holds while its status is `open`: the account's AVAILABLE cash is the cash less the reserved cash of its open orders, and the shares it may sell are the
+-- shares held less the reserved shares (AccountStore.available_cash / available_shares, the one door every reader of what may be spent or sold goes through). A purchase holds its most possible cost (the shares typed
+-- times the limit, or the dollars of an order in dollars), a sale holds its shares. An order is placed, filled, expired and cancelled in ONE transaction that locks the account row first (the same lock every booking takes),
+-- so a placement cannot race a fill or another placement. This is additive: CREATE TABLE IF NOT EXISTS keeps every table and account.
+CREATE TABLE IF NOT EXISTS trading.open_orders (
+  order_id        bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  account_id      bigint NOT NULL REFERENCES trading.accounts (account_id) ON DELETE CASCADE,
+  request_id      text NOT NULL CHECK (char_length(request_id) BETWEEN 1 AND 80),
+  record_id       text NOT NULL CHECK (char_length(record_id) BETWEEN 1 AND 80),
+  symbol          text NOT NULL CHECK (symbol ~ '^[A-Z0-9.-]{1,10}$'),
+  company         text CHECK (company IS NULL OR char_length(company) BETWEEN 1 AND 200),
+  side            text NOT NULL CHECK (side IN ('buy', 'sell')),
+  shares          numeric(18, 6) CHECK (shares IS NULL OR shares > 0),
+  dollars         numeric(14, 2) CHECK (dollars IS NULL OR dollars > 0),
+  limit_price     numeric(14, 4) NOT NULL CHECK (limit_price > 0),
+  reserved_cash   numeric(14, 2) NOT NULL DEFAULT 0 CHECK (reserved_cash >= 0),
+  reserved_shares numeric(18, 6) NOT NULL DEFAULT 0 CHECK (reserved_shares >= 0),
+  request         text NOT NULL,
+  placed_at       timestamptz NOT NULL DEFAULT now(),
+  expires_at      timestamptz NOT NULL,
+  status          text NOT NULL DEFAULT 'open' CHECK (status IN ('open', 'filled', 'expired', 'cancelled', 'rejected')),
+  closed_at       timestamptz,
+  reason          text,
+  trade_id        bigint,
+  raise_funds_by  text,
+  CONSTRAINT open_order_shares_or_dollars CHECK ((shares IS NOT NULL) <> (dollars IS NOT NULL)),
+  CONSTRAINT open_order_holds_one_thing CHECK ((side = 'buy' AND reserved_shares = 0 AND (reserved_cash > 0 OR raise_funds_by IS NOT NULL)) OR (side = 'sell' AND reserved_cash = 0 AND reserved_shares > 0 AND dollars IS NULL AND raise_funds_by IS NULL)),
+  CONSTRAINT open_order_closed_has_a_time CHECK (status = 'open' OR closed_at IS NOT NULL),
+  CONSTRAINT open_order_one_per_record UNIQUE (account_id, record_id)
+);
+
+-- Design choices entry 143 (a waiting PURCHASE whose cash is short, with the user's permission to raise funds): `raise_funds_by` says how the user permitted selling holdings to pay for it WHEN THE PRICE IS REACHED ('words': their own words, 'setting':
+-- ALWAYS_RAISE_FUNDS); nothing is sold while it waits. Such an order sets aside only the cash that is free (it may be none), so a purchase may hold 0 when `raise_funds_by` is set. For a book that already has the table (entry 140), additive and
+-- safe to run again: the column is added if it is missing and the one constraint on what an order holds is replaced.
+ALTER TABLE trading.open_orders ADD COLUMN IF NOT EXISTS raise_funds_by text;
+ALTER TABLE trading.open_orders DROP CONSTRAINT IF EXISTS open_order_raise_funds_by_known;
+ALTER TABLE trading.open_orders ADD CONSTRAINT open_order_raise_funds_by_known CHECK (raise_funds_by IS NULL OR raise_funds_by IN ('words', 'setting'));
+ALTER TABLE trading.open_orders DROP CONSTRAINT IF EXISTS open_order_holds_one_thing;
+ALTER TABLE trading.open_orders ADD CONSTRAINT open_order_holds_one_thing CHECK ((side = 'buy' AND reserved_shares = 0 AND (reserved_cash > 0 OR raise_funds_by IS NOT NULL)) OR (side = 'sell' AND reserved_cash = 0 AND reserved_shares > 0 AND dollars IS NULL AND raise_funds_by IS NULL));
+
+COMMENT ON TABLE trading.open_orders IS
+  'A direct order that waits for its limit price (a DAY order, paper broker only). While status is open it SETS ASIDE reserved_cash (a purchase) or reserved_shares (a sale): that money and those shares are not available to anything else.';
+
+CREATE INDEX IF NOT EXISTS open_orders_open ON trading.open_orders (account_id) WHERE status = 'open';
+
+-- The watcher in the web server checks the orders of EVERY account, and the application role sees only the account it names (row-level security). These two functions are the two questions it may ask across accounts: which
+-- accounts have an open order, and which account an order belongs to (a cancel by order number). Neither returns anything else.
+CREATE OR REPLACE FUNCTION trading.accounts_with_open_orders() RETURNS TABLE (account_id bigint)
+LANGUAGE sql
+SECURITY DEFINER
+SET search_path = trading, pg_temp
+STABLE
+AS $$
+  SELECT DISTINCT o.account_id FROM open_orders o WHERE o.status = 'open' ORDER BY o.account_id
+$$;
+
+CREATE OR REPLACE FUNCTION trading.account_of_open_order(p_order_id bigint) RETURNS bigint
+LANGUAGE sql
+SECURITY DEFINER
+SET search_path = trading, pg_temp
+STABLE
+AS $$
+  SELECT o.account_id FROM open_orders o WHERE o.order_id = p_order_id
+$$;
+
 CREATE OR REPLACE FUNCTION trading.create_account(
   p_display_name text,
   p_risk_tolerance text,
@@ -316,6 +382,11 @@ CREATE POLICY trade_isolation ON trading.trades
   USING (account_id = trading.current_account_id())
   WITH CHECK (account_id = trading.current_account_id());
 
+DROP POLICY IF EXISTS open_order_isolation ON trading.open_orders;
+CREATE POLICY open_order_isolation ON trading.open_orders
+  USING (account_id = trading.current_account_id())
+  WITH CHECK (account_id = trading.current_account_id());
+
 DROP POLICY IF EXISTS decision_isolation ON trading.recommendation_decisions;
 CREATE POLICY decision_isolation ON trading.recommendation_decisions
   USING (account_id = trading.current_account_id())
@@ -329,6 +400,8 @@ ALTER TABLE trading.positions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE trading.positions FORCE ROW LEVEL SECURITY;
 ALTER TABLE trading.trades ENABLE ROW LEVEL SECURITY;
 ALTER TABLE trading.trades FORCE ROW LEVEL SECURITY;
+ALTER TABLE trading.open_orders ENABLE ROW LEVEL SECURITY;
+ALTER TABLE trading.open_orders FORCE ROW LEVEL SECURITY;
 ALTER TABLE trading.recommendation_decisions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE trading.recommendation_decisions FORCE ROW LEVEL SECURITY;
 
@@ -341,6 +414,7 @@ GRANT SELECT ON ALL TABLES IN SCHEMA trading TO prometheus_app;
 GRANT INSERT ON trading.cash_ledger, trading.trades, trading.positions, trading.recommendation_decisions TO prometheus_app;
 GRANT UPDATE, DELETE ON trading.positions TO prometheus_app;
 GRANT UPDATE ON trading.recommendation_decisions TO prometheus_app;
+GRANT INSERT, UPDATE ON trading.open_orders TO prometheus_app;
 GRANT UPDATE (
   display_name, preferred_name, email, phone, timezone, status, risk_tolerance, trade_mode,
   age, investment_horizon_years, note, updated_at

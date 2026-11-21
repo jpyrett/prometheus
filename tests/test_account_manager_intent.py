@@ -49,7 +49,7 @@ def test_a_request_that_asks_for_no_split_has_the_allocation_default_and_the_for
 
 
 def test_any_other_theme_goes_through_the_same_checks_with_a_budget_in_dollars_or_thousands():
-    for typed, budget in (("Put $5,000 into the 2 best oil companies, split it equally.", 5000), ("Buy oil, two of them, 5k, divide it evenly", 5000), ("get me 2 oil stocks for 2.5 million, even please", 2_500_000)):
+    for typed, budget in (("Put $5,000 into the 2 best oil companies, split it equally.", 5000), ("Buy oil, two of them, $5k, divide it evenly", 5000), ("get me 2 oil stocks for 2.5 million dollars, even please", 2_500_000)):      # AMENDED (entry 138): 5k and 2.5 million with no $ and no word dollars are quantities, not money
         intent = it.parse_intent(form(topic="oil", count=2, allocation="even", budget=budget), typed)
         assert (intent.topic, intent.count, intent.allocation, intent.budget) == ("oil", 2, "even", budget), typed
 

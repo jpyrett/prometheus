@@ -14,9 +14,10 @@ WHAT THE USER MAY ANSWER (Jacob, 2026-11-14: "what percentage, dollar amount to 
 Jacob: *"No. its suppose to be round-robin. Not all in one."*: nobody puts everything into the first company any more). An amount for EACH company is each company's own cap.
 
 THE MODEL PHRASES THE QUESTION AND READS THE ANSWER INTO THAT FORM. IT DOES NOTHING ELSE. CODE (this module) checks the form against what the user typed and does ALL the arithmetic:
-  * the amount must be a number the user TYPED in an answer (`intent.numbers_in`), the unit must be one their words show (a % sign or "percent"; "shares"; a $ sign or "dollars", or a bare number when they gave no
-    other unit), a percentage is above 0 and at most 100, shares are a whole number, and what is asked must not cost more than the cash: a number nobody typed, a figure above the cash or a percentage outside 0 to
-    100 is refused, with the reason, and the model asks again (at most `max_problems` times), after which the default size is shown, and the order says so;
+  * the amount must be a number the user TYPED in an answer (`intent.numbers_in`), the unit must be one their words show (design choices entry 138, Jacob's rule for every number the user types: a % sign or "percent" is a percentage;
+    a `$` before the number or the word dollars, bucks or usd after it is MONEY, read by `intent.written_amounts`, the one rule; a bare number with neither, "10" or "10 of them", is a number of SHARES, never dollars), a percentage is above 0 and at
+    most 100, shares are a whole number, and what is asked must not cost more than the cash: a number nobody typed, a figure above the cash or a percentage outside 0 to 100 is refused, with the reason, and the model asks again
+    (at most `max_problems` times), after which the default size is shown, and the order says so;
   * (design choices entry 111, M3) for a DIRECT order whose account can hold a fraction, dollars or a percentage for EACH stock buy `shares.buys(the amount, its price)`, which may have a fraction, and the purchase is an order in dollars; an answer in shares stays whole;
   * (design choices entry 112) money and shares are `Decimal`: the amount is the Decimal of the digits the model's JSON wrote (a bool and a string are refused), compared EXACTLY with the numbers the user typed (`intent.numbers_in`, Decimals too), the cost of a
     request is `trade_amount`, a percentage of the account is the exact quotient and a dollar amount for each stock is turned into shares by `shares.buys` or the exact whole-share quotient: no tolerance and no float guard;
@@ -38,7 +39,7 @@ from pydantic import BaseModel, BeforeValidator, ConfigDict, Field, PlainSeriali
 
 from prometheus.agents.account_manager import sizing
 from prometheus.agents.account_manager.config import AccountManagerConfig
-from prometheus.agents.account_manager.intent import EVEN_CUE, numbers_in
+from prometheus.agents.account_manager.intent import EVEN_CUE, NUMBER_WORDS, money_written, numbers_in, written_amounts
 from prometheus.common import shares as sh
 from prometheus.common.money import Money, canonical, cents, digits, json_number
 from prometheus.common.portfolio import trade_amount
@@ -49,7 +50,8 @@ UNITS = ("percent", "dollars", "shares", "max")
 SCOPES = ("each", "total")
 PERCENT_CUE = re.compile(r"%|\bper ?cent\b|\bpercent\b", re.I)
 SHARES_CUE = re.compile(r"\bshares?\b", re.I)
-DOLLARS_CUE = re.compile(r"\$|\bdollars?\b|\busd\b|\bbucks?\b", re.I)
+# A number written with no `$`, no word dollars, no `%` and no unit (k, thousand, million): "10", "10 shares", "10 of them", "ten" (entry 138: without a $ or the word dollars a number is a QUANTITY, a number of shares).
+BARE_NUMBER = re.compile(rf"(?<![\w$.,])(?P<n>\d[\d,]*(?:\.\d+)?|{'|'.join(NUMBER_WORDS)})(?![\w%])(?![.,]\d)(?!\s*(?:%|percent\b|per ?cent\b|k\b|thousand\b|million\b|dollars?\b|bucks?\b|usd\b))", re.I)
 MAX_CUE = re.compile(r"\b(?:as (?:much|many)|all (?:of )?(?:it|my|the|our)|everything|max(?:imum)?|the most|most (?:amount|shares?|money)|the largest|the biggest|whatever (?:you|the|is)|go all in|the limit|fully invest\w*)\b", re.I)
 ROBIN_CUE = re.compile(r"\bround[- ]?robin\b|\bin turn\b|\bone (?:share )?(?:at a time|of each)\b|\balternat\w+\b|\btake turns\b", re.I)
 YES = re.compile(r"^\s*(?:y|yes|yeah|yep|ok|okay|sure|please|do it|raise it)\b", re.I)
@@ -135,6 +137,19 @@ def _in(amount: Decimal, said: str) -> bool:
     return amount in numbers_in(said)
 
 
+def bare_numbers(said: str) -> set[Decimal]:
+    """The numbers the user's answer writes as a NUMBER OF SHARES (entry 138): written with no `$` and no word dollars (`intent.written_amounts` finds the ones that have them: one rule for the request and for the answer), no `%` and no
+    unit of thousands or millions. "10" and "10 of them" are shares; "$10", "10 dollars" and "10 bucks" are money and "10%" a percentage, and none of those is in the set. A program's reading of the user's own words."""
+    marked = [(w.start, w.end) for w in written_amounts(said)]
+    found = set()
+    for match in BARE_NUMBER.finditer(said):
+        if any(a <= match.start("n") < b for a, b in marked):
+            continue
+        word = match["n"].lower()
+        found.add(Decimal(NUMBER_WORDS[word]) if word in NUMBER_WORDS else Decimal(word.replace(",", "")))
+    return found
+
+
 def _order(purchases: list[sizing.Purchase]) -> list[sizing.Purchase]:
     return [p for _, p in sorted(enumerate(purchases), key=lambda pair: (pair[1].rank, pair[0]))]
 
@@ -184,12 +199,14 @@ def check_choice(choice: SizingChoice, said: str, purchases: list[sizing.Purchas
         if amount > 100:
             raise ValueError("a percentage of the account is above 0 and at most 100")
     elif choice.unit == "shares":
-        if not SHARES_CUE.search(said):
-            raise ValueError("the user did not give a number of shares (no 'shares' in their answer)")
+        if amount not in bare_numbers(said):
+            raise ValueError("the user did not give a number of shares: a number of shares is a number written with no $, no % and no word dollars ('10', '10 shares', '10 of them')")
         if amount != amount.to_integral_value():
             raise ValueError("shares are a whole number")
-    elif not (DOLLARS_CUE.search(said) or not (PERCENT_CUE.search(said) or SHARES_CUE.search(said))):
-        raise ValueError("the user gave percent or shares, not dollars")
+    elif amount not in money_written(said):
+        if PERCENT_CUE.search(said) or SHARES_CUE.search(said):
+            raise ValueError("the user gave percent or shares, not dollars")
+        raise ValueError(f"the number {amount:f} has no $ and no word dollars (or bucks): written that way it is a number of SHARES, never dollars. Use unit shares, or ask whether they mean dollars")
     if choice.unit == "percent" and equity is None:
         raise ValueError("the value of the account is not known, so a percentage of it cannot be worked out")
     cost = needed_dollars(choice, purchases, equity)
@@ -356,7 +373,7 @@ def terminal_clarifier(ask=input, show=print, interactive: bool | None = None) -
         if not here():
             return None
         if card.get("facts"):
-            show("\n".join(["", "=" * 118, "HOW MUCH?  The Account Manager asks before it proposes the trades. Answer with a percentage of your account, dollars, a number of shares, or \"as much as I can\".", "=" * 118,
+            show("\n".join(["", "=" * 118, "HOW MUCH?  The Account Manager asks before it proposes the trades. Answer with a percentage of your account (20%), dollars (with a $ or the word dollars: $3,000), a number of shares (a number with no $ is shares: 10 is 10 shares), or \"as much as I can\".", "=" * 118,
                             *card["facts"]]))
         suffix = f"  (question {card['n']} of {card['of']})"
         try:

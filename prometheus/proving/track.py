@@ -28,12 +28,15 @@ LOOKBACK_DAYS = 45          # calendar days of bars read before the first decisi
 _CACHE: dict = {"stamp": None, "run": None}
 
 
-def caveats_of(outcome_list: list[RecOutcome], config: ProvingConfig, *, simulated_fills: bool = False, thin_news: bool = False, models_may_remember: bool = False, not_point_in_time: bool = False, fast_models: bool = False) -> list[str]:
+def caveats_of(outcome_list: list[RecOutcome], config: ProvingConfig, *, simulated_fills: bool = False, thin_news: bool = False, models_may_remember: bool = False, not_point_in_time: bool = False, fast_models: bool = False, analysts_used: bool = False) -> list[str]:
     """The caveat codes that apply (the closed list of record.CAVEATS, code decides): returns are price returns (always), a stop and a target are judged on daily bars, a hypothetical entry fills at the next open, an open position is
-    marked, a split was adjusted, a small sample, and the Time Machine's own (fundamentals and the directory are today's, the models may remember, the news was thin)."""
+    marked, a split was adjusted, a small sample, and the Time Machine's own (fundamentals and the directory are today's, the models may remember, the news was thin, and, when a review used them, the analysts' counts are each
+    month's last revision: Critic v3)."""
     codes = []
     if not_point_in_time:
         codes += ["fundamentals_not_point_in_time", "symbol_directory_is_todays"]
+        if analysts_used:
+            codes.append("analysts_not_point_in_time")
     codes.append("price_returns_no_dividends")
     if simulated_fills or any(o.hypothetical for o in outcome_list):
         codes.append("fills_at_next_open_no_slippage")

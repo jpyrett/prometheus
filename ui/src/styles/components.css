@@ -1336,6 +1336,18 @@ textarea.in {
   border: 1px solid var(--border);
   margin-top: 8px;
 }
+.groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.groups .group {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 .note .badge {
   flex: none;
   align-self: flex-start;
@@ -1553,4 +1565,24 @@ textarea.in {
 .gal .recommendation {
   border: 0;
   box-shadow: none;
+}
+
+/* The waiting limit orders (design choices entry 140): a quiet list under the portfolio, each with its Cancel. */
+.orders-tbl td {
+  vertical-align: top;
+}
+.orders-tbl .sub {
+  display: block;
+  color: var(--text-3);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.sub.aside {
+  color: var(--text-3);
+}
+.hint.notice {
+  color: var(--text-2);
+}
+.hint.err {
+  color: var(--neg, #b3261e);
 }

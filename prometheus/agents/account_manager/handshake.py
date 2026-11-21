@@ -116,8 +116,9 @@ def held(portfolio: Portfolio, symbol: str) -> Decimal:
 
 
 def unchanged(before: Portfolio, after: Portfolio, symbol: str) -> bool:
-    """True when the cash and the shares of `symbol` are the same in both reads: nothing happened between them."""
-    return before.cash_avail == after.cash_avail and sh.same(held(before, symbol), held(after, symbol))
+    """True when the cash and the shares of `symbol` are the same in both reads: nothing happened between them. The WHOLE cash is compared (`cash_total`: the available cash and what waiting orders have set aside, design choices entry 140), so that
+    the hold of an order that was filled between the two reads is not mistaken for a change in the cash."""
+    return before.cash_total == after.cash_total and sh.same(held(before, symbol), held(after, symbol))
 
 
 def check_booked(before: Portfolio, after: Portfolio, row: dict | None, symbol: str, side: str, shares: Decimal) -> list[str]:
@@ -129,7 +130,7 @@ def check_booked(before: Portfolio, after: Portfolio, row: dict | None, symbol: 
         problems.append("the trade is not in the book's list of trades")
     elif (row["symbol"], row["side"]) != (symbol, side) or not sh.same(row["shares"], shares):
         problems.append("the trade in the book's list is not the one that was placed")
-    if before.cash_avail == after.cash_avail:
+    if before.cash_total == after.cash_total:      # the whole cash: a waiting order's hold released by its own fill is not a change of the cash (entry 140)
         problems.append("the cash is the same as before the trade")
     if sh.same(held(before, symbol), held(after, symbol)):
         problems.append(f"the shares of {symbol} are the same as before the trade")
@@ -148,7 +149,7 @@ def permission_code(reasons: list[str]) -> str:
 
 @traced("account_manager.decide_approval")
 def decide_approval(portfolio: Portfolio, trade: dict, price: Decimal, on: date, commission: Decimal = Decimal(0), expected_proceeds: Decimal = Decimal(0), spendable: Decimal | None = None, pot: Decimal | None = None,
-                    dollars: Decimal | None = None) -> Approval:
+                    dollars: Decimal | None = None, max_price: Decimal | None = None, min_price: Decimal | None = None) -> Approval:
     """What the account can take of this trade, from the portfolio as it is NOW (pure: no database, no clock). `trade` is the Trader's record of it as a dict (`symbol`, `side`, `shares`: what is asked, and
     `shares_approved`: what the decision allowed, which the approval never exceeds); `price` is the price it would fill at; `on` the trade date (the T+1 lock of a sale); `commission` the Trader's
     setting (0 in this version); `expected_proceeds` the estimated proceeds of sales that are to be filled BEFORE this purchase (the funding pre-check: it counts as cash for this answer only, and nothing is
@@ -157,7 +158,9 @@ def decide_approval(portfolio: Portfolio, trade: dict, price: Decimal, on: date,
     whatever price a trade fills at; `pot` is only for the sentence. Nothing left to spend is `insufficient_cash`, and the reason says when it is the money of the request that is used up and not the cash.
     `dollars` is the decision's ORDER IN DOLLARS (design choices entry 111, M2; None: an order in shares, as ever): the most the purchase may cost. The Account Manager turns the dollars into shares HERE, at the price it would fill
     at: it approves `shares.buys(min(dollars, spendable, cash now + expected proceeds), price)`, which can be FEWER shares than the estimate the decision was sized with (the price is higher) or MORE (it is lower), and
-    never costs more than the dollars. The asked shares and the shares the decision allowed are only the estimate then."""
+    never costs more than the dollars. The asked shares and the shares the decision allowed are only the estimate then.
+    `max_price` is the user's PRICE LIMIT (design choices entry 138: "under $50 a share"; None: none was given): a purchase whose fill price is above it is refused (`not_permitted`), whatever the cash and the pot say; a sale is never limited by it.
+    `min_price` is the user's PRICE FLOOR (design choices entry 140: "over $20 a share", "sell at $600 or more"; None: none was given): a trade, a purchase or a sale, whose fill price is under it is refused (`not_permitted`), whatever the cash and the shares say."""
     side, symbol, asked, allowed = trade.get("side"), trade.get("symbol"), trade.get("shares"), trade.get("shares_approved")
     usable = lambda x: _quantity(x) > 0
     if side not in ("buy", "sell") or not isinstance(symbol, str) or not usable(asked):
@@ -170,6 +173,8 @@ def decide_approval(portfolio: Portfolio, trade: dict, price: Decimal, on: date,
     if not price > 0:
         return refusal("account_refused", "the trade has no price above zero", portfolio.cash_avail)
     wanted = min(asked, sh.quantity(allowed)) if usable(allowed) else asked
+    if min_price is not None and price < min_price:
+        return refusal("not_permitted", f"the price {price:,.4f} is under your floor of ${min_price:,.2f} a share: the {'purchase' if side == 'buy' else 'sale'} is not made", portfolio.cash_avail)
     if side == "sell":
         if portfolio.position(symbol) is None:
             return refusal("not_held", f"the portfolio does not hold {symbol}, and there is no short sale", portfolio.cash_avail)
@@ -179,6 +184,8 @@ def decide_approval(portfolio: Portfolio, trade: dict, price: Decimal, on: date,
         shares = min(wanted, sellable)
         why = "" if shares == asked else f"cut from {sh.text(asked)} to {sh.text(shares)} shares: only that many are sellable"
         return Approval(approved=True, shares=shares, cash_avail=portfolio.cash_avail, reason=why)
+    if max_price is not None and price > max_price:
+        return refusal("not_permitted", f"the price {price:,.4f} is above your limit of ${max_price:,.2f} a share: the purchase is not made at this price, and nothing is left resting in the market by this fill (a direct order that waits for its price is a waiting order, placed before the Trader: `orders.py`, entry 140)", portfolio.cash_avail)
     available = portfolio.cash_avail + expected_proceeds
     if dollars is not None:
         return _approve_dollars(portfolio, price, commission, available, spendable, pot, dollars)

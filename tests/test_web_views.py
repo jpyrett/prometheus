@@ -125,3 +125,19 @@ def test_the_records_of_a_row_are_the_raw_records_and_a_row_that_is_not_there_is
     assert views.records_of(data["order"], "ZZZZ") is None
     neutral = capture("pam_smith_neutral")
     assert set(views.records_of(neutral["order"], "MU")) == {"candidate", "decision", "trade"}
+
+
+def test_a_review_of_critic_version_3_shows_its_three_groups_and_the_analysts_in_one_line_and_an_older_review_shows_neither():
+    """The page's review part (design/critic_v3_two_reasons_spec.md section 5: "the Critic's card shows the three groups (bad / clean) and the analyst counts in one line each; no new rule on the page"). The REAL PG_open record reviewed
+    by the Critic with the REAL Finnhub counts of the capture; the old review is the real one of `bob_jones_oil`, made before the groups existed."""
+    from critic_helpers import FakeClerk, captured, review, tampered_order
+    counts = json.loads((Path(__file__).parent / "fixtures" / "finnhub_recommendation_trends.json").read_text(encoding="utf-8"))["symbols"]["PG"]
+    periods = [{"period": r["period"], **{f: r[f] for f in ("strongBuy", "buy", "hold", "sell", "strongSell")}} for r in counts]
+    order = tampered_order("PG_open", **{"trade.family": "trend"})
+    new = review(order, clerk=FakeClerk(order, own={}, analysts={"PG": periods}, changes={"PG": {"ret_5d": -0.021}}), own={})["PG"]
+    part = views._review_part(new)
+    assert [(g["name"], g["label"], g["bad"], g["codes"]) for g in part["groups"]] == [("news", "News", False, []), ("performance", "Performance", True, ["trend_not_confirmed"]), ("price", "Price", False, [])]
+    assert part["analysts"] == "6 strong buy, 14 buy, 14 hold, 1 sell, 0 strong sell in 2026-11-01 (35 analysts): mean 3.71 of 5, down 0.04 since 2026-08-01" and part["approved"] is True
+    assert [d["name"] for d in part["dimensions"]][-1] == "analysts" and part["dimensions"][-1]["label"] == "Analysts" and part["pattern_bonus"] == new["pattern_bonus"]
+    old = views._review_part(capture("bob_jones_oil")["order"]["reviews"][0])
+    assert old["groups"] == [] and old["analysts"] is None and old["pattern_bonus"] == 0 and len(old["dimensions"]) == 6

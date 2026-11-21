@@ -1,0 +1,615 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to requests that say 'raise funds if needed', recorded on 2026-11-20 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py after design choices entry 142: the form has `raise_funds`). 'replies' is what the model answered, in order (a second reply is the answer to code's refusal of the first); 'outcome' what parse_intent made of it. Nothing here is edited. The tests give these replies back to the real Account Manager, whose code checks every field against the user's own words.",
+ "model": "openai/gpt-oss-120b",
+ "tokens_in": 48444,
+ "tokens_out": 3698,
+ "requests": {
+  "Buy 2 shares of ANT and raise funds if needed": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"ANT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 2, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2 shares of ANT (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 2,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2296,
+   "tokens_out": 157
+  },
+  "Buy 2 shares of ANT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"ANT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 2, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2 shares of ANT (your own order: no recommendation is made and the Critic is not asked)",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 2,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2291,
+   "tokens_out": 126
+  },
+  "Buy 2 shares of ANT but don't sell anything": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 2, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2 shares of ANT (your own order: no recommendation is made and the Critic is not asked)",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 2,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2295,
+   "tokens_out": 163
+  },
+  "Buy 2 shares of ANT, don't raise funds": {
+   "replies": [
+    "{\n  \"action\": \"order\",\n  \"topic\": null,\n  \"symbols\": [\"ANT\"],\n  \"companies\": [],\n  \"count\": null,\n  \"allocation\": \"default\",\n  \"budget\": null,\n  \"each\": false,\n  \"max_price\": null,\n  \"min_price\": null,\n  \"raise_funds\": false,\n  \"orders\": [\n    {\n      \"side\": \"buy\",\n      \"symbol\": \"ANT\",\n      \"shares\": 2,\n      \"dollars\": null\n    }\n  ]\n}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2 shares of ANT (your own order: no recommendation is made and the Critic is not asked)",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 2,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2295,
+   "tokens_out": 155
+  },
+  "buy 5 MSFT, sell some stock to pay for it if you have to": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 5, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 5 shares of MSFT (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 5,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2302,
+   "tokens_out": 167
+  },
+  "Buy 2 shares of ANT and 3 shares of MSFT and raise funds if needed": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"ANT\", \"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 2, \"dollars\": null}, {\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 3, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2 shares of ANT, buy 3 shares of MSFT (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 2,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 3,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2303,
+   "tokens_out": 181
+  },
+  "Buy $500 of MSFT and raise funds if needed": {
+   "replies": [
+    "{\n  \"action\": \"order\",\n  \"topic\": null,\n  \"symbols\": [],\n  \"companies\": [],\n  \"count\": null,\n  \"allocation\": \"default\",\n  \"budget\": null,\n  \"each\": false,\n  \"max_price\": null,\n  \"min_price\": null,\n  \"raise_funds\": true,\n  \"orders\": [\n    {\n      \"side\": \"buy\",\n      \"symbol\": \"MSFT\",\n      \"shares\": null,\n      \"dollars\": 500\n    }\n  ]\n}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $500.00 of MSFT (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": 500
+     }
+    ]
+   },
+   "tokens_in": 2296,
+   "tokens_out": 175
+  },
+  "Sell 10 shares of MSFT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 10 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 10,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2292,
+   "tokens_out": 122
+  },
+  "buy 10 of MU if recommended and raise funds if needed": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [\"MU\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": true, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended MU; if approved, 10 shares of MU (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [
+     "MU"
+    ],
+    "shares_of": {
+     "MU": 10
+    },
+    "shares_each": null,
+    "orders": []
+   },
+   "tokens_in": 2297,
+   "tokens_out": 181
+  },
+  "Buy 5 shares of each of the top 3 oil stocks if recommended, and raise funds if needed": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": true, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'oil' companies; if approved, 5 shares of each (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": 3,
+    "corrected": [],
+    "topic": "oil",
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": 5,
+    "orders": []
+   },
+   "tokens_in": 2306,
+   "tokens_out": 275
+  },
+  "buy 10 of MU if the recommendation passes, but don't sell anything": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": []}",
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [\"MU\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended MU; if approved, 10 shares of MU",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [
+     "MU"
+    ],
+    "shares_of": {
+     "MU": 10
+    },
+    "shares_each": null,
+    "orders": []
+   },
+   "tokens_in": 4778,
+   "tokens_out": 390
+  },
+  "Buy $200 of ANT and raise funds if needed": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": null, \"dollars\": 200}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $200.00 of ANT (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": null,
+      "dollars": 200
+     }
+    ]
+   },
+   "tokens_in": 2295,
+   "tokens_out": 191
+  },
+  "Buy 2 shares of ANT and 1 share of GOOGL and raise funds if needed": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"ANT\", \"GOOGL\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 2, \"dollars\": null}, {\"side\": \"buy\", \"symbol\": \"GOOGL\", \"shares\": 1, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2 shares of ANT, buy 1 share of GOOGL (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 2,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "GOOGL",
+      "company": null,
+      "shares": 1,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2304,
+   "tokens_out": 173
+  },
+  "Sell 1 share of MCD and buy 3 shares of ANT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MCD\", \"shares\": 1, \"dollars\": null}, {\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 3, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 1 share of MCD, buy 3 shares of ANT (your own order: no recommendation is made and the Critic is not asked)",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "MCD",
+      "company": null,
+      "shares": 1,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 3,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2299,
+   "tokens_out": 154
+  },
+  "Sell 1 share of MCD and buy 5 shares of ANT and raise funds if needed": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"max_price\":null,\"min_price\":null,\"raise_funds\":true,\"orders\":[{\"side\":\"sell\",\"symbol\":\"MCD\",\"shares\":1,\"dollars\":null},{\"side\":\"buy\",\"symbol\":\"ANT\",\"shares\":5,\"dollars\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 1 share of MCD, buy 5 shares of ANT (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "MCD",
+      "company": null,
+      "shares": 1,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 5,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2304,
+   "tokens_out": 234
+  },
+  "Buy 4 shares of ANT and raise funds if needed": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": true, \"orders\": [{\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 4, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 4 shares of ANT (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 4,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2296,
+   "tokens_out": 152
+  },
+  "Sell 1 share of MCD and buy 5 shares of ANT": {
+   "replies": [
+    "{\n  \"action\": \"order\",\n  \"topic\": null,\n  \"symbols\": [],\n  \"companies\": [],\n  \"count\": null,\n  \"allocation\": \"default\",\n  \"budget\": null,\n  \"each\": false,\n  \"max_price\": null,\n  \"min_price\": null,\n  \"raise_funds\": false,\n  \"orders\": [\n    {\n      \"side\": \"sell\",\n      \"symbol\": \"MCD\",\n      \"shares\": 1,\n      \"dollars\": null\n    },\n    {\n      \"side\": \"buy\",\n      \"symbol\": \"ANT\",\n      \"shares\": 5,\n      \"dollars\": null\n    }\n  ]\n}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 1 share of MCD, buy 5 shares of ANT (your own order: no recommendation is made and the Critic is not asked)",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "MCD",
+      "company": null,
+      "shares": 1,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 5,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2299,
+   "tokens_out": 188
+  },
+  "Sell 5 shares of MCD and buy 3 shares of ANT": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MCD\", \"shares\": 5, \"dollars\": null}, {\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 3, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 5 shares of MCD, buy 3 shares of ANT (your own order: no recommendation is made and the Critic is not asked)",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "MCD",
+      "company": null,
+      "shares": 5,
+      "dollars": null
+     },
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 3,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2299,
+   "tokens_out": 154
+  },
+  "Buy 2 shares of ANT at $85 or less and raise funds if needed": {
+   "replies": [
+    "{\n  \"action\": \"order\",\n  \"topic\": null,\n  \"symbols\": [],\n  \"companies\": [],\n  \"count\": null,\n  \"allocation\": \"default\",\n  \"budget\": null,\n  \"each\": false,\n  \"max_price\": 85,\n  \"min_price\": null,\n  \"raise_funds\": true,\n  \"orders\": [\n    {\n      \"side\": \"buy\",\n      \"symbol\": \"ANT\",\n      \"shares\": 2,\n      \"dollars\": null\n    }\n  ]\n}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2 shares of ANT, only while a share costs $85.00 or less (your own order: no recommendation is made and the Critic is not asked) (you said to raise funds if needed: I may sell some of your holdings to pay for it)",
+    "raise_funds": true,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 2,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2301,
+   "tokens_out": 187
+  },
+  "Buy 2 shares of ANT at $85 or less": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"ANT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 85, \"min_price\": null, \"raise_funds\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"ANT\", \"shares\": 2, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 2 shares of ANT, only while a share costs $85.00 or less (your own order: no recommendation is made and the Critic is not asked)",
+    "raise_funds": false,
+    "budget": null,
+    "each": false,
+    "count": null,
+    "corrected": [],
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "ANT",
+      "company": null,
+      "shares": 2,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2296,
+   "tokens_out": 173
+  }
+ }
+}

@@ -11,6 +11,9 @@ A POSITION'S PLAN is the plan of the recommendation that bought it: the book's `
 recommendation's own stop, target and time stop are read (`record.plan_of`). A position bought by a direct order has no plan and shows none: it is `no_plan`, its price against its cost only. A position bought as a NEUTRAL company (`neutral-<request>-<n>`: the Advisor scored it neutral) has the
 Advisor's EXIT plan since Advisor config version 2 (a stop and a time stop, no target: `recs.neutral_record_of` finds it on the saved session's candidates) and is judged by it like any other, with a note that says so; one bought before that has no plan and
 is `no_plan`, its note says the Advisor made none. Nothing invents a stop.
+A TRAILING plan (the TREND family since Advisor config version 3, design/advisor_exit_plan_spec.md E3: no target, and a stop that rises with the highest close) is WATCHED the same way, against the stop in force on each bar (`simulator.trailing_stop`: the plan's stop or the highest
+close since the purchase, up to the day before the bar, less the plan's distance, whichever is higher), and the position reports the level now: `plan.stop_now` and `plan.highest_close` ("XOM's trailing stop is now 142.10 (highest close 150.30 - 8.20)"). A day's own close
+never moves its own stop, and today's bar is not a close (it may be a session still running). The monitor places no stop order and the Trader places none either.
 THE STATUS of a position with a plan, judged in time order: for each stored bar AFTER the purchase day its low against the stop and then its high against the target (a day that touches both is a stop, as `simulator.follow` says; the
 bar of the purchase day itself is not read: part of it happened before the purchase), the time stop's date (a bar on or after it) and last the QUOTE NOW (the stop before the target). `stop_hit`, `target_hit`, `time_stop_passed` or
 `in_plan`, and `evidence` says which: "the quote now" or "the low of 2026-11-17". A symbol whose stored bars show a close-to-open move past `split_suspect_pct` since the purchase is judged on the quote alone (a split in the
@@ -45,9 +48,13 @@ class _Model(BaseModel):
 
 
 class LivePlan(_Model):
-    stop: Price | None = None
+    stop: Price | None = None                   # the plan's own stop (a trailing plan's STARTING stop)
     target: Price | None = None
     time_stop_date: date | None = None
+    trailing: bool = False                      # the stop trails the highest close (no target)
+    trail_distance: Price | None = None
+    highest_close: Price | None = None          # trailing: the highest close since the purchase, through the last closed day
+    stop_now: Price | None = None               # trailing: the stop in force now (never under `stop`)
 
 
 class LivePosition(_Model):
@@ -166,7 +173,7 @@ def _plan_for(symbol: str, buys: list[dict], index: dict) -> tuple[LivePlan | No
                 return None, record_id, buy["traded_on"], notes
             if record_id.startswith("neutral-"):
                 notes.append("bought as a company the Advisor scored neutral: it has a stop and a time stop, no target")
-            return LivePlan(stop=found.stop, target=found.target, time_stop_date=found.time_stop_date), record_id, buy["traded_on"], notes
+            return LivePlan(stop=found.stop, target=found.target, time_stop_date=found.time_stop_date, trailing=found.trailing, trail_distance=found.trail_distance), record_id, buy["traded_on"], notes
     last = max(buys, key=lambda b: (b["traded_on"], b.get("trade_id", 0)), default=None)
     record_id = last.get("record_id") if last else None
     if isinstance(record_id, str) and record_id.startswith("neutral-"):
@@ -180,9 +187,16 @@ def _plan_for(symbol: str, buys: list[dict], index: dict) -> tuple[LivePlan | No
     return None, record_id if isinstance(record_id, str) else None, since, notes
 
 
-def _judge(symbol: str, plan: LivePlan, price: Decimal | None, bars: list[dict], since: date | None, today: date, suspect_pct: Decimal) -> tuple[str, str | None, list[str]]:
-    """(status, evidence, notes) of a position with a plan: time order, stop before target (see the module text)."""
+def _trail_base(bars: list[dict], since: date | None, before: str) -> Decimal | None:
+    """The highest close of the bars from the purchase day (`since`, whose own close counts: the position is held through it) up to the day BEFORE `before`: the base a trailing stop rises from. None when there is none (a position bought today)."""
+    closes = [simulator.bar_price(b, "close") for b in bars if isinstance(b, dict) and isinstance(b.get("date"), str) and since is not None and since.isoformat() <= b["date"] < before]
+    return max((c for c in closes if c is not None), default=None)
+
+
+def _judge(symbol: str, plan: LivePlan, price: Decimal | None, bars: list[dict], since: date | None, today: date, suspect_pct: Decimal) -> tuple[str, str | None, list[str], Decimal | None]:
+    """(status, evidence, notes, the stop that was hit) of a position with a plan: time order, stop before target (see the module text). The stop of a trailing plan is the one in force on each bar."""
     notes: list[str] = []
+    trail = plan.trail_distance if plan.trailing else None
     after = sorted((b for b in bars if isinstance(b, dict) and isinstance(b.get("date"), str) and since is not None and b["date"] > since.isoformat()), key=lambda b: b["date"])
     use_bars = bool(after)
     if after and since is not None and splits.suspect_move(bars, since, _day(after[-1]["date"]) or since, suspect_pct) is not None:
@@ -192,26 +206,37 @@ def _judge(symbol: str, plan: LivePlan, price: Decimal | None, bars: list[dict],
         for bar in after:
             when = bar["date"]
             if plan.time_stop_date is not None and _day(when) is not None and _day(when) >= plan.time_stop_date:
-                return "time_stop_passed", f"the bar of {when}", notes
+                return "time_stop_passed", f"the bar of {when}", notes, None
             low, high = simulator.bar_price(bar, "low"), simulator.bar_price(bar, "high")
-            if plan.stop is not None and low is not None and low <= plan.stop:
-                return "stop_hit", f"the low of {when}", notes
+            stop = simulator.trailing_stop(plan.stop, _trail_base(bars, since, when), trail)       # the stop in force on this bar: the closes before it, never its own
+            if stop is not None and low is not None and low <= stop:
+                return "stop_hit", f"the low of {when}", notes, stop
             if plan.target is not None and high is not None and high >= plan.target:
-                return "target_hit", f"the high of {when}", notes
+                return "target_hit", f"the high of {when}", notes, None
     if plan.time_stop_date is not None and today >= plan.time_stop_date:
-        return "time_stop_passed", f"today is {today.isoformat()}", notes
+        return "time_stop_passed", f"today is {today.isoformat()}", notes, None
     if price is not None:
-        if plan.stop is not None and price <= plan.stop:
-            return "stop_hit", "the quote now", notes
+        stop = simulator.trailing_stop(plan.stop, _trail_base(bars, since, today.isoformat()), trail)
+        if stop is not None and price <= stop:
+            return "stop_hit", "the quote now", notes, stop
         if plan.target is not None and price >= plan.target:
-            return "target_hit", "the quote now", notes
-    return "in_plan", None, notes
+            return "target_hit", "the quote now", notes, None
+    return "in_plan", None, notes, None
 
 
-def _sentence(position: LivePosition) -> str:
+def _trail_note(plan: LivePlan) -> str:
+    """Where a trailing stop stands, in words: raised ("XOM's trailing stop is now 142.10 (highest close 150.30 - 8.20)") or still the plan's own."""
+    if plan.stop_now is not None and plan.highest_close is not None and plan.trail_distance is not None and plan.stop_now != plan.stop:
+        return f"the trailing stop is now {plan.stop_now:,.4f} (highest close {plan.highest_close:,.4f} - {plan.trail_distance:,.4f})"
+    return "the trailing stop is still the plan's own" + ("" if plan.stop is None else f", {plan.stop:,.4f}") + ": no close has lifted it yet"
+
+
+def _sentence(position: LivePosition, level: Decimal | None = None) -> str:
     plan, price = position.plan, position.price
     where = "" if position.evidence is None else f" ({position.evidence})"
     if position.status == "stop_hit":
+        if plan.trailing:
+            return f"{position.symbol} hit its trailing stop at {(level if level is not None else plan.stop_now):,.4f}{where}: the price now is {price:,.4f}. Nothing was sold; selling is your decision."
         return f"{position.symbol} hit its stop at {plan.stop:,.4f}{where}: the price now is {price:,.4f}. Nothing was sold; selling is your decision."
     if position.status == "target_hit":
         return f"{position.symbol} reached its target of {plan.target:,.4f}{where}: the price now is {price:,.4f}. Nothing was sold; selling is your decision."
@@ -305,19 +330,25 @@ def snapshot(manager, account_id: int, *, now: datetime | None = None, store: Pr
                             simulated=bool(isinstance(quote, dict) and quote.get("simulated")), value=value, gain=None if value is None else value - cost, gain_pct=None if value is None else _ratio(value, cost),
                             day_change_pct=_percent_to_fraction((quote or {}).get("change_percent")) if isinstance(quote, dict) else None, plan=plan, since=since, record_id=record_id, notes=list(why))
         if plan is not None:
-            live.status, live.evidence, judged = _judge(position.symbol, plan, price, bars.get(position.symbol, []), since, today, config.split_suspect_pct)
+            if plan.trailing:      # where the trailing stop stands now: the highest close through the last closed day and the stop it makes
+                base = _trail_base(bars.get(position.symbol, []), since, today.isoformat())
+                live.plan = plan.model_copy(update={"highest_close": base, "stop_now": simulator.trailing_stop(plan.stop, base, plan.trail_distance)})
+                plan = live.plan
+            live.status, live.evidence, judged, hit = _judge(position.symbol, plan, price, bars.get(position.symbol, []), since, today, config.split_suspect_pct)
             live.notes.extend(judged)
+            if plan.trailing:
+                live.notes.append(_trail_note(plan))
             if live.status != "in_plan":
-                alerts.append(Alert(symbol=position.symbol, kind=live.status, sentence=_sentence(live)))
+                alerts.append(Alert(symbol=position.symbol, kind=live.status, sentence=_sentence(live, hit)))
         if price is None:
             live.notes.append("no quote could be had: the position is counted at its cost")
         cost_total += cost
         value_total += value if value is not None else cost
         live_positions.append(live)
     session = session_at(now, load_calendar())
-    equity = portfolio.cash_avail + value_total
+    equity = portfolio.cash_total + value_total
     days = sorted({b["date"] for b in bars.get(config.benchmark, []) if isinstance(b, dict) and isinstance(b.get("date"), str) and b["date"] < today.isoformat()})      # TODAY is the live point: a bar stored today may be of a session still running, and is never read as a close
-    return LiveSnapshot(account_id=account_id, name=portfolio.user, positions=live_positions, cash=portfolio.cash_avail, invested_at_cost=cost_total, market_value=value_total, equity=equity, gain=value_total - cost_total,
+    return LiveSnapshot(account_id=account_id, name=portfolio.user, positions=live_positions, cash=portfolio.cash_total, invested_at_cost=cost_total, market_value=value_total, equity=equity, gain=value_total - cost_total,
                         gain_pct=_ratio(value_total, cost_total) if cost_total else None, as_of_utc=now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), alerts=alerts,
                         session=SessionView(state=session.state, open=session.is_open, reason=session.reason, next_open_utc=session.next_open_utc.strftime("%Y-%m-%dT%H:%M:%SZ")), history=equity_history(history, bars, days),
                         last_bar_day=_day(last_bar), clock_note=trading_clock.clock_note(now), notes=notes)
@@ -351,7 +382,8 @@ def report(shot: LiveSnapshot) -> str:
         lines.append(shot.clock_note)
     for p in shot.positions:
         now = "no quote" if p.price is None else f"{p.price:,.4f} at {p.price_time}{' (stored close, simulated)' if p.simulated else ''}"
-        plan = "no plan" if p.plan is None else f"stop {p.plan.stop if p.plan.stop is not None else '-'}  target {p.plan.target if p.plan.target is not None else '-'}  time stop {p.plan.time_stop_date or '-'}"
+        plan = "no plan" if p.plan is None else (f"stop {p.plan.stop if p.plan.stop is not None else '-'}  target {p.plan.target if p.plan.target is not None else '-'}  time stop {p.plan.time_stop_date or '-'}"
+                                                 + (f"  TRAILING: stop now {p.plan.stop_now if p.plan.stop_now is not None else '-'} (distance {p.plan.trail_distance})" if p.plan.trailing else ""))
         gain = "" if p.gain is None else f"  value ${p.value:,.2f}  gain ${p.gain:+,.2f} ({p.gain_pct:+.2%})"
         change = "" if p.day_change_pct is None else f"  today {p.day_change_pct:+.2%}"
         lines.append(f"  {p.symbol:<6} {p.shares} sh  cost {p.cost_basis:,.4f}  price {now}{gain}{change}")

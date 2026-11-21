@@ -17,6 +17,12 @@ WHAT IS COUNTED. `outcomes` is every `RecOutcome` of the run, traded or hypothet
    `closed` those of them that closed (what the win rate rests on), and `small_sample` is `n < min_sample`: under it the page shows a rate or an average with the mark and no colour of success or failure (P9). A bucket is [low, high).
  - `by_symbol`: the TRADED outcomes of each symbol (hypothetical ones have no money): their count, their gain (a sum of Money) and the gain over what was paid.
 
+THE FORWARD EXCESS (design/advisor_exit_plan_spec.md E5 and E6). The returns above are BY THE PLAN: where the plan put its stop and its target decides them, and a target 1% above the entry makes nearly every idea a "win" (`win_rate` is "won by its plan"). So every
+outcome also carries the stock's return against the benchmark's from the decision day's close, N sessions later (`RecOutcome.forward`, `outcomes.forward_of`: plan, order and fill play no part), and the FAMILY and SCORE tables read it: each row of `by_family`
+and `by_score` has `forward`, one `ForwardStats` for each of the config's `forward_sessions` with its n, its mean excess, the standard error of that mean (`spread`) and `inside_chance` (the mean is within `CHANCE_BAND` standard errors of zero: not to be called good or
+bad). Every outcome that has the figure counts, traded or not, whatever its verdict and its result (a denied, a not-filled one too). The score buckets count the strategy-family picks only (a company the Advisor scored neutral has no family and a score of its own
+making: it is the `neutral` row of the family table), the buckets are the config's (`<60, 60-65, 65-70, 70-75, 75+`), and the family table has a row `neutral` for those companies (the Advisor's neutral recommendations, Jacob's switch).
+
 A `_pct` is a FRACTION (0.0077 is 0.77%), to six places, half up, worked out in Decimal from the digits the returns are written with so that it carries no binary noise (`simulator._fraction` and `_return_difference` are the one place a return
 is worked out); a mean is the sum of the Decimals over the count. A return, a drawdown, a rate and a mean are measurements (P7): the only floats here.
 """
@@ -25,7 +31,7 @@ from decimal import ROUND_HALF_UP, Decimal
 
 from prometheus.agents.trader import simulator
 from prometheus.proving.config import ProvingConfig, load_config
-from prometheus.proving.record import (CriticValue, EquityPoint, Exits, FamilyStats, Headline, OutcomeStats, PortfolioStats, RecOutcome, ScoreStats, Stats, SymbolStats, VerdictStats)
+from prometheus.proving.record import (CriticValue, EquityPoint, Exits, FamilyStats, ForwardStats, Headline, OutcomeStats, PortfolioStats, RecOutcome, ScoreStats, Stats, SymbolStats, VerdictStats)
 
 Measure = float | None      # a return, a drawdown, a rate or a mean: a measurement, never added to money (P7)
 STEP = Decimal("0.000001")
@@ -127,7 +133,7 @@ def _outcome_block(outcomes: list[RecOutcome], config: ProvingConfig) -> Outcome
     lost = [o for o in outcomes if o.result == "lost"]
     closed = won + lost
     wins, losses = sum((Decimal(str(o.return_pct)) for o in won), Decimal(0)), sum((Decimal(str(o.return_pct)) for o in lost), Decimal(0))
-    exits = Exits(open=sum(1 for o in outcomes if o.result == "open"), **{reason: sum(1 for o in closed if o.exit.reason == reason) for reason in ("stop", "target", "time_stop")})
+    exits = Exits(open=sum(1 for o in outcomes if o.result == "open"), **{reason: sum(1 for o in closed if o.exit.reason == reason) for reason in ("stop", "trailing_stop", "target", "time_stop")})
     return OutcomeStats(n=len(outcomes), closed=len(closed), open=exits.open, won=len(won), lost=len(lost), not_filled=sum(1 for o in outcomes if o.result == "not_filled"), no_data=sum(1 for o in outcomes if o.result == "no_data"),
                         win_rate=_rate(len(won), len(closed)), avg_win_pct=_mean(o.return_pct for o in won), avg_loss_pct=_mean(o.return_pct for o in lost),
                         profit_factor=_q(wins / -losses) if lost and losses < 0 else None, avg_sessions_held=_mean(o.exit.sessions_held for o in closed), exits=exits, small_sample=len(closed) < config.min_sample)
@@ -205,6 +211,30 @@ def spread(values: list[Decimal]) -> tuple[Decimal, Decimal]:
 
 _spread = spread      # the name the module used before the report card (`report_card.py`) needed the same arithmetic
 
+NEUTRAL = "neutral"      # the row of the family table for the companies the Advisor scored neutral: they have no strategy family
+
+
+def forward_mean(values: list, sessions: int, min_sample: int) -> ForwardStats:
+    """The mean of some forward excess returns (floats written to six places) with its n and the standard error of that mean, worked in Decimal from the digits they are written with; `inside_chance` is None with fewer than two."""
+    values = [Decimal(str(v)) for v in values if v is not None]
+    if not values:
+        return ForwardStats(sessions=sessions, n=0)
+    mean, variance = spread(values)
+    error = variance.sqrt()
+    return ForwardStats(sessions=sessions, n=len(values), mean_excess_pct=_q(mean), se_pct=_q(error), inside_chance=None if len(values) < 2 else abs(mean) <= CHANCE_BAND * error, small_sample=len(values) < min_sample)
+
+
+def forward_stats(rows: list[RecOutcome], config: ProvingConfig) -> list[ForwardStats]:
+    """One `ForwardStats` for each of the config's forward sessions, over the forward excess of `rows` (see THE FORWARD EXCESS in the module text)."""
+    return [forward_mean([f.excess_return_pct for o in rows for f in o.forward if f.sessions == n], n, config.min_sample) for n in config.forward_sessions]
+
+
+def family_of(outcome: RecOutcome) -> str | None:
+    """The family table's name for an outcome: its strategy family, `neutral` for a company the Advisor scored neutral (no family), None for an outcome with no Advisor cell."""
+    if outcome.advisor is None:
+        return None
+    return outcome.advisor.family or NEUTRAL
+
 
 def gap_of(first: list, second: list) -> dict | None:
     """THE ONE PLACE a gap between two groups of excess returns is judged (the Critic's sentence, `stats.compute`, and the report card of the Critic's rules, `report_card.py`, both use it): {n_first, n_second, mean_first, mean_second, gap
@@ -255,7 +285,10 @@ def compute(outcomes: list[RecOutcome], equity: list[EquityPoint], config: Provi
     usable = [o for o in outcomes if _usable(o)]
     portfolio, block = _portfolio(equity, starting_cash), _outcome_block(outcomes, config)
     by_verdict = [VerdictStats(verdict=v, **_group([o for o in usable if o.verdict == v], config)) for v in VERDICTS]
-    by_score = [ScoreStats(low=low, high=high, **_group([o for o in usable if o.advisor and config.bucket_of(o.advisor.score) == (low, high)], config)) for low, high in config.buckets()]
-    by_family = [FamilyStats(family=f, **_group([o for o in usable if o.advisor and o.advisor.family == f], config)) for f in sorted({o.advisor.family for o in usable if o.advisor and o.advisor.family})]
+    in_bucket = lambda o, low, high: o.advisor is not None and config.bucket_of(o.advisor.score) == (low, high)
+    by_score = [ScoreStats(low=low, high=high, forward=forward_stats([o for o in outcomes if in_bucket(o, low, high) and o.advisor.family], config), **_group([o for o in usable if in_bucket(o, low, high)], config)) for low, high in config.buckets()]
+    names = {family_of(o) for o in outcomes} - {None}
+    by_family = [FamilyStats(family=f, forward=forward_stats([o for o in outcomes if family_of(o) == f], config), **_group([o for o in usable if family_of(o) == f], config))
+                 for f in [*sorted(names - {NEUTRAL}), *([NEUTRAL] if NEUTRAL in names else [])]]
     return Stats(portfolio=portfolio, outcomes=block, by_verdict=by_verdict, by_score=by_score, by_family=by_family, by_symbol=_by_symbol(outcomes), critic_value=_critic_value(by_verdict, config, bench, usable),
                  headline=_headline(portfolio, block, usable, config, bench))

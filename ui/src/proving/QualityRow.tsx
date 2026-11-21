@@ -22,12 +22,17 @@ export function QualityRow({ outcomes, stats, minSample = 20, benchmark = "SPY" 
     );
   }
   const small = stats.outcomes.small_sample;
+  const forwardKept = stats.by_score.some((b) => (b.forward ?? []).some((f) => f.sessions === 20 && f.n > 0)); // a run saved before the forward excess existed is drawn by its plan
   return (
     <div className="quality">
       <Card title="Was the Advisor's score right?" right={<Sample small={small} />}>
         <div className="card-b">
           <CalibrationChart outcomes={outcomes} buckets={stats.by_score} minSample={minSample} benchmarkName={benchmark} />
-          <p className="q-note muted">Each dot is a recommendation: its score across, how it did against {benchmark} up. The line is the average of each score band; * marks a band under {minSample} outcomes.</p>
+          <p className="q-note muted">
+            {forwardKept
+              ? `Each dot is a strategy-family pick: its score across, how it did against ${benchmark} up, 20 sessions after the decision day whatever its plan did. The line is the average of each score band; * marks a band under ${minSample} picks. Companies scored neutral are in the family table.`
+              : `Each dot is a recommendation: its score across, how it did against ${benchmark} up. The line is the average of each score band; * marks a band under ${minSample} outcomes.`}
+          </p>
         </div>
       </Card>
       <Card title="Was the Critic right?" right={<Sample small={stats.critic_value.denied_n < minSample || stats.critic_value.approved_n < minSample} />}>

@@ -1,0 +1,401 @@
+{
+ "_note": "The REAL account 6553 (read only) and the REAL Finnhub quotes of ANT and its holdings, as the Data Clerk returned them, recorded 2026-11-21 by scripts/capture_raise_funds_account.py. Jacob's request on the page was 'Buy 2 shares of ANT and raise funds if needed': the cash did not cover 2 x $88.91. A test makes a THROWAWAY account the same (the cash, and each position bought on its day at its average cost) and gives these quotes back to the real Data Clerk. Nothing here is edited.",
+ "captured_utc": "2026-11-21T04:35:31Z",
+ "cash": 60.14,
+ "positions": [
+  {
+   "symbol": "AAPL",
+   "shares": 17,
+   "cost_basis": 356.27,
+   "acquired": "2026-11-13"
+  },
+  {
+   "symbol": "AMZN",
+   "shares": 16,
+   "cost_basis": 266.66,
+   "acquired": "2026-11-13"
+  },
+  {
+   "symbol": "DPZ",
+   "shares": 4.389558,
+   "cost_basis": 341.72,
+   "acquired": "2026-11-13"
+  },
+  {
+   "symbol": "F",
+   "shares": 23,
+   "cost_basis": 11.91,
+   "acquired": "2026-11-13"
+  },
+  {
+   "symbol": "GM",
+   "shares": 19,
+   "cost_basis": 86,
+   "acquired": "2026-11-13"
+  },
+  {
+   "symbol": "GOOGL",
+   "shares": 17.025628,
+   "cost_basis": 295.77,
+   "acquired": "2026-11-13"
+  },
+  {
+   "symbol": "KO",
+   "shares": 49,
+   "cost_basis": 98.09,
+   "acquired": "2026-11-18"
+  },
+  {
+   "symbol": "MCD",
+   "shares": 3,
+   "cost_basis": 271.97,
+   "acquired": "2026-11-13"
+  },
+  {
+   "symbol": "MDLZ",
+   "shares": 48,
+   "cost_basis": 66.565,
+   "acquired": "2026-11-18"
+  },
+  {
+   "symbol": "META",
+   "shares": 15,
+   "cost_basis": 641.69,
+   "acquired": "2026-11-13"
+  },
+  {
+   "symbol": "PG",
+   "shares": 66,
+   "cost_basis": 170.1564,
+   "acquired": "2026-11-18"
+  },
+  {
+   "symbol": "PZZA",
+   "shares": 75.301204,
+   "cost_basis": 19.92,
+   "acquired": "2026-11-13"
+  }
+ ],
+ "quotes": {
+  "ANT": {
+   "symbol": "ANT",
+   "price": 88.91,
+   "change": -8.26,
+   "change_percent": -8.5006,
+   "high": 92.56,
+   "low": 83.05,
+   "open": 89.86,
+   "previous_close": 97.17,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "AAPL": {
+   "symbol": "AAPL",
+   "price": 342.56,
+   "change": -6.65,
+   "change_percent": -1.9043,
+   "high": 354.34,
+   "low": 340.56,
+   "open": 352.865,
+   "previous_close": 349.21,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "AMZN": {
+   "symbol": "AMZN",
+   "price": 246.82,
+   "change": -10.55,
+   "change_percent": -4.0992,
+   "high": 259.97,
+   "low": 245.31,
+   "open": 253.48,
+   "previous_close": 257.37,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "DPZ": {
+   "symbol": "DPZ",
+   "price": 348.61,
+   "change": -3.67,
+   "change_percent": -1.0418,
+   "high": 359.805,
+   "low": 346.955,
+   "open": 357.94,
+   "previous_close": 352.28,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "F": {
+   "symbol": "F",
+   "price": 11.17,
+   "change": -0.07,
+   "change_percent": -0.6228,
+   "high": 11.67,
+   "low": 11.13,
+   "open": 11.27,
+   "previous_close": 11.24,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "GM": {
+   "symbol": "GM",
+   "price": 78.71,
+   "change": -3.04,
+   "change_percent": -3.7187,
+   "high": 82.2,
+   "low": 78.31,
+   "open": 82.2,
+   "previous_close": 81.75,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "GOOGL": {
+   "symbol": "GOOGL",
+   "price": 265.29,
+   "change": -7.37,
+   "change_percent": -2.703,
+   "high": 283.15,
+   "low": 264.22,
+   "open": 274.5,
+   "previous_close": 272.66,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "KO": {
+   "symbol": "KO",
+   "price": 96.99,
+   "change": 0.9,
+   "change_percent": 0.9366,
+   "high": 97.785,
+   "low": 96.745,
+   "open": 97.0,
+   "previous_close": 96.09,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "MCD": {
+   "symbol": "MCD",
+   "price": 273.24,
+   "change": 0.89,
+   "change_percent": 0.3268,
+   "high": 278.29,
+   "low": 272.52,
+   "open": 275.92,
+   "previous_close": 272.35,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "MDLZ": {
+   "symbol": "MDLZ",
+   "price": 66.28,
+   "change": 0.59,
+   "change_percent": 0.8982,
+   "high": 67.39,
+   "low": 66.08,
+   "open": 66.53,
+   "previous_close": 65.69,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "META": {
+   "symbol": "META",
+   "price": 560.84,
+   "change": -35.38,
+   "change_percent": -5.9341,
+   "high": 588.69,
+   "low": 558.68,
+   "open": 583.91,
+   "previous_close": 596.22,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "PG": {
+   "symbol": "PG",
+   "price": 169.37,
+   "change": 1.52,
+   "change_percent": 0.9056,
+   "high": 171.6125,
+   "low": 169.05,
+   "open": 171.0,
+   "previous_close": 167.85,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  },
+  "PZZA": {
+   "symbol": "PZZA",
+   "price": 18.14,
+   "change": -0.21,
+   "change_percent": -1.1444,
+   "high": 18.655,
+   "low": 17.98,
+   "open": 18.34,
+   "previous_close": 18.35,
+   "as_of_utc": "2026-11-20T21:00:00Z",
+   "source": "Finnhub /quote"
+  }
+ },
+ "directory": {
+  "ANT": [
+   {
+    "description": "ANTHROPIC PBC-CL A",
+    "displaySymbol": "ANT",
+    "symbol": "ANT",
+    "type": "Common Stock"
+   },
+   {
+    "description": "ANTEROS METALS INC",
+    "displaySymbol": "ANT.CN",
+    "symbol": "ANT.CN",
+    "type": "Common Stock"
+   },
+   {
+    "description": "ANTEROS METALS INC",
+    "displaySymbol": "ANT.NE",
+    "symbol": "ANT.NE",
+    "type": "Common Stock"
+   },
+   {
+    "description": "ANTIMONY RESOURCES LTD",
+    "displaySymbol": "ANT.AX",
+    "symbol": "ANT.AX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "ANTHROPIC PBC-CL A",
+    "displaySymbol": "ANT.VI",
+    "symbol": "ANT.VI",
+    "type": "Common Stock"
+   },
+   {
+    "description": "AN GIANG FRUIT-VEGETABLES &",
+    "displaySymbol": "ANT.VN",
+    "symbol": "ANT.VN",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Mercantil Servicios Financieros CA",
+    "displaySymbol": "MVZ.B.CR",
+    "symbol": "MVZ.B.CR",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Anthropic, PBC",
+    "displaySymbol": "ANT",
+    "symbol": "ANT",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Ron Santa Teresa CA",
+    "displaySymbol": "RST.CR",
+    "symbol": "RST.CR",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Palantir Technologies Inc.",
+    "displaySymbol": "PLTR",
+    "symbol": "PLTR",
+    "type": "Common Stock"
+   },
+   {
+    "description": "Banco Santander SA",
+    "displaySymbol": "SAN.MC",
+    "symbol": "SAN.MC",
+    "type": "Common Stock"
+   }
+  ],
+  "GOOGL": [
+   {
+    "description": "ALPHABET INC-CL A",
+    "displaySymbol": "GOOGL",
+    "symbol": "GOOGL",
+    "type": "Common Stock"
+   },
+   {
+    "description": "ALPHABET INC-CL A",
+    "displaySymbol": "GOOGL.MX",
+    "symbol": "GOOGL.MX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "ALPHABET INC-CL A",
+    "displaySymbol": "GOOGL.SN",
+    "symbol": "GOOGL.SN",
+    "type": "Common Stock"
+   },
+   {
+    "description": "ALPHABET INC-CL A",
+    "displaySymbol": "GOOGL.SW",
+    "symbol": "GOOGL.SW",
+    "type": "Common Stock"
+   }
+  ],
+  "MCD": [
+   {
+    "description": "MCDONALD'S CORP",
+    "displaySymbol": "MCD",
+    "symbol": "MCD",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MCDONALD'S CORP - CDR",
+    "displaySymbol": "MCD.TO",
+    "symbol": "MCD.TO",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "MCDONALD'S CORP - CDR",
+    "displaySymbol": "MCD.NE",
+    "symbol": "MCD.NE",
+    "type": "Canadian DR"
+   },
+   {
+    "description": "MCDONALD'S CORP",
+    "displaySymbol": "MCD.MX",
+    "symbol": "MCD.MX",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MCDONALD'S CORP",
+    "displaySymbol": "MCD.RO",
+    "symbol": "MCD.RO",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MCDONALD'S CORP",
+    "displaySymbol": "MCD.VI",
+    "symbol": "MCD.VI",
+    "type": "Common Stock"
+   },
+   {
+    "description": "MYCODERN SA",
+    "displaySymbol": "MCD.WA",
+    "symbol": "MCD.WA",
+    "type": "Common Stock"
+   },
+   {
+    "description": "McDonald's Corp",
+    "displaySymbol": "MCD",
+    "symbol": "MCD",
+    "type": "Common Stock"
+   },
+   {
+    "description": "McDonald's Holdings Company Japan Ltd",
+    "displaySymbol": "2702.T",
+    "symbol": "2702.T",
+    "type": "Common Stock"
+   },
+   {
+    "description": "IMCD NV",
+    "displaySymbol": "IMCD.AS",
+    "symbol": "IMCD.AS",
+    "type": "Common Stock"
+   },
+   {
+    "description": "McDermott International Ltd",
+    "displaySymbol": "MCDIF",
+    "symbol": "MCDIF",
+    "type": "Common Stock"
+   }
+  ]
+ }
+}

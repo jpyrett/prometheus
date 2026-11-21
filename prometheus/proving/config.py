@@ -1,7 +1,8 @@
 """The Proving Ground's thresholds: `configs/proving_v1.json`, read and checked ONCE (design/proving_ground_spec.md section 5).
 
     config = load_config()                  # the file, validated: a missing key, an unknown key or a wrong type is an error NOW, not halfway through a run
-    config.horizons                         # [5, 10, 20]      the sessions after the entry at which a recommendation's return is read
+    config.horizons                         # [5, 10, 20]      the sessions after the entry at which a recommendation's return is read BY ITS PLAN
+    config.forward_sessions                 # [5, 10, 20, 40] the sessions after the DECISION DAY's close at which the stock's return against the benchmark's is read, whatever the plan did (design/advisor_exit_plan_spec.md E5)
     config.benchmark                        # "SPY"
     config.min_sample                       # 20               under this many outcomes a rate or an average is shown with a small-sample mark and no colour of success or failure (P9)
     config.split_suspect_pct                # Decimal('0.40')  a close-to-open move past this is a suspected split (P10)
@@ -112,6 +113,7 @@ class Store(_Section):
 class ProvingConfig(_Section):
     config_version: str = Field(min_length=1)
     horizons: list[StrictInt]                            # sessions after the entry, ascending
+    forward_sessions: list[StrictInt]                    # sessions after the decision day's close, ascending: the plan-independent forward return of every outcome (E5)
     benchmark: str
     min_sample: StrictInt = Field(gt=0)
     split_suspect_pct: Rate = Field(gt=0, lt=1)
@@ -125,7 +127,7 @@ class ProvingConfig(_Section):
     def _benchmark(cls, value: str) -> str:
         return check_symbol(value)
 
-    @field_validator("horizons")
+    @field_validator("horizons", "forward_sessions")
     @classmethod
     def _horizons(cls, value: list[int]) -> list[int]:
         if not value or any(h < 1 for h in value) or value != sorted(set(value)):

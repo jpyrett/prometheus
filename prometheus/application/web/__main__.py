@@ -18,7 +18,19 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--replay-speed", type=float, default=1.0, help="how long each stage takes in the replay, 1.0 is about 10 seconds for a whole run, 0 is no pause")
     parser.add_argument("--question-timeout", type=float, default=600.0, help="seconds an open question waits for an answer before it counts as no answer (default 600)")
     parser.add_argument("--dev", action="store_true", help="allow the page served by Vite (localhost:5173) to call the API")
+    parser.add_argument("--no-watch", action="store_true", help="do not start the watcher of the waiting limit orders (it checks them every minute while the market is open, and expires the ones whose session is over; a replay never has one)")
     return parser
+
+
+def _watcher():
+    """The live watcher of the waiting limit orders (design choices entry 140), or None when the account book cannot be opened (the page says so on its own: nothing waits without the book). Built here and never by `create_app`."""
+    from prometheus.application.web.watch import OrderWatch
+    try:
+        from prometheus.persistence.accounts import open_account_store
+        return OrderWatch(open_account_store())
+    except Exception as error:
+        print(f"the watcher of waiting orders is not started: the account book could not be opened ({type(error).__name__})")
+        return None
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -35,8 +47,9 @@ def main(argv: list[str] | None = None) -> int:
         except (ValueError, OSError) as error:
             print(f"ERROR: {error}", file=sys.stderr)
             return 2
-    app = create_app(replay=replay, dev=args.dev, question_timeout=args.question_timeout)
-    note = f"REPLAY of {Path(args.replay).name}: no model, no quote, no database" if replay else "LIVE: pressing Go! is a PAID run (OpenRouter, Finnhub) that writes the UI's own account in Postgres"
+    watch = None if replay or args.no_watch else _watcher()
+    app = create_app(replay=replay, dev=args.dev, question_timeout=args.question_timeout, watch=watch)
+    note = f"REPLAY of {Path(args.replay).name}: no model, no quote, no database" if replay else "LIVE: pressing Go! is a PAID run (OpenRouter, Finnhub) that writes the UI's own account in Postgres" + ("; the WATCHER of waiting limit orders is on: while an order waits and the market is open it quotes Finnhub once a minute (--no-watch turns it off)" if watch is not None else "")
     from prometheus.application.web import tracing
     from prometheus.common import langsmith_tracing
     print(langsmith_tracing.configure())   # LangSmith traces each run when LANGSMITH_API_KEY is set (entry 114)

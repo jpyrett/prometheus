@@ -130,12 +130,12 @@ def test_a_review_that_asked_for_a_person_is_denied_so_in_auto_mode_nobody_is_as
 
 
 def test_in_auto_mode_an_approved_purchase_trades_with_the_critics_reason_and_nobody_is_asked_at_any_score():
-    """Entry 104: no second mark. Auto mode trades what the Critic approved, at the score it approved (PG_open's 88 here, and a review that approved at 70, the Critic's own mark, the same)."""
+    """Entry 104: no second mark. Auto mode trades what the Critic approved, at the score it approved (PG_open's 93 here since Critic v3, 88 before it, and a review that approved at 70, the same)."""
     for changes in ({}, {"score": 70, "grade": "C"}):
         asked = Asked(False)
         d = decide(reviewed(**changes), p=profile(trade_mode="auto"), approver=asked).trade_decisions[0]
         assert d["will_trade"] == "yes_auto" and not d["asked_user"] and asked.cards == [] and d["shares"] > 0
-        assert d["reason"].startswith(f"approved by the Critic (score {changes.get('score', 88)}): Auto mode trades what the Critic approves") and "escalated" not in d
+        assert d["reason"].startswith(f"approved by the Critic (score {changes.get('score', 93)}): Auto mode trades what the Critic approves") and "escalated" not in d
 
 
 def test_a_recommendation_to_reduce_is_never_traded_or_asked_about_in_either_mode():

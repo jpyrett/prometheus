@@ -8,6 +8,7 @@ from datetime import date
 from pathlib import Path
 
 import pytest
+from proving_helpers import as_before_the_forward_excess, outcomes_before_the_forward_return
 
 from prometheus.agents.account_manager.intent import TradeIntent
 from prometheus.proving import engine, speed as speed_module, tracing
@@ -334,7 +335,7 @@ def test_the_walk_over_the_real_fast_research_is_the_saved_run_and_a_cached_reru
     again = engine.run_time_machine(FAST_6M_REQUEST, store=six_month_store(tmp_path), intent=FAST_6M_INTENT)
     assert again.coverage["timing"]["cached_days"] == 23 and again.speed == "fast" and "fast_models" in again.caveats
     assert [(o.key, o.result, o.return_pct, o.not_traded_reason, o.source) for o in again.outcomes] == [(o.key, o.result, o.return_pct, o.not_traded_reason, o.source) for o in FAST_6M.outcomes]
-    assert again.stats == FAST_6M.stats and [p.equity for p in again.equity] == [p.equity for p in FAST_6M.equity]      # the fixture's last day was walked again once the bars of 2026-11-20 had settled (entry 129)
+    assert as_before_the_forward_excess(again.stats) == as_before_the_forward_excess(FAST_6M.stats) and outcomes_before_the_forward_return(again) == outcomes_before_the_forward_return(FAST_6M) and [p.equity for p in again.equity] == [p.equity for p in FAST_6M.equity]      # the fixture's last day was walked again once the bars of 2026-11-20 had settled (entry 129)
     assert again.seconds < 30 and again.timing["research_seconds"] < 3      # the recorded run took more than a minute in its research; from the cache it is the reading of 23 files
     held_back = [o for o in again.outcomes if o.notes and "Advisor's cooldown" in " ".join(o.notes)]
     assert held_back and {o.not_traded_reason for o in held_back} == {"cooldown"} and {o.source for o in again.outcomes} == {"time_machine"}

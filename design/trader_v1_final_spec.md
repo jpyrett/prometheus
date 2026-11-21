@@ -627,3 +627,12 @@ A live venue is a third class with `simulated = False` and `books = True`: `pric
 | Reconciliation | The broker's cash and positions are a second source of truth beside the Postgres book. A difference must stop trading and be shown to the user, never be settled silently. |
 | Stop orders | The plan's stop is a price on the record. A live venue could rest it at the broker; that is the stop-loss TODO, and it is a new origin of a sale (entry 105). |
 | Market hours and halts | The simulated venues fill whenever they are asked. |
+
+
+## Amendment of 2026-11-21 (design choices entry 143, B1): a sale that fills lower, the sales stay
+
+The venue has one more door, `report_fill(trade, shares, estimate, prices)`: what was really FILLED, asked AFTER the Account Manager approved `shares` at the price of `estimate` (what `execute` said it would fill at). A simulated venue returns the estimate (a paper fill is the quote, a backtest fill the bar's price). A live venue SUBMITS the approved shares there, never before the approval, and may report a sale at a LOWER price; a purchase must never be reported above the price it was approved at (a live venue sends a limit order at it: nothing may cost more than the account's money, entry 111). `PaperBroker._fill` books what filled; a `rejected` or `active` report after the approval is a rejected trade.
+
+When funding sales were booked and brought less than they were estimated at, the Account Manager's approval of the funded purchase, which reads the cash the book shows then, refuses it (`insufficient_cash`; the cash is the only check). `PaperBroker._sales_fell_short` turns that into the thirteenth reject code, `sales_fell_short`: the sales were approved, filled and booked and STAY (nothing here undoes a booked sale), the purchase is `rejected`, its reason says what the sales brought against what was planned, a note goes on the work order, and the Trader's summary names the sales that stay. The whole-run output check `verify_trades` does not call that an error (a filled funding sale whose purchase was rejected for ANY OTHER reason is still the worst case of section 7 and is still reported). A purchase that still fills (cut to the cash, or paid in full) gets a note when the sales brought less. Section 14's list of reject codes is now thirteen.
+
+What a live venue still must bring is the table of the amendment of entry 128 (an order id, partial fills, an order past the run, cancel, reconciliation, stop orders, market hours): this one row, "a sale that fills lower", is no longer in it.

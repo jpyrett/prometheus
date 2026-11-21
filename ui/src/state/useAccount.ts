@@ -90,7 +90,7 @@ export function useAccount(health: Health | null) {
 
   /** A run's `portfolio` event replaces the holdings and the cash (the person and the profile stay as the account says). */
   const applyPortfolio = useCallback((p: PortfolioData) => {
-    setView((current) => (current === null || current.account.id === p.account.id || replay ? { account: p.account, positions: p.positions, cash: p.cash, invested: p.invested, total: p.total, as_of_utc: p.as_of_utc } : current));
+    setView((current) => (current === null || current.account.id === p.account.id || replay ? { account: p.account, positions: p.positions, cash: p.cash, available: p.available, reserved_cash: p.reserved_cash, invested: p.invested, total: p.total, as_of_utc: p.as_of_utc } : current));
   }, [replay]);
 
   const forget = useCallback(() => {

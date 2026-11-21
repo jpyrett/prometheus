@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { replayEvents } from "../state/runReducer";
-import { approveQuestion, bobEvents, clarifyQuestion, confirmQuestion, missingQuestion } from "../test/fixtures";
+import { approveQuestion, bobEvents, clarifyQuestion, confirmQuestion, fundingQuestion, missingQuestion, raiseFundsQuestion } from "../test/fixtures";
 import { QuestionCard } from "./QuestionCard";
 
 function setup(question: typeof confirmQuestion, row?: Parameters<typeof QuestionCard>[0]["row"]) {
@@ -103,5 +103,47 @@ describe("QuestionCard: a stock the Data Clerk did not find (recorded from the l
     expect(screen.getByText("ACCOUNT MANAGER ASKS · 2 OF 3")).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "Stop the order" }));
     expect(answer).toHaveBeenCalledWith(missingQuestion.question_id, false);
+  });
+});
+
+
+describe("QuestionCard: raising funds for a purchase the cash does not cover (entry 142; the numbers of Jacob's real request on a throwaway copy of his account)", () => {
+  it("the question says how short the cash is in the Account Manager's own sentence, lists what would be bought, and its buttons answer yes and no", () => {
+    const answer = setup(raiseFundsQuestion);
+    expect(screen.getByText("ACCOUNT MANAGER ASKS · RAISE FUNDS?")).toBeTruthy();
+    expect(document.querySelector(".qcard p")!.textContent).toBe("You have $60.14 available; 2 ANT at $88.91 cost $177.82, $117.68 short. Shall I raise the money by selling some of your holdings? I will show you what I would sell first.");
+    expect(screen.getByLabelText("What would be bought").textContent).toContain("ANT");
+    expect(screen.getByLabelText("What would be bought").textContent).toContain("$177.82");
+    expect(document.activeElement).toBe(screen.getByRole("button", { name: "Yes, raise the money" }));
+    fireEvent.click(screen.getByRole("button", { name: "Yes, raise the money" }));
+    expect(answer).toHaveBeenCalledWith(raiseFundsQuestion.question_id, true);
+    expect((screen.getByRole("button", { name: "No" }) as HTMLButtonElement).disabled).toBe(true); // both lock once an answer is on its way
+    expect(screen.getByText("Nothing is sold without your yes. No answer means no.")).toBeTruthy();
+  });
+
+  it("No answers false", () => {
+    const answer = setup(raiseFundsQuestion);
+    fireEvent.click(screen.getByRole("button", { name: "No" }));
+    expect(answer).toHaveBeenCalledWith(raiseFundsQuestion.question_id, false);
+  });
+
+  it("the plan shows which holding is sold, how many shares, at what price, the gain, and the cash before and after; Sell, then buy answers yes and No, sell nothing answers no", () => {
+    const answer = setup(fundingQuestion);
+    expect(screen.getByText("APPROVE THE SALES")).toBeTruthy();
+    expect(document.querySelector(".qcard p")!.textContent).toBe("To buy 2 shares of ANT, with cash of $60.14, these holdings would be sold first:");
+    const sells = screen.getByLabelText("The holdings that would be sold").textContent!;
+    expect(sells).toContain("DPZ");
+    expect(sells).toContain("Sell 1 at $348.61");
+    expect(sells).toContain("$348.61, gain $6.89");
+    expect(document.querySelector(".qcard .cap")!.textContent).toBe("The cash after the sales and the purchase would be about $230.93.");
+    fireEvent.click(screen.getByRole("button", { name: "Sell, then buy" }));
+    expect(answer).toHaveBeenCalledWith(fundingQuestion.question_id, true);
+    expect((screen.getByRole("button", { name: "No, sell nothing" }) as HTMLButtonElement).disabled).toBe(true);
+  });
+
+  it("No, sell nothing answers false", () => {
+    const answer = setup(fundingQuestion);
+    fireEvent.click(screen.getByRole("button", { name: "No, sell nothing" }));
+    expect(answer).toHaveBeenCalledWith(fundingQuestion.question_id, false);
   });
 });

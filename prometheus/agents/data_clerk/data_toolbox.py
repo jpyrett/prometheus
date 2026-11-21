@@ -89,6 +89,9 @@ ARTICLE_START, SUMMARY_START, INSIGHTS_START, ARTICLE_END = (
 FINNHUB_NEWS_URL = "https://finnhub.io/api/v1/company-news"
 FINNHUB_PRESS_URL = "https://finnhub.io/api/v1/press-releases"
 FINNHUB_QUOTE_URL = "https://finnhub.io/api/v1/quote"
+FINNHUB_RECOMMENDATION_URL = "https://finnhub.io/api/v1/stock/recommendation"   # analyst recommendation trends: a row for each month ("period"), the counts strongBuy, buy, hold, sell, strongSell. The one analyst endpoint the licence covers (probed 2026-11-20; price targets and upgrades answer 403)
+RATING_FIELDS = ("strongBuy", "buy", "hold", "sell", "strongSell")
+ANALYSTS_DIR = "data/analysts"   # under the base folder: one <SYMBOL>.json for each symbol, a dict keyed by period (derived data, gitignored)
 FINNHUB_GENERAL_URL = "https://finnhub.io/api/v1/news"
 FINNHUB_GENERAL_CATEGORIES = ("general", "merger")
 PRESS_RELEASES_DEFAULT_DIR = "data/press_releases"   # PRESS_RELEASES_OUTPUT_DIR overrides it; the RAG loader reads the same setting
@@ -649,6 +652,80 @@ class DataToolbox:
                 "open": round(float(data.get("o") or 0.0), 4), "previous_close": round(float(data.get("pc") or 0.0), 4),
                 "as_of_utc": datetime.fromtimestamp(int(data["t"]), timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
                 "source": "Finnhub /quote"}
+
+    def _analysts_file(self, symbol: str, store: str) -> Path:
+        """`<base>/<store>/<SYMBOL>.json`. `store` is a relative folder under `data/` with no `..`: anything else is refused (a work order's request field is checked by `verify_ratings_request` too)."""
+        parts = Path(store).parts
+        if not parts or Path(store).is_absolute() or ".." in parts or parts[0] != "data":
+            raise ValueError("the analysts' store must be a relative folder under data/ with no ..")
+        return self.base_dir / store / f"{symbol}.json"
+
+    def fetch_analyst_ratings(self, symbols: list[str], store: str = ANALYSTS_DIR) -> dict[str, dict]:
+        """Fetch the analyst RECOMMENDATION TRENDS of some tickers from Finnhub (`FINNHUB_RECOMMENDATION_URL`, one call each, the paid key) and keep each answer in `<store>/<SYMBOL>.json`: a dict keyed by `period`
+        ("2026-11-01", the month), each {strongBuy, buy, hold, sell, strongSell, fetched_utc}. The NEWEST ANSWER FOR A PERIOD WINS (Finnhub revises the current month's counts), a period it no longer lists stays, and
+        the file is written atomically (a temporary file, then a replace). A row that cannot be read (no real date, a count that is not a whole number of at least zero, another symbol's) is discarded and counted, never
+        written. Returns {symbol: {fetched, written, discarded, newest, path}}. A real, paid-API network call, refused while a day is bound (`trading_clock.refuse_when_bound`: the Time Machine reads only what is stored);
+        an API failure raises (the message never holds the key)."""
+        trading_clock.refuse_when_bound("fetch_analyst_ratings")
+        wanted = list(dict.fromkeys(s.strip().lstrip("$").upper() for s in symbols))
+        if not wanted or any(not re.fullmatch(r"[A-Z0-9][A-Z0-9.\-]{0,9}", s) for s in wanted):
+            raise ValueError("give one or more ticker symbols")
+        key = self._api_keys()["FINNHUB_API_KEY"]
+        out = {}
+        with httpx.Client(timeout=httpx.Timeout(30.0)) as client:
+            limiter = _RateLimiter(FINNHUB_MIN_INTERVAL)
+            for symbol in wanted:
+                data = self._get_json(client, limiter, "Finnhub recommendation", FINNHUB_RECOMMENDATION_URL, {"symbol": symbol}, headers={"X-Finnhub-Token": key})
+                path = self._analysts_file(symbol, store)
+                stored = {}
+                if path.exists():
+                    try:
+                        body = json.loads(path.read_text(encoding="utf-8"))
+                        stored = body if isinstance(body, dict) else {}
+                    except (OSError, ValueError):
+                        stored = {}      # an unreadable file is replaced whole by what Finnhub just said
+                kept, discarded, stamp = {}, 0, datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+                for row in data if isinstance(data, list) else []:
+                    try:
+                        period = row["period"]
+                        date.fromisoformat(period)
+                        counts = {name: row[name] for name in RATING_FIELDS}
+                        if any(isinstance(n, bool) or not isinstance(n, int) or n < 0 for n in counts.values()) or (row.get("symbol") or symbol).upper() != symbol:
+                            raise ValueError("not a recommendation count of this ticker")
+                    except ARTICLE_FAILURES:    # a row that cannot be read as a count: discarded and counted
+                        discarded += 1
+                        continue
+                    kept[period] = {**counts, "fetched_utc": stamp}
+                stored.update(kept)
+                path.parent.mkdir(parents=True, exist_ok=True)
+                tmp = path.with_suffix(".json.tmp")
+                tmp.write_text(json.dumps(dict(sorted(stored.items())), indent=1) + "\n", encoding="utf-8")
+                tmp.replace(path)
+                out[symbol] = {"fetched": len(kept), "written": len(kept), "discarded": discarded, "newest": max(stored) if stored else None, "path": str(path)}
+        return out
+
+    def read_analyst_ratings(self, symbol: str, store: str = ANALYSTS_DIR, until: date | None = None) -> list[dict]:
+        """The stored recommendation counts of one symbol, NEWEST FIRST: [{period, strongBuy, buy, hold, sell, strongSell}]. POINT IN TIME: only the periods on or before `until` (a period "2026-11-01" is usable from
+        2026-11-01) and, while a day is bound (`trading_clock.as_of`), never one after it whatever `until` says. No file, or one that cannot be read, is an empty list. Nothing is fetched and nothing is written."""
+        path = self._analysts_file(symbol.strip().lstrip("$").upper(), store)
+        try:
+            body = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return []
+        bound = trading_clock.bound_day()
+        limit = min((d for d in (until, bound) if d is not None), default=None)
+        rows = []
+        for period, counts in (body.items() if isinstance(body, dict) else []):
+            try:
+                if limit is not None and date.fromisoformat(period) > limit:
+                    continue
+                row = {name: counts[name] for name in RATING_FIELDS}
+                if any(isinstance(n, bool) or not isinstance(n, int) or n < 0 for n in row.values()):
+                    continue
+            except ARTICLE_FAILURES:
+                continue
+            rows.append({"period": period, **row})
+        return sorted(rows, key=lambda r: r["period"], reverse=True)
 
     def fetch_press_releases(self, symbol: str, from_date: int = 365, start: date | None = None, end: date | None = None) -> dict:
         """Fetch the official company press releases (Finnhub /press-releases) for `symbol` from

@@ -10,8 +10,8 @@ import { areaPath, linePath } from "./path";
 import { dayNumber, extent, linear, shortDate } from "./scale";
 import { TipRow, Tooltip } from "./Tooltip";
 
-const EXIT_COLOR: Record<string, string> = { target: "var(--pos)", stop: "var(--neg)", time_stop: "var(--neutral)" };
-const EXIT_WORD: Record<string, string> = { target: "target", stop: "stop", time_stop: "time stop" };
+const EXIT_COLOR: Record<string, string> = { target: "var(--pos)", stop: "var(--neg)", trailing_stop: "var(--text-2)", time_stop: "var(--neutral)" };
+const EXIT_WORD: Record<string, string> = { target: "target", stop: "stop", trailing_stop: "trailing stop", time_stop: "time stop" };
 
 /** Why an outcome has no path, in words (the Trader's own code for a limit never reached). */
 export function noPathWords(o: RecOutcome): string {
@@ -48,7 +48,7 @@ export function PlanChart({ outcome, fallbackWidth = 236 }: { outcome: RecOutcom
   }
 
   const last = path[path.length - 1]!;
-  const label = `${o.symbol} plan chart. Entered ${shortDate(entry.date, true)} at ${money(entry.price)}${o.plan.stop ? `, stop ${money(o.plan.stop)}` : ""}${o.plan.target ? `, target ${money(o.plan.target)}` : ""}. ${
+  const label = `${o.symbol} plan chart. Entered ${shortDate(entry.date, true)} at ${money(entry.price)}${o.plan.stop ? `, ${o.plan.trailing ? "starting stop" : "stop"} ${money(o.plan.stop)}${o.plan.trailing ? " (a trailing stop: it rises with the highest close; no target)" : ""}` : ""}${o.plan.target ? `, target ${money(o.plan.target)}` : ""}. ${
     o.exit ? `Exited at the ${EXIT_WORD[o.exit.reason]} on ${shortDate(o.exit.date, true)} at ${money(o.exit.price)}` : `Still open, last close ${money(last.close)} on ${shortDate(last.date, true)}`
   }${o.return_pct !== null ? `, return ${pct(o.return_pct)}` : ""}${o.excess_return_pct !== null ? `, ${pct(o.excess_return_pct)} against SPY` : ""}.${hypothetical ? " Not traded: a share-equivalent followed by the plan." : ""}`;
 
@@ -93,7 +93,7 @@ export function PlanChart({ outcome, fallbackWidth = 236 }: { outcome: RecOutcom
               <>
                 <line className="pc-stop" x1={m.left} x2={plotRight} y1={y(o.plan.stop)} y2={y(o.plan.stop)} />
                 <text className="pc-label" x={plotRight + 4} y={y(o.plan.stop)} dy="0.32em">
-                  stop
+                  {o.plan.trailing ? "start stop" : "stop"}
                 </text>
               </>
             )}

@@ -68,8 +68,8 @@ export interface EquityChartProps {
   fallbackWidth?: number;
 }
 
-const REASON_COLOR: Record<string, string> = { target: "var(--pos)", stop: "var(--neg)", time_stop: "var(--neutral)" };
-const REASON_WORD: Record<string, string> = { target: "target", stop: "stop", time_stop: "time stop" };
+const REASON_COLOR: Record<string, string> = { target: "var(--pos)", stop: "var(--neg)", trailing_stop: "var(--text-2)", time_stop: "var(--neutral)" };
+const REASON_WORD: Record<string, string> = { target: "target", stop: "stop", trailing_stop: "trailing stop", time_stop: "time stop" };
 
 /** The words of a tile's time: the day's seconds and its split by stage ("73.3 s: Data Clerk 38.5 s, Advisor 12.4 s, Critic 22.2 s"); nothing for a cached or waiting day. */
 export function tileTimeWords(mark: DayMark): string {
@@ -150,6 +150,11 @@ export function EquityChart({ points, shown, sweeping, events, days, research, s
           <Key kind="dot" color="var(--neg)">
             Stop
           </Key>
+          {events.some((e) => e.reason === "trailing_stop") && (
+            <Key kind="dot" color="var(--text-2)">
+              Trailing stop
+            </Key>
+          )}
           <Key kind="dot" color="var(--neutral)">
             Time stop
           </Key>

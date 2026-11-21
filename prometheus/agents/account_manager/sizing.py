@@ -358,7 +358,7 @@ def _round_robin(purchases: list[Purchase], sizable: list[int], wanted: dict, ca
 def equity_of(portfolio: Portfolio, prices: dict[str, Decimal]) -> tuple[Decimal | None, str]:
     """(equity, what it was worked out from): the free cash plus every holding at its price in `prices`. A holding with no usable price is counted at its COST BASIS and the note says so. None only when the account holds nothing
     (no cash and no holdings): there is no equity to take a share of (the Account Manager's "20% of my account" needs one)."""
-    value, unpriced = portfolio.cash_avail, []
+    value, unpriced = portfolio.cash_total, []      # equity counts the cash set aside for a waiting order (entry 140): it is still the account's
     for position in portfolio.positions:
         price = _amount(prices.get(position.symbol))
         if price is None:

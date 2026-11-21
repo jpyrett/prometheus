@@ -127,7 +127,7 @@ def test_nothing_in_the_session_knows_a_sector_a_company_or_a_ticker():
 
 def test_the_graph_has_no_node_the_other_requests_do_not_have():
     nodes = lambda **o: set(desk.build_desk(clerk_factory=lambda order: None, advisor_factory=lambda order: None, **o).get_graph().nodes)
-    assert nodes(with_critic=True, with_trader=True) == {"__start__", "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "trader", "__end__"}      # account_manager_direct: a trade the user names themselves (entry 87)
+    assert nodes(with_critic=True, with_trader=True) == {"__start__", "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "account_manager_funds", "trader", "__end__"}      # account_manager_direct: a trade the user names themselves (entry 87); account_manager_funds: RaiseFunds for a purchase the cash does not cover and the user permitted to be paid for by selling (entry 142)
     assert nodes() == {"__start__", "account_manager", "data_clerk", "advisor", "__end__"}
 
 

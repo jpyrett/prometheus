@@ -58,12 +58,14 @@ class FakeClerk:
     fresh        {symbol: [hit, ...]}: newer stored text
     missing      chunk ids to answer as not found
     listed       {symbol: True | False | None}
-    fail         names of requests that raise ("metrics", "quotes", "verification")
+    fail         names of requests that raise ("metrics", "quotes", "verification", "analysts")
+    analysts     {symbol: [period, ...]}: the analysts' monthly counts the day could know, newest first, each {period, strongBuy, buy, hold, sell, strongSell}; none by default (the dimension is then not applicable)
     """
 
-    def __init__(self, order, now=NOW, metrics=None, quotes=None, fresh=None, missing=(), listed=None, fail=(), own=None, changes=None):
+    def __init__(self, order, now=NOW, metrics=None, quotes=None, fresh=None, missing=(), listed=None, fail=(), own=None, changes=None, analysts=None):
         self.order, self.now, self.fresh, self.missing, self.fail = order, now, fresh or {}, set(missing), set(fail)
         self.listed = listed or {}
+        self.analysts = analysts or {}
         self.metrics = copy.deepcopy(metrics if metrics is not None else order.data.metrics)
         for symbol, results in self.metrics.items():
             last = (results.get("last_close") or {}).get("value")
@@ -101,6 +103,14 @@ class FakeClerk:
             if last:
                 quotes[symbol] = {"symbol": symbol, "price": last, "previous_close": last, "as_of_utc": stamp, "source": "fake"}
         order.data = wo.DataResult(quotes=quotes)
+        order.status = "data_ready"
+        return order
+
+    def request_analyst_ratings(self, order, today=None):
+        self.asked.append(("analysts", list(order.subject), today))
+        if "analysts" in self.fail:
+            raise RuntimeError("the analyst ratings are down")
+        order.data = wo.DataResult(analysts={s: {"periods": copy.deepcopy(self.analysts.get(s, [])), "fetched": False, "note": None} for s in order.subject})
         order.status = "data_ready"
         return order
 

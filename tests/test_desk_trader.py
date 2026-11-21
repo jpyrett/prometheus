@@ -129,18 +129,19 @@ def test_a_trader_without_the_critic_is_refused_whatever_else_is_asked_for():
 
 def test_the_trader_node_follows_the_decision_and_the_graph_ends_after_it():
     nodes, found = edges(with_critic=True, with_trader=True)
-    assert nodes == {START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "trader", END}
+    assert nodes == {START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "account_manager_funds", "trader", END}      # entry 142: the funds node is on every desk that decides AND trades
     assert found == {(START, "account_manager", False), ("account_manager", "data_clerk", True), ("account_manager", END, True), ("data_clerk", "advisor", True), ("data_clerk", END, True),
                      ("advisor", "critic", True), ("advisor", END, True), ("critic", "account_manager_decision", False),
                      ("account_manager_decision", "trader", True), ("account_manager_decision", END, True), ("trader", END, False),
                      ("account_manager", "account_manager_direct", True), ("account_manager_direct", "trader", True), ("account_manager_direct", END, True),
-                     ("advisor", "account_manager_decision", True)}      # the last four: a company the Advisor scored neutral counts as approved when nothing is left for the Critic (entry 91); and a trade the user names goes from the Account Manager's reading to its decision and on to the Trader (entry 87)
+                     ("advisor", "account_manager_decision", True),      # the last four: a company the Advisor scored neutral counts as approved when nothing is left for the Critic (entry 91); and a trade the user names goes from the Account Manager's reading to its decision and on to the Trader (entry 87)
+                     ("account_manager_decision", "account_manager_funds", True), ("account_manager_direct", "account_manager_funds", True), ("account_manager_funds", "trader", True), ("account_manager_funds", END, True)}      # entry 142: a purchase the user permitted to be paid for by selling holdings goes through RaiseFunds on its way to the Trader
 
 
 def test_with_the_funds_node_the_funds_node_runs_first_and_its_answer_goes_on_to_the_trader():
     nodes, found = edges(with_critic=True, with_funds=True, with_trader=True)
     assert nodes == {START, "account_manager", "data_clerk", "advisor", "critic", "account_manager_decision", "account_manager_direct", "account_manager_funds", "trader", END}
-    assert ("account_manager", "account_manager_direct", True) in found and ("account_manager_direct", "trader", True) in found and ("account_manager_direct", "account_manager_funds", True) not in found      # a direct order is never funded (entry 87)
+    assert ("account_manager", "account_manager_direct", True) in found and ("account_manager_direct", "trader", True) in found and ("account_manager_direct", "account_manager_funds", True) in found      # a direct order the user permitted to be funded goes through the funds node too (entry 142; it was never funded under entry 87)
     assert ("account_manager_decision", "account_manager_funds", True) in found and ("account_manager_decision", END, True) in found
     assert ("account_manager_funds", "trader", True) in found and ("account_manager_funds", END, True) in found and ("trader", END, False) in found
     assert ("account_manager_decision", "trader", True) not in found and ("account_manager_funds", END, False) not in found       # the funds node does not end the graph by itself any more
@@ -483,7 +484,7 @@ def test_the_flags_that_do_not_go_together_are_refused_by_the_parser_before_anyt
 def test_show_graph_shows_the_trader_node_and_with_raise_funds_the_funds_node_before_it(capsys):
     assert desk.main(["--show-graph", "--critic", "--trade"]) == 0
     plain = capsys.readouterr().out
-    assert "trader(trader)" in plain and "account_manager_decision -.-> trader;" in plain and "trader --> __end__;" in plain and "account_manager_funds" not in plain
+    assert "trader(trader)" in plain and "account_manager_decision -.-> trader;" in plain and "trader --> __end__;" in plain and "account_manager_funds -.-> trader;" in plain      # entry 142: the funds node is on every desk that decides and trades (a decision that carries funding goes through it); the old "not in plain" held until then
     assert desk.main(["--show-graph", "--critic", "--raise-funds", "--trade"]) == 0
     funds = capsys.readouterr().out
     assert "trader(trader)" in funds and "account_manager_funds -.-> trader;" in funds and "account_manager_decision -.-> account_manager_funds;" in funds and "account_manager_decision -.-> trader;" not in funds

@@ -414,7 +414,7 @@ def test_the_real_recommendations_are_valid_records_with_prices_and_dates_and_no
         valid = Recommendation.model_validate(record)                                                                  # extra="forbid": a size field left in the capture would fail here
         assert not gone & set(record["trade"]) and not {"position_pct_after", "funds_feasible"} & set(record["portfolio_fit"])
         assert valid.trade.entry_zone and valid.trade.stop_price and valid.trade.stop_distance and valid.trade.time_stop_date and valid.trade.order_style    # the plan: prices and dates
-        assert set(record["trade"]) == set(TradePlan.model_fields)
+        assert set(record["trade"]) == set(TradePlan.model_fields) - {"trailing", "trail_distance"}      # the capture was made before Advisor config version 3: its plan has no trailing fields (they read as a fixed stop)
         # AMENDED (entry 105): the capture is a VERSION 2 record (it still has `portfolio_fit` and the three holding keys of its action, all at their not-held values). The version 3 models read it, move the note to
         # `concentration` and drop the rest; the capture is not edited.
         assert record["identity"]["schema_version"] == 2 and set(record["portfolio_fit"]) == {"sector_weight_after", "correlation_to_portfolio_63d", "note"} and record["action"]["held_shares"] == 0

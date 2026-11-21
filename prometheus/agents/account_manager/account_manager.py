@@ -38,6 +38,11 @@ an order is that the funds cover it (entry 91).
 A DIRECT ORDER (design choices entry 87): when the user names the trade ("Buy 50 shares of MSFT") `understand_request` reads it as `orders`, the desk skips the Data Clerk's search, the Advisor and the Critic, and `decide_direct` prices
 each order with the Data Clerk and decides it (the user's own order is the approval), and the Trader places it through the same handshake: as typed or not at all.
 
+A DIRECT ORDER WHOSE LIMIT IS NOT MET WAITS (design choices entry 140; `orders.py`, design/limit_orders_spec.md Part B): a purchase with a ceiling ("buy 10 MU at $90 or less") whose quote is above it, and a sale with a floor ("sell 10 MSFT at $600 or more")
+whose quote is below it, become an OPEN ORDER, a DAY order on the paper broker with its cash (a purchase) or its shares (a sale) SET ASIDE: `decide_direct` places it in the account book (`_place_waiting`: one transaction under the account's row locks), what is
+set aside is not available to anything else (the book's one door: `list_portfolio` returns the AVAILABLE cash as `cash_avail` and the holding with the reservations beside it, `available_cash`, `open_orders`, `cancel_open_order`), and the web server's watcher
+fills it through the SAME funnel when the quote reaches the limit (`fill_open_order`: the order's own hold is available to its own trade and to nothing else, `_portfolio`; the booking marks the order filled in the same transaction) or expires it at the close.
+
 The Account Manager decides HOW MUCH to buy or sell (design choices entry 80: the Advisor and the Critic only deal with recommendations): `decide_trades` sizes every purchase the Critic approved from the user's money
 (`sizing.py`; the only check is that the funds cover the order; Auto mode spends the funds round-robin, a share of each stock in turn; Auto mode asks nothing, and a recommendation the Critic denied is returned to the user: entry 104). A sale is never a recommendation (entry 105): it is the user's own direct order or RaiseFunds. It asks the Data Clerk for the current prices of the holdings first, when it needs them.
 
@@ -55,23 +60,24 @@ import re
 import sys
 import threading
 import time
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from decimal import Decimal
 from pathlib import Path
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
-from prometheus.agents.account_manager import handshake, neutral, sizing
+from prometheus.agents.account_manager import funding, handshake, neutral, orders, sizing
 from prometheus.agents.critic import feedback
 from prometheus.agents.account_manager.config import load_config as load_account_manager_config
-from prometheus.agents.account_manager.intent import TradeIntent, check_typed, parse_intent
+from prometheus.agents.account_manager.intent import NeedsClarification, TradeIntent, check_typed, parse_intent, read_unit_answer, settle_unit
 from prometheus.common import shares as sh
-from prometheus.common.money import digits, money as money_door, price as price_door
-from prometheus.common.portfolio import Portfolio, after_purchase, apply_fill, load_portfolio
+from prometheus.common.money import canonical, digits, money as money_door, price as price_door
+from prometheus.common.market_calendar import eastern_date
+from prometheus.common.portfolio import Portfolio, after_purchase, apply_fill, load_portfolio, trade_amount
 from prometheus.common.trading_clock import trading_now
 from prometheus.common.user_account import UserDirectory
 from prometheus.common.user_profile import RiskView, UserProfile, load_profile
-from prometheus.common.work_order import DIRECT, WorkOrder, decision_dollars, decision_of, decision_pot, iso_date, new_work_order, verify_trade
+from prometheus.common.work_order import DIRECT, DataResult, WorkOrder, decision_dollars, decision_max_price, decision_min_price, decision_of, decision_pot, iso_date, new_work_order, verify_trade
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.models.chat import model_name as chat_model_name
 from prometheus.prompts import account_manager_request as request_prompt
@@ -181,6 +187,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         self._booking = False                      # the run books each fill in the Postgres account book (asked for with `book`, and a saved account is connected)
         self._book_unavailable = False             # booking was asked for and no saved account is connected: said once, in the first Booking
         self._run_fills: dict[str, dict] = {}      # the fills `record_fill` was told in the open run, by trade id (a copy of each filled trade): what the run has spent of its pot besides what the work order already shows (entry 111, M1)
+        self._filling = None                       # the waiting order (an `OpenOrder`) this manager is FILLING right now (`fill_open_order`, entry 140): its own hold is available to ITS trade only, and its booking marks it filled
 
     @classmethod
     def classic(cls, model=None, clerk=None, **options):
@@ -237,7 +244,8 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
     @traced("account_manager.decide_trades")
     def decide_trades(self, order: WorkOrder, portfolio: Portfolio, approver=None, now=None, mode: str | None = None, balance: str | None = None, budget: Decimal | None = None,
-                      clarify=None, said_how_much: bool = False, request_text: str = "", count: int | None = None, each: Decimal | None = None) -> WorkOrder:
+                      clarify=None, said_how_much: bool = False, request_text: str = "", count: int | None = None, each: Decimal | None = None, max_price: Decimal | None = None,
+                      min_price: Decimal | None = None, shares_of: dict | None = None, shares_each: Decimal | None = None, raise_funds: bool = False) -> WorkOrder:
         """The Critic's verdicts become trade decisions (`order.trade_decisions`, one per review; see `decisions.py` for the rules), and the Account Manager decides HOW MUCH (design choices entry 80: the Advisor and the
         Critic only deal with recommendations): a denial is final, an approval that ran out is not traded, every approved purchase is sized from the user's money (`sizing.py`: the only check is that the funds cover the order), and an approved recommendation
         is traded in Auto mode, where NOTHING is asked (design choices entry 104: there is no second mark and a review that wants a person was already denied by the Critic); in Ask mode it goes to the user, through `approver`
@@ -260,15 +268,33 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         amount (the plan of the answer "an amount for each company", `clarify.plan_each_dollars`; whole shares, the leftover stays cash) and the POT of the run is the amount times the number of purchases that can be sized, never above the
         cash. Nothing is asked in either mode (the user already said how much), and no split is made (`balance` is dropped: every purchase has its own cap). It is one way to say how much, so it does not go with a `budget`.
 
+        `max_price` (design choices entry 138; "the top 3 AI stocks under $50 a share") is the user's PRICE LIMIT, the most one share may cost: the Advisor already left out what costs more, and the Account Manager checks it again because the price
+        moves: a purchase (approved or neutral) whose price is above it gets NO decision and the user is told (`decisions.over_limit_line`), every other decision carries it and the handshake refuses a fill above it. The neutral companies
+        are all priced first when there is a limit, so the number asked for is filled from those under it. A limit is a price: never a size and never a rule about risk.
+
+        `min_price` (entry 140; "the top 3 AI stocks over $20 a share") is the user's PRICE FLOOR, the same from the other side: a purchase priced under it gets no decision and the user is told, and the handshake refuses a fill under it.
+        `shares_of` ({the stock as named: shares}) and `shares_each` (entry 140, C2; "buy 10 of MU if the recommendation passes", "5 shares of each of the top 3") are the shares the user TYPED with the recommendation: each approved (or neutral)
+        purchase of such a stock is limited to them (the sizing's `wanted`, binding `asked`; the smaller of this and another limit wins), the cash is still the only other check, and a denied one buys nothing.
+
+        RAISING FUNDS FOR THE SHARES THE USER TYPED (design choices entry 142, R10 and R11; `funding.py`). When EVERY approved (and neutral) purchase has typed shares (`shares_of`, `shares_each`) and what they cost, within the budget the user gave if any,
+        is more than the AVAILABLE cash, the shortfall may be raised by selling holdings, and ONLY if the user permitted it: `raise_funds` (their words), the setting ALWAYS_RAISE_FUNDS (unless their words said not to sell), or a yes to ONE question
+        in Ask mode (no answer is a no). Permitted, the purchases are sized as if the account held the money (each gets its typed shares: the budget is never exceeded), each decision carries `funding`, and the desk raises the whole shortfall in ONE
+        RaiseFunds plan before the Trader sells and buys (`fund_decisions`). Not permitted (Auto mode without the words, a no), nothing is sold: the round robin buys fewer shares with the cash, as ever, and the user is told what to say. A purchase with no
+        typed shares (sized to the cash) never triggers it, and a request that has one is not funded at all (the money raised would reach it).
+
         Returns the SAME order, `decided` unless an answer is pending. Refuses (a message on the order) a profile that is not the portfolio's user's."""
         from prometheus.agents.account_manager import clarify as clarifying, decisions
         if each is not None and budget is not None:
             order.errors = [*order.errors, "an amount for each stock and one total (a budget) are two ways to say how much: give one of them"]
             return order
-        approved = decisions.purchases_to_size(order, portfolio, now)      # the purchases the Critic's approvals make (a denied recommendation is not one): [] unless the order is `reviewed`
-        chosen, unneeded = neutral.choose(neutral.neutral_candidates(order), len(approved), count)        # every neutral company counts as approved (entry 107), up to the number the request asked for
+        approved = decisions.purchases_to_size(order, portfolio, now, max_price, min_price)      # the purchases the Critic's approvals make (a denied recommendation is not one; one priced above the user's limit is not either): [] unless the order is `reviewed`
+        names = neutral.neutral_candidates(order)
+        known_prices: dict[str, Decimal] = {}
+        if (max_price is not None or min_price is not None) and names:      # the user's price limit and floor (entries 138 and 140): price every neutral company first, so that the number asked for is filled from those inside them
+            names, known_prices = self._neutral_under_limit(order, names, max_price, min_price)
+        chosen, unneeded = neutral.choose(names, len(approved), count)        # every neutral company counts as approved (entry 107), up to the number the request asked for
         self._not_needed(order, unneeded, count)
-        neutral_prices = self._neutral_prices(order, chosen) if chosen else {}
+        neutral_prices = (known_prices or self._neutral_prices(order, chosen)) if chosen else {}
         neutral_purchases = neutral.purchases_for(order, chosen, neutral_prices, max((p.rank for p in approved), default=0))      # ranked after the approved ones: the sizing visits them in that order
         extra = [p for p in neutral_purchases if p.price is not None]      # asked about with the approved ones: ONE set of questions, over everything that is to be bought
         prices = self._held_prices(order, portfolio, now, bool(extra))
@@ -279,14 +305,86 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
                 balance, budget, wanted = None, plan.budget, plan.wanted
                 self.tell_user("", f"  How much: {plan.text}.")
         elif (clarify is not None and getattr(clarify, "available", lambda: True)() and (mode or self.profile.trade_mode) == "ask" and budget is None and not said_how_much
-                and (decisions.has_purchase_to_size(order, now) or extra)):
-            plan = self.clarify_sizing(order, portfolio, prices, clarify, now, balance, request_text, extra)
+                and (decisions.has_purchase_to_size(order, now, max_price, min_price) or extra)):
+            plan = self.clarify_sizing(order, portfolio, prices, clarify, now, balance, request_text, extra, max_price=max_price, min_price=min_price)
             if plan is not None:
                 balance, budget, wanted = plan.balance, plan.budget, plan.wanted
+        if shares_of or shares_each is not None:      # the shares the user typed with the recommendation (entry 140, C2): each such purchase is limited to them; the smaller of two limits on one purchase wins
+            rows = [(p, decisions.company_of(order, p)) for p in approved] + [(p, c.get("company")) for c, p in zip(chosen, neutral_purchases) if p.price is not None]
+            typed = decisions.typed_wanted(rows, shares_of, shares_each)
+            if typed:
+                wanted = decisions.combine_wanted(wanted, typed)
+                symbol_of = {p.record_id: p.symbol for p, _ in rows}
+                self.tell_user("", "  How much, as you typed it: " + ", ".join(f"{sh.text(n)} {sh.noun(n)} of {symbol_of[record]}" for record, n in typed.items()) + " (if approved; the cash is the only other limit).")
+        raising = None
+        if (shares_of or shares_each is not None) and each is None and wanted:      # the shares the user typed may be paid for by selling holdings (entry 142, R10): only when the user permitted it
+            raising = self._typed_funding(order, portfolio, [*approved, *extra], wanted, budget, prices, now, mode, approver, raise_funds, request_text)
+        notes_before = len(order.data.notes) if order.data is not None else 0
         order = decisions.decide_trades(order, portfolio, self.profile, approver, now, mode, balance, budget, prices, wanted, neutral_purchases=list(zip(chosen, neutral_purchases)),
-                                        fractional=self.fractional_split(balance))
+                                        fractional=self.fractional_split(balance), max_price=max_price, min_price=min_price, funding=raising)
+        for note in (order.data.notes[notes_before:] if order.data is not None else []):      # what a price limit or floor left without a decision: told to the user (the notes of the neutral ones were told as they were made)
+            for prefix in (decisions.OVER_LIMIT, decisions.UNDER_FLOOR):
+                if note.startswith(prefix):
+                    self.tell_user(f"      {note[len(prefix):]}")
         self._save_decisions(order)
         return order
+
+    def _typed_funding(self, order: WorkOrder, portfolio: Portfolio, rows: list[sizing.Purchase], wanted: dict[str, Decimal], budget: Decimal | None, prices: dict[str, Decimal], now, mode: str | None, approver,
+                       raise_funds: bool, request_text: str) -> tuple[Decimal, str] | None:
+        """(the money to raise, how the user permitted it) for the shares typed with a recommendation (R10 and R11), or None: nothing to raise (the cash covers it, or a purchase has no typed shares), the holdings could not pay for it, or the user
+        did not permit selling (Auto mode without the words, a no, no answer); the user is told which. The shortfall is the cost of the typed shares of every purchase less the available cash, never more than the budget the user gave leaves."""
+        rows = [p for p in rows if p.price is not None]
+        left_out = [p for p in rows if p.record_id not in wanted]      # entry 143, P1: a purchase with NO typed shares is sized to what the cash leaves after the typed ones, never to money raised by selling
+        rows = [p for p in rows if p.record_id in wanted]
+        if not rows:
+            return None
+        need = sum((trade_amount(wanted[p.record_id], p.price) for p in rows), Decimal("0.00"))
+        cap = need if budget is None else min(need, budget)
+        shortfall = cap - portfolio.cash_avail
+        if shortfall <= 0:
+            return None
+        mode = mode or self.profile.trade_mode
+        feasible, note = sizing.funds_check(cap, portfolio, prices, eastern_date(now))
+        if not feasible:
+            self.tell_user(f"      Raising funds could not pay for the shares you typed: ${shortfall:,.2f} is short of the cash ${portfolio.cash_avail:,.2f}, and {note}. The cash buys what it can.")
+            return None
+        by = funding.permission(raise_funds, request_text)
+        if by is None and mode == "ask" and approver is not None and getattr(approver, "available", lambda: True)():
+            buys = [{"symbol": p.symbol, "shares": wanted[p.record_id], "price": p.price, "cost": trade_amount(wanted[p.record_id], p.price)} for p in rows]
+            answer = self._ask_raise_funds(order, approver, funding.ask_card(portfolio.cash_avail, buys, shortfall, left_out=[p.symbol for p in left_out]))
+            if answer is not True:
+                self.tell_user("      Nothing is sold" + (": you did not want holdings sold to pay for it." if answer is False else ": there was no answer, and no answer is a no.") + " The cash buys what it can.")
+                return None
+            by = "asked"
+        if by is None:
+            self.tell_user(f"      The shares you typed cost ${cap:,.2f}, ${shortfall:,.2f} more than the cash ${portfolio.cash_avail:,.2f}, and nothing is sold unless you say so: {funding.NOT_SAID}. The cash buys what it can.")
+            return None
+        self.tell_user(f"      The shares you typed cost ${cap:,.2f}, ${shortfall:,.2f} more than the cash ${portfolio.cash_avail:,.2f}: {funding.how_words(by)}, so I will raise the money by selling some of your holdings first (RaiseFunds), and then buy.")
+        if left_out:
+            self.tell_user(f"      {funding.left_out_line([p.symbol for p in left_out])}")
+        return shortfall, by
+
+    def _neutral_under_limit(self, order: WorkOrder, names: list[dict], max_price: Decimal | None, min_price: Decimal | None = None) -> tuple[list[dict], dict[str, Decimal]]:
+        """(the neutral companies priced inside the user's limit and floor, their prices) (entries 138 and 140, L4 and F2): ONE quote order for the companies, then each one above `max_price` or under `min_price` is left out with a line for
+        the user and a note on the order's data (`decisions.OVER_LIMIT`, `decisions.UNDER_FLOOR`). A company with no price stays (it is `no_system_denied` when decided: nothing is bought that cannot be priced). Never raises (`_neutral_prices`)."""
+        from prometheus.agents.account_manager import decisions
+        from prometheus.common.work_order import MAX_QUOTE_SYMBOLS
+
+        prices = self._neutral_prices(order, names[:MAX_QUOTE_SYMBOLS])
+        kept = []
+        for candidate in names:
+            at = prices.get(candidate["symbol"])
+            if at is not None and max_price is not None and at > max_price:
+                note = decisions.OVER_LIMIT + decisions.over_limit_line(candidate["symbol"], at, max_price)
+            elif at is not None and min_price is not None and at < min_price:
+                note = decisions.UNDER_FLOOR + decisions.under_floor_line(candidate["symbol"], at, min_price)
+            else:
+                kept.append(candidate)
+                continue
+            self.tell_user(f"      {note.split(': ', 1)[1]}")
+            if order.data is not None:
+                order.data.notes = [*order.data.notes, note]
+        return kept, {symbol: at for symbol, at in prices.items() if symbol in {c["symbol"] for c in kept}}
 
     def _neutral_prices(self, order: WorkOrder, names: list[dict]) -> dict[str, Decimal]:
         """{symbol: current price} of the neutral companies, from ONE quote order to the Data Clerk (`request_prices`). Never raises: a price that cannot be had is a message on the order and that company is left out (it is not bought)."""
@@ -363,7 +461,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
     @traced("account_manager.decide_direct")
     def decide_direct(self, order: WorkOrder, portfolio: Portfolio, now=None, mode: str | None = None, approver=None, clarify=None, said_how_much: bool = False, request_text: str = "",
-                      balance: str | None = None, budget: Decimal | None = None) -> WorkOrder:
+                      balance: str | None = None, budget: Decimal | None = None, raise_funds: bool = False) -> WorkOrder:
         """The trade decisions for a DIRECT ORDER (design choices entries 87 and 88): the user named the trades, so no recommendation was made and the Critic was not asked (`direct.py`). The current price of each symbol is
         asked of the Data Clerk (one quote order: `request_prices`); each of `order.direct_orders` is then decided at its price: `yes_user` (the user's own order is the approval; the user is not asked again), or `no_funds`
         (the cash does not pay for the shares in full, or the account does not hold them: it is never made smaller), or `no_system_denied` (no price). When the user NAMED A COMPANY, the symbol is the Data Clerk's: in Ask mode
@@ -376,16 +474,111 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         or no. In AUTO mode nothing is asked: the funds are spent as the user's words say (`balance`, `budget`; round-robin by default: one stock gets what the cash allows). A SALE with no number is not placed: say how many.
 
         THE DOLLARS THE USER WROTE FOR A STOCK ARE ITS LIMIT (design choices entry 122: "Buy $3,000 of XOM and $3,000 of MSFT" spends $3,000 on each and $6,000 in all, never the whole cash): see `_size_direct`. A purchase with no number
-        in a request where another purchase has one is asked about in Ask mode and is not placed in Auto mode (the cash is never its default)."""
+        in a request where another purchase has one is asked about in Ask mode and is not placed in Auto mode (the cash is never its default).
+
+        A PURCHASE THE CASH DOES NOT COVER (design choices entry 142; `funding.py`, design/direct_raise_funds_spec.md R1 to R8, R12). The direct buys of the request that are placed now (typed shares, the dollars of a stock, a total) cost
+        more than the AVAILABLE cash: the shortfall. Holdings are sold to pay for it ONLY when the user permitted it: `raise_funds` (the form's: their words said "raise funds if needed"), the setting ALWAYS_RAISE_FUNDS (unless their words
+        said not to sell), or, in Ask mode, a yes to ONE question (the card `raise_funds`; no answer is a no). Auto mode asks nothing: without the words it does not sell and says what to add. Permitted, each such purchase is decided
+        `yes_user` as the user typed it (never cut) with `funding` on the decision, and the desk runs RaiseFunds before the Trader (`fund_decisions`); a purchase in dollars is sized with the money to be raised, its dollars the most it may cost.
+        Not permitted, a purchase of typed shares is `no_funds` with the reason, and one in dollars is sized to the cash as before. If even selling every holding that may be sold could not pay for it (R8) it is `no_funds` too, naming
+        the shortfall and what the holdings could raise."""
         from prometheus.agents.account_manager import direct
         now = now or trading_now()
         prices = self._direct_prices(order)
-        sized = self._size_direct(order, portfolio, prices, now, mode, clarify, said_how_much, request_text, balance, budget)
-        order = direct.decide_direct(order, portfolio, self.profile, mode, prices, now, load_account_manager_config().direct.valid_minutes, approver, sized, fractions=self._book_holds_fractions())
+        sales, after = self._own_sales(order, portfolio, prices, now)      # entry 143, S1: the user's own sale in this request pays for the purchases too (it is placed first)
+        proceeds = sum((s["amount"] for s in sales), Decimal("0.00"))
+        by, shortfall, why_not = self._direct_funding(order, after, prices, now, mode, approver, raise_funds, request_text, budget, sales)
+        sized = self._size_direct(order, after, prices, now, mode, clarify, said_how_much, request_text, balance, budget, extra_cash=shortfall if by else Decimal("0.00"))
+        waiting_by, waiting_why = self._waiting_funding(order, portfolio, prices, now, raise_funds, request_text)      # entry 143, W-F: a waiting purchase the free cash does not cover, paid for by selling when its price is reached
+        order = direct.decide_direct(order, portfolio, self.profile, mode, prices, now, load_account_manager_config().direct.valid_minutes, approver, sized, fractions=self._book_holds_fractions(),
+                                     funding=self._funding_map(order, prices, budget, shortfall, by) if by else None, why_not={**why_not, **waiting_why}, sale_proceeds=proceeds, waiting_funding=waiting_by)
+        self._place_waiting(order, now)      # an order whose limit the price has not reached WAITS as a day order, its cash or shares set aside (entry 140)
         self._save_decisions(order)
         return order
 
-    def _size_direct(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, Decimal], now, mode: str | None, clarify, said_how_much: bool, request_text: str, balance: str | None, budget: Decimal | None) -> dict[str, dict]:
+    def _place_waiting(self, order: WorkOrder, now: datetime) -> None:
+        """Place in the account book every direct order that waits (design choices entry 140, W1 to W4): each decision `direct.decide_direct` gave a `waiting` plan (the order's limit is not reached, the user confirmed it where Ask mode asks) becomes an OPEN
+        ORDER, with what it needs SET ASIDE, in ONE transaction that locks the account (`AccountStore.place_open_order`: the book refuses a placement the available cash or shares do not cover, whatever was read before). The decision then carries the
+        order's number (`open_order_id`) and says it WAITS, and the user is told (`tell_user`): "Waiting: buy 10 MU at $90.00 or less (now $95.12), $900.00 set aside, until 4:00 pm ET today." Without a saved account (a portfolio file) nothing can wait, and the
+        decision says so. A placement the book refused is `no_funds` with its sentence. Never raises for a database failure: the order is then not placed, and the decision says so."""
+        for entry, decision in zip(order.direct_orders, order.trade_decisions):
+            plan = decision.get("waiting")
+            if not isinstance(plan, dict) or decision.get("open_order_id") is not None:
+                continue
+            decision.pop("waiting", None)
+            if self.store is None or self.account_id is None:
+                decision.update(will_trade="no_system_denied", funds_avail=False, shares=Decimal(0), est_cost=Decimal("0.00"),
+                                reason=f"{entry['symbol']} is at ${plan['price']:,.2f} a share, {'above' if plan['side'] == 'buy' else 'under'} your limit of ${plan['limit']:,.2f}: not placed. An order that waits for its price needs the saved account book to set its cash or shares aside, and this run has none")
+                self.tell_user(f"      {decision['reason']}")
+                continue
+            try:
+                placed = self.store.place_open_order(self.account_id, request_id=order.request_id, record_id=entry["record_id"], symbol=entry["symbol"], company=entry.get("company"), side=plan["side"],
+                                                     limit_price=plan["limit"], request=entry["request"], placed_at=now, expires_at=_moment(plan["expires_utc"]),
+                                                     shares=plan["shares"], dollars=plan["dollars"], raise_funds_by=plan.get("funded_by"))
+            except ValueError as error:      # the book's own refusal: what it would set aside is not available (another order took it, or the cash moved)
+                decision.update(will_trade="no_funds", funds_avail=False, shares=Decimal(0), est_cost=Decimal("0.00"), reason=" ".join(str(error).split())[:300] + ": the order cannot wait, and nothing is placed")
+                self.tell_user(f"      {decision['reason']}")
+                continue
+            except Exception as error:      # a database or network failure: nothing is known to be set aside, so nothing is placed
+                decision.update(will_trade="no_system_denied", funds_avail=False, shares=Decimal(0), est_cost=Decimal("0.00"), reason=f"the account book could not be asked to set the order aside ({type(error).__name__}): nothing is placed")
+                self.tell_user(f"      {decision['reason']}")
+                continue
+            decision["open_order_id"] = placed.order_id
+            decision["waiting_utc"] = plan["expires_utc"]
+            orders.audit({"event": "placed", "text": decision["reason"], "order": placed.as_dict()})
+            self.tell_user(f"      {decision['reason']} (order #{placed.order_id}: it can be cancelled on the page, or with `python -m prometheus.agents.account_manager.orders --account {self.account_id} --cancel {placed.order_id}`)")
+
+    @traced("account_manager.fill_open_order")
+    def fill_open_order(self, open_order, price: Decimal, trader, now: datetime) -> WorkOrder:
+        """FILL a waiting order whose limit the quote has reached (design choices entry 140, W5): the SAME funnel as any direct order, no second booking path. The order becomes a one-order work order (the user's own record, with the words they
+        typed and the limit they wrote), `direct.decide_direct` decides it at `price` (`yes_user`: the user's own order is the approval, and the limit is checked again by the handshake at the fill price), and `perform_trades` hands it to `trader` (the
+        paper venue, no model): `approve_trade` reads the account with THIS order's own hold available to it and to nothing else (`_portfolio`), the Trader fills at the quote, `verify_fill` checks the fill, and `record_fill` books it in the book's one
+        transaction (`book_trade(order_id=...)`: the order becomes `filled` and its hold is gone in the same commit; a second fill is refused). A purchase in dollars buys what its dollars pay for at the fill price (`shares.buys`; whole shares when the book
+        cannot hold a fraction), never more than the order set aside. Returns the work order. A fill that fails is a `rejected` trade (or a decision that is not `yes_user`) on it: the caller closes the order (`AccountStore.reject_open_order`), nothing is retried."""
+        from prometheus.agents.account_manager import direct
+        self._filling = open_order
+        try:
+            work = new_work_order(open_order.request, requester=REQUESTER, action_type="trade")
+            fractions = self._book_holds_fractions()
+            in_dollars = open_order.dollars is not None
+            shares = open_order.shares if not in_dollars else (sh.buys(open_order.dollars, price) if fractions else Decimal(int(open_order.dollars // price)))      # an order in dollars: what its dollars buy at THIS price
+            entry = {"record_id": open_order.record_id, "side": open_order.side, "symbol": open_order.symbol, "company": open_order.company or open_order.symbol, "shares": shares, "request": open_order.request,
+                     "requested_utc": open_order.placed_at.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "typed_company": None, "how_many": "dollars" if in_dollars else "typed", "found_by": None,
+                     **({"dollars": open_order.dollars} if in_dollars else {}), ("max_price" if open_order.side == "buy" else "min_price"): open_order.limit_price}
+            work.direct_orders, work.subject, work.data = [entry], [open_order.symbol], DataResult()
+            sized = {open_order.record_id: {"shares": shares, "how": "dollars", "pot": open_order.dollars, "dollars": open_order.dollars if fractions else None, "allocation": "round_robin", "binding": None}} if in_dollars and shares > 0 else None
+            portfolio = self._portfolio()      # with this order's own hold available to it
+            fund_map, why_not = self._funding_at_fill(work, open_order, portfolio, shares, price, now)      # entry 143, W-F4: the price is reached and the cash does not cover it: the user's permission, given when the order was placed, is used NOW
+            work = direct.decide_direct(work, portfolio, self.profile, "auto", {open_order.symbol: price}, now, load_account_manager_config().direct.valid_minutes, None, sized, fractions=fractions, funding=fund_map or None, why_not=why_not)
+            self._save_decisions(work)
+            funds = self.fund_decisions(work, portfolio, now) if fund_map else None      # RaiseFunds, once, for the shortfall at this price; when it cannot pay for it the decision becomes `no_funds` and nothing is sold
+            if not any(d.get("will_trade") in ("yes_auto", "yes_user") for d in work.trade_decisions):
+                return work
+            return self.perform_trades(work, portfolio, trader, now, funding=funds, book=True)
+        finally:
+            self._filling = None
+
+    def _funding_at_fill(self, work: WorkOrder, open_order, portfolio: Portfolio, shares: Decimal, price: Decimal, now) -> tuple[dict[str, dict], dict[str, str]]:
+        """({record_id: `funding.decision_funding`}, {record_id: why not}) for the fill of a waiting PURCHASE that the user permitted to raise funds (design choices entry 143, W-F4; `open_order.raise_funds_by`, "words" or "setting", written when it was
+        placed). Its price is reached: if the cash it may use now (the free cash, and its own hold, which `portfolio` already counts) pays for the shares at this price, nothing is raised and it fills as any order; if not, the shortfall is what
+        they cost less that cash, the arithmetic says whether the holdings that may be sold could pay for it (R8: when they could not, nothing is sold and the order is closed with the reason), and the decision carries `funding` so that
+        `fund_decisions` runs RaiseFunds and the Trader sells first and buys after, one trade at a time. Nobody is asked (nobody is there): the permission is the user's own, given when they placed the order. Never raises."""
+        if open_order.side != "buy" or open_order.raise_funds_by is None:
+            return {}, {}
+        cost = trade_amount(shares, price)
+        short = cost - portfolio.cash_avail
+        if short <= 0:
+            return {}, {}
+        feasible, note = self._holdings_could_raise(work, portfolio, cost, now)
+        if not feasible:
+            line = f"raising funds could not pay for it: ${short:,.2f} is short of the cash ${portfolio.cash_avail:,.2f} at ${price:,.2f} a share, and {note}"
+            self.tell_user(f"      Order #{open_order.order_id}: {line}")
+            return {}, {open_order.record_id: line}
+        self.tell_user(f"      Order #{open_order.order_id}: the price is reached and the cash ${portfolio.cash_avail:,.2f} is ${short:,.2f} short of {sh.text(shares)} {open_order.symbol} at ${price:,.2f}: {funding.how_words(open_order.raise_funds_by)}, so I raise the money by selling some of your holdings first (RaiseFunds), and then buy.")
+        return {open_order.record_id: funding.decision_funding(short, open_order.raise_funds_by)}, {}
+
+    def _size_direct(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, Decimal], now, mode: str | None, clarify, said_how_much: bool, request_text: str, balance: str | None, budget: Decimal | None,
+                     extra_cash: Decimal = Decimal("0.00")) -> dict[str, dict]:
         """The number of shares of each PURCHASE the user named with no number of shares: {record_id: {"shares", "how", "pot", "dollars", ...}} ("dollars": the money the user wrote for THAT stock, entry 122; "asked": the user answered
         the Account Manager's questions; "budget": the one total the user gave; "cash": all the cash, spread round-robin over the stocks named: entry 106; "unsaid": see below, with no shares). Nothing else bounds it (no limit of any
         profile). Never raises: whatever fails leaves the order unsized, and `direct.decide_direct` refuses it with the reason.
@@ -396,8 +589,15 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
         A PURCHASE WITH NO NUMBER IN A REQUEST WHERE ANOTHER PURCHASE HAS ONE ("Buy $2,000 of AAPL and MSFT", with no total and no "as much as I can"; entry 122, D6) is never given the cash by default: in Ask mode the Account Manager asks
         how much of it (`clarify_sizing`, about that purchase alone) and the answer is its size; with no answer, and in Auto mode, it is `unsaid` and `direct.decide_direct` does not place it ("say how much of MSFT"), the others go ahead.
-        When both kinds are sized, every decision carries the SAME pot (a run has one): the sum of the pots of the two."""
-        entries = [e for e in order.direct_orders if isinstance(e, dict) and e.get("shares") is None and e.get("side") == "buy" and prices.get(e.get("symbol"))]
+        When both kinds are sized, every decision carries the SAME pot (a run has one): the sum of the pots of the two.
+
+        `extra_cash` (entry 142, R1): the money the Account Manager is about to RAISE by selling holdings, which the user permitted: the purchases are sized as if the account held it (the pot is the dollars the user wrote, never more),
+        and the handshake still reads the real cash at every buy, so nothing is ever spent that is not there."""
+        from prometheus.agents.account_manager import direct
+        if extra_cash:
+            portfolio = portfolio.model_copy(update={"cash_avail": portfolio.cash_avail + extra_cash})      # sized as if the money were there; the work order's own portfolio is not changed
+
+        entries = [e for e in order.direct_orders if isinstance(e, dict) and e.get("shares") is None and e.get("side") == "buy" and prices.get(e.get("symbol")) and not direct.not_now(e, prices.get(e.get("symbol")))]      # one priced above its ceiling or under its floor is not placed now (entries 138 and 140: it waits, or is not placed), so it takes no part of the money
         if not entries:
             return {}
         mode = mode or self.profile.trade_mode
@@ -472,7 +672,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
     @traced("account_manager.clarify_sizing")
     def clarify_sizing(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, Decimal], channel, now=None, balance: str | None = None, request_text: str = "", extra: list[sizing.Purchase] | None = None,
-                       fractional: bool = False):
+                       fractional: bool = False, max_price: Decimal | None = None, min_price: Decimal | None = None):
         """Ask the user how much to buy (design choices entry 85, `clarify.py`): a bounded ReAct loop with this agent's model. It phrases at most three questions through `channel`, reads the user's answer (a percentage
         of the account, dollars, shares, or "as much as I can") into a form, and CODE checks the form against what the user typed and works out the whole shares (the only thing that can cut it is the cash: there is no
         limit of the profile to raise, entry 91). Returns a `clarify.SizingPlan` (what `decisions.decide_trades` sizes under), or None when nothing could be worked out (no purchase, a model that cannot be reached, nonsense,
@@ -481,7 +681,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         config = load_account_manager_config()
         self.last_sizing = {"model": getattr(self.model, "model_name", None), "calls": 0, "questions": [], "answers": [], "problems": [], "choice": None, "plan": None, "why": ""}
         try:
-            purchases = [*decisions.purchases_to_size(order, portfolio, now), *(extra or [])]      # the Critic's approved purchases, and the neutral ones that count as approved (entry 91): one set of questions
+            purchases = [*decisions.purchases_to_size(order, portfolio, now, max_price, min_price), *(extra or [])]      # the Critic's approved purchases (none outside the user's price limit and floor), and the neutral ones that count as approved (entry 91): one set of questions
             if not purchases:
                 return None
             equity, _ = sizing.equity_of(portfolio, prices)
@@ -613,8 +813,22 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         return self._book().number_denied_recommendations(self.account_id, start, end)
 
     def account_balance(self) -> Decimal:
-        """Settled cash, in dollars."""
+        """Settled cash, in dollars: ALL of it, what the account holds (the cash a waiting order has set aside is still in it). What may be SPENT is `available_cash` (design choices entry 140)."""
         return self._book().account_balance(self.account_id)
+
+    def available_cash(self) -> Decimal:
+        """The cash that may be spent: the settled cash less what the account's waiting orders have set aside (design choices entry 140: the book's one door, `AccountStore.available_cash`)."""
+        return self._book().available_cash(self.account_id)
+
+    def open_orders(self, statuses: tuple[str, ...] = ("open",)) -> list:
+        """The account's waiting limit orders (`OpenOrder`s; the open ones by default): each holds cash (a purchase) or shares (a sale) that no other order may use (design choices entry 140)."""
+        return self._book().open_orders(self.account_id, statuses)
+
+    def cancel_open_order(self, order_id: int, when: datetime | None = None):
+        """The user cancels a waiting order: what it set aside is available again, in one transaction. Returns the order. ValueError (nothing changed) when there is none of that number or it is not open."""
+        closed = self._book().cancel_open_order(self.account_id, order_id, when)
+        orders.audit({"event": "cancelled", "text": f"order #{closed.order_id} cancelled by the user: {orders.order_words(closed)}", "order": closed.as_dict()})
+        return closed
 
     # ---- what the user is shown (the user talks to the Account Manager only)
 
@@ -648,7 +862,8 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         except Exception:   # it could not be read: the user is told only what is known
             self.tell_user(f"      ({title}: the account could not be read just now)")
             return
-        self.tell_user(f"      {title}:", f"        cash {portfolio.cash_avail:,.2f}", *[f"        {line}" for line in holding_lines(portfolio)])
+        cash = [f"        cash {portfolio.cash_avail:,.2f}"] if not portfolio.reserved_cash else [f"        cash {portfolio.cash_total:,.2f}", f"        set aside for waiting orders {portfolio.reserved_cash:,.2f}", f"        available {portfolio.cash_avail:,.2f}"]
+        self.tell_user(f"      {title}:", *cash, *[f"        {line}" for line in holding_lines(portfolio)])
 
     def record_trade(self, symbol: str, side: str, shares: Decimal, price: Decimal, traded_on: date, *, name: str | None = None, source: str = "bot", record_id: str | None = None) -> Decimal:
         """Book a filled trade in the ledger and return that trade's realized gain. This does not send an order and does not decide anything: the Trader's `PaperBroker` simulates the fill; `notify_trades` calls this for each fill it is given when it is asked to `book`, and `record_fill`
@@ -661,6 +876,194 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             from prometheus.agents.data_clerk.data_clerk_agent import DataClerk  # imported here: the Data Clerk needs the toolbox's dependencies and builds its own model
             self._clerk = DataClerk()
         return self._clerk
+
+    # ---- raising funds for a purchase the cash does not cover (entry 142; funding.py)
+
+    def _direct_costs(self, order: WorkOrder, prices: dict[str, Decimal], budget: Decimal | None) -> list[tuple[dict, Decimal]] | None:
+        """[(the user's order, what it costs at most)] for every direct BUY that is placed now: typed shares at the price, the dollars the user wrote for the stock, and ONE total for the stocks named with no number (the budget). None when
+        a stock has no number and there is no budget ("as much as I can": the cash is its amount, so nothing can be short of it). Orders that wait or are not placed at this price (`direct.not_now`) and sales are left out."""
+        from prometheus.agents.account_manager import direct
+
+        rows, bare = [], []
+        for entry in order.direct_orders:
+            if not isinstance(entry, dict) or entry.get("side") != "buy":
+                continue
+            price = prices.get(entry.get("symbol"))
+            if not price or direct.not_now(entry, price):
+                continue
+            if entry.get("shares") is not None:
+                rows.append((entry, trade_amount(sh.quantity(entry["shares"]), price)))
+            elif entry.get("dollars") is not None:
+                rows.append((entry, money_door(entry["dollars"])))
+            else:
+                bare.append(entry)
+        if bare:
+            if budget is None:
+                return None
+            rows += [(bare[0], money_door(budget)), *((entry, Decimal("0.00")) for entry in bare[1:])]
+        return rows
+
+    def _funding_map(self, order: WorkOrder, prices: dict[str, Decimal], budget: Decimal | None, shortfall: Decimal, by: str) -> dict[str, dict]:
+        """{record_id: what its decision carries (`funding.decision_funding`)} for every direct buy that is part of the run's funding (R7): all of them, the ones the cash alone would cover included, because the first one placed uses the cash."""
+        return {entry["record_id"]: funding.decision_funding(shortfall, by) for entry, _ in (self._direct_costs(order, prices, budget) or [])}
+
+    def _own_sales(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, Decimal], now) -> tuple[list[dict], Portfolio]:
+        """([{symbol, shares, price, amount}], the portfolio once they are filled) for the user's OWN SALES of this request that are placed now (design choices entry 143, S1 to S3: "Sell 3 MCD and buy 2 ANT, raise funds if needed"). A sale
+        is placed before any purchase (the Trader's rule, `PaperBroker.place`), so its proceeds are cash by the time a purchase is approved: they count toward what the purchases need, and the shares it sells are not shares RaiseFunds may
+        sell again. Only a sale of typed shares, priced, that is not waiting or under its floor (`direct.not_now`) and that the account holds and may sell today counts; the amount is `trade_amount(shares, price)`, an ESTIMATE at the quote: the
+        approval of each purchase still reads the cash the book shows then, so nothing is ever spent that is not there. No sale: ([], the portfolio given). Never raises."""
+        from prometheus.agents.account_manager import direct
+
+        today, sales, after = eastern_date(now), [], portfolio
+        for entry in order.direct_orders:
+            if not isinstance(entry, dict) or entry.get("side") != "sell" or entry.get("shares") is None:
+                continue
+            price = prices.get(entry.get("symbol"))
+            if not price or direct.not_now(entry, price):
+                continue
+            try:
+                count = sh.quantity(entry["shares"])
+                if count > after.sellable_shares(entry["symbol"], today):
+                    continue
+                after = apply_fill(after, entry["symbol"], "sell", count, price, today)
+            except ValueError:
+                continue
+            sales.append({"symbol": entry["symbol"], "shares": count, "price": price, "amount": trade_amount(count, price)})
+        return sales, after
+
+    def _waiting_funding(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, Decimal], now, raise_funds: bool, request_text: str) -> tuple[dict[str, str], dict[str, str]]:
+        """({record_id: how the user permitted it}, {record_id: why a purchase is not funded}) for the direct PURCHASES of this request that WAIT for their limit and that the free cash does not cover (design choices entry 143, W-F1 to W-F5;
+        `funding.py`). Nothing is sold now: a waiting order is paid for by selling holdings only WHEN ITS PRICE IS REACHED (`fill_open_order`), so the buy and its sales happen together, never the sales alone for a purchase that may never come.
+        Nobody is there to approve a plan at that moment, so only the user's own WORDS ("raise funds if needed") or the setting ALWAYS_RAISE_FUNDS permit it (`funding.permission`: "words" or "setting"); in Ask mode without them the order is
+        refused for want of cash, as before, and says what to add. Before it waits, the arithmetic says whether the holdings that may be sold could pay for it at its limit (`_holdings_could_raise`, R8): if not it is refused and says what
+        they could raise. The cash that is free is set aside; the rest is the shortfall at the limit. Never raises."""
+        from prometheus.agents.account_manager import orders
+
+        by, why = {}, {}
+        for entry in order.direct_orders:
+            price = prices.get(entry.get("symbol")) if isinstance(entry, dict) else None
+            if not isinstance(entry, dict) or entry.get("side") != "buy" or not price or not orders.waits(entry, price):
+                continue
+            limit = orders.limit_of(entry)
+            shares = sh.quantity(entry["shares"]) if entry.get("shares") is not None and entry.get("how_many") in (None, "typed") else None
+            cost = trade_amount(shares, limit) if shares is not None else (money_door(entry["dollars"]) if entry.get("dollars") is not None else None)
+            if limit is None or cost is None or cost <= portfolio.cash_avail:
+                continue
+            short = cost - portfolio.cash_avail
+            permitted = funding.permission(raise_funds, request_text)
+            if permitted is None:
+                why[entry["record_id"]] = f"nothing is sold unless you say so, and a waiting order is paid for by selling only on your own words (the sale happens when the price is reached, with nobody there to approve it): {funding.NOT_SAID}"
+                continue
+            feasible, note = self._holdings_could_raise(order, portfolio, cost, now)
+            if not feasible:
+                why[entry["record_id"]] = f"raising funds could not pay for it: ${short:,.2f} is short of the cash ${portfolio.cash_avail:,.2f} at your limit, and {note}"
+                self.tell_user(f"      {why[entry['record_id']]}")
+                continue
+            by[entry["record_id"]] = permitted
+        return by, why
+
+    def _direct_funding(self, order: WorkOrder, portfolio: Portfolio, prices: dict[str, Decimal], now, mode: str | None, approver, raise_funds: bool, request_text: str,
+                        budget: Decimal | None, sales: list[dict] | None = None) -> tuple[str | None, Decimal, dict[str, str]]:
+        """(how the user permitted selling holdings or None, the shortfall, {record_id: why a purchase of typed shares is not funded}) for the direct buys of this request (see `decide_direct`). The shortfall is what the buys cost at most less the
+        available cash (`cash_avail`, the book's door, entry 140) and less what the user's own sales of the same request bring (entry 143, S1: `portfolio` is then the account once those sales are filled, and `sales` says them); no shortfall, no question. Before any question the arithmetic says whether the holdings that may be sold could pay for it at all (R8: `sizing.funds_check`); when they
+        could not, nothing is asked and nothing is sold. Never raises: a price that cannot be had leaves the purchase unfunded."""
+        rows = self._direct_costs(order, prices, budget)
+        if not rows:
+            return None, Decimal("0.00"), {}
+        need = sum((cost for _, cost in rows), Decimal("0.00"))
+        shortfall = need - portfolio.cash_avail
+        if shortfall <= 0:
+            return None, Decimal("0.00"), {}
+        mode = mode or self.profile.trade_mode
+        typed = {entry["record_id"] for entry, _ in rows if entry.get("shares") is not None}
+        buys = [{"symbol": entry["symbol"], "shares": sh.quantity(entry["shares"]) if entry.get("shares") is not None else sh.buys(cost, prices[entry["symbol"]]), "price": prices[entry["symbol"]], "cost": cost} for entry, cost in rows if cost > 0]
+        refuse = lambda why: (None, shortfall, {record: why for record in typed})
+        sales = sales or []
+        cash = funding.cash_words(portfolio.cash_avail, sales)      # "cash $60.14", or with the user's own sale of the request: "cash $60.14 plus about $348.61 from your own sale of 1 DPZ"
+        feasible, note = self._holdings_could_raise(order, portfolio, need, now)
+        if not feasible:
+            line = f"raising funds could not pay for it: ${shortfall:,.2f} is short of the {cash}, and {note}"
+            self.tell_user(f"      {line}")
+            return refuse(line)
+        by = funding.permission(raise_funds, request_text)
+        if by is None and mode == "ask" and approver is not None and getattr(approver, "available", lambda: True)():
+            answer = self._ask_raise_funds(order, approver, funding.ask_card(portfolio.cash_avail - sum((x["amount"] for x in sales), Decimal("0.00")), buys, shortfall, sales))
+            if answer is True:
+                by = "asked"
+            else:
+                why = "you did not want holdings sold to pay for it" if answer is False else "nobody answered the question whether to raise the money by selling holdings, and no answer is a no"
+                self.tell_user(f"      Nothing is sold: {why}.")
+                return refuse(why + ": the order is placed as you typed it or not at all")
+        if by is None:
+            why = f"nothing is sold in Auto mode unless you say so: {funding.NOT_SAID}" if mode == "auto" else f"nobody was there to ask whether to raise the money by selling holdings: {funding.NOT_SAID}"
+            self.tell_user(f"      The {cash} is ${shortfall:,.2f} short of what you asked to buy, and {why}.")
+            return refuse(why)
+        self.tell_user(f"      The {cash} is ${shortfall:,.2f} short of what you asked to buy: {funding.how_words(by)}, so I will raise the money by selling some of your holdings first (RaiseFunds), and then buy.")
+        return by, shortfall, {}
+
+    def _ask_raise_funds(self, order: WorkOrder, approver, card: dict) -> bool | None:
+        """The ONE question of Ask mode (R3): the card of the kind `raise_funds`. True for a yes, False for a no, None for no answer (or a prompt that failed: the user has not said yes)."""
+        try:
+            answer = approver(card)
+        except Exception as error:
+            order.errors = [*order.errors, f"the user could not be asked whether to raise funds ({type(error).__name__})"]
+            return None
+        return answer if isinstance(answer, bool) else None
+
+    def _holdings_could_raise(self, order: WorkOrder, portfolio: Portfolio, need: Decimal, now) -> tuple[bool, str]:
+        """(whether selling the holdings that may be sold could raise `need` with the cash, a sentence): arithmetic on the holdings' prices (one quote order to the Data Clerk: `_held_prices`) and `sizing.funds_check`, no model. R8: when it is
+        not, the sentence says what they could raise."""
+        prices = self._held_prices(order, portfolio, now, True)
+        return sizing.funds_check(need, portfolio, prices, eastern_date(now))
+
+    @staticmethod
+    def _after_decided_sales(order: WorkOrder, portfolio: Portfolio, now) -> Portfolio:
+        """The account once the user's own sales that the decisions of this order permit (`origin` direct, a sale, `yes_user` or `yes_auto`) are filled at their decision's price (entry 143, S2): the same arithmetic the Account Manager
+        made when it decided (`_own_sales`), read back from the decisions. A sale the account cannot make is left out (the Trader's handshake refuses it). No such sale: the portfolio given."""
+        today, after = eastern_date(now), portfolio
+        for d in order.trade_decisions:
+            if not isinstance(d, dict) or d.get("origin") != DIRECT or d.get("action") != "reduce" or d.get("will_trade") not in ("yes_auto", "yes_user") or not d.get("price"):
+                continue
+            try:
+                after = apply_fill(after, d["symbol"], "sell", sh.quantity(d["shares"]), price_door(d["price"]), today)
+            except ValueError:
+                continue
+        return after
+
+    @traced("account_manager.fund_decisions")
+    def fund_decisions(self, order: WorkOrder, portfolio: Portfolio, now=None) -> dict | None:
+        """RaiseFunds for the purchases the decisions say are to be paid for by selling (entry 142, R6 and R10): the decisions that carry `funding` and may trade (`funding.funded_decisions`). ONE plan raises the WHOLE shortfall of all of them
+        (the first is RaiseFunds' target and the others its `also`: no stock being bought is ever sold), for the shares as decided (whole shares: a fraction is raised for the next whole one). Returns the answer for the Trader's funding plan
+        (`perform_trades(..., funding=)`): RaiseFunds' own, plus `basket` (the symbols), `plan_id` (written on the decisions), `by` (how the user permitted it) and `ask_user` (False only in Auto mode, where the user's own words or the setting are the
+        approval of the sales; Ask mode always shows the plan and asks). None when no decision needs it. When RaiseFunds cannot pay for it (R8: no plan, no price, the search failed) every such decision becomes `no_funds`, with the shortfall and
+        what the holdings could raise, the user is told and the answer says why; nothing is sold. Never raises."""
+        needing = funding.funded_decisions(order)
+        if not needing:
+            return None
+        now = now or trading_now()
+        portfolio = self._after_decided_sales(order, portfolio, now)      # entry 143, S2: the user's own sales of this request are placed first, so RaiseFunds works from the account once they are filled: their proceeds are cash, and their shares are not for sale again
+        by, mode = needing[0]["funding"]["by"], needing[0].get("mode") or self.profile.trade_mode
+        buys = [(d["symbol"], sh.ceil(sh.quantity(d["shares"]))) for d in needing]
+        try:
+            result = self.raise_funds(portfolio, buys[0][0], buys[0][1], eastern_date(now), up_to=False, also=buys[1:] or None)
+        except Exception as error:
+            result = {"status": "error", "errors": [f"RaiseFunds failed ({type(error).__name__})"], "quotes": {}, "run": {}}
+        answer = {**result, "basket": [symbol for symbol, _ in buys], "by": by, "ask_user": not (mode == "auto" and by in ("words", "setting"))}
+        if result.get("status") in ("plan", "funded"):
+            answer["plan_id"] = plan_id = f"{order.request_id}-funds"
+            for d in needing:
+                d["funding"]["plan_id"] = plan_id if result["status"] == "plan" else None
+            return answer
+        need = result.get("need") or needing[0]["funding"]["shortfall"]
+        why = "; ".join(map(str, result.get("errors") or [])) or str(result.get("stop") or result.get("status"))
+        held = _prices_of(dict(result.get("quotes") or {}), portfolio.symbols)
+        could = sizing.funds_check(max(need, Decimal("0.01")) + portfolio.cash_avail, portfolio, held, eastern_date(now))[1] if held else "no holding of the account could be priced"
+        line = f"RaiseFunds could not raise the ${need:,.2f} that is short ({why}); {could}"
+        for d in needing:
+            d.update(will_trade="no_funds", funds_avail=False, reason=" ".join(line.split())[:400] + ": the purchase is placed as you typed it or not at all, and nothing is sold")
+        self.tell_user(f"      {line}: nothing is sold and nothing is bought.")
+        self._save_decisions(order)
+        return {**answer, "plan_id": None}
 
     # ---- the Data Clerk: prices
 
@@ -690,7 +1093,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         (`Booking.note`). A new call starts a new run: whatever the last one left is forgotten. The portfolio given is never changed."""
         self._run_fills = {}
         if self.account_id is not None:
-            saved = self.list_portfolio()
+            saved = self._portfolio()
             self._session, self._booking, self._book_unavailable, self._working = True, bool(book), False, None if book else saved
             return saved
         if portfolio is None:
@@ -719,7 +1122,14 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         is the Account Manager's figure, never the Trader's. Raises ValueError when no run is open (call `trading_portfolio` first); a database failure raises as `list_portfolio` does."""
         if not self._session:
             raise ValueError("no trading run is open: call trading_portfolio first")
-        return self.list_portfolio() if self._booking else self._working
+        return self._portfolio() if self._booking else self._working
+
+    def _portfolio(self) -> Portfolio:
+        """The saved account as THIS run reads it: the book's `list_portfolio` (the available cash, the whole holding and what waiting orders hold), and, while this manager is FILLING a waiting order (`fill_open_order`, design choices entry 140), with that
+        order's own hold left out: it is available to its own trade and to nothing else."""
+        if self._filling is None:
+            return self.list_portfolio()
+        return self._book().list_portfolio(self.account_id, release=self._filling.order_id)
 
     @traced("account_manager.apply_earlier_fills")
     def apply_earlier_fills(self, trades: list[dict]) -> list[str]:
@@ -781,7 +1191,9 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             pot = decision_pot(decision) if decision is not None and trade.get("side") == "buy" and trade.get("kind") != "funding" else None
             spendable = None if pot is None else max(Decimal("0.00"), pot - self.spent_of_pot(order, pot))      # what the run may still spend of its money, from the fills on the work order and in this run (M1)
             dollars = decision_dollars(decision) if decision is not None and trade.get("side") == "buy" and trade.get("kind") != "funding" else None      # an ORDER IN DOLLARS (entry 111, M2): from the decision, which is the Account Manager's own, never from the Trader's record of it
-            answer = handshake.decide_approval(self.current_portfolio(), trade, price, on, commission, expected_proceeds, spendable, pot, dollars)
+            limit = decision_max_price(decision) if decision is not None and trade.get("side") == "buy" and trade.get("kind") != "funding" else None      # the user's price limit (entry 138): from the decision, the Account Manager's own, never from the Trader's record
+            floor = decision_min_price(decision) if decision is not None and trade.get("kind") != "funding" else None      # the user's price floor (entry 140): from the decision too, for a purchase and for a sale
+            answer = handshake.decide_approval(self.current_portfolio(), trade, price, on, commission, expected_proceeds, spendable, pot, dollars, limit, min_price=floor)
             if answer.approved and trade.get("kind") != "funding" and decision is not None and decision.get("origin") == DIRECT and dollars is None and answer.shares < sh.quantity(decision.get("shares", 0)):
                 # the user named this trade (entry 87): it is placed as typed or not at all, never cut to the cash or to the shares sellable today
                 return handshake.refusal("insufficient_cash" if trade.get("side") == "buy" else "not_sellable_today", f"the order is for {sh.shown(decision.get('shares'))} shares and is placed as you typed it or not at all, and the account can take {sh.text(answer.shares)}: {answer.reason}",
@@ -841,7 +1253,8 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         except Exception as error:
             return self._not_done("refused", label, f"the account could not be read before the booking ({type(error).__name__}): nothing was booked")
         try:
-            booked = self._book().book_trade(self.account_id, symbol, side, sh.as_decimal(shares), price, when, source="bot", record_id=record_id)       # 2
+            booked = self._book().book_trade(self.account_id, symbol, side, sh.as_decimal(shares), price, when, source="bot", record_id=record_id,
+                                             **({"order_id": self._filling.order_id} if self._filling is not None and record_id == self._filling.record_id and side == self._filling.side and symbol == self._filling.symbol else {}))       # 2 (a waiting order's fill marks the order filled in this same transaction, entry 140; a funding sale of that fill carries the same record_id but is a sale of another stock, a booking of its own: entry 143)
         except ValueError as error:   # the book's own refusal (the cash does not cover it, the shares are not held, the account is not active) or its check before the commit: rolled back, nothing was committed
             return self._not_done("refused", label, " ".join(str(error).split()), cash_before=before.cash_avail)
         except Exception as error:    # a database or network failure while the transaction was open: the account is read again to settle it, never guessed
@@ -958,11 +1371,41 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             content = reply.content if isinstance(reply.content, str) else ""
             try:
                 return parse_intent(content, typed)
+            except NeedsClarification:      # the user has to say more (entry 138): no second try of the model can fix it
+                raise
             except ValueError as error:
                 problem = str(error)
                 usage["retries"] += 1
                 messages = [*messages, AIMessage(content=content), HumanMessage(content=request_prompt.RETRY.format(problem=problem))]
         raise ValueError(f"I could not understand the request ({problem}). Say what you want as a theme, as tickers or as company names, and how many you want to buy from.")
+
+    @traced("account_manager.settle_unclear_number")
+    def settle_unclear_number(self, intent: TradeIntent, mode: str | None = None, channel=None) -> TradeIntent:
+        """A number the user wrote with no $ and no word dollars after a money verb ("spend 1000 on MU") is shares or dollars, and it is never read either way without asking (design choices entry 138, D5: buying 1000 shares
+        when $1,000 was meant spends real money nobody intended). In ASK mode, with somebody at the keyboard (`channel`, the same one as the how-much questions: a card with a `question`, answered with the text typed), the user is asked
+        once, and once more when the answer names neither; CODE reads the answer (`intent.read_unit_answer`: shares, or a $ or the word dollars) and settles the number (`intent.settle_unit`). In AUTO mode nothing is asked and the run
+        stops: `NeedsClarification`, whose message says how to write it. So does Ask mode with nobody to ask, and an answer that never comes clear. An intent with no such number comes back as it is."""
+        number = intent.unclear_number
+        if number is None:
+            return intent
+        shown = f"{canonical(number):,f}"
+        say = f"You wrote {shown} with no $ and no word dollars, so it could be {shown} shares or ${number:,.2f}"
+        how = f"Write the amount with a $ sign or the word dollars (${shown}), or as shares ('{shown} shares of ...'), and send the request again."
+        if (mode or self.profile.trade_mode) != "ask" or channel is None or not getattr(channel, "available", lambda: True)():
+            raise NeedsClarification(f"{say}, and nothing is bought on a guess (Auto mode asks nothing). {how}")
+        for n in (1, 2):
+            answer = channel({"question": f"{say}: which did you mean? Answer shares or dollars.", "n": n, "of": 2, "facts": [], "kind": "how_much"})
+            if answer is None:
+                break
+            unit = read_unit_answer(answer, number)
+            if unit is not None:
+                try:
+                    settled = settle_unit(intent, unit)
+                except ValueError as error:
+                    raise NeedsClarification(f"{say}; you said {unit}, but {error}. {how}") from None
+                self.tell_user("", f"  Understood: {shown} {'shares' if unit == 'shares' else 'dollars'}.")
+                return settled
+        raise NeedsClarification(f"{say}, and the answer did not say which. {how}")
 
     # ---- the thought generator
 
@@ -1024,7 +1467,8 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         return quotes, json.loads(order.model_dump_json()), failed
 
     def _plan(self, portfolio: Portfolio, target: str, shares: Decimal | None, quotes: dict, today: date | None, only_green: bool, fill: str | None = None, explore: bool = False,
-              lean: bool = False, green_first: bool = False, up_to: bool = False, never_liquidate: bool = False, auto_depth: bool = True, whole_plans: bool = False, **limits) -> dict:
+              lean: bool = False, green_first: bool = False, up_to: bool = False, never_liquidate: bool = False, auto_depth: bool = True, whole_plans: bool = False,
+              also: tuple[tuple[str, Decimal], ...] = (), **limits) -> dict:
         """The tree search for one purchase, with the quotes already in hand. Never raises for a model problem. `limits` are the size of the tree: `max_depth` and `branching` (also told to the
         model), `beam_width` and `max_calls`.
 
@@ -1034,7 +1478,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         limits = dict(limits)
         sizes = {k: limits.pop(k) for k in ("max_depth", "branching") if limits.get(k)}
         prices = _prices_of(quotes, list(quotes))      # a quote is the Data Clerk's float: it becomes a Decimal price here, once
-        probe = rf.build_problem(portfolio, target, 1, prices, today, only_green, fill, never_liquidate=never_liquidate)
+        probe = rf.build_problem(portfolio, target, 1, prices, today, only_green, fill, never_liquidate=never_liquidate, also=also)
         cap = probe.max_affordable
         resolved = cap if shares is None else min(shares, cap) if up_to else shares
         info = {"requested": shares, "up_to": up_to, "resolved_shares": resolved, "most_affordable": cap}
@@ -1046,10 +1490,10 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             sizes.setdefault("max_depth", 3)
             auto_depth = False
         if resolved < 1:  # not even one share can be paid for, even by selling everything that may be sold: nothing is sold, and no model is asked
-            problem = rf.build_problem(portfolio, target, 1, prices, today, only_green, fill, explore, lean, green_first=green_first, never_liquidate=never_liquidate, whole_plans=whole_plans)
+            problem = rf.build_problem(portfolio, target, 1, prices, today, only_green, fill, explore, lean, green_first=green_first, never_liquidate=never_liquidate, whole_plans=whole_plans, also=also)
             return {**rf.answer(problem, [], {"trace": [], "calls": 0, "nodes": 1, "errors": [],
                                               "stop": "selling everything that may be sold cannot pay for even one share: nothing is sold"}, rf.effective_limits(problem)), **info}
-        problem = rf.build_problem(portfolio, target, resolved, prices, today, only_green, fill, explore, lean, green_first=green_first, never_liquidate=never_liquidate, whole_plans=whole_plans, **sizes)
+        problem = rf.build_problem(portfolio, target, resolved, prices, today, only_green, fill, explore, lean, green_first=green_first, never_liquidate=never_liquidate, whole_plans=whole_plans, also=also, **sizes)
         if "max_depth" not in sizes and auto_depth:  # not asked for: the depth the purchase needs (entry 49), from arithmetic on the holdings: the fewest stocks that could pay for it, plus two
             problem = dataclasses.replace(problem, max_depth=problem.auto_depth())
             limits.setdefault("max_calls", max(rf.MAX_LLM_CALLS, -(-8 * (1 + limits.get("beam_width", rf.BEAM_WIDTH) * (problem.max_depth - 1)) // 5)))   # a deeper tree needs the calls to reach its depth, and room for the re-asks (1.6 times, rounded up: in whole numbers)
@@ -1062,16 +1506,21 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
 
     @traced("account_manager.raise_funds")
     def raise_funds(self, portfolio: Portfolio, target: str, shares: Decimal | None, today: date | None = None, only_green: bool | None = None, fill: str | None = None, explore: bool | None = None,
-                    lean: bool | None = None, green_first: bool | None = None, up_to: bool | None = None, never_liquidate: bool | None = None, whole_plans: bool | None = None, **limits) -> dict:
+                    lean: bool | None = None, green_first: bool | None = None, up_to: bool | None = None, never_liquidate: bool | None = None, whole_plans: bool | None = None,
+                    also: list[tuple[str, Decimal]] | None = None, **limits) -> dict:
         """Buy `shares` of `target`: find what to sell. Returns the answer of `reasoning.raise_funds.search` plus `quotes` (what the Data Clerk returned), `run` (the model, calls and
         tokens) and `prices_order` (the quote work order, as plain JSON). `status` is `plan`, `funded`, `infeasible`, `no_prices` (the Data Clerk could not quote every symbol: nothing is
         guessed and the model is not called) or `refused` (the request itself is wrong: the reason is in `errors`). `only_green`: only holdings that show a profit may be sold. A stock is
         never sold to pay for more of itself. `fill` (entry 44): a second stock bought with the cash LEFT after the purchase, as many shares as it affords; it is never sold, the sells are lean (no
         step sells more shares than the shortfall needs), and if selling everything cannot pay for `shares` of `target` the status is `infeasible` and nothing is sold. Never raises for a model, API
         or input problem. `shares` None: as many as the portfolio can pay for; `up_to`: as many as it can pay for, at most `shares` (see `_plan`); `green_first`: the score prefers selling the most
-        profitable (highest percent gain) holdings first (entry 45). `explore` (entry 44): the generator must give both kinds of step, COVER and PARTIAL, and is asked again (once per node, within the budget) when a kind is missing."""
+        profitable (highest percent gain) holdings first (entry 45). `explore` (entry 44): the generator must give both kinds of step, COVER and PARTIAL, and is asked again (once per node, within the budget) when a kind is missing.
+        `also` (entry 142, R10) is [(symbol, whole shares)] of the OTHER purchases of the same run: the plan raises the money for the target and for these in ONE plan, and none of these stocks is ever sold."""
         try:
             target = self._check_purchase(target, shares)
+            others = tuple((self._check_purchase(symbol, count), sh.quantity(count)) for symbol, count in (also or []))
+            if len({target, *(symbol for symbol, _ in others)}) != 1 + len(others):
+                raise ValueError("every purchase of a run is a different stock")
             if fill is not None:
                 fill = self._check_purchase(fill, 1)
                 if fill == target:
@@ -1082,11 +1531,11 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         never_liquidate = self.never_liquidate if never_liquidate is None else never_liquidate
         explore, lean, green_first, up_to, whole_plans, limits = self._resolve(explore, lean, green_first, up_to, whole_plans, limits)
         self._new_run()
-        quotes, prices_order, failed = self._prices([target, *([fill] if fill else []), *portfolio.symbols])
+        quotes, prices_order, failed = self._prices([target, *([fill] if fill else []), *(symbol for symbol, _ in others), *portfolio.symbols])
         out = {"quotes": quotes, "prices_order": prices_order, "run": self.run}
         if failed:
             return {**out, "status": "no_prices", "errors": failed}
-        result = self._plan(portfolio, target, shares, quotes, today, only_green, fill, explore, lean, green_first, up_to, never_liquidate, whole_plans=whole_plans, **limits)
+        result = self._plan(portfolio, target, shares, quotes, today, only_green, fill, explore, lean, green_first, up_to, never_liquidate, whole_plans=whole_plans, also=others, **limits)
         return {**out, **result}
 
     @traced("account_manager.raise_funds_many")
@@ -1179,6 +1628,11 @@ def wanted_in_dollars(plan) -> bool:
     return plan.wanted is None or plan.in_dollars
 
 
+def _moment(text: str) -> datetime:
+    """An aware UTC moment from the text the decisions write ("2026-11-20T21:00:00Z")."""
+    return datetime.fromisoformat(text.replace("Z", "+00:00"))
+
+
 def _prices_of(quotes: dict, symbols: list[str]) -> dict[str, Decimal]:
     """{symbol: price} of the symbols that have a usable quote, THE DOOR of a quote: the Data Clerk's `data.quotes` hold the price as the int or float its API client gave, and it becomes a Decimal here, once (`money.price`: above zero, four places,
     half up). A symbol with no quote, one that is not a record, or a price that is not a number above zero (a bool, a string) is left out; the caller says which are missing."""
@@ -1198,7 +1652,8 @@ def holding_lines(portfolio: Portfolio) -> list[str]:
     if not portfolio.positions:
         return ["(no positions)"]
     width = max(6, *(len(sh.text(p.shares)) for p in portfolio.positions))                  # a quantity with a fraction is wider than six characters (entry 110)
-    return [f"{p.symbol:<6} {sh.text(p.shares):>{width}}  cost {p.cost_basis:,.4f}  acquired {p.acquired or '-'}" for p in portfolio.positions]
+    return [f"{p.symbol:<6} {sh.text(p.shares):>{width}}  cost {p.cost_basis:,.4f}  acquired {p.acquired or '-'}"
+            + (f"  ({sh.text(portfolio.reserved_shares[p.symbol])} set aside for a waiting sale)" if portfolio.reserved_shares.get(p.symbol) else "") for p in portfolio.positions]
 
 
 def format_account(manager: AccountManager, start: date, end: date) -> str:
@@ -1217,6 +1672,9 @@ def format_account(manager: AccountManager, start: date, end: date) -> str:
         "PORTFOLIO",
     ]
     lines.extend(holding_lines(portfolio))
+    waiting = manager.open_orders()
+    if waiting:      # waiting limit orders (entry 140): what they set aside is not available to anything else
+        lines += [f"WAITING ORDERS  (cash set aside {portfolio.reserved_cash:,.2f}; available {portfolio.cash_avail:,.2f})", *[f"  {orders.order_line(order)}" for order in waiting]]
     return "\n".join(lines)
 
 

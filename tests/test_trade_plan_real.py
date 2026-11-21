@@ -9,6 +9,10 @@ What these tests prove: removing the risk budget, the position and liquidity cap
 mid, the stop distance and price, the target, the time stop, the order style, the limit price, the invalidation rules, the gap risk and the notes are the same for every one of the 208. The only note that went is the
 one that said the size could not be worked out ("no size: equity is unknown"); no real capture had it. Nothing here is invented: the quote, when there is one, is the symbol's own last close.
 
+AMENDED (Advisor config version 3, design/advisor_exit_plan_spec.md rules E1 and E2; design choices entry 139): the file is the plans of Advisor config version 2 and is NOT edited. Version 3 changes ONE thing about a plan: its TARGET and the trailing stop that goes with
+it. A target is at least 2 x the stop distance above the entry mid (conviction, event, reversion and theme: the edge's target when it is already higher), the TREND family has no target and a stop that trails the highest close (`trailing`, `trail_distance` = the stop distance), and
+capital_return keeps no target. The tests below compare all 182 plans with the old file and say exactly what is allowed to differ.
+
 AMENDED (design choices entry 105): the file's 26 plans for a `reduce` (a plan with an entry zone and nothing else, the family None) are the plans of a sale the Advisor no longer recommends: `build` needs a family now, and
 those 26 are not compared. The other 182 are, unchanged. The file is a capture and is not edited.
 """
@@ -69,18 +73,40 @@ def test_the_file_covers_every_family_both_entry_prices_and_the_rules_that_chang
     assert not any(GONE & set(v) for v in golden.values())                                                          # the file holds no size
 
 
-def test_every_non_size_number_of_the_plan_is_what_the_old_code_made_for_all_182_real_plans_of_a_purchase(golden, captures):
-    different = []
-    for key, old in golden.items():
+EXIT_NOTES = ("the target is ", "trailing stop, no target")      # the two sentences Advisor config version 3 adds to a plan's notes
+
+
+def test_every_number_of_the_plan_is_what_the_old_code_made_for_all_182_real_plans_but_the_target_and_the_trail(golden, captures):
+    """Every field of the 182 plans is the old one except the target and the two trailing fields (and a note that says why): the entry zone, mid, stop distance and price, time stop, order style, limit price, invalidation, gap risk and the other notes are unchanged.
+    The target: capital_return and a plan with no prices keep theirs; the trend family has none and trails (`trailing` true, `trail_distance` the stop distance); every other family has the old target or, where that is nearer than 2 x the stop distance above the entry
+    mid, the entry mid plus 2 x the stop distance (worked here by hand from the OLD file's own entry mid and stop distance, to the 4 places the plan is written in)."""
+    different, raised, trailed = [], 0, 0
+    for key, golden_plan in golden.items():
+        old = dict(golden_plan)                                                  # the module's file is read once: never changed
         new = new_plan(key, captures).model_dump(mode="json")
-        if new != old:
+        family = key.split("|")[2]
+        notes = [n for n in new.pop("notes") if not n.startswith(EXIT_NOTES)]
+        trailing, trail, target = new.pop("trailing"), new.pop("trail_distance"), new.pop("target_price")
+        old_target, old_notes = old.pop("target_price"), old.pop("notes")
+        if new != old or notes != old_notes:
             different.append((key, {k: (old.get(k), new.get(k)) for k in {*old, *new} if old.get(k) != new.get(k)}))
-    assert different == []
+        priced = old["stop_price"] is not None
+        assert trailing is (family == "trend" and priced) and trail == (old["stop_distance"] if trailing else None), key
+        if not priced or family == "capital_return":
+            assert target == old_target, key                                      # no prices, or bought for the payout: no target, as before
+        elif trailing:
+            assert target is None, key                                            # the trend family runs its winners: no target
+            trailed += 1
+        else:
+            floor = round(old["entry_mid"] + 2 * old["stop_distance"], 4)
+            assert old_target is not None and abs(target - max(old_target, floor)) <= 0.0002 and target - old["entry_mid"] >= 2 * old["stop_distance"] - 0.0002, key
+            raised += target > old_target + 0.0002
+    assert different == [] and raised > 0 and trailed > 0         # the 2 for 1 floor moved targets and the trailing stop took the trend family's
 
 
-def test_the_new_plans_carry_exactly_the_fields_the_old_ones_had_less_the_size(golden, captures):
+def test_the_new_plans_carry_exactly_the_fields_the_old_ones_had_less_the_size_and_the_two_trailing_fields(golden, captures):
     for key in golden:
-        assert set(new_plan(key, captures).model_dump(mode="json")) == set(next(iter(golden.values())))
+        assert set(new_plan(key, captures).model_dump(mode="json")) == set(next(iter(golden.values()))) | {"trailing", "trail_distance"}
 
 
 def test_there_is_no_plan_for_a_reduction_any_more_build_needs_the_strategy_a_purchase_is_made_on():
@@ -98,6 +124,28 @@ def test_a_real_plan_checked_by_hand(captures):
     assert plan.entry_mid == 806.43 and plan.entry_zone == [round(806.43 - 0.5 * atr, 4), round(806.43 + 0.5 * atr, 4)] and plan.stop_distance == round(3 * atr, 4) and plan.stop_price == round(806.43 - 3 * atr, 4)
     assert plan.target_price is None and plan.order_style == "limit" and plan.limit_price == 806.43 and plan.time_stop_date == "2027-04-30" and plan.horizon_bars == 126
     assert [r["kind"] for r in plan.invalidation] == ["price_below", "days_elapsed", "event_class"]
+
+
+def test_the_real_trend_plan_of_procter_and_gamble_trails_and_its_conviction_plan_pays_two_for_one(captures):
+    """PG (Advisor capture PG_open, 2026-11-05) from its real numbers, by hand: the trend plan has no target and trails by its stop distance; the conviction plan's target is the entry mid plus 2 x its stop distance, because the family's edge target (0.6% a month,
+    40 sessions: 1.2%) is nearer than that."""
+    metrics = captures["PG_open"]["metrics"]["PG"]
+    last, atr = metrics["last_close"]["value"], metrics["atr_14"]["value"]
+    trend = new_plan("PG_open|PG|trend|no_quote|None", captures)
+    assert trend.entry_mid == round(last, 4) and trend.target_price is None and trend.trailing is True and trend.trail_distance == trend.stop_distance and trend.stop_price == round(last - trend.stop_distance, 4)
+    assert trend.stop_distance == round(3 * atr, 4) or any("the stop is the 50-day mean" in n for n in trend.notes)       # 3 ATR, or the distance to the 50-day mean when that is nearer
+    conviction = new_plan("PG_open|PG|conviction|no_quote|None", captures)
+    assert conviction.trailing is False and conviction.target_price == round(max(last * (1 + 1.5 * 0.012), last + 2 * conviction.stop_distance), 4) == round(last + 2 * conviction.stop_distance, 4)
+    assert conviction.target_price > round(last * 1.018, 4) and any("the family's edge alone gave" in n for n in conviction.notes)
+
+
+def test_the_report_says_a_trend_plan_trails_and_a_capital_return_plan_is_held_for_the_payout(captures):
+    """The runner's report (`recommendations.plan_target`) no longer says "held for the payout" of every plan without a target: only SNDK's capital-return plan is; PG's trend plan says how far its stop trails."""
+    from prometheus.application import recommendations as report
+    trend = new_plan("PG_open|PG|trend|no_quote|None", captures)
+    assert report.plan_target(trend.model_dump()) == f"none (the stop trails the highest close by ${trend.trail_distance:,.2f})"
+    assert report.plan_target(new_plan("SNDK|SNDK|capital_return|no_quote|None", captures).model_dump()) == "none (held for the payout)"
+    assert report.plan_target(new_plan("PG_open|PG|conviction|no_quote|None", captures).model_dump()) == f"${new_plan('PG_open|PG|conviction|no_quote|None', captures).target_price:,.2f}"
 
 
 def test_the_order_in_the_captures_is_data_ready_and_the_metrics_are_the_real_ones(captures):

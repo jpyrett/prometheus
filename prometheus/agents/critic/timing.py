@@ -6,6 +6,9 @@ A recommendation is for the trading day it was made on, and it can only be acted
 `common/market_calendar.py`). So the Critic asks four questions: is the market open now; is the record from today's trading day; is the price still where the plan assumed; and are the prices it is
 looking at recent. The price it finds is the DEAL PRICE the risk and value checks use: the live quote when it is usable, else the re-fetched last close, else nothing.
 
+Critic v3 (design/critic_v3_two_reasons_spec.md): nothing here changed, but what the findings MEAN did (`reasons.py`): the stale quote, the closed market, the expired record and the stop already hit are faults and deny alone; `price_left_zone` (above the zone: too
+expensive now) is a sign of the group `price`, and `price_below_zone` (a warning) a sign of the group `performance`, so neither denies without a bad sign in another group.
+
 An approval does not last: `valid_until` is the earlier of the end of the trading window and a short time to live after the review. After it the Account Manager must not trade (and
 `work_order.verify_trade` refuses): the price check is old.
 """

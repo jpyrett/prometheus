@@ -22,12 +22,23 @@ THEME (the run's own request: the report card never guesses a sector). `gap`, it
 of a run uses it too): the gap is inside chance when it is within `stats.CHANCE_BAND` standard errors of zero. A comparison with a group under `min_sample` (20) usable outcomes is `too_few`. The sentence of a row is one of a CLOSED set of templates
 (`SENTENCES`): the numbers are the only thing put in.
 
+CRITIC VERSION 3 (design/critic_v3_two_reasons_spec.md): a denial needs bad signs in TWO of the groups news, performance and price (or a fault, or a profile finding). A version-3 card also carries `groups`: one row for each group
+("denied with this group bad": `fired` recommendations with a bad sign in it, of those how many the Critic `denied`, and the outcomes of those against the ones whose group was clean), and the two-group verdict (`two`: recommendations with bad signs in two
+or more groups against the others, the denials the new rule makes) and `one` (a single bad group: approved with a note, against none). The groups are read from the review's `groups` (or its outcome's cell); a version before 3 has none and no `groups` key, but its card carries `as_v3`: WHAT THE VERSION-3 RULES WOULD HAVE SAID about the same recommendations, worked out from the
+codes of their findings by the closed class table (`critic/reasons.py`): a fault, a finding that asked for a person, or bad signs in two groups denies; anything else approves; `data_mismatch` and `data_unverified` are not faults (rule V7). It is an
+approximation (the analysts, the new patterns and the new chart signs did not exist when those reviews were made, and a `data_mismatch` of the price itself cannot be told from one of another number) and the card says so: it is there to show what the new rule changes, not to replace a run of version 3.
+
+THE FORWARD EXCESS (design/advisor_exit_plan_spec.md E5 and E6). The `excess` above is BY THE PLAN, so it depends on where the Advisor put its stop and target; each family row of `by_family` therefore also carries `forward`: the stock's excess over SPY from the decision day's
+close to N sessions later (the outcome's own `forward`, plan-independent), for the family's recommendations (`all`), the ones the Critic denied and the ones it approved, each a list of `stats.ForwardStats` figures (n, mean, standard error, inside chance) for the sessions the
+outcomes carry (an outcome saved before the block existed has none and is not counted).
+
 HONEST LIMITS, said in `limits`: the outcomes of overlapping weeks are not independent, so the standard errors flatter a result; a rule that was chosen on a window can only be confirmed on later outcomes; and the stocks are those of a few themes.
 """
 import json
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
+from prometheus.agents.critic import reasons
 from prometheus.proving import stats as stats_mod
 from prometheus.proving.config import ProvingConfig, load_config
 from prometheus.proving.record import ProvingRun, RecOutcome
@@ -37,6 +48,7 @@ from prometheus.rag.config import REPO_ROOT
 # The findings that say "this is not for the user's risk profile" (the Critic's risk-fit blockers): suitability, not a forecast, so never judged by returns and never part of a comparison.
 SUITABILITY = ("risk_above_profile", "symbol_excluded", "sector_excluded", "price_below_profile_min")
 KIND_ORDER = ("blocker", "human", "warning")
+GROUPS = ("news", "performance", "price")        # the groups of judgment of Critic version 3 (`critic/reasons.py`)
 FIXTURES = REPO_ROOT / "tests" / "fixtures" / "proving_real"
 LIMITS = ("The outcomes of overlapping weeks are not independent of one another, so the standard errors flatter a result.",
           "A rule that was chosen on one window can only be confirmed by later outcomes: judge each rule on the weeks that came after it was set.",
@@ -66,6 +78,8 @@ class Entry:
     blockers: list[str]
     warnings: list[str]
     human: list[str]
+    groups: list[str] | None = None     # Critic version 3: the groups with a bad sign ([] all clean); None: a review of an earlier version
+    forward: dict[int, float | None] = field(default_factory=dict)      # the outcome's plan-independent forward excess over the benchmark, by sessions ({} for an outcome saved before it existed)
 
     @property
     def suitability(self) -> bool:
@@ -89,8 +103,10 @@ def _digest(review: dict) -> dict | None:
         return None
     codes = lambda key: [f["code"] for f in review.get(key) or [] if isinstance(f, dict) and isinstance(f.get("code"), str)]
     human = review.get("requires_human_reasons")
+    grouped = review.get("groups")
     return {"version": ((review.get("audit") or {}).get("config_version")) if isinstance(review.get("audit"), dict) else None, "blockers": codes("blockers"), "warnings": codes("warnings"),
-            "human": [r for r in human if isinstance(r, str)] if isinstance(human, list) else []}
+            "human": [r for r in human if isinstance(r, str)] if isinstance(human, list) else [],
+            "groups": [g for g in GROUPS if grouped.get(g)] if isinstance(grouped, dict) and grouped else None}
 
 
 def _file_digests(path: Path) -> dict[str, dict]:
@@ -171,14 +187,15 @@ def entries_of(runs: list[ProvingRun], index: ReviewIndex) -> tuple[list[Entry],
             seen.add(o.record_id)
             cell = o.critic
             if cell is not None and cell.blockers is not None and cell.warnings is not None and cell.human is not None and cell.config_version:
-                version, blockers, warnings, human = cell.config_version, cell.blockers, cell.warnings, cell.human
+                version, blockers, warnings, human, groups = cell.config_version, cell.blockers, cell.warnings, cell.human, cell.groups
             else:
                 digest = index.get(o.record_id)
                 if digest is None or not digest["version"]:
                     unmatched += 1
                     continue
-                version, blockers, warnings, human = digest["version"], digest["blockers"], digest["warnings"], digest["human"]
-            found.append(Entry(o.record_id, run.run_id, theme, o.advisor.family if o.advisor else None, o.verdict, o.excess_return_pct if _usable(o) else None, o.result, version, list(blockers), list(warnings), list(human)))
+                version, blockers, warnings, human, groups = digest["version"], digest["blockers"], digest["warnings"], digest["human"], digest.get("groups")
+            found.append(Entry(o.record_id, run.run_id, theme, o.advisor.family if o.advisor else None, o.verdict, o.excess_return_pct if _usable(o) else None, o.result, version, list(blockers), list(warnings), list(human),
+                               None if groups is None else list(groups), {f.sessions: f.excess_return_pct for f in o.forward}))
     return found, unmatched
 
 
@@ -213,6 +230,12 @@ def compare(hit: list[Entry], rest: list[Entry], min_sample: int, suitability: b
     return row
 
 
+def forward_of(entries: list[Entry], min_sample: int) -> list[dict]:
+    """The forward excess of some entries at each of the sessions any of them carries: `stats.forward_mean` as a dict ({sessions, n, mean_excess_pct, se_pct, inside_chance, small_sample})."""
+    sessions = sorted({n for e in entries for n in e.forward})
+    return [stats_mod.forward_mean([e.forward.get(n) for e in entries], n, min_sample).model_dump(mode="json") for n in sessions]
+
+
 def _by_theme(hit: list[Entry], rest: list[Entry], themes: list[str], min_sample: int, judged: bool) -> dict:
     out = {}
     for theme in themes:
@@ -224,6 +247,53 @@ def _by_theme(hit: list[Entry], rest: list[Entry], themes: list[str], min_sample
                       "rest_mean_excess": cell["rest"]["mean_excess"],
                       "gap": cell["gap"], "se": cell["se"], "inside_chance": cell["inside_chance"], "sentence_code": cell["sentence_code"]}
     return out
+
+
+def derived_groups(e: Entry) -> list[str]:
+    """The groups with a bad sign in a review of an earlier version, worked out from the codes of its findings (a blocker, a warning or a finding that asked for a person) by `critic/reasons.py`: [news, performance, price] in order."""
+    codes = {*e.blockers, *e.warnings, *e.human}
+    return [g for g in GROUPS if any(code in codes for code in reasons.SIGNS[g])]
+
+
+def v3_verdict(e: Entry, groups: list[str]) -> str:
+    """`denied` when the version-3 rules deny: a fault (a blocker of the class table's faults) or a finding that asked for a person, or bad signs in two groups; else `approved`. A profile finding is suitability and is never in the population."""
+    fault = any(reasons.class_of(code) in (reasons.FAULT, reasons.PROFILE) for code in e.blockers)
+    asks_a_person = any(code != "fresh_negative_news" for code in e.human)       # version 1 asked for a person over `fresh_negative_news`; since version 2 it only informs
+    return "denied" if fault or asks_a_person or len(groups) >= 2 else "approved"
+
+
+def _what_if_card(population: list[Entry], min_sample: int, themes: list[str]) -> dict:
+    """`as_v3`: the version-3 rules applied to the findings of an earlier version: the verdict they would have made (denied against approved, with how many changed), and the groups as `_group_card` makes them."""
+    again = []
+    for e in population:
+        groups = derived_groups(e)
+        again.append(Entry(**{**e.__dict__, "groups": groups, "verdict": v3_verdict(e, groups)}))
+    denied, approved = [e for e in again if e.verdict == "denied"], [e for e in again if e.verdict == "approved"]
+    verdict = {"fired": len(denied), **compare(denied, approved, min_sample, subject=("the denied", "the approved"))}
+    verdict["by_theme"] = _by_theme(denied, approved, themes, min_sample, True)
+    before = {e.record_id: e.verdict for e in population}
+    changed = {"approved_to_denied": sum(1 for e in again if before[e.record_id] == "approved" and e.verdict == "denied"), "denied_to_approved": sum(1 for e in again if before[e.record_id] == "denied" and e.verdict == "approved")}
+    return {"note": "The version-3 rules applied to the findings this version made, worked out from their codes: an approximation (the analysts, the new patterns and the new chart signs did not exist then).", "changed": changed, "verdict": verdict,
+            "groups": _group_card(again, min_sample, themes)}
+
+
+def _group_card(population: list[Entry], min_sample: int, themes: list[str]) -> dict | None:
+    """The groups of a version-3 card, or None when no entry of the version carries them. Each row of `rows` is one group: `fired` entries with a bad sign in it (`denied` of them), their outcomes against the entries whose group was
+    clean (`compare`, with its themes). `two` compares the entries with bad signs in two or more groups (what the new rule denies) with the rest; `one`, the entries with exactly one bad group (an approval with a note, unless a fault
+    denied it) with the entries that have none."""
+    known = [e for e in population if e.groups is not None]
+    if not known:
+        return None
+    rows = []
+    for group in GROUPS:
+        hit, rest = [e for e in known if group in e.groups], [e for e in known if group not in e.groups]
+        row = {"group": group, "kind": "group", "fired": len(hit), "denied": sum(1 for e in hit if e.verdict == "denied"), **compare(hit, rest, min_sample, subject=("bad", "clean"))}
+        row["by_theme"] = _by_theme(hit, rest, themes, min_sample, True)
+        rows.append(row)
+    many, one, none = [e for e in known if len(e.groups) >= 2], [e for e in known if len(e.groups) == 1], [e for e in known if not e.groups]
+    two = {"fired": len(many), "denied": sum(1 for e in many if e.verdict == "denied"), **compare(many, [e for e in known if len(e.groups) < 2], min_sample, subject=("two or more bad groups", "fewer"))}
+    one = {"fired": len(one), "denied": sum(1 for e in one if e.verdict == "denied"), **compare(one, none, min_sample, subject=("one bad group", "no bad group"))}
+    return {"rows": rows, "two": two, "one": one}
 
 
 def _version_card(version: str, entries: list[Entry], min_sample: int, themes: list[str]) -> dict:
@@ -249,15 +319,23 @@ def _version_card(version: str, entries: list[Entry], min_sample: int, themes: l
     for family in sorted({e.family for e in population if e.family}):
         mine = [e for e in population if e.family == family]
         cell = compare([e for e in mine if e.verdict == "denied"], [e for e in mine if e.verdict == "approved"], min_sample, subject=("the denied", "the approved"))
+        denied_of, approved_of = [e for e in mine if e.verdict == "denied"], [e for e in mine if e.verdict == "approved"]
         families.append({"family": family, **group_of(mine), "denied": cell["hit"], "approved": cell["rest"], "gap": cell["gap"], "se": cell["se"], "inside_chance": cell["inside_chance"],
-                         "sentence_code": cell["sentence_code"], "sentence": cell["sentence"]})
-    return {"config_version": version, "reviewed": len(entries), "population": len(population), "suitability_excluded": len(entries) - len(population), "verdict": verdict, "rows": rows, "by_family": families}
+                         "sentence_code": cell["sentence_code"], "sentence": cell["sentence"],
+                         "forward": {"all": forward_of(mine, min_sample), "denied": forward_of(denied_of, min_sample), "approved": forward_of(approved_of, min_sample)}})
+    card = {"config_version": version, "reviewed": len(entries), "population": len(population), "suitability_excluded": len(entries) - len(population), "verdict": verdict, "rows": rows, "by_family": families}
+    groups = _group_card(population, min_sample, themes)
+    if groups is not None:       # a version that has the groups (3 and later)
+        card["groups"] = groups
+    elif population:             # an earlier one has none: it says what the version-3 rules would have made of the same findings
+        card["as_v3"] = _what_if_card(population, min_sample, themes)
+    return card
 
 
 def build(runs: list[ProvingRun] | None = None, *, store: ProvingStore | None = None, config: ProvingConfig | None = None, folders: list[Path] | None = None, include_track: bool = True, desks: bool = True) -> dict:
     """The report card of the Critic's rules over `runs` (every saved Time Machine run of the store, oldest first, and the Track Record, when left out). `folders` are where the research of older runs is read from (`default_folders`); `desks`
     False leaves the runs' own saved desks out of that (see `ReviewIndex`). See the
-    module text for the shape: {min_sample, chance_band, limits, runs, themes, config_versions, unmatched, by_config_version: {version: {config_version, reviewed, population, suitability_excluded, verdict, rows, by_family}}}."""
+    module text for the shape: {min_sample, chance_band, limits, runs, themes, config_versions, unmatched, by_config_version: {version: {config_version, reviewed, population, suitability_excluded, verdict, rows, by_family[, groups]}}}."""
     config = config or load_config()
     if runs is None:
         store = store or ProvingStore()
@@ -303,6 +381,17 @@ def _signed(value: float | None) -> str:
     return "   n/a" if value is None else f"{value * 100:+6.2f}"
 
 
+def _group_lines(g: dict) -> list[str]:
+    """The groups of a card as text: a line for each group (how many recommendations had a bad sign in it, how many of those were denied, their outcomes against the ones whose group was clean) and the one- and two-group verdicts."""
+    lines = ["  the groups (a group is bad when a sign of it fired; bad signs in two groups deny, a fault or a profile finding denies alone)",
+             f"  {'group':<28} {'bad':>5} {'denied':>6} {'won/closed':>10} {'bad':>7} {'clean':>7} {'gap':>7} {'se':>6}  sentence"]
+    for r in g["rows"]:
+        lines.append(f"  {r['group']:<28} {r['fired']:>5} {r['denied']:>6} {str(r['hit']['won']) + '/' + str(r['hit']['closed']):>10} {_signed(r['hit']['mean_excess'])} {_signed(r['rest']['mean_excess'])} {_signed(r['gap'])} {_signed(r['se'])}  {r['sentence']}")
+    for label, r in (("two or more bad groups", g["two"]), ("one bad group", g["one"])):
+        lines.append(f"  {label:<28} {r['fired']:>5} {r['denied']:>6} {str(r['hit']['won']) + '/' + str(r['hit']['closed']):>10} {_signed(r['hit']['mean_excess'])} {_signed(r['rest']['mean_excess'])} {_signed(r['gap'])} {_signed(r['se'])}  {r['sentence']}")
+    return lines
+
+
 def report(card: dict) -> str:
     """The card as the command prints it: for each version of the Critic, the verdict's own row (denied against approved, without the suitability denials), one line for each rule, and the Critic's verdict by theme."""
     lines = [f"CRITIC REPORT CARD  {len(card['runs'])} run(s), {len(card['themes'])} theme(s): {', '.join(card['themes'])}",
@@ -322,8 +411,25 @@ def report(card: dict) -> str:
             if not r["suitability"]:
                 for theme, t in r["by_theme"].items():
                     lines.append(f"      {theme:<26} n={t['n']:<3} hit {_signed(t['mean_excess'])}  rest {_signed(t['rest_mean_excess'])}  gap {_signed(t['gap'])}  {t['sentence_code'].replace('_', ' ')}")
+        if "as_v3" in c:
+            w = c["as_v3"]
+            v3 = w["verdict"]
+            lines.append(f"  WHAT THE VERSION-3 RULES WOULD SAY about these {c['population']} recommendations (from the codes of their findings; an approximation): {w['changed']['approved_to_denied']} approved would be denied and {w['changed']['denied_to_approved']} denied would be approved")
+            lines.append(f"  the verdict   denied n={v3['hit']['n']:<3} {_signed(v3['hit']['mean_excess'])}  won {v3['hit']['won']}/{v3['hit']['closed']}   approved n={v3['rest']['n']:<3} {_signed(v3['rest']['mean_excess'])}  won {v3['rest']['won']}/{v3['rest']['closed']}   "
+                         f"approved minus denied {_signed(None if v3['gap'] is None else -v3['gap'])} (se {_signed(v3['se'])})")
+            lines.append(f"      {v3['sentence']}")
+            for theme, t in v3["by_theme"].items():
+                lines.append(f"      {theme:<28} denied n={t['n']:<3} {_signed(t['mean_excess'])}  approved n={t['rest_n']:<3} {_signed(t['rest_mean_excess'])}   gap {_signed(t['gap'])} (se {_signed(t['se'])})  {t['sentence_code'].replace('_', ' ')}")
+            if w["groups"] is not None:
+                lines.extend(_group_lines(w["groups"]))
+        if "groups" in c:
+            lines.extend(_group_lines(c["groups"]))
         for f in c["by_family"]:
             lines.append(f"  family {f['family']:<15} n={f['n']:<3} {_signed(f['mean_excess'])}  denied n={f['denied']['n']:<3} {_signed(f['denied']['mean_excess'])}  approved n={f['approved']['n']:<3} {_signed(f['approved']['mean_excess'])}   {f['sentence_code'].replace('_', ' ')}")
+            for who in ("all", "denied", "approved"):
+                shown = [x for x in f.get("forward", {}).get(who, []) if x["n"]]
+                if shown:
+                    lines.append(f"      forward excess, {who:<8} " + "  ".join(f"{x['sessions']} sessions {_signed(x['mean_excess_pct'])} (se {_signed(x['se_pct'])}, n {x['n']})" for x in shown))
     if card["unmatched"]:
         lines += ["", f"  {card['unmatched']} reviewed outcome(s) had no review to read the findings from and are left out"]
     lines += ["", *[f"  limit: {text}" for text in card["limits"]]]

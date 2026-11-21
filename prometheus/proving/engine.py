@@ -46,6 +46,7 @@ from pydantic import BaseModel, BeforeValidator, ConfigDict, Field, StrictBool, 
 
 from prometheus.agents.trader.config import load_config as load_trader_config
 from prometheus.common import money as money_module
+from prometheus.common import shares as sh
 from prometheus.common import trace, trading_clock
 from prometheus.common.market_calendar import is_trading_day, load_calendar, next_trading_day, simulated_moment
 from prometheus.common.money import PositiveMoney, dumps
@@ -363,7 +364,8 @@ def research_day(day: date, request: TimeMachineRequest, intent, memo: Memo, gua
                 return done("failed", None, None, "a model call failed: " + "; ".join(dict.fromkeys(broken))[:200])
             stored = json.loads(order.model_dump_json(exclude={"data"}))
             stored["data"] = {"companies": order.data.companies if order.data else [], "notes": list(order.data.notes) if order.data else []}      # the articles are left out; what the decision reads stays
-            scalars = {k: plan_.get(k) for k in ("balance", "budget", "each", "count", "said_how_much", "request_text", "find", "case", "action")}
+            scalars = {k: plan_.get(k) for k in ("balance", "budget", "each", "count", "said_how_much", "request_text", "find", "case", "action", "max_price")}
+            scalars.update({k: plan_[k] for k in ("min_price", "shares_of", "shares_each") if plan_.get(k)})      # a price floor and the shares typed with a recommendation (entry 140): kept only when the request has them, so every earlier saved day is read as before
             finished = done("done", stored, json.loads(dumps(scalars)), None)
             try:
                 finished.news_sources = len(order.data.sources_of("news")) if order.data is not None and order.data.results else None
@@ -727,7 +729,8 @@ def run_time_machine(request: TimeMachineRequest, *, store: ProvingStore | None 
         link_seconds = time.perf_counter() - link_began
         trace.set_outputs(root, {"headline": summary.headline.sentence, "decision_days": len(days)})
     thin_days = [d.isoformat() for d in days if d in research and research[d].news_sources is not None and research[d].news_sources < config.time_machine.news_coverage_min_sources]
-    caveats = track.caveats_of(all_outcomes, config, simulated_fills=True, thin_news=bool(thin_days), models_may_remember=True, not_point_in_time=True, fast_models=speed == "fast")
+    analysts_used = any(isinstance(review.get("analysts"), dict) and review["analysts"].get("applicable") for d in days if d in research and research[d].order for review in (research[d].order.get("reviews") or []))       # a review scored the analysts' counts (Critic v3): they are each month's last revision, not what was known on the day
+    caveats = track.caveats_of(all_outcomes, config, simulated_fills=True, thin_news=bool(thin_days), models_may_remember=True, not_point_in_time=True, fast_models=speed == "fast", analysts_used=analysts_used)
     cached_days = [d.isoformat() for d in days if d in research and research[d].cached]
     total_usage = {"calls": understood_cost["calls"], "tokens_in": understood_cost["tokens_in"], "tokens_out": understood_cost["tokens_out"], "models": {}}
     for item in usage.values():
@@ -780,7 +783,7 @@ def timing_of(per_day: dict, *, speed: str, research_seconds: float, walk_second
 def _decide_day(day: date, found: Day, intent, request: TimeMachineRequest, manager, trader, account: SimPortfolio, earlier: list[dict], book: dict, config: ProvingConfig, trader_config, clerk, info: dict) -> tuple:
     """One decision day of the walk: the cooldown, the Account Manager's decision with the account's own money, the Trader's fills at the next open and the outcomes of the day's recommendations. Returns (the day's row, the trades,
     the outcomes, the work order as a dict for the page)."""
-    from prometheus.common.money import money
+    from prometheus.common.money import money, price
     order = WorkOrder.model_validate(found.order)
     full = order.model_copy(deep=True)
     scalars = found.plan or {}
@@ -792,7 +795,11 @@ def _decide_day(day: date, found: Day, intent, request: TimeMachineRequest, mana
     with trading_clock.as_of(day):
         desk_portfolio = account.as_desk_portfolio()
         decided = manager.decide_trades(order, desk_portfolio, None, moment, "auto", scalars.get("balance"), None if budget is None else money(budget), clarify=None, said_how_much=bool(scalars.get("said_how_much")),
-                                        request_text=scalars.get("request_text") or "", count=scalars.get("count"), each=None if each is None else money(each))
+                                        request_text=scalars.get("request_text") or "", count=scalars.get("count"), each=None if each is None else money(each),
+                                        max_price=None if scalars.get("max_price") is None else price(scalars["max_price"]),      # "under $50 a share" (entry 138): read by the same code as a live run, here the Account Manager's own check of the price
+                                        min_price=None if scalars.get("min_price") is None else price(scalars["min_price"]),      # "over $20 a share" (entry 140)
+                                        shares_of={name: sh.quantity(n) for name, n in (scalars.get("shares_of") or {}).items()} or None,
+                                        shares_each=None if scalars.get("shares_each") is None else sh.quantity(scalars["shares_each"]))      # the shares typed with a recommendation (entry 140): each approved purchase's limit
         with trace.span("proving.fill", metadata={"as_of": day.isoformat()}):
             if decided.status in ("decided", "reviewed") and any(d.get("will_trade") in TRADING for d in decided.trade_decisions):
                 decided = manager.perform_trades(decided, desk_portfolio, trader, moment, funding=None, approver=None, book=False)

@@ -9,6 +9,10 @@ on the work order; a great deal earns a bonus on the score, in proportion to the
     premium  = deal_price / sma_126 - 1          discount = -premium
     label    falling | unknown | overpriced | rich | great | good | fair      (the first that fits)
 
+THE REWARD OF `reward_to_risk` IS THE MARKET'S, NOT THE PLAN'S (design/advisor_exit_plan_spec.md rule E7): it is the distance from the deal price up to the 126-session high over the plan's stop distance, so it reads no `target_price`. A TRAILING plan (the
+TREND family since Advisor config version 3: `trailing` true, no target, a stop that rises with the highest close) therefore needs no special case: the measure is the same number it was for any plan, a missing target is never read as a zero reward and
+never as an unknown (the unknown credit is for a missing 126-session high or stop distance only), and `stop_distance` is still the plan's starting stop distance.
+
 A company with fewer than 126 stored bars (a recent IPO) has no six-month average. That is a plain NOTE on the review (`value_not_assessable`, a warning), never a denial: it does not ask for a person (design choices entry 103,
 corrected: Jacob, 2026-11-15, "it eliminates IPOs from being traded and is a bad rule"), the measures that need the average count the unknown credit as they always did, and the other value rules still apply.
 """

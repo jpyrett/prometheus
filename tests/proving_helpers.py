@@ -109,3 +109,21 @@ def restated(plan, close: Decimal, day: date):
 
 def close_on(series, day: str) -> Decimal:
     return price_door(next(b for b in series if b["date"] == day)["close"])
+
+
+def as_before_the_forward_excess(stats) -> dict:
+    """A run's statistics as they were before the forward excess (design/advisor_exit_plan_spec.md E5 and E6): without the `forward` blocks, without the score table (its buckets are the config's new ones: <60, 60-65, 65-70, 70-75, 75+) and without the family table's `neutral` row.
+    What a saved run recorded and what the same run walked again now says must be the same in everything else."""
+    body = stats.model_dump(mode="json")
+    body.pop("by_score")
+    body["by_family"] = [{k: v for k, v in row.items() if k != "forward"} for row in body["by_family"] if row["family"] != "neutral"]
+    return body
+
+
+FOLLOWED = ("key", "decision_day", "symbol", "verdict", "traded", "hypothetical", "plan", "entry", "exit", "result", "return_pct", "benchmark_return_pct", "excess_return_pct", "sector_return_pct", "gain", "horizons", "max_favorable_pct", "max_adverse_pct", "path", "split_adjusted")
+
+
+def outcomes_before_the_forward_return(run) -> list[dict]:
+    """What a run's outcomes say about HOW THE RECOMMENDATIONS WERE FOLLOWED (the plan, the entry, the exit, every return, the path), without the new `forward` block and without the bookkeeping that other changes since the run was saved added (its source, the Critic's finding
+    codes, the reason a recommendation was not traded). A run walked again from the same cache and the same bars must give them again: design/advisor_exit_plan_spec.md E8 (old records follow exactly as before)."""
+    return [{k: v for k, v in o.model_dump(mode="json").items() if k in FOLLOWED} for o in run.outcomes]

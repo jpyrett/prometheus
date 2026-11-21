@@ -1,7 +1,9 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { stateOfRun } from "../proving/provingReducer";
+import forwardRunFile from "../test/proving_forward_run.json";
 import { coverageFixture, fastRun, livePlanSnapshot, trackRun } from "../test/proving";
+import type { ProvingRun } from "../proving/types";
 import { CalibrationChart } from "./CalibrationChart";
 import { EquityChart } from "./EquityChart";
 import { ExitMix } from "./ExitMix";
@@ -162,6 +164,75 @@ describe("the quality charts", () => {
     expect(rows[4]).toEqual(["Average win", "1", "+7.7%"]);
     expect(rows[5]).toEqual(["Average loss", "16", "−3.3%"]);
     expect(rows.some((r) => r[0] === "Family: trend" && r[2]!.includes("small sample"))).toBe(true);
+  });
+});
+
+// The recorded fast six-month oil run walked again from its research cache with the code of design choices entry 139 (the forward excess, the new score buckets, the neutral row of the family table): its statistics as the server computed them, and its 91
+// outcomes without the day-by-day path (src/test/proving_forward_run.json). Every number below is the server's.
+const forwardRun = forwardRunFile as unknown as Pick<ProvingRun, "stats" | "outcomes">;
+
+describe("the family and score tables read the forward excess", () => {
+  const stats = forwardRun.stats;
+  it("the family table lists the forward excess after each horizon with its n, standard error and the chance band, and the win rate is 'won by its plan'", () => {
+    render(<ExitMix outcomes={stats.outcomes} families={stats.by_family} />);
+    expect(screen.getByRole("img").getAttribute("aria-label")).toContain("Exit mix. 74 trades followed: 41 target, 11 stop, 0 time stop, 22 still open");
+    showTable();
+    const rows = rowsOf().map(cells);
+    const trend = rows.find((r) => r[0] === "Family: trend")!;
+    expect(trend[1]).toBe("28"); // the plan's n
+    expect(trend[2]).toContain("after the decision day, against SPY: 5 sessions +0.7 pts (se +0.7 pts, n 35, within chance); 10 sessions +1.3 pts (se +1.0 pts, n 35, within chance); 20 sessions +3.2 pts (se +1.4 pts, n 29); 40 sessions +8.7 pts (se +1.6 pts, n 19)");
+    expect(trend[2]).toContain("won by its plan 68% of 28");
+    expect(rows.map((r) => r[0]).filter((x) => x!.startsWith("Family:"))).toEqual(["Family: conviction", "Family: trend", "Family: neutral"]);
+  });
+  it("the family bars are the forward excess after 20 sessions, grey for a mean that chance alone gives", () => {
+    const { container } = render(<ExitMix outcomes={stats.outcomes} families={stats.by_family} />);
+    expect(container.textContent).toContain("Mean excess over SPY 20 sessions after the decision day, by strategy family");
+    expect(container.textContent).toContain("n=29"); // the trend's forward n, not the plan's 28
+    const bars = [...container.querySelectorAll("rect.hbar")].map((r) => r.getAttribute("fill"));
+    expect(bars.slice(-3)).toEqual(["var(--pos)", "var(--pos)", "var(--neutral)"]); // conviction and trend beyond chance; neutral (+3.2 points, 1.7 standard errors) within it
+  });
+  it("the exit mix shows a trailing-stop part only when a trade ended by one", () => {
+    const withTrailing = { ...stats.outcomes, exits: { ...stats.outcomes.exits, trailing_stop: 3 } };
+    const { unmount } = render(<ExitMix outcomes={stats.outcomes} families={[]} />);
+    expect(screen.queryByText(/Trailing stop/)).toBeNull();
+    unmount();
+    render(<ExitMix outcomes={withTrailing} families={[]} />);
+    showTable();
+    expect(rowsOf().map(cells).slice(0, 5).map((r) => r[0])).toEqual(["Target", "Stop", "Trailing stop", "Time stop", "Still open"]);
+  });
+  it("the score table lists the new buckets with the forward excess after 20 sessions, its n and standard error, and says which are within chance or small", () => {
+    render(<CalibrationChart outcomes={forwardRun.outcomes} buckets={stats.by_score} minSample={20} />);
+    expect(screen.getByRole("img").getAttribute("aria-label")).toContain("picks by Advisor score against excess return over SPY 20 sessions after the decision day");
+    showTable();
+    const rows = rowsOf().map(cells);
+    expect(rows.map((r) => r[0])).toEqual(["0–59", "60–64", "65–69", "70–74", "75–100"]);
+    expect(rows[3]).toEqual(["70–74", "28", "+2.1 pts", "+1.4 pts", "82%", "within chance"]);
+    expect(rows[0]).toEqual(["0–59", "0", "—", "—", "—", "none"]);
+    expect(rows[2]![5]).toBe("small sample (under 20)");
+  });
+  it("a run saved before the forward excess existed is drawn by the plan, as it was", () => {
+    const old = trackRun.stats;
+    render(<CalibrationChart outcomes={trackRun.outcomes} buckets={old.by_score} minSample={20} />);
+    showTable();
+    expect(screen.getByRole("table").querySelectorAll("th")).toHaveLength(5);
+  });
+});
+
+describe("the plan ladder of a trailing position", () => {
+  // The recorded CVX position of the live snapshot with ONE change, the plan the trend family has since Advisor config version 3: its stop trails (a starting stop, the stop in force now), and it has no target.
+  const recorded = livePlanSnapshot.positions.find((p) => p.symbol === "CVX")!;
+  const trailing = livePlanSnapshot.positions.map((p) =>
+    p.symbol === "CVX" ? { ...p, status: "in_plan" as const, plan: { stop: p.plan!.stop, target: null, time_stop_date: "2026-12-21", trailing: true, trail_distance: 9.8, highest_close: 229.5, stop_now: 219.7 } } : p,
+  );
+  it("draws the stop in force as a TRAILING stop, never the starting one, and says there is no target", () => {
+    const { container } = render(<PlanLadder positions={trailing} />);
+    const cvx = [...container.querySelectorAll(".lad-row")].find((r) => r.textContent!.includes("CVX"))!;
+    expect(cvx.textContent).toContain("trailing stop $219.70");
+    expect(cvx.textContent).not.toContain(`$${recorded.plan!.stop!.toFixed(2)}`);
+    expect(cvx.textContent).toContain("no target");
+    expect(cvx.querySelector(".lad-cap.target")).toBeNull();
+    showTable();
+    expect(rowsOf().map(cells).find((r) => r[0] === "CVX")![4]).toBe("$219.70");
   });
 });
 

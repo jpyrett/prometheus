@@ -82,7 +82,7 @@ def test_a_dead_cat_bounce_cannot_earn_the_great_deal_bonus():
 
 def test_a_weak_chart_is_a_warning_under_the_mark():
     r = run(cross_50_200_20d=-2, last_close=80.0, sma_50=90.0, sma_200=100.0, structure_63d="down")     # -15 - 10 - 10 = -35: 15
-    assert r.score == 15.0 and sorted(codes(r, "warning")) == ["death_cross", "weak_chart"]
+    assert r.score == 15.0 and sorted(codes(r, "warning")) == ["chart_bearish", "death_cross", "weak_chart"]       # Critic v3: a net of -35 is also under `chart.bearish_at` (-20), a sign of the group performance
     assert "weak_chart" in codes(run(structure_63d="down", macd_hist=-1.0, last_close=80.0, sma_50=90.0, sma_200=100.0))          # -10 -10 -5: 25 is under 35
     assert "weak_chart" not in codes(run(cross_50_200_20d=-2))                                                                      # -15: exactly 35 is not under the mark
     assert "weak_chart" not in codes(run(structure_63d="down"))                                                                     # -10: 40
@@ -101,13 +101,39 @@ def test_a_reduction_is_not_a_record_so_the_chart_never_judges_one():
 # ---------------------------------------------------------------- inside a review
 
 
-def test_a_dead_cat_bounce_denies_the_recommendation_whatever_the_rest_says():
-    new = {k: v for k, v in DEAD_CAT.items() if k not in ("last_close", "sma_50")}     # SNDK's own close (806) is already under its 50-day mean (1517); only the new numbers are added
-    out = review(captured("SNDK"), changes={"SNDK": new})["SNDK"]
-    assert not out["approved"] and "dead_cat_bounce" in out["denial_reasons"] and out["score"] <= 49 and out["bonus"] == 0 and "approved_shares" not in out
+def test_a_dead_cat_bounce_is_one_sign_of_performance_it_denies_only_with_a_bad_sign_in_another_group():
+    """AMENDED (Critic v3, rule V5): a dead cat bounce used to deny alone ("whatever the rest says"). It is a sign of the group `performance` now: on the real PG_open record, with the Critic's own numbers made a dead cat bounce (the 50-day
+    mean moved above the close), the review is APPROVED with the one reason against it named and no blocker; with the six-month average moved so that the price is 50% above it (`overpriced`, a sign of the group `price`), two groups
+    are bad and the review is DENIED, capped, with the groups first in its reasons and the blockers in the closed order."""
+    cat = dict(decline_from_peak_63d=-0.25, rebound_from_trough_63d=0.05, sessions_since_trough_63d=15, sma_50=500.0)
+    alone = review(captured("PG_open"), changes={"PG": cat})["PG"]
+    assert alone["approved"] and alone["blockers"] == [] and alone["denial_reasons"] == [] and alone["groups"] == {"news": [], "performance": ["dead_cat_bounce"], "price": []}
+    assert "dead_cat_bounce" in [w["code"] for w in alone["warnings"]] and any(p["name"] == "dead_cat_bounce" for p in alone["chart"]["patterns"])
+    assert "Note: one reason against it: performance (dead_cat_bounce:" in alone["summary"] and alone["score"] == alone["score_before_blockers"] > 49
+    last = rec_of(captured("PG_open")).features["last_close"]["value"]
+    out = review(captured("PG_open"), changes={"PG": {**cat, "sma_126": last / 1.5}})["PG"]
+    assert not out["approved"] and out["denial_reasons"] == ["group:performance", "group:price", "overpriced", "dead_cat_bounce"] and out["score"] <= 49 and out["bonus"] == 0
     assert any(p["name"] == "dead_cat_bounce" for p in out["chart"]["patterns"]) and any(b["code"] == "dead_cat_bounce" and b["dimension"] == "chart" for b in out["blockers"])
     listed = [b["code"] for b in out["blockers"]]
-    assert listed == sorted(listed, key=BLOCKER_ORDER.index) and listed.index("falling_knife") < listed.index("dead_cat_bounce")      # the closed order: value, then chart
+    assert listed == sorted(listed, key=BLOCKER_ORDER.index) and listed.index("overpriced") < listed.index("dead_cat_bounce")      # the closed order: value, then chart
+    assert out["summary"].startswith("DENY PG: poor performance (dead_cat_bounce:") and " and a price that is too high (overpriced:" in out["summary"]
+
+
+def test_poor_performance_is_a_63_session_return_at_or_under_minus_15_percent_with_a_falling_21_session_return():
+    """Critic v3 (spec V4): the Critic's own re-asked returns, never the record's. A WARNING (a sign of the group performance): at the bound it fires, just above it or with a 21-session return that is not negative it does not, and a
+    return that could not be calculated is not judged. Inside a whole review of the real PG_open record it is the one bad group: approved, with the reason named."""
+    rec = rec_of(captured("PG_open"))
+    P = CONFIG.performance
+    assert P.poor_ret_63d == -0.15
+    [f] = ch.poor_performance(rec, -0.15, -0.0001, P)
+    assert (f.code, f.severity, f.dimension) == ("poor_performance", "warning", "chart") and "down 15.0% over 63 sessions" in f.message and f.value == [-0.15, -0.0001] and f.threshold == -0.15
+    assert ch.poor_performance(rec, -0.1499, -0.05, P) == [] and ch.poor_performance(rec, -0.30, 0.0, P) == [] and ch.poor_performance(rec, -0.30, 0.02, P) == []
+    assert ch.poor_performance(rec, None, -0.05, P) == [] and ch.poor_performance(rec, -0.30, None, P) == []
+    r = review(captured("PG_open"), own={}, changes={"PG": {"ret_21d": -0.02, "ret_63d": -0.20}})["PG"]
+    assert r["approved"] and r["groups"]["performance"] == ["poor_performance"] and "Note: one reason against it: performance (poor_performance: PG is down 20.0% over 63 sessions" in r["summary"]
+    assert "poor_performance" in [w["code"] for w in r["warnings"]] and r["blockers"] == []
+    plain = review(captured("PG_open"), own={}, changes={"PG": {"ret_21d": -0.02, "ret_63d": -0.10}})["PG"]
+    assert plain["groups"]["performance"] == []
 
 
 def test_the_scorecard_shows_the_chart_line():

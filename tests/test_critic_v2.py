@@ -52,13 +52,20 @@ def test_a_newer_article_that_looks_bad_is_a_warning_that_asks_for_nobody_and_th
     assert "fresh_negative_news" not in [w["code"] for w in quiet["warnings"]]
 
 
-def test_a_newer_article_that_reports_a_blocking_event_still_denies():
-    """A REAL stored Procter & Gamble article whose sentence code reads as `earnings_miss` (a class in `evidence.blocking_classes`), dated inside the ten days the rule looks back: still a blocker, the model's label notwithstanding."""
+def test_a_newer_article_that_reports_a_blocking_event_is_still_a_blocker_and_denies_with_a_bad_sign_in_another_group():
+    """A REAL stored Procter & Gamble article whose sentence code reads as `earnings_miss` (a class in `evidence.blocking_classes`), dated inside the ten days the rule looks back: still the blocker `fresh_negative_event`, the model's
+    label notwithstanding. AMENDED (Critic v3, rule V5): it is a sign of the group `news` and denied alone; now ONE bad group approves (the sentence names it, the blocker is shown as a warning because it did not deny), and with a
+    second bad group (the same record made a trend one whose stock fell over five sessions: `trend_not_confirmed`, performance) the review is DENIED, capped, with both groups in its reasons."""
     article = {**real_article("PG", "Procter & Gamble Q4 Earnings Beat on Productivity"), "published_utc": "2026-11-04T14:00:00Z"}       # the real text; its date moved to the day before the review so that it is "newer than what the Advisor saw"
     assert ev.bearish_classes(article["text"], "PG", "Procter & Gamble") == ["earnings_miss"] and "earnings_miss" in CONFIG.evidence.blocking_classes
     r = review(captured("PG_open"), fresh={"PG": [article]}, own={})["PG"]
-    assert not r["approved"] and "fresh_negative_event" in codes(r) and "earnings_miss" in r["blockers"][0]["message"] and r["requires_human"] is False and r["score"] <= 49
-    assert "fresh_negative_news" not in [w["code"] for w in r["warnings"]]
+    assert r["approved"] and r["blockers"] == [] and r["groups"]["news"] == ["fresh_negative_event"] and r["requires_human"] is False and r["score"] == r["score_before_blockers"] > 49
+    assert "fresh_negative_event" in [w["code"] for w in r["warnings"]] and "earnings_miss" in next(w for w in r["warnings"] if w["code"] == "fresh_negative_event")["message"]
+    assert "Note: one reason against it: news (fresh_negative_event:" in r["summary"] and "fresh_negative_news" not in [w["code"] for w in r["warnings"]]
+    both = review(tampered_order("PG_open", **{"trade.family": "trend"}), fresh={"PG": [article]}, own={}, changes={"PG": {"ret_5d": -0.021}})["PG"]
+    assert not both["approved"] and both["denial_reasons"] == ["group:news", "group:performance", "trend_not_confirmed", "fresh_negative_event"] and both["score"] <= 49 < both["score_before_blockers"]
+    assert [b["code"] for b in both["blockers"]] == ["trend_not_confirmed", "fresh_negative_event"] and both["requires_human"] is False
+    assert both["summary"].startswith("DENY PG: poor news (fresh_negative_event:") and " and poor performance (trend_not_confirmed:" in both["summary"]
 
 
 # ---------------------------------------------------------------- C4: a company is the same company whatever its spelling
@@ -127,16 +134,22 @@ def test_over_the_real_records_of_the_oil_weeks_exactly_the_trend_ones_that_fell
     assert only.severity == "blocker" and only.dimension == "chart" and f"{falling[0].features['ret_5d']['value']:+.1%}" in only.message and only.value == falling[0].features["ret_5d"]["value"] and only.threshold == 0.0
 
 
-def test_a_trend_review_is_denied_when_the_stock_fell_over_five_sessions_and_the_same_record_is_not_on_a_rising_week():
-    """The whole review of the real PG_open record made a TREND recommendation: with the Critic's own re-asked `ret_5d` at -2.1% it is denied for `trend_not_confirmed` (its message says the number, the score is capped), with the real
-    +4.1% the record had it is approved, and a CONVICTION record is not touched by the same -2.1%."""
+def test_a_trend_review_with_a_stock_that_fell_over_five_sessions_is_approved_with_the_reason_named_and_a_second_bad_group_denies_it():
+    """The whole review of the real PG_open record made a TREND recommendation: with the Critic's own re-asked `ret_5d` at -2.1% the finding `trend_not_confirmed` is raised (its message says the number) and with the real +4.1% the
+    record had it is not; a CONVICTION record is not touched by the same -2.1%. AMENDED (Critic v3, rule V5, design/critic_v3_two_reasons_spec.md section 8: "trend_not_confirmed no longer denies alone"): it is a sign of the group
+    `performance`, so the falling review is APPROVED with the one reason against it in its summary (no blocker, the score not capped); the same review with a bad sign in `price` as well (the six-month average moved so that the
+    price is 50% above it: `overpriced`) is DENIED."""
     falling = review(tampered_order("PG_open", **{"trade.family": "trend"}), own={}, changes={"PG": {"ret_5d": -0.021}})["PG"]
-    assert not falling["approved"] and codes(falling) == ["trend_not_confirmed"] and falling["score"] <= 49 < falling["score_before_blockers"] and "-2.1%" in falling["blockers"][0]["message"]
-    assert falling["summary"].startswith("DENY PG: The strategy is trend") and falling["requires_human"] is False
+    assert falling["approved"] and falling["blockers"] == [] and falling["denial_reasons"] == [] and falling["groups"]["performance"] == ["trend_not_confirmed"] and falling["score"] == falling["score_before_blockers"] > 49
+    [warn] = [w for w in falling["warnings"] if w["code"] == "trend_not_confirmed"]
+    assert "-2.1%" in warn["message"] and falling["summary"].startswith("APPROVE PG:") and "Note: one reason against it: performance (trend_not_confirmed: The strategy is trend" in falling["summary"] and falling["requires_human"] is False
+    last = rec_of(captured("PG_open")).features["last_close"]["value"]
+    dear = review(tampered_order("PG_open", **{"trade.family": "trend"}), own={}, changes={"PG": {"ret_5d": -0.021, "sma_126": last / 1.5}})["PG"]
+    assert not dear["approved"] and codes(dear) == ["overpriced", "trend_not_confirmed"] and dear["score"] <= 49 < dear["score_before_blockers"] and dear["summary"].startswith("DENY PG: poor performance (trend_not_confirmed: The strategy is trend")
     rising = review(tampered_order("PG_open", **{"trade.family": "trend"}), own={})["PG"]            # the real +4.05% of the capture
-    assert rising["approved"] and codes(rising) == [] and "trend_not_confirmed" not in codes(rising, "warnings") and "trend_unconfirmed_unknown" not in codes(rising, "warnings")
+    assert rising["approved"] and codes(rising) == [] and "trend_not_confirmed" not in codes(rising, "warnings") and "trend_unconfirmed_unknown" not in codes(rising, "warnings") and rising["groups"]["performance"] == []
     conviction = review(captured("PG_open"), own={}, changes={"PG": {"ret_5d": -0.021}})["PG"]
-    assert conviction["approved"] and codes(conviction) == []
+    assert conviction["approved"] and codes(conviction) == [] and conviction["groups"]["performance"] == [] and "trend_not_confirmed" not in codes(conviction, "warnings")
 
 
 def test_when_the_five_session_return_cannot_be_had_it_is_a_warning_and_not_a_denial_and_it_changes_no_accuracy_number():
@@ -245,3 +258,61 @@ def test_the_critics_store_is_the_configs_folder_and_a_test_critic_keeps_none():
     assert Critic(model=object()).label_store is None                                                                    # conftest turns the config's store off: no test reads or writes the project's own labels
     assert Critic(model=object(), label_store=None).label_store is None
     assert (REPO_ROOT / ".gitignore").read_text(encoding="utf-8").count("data/critic/") == 1
+
+
+# ---------------------------------------------------------------- Critic v3: what the Account Manager tells the user about a denial for two reasons
+
+def test_the_account_manager_tells_the_user_a_denial_for_two_groups_in_words_and_a_denial_for_a_fault_as_before():
+    """`decisions.denied_lines` reads the review's `denial_reasons`: a denial for bad signs in two groups says "two reasons against it" and then the groups in words with the heaviest code of each (Critic v3, rule V9); a denial for a
+    fault (the market is closed) is its one sentence, as it was."""
+    from critic_helpers import make_critic
+
+    from prometheus.agents.account_manager import decisions
+    last = rec_of(captured("PG_open")).features["last_close"]["value"]
+    order = tampered_order("PG_open", **{"trade.family": "trend"})
+    make_critic(order, own={}, changes={"PG": {"ret_5d": -0.021, "sma_126": last / 1.5}}).review_recommendations(order, view(), NOW)
+    [header, line] = decisions.denied_lines(order)
+    assert header == "      DENIED by the Critic, not traded:" and not order.reviews[0]["approved"]
+    assert line.startswith("        PG     score 49 (F): two reasons against it, poor performance (trend_not_confirmed: The strategy is trend") and " and a price that is too high (overpriced: The price 167.10 is 50.0% above" in line
+    closed = captured("PG_open")
+    make_critic(closed, own={}).review_recommendations(closed, view(), at_saturday())
+    [_, said] = decisions.denied_lines(closed)
+    assert "reasons against it" not in said and said.startswith("        PG     score 49 (F): The market is closed")
+
+
+def at_saturday():
+    from critic_helpers import at
+    return at("2026-11-07 12:00")
+
+
+def test_the_real_reviews_of_the_oil_weeks_run_through_the_version_3_verdict_follow_the_rules_by_hand():
+    """Critic v3 on REAL captured reviews (the findings and the dimensions the Critic of version 2 wrote at four decision weeks, rebuilt as they were and given to `scoring.decide`): a review is denied exactly when a fault or a
+    profile blocker is on it, or a finding asked for a person (and not the `fresh_negative_news` that stopped asking in version 2), or signs of two groups fired; the score is capped exactly then; and the reviews that version 2 denied
+    for ONE reason now approve."""
+    from prometheus.agents.critic import scoring as sc
+    from prometheus.agents.critic.record import Dimension, Finding
+    faults = {"record_not_reviewable", "record_defect", "symbol_unknown", "price_mismatch", "source_missing", "source_altered", "market_closed", "quote_stale", "no_live_price", "bars_stale", "record_expired", "time_stop_passed",
+              "stop_already_hit", "risk_above_profile", "symbol_excluded", "sector_excluded", "price_below_profile_min"}
+    signs = {"news": {"fresh_negative_event", "fresh_negative_news", "event_not_supported", "analysts_bearish"},
+             "performance": {"trend_not_confirmed", "dead_cat_bounce", "falling_knife", "price_below_zone", "chart_bearish", "poor_performance"}, "price": {"overpriced", "valuation_extreme", "price_left_zone"}}
+    from prometheus.agents.critic.record import BLOCKER_ORDER
+    reviews = []
+    for path in REAL_CACHES:
+        reviews += (json.loads(Path(path).read_text(encoding="utf-8")).get("order") or {}).get("reviews", [])
+    assert len(reviews) > 100
+    freed = kept = 0
+    for r in reviews:
+        # version 1 and 2 blockers that are not blockers any more (`data_mismatch`, `data_unverified`, `blend_not_supported`: rules V7 and C3) are warnings now, and `fresh_negative_news` no longer asks for a person (C2: version 1 reviews hold it that way)
+        findings = [Finding.model_construct(code=f["code"], dimension=f["dimension"], severity="warning" if severity == "blocker" and f["code"] not in BLOCKER_ORDER else severity, message=f["message"], value=None, threshold=None,
+                                            requires_human=bool(f.get("requires_human")) and f["code"] != "fresh_negative_news") for severity, key in (("blocker", "blockers"), ("warning", "warnings"), ("info", "notes")) for f in r[key]]
+        dims = {n: Dimension.model_validate(d) for n, d in r["dimensions"].items()}
+        v = sc.decide(findings, dims, r["bonus"], CONFIG)
+        codes = {f.code for f in findings}
+        asks = any(f.requires_human for f in findings)
+        alone = any(f.severity == "blocker" and f.code in faults for f in findings)
+        two = sum(1 for names in signs.values() if codes & names) >= 2
+        assert v.approved == (not (alone or asks or two)), (r["symbol"], r["summary"][:80])
+        assert v.blocked == (alone or two) and v.score == (min(v.score_before_blockers, 49) if v.blocked else v.score_before_blockers)
+        freed += (not r["approved"]) and v.approved
+        kept += (not r["approved"]) and not v.approved
+    assert freed > 20 and kept > 5                                                                        # one reason alone freed a good many of the denials of versions 1 and 2, and the faults and the pairs still deny

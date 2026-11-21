@@ -193,3 +193,35 @@ def test_the_answers_route_carries_the_yes_of_a_missing_company_question_back_to
         time.sleep(0.02)
     closed = next(e["data"] for e in run.events if e["type"] == "question_closed")
     assert got == [True] and (closed["answer"], closed["by"]) == (True, "you") and next(e["data"] for e in run.events if e["type"] == "question")["kind"] == "missing_company"
+
+
+def test_the_live_run_takes_the_box_always_raise_funds_as_the_setting_for_the_run_and_a_missing_value_is_false():
+    """Entry 142, R12: `run_live` maps the box with `run_settings` (the one place) and applies it around the whole run (`applied`: set for the run, put back after), exactly as the Neutral box; the run_started event says what it was."""
+    import inspect
+
+    source = inspect.getsource(desk_run.run_live)
+    assert 'run_settings_module.run_settings(params["strict"], params["neutral"], params.get("raise_funds", False))' in source and "with run_settings_module.applied(chosen):" in source and '"raise_funds": chosen.always_raise_funds' in source
+
+
+def test_the_approver_turns_the_two_funding_cards_into_their_own_questions_and_their_answers_are_a_yes_a_no_or_nothing():
+    """The cash does not cover a purchase (entry 142, R3 and R4): the card of kind `raise_funds` is ONE question in the Account Manager's sentence, the card of kind `funding` is the plan RaiseFunds made (the holdings, their prices and gains, the cash after). No answer is None, never a yes."""
+    from decimal import Decimal
+
+    run = Run("funding-cards", "live")
+    live = desk_run.Live(Emitter(run))
+    live.running = "account_manager_direct"
+    _, approver, _ = desk_run.callables(run, live, 5, auto=False)
+    ask = {"kind": "raise_funds", "text": "You have $60.14 available; 2 ANT at $88.91 cost $177.82, $117.68 short. Shall I raise the money by selling some of your holdings? I will show you what I would sell first.", "question": "Raise the money by selling some of your holdings? [y/N] ",
+           "cash": Decimal("60.14"), "cost": Decimal("177.82"), "shortfall": Decimal("117.68"), "buys": [{"symbol": "ANT", "shares": Decimal(2), "price": Decimal("88.91"), "cost": Decimal("177.82")}]}
+    plan = {"kind": "funding", "text": "To buy 2 shares of ANT (about $177.82) with cash of $60.14, these holdings would be sold first:", "symbol": "ANT", "shares": Decimal(2), "est_cost": Decimal("177.82"), "question": "Sell these to pay for 2 shares of ANT (about $178)? [y/N] ",
+            "legs": [{"symbol": "DPZ", "shares": Decimal(1), "price": Decimal("348.61"), "amount": Decimal("348.61"), "gain": Decimal("6.89")}], "buys": [{"symbol": "ANT", "shares": Decimal(2), "price": Decimal("88.91"), "cost": Decimal("177.82")}], "cash": Decimal("60.14"), "cash_after": Decimal("230.93")}
+    seen = []
+    thread = answering(run, [True, False], seen)
+    assert approver(ask) is True and approver(plan) is False
+    thread.join(3)
+    first, second = seen
+    assert (first["kind"], first["title"], first["text"], first["shortfall"], first["buys"][0]["symbol"]) == ("raise_funds", "Raise funds?", ask["text"], Decimal("117.68"), "ANT")
+    assert (second["kind"], second["title"], second["cash_after"], second["legs"][0]["symbol"], second["legs"][0]["gain"]) == ("funding", "Approve the sales", Decimal("230.93"), "DPZ", Decimal("6.89"))      # the stream writes a Decimal as a JSON number (entry 112)
+    assert [e["data"]["text"] for e in run.events if e["type"] == "log"] == ["yes: raise the money by selling holdings", "no: sell nothing"]
+    quiet = Run("quiet-funding", "live")
+    assert desk_run.callables(quiet, desk_run.Live(Emitter(quiet)), 0.2, auto=False)[1](ask) is None            # no answer is never a yes

@@ -142,7 +142,7 @@ def check(choice, said, purchases=PURCHASES, cash=CASH, equity=EQUITY, prior=Non
     (clarify.SizingChoice(unit="percent", amount=20), "20% of my account"),
     (clarify.SizingChoice(unit="percent", amount=20), "twenty percent is 20 percent"),
     (clarify.SizingChoice(unit="dollars", amount=3000), "$3,000"),
-    (clarify.SizingChoice(unit="dollars", amount=3000), "3000"),                                                   # a bare number is dollars when no other unit was typed
+    # ("3000" with no other unit was accepted here as dollars; since entry 138 a bare number is SHARES: it is refused for dollars below, and accepted for shares in tests/test_request_numbers.py)
     (clarify.SizingChoice(unit="dollars", amount=3000), "3k dollars"),
     (clarify.SizingChoice(unit="shares", amount=10, scope="each"), "10 shares of each"),
     (clarify.SizingChoice(unit="max"), "as much as I can"),
@@ -162,6 +162,7 @@ def test_a_choice_the_users_own_words_support_is_accepted(choice, said):
     (clarify.SizingChoice(unit="percent", amount=150), "150%", "above 0 and at most 100"),
     (clarify.SizingChoice(unit="percent", amount=20), "20 dollars", "did not give a percentage"),
     (clarify.SizingChoice(unit="shares", amount=10), "$10", "did not give a number of shares"),
+    (clarify.SizingChoice(unit="dollars", amount=3000), "3000", "has no $ and no word dollars"),                  # AMENDED (entry 138): it was accepted as dollars; a bare number is shares
     (clarify.SizingChoice(unit="shares", amount=2.5), "2.5 shares", "shares are a whole number"),
     (clarify.SizingChoice(unit="dollars", amount=20), "20%", "gave percent or shares, not dollars"),
     (clarify.SizingChoice(unit="dollars", amount=99999), "$99,999", "the cash is $15,000.00: ask for less"),

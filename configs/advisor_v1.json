@@ -1,6 +1,6 @@
 {
-  "config_version": "2",
-  "_note": "Every threshold, weight, prior and multiplier of the Advisor's Generate Recommendations step (design/advisor_v1_final_spec.md, design/week5_advisor_implementation.md). Code reads these once at start (prometheus/agents/advisor/config.py checks that none is missing or unknown). The model never chooses one. Change a number here, never in the code, and never tune one from the ledger.",
+  "config_version": "3",
+  "_note": "Every threshold, weight, prior and multiplier of the Advisor's Generate Recommendations step (design/advisor_v1_final_spec.md, design/week5_advisor_implementation.md). Code reads these once at start (prometheus/agents/advisor/config.py checks that none is missing or unknown). The model never chooses one. Change a number here, never in the code, and never tune one from the ledger. Version 3 (design/advisor_exit_plan_spec.md): trade.min_reward_to_risk (2.0, the textbook minimum) and trade.trailing_families (trend) are CONVENTIONS chosen by reason, not tuned on outcomes (entry 133 rule): a target is at least min_reward_to_risk times the stop distance above the entry, and a trailing family has no target and a stop that rises with the highest close.",
   "limits": {"max_candidates": 15, "max_companies": 5, "max_signals_per_kind": 3, "max_events": 3, "discover_min_articles": 3, "max_candidates_on_order": 30, "recent_bars": 35},
   "gates": {"max_bar_age_sessions": 1, "max_fundamentals_age_days": 100,
             "red_flag_event_bars": 60, "red_flag_debt_to_equity": 4, "red_flag_current_ratio": 1, "earnings_days": 3, "earnings_estimate_low": 85, "earnings_estimate_high": 95},
@@ -70,7 +70,7 @@
     "industry": {"sleeve": "industry", "top_k": 5, "eligible": ["event", "trend", "capital_return", "reversion", "conviction"], "veto_only": []},
     "market": {"sleeve": "tape", "top_k": 5, "eligible": ["event", "trend", "capital_return", "reversion", "conviction"], "veto_only": []}
   },
-  "trade": {"entry_atr": 0.5, "stop_atr": {"reversion": 2, "event": 2, "trend": 3, "capital_return": 3, "theme": 3, "conviction": 3}, "target_edge_multiple": 1.5, "trend_limit_atr": 0.25, "event_limit_reaction_atr": 1},
+  "trade": {"entry_atr": 0.5, "stop_atr": {"reversion": 2, "event": 2, "trend": 3, "capital_return": 3, "theme": 3, "conviction": 3}, "target_edge_multiple": 1.5, "min_reward_to_risk": 2.0, "trailing_families": ["trend"], "trend_limit_atr": 0.25, "event_limit_reaction_atr": 1},
   "neutral": {"stop_atr_multiple": 2.0, "horizon_bars": 20},
   "ledger": {"path": "data/ledger/recommendations.jsonl"}
 }

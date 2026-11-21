@@ -8,7 +8,7 @@ export type StageKey = "work_order" | "gather" | "recommend" | "critique" | "pre
 export type StageState = "pending" | "busy" | "waiting" | "done" | "skipped" | "failed";
 export type TradeMode = "ask" | "auto";
 export type RiskLevel = "conservative" | "moderate" | "aggressive";
-export type RunStatus = "traded" | "no_trade" | "looked" | "stopped" | "failed";
+export type RunStatus = "traded" | "waiting" | "no_trade" | "looked" | "stopped" | "failed";
 
 export interface StageInfo {
   key: StageKey;
@@ -25,6 +25,8 @@ export interface Position {
   shares: number;
   cost_basis: number;
   value: number;
+  /** The shares a waiting sale has set aside (design choices entry 140); absent in a recorded session. */
+  reserved?: number;
 }
 
 export interface AccountInfo {
@@ -40,10 +42,56 @@ export interface AccountInfo {
 export interface AccountView {
   account: AccountInfo;
   positions: Position[];
+  /** ALL the cash of the account. */
   cash: number;
+  /** The part of it that may be spent: the cash less what waiting orders have set aside (entry 140). Absent in a recorded session: then it is all of the cash. */
+  available?: number;
+  /** The cash the waiting orders hold. */
+  reserved_cash?: number;
   invested: number;
   total: number;
   as_of_utc: string | null;
+}
+
+/** A waiting limit order of the account (design choices entry 140): a DAY order, with its cash (a purchase) or its shares (a sale) set aside. `limit_price` is the ceiling of a purchase and the floor of a sale. */
+export interface OpenOrder {
+  order_id: number;
+  account_id: number;
+  symbol: string;
+  company: string | null;
+  side: "buy" | "sell";
+  shares: number | null;
+  dollars: number | null;
+  limit_price: number;
+  reserved_cash: number;
+  reserved_shares: number;
+  request: string;
+  placed_utc: string;
+  expires_utc: string;
+  status: "open" | "filled" | "expired" | "cancelled" | "rejected";
+  reason: string | null;
+  /** Design choices entry 143: how the user permitted selling holdings to pay for this purchase WHEN ITS PRICE IS REACHED ("words": their own words, "setting": ALWAYS_RAISE_FUNDS); absent or null: never. */
+  raise_funds_by?: "words" | "setting" | null;
+}
+
+export interface OrdersView {
+  orders: OpenOrder[];
+  reserved_cash: number;
+  available: number;
+  /** A watcher (a server) holds the advisory lock now: the orders are being watched. */
+  watching: boolean;
+}
+
+/** One line the watcher or the Cancel route sent (`/api/orders/events`). */
+export interface OrderNotice {
+  type: "placed" | "filled" | "expired" | "cancelled" | "rejected";
+  order_id: number;
+  account_id: number;
+  symbol: string;
+  side: string;
+  text: string;
+  at: string;
+  ts: number;
 }
 
 /** The `portfolio` event: the account view plus what changed against the first one of the run. */
@@ -114,8 +162,21 @@ export interface Review {
   blockers: { code: string; message: string }[];
   warnings: { code: string; message: string }[];
   risk: { level: string | null; score: number | null; tolerance: string | null; allowed: string | null } | null;
+  /** Critic version 3: the three groups of judgment (news, performance, price), bad when a sign of the group fired. A denial needs two bad groups (or a fault, or a profile finding). Absent or empty on a review made before version 3. */
+  groups?: ReviewGroup[];
+  /** Critic version 3: the analysts' recommendation counts in one line, as the Critic words it. Null or absent when the review has none. */
+  analysts?: string | null;
+  /** Critic version 3: the net chart points as a bonus on the score (a bearish chart lowers it). */
+  pattern_bonus?: number;
   valid_until_utc: string | null;
   requires_human: boolean;
+}
+
+export interface ReviewGroup {
+  name: string;
+  label: string;
+  bad: boolean;
+  codes: string[];
 }
 
 export interface DecisionCell {
@@ -212,7 +273,7 @@ export interface RunStartedData {
   mode: "live" | "replay";
   account_id: number;
   prompt: string;
-  options: { strict: boolean; neutral: boolean; fetch: boolean; speed?: "fast" | "faithful" | null };
+  options: { strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean; speed?: "fast" | "faithful" | null };
   trade_mode: TradeMode;
   started_utc: string;
   stages: StageInfo[];
@@ -236,7 +297,24 @@ export interface LogData {
   ts: number;
 }
 
-export type QuestionKind = "confirm" | "clarify" | "approve" | "missing_company";
+export type QuestionKind = "confirm" | "clarify" | "approve" | "missing_company" | "raise_funds" | "funding";
+
+/** A purchase a funding question is about (entry 142): what it costs at its price. */
+export interface FundingBuy {
+  symbol: string;
+  shares: number;
+  price: number | null;
+  cost: number;
+}
+
+/** One sale of RaiseFunds' plan, as the funding card shows it (entry 142, R4): the price, about what it brings and the gain (negative: a loss). */
+export interface FundingLeg {
+  symbol: string;
+  shares: number;
+  price: number | null;
+  amount: number;
+  gain: number;
+}
 
 export interface ProposalItem {
   symbol: string;
@@ -270,6 +348,13 @@ export interface QuestionData {
   reason?: string | null;
   kept?: KeptStock[];
   wording?: "model" | "code" | null;
+  /** The cash does not cover the purchases and nothing permits selling holdings (`raise_funds`, entry 142, R3): the cash, what the purchases cost, how short it is, and the purchases. */
+  shortfall?: number | null;
+  cost?: number | null;
+  buys?: FundingBuy[];
+  /** The plan RaiseFunds made (`funding`, R4): the sales, the cash before (`cash`) and the cash after the sales and the purchases. */
+  legs?: FundingLeg[];
+  cash_after?: number | null;
   ts: number;
 }
 
@@ -351,7 +436,7 @@ export interface Health {
   book: string;
   clock_note: string;
   clock_pill?: string;
-  defaults: { prompt: string; strict: boolean; neutral: boolean; fetch: boolean };
+  defaults: { prompt: string; strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean };
   limits: { prompt_chars: number };
   active_run: string | null;
   /** What the active run is, when the server says (a desk run or a Proving Ground run): the page attaches it to the right tab. */
@@ -366,6 +451,8 @@ export interface RunRequest {
   strict: boolean;
   neutral: boolean;
   fetch: boolean;
+  /** The box "Always raise funds" (entry 142, R12): the setting ALWAYS_RAISE_FUNDS for this one run; off unless ticked. */
+  raise_funds: boolean;
   /** The Mode switch: what the run uses. The server saves it through the Account Manager when it differs from the account's. */
   mode: TradeMode;
 }

@@ -2,27 +2,33 @@
 
     result = assess(rec, fetched, config.chart)
 
-Fifteen simple patterns, each a plain statement over numbers the Data Clerk calculated for the Critic (`CHART_METRICS`): the 50-day mean against the 200-day mean (a golden or a death cross), the
-stacking of price and means, the highs and lows of three windows, a breakout on volume, the distance to the 52-week high, MACD, RSI and on-balance volume, and the dead cat bounce. Every pattern is
+Twenty-three simple patterns, each a plain statement over numbers the Data Clerk calculated for the Critic (`CHART_METRICS`): the 50-day mean against the 200-day mean (a golden or a death cross), the
+stacking of price and means, the highs and lows of three windows, a breakout on volume, the distance to the 52-week high, MACD, RSI and on-balance volume, and the dead cat bounce; and, since version 3, the eight of
+`patterns.py` (double top and bottom, head and shoulders and its inverse, the triangles, the 52-week breakout and breakdown), which read the closing prices the Data Clerk gives (`close_history`). Every pattern is
 arithmetic on those numbers and its thresholds are in `configs/critic_v1.json` (`chart`). A pattern whose number could not be made is `unknown`: it is not judged, never guessed.
 
     score = clip(neutral + the points of the patterns that hold, 0, 100)           neutral 50: a chart with no pattern is neither good nor bad
+    pattern_bonus = clamp(the same net points x per_point, -max_points, +max_points)    ALSO a bonus on the review's final score (Critic v3): a bullish chart raises it, a bearish one lowers it
 
 The dimension is a weaker voice than the others (10 of 100 points). One pattern is a BLOCKER: the dead cat bounce (a fall of at least 25% from a peak, a small bounce off the low in the last
 sessions, the price still far under the peak and under its 50-day mean) is the pattern that most often precedes a second leg down. The golden cross and the rest only add points; a death cross
-is a warning.
+is a warning. Version 3 groups the signs: the dead cat bounce, `trend_not_confirmed`, `chart_bearish` (the net points at or under `chart.bearish_at`) and `poor_performance` are signs of the group `performance`
+(`reasons.py`): one of them does not deny, two groups with a bad sign do.
 """
 from dataclasses import dataclass, field
 
 from prometheus.agents.advisor.record import Recommendation
 from prometheus.agents.critic.common import blocker, clip, info, metric_value, pct, warning
-from prometheus.agents.critic.config import PATTERNS, Chart
+from prometheus.agents.critic import patterns
+from prometheus.agents.critic.config import PATTERNS, Chart, Performance
 from prometheus.agents.critic.record import ChartDetail, Finding, Measure, PatternHit
 
 CHART_METRICS = ("sma_200", "sma_50_vs_200", "cross_50_200_20d", "structure_63d", "breakout_20d", "volume_ratio_1d", "macd_hist", "rsi_14", "obv_20d_change",
-                 "decline_from_peak_63d", "rebound_from_trough_63d", "sessions_since_trough_63d")   # asked for with `sma_50`, `last_close` and `pct_of_52w_high`, which the review already has
+                 "decline_from_peak_63d", "rebound_from_trough_63d", "sessions_since_trough_63d", "close_history")   # asked for with `sma_50`, `last_close` and `pct_of_52w_high`, which the review already has
 FACTS = ("last_close", "sma_50", "pct_of_52w_high", *CHART_METRICS)
+SERIES = ("close_history",)      # a series of closes, not a number: the swing patterns read it, and it is not kept in the review's facts
 TREND_METRICS = ("ret_5d",)      # asked for with the review for rule C5 (`trend_not_confirmed`); the Critic's own reading, never compared with the record's (`recheck.ASKED_ONLY`)
+PERFORMANCE_METRICS = ("ret_63d",)   # asked for with the review for `poor_performance` (Critic v3), next to `ret_21d` (which it always asks); like every `OWN` name it is compared only when the record holds it too
 
 Judgement = tuple[bool | None, str]      # (does the pattern hold: None when a number it needs is missing, the numbers in words)
 UNKNOWN: Judgement = (None, "")
@@ -119,6 +125,7 @@ JUDGES = {
     "healthy_rsi": _healthy_rsi, "overbought": _overbought,
     "obv_rising": lambda f, c: _obv(f, True), "obv_falling": lambda f, c: _obv(f, False),
     "dead_cat_bounce": _dead_cat,
+    **patterns.JUDGES,
 }
 assert set(JUDGES) == set(PATTERNS)
 
@@ -136,6 +143,21 @@ def trend_confirmation(rec: Recommendation, ret_5d: float | None, config: Chart)
     return []
 
 
+def poor_performance(rec: Recommendation, ret_63d: float | None, ret_21d: float | None, config: Performance) -> list[Finding]:
+    """`poor_performance` (a WARNING, a sign of the group `performance`: it denies only with a bad sign in another group, rule V4): the stock's 63-session return, as the Critic's own re-asked metric gives it, is at or under
+    `config.poor_ret_63d` AND its 21-session return is negative (a stock that is down on the quarter and still falling). Nothing when either return cannot be had."""
+    if ret_63d is None or ret_21d is None or ret_63d > config.poor_ret_63d or ret_21d >= 0:
+        return []
+    return [warning("chart", "poor_performance", f"{rec.symbol} is down {abs(ret_63d):.1%} over 63 sessions (the limit is {config.poor_ret_63d:+.1%}) and {abs(ret_21d):.1%} over the last 21: poor performance.", value=[ret_63d, ret_21d], threshold=config.poor_ret_63d)]
+
+
+def pattern_bonus(net_points: float | None, config) -> float:
+    """`clamp(net x per_point, -max_points, +max_points)`, to two places: the net points of the chart patterns that hold, as a bonus on the final score (a bearish chart lowers it). Nothing without a net."""
+    if not net_points:
+        return 0.0
+    return round(max(-config.max_points, min(config.max_points, net_points * config.per_point)), 2)
+
+
 def assess(rec: Recommendation, fetched: dict | None, config: Chart) -> ChartResult:
     """The chart findings of one record, its score (0 to 100) and the detail."""
     out = ChartResult()
@@ -151,7 +173,7 @@ def assess(rec: Recommendation, fetched: dict | None, config: Chart) -> ChartRes
             total += p.points
     out.score = round(clip(config.neutral + total, 0.0, 100.0), 2)
     out.measures = measures
-    out.detail = ChartDetail(patterns=hits, unknown=unknown, points=total, facts={k: v for k, v in facts.items() if v is not None})
+    out.detail = ChartDetail(patterns=hits, unknown=unknown, points=total, facts={k: v for k, v in facts.items() if v is not None and k not in SERIES})
 
     held = {h.name: h for h in hits}
     if "dead_cat_bounce" in held:
@@ -162,6 +184,9 @@ def assess(rec: Recommendation, fetched: dict | None, config: Chart) -> ChartRes
     if "golden_cross" in held:
         out.findings.append(info("chart", "golden_cross", f"Golden cross: {held['golden_cross'].evidence}.", value=facts["cross_50_200_20d"]))
     out.findings.extend(trend_confirmation(rec, metric_value(fetched, "ret_5d"), config))
+    if total <= config.bearish_at:
+        out.findings.append(warning("chart", "chart_bearish", f"The chart is bearish: the patterns that hold ({', '.join(h.name.replace('_', ' ') for h in hits if h.points < 0)}) net {total:+g} points (the sign is at {config.bearish_at:+g} or under).",
+                                    value=total, threshold=config.bearish_at))
     if len(unknown) == len(config.patterns):
         out.findings.append(warning("chart", "chart_not_assessable", "The chart could not be judged: none of the numbers it needs could be made (too few stored sessions)."))
     elif out.score < config.weak_below:

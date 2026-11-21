@@ -1,0 +1,796 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to requests that say dollars or shares, skip the recommendations or give a price limit, recorded on 2026-11-20 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py after design choices entry 138: the form has `max_price`). 'replies' is what the model answered, in order (a second reply is the answer to code's refusal of the first); 'outcome' what parse_intent made of it. Nothing here is edited. The tests give these replies back to the real Account Manager, whose code checks every field against the user's own words. ENTRY 140 (recorded 2026-11-20, prompts/account_manager_request.py after design choices entry 140: the form has `min_price` and says that shares typed with a recommendation are 'buy'): the requests from 'Buy the top 3 AI stocks over $20 a share' on, and the text recorded again under the key '<text> [entry 140]'; the older requests keep the replies they were recorded with.",
+ "model": "openai/gpt-oss-120b",
+ "tokens_in": 60660,
+ "tokens_out": 5470,
+ "requests": {
+  "Buy $2500 worth of symbol KO and skip recommendations.": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"KO\", \"shares\": null, \"dollars\": 2500}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $2,500.00 of KO (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "KO",
+      "company": null,
+      "shares": null,
+      "dollars": 2500,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1880,
+   "tokens_out": 138
+  },
+  "I want to buy $1000 of MU.": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": null, \"dollars\": 1000}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $1,000.00 of MU (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": null,
+      "dollars": 1000,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1878,
+   "tokens_out": 136
+  },
+  "I want to buy 10 of MU.": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"MU\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 10 shares of MU (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": 10,
+      "dollars": null,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1877,
+   "tokens_out": 132
+  },
+  "Buy 1000 MU": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": 1000, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 1,000 shares of MU (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": 1000,
+      "dollars": null,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1874,
+   "tokens_out": 130
+  },
+  "Buy 1000 dollars of MU": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"MU\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": null, \"dollars\": 1000}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $1,000.00 of MU (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": null,
+      "dollars": 1000,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1876,
+   "tokens_out": 159
+  },
+  "buy 500 bucks of AMD": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"AMD\", \"shares\": null, \"dollars\": 500}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $500.00 of AMD (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "AMD",
+      "company": null,
+      "shares": null,
+      "dollars": 500,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1875,
+   "tokens_out": 142
+  },
+  "spend 1000 on MU": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": null, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MU (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked) (still to settle: is 1,000 shares or dollars?)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": 1000,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": null,
+      "dollars": null,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1876,
+   "tokens_out": 302
+  },
+  "Buy the top 3 AI stocks under $50 a share": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 50, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'AI' companies; spending as much as the account allows; only while a share costs $50.00 or less",
+    "budget": null,
+    "each": false,
+    "count": 3,
+    "max_price": 50,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": "AI",
+    "symbols": [],
+    "orders": []
+   },
+   "tokens_in": 1881,
+   "tokens_out": 102
+  },
+  "Buy $1000 of MU under $50 a share": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 50, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": null, \"dollars\": 1000}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $1,000.00 of MU, only while a share costs $50.00 or less (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": 50,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": null,
+      "dollars": 1000,
+      "max_price": 50
+     }
+    ]
+   },
+   "tokens_in": 1880,
+   "tokens_out": 156
+  },
+  "Recommend 3 oil stocks below $40": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 40, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "research",
+    "describe": "look at (nothing will be bought) the 3 most recommended 'oil' companies; only while a share costs $40.00 or less (note: you asked for recommendations and said nothing about buying: this is a look, nothing will be bought)",
+    "budget": null,
+    "each": false,
+    "count": 3,
+    "max_price": 40,
+    "corrected": [
+     "you asked for recommendations and said nothing about buying: this is a look, nothing will be bought"
+    ],
+    "unclear_number": null,
+    "topic": "oil",
+    "symbols": [],
+    "orders": []
+   },
+   "tokens_in": 1877,
+   "tokens_out": 117
+  },
+  "buy AI stocks, skip recommendations": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": []}"
+   ],
+   "outcome": {
+    "refused": "You asked me to skip the recommendations, but no stock to buy is named: only the recommendations choose stocks for a theme. Name the stocks to buy (for example 'Buy $2,500 of ABCD and skip recommendations'), or let me recommend some."
+   },
+   "tokens_in": 1875,
+   "tokens_out": 183
+  },
+  "I want to buy MSFT, no research needed": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MSFT (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": null,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1879,
+   "tokens_out": 172
+  },
+  "Buy 10 of MU if the recommendation passes": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"max_price\":null,\"orders\":[{\"side\":\"buy\",\"symbol\":\"MU\",\"shares\":10,\"dollars\":null}]}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended MU; spending as much as the account allows (note: 10 shares of MU cannot be combined with a recommendation yet: the number of shares is not used, the money is sized as for any recommendation)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [
+     "10 shares of MU cannot be combined with a recommendation yet: the number of shares is not used, the money is sized as for any recommendation"
+    ],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [
+     "MU"
+    ],
+    "orders": []
+   },
+   "tokens_in": 1878,
+   "tokens_out": 164
+  },
+  "Buy 10 shares of MU over $20 a share": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 10 shares of MU (your own order: no recommendation is made and the Critic is not asked) (note: $20 a share was written as a MINIMUM price: a minimum price is not supported yet, so it is ignored)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [
+     "$20 a share was written as a MINIMUM price: a minimum price is not supported yet, so it is ignored"
+    ],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": 10,
+      "dollars": null,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1880,
+   "tokens_out": 164
+  },
+  "Buy 5k of MU": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": 5000, \"dollars\": null}]}",
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": 5000, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "refused": "I could not understand the request (5,000 shares of MU is not what you typed: say it as a number of shares, for example 'buy 5,000 shares of MU'). Say what you want as a theme, as tickers or as company names, and how many you want to buy from."
+   },
+   "tokens_in": 3949,
+   "tokens_out": 471
+  },
+  "Buy $2500 worth of symbol MSFT and skip recommendations.": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": 2500}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy $2,500.00 of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": 2500,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1881,
+   "tokens_out": 138
+  },
+  "I want to buy 10 of MSFT.": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 10 shares of MSFT (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 10,
+      "dollars": null,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1878,
+   "tokens_out": 134
+  },
+  "Buy 10 of MSFT under $50 a share": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 50, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 10 shares of MSFT, only while a share costs $50.00 or less (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": 50,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 10,
+      "dollars": null,
+      "max_price": 50
+     }
+    ]
+   },
+   "tokens_in": 1880,
+   "tokens_out": 128
+  },
+  "Buy 10 of MSFT under $1000 a share": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 1000, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 10 shares of MSFT, only while a share costs $1,000.00 or less (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": 1000,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 10,
+      "dollars": null,
+      "max_price": 1000
+     }
+    ]
+   },
+   "tokens_in": 1881,
+   "tokens_out": 150
+  },
+  "spend 1000 on MSFT": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[\"MSFT\"],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"max_price\":null,\"orders\":[{\"side\":\"buy\",\"symbol\":\"MSFT\",\"shares\":null,\"dollars\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MSFT (you did not say how many shares) (your own order: no recommendation is made and the Critic is not asked) (still to settle: is 1,000 shares or dollars?)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "corrected": [],
+    "unclear_number": 1000,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": null,
+      "max_price": null
+     }
+    ]
+   },
+   "tokens_in": 1877,
+   "tokens_out": 288
+  },
+  "Buy $5,000 of MSFT and TSLA under $400 a share": {
+   "replies": [
+    "{\"action\":\"order\",\"topic\":null,\"symbols\":[\"MSFT\",\"TSLA\"],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":5000,\"each\":false,\"max_price\":400,\"orders\":[{\"side\":\"buy\",\"symbol\":\"MSFT\",\"shares\":null,\"dollars\":null},{\"side\":\"buy\",\"symbol\":\"TSLA\",\"shares\":null,\"dollars\":null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MSFT (you did not say how many shares), buy TSLA (you did not say how many shares), spending $5,000.00, only while a share costs $400.00 or less (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": 5000,
+    "each": false,
+    "count": null,
+    "max_price": 400,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": null,
+      "max_price": 400
+     },
+     {
+      "side": "buy",
+      "symbol": "TSLA",
+      "company": null,
+      "shares": null,
+      "dollars": null,
+      "max_price": 400
+     }
+    ]
+   },
+   "tokens_in": 1885,
+   "tokens_out": 328
+  },
+  "Buy the top 3 AI stocks over $20 a share": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\":3, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": 20, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'AI' companies; spending as much as the account allows; only while a share costs $20.00 or more",
+    "budget": null,
+    "each": false,
+    "count": 3,
+    "max_price": null,
+    "min_price": 20,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": "AI",
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": []
+   },
+   "tokens_in": 2109,
+   "tokens_out": 133
+  },
+  "Recommend 3 oil stocks between $20 and $60 a share": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 60, \"min_price\": 20, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "research",
+    "describe": "look at (nothing will be bought) the 3 most recommended 'oil' companies; only while a share costs between $20.00 and $60.00 (note: you asked for recommendations and said nothing about buying: this is a look, nothing will be bought)",
+    "budget": null,
+    "each": false,
+    "count": 3,
+    "max_price": 60,
+    "min_price": 20,
+    "corrected": [
+     "you asked for recommendations and said nothing about buying: this is a look, nothing will be bought"
+    ],
+    "unclear_number": null,
+    "topic": "oil",
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": []
+   },
+   "tokens_in": 2110,
+   "tokens_out": 118
+  },
+  "Sell 10 shares of MSFT at $600 or more": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": 600, \"orders\": [{\"side\": \"sell\", \"symbol\": \"MSFT\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "sell 10 shares of MSFT, only while a share costs $600.00 or more (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "min_price": 600,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "sell",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": 10,
+      "dollars": null,
+      "max_price": null,
+      "min_price": 600
+     }
+    ]
+   },
+   "tokens_in": 2109,
+   "tokens_out": 164
+  },
+  "Buy 10 of MU at $90 or less": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"MU\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 90, \"min_price\": null, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MU\", \"shares\": 10, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 10 shares of MU, only while a share costs $90.00 or less (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": 90,
+    "min_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MU",
+      "company": null,
+      "shares": 10,
+      "dollars": null,
+      "max_price": 90,
+      "min_price": null
+     }
+    ]
+   },
+   "tokens_in": 2107,
+   "tokens_out": 173
+  },
+  "buy MSFT over $20 a share": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": 20, \"orders\": [{\"side\": \"buy\", \"symbol\": \"MSFT\", \"shares\": null, \"dollars\": null}]}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy MSFT (you did not say how many shares), only while a share costs $20.00 or more (your own order: no recommendation is made and the Critic is not asked)",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "min_price": 20,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "MSFT",
+      "company": null,
+      "shares": null,
+      "dollars": null,
+      "max_price": null,
+      "min_price": 20
+     }
+    ]
+   },
+   "tokens_in": 2105,
+   "tokens_out": 194
+  },
+  "buy 5 shares of each of the top 3 oil stocks if recommended": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"each\": true, \"max_price\": null, \"min_price\": null, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 3 most recommended 'oil' companies; if approved, 5 shares of each",
+    "budget": null,
+    "each": false,
+    "count": 3,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": "oil",
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": 5,
+    "orders": []
+   },
+   "tokens_in": 2112,
+   "tokens_out": 274
+  },
+  "Buy 10 of MU and 5 of AMD if they're recommended": {
+   "replies": [
+    "{\"action\":\"buy\",\"topic\":null,\"symbols\":[\"MU\",\"AMD\"],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"max_price\":null,\"min_price\":null,\"orders\":[]}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended MU, AMD; if approved, 10 shares of MU and 5 shares of AMD",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [
+     "MU",
+     "AMD"
+    ],
+    "shares_of": {
+     "MU": 10,
+     "AMD": 5
+    },
+    "shares_each": null,
+    "orders": []
+   },
+   "tokens_in": 2110,
+   "tokens_out": 185
+  },
+  "Buy 10 of MU if the recommendation passes [entry 140]": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"orders\": []}",
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [\"MU\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended MU; if approved, 10 shares of MU",
+    "budget": null,
+    "each": false,
+    "count": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "unclear_number": null,
+    "topic": null,
+    "symbols": [
+     "MU"
+    ],
+    "shares_of": {
+     "MU": 10
+    },
+    "shares_each": null,
+    "orders": []
+   },
+   "tokens_in": 4381,
+   "tokens_out": 395
+  }
+ }
+}

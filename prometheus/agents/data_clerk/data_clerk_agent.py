@@ -57,7 +57,7 @@ from langgraph.prebuilt import ToolNode
 
 from prometheus.common.trading_clock import NEVER_FETCHES, bound_day, market_day, use_live_trading
 from prometheus.common.trace import traced
-from prometheus.common.work_order import HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_request, verify_symbol_request, verify_verification_request
+from prometheus.common.work_order import ANALYSTS_STORE, HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_ratings_request, verify_request, verify_symbol_request, verify_verification_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.prompts.data_clerk import COMPANIES_RETRY, LAST_TURN, THEME_MEMBERS_RETRY, companies_prompt, repair_message, system_prompt, theme_members_prompt, theme_members_question
 from prometheus.rag.citations import SourceBook
@@ -497,6 +497,41 @@ class DataClerk:
         order.data = DataResult(answer=f"daily bars of {len(symbols)} symbols, {order.bars['start']} to {order.bars['end']}", bars=bars, notes=notes,
                                 tool_calls=[{"name": "daily_bars", "args": args, "outcome": "ok"}], completed_utc=_utc_now())
         order.status = "data_ready"
+        return order
+
+    @traced("data_clerk.request_analyst_ratings", run_type="tool")
+    def request_analyst_ratings(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
+        """The Data Clerk's agent call for a `fetch_analyst_ratings` order (Critic v3, design choices entry 137): the analysts' recommendation counts (Finnhub `/stock/recommendation`: strongBuy, buy, hold, sell, strongSell for each
+        month) of every symbol of `order.subject`, put on `order.data.analysts` as {symbol: {"periods": [...] newest first, "fetched", "note"}}, and the SAME order returned.
+
+        There is no model call. Each symbol is asked of Finnhub (one paid call) and the answer is kept in the store the order names (`order.ratings["store"]`, `data/analysts` when it names none): a dict keyed by month,
+        the newest answer for a month winning. What is READ is POINT IN TIME: only the months on or before `today` (the day the Critic reviews), and while a day is bound (`trading_clock.as_of`, the Time Machine) NOTHING is fetched
+        (every fetcher refuses a past day) and only the stored file is read. A symbol with nothing stored has an empty list and a note: a result, not a failure. A symbol whose call failed is named in `order.errors` and the order is
+        `data_failed` (the counts that were stored still come back, as the quotes that did come back stay on a failed quote order). An order that already has its data comes back unchanged."""
+        if order.status in HAS_DATA:
+            return order
+        reasons = verify_ratings_request(order)
+        if reasons:
+            order.status, order.errors = "data_failed", [*order.errors, *reasons]
+            return order
+        wanted = [order.subject] if isinstance(order.subject, str) else list(order.subject)
+        try:
+            symbols = list(dict.fromkeys(check_symbol(s.strip().lstrip("$")) for s in wanted))
+        except ValueError as error:  # not a ticker symbol: refused before anything is read
+            order.status, order.errors = "data_failed", [*order.errors, str(error)]
+            return order
+        store = (order.ratings or {}).get("store") or ANALYSTS_STORE
+        try:
+            found = self.tools.analyst_ratings(symbols, store, today)
+        except Exception as error:  # the store could not be read at all, or a bug: say the kind, never details
+            order.status, order.errors = "data_failed", [*order.errors, f"the analyst ratings could not be read ({type(error).__name__}: {' '.join(str(error).split())[:160]})"]
+            order.data = DataResult(tool_calls=[{"name": "analyst_ratings", "args": {"symbols": len(symbols)}, "outcome": "error"}], completed_utc=_utc_now())
+            return order
+        problems = found["problems"]
+        order.data = DataResult(answer=f"analyst ratings of {len(symbols)} symbols: " + ", ".join(f"{s} {len(r['periods'])} periods" for s, r in found["ratings"].items()), analysts=found["ratings"], problems=problems,
+                                tool_calls=[{"name": "analyst_ratings", "args": {"symbols": len(symbols)}, "outcome": "error" if problems else "ok"}], completed_utc=_utc_now())
+        order.errors = [*order.errors, *problems]
+        order.status = "data_failed" if problems else "data_ready"
         return order
 
     @traced("data_clerk.request_metrics")

@@ -301,6 +301,15 @@ def _money(value) -> str:
     return "n/a" if value is None else f"${value:,.2f}"
 
 
+def plan_target(plan: dict) -> str:
+    """The target of a recommendation's plan in words: its price; for a TRAILING plan (the trend family since Advisor config version 3) that there is none and how far the stop trails; for a capital-return plan that it is held for the payout."""
+    if plan.get("target_price"):
+        return _money(plan["target_price"])
+    if plan.get("trailing"):
+        return f"none (the stop trails the highest close by {_money(plan['trail_distance'])})"
+    return "none (held for the payout)"
+
+
 def _cut(text: str, width: int) -> str:
     text = " ".join((text or "").split())
     return text if len(text) <= width else text[:width - 1].rstrip() + "…"
@@ -471,7 +480,7 @@ def report(result: Result) -> str:
         line(f"      why     : strategies that passed: {', '.join(passed) or 'none'}; opens on {t['family']}; confidence {r['agreement']['confidence']:.2f} from {r['agreement']['evidence_n']} pieces of text evidence")
         if t.get("entry_zone"):
             line(f"      plan    : entry {t['entry_zone'][0]:.2f} to {t['entry_zone'][1]:.2f} ({t['order_style']}" + (f" at {t['limit_price']:.2f}" if t.get("limit_price") else "") + f"), stop {_money(t['stop_price'])}, "
-                 f"target {_money(t['target_price']) if t.get('target_price') else 'none (held for the payout)'}, time stop {t['time_stop_date']}")
+                 f"target {plan_target(t)}, time stop {t['time_stop_date']}")
         out.extend(blend_lines(r.get("blend")))
         for e in r["evidence"]["events"][:2]:
             line(f"      event   : {e['class']} ({e['direction']}, {e.get('age_bars')} bars ago): {_cut(e['quote'], 90)}")

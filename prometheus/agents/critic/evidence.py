@@ -360,7 +360,7 @@ def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceC
 
     # about the claims themselves
     if independent is False:
-        out.findings.append(warning("evidence", "same_model_family", f"The critic's model ({critic_model}) is from the same producer as the Advisor's ({rec.advisor.get('model')}): it may agree with its own family's text.", requires_human=True))
+        out.findings.append(warning("evidence", "same_model_family", f"The critic's model ({critic_model}) is from the same producer as the Advisor's ({rec.advisor.get('model')}): it may agree with its own family's text."))      # a WARNING, never a person (Jacob, 2026-11-21: GLM was too expensive, CRITIC_MODEL is openai/gpt-oss-120b like the Advisor; with requires_human every review was denied, entry 103)
     dated = [(found.get("published_utc"), found.get("publisher")) for c in mine for found in [(verification.get("chunks") or {}).get(c.chunk_id) or {}] if c.chunk_id and found.get("found")]
     ages = [a for a in (_age(p, today) for p, _ in dated) if a is not None]
     if ages and min(ages) > ev.old_evidence_days:

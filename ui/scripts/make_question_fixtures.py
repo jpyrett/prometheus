@@ -9,6 +9,9 @@ live desk builds them (`prometheus/application/web/desk_run.py`, `replay.py::_as
   clarify   the first question of the Account Manager's real model reply (clarify_ask_mode.json) and the facts lines `clarify.facts_lines` writes for the capture's approved purchases
   missing   the question about Chick-fil-a, a stock the Data Clerk did not find (design choices entry 102): the Account Manager's real model wording (direct_order_names.json), checked by `missing.check_wording`, and the
             stocks that stayed on the order in the real session d_pyrett_names_ask.json, put in the page's payload by `desk_run.missing_payload` (the same function the live desk uses)
+  raise_funds  the question of Ask mode when the cash does not cover what the user typed and nothing permits selling holdings (design choices entry 142, R3), made by `funding.ask_card` from the numbers of the real live session
+               ant_raise_funds_ask.json (the cash, 2 x ANT at its real quote) and put in the page's payload by `desk_run.raise_funds_payload`
+  funding      the plan RaiseFunds made for it (R4): the real session's sale (one DPZ at the price it sold at, its gain over the average cost) and purchase, and the cash before and after, put in the page's payload by `desk_run.funding_payload`
 Each is a `question` event; the page's dev mode (`?fixture=bob&at=29&question=approve`) and the tests read them.
 """
 import json
@@ -22,7 +25,9 @@ sys.path.insert(0, str(REPO))
 from prometheus.agents.account_manager.clarify import facts_lines     # noqa: E402
 from prometheus.agents.critic.report import scorecard                 # noqa: E402
 from prometheus.agents.account_manager import missing                 # noqa: E402
-from prometheus.application.web.desk_run import missing_payload       # noqa: E402
+from prometheus.agents.account_manager import funding                 # noqa: E402
+from prometheus.application.web.desk_run import funding_payload, missing_payload, raise_funds_payload       # noqa: E402
+from prometheus.common.money import digits                            # noqa: E402
 
 CAPTURES = REPO / "tests" / "fixtures" / "session_real"
 OUT = REPO / "ui" / "src" / "fixtures" / "questions.json"
@@ -64,5 +69,20 @@ said = missing.check_wording(missing._question_of(names["wording"]["Chick-fil-a"
 card = missing.card_for("Chick-fil-a", missing.reason_of(lost), kept, 1, 1, missing.Wording(text=said, source="model"), names["request"])
 absent = {"seq": 0, "type": "question", "data": {"question_id": "missing0001", "kind": "missing_company", **missing_payload(card), "ts": 0}}
 
-OUT.write_text(json.dumps({"confirm": confirm, "clarify": clarify, "approve": approve, "missing": absent}, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+ant = json.loads((CAPTURES / "ant_raise_funds_ask.json").read_text(encoding="utf-8"))["order"]       # entry 142: Jacob's real request, on a throwaway copy of his account
+buy, sale = ant["trades"]
+run = ant["trader_runs"][-1]
+before = digits(run["portfolio_before"]["cash"])
+price, cost = digits(buy["fill"]["price"]), digits(buy["fill"]["amount"])
+basis = next(digits(p["cost_basis"]) for p in run["portfolio_before"]["positions"] if p["symbol"] == sale["symbol"])
+buys = [{"symbol": buy["symbol"], "shares": buy["shares"], "price": price, "cost": cost}]
+raise_funds = {"seq": 0, "type": "question", "data": {"question_id": "raise0001", "kind": "raise_funds", **raise_funds_payload(funding.ask_card(before, buys, cost - before)), "ts": 0}}
+proceeds = digits(sale["fill"]["amount"])
+leg = {"symbol": sale["symbol"], "shares": sale["shares"], "price": digits(sale["fill"]["price"]), "amount": proceeds, "gain": proceeds - digits(basis) * sale["shares"]}
+plan_text = ("To buy 2 shares of ANT (about $177.82) with cash of $60.14, these holdings would be sold first:\n  sell 1 DPZ at $348.61: about $348.61, a gain of $6.89\n"
+             "  together about $348.61; the cash after the sales and the purchase would be about $230.93")      # the card the Trader showed in the real session, as the terminal printed it
+plan = {"kind": "funding", "text": plan_text, "symbol": buy["symbol"], "shares": buy["shares"], "est_cost": cost, "question": "Sell these to pay for 2 shares of ANT (about $178)? [y/N] ", "legs": [leg], "buys": buys, "cash": before, "cash_after": before + proceeds - cost}
+funding_question = {"seq": 0, "type": "question", "data": {"question_id": "funding0001", "kind": "funding", **funding_payload(plan), "ts": 0}}
+
+OUT.write_text(json.dumps({"confirm": confirm, "clarify": clarify, "approve": approve, "missing": absent, "raise_funds": raise_funds, "funding": funding_question}, indent=1, ensure_ascii=False, default=float) + "\n", encoding="utf-8")
 print(f"wrote {OUT.relative_to(REPO)}")

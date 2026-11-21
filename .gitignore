@@ -260,3 +260,6 @@ data/index/
 
 # The Critic's label store (Critic v2, design/critic_v2_evidence_spec.md rule C6): the model's labels of quotes, kept so the same quote gets the same label. A result of this machine's runs.
 data/critic/
+
+# The analysts' recommendation counts (Critic v3, design/critic_v3_two_reasons_spec.md section 3): Finnhub's /stock/recommendation kept per symbol by the Data Clerk, one file each (derived data, safe to delete: the next review fetches it again). Local only.
+data/analysts/

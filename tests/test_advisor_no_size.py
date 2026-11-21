@@ -15,7 +15,7 @@ from datetime import date
 import pytest
 from advisor_helpers import MemoryLedger, Scripted
 from pydantic import ValidationError
-from test_advisor_sndk_pg import FIXTURES, RecordedClerk, scrub
+from test_advisor_sndk_pg import FIXTURES, RecordedClerk, recorded_plan_config, scrub
 
 from prometheus.agents.advisor import thesis as th
 from prometheus.agents.advisor.advisor import Advisor
@@ -127,7 +127,7 @@ def test_the_advisors_settings_hold_no_size_and_the_loader_expects_none():
 
     found = keys(json.loads(SETTINGS.read_text(encoding="utf-8")))
     assert not found & {"risk_pct", "risk_pct_stress", "max_position_pct", "add_max_position_pct", "oversized_pct"}, found
-    assert set(AdvisorConfig.model_fields["trade"].annotation.model_fields) == {"entry_atr", "stop_atr", "target_edge_multiple", "trend_limit_atr", "event_limit_reaction_atr"}
+    assert set(AdvisorConfig.model_fields["trade"].annotation.model_fields) == {"entry_atr", "stop_atr", "target_edge_multiple", "min_reward_to_risk", "trailing_families", "trend_limit_atr", "event_limit_reaction_atr"}      # the two between are Advisor config version 3's exit conventions (a target pays 2 for 1 risked; the trend family trails): prices, never a size
     assert set(AdvisorConfig.model_fields["ranking"].annotation.model_fields) == {"diversity_within"}
 
 
@@ -144,15 +144,15 @@ def capture(name: str) -> dict:
     return json.loads((FIXTURES / f"{name}.json").read_text(encoding="utf-8"))
 
 
-def run(name: str, plan_reply=None, changes=None):
-    """The Advisor on the captured inputs, as `test_advisor_sndk_pg.replay` does it (no portfolio is given), and, for a test that needs it, ONE real metric changed."""
+def run(name: str, plan_reply=None, changes=None, config_path=None):
+    """The Advisor on the captured inputs, as `test_advisor_sndk_pg.replay` does it (no portfolio is given), and, for a test that needs it, ONE real metric changed. `config_path`: the Advisor's settings (when left out, the plan the recorded replies were written for: `recorded_plan_config`)."""
     fx = capture(name)
     metrics = copy.deepcopy(fx["metrics"])
     for (symbol, metric), value in (changes or {}).items():
         metrics[symbol][metric]["value"] = value
     replies = fx["replies"] if plan_reply is None else [plan_reply, *(r for r in fx["replies"] if '"theses"' in r)]
     order = wo.WorkOrder.model_validate(fx["order"])
-    Advisor(model=Scripted(*replies), clerk=RecordedClerk(metrics), ledger=MemoryLedger()).generate_recommendations(order, "funds", date.fromisoformat(fx["today"]))
+    Advisor(model=Scripted(*replies), clerk=RecordedClerk(metrics), ledger=MemoryLedger(), config_path=config_path or recorded_plan_config()).generate_recommendations(order, "funds", date.fromisoformat(fx["today"]))
     return order, fx
 
 

@@ -111,5 +111,62 @@
    "wording": "model",
    "ts": 0
   }
+ },
+ "raise_funds": {
+  "seq": 0,
+  "type": "question",
+  "data": {
+   "question_id": "raise0001",
+   "kind": "raise_funds",
+   "title": "Raise funds?",
+   "text": "You have $60.14 available; 2 ANT at $88.91 cost $177.82, $117.68 short. Shall I raise the money by selling some of your holdings? I will show you what I would sell first.",
+   "question": "You have $60.14 available; 2 ANT at $88.91 cost $177.82, $117.68 short. Shall I raise the money by selling some of your holdings? I will show you what I would sell first.",
+   "cash": 60.14,
+   "cost": 177.82,
+   "shortfall": 117.68,
+   "buys": [
+    {
+     "symbol": "ANT",
+     "shares": 2,
+     "price": 88.91,
+     "cost": 177.82
+    }
+   ],
+   "ts": 0
+  }
+ },
+ "funding": {
+  "seq": 0,
+  "type": "question",
+  "data": {
+   "question_id": "funding0001",
+   "kind": "funding",
+   "title": "Approve the sales",
+   "text": "To buy 2 shares of ANT (about $177.82) with cash of $60.14, these holdings would be sold first:\n  sell 1 DPZ at $348.61: about $348.61, a gain of $6.89\n  together about $348.61; the cash after the sales and the purchase would be about $230.93",
+   "question": "Sell these to pay for 2 shares of ANT (about $178)? [y/N] ",
+   "symbol": "ANT",
+   "shares": 2,
+   "est_cost": 177.82,
+   "cash": 60.14,
+   "cash_after": 230.93,
+   "legs": [
+    {
+     "symbol": "DPZ",
+     "shares": 1,
+     "price": 348.61,
+     "amount": 348.61,
+     "gain": 6.89
+    }
+   ],
+   "buys": [
+    {
+     "symbol": "ANT",
+     "shares": 2,
+     "price": 88.91,
+     "cost": 177.82
+    }
+   ],
+   "ts": 0
+  }
  }
 }

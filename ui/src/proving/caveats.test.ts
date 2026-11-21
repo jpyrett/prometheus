@@ -8,7 +8,7 @@ describe("the caveats are shown as written (P3)", () => {
     const text = readFileSync(resolve(process.cwd(), "..", "prometheus", "proving", "record.py"), "utf8");
     const block = text.slice(text.indexOf("CAVEATS: dict[str, str] = {"), text.indexOf("assert set(get_args(CaveatCode))"));
     const written = Object.fromEntries([...block.matchAll(/^\s+"(\w+)": "(.*)",$/gm)].map((m) => [m[1], m[2]]));
-    expect(Object.keys(written)).toHaveLength(11);
+    expect(Object.keys(written)).toHaveLength(12);
     expect(CAVEAT_SENTENCES).toEqual(written);
   });
   it("the server's own sentence wins over the page's copy, a bare code gets the sentence of its code, a code twice is shown once", () => {

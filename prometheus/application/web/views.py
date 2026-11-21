@@ -14,7 +14,7 @@ read (an int or a float) and pass through as they are. The page receives NUMBERS
 from datetime import date
 from decimal import Decimal
 
-from prometheus.agents.critic.report import DECISION_WORDS, LABELS
+from prometheus.agents.critic.report import DECISION_WORDS, LABELS, analysts_line
 from prometheus.common import shares as sh
 from prometheus.common.portfolio import trade_amount
 from prometheus.application.recommendations import KEY_NUMBERS, _number
@@ -26,13 +26,13 @@ STAGES = [
     {"key": "gather", "label": "Gather Data", "agent": "data_clerk", "agent_label": "Data Clerk", "nodes": ("data_clerk",)},
     {"key": "recommend", "label": "Create Recommendations", "agent": "advisor", "agent_label": "Advisor", "nodes": ("advisor",)},
     {"key": "critique", "label": "Critique · Approve / Deny", "agent": "critic", "agent_label": "Critic", "nodes": ("critic",)},
-    {"key": "prepare", "label": "Prepare Trading Order", "agent": "account_manager", "agent_label": "Account Manager", "nodes": ("account_manager_decision", "account_manager_direct")},
+    {"key": "prepare", "label": "Prepare Trading Order", "agent": "account_manager", "agent_label": "Account Manager", "nodes": ("account_manager_decision", "account_manager_direct", "account_manager_funds")},
     {"key": "trade", "label": "Trade · Place Order", "agent": "trader", "agent_label": "Trader", "nodes": ("trader",)},
 ]
 STAGE_OF_NODE = {node: stage["key"] for stage in STAGES for node in stage["nodes"]}
 # What a node writes on the order's `errors` when its agent could not start, decide or prepare (the desk's own words, `langgraph/desk.py`): the stage is then failed.
 COULD_NOT = {"data_clerk": "the Data Clerk could not", "advisor": "the Advisor could not", "critic": "the Critic could not", "account_manager_decision": "the Account Manager could not",
-             "account_manager_direct": "the Account Manager could not", "trader": "the Trader could not"}
+             "account_manager_direct": "the Account Manager could not", "account_manager_funds": "the Account Manager could not", "trader": "the Trader could not"}
 BAR_NAMES = {"news": "News", "performance": "Performance", "historical": "Historical", "filings": "Filings"}
 ORDER_WORDS = {"marketable_limit": "Limit", "limit": "Limit", "market": "Market"}
 
@@ -92,13 +92,16 @@ def stage_states(*, path: list[str], seconds: dict | None = None, running: str |
 # ---------------------------------------------------------------- the account
 
 def account_view(holder, portfolio, *, as_of: str | None = None, read_only: bool | None = None) -> dict:
-    """The account (spec 4.5): who, the holdings with their value (shares x average cost: the book knows no market price), the cash and the totals. `holder` is a `UserAccount` (or anything with its fields)."""
-    positions = [{"symbol": p.symbol, "name": p.name, "shares": p.shares, "cost_basis": p.cost_basis, "value": trade_amount(p.shares, p.cost_basis)} for p in portfolio.positions]
+    """The account (spec 4.5): who, the holdings with their value (shares x average cost: the book knows no market price), the cash and the totals. `holder` is a `UserAccount` (or anything with its fields).
+
+    WAITING ORDERS (design choices entry 140): `cash` is ALL the cash of the account and `available` the part that may be spent (`reserved_cash` is what waiting orders have set aside); a position carries `reserved`, the shares a waiting sale has
+    set aside. The total is the whole cash and the whole holdings, so a reservation is never a change of the account's value (`portfolio_changes` compares the whole cash)."""
+    positions = [{"symbol": p.symbol, "name": p.name, "shares": p.shares, "cost_basis": p.cost_basis, "value": trade_amount(p.shares, p.cost_basis), "reserved": portfolio.reserved_shares.get(p.symbol, Decimal(0))} for p in portfolio.positions]
     invested = sum((p["value"] for p in positions), Decimal("0.00"))
-    cash = portfolio.cash_avail
+    cash = portfolio.cash_total
     sample = getattr(holder, "seed_key", None) is not None
     return {"account": {"id": holder.account_id, "name": holder.display_name, "age": holder.age, "risk": holder.risk_tolerance, "mode": holder.trade_mode, "sample": sample, "read_only": sample if read_only is None else read_only},
-            "positions": positions, "cash": cash, "invested": invested, "total": invested + cash, "as_of_utc": as_of}
+            "positions": positions, "cash": cash, "available": portfolio.cash_avail, "reserved_cash": portfolio.reserved_cash, "invested": invested, "total": invested + cash, "as_of_utc": as_of}
 
 
 def portfolio_changes(before: dict, after: dict) -> dict:
@@ -138,7 +141,7 @@ def _critic_cell(review: dict | None) -> dict | None:
 def _decision_cell(decision: dict | None) -> dict | None:
     if decision is None:
         return None
-    return {"will_trade": decision["will_trade"], "words": DECISION_WORDS.get(decision["will_trade"], decision["will_trade"]), "action": decision.get("action"), "shares": decision.get("shares"),
+    return {"will_trade": decision["will_trade"], "words": "WAITING (a day order: its cash or shares are set aside)" if decision.get("open_order_id") is not None else DECISION_WORDS.get(decision["will_trade"], decision["will_trade"]), "action": decision.get("action"), "shares": decision.get("shares"),
             "est_cost": decision.get("est_cost"), "dollars": decision.get("dollars"), "price": decision.get("price"), "origin": decision.get("origin")}
 
 
@@ -209,6 +212,9 @@ def _review_part(review: dict | None) -> dict | None:
             "blockers": [{"code": b["code"], "message": b["message"]} for b in review.get("blockers") or []],
             "warnings": [{"code": w["code"], "message": w["message"]} for w in review.get("warnings") or []],
             "risk": {"level": risk.get("risk_level"), "score": risk.get("risk_score"), "tolerance": risk.get("tolerance_stated"), "allowed": risk.get("allowed_level")} if risk else None,
+            "groups": [{"name": g, "label": g.capitalize(), "bad": bool(codes), "codes": list(codes)} for g, codes in (review.get("groups") or {}).items()],      # Critic v3: the three groups of judgment, bad (a sign of it fired) or clean; [] on a review before version 3
+            "analysts": analysts_line(review) if review.get("analysts") else None,                                                                    # Critic v3: the analysts' counts in one line (the Critic's own sentence); None on a review before version 3
+            "pattern_bonus": review.get("pattern_bonus") or 0,
             "valid_until_utc": review.get("valid_until_utc"), "requires_human": bool(review.get("requires_human"))}
 
 
@@ -323,8 +329,8 @@ def companies_found(order, plan: dict | None = None) -> list[dict]:
 
 
 WRITTEN_BY = {"advisor_runs": ("advisor",), "recommendations": ("advisor",), "candidates": ("advisor",), "critic_runs": ("critic",), "reviews": ("critic",),
-              "trade_decisions": ("account_manager_decision", "account_manager_direct"), "trades": ("trader",), "trader_runs": ("trader",)}
-STATUS_AFTER = {"account_manager": "new", "data_clerk": "data_ready", "advisor": "recommended", "critic": "reviewed", "account_manager_decision": "decided", "account_manager_direct": "decided"}
+              "trade_decisions": ("account_manager_decision", "account_manager_direct", "account_manager_funds"), "trades": ("trader",), "trader_runs": ("trader",)}
+STATUS_AFTER = {"account_manager": "new", "data_clerk": "data_ready", "advisor": "recommended", "critic": "reviewed", "account_manager_decision": "decided", "account_manager_direct": "decided", "account_manager_funds": "decided"}
 
 
 def cut_order(order: dict, path: list[str]) -> dict:
@@ -342,15 +348,24 @@ def cut_order(order: dict, path: list[str]) -> dict:
 
 # ---------------------------------------------------------------- how a run ended
 
+def waiting_lines(order) -> list[str]:
+    """The sentence of each direct order that was placed to WAIT for its limit price (a decision with an `open_order_id`, design choices entry 140): "Waiting: buy 10 MU at $90.00 or less (now $95.12), $900.00 set aside, until 4:00 pm ET today.". Empty when none waits."""
+    decisions = (_get(order, "trade_decisions") or []) if order is not None else []
+    return [d["reason"] for d in decisions if isinstance(d, dict) and d.get("open_order_id") is not None and isinstance(d.get("reason"), str)]
+
+
 def run_verdict(before: dict, after: dict, *, action: str | None, order=None, result=None, mode: str | None = None) -> dict:
     """The verdict of a run, as the session decides it (`session.run_session`): `traded` when the portfolio changed (cash or shares), `looked` when the request was only to look, otherwise `no_trade` with the reasons the
     session gives (`session.why_not`). `before` and `after` are account views. `stopped` and `failed` are the caller's."""
     from prometheus.application.session import why_not
 
     moved = portfolio_changes(before, after)
+    waiting = waiting_lines(order)      # direct orders that now WAIT for their limit price (entry 140): the run's last message says so, with what is set aside and until when
     if moved["changes"] or moved["cash_change"] != 0:
         names = ", ".join(f"{sh.signed(shares)} {symbol}".replace("-", "−") for symbol, shares in moved["changes"].items())
-        return {"status": "traded", "headline": f"The portfolio changed: {names}. Cash ${before['cash']:,.2f} → ${after['cash']:,.2f}." if names else f"Cash ${before['cash']:,.2f} → ${after['cash']:,.2f}.", "reasons": []}
+        return {"status": "traded", "headline": f"The portfolio changed: {names}. Cash ${before['cash']:,.2f} → ${after['cash']:,.2f}." if names else f"Cash ${before['cash']:,.2f} → ${after['cash']:,.2f}.", "reasons": waiting}
+    if waiting:
+        return {"status": "waiting", "headline": waiting[0], "reasons": waiting[1:]}
     if action not in ("buy", "order"):
         return {"status": "looked", "headline": "A look only: nothing was to be bought. The portfolio is as it was.", "reasons": []}
     reasons = why_not(result, order) if order is not None else ["no work order was made"]

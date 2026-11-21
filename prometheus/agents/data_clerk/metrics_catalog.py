@@ -23,13 +23,16 @@ from typing import Callable
 
 from prometheus.agents.data_clerk import fundamentals as fund
 from prometheus.agents.data_clerk import technicals as tech
-from prometheus.agents.data_clerk.bars import Bar, BarStore
+from prometheus.agents.data_clerk.bars import MAX_BARS, Bar, BarStore
 from prometheus.agents.data_clerk.data_toolbox import FINANCIAL_METRICS
 from prometheus.agents.data_clerk.fundamentals import Missing
+from prometheus.common.money import EXACT, price as price_door
 from prometheus.rag.config import REPO_ROOT
 
 FORBIDDEN_KEYS = ("score", "stance", "sentiment", "recommendation", "rating", "verdict")  # no metric result may use these as a key
 SPY = "SPY"
+CLOSE_HISTORY_MIN = 21      # a month of sessions: fewer closes than this and the metric is None with the usual note (the swing patterns need 11 at least)
+CLOSE_HISTORY = MAX_BARS    # how many closes the `close_history` metric carries: every bar a review loads (300, about 14 months), the Critic's swing patterns and its 52-week breakout read them
 RECENT_BARS = 35        # how many of the latest bars the `recent_bars` metric carries: enough to date an event up to 10 bars old and to average the 20 bars of volume before it
 SECTOR_ETF_FILE = REPO_ROOT / "configs" / "sector_etfs.json"
 
@@ -51,6 +54,7 @@ class Context:
     sector_bars: list[Bar] | None = None
     financials: dict | None = None      # the result of `Financials.get`: {symbol, as_of, metrics: {name: {value, unit, description}}}
     evidence: dict | None = None        # the result of `filing_signals.recommendation_evidence`
+    splits: object | None = None        # the symbol's stored split table (`prometheus.proving.splits.SplitTable`: the Proving Ground's own reader), or None when none is stored; only `close_history` reads it
 
 
 @dataclass(frozen=True)
@@ -184,6 +188,24 @@ def _unavailable(name: str):
     return run
 
 
+def _close_history(c: Context):
+    """The last `CLOSE_HISTORY` closes as [date, close], in the share basis of the LAST bar's day. The stored bars are UNADJUSTED, so a stock that split inside the window drops by the split's factor in one night: a crash that never
+    was, and a pattern that is not one. The stored split table (the Proving Ground's `SplitTable.factor_between`: the shares one share of a day has become by another) puts every close before a split into the basis of the last day: divided by the
+    factors of the splits that executed after it and on or before the last bar's day (a split after that day is the future and is never applied). The division goes through the price door (four places, half up), as the Proving Ground's
+    `to_basis` does. With no table, or no split inside the window, the closes are the stored ones. `inputs_summary.splits` names the splits applied."""
+    window = c.bars[-CLOSE_HISTORY:]
+    last_day = window[-1].date
+    table = c.splits
+    applied = [s for s in (table.splits if table is not None else []) if window[0].date < s.execution_date <= last_day]
+    rows = []
+    for b in window:
+        factor = table.factor_between(b.date, last_day) if applied else 1
+        rows.append([b.date.isoformat(), b.close if factor == 1 else float(price_door(EXACT.divide(price_door(b.close), factor)))])
+    summary = _last(c)
+    summary["splits"] = [{"date": s.execution_date.isoformat(), "factor": float(s.factor)} for s in applied]
+    return rows, summary
+
+
 def _build() -> dict[str, MetricSpec]:
     specs: list[MetricSpec] = []
     for n, name in ((1, "ret_1d"), (5, "ret_5d"), (21, "ret_21d"), (63, "ret_63d"), (126, "ret_126d"), (252, "ret_252d")):
@@ -191,6 +213,9 @@ def _build() -> dict[str, MetricSpec]:
     specs += [
         _bar_spec("recent_bars", "price", "[date, close, volume]", lambda c: ([[b.date.isoformat(), b.close, b.volume] for b in c.bars[-RECENT_BARS:]], _last(c)),
                   f"the latest {RECENT_BARS} bars as [date, close, volume], oldest first: the Advisor dates an event and measures its reaction against them (the one metric whose value is a list)", f"last {RECENT_BARS} bars"),
+        MetricSpec("close_history", "price", ("bars", "splits"), "[date, close]", CLOSE_HISTORY_MIN, f"the closing prices of the last {CLOSE_HISTORY} sessions (as many as are stored) as [date, close], oldest first, in the share basis of the last day "
+                   f"(a stored split inside the window is applied to the closes before it): the Critic's chart patterns (double top and bottom, head and shoulders, triangles, the 52-week breakout) read them (a list-valued metric, as recent_bars)",
+                   _close_history, f"last {CLOSE_HISTORY} bars"),
         _bar_spec("last_close", "price", "USD", lambda c: (c.bars[-1].close, {"bar_date": c.bars[-1].date.isoformat()}), "the latest stored close", "1 bar"),
         _bar_spec("mom_12_1", "price", "fraction", _simple(tech.mom_12_1), "12-month return skipping the latest month: close[-21] / close[-252] - 1"),
         _bar_spec("pct_of_52w_high", "price", "fraction", _simple(tech.pct_of_52w_high), "close / the highest high of the last 252 bars"),
@@ -312,9 +337,9 @@ def metric_result(spec: MetricSpec, c: Context) -> dict:
 
 
 def compute(symbols: list[str], requests: list[dict], bars: BarStore, financials: dict[str, dict], evidence: dict[str, dict], today: date,
-            sectors: dict[str, str] | None = None) -> dict[str, dict[str, dict]]:
+            sectors: dict[str, str] | None = None, splits: dict | None = None) -> dict[str, dict[str, dict]]:
     """{symbol: {metric name: result}} for every requested metric of every symbol. `financials` and `evidence` are {symbol: payload} (a symbol without one has its metrics that need it
-    as `None` with a note); `sectors` is {symbol: sector ETF ticker}. A name that is not in the catalogue raises ValueError (the work order check refuses it first)."""
+    as `None` with a note); `sectors` is {symbol: sector ETF ticker}; `splits` is {symbol: its stored split table} (a symbol without one has its closes as stored). A name that is not in the catalogue raises ValueError (the work order check refuses it first)."""
     names = [r["name"] for r in requests]
     unknown = [n for n in names if n not in METRICS]
     if unknown:
@@ -323,6 +348,6 @@ def compute(symbols: list[str], requests: list[dict], bars: BarStore, financials
     spy = bars.bars(SPY, end=today)
     for symbol in symbols:
         etf = (sectors or {}).get(symbol)
-        context = Context(symbol, today, bars.bars(symbol, end=today), spy, etf, bars.bars(etf, end=today) if etf else None, financials.get(symbol), evidence.get(symbol))
+        context = Context(symbol, today, bars.bars(symbol, end=today), spy, etf, bars.bars(etf, end=today) if etf else None, financials.get(symbol), evidence.get(symbol), (splits or {}).get(symbol))
         out[symbol] = {name: metric_result(METRICS[name], context) for name in dict.fromkeys(names)}
     return out

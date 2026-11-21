@@ -33,6 +33,7 @@ export interface RunBoxView {
 
 const FINISHED_LABEL: Record<string, { label: string; tone: Tone }> = {
   traded: { label: "COMPLETED", tone: "pos" },
+  waiting: { label: "WAITING", tone: "pos" },
   no_trade: { label: "NOTHING TRADED", tone: "warn" },
   looked: { label: "COMPLETED", tone: "pos" },
   stopped: { label: "STOPPED", tone: "neg" },

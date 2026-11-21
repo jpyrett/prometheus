@@ -57,7 +57,7 @@ from datetime import datetime
 from typing import Callable
 
 from prometheus.agents.trader.config import TraderConfig
-from prometheus.agents.trader.record import Fill, Trade
+from prometheus.agents.trader.record import REJECT_CODES, Fill, Trade
 from decimal import Decimal
 
 from prometheus.agents.trader.simulator import Execution, usable
@@ -297,6 +297,28 @@ class PaperBroker:
         for leg, execution in plan:
             self._fill(leg, execution, shares=leg.shares)     # a sale that fails is failed and not retried; the others go on, and so does the purchase (its approval reads the cash the book shows then)
         self._fill(buy, buy_execution)
+        self._sales_fell_short(buy, plan)
+
+    def _sales_fell_short(self, buy: Trade, plan: list[tuple[Trade, Execution]]) -> None:
+        """THE SALES STAY, THE PURCHASE IS REFUSED (design choices entry 143, B1; the path a live broker needs and paper trading cannot reach). The funding sales were approved, filled and booked (a booked sale is real: nothing here undoes it), but
+        brought less than they were estimated at (a lower fill, or a sale that failed after the estimate), so the Account Manager's approval of the purchase, which reads the cash the book shows NOW, refused it (`insufficient_cash`: the cash is the
+        only check, and it is never overspent). That is not an error of the run and not a retry: the purchase is `rejected` with the code `sales_fell_short`, its reason says what was sold, what it brought against what was planned, and that the
+        sales stay, and the run says it too (a note, which the user is shown). A purchase that still filled (cut to the cash, as a recommendation purchase is) is told the same in a note. Nothing happens when every sale brought what it was estimated at."""
+        sold = [(leg, estimate) for leg, estimate in plan if leg.status == "filled" and leg.fill is not None]
+        planned = sum((trade_amount(leg.shares, estimate.price) for leg, estimate in plan), Decimal("0.00"))
+        got = sum((leg.fill.amount for leg, _ in sold), Decimal("0.00"))
+        if not sold or got >= planned:
+            return
+        what = "; ".join(f"{sh.text(leg.shares)} {leg.symbol} at {leg.fill.price:,.4f} (planned {estimate.price:,.4f})" if leg.fill.price != estimate.price else f"{sh.text(leg.shares)} {leg.symbol} at {leg.fill.price:,.4f}" for leg, estimate in sold)
+        failed = [leg for leg, _ in plan if leg.status != "filled"]
+        said = f"the sales brought ${got:,.2f}, not the about ${planned:,.2f} planned ({what}" + (f"; {', '.join(leg.trade_id for leg in failed)} did not fill" if failed else "") + ")"
+        if buy.status == "rejected" and buy.reject_code == "insufficient_cash":
+            buy.reject_code = "sales_fell_short"
+            buy.reason = f"{said}, so the cash no longer pays for {sh.text(buy.shares)} {buy.symbol}: it was not placed. The sales stay: they were approved, filled and booked. {buy.reason}"[:600]
+            self.notes.append(f"{buy.trade_id}: {buy.reason}")
+        elif buy.status == "filled":
+            self.notes.append(f"{buy.trade_id}: {said}" + (f", so the purchase was cut to what the cash pays for ({sh.text(buy.shares)} of {sh.text(buy.shares_approved)} {buy.symbol}). The sales stay." if buy.shares < buy.shares_approved
+                                                                  else "; it was still enough to pay for the purchase."))
 
     @staticmethod
     def _why_not_sold(leg: Trade, execution: Execution) -> str:
@@ -336,6 +358,10 @@ class PaperBroker:
             if trade.kind == "funding":
                 return self.reject(trade, "funding_failed", f"the Account Manager did not approve the sale ({approval.code}): {approval.reason}")
             return self.reject(trade, approval.code, approval.reason + (f" ({self.cash_hint})" if approval.code == "insufficient_cash" and self.cash_hint else ""))
+        reported = self.venue.report_fill(trade, approval.shares, execution, self.prices)      # what the venue says really filled, AFTER the approval (entry 143, B1): a simulated venue gives the estimate back, a live one may report a sale at a lower price
+        if reported.status != "filled" or reported.price is None:
+            return self.reject(trade, reported.reject_code if reported.reject_code in REJECT_CODES else "internal_error", reported.reason or "the venue did not fill the approved order")
+        execution = reported
         count = approval.shares if trade.dollars is not None and trade.side == "buy" else min(wanted, approval.shares)      # never more than approved (the Account Manager never approves more than was asked). An order in DOLLARS (entry 111, M2) fills the shares its dollars pay for at this price: fewer than the estimate when the price is higher, more when it is lower
         for_what = "the money of this request (its pot)" if "the money of this request" in approval.reason else "the cash"      # entry 111, M1: what the Account Manager's approval was held by
         cut = (f"; an order of ${trade.dollars:,.2f}: {sh.text(count)} shares at {execution.price:,.4f} (the estimate was {sh.text(trade.shares_approved)})" + (f", held by {for_what}" if ", held by " in approval.reason else "") if trade.dollars is not None and trade.side == "buy" else

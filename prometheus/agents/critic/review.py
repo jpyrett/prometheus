@@ -6,13 +6,14 @@ ONE work order in (status `recommended`), the SAME work order out (status `revie
 
     1  preconditions    the order has recommendations; `now` has a timezone; an order already reviewed comes back unchanged
     2  integrity        each record against itself and against the order (integrity.py): the Advisor's arithmetic worked again, every quote looked up
-    3  three requests   to the Data Clerk, for ALL the records at once: the key metrics again, a current quote, the sources read again (recheck.gather)
+    3  four requests    to the Data Clerk, for ALL the records at once: the key metrics again, a current quote, the sources read again, the analysts' recommendation counts (recheck.gather)
     4  accuracy         what came back against what the record says (recheck.compare, check_sources, cross_checks)
     5  evidence         ONE model call per record: does each quote really support the claim? plus a control claim; then the return worked again without the quotes that did not hold (evidence.py)
     6  timing           the market's session, the record's date, the price against the entry zone (timing.py)
     7  risk fit         the risk against the user's profile: the company's risk, never how much to buy (risk.py)
-    8  value            the price against its six-month average, the valuation (value.py); then the chart patterns: crosses, structure, dead cat bounce (chart.py)
-    9  verdict          the six scores, the bonus, the blockers, the score, the verdict (APPROVED or DENIED, nothing between: a finding that asks for a person to look denies it too, `needs_human_review`, entry 103), the summary (scoring.py); write out
+    8  value            the price against its six-month average, the valuation (value.py); then the chart patterns: crosses, structure, dead cat bounce, the swing patterns (chart.py, patterns.py), the returns (performance); then the analysts (analysts.py)
+    9  verdict          the seven scores, the bonuses, the findings, the score, the verdict (APPROVED or DENIED, nothing between: a fault or a profile finding denies alone, bad signs in two of the groups news, performance and price deny, and a finding that
+                        asks for a person to look denies it too, `needs_human_review`, entry 103; reasons.py, scoring.py), the summary; write out
 
 The Critic only deals with recommendations TO BUY (entry 105: a record that is not one, or that says something is held, is a `record_defect` and is not reviewed): it does not know the user's money (it is given the profile's `RiskView`, which holds no size limit, and no portfolio), and it sizes nothing. How much to buy is the Account Manager's (agents/account_manager/sizing.py).
 
@@ -31,10 +32,10 @@ from pydantic import ValidationError
 
 from prometheus.agents.advisor.record import Recommendation
 from prometheus.agents.critic import evidence as ev
-from prometheus.agents.critic import chart, feedback, integrity, recheck, risk, scoring, timing, value
+from prometheus.agents.critic import analysts, chart, feedback, integrity, recheck, risk, scoring, timing, value
 from prometheus.agents.critic.claims import Claim, claims_of
-from prometheus.agents.critic.common import blocker, et_text, utc_text, warning
-from prometheus.agents.critic.record import AccuracyDetail, Audit, ChartDetail, Dimension, Finding, Integrity, Review, RiskDetail, TimingDetail, ValueDetail
+from prometheus.agents.critic.common import blocker, et_text, metric_value, utc_text, warning
+from prometheus.agents.critic.record import AccuracyDetail, AnalystsDetail, Audit, ChartDetail, Dimension, Finding, Integrity, Review, RiskDetail, TimingDetail, ValueDetail
 from prometheus.common.market_calendar import eastern_date, session_at
 from prometheus.common.user_profile import RiskView
 from prometheus.common.trace import traced
@@ -63,6 +64,7 @@ class Work:
     risk_result: risk.RiskResult | None = None
     value_result: value.ValueResult | None = None
     chart_result: chart.ChartResult | None = None
+    analysts_result: analysts.AnalystsResult | None = None
     metric_order: str | None = None
 
 
@@ -106,7 +108,7 @@ def review_order(critic, order: WorkOrder, view: RiskView, now: datetime | None 
         return order
     model = critic.model
     run = {"stage": "review", "model": critic.model_name, "tokens_in": 0, "tokens_out": 0, "calls": 0, "dropped": [], "error": None, "errors": list(critic.errors), "records": len(order.recommendations),
-           "records_called": 0, "controls_failed": 0, "labels_from_store": 0, "metric_order": None, "quote_order": None, "verify_order": None, "independent_model": None, "advisor_model": None, "seconds": 0.0,
+           "records_called": 0, "controls_failed": 0, "labels_from_store": 0, "metric_order": None, "quote_order": None, "verify_order": None, "analysts_order": None, "independent_model": None, "advisor_model": None, "seconds": 0.0,
            "tolerance": view.risk_tolerance, "now_et": et_text(now), "session": session_at(now).state, "ignore_market_hours": timing.market_hours_ignored()}
     works = [Work(i, raw) for i, raw in enumerate(order.recommendations)]
 
@@ -130,12 +132,12 @@ def review_order(critic, order: WorkOrder, view: RiskView, now: datetime | None 
             w.findings.append(warning("accuracy", "no_thesis", "The record has neither a thesis nor the reason it has none."))
         reviewable.append(w)
 
-    # ---- 3 the three requests to the Data Clerk
+    # ---- 3 the four requests to the Data Clerk
     items = [(w.rec, str(w.day or eastern_date(now)), w.claims) for w in reviewable]
     gathered = recheck.gather(critic.clerk, order, items, now, config) if items else recheck.Gathered()
     run["errors"].extend(gathered.errors)
     run["metric_order"] = ",".join(gathered.metric_orders.values()) or None
-    run["quote_order"], run["verify_order"] = gathered.quote_order, ",".join(gathered.verify_orders) or None
+    run["quote_order"], run["verify_order"], run["analysts_order"] = gathered.quote_order, ",".join(gathered.verify_orders) or None, gathered.analysts_order
 
     # ---- 4 to 8, per record (one after the other, as always; `critic.parallel` above 1 reviews the records at once, see `_check_all`)
     _check_all(reviewable, critic, model, order, view, gathered, now, run)
@@ -230,12 +232,16 @@ def _check(w: Work, critic, model, order: WorkOrder, view: RiskView, gathered: r
     w.findings += value.history_warnings(rec, w.timing_result.deal_price, critic.history, eastern_date(now), config.value)
     w.chart_result = chart.assess(rec, fetched, config.chart)
     w.findings += w.chart_result.findings
+    w.findings += chart.poor_performance(rec, metric_value(fetched, "ret_63d"), metric_value(fetched, "ret_21d"), config.performance)
+    w.analysts_result = analysts.assess(rec.symbol, gathered.analysts.get(rec.symbol), config.analysts)
+    w.findings += w.analysts_result.findings
     dimension = lambda name, score, applicable=True, measures=None: scoring.make_dimension(name, config, score, applicable, measures)
     w.dimensions = {"accuracy": dimension("accuracy", accuracy, True, accuracy_measures), "evidence": dimension("evidence", w.evidence_result.score, True, w.evidence_result.measures),
                     "risk_fit": dimension("risk_fit", w.risk_result.score, w.risk_result.applicable, w.risk_result.measures),
                     "timing": dimension("timing", w.timing_result.score, True, w.timing_result.measures),
                     "value": dimension("value", w.value_result.score, w.value_result.applicable, w.value_result.measures),
-                    "chart": dimension("chart", w.chart_result.score, w.chart_result.applicable, w.chart_result.measures)}
+                    "chart": dimension("chart", w.chart_result.score, w.chart_result.applicable, w.chart_result.measures),
+                    "analysts": dimension("analysts", w.analysts_result.score, w.analysts_result.applicable, w.analysts_result.measures)}
 
 
 def _build(w: Work, critic, order: WorkOrder, now: datetime, gathered: recheck.Gathered, run: dict) -> Review:
@@ -250,23 +256,27 @@ def _build(w: Work, critic, order: WorkOrder, now: datetime, gathered: recheck.G
         red_flag_passed = next((g.passed for g in rec.gates if g.gate == "red_flag"), False)
         if scoring.great_deal_bonus_allowed(w.findings, rec.quality.multiplier, red_flag_passed, config.value.bonus.min_quality):
             bonus = value.bonus_points(w.value_result.discount, config.value.bonus)
-    verdict = scoring.decide(w.findings, w.dimensions, bonus, config)
+    pattern_bonus = chart.pattern_bonus(w.chart_result.detail.points, config.chart.bonus) if w.chart_result is not None and w.chart_result.applicable else 0.0
+    verdict = scoring.decide(w.findings, w.dimensions, bonus, config, pattern_bonus)
+    blockers, warnings, notes = scoring.partition(w.findings, verdict)
     until = None
     if verdict.approved and w.timing_result is not None and w.timing_result.session is not None:
         until = utc_text(timing.valid_until(w.timing_result.session, now, config.timing.review_ttl_minutes))
     advisor_model = rec.advisor.get("model") if rec else None
     audit = Audit(critic_model=critic.model_name, advisor_model=advisor_model, independent_model=ev.independence(critic.model_name, advisor_model) if rec else None, config_version=config.config_version,
-                  metric_order=w.metric_order, quote_order=gathered.quote_order, verify_order=",".join(gathered.verify_orders) or None,
+                  metric_order=w.metric_order, quote_order=gathered.quote_order, verify_order=",".join(gathered.verify_orders) or None, analysts_order=gathered.analysts_order,
                   run={k: run[k] for k in ("model", "calls", "tokens_in", "tokens_out", "records_called", "controls_failed", "labels_from_store")})
     return Review(
         review_id=uuid.uuid4().hex[:12], record_id=identity.get("record_id") or f"record-{w.index}", request_id=identity.get("request_id") or order.request_id, symbol=raw.get("symbol", "?"), action=action,
         reviewed_utc=utc_text(now), valid_until_utc=until, approved=verdict.approved, score=verdict.score, score_before_blockers=verdict.score_before_blockers, grade=verdict.grade, bonus=bonus,
+        pattern_bonus=pattern_bonus, groups=verdict.groups,
         requires_human=verdict.requires_human, requires_human_reasons=verdict.requires_human_reasons, denial_reasons=verdict.denial_reasons,
-        summary=scoring.summarize(raw.get("symbol", "?"), verdict, w.findings, w.dimensions, config.verdict.approve_min_score),
-        blockers=scoring.order_blockers(w.findings), warnings=[f for f in w.findings if f.severity == "warning"], notes=[f for f in w.findings if f.severity == "info"], dimensions=w.dimensions,
+        summary=scoring.summarize(raw.get("symbol", "?"), verdict, w.findings, w.dimensions),
+        blockers=blockers, warnings=warnings, notes=notes, dimensions=w.dimensions,
         accuracy=_accuracy_detail(w), evidence=w.evidence_result.detail if w.evidence_result else ev.EvidenceResult().detail,
         timing=w.timing_result.detail if w.timing_result and w.timing_result.detail else _closed_timing(now), risk=w.risk_result.detail if w.risk_result else RiskDetail(),
-        value=w.value_result.detail if w.value_result else ValueDetail(), chart=w.chart_result.detail if w.chart_result else ChartDetail(), audit=audit)
+        value=w.value_result.detail if w.value_result else ValueDetail(), chart=w.chart_result.detail if w.chart_result else ChartDetail(),
+        analysts=w.analysts_result.detail if w.analysts_result else AnalystsDetail(), audit=audit)
 
 
 def _accuracy_detail(w: Work) -> AccuracyDetail:

@@ -1,0 +1,406 @@
+{
+ "request": "Buy 2 shares of ANT and raise funds if needed",
+ "intent": {
+  "request": "Buy 2 shares of ANT and raise funds if needed",
+  "action": "order",
+  "topic": null,
+  "symbols": [],
+  "companies": [],
+  "count": null,
+  "allocation": "default",
+  "budget": null,
+  "each": false,
+  "raise_funds": true,
+  "orders": [
+   {
+    "side": "buy",
+    "symbol": "ANT",
+    "company": null,
+    "shares": 2,
+    "dollars": null
+   }
+  ]
+ },
+ "path": [
+  "account_manager",
+  "account_manager_direct",
+  "account_manager_funds",
+  "trader"
+ ],
+ "order": {
+  "schema_version": 4,
+  "request_id": "624a1edb438f",
+  "requester": "desk",
+  "created_utc": "2026-11-21T04:47:01Z",
+  "query": "Buy 2 shares of ANT and raise funds if needed",
+  "action_type": "trade",
+  "subject": [
+   "ANT"
+  ],
+  "company": null,
+  "source": "news",
+  "time_period": null,
+  "since_days": null,
+  "live": false,
+  "top_k": 5,
+  "criteria": null,
+  "status": "traded",
+  "resolved": null,
+  "data": {
+   "answer": "ANT: Anthropic Pbc-Cl A (ANT)",
+   "references": [],
+   "sources": [],
+   "sweep": {},
+   "results": {},
+   "filing_evidence": {},
+   "metrics": {},
+   "companies": [
+    {
+     "brand": "ANT",
+     "parent": null,
+     "symbol": "ANT",
+     "company": "Anthropic Pbc-Cl A",
+     "public": true,
+     "how": "ticker",
+     "note": ""
+    }
+   ],
+   "market_brief": {},
+   "verification": {},
+   "quotes": {},
+   "analysts": {},
+   "bars": {},
+   "security_dropped": [],
+   "problems": [],
+   "notes": [],
+   "no_supporting_text": false,
+   "tool_calls": [
+    {
+     "name": "find_symbol",
+     "args": {
+      "symbol": "ANT"
+     },
+     "outcome": "ok"
+    }
+   ],
+   "turns": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "completed_utc": "2026-11-21T04:47:01Z"
+  },
+  "recommendations": [],
+  "advisor_runs": [],
+  "errors": [],
+  "metrics": null,
+  "case": null,
+  "sector": null,
+  "candidates": [],
+  "verify": null,
+  "reviews": [],
+  "critic_runs": [],
+  "trade_decisions": [
+   {
+    "record_id": "direct-624a1edb438f-1",
+    "review_id": null,
+    "symbol": "ANT",
+    "action": "open",
+    "shares": 2,
+    "est_cost": 177.82,
+    "mode": "ask",
+    "will_trade": "yes_user",
+    "funds_avail": true,
+    "funds_note": "needs RaiseFunds: the cash does not cover it, and $117.68 is to be raised by selling holdings first",
+    "asked_user": false,
+    "reason": "the user approved: you named this trade yourself (buy 2 shares of ANT): no recommendation was made and the Critic was not asked; the cash $60.14 does not pay for 2 shares of ANT at $88.91 ($177.82), so the Account Manager raises the money by selling holdings first (RaiseFunds: $117.68 to raise for the request, you said to raise funds) and then buys as you typed it",
+    "decided_utc": "2026-11-21T04:47:01Z",
+    "size": null,
+    "origin": "direct",
+    "company": "Anthropic Pbc-Cl A",
+    "price": 88.91,
+    "valid_until_utc": "2026-11-21T05:17:01Z",
+    "funding": {
+     "shortfall": 117.68,
+     "plan_id": "624a1edb438f-funds",
+     "by": "words"
+    }
+   }
+  ],
+  "bars": null,
+  "ratings": null,
+  "trades": [
+   {
+    "trade_id": "T1",
+    "kind": "recommendation",
+    "record_id": "direct-624a1edb438f-1",
+    "review_id": null,
+    "funds_for": null,
+    "symbol": "ANT",
+    "side": "buy",
+    "shares_approved": 2,
+    "dollars": null,
+    "shares": 2,
+    "order_type": "market",
+    "limit_price": null,
+    "ref_price": 88.91,
+    "limit_low": 86.2427,
+    "limit_high": 89.7991,
+    "status": "filled",
+    "reject_code": null,
+    "reason": "market order filled at the quote 88.9100 with 0 bps of slippage",
+    "placed_by": "code",
+    "note": "",
+    "placed_utc": "2026-11-21T04:47:05Z",
+    "mode": "paper",
+    "fill": {
+     "price": 88.91,
+     "shares": 2,
+     "amount": 177.82,
+     "commission": 0,
+     "date": "2026-11-20",
+     "price_source": "quote",
+     "slippage_bps": 0
+    },
+    "booked": true,
+    "outcome": null
+   },
+   {
+    "trade_id": "T1-F1",
+    "kind": "funding",
+    "record_id": "direct-624a1edb438f-1",
+    "review_id": null,
+    "funds_for": "T1",
+    "symbol": "DPZ",
+    "side": "sell",
+    "shares_approved": 1,
+    "dollars": null,
+    "shares": 1,
+    "order_type": "market",
+    "limit_price": null,
+    "ref_price": 348.61,
+    "limit_low": 345.1239,
+    "limit_high": 359.0683,
+    "status": "filled",
+    "reject_code": null,
+    "reason": "market order filled at the quote 348.6100 with 0 bps of slippage",
+    "placed_by": "code",
+    "note": "",
+    "placed_utc": "2026-11-21T04:47:05Z",
+    "mode": "paper",
+    "fill": {
+     "price": 348.61,
+     "shares": 1,
+     "amount": 348.61,
+     "commission": 0,
+     "date": "2026-11-20",
+     "price_source": "quote",
+     "slippage_bps": 0
+    },
+    "booked": true,
+    "outcome": null
+   }
+  ],
+  "trader_runs": [
+   {
+    "model": null,
+    "temperature": 0.0,
+    "mode": "paper",
+    "now_utc": "2026-11-21T04:47:05Z",
+    "use_model": true,
+    "turns": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "tool_calls": [],
+    "placed_by_model": 0,
+    "placed_by_code": 1,
+    "summary": "Paper run: T1 buy 2 ANT filled at 88.9100 ($177.82). Cash $60.14 to $230.93.",
+    "summary_by": "code",
+    "portfolio_before": {
+     "cash": 60.14,
+     "positions": [
+      {
+       "symbol": "AAPL",
+       "shares": 17,
+       "cost_basis": 356.27,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "AMZN",
+       "shares": 16,
+       "cost_basis": 266.66,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "DPZ",
+       "shares": 4.389558,
+       "cost_basis": 341.72,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "F",
+       "shares": 23,
+       "cost_basis": 11.91,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "GM",
+       "shares": 19,
+       "cost_basis": 86,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "GOOGL",
+       "shares": 17.025628,
+       "cost_basis": 295.77,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "KO",
+       "shares": 49,
+       "cost_basis": 98.09,
+       "acquired": "2026-11-18"
+      },
+      {
+       "symbol": "MCD",
+       "shares": 3,
+       "cost_basis": 271.97,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "MDLZ",
+       "shares": 48,
+       "cost_basis": 66.565,
+       "acquired": "2026-11-18"
+      },
+      {
+       "symbol": "META",
+       "shares": 15,
+       "cost_basis": 641.69,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "PG",
+       "shares": 66,
+       "cost_basis": 170.1564,
+       "acquired": "2026-11-18"
+      },
+      {
+       "symbol": "PZZA",
+       "shares": 75.301204,
+       "cost_basis": 19.92,
+       "acquired": "2026-11-13"
+      }
+     ]
+    },
+    "portfolio_after": {
+     "cash": 230.93,
+     "positions": [
+      {
+       "symbol": "AAPL",
+       "shares": 17,
+       "cost_basis": 356.27,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "AMZN",
+       "shares": 16,
+       "cost_basis": 266.66,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "ANT",
+       "shares": 2,
+       "cost_basis": 88.91,
+       "acquired": "2026-11-20"
+      },
+      {
+       "symbol": "DPZ",
+       "shares": 3.389558,
+       "cost_basis": 341.72,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "F",
+       "shares": 23,
+       "cost_basis": 11.91,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "GM",
+       "shares": 19,
+       "cost_basis": 86,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "GOOGL",
+       "shares": 17.025628,
+       "cost_basis": 295.77,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "KO",
+       "shares": 49,
+       "cost_basis": 98.09,
+       "acquired": "2026-11-18"
+      },
+      {
+       "symbol": "MCD",
+       "shares": 3,
+       "cost_basis": 271.97,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "MDLZ",
+       "shares": 48,
+       "cost_basis": 66.565,
+       "acquired": "2026-11-18"
+      },
+      {
+       "symbol": "META",
+       "shares": 15,
+       "cost_basis": 641.69,
+       "acquired": "2026-11-13"
+      },
+      {
+       "symbol": "PG",
+       "shares": 66,
+       "cost_basis": 170.1564,
+       "acquired": "2026-11-18"
+      },
+      {
+       "symbol": "PZZA",
+       "shares": 75.301204,
+       "cost_basis": 19.92,
+       "acquired": "2026-11-13"
+      }
+     ]
+    },
+    "price_order": "d99d836a8969",
+    "funding": {
+     "status": "plan",
+     "approved": true,
+     "note": "the user approved the funding sells"
+    },
+    "booked": true,
+    "config_version": "1",
+    "dropped": [],
+    "errors": []
+   }
+  ],
+  "direct_orders": [
+   {
+    "record_id": "direct-624a1edb438f-1",
+    "side": "buy",
+    "symbol": "ANT",
+    "company": "Anthropic Pbc-Cl A",
+    "shares": 2,
+    "request": "Buy 2 shares of ANT and raise funds if needed",
+    "requested_utc": "2026-11-21T04:47:01Z",
+    "typed_company": null,
+    "how_many": "typed",
+    "found_by": "ticker"
+   }
+  ],
+  "max_price": null,
+  "min_price": null
+ }
+}

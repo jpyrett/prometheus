@@ -42,7 +42,7 @@ describe("the page against the recorded replay of bob_jones_oil", () => {
     await waitFor(() => expect((screen.getByRole("button", { name: "Go!" }) as HTMLButtonElement).disabled).toBe(false));
     fireEvent.click(screen.getByRole("button", { name: "Go!" }));
     await waitFor(() => expect(FakeEventSource.instances).toHaveLength(1));
-    expect(calls.find((c) => c.method === "POST")?.body).toEqual({ account_id: 0, prompt: health.defaults.prompt, strict: false, neutral: true, fetch: false, mode: "auto" });
+    expect(calls.find((c) => c.method === "POST")?.body).toEqual({ account_id: 0, prompt: health.defaults.prompt, strict: false, neutral: true, fetch: false, raise_funds: false, mode: "auto" });
     expect(FakeEventSource.last.url).toBe(`/api/runs/${RUN_ID}/events?after=0`);
 
     // Mid-run: Running…, the trade stage is current, Activity fills.

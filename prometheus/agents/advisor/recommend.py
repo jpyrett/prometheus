@@ -45,6 +45,7 @@ from prometheus.agents.advisor.quality import quality_multiplier
 from prometheus.agents.advisor.record import Action, Agreement, Audit, Candidate, Concentration, Evidence, Identity, Ranking, Recommendation, Risk, Thesis
 from prometheus.agents.advisor.thesis import write_theses
 from prometheus.common import trading_clock
+from prometheus.common.money import price as price_door
 from prometheus.common.trace import traced
 from prometheus.common.work_order import MAX_METRIC_SYMBOLS, WorkOrder, corpus_of, new_work_order, sector_map
 from prometheus.prompts.advisor_v1 import RETRY_PLAN, plan_message, plan_system
@@ -67,6 +68,28 @@ class Checked:
     drop_cause: dict | None = None
     archetypes: list[str] = field(default_factory=list)
     model_score: int | None = None
+
+
+def within_price_limit(eligible: list[rk.Scored], quotes: dict, limit, rejected: dict[str, dict], floor=None) -> list[rk.Scored]:
+    """The user's PRICE LIMIT (a ceiling) and PRICE FLOOR, applied in code BEFORE the sleeve picks (design choices entries 138 and 140; "the top 3 AI stocks under $50 a share", "... over $20 a share", "between $20 and $60 a share"): a
+    candidate whose last price (the price its trade plan uses: `trade_plan.price_of`, the quote when the order has one, else the last stored close) is above `limit` or under `floor` is left out, so the number asked for is filled from those inside.
+    Each one left out is written in `rejected` with its reason (it then lists on `order.candidates` like any other that was not returned); a candidate with no price at all cannot be shown to be inside and is left out too. `limit` and `floor` None
+    (the user gave none) returns `eligible` as it is. It is a PRICE and nothing else: the Advisor knows no money of the user's and recommends no size. Pure arithmetic, no model; ONE function for both bounds."""
+    if limit is None and floor is None:
+        return eligible
+    ceiling, least, kept = None if limit is None else price_door(limit), None if floor is None else price_door(floor), []
+    for s in eligible:
+        last, _ = tp.price_of(s.symbol, s.metrics, quotes.get(s.symbol))
+        at = price_door(last) if last is not None else None
+        if at is None:
+            rejected[s.symbol] = {"reason": f"no price to check against your limit of ${ceiling:,.2f} a share" if ceiling is not None else f"no price to check against your minimum of ${least:,.2f} a share"}
+        elif ceiling is not None and at > ceiling:
+            rejected[s.symbol] = {"reason": f"price ${at:,.2f} is above your limit of ${ceiling:,.2f} a share"}
+        elif least is not None and at < least:
+            rejected[s.symbol] = {"reason": f"price ${at:,.2f} is under your minimum of ${least:,.2f} a share"}
+        else:
+            kept.append(s)
+    return kept
 
 
 def _now(today: date | None) -> str:
@@ -318,6 +341,7 @@ def generate(advisor: Advisor, order: WorkOrder, case: str | None = None, today:
             rejected[s.symbol] = {"reason": f"cooldown: an earlier {family.family} recommendation ({old}) still stands", "cooldown_of": old}
         else:
             eligible.append(s)
+    eligible = within_price_limit(eligible, quotes, order.max_price, rejected, order.min_price)      # the user's price limit and floor ("under $50 a share", "over $20 a share"): what costs more or less is left out before the sleeve picks (entries 138 and 140)
     picked, why = rk.select(eligible, case, regime[0], config)
     universe = {s.symbol: n for n, s in enumerate(sorted(new_ideas, key=lambda s: (bool(s.gates.failed), *rk.sort_key(s))), 1)}   # every new idea, best to worst: those that passed every gate first
     for symbol, reason in why.items():

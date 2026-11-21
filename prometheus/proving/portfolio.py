@@ -26,6 +26,10 @@ share basis of the ENTRY (`splits.to_basis`), so the plan made before the split 
 made). A lot that crossed a split is worked in the share basis of its entry for the money (see `record.Exit`). A symbol with NO table is never followed across a suspected split (a close-to-open move past `split_suspect_pct`): the bars from that
 day on are left out, so the position stays open at its last good close, marked stale, and `warnings` says why: a split must never read as a loss and hit a stop.
 
+A TRAILING STOP (design/advisor_exit_plan_spec.md E4: the TREND family's plan, no target): a lot whose plan trails (`PlanView.trailing`) is followed with `simulator.follow(trail_distance=)`, the SAME call, so the stop rises with the highest close and the exit
+is `trailing_stop` when the stop that fired was above the plan's own. `positions()` shows the stop IN FORCE (`simulator.trailing_stop`: the plan's stop or the highest close since the entry less the distance, whichever is higher, at the last mark). The distance is a
+plan price, divided by a split's factor like the stop.
+
 MONEY, PRICES AND SHARES ARE `Decimal` through the doors (entry 112): the cash is to the cent, a price has four places, a quantity six; a bar's floats cross the price door once inside the simulator. The only floats are the drawdown of a point
 (a fraction, a measurement). No size limit, risk rule, liquidity rule or minimum order is added.
 """
@@ -82,6 +86,8 @@ class Lot:
     applied: date
     last_close: Decimal | None = None
     last_day: date | None = None
+    trail: Decimal | None = None            # the distance a TRAILING plan's stop keeps under the highest close, in the share basis of the ENTRY (None: a fixed stop)
+    highest: Decimal | None = None          # the highest close since the entry through the last mark, in the share basis of the ENTRY (only a lot that trails keeps it)
 
 
 class SimPortfolio:
@@ -130,12 +136,12 @@ class SimPortfolio:
             made = about.decision_day if about and about.decision_day else day
             table = self.splits.get(trade.symbol)
             factor = table.factor_between(made, day) if table is not None else Decimal(1)                 # a split between the day the plan was made and the day of the fill: the plan's prices into the fill's basis
-            stop, target = (None if x is None else x if factor == 1 else price_scale(EXACT.divide(x, factor)) for x in (plan.stop, plan.target))
+            stop, target, trail = (None if x is None else x if factor == 1 else price_scale(EXACT.divide(x, factor)) for x in (plan.stop, plan.target, plan.trail_distance if plan.trailing else None))
             self._cash -= fill.amount
             self._spent += fill.amount
             lot = Lot(symbol=trade.symbol, name=about.name if about else None, record_id=trade.record_id, key=about.key if about else None, trade_id=trade.trade_id, entry_day=day, entry_price=fill.price,
                       entry_shares=fill.shares, cost=fill.amount, stop=stop, target=target, time_stop=plan.time_stop_date.isoformat() if plan.time_stop_date else None, plan_day=made, shares=fill.shares, basis=fill.price,
-                      stop_now=stop, target_now=target, applied=day)
+                      stop_now=stop, target_now=target, applied=day, trail=trail)
             self.lots.append(lot)
             found.append(lot)
         self.check()
@@ -175,7 +181,7 @@ class SimPortfolio:
                 continue
             table = self.splits.get(lot.symbol)
             window = splits_mod.to_basis(self._series(lot, bars, day), table, lot.entry_day)
-            outcome = simulator.follow(lot.entry_price, lot.entry_shares, lot.entry_day, window, lot.stop, lot.target, lot.time_stop, self.slippage_bps)
+            outcome = simulator.follow(lot.entry_price, lot.entry_shares, lot.entry_day, window, lot.stop, lot.target, lot.time_stop, self.slippage_bps, trail_distance=lot.trail)
             if outcome.status != "closed":
                 self._roll(lot, day)
                 continue
@@ -213,6 +219,11 @@ class SimPortfolio:
             close = simulator.bar_price(bar, "close") if bar else None
             if close is not None:
                 lot.last_close, lot.last_day = close, day
+                if lot.trail is not None:        # a trailing stop's base: the highest close since the entry, in the share basis of the ENTRY (the stored bars after a split are put back into it)
+                    table = self.splits.get(lot.symbol)
+                    window = splits_mod.to_basis(self._series(lot, bars, day), table, lot.entry_day)
+                    closes = [simulator.bar_price(b, "close") for b in window if isinstance(b.get("date"), str) and b["date"] >= lot.entry_day.isoformat()]
+                    lot.highest = max((c for c in closes if c is not None), default=None)
             else:
                 stale.append(lot.symbol)
             invested += trade_amount(lot.shares, lot.last_close if lot.last_close is not None else lot.basis)
@@ -234,7 +245,13 @@ class SimPortfolio:
                 continue
             price = lot.last_close if lot.last_close is not None else lot.basis
             value = trade_amount(lot.shares, price)
-            out.append(Position(symbol=lot.symbol, name=lot.name, shares=lot.shares, cost_basis=lot.basis, entry_date=lot.entry_day, record_id=lot.record_id, key=lot.key, stop=lot.stop_now, target=lot.target_now,
+            stop = lot.stop_now
+            if lot.trail is not None:          # the stop in force, worked in the basis of the entry (where the highest close is) and shown in the basis of today
+                table = self.splits.get(lot.symbol)
+                level = simulator.trailing_stop(lot.stop, lot.highest, lot.trail)
+                factor = table.factor_between(lot.entry_day, lot.applied) if table is not None else Decimal(1)
+                stop = level if level is None or factor == 1 else price_scale(EXACT.divide(level, factor))
+            out.append(Position(symbol=lot.symbol, name=lot.name, shares=lot.shares, cost_basis=lot.basis, entry_date=lot.entry_day, record_id=lot.record_id, key=lot.key, stop=stop, target=lot.target_now, trailing=lot.trail is not None,
                                 time_stop_date=date.fromisoformat(lot.time_stop) if lot.time_stop else None, price=price, value=value, gain=value - trade_amount(lot.shares, lot.basis),
                                 stale=day is not None and lot.last_day != day))
         return out

@@ -16,21 +16,26 @@ interface Row {
   shares: number;
   value: number;
   change: number | null;
+  /** The shares a waiting sale has set aside. */
+  reserved: number;
 }
 
 /** The holdings, the cash and the totals (spec 5.3 (1)). Value is shares x average cost: the book knows no market price (D11). */
 export function PortfolioCard({ view, changed, before }: { view: AccountView | null; changed: PortfolioChanges | null; before: AccountView | null }) {
   const positions = view?.positions ?? [];
   const changes = changed?.changes ?? {};
-  const rows: Row[] = positions.map((p) => ({ symbol: p.symbol, name: p.name, shares: p.shares, value: p.value, change: changes[p.symbol] ?? null }));
+  const rows: Row[] = positions.map((p) => ({ symbol: p.symbol, name: p.name, shares: p.shares, value: p.value, change: changes[p.symbol] ?? null, reserved: p.reserved ?? 0 }));
   // A position the run sold out is no longer on the account: keep its row, with the change, until the next run.
   for (const [symbol, change] of Object.entries(changes)) {
     if (!positions.some((p) => p.symbol === symbol) && change < 0) {
-      rows.push({ symbol, name: before?.positions.find((p) => p.symbol === symbol)?.name ?? null, shares: 0, value: 0, change });
+      rows.push({ symbol, name: before?.positions.find((p) => p.symbol === symbol)?.name ?? null, shares: 0, value: 0, change, reserved: 0 });
     }
   }
   const invested = view?.invested ?? 0;
   const cash = view?.cash ?? 0;
+  // WAITING ORDERS (entry 140): the cash is all of it; what waiting orders have set aside is not available to anything else.
+  const setAside = view?.reserved_cash ?? 0;
+  const available = view?.available ?? cash;
   const total = view?.total ?? 0;
   const investedPct = percent(invested, total);
   const cashChanged = changed !== null && Math.abs(changed.cash_change) >= 0.005;
@@ -67,6 +72,7 @@ export function PortfolioCard({ view, changed, before }: { view: AccountView | n
                       <span className="sub" title={r.name ?? undefined}>
                         {r.name ?? " "}
                       </span>
+                      {r.reserved > 0 && <span className="sub aside">{shareText(r.reserved)} set aside for a waiting sale</span>}
                     </td>
                     <td className="r num">{shareText(r.shares)}</td>
                     <td className="r num">{money(r.value)}</td>
@@ -83,7 +89,7 @@ export function PortfolioCard({ view, changed, before }: { view: AccountView | n
               <tr className="cash">
                 <td>
                   <b>Cash</b>
-                  <span className="sub">available to trade</span>
+                  <span className="sub">{setAside > 0 ? `${money(setAside)} set aside for waiting orders · ${money(available)} available to trade` : "available to trade"}</span>
                 </td>
                 <td className="r num muted">—</td>
                 <td className="r num">{money(cash)}</td>
@@ -102,7 +108,7 @@ export function PortfolioCard({ view, changed, before }: { view: AccountView | n
                 Funds available
                 {cashChanged && changed ? <span className="was">was {money(changed.cash_before)}</span> : null}
               </td>
-              <td className="r num">{money(cash)}</td>
+              <td className="r num">{money(available)}</td>
             </tr>
             <tr className="grand">
               <td>Account value</td>

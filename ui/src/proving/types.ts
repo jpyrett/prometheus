@@ -5,7 +5,7 @@ import type { WorkOrderView } from "../api/types";
 
 export type Verdict = "approved" | "denied" | "neutral" | "unreviewed";
 export type Result = "won" | "lost" | "open" | "not_filled" | "no_data";
-export type ExitReason = "stop" | "target" | "time_stop";
+export type ExitReason = "stop" | "trailing_stop" | "target" | "time_stop";
 /** How a run was made (prometheus/proving/speed.py): FAST asks the Advisor's model with its reasoning switched off and the Critic's at a lower effort; FAITHFUL asks the models as the live desk does. Every program rule is the same in both. */
 export type Speed = "fast" | "faithful";
 /** Where an outcome's recommendation came from: a run of this page, a recorded session of the project (the Track Record), or a decision day of a Time Machine run. */
@@ -26,7 +26,8 @@ export type CaveatCode =
   | "open_positions_marked"
   | "split_adjusted"
   | "model_knowledge_cutoff"
-  | "fast_models";
+  | "fast_models"
+  | "analysts_not_point_in_time";
 
 /** The Advisor's plan: prices and dates, no size. */
 export interface PlanView {
@@ -39,6 +40,9 @@ export interface PlanView {
   time_stop_date: string | null;
   horizon_bars: number | null;
   order_style: string | null;
+  /** The stop TRAILS the highest close (the trend family since Advisor config version 3: no target); absent in a run saved before. */
+  trailing?: boolean;
+  trail_distance?: number | null;
 }
 
 export interface AdvisorCell {
@@ -80,6 +84,14 @@ export interface Horizon {
   benchmark_return_pct: number | null;
 }
 
+/** The stock's return from the close of the decision day to the close `sessions` sessions later, against the benchmark's over the same dates, whatever the plan did: it measures the pick, not where the plan put its stop and target. Absent in a run saved before it existed. */
+export interface Forward {
+  sessions: number;
+  return_pct: number | null;
+  benchmark_return_pct: number | null;
+  excess_return_pct: number | null;
+}
+
 /** One day of a position's path: the close, the return since the entry price, and the benchmark's return over the same days. */
 export interface PathPoint {
   date: string;
@@ -116,6 +128,7 @@ export interface RecOutcome {
   sector_return_pct: number | null;
   gain: number | null;
   horizons: Horizon[];
+  forward?: Forward[];
   max_favorable_pct: number | null;
   max_adverse_pct: number | null;
   path: PathPoint[];
@@ -227,6 +240,8 @@ export interface PortfolioStats {
 
 export interface Exits {
   stop: number;
+  /** Absent in a run saved before the trailing stop existed. */
+  trailing_stop?: number;
   target: number;
   time_stop: number;
   open: number;
@@ -258,15 +273,29 @@ export interface GroupStats {
   small_sample: boolean;
 }
 
+/** The mean FORWARD excess of a group at one horizon, with its n, the standard error of the mean and whether chance alone gives a mean this size (within two standard errors of zero; null with fewer than two). */
+export interface ForwardStats {
+  sessions: number;
+  n: number;
+  mean_excess_pct: number | null;
+  se_pct: number | null;
+  inside_chance: boolean | null;
+  small_sample: boolean;
+}
+
 export interface VerdictStats extends GroupStats {
   verdict: Verdict;
 }
 export interface ScoreStats extends GroupStats {
   low: number;
   high: number;
+  /** The plan-independent excess of the strategy-family picks of the score bucket; absent in a run saved before it existed. The win rate above is "won by its plan". */
+  forward?: ForwardStats[];
 }
 export interface FamilyStats extends GroupStats {
+  /** A strategy family, or "neutral" for the companies the Advisor scored neutral. */
   family: string;
+  forward?: ForwardStats[];
 }
 export interface SymbolStats {
   symbol: string;
@@ -533,6 +562,11 @@ export interface LivePlan {
   stop: number | null;
   target: number | null;
   time_stop_date: string | null;
+  /** A trailing plan (no target): `stop` is its starting stop, `stop_now` the stop in force now and `highest_close` what it rises from; absent in a snapshot made before. */
+  trailing?: boolean;
+  trail_distance?: number | null;
+  highest_close?: number | null;
+  stop_now?: number | null;
 }
 
 export type LiveStatus = "in_plan" | "stop_hit" | "target_hit" | "time_stop_passed" | "no_plan";
@@ -657,6 +691,8 @@ export interface CriticFamilyRow {
   inside_chance: boolean | null;
   sentence_code: CriticReading;
   sentence: string;
+  /** The plan-independent forward excess of the family's recommendations, of the ones the Critic denied and of the ones it approved (the same figures as `ForwardStats`); absent in a card made before it existed. */
+  forward?: { all: ForwardStats[]; denied: ForwardStats[]; approved: ForwardStats[] };
 }
 
 export interface CriticVersionCard {

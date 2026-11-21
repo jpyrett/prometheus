@@ -140,7 +140,9 @@ class Ranking(_Model):
 
 
 class TradePlan(_Model):
-    """The plan of one trade: prices and dates, no size (entry 80)."""
+    """The plan of one trade: prices and dates, no size (entry 80). A TRAILING plan (`trailing` true: the TREND family since Advisor config version 3, `design/advisor_exit_plan_spec.md` rule E2) has NO target: its stop starts at `stop_price` and,
+    at each close, rises to the highest close since the entry less `trail_distance` (a price distance fixed at the decision, equal to `stop_distance`), and never falls; the time stop stays. A record made before (no `trailing`) is a plan with a fixed
+    stop and a target, as it always was. The Advisor's plan is a MEASUREMENT: `trail_distance` is a float like every price here."""
     family: str | None = None
     entry_basis: str
     entry_zone: list[float] | None = None
@@ -148,6 +150,8 @@ class TradePlan(_Model):
     stop_distance: float | None = None
     stop_price: float | None = None
     target_price: float | None = None
+    trailing: bool = False
+    trail_distance: float | None = None
     horizon_bars: int | None = None
     time_stop_date: str | None = None
     time_stop_note: str | None = None

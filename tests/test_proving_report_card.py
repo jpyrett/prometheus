@@ -153,7 +153,7 @@ def test_the_route_answers_with_the_card_of_the_recorded_runs_and_the_track_reco
     assert set(card) == {"min_sample", "chance_band", "limits", "sentences", "runs", "themes", "config_versions", "unmatched", "by_config_version"}
     assert card["min_sample"] == 20 and card["chance_band"] == 2 and set(card["sentences"]) == set(rc.SENTENCES) and "1" in card["by_config_version"]
     version = card["by_config_version"]["1"]
-    assert set(version) == {"config_version", "reviewed", "population", "suitability_excluded", "verdict", "rows", "by_family"}
+    assert set(version) == {"config_version", "reviewed", "population", "suitability_excluded", "verdict", "rows", "by_family", "as_v3"}      # Critic v3: a version before 3 says what the version-3 rules would have made of the same findings
     row = version["rows"][0]
     assert set(row) == {"code", "kind", "suitability", "fired", "hit", "rest", "gap", "se", "inside_chance", "sentence_code", "sentence", "by_theme"} and set(row["hit"]) == {"n", "closed", "won", "mean_excess"}
     assert {r["kind"] for r in card["runs"]} >= {"time_machine"} and any(r["kind"] == "track" for r in card["runs"])
@@ -176,3 +176,74 @@ def test_the_offline_dataset_carries_the_finding_codes_and_critic_rule_value_sco
             and "risk_above_profile" not in e["inputs"]["findings"]["blockers"]]
     assert one["score"] == stats.gap_of([x for c, x in mine if code in c], [x for c, x in mine if code not in c])["gap"]
     assert ev.critic_rule_value([{"example": {"inputs": {"verdict": "approved"}, "outputs": {}}, "outputs": {}}]) == ev.NOT_APPLICABLE
+
+
+# ---------------------------------------------------------------- Critic version 3: the groups (design/critic_v3_two_reasons_spec.md section 5)
+
+NEWS = {"fresh_negative_event", "fresh_negative_news", "event_not_supported", "analysts_bearish"}
+PERFORMANCE = {"trend_not_confirmed", "dead_cat_bounce", "falling_knife", "price_below_zone", "chart_bearish", "poor_performance"}
+PRICE = {"overpriced", "valuation_extreme", "price_left_zone"}
+FAULTS = {"record_not_reviewable", "record_defect", "symbol_unknown", "price_mismatch", "source_missing", "source_altered", "data_unreliable", "market_closed", "quote_stale", "no_live_price", "bars_stale", "record_expired",
+          "time_stop_passed", "stop_already_hit"}
+
+
+def hand_groups(entry):
+    codes = {*entry.blockers, *entry.warnings, *entry.human}
+    return [name for name, signs in (("news", NEWS), ("performance", PERFORMANCE), ("price", PRICE)) if codes & signs]
+
+
+def real_entries():
+    entries, _ = rc.entries_of([FAST], rc.ReviewIndex([FAST], FOLDERS))
+    return entries
+
+
+def test_a_card_of_a_version_before_3_says_what_the_version_3_rules_would_have_made_of_the_same_findings():
+    """The REAL oil test of Critic version 1: its reviews' codes, run through the class table written out here by hand (a fault, a finding that asked for a person, or bad signs in two groups denies; `fresh_negative_news` no longer asks for a person
+    and `data_mismatch`/`data_unverified` are no faults). The card's `as_v3` has the same denied and approved, the same outcomes, and the same count of what changed."""
+    entries = real_entries()
+    card = rc.build([FAST], folders=FOLDERS)["by_config_version"]["1"]
+    assert "groups" not in card and "as_v3" in card
+    population = [e for e in entries if not e.suitability]
+
+    def denied(e):
+        return bool({b for b in e.blockers} & FAULTS) or any(h != "fresh_negative_news" for h in e.human) or len(hand_groups(e)) >= 2
+    mine_denied, mine_approved = [e for e in population if denied(e)], [e for e in population if not denied(e)]
+    v = card["as_v3"]["verdict"]
+    assert (v["hit"]["n"], v["rest"]["n"]) == (len([e for e in mine_denied if e.excess is not None]), len([e for e in mine_approved if e.excess is not None]))
+    assert v["hit"]["mean_excess"] == pytest.approx(mean(e.excess for e in mine_denied if e.excess is not None), abs=1e-6) and v["rest"]["mean_excess"] == pytest.approx(mean(e.excess for e in mine_approved if e.excess is not None), abs=1e-6)
+    changed = card["as_v3"]["changed"]
+    assert changed == {"approved_to_denied": sum(1 for e in population if e.verdict == "approved" and denied(e)), "denied_to_approved": sum(1 for e in population if e.verdict == "denied" and not denied(e))}
+    assert changed["denied_to_approved"] > 0 and "approximation" in card["as_v3"]["note"] and v["sentence_code"] in rc.SENTENCES
+
+
+def test_the_groups_of_a_version_3_card_count_each_group_the_one_group_approvals_and_the_two_group_denials():
+    """The real entries of the oil test given the groups their findings' codes make (by the hand-written table above) and labelled version 3, as the engine would write them for a run of the new Critic: every group row, the two-group verdict
+    and the one-group row are the plain counts and means of those entries."""
+    entries = real_entries()
+    later = [rc.Entry(**{**e.__dict__, "version": "3", "record_id": e.record_id + "-v3", "groups": hand_groups(e)}) for e in entries]
+    card = rc._version_card("3", later, 20, ["oil"])
+    assert "as_v3" not in card and set(card["groups"]) == {"rows", "two", "one"} and [r["group"] for r in card["groups"]["rows"]] == ["news", "performance", "price"]
+    population = [e for e in later if not e.suitability]
+    for row in card["groups"]["rows"]:
+        hit = [e for e in population if row["group"] in e.groups]
+        clean = [e for e in population if row["group"] not in e.groups]
+        assert row["fired"] == len(hit) and row["denied"] == sum(1 for e in hit if e.verdict == "denied") and row["kind"] == "group"
+        assert (row["hit"]["n"], row["rest"]["n"]) == (len([e for e in hit if e.excess is not None]), len([e for e in clean if e.excess is not None]))
+        assert row["hit"]["mean_excess"] == pytest.approx(mean(e.excess for e in hit if e.excess is not None), abs=1e-6)
+    many, one = [e for e in population if len(e.groups) >= 2], [e for e in population if len(e.groups) == 1]
+    assert card["groups"]["two"]["fired"] == len(many) and card["groups"]["one"]["fired"] == len(one) and one and all(row["sentence_code"] in rc.SENTENCES for row in [*card["groups"]["rows"], card["groups"]["two"], card["groups"]["one"]])
+    text = rc.report({"min_sample": 20, "chance_band": 2.0, "limits": [], "runs": [], "themes": ["oil"], "unmatched": 0, "config_versions": ["3"], "by_config_version": {"3": card}})
+    assert "CRITIC VERSION 3" in text and "the groups (a group is bad when a sign of it fired" in text and "two or more bad groups" in text and "one bad group" in text and "WHAT THE VERSION-3" not in text
+
+
+def test_a_review_of_version_3_gives_its_outcome_cell_the_groups_and_one_before_it_gives_none():
+    from critic_helpers import captured, review, tampered_order
+    clean = critic_cell(review(captured("PG_open"), own={})["PG"])
+    assert clean.groups == [] and clean.config_version == "3"
+    trend = tampered_order("PG_open", **{"trade.family": "trend"})
+    two = critic_cell(review(trend, own={}, changes={"PG": {"ret_5d": -0.021, "sma_126": 111.4}})["PG"])
+    assert two.groups == ["performance", "price"] and two.approved is False and "trend_not_confirmed" in two.blockers and "overpriced" in two.blockers
+    old = next(r for r in reviews_of_the_research().values())
+    assert "groups" not in old and critic_cell(old).groups is None
+    entries, _ = rc.entries_of([FAST], rc.ReviewIndex([FAST], FOLDERS))
+    assert all(e.groups is None for e in entries)

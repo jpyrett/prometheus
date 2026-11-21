@@ -30,7 +30,7 @@ from pydantic import BaseModel, BeforeValidator, Field, PlainSerializer, field_v
 from prometheus.common import shares as sh
 from prometheus.common import trading_clock
 from prometheus.common.money import EXACT, Price, cents, exact, json_number, non_negative_money, price_scale
-from prometheus.common.shares import PositiveShares
+from prometheus.common.shares import PositiveShares, Shares
 from prometheus.rag.loaders import check_symbol
 
 
@@ -65,9 +65,11 @@ class Portfolio(BaseModel):
     schema_version: int = 1
     user: str
     currency: str = "USD"
-    cash_avail: Cash = Decimal("0.00")                                  # free settled cash, in `currency`, to the cent: what can buy today. Sale proceeds that have not settled (T+1) are not in it. A file may write it as text ("51.23")
+    cash_avail: Cash = Decimal("0.00")                                  # free settled cash, in `currency`, to the cent: what can buy today. Sale proceeds that have not settled (T+1) are not in it, and neither is the cash a waiting order has SET ASIDE (below). A file may write it as text ("51.23")
     positions: list[Position] = Field(default_factory=list)
     note: str | None = None
+    reserved_cash: Cash = Field(default=Decimal("0.00"), exclude=True)  # WAITING ORDERS (design choices entry 140): the cash the account's open orders hold, which `cash_avail` has already had taken off (the account book's `list_portfolio` reads the one door, `AccountStore.available_cash`). Not part of any dump: only the account book knows it
+    reserved_shares: dict[str, Shares] = Field(default_factory=dict, exclude=True)  # {symbol: shares} the open orders to SELL hold: `positions` keeps the whole holding, and `sellable_shares` takes these off
 
     @model_validator(mode="after")
     def _one_line_per_symbol(self):
@@ -92,8 +94,23 @@ class Portfolio(BaseModel):
             return Decimal(0)
         today = today or trading_clock.market_day()
         if position.acquired is None or position.acquired < today:
-            return position.shares
-        return Decimal(0) if position.recent_shares is None else sh.minus(position.shares, min(position.recent_shares, position.shares))
+            free = position.shares
+        else:
+            free = Decimal(0) if position.recent_shares is None else sh.minus(position.shares, min(position.recent_shares, position.shares))
+        return min(free, self.free_shares(symbol))      # the shares a waiting sale has set aside may not be sold again (design choices entry 140)
+
+    @property
+    def cash_total(self) -> Decimal:
+        """ALL the cash of the account: the available cash and what waiting orders have set aside. What the account holds, as the book's ledger has it; `cash_avail` is what may be spent."""
+        return self.cash_avail + self.reserved_cash
+
+    def free_shares(self, symbol: str) -> Decimal:
+        """The shares of `symbol` held that no waiting sale has set aside: what a new sale may sell (0 when none is held)."""
+        position = self.position(symbol)
+        if position is None:
+            return Decimal(0)
+        reserved = self.reserved_shares.get(symbol, Decimal(0))
+        return Decimal(0) if reserved >= position.shares else sh.minus(position.shares, reserved)
 
     def market_value(self, prices: dict[str, Decimal]) -> Decimal:
         return sum((trade_amount(p.shares, prices[p.symbol]) for p in self.positions), Decimal("0.00"))      # each holding's value is `trade_amount`: decimal, half up to the cent (design choices entries 111 and 112)

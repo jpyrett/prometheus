@@ -1,7 +1,7 @@
 // The outcome wall (spec 13.2 (3)): one small card per recommendation in decision-day order, filterable by verdict and result. A card shows the ticker, the Advisor's score dial, the Critic's verdict badge,
 // the plan chart, the return and the excess, and WON / LOST / OPEN / NOT FILLED. A stock the desk did not buy (P8) is grey with a dashed outline and says why. A card that closes while the run is
 // watched flashes once. Click: the full recommendation in a side sheet, drawn by the Desk's own RecommendationPanel.
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { PlanChart } from "../charts/PlanChart";
 import { shortDate } from "../charts/scale";
 import { RecommendationPanel } from "../components/RecommendationPanel";
@@ -11,6 +11,10 @@ import { ScoreDial } from "../components/ui/ScoreDial";
 import { money, pct, points, shares as shareText } from "../format";
 import type { WorkOrderView, WorkRow } from "../api/types";
 import { ChipGroup } from "./Chips";
+
+// The Critic v3 denies for two GROUPS (design choices entry 137): `group:news` is said in words, as the Critic's own DENY sentence says it; every other code is shown as recorded.
+const GROUP_WORDS: Record<string, string> = { "group:news": "poor news", "group:performance": "poor performance", "group:price": "a price too high" };
+const reasonWords = (code: string) => GROUP_WORDS[code] ?? code;
 import type { RecOutcome, Result, Verdict } from "./types";
 import { filterOutcomes, NO_FILTERS, notTradedWords, RESULT_WORDS, VERDICT_WORDS, wallOrder, type Filters } from "./selectors";
 
@@ -215,10 +219,10 @@ export function OutcomeSheet({ outcome: o, desk, onClose, onNeedDesk }: { outcom
                   <dt>Advisor</dt>
                   <dd>{o.advisor ? `score ${o.advisor.score ?? "—"} · ${o.advisor.stance ?? "—"} · ${o.advisor.family ?? "—"}` : "—"}</dd>
                   <dt>Critic</dt>
-                  <dd>{o.critic ? `${o.critic.approved ? "approved" : "denied"} ${o.critic.score ?? ""} ${o.critic.grade ?? ""}${o.critic.denial_reasons.length ? ` (${o.critic.denial_reasons.join(", ")})` : ""}` : VERDICT_WORDS[o.verdict]}</dd>
+                  <dd>{o.critic ? `${o.critic.approved ? "approved" : "denied"} ${o.critic.score ?? ""} ${o.critic.grade ?? ""}${o.critic.denial_reasons.length ? ` (${o.critic.denial_reasons.map(reasonWords).join(", ")})` : ""}` : VERDICT_WORDS[o.verdict]}</dd>
                   <dt>Plan</dt>
                   <dd className="num">
-                    entry {o.plan.entry_low !== null ? `${money(o.plan.entry_low)} to ${money(o.plan.entry_high)}` : "—"} · stop {money(o.plan.stop)} · target {money(o.plan.target)}
+                    entry {o.plan.entry_low !== null ? `${money(o.plan.entry_low)} to ${money(o.plan.entry_high)}` : "—"} · {o.plan.trailing ? "starting stop" : "stop"} {money(o.plan.stop)} · {o.plan.trailing ? `no target, the stop trails ${money(o.plan.trail_distance)} under the highest close` : `target ${money(o.plan.target)}`}
                     {o.plan.time_stop_date ? ` · time stop ${o.plan.time_stop_date}` : ""}
                   </dd>
                   {o.notes.length > 0 && (
@@ -227,6 +231,26 @@ export function OutcomeSheet({ outcome: o, desk, onClose, onNeedDesk }: { outcom
                       <dd>{o.notes.join("; ")}</dd>
                     </>
                   )}
+                </dl>
+              </div>
+            </Card>
+          )}
+          {(o.forward ?? []).some((f) => f.return_pct !== null) && (
+            <Card title="After the decision day">
+              <div className="card-b">
+                <p className="muted">The stock&apos;s return from the close of the decision day, whatever the plan did (it measures the pick, not where the plan put its stop and target):</p>
+                <dl className="kv">
+                  {(o.forward ?? [])
+                    .filter((f) => f.return_pct !== null)
+                    .map((f) => (
+                      <Fragment key={f.sessions}>
+                        <dt>{f.sessions} sessions</dt>
+                        <dd className="num">
+                          {pct(f.return_pct)}
+                          {f.excess_return_pct !== null ? ` · ${points(f.excess_return_pct)} against the benchmark` : ""}
+                        </dd>
+                      </Fragment>
+                    ))}
                 </dl>
               </div>
             </Card>

@@ -232,9 +232,13 @@ class Sleeve(_Section):
 
 
 class Trade(_Section):
+    """The trade plan's multipliers. `min_reward_to_risk` and `trailing_families` are CONVENTIONS (design/advisor_exit_plan_spec.md, rules E1 and E2): a target is at least `min_reward_to_risk` times the stop distance above the entry, and a family
+    in `trailing_families` has no target and a stop that rises with the highest close. Neither is tuned on the outcomes (design choices entry 133)."""
     entry_atr: float
     stop_atr: dict[str, float]
     target_edge_multiple: float
+    min_reward_to_risk: float = Field(ge=0)      # 0 is no floor: the target is the family's edge alone, as before Advisor config version 3
+    trailing_families: list[str]
     trend_limit_atr: float
     event_limit_reaction_atr: float
 
@@ -288,6 +292,9 @@ def load_config(path: str | Path | None = None) -> AdvisorConfig:
             raise ValueError(f"{path}: regime.multipliers.{family} has no value for {', '.join(missing)}")
         if family not in config.trade.stop_atr:
             raise ValueError(f"{path}: trade.stop_atr has no value for {family}")
+    unknown_trailing = [f for f in config.trade.trailing_families if f not in FAMILIES]
+    if unknown_trailing or len(set(config.trade.trailing_families)) != len(config.trade.trailing_families):
+        raise ValueError(f"{path}: trade.trailing_families must name each strategy family once, not {config.trade.trailing_families}")
     for case, sleeve in config.sleeves.items():
         unknown = [f for f in [*sleeve.eligible, *sleeve.veto_only] if f not in FAMILIES]
         if case not in ("funds", "theme", "industry", "market") or unknown:

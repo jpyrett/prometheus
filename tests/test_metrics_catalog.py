@@ -46,7 +46,7 @@ def test_the_catalogue_is_complete_and_consistent():
     assert len(catalog.METRIC_NAMES) == len(set(catalog.METRIC_NAMES))
     for name, spec in catalog.METRICS.items():
         assert spec.name == name and callable(spec.fn) and spec.unit and spec.window and spec.description, name
-        assert set(spec.inputs) <= {"bars", "financials", "evidence"}, name
+        assert set(spec.inputs) <= {"bars", "financials", "evidence", "splits"}, name      # "splits" (Critic v3): `close_history` is put into the share basis of the last day by the stored split table
     for name in tech.MIN_BARS:                                           # every indicator of the technicals module is in the catalogue (the ones that are not names of their own)
         assert name in catalog.METRICS or name in ("atr_14",) or name.startswith(("ret_", "sma_", "above_sma")), name
     assert set(FINANCIAL_METRICS) <= set(catalog.METRIC_NAMES)           # every Finnhub field kept is a metric

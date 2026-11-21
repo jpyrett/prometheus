@@ -141,8 +141,7 @@ def _first_reading(typed: str, replies: list):
     (EACH, edited(EACH, 0, dollars=-3000), "dollars"),
     (EACH, edited(EACH, budget=6000), "one total (budget) and the dollars of a stock"),                                                    # a total and the dollars of the orders
     (EACH, edited(EACH, allocation="even"), "an even split"),                                                                            # an even split of amounts that are already given
-    ("Buy 3,000 shares of XOM and 3,000 shares of MSFT", edited(EACH), "not as money"),                                                    # the number was written as shares
-    ("Buy 3000 of XOM and 3000 of MSFT", edited(EACH), "not as money"),                                                                    # a bare number is not money
+    # ("Buy 3,000 shares of XOM and 3,000 shares of MSFT" and "Buy 3000 of XOM and 3000 of MSFT" with the model's dollars 3000 were REFUSED here; since entry 138 a number written as shares or as a bare number before the stock is CORRECTED to shares, tests/test_request_numbers.py)
     ("Buy 20% of XOM and 20% of MSFT", edited(EACH, 0, dollars=20), "not as money"),                                                        # a percentage
     ("Buy $5,000 of MU and AMD", edited("Buy $5,000 of MU and AMD", action="order", symbols=[], budget=None, orders=[{"side": "buy", "symbol": "MU", "shares": None, "dollars": 5000}, {"side": "buy", "symbol": "AMD", "shares": None, "dollars": 5000}]),
      "the dollars of 2 orders but you wrote it 1 time"),                                                                                  # $5,000 written once is one total, never $5,000 for each: that would spend $10,000
@@ -153,7 +152,7 @@ def test_a_reading_whose_dollars_the_user_did_not_write_as_money_is_refused(type
 
 
 def test_the_check_reads_numbers_and_never_the_words_around_the_stock():
-    assert it.money_written("Buy $3,500 of XOM and 2k of MSFT, 4,000 shares, 20%, 1500 into NVDA, 7 dollars") == {Decimal("3500"), Decimal("2000"), Decimal("7")} and it.money_written("2k of MSFT, 3 million", strict=True) == set()
+    assert it.money_written("Buy $3,500 of XOM and 2k of MSFT, 4,000 shares, 20%, 1500 into NVDA, 7 dollars") == {Decimal("3500"), Decimal("7")} and it.money_written("2k of MSFT, 3 million", strict=True) == set()      # AMENDED (entry 138): 2k with no $ and no word dollars is a quantity, not money
     typed = "Put $1,500 into NVDA and $500 into AMD"
     assert fields(it.parse_intent(FORMS[typed]["replies"][-1], typed)) == [("buy", "NVDA", None, 1500), ("buy", "AMD", None, 500)]
     swapped = json.dumps({**reply(typed), "orders": [{"side": "buy", "symbol": "NVDA", "shares": None, "dollars": 500}, {"side": "buy", "symbol": "AMD", "shares": None, "dollars": 1500}]})

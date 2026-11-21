@@ -27,7 +27,7 @@ The graph:
                                   +-- nothing is permitted --> END
 
     A DIRECT ORDER (entries 87 and 88: the user names the trade, "Buy 50 shares of MSFT" or "of Microsoft"; only with the Critic's desk, `with_critic=True`, which is the one that decides and trades) skips the research, the Advisor and the Critic:
-    START -> account_manager -> account_manager_direct -> trader -> END                (the trader node runs only when the decision says yes_user; the Data Clerk's node, the Advisor and the Critic are never run: the Account Manager asks the Data Clerk for each
+    START -> account_manager -> account_manager_direct -> [account_manager_funds ->] trader -> END                (the trader node runs only when the decision says yes_user; the funds node only when a direct buy the cash does not cover is permitted to be paid for by selling holdings, entry 142; the Data Clerk's node, the Advisor and the Critic are never run: the Account Manager asks the Data Clerk for each
                                                                                        company name and symbol itself and appends them to the work order when it makes it)
     A STOCK THE DATA CLERK DID NOT FIND (entries 101 and 102): "Google" is found as its listed owner (Alphabet Inc., GOOGL); a name that is not listed ("Chick-fil-a": privately held) is, when others were found, DROPPED from the order
     without a question in AUTO mode and asked about one by one in ASK mode (the `approver` carries the question; the Account Manager's model words it, code checks it and reads the yes or no); a blocking issue (nothing found, a lookup that
@@ -54,6 +54,10 @@ state of the graph (the design: "the saved WORK_ORDER is the same object every a
                    (`AccountManager.name_the_stocks`: `data.companies` and the user's own orders in `direct_orders`). This node asks the Data Clerk for the current price of each symbol, decides each order
                    (`AccountManager.decide_direct`: the user's own order is the approval, `yes_user`, `origin: "direct"`; for a company the user NAMED, Ask mode asks them to confirm the symbol, the company, the shares and the amount, and Auto mode
                    does not ask; it is placed as typed or not at all; the profile's limits never apply) and the order goes on to the Trader.
+  account_manager_funds  RAISING FUNDS FOR A PURCHASE THE CASH DOES NOT COVER (entry 142; `funding.py`, design/direct_raise_funds_spec.md). On every desk that has the Critic AND the Trader, a decision that carries `funding` (the user permitted selling holdings
+                   to pay for it: "raise funds if needed" in their words, the setting ALWAYS_RAISE_FUNDS, or their yes in Ask mode; a direct order's typed shares, the dollars of a direct order, or the shares typed with a recommendation) sends the run
+                   through this node on its way to the Trader: `AccountManager.fund_decisions` runs RaiseFunds ONCE for the whole shortfall and its answer is `state["funds"]`, the Trader's funding plan; when it cannot pay for the purchase the decision is `no_funds`
+                   and the Trader is not run. Without such a decision the run never touches it. (With `with_funds`, the older flag of entry 42, the node also plans the best recommendation as it always did.)
   trader           (only with `build_desk(with_trader=True)`, Trader v1, entries 73 to 75) the Account Manager hands the decided order to the Trader (`AccountManager.perform_trades`): it executes the permitted trades against a
                    SIMULATED broker, on paper (the current quote) or as a backtest (the stored bars), and the Account Manager approves each trade against the funds it holds and records each fill as it happens, one trade at a time (entry 81: the Trader holds no cash). With the funds node the RaiseFunds plan arrives as the funding
                    plan (its sells need the user's yes). It never raises, and it never edits the Advisor's records, the Critic's reviews or the decisions; it writes `order.trades` and `order.trader_runs` and sets `traded`.
@@ -100,6 +104,7 @@ from typing import Annotated, Callable, TypedDict
 from langgraph.graph import END, START, StateGraph
 
 from prometheus.agents.account_manager import direct as direct_order
+from prometheus.agents.account_manager import funding as funding_module
 from prometheus.agents.account_manager import neutral as neutral_names
 from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO, DEFAULT_PROFILE, AccountManager, report as funds_report, top_recommendation
 from prometheus.agents.account_manager.decisions import terminal_approver
@@ -345,6 +350,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         try:
             intent = manager.understand_request(ask.get("text"))
             asked = None if intent.action == "order" else classify(*intent.as_request())
+            mode = (state["request"].get("account") or {}).get("mode") or manager.profile.trade_mode      # the run's own mode
+            intent = manager.settle_unclear_number(intent, mode, clarify)      # "spend 1000 on MU": shares or dollars? asked in Ask mode, a stop in Auto mode (entry 138, D5): never bought on a guess
         except (ValueError, RuntimeError, OSError) as error:        # the request could not be read: the run's last message asks the user to clarify it (entry 102)
             return {"order": None, "errors": [str(error)], "plan": None, "clarify": True}
         if intent.action == "order" and not with_critic:
@@ -361,11 +368,15 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         find, days, fetch = intent.count or ask.get("default_count", 3), ask.get("news_days", ASK_NEWS_DAYS), bool(ask.get("fetch"))
         case = ask.get("case") or ("industry" if asked.kind in ("phrase", "list") else "funds")
         order = new_work_order(f"What do the stored news, press releases and filings say about {intent.what()}?", requester=state["request"].get("requester", REQUESTER), subject=asked.symbols or asked.phrase or asked.text, source=DEFAULT_SOURCE,
-                               time_period=f"last {days} days", since_days=days, top_k=TOP_K, live=fetch, case=case, criteria={"sentiment": "bullish or bearish"})
+                               time_period=f"last {days} days", since_days=days, top_k=TOP_K, live=fetch, case=case, criteria={"sentiment": "bullish or bearish"}, max_price=intent.max_price, min_price=intent.min_price)      # a price limit ("under $50 a share") and a price floor ("over $20 a share") go on the order, where the Advisor reads them (entries 138 and 140)
         reasons = verify_request(order)
         order.errors = [*order.errors, *reasons]
         plan = {"intent": intent, "request": asked, "find": find, "case": case, "action": intent.action, "balance": "even" if intent.allocation == "even" else None, "budget": intent.total_budget,
                 "each": intent.each_dollars,      # "the top 3 with $3,000 each" (entry 125): the amount for EACH purchase, never a total
+                "max_price": intent.max_price,      # "under $50 a share" (entry 138): the Account Manager checks it again against the price it sizes at
+                "min_price": intent.min_price,      # "over $20 a share" (entry 140): the same from the other side
+                "raise_funds": intent.raise_funds,      # the user's words let the Account Manager sell holdings to pay for a purchase the cash does not cover (entry 142, R2)
+                "shares_of": dict(intent.shares_of) or None, "shares_each": intent.shares_each,      # "buy 10 of MU if the recommendation passes", "5 shares of each of the top 3" (entry 140, C1): the shares are each approved purchase's limit
                 "count": intent.count,      # the number of companies the request asked for, or None: `find` falls back to a default of 3 for the Advisor and that default must not cut anything (entry 107)
                 "said_how_much": intent.said_how_much(), "request_text": intent.request, "fetch": fetch,
                 "news_days": days, "result": Result(asked, case, eastern_date(clock()), find)}
@@ -459,7 +470,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             return {"order": order}
         plan = state.get("plan") or {}
         return {"order": manager.decide_trades(order, portfolio, approver, clock(), (state["request"].get("account") or {}).get("mode"), plan.get("balance"), plan.get("budget"),
-                                               clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "", count=plan.get("count"), each=plan.get("each"))}
+                                               clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "", count=plan.get("count"), each=plan.get("each"), max_price=plan.get("max_price"),
+                                               min_price=plan.get("min_price"), shares_of=plan.get("shares_of"), shares_each=plan.get("shares_each"), raise_funds=bool(plan.get("raise_funds")))}
 
     def account_manager_direct(state: DeskState) -> dict:
         """A DIRECT ORDER (entry 87): the Account Manager prices the trades the user named (it asks the Data Clerk for the quotes) and decides them: the user's own order is the approval, so there is no recommendation, no
@@ -473,7 +485,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         plan = state.get("plan") or {}
         intent = plan.get("intent")
         return {"order": manager.decide_direct(order, portfolio, clock(), (state["request"].get("account") or {}).get("mode"), approver, clarify=clarify, said_how_much=intent.said_how_much() if intent else True,
-                                               request_text=plan.get("request_text") or "", balance="even" if intent and intent.allocation == "even" else None, budget=intent.total_budget if intent else None)}
+                                               request_text=plan.get("request_text") or "", balance="even" if intent and intent.allocation == "even" else None, budget=intent.total_budget if intent else None,
+                                               raise_funds=bool(intent and intent.raise_funds))}
 
     def trader(state: DeskState) -> dict:
         """The Account Manager hands the decided order to the Trader, which executes what is permitted against the simulated broker (paper or backtest): never raises, and never edits what the other agents wrote. The
@@ -489,9 +502,18 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         return {"order": manager.perform_trades(order, portfolio, agent, clock(), funding=state.get("funds"), approver=approver, book=bool(spec.get("book")))}
 
     def account_manager_funds(state: DeskState) -> dict:
-        """RaiseFunds for the best recommendation: never raises, and never changes the work order."""
+        """RaiseFunds, never raising. When a decision carries `funding` (entry 142: the user permitted selling holdings to pay for the purchase the cash does not cover) it is RaiseFunds for those purchases, ONE plan for the whole shortfall
+        (`AccountManager.fund_decisions`), the Trader's funding plan; the decisions change only when it cannot pay for them (`no_funds`). Otherwise (the older `--raise-funds` of entry 42) it is RaiseFunds for the best recommendation and
+        never changes the work order."""
         spec = state["request"].get("funds") or {}
         order = state["order"]
+        if funding_module.needs_funding(order):
+            try:
+                manager, portfolio = account(state)
+            except (RuntimeError, ValueError, OSError) as error:
+                order.errors = [*order.errors, f"the Account Manager could not raise the funds: {error}"]
+                return {"order": order}
+            return {"order": order, "funds": manager.fund_decisions(order, portfolio, clock())}
         trades = [d for d in order.trade_decisions if d["will_trade"] in ("yes_auto", "yes_user") and d["action"] != "reduce"]   # with the Critic: what it approved, the Account Manager sized (the shares it asks RaiseFunds for are the decision's) and the user or Auto allowed
         target = spec.get("buy") or (trades[0]["symbol"] if trades else None if with_critic else top_recommendation(order))
         if not spec.get("shares") and trades and trades[0]["symbol"] == target:
@@ -529,7 +551,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     def after_decision(state: DeskState) -> str:
         if with_funds:
             return "account_manager_funds" if state["order"].status in ("decided", "reviewed") else END
-        return "trader" if with_trader and permitted(state["order"]) else END
+        return after_permission(state["order"])
 
     def after_funds(state: DeskState) -> str:
         return "trader" if with_trader and permitted(state["order"]) else END
@@ -540,11 +562,18 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         return "account_manager_direct" if (state.get("plan") or {}).get("direct") and with_critic else "data_clerk"      # a direct order skips the research, the Advisor and the Critic (entry 87)
 
     def after_direct(state: DeskState) -> str:
-        return "trader" if with_trader and permitted(state["order"]) else END
+        return after_permission(state["order"])
+
+    def after_permission(order: WorkOrder) -> str:
+        """Where a decided order goes: nowhere when nothing is permitted; to RaiseFunds first when a permitted purchase is to be paid for by selling holdings the user allowed to be sold (entry 142); else straight to the Trader."""
+        if not (with_trader and permitted(order)):
+            return END
+        return "account_manager_funds" if funds_node and funding_module.needs_funding(order) else "trader"
 
     def after_data_clerk(state: DeskState) -> str:
         return "advisor" if with_advisor and state["order"].status == "data_ready" else END
 
+    funds_node = with_funds or (with_critic and with_trader)      # entry 142: every desk that decides AND trades can raise funds for a purchase the cash does not cover
     graph = StateGraph(DeskState)
     graph.add_node("account_manager", _timed("account_manager", account_manager))
     graph.add_node("data_clerk", _timed("data_clerk", data_clerk))
@@ -552,7 +581,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     if with_critic:
         graph.add_node("critic", _timed("critic", critic))
         graph.add_node("account_manager_decision", _timed("account_manager_decision", account_manager_decision))
-    if with_funds:
+    if funds_node:
         graph.add_node("account_manager_funds", _timed("account_manager_funds", account_manager_funds))
     if with_trader:
         graph.add_node("trader", _timed("trader", trader))
@@ -560,7 +589,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     if with_critic:   # the desk that decides and trades can take a direct order: account_manager -> account_manager_direct -> trader
         graph.add_node("account_manager_direct", _timed("account_manager_direct", account_manager_direct))
         graph.add_conditional_edges("account_manager", after_account_manager, {"data_clerk": "data_clerk", "account_manager_direct": "account_manager_direct", END: END})
-        graph.add_conditional_edges("account_manager_direct", after_direct, {"trader": "trader", END: END} if with_trader else {END: END})
+        graph.add_conditional_edges("account_manager_direct", after_direct, {"trader": "trader", **({"account_manager_funds": "account_manager_funds"} if funds_node else {}), END: END} if with_trader else {END: END})
     else:
         graph.add_conditional_edges("account_manager", after_account_manager, {"data_clerk": "data_clerk", END: END})
     graph.add_conditional_edges("data_clerk", after_data_clerk, {"advisor": "advisor", END: END})
@@ -574,10 +603,12 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             else:
                 graph.add_edge("account_manager_funds", END)
         elif with_trader:
-            graph.add_conditional_edges("account_manager_decision", after_decision, {"trader": "trader", END: END})
+            graph.add_conditional_edges("account_manager_decision", after_decision, {"trader": "trader", "account_manager_funds": "account_manager_funds", END: END})
         else:
             graph.add_edge("account_manager_decision", END)
         if with_trader:
+            if not with_funds:      # the funds node of entry 142: its answer is the Trader's funding plan (with `with_funds` the edge above is the same one)
+                graph.add_conditional_edges("account_manager_funds", after_funds, {"trader": "trader", END: END})
             graph.add_edge("trader", END)
     elif with_funds:
         graph.add_conditional_edges("advisor", after_advisor, {"account_manager_funds": "account_manager_funds", END: END})

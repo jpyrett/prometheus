@@ -47,7 +47,7 @@ def play(http: TestClient) -> list[tuple[int, str, dict]]:
 def test_the_replay_of_bob_jones_goes_through_six_stages_and_ends_traded_with_the_account_of_the_capture():
     http = client("bob_jones_oil")
     health = http.get("/api/health").json()
-    assert health["mode"] == "replay" and health["book"] == "ok" and health["defaults"] == {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": True} and health["limits"] == {"prompt_chars": 600}
+    assert health["mode"] == "replay" and health["book"] == "ok" and health["defaults"] == {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": False, "raise_funds": False} and health["limits"] == {"prompt_chars": 600}
     assert DEFAULT_PROMPT == "Buy an even mixture of 3 most recommended stocks in the pizza restaurants using $3000 of my available money"
     events = play(http)
     kinds = [kind for _, kind, _ in events]
@@ -187,7 +187,29 @@ def test_run_settings_for_the_four_combinations_only_say_whether_a_neutral_recom
     assert settings.run_settings(strict=False, neutral=False) == settings.RunSettings(allow_neutral=False)
     for neutral in (True, False):                                            # strict: only what the Critic approves trades, so neutral is not a pass whatever the other box says
         assert settings.run_settings(strict=True, neutral=neutral) == settings.RunSettings(allow_neutral=False)
-    assert [f.name for f in dataclasses.fields(settings.RunSettings)] == ["allow_neutral"]
+    assert [f.name for f in dataclasses.fields(settings.RunSettings)] == ["allow_neutral", "always_raise_funds"]      # AMENDED (entry 142, R12): the box "Always raise funds" is the second setting of a run
+
+
+def test_the_raise_funds_box_is_its_own_setting_off_unless_ticked_and_does_not_change_what_strict_means():
+    assert settings.run_settings(False, True) == settings.RunSettings(allow_neutral=True, always_raise_funds=False) and settings.run_settings(False, True, raise_funds=True).always_raise_funds is True
+    assert settings.run_settings(True, True, raise_funds=True) == settings.RunSettings(allow_neutral=False, always_raise_funds=True)      # Strict still means only what the Critic approves; the box is independent of it
+
+
+def test_the_raise_funds_variable_is_set_for_the_run_and_put_back_even_when_the_run_raises(monkeypatch):
+    monkeypatch.setenv(settings.RAISE_FUNDS_SETTING, "false")
+    with settings.applied(settings.run_settings(False, True, True)):
+        assert os.environ[settings.RAISE_FUNDS_SETTING] == "true" and os.environ[settings.NEUTRAL_SETTING] == "true"
+    assert os.environ[settings.RAISE_FUNDS_SETTING] == "false"
+    with pytest.raises(RuntimeError):
+        with settings.applied(settings.run_settings(False, True, True)):
+            raise RuntimeError("the run broke")
+    assert os.environ[settings.RAISE_FUNDS_SETTING] == "false"
+    with settings.applied(settings.run_settings(False, True)):                      # the box unticked is false for that run, whatever `.env` says
+        assert os.environ[settings.RAISE_FUNDS_SETTING] == "false"
+    monkeypatch.delenv(settings.RAISE_FUNDS_SETTING)
+    with settings.applied(settings.run_settings(False, True, True)):
+        assert os.environ[settings.RAISE_FUNDS_SETTING] == "true"
+    assert settings.RAISE_FUNDS_SETTING not in os.environ                         # it was not set before: removed again
 
 
 def test_the_neutral_variable_is_set_for_the_run_and_put_back_even_when_the_run_raises(monkeypatch):

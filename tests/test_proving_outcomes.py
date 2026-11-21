@@ -264,8 +264,8 @@ def test_a_recommendation_is_read_as_the_record_has_it_in_schema_2_and_3_and_the
     assert [record.verdict_of(reals[r].order, r) for r in ("937bfd681be3", "8b78a7afdbcc", "816aea79fcda", "6d8959fcf54e")] == ["denied", "approved", "denied", "denied"]     # APA (risk), XOM, SNDK (risk), PG (the market was closed)
     assert [record.verdict_of(reals["816aea79fcda"].order, d["record_id"]) for d in reals["816aea79fcda"].order.trade_decisions] == ["denied", "neutral", "neutral"]
     assert record.verdict_of(reals["816aea79fcda"].order, "not-a-record") == "unreviewed"
-    assert record.caveat_sentences(["small_sample"]) == [record.CAVEATS["small_sample"]] and len(record.CAVEATS) == 11 and "fast_models" in record.CAVEATS
+    assert record.caveat_sentences(["small_sample"]) == [record.CAVEATS["small_sample"]] and len(record.CAVEATS) == 12 and "fast_models" in record.CAVEATS and "analysts_not_point_in_time" in record.CAVEATS
     with pytest.raises(ValueError):
         record.caveat_sentences(["everything_is_fine"])
     first = FIRST
-    assert first == date(2025, 5, 1) and load_config().bucket_of(73) == (70, 80) and load_config().bucket_of(100) == (80, 101) and load_config().bucket_of(101) is None
+    assert first == date(2025, 5, 1) and load_config().bucket_of(73) == (70, 75) and load_config().bucket_of(100) == (75, 101) and load_config().bucket_of(101) is None and load_config().bucket_of(59) == (0, 60)      # the buckets of the config since the forward excess: <60, 60-65, 65-70, 70-75, 75+

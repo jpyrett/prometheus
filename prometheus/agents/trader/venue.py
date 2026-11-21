@@ -71,6 +71,12 @@ class Venue(Protocol):
         """The price rules for ONE trade against the snapshot: `filled` at a price, `active` (it rests) or `rejected` with a code of the Trader's closed list. `shares` is what a real venue would submit; a simulated venue's rules
         decide the price and the status only, and the shares are the Account Manager's approval (the handshake of entry 81)."""
 
+    def report_fill(self, trade: Trade, shares: Decimal, estimate: Execution, prices: Prices) -> Execution:
+        """What the venue says was FILLED, asked AFTER the Account Manager approved `shares` of this trade at the price of `estimate` (what `execute` said it would fill at): the report of the fill that is then verified and booked (design choices
+        entry 143, B1). A simulated venue fills exactly as it estimated, so it gives `estimate` back. A live venue SUBMITS the approved shares here (never before the approval) and waits for the broker's report: a sale may come back at a LOWER
+        price than the estimate (the Account Manager books what really filled; a funded purchase is then approved against the cash that is really there, and refused when it no longer pays for it: the sales stay, see `PaperBroker._fund`), and
+        a purchase must never be reported at a higher price than it was approved at (a live venue sends a limit order at the approved price: nothing may cost more than the account's money, entry 111). `filled` with a price, or `rejected`/`active` with the reason."""
+
     def follow(self, trade: Trade, plan: dict, prices: Prices) -> Outcome | None:
         """Step 9: how a filled purchase went through the bars after its entry, by the Advisor's own `plan` (the recommendation's `trade`): an `Outcome`; None for a venue that has no later bars to follow it through."""
 
@@ -94,6 +100,11 @@ def plan_price(measured) -> Decimal | None:
         return price_door(measured)
     except ValueError:
         return None
+
+
+def plan_trail(plan: dict) -> Decimal | None:
+    """The Advisor's trailing distance (its float) through THE price door, once; None for a plan with a fixed stop (a record made before Advisor config version 3 has no `trailing`, and a plan that says `trailing` false has none)."""
+    return plan_price(plan.get("trail_distance")) if plan.get("trailing") is True else None
 
 
 def snapshot(prices: Prices, why: dict[tuple[str, ...], str], answered: bool, errors: list[str], say_failed: bool) -> Prices:
@@ -148,6 +159,9 @@ class PaperVenue:
     def execute(self, trade: Trade, shares: Decimal, prices: Prices) -> Execution:
         return simulator.fill_paper(trade.side, trade.order_type, trade.limit_price, prices.quotes.get(trade.symbol), trade.limit_low, trade.limit_high, self.config.costs.slippage_bps)
 
+    def report_fill(self, trade: Trade, shares: Decimal, estimate: Execution, prices: Prices) -> Execution:
+        return estimate                                   # a paper fill is the quote it was estimated at (slippage 0: entry 111, M4)
+
     def follow(self, trade: Trade, plan: dict, prices: Prices) -> Outcome | None:
         return None
 
@@ -197,9 +211,12 @@ class BacktestVenue:
             return Execution("rejected", f"{trade.symbol} has no stored bar on {prices.entry_date.isoformat()}", reject_code="price_unavailable")
         return simulator.fill_backtest(trade.side, trade.order_type, trade.limit_price, bar, trade.limit_low, trade.limit_high, self.config.costs.slippage_bps)
 
+    def report_fill(self, trade: Trade, shares: Decimal, estimate: Execution, prices: Prices) -> Execution:
+        return estimate                                   # a backtest fill is the bar's price it was estimated at
+
     def follow(self, trade: Trade, plan: dict, prices: Prices) -> Outcome | None:
         return simulator.follow(trade.fill.price, trade.fill.shares, trade.fill.date, prices.bars.get(trade.symbol, []), plan_price(plan.get("stop_price")), plan_price(plan.get("target_price")), plan.get("time_stop_date"),
-                                self.config.costs.slippage_bps, prices.bars.get(self.config.backtest.benchmark))
+                                self.config.costs.slippage_bps, prices.bars.get(self.config.backtest.benchmark), trail_distance=plan_trail(plan))
 
 
 SIMULATED: dict[str, type] = {"paper": PaperVenue, "backtest": BacktestVenue}      # the two venues of this version: both simulate

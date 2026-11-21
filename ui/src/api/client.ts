@@ -1,6 +1,6 @@
 // fetch wrappers for the routes of spec 4.1. A refusal is {"error": "<message for the user>"} with a 4xx: it becomes an ApiError with that message.
 import type { Coverage, CriticReport, DayView, LiveSnapshot, PlanAnswer, ProvingRun, RunIndexRow, TimeMachineRequest } from "../proving/types";
-import type { AccountView, Health, RawRecords, RiskLevel, RunRequest, TradeMode } from "./types";
+import type { AccountView, Health, OpenOrder, OrdersView, RawRecords, RiskLevel, RunRequest, TradeMode } from "./types";
 
 export class ApiError extends Error {
   status: number;
@@ -51,6 +51,10 @@ export const api = {
   createAccount: (body: NewAccount) => call<AccountView>("POST", "/api/accounts", body),
   patchAccount: (id: number, body: Partial<{ name: string; age: number; risk: RiskLevel; mode: TradeMode }>) => call<AccountView>("PATCH", `/api/accounts/${id}`, body),
   funds: (id: number, action: "add" | "remove", amount: string) => call<AccountView>("POST", `/api/accounts/${id}/funds`, { action, amount }),
+  /** The account's waiting limit orders (entry 140). */
+  orders: (accountId: number) => call<OrdersView>("GET", `/api/accounts/${accountId}/orders`),
+  /** Cancel a waiting order: what it set aside is available again. */
+  cancelOrder: (orderId: number) => call<OpenOrder>("DELETE", `/api/orders/${orderId}`),
   startRun: (body: RunRequest) => call<{ run_id: string }>("POST", "/api/runs", body),
   answer: (runId: string, questionId: string, answer: boolean | string) => call<void>("POST", `/api/runs/${runId}/answers`, { question_id: questionId, answer }),
   stop: (runId: string) => call<{ stopping: boolean }>("POST", `/api/runs/${runId}/stop`),

@@ -4,13 +4,15 @@ A review answers the questions a person asks of a recommendation, in the order t
 
     approved, score, grade   the verdict, and the score it comes from (0 to 100; a blocker caps it)
     blockers, warnings       what is wrong (a blocker denies), what to know (a warning does not), notes (information)
-    dimensions               the six parts of the score with their weights: accuracy, evidence, risk fit, timing, value, chart
+    dimensions               the seven parts of the score with their weights: accuracy, evidence, risk fit, timing, value, chart, analysts (version 3; a review of an earlier version has the first six)
+    groups                   the three groups of judgment (news, performance, price) and the signs that fired in each (version 3): a denial needs bad signs in two of them, or a fault, or a profile finding
     accuracy                 what was fetched again and whether it matched; the sources read again; the cross-checks
     evidence                 what the model said about each quote (labels only), the control claim, newer sources, what the expected return is WITHOUT the quotes that did not hold
     timing                   the session, the record's date, the price and where it sits in the entry zone
     risk                     the tolerance, the risk score and level (never a size: how much to buy is the Account Manager's)
     value                    the price against the six-month average, the profit potential, the bonus
     chart                    the chart patterns that hold (golden cross, dead cat bounce, ...) and the numbers behind them
+    analysts                 the analysts' recommendation counts of the newest period, the mean rating and its change (version 3)
     audit                    which model, which config, which Data Clerk orders
 
 Every model forbids unknown fields: a typo in the code that builds a review fails when the review is built. The reviews live on `order.reviews` as dicts (`model_dump(mode="json")`); the
@@ -26,15 +28,18 @@ SEVERITIES = ("blocker", "warning", "info")
 MODEL_FIELDS = ("evidence.claims[*].label", "evidence.claims[*].reason", "evidence.control.label", "evidence.fresh[*].label", "evidence.fresh[*].quote")
 
 # The closed list of codes that may be a BLOCKER (spec 9.3), in the order the summary names them. A blocker with any other code cannot be built.
-# Version 2 (design/critic_v2_evidence_spec.md): `trend_not_confirmed` joined the chart's (rule C5); `blend_not_supported` left the evidence's (rule C3: it is a warning now). A review stored by version 1 still holds it as a blocker in its dict:
-# nothing validates a stored review again (the Proving Ground reads them as dicts), so the list does not keep a code that cannot be a blocker any more.
+# Version 2 (design/critic_v2_evidence_spec.md): `trend_not_confirmed` joined the chart's (rule C5); `blend_not_supported` left the evidence's (rule C3: it is a warning now).
+# Version 3 (design/critic_v3_two_reasons_spec.md): `data_unreliable` joined the accuracy's (rule V7: the price itself, or a record whose values mostly do not match, cannot be trusted); `data_unverified` and `data_mismatch` left it (they are
+# warnings about one metric now); the analysts' dimension has no blocker of its own (`analysts_bearish` is a warning, a news sign). A review stored by an earlier version still holds its old blockers in its dict: nothing validates a stored
+# review again (the Proving Ground reads them as dicts), so the list does not keep a code that cannot be a blocker any more. `reasons.py` says which codes are a fault, a profile finding or a sign of a group, and a test fails when a code here is in no class.
 BLOCKER_CODES: dict[str, tuple[str, ...]] = {
-    "accuracy": ("record_not_reviewable", "record_defect", "data_unverified", "data_mismatch", "source_missing", "source_altered", "symbol_unknown", "price_mismatch"),
+    "accuracy": ("record_not_reviewable", "record_defect", "data_unreliable", "source_missing", "source_altered", "symbol_unknown", "price_mismatch"),
     "timing": ("market_closed", "record_expired", "time_stop_passed", "bars_stale", "no_live_price", "quote_stale", "price_left_zone", "stop_already_hit"),
     "risk_fit": ("risk_above_profile", "symbol_excluded", "sector_excluded", "price_below_profile_min"),
     "value": ("overpriced", "valuation_extreme", "falling_knife"),
     "chart": ("dead_cat_bounce", "trend_not_confirmed"),
     "evidence": ("event_not_supported", "fresh_negative_event"),
+    "analysts": (),
 }
 BLOCKER_ORDER = tuple(code for codes in BLOCKER_CODES.values() for code in codes)
 
@@ -46,7 +51,7 @@ class _Model(BaseModel):
 class Finding(_Model):
     """One thing the Critic found: a plain sentence with its numbers in it."""
     code: str
-    dimension: Literal["accuracy", "evidence", "risk_fit", "timing", "value", "chart"]
+    dimension: Literal["accuracy", "evidence", "risk_fit", "timing", "value", "chart", "analysts"]
     severity: Literal["blocker", "warning", "info"]
     message: str
     value: Any = None
@@ -218,6 +223,19 @@ class ChartDetail(_Model):
     facts: dict[str, Any] = Field(default_factory=dict)        # the numbers the Data Clerk gave, as the patterns read them
 
 
+class AnalystsDetail(_Model):
+    """The analysts' side of a review (version 3): Finnhub's recommendation counts of the newest usable period and what the Critic made of them. `applicable` False: no usable period, or fewer analysts than `analysts.min_analysts`."""
+    applicable: bool = False
+    period: str | None = None                          # the newest period the Data Clerk gave that the day could know ("2026-11-01")
+    n: int | None = None                               # strongBuy + buy + hold + sell + strongSell
+    counts: dict[str, int] = Field(default_factory=dict)   # strongBuy, buy, hold, sell, strongSell
+    mean: float | None = None                          # 1 (strong sell) to 5 (strong buy)
+    score: float | None = None                         # 100 x (mean - 1) / 4
+    mean_change: float | None = None                   # the mean minus the mean of the period `trend_months` earlier (shown, not scored)
+    compared_period: str | None = None
+    note: str | None = None
+
+
 class Audit(_Model):
     critic_model: str | None = None
     advisor_model: str | None = None
@@ -226,6 +244,7 @@ class Audit(_Model):
     metric_order: str | None = None
     quote_order: str | None = None
     verify_order: str | None = None
+    analysts_order: str | None = None
     run: dict | None = None
 
 
@@ -243,7 +262,9 @@ class Review(_Model):
     score: int
     score_before_blockers: int
     grade: str
-    bonus: float = 0.0
+    bonus: float = 0.0                                 # the great-deal bonus
+    pattern_bonus: float = 0.0                         # version 3: the net chart points x `chart.bonus.per_point`, capped: a bullish chart raises the score, a bearish one lowers it
+    groups: dict[str, list[str]] = Field(default_factory=dict)   # version 3: {"news": [codes], "performance": [...], "price": [...]}, the signs that fired in each group (a group with a code is BAD); {} on a review of an earlier version
     requires_human: bool = False
     requires_human_reasons: list[str] = Field(default_factory=list)
     denial_reasons: list[str] = Field(default_factory=list)
@@ -258,6 +279,7 @@ class Review(_Model):
     risk: RiskDetail
     value: ValueDetail
     chart: ChartDetail = Field(default_factory=ChartDetail)
+    analysts: AnalystsDetail = Field(default_factory=AnalystsDetail)
     audit: Audit
 
     @property

@@ -7,12 +7,14 @@
 size: the Critic does not decide how much to buy (the Account Manager does, and adds what it would place to the card it shows the user: `decisions._card`).
 """
 from prometheus.agents.critic.common import EASTERN, pct
+from prometheus.agents.critic.reasons import GROUP_WORDS
 from prometheus.common import shares as sh
 from prometheus.common.work_order import parse_utc
 
 DECISION_WORDS = {"yes_auto": "yes (AUTO)", "yes_user": "yes (you approved)", "pending_user": "pending your answer (ASK)", "no_system_denied": "no (system denied)",
                   "no_expired": "no (the approval ran out)", "no_funds": "no (no funds)", "no_user_denied": "no (you denied)"}
-LABELS = {"accuracy": "accuracy", "evidence": "evidence", "risk_fit": "risk fit", "timing": "timing", "value": "value", "chart": "chart"}
+LABELS = {"accuracy": "accuracy", "evidence": "evidence", "risk_fit": "risk fit", "timing": "timing", "value": "value", "chart": "chart", "analysts": "analysts"}
+GROUP_LABELS = {"news": "news", "performance": "performance", "price": "price"}
 
 
 def _points(review: dict, name: str) -> str:
@@ -87,6 +89,25 @@ def _value(review: dict) -> str:
     return f"{v['deal'].upper()}: {gap}"
 
 
+def analysts_line(review: dict) -> str:
+    """The analysts' counts in one line: `10 strong buy, 12 buy, 8 hold, 1 sell, 0 strong sell in 2026-11-01 (31 analysts): mean 3.97 of 5, up 0.21 since 2026-08-01`."""
+    a = review.get("analysts") or {}
+    if not a.get("applicable"):
+        return a.get("note") or "no analyst ratings"
+    text = f"{a['note']}: mean {a['mean']:.2f} of 5"
+    if a.get("mean_change") is not None:
+        text += f", {'up' if a['mean_change'] > 0 else 'down' if a['mean_change'] < 0 else 'unchanged'}{'' if a['mean_change'] == 0 else ' ' + format(abs(a['mean_change']), '.2f')} since {a['compared_period']}"
+    return text
+
+
+def groups_line(review: dict) -> str | None:
+    """The three groups of judgment in one line (`news clean, performance BAD (trend_not_confirmed), price clean`), or None for a review of a version before the groups."""
+    groups = review.get("groups")
+    if not groups:
+        return None
+    return ", ".join(f"{GROUP_LABELS[g]} " + (f"BAD ({', '.join(groups[g])})" if groups.get(g) else "clean") for g in GROUP_LABELS if g in groups)
+
+
 def _chart(review: dict) -> str:
     c = review["chart"]
     if not c["facts"]:
@@ -107,20 +128,29 @@ def scorecard(review: dict, record: dict | None = None) -> dict:
     elif review["score_before_blockers"] > review["score"]:
         head += f"      would have been {review['score_before_blockers']} without the blockers"
     lines = [head]
-    rows = (("accuracy", _accuracy(review)), ("evidence", _evidence(review)), ("risk_fit", _risk(review)), ("timing", _timing(review, record)), ("value", _value(review)), ("chart", _chart(review)))
+    rows = (("accuracy", _accuracy(review)), ("evidence", _evidence(review)), ("risk_fit", _risk(review)), ("timing", _timing(review, record)), ("value", _value(review)), ("chart", _chart(review)), ("analysts", analysts_line(review)))
     for name, text in rows:
+        if name not in review["dimensions"]:      # a review of a version before the analysts has six dimensions
+            continue
         if review["dimensions"][name]["applicable"]:
             lines.append(f"      {LABELS[name]:<9} {_points(review, name):>5}   {text}")
         else:
             lines.append(f"      {LABELS[name]:<9} {'-':>5}   {text}")
     if review["dimensions"]["value"]["applicable"]:
         lines.append(f"      {'bonus':<9} {'+' + format(review['bonus'], 'g'):>5}   " + (f"{pct(review['value']['discount'])} under its 6-month average" if review["bonus"] else "no discount to the 6-month average"))
+    if review.get("pattern_bonus"):
+        lines.append(f"      {'patterns':<9} {format(review['pattern_bonus'], '+g'):>5}   the net chart points move the score ({_chart(review)})")
+    if groups_line(review):
+        lines.append(f"      groups:   {groups_line(review)}")
     if review["warnings"]:
         lines.append("      warnings: " + "; ".join(dict.fromkeys(w["code"] for w in review["warnings"])))
     for b in review["blockers"]:
         lines.append(f"      BLOCKER {b['code']}: {b['message']}")
     if review["denial_reasons"] and "score_below_minimum" in review["denial_reasons"]:
         lines.append("      BLOCKER score_below_minimum: the score is under the mark for approval")
+    two = [r[len("group:"):] for r in review["denial_reasons"] if r.startswith("group:")]
+    if two:
+        lines.append("      DENIED: bad signs in " + " and ".join(f"{GROUP_WORDS[g]} ({', '.join(review['groups'].get(g) or [])})" for g in two))
     if "needs_human_review" in review["denial_reasons"]:
         lines.append("      DENIED needs_human_review: a person must look before this can trade: " + ", ".join(review["requires_human_reasons"]))
     return {"text": "\n".join(lines), "symbol": review["symbol"], "approved": approved, "score": review["score"], "grade": review["grade"], "summary": review["summary"]}

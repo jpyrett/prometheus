@@ -29,8 +29,11 @@ MONEY IS `decimal.Decimal` (design choices entry 112): the cash a user starts wi
 EXIT CODES: 0 the session did what was asked (the portfolio changed, or it was only a look); 1 it could not trade (the reasons are printed); 2 a bad flag, or the account book, the keys or the request could not be used.
 """
 import argparse
+import functools
 import json
+import os
 import sys
+from contextlib import contextmanager
 from pathlib import Path
 from dataclasses import dataclass
 from decimal import Decimal
@@ -81,6 +84,8 @@ def build_parser() -> argparse.ArgumentParser:
     desk.add_argument("--default-count", type=int, default=DEFAULT_COUNT, help=f"how many of the top companies to buy from when the request does not say (default {DEFAULT_COUNT})")
     desk.add_argument("--model", default="openai/gpt-oss-120b", help="the Advisor's OpenRouter model id (default openai/gpt-oss-120b)")
     desk.add_argument("--no-trader-model", action="store_true", help="the Trader without a model: the program places the default orders")
+    desk.add_argument("--always-raise-funds", action="store_true", default=None, help="for this session ALWAYS_RAISE_FUNDS is true: the same as saying \"raise funds if needed\" in the request (entry 142, R12): when the cash does not cover a purchase you typed, holdings are sold to pay for it "
+                      "(Ask mode still shows you the plan and asks; Auto mode sells and buys; \"don't sell anything\" in your words wins). Without the flag the setting is what the environment and .env say (false when unset)")
     desk.add_argument("--real-ledger", action="store_true", help="use the real ledgers (data/ledger/): a company recommended before is then hidden by its cooldown. The default is throwaway ledgers, so a session can be repeated")
     run = parser.add_argument_group("the session")
     run.add_argument("--yes", "-y", action="store_true", help="do not ask to confirm what was understood (in Ask mode you are STILL asked to approve each trade: --yes never approves a trade)")
@@ -150,12 +155,13 @@ def money(value) -> str:
 
 
 def portfolio_lines(portfolio: Portfolio) -> list[str]:
-    lines = [f"  cash      {money(portfolio.cash_avail):>14}"]
+    lines = [f"  cash      {money(portfolio.cash_avail):>14}"] if not portfolio.reserved_cash else [f"  cash      {money(portfolio.cash_total):>14}", f"  set aside {money(portfolio.reserved_cash):>14}   (for waiting limit orders)", f"  available {money(portfolio.cash_avail):>14}"]
     if not portfolio.positions:
         lines.append("  holdings  none")
     width = max(6, *(len(sh.text(p.shares)) for p in portfolio.positions)) if portfolio.positions else 6                    # a quantity with a fraction is wider (entry 110)
     for p in portfolio.positions:
-        lines.append(f"  {p.symbol:<9} {sh.text(p.shares):>{width}} shares at an average cost of {money(p.cost_basis):>10}  = {money(trade_amount(p.shares, p.cost_basis)):>12}" + (f"   (latest purchase {p.acquired})" if p.acquired else ""))
+        lines.append(f"  {p.symbol:<9} {sh.text(p.shares):>{width}} shares at an average cost of {money(p.cost_basis):>10}  = {money(trade_amount(p.shares, p.cost_basis)):>12}" + (f"   (latest purchase {p.acquired})" if p.acquired else "")
+                     + (f"   ({sh.text(portfolio.reserved_shares[p.symbol])} set aside for a waiting sale)" if portfolio.reserved_shares.get(p.symbol) else ""))
     return lines
 
 
@@ -164,7 +170,7 @@ def holdings_of(portfolio: Portfolio) -> dict[str, Decimal]:
 
 
 def changed(before: Portfolio, after: Portfolio) -> bool:
-    return before.cash_avail != after.cash_avail or holdings_of(before) != holdings_of(after)
+    return before.cash_total != after.cash_total or holdings_of(before) != holdings_of(after)      # the WHOLE cash: cash a waiting order sets aside is not a change of the account (entry 140)
 
 
 def account_block(title: str, holder, portfolio: Portfolio, profile) -> list[str]:
@@ -284,6 +290,20 @@ def trade_lines(order) -> list[str]:
     return lines
 
 
+def waiting_lines_of(order) -> list[str]:
+    """The sentence of each direct order that was placed to WAIT for its limit price (a decision with an `open_order_id`): "Waiting: buy 10 MU at $90.00 or less (now $95.12), $900.00 set aside, until 4:00 pm ET today." (design choices entry 140)."""
+    return [d["reason"] for d in order.trade_decisions if isinstance(d, dict) and d.get("open_order_id") is not None and isinstance(d.get("reason"), str)]
+
+
+def watcher_note(parts) -> list[str]:
+    """A waiting order is watched only while the page's server runs (`./run_ui.sh`): this session says so, and says when NO server is running its watcher now (the account book's advisory lock is free), so the user knows nothing will fill or expire the order until one is started."""
+    try:
+        running = bool(parts.store.watcher_running())
+    except Exception:
+        return ["  A waiting order is watched only while the page's server runs (./run_ui.sh)."]
+    return ["  A waiting order is watched only while the page's server runs (./run_ui.sh)." + ("" if running else " NO SERVER IS RUNNING a watcher now: start one (./run_ui.sh), or cancel the order with `python -m prometheus.agents.account_manager.orders --account N --cancel ID`; its cash or shares stay set aside until a watcher expires it after its session's close, or you cancel it.")]
+
+
 def why_not(result, order) -> list[str]:
     """Why the portfolio did not change, from what the run recorded."""
     reasons = [n for n in result.notes if "did not run" not in n][:3] if result is not None else []      # no `result` for a direct order: nothing was searched
@@ -318,6 +338,7 @@ def why_not(result, order) -> list[str]:
 NODE_WORDS = {"account_manager": "the Account Manager read the request and made the work order", "data_clerk": "the Data Clerk found the companies and answered the work order",
               "advisor": "the Advisor ranked the companies", "critic": "the Critic reviewed each recommendation against the profile", "account_manager_decision": "the Account Manager decided what may trade",
               "account_manager_direct": "the Account Manager priced the trades you named and decided them (no recommendation, no Critic review)",
+              "account_manager_funds": "the Account Manager raised the money by selling holdings (RaiseFunds), because the cash did not cover the purchase and you permitted it",
               "trader": "the Trader executed the permitted trades (simulated: nothing is sent to a broker)"}
 
 
@@ -372,6 +393,33 @@ def clean_up(args: argparse.Namespace, parts: Parts, account_id, created: bool, 
         say(f"  account {account_id} is kept: python -m prometheus.agents.account_manager.account_manager --account {account_id}")
 
 
+@contextmanager
+def always_raise_funds_for(flag: bool | None):
+    """`--always-raise-funds` sets ALWAYS_RAISE_FUNDS to true for the session and puts it back as it was; without the flag (None) nothing is touched: the setting is what the environment and `.env` say."""
+    if not flag:
+        yield
+        return
+    had, before = "ALWAYS_RAISE_FUNDS" in os.environ, os.environ.get("ALWAYS_RAISE_FUNDS")
+    os.environ["ALWAYS_RAISE_FUNDS"] = "true"
+    try:
+        yield
+    finally:
+        if had:
+            os.environ["ALWAYS_RAISE_FUNDS"] = before
+        else:
+            os.environ.pop("ALWAYS_RAISE_FUNDS", None)
+
+
+def with_always_raise_funds(function):
+    """Run the session with its `--always-raise-funds` applied (the setting for the length of the session, put back after); the function keeps its own source and name (`functools.wraps`)."""
+    @functools.wraps(function)
+    def wrapper(args, *rest, **options):
+        with always_raise_funds_for(getattr(args, "always_raise_funds", None)):
+            return function(args, *rest, **options)
+    return wrapper
+
+
+@with_always_raise_funds
 def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input, out=print) -> int:
     say = lambda *lines: [out(line) for line in lines]
     try:
@@ -466,10 +514,13 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
     elif not buying:
         say("", RULE, "SESSION  a look only: nothing was to be bought. The portfolio is as it was.", RULE)
         ok = True
+    elif not did and waiting_lines_of(order):      # a direct order whose limit price is not met WAITS as a day order, its cash or shares set aside (entry 140)
+        say("", RULE, "SESSION  WAITING: the order waits in the market for its limit price; nothing was traded yet.", *[f"  - {line}" for line in waiting_lines_of(order)], *watcher_note(parts), RULE)
+        ok = True
     elif did:
         bought = [f"{sh.signed(sh.difference(shares, holdings_of(before).get(symbol, 0)))} {symbol}" for symbol, shares in holdings_of(after).items() if not sh.same(shares, holdings_of(before).get(symbol, 0))]      # `+d` crashed on a fraction (entry 110)
         sold = [f"{sh.signed(sh.difference(0, shares))} {symbol}" for symbol, shares in holdings_of(before).items() if symbol not in holdings_of(after)]
-        say("", RULE, f"SESSION  PASSED: the portfolio changed ({', '.join(bought + sold)}); cash {money(before.cash_avail)} -> {money(after.cash_avail)}", RULE)
+        say("", RULE, f"SESSION  PASSED: the portfolio changed ({', '.join(bought + sold)}); cash {money(before.cash_total)} -> {money(after.cash_total)}", *[f"  - {line}" for line in waiting_lines_of(order)], *(watcher_note(parts) if waiting_lines_of(order) else []), RULE)
         ok = True
     else:
         say("", RULE, "SESSION  the portfolio did NOT change. Why:", *[f"  - {reason}" for reason in why_not(result, order)], RULE)

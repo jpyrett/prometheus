@@ -7,11 +7,12 @@ from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
+from proving_helpers import as_before_the_forward_excess
 
 from prometheus.application.web.app import create_app
 from prometheus.application.web.proving_run import Proving
 from prometheus.application.web.replay import Replay, load_capture
-from prometheus.proving.record import ProvingRun
+from prometheus.proving.record import ProvingRun, Stats as RunStats
 from prometheus.proving.store import ProvingStore
 
 HERE = Path(__file__).parent
@@ -143,5 +144,7 @@ def test_a_time_machine_run_from_the_real_cache_streams_the_events_and_saves_the
     assert all(e["data"]["status"] == "cached" for e in events if e["type"] == "pv_research") and any(e["type"] == "pv_decision" and e["data"]["view"]["rows"] for e in events)
     saved_id = next(e["data"]["saved_id"] for e in events if e["type"] == "pv_finished")
     assert [r["run_id"] for r in web.get("/api/proving/runs").json()] == [saved_id] and web.get("/api/health").json()["active_kind"] is None
-    assert web.get(f"/api/proving/runs/{saved_id}").json()["stats"] == json.loads(SAVED.stats.model_dump_json())
+    served = web.get(f"/api/proving/runs/{saved_id}").json()["stats"]
+    assert served == json.loads(RunStats.model_validate(served).model_dump_json())                                    # the page is sent exactly the statistics the run computed (and nothing it computes itself, P12)
+    assert as_before_the_forward_excess(RunStats.model_validate(served)) == as_before_the_forward_excess(SAVED.stats)      # and in everything the saved run recorded they are the same; the forward excess is new
     assert web.delete(f"/api/proving/runs/{saved_id}").status_code == 204 and web.get("/api/proving/runs").json() == []

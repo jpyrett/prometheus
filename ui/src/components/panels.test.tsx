@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { replayEvents, type RunState } from "../state/runReducer";
 import { ClockContext } from "../state/useNow";
@@ -147,6 +147,29 @@ describe("RecommendationPanel", () => {
     expect(within(review).getByText("needs_human_review")).toBeTruthy();
     expect(within(review).getByText(/a finding asks for a person to look, so the Critic denied it and nothing is traded for it/)).toBeTruthy();
     expect(screen.queryByText("NEEDS YOUR EYES")).toBeNull();
+  });
+
+  it("a version-3 review shows the three groups, bad or clean, and the analysts' counts in one line; an older review shows neither (Critic v3)", () => {
+    const xom = row(bobEvents, "XOM");
+    render(<RecommendationPanel row={xom} runId="r" waitingForAdvisor={false} />);
+    expect(document.querySelector(".groups")).toBeNull(); // the capture's review was made before the groups: nothing is drawn for them
+    expect(screen.queryByText("ANALYSTS")).toBeNull();
+    cleanup();
+    const groups = [
+      { name: "news", label: "News", bad: false, codes: [] },
+      { name: "performance", label: "Performance", bad: true, codes: ["trend_not_confirmed"] },
+      { name: "price", label: "Price", bad: false, codes: [] },
+    ];
+    const analysts = "6 strong buy, 14 buy, 14 hold, 1 sell, 0 strong sell in 2026-11-01 (35 analysts): mean 3.71 of 5, down 0.04 since 2026-08-01";
+    const v3 = { ...xom, detail: { ...xom.detail, review: { ...xom.detail.review!, groups, analysts } } };
+    render(<RecommendationPanel row={v3} runId="r" waitingForAdvisor={false} />);
+    const review = screen.getByText("Critic review").closest(".sec") as HTMLElement;
+    const shown = within(review).getByRole("group", { name: /three groups of judgment/ });
+    expect(Array.from(shown.querySelectorAll(".group")).map((g) => g.textContent)).toEqual(["NEWS CLEAN", "PERFORMANCE BAD trend_not_confirmed", "PRICE CLEAN"]);
+    expect(shown.querySelectorAll(".badge.neg")).toHaveLength(1);
+    expect(shown.querySelectorAll(".badge.pos")).toHaveLength(2);
+    expect(within(review).getByText("ANALYSTS")).toBeTruthy();
+    expect(within(review).getByText(analysts)).toBeTruthy();
   });
 
   it("a stock that was scored and not recommended has its reason and no thesis, plan or review", () => {

@@ -7,7 +7,7 @@ import { Badge } from "../components/ui/Badge";
 import { Card } from "../components/ui/Card";
 import { points } from "../format";
 import { ChipGroup } from "./Chips";
-import type { CriticReport, CriticRuleRow, CriticVersionCard } from "./types";
+import type { CriticFamilyRow, CriticReport, CriticRuleRow, CriticVersionCard, ForwardStats } from "./types";
 import { useCriticReport } from "./useProvingData";
 
 const KIND: Record<string, string> = { blocker: "blocker", human: "asked for a person", warning: "warning", verdict: "verdict" };
@@ -80,6 +80,7 @@ export function CriticRulesCard({ report, minSample = 20 }: { report: CriticRepo
                 <th className="r">Outcomes</th>
                 <th className="r">Denied</th>
                 <th className="r">Approved</th>
+                <th className="r" title="The stock against the benchmark 20 sessions after the decision day, whatever the plan did: all of the family, then the denied and the approved">After 20 sessions</th>
                 <th>Reading</th>
               </tr>
             </thead>
@@ -90,6 +91,7 @@ export function CriticRulesCard({ report, minSample = 20 }: { report: CriticRepo
                   <td className="r num">{f.n}</td>
                   <td className="r num">{`${f.denied.n} · ${points(f.denied.mean_excess)}`}</td>
                   <td className="r num">{`${f.approved.n} · ${points(f.approved.mean_excess)}`}</td>
+                  <td className="r num">{forwardWords(f)}</td>
                   <td>{f.sentence_code.replace(/_/g, " ")}</td>
                 </tr>
               ))}
@@ -99,6 +101,14 @@ export function CriticRulesCard({ report, minSample = 20 }: { report: CriticRepo
       </div>
     </Card>
   );
+}
+
+/** A family's forward excess after 20 sessions, as the server computed it: "+3.2 pts (n 29) · denied +1.0 (n 8) · approved +4.0 (n 21)"; a dash when the card has none. */
+function forwardWords(f: CriticFamilyRow): string {
+  const at = (cells: ForwardStats[] | undefined) => cells?.find((c) => c.sessions === 20);
+  const say = (c: ForwardStats | undefined) => (c && c.n ? `${points(c.mean_excess_pct)} (n ${c.n})` : "—");
+  const all = at(f.forward?.all);
+  return all && all.n ? `${say(all)} · denied ${say(at(f.forward?.denied))} · approved ${say(at(f.forward?.approved))}` : "—";
 }
 
 /** The card on the Track Record tab: asks the server (free) and draws what it answers. */

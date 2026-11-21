@@ -36,14 +36,14 @@ ORDER_TYPES = ("market", "limit")
 PLACED_BY = ("model", "code")
 PRICE_SOURCES = ("quote", "bar_open", "bar_limit")
 OUTCOME_STATUSES = ("open", "closed")
-EXIT_REASONS = ("stop", "target", "time_stop")
+EXIT_REASONS = ("stop", "trailing_stop", "target", "time_stop")      # `trailing_stop`: a TREND plan's stop that had risen above the plan's own stop (design/advisor_exit_plan_spec.md rule E4)
 SUMMARY_BY = ("model", "code")
 # The ONLY places a model's words reach a trade or a run (spec 14): the note of a trade and the summary of a run. Both are checked by code (T8): a note is cut to `limits.max_note_words`, a summary is kept only when every
 # trade it names and every number in it is real, and is otherwise replaced by code's own sentence.
 MODEL_FIELDS = ("trades[*].note", "trader_runs[*].summary")
 # The closed list of reasons a trade is rejected (spec 5). `reason` is the sentence; `reject_code` is one of these.
 REJECT_CODES = ("not_permitted", "approval_expired", "price_unavailable", "price_outside_limits", "limit_not_reached", "insufficient_cash",
-                "not_held", "not_sellable_today", "funding_failed", "not_attempted", "account_refused", "internal_error")
+                "not_held", "not_sellable_today", "funding_failed", "not_attempted", "account_refused", "internal_error", "sales_fell_short")      # "sales_fell_short" (entry 143, B1): the funding sales were approved, filled and booked, but brought less than planned, so the purchase they were to pay for was refused; the sales stay
 
 
 def is_ticker(value) -> bool:
@@ -75,7 +75,7 @@ class Fill(_Model):
 class Outcome(_Model):
     """How a filled purchase went, followed through the stored bars after its entry (backtest mode only: `simulator.follow`; spec section 10). Never booked in the account book."""
     status: Literal["open", "closed"]
-    exit_reason: Literal["stop", "target", "time_stop"] | None = None
+    exit_reason: Literal["stop", "trailing_stop", "target", "time_stop"] | None = None
     exit_date: str | None = None
     exit_price: Price | None = None
     sessions_held: int | None = None

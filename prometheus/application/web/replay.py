@@ -32,7 +32,7 @@ from prometheus.common.money import price as price_door
 from prometheus.common.portfolio import Portfolio, apply_fill
 from prometheus.common.work_order import WorkOrder
 
-PAUSE = {"account_manager": 1.2, "data_clerk": 2.4, "advisor": 2.4, "critic": 2.4, "account_manager_decision": 1.2, "account_manager_direct": 1.2, "trader": 1.2}   # seconds of a node at speed 1.0
+PAUSE = {"account_manager": 1.2, "data_clerk": 2.4, "advisor": 2.4, "critic": 2.4, "account_manager_decision": 1.2, "account_manager_direct": 1.2, "account_manager_funds": 2.4, "trader": 1.2}   # seconds of a node at speed 1.0
 FILL_PAUSE = 1.0     # seconds between two fills at speed 1.0
 
 

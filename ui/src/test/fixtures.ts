@@ -19,6 +19,8 @@ export const confirmQuestion = questions.confirm.data as unknown as QuestionData
 export const clarifyQuestion = questions.clarify.data as unknown as QuestionData;
 export const approveQuestion = questions.approve.data as unknown as QuestionData;
 export const missingQuestion = questions.missing.data as unknown as QuestionData;
+export const raiseFundsQuestion = questions.raise_funds.data as unknown as QuestionData;      // entry 142: Jacob's real request on a throwaway copy of his account (the numbers of the real live session)
+export const fundingQuestion = questions.funding.data as unknown as QuestionData;
 
 export function ofType<T extends ServerEvent["type"]>(events: ServerEvent[], type: T): Extract<ServerEvent, { type: T }>[] {
   return events.filter((e): e is Extract<ServerEvent, { type: T }> => e.type === type);

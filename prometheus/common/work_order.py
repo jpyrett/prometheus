@@ -37,6 +37,8 @@ order and reads exactly as before; one that carries any is `schema_version` 2.
 CRITIC V1 (design choices entries 56 to 59): the Critic reads `recommendations` and writes `reviews` (one per recommendation, joined by `record_id`) and `critic_runs`; the Account Manager then writes
 `trade_decisions` (one per review: `will_trade`, `funds_avail`). The Critic asks the Data Clerk, directly, for the numbers and the sources again with a `verify_data` order (`verify`, answered on
 `data.verification`). `verify_trade` is the one check the Trader must pass before any trade: no review, no approval or no permission means no trade. An order that carries reviews is `schema_version` 3.
+CRITIC V3 (design choices entry 137): the Critic also asks, in the same step, for the analysts' recommendation counts with a `fetch_analyst_ratings` order (`ratings` = {"store": the folder under data/}, answered on `data.analysts`:
+`verify_ratings_request`, `DataClerk.request_analyst_ratings`). An order that carries `ratings` is `schema_version` 2.
 
 TRADER V1 (design/trader_v1_final_spec.md): the Trader reads `trade_decisions` and writes `trades` (one `Trade` record per ticket, joined to a decision by `record_id`; `TRADE_STATUSES`) and `trader_runs` (one record per run:
 prometheus/agents/trader/record.py), and the order becomes `traded`. `verify_trades` is its output guard: the trades must agree with the decisions or nothing is booked. The Trader never asks the Data Clerk for a price itself:
@@ -61,15 +63,16 @@ import re
 import uuid
 from datetime import date, datetime, timezone
 from decimal import ROUND_DOWN, Decimal
+from pathlib import Path
 from typing import Annotated, Literal
 
 from pydantic import BaseModel, Field
 
 from prometheus.common import shares as sh
-from prometheus.common.money import CENT, Jsonable, cents, digits, money, price
+from prometheus.common.money import CENT, Jsonable, Price, cents, digits, money, price
 from prometheus.common.trace import traced
 
-ACTION_TYPES = ("trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars", "lookup_symbol")
+ACTION_TYPES = ("trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars", "lookup_symbol", "fetch_analyst_ratings")
 SEARCH_ACTIONS = ("search_news", "search_filing")   # what the Data Clerk's request_data handles today: a search of stored text (the other actions are refused by verify_request)
 ACTION_SOURCE = {"search_filing": "filings"}       # an action that belongs to one source, and the source that has only that action: both directions are checked (entry 37)
 SOURCE_ACTION = {source: action for action, source in ACTION_SOURCE.items()}
@@ -129,6 +132,7 @@ class DataResult(BaseModel):
     market_brief: dict = Field(default_factory=dict)  # Case 3 only (the "what is happening" brief of Advisor v1 spec section 13): not built yet, always empty
     verification: dict = Field(default_factory=dict)  # the answer to a `verify_data` order (Critic v1): the chunks and filing-evidence items read again from the store, the symbols checked against the directory, the newest stored text; empty on any other order
     quotes: dict[str, dict] = Field(default_factory=dict)  # per symbol: the current quote (price, change, high, low, open, previous close, as_of_utc, source) of a `fetch_quote` order (entry 42); empty on any other order
+    analysts: dict[str, dict] = Field(default_factory=dict)  # per symbol: the answer to a `fetch_analyst_ratings` order (Critic v3): {"periods": [{period, strongBuy, buy, hold, sell, strongSell}, ...] newest first, only those the day could know, "fetched": bool, "note"}; empty on any other order
     bars: dict[str, list[dict]] = Field(default_factory=dict)  # per symbol: the stored daily bars of a `fetch_bars` order, oldest first, each {"date": "YYYY-MM-DD", "open", "high", "low", "close", "volume"}; a symbol with none in the range is an empty list. Empty on any other order
     security_dropped: list[dict] = Field(default_factory=list)  # the documents the security layer dropped from the evidence before anything read them: {id, corpus, action, risk, rules} (entry 116); empty when none was
     problems: list[str] = Field(default_factory=list)
@@ -156,7 +160,7 @@ class WorkOrder(BaseModel):
     requester: str = "user"
     created_utc: str
     query: str                                  # the request in the user's own words: the Data Clerk's question
-    action_type: Literal["trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars", "lookup_symbol"] = "search_news"
+    action_type: Literal["trade", "search_news", "search_filing", "fetch_quote", "search_socials", "calculate_financials", "verify_data", "fetch_bars", "lookup_symbol", "fetch_analyst_ratings"] = "search_news"
     subject: str | list[str] | None = None      # a symbol, a list of symbols, or a term such as "memory stocks". Press releases and filings: ARGUMENT #1, the symbol (one)
     company: str | None = None                  # the company's name: for news, when the symbol was looked up from a name ("Procter & Gamble Co"), so that the Data Clerk can use it.
                                                 # Press releases and filings: ARGUMENT #2, the name to look up when the symbol is not given or not found
@@ -185,24 +189,31 @@ class WorkOrder(BaseModel):
     trade_decisions: Annotated[list[dict], Jsonable] = Field(default_factory=list)  # the Account Manager: one decision per review (will_trade, funds_avail, ...): the Trader's permission
     # Trader v1 (design/trader_v1_final_spec.md). An order that carries trades is `schema_version` 4; a `fetch_bars` order carries `bars`.
     bars: dict | None = None                    # a `fetch_bars` order: the range to read, {"start": "YYYY-MM-DD", "end": "YYYY-MM-DD"} (`verify_bar_request` says what is allowed)
+    ratings: dict | None = None                 # a `fetch_analyst_ratings` order: {"store": "data/analysts"}, the folder under `data/` where the answers are kept (`verify_ratings_request` says what is allowed)
     trades: Annotated[list[dict], Jsonable] = Field(default_factory=list)       # the Trader: one trade per ticket (prometheus/agents/trader/record.py `Trade`), each joined to a decision by `record_id`; `TRADE_STATUSES`
     trader_runs: Annotated[list[dict], Jsonable] = Field(default_factory=list)  # one record per Trader run: the model, the mode, the tool calls, the summary, the account before and after, what was dropped, errors
     # A DIRECT ORDER (design choices entry 87): the user named the trade ("Buy 50 shares of MSFT"), so there is no recommendation and no review. The Account Manager writes one record per trade here (`DIRECT_KEYS`) and
     # its decision for it carries `origin: "direct"`; `verify_trade` accepts such a decision only while the order holds the user's matching record.
     direct_orders: Annotated[list[dict], Jsonable] = Field(default_factory=list)
+    # A PRICE LIMIT the user wrote ("the top 3 AI stocks under $50 a share", design choices entry 138): the most one share may cost. The Advisor drops, in code, every candidate whose last price is above it before it ranks (`recommend.within_price_limit`), the
+    # Account Manager gives no decision to a purchase priced above it and its handshake refuses a fill above it. A ceiling only; None when the user gave none. It is a price and never an amount of money or a size.
+    max_price: Price | None = None
+    # A PRICE FLOOR the user wrote ("the top 3 AI stocks over $20 a share", design choices entry 140): the least one share may cost. The same filter as `max_price` from the other side: the Advisor drops what costs less, the Account Manager gives no
+    # decision to a purchase priced under it and its handshake refuses a fill under it. None when the user gave none. A price, never an amount of money or a size.
+    min_price: Price | None = None
 
 
 def new_work_order(query: str, *, requester: str = "user", action_type: str = "search_news", subject=None, source: str = "news",
                    time_period: str | None = None, since_days: int | None = None, top_k: int = 5, live: bool = False,
                    criteria: dict | None = None, company: str | None = None, metrics: list[dict] | None = None, case: str | None = None,
-                   sector: str | dict[str, str] | None = None, verify: dict | None = None, bars: dict | None = None) -> WorkOrder:
+                   sector: str | dict[str, str] | None = None, verify: dict | None = None, bars: dict | None = None, ratings: dict | None = None, max_price: Decimal | None = None, min_price: Decimal | None = None) -> WorkOrder:
     """A new order, with an id and a timestamp. It is not checked here: `verify_request` is the check, so that a bad request becomes
     a reported reason and not an exception halfway through the desk."""
     return WorkOrder.model_construct(
-        schema_version=2 if (metrics is not None or case is not None or sector is not None or verify is not None or bars is not None) else 1, request_id=uuid.uuid4().hex[:12], requester=requester, created_utc=_now(), query=query, action_type=action_type,
+        schema_version=2 if (metrics is not None or case is not None or sector is not None or verify is not None or bars is not None or ratings is not None) else 1, request_id=uuid.uuid4().hex[:12], requester=requester, created_utc=_now(), query=query, action_type=action_type,
         subject=subject, company=company, source=source, time_period=time_period, since_days=since_days, live=live, top_k=top_k, criteria=criteria,
         status="new", resolved=None, data=None, recommendations=[], advisor_runs=[], errors=[], metrics=metrics, case=case, sector=sector, candidates=[], verify=verify,
-        reviews=[], critic_runs=[], trade_decisions=[], bars=bars, trades=[], trader_runs=[], direct_orders=[])
+        reviews=[], critic_runs=[], trade_decisions=[], bars=bars, ratings=ratings, trades=[], trader_runs=[], direct_orders=[], max_price=max_price, min_price=min_price)
 
 
 def verify_request(order: WorkOrder) -> list[str]:
@@ -381,6 +392,32 @@ def verify_bar_request(order: WorkOrder) -> list[str]:
     return reasons
 
 
+RATINGS_ACTION = "fetch_analyst_ratings"
+MAX_RATINGS_SYMBOLS = MAX_QUOTE_SYMBOLS   # one Finnhub call each, paced at 4 a second
+ANALYSTS_STORE = "data/analysts"          # where the Data Clerk keeps each symbol's recommendation counts (derived data, gitignored)
+
+
+def verify_ratings_request(order: WorkOrder) -> list[str]:
+    """Why the Data Clerk may NOT answer this `fetch_analyst_ratings` order (`DataClerk.request_analyst_ratings`, Critic v3); an empty list means it may. Its own check, as the quote order's: the subject is 1 to 30 symbols and
+    `ratings`, when given, is exactly {"store": a relative folder under `data/` with no `..`}; the order has no data yet."""
+    reasons = []
+    if order.action_type != RATINGS_ACTION:
+        reasons.append(f"action_type {order.action_type!r} is not {RATINGS_ACTION!r}")
+    symbols = [order.subject] if isinstance(order.subject, str) else list(order.subject or [])
+    if not symbols or not all(isinstance(s, str) and s.strip() for s in symbols):
+        reasons.append("an analyst-ratings request needs one or more ticker symbols as its subject")
+    elif len(symbols) > MAX_RATINGS_SYMBOLS:
+        reasons.append(f"an analyst-ratings request is for at most {MAX_RATINGS_SYMBOLS} symbols at a time")
+    if order.ratings is not None:
+        store = order.ratings.get("store") if isinstance(order.ratings, dict) and set(order.ratings) == {"store"} else None
+        parts = Path(store).parts if isinstance(store, str) and store.strip() else ()
+        if not parts or Path(store).is_absolute() or ".." in parts or parts[0] != "data" or not re.fullmatch(r"[A-Za-z0-9_./\-]+", store):
+            reasons.append('an analyst-ratings request\'s `ratings` is exactly {"store": a folder under data/, such as "data/analysts"}')
+    if order.status in HAS_DATA:
+        reasons.append(f"the order already has its data (status {order.status})")
+    return reasons
+
+
 def verify_action(order: WorkOrder) -> list[str]:
     """Whether the data on the order can be trusted; an empty list means it can (the design's verify_action, which checks row counts).
     "Nothing found" passes: it is a result, but only after a search: a search order (search_news or search_filing) whose answer involved no successful search fails. What fails is data that contradicts itself or that the Data Clerk itself flagged."""
@@ -432,7 +469,7 @@ NEUTRAL = "neutral"                                 # the `origin` of a decision
 DIRECT = "direct"                                   # the `origin` of a decision made for a trade the USER named (entry 87): no recommendation, no Critic review; the order's `direct_orders` is its permission
 DIRECT_SIDES = ("buy", "sell")
 DIRECT_KEYS = ("record_id", "side", "symbol", "company", "shares", "request", "requested_utc")   # what a record of `order.direct_orders` holds: `company` is the company's name as the data source gives it (entry 88)
-DIRECT_OPTIONAL = ("typed_company", "how_many", "found_by", "dollars")  # `dollars` (entry 122): the money the user wrote for THIS stock ("Buy $3,000 of XOM"), a number above zero to the cent; the order then has no shares until the Account Manager sizes it (`how_many` "dollars"). entry 88: what the user typed when they named a COMPANY and not a ticker (the `symbol` is then the Data Clerk's); None when they typed the ticker. `found_by` (entry 101): how the Data Clerk found it, "ticker", "name" or "brand" (the symbol is the LISTED OWNER's of what was typed: "Google" is Alphabet Inc.)
+DIRECT_OPTIONAL = ("typed_company", "how_many", "found_by", "dollars", "max_price", "min_price")  # `min_price` (entry 140): the least one share may cost, from "Sell 10 shares of MSFT at $600 or more" (a price above zero; a sale waits for the price to be at or over it, a buy is placed only while the quote is at or over it); `max_price` (entry 138): the most one share may cost, from "Buy 10 of MU under $50 a share" (a price above zero; a buy is placed only while the quote is at or under it); `dollars` (entry 122): the money the user wrote for THIS stock ("Buy $3,000 of XOM"), a number above zero to the cent; the order then has no shares until the Account Manager sizes it (`how_many` "dollars"). entry 88: what the user typed when they named a COMPANY and not a ticker (the `symbol` is then the Data Clerk's); None when they typed the ticker. `found_by` (entry 101): how the Data Clerk found it, "ticker", "name" or "brand" (the symbol is the LISTED OWNER's of what was typed: "Google" is Alphabet Inc.)
 MAX_DIRECT_SHARES = 1_000_000                       # a typing mistake, not a limit of the account: the cash and the holdings are what limit a trade. The number of shares may have a decimal part (entry 110)
 
 
@@ -572,6 +609,16 @@ def verify_direct_orders(entries: list) -> list[str]:
             else:
                 if entry["shares"] is not None and entry.get("how_many") in (None, "typed"):
                     reasons.append(f"{label}: an order has shares or dollars, never both: the user typed both")
+        if entry.get("max_price") is not None:
+            try:
+                price(entry["max_price"])
+            except ValueError:
+                reasons.append(f"{label}: max_price is a price above zero (the most one share may cost), or left out")
+        if entry.get("min_price") is not None:
+            try:
+                price(entry["min_price"])
+            except ValueError:
+                reasons.append(f"{label}: min_price is a price above zero (the least one share may cost), or left out")
         if not isinstance(entry["request"], str) or not entry["request"].strip():
             reasons.append(f"{label} carries no words of the user's")
     return reasons
@@ -655,6 +702,11 @@ def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
                     reasons.append(f"the user wrote ${own:,.2f} for this stock" + (f" and the decision's {'dollars' if dollars is not None else 'estimated cost'} are ${spend:,.2f}" if own is not None and spend is not None else " and the decision does not say what it costs") + ": the user's dollars are the most it may cost")
             if dollars is not None and decision.get("action") == "reduce":
                 reasons.append("a sale is an order in shares: it carries no dollars")
+        try:
+            decision_max_price(decision)
+            decision_min_price(decision)
+        except ValueError as error:
+            reasons.append(str(error))
     return reasons
 
 
@@ -707,6 +759,28 @@ def _money_or_none(value) -> Decimal | None:
         return money(value)
     except ValueError:
         return None
+
+
+def decision_max_price(decision) -> Decimal | None:
+    """The PRICE LIMIT of a decision (design choices entry 138): the most one share of the purchase may cost, a price above zero at four places; None when the user gave none (a decision with no `max_price`). The Account Manager's handshake
+    refuses a purchase whose fill price is above it and `verify_fill` checks the fill. Raises ValueError when the decision carries a `max_price` that is not a price above zero (a bool, a string, zero)."""
+    if not isinstance(decision, dict) or decision.get("max_price") is None:
+        return None
+    try:
+        return price(decision["max_price"])
+    except ValueError:
+        raise ValueError(f"the decision's max_price must be a price above zero, not {decision['max_price']!r}") from None
+
+
+def decision_min_price(decision) -> Decimal | None:
+    """The PRICE FLOOR of a decision (design choices entry 140): the least one share of the trade may fill at, a price above zero at four places; None when the user gave none (a decision with no `min_price`). The Account Manager's
+    handshake refuses a trade (a purchase or a sale) whose fill price is under it and `verify_fill` checks the fill. Raises ValueError when the decision carries a `min_price` that is not a price above zero (a bool, a string, zero)."""
+    if not isinstance(decision, dict) or decision.get("min_price") is None:
+        return None
+    try:
+        return price(decision["min_price"])
+    except ValueError:
+        raise ValueError(f"the decision's min_price must be a price above zero, not {decision['min_price']!r}") from None
 
 
 def decision_dollars(decision) -> Decimal | None:
@@ -818,7 +892,7 @@ def _trade_reasons(order: WorkOrder, trade, index: int, by_id: dict, seen: set, 
             reasons.append(f"{label} is a funding trade but is not a sale")
         if parent is None or parent.get("side") != "buy" or parent.get("kind") == "funding":
             reasons.append(f"{label} funds {trade.get('funds_for')!r}, which is not a purchase on this order")
-        elif whole_run and status == "filled" and parent.get("status") != "filled":   # holdings sold and nothing bought is the worst case (spec section 7): the Trader's order of work prevents it, this is the check behind that
+        elif whole_run and status == "filled" and parent.get("status") != "filled" and parent.get("reject_code") != "sales_fell_short":   # holdings sold and nothing bought is the worst case (spec section 7): the Trader's order of work prevents it, this is the check behind that. The ONE way it can still happen is a sale that really filled for less than it was estimated (a live broker; entry 143, B1): the purchase is then `sales_fell_short`, the sales stay, and the run says so
             reasons.append(f"{label} is a filled funding sale but the purchase it pays for, {trade.get('funds_for')}, is {parent.get('status')}, not filled")
     elif status == "filled":
         record_id = trade.get("record_id")
@@ -834,6 +908,18 @@ def _trade_reasons(order: WorkOrder, trade, index: int, by_id: dict, seen: set, 
             if trade.get("side") == "sell" and decision.get("origin") != DIRECT:
                 reasons.append(f"{label} is a sale tied to recommendation {record_id}: a sale comes only from the user's own direct order or from RaiseFunds (a funding sale), never from a recommendation")
             shares = _quantity(fill.get("shares")) if isinstance(fill, dict) else None
+            try:
+                limit = decision_max_price(decision)
+            except ValueError:
+                limit = None       # `verify_trade` says what is wrong with the decision's limit
+            if limit is not None and trade.get("side") == "buy" and isinstance(fill, dict) and _positive(fill.get("price")) and price(fill["price"]) > limit:
+                reasons.append(f"{label} filled at ${price(fill['price']):,.4f} a share, above the user's price limit of ${limit:,.2f}")
+            try:
+                floor = decision_min_price(decision)
+            except ValueError:
+                floor = None       # `verify_trade` says what is wrong with the decision's floor
+            if floor is not None and isinstance(fill, dict) and _positive(fill.get("price")) and price(fill["price"]) < floor:
+                reasons.append(f"{label} filled at ${price(fill['price']):,.4f} a share, under the user's price floor of ${floor:,.2f}")
             try:
                 dollars = decision_dollars(decision)
             except ValueError:

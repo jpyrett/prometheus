@@ -1,7 +1,7 @@
 """The Critic's thresholds: `configs/critic_v1.json`, read and checked ONCE (Critic v1 spec Appendix A, design choices entry 59).
 
     config = load_config()                  # the file, validated: a missing key, an unknown key or a wrong type is an error NOW, not halfway through a review
-    config.verdict.approve_min_score        # 70
+    config.verdict.blocked_score_cap        # 49
 
 Every threshold, weight and tolerance of the Critic is in that file and nowhere else. The model never chooses one and the code never writes one. `extra="forbid"` means a typo in the JSON fails
 when the file is loaded, instead of being ignored while the code uses a default (the same rule as the Advisor's `config.py`).
@@ -15,11 +15,14 @@ from prometheus.common.user_profile import TOLERANCES
 from prometheus.rag.config import REPO_ROOT
 
 CONFIG_PATH = REPO_ROOT / "configs" / "critic_v1.json"
-DIMENSIONS = ("accuracy", "evidence", "risk_fit", "timing", "value", "chart")
-# The chart patterns the Critic knows and the side each is on (`chart.py` judges them; the config gives each its points: positive for a bullish one, negative for a bearish one)
+DIMENSIONS = ("accuracy", "evidence", "risk_fit", "timing", "value", "chart", "analysts")
+# The chart patterns the Critic knows and the side each is on (`chart.py` and `patterns.py` judge them; the config gives each its points: positive for a bullish one, negative for a bearish one).
+# Version 3 (design/critic_v3_two_reasons_spec.md section 4) added the eight of `patterns.py`: the swing patterns and the 52-week breakout and breakdown, calculated in code from the stored closes.
 PATTERNS = {"golden_cross": "bullish", "bull_alignment": "bullish", "uptrend_structure": "bullish", "breakout_on_volume": "bullish", "near_high": "bullish", "macd_positive": "bullish",
             "healthy_rsi": "bullish", "obv_rising": "bullish", "death_cross": "bearish", "bear_alignment": "bearish", "downtrend_structure": "bearish", "dead_cat_bounce": "bearish",
-            "overbought": "bearish", "macd_negative": "bearish", "obv_falling": "bearish"}
+            "overbought": "bearish", "macd_negative": "bearish", "obv_falling": "bearish",
+            "double_bottom": "bullish", "inverse_head_and_shoulders": "bullish", "ascending_triangle": "bullish", "breakout_52w": "bullish",
+            "double_top": "bearish", "head_and_shoulders": "bearish", "descending_triangle": "bearish", "breakdown_52w": "bearish"}
 LEVELS = ("low", "medium", "high", "very_high")           # from the least risk to the most: the order matters
 LABELS = ("supports", "weak", "unrelated", "contradicts", "unreviewed")
 KINDS = ("bars", "bars_changed", "provider", "provider_price_linked", "filing", "filing_changed", "derived")
@@ -45,8 +48,7 @@ class Limits(_Section):
 
 
 class Verdict(_Section):
-    approve_min_score: int = Field(ge=0, le=100)
-    blocked_score_cap: int = Field(ge=0, le=100)   # a recommendation with a blocker never shows more than this
+    blocked_score_cap: int = Field(ge=0, le=100)   # a DENIED recommendation (a fault, a profile finding or bad signs in two groups) never shows more than this. Version 3 has no mark the score must reach: the score ranks and informs, it never denies (rule V8)
     grades: dict[str, int]
     unknown_credit: float = Field(ge=0, le=1)      # what a measure that could not be made counts as, 0 to 1
 
@@ -56,8 +58,6 @@ class Verdict(_Section):
             raise ValueError("verdict.grades must have exactly A, B, C and D (anything under D is F)")
         if not self.grades["A"] > self.grades["B"] > self.grades["C"] > self.grades["D"] >= 0:
             raise ValueError("verdict.grades must fall from A to D")
-        if self.blocked_score_cap >= self.approve_min_score:
-            raise ValueError("verdict.blocked_score_cap must be under approve_min_score, or a blocked recommendation could be approved by its score")
         return self
 
 
@@ -228,8 +228,23 @@ class DeadCat(_Section):
     max_vs_peak: float = Field(lt=0)       # and the price is still at least this far under the peak (a negative number)
 
 
+class ChartBonus(_Section):
+    """The net points of the patterns that hold are ALSO a bonus on the final score (Critic v3, rule section 4): `clamp(net x per_point, -max_points, +max_points)`: a bullish chart raises the score, a bearish one lowers it."""
+    per_point: float = Field(ge=0)
+    max_points: float = Field(ge=0)
+
+
 class Chart(_Section):
     neutral: float = Field(ge=0, le=100)   # the score of a chart with no pattern: the points of the patterns that hold move it up or down from here
+    bearish_at: float = Field(lt=0)        # `chart_bearish` (a performance sign, rule V4): the net points of the patterns that hold are at or under this (a negative number)
+    bonus: ChartBonus
+    pivot_window: int = Field(ge=1)        # a swing high or low is the highest or lowest close of this many sessions each side of it (`patterns.py`)
+    pattern_lookback: int = Field(ge=3)    # the swing patterns are looked for in the last this many sessions
+    pattern_recent_sessions: int = Field(ge=1)   # a pattern must be COMPLETE recently to count: the neckline of a double top or bottom, a head and shoulders and its inverse was broken within the last this many sessions (the last close is still beyond it), and the last swing point of a triangle is within the last 2 x pivot_window + this many
+    year_sessions: int = Field(ge=2)       # the 52-week breakout and breakdown: the close against the highest and lowest of this many sessions before it
+    level_tolerance: float = Field(gt=0, lt=1)   # two levels are "the same" when they differ by no more than this share of the higher
+    min_gap: int = Field(ge=1)             # the two tops or bottoms of a double top or bottom are at least this many sessions apart
+    min_depth: float = Field(gt=0, lt=1)   # the valley between two tops, the head over the shoulders: at least this share
     weak_below: float = Field(ge=0, le=100)
     volume_ratio_min: float = Field(gt=0)
     near_high: float = Field(gt=0, le=1)
@@ -253,6 +268,26 @@ class Chart(_Section):
         return self
 
 
+class Analysts(_Section):
+    """Finnhub's analyst recommendation trends (Critic v3 section 3): the dimension `analysts` and the news sign `analysts_bearish`."""
+    min_analysts: int = Field(ge=1)        # a period with fewer analysts than this is not scored (the dimension is out of the weighted average)
+    trend_months: int = Field(ge=1)        # the change of the mean rating is shown against the period this many months earlier
+    bearish_mean: float = Field(ge=1, le=5)    # the sign: the mean rating (1 strong sell to 5 strong buy) is at or under this
+    bearish_drop: float = Field(lt=0)      # or it fell by at least this much (a negative number) over `trend_months`
+    store: str = Field(min_length=1)       # where the Data Clerk keeps each symbol's answers (data/analysts/SYMBOL.json), a folder under `data/`
+
+    @model_validator(mode="after")
+    def _check(self):
+        parts = Path(self.store).parts
+        if Path(self.store).is_absolute() or ".." in parts or not parts or parts[0] != "data":
+            raise ValueError("analysts.store must be a folder under data/ (a relative path with no ..)")
+        return self
+
+
+class Performance(_Section):
+    poor_ret_63d: float = Field(lt=0)      # `poor_performance` (a performance sign): the 63-session return is at or under this (a negative number) AND the 21-session return is negative
+
+
 class Ledger(_Section):
     path: str
 
@@ -270,6 +305,8 @@ class CriticConfig(_Section):
     risk: Risk
     value: Value
     chart: Chart
+    analysts: Analysts
+    performance: Performance
     ledger: Ledger
 
     @model_validator(mode="after")

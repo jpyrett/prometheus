@@ -8,21 +8,22 @@ for the score, a list of chart patterns, a badge for the verdict). So it is flat
 points, share of the weight earned and a `band` (strong, ok, weak) for a colour; the FINAL GATE spelled out (the blended score, the mark, the cap, what blocked it); the patterns; the findings; the
 decision (and no size: how much to buy is the Account Manager's, which writes it in the decision). The full review stays on `order.reviews` and is linked by `review_id`.
 
-THE FINAL GATE. A recommendation is approved when it has no blocker and its BLENDED score reaches the mark:
+THE FINAL GATE (Critic v3, design/critic_v3_two_reasons_spec.md). The score no longer denies; the verdict is the findings':
 
-    base   = sum(weight x dimension score) / sum(weights of the dimensions that apply)          six dimensions: accuracy, evidence, risk fit, timing, value, chart
-    score  = min(100, round(base + the great-deal bonus));  with a blocker, at most `blocked_score_cap` (49)
-    approved = no blocker and score >= `approve_min_score` (70) and no finding that asks for a person to look (`needs_human_review`: a denial that does not cap the score; entry 103)
+    base   = sum(weight x dimension score) / sum(weights of the dimensions that apply)          seven dimensions: accuracy, evidence, risk fit, timing, value, chart, analysts
+    score  = min(100, round(base + the great-deal bonus + the chart-pattern bonus));  a DENIED review with a blocker reason shows at most `blocked_score_cap` (49)
+    denied = a fault or a profile finding, or bad signs in TWO of the groups news, performance and price, or a finding that asks for a person to look (`needs_human_review`: a denial that does not cap the score; entry 103)
 """
 from prometheus.agents.critic import report
 from prometheus.agents.critic.config import DIMENSIONS, CriticConfig
 
 SCHEMA = 1
-TITLES = {"accuracy": "Accuracy", "evidence": "Evidence", "risk_fit": "Risk fit", "timing": "Timing", "value": "Value", "chart": "Chart"}
+TITLES = {"accuracy": "Accuracy", "evidence": "Evidence", "risk_fit": "Risk fit", "timing": "Timing", "value": "Value", "chart": "Chart", "analysts": "Analysts"}
 HEADLINES = {"accuracy": lambda review, record: report._accuracy(review), "evidence": lambda review, record: report._evidence(review), "risk_fit": lambda review, record: report._risk(review),
-             "timing": report._timing, "value": lambda review, record: report._value(review), "chart": lambda review, record: report._chart(review)}
-FORMULA = ("score = min(100, round(sum(weight x dimension score) / sum(weights that apply) + bonus)); a blocker caps it; "
-           "approved = no blocker and score >= the mark and no finding that asks for a person to look")
+             "timing": report._timing, "value": lambda review, record: report._value(review), "chart": lambda review, record: report._chart(review),
+             "analysts": lambda review, record: report.analysts_line(review)}
+FORMULA = ("score = min(100, round(sum(weight x dimension score) / sum(weights that apply) + bonus + pattern bonus)); a denial for a blocker caps it; "
+           "denied = a fault or a profile finding, or bad signs in two of news, performance and price, or a finding that asks for a person to look")
 
 
 def band(score: float, config: CriticConfig) -> str:
@@ -54,10 +55,9 @@ def feedback(review: dict, record: dict | None, config: CriticConfig) -> dict:
         "schema": SCHEMA, "review_id": review["review_id"], "reviewed_utc": review["reviewed_utc"], "valid_until_utc": review["valid_until_utc"],
         "verdict": {"approved": review["approved"], "decision": "approve" if review["approved"] else "deny", "score": review["score"], "grade": review["grade"], "band": band(review["score"], config),
                     "summary": review["summary"]},
-        "gate": {"formula": FORMULA, "base_score": base, "bonus": review["bonus"], "weight_total": weight_total, "score_before_blockers": review["score_before_blockers"], "score": review["score"],
-                 "approve_min_score": v.approve_min_score, "blocked_score_cap": v.blocked_score_cap,
-                 "passed_score": review["score_before_blockers"] >= v.approve_min_score, "blocked": bool(blockers), "blocked_by": [b["code"] for b in blockers],
-                 "denial_reasons": review["denial_reasons"], "margin": review["score"] - v.approve_min_score},
+        "gate": {"formula": FORMULA, "base_score": base, "bonus": review["bonus"], "pattern_bonus": review["pattern_bonus"], "weight_total": weight_total, "score_before_blockers": review["score_before_blockers"],
+                 "score": review["score"], "blocked_score_cap": v.blocked_score_cap, "blocked": bool(blockers), "blocked_by": [b["code"] for b in blockers],
+                 "denial_reasons": review["denial_reasons"], "groups": review["groups"]},
         "dimensions": rows,
         "patterns": {"holding": review["chart"]["patterns"], "unknown": review["chart"]["unknown"], "points": review["chart"]["points"]},
         "findings": {"blockers": blockers, "warnings": [_finding(f) for f in review["warnings"]], "notes": [_finding(f) for f in review["notes"]]},

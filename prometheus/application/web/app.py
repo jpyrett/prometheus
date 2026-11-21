@@ -10,6 +10,7 @@ MONEY (design choices entry 112): the views carry `Decimal`s, and every JSON the
 numbers as before and is not changed.
 """
 import time
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import Body, FastAPI, Header, Query, Request
@@ -24,6 +25,7 @@ from prometheus.application.web.accounts import Accounts, ServiceError
 from prometheus.application.web.proving_run import FIXTURES as PROVING_FIXTURES, Proving, ProvingError
 from prometheus.application.web.replay import Replay
 from prometheus.application.web.runs import QuestionClosed, RunBusy, RunManager
+from prometheus.application.web.watch import Notices
 from prometheus.common.market_calendar import load_calendar
 from prometheus.common.money import dumps, jsonable
 from prometheus.common.user_account import clean_trade_mode
@@ -59,16 +61,32 @@ def error(status: int, message: str) -> JSONResponse:
 
 
 def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None, manager: RunManager | None = None, dev: bool = False, question_timeout: float = 600.0,
-               live_target=None, static_dir: Path | None = UI_DIST, guard: Guard | None = None, proving: Proving | None = None) -> FastAPI:
+               live_target=None, static_dir: Path | None = UI_DIST, guard: Guard | None = None, proving: Proving | None = None, watch=None) -> FastAPI:
     """`live_target(run, params, accounts, question_timeout)` runs the live desk (`desk_run.run_live` by default, imported when first needed: it builds the real agents). `guard` (entry 116) counts the requests of `POST /api/runs`
-    against the account's rate limit (HTTP 429 with the policy's message); `Guard.code_only()` by default: the rate limit needs no model."""
-    app = FastAPI(title="Prometheus desk", docs_url=None, redoc_url=None, openapi_url=None)
+    against the account's rate limit (HTTP 429 with the policy's message); `Guard.code_only()` by default: the rate limit needs no model.
+
+    `watch` (design choices entry 140) is the WATCHER of the waiting limit orders (`watch.OrderWatch`: anything with `start()`, `stop()` and `notices`): it is started with the app and stopped with it (the lifespan: the app must be run as a server, or
+    entered as a context by a test client), and it is NEVER built here. None, the default, is no watcher at all: a test or a replay builds the app without one, and a test that wants one passes one with a fake clock. The page's notices (a fill, an
+    expiry, a cancel) are `watch.notices`, or a log of the app's own when there is no watcher: `GET /api/orders/events`."""
+    @asynccontextmanager
+    async def lifespan(app: FastAPI):
+        if watch is not None:
+            watch.start()
+        try:
+            yield
+        finally:
+            if watch is not None:
+                watch.stop()
+
+    app = FastAPI(title="Prometheus desk", docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
     runs, accounts = manager or RunManager(), accounts or Accounts()
     guard = guard or Guard.code_only()
     proving = proving or (Proving(fixtures=PROVING_FIXTURES, paid=False) if replay else Proving())      # --replay serves the saved real runs and refuses a paid one
     app.state.runs, app.state.replay, app.state.accounts, app.state.guard, app.state.proving = runs, replay, accounts, guard, proving
+    notices = getattr(watch, "notices", None) or Notices()
+    app.state.watch, app.state.notices = watch, notices
     if dev:
-        app.add_middleware(CORSMiddleware, allow_origins=DEV_ORIGINS, allow_methods=["GET", "POST", "PATCH"], allow_headers=["*"])
+        app.add_middleware(CORSMiddleware, allow_origins=DEV_ORIGINS, allow_methods=["GET", "POST", "PATCH", "DELETE"], allow_headers=["*"])
 
     @app.exception_handler(RequestValidationError)
     async def invalid(request: Request, exc: RequestValidationError):
@@ -90,7 +108,7 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
     @app.get("/api/health")
     def health():
         return {"ok": True, "mode": "replay" if replay else "live", "book": "ok" if replay else accounts.book_status(), "clock_note": clock_note() or "", "clock_pill": clock_pill(),
-                "defaults": {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": True}, "limits": {"prompt_chars": MAX_TEXT},
+                "defaults": {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": False, "raise_funds": False}, "limits": {"prompt_chars": MAX_TEXT},
                 "active_run": runs.active_id(), "active_kind": active_kind(runs), "tracing": tracing.status(), "replay_file": replay.capture.get("_file") if replay else None}
 
     # ---------------------------------------------------------------- accounts
@@ -112,6 +130,38 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
     @app.post("/api/accounts/{account_id}/funds")
     def funds(account_id: int, body: dict = Body(...)):
         return read_only_replay() if replay else jsonable(accounts.funds(account_id, body.get("action"), body.get("amount")))
+
+    # ---------------------------------------------------------------- waiting limit orders (entry 140)
+    @app.get("/api/accounts/{account_id}/orders")
+    def account_orders(account_id: int):
+        return {"orders": [], "reserved_cash": 0, "available": 0, "watching": False} if replay else jsonable(accounts.orders(account_id))
+
+    @app.delete("/api/orders/{order_id}")
+    def cancel_order(order_id: int):
+        if replay:
+            return read_only_replay()
+        order = accounts.cancel_order(order_id)
+        notices.add({"type": "cancelled", "order_id": order["order_id"], "account_id": order["account_id"], "symbol": order["symbol"], "side": order["side"],
+                     "text": f"Order #{order['order_id']} cancelled: what it set aside is available again.", "at": order["closed_utc"]})
+        return jsonable(order)
+
+    @app.get("/api/orders/events")
+    def order_events(after: int = Query(0, ge=0), once: bool = Query(False)):
+        """The notices of the watcher and the cancel route as Server-Sent Events (`order`): every one after `after`, then the new ones as they come; `once=true` sends what there is and ends (the tests' and the recordings' handle)."""
+        def stream():
+            seen, beat = after, time.monotonic()
+            while True:
+                batch, _ = notices.read_from(seen, wait=0.0 if once else 1.0)
+                for e in batch:
+                    seen = e["seq"]
+                    yield f"id: {e['seq']}\nevent: {e['type']}\ndata: {dumps(e['data'])}\n\n"
+                    beat = time.monotonic()
+                if once:
+                    return
+                if time.monotonic() - beat >= KEEP_ALIVE_SECONDS:
+                    yield ": keep-alive\n\n"
+                    beat = time.monotonic()
+        return StreamingResponse(stream(), media_type="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no", "Connection": "keep-alive"})
 
     # ---------------------------------------------------------------- runs
     @app.post("/api/runs", status_code=202)
@@ -140,7 +190,7 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
                 run = runs.start(replay.play, kind="replay")
             else:
                 from prometheus.application.web import desk_run
-                params = {"account_id": account_id, "prompt": " ".join(prompt.split()), "strict": bool(body.get("strict", False)), "neutral": bool(body.get("neutral", True)), "fetch": bool(body.get("fetch", False)), "trade_mode": trade_mode}
+                params = {"account_id": account_id, "prompt": " ".join(prompt.split()), "strict": bool(body.get("strict", False)), "neutral": bool(body.get("neutral", True)), "fetch": bool(body.get("fetch", False)), "raise_funds": bool(body.get("raise_funds", False)), "trade_mode": trade_mode}
                 target = live_target or desk_run.run_live
                 run = runs.start(lambda r: target(r, params, accounts, question_timeout), kind="live")
         except RunBusy:
