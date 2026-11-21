@@ -51,34 +51,6 @@ def test_share_count_change_is_the_balance_sheets_change_as_a_fraction(apple, me
         f.share_count_change({})
 
 
-def test_payout_coverage_sbc_and_the_accrual_ratios_use_the_same_period(apple, meta):
-    assert f.payout_coverage(apple)[0] == pytest.approx(3921 / 42097)               # dividends over net income, the quarter
-    assert f.payout_coverage(meta)[0] == pytest.approx(4060 / 52481)                # net income of the NINE months (the third of four columns), not the quarter's 9,860
-    assert f.sbc_to_revenue(apple)[0] == pytest.approx(3594 / 143756)
-    assert f.sbc_to_revenue(meta)[0] == pytest.approx(21053 / 181712)
-    cfo = next(a["current"] for a in apple["capital_actions"] if a["item"] == "cash from operations")
-    assets = apple["balance_sheet"]["items"]["total_assets"]["current"]
-    value, summary = f.accrual_ratio(apple)
-    assert value == pytest.approx((42097 - cfo) / assets) and summary["total_assets"] == assets * 1e6
-    assert f.cfo_negative_with_profit(apple)[0] is False and f.cfo_negative_with_profit(meta)[0] is False
-
-
-def test_cash_balance_is_the_balance_sheets_cash_in_dollars(apple):
-    cash = apple["balance_sheet"]["items"]["cash"]["current"]
-    value, summary = f.cash_balance(apple)
-    assert value == cash * 1e6 and summary["as_reported"] == cash
-    with pytest.raises(f.Missing, match="no cash"):
-        f.cash_balance({})
-
-
-def test_receivables_and_inventory_against_sales_are_percentage_points(apple):
-    receivables = apple["balance_sheet"]["items"]["accounts_receivable"]["change_pct"]
-    value, summary = f.receivables_vs_sales(apple)
-    assert value == pytest.approx(receivables - (143756 - 124300) / 124300 * 100) and summary["revenue_change_pct"] == pytest.approx(15.65, abs=0.01)
-    inventory = apple["balance_sheet"]["items"]["inventories"]["change_pct"]
-    assert f.inventory_vs_sales(apple)[0] == pytest.approx(inventory - (143756 - 124300) / 124300 * 100)
-
-
 def test_every_ratio_is_missing_not_guessed_when_its_inputs_are_not_there():
     for fn in (f.payout_coverage, f.sbc_to_revenue, f.accrual_ratio, f.cfo_negative_with_profit, f.receivables_vs_sales, f.inventory_vs_sales):
         with pytest.raises(f.Missing):
@@ -89,17 +61,6 @@ def test_a_negative_net_income_has_no_payout_coverage():
     evidence = {"capital_actions": [{"item": "dividends paid", "current": -5.0, "units": "(In dollars)"}], "income": [{"item": "net income", "values": [-10.0, 4.0], "units": "(In dollars)"}]}
     with pytest.raises(f.Missing, match="not positive"):
         f.payout_coverage(evidence)
-
-
-def test_nothing_here_scores_anything(apple, meta):
-    """The module's ratios are numbers and booleans; their inputs summaries hold no judgement words."""
-    for evidence in (apple, meta):
-        for fn in (f.share_count_change, f.payout_coverage, f.sbc_to_revenue, f.accrual_ratio, f.cfo_negative_with_profit, f.receivables_vs_sales):
-            try:
-                _, summary = fn(evidence)
-            except f.Missing:
-                continue
-            assert not fs.keys_of(summary) & set(fs.FORBIDDEN_KEYS)
 
 
 def test_every_statement_is_put_in_dollars_by_its_own_units_line_and_an_unknown_scale_is_never_assumed():

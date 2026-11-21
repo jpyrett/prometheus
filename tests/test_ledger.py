@@ -2,7 +2,7 @@
 import json
 from datetime import date
 
-from prometheus.memory.ledger import DEFAULT_PATH, Ledger
+from prometheus.memory.ledger import Ledger
 
 
 def rec(symbol="PG", family="capital_return", day="2026-10-23", rid="a1"):

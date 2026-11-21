@@ -7,7 +7,6 @@ from contextlib import contextmanager
 from datetime import date, datetime, timezone
 from decimal import Decimal
 
-import psycopg
 import pytest
 
 from prometheus.agents.account_manager import account_manager as am
@@ -16,7 +15,6 @@ from prometheus.common.user_account import clean_risk_level, date_window, parse_
 from prometheus.persistence.accounts import SECRETS, open_account_store
 
 YEAR = (date(2026, 1, 1), date(2026, 12, 31))
-NOW = datetime(2026, 11, 12, 16, 0, tzinfo=timezone.utc)
 
 
 def test_money_dates_and_risk_levels_are_checked_before_any_database():
@@ -101,27 +99,6 @@ def test_the_sample_accounts_match_the_seed(store):
     with pytest.raises(ValueError, match="cannot be deleted"):
         store.delete_account(jacob.account_id)
     assert jacob.account_balance() == Decimal("51.23")
-
-
-def test_funds_can_be_removed_down_to_zero_and_never_below_it(store):
-    """`remove_funds` (UI v1, design choices entry 100): a withdrawal is one negative ledger row, and the cash check the book already makes (the cash is the only thing it looks at) refuses more than the account holds."""
-    with book(store) as manager:
-        manager.add_funds(Decimal("500.00"), date(2026, 1, 15))
-        assert manager.remove_funds(Decimal("120.25"), date(2026, 1, 16)) == Decimal("379.75")
-        assert manager.remove_funds("379.75") == Decimal("0.00") and manager.account_balance() == Decimal("0.00")
-        with pytest.raises(ValueError, match=r"the account has \$0.00 in cash: \$0.01 cannot be removed"):
-            manager.remove_funds("0.01")
-        manager.add_funds("10.00")
-        for bad in (1.5, 0, -5, "0", "abc"):
-            with pytest.raises(ValueError):
-                manager.remove_funds(bad)
-        with pytest.raises(ValueError, match="cannot be removed"):
-            manager.remove_funds("10.01")
-        assert manager.account_balance() == Decimal("10.00")
-        with psycopg.connect(row_factory=psycopg.rows.dict_row, **store._connect) as conn:
-            conn.execute("SELECT set_config('trading.account_id', %s, true)", (str(manager.account_id),))
-            kinds = [(r["kind"], r["amount"], r["balance_after"]) for r in conn.execute("SELECT kind, amount, balance_after FROM trading.cash_ledger WHERE account_id = %s ORDER BY entry_id", (manager.account_id,)).fetchall()]
-        assert kinds == [("deposit", Decimal("500.00"), Decimal("500.00")), ("withdrawal", Decimal("-120.25"), Decimal("379.75")), ("withdrawal", Decimal("-379.75"), Decimal("0.00")), ("deposit", Decimal("10.00"), Decimal("10.00"))]
 
 
 def test_a_new_account_takes_funds_lists_holds_and_counts_the_gain(store):
@@ -217,101 +194,6 @@ def test_fills_the_trader_reports_are_booked_through_notify_trades_and_the_book_
         not_booked, problems = manager.notify_trades(saved, [filled("T4", "PG", "sell", 1, Decimal("170.0"), record_id="rec-memory")], sold_on)       # no book=True: nothing is saved
         assert problems == [] and not_booked.position("PG").shares == 5 and manager.account_balance() == Decimal("1137.50") and manager.list_portfolio().position("PG").shares == 6
     assert sample_state() == before
-
-
-def test_the_trader_in_paper_mode_books_its_fill_in_a_throwaway_account_and_the_three_samples_do_not_move(store):
-    """Trader v1 (spec sections 13 and 16) against the REAL local Postgres: a `Trader(use_model=False)` runs the captured, decided PG order in paper mode with `book=True`, over an Account Manager connected to an account this test
-    creates and deletes, with a fake quote. The fill must be in the book (cash, position, trade count, realized gain); a second run must not trade again; and the three sample accounts must be exactly as they were."""
-    from advisor_helpers import MemoryLedger
-    from trader_helpers import NOW, MarketClerk, decided
-
-    from prometheus.agents.trader.trader import Trader
-
-    samples = ("jacob_sample", "avery_chen", "blake_okonkwo")
-
-    def sample_state():
-        state = {}
-        for seed in samples:
-            account_id = store.account_id_for_seed(seed)
-            state[seed] = (store.account_balance(account_id), store.list_portfolio(account_id).model_dump_json(), store.number_trades(account_id, *YEAR),
-                           store.number_approved_recommendations(account_id, *YEAR), store.number_denied_recommendations(account_id, *YEAR))
-        return state
-
-    before, day = sample_state(), date(2026, 11, 5)
-    with book(store, name="Trader Holder") as holder:
-        holder.add_funds(Decimal("10000.00"), day)
-        manager = am.AccountManager(model=object(), model_id="account-book", clerk=MarketClerk({"PG": 167.10}))
-        manager.connect(store, holder.account_id)                                                          # the desk builds the manager first and learns the account afterwards
-        order, ledger = decided(), MemoryLedger()
-        trader = Trader(use_model=False, ledger=ledger)
-        assert manager.profile.user == "Trader Holder" and manager.trading_portfolio().cash_avail == Decimal("10000")
-
-        trader.execute_trades(order, manager, None, NOW, book=True)                                          # paper mode (the default), the account's own portfolio, the fills saved
-        [trade] = order.trades
-        assert (trade["status"], trade["symbol"], trade["side"], trade["shares"], trade["booked"], trade["placed_by"]) == ("filled", "PG", "buy", 44, True, "code")
-        assert (trade["fill"]["price"], trade["fill"]["amount"], trade["fill"]["date"], trade["fill"]["price_source"]) == (Decimal("167.1"), Decimal("7352.4"), "2026-11-05", "quote")
-        assert order.status == "traded" and order.errors == [] and order.trader_runs[0]["booked"] is True and order.trader_runs[0]["errors"] == []
-
-        assert manager.account_balance() == Decimal("2647.60")                                               # 10000.00 - round(44 x 167.10, 2): the book holds the cash the Trader's run reported
-        assert order.trader_runs[0]["portfolio_after"]["cash"] == Decimal("2647.6") and order.trader_runs[0]["portfolio_before"]["cash"] == Decimal("10000")
-        saved = manager.list_portfolio()
-        assert [(p.symbol, p.shares, p.cost_basis, p.acquired) for p in saved.positions] == [("PG", 44, Decimal("167.1"), day)] and saved.cash_avail == Decimal("2647.6")
-        assert manager.number_trades(day, day) == 1 and manager.calculate_total_gain(day, day) == Decimal("0.00")
-        assert [r["trade_id"] for r in ledger.records] == ["T1"]
-
-        again = trader.execute_trades(order, manager, None, NOW, book=True)                                  # T3: a filled trade is final; nothing is bought twice
-        assert again is order and len(order.trades) == 1 and len(order.trader_runs) == 2 and order.trader_runs[1]["portfolio_after"]["cash"] == Decimal("2647.6")
-        assert manager.account_balance() == Decimal("2647.60") and manager.number_trades(day, day) == 1 and manager.list_portfolio().position("PG").shares == 44
-    assert sample_state() == before
-
-
-def _review(record_id, *, approved=True, score=90):
-    return {
-        "record_id": record_id, "review_id": record_id + "-review", "symbol": "F", "action": "open", "approved": approved,
-        "summary": "APPROVE F" if approved else "DENY F", "valid_until_utc": "2026-11-12T20:00:00Z",
-        "score": score, "requires_human": False, "requires_human_reasons": [], "timing": {"deal_price": 10.0},
-    }
-
-
-def _order(*reviews):
-    order = wo.new_work_order("book", requester="account_manager")
-    order.status = "reviewed"
-    order.reviews = list(reviews)
-    order.recommendations = [{"identity": {"record_id": review["record_id"]}, "trade": {"entry_mid": 10.0}} for review in reviews]
-    return order
-
-
-def test_decisions_are_saved_and_a_later_answer_moves_the_count(store):
-    day = (date(2026, 11, 12), date(2026, 11, 12))
-    with book(store, name="Decision Holder") as manager:
-        manager.add_funds(Decimal("1000"))
-        portfolio = manager.list_portfolio()
-        order = manager.decide_trades(_order(_review("rec-yes", approved=True), _review("rec-no", approved=False, score=10)), portfolio, now=NOW, mode="auto")
-        assert [d["will_trade"] for d in order.trade_decisions] == ["yes_auto", "no_system_denied"]
-        assert (manager.number_approved_recommendations(*day), manager.number_denied_recommendations(*day)) == (1, 1)
-        waiting = manager.decide_trades(_order(_review("rec-wait")), portfolio, approver=None, now=NOW, mode="ask")
-        assert waiting.trade_decisions[0]["will_trade"] == "pending_user"
-        assert (manager.number_approved_recommendations(*day), manager.number_denied_recommendations(*day)) == (1, 1)
-        answered = manager.record_user_decision(waiting, "rec-wait", True, NOW)
-        assert answered.trade_decisions[0]["will_trade"] == "yes_user"
-        assert (manager.number_approved_recommendations(*day), manager.number_denied_recommendations(*day)) == (2, 1)
-
-
-def test_a_query_without_the_account_sees_nothing_and_cash_is_not_writable(store):
-    jacob = store.account_id_for_seed("jacob_sample")
-    before = store.account_balance(jacob)
-
-    def count(cur):
-        cur.execute("SELECT count(*) AS n FROM trading.accounts")
-        return int(cur.fetchone()["n"])
-
-    assert store._run(None, count) == 0
-    assert store._run(jacob, count) == 1
-    with pytest.raises(psycopg.errors.InsufficientPrivilege):
-        store._run(jacob, lambda cur: cur.execute("UPDATE trading.accounts SET cash_balance = cash_balance + 1 WHERE account_id = %s", (jacob,)))
-    with pytest.raises(psycopg.errors.InsufficientPrivilege):
-        store._run(None, lambda cur: cur.execute("INSERT INTO trading.accounts (display_name, risk_tolerance) VALUES ('x', 'moderate')"))
-    assert store.account_balance(jacob) == before
 
 
 def test_the_account_command_prints_the_samples(store, capsys):

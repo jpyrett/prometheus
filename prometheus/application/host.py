@@ -56,18 +56,6 @@ class PrometheusHost:
             contents = await client.read_resource(uri)
             return contents[0].text
 
-    async def list_catalog(self) -> dict[str, list[str]]:
-        async with self._client() as client:
-            tools = await client.list_tools()
-            prompts = await client.list_prompts()
-            resources = await client.list_resources()
-            templates = await client.list_resource_templates()
-            return {
-                "tools": [t.name for t in tools],
-                "prompts": [p.name for p in prompts],
-                "resources": [r.uri for r in resources],
-                "templates": [t.uri_template for t in templates],
-            }
 
     async def run_smoke(
         self,

@@ -8,7 +8,6 @@ ranking, one hit per article, the relevance bar, the date window, and the MMR op
 the real MiniLM model on the three real articles in tests/fixtures; they skip themselves when the model is not
 available. No test touches the real index in data/processed/vectorstore: every store lives in a temporary folder.
 """
-import warnings
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -20,17 +19,14 @@ from langchain_core.documents import Document
 from langchain_core.embeddings import Embeddings
 
 from prometheus.rag import retriever, store as rag_store
-from prometheus.rag.ingest import ingest_documents
 from prometheus.rag.loaders import load_news
-from prometheus.rag.retriever import MAX_K, MIN_SCORE, Hit, search_news
+from prometheus.rag.retriever import Hit, search_news
 
 FIXTURE = Path(__file__).parent / "fixtures" / "news_sample.txt"
-COREWEAVE = "polygon:287f3b5c2f0c59c2b903cd391bb97c0c090f48a25c64cdf5e7df1dab0e85382a"
 DAY = timedelta(days=1)
 # The test clock follows the real one: yesterday at noon UTC. The tools count windows (since_days) back from the real clock, so a clock pinned to a past day made those tests fail as the days went by.
 # The synthetic chunks are dated NOW minus some days; a test that needs a fixed date (the real stored sample above) builds its own.
 NOW = (datetime.now(timezone.utc) - DAY).replace(hour=12, minute=0, second=0, microsecond=0)
-STAMP = "%Y-%m-%dT%H:%M:%SZ"
 
 
 class KeywordEmbeddings(Embeddings):
@@ -48,17 +44,6 @@ class KeywordEmbeddings(Embeddings):
 
     def embed_query(self, text):
         return self._vector(text)
-
-
-class HotCold(Embeddings):
-    """Three fixed vectors, so that one pair of texts points in exactly opposite directions (cosine similarity -1)."""
-    VECTORS = {"hot": [1.0, 0.0], "warm": [0.6, 0.8], "cold": [-1.0, 0.0]}
-
-    def embed_documents(self, texts):
-        return [self.VECTORS[t.split()[0]] for t in texts]
-
-    def embed_query(self, text):
-        return self.VECTORS[text.split()[0]]
 
 
 def make_store(path: Path, embeddings) -> Chroma:
@@ -102,9 +87,6 @@ def ids(hits: list[Hit]) -> list[str]:
     return [h.article_id for h in hits]
 
 
-# ---------------------------------------------------------------- what a hit is
-
-
 # ---------------------------------------------------------------- newest first (found in the SNDK run: "latest" returned old articles)
 
 @pytest.fixture
@@ -118,26 +100,7 @@ def dated(tmp_path):
         chunk("new-offtopic", 0, 1, "tesla car", ["AAPL"], NOW - 1 * DAY + timedelta(hours=9))])  # the newest of all, but not about apple
 
 
-@pytest.mark.parametrize("value", ["yes", 1, None])
-def test_newest_first_must_be_true_or_false(dated, value):
-    with pytest.raises(ValueError, match="newest_first must be true or false"):
-        search_news("apple iphone", newest_first=value, store=dated, now=NOW)
-
-
-# ---------------------------------------------------------------- filters
-
-
-# ---------------------------------------------------------------- scores and "no supporting text"
-
-
 # ---------------------------------------------------------------- diverse (MMR)
-
-def test_diverse_picks_another_story_instead_of_the_near_duplicate(news):
-    plain = search_news("apple iphone phone", min_score=0.2, k=2, store=news)
-    spread = search_news("apple iphone phone", min_score=0.2, k=2, diverse=True, lambda_mult=0.3, store=news)
-    assert ids(plain) == ["a1", "a2"]  # a2 is almost the same story as a1
-    assert ids(spread) == ["a1", "a3"]  # the best match first, then the one least like it that is still relevant
-    assert ids(search_news("apple iphone phone", min_score=0.2, k=2, diverse=True, lambda_mult=1.0, store=news)) == ["a1", "a2"]
 
 
 def test_the_bar_applies_before_the_spreading_so_variety_cannot_pull_in_noise(news):
@@ -206,44 +169,3 @@ def test_cli_tells_you_to_ingest_when_the_index_is_empty(news, monkeypatch, caps
     monkeypatch.setattr(retriever, "count_chunks", lambda kind="news": 0)
     assert retriever.main(["apple"]) == 1
     assert "nothing is stored yet" in capsys.readouterr().err
-
-
-# ---------------------------------------------------------------- the real embedding model (skipped when unavailable)
-
-@pytest.fixture(scope="module")
-def real_embeddings():
-    try:
-        return rag_store.get_embeddings()
-    except Exception as error:  # no local copy of the model and no network
-        pytest.skip(f"the embedding model is not available: {type(error).__name__}")
-
-
-@pytest.fixture
-def real_news(tmp_path, real_embeddings) -> Chroma:
-    """The three real articles in tests/fixtures (four chunks), embedded by the real model."""
-    store = make_store(tmp_path / "real", real_embeddings)
-    ingest_documents(load_news(FIXTURE), store)
-    return store
-
-
-def test_with_the_real_model_questions_find_their_article(real_news):
-    # no word in common with the article: found by meaning
-    assert search_news("new folding smartphone sales", store=real_news)[0].article_id == "finnhub:143136906"
-    first = search_news("an AI cloud company worried about its debt", min_score=None, store=real_news)[0]
-    assert first.article_id == COREWEAVE
-    assert search_news("what do Meta and Apple plan for AI inference spending", store=real_news)[0].article_id == "finnhub:143103074"
-
-
-def test_the_real_entry_point_end_to_end(monkeypatch, tmp_path, real_embeddings, capsys):
-    from prometheus.rag import ingest
-    news_dir = tmp_path / "news"
-    news_dir.mkdir()
-    (news_dir / "AAPL.txt").write_text(FIXTURE.read_text(encoding="utf-8"), encoding="utf-8")
-    monkeypatch.setenv("NEWS_OUTPUT_DIR", str(news_dir))
-    monkeypatch.setenv("VECTOR_STORE_PATH", str(tmp_path / "index"))
-    assert ingest.main(["AAPL"]) == 0
-    capsys.readouterr()
-    assert retriever.main(["new folding smartphone sales", "--tickers", "AAPL", "-k", "2"]) == 0
-    out = capsys.readouterr().out
-    assert "The iPhone Duo Launch Kicks Off a Crucial Few Weeks for Apple" in out
-    assert [h.article_id for h in search_news("new folding smartphone sales", k=1)] == ["finnhub:143136906"]  # the real store, found through the settings

@@ -666,6 +666,8 @@ def test_a_trade_with_no_price_is_rejected_before_it_fills_and_never_reaches_the
 def test_a_resting_order_is_never_approved_or_booked_and_the_run_does_not_wait_for_the_market(monkeypatch, no_sleep):
     """A backtest at the moment of the decision: the next session's bar is not stored yet, so each order rests (`active`). A resting trade is not a trade about to be placed: no approval, no booking, no waiting."""
     order, am = real_order(), manager()
+    stored = am.request_bars
+    monkeypatch.setattr(am, "request_bars", lambda symbols, start, end: stored(symbols, min(start, FRIDAY), FRIDAY))      # the real stored bars AS THEY WERE at the moment of the decision: nothing after that Friday (the store has later sessions now, which would fill the orders)
     rec = Recorder(monkeypatch, am)
     am.perform_trades(order, BOB, trader(mode="backtest"), MOMENT)
     assert [t["status"] for t in order.trades] == ["active", "active"] and handshake_calls(rec) == [] and last(order)["portfolio_after"]["cash"] == Decimal("15000.0")

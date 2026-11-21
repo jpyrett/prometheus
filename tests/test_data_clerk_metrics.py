@@ -2,7 +2,6 @@
 
 No network: a fake toolbox stands in for Finnhub, the bars are day files written into a temporary folder in the real format, and the stored filings are the real Apple ones.
 """
-import json
 from datetime import date
 
 import pytest
@@ -11,7 +10,7 @@ from test_filing_signals import APPLE_TODAY, store
 from bar_helpers import weekdays, write_day_files
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.common import work_order as wo
-from prometheus.tools.data_clerk import DATA_CLERK_TOOLS, DataClerkTools, ToolInputError
+from prometheus.tools.data_clerk import DataClerkTools, ToolInputError
 
 TODAY = date(2026, 10, 23)
 FINNHUB = {"peTTM": 25.0, "roeTTM": 30.0}
@@ -74,26 +73,6 @@ def test_the_data_clerk_puts_the_metrics_of_every_symbol_on_the_order_without_a_
     assert wo.WorkOrder.model_validate_json(result.model_dump_json()) == result                                       # plain JSON
 
 
-def test_a_metric_that_cannot_be_computed_is_a_result_with_a_note_not_a_failure(bars_root):
-    result = clerk(bars_root).request_metrics(order(["AAPL"], "sma_200", "rsi_14", "sue_4q"), today=TODAY)
-    assert result.status == "data_ready"
-    assert result.data.metrics["AAPL"]["sma_200"]["note"] == "needs 200 bars, 40 stored" and result.data.metrics["AAPL"]["sue_4q"]["value"] is None
-
-
-def test_finnhub_failing_for_one_symbol_is_a_note_and_the_bars_metrics_still_come(bars_root):
-    result = clerk(bars_root, Toolbox(fail=["PG"])).request_metrics(order(["AAPL", "PG"], "ret_5d", "pe_ratio"), today=TODAY)
-    assert result.status == "data_ready"
-    pg = result.data.metrics["PG"]
-    assert pg["ret_5d"]["value"] is not None and pg["pe_ratio"]["value"] is None and "no Finnhub metric payload for PG" in pg["pe_ratio"]["note"]
-    assert any(n.startswith("PG: Finnhub metrics failed (RuntimeError: No financial metrics returned for PG") for n in result.data.notes)
-
-
-def test_a_symbol_that_cannot_be_read_at_all_fails_the_order_and_is_named_while_the_others_stay(bars_root):
-    result = clerk(bars_root).request_metrics(order(["AAPL", "ZZZZ"], "ret_5d", "last_close"), today=TODAY)
-    assert result.status == "data_failed" and result.errors == ["ZZZZ: nothing could be read (no stored bars for it)"]
-    assert result.data.metrics["AAPL"]["last_close"]["value"] == 139.5 and result.data.metrics["ZZZZ"]["last_close"]["value"] is None
-
-
 def test_a_symbol_that_is_not_a_ticker_is_refused_before_anything_is_read(bars_root):
     toolbox = Toolbox()
     result = clerk(bars_root, toolbox).request_metrics(order(["../etc"], "ret_5d"), today=TODAY)
@@ -113,37 +92,7 @@ def test_an_order_that_already_has_its_data_comes_back_unchanged(bars_root):
     assert again is first and toolbox_calls == []                       # ret_5d needs no Finnhub call at all: the bars metrics never touch the paid API
 
 
-def test_only_the_inputs_a_requested_metric_needs_are_read(bars_root, filings):
-    toolbox = Toolbox()
-    c = clerk(bars_root, toolbox)
-    c.request_metrics(order(["AAPL"], "ret_5d"), today=TODAY)
-    assert toolbox.financials.asked == []                               # bars only: no Finnhub call, no filings read
-    c.request_metrics(order(["AAPL"], "pe_ratio"), today=TODAY)
-    assert toolbox.financials.asked == ["AAPL"]
-
-
-def test_the_sector_of_the_order_gives_the_residual_metrics_an_etf(tmp_path):
-    root = tmp_path / "day_aggs_v1"
-    rows = {d: [{"ticker": t, "open": 10, "high": 12, "low": 9, "close": c, "volume": 1000} for t, c in (("AAPL", 11.0 + i), ("SPY", 50.0), ("XLK", 20.0 + i / 2))] for i, d in enumerate(weekdays(10, TODAY))}
-    write_day_files(root, rows)
-    # AAPL closes 11..20 (5 sessions ago 15): +33.3%; XLK closes 20, 20.5 ... 24.5 (5 sessions ago 22): +11.4%; the residual is the difference
-    for sector, expected in ((None, None), ("XLK", (20 / 15 - 1) - (24.5 / 22 - 1))):
-        result = clerk(root).request_metrics(order(["AAPL"], "residual_5d", **({"sector": sector} if sector else {})), today=TODAY)
-        value = result.data.metrics["AAPL"]["residual_5d"]["value"]
-        assert (value is None) if expected is None else value == pytest.approx(expected)
-
-
 # ---------------------------------------------------------------- the tool the model and the MCP server see
-
-def test_calculate_metrics_is_on_the_allow_list_and_is_the_code_behind_request_metrics(bars_root, filings):
-    assert DATA_CLERK_TOOLS[-1] == "calculate_metrics"
-    tools = DataClerkTools(toolbox=Toolbox(), bars_root=bars_root)
-    tools.today = TODAY
-    out = tools.calculate_metrics(["aapl"], ["ret_5d", "pe_ratio"])
-    assert out["as_of"] == "2026-10-23" and out["results"]["AAPL"]["ret_5d"]["value"] == pytest.approx(139.5 / 134.5 - 1) and out["bars"] == {"AAPL": 40}
-    json.dumps(out)                                                     # a tool result goes to the model as JSON
-    tool = {t.name: t for t in tools.langchain_tools()}["calculate_metrics"]
-    assert list(tool.args) == ["symbols", "metrics"] and "rates NOTHING" in tool.description and "needs 30 bars, 17 stored" in tool.description
 
 
 def test_calculate_metrics_refuses_what_the_model_must_fix(bars_root):

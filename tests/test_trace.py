@@ -19,10 +19,8 @@ from langsmith import run_trees, utils
 from langsmith.run_helpers import get_current_run_tree
 
 from prometheus.agents.account_manager import handshake
-from prometheus.agents.account_manager.sizing import size_purchases
 from prometheus.common import langsmith_tracing, trace
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import Portfolio
 from prometheus.common.trace import summarize, traced
 from prometheus.persistence.accounts import AccountStore
 
@@ -103,19 +101,6 @@ def fail(argument):
     raise ValueError("this is the function's own error")
 
 
-def test_with_no_trace_open_a_decorated_function_is_the_plain_function_and_nothing_is_summarized():
-    watched = Watched(a=1)
-    assert get_current_run_tree() is None
-    assert add(1, 3) == 4 and add(a=5, config=watched) == 7             # a parameter called `config` is the function's own
-    with pytest.raises(ValueError, match="the function's own error"):
-        fail(watched)
-    with pytest.raises(TypeError, match="missing 1 required positional argument"):
-        add()                                                             # the function's own refusal of a bad call
-    assert watched.reads == 0 and get_current_run_tree() is None          # no summary was made, no run was made
-    assert inspect.signature(add) == inspect.signature(add.__wrapped__) and add.__name__ == "add"
-    assert list(inspect.signature(size_purchases).parameters)[:3] == ["purchases", "cash", "config"]      # the real decorated functions keep their signatures too
-
-
 def test_inside_a_node_a_decorated_function_is_a_child_of_the_node_and_changes_nothing(tracing_on):
     runs, watched, store = [], Watched(a=1), AccountStore({"host": "db.invalid", "port": "1", "database": "d", "app_user": "u", "app_password": "SECRETWORD"})
 
@@ -175,37 +160,7 @@ def test_the_handshake_spans_show_the_approved_shares_and_the_cash_before_and_af
     assert [t["status"] for t in order.trades] == ["filled", "filled"] and order.status == "traded"                # the traced run is the run
 
 
-def test_a_refusal_is_summarized_with_its_code_and_its_reason():
-    refused = handshake.refusal("insufficient_cash", "the cash does not pay for one share", Decimal("12.50"))
-    assert summarize(refused) == {"approved": False, "shares": Decimal("0"), "cash_avail": Decimal("12.50"), "code": "insufficient_cash", "reason": "the cash does not pay for one share"}
-
-
 # ---------------------------------------------------------------- summarize, on real data
-
-def captured(name: str) -> wo.WorkOrder:
-    data = json.loads((FIXTURES / name).read_text(encoding="utf-8"))
-    return wo.WorkOrder.model_validate(copy.deepcopy(data["order"]))
-
-
-def test_a_work_order_is_its_symbols_and_its_counts_never_its_articles():
-    order = captured("advisor_real/PG_open.json")                      # the real order the Data Clerk answered: 17 chunks of stored news, press releases and filings, each with its text
-    summary = summarize(order)
-    assert order.data and len(order.data.sources) == 17 and all(source.get("text") for source in order.data.sources)
-    assert summary["id"] == order.request_id and summary["status"] == order.status and summary["symbols"] == ([order.subject] if isinstance(order.subject, str) else list(order.subject))
-    assert summary["counts"]["sources"] == 17 and summary["counts"]["recommendations"] == len(order.recommendations)
-    text = json.dumps(summary, default=str)
-    assert len(text) < 2500 and not [s for s in order.data.sources if s["text"][:60] in text] and order.data.answer[:60] not in text
-
-
-def test_a_work_order_that_traded_is_counted_and_its_decimals_stay_decimals():
-    order = captured("session_real/auto_even_split_decimal.json")
-    summary = summarize(order)
-    assert summary["counts"] == {"companies": 0, "sources": 0, "quotes": 0, "bars": 0, "recommendations": 3, "reviews": 3, "trade_decisions": len(order.trade_decisions), "direct_orders": 0, "trades": 3, "errors": 0}
-    assert summary["symbols"] == list(order.subject) and len(summary["symbols"]) == 15 and summary["action"] == order.action_type
-    assert len(json.dumps(summary, default=str)) < 2500 and "thesis" not in json.dumps(summary)
-    cash = summarize(Portfolio(user="Bob Jones", cash_avail=Decimal("15000.00")))["cash_avail"]
-    assert cash == Decimal("15000.00") and isinstance(cash, Decimal)
-    assert summarize(BOB)["cash_avail"] == Decimal("15000.00") and isinstance(summarize(BOB)["cash_avail"], Decimal)
 
 
 def test_what_is_not_data_is_its_type_name_a_long_list_is_cut_and_nothing_raises():

@@ -28,10 +28,6 @@ SPLITS = REPO_ROOT / "data" / "historical" / "splits_v1"
 STAMP = re.compile(r"^(published_utc|filed): (\d{4}-\d{2})")
 
 
-def _month(value: str) -> str | None:
-    return value[:7] if isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}.*", value) else None
-
-
 def _stamp(paths: list[Path]) -> list:
     return [[str(p.relative_to(REPO_ROOT)), p.stat().st_size, p.stat().st_mtime_ns] for p in sorted(paths)]
 

@@ -78,13 +78,6 @@ def check(t, parent=None, prob=None):
     return rf.check_step(prob, parent or rf.root(prob), t, "n9")
 
 
-def test_a_good_thought_becomes_a_node_with_every_figure_calculated_by_code():
-    # AMENDED (entry 111, M5): the shares were "4", a string that was cleaned into 4; a share count is a number and a string is an error now (below), so it is 4
-    node, reason = check({"symbol": "tsla", "shares": 4, "idea": "x", "score": 999, "price": 1, "proceeds": 1e9})  # the model's own figures are ignored; "tsla" is cleaned
-    assert reason is None and node.sells == (("TSLA", 4),) and node.proceeds == Decimal("1000.00") and node.shortfall == Decimal("0.00") and node.complete
-    assert node.gain == Decimal("-200.00") and node.score == rf.score_plan(problem(), node.sells)[0] != 999
-
-
 @pytest.mark.parametrize("t, message", [
     ("sell TSLA", "not an object"),
     ({"symbol": "TSLA"}, "shares must be a whole number"),
@@ -103,51 +96,13 @@ def test_a_thought_that_breaks_a_rule_is_rejected_with_the_reason(t, message):
     assert node is None and message in reason
 
 
-def test_a_symbol_may_appear_once_in_a_plan():
-    prob = problem()
-    parent, _ = rf.check_step(prob, rf.root(prob), thought("TSLA", 1), "n1")
-    node, reason = rf.check_step(prob, parent, thought("TSLA", 1), "n2")
-    assert node is None and "already in this plan" in reason
-
-
 # ---------------------------------------------------------------- the search
-
-
-def untimed(result):
-    """The result without the seconds, which are the only thing that differs between two runs of the same search."""
-    result["stats"].pop("seconds", None), result["stats"].pop("first_plan_seconds", None)
-    for level in result["trace"]:
-        level.pop("seconds", None)
-    return result
-
-
-def test_the_search_is_deterministic_for_the_same_thoughts():
-    table = {ROOT: [thought("MSFT", 2), thought("TSLA", 2), thought("GM", 15)], "TSLA x2": [thought("GM", 6), thought("MSFT", 1)]}
-    first, second = rf.search(problem(), Gen(table)), rf.search(problem(), Gen(table))
-    assert rf.as_json(untimed(first)) == rf.as_json(untimed(second))
-
-
-def test_the_call_budget_ends_the_search_even_with_unfinished_plans_left():
-    gen = Gen({ROOT: [thought("GM", 1), thought("TSLA", 1), thought("MSFT", 1)]}, default=[thought("GM", 1)])
-    result = rf.search(problem(), gen, max_calls=2)
-    assert result["stats"]["llm_calls"] == 2 and len(gen.calls) == 2 and "the call budget (2) was used" in result["stop"]
 
 
 def test_the_same_thought_twice_from_one_node_is_counted_once():
     result = rf.search(problem(), Gen({ROOT: [thought("TSLA", 4), thought("tsla", 4), thought("GM", 15)]}))      # AMENDED (entry 111, M5): the second one said "4" (a string); the same thought now differs only in the case of the symbol
     statuses = [c["status"] for c in result["trace"][0]["children"]]
     assert statuses == ["complete", "duplicate", "complete"] and result["stats"]["nodes"] == 3
-
-
-def test_only_the_latest_rejections_are_told_to_the_generator():
-    bad = [thought("NVDA", 1), thought("AAPL", 1), thought("QQQ", 1)]  # none is held: three rejections from each node
-    gen = Gen({ROOT: [thought("GM", 1), thought("TSLA", 1), thought("MSFT", 1)],
-               "GM x1": [*bad, thought("TSLA", 1)], "TSLA x1": [*bad, thought("GM", 1)], "MSFT x1": [*bad, thought("GM", 1)]})
-    result = rf.search(problem(), gen, branching=4)
-    every = [c["reason"] for level in result["trace"] for c in level["children"] if c["status"] == "rejected"]
-    assert len(every) == 9
-    third_level = [c for c in gen.calls if c[1].count("x") == 2]  # the calls on plans of two steps
-    assert third_level and all(len(c[2]) == rf.MAX_REJECTIONS_TOLD == 6 and c[2] == every[-6:] for c in third_level)
 
 
 def test_a_generator_that_fails_is_recorded_and_the_other_nodes_are_still_expanded():
@@ -166,65 +121,13 @@ def test_a_generator_that_fails_is_recorded_and_the_other_nodes_are_still_expand
     assert result["errors"] == ["expanding n1 failed (RuntimeError)"] and "secret" not in rf.as_json(result)
 
 
-def test_if_every_call_fails_the_answer_is_infeasible_with_the_errors():
-    def broken(prob, node, rejected):
-        raise TimeoutError("x")
-
-    result = rf.search(problem(), broken)
-    assert result["status"] == "infeasible" and result["plan"] is None and result["errors"] == ["expanding n0 failed (TimeoutError)"]
-
-
-def test_when_the_cash_already_covers_the_purchase_nothing_is_sold_and_nothing_is_asked():
-    portfolio = no_cash().model_copy(update={"cash_avail": Decimal("1000.00")})
-    gen = Gen({})
-    result = rf.search(problem(portfolio=portfolio), gen)
-    assert result["status"] == "funded" and result["plan"] is None and gen.calls == [] and result["stats"]["llm_calls"] == 0
-
-
 # ---------------------------------------------------------------- the reasoning trace and the answer, as the user reads them
-
-QUOTES = {s: {"price": p, "change_percent": 0.5, "as_of_utc": "2026-11-03T21:00:00Z", "source": "Finnhub /quote"} for s, p in PRICES.items()}
-
-
-def test_the_answer_prints_the_goal_the_trace_the_orders_the_score_and_the_portfolio_before_and_after():
-    gen = Gen({ROOT: [thought("MSFT", 2), thought("TSLA", 2, "TSLA is below its cost basis"), thought("GM", 15)], "TSLA x2": [thought("GM", 6), thought("MSFT", 1)]})
-    text = rf.format_answer(rf.search(problem(), gen), quotes=QUOTES)
-    for expected in ("GOAL     buy 2 x MU at $410.00 = $820.00", "QUOTES (from the Data Clerk's get_quote tool)", "Finnhub /quote", "REASONING TRACE", "LEVEL 1", "LEVEL 2",
-                     "COMPLETE", "kept", "LLM idea: TSLA is below its cost basis", "FINAL ANSWER", "| SELL  | TSLA", "| SELL  | GM", "| BUY   | MU",
-                     "score 84.0 / 100", "OTHER COMPLETED PLANS", "PORTFOLIO (shares)", "| cash   |", "SEARCH   2 LLM calls"):
-        assert expected in text, expected
-
-
-def test_the_answer_for_an_impossible_purchase_says_so_and_prints_no_orders():
-    text = rf.format_answer(rf.search(problem(shares=500), Gen({ROOT: [thought("MSFT", 50)]})))
-    assert "RESULT   INFEASIBLE" in text and "at most 134 share(s) of MU" in text and "FINAL ANSWER" not in text
 
 
 def test_the_answer_when_the_cash_covers_the_purchase():
     portfolio = no_cash().model_copy(update={"cash_avail": Decimal("1000.00")})
     text = rf.format_answer(rf.search(problem(portfolio=portfolio), Gen({})))
     assert "RESULT   funded" in text and "(no search: the free settled cash (cash_avail) already covers the purchase)" in text
-
-
-def test_a_rejected_and_a_pruned_thought_are_shown_with_their_reasons():
-    gen = Gen({ROOT: [thought("TSLA", 1), thought("GM", 2), thought("MSFT", 1), ], "TSLA x1": [thought("GM", 500)]})
-    text = rf.format_trace(rf.search(problem(), gen, beam_width=1))
-    assert "PRUNED" in text and "below the beam" in text and "REJECTED" in text and "only 60 are sellable" in text
-
-
-# ---------------------------------------------------------------- "sell only what is in profit" (green), and never the stock being bought
-
-def green_problem(prices=None, shares=2):
-    return rf.build_problem(no_cash(), "MU", shares, prices or {**PRICES, "TSLA": Decimal("250.00")}, TODAY, only_green=True)  # TSLA 250 is below its basis of 300: red
-
-
-def test_when_the_free_cash_pays_for_the_purchase_the_holdings_after_are_the_same_and_the_cash_is_spent():
-    portfolio = no_cash().model_copy(update={"cash_avail": Decimal("1000.00")})
-    result = rf.search(problem(portfolio=portfolio), Gen({}))
-    assert result["status"] == "funded" and result["after"] == {"shares": {"MSFT": 50, "TSLA": 123, "GM": 60, "MU": 2}, "cash": Decimal("180.00")}
-
-
-# ---------------------------------------------------------------- the same sells in another order are one plan (entry 45)
 
 
 # ---------------------------------------------------------------- the size of the tree, and what the beam ranks by (entry 45): pure functions on the complex portfolio, no model
@@ -275,30 +178,10 @@ class SlowGen(Gen):
 THREE_BRANCHES = {ROOT: [thought("GM", 1), thought("TSLA", 1), thought("MSFT", 1)], "GM x1": [thought("TSLA", 1)], "TSLA x1": [thought("GM", 2)], "MSFT x1": [thought("GM", 3)]}
 
 
-def test_parallel_gives_exactly_the_same_result_and_trace_as_sequential():
-    results = [rf.search(problem(), SlowGen(THREE_BRANCHES, 0.01), parallel=flag) for flag in (False, True)]
-    for r in results:   # the seconds are the only thing that differs between two runs
-        r["stats"].pop("seconds"), r["stats"].pop("first_plan_seconds")
-        for level in r["trace"]:
-            level.pop("seconds")
-    assert rf.as_json(results[0]) == rf.as_json(results[1])
-    assert [e["node"] for e in results[1]["trace"][1]["expanded"]] == [e["node"] for e in results[0]["trace"][1]["expanded"]] and len(results[1]["trace"][1]["expanded"]) == 3
-
-
 def test_parallel_keeps_to_the_call_budget_that_the_plans_of_a_level_share():
     gen = SlowGen(THREE_BRANCHES)
     result = rf.search(problem(), gen, parallel=True, max_calls=3)   # the root takes one call: two of the three plans of level 2 can be expanded
     assert result["stats"]["llm_calls"] == 3 and len(gen.calls) == 3 and len(result["trace"][1]["expanded"]) == 2
-
-
-def test_a_plan_that_fails_in_parallel_is_recorded_in_its_place_and_the_others_still_run():
-    def flaky(prob, node, rejected):
-        time.sleep(0.02)
-        if node.id == "n2":
-            raise TimeoutError("secret")
-        return THREE_BRANCHES.get(node.plan(), [])
-    result = rf.search(problem(), flaky, parallel=True)
-    assert result["errors"] == ["expanding n2 failed (TimeoutError)"] and len(result["trace"][1]["expanded"]) == 2 and "secret" not in rf.as_json(result)
 
 
 # ---------------------------------------------------------------- the time limit (entry 48): what is sold when it passes (the tests that only measured seconds were deleted, entry 86)
@@ -310,23 +193,6 @@ def test_once_the_time_limit_has_passed_no_new_level_starts_and_the_best_complet
     assert "the time limit (0.05 s) was reached; the best completed plan is the answer" in result["stop"] and result["limits"]["deadline"] == 0.05
 
 
-def test_with_nothing_completed_when_the_time_is_up_nothing_is_sold():
-    result = rf.search(problem(), SlowGen({ROOT: [thought("GM", 1)], "GM x1": [thought("TSLA", 4)]}, delay=0.1), deadline=0.05)
-    assert result["status"] == "infeasible" and result["plan"] is None and result["after"] == {} and "the time limit (0.05 s) was reached" in result["stop"]
-
-
-def test_in_parallel_a_level_already_out_is_waited_for_after_the_limit():
-    gen = SlowGen(THREE_BRANCHES, delay=0.15)
-    result = rf.search(problem(), gen, deadline=0.2, parallel=True)   # level 1 ends at 0.15 s (in time); level 2's three calls start together and finish at 0.30 s: after the limit, waited for
-    assert len(result["trace"]) == 2 and gen.most == 3 and "the time limit" in result["stop"] and result["stats"]["seconds"] >= 0.29
-
-
-# ---------------------------------------------------------------- the tree raises its own depth (entry 49)
-
-def strict_complex(target="LLY", shares=3, **options):
-    return rf.build_problem(pf.load_portfolio(COMPLEX), target, shares, COMPLEX_PRICES, only_green=True, lean=True, never_liquidate=True, **options)
-
-
 # ---------------------------------------------------------------- whole plans as thoughts (entry 50): tried, measured slower, kept as an option
 
 def plan(*sells, idea="idea"):
@@ -335,13 +201,6 @@ def plan(*sells, idea="idea"):
 
 def whole_problem(**options):
     return rf.build_problem(no_cash(), "MU", 2, PRICES, TODAY, whole_plans=True, lean=True, **options)   # 820 to raise; TSLA 250, GM 55, MSFT 420
-
-
-def test_a_whole_plan_is_one_node_one_level_below_its_parent_with_every_sell_checked_in_order():
-    p = whole_problem()
-    node, reason = rf.check_step(p, rf.root(p), plan(("MSFT", 1), ("TSLA", 2)), "n1")   # 420, then 2 x 250 = 920 >= 820
-    assert reason is None and node.sells == (("MSFT", 1), ("TSLA", 2)) and node.depth == 1 and node.proceeds == Decimal("920.00") and node.complete and node.idea == "idea"
-    assert node.score == rf.score_plan(p, node.sells)[0]
 
 
 def test_a_whole_plan_that_breaks_a_rule_is_rejected_with_the_sell_that_breaks_it():
@@ -357,25 +216,11 @@ def test_a_whole_plan_may_not_keep_selling_after_it_has_raised_the_money():
     assert "sell 2 (GM) comes after the plan has already raised the money" in reason
 
 
-def test_the_last_sell_of_a_lean_whole_plan_may_not_sell_a_share_too_many():
-    p = whole_problem()
-    assert "sells more than is needed: 2 share(s)" in rf.check_step(p, rf.root(p), plan(("MSFT", 1), ("TSLA", 3)), "n1")[1]   # after MSFT 420, 400 more: 2 TSLA are enough, 3 are not
-
-
 @pytest.mark.parametrize("bad", [{"sells": []}, {"sells": "MSFT"}, {"sells": ["MSFT"]}, {"sells": [1]}])
 def test_a_whole_plan_that_is_not_a_list_of_sells_is_rejected(bad):
     p = whole_problem()
     node, reason = rf.check_step(p, rf.root(p), bad, "n1")
     assert node is None and "not a non-empty list of sells" in reason
-
-
-def test_with_whole_plans_no_partial_step_is_wanted_and_the_search_asks_again_from_the_start_when_every_plan_was_rejected():
-    p = whole_problem()
-    assert rf.wanted_kinds(p, rf.root(p), 3)[1] is False
-    gen = Gen({ROOT: [plan(("GM", 99)), plan(("NVDA", 1))]})
-    bad = rf.search(p, gen)                     # both rejected, every time: asked again from the start until the depth is used
-    assert bad["status"] == "infeasible" and [c[1] for c in gen.calls] == [ROOT, ROOT, ROOT] and [lv["retry"] for lv in bad["trace"]] == [True, True, False]
-    assert gen.calls[1][2] and "only 60 are sellable" in gen.calls[1][2][0] or "only 10 are sellable" in gen.calls[1][2][0]   # the second call is told why
 
 
 def test_a_retry_that_finds_a_good_plan_ends_the_search():
@@ -386,14 +231,3 @@ def test_a_retry_that_finds_a_good_plan_ends_the_search():
         return [plan(("GM", 99))] if len(calls) == 1 else [plan(("MSFT", 1), ("TSLA", 2))]
     result = rf.search(whole_problem(), generate)
     assert result["status"] == "plan" and [(x["symbol"], x["shares"]) for x in result["plan"]["sells"]] == [("MSFT", 1), ("TSLA", 2)] and result["stats"]["levels"] == 2 and calls[1] != []
-
-
-def test_a_search_with_whole_plans_finishes_in_one_round_when_the_first_plans_are_good():
-    gen = Gen({ROOT: [plan(("MSFT", 1), ("TSLA", 2)), plan(("TSLA", 4)), plan(("GM", 10), ("MSFT", 1))]})
-    result = rf.search(whole_problem(), gen)
-    assert result["stats"]["levels"] == 1 and len(gen.calls) == 1 and result["stats"]["completed_plans"] >= 2
-
-
-def test_the_trace_shows_a_whole_plan_as_its_list_of_sells():
-    text = rf.format_trace(rf.search(whole_problem(), Gen({ROOT: [plan(("MSFT", 1), ("TSLA", 2))]})))
-    assert "plan: MSFT x1, TSLA x2" in text

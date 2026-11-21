@@ -2,7 +2,6 @@
 
 (Kept apart from tests/test_work_order.py, which builds real stores for the Data Clerk: none of this needs one. No network, no model.)
 """
-import copy
 
 import pytest
 

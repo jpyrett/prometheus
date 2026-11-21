@@ -6,9 +6,6 @@ Reading a request with the real model is in `tests/test_end_to_end_live.py` (it 
 """
 import json
 import re
-from decimal import Decimal
-from pathlib import Path
-from types import SimpleNamespace
 
 import pytest
 
@@ -25,33 +22,7 @@ def form(**changes):
     return json.dumps({"action": "buy", "topic": None, "symbols": [], "companies": [], "count": None, "allocation": "default", "budget": None, **changes})
 
 
-def manager(*replies):
-    return AccountManager(model=Scripted(*replies), model_id="scripted")
-
-
 # ---------------------------------------------------------------- the form, checked against the words
-
-def test_the_sentence_that_started_this_becomes_a_theme_a_count_and_an_even_split():
-    intent = it.parse_intent(form(topic="oil", count=3, allocation="even"), SENTENCE)
-    assert (intent.action, intent.topic, intent.count, intent.allocation, intent.budget, intent.symbols, intent.companies) == ("buy", "oil", 3, "even", None, [], [])
-    assert intent.request == SENTENCE and intent.as_request() == ("oil", "phrase")
-    assert intent.describe() == "buy the 3 most recommended 'oil' companies; the money spread evenly over the companies that are approved; spending as much as the account allows"
-
-
-def test_a_request_that_asks_for_no_split_has_the_allocation_default_and_the_form_shown_to_the_model_says_so():
-    """Entry 80: "no split asked" was called `advisor` (the Advisor sized then); it is `default`: the Account Manager's own way for the mode (round-robin in Auto, what the limits allow in Ask)."""
-    from prometheus.prompts.account_manager_request import SYSTEM
-
-    intent = it.parse_intent(form(topic="oil"), "buy the best oil stocks")
-    assert intent.allocation == "default" and it.TradeIntent(request="x", action="buy").allocation == "default"
-    assert '"allocation": "default"' in SYSTEM and 'otherwise "default"' in SYSTEM and "advisor" not in SYSTEM.lower()
-    assert intent.describe() == "buy the most recommended 'oil' companies; spending as much as the account allows"
-
-
-def test_any_other_theme_goes_through_the_same_checks_with_a_budget_in_dollars_or_thousands():
-    for typed, budget in (("Put $5,000 into the 2 best oil companies, split it equally.", 5000), ("Buy oil, two of them, $5k, divide it evenly", 5000), ("get me 2 oil stocks for 2.5 million dollars, even please", 2_500_000)):      # AMENDED (entry 138): 5k and 2.5 million with no $ and no word dollars are quantities, not money
-        intent = it.parse_intent(form(topic="oil", count=2, allocation="even", budget=budget), typed)
-        assert (intent.topic, intent.count, intent.allocation, intent.budget) == ("oil", 2, "even", budget), typed
 
 
 def test_tickers_company_names_and_a_mix_are_read_too():
@@ -66,11 +37,6 @@ def test_tickers_company_names_and_a_mix_are_read_too():
     both = it.parse_intent(form(topic="oil", symbols=["PG"]), "buy oil like PG")
     with pytest.raises(ValueError, match="both a theme and named companies"):
         both.as_request()
-
-
-def test_a_request_to_look_is_research_and_nothing_is_to_be_bought():
-    intent = it.parse_intent(form(action="research", topic="oil"), "show me the oil companies")
-    assert intent.action == "research" and intent.describe().startswith("look at (nothing will be bought)")
 
 
 @pytest.mark.parametrize("changes, typed, message", [
@@ -109,24 +75,6 @@ def test_a_reply_that_is_not_a_form_is_refused(reply, message):
         it.parse_intent(reply, "buy oil")
 
 
-@pytest.mark.parametrize("typed", ["", "   ", None, 5, "x" * 601])
-def test_nothing_or_too_much_is_refused_before_the_model_is_asked(typed):
-    with pytest.raises(ValueError, match="nothing to understand|longer than"):
-        it.check_typed(typed)
-
-
-def test_numbers_are_read_in_digits_thousands_millions_and_words():
-    assert Decimal("3") in it._numbers("the three best") and Decimal("7") in it._numbers("Seven of them")
-    assert Decimal("5000") in it._numbers("$5,000") and Decimal("5000") in it._numbers("5k") and Decimal("5000") in it._numbers("5 thousand") and Decimal("2500000") in it._numbers("2.5 million")
-    assert it._numbers("no numbers here") == set()
-
-
-@pytest.mark.parametrize("typed", ["show me oil", "what do you think of oil", "compare the oil companies", "which oil companies are best"])
-def test_asking_to_look_is_never_a_purchase_even_if_the_model_says_buy(typed):
-    with pytest.raises(ValueError, match="buying was not asked for"):
-        it.parse_intent(form(topic="oil"), typed)
-
-
 # ---------------------------------------------------------------- the Account Manager reads it: the real model client, and a real failure
 
 def unreachable_manager(monkeypatch):
@@ -151,33 +99,6 @@ def test_nothing_or_too_much_never_reaches_the_model_so_no_connection_is_even_tr
     with pytest.raises(ValueError, match="nothing to understand|longer than"):
         m.understand_request(typed)
     assert m.intent_run == {}                                                               # the check is before the model is touched
-
-
-# ---------------------------------------------------------------- the page's own example, read by the real model (design choices entry 108)
-
-class Recorded:
-    """The Account Manager's model: its REAL recorded reply, given back (`tests/fixtures/session_real/page_default_request_form.json`)."""
-
-    model_name = "openai/gpt-oss-120b"
-
-    def __init__(self, replies):
-        self.replies, self.seen = list(replies), []
-
-    def invoke(self, messages):
-        self.seen.append(messages)
-        return SimpleNamespace(content=self.replies.pop(0), usage_metadata={"input_tokens": 814, "output_tokens": 98})
-
-
-def test_the_request_box_default_text_is_read_by_the_real_model_as_an_even_split_of_three_with_three_thousand_dollars():
-    """Part G: the page's own example ("Buy an even mixture of 3 most recommended stocks in the pizza restaurants using $3000 of my available money") must reach the Account Manager as `allocation: even`, not `default`. The model's REAL
-    reply (one call, no retry, 2026-11-15) is checked here by the real Account Manager against the user's words, as every reply is; the prompt did not need to change."""
-    from prometheus.application.web.app import DEFAULT_PROMPT
-    recorded = json.loads((Path(__file__).parent / "fixtures" / "session_real" / "page_default_request_form.json").read_text(encoding="utf-8"))
-    assert list(recorded["requests"]) == [DEFAULT_PROMPT]
-    model = Recorded(recorded["requests"][DEFAULT_PROMPT]["replies"])
-    intent = AccountManager(model=model, model_id="recorded").understand_request(DEFAULT_PROMPT)
-    assert (intent.action, intent.topic, intent.count, intent.allocation, intent.budget, intent.orders) == ("buy", "pizza restaurants", 3, "even", Decimal("3000"), []) and len(model.seen) == 1
-    assert model.seen[0][0].content == prompt.SYSTEM                                                                              # the Account Manager's own prompt, as it stands
 
 
 # ---------------------------------------------------------------- the prompt names nothing

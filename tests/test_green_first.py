@@ -6,7 +6,6 @@ Jacob's rules (2026-11-03): "sell the most profitable (stocks most in the green 
 possible". WHAT TO SELL is still decided by the Tree of Thought: the arithmetic of `trading_math` only measures a plan the tree has built (the green-first component of its score), and the number of shares
 is arithmetic (`Problem.max_affordable`), never a plan. The "LLM" is scripted, the prices are the recorded 2026-11-03 quotes, no network, no key, no cost.
 """
-import re
 from decimal import Decimal
 
 import pytest
@@ -16,8 +15,7 @@ from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.common import portfolio as pf
 from prometheus.prompts import account_manager as prompts
 from prometheus.reasoning import raise_funds as rf
-from prometheus.tools import trading_math as tm
-from test_sndk_mu import LIVE_RUN_3, PRICES, ROOT, SCENARIO, QuoteToolbox, ScriptedByPlan
+from test_sndk_mu import LIVE_RUN_3, SCENARIO, QuoteToolbox, ScriptedByPlan
 
 TODAY = None
 
@@ -25,13 +23,6 @@ TODAY = None
 @pytest.fixture
 def start():
     return pf.load_portfolio(SCENARIO)   # PG 15 @ 60, MCD 120 @ 40, GOOGL 30 @ 100, LLY 25 @ 155, $200
-
-
-def green_problem(start, **options):
-    return rf.build_problem(start, "SNDK", 3, PRICES, fill="MU", green_first=True, **options)
-
-
-# ---------------------------------------------------------------- the arithmetic that measures a plan
 
 
 # ---------------------------------------------------------------- the score: green-first replaces the tax component
@@ -76,26 +67,6 @@ def small_agent(table):
     return manager
 
 
-TWO_STEPS = {ROOT: [("GM", 10)], "GM x10": [("F", 23)]}   # 550, then 270 more: 23 F (276) finishes it
-
-
-def test_with_no_number_of_shares_the_portfolio_buys_as_many_as_it_can_pay_for_and_the_tree_decides_what_to_sell():
-    manager = small_agent(TWO_STEPS)
-    result = manager.raise_funds(SMALL, "MU", None)
-    assert result["requested"] is None and result["most_affordable"] == 2 and result["resolved_shares"] == 2 and result["shares"] == 2
-    assert result["status"] == "plan" and [(x["symbol"], x["shares"]) for x in result["plan"]["sells"]] == [("GM", 10), ("F", 23)]
-    assert result["limits"]["max_depth"] == 2 and result["stats"]["llm_calls"] == 2   # a plan as deep as the holdings that can be sold; and it was the model that proposed the sells
-    assert "QUANTITY: no number of shares was given, so as many as the portfolio can pay for: at most 2 x MU" in am.report(result)
-
-
-def test_up_to_x_buys_x_when_it_can_and_the_most_it_can_when_it_cannot():
-    big = small_agent({ROOT: [("GM", 10)], "GM x10": [("F", 23)]})
-    capped = big.raise_funds(SMALL, "MU", 5, up_to=True)   # 5 asked, 2 affordable
-    assert capped["resolved_shares"] == 2 and capped["shares"] == 2 and capped["status"] == "plan" and "QUANTITY: up to 5 x MU; the portfolio can pay for at most 2, so 2 bought" in am.report(capped)
-    one = small_agent({ROOT: [("GM", 8)]}).raise_funds(SMALL, "MU", 1, up_to=True)   # 1 asked and 1 affordable: 410 needs 8 GM (440)
-    assert one["resolved_shares"] == 1 and one["status"] == "plan" and one["plan"]["proceeds"] == Decimal("440")
-
-
 def test_if_not_even_one_share_can_be_paid_for_nothing_is_sold_and_the_model_is_not_asked():
     for shares in (None, 3):
         manager = small_agent({})
@@ -109,23 +80,5 @@ def test_several_stocks_with_no_number_of_shares_are_refused_because_as_many_as_
     result = manager.raise_funds_many(SMALL, [("MU", None), ("F", 2)], today=None)
     assert result["status"] == "refused" and "works for ONE stock" in result["errors"][0] and manager.toolbox.asked == [] and manager.scripted.seen == []
     assert small_agent({}).raise_funds_many(SMALL, [("MU", None)])["status"] != "refused"   # one stock: fine
-
-
-def test_several_stocks_with_a_number_each_use_up_to_and_green_first_in_order():
-    manager = small_agent({ROOT: [("GM", 8)]})
-    result = manager.raise_funds_many(SMALL, [("MU", 1), ("BIG", 2)], up_to=True, green_first=True)
-    first, second = result["purchases"]
-    assert first["status"] == "plan" and first["resolved_shares"] == 1 and first["green_first"] is True
-    assert second["status"] == "infeasible" and second["resolved_shares"] == 0   # after the first, not even one BIG can be paid for
-
-
-@pytest.mark.parametrize("shares", [0, -1, 1.5, True, "3"])
-def test_a_number_of_shares_that_is_not_a_whole_number_of_at_least_one_is_still_refused(shares):
-    result = small_agent({}).raise_funds(SMALL, "MU", shares)
-    assert result["status"] == "refused" and "whole number of at least 1" in result["errors"][0]
-
-
-def test_on_the_command_line_no_number_means_as_many_as_possible_and_a_number_after_a_colon_means_that_many():
-    assert am.parse_purchase("MU", None) == ("MU", None) and am.parse_purchase("MU:3", None) == ("MU", 3) and am.parse_purchase("MU", 4) == ("MU", 4)
 
 

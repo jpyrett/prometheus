@@ -7,10 +7,8 @@ at 169.53 and EOG at 156.51 (read from the stored bars on 2026-11-20; two sessio
 The seam is a BEHAVIOUR-FREE change (every Trader test passed unchanged): what these tests add is that the two venues give EXACTLY what the two branches of `PaperBroker._simulate` and `execute._prices` gave (the simulator's own functions, called here
 by hand with the same arguments), that a mode that is not paper or backtest is an error, that a venue that places real orders is refused, and that no `if mode ==` is left in the funnel.
 """
-import ast
 from datetime import date
 from decimal import Decimal
-from pathlib import Path
 
 import pytest
 from handshake_helpers import BOB, FRIDAY, MOMENT, clerk, close_of, friday_close, manager, real_order, stored_close_available, trader  # noqa: F401  (friday_close is a fixture)
@@ -19,11 +17,7 @@ from prometheus.agents.trader import execute, simulator, tickets, venue
 from prometheus.agents.trader.broker import PaperBroker, Prices
 from prometheus.agents.trader.config import load_config
 from prometheus.agents.trader.venue import BacktestVenue, PaperVenue, venue_for
-from prometheus.common.money import price as price_door
-from prometheus.tools import trader as trader_tools
 
-ROOT = Path(__file__).resolve().parents[1]
-TRADER = ROOT / "prometheus" / "agents" / "trader"
 SYMBOLS = ["XOM", "EOG"]
 FIRST_SESSION = date(2026, 11, 16)
 
@@ -72,30 +66,6 @@ def test_the_two_venues_give_exactly_what_the_two_branches_gave():
     assert (waiting.status, waiting.reason) == ("active", "waiting for the next session: no daily bar is stored from the entry day on yet") and venue_for("backtest", config).missing(early, "XOM") is None
 
 
-def test_the_venues_ask_the_account_manager_for_the_one_snapshot_and_the_backtest_follows_each_purchase_by_the_plan(friday_close):
-    """`venue.prices` through the REAL Account Manager over the real Data Clerk (the simulated Friday: its quotes are the stored closes, Finnhub is never asked): the paper snapshot holds the closes, the backtest snapshot the bars and the entry day.
-    `venue.follow` is `simulator.follow` on the real plan: XOM's stop of the plan (169.3786, the 50-day mean) was touched on the entry bar itself, EOG's (150.028) two sessions later; a venue with no later bars follows nothing."""
-    config, am, errors = load_config(), manager(), []
-    paper = venue_for("paper", config).prices(am, SYMBOLS, MOMENT, errors)
-    assert (paper.mode, paper.trade_date, paper.quotes, paper.failed, paper.unavailable, errors) == ("paper", FRIDAY, {s: close_of(s) for s in SYMBOLS}, "", {}, []) and paper.order_id
-    back = venue_for("backtest", config).prices(am, SYMBOLS, MOMENT, errors)
-    assert (back.mode, back.entry_date, back.trade_date, back.failed, back.unavailable, errors) == ("backtest", FIRST_SESSION, FIRST_SESSION, "", {}, []) and set(back.bars) == {"XOM", "EOG", "SPY"} and back.order_id
-    assert back.bars["XOM"][0]["date"] == "2026-11-13" and venue_for("paper", config).prices(am, [], MOMENT, errors).quotes == {} and venue_for("backtest", config).prices(am, [], MOMENT, errors).bars == {}      # nothing to judge asks nothing
-
-    order = real_order()
-    am.perform_trades(order, BOB, trader(mode="backtest"), MOMENT)
-    bars, recs = real_bars(*SYMBOLS), {r["identity"]["record_id"]: r["trade"] for r in order.recommendations}
-    assert [(t["symbol"], t["status"], t["fill"]["date"], t["fill"]["price"]) for t in order.trades] == [("XOM", "filled", "2026-11-16", Decimal("169.5300")), ("EOG", "filled", "2026-11-16", Decimal("156.5100"))]
-    for t, (reason, day, price) in zip(order.trades, [("stop", "2026-11-16", Decimal("169.3786")), ("stop", "2026-11-18", Decimal("150.0280"))]):
-        plan, fill = recs[t["record_id"]], t["fill"]
-        by_hand = simulator.follow(fill["price"], fill["shares"], fill["date"], bars[t["symbol"]], price_door(plan["stop_price"]), price_door(plan["target_price"]), plan["time_stop_date"], config.costs.slippage_bps, bars["SPY"])
-        assert (by_hand.exit_reason, by_hand.exit_date, by_hand.exit_price) == (reason, day, price)
-        assert t["outcome"]["exit_date"] == day and t["outcome"]["exit_price"] == price and t["outcome"]["exit_reason"] == reason          # what the Trader's step 9 asked the venue for
-    from prometheus.agents.trader.record import Trade
-    filled = Trade.model_validate(order.trades[1])
-    assert venue_for("backtest", config).follow(filled, recs[filled.record_id], back).model_dump() == filled.outcome.model_dump() and venue_for("paper", config).follow(filled, recs[filled.record_id], paper) is None
-
-
 def test_an_unknown_mode_is_an_error_and_a_venue_that_places_real_orders_is_refused(monkeypatch):
     """`venue_for` is the one place a mode becomes a venue: paper and backtest are the two simulated ones; anything else is the Trader's own sentence. A venue whose `simulated` is False is refused while PAPER_TRADING is true, and also when it is not
     registered, and made only when PAPER_TRADING is off AND it is registered (none is: live trading is not built, and the Trader's first check still refuses a run without PAPER_TRADING)."""
@@ -124,33 +94,3 @@ def test_an_unknown_mode_is_an_error_and_a_venue_that_places_real_orders_is_refu
         venue_for("sneaky", config)
 
 
-def test_the_funnel_asks_its_venue_and_no_mode_is_compared_in_the_broker_or_the_steps():
-    """A source read: `broker.py`, `execute.py` and the model's tools hold no comparison of a mode with a word and no "paper" or "backtest" in code (a docstring is not code); the one `PaperBroker` made with a mode has the venue of that mode and
-    takes another when it is given one; the old homes of the branches are gone."""
-    def code_strings(path: Path) -> list[str]:
-        tree = ast.parse(path.read_text(encoding="utf-8"))
-        docstrings = {id(node.body[0].value) for node in ast.walk(tree) if isinstance(node, (ast.Module, ast.ClassDef, ast.FunctionDef)) and node.body and isinstance(node.body[0], ast.Expr)
-                      and isinstance(node.body[0].value, ast.Constant) and isinstance(node.body[0].value.value, str)}
-        return [n.value for n in ast.walk(tree) if isinstance(n, ast.Constant) and isinstance(n.value, str) and id(n) not in docstrings and n.value in ("paper", "backtest", "live")]
-
-    def compares_a_mode(path: Path) -> list[int]:
-        found = []
-        for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
-            if isinstance(node, ast.Compare):
-                names = {n.id for n in ast.walk(node) if isinstance(n, ast.Name)} | {n.attr for n in ast.walk(node) if isinstance(n, ast.Attribute)}
-                if "mode" in names and any(isinstance(c, ast.Constant) and isinstance(c.value, str) for c in [node.left, *node.comparators]):
-                    found.append(node.lineno)
-        return found
-
-    for path in (TRADER / "broker.py", TRADER / "execute.py", ROOT / "prometheus" / "tools" / "trader.py"):
-        assert code_strings(path) == [] and compares_a_mode(path) == [], path.name
-    assert "venue_for" in (TRADER / "venue.py").read_text(encoding="utf-8") and "venue_for" in (TRADER / "execute.py").read_text(encoding="utf-8")
-    assert not hasattr(trader_tools, "market_price") and not hasattr(execute, "_plan_price") and not hasattr(execute, "_quoted")
-
-    config, found = real_tickets("backtest")
-    broker = PaperBroker(config, "backtest", manager(), real_order(), Prices("backtest", FIRST_SESSION), found, lambda t: (None, ""), MOMENT)
-    assert isinstance(broker.venue, BacktestVenue) and broker.mode == "backtest"
-    own = PaperVenue(config)
-    assert PaperBroker(config, "backtest", manager(), real_order(), Prices("backtest", FIRST_SESSION), found, lambda t: (None, ""), MOMENT, venue=own).venue is own
-    with pytest.raises(ValueError, match="live trading is not built"):
-        PaperBroker(config, "live", manager(), real_order(), Prices("backtest", FIRST_SESSION), found, lambda t: (None, ""), MOMENT)

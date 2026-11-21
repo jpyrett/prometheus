@@ -160,11 +160,6 @@ def critique(record: dict, order) -> Critique:
     return c
 
 
-def critique_order(order) -> list[Critique]:
-    """A Critique for every recommendation on the order."""
-    return [critique(r, order) for r in order.recommendations]
-
-
 def tampered(record: dict, **changes) -> dict:
     """A copy of a record with a nested change, for the tests that prove a check can fail: `tampered(r, **{"trade.stop_price": 1.0})`."""
     out = json.loads(json.dumps(record))

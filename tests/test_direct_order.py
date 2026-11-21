@@ -21,7 +21,7 @@ import copy
 import inspect
 import json
 from contextlib import suppress
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, timedelta
 from decimal import Decimal
 from pathlib import Path
 from types import SimpleNamespace

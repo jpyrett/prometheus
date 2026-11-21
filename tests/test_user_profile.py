@@ -4,11 +4,7 @@ import json
 import pytest
 from pydantic import ValidationError
 
-from prometheus.common.portfolio import load_portfolio
-from prometheus.common.user_profile import TOLERANCES, RiskView, UserProfile, load_profile
-from prometheus.rag.config import REPO_ROOT
-
-SAMPLE = REPO_ROOT / "configs" / "profiles" / "jacob_pyrett.json"
+from prometheus.common.user_profile import TOLERANCES, UserProfile, load_profile
 
 
 def profile(**kw) -> UserProfile:

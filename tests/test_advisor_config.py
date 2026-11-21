@@ -1,10 +1,9 @@
 """Tests for prometheus.agents.advisor.config (the settings file is read and checked once)."""
 import json
-import shutil
 
 import pytest
 
-from prometheus.agents.advisor.config import CONFIG_PATH, FAMILIES, REGIMES, load_config
+from prometheus.agents.advisor.config import CONFIG_PATH, load_config
 
 
 def edited(tmp_path, change):

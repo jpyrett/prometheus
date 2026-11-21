@@ -508,10 +508,6 @@ def beyond_count(order: WorkOrder, find) -> list[dict]:
     return extra
 
 
-def _venue_exit_key(trade: dict) -> tuple:
-    return trade.get("record_id"), trade.get("symbol")
-
-
 def check_exits(trades: list[dict], portfolio: SimPortfolio, splits: dict, walked_until: date | None = None) -> list[str]:
     """One exit rule (spec 7.2): each filled purchase's `Trade.outcome` (the Trader's follower) against the account's own sale or open lot. Raises ExitRuleError on a disagreement; a symbol with a split table or a suspected split is
     followed by the account's own split rules and is left out (said in the returned notes). `walked_until` is the last day the walk reached (a stopped run did not walk to the end): an exit after it has not happened yet and is not compared."""

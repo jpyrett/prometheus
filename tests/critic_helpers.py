@@ -26,7 +26,6 @@ from prometheus.rag.config import REPO_ROOT
 ET = ZoneInfo("America/New_York")
 NOW = datetime(2026, 11, 5, 10, 30, tzinfo=ET)       # Thursday: the day the captures were made, in the regular session
 PORTFOLIO = REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett.json"
-PLACEHOLDER = "the captures hold no six-month average, EPS or P/S: these are INPUTS for the rules (a price 4% above its average), not market data"
 
 
 def at(text: str) -> datetime:

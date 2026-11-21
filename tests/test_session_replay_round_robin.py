@@ -46,10 +46,6 @@ def reviewed(capture) -> wo.WorkOrder:
     return order
 
 
-def kept(decision):
-    return {k: decision[k] for k in ("record_id", "symbol", "action", "shares", "est_cost", "mode", "will_trade", "funds_avail") if k in decision}
-
-
 def test_the_capture_is_one_real_session_through_every_node_and_the_run_booked_what_it_traded(capture):
     assert capture["path"] == NODES and capture["request"].startswith("I want to buy oil stocks. Use as much of the money")
     assert capture["intent"]["action"] == "buy" and capture["intent"]["count"] == 3 and capture["intent"]["allocation"] == "default" and capture["intent"]["budget"] is None

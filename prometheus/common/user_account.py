@@ -99,8 +99,6 @@ class UserDirectory:
     def set_age(self, age: int | None) -> UserAccount:
         return self._save(age=age)
 
-    def set_horizon(self, years) -> UserAccount:
-        return self._save(investment_horizon_years=years)
 
     def _save(self, **changes) -> UserAccount:
         saved = self._store.update_user(self._account_id, **changes)

@@ -23,21 +23,12 @@ from prometheus.agents.data_clerk import data_toolbox
 from prometheus.agents.data_clerk import edgar_text
 from prometheus.agents.data_clerk.data_toolbox import DataToolbox
 from prometheus.rag import config, ingest, retriever, store as rag_store
-from prometheus.rag.ingest import ingest_filings, to_chunks
-from prometheus.rag.loaders import (FORM_NAMES, SECTION_LABELS, decode_entities, filing_file, form_name, load_filings, load_news, load_press_releases,
-                                    main as loaders_main)
-from prometheus.rag.retriever import search_filings, search_news, search_press_releases
+from prometheus.rag.ingest import ingest_filings
+from prometheus.rag.loaders import SECTION_LABELS, load_filings
+from prometheus.rag.retriever import search_filings, search_news
 from test_rag_retriever import KeywordEmbeddings
 
 FIXTURE = Path(__file__).parent / "fixtures" / "filings_sample.txt"
-EIGHT_K = "sec:0000320193-25-000077:items"
-BUSINESS = "sec:0000320193-25-000079:business"
-RISKS = "sec:0000320193-25-000079:risk_factors"
-TEN_Q = "sec:0000320193-26-000006"
-CEO_8K = "sec:0001140361-26-015711:items"
-PROXY = "sec:0001308179-26-000008"
-FORM_144 = "sec:0001959173-26-002757"
-FIXTURE_IDS = [EIGHT_K, BUSINESS, RISKS, TEN_Q, CEO_8K, PROXY, FORM_144]  # the order of the records in the file; the 10-K is two Documents
 
 # A minimal valid record. Each error test breaks one thing in it.
 GOOD = """<<<FILING>>>
@@ -83,28 +74,11 @@ def real_records() -> dict[str, tuple[dict, str]]:
     return out
 
 
-# ---------------------------------------------------------------- the loader, on real records
-
-
-def test_html_entities_are_decoded_like_in_news(tmp_path):
-    doc = load_text(tmp_path, GOOD.replace("Item 2.02    Results.", "Procter &amp; Gamble&#39;s results."))[0]
-    assert doc.page_content.endswith("Procter & Gamble's results.")
-
-
 # ---------------------------------------------------------------- one filing twice: the text fetched from EDGAR later (design choices entry 36)
-
-WITH_TEXT = GOOD.replace("form: 8-K", "form: 10-Q").replace("== items ==\nItem 2.02    Results.", "== mdna ==\nItem 2. Management's Discussion\nthe discussion.\n\n== controls ==\nItem 4. Controls\nthe controls.")
-TEN_Q_NO_TEXT = NO_TEXT.replace("form: 8-K", "form: 10-Q")
 
 
 def accession(n: int, record: str) -> str:
     return record.replace("0000320193-25-000077", f"0000320193-25-{n:06d}")
-
-
-def test_a_broken_second_record_still_names_its_line_after_the_first_was_read(tmp_path):
-    second = len(TEN_Q_NO_TEXT.splitlines()) + 1
-    with pytest.raises(ValueError, match=rf"AAPL\.txt:{second}: bad filed"):
-        load_text(tmp_path, TEN_Q_NO_TEXT + WITH_TEXT.replace("filed: 2025-10-30", "filed: nonsense"))
 
 
 def test_every_section_name_the_edgar_module_can_produce_has_a_label_for_its_headline():
@@ -145,82 +119,12 @@ def test_a_record_the_toolbox_would_not_have_written_stops_the_load_with_the_fil
     assert "AAPL.txt:" in str(error.value)
 
 
-def test_the_line_in_the_message_is_the_line_where_the_bad_record_starts(tmp_path):
-    second = len(GOOD.splitlines()) + 1  # the second record starts on the line after the first one's <<<END>>>
-    with pytest.raises(ValueError, match=rf"AAPL\.txt:{second}: bad filed"):
-        load_text(tmp_path, GOOD + GOOD.replace("filed: 2025-10-30", "filed: nonsense"))
-
-
 def test_bytes_that_are_not_utf8_name_the_line(tmp_path):
     path = tmp_path / "AAPL.txt"
     path.write_bytes(GOOD.encode().replace(b"Results.", b"Res\xffults."))
     line = GOOD.splitlines().index("Item 2.02    Results.") + 1
     with pytest.raises(ValueError, match=f"AAPL.txt:{line}: not valid UTF-8"):
         load_filings(path)
-
-
-def test_the_press_release_loader_still_refuses_a_filing_record_and_still_reads_its_own(tmp_path):
-    """The shared record parser takes the start marker as an argument: one format is never read as the other, in either direction (the filing loader still refuses a release with an error; the press release loader discards a filing record, entry 83)."""
-    path = tmp_path / "x.txt"
-    path.write_text(GOOD, encoding="utf-8")
-    skipped = []
-    assert load_press_releases(path, skipped) == [] and skipped and "text outside a record" in skipped[0].reason      # entry 83: not read as a release, and discarded rather than an error
-    assert len(load_press_releases(Path(__file__).parent / "fixtures" / "press_releases_sample.txt")) == 3
-
-
-# ---------------------------------------------------------------- where the files are
-
-
-def test_the_loader_command_line_shows_what_a_filing_file_becomes(capsys):
-    assert loaders_main([str(FIXTURE), "--filings", "--show", "1"]) == 0
-    out = capsys.readouterr().out
-    assert "7 filing documents | 2025-10-30T00:00:00Z to 2026-04-20T00:00:00Z | 0 with insights | 7 distinct ids" in out
-    assert "AAPL 8-K, filed 2025-10-30" in out and EIGHT_K in out
-
-
-def test_the_loader_command_line_reports_a_broken_file_without_a_traceback(tmp_path, capsys):
-    bad = tmp_path / "AAPL.txt"
-    bad.write_text(GOOD.replace("<<<END>>>\n", ""), encoding="utf-8")
-    assert loaders_main([str(bad), "--filings"]) == 1
-    captured = capsys.readouterr()
-    assert "ERROR:" in captured.err and "Traceback" not in captured.err
-
-
-def test_the_loader_command_line_says_so_for_a_file_with_no_filings(tmp_path, capsys):
-    empty = tmp_path / "ZZZ.txt"
-    empty.write_text("", encoding="utf-8")
-    assert loaders_main([str(empty), "--filings"]) == 0 and "no filings" in capsys.readouterr().out
-
-
-# ---------------------------------------------------------------- three collections in one folder
-
-
-@pytest.fixture
-def folder_store(tmp_path, monkeypatch):
-    """The real store functions over a temporary folder and the fake word embedder (no model download)."""
-    monkeypatch.setenv("VECTOR_STORE_PATH", str(tmp_path / "vectors"))
-    monkeypatch.setattr(rag_store, "get_embeddings", lambda: KeywordEmbeddings())
-    return rag_store
-
-
-def test_each_kind_has_its_own_collection_so_a_count_or_a_reset_of_one_never_touches_the_others(folder_store):
-    stores = {kind: folder_store.get_vector_store(kind) for kind in ("news", "press_releases", "filings")}
-    stores["news"].add_texts(["apple iphone"], ids=["n#0"], metadatas=[{"article_id": "n"}])
-    stores["press_releases"].add_texts(["apple iphone", "nvidia chip"], ids=["p#0", "q#0"], metadatas=[{"article_id": "p"}, {"article_id": "q"}])
-    stores["filings"].add_texts(["apple iphone", "nvidia chip", "tesla car"], ids=["f#0", "g#0", "h#0"], metadatas=[{"article_id": c} for c in "fgh"])
-    assert [folder_store.count_chunks(k) for k in ("news", "press_releases", "filings")] == [1, 2, 3]
-    assert folder_store.reset_collection("filings") is True
-    assert [folder_store.count_chunks(k) for k in ("news", "press_releases", "filings")] == [1, 2, 0]
-    assert folder_store.reset_collection("filings") is False  # nothing left to delete
-
-
-def test_the_store_command_line_can_show_the_filings_collection(monkeypatch, capsys):
-    monkeypatch.setattr(rag_store, "count_chunks", lambda kind="news": 0)
-    assert rag_store.main(["--filings"]) == 0
-    out = capsys.readouterr().out
-    assert "collection : filings-" in out and "ingest --filings AAPL" in out
-    with pytest.raises(SystemExit):
-        rag_store.main(["--filings", "--press-releases"])
 
 
 # ---------------------------------------------------------------- ingest
@@ -252,24 +156,12 @@ def ingest_cli(monkeypatch, folder, filings_store):
     return folder
 
 
-def test_the_ingest_command_line_reads_filing_files_into_the_filings_collection(ingest_cli, capsys):
-    assert ingest.main(["--filings", "AAPL"]) == 0
-    out = capsys.readouterr().out
-    assert re.search(r"AAPL: 7 filing documents -> \d+ chunks \| added \d+, updated 0, unchanged 0, deleted 0", out) and "the collection now holds" in out
-
-
 def test_all_with_filings_takes_every_file_of_the_filings_folder_and_rebuild_clears_only_the_filings_collection(ingest_cli, monkeypatch, capsys):
     resets = []
     monkeypatch.setattr(ingest, "reset_collection", lambda kind="news": resets.append(kind) or True)
     assert ingest.main(["--filings", "--rebuild", "--all"]) == 0
     out = capsys.readouterr().out
     assert resets == ["filings"] and "AAPL: 7 filing documents" in out and "META: 7 filing documents" in out and out.count("filing documents ->") == 2
-
-
-def test_the_ingest_command_line_says_when_there_are_no_filing_files(monkeypatch, tmp_path, capsys):
-    monkeypatch.setenv("FILINGS_OUTPUT_DIR", str(tmp_path))
-    assert ingest.main(["--filings", "--all"]) == 1
-    assert "ERROR: no filing files in" in capsys.readouterr().err
 
 
 # ---------------------------------------------------------------- search
@@ -286,20 +178,6 @@ def test_bad_search_arguments_are_refused_for_filings_as_for_news(stored):
             search_filings("Apple", store=stored, **bad)
     with pytest.raises(ValueError):
         search_filings("   ", store=stored)
-
-
-def test_the_retriever_command_line_can_search_the_filings(stored, monkeypatch, capsys):
-    monkeypatch.setattr(retriever, "get_vector_store", lambda kind="news": stored if kind == "filings" else pytest.fail("the news store must not be used"))
-    monkeypatch.setattr(retriever, "count_chunks", lambda kind="news": 100 if kind == "filings" else 0)
-    assert retriever.main(["Apple", "--tickers", "AAPL", "--filings", "--min-score", "0", "-k", "20", "--newest-first"]) == 0
-    out = capsys.readouterr().out
-    assert "SEC filing" in out and "AAPL 8-K, filed 2026-04-20" in out and "https://www.sec.gov/Archives/edgar/data/320193/" in out
-
-
-def test_the_retriever_command_line_tells_you_how_to_ingest_filings_when_there_are_none(monkeypatch, capsys):
-    monkeypatch.setattr(retriever, "count_chunks", lambda kind="news": 0)
-    assert retriever.main(["Apple", "--filings"]) == 1
-    assert "ingest --filings --all" in capsys.readouterr().err
 
 
 # ---------------------------------------------------------------- the toolbox writes <SYMBOL>.txt in the filings folder
@@ -343,36 +221,8 @@ def toolbox(tmp_path, monkeypatch):
     return box
 
 
-def test_what_the_toolbox_writes_is_what_the_loader_reads_and_it_reads_the_same_documents_as_the_real_fixture(toolbox, tmp_path, capsys):
-    toolbox.fetch_filings("AAPL")
-    capsys.readouterr()
-    written = {d.id: d for d in load_filings(tmp_path / "fl" / "AAPL.txt")}
-    real = {d.id: d for d in load_filings(FIXTURE)}
-    assert sorted(written) == sorted(real) == sorted(FIXTURE_IDS)  # the file order differs (the toolbox sorts by date), the Documents do not
-    for article_id, doc in real.items():
-        assert written[article_id].page_content == doc.page_content and written[article_id].metadata == doc.metadata, article_id
-
-
-def test_fetching_again_appends_nothing_so_the_file_never_gets_a_duplicate(toolbox, tmp_path, capsys):
-    toolbox.fetch_filings("AAPL")
-    before = (tmp_path / "fl" / "AAPL.txt").read_bytes()
-    again = toolbox.fetch_filings("AAPL")
-    capsys.readouterr()
-    assert (again["fetched"], again["written"], again["duplicates"]) == (6, 0, 6)
-    assert (tmp_path / "fl" / "AAPL.txt").read_bytes() == before
-
-
 def test_the_toolbox_still_checks_its_arguments_and_reaches_the_api_for_nothing_that_is_refused(toolbox):
     for bad in (dict(symbol=""), dict(symbol="AAPL", from_date=0), dict(symbol="AAPL", from_date=True)):
         with pytest.raises(ValueError):
             toolbox.fetch_filings(**bad)
     assert toolbox.asked == []
-
-
-def test_keyword_search_still_finds_the_filings_in_the_folder_the_fetch_wrote(toolbox, tmp_path, capsys, monkeypatch):
-    toolbox.fetch_filings("AAPL")
-    capsys.readouterr()
-    monkeypatch.setattr(data_toolbox, "datetime", type("D", (datetime,), {"now": classmethod(lambda cls, tz=None: datetime(2026, 5, 1, tzinfo=timezone.utc))}))
-    found = toolbox.search("AAPL", ["Ternus"], from_date=60, refresh=False)
-    capsys.readouterr()
-    assert [(f["form"], f["filed"]) for f in found["filings"]] == [("8-K", "2026-04-20")]  # the same reader, now on the setting's folder

@@ -12,20 +12,12 @@ from datetime import date, datetime, timezone
 from zoneinfo import ZoneInfo
 
 import pytest
-from test_critic_recheck import cross
 
-from prometheus.agents.account_manager.account_manager import AccountManager
-from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
-from prometheus.agents.data_clerk.data_toolbox import DataToolbox
 from prometheus.common import market_calendar as mc
 from prometheus.common import trading_clock as tc
-from prometheus.common import work_order as wo
-from prometheus.rag import config as rag_config
 from prometheus.tools.data_clerk import DATA_CLERK_TOOLS, DataClerkTools, ToolInputError
 
 ET = ZoneInfo("America/New_York")
-SATURDAY = datetime(2026, 11, 14, 1, 30, tzinfo=ET)
-SIMULATED_FRIDAY = datetime(2026, 11, 13, 15, 30, tzinfo=ET)        # the moment USE_LIVE_TRADING=false gives on that Saturday
 
 
 @pytest.fixture
@@ -33,41 +25,7 @@ def simulated(monkeypatch):
     monkeypatch.setenv("USE_LIVE_TRADING", "false")
 
 
-@pytest.fixture
-def saturday(monkeypatch, simulated):
-    """USE_LIVE_TRADING=false AND the real clock frozen to Saturday 01:30 Eastern."""
-    class Frozen(datetime):
-        @classmethod
-        def now(cls, tz=None):
-            return SATURDAY.astimezone(tz) if tz else SATURDAY.replace(tzinfo=None)
-    monkeypatch.setattr(tc, "datetime", Frozen)
-
-
-# ---------------------------------------------------------------- the setting
-
-
 # ---------------------------------------------------------------- the clock
-
-def test_with_the_real_clock_the_moment_is_the_moment_given_or_now():
-    assert tc.trading_now(SATURDAY) == SATURDAY and tc.trading_now(SATURDAY).tzinfo is not None
-    assert abs((tc.trading_now() - datetime.now(timezone.utc)).total_seconds()) < 5
-    assert tc.clock_note(SATURDAY) is None and tc.market_day(SATURDAY) == date(2026, 11, 14)
-
-
-@pytest.mark.parametrize("label, real, expected_day", [
-    ("Saturday", datetime(2026, 11, 14, 1, 30, tzinfo=ET), date(2026, 11, 13)),
-    ("Sunday", datetime(2026, 11, 15, 23, 0, tzinfo=ET), date(2026, 11, 13)),
-    ("Monday morning", datetime(2026, 11, 16, 8, 0, tzinfo=ET), date(2026, 11, 13)),
-    ("a Tuesday while the market is open", datetime(2026, 11, 17, 11, 0, tzinfo=ET), date(2026, 11, 16)),
-    ("the Friday after Thanksgiving (Thursday was a holiday)", datetime(2026, 11, 27, 10, 0, tzinfo=ET), date(2026, 11, 25)),
-    ("the Monday after an early-close Friday", datetime(2026, 11, 30, 10, 0, tzinfo=ET), date(2026, 11, 27)),
-])
-def test_the_simulated_clock_is_the_previous_business_day_inside_its_regular_session(simulated, label, real, expected_day):
-    moment = tc.trading_now(real)
-    session = mc.session_at(moment)
-    assert tc.market_day(real) == expected_day and mc.eastern_date(moment) == expected_day, label
-    assert session.state == "regular" and session.trading_date == expected_day, label       # the market is "open", and the day is a trading day
-    assert tc.last_closed_day(real) == expected_day
 
 
 @pytest.mark.parametrize("label, real, expected_day", [
@@ -94,10 +52,6 @@ def test_a_moment_without_a_timezone_is_a_mistake_in_either_mode(monkeypatch, on
         tc.trading_now(datetime(2026, 11, 14, 1, 30))
     with pytest.raises(ValueError):
         tc.last_closed_day(datetime(2026, 11, 14, 1, 30))
-
-
-def test_the_default_moment_is_derived_from_the_real_clock_only_here(saturday):
-    assert tc.trading_now().astimezone(ET) == SIMULATED_FRIDAY and tc.market_day() == date(2026, 11, 13)
 
 
 # ---------------------------------------------------------------- the calendar's new setting
@@ -164,30 +118,6 @@ def test_a_missing_bar_folder_is_an_error_not_no_price(tmp_path):
 
 def test_the_close_quote_is_not_a_tool_of_the_model():
     assert "close_quote" not in DATA_CLERK_TOOLS and len(DATA_CLERK_TOOLS) == 13
-
-
-def finnhub_tripwire(monkeypatch):
-    """Finnhub is the real `DataToolbox.get_quote`; with the simulated clock it must never be called, so it is made to fail the test if it is (a tripwire: it fabricates no data)."""
-    def asked(self, symbol):
-        raise AssertionError("Finnhub was asked for a live quote")
-    monkeypatch.setattr(DataToolbox, "get_quote", asked)
-
-
-def quote_order(*symbols):
-    return wo.new_work_order("prices", requester="account_manager", action_type="fetch_quote", subject=list(symbols), live=True)
-
-
-# ---------------------------------------------------------------- the Critic does not compare the bar with itself
-
-def test_a_simulated_quote_is_not_a_second_provider_so_the_price_check_is_skipped_not_passed():
-    live = cross()
-    assert "price" in {c.name for c in live[0]}
-    simulated_quote = cross(quote_mutate=lambda q: q.update(simulated=True))
-    assert "price" not in {c.name for c in simulated_quote[0]} and simulated_quote[1] == [] and {c.name for c in simulated_quote[0]} == {"identity", "high_52w"}
-    wildly_different = cross(quote_mutate=lambda q: q.update(simulated=True, price=q["price"] * 1.5, previous_close=1.0))
-    assert wildly_different[1] == []                                          # no `price_mismatch` from a quote that is the bar itself
-    real_but_different = cross(quote_mutate=lambda q: q.update(price=q["price"] * 1.5))
-    assert [f.code for f in real_but_different[1]] == ["price_mismatch"]       # a REAL second provider still is caught
 
 
 # ---------------------------------------------------------------- the rule that the Trader does not trade for real

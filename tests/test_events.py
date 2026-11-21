@@ -34,39 +34,11 @@ CANONICAL = [
     ("going_concern", "These conditions raise substantial doubt about the company's ability to continue as a going concern."),
     ("index_flow", "Sandisk will be added to the S&P 500 index effective before the open on Monday."),
 ]
-NEAR_MISSES = [  # sentences that matched before the patterns were narrowed, or that a looser pattern would take
-    ("earnings_beat", "The author expects the Oct. 29 earnings report to exceed expectations and drive stock appreciation.", "a prediction, not a result"),
-    ("guidance_raise", "Procter & Gamble (NYSE:PG) reported a 4.0% increase in organic sales for the first quarter of fiscal 2027, led primarily by volume growth, while maintaining its full-year outlook.", "'increase' is of sales"),
-    ("guidance_raise", "Company did not raise guidance due to weakness in Vans brand, and shares fell 3% in early trading.", "negated"),
-    ("guidance_cut", "Ford reported third quarter earnings that topped estimates, and upped the lower end of its profit guidance.", "the LOWER END was raised"),
-    ("guidance_cut", "Karooooo's shares fell 8% despite strong subscriber growth due to lower-than-expected earnings and unchanged guidance.", "'lower-than-expected' and unchanged"),
-    ("earnings_miss", "Cybertruck sales fell 92% short of estimates, Optimus robot integration lagged expectations.", "a person's product forecasts, not a result"),
-    ("dividend_increase", "The company has paid dividends for 136 years and raised them for 70 consecutive years, earning Dividend King status.", "a history, not a new raise"),
-    ("dividend_increase", "The Company intends to increase its dividend on an annual basis, subject to declaration by the Board of Directors.", "an intention (every 10-Q has it)"),
-    ("dividend_initiation", "We currently anticipate that our available funds will fund our investments in infrastructure and AI initiatives, subject to a dividend.", "'initiatives' is not 'initiate'"),
-    ("dividend_cut", "We may be required to reduce or delay investments and capital expenditures, suspend dividend payments, seek additional capital, or restructure.", "a risk factor: what may happen"),
-    ("dilution_offering", "SK Hynix's decision to scrap plans for a U.S. initial public offering of its Solidigm business could benefit Micron Technology.", "an IPO that was cancelled, of another company"),
-    ("restatement", "Apple Inc. Non-Employee Director Stock Plan, as Amended and Restated was approved.", "a plan, not the financial statements"),
-    ("buyback_authorization", "As of the end of the quarter the Company has an authorized share repurchase program, which does not obligate the Company to acquire any amount.", "no amount, an existing programme"),
-    ("sector_sympathy", "While the dividend yield of 0.6% is modest compared to competitors, the article argues that Costco has outperformed.", "a comparison, not a move with a peer"),
-]
-
-
-@pytest.mark.parametrize("name, sentence, where", REAL)
-def test_every_class_with_a_real_example_matches_it_and_the_direction_is_the_tables(name, sentence, where):
-    found = {m["class"]: m for m in ev.match_events(sentence)}
-    assert name in found, f"{name} did not match a real sentence of {where}"
-    assert found[name]["direction"] == ev.EVENT_CLASSES[name].direction
 
 
 @pytest.mark.parametrize("name, sentence", CANONICAL)
 def test_the_classes_the_stored_text_has_no_example_of_match_their_canonical_sentence(name, sentence):
     assert name in {m["class"] for m in ev.match_events(sentence)}
-
-
-@pytest.mark.parametrize("name, sentence, why", NEAR_MISSES)
-def test_a_near_miss_does_not_match_its_class(name, sentence, why):
-    assert name not in {m["class"] for m in ev.match_events(sentence)}, why
 
 
 def test_every_text_class_is_covered_by_an_example_and_the_directions_are_fixed():

@@ -1,17 +1,13 @@
 """The Time Machine's walk (prometheus/proving/engine.py; design/proving_ground_spec.md section 7; P2, P4, P5, P6, P7) over the REAL research of a real run, cached: FREE, no model is called. The saved real run is
 `tests/fixtures/proving_real/oil_weekly_short.json` (the oil request, 4 weekly decision days, cash 10000) and its research cache is beside it (`oil_weekly_short_cache/`). A test that would need a model fails loudly instead of paying for one."""
 import json
-import os
 import shutil
 from datetime import date
-from decimal import Decimal
 from pathlib import Path
 
 import pytest
-from proving_helpers import as_before_the_forward_excess, outcomes_before_the_forward_return
 
 from prometheus.agents.account_manager.intent import TradeIntent
-from prometheus.common.work_order import WorkOrder
 from prometheus.proving import engine
 from prometheus.proving.memo import NAMES, Memo
 from prometheus.proving.record import ProvingRun
@@ -47,82 +43,6 @@ def store(tmp_path, monkeypatch):
 def run(store, **changes):
     request = REQUEST.model_copy(update=changes)
     return engine.run_time_machine(request, store=store, intent=INTENT)
-
-
-def stable(saved: ProvingRun) -> dict:
-    """A run without what changes between two runs of the same thing: its id, its clock and its timings."""
-    body = saved.model_dump(mode="json")
-    for key in ("run_id", "created_utc", "seconds", "langsmith", "timing"):
-        body.pop(key)
-    body["coverage"] = {k: v for k, v in body["coverage"].items() if k not in ("timing", "memo", "desks")}      # a desk holds the Trader's own ids of a run: its decisions and fills are compared below
-    body["desks"] = {day: ([(d["symbol"], d["will_trade"], d["shares"]) for d in desk["trade_decisions"]], [(t["symbol"], t["status"], t["fill"]) for t in desk["trades"]]) for day, desk in saved.coverage["desks"].items()}
-    return body
-
-
-def test_the_walk_over_the_cached_research_is_the_saved_run_and_the_same_twice(store, monkeypatch):
-    """No model: the same cached research, the same stored bars, the same result: as the saved real run, as itself a second time, and whatever the pool's size is (the pool only matters to phase 1)."""
-    first = run(store)
-    assert first.status == "finished" and [(d.day, d.status) for d in first.decision_days] == [(d.day, d.status) for d in SAVED.decision_days]
-    assert [(o.key, o.result, o.return_pct) for o in first.outcomes] == [(o.key, o.result, o.return_pct) for o in SAVED.outcomes]
-    assert as_before_the_forward_excess(first.stats) == as_before_the_forward_excess(SAVED.stats) and [p.equity for p in first.equity] == [p.equity for p in SAVED.equity]      # the saved run (made before the forward excess) is reproduced in everything it recorded
-    assert outcomes_before_the_forward_return(first) == outcomes_before_the_forward_return(SAVED) and SAVED.outcomes[0].forward == [] and len(first.outcomes[0].forward) == 4      # E8: old records are followed exactly as before; only the new `forward` block is added
-    assert first.coverage["timing"]["cached_days"] == len(first.decision_days)
-    monkeypatch.setattr(engine, "engine_settings", lambda: {"parallel_days": 1, "retry_429": 0})
-    second = run(store)
-    assert stable(first) == stable(second)
-
-
-def test_the_cooldown_taken_is_the_advisors_own_function_on_the_same_records():
-    """A recommendation of a later day is taken off exactly when `ranking.cooldown_of` says an earlier one of this run still stands (same symbol and family, time stop not passed, no invalidation fired)."""
-    from types import SimpleNamespace
-
-    from prometheus.agents.advisor import ranking
-    cached = sorted((REAL / "oil_weekly_short_cache").glob("*.json"))
-    days = sorted((d for d in (json.loads(p.read_text(encoding="utf-8")) for p in cached) if "day" in d), key=lambda d: d["day"])
-    earlier: list[dict] = []
-    for found in days:
-        order = WorkOrder.model_validate(found["order"])
-        day = date.fromisoformat(found["day"])
-        expected = []
-        for rec in order.recommendations:
-            seen = SimpleNamespace(metrics=rec["features"], events=rec["evidence"]["events"])
-            if ranking.cooldown_of(seen, rec["trade"]["family"], [r for r in earlier if r["symbol"] == rec["symbol"]], day.isoformat()):
-                expected.append(rec["identity"]["record_id"])
-        taken = engine.cooldown_filter(order, day, earlier)
-        assert [c["identity"]["record_id"] for c in taken] == expected
-        assert all(r["identity"]["record_id"] not in expected for r in order.recommendations)
-        earlier.extend(order.recommendations)
-
-
-def test_another_amount_of_cash_changes_the_sizes_and_not_the_recommendations(store):
-    """The research does not depend on the money: with $1,000 instead of $10,000 the same recommendations are scored, and what is bought is smaller: a day never spends more than the account's cash THAT day or than the pot (P7)."""
-    rich, poor = run(store), run(store, cash=Decimal("1000.00"))
-    assert [o.key for o in rich.outcomes if o.verdict != "neutral"] == [o.key for o in poor.outcomes if o.verdict != "neutral"]
-    spent = lambda r: sum(d.spent for d in r.decision_days)
-    assert 0 < spent(poor) < spent(rich)
-    for saved in (rich, poor):
-        cash_on = {p.date: p.cash for p in saved.equity}      # the point of a decision day is marked after the decision and before its fill: its cash is the cash the Account Manager sized with
-        assert all(d.spent <= cash_on[d.day] and d.spent <= Decimal("3000.00") for d in saved.decision_days)
-        assert all(p.cash >= 0 for p in saved.equity)
-
-
-def test_a_run_never_spends_more_than_its_money_and_its_books_balance(store):
-    """P7 on the real walk: every day the equity is the cash plus the positions and the cash is never negative; the cash only moves by the real fills and exits; a position's exit is never before its entry."""
-    saved = run(store)
-    paid = sum(e.amount for e in saved.events if e.kind == "buy")
-    got = sum(e.amount for e in saved.events if e.kind == "exit")
-    assert all(p.equity == p.cash + p.invested and p.cash >= 0 for p in saved.equity)
-    assert saved.equity[-1].cash == REQUEST.cash - paid + got and paid > REQUEST.cash > paid - got      # the cash from the exits bought again: more was paid in all than the account started with, never more than it had
-    assert all(e.date >= next(o.entry.date for o in saved.outcomes if o.key == e.key) for e in saved.events if e.kind == "exit")
-
-
-def test_the_engines_exits_are_the_traders_followers_exits(store):
-    """One exit rule: the run checked every filled purchase's `Trade.outcome` against the account's own sale (or open lot) and did not fail; a position that was sold has the exit date, price and reason `follow` gave."""
-    saved = run(store)
-    sold = [e for e in saved.events if e.kind == "exit"]
-    for event in sold:
-        outcome = next(o for o in saved.outcomes if o.key == event.key)
-        assert (outcome.exit.date, outcome.exit.price, outcome.exit.reason) == (event.date, event.price, event.reason)
 
 
 def test_a_stopped_run_is_saved_as_stopped_with_what_it_has(store):

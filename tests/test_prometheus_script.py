@@ -5,7 +5,6 @@ Run:  pytest tests/test_prometheus_script.py -q
 The script is run for real with bash, with PROMETHEUS_DRY_RUN=1 so that it prints the command it WOULD run instead of running it: no network, no
 key, no cost, nothing fetched or written. Answers are piped in, the way a person would type them.
 """
-import json
 import os
 import shlex
 import subprocess
@@ -235,8 +234,6 @@ def test_the_paid_fetch_is_asked_about_and_nobody_answering_is_a_no():
 
 
 # ---- the session as the Account Manager reads it now: a trade the user names (design choices entry 87) does no research, so the paid refresh is not asked about
-
-DIRECT_REQUESTS = json.loads((REPO / "tests" / "fixtures" / "session_real" / "direct_order_forms.json").read_text(encoding="utf-8"))["requests"]
 
 
 def fetched(prompt: str, *more: str) -> bool:

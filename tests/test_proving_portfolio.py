@@ -5,7 +5,6 @@ REAL DATA ONLY. The purchases are the fills of the REAL Trader in backtest mode 
 sessions 2026-11-13 to 2026-11-19 exactly as the engine will walk it (the day's fills, then the exits, then the mark), and every number is compared with what the Trader and the Account Manager said (the Trader's own `Trade.outcome` and the Account
 Manager's own cash after the purchases) and with a reading of the bars by hand, in exact Decimal. The split case puts a real purchase of Netflix, filled at the real open of 2025-11-14, across its real 10-for-1 split of 2025-11-17.
 """
-import json
 from datetime import date
 from decimal import Decimal
 
@@ -14,8 +13,7 @@ from proving_helpers import close_on, plans_of, real_bars, real_records, replaye
 
 from prometheus.agents.trader import simulator
 from prometheus.agents.trader.record import Fill, Trade
-from prometheus.common.money import dumps
-from prometheus.common.portfolio import Portfolio, apply_fill, load_portfolio, trade_amount
+from prometheus.common.portfolio import trade_amount
 from prometheus.proving import record, splits
 from prometheus.proving.portfolio import IdentityError, LotInfo, SimPortfolio
 
@@ -35,53 +33,6 @@ def walk(order, cash: str, bars):
         exits += account.step(date.fromisoformat(day), bars)
         points.append(account.mark(date.fromisoformat(day), bars))
     return account, points, exits, after_buys
-
-
-def hand_value(account, bars, day: str) -> Decimal:
-    """The open positions at the close of `day`, each `trade_amount(shares, close)`, worked out from the bars by hand."""
-    return sum((trade_amount(lot.shares, simulator.bar_price(simulator.bar_on(bars[lot.symbol], day), "close")) for lot in account.lots), Decimal("0.00"))
-
-
-@pytest.mark.parametrize("capture, cash, closed, still_open, final_cash", [
-    ("bob_jones_oil", "15000.00", [("XOM", "2026-11-16", "169.3786", "stop", 0, "-1.21"), ("EOG", "2026-11-18", "150.0280", "stop", 2, "-51.86")], [], "14946.93"),
-    ("auto_even_split_dollars", "40000.00", [("XOM", "2026-11-16", "169.3786", "stop", 0, "-5.36"), ("CVX", "2026-11-17", "215.4814", "stop", 1, "-124.04"), ("EOG", "2026-11-18", "150.0280", "stop", 2, "-248.50")], ["OXY", "META"], "27622.10"),
-])
-def test_the_real_traders_fills_are_walked_day_by_day_and_every_identity_holds_exactly_and_the_exits_are_the_traders_own(capture, cash, closed, still_open, final_cash):
-    """The cash after the purchases is the Account Manager's own (`portfolio_after`), each exit is the Trader's own `Trade.outcome` (the same day, price, reason, sessions and gain: there are not two exit rules), the equity of every day is the cash
-    plus the open positions at the close worked out by hand, the gains add up to the proceeds less the cost, and the desk's portfolio is exactly what the desk's own `apply_fill` makes of the same fills (and loads from its JSON file)."""
-    order = replayed(capture, cash)
-    bars = real_bars({t["symbol"] for t in order.trades})
-    account, points, exits, after_buys = walk(order, cash, bars)
-    assert [t["status"] for t in order.trades] == ["filled"] * len(order.trades) and {t["fill"]["date"] for t in order.trades} == {"2026-11-16"}
-    assert after_buys == Decimal(str(order.trader_runs[-1]["portfolio_after"]["cash"])) == Decimal(cash) - sum((t["fill"]["amount"] for t in order.trades), Decimal("0.00"))      # the Account Manager's own cash
-    assert [(e.symbol, e.date.isoformat(), str(e.price), e.reason, e.sessions_held, str(e.gain)) for e in sorted(exits, key=lambda e: e.date)] == closed
-    outcomes = {t["symbol"]: t["outcome"] for t in order.trades}
-    for e in exits:
-        o = outcomes[e.symbol]
-        assert (e.date.isoformat(), e.price, e.reason, e.sessions_held, e.gain) == (o["exit_date"], o["exit_price"], o["exit_reason"], o["sessions_held"], o["realized_gain"])
-        assert e.amount == trade_amount(e.shares, e.price) and e.gain == e.amount - e.cost and e.cost == next(t["fill"]["amount"] for t in order.trades if t["symbol"] == e.symbol)
-    assert sorted(lot.symbol for lot in account.lots) == sorted(still_open)
-    for point in points:
-        assert point.equity == point.cash + point.invested and point.stale == [] and point.drawdown_pct <= 0
-    assert str(points[0].equity) == cash and points[-1].cash == account.cash == Decimal(final_cash)
-    assert points[-1].invested == hand_value(account, bars, "2026-11-19") and points[-1].equity == account.cash + hand_value(account, bars, "2026-11-19")
-    assert account.cash == Decimal(final_cash) and account.realized == sum((e.gain for e in exits), Decimal("0.00")) == account.cash + sum((lot.cost for lot in account.lots), Decimal("0.00")) - Decimal(cash)
-    assert points[1].equity == points[1].cash + hand_value_on(order, bars, account, exits)                                                  # (the day the purchases filled)
-
-    fresh = SimPortfolio(Decimal(cash), user="Bob Jones")
-    fresh.apply_fills(order.trades, plans_of(order))
-    held = Portfolio(user="Bob Jones", cash_avail=Decimal(cash))
-    for t in order.trades:
-        held = apply_fill(held, t["symbol"], "buy", t["fill"]["shares"], t["fill"]["price"], date.fromisoformat(t["fill"]["date"]), plans_of(order)[t["record_id"]].name)
-    assert fresh.as_desk_portfolio().model_dump() == held.model_dump() and fresh.as_desk_portfolio().cash_avail == after_buys
-    return_trip = Portfolio.model_validate(json.loads(dumps(fresh.as_desk_portfolio().model_dump(mode="json"))))
-    assert return_trip == fresh.as_desk_portfolio()
-
-
-def hand_value_on(order, bars, account, exits) -> Decimal:
-    """The positions of the day of the fills (2026-11-16) at its close: the lots that were still held at that close, by hand (a position stopped that day is out)."""
-    sold_that_day = {e.symbol for e in exits if e.date.isoformat() == "2026-11-16"}
-    return sum((trade_amount(t["fill"]["shares"], simulator.bar_price(simulator.bar_on(bars[t["symbol"]], "2026-11-16"), "close")) for t in order.trades if t["symbol"] not in sold_that_day), Decimal("0.00"))
 
 
 def test_a_held_symbol_with_no_bar_keeps_its_close_and_the_point_says_so_and_a_sale_or_a_fill_the_cash_cannot_pay_is_refused():

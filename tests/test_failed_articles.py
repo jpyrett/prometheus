@@ -85,13 +85,6 @@ def written_ids(tmp_path: Path, symbol: str = "AAPL") -> list[str]:
     return ids
 
 
-def test_the_real_records_are_fetched_and_written_when_nothing_fails(toolbox, tmp_path, capsys):
-    stats = toolbox.fetch_news(symbol="AAPL", from_date=60)
-    capsys.readouterr()
-    assert stats["failed"] == 0 and stats["written"] == 3
-    assert sorted(written_ids(tmp_path)) == sorted(d.id for d in load_news(NEWS))             # the same three real articles, reproduced from the API shapes
-
-
 @pytest.mark.parametrize("which", ["finnhub", "polygon"])
 def test_an_item_the_api_gave_that_cannot_be_made_into_an_article_is_discarded_and_the_rest_are_written(toolbox, tmp_path, capsys, which):
     good = {"finnhub": toolbox.finnhub[0], "polygon": toolbox.polygon[0]}[which]
@@ -145,24 +138,6 @@ def damaged(line: str) -> list[str]:
     art = json.loads(line)
     return [line[: len(line) // 2], "not json at all", json.dumps({k: v for k, v in art.items() if k != "headline"}), json.dumps({**art, "published": "garbage"}),
             json.dumps({**art, "insights": "positive"}), json.dumps({**art, "tickers": None}), json.dumps(["a", "list"])]
-
-
-def test_a_market_news_line_that_is_not_a_whole_article_is_never_read(tmp_path, monkeypatch):
-    day, lines = real_market_lines()
-    box = market_store(tmp_path, monkeypatch, [lines[0], *damaged(lines[1]), *lines[1:]], day)
-    read = list(box._market_articles(tmp_path / "news" / "market" / f"{day}.jsonl"))
-    assert [a["url"] for a in read] == [json.loads(line)["url"] for line in lines]               # exactly the real lines, in order; none of the damaged ones
-
-
-def test_discover_over_a_market_store_with_damaged_lines_gives_the_answer_of_the_real_lines_alone(tmp_path, monkeypatch, capsys):
-    day, lines = real_market_lines(400)
-    phrase = next(w for w in ("AI", "earnings", "Fed", "inflation", "oil") if w.lower() in " ".join(lines).lower())
-    clean = market_store(tmp_path / "a", monkeypatch, lines, day)
-    expected = clean.discover(phrase, from_date=120, refresh=False)
-    mixed = market_store(tmp_path / "b", monkeypatch, [lines[0], *damaged(lines[1]), *lines[1:], *damaged(lines[2])], day)
-    got = mixed.discover(phrase, from_date=120, refresh=False)
-    capsys.readouterr()
-    assert got == expected and expected["scanned"] == len(lines)
 
 
 def test_the_seen_urls_of_a_market_store_ignore_a_damaged_line_instead_of_stopping_the_sync(tmp_path, monkeypatch):

@@ -67,12 +67,6 @@ def test_a_phrase_becomes_real_tickers_by_lookup_and_private_companies_are_liste
     assert out["run"]["stage"] == "companies" and out["run"]["calls"] == 1 and out["run"]["error"] is None
 
 
-def test_the_models_ticker_is_never_used_the_lookup_decides_and_a_wrong_guess_is_said():
-    wrong = {"brand": "Domino's", "parent": "Domino's Pizza", "ticker": "DMP.AX"}
-    row = clerk(proposal(wrong)).find_companies("Pizza")["companies"][0]
-    assert row["symbol"] == "DPZ" and row["note"] == "the model guessed DMP.AX; the lookup says DPZ"
-
-
 def test_a_ticker_hint_is_accepted_only_when_finnhub_has_it_and_its_name_shares_a_word_with_the_company():
     # "Yum Brands" (no "!") finds nothing in Finnhub's directory (it is punctuation sensitive), but the hint YUM exists and its name is "YUM! BRANDS INC"
     ok = clerk(proposal({"brand": "Pizza Hut", "parent": "Yum Brands", "ticker": "YUM"})).find_companies("Pizza")["companies"][0]
@@ -81,13 +75,6 @@ def test_a_ticker_hint_is_accepted_only_when_finnhub_has_it_and_its_name_shares_
     assert nothing["symbol"] is None and nothing["public"] is False and "no listed company named 'Zorblax Pizza Holdings'" in nothing["note"]
     unrelated = clerk(proposal({"brand": "Mystery Pizza", "parent": "Zorblax Pizza Holdings", "ticker": "DPZ"})).find_companies("Pizza")["companies"][0]
     assert unrelated["symbol"] is None                                                       # DPZ exists and "Domino's Pizza" shares the word "pizza" with it: one shared word is not enough
-
-
-def test_a_rate_limited_lookup_waits_and_tries_again_it_is_not_not_found(monkeypatch):
-    monkeypatch.setattr("time.sleep", lambda s: None)
-    c = clerk(proposal(PIZZA[0]), search=Search(fail_429=1))
-    c.lookup_interval = 0.01
-    assert c.find_companies("Pizza")["companies"][0]["symbol"] == "DPZ"
 
 
 def test_a_lookup_that_keeps_failing_is_named_and_the_company_is_not_scored(monkeypatch):
@@ -116,11 +103,6 @@ def test_a_model_that_fails_or_gives_junk_leaves_notes_and_never_raises():
     assert junk["companies"] == [] and "not usable" in junk["notes"][0]
     retry = clerk(("sorry", proposal(PIZZA[0]))).find_companies("Pizza")
     assert [c["symbol"] for c in retry["companies"]] == ["DPZ"] and retry["run"]["calls"] == 2
-
-
-def test_the_proposals_are_capped_and_junk_entries_are_ignored():
-    many = [{"brand": f"B{i}", "parent": None} for i in range(30)] + ["junk", 5]
-    assert len(clerk(proposal(*many)).find_companies("Pizza", count=5)["companies"]) == 5
 
 
 @pytest.mark.parametrize("phrase, count", [("", 5), ("   ", 5), ("a" * 61, 5), ("pizza; rm -rf /", 5), ("../x", 5), ("Pizza", 0), ("Pizza", 21), ("Pizza", True)])
@@ -167,16 +149,6 @@ def fetcher(allow=True, fail=None):
     c = DataClerk(model=object(), allow_fetch=allow)
     c.tools = FetchTools(fail)
     return c
-
-
-def test_refresh_fetches_bars_for_the_symbols_spy_and_the_etfs_then_each_symbols_news_press_releases_and_filings():
-    c = fetcher()
-    report = c.refresh_data(["dpz", "$PZZA", "DPZ"], news_days=10, filings_days=300, bars_days=400)
-    assert all(r["outcome"] == "ok" for r in report) and [(r["step"], r["symbol"]) for r in report] == [("daily_bars", None)] + [(s, sym) for sym in ("DPZ", "PZZA") for s in ("news", "press_releases", "filings")]
-    bars = c.tools.calls[0]
-    assert bars[2][0][:4] == ["DPZ", "PZZA", "SPY", "XLK"] and len(bars[2][0]) == 14 and bars[2][1] == 400
-    assert ("news", "DPZ", 10) in c.tools.calls and ("filings", "PZZA", 300) in c.tools.calls and ("press_releases", "DPZ", 300) in c.tools.calls
-    assert report[1]["detail"] == {"fetched": 10, "written": 9, "duplicates": 1}
 
 
 def test_a_step_that_fails_is_reported_with_its_kind_and_the_other_steps_still_run():

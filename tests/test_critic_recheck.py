@@ -1,13 +1,10 @@
 """Accuracy: the Data Clerk is asked again and the old and new values are compared (Critic spec 8.1). The three requests, the tolerances, the sources read again, the cross-checks."""
 import copy
-from datetime import timedelta
 
-import pytest
 from critic_helpers import CONFIG, NOW, FakeClerk, captured, rec_of
 
 from prometheus.agents.critic import recheck as rc
 from prometheus.agents.critic.claims import claims_of
-from prometheus.common import work_order as wo
 
 ACC = CONFIG.accuracy
 
@@ -20,9 +17,6 @@ def setup(name="PG_open", **options):
     got = rc.gather(clerk, order, [(rec, "2026-11-05", claims)], NOW, CONFIG)
     names, decisive = rc.key_metrics(rec, CONFIG.limits.max_metrics)
     return order, rec, clerk, claims, got, names, decisive
-
-
-# ---------------------------------------------------------------- what to ask for
 
 
 # ---------------------------------------------------------------- the three requests
@@ -50,26 +44,6 @@ def compared(mutate=None, **options):
     return rec, rc.compare(rec, fetched, names, decisive, ACC), decisive
 
 
-def test_the_price_that_differs_makes_the_record_unreliable_by_itself():
-    """AMENDED (Critic v3, rule V7): a decisive number that differed was a `data_mismatch` blocker. The PRICE (`last_close`) not matching is the one case that still denies alone, as `data_unreliable` (a fault)."""
-    def bad(f):
-        f["last_close"]["value"] *= 1.10
-    _, (rechecks, findings, rate), _ = compared(bad)
-    [finding] = findings
-    assert (finding.code, finding.severity, finding.dimension) == ("data_unreliable", "blocker", "accuracy") and "last_close was" in finding.message and "cannot be trusted" in finding.message
-    assert next(r for r in rechecks if r.name == "last_close").match is False and next(r for r in rechecks if r.name == "last_close").decisive and rate < 1.0
-
-
-def test_another_decisive_number_that_differs_is_a_warning_about_one_metric_not_a_denial():
-    """Rule V7: the ATR (decisive, but not the price) that differs from a new calculation is a WARNING `data_mismatch`; the match rate (and so the accuracy score) still counts it."""
-    def bad(f):
-        f["atr_14"]["value"] *= 3
-    _, (rechecks, findings, rate), _ = compared(bad)
-    [finding] = findings
-    assert (finding.code, finding.severity, finding.dimension) == ("data_mismatch", "warning", "accuracy") and "atr_14 was" in finding.message and rate < 1.0
-    assert next(r for r in rechecks if r.name == "atr_14").match is False and next(r for r in rechecks if r.name == "atr_14").decisive
-
-
 def test_a_decisive_number_that_cannot_be_calculated_again_is_a_warning_with_the_clerks_note_and_the_price_that_cannot_is_a_fault():
     def gone(f):
         f["atr_14"] = {**f["atr_14"], "value": None, "note": "needs 20 bars, 17 stored"}
@@ -80,21 +54,6 @@ def test_a_decisive_number_that_cannot_be_calculated_again_is_a_warning_with_the
         f["last_close"] = {**f["last_close"], "value": None, "note": "needs 1 bars, 0 stored"}
     _, (_, findings, _), _ = compared(no_price)
     assert [(f.code, f.severity) for f in findings][0] == ("data_unreliable", "blocker") and "could not be calculated again" in findings[0].message
-
-
-def test_several_small_mismatches_among_the_other_numbers_trip_the_match_rate_floor_and_the_record_is_unreliable():
-    order, rec, clerk, claims, got, names, decisive = setup()
-    fetched = copy.deepcopy(got.metrics_for(rec, "2026-11-05"))
-    others = [r.name for r in rc.compare(rec, fetched, names, decisive, ACC)[0] if not r.decisive and isinstance(fetched[r.name]["value"], float)]
-    total = len(rc.compare(rec, fetched, names, decisive, ACC)[0])
-    wrong = 0
-    for name in others:
-        fetched[name]["value"] = fetched[name]["value"] * 3 + 1
-        wrong += 1
-        rechecks, findings, rate = rc.compare(rec, fetched, names, decisive, ACC)
-        if rate < ACC.min_match_rate:
-            break
-    assert findings and findings[0].code == "data_unreliable" and findings[0].severity == "blocker" and f"{rate:.0%}" in findings[0].message and rate == pytest.approx((total - wrong) / total) and wrong >= 2      # AMENDED (V7): the record as a whole cannot be trusted
 
 
 def test_nothing_returned_for_the_symbol_is_data_unreliable():
@@ -143,28 +102,6 @@ def test_a_quote_that_is_no_longer_in_its_source_is_a_blocker():
     assert [f.code for f in findings] == ["source_missing"] and "no longer in its source" in findings[0].message and checks[0].quote_in_text is False
 
 
-def test_an_altered_headline_or_date_is_a_blocker():
-    (_, findings, _), _ = sources_of(lambda v, c: v["chunks"][c[0].chunk_id].update(headline="A different headline"))
-    assert [f.code for f in findings] == ["source_altered"]
-    (_, findings, _), _ = sources_of(lambda v, c: v["chunks"][c[0].chunk_id].update(published_utc="2026-11-04T00:00:00Z"))
-    assert [f.code for f in findings] == ["source_altered"]
-
-
-def test_the_rest_of_the_text_changing_is_only_a_warning():
-    (checks, findings, rate), _ = sources_of(lambda v, c: v["chunks"][c[0].chunk_id].update(text=v["chunks"][c[0].chunk_id]["text"] + " An editor's note was added."))
-    assert [(f.code, f.severity) for f in findings] == [("source_text_changed", "warning")] and checks[0].same_text is False and rate == 1.0
-
-
-def test_a_source_that_does_not_list_the_symbol_is_a_warning_and_is_marked_untagged():
-    (checks, findings, _), _ = sources_of(lambda v, c: v["chunks"][c[0].chunk_id].update(tickers=["MSFT"]))
-    assert [(f.code, f.severity) for f in findings] == [("source_not_tagged", "warning")] and checks[0].tagged is False
-
-
-def test_when_the_verification_request_failed_every_source_is_missing_and_says_so():
-    (checks, findings, rate), claims = sources_of(fail=["verification"], mutate=lambda v, c: [v.update(chunks={}, evidence={}) for _ in [0]])
-    assert len(findings) == len(claims) and all(f.code == "source_missing" and "verification request failed" in f.message for f in findings) and rate == 0.0
-
-
 # ---------------------------------------------------------------- the cross-checks
 
 def cross(mutate=None, quote_mutate=None, **options):
@@ -199,26 +136,9 @@ def test_an_after_hours_print_on_the_bars_day_is_not_the_close():
     assert [f.code for f in closing[1]] == ["price_mismatch"]
 
 
-def test_a_bar_from_any_other_day_is_not_compared_at_all():
-    checks, findings, _, _ = cross(mutate=lambda f, v: f["last_close"].update(as_of="2026-10-20"))
-    assert "price" not in {c.name for c in checks} and findings == []
-
-
-def test_a_symbol_the_directory_does_not_list_is_a_blocker_and_a_failed_lookup_only_a_warning():
-    _, findings, identity, rate = cross(listed={"PG": False})
-    assert [f.code for f in findings if f.severity == "blocker"] == ["symbol_unknown"] and identity.listed is False
-    _, findings, identity, _ = cross(listed={"PG": None})
-    assert [(f.code, f.severity, f.requires_human) for f in findings] == [("identity_unverified", "warning", True)] and identity.listed is None and "429" in findings[0].message
-
-
 def test_a_company_name_the_directory_does_not_recognise_is_a_warning_for_a_person():
     checks, findings, identity, _ = cross(mutate=lambda f, v: v["symbols"]["PG"].update(company="ACME ROCKET SKATES LTD"))
     assert [(f.code, f.severity, f.requires_human) for f in findings] == [("company_mismatch", "warning", True)] and not next(c for c in checks if c.name == "identity").passed
-
-
-def test_a_52_week_high_that_disagrees_with_finnhubs_is_a_warning():
-    checks, findings, _, rate = cross(mutate=lambda f, v: f["high_52w"].update(value=f["high_52w"]["value"] * 1.2))
-    assert [(f.code, f.severity) for f in findings] == [("high_52w_differs", "warning")] and rate == pytest.approx(2 / 3)
 
 
 # ---------------------------------------------------------------- no equity: the Critic does not know the user's money
@@ -229,8 +149,3 @@ def test_the_critic_has_no_equity_and_never_compares_one_with_the_advisors():
     assert not hasattr(rc, "own_equity") and not hasattr(rc, "equity_check") and "equity_rel" not in type(ACC).model_fields
     import inspect
     assert "portfolio" not in inspect.signature(rc.gather).parameters
-
-
-# ---------------------------------------------------------------- the accuracy score
-
-

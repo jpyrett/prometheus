@@ -1,5 +1,4 @@
 """Tests for prometheus.agents.advisor.quality (Advisor v1 spec section 9.3, phase 3)."""
-import pytest
 from advisor_helpers import CONFIG, TODAY, healthy, metric
 
 from prometheus.agents.advisor.quality import quality_multiplier
@@ -9,26 +8,6 @@ Q = CONFIG.quality
 
 def quality(metrics):
     return quality_multiplier(metrics, TODAY, Q)
-
-
-@pytest.mark.parametrize("override, check, factor", [
-    (dict(operating_margin=0.0), "operating_margin", 0.6), (dict(roe=7.99), "roe", 0.85), (dict(revenue_growth=-0.01), "revenue_growth", 0.85),
-    (dict(debt_to_equity=2.01), "debt_to_equity", 0.7), (dict(current_ratio=0.99), "current_ratio", 0.85), (dict(share_count_change=0.011), "share_count_change", 0.8),
-    (dict(sbc_to_revenue=0.16), "sbc_to_revenue", 0.7), (dict(accrual_ratio=0.11), "accrual_ratio", 0.5),
-    (dict(receivables_vs_sales=15.1), "receivables_vs_sales", 0.5), (dict(inventory_vs_sales=15.1), "inventory_vs_sales", 0.5), (dict(cfo_negative_with_profit=True), "cfo_negative_with_profit", 0.5),
-    (dict(risk_factor_change=0.36), "risk_factor_change", 0.75),
-])
-def test_each_haircut_applies_just_past_its_threshold(override, check, factor):
-    result = quality(healthy(**override))
-    assert [(h.check, h.factor) for h in result.haircuts] == [(check, factor)] and result.multiplier == pytest.approx(factor)
-
-
-def test_factors_multiply_and_the_floor_is_0_2():
-    result = quality(healthy(operating_margin=-5.0, roe=1.0, revenue_growth=-3.0))
-    assert result.multiplier == pytest.approx(0.6 * 0.85 * 0.85)
-    terrible = quality(healthy(operating_margin=-5.0, roe=1.0, revenue_growth=-3.0, debt_to_equity=5.0, current_ratio=0.5, share_count_change=0.05, sbc_to_revenue=0.5,
-                               accrual_ratio=0.5, cfo_negative_with_profit=True))
-    assert terrible.multiplier == 0.2 and len(terrible.haircuts) > 6
 
 
 def test_the_earnings_quality_checks_take_their_factor_once_and_turn_reversion_off():

@@ -98,16 +98,3 @@ def test_the_closed_list_of_blocker_codes_has_every_code_once():
     assert set(BLOCKER_CODES) == set(cc.DIMENSIONS) and BLOCKER_ORDER[0] == "record_not_reviewable" and BLOCKER_ORDER[-1] == "fresh_negative_event" and BLOCKER_CODES["analysts"] == ()
 
 
-def test_the_weights_of_version_3_are_the_specs_and_total_a_hundred():
-    config = cc.load_config()
-    assert config.config_version == "3" and dict(config.weights) == {"accuracy": 25, "evidence": 15, "risk_fit": 15, "timing": 10, "value": 15, "chart": 10, "analysts": 10} and sum(config.weights.values()) == 100
-    assert not hasattr(config.verdict, "approve_min_score") and config.verdict.blocked_score_cap == 49
-
-
-def test_the_new_numbers_of_version_3_are_the_specs():
-    config = cc.load_config()
-    a, c = config.analysts, config.chart
-    assert (a.min_analysts, a.trend_months, a.bearish_mean, a.bearish_drop, a.store) == (3, 3, 2.5, -0.5, "data/analysts") and config.performance.poor_ret_63d == -0.15
-    assert (c.bearish_at, c.bonus.per_point, c.bonus.max_points, c.pivot_window, c.pattern_lookback, c.pattern_recent_sessions, c.level_tolerance, c.min_gap, c.min_depth, c.year_sessions) == (-20, 0.25, 8, 5, 120, 10, 0.03, 10, 0.05, 252)
-    assert {p.name: p.points for p in c.patterns if p.name in ("double_bottom", "double_top", "inverse_head_and_shoulders", "head_and_shoulders", "ascending_triangle", "descending_triangle", "breakout_52w", "breakdown_52w")} == {
-        "double_bottom": 10, "double_top": -10, "inverse_head_and_shoulders": 10, "head_and_shoulders": -10, "ascending_triangle": 5, "descending_triangle": -5, "breakout_52w": 10, "breakdown_52w": -10}

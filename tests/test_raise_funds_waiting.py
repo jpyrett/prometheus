@@ -16,7 +16,6 @@ from test_raise_funds_direct import DPZ, Book, bookings, db, store  # noqa: F401
 
 from prometheus.agents.account_manager import funding
 from prometheus.agents.account_manager.orders import Watcher
-from prometheus.common import work_order as wo
 from prometheus.common.money import price as price_door
 from prometheus.common.portfolio import trade_amount
 

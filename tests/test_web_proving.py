@@ -1,7 +1,6 @@
 """The Proving Ground's routes (prometheus/application/web/proving_run.py, proving_views.py, app.py; design/proving_ground_spec.md section 9) over the SAVED REAL runs of `tests/fixtures/proving_real/` in replay: free, no model, no quote, no
 database. The shapes are the page's contract: the routes answer with the run's own fields and the events of a replay are the events of a live run."""
 import json
-import threading
 import time
 from pathlib import Path
 

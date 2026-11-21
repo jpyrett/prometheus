@@ -5,7 +5,6 @@ Run:  pytest tests/test_work_order.py -q
 No network, no key, no cost: a scripted model stands in for the chat model (see test_data_clerk_agent.py) and the stores are in
 temporary folders.
 """
-import json
 import shutil
 from datetime import date
 from pathlib import Path
@@ -20,7 +19,7 @@ from prometheus.common import work_order as wo
 from prometheus.rag import store as rag_store
 from test_data_clerk_agent import ScriptedModel, call, say  # the same scripted model and turns as the agent tests
 from test_data_clerk_tools import FakeToolbox
-from test_symbols import META, PG_NAME, PG_TICKER, AnyQuery, FakeSearch  # the REAL Finnhub rows the symbol tests already use
+from test_symbols import META, PG_NAME, PG_TICKER, FakeSearch  # the REAL Finnhub rows the symbol tests already use
 from test_filings import DistinctEmbeddings
 from test_rag_retriever import DAY, NOW, KeywordEmbeddings, chunk, fill, make_store
 
@@ -52,9 +51,6 @@ def clerk(script, index, toolbox, **options):
 
 def order(**fields):
     return wo.new_work_order(fields.pop("query", "What is new with Apple's phone?"), **fields)
-
-
-# ---------------------------------------------------------------- the order itself
 
 
 # ---------------------------------------------------------------- verify_request
@@ -145,16 +141,6 @@ def press_clerk(script, index, toolbox, press_index, search=None, **options):
 def press_order(**fields):
     fields = {"source": "press_releases", "since_days": 365, "top_k": 3, "query": "What do the press releases say?", **fields}
     return order(**fields)
-
-
-# ---------------------------------------------------------------- verify_request
-
-
-# ---------------------------------------------------------------- verify_action: a press release order must have searched the press releases
-
-def result_with(*tools, outcome="ok") -> Result:
-    return Result(question="q", answer="PG [1].", references=[{"number": 1, "chunk_id": "a#0"}], sources=[{"number": 1, "chunk_id": "a#0"}],
-                  tool_calls=[{"name": name, "args": {}, "outcome": outcome} for name in tools])
 
 
 # ---------------------------------------------------------------- request_data for a press release order: the symbol first, then the company name
@@ -351,5 +337,3 @@ def test_a_metrics_request_must_be_a_metrics_order_and_must_not_already_have_its
     done = metric_order()
     done.status = "data_ready"
     assert any("already has its data" in r for r in wo.verify_metric_request(done))
-
-

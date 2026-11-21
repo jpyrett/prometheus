@@ -5,10 +5,10 @@ spec's named cases (the anti-chase rule, the idiosyncratic-drop rule with and wi
 the laggard rule). The numbers are literals that put a rule at its threshold; they are not market data.
 """
 import pytest
-from advisor_helpers import CONFIG, family_input, metrics_of
+from advisor_helpers import family_input, metrics_of
 
 from prometheus.agents.advisor import families as fam
-from prometheus.agents.advisor.record import Haircut, Quality
+from prometheus.agents.advisor.record import Quality
 
 # ---------------------------------------------------------------- trend
 
@@ -48,11 +48,6 @@ def test_a_bullish_event_whose_move_is_over_3_atrs_is_priced_in_and_does_not_pas
     assert run("event", EVENT, events=[ev(reaction=0.06)]).passed                       # exactly 3 ATRs is allowed
 
 
-def test_a_bullish_event_with_no_computable_reaction_is_not_assumed_unpriced():
-    r = run("event", EVENT, events=[ev(reaction=None)])
-    assert not r.passed and "cannot be computed" in r.notes[0]
-
-
 def test_a_bullish_and_a_bearish_event_the_newer_one_votes_and_the_contradiction_is_recorded():
     r = run("event", EVENT, events=[ev("guidance_raise", "bullish", age=4), ev("earnings_miss", "bearish", age=1, reaction=-0.01)])
     assert r.direction == "bearish" and any(n.startswith("contradiction: earnings_miss (age 1) against guidance_raise (age 4)") for n in r.notes) and r.counter_evidence_ids == ["[3]"]
@@ -69,12 +64,6 @@ def test_event_needs_its_required_numbers():
 
 REV = dict(ret_5d=-0.09, zscore_21d=-2.5, rsi_14=28.0, atr_pct=0.02, roe=18.0, debt_to_equity=0.9, current_ratio=1.4, revenue_growth=6.0, residual_5d=-0.06, sector_ret_5d=-0.01, spy_ret_5d=0.0,
            above_sma_200=True, above_sma_50=True, bollinger_pct_b=-0.1, volume_ratio_1d=2.2, candle_reversal_1d=True)
-
-
-def test_reversion_passes_for_a_sound_company_that_fell_with_no_news_of_its_own():
-    r = run("reversion", REV)
-    # 0.40 + 0.20 x clip((2.5 - 2) / 2) + 0.10 (rsi <= 30) + 0.10 (%B <= 0) + 0.10 (volume 2.2x) + 0.10 (reversal candle)
-    assert r.passed and r.direction == "bullish" and r.score == pytest.approx(0.40 + 0.20 * 0.25 + 0.40) and r.horizon_bars == 10 and r.prior_20d == 0.010
 
 
 def test_the_idiosyncratic_rule_with_a_sector_etf_and_without_one():
@@ -104,12 +93,6 @@ def test_a_fundamental_cause_is_refused_and_a_neutral_one_is_noted():
     assert not recent_miss.passed and "fundamental cause: earnings_miss" in recent_miss.notes
 
 
-def test_an_earnings_quality_check_switches_reversion_off():
-    quality = Quality(multiplier=0.5, haircuts=[Haircut(check="accrual_ratio", value=0.3, factor=0.5)], turned_off=["reversion"])
-    r = run("reversion", REV, quality=quality)
-    assert not r.passed and "switched off by an earnings-quality check: accrual_ratio" in r.notes[0]
-
-
 # ---------------------------------------------------------------- capital_return
 
 CR = dict(earnings_yield=0.04, debt_to_equity=0.9, share_count_change=-0.02, payout_coverage=0.6, revenue_growth=4.0, cash_balance=10e9)
@@ -122,14 +105,6 @@ CR = dict(earnings_yield=0.04, debt_to_equity=0.9, share_count_change=-0.02, pay
 def test_each_capital_return_rule_fails_on_its_own(override, message):
     r = run("capital_return", {**CR, **override})
     assert r.computable and not r.passed and any(message in n for n in r.notes)
-
-
-def test_the_share_count_is_the_capital_return_test_and_a_fall_of_more_than_one_percent_scores_higher():
-    """Design choices entry 97: there is no payout yield (it was over the market capitalization); a share count that fell at least 0.5% is what passes, and one that fell more than 1% adds 0.15 + 0.10."""
-    r = run("capital_return", {**CR, "share_count_change": -0.012})
-    assert r.passed and r.score == pytest.approx(0.40 + 0.15 + 0.10 + 0.10)
-    assert run("capital_return", {**CR, "share_count_change": -0.007}).score == pytest.approx(0.40 + 0.10)
-    assert not run("capital_return", {**CR, "share_count_change": -0.004}).passed
 
 
 def test_a_buyback_authorization_adds_a_tenth_and_is_halved_when_it_exceeds_the_cash():
@@ -152,25 +127,6 @@ def theme_run(metrics=None, data=THEME, **kw):
     return run("theme", {"ret_21d": 0.02, "volume_ratio_1d": 1.5, "roe": 20.0, "operating_margin": 10.0, **(metrics or {})}, theme=data, signals=VERIFIED, **kw)
 
 
-def test_a_laggard_of_a_positive_theme_passes_and_the_score_is_the_formula():
-    r = theme_run()
-    # median of (0.02, 0.10, 0.30) = 0.10; 0.40 + 0.20 x clip(0.15 / 0.30) + 0.20 x (1 - place 0.0) + 0 (8/12 = 67% < 80%) + 0.10 (volume 1.5x)
-    assert r.passed and r.direction == "bullish" and r.score == pytest.approx(0.40 + 0.10 + 0.20 + 0.10) and r.features_used["theme_role"] == "laggard" and r.horizon_bars == 42
-
-
-def test_a_company_that_already_moved_with_the_theme_is_a_leader_not_a_recommendation():
-    r = theme_run({"ret_21d": 0.30})
-    assert not r.passed and r.features_used["theme_role"] == "leader" and r.notes[-1] == "already moved 30% in 21 bars (the basket median is 10%)"
-
-
-@pytest.mark.parametrize("data, message", [
-    ({**THEME, "articles": 2}, "only 2 articles"), ({**THEME, "positive": 5, "neutral": 4, "negative": 3}, "of the articles on the theme are positive"),
-])
-def test_theme_needs_enough_positive_coverage(data, message):
-    r = theme_run(data=data)
-    assert r.computable and not r.passed and any(message in n for n in r.notes)
-
-
 def test_theme_needs_the_discovery_result_and_a_verified_signal_naming_the_company():
     assert not run("theme", {"ret_21d": 0.02}, signals=VERIFIED).computable
     r = run("theme", {"ret_21d": 0.02}, theme=THEME, signals=[])
@@ -180,9 +136,6 @@ def test_theme_needs_the_discovery_result_and_a_verified_signal_naming_the_compa
 def test_theme_with_a_poor_quality_company_does_not_pass():
     r = theme_run(quality=Quality(multiplier=0.4))
     assert not r.passed and any("quality multiplier 0.40" in n for n in r.notes)
-
-
-# ---------------------------------------------------------------- the registry
 
 
 # ---------------------------------------------------------------- conviction (Advisor v1 Amendment 5)

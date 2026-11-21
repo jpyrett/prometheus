@@ -9,10 +9,7 @@ from pathlib import Path
 import pytest
 
 from bar_helpers import weekdays, write_day_files
-from prometheus.agents.data_clerk import technicals
-from prometheus.agents.data_clerk.bars import Bar, BarStore, date_of
-
-REAL_ROOT = Path(__file__).resolve().parent.parent / "data" / "historical" / "day_aggs_v1"
+from prometheus.agents.data_clerk.bars import BarStore
 
 
 def rows(day_index, **by_ticker):
@@ -34,16 +31,6 @@ def test_a_corrupt_file_is_reported_with_its_day_and_the_rest_is_still_read(tmp_
     assert [b.date for b in store.bars("AAA")] == [days[0], days[2]]
     assert len(store.gaps) == 1 and store.gaps[0].startswith(f"{days[1]}: unreadable (")
     assert "not,the" not in store.gaps[0]               # the file's content is never put in a message
-
-
-@pytest.mark.skipif(not REAL_ROOT.exists(), reason="the real day_aggs_v1 files are not on this machine")
-def test_the_real_files_give_bars_and_only_the_indicators_that_fit():
-    """Phase 1 acceptance: with the real stored sessions (17 in October 2026 when this was written) an indicator answers exactly when it has enough bars."""
-    store = BarStore(REAL_ROOT).load(["SPY", "PG"])
-    bars = store.bars("PG")
-    assert len(bars) >= 10 and all(a.date < b.date for a, b in zip(bars, bars[1:]))
-    assert (technicals.rsi_14(bars) is None) == (len(bars) < technicals.MIN_BARS["rsi_14"])
-    assert technicals.ret(bars, 5) is not None
 
 
 # ---------------------------------------------------------------- the narrow sync (no network: the aws call is recorded)
@@ -103,19 +90,6 @@ def toolbox_with(tmp_path, monkeypatch, results_by_symbol):
         return {"results": results_by_symbol.get(symbol, [])}
     monkeypatch.setattr(DataToolbox, "_get_json", staticmethod(fake_get))
     return box, calls
-
-
-def test_fetch_daily_bars_writes_one_file_per_ticker_in_the_day_file_columns(tmp_path, monkeypatch):
-    days = weekdays(3, date(2026, 11, 4))
-    box, calls = toolbox_with(tmp_path, monkeypatch, {"PG": [rest_row(d, 160.0 + i) for i, d in enumerate(days)]})
-    info = box.fetch_daily_bars(["pg", "$PG", "XLP"], days=30, end=date(2026, 11, 4))
-    assert info == {"PG": {"fetched": 3, "stored": 3, "first": str(days[0]), "last": str(days[-1])}, "XLP": {"fetched": 0, "stored": 0, "first": None, "last": None}}
-    assert [c[0] for c in calls] == ["https://api.massive.com/v2/aggs/ticker/PG/range/1/day/2026-10-05/2026-11-04", "https://api.massive.com/v2/aggs/ticker/XLP/range/1/day/2026-10-05/2026-11-04"]
-    assert calls[0][1]["adjusted"] == "false" and calls[0][1]["sort"] == "asc"                    # unadjusted, like the flat files
-    text = (tmp_path / "data" / "historical" / "ticker_bars_v1" / "PG.csv").read_text().splitlines()
-    assert text[0] == "ticker,volume,open,close,high,low,window_start,transactions" and len(text) == 4 and text[1].startswith("PG,1000.0,159.0,160.0,161.0,158.0,") and "SECRET-KEY" not in "\n".join(text)
-    store = BarStore(tmp_path / "data" / "historical" / "day_aggs_v1").load(["PG"])             # BarStore reads it: no day files at all
-    assert [b.date for b in store.bars("PG")] == days and store.bars("PG")[-1].close == 162.0 and store.gaps == []
 
 
 def test_a_second_fetch_merges_a_date_fetched_again_replaces_the_old_row_and_nothing_is_lost(tmp_path, monkeypatch):

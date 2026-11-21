@@ -44,18 +44,9 @@ def class_of(code: str) -> str | None:
     return CLASS_OF.get(code)
 
 
-def is_sign(code: str) -> bool:
-    return CLASS_OF.get(code) in GROUPS
-
-
 def groups_of(findings: list[Finding]) -> dict[str, list[Finding]]:
     """{group: the findings of that group's signs that fired}: always the three groups, in order, an empty list for a clean one. Any finding counts (a blocker or a warning), whatever its severity."""
     return {group: [f for f in findings if CLASS_OF.get(f.code) == group] for group in GROUPS}
-
-
-def bad_groups(findings: list[Finding]) -> list[str]:
-    """The names of the groups with at least one sign, in the order of `GROUPS`."""
-    return [group for group, found in groups_of(findings).items() if found]
 
 
 def heaviest(found: list[Finding]) -> Finding:

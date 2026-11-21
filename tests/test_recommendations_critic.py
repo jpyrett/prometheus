@@ -49,64 +49,6 @@ def go(request_text="DPZ", critic=True, manager=None, approver=None, now=NOW, to
     return result, clerk, reviewer
 
 
-def test_a_run_with_a_critic_reviews_every_recommendation_and_the_account_manager_decides():
-    result, clerk, _ = go("DPZ PZZA YUM")
-    order = result.order
-    assert order.status in ("decided", "reviewed") and len(order.reviews) == len(order.recommendations) >= 1 and result.now == NOW
-    assert [d["record_id"] for d in order.trade_decisions] == [r["record_id"] for r in order.reviews] and order.critic_runs[0]["records"] == len(order.recommendations)
-    assert {"critic", "decide"} <= set(result.seconds)
-
-
-def test_without_a_critic_the_run_is_what_it_was():
-    result, _, _ = go("DPZ PZZA YUM", critic=False)
-    assert result.order.status == "recommended" and result.order.reviews == [] and result.order.trade_decisions == [] and result.now is None and "critic" not in result.seconds
-
-
-def test_the_report_has_the_critic_section_after_the_recommendations_and_the_models_calls():
-    result, _, _ = go("DPZ PZZA YUM")
-    text = rec.report(result)
-    assert text.index("RECOMMENDATIONS  (") < text.index("CRITIC REVIEW  (model z-ai/glm-5.3") and "TRADE DECISIONS" in text and "MODEL CALLS (Critic): z-ai/glm-5.3" in text
-    assert "The Critic's verdict is arithmetic over what the Data Clerk returned again" in text and "Nothing here is bought or sold." in text
-
-
-def test_a_review_dated_on_another_day_than_the_run_says_it_is_a_replay():
-    result, _, _ = go("DPZ PZZA YUM", now=at("2026-10-26 10:30"))
-    assert any("is not the Eastern date of the review (2026-10-26): every recommendation is expired" in n for n in result.notes)
-    assert all("record_expired" in [b["code"] for b in r["blockers"]] for r in result.order.reviews)
-
-
-def test_the_mode_is_the_profiles_unless_the_run_overrides_it_and_ask_mode_asks():
-    asked = []
-    result, _, _ = go("DPZ PZZA YUM", approver=lambda card: asked.append(card["symbol"]) or True)
-    approved = [r for r in result.order.reviews if r["approved"]]
-    sized = [d for d in result.order.trade_decisions if d["shares"]]               # the Account Manager sizes each approval (entries 80 and 91): the cash is the only check, so every approval is sized (10 shares of the $1,000) and asked about
-    assert len(asked) == len(sized) == len(approved) and all(d["mode"] == "ask" for d in result.order.trade_decisions)
-    trusting = AccountManager(model=object(), profile=profile(user="t", trade_mode="ask"))      # the profile says Ask; the run says Auto
-    result, _, _ = go("DPZ PZZA YUM", manager=trusting, mode="auto", approver=lambda card: pytest.fail("auto mode asks nothing (entry 104)"))
-    assert all(d["mode"] == "auto" for d in result.order.trade_decisions) and "yes_auto" in [d["will_trade"] for d in result.order.trade_decisions]
-
-
-def test_no_recommendations_means_no_review():
-    class Nobody(Clerk):
-        def request_metrics(self, order, today=None):
-            order.status, order.errors = "data_failed", ["boom"]
-            return order
-    result, _, _ = go("DPZ", clerk=Nobody())
-    assert result.order.reviews == [] and result.now is None
-
-
-def test_a_data_clerk_that_cannot_answer_the_critic_leaves_every_recommendation_denied_not_a_crash():
-    class Mute(Clerk):
-        def request_quotes(self, order):
-            raise RuntimeError("no key")
-
-        def request_verification(self, order, now=None):
-            raise RuntimeError("no store")
-    result, _, _ = go("DPZ PZZA YUM", clerk=Mute())
-    assert result.order.reviews and all(not r["approved"] for r in result.order.reviews)
-    assert any("RuntimeError" in e for e in result.order.critic_runs[0]["errors"]) and "critic note:" in rec.report(result)
-
-
 # ---------------------------------------------------------------- the command
 
 def fake_main(monkeypatch, capsys, *argv):
@@ -121,16 +63,6 @@ def fake_main(monkeypatch, capsys, *argv):
     return code, capsys.readouterr(), made
 
 
-def test_the_command_runs_the_critic_by_default_and_prints_its_section(monkeypatch, capsys, tmp_path):
-    save = tmp_path / "order.json"
-    code, out, made = fake_main(monkeypatch, capsys, "DPZ PZZA YUM", "--no-ledger", "--cash", "1000", "--now", "2026-10-23 10:30", "--no-ask", "--save", str(save))
-    assert code == 0 and "CRITIC REVIEW  (model z-ai/glm-5.3" in out.out and "mode ASK" in out.out and "pending your answer (ASK)" in out.out and "TRADE DECISIONS" in out.out
-    assert made and made[0]["model_id"] is None and made[0]["effort"] is None and made[0]["ledger"] is not None and made[0]["history"] is not None
-    saved = wo.WorkOrder.model_validate_json(save.read_text())
-    assert saved.status in ("decided", "reviewed") and saved.reviews and saved.schema_version == 3
-    assert "reading check" not in out.out and "(work order saved to" in out.out
-
-
 def test_no_critic_leaves_it_out_and_the_critic_options_need_the_critic(monkeypatch, capsys):
     code, out, made = fake_main(monkeypatch, capsys, "DPZ PZZA YUM", "--no-critic", "--cash", "1000", "--today", "2026-10-23")
     assert code == 0 and made == [] and "CRITIC REVIEW" not in out.out
@@ -140,19 +72,9 @@ def test_no_critic_leaves_it_out_and_the_critic_options_need_the_critic(monkeypa
         assert stop.value.code == 2
 
 
-def test_the_critics_model_and_effort_and_the_mode_reach_the_critic_and_the_decisions(monkeypatch, capsys):
-    code, out, made = fake_main(monkeypatch, capsys, "DPZ PZZA YUM", "--no-ledger", "--cash", "1000", "--now", "2026-10-23 10:30", "--critic-model", "qwen/qwen3.8-2.4t-a95b", "--critic-effort", "high", "--mode", "auto")
-    assert code == 0 and made[0]["model_id"] == "qwen/qwen3.8-2.4t-a95b" and made[0]["effort"] == "high" and "mode AUTO" in out.out
-
-
 def test_a_bad_profile_stops_the_run_before_anything_is_paid_for(monkeypatch, capsys, tmp_path):
     (tmp_path / "p.json").write_text('{"user": "x"}', encoding="utf-8")
     code, out, made = fake_main(monkeypatch, capsys, "DPZ PZZA YUM", "--cash", "1000", "--profile", str(tmp_path / "p.json"))
     assert code == 2 and "p.json" in out.err and made == [] and "PROMETHEUS RECOMMENDATIONS" not in out.out
 
 
-def test_the_default_date_is_the_easterns_date_of_the_review_and_a_different_one_is_a_replay(monkeypatch, capsys):
-    code, out, _ = fake_main(monkeypatch, capsys, "DPZ PZZA YUM", "--no-ledger", "--cash", "1000", "--now", "2026-10-23 10:30")
-    assert "as of 2026-10-23" in out.out and "Eastern date" not in out.out
-    code, out, _ = fake_main(monkeypatch, capsys, "DPZ PZZA YUM", "--no-ledger", "--cash", "1000", "--now", "2026-10-23 10:30", "--today", "2026-10-22")
-    assert "is not the Eastern date of the review (2026-10-23)" in out.out

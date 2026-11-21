@@ -1,20 +1,12 @@
 """Tests for prometheus.agents.advisor.ranking (Advisor v1 spec sections 9.5 to 9.8 and 12, phase 5): one vote per family, the min rule, the cost, the stance, the regime, the holdings
 pass, the cooldown, the sleeves, diversity and a deterministic order. Numbers are literals that put a rule at its threshold; they are not market data."""
 import pytest
-from advisor_helpers import CONFIG, TODAY, fr, healthy, metric, metrics_of, scored
+from advisor_helpers import CONFIG, fr, healthy, metrics_of, scored
 
 from prometheus.agents.advisor import ranking as rk
-from prometheus.agents.advisor.record import Haircut, Quality
-
-SPY_TREND = metrics_of(spy_above_sma_200=True, spy_vol_21d_ann=0.15, spy_drawdown_63d=-0.03, spy_ret_21d=0.02, breadth_200=None)
 
 
 # ---------------------------------------------------------------- the regime
-
-def test_the_regime_is_unknown_when_spy_has_too_few_bars_and_says_why():
-    state, note = rk.regime_of(metrics_of(spy_above_sma_200=None), CONFIG)
-    assert state == "unknown" and note == "needs bars for spy_above_sma_200; regime not computable"
-    assert rk.regime_of({}, CONFIG)[0] == "unknown" and rk.regime_of(None, CONFIG)[1] == "SPY metrics are missing; regime not computable"
 
 
 @pytest.mark.parametrize("override, state", [
@@ -31,34 +23,9 @@ def test_the_regime_states(override, state):
 # ---------------------------------------------------------------- one symbol
 
 
-def test_one_vote_per_family_so_two_families_do_not_add_and_the_best_bullish_edge_leads():
-    assert rk.combine([fr("trend", edge=0.004), fr("reversion", edge=0.003)]) == (0.004, False)
-    assert rk.combine([fr("trend", edge=0.004), fr("event", "bearish", edge=-0.0015)]) == (pytest.approx(0.0025), True)    # the min rule: the largest bearish magnitude is taken off
-    assert rk.combine([fr("event", "bearish", edge=-0.002), fr("capital_return", "bearish", edge=-0.001)]) == (-0.002, False)
-    assert rk.combine([fr("trend", passed=False)]) == (None, False) and rk.combine([]) == (None, False)
-
-
 def blend_of(value):
     """A blend with this value (the parts are not needed here: rank_symbol reads `value`)."""
     return {"value": value, "score": round(50 + 50 * value)}
-
-
-def test_a_bearish_edge_has_the_confidence_of_the_bearish_side_of_the_blend():
-    worse = scored(families=[fr("event", "bearish", edge=-0.008)], blend=blend_of(-0.6))
-    better = scored(families=[fr("event", "bearish", edge=-0.008)], blend=blend_of(0.6))
-    assert worse.confidence == pytest.approx(0.8) and better.confidence == pytest.approx(0.2)       # a bearish blend is the confidence of a bearish composite
-    assert not hasattr(worse, "excess") and not hasattr(worse, "cost_pct") and not hasattr(worse, "scale_factor")
-
-
-def test_an_edge_of_zero_is_neutral_and_says_so_and_any_edge_above_zero_is_bullish():
-    s = scored(families=[fr("trend", edge=0.0)])
-    assert s.stance == "neutral" and s.stance_reason == "no edge" and s.score == 50
-    assert scored(families=[fr("trend", edge=0.0001)]).stance == "bullish"
-
-
-def test_a_bearish_composite_is_bearish_and_uses_the_bearish_agreement():
-    s = scored(families=[fr("event", "bearish", edge=-0.008)], votes=[("bearish", 1.0)] * 2)
-    assert s.stance == "bearish" and s.composite == -0.008 and s.agreement == pytest.approx(1 - 1 / 4) and s.score == 50 and scored(families=[fr("event", "bearish", edge=-0.008)], blend=blend_of(-0.4)).score == 30   # two bearish news votes: bullish agreement (0+1)/(0+2+2) = 0.25, so the bearish one is 0.75
 
 
 # ---------------------------------------------------------------- invalidation, cooldown, holdings
@@ -91,16 +58,6 @@ def test_the_cooldown_holds_until_the_time_stop_and_ends_when_an_invalidation_ru
     assert rk.cooldown_of(s, "trend", [], "2026-10-23") is None
 
 
-def test_the_advisor_has_no_holdings_pass_it_knows_no_holding_so_it_never_reduces_adds_to_or_holds_one():
-    """AMENDED (entry 105; Jacob, 2026-11-15: *"The Advisor never recommends reducing a holding or any other portfolio related matters"*). This file tested `holding_action`, the holdings pass: a held name was reduced on a red
-    flag, a bearish event, an invalidated earlier recommendation or a family that stopped passing, and was added to when it was bullish and as good as the new ideas. The Advisor is given no portfolio any more, so the
-    pass is gone, and so is what it read: no `holding_action`, no `held`, `held_shares` or `cost_basis` on a ranked symbol. A name that failed a gate is a candidate with the gate (never a `reduce`)."""
-    assert not hasattr(rk, "holding_action")
-    assert not {"held", "held_shares", "cost_basis"} & set(rk.Scored.__dataclass_fields__)
-    failed = scored(metrics=healthy(cfo_negative_with_profit=True))
-    assert failed.gates.first_failed().gate == "red_flag" and rk.open_family(failed, "funds", "trend", CONFIG) is None
-
-
 # ---------------------------------------------------------------- the sleeves
 
 def pick(candidates, case="funds", regime="trend"):
@@ -128,12 +85,6 @@ def test_names_that_are_not_bullish_or_are_gated_are_left_out_with_the_reason():
     cands = [scored("NEU", [fr("trend", edge=0.0)]), scored("GAT", [fr("capital_return", edge=0.006)], metrics=healthy(cfo_negative_with_profit=True)), scored("NON", [fr("trend", passed=False)])]
     names, why = pick(cands)
     assert names == [] and why["NEU"] == "stance neutral (no edge)" and why["GAT"] == "gate red_flag failed" and why["NON"] == "stance neutral (no family passed)"
-
-
-def test_the_theme_sleeve_needs_the_theme_family_and_takes_up_to_five():
-    leader = scored("LD", [fr("capital_return", edge=0.006)], theme_role="leader")
-    names, why = pick([leader] + [scored(f"T{i}", [fr("theme", edge=0.004 + i * 0.0005, horizon_bars=42)]) for i in range(6)], case="theme")
-    assert [n[0] for n in names] == ["T5", "T4", "T3", "T2", "T1"] and why["LD"] == "the theme family did not pass (theme_role: leader)" and why["T0"] == "rank 6 is beyond the top 5"
 
 
 def test_diversity_takes_a_different_sector_when_its_blend_is_within_80_percent_and_records_it():

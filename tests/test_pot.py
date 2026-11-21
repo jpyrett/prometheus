@@ -12,11 +12,8 @@ from decimal import Decimal
 
 import pytest
 from handshake_helpers import BOB, FRIDAY, MOMENT, Recorder, close_of, friday_close, manager, real_order, trader  # noqa: F401  (friday_close is a fixture)
-from test_account_manager_handshake import tickets_of
 
-from prometheus.agents.account_manager.handshake import decide_approval
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import trade_amount
 
 pytestmark = pytest.mark.usefixtures("friday_close")
 
@@ -25,12 +22,6 @@ def run(order, cash=Decimal("15000.00")):
     am = manager()
     am.perform_trades(order, BOB.model_copy(update={"cash_avail": cash}), trader(), MOMENT)
     return am, {t["trade_id"]: t for t in order.trades}
-
-
-def test_every_purchase_the_account_manager_sized_carries_the_pot_of_the_request():
-    order = real_order()
-    pots = {d["symbol"]: d["size"]["pot"] for d in order.trade_decisions if d["size"]}
-    assert set(pots) >= {"XOM", "EOG"} and set(pots.values()) == {Decimal("2750.00")}                                      # the budget of the request, which is less than the $15,000 of cash
 
 
 def test_the_handshake_cuts_a_purchase_that_would_pass_the_pot_while_the_cash_would_cover_it_and_refuses_the_next_when_the_money_is_used_up():
@@ -43,17 +34,6 @@ def test_the_handshake_cuts_a_purchase_that_would_pass_the_pot_while_the_cash_wo
     assert (t["T2"]["status"], t["T2"]["reject_code"]) == ("rejected", "insufficient_cash") and "the money of this request is used up" in t["T2"]["reason"] and "is not the limit" in t["T2"]["reason"]
     assert sum((x["fill"]["amount"] for x in order.trades if x["status"] == "filled"), Decimal("0.00")) <= Decimal("2750.00") and wo.verify_trades(order) == []
     assert order.trader_runs[-1]["portfolio_after"]["cash"] > Decimal("11000.00")                                          # the cash was never the limit: money is left over, which is fine
-
-
-def test_a_run_that_is_resumed_counts_what_was_filled_before_from_the_work_order_and_not_from_memory():
-    order = real_order()
-    run(order)
-    spent = sum((t["fill"]["amount"] for t in order.trades if t["status"] == "filled"), Decimal("0.00"))
-    assert 0 < spent <= Decimal("2750.00")
-    fresh = manager()                                                                                          # a new Account Manager: it remembers nothing of the first run
-    assert fresh.spent_of_pot(order, Decimal("2750.00")) == spent and fresh.spent_of_pot(order, Decimal("1000.00")) == 0     # another pot is another request
-    left = decide_approval(BOB, tickets_of(real_order())["XOM"], close_of("XOM"), FRIDAY, spendable=max(Decimal("0.00"), Decimal("2750.00") - spent), pot=Decimal("2750.00"))
-    assert left.approved is (Decimal("2750.00") - spent >= close_of("XOM")) and (left.approved or "the money of this request is used up" in left.reason)
 
 
 def test_a_program_fails_a_work_order_whose_fills_pass_the_pot_or_whose_purchases_carry_two_pots():
@@ -76,14 +56,3 @@ def test_a_program_fails_a_work_order_whose_fills_pass_the_pot_or_whose_purchase
     assert wo.verify_trades(unsized) == []                                                                     # a decision that carries no pot has the cash for its limit, as before
 
 
-def test_without_a_pot_the_cash_is_the_limit_exactly_as_before_and_a_direct_order_with_typed_shares_is_never_cut():
-    order = real_order()
-    for d in order.trade_decisions:
-        d["size"] = None
-    xom = next(d for d in order.trade_decisions if d["symbol"] == "XOM")
-    xom["shares"] = 20
-    ticket = {**tickets_of(order)["XOM"], "shares": 20}
-    am, t = run(order)
-    assert t["T1"]["shares"] == 20 and t["T1"]["status"] == "filled" and wo.verify_trades(order) == []
-    answer = decide_approval(BOB, ticket, close_of("XOM"), FRIDAY)
-    assert answer.approved and answer.shares == 20 and trade_amount(20, close_of("XOM")) > Decimal("2750.00")

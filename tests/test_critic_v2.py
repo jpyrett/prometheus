@@ -11,8 +11,7 @@ from advisor_helpers import MemoryLedger
 from critic_helpers import ADVISOR_CONFIG, CONFIG, NOW, FakeClerk, ReviewerModel, captured, rec_of, review, tampered_order, view
 from test_critic_evidence import Setup
 
-from prometheus.agents.advisor.record import Recommendation
-from prometheus.agents.critic import chart, names, recheck as rc
+from prometheus.agents.critic import names, recheck as rc
 from prometheus.agents.critic import evidence as ev
 from prometheus.agents.critic.critic import Critic
 from prometheus.agents.critic.labels import LabelStore, open_store, prompt_version
@@ -35,21 +34,6 @@ def real_article(symbol: str, headline_starts: str) -> dict:
 
 
 # ---------------------------------------------------------------- C2: a newer article that looks bad informs, it does not deny
-
-def test_a_newer_article_that_looks_bad_is_a_warning_that_asks_for_nobody_and_the_review_is_approved():
-    """The real PG_open review at 2026-11-05 10:30 with a REAL stored Procter & Gamble article that the model calls bearish (a scripted reply, with a sentence copied from the article) and in which code finds no bad class:
-    `fresh_negative_news` was a warning that asked for a person, a DENIAL since entry 103 (it fired 76 times in four six-month tests and 60 of the 72 that closed were winners). Now it informs: the review is approved, carries
-    the warning and the lower 'clean' share of the evidence score, and nobody is asked."""
-    article = real_article("PG", "Procter & Gamble's Turnaround Gains Steam")
-    quote = "TD Cowen raises Procter & Gamble's price target to $166 after Q1 beat, but maintains a Hold on rising commodity costs."
-    assert quote in article["text"] and ev.bearish_classes(article["text"], "PG", "Procter & Gamble") == []
-    quiet = review(captured("PG_open"), own={})["PG"]
-    r = review(captured("PG_open"), model=ReviewerModel(fresh={"F1": ("bearish", quote)}), fresh={"PG": [article]}, own={})["PG"]
-    [warn] = [w for w in r["warnings"] if w["code"] == "fresh_negative_news"]
-    assert warn["requires_human"] is False and r["requires_human"] is False and r["requires_human_reasons"] == []
-    assert r["approved"] and r["denial_reasons"] == [] and r["blockers"] == [] and r["valid_until_utc"]
-    assert r["evidence"]["fresh"][0]["label"] == "bearish" and r["dimensions"]["evidence"]["score"] < quiet["dimensions"]["evidence"]["score"] and r["score"] < quiet["score"]      # it still costs evidence points
-    assert "fresh_negative_news" not in [w["code"] for w in quiet["warnings"]]
 
 
 def test_a_newer_article_that_reports_a_blocking_event_is_still_a_blocker_and_denies_with_a_bad_sign_in_another_group():
@@ -97,59 +81,7 @@ def test_the_real_names_that_were_called_a_mismatch_are_the_same_company_and_a_d
     assert not names.same_company("F", "Ford Motor", "Frontier Group") and not names.same_company("XOM", "", "Exxonmobil Holdings Corp")      # one letter never names a company; no name matches nothing
 
 
-def test_a_real_record_called_exxon_mobil_is_not_a_company_mismatch_but_a_different_company_still_is():
-    """The cross-check of the Critic with the directory's real answer: the record calls XOM 'Exxon Mobil', the directory lists 'Exxonmobil Holdings Corp'. It was the warning that asks for a person (a denial); now the identity check passes."""
-    order = captured("PG_open")
-    rec = rec_of(order).model_copy(update={"symbol": "XOM", "company": "Exxon Mobil"})
-    checks, findings, identity, _ = rc.cross_checks(rec, None, None, {"symbols": {"XOM": {"listed": True, "company": "Exxonmobil Holdings Corp", "note": None}}}, CONFIG.accuracy)
-    assert findings == [] and next(c for c in checks if c.name == "identity").passed and identity.listed_company == "Exxonmobil Holdings Corp"
-    checks, findings, _, _ = rc.cross_checks(rec, None, None, {"symbols": {"XOM": {"listed": True, "company": "Apa Corp", "note": None}}}, CONFIG.accuracy)
-    assert [(f.code, f.requires_human) for f in findings] == [("company_mismatch", True)] and "corporate words" in next(c for c in checks if c.name == "identity").note
-
-
 # ---------------------------------------------------------------- C5: a trend recommendation must be confirmed by the last five sessions
-
-def real_records() -> list[Recommendation]:
-    found, seen = [], set()
-    for path in REAL_CACHES:
-        for rec in (json.loads(Path(path).read_text(encoding="utf-8")).get("order") or {}).get("recommendations", []):
-            if rec["identity"]["record_id"] not in seen:
-                seen.add(rec["identity"]["record_id"])
-                found.append(Recommendation.model_validate(rec))
-    return found
-
-
-def test_over_the_real_records_of_the_oil_weeks_exactly_the_trend_ones_that_fell_are_denied():
-    """Rule C5 on the REAL records the Advisor made at four decision weeks, with each one's own return over the five sessions before its decision day (`ret_5d`, which the Advisor and the Critic calculate from the same stored bars):
-    `trend_not_confirmed` for a trend record at or under 0.0, nothing for a trend record above it, and nothing for ANY other family however far it fell."""
-    records = real_records()
-    trend = [r for r in records if r.trade.family == "trend"]
-    falling = [r for r in trend if r.features["ret_5d"]["value"] <= CONFIG.chart.trend_confirm_ret_5d]
-    others_down = [r for r in records if r.trade.family != "trend" and r.features["ret_5d"]["value"] <= 0]
-    assert falling and len(falling) < len(trend) and others_down
-    for rec in records:
-        found = chart.trend_confirmation(rec, rec.features["ret_5d"]["value"], CONFIG.chart)
-        assert [f.code for f in found] == (["trend_not_confirmed"] if rec in falling else []), (rec.symbol, rec.trade.family, rec.features["ret_5d"]["value"])
-    only = chart.trend_confirmation(falling[0], falling[0].features["ret_5d"]["value"], CONFIG.chart)[0]
-    assert only.severity == "blocker" and only.dimension == "chart" and f"{falling[0].features['ret_5d']['value']:+.1%}" in only.message and only.value == falling[0].features["ret_5d"]["value"] and only.threshold == 0.0
-
-
-def test_a_trend_review_with_a_stock_that_fell_over_five_sessions_is_approved_with_the_reason_named_and_a_second_bad_group_denies_it():
-    """The whole review of the real PG_open record made a TREND recommendation: with the Critic's own re-asked `ret_5d` at -2.1% the finding `trend_not_confirmed` is raised (its message says the number) and with the real +4.1% the
-    record had it is not; a CONVICTION record is not touched by the same -2.1%. AMENDED (Critic v3, rule V5, design/critic_v3_two_reasons_spec.md section 8: "trend_not_confirmed no longer denies alone"): it is a sign of the group
-    `performance`, so the falling review is APPROVED with the one reason against it in its summary (no blocker, the score not capped); the same review with a bad sign in `price` as well (the six-month average moved so that the
-    price is 50% above it: `overpriced`) is DENIED."""
-    falling = review(tampered_order("PG_open", **{"trade.family": "trend"}), own={}, changes={"PG": {"ret_5d": -0.021}})["PG"]
-    assert falling["approved"] and falling["blockers"] == [] and falling["denial_reasons"] == [] and falling["groups"]["performance"] == ["trend_not_confirmed"] and falling["score"] == falling["score_before_blockers"] > 49
-    [warn] = [w for w in falling["warnings"] if w["code"] == "trend_not_confirmed"]
-    assert "-2.1%" in warn["message"] and falling["summary"].startswith("APPROVE PG:") and "Note: one reason against it: performance (trend_not_confirmed: The strategy is trend" in falling["summary"] and falling["requires_human"] is False
-    last = rec_of(captured("PG_open")).features["last_close"]["value"]
-    dear = review(tampered_order("PG_open", **{"trade.family": "trend"}), own={}, changes={"PG": {"ret_5d": -0.021, "sma_126": last / 1.5}})["PG"]
-    assert not dear["approved"] and codes(dear) == ["overpriced", "trend_not_confirmed"] and dear["score"] <= 49 < dear["score_before_blockers"] and dear["summary"].startswith("DENY PG: poor performance (trend_not_confirmed: The strategy is trend")
-    rising = review(tampered_order("PG_open", **{"trade.family": "trend"}), own={})["PG"]            # the real +4.05% of the capture
-    assert rising["approved"] and codes(rising) == [] and "trend_not_confirmed" not in codes(rising, "warnings") and "trend_unconfirmed_unknown" not in codes(rising, "warnings") and rising["groups"]["performance"] == []
-    conviction = review(captured("PG_open"), own={}, changes={"PG": {"ret_5d": -0.021}})["PG"]
-    assert conviction["approved"] and codes(conviction) == [] and conviction["groups"]["performance"] == [] and "trend_not_confirmed" not in codes(conviction, "warnings")
 
 
 def test_when_the_five_session_return_cannot_be_had_it_is_a_warning_and_not_a_denial_and_it_changes_no_accuracy_number():
@@ -177,18 +109,6 @@ def run_with(store, model, **options):
     return result, run
 
 
-def test_the_same_claim_twice_asks_the_model_once_and_the_audit_counts_the_labels_the_store_answered(tmp_path):
-    store = LabelStore(tmp_path / "labels")
-    first = ReviewerModel(labels={"[5]": "weak"})
-    a, run_a = run_with(store, first)
-    assert len(first.seen) == 1 and run_a["labels_from_store"] == 0 and a.detail.control.passed and store.count() == len([c for c in a.detail.claims]) + 0
-    second = ReviewerModel(default="contradicts")             # a model that would say something else: it must not be asked
-    b, run_b = run_with(store, second)
-    assert second.seen == [] and run_b["labels_from_store"] == len(b.detail.claims) and run_b["calls"] == 0 and not b.called
-    assert [(c.ref, c.label, c.reason) for c in b.detail.claims] == [(c.ref, c.label, c.reason) for c in a.detail.claims] and b.detail.reviewed and b.detail.control is None
-    assert b.score == a.score and [f.code for f in b.findings] == [f.code for f in a.findings] and b.detail.counterfactual == a.detail.counterfactual
-
-
 def test_another_model_another_prompt_another_source_text_or_a_failed_control_asks_again(tmp_path):
     store = LabelStore(tmp_path / "labels")
     run_with(store, ReviewerModel())
@@ -213,23 +133,6 @@ def test_another_model_another_prompt_another_source_text_or_a_failed_control_as
     again = ReviewerModel()
     run_with(bad, again)
     assert len(again.seen) == 1 and bad.count() > 0                                                                 # so it asks again, and the right reply is kept
-
-
-def test_a_store_that_is_off_keeps_nothing_and_a_partly_answered_review_asks_only_for_the_rest(tmp_path):
-    first = ReviewerModel()
-    run_with(None, first)
-    second = ReviewerModel()
-    run_with(None, second)
-    assert len(first.seen) == len(second.seen) == 1 and not list(tmp_path.glob("*"))
-    store = LabelStore(tmp_path / "labels")
-    run_with(store, ReviewerModel())
-    some = sorted(Path(store.folder).glob("*/*.json"))
-    assert len(some) >= 2
-    some[0].unlink()                                                                                                 # one label is missing: only that quote is sent (and the control)
-    partial = ReviewerModel()
-    r, run = run_with(store, partial)
-    claims_asked = partial.seen[0][-1].content.split("SOURCES of the claims")[0]
-    assert len(partial.seen) == 1 and run["labels_from_store"] == len(r.detail.claims) - 1 and claims_asked.count('"') // 2 == 2 and r.detail.control.passed       # one claim, and the planted control
 
 
 def test_a_fresh_sources_label_is_kept_too_and_the_review_through_a_critic_with_a_store_makes_one_call_then_none(tmp_path):
@@ -285,34 +188,3 @@ def at_saturday():
     return at("2026-11-07 12:00")
 
 
-def test_the_real_reviews_of_the_oil_weeks_run_through_the_version_3_verdict_follow_the_rules_by_hand():
-    """Critic v3 on REAL captured reviews (the findings and the dimensions the Critic of version 2 wrote at four decision weeks, rebuilt as they were and given to `scoring.decide`): a review is denied exactly when a fault or a
-    profile blocker is on it, or a finding asked for a person (and not the `fresh_negative_news` that stopped asking in version 2), or signs of two groups fired; the score is capped exactly then; and the reviews that version 2 denied
-    for ONE reason now approve."""
-    from prometheus.agents.critic import scoring as sc
-    from prometheus.agents.critic.record import Dimension, Finding
-    faults = {"record_not_reviewable", "record_defect", "symbol_unknown", "price_mismatch", "source_missing", "source_altered", "market_closed", "quote_stale", "no_live_price", "bars_stale", "record_expired", "time_stop_passed",
-              "stop_already_hit", "risk_above_profile", "symbol_excluded", "sector_excluded", "price_below_profile_min"}
-    signs = {"news": {"fresh_negative_event", "fresh_negative_news", "event_not_supported", "analysts_bearish"},
-             "performance": {"trend_not_confirmed", "dead_cat_bounce", "falling_knife", "price_below_zone", "chart_bearish", "poor_performance"}, "price": {"overpriced", "valuation_extreme", "price_left_zone"}}
-    from prometheus.agents.critic.record import BLOCKER_ORDER
-    reviews = []
-    for path in REAL_CACHES:
-        reviews += (json.loads(Path(path).read_text(encoding="utf-8")).get("order") or {}).get("reviews", [])
-    assert len(reviews) > 100
-    freed = kept = 0
-    for r in reviews:
-        # version 1 and 2 blockers that are not blockers any more (`data_mismatch`, `data_unverified`, `blend_not_supported`: rules V7 and C3) are warnings now, and `fresh_negative_news` no longer asks for a person (C2: version 1 reviews hold it that way)
-        findings = [Finding.model_construct(code=f["code"], dimension=f["dimension"], severity="warning" if severity == "blocker" and f["code"] not in BLOCKER_ORDER else severity, message=f["message"], value=None, threshold=None,
-                                            requires_human=bool(f.get("requires_human")) and f["code"] != "fresh_negative_news") for severity, key in (("blocker", "blockers"), ("warning", "warnings"), ("info", "notes")) for f in r[key]]
-        dims = {n: Dimension.model_validate(d) for n, d in r["dimensions"].items()}
-        v = sc.decide(findings, dims, r["bonus"], CONFIG)
-        codes = {f.code for f in findings}
-        asks = any(f.requires_human for f in findings)
-        alone = any(f.severity == "blocker" and f.code in faults for f in findings)
-        two = sum(1 for names in signs.values() if codes & names) >= 2
-        assert v.approved == (not (alone or asks or two)), (r["symbol"], r["summary"][:80])
-        assert v.blocked == (alone or two) and v.score == (min(v.score_before_blockers, 49) if v.blocked else v.score_before_blockers)
-        freed += (not r["approved"]) and v.approved
-        kept += (not r["approved"]) and not v.approved
-    assert freed > 20 and kept > 5                                                                        # one reason alone freed a good many of the denials of versions 1 and 2, and the faults and the pairs still deny

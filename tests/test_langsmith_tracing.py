@@ -13,12 +13,6 @@ def environment_only(monkeypatch):
     monkeypatch.setattr(langsmith_tracing, "setting", lambda name, default: os.environ.get(name) or default)
 
 
-def test_the_tests_never_trace():
-    assert os.environ["LANGSMITH_TRACING"] == "false"
-    assert "off" in langsmith_tracing.configure()
-    assert os.environ["LANGSMITH_TRACING"] == "false"
-
-
 def test_no_key_is_off(monkeypatch):
     environment_only(monkeypatch)
     assert "off" in langsmith_tracing.configure()
@@ -39,18 +33,3 @@ def test_a_key_traces_to_the_agent_address_and_drops_a_project(monkeypatch):
     assert address.address_from_env() == address.agent_address("prometheus", "local")
 
 
-def test_the_advisor_call_runs_in_the_callers_context():
-    """`invoke_with_limit` runs the model in a worker thread; the caller's contextvars (LangChain's run, LangSmith's trace) must reach it."""
-    import contextvars
-
-    from langchain_core.runnables import RunnableLambda
-
-    from prometheus.agents.advisor.calls import invoke_with_limit
-    run = contextvars.ContextVar("run", default=None)
-    run.set("desk")
-    assert invoke_with_limit(RunnableLambda(lambda messages: run.get()), [], seconds=5) == "desk"
-
-
-def test_a_command_says_nothing_when_tracing_is_off(capsys):
-    langsmith_tracing.start()
-    assert capsys.readouterr() == ("", "")

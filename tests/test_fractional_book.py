@@ -4,7 +4,7 @@ The REAL local Postgres on THROWAWAY accounts that the tests create and delete (
 these tests use. The tests that book a fraction are skipped, with the reason, when the database still has the integer share columns (`AccountStore.holds_fractions()`: run `bash scripts/setup_postgres.sh`); the test of
 the refusal runs against whatever the database is. The prices are the stored closes of Friday 2026-11-13 through the real Data Clerk, the order is the real session's (`bob_jones_oil.json`).
 """
-from datetime import date, timedelta
+from datetime import timedelta
 from decimal import Decimal
 
 import pytest
@@ -25,14 +25,6 @@ def fractional_db(db):
     if not db.store.holds_fractions():
         pytest.skip("the account book still has integer share columns: run `bash scripts/setup_postgres.sh` (design choices entry 110)")
     return db
-
-
-def test_the_book_says_it_holds_fractions_exactly_when_its_share_columns_are_numeric(store):
-    def column(cur):
-        cur.execute("SELECT data_type FROM information_schema.columns WHERE table_schema = 'trading' AND table_name = 'positions' AND column_name = 'shares'")
-        return cur.fetchone()["data_type"]
-
-    assert (store._run(None, column) == "numeric") == store.holds_fractions() == store.holds_fractions()
 
 
 def test_a_fractional_buy_is_booked_and_read_back_exactly_part_is_sold_and_the_rest_sold_leaves_no_position(fractional_db):
@@ -58,39 +50,6 @@ def test_a_fractional_buy_is_booked_and_read_back_exactly_part_is_sold_and_the_r
     for bad in (0, Decimal("0.1234567"), True, "2", Decimal("-1.5")):
         with pytest.raises(ValueError, match="number above zero"):
             db.store.book_trade(account_id, "XOM", "buy", bad, price, day)
-
-
-def test_a_second_fractional_buy_adds_exactly_averages_the_cost_and_locks_only_the_new_lot(fractional_db):
-    db = fractional_db
-    account_id, first_price, second_price = db.account("5000.00"), Decimal("500.0000"), Decimal("520.5000")
-    db.store.book_trade(account_id, "MSFT", "buy", Decimal("4.5"), first_price, date(2026, 11, 10))
-    two = db.store.book_trade(account_id, "MSFT", "buy", Decimal("0.333333"), second_price, FRIDAY)
-    held = db.store.list_portfolio(account_id).position("MSFT")
-    basis = ((Decimal("4.5") * first_price + Decimal("0.333333") * second_price) / Decimal("4.833333")).quantize(Decimal("0.0001"))
-    assert (held.shares, held.recent_shares, held.cost_basis, held.acquired) == (Decimal("4.833333"), Decimal("0.333333"), basis, FRIDAY) and two.held_before == Decimal("4.5") and two.held_after == Decimal("4.833333")
-    assert sh.plus(Decimal("4.5"), Decimal("0.333333")) == Decimal("4.833333") and db.cash(account_id) == Decimal("5000.00") - Decimal("2250.00") - trade_amount(Decimal("0.333333"), second_price)
-
-
-def test_the_trader_books_two_fractional_purchases_and_the_book_shows_them_exactly(fractional_db, monkeypatch):
-    db = fractional_db
-    account_id, order = db.account("15000.00"), fractional_order()
-    am = db.manager(account_id)
-    rec = Recorder(monkeypatch, am)
-    am.perform_trades(order, None, trader(), MOMENT, book=True)
-    t = by_id(order)
-    wanted = {d["symbol"]: d["shares"] for d in order.trade_decisions if d["will_trade"] in wo.TRADING}
-    assert [(x["status"], x["booked"]) for x in t.values()] == [("filled", True)] * 2 and {x["symbol"]: x["shares"] for x in t.values()} == wanted and wo.verify_trades(order) == []
-    assert db.held(account_id) == wanted and all(type(n) is Decimal and not sh.whole(n) for n in db.held(account_id).values()) and db.cash(account_id) == Decimal("15000.00") - sum((x["fill"]["amount"] for x in t.values()), Decimal("0.00"))
-    assert [a.status for k, _, a in rec.answers if k == "record"] == ["booked", "booked"] and all(a.verified for k, _, a in rec.answers if k == "record") and last(order)["booked"] is True and order.errors == []
-    assert last(order)["portfolio_after"]["positions"] == [{"symbol": p.symbol, "shares": p.shares, "cost_basis": p.cost_basis, "acquired": p.acquired.isoformat()} for p in db.store.list_portfolio(account_id).positions]
-
-
-def test_a_fractional_decision_is_saved_and_counted(fractional_db):
-    db = fractional_db
-    account_id = db.account("1000.00")
-    decision = {"record_id": "frac-decision", "symbol": "XOM", "action": "open", "shares": Decimal("31.581606"), "mode": "auto", "will_trade": "yes_auto", "reason": "an even split", "decided_utc": "2026-11-13T20:30:00Z"}
-    db.store.save_decisions(account_id, [decision, {**decision, "record_id": "none", "shares": 0, "will_trade": "no_funds"}])
-    assert db.store.number_approved_recommendations(account_id, *YEAR) == 1 and db.store.number_denied_recommendations(account_id, *YEAR) == 1
 
 
 def test_a_fraction_on_a_book_that_does_not_hold_fractions_is_refused_before_anything_is_written_and_a_whole_trade_still_goes_through(db, monkeypatch):

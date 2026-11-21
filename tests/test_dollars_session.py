@@ -23,7 +23,7 @@ from prometheus.agents.trader.report import trade_section
 from prometheus.common import shares as sh
 from prometheus.common import work_order as wo
 from prometheus.common.money import money, price, rate
-from prometheus.common.portfolio import Portfolio, trade_amount
+from prometheus.common.portfolio import Portfolio
 from prometheus.common.user_profile import UserProfile
 
 CAPTURE = Path(__file__).parent / "fixtures" / "session_real" / "auto_even_split_dollars.json"

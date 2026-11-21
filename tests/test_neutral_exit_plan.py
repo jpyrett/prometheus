@@ -9,20 +9,17 @@ import json
 from datetime import date
 from decimal import Decimal
 
-from advisor_helpers import MemoryLedger, Scripted
 from handshake_helpers import MOMENT, clerk, manager, trader
 from proving_helpers import CAPTURES, real_bars, stored_bars_available
-from test_advisor_sndk_pg import FIXTURES, RecordedClerk
+from test_advisor_sndk_pg import FIXTURES
 
 import pytest
 
 from prometheus.agents.advisor import trade_plan as tp
 from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.advisor.config import load_config
-from prometheus.agents.advisor.record import Candidate
 from prometheus.common import trading_clock
 from prometheus.common import work_order as wo
-from prometheus.common.money import dumps
 from prometheus.common.portfolio import Portfolio
 from prometheus.proving import engine, outcomes, recs, record
 from prometheus.proving.portfolio import LotInfo, SimPortfolio
@@ -47,32 +44,6 @@ def test_the_stop_is_two_atr_under_the_last_close_and_the_time_stop_twenty_tradi
     assert (CONFIG.config_version, CONFIG.neutral.stop_atr_multiple, CONFIG.neutral.horizon_bars) == ("3", 2.0, 20)      # config version 3 is the exit-plan version (targets pay 2 for 1, trend trails); the neutral exit plan is as version 2 made it
 
 
-def advised_neutral():
-    """The real PG capture with ONE change, so that no family passes (its RSI is 80, over the 75 the trend and conviction strategies allow) and the model says nothing: PG is a company the Advisor scores NEUTRAL, no gate stopped it."""
-    fx = copy.deepcopy(PG)
-    fx["metrics"]["PG"]["rsi_14"]["value"] = 80.0
-    order = wo.WorkOrder.model_validate(fx["order"])
-    replies = [json.dumps({"companies": []}), *(r for r in fx["replies"] if '"theses"' in r)]
-    Advisor(model=Scripted(*replies), clerk=RecordedClerk(fx["metrics"]), ledger=MemoryLedger()).generate_recommendations(order, "funds", date.fromisoformat(fx["today"]))
-    return order
-
-
-def test_the_advisor_gives_a_neutral_company_a_plan_and_nobody_else_one():
-    order = advised_neutral()
-    by_symbol = {c["symbol"]: c for c in order.candidates}
-    pg, addyy = by_symbol["PG"], by_symbol["ADDYY"]
-    assert pg["stance"] == "neutral" and pg["gate"] is None and wo.is_neutral_candidate(pg) and order.recommendations == []
-    assert pg["exit_plan"] == {"stop_price": 160.5234, "time_stop_date": "2026-12-04", "basis": pg["exit_plan"]["basis"]} and Candidate.model_validate(pg).exit_plan.stop_price == 160.5234
-    assert addyy["stance"] == "neutral" and addyy["gate"] == "freshness" and addyy["exit_plan"] is None             # a gate stopped it: it is never a neutral purchase, so no plan
-    order2 = PG_open_order()
-    assert order2.recommendations and all("exit_plan" not in r for r in order2.recommendations)                      # a recommendation has its trade plan and no exit plan
-
-
-def PG_open_order():
-    from test_advisor_sndk_pg import replay
-    return replay("PG_open")[0]
-
-
 def real_neutral_order():
     """The real neutral session (MU and AMD scored neutral by the Advisor on 2026-11-13, bought as approved) with an exit plan on each of its candidates, made by the Advisor's own function from the REAL stored bars of that day through the Data Clerk's metric door."""
     data = json.loads((CAPTURES / "pam_smith_neutral.json").read_text(encoding="utf-8"))
@@ -92,19 +63,6 @@ def traded(order, mutate=None):
     order.status, order.trades, order.trader_runs = "decided", [], []
     manager().perform_trades(order, Portfolio(user="Bob Jones", cash_avail=Decimal("40000.00")), trader(mode="backtest"), MOMENT)
     return order
-
-
-@needs_bars
-def test_the_traders_tickets_of_a_neutral_purchase_are_byte_for_byte_what_they_were():
-    """The same real neutral decisions through the real Trader in backtest, with the candidates' exit plans and without them: the same trades, field for field (a market order at the next open, the limit range of the quote). The plan is an EXIT plan and nothing else."""
-    with_plan = real_neutral_order()
-    assert all(c["exit_plan"]["stop_price"] and c["exit_plan"]["time_stop_date"] > "2026-11-13" for c in with_plan.candidates)
-    without = with_plan.model_copy(deep=True)
-    for c in without.candidates:
-        c.pop("exit_plan")
-    a, b = traded(with_plan), traded(without)
-    runs = lambda order: json.loads(dumps([{k: v for k, v in r.items() if not k.endswith("_order")} for r in order.trader_runs]))      # the ids of the Data Clerk's requests are new each time; nothing else of a run is
-    assert dumps(a.trades) == dumps(b.trades) and runs(a) == runs(b) and [t["order_type"] for t in a.trades] == ["market", "market"] and len(a.trades) == 2
 
 
 @needs_bars

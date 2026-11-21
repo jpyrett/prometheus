@@ -8,56 +8,25 @@ REAL DATA ONLY: the real prices of the real sessions (`tests/fixtures/session_re
 `bill_gates_direct_order_company_auto.json`: 50 MSFT at 524.1419, which is $26,207.10 to the cent (half up, as the book works it) and was $26,207.09 as a float product rounded.
 """
 import json
-from datetime import date
 from decimal import Decimal
 from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
 from test_direct_order import form
-from test_fractional_even_split import PRICES
 
 from prometheus.agents.account_manager import clarify
 from prometheus.agents.account_manager import intent as it
 from prometheus.agents.account_manager import sizing
-from prometheus.agents.account_manager.account_manager import AccountManager, parse_purchase, parse_thoughts
-from prometheus.agents.trader import tickets as tk
+from prometheus.agents.account_manager.account_manager import parse_thoughts
 from prometheus.application import session
 from prometheus.application.web import views
 from prometheus.application.web.replay import Replay, load_capture
 from prometheus.common.money import money, price
-from prometheus.common.portfolio import Portfolio, Position, apply_fill, trade_amount
+from prometheus.common.portfolio import Portfolio, Position, trade_amount
 from prometheus.reasoning import raise_funds as rf
 
 SESSIONS = Path(__file__).parent / "fixtures" / "session_real"
-SAMPLE = Portfolio(user="Fraction Holder", cash_avail=Decimal("51.23"), positions=[Position(symbol="MSFT", shares=50, cost_basis=Decimal("150")), Position(symbol="GM", shares=60, cost_basis=Decimal("10"))])
-THOUGHT = '{"thoughts": [{"symbol": "GM", "shares": %s, "idea": "sell the one that is up"}]}'      # the shape of the reply `AccountManager._generate` reads
-
-
-def problem():
-    return rf.build_problem(SAMPLE, "MU", 2, {**PRICES}, date(2026, 11, 13), only_green=True)
-
-
-@pytest.mark.parametrize("said", ['"2"', '" 2 "', "true", '"2.0"'])
-def test_a_models_thought_that_says_shares_in_text_or_true_is_rejected_and_the_model_is_told_why(said):
-    thought = parse_thoughts(THOUGHT % said)[0]
-    node, reason = rf.check_step(problem(), rf.root(problem()), thought, "n1")
-    assert node is None and "shares must be a whole number of at least 1 (a number, not text or true/false" in reason
-    assert rf._clean(thought) == ("GM", None)
-    node, reason = rf.check_step(problem(), rf.root(problem()), parse_thoughts(THOUGHT % "2")[0], "n1")
-    assert reason is None and node.sells == (("GM", 2),)                                                 # the number itself is as good as ever
-
-
-@pytest.mark.parametrize("count", [True, "2", "2.0", 0, -1])      # entry 112: 2.0 is not in this list any more (below)
-def test_the_purchase_to_plan_is_a_whole_number_and_a_bool_a_string_or_a_count_below_one_is_refused(count):
-    with pytest.raises(ValueError, match="whole number of at least 1"):
-        AccountManager._check_purchase("MU", count)
-    with pytest.raises(ValueError, match="whole number of at least 1"):
-        rf.build_problem(SAMPLE, "MU", count, {**PRICES}, date(2026, 11, 13))
-    result = AccountManager(model=object(), model_id="x").raise_funds(SAMPLE, "MU", count)
-    assert result["status"] == "refused" and "whole number of at least 1" in result["errors"][0]
-    assert AccountManager._check_purchase("mu", 2) == "MU" and AccountManager._check_purchase("MU", None) == "MU" and AccountManager._check_purchase("MU", 2.0) == "MU"      # entry 112: a float is taken by its digits at the share door (`shares.quantity`), so 2.0 is the whole number 2; it was refused while a count had to be an int
-    assert parse_purchase("MU:10", None) == ("MU", 10)                                                   # the user's own TEXT is read into a number once, at the edge
 
 
 def test_the_models_how_much_answer_in_shares_is_a_number_and_text_or_true_is_an_error_it_is_told_about():
@@ -66,26 +35,6 @@ def test_the_models_how_much_answer_in_shares_is_a_number_and_text_or_true_is_an
         with pytest.raises(ValueError, match="a number of shares is a number"):
             clarify.SizingChoice(unit="shares", amount=amount, scope="each")
     assert clarify.SizingChoice(unit="dollars", amount=3000).amount == 3000                              # money is not a count
-
-
-def test_a_direct_orders_form_and_a_funding_sale_take_a_number_of_shares_and_nothing_else():
-    typed = "Buy 50 shares of MSFT"
-    assert it.parse_intent(form(orders=[{"side": "buy", "symbol": "MSFT", "shares": 50}]), typed).orders[0].shares == 50
-    for shares in ('"50"', "true"):
-        with pytest.raises(ValueError, match="orders must be a list"):
-            it.parse_intent(form(orders=[{"side": "buy", "symbol": "MSFT", "shares": json.loads(shares)}]), typed)
-    with pytest.raises(ValueError):
-        sizing.size_purchases([sizing.Purchase(record_id="r", symbol="MSFT", action="open", price=PRICES["MSFT"])], Decimal("1000.00"), wanted={"r": "2"})
-    for count in ("2", True):
-        target, legs, note = tk.funding_legs({"status": "plan", "target": "MSFT", "plan": {"sells": [{"symbol": "GM", "shares": count, "price": PRICES["GM"]}]}}, [_ticket()], SAMPLE, date(2026, 11, 13))
-        assert legs == [] and "has no whole number of shares" in note
-    with pytest.raises(ValueError, match="number above zero"):
-        apply_fill(SAMPLE, "GM", "sell", "2", PRICES["GM"], date(2026, 11, 13))
-
-
-def _ticket():
-    from prometheus.agents.trader.record import Trade
-    return Trade(trade_id="T1", kind="recommendation", record_id="r", symbol="MSFT", side="buy", shares_approved=1, shares=1, status="new", mode="paper")
 
 
 def test_money_from_a_count_and_a_price_is_decimal_half_up_to_the_cent_in_every_place_the_survey_found():

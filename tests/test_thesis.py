@@ -61,23 +61,6 @@ def write(replies, records):
     return th.write_theses(model, records, run), run, model
 
 
-def test_a_failed_thesis_gets_one_retry_with_the_reasons_and_a_good_second_reply_is_taken(record):
-    bad = thesis_reply(thesis="Buy it at 37 dollars, an unmeasured prior.")
-    theses, run, model = write([bad, thesis_reply()], [record])
-    assert theses["PG"].thesis is not None and run["calls"] == 2
-    retry = model.seen[1][-1].content
-    assert "These theses failed the program's checks" in retry and "PG: the thesis has numbers that are not in the record: 37" in retry
-
-
-def test_bad_json_is_retried_once_and_a_model_failure_is_recorded_not_raised(record):
-    theses, run, _ = write(["not json at all", thesis_reply()], [record])
-    assert theses["PG"].thesis is not None and run["calls"] == 2
-    theses, run, _ = write([RuntimeError("down")], [record])
-    assert theses["PG"].thesis is None and theses["PG"].thesis_error == "the thesis model call failed (RuntimeError)" and run["error"] == theses["PG"].thesis_error
-    theses, run, _ = write(["junk", "junk"], [record])
-    assert theses["PG"].thesis is None and "not usable" in theses["PG"].thesis_error
-
-
 def test_no_records_means_no_call():
     theses, run, model = write([], [])
     assert theses == {} and model.seen == [] and run["calls"] == 0

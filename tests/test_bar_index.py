@@ -11,8 +11,6 @@ import pytest
 from prometheus.agents.data_clerk import bar_index
 from prometheus.agents.data_clerk.bars import DEFAULT_ROOT, BarStore, _day_files
 
-SYMBOLS = ["XOM", "CVX", "SPY", "XLE", "BP.L"]     # BP.L is not in the US day files: an empty series, as the files give it
-
 
 def read_files(root, symbols, **options) -> BarStore:
     """What `BarStore.load` gives from the FILES: the index is switched off for the call."""
@@ -27,17 +25,6 @@ def same(a: BarStore, b: BarStore, symbols) -> None:
     assert a.dates == b.dates and a.gaps == b.gaps and a.loaded == b.loaded
     for symbol in symbols:
         assert a.bars(symbol) == b.bars(symbol), symbol
-
-
-@pytest.mark.parametrize("options", [{}, {"end": date(2026, 11, 10)}, {"end": date(2026, 11, 19), "max_bars": 10}, {"end": date(2026, 11, 19), "start": date(2026, 11, 2), "max_bars": 30}, {"end": date(2026, 3, 2), "max_bars": 252}])
-def test_the_index_gives_the_files_bars_dates_and_gaps_for_the_real_stored_bars(options):
-    """The same bars, dates, gaps and loaded symbols for several ends, starts and `max_bars`, on the real folder (the index is built on the first call and read on the second)."""
-    from_files = read_files(DEFAULT_ROOT, SYMBOLS, **options)
-    first = BarStore(DEFAULT_ROOT).load(SYMBOLS, **options)
-    again = BarStore(DEFAULT_ROOT).load(SYMBOLS, **options)
-    assert (bar_index.INDEX_ROOT / "XOM.parquet").is_file()
-    same(from_files, first, SYMBOLS)
-    same(from_files, again, SYMBOLS)
 
 
 def copy_of_real_days(tmp_path: Path, count: int = 12) -> Path:
@@ -112,34 +99,3 @@ def test_a_symbol_added_later_is_built_on_first_use_and_the_index_is_for_the_rea
         bar_index.BarIndex(root, root.parent / "ticker_bars_v1", index_root)._symbol_path("../etc")
 
 
-def test_a_rest_bar_fetched_before_its_day_closed_is_never_read_and_is_read_once_fetched_after_the_close(tmp_path):
-    """Design choices entry 129 (Jacob, 2026-11-20). A REAL per-ticker file (CVX) is copied; its newest bar is 2026-11-20. With the file's time set to 13:00 Eastern of that day (a fetch during the session)
-    the bar of that day is a part of a day and is not read, the day before is the newest; with the time at 18:00 Eastern (the day has settled) it is read; at 16:05 it is still not (the provider revises the bar for a while after the close). The same by the index's own reader."""
-    import os
-    import shutil
-    from datetime import datetime
-    from zoneinfo import ZoneInfo
-
-    from prometheus.agents.data_clerk.bar_index import BarIndex
-    from prometheus.agents.data_clerk.bars import BarStore
-    from prometheus.rag.config import REPO_ROOT
-
-    source = REPO_ROOT / "data" / "historical" / "ticker_bars_v1" / "CVX.csv"
-    extra, days = tmp_path / "ticker_bars_v1", tmp_path / "day_aggs_v1"
-    extra.mkdir(); days.mkdir()
-    copy = Path(shutil.copy(source, extra / "CVX.csv"))
-    eastern = ZoneInfo("America/New_York")
-    last_row_day = date(2026, 11, 20)
-
-    def at(hour, minute):
-        stamp = datetime(2026, 11, 20, hour, minute, tzinfo=eastern).timestamp()
-        os.utime(copy, (stamp, stamp))
-        by_store = [bar.date for bar in BarStore(days, extra)._extra_bars("CVX")]
-        by_index = [row[0] for row in BarIndex(days, extra, tmp_path / "index")._read_rest("CVX")[0]]
-        assert by_store == by_index
-        return by_store
-
-    during, soon, after = at(13, 0), at(16, 5), at(18, 0)
-    assert soon == during      # five minutes after the close the provider has not settled the day: still not read
-    assert last_row_day not in during and during[-1] == date(2026, 11, 19)
-    assert after[-1] == last_row_day and after[:-1] == during

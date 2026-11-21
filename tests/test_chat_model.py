@@ -10,7 +10,6 @@ import pytest
 
 from prometheus.models import chat
 from prometheus.rag import config
-from prometheus.tools.data_clerk import DATA_CLERK_TOOLS, DataClerkTools
 
 FAKE_KEY = "sk-or-test-NOT-A-REAL-KEY-12345"
 SETTINGS = ["OPENROUTER_API_KEY", "OPENROUTER_BASE_URL", "OPENROUTER_HTTP_REFERER", "OPENROUTER_APP_TITLE",

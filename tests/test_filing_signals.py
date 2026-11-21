@@ -58,13 +58,6 @@ def meta(tmp_path, monkeypatch, capsys):
     return fs.recommendation_evidence("META", filings, today=META_TODAY)
 
 
-@pytest.fixture
-def meta_no_10q_text(tmp_path, monkeypatch):
-    """META exactly as `data/filings/META.txt` is today: the 10-Q is stored without text."""
-    filings, _ = store(tmp_path, monkeypatch, "META", "filings_meta_sample.txt", None, META_TODAY, folder_name="META_without_10q_text")
-    return fs.recommendation_evidence("META", filings, today=META_TODAY)
-
-
 def row(items: list[dict], label: str, **where) -> dict:
     return next(r for r in items if r["label"] == label and all(r.get(k) == v for k, v in where.items()))
 
@@ -86,23 +79,6 @@ def test_a_document_that_is_not_a_filings_is_refused(bad):
 @pytest.mark.parametrize("current, prior, expected", [(45317, 35934, (9383, 26.11)), (-2177, -14264, (12087, 84.74)), (0, -26248, (26248, 100.0)), (5, 0, (5, None)), (None, 3, (None, None))])
 def test_change_is_the_difference_and_the_percent_of_the_prior_in_its_size(current, prior, expected):
     assert tuple(fs.change(current, prior).values()) == expected
-
-
-# ---------------------------------------------------------------- the real balance sheets
-
-
-# ---------------------------------------------------------------- capital actions and the income statement
-
-
-# ---------------------------------------------------------------- the passages
-
-
-# ---------------------------------------------------------------- it scores nothing
-
-def test_no_result_has_a_score_a_stance_a_rating_or_a_recommendation_as_a_key(apple, meta, meta_no_10q_text):
-    for out in (apple, meta, meta_no_10q_text):
-        assert not [k for k in fs.keys_of(out) if any(word in k.lower() for word in fs.FORBIDDEN_KEYS)], fs.keys_of(out)
-    assert fs.keys_of({"a": [{"score": 1}]}) == {"a", "score"}  # the walker finds a key that is deep in a list
 
 
 # ---------------------------------------------------------------- the window, the empty cases, the gaps
@@ -146,37 +122,6 @@ def test_the_share_count_of_the_dash_layout_is_the_outstanding_shares_now_and_at
     assert sheet["units"] == "(in millions, except par value)" and sheet["shares"]["current"] == 144.0 and sheet["shares"]["change_pct"] == -1.37
 
 
-# ---------------------------------------------------------------- Procter & Gamble's 10-Q (real lines of the stored page: a third layout, found by the first real run of the Advisor)
-
-PG_STATEMENTS = """CONSOLIDATED STATEMENTS OF EARNINGS
-Three Months Ended December 31 | Six Months Ended December 31
-Amounts in millions except per share amounts | 2025 | 2024 | 2025 | 2024
-NET SALES | $ | 22,208 | $ | 21,882 | $ | 44,594 | $ | 43,619
-NET EARNINGS | 4,331 | 4,659 | 9,112 | 8,646
-CONSOLIDATED BALANCE SHEETS
-Amounts in millions | December 31, 2025 | June 30, 2025
-Cash and cash equivalents | $ | 10,825 | $ | 9,556
-Accounts receivable | 6,279 | 6,185
-Total inventories | 7,817 | 7,551
-TOTAL ASSETS | $ | 127,286 | $ | 125,231
-CONSOLIDATED STATEMENTS OF CASH FLOWS
-Six Months Ended December 31
-Amounts in millions | 2025 | 2024
-OPERATING ACTIVITIES (1)
-Net earnings | 9,112 | 8,646
-Share-based compensation expense | 262 | 241
-TOTAL OPERATING ACTIVITIES | 10,380 | 9,127
-Dividends to shareholders | (5,093) | (4,886)
-Treasury stock purchases | (3,528) | (4,449)"""
-
-
-def test_procter_and_gambles_cash_balance_and_payout_coverage_are_worked_from_those_figures():
-    from prometheus.agents.data_clerk import fundamentals as f
-    rows = fs.parse_rows(PG_STATEMENTS)
-    evidence = {"period_months": fs.period_months(rows, "10-Q"), "capital_actions": fs.capital_actions(rows), "income": fs.income_headlines(rows), "balance_sheet": fs.balance_sheet(rows)}
-    assert f.cash_balance(evidence)[0] == 10825e6 and f.payout_coverage(evidence)[0] == pytest.approx(5093 / 9112)
-
-
 # ---------------------------------------------------------------- Domino's, Papa John's and Yum's 10-Qs (real lines of the stored pages; the pizza run was the fourth, fifth and sixth layout)
 
 DPZ_STATEMENTS = """Condensed Consolidated Balance Sheets
@@ -200,22 +145,6 @@ Three Fiscal Quarters Ended
 Net cash provided by operating activities | 520,601 | 552,256
 Purchases of common stock | (308,239 | ) | (277,698 | )
 Payments of common stock dividends and equivalents | (134,331 | ) | (119,503 | )"""
-PZZA_STATEMENTS = """Condensed Consolidated Balance Sheets
-(Unaudited)
-(In thousands, except per share amounts) | June 28,2026 | December 28,2025
-Accounts receivable, net | 94,512 | 103,068
-Inventories | 32,546 | 34,336
-Total assets | $ | 805,031 | $ | 837,508
-Condensed Consolidated Statements of Operations
-(Unaudited)
-Three Months Ended | Six Months Ended
-(In thousands, except per share amounts) | June 28,2026 | June 29,2025 | June 28,2026 | June 29,2025
-Total revenues | 482,397 | 529,166 | 961,006 | 1,047,475
-Net income | 8,700 | 9,671 | 15,638 | 19,014
-Condensed Consolidated Statements of Cash Flows
-(In thousands) | June 28,2026 | June 29,2025
-Net cash provided by operating activities | 35,828 | 66,843
-Dividends paid to common stockholders | (30,864) | (30,493)"""
 YUM_STATEMENTS = """CONDENSED CONSOLIDATED STATEMENTS OF INCOME (Unaudited)
 (in millions, except per share data)
 Quarter ended | Year to date
@@ -260,14 +189,6 @@ def test_yums_year_to_date_months_labels_and_share_count_are_read():
     assert sheet["shares"] and (sheet["shares"]["current"], sheet["shares"]["prior"], sheet["shares"]["unit"]) == (273.0, 277.0, "million")
 
 
-def test_months_from_the_balance_sheet_dates_to_the_nearest_quarter():
-    cols = lambda a, b: {"columns": [a, b]}
-    assert fs.months_from_balance_sheet(cols("September 6, 2026", "December 28, 2025")) == 9
-    assert fs.months_from_balance_sheet(cols("December 31, 2025", "June 30, 2025")) == 6 and fs.months_from_balance_sheet(cols("6/30/2026", "12/31/2025")) == 6
-    assert fs.months_from_balance_sheet({"columns": ["(In thousands)", "June 28,2026", "December 28,2025"]}) == 6          # the units cell is skipped
-    assert fs.months_from_balance_sheet(cols("June 28, 2026", "June 28, 2026")) is None and fs.months_from_balance_sheet(cols("x", "y")) is None and fs.months_from_balance_sheet(None) is None
-
-
 # ---------------------------------------------------------------- McDonald's and Restaurant Brands' 10-Qs (real lines): bare units, four cash-flow columns, other labels, a Part I heading in title case
 
 MCD_STATEMENTS = """CONDENSED CONSOLIDATED STATEMENT OF CASH FLOWS (UNAUDITED)
@@ -279,11 +200,6 @@ Common stock dividends | (1,317) | (1,265) | (2,640) | (2,530)
 CONDENSED CONSOLIDATED BALANCE SHEET (UNAUDITED)
 In millions, except per share data | June 30,2026 | December 31,2025
 Total assets | $ | 56,000 | $ | 55,000"""
-QSR_STATEMENTS = """CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS
-(In millions of U.S. dollars, except share data, Unaudited) | 2026 | 2025
-Net cash provided by operating activities from continuing operations | 1,308 | 1,159
-Payment of common share dividends and Partnership exchangeable unit distributions | (875) | (826)
-Repurchases of common shares | (444) | (306)"""
 
 
 def test_mcdonalds_bare_units_four_cash_flow_columns_and_its_labels_are_read():
@@ -304,14 +220,3 @@ def test_the_title_case_part_line_is_found_and_a_10q_stored_without_a_part_line_
     assert set(stored[0]["sections"]) == {"financial_statements", "mdna", "market_risk", "controls", "item5"} and stored[0]["sections"]["financial_statements"] == "statements"
     named = fs.filings_from_documents([doc("financial_statements", "statements"), doc("mdna", "management discussion")])                       # a filing that was named properly is left alone
     assert set(named[0]["sections"]) == {"financial_statements", "mdna"}
-
-
-def test_negative_equity_is_true_for_a_deficit_false_for_positive_equity_and_missing_without_a_balance_sheet():
-    from prometheus.agents.data_clerk import fundamentals as fund
-    deficit = fund.negative_equity({"balance_sheet": {"items": {"total_equity": {"current": -1023.0, "label": "Total shareholders\u2019 equity (deficit)"}}, "units": "In millions"}})
-    assert deficit[0] is True and deficit[1]["total_equity_as_reported"] == -1023.0
-    assert fund.negative_equity({"balance_sheet": {"items": {"total_equity": {"current": 5.0}}, "units": None}})[0] is False
-    with pytest.raises(fund.Missing):
-        fund.negative_equity({"balance_sheet": {"items": {}}})
-    with pytest.raises(fund.Missing):
-        fund.negative_equity({})

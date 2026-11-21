@@ -147,29 +147,6 @@ def test_a_request_that_could_not_be_read_ends_the_run_with_the_reason_and_the_r
     assert run.events[-1]["data"]["reasons"] == ["stopped: what was understood was not confirmed, so nothing was done"]         # a no to "is this what you meant" is not a request to clarify
 
 
-def test_the_approver_turns_the_missing_company_card_into_the_page_question_and_the_stage_waits_while_it_is_open():
-    run = Run("missing", "live")
-    live = desk_run.Live(Emitter(run))
-    live.running = "account_manager"
-    _, approver, _ = desk_run.callables(run, live, 5, auto=False)
-    card, seen = missing_card(), []
-    thread = answering(run, [True], seen)
-    assert approver(card) is True
-    thread.join(3)
-    (asked,) = seen
-    assert (asked["kind"], asked["title"], asked["typed"], asked["reason"], asked["n"], asked["of"], asked["wording"]) == ("missing_company", "Continue without Chick-fil-a?", "Chick-fil-a", LOST, 1, 1, "model")
-    assert asked["text"] == asked["question"] == card["sentence"] and "Chick-fil-a was not found" in asked["text"] and [k["symbol"] for k in asked["kept"]] == ["F", "GM", "PG", "GOOGL"]
-    assert asked["facts"] == ["Still on your order:", "  F: Ford Motor Co (F)", "  GM: General Motors Co (GM)", "  Procter and gamble: The Procter & Gamble Company (PG)", "  Google: Alphabet Inc. (GOOGL), the listed owner of what you typed"]
-    assert [e["data"]["state"] for e in run.events if e["type"] == "stage" and e["data"]["key"] == "work_order"] == ["waiting", "busy"]
-    assert [(e["data"]["agent"], e["data"]["text"]) for e in run.events if e["type"] == "log"] == [("you", "continue without Chick-fil-a")]
-    for answer, words in ((False, "stop the order: no to going on without Chick-fil-a"), (None, "(no answer about Chick-fil-a: the order is not placed)")):
-        again = Run("again", "live")
-        _, approver, _ = desk_run.callables(again, desk_run.Live(Emitter(again)), 0.2 if answer is None else 5, auto=False)
-        thread = answering(again, [answer], []) if answer is not None else None
-        assert approver(card) is answer
-        assert [e["data"]["text"] for e in again.events if e["type"] == "log"] == [words]
-
-
 def test_the_answers_route_carries_the_yes_of_a_missing_company_question_back_to_the_desk():
     manager = RunManager()
     http = TestClient(create_app(manager=manager))

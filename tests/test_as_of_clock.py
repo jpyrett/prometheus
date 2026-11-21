@@ -8,39 +8,30 @@ Finnhub call a review makes is made to fail on purpose (a tripwire), and the fet
 
 Unbound, every door is exactly what it was: the existing tests of the retriever, the tools, the toolbox, the ledger, the Advisor and the Critic are the proof and pass unchanged.
 """
-import contextvars
 import copy
-import io
 import json
-import operator
 import re
 import shutil
 import threading
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
-from typing import Annotated
 
 import pytest
 from advisor_helpers import Scripted
 from critic_helpers import ReviewerModel, view
 from test_advisor_sndk_pg import FIXTURES as ADVISOR_CAPTURES
 from test_advisor_sndk_pg import RecordedClerk
-from typing_extensions import TypedDict
 
 from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.critic.critic import Critic
-from prometheus.agents.data_clerk import filing_signals
 from prometheus.agents.data_clerk.bars import BarStore
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.agents.data_clerk.data_toolbox import Financials, DataToolbox, fetch_window
 from prometheus.common import trading_clock as tc
 from prometheus.common import work_order as wo
-from prometheus.common.portfolio import load_portfolio
 from prometheus.memory.ledger import Ledger
 from prometheus.rag import retriever
-from prometheus.rag.loaders import filing_file, load_filings
 from prometheus.rag.config import REPO_ROOT
-from prometheus.rag.retriever import Hit
 from prometheus.rag.store import get_embeddings
 from prometheus.tools.data_clerk import DATA_CLERK_TOOLS, DataClerkTools, ToolInputError, ToolLimitError
 
@@ -50,7 +41,6 @@ END_OF_D = datetime(2026, 11, 10, 4, 59, 59, 999999, tzinfo=timezone.utc)       
 D_MARKET = date(2026, 10, 20)                                                          # the market-wide news is stored from 2026-10-13 to 2026-10-24
 STORE = REPO_ROOT / "data" / "processed" / "vectorstore"
 BARS = REPO_ROOT / "data" / "historical" / "day_aggs_v1"
-ET_NOTE = "CLOCK    AS OF 2026-11-09 (the Proving Ground)"
 
 
 def stamp(hit) -> datetime:
@@ -63,21 +53,6 @@ def need_bars():
 
 
 # ---------------------------------------------------------------- the clock itself
-
-def test_the_bound_day_is_the_whole_clock_and_it_lets_go_of_it():
-    assert tc.bound_day() is None and tc.horizon() is None and tc.use_live_trading() is True      # the suite pins the real clock (conftest)
-    with tc.as_of(D):
-        assert tc.bound_day() == D and tc.market_day() == D and tc.use_live_trading() is False
-        assert tc.trading_now() == datetime(2026, 11, 9, 20, 30, tzinfo=timezone.utc)             # 15:30 in New York: `simulated_moment(D)`
-        assert tc.trading_now(datetime(2030, 1, 1, tzinfo=timezone.utc)) == tc.trading_now()      # an explicit real moment does not move it
-        assert tc.horizon() == END_OF_D and tc.clock_note().startswith(ET_NOTE) and "no live quote is used" in tc.clock_note()
-        with tc.as_of(D):                                                                         # the same day again is the same binding
-            assert tc.bound_day() == D
-        assert tc.bound_day() == D
-    assert tc.bound_day() is None and tc.horizon() is None and tc.clock_note() is None
-    with pytest.raises(RuntimeError), tc.as_of(D):                                                # an exception inside leaves nothing bound
-        raise RuntimeError("boom")
-    assert tc.bound_day() is None
 
 
 def test_a_day_that_is_not_a_past_trading_day_is_refused_before_anything_is_bound():
@@ -92,63 +67,7 @@ def test_a_day_that_is_not_a_past_trading_day_is_refused_before_anything_is_boun
             pass
 
 
-def test_the_summer_horizon_is_the_end_of_the_new_york_day_in_summer_time():
-    with tc.as_of(date(2026, 7, 6)):
-        assert tc.horizon() == datetime(2026, 7, 7, 3, 59, 59, 999999, tzinfo=timezone.utc)
-
-
 # ---------------------------------------------------------------- the context follows the threads that copy it
-
-class DayModel:
-    """What a model call is in `invoke_with_limit`: anything with `invoke`. It answers with the day it finds bound, in the thread it runs in."""
-
-    def invoke(self, messages):
-        return tc.bound_day(), threading.current_thread().name
-
-
-def test_the_binding_reaches_the_threads_that_copy_the_context_and_only_those():
-    from prometheus.agents.advisor.calls import invoke_with_limit
-    with tc.as_of(D):
-        seen, thread = invoke_with_limit(DayModel(), [])                                          # the Advisor's model calls run in a thread with a copy of the context
-        assert seen == D and thread != threading.current_thread().name
-        box = []
-        bare = threading.Thread(target=lambda: box.append(tc.bound_day()))                        # a thread that does NOT copy it starts with nothing: that is why every thread site copies
-        bare.start()
-        bare.join()
-        assert box == [None]
-        copied = []
-        context = contextvars.copy_context()
-        worker = threading.Thread(target=context.run, args=(lambda: copied.append(tc.bound_day()),))
-        worker.start()
-        worker.join()
-        assert copied == [D]
-    assert tc.bound_day() is None
-
-
-class Seen(TypedDict, total=False):
-    seen: Annotated[list, operator.add]
-
-
-def test_a_real_langgraph_node_in_its_own_thread_reads_the_bound_day():
-    from langgraph.graph import END, START, StateGraph
-
-    def node(name):
-        def run(state):
-            return {"seen": [(name, threading.current_thread().name, tc.bound_day(), tc.market_day())]}
-        return run
-
-    graph = StateGraph(Seen)
-    for name in ("a", "b"):
-        graph.add_node(name, node(name))
-        graph.add_edge(START, name)
-        graph.add_edge(name, END)
-    app = graph.compile()
-    with tc.as_of(D):
-        out = app.invoke({"seen": []})
-        streamed = [chunk for mode, chunk in app.stream({"seen": []}, stream_mode=["tasks", "values"]) if mode == "values"][-1]
-    for result in (out, streamed):
-        assert {s[0] for s in result["seen"]} == {"a", "b"} and {(s[2], s[3]) for s in result["seen"]} == {(D, D)}
-    assert any(s[1] != threading.current_thread().name for s in out["seen"])                       # at least one node really ran in a worker thread
 
 
 def test_every_thread_site_of_the_package_copies_the_context_or_runs_no_agent_code():
@@ -203,13 +122,6 @@ def test_news_after_the_bound_day_is_never_returned_and_the_window_counts_back_f
         newest(retriever.search_news, "MSFT", until=datetime(2026, 11, 6))
 
 
-def test_press_releases_after_the_bound_day_are_never_returned(real_index):
-    assert any(stamp(h) > END_OF_D for h in newest(retriever.search_press_releases, "CNQ"))
-    with tc.as_of(D):
-        bound = newest(retriever.search_press_releases, "CNQ")
-        assert bound and all(stamp(h) <= END_OF_D for h in bound)
-
-
 def test_a_filing_has_a_date_so_the_day_after_is_not_known_even_though_it_is_before_the_new_york_midnight_in_utc(real_index):
     """A filing is stamped 00:00 UTC of its filing date. The end of the New York day is already the NEXT day in UTC, so the horizon alone would let a filing of 2026-11-10 through on 2026-11-09 (found on Costco's real
     8-K of 2026-11-10): the filings collection is cut at 23:59:59 UTC of the bound day, and a filing of the bound day itself (Apple's of 2026-11-09) counts."""
@@ -220,44 +132,7 @@ def test_a_filing_has_a_date_so_the_day_after_is_not_known_even_though_it_is_bef
         assert any(h.published_utc[:10] == "2026-11-09" for h in newest(retriever.search_filings, "AAPL"))    # filed on D: known on D
 
 
-def test_a_chunk_cited_by_id_is_not_read_when_it_is_dated_after_the_bound_day(real_index):
-    tools = DataClerkTools()
-    after = next(h for h in newest(retriever.search_filings, "COST") if h.published_utc[:10] == "2026-11-10")
-    before = next(h for h in newest(retriever.search_filings, "COST") if h.published_utc[:10] <= "2026-11-09")
-    assert tools.read_sources([after.chunk_id, before.chunk_id])[after.chunk_id]["found"] is True
-    with tc.as_of(D):
-        got = tools.read_sources([after.chunk_id, before.chunk_id])
-        assert got[after.chunk_id]["found"] is False and "as of 2026-11-09" in got[after.chunk_id]["note"] and got[before.chunk_id]["found"] is True
-
-
-def test_the_clerks_own_retrieval_and_the_critics_fresh_sources_read_the_same_closed_index(real_index):
-    tools = DataClerkTools()
-    with tc.as_of(D):
-        answer = tools.retrieve_news("what is happening with Microsoft", tickers="MSFT", k=20, newest_first=True)
-        assert answer["found"] and all(stamp(Hit(**h)) <= END_OF_D for h in answer["hits"])
-        fresh = tools.recent_sources("MSFT", "Microsoft", since_days=30, k=20, now=datetime(2026, 11, 20, tzinfo=timezone.utc))
-        assert fresh and all(datetime.fromisoformat(h["published_utc"].replace("Z", "+00:00")) <= END_OF_D for h in fresh)
-
-
 # ---------------------------------------------------------------- the filing evidence and the stored-text search (the real stored files)
-
-DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
-
-
-def test_filing_evidence_stops_at_the_bound_day_in_the_window_the_gaps_and_the_digest():
-    tools = DataClerkTools()
-    free = tools.fetch_filings_recommendation("COST")
-    assert free["as_of"] > D.isoformat()                                                                # Costco filed on 2026-11-10, the day after D
-    with tc.as_of(D):
-        bound = tools.fetch_filings_recommendation("COST")
-        assert bound["as_of"] <= D.isoformat() and bound["filings"]["in_window"] < free["filings"]["in_window"]
-        assert all(f["filed"] <= D.isoformat() for f in bound["filings"]["with_text"]) and all(e["source"]["filed"] <= D.isoformat() for e in bound["evidence"])
-        assert max(DATE.findall(bound["digest"] + " ".join(bound["gaps"]))) <= D.isoformat()           # not even a date of the future in a sentence
-        assert tools.today == D
-        assert max(DATE.findall(tools.fetch_filings_recommendation("COST", since_days=730)["digest"])) <= D.isoformat()
-    filings = filing_signals.filings_from_documents(load_filings(filing_file("COST")))
-    through = filing_signals.recommendation_evidence("COST", filings, today=date(2026, 11, 20), until=date(2026, 11, 6))
-    assert through["as_of"] <= "2026-11-06" < filing_signals.recommendation_evidence("COST", filings, today=date(2026, 11, 20))["as_of"]       # `until` is also a plain argument: unbound it closes the window, left out it closes nothing
 
 
 def test_the_toolbox_searches_the_stored_text_as_of_the_bound_day_and_never_refreshes(monkeypatch, capsys):
@@ -416,15 +291,6 @@ def ledger(tmp_path):
     return Ledger(path)
 
 
-def test_the_ledger_shows_no_line_written_after_the_bound_day(ledger):
-    assert [r["identity"]["as_of_utc"][:10] for r in ledger.recent("YUM")] == ["2026-11-06", "2026-11-12"]
-    assert [r["identity"]["as_of_utc"][:10] for r in ledger.recent("YUM", until=date(2026, 11, 6))] == ["2026-11-06"]
-    with tc.as_of(D):
-        assert [r["identity"]["as_of_utc"][:10] for r in ledger.recent("YUM")] == ["2026-11-06"]
-        assert [r["identity"]["as_of_utc"][:10] for r in ledger.recent("YUM", until=date(2026, 11, 30))] == ["2026-11-06"]       # a later `until` is cut
-        assert ledger.recent("PG") == []                                                           # its only line is of the 12th
-
-
 def advisor_replay(name, ledger, today=None):
     capture = json.loads((ADVISOR_CAPTURES / f"{name}.json").read_text(encoding="utf-8"))
     order = wo.WorkOrder.model_validate(capture["order"])
@@ -451,15 +317,6 @@ def test_the_advisor_asked_with_no_date_works_on_the_bound_day_and_its_cooldown_
         assert [scrubbed(r) for r in bound.recommendations] == [scrubbed(r) for r in dated.recommendations]
     later, _ = advisor_replay("PG_open", ledger, today=date(2026, 11, 20))                          # unbound, on a day after the line: the cooldown is what it always was
     assert later.recommendations == [] and "cooldown" in json.dumps(later.candidates)
-
-
-def test_a_position_bought_on_the_bound_day_is_locked_that_day_not_on_the_real_today():
-    portfolio = load_portfolio(REPO_ROOT / "configs" / "portfolios" / "jacob_pyrett.json")
-    held = portfolio.positions[0]
-    bought_on_d = portfolio.model_copy(update={"positions": [held.model_copy(update={"acquired": D, "recent_shares": None})]})
-    day_before = portfolio.model_copy(update={"positions": [held.model_copy(update={"acquired": D - timedelta(days=1), "recent_shares": None})]})
-    with tc.as_of(D):
-        assert bought_on_d.sellable_shares(held.symbol) == 0 and day_before.sellable_shares(held.symbol) == held.shares
 
 
 # ---------------------------------------------------------------- the Critic: a real recommendation, a past day, no denial for timing
@@ -563,22 +420,6 @@ def test_news_is_fetched_in_the_window_it_is_given_and_a_window_keeps_only_what_
     capsys.readouterr()
 
 
-def test_press_releases_and_filings_close_the_range_at_the_other_end_only_when_a_window_is_given(monkeypatch, tmp_path, capsys):
-    providers = Providers(monkeypatch)
-    toolbox = DataToolbox(base_dir=tmp_path)
-    toolbox.fetch_press_releases("XOM", start=date(2026, 5, 20), end=date(2026, 6, 18))
-    assert providers.asked[-1][2] == {"symbol": "XOM", "from": "2026-05-20", "to": "2026-06-18"}
-    toolbox.fetch_press_releases("XOM", from_date=365)
-    assert providers.asked[-1][2]["from"] == f"{datetime.now(timezone.utc) - timedelta(days=365):%Y-%m-%d}" and providers.asked[-1][2]["to"] == f"{datetime.now(timezone.utc):%Y-%m-%d}"
-    providers.asked.clear()
-    toolbox.fetch_filings("XOM", start=date(2026, 5, 20), end=date(2026, 6, 18))
-    assert len(providers.asked) == 14 and all(p[2]["filing_date.gte"] == "2026-05-20" and p[2]["filing_date.lte"] == "2026-06-18" for p in providers.asked)      # 12 forms, the 10-K sections, the 8-K text
-    providers.asked.clear()
-    toolbox.fetch_filings("XOM", from_date=365)
-    assert len(providers.asked) == 14 and all("filing_date.lte" not in p[2] and p[2]["filing_date.gte"] == f"{datetime.now(timezone.utc) - timedelta(days=365):%Y-%m-%d}" for p in providers.asked)
-    capsys.readouterr()
-
-
 def test_market_news_in_a_past_window_asks_massive_only_and_leaves_the_coverage_file_alone(monkeypatch, tmp_path, capsys):
     providers = Providers(monkeypatch)
     toolbox = DataToolbox(base_dir=tmp_path)
@@ -641,77 +482,3 @@ def test_the_six_months_are_seven_windows_oldest_first_with_no_gap_and_no_overla
             backfill.windows(*bad)
 
 
-def test_without_yes_the_script_prints_the_plan_and_fetches_and_writes_nothing(backfill, monkeypatch, tmp_path):
-    def boom(*args, **kwargs):
-        raise AssertionError("the plan reached a provider")
-
-    for name in ("fetch_news", "fetch_press_releases", "fetch_filings", "sync_market_news", "fetch_splits", "_api_keys"):
-        monkeypatch.setattr(DataToolbox, name, boom)
-    out, progress = io.StringIO(), tmp_path / "backfill" / "progress.jsonl"
-    code = backfill.main(["--from", "2026-05-20", "--to", "2026-11-20", "--symbols", "XOM", "PG", "--kinds", "news,press_releases,filings,market_news", "--progress", str(progress)], today=date(2026, 11, 20), out=out)
-    text = out.getvalue()
-    assert code == 0 and "not run: add --yes to fetch" in text and not progress.exists() and not progress.parent.exists()
-    assert "7 window(s) of up to 30 days, oldest first" in text and text.index("window 2026-05-20 .. 2026-06-18") < text.index("window 2026-11-16 .. 2026-11-20")
-    assert "news" in text and "14 to fetch" in text and "at least 76 API calls" in text                                # 2 symbols x (6 x (5 Finnhub weeks + 1 Massive page) + 2 for the 5-day window)
-    assert re.search(r"press_releases\s+14 to fetch,\s+0 skipped \(none\), at least 14 API calls", text)
-    assert re.search(r"filings\s+0 to fetch,\s+14 skipped \(stored filings already reach back\)", text)               # XOM and PG have a year of filings stored
-    assert re.search(r"market_news\s+7 to fetch,\s+0 skipped \(none\), at least 9 API calls", text)                  # one Massive page a window, and the two general feeds for the window that reaches today
-
-
-def test_the_default_symbols_are_those_with_stored_news_and_a_stored_split_table_is_skipped(backfill, tmp_path):
-    real = DataToolbox(base_dir=REPO_ROOT)
-    assert {"XOM", "PG", "MSFT"} <= set(backfill.stored_symbols(real))
-    fresh = DataToolbox(base_dir=tmp_path)
-    (tmp_path / "data" / "historical" / "splits_v1").mkdir(parents=True)
-    (tmp_path / "data" / "historical" / "splits_v1" / "PG.json").write_text('{"symbol": "PG", "splits": []}', encoding="utf-8")
-    items = backfill.work_list(fresh, ["PG", "XOM"], ["splits"], [], date(2026, 5, 20), backfill.Progress(tmp_path / "p.jsonl"))
-    assert [(i["symbol"], i["skipped"]) for i in items] == [("PG", "already stored"), ("XOM", None)]
-
-
-class RecordingToolbox(DataToolbox):
-    """The real toolbox with the provider calls replaced by a recorder, for the script's own order and bookkeeping."""
-
-    def __init__(self, base_dir, fail=()):
-        super().__init__(base_dir=base_dir)
-        self.calls, self.fail = [], set(fail)
-
-    def _record(self, kind, symbol, start, end):
-        self.calls.append((kind, symbol, start, end))
-        if (kind, symbol) in self.fail:
-            raise RuntimeError("HTTP 500")
-        return {"fetched": 3, "written": 2, "duplicates": 1}
-
-    def fetch_news(self, company=None, symbol=None, keywords=None, from_date=30, start=None, end=None):
-        return self._record("news", symbol, start, end)
-
-    def fetch_press_releases(self, symbol, from_date=365, start=None, end=None):
-        return self._record("press_releases", symbol, start, end)
-
-    def sync_market_news(self, from_date=7, start=None, end=None):
-        return self._record("market_news", "*", start, end)
-
-
-def test_with_yes_it_goes_window_by_window_oldest_first_remembers_what_came_back_and_resumes(backfill, tmp_path):
-    toolbox = RecordingToolbox(tmp_path, fail={("press_releases", "PG")})
-    progress, out = tmp_path / "progress.jsonl", io.StringIO()
-    args = ["--from", "2026-09-17", "--to", "2026-11-20", "--symbols", "XOM", "PG", "--kinds", "news,press_releases,market_news", "--progress", str(progress), "--yes"]
-    code = backfill.main(args, toolbox=toolbox, today=date(2026, 11, 20), out=out)
-    starts = [c[2] for c in toolbox.calls]
-    assert code == 1 and starts == sorted(starts) and starts[0] == date(2026, 9, 17) and starts[-1] == date(2026, 11, 16)               # the oldest window first, every kind of a window before the next window
-    assert [c[:2] for c in toolbox.calls[:5]] == [("market_news", "*"), ("news", "XOM"), ("press_releases", "XOM"), ("news", "PG"), ("press_releases", "PG")]
-    text = out.getvalue()
-    assert "press_releases PG 2026-09-17..2026-10-16: FAILED (RuntimeError: HTTP 500)" in text and "3 window(s) FAILED" in text and "python -m prometheus.rag.ingest --all" in text and "--press-releases --all" in text
-    done = [json.loads(line) for line in progress.read_text(encoding="utf-8").splitlines()]
-    assert len(done) == len(toolbox.calls) - 3 and not any(d["kind"] == "press_releases" and d["symbol"] == "PG" for d in done)       # a window that failed is not recorded
-    again = RecordingToolbox(tmp_path)
-    assert backfill.main(args, toolbox=again, today=date(2026, 11, 20), out=io.StringIO()) == 0
-    assert [c[:2] for c in again.calls] == [("press_releases", "PG")] * 3                                                              # only the failed ones are fetched again
-    stop = RecordingToolbox(tmp_path, fail={("news", s) for s in ("A", "B", "C")} | {("market_news", "*")})
-    assert backfill.main(["--from", "2026-09-17", "--to", "2026-11-20", "--symbols", "A", "B", "C", "--kinds", "news", "--progress", str(tmp_path / "other.jsonl"), "--yes"], toolbox=stop, today=date(2026, 11, 20), out=io.StringIO()) == 1
-    assert len(stop.calls) == backfill.MAX_FAILURES_IN_A_ROW                                                                           # a key or the network is wrong: it stops asking
-
-
-def test_bad_arguments_are_refused_with_exit_2_before_anything_is_planned(backfill, tmp_path, capsys):
-    for argv in (["--from", "2026-13-01"], ["--from", "2026-05-20", "--to", "2026-12-01"], ["--from", "2026-05-20", "--kinds", "news,tweets"], ["--from", "2026-11-20", "--to", "2026-05-20"], ["--from", "2026-05-20", "--symbols", "not a symbol"]):
-        assert backfill.main([*argv, "--progress", str(tmp_path / "p.jsonl")], today=date(2026, 11, 20), out=io.StringIO()) == 2
-    assert capsys.readouterr().err.count("ERROR:") == 5

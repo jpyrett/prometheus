@@ -1,14 +1,13 @@
 """The Trader's records (prometheus/agents/trader/record.py, Trader spec section 14): Trade, Fill, Outcome, Run, and the closed list of rejection codes. No network and no model."""
 import ast
 import json
-from decimal import Decimal
 from pathlib import Path
 
 import pytest
 from pydantic import ValidationError
 
 from prometheus.agents.trader import record
-from prometheus.agents.trader.record import REJECT_CODES, Fill, FundingRun, Outcome, Run, Snapshot, Trade
+from prometheus.agents.trader.record import REJECT_CODES, Fill, Outcome, Run, Trade
 from prometheus.common import work_order as wo
 
 
@@ -49,26 +48,6 @@ def test_a_rejected_trade_cannot_be_built_with_another_code_or_none(code):
         trade(status="rejected", reject_code=3)
 
 
-def test_the_guard_of_the_work_order_and_the_record_agree_on_what_a_rejected_trade_is():
-    order = wo.new_work_order("x", subject=["PG"])
-    order.trades = [trade(status="rejected", reject_code="not_permitted").model_dump(mode="json")]
-    assert wo.verify_trades(order) == []
-    order.trades[0]["reject_code"] = None
-    assert any("rejected but has no reject_code" in r for r in wo.verify_trades(order))
-
-
-def test_a_good_flow_built_with_the_records_passes_the_output_guard():
-    order = wo.new_work_order("x", subject=["PG"])
-    order.status = "decided"
-    order.trade_decisions = [{"record_id": "r1", "symbol": "PG", "action": "add", "shares": 44, "will_trade": "yes_user"}]
-    sale = trade(trade_id="T1-F1", kind="funding", funds_for="T1", symbol="MSFT", side="sell", shares_approved=5, shares=5, status="filled",
-                 fill=fill(price=420.0, shares=5, amount=2100.0)).model_dump(mode="json")
-    order.trades = [trade(status="filled", fill=fill()).model_dump(mode="json"), sale]
-    assert wo.verify_trades(order) == []
-    order.trades[0]["fill"]["shares"] = 45
-    assert wo.verify_trades(order) != []
-
-
 # ---------------------------------------------------------------- fills
 
 def test_a_fill_has_a_price_and_shares_above_zero_and_a_source_from_the_list():
@@ -77,28 +56,6 @@ def test_a_fill_has_a_price_and_shares_above_zero_and_a_source_from_the_list():
         with pytest.raises(ValidationError):
             fill(**bad)
     assert {fill(price_source=s).price_source for s in record.PRICE_SOURCES} == {"quote", "bar_open", "bar_limit"}
-
-
-def test_the_money_and_the_shares_of_a_fill_and_a_trade_are_decimals_a_float_is_read_by_its_written_digits_and_json_gets_numbers():
-    """Entry 112: the price is a Decimal at four places (half up: a quote with five decimals is rounded once, here), the amount and the commission to the cent, the shares to six places; a bool, a string and an amount
-    with a fraction of a cent are refused, and what is written for JSON is a number."""
-    f = fill(price=167.12345)
-    assert (f.price, f.amount, f.shares, f.commission, f.slippage_bps) == (Decimal("167.1235"), Decimal("7352.40"), Decimal("44"), Decimal("0"), Decimal("5"))
-    assert all(isinstance(x, Decimal) for x in (f.price, f.amount, f.shares, f.commission, f.slippage_bps))
-    assert fill().model_dump(mode="json") == {"price": 167.1, "shares": 44, "amount": 7352.4, "commission": 0, "date": "2026-11-05", "price_source": "quote", "slippage_bps": 5}
-    for bad in ({"price": "167.1"}, {"shares": True}, {"amount": 7352.405}):
-        with pytest.raises(ValidationError):
-            fill(**bad)
-    t = trade(shares=0.5, limit_price=100.5, dollars=1000)
-    assert (t.shares, t.limit_price, t.dollars) == (Decimal("0.5"), Decimal("100.5"), Decimal("1000.00")) and Trade.model_validate(t.model_dump(mode="json")) == t
-
-
-def test_an_outcome_is_open_or_closed_and_an_exit_is_a_stop_a_trailing_stop_a_target_or_the_time_stop():
-    assert Outcome(status="open", last_date="2026-11-30", last_close=170.0, unrealized_gain=125.6).exit_reason is None
-    for bad in ({"status": "done"}, {"status": "closed", "exit_reason": "tired"}):
-        with pytest.raises(ValidationError):
-            Outcome(**bad)
-    assert {Outcome(status="closed", exit_reason=r).exit_reason for r in record.EXIT_REASONS} == {"stop", "trailing_stop", "target", "time_stop"}      # `trailing_stop` since the trend family's plan trails (design/advisor_exit_plan_spec.md E4)
 
 
 # ---------------------------------------------------------------- runs

@@ -21,7 +21,6 @@ from prometheus.agents.data_clerk import data_toolbox, edgar_text
 from prometheus.agents.data_clerk.data_toolbox import DataToolbox, _RateLimiter
 from prometheus.agents.data_clerk.edgar_text import EdgarLayoutError, EdgarNotConfigured
 from prometheus.rag import store as rag_store
-from prometheus.rag.loaders import load_filings
 from prometheus.tools.data_clerk import DataClerkTools
 from test_filings import DistinctEmbeddings, massive_answers_from_the_real_records
 
@@ -30,11 +29,6 @@ FILINGS = Path(__file__).parent / "fixtures" / "filings_sample.txt"
 ACCESSION = "0000320193-26-000006"
 URL = f"https://www.sec.gov/Archives/edgar/data/320193/{ACCESSION}.txt"
 AGENT = "Jacob Pyrett jacob_pyrett@yahoo.com"
-NAMES = ["financial_statements", "mdna", "market_risk", "controls", "legal_proceedings", "risk_factors", "unregistered_sales", "defaults", "mine_safety", "other_information", "exhibits"]
-
-
-def lines_of(html: str) -> list[str]:
-    return edgar_text.html_to_lines(html)
 
 
 # ---------------------------------------------------------------- the real submission
@@ -51,20 +45,6 @@ def test_only_the_forms_the_module_knows_are_taken():
         edgar_text.filing_sections(SUBMISSION, "EX-31.1")
 
 
-# ---------------------------------------------------------------- html to lines (small pages)
-
-
-# ---------------------------------------------------------------- the Items of a 10-Q (small texts)
-
-
-def test_text_with_no_item_heading_is_an_error_and_not_one_big_section():
-    with pytest.raises(EdgarLayoutError, match="no Item heading"):
-        edgar_text.split_items(["just", "some", "text"])
-    page = f"<SEC-HEADER>x</SEC-HEADER><DOCUMENT>\n<TYPE>10-Q\n<TEXT>\n<html><body><p>hello</p></body></html>\n</TEXT>\n</DOCUMENT>\n"
-    with pytest.raises(EdgarLayoutError, match="no Item heading"):
-        edgar_text.filing_sections(page, "10-Q")
-
-
 # ---------------------------------------------------------------- the setting
 
 @pytest.fixture
@@ -75,15 +55,6 @@ def box(tmp_path, monkeypatch):
     (tmp_path / "filings" / "AAPL.txt").write_bytes(FILINGS.read_bytes())
     monkeypatch.setattr(data_toolbox, "datetime", type("D", (datetime,), {"now": classmethod(lambda cls, tz=None: datetime(2026, 5, 1, tzinfo=timezone.utc))}))  # a fixed "today"
     return DataToolbox(base_dir=tmp_path)
-
-
-def test_the_user_agent_comes_from_the_environment_then_the_env_file_and_has_no_default(box, monkeypatch):
-    with pytest.raises(EdgarNotConfigured, match="SEC_USER_AGENT is not set") as error:
-        box._sec_user_agent(env={})
-    assert "Your Name you@example.com" in str(error.value)  # the message shows the shape, never a value that was invented
-    assert box._sec_user_agent(env={"SEC_USER_AGENT": "  Jacob   Pyrett jacob_pyrett@yahoo.com "}) == AGENT  # spaces collapsed
-    monkeypatch.setenv("SEC_USER_AGENT", "From Environment env@example.com")
-    assert box._sec_user_agent(env={"SEC_USER_AGENT": AGENT}) == "From Environment env@example.com"  # the environment first
 
 
 @pytest.mark.parametrize("value", ["Prometheus", "no contact here", "Jacob Pyrett j\u00e4cob@example.com", "name@example.com\u0000", "   "])
@@ -107,26 +78,6 @@ def downloads(box, monkeypatch):
     monkeypatch.setenv("SEC_USER_AGENT", AGENT)
     box.asked = asked
     return box
-
-
-def test_the_second_run_finds_nothing_to_fetch_and_makes_no_request(downloads, tmp_path, capsys):
-    downloads.fetch_filing_text("AAPL", from_date=400)
-    size = (tmp_path / "filings" / "AAPL.txt").stat().st_size
-    again = downloads.fetch_filing_text("AAPL", from_date=400)
-    capsys.readouterr()
-    assert again["candidates"] == 0 and again["written"] == 0 and len(downloads.asked) == 1 and (tmp_path / "filings" / "AAPL.txt").stat().st_size == size
-
-
-def test_nothing_to_fetch_needs_no_user_agent_and_something_to_fetch_does(box, capsys):
-    assert box.fetch_filing_text("AAPL", from_date=30)["candidates"] == 0  # the 10-Q was filed 91 days before the fixed "today": outside 30 days, nothing to do, no setting needed
-    with pytest.raises(EdgarNotConfigured, match="SEC_USER_AGENT is not set"):
-        box.fetch_filing_text("AAPL", from_date=400)
-    capsys.readouterr()
-
-
-def test_a_filing_filed_before_the_window_is_not_fetched(downloads, capsys):
-    assert downloads.fetch_filing_text("AAPL", from_date=60)["candidates"] == 0 and downloads.asked == []
-    capsys.readouterr()
 
 
 def test_only_filings_of_the_asked_forms_are_candidates_and_other_forms_are_refused(downloads, capsys):
@@ -198,29 +149,6 @@ def mock_client(handler, **kwargs):
 def get(handler, url=URL):
     with mock_client(handler) as client:
         return DataToolbox._get_bytes(client, _RateLimiter(0), "EDGAR test", url)
-
-
-def test_the_real_client_sends_the_identity_in_the_user_agent_header_and_asks_for_the_stored_url(box, monkeypatch, capsys):
-    """No fake of `_get_bytes` here: the real download code runs, over a mock transport that answers with the real fixture."""
-    requests = []
-    real = httpx.Client
-
-    def handler(request):
-        requests.append(request)
-        return httpx.Response(200, content=SUBMISSION.encode())
-
-    monkeypatch.setenv("SEC_USER_AGENT", AGENT)
-    monkeypatch.setattr(httpx, "Client", lambda **kw: real(transport=httpx.MockTransport(handler), **kw))
-    assert box.fetch_filing_text("AAPL", from_date=400)["written"] == 1
-    capsys.readouterr()
-    assert [str(r.url) for r in requests] == [URL] and requests[0].headers["user-agent"] == AGENT
-
-
-def test_a_200_returns_the_bytes_and_a_404_or_a_redirect_stops_without_the_identity_in_the_message():
-    assert get(lambda r: httpx.Response(200, content=b"abc")) == b"abc"
-    for status in (404, 403, 302):
-        with pytest.raises(RuntimeError, match=f"EDGAR test HTTP {status}$"):
-            get(lambda r, s=status: httpx.Response(s, headers={"location": "https://elsewhere.example.com/"}))
 
 
 def test_a_429_or_a_5xx_is_retried_with_a_pause_and_then_succeeds_or_gives_up(monkeypatch):

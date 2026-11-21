@@ -120,10 +120,3 @@ def as_before_the_forward_excess(stats) -> dict:
     return body
 
 
-FOLLOWED = ("key", "decision_day", "symbol", "verdict", "traded", "hypothetical", "plan", "entry", "exit", "result", "return_pct", "benchmark_return_pct", "excess_return_pct", "sector_return_pct", "gain", "horizons", "max_favorable_pct", "max_adverse_pct", "path", "split_adjusted")
-
-
-def outcomes_before_the_forward_return(run) -> list[dict]:
-    """What a run's outcomes say about HOW THE RECOMMENDATIONS WERE FOLLOWED (the plan, the entry, the exit, every return, the path), without the new `forward` block and without the bookkeeping that other changes since the run was saved added (its source, the Critic's finding
-    codes, the reason a recommendation was not traded). A run walked again from the same cache and the same bars must give them again: design/advisor_exit_plan_spec.md E8 (old records follow exactly as before)."""
-    return [{k: v for k, v in o.model_dump(mode="json").items() if k in FOLLOWED} for o in run.outcomes]

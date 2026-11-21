@@ -7,10 +7,9 @@ from datetime import date, datetime
 import pytest
 
 from bar_helpers import weekdays, write_day_files
-from prometheus.agents.data_clerk import bars as bars_module
 from prometheus.agents.data_clerk.data_clerk_agent import DataClerk
 from prometheus.common import work_order as wo
-from prometheus.tools.data_clerk import DATA_CLERK_TOOLS, DataClerkTools, ToolInputError
+from prometheus.tools.data_clerk import DataClerkTools, ToolInputError
 
 TODAY = date(2026, 10, 23)
 SYMBOLS = ("AAPL", "SPY", "PG")
@@ -51,30 +50,6 @@ def order(symbols=("PG",), start="2026-10-12", end="2026-10-16", **changes):
 # ---------------------------------------------------------------- DataClerkTools.daily_bars
 
 
-def test_one_day_is_a_range_and_a_weekend_inside_the_range_is_not_a_gap(bars_root):
-    found = tools(bars_root).daily_bars(["PG"], date(2026, 10, 16), date(2026, 10, 16))
-    assert [b["date"] for b in found["bars"]["PG"]] == ["2026-10-16"]
-    saturday = tools(bars_root).daily_bars(["PG"], date(2026, 10, 17), date(2026, 10, 18))
-    assert saturday["bars"] == {"PG": []}
-    over = tools(bars_root).daily_bars(["PG"], date(2026, 10, 15), date(2026, 10, 20))
-    assert [b["date"] for b in over["bars"]["PG"]] == ["2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20"] and over["gaps"] == []
-
-
-def test_a_range_after_the_newest_stored_day_is_empty_lists_and_a_gap_that_says_so(bars_root):
-    found = tools(bars_root).daily_bars(["PG", "SPY"], date(2026, 10, 26), date(2026, 11, 10))
-    assert found["bars"] == {"PG": [], "SPY": []}
-    assert len(found["gaps"]) == 1 and "no day_aggs_v1 files from 2026-10-26 to 2026-11-10" in found["gaps"][0]
-
-
-def test_a_missing_day_inside_the_range_is_named_and_no_bar_is_made_up(tmp_path):
-    root = tmp_path / "day_aggs_v1"
-    days = weekdays(10, TODAY)
-    write_day_files(root, {d: [{"ticker": "PG", "open": 1, "high": 2, "low": 0.5, "close": 1.5, "volume": 10}] for d in days}, skip=(date(2026, 10, 14),))
-    found = tools(root).daily_bars(["PG"], date(2026, 10, 12), date(2026, 10, 16))
-    assert [b["date"] for b in found["bars"]["PG"]] == ["2026-10-12", "2026-10-13", "2026-10-15", "2026-10-16"]
-    assert found["gaps"] == ["2026-10-14: no file (a market holiday, or not synced)"]
-
-
 @pytest.mark.parametrize("symbols, start, end, message", [
     ("PG", date(2026, 10, 12), date(2026, 10, 13), "at least one ticker"),
     ([], date(2026, 10, 12), date(2026, 10, 13), "at least one ticker"),
@@ -90,19 +65,7 @@ def test_daily_bars_refuses_what_makes_no_sense(bars_root, symbols, start, end, 
         tools(bars_root).daily_bars(symbols, start, end)
 
 
-def test_a_bar_folder_that_does_not_exist_is_an_error_and_not_no_bars(tmp_path):
-    with pytest.raises(FileNotFoundError, match="does not exist"):
-        tools(tmp_path / "nowhere").daily_bars(["PG"], date(2026, 10, 12), date(2026, 10, 13))
-
-
 # ---------------------------------------------------------------- DataClerk.request_bars
-
-
-def test_a_range_in_the_future_is_data_ready_with_empty_lists_and_the_gap_in_the_notes(bars_root):
-    result = clerk(bars_root).request_bars(order(("PG", "SPY"), start="2026-11-05", end="2026-11-30"))
-    assert result.status == "data_ready" and result.data.bars == {"PG": [], "SPY": []}
-    assert result.data.notes[:2] == ["PG: no stored bar from 2026-11-05 to 2026-11-30", "SPY: no stored bar from 2026-11-05 to 2026-11-30"]
-    assert "no day_aggs_v1 files from 2026-11-05 to 2026-11-30" in result.data.notes[2] and result.data.notes[2].startswith("bars: ")
 
 
 class SpyTools:

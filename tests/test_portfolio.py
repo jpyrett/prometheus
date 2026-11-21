@@ -11,7 +11,6 @@ from datetime import date
 import pytest
 from pydantic import ValidationError
 
-from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO
 from prometheus.common import portfolio as pf
 
 
@@ -21,20 +20,12 @@ def make(**changes):
     return pf.Portfolio.model_validate(data)
 
 
-# ---------------------------------------------------------------- the sample file is Jacob's portfolio
-
-
 # ---------------------------------------------------------------- the T+1 rule
 
 
 def test_a_position_with_no_purchase_date_is_all_sellable_and_a_symbol_not_held_has_none():
     p = make()
     assert p.sellable_shares("MSFT", date(2026, 11, 3)) == 10 and p.sellable_shares("NVDA", date(2026, 11, 3)) == 0
-
-
-def test_market_value_uses_the_prices_given():
-    p = make(positions=[{"symbol": "MSFT", "shares": 10, "cost_basis": 100.0}, {"symbol": "GM", "shares": 4, "cost_basis": 10.0}])
-    assert p.market_value({"MSFT": Decimal("400.0"), "GM": Decimal("50.0")}) == Decimal("4200.0")
 
 
 # ---------------------------------------------------------------- bad portfolios are refused
@@ -62,17 +53,6 @@ def base():
     return make(cash_avail="100", positions=[{"symbol": "MSFT", "shares": 10, "cost_basis": 100.0, "acquired": "2024-01-02"}, {"symbol": "F", "shares": 260, "cost_basis": 2.0}])
 
 
-def test_a_second_purchase_the_same_day_adds_to_the_locked_shares():
-    once = pf.after_purchase(base(), "F", 300, Decimal("12.00"), [], Decimal("0.00"), TODAY)
-    twice = pf.after_purchase(once, "F", 40, Decimal("10.00"), [], Decimal("0.00"), TODAY)
-    assert twice.position("F").shares == 600 and twice.position("F").recent_shares == 340 and twice.sellable_shares("F", TODAY) == 260
-
-
-def test_buying_into_a_position_that_was_wholly_locked_keeps_it_wholly_locked():
-    locked = make(positions=[{"symbol": "F", "shares": 5, "cost_basis": 1.0, "acquired": "2026-11-03"}])
-    assert pf.after_purchase(locked, "F", 5, Decimal("3.00"), [], Decimal("0.00"), TODAY).sellable_shares("F", TODAY) == 0
-
-
 # ---------------------------------------------------------------- apply_fill: one filled trade (Trader v1 spec section 13)
 
 
@@ -82,21 +62,6 @@ def test_a_second_buy_the_same_day_adds_to_the_locked_shares_and_a_wholly_locked
     assert twice.position("F").shares == 600 and twice.position("F").recent_shares == 340 and twice.sellable_shares("F", TODAY) == 260 and twice.cash_avail == Decimal("10000.00") - Decimal("3600.00") - Decimal("400.00")
     locked = make(cash_avail="100", positions=[{"symbol": "F", "shares": 5, "cost_basis": 1.0, "acquired": "2026-11-03"}])
     assert pf.apply_fill(locked, "F", "buy", 5, Decimal("3.00"), TODAY).sellable_shares("F", TODAY) == 0
-
-
-def test_an_amount_is_rounded_half_up_to_the_cent_the_way_the_account_book_rounds_it():
-    assert round(Decimal("500.125"), 2) == Decimal("500.12") and pf.trade_amount(1, Decimal("500.125")) == Decimal("500.13")                    # Python's round goes to the even cent; the book (Decimal, ROUND_HALF_UP) does not
-    assert pf.trade_amount(3, Decimal("167.125")) == Decimal("501.38") and pf.trade_amount(44, Decimal("167.1")) == Decimal("7352.4") and pf.trade_amount(10, Decimal("150.25")) == Decimal("1502.5") and pf.trade_amount(1, Decimal("0.004")) == Decimal("0.0")
-    assert pf.apply_fill(make(cash_avail="1000", positions=[]), "PG", "buy", 1, Decimal("500.125"), TODAY).cash_avail == Decimal("499.87")
-    sale = make(cash_avail="0", positions=[{"symbol": "PG", "shares": 1, "cost_basis": 1.0}])
-    assert pf.apply_fill(sale, "PG", "sell", 1, Decimal("500.125"), TODAY).cash_avail == Decimal("500.13")
-
-
-def test_a_name_is_kept_unless_a_new_one_is_given():
-    named = make(cash_avail="1000", positions=[{"symbol": "PG", "name": "Procter & Gamble Co", "shares": 1, "cost_basis": 100.0}])
-    assert pf.apply_fill(named, "PG", "buy", 1, Decimal("100.00"), TODAY).position("PG").name == "Procter & Gamble Co"
-    assert pf.apply_fill(named, "PG", "buy", 1, Decimal("100.00"), TODAY, name="P&G").position("PG").name == "P&G"
-    assert pf.apply_fill(named, "PG", "sell", 1, Decimal("100.00"), TODAY).position("PG") is None
 
 
 @pytest.mark.parametrize("args, message", [

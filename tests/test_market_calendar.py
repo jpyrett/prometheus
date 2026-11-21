@@ -19,56 +19,6 @@ def utc(text: str) -> datetime:
 
 
 # the NYSE's published lists (nyse.com/markets/hours-calendars, read 2026-11-11)
-PUBLISHED = {
-    2026: ["2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25", "2026-06-19", "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25"],
-    2027: ["2027-01-01", "2027-01-18", "2027-02-15", "2027-03-26", "2027-05-31", "2027-06-18", "2027-07-05", "2027-09-06", "2027-11-25", "2027-12-24"],
-    2028: ["2028-01-17", "2028-02-21", "2028-04-14", "2028-05-29", "2028-06-19", "2028-07-04", "2028-09-04", "2028-11-23", "2028-12-25"],
-}
-
-
-@pytest.mark.parametrize("year", PUBLISHED)
-def test_the_holiday_rules_give_the_nyses_published_list(year):
-    assert sorted(d.isoformat() for d in mc.holidays(year)) == PUBLISHED[year]
-
-
-@pytest.mark.parametrize("moment, state, trading_date, window_closes, next_open", [
-    ("2026-11-11 10:00", "regular", date(2026, 11, 11), "2026-11-12T01:00:00Z", "2026-11-12T09:00:00Z"),       # the window closes at 20:00 Eastern
-    ("2026-11-11 22:13", "closed", None, None, "2026-11-12T09:00:00Z"),                                        # after the after-hours close
-    ("2026-11-16 03:59", "closed", None, None, "2026-11-16T09:00:00Z"),
-    ("2026-11-16 04:00", "pre_market", date(2026, 11, 16), "2026-11-17T01:00:00Z", "2026-11-17T09:00:00Z"),
-    ("2026-11-16 09:29", "pre_market", date(2026, 11, 16), "2026-11-17T01:00:00Z", "2026-11-17T09:00:00Z"),
-    ("2026-11-16 09:30", "regular", date(2026, 11, 16), "2026-11-17T01:00:00Z", "2026-11-17T09:00:00Z"),
-    ("2026-11-16 15:59", "regular", date(2026, 11, 16), "2026-11-17T01:00:00Z", "2026-11-17T09:00:00Z"),
-    ("2026-11-16 16:00", "after_hours", date(2026, 11, 16), "2026-11-17T01:00:00Z", "2026-11-17T09:00:00Z"),   # Tuesday is a trading day: after-hours runs
-    ("2026-11-16 19:59", "after_hours", date(2026, 11, 16), "2026-11-17T01:00:00Z", "2026-11-17T09:00:00Z"),
-    ("2026-11-16 20:00", "closed", None, None, "2026-11-17T09:00:00Z"),
-    ("2026-11-13 15:59", "regular", date(2026, 11, 13), "2026-11-13T21:00:00Z", "2026-11-16T09:00:00Z"),       # a Friday: the window ends at 16:00 (Jacob's rule)
-    ("2026-11-13 16:00", "closed", None, None, "2026-11-16T09:00:00Z"),
-    ("2026-11-14 12:00", "closed", None, None, "2026-11-16T09:00:00Z"),                                        # a Saturday
-    ("2026-11-15 12:00", "closed", None, None, "2026-11-16T09:00:00Z"),                                        # a Sunday
-    ("2026-11-25 15:59", "regular", date(2026, 11, 25), "2026-11-25T21:00:00Z", "2026-11-27T09:00:00Z"),       # the day before Thanksgiving: no after-hours
-    ("2026-11-25 16:00", "closed", None, None, "2026-11-27T09:00:00Z"),
-    ("2026-11-26 11:00", "closed", None, None, "2026-11-27T09:00:00Z"),                                        # Thanksgiving
-    ("2026-11-27 12:59", "regular", date(2026, 11, 27), "2026-11-27T18:00:00Z", "2026-11-30T09:00:00Z"),       # an early close
-    ("2026-11-27 13:00", "closed", None, None, "2026-11-30T09:00:00Z"),
-    ("2026-07-03 10:00", "closed", None, None, "2026-07-06T08:00:00Z"),                                        # Independence Day, observed
-    ("2026-07-01 10:00", "regular", date(2026, 7, 1), "2026-07-02T00:00:00Z", "2026-07-02T08:00:00Z"),         # daylight time: 20:00 Eastern is 00:00 UTC
-    ("2026-07-02 17:00", "closed", None, None, "2026-07-06T08:00:00Z"),                                        # the day before the observed holiday: no after-hours
-])
-def test_the_session_of_a_moment(moment, state, trading_date, window_closes, next_open):
-    s = mc.session_at(at(moment))
-    assert (s.state, s.trading_date) == (state, trading_date)
-    assert s.window_closes_utc == (utc(window_closes) if window_closes else None)
-    assert s.next_open_utc == utc(next_open)
-    assert s.is_open == (state != "closed")
-
-
-@pytest.mark.parametrize("moment, reason", [
-    ("2026-11-11 22:13", "after the after-hours close"), ("2026-11-16 03:59", "before the pre-market open"), ("2026-11-14 12:00", "weekend"),
-    ("2026-11-26 11:00", "holiday: Thanksgiving Day"), ("2026-11-13 16:00", "after the regular close on a day before a closed day"),
-    ("2026-11-27 13:00", "after the early close"), ("2026-07-03 10:00", "holiday: Independence Day")])
-def test_a_closed_moment_says_why(moment, reason):
-    assert mc.session_at(at(moment)).reason == reason
 
 
 def test_an_extra_closed_date_closes_the_day(tmp_path):

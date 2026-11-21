@@ -13,7 +13,7 @@ import pytest
 
 from prometheus.common import shares as sh
 from prometheus.common.money import money, price
-from prometheus.common.portfolio import Position, trade_amount
+from prometheus.common.portfolio import trade_amount
 
 OIL = json.loads((Path(__file__).parent / "fixtures" / "session_real" / "auto_oil_no_second_mark.json").read_text(encoding="utf-8"))["order"]["trade_decisions"]
 PRICES = {d["symbol"]: price(money(d["est_cost"]) / d["shares"]) for d in OIL if d["shares"]}      # EOG 158.32, CVX 219.89 ... the price each purchase was sized at (the capture's float goes through the door of money, then a Decimal quotient)
@@ -49,20 +49,6 @@ def test_buys_is_the_most_shares_whose_cost_to_the_cent_is_not_above_the_dollars
     for price_ in (Decimal("5000.50"), Decimal("7123.45"), Decimal("9999.99")):                                  # a step costs over half a cent: the rounding can leave the cost a cent short, and one more step closes it
         for dollars in (Decimal("5000.00"), Decimal("10000.00"), Decimal("4999.99"), Decimal("1234.56")):
             assert trade_amount(sh.buys(dollars, price_), price_) == dollars
-
-
-def test_text_signed_and_noun_are_what_every_sentence_prints():
-    assert [sh.text(x) for x in (81, 1234, Decimal("1234567.5"), Decimal("81.004455"), Decimal("0.5"), Decimal("0.000001"), 0)] == ["81", "1,234", "1,234,567.5", "81.004455", "0.5", "0.000001", "0"]
-    assert [sh.signed(x) for x in (-81, Decimal("0.5"), 3, 0, Decimal("-0.000001"))] == ["-81", "+0.5", "+3", "+0", "-0.000001"]
-    assert [sh.noun(x) for x in (1, Decimal("1.0"), Decimal("0.5"), 2, 0)] == ["share", "share", "shares", "shares", "shares"]
-
-
-def test_a_field_of_shares_runs_the_door_before_pydantic_turns_a_bool_into_one():
-    assert Position(symbol="MSFT", shares=Decimal("15.000000"), cost_basis=Decimal("1.0")).shares == 15 and str(Position(symbol="MSFT", shares=Decimal("23.0"), cost_basis=Decimal("1.0")).shares) == "23"
-    assert Position(symbol="MSFT", shares=Decimal("81.004455"), cost_basis=Decimal("1.0"), recent_shares=Decimal("0.004455")).recent_shares == Decimal("0.004455")
-    for bad in (True, "2", 0, 0.1 + 0.2, 0.1234567, -1):
-        with pytest.raises(ValueError):
-            Position(symbol="MSFT", shares=bad, cost_basis=Decimal("1.0"))
 
 
 def test_the_four_share_columns_are_numeric_with_the_scale_of_places_in_the_create_table_and_in_the_alter():

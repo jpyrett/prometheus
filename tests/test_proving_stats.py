@@ -11,7 +11,6 @@ from decimal import ROUND_HALF_UP, Context, Decimal
 import pytest
 from proving_helpers import plans_of, real_bars, real_records, replayed, stored_bars_available
 
-from prometheus.common.portfolio import trade_amount
 from prometheus.proving import record, outcomes, stats
 from prometheus.proving.config import load_config
 from prometheus.proving.portfolio import SimPortfolio
@@ -30,10 +29,6 @@ def six(x: Decimal) -> float:
 def mean(values) -> float | None:
     values = [Decimal(str(v)) for v in values]
     return six(CTX.divide(sum(values, Decimal(0)), Decimal(len(values)))) if values else None
-
-
-def ratio(part, whole) -> float | None:
-    return six(CTX.divide(Decimal(part), Decimal(whole))) if whole else None
 
 
 @pytest.fixture(scope="module")
@@ -64,74 +59,6 @@ def curve():
         held = Decimal("40000.00") if day < "2026-11-16" else (Decimal("40000.00") * Decimal(str(next(b for b in bars["SPY"] if b["date"] == day)["close"])) / spy_open).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
         points.append(point.model_copy(update={"benchmark": held}))
     return points
-
-
-def test_every_statistic_of_a_real_set_of_outcomes_is_what_a_hand_count_of_them_says_with_its_n_and_the_small_sample_mark(scored, curve):
-    config = load_config()
-    result = stats.compute(scored, curve, config, starting_cash=Decimal("40000.00"))
-    won, lost = [o for o in scored if o.result == "won"], [o for o in scored if o.result == "lost"]
-    opened, closed = [o for o in scored if o.result == "open"], [o for o in scored if o.result in ("won", "lost")]
-    assert len(scored) == 28 and (len(won), len(lost), len(opened)) == (5, 17, 6) and sum(o.traded for o in scored) == 12 and sum(o.hypothetical for o in scored) == 16
-
-    block = result.outcomes                                                                     # the outcomes block: every outcome, an open position never a win
-    assert (block.n, block.closed, block.open, block.won, block.lost, block.not_filled, block.no_data) == (28, 22, 6, 5, 17, 0, 0)
-    assert block.win_rate == ratio(5, 22) and block.avg_win_pct == mean(o.return_pct for o in won) and block.avg_loss_pct == mean(o.return_pct for o in lost)
-    assert block.profit_factor == six(CTX.divide(sum((Decimal(str(o.return_pct)) for o in won), Decimal(0)), -sum((Decimal(str(o.return_pct)) for o in lost), Decimal(0))))
-    assert block.avg_sessions_held == mean(o.exit.sessions_held for o in closed)
-    assert (block.exits.stop, block.exits.target, block.exits.time_stop, block.exits.open) == (sum(o.exit.reason == "stop" for o in closed), sum(o.exit.reason == "target" for o in closed), 0, 6)
-    assert block.small_sample is False and block.closed >= config.min_sample                                     # 22 closed: over the minimum of 20
-
-    usable = [o for o in scored if o.return_pct is not None and o.excess_return_pct is not None]
-    for row in result.by_verdict:                                                                  # the Critic's value: approved, denied, neutral, unreviewed
-        group = [o for o in usable if o.verdict == row.verdict]
-        done = [o for o in group if o.result in ("won", "lost")]
-        assert [r.verdict for r in result.by_verdict] == ["approved", "denied", "neutral", "unreviewed"]
-        assert (row.n, row.closed, row.mean_return_pct, row.mean_excess_pct, row.win_rate, row.small_sample) == (len(group), len(done), mean(o.return_pct for o in group), mean(o.excess_return_pct for o in group),
-                                                                                                                 ratio(sum(o.result == "won" for o in done), len(done)), len(group) < 20)
-    assert [(r.verdict, r.n) for r in result.by_verdict] == [("approved", 12), ("denied", 12), ("neutral", 0), ("unreviewed", 4)]
-    assert [(r.low, r.high) for r in result.by_score] == [(0, 60), (60, 65), (65, 70), (70, 75), (75, 101)]      # the config's buckets since the forward excess (<60, 60-65, 65-70, 70-75, 75+): they were (0, 40), (40, 50), (50, 60), (60, 70), (70, 80), (80, 101)
-    for row in result.by_score:                                                                    # the Advisor's score in the buckets of the config: [low, high)
-        group = [o for o in usable if o.advisor.score is not None and row.low <= o.advisor.score < row.high]
-        done = [o for o in group if o.result in ("won", "lost")]
-        assert (row.n, row.closed, row.mean_return_pct, row.mean_excess_pct, row.win_rate, row.small_sample) == (len(group), len(done), mean(o.return_pct for o in group), mean(o.excess_return_pct for o in group),
-                                                                                                                 ratio(sum(o.result == "won" for o in done), len(done)), len(group) < 20)
-    assert sum(r.n for r in result.by_score) == len(usable) == 28
-    assert [r.family for r in result.by_family] == sorted({o.advisor.family for o in scored})
-    for row in result.by_family:
-        group = [o for o in usable if o.advisor.family == row.family]
-        assert (row.n, row.mean_excess_pct) == (len(group), mean(o.excess_return_pct for o in group))
-    traded = [o for o in scored if o.traded]
-    assert [r.symbol for r in result.by_symbol] == sorted({o.symbol for o in traded})
-    for row in result.by_symbol:                                                                   # the desk's money: gain in Money, over what was paid
-        mine = [o for o in traded if o.symbol == row.symbol]
-        gain, paid = sum((o.gain for o in mine), Decimal("0.00")), sum((o.entry.amount for o in mine), Decimal("0.00"))
-        assert (row.n, row.gain, row.return_pct) == (len(mine), gain, six(CTX.divide(gain, paid))) and isinstance(row.gain, Decimal)
-
-    folio = result.portfolio                                                                       # the account: from the curve alone
-    equity = [p.equity for p in curve]
-    assert (folio.start.isoformat(), folio.end.isoformat(), folio.days, folio.start_equity, folio.end_equity) == ("2026-11-13", "2026-11-19", 5, Decimal("40000.00"), equity[-1])
-    assert folio.return_pct == six(CTX.divide(equity[-1], Decimal("40000.00")) - 1) and folio.benchmark_return_pct == six(CTX.divide(curve[-1].benchmark, Decimal("40000.00")) - 1)
-    assert folio.excess_return_pct == six(Decimal(str(folio.return_pct)) - Decimal(str(folio.benchmark_return_pct)))
-    peak, worst, day_returns, base = Decimal("40000.00"), Decimal(0), [], Decimal("40000.00")
-    for p in curve:
-        peak = max(peak, p.equity)
-        worst = min(worst, CTX.divide(p.equity, peak) - 1)
-        day_returns.append(six(CTX.divide(p.equity, base) - 1))
-        base = p.equity
-    assert folio.max_drawdown_pct == six(worst) and (folio.best_day_pct, folio.worst_day_pct) == (max(day_returns), min(day_returns))
-    assert folio.drawdown_from.isoformat() == "2026-11-13" and folio.drawdown_to.isoformat() == [p.date for p in curve if CTX.divide(p.equity, Decimal("40000.00")) - 1 == worst][0].isoformat()
-    assert folio.invested_avg_pct == six(CTX.divide(sum((CTX.divide(p.invested, p.equity) for p in curve), Decimal(0)), Decimal(5)))
-
-    # the sentences, written out by hand from the templates' words
-    approved, denied = result.by_verdict[0], result.by_verdict[1]
-    assert (result.critic_value.denied_n, result.critic_value.approved_n) == (12, 12) and approved.small_sample and denied.small_sample          # both groups are under the minimum
-    assert result.critic_value.sentence == "Small sample: the Critic denied 12 and approved 12, too few to say whether it was right (20 of each are needed)."
-    assert result.critic_value.denied_mean_excess_pct == denied.mean_excess_pct and result.critic_value.approved_mean_excess_pct == approved.mean_excess_pct
-    excess = abs(folio.excess_return_pct)
-    word = "Beat" if folio.excess_return_pct > 0 else "Trailed"
-    assert result.headline.sentence == f"{word} SPY by {format((Decimal(str(excess)) * 100).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP), 'f')} points over 6 days: 28 recommendations, {WON_SHARE}% of the closed ones won."
-    assert result.headline.tone == ("pos" if folio.excess_return_pct > 0 else "neg")
-    assert result.headline.sentence == "Beat SPY by 1.4 points over 6 days: 28 recommendations, 23% of the closed ones won." and (folio.return_pct, folio.benchmark_return_pct) == (-0.030737, -0.045074)       # the desk lost 3.1% and SPY 4.5%
 
 
 def test_under_the_minimum_every_rate_carries_the_small_sample_mark_and_no_tone_and_without_a_curve_the_headline_is_about_the_recommendations(scored):

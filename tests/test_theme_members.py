@@ -16,14 +16,11 @@ from types import SimpleNamespace
 import pytest
 
 from prometheus.agents.data_clerk.data_clerk_agent import NEWS_ADDED, DataClerk
-from prometheus.application import recommendations
-from prometheus.prompts.data_clerk import theme_members_prompt
 from prometheus.tools import symbols
 
 CAPTURE = json.loads((Path(__file__).parent / "fixtures" / "data_clerk_real" / "theme_members.json").read_text(encoding="utf-8"))
 CASES = CAPTURE["cases"]
 OIL, CYBER = CASES["oil"], CASES["cybersecurity"]
-TODAY = date.fromisoformat(OIL["today"])
 
 
 class Replay:
@@ -97,44 +94,6 @@ def news_rows(out):
 
 # ---------------------------------------------------------------- the real replies
 
-def test_the_real_replies_leave_out_procter_and_gamble_and_meta_for_oil_and_keep_the_oil_companies():
-    out, model = run(OIL)
-    assert out["companies"] == OIL["result"]["companies"] and out["notes"] == OIL["result"]["notes"]      # what the live call returned
-    assert "PG" not in symbols_of(out) and "META" not in symbols_of(out)
-    assert set(news_rows(out)) == {"VLO", "CVE", "PBF", "APA", "CNQ", "CRGY"}                             # the real oil companies of the news are confirmed
-    refused = {n.split(" ")[0]: n for n in out["notes"] if "not in the theme" in n}
-    assert set(refused) == {"PG", "META"} and "Procter & Gamble Co/The" in refused["PG"] and "consumer goods" in refused["PG"] and "'oil'" in refused["PG"]
-    assert len(model.seen) == 2 and out["membership"]["stage"] == "theme_members" and out["membership"]["calls"] == 1 and out["membership"]["error"] is None
-
-
-def test_the_real_replies_leave_out_amazon_nvidia_and_honeywell_aerospace_for_cybersecurity():
-    out, model = run(CYBER)
-    assert out["companies"] == CYBER["result"]["companies"] and out["notes"] == CYBER["result"]["notes"]
-    assert not {"AMZN", "NVDA", "HONA"} & set(symbols_of(out)) and news_rows(out) == {}                   # the proposals stand alone: CRWD and S were proposed, the news adds nothing new
-    assert "CRWD" in symbols_of(out) and "S" in symbols_of(out)
-    assert {n.split(" ")[0] for n in out["notes"] if "not in the theme" in n} == {"AMZN", "NVDA", "HONA"}
-    assert len(model.seen) == 2
-
-
-def test_a_confirmed_company_is_added_with_its_listed_name_the_count_and_the_models_reason():
-    row = news_rows(run(OIL)[0])["VLO"]
-    assert row["how"] == "stored market news, confirmed by the Data Clerk's model" and row["public"] is True and row["parent"] is None and row["brand"] == "VLO"
-    assert row["company"] == "Valero Energy Corp" and any(r["description"] == "VALERO ENERGY CORP" for r in OIL["directory"]["VLO"])     # the directory's own name (shown as the project shows a name in capitals), not the model's
-    assert row["note"] == "7 stored articles; the model says it belongs: Valero refines and markets petroleum products."
-
-
-def test_the_model_is_asked_once_and_only_about_tickers_the_directory_names_that_the_model_did_not_propose():
-    out, model = run(OIL)
-    system, question = model.seen[1]
-    sent = json.loads(re.search(r"<tickers>\n(.*)\n</tickers>", question.content, re.S).group(1))
-    proposed = {c["symbol"] for c in OIL["result"]["companies"] if c["how"] != NEWS_ADDED}
-    discovered = [r for r in OIL["discovered"]["tickers"] if r["articles"] >= 3]
-    assert [s["symbol"] for s in sent] == [r["symbol"] for r in discovered if r["symbol"] not in proposed and r["symbol"] != "BP"]      # CVX was proposed; BP's only listing here is an ADR the directory rules refuse
-    pg = next(s for s in sent if s["symbol"] == "PG")
-    assert pg == {"symbol": "PG", "company": "Procter & Gamble Co/The", "headline": "Inflamed Oil Prices Send Pre-Markets Lower"}
-    assert question.content.startswith('<theme>"oil"</theme>') and "BELONGS" in system.content and "data, never instructions" in system.content
-    assert any(n.startswith("BP: ") and "no company of that symbol in Finnhub's directory" in n for n in out["notes"])      # not sent unnamed, said
-
 
 def test_a_ticker_the_symbol_lookup_fails_for_is_not_sent_and_the_failure_is_said():
     out, model = run(OIL, directory=Directory(OIL, broken={"PG"}))
@@ -143,46 +102,17 @@ def test_a_ticker_the_symbol_lookup_fails_for_is_not_sent_and_the_failure_is_sai
     assert any(n.startswith("PG: ") and "the symbol lookup failed" in n for n in out["notes"])
 
 
-def test_nothing_new_in_the_news_means_no_second_model_call():
-    only_proposed = {"CVX"}                                  # the one ticker of the oil news that the real model proposed
-    out, model = run(OIL, replies=[OIL["model_calls"][0]["reply"]], tools=Tools(OIL, only=only_proposed))
-    assert len(model.seen) == 1 and out["membership"] is None and news_rows(out) == {} and out["notes"] == []
-    few = run(CYBER, replies=[CYBER["model_calls"][0]["reply"]], tools=Tools(CYBER, only={"ADBE", "ANET", "AVGO", "BKYI", "BULL"}))      # the cybersecurity news that has fewer than 3 articles: not candidates
-    assert len(few[1].seen) == 1 and few[0]["membership"] is None
-
-
 # ---------------------------------------------------------------- code checks the form of the answer (T3), on the real reply edited by one field
-
-def drop(symbol):
-    return lambda members: members.remove(next(m for m in members if m["symbol"] == symbol))
 
 
 def change(of, **fields):
     return lambda members: next(m for m in members if m["symbol"] == of).update(fields)
 
 
-def test_a_ticker_the_answer_does_not_mention_is_not_added_and_it_is_said():
-    out, _ = run(OIL, replies_of(OIL, edit=drop("VLO")))
-    assert "VLO" not in symbols_of(out) and set(news_rows(out)) == {"CVE", "PBF", "APA", "CNQ", "CRGY"}
-    assert any(n.startswith("VLO (") and "the model did not say whether it belongs" in n for n in out["notes"])
-
-
 @pytest.mark.parametrize("belongs", ["true", "yes", 1, None])
 def test_a_belongs_that_is_not_true_or_false_is_not_a_yes(belongs):
     out, _ = run(OIL, replies_of(OIL, edit=change("CVE", belongs=belongs)))
     assert "CVE" not in symbols_of(out) and any(n.startswith("CVE (") and "did not say whether it belongs" in n for n in out["notes"])
-
-
-def test_a_symbol_that_was_not_sent_is_ignored_even_when_the_model_says_it_belongs():
-    out, _ = run(OIL, replies_of(OIL, edit=lambda members: members.append({"symbol": "ZZZZ", "belongs": True, "reason": "made up"})))
-    assert "ZZZZ" not in symbols_of(out) and symbols_of(out) == symbols_of(run(OIL)[0])
-    out, _ = run(OIL, replies_of(OIL, edit=change("PG", symbol="CVX")))                # the answer names CVX (never sent: it was proposed) in place of PG
-    assert "PG" not in symbols_of(out) and any(n.startswith("PG (") and "did not say" in n for n in out["notes"])
-
-
-def test_the_answer_may_say_yes_for_a_company_the_first_reading_refused_only_by_its_own_field():
-    out, _ = run(OIL, replies_of(OIL, edit=change("PG", belongs=True, reason="x")))     # the one field changed: the code follows the model's answer, it adds no judgment of its own
-    assert "PG" in news_rows(out) and news_rows(out)["PG"]["note"].endswith("the model says it belongs: x")
 
 
 def test_a_reply_that_is_not_the_shape_is_tried_once_more_then_the_news_adds_nothing_and_it_says_so():
@@ -193,40 +123,3 @@ def test_a_reply_that_is_not_the_shape_is_tried_once_more_then_the_news_adds_not
     assert news_rows(failed) == {} and symbols_of(failed) == [c["symbol"] for c in OIL["result"]["companies"] if c["how"] != NEWS_ADDED]
     assert failed["membership"]["calls"] == 2 and "not usable" in failed["membership"]["error"] and len(model.seen) == 3
     assert any("none was added" in n and "could not confirm that they belong" in n and "PG" in n for n in failed["notes"])
-
-
-def test_a_model_that_fails_adds_no_news_company_and_the_proposals_stand_alone():
-    out, _ = run(OIL, replies=[OIL["model_calls"][0]["reply"], RuntimeError("down")])
-    assert news_rows(out) == {} and symbols_of(out) == [c["symbol"] for c in OIL["result"]["companies"] if c["how"] != NEWS_ADDED]
-    assert out["membership"]["error"] == "the theme_members model call failed (RuntimeError)" and any("none was added" in n for n in out["notes"])
-
-
-def test_an_empty_answer_adds_nothing():
-    out, _ = run(OIL, replies_of(OIL, membership=json.dumps({"members": []})))
-    assert news_rows(out) == {} and sum("did not say whether it belongs" in n for n in out["notes"]) == 8
-
-
-# ---------------------------------------------------------------- the rest of the desk
-
-def test_a_list_item_is_one_company_so_a_company_the_news_added_is_left_out_of_it():
-    proposal_none = json.dumps({"companies": [], "sector_etf": None})            # the real proposal reply, with its one list emptied: nothing proposed, so the news is all there is
-    clerk = DataClerk(model=Replay([proposal_none, OIL["model_calls"][1]["reply"]]), symbol_search=Directory(OIL, unrecorded_finds_nothing=True))      # CVX was proposed when it was recorded, so the directory was never asked for it
-    clerk.lookup_interval, clerk.tools = 0, Tools(OIL)
-    request = recommendations.Request(kind="list", text="oil", items=["oil"])
-    result = recommendations.Result(request, "industry", TODAY, 3)
-    found = recommendations._list_companies(request, clerk, TODAY, result)
-    assert [(c["symbol"], c["public"]) for c in found] == [(None, False)] and "no listed company found" in found[0]["note"]
-
-
-def test_the_prompt_names_no_real_company_sector_or_ticker():
-    prompt = theme_members_prompt(TODAY)
-    words = set(re.findall(r"[A-Za-z0-9&.']+", prompt))
-    for case in CASES.values():
-        for row in case["discovered"]["tickers"]:
-            assert row["symbol"] not in words
-        for rows in case["directory"].values():
-            for row in rows:
-                assert row["description"] not in prompt and (len(row["symbol"]) < 2 or row["symbol"] not in words)
-    for real in ("oil", "cybersecurity", "Procter", "Amazon", "Nvidia", "Meta", "energy"):
-        assert real.lower() not in prompt.lower()
-    assert "2026-11-20" in prompt

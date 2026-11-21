@@ -3,11 +3,7 @@
 import pytest
 
 from prometheus.mcp.client import connect_client
-from prometheus.mcp.server import (
-    fetch_quote,
-    verify_fetch_quote,
-    _quote_payload,
-)
+from prometheus.mcp.server import fetch_quote, verify_fetch_quote
 
 
 # ── Pure unit tests (call functions directly) ───────────────────────────────

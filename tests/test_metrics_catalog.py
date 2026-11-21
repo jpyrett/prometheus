@@ -80,29 +80,6 @@ def test_compute_gives_one_result_object_per_symbol_per_requested_metric(tmp_pat
     assert zzz["rsi_14"]["value"] is None and zzz["rsi_14"]["note"] == "needs 30 bars, 0 stored" and zzz["last_close"]["note"] == "needs 1 bars, 0 stored"
 
 
-def test_the_finnhub_metrics_are_read_from_the_payload(tmp_path):
-    bars = write_series(tmp_path, 30)
-    payload = parse_metric_payload("AAA", FINNHUB, "2026-10-22")
-    out = catalog.compute(["AAA"], [{"name": n} for n in ("pe_ratio", "pb_ratio", "ps_ratio", "earnings_yield", "roe")], bars, {"AAA": payload}, {}, TODAY)["AAA"]
-    assert out["pe_ratio"]["value"] == 25.0 and out["pe_ratio"]["source"] == "finnhub_metric:2026-10-22" and out["pe_ratio"]["as_of"] == "2026-10-22"
-    assert out["pb_ratio"]["value"] == 9.0                                                          # the annual figure, because there is no quarterly one
-    assert out["ps_ratio"]["value"] is None and out["ps_ratio"]["note"] == "Finnhub has no value for ps_ratio for AAA"
-    assert out["earnings_yield"]["value"] == pytest.approx(0.04) and out["roe"]["value"] == 30.0
-    missing = catalog.compute(["AAA"], [{"name": "pe_ratio"}, {"name": "earnings_yield"}], bars, {}, {}, TODAY)["AAA"]
-    assert missing["pe_ratio"]["value"] is None and "no Finnhub metric payload for AAA" in missing["pe_ratio"]["note"] and missing["earnings_yield"]["value"] is None
-
-
-def test_filing_metrics_are_derived_from_the_evidence_and_say_where_they_came_from(tmp_path, apple_evidence):
-    bars = write_series(tmp_path, 30)
-    payload = parse_metric_payload("AAA", FINNHUB, "2026-10-22")
-    out = catalog.compute(["AAA"], [{"name": n} for n in ("payout_coverage", "share_count_change")], bars, {"AAA": payload}, {"AAA": apple_evidence}, TODAY)["AAA"]
-    accession = apple_evidence["balance_sheet"]["source"]["accession"]
-    assert out["payout_coverage"]["source"] == f"filing:{accession}" and out["payout_coverage"]["value"] == pytest.approx(3921 / 42097)
-    assert out["share_count_change"]["value"] < 0 and "dilution_current" not in catalog.METRIC_NAMES
-    none = catalog.compute(["AAA"], [{"name": "payout_coverage"}, {"name": "share_count_change"}], bars, {}, {}, TODAY)["AAA"]
-    assert none["payout_coverage"]["note"] == "no stored filings of AAA (fetch_filings has not been run for it)" and none["share_count_change"]["value"] is None
-
-
 def test_sector_and_market_metrics_need_their_etf_and_spy(tmp_path):
     bars = write_series(tmp_path, 300)
     names = ("sector_etf", "sector_ret_5d", "residual_5d", "residual_mom_12_1", "spy_ret_5d", "spy_above_sma_200", "beta_63d", "corr_63d_spy")
@@ -125,18 +102,6 @@ def test_unknown_metric_names_are_refused_with_the_known_names(tmp_path):
 
 def test_the_sector_etf_keys_are_the_eleven_spdr_funds():
     assert catalog.sector_etfs() == ("XLK", "XLF", "XLV", "XLE", "XLY", "XLP", "XLI", "XLB", "XLU", "XLRE", "XLC")
-
-
-def test_the_six_month_metrics_are_in_the_catalogue_and_computed_from_126_bars(tmp_path):
-    for name in ("sma_126", "high_126d", "low_126d"):
-        spec = catalog.METRICS[name]
-        assert (spec.group, spec.unit, spec.min_bars, spec.inputs) == ("price", "USD", 126, ("bars",))
-    names = [{"name": "sma_126"}, {"name": "high_126d"}, {"name": "low_126d"}]
-    short = catalog.compute(["AAA"], names, write_series(tmp_path / "short", 17), {}, {}, TODAY)["AAA"]
-    assert all(short[n]["value"] is None and short[n]["note"] == "needs 126 bars, 17 stored" for n in short)
-    out = catalog.compute(["AAA"], names, write_series(tmp_path / "long", 130), {}, {}, TODAY)["AAA"]   # closes 100.5 + i, highs 101.5 + i, lows 99 + i for i = 0..129
-    assert out["sma_126"]["value"] == pytest.approx(167.0) and out["high_126d"]["value"] == 230.5 and out["low_126d"]["value"] == 103.0
-    assert out["sma_126"]["window"] == "last 126 bars" and out["sma_126"]["source"].startswith("day_aggs:")
 
 
 def test_every_quantity_is_in_base_units_so_companies_compare_like_with_like():

@@ -26,7 +26,6 @@ from test_neutral_recommendation import neutral_only
 from prometheus.agents.account_manager import decisions, direct, handshake, neutral
 from prometheus.agents.account_manager import intent as it
 from prometheus.agents.account_manager.account_manager import AccountManager
-from prometheus.agents.advisor import ranking as rk
 from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.advisor.recommend import within_price_limit
 from prometheus.common import shares as sh

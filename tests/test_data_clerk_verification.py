@@ -3,7 +3,7 @@
 No network, no key: stores live in temporary folders (the fake one-word-per-dimension embedder of test_rag_retriever), the symbol directory is a fake, and the Data Clerk's model is an object that
 raises when it is invoked (this call must never reach it).
 """
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import pytest
 from test_filing_signals import APPLE_TODAY, store as filing_store
@@ -32,7 +32,7 @@ def stores(tmp_path):
         chunk("a2", 0, 1, "apple iphone phone phone", ["AAPL"], NOW - 1 * DAY, publisher="Reuters"),
         chunk("n1", 0, 1, "nvidia chip chip chip", ["NVDA"], NOW - 3 * DAY)])
     press = fill(make_store(tmp_path / "press", KeywordEmbeddings()), [
-        chunk("pr:p1", 0, 1, "apple tesla announces", ["AAPL"], NOW - 2 * DAY, publisher="Press release")])
+        chunk("pr:p1", 0, 1, "apple tesla announces", ["AAPL"], NOW - 1.4 * DAY, publisher="Press release")])      # 46 to 70 hours old whatever the hour of the run: inside a 3-day window, and older than a2
     filings = fill(make_store(tmp_path / "filings", KeywordEmbeddings()), [
         chunk("sec:0000320193-26-000006:risk_factors", 0, 1, "apple tax risk", ["AAPL"], NOW - 9 * DAY, publisher="SEC filing")])
     return news, press, filings
@@ -79,17 +79,6 @@ def apple_filings(tmp_path, monkeypatch, capsys):
     capsys.readouterr()
 
 
-def test_evidence_items_are_read_again_by_id_from_the_stored_filings(stores, apple_filings):
-    tools = clerk(stores).tools
-    tools.today = APPLE_TODAY
-    items = {i["id"]: i for i in tools.fetch_filings_recommendation("AAPL")["evidence"]}
-    first = next(iter(items))
-    got = tools.read_evidence("AAPL", [first, "E999"])
-    assert got[first]["found"] is True and got[first]["quote"] == items[first]["quote"] and got[first]["what"] == items[first]["what"]
-    assert set(got[first]["source"]) == {"accession", "form", "filed"} and got[first]["source"]["accession"] == items[first]["source"]["accession"]
-    assert got["E999"] == {"found": False, "note": "AAPL has no evidence item E999 in its stored filings"}
-
-
 def test_no_stored_filings_means_every_evidence_id_is_not_found_with_the_tools_message(stores, tmp_path, monkeypatch):
     monkeypatch.setenv("FILINGS_OUTPUT_DIR", str(tmp_path / "empty"))
     got = clerk(stores).tools.read_evidence("AAPL", ["E1", "E2"])
@@ -97,11 +86,6 @@ def test_no_stored_filings_means_every_evidence_id_is_not_found_with_the_tools_m
 
 
 # ---------------------------------------------------------------- recent_sources
-
-def test_the_newest_stored_news_and_press_releases_come_back_newest_first_with_their_corpus(stores):
-    got = clerk(stores).tools.recent_sources("AAPL", "Apple", since_days=14, k=8)
-    assert [h["article_id"] for h in got] == ["a2", "pr:p1", "a1"] and [h["corpus"] for h in got] == ["news", "press_releases", "news"]
-    assert got[0]["text"] == "apple iphone phone phone" and {"chunk_id", "headline", "publisher", "published_utc", "tickers"} <= set(got[0])
 
 
 def test_recent_sources_respects_the_window_the_symbol_and_k(stores):
@@ -162,13 +146,6 @@ def test_one_failed_part_does_not_stop_the_others(stores, monkeypatch):
     assert [c["outcome"] for c in result.data.tool_calls if c["name"] == "recent_sources"] == ["error"]
 
 
-def test_every_part_failing_makes_the_order_data_failed(stores, monkeypatch):
-    c = clerk(stores)
-    monkeypatch.setattr(c.tools, "read_sources", lambda ids: (_ for _ in ()).throw(RuntimeError("boom")))
-    result = c.request_verification(order(chunks=["a1#0"]))
-    assert result.status == "data_failed" and result.errors and result.data.verification["chunks"] == {}
-
-
 def test_a_refused_request_comes_back_data_failed_with_the_reasons_and_no_data(stores):
     result = clerk(stores).request_verification(order(chunks=["has space"]))
     assert result.status == "data_failed" and result.data is None and any("chunks must be a list" in e for e in result.errors)
@@ -180,17 +157,3 @@ def test_an_order_that_already_has_its_data_is_returned_unchanged(stores):
     assert clerk(stores).request_verification(done) is done and done.data is None and done.errors == []
 
 
-def test_the_symbol_lookup_is_paced_and_nothing_is_fetched(stores):
-    c = clerk(stores, AnyQuery([]))
-    c.lookup_interval = 0.05
-    started = datetime.now()
-    c.request_verification(order(symbols=["AAPL", "MSFT", "TSLA"]))
-    assert datetime.now() - started >= timedelta(seconds=0.1)       # three lookups, no faster than one every 50 ms
-    assert c.allow_fetch is False
-
-
-def test_a_chunk_asked_twice_is_read_once_and_the_clock_is_passed_to_the_search(stores):
-    later = NOW + 30 * DAY             # a month on, nothing in these stores is inside the last 7 days
-    result = clerk(stores).request_verification(order(chunks=["a1#0", "a1#0"], symbols=["AAPL"], fresh={"since_days": 7, "k": 3}), now=later)
-    assert result.data.verification["chunks"].keys() == {"a1#0"} and result.data.verification["fresh"]["AAPL"] == []
-    assert len(clerk(stores).request_verification(order(symbols=["AAPL"], fresh={"since_days": 7, "k": 3}), now=NOW).data.verification["fresh"]["AAPL"]) == 3

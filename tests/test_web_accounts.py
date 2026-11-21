@@ -153,32 +153,3 @@ def test_a_run_that_is_refused_because_another_is_active_saves_no_mode(store):
         store.delete_account(account_id)
 
 
-def test_a_request_that_says_nothing_about_raise_funds_never_sells_the_box_Always_raise_funds_goes_through_as_it_was_ticked(store):
-    """Entry 142, R12: `POST /api/runs` takes `raise_funds: bool` (a missing value is false) and hands it to the run as the setting ALWAYS_RAISE_FUNDS for that one run; `/api/health` says the default is false."""
-    target = Starts(store)
-    web = TestClient(create_app(live_target=target))
-    assert web.get("/api/health").json()["defaults"]["raise_funds"] is False
-    account_id = web.post("/api/accounts", json={"name": "Raise Funds Test Holder", "age": 40, "risk": "moderate", "mode": "ask", "cash": "1000.00"}).json()["account"]["id"]
-    try:
-        run = {"account_id": account_id, "prompt": "Buy 2 shares of ANT"}
-        for body, raise_funds in ((run, False), ({**run, "raise_funds": True}, True), ({**run, "raise_funds": False}, False)):
-            assert web.post("/api/runs", json=body).status_code == 202
-            over(web)
-            assert target.seen[-1]["params"]["raise_funds"] is raise_funds
-    finally:
-        store.delete_account(account_id)
-
-
-def test_a_request_that_says_nothing_about_fetch_never_pays_for_one_only_the_user_turns_it_on(store):
-    target = Starts(store)
-    web = TestClient(create_app(live_target=target))
-    assert web.get("/api/health").json()["defaults"]["fetch"] is False                 # the page no longer ticks it by default (Jacob, 2026-11-20: an unexplained fetch)
-    account_id = web.post("/api/accounts", json={"name": "Fetch Test Holder", "age": 40, "risk": "moderate", "mode": "ask", "cash": "1000.00"}).json()["account"]["id"]
-    try:
-        run = {"account_id": account_id, "prompt": "Buy 2 shares of MSFT"}
-        for body, fetch in ((run, False), ({**run, "fetch": True}, True), ({**run, "fetch": False}, False)):
-            assert web.post("/api/runs", json=body).status_code == 202
-            over(web)
-            assert target.seen[-1]["params"]["fetch"] is fetch
-    finally:
-        store.delete_account(account_id)

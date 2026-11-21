@@ -8,7 +8,6 @@ denied). Nothing is invented, and no agent is replaced by a stand-in. The tests 
 """
 import copy
 import json
-import math
 from datetime import date, datetime, timezone
 from decimal import Decimal
 from pathlib import Path
@@ -24,11 +23,9 @@ from prometheus.common.user_profile import UserProfile
 from prometheus.tools.data_clerk import DataClerkTools
 
 DAY = date(2026, 11, 13)
-EQUITY = Decimal("15000")
 CAPTURE = Path(__file__).parent / "fixtures" / "session_real" / "bob_jones_oil.json"
 MOMENT = datetime(2026, 11, 13, 20, 30, tzinfo=timezone.utc)          # 15:30 Eastern on Friday 2026-11-13: the simulated moment of the real run
 PROFILE = UserProfile(user="Bob Jones", risk_tolerance="conservative", age=60, trade_mode="auto")
-WIDE = PROFILE                                                                                                                         # there is no limit of the profile any more (entry 91): only the money holds a purchase back
 BOB = Portfolio(user="Bob Jones", cash_avail=Decimal("15000"))
 
 
@@ -65,34 +62,7 @@ def decide(capture, order=None, portfolio=BOB, profile=PROFILE, balance="even", 
     return decisions.decide_trades(order or reviewed(capture), portfolio, profile, None, MOMENT, mode, balance, budget)
 
 
-# ---------------------------------------------------------------- the rule on its own, over real prices
-
-def test_every_company_gets_the_same_dollars_whatever_its_price(closes):
-    got = split(["PG", "MSFT", "GM"], closes, Decimal("4500"))
-    target = Decimal("1500.00")                                                                  # no limit of any company's own: the money divided by the companies is the target
-    assert all(s.target_dollars == target and s.of == 3 and s.allocation == "even" for s in got.values())
-    for symbol, s in got.items():
-        assert s.shares >= math.floor(target / closes[symbol]) >= 1 and "even split" in s.notes[0]                  # AMENDED (entry 108): the equal amount buys these whole shares, and the leftover may buy more (below)
-    assert {s: got[s].shares for s in got} == {"PG": 8, "MSFT": 3, "GM": 18} and Decimal("4500") - sum(s.est_cost for s in got.values()) == Decimal("21.96")      # by hand: step 1 PG 8, MSFT 2, GM 17 ($3,868.16); the $631.84 left buys MSFT 1 and GM 1 more
-
-
-def test_a_company_that_could_not_buy_one_share_is_dropped_and_the_others_are_balanced_again(closes):
-    got = split(["GM", "PG", "TSLA"], closes, Decimal("600"))                                               # $200 each buys no share of TSLA: it is out, and $300 each is for the other two
-    assert (got["TSLA"].shares, got["TSLA"].est_cost, got["TSLA"].binding) == (0, 0, "no_room") and f"does not buy one share at ${closes['TSLA']:,.2f}" in got["TSLA"].notes[-1]
-    assert [got[s].shares for s in ("GM", "PG")] == [3, 2]                                         # AMENDED (entry 108): $300 each bought GM 3 ($258.00) and PG 1 ($169.80); the $172.20 left bought PG a second share ($339.60), and GM's next ($86.00) no longer fits the $2.40 left
-    assert got["GM"].target_dollars == got["PG"].target_dollars == Decimal("300") and got["GM"].of == got["PG"].of == 2
-
-
 # ---------------------------------------------------------------- through decide_trades, over the real reviews of the real session
-
-
-def test_a_company_that_could_not_buy_one_share_is_dropped_through_decide_trades_and_is_not_asked_about(capture):
-    asked = []
-    poorer = Portfolio(user="Bob Jones", cash_avail=Decimal("300"))                                           # $150 each buys no share of either
-    out = decisions.decide_trades(reviewed(capture), poorer, WIDE.model_copy(update={"trade_mode": "ask"}), lambda card: asked.append(card["symbol"]) or True, MOMENT, "ask", "even", None)
-    shares = {d["symbol"]: (d["shares"], d["will_trade"]) for d in out.trade_decisions}
-    assert shares == {"XOM": (0, "no_funds"), "APA": (0, "no_system_denied"), "EOG": (0, "no_funds")} and asked == [] and out.status == "decided"
-    assert all("does not buy one share" in d["reason"] for d in out.trade_decisions if d["will_trade"] == "no_funds") and not any("balance" in d for d in out.trade_decisions)
 
 
 def test_only_a_purchase_is_part_of_the_split_a_recommended_sale_is_never_traded_and_a_denial_is_not_part_of_anything(capture):

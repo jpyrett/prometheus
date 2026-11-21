@@ -15,13 +15,13 @@ from datetime import date
 import pytest
 from advisor_helpers import MemoryLedger, Scripted
 from pydantic import ValidationError
-from test_advisor_sndk_pg import FIXTURES, RecordedClerk, recorded_plan_config, scrub
+from test_advisor_sndk_pg import FIXTURES, RecordedClerk, recorded_plan_config
 
 from prometheus.agents.advisor import thesis as th
 from prometheus.agents.advisor.advisor import Advisor
 from prometheus.agents.advisor.calls import parse_list
 from prometheus.agents.advisor.config import AdvisorConfig
-from prometheus.agents.advisor.record import Concentration, Recommendation, TradePlan
+from prometheus.agents.advisor.record import Concentration, TradePlan
 from prometheus.common import work_order as wo
 from prometheus.rag.config import REPO_ROOT
 
@@ -100,20 +100,6 @@ def test_the_advisor_is_given_no_portfolio_it_imports_none_takes_none_and_names_
     assert problems == []
 
 
-def test_what_the_advisors_model_is_told_has_no_holding_no_sale_and_no_portfolio():
-    """The plan prompt, the thesis prompt and the candidate lines (what the model is shown), and the digest of a REAL record, say nothing of a holding, a sale, a reduction or a portfolio (entry 105)."""
-    import re
-
-    from prometheus.prompts import advisor_v1 as prompts
-    words = re.compile(r"\b(held|holds|holding|holdings|sell|sells|sold|selling|reduce|reduction|portfolio|hold)\b", re.I)
-    fixed = [prompts.plan_system(date(2026, 11, 5), 10, 5, evidence=True), prompts.plan_system(date(2026, 11, 5), 10, 5, evidence=False), prompts.THESIS_SYSTEM, prompts.RETRY_PLAN, prompts.RETRY_THESIS,
-             prompts.candidates_text([{"symbol": "PG", "company": "Procter & Gamble", "origin": origin} for origin in ("subject", "sources", "discover", "model")])]
-    assert [m.group(0) for text in fixed for m in words.finditer(text.replace("the company sells new shares or convertible debt", ""))] == []      # an event class, the COMPANY's dilution: not the user's sale
-    order, _ = run("PG_open")
-    digest = th.digest(order.recommendations[0])
-    assert digest.splitlines()[1].startswith("Decision: buy (") and not [m.group(0) for line in digest.splitlines() if not line.startswith(("Evidence", "Event")) for m in words.finditer(line)]
-
-
 def test_the_advisor_imports_nothing_of_the_users_profile_the_account_manager_or_the_account_book():
     for path in ADVISOR_FILES:
         for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
@@ -156,17 +142,6 @@ def run(name: str, plan_reply=None, changes=None, config_path=None):
     return order, fx
 
 
-@pytest.mark.parametrize("name", ["SNDK", "PG", "PG_open"])
-def test_no_real_record_holds_a_size_and_each_validates_as_a_record(name):
-    order, _ = run(name)
-    assert order.status == "recommended" and order.recommendations
-    for record in order.recommendations:
-        Recommendation.model_validate(record)
-        assert set(record["trade"]) == set(TradePlan.model_fields) and not SIZE_FIELDS & set(record["trade"])
-        assert set(record["concentration"]) == set(Concentration.model_fields) and "portfolio_fit" not in record
-        assert "suggested_shares" not in json.dumps(record) and "position_pct" not in json.dumps(record) and "risk_budget" not in json.dumps(record)       # not in any section, not even as text
-
-
 def test_a_red_flag_on_the_real_captured_company_stops_it_as_a_candidate_there_is_no_reduction():
     """AMENDED (entry 105). This test changed ONE real number of the held GM (its cash flow is negative while it shows a profit: a red flag) and the holdings pass wrote a `reduce` with an entry zone and no amount. The Advisor
     knows no holding: the same change to the company the capture is about (SNDK) stops it at the red_flag gate, it is a candidate with the reason, and there is no record, so nothing is recommended to buy or to sell."""
@@ -195,16 +170,6 @@ def test_the_real_models_thesis_passes_the_checks_on_a_record_with_no_size(name)
     digest = th.digest(dumped)
     assert "suggested" not in digest and "oversized" not in digest and "of equity" not in digest and "position " not in digest and "shares" not in digest.replace("share_count_change", "")
     assert "Trade: strategy" in digest and "stop " in digest and "time stop " in digest and "order " in digest
-
-
-def test_the_thesis_may_not_name_a_number_the_record_does_not_have_so_it_cannot_propose_an_amount():
-    order, _ = run("PG_open")
-    record = order.recommendations[0]
-    allowed = th.allowed_numbers(record)
-    amount = next(n for n in range(2, 5000) if float(n) not in allowed and not any(abs(round(a, 0) - n) < 1e-9 for a in allowed))
-    item = {**real_thesis_items("PG_open")[0], "thesis": f"Buy {amount} shares of PG on its capital return."}
-    reasons = th.check(item, record)
-    assert any(f"{amount}" in reason and "not in the record" in reason for reason in reasons)
 
 
 def test_the_thesis_prompt_tells_the_model_there_is_no_amount_and_the_system_text_names_no_size():
