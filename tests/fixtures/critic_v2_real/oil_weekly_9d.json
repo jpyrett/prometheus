@@ -1,0 +1,55 @@
+{
+ "_note": "The research of the nine weekly decision days 2026-09-14 to 2026-11-09 of a REAL fast Time Machine run made with Critic version 2 (tm-20261121-000738-2fa2: the oil request, cash 10000, the Neutral box on), copied from data/proving/cache with its keys. `request`, `intent`, `stamp`, `versions` and `models` are the run's own: the keys are the keys research_key makes from them (the Advisor was asked for 3 spare recommendations).",
+ "run_id": "tm-20261121-000738-2fa2",
+ "request": {
+  "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+  "cash": 10000,
+  "start": "2026-06-08",
+  "end": "2026-11-09",
+  "cadence": "weekly",
+  "risk": "moderate",
+  "neutral": true,
+  "strict": false,
+  "speed": "fast"
+ },
+ "intent": {
+  "request": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+  "action": "buy",
+  "topic": "oil",
+  "symbols": [],
+  "companies": [],
+  "count": 3,
+  "allocation": "even",
+  "budget": 3000,
+  "each": false,
+  "orders": []
+ },
+ "stamp": "a7512cc04692a6bd",
+ "versions": {
+  "advisor_v1": "2",
+  "critic_v1": "2",
+  "account_manager_v1": "1",
+  "trader_v1": "1",
+  "proving_v1": "1"
+ },
+ "models": {
+  "data_clerk": "openai/gpt-oss-120b",
+  "advisor": "nvidia/nemotron-3-super-120b-a12b",
+  "critic": "z-ai/glm-5.3",
+  "account_manager": "openai/gpt-oss-120b",
+  "guard": "qwen/qwen3.8-max-0902",
+  "trader": null
+ },
+ "keys": {
+  "2026-09-14": "6a913ca3447bf038a42bb12f113c9fa08c346940",
+  "2026-09-21": "dba31344d4d36f34196b6a94613a95ad1ade0467",
+  "2026-09-28": "d49e98a55b093f475541784ebe8721e72c417fee",
+  "2026-10-05": "6e9b2e518c733b1bf524f039862a239c2a6910d4",
+  "2026-10-12": "08299e68b326af0903a4c721a4a3008a66392187",
+  "2026-10-19": "b8854434ad0f64c0f88cb49851b1e62c2671a96a",
+  "2026-10-26": "85074938a24d5fd69ec52611463b6f485fdf82fa",
+  "2026-11-02": "a341bf8ca4c65dfea4c7263877c66c2f08f7a911",
+  "2026-11-09": "6895dbaf60d571df90806b08f8d59e129eb0516d"
+ },
+ "last_bar_day": "2026-11-20"
+}

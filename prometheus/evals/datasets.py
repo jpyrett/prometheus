@@ -17,7 +17,8 @@ from prometheus.rag.config import REPO_ROOT
 
 REDTEAM = "prometheus-security-redteam"
 SESSIONS = "prometheus-sessions"
-DATASETS = (REDTEAM, SESSIONS)
+OUTCOMES = "prometheus-outcomes"
+DATASETS = (REDTEAM, SESSIONS, OUTCOMES)
 RED_TEAM_FILE = REPO_ROOT / "configs" / "security" / "red_team_v1.jsonl"
 CAPTURES = REPO_ROOT / "tests" / "fixtures" / "session_real"
 GUARD_REPLIES = REPO_ROOT / "tests" / "fixtures" / "security" / "guard_replies.json"
@@ -34,6 +35,9 @@ def description(name: str) -> str:
     if name == SESSIONS:
         return (f"Prometheus real sessions (design choices entry 117): one example per real session capture of tests/fixtures/session_real that holds a work order, with what the desk did (understood, recommendations, "
                 f"the Critic's verdicts, decisions, trades, cash before and after). Created {today} by scripts/run_offline_evals.py; no article text is stored.")
+    if name == OUTCOMES:
+        return (f"Prometheus outcomes (design choices entry 126, the Proving Ground): one example per recommendation of the real runs that the stored bars have scored (the Track Record), with what the desk said (the Advisor's score and plan, "
+                f"the Critic's verdict) and how it did against SPY. Created {today} by scripts/run_offline_evals.py; no article text is stored.")
     raise ValueError(f"unknown dataset {name!r}: choose one of {', '.join(DATASETS)}")
 
 
@@ -156,14 +160,34 @@ def session_examples() -> list[dict]:
     return examples
 
 
+def outcome_examples() -> list[dict]:
+    """One example per SCORED recommendation of the Track Record (`prometheus.proving.track.build`: the real runs against the stored bars; free): inputs = the record's ids, the Advisor's score, stance and family, the Critic's verdict
+    the plan (prices and dates) and the CODES of the Critic's findings (blockers, warnings, the ones that asked for a person, and its version); reference outputs = the outcome (result, return, benchmark, excess, exit, path closes). NEVER article text. A recommendation with no data yet (`no_data`, `not_filled`) is not an example."""
+    from prometheus.common.money import jsonable
+    from prometheus.proving import track
+    examples = []
+    for o in track.build().outcomes:
+        if o.result not in ("won", "lost", "open"):
+            continue
+        key = f"outcome:{o.key}"
+        inputs = {"example_key": key, "record_id": o.record_id, "review_id": o.review_id, "symbol": o.symbol, "decision_day": o.decision_day.isoformat(), "verdict": o.verdict,
+                  "advisor": o.advisor.model_dump(mode="json") if o.advisor else None, "critic": o.critic.model_dump(mode="json") if o.critic else None, "plan": jsonable(o.plan.model_dump(mode="json")),
+                  "findings": {"config_version": o.critic.config_version, "blockers": o.critic.blockers, "warnings": o.critic.warnings, "human": o.critic.human} if o.critic else None}      # the codes of what the Critic found (Critic v2, `critic_rule_value`)
+        outputs = jsonable({"result": o.result, "traded": o.traded, "not_traded_reason": o.not_traded_reason, "return_pct": o.return_pct, "benchmark_return_pct": o.benchmark_return_pct, "excess_return_pct": o.excess_return_pct,
+                            "exit_reason": o.exit.reason if o.exit else None, "sessions_held": o.exit.sessions_held if o.exit else None, "max_adverse_pct": o.max_adverse_pct, "max_favorable_pct": o.max_favorable_pct,
+                            "path": [{"date": p.date.isoformat(), "close": p.close, "return_pct": p.return_pct} for p in o.path]})
+        examples.append({"key": key, "inputs": inputs, "outputs": outputs, "metadata": {"example_key": key, "source": "prometheus.proving.track", "verdict": o.verdict, "result": o.result, "traded": o.traded}})
+    return examples
+
+
 def build(name: str | None = None) -> dict:
     """{dataset name: examples}, or just the one named."""
-    both = {REDTEAM: redteam_examples(), SESSIONS: session_examples()}
+    builders = {REDTEAM: redteam_examples, SESSIONS: session_examples, OUTCOMES: outcome_examples}
     if name is None:
-        return both
-    if name not in both:
+        return {n: b() for n, b in builders.items()}
+    if name not in builders:
         raise ValueError(f"unknown dataset {name!r}: choose one of {', '.join(DATASETS)}")
-    return {name: both[name]}
+    return {name: builders[name]()}
 
 
 # ---------------------------------------------------------------- the upload, as a plan (pure: the command makes the calls)

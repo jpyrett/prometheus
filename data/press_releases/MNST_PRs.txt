@@ -1,0 +1,108 @@
+<<<PRESS_RELEASE>>>
+id: e08f43ea69cce9bf
+symbol: MNST
+published_utc: 2025-11-24T08:00:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-announces-webcast-details-investor-meeting-december-2-2025-company
+headline: Monster Beverage Announces Webcast Details for Investor Meeting December 2, 2025; Company Announces Participation in Morgan Stanley Global Consumer & Retail Conference
+<<<TEXT>>>
+--Monster Beverage Corporation announced today that its Chief Executive Officer, Hilton Schlosberg, and members of its senior executive team will host an investor meeting Tuesday, December 2, 2025, to provide an update on the Company’ s business and operations. The Company also announced that its CEO and members of its senior executive team will participate in a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b325ee9fbdba9078
+symbol: MNST
+published_utc: 2026-02-19T12:30:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-report-financial-results-2025-fourth-quarter-february-26-2026-2026
+headline: Monster Beverage to Report Financial Results for 2025 Fourth Quarter on February 26, 2026
+<<<TEXT>>>
+--Monster Beverage Corporation announced today that results for its fourth quarter ended December 31, 2025, will be reported on Thursday, February 26, 2026, after the close of the market. The company also said that Chief Executive Officer, Hilton Schlosberg, will host an investor conference call that same day at 2 p.m. Pacific Time to review the company’ s financial...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b22c60faba49ba74
+symbol: MNST
+published_utc: 2026-02-26T16:10:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-reports-2025-fourth-quarter-and-full-year-financial-results-2026-02
+headline: Monster Beverage Reports 2025 Fourth Quarter and Full-Year Financial Results
+<<<TEXT>>>
+--February 26, 2026– Monster Beverage Corporation today reported financial results for the three- and twelve-months ended December 31, 2025. Net sales for the 2025 fourth quarter increased 17.6 percent to $2.13 billion, from $1.81 billion in the same period last year. Net sales for the Company’ s Monster Energy ® Drinks segment, which primarily includes the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 08e70fbc7be240c1
+symbol: MNST
+published_utc: 2026-03-16T18:24:00Z
+url: https://www.nasdaq.com/press-release/monster-energy-flips-chicago-river-green-st-patricks-spectacular-jet-ski-show-2026-03
+headline: Monster Energy Flips Chicago River Green for St. Patrick’s with Spectacular Jet Ski Show
+<<<TEXT>>>
+--Monster Energy returned to Chicago for the greatest St Patrick's day celebration this side of the Atlantic… and this time brought two very special guests! Surprising the tens of thousands of onlookers gathered to watch the incredible annual St Paddy’ s Day spectacle, Monster Energy’ s pro jet ski riders Tory Snyder and Coy Curtis ripped along the newly glowing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 137e650b89df7440
+symbol: MNST
+published_utc: 2026-04-30T11:00:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-report-financial-results-2026-first-quarter-may-7-2026-2026-04-30
+headline: Monster Beverage to Report Financial Results for 2026 First Quarter on May 7, 2026
+<<<TEXT>>>
+--Monster Beverage Corporation announced today that results for its first quarter ended March 31, 2026, will be reported on Thursday, May 7, 2026, after the close of the market. The company also said that Chief Executive Officer, Hilton Schlosberg, will host an investor conference call that same day at 2 p.m. Pacific Time to review the company’ s financial results and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 623e606e57ad7f7a
+symbol: MNST
+published_utc: 2026-05-07T16:10:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-reports-2026-first-quarter-financial-results-2026-05-07
+headline: Monster Beverage Reports 2026 First Quarter Financial Results
+<<<TEXT>>>
+--Monster Beverage Corporation today reported financial results for the three-months ended March 31, 2026. Net sales for the 2026 first quarter increased 26.9 percent to $2.35 billion, from $1.85 billion in the same period last year. Net sales for the Company’ s Monster Energy ® Drinks segment, which primarily includes the Company’ s Monster Energy ® drinks,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0708ad891b89f2fb
+symbol: MNST
+published_utc: 2026-05-15T16:05:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-board-authorizes-new-5000-million-share-repurchase-program-2026-05
+headline: Monster Beverage Board Authorizes New $500.0 Million Share Repurchase Program
+<<<TEXT>>>
+--Monster Beverage Corporation today announced that its Board of Directors has authorized a new share repurchase program for the repurchase of up to an additional $500.0 million of the Company’ s outstanding common stock. As of May 14, 2026, approximately $400.0 million remained available for repurchase under the Company’ s previously authorized repurchase...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 47603a4b23cf02b2
+symbol: MNST
+published_utc: 2026-05-28T08:00:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-announces-participation-dbaccess-global-consumer-conference-2026
+headline: Monster Beverage Announces Participation in dbAccess Global Consumer Conference 2026
+<<<TEXT>>>
+--Monster Beverage Corporation announced today that members of its senior management team will participate in a fireside chat at the dbAccess Global Consumer Conference on Thursday, June 4, 2026 at 9:15 a.m. CEST/ 3:15 a.m. ET. The fireside chat will be open to all interested parties as a live webcast at www.monsterbevcorp.com, under the" Events&...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 829d28b4d1c82ded
+symbol: MNST
+published_utc: 2026-07-08T16:10:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-declares-two-one-stock-split-2026-07-08
+headline: Monster Beverage Declares Two-for-One Stock Split
+<<<TEXT>>>
+--Monster Beverage Corporation today announced that its Board of Directors has approved and declared a 2- for-1 split of its common stock that will be effected in the form of a 100% stock dividend. Each stockholder of record on July 24, 2026 will receive a dividend of one additional share of common stock for each then-held share, to be distributed after close of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f813125f8ad1e073
+symbol: MNST
+published_utc: 2026-07-25T07:30:00Z
+url: https://www.nasdaq.com/press-release/monster-energy-athletes-claim-victory-and-podium-spots-day-1-x-games-new-orleans-2026
+headline: Monster Energy Athletes Claim Victory and Podium Spots on Day 1 of X Games New Orleans 2026
+<<<TEXT>>>
+On Friday, Monster Energy riders claimed a total of five medals across four contest events at legendary Caesars Superdome in New Orleans. In the Monster Energy BMX Street final, 30- year-old Boyd Hilder from Gold Coast, Australia, claimed the bronze medal with a technical run. Day one in the Big Easy ended with Monster Energy Men's Skateboard Street Best Trick and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 90c9b35fd001cc39
+symbol: MNST
+published_utc: 2026-07-30T08:05:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-report-financial-results-2026-second-quarter-august-6-2026-2026-07
+headline: Monster Beverage to Report Financial Results for 2026 Second Quarter on August 6, 2026
+<<<TEXT>>>
+--Monster Beverage Corporation today announced that it will release its financial results for the second quarter ended June 30, 2026, on Thursday, August 6, 2026, after the market closes. The company also announced that Chief Executive Officer Hilton Schlosberg will host an investor conference call at 2:00 p.m. Pacific Time that day to discuss the company's...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 81c2f5bc9452451c
+symbol: MNST
+published_utc: 2026-08-06T16:10:00Z
+url: https://www.nasdaq.com/press-release/monster-beverage-reports-2026-second-quarter-financial-results-2026-08-06
+headline: Monster Beverage Reports 2026 Second Quarter Financial Results
+<<<TEXT>>>
+--Monster Beverage Corporation today reported financial results for the three- and six-months ended June 30, 2026. Net sales for the 2026 second quarter increased 20.2 percent to $2.54 billion, from $2.11 billion in the same period last year. Net sales for the Company’ s Monster Energy ® Drinks segment, which primarily includes the Company’ s Monster Energy ®...
+<<<END>>>

@@ -19,11 +19,12 @@ from prometheus.models.chat import is_rate_limited
 
 
 MODEL_TIMEOUT = 300   # seconds one model call may take. The client's own timeout is per read and a provider that keeps the connection open (a slow or stuck host) never trips it: one such call held a run for ten minutes.
+CALL_LIMIT: contextvars.ContextVar[float | None] = contextvars.ContextVar("model_call_limit", default=None)      # None: MODEL_TIMEOUT, as every live run. The Proving Ground's fast Time Machine sets a shorter wait for the days it researches (`proving.speed.limit_of`)
 
 
 def invoke_with_limit(model, messages: list, seconds: float | None = None):
-    """`model.invoke(messages)`, but raises TimeoutError after `seconds` (MODEL_TIMEOUT when left out). The call runs in a daemon thread, so a stuck one is abandoned, not killed (it ends with the process)."""
-    seconds = MODEL_TIMEOUT if seconds is None else seconds
+    """`model.invoke(messages)`, but raises TimeoutError after `seconds` (the context's `CALL_LIMIT`, else MODEL_TIMEOUT, when left out). The call runs in a daemon thread, so a stuck one is abandoned, not killed (it ends with the process)."""
+    seconds = (CALL_LIMIT.get() or MODEL_TIMEOUT) if seconds is None else seconds
     box: dict = {}
 
     def call():

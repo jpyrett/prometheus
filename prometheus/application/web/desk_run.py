@@ -21,6 +21,7 @@ from prometheus.application.web.emitter import AGENT_OF_NODE, NOT_PLACED, NOT_PL
 from prometheus.application.web.runs import Run
 from prometheus.common.trading_clock import clock_note
 from prometheus.langgraph.desk import build_desk
+from prometheus.proving import sessions as proving_sessions
 
 POLL_SECONDS = 1.0
 COUNT_MODEL_CALLS = False      # the callbacks of `graph.stream` reached the Account Manager's, the Data Clerk's and the Trader's model calls in the first live run, and not the Advisor's or the Critic's: a total would be wrong, so the page shows none (spec 7)
@@ -219,6 +220,10 @@ def _stream(run, params, accounts, question_timeout, out, live, chosen, mode, pa
         if run.stop_flag.is_set():
             out.log("system", "stopped: the desk stops before its next stage; a trade already placed stays", "warn")
             break
+    if not run.stop_flag.is_set():
+        saved = proving_sessions.save_session(params["prompt"], None, final, account_id=params["account_id"], screen=proving_sessions.screen_of(guard, params["account_id"]))      # the Track Record keeps the run (a failure to save is a log line, never a failed run)
+        if saved is not None:
+            out.log("system", "the run is kept for the Track Record")
     return final, poller
 
 

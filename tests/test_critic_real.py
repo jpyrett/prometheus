@@ -28,13 +28,19 @@ def test_pg_on_conviction_is_approved():
     assert r["approved"] and codes(r) == [] and "approved_shares" not in r and "thin_edge" not in codes(r, "warnings") and "excess_reviewed" not in r["value"]
 
 
-def test_a_conviction_recommendation_is_denied_when_the_quotes_it_stands_on_do_not_hold():
-    """The conviction family stands on the blend. When the model says every quote says the opposite, the news part turns negative (-0.58) and the blend falls from 0.57 to 0.11, under the 0.30 mark
-    the strategy needs: `blend_not_supported`."""
+def test_a_conviction_recommendation_whose_quotes_do_not_hold_is_approved_with_the_warning_and_fewer_evidence_points():
+    """AMENDED (Critic v2, rule C3, design/critic_v2_evidence_spec.md). The conviction family stands on the blend. When the model says every quote says the opposite, the news part turns negative (-0.58) and the blend falls from
+    0.57 to 0.11, under the 0.30 mark the strategy needs: `blend_not_supported`. It was a BLOCKER (the review was denied, its score capped at 49); in the four six-month tests of 2026-11-20 it fired 42 times and 37 of the 41 that closed were
+    winners, so it is a WARNING now: the blend worked again is still calculated and shown, the evidence dimension still loses its points (4 of 15, against 15 of 15 when the quotes hold), and the review still says so."""
+    held = review(captured("PG"))["PG"]
     r = review(captured("PG"), model=ReviewerModel(default="contradicts"))["PG"]
     c = r["evidence"]["counterfactual"]
     assert c["blend"] == 0.1111 and c["blend_recorded"] == 0.5725
-    assert not r["approved"] and "blend_not_supported" in codes(r)
+    assert r["approved"] and codes(r) == [] and codes(r, "warnings") == ["blend_not_supported"] and r["denial_reasons"] == [] and r["requires_human"] is False
+    assert (r["score"], r["grade"]) == (77, "C") and (held["score"], held["grade"]) == (88, "B")                       # the lower evidence points are the whole cost: 15 of 15 became 4.5 of 15
+    assert (r["dimensions"]["evidence"]["points"], held["dimensions"]["evidence"]["points"]) == (4.5, 15.0)
+    assert r["summary"].startswith("APPROVE PG: score 77 (C)") and "evidence 4/15" in r["summary"] and r["summary"].endswith("under the 0.3 the conviction strategy needs (blend_not_supported).")      # the approval says why it is not an easy one
+    assert "blend_not_supported" not in held["summary"]
 
 
 def test_pg_open_passes_every_check_and_is_approved_without_a_six_month_average_and_with_no_size():

@@ -16,7 +16,7 @@ import time
 import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, datetime, time as day_time, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -30,6 +30,7 @@ from dotenv import dotenv_values
 
 from prometheus.agents.data_clerk import edgar_text
 from prometheus.agents.data_clerk.edgar_text import EdgarNotConfigured
+from prometheus.common import trading_clock
 
 S3_ROOT = "s3://flatfiles/us_stocks_sip"
 ENDPOINT_URL = "https://files.massive.com"
@@ -112,6 +113,30 @@ POLYGON_PAGE_SIZE = 1000
 POLYGON_MIN_INTERVAL = 0.1     # 10 calls/s, well under the paid limit
 FINNHUB_WINDOW_DAYS = 7        # company-news returns a capped number of items per call: use small windows
 API_MAX_ATTEMPTS = 5
+MASSIVE_SPLITS_URL = "https://api.massive.com/stocks/v1/splits"   # Massive's corporate-actions splits (the older /v3/reference/splits is deprecated): ticker, execution_date.gte/.lte, sort, limit (default 100, max 5000), next_url
+SPLITS_DIR = "splits_v1"       # under data/historical: one <SYMBOL>.json of the stored split table per ticker, what `fetch_splits` writes (the Proving Ground reads it; the stored bars are unadjusted)
+SPLITS_PAGE_SIZE = 1000
+SPLIT_FIELDS = ("ticker", "execution_date", "split_from", "split_to", "adjustment_type", "id")   # kept from each Massive result
+
+
+def fetch_window(from_date: int, start: date | None, end: date | None, now: datetime) -> tuple[datetime, datetime]:
+    """The window a fetcher asks the providers for, as aware UTC datetimes (start, end). PURE: nothing is read or written.
+
+    With no `start` it is the form the fetchers have always had: the last `from_date` days up to `now` (and `end` must be left out). With a `start` (a date) the window is from the beginning of that day to the END of the `end`
+    day (23:59:59 UTC; `now` when `end` is left out or is later than now), `from_date` is not used, and a `start` after the end is an error. A window is made of whole days because the providers' date parameters are whole days.
+    Raises ValueError for a start or an end that is not a date (a datetime is not one), an `end` with no `start`, a start after the end, or a start in the future."""
+    if start is None and end is None:
+        return now - timedelta(days=from_date), now
+    if start is None:
+        raise ValueError("end needs a start: a window is start..end (or start..now); the from_date form counts back from now and takes neither")
+    for name, day in (("start", start), ("end", end)):
+        if day is not None and type(day) is not date:
+            raise ValueError(f"{name} must be a date (got {type(day).__name__})")
+    begin = datetime.combine(start, day_time.min, tzinfo=timezone.utc)
+    last = now if end is None else min(datetime.combine(end, day_time(23, 59, 59), tzinfo=timezone.utc), now)
+    if begin > last:
+        raise ValueError(f"the window starts {start} but ends {last:%Y-%m-%d %H:%M} UTC: start must be on or before the end, and not in the future")
+    return begin, last
 
 
 class _RateLimiter:
@@ -136,7 +161,10 @@ def _progress(prefix: str, fraction: float, suffix: str = "") -> None:
 
 
 class DataToolbox:
-    def __init__(self, base_dir: Path | str | None = None):
+    def __init__(self, base_dir: Path | str | None = None, memo=None):
+        """`memo` (the Proving Ground, design/proving_ground_spec.md 7.6): a per-run `proving.memo.Memo` that keeps Finnhub's financials of a symbol, which are today's snapshot whatever the decision day is (P3), so that one call serves every
+        day of a run. None (the default) is the toolbox as it always was."""
+        self.memo = memo
         self.base_dir = Path(base_dir) if base_dir else Path(__file__).resolve().parent
         self.aws_dir = self.base_dir / ".aws"
         self.root_data_dir = self.base_dir / "data" / "historical"
@@ -206,6 +234,7 @@ class DataToolbox:
     # ------------------------------------------------------------------ Download
     def fetch_historical_data(self) -> None:
         """Sync the current month's flat files for all four data types."""
+        trading_clock.refuse_when_bound("fetch_historical_data")
         now = datetime.now()
         month = f"{now.month:02d}"
         year = str(now.year)
@@ -224,6 +253,7 @@ class DataToolbox:
         of daily bars (Advisor v1 spec section 2.1) and `fetch_historical_data` syncs only the current month, for all four data types (minute bars, trades and quotes are gigabytes). `months` are
         "YYYY-MM" texts. It only ADDS files under data/historical/day_aggs_v1 (`aws s3 sync` never deletes here), it does not convert them, and it is not a tool of the Data Clerk's model (it is not in
         DATA_CLERK_TOOLS). It uses the Massive flat-file bucket and the credentials in .aws (the project's, else ~/.aws): a real network call. Returns the folders synced."""
+        trading_clock.refuse_when_bound("sync_day_aggs")
         if not months or len(months) > 36:
             raise ValueError("give 1 to 36 months as 'YYYY-MM'")
         parsed = []
@@ -260,6 +290,7 @@ class DataToolbox:
         arrive in batches; the Advisor's freshness gate wants yesterday's close), and it needs no flat-file credentials. Each ticker is written to data/historical/ticker_bars_v1/<SYMBOL>.csv in
         the columns of the day files, MERGED with what is there (a date fetched again replaces the old row); nothing else under data/historical is touched. Returns {symbol: {fetched, stored,
         first, last}}. A symbol that is not a ticker, or `days` outside 1 to 800, is refused before any call; an API failure raises (the message never holds the key)."""
+        trading_clock.refuse_when_bound("fetch_daily_bars")
         wanted = list(dict.fromkeys(s.strip().lstrip("$").upper() for s in symbols))
         if not wanted or any(not re.fullmatch(r"[A-Z0-9][A-Z0-9.\-]{0,9}", s) for s in wanted):
             raise ValueError("give one or more ticker symbols")
@@ -290,6 +321,49 @@ class DataToolbox:
                 stamps = sorted(stored)
                 out[symbol] = {"fetched": len(rows), "stored": len(stored), "first": datetime.fromtimestamp(stamps[0] / 1e9, timezone.utc).date().isoformat() if stamps else None,
                                "last": datetime.fromtimestamp(stamps[-1] / 1e9, timezone.utc).date().isoformat() if stamps else None}
+        return out
+
+    def fetch_splits(self, symbols: list[str]) -> dict[str, dict]:
+        """Fetch the SPLIT TABLE of some tickers from Massive's corporate-actions API (`MASSIVE_SPLITS_URL`: `GET /stocks/v1/splits`, filtered by `ticker`, oldest first, followed through `next_url`) and write each to
+        data/historical/splits_v1/<SYMBOL>.json: {symbol, source, fetched_utc, splits: [{ticker, execution_date, split_from, split_to, adjustment_type, id}]}. The stored daily bars are UNADJUSTED, so a position that
+        crosses a split needs this table (the Proving Ground, design/proving_ground_spec.md P10). A real, paid-API network call, refused while a day is bound. One file per ticker, replaced whole: a ticker with NO split gets
+        a file with an empty list (the table was read and says none), and a ticker with no file is one whose table could not be read. A result that is not a split (no date, no ratio, a ratio that is not above zero) is
+        discarded and counted, never written. Nothing else under data/historical is touched. Returns {symbol: {fetched, written, discarded, first, last, path}}. A symbol that is not a ticker is refused before any call; an
+        API failure raises (the message never holds the key)."""
+        trading_clock.refuse_when_bound("fetch_splits")
+        wanted = list(dict.fromkeys(s.strip().lstrip("$").upper() for s in symbols))
+        if not wanted or any(not re.fullmatch(r"[A-Z0-9][A-Z0-9.\-]{0,9}", s) for s in wanted):
+            raise ValueError("give one or more ticker symbols")
+        key = self._api_keys()["POLYGON_API_KEY"]
+        folder = self.root_data_dir / SPLITS_DIR
+        out = {}
+        with httpx.Client(timeout=httpx.Timeout(30.0)) as client:
+            limiter = _RateLimiter(POLYGON_MIN_INTERVAL)
+            for symbol in wanted:
+                results, discarded, rows, url, params = [], 0, 0, MASSIVE_SPLITS_URL, {"ticker": symbol, "sort": "execution_date.asc", "limit": SPLITS_PAGE_SIZE, "apiKey": key}
+                while url:
+                    data = self._get_json(client, limiter, "Massive splits", url, params)
+                    for row in (data.get("results") or []) if isinstance(data, dict) else []:
+                        rows += 1
+                        try:
+                            kept = {name: row.get(name) for name in SPLIT_FIELDS}
+                            date.fromisoformat(kept["execution_date"])
+                            if (kept["ticker"] or symbol) != symbol or not all(isinstance(kept[n], (int, float)) and not isinstance(kept[n], bool) and kept[n] > 0 for n in ("split_from", "split_to")):
+                                raise ValueError("not a split of this ticker")
+                        except ARTICLE_FAILURES:   # a row that cannot be read as a split: discarded and counted
+                            discarded += 1
+                            continue
+                        results.append(kept)
+                    next_url = data.get("next_url") if isinstance(data, dict) else None
+                    url, params = (str(httpx.URL(next_url).copy_merge_params({"apiKey": key})) if next_url else None), None   # the cursor is in next_url and the key is not: it is added to it, the url never goes into a message
+                results = sorted({r["execution_date"] + "|" + str(r["id"]): r for r in results}.values(), key=lambda r: (r["execution_date"], str(r["id"])))
+                path = folder / f"{symbol}.json"
+                folder.mkdir(parents=True, exist_ok=True)
+                tmp = path.with_suffix(".json.tmp")
+                tmp.write_text(json.dumps({"symbol": symbol, "source": "Massive /stocks/v1/splits", "fetched_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "splits": results}, indent=1) + "\n", encoding="utf-8")
+                tmp.replace(path)
+                out[symbol] = {"fetched": rows, "written": len(results), "discarded": discarded, "first": results[0]["execution_date"] if results else None,
+                               "last": results[-1]["execution_date"] if results else None, "path": str(path)}
         return out
 
     # ------------------------------------------------------------------ Convert
@@ -383,14 +457,17 @@ class DataToolbox:
     # ------------------------------------------------------------------ Summary
     def performance_summary(self, symbol: str, points: int = 61) -> dict:
         """Summarize how `symbol` traded this month from the day_aggs_v1 files.
-        Returns (and saves to data/summaries/<SYMBOL>_<YYYY-MM>.json) the date range, volume,
+        Returns (and saves to data/summaries/<SYMBOL>_<YYYY-MM>.json, except while a day is bound) the date range, volume,
         number of trades, lowest/average/highest price, and a normal-distribution (bell curve)
-        built from the daily closes: mean = average price, std = std of daily closes."""
-        now = datetime.now()
+        built from the daily closes: mean = average price, std = std of daily closes.
+
+        While a day is bound (`trading_clock.as_of`, the Proving Ground) "this month" is the month of that day, only the days up to and including it are read, and nothing is saved: the summary is of what was known then."""
+        bound = trading_clock.bound_day()
+        now = datetime.now() if bound is None else datetime.combine(bound, day_time.min)
         month, year = f"{now.month:02d}", str(now.year)
         symbol = symbol.upper().strip()
         src_dir = self.root_data_dir / "day_aggs_v1" / year / month
-        files = sorted(src_dir.glob("*.csv.gz"))
+        files = sorted(p for p in src_dir.glob("*.csv.gz") if bound is None or p.name[:-7] <= bound.isoformat())
         if not files:
             raise RuntimeError(f"No day_aggs_v1 files in {src_dir}")
 
@@ -439,9 +516,10 @@ class DataToolbox:
                 "curve": curve,
             },
         }
-        out = self.base_dir / "data" / "summaries" / f"{symbol}_{year}-{month}.json"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(json.dumps(summary, indent=2))
+        if bound is None:
+            out = self.base_dir / "data" / "summaries" / f"{symbol}_{year}-{month}.json"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(json.dumps(summary, indent=2))
         return summary
 
     # ------------------------------------------------------------------ Export
@@ -484,11 +562,15 @@ class DataToolbox:
 
     # ------------------------------------------------------------------ News
     def fetch_news(self, company: str | None = None, symbol: str | None = None,
-                   keywords: list[str] | None = None, from_date: int = 30) -> dict:
+                   keywords: list[str] | None = None, from_date: int = 30, start: date | None = None, end: date | None = None) -> dict:
         """Fetch news for `symbol` from `from_date` days ago until now (Finnhub + Polygon/Massive),
         keep articles whose headline/summary match the company name AND any keyword (whichever of
         the two are given), and append them to {NEWS_OUTPUT_DIR}/{SYMBOL}.txt.
-        Articles already in the file (same URL) are skipped. API errors stop the operation and raise."""
+        Articles already in the file (same URL) are skipped. API errors stop the operation and raise.
+
+        A WINDOW instead: `start` (a date) and, optionally, `end` (a date, included; now when left out) fetch exactly that span and `from_date` is not used (`fetch_window`). Only the articles published inside it are kept,
+        so a past window can be filled in oldest first (`scripts/backfill_history.py`). Nothing else changes: the same files, the same dedup by URL, the same discarding of a broken article."""
+        trading_clock.refuse_when_bound("fetch_news")
         if not symbol or not symbol.strip():
             raise ValueError("symbol is required (Finnhub and Polygon query by symbol)")
         if not isinstance(from_date, int) or isinstance(from_date, bool) or from_date < 1:
@@ -496,8 +578,8 @@ class DataToolbox:
         symbol = symbol.strip().upper()
         keywords = [k.strip() for k in (keywords or []) if k and k.strip()]
         company = company.strip() if company and company.strip() else None
-        now = datetime.now(timezone.utc)
-        start = now - timedelta(days=from_date)
+        windowed = start is not None or end is not None
+        start, now = fetch_window(from_date, start, end, datetime.now(timezone.utc))      # `now` is the end of the window: the real now unless an `end` was given
 
         env = dotenv_values(self.base_dir / ".env")
         keys = self._api_keys(env)
@@ -510,7 +592,7 @@ class DataToolbox:
                  "written": 0, "duplicates": 0, "failed": 0}
         self.articles_failed = 0
 
-        print(f"News {symbol}: last {from_date} days ({start:%Y-%m-%d} -> {now:%Y-%m-%d})")
+        print(f"News {symbol}: " + (f"window ({start:%Y-%m-%d} -> {now:%Y-%m-%d})" if windowed else f"last {from_date} days ({start:%Y-%m-%d} -> {now:%Y-%m-%d})"))
         with httpx.Client(timeout=httpx.Timeout(30.0)) as api, open(out_path, "a", encoding="utf-8") as out:
             sources = (
                 self._iter_finnhub(api, keys["FINNHUB_API_KEY"], symbol, start, now),
@@ -521,7 +603,7 @@ class DataToolbox:
                     for art in page:
                         stats["fetched"] += 1
                         try:
-                            if art["published"] < start:
+                            if art["published"] < start or (windowed and art["published"] > now):
                                 continue
                             if not self._matches(self._match_text(art), company, keywords):
                                 continue
@@ -550,7 +632,8 @@ class DataToolbox:
         Returns {symbol, price, change, change_percent, high, low, open, previous_close, as_of_utc, source}.
         `as_of_utc` is when the last trade happened: outside market hours it is the last trade of the session,
         not "now". Finnhub answers an unknown symbol with all zeros, which is raised here as an error rather
-        than returned as a price of 0. Errors (no key, bad symbol, API failure) raise."""
+        than returned as a price of 0. Errors (no key, bad symbol, API failure) raise. Refused while a day is bound (`trading_clock.as_of`): a past day has no live price."""
+        trading_clock.refuse_when_bound("get_quote")
         if not symbol or not symbol.strip():
             raise ValueError("symbol is required")
         symbol = symbol.strip().upper()
@@ -567,21 +650,24 @@ class DataToolbox:
                 "as_of_utc": datetime.fromtimestamp(int(data["t"]), timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
                 "source": "Finnhub /quote"}
 
-    def fetch_press_releases(self, symbol: str, from_date: int = 365) -> dict:
+    def fetch_press_releases(self, symbol: str, from_date: int = 365, start: date | None = None, end: date | None = None) -> dict:
         """Fetch the official company press releases (Finnhub /press-releases) for `symbol` from
         `from_date` days ago until now and append them, oldest first, to
         {PRESS_RELEASES_OUTPUT_DIR}/{SYMBOL}_PRs.txt (default data/press_releases/). Fully independent
         of fetch_news (own request, parser, file and record format). Releases already in the file
         (same id) are skipped, so reruns are safe. Errors stop the operation and raise.
-        Returns {symbol, path, fetched, written, duplicates}."""
+        Returns {symbol, path, fetched, written, duplicates}.
+
+        A WINDOW instead: `start` (a date) and, optionally, `end` (a date, included; now when left out) are Finnhub's own `from` and `to`, and `from_date` is not used (`fetch_window`)."""
+        trading_clock.refuse_when_bound("fetch_press_releases")
         if not symbol or not symbol.strip():
             raise ValueError("symbol is required")
         if not isinstance(from_date, int) or isinstance(from_date, bool) or from_date < 1:
             raise ValueError("from_date must be a positive integer (days back from today)")
         symbol = symbol.strip().upper()
         key = self._api_keys()["FINNHUB_API_KEY"]
-        now = datetime.now(timezone.utc)
-        start = now - timedelta(days=from_date)
+        windowed = start is not None or end is not None
+        start, now = fetch_window(from_date, start, end, datetime.now(timezone.utc))
         out_path = self._press_dir() / f"{symbol}{PRESS_RELEASES_SUFFIX}"
         out_path.parent.mkdir(parents=True, exist_ok=True)
         seen: set[str] = set()
@@ -590,7 +676,7 @@ class DataToolbox:
                 seen = {line[4:].strip() for line in f if line.startswith("id: ")}
         stats = {"symbol": symbol, "path": str(out_path), "fetched": 0, "written": 0, "duplicates": 0, "failed": 0}
 
-        print(f"Press releases {symbol}: last {from_date} days ({start:%Y-%m-%d} -> {now:%Y-%m-%d})")
+        print(f"Press releases {symbol}: " + (f"window ({start:%Y-%m-%d} -> {now:%Y-%m-%d})" if windowed else f"last {from_date} days ({start:%Y-%m-%d} -> {now:%Y-%m-%d})"))
         with httpx.Client(timeout=httpx.Timeout(30.0)) as api:
             data = self._get_json(
                 api, _RateLimiter(FINNHUB_MIN_INTERVAL), "Finnhub press releases", FINNHUB_PRESS_URL,
@@ -629,22 +715,28 @@ class DataToolbox:
               f"{stats['duplicates']} duplicates" + (f", {stats['failed']} failed and were discarded" if stats["failed"] else "") + f" -> {out_path}")
         return stats
 
-    def fetch_filings(self, symbol: str, from_date: int = 365, forms: tuple[str, ...] = FILING_FORMS) -> dict:
+    def fetch_filings(self, symbol: str, from_date: int = 365, forms: tuple[str, ...] = FILING_FORMS, start: date | None = None, end: date | None = None) -> dict:
         """Fetch SEC EDGAR filings for `symbol` filed in the last `from_date` days from the Massive
         (Polygon) filings endpoints and append them, oldest first, to data/filings/{SYMBOL}.txt.
         One record per filing (accession number). Text is included where the API provides it:
         10-K (Business and Risk Factors sections) and 8-K (Items text). Other forms (10-Q ...) are
         listed with their SEC URL and no text. Reruns skip accession numbers already in the file.
         Fully independent of the news and press-release code. Errors stop the operation and raise.
-        Returns {symbol, path, fetched, written, duplicates}."""
+        Returns {symbol, path, fetched, written, duplicates}.
+
+        A WINDOW instead: `start` (a date) and, optionally, `end` (a date, included; now when left out) are Massive's `filing_date.gte` and `filing_date.lte` (all three endpoints take both), and `from_date` is not used
+        (`fetch_window`). The limit of one call is the same, so a window that holds that many filings of one form raises and a smaller window is the answer."""
+        trading_clock.refuse_when_bound("fetch_filings")
         if not symbol or not symbol.strip():
             raise ValueError("symbol is required")
         if not isinstance(from_date, int) or isinstance(from_date, bool) or from_date < 1:
             raise ValueError("from_date must be a positive integer (days back from today)")
         symbol = symbol.strip().upper()
         key = self._api_keys()["POLYGON_API_KEY"]
-        now = datetime.now(timezone.utc)
-        since = f"{now - timedelta(days=from_date):%Y-%m-%d}"
+        windowed = start is not None or end is not None
+        first, now = fetch_window(from_date, start, end, datetime.now(timezone.utc))
+        since = f"{first:%Y-%m-%d}"
+        until = f"{now:%Y-%m-%d}" if windowed else None   # `filing_date.lte`: only a window closes the range at the other end
         out_path = self._filings_dir() / f"{symbol}.txt"
         out_path.parent.mkdir(parents=True, exist_ok=True)
         seen: set[str] = set()
@@ -653,15 +745,15 @@ class DataToolbox:
                 seen = {line[11:].strip() for line in f if line.startswith("accession: ")}
         stats = {"symbol": symbol, "path": str(out_path), "fetched": 0, "written": 0, "duplicates": 0}
 
-        print(f"Filings {symbol}: {', '.join(forms)} filed since {since}")
+        print(f"Filings {symbol}: {', '.join(forms)} filed " + (f"from {since} to {until}" if windowed else f"since {since}"))
         limiter = _RateLimiter(POLYGON_MIN_INTERVAL)
 
         def query(path: str, extra: dict, limit: int, sort: str = "filing_date.asc") -> list[dict]:
-            params = {"ticker": symbol, "filing_date.gte": since, "sort": sort,
+            params = {"ticker": symbol, "filing_date.gte": since, **({"filing_date.lte": until} if until else {}), "sort": sort,
                       "limit": limit, "apiKey": key, **extra}
             results = self._get_json(client, limiter, "Massive filings", f"{FILINGS_URL}{path}", params)["results"]
             if len(results) >= limit:
-                raise RuntimeError(f"{path} returned {limit}+ results for {symbol}; use a smaller from_date")
+                raise RuntimeError(f"{path} returned {limit}+ results for {symbol}; use a smaller from_date (or a smaller window)")
             return results
 
         with httpx.Client(timeout=httpx.Timeout(60.0)) as client:
@@ -711,6 +803,7 @@ class DataToolbox:
         record of the same accession is appended with `text_status: ok` and the period of the report (the loader reads the last record that has text; the file stays append-only).
         A filing that already has text is skipped, so reruns are safe. Needs SEC_USER_AGENT (a name and a contact: EDGAR asks every client to say who it is): without it
         this raises EdgarNotConfigured, unless there is nothing to fetch. Every other error stops the operation and raises. Returns {symbol, path, candidates, written}."""
+        trading_clock.refuse_when_bound("fetch_filing_text")
         if not symbol or not symbol.strip():
             raise ValueError("symbol is required")
         if not isinstance(from_date, int) or isinstance(from_date, bool) or from_date < 1:
@@ -836,21 +929,27 @@ class DataToolbox:
     # Market-wide (ticker-less) news kept locally as one JSON-lines file per UTC publish day:
     #   {NEWS_OUTPUT_DIR}/market/YYYY-MM-DD.jsonl   plus   market/_coverage.json {"from", "to"}
     # sync_market_news() fills it incrementally; discover() searches it without any API calls.
-    def sync_market_news(self, from_date: int = 7) -> dict:
+    def sync_market_news(self, from_date: int = 7, start: date | None = None, end: date | None = None) -> dict:
         """Download market-wide news (Polygon, every page; Finnhub general + merger feeds, latest
         items) for the last `from_date` days into the local store. Already-synced time is skipped
         (the stored range is tracked in _coverage.json), articles are de-duplicated by URL, and a
         progress bar shows the Polygon download. Errors stop the operation and raise; re-running
-        is safe. Returns {path, fetched, written, duplicates}."""
+        is safe. Returns {path, fetched, written, duplicates}.
+
+        A WINDOW instead: `start` (a date) and, optionally, `end` (a date, included; now when left out) fetch exactly that span of Polygon's market-wide news (`published_utc.gte` and `.lte`) and `from_date` is not
+        used (`fetch_window`). A window does not read or change `_coverage.json` (that file is the incremental `from_date` form's own record of one contiguous range, and a past window is not part of it): it is
+        de-duplicated by URL like everything else, so repeating a window writes nothing twice. Finnhub's general feeds hold only the latest items, so they are asked only when the window reaches the last two days."""
+        trading_clock.refuse_when_bound("sync_market_news")
         if not isinstance(from_date, int) or isinstance(from_date, bool) or from_date < 1:
             raise ValueError("from_date must be a positive integer (days back from today)")
         keys = self._api_keys()
-        now = datetime.now(timezone.utc)
-        start = now - timedelta(days=from_date)
+        windowed = start is not None or end is not None
+        real_now = datetime.now(timezone.utc)
+        start, now = fetch_window(from_date, start, end, real_now)
         store = self._news_dir() / MARKET_DIR
         store.mkdir(parents=True, exist_ok=True)
         cov_path = store / "_coverage.json"
-        cov = json.loads(cov_path.read_text()) if cov_path.exists() else None
+        cov = json.loads(cov_path.read_text()) if cov_path.exists() and not windowed else None
         cov_from = datetime.fromisoformat(cov["from"]) if cov else None
         cov_to = datetime.fromisoformat(cov["to"]) if cov else None
         # Resume from the end of what is already stored (1h overlap) if it reaches back far enough.
@@ -872,15 +971,16 @@ class DataToolbox:
                 self._progress("Polygon", (last - fetch_from).total_seconds() / span,
                                f"{stats['fetched']:,} articles  {stats['written']:,} new  page {pages}", t0)
             sys.stdout.write("\n")
-            for cat in FINNHUB_GENERAL_CATEGORIES:
+            for cat in FINNHUB_GENERAL_CATEGORIES if not windowed or now >= real_now - timedelta(days=2) else ():
                 for page in self._iter_finnhub_general(api, keys["FINNHUB_API_KEY"], cat):
-                    page = [a for a in page if a["published"] >= fetch_from]
+                    page = [a for a in page if a["published"] >= fetch_from and (not windowed or a["published"] <= now)]
                     stats["fetched"] += len(page)
                     self._market_write(store, page, seen, stats)
                 print(f"  Finnhub {cat}: done  ({stats['written']:,} new in total)")
-        cov_path.write_text(json.dumps({
-            "from": (min(cov_from, start) if cov and cov_from else start).isoformat(),
-            "to": now.isoformat()}))
+        if not windowed:
+            cov_path.write_text(json.dumps({
+                "from": (min(cov_from, start) if cov and cov_from else start).isoformat(),
+                "to": now.isoformat()}))
         print(f"Market news sync: {stats['fetched']:,} fetched, {stats['written']:,} new, "
               f"{stats['duplicates']:,} duplicates")
         return stats
@@ -892,6 +992,7 @@ class DataToolbox:
         short description, link, id and publish time, and no tickers, so tickers/keywords/insights are
         empty and search() finds these items by text. Feeds hold only the latest items (no history);
         run it regularly. De-duplicated by URL. Errors raise. Returns {path, fetched, written, duplicates}."""
+        trading_clock.refuse_when_bound("sync_cnbc_news")
         store = self._news_dir() / MARKET_DIR
         store.mkdir(parents=True, exist_ok=True)
         seen = self._market_seen(store, datetime.now(timezone.utc) - timedelta(days=30))
@@ -928,9 +1029,22 @@ class DataToolbox:
     articles_failed = 0   # the items the last news fetch discarded because they could not be made into an article (entry 83)
 
     @staticmethod
-    def _market_files(store: Path, start: datetime) -> list[Path]:
+    def _market_files(store: Path, start: datetime, cutoff: datetime | None = None) -> list[Path]:
+        """The market-news day files (one per UTC publish day) from `start`'s day on, and with a `cutoff` not after the cutoff's UTC day."""
         first = f"{start:%Y-%m-%d}"
-        return sorted(p for p in store.glob("????-??-??.jsonl") if p.stem >= first)
+        last = f"{cutoff.astimezone(timezone.utc):%Y-%m-%d}" if cutoff is not None else None
+        return sorted(p for p in store.glob("????-??-??.jsonl") if p.stem >= first and (last is None or p.stem <= last))
+
+    @staticmethod
+    def _until_cutoff(until: date | None) -> tuple[date | None, datetime | None]:
+        """The `until` a stored-text search honours and the instant it means (the end of that Eastern day, as an aware UTC datetime). While a day is bound, `until` defaults to it and is never later; a refresh is then
+        never allowed (the callers test `until is None`). (None, None) when there is no upper bound at all."""
+        if until is not None and type(until) is not date:
+            raise ValueError("until must be a date")
+        bound = trading_clock.bound_day()
+        if bound is not None:
+            until = bound if until is None else min(until, bound)
+        return until, (trading_clock.end_of_day(until) if until is not None else None)
 
     def _market_articles(self, path: Path):
         """Yield the articles of one market-news day file (JSON lines). A line that is not a whole article (not JSON, a field missing or of the wrong kind, a time that is not a time) is DISCARDED and ignored
@@ -973,7 +1087,7 @@ class DataToolbox:
             with open(store / f"{day}.jsonl", "a", encoding="utf-8") as f:
                 f.write("\n".join(lines) + "\n")
 
-    def discover(self, phrase: str, from_date: int = 7, top: int = 10, refresh: bool = True) -> dict:
+    def discover(self, phrase: str, from_date: int = 7, top: int = 10, refresh: bool = True, until: date | None = None) -> dict:
         """Find which companies a trend/keyword phrase (e.g. "weight loss", "GLP-1") is about.
         With refresh=True (default) it first runs sync_market_news(from_date) (cheap when already
         synced), then searches the local market-news store: articles whose headline, summary, API
@@ -981,7 +1095,10 @@ class DataToolbox:
         the tickers they mention ranked. If an article has Polygon insights, only the tickers with
         their own insight count (the ones the article is really about); otherwise all its tickers do.
         Returns {phrase, from_date, scanned, matched, tickers: [{symbol, articles, positive, neutral,
-        negative, providers, headlines}]}, best first, at most `top`. Errors raise."""
+        negative, providers, headlines}]}, best first, at most `top`. Errors raise.
+
+        `until` (a date, included) closes the window at the other end: only articles published up to the END of that day (US Eastern, `trading_clock.end_of_day`), and `from_date` counts back from it. While a day is
+        bound (`trading_clock.as_of`) it defaults to that day and is never later. A search with an `until` never refreshes (a past window is not fetched). Unbound and left out: everything up to now, as before."""
         if not phrase or not phrase.strip():
             raise ValueError("phrase is required")
         if not isinstance(from_date, int) or isinstance(from_date, bool) or from_date < 1:
@@ -989,11 +1106,12 @@ class DataToolbox:
         if not isinstance(top, int) or isinstance(top, bool) or top < 1:
             raise ValueError("top must be a positive integer")
         phrase = phrase.strip()
-        if refresh:
+        until, cutoff = self._until_cutoff(until)
+        if refresh and until is None:
             self.sync_market_news(from_date)
         store = self._news_dir() / MARKET_DIR
-        start = datetime.now(timezone.utc) - timedelta(days=from_date)
-        files = self._market_files(store, start) if store.exists() else []
+        start = (cutoff or datetime.now(timezone.utc)) - timedelta(days=from_date)
+        files = self._market_files(store, start, cutoff) if store.exists() else []
         if not files:
             raise RuntimeError(f"no market news stored in {store}; run sync_market_news() first")
 
@@ -1011,7 +1129,7 @@ class DataToolbox:
                 except ARTICLE_FAILURES:   # an article that cannot be read is discarded (entry 83): not scanned, not matched, not counted
                     continue
                 scanned += 1
-                if art["published"] < start or not self._matches(self._match_text(art), phrase, []):
+                if art["published"] < start or (cutoff is not None and art["published"] > cutoff) or not self._matches(self._match_text(art), phrase, []):
                     continue
                 matched += 1
                 for sym in syms:
@@ -1036,14 +1154,17 @@ class DataToolbox:
         return {"phrase": phrase, "from_date": from_date, "scanned": scanned,
                 "matched": matched, "tickers": ranked}
 
-    def search(self, symbol: str, terms: list[str], from_date: int = 30, refresh: bool = True) -> dict:
+    def search(self, symbol: str, terms: list[str], from_date: int = 30, refresh: bool = True, until: date | None = None) -> dict:
         """Combined news + filings search for one ticker. With refresh=True (default) it first runs
         fetch_news(symbol, keywords=terms) and fetch_filings(symbol) for the window, then searches
         the stored files data: news/{SYMBOL}.txt and data/filings/{SYMBOL}.txt. A record matches when
         ANY term occurs (whole word, case-insensitive) in its text; filings without text (10-Q,
         14C, 144 ...) are searched on form and URL only, so they rarely match.
         Returns {symbol, terms, from_date, news: [{published, publisher, headline, url}],
-        filings: [{filed, form, url, text_status}], filings_in_window}. Errors raise."""
+        filings: [{filed, form, url, text_status}], filings_in_window}. Errors raise.
+
+        `until` (a date, included) closes the window at the other end, as for `discover`: news up to the end of that Eastern day, filings FILED on or before it, and `from_date` counts back from it. While a day is bound
+        (`trading_clock.as_of`) it defaults to that day and is never later. A search with an `until` never refreshes (a past window is not fetched). Unbound and left out: everything up to now, as before."""
         if not symbol or not symbol.strip():
             raise ValueError("symbol is required")
         terms = [t.strip() for t in (terms or []) if t and t.strip()]
@@ -1052,23 +1173,24 @@ class DataToolbox:
         if not isinstance(from_date, int) or isinstance(from_date, bool) or from_date < 1:
             raise ValueError("from_date must be a positive integer (days back from today)")
         symbol = symbol.strip().upper()
-        if refresh:
+        until, cutoff = self._until_cutoff(until)
+        if refresh and until is None:
             self.fetch_news(symbol=symbol, keywords=terms, from_date=from_date)
             self.fetch_filings(symbol, from_date)
             self.sync_cnbc_news()
-        start = datetime.now(timezone.utc) - timedelta(days=from_date)
+        start = (cutoff or datetime.now(timezone.utc)) - timedelta(days=from_date)
 
         news = []
         for head, body in self._read_records(self._news_dir() / f"{symbol}.txt", ARTICLE_START):
-            if head.get("published_utc", "") >= f"{start:%Y-%m-%dT%H:%M:%SZ}" and \
+            if head.get("published_utc", "") >= f"{start:%Y-%m-%dT%H:%M:%SZ}" and (cutoff is None or head.get("published_utc", "") <= f"{cutoff:%Y-%m-%dT%H:%M:%SZ}") and \
                     self._matches(f"{head.get('headline', '')}\n{body}", None, terms):
                 news.append({"published": head["published_utc"], "publisher": head.get("publisher", ""),
                              "headline": head.get("headline", ""), "url": head.get("url", "")})
-        for path in self._market_files(self._news_dir() / MARKET_DIR, start):
+        for path in self._market_files(self._news_dir() / MARKET_DIR, start, cutoff):
             for art in self._market_articles(path):
                 if art["api"] == "cnbc-rss" and self._matches(f"{art['headline']}\n{art['summary']}", None, terms):
                     when = datetime.fromisoformat(art["published"])
-                    if when >= start:
+                    if when >= start and (cutoff is None or when <= cutoff):
                         news.append({"published": f"{when:%Y-%m-%dT%H:%M:%SZ}", "publisher": "CNBC",
                                      "headline": art["headline"], "url": art["url"]})
         filings, in_window = [], 0
@@ -1079,7 +1201,7 @@ class DataToolbox:
             if known is None or head.get("text_status") == "ok" or known[0].get("text_status") != "ok":
                 by_accession[key] = (head, body)  # a filing whose text was fetched later (entry 36) is listed once, with its text; a record without text never replaces one with text
         for head, body in by_accession.values():
-            if head.get("filed", "") < f"{start:%Y-%m-%d}":
+            if head.get("filed", "") < f"{start:%Y-%m-%d}" or (until is not None and head.get("filed", "") > until.isoformat()):
                 continue
             in_window += 1
             if self._matches(f"{head.get('form', '')}\n{head.get('url', '')}\n{body}", None, terms):
@@ -1349,10 +1471,21 @@ class Financials:
 
     def get(self, symbol: str) -> dict:
         """Return {symbol, as_of, metrics: {name: {value, unit, description}}}. A metric Finnhub has no
-        value for is returned with value None. Errors (bad symbol, API failure) raise."""
+        value for is returned with value None. Errors (bad symbol, API failure) raise.
+
+        Finnhub's metrics are TODAY'S snapshot and have no history (Jacob: keep and disclose, design/proving_ground_spec.md P3). While a past day is bound (`trading_clock.as_of`) the payload says so: `point_in_time: False`,
+        so that the caveat of a Proving Ground result is computed, not assumed. Unbound the payload is exactly as before."""
         if not symbol or not symbol.strip():
             raise ValueError("symbol is required")
         symbol = symbol.strip().upper()
+        memo = getattr(self.agent, "memo", None)
+        payload = memo.get("financials", symbol, lambda: self._call(symbol)) if memo is not None else self._call(symbol)      # the memo hands out a copy: a run's days never share one object
+        if trading_clock.bound_day() is not None:
+            payload["point_in_time"] = False
+        return payload
+
+    def _call(self, symbol: str) -> dict:
+        """The Finnhub call itself (one request) and its parsing: what `get` has always done."""
         key = self.agent._api_keys()["FINNHUB_API_KEY"]
         with httpx.Client(timeout=httpx.Timeout(30.0)) as client:
             data = self.agent._get_json(

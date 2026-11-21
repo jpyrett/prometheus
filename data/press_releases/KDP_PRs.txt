@@ -1,0 +1,216 @@
+<<<PRESS_RELEASE>>>
+id: b4a168924250cdba
+symbol: KDP
+published_utc: 2025-11-24T09:00:00Z
+url: https://www.nasdaq.com/press-release/keurigr-transforms-home-coffee-experience-debut-keurig-coffee-collective-its-first
+headline: Keurig® Transforms the At-Home Coffee Experience with the Debut of Keurig Coffee Collective - Its First Ever Branded Coffee Line
+<<<TEXT>>>
+--Keurig ®, the brand that transformed single-serve coffee, today expands its portfolio to the premium coffee category with the launch of Keurig Coffee Collective. That's right, the brand you thought already made coffee is helping to uncomplicate your morning routine even more with its very own branded coffee line.  "Today is a big step in Keurig's brand history...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c350ee7597efcddc
+symbol: KDP
+published_utc: 2025-11-25T07:30:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-appoints-anthony-disilvestro-chief-financial-officer-2025-11-25
+headline: Keurig Dr Pepper Appoints Anthony DiSilvestro as Chief Financial Officer
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, Nov. 25, 2025/ PRNewswire/-- Keurig Dr Pepper today announced the appointment of Anthony DiSilvestro to the position of Chief Financial Officer, effective immediately. DiSilvestro will report to Chief Executive Officer Tim Cofer and lead the Company's Finance and Technology organizations.  "As a seasoned and forward-thinking...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 01777cb3c129b144
+symbol: KDP
+published_utc: 2025-12-01T10:00:00Z
+url: https://www.nasdaq.com/press-release/treat-yourself-crazy-good-coffee-original-donut-shopr-and-pop-tartsr-announce-new
+headline: Treat Yourself to a Crazy Good Coffee - The Original Donut Shop® and Pop-Tarts® Announce New Flavor Innovation Ahead of 2025 Pop-Tarts Bowl
+<<<TEXT>>>
+BURLINGTON, Mass. and CHICAGO, Dec. 1, 2025/ PRNewswire/-- The Original Donut Shop ® today announced its latest flavor innovation, The Original Donut Shop ® Pop-Tarts™ Brown Sugar Cinnamon- flavored K-Cup ® pod. To celebrate the collaboration, The Original Donut Shop ® will be an official partner of the 2025 Pop-Tarts Bowl at Camping World Stadium in Orlando on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d19332cc9d77793f
+symbol: KDP
+published_utc: 2025-12-08T10:13:00Z
+url: https://www.nasdaq.com/press-release/dr-pepper-marks-18-years-impact-announcement-2025-dr-pepper-tuition-giveaway-winners
+headline: Dr Pepper Marks 18 Years of Impact with the Announcement of the 2025 Dr Pepper Tuition Giveaway Winners
+<<<TEXT>>>
+--Dr Pepper ®, part of the Keurig Dr Pepper portfolio of brands, has announced the winners of the 18th annual Dr Pepper Tuition Giveaway, awarding three students each $100,000 in tuition funds during the three College Football Conference Championship games on Saturday, December 6th. Reflecting upon the weekend's events, Derek Dabrowski, Senior Vice President...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 04fc33c8e71c00d2
+symbol: KDP
+published_utc: 2025-12-09T16:15:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-declares-quarterly-dividend-2025-12-09
+headline: Keurig Dr Pepper Declares Quarterly Dividend
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, Dec. 9, 2025/ PRNewswire/-- Keurig Dr Pepper announced today that its Board of Directors has declared a regular quarterly cash dividend of $0.23 per share, payable in U.S. dollars, on the Company's common stock. ABOUT KEURIG DR PEPPER Keurig Dr Pepper is a leading beverage company in North America, with a portfolio of more than 125...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0ff6a8ffebf0ac7f
+symbol: KDP
+published_utc: 2026-01-22T16:15:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-report-fourth-quarter-2025-results-and-host-conference-call-2026-01
+headline: Keurig Dr Pepper to Report Fourth Quarter 2025 Results and Host Conference Call
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, Jan. 22, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. will release its financial results for the fourth quarter and full year ended December 31, 2025 before the market opens on Tuesday, February 24, 2026. Investors and analysts may access the call by dialing 629-0615 within the United States or Canada and 317-1824 internationally...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c7ff9f1de887dfb2
+symbol: KDP
+published_utc: 2026-02-03T16:15:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-declares-quarterly-dividend-2026-02-03
+headline: Keurig Dr Pepper Declares Quarterly Dividend
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, Feb. 3, 2026/ PRNewswire/-- Keurig Dr Pepper announced today that its Board of Directors has declared a regular quarterly cash dividend of $0.23 per share, payable in U.S. dollars, on the Company's common stock. ABOUT KEURIG DR PEPPER Keurig Dr Pepper is a leading beverage company in North America, with a portfolio of more than 125...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ce6a7d59cb684f1e
+symbol: KDP
+published_utc: 2026-02-12T16:45:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-announces-new-directors-and-governance-changes-2026-02-12
+headline: Keurig Dr Pepper Announces New Directors and Governance Changes
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, Feb. 12, 2026/ PRNewswire/-- Keurig Dr Pepper today announced the continued evolution of its Board of Directors. On the same date, the existing Remuneration& Nominating Committee will separate into newly-created Nominating& Governance and Compensation Committees. Pam Patsley, Chair of the Remuneration& Nominating Committee,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e046507068f31ce7
+symbol: KDP
+published_utc: 2026-02-18T09:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-announces-flavorful-new-innovation-across-its-refreshment-portfolio
+headline: Keurig Dr Pepper Announces Flavorful New Innovation Across Its Refreshment Portfolio
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, Feb. 18, 2026/ PRNewswire/-- Keurig Dr Pepper is entering 2026 with an unrivaled commitment to flavor leadership, debuting innovations across its carbonated soft drinks, teas, waters, energy and juice drinks portfolios.  "Consumers want beverages that fit every need throughout their day, and our 2026 lineup does exactly that while...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7475cdaa708fabf4
+symbol: KDP
+published_utc: 2026-02-23T16:30:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-announces-updated-financing-plan-jde-peets-acquisition-2026-02-23
+headline: Keurig Dr Pepper Announces Updated Financing Plan for JDE Peet's Acquisition
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, Feb. 23, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. today announced updated financing plans and transaction timelines for the acquisition of JDE Peet's and subsequent planned separation into two independent companies. A targeted close of the JDE Peet's acquisition in early April 2026, with expected combined net leverage of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 554448693657220d
+symbol: KDP
+published_utc: 2026-02-24T07:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-reports-q4-and-full-year-2025-results-and-provides-2026-outlook-2026
+headline: Keurig Dr Pepper Reports Q4 and Full Year 2025 Results and Provides 2026 Outlook
+<<<TEXT>>>
+Performance Led by Strong Momentum in U.S. Refreshment Beverages. BURLINGTON, Mass. and FRISCO, Texas, Feb. 24, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. today reported results for the fourth quarter and full year ended December 31, 2025 and provided guidance for 2026.. Constant currency net sales growth of more than 8%, driven by U.S. Refreshment Beverages and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2734a517e5b0d053
+symbol: KDP
+published_utc: 2026-03-26T16:15:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-report-first-quarter-2026-results-and-host-conference-call-2026-03
+headline: Keurig Dr Pepper to Report First Quarter 2026 Results and Host Conference Call
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, March 26, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. will release its financial results for the first quarter ended March 31, 2026 before the market opens on Thursday, April 23, 2026. Investors and analysts may access the call by dialing 629-0615 within the United States or Canada and 317-1824 internationally and referencing the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bde6cb58e3cfb05c
+symbol: KDP
+published_utc: 2026-03-27T17:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-declares-offer-jde-peets-unconditional-2026-03-27
+headline: Keurig Dr Pepper Declares Offer for JDE Peet's Unconditional
+<<<TEXT>>>
+This is a joint press release by Keurig Dr Pepper Inc., Kodiak BidCo B.V. and JDE Peet's N.V. pursuant to the provisions of Section 16, paragraph 1 and 2, Section 17, paragraph 1 and Section 4, paragraph 3 of the Dutch Decree on public takeover bids in connection with the recommended public cash offer by Kodiak BidCo B.V. for all issued and outstanding ordinary...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5e07a7c936fef81f
+symbol: KDP
+published_utc: 2026-04-21T09:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-and-nestle-usa-extend-strategic-partnership-2026-04-21
+headline: Keurig Dr Pepper and Nestlé USA Extend Strategic Partnership
+<<<TEXT>>>
+BURLINGTON, Mass., FRISCO, Texas, and ARLINGTON, Va., April 21, 2026/ PRNewswire/-- Keurig Dr Pepper and Nestlé USA today announced an extended agreement renewing and expanding their strategic partnership, including the manufacturing and distribution of Starbucks ® K-Cup ® pods in the U.S. and Canada.  "Keurig's leading single‑ serve coffee platform is built on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b02f28b3c65f716a
+symbol: KDP
+published_utc: 2026-04-23T07:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-reports-q1-results-and-reaffirms-guidance-2026-2026-04-23
+headline: Keurig Dr Pepper Reports Q1 Results and Reaffirms Guidance for 2026
+<<<TEXT>>>
+Q1 Performance Led by Strong Momentum in U.S. Refreshment Beverages. Company Reaffirms 2026 Constant Currency Net Sales and Adjusted EPS Outlook. BURLINGTON, Mass. and FRISCO, Texas, April 23, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. today reported results for the first quarter of 2026 and reaffirmed its full year guidance.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8cb0116e85337fea
+symbol: KDP
+published_utc: 2026-05-06T09:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-peppers-2026-state-beverages-trend-report-reveals-gen-zs-drink-choice-now
+headline: Keurig Dr Pepper's 2026 State of Beverages Trend Report Reveals Gen Z's Drink Choice Is Now a Form of Self-Expression
+<<<TEXT>>>
+BURLINGTON, Mass. and FRISCO, Texas, May 6, 2026/ PRNewswire/-- Keurig Dr Pepper today released its State of Beverages 2026 Trend Report, highlighting how beverage consumption is evolving in an era of more choice than ever.  "The beverage industry has always been dynamic, but Gen Z and Gen Alpha are driving a more profound shift in the role of beverages in everyday life,"...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 862ef40bfc654ab2
+symbol: KDP
+published_utc: 2026-05-20T16:15:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-declares-quarterly-dividend-2026-05-20
+headline: Keurig Dr Pepper Declares Quarterly Dividend
+<<<TEXT>>>
+FRISCO, Texas and BURLINGTON, Mass., May 20, 2026/ PRNewswire/-- Keurig Dr Pepper announced today that its Board of Directors has declared a regular quarterly cash dividend of $0.23 per share, payable in U.S. dollars, on the Company's common stock. ABOUT KEURIG DR PEPPER Keurig Dr Pepper is a leading beverage company with more than 150 owned, licensed and partner brands...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 277108902ee9944a
+symbol: KDP
+published_utc: 2026-05-20T16:30:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-participate-deutsche-bank-dbaccess-global-consumer-conference-2026
+headline: Keurig Dr Pepper to Participate in Deutsche Bank dbAccess Global Consumer Conference
+<<<TEXT>>>
+FRISCO, Texas and BURLINGTON, Mass., May 20, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. today announced that Tim Cofer, Chief Executive Officer, and Anthony DiSilvestro, Chief Financial Officer, will present at the Deutsche Bank dbAccess Global Consumer Conference on June 3, 2026 at 5:15 AM ET. Katie Gilroy Keurig Dr Pepper T: 781-418-3345/ katie.gilroy@kdrp.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 23156e2eaeba28f8
+symbol: KDP
+published_utc: 2026-06-11T17:55:00Z
+url: https://www.nasdaq.com/press-release/jab-sells-remaining-stake-keurig-dr-pepper-2026-06-11
+headline: JAB Sells Remaining Stake in Keurig Dr Pepper
+<<<TEXT>>>
+JAB BevCo B.V., a subsidiary of JAB Holding Company S.a.r.l., today announced that it has sold its remaining stake in Keurig Dr Pepper Inc., consisting of approximately 59.1 million shares, or approximately 4.3% of KDP's outstanding common stock, through an unregistered block trade by J.P. Morgan Securities LLC. JAB remains firmly committed to its consumer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e9956b95fd14dd91
+symbol: KDP
+published_utc: 2026-06-23T02:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-announces-leadership-updates-2026-06-23
+headline: Keurig Dr Pepper Announces Leadership Updates
+<<<TEXT>>>
+FRISCO, Texas and BURLINGTON, Mass., June 23, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. today announced leadership updates as the Company advances preparations for its planned separation into Beverage Co. and Global Coffee Co., which is targeted for early 2027.. The KDP Board of Directors has opened a search process for the future CEO of Global Coffee Co. Pamela...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c5ccc8530751ea55
+symbol: KDP
+published_utc: 2026-06-25T16:15:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-report-second-quarter-2026-results-and-host-conference-call-2026-06
+headline: Keurig Dr Pepper to Report Second Quarter 2026 Results and Host Conference Call
+<<<TEXT>>>
+FRISCO, Texas and BURLINGTON, Mass., June 25, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. will release its financial results for the second quarter ended June 30, 2026 before the market opens on Thursday, August 6, 2026. Investors and analysts may access the call by dialing 629-0615 within the United States or Canada and 317-1824 internationally and referencing the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f1666f165fecffb6
+symbol: KDP
+published_utc: 2026-08-06T07:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-reports-q2-results-and-reaffirms-guidance-2026-2026-08-06
+headline: Keurig Dr Pepper Reports Q2 Results and Reaffirms Guidance for 2026
+<<<TEXT>>>
+Company Reaffirms 2026 Constant Currency Net Sales and Adjusted EPS Outlook. FRISCO, Texas and BURLINGTON, Mass., Aug. 6, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. today reported results for the second quarter of 2026 and reaffirmed its full year guidance. Refreshment Beverages generated double-digit top- and bottom-line growth, KDP International sequentially...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 96ead84aa46f27ec
+symbol: KDP
+published_utc: 2026-08-10T10:00:00Z
+url: https://www.nasdaq.com/press-release/7up-puts-lime-spotlight-its-biggest-brand-evolution-more-15-years-2026-08-10
+headline: 7UP Puts Lime in the Spotlight With Its Biggest Brand Evolution in More Than 15 Years
+<<<TEXT>>>
+--7 UP ®, part of the Keurig Dr Pepper portfolio of brands, is redefining the $5 billion lemon-lime category 1 with its first evolution in over 15 years, with a lime-led reformulation at the center. The debut of 7 UP Lime Lemon marks the category's first lime-led formula designed to strengthen the brand's distinctiveness and appeal with a new generation of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4ba4e3d1fcecb6a0
+symbol: KDP
+published_utc: 2026-08-12T08:00:00Z
+url: https://www.nasdaq.com/press-release/keurig-dr-pepper-announces-appointment-new-director-its-board-2026-08-12
+headline: Keurig Dr Pepper Announces Appointment of New Director to its Board
+<<<TEXT>>>
+FRISCO, Texas and BURLINGTON, Mass., Aug. 12, 2026/ PRNewswire/-- Keurig Dr Pepper Inc. announced today that Aaron Alt has been appointed a director of the Company's Board of Directors, effective August 14, 2026. He holds an MBA from Northwestern University's Kellogg School of Management, a J.D. from Harvard Law School and a bachelor's degree from Northwestern...
+<<<END>>>

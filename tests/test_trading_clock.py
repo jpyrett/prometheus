@@ -67,7 +67,24 @@ def test_the_simulated_clock_is_the_previous_business_day_inside_its_regular_ses
     session = mc.session_at(moment)
     assert tc.market_day(real) == expected_day and mc.eastern_date(moment) == expected_day, label
     assert session.state == "regular" and session.trading_date == expected_day, label       # the market is "open", and the day is a trading day
-    assert tc.previous_business_day(real) == expected_day
+    assert tc.last_closed_day(real) == expected_day
+
+
+@pytest.mark.parametrize("label, real, expected_day", [
+    ("Friday 16:12, after the close: Friday itself (Jacob, 2026-11-20)", datetime(2026, 11, 20, 16, 12, tzinfo=ET), date(2026, 11, 20)),
+    ("Friday at the close exactly", datetime(2026, 11, 20, 16, 0, tzinfo=ET), date(2026, 11, 20)),
+    ("Friday 15:59, not closed yet: Thursday", datetime(2026, 11, 20, 15, 59, tzinfo=ET), date(2026, 11, 19)),
+    ("Friday 23:59: Friday", datetime(2026, 11, 20, 23, 59, tzinfo=ET), date(2026, 11, 20)),
+    ("Saturday 00:01, past midnight: Friday", datetime(2026, 11, 21, 0, 1, tzinfo=ET), date(2026, 11, 20)),
+    ("Sunday: Friday", datetime(2026, 11, 22, 12, 0, tzinfo=ET), date(2026, 11, 20)),
+    ("Tuesday 00:30, past midnight: Monday", datetime(2026, 11, 24, 0, 30, tzinfo=ET), date(2026, 11, 23)),
+    ("the early-close Friday at 13:05: that Friday", datetime(2026, 11, 27, 13, 5, tzinfo=ET), date(2026, 11, 27)),
+    ("Thanksgiving evening (a holiday): Wednesday", datetime(2026, 11, 26, 18, 0, tzinfo=ET), date(2026, 11, 25)),
+])
+def test_after_the_close_the_simulated_day_is_today_and_past_midnight_or_at_the_weekend_the_last_day_that_closed(simulated, label, real, expected_day):
+    moment = tc.trading_now(real)
+    assert tc.last_closed_day(real) == expected_day and tc.market_day(real) == expected_day, label
+    assert mc.session_at(moment).state == "regular" and mc.session_at(moment).trading_date == expected_day, label
 
 
 @pytest.mark.parametrize("on", ["true", "false"])
@@ -76,7 +93,7 @@ def test_a_moment_without_a_timezone_is_a_mistake_in_either_mode(monkeypatch, on
     with pytest.raises(ValueError, match="timezone"):
         tc.trading_now(datetime(2026, 11, 14, 1, 30))
     with pytest.raises(ValueError):
-        tc.previous_business_day(datetime(2026, 11, 14, 1, 30))
+        tc.last_closed_day(datetime(2026, 11, 14, 1, 30))
 
 
 def test_the_default_moment_is_derived_from_the_real_clock_only_here(saturday):

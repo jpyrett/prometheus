@@ -1,6 +1,6 @@
 // "Component states" (?states): the sheet under the mockup, drawn with the page's own components so the states cannot drift from the page.
 // It is a development view: nothing here talks to the server, and the text of the run-box examples that no capture covers is the mockup's own, marked as illustrative.
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import type { QuestionData } from "./api/types";
 import { StepList } from "./components/Pipeline";
 import { QuestionCard } from "./components/QuestionCard";
@@ -16,6 +16,7 @@ import { initialRunState, replayEvents, type RunState, type StageView } from "./
 import { useTheme } from "./state/useTheme";
 import { approveQuestionEvent, bobEvents, clarifyQuestionEvent, confirmQuestionEvent, missingQuestionEvent } from "./statesData";
 
+const ProvingStates = lazy(() => import("./proving/ProvingStates"));
 const noop = () => undefined;
 const answer = () => Promise.resolve();
 
@@ -140,6 +141,9 @@ export default function StatesPage() {
           </div>
         </Card>
       </div>
+      <Suspense fallback={null}>
+        <ProvingStates />
+      </Suspense>
     </div>
   );
 }

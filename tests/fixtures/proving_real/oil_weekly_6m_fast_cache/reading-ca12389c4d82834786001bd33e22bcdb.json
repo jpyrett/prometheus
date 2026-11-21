@@ -1,0 +1,1 @@
+{"intent": {"request": "Buy the 3 most recommended oil stocks with $3,000, split evenly", "action": "buy", "topic": "oil", "symbols": [], "companies": [], "count": 3, "allocation": "even", "budget": 3000, "each": false, "orders": []}, "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly"}

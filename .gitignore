@@ -251,3 +251,12 @@ design/langsmith_api_key.txt
 
 # The security layer's audit log (design choices entry 116): one JSON line per screened input. Local only.
 logs/
+
+# The Proving Ground's results (design/proving_ground_spec.md): runs, the research cache, the sessions
+data/proving/
+
+# The bar index of the Time Machine (derived data, safe to delete: it is rebuilt) (design/proving_ground_spec.md 7.6)
+data/index/
+
+# The Critic's label store (Critic v2, design/critic_v2_evidence_spec.md rule C6): the model's labels of quotes, kept so the same quote gets the same label. A result of this machine's runs.
+data/critic/

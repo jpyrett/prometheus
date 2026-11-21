@@ -15,6 +15,8 @@ Entry 40 added two things the Advisor reads from the work order, both written by
 """
 from datetime import date
 
+from prometheus.common import trading_clock
+
 SYSTEM = """You are the Advisor of a trading desk. Today is {today}. You receive a work order and, when there are any, numbered sources: text from the web. Say which companies the work order is about and whether each is a bullish or a bearish opportunity, and why.
 
 Rules
@@ -44,7 +46,7 @@ RETRY = ("Your reply was not valid JSON in the required shape ({problem}). Reply
 
 def system_prompt(today: date | None = None, bare: bool = False, evidence: bool = False) -> str:
     """The system prompt. `evidence` adds the rules about filing evidence (the order carries some); the bare baseline never has them."""
-    text = (BARE_SYSTEM if bare else SYSTEM).format(today=(today or date.today()).isoformat())
+    text = (BARE_SYSTEM if bare else SYSTEM).format(today=(today or trading_clock.bound_day() or date.today()).isoformat())
     if evidence and not bare:
         head, tail = text.split("\n\nReply with JSON only", 1)
         text = f"{head}\n{EVIDENCE_RULES}\n\nReply with JSON only{tail}"

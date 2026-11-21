@@ -1,0 +1,156 @@
+{
+ "_note": "GET /api/proving/live/{account_id}: three positions with a plan, every stop hit. Copied by scripts/make_proving_fixtures.mjs from tests/fixtures/proving_real/live_snapshot_plan.json; the answer in `data` is not edited.",
+ "source": "tests/fixtures/proving_real/live_snapshot_plan.json",
+ "data": {
+  "account_id": 8295,
+  "name": "Plan Check Throwaway",
+  "positions": [
+   {
+    "symbol": "CVX",
+    "name": "CVX",
+    "shares": 27.28637,
+    "cost_basis": 219.89,
+    "price": 209.02,
+    "price_time": "2026-11-20T19:35:30Z",
+    "simulated": false,
+    "value": 5703.4,
+    "gain": -296.6,
+    "gain_pct": -0.049433,
+    "day_change_pct": 0.012203,
+    "plan": {
+     "stop": 215.4814,
+     "target": 224.7431,
+     "time_stop_date": "2027-02-10"
+    },
+    "status": "stop_hit",
+    "evidence": "the low of 2026-11-17",
+    "since": "2026-11-13",
+    "record_id": "c17c56d1ce7d",
+    "notes": []
+   },
+   {
+    "symbol": "EOG",
+    "name": "EOG",
+    "shares": 37.897928,
+    "cost_basis": 158.32,
+    "price": 150,
+    "price_time": "2026-11-20T19:35:36Z",
+    "simulated": false,
+    "value": 5684.69,
+    "gain": -315.31,
+    "gain_pct": -0.052552,
+    "day_change_pct": 0.003412,
+    "plan": {
+     "stop": 150.028,
+     "target": 162.2635,
+     "time_stop_date": "2027-02-10"
+    },
+    "status": "stop_hit",
+    "evidence": "the low of 2026-11-18",
+    "since": "2026-11-13",
+    "record_id": "d415bba65829",
+    "notes": []
+   },
+   {
+    "symbol": "XOM",
+    "name": "XOM",
+    "shares": 35.172049,
+    "cost_basis": 170.59,
+    "price": 160.39,
+    "price_time": "2026-11-20T19:35:34Z",
+    "simulated": false,
+    "value": 5641.24,
+    "gain": -358.76,
+    "gain_pct": -0.059793,
+    "day_change_pct": 0.009186,
+    "plan": {
+     "stop": 169.3786,
+     "target": 174.9426,
+     "time_stop_date": "2027-02-10"
+    },
+    "status": "stop_hit",
+    "evidence": "the low of 2026-11-16",
+    "since": "2026-11-13",
+    "record_id": "64cf72c6b6bc",
+    "notes": []
+   }
+  ],
+  "cash": 2000,
+  "invested_at_cost": 18000,
+  "market_value": 17029.33,
+  "equity": 19029.33,
+  "gain": -970.67,
+  "gain_pct": -0.053926,
+  "as_of_utc": "2026-11-20T19:36:05Z",
+  "alerts": [
+   {
+    "symbol": "CVX",
+    "kind": "stop_hit",
+    "sentence": "CVX hit its stop at 215.4814 (the low of 2026-11-17): the price now is 209.0200. Nothing was sold; selling is your decision."
+   },
+   {
+    "symbol": "EOG",
+    "kind": "stop_hit",
+    "sentence": "EOG hit its stop at 150.0280 (the low of 2026-11-18): the price now is 150.0000. Nothing was sold; selling is your decision."
+   },
+   {
+    "symbol": "XOM",
+    "kind": "stop_hit",
+    "sentence": "XOM hit its stop at 169.3786 (the low of 2026-11-16): the price now is 160.3900. Nothing was sold; selling is your decision."
+   }
+  ],
+  "session": {
+   "state": "regular",
+   "open": true,
+   "reason": "",
+   "next_open_utc": "2026-11-23T09:00:00Z"
+  },
+  "history": [
+   {
+    "date": "2026-11-12",
+    "equity": 20000,
+    "cash": 20000,
+    "invested": 0,
+    "stale": []
+   },
+   {
+    "date": "2026-11-13",
+    "equity": 20000,
+    "cash": 2000,
+    "invested": 18000,
+    "stale": []
+   },
+   {
+    "date": "2026-11-16",
+    "equity": 19686.11,
+    "cash": 2000,
+    "invested": 17686.11,
+    "stale": []
+   },
+   {
+    "date": "2026-11-17",
+    "equity": 19649.29,
+    "cash": 2000,
+    "invested": 17649.29,
+    "stale": []
+   },
+   {
+    "date": "2026-11-18",
+    "equity": 18938.59,
+    "cash": 2000,
+    "invested": 16938.59,
+    "stale": []
+   },
+   {
+    "date": "2026-11-19",
+    "equity": 18889.89,
+    "cash": 2000,
+    "invested": 16889.89,
+    "stale": []
+   }
+  ],
+  "last_bar_day": "2026-11-20",
+  "clock_note": null,
+  "notes": []
+ }
+}

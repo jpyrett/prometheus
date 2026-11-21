@@ -26,13 +26,15 @@ SEVERITIES = ("blocker", "warning", "info")
 MODEL_FIELDS = ("evidence.claims[*].label", "evidence.claims[*].reason", "evidence.control.label", "evidence.fresh[*].label", "evidence.fresh[*].quote")
 
 # The closed list of codes that may be a BLOCKER (spec 9.3), in the order the summary names them. A blocker with any other code cannot be built.
+# Version 2 (design/critic_v2_evidence_spec.md): `trend_not_confirmed` joined the chart's (rule C5); `blend_not_supported` left the evidence's (rule C3: it is a warning now). A review stored by version 1 still holds it as a blocker in its dict:
+# nothing validates a stored review again (the Proving Ground reads them as dicts), so the list does not keep a code that cannot be a blocker any more.
 BLOCKER_CODES: dict[str, tuple[str, ...]] = {
     "accuracy": ("record_not_reviewable", "record_defect", "data_unverified", "data_mismatch", "source_missing", "source_altered", "symbol_unknown", "price_mismatch"),
     "timing": ("market_closed", "record_expired", "time_stop_passed", "bars_stale", "no_live_price", "quote_stale", "price_left_zone", "stop_already_hit"),
     "risk_fit": ("risk_above_profile", "symbol_excluded", "sector_excluded", "price_below_profile_min"),
     "value": ("overpriced", "valuation_extreme", "falling_knife"),
-    "chart": ("dead_cat_bounce",),
-    "evidence": ("event_not_supported", "blend_not_supported", "fresh_negative_event"),
+    "chart": ("dead_cat_bounce", "trend_not_confirmed"),
+    "evidence": ("event_not_supported", "fresh_negative_event"),
 }
 BLOCKER_ORDER = tuple(code for codes in BLOCKER_CODES.values() for code in codes)
 

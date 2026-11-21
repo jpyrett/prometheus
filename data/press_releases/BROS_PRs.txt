@@ -1,0 +1,171 @@
+<<<PRESS_RELEASE>>>
+id: 1c1febba2fabe683
+symbol: BROS
+published_utc: 2026-01-05T07:07:00Z
+url: https://www.nasdaq.com/press-release/sip-sunny-side-dutch-brosr-new-drinks-2026-01-05
+headline: Sip on the Sunny Side with Dutch Bros® New Drinks!
+<<<TEXT>>>
+--Sip on the sunny side all day long with Dutch Bros new breakfast inspired drinks! Order it as an iced mocha, mocha Freeze or mocha cold brew. The Smooth Strawberry Rebel turns your smoothie cravings into an epic energy drink with strawberry and banana flavor mixed with Dutch Bros' exclusive Dutch Bros Rebel ® energy drink and sweet cream.  "Dutch Bros is all about...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e36c74934abd2628
+symbol: BROS
+published_utc: 2026-01-05T16:05:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-appoints-jennifer-somers-chief-shops-officer-2026-01-05
+headline: Dutch Bros Inc. Appoints Jennifer Somers as Chief Shops Officer
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick-service beverage industry, today announced the appointment of Jennifer Somers as Chief Shops Officer. Reporting to Christine Barone, Chief Executive Officer and President of Dutch Bros, Somers will lead Dutch Bros’ field organization and shop operations, overseeing operational excellence,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2abb506feba40b52
+symbol: BROS
+published_utc: 2026-01-29T09:00:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-host-fourth-quarter-and-fiscal-year-2025-conference-call-and-webcast
+headline: Dutch Bros Inc. to Host Fourth Quarter and Fiscal Year 2025 Conference Call and Webcast on February 12
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick service beverage industry, today announced that Christine Barone, Chief Executive Officer and President, and Joshua Guenser, Chief Financial Officer, will host a conference call and webcast to review financial results for the fourth quarter and fiscal year 2025, which ended on December 31,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 15ac51e38240616c
+symbol: BROS
+published_utc: 2026-02-01T07:53:00Z
+url: https://www.nasdaq.com/press-release/dutch-brosr-launches-decadent-drinks-celebrate-dutch-luvr-2026-02-01
+headline: Dutch Bros® Launches Decadent Drinks to Celebrate Dutch Luv®
+<<<TEXT>>>
+--Dutch Bros is inviting customers to have their cake and drink it too with new decadent flavors. The Pink Velvet Mocha and Luvstruck Rebel are this season's romantic drink selections now available at all 1,081+ Dutch Bros locations, while supplies last!  "This year's Dutch Luv season brings two new special flavors and a chance to pour extra love into our...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: adf7fe4ab7fbd9d9
+symbol: BROS
+published_utc: 2026-02-10T07:00:00Z
+url: https://www.nasdaq.com/press-release/dutch-brosr-cpg-products-expand-more-stores-and-online-2026-02-10
+headline: Dutch Bros® CPG Products Expand to More Stores and Online
+<<<TEXT>>>
+TEMPE, Ariz., Feb. 10, 2026/ PRNewswire/-- Dutch Bros Inc., one of the fastest-growing quick service beverage brands in the U.S., is bringing the flavors customers love to more places with its Dutch Bros at home assortment. Developed in partnership with Trilliant Food& Nutrition, LLC, a leading U.S. coffee manufacturer, the Dutch Bros at home assortment is now available...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6b7da5ed2bdb770a
+symbol: BROS
+published_utc: 2026-02-12T16:05:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-reports-fourth-quarter-and-fiscal-year-2025-financial-results-2026-02
+headline: Dutch Bros Inc. Reports Fourth Quarter and Fiscal Year 2025 Financial Results
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick service beverage industry, today reported financial results for the fourth quarter and year ended December 31, 2025. Christine Barone, Chief Executive Officer and President of Dutch Bros, said," The results of our fourth quarter and full year 2025 show that five years into our journey as a public...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e3bf80e5be7b4cef
+symbol: BROS
+published_utc: 2026-02-27T07:43:00Z
+url: https://www.nasdaq.com/press-release/dutch-brosr-releases-new-drink-trio-school-taste-buds-2026-02-27
+headline: Dutch Bros® Releases New Drink Trio to School Taste Buds
+<<<TEXT>>>
+--Recess starts now at Dutch Bros with three new, childhood-inspired drinks! Throw it back to the good ol' days with the Brown Butter Chocolate Chip, Fruit Punch with a Sour Candy Straw and Kool Blue, now available at all 1,136+ Dutch Bros locations, while supplies last!  "This epic drink trio is a time capsule of nostalgic flavors," said Tana Davila, chief marketing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5bb8b69e57f8a0dc
+symbol: BROS
+published_utc: 2026-04-15T09:00:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-host-first-quarter-2026-conference-call-and-webcast-may-6-2026-04-15
+headline: Dutch Bros Inc. to Host First Quarter 2026 Conference Call and Webcast on May 6
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick service beverage industry, today announced that Christine Barone, Chief Executive Officer and President, and Joshua Guenser, Chief Financial Officer, will host a conference call and webcast to review financial results for the first quarter ended March 31, 2026 on Wednesday, May 6, 2026 at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b01238f49c5715b3
+symbol: BROS
+published_utc: 2026-05-01T07:56:00Z
+url: https://www.nasdaq.com/press-release/dutch-brosr-splashes-summer-new-myst-energy-refreshertm-and-returning-seasonal-faves
+headline: Dutch Bros® Splashes into Summer with New Myst Energy Refresher™ and Returning Seasonal Faves
+<<<TEXT>>>
+--Dive into the enchantment of Dutch Bros summer drinks! Ready for any adventure, this lineup features an exciting new drink category and two beloved seasonal sips. Myst Energy Refreshers, Dulce de Leche and Strawberry Colada are now making waves at all 1,136+ Dutch Bros locations, while supplies last!  "We're really excited to not only bring back beloved summer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8ca5a42e64ec0c11
+symbol: BROS
+published_utc: 2026-05-06T16:05:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-reports-first-quarter-2026-financial-results-2026-05-06
+headline: Dutch Bros Inc. Reports First Quarter 2026 Financial Results
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick service beverage industry, today reported financial results for the first quarter ended March 31, 2026. Christine Barone, Chief Executive Officer and President of Dutch Bros, said," Our first quarter results reinforce that Dutch Bros continues to operate in a category of its own.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ace39ff73e2fc125
+symbol: BROS
+published_utc: 2026-05-11T07:57:00Z
+url: https://www.nasdaq.com/press-release/honoring-legacy-dutch-brosr-annual-drink-one-daner-day-giving-returns-raise-als
+headline: Honoring a Legacy: Dutch Bros® Annual Drink One For Dane® Day of Giving Returns to Raise ALS Awareness
+<<<TEXT>>>
+--On Friday, May 15, Dutch Bros will hold its annual Drink One for Dane Day of Giving, remembering co-founder Dane Boersma and raising awareness for Amyotrophic Lateral Sclerosis. During the event, the Dutch Bros Foundation and Dutch Bros franchisees will donate $1 for every drink sold to the fight against ALS.  "For nearly two decades, Drink One for Dane has held a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ea6a61c6df1a9727
+symbol: BROS
+published_utc: 2026-05-12T16:05:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-acquire-phoenix-east-valley-franchise-expanding-company-operated
+headline: Dutch Bros Inc. to Acquire Phoenix East Valley Franchise, Expanding Company-Operated Presence in Arizona
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick-service beverage industry, today announced it has entered into an agreement to acquire the Phoenix East Valley franchise. After nearly 20 years with Dutch Bros, franchise owner Jim Thompson has decided to retire. He played a meaningful role in shaping Dutch Bros into what it is today," said...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e765123e9249a128
+symbol: BROS
+published_utc: 2026-05-13T08:18:00Z
+url: https://www.nasdaq.com/press-release/dutch-brosr-arrives-chicagoland-first-shop-opening-melrose-park-2026-05-13
+headline: Dutch Bros® Arrives in Chicagoland with First Shop Opening in Melrose Park
+<<<TEXT>>>
+--Dutch Bros Coffee, a leader in the drive-thru beverage category, is set to debut its fun-loving brand in the Chicago suburbs, with its new Melrose Park location opening on Thursday, May 14.  "Opening in the Chicago area has always been a dream for us at Dutch Bros, and Melrose Park is just the beginning," said Allie Lahti, Local Market Lead at Dutch Bros Coffee.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2b8cfde2c8472492
+symbol: BROS
+published_utc: 2026-05-26T09:00:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-participate-upcoming-investor-conference-2026-05-26
+headline: Dutch Bros Inc. to Participate in Upcoming Investor Conference
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick service beverage industry, today announced that the Company will participate in William Blair’ s 46 th Annual Growth Stock Conference in Chicago. Founded in 1992 by brothers Dane and Travis Boersma, Dutch Bros began with a double-head espresso machine and a pushcart in Grants Pass, Oregon.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ac27cf231efcc3d5
+symbol: BROS
+published_utc: 2026-05-29T08:02:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-community-reaches-20-million-total-lifetime-donations-muscular-dystrophy
+headline: Dutch Bros Community Reaches $20 Million in Total Lifetime Donations to Muscular Dystrophy Association During 19th Annual Drink One For Dane Day of Giving
+<<<TEXT>>>
+*This $20 million lifetime achievement reflects the power of the Dutch Bros community.  "The unified energy of our customers, crews and entire Dutch Bros team rallying together for each annual Drink One For Dane Day of Giving is what keeps Dane's legacy of giving alive and lets us keep making a massive difference, one cup at a time," said Tana Davila, Chief Marketing...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1f9585fbb5d5d2fe
+symbol: BROS
+published_utc: 2026-07-06T07:54:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-takes-customers-planet-dutch-out-world-flavors-2026-07-06
+headline: Dutch Bros Takes Customers to Planet Dutch with Out-of-This-World Flavors
+<<<TEXT>>>
+--Dutch Bros is taking customers on a cosmic ride to Planet Dutch with three stellar sips! Here to rocket customers through the day, the Cosmic Cookie Dough, Stardust and Supernova are now available at all 1,177+ Dutch Bros locations, while supplies last!  "At Dutch Bros, our brand naturally connects with fun flavors and playful toppings, and this drink trio is a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 98aedef7e76bd49c
+symbol: BROS
+published_utc: 2026-07-22T08:30:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-host-second-quarter-2026-conference-call-and-webcast-august-5-2026-07
+headline: Dutch Bros Inc. to Host Second Quarter 2026 Conference Call and Webcast on August 5
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick service beverage industry, will host a conference call and webcast to review financial results for the second quarter, which ended on June 30, 2026. The conference call and webcast will take place on Wednesday, August 5, 2026 at 5:00 p.m. Eastern Time. Dutch Bros will report financial results for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5fc71e8afacd80e6
+symbol: BROS
+published_utc: 2026-08-05T16:05:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-accelerates-its-expansion-strategic-site-acquisition-key-growth-markets
+headline: Dutch Bros Accelerates its Expansion with Strategic Site Acquisition in Key Growth Markets
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick-service beverage industry, today announced it has entered into an agreement to acquire the real estate and related site assets of up to 65 Salad and Go™ locations across Arizona, Nevada, Oklahoma, and Texas. The site acquisition would provide Dutch Bros with a portfolio of established drive-thru...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5d4b0cfc63a9da2a
+symbol: BROS
+published_utc: 2026-08-05T16:06:00Z
+url: https://www.nasdaq.com/press-release/dutch-bros-inc-reports-second-quarter-2026-financial-results-2026-08-05
+headline: Dutch Bros Inc. Reports Second Quarter 2026 Financial Results
+<<<TEXT>>>
+Dutch Bros Inc., one of the fastest-growing brands in the U.S. quick service beverage industry, today reported financial results for the second quarter ended June 30, 2026. Christine Barone, Chief Executive Officer and President of Dutch Bros, said," Our second quarter performance reflects the strength of the Dutch Bros brand, powered by our differentiated...
+<<<END>>>

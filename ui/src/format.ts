@@ -97,3 +97,46 @@ export function words(text: string): string {
 export function cap(text: string): string {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
+
+// ---------------------------------------------------------------- the Proving Ground (a `_pct` is a FRACTION: 0.0077 is 0.77%)
+
+const MINUS = "−";
+const DASH = "—";
+
+/** A fraction as a percent with a real minus sign: 0.0321 to "+3.2%", -0.1 to "−10.0%". `sign: false` leaves out the plus. */
+export function pct(fraction: number | null | undefined, digits = 1, sign = true): string {
+  if (fraction === null || fraction === undefined || Number.isNaN(fraction)) return DASH;
+  const text = (Math.abs(fraction) * 100).toFixed(digits);
+  const zero = Number(text) === 0;
+  return `${fraction < 0 && !zero ? MINUS : sign && fraction > 0 && !zero ? "+" : ""}${text}%`;
+}
+
+/** A difference of two fractions as points: 0.032 to "+3.2 pts" (percentage points). */
+export function points(fraction: number | null | undefined, digits = 1): string {
+  if (fraction === null || fraction === undefined || Number.isNaN(fraction)) return DASH;
+  const text = (Math.abs(fraction) * 100).toFixed(digits);
+  const zero = Number(text) === 0;
+  return `${fraction < 0 && !zero ? MINUS : fraction > 0 && !zero ? "+" : ""}${text} pts`;
+}
+
+/** An axis money: $9,800 under 10,000; $10.4k above; $1.2M. One style per axis is the caller's job. */
+export function moneyAxis(value: number): string {
+  const a = Math.abs(value);
+  const sign = value < 0 ? MINUS : "";
+  if (a >= 1_000_000) return `${sign}$${(a / 1_000_000).toFixed(a >= 10_000_000 ? 0 : 1)}M`;
+  if (a >= 100_000) return `${sign}$${Math.round(a / 1000)}k`;
+  if (a >= 10_000) return `${sign}$${(a / 1000).toFixed(1).replace(/\.0$/, "")}k`;
+  return `${sign}$${int.format(Math.round(a))}`;
+}
+
+/** A rate that is 0 to 1 as a whole percent: 0.583 to "58%". */
+export function rate(fraction: number | null | undefined): string {
+  return fraction === null || fraction === undefined || Number.isNaN(fraction) ? DASH : `${Math.round(fraction * 100)}%`;
+}
+
+/** 133 seconds to "2m 13s"; under a minute "37.2s". */
+export function duration(seconds: number): string {
+  if (seconds < 60) return `${seconds.toFixed(1)}s`;
+  const m = Math.floor(seconds / 60);
+  return `${m}m ${two(Math.round(seconds - m * 60))}s`;
+}

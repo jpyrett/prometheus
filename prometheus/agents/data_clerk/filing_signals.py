@@ -17,6 +17,7 @@ for Apple, `2,214 million` in the label for META; `Accumulated deficit` and `Ret
 import re
 from datetime import date, datetime, timedelta, timezone
 
+from prometheus.common import trading_clock
 from prometheus.rag.loaders import filing_parts
 
 TOPIC_FILTER = {"dilution": "negative", "executive_compensation": "negative", "equity_compensation": "negative", "buyback": "positive", "dividend": "positive"}
@@ -353,10 +354,19 @@ def move(row: dict) -> str:
     return f"{number_text(row['current'])} vs {number_text(row['prior'])} ({row['change']:+,.0f}{pct})" if row["change"] is not None else f"{number_text(row['current'])} vs {number_text(row['prior'])}"
 
 
-def recommendation_evidence(symbol: str, filings: list[dict], today: date | None = None, since_days: int = DEFAULT_WINDOW) -> dict:
+def recommendation_evidence(symbol: str, filings: list[dict], today: date | None = None, since_days: int = DEFAULT_WINDOW, until: date | None = None) -> dict:
     """The evidence package for one company from its stored filings (see the module text). `filings` is `filings_from_documents(...)`, `since_days` the window of filing dates
-    counted back from `today`. Returns {symbol, as_of, window_days, filings, balance_sheet, capital_actions, income, evidence, found, gaps, digest}; scores nothing."""
+    counted back from `today`. Returns {symbol, as_of, window_days, filings, balance_sheet, capital_actions, income, evidence, found, gaps, digest}; scores nothing.
+
+    `until` closes the window at the other end: only filings filed on or before it. While a day is bound (`trading_clock.as_of`, the Proving Ground) it defaults to that day, `today` defaults to it and is never later than it, and a filing
+    filed after it is left out of EVERYTHING (the window, the gaps, the digest: not even "the latest stored was filed ..."). Unbound and with no `until`, nothing is cut, whatever `today` is (as before)."""
+    bound = trading_clock.bound_day()
+    if bound is not None:
+        today = min(today or bound, bound)
+        until = min(until or bound, bound)
     today = today or datetime.now(timezone.utc).date()
+    if until is not None:
+        filings = [f for f in filings if f["filed"] <= until.isoformat()]
     since = (today - timedelta(days=since_days)).isoformat()
     window = sorted((f for f in filings if f["filed"] >= since), key=lambda f: f["filed"], reverse=True)
     stored = [{"accession": f["accession"], "form": f["form"], "filed": f["filed"], "period_end": f["period_end"], "sections": list(f["sections"]), "url": f["url"]} for f in window if f["has_text"]]

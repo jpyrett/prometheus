@@ -1,0 +1,1557 @@
+{
+ "_note": "Recorded from the replay server by scripts/record_proving.mjs (GET /api/proving/runs/tm-20261120-214729-ba86/days/2026-06-08). The answer in `data` is exactly what the page received.",
+ "source": "GET /api/proving/runs/tm-20261120-214729-ba86/days/2026-06-08",
+ "data": {
+  "day": "2026-06-08",
+  "title": "The desk on 2026-06-08",
+  "view": {
+   "request_id": "9e8136fd2db9",
+   "status": "traded",
+   "kind": "research",
+   "understood": "buy the 3 most recommended 'oil' companies; the money spread evenly over the companies that are approved; spending at most $3,000.00",
+   "rows": [
+    {
+     "key": "OXY",
+     "symbol": "OXY",
+     "company": "Occidental Petroleum",
+     "rank": 1,
+     "group": "recommended",
+     "advisor": {
+      "score": 73,
+      "stance": "bullish",
+      "reason": "conviction: blended score 73 (news, performance, history and filings together)"
+     },
+     "critic": {
+      "approved": true,
+      "score": 79,
+      "grade": "C"
+     },
+     "decision": {
+      "will_trade": "yes_auto",
+      "words": "yes (AUTO)",
+      "action": "open",
+      "shares": 17.397355,
+      "est_cost": 1000,
+      "dollars": 1000,
+      "price": 57.48,
+      "origin": null
+     },
+     "trade": {
+      "status": "filled",
+      "side": "buy",
+      "shares": 17.568517,
+      "price": 56.92,
+      "amount": 1000
+     },
+     "detail": {
+      "header": {
+       "score": 73,
+       "stance": "bullish",
+       "rank": 1,
+       "of": 10,
+       "strategy": "conviction"
+      },
+      "thesis": "Buy Occidental Petroleum based on its blended score of 73 and bullish conviction, supported by its acquisition of a 10% stake in ExxonMobil's Ultra Deep 1 block and positive stock movement due to rising oil prices from geopolitical tensions. The recommendation would be wrong if the stock fails to hold above the stop loss of 51.948 or if the expected 20-day edge of 0.30% does not materialize.",
+      "bull": [
+       {
+        "text": "Occidental Petroleum is acquiring a 10% stake in ExxonMobil's Ultra Deep 1 deepwater exploration block offshore Trinidad and Tobago.",
+        "ref": "[3]"
+       },
+       {
+        "text": "OXY | positive | Stock up 4.04% due to rising oil prices driven by geopolitical tensions and supply concerns. As a major U.S. oil producer, the company benefits from increased global demand and higher energy prices resulting from potential Middle East shipping disruptions.",
+        "ref": "[4]"
+       }
+      ],
+      "bear": [
+       {
+        "text": "Family reversion: did not pass: not oversold: ret_5d -0.024, zscore_21d -0.16, rsi_14 48.2; not idiosyncratic: residual_5d -0.042 against the sector's 0.018; company-specific news in the last 5 bars (1) and no neutral cause was given.",
+        "ref": "rsi_14"
+       }
+      ],
+      "evidence": [
+       {
+        "source": 3,
+        "direction": "bullish",
+        "quote": "Occidental Petroleum is acquiring a 10% stake in ExxonMobil's Ultra Deep 1 deepwater exploration block offshore Trinidad and Tobago.",
+        "verified": true,
+        "counted": true,
+        "reason": null
+       },
+       {
+        "source": 4,
+        "direction": "bullish",
+        "quote": "OXY | positive | Stock up 4.04% due to rising oil prices driven by geopolitical tensions and supply concerns. As a major U.S. oil producer, the company benefits from increased global demand and higher energy prices resulting from potential Middle East shipping disruptions.",
+        "verified": true,
+        "counted": true,
+        "reason": null
+       },
+       {
+        "source": 8,
+        "direction": "bullish",
+        "quote": "Occidental to acquire 10% stake in Exxon's Trinidad deepwater block, sources sayExxon conducting seismic surveys, data interpretation expected by end of 2026Block borders Guyana's Stabroek, potential seen but exploration",
+        "verified": true,
+        "counted": true,
+        "reason": null
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0.3646,
+        "available": true,
+        "contribution": 0.1458
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0.5848,
+        "available": true,
+        "contribution": 0.1754
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0.7129,
+        "available": true,
+        "contribution": 0.1426
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       }
+      ],
+      "key_numbers": [
+       {
+        "label": "Last close",
+        "value": "$57.48"
+       },
+       {
+        "label": "12-1 month momentum",
+        "value": "24.7%"
+       },
+       {
+        "label": "1-month return",
+        "value": "6.6%"
+       },
+       {
+        "label": "Of 52-week high",
+        "value": "85.2%"
+       },
+       {
+        "label": "RSI 14",
+        "value": "48.2"
+       },
+       {
+        "label": "Volatility (annual)",
+        "value": "41.2%"
+       },
+       {
+        "label": "Earnings yield",
+        "value": "15.4%"
+       },
+       {
+        "label": "Return on equity %",
+        "value": "20.6"
+       },
+       {
+        "label": "Revenue growth %",
+        "value": "16.6"
+       },
+       {
+        "label": "Debt / equity",
+        "value": "0.27"
+       },
+       {
+        "label": "Current ratio",
+        "value": "1.38"
+       }
+      ],
+      "plan": {
+       "entry_zone": "$56.56 – $58.40",
+       "stop": "$51.95",
+       "target": "$58.00",
+       "order": "Limit $57.48",
+       "time_stop": "Aug 3, 2026",
+       "horizon": "40 sessions",
+       "invalidation": [
+        "price below: 51.948",
+        "days elapsed: 40",
+        "event class: guidance_cut, earnings_miss, dividend_cut, dilution_offering, ceo_departure_unplanned, material_weakness, restatement, going_concern, form_144_sale_notice"
+       ],
+       "notes": [
+        "entry zone = last +- 0.5 x atr_14; stop = 3 x atr_14 (atr_14 = 1.84)"
+       ]
+      },
+      "review": {
+       "approved": true,
+       "score": 79,
+       "grade": "C",
+       "summary": "APPROVE OXY: score 79 (C); accuracy 30/30, evidence 14/15, risk fit 10/20, timing 10/10, value 10/15, chart 5/10.",
+       "dimensions": [
+        {
+         "name": "accuracy",
+         "label": "Accuracy",
+         "points": 30,
+         "weight": 30,
+         "applicable": true
+        },
+        {
+         "name": "evidence",
+         "label": "Evidence",
+         "points": 13.75,
+         "weight": 15,
+         "applicable": true
+        },
+        {
+         "name": "risk_fit",
+         "label": "Risk fit",
+         "points": 10.27,
+         "weight": 20,
+         "applicable": true
+        },
+        {
+         "name": "timing",
+         "label": "Timing",
+         "points": 10,
+         "weight": 10,
+         "applicable": true
+        },
+        {
+         "name": "value",
+         "label": "Value",
+         "points": 9.5,
+         "weight": 15,
+         "applicable": true
+        },
+        {
+         "name": "chart",
+         "label": "Chart",
+         "points": 5,
+         "weight": 10,
+         "applicable": true
+        }
+       ],
+       "blockers": [],
+       "warnings": [
+        {
+         "code": "source_not_tagged",
+         "message": "[8]: the source read again does not list OXY among its tickers, so it is not counted as evidence for it."
+        },
+        {
+         "code": "rich_price",
+         "message": "The price is 11.0% above its six-month average (51.80)."
+        }
+       ],
+       "risk": {
+        "level": "medium",
+        "score": 43.8,
+        "tolerance": "moderate",
+        "allowed": "medium"
+       },
+       "valid_until_utc": "2026-06-08T20:30:00Z",
+       "requires_human": false
+      },
+      "order": {
+       "decision": {
+        "will_trade": "yes_auto",
+        "words": "yes (AUTO)",
+        "action": "open",
+        "shares": 17.397355,
+        "est_cost": 1000,
+        "dollars": 1000,
+        "price": 57.48,
+        "origin": null,
+        "reason": "approved by the Critic (score 79): Auto mode trades what the Critic approves (balanced evenly: about $1,000.00 for each of 3 purchases)",
+        "mode": "auto",
+        "balance": {
+         "mode": "even",
+         "target_dollars": 1000,
+         "of": 3
+        },
+        "binding": "budget",
+        "allocation": "even"
+       },
+       "trade": {
+        "status": "filled",
+        "side": "buy",
+        "shares": 17.568517,
+        "price": 56.92,
+        "amount": 1000,
+        "trade_id": "T1",
+        "reason": "limit order filled at 56.9200 (the open of 2026-06-09 was 56.9200, the limit 57.4800); an order of $1,000.00: 17.568517 shares at 56.9200 (the estimate was 17.397355)",
+        "reject_code": null,
+        "order_type": "limit",
+        "mode": "backtest",
+        "slippage_bps": 0,
+        "price_source": "bar_open",
+        "booked": false
+       }
+      }
+     }
+    },
+    {
+     "key": "CVX",
+     "symbol": "CVX",
+     "company": "Chevron",
+     "rank": 2,
+     "group": "recommended",
+     "advisor": {
+      "score": 73,
+      "stance": "bullish",
+      "reason": "conviction: blended score 73 (news, performance, history and filings together)"
+     },
+     "critic": {
+      "approved": true,
+      "score": 80,
+      "grade": "B"
+     },
+     "decision": {
+      "will_trade": "yes_auto",
+      "words": "yes (AUTO)",
+      "action": "open",
+      "shares": 5.284295,
+      "est_cost": 1000,
+      "dollars": 1000,
+      "price": 189.24,
+      "origin": null
+     },
+     "trade": {
+      "status": "filled",
+      "side": "buy",
+      "shares": 5.305039,
+      "price": 188.5,
+      "amount": 1000
+     },
+     "detail": {
+      "header": {
+       "score": 73,
+       "stance": "bullish",
+       "rank": 2,
+       "of": 10,
+       "strategy": "conviction"
+      },
+      "thesis": "Buy Chevron based on its blended score of 73 and bullish conviction, supported by its capital-efficiency play, reduced rig count in the Permian, and shares purchased under share repurchase and executive compensation plans. The recommendation would be wrong if the stock fails to hold above the stop loss of 176.561 or if the expected 20-day edge of 0.30% does not materialize.",
+      "bull": [
+       {
+        "text": "CVX | positive | Offers sharper capital-efficiency play with tighter free-cash-flow discipline. Achieved 1 million boe/d in Permian while reducing rig count from 13 to 9, expected to add ~$2 billion to free cash flow. Provides cleaner free-cash-flow story compared to ExxonMobil's growth-through-scal",
+        "ref": "[5]"
+       },
+       {
+        "text": "Shares purchased under share repurchase and executive compensation plans",
+        "ref": "E11"
+       }
+      ],
+      "bear": [
+       {
+        "text": "Family reversion: did not pass: not oversold: ret_5d 0.018, zscore_21d 0.34, rsi_14 51.8; not idiosyncratic: residual_5d 0.000 against the sector's 0.018; company-specific news in the last 5 bars (1) and no neutral cause was given.",
+        "ref": "rsi_14"
+       }
+      ],
+      "evidence": [
+       {
+        "source": 5,
+        "direction": "bullish",
+        "quote": "CVX | positive | Offers sharper capital-efficiency play with tighter free-cash-flow discipline. Achieved 1 million boe/d in Permian while reducing rig count from 13 to 9, expected to add ~$2 billion to free cash flow. Provides cleaner free-cash-flow story compared to ExxonMobil's growth-through-scal",
+        "verified": true,
+        "counted": true,
+        "reason": null
+       },
+       {
+        "source": "E11",
+        "direction": "bullish",
+        "quote": "Shares purchased under share repurchase and executive compensation plans",
+        "verified": true,
+        "counted": true,
+        "reason": null
+       },
+       {
+        "source": "E14",
+        "direction": "bullish",
+        "quote": "Shares purchased under share repurchase and executive compensation plans | (2,572) | (3,917)",
+        "verified": true,
+        "counted": false,
+        "reason": null
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0.2163,
+        "available": true,
+        "contribution": 0.0865
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0.5906,
+        "available": true,
+        "contribution": 0.1772
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0.4949,
+        "available": true,
+        "contribution": 0.099
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 1,
+        "available": true,
+        "contribution": 0.1
+       }
+      ],
+      "key_numbers": [
+       {
+        "label": "Last close",
+        "value": "$189.24"
+       },
+       {
+        "label": "12-1 month momentum",
+        "value": "29.5%"
+       },
+       {
+        "label": "1-month return",
+        "value": "3.7%"
+       },
+       {
+        "label": "Of 52-week high",
+        "value": "88.1%"
+       },
+       {
+        "label": "RSI 14",
+        "value": "51.8"
+       },
+       {
+        "label": "Volatility (annual)",
+        "value": "26.9%"
+       },
+       {
+        "label": "Earnings yield",
+        "value": "6.7%"
+       },
+       {
+        "label": "Return on equity %",
+        "value": "14.3"
+       },
+       {
+        "label": "Revenue growth %",
+        "value": "20.8"
+       },
+       {
+        "label": "Debt / equity",
+        "value": "0.17"
+       },
+       {
+        "label": "Current ratio",
+        "value": "1.34"
+       }
+      ],
+      "plan": {
+       "entry_zone": "$187.13 – $191.35",
+       "stop": "$176.56",
+       "target": "$190.94",
+       "order": "Limit $189.24",
+       "time_stop": "Aug 3, 2026",
+       "horizon": "40 sessions",
+       "invalidation": [
+        "price below: 176.561",
+        "days elapsed: 40",
+        "event class: guidance_cut, earnings_miss, dividend_cut, dilution_offering, ceo_departure_unplanned, material_weakness, restatement, going_concern, form_144_sale_notice"
+       ],
+       "notes": [
+        "entry zone = last +- 0.5 x atr_14; stop = 3 x atr_14 (atr_14 = 4.23)"
+       ]
+      },
+      "review": {
+       "approved": true,
+       "score": 80,
+       "grade": "B",
+       "summary": "APPROVE CVX: score 80 (B); accuracy 27/30, evidence 9/15, risk fit 16/20, timing 10/10, value 11/15, chart 6/10.",
+       "dimensions": [
+        {
+         "name": "accuracy",
+         "label": "Accuracy",
+         "points": 27,
+         "weight": 30,
+         "applicable": true
+        },
+        {
+         "name": "evidence",
+         "label": "Evidence",
+         "points": 9.25,
+         "weight": 15,
+         "applicable": true
+        },
+        {
+         "name": "risk_fit",
+         "label": "Risk fit",
+         "points": 16.27,
+         "weight": 20,
+         "applicable": true
+        },
+        {
+         "name": "timing",
+         "label": "Timing",
+         "points": 10,
+         "weight": 10,
+         "applicable": true
+        },
+        {
+         "name": "value",
+         "label": "Value",
+         "points": 11.07,
+         "weight": 15,
+         "applicable": true
+        },
+        {
+         "name": "chart",
+         "label": "Chart",
+         "points": 6.5,
+         "weight": 10,
+         "applicable": true
+        }
+       ],
+       "blockers": [],
+       "warnings": [
+        {
+         "code": "high_52w_differs",
+         "message": "The 52-week high from the bars (214.71) and Finnhub's (236.48) differ by more than 3% (a split?)."
+        }
+       ],
+       "risk": {
+        "level": "low",
+        "score": 16.8,
+        "tolerance": "moderate",
+        "allowed": "medium"
+       },
+       "valid_until_utc": "2026-06-08T20:30:00Z",
+       "requires_human": false
+      },
+      "order": {
+       "decision": {
+        "will_trade": "yes_auto",
+        "words": "yes (AUTO)",
+        "action": "open",
+        "shares": 5.284295,
+        "est_cost": 1000,
+        "dollars": 1000,
+        "price": 189.24,
+        "origin": null,
+        "reason": "approved by the Critic (score 80): Auto mode trades what the Critic approves (balanced evenly: about $1,000.00 for each of 3 purchases)",
+        "mode": "auto",
+        "balance": {
+         "mode": "even",
+         "target_dollars": 1000,
+         "of": 3
+        },
+        "binding": "budget",
+        "allocation": "even"
+       },
+       "trade": {
+        "status": "filled",
+        "side": "buy",
+        "shares": 5.305039,
+        "price": 188.5,
+        "amount": 1000,
+        "trade_id": "T2",
+        "reason": "limit order filled at 188.5000 (the open of 2026-06-09 was 188.5000, the limit 189.2400); an order of $1,000.00: 5.305039 shares at 188.5000 (the estimate was 5.284295)",
+        "reject_code": null,
+        "order_type": "limit",
+        "mode": "backtest",
+        "slippage_bps": 0,
+        "price_source": "bar_open",
+        "booked": false
+       }
+      }
+     }
+    },
+    {
+     "key": "XOM",
+     "symbol": "XOM",
+     "company": "Exxon Mobil",
+     "rank": 3,
+     "group": "recommended",
+     "advisor": {
+      "score": 72,
+      "stance": "bullish",
+      "reason": "conviction: blended score 72 (news, performance, history and filings together)"
+     },
+     "critic": {
+      "approved": false,
+      "score": 79,
+      "grade": "C"
+     },
+     "decision": {
+      "will_trade": "no_system_denied",
+      "words": "no (system denied)",
+      "action": "open",
+      "shares": 0,
+      "est_cost": 0,
+      "dollars": null,
+      "price": null,
+      "origin": null
+     },
+     "trade": null,
+     "detail": {
+      "header": {
+       "score": 72,
+       "stance": "bullish",
+       "rank": 3,
+       "of": 10,
+       "strategy": "conviction"
+      },
+      "thesis": "Buy Exxon Mobil based on its blended score of 72 and bullish conviction, supported by its Q1 2026 Golden Pass LNG cargo loading and nearly $5 billion in stock buybacks. The recommendation would be wrong if the stock fails to hold above the stop loss of 139.8412 or if the expected 20-day edge of 0.30% does not materialize.",
+      "bull": [
+       {
+        "text": "Exxon opened Q1 2026 by loading its first Golden Pass LNG cargo and buying back nearly $5 billion in stock.",
+        "ref": "[2]"
+       },
+       {
+        "text": "Share repurchases, at cost | — | — | — | (4,852) | (4,852) | — | (4,852)",
+        "ref": "E6"
+       }
+      ],
+      "bear": [
+       {
+        "text": "Family reversion: did not pass: not oversold: ret_5d 0.016, zscore_21d -0.05, rsi_14 50.0; not idiosyncratic: residual_5d -0.002 against the sector's 0.018; company-specific news in the last 5 bars (2) and no neutral cause was given.",
+        "ref": "rsi_14"
+       }
+      ],
+      "evidence": [
+       {
+        "source": 2,
+        "direction": "bullish",
+        "quote": "Exxon opened Q1 2026 by loading its first Golden Pass LNG cargo and buying back nearly $5 billion in stock.",
+        "verified": true,
+        "counted": true,
+        "reason": null
+       },
+       {
+        "source": "E6",
+        "direction": "bullish",
+        "quote": "Share repurchases, at cost | — | — | — | (4,852) | (4,852) | — | (4,852)",
+        "verified": true,
+        "counted": true,
+        "reason": null
+       },
+       {
+        "source": "E7",
+        "direction": "bullish",
+        "quote": "Share repurchases, at cost | — | — | — | (4,917) | (4,917) | — | (4,917)",
+        "verified": true,
+        "counted": false,
+        "reason": null
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0.144,
+        "available": true,
+        "contribution": 0.0576
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0.6122,
+        "available": true,
+        "contribution": 0.1837
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0.4587,
+        "available": true,
+        "contribution": 0.0917
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 1,
+        "available": true,
+        "contribution": 0.1
+       }
+      ],
+      "key_numbers": [
+       {
+        "label": "Last close",
+        "value": "$151.75"
+       },
+       {
+        "label": "12-1 month momentum",
+        "value": "38.6%"
+       },
+       {
+        "label": "1-month return",
+        "value": "3.5%"
+       },
+       {
+        "label": "Of 52-week high",
+        "value": "86.0%"
+       },
+       {
+        "label": "RSI 14",
+        "value": "50.0"
+       },
+       {
+        "label": "Volatility (annual)",
+        "value": "30.6%"
+       },
+       {
+        "label": "Earnings yield",
+        "value": "6.3%"
+       },
+       {
+        "label": "Return on equity %",
+        "value": "15.6"
+       },
+       {
+        "label": "Revenue growth %",
+        "value": "19.5"
+       },
+       {
+        "label": "Debt / equity",
+        "value": "0.13"
+       },
+       {
+        "label": "Current ratio",
+        "value": "1.19"
+       }
+      ],
+      "plan": {
+       "entry_zone": "$149.77 – $153.73",
+       "stop": "$139.84",
+       "target": "$153.12",
+       "order": "Limit $151.75",
+       "time_stop": "Aug 3, 2026",
+       "horizon": "40 sessions",
+       "invalidation": [
+        "price below: 139.8412",
+        "days elapsed: 40",
+        "event class: guidance_cut, earnings_miss, dividend_cut, dilution_offering, ceo_departure_unplanned, material_weakness, restatement, going_concern, form_144_sale_notice"
+       ],
+       "notes": [
+        "entry zone = last +- 0.5 x atr_14; stop = 3 x atr_14 (atr_14 = 3.97)"
+       ]
+      },
+      "review": {
+       "approved": false,
+       "score": 79,
+       "grade": "C",
+       "summary": "DENY XOM: a person must look before this can trade: company_mismatch (The record calls XOM 'Exxon Mobil' but the directory lists it as 'Exxonmobil Holdings Corp').",
+       "dimensions": [
+        {
+         "name": "accuracy",
+         "label": "Accuracy",
+         "points": 24,
+         "weight": 30,
+         "applicable": true
+        },
+        {
+         "name": "evidence",
+         "label": "Evidence",
+         "points": 14,
+         "weight": 15,
+         "applicable": true
+        },
+        {
+         "name": "risk_fit",
+         "label": "Risk fit",
+         "points": 14.82,
+         "weight": 20,
+         "applicable": true
+        },
+        {
+         "name": "timing",
+         "label": "Timing",
+         "points": 10,
+         "weight": 10,
+         "applicable": true
+        },
+        {
+         "name": "value",
+         "label": "Value",
+         "points": 11.21,
+         "weight": 15,
+         "applicable": true
+        },
+        {
+         "name": "chart",
+         "label": "Chart",
+         "points": 5,
+         "weight": 10,
+         "applicable": true
+        }
+       ],
+       "blockers": [],
+       "warnings": [
+        {
+         "code": "company_mismatch",
+         "message": "The record calls XOM 'Exxon Mobil' but the directory lists it as 'Exxonmobil Holdings Corp'."
+        },
+        {
+         "code": "high_52w_differs",
+         "message": "The 52-week high from the bars (176.41) and Finnhub's (188.50) differ by more than 3% (a split?)."
+        },
+        {
+         "code": "evidence_old",
+         "message": "The newest quote the recommendation stands on is 11 days old (the limit is 10)."
+        }
+       ],
+       "risk": {
+        "level": "medium",
+        "score": 23.3,
+        "tolerance": "moderate",
+        "allowed": "medium"
+       },
+       "valid_until_utc": null,
+       "requires_human": true
+      },
+      "order": {
+       "decision": {
+        "will_trade": "no_system_denied",
+        "words": "no (system denied)",
+        "action": "open",
+        "shares": 0,
+        "est_cost": 0,
+        "dollars": null,
+        "price": null,
+        "origin": null,
+        "reason": "DENY XOM: a person must look before this can trade: company_mismatch (The record calls XOM 'Exxon Mobil' but the directory lists it as 'Exxonmobil Holdings Corp').",
+        "mode": "auto",
+        "balance": null,
+        "binding": null,
+        "allocation": null
+       }
+      }
+     }
+    },
+    {
+     "key": "COP",
+     "symbol": "COP",
+     "company": null,
+     "rank": 4,
+     "group": "neutral",
+     "advisor": {
+      "score": 65,
+      "stance": "neutral",
+      "reason": "stance neutral (no family passed)"
+     },
+     "critic": null,
+     "decision": {
+      "will_trade": "yes_auto",
+      "words": "yes (AUTO)",
+      "action": "open",
+      "shares": 8.411136,
+      "est_cost": 1000,
+      "dollars": 1000,
+      "price": 118.89,
+      "origin": "neutral"
+     },
+     "trade": {
+      "status": "filled",
+      "side": "buy",
+      "shares": 8.474576,
+      "price": 118,
+      "amount": 1000
+     },
+     "detail": {
+      "header": {
+       "score": 65,
+       "stance": "neutral",
+       "rank": 4,
+       "of": 10,
+       "strategy": null
+      },
+      "message": "The Advisor found no strategy for this company (a neutral score). A neutral recommendation counts as approved, so there is no Critic review.",
+      "strategies": [
+       {
+        "name": "trend",
+        "passed": false,
+        "score": null,
+        "note": "pct_of_52w_high 0.875 is under 0.9"
+       },
+       {
+        "name": "event",
+        "passed": false,
+        "score": null,
+        "note": "no counted event: none were verified"
+       },
+       {
+        "name": "reversion",
+        "passed": false,
+        "score": null,
+        "note": "not oversold: ret_5d 0.029, zscore_21d 0.15, rsi_14 49.6"
+       },
+       {
+        "name": "capital_return",
+        "passed": false,
+        "score": null,
+        "note": "share_count_change: no shares issued and outstanding on the stored balance sheet"
+       },
+       {
+        "name": "conviction",
+        "passed": false,
+        "score": null,
+        "note": "only 2 of 4 blend parts have a value (performance, historical); it needs 3"
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0.586,
+        "available": true,
+        "contribution": 0.1758
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0.6229,
+        "available": true,
+        "contribution": 0.1246
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       }
+      ],
+      "order": {
+       "decision": {
+        "will_trade": "yes_auto",
+        "words": "yes (AUTO)",
+        "action": "open",
+        "shares": 8.411136,
+        "est_cost": 1000,
+        "dollars": 1000,
+        "price": 118.89,
+        "origin": "neutral",
+        "reason": "the Advisor scored COP NEUTRAL (score 65: stance neutral (no family passed)); ALLOW_NEUTRAL_RECOMMENDATIONS is on, so a neutral recommendation counts as approved; no profile limit applies (balanced evenly: about $1,000.00 for each of 3 purchases)",
+        "mode": "auto",
+        "balance": {
+         "mode": "even",
+         "target_dollars": 1000,
+         "of": 3
+        },
+        "binding": "budget",
+        "allocation": "even"
+       },
+       "trade": {
+        "status": "filled",
+        "side": "buy",
+        "shares": 8.474576,
+        "price": 118,
+        "amount": 1000,
+        "trade_id": "T3",
+        "reason": "market order filled at the open 118.0000 of 2026-06-09 with 0 bps of slippage; an order of $1,000.00: 8.474576 shares at 118.0000 (the estimate was 8.411136)",
+        "reject_code": null,
+        "order_type": "market",
+        "mode": "backtest",
+        "slippage_bps": 0,
+        "price_source": "bar_open",
+        "booked": false
+       }
+      }
+     }
+    },
+    {
+     "key": "MRO",
+     "symbol": "MRO",
+     "company": null,
+     "rank": 5,
+     "group": "scored",
+     "advisor": {
+      "score": 53,
+      "stance": "neutral",
+      "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+     },
+     "critic": null,
+     "decision": null,
+     "trade": null,
+     "detail": {
+      "header": {
+       "score": 53,
+       "stance": "neutral",
+       "rank": 5,
+       "of": 10,
+       "strategy": null
+      },
+      "message": "Not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+      "strategies": [
+       {
+        "name": "trend",
+        "passed": false,
+        "score": null,
+        "note": "mom_12_1: needs 252 bars, 0 stored"
+       },
+       {
+        "name": "event",
+        "passed": false,
+        "score": null,
+        "note": "atr_pct: needs 20 bars, 0 stored"
+       },
+       {
+        "name": "reversion",
+        "passed": false,
+        "score": null,
+        "note": "ret_5d: needs 6 bars, 0 stored"
+       },
+       {
+        "name": "capital_return",
+        "passed": false,
+        "score": null,
+        "note": "share_count_change: no shares issued and outstanding on the stored balance sheet"
+       },
+       {
+        "name": "conviction",
+        "passed": false,
+        "score": null,
+        "note": "blend +0.067 is under 0.3"
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0.3361,
+        "available": true,
+        "contribution": 0.0672
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       }
+      ]
+     },
+     "reason": "not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+    },
+    {
+     "key": "BP.L",
+     "symbol": "BP.L",
+     "company": null,
+     "rank": 6,
+     "group": "scored",
+     "advisor": {
+      "score": 50,
+      "stance": "neutral",
+      "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+     },
+     "critic": null,
+     "decision": null,
+     "trade": null,
+     "detail": {
+      "header": {
+       "score": 50,
+       "stance": "neutral",
+       "rank": 6,
+       "of": 10,
+       "strategy": null
+      },
+      "message": "Not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+      "strategies": [
+       {
+        "name": "trend",
+        "passed": false,
+        "score": null,
+        "note": "mom_12_1: needs 252 bars, 0 stored"
+       },
+       {
+        "name": "event",
+        "passed": false,
+        "score": null,
+        "note": "atr_pct: needs 20 bars, 0 stored"
+       },
+       {
+        "name": "reversion",
+        "passed": false,
+        "score": null,
+        "note": "ret_5d: needs 6 bars, 0 stored"
+       },
+       {
+        "name": "capital_return",
+        "passed": false,
+        "score": null,
+        "note": "earnings_yield: no Finnhub metric payload for BP.L (it was not fetched or the call failed)"
+       },
+       {
+        "name": "conviction",
+        "passed": false,
+        "score": null,
+        "note": "blend +0.000 is under 0.3"
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       }
+      ]
+     },
+     "reason": "not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+    },
+    {
+     "key": "ENI.MI",
+     "symbol": "ENI.MI",
+     "company": null,
+     "rank": 7,
+     "group": "scored",
+     "advisor": {
+      "score": 50,
+      "stance": "neutral",
+      "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+     },
+     "critic": null,
+     "decision": null,
+     "trade": null,
+     "detail": {
+      "header": {
+       "score": 50,
+       "stance": "neutral",
+       "rank": 7,
+       "of": 10,
+       "strategy": null
+      },
+      "message": "Not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+      "strategies": [
+       {
+        "name": "trend",
+        "passed": false,
+        "score": null,
+        "note": "mom_12_1: needs 252 bars, 0 stored"
+       },
+       {
+        "name": "event",
+        "passed": false,
+        "score": null,
+        "note": "atr_pct: needs 20 bars, 0 stored"
+       },
+       {
+        "name": "reversion",
+        "passed": false,
+        "score": null,
+        "note": "ret_5d: needs 6 bars, 0 stored"
+       },
+       {
+        "name": "capital_return",
+        "passed": false,
+        "score": null,
+        "note": "earnings_yield: no Finnhub metric payload for ENI.MI (it was not fetched or the call failed)"
+       },
+       {
+        "name": "conviction",
+        "passed": false,
+        "score": null,
+        "note": "blend +0.000 is under 0.3"
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       }
+      ]
+     },
+     "reason": "not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+    },
+    {
+     "key": "EQNR.OL",
+     "symbol": "EQNR.OL",
+     "company": null,
+     "rank": 8,
+     "group": "scored",
+     "advisor": {
+      "score": 50,
+      "stance": "neutral",
+      "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+     },
+     "critic": null,
+     "decision": null,
+     "trade": null,
+     "detail": {
+      "header": {
+       "score": 50,
+       "stance": "neutral",
+       "rank": 8,
+       "of": 10,
+       "strategy": null
+      },
+      "message": "Not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+      "strategies": [
+       {
+        "name": "trend",
+        "passed": false,
+        "score": null,
+        "note": "mom_12_1: needs 252 bars, 0 stored"
+       },
+       {
+        "name": "event",
+        "passed": false,
+        "score": null,
+        "note": "atr_pct: needs 20 bars, 0 stored"
+       },
+       {
+        "name": "reversion",
+        "passed": false,
+        "score": null,
+        "note": "ret_5d: needs 6 bars, 0 stored"
+       },
+       {
+        "name": "capital_return",
+        "passed": false,
+        "score": null,
+        "note": "earnings_yield: no Finnhub metric payload for EQNR.OL (it was not fetched or the call failed)"
+       },
+       {
+        "name": "conviction",
+        "passed": false,
+        "score": null,
+        "note": "blend +0.000 is under 0.3"
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       }
+      ]
+     },
+     "reason": "not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+    },
+    {
+     "key": "SHEL.L",
+     "symbol": "SHEL.L",
+     "company": null,
+     "rank": 9,
+     "group": "scored",
+     "advisor": {
+      "score": 50,
+      "stance": "neutral",
+      "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+     },
+     "critic": null,
+     "decision": null,
+     "trade": null,
+     "detail": {
+      "header": {
+       "score": 50,
+       "stance": "neutral",
+       "rank": 9,
+       "of": 10,
+       "strategy": null
+      },
+      "message": "Not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+      "strategies": [
+       {
+        "name": "trend",
+        "passed": false,
+        "score": null,
+        "note": "mom_12_1: needs 252 bars, 0 stored"
+       },
+       {
+        "name": "event",
+        "passed": false,
+        "score": null,
+        "note": "atr_pct: needs 20 bars, 0 stored"
+       },
+       {
+        "name": "reversion",
+        "passed": false,
+        "score": null,
+        "note": "ret_5d: needs 6 bars, 0 stored"
+       },
+       {
+        "name": "capital_return",
+        "passed": false,
+        "score": null,
+        "note": "earnings_yield: no Finnhub metric payload for SHEL.L (it was not fetched or the call failed)"
+       },
+       {
+        "name": "conviction",
+        "passed": false,
+        "score": null,
+        "note": "blend +0.000 is under 0.3"
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       }
+      ]
+     },
+     "reason": "not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+    },
+    {
+     "key": "TTE.PA",
+     "symbol": "TTE.PA",
+     "company": null,
+     "rank": 10,
+     "group": "scored",
+     "advisor": {
+      "score": 50,
+      "stance": "neutral",
+      "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+     },
+     "critic": null,
+     "decision": null,
+     "trade": null,
+     "detail": {
+      "header": {
+       "score": 50,
+       "stance": "neutral",
+       "rank": 10,
+       "of": 10,
+       "strategy": null
+      },
+      "message": "Not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+      "strategies": [
+       {
+        "name": "trend",
+        "passed": false,
+        "score": null,
+        "note": "mom_12_1: needs 252 bars, 0 stored"
+       },
+       {
+        "name": "event",
+        "passed": false,
+        "score": null,
+        "note": "atr_pct: needs 20 bars, 0 stored"
+       },
+       {
+        "name": "reversion",
+        "passed": false,
+        "score": null,
+        "note": "ret_5d: needs 6 bars, 0 stored"
+       },
+       {
+        "name": "capital_return",
+        "passed": false,
+        "score": null,
+        "note": "earnings_yield: no Finnhub metric payload for TTE.PA (it was not fetched or the call failed)"
+       },
+       {
+        "name": "conviction",
+        "passed": false,
+        "score": null,
+        "note": "blend +0.000 is under 0.3"
+       }
+      ],
+      "score_build": [
+       {
+        "name": "news",
+        "label": "News",
+        "weight": 40,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "performance",
+        "label": "Performance",
+        "weight": 30,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "historical",
+        "label": "Historical",
+        "weight": 20,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       },
+       {
+        "name": "filings",
+        "label": "Filings",
+        "weight": 10,
+        "value": 0,
+        "available": false,
+        "contribution": 0
+       }
+      ]
+     },
+     "reason": "not recommended: gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)"
+    }
+   ]
+  },
+  "decision_day": {
+   "day": "2026-06-08",
+   "status": "traded",
+   "recommended": 3,
+   "approved": 2,
+   "denied": 1,
+   "traded": 3,
+   "spent": 3000,
+   "reason": null,
+   "trace_id": "01a1faed-ca1e-7190-8629-9532ac98041b"
+  }
+ }
+}

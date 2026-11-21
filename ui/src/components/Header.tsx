@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { AccountView, Health } from "../api/types";
 import { cap, initials } from "../format";
+import type { Route } from "../proving/hash";
+import { formatHash } from "../proving/hash";
 import type { Theme } from "../state/useTheme";
 import { Logo, MoonIcon, SunIcon } from "./icons";
 
@@ -13,9 +15,14 @@ export interface HeaderProps {
   onSwitch: (id: number) => Promise<unknown>;
   onNewAccount: () => void;
   busy: boolean;
+  /** The tabs (spec 13.1): which one is shown, how to go to another, and which kind of run is active (the other tab shows it is busy). */
+  tab?: "desk" | "proving";
+  onTab?: (route: Route) => void;
+  deskRunning?: boolean;
+  provingRunning?: boolean;
 }
 
-export function Header({ health, account, theme, onToggleTheme, onSwitch, onNewAccount, busy }: HeaderProps) {
+export function Header({ health, account, theme, onToggleTheme, onSwitch, onNewAccount, busy, tab = "desk", onTab, deskRunning = false, provingRunning = false }: HeaderProps) {
   const replay = health?.mode === "replay";
   return (
     <>
@@ -24,6 +31,18 @@ export function Header({ health, account, theme, onToggleTheme, onSwitch, onNewA
         <div className="brand">
           PROMETHEUS<small>Agentic trading desk</small>
         </div>
+        {onTab && (
+          <nav className="tabs" aria-label="Sections">
+            <a href="#desk" className={`tab${tab === "desk" ? " on" : ""}`} aria-current={tab === "desk" ? "page" : undefined} onClick={(e) => (e.preventDefault(), onTab({ tab: "desk" }))}>
+              Desk
+              {deskRunning && tab !== "desk" && <i className="dot pulse busy-dot" style={{ ["--agent" as string]: "var(--brand)" }} title="a desk run is active" />}
+            </a>
+            <a href={formatHash({ tab: "proving", view: "time_machine" }) || "#proving"} className={`tab${tab === "proving" ? " on" : ""}`} aria-current={tab === "proving" ? "page" : undefined} onClick={(e) => (e.preventDefault(), onTab({ tab: "proving", view: "time_machine" }))}>
+              Proving Ground
+              {provingRunning && tab !== "proving" && <i className="dot pulse busy-dot" style={{ ["--agent" as string]: "var(--brand)" }} title="a Proving Ground test is running" />}
+            </a>
+          </nav>
+        )}
         <div className="spacer" />
         <span className="pill info" title="The Trader fills against a simulated broker. Nothing is sent to a real one.">
           PAPER TRADING · SIMULATED BROKER

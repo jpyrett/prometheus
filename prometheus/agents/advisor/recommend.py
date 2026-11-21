@@ -17,6 +17,9 @@ ONE work order in (status `data_ready`), the SAME work order out (status `recomm
     11  THESIS call         MODEL call 2: three sentences and bullets from the FINISHED record, every number and ref checked by code (thesis.py)
     12  write out           records onto `order.recommendations` (the new ideas by rank), the rest onto `order.candidates`, the runs onto `order.advisor_runs`, one line per record onto the ledger
 
+A NEUTRAL company (stance neutral, no gate failed) on the candidates also carries an `exit_plan` (Advisor config version 2: a stop of 2 ATR under the last close and a time stop 20 trading days after the decision day, no target; `trade_plan.neutral_exit_plan`):
+it is read by the Proving Ground and the Live view to follow a neutral position, and by nothing that places an order.
+
 THE ADVISOR IS GIVEN NO PORTFOLIO (design choices entry 105): it does not know what the user holds, so it has no holdings pass, never writes a `reduce`, an `add` or a `hold`, and a company the user already holds is an
 ordinary candidate. It does not use the user's money and recommends no amount either (entry 80). Every record it writes is a recommendation to BUY.
 
@@ -41,6 +44,7 @@ from prometheus.agents.advisor.gates import negative_equity, run_gates, value
 from prometheus.agents.advisor.quality import quality_multiplier
 from prometheus.agents.advisor.record import Action, Agreement, Audit, Candidate, Concentration, Evidence, Identity, Ranking, Recommendation, Risk, Thesis
 from prometheus.agents.advisor.thesis import write_theses
+from prometheus.common import trading_clock
 from prometheus.common.trace import traced
 from prometheus.common.work_order import MAX_METRIC_SYMBOLS, WorkOrder, corpus_of, new_work_order, sector_map
 from prometheus.prompts.advisor_v1 import RETRY_PLAN, plan_message, plan_system
@@ -66,7 +70,8 @@ class Checked:
 
 
 def _now(today: date | None) -> str:
-    """When the records are as of: the date the caller passed (at midnight UTC: a rerun for that date is the same date), else this moment."""
+    """When the records are as of: the date the caller passed (at midnight UTC: a rerun for that date is the same date), else the day a past run is bound to (`trading_clock.as_of`, the same form), else this moment."""
+    today = today or trading_clock.bound_day()
     return f"{today.isoformat()}T00:00:00Z" if today else datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
 
@@ -212,7 +217,7 @@ def generate(advisor: Advisor, order: WorkOrder, case: str | None = None, today:
     """The twelve steps (see the module text). Returns the SAME order. `top_k` replaces the sleeve's number of new ideas (1 to 20). `only_subject`: look only at the order's own symbols
     (a comparison of named companies, entry 53): no symbol is added because the sources name it, the theme finds it or the model proposes it."""
     config, as_of = advisor.config, _now(today)
-    today = today or date.today()
+    today = today or trading_clock.market_day()   # the desk's own day (the real one, the simulated one of USE_LIVE_TRADING=false, or the day `as_of` binds): never the machine's date
     # ---- 1 preconditions
     if order.status != "data_ready":
         order.errors = [*order.errors, f"the Advisor needs an order whose data is ready (status {order.status})"]
@@ -307,7 +312,7 @@ def generate(advisor: Advisor, order: WorkOrder, case: str | None = None, today:
     eligible = []
     for s in new_ideas:
         family = rk.open_family(s, case, regime[0], config)
-        old = rk.cooldown_of(s, family.family, ledger.recent(s.symbol, family.family), today.isoformat()) if family else None
+        old = rk.cooldown_of(s, family.family, ledger.recent(s.symbol, family.family, **({"until": today} if trading_clock.bound_day() else {})), today.isoformat()) if family else None   # a past day reads no line written after it (the ledger closes itself too)
         if old:
             cooling[s.symbol] = old
             rejected[s.symbol] = {"reason": f"cooldown: an earlier {family.family} recommendation ({old}) still stands", "cooldown_of": old}
@@ -352,9 +357,10 @@ def generate(advisor: Advisor, order: WorkOrder, case: str | None = None, today:
         gate = s.gates.first_failed()
         parts = ([f"gate {gate.gate} failed" + (f": {gate.note}" if gate.note else "")] if gate else []) + ([info["reason"]] if info.get("reason") and not (gate and info["reason"].startswith("gate ")) else [])
         reason = "; ".join(parts) or "not selected"
+        neutral = s.stance == "neutral" and gate is None      # a company the Advisor scored NEUTRAL that no gate stopped (`work_order.is_neutral_candidate`): it gets an EXIT plan (Advisor v2, section 7 of design/critic_v2_evidence_spec.md); it is an exit plan only, no entry, no size
         leftovers.append(Candidate(symbol=s.symbol, company=s.company, origin=next(c["origin"] for c in candidates if c["symbol"] == s.symbol), gate=gate.gate if gate else None,
                                    gate_value=gate.value if gate else None, families=s.families, negative_equity=negative_equity(s.metrics), blend=s.blend, score=s.score, stance=s.stance, rank=universe.get(s.symbol), reason=reason, cooldown_of=info.get("cooldown_of"),
-                                   theme_role=s.theme_role))
+                                   theme_role=s.theme_role, exit_plan=tp.neutral_exit_plan(s.metrics, today, config) if neutral else None))
     leftovers.sort(key=lambda c: (c.score is None, -(c.score or 0), c.symbol))
     order.candidates = [c.model_dump(mode="json") for c in leftovers[:config.limits.max_candidates_on_order]]
     for rec in final:

@@ -3,6 +3,7 @@
     ledger = Ledger()                                   # data/ledger/recommendations.jsonl (the path is in configs/advisor_v1.json)
     ledger.append(record)                               # one JSON line, never rewritten
     ledger.recent("PG", family="capital_return", since=date(2026, 9, 1))      # the earlier records for the symbol, oldest first
+    ledger.recent("PG", until=date(2026, 11, 9))                              # only those written on or before that day (the Proving Ground: a past day never reads a later line)
     ledger.problems                                     # lines that could not be read, in words
 
 WHAT IT IS FOR. The Advisor reads it for one rule: the COOLDOWN (do not open the same symbol for the same family again while the first recommendation's time stop has not passed and its
@@ -18,6 +19,7 @@ import json
 from datetime import date
 from pathlib import Path
 
+from prometheus.common import trading_clock
 from prometheus.rag.config import REPO_ROOT
 
 DEFAULT_PATH = REPO_ROOT / "data" / "ledger" / "recommendations.jsonl"
@@ -57,15 +59,23 @@ class Ledger:
                 records.append(record)
         return records
 
-    def recent(self, symbol: str, family: str | None = None, since: date | None = None) -> list[dict]:
-        """The records of `symbol`, oldest first; with `family`, only those whose trade was driven by that family; with `since`, only those written on or after that date."""
+    def recent(self, symbol: str, family: str | None = None, since: date | None = None, until: date | None = None) -> list[dict]:
+        """The records of `symbol`, oldest first; with `family`, only those whose trade was driven by that family; with `since`, only those written on or after that date; with `until`, only those written on or
+        before it. While a past trading day is bound (`trading_clock.as_of`, the Proving Ground) `until` defaults to that day and is never later: a ledger that holds lines from after the day (a real run made later,
+        or the same test run before) shows none of them, whoever asks (the Advisor's cooldown, the Critic's history, the Trust Score). Unbound and left out: no upper bound, as before."""
+        bound = trading_clock.bound_day()
+        if bound is not None:
+            until = bound if until is None else min(until, bound)
         out = []
         for record in self.read():
             if record.get("symbol") != symbol:
                 continue
             if family is not None and (record.get("trade") or {}).get("family") != family:
                 continue
-            if since is not None and str((record.get("identity") or {}).get("as_of_utc", ""))[:10] < since.isoformat():
+            stamp = str((record.get("identity") or {}).get("as_of_utc", ""))[:10]
+            if since is not None and stamp < since.isoformat():
+                continue
+            if until is not None and (not stamp or stamp > until.isoformat()):   # a line with no date cannot be placed before the day
                 continue
             out.append(record)
         return out

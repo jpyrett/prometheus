@@ -22,6 +22,9 @@ import pyarrow as pa
 import pyarrow.compute as pc
 import pyarrow.csv as pv_csv
 
+from prometheus.agents.data_clerk import bar_index
+from prometheus.common import trading_clock
+
 COLUMNS = ("ticker", "volume", "open", "close", "high", "low", "window_start", "transactions")
 MAX_BARS = 300          # about 14 months of sessions: enough for the 252-bar metrics with room
 DEFAULT_ROOT = Path("data/historical/day_aggs_v1")
@@ -41,6 +44,16 @@ class Bar:
 def date_of(window_start_ns: int) -> date:
     """`window_start` (nanoseconds since the epoch, UTC) -> the trading date."""
     return datetime.fromtimestamp(window_start_ns / 1e9, tz=timezone.utc).date()
+
+
+SETTLE_MINUTES = 90     # a day's bar is final only some time after the close: SPY's bar of 2026-11-20 fetched 2 minutes after it said 690.87 and, fetched again that evening, 689.81 with more volume
+
+
+def is_part_of_a_day(day: date, fetched_ns: int) -> bool:
+    """True when a REST bar dated `day` sits in a file last written BEFORE that day's regular close plus `SETTLE_MINUTES` (design choices entry 129): it was fetched while the session was still open, or before
+    the provider had settled the day, so its "close" is the price at the moment of the fetch and its volume is a part of the day's. Such a bar is never read: not as a close, not for an indicator. A fetch after the close rewrites the file and the bar is then the day's own."""
+    from prometheus.common.market_calendar import regular_close_utc
+    return fetched_ns < (regular_close_utc(day).timestamp() + SETTLE_MINUTES * 60) * 1e9
 
 
 def _day_files(root: Path) -> dict[date, Path]:
@@ -65,10 +78,21 @@ class BarStore:
 
     def load(self, symbols, end: date | None = None, max_bars: int = MAX_BARS, start: date | None = None) -> "BarStore":
         """Read the newest `max_bars` day files on or before `end` (default: the newest stored), keep only `symbols`. Returns self. Call it ONCE per run with every symbol needed.
-        `start` (Trader v1: `DataClerkTools.daily_bars`) leaves out every day before it, files and REST bars alike, so a range is read and nothing older than it (left out: as before)."""
+        `start` (Trader v1: `DataClerkTools.daily_bars`) leaves out every day before it, files and REST bars alike, so a range is read and nothing older than it (left out: as before).
+        With no `end` while a past day is bound (`trading_clock.as_of`, the Proving Ground) the newest day read is that day, not the newest stored: an EXPLICIT `end` is the caller's own range and is kept
+        (the follower's and the backtest's door to the days after the decision, `DataClerkTools.daily_bars`)."""
+        if end is None:
+            end = trading_clock.bound_day()
         wanted = {s.strip().upper() for s in symbols}
         self.loaded |= wanted
         files = _day_files(self.root)
+        index = bar_index.index_for(self.root, self.extra_root)       # the Proving Ground's bar index (design/proving_ground_spec.md 7.6): the same bars from one small file per symbol, when it can prove it is current
+        if index is not None:
+            try:
+                index.fill(self, wanted, files, end, max_bars, start)
+                return self
+            except Exception:       # the files are the truth: this call reads them, and the index is built again next time
+                index.reset()
         days = sorted(d for d in files if (end is None or d <= end) and (start is None or d >= start))[-max_bars:]
         for day in days:
             try:
@@ -106,7 +130,9 @@ class BarStore:
             return []
         try:
             table = pv_csv.read_csv(path, convert_options=pv_csv.ConvertOptions(include_columns=list(COLUMNS)))
-            return [Bar(date_of(r["window_start"]), r["open"], r["high"], r["low"], r["close"], r["volume"], int(r["transactions"])) for r in table.to_pylist() if r["ticker"] == symbol]
+            fetched = path.stat().st_mtime_ns
+            bars = [Bar(date_of(r["window_start"]), r["open"], r["high"], r["low"], r["close"], r["volume"], int(r["transactions"])) for r in table.to_pylist() if r["ticker"] == symbol]
+            return [bar for bar in bars if not is_part_of_a_day(bar.date, fetched)]   # a bar fetched before its day closed is a part of a day: never read (entry 129)
         except Exception as error:  # a damaged file: said, and the day files are still used
             self.gaps.append(f"{symbol}: the REST bar file is unreadable ({type(error).__name__})")
             return []

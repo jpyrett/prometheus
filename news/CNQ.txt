@@ -1409,3 +1409,4462 @@ FTI | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative in the ene
 DK | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative in the energy sector but no specific company performance data or analysis provided in the article.
 CNQ | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative in the energy sector but no specific company performance data or analysis provided in the article.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140405923
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-24T11:50:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2b69bfab337edf5d83cdc25a41b2783690b474f17afdec3488fa362db0a7585
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Here is why Canadian Natural Resources Limited (CNQ) is among the Best Natural Gas Stocks to Buy for Transitional Power
+<<<SUMMARY>>>
+With a short percentage of shares outstanding of 0.47%, Canadian Natural Resources Limited (NYSE:CNQ) is among the 9 Best Natural Gas Stocks to Buy for Transitional Power. On May 20, Scotiabank analyst Kevin Fisk raised the firm’s price target on Canadian Natural Resources Limited (NYSE:CNQ) to C$74 from C$70 while maintaining an Outperform rating on the shares. […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140397082
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-23T06:45:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=bcb5f0931d5893fe7bfe6933a4424ef25912bd7f0abdfff92d43d37fd7d3b3c4
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: BGR: Oil Prices Could Go Much Higher And This Fund Would Benefit
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140405924
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-22T12:32:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=28626b0c42001c102e2989d3b953f509de880aab14e44734312be7defb5fb5a8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: 3 TSX Dividend Stocks Yielding Up To 6.8%
+<<<SUMMARY>>>
+The Canadian market has shown resilience, with earnings growth projections for 2026 being revised upward despite global uncertainties such as the Iran crisis. This positive outlook is supported by robust performance in sectors like energy and materials, even amid potential challenges like elevated oil prices and inflation pressures. In this context, dividend stocks can be an attractive option for investors seeking stability and income, especially when interest rates are expected to remain...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140405925
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-22T12:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=48156b9cb4e3d3c9e399427da022ff25951c6eebdb0165983b535666dadfc4cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Petrobras Inks Strategic Offshore Decommissioning Deal With Saipem
+<<<SUMMARY>>>
+PBR signs offshore decommissioning pact with Saipem as Brazil expands infrastructure retirement and well abandonment projects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140389831
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-22T11:20:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7e99bfaf99848f76d675c4f27f8f14536306f961b41adc3591468004c9443c78
+image_url: https://i.vimeocdn.com/video/2160432874-2a09d51b4bb961d74f96c457ee7e2587b25d643e683ed6d8f5e75f050a234f14-d_1280?region=us
+category: company
+tickers: CNQ
+keywords: 
+headline: Top Income Stocks For Volatile Markets: Beating Inflation And Uncertainty
+<<<SUMMARY>>>
+Stop letting market fear dictate your portfolio. Steven Cress shares the quantitative secret to finding resilient income stocks like CNQ.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140405926
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-21T13:40:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4157726dc45abb36db44e739a2d8b172172fdd004083ff56173fff3beb02a607
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Is Enerflex Ltd. (EFXT) Outperforming Other Oils-Energy Stocks This Year?
+<<<SUMMARY>>>
+Here is how Enerflex (EFXT) and Canadian Natural Resources (CNQ) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140405927
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-21T13:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c1fbc9e1edb3b7a1687721a347db40ce20681232d23f3c4e72093560efe00d3a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Cheniere Starts LNG Production at Corpus Christi Stage 3 Train 6
+<<<SUMMARY>>>
+Cheniere Energy advances Stage 3 expansion as Train 6 produces first LNG, supporting higher exports and long-term global supply growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140405928
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-20T18:21:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e6909f8aac3de66a04b74c734859c51d439507d557cadd9e7779d97c48376023
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Assessing Canadian Natural Resources’ Valuation After Record Production And Heightened Shareholder Returns
+<<<SUMMARY>>>
+Canadian Natural Resources (TSX:CNQ) is back in focus after a cluster of recent updates, including record production figures, a fresh dividend decision, ongoing share repurchases, and adjusted 2026 capital and production guidance. See our latest analysis for Canadian Natural Resources. The recent production records, dividend affirmation and continued buybacks appear to be feeding into strong momentum, with a 30 day share price return of 15.54% and a 1 year total shareholder return of 66.89%...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140405929
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-20T16:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9d029d2767b79a477b4629770d350e35c8fd7f5b66ce1eded787955928699d3e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Are You Looking for a Top Momentum Pick? Why Canadian Natural Resources (CNQ) is a Great Choice
+<<<SUMMARY>>>
+Does Canadian Natural Resources (CNQ) have what it takes to be a top stock pick for momentum investors? Let's find out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140370371
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-20T14:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4f5ba4da42fa85bb2b2f6283e94d3c6c75031be5356aa0fd84a0b20b5a1526a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: HAL Unveils Next-Generation Solution for Challenging Reservoirs
+<<<SUMMARY>>>
+Halliburton launches Xaminer Deep Testing service to deliver early reservoir insights and streamline evaluation in complex formations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140405931
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-20T14:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6c2704234eae763a0514aaddbb688f15ada6afafa24edbe7fb48f6afda1a034c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Petrobras Confirms Hydrocarbon Discovery in Brazil's Santos Basin
+<<<SUMMARY>>>
+PBR confirms expanded oil discovery in the Santos Basin's Aram Block, with high-quality crude and deeper pre-salt potential boosting output hopes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140456082
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-29T07:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=454704f875749790eaafe6d1a33a096ad35454463b028f771b47a341628d25e5
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/693349866/image_693349866.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: I'm Betting Big On This Near-Perfect Retirement Strategy That Most Investors Miss
+<<<SUMMARY>>>
+Discover hidden risks in index, dividend ETF, and covered call retirement fundsâand a unique income strategy for dividend growth and market-beating returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139936533
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-09T15:37:31Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8a1147515739011f1ca9ec14c9043de2f205f28ffef8afa578575fd2ca7d86ae
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Shares of companies in the broader industrial space are trading higher amid overall market strength as stocks rebound following recent weakness. Stocks have been highly volatile following the Fed's recent rate hike.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140570600
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-08T13:39:22Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=02bb1d4b579889da1eabbdd9a5b71509a221d05a46f2a5c8df9cf481f366b92a
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1323151704/image_1323151704.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Iran Escalates: Is Oil About To Soar?
+<<<SUMMARY>>>
+Escalating Middle East conflict and renewed Iran-Israel hostilities have heightened the risk of a substantial oil price spike. Read the full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140511280
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-03T07:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=304bf626a0e2b1364ab64334ee1e559837bbaa982ad0d2f64ae589877802e0e0
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2251246152/image_2251246152.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: This Market Looks Insane: But It's A Stock Picker's Dream
+<<<SUMMARY>>>
+The market is dominated by AI-driven growth, leading to extreme valuations and concentration in a handful of stocks. Click here to read more on my analysis.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140648503
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-16T16:30:34Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=84d88f2a761270f920e332735043d0e5b4a69ef866349f75db31cbbca4e879fc
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Here's How Much $100 Invested In Canadian Natural Res 5 Years Ago Would Be Worth Today
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140634887
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-14T22:27:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=0f690420e6e57cf81162858dddd4a59133cf9c150094bc1402110b6919b80402
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/139680019/image_139680019.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Undercovered Dozen: Dynex Capital, Blackstone, Rithm Capital, And More
+<<<SUMMARY>>>
+Discover 12 undercovered stocks from Seeking Alpha (June 5â11).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140626615
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-13T06:53:45Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=9d73db358622346b7d3714fd87dc018a547bd327dad1f18a9d9d4a6adb38e114
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2185425050/image_2185425050.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: What Moved Markets This Week
+<<<SUMMARY>>>
+U.S. stocks ended the week higher as stocks rebounded from an early-week selloff amid latest inflation data. Read more about this week's major events on Wall Street.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140594766
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-10T13:04:06Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=03e43cdabdc61321c3d2114b464fda55bdaa284a14e1e9e8554a0c01bb7553b1
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2138662781/image_2138662781.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: Great Buy As Iran War Escalates (Upgrade)
+<<<SUMMARY>>>
+Canadian Natural Resources Limited: Canada-based oil producer insulated from Middle East risk, ~4% yield, buybacks, strong FCF and 8x P/E. Click for a CNQ update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140590845
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-10T03:47:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=818fcb573f177a713e4d6ccaaeab6c6eade437a329df9f65243cbb74649801d0
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: A Time For Patience
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140590847
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-10T03:40:35Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=292fa0c91f1e998b25106f57f91cde6833cc988b154fa1a19f443165ff13d02c
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2156739559/image_2156739559.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Is A Natural Buy Fueled By Fundamentals And Valuation
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) outlook: resilient cash flow, production growth, strong balance sheet, and oil tightening potential. See more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140664961
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-18T15:26:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=ffc3c72d00faf0e8ca7fd35b9cd0a9d10f6e16f3b83ed36747797435f8af7eb9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1990349253/image_1990349253.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: We Have A Valuation Problem - May Dividend Income Report
+<<<SUMMARY>>>
+Since I started this portfolio in September 2017, I have received a total of $36,444.54 CAD in dividends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139984718
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-24T12:43:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=bc638b7f12b47019d02c89edcaa7790cf15278446385e8c7259101cb9cff4bda
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Sable Offshore shares are trading higher after the company announced that it expects first oil sales to begin in April 2026 following a U.S. government order to allow oil flows through a California pipeline.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140680142
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-20T15:44:31Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1fc9ebac864582d3446cd4e8cafb620fbe878d5f074ca357150bf5058ac59680
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/540969074/image_540969074.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: My Top Energy Stocks For 2026 Mid Year Update
+<<<SUMMARY>>>
+Geopolitical risk is boosting volatile oil/gas pricesâsee energy stock picks (XOM, CRK, AR, EGY) and why diversification matters.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140677732
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-20T09:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=71e338042f921e10cfaa2f1c07f5f2a5ac07b12ae949bc18cd04ebab4aa98330
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1353194421/image_1353194421.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Best Commodity Idea Competition: The Winners
+<<<SUMMARY>>>
+Seeking Alpha is pleased to announce the winners of our recent Best Commodity Idea Competition. Here's a look at all the winners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140779176
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-01T09:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e3d26b3dfb0e2be470929527a7529d390f802d9969f5fc48cbe09f20d1b1b598
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1753589334/image_1753589334.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: One Of The Huge Mistakes Dividend Investors Are Making Right Now
+<<<SUMMARY>>>
+Dividend investing may seem simple in theory, but there are many pitfalls that investors fall into along the journey. Click here to read in detail.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140775116
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-30T17:18:31Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c63d7c9c6c3da5afbadf4cfe3501be1caa1c06a3cbdfab463e7bfd498968b37e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1174934129/image_1174934129.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Building A $100,000 Dividend Portfolio With SCHD And July's Top High-Yield Picks
+<<<SUMMARY>>>
+Build a $100K dividend portfolio around SCHD plus 10 high-yield picks & funds for a 5.91% yield, 6.58% growth, and diversificationâread more macro analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140757623
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-28T20:54:23Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=3f4e991766959ba4e84f2b11dd3ece517b0be30dd409a7fe6ad2839d798eb2d7
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/136327907/image_136327907.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: My Top 10 High-Yield Picks For July 2026: One Yields More Than 13%
+<<<SUMMARY>>>
+PepsiCo, BB Seguridade, Novo Nordisk, and Rio Tinto offer undervaluation and strong profitability metrics. Check out top 10 July 2026 high-yield dividend stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140755408
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-28T14:46:45Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=36fd128517700b7f46da67a4c08a7aedcf1cafaf4946e1c2444fcd2b165023ed
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1396835274/image_1396835274.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Confessions Of An Oil Bull
+<<<SUMMARY>>>
+The energy markets have struggled with volatility. Read how investors can prepare for what happens next.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140753503
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-28T07:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=59a473561364eb8506d21376e6905afc0712c190c0c11ac6c0b92952adac150d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1643001950/image_1643001950.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: The Market Is Dead Wrong: I'm Buying Dirt-Cheap Energy Stocks
+<<<SUMMARY>>>
+Energy sector fundamentals strengthen as Iran War de-risks, oil prices normalize, and cyclical growth accelerates. Check out the stocks that I favor here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140069661
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-08T11:18:09Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=63f26f46075f53f968b530e457a8943e6faef92a9f7d6e0299f433459d873f2d
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: HighPeak Energy shares are trading lower after the company reported worse-than-expected Q4 financial results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139998989
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-07T15:16:09Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=509fb44192cf5c08b2d976c6f767df40ccd06f77210b3596dda346945842e11a
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Shares of several energy companies are trading lower as oil prices collapse amid high supply. The coronavirus pandemic has led to a sharp decline in oil demand.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140888226
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T13:45:49Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=2fc7e2002ab8e39cabb3974c06cad1fde6ceec9d2584a7770aa6b20f081d01e9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2184220601/image_2184220601.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: How To Build A $50,000 Dividend Portfolio In Today's Market
+<<<SUMMARY>>>
+Build a resilient dividend income portfolio with quality stocks & ETFs: 3.75% yield, low payout ratios, low beta, and defensive sector focus. Here's what investors need to consider.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140886116
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T10:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=71152ae9917c9410c366e5f68dae6360483ceb9e2dd11cd3ea37fb9c86d62260
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2200761999/image_2200761999.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: Buy This Oil Giant Before Returns Accelerate (Downgrade)
+<<<SUMMARY>>>
+Canadian Natural Resources stock looks like a "Buy" after a pullback. Here's what investors need to know.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140882449
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-12T21:10:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=12ec7d3becf68df3483b39e91c26cab81ae74effb717432306fc23e70f653645
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2152093071/image_2152093071.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: A Dividend Machine In A Volatile Oil Market
+<<<SUMMARY>>>
+Canadian Natural Resources' integrated approach and strong balance sheet enhance resilience amid volatile commodity cycles. Learn why CNQ stock is a Hold.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163357
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-25T14:10:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4d69aa3acfa80c6e6c70e6be5e90c6d7b572f9b1f272ff67a4637e4d3a2ad588
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (TSX:CNQ) Stock Still Looks Below Fair Value After 308% Run
+<<<SUMMARY>>>
+Canadian Natural Resources has delivered a very large 5 year return, yet at a recent share price of C$65.48 the stock still screens as undervalued on Simply Wall St’s broader valuation checks. That raises an obvious question about how much of its recent progress is already built into the price. Canadian Natural Resources has returned about 308.4% over 5 years, which puts the recent rally into context as a multi year rerating rather than a short term spike. Progress on the Pathways carbon...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163358
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-24T23:10:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1da08a9120894c40c656a5647ebf803c14d6a15235a00a8830b27133cca85162
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (TSX:CNQ) Could Be 8% Below Fair Value As Buy Rating Lifts Interest
+<<<SUMMARY>>>
+Canadian Natural Resources (TSX:CNQ) has moved into focus after Zacks raised the stock to a Rank #1 Strong Buy, citing higher earnings estimates over the past 3 months and a more positive earnings outlook. See our latest analysis for Canadian Natural Resources. At a recent share price of CA$65.48, Canadian Natural Resources has seen a 16.80% 1 month share price return and a 38.96% year to date share price return. The 1 year total shareholder return of 59.38% points to momentum that has been...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141001044
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-23T22:20:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8e529301c38c162875457604cb4c74cc56725255ca2443cabc8edddb2b3a51d6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Ovintiv (OVV) Lags Q2 Earnings Estimates
+<<<SUMMARY>>>
+Ovintiv (OVV) delivered earnings and revenue surprises of -8.90% and +28.21%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140044147
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-23T10:42:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=03f60dd042447b52bed862fa96a4d53cd0716e6288fe1762bf86958e181d140f
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Sky Quarry Shares Resume Trade
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140988153
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-22T20:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f12b46768222b60cc0e5cc0ad5a8a82c6ef823fd74cb0af6ee75633f8d102550
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Top Stock Reports for Qualcomm, Intuitive Surgical & Stryker
+<<<SUMMARY>>>
+QUALCOMM is expanding beyond smartphones with growth in automotive, edge AI and data centers, but competition and weak China demand remain key challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163361
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-22T16:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0c0e97c4cc721f75d3d2272b0549d035f84f62a359ebb0dd57fb2976144c5dbc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (CNQ) Upgraded to Strong Buy: What Does It Mean for the Stock?
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) has been upgraded to a Zacks Rank #1 (Strong Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140968414
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-21T04:08:33Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=501e5fb617eefb247a8912f0d6ec808ca7462634a393bd8e67b2c3c947268dbb
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/157293621/image_157293621.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Undercovered Dozen: ServiceNow, Kraft Heinz, Infleqtion, And More
+<<<SUMMARY>>>
+Explore top stock picks: ServiceNow, Kraft Heinz, and GigaCloud rated Strong Buys, plus Corning downgraded to Sell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141076944
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-31T07:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=27aa3a120bf6b7c4f3d16347fe0df336855dea832e4a62b317660f1ed73f812b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1391887455/image_1391887455.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: A Major Market Rotation Is Just Getting Underway
+<<<SUMMARY>>>
+AI stocks have slumped. Click here to learn why they may stay weak, where market leadership is shifting, and my top picks now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163353
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-30T14:00:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3813aba392dc76b5faa344473735c5e04654e7f87349e96f83d60e084b7c63cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (CNQ) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163354
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-30T00:35:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae3d18fbdd42603a3e32735b8ad3a102985ab8f1cbf9e371e8706191275f70fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Tourmaline Oil Corp. (TRMLF) Q2 Earnings and Revenues Miss Estimates
+<<<SUMMARY>>>
+Tourmaline Oil Corp. (TRMLF) delivered earnings and revenue surprises of -5.56% and -4.07%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140007504
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-29T10:41:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=35401ed0cbb701d3f50faafb3edb2ea607b81c4015035e3eb1c3e3fd4b257718
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Expand Energy shares are trading higher after the company reported better-than-expected Q1 financial results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141044233
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-28T14:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0d70500ee1b0ccd337abd6275c6b2ee8cda5094b667fa8c94689979b33009fb6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Why Ovintiv's Permian and Montney Assets Matter for Investors Today
+<<<SUMMARY>>>
+OVV is sharpening its focus on the Permian and Montney, where stronger wells, deep inventory and disciplined spending aim to drive lasting cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141093428
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-27T13:24:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2e72826e9fce214e985efc1a15a7724e829535bfb726bacc53f1ed0a566bda71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Dell Upgraded, Tesla Downgraded: Updated Rankings on Top Blue-Chip Stocks
+<<<SUMMARY>>>
+During these busy times, it pays to stay on top of the latest profit opportunities. And today’s blog post should be a great place to start. After taking a close look at the latest data on institutional buying pressure and each company’s fundamental health, I decided to revise my Stock Grader recommendations for 117 big blue chips. Chances are that you have at least one of these stocks in your portfolio, so you may want to give this list a skim and act accordingly. This Week’s Ratings Changes: Up
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140057383
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-27T10:50:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=13e26895d4948184feb4cf6aae2fc7d647c35e4605c211341629934a998840e5
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Battalion Oil Shares Resume Trade
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163342
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-08T02:03:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=090457ff799686e9ec50d926c22d59ff25e8427fed24edab9300bf96ca12a333
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Q2 Earnings Call Highlights
+<<<SUMMARY>>>
+Canadian Natural Resources (NYSE:CNQ) reported record second-quarter production, adjusted earnings and adjusted funds flow, supported by strong oil sands performance, higher output from acquired assets and favorable pricing for synthetic crude oil. President Scott Stauth said the company set eight
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163343
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T16:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=72b5150fd90b1d1e4ca452f69035813912b868355a7fa97acb07283f975df989
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: CNQ Q2 Earnings Call Flags Higher Output and Growth Discipline
+<<<SUMMARY>>>
+Canadian Natural's Q2 call lifts 2026 production guidance after record output, keeps capital at C$6B and major growth projects on hold pending MOU terms.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163344
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T23:01:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c37cfef21f6b493440beac7a74c6b25034de9e30cdc04e05fa4df4793d58fa80
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Ltd (CNQ) (Q2 2026) Earnings Call Highlights: Record Production and ...
+<<<SUMMARY>>>
+Canadian Natural Resources Ltd (CNQ) posts record quarterly production and adjusted net earnings, driven by strong Oil Sands performance and successful Peace River acquisitions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141136877
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T13:44:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=9fbc198eaf875d6ef0191c746f146220ff0a181e59890126e55cd03e70107928
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Limited (CNQ:CA) Q2 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Canadian Natural Resources Limited (CNQ:CA) Q2 2026 Earnings Call August 6, 2026 11:00 AM EDTCompany ParticipantsLance Casson - Manager of Investor...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163345
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T13:30:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bbac5ff0f2acb97f4c854194fc896793500a83cc6f2b88573f4031fbc7445417
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (CNQ) Q2 Earnings: Taking a Look at Key Metrics Versus Estimates
+<<<SUMMARY>>>
+The headline numbers for Canadian Natural Resources (CNQ) give insight into how the company performed in the quarter ended June 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163346
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T12:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e0ea51d17fcbf72da0eb1265d116c3ebfb4e1cd66f01255138b7e0f71e7c6f21
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Beyond Oil Prices: The Case for 3 Dividend-Paying Energy Giants
+<<<SUMMARY>>>
+KMI, CVX and CNQ pair dependable dividends with scale, resilient operations and financial strength amid volatile oil prices and elevated supply risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163347
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T11:10:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dcb6c385e30350d5ede0cdaf036acef3e1a3174dc2174c29aa186fc205417dfc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (CNQ) Q2 Earnings and Revenues Top Estimates
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) delivered earnings and revenue surprises of +10.49% and +15.11%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163349
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T09:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e33a1c77b37a163f151789a5b57884320e0403a96bc6b9aac15722236079935
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Limited Announces 2026 Second Quarter Results
+<<<SUMMARY>>>
+Calgary, Alberta--(Newsfile Corp. - August 6, 2026) - Canadian Natural's (TSX: CNQ) (NYSE: CNQ) President, Scott Stauth, commented on the Company's second quarter results, "We had a very strong 2026 second quarter, reflecting our continued focus on operational excellence, capital efficiency and continuous improvement, which drove eight new operational and financial records in the quarter. An example of this performance was achieved in our world class Oil Sands Mining and Upgrading operations,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163348
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T09:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e946cdfe65fd03743eb7483f56e9cf150821150041f1a7c6756c2bf3a6c51a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Limited Announces Quarterly Dividend
+<<<SUMMARY>>>
+Calgary, Alberta--(Newsfile Corp. - August 6, 2026) - Canadian Natural Resources Limited (TSX: CNQ) (NYSE: CNQ) announces that its Board of Directors has declared a quarterly cash dividend on its common shares of C$0.625 (sixty-two and one half cents). The dividend will be payable on October 2, 2026 to shareholders of record at the close of business on September 11, 2026.Following the previously announced dividend increase in March of this year, 2026 marks the 26th consecutive year of dividend..
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141135073
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T05:13:48Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=62f705e76a85942639746c03f30509173074a44f5edb84f9223910c1bd4870cd
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Res Q2 Adj. EPS $1.58 Beats $1.40 Estimate, Sales $10.648B Beat $9.320B Estimate
+<<<SUMMARY>>>
+Canadian Natural Res (NYSE:CNQ) reported quarterly earnings of $1.58 per share which beat the analyst consensus estimate of $1.40 by 12.86 percent. This is a 209.8 percent increase over earnings of $0.51 per share from
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141135074
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T05:12:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d143e46cf468e83f89eb94442e3cc4977b819adc9122bb7b790755e7a17bd468
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Res Q2 Adj. EPS $1.58 Beats $1.40 Estimate
+<<<SUMMARY>>>
+Canadian Natural Res (NYSE:CNQ) reported quarterly earnings of $1.58 per share which beat the analyst consensus estimate of $1.40 by 12.86 percent. This is a 209.8 percent increase over earnings of $0.51 per share from
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163350
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T00:35:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ca47f63ed8fee6b57722e28559a7e2dde2daf312db0c3bd095eeef886f5034f4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Array Technologies, Inc. (ARRY) Q2 Earnings and Revenues Surpass Estimates
+<<<SUMMARY>>>
+Array Technologies (ARRY) delivered earnings and revenue surprises of +118.18% and +5.63%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141135669
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-04T13:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9a4048e9c6d33cac4ab8af48000e54fbecfbb0d72bfb611b91ab76aa8142eea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural to Report Q2 Earnings: What's in the Offing?
+<<<SUMMARY>>>
+CNQ heads into Q2 results with revenue and earnings growth estimates as stronger synthetic crude prices face off against rising costs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141163352
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-03T13:15:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7a4a47a05c878963b5588ab85a88a508b5e9941973e44f0f8de2c7175d78916d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Insights Into Canadian Natural Resources (CNQ) Q2: Wall Street Projections for Key Metrics
+<<<SUMMARY>>>
+Looking beyond Wall Street's top-and-bottom-line estimate forecasts for Canadian Natural Resources (CNQ), delve into some of its key metrics to gain a deeper insight into the company's potential performance for the quarter ended June 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141295402
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-14T13:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=589aff4ca870788a9cffa8cc7e9f11432942683f2da10415053b474801b951d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Q2 Earnings & Revenues Beat Estimates, Increase YoY
+<<<SUMMARY>>>
+CNQ's Q2 earnings and revenues beat estimates as higher production and oil and NGL prices lift results and 2026 guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141190121
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-11T21:54:43Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6122dcbbe887770943e505b8e118b1a6814c928f257ef65b6a02dcccc21b63a2
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Tracking AMG's Yacktman Asset Management Portfolio - Q2 2026 Update
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141275952
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-11T14:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d81143f64e522308b8317a37a4eebcc0152991187b30a770a16652103d5e8526
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Suncor Boosts Buybacks as Record Cash Flow Supports Bigger Returns
+<<<SUMMARY>>>
+Suncor Energy boosts monthly buybacks to C$500 million after record cash flow, but commodity swings and operating risks could test the pace.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141184287
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-11T12:40:56Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=46c86e69b6cd632f62bcb36cd557e365be171193b41af53d8e9b357e4a266609
+image_url: https://www.chartmill.com/images/uploads/CM_Breakout_Stocks_Small_free_bb09e243c7.webp
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (NYSE:CNQ) Flashes Perfect Technical Rating and Breakout Setup
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) scores 10/10 technical rating and 8/10 setup quality, signaling a potential breakout with defined entry and stop levels.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141175892
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-09T14:46:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6dae30136bfa6d9039faf8804c0e42a02fdd4ceaa29c24a040887a15c482ae58
+image_url: https://cdn.benzinga.com/files/images/story/2026/08/09/Strait-Of-Hormuz-Disruptions-Add-Pressur.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Trump May Open the Hormuz, But He Can’t Prevent Next Oil Shock
+<<<SUMMARY>>>
+The investment community watching the Strait of Hormuz is treating a possible armistice, freer tanker traffic and pressure from Washington as if they could settle the oil market’s bigger question.
+
+
+
+They may calm spot
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141474505
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-09T08:08:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=90249dda825d6fee8984648af522dfbd40a368338f95097757a40f96fd04691e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (TSX:CNQ) Stock Still Looks Cheap As Its 294% Run Continues
+<<<SUMMARY>>>
+Canadian Natural Resources has delivered a very strong 5 year share price run, yet recent valuation checks still lean toward the stock looking inexpensive at around C$63.45. The stock has returned about 294.5% over 5 years, which puts extra focus on whether the current price already builds in much of the good news. Record production and ongoing project options can support expectations for cash generation, while large scale oil sands expansion plans and carbon capture commitments may add...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141474506
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-09T07:14:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a129d4fadee38506a6e50ff19cff66904f430b94bd9928c6731a250a33f95f50
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (TSX:CNQ) Posts Record Q2 And Revisits Oil Sands Expansion
+<<<SUMMARY>>>
+Canadian Natural Resources (TSX:CNQ) reports record Q2 2026 results and raises its production guidance. The company signals it may revisit multi billion dollar oil sands expansion projects following a new policy memorandum of understanding with government and industry peers. Management highlights that the potential expansions would represent multi billion dollar investments with implications for shareholders and the broader Canadian energy sector. For investors watching how large producers...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141308164
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-24T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=ccfc1aac330e5ed02100e8d3a9ee4447bd7e0ce901450d296bc0654d5885f917
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2191007648/image_2191007648.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Oil Just Burns Better: Canadian Natural Resources
+<<<SUMMARY>>>
+Canadian Natural Resources excels as a low-cost oil producer, capitalizing on oil price volatility and minimal Middle East exposure. Learn more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141275948
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-20T16:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7f2afc6c508c42b64562d4f8202ebdbe50330300b62a56c65367bf0b745f4f71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: CNQ Raises 2026 Production Outlook While Holding Core Capital Flat
+<<<SUMMARY>>>
+Canadian Natural raised its 2026 production outlook again while keeping operating capital at C$5.99B, putting capital efficiency and execution in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141249303
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-18T12:01:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5c8f2eb0354fefe9d22f5e2ca337864b69722e96e786a665708dcb2968739086
+image_url: https://cdn.benzinga.com/files/images/story/2025/07/10/valuestock_3.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: $100 Invested In Canadian Natural Res 5 Years Ago Would Be Worth This Much Today
+<<<SUMMARY>>>
+Canadian Natural Res (NYSE:CNQ) has outperformed the market over the past 5 years by 13.73% on an annualized basis producing an average annual return of 25.16%. Currently, Canadian Natural Res has a market
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141245760
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-18T10:05:33Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=20f7ef05a152c4f46f15d45bac69c17e98a5c9b27ca1ccf4cc7e2986498897f5
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: Returns May Be About To Soar
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141364668
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-31T19:44:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd1f8e179d2c30af18c5af017b143f02e5f2031b18053958d595b7fccd3fe0f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: The Winners and Losers From Trump’s Venezuelan Oil Deal
+<<<SUMMARY>>>
+Valero Energy and Halliburton are oil services firms that could win more business in Venezuela. Suncor and other companies that compete against Venezuelan resources could be hurt.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141356891
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-31T17:04:57Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=de635e55c75d8f00172e9fe532a6ce029f0286b96f62c03a668d575fd38c8124
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Venezuela Will Refill America's Oil Reserves
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141474501
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-29T02:14:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30f327ac21275ef8a9ef263c7b5b767a617591123e63303d1cb7fd49152d7a48
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Cenovus (CVE) Enters the Ranks of the World’s Largest Oil and Gas Producers
+<<<SUMMARY>>>
+It’s a good time to be a Canadian oil sands producer. First, higher crude prices have boosted earnings for producers. Before the Iran war began, Brent crude was at about $73 a barrel and later shot up above $120 as the conflict escalated. The war disrupted traffic flow through the Strait of Hormuz corridor, where […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141362375
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-28T04:34:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fc3a9539334ced1ba423e48cb90c4ffe183cd24b1c8169197ed3aa57eec7c7cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Accenture Stock And 2 Dividend Compounders for Passive Income
+<<<SUMMARY>>>
+Central banks across Asia and Europe are moving toward tighter policy as inflation stays on the radar, yet cash in the bank still offers limited income. That gap creates a clear opening for investors who want income that can keep working even as rates shift. This article looks at three stocks from the Dividend Powerhouses screener that currently offer 5%+ yields with covered, growing, and stable payouts. The three dividend stocks covered below are just a small sample of this income theme, and...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141474503
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-26T12:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c58447c7a27cd3d47b85a9556b0a657a64f061d6075b2605ba269b249294b842
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: An Oil Catastrophe Was Averted in 2026. What If It Comes in 2027?
+<<<SUMMARY>>>
+Two fund managers with a strong track record of contrarian commodity calls think the oil spike is yet to come. Here’s how they’re preparing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141317571
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-25T07:34:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a5715a89f502463a41c3d3b22f0984775bc42bd574e0a5aa8ba7992a4d567968
+image_url: https://cdn.benzinga.com/files/images/story/2026/08/25/Jim-Cramer-Lauds-Trumps-Tariff-Playbook.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Jim Cramer: Williams Companies Is 'Terrific,' This Tech Company Had An ‘Amazing’ Quarter
+<<<SUMMARY>>>
+Jim Cramer shares his opinions on Rocket Lab, Canadian Natural Resources, Palantir, IBM and Williams Companies on Mad Money Lightning Round.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141315884
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-25T07:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=3a1400cd007698ed4e484055cdfd498ae20a293b62edc7901c72e7fcee7d15fd
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2262173078/image_2262173078.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: My Game Plan For What Some Call A Fat AI Bubble
+<<<SUMMARY>>>
+Broadening stock market leadership beyond AI: why dividend growth, value, and cyclicals may outperform. Read the full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141598288
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-06T11:52:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d49f309d5cf9ef48b2bc40830f5e64967650b94b6b5c70143428dda58760ea1d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Which TSX stocks investors will be watching next week?
+<<<SUMMARY>>>
+Investing.com -- Canadian energy stocks are set to command attention on the TSX this week as analyst upgrades and tariff-related headlines drive trading activity, while major banks draw scrutiny over buybacks, earnings prospects and strategic moves.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141589666
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-06T07:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=95e06713e6b57b8b878cfc33aab039b43059b5eb5268c5ba0bc6e13f7c612008
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1173364851/image_1173364851.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: 5 Stocks I Want If Oil Hits $100
+<<<SUMMARY>>>
+Top Energy picks for 2026: TPL, VNOM, CNQ, CVX & WBI. Here's what investors need to consider.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141376185
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-02T12:11:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da5a9fc0fc449cc04bcd95b5c2efb689b6ee729b25aa9da93b3bcae4fe9d2074
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Dow Jones Futures Rise As Oil Prices Fall; Dell, Credo, Palo Alto Are Earnings Movers
+<<<SUMMARY>>>
+The Dow Jones and Nasdaq 100 fell below their 50-day lines as oil prices jumped. Dell, Palo Alto and Credo were earnings movers late.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141373089
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-01T21:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5696555caf3dade6646ba83337ce0dcc8c1f410af8c7606efaf83068450d27d2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Oil Stocks Hit New Highs After U.S. Resumes Strikes in Strait of Hormuz
+<<<SUMMARY>>>
+Renewed U.S. strikes in the Strait of Hormuz sent shares of major oil companies higher Tuesday, with several on track for record highs.  “The United States is, as we speak, striking Iranian Targets near the Strait of Hormuz,” President Donald Trump said in a post on Truth Social Tuesday afternoon.  “The strikes are large and powerful, and in retaliation for the Iranians’ failed attempt at adding sea mines to the Strait.”
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141370048
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-01T18:07:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bb4491add5579cb2d399ae7df2b52e7f5c5cb6d5d9377e04e8fc2c9ccbab6333
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Oil Stock Edges Into Buy Zone After 200% Earnings Growth
+<<<SUMMARY>>>
+Canadian Natural Resources rose 2.5% on Tuesday. The stock is inching toward a handle buy point of 51.48.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141444876
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-01T16:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=12dbd832c91e3c1663d0a8ed05ba7ca9888d69f6de09ce9c85bb655150ae9b73
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Here's Why a Hold Strategy Is Apt for Canadian Natural Stock Now
+<<<SUMMARY>>>
+CNQ's record production, low-cost oil sands assets and growth initiatives support its outlook, but commodity risks and a Horizon turnaround warrant caution.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141371175
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-01T15:49:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ab0f384f14439873c7f0f11d1e0acbc0cde6c58326503a0084aea675b1e5ce6e
+image_url: https://cdn.benzinga.com/files/images/story/2026/09/01/Oil-Pump-Jacks-And-Refinery-Silhouettes-.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: These 7 Energy Stocks Are Rallying as Crude Tops $90 on US Strikes in Iran
+<<<SUMMARY>>>
+US strikes on Iran near the Strait of Hormuz sent WTI crude up 5.4% to $90.38. Seven energy stocks rallied and the 10-year yield hit 4.80%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142115390
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-11T17:15:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=44090e81895b8b2c481c3fce554c727db0721e4233a505e444649ad297ca3bfa
+image_url: https://cdn.benzinga.com/files/images/story/2025/07/10/valuestock_3.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: $100 Invested In Canadian Natural Res 5 Years Ago Would Be Worth This Much Today
+<<<SUMMARY>>>
+Canadian Natural Res (NYSE:CNQ) has outperformed the market over the past 5 years by 12.63% on an annualized basis producing an average annual return of 24.1%. Currently, Canadian Natural Res has a market capitalization
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142083391
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-11T11:01:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e2a36a10c4b75212877f6089c758473271aad52e5792dfaf916c3bb85293bfad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Ltd's Dividend Analysis
+<<<SUMMARY>>>
+This article first appeared on GuruFocus.  Canadian Natural Resources Ltd (NYSE:CNQ) recently announced a total dividend of $0.45 per share, with the ex-dividend date set for September 11, 2026.  This amount consists entirely of a cash dividend of $0.45 per share, which is payable to shareholders on October 2, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142070257
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-10T19:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=57add230d22b9a9335559240dd8babd66d61760c6a2a4d6bd856e13efe200824
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Brent Is Back Above $100 and Could Keep Rising. How to Play It.
+<<<SUMMARY>>>
+Canadian Natural Resources is up 52% this year and pays a 3.5% dividend yield. Shares could be headed higher.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142034197
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-09T12:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32e8f0378ed11930d1370548a0cd9e7896e64ec2414adad4d68767bb640c242e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Oil Prices Are Climbing, Yet These 3 Energy Stocks Yield 3%+
+<<<SUMMARY>>>
+For investors seeking energy exposure without assuming excessive risk, KMI, CVX and CNQ offer a mix of scale, financial strength and dependable shareholder returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142010954
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-09T10:21:19Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=91a4bb142eaa0ca72f82e089d4a4b0d2a58adf9f4ae991c044fd747ed33bb10e
+image_url: https://www.chartmill.com/images/uploads/HGM_Breakout_19d1a7df53.webp
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (NYSE:CNQ) Shows High Growth Momentum With a Bull Flag Breakout Setup
+<<<SUMMARY>>>
+Canadian Natural Resources combines strong earnings momentum with top technicals and a solid setup, making it a compelling growth stock to watch.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140057324
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-16T15:47:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=303497bcf11be990c28b12f050a4241382fa47073aeafcacca9527374a7ec8d4
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Granite Ridge Resources shares are trading lower after the company reported worse-than-expected Q4 financial results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142188388
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-16T09:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=199142572f59c3550e58e67238313786c122fce86db3540f19abd0bbdf3a8c62
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: The Zacks Analyst Blog Highlights S&P Global, Cloudflare, Canadian Natural Resources, Star Group and Hour Loop
+<<<SUMMARY>>>
+S&P Global, Cloudflare and Canadian Natural headline today's research, with growth drivers balanced by valuation, execution and market risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142168644
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-15T20:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da0d1a197d359b8fe09f54940ac34a3c52be3e64c6ca547cec998ea9b8146a5f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Top Research Reports for S&P Global, Cloudflare & Canadian Natural
+<<<SUMMARY>>>
+Cloudflare's enterprise demand, AI-driven adoption and raised 2026 outlook support growth, but margin pressure and competition keep risk balanced.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e0a920cb9ed4b774d03637015baaa8eb44b4ba36a586f9d8db88664bd98acb2a
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-01T16:15:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/2983364/here-s-why-a-hold-strategy-is-apt-for-canadian-natural-stock-now?cid=CS-ZC-FT-analyst_blog|rank_focused-2983364
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: CNQ, BTE
+keywords: oil sands, production guidance, commodity prices, cash flow, regulatory uncertainty, maintenance turnaround, acquisitions, energy sector
+headline: Here's Why a Hold Strategy Is Apt for Canadian Natural Stock Now
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) posted record Q2 2026 production of 1.68 million BOE/d and raised full-year guidance, with strong earnings projections of $4.05 per share for 2026. However, the company faces headwinds from commodity price volatility, a scheduled 35-day Horizon turnaround reducing production by ~29,000 bbl/d, and regulatory delays affecting major growth projects. The stock is rated Zacks Rank #3 (Hold).
+<<<INSIGHTS>>>
+CNQ | neutral | While CNQ demonstrates strong operational performance with record production, raised guidance, and low-cost assets, these positives are balanced by significant headwinds including high commodity price sensitivity, upcoming production disruptions from the Horizon turnaround, regulatory delays on major projects, and substantial capital requirements. The Zacks Rank #3 (Hold) rating reflects this mixed outlook.
+BTE | neutral | Baytex underperformed CNQ over the three-month period (down 1.4%) and shows lower earnings growth expectations (210.8% for 2026) compared to its peer, suggesting weaker relative positioning in the current market environment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b19e32432ae11d2c3ede34146257ae35fb4a64191ee3bde9192f05f156caad84
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-09T12:41:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/2986960/oil-prices-are-climbing-yet-these-3-energy-stocks-yield-3?cid=CS-ZC-FT-analyst_blog|industry_focus-2986960
+image_url: https://staticx-tuner.zacks.com/images/articles/main/74/780.jpg
+category: 
+tickers: EP, EPpC, KMI, CVX, CNQ
+keywords: energy stocks, dividend yields, oil prices, geopolitical tensions, Middle East, energy infrastructure, commodity volatility
+headline: Oil Prices Are Climbing, Yet These 3 Energy Stocks Yield 3%+
+<<<SUMMARY>>>
+Oil prices have climbed to three-month highs due to Middle East tensions and disrupted Gulf crude flows. For investors seeking energy exposure without relying solely on oil price appreciation, dividend-paying energy stocks like Kinder Morgan, Chevron, and Canadian Natural Resources offer recurring income and diversified cash flows with yields above 3%.
+<<<INSIGHTS>>>
+EP | positive | Operates largest North America energy infrastructure network with stable fee-based cash flows, expects ninth consecutive dividend increase in 2026, and offers 3.7% yield with defensive characteristics during volatile markets.
+EPpC | positive | Operates largest North America energy infrastructure network with stable fee-based cash flows, expects ninth consecutive dividend increase in 2026, and offers 3.7% yield with defensive characteristics during volatile markets.
+KMI | positive | Operates largest North America energy infrastructure network with stable fee-based cash flows, expects ninth consecutive dividend increase in 2026, and offers 3.7% yield with defensive characteristics during volatile markets.
+CVX | positive | Integrated business with multiple cash flow sources across geographies, 90-year dividend maintenance/increase track record, 3.4% yield above sector average, and disciplined capital spending support shareholder returns.
+CNQ | positive | Large portfolio of long-life, low-decline assets with geographic diversification, 26 consecutive years of dividend increases, 3.6% yield above sector average, and strong balance sheet support income sustainability.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:443bdcc0906f68b41337a4f1dc373552bd73e4d60e177495eb64bcf1ab021718
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-15T20:13:00Z
+publisher: Zacks Investment Research
+author: Mark Vickery
+url: https://www.zacks.com/commentary/2989703/top-research-reports-for-s-p-global-cloudflare-canadian-natural?cid=CS-ZC-FT-research_daily-2989703
+image_url: https://staticx-tuner.zacks.com/images/articles/main/51/210.jpg
+category: 
+tickers: SPGI, NET, CNQ, SGU, HOUR, EXC, NDSN, LAMR
+keywords: equity research, stock analysis, investment themes, earnings, market outlook
+headline: Top Research Reports for S&P Global, Cloudflare & Canadian Natural
+<<<SUMMARY>>>
+Zacks analysts published research on 16 major stocks and 2 microcaps on September 15, 2026. Key reports include S&P Global (neutral outlook despite strong recurring revenues and AI adoption), Cloudflare (balanced risk-reward with strong enterprise demand but valuation concerns), and Canadian Natural Resources (neutral stance due to commodity volatility and regulatory risks). Additional coverage includes Exelon, Nordson, Lamar Advertising, and others with mixed outlooks reflecting both growth opportunities and operational challenges.
+<<<INSIGHTS>>>
+SPGI | neutral | Positive factors include recurring benchmark revenues, AI adoption, and margin improvements, but offset by elevated costs, sizable debt, and intense competition. Financial and execution risks limit near-term upside.
+NET | neutral | Strong enterprise demand and raised 2026 outlook are positive, but gross-margin compression, intense competition, macro uncertainty, workforce restructuring, and stretched valuation create balanced risk-reward profile.
+CNQ | neutral | Diversified portfolio and strong cash-flow generation are supported by low-cost assets, but significant oil sands exposure creates commodity volatility sensitivity and regulatory uncertainty. Pipeline constraints and ESG scrutiny limit upside.
+SGU | neutral | Acquisition strategy and HVAC diversification provide growth opportunities, but persistent customer attrition, energy conversions, elevated commodity costs, and tariff uncertainty constrain organic growth and margins.
+HOUR | neutral | Strong revenue growth (25.2% in Q2 2026) and profitability are positive, but weak cash flow, rising inventory, heavy Amazon dependence (97% of revenues), tariff risks, and platform policy changes create significant headwinds.
+EXC | positive | Planned $41.7B investment in transmission and distribution infrastructure combined with revenue decoupling mechanisms support performance improvement.
+NDSN | neutral | Growing demand for nonwoven and industrial coating products drives the Industrial Precision Solutions segment, but high costs remain a significant concern.
+LAMR | neutral | Resilient local demand, digital growth, and disciplined acquisitions are positive, but ad cyclicality, rate exposure, and strong competition temper upside potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142365995
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-23T23:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e71b877bf137e2325dbc2eb16dfea4f3a07498c4b64d5e619e049b2eca37f67c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canada’s Oil Patch On Track For Biggest M&A Wave In A Decade
+<<<SUMMARY>>>
+Canada’s oil patch is experiencing another major M&A boom, with more than $30 billion in deals so far in 2026 and activity potentially surpassing the $53 billion recorded in 2017.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142358477
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-23T12:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e84f3bd727911794bd59db1d07709502d75862d4887b5674dfa6774265c52bf9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Zacks Industry Outlook Highlights Baytex Energy, InPlay Oil and Canadian Natural Resources
+<<<SUMMARY>>>
+Canadian E&P gains momentum as wider market access, better technology and rising earnings estimates spotlight three stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142344655
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-22T12:57:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=65e686053f0376b1fca3bcb70bbfb5676d906f76531e33edcd697239ee7bf418
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian E&P Industry Gains Momentum: 3 Stocks in Focus
+<<<SUMMARY>>>
+Following a careful analysis of the Zacks Oil and Gas - Exploration and Production - Canadian industry, we advise focusing on shares of BTE, IPOOF and CNQ.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142330884
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-22T08:19:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cd681cd3e56311e6655d4f4fc0e9e19b32976379efd5e0429006c2bc404e5f70
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: 3 Canadian Dividend Stocks With Yields Over 3%
+<<<SUMMARY>>>
+Rising bond yields have restored a clear premium for longer term government debt, so cash and short term instruments no longer carry the only attractive headline yields. That shift has pushed many Canadians to rethink how they earn regular income from their portfolio. Reliable dividend payers with yields above 3% and a track record of covered, growing payouts offer one clear route. This article highlights three such Canadian dividend stocks for closer examination. The three dividend stocks...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139967249
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-21T13:53:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=db3c7c0a430c6ca6ae910bac1a0922db000257556e138bbcacea6c2ff7de5b4f
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Delixy Holdings H1 EPS $0.04 Up From $0.03 YoY, Sales $102.000M Down From $143.761M YoY
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:777078
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-18T13:31:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d480f5814582c33a4b5f10294897c738aa707bae4cecdd31e16596d6b7d11b5
+image_url: 
+category: company news
+tickers: CNQ
+keywords: 
+headline: These Are The 5 Best Stocks To Buy And Watch Now
+<<<SUMMARY>>>
+Buying a stock is easy, but buying the right stock without a time-tested strategy is incredibly hard. So what are the best stocks to buy now or put on a watchlist?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142247851
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-18T09:30:52Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=6512a091e3527fc6803174dbbae47abf28332a05c7e4f3cb78aa77d9df916f91
+image_url: https://www.chartmill.com/images/uploads/minervini_news_8825971f4b.webp
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (NYSE:CNQ) Passes Minervini Trend Template and High Growth Momentum Screen
+<<<SUMMARY>>>
+CNQ passes Minervini Trend Template and High Growth Momentum screen with strong technicals, bullish flag setup, and accelerating EPS growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142251215
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-18T07:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=3a8e86efd1b87ed32205dfddfef29fce6d7543a50f57239e584cfac5edaf393d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1302549500/image_1302549500.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: A $100,000 Retirement Dividend Snowball In A Rising-Rate World
+<<<SUMMARY>>>
+Learn how to build a $100,000 dividend snowball for passive income in todayâs rising rate marketâplus allocation tips and specific picks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142221843
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-17T05:14:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0746a93cc0464a6049c7a6b99841927d59d648f47954c06375ed8338eb389cdb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (TSX:CNQ) Stock May Be A Bargain On Cash Flow
+<<<SUMMARY>>>
+Canadian Natural Resources has delivered a powerful run in recent years, which puts fresh attention on what investors are really paying for its cash flows today. With the stock now trading around $70.08, a key question is how that market price lines up with the cash the business is expected to generate over time. Over the past 5 years, Canadian Natural Resources has returned about 315.4%, which means there is a lot of accumulated optimism at stake when considering whether cash flows can...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142206603
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-17T04:28:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8515f90fc5b11b2aa2ce2c190143f481ae2524373358ee72474d3b78fa8d20a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (TSX:CNQ) Looks Fairly Valued As Cost Cuts Support Its Case
+<<<SUMMARY>>>
+Canadian Natural Resources (TSX:CNQ) has drawn fresh attention after a six month stretch in which its shares rose alongside solid production, diversified assets, and an emphasis on liquids rich, low cost projects. Over the past year, Canadian Natural Resources has seen strong momentum, with the share price up 48.73% year to date and a 1 year total shareholder return of 63.98%. That strength sits alongside very large 5 year total shareholder returns of 315.37%. Scan beyond Canadian Natural...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142524253
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-30T18:00:08Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=21fc7455720341bd3706e24b3d9dd124ec464e753f2931b825d5654cdb456a3e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/157718880/image_157718880.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: The EU Deal Could Help, But Not Now
+<<<SUMMARY>>>
+Canadian Natural Resources posted its best quarter ever, but reverse DCF shows CNQ is priced for midâcycle WTI near $64, leaving limited upside. Click for more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142514425
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-30T10:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=13155cffedb8dcc23eac36bf0d08dceb0ccc20626f13bb10f1ac8e9c47bc077b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canada and Alberta Seal Historic Oil Sands Agreement Linking Production Growth to Carbon Capture
+<<<SUMMARY>>>
+In July 2026, a trilateral Memorandum of Understanding (MOU) between the Government of Canada, the Government of Alberta and five major oil sands producers established a framework linking expanded production capacity to historic investment in carbon capture technology and new export infrastructure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142497294
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-29T10:45:44Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5872efbf2a458f9c5a61825af7a089c62c8f0a928d961f2a4f42f1fd1e1840b7
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2253758730/image_2253758730.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: A Top Pick Amid Oil Uncertainty
+<<<SUMMARY>>>
+Canadian Natural Resources has access to long-life, low-decline oil sands assets in Canada. Check out why CNQ stock is a buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142493798
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-29T07:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=4c5abb4f21aa5bf85df569781925c19a9147bca7d8c1ab6447adf843358e7931
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Where I'd Put My Next $10,000 In Stocks
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142474660
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-28T23:58:16Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=53c72ec7f4cfb484c2c513bf8bef03bff3828683a8e48ab11b48d6a5dbc02fde
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2266943052/image_2266943052.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: Hormuz Can Reopen, The 100% Payout Still Arrives
+<<<SUMMARY>>>
+Canadian Natural Resources' share price has shown resilience, correcting only ~3.5% vs. a ~15% drop in WTI since April. Read why CNQ stock is a Buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142418101
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-25T07:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=bef2f86bc7a99565065b64ae51c938a25e51ac58a3436425e595c59ac7c7e591
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1577578942/image_1577578942.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: The More These Dividend Machines Drop, The More I Buy
+<<<SUMMARY>>>
+Blue-chip dividend stocks sold off hardâlearn why thatâs good news and how to capitalize with top income picks and strategies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142668771
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-06T19:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eedfe57e908a7428ca58580b7fa1faf1fba719d888a907c6ff12f983e817fb10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Top Research Reports for SpaceX, Dell & KLA Corp.
+<<<SUMMARY>>>
+Today's Research Daily features new research reports on 16 major stocks, including Space Exploration Technologies Corp. (SPCX), Dell Technologies Inc. (DELL) and KLA Corporation (KLAC), as well as two micro-cap stocks, AXIL Brands, Inc. (AXIL) and Optex Systems Holdings, Inc (OPXS).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142666566
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-06T13:31:08Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=11fbd22fc4bf63a1c0492058288ae75df8a3448150116133741155eea152f804
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1341830582/image_1341830582.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Oil And Gas: You Ain't Seen Nothing Yet
+<<<SUMMARY>>>
+Petrobras is a top energy pick as Brent premium, Mideast risks, and a flattening oil curve lift upside. Read the full analysis here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142650403
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-06T06:16:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a148e065e6c5e78351c0225d633877075937bddea8bc9f23b62bd0b9038427d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Tire Stock And 2 More Canadian Dividend Stocks
+<<<SUMMARY>>>
+Asian stocks have recently reacted to shifting expectations for US interest rates, which has refocused attention on reliable income rather than short term speculation. For Canadian dividend hunters, that puts well covered yields above 3% in the spotlight. Investors receive income while markets debate the next move from central banks. This article highlights three Canadian dividend powerhouses from our income screen that aim to combine yield with stability. The three stocks below are just a...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142650429
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-06T05:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2bdd5eaf69e2e45a8908fd81b8ebff9e05d3ff33d1970618273629bc0a383595
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Best Income Stocks to Buy for October 6th
+<<<SUMMARY>>>
+GSBD, HRB, CNQ made it to the Zacks Rank #1 (Strong Buy) income stocks list on October 6th, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142627215
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-04T14:07:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f37221851b8b33c4d8d0d6f3cb08a1a7d1a0e1dfeddc42dfee6636292b294a56
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Conditional Pathways CCS Pact Could Be A Game Changer For Canadian Natural Resources (TSX:CNQ)
+<<<SUMMARY>>>
+In late September 2026, Canadian Natural Resources and four other oil sands producers, together with the federal and Alberta governments, committed via a trilateral MOU to advance the Pathways CCS project targeting up to 16 million tonnes of CO2 capture annually by 2045, with final binding terms still pending. An important insight is that this conditional CCS framework directly links potential future oil sands expansion to large-scale emissions management, potentially reshaping long-term...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142894051
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-14T13:31:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=df31388412f2641b5f5ba94d2b42675cf45cf1a564c7b96d6f697bd4573d7ffe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: A Reliable Dividend With Less Room for Error
+<<<SUMMARY>>>
+Canadian Natural Resources Limited (NYSE:CNQ) stands out for its blend of long-life oil sands, conventional oil, and natural gas operations, all while maintaining a steady track record of returning cash to shareholders. Thanks to its scale and low operating costs, the company can keep supporting its dividend through market swings. Still, its earnings remain closely […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142837051
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-13T03:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5376b8e28eb762ac02d174caa1aa9ea63defce50355b6f11414acd56ced31c08
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1447640636/image_1447640636.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Disrupted Supply, Tighter Policy: A Volatile Quarter For Resource Markets
+<<<SUMMARY>>>
+Persistent Gulf disruption and a Federal Reserve pivot toward rate hikes kept resource markets volatile in Q3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142823519
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-12T15:28:10Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7f64b76d7b404ad58ae1d7101a86639894ba0a8d4643edd0ef2e503cc1995016
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2251333464/image_2251333464.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Cenovus Energy: Strong Growth And Good Shareholder Returns Ahead
+<<<SUMMARY>>>
+The Athabasca Oil acquisition will boost CVEâs production, reserves, and future growth, despite temporarily delaying aggressive buybacks. Read the latest analysis on the deal here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142821946
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-12T14:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ebaaf2a00a4ba57d1c0007b07c52def3844d13046845980dbd396dc0507dc634
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Shell and Equinor Deepen Canadian Ties With Bay du Nord Deal
+<<<SUMMARY>>>
+SHEL is acquiring a 30% stake in Canada's proposed Bay du Nord oil project from EQNR, targeting long-term growth while maintaining capital discipline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142761456
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T18:15:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=52ab7092504b7fb2733bb2d7e509a77196d87abfa776de9bef3ddcd3cf0c2ceb
+image_url: https://cdn.benzinga.com/files/images/story/2025/07/10/valuestock_3.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Here's How Much $1000 Invested In Canadian Natural Res 5 Years Ago Would Be Worth Today
+<<<SUMMARY>>>
+Canadian Natural Res (NYSE:CNQ) has outperformed the market over the past 5 years by 7.35% on an annualized basis producing an average annual return of 19.63%. Currently, Canadian Natural Res has a market capitalization
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142954165
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-16T22:13:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a52fe34e4923e83eed0c588caa212aa1ea3a0ec7cf261effd911a7af250a7a2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (TSX:CNQ) Beats On Earnings, Is It Fully Priced?
+<<<SUMMARY>>>
+Canadian Natural Resources (TSX:CNQ) is back in focus after its latest earnings release topped consensus estimates on both EPS and revenue, a run of positive surprises that has aligned with stronger investor interest in the stock. Recent trading has reflected that earnings strength, with the share price at CA$76.10 and a 1-month share price return of 8.59%, 90-day gain of 23.90% and year-to-date move of 61.50%. Over a longer stretch, total shareholder return of 88.03% over one year and...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142949143
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-16T16:49:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e0a48e2e6def1f2fc47bda657b08ade7c7349141194884aa1667e412ada09923
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Coca-Cola Tops Buy Point After Landing A Whale. Four Other Top Stocks In Buy Zones.
+<<<SUMMARY>>>
+Coca-Cola rose above the 92.49 buy point of a flat base. It was among the actionable stocks Friday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140010552
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-16T13:54:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7a9bea0d8b12194ca4e9508da60ca53697865377733bc2ec477e8f9c29dca786
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Watching Drilling Tools International; Hearing Zacks Under $10 Newsletter Picks Stock
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142922100
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-15T17:29:10Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=fd0c59b3d77a95d1b94e03af6da568d32769eee41f1b36ecf91617fa2e7bb0ef
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2292327885/image_2292327885.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Energy: We're Seeing Something Very Special Right Now
+<<<SUMMARY>>>
+XLE is up 50% YTD on the Strait of Hormuz risk and strong demand. Click for a look at the energy sector and see if it is the right place for your funds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142926998
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-15T12:15:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a327786d029ee4c427986da74738f28d1ae2793c8aa9ec570fe865d3062e072c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Limited (CNQ) Hit a 52 Week High, Can the Run Continue?
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142904873
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-15T04:15:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=d33c8bdc39f48096118f891f2a835dbd23828bb9c6f3236d3608ca10d97ed381
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2205618145/image_2205618145.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: 3 Stocks To Get The Best Out Of The Trade War
+<<<SUMMARY>>>
+Here are the sectors that shield you, the sectors taking the hit, and three companies that could do well down the road.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:813d3f2be2b9cd72c2143a2c3489b7201d3e3c40a5d49fc977f0b48c34e02c68
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-30T12:00:00Z
+publisher: GlobeNewswire Inc.
+author: Na
+url: https://www.globenewswire.com/news-release/2026/09/30/3371803/0/en/trio-petroleum-announces-lloydminster-acquisition-with-cummings-multilateral-oil-well-and-workover-production-growth-opportunity.html
+image_url: https://ml.globenewswire.com/Resource/Download/98461839-e0d1-4a6a-a36f-c08578974698
+category: 
+tickers: TPET, CNQ
+keywords: oil acquisition, Lloydminster, multilateral drilling, heavy oil, workover program, Saskatchewan, production growth, water disposal facility
+headline: TRIO PETROLEUM ANNOUNCES LLOYDMINSTER ACQUISITION WITH CUMMINGS MULTILATERAL OIL WELL AND WORKOVER PRODUCTION GROWTH OPPORTUNITY
+<<<SUMMARY>>>
+Trio Petroleum Corp acquired 24 oil wells (4 producing, 20 shut-in) from Marlin Resources Ltd in Saskatchewan's Lloydminster region for CDN$800,000 cash plus an underutilized water disposal asset. The acquisition includes 37 BOPD of current production, a planned Cummings multilateral well with CDN$1.2 million development budget, and a CDN$425,000 workover program. The company expects the purchase price per flowing barrel to be discounted compared to market rates for comparable assets.
+<<<INSIGHTS>>>
+TPET | positive | The company is executing its growth strategy through accretive acquisitions at attractive valuations. The deal includes multiple production upside opportunities (existing well workovers and new multilateral drilling), strategic infrastructure improvements, and management confidence in value creation. The acquisition is positioned as a step toward building a substantially larger Canadian oil and gas business.
+CNQ | neutral | CNRL is mentioned only as a reference point for validating the Cummings multilateral development concept through their nearby producing wells. There is no direct business impact or strategic involvement with Trio in this transaction.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c44f6f9fe9caf9d0d5fc3bfaf7d5675246db2f11b0f4bb24de2913e17a190918
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-30T12:45:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/2998088/here-s-why-canadian-natural-resources-cnq-is-a-strong-growth-stock?cid=CS-ZC-FT-fundamental_analysis|zacks_education_growth_score-2998088
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default17.jpg
+category: 
+tickers: CNQ
+keywords: Canadian Natural Resources, growth stock, earnings growth, Zacks Rank, Style Scores, oil and natural gas, energy company
+headline: Here's Why Canadian Natural Resources (CNQ) is a Strong Growth Stock
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) is highlighted as a strong growth stock with a Zacks Rank #3 (Hold) and a Growth Style Score of A. The company is forecasted to achieve 59.5% year-over-year earnings growth for the current fiscal year, with recent upward earnings estimate revisions and a solid average earnings surprise of +12.9%.
+<<<INSIGHTS>>>
+CNQ | positive | CNQ receives a positive sentiment due to its strong Growth Style Score of A, forecasted 59.5% year-over-year earnings growth, recent upward earnings estimate revisions (+$0.13 to $4.05 per share), and solid average earnings surprise of +12.9%. The company is recommended for growth investors despite its Hold rank.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a345b414d33130db9a42d864cecda8ddcd08926f4806bfa9cf9fad666aebdd28
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T05:25:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3000619/best-income-stocks-to-buy-for-october-6th?cid=CS-ZC-FT-zacks_1_rank_additions|income_additions-3000619
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ea/574.jpg
+category: 
+tickers: GSBD, HRB, CNQ
+keywords: dividend yield, Zacks Rank #1, income stocks, earnings estimates, business development company, tax preparation, energy
+headline: Best Income Stocks to Buy for October 6th
+<<<SUMMARY>>>
+Zacks highlights three Rank #1 stocks with strong income characteristics: Goldman Sachs BDC with a 14.1% dividend yield and 12.2% earnings estimate increase; H&R Block with a 4.4% dividend yield and 8.1% earnings estimate increase; and Canadian Natural Resources with a 3.7% dividend yield and 6% earnings estimate increase.
+<<<INSIGHTS>>>
+GSBD | positive | Zacks Rank #1 designation, 12.2% increase in consensus earnings estimates over 60 days, and dividend yield of 14.1% significantly above industry average of 12.3%
+HRB | positive | Zacks Rank #1 designation, 8.1% increase in consensus earnings estimates over 60 days, and dividend yield of 4.4% compared to industry average of 0.0%
+CNQ | positive | Zacks Rank #1 designation, 6% increase in consensus earnings estimates over 60 days, and dividend yield of 3.7% above industry average of 1.7%
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b5e7ec3129b35970187287b05ca7eb7ac179bd9934c153819a8da1ec283ebdcb
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T19:51:00Z
+publisher: Zacks Investment Research
+author: Mark Vickery
+url: https://www.zacks.com/commentary/3000930/top-research-reports-for-spacex-dell-kla-corp?cid=CS-ZC-FT-research_daily-3000930
+image_url: https://staticx-tuner.zacks.com/images/articles/main/db/137.jpg
+category: 
+tickers: SPCX, DELL, KLAC, AXIL, OPXS, LMT, DE, CNQ, SRPT
+keywords: AI infrastructure, semiconductor demand, SpaceX IPO, defense contracts, commodity prices, backlog expansion
+headline: Top Research Reports for SpaceX, Dell & KLA Corp.
+<<<SUMMARY>>>
+Zacks Research Daily features analysis of 16 major stocks on October 6, 2026. SpaceX benefits from reusable launch technology and Starlink expansion but faces capital requirements. Dell outperforms due to AI infrastructure demand and broad portfolio strength. KLA gains from AI-driven semiconductor demand and process-control intensity. Additional coverage includes analysis of Lockheed Martin's expanded backlog, Deere's pricing actions offsetting commodity headwinds, and concerns about Sarepta's concentrated DMD focus.
+<<<INSIGHTS>>>
+SPCX | positive | Outperformed industry since IPO (+28.4% vs +13.9%), benefits from reusable launch technology, Starlink growth, and AI infrastructure expansion opportunities
+DELL | positive | Significantly outperformed industry over past year (+266.1% vs +36.3%), driven by strong AI infrastructure demand, broad portfolio, and improving efficiency
+KLAC | positive | Outperformed industry over past year (+90.7% vs +52.7%), benefits from AI-driven semiconductor demand and advanced packaging opportunities
+AXIL | negative | Underperformed industry over six months (-13.0% vs +2.4%), faces tariff-related pressure, elevated marketing costs, and execution risks from business expansion
+OPXS | negative | Underperformed industry over past year (-24.0% vs -11.2%), faces margin pressure, weak cash flow, and declining legacy periscope demand
+LMT | positive | Strong contract wins including PAC-3 and F-35 awards expanded backlog to $230B, providing solid multiyear revenue visibility
+DE | neutral | Low commodity prices will hurt agricultural equipment demand, but offset by pricing actions and cost-reduction efforts
+CNQ | positive | Oil Sands Mining and Upgrading operations generate some of the strongest margins in the industry with high return opportunities
+SRPT | negative | All four marketed products target only DMD indication, creating concentration risk and limiting diversification
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4ec5990bb1041cb75994c830a8ed22fb063ca18f25aa51336209021ac3723c25
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-12T14:52:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3005380/shell-and-equinor-deepen-canadian-ties-with-bay-du-nord-deal?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3005380
+image_url: https://staticx-tuner.zacks.com/images/articles/main/0a/430.jpg
+category: 
+tickers: SHEL, EQNR, APA, CNQ
+keywords: offshore oil, Bay du Nord, Canada, capital allocation, energy sector, deepwater development, FPSO vessel
+headline: Shell and Equinor Deepen Canadian Ties With Bay du Nord Deal
+<<<SUMMARY>>>
+Shell has agreed to acquire a 30% non-operated interest in Equinor's Bay du Nord offshore oil project in Canada's Flemish Pass Basin. The project holds over 400 million barrels of recoverable resources with first oil expected in 2031 and requires approximately C$14 billion in investment. An investment decision is targeted for early 2027, subject to regulatory approvals and Shell's investment criteria.
+<<<INSIGHTS>>>
+SHEL | positive | Shell is expanding its Canadian offshore presence with a strategic minority stake in a major oil project with long-term growth potential and expected returns above its investment hurdle rate. The deal strengthens its portfolio and competitive position in the energy sector.
+EQNR | positive | Equinor retains operational control (70% interest) of the Bay du Nord project while securing Shell as a partner, reducing financial burden and risk while maintaining project leadership and upside potential.
+APA | neutral | Mentioned as a comparable energy sector stock with strong Zacks ranking, but no direct connection to the Bay du Nord deal or specific company developments discussed.
+CNQ | neutral | Mentioned as a comparable Canadian energy company with strong Zacks ranking, but no direct connection to the Bay du Nord deal or specific company developments discussed.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140010081
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T12:31:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1f714709ab7ddf7f6cb7144cca446464e468587349f49f9b62558fa0d4ae9f57
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Imperial Oil shares are trading lower after the company reported worse-than-expected Q4 sales results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143117780
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T06:12:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87effc9f37340e5fcdc1e9fb9670719ab076425ebb7e91f6d56a71b2acc0cea5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Groupe Dynamite And 2 Other Canadian Undervalued Stocks
+<<<SUMMARY>>>
+Global energy markets are swinging as LNG Canada’s Phase 2 expansion moves ahead, doubling capacity and sharpening interest in long term Canadian export projects. Cash rich operations can throw off steady inflows even when headlines are noisy, yet some of these Canadian stocks still trade below estimated fair value. This article walks through three such opportunities where discounted cash flow signals potential mispricing. The three stocks highlighted next are only a sample set from this cash...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143105740
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:31:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=61830e9b3a8964fc3a62e34001a14b81b5e60fbfeecd254d8972632a11475c70
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Transocean Secures $550M in Gulf Contracts, Strengthens Backlog
+<<<SUMMARY>>>
+RIG's $550M U.S. Gulf drilling contracts boost its backlog and extend operations into 2027, supported by rising deepwater demand and strong rig utilization.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102476
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1b762ea5a172bea9102ac8d7b24c1110d37406459f026f9ffe5eecb025fd098
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Chevron Eyes $1B Gulf Asset Sale to Focus on Growth Projects
+<<<SUMMARY>>>
+CVX explores a potential $1 billion sale of mature U.S. Gulf oil and gas assets as it shifts focus to newer offshore projects and long-term production growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102832
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a1ebb293ce9317e767ef24a034049cc6e5ba5b3586b1c272b2c14f4e692d92b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: APA Plans to Keep Forties Charlie Operational Amid Strike Threat
+<<<SUMMARY>>>
+APA plans to keep Forties Charlie operational despite a threatened strike, aiming to protect oil flows and avert wider North Sea pipeline disruptions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143100094
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T12:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed52305d24d7d700a058279b87dc85dc8181d907e86fbcc1d8d7b158826859d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: 3 Energy Dividend Stocks to Buy for More Than Oil Exposure
+<<<SUMMARY>>>
+With oil supplies under threat and crude prices elevated, CVX, CNQ and KMI offer dividend income backed by diversified operations and resilient cash flows.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143027361
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T12:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83b14e8ffe750d66c9abcac441ae9e7342bd0da689f5db0f114a080488d22c81
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Is OMV (OMVKY) Outperforming Other Oils-Energy Stocks This Year?
+<<<SUMMARY>>>
+Here is how OMV AG (OMVKY) and Canadian Natural Resources (CNQ) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143018902
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T15:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ce2b7706f2edbf32b8c9b8ec7c55dc134354dd8f276f98d3fc580bdf292df9c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (CNQ) Is Up 8.36% in One Week: What You Should Know
+<<<SUMMARY>>>
+Does Canadian Natural Resources (CNQ) have what it takes to be a top stock pick for momentum investors? Let's find out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143008676
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a72aeb7b56c43adc906e058ce656d363ff1b627f08fb5e8d49610d78cf76ee7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Best Momentum Stock to Buy for October 19th
+<<<SUMMARY>>>
+APOG, CNQ and EOG made it to the Zacks Rank #1 (Strong Buy) momentum stocks list on October 19, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143014008
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T10:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e9b010b10b7a75a3d802197cd15e55c19e0603857289249a966043c863f1097
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Best Income Stocks to Buy for October 19th
+<<<SUMMARY>>>
+VSNT, CNQ and APOG made it to the Zacks Rank #1 (Strong Buy) income stocks list on October 19, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143343797
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T15:52:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a5f307832232e1b9ada54e015f7fcc8059288d07d339f217347d96e064c9cf51
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: How This 'Big 5' Oil Stock Turned The Tarry Stuff To Earnings Gold
+<<<SUMMARY>>>
+Cenovus Energy invested heavily in the highly attractive Canadian oil sands. Earnings are booming as investments pay off.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143308211
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-30T03:18:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f8e50923942da7d67cb6864948cd339d2319e09fe3626b4e72d954e9eecb4a50
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: 3 Canadian Undervalued Stocks Trading Up To 50% Below Fair Value
+<<<SUMMARY>>>
+Big tech is pouring money into AI data centers, and recent updates from Amazon and Intel show how quickly heavy spending can pressure cash flows. That kind of strain can push attention away from quieter Canadian companies that generate steadier cash and trade below what careful modelling suggests they are worth. This article highlights three such Canadian stocks that appear underpriced on cash flow and explains what to watch before you invest. The three stocks covered below are just a short...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143294051
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T15:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c0c7c82bffe2265a983eba6325634f7ac30d0c10ef81cbd7441fb55f1f19139c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Halliburton Deploys ROCS Technology With Petrobras in Brazil
+<<<SUMMARY>>>
+HAL deploys ROCS technology with PBR in Brazil, simplifying deepwater well completions by reducing equipment needs and offshore complexity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143293860
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T14:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bfdae470d8007e89ea61f3a4bf850dc826dfacf8f15060635e18fe4971a3724f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Nabors Expands International Reach With Venezuela Drilling Contract
+<<<SUMMARY>>>
+NBR is returning to Venezuela with a multiyear drilling contract and an idle U.S. rig, targeting new international growth opportunities while maintaining capital discipline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143296336
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-29T13:00:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1fcaf4256251137c53213cf320fcddbc57c41aa4aa01a68b5d090f8e861b8886
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (CNQ) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143260864
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T14:49:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=485cd4a26e4611ccbe3e28885d161c9ed76b467c77072a6e3e9bf7149cebe619
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: PBR Stock Slides After Brazil Election: Is It a Buying Opportunity?
+<<<SUMMARY>>>
+Petrobras' shares plunge 14% after Lula's reelection, but record production, strong cash flow and offshore investments offer support amid political risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143259407
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T13:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=002c19454dea47785454f7e7f99d430a65614f7fa1f809e5f3199a53d05021a7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Galp and Moeve End Merger Discussions Over Commercial Differences
+<<<SUMMARY>>>
+GLPEY and Moeve scrap their proposed refining and fuel retail merger over commercial differences, ending plans to create a major European downstream operator.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143255003
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-28T07:12:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd2678733c4628c3e6e8661bf5185f51cf7885f88a4257794d0dc458b0f52b55
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Elite Canadian Value Stocks To Own In October 2026
+<<<SUMMARY>>>
+Oil prices have climbed after attacks on Saudi energy facilities, and that kind of shock tends to push investors toward reliable cash generators. Canadian companies with strong cash inflows but share prices that look too low can become especially interesting when energy costs bite into household budgets. This article walks through three Canadian stocks that screen as undervalued on cash flows and explains why value driven investors are paying attention now. The three stocks featured next are...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143238537
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T15:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a2da49540b6539ebd11b1fa610c022d3b44c220195bef3f88b5be5540189a45a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Here's Why a Hold Strategy Is Apt for Halliburton Stock for Now
+<<<SUMMARY>>>
+HAL's global expansion, offshore contracts and technology investments fuel growth, but North American weakness and declining EPS estimates raise concerns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143237097
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T14:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=076239962cc77aed8e56a443369fedc12deed578ad5e76141dc7fdfca316ed16
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Ovintiv Expands Montney Operations Through Logan Acquisition
+<<<SUMMARY>>>
+OVV's $890 million Logan Energy proposed acquisition adds 266,000 net acres and 20,000 BOE/d, with projected synergies and stronger cash flow growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143215456
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T06:08:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=af983e66332f36443dd0c1c561f47626f8f45da74d4869ec2916e07d9808df28
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: 3 Canadian Undervalued Stocks To Own In October 2026
+<<<SUMMARY>>>
+China’s industrial profits recently grew 14.4%, helped by stronger manufacturing linked to artificial intelligence demand. That kind of cash generation story is exactly what value hunters look for in Canadian companies that quietly throw off solid cash while trading below estimated worth. This article walks through three Canadian stocks flagged by a cash flow focused screen that may appeal if you are hunting for underpriced future cash streams. The three stocks below are only a starter pack,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143235983
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T18:45:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=746a986d3c7a6cdafd08d3cb4da8a35926f7db30596c63d6e0dd690605bfc1fa
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_2.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Here's How Much $1000 Invested In Canadian Natural Res 5 Years Ago Would Be Worth Today
+<<<SUMMARY>>>
+Canadian Natural Res (NYSE:CNQ) has outperformed the market over the past 5 years by 10.24% on an annualized basis producing an average annual return of 20.99%. Currently, Canadian Natural Res has a market
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143200256
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T14:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e3855f90c1f228ca88897e579373fc8fadd8623e34b6ea62cca97f0f8e6d0fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Chevron's Nargis-2 Results Expand Egypt's Offshore Gas Potential
+<<<SUMMARY>>>
+CVX's Nargis-2 well in Egypt confirms further gas-bearing zones, advancing offshore appraisal while leaving commercial viability and production timelines uncertain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143191511
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T04:23:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8135f03efbff87c859352feeb7f8c96915ec32b5d88edabb1cbc70d0222efb66
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: 3 Canadian Value Stocks To Watch In October 2026
+<<<SUMMARY>>>
+Canadian investors are watching central banks hold interest rates steady while inflation and energy costs stay in focus. That kind of pause keeps a spotlight on cash, because predictable cash inflows can matter more when borrowing costs are not drifting lower. Stocks that generate solid cash and still trade below estimated fair value can appeal to patient buyers. This article highlights three such opportunities from the Canada focused cash flow screen. The three stocks below are just a sample...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143169012
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-24T17:11:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=96d09ff6e182bce2097a3cf2037d09da6735271463218c55c9e568515df089f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Top 3 Canadian Value Stocks To Watch In October 2026
+<<<SUMMARY>>>
+Rising oil prices linked to conflict risks in the Middle East are putting fresh pressure on corporate costs and consumer wallets. When markets fixate on headlines, cash rich Canadian businesses that already generate solid inflows yet trade below estimated fair value can get overlooked. This article highlights three such stocks from a discounted cash flow focused screener that may appeal to investors hunting resilient cash engines at marked down prices. The three Canadian stocks below are just...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143588575
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=80b30fbfb20638e4ddd06e538db0738a10822055081ad3d67876bc54dfb47451
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Petrobras Strengthens Oil Spill Response With New Vessel Charter
+<<<SUMMARY>>>
+PBR strengthens offshore safety with a four-year oil spill response vessel charter, supporting emergency preparedness and its broader fleet expansion plans.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143604114
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:10:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0ea447643c8043e4b0ede21643a55b33b0d79a758c75228156d6e3b9f148aafc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Is Canadian Natural Resources (TSX:CNQ) Undervalued After Record Output And Buybacks?
+<<<SUMMARY>>>
+Canadian Natural Resources has delivered a strong multi year share price run, so the immediate question for you as an investor is whether the current valuation is still aligned with what its earnings can support. After a recent pullback, the issue is less about short term price swings and more about how much of the business's profit power is already reflected in today's tag. Over the past 5 years the stock has gained 234.1%, which places more focus on whether the underlying earnings profile...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143604115
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a65870581b2a1d831016a3599b99bddf865a8be2754512d5079e3fde013cd5d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: CNQ Q3 Earnings Call Highlights: Buybacks and Production Outlook
+<<<SUMMARY>>>
+Canadian Natural accelerates share buybacks after reaching its debt target early, while improved Horizon reliability and strong thermal output boost its Q4 outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143584975
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:47:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=855b15d23d4f732ba31490986eff7f548be85897496864c325a309e9c3ce38f4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Diamondback Just Raised Its Dividend 7.3%. These 3 Energy Stocks Are Paying Investors Too
+<<<SUMMARY>>>
+Four oil and gas producers just paired earnings with fresh payouts, but one dividend is built to survive $30 oil and another sits on a thin gas price cushion. Which checks are truly safe, and which come with a catch?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143604125
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T13:10:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09c6edac71a93b47d1a876dc667e85852b4de9825102d4e1058d28e983bb6206
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: How to Maximize Your Retirement Portfolio with These Top-Ranked Dividend Stocks
+<<<SUMMARY>>>
+The traditional ways to plan for your retirement may mean income can no longer cover expenses post-employment. But what if there was another option that could provide a steady, reliable source of income in your nest egg years?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143547202
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T23:55:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=268523178f2a2c4dab1baed2ce2d29f1fda3c1324d1dc62bf1b41b03c6072c85
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Two of Canada’s top energy producers prioritize investors over growth — for now
+<<<SUMMARY>>>
+Canadian Natural will hand all its spare cash to shareholders, while Tourmaline buys back shares and launches a spinout
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143547450
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T18:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a144dd5697fdb091ed048ba08d35c3a0d3ebc5556b5ec66e1b95c0b14fbb3f0a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Q3 beat raises stakes for 2027 outlook
+<<<SUMMARY>>>
+Investing.com -- Canadian Natural Resources (CNQ) latest earnings beat could strengthen investor confidence in its growth outlook, but the oil and gas producer faces a tougher test in 2027 as analysts forecast moderating profits following a sharp earnings recovery this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143542573
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T17:39:28Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c6ebac7a297e203644fc9d0057a0ff51a95543c6abac3d302e9684877a19fddd
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1990350877/image_1990350877.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural: Strong Results, 10%+ Yield
+<<<SUMMARY>>>
+Canadian Natural Resources Limited looks attractive after strong Q3 results, rising shareholder returns, and robust cash flow. Discover more about CNQ here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539532
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fbcca7167fa582fa92c7be18f9a86e3dda19ff53ad5c25072d7935f0ba8cc2e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Murphy USA's 55-Store Pipeline Supports Its 2027 Expansion Plan
+<<<SUMMARY>>>
+MUSA targets 50-plus annual store openings from 2027, backed by 55 stores under construction and plans for additional starts to sustain expansion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143547451
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T15:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=25f896c7d825ab02961ca6b37b9df8bcd15525cf41bcdf392377daa6e0a83ef7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Compared to Estimates, Canadian Natural Resources (CNQ) Q3 Earnings: A Look at Key Metrics
+<<<SUMMARY>>>
+Although the revenue and EPS for Canadian Natural Resources (CNQ) give a sense of how its business performed in the quarter ended September 2026, it might be worth considering how some key metrics compare with Wall Street estimates and the year-ago numbers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143545391
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:40:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ba9746ce7ea8caf66b359c10cf5d33d0c43ccb1b4e80115dd6d86412108f0f4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Is Canadian Natural Resources Limited (CNQ) Stock Outpacing Its Oils-Energy Peers This Year?
+<<<SUMMARY>>>
+Here is how Canadian Natural Resources (CNQ) and Imperial Oil (IMO) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539975
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T13:14:48Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=891d5a19f4e25c8ac12be4ca552b6422b70ffd4176f014b1c925c7a6eeaae14f
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Limited (CNQ:CA) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Canadian Natural Resources Limited (CNQ:CA) Q3 2026 Earnings Call November 5, 2026 11:00 AM ESTCompany ParticipantsLance Casson - Manager of Investor...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143543798
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T11:10:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c58d6edd31524c94685b716cc940fed36e2d3ccf94434871f1066aa2f7977293
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (CNQ) Beats Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) delivered earnings and revenue surprises of +12.38% and +10.25%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143547454
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T10:56:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b32bd1a8b26db6468f9ff0db29c4a1d72e8a3cee5f9c020debeadfdaf7f2f4da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+CALGARY ALBERTA CANADA, Alberta (AP) — CALGARY ALBERTA CANADA, Alberta (AP) — Canadian Natural Resources Ltd. (CNQ) on Thursday reported profit of $2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143527722
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T09:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=140c70ce3b943be1c59d0fd1a78e724242585e44c0a2adf278a2e2c028e5a855
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Limited Announces 2026 Third Quarter Results
+<<<SUMMARY>>>
+Calgary, Alberta--(Newsfile Corp. - November 5, 2026) - Canadian Natural's (TSX: CNQ) (NYSE: CNQ) President, Scott Stauth, commented on the Company's third quarter results, "The strength of our well-‍balanced and diverse portfolio, combined with our continued focus on safe, effective and efficient operations, delivered another strong quarter. In Q3/26, we achieved production of approximately 1,217,000 bbl/d of liquids and 2.6 Bcf/‍d of natural gas, totaling approximately 1,652,000 BOE/d,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143527721
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T09:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9193ab174014217a73ae4fd16867cb5caaadaaf96b4b0d38e39e4bc783058717
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources Limited Announces Quarterly Dividend
+<<<SUMMARY>>>
+Calgary, Alberta--(Newsfile Corp. - November 5, 2026) - Canadian Natural Resources Limited (TSX: CNQ) (NYSE: CNQ) announces that its Board of Directors has declared a quarterly cash dividend on its common shares of C$0.625 (sixty-two and one half cents). The dividend will be payable on January 5, 2027 to shareholders of record at the close of business on December 15, 2026.Following the previously announced dividend increase in March of this year, 2026 marks the 26th consecutive year of dividend.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533057
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T08:35:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6b48d986cfc8fa710dcac7d0252310a6932886c80cbdfd50b7dde4e86c7b3fd2
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Res Q3 Adj. EPS $1.18 Beats $1.05 Estimate, Sales $9.142B Beat $8.290B Estimate
+<<<SUMMARY>>>
+Canadian Natural Res (NYSE:CNQ) reported quarterly earnings of $1.18 per share which beat the analyst consensus estimate of $1.05 by 12.38 percent. This is a 87.3 percent increase over earnings of $0.63 per share from
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143533058
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T05:07:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6da93d25afc0417e902276e3d79becaa890f0738d6418c4700af0f7f503f31db
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Res Q3 Adj. EPS $1.18 Beats $1.05 Estimate
+<<<SUMMARY>>>
+Canadian Natural Res (NYSE:CNQ) reported quarterly earnings of $1.18 per share which beat the analyst consensus estimate of $1.05 by 12.38 percent. This is a 87.3 percent increase over earnings of $0.63 per share from
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143494665
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T20:33:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c734804f1b8d7a1a7c2f3b3835bf5caf2ea08cd3e6e937006b51ecc565bc18fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: 5 Best Dividend Stocks for Long Term Growth
+<<<SUMMARY>>>
+Dividend stocks have been lagging the broader market for a while, though that may be changing. The S&P 500 Dividend Aristocrats index is up over 7% in October to date, compared to just under 1% for the S&P 500. Market volatility has been a factor in this shift. The semiconductor stocks and other AI-related names […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143532755
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T16:31:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=556485568e8138e2aaae636bf628537078f73f20c08f9e3ac7d9d1bb877060c7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/04/earnings-scheduled-1.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Toyota, ConocoPhillips On Deck Thursday As Auto Demand, Oil Prices Face Test
+<<<SUMMARY>>>
+Toyota Motor headlines Thursday’s reports, with investors weighing the automaker’s earnings outlook against a stock still well below its 52-week high. ConocoPhillips, Sony Group, Parker Hannifin and Canadian Natural
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140016558
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:49:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ca36e4c4668724f71c983a61e3b39fbc90251892a4e2be1f5490130efa5a3d58
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: Nephila Capital Selects SEI As Global Strategic Partner To Support Back- And Middle-Office Operations
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143491076
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=472a1ab7d74c68cbe6199b89b49162814d9f15d0ee29d022354598ee83baf7fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Diamondback Q3 Earnings Beat on Higher Oil Prices and Production
+<<<SUMMARY>>>
+FANG beats Q3 earnings and revenue estimates as production and realized oil prices rise, boosting free cash flow and prompting higher dividends and 2026 guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143496986
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:38:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76d596a5b15baff6edbb57117cec793d0aa183c2f08a3d2b5d2e27b32d37406b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Suncor rewards investors as it rakes in record cash
+<<<SUMMARY>>>
+Oilsands giant hikes dividend and increases share buybacks
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490835
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d83abe95d1805063b0f800bdc90350d097607f7c77abc71222b3be662ad02fb1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Chevron Advances Iraq Oilfield Deal, Expands Growth Prospects
+<<<SUMMARY>>>
+CVX advances Iraq oilfield talks, reaching key terms for West Qurna 2 and pursuing Nasiriyah and four exploration blocks to expand its upstream growth opportunities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143498446
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:12:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7f794d772cbecb86cb3b42ba0230b3924bc386400e037622b315cd83e4f0c7b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Top Canadian Value Stocks For November 2026
+<<<SUMMARY>>>
+Euro zone inflation recently hit a three year high, and central banks are signalling they may keep interest rates tight to contain energy driven price pressure. Higher borrowing costs can put pressure on weaker balance sheets, while cash rich businesses have more room to breathe. That is where undervalued Canadian companies with solid cash generation come in. This article highlights three such stocks that screen as attractively priced on future cash flows. The three companies covered below...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490961
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T13:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ab8b9d5776c11cb236e297301f39c39b8a09ed6889bf09c9028641d0610a9a45
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: What's in Store for These 4 Energy Stocks in Q3 Earnings?
+<<<SUMMARY>>>
+Canadian Natural, ConocoPhillips, TC Energy and Targa Resources are set to report their third-quarter earnings tomorrow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143490962
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T11:58:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=998aa18de1738c5bd9ca323c4d2a5e4decb86922fb62d5efa327680d01435910
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: 6 Big Funds Bought Devon Energy. Is It a Buy Before Earnings?
+<<<SUMMARY>>>
+Key TakeawaysSix funds managing $2 billion to $6 billion each in US stocks reported new stakes in Devon Energy (DVN:NYSE) in their 13Fs for the quarter ended June 30, and the stock is up 15% since. Analysts’ average target sits 27% above Devon’s price, while ConocoPhillips (COP:NYSE), EOG Resources (EOG:NYSE) and Canadian Natural Resources (CNQ) all trade near or above their own targets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447383
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T15:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aca5a3bd4aa7d00ba585908e1b33e7712596aaf82f9b4213a2246cf21c43dce8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural to Report Q3 Earnings: What's in the Offing?
+<<<SUMMARY>>>
+CNQ's Q3 earnings are likely to benefit from higher production and cost savings, but softer synthetic crude pricing and maintenance pose challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143445913
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5c0f9fb06a1b6683db6fbff511fb0209f4c0f22f8774e24b9ea9a715130304dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Shell Strengthens Its European LNG Position With New METLEN Deal
+<<<SUMMARY>>>
+SHEL's five-year LNG deal with METLEN secures six annual cargoes from 2027, strengthening its European market presence and U.S.-sourced gas sales visibility.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143454123
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:15:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=40c3a718a6865f4001766a6e36155ab6fcd07b9f26b6292b51c2906632ef0d0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Gear Up for Canadian Natural Resources (CNQ) Q3 Earnings: Wall Street Estimates for Key Metrics
+<<<SUMMARY>>>
+Besides Wall Street's top-and-bottom-line estimates for Canadian Natural Resources (CNQ), review projections for some of its key metrics to gain a deeper understanding of how the company might have fared during the quarter ended September 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401425
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T21:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=75a1d5fcfea9b6a400324bcb9c12a29984ee85527f688e3c3df24b41d490b698
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Lower Oil Prices Take Energy Stocks Down With Them
+<<<SUMMARY>>>
+Some energy stocks fell more than 6% on hopeful signals for a breakthrough in the Iran war.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143400686
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T16:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7248e8d846f496e88f97291460975d2b7f180d2a34a83c03e106bb36c53c6bc2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Petrobras Strengthens Brazil's Exploration Outlook With Third Find
+<<<SUMMARY>>>
+PBR confirms a third oil discovery in Brazil's Morpho well, strengthening Equatorial Margin prospects and advancing its $2.5 billion exploration strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140054935
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:37:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9cf6d72fdda64b32413aa6c2b2043f073fa1de2fa8bcae92e786055eb6a985cb
+image_url: 
+category: company
+tickers: CNQ
+keywords: 
+headline: NextNRG shares are trading lower after the company reported worse-than-expected Q4 sales results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143398916
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T14:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b295c289e861e1f9d8afba7402b24a760cd09cdded6357d9699a196393b71d9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: NOV Expects Higher Offshore Bookings on Strong FPSO Project Pipeline
+<<<SUMMARY>>>
+NOV expects FPSO equipment demand to strengthen in 2027-28 as offshore project sanctioning accelerates, deeper-water developments expand and procurement opportunities grow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143397003
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T08:30:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e77e43c1a1a5581c246e6f57896c7ccf50fdecf5e373644143922253a2091e21
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/02/Quarterly-Results-Sales-Profits-Earnings.jpg?width=2048&height=1536
+category: company
+tickers: CNQ
+keywords: 
+headline: Traders Are Pricing a 12% Swing in Shopify Ahead of Earnings
+<<<SUMMARY>>>
+Shopify leads the Q3 2026 earnings volatility watchlist with a 12.08% implied move, followed by Cloudflare at 12.07%, as traders brace for earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143374748
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T07:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5c05d6a081cf0bebb175a7440b7da063dc2c4e12d5a773cf2abf30513dffcf3b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2216278220/image_2216278220.jpg?io=getty-c-w1536
+category: company
+tickers: CNQ
+keywords: 
+headline: The Biggest Megatrend Of My Lifetime Is Just Getting Started
+<<<SUMMARY>>>
+Energy sector earnings are growing rapidly, yet the sector remains underweighted and undervalued. Read why I favor midstream and upstream names in the sector.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f304aa88b8420bbc1a4109771603b447e7535ad55508a5c50bb626a6307156ce
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-19T10:18:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3010288/best-income-stocks-to-buy-for-october-19th?cid=CS-ZC-FT-zacks_1_rank_additions|income_additions-3010288
+image_url: https://staticx-tuner.zacks.com/images/articles/main/17/586.jpg
+category: 
+tickers: VSNT, CNQ, APOG
+keywords: dividend stocks, income investing, Zacks Rank #1, strong buy, earnings estimates
+headline: Best Income Stocks to Buy for October 19th
+<<<SUMMARY>>>
+Zacks highlights three Rank #1 (Strong Buy) stocks with attractive dividend yields: Versant Media Group (4.7% yield), Canadian Natural Resources (3.4% yield), and Apogee Enterprises (2.6% yield). All three companies have seen positive earnings estimate revisions over the last 60 days, with Apogee showing the strongest growth at 13.9%.
+<<<INSIGHTS>>>
+VSNT | positive | Zacks Rank #1 (Strong Buy) rating with 4.7% dividend yield significantly above industry average of 0.0%, and positive earnings estimate revision of 1.5% over 60 days
+CNQ | positive | Zacks Rank #1 rating with 3.4% dividend yield above industry average of 1.6%, and positive earnings estimate revision of 1.2% over 60 days
+APOG | positive | Zacks Rank #1 rating with 2.6% dividend yield and strongest earnings estimate revision at 13.9% over 60 days, indicating robust growth expectations
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f3e2a7e58a96238485366bba0b5ecd5775b7ccf00407e90beb4c458dfdae2947
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-19T13:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3010345/best-momentum-stock-to-buy-for-october-19th?cid=CS-ZC-FT-zacks_1_rank_additions|momentum_additions-3010345
+image_url: https://staticx-tuner.zacks.com/images/articles/main/c0/160683.webp
+category: 
+tickers: APOG, CNQ, EOG
+keywords: Zacks Rank #1, Strong Buy, momentum stocks, architectural products, energy companies, oil and gas, earnings estimates
+headline: Best Momentum Stock to Buy for October 19th
+<<<SUMMARY>>>
+Zacks highlights three stocks with Rank #1 (Strong Buy) ratings and strong momentum characteristics: Apogee Enterprises (architectural products), Canadian Natural Resources (oil and gas exploration), and EOG Resources (crude oil and natural gas). All three have shown outperformance compared to the S&P 500 over the last three months, with earnings estimate increases ranging from 1.2% to 13.9% over the past 60 days.
+<<<INSIGHTS>>>
+APOG | positive | Zacks Rank #1 (Strong Buy), 13.9% earnings estimate increase over 60 days, Momentum Score A, 4.9% three-month gain outperforming S&P 500
+CNQ | positive | Zacks Rank #1 (Strong Buy), 23.6% three-month gain significantly outperforming S&P 500, Momentum Score B, though modest 1.2% earnings estimate increase
+EOG | positive | Zacks Rank #1 (Strong Buy), 7.8% earnings estimate increase over 60 days, 12.7% three-month gain outperforming S&P 500, Momentum Score B
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3236d5c4a3d48b2e5f5adfd6dc5ed6b339bce4c453b4a79a5cca8f810680da6f
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-19T15:00:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3010666/canadian-natural-resources-cnq-is-up-8-36-in-one-week-what-you-should-know?cid=CS-ZC-FT-fundamental_analysis|yseop_template_10-3010666
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default9.jpg
+category: 
+tickers: CNQ
+keywords: Canadian Natural Resources, momentum investing, earnings estimate revisions, oil and gas, Zacks Rank, stock performance
+headline: Canadian Natural Resources (CNQ) Is Up 8.36% in One Week: What You Should Know
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) has gained 8.36% over the past week, outperforming its industry peer group. The company holds a Zacks Rank #1 (Strong Buy) rating with a Momentum Style Score of B, supported by positive earnings estimate revisions and strong year-over-year performance of 78.56%.
+<<<INSIGHTS>>>
+CNQ | positive | CNQ demonstrates strong momentum with 8.36% weekly gains outperforming its industry (6.08%), 78.56% year-over-year performance significantly exceeding S&P 500's 16.73%, positive earnings estimate revisions (1 upward vs 0 downward for full year), and a Zacks Rank #1 (Strong Buy) rating with Momentum Style Score of B.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:52beed8aea3e7f4bb3be25755a5eb6f162cba36d191726b3d19d84545a5ec022
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T14:25:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013187/apa-plans-to-keep-forties-charlie-operational-amid-strike-threat?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3013187
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9d/53642.jpg
+category: 
+tickers: APA, CNQ, CRGY, DK
+keywords: strike, North Sea, Forties Pipeline System, labor dispute, offshore operations, energy infrastructure, pay dispute
+headline: APA Plans to Keep Forties Charlie Operational Amid Strike Threat
+<<<SUMMARY>>>
+APA Corporation plans to maintain operations at the Forties Charlie platform in the U.K. North Sea despite a threatened 24-hour strike by over 160 offshore workers represented by the Unite union over pay disputes. The company will retain experienced personnel to support pipeline flows and third-party oil production even if its own output is temporarily suspended. Another strike is scheduled for November 4 if the compensation dispute remains unresolved.
+<<<INSIGHTS>>>
+APA | negative | The company faces operational uncertainty from threatened industrial action affecting seven offshore installations. While contingency measures aim to minimize disruption, the unresolved compensation dispute and scheduled strikes pose near-term production risks and operational challenges.
+CNQ | neutral | Mentioned as a comparable energy sector investment with strong fundamentals (Zacks Rank #1, 61.4% projected earnings growth), but no direct connection to the article's main subject matter.
+CRGY | neutral | Listed as an alternative energy sector investment with positive metrics (Zacks Rank #1, 46.7% projected earnings growth), but unrelated to the strike and North Sea operations discussed.
+DK | neutral | Mentioned as a comparable energy sector pick with strong growth projections (169.4% earnings growth), but not directly relevant to the article's focus on North Sea operations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:24d8e48e486e1205a5d07ddcf2146195afb935cb8e1ca0c10c14ed3f6fbb1e17
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T14:28:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013188/chevron-eyes-1b-gulf-asset-sale-to-focus-on-growth-projects?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3013188
+image_url: https://staticx-tuner.zacks.com/images/articles/main/73/63.jpg
+category: 
+tickers: CVX, CNQ, CRGY, DK
+keywords: asset divestment, U.S. Gulf, portfolio optimization, offshore production, capital reallocation, mature assets, growth strategy
+headline: Chevron Eyes $1B Gulf Asset Sale to Focus on Growth Projects
+<<<SUMMARY>>>
+Chevron is exploring the divestment of mature offshore assets in the U.S. Gulf, including Petronius, Tubular Bells, and Llano, potentially generating approximately $1 billion. The company is redirecting capital toward higher-growth projects like Anchor and Ballymore to reach 300,000 barrels of oil equivalent per day by 2026. The initiative remains in preliminary stages with no certainty of completion.
+<<<INSIGHTS>>>
+CVX | positive | Chevron's strategic portfolio optimization demonstrates disciplined capital allocation by monetizing mature assets to fund higher-growth offshore developments (Anchor and Ballymore). The company maintains a Zacks Rank #1 (Strong Buy) and is positioned to strengthen long-term production growth and returns.
+CNQ | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+CRGY | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+DK | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4e103755a03274415edf766d4e48fde2a5296ca34473719532e4b6e6ed29fc5b
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T14:31:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013203/transocean-secures-550m-in-gulf-contracts-strengthens-backlog?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3013203
+image_url: https://staticx-tuner.zacks.com/images/articles/main/74/780.jpg
+category: 
+tickers: RIG, CNQ, CRGY, DK
+keywords: offshore drilling, deepwater contracts, U.S. Gulf, drilling backlog, ultra-deepwater drillships, oil and gas exploration, rig utilization
+headline: Transocean Secures $550M in Gulf Contracts, Strengthens Backlog
+<<<SUMMARY>>>
+Transocean Ltd. (RIG) has secured approximately $550 million in new offshore drilling contracts for its ultra-deepwater drillships Deepwater Proteus and Deepwater Conqueror in the U.S. Gulf, with operations commencing in 2027. The contracts add $325 million and $225 million to backlog respectively and reflect strong demand for advanced deepwater drilling equipment amid improving offshore exploration activity.
+<<<INSIGHTS>>>
+RIG | positive | Transocean secured $550M in new contracts extending operations into 2027, demonstrating strong demand for its advanced fleet. The company expects high-spec rig utilization above 90% in 2027, has improved revenue visibility, and benefits from consecutive contract assignments that minimize idle periods. Recent $1.1B commitments in October further strengthen the backlog.
+CNQ | neutral | Mentioned only as a comparable Zacks Rank #1 stock recommendation with projected 61.4% earnings growth in 2026. No specific news or developments related to this company are discussed in the article.
+CRGY | neutral | Mentioned only as a comparable Zacks Rank #1 stock recommendation with projected 46.7% earnings growth in 2026. No specific news or developments related to this company are discussed in the article.
+DK | neutral | Mentioned only as a comparable Zacks Rank #1 stock recommendation with projected 169.4% earnings growth in 2026. No specific news or developments related to this company are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:23f0049222cd263911ba69d3f435fdcb11c05b4d2308560d1dfb69af27c16606
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-27T14:51:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3016208/ovintiv-expands-montney-operations-through-logan-acquisition?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3016208
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: OVV, MPC, DK, CNQ
+keywords: acquisition, Montney oil region, drilling inventory, cost synergies, cash flow growth, energy sector, oil production
+headline: Ovintiv Expands Montney Operations Through Logan Acquisition
+<<<SUMMARY>>>
+Ovintiv Inc. has agreed to acquire Logan Energy Corp. for approximately $890 million in an all-cash transaction. The deal will add 266,000 net acres and 20,000 BOE/d of production in Canada's Montney region, with expected annual synergies of $60 million and a projected 5% boost to 2027 cash flow per share. The acquisition is expected to close in early Q1 2027.
+<<<INSIGHTS>>>
+OVV | positive | The acquisition is strategically positioned to expand production capacity, generate $60 million in annual synergies, boost 2027 cash flow per share by 5%, and add 420 net oil well locations with premium-return potential. The company maintains shareholder return targets and expects net debt to remain below $4 billion, demonstrating disciplined capital management.
+MPC | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1 (Strong Buy) rating, but no specific news or developments related to this company are discussed in the article.
+DK | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1 (Strong Buy) rating, but no specific news or developments related to this company are discussed in the article.
+CNQ | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1 (Strong Buy) rating, but no specific news or developments related to this company are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:62d67f12c0b8ff05e482560c2fd9acefe1fc92660e1ed408042cd7282e03c5f3
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-27T15:20:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3016359/here-s-why-a-hold-strategy-is-apt-for-halliburton-stock-for-now?cid=CS-ZC-FT-analyst_blog|rank_focused-3016359
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6e/152233.webp
+category: 
+tickers: HAL, CNQ, CHRD, BKR
+keywords: Halliburton, oilfield services, international expansion, margin expansion, North American fracturing, offshore contracts, earnings decline, energy sector
+headline: Here's Why a Hold Strategy Is Apt for Halliburton Stock for Now
+<<<SUMMARY>>>
+Halliburton (HAL) has gained 25.4% YTD, driven by strong Q3 results and international expansion with 9% revenue growth. The company targets 200 basis points of margin expansion in 2027 through restructuring and cost savings. However, weak North American fracturing, declining Completion and Production segment performance, and projected 2026 EPS decline present near-term headwinds. The stock holds a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+HAL | neutral | While HAL shows strong international growth (9% YoY), expanding offshore contracts, and positive 2027 margin expansion guidance (200 bps), these positives are offset by weak North American fracturing (-9% YoY), declining Completion and Production segment performance (-4% YoY revenues), and projected 2026 EPS decline of 3.7%. The Zacks Rank #3 (Hold) recommendation reflects balanced risk-reward with near-term challenges tempering long-term growth prospects.
+CNQ | positive | Zacks Rank #1 (Strong Buy) with projected 2026 earnings growth of 61.4% year-over-year, indicating strong earnings momentum and positive market outlook.
+CHRD | positive | Zacks Rank #1 (Strong Buy) with exceptional projected 2026 earnings growth of 142.5% year-over-year, demonstrating significant earnings acceleration potential.
+BKR | positive | Zacks Rank #1 (Strong Buy) with projected 2026 revenue growth of 6.4% year-over-year, indicating steady business expansion and positive market positioning.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:928b13c29ef152834f4e489aa7117f6657463a4377c5f1ab956ae6d1138a4452
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-28T13:11:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3017394/galp-and-moeve-end-merger-discussions-over-commercial-differences?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3017394
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: GLPEY, CNQ, CHRD, BKR
+keywords: merger termination, downstream consolidation, refining capacity, fuel retail, energy transition, commercial terms, European refining industry
+headline: Galp and Moeve End Merger Discussions Over Commercial Differences
+<<<SUMMARY>>>
+Portuguese energy company Galp Energia and Spain-based Moeve have terminated negotiations to combine their downstream businesses after failing to agree on commercial terms. The proposed deal would have created one of Europe's largest refining and fuel retail operators with 700,000 barrels per day of refining capacity and 3,500 fuel stations. Global energy market volatility and disagreements over asset valuations led to the collapse of talks.
+<<<INSIGHTS>>>
+GLPEY | neutral | While the failed merger is a setback, Galp maintains operational independence, retains strategic flexibility, and plans to pursue downstream investments and Brazil oil production. The company has not ruled out future consolidation opportunities and holds a Zacks Rank #1 (Strong Buy).
+CNQ | positive | Mentioned as a top-ranked energy stock with Zacks Rank #1 (Strong Buy) and consensus estimate showing 61.4% year-over-year earnings growth for 2026.
+CHRD | positive | Highlighted as a Zacks Rank #1 stock with strong growth prospects, showing 142.5% year-over-year earnings growth estimate for 2026.
+BKR | positive | Recommended as a Zacks Rank #1 (Strong Buy) oilfield services provider with 6.4% year-over-year revenue growth expected for 2026.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b4f1016d151f1738c8e846401bfd881054d11aad7a1b48e6855e81f7aa2a6713
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T13:00:14Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3018597/canadian-natural-resources-cnq-earnings-expected-to-grow-what-to-know-ahead-of-next-week-s-release?cid=CS-ZC-FT-fundamental_analysis|yseop_template_9-3018597
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default302.jpg
+category: 
+tickers: CNQ, TRMOY
+keywords: earnings report, Q3 2026, earnings per share, revenue growth, estimate revisions, Earnings ESP, Zacks Rank, oil and natural gas
+headline: Canadian Natural Resources (CNQ) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) is expected to report Q3 2026 earnings of $1.05 per share on November 5, representing 69.4% year-over-year growth with revenues of $8.29 billion (up 20%). While consensus estimates have been revised 16.37% higher in the last 30 days, the stock has an Earnings ESP of 0% with a Zacks Rank #1, making it difficult to predict an earnings beat. The company has a strong history of beating estimates, having surpassed consensus four times in the last four quarters.
+<<<INSIGHTS>>>
+CNQ | neutral | While the company shows strong fundamentals with 69.4% YoY earnings growth and consistent history of beating estimates (4 out of 4 quarters), the Earnings ESP of 0% combined with consensus estimates already being revised upward 16.37% suggests limited upside surprise potential. The neutral sentiment reflects balanced expectations with no clear catalyst for outperformance.
+TRMOY | neutral | Expected to report $0.57 EPS (58.3% YoY growth) with Earnings ESP of 0% and Zacks Rank #3 (Hold). The company has only beaten consensus estimates 2 out of 4 times, and minimal estimate revisions (1.1% higher) suggest limited surprise potential, warranting a neutral outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2c3779da597ee3764960a5a770558b3cf2d2c1b51072873ddf17a380a3060bfb
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-29T14:54:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3018797/nabors-expands-international-reach-with-venezuela-drilling-contract?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3018797
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: NBR, MPC, DK, CNQ
+keywords: Venezuela drilling contract, rig deployment, international drilling margins, capital discipline, idle rig redeployment, oil and gas drilling
+headline: Nabors Expands International Reach With Venezuela Drilling Contract
+<<<SUMMARY>>>
+Nabors Industries has signed a multiyear drilling contract in Venezuela and plans to deploy an idle U.S. rig in early 2027, marking its return to drilling operations in the country. The company is tracking over 20 additional Venezuelan rig opportunities and expects international drilling margins to reach approximately $19,500 in Q4 2026, with Venezuela potentially becoming a meaningful contributor to its international business.
+<<<INSIGHTS>>>
+NBR | positive | Nabors secured a multiyear Venezuela drilling contract with attractive economics, is tracking 20+ additional opportunities in the country, achieved record international daily adjusted gross margin of $19,060 in Q3 2026, and expects further margin improvements in Q4. The company demonstrates capital discipline by redeploying existing idle rigs rather than building new units, positioning Venezuela as a potential growth platform for its international business.
+MPC | neutral | Mentioned only as a comparison stock with Zacks Rank #1 (Strong Buy) rating in the energy sector. No specific news or developments related to the company are discussed in the article.
+DK | neutral | Mentioned only as a comparison stock with Zacks Rank #1 (Strong Buy) rating in the energy sector. No specific news or developments related to the company are discussed in the article.
+CNQ | neutral | Mentioned only as a comparison stock with Zacks Rank #1 (Strong Buy) rating in the energy sector. No specific news or developments related to the company are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a475c363a0fb42a1de4a5b0ca33763c70fd97c338aa89133a47917661c8b46db
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T14:08:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020675/oceaneering-international-eyes-new-opportunities-in-offshore-markets?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3020675
+image_url: https://staticx-tuner.zacks.com/images/articles/main/58/39028.jpg
+category: 
+tickers: OII, MPC, DK, CNQ
+keywords: offshore drilling, subsea robotics, Brazil, Guyana, Mozambique, ROV utilization, EBITDA guidance, deepwater development
+headline: Oceaneering International Eyes New Opportunities in Offshore Markets
+<<<SUMMARY>>>
+Oceaneering International (OII) expects international offshore markets, particularly Brazil, Guyana, and Africa, to drive growth in 2027. The company's Subsea Robotics segment showed 6% revenue growth to $233 million with 16% operating income increase. OII initiated 2027 EBITDA guidance of $430-$480 million, supported by higher ROV utilization and improved performance across its business segments.
+<<<INSIGHTS>>>
+OII | positive | Company demonstrated strong operational performance with 16% operating income growth in Subsea Robotics, secured $180 million in new contracts extending to 2031, achieved 59% market share on floating rigs, and provided optimistic 2027 EBITDA guidance of $430-$480 million. Multiple growth catalysts identified across key international markets.
+MPC | neutral | Mentioned as a Zacks Rank #1 alternative investment option but not discussed in the main article content. Inclusion is promotional rather than substantive.
+DK | neutral | Mentioned as a Zacks Rank #1 alternative investment option but not discussed in the main article content. Inclusion is promotional rather than substantive.
+CNQ | neutral | Mentioned as a Zacks Rank #1 alternative investment option but not discussed in the main article content. Inclusion is promotional rather than substantive.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:506ac9993721c9c56dcdf5f77ad981dadb3e53215e2167d3c5ec1facf5f6ca19
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T14:10:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020677/nov-expects-higher-offshore-bookings-on-strong-fpso-project-pipeline?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3020677
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ca/184462.webp
+category: 
+tickers: NOV, MPC, DK, CNQ
+keywords: FPSO, offshore equipment, floating production storage offloading, project sanctioning, deepwater, equipment procurement, mooring systems, gas processing
+headline: NOV Expects Higher Offshore Bookings on Strong FPSO Project Pipeline
+<<<SUMMARY>>>
+NOV Inc. anticipates stronger offshore equipment demand as floating production, storage and offloading (FPSO) projects sanctioned in 2026 move toward procurement in 2027-2028. The company estimates $100-700 million in addressable equipment content per FPSO. New FPSO projects feature deeper water depths (1,400 meters median vs. 420 meters for active fleet) and higher gas-processing requirements, supporting demand for NOV's specialized equipment and services. However, near-term challenges include moderating Middle East activity and geopolitical disruptions.
+<<<INSIGHTS>>>
+NOV | positive | NOV is positioned to benefit from accelerating FPSO project sanctioning in 2026 and anticipated equipment orders in 2027-2028. The company has significant addressable market opportunity ($100-700M per FPSO) and recent awards demonstrate its competitive position. However, the Zacks Rank #3 (Hold) rating and near-term challenges (Middle East moderation, geopolitical disruptions) temper the outlook.
+MPC | neutral | Mentioned as a better-ranked alternative (Zacks Rank #1) in the energy sector but has no direct connection to the main article's FPSO/offshore equipment focus.
+DK | neutral | Mentioned as a better-ranked alternative (Zacks Rank #1) in the energy sector but has no direct connection to the main article's FPSO/offshore equipment focus.
+CNQ | neutral | Mentioned as a better-ranked alternative (Zacks Rank #1) in the energy sector but has no direct connection to the main article's FPSO/offshore equipment focus.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:98c73246e82bc5b81f4fbcd2ccf6d38f9691832c60afa87eddb5deb5e199d28e
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T16:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3020947/petrobras-strengthens-brazil-s-exploration-outlook-with-third-find?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3020947
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: PBR, PBR.A, CNQ, CVE, CHRD
+keywords: oil discovery, Petrobras, Equatorial Margin, offshore Brazil, exploration, Morpho well, reserve replenishment
+headline: Petrobras Strengthens Brazil's Exploration Outlook With Third Find
+<<<SUMMARY>>>
+Petrobras has confirmed a third oil discovery in the Morpho well located in the Equatorial Margin off Brazil's coast in ultra-deep waters. The company plans to invest $2.5 billion in exploration activities along the Equatorial Margin and drill 15 wells over five years. However, commercial viability of the discoveries remains unconfirmed, and further technical evaluation is needed before development decisions.
+<<<INSIGHTS>>>
+PBR | positive | The company achieved its third oil discovery in a single well, demonstrating technical success and reinforcing confidence in the region's hydrocarbon potential. The $2.5 billion investment commitment and plans to drill 15 wells over five years show strong strategic commitment to long-term reserve replenishment.
+PBR.A | positive | The company achieved its third oil discovery in a single well, demonstrating technical success and reinforcing confidence in the region's hydrocarbon potential. The $2.5 billion investment commitment and plans to drill 15 wells over five years show strong strategic commitment to long-term reserve replenishment.
+CNQ | neutral | Mentioned as a top-ranked energy stock alternative with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+CVE | neutral | Mentioned as a top-ranked energy stock alternative with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+CHRD | neutral | Mentioned as a top-ranked energy stock alternative with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:56f6a79ec49d4c62b99b3dc35d96454e614f0ec34de553d98faee523daf62cc9
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-03T15:45:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022017/canadian-natural-to-report-q3-earnings-what-s-in-the-offing?cid=CS-ZC-FT-analyst_blog|earnings_preview-3022017
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3b/649.jpg
+category: 
+tickers: CNQ, CLMT, PAA, OXY, OXY.WS
+keywords: Q3 2026 earnings, Canadian Natural Resources, oil and gas, synthetic crude pricing, production guidance, earnings beat, commodity prices
+headline: Canadian Natural to Report Q3 Earnings: What's in the Offing?
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) is set to report Q3 2026 earnings on Nov. 5 with an estimated EPS of $1.05 on $8.3B in revenues. While higher production guidance and strong Jackfish output may support results, softer synthetic crude pricing, planned maintenance, and volatile commodity prices present headwinds. The Zacks model does not predict an earnings beat despite CNQ's Rank #1 rating.
+<<<INSIGHTS>>>
+CNQ | neutral | Mixed outlook with positive factors (higher production guidance, strong Jackfish output, operational efficiencies) offset by negative pressures (softer synthetic crude pricing moderating from $8.37/barrel premium to near parity, planned maintenance extending into Q4, volatile commodity prices, and substantial capex of C$6B potentially straining free cash flow). Zacks model does not predict an earnings beat despite Rank #1 rating and 0.00% Earnings ESP.
+CLMT | positive | Strong earnings beat potential with +48.76% Earnings ESP and Zacks Rank #2 (Buy). Expected 19.3% year-over-year revenue growth in 2026, and shares have surged 132.7% in the past year.
+PAA | positive | Positive earnings beat indicators with +11.94% Earnings ESP and Zacks Rank #2 (Buy). Expected 12.3% year-over-year EPS growth in 2026, and shares have gained 57.4% in the past year.
+OXY | positive | Favorable earnings beat setup with +4.14% Earnings ESP and Zacks Rank #2 (Buy). Expected 208.1% year-over-year EPS growth in 2026, and shares have rallied 48.8% in the past year.
+OXY.WS | positive | Favorable earnings beat setup with +4.14% Earnings ESP and Zacks Rank #2 (Buy). Expected 208.1% year-over-year EPS growth in 2026, and shares have rallied 48.8% in the past year.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:090e51c01032830c791c3c7977be085bc2d7a42dbeaf7574d0bbd651750d5042
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-04T13:47:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3022992/diamondback-q3-earnings-beat-on-higher-oil-prices-and-production?cid=CS-ZC-FT-analyst_blog|earnings_article-3022992
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f8/169741.webp
+category: 
+tickers: FANG, MPC, DK, CNQ
+keywords: earnings beat, production growth, free cash flow, dividend increase, share repurchase, oil prices, Permian Basin, capital discipline
+headline: Diamondback Q3 Earnings Beat on Higher Oil Prices and Production
+<<<SUMMARY>>>
+Diamondback Energy (FANG) reported Q3 2026 adjusted EPS of $5.86, beating estimates by 19.1%, with revenues surging 38.4% year-over-year to $5.43 billion. The company generated $2.15 billion in free cash flow, raised its 2026 production guidance, increased its dividend by 7.3%, and repurchased $251 million in shares. Higher oil prices and 9.7% production growth drove strong results.
+<<<INSIGHTS>>>
+FANG | positive | Company significantly beat earnings estimates (19.1%), achieved strong revenue growth (38.4% YoY), generated substantial free cash flow ($2.15B), raised production guidance, increased dividend by 7.3%, and maintained disciplined capital allocation with share buybacks. All metrics indicate strong operational and financial performance.
+MPC | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but no specific performance data or news provided in the article. Inclusion is promotional rather than substantive.
+DK | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but no specific performance data or news provided in the article. Inclusion is promotional rather than substantive.
+CNQ | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but no specific performance data or news provided in the article. Inclusion is promotional rather than substantive.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7981fed12114c325858734836dd6fe2574a95e976d9bd9923ed24cfd90cef02e
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T11:10:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3023850/canadian-natural-resources-cnq-beats-q3-earnings-and-revenue-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3023850
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default357.jpg
+category: 
+tickers: CNQ
+keywords: earnings beat, Q3 2026, oil and gas, Canadian Natural Resources, revenue surprise, Zacks Rank #1, Strong Buy
+headline: Canadian Natural Resources (CNQ) Beats Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+Canadian Natural Resources reported Q3 2026 earnings of $1.18 per share, beating consensus estimates of $1.05, with a 12.38% earnings surprise. Revenue reached $9.14 billion, surpassing estimates by 10.25%. The company has outperformed market expectations for four consecutive quarters and received a Zacks Rank #1 (Strong Buy) rating, with shares up 46.7% year-to-date versus the S&P 500's 12.3% gain.
+<<<INSIGHTS>>>
+CNQ | positive | Company beat both EPS estimates (+12.38% surprise) and revenue estimates (+10.25% surprise), has surpassed consensus estimates for four consecutive quarters, received Zacks Rank #1 (Strong Buy) rating, and significantly outperformed the S&P 500 year-to-date (46.7% vs 12.3%).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:25251ffea780dbde13b67602ae3f865fcca02ba75e198f5e35adc65d0417eb5c
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T15:00:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3024535/compared-to-estimates-canadian-natural-resources-cnq-q3-earnings-a-look-at-key-metrics?cid=CS-ZC-FT-fundamental_analysis|nfm-3024535
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default196.jpg
+category: 
+tickers: CNQ
+keywords: Q3 earnings, revenue beat, EPS surprise, production volumes, crude oil, natural gas, oil sands, Strong Buy rating
+headline: Compared to Estimates, Canadian Natural Resources (CNQ) Q3 Earnings: A Look at Key Metrics
+<<<SUMMARY>>>
+Canadian Natural Resources reported Q3 2026 revenue of $9.14 billion, up 32.3% year-over-year and exceeding consensus estimates by 10.25%. EPS came in at $1.18 versus $0.62 in the prior year quarter, beating the consensus estimate of $1.05 by 12.38%. The company exceeded analyst expectations across most production metrics, including daily equivalent production and crude oil/NGL volumes. CNQ holds a Zacks Rank #1 (Strong Buy) rating and has outperformed the S&P 500 by 4.9% over the past month.
+<<<INSIGHTS>>>
+CNQ | positive | CNQ significantly beat both revenue and EPS expectations (10.25% and 12.38% respectively), demonstrated strong year-over-year growth (32.3% revenue increase), exceeded analyst estimates on most production metrics, and received a Zacks Rank #1 Strong Buy rating with recent stock outperformance of 4.5% versus the S&P 500.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d7b19fd5973ec5ebd89cc451c335e6acc6afd59495c4f018ebf3526eea3eff6c
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T15:13:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024548/murphy-usa-s-55-store-pipeline-supports-its-2027-expansion-plan?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3024548
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ba/1850.jpg
+category: 
+tickers: MUSA, MPC, DK, CNQ
+keywords: store expansion, retail growth, construction pipeline, organic growth strategy, fuel retail
+headline: Murphy USA's 55-Store Pipeline Supports Its 2027 Expansion Plan
+<<<SUMMARY>>>
+Murphy USA (MUSA) is accelerating its retail expansion strategy, aiming for at least 50 new store openings annually beginning in 2027. The company currently has 55 stores under construction with plans to start 15-20 additional projects by January 2027, supported by improvements in its real estate pipeline and construction processes.
+<<<INSIGHTS>>>
+MUSA | positive | The company demonstrates strong expansion momentum with 55 stores under construction, plans for 15-20 additional starts, and a clear target of 50+ annual openings from 2027 onward. Management is actively improving operational processes to support sustained growth, indicating confidence in execution and long-term organic growth potential.
+MPC | neutral | Mentioned as a comparison stock with a Zacks Rank #1 (Strong Buy) rating in the energy sector. No specific news or developments about the company are discussed in the article.
+DK | neutral | Mentioned as a comparison stock with a Zacks Rank #1 (Strong Buy) rating in the energy sector. No specific news or developments about the company are discussed in the article.
+CNQ | neutral | Mentioned as a comparison stock with a Zacks Rank #1 (Strong Buy) rating in the energy sector. No specific news or developments about the company are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7df5c95e3b2e9e3000d26b5a31b3cabd3cb84f3c433896cb9c72756352f7ad72
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T14:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025571/cnq-q3-earnings-call-highlights-buybacks-and-production-outlook?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3025571
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default200.jpg
+category: 
+tickers: CNQ
+keywords: earnings beat, share buybacks, debt reduction, oil production, synthetic crude, thermal operations, capital allocation, free cash flow
+headline: CNQ Q3 Earnings Call Highlights: Buybacks and Production Outlook
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) exceeded Q3 2026 earnings expectations and announced an accelerated shareholder buyback program after net debt fell to C$12.1 billion, below its C$13 billion target. The company targets C$800 million in monthly buybacks for November-December and expects Horizon's early turnaround completion to add 23,000 bpd of synthetic crude output in Q4. Thermal production reached a record 300,000 bpd, up 9% year-over-year.
+<<<INSIGHTS>>>
+CNQ | positive | Company exceeded earnings estimates ($1.18 vs $1.05 consensus), surpassed revenue expectations ($9.14B vs $8.29B consensus), achieved net debt target ahead of schedule, accelerated shareholder returns through C$800M monthly buybacks, achieved record thermal production of 300,000 bpd (+9% YoY), and completed Horizon turnaround 7 days ahead of schedule with expected 23,000 bpd production increase. Zacks Rank #1 (Strong Buy) with positive Growth and VGM scores support the positive outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143989498
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:25:07Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=441dc6b71818f9baa7ca2edc982fb9c9144f0f87d43c10f3535b02fc9cefde47
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2301141016/image_2301141016.jpg?io=getty-c-og
+category: company
+tickers: CNQ
+keywords: 
+headline: My Top Dividend Growth Picks In Each GICS Sector (November 2026)
+<<<SUMMARY>>>
+The bull case for dividend growth picks: sector winners would have returned 144% in five years vs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e160d6fda4296e10421aa9a6a77d80b96a161aedf3ba2ca3b15d23f9e7e38151
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T14:24:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033202/northern-oil-and-gas-raises-output-outlook-after-record-q3-ebitda?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3033202
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: NOG, FTI, DK, CNQ
+keywords: oil and gas production, production guidance, free cash flow, debt reduction, capital expenditure, EBITDA, energy sector
+headline: Northern Oil and Gas Raises Output Outlook After Record Q3 EBITDA
+<<<SUMMARY>>>
+Northern Oil and Gas (NOG) raised its 2026 production guidance to 147,000-150,000 Boe/d while maintaining its capital spending budget at $850-$900 million. The company reported record Q3 output of 156,239 Boe/d and adjusted EBITDA of $444.5 million, with free cash flow reaching $148.6 million. Despite reducing debt by over $100 million, NOG faces rising production expenses and maintains an elevated debt-to-capital ratio of 58.93%.
+<<<INSIGHTS>>>
+NOG | positive | Company raised production guidance, achieved record Q3 output and EBITDA, generated strong free cash flow of $148.6 million, reduced debt by over $100 million, and improved drilling efficiency with normalized well costs declining 3% sequentially. Analyst consensus estimates for 2026 earnings increased 12.67% with all five analysts revising projections higher.
+FTI | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy sector but no specific company performance data or analysis provided in the article.
+DK | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy sector but no specific company performance data or analysis provided in the article.
+CNQ | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy sector but no specific company performance data or analysis provided in the article.
+<<<END>>>

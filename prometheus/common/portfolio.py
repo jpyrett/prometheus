@@ -28,6 +28,7 @@ from typing import Annotated
 from pydantic import BaseModel, BeforeValidator, Field, PlainSerializer, field_validator, model_validator
 
 from prometheus.common import shares as sh
+from prometheus.common import trading_clock
 from prometheus.common.money import EXACT, Price, cents, exact, json_number, non_negative_money, price_scale
 from prometheus.common.shares import PositiveShares
 from prometheus.rag.loaders import check_symbol
@@ -89,7 +90,7 @@ class Portfolio(BaseModel):
         position = self.position(symbol)
         if position is None:
             return Decimal(0)
-        today = today or date.today()
+        today = today or trading_clock.market_day()
         if position.acquired is None or position.acquired < today:
             return position.shares
         return Decimal(0) if position.recent_shares is None else sh.minus(position.shares, min(position.recent_shares, position.shares))
@@ -181,7 +182,7 @@ def after_purchase(portfolio: Portfolio, target: str, shares: Decimal, price: De
     (what the plan says is left). The shares bought are marked as bought `today` (`acquired`, `recent_shares`), so that the T+1 lock keeps them from being sold in the next plan of the same day,
     and the older shares of the same stock stay sellable. A target already held gets the weighted average cost basis. Returns a NEW portfolio: the one given is not changed. Raises
     ValueError for a sell the portfolio cannot make (a symbol it does not hold, more shares than held)."""
-    today = today or date.today()
+    today = today or trading_clock.market_day()
     held = {p.symbol: p.model_copy() for p in portfolio.positions}
     for symbol, n in sells:
         _sell_from(held, symbol, n)

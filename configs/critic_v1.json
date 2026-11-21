@@ -1,6 +1,7 @@
 {
-  "config_version": "1",
+  "config_version": "2",
   "_note": "Every threshold and weight of the Critic's Review Recommendations step (design/critic_v1_final_spec.md). Read once at start; a missing or unknown key is an error. The model never chooses one. Change a number here, never in the code. The risk measures have no position size (sizing is the Account Manager's: configs/account_manager_v1.json): their weights are the earlier ones (25, 15, 10, 10, 10, 10, 5, 5) scaled by 100/90 to one decimal and fixed to total exactly 100.",
+  "_version_2": "Version 2 (design/critic_v2_evidence_spec.md): fresh_negative_news and blend_not_supported inform and no longer deny; company_mismatch compares the names in critic/names.py; the new blocker trend_not_confirmed reads chart.trend_confirm_ret_5d; the model's labels are kept in evidence.label_store (null turns it off). The two thresholds are the spec's, not tuned.",
   "limits": {"max_records": 20, "max_metrics": 60, "max_fresh": 8, "max_model_calls": 10, "model_timeout_seconds": 240, "max_source_chars": 4000},
   "weights": {"accuracy": 30, "evidence": 15, "risk_fit": 20, "timing": 10, "value": 15, "chart": 10},
   "verdict": {"approve_min_score": 70, "blocked_score_cap": 49, "grades": {"A": 90, "B": 80, "C": 70, "D": 60}, "unknown_credit": 0.5},
@@ -16,7 +17,8 @@
                  {"headline": "Community notes", "text": "The city library extended its weekend opening hours starting next month. Residents can find the new schedule on the notice board."},
                  {"headline": "Community notes", "text": "The county fair moved its baking contest to the main hall this year. Entries are accepted at the front desk until noon."},
                  {"headline": "Community notes", "text": "The hiking club repainted the trail markers along the north ridge last weekend. Volunteers are welcome at the next work day."}],
-               "blocking_classes": ["going_concern", "restatement", "material_weakness", "guidance_cut", "earnings_miss", "dilution_offering", "dividend_cut"]},
+               "blocking_classes": ["going_concern", "restatement", "material_weakness", "guidance_cut", "earnings_miss", "dilution_offering", "dividend_cut"],
+               "label_store": "data/critic/labels"},
   "timing": {"max_quote_age_minutes": 60, "review_ttl_minutes": 60, "session_factor": {"regular": 1.0, "pre_market": 0.7, "after_hours": 0.7},
              "top_of_zone_factor": 0.5, "below_zone_factor": 0.7},
   "risk": {"levels": {"low": 20, "medium": 45, "high": 70}, "allowed": {"conservative": "low", "moderate": "medium", "aggressive": "high"},
@@ -38,7 +40,7 @@
               {"name": "reward_to_risk", "zero_at": 0.5, "full_at": 2.5, "weight": 30},
               {"name": "earnings_yield", "zero_at": 0.0125, "full_at": 0.06, "weight": 20}],
             "last_recommendation_days": 30, "last_recommendation_rise": 0.05},
-  "chart": {"neutral": 50, "weak_below": 35, "volume_ratio_min": 1.5, "near_high": 0.90, "rsi_healthy_low": 50, "rsi_healthy_high": 70, "rsi_overbought": 80,
+  "chart": {"neutral": 50, "weak_below": 35, "volume_ratio_min": 1.5, "near_high": 0.90, "trend_confirm_ret_5d": 0.0, "rsi_healthy_low": 50, "rsi_healthy_high": 70, "rsi_overbought": 80,
             "dead_cat": {"min_decline": -0.25, "min_rebound": 0.05, "max_trough_age": 15, "max_vs_peak": -0.15},
             "patterns": [
               {"name": "golden_cross", "points": 15}, {"name": "bull_alignment", "points": 10}, {"name": "uptrend_structure", "points": 10}, {"name": "breakout_on_volume", "points": 10},

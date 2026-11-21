@@ -18,6 +18,7 @@ ACCOUNT_SIDE = [
     "prometheus/persistence/accounts.py",
     "prometheus/tools/trader.py", "prometheus/tools/trading_math.py", "prometheus/reasoning/raise_funds.py",
     "prometheus/langgraph/desk.py", "prometheus/application/session.py", "prometheus/application/recommendations.py",
+    "prometheus/proving/config.py", "prometheus/proving/outcomes.py", "prometheus/proving/portfolio.py", "prometheus/proving/record.py", "prometheus/proving/splits.py", "prometheus/proving/stats.py", "prometheus/proving/store.py", "prometheus/proving/live.py", "prometheus/proving/sessions.py", "prometheus/proving/recs.py", "prometheus/proving/bars.py",      # the Proving Ground's pure core (entry 126, P7): its simulated account, its fills and exits and its results
     *sorted(str(p.relative_to(ROOT)) for pattern in ("prometheus/agents/account_manager/*.py", "prometheus/agents/trader/*.py", "prometheus/application/web/*.py", "prometheus/prompts/account_manager*.py", "prometheus/prompts/trader.py")
             for p in ROOT.glob(pattern) if p.name != "__init__.py"),
 ]
@@ -58,6 +59,10 @@ ALLOWED = {
     "prometheus/application/web/replay.py": {"<module>": TIMING + " (the replay's own pacing)", "__init__": TIMING, "play": TIMING, "_pause": TIMING},
     "prometheus/application/web/runs.py": {"<module>": TIMING, "emit": TIMING + " (the event's timestamp)", "read_from": TIMING, "ask": TIMING},
     "prometheus/application/web/views.py": {"stage_states": TIMING + " (the seconds a stage took)", "_score_build": ADVISOR + " (the weight of a dimension of the score, as a percentage)"},
+    "prometheus/proving/config.py": {"RoleSettings": TIMING + " (how long one model call is waited for)", "ModeSettings": TIMING + " (the wall limit of a model call and the measured seconds of a run)", "TimeMachine": TIMING + " (the pause before a day is tried again)"},
+    "prometheus/proving/live.py": {"_ratio": RETURN + " (the gain of a position over its cost)", "_percent_to_fraction": "Finnhub's `change_percent` of the day (a percentage) as a fraction: a measurement, never added to money"},
+    "prometheus/proving/record.py": {"<module>": "`Measure`, the one name of a measurement in the results (a return, a drawdown, a rate, a mean, a timing): a fraction worked out from Decimal values at the very end, never added to money (P7)"},
+    "prometheus/proving/stats.py": {"<module>": "`Measure`, the type of a statistic (a return, a rate, a mean): a measurement (P7)", "_q": RETURN + ": the ONE place a statistic becomes the float that is written, to six places"},
 }
 
 

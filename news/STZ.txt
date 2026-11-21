@@ -1,0 +1,329 @@
+<<<ARTICLE>>>
+id: finnhub:143769807
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=53ec5349e56a3c8b825ff45c37c11402cb5e6f9f3e20c4a1ac353b130ebae5c9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STZ
+keywords: 
+headline: How Constellation Brands Is Building the Next Generation of Cultural Partnerships; Modelo® Becomes the First-Ever Official Beer of the NCAA
+<<<SUMMARY>>>
+Landmark partnership reflects Constellation’s ability to anticipate shifts in consumer behavior and build brands at the center of the passions, communities and experiences shaping cultural conversations Modelo NCAA Chant Modelo® Becomes the First-Ever Official Beer of the NCAA Modelo® Becomes the First-Ever Official Beer of the NCAA Key News: Constellation Brands is advancing a consumer-led growth strategy rooted in understanding what drives consumer passions and translating those insights into
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738835
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T14:05:23Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a6048b245af910502ab1366107cf9eea6a95b9e300c48cb0f295cd934ed59053
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1372189966/image_1372189966.jpg?io=getty-c-og
+category: company
+tickers: STZ
+keywords: 
+headline: Constellation Brands: Still A Modest Buy, But Not For The Enterprising Individual Investor
+<<<SUMMARY>>>
+Constellation Brands is rated a modest Buy, as the stock has declined nearly 20% despite four consecutive earnings beats. Read more on the STZ stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734905
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:26:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dcfd9879288d195d7488f975171d6c747547fa01e2495ddd65d7cd6c91710e61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STZ
+keywords: 
+headline: Constellation offloads US whiskey distiller Nelson’s Green Brier
+<<<SUMMARY>>>
+Constellation said the deal was part of its “focus on the consumer segments, channels and markets best positioned to drive long-term growth for our reshaped wine and spirits portfolio”.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143711212
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T00:45:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=b8e75a5f7e03cbcab16edf1449365f2ccb2392f260f9f625c7df68094140d699
+image_url: 
+category: company
+tickers: STZ
+keywords: 
+headline: Moat Stocks Rebound As Tech Retreats
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686731
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T07:37:29Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=059db2ada0d0d52e6417ceede5f3fa17a3139ed5973d65e36e12e2a6f902d1f4
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/10/Stressed-Woman-Checking-Bills-Credit-Car.jpg?width=2048&height=1536
+category: company
+tickers: STZ
+keywords: 
+headline: What an Empty Wine Glass Says About the Next Recession
+<<<SUMMARY>>>
+Rising rent and debt costs are squeezing U.S. households, making wine an early casualty. Explore the economic data behind the slump.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143701745
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T21:25:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e68e69f3111455699cdcd6699334edcd9c7c9c3ab57bd9f7e4e3e3c850a14fec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STZ
+keywords: 
+headline: Wine and spirits could get cheaper after the midterms. Here’s why
+<<<SUMMARY>>>
+The election results have raised hopes of tariff relief for imported alcohol, potentially giving American consumers a break on prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143654746
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6095279f9fa00cb1c5cce73e8d025df23a00c2a608727a120a35f250c2f70e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STZ
+keywords: 
+headline: Newell Brands Elects William "Bill" Newlands to Board of Directors
+<<<SUMMARY>>>
+ATLANTA, November 09, 2026--Newell Brands (NASDAQ: NWL) today announced that Bill Newlands, former President and Chief Executive Officer of Constellation Brands, has been elected to the company’s Board of Directors, effective January 1, 2027. Upon Mr. Newlands’ appointment, the company’s Board will expand from eight members to nine.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942275
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T09:05:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0f28d0184b9c68da8f45b0b829bb593d25374bac2d3d61df4a7b0fa712894f1a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/19/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: STZ
+keywords: 
+headline: WildStar Partners Sells $65M Of Constellation Brands As Rally Stalls
+<<<SUMMARY>>>
+WildStar Partners LLC sold 450,000 shares of Constellation Brands Inc (NYSE:STZ) for $65.25 million on Nov. 16, 2026. The entity reduced its holdings by 2.2%, leaving it with 19,978,521 shares of total beneficial
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143896634
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T03:13:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=82a448226b9f6c1ce8ac452726b4579d7ab0652b5ffdf8a02b9f361e708b6b8f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STZ
+keywords: 
+headline: Here Are the Current Berkshire Hathaway Stock Holdings
+<<<SUMMARY>>>
+Berkshire Hathaway's holdings are a diverse set of blue chips and lesser-known growth bets. Here, we look at the stocks included in the equity portfolio.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143885596
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T21:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8c63d9f51b930eee7dcb9f1cfeb06b90a42b9e112a4e9ba0850d79f7f803be4e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STZ
+keywords: 
+headline: Constellation Brands to Present at the 2026 Morgan Stanley Global Consumer & Retail Conference on December 1, 2026
+<<<SUMMARY>>>
+ROCHESTER, N.Y., Nov. 17, 2026 (GLOBE NEWSWIRE) -- Constellation Brands, Inc. (NYSE: STZ), a leading U.S.-based total beverage alcohol company, announced today that Garth Hankinson, Executive Vice President and Chief Financial Officer, will participate in a fireside chat at the 2026 Morgan Stanley Global Consumer & Retail Conference on Tuesday, December 1, 2026, in New York, NY. The presentation is scheduled to begin at 1:30 p.m. ET and is expected to cover the company’s financial metrics, opera
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877764
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T09:51:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6054188fec1dbdcf5ba8505b603ec6f93a3f85c89020254c1c4dc0dfc54bdbe7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/17/Defensive-Stocks-Puzzle-Utilities-Health.jpg?width=2048&height=1536
+category: company
+tickers: STZ
+keywords: 
+headline: Wall Street Is Trading Chips for Chicken: Staples See Best Run Against Tech Since 2001
+<<<SUMMARY>>>
+Consumer staples fund XLP has beaten tech fund XLK by 39.5% in seven weeks, the widest gap since March 2001.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143985689
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:36:25Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=02ab0e85b9999d5982604d224630f6ddd0741b53afbd52b51402b69b8b834e93
+image_url: https://www.chartmill.com/images/uploads/cannabis_theme_f843462963.webp
+category: company
+tickers: STZ
+keywords: 
+headline: Cannabis Stocks’ Headline Gains Mask a Narrow, Quality-Led Rally
+<<<SUMMARY>>>
+Cannabis stocks show narrow leadership, with profitable large caps and ancillaries outperforming while average pure-play names remain weak.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143985493
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:50:31Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=1530091cdd382e700e6e9cf2b32348f749e4da4bfd752a23fec12ce2c99d4827
+image_url: https://www.chartmill.com/images/uploads/CM_Breakout_Stocks_Small_free_bb09e243c7.webp
+category: company
+tickers: STZ
+keywords: 
+headline: Constellation Brands (NYSE:STZ) Shows Breakout Setup With Strong Technical Strength
+<<<SUMMARY>>>
+Constellation Brands (STZ) scores 9/10 on technical strength and 8/10 on setup quality as it consolidates near support, signaling a potential breakout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143984345
+symbol: STZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:22:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92717c03b6c12a1464a16b3912dcff118f80786687698b8ceb7604b8bfa84ed1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STZ
+keywords: 
+headline: What Is Constellation Brands No Longer Telling Shareholders?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8019380150a1699958b81795d9fc97dea0dd20e7df4b0a2832c294b8aaf94ac6
+symbol: STZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:45:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/12/my-forever-portfolio-5-dividend-paying-value-stock/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893360%2Fgettyimages-1924765911-1200x800-5b2df79-1.jpg&w=1200&op=resize
+category: 
+tickers: MKC, MKC.V, HRL, KMB, CLX, STZ
+keywords: dividend stocks, value investing, consumer staples, forever portfolio, dividend kings, undervalued stocks
+headline: My Forever Portfolio: 5 Dividend-Paying Value Stocks That Are Too Cheap to Ignore
+<<<SUMMARY>>>
+The article presents five consumer staples dividend-paying stocks trading at discounted valuations: McCormick, Hormel Foods, Kimberly-Clark, Clorox, and Constellation Brands. These companies sell essential products with consistent demand, have long histories of dividend increases, and are currently undervalued despite solid earnings. Recent leadership changes and strategic acquisitions position these stocks as attractive long-term holdings for patient investors.
+<<<INSIGHTS>>>
+MKC | positive | Trading at 15x P/E versus 24x five years ago despite similar earnings; 40-year dividend increase streak; CEO strategy of flavoring calories provides competitive moat; Unilever acquisition adds scale despite near-term concerns.
+MKC.V | positive | Trading at 15x P/E versus 24x five years ago despite similar earnings; 40-year dividend increase streak; CEO strategy of flavoring calories provides competitive moat; Unilever acquisition adds scale despite near-term concerns.
+HRL | positive | Down 38% over five years creating attractive 5.3% dividend yield; 60-year dividend increase streak (Dividend King status); new CEO with strong track record at Mondelez and Planters; restaurant sales growing for 12 consecutive quarters.
+KMB | positive | Flat stock price over five years with consistent 4.6% dividend yield; 54-year dividend increase streak; owns 10 billion-dollar brands including newly acquired Tylenol; expected double-digit earnings growth in 2028 post-acquisition integration.
+CLX | positive | Trading 23% below five-year price despite solid earnings expectations; new CEO (Fabian Garcia) brings fresh leadership and operational expertise from Unilever; represents a turnaround opportunity after systems integration challenges in 2026.
+STZ | positive | Trading at modest 12x forward earnings despite owning top-selling beer brand (Modelo) in U.S.; gaining market share faster than competitors; Pacifico growing 19%; positioned as portfolio's growth piece despite demographic headwinds.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:40d7e4064b5c056ac8f3deb5c394c48b7a29b8c4239c4e70777f0f7c1a897b72
+symbol: STZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T14:00:00Z
+publisher: GlobeNewswire Inc.
+author: Beer Institute
+url: https://www.globenewswire.com/news-release/2026/11/13/3402600/0/en/beer-institute-recognizes-industry-professionals-with-2026-best-in-brew-honors.html
+image_url: https://ml.globenewswire.com/Resource/Download/59985800-37e1-4ef3-bab4-0b3adb118ef9
+category: 
+tickers: BUD, SAM, STZ, TAP, TAP.A
+keywords: BEST IN BREW Honors, beer industry, employee recognition, brewing professionals, supply chain, operations
+headline: Beer Institute Recognizes Industry Professionals with 2026 BEST IN BREW Honors
+<<<SUMMARY>>>
+The Beer Institute announced its 2026 BEST IN BREW Honors, recognizing 16 exceptional professionals from major brewing companies and suppliers. The awards celebrate outstanding contributions across diverse roles including brewing, operations, supply chain, and corporate leadership in an industry supporting 2.42 million American jobs and $471 billion in economic output.
+<<<INSIGHTS>>>
+BUD | positive | Company recognized for having an honoree (Jeff Knapper, Senior Director of Heritage Operations) among the industry's top professionals, reflecting strong operational excellence and talent development.
+SAM | positive | Company recognized for having an honoree (Phil Savastano, Chief Supply Chain Officer) among the industry's top professionals, indicating strong supply chain leadership and industry standing.
+STZ | positive | Company recognized for having an honoree (Edgar Guillaumin, VP Public Affairs) among the industry's top professionals, demonstrating strong public affairs and industry engagement.
+TAP | positive | Company recognized for having an honoree (Jason Boose, Senior Manager Barley Program) among the industry's top professionals, indicating strong supply chain and agricultural expertise.
+TAP.A | positive | Company recognized for having an honoree (Jason Boose, Senior Manager Barley Program) among the industry's top professionals, indicating strong supply chain and agricultural expertise.
+<<<END>>>

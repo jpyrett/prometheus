@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { api, ApiError } from "./api/client";
 import type { Health, TradeMode, WorkRow } from "./api/types";
 import { ActivityFeed } from "./components/ActivityFeed";
@@ -11,10 +11,22 @@ import { RequestCard } from "./components/RequestCard";
 import { WorkOrderTable } from "./components/WorkOrderTable";
 import { Card } from "./components/ui/Card";
 import { loadFixture, parseFixtureParams } from "./devFixture";
+import { formatHash, parseHash, type Route } from "./proving/hash";
+import { ProvingGround } from "./proving/ProvingGround";
+import { useProving } from "./proving/useProving";
 import { ClockContext } from "./state/useNow";
 import { useAccount } from "./state/useAccount";
 import { useRun } from "./state/useRun";
 import { useTheme } from "./state/useTheme";
+
+/** A tab's content: hidden when another tab is shown, but still mounted, so a run and what was typed carry on. `display: contents` keeps its children the page's own flex items. */
+function Pane({ hidden, children }: { hidden: boolean; children: ReactNode }) {
+  return (
+    <div className="tabpane" hidden={hidden}>
+      {children}
+    </div>
+  );
+}
 
 const fixtureParams = typeof window === "undefined" ? null : parseFixtureParams(window.location.search);
 
@@ -22,7 +34,28 @@ export default function App() {
   const [health, setHealth] = useState<Health | null>(null);
   const [offline, setOffline] = useState<string | null>(null);
   const run = useRun();
+  const proving = useProving();
   const account = useAccount(health);
+  // The address says which tab: "" is the Desk, "#proving..." the Proving Ground (no router: the hash).
+  const [route, setRoute] = useState<Route>(() => (typeof window === "undefined" ? { tab: "desk" } : parseHash(window.location.hash)));
+  const [visitedProving, setVisitedProving] = useState(route.tab === "proving");
+  useEffect(() => {
+    const onHash = () => setRoute(parseHash(window.location.hash));
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+  useEffect(() => {
+    if (route.tab === "proving") setVisitedProving(true);
+  }, [route]);
+  const navigate = useCallback((next: Route) => {
+    setRoute(next);
+    const want = formatHash(next);
+    if (formatHash(parseHash(window.location.hash)) === want) return;
+    if (want) window.location.hash = want;
+    else window.history.pushState(null, "", window.location.pathname + window.location.search);
+  }, []);
+  const tab = route.tab;
+  const provingRunning = proving.state.phase === "running";
   const theme = useTheme();
   const [prompt, setPrompt] = useState<string | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
@@ -47,9 +80,13 @@ export default function App() {
 
   // A run already going on (the page was reloaded): attach and everything redraws from the replayed events.
   const { attach, feed } = run;
+  const attachProving = proving.attach;
   useEffect(() => {
-    if (health?.active_run && !fixtureParams) attach(health.active_run);
-  }, [health?.active_run, attach]);
+    if (!health?.active_run || fixtureParams) return;
+    // the health answer says which kind of run is active ("desk" or "proving"): the run goes to its own tab's state
+    if (health.active_kind === "proving") attachProving(health.active_run);
+    else attach(health.active_run);
+  }, [health?.active_run, health?.active_kind, attach, attachProving]);
 
   // The recorded stream of a screenshot (?fixture=...): fed once the account has loaded, so its portfolio events land on top of it.
   const fixtureFed = useRef(false);
@@ -115,15 +152,23 @@ export default function App() {
     [account.create, account.patch, account.funds], // eslint-disable-line react-hooks/exhaustive-deps
   );
 
+  const sampleBlock = !replay && view?.account.sample ? "sample accounts are read-only here" : null;
+  const requestBlocked = provingRunning ? "a Proving Ground test is running: wait for it to finish, or stop it" : sampleBlock;
+  // the Proving Ground stays mounted (hidden) after its first visit, with the view it was on
+  const lastProving = useRef<(Route & { tab: "proving" }) | null>(null);
+  if (route.tab === "proving") lastProving.current = route;
+  const proveRoute = lastProving.current;
+
   return (
     <ClockContext.Provider value={frozenNow}>
-      <div className="app">
-        <Header health={health} account={view} theme={theme.theme} onToggleTheme={theme.toggle} onSwitch={account.load} onNewAccount={() => setOpenNew(true)} busy={running} />
+      <div className={`app${tab === "proving" ? " proving-on" : ""}`}>
+        <Header health={health} account={view} theme={theme.theme} onToggleTheme={theme.toggle} onSwitch={account.load} onNewAccount={() => setOpenNew(true)} busy={running || provingRunning} tab={tab} onTab={(r) => navigate(r.tab === "proving" && lastProving.current ? lastProving.current : r)} deskRunning={running} provingRunning={provingRunning} />
         {offline && (
           <div className="bookbar" role="alert">
             <b>{offline}.</b> Start it with <code>./run_ui.sh</code> or <code>python -m prometheus.application.web</code>.
           </div>
         )}
+        <Pane hidden={tab !== "desk"}>
         <Pipeline state={state} />
         <main className="grid">
           <div className="col">
@@ -143,7 +188,7 @@ export default function App() {
                 onGo={(request) => void run.start(request)}
                 onStop={() => void run.stop()}
                 error={run.error}
-                blockedReason={!replay && view?.account.sample ? "sample accounts are read-only here" : null}
+                blockedReason={requestBlocked}
                 mode={mode}
                 onMode={changeMode}
                 modeLockedReason={readOnlyReason}
@@ -165,6 +210,12 @@ export default function App() {
             <RecommendationPanel row={selectedRow} runId={state.runId} waitingForAdvisor={rows.length > 0 || running} />
           </div>
         </main>
+        </Pane>
+        {visitedProving && proveRoute && (
+          <Pane hidden={tab !== "proving"}>
+            <ProvingGround route={proveRoute} onRoute={navigate} proving={proving} health={health} accountId={view ? view.account.id : null} defaultRisk={view?.account.risk ?? "moderate"} deskRunning={running} active={tab === "proving"} />
+          </Pane>
+        )}
       </div>
     </ClockContext.Provider>
   );

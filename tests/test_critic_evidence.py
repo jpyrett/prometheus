@@ -92,13 +92,15 @@ def test_the_blend_without_the_quotes_that_did_not_hold_is_never_above_the_advis
         assert r.detail.counterfactual.blend <= r.detail.counterfactual.blend_recorded + 1e-9
 
 
-def test_a_conviction_position_is_denied_when_its_blend_does_not_survive_the_review():
-    """The conviction family stands on the blend alone (Advisor Amendment 5). When the quotes behind the blend do not hold, the blend falls under the family's own mark (0.30)."""
+def test_a_conviction_positions_blend_that_does_not_survive_the_review_is_a_warning():
+    """The conviction family stands on the blend alone (Advisor Amendment 5). When the quotes behind the blend do not hold, the blend falls under the family's own mark (0.30). AMENDED (Critic v2, rule C3): that is the WARNING
+    `blend_not_supported` now, no longer a blocker (the blend worked again is still calculated and the evidence score still loses its points)."""
     s = Setup(**{"trade.family": "conviction"})
     held, _ = s.run(ReviewerModel())
     assert "blend_not_supported" not in codes(held)
     r, _ = Setup(**{"trade.family": "conviction"}).run(ReviewerModel(default="contradicts"))
-    assert "blend_not_supported" in codes(r, "blocker") and r.detail.counterfactual.blend < 0.30 <= r.detail.counterfactual.blend_recorded
+    assert "blend_not_supported" in codes(r, "warning") and "blend_not_supported" not in codes(r, "blocker") and r.detail.counterfactual.blend < 0.30 <= r.detail.counterfactual.blend_recorded
+    assert not [f for f in r.findings if f.code == "blend_not_supported"][0].requires_human and r.score < held.score        # it asks for nobody, and the evidence score is lower
     assert "blend_not_supported" not in codes(Setup(**{"trade.family": "capital_return"}).run(ReviewerModel(default="contradicts"))[0])   # opened on another strategy: not judged by the blend alone
 
 

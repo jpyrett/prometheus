@@ -164,7 +164,81 @@ def critic_denial_rate(outputs: dict) -> dict:
     return {"key": "critic_denial_rate", "score": len(denied) / len(reviews), "comment": f"the Critic denied {len(denied)} of {len(reviews)} recommendation(s)" + (f": {', '.join(str(r.get('symbol')) for r in denied)}" if denied else "")}
 
 
+# ---------------------------------------------------------------- the outcomes (the Proving Ground's `prometheus-outcomes`: outputs are the recorded outcome of a scored recommendation; entry 126)
+
+def beat_benchmark(outputs: dict) -> dict:
+    """1 when the recommendation beat SPY (its excess return is above zero); not applicable without a benchmark return."""
+    excess = outputs.get("excess_return_pct")
+    if not isinstance(excess, (int, float)) or isinstance(excess, bool):
+        return NOT_APPLICABLE
+    return _result("beat_benchmark", excess > 0, f"{outputs.get('result')}: a return of {outputs.get('return_pct'):+.2%} against SPY's {outputs.get('benchmark_return_pct'):+.2%}, an excess of {excess:+.2%}")
+
+
+def stop_before_target(inputs: dict, outputs: dict) -> dict:
+    """The exit followed the plan's order (P5): a position that left by its TARGET never closed at or under its stop before, and one that left by its STOP never closed at or over its target before. Judged on the path's closes; not applicable
+    for a position that is still open or has no plan prices."""
+    plan, reason, path = inputs.get("plan") or {}, outputs.get("exit_reason"), outputs.get("path") or []
+    stop, target = plan.get("stop"), plan.get("target")
+    if reason not in ("stop", "target") or not path:
+        return NOT_APPLICABLE
+    before = path[:-1]
+    crossed = [p for p in before if (reason == "target" and stop is not None and p["close"] <= stop) or (reason == "stop" and target is not None and p["close"] >= target)]
+    return _result("stop_before_target", not crossed, f"left by its {reason} after {len(path)} closes; " + (f"{len(crossed)} earlier close(s) had already crossed the other level" if crossed else "no earlier close crossed the other level"))
+
+
+def critic_denial_avoided_loss(inputs: dict, outputs: dict) -> dict:
+    """For a recommendation the Critic DENIED: 1 when the denial avoided a loser (the stock did worse than SPY), 0 when it kept the desk out of a winner. Not applicable to anything the Critic did not deny."""
+    excess = outputs.get("excess_return_pct")
+    if inputs.get("verdict") != "denied" or not isinstance(excess, (int, float)) or isinstance(excess, bool):
+        return NOT_APPLICABLE
+    return _result("critic_denial_avoided_loss", excess < 0, f"the Critic denied {inputs.get('symbol')}: it did {excess:+.2%} against SPY")
+
+
+def approved_outperformed_denied(rows: list[dict]) -> dict:
+    """Over the whole dataset: 1 when the recommendations the Critic APPROVED averaged a higher excess return than the ones it DENIED. A measurement over groups, so it takes the rows (`evaluate_locally`'s), not one example."""
+    groups: dict[str, list] = {"approved": [], "denied": []}
+    for row in rows:
+        verdict, excess = row["example"]["inputs"].get("verdict"), row["outputs"].get("excess_return_pct")
+        if verdict in groups and isinstance(excess, (int, float)) and not isinstance(excess, bool):
+            groups[verdict].append(excess)
+    if not groups["approved"] or not groups["denied"]:
+        return NOT_APPLICABLE
+    mean = {k: sum(v) / len(v) for k, v in groups.items()}
+    return _result("approved_outperformed_denied", mean["approved"] > mean["denied"], f"approved averaged {mean['approved']:+.2%} over {len(groups['approved'])}, denied {mean['denied']:+.2%} over {len(groups['denied'])} (excess against SPY)")
+
+
+def critic_rule_value(rows: list[dict]) -> dict:
+    """Over the whole dataset, for EACH finding code of the Critic's reviews: the GAP, in excess return over SPY, between the recommendations the code fired on and all the others (its `score`, a fraction: negative means the rule picks losers, which is what a
+    denying rule is for), with the counts and the standard error in its comment (Critic v2 rule C1: a rule must earn its place; the same arithmetic as `proving/report_card.py`, `stats.gap_of`). A recommendation denied for the user's risk profile is left out
+    (suitability is not a forecast) and a code is judged only inside one version of the Critic. One result for each code that fired on at least one usable outcome; not applicable when no example carries finding codes. A measurement over groups, so
+    it takes the rows (`evaluate_locally`'s), not one example."""
+    from prometheus.proving import stats
+    from prometheus.proving.report_card import SUITABILITY
+    entries = []
+    for row in rows:
+        inputs, excess = row["example"]["inputs"], row["outputs"].get("excess_return_pct")
+        found = inputs.get("findings")
+        if not isinstance(found, dict) or found.get("blockers") is None or inputs.get("verdict") not in ("approved", "denied") or not isinstance(excess, (int, float)) or isinstance(excess, bool):
+            continue
+        codes = {*(found.get("blockers") or []), *(found.get("warnings") or []), *(found.get("human") or [])}
+        if any(code in SUITABILITY for code in found["blockers"]):
+            continue
+        entries.append((found.get("config_version"), codes, excess))
+    if not entries:
+        return NOT_APPLICABLE
+    results = []
+    for version in sorted({v for v, _, _ in entries}, key=lambda v: (len(str(v)), str(v))):
+        mine = [(codes, excess) for v, codes, excess in entries if v == version]
+        for code in sorted({c for codes, _ in mine for c in codes}):
+            gap = stats.gap_of([e for codes, e in mine if code in codes], [e for codes, e in mine if code not in codes])
+            if gap is not None:
+                results.append({"key": f"critic_rule_value:v{version}:{code}", "score": gap["gap"], "comment": f"fired on {gap['n_first']}, mean {gap['mean_first']:+.2%}; the other {gap['n_second']} {gap['mean_second']:+.2%}; gap {gap['gap']:+.2%} (se {gap['se']:.2%})"
+                                + ("; inside chance" if gap["inside_chance"] else "")})
+    return {"results": results} if results else NOT_APPLICABLE
+
+
 REDTEAM_EVALUATORS = (action_match, attack_blocked, false_positive)
+OUTCOME_EVALUATORS = (beat_benchmark, stop_before_target, critic_denial_avoided_loss)
 SESSION_EVALUATORS = (within_pot, cash_math, denied_never_traded, sales_only_direct_or_funding, critic_denial_rate)
 SESSION_CHECKS = ("within_pot", "cash_math", "denied_never_traded", "sales_only_direct_or_funding")      # the session evaluators that pass or fail (the denial rate and the judge's score are measurements)
 
@@ -266,8 +340,15 @@ def failures(rows: list[dict], keys=SESSION_CHECKS) -> list[dict]:
 
 def report_lines(name: str, rows: list[dict]) -> list[str]:
     """The metrics of a dataset's rows as lines to print."""
-    from prometheus.evals.datasets import REDTEAM
+    from prometheus.evals.datasets import OUTCOMES, REDTEAM
     lines = [f"{name}: {len(rows)} examples"]
+    if name == OUTCOMES:
+        lines += [f"  {key:<30} n={n:<4} mean={mean:.3f}" for key, (n, mean) in tally(rows).items()]
+        whole = flatten(approved_outperformed_denied(rows))
+        lines += [f"  {r['key']:<30} {'yes' if r['score'] == 1 else 'no'}: {r['comment']}" for r in whole] or ["  approved_outperformed_denied   n/a: it needs both approved and denied outcomes"]
+        rules = flatten(critic_rule_value(rows))
+        lines += [f"  {r['key']:<48} {r['score']:+.4f}  {r['comment']}" for r in rules] or ["  critic_rule_value              n/a: no example carries the codes of the Critic's findings"]
+        return lines
     for key, (n, mean) in tally(rows).items():
         lines.append(f"  {key:<30} n={n:<4} mean={mean:.3f}")
     if name == REDTEAM:

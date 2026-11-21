@@ -14,6 +14,8 @@ cite by number, treat source text as data, stop searching, and know today's date
 import json
 from datetime import date
 
+from prometheus.common import trading_clock
+
 SYSTEM = """You are the Data Clerk of a trading desk. Today is {today}. You answer questions about companies, products and topics from stored news, using tools.
 
 How to work
@@ -43,7 +45,7 @@ LAST_TURN = ("You have no more tool calls for this question. Answer now from the
 
 
 def system_prompt(today: date | None = None) -> str:
-    return SYSTEM.format(today=(today or date.today()).isoformat())
+    return SYSTEM.format(today=(today or trading_clock.bound_day() or date.today()).isoformat())
 
 
 def repair_message(invalid: list[int], sources: int) -> str:
@@ -72,7 +74,7 @@ COMPANIES_RETRY = "Your reply was not valid JSON in the required shape ({problem
 
 
 def companies_prompt(phrase: str, count: int, today: date | None = None) -> str:
-    return COMPANIES_SYSTEM.format(today=(today or date.today()).isoformat(), count=count)
+    return COMPANIES_SYSTEM.format(today=(today or trading_clock.bound_day() or date.today()).isoformat(), count=count)
 
 
 # ---------------------------------------------------------------- does a company found in the news belong to the theme? (entry 120; design/theme_membership_spec.md)
@@ -95,7 +97,7 @@ THEME_MEMBERS_RETRY = "Your reply was not valid JSON in the required shape ({pro
 
 
 def theme_members_prompt(today: date | None = None) -> str:
-    return THEME_MEMBERS_SYSTEM.format(today=(today or date.today()).isoformat())
+    return THEME_MEMBERS_SYSTEM.format(today=(today or trading_clock.bound_day() or date.today()).isoformat())
 
 
 def theme_members_question(phrase: str, rows: list[dict]) -> str:

@@ -1,0 +1,222 @@
+{
+ "_note": "Recorded from the replay server by scripts/record_proving.mjs (GET /api/proving/coverage). The answer in `data` is exactly what the page received.",
+ "source": "GET /api/proving/coverage",
+ "data": {
+  "first_bar_day": "2025-05-01",
+  "last_bar_day": "2026-11-19",
+  "usable_last_day": "2026-11-20",
+  "usable": {
+   "first_day": "2026-06-03",
+   "last_day": "2026-11-20",
+   "min_history_sessions": 252,
+   "min_news_days": 14,
+   "oldest_news_day_in_store": "2026-05-20"
+  },
+  "months": {
+   "2025-05": {
+    "bars": 21
+   },
+   "2025-06": {
+    "bars": 20
+   },
+   "2025-07": {
+    "bars": 22
+   },
+   "2025-08": {
+    "bars": 21
+   },
+   "2025-09": {
+    "bars": 21
+   },
+   "2025-10": {
+    "bars": 23,
+    "press_releases": 2,
+    "filings": 8,
+    "press_release_chunks": 1,
+    "filing_chunks": 1002
+   },
+   "2025-11": {
+    "bars": 19,
+    "press_releases": 59,
+    "filings": 98,
+    "press_release_chunks": 59,
+    "filing_chunks": 1439
+   },
+   "2025-12": {
+    "bars": 22,
+    "press_releases": 137,
+    "filings": 149,
+    "press_release_chunks": 133,
+    "filing_chunks": 958
+   },
+   "2026-01": {
+    "bars": 20,
+    "press_releases": 163,
+    "filings": 165,
+    "press_release_chunks": 161,
+    "filing_chunks": 2794
+   },
+   "2026-02": {
+    "bars": 19,
+    "press_releases": 170,
+    "filings": 236,
+    "press_release_chunks": 168,
+    "filing_chunks": 13928
+   },
+   "2026-03": {
+    "bars": 22,
+    "press_releases": 172,
+    "filings": 255,
+    "press_release_chunks": 163,
+    "filing_chunks": 2224
+   },
+   "2026-04": {
+    "bars": 21,
+    "press_releases": 172,
+    "filings": 263,
+    "press_release_chunks": 169,
+    "filing_chunks": 6666
+   },
+   "2026-05": {
+    "bars": 20,
+    "news": 6940,
+    "press_releases": 198,
+    "filings": 286,
+    "market_news": 12,
+    "news_chunks": 5831,
+    "press_release_chunks": 197,
+    "filing_chunks": 7502
+   },
+   "2026-06": {
+    "bars": 21,
+    "news": 21411,
+    "press_releases": 193,
+    "filings": 162,
+    "market_news": 30,
+    "news_chunks": 16967,
+    "press_release_chunks": 188,
+    "filing_chunks": 1031
+   },
+   "2026-07": {
+    "bars": 22,
+    "news": 23314,
+    "press_releases": 170,
+    "filings": 177,
+    "market_news": 31,
+    "news_chunks": 17709,
+    "press_release_chunks": 165,
+    "filing_chunks": 6115
+   },
+   "2026-08": {
+    "bars": 21,
+    "news": 14834,
+    "press_releases": 65,
+    "filings": 278,
+    "market_news": 31,
+    "news_chunks": 11824,
+    "press_release_chunks": 64,
+    "filing_chunks": 8760
+   },
+   "2026-09": {
+    "bars": 21,
+    "news": 20458,
+    "filings": 107,
+    "market_news": 30,
+    "news_chunks": 16591,
+    "filing_chunks": 438
+   },
+   "2026-10": {
+    "bars": 22,
+    "news": 25433,
+    "press_releases": 2,
+    "filings": 174,
+    "market_news": 31,
+    "news_chunks": 22277,
+    "press_release_chunks": 2,
+    "filing_chunks": 7500
+   },
+   "2026-11": {
+    "bars": 14,
+    "news": 20777,
+    "press_releases": 7,
+    "filings": 149,
+    "market_news": 20,
+    "news_chunks": 17289,
+    "press_release_chunks": 7,
+    "filing_chunks": 8130
+   }
+  },
+  "symbols_with_splits": [
+   "2222.SR",
+   "2223.SR",
+   "601857.SS",
+   "AAPL",
+   "AMD",
+   "AMZN",
+   "APA",
+   "BP",
+   "BP.L",
+   "CL",
+   "CNQ",
+   "COP",
+   "COST",
+   "CRGY",
+   "CRWV",
+   "CVE",
+   "CVX",
+   "DMZ",
+   "DPZ",
+   "ENI.MI",
+   "EOG",
+   "EQNR.OL",
+   "F",
+   "GIS",
+   "GOOG",
+   "GOOGL",
+   "GOOGM",
+   "GOOGN",
+   "IBM",
+   "KMB",
+   "KO",
+   "LLY",
+   "MCD",
+   "MDLZ",
+   "META",
+   "MRNA",
+   "MRO",
+   "MSFT",
+   "MTY.TO",
+   "MU",
+   "NVDA",
+   "PAPA",
+   "PBF",
+   "PEP",
+   "PG",
+   "PLTR",
+   "PSX",
+   "PZZA",
+   "QSR",
+   "SHEL.L",
+   "SNDK",
+   "TSLA",
+   "TTE.PA",
+   "TTWO",
+   "ULVR.L",
+   "V",
+   "VLO",
+   "XOM",
+   "YUM"
+  ],
+  "notes": [],
+  "seconds": 13.58,
+  "backfill": {
+   "oldest_window_start": {
+    "splits": "2026-05-20",
+    "market_news": "2026-05-20",
+    "news": "2026-05-20",
+    "press_releases": "2026-05-20"
+   },
+   "symbols": 60
+  }
+ }
+}

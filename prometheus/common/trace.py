@@ -20,6 +20,7 @@ A decorated function changes NOTHING about what it does: same value, same except
 
 Everything here is also true of a span that is NOT sent: `summarize` never raises (what it cannot read is its type name), and a failure of the SDK in a span is the SDK's to log, the step still runs.
 """
+import contextlib
 import dataclasses
 import enum
 import functools
@@ -30,7 +31,8 @@ from decimal import Decimal
 from pathlib import PurePath
 
 from langsmith import traceable
-from langsmith.run_helpers import get_current_run_tree
+from langsmith.run_helpers import get_current_run_tree, trace as ls_trace
+from langsmith.utils import tracing_is_enabled
 
 MAX_ITEMS = 20       # a list keeps this many items, then says how many more there were
 MAX_KEYS = 30        # a dict keeps this many keys
@@ -191,3 +193,40 @@ def traced(name, run_type: str = "chain"):
         return wrapper
 
     return decorate
+
+
+# ---------------------------------------------------------------- the Proving Ground's own trace (design/proving_ground_spec.md section 12, entry 126)
+
+@contextlib.contextmanager
+def root(name: str, run_type: str = "chain", metadata: dict | None = None, tags: list[str] | None = None, inputs=None):
+    """START a trace: a context manager that opens a ROOT run named `name` when tracing is on and yields its run tree (None when tracing is off: nothing is made, summarized or sent). THE ONLY THING IN THIS MODULE THAT MAY START A
+    TRACE (`traced` and `span` only nest): the Time Machine opens ONE root for a test, `proving.time_machine`, and everything it does nests under it. The run goes to the agent address of entry 114 like every other (the SDK reads it from the
+    environment `langsmith_tracing.configure` set); `metadata` (numbers, ids, dates: never article text) and `tags` are on the run, and `inputs` goes through `summarize` like every other payload. A run that is already open is NOT replaced:
+    the new run is its child (`trace` does that), so a test of the Time Machine started from a traced command nests."""
+    if run_type not in ("chain", "tool"):
+        raise ValueError(f'run_type must be "chain" or "tool", not {run_type!r}')
+    if not tracing_is_enabled():
+        yield None
+        return
+    with ls_trace(name=name, run_type=run_type, inputs=_outputs(inputs) if inputs is not None else {}, metadata=dict(metadata or {}), tags=list(tags or [])) as tree:
+        yield tree
+
+
+@contextlib.contextmanager
+def span(name: str, run_type: str = "chain", metadata: dict | None = None, inputs=None):
+    """A named child span of the open trace, and NOTHING when none is open (R3: it only nests, never starts a root). Yields the run tree or None. `inputs` goes through `summarize`."""
+    if get_current_run_tree() is None:
+        yield None
+        return
+    with ls_trace(name=name, run_type=run_type, inputs=_outputs(inputs) if inputs is not None else {}, metadata=dict(metadata or {})) as tree:
+        yield tree
+
+
+def set_outputs(tree, outputs) -> None:
+    """Put `outputs` (through `summarize`) on a span or root made by `root` or `span`; a no-op for None (tracing off). Never raises."""
+    if tree is None:
+        return
+    try:
+        tree.add_outputs(_outputs(outputs))
+    except Exception:
+        pass

@@ -4,8 +4,9 @@
     broker = PaperBroker(config, "paper", account, order, prices, trades, permit, now)    # `account` is the Account Manager: the Trader's only door, and the only owner of the funds
     trade = broker.place("T1", "limit", 167.1, note="inside the range")              # a Trade: filled, active (a resting order) or rejected with a code
 
-`simulator.py` has the fill RULES (pure); this applies them to one trade. It is the one place every trade goes through, whoever places it (the model's `place_order` tool, or the code's sweep), so the guards cannot be
-skipped by a path that forgets them:
+`simulator.py` has the fill RULES (pure); this applies them to one trade. WHERE the order goes is the VENUE's (`venue.py`, design choices entry 128: `PaperVenue` the current quote, `BacktestVenue` the stored bars, a real broker
+later): this class keeps its name and every guard below and asks `self.venue.execute(...)` for the price and the fill, so no `mode` string is read here. It is the one place every trade goes through, whoever places it (the
+model's `place_order` tool, or the code's sweep), so the guards cannot be skipped by a path that forgets them:
 
   T1  `permit` (the closure over `work_order.verify_trade`) runs again for every trade as it is placed;
   T2  an order is a type and a price inside the range code computed (`Refused` otherwise): nothing here takes a symbol, a side or a share count from a caller;
@@ -51,16 +52,17 @@ what happens) and ask the Account Manager whether that would pay for even one sh
 every sale `funding_failed`, and NOTHING is sold; else fill each sale (one that cannot fill is `funding_failed` and the others go on) and only then ask for the purchase's approval, which reads the cash the BOOK now shows.
 Holdings sold and nothing bought is the worst case, and this order is what stops it (the output guard `verify_trades` backs it up).
 """
-from dataclasses import dataclass, field
-from datetime import date, datetime
+from dataclasses import dataclass
+from datetime import datetime
 from typing import Callable
 
 from prometheus.agents.trader.config import TraderConfig
 from prometheus.agents.trader.record import Fill, Trade
 from decimal import Decimal
 
-from prometheus.agents.trader.simulator import Execution, bar_on, fill_backtest, fill_paper, usable
+from prometheus.agents.trader.simulator import Execution, usable
 from prometheus.agents.trader.tickets import shown_range, utc_text
+from prometheus.agents.trader.venue import Prices, Venue, venue_for      # `Prices` moved to venue.py (entry 128) and is still importable from here
 from prometheus.common import shares as sh
 from prometheus.common.money import exact, price_scale
 from prometheus.common.portfolio import trade_amount
@@ -72,21 +74,6 @@ CASH_HINT = "run the desk with --raise-funds to plan the sales that would pay fo
 class Refused(ValueError):
     """A placing the broker will not do, with a sentence that says how to fix it (an unknown trade id, a trade already placed, an order outside the range, a purchase while a sale is unplaced). It is the model's to
     correct and try again; it never ends a run."""
-
-
-@dataclass
-class Prices:
-    """ONE snapshot of prices: what step 4 of the Trader asked the Account Manager for, once. `trade_date` is the date of every fill of the run (paper: the Eastern date of the run; backtest: the entry date).
-    Paper: `quotes` {symbol: price}, a symbol with no usable quote is simply not there. Backtest: `bars` {symbol: [bar, ...]} and `entry_date`, None when no bar is stored from the calendar's entry day on (the future is
-    not stored yet: orders wait)."""
-    mode: str
-    trade_date: date
-    quotes: dict[str, Decimal] = field(default_factory=dict)
-    bars: dict[str, list[dict]] = field(default_factory=dict)
-    entry_date: date | None = None
-    order_id: str | None = None                 # the request id of the quote or bars order the Account Manager made
-    failed: str = ""                            # why no price could be had at all (the request failed or was refused): every order is then `price_unavailable`, which is not the same as "the future is not stored yet"
-    unavailable: dict[str, str] = field(default_factory=dict)   # the request is made in groups of at most 30 symbols; when one group failed and the others answered, each symbol of that group is here with why: `price_unavailable`
 
 
 def cut_note(note, max_words: int) -> str:
@@ -119,12 +106,15 @@ class _Unconfirmed:
 
 
 class PaperBroker:
-    def __init__(self, config: TraderConfig, mode: str, account, order: WorkOrder, prices: Prices, trades: list[Trade], permit: Callable[[Trade], tuple[str | None, str]], now: datetime, cash_hint: str = ""):
+    def __init__(self, config: TraderConfig, mode: str, account, order: WorkOrder, prices: Prices, trades: list[Trade], permit: Callable[[Trade], tuple[str | None, str]], now: datetime, cash_hint: str = "",
+                 venue: Venue | None = None):
         """config: the Trader's settings. account: the Account Manager, with its trading run open (`trading_portfolio`): the only owner of the funds, asked for each trade's approval and told each fill (see the module
         text). order: the work order (the Account Manager checks the decision again with `work_order.verify_trade`, and `verify_fill` reads the decisions). prices: the one snapshot. trades: EVERY trade of the run (the
         tickets, the funding sells, the active ones of an earlier run), in the order they will be shown; the broker changes these objects as it places them. permit: `permit(trade) -> (code, reason)`, (None, "")
-        when `work_order.verify_trade` says the trade is allowed now (rule T1): it runs again for every trade placed. cash_hint: a sentence added to an `insufficient_cash` reason when no funding plan is in use."""
+        when `work_order.verify_trade` says the trade is allowed now (rule T1): it runs again for every trade placed. cash_hint: a sentence added to an `insufficient_cash` reason when no funding plan is in use. venue: where
+        the orders go (`venue.py`, entry 128: the price and the fill come from it); left out it is the venue of `mode` (`venue_for`, a ValueError for a mode that is not paper or backtest)."""
         self.config, self.mode, self.prices, self.permit, self.now, self.cash_hint = config, mode, prices, permit, now, cash_hint
+        self.venue = venue if venue is not None else venue_for(mode, config)
         self.account, self.order = account, order
         self.trades: dict[str, Trade] = {t.trade_id: t for t in trades}
         if len(self.trades) != len(trades):
@@ -265,20 +255,12 @@ class PaperBroker:
         self._fund(trade, execution, legs)
 
     def _simulate(self, trade: Trade) -> Execution:
-        """The fill rules for a trade against the snapshot (no cash, no shares: those are applied when it fills)."""
-        slip = self.config.costs.slippage_bps
+        """The fill rules for a trade against the snapshot (no cash, no shares: those are applied when it fills). A snapshot that failed is the same for every trade; the venue says the rest (`venue.execute`)."""
         if self.prices.failed:
             return Execution("rejected", self.prices.failed, reject_code="price_unavailable")
         if trade.symbol in self.prices.unavailable:
             return Execution("rejected", self.prices.unavailable[trade.symbol], reject_code="price_unavailable")
-        if self.mode == "paper":
-            return fill_paper(trade.side, trade.order_type, trade.limit_price, self.prices.quotes.get(trade.symbol), trade.limit_low, trade.limit_high, slip)
-        if self.prices.entry_date is None:
-            return Execution("active", "waiting for the next session: no daily bar is stored from the entry day on yet")
-        bar = bar_on(self.prices.bars.get(trade.symbol), self.prices.entry_date)
-        if bar is None:
-            return Execution("rejected", f"{trade.symbol} has no stored bar on {self.prices.entry_date.isoformat()}", reject_code="price_unavailable")
-        return fill_backtest(trade.side, trade.order_type, trade.limit_price, bar, trade.limit_low, trade.limit_high, slip)
+        return self.venue.execute(trade, trade.shares, self.prices)
 
     def _settle(self, trade: Trade, execution: Execution, legs: list[Trade]) -> None:
         """A trade with no funding sales (or one whose price did not fill): fill it, rest it, or reject it, and say the same of its sales."""

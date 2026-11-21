@@ -6,6 +6,7 @@ import App from "./App";
 import "./styles/tokens.css";
 import "./styles/base.css";
 import "./styles/components.css";
+import "./styles/proving.css";
 
 // ?states draws the sheet of component states (a development view, see StatesPage.tsx); everything else is the page.
 const StatesPage = lazy(() => import("./StatesPage"));

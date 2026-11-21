@@ -1,0 +1,99 @@
+<<<PRESS_RELEASE>>>
+id: 8eb0deae772e18cb
+symbol: CELH
+published_utc: 2025-12-03T07:00:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-highlights-2025-execution-progress-ahead-morgan-stanley-global
+headline: Celsius Holdings Highlights 2025 Execution Progress Ahead of Morgan Stanley Global Consumer & Retail Conference
+<<<TEXT>>>
+Celsius Holdings, Inc. today provided an update on its 2025 brand integration efforts, Alani Nu direct store delivery transition progress, and recently achieved milestones ahead of the Company’ s participation in the Morgan Stanley Global Consumer& Retail Conference. "Our teams have been incredibly disciplined this year, staying focused on our consumers and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 750889f0a5d474ad
+symbol: CELH
+published_utc: 2026-02-10T16:30:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-appoints-christy-jacoby-and-john-short-companys-board-directors-2026
+headline: Celsius Holdings Appoints Christy Jacoby and John Short to the Company’s Board of Directors
+<<<TEXT>>>
+Celsius Holdings, Inc. today announced the appointment of Christy Jacoby and John Short to its Board of Directors. "We thank Israel and Mike for their service and contributions during an important period of growth and evolution for Celsius Holdings," said John Fieldly, Chairman and Chief Executive Officer of Celsius Holdings." As we continue to scale with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 72c2b923b0bca8d0
+symbol: CELH
+published_utc: 2026-02-12T16:05:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-announces-cagny-conference-participation-and-fourth-quarter-and-full
+headline: Celsius Holdings Announces CAGNY Conference Participation and Fourth Quarter and Full-Year 2025 Earnings Release Date
+<<<TEXT>>>
+Celsius Holdings, Inc. announced today that John Fieldly, Chairman and CEO, Eric Hanson, President and Chief Operating Officer, and Kyle Watson, Chief Brand Officer, will present at the Consumer Analyst Group of New York Conference at 5 p.m. ET on Thursday, Feb. 19, 2026. The Company also announced that it will release its fourth quarter and full-year 2025 financial...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3ad44319d6b68cc4
+symbol: CELH
+published_utc: 2026-02-17T08:00:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-participate-upcoming-investor-conferences-2026-02-17
+headline: Celsius Holdings to Participate in Upcoming Investor Conferences
+<<<TEXT>>>
+Celsius Holdings, Inc. today announced it will participate in the following investor conferences:. Consumer Analyst Group of New York Conference Date: Feb. 19, 2026 Webcast: Feb. 19, approximately 5 p.m. ET. Celsius Holdings, Inc. is a functional beverage company and the owner of energy drink brand CELSIUS ®, hydration brand CELSIUS HYDRATION TM, health and wellness...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7bef4bfa5a8b6995
+symbol: CELH
+published_utc: 2026-02-26T06:00:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-reports-full-year-2025-and-fourth-quarter-financial-results-2026-02
+headline: Celsius Holdings Reports Full-Year 2025 and Fourth Quarter Financial Results
+<<<TEXT>>>
+Celsius Holdings, Inc. today reported fourth quarter and full-year 2025 financial results. John Fieldly, Chairman and CEO of Celsius Holdings, said:" 2025 was a defining year for Celsius Holdings as we delivered record full-year revenue of $2.5 billion, underscoring the power of our brands and the strength of our growth model. As PepsiCo’ s energy category...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 847fc732c7e36c68
+symbol: CELH
+published_utc: 2026-04-30T16:05:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-release-first-quarter-results-thursday-may-7-2026-2026-04-30
+headline: Celsius Holdings to Release First Quarter Results on Thursday, May 7, 2026
+<<<TEXT>>>
+Celsius Holdings, Inc. will release its first quarter financial results before markets open on Thursday, May 7, 2026. Downloadable files, an audio replay and transcript will be available within 24 hours after the call on the Celsius Holdings investor relations website. Celsius Holdings, Inc. is a functional beverage company and the owner of energy drink brand...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: afcc4bce9c740777
+symbol: CELH
+published_utc: 2026-05-07T06:00:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-reports-first-quarter-2026-financial-results-2026-05-07
+headline: Celsius Holdings Reports First Quarter 2026 Financial Results
+<<<TEXT>>>
+Celsius Holdings, Inc. today reported first quarter 2026 financial results. John Fieldly, Chairman and CEO of Celsius Holdings, said:" The first quarter of 2026 was a defining period for Celsius Holdings as we delivered record first-quarter revenue of $783 million, underscoring the power of our brands and the strength of our growth model. As PepsiCo’ s energy...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 975ac4cd5c76dcfd
+symbol: CELH
+published_utc: 2026-05-08T09:15:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-participate-upcoming-investor-conferences-2026-05-08
+headline: Celsius Holdings to Participate in Upcoming Investor Conferences
+<<<TEXT>>>
+Celsius Holdings, Inc. today announced it will participate in the following investor conferences:. Deutsche Bank Global Consumer Conference Date: June 2, 2026 Fireside chat webcast: June 2, approximately 5:15 p.m. CEST/ 11:15 a.m. ET. About Celsius Holdings, Inc. Celsius Holdings, Inc. is a functional beverage company and the owner of energy drink brand...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cd15b77ba07380a7
+symbol: CELH
+published_utc: 2026-07-30T16:05:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-release-second-quarter-results-thursday-aug-6-2026-2026-07-30
+headline: Celsius Holdings to Release Second Quarter Results on Thursday, Aug. 6, 2026
+<<<TEXT>>>
+Celsius Holdings, Inc. will release its second quarter financial results before markets open on Thursday, Aug. 6, 2026. Following the release, management will host a conference call and webcast at 8 a.m. ET to discuss the company’ s second quarter results. Downloadable files, an audio replay and transcript will be available within 24 hours after the call on the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3e023d8a13b7cd0a
+symbol: CELH
+published_utc: 2026-08-06T06:00:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-reports-second-quarter-2026-financial-results-2026-08-06
+headline: Celsius Holdings Reports Second Quarter 2026 Financial Results
+<<<TEXT>>>
+Celsius Holdings, Inc. today reported second quarter 2026 financial results. John Fieldly, Chairman and CEO of Celsius Holdings, said:" During the second quarter of 2026, we made meaningful progress in advancing Celsius Holdings as a scaled portfolio of leading brands. For the three months ended June 30, 2026, revenue totaled approximately $817.9 million—...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 43a901b09f65a574
+symbol: CELH
+published_utc: 2026-08-10T16:10:00Z
+url: https://www.nasdaq.com/press-release/celsius-holdings-announces-leadership-changes-part-organizational-realignment-support
+headline: Celsius Holdings Announces Leadership Changes as Part of Organizational Realignment to Support its Total Energy Portfolio Strategy
+<<<TEXT>>>
+Celsius Holdings, Inc. today announced leadership changes designed to further align the Company's leadership structure with the continued execution of its total energy portfolio strategy. Tony Guilfoyle, former Chief Customer Officer of Celsius Holdings, was appointed to the newly created role of Chief Business Transformation Officer, effective July...
+<<<END>>>

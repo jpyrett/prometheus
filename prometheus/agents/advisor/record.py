@@ -248,6 +248,14 @@ class Recommendation(_Model):
         return data
 
 
+class ExitPlan(_Model):
+    """How a NEUTRAL company's position ends (Advisor v2, `design/critic_v2_evidence_spec.md` section 7): a stop under the last close and a time stop, NO target, nothing else. It is an EXIT plan only: the Trader's tickets, the entry
+    zone, the limit range and the order type of a neutral purchase are what they were. `stop_price` is None when the ATR could not be calculated (the time stop alone stands); `basis` says how both were made."""
+    stop_price: float | None = None
+    time_stop_date: str
+    basis: str
+
+
 class Candidate(_Model):
     """A symbol that reached scoring and is not in the returned list, with the reason (a gate that stopped it, or its rank)."""
     symbol: str
@@ -264,6 +272,7 @@ class Candidate(_Model):
     reason: str
     cooldown_of: str | None = None
     theme_role: str | None = None
+    exit_plan: ExitPlan | None = None      # a NEUTRAL company (stance neutral, no failed gate) carries one; any other candidate has none; a candidate saved before Advisor config version 2 has none
 
     @model_validator(mode="before")
     @classmethod

@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { api, ApiError } from "../api/client";
-import type { OrderPart, Review, WorkRow } from "../api/types";
+import type { OrderPart, RawRecords, Review, WorkRow } from "../api/types";
 import { cap, money, price4, shares as shareText, signedDecimal, words } from "../format";
 import { Badge } from "./ui/Badge";
 import { Card } from "./ui/Card";
@@ -13,6 +13,8 @@ export interface RecommendationPanelProps {
   runId: string | null;
   /** Rows exist but the Advisor has not answered (the empty state says so). */
   waitingForAdvisor: boolean;
+  /** Where the Raw record is read from when it is not a Desk run (a day of a Proving Ground run): given the row's key, the records. */
+  loadRecords?: (key: string) => Promise<RawRecords>;
 }
 
 function Sec({ title, right, children, className = "" }: { title: string; right?: ReactNode; children: ReactNode; className?: string }) {
@@ -30,7 +32,7 @@ function Sec({ title, right, children, className = "" }: { title: string; right?
 const has = <T,>(list: T[] | undefined | null): list is T[] => Array.isArray(list) && list.length > 0;
 
 /** The selected stock: the sections of spec 4.4.1, each only when it has data (spec 5.3 (11)). */
-export function RecommendationPanel({ row, runId, waitingForAdvisor }: RecommendationPanelProps) {
+export function RecommendationPanel({ row, runId, waitingForAdvisor, loadRecords }: RecommendationPanelProps) {
   if (!row) {
     return (
       <Card title="Recommendation" grow className="recommendation" right="by the Advisor · reviewed by the Critic">
@@ -163,7 +165,7 @@ export function RecommendationPanel({ row, runId, waitingForAdvisor }: Recommend
         {d.plan && <PlanSection plan={d.plan} />}
         {d.review && <ReviewSection review={d.review} />}
         {d.order && <OrderSection order={d.order} />}
-        <RawRecord runId={runId} rowKey={row.key} />
+        <RawRecord runId={runId} rowKey={row.key} loadRecords={loadRecords} />
       </div>
     </Card>
   );
@@ -326,7 +328,7 @@ function OrderSection({ order }: { order: OrderPart }) {
   );
 }
 
-function RawRecord({ runId, rowKey }: { runId: string | null; rowKey: string }) {
+function RawRecord({ runId, rowKey, loadRecords }: { runId: string | null; rowKey: string; loadRecords?: (key: string) => Promise<RawRecords> }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState<string | null>(null);
   const [problem, setProblem] = useState<string | null>(null);
@@ -339,22 +341,21 @@ function RawRecord({ runId, rowKey }: { runId: string | null; rowKey: string }) 
   }, [rowKey, runId]);
 
   useEffect(() => {
-    if (!open || text !== null || !runId) return;
+    if (!open || text !== null || (!runId && !loadRecords)) return;
     let live = true;
-    api
-      .records(runId, rowKey)
+    (loadRecords ? loadRecords(rowKey) : api.records(runId!, rowKey))
       .then((records) => live && setText(JSON.stringify(records, null, 2)))
       .catch((e) => live && setProblem(e instanceof ApiError ? e.message : "the record could not be read"));
     return () => {
       live = false;
     };
-  }, [open, text, runId, rowKey]);
+  }, [open, text, runId, rowKey, loadRecords]);
 
   return (
     <div className="sec raw">
       <details open={open} onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}>
         <summary>Raw record</summary>
-        {open && (problem ? <p className="err">{problem}</p> : text === null ? <p className="muted">{runId ? "reading…" : "no run to read it from"}</p> : <pre className="rawjson">{text}</pre>)}
+        {open && (problem ? <p className="err">{problem}</p> : text === null ? <p className="muted">{runId || loadRecords ? "reading…" : "no run to read it from"}</p> : <pre className="rawjson">{text}</pre>)}
       </details>
     </div>
   );

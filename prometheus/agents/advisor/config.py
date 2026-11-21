@@ -239,6 +239,13 @@ class Trade(_Section):
     event_limit_reaction_atr: float
 
 
+class Neutral(_Section):
+    """The EXIT PLAN of a neutral company (Advisor v2, `design/critic_v2_evidence_spec.md` section 7, `trade_plan.neutral_exit_plan`): two CONVENTIONS, not findings (nothing in the record says where a neutral company should go): the stop is
+    `stop_atr_multiple` times the 14-day ATR under the last close, the time stop `horizon_bars` trading days after the decision day. They are Jacob's to change."""
+    stop_atr_multiple: float = Field(gt=0)
+    horizon_bars: int = Field(gt=0)
+
+
 class Ledger(_Section):
     path: str
 
@@ -255,6 +262,7 @@ class AdvisorConfig(_Section):
     blend: Blend
     sleeves: dict[str, Sleeve]
     trade: Trade
+    neutral: Neutral
     ledger: Ledger
 
     model_config = ConfigDict(extra="forbid", frozen=True, populate_by_name=True)

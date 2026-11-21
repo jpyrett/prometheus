@@ -20,16 +20,21 @@ Never on the allow-list, on purpose: init_aws_cli (installs software), fetch_his
 convert_to_parquet (a long batch job), export_project (rsync to any destination), and the two scheduled
 refresh jobs sync_market_news and sync_cnbc_news.
 
+AS OF A PAST DAY (the Proving Ground, entry 127: `trading_clock.as_of`). While a day is bound every tool here reads only what was known on it: the searches are closed by the retriever itself (`rag/retriever.py`), the stored-text
+tools of the toolbox take `until`, the filing evidence stops at the day, the metrics are computed as of it, and `get_quote` answers with the stored close of that day (marked `simulated`). The fetch tools refuse (`trading_clock.NEVER_FETCHES`): a test
+of a past day calls no paid API and writes no stored text. `get_financials` is the one thing that is today's snapshot (Finnhub's metrics have no history, Jacob: keep and disclose); its payload says `point_in_time: False`.
+
 See what the model sees:   python -m prometheus.tools.data_clerk
 """
 import functools
 import sys
-from datetime import date, timedelta
+from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 
 from langchain_core.tools import BaseTool, StructuredTool, tool
 
 from prometheus.agents.data_clerk import filing_signals
+from prometheus.common import trading_clock
 from prometheus.agents.data_clerk.edgar_text import EdgarNotConfigured
 from prometheus.rag.citations import SourceBook
 from prometheus.rag.config import REPO_ROOT
@@ -145,12 +150,35 @@ class DataClerkTools:
             from prometheus.agents.data_clerk.data_toolbox import DataToolbox  # imported here: it needs pyarrow and httpx
             toolbox = DataToolbox(base_dir=REPO_ROOT)  # the same root as rag/: news/ and .env are the ones rag/ reads
         self.toolbox = toolbox
-        self.today: date | None = None  # the date `fetch_filings_recommendation` counts its window back from: today when None (a test sets it; the model never sees it)
+        self._today: date | None = None
         self.store = store
         self.press_store = press_store
         self.filings_store = filings_store
         self.guard = guard
         self.bars_root = bars_root  # where the day_aggs_v1 files are (a folder holding YYYY/MM/YYYY-MM-DD.csv.gz): the toolbox's own data/historical when left out; a test points it at a temporary folder
+
+    @property
+    def today(self) -> date | None:
+        """The date `fetch_filings_recommendation` and the metrics count back from: the one set here (a test sets it; the model never sees it), else the day bound by `trading_clock.as_of`, else None (the callers then use
+        the real date, as before). A day that is bound is also the LAST day any of them may read: see `_through`."""
+        return self._today if self._today is not None else trading_clock.bound_day()
+
+    @today.setter
+    def today(self, value: date | None) -> None:
+        self._today = value
+
+    @staticmethod
+    def _through(day: date | None) -> date | None:
+        """`day` cut to the bound day: while a day is bound nothing may be read after it, whatever date a caller passes. Unbound, or with no `day`, the day as it was."""
+        bound = trading_clock.bound_day()
+        return day if bound is None or day is None or day <= bound else bound
+
+    @staticmethod
+    def _no_fetch(tool_name: str) -> None:
+        """Refuse a fetch tool while a day is bound: it would call a paid API and write the stored text (`trading_clock.NEVER_FETCHES`). The model is told to answer with what is stored."""
+        day = trading_clock.bound_day()
+        if day is not None:
+            raise ToolLimitError(f"{trading_clock.NEVER_FETCHES}: {tool_name} is turned off while the desk works as of {day}, so only the text stored on or before that day can be searched")
 
     # ---- search by meaning (rag/)
 
@@ -292,6 +320,7 @@ class DataClerkTools:
             keywords: Optional list of words. Only articles that mention any of them are kept.
             from_date: How many days back to fetch, 1 to 90. The default is 7.
         """
+        self._no_fetch("fetch_news")
         symbol = _symbol(symbol)
         company = _text("company", company)
         keywords = _words("keywords", keywords)
@@ -311,6 +340,7 @@ class DataClerkTools:
             symbol: The ticker symbol, such as "AAPL".
             from_date: How many days back to fetch, 1 to 730. The default is 365.
         """
+        self._no_fetch("fetch_press_releases")
         symbol = _symbol(symbol)
         from_date = _days("from_date", from_date, MAX_FILING_DAYS)
         stats = self.toolbox.fetch_press_releases(symbol, from_date=from_date)
@@ -331,6 +361,7 @@ class DataClerkTools:
             symbol: The ticker symbol, such as "AAPL".
             from_date: How many days back to fetch, 1 to 730. The default is 365.
         """
+        self._no_fetch("fetch_filings")
         symbol = _symbol(symbol)
         from_date = _days("from_date", from_date, MAX_FILING_DAYS)
         stats = self.toolbox.fetch_filings(symbol, from_date=from_date)
@@ -363,9 +394,15 @@ class DataClerkTools:
             docs = load_filings(filing_file(symbol))
         except FileNotFoundError:
             raise ToolInputError(f"no filings of {symbol} are stored: run fetch_filings for it first") from None
-        return filing_signals.recommendation_evidence(symbol, filing_signals.filings_from_documents(docs), today=self.today, since_days=since_days)
+        return filing_signals.recommendation_evidence(symbol, filing_signals.filings_from_documents(docs), today=self.today, since_days=since_days)   # a bound day also closes the window at the day (`until` defaults to it)
 
     # ---- keyword search over the stored text, and the other data
+
+    @staticmethod
+    def _stored_until() -> dict:
+        """The `until` the toolbox's stored-text searches take, only while a day is bound (the toolbox defaults to it too: this makes the door visible here, and an unbound call passes exactly what it always passed)."""
+        day = trading_clock.bound_day()
+        return {} if day is None else {"until": day}
 
     def keyword_search(self, symbol: str, terms: list[str], from_date: int = 30) -> dict:
         """Find stored news and filings for one ticker that contain any of the exact words you give. This matches words, not meaning: for a question, use retrieve_news.
@@ -380,7 +417,7 @@ class DataClerkTools:
         symbol = _symbol(symbol)
         terms = _words("terms", terms, required=True)
         from_date = _days("from_date", from_date, MAX_SEARCH_DAYS)
-        found = self.toolbox.search(symbol, terms, from_date=from_date, refresh=False)
+        found = self.toolbox.search(symbol, terms, from_date=from_date, refresh=False, **self._stored_until())
         news, filings = found.get("news", []), found.get("filings", [])
         return {"symbol": symbol, "terms": terms, "from_date": from_date,
                 "news_total": len(news), "news": news[:SHOWN_NEWS],
@@ -401,7 +438,7 @@ class DataClerkTools:
         phrase = _text("phrase", phrase, required=True)
         from_date = _days("from_date", from_date, MAX_DISCOVER_DAYS)
         top = _days("top", top, MAX_DISCOVER_TOP)
-        return self.toolbox.discover(phrase, from_date=from_date, top=top, refresh=False)
+        return self.toolbox.discover(phrase, from_date=from_date, top=top, refresh=False, **self._stored_until())
 
     def get_financials(self, symbol: str) -> dict:
         """Get ten common financial metrics for one ticker (P/E, EPS, margins, return on equity, debt to equity and others) from Finnhub.
@@ -430,7 +467,11 @@ class DataClerkTools:
         Args:
             symbol: The ticker symbol, such as "AAPL".
         """
-        return self.toolbox.get_quote(_symbol(symbol))
+        symbol = _symbol(symbol)
+        day = trading_clock.bound_day()
+        if day is not None:   # a past day has no live price: the stored close of that day, marked `simulated` (the same answer `DataClerk.request_quotes` gives)
+            return self.close_quote(symbol, day)
+        return self.toolbox.get_quote(symbol)
 
     def calculate_metrics(self, symbols: list[str], metrics: list[str]) -> dict:
         """Calculate technical and fundamental numbers for up to 10 tickers: returns over 5 to 252 sessions, RSI, MACD, Bollinger %B, ADX, ATR, volatility, beta, volume ratios, P/E, margins, debt, share count change and more.
@@ -460,7 +501,7 @@ class DataClerkTools:
         metrics that needed it say so in their own `note`, and everything else is still computed. No symbol check here: the callers check them."""
         from prometheus.agents.data_clerk import metrics_catalog as catalog
         from prometheus.agents.data_clerk.bars import BarStore
-        today = today or self.today or date.today()
+        today = self._through(today or self.today or date.today())   # while a day is bound, never later than it: the bars and the evidence are read as of that day
         root = self.bars_root or getattr(self.toolbox, "root_data_dir", REPO_ROOT / "data" / "historical") / "day_aggs_v1"
         store = BarStore(root).load([*symbols, catalog.SPY, *catalog.sector_etfs()], end=today)
         needs = {kind for r in requests for kind in catalog.METRICS[r["name"]].inputs}
@@ -514,6 +555,9 @@ class DataClerkTools:
         from prometheus.common.market_calendar import simulated_moment
         if type(day) is not date:
             raise ToolInputError("day must be a date")
+        bound = trading_clock.bound_day()
+        if bound is not None and day > bound:   # the close of a later day is the future of the desk's day
+            raise ToolInputError(f"no quote for {day}: the desk works as of {bound}, and a later close is not known yet")
         symbol = _symbol(symbol)
         root = self.bars_root or getattr(self.toolbox, "root_data_dir", REPO_ROOT / "data" / "historical") / "day_aggs_v1"
         if not Path(root).is_dir():
@@ -526,7 +570,7 @@ class DataClerkTools:
         moment = (simulated_moment(day) - timedelta(minutes=1)).isoformat(timespec="seconds").replace("+00:00", "Z")
         return {"symbol": symbol, "price": round(float(bar.close), 4), "change": round(float(bar.close - previous), 4), "change_percent": round(float((bar.close / previous - 1) * 100), 4) if previous else 0.0,
                 "high": round(float(bar.high), 4), "low": round(float(bar.low), 4), "open": round(float(bar.open), 4), "previous_close": round(float(previous), 4), "as_of_utc": moment,
-                "source": f"daily bar of {day} (USE_LIVE_TRADING=false: the market close of the previous business day)", "simulated": True}
+                "source": f"daily bar of {day} (USE_LIVE_TRADING=false: the market close of the last trading day that has closed)", "simulated": True}
 
     # ---- the Critic's code path (Critic v1 spec 5.2): NOT tools of the model, so not in DATA_CLERK_TOOLS (a model has no use for them)
 
@@ -550,14 +594,26 @@ class DataClerkTools:
                 out.update({i: {"found": False, "note": f"the store could not be read ({type(error).__name__})"} for i in ids})
                 continue
             stored = {i: (doc, meta or {}) for i, doc, meta in zip(got.get("ids", []), got.get("documents", []), got.get("metadatas", []))}
+            cutoff = self._cutoff_ts(corpus)
             for chunk_id in ids:
                 if chunk_id not in stored:
                     out[chunk_id] = {"found": False, "note": f"not in the stored {CORPUS_LABELS[corpus]}"}
                     continue
                 doc, meta = stored[chunk_id]
+                if cutoff is not None and not (isinstance(meta.get("published_ts"), (int, float)) and meta["published_ts"] <= cutoff):   # a day is bound: a chunk dated after it is not read (and one with no date cannot be placed)
+                    out[chunk_id] = {"found": False, "note": f"not in the stored {CORPUS_LABELS[corpus]} as of {trading_clock.bound_day()}"}
+                    continue
                 out[chunk_id] = {"found": True, "corpus": corpus, "article_id": meta.get("article_id"), "headline": meta.get("headline"), "publisher": meta.get("publisher"),
                                  "published_utc": meta.get("published_utc"), "url": meta.get("url"), "tickers": list(meta.get("tickers") or []), "text": doc}
         return {chunk_id: out[chunk_id] for chunk_id in wanted}
+
+    @staticmethod
+    def _cutoff_ts(corpus: str) -> int | None:
+        """While a day is bound: the last `published_ts` a chunk of this collection may have (the end of that Eastern day; for the filings, which have a date and no time, 23:59:59 UTC of the day); None when nothing is bound."""
+        day, horizon = trading_clock.bound_day(), trading_clock.horizon()
+        if day is None:
+            return None
+        return int(datetime.combine(day, time(23, 59, 59), tzinfo=timezone.utc).timestamp()) if corpus == "filings" else int(horizon.timestamp())
 
     def read_evidence(self, symbol: str, ids: list[str]) -> dict[str, dict]:
         """The filing-evidence items of one symbol with these ids (E3 ...), read again from the STORED filings (free, nothing fetched): {id: {found, topic, filter, quote, what, derived, source: {accession,

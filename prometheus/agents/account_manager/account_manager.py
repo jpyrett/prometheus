@@ -586,6 +586,10 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         """The saved holdings and the settled cash, as the same Portfolio the rest of the desk already reads."""
         return self._book().list_portfolio(self.account_id)
 
+    def history(self) -> dict:
+        """The account's dated trades and cash ledger as the book keeps them (read only): `{trades: [...], cash: [...]}`, oldest first. The Proving Ground's live monitor reads it; nothing is written."""
+        return self._book().history(self.account_id)
+
     def set_risk_level(self, level: str) -> str:
         """Set the user's risk tolerance to conservative, moderate, or aggressive (the levels on the profile). Returns the level that was saved."""
         saved = self._book().set_risk_level(self.account_id, level)

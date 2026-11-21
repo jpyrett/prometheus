@@ -8,7 +8,7 @@ The cap means one number tells the whole story: a recommendation with a blocker 
 A finding that asks for a person to look (`requires_human`) DENIES the recommendation (`needs_human_review`; design choices entry 103, Jacob 2026-11-15: *"if the Critic wants a person to review, then the Critic needs to Deny
 the recommendation and return the reason"*): there is no third state between approved and denied. That denial is NOT a blocker and does not cap the score: it says the review could not be trusted without a person, not that
 the recommendation is bad, so the score stays what the dimensions gave. `requires_human` and `requires_human_reasons` stay on the review: they name the finding.
-The summary sentence is built from fixed wording and the findings' own messages: a model never writes a line the user reads.
+The summary sentence is built from fixed wording and the findings' own messages: a model never writes a line the user reads. An APPROVE sentence also says the two findings that inform without denying (`INFORMS`).
 """
 from dataclasses import dataclass, field
 
@@ -16,6 +16,8 @@ from prometheus.agents.critic.config import DIMENSIONS, CriticConfig
 from prometheus.agents.critic.record import BLOCKER_ORDER, Dimension, Finding, Measure
 from prometheus.agents.critic.report import scorecard  # noqa: F401  (the card the Account Manager shows; defined with the report so that scoring stays pure arithmetic)
 
+# The two findings that INFORM an approval (Critic v2, rules C2 and C3): they stopped denying, so an APPROVE sentence says them, or the user would learn of a newer bad article or of a blend the quotes no longer support only from the card.
+INFORMS = ("fresh_negative_news", "blend_not_supported")
 LABEL = {"accuracy": "accuracy", "evidence": "evidence", "risk_fit": "risk fit", "timing": "timing", "value": "value", "chart": "chart"}
 
 
@@ -91,7 +93,9 @@ def summarize(symbol: str, verdict: Verdict, findings: list[Finding], dimensions
     (`DENY YUM: a person must look before this can trade: evidence_not_reviewed (The quotes could not be reviewed by the model: ...).`)."""
     if verdict.approved:
         parts = ", ".join(f"{LABEL[n]} {d.points:.0f}/{d.weight:g}" for n, d in dimensions.items() if d.applicable)
-        return f"APPROVE {symbol}: score {verdict.score} ({verdict.grade}); {parts}."
+        told = list({f.code: f for f in findings if f.severity == "warning" and f.code in INFORMS}.values())
+        note = (" Note: " + "; ".join(f"{f.message.rstrip('.')} ({f.code})" for f in told[:2]) + (f"; and {len(told) - 2} more" if len(told) > 2 else "") + ".") if told else ""
+        return f"APPROVE {symbol}: score {verdict.score} ({verdict.grade}); {parts}.{note}"
     blockers = order_blockers(findings)
     reasons = []
     if blockers:

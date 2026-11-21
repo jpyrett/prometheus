@@ -28,7 +28,8 @@ from datetime import date, timedelta
 from prometheus.agents.advisor.config import AdvisorConfig
 from prometheus.agents.advisor.events import BEARISH
 from prometheus.agents.advisor.gates import value
-from prometheus.agents.advisor.record import FamilyResult, TradePlan
+from prometheus.agents.advisor.record import ExitPlan, FamilyResult, TradePlan
+from prometheus.common.market_calendar import next_trading_day
 
 FAMILY_INVALIDATION = {"trend": "below_sma_200", "reversion": "rsi_14_above_70"}   # capital_return and conviction have none of their own: the stop, the time and a bearish event end them
 
@@ -39,6 +40,28 @@ def add_weekdays(day: date, n: int) -> date:
         day += timedelta(days=1)
         n -= day.weekday() < 5
     return day
+
+
+def add_trading_days(day: date, n: int) -> date:
+    """The date `n` TRADING days after `day`, by the market calendar (weekends and the exchange's holidays skipped: `market_calendar.next_trading_day`)."""
+    for _ in range(n):
+        day = next_trading_day(day)
+    return day
+
+
+def neutral_exit_plan(metrics: dict | None, today: date, config: AdvisorConfig) -> ExitPlan:
+    """The exit plan of a NEUTRAL company (Advisor v2, design/critic_v2_evidence_spec.md section 7): the stop is `neutral.stop_atr_multiple` (2.0) times the 14-day ATR under the last close, and the time stop is `neutral.horizon_bars` (20)
+    trading days after `today`, the decision day. NO target (nothing in the record says where a neutral company should go) and nothing else: it is an EXIT plan, not an entry plan, so the Trader's tickets of a neutral purchase (market, at the
+    quote) are untouched. With no ATR (fewer than 20 stored bars) or a stop that would not be above zero there is no stop and the time stop alone stands, and `basis` says so. Pure arithmetic, no model, and no size, no portfolio."""
+    rule = config.neutral
+    last, atr = value(metrics, "last_close"), value(metrics, "atr_14")
+    stop = round(last - rule.stop_atr_multiple * atr, 4) if last is not None and atr is not None and last - rule.stop_atr_multiple * atr > 0 else None
+    when = add_trading_days(today, rule.horizon_bars).isoformat()
+    if stop is not None:
+        basis = f"stop {rule.stop_atr_multiple:g} x atr_14 ({atr:.2f}) under the last close {last:.2f}; time stop {rule.horizon_bars} trading days after {today.isoformat()}; no target"
+    else:
+        basis = (f"no stop: {'atr_14 is missing (needs 20 bars)' if atr is None or last is None else 'the stop would not be above zero'}; the time stop alone stands, {rule.horizon_bars} trading days after {today.isoformat()}; no target")
+    return ExitPlan(stop_price=stop, time_stop_date=when, basis=basis)
 
 
 def price_of(symbol: str, metrics: dict | None, quote: dict | None) -> tuple[float | None, str]:

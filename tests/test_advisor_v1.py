@@ -34,7 +34,7 @@ def test_the_whole_step_on_the_fixture_universe(tmp_path):
     assert [f.family for f in record.families if f.passed] == ["event", "capital_return", "conviction"] and record.trade.family == "conviction" and record.trade.stop_price is not None and record.trade.order_style == "limit"
     assert record.thesis.thesis.startswith("Open Procter") and record.thesis.thesis_error is None
     assert [g.gate for g in record.gates] == ["no_metrics", "freshness", "red_flag", "event_risk"] and all(g.passed for g in record.gates)
-    assert record.audit.config_version == "1" and record.audit.metric_order == out.advisor_runs[0]["metric_order"] and record.audit.plan_run["calls"] == 1 and record.audit.thesis_run["calls"] == 1
+    assert record.audit.config_version == "2" and record.audit.metric_order == out.advisor_runs[0]["metric_order"] and record.audit.plan_run["calls"] == 1 and record.audit.thesis_run["calls"] == 1
     assert [(r["stage"], r["calls"], r["error"]) for r in out.advisor_runs] == [("plan", 1, None), ("thesis", 1, None)] and len(model.seen) == 2     # the model is called exactly twice
     assert len(advisor.ledger.records) == 1 and advisor.ledger.records[0]["identity"]["record_id"] == record.identity.record_id and out.candidates == []
 

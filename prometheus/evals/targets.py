@@ -82,3 +82,12 @@ def recorded_redteam_target():
 def sessions_target(inputs: dict) -> dict:
     """The recorded output of the capture `inputs["example_key"]` names (no agent is rerun)."""
     return recorded_summary(inputs["example_key"])
+
+
+def outcomes_target(inputs: dict) -> dict:
+    """The recorded outcome of the recommendation `inputs["example_key"]` names (the Track Record scored it against the stored bars; no agent is rerun)."""
+    from prometheus.evals.datasets import outcome_examples
+    for example in outcome_examples():
+        if example["key"] == inputs["example_key"]:
+            return example["outputs"]
+    raise KeyError(f"no scored outcome has the example key {inputs['example_key']!r}")

@@ -34,9 +34,8 @@ from typing import Callable
 from langchain_core.tools import BaseTool, StructuredTool, tool
 from pydantic import ValidationError
 
-from prometheus.agents.trader.broker import PaperBroker, Prices, Refused
+from prometheus.agents.trader.broker import PaperBroker, Refused
 from prometheus.agents.trader.record import Trade
-from prometheus.agents.trader.simulator import bar_on
 from prometheus.agents.trader.tickets import shown_range
 from prometheus.common.money import dumps, price as price_door
 
@@ -157,17 +156,6 @@ def loggable(args) -> dict:
     return out
 
 
-def market_price(prices: Prices, symbol: str) -> Decimal | None:
-    """The price the model is told a trade stands at: the quote (paper, a Decimal: it passed the price door when it was fetched) or the open of the entry bar (backtest: a stored bar's float, through the price door here); None when there is none."""
-    if prices.mode == "paper":
-        return prices.quotes.get(symbol)
-    bar = bar_on(prices.bars.get(symbol), prices.entry_date) if prices.entry_date else None
-    try:
-        return price_door(bar.get("open")) if bar else None
-    except ValueError:
-        return None
-
-
 class TraderTools:
     def __init__(self, broker: PaperBroker, notifier: Callable[[], dict]):
         """broker: the run's PaperBroker (it holds the trades and the one snapshot of prices, and does the handshake with the Account Manager). notifier: a callable with a boolean `done`, which closes the run and reads the
@@ -179,7 +167,7 @@ class TraderTools:
     def _view(self, trade: Trade) -> dict:
         out = {"trade_id": trade.trade_id, "symbol": trade.symbol, "side": trade.side, "shares": trade.shares, "status": trade.status}
         if trade.status == "new":
-            price = market_price(self.broker.prices, trade.symbol)
+            price = self.broker.venue.price_of(self.broker.prices, trade.symbol)      # the price the model is told a trade stands at: the venue says (the quote for paper, the entry bar's open for a backtest)
             out["market_price"] = price
             out["default_order"] = {"order_type": trade.order_type, "limit_price": trade.limit_price}
             out["limit_range"] = shown_range(trade.limit_low, trade.limit_high) if trade.limit_low is not None and trade.limit_high is not None else None

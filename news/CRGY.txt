@@ -248,3 +248,4446 @@ LNG | neutral | Mixed results with 13.81% miss on adjusted EPS ($3.62 vs $4.20 e
 CRGY | positive | Strong Q3 performance with 30.5% EPS beat, 113.9% year-over-year earnings growth, 55.9% revenue increase, and production growth to 328 MBoe/d. Solid liquidity of $2 billion supports positive outlook.
 FANG | positive | Excellent Q3 results with 19.1% EPS beat, 62.1% GAAP earnings growth, 38.4% revenue surge, strong free cash flow of $2.15 billion, and record production of 1,033,967 BOE/d.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140428900
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-24T08:12:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e4a936a76af820b76032ef423a1a88559b404024a537181bbabce244041bea3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: A Look At Crescent Energy (CRGY) Valuation After Its Amended Credit Facility And Strong Share Price Momentum
+<<<SUMMARY>>>
+Crescent Energy (CRGY) just reworked its main credit facility, cutting the borrowing base to US$3.5b, extending the revolver maturity to May 19, 2031, and gaining flexibility around future indebtedness. See our latest analysis for Crescent Energy. Against this backdrop, Crescent Energy’s share price return has been firm, with a 26.56% 3 month move and a 55.11% year to date gain, while the 1 year total shareholder return sits at 61.71%, pointing to strong positive momentum. If you are looking...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140398544
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-23T13:56:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87ff711671dd19750ac2416d6df4c2610c6403863e9e6fc9d9084e267cb313be
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Stock Under $50 with Impressive Fundamentals and 2 That Underwhelm
+<<<SUMMARY>>>
+Stocks in the $10-50 range offer a sweet spot between affordability and stability as they’re typically more established than penny stocks. But their headline prices don’t guarantee quality, and investors should exercise caution as some have shaky business models.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140393142
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-22T16:32:01Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=b82af337b006a0767a4d3a3d3f6a1df95845b54586352cb2995f2df947f313d3
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2193852970/image_2193852970.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: 11 'Safer' Dividend Dogs Lead 20 May Barron's 2026 Oil And Blue Chips
+<<<SUMMARY>>>
+Barronâs Oil & Blue Chip Tips for May 2026 highlight 20 stocks, with 11 deemed 'safer' based on free cash flow yields exceeding dividend yields. Read the full list here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140391827
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-22T16:28:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=061478bc1cce5abcec2a77d490e47d7874e3f0b0f2d45df20d5982b14b8c70ac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 2 Profitable Stocks Worth Your Attention and 1 We Find Risky
+<<<SUMMARY>>>
+Even if a company is profitable, it doesn’t always mean it’s a great investment. Some struggle to maintain growth, face looming threats, or fail to reinvest wisely, limiting their future potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140414130
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-21T21:29:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2d004a719f082a5be387c896da5528071ed6f99dc2d8ab44ff1dccd84139941
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Why This Fund Sold Off $11 Million of a Stock That's Up 325% in a Year
+<<<SUMMARY>>>
+With a global fleet and advanced automation, Nabors Industries delivers drilling solutions to oil and gas producers across 20+ markets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140414132
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-21T21:12:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c5406265c10bd7321d1d78905359939ac711e19bdfeacbd285f9d76a69c218c6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: What to Know About This Fund's $27 Million Bet on a Cash-Generating Oil Producer
+<<<SUMMARY>>>
+Houston-based Crescent Energy produces oil and gas from a diversified U.S. basin portfolio, with shares up 40% over the past year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140428905
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-21T13:55:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=057face79abe718adc7c99d5a885ea1ab3ba0364e2f1264be7fe084de267bac3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Wall Street Analysts Believe Crescent Energy (CRGY) Could Rally 25.55%: Here's is How to Trade
+<<<SUMMARY>>>
+The average of price targets set by Wall Street analysts indicates a potential upside of 25.6% in Crescent Energy (CRGY). While the effectiveness of this highly sought-after metric is questionable, the positive trend in earnings estimate revisions might translate into an upside in the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140543091
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-02T16:00:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=72138711f17b78bb6d3bb24bf128effadb8921a730c83efe52bc02ef0008b3f9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: All You Need to Know About Crescent Energy (CRGY) Rating Upgrade to Strong Buy
+<<<SUMMARY>>>
+Crescent Energy (CRGY) has been upgraded to a Zacks Rank #1 (Strong Buy), reflecting growing optimism about the company's earnings prospects. This might drive the stock higher in the near term.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140498500
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-02T10:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eeac56a467f4e97c196184c453696e96668db5abeb4339f1c0ca16755dfc111d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: New Strong Buy Stocks for June 2nd
+<<<SUMMARY>>>
+GOLD, ELMD, TPR, PLGO and CRGY have been added to the Zacks Rank #1 (Strong Buy) List on June 2nd, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140543093
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-02T09:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cc2b62b50faab7f07cff8d931647d4a87602656f3a79fc92fd26f0bfd0413c40
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Best Value Stocks to Buy for June 2nd
+<<<SUMMARY>>>
+CRGY, PLGO and GOLD made it to the Zacks Rank #1 (Strong Buy) value stocks list on June 2nd, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140497863
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-02T07:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a706b608b03f78afc6845a8f2fef4b4e6d27e6c7f6855235107b6e8e4eac752e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Best Income Stocks to Buy for June 2nd
+<<<SUMMARY>>>
+CRGY, HAS and PLGO made it to the Zacks Rank #1 (Strong Buy) income stocks list on June 2nd, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140543095
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-01T22:08:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f759eeb3ad36274247858032d36a170289eb88bc406856ebe88b8a3c34b7e2c5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Energy Stock on Our Buy List and 2 Facing Headwinds
+<<<SUMMARY>>>
+Energy businesses quietly power the physical things we depend on, from cars and homes to e-commerce infrastructure. But their prominence also brings high exposure to the ups and downs of economic and energy cycles. Luckily, the tide is turning in their favor as the industry’s 29% return over the past six months has topped the S&P 500 by 18.1 percentage points.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140456475
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-29T10:08:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91997a6e7d23b658e7e28e8c1b65e43c2aa443603c5b8b30f4ef404eadd18737
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 2 Value Stocks with Solid Fundamentals and 1 We Ignore
+<<<SUMMARY>>>
+Value investing has produced some of the world’s most famous investing billionaires, including Warren Buffett, David Einhorn, and Seth Klarman, who built their fortunes by purchasing wonderful businesses at reasonable prices. But these hidden gems are few and far between - many stocks that appear cheap often stay that way because they face structural issues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140543097
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-27T22:41:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=adbe41c3ac6870c9bba3044f4d3f538c72fba0fbcd51ff375a64bdd42b8b59b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy and Cactus Stocks Trade Down, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks fell in the morning session after WTI crude collapsed 4.7% to $92.94 on Iran-US peace deal progress.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140543098
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-27T21:44:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a7b4e5f8b0e427af185a3ae7bfb3468bd91d5c44861459dab1089c0df3049500
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 10 Percent Owner Sells CRGY 32.6M Shares for $402 Million
+<<<SUMMARY>>>
+This Houston-based energy producer, active across major U.S. basins, reported significant insider selling in its latest SEC filing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140434648
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-27T08:45:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=94fc093b74f9ea06a93be2f375e1c491bf23de9755fdea000f648d138c7e0971
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Mizuho Maintains Neutral on Crescent Energy, Raises Price Target to $15
+<<<SUMMARY>>>
+Mizuho  analyst Nitin Kumar   maintains Crescent Energy (NYSE:CRGY) with a Neutral and raises the price target from $14 to $15.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140659338
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-09T22:15:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=453d03443afebdcd8304d333a6edd538dd37cef52d98926c9174cb3d50ac67e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Falls More Steeply Than Broader Market: What Investors Need to Know
+<<<SUMMARY>>>
+The latest trading day saw Crescent Energy (CRGY) settling at $11.44, representing a -2.8% change from its previous close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140659339
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-09T13:18:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d591bb3ed0f38d411e27b0f0d21f03deb2753ea5da17d7f740fd7e18716295d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Spike In Oil Prices Boosted Crescent Energy Company (CRGY) in Q1
+<<<SUMMARY>>>
+American Century Investments, an investment management company, released its first-quarter 2026 investor letter for the “American Century Investments Small Cap Value Fund.” A copy is available to download here. Equity markets encountered challenges during the quarter, initially due to fears of AI disruption and later due to the conflict in Iran. The Fund’s Investor Class […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140659340
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-09T12:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7df89ea1df26ea99b6eb29b3097817566a8f7b0aa99daf97e9ebaada22494839
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Oklo Strengthens Reactor Development With ARMEC Acquisition
+<<<SUMMARY>>>
+OKLO's ARMEC acquisition boosts its manufacturing, talent and supply-chain control, strengthening its ability to accelerate advanced nuclear deployment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140536850
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-05T13:40:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e80a9f99b2e8dae3252b2d1194377dc2e4c3bc53ee75af76ed44a23dea2cff4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Are Oils-Energy Stocks Lagging Chord Energy Corporation (CHRD) This Year?
+<<<SUMMARY>>>
+Here is how Chord Energy Corporation (CHRD) and Crescent Energy (CRGY) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140535500
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-05T12:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb8c656e08e881d91897cf031769d208656da2686a8341c372e175710aa50317
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: GE Vernova Stock Surges 47.2% YTD: Should Investors Jump in Now?
+<<<SUMMARY>>>
+GEV stock surges this year on AI-driven power demand, wind expansion in India and gas turbine growth, but tariff costs and premium valuation loom.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140543089
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-04T09:10:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e5a3b9d340593826ae9ec8c0486857066d90dcc898038039dd7b4d03d4d981e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: How Investors Are Reacting To Crescent Energy (CRGY) Zacks Rank #1 Upgrade And Earnings Optimism
+<<<SUMMARY>>>
+Crescent Energy recently received a Zacks Rank #1 (Strong Buy) upgrade, reflecting heightened optimism among analysts about its earnings prospects and underlying fundamentals. This upgrade underscores a shift in analyst expectations for Crescent’s future profitability, potentially raising investor attention to its evolving earnings profile. We’ll now examine how this Strong Buy upgrade, tied to improved earnings expectations, interacts with Crescent Energy’s existing investment...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140543090
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-03T16:07:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=235dba2b206da3a69034781bb1904273edb065391a6adf4f8d26e1ae6452ee9c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Small-Cap Stock Worth Your Attention and 2 Facing Headwinds
+<<<SUMMARY>>>
+Small-cap stocks can be incredibly lucrative investments because their lack of analyst coverage leads to frequent mispricings. However, these businesses (and their stock prices) often stay small because their subscale operations make it harder to expand their competitive moats.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140645182
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-16T12:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0b232632934ef057fe6d52072c1d4dbf42215df55767572a51c4fb3295ebad2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy and the Trend Toward Oil-Rich Cash Flow Assets
+<<<SUMMARY>>>
+CRGY's oil-rich assets, disciplined capital plan and royalty exposure show why cash-flow-first energy producers are drawing investor attention.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140645038
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-16T12:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92de3dcfec6d1d9770de9c30b988a7d8b56dbdeac1c4bf5a1c3a0cae2a285d31
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Why Crescent Energy's Improved FCF Outlook Deserves Attention
+<<<SUMMARY>>>
+CRGY's stronger execution, cheap valuation and $1B 2026 free cash flow outlook sharpen its value case, but debt and commodity swings remain risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140645039
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-16T12:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=305757086f27f6f996bb82d623eaaf090582f68fa280db2ad839068e4b09b5c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Stock Outlook as Permian Synergies Build in 2026
+<<<SUMMARY>>>
+CRGY's 2026 outlook brightens as Permian synergies, minerals cash flow and free cash flow flexibility support its oil-weighted portfolio.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140643021
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-16T05:08:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=485ec341391d67a9dd09598edf3534befa8fc616e0ff16288bbfc91b19b2c9e4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy and Permian Resources Stocks Trade Down, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks fell in the morning session after a peace agreement between the U.S. and Iran sent oil prices tumbling, dragging down the energy sector.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140659330
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-15T22:15:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ca58105f00fb71e68b53ffb8c6e387cc11e9ff8e99d1ebe7195f5362772735c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Sinks As Market Gains: Here's Why
+<<<SUMMARY>>>
+Crescent Energy (CRGY) closed the most recent trading day at $11.02, moving 4.84% from the previous trading session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140617765
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-12T12:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f504232771cfbd916c4fae837d95e1d7bbaaf0c0161faf2ebe081146175e1607
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Ormat Technologies Gains From Geothermal and Energy Storage Expansion
+<<<SUMMARY>>>
+ORA expands geothermal and energy storage capacity through new projects and acquisitions, while tariff and supply-chain risks remain in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140659332
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-12T12:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=910c74cc06fd8bc778d8417a2b4f96115e784991e3248095aeec54c7b57bdf7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Oklo Strengthens Aurora-INL Path With DOE's PDSA Clearance
+<<<SUMMARY>>>
+OKLO wins DOE approval for Aurora-INL's preliminary safety analysis, advancing its first fast fission power plant under the Reactor Pilot Program.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140607343
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-11T13:14:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09217ea8ec47e034cd9ac4842fc8c4b00b6a9b6bff3104ae3c9825730eb40fd0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Sempra Poised Well for Growth on LNG and Utility Investments
+<<<SUMMARY>>>
+SRE expands LNG, utility and renewable energy investments to meet rising power demand, though wildfire risks remain a concern.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140601081
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-10T23:05:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=faced60bd52d267f70c70348d13640c749684daac4f1d23829cb9c40a18d9e91
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Permian Resources and Crescent Energy Shares Skyrocket, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks jumped in the afternoon session after the U.S. launched "self-defense strikes" on Iran as Trump warned the country "will have to pay the price" for stalling negotiations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140659336
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-10T09:05:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ee991ab8a840c88cd0456da8c9d2b5765f3ebf55f5604c4a36c78761c5bfccf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: A Look At Crescent Energy (CRGY) Valuation After Recent Share Price Weakness
+<<<SUMMARY>>>
+Crescent Energy (CRGY) has drawn investor attention after recent share price weakness, with the stock down 7.7% over the past month and 4.3% over the past 3 months from its last close of US$11.44. See our latest analysis for Crescent Energy. Despite the recent share price pressure, with the stock down over the past week and month, Crescent Energy still shows a stronger picture on a longer view, with a 34.43% year to date share price return and a 30.52% 1 year total shareholder return. If you...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140589242
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-10T00:06:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2fa04a3bfa036e3a7452bc30a048c69572c6a71cea8d9094a2f1a7cf2004cbe7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Chord Energy, Helmerich & Payne, and Crescent Energy Shares Plummet, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks fell in the afternoon session after Trump said a US-Iran deal could come in "two or three days," pulling energy equities sharply lower as investors priced out the conflict premium.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140674061
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-18T13:51:55Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f4c48aa965bbe88cb276a70f437a5079eb5faf1541a80e5e0ade4a69600a2745
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Raymond James Maintains Strong Buy on Crescent Energy, Lowers Price Target to $18
+<<<SUMMARY>>>
+Raymond James  analyst John Freeman   maintains Crescent Energy (NYSE:CRGY) with a Strong Buy and lowers the price target from $20 to $18.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140659325
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-17T19:38:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a58620fe2b93b10ccdf9efdffada9dfd3727b3a207e4cc8094aa9edc2c334a15
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Is Crescent Energy (CRGY) One of the Best New Stocks to Buy With the Huge Upside Potential?
+<<<SUMMARY>>>
+Crescent Energy Company (NYSE:CRGY) is one of the best new stocks to buy with the huge upside potential. On May 4, Crescent Energy reported Q1 2026 earnings, driven by record production of 341 MBoe/d and the accelerated integration of its Permian assets. By optimizing operational planning and reducing well costs through service contract rebidding and […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140945428
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-02T16:36:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09a8f69aa10ab65422d2aa551eef8c7abe413cecd93e82b32ad671f4d9f88294
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: A Look Back at U.S. Shale E&P Stocks’ Q1 Earnings: Crescent Energy (NYSE:CRGY) Vs The Rest Of The Pack
+<<<SUMMARY>>>
+As the craze of earnings season draws to a close, here’s a look back at some of the most exciting (and some less so) results from Q1. Today, we are looking at U.S. shale E&P stocks, starting with Crescent Energy (NYSE:CRGY).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140772109
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-30T12:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5c4ca4338be38d1a2b159a2161b57f9fdc7adac22b25c8cfa22988e1ccb73ad9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Shell Signs New Engineering Framework Agreement With Chiyoda
+<<<SUMMARY>>>
+SHEL signs a new agreement with Chiyoda to speed engineering support, improve project execution and strengthen delivery across global energy projects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140772110
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-30T12:48:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aa40e3b0cdba947198e5b2f258d33dabb6af5db6be401e2bc62185d8a6e7864f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Halliburton Teams Up With Shape Digital for AI Asset Management
+<<<SUMMARY>>>
+HAL teams with Shape Digital to unify subsurface and operational data, helping operators improve production planning, reliability, safety and efficiency.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140945431
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-29T22:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a729a2ceec6300d512e9d4accad2dbe02243060d08cf5db8e2d66b4bf04af41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Sinks As Market Gains: Here's Why
+<<<SUMMARY>>>
+In the closing of the recent trading day, Crescent Energy (CRGY) stood at $10, denoting a -1.19% move from the preceding trading day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140764209
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-29T14:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0ad061baa2ac4d2122ee02bacf8f158dfaea47dca30dd70c903d677c45f396d6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Canadian Natural Resources' Stability Makes It a Wise Hold Right Now
+<<<SUMMARY>>>
+CNQ benefits from low-cost operations, record production and vast reserves with a strong growth pipeline, but earnings face commodity price volatility, high capex and maintenance risks
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140764150
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-29T14:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8c28dcd6cf7f69d5e5ec61e225b0ba0d73eb96a51ad75c635a60a1701b78b4a7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Williams Eyes LNG Growth With Potential $5.5B Momentum Midstream Deal
+<<<SUMMARY>>>
+WMB reportedly nears one of its biggest acquisitions, with a $5.5 billion Momentum Midstream deal aimed at expanding gas infrastructure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140736605
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-26T13:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c57b49098c467ce96ab79efe572abc49920fa0ddbf099de7c29819f183875109
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: TechnipFMC Wins iEPCI Contract From Var Energi in the North Sea
+<<<SUMMARY>>>
+FTI lands a $500M-$1B North Sea iEPCI contract from Var Energi, boosting backlog and reinforcing its integrated subsea growth strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140768076
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-26T13:21:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bbbe2551bf2a9c9d4eae96d7b9fb67e8f36ab80910744ecaef295572e0c46e07
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Saipem and Subsea7 Progress Merger Amid Saudi Asset Sale
+<<<SUMMARY>>>
+SAPMF advances its SUBCY merger with Brazil's approval while selling its Saudi shallow-water drilling business for $285 million to sharpen its offshore focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140851068
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-09T12:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c5d66addb8f4dbfcc5e901e85e602d83233cc23f74cbc89f769933d19e400d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Stock Rises 18% in 6 Months: Time to Buy or Stay?
+<<<SUMMARY>>>
+CRGY climbs 18% in six months, but can strong cash flow, Permian synergies and low valuation outweigh elevated leverage, lower ROE and oil price risks?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140942573
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-09T11:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8e4ac2c9dc1d1931951e2864f0393b925fc985336e56b16f6aa22248af5d3cb9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 2 of Wall Street’s Favorite Stocks with Exciting Potential and 1 We Turn Down
+<<<SUMMARY>>>
+The stocks in this article have caught Wall Street’s attention in a big way, with price targets implying returns above 20%. But investors should take these forecasts with a grain of salt because analysts typically say nice things about companies so their firms can win business in other product lines like M&A advisory.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140945424
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-08T20:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6efc82a4d2bf374c1564eef05c044263f4734153828c6727217058eed77eac55
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Schedules Second Quarter 2026 Earnings Release and Conference Call
+<<<SUMMARY>>>
+HOUSTON, July 08, 2026--Crescent Energy Company (NYSE: CRGY) today announced plans to host a conference call and webcast at 10 a.m. CT, on Tuesday, August 4, 2026, to discuss its second quarter 2026 financial and operating results. The Company plans to release results after market close on Monday, August 3, 2026. The earnings release, supplemental slides and live webcast will be available through the Investors section of the Company’s website at www.crescentenergyco.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140829227
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-07T11:21:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09ce33068e5557679dadddcb8709c398e0aad085f5fdf20f8d92fdd457ab8ac6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 2 Growth Stocks with Explosive Upside and 1 We Find Risky
+<<<SUMMARY>>>
+Growth boosts valuation multiples, but it doesn’t always last forever. Companies that cannot maintain it are often penalized with large declines in market value, a lesson ingrained in investors who lost money in tech stocks during 2022.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140829798
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-07T09:34:04Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=082f06d7fab550b07efeb5a61aa00820b7d116feb9c7c4198fa330d5169bdcb9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2226780791/image_2226780791.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy: The Free Cash Flow Doesn't Lie - This One Is Way Too Cheap To Ignore
+<<<SUMMARY>>>
+Crescent Energy (CRGY) is rated a Strong Buy, with valuation deeply disconnected from its robust free cash flow and strong synergies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140945426
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-06T16:10:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=451ef9078c3042b2df8d041ba6a99cecf625bf8fc4c4454fdfb1db2683c35946
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Will Crescent Energy (CRGY) Beat Estimates Again in Its Next Earnings Report?
+<<<SUMMARY>>>
+Crescent Energy (CRGY) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140945427
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-03T04:31:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=06a137b3e60cd473e912405ea30d3fc09647761a51aa5e421a786f96f4f401a6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Still Looks Cheap As The Market Stays Cautious
+<<<SUMMARY>>>
+Crescent Energy stock has slipped sharply over the past month, yet the broader valuation checks still lean cheap. This sets up a tension between weak recent returns and what the fundamentals-based pricing signals suggest. The share price is down 22.1% over the past month, which puts recent trading firmly against holders who bought into the earlier advance. Recent earnings strength and scale in key U.S. shale basins can support investor expectations for future cash generation, but the recent...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140945416
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-15T22:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=69b0c37991ce1bc9d3ce7723a6deadc21971a91cda2a119df46d9d893d6a09ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Why Crescent Energy (CRGY) Outpaced the Stock Market Today
+<<<SUMMARY>>>
+Crescent Energy (CRGY) closed the most recent trading day at $10.17, moving +1.6% from the previous trading session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140914050
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-15T19:41:21Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=be0374bf3fa33371214f1c93369ba18aa7899c72940bd716b1c7737ecc7b0bf7
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: UBS Initiates Coverage of Crescent Energy (CRGY) with Buy Recommendation
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140915175
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-15T06:54:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e00ab5f0bc8b493c2bca5867b042e6bcf7d8fac49ebaa075e6bc75ff2b901db2
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: UBS Initiates Coverage On Crescent Energy with Buy Rating, Announces Price Target of $13
+<<<SUMMARY>>>
+UBS  analyst Peyton Dorne   initiates coverage on Crescent Energy (NYSE:CRGY) with a Buy rating and announces Price Target of $13.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140896978
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-14T12:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c0a46004bf04a33bc9e66e4333a80c616c665bed0e8d29776bf12e18c087f2d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: A Global Insurer Just Bought This Canadian Company's Quantum-Risk Toolkit, and the Timing Is No Accident
+<<<SUMMARY>>>
+Some of the most consequential decisions in business are made years before the risk they address actually materializes. A driller commits capital to a deepwater project that will not produce for a decade. An insurer prices policies against events that may never happen. And now, a growing set of regulated enterprises are spending money today to defend against a computer that does not yet exist in usable form: a quantum machine powerful enough to break the encryption that protects the modern finan
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140892672
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T23:02:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=42bedee2da4c18c67c6d6da5f9b46f778b8b5c81e8df53409759cd5b9c335bb0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Texas Pacific Land, Crescent Energy, and Noble Corporation Shares Skyrocket, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks jumped in the afternoon session after the U.S. launched a new wave of military strikes against Iranian targets, as President Donald Trump announced a 20% U.S. toll on cargo transiting the Strait of Hormuz.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140887076
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T13:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ee91bc1812d438787b59e401e12e3d07ad94520ba571ce823e217f075e506c40
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Can CRGY's Cash Flow Centric Business Model Support Future Growth?
+<<<SUMMARY>>>
+Crescent Energy prioritizes free cash flow over production growth, with strong liquidity, synergy gains and a projected $1B in 2026 levered FCF.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140025917
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T10:42:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=362210f743ece998027102e7fe07bf0bb1afa66d96332a9c0fec2469c73696c3
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: PEDEVCO To Conduct 1-For-20 Reverse Stock Split
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140945420
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-12T14:23:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dfaeea2582254c4488a5d5e15124cee5b9a279dd9cced4269ebfdf25dbfd764a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company (CRGY) Is A Top Stock In Miller Value Partners’ Filings
+<<<SUMMARY>>>
+We recently published Bill Miller Portfolio: Top 10 Stock Picks. Crescent Energy Company (NYSE:CRGY) is one of the top stock picks. Crescent Energy Company (NYSE:CRGY) is a mid sized oil and gas exploration and production company. Its shares are up by 2.4% over the past year and by 11% year-to-date. Raymond James discussed the firm […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140874571
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-11T22:44:01Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5aef80a696bc4b97a600c898f1845b67cb0b1a853aea80702ec612d23f748d3a
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1429965405/image_1429965405.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy: Concentrating On Free Cash Flow Growth
+<<<SUMMARY>>>
+Crescent Energy (CRGY) aims to boost free cash flow via operational improvements and acquisitions, backed by KKR.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140945421
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-10T10:31:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8bc3928a91b4f6d02978a3e24c1c5448559bfbd01b5be23e8d19c8ff17944a9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Profitable Stock Worth Your Attention and 2 We Turn Down
+<<<SUMMARY>>>
+Even if a company is profitable, it doesn’t always mean it’s a great investment. Some struggle to maintain growth, face looming threats, or fail to reinvest wisely, limiting their future potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104700
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-24T22:15:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bdc148bb10ecba38f006a920e155b0fbe7592d24fddb7cfaf4880babe7c932d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Sinks As Market Gains: Here's Why
+<<<SUMMARY>>>
+The latest trading day saw Crescent Energy (CRGY) settling at $11.27, representing a -1.05% change from its previous close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104701
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-21T18:11:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d561a47ab614a3ec55f39274fcb0a56bf86161c5af0d94173e77edb462c3eaea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Looks Undervalued On Its 30% One Year Run
+<<<SUMMARY>>>
+Crescent Energy has delivered a 29.6% return over the past year, and with the stock recently closing at US$10.47, the key tension now is whether that performance is already reflected in the price or if the current valuation still leaves room for upside. A 29.6% gain over 1 year sets Crescent Energy apart as a solid recent performer, which naturally raises the bar for what counts as "cheap" today. Strong free cash flow generation and operational efficiency can support the investment case,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140968512
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-21T04:20:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=73514492250fe9d945bd98324b7adb46559dbd5c39f0b0bff65783b70cdc456b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2164170283/image_2164170283.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy: Beyond The Commodity Cycle
+<<<SUMMARY>>>
+Despite CRGYâs high-quality asset portfolio and proven value creation strategy, shares trade at a trailing 12-month FCF yield of ~22%, while none of its peers offer a yield >12%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104702
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-20T13:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=38b998c63f5ebdc152959853740c522ebe099b9e95cbd6c04045ebac1fed2027
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy vs. Magnolia: Which E&P Stock Offers a Better Bet?
+<<<SUMMARY>>>
+CRGY and MGY both offer compelling E&P strategies, but one stands out for long-term investors. See what drives the difference.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104694
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-30T22:15:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32cc3c2498fd7246432cd735d2225c36eafe31b931bdac90055eb8e1b6dd0aac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Gains But Lags Market: What You Should Know
+<<<SUMMARY>>>
+Crescent Energy (CRGY) closed the most recent trading day at $11.17, moving +1.09% from the previous trading session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141064716
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-30T10:37:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=725461f7bf8079df1cb314adee6a22a0674f3cf132d616ee002e87858d7678f5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy, Northern Oil and Gas, HighPeak Energy, Occidental Petroleum, and Matador Resources Shares Skyrocket, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks jumped in the afternoon session after renewed fighting across the Middle East, and a larger-than-expected drop in U.S. crude stockpiles reinforced concerns over oil supply.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139935648
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-29T15:17:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f6b03327e57c1655b259ebab9b8994234ae51b3ce453684b0bc111b21b7ee37d
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Chord Energy shares are trading higher after Truist Securities initiated coverage on the stock with a Buy rating and announced a $169 price target.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141054363
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-29T13:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=17b85a4cb1cd6477a8ab5378c52dda364ee84de25706cb5b5582b4cda90c7f2e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy to Report Q2 Earnings: What's in Store?
+<<<SUMMARY>>>
+CRGY's Q2 results may get a lift from stronger oil prices and revenues, though weaker natural gas realizations could temper earnings growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104697
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-28T23:09:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e710bfd00db7428bf4e0c2203f4dfc25c03ac0e37a723af6372922ff6d895488
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 2 Value Stocks to Target This Week and 1 We Brush Off
+<<<SUMMARY>>>
+The low valuation multiples for value stocks provide a margin of safety that growth stocks rarely offer. However, the challenge lies in determining whether these cheap assets are genuinely undervalued or simply on sale due to their potentially deteriorating business models.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104698
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-28T14:00:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=25faa4841331003382ab96d6116aacc9257624172dc5fa829b1ceca0e1a74f99
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Enlight Renewable Energy Ltd. (ENLT) Earnings Expected to Grow: Should You Buy?
+<<<SUMMARY>>>
+Enlight Renewable Energy Ltd. (ENLT) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104699
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-27T14:00:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a07e1da5eac7ffbf4d845ab3281596814173c326f0d9b0571c68b0117e579780
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Reports Next Week: Wall Street Expects Earnings Growth
+<<<SUMMARY>>>
+Crescent Energy (CRGY) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140057383
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-27T10:50:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=13e26895d4948184feb4cf6aae2fc7d647c35e4605c211341629934a998840e5
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Battalion Oil Shares Resume Trade
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141033382
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-27T08:01:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8d7241861be51ecf470b5a62bc48cbc5c83eaaedde98aabf70fc0a601bcc91a2
+image_url: https://cdn.benzinga.com/files/images/story/2026/07/27/Display-Of-Stock-Market-Quotes.jpg?width=2048&height=1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Everbright Digital, Kosmos Energy And Other Big Stocks Moving Lower In Monday’s Pre-Market Session
+<<<SUMMARY>>>
+US stock futures rise 1%, Everbright Digital shares fall 8.1% in pre-market trading, other stocks also decline
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141142192
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T15:15:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=87d570bbb595a31dd83e597fe27e5b708a03f36c18873a60a68062a892d4782c
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: UBS Maintains Buy on Crescent Energy, Raises Price Target to $14
+<<<SUMMARY>>>
+UBS  analyst Peyton Dorne   maintains Crescent Energy (NYSE:CRGY) with a Buy and raises the price target from $13 to $14.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464182
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-05T13:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6942406e33ef423189df7ef6263e2f03f9032dd6e51ed3a4cdd803469e58d46
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Q2 Earnings Call Centers on Permian Synergy Expansion
+<<<SUMMARY>>>
+CRGY's Q2 results feature higher output, record free cash flow and a tripled Permian synergy target without a higher development budget.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464183
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-05T05:11:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe28a31ea8cc640243a1b778e73bc44d073ec5db866ad78e1eac3c733c0d551f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Gets Fair Value Trim As Analysts Rework Oil Assumptions
+<<<SUMMARY>>>
+The fair value estimate for Crescent Energy has shifted from about US$17.36 to roughly US$15.93, which places it closer to the current cluster of analyst price targets between US$13 and US$18. This change aligns with recent commentary that balances optimism around portfolio integration and deleveraging with caution on leverage and oil price sensitivity. As you read on, you will see how these elements fit together and what to watch as the Crescent Energy story continues to evolve. Analyst...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464184
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-05T05:03:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d05cd8c577373c8074a56217e7137c248d10b43259e12f42b6095920002d203f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Q2 Earnings Call Highlights
+<<<SUMMARY>>>
+Crescent Energy (NYSE:CRGY) reported record quarterly levered free cash flow in the second quarter of 2026 and raised its full-year production outlook, citing higher volumes, lower operating costs and accelerating savings from its Permian acquisition. Chief Executive Officer David Rockecharlie said
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141113704
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-04T16:10:07Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c0d8fc22d8bc897fb9f9cc9bdc7804ed7ef9102a4796826591eb12fde2f08702
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company (CRGY) Q2 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Crescent Energy Company (CRGY) Q2 2026 Earnings Call August 4, 2026 11:00 AM EDTCompany ParticipantsDavid Rockecharlie - CEO & DirectorBrandi Kendall -...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141114345
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-04T14:14:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=384faab078d9c91ef391acc4b5355b876e922eb3c07d1aeaa522828ed2cf85d1
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Mizuho Maintains Neutral on Crescent Energy, Raises Price Target to $16
+<<<SUMMARY>>>
+Mizuho  analyst Nitin Kumar   maintains Crescent Energy (NYSE:CRGY) with a Neutral and raises the price target from $15 to $16.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141110932
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-04T13:02:15Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a2f38daf8120cdfe5e4c250dc3cf475fcbeb2ce4dbea3d7d0e67a6c335617333
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company 2026 Q2 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-08-04. The following slide deck was published by Crescent Energy Company in conjunction with their 2026 Q2 earnings call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141114346
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-04T09:05:38Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5e7e7e57a70f06ede7a9ed6ca1c58bfed1caaa4a14f8762e44f49a9f3703489e
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Stephens & Co. Maintains Overweight on Crescent Energy, Raises Price Target to $18
+<<<SUMMARY>>>
+Stephens &amp; Co.  analyst Mike Scialla   maintains Crescent Energy (NYSE:CRGY) with a Overweight and raises the price target from $17 to $18.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104689
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-03T23:00:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9c853b95e23a283e036605b820eed352f74ae9d8ed59854c58930523ff60872a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Q2 Earnings: How Key Metrics Compare to Wall Street Estimates
+<<<SUMMARY>>>
+The headline numbers for Crescent Energy (CRGY) give insight into how the company performed in the quarter ended June 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104690
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-03T22:45:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4b9e1db49b0eeb0ca68f24cf03906cc1fa6fbee1302a2d5dc62f61ade48b6b14
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Surpasses Q2 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+Crescent Energy (CRGY) delivered earnings and revenue surprises of +16.95% and +13.21%, respectively, for the quarter ended June 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104691
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-03T21:29:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2dfa5b732766f44bd2e1c9c3265511a017d9f9dddea60c1616316c887602411c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (NYSE:CRGY) Surprises With Strong Q2 CY2026
+<<<SUMMARY>>>
+Oil and gas producer Crescent Energy (NYSE:CRGY) reported Q2 CY2026 results topping the market’s revenue expectations, with sales up 55.3% year on year to $1.39 billion. Its non-GAAP profit of $0.69 per share was 16.5% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104692
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-03T20:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cd9c52cb4dec6ead7e7c9b781ea44fd27aa2d5e9641edf08122eadcef27c2732
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Reports Second Quarter 2026 Results
+<<<SUMMARY>>>
+HOUSTON, August 03, 2026--Crescent Energy Company (NYSE: CRGY) ("Crescent" or the "Company") today announced financial and operating results for the second quarter of 2026. Crescent’s earnings release and supplemental earnings presentation can be found at www.crescentenergyco.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141114347
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-03T16:17:46Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a69de0a65598ee917ab294d9b7a0db05e7c498b20f647afa289dcdfc5b022c7c
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Q2 Adj. EPS $0.69 Beats $0.58 Estimate, Sales $1.395B Beat $1.259B Estimate
+<<<SUMMARY>>>
+Crescent Energy (NYSE:CRGY) reported quarterly earnings of $0.69 per share which beat the analyst consensus estimate of $0.58 by 18.97 percent. This is a 72.5 percent increase over earnings of $0.40 per share from the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141104693
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-02T04:44:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=816d513cc25ae01e46186deea1d9e0286904a3a54be7cc2e7ed86bffa7e611e5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) To Report Earnings Tomorrow: Here Is What To Expect
+<<<SUMMARY>>>
+Oil and gas producer Crescent Energy (NYSE:CRGY) will be reporting results this Monday afternoon. Here’s what to expect.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141210187
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-13T09:07:52Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=69a7f5f83a531f771f490c210043cc5ca15a27416f1ae8b35f7970e77f8996e9
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Wells Fargo Maintains Overweight on Crescent Energy, Raises Price Target to $24
+<<<SUMMARY>>>
+Wells Fargo  analyst Sam Margolin   maintains Crescent Energy (NYSE:CRGY) with a Overweight and raises the price target from $18 to $24.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464179
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-11T22:45:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a1b0ab81966766968cc72a5f8128da6757f73a429284312bf3bf38ec0750892a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: The Top 5 Analyst Questions From Crescent Energy’s Q2 Earnings Call
+<<<SUMMARY>>>
+Crescent Energy’s second quarter results reflected strong operational execution and meaningful improvements across its core basins. Management attributed the outperformance to higher oil production, significant cost reductions, and enhanced free cash flow generation, particularly following the integration of recent Permian acquisitions. CEO David Rockecharlie highlighted that “consistent execution across the portfolio drove another quarter of outperformance and supports an enhanced full year out
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464173
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-11T01:29:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=196442d2717476bb3bb6dabdbd3ea8545d9ede3bc0cb8126a5856cd90b56f9ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Q2 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Permian synergies tripled, structural costs cut, record free cash flow generated.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141177911
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-10T16:12:03Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=0f6d6ef718e964b46185d0dbebcf75034916068f40fa9ab11e691e09ea157d0b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2228797858/image_2228797858.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy: Growth Will Continue Even Without More Acquisitions
+<<<SUMMARY>>>
+Crescent Energy is a Strong Buy, citing KKR-led accretive acquisitions, cost discipline, and investment-grade progress for long-term gains. More on CRGY stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141175342
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-10T14:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0b0bc639a14bb1b7ce8a5c51fcf341a673cd89ec8fc402ef407e1044d0937064
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Is GE Vernova Stock a Buy After Its 25.2% Six-Month Rally?
+<<<SUMMARY>>>
+GEV's strong orders, rising gas turbine demand and expanding manufacturing capacity are driving growth, but its premium valuation may warrant caution.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141175468
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-10T14:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aff1f9a11d0c869e718adec5c9f9ad73e908e8809c329be8972b0c694254c091
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Q2 Earnings and Revenues Beat Estimates, Rise Y/Y
+<<<SUMMARY>>>
+CRGY expects total production guidance of 327-335 MBoe/d, up from 320-335 MBoe/d, and adjusted operating expense guidance of $11-$12 per Boe, down from $11.50-$12.50.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140007504
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-10T12:27:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=35401ed0cbb701d3f50faafb3edb2ea607b81c4015035e3eb1c3e3fd4b257718
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Expand Energy shares are trading higher after the company reported better-than-expected Q1 financial results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141170877
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-09T22:13:36Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=63726e67657f6aaaf51f456a4ed4535d3c12a5c33473431caaa574e5928411eb
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2256336734/image_2256336734.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy: Still Far Too Cheap After An Outstanding Quarter
+<<<SUMMARY>>>
+Despite oil price volatility and geopolitical risks, Crescent Energy's conservative DCF suggests intrinsic value near $21.84 per share. Read why CRGY is a Strong Buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464172
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-17T11:15:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9776774d3ace9e6026dc2fde5b4aae43b618106a9274f54d40b7ae98ddc840e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Co's Dividend Analysis
+<<<SUMMARY>>>
+This article first appeared on GuruFocus.  Crescent Energy Co (NYSE:CRGY) recently announced a total dividend of $0.12 per share, with the ex-dividend date set for 2026-08-17.  This includes a $0.12 per share cash dividend payable on 2026-08-31.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141364356
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-24T16:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e80251182bd67fdc67b420a2225f790faf4f19be799ff273df626e8242e043d9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: CRGY Raises 2026 Outlook as Permian Synergies Expand Free Cash Flow
+<<<SUMMARY>>>
+Crescent Energy lifts 2026 production guidance without raising development capital as lower costs and Permian synergies boost free cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141262744
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-20T12:07:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=278217fb6d18fb789fc9d841f66676bab178e446b845e44eab81f0ae2256fd94
+image_url: https://cdn.benzinga.com/files/images/story/2026/08/20/Cyberpunk-Photo-Of-An-Upward-trending-Sa.jpg?width=2048&height=1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Perfect Stocks Portfolio: August 2026 Edition
+<<<SUMMARY>>>
+The past month has offered investors a useful reminder that financial markets rarely move in lockstep with the headlines.
+
+
+
+The geopolitical backdrop has become more difficult, trade policy remains unsettled, energy
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141257164
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-18T14:21:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a74c69a6d41b15d456c2899fe81e0e7a6177a484d9c2251ea9c3f87951136d13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Small-Cap Stock for Long-Term Investors and 2 We Question
+<<<SUMMARY>>>
+Many small-cap stocks have limited Wall Street coverage, giving savvy investors the chance to act before everyone else catches on. But the flip side is that these businesses have increased downside risk because they lack the scale and staying power of their larger competitors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141520709
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-05T09:59:26Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=99f1dbb7cb0e8b9d81deeb5c8ae56d37d85d41ec6cac2ff9644d8e26d4eec6da
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/187111127/image_187111127.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Buy 3 Ideal September Dividend Dogs Out Of Barron's 58 August Picks
+<<<SUMMARY>>>
+Barronâs Aug 24, 2026 dividend stock picks: 47 payers, âsaferâ high-yield dogs, projected gains to Sept 2027, risks & targetsâread now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141457853
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-04T19:57:11Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=4022ed43490a5a9d308b41e18e2593dff5f63e5ee040c42e71d3bdf08f13b5d7
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Seaport Global Initiates Coverage of Crescent Energy (CRGY) at Sell
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464167
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-04T18:46:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c8ea81654fbabac1e31f77c77a90f6e18f1f681beff1b1e29604938449a05122
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY): 3 Reasons We Love This Stock
+<<<SUMMARY>>>
+Crescent Energy’s 22% return over the past six months has outpaced the S&P 500 by 10.3%, and its stock price has climbed to $14.04 per share. This was partly due to its solid quarterly results, and the performance may have investors wondering how to approach the situation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464174
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-04T15:30:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=557bf010e44d79283f2ca541067f304f70c36edc6188b55cf7bb7ed82fe28b36
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Clearway Energy (CWEN) Down 4.2% Since Last Earnings Report: Can It Rebound?
+<<<SUMMARY>>>
+Clearway Energy (CWEN) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464168
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-04T14:11:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=21841e84bc18cfc817ca5ebd5b20e17f4e4bd9fb0a2b47a7437ff4bc526205cc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Looks Fully Priced After Its 64% Run
+<<<SUMMARY>>>
+Crescent Energy stock has delivered a strong run so far this year, yet the broader valuation checks lean expensive and suggest the recent rally may already price in a lot of optimism. Year to date, Crescent Energy shares are up about 64%, which puts more pressure on the valuation case to justify the move. Expectations for steady cash generation from its energy portfolio can support the current share price, while exposure to commodity price swings remains a key risk for how sustainable those...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141464169
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-04T02:16:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=80a6e1a548adbf11b233b8792b723f64f3a795c64a96f96fe0cb8986c0febdb3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Should Crescent Energy’s Upbeat Q2 and Guidance Shift Require Action From Crescent Energy (CRGY) Investors?
+<<<SUMMARY>>>
+Crescent Energy recently reported past second-quarter 2026 results that exceeded analyst expectations on adjusted earnings and revenue, supported by higher production, better oil price realizations, and improved operating efficiencies. The company also raised its 2026 production guidance while trimming projected operating expenses and production taxes, and continued to fortify its balance sheet through debt redemption, dividends, and potential capital returns via acquisitions or share...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141399776
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-03T05:46:55Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=afd46350f6270edbe679dc9d147a2665118c58426d6b93f55a97923fb1be749d
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Seaport Global Initiates Coverage On Crescent Energy with Sell Rating, Announces Price Target of $12
+<<<SUMMARY>>>
+Seaport Global  analyst Vin Lovaglio   initiates coverage on Crescent Energy (NYSE:CRGY) with a Sell rating and announces Price Target of $12.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141388466
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-02T23:00:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41e39ce2214e0a716a9c4641e60b7ce33de23b023914bdfc6a9500d3ecb29d6b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 2 Profitable Stocks with Exciting Potential and 1 That Underwhelm
+<<<SUMMARY>>>
+While profitability is essential, it doesn’t guarantee long-term success. Some companies that rest on their margins will lose ground as competition intensifies — as Jeff Bezos said, “Your margin is my opportunity”.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141379797
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-02T15:30:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=786c8790315662c71e5197502194d21a37435b246fe9f48799bc5383baac6d66
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Why Is Crescent Energy (CRGY) Up 24.7% Since Last Earnings Report?
+<<<SUMMARY>>>
+Crescent Energy (CRGY) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141376457
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-02T12:44:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=60aab09df0ccd2d30fc58a01828d5b903936c64431b3cc6b75a3b8551140ce13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Surging Stock with Exciting Potential and 2 We Brush Off
+<<<SUMMARY>>>
+Great things are happening to the stocks in this article. They’re all outperforming the market over the last month because of positive catalysts such as a new product line, constructive news flow, or even a loyal Reddit fanbase.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141376459
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-02T12:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8f2dd86c5508912a20d2f6a2d4e8835b71aa075625d906a92cb2ad87b235586a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: GEV Stock Rises 37.5% YTD: Time to Lock in Gains or Ride the Wave?
+<<<SUMMARY>>>
+GE Vernova's shares are surging as grid and electricity demand drives backlog growth, but tariffs, supply risks and premium valuation pose challenges.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141381756
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-02T10:08:51Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4efc00d4b2fb5b52835906ba1b4793e746798e8c79b987983e302c356d26950d
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Wells Fargo Maintains Overweight on Crescent Energy, Lowers Price Target to $19
+<<<SUMMARY>>>
+Wells Fargo  analyst Noah Hungness   maintains Crescent Energy (NYSE:CRGY) with a Overweight and lowers the price target from $24 to $19.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142143646
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-14T18:35:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4c79cceac8ffe57a5efa3b2c37c833100cccf7720f4180c6ab614bcc3981cea1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Stock Under $50 to Own for Decades and 2 Facing Headwinds
+<<<SUMMARY>>>
+Stocks trading between $10 and $50 can be particularly interesting as they frequently represent businesses that have survived their early challenges. However, investors should remain vigilant as some may still have unproven business models, leaving them vulnerable to the ebbs and flows of the broader market.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142074160
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-10T22:15:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14dd506b1d20129ca71391fedcf04ee2031921e869fd5a670e95382918fb7f25
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Why the Market Dipped But Crescent Energy (CRGY) Gained Today
+<<<SUMMARY>>>
+In the latest trading session, Crescent Energy (CRGY) closed at $14.41, marking a +1.19% move from the previous day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142088024
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-10T13:54:56Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6973720431b04c43b61c60a2aae1bdc9f801e24474a25003cf40ee12426b0f07
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Raymond James Maintains Strong Buy on Crescent Energy, Raises Price Target to $20
+<<<SUMMARY>>>
+Raymond James  analyst John Freeman   maintains Crescent Energy (NYSE:CRGY) with a Strong Buy and raises the price target from $19 to $20.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142200776
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-16T22:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba2d2170c20422f7413652cc94a3aea898c41b5d63963f330eb40dfe0cc1678d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Sees a More Significant Dip Than Broader Market: Some Facts to Know
+<<<SUMMARY>>>
+Crescent Energy (CRGY) closed the most recent trading day at $14.4, moving 6.31% from the previous trading session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142201338
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-16T21:08:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ae92356a02de81253e63437172b2d3ffba800718e0a58e1758235a897feb01c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy, HighPeak Energy, and Kosmos Energy Stocks Trade Down, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks fell in the morning session after the Federal Reserve's interest-rate decision, pausing a recent rally even as Middle East supply risks remained in focus. Brent crude eased 1.1% to $107.61 a barrel, its first decline of the week, according to the Associated Press. Reuters reported that oil's retreat and steadier bond yields came as investors waited for the Fed's policy announcement later in the day. The pullback followed a sharp Tuesday rally that had pushed benchmarks near fo
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140057324
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-16T15:47:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=303497bcf11be990c28b12f050a4241382fa47073aeafcacca9527374a7ec8d4
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Granite Ridge Resources shares are trading lower after the company reported worse-than-expected Q4 financial results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142169625
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-15T21:11:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=37c656dd36496734404a71686d5d4d2887fbaa9b6f9044026f00533429e42bf6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: SM Energy, Crescent Energy, Solaris Energy Infrastructure, Talos Energy, and HighPeak Energy Shares Are Soaring, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks jumped in the morning session as crude oil prices surged past $103 per barrel, driven by Middle East conflict and pipeline disruptions in Saudi Arabia.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140044147
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-15T13:15:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=03f60dd042447b52bed862fa96a4d53cd0716e6288fe1762bf86958e181d140f
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Sky Quarry Shares Resume Trade
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2a6b591e51a11d92beff7493a6e4687a560a8ade416cf1e18185a9ed0a0f88ad
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-02T12:38:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/2983573/gev-stock-rises-37-5-ytd-time-to-lock-in-gains-or-ride-the-wave?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-2983573
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b6/36351.jpg
+category: 
+tickers: GEV, CRGY, BE
+keywords: grid modernization, electrification, data centers, AI expansion, backlog growth, HVDC technology, tariffs, supply chain disruptions, premium valuation, energy security
+headline: GEV Stock Rises 37.5% YTD: Time to Lock in Gains or Ride the Wave?
+<<<SUMMARY>>>
+GE Vernova (GEV) has surged 37.5% year-to-date, driven by strong demand across power generation and grid modernization tied to electrification, data centers, and AI expansion. The company's backlog reached $176 billion, bolstered by new grid projects in the UK and a South Korea HVDC joint venture. However, GEV trades at a premium valuation (34.22X forward P/E) and faces headwinds from tariffs ($100-200M impact in 2026) and supply chain disruptions. Analysts recommend new investors wait for a better entry point while current holders maintain positions.
+<<<INSIGHTS>>>
+GEV | positive | Strong backlog growth ($176B), expanding market opportunities through UK grid projects and South Korea joint venture, high ROE (42.42%), and robust earnings growth (73.09% YoY). However, sentiment is tempered by premium valuation and near-term tariff/supply chain risks.
+CRGY | positive | Outperformed industry with 67.7% year-to-date gains and 40.6% YoY EPS growth estimate, indicating strong market performance in the alternative energy sector.
+BE | positive | Exceptional performance with 144% year-to-date gains and 238.2% YoY EPS growth estimate, demonstrating significant market momentum and earnings expansion in the alternative energy space.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:44e1416dba0deb25ba09b4db9df0c9b11d9e8ff266e43c4f7f3a18ddcb96151b
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-02T15:30:05Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/2983884/why-is-crescent-energy-crgy-up-24-7-since-last-earnings-report?cid=CS-ZC-FT-realtime_blog-2983884
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default59.jpg
+category: 
+tickers: CRGY, EXE
+keywords: earnings beat, production growth, cost efficiency, Permian optimization, free cash flow, guidance raise, oil prices, balance sheet strength
+headline: Why Is Crescent Energy (CRGY) Up 24.7% Since Last Earnings Report?
+<<<SUMMARY>>>
+Crescent Energy (CRGY) reported Q2 2026 earnings of 69 cents per share, beating consensus by 16.95%, with revenues of $1.4 billion exceeding estimates by 13.2%. The company raised 2026 guidance, increased Permian synergy targets to $250-300 million, and generated record free cash flow of $418 million. Shares have gained 24.7% since the earnings report. Despite positive fundamentals, the stock holds a Zacks Rank #3 (Hold) rating with upward estimate revisions.
+<<<INSIGHTS>>>
+CRGY | positive | Strong Q2 earnings beat (EPS +16.95%, revenue +13.2%), significant production growth (335 MBoe/d vs 263 prior year), record cash generation ($418M levered free cash flow), raised 2026 guidance, tripled Permian synergy targets to $250-300M, improved operational efficiencies across all basins, and strengthened balance sheet. Stock up 24.7% post-earnings with upward estimate revisions.
+EXE | neutral | Mixed signals: EPS growth of +45.4% expected for current quarter, but revenues declined 9.5% year-over-year in last reported quarter. Stock gained only 7.4% over past month compared to CRGY's 24.7%. Holds Zacks Rank #3 (Hold) with VGM Score of B and negative estimate revisions (-4.4% over 30 days).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0818135a88820a0b53bfa9fe2d842dc461edfdfc2d13cba3011c1f448b3715a5
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-16T22:15:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/2990991/crescent-energy-crgy-sees-a-more-significant-dip-than-broader-market-some-facts-to-know?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6v3-2990991
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default26.jpg
+category: 
+tickers: CRGY
+keywords: Crescent Energy, stock decline, earnings forecast, valuation, oil and gas, market performance
+headline: Crescent Energy (CRGY) Sees a More Significant Dip Than Broader Market: Some Facts to Know
+<<<SUMMARY>>>
+Crescent Energy stock fell 6.31% on September 16, 2026, underperforming the S&P 500's 0.45% loss. Despite the recent decline, the company is expected to report strong earnings growth of 60% YoY with revenue projected at $1.2 billion (38% increase). The stock trades at a Forward P/E of 5.99, significantly below its industry average of 17.92, and currently holds a Zacks Rank of #3 (Hold).
+<<<INSIGHTS>>>
+CRGY | neutral | While the stock experienced a significant single-day decline of 6.31%, the company shows strong fundamental growth prospects with 60% EPS growth and 38% revenue growth expected. The stock trades at a substantial valuation discount (Forward P/E of 5.99 vs. industry 17.92), and recent analyst estimate revisions have been positive (4.66% rise in consensus EPS). The Zacks Rank of #3 (Hold) reflects a balanced outlook, neither strongly bullish nor bearish.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142344292
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-22T22:15:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd988a5fa1cdc20863788f531c5a163552a48681f070d553373db81a52757639
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Moves -1.89%: What You Should Know
+<<<SUMMARY>>>
+Crescent Energy (CRGY) closed at $13.01 in the latest trading session, marking a -1.89% move from the prior day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142323635
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-22T06:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d34e4fb8fb618e2ab316cc7bb5d9e6e338be65cdc06e4cfe25edbaabd2efd808
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: New Era Energy & Digital, Inc. (NUAI) Moves 30.6% Higher: Will This Strength Last?
+<<<SUMMARY>>>
+New Era Energy & Digital, Inc. (NUAI) saw its shares surge in the last session with trading volume being higher than average. The latest trend in earnings estimate revisions may not translate into further price increase in the near term.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142226027
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-17T07:50:42Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=eb84a4ba73ac4d26f3814c10090375506e44f523b46003bb5c011c84b3b429d3
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Truist Securities Initiates Coverage On Crescent Energy with Buy Rating, Announces Price Target of $19
+<<<SUMMARY>>>
+Truist Securities  analyst Gabriel Daoud   initiates coverage on Crescent Energy (NYSE:CRGY) with a Buy rating and announces Price Target of $19.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142516545
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-30T13:25:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=040f44540cf078b0eea7ecea97e017a4b2a6869507a8672a8bd134472e853438
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Value Stock for Long-Term Investors and 2 We Find Risky
+<<<SUMMARY>>>
+Value stocks typically trade at discounts to the broader market, offering patient investors the opportunity to buy businesses when they’re out of favor. The key risk, however, is that these stocks are usually cheap for a reason, and a low valuation can reflect underlying business challenges rather than a genuine bargain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142513488
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-30T07:08:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7fdf11f24a36ef9879298b405aa3336b21f9977fbc67af54aa990e118fbeabd0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock Could Be Above Fair Value On Earnings
+<<<SUMMARY>>>
+Crescent Energy has delivered a strong year to date share price gain, which naturally puts a spotlight on whether the current market value lines up with what its earnings can support. With the stock now trading at US$12.89, the question for investors is how that move squares with the profit power of the underlying business. The share price is up 51.5% year to date, which puts more weight on the question of whether Crescent Energy's earnings can carry that kind of move. The business model is...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142511658
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-29T21:07:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=800e3020e90a11299eea62f1e8cee072975bdcb19297f3c0a61003bb641525db
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Is Crescent Energy (CRGY) Undervalued As Earnings Expectations Improve?
+<<<SUMMARY>>>
+Crescent Energy stock reaction and earnings expectations Crescent Energy (CRGY) slipped 1.29% in the latest session to close at $12.98, lagging the broader market, as investors evaluated new earnings projections indicating higher expected EPS and revenue in the upcoming quarter. For Crescent Energy, the recent 1-day share price decline and 1-week drop sit against a much stronger backdrop, with a 90-day share price return of 32.18% and a year-to-date gain of 52.53%. The 1-year total...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142471979
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-28T22:30:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=407b4c4f481b401f89a5982cb08d57ecb5222c93f5ce91e86670b49ad838fa38
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy and Kosmos Energy Stocks Trade Up, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks jumped in the pre-market session after crude oil prices jumped following President Donald Trump’s rejection of an Iranian proposal to reopen the Strait of Hormuz.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142472613
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-28T21:15:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=80825c8c0c1ab8cb1bc9abe4461663c757d9a79a24be9778c66724a5ccd304c9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Falls More Steeply Than Broader Market: What Investors Need to Know
+<<<SUMMARY>>>
+Crescent Energy (CRGY) closed at $12.98 in the latest trading session, marking a -1.29% move from the prior day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142462904
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-28T08:38:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba355398a195a7fbd7977ab197896320f819c0d37029f00c3c33560b9abdcc2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 2 of Wall Street’s Favorite Stocks with Exciting Potential and 1 Facing Challenges
+<<<SUMMARY>>>
+Wall Street has set ambitious price targets for the stocks in this article. While this suggests attractive upside potential, it’s important to remain skeptical because analysts face institutional pressures that can sometimes lead to overly optimistic forecasts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142694851
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-07T12:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cb4c26d909d1d85133f2416498f3f59408945c4d416f33f7b12115792c26bc26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: GE Vernova Surges 9.4% in a Month: Hold or Fold the Stock?
+<<<SUMMARY>>>
+GEV's nuclear expansion and services growth are boosting its prospects, but supply risks, tariffs and a premium valuation temper the outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142674354
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-06T15:10:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0b7eb0a2f094b6e29ecf32b9722d308fc77f032f14b892ac641ff8180bca909
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Will Crescent Energy (CRGY) Beat Estimates Again in Its Next Earnings Report?
+<<<SUMMARY>>>
+Crescent Energy (CRGY) has an impressive earnings surprise history and currently possesses the right combination of the two key ingredients for a likely beat in its next quarterly report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142674355
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-06T12:40:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0793c3481ba1aacd804c05c8d5c3ff454854d7a47bc6d8f01a4f097a8add8586
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Are Oils-Energy Stocks Lagging Crescent Energy Company (CRGY) This Year?
+<<<SUMMARY>>>
+Here is how Crescent Energy (CRGY) and Alvopetro Energy Ltd. (ALVOF) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142653167
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-06T06:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7aada0d86962d427870698cc00e24f8d189eaace6372331e32c605dc891390a7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Best Value Stocks to Buy for October 6th
+<<<SUMMARY>>>
+PARR, CRGY and APA made it to the Zacks Rank #1 (Strong Buy) value stocks list on October 6th, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142641399
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-05T21:15:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=503d03457191ec31b93f27ba5714b54d7a1c73847269379fa3c4438c3a16a2fa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Why Crescent Energy (CRGY) Outpaced the Stock Market Today
+<<<SUMMARY>>>
+Crescent Energy (CRGY) concluded the recent trading session at $13.56, signifying a +1.27% move from its prior day's close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142918083
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-14T12:38:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b9831a59a36996d63be55a874b705bf452f5d4546e40749eb3c02f16169252a2
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Evercore ISI Group Maintains Outperform on Crescent Energy, Lowers Price Target to $17
+<<<SUMMARY>>>
+Evercore ISI Group  analyst Stephen Richardson   maintains Crescent Energy (NYSE:CRGY) with a Outperform and lowers the price target from $18 to $17.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142881816
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-14T10:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30d6421148b8b1d551077757d57122e521f35e5d2b3ac1549e7351ab056bc07d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: The Zacks Analyst Blog Highlights Crescent Energy, Devon Energy, Energy Transfer, Cenovus Energy and Drilling Tools International
+<<<SUMMARY>>>
+Crescent Energy, Energy Transfer and others are pursuing major acquisitions to expand production, boost efficiency and strengthen cash flow as energy M&A activity accelerates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142879253
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-14T10:09:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e5e02505399e779fc8e59a09a613b8f4ae362f508887126ffb14fbc10f60cf2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 3 U.S. Energy Stocks With Direct Exposure to Rising Oil Prices
+<<<SUMMARY>>>
+Gasoline and diesel prices are biting again, CPI is running hotter than the Fed’s 2% target, and rate cut hopes keep getting pushed out. That mix can punish some corners of the market while creating fresh openings in others before the story shows up in headlines. This article explains how that backdrop relates to energy producers and highlights 3 U.S. stocks that are exposed to these inflation catalysts. The stocks highlighted below are just a sample. The full screen surfaces 52 more U.S...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142878646
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-14T10:02:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0cfa0b4ad11750682f9b9b21cea1990747dc48ef940ee8467ab433b99ba6389
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 1 Safe-and-Steady Stock with Impressive Fundamentals and 2 Facing Headwinds
+<<<SUMMARY>>>
+Stability is great, but low-volatility stocks may struggle to deliver market-beating returns over time as they sometimes underperform during bull markets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142882873
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-13T10:50:33Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0faee8a8512534c0fa418cb3c99ac2e5e4048435d308a1a760ecf19bae82d418
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Wells Fargo Maintains Overweight on Crescent Energy, Raises Price Target to $20
+<<<SUMMARY>>>
+Wells Fargo  analyst Noah Hungness   maintains Crescent Energy (NYSE:CRGY) with a Overweight and raises the price target from $19 to $20.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142850073
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-12T17:06:52Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cd4cad5127b4183512273b19ccd4e27313369def129a07b2a984fe3fcbaad1ed
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: UBS Maintains Buy on Crescent Energy, Lowers Price Target to $18
+<<<SUMMARY>>>
+UBS  analyst Peyton Dorne   maintains Crescent Energy (NYSE:CRGY) with a Buy and lowers the price target from $19 to $18.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142822305
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-12T13:02:49Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=694a0b60fdfa8c7e034970fe9091db21715fd5c4bd16b6dca37385c8fe9d9e5e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2265778384/image_2265778384.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy: Attractive Without War Premium
+<<<SUMMARY>>>
+Crescent Energy is rated a Buy, with valuation attractive even at oil prices well below EIA 2027 forecasts. Read more on CRGY stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142812849
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-12T06:32:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e3c3aa1f35b782329d258f4906ff8cb7efb85a8a71dce80cfe4f008f09e30ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Stocktwits M&A Watch: Viatris-Pacira Deal, Coca-Cola’s Costa Coffee Sale, Devon’s Eagle Ford Divestiture In Focus
+<<<SUMMARY>>>
+Wall Street is abuzz with deal chatter as major healthcare, beverage, and oil companies eye significant deals in the coming weeks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142767239
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-09T20:01:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=37b56db311e0bdda1b309366014db0e2b5f8fc3dc5e7e1fb97e23d75099437ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Moody’s revises Crescent Energy outlook to positive following Eagle Ford deal
+<<<SUMMARY>>>
+Investing.com -- Moody's Ratings has revised its outlook on Crescent Energy Co (NYSE:CRGY) to positive from stable while affirming its Ba3 Corporate Family Rating, signaling confidence that the energy producer will successfully de-lever following its massive asset expansion. The action comes immediately after Crescent announced a $3.85 billion all-cash acquisition of Eagle Ford Basin assets from Devon Energy Corporation, a transaction that significantly increases scale while temporarily elevatin
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142764295
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-09T14:31:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ddc11ce3018ba1c43214ac4c78d8b2eced212a41d24ca08296a5cbc138ea6b01
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy's Devon Deal Strengthens Its Eagle Ford Dominance
+<<<SUMMARY>>>
+CRGY's $3.85 billion Devon deal adds 68,000 boe/d, targets $140 million in annual synergies and expands its Eagle Ford footprint.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142761628
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-09T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=847b8180135db7b1cd45311343c65a142b2a25a86abdef99affc9ad562a73663
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Four Energy Deals in Four Days as Brent Holds Above $100
+<<<SUMMARY>>>
+Oil Market Daily News Commentary - The U.S. Energy Information Administration now expects Brent crude to average $96.32 a barrel in 2026 and $83.74 in 2027, up from $91.01 and $73.74 a month ago, according to its October Short-Term Energy Outlook released this week. It is the third consecutive increase for both years, and the agency sees Brent averaging about $105 in the fourth quarter. Oil companies spent the week putting that price environment to work, announcing four separate transactions in
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142760690
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-09T10:48:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a26305c0a39a75b35c12af38299d19ef27c56ca8ee8572bf3e482a5764ad599
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Devon Energy to sell Eagle Ford assets to Crescent for $4.2bn
+<<<SUMMARY>>>
+The all-cash transaction comprises around 90,000 net acres in south Texas, producing approximately 68,000boepd.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142749608
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-09T07:17:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84e0200d4976f21361ab128ad2a309e9ab8196cffd7d180d8e9047731d0a2d40
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Is Spending $4.2 Billion On Eagle Ford Assets
+<<<SUMMARY>>>
+Crescent Energy (NYSE:CRGY) agreed to buy Devon Energy's Eagle Ford basin assets for US$4.2b in cash. The acquisition focuses Crescent's portfolio more heavily on the Eagle Ford region and expands its Tier 1 asset base. The purchase is backed by an equity offering and support from KKR, which is a key financial sponsor of Crescent. The Eagle Ford asset purchase is important, but investors should also consider Crescent Energy's broader financial profile and risk picture. We have also spotted 3...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142751400
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-09T04:38:16Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=79858e8dc9017682d5cdf563078ae624317b7d83999ed2911453c7f50865ca5e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2284129445/image_2284129445.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy: An Excellent Deal
+<<<SUMMARY>>>
+Crescent Energy is acquiring Devon's Eagle Ford assets for a net price of roughly $3.85 billion. Check out why CRGY stock is a strong buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142741800
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-09T02:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=60718d808d4a80350e2365f411040cc5b4077cd6d6a6866ff612820e944b400e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company Announces Pricing of Public Offering of Class A Common Stock
+<<<SUMMARY>>>
+HOUSTON, October 09, 2026--Crescent Energy Company ("Crescent" or the "Company") (NYSE: CRGY) today announced the pricing of an underwritten, public offering of 80,000,000 shares of its Class A common stock, par value $0.0001 per share ("Class A common stock"), at a price to the public of $12.50 per share, pursuant to an effective shelf registration statement on Form S-3 (the "Registration Statement") filed previously with the U.S. Securities and Exchange Commission (the "SEC").
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142731889
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T15:33:38Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=221f8e21f03bf00c7125b157f9516f61b77c36a1ecf747c74b3f5843f2191715
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company (CRGY) Discusses Acquisition of Eagle Ford Assets and Strategic Operational Expansion Transcript
+<<<SUMMARY>>>
+Crescent Energy Company (CRGY) Discusses Acquisition of Eagle Ford Assets and Strategic Operational Expansion October 8, 2026 8:00 AM EDTCompany...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142730045
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T15:17:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=650cd623f0815e641e9ed40c65873f549884410db4b87a4ebd68b26ee39dd9a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Devon Sells Eagle Ford Assets to Crescent Energy
+<<<SUMMARY>>>
+Devon Energy (DVN) agreed to sell its assets in the Eagle Ford basin to Crescent Energy (CRGY) for $
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142730047
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T15:02:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=842a9cd0a8f9929a012d9ea709f05c3b279588fad2326b581a4c46b757d0f568
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Buys Devon’s Eagle Ford Assets for $3.85B, Targets $140M in Synergies
+<<<SUMMARY>>>
+Crescent Energy (NYSE:CRGY) said it has agreed to acquire Devon Energy’s Eagle Ford assets for a net purchase price of about $3.85 billion, a transaction the company expects to close in the fourth quarter of 2026 or early 2027, subject to customary conditions and regulatory approvals. Chief Executi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142731609
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T14:54:13Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=0a4b736644c6b9eb298490a32c7b1789595ea41b20203cff2ffe35410c8722e3
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company (CRGY) Discusses Acquisition of Eagle Ford Assets and Strategic Operational Expansion - Slideshow
+<<<SUMMARY>>>
+2026-10-08. The following slide deck was published by Crescent Energy Company in conjunction with this event.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142730046
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T14:47:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8141d8cb82947278d1f46e3ea99ba05210f67c4b50849e1a2a79745f828f649f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Devon Energy Exits Eagle Ford in $4.2 Billion Shale Deal
+<<<SUMMARY>>>
+Devon Energy (NYSE: DVN) has agreed to sell its Eagle Ford assets in South Texas to Crescent Energy (NYSE: CRGY) for $4.2 billion in cash, marking a major reshuffling of U.S. shale assets as Devon sharpens its focus on the Delaware Basin.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142727610
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T13:24:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=895fc7a27d3f764b06d4d1a9f87895e02c6ab6fa805b0326626d6c308d10a0c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Sector Update: Energy Stocks Rise Pre-Bell Thursday
+<<<SUMMARY>>>
+Energy stocks were rising pre-bell Thursday, with the State Street Energy Select Sector SPDR ETF (XL
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142727611
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T13:13:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8742f9d38527302e752ed8053ce477b06605fe43b23e74eafa5c8886e1ee45bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Devon Energy sells Eagle Ford shale assets to Crescent for $4.2B
+<<<SUMMARY>>>
+The deal covers roughly 90,000 net acres in South Texas and is expected to close around year-end 2026
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142761389
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T12:48:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0b4e22b337c866b0f4e35baedb36d55a5724c83a837490dab763abef03d673e1
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/08/Devon-Energy-Corp--NYSE-DVN.jpg?width=2048&height=1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Devon Energy Eagle Ford Sale to Boost Buybacks and Reduce Debt
+<<<SUMMARY>>>
+Devon Energy agreed to sell its Eagle Ford assets to Crescent Energy for $4.2 billion in cash, with proceeds supporting buybacks and debt reduction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142726182
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T11:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db46a4ee55c32d363b84f3068c0e8da8fa05256f5abf7f110de589f9a3197bb9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy to Acquire Eagle Ford Assets from Devon Energy, Solidifying Crescent’s World-Class Position in the Basin
+<<<SUMMARY>>>
+HOUSTON, October 08, 2026--Crescent Energy Company (NYSE: CRGY) ("Crescent" or the "Company") today announced that it has entered into a definitive agreement to acquire Eagle Ford assets from Devon Energy for an estimated net purchase price of approximately $3.85 billion(1) (the "Transaction"). The Transaction solidifies Crescent’s world-class Eagle Ford position, adding Tier 1 inventory and meaningful scale directly adjacent to its existing operations. The acquired assets will be managed with C
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142726183
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T11:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a5db438e3a02839ab42aeec1ef7f14a3924d8c0829ce5bf227b549fc49898ff4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company Announces Public Offering of Class A Common Stock
+<<<SUMMARY>>>
+HOUSTON, October 08, 2026--Crescent Energy Company ("Crescent" or the "Company") (NYSE: CRGY) today announced the commencement of an underwritten public offering of $1,000,000,000 of its Class A common stock, par value $0.0001 per share ("Class A common stock"), pursuant to an effective shelf registration statement on Form S-3 (the "Registration Statement") filed previously with the U.S. Securities and Exchange Commission (the "SEC").
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142726181
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T11:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8775ad44a675270d56b3f96911ff7e73dcd00d70636be3ca2bff8445efd38fd8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Devon Energy Announces Agreement to Exit the Eagle Ford for $4.2 Billion
+<<<SUMMARY>>>
+Transaction high-grades Devon’s portfolio, monetizes at an attractive valuation and enhances financial flexibilityHOUSTON, Oct. 08, 2026 (GLOBE NEWSWIRE) -- Devon Energy Corp. (NYSE: DVN) today announced it has entered into a definitive agreement to sell its Eagle Ford assets to Crescent Energy Company for total consideration of $4.2 billion in cash, subject to customary closing adjustments. “This sale is a direct outcome of our ongoing portfolio review, and it sharpens our focus on the highest-
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142717167
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T08:24:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fed0842d8eacdf54819a021e762078cc1d8d6ea39db24e8c54b2b14a032e5876
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: 2 Cash-Producing Stocks with Exciting Potential and 1 We Avoid
+<<<SUMMARY>>>
+Generating cash is essential for any business, but not all cash-rich companies are great investments. Some produce plenty of cash but fail to allocate it effectively, leading to missed opportunities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142729137
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T07:24:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ae502867b65d62bc422e7ae301e2d3de65e6187a6fcbef2af31dc309d0324afb
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company Commences $1B Class A Common Stock Offering
+<<<SUMMARY>>>
+Crescent Energy Company (&#34;Crescent&#34; or the &#34;Company&#34;) (NYSE:CRGY) today announced the commencement of an underwritten public offering of $1,000,000,000 of its Class A common stock, par value $0.0001 per
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142727919
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-08T07:13:28Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=45c29b2872d0e8729bf922e1c47185bd6d5a4a9514fcafdb6146aeca6fba8f4f
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Devon Energy To Sell Its Eagle Ford Assets To Crescent Energy For $4.2B In Cash
+<<<SUMMARY>>>
+TRANSACTION HIGHLIGHTSAsset details: The Eagle Ford assets to be sold consist of approximately 90,000 net acres in Karnes, DeWitt, and Gonzales Counties, Texas. The assets represent approximately 4% of Devon&#39;s total
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140010552
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-16T13:54:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7a9bea0d8b12194ca4e9508da60ca53697865377733bc2ec477e8f9c29dca786
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Watching Drilling Tools International; Hearing Zacks Under $10 Newsletter Picks Stock
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142925134
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-15T20:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f50781d53b040494ad576d28ac7a4ad1a2e9282569e89c89de9096b48d3a71b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Schedules Third Quarter 2026 Earnings Release and Conference Call
+<<<SUMMARY>>>
+HOUSTON, October 15, 2026--Crescent Energy Company (NYSE: CRGY) today announced plans to host a conference call and webcast at 10 a.m. CT, on Tuesday, November 3, 2026, to discuss its third quarter 2026 financial and operating results. The Company plans to release results after market close on Monday, November 2, 2026. The earnings release, supplemental slides and live webcast will be available through the Investors section of the Company’s website at www.crescentenergyco.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142945369
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-15T15:58:11Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3a8bd643abf1aa971f70b5be3b99d20071b51569ca306cb9fb4ba658ec07d5ca
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Scotiabank Initiates Coverage On Crescent Energy with Sector Outperform Rating, Announces Price Target of $18
+<<<SUMMARY>>>
+Scotiabank  analyst Mark Lear   initiates coverage on Crescent Energy (NYSE:CRGY) with a Sector Outperform rating and announces Price Target of $18.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8dedf975efc4713310c975d89c84161aebde90859461598d8c1b22cd58ae0495
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-22T06:38:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/2993367/new-era-energy-digital-inc-nuai-moves-30-6-higher-will-this-strength-last?cid=CS-ZC-FT-fundamental_analysis|daily_price_change_5%-2993367
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default299.jpg
+category: 
+tickers: NUAI, NUAIW, VST, CRGY
+keywords: power purchase agreement, data center, Texas Critical Data Center, earnings estimates, stock rally, Zacks Rank
+headline: New Era Energy & Digital, Inc. (NUAI) Moves 30.6% Higher: Will This Strength Last?
+<<<SUMMARY>>>
+New Era Energy & Digital (NUAI) surged 30.6% following announcement of a 20-year power purchase agreement with Vistra for 200-207 MW of power for its Texas Critical Data Center project. However, the company faces headwinds with expected quarterly losses of $0.11 per share (up 45% year-over-year) and declining revenues. With unchanged earnings estimates over the past 30 days and a Zacks Rank #3 (Hold), analysts question whether the recent rally can sustain.
+<<<INSIGHTS>>>
+NUAI | neutral | While the stock rallied 30.6% on a positive power purchase agreement announcement, the company faces deteriorating fundamentals with increasing losses and declining revenues. Unchanged earnings estimates suggest the rally may not be sustainable, and the Zacks Rank #3 (Hold) rating reflects cautious outlook.
+NUAIW | neutral | While the stock rallied 30.6% on a positive power purchase agreement announcement, the company faces deteriorating fundamentals with increasing losses and declining revenues. Unchanged earnings estimates suggest the rally may not be sustainable, and the Zacks Rank #3 (Hold) rating reflects cautious outlook.
+VST | neutral | Mentioned only as a counterparty to the power purchase agreement with no direct impact on its operations or sentiment discussed in the article.
+CRGY | neutral | Peer company in the same industry with a Zacks Rank #3 (Hold). While it shows positive earnings growth expectations (+60% year-over-year), the stock declined 4.6% in the last session with modest earnings estimate revisions (+1.2%), indicating neutral momentum.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e921e56cfe72513ec464eb2bfc2b423ed9f2abf47d299444cbef8823f6908ff0
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-22T22:15:06Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/2994076/crescent-energy-crgy-stock-moves-1-89-what-you-should-know?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6v3-2994076
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default237.jpg
+category: 
+tickers: CRGY
+keywords: Crescent Energy, stock performance, earnings growth, valuation, oil and gas, Zacks Rank
+headline: Crescent Energy (CRGY) Stock Moves -1.89%: What You Should Know
+<<<SUMMARY>>>
+Crescent Energy (CRGY) declined 1.89% to $13.01 in the latest session, underperforming its sector. The company is expected to report strong earnings growth of 60% EPS and 38% revenue growth year-over-year, with full-year projections showing 42.78% earnings growth. However, the stock holds a Zacks Rank #3 (Hold) rating despite trading at a discount with a Forward P/E of 5.17 compared to the industry average of 17.5.
+<<<INSIGHTS>>>
+CRGY | neutral | While the company shows strong projected earnings growth (60% EPS, 38% revenue growth) and trades at a significant valuation discount (Forward P/E 5.17 vs. industry 17.5), the Zacks Rank #3 (Hold) rating and recent underperformance (-4.26% over one month) suggest a balanced outlook with neither strong bullish nor bearish conviction.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cdee34befe5fe2d7c7b450d608c055c32352fe9331d3b0860b277d3b27556482
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-05T21:15:04Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3000601/why-crescent-energy-crgy-outpaced-the-stock-market-today?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6v3-3000601
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default250.jpg
+category: 
+tickers: CRGY
+keywords: Crescent Energy, oil and gas, earnings growth, stock valuation, Zacks Rank, analyst estimates, energy sector
+headline: Why Crescent Energy (CRGY) Outpaced the Stock Market Today
+<<<SUMMARY>>>
+Crescent Energy (CRGY) closed at $13.56, up 1.27% on the day but down 2.76% over the past month. The oil and gas company is projected to report strong earnings growth of 42.86% EPS and 32.46% revenue increase year-over-year. With a Zacks Rank of #3 (Hold) and a Forward P/E of 4.83 trading below the industry average of 17.21, the stock appears undervalued. Analyst estimates have increased 24.63% over the past month, indicating growing optimism.
+<<<INSIGHTS>>>
+CRGY | positive | Strong projected earnings growth (42.86% EPS increase), significant revenue growth (32.46% increase), positive analyst estimate revisions (+24.63% over past month), and attractive valuation with Forward P/E of 4.83 well below industry average of 17.21 all support a positive outlook despite the Hold rating.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ae32a085ade9345c8b1fafc953010ef64e10ebd132b66def5fb854d8b1030056
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T06:11:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3000629/best-value-stocks-to-buy-for-october-6th?cid=CS-ZC-FT-zacks_1_rank_additions|value_additions-3000629
+image_url: https://staticx-tuner.zacks.com/images/articles/main/c7/593.jpg
+category: 
+tickers: PARR, CRGY, APA
+keywords: energy stocks, value investing, Zacks Rank #1, price-to-earnings ratio, earnings estimates, oil and natural gas
+headline: Best Value Stocks to Buy for October 6th
+<<<SUMMARY>>>
+Three energy sector stocks have been identified as having Zacks Rank #1 (Strong Buy) ratings with strong value characteristics. Par Pacific Holdings (PARR), Crescent Energy Company (CRGY), and APA Corporation (APA) all feature low price-to-earnings ratios compared to their respective industry benchmarks and possess Value Scores of A, with recent earnings estimate increases ranging from 17.9% to 23.6% over the past 60 days.
+<<<INSIGHTS>>>
+PARR | positive | Zacks Rank #1 rating, 19.4% increase in consensus earnings estimates over 60 days, P/E of 3.78 significantly below industry average of 11.40, and Value Score of A indicate strong buy potential.
+CRGY | positive | Zacks Rank #1 rating, highest earnings estimate increase at 23.6% over 60 days, P/E of 4.83 well below S&P 500 average of 22.45, and Value Score of A suggest attractive valuation.
+APA | positive | Zacks Rank #1 rating, 17.9% increase in consensus earnings estimates over 60 days, P/E of 7.53 significantly below S&P 500 average of 22.45, and Value Score of A indicate strong value characteristics.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:85008d790e0f0503b6424a4d57bbac9f355a2878e4d22b895162e59c7665edcb
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T11:55:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3000761/why-investors-need-to-take-advantage-of-these-2-oils-and-energy-stocks-now?cid=CS-ZC-FT-fundamental_analysis|zacks_education_earnings_esp-3000761
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default337.jpg
+category: 
+tickers: CRGY, DVN
+keywords: earnings surprise, ESP filter, oil and energy stocks, earnings expectations, analyst revisions
+headline: Why Investors Need to Take Advantage of These 2 Oils and Energy Stocks Now
+<<<SUMMARY>>>
+The article highlights two oil and energy stocks with positive Earnings Surprise Prediction (ESP) figures ahead of their earnings reports: Crescent Energy (CRGY) with a +11.44% ESP and Strong Buy rating, and Devon Energy (DVN) with a +7.17% ESP and Hold rating. Both stocks are expected to beat analyst earnings expectations based on the Zacks ESP methodology.
+<<<INSIGHTS>>>
+CRGY | positive | Strong Buy rating (#1) with +11.44% positive ESP, indicating high probability of beating earnings expectations on November 2, 2026
+DVN | positive | Hold rating (#3) with +7.17% positive ESP, suggesting good chance of beating analyst expectations in upcoming November 4, 2026 earnings report
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:eba48576072374073fbeb3a516af86a57ec8cd99232ea7cba0dcc5ea00c4a8ca
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T12:40:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3000907/are-oils-energy-stocks-lagging-crescent-energy-company-crgy-this-year?cid=CS-ZC-FT-fundamental_analysis|yseop_template_1-3000907
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default148.jpg
+category: 
+tickers: CRGY
+keywords: Oils-Energy sector, outperformance, earnings estimates, Zacks Rank, year-to-date returns, Strong Buy
+headline: Are Oils-Energy Stocks Lagging Crescent Energy Company (CRGY) This Year?
+<<<SUMMARY>>>
+Crescent Energy (CRGY) is significantly outperforming the Oils-Energy sector with a year-to-date gain of 61.6% compared to the sector average of 31.4%. The company holds a Zacks Rank #1 (Strong Buy) rating with consensus earnings estimates up 43.9% in the past quarter. Alvopetro Energy Ltd. (ALVOF) is also outperforming with a 37.1% year-to-date return and a Zacks Rank #1 rating.
+<<<INSIGHTS>>>
+CRGY | positive | Strong outperformance with 61.6% year-to-date return versus sector average of 31.4%, Zacks Rank #1 (Strong Buy), and significant 43.9% increase in consensus earnings estimates over the past quarter indicating improving analyst sentiment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:133099ee153a46289fca85fe74410f0babce14d33267be8e2f05b7357df55784
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T15:10:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3001221/will-crescent-energy-crgy-beat-estimates-again-in-its-next-earnings-report?cid=CS-ZC-FT-fundamental_analysis|yseop_template_7-3001221
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default100.jpg
+category: 
+tickers: CRGY
+keywords: earnings beat, earnings estimates, Earnings ESP, Zacks Rank, oil and gas, quarterly earnings, consensus estimate
+headline: Will Crescent Energy (CRGY) Beat Estimates Again in Its Next Earnings Report?
+<<<SUMMARY>>>
+Crescent Energy (CRGY) has a strong track record of beating earnings estimates, with an average surprise of 26.42% over the past two quarters. The company currently has a positive Earnings ESP of +11.44% and a Zacks Rank #1 (Strong Buy) rating, suggesting another earnings beat is likely in its next quarterly report. Stocks with this combination of positive ESP and strong rank historically beat consensus estimates nearly 70% of the time.
+<<<INSIGHTS>>>
+CRGY | positive | The company has demonstrated a consistent pattern of beating earnings estimates with an average surprise of 26.42% over the past two quarters. It holds a positive Earnings ESP of +11.44% and a Zacks Rank #1 (Strong Buy) rating, both indicators suggesting a high probability of another earnings beat in the upcoming report.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:89f3c1fef0bda484e1af90b1bd9815054f220bdbebdb9414df03046e4e64976a
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-07T12:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3001737/ge-vernova-surges-9-4-in-a-month-hold-or-fold-the-stock?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3001737
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b6/36351.jpg
+category: 
+tickers: GEV, CRGY, CEG
+keywords: small modular reactor, BWRX-300, nuclear energy, gas turbines, supply chain disruption, tariffs, valuation premium, earnings growth
+headline: GE Vernova Surges 9.4% in a Month: Hold or Fold the Stock?
+<<<SUMMARY>>>
+GE Vernova (GEV) shares rose 9.4% in the past month, driven by securing the first U.S. construction permit for its BWRX-300 small modular reactor and expanding its services business with a gas turbine life extension deal in Egypt. However, the stock trades at a premium valuation (40.14X forward P/E) and faces headwinds from supply chain disruptions and tariff costs of $100-200 million in 2026. New investors may wait for better entry points, while current holders are advised to stay invested given strong earnings growth and ROE.
+<<<INSIGHTS>>>
+GEV | positive | Company achieved significant milestone with first U.S. SMR construction permit, expanded deployment pipeline, secured long-term services contracts, demonstrated strong earnings growth (72.47% YoY), and high ROE (42.42%). However, positive sentiment is tempered by premium valuation and supply chain/tariff headwinds.
+CRGY | neutral | Stock declined 1.1% during the period and showed lower earnings growth (54.4% YoY) compared to GEV, with no specific positive catalysts mentioned in the article.
+CEG | neutral | Stock declined 1.7% during the period and demonstrated lower earnings growth (29.8% YoY) and long-term growth rate (14.92%) compared to GEV, with no specific positive catalysts mentioned.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:20bc3a0e690180d0f68925bfe9c630219c485aa8281a044f08dcc7782911a136
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-13T15:35:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3006352/4-energy-stocks-positioned-for-growth-as-m-a-activity-picks-up?cid=CS-ZC-FT-analyst_blog|industry_focus-3006352
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9d/53642.jpg
+category: 
+tickers: CRGY, DVN, ET, CVE, DTI
+keywords: mergers and acquisitions, oil industry, energy sector, production expansion, operational efficiency, crude oil prices, shale assets, midstream operations, cash flow generation
+headline: 4 Energy Stocks Positioned for Growth as M&A Activity Picks Up
+<<<SUMMARY>>>
+The oil and energy sector is experiencing increased M&A activity as companies pursue strategic acquisitions to expand production, reduce costs, and improve profitability. Recent major deals include Crescent Energy's $3.85B acquisition of Devon Energy's Eagle Ford assets, Energy Transfer's $2.63B Vaquero Midstream buyout, Cenovus Energy's C$5.7B Athabasca Oil acquisition, and Drilling Tools International's purchase of Saltire and Foxley. These transactions are expected to generate significant synergies, expand asset portfolios, and create long-term earnings growth opportunities for investors.
+<<<INSIGHTS>>>
+CRGY | positive | Acquiring Devon Energy's Eagle Ford assets for $3.85B will add 68,000 barrels per day production, position as basin's second-largest operator, generate $140M annual synergies by 2027, and enhance free cash flow. Rated Zacks Rank #1 (Strong Buy).
+DVN | neutral | Divesting Eagle Ford assets to Crescent Energy; while this represents a strategic divestment, the article does not provide specific details on the impact to Devon Energy's overall operations or future prospects.
+ET | positive | Acquiring Vaquero Midstream for $2.63B strengthens natural gas gathering and processing operations in Delaware Basin, expands pipeline network and processing capacity, and is expected to immediately increase distributable cash flow per unit with long-term fee-based contracts.
+CVE | positive | Acquiring Athabasca Oil for C$5.7B adds 45,000 barrels per day production, substantial long-life reserves, generates C$85M annual synergies, and supports growth strategy to increase thermal oil production to 115,000 barrels per day by 2032. Rated Zacks Rank #1.
+DTI | positive | Acquiring Saltire and Foxley for $80M cash and 17.4M shares expands international presence to 40% of revenues, adds $50.4M annualized revenues and $22.5M adjusted EBITDA, improves margins and creates cross-selling opportunities.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:20f6e0a842b2b00d7ab20b8edba5ad1e706f16db773f57a4984dc24f2e721c91
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-14T10:46:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3006707/the-zacks-analyst-blog-highlights-crescent-energy-devon-energy-energy-transfer-cenovus-energy-and-drilling-tools-international?cid=CS-ZC-FT-press_releases-3006707
+image_url: https://staticx-tuner.zacks.com/images/articles/main/71/2606.jpg
+category: 
+tickers: CRGY, DVN, ET, CVE, DTI
+keywords: M&A activity, energy sector, crude oil prices, acquisitions, operational efficiency, production expansion, synergies, midstream operations
+headline: The Zacks Analyst Blog Highlights Crescent Energy, Devon Energy, Energy Transfer, Cenovus Energy and Drilling Tools International
+<<<SUMMARY>>>
+Energy sector M&A activity is accelerating with elevated crude prices around $90/barrel supporting strategic acquisitions. Crescent Energy is acquiring Devon Energy's Eagle Ford assets for $3.85 billion, Energy Transfer is acquiring Vaquero Midstream for $2.63 billion, Cenovus Energy is acquiring Athabasca Oil for C$5.7 billion, and Drilling Tools International is acquiring Saltire and Foxley for approximately $80 million in cash and stock. These transactions are expected to enhance operational efficiency, expand production capacity, and generate significant synergies for the acquiring companies.
+<<<INSIGHTS>>>
+CRGY | positive | Acquiring Devon Energy's Eagle Ford assets for $3.85 billion will add 68,000 barrels of oil equivalent per day, position it as the basin's second-largest operator, generate $140 million in annual synergies by 2027, and enhance capital efficiency. Zacks Rank #1 (Strong Buy) rating supports positive outlook.
+DVN | neutral | Divesting Eagle Ford assets to Crescent Energy; while this represents a strategic divestment, the article does not provide specific sentiment indicators about the impact on Devon Energy's overall position or future prospects.
+ET | positive | Acquiring Vaquero Midstream for $2.63 billion strengthens natural gas gathering and processing operations in the Delaware Basin with 300-mile pipeline network and 675 million cubic feet per day capacity. Fee-based contracts averaging 10 years are expected to immediately increase distributable cash flow per common unit.
+CVE | positive | Acquiring Athabasca Oil for C$5.7 billion adds 45,000 barrels of oil equivalent per day and substantial long-life reserves. Management plans to increase thermal oil production to 115,000 barrels per day by 2032 with C$85 million in annual synergies. Zacks Rank #1 rating supports positive outlook.
+DTI | positive | Acquiring Saltire and Foxley for approximately $80 million in cash and 17.4 million shares significantly expands international presence, increasing Eastern Hemisphere contribution from 18% to 40% of revenues. Expected to generate $50.4 million in annualized revenues and improve EBITDA margins.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:61dd2cf903a14cf040572af6d6dd02723c4e9f8bfca76aad31c9a0a9c3c71562
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-16T12:45:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3009795/why-crescent-energy-crgy-is-a-top-growth-stock-for-the-long-term?cid=CS-ZC-FT-fundamental_analysis|zacks_education_growth_score-3009795
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default38.jpg
+category: 
+tickers: CRGY
+keywords: Zacks Rank, Style Scores, stock rating, investment screening, earnings estimates, growth investing, value investing, momentum investing
+headline: Why Crescent Energy (CRGY) is a Top Growth Stock for the Long-Term
+<<<SUMMARY>>>
+Zacks presents its investment screening tools and Style Scores system designed to help investors identify stocks with strong performance potential. The article highlights Crescent Energy (CRGY) as a #1 Strong Buy pick with positive growth forecasts and earnings estimate revisions.
+<<<INSIGHTS>>>
+CRGY | positive | CRGY received a #1 Strong Buy rating from Zacks Rank with a VGM Score of A. The company shows strong growth prospects with forecasted year-over-year earnings growth of 46.7%, positive analyst earnings estimate revisions (+$0.40 to $2.64 per share), and an impressive average earnings surprise of +36.1%.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143138508
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-23T22:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dea5a679b7fdafee7c78e2a719235180cf430e8184ac2c667451be252760564c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Strata Critical Medical and 3 More Stocks See Action From Activist Investors
+<<<SUMMARY>>>
+Activists also report to the SEC on Crescent Energy, Talos Energy, and Navigator Holdings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143105740
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:31:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=61830e9b3a8964fc3a62e34001a14b81b5e60fbfeecd254d8972632a11475c70
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Transocean Secures $550M in Gulf Contracts, Strengthens Backlog
+<<<SUMMARY>>>
+RIG's $550M U.S. Gulf drilling contracts boost its backlog and extend operations into 2027, supported by rising deepwater demand and strong rig utilization.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102476
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1b762ea5a172bea9102ac8d7b24c1110d37406459f026f9ffe5eecb025fd098
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Chevron Eyes $1B Gulf Asset Sale to Focus on Growth Projects
+<<<SUMMARY>>>
+CVX explores a potential $1 billion sale of mature U.S. Gulf oil and gas assets as it shifts focus to newer offshore projects and long-term production growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143102832
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T14:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a1ebb293ce9317e767ef24a034049cc6e5ba5b3586b1c272b2c14f4e692d92b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: APA Plans to Keep Forties Charlie Operational Amid Strike Threat
+<<<SUMMARY>>>
+APA plans to keep Forties Charlie operational despite a threatened strike, aiming to protect oil flows and avert wider North Sea pipeline disruptions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143106589
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-22T12:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a60981aacc6ffbcc12cd70648141e8ded026f382cf0430473b096dc194ca236
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Is Enlight Renewable Energy Ltd. (ENLT) Stock Outpacing Its Oils-Energy Peers This Year?
+<<<SUMMARY>>>
+Here is how Enlight Renewable Energy Ltd. (ENLT) and Crescent Energy (CRGY) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143021509
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T04:57:26Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=672b5f4ffd889e133b59167bfb3c02c11de986117ea7a7176567ede1554cb678
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2228797858/image_2228797858.jpg?io=getty-c-w1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Sell Devon Energy To Buy Permian Resources
+<<<SUMMARY>>>
+Devon Energy owns prime Delaware Basin acreage, but management settles for good enough rather than maximizing value. See why DVN stock is a Strong Sell.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143244044
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-27T13:00:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6113a8b73651965a9646e573f620da226696fe369929da83bc2bd8af5dc8a4da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: XPLR Infrastructure (XIFR) May Report Negative Earnings: Know the Trend Ahead of Next Week's Release
+<<<SUMMARY>>>
+XPLR Infrastructure (XIFR) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143200342
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T13:00:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d4b2b713c74491343fa66952a4a16e8076140c1321d8d498e7878d148b52eec4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Crescent Energy (CRGY) doesn't possess the right combination of the two key ingredients for a likely earnings beat in its upcoming report. Get prepared with the key expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143197508
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-26T07:54:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=28ccc011b6e812c77becda88c4f0b7c7a0f6226b1e1d43e7dcc4826c8c2e79b9
+image_url: https://cdn.benzinga.com/files/images/story/2026/10/26/Big-Social-Security-COLA-Update-Expected.jpg?width=2048&height=1536
+category: company
+tickers: CRGY
+keywords: 
+headline: IBM, Lockheed Martin, Goldman Sachs And An Energy Stock On CNBC’s ‘Final Trades’
+<<<SUMMARY>>>
+CNBC’s Final Trades: Devon Energy, Lockheed Martin, Goldman Sachs and IBM, backed by asset sale and strong earnings; shares mixed Friday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143590004
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=748d2e99527c597deb5e3c145b0d96e87ff37ef64472dc7be11d2b8d6cd7ed4f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: APA Q3 Earnings Beat on Strong Oil Prices and U.S. Output
+<<<SUMMARY>>>
+APA's Q3 adjusted earnings more than doubled as higher oil prices and U.S. output lifted results, with 2026 free cash flow guidance raised $600M to $2.9B.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143589933
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-06T15:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5de9933086f8e39cbe2c32929d07c4e34a16920d8e3ab933c0dd0317e2c0d150
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: CRGY Stock After Q3 Earnings: Is More Upside on the Horizon?
+<<<SUMMARY>>>
+Crescent Energy's Q3 earnings beat, rising Permian synergies and planned Devon acquisition bolster its upside potential, though debt and commodity risks remain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143539531
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-05T16:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e81ca13badc35b5bc2ef482cce5a3658b8bef2bb7c370dc3ff52db7752f5169
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: CRGY Q3 Earnings Beat on Higher Oil Prices and Production
+<<<SUMMARY>>>
+Crescent Energy's Q3 earnings surge 113.9% as oil prices and production increase, while Permian synergies and a $3.85 billion Devon deal shape its next steps.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143492770
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T17:15:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=57eef2b72e3ca27cd0bfa426c91ca60693f254b979eb29f4c3a19339fbc8972d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: How Could Devon Energy (DVN) Reshape Its Future With A $4.2 Billion Deal?
+<<<SUMMARY>>>
+Devon Energy (NYSE:DVN) agreed to sell its Eagle Ford assets to Crescent Energy in a US$4.2b cash transaction. The divested Eagle Ford position represents about 4% of Devon Energy's total production footprint. Management plans to direct sale proceeds toward share repurchases and debt reduction, in line with its portfolio focus on longer-duration assets. The US$4.2b Eagle Ford sale is only part of the story for Devon Energy's evolving portfolio and capital plans. We have also flagged 2...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140016558
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T14:49:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ca36e4c4668724f71c983a61e3b39fbc90251892a4e2be1f5490130efa5a3d58
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Nephila Capital Selects SEI As Global Strategic Partner To Support Back- And Middle-Office Operations
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143534739
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-04T12:07:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8cf745d1071361675edb9ebe0c52960a3fecaeac39bf700c0463a58667d11849
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Truist Securities Maintains Buy on Crescent Energy, Raises Price Target to $20
+<<<SUMMARY>>>
+Truist Securities  analyst Gabriel Daoud   maintains Crescent Energy (NYSE:CRGY) with a Buy and raises the price target from $19 to $20.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143453460
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T21:14:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=07adf57f410d18ead88ac7dca424724ca4d271d851b0052c53275cbe5a3f2214
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: What Crescent Energy (CRGY) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+Crescent Energy (NYSE:CRGY) reported third-quarter results that exceeded its internal market expectations for production, capital spending and levered free cash flow, while outlining further operational savings and its planned integration of Devon Energy’s Eagle Ford assets. The company produced ap
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143453457
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T20:47:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5505d8585729546eadcf7dfcb6a3dadf2da888f318ffa220ef3f54b82a95dd77
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Devon Eagle Ford deal reshapes Crescent's debt reduction plans.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143447880
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T14:05:56Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e39c4cd6efb698dbb6e4b56092bab882979f3ceaedd172c21b36b6c0932db8ed
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company (CRGY) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Crescent Energy Company (CRGY) Q3 2026 Earnings Call November 3, 2026 11:00 AM ESTCompany ParticipantsReid Gallagher - Investor Relations ExecutiveDavid...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143453458
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d439baff52d57417f8df18e33ac1ffd4a07eaaf42bbc6534f3bdba7b8ae50d84
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Crescent Energy Company's Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143489476
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T13:01:03Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6846d09f06c16098bdb0c3fc4c7e28325f472fb4ad6fa0d09c2a3094a2d67a2e
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/03/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Crescent Energy (NYSE:CRGY) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.This transcript is brought to you by Benzinga APIs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143446568
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T11:32:33Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=77edc9c7e1ca47334c1ed29476a52f0317689c08a6fe0ca44dfc6780f2160f60
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Company 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-03. The following slide deck was published by Crescent Energy Company in conjunction with their 2026 Q3 earnings call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143417035
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-03T04:29:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=75f41e94bb5d45f7e36c364f0b0aa95031bc4dc886d96eb8fd162793fdd608be
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+HOUSTON (AP) — HOUSTON (AP) — Crescent Energy Company (CRGY) on Monday reported a loss of $2.The Houston-based company said it had a loss of 1 cent per share.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143401780
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T23:16:16Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=da3e19bf681a95e907be3a6121a6430203971bc39e53cf28ca17af82c32c4209
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_17_c249efcc18.webp
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (NYSE:CRGY) Q3 2026 Revenue and EPS Beat Estimates
+<<<SUMMARY>>>
+Crescent Energy Q3 2026 revenue jumped 55.9% to $1.351B and EPS reached $0.77, beating consensus; shares rose after hours on the strong beat.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143406260
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T23:10:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c1de67d81c595ba1a706ff1cc2356676f4a05442f83cd8ca87b62028875698e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Surpasses Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+Crescent Energy (CRGY) delivered earnings and revenue surprises of +30.51% and +17.13%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143403060
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T22:15:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c18ad67257e75becede0665f439e5d2ae7f0e5a275e2c443af4514eaa5abbec2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (NYSE:CRGY) reports bullish Q3 2026
+<<<SUMMARY>>>
+Oil and gas producer Crescent Energy (NYSE:CRGY) reported Q3 2026 results beating Wall Street’s revenue expectations, with revenue up 55.9% year on year to $1.35 billion. Its non-GAAP profit of $0.77 per share was 27.4% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143403061
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T21:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0daf4c42f4639cfb4aa59328a002fb5edf978e5a8f693dfa2648ffe6eb860be0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Announces Confidential Submission of Draft Registration Statement for Proposed Initial Public Offering of Crescent Royalties
+<<<SUMMARY>>>
+HOUSTON, November 02, 2026--Crescent Energy Company ("Crescent") announced today that, as permitted under the Jumpstart Our Business Startups Act, it has caused its indirect subsidiary, Crescent Royalty Company ("Crescent Royalties"), to confidentially submit a draft registration statement on Form S-1 with the U.S. Securities and Exchange Commission (the "SEC") for a proposed initial public offering of Crescent Royalties’ Class A common stock, par value $0.0001 per share ("Class A Common Stock")
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143403062
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T21:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0daf834b7280f928d40df9fdb6e13f432d9a811bd592e6f14945cbad89a90d3a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Reports Third Quarter 2026 Results
+<<<SUMMARY>>>
+HOUSTON, November 02, 2026--Crescent Energy Company (NYSE: CRGY) ("Crescent" or the "Company") today announced financial and operating results for the third quarter of 2026. Crescent’s earnings release and supplemental earnings presentation can be found at www.crescentenergyco.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143444052
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T17:42:35Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=dac4a2f4ba6c860716f8f9a1c34d064d0db178c93a59494ec3682673615f5c2d
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy Q3 Adj. EPS $0.77 Beats $0.61 Estimate, Sales $1.351B Beat $1.230B Estimate
+<<<SUMMARY>>>
+Crescent Energy (NYSE:CRGY) reported quarterly earnings of $0.77 per share which beat the analyst consensus estimate of $0.61 by 26.23 percent. This is a 113.89 percent increase over earnings of $0.36 per share from the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140054935
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-02T15:37:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9cf6d72fdda64b32413aa6c2b2043f073fa1de2fa8bcae92e786055eb6a985cb
+image_url: 
+category: company
+tickers: CRGY
+keywords: 
+headline: NextNRG shares are trading lower after the company reported worse-than-expected Q4 sales results.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143379448
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-01T21:51:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4ed2aeedec20208d00569823a0ac891c7e769143d1643b16f516ba810903d75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Q3 earnings report preview: what to look for
+<<<SUMMARY>>>
+Oil and gas producer Crescent Energy (NYSE:CRGY) will be reporting earnings this Monday after market hours. Here’s what you need to know.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143359290
+symbol: CRGY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-31T02:10:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=138e83ef70ad0f37ac0a6612e53ef2aad9244ffb6be0d500d63d49010146b4c6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CRGY
+keywords: 
+headline: Crescent Energy (CRGY) Stock May Be Above Fair Value Following Its 76% Run
+<<<SUMMARY>>>
+Crescent Energy has logged a strong run over the past year, which puts a spotlight on whether the current share price lines up with what its earnings can reasonably support. With the stock now reflecting both recent momentum and deal headlines, the key issue is how much of its earnings story is already embedded in that US$14.20 tag. The share price has returned 75.7% over the past year, which raises the question of how much earnings strength the market is already pricing in. The planned...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:52beed8aea3e7f4bb3be25755a5eb6f162cba36d191726b3d19d84545a5ec022
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T14:25:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013187/apa-plans-to-keep-forties-charlie-operational-amid-strike-threat?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3013187
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9d/53642.jpg
+category: 
+tickers: APA, CNQ, CRGY, DK
+keywords: strike, North Sea, Forties Pipeline System, labor dispute, offshore operations, energy infrastructure, pay dispute
+headline: APA Plans to Keep Forties Charlie Operational Amid Strike Threat
+<<<SUMMARY>>>
+APA Corporation plans to maintain operations at the Forties Charlie platform in the U.K. North Sea despite a threatened 24-hour strike by over 160 offshore workers represented by the Unite union over pay disputes. The company will retain experienced personnel to support pipeline flows and third-party oil production even if its own output is temporarily suspended. Another strike is scheduled for November 4 if the compensation dispute remains unresolved.
+<<<INSIGHTS>>>
+APA | negative | The company faces operational uncertainty from threatened industrial action affecting seven offshore installations. While contingency measures aim to minimize disruption, the unresolved compensation dispute and scheduled strikes pose near-term production risks and operational challenges.
+CNQ | neutral | Mentioned as a comparable energy sector investment with strong fundamentals (Zacks Rank #1, 61.4% projected earnings growth), but no direct connection to the article's main subject matter.
+CRGY | neutral | Listed as an alternative energy sector investment with positive metrics (Zacks Rank #1, 46.7% projected earnings growth), but unrelated to the strike and North Sea operations discussed.
+DK | neutral | Mentioned as a comparable energy sector pick with strong growth projections (169.4% earnings growth), but not directly relevant to the article's focus on North Sea operations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:24d8e48e486e1205a5d07ddcf2146195afb935cb8e1ca0c10c14ed3f6fbb1e17
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T14:28:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013188/chevron-eyes-1b-gulf-asset-sale-to-focus-on-growth-projects?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3013188
+image_url: https://staticx-tuner.zacks.com/images/articles/main/73/63.jpg
+category: 
+tickers: CVX, CNQ, CRGY, DK
+keywords: asset divestment, U.S. Gulf, portfolio optimization, offshore production, capital reallocation, mature assets, growth strategy
+headline: Chevron Eyes $1B Gulf Asset Sale to Focus on Growth Projects
+<<<SUMMARY>>>
+Chevron is exploring the divestment of mature offshore assets in the U.S. Gulf, including Petronius, Tubular Bells, and Llano, potentially generating approximately $1 billion. The company is redirecting capital toward higher-growth projects like Anchor and Ballymore to reach 300,000 barrels of oil equivalent per day by 2026. The initiative remains in preliminary stages with no certainty of completion.
+<<<INSIGHTS>>>
+CVX | positive | Chevron's strategic portfolio optimization demonstrates disciplined capital allocation by monetizing mature assets to fund higher-growth offshore developments (Anchor and Ballymore). The company maintains a Zacks Rank #1 (Strong Buy) and is positioned to strengthen long-term production growth and returns.
+CNQ | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+CRGY | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+DK | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1, but no specific news or developments related to this company are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4e103755a03274415edf766d4e48fde2a5296ca34473719532e4b6e6ed29fc5b
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-22T14:31:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3013203/transocean-secures-550m-in-gulf-contracts-strengthens-backlog?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3013203
+image_url: https://staticx-tuner.zacks.com/images/articles/main/74/780.jpg
+category: 
+tickers: RIG, CNQ, CRGY, DK
+keywords: offshore drilling, deepwater contracts, U.S. Gulf, drilling backlog, ultra-deepwater drillships, oil and gas exploration, rig utilization
+headline: Transocean Secures $550M in Gulf Contracts, Strengthens Backlog
+<<<SUMMARY>>>
+Transocean Ltd. (RIG) has secured approximately $550 million in new offshore drilling contracts for its ultra-deepwater drillships Deepwater Proteus and Deepwater Conqueror in the U.S. Gulf, with operations commencing in 2027. The contracts add $325 million and $225 million to backlog respectively and reflect strong demand for advanced deepwater drilling equipment amid improving offshore exploration activity.
+<<<INSIGHTS>>>
+RIG | positive | Transocean secured $550M in new contracts extending operations into 2027, demonstrating strong demand for its advanced fleet. The company expects high-spec rig utilization above 90% in 2027, has improved revenue visibility, and benefits from consecutive contract assignments that minimize idle periods. Recent $1.1B commitments in October further strengthen the backlog.
+CNQ | neutral | Mentioned only as a comparable Zacks Rank #1 stock recommendation with projected 61.4% earnings growth in 2026. No specific news or developments related to this company are discussed in the article.
+CRGY | neutral | Mentioned only as a comparable Zacks Rank #1 stock recommendation with projected 46.7% earnings growth in 2026. No specific news or developments related to this company are discussed in the article.
+DK | neutral | Mentioned only as a comparable Zacks Rank #1 stock recommendation with projected 169.4% earnings growth in 2026. No specific news or developments related to this company are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6ca51bd5a9b570578430d2c0bbe98551876aa2eee4ff3281cff67e95d4b8279e
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-26T13:00:13Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3014901/crescent-energy-crgy-earnings-expected-to-grow-what-to-know-ahead-of-next-week-s-release?cid=CS-ZC-FT-fundamental_analysis|yseop_template_9-3014901
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default54.jpg
+category: 
+tickers: CRGY, GEV
+keywords: earnings report, Q3 2026, earnings per share, revenue growth, Earnings ESP, Zacks Rank, earnings surprise, oil and gas, alternative energy
+headline: Crescent Energy (CRGY) Earnings Expected to Grow: What to Know Ahead of Next Week's Release
+<<<SUMMARY>>>
+Crescent Energy is expected to report Q3 2026 earnings of $0.59 per share (up 68.6% YoY) with revenues of $1.14 billion (up 31.9% YoY) on November 2. While the company has a Zacks Rank #2 (Buy) and a strong earnings beat history, its Earnings ESP of 0% makes it difficult to predict whether it will beat consensus estimates. GE Vernova, a comparable industry player, shows stronger earnings surprise potential with a +5.47% Earnings ESP.
+<<<INSIGHTS>>>
+CRGY | neutral | While CRGY shows strong fundamentals with 68.6% YoY earnings growth and a Zacks Rank #2 (Buy), the 0% Earnings ESP indicates no clear indication of beating consensus estimates. The company's strong historical beat record (4 out of 4 quarters) is positive, but the lack of recent analyst revisions and neutral ESP make it difficult to predict outperformance.
+GEV | positive | GE Vernova demonstrates stronger earnings surprise potential with a +5.47% Earnings ESP combined with a Zacks Rank #3 (Hold), suggesting it will likely beat consensus EPS estimates. The company also shows significant YoY earnings growth of 145.7%, indicating strong business momentum.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ccd1498c0ed44e1e99010d232d8ff4bd09e42ee03fb4da01124778a574af2ceb
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-27T13:00:20Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3015992/xplr-infrastructure-xifr-may-report-negative-earnings-know-the-trend-ahead-of-next-week-s-release?cid=CS-ZC-FT-fundamental_analysis|yseop_template_9-3015992
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default344.jpg
+category: 
+tickers: XIFR, CRGY
+keywords: earnings report, clean energy, limited partnership, earnings surprise, Zacks Rank, Earnings ESP, Q3 2026
+headline: XPLR Infrastructure (XIFR) May Report Negative Earnings: Know the Trend Ahead of Next Week's Release
+<<<SUMMARY>>>
+XPLR Infrastructure is expected to report a quarterly loss of $0.14 per share for Q3 2026, representing a 62.2% year-over-year improvement, though revenues are projected to decline 6.4%. With an Earnings ESP of 0% and a Zacks Rank #1, the stock is not considered a compelling earnings-beat candidate. The company has beaten consensus estimates in 3 of the last 4 quarters.
+<<<INSIGHTS>>>
+XIFR | neutral | While the company shows improvement in losses year-over-year (62.2% better) and carries a Zacks Rank #1, the Earnings ESP of 0% combined with declining revenues (-6.4%) makes it difficult to predict an earnings beat. The neutral sentiment reflects mixed signals: positive historical performance (3 of 4 quarters beat estimates) offset by weak near-term indicators.
+CRGY | positive | Crescent Energy shows strong fundamentals with expected earnings of $0.59 per share (up 68.6% YoY) and revenues projected to increase 33.1%. The company has beaten consensus estimates in all trailing four quarters and carries a Zacks Rank #2 (Buy), despite having an Earnings ESP of 0%.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1c40de5cc5165ffe7cad7fd5cf4e5703c9288c73e0ea4f1a06539d2a51447ac1
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-02T23:10:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3021263/crescent-energy-crgy-surpasses-q3-earnings-and-revenue-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3021263
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default15.jpg
+category: 
+tickers: CRGY, MNTK
+keywords: earnings surprise, revenue growth, Zacks Rank, alternative energy, stock performance, earnings estimates
+headline: Crescent Energy (CRGY) Surpasses Q3 Earnings and Revenue Estimates
+<<<SUMMARY>>>
+Crescent Energy reported Q3 2026 earnings of $0.77 per share, beating consensus estimates by 30.51%, with revenues of $1.35 billion exceeding expectations by 17.13%. The company has outperformed the market by 69.3% year-to-date and received a Zacks Rank #2 (Buy) rating. Montauk Renewables is expected to report upcoming quarterly earnings of $0.05 per share with revenues of $55.19 million.
+<<<INSIGHTS>>>
+CRGY | positive | Company significantly beat EPS consensus estimates by 30.51% ($0.77 vs $0.59) and revenue estimates by 17.13%. Stock has outperformed S&P 500 by 58.6% year-to-date (69.3% vs 10.7%). Received Zacks Rank #2 (Buy) with favorable estimate revision trends, indicating expected near-term outperformance.
+MNTK | neutral | Company has not yet reported results. Consensus estimates show modest expected growth (EPS +25% YoY, revenues +21.9% YoY), but estimates have remained unchanged over the last 30 days, suggesting stable but unexciting expectations with no recent positive or negative revisions.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9dedf42ea3cc3a928af514a371b9bc3226b5560e417c065ddb67d8fb8efaaaa4
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-05T16:36:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3024685/crgy-q3-earnings-beat-on-higher-oil-prices-and-production?cid=CS-ZC-FT-analyst_blog|earnings_article-3024685
+image_url: https://staticx-tuner.zacks.com/images/articles/main/0c/364.jpg
+category: 
+tickers: CRGY, KMI, MPC, NOV
+keywords: Q3 earnings, oil production, Permian synergies, Eagle Ford acquisition, cash flow, leverage reduction
+headline: CRGY Q3 Earnings Beat on Higher Oil Prices and Production
+<<<SUMMARY>>>
+Crescent Energy (CRGY) reported Q3 2026 adjusted EPS of 77 cents, beating consensus by 30.5%, with production rising to 328 MBoe/d. The company raised its Permian synergy target above $300M and announced a pending $3.85B acquisition of Devon Energy's Eagle Ford assets expected to add 68 MBoe/d. Strong cash generation supported a 1.5x net leverage ratio.
+<<<INSIGHTS>>>
+CRGY | positive | Strong earnings beat (30.5% above consensus), significant YoY EPS growth (113.9%), increased production volumes, improved unit costs, raised synergy targets, and solid cash generation supporting deleveraging strategy.
+KMI | positive | Earnings beat consensus by 6.1%, 20.7% YoY earnings growth, revenue growth of 9.3%, and improved contributions from multiple business segments.
+MPC | positive | Significant earnings beat (4.62% above consensus), exceptional 794.7% YoY earnings surge driven by strong refining margins, 100% refining capacity utilization, and substantial revenue growth of 57.6%.
+NOV | positive | Earnings beat consensus by 4.17%, 127.3% YoY earnings growth, improved operational execution and cost efficiencies, and solid capital equipment bookings.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e3df930087cf3505d5d82501677c8d4cb7a4bff1e1041d9ce66ec8bf9f1e8364
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T15:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025776/crgy-stock-after-q3-earnings-is-more-upside-on-the-horizon?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3025776
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9b/170330.webp
+category: 
+tickers: CRGY, EOG, DVN
+keywords: Q3 2026 earnings, Permian synergies, Devon Energy acquisition, free cash flow, Eagle Ford, cost reductions, oil production, leverage targets
+headline: CRGY Stock After Q3 Earnings: Is More Upside on the Horizon?
+<<<SUMMARY>>>
+Crescent Energy delivered strong Q3 2026 results with earnings and revenue beating estimates, driven by higher production and improved oil realizations. The company raised its annual Permian synergy target above $300M with $295M already captured. The planned $3.85B Devon Energy Eagle Ford acquisition is expected to add 68,000 BOE/d and $140M in annual synergies, though rising acquisition debt remains a concern. CRGY trades at a discounted valuation relative to peers.
+<<<INSIGHTS>>>
+CRGY | positive | Strong Q3 earnings and revenue beat, significant cost reductions (20-25% in Permian, 25%+ in Eagle Ford), robust free cash flow generation ($367M levered FCF), accelerating synergies ($295M captured), strategic Devon acquisition expanding production scale, and attractive discounted valuation (0.82X P/S vs 3.27X industry average) support positive outlook despite acquisition-related debt concerns.
+EOG | neutral | Mentioned as an outperforming peer with 38% one-year share gains and trading at 2.66X P/S F-12M (premium to CRGY but below industry average). No specific operational or financial updates provided in the article.
+DVN | neutral | Mentioned only in context of the pending Eagle Ford asset sale to Crescent Energy. No operational or financial performance data provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cce9039a85bddde15d879793215638f6c4225a37e40edea65017a05e0bea2d40
+symbol: CRGY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-06T15:52:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3025777/apa-q3-earnings-beat-on-strong-oil-prices-and-u-s-output?cid=CS-ZC-FT-analyst_blog|earnings_article-3025777
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a0/644.jpg
+category: 
+tickers: APA, LNG, CRGY, FANG
+keywords: Q3 earnings, free cash flow, oil prices, production, shareholder returns, debt reduction, Suriname development
+headline: APA Q3 Earnings Beat on Strong Oil Prices and U.S. Output
+<<<SUMMARY>>>
+APA Corporation delivered strong third-quarter results with adjusted EPS of $1.94, up 108.6% year-over-year and beating consensus by 34.72%. Revenues climbed 39.3% to $2.81 billion, driven by higher realized crude prices (+36.5%) and resilient U.S. production (+4.7%). The company raised its 2026 free cash flow outlook by $600 million to $2.9 billion and returned $537 million to shareholders. However, Egyptian and North Sea production declined, and the company targets reaching a new $2 billion net debt goal.
+<<<INSIGHTS>>>
+APA | positive | Strong earnings beat (108.6% EPS growth), revenue beat, raised 2026 free cash flow guidance by $600M, increased shareholder returns ($537M), and improved U.S. production. Positive momentum offset by declines in Egypt and North Sea operations.
+LNG | neutral | Mixed results with revenue beat (+14.85%) and record LNG cargo exports, but EPS missed consensus by 13.81%. Strong liquidity position ($1.66B cash) but high debt ($22.58B) limits upside.
+CRGY | positive | Strong earnings beat (30.5% above consensus), EPS growth of 113.9% year-over-year, revenue beat (+17.1%), and production growth (+29.6%). Solid liquidity and dividend declaration support positive outlook.
+FANG | positive | Significant earnings beat (19.1% above consensus), GAAP earnings up 62.1% year-over-year, revenue beat (+26.5%), strong free cash flow generation ($2.15B), and record production volumes.
+<<<END>>>

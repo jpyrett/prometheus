@@ -210,10 +210,10 @@ def test_fetch_news_calls_the_toolbox_and_then_makes_the_new_articles_searchable
     result = tools.fetch_news("$aapl", company="Apple", keywords=["iPhone"], from_date=14)
     assert toolbox.calls == [("fetch_news", (), dict(company="Apple", symbol="AAPL", keywords=["iPhone"], from_date=14))]
     assert result == {"symbol": "AAPL", "fetched": 9, "matched": 4, "written": 3, "duplicates": 1,
-                      "indexed": {"articles": 3, "chunks": 4, "added": 4, "updated": 0, "unchanged": 0, "deleted": 0}}
+                      "indexed": {"articles": 3, "chunks": 5, "added": 5, "updated": 0, "unchanged": 0, "deleted": 0}}
     assert "secret" not in str(result) and "path" not in result  # the local file path stays out of the prompt
     again = tools.fetch_news("AAPL")  # same file again: everything is unchanged
-    assert again["indexed"]["added"] == 0 and again["indexed"]["unchanged"] == 4
+    assert again["indexed"]["added"] == 0 and again["indexed"]["unchanged"] == 5
 
 
 def test_fetch_press_releases_calls_the_toolbox_and_then_makes_the_new_releases_searchable(tools, toolbox, press_index, index):

@@ -100,9 +100,22 @@ def count_too_long(texts: list[str], embeddings: HuggingFaceEmbeddings | None = 
     everything past its limit (256 tokens for MiniLM), so a text over the limit is only partly searchable.
 
     LangChain keeps the real model in `_client`. This function is the only place that touches it."""
+    limit = token_limit(embeddings)
+    return sum(length > limit for length in token_lengths(texts, embeddings))
+
+
+def token_limit(embeddings: HuggingFaceEmbeddings | None = None) -> int:
+    """How many tokens the embedding model reads of one text (256 for MiniLM), its own special tokens included."""
+    return (embeddings or get_embeddings())._client.max_seq_length
+
+
+def token_lengths(texts: list[str], embeddings: HuggingFaceEmbeddings | None = None) -> list[int]:
+    """The length of each text in the embedding model's own tokens, special tokens included: what `count_too_long` compares with `token_limit`, and what the
+    chunker uses to cut a chunk that is too long for the model (design choices entry 131). No text: an empty list (the tokenizer raises on one)."""
+    if not texts:   # a file with no article (a symbol whose every fetch came back empty): the tokenizer raises IndexError on an empty list
+        return []
     model = (embeddings or get_embeddings())._client
-    lengths = model.tokenizer(texts, add_special_tokens=True, truncation=False)["input_ids"]
-    return sum(len(ids) > model.max_seq_length for ids in lengths)
+    return [len(ids) for ids in model.tokenizer(texts, add_special_tokens=True, truncation=False)["input_ids"]]
 
 
 def main(argv: list[str] | None = None) -> int:

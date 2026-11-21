@@ -1,0 +1,122 @@
+{
+ "_note": "Recorded from the replay server by scripts/record_proving.mjs (POST /api/proving/plan (fast)). The answer in `data` is exactly what the page received.",
+ "source": "POST /api/proving/plan (fast)",
+ "request": {
+  "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+  "cash": 10000,
+  "start": "2026-06-08",
+  "end": "2026-11-09",
+  "cadence": "weekly",
+  "risk": "moderate",
+  "neutral": true,
+  "strict": false,
+  "speed": "fast"
+ },
+ "data": {
+  "problems": [],
+  "cadence": "weekly",
+  "decision_days": [
+   "2026-06-08",
+   "2026-06-15",
+   "2026-06-22",
+   "2026-06-29",
+   "2026-07-06",
+   "2026-07-13",
+   "2026-07-20",
+   "2026-07-27",
+   "2026-08-03",
+   "2026-08-10",
+   "2026-08-17",
+   "2026-08-24",
+   "2026-08-31",
+   "2026-09-08",
+   "2026-09-14",
+   "2026-09-21",
+   "2026-09-28",
+   "2026-10-05",
+   "2026-10-12",
+   "2026-10-19",
+   "2026-10-26",
+   "2026-11-02",
+   "2026-11-09"
+  ],
+  "cached_days": [
+   "2026-06-08",
+   "2026-06-15",
+   "2026-06-22",
+   "2026-06-29",
+   "2026-07-06",
+   "2026-07-13",
+   "2026-07-20",
+   "2026-07-27",
+   "2026-08-03",
+   "2026-08-10",
+   "2026-08-17",
+   "2026-08-24",
+   "2026-08-31",
+   "2026-09-08",
+   "2026-09-14",
+   "2026-09-21",
+   "2026-09-28",
+   "2026-10-05",
+   "2026-10-12",
+   "2026-10-19",
+   "2026-10-26",
+   "2026-11-02",
+   "2026-11-09"
+  ],
+  "cache_known": true,
+  "paid_days": 0,
+  "caveats": [
+   {
+    "code": "fundamentals_not_point_in_time",
+    "sentence": "Company fundamentals (earnings, margins, ratios) are today's figures from Finnhub, not the figures known on each past decision day."
+   },
+   {
+    "code": "symbol_directory_is_todays",
+    "sentence": "Companies are found with today's symbol directory, so a company that was delisted or renamed since a decision day cannot be found."
+   },
+   {
+    "code": "price_returns_no_dividends",
+    "sentence": "Returns are price returns with no dividends, for the stocks and for the benchmark alike."
+   },
+   {
+    "code": "fills_at_next_open_no_slippage",
+    "sentence": "Every purchase fills at the next regular open of the stored daily bars, with no slippage and no commission."
+   },
+   {
+    "code": "daily_bars_stop_before_target",
+    "sentence": "Exits are judged on daily bars: a day that touches both the stop and the target counts as the stop, and on the day of the entry only the stop can fire."
+   },
+   {
+    "code": "open_positions_marked",
+    "sentence": "A position that no rule has closed is open: it is marked at the last stored close and is never counted as a win."
+   },
+   {
+    "code": "model_knowledge_cutoff",
+    "sentence": "The models know the world only up to their own training cutoff, which can be later than a past decision day: they may remember what happened next."
+   },
+   {
+    "code": "fast_models",
+    "sentence": "The Advisor's model ran with its reasoning switched off and the Critic's at reduced reasoning effort to make this test fast; a faithful run uses the live settings and takes longer."
+   }
+  ],
+  "cost_estimate_usd": 0,
+  "range": {
+   "first_day": "2026-06-03",
+   "last_day": "2026-11-20",
+   "min_history_sessions": 252,
+   "min_news_days": 14,
+   "oldest_news_day_in_store": "2026-05-20"
+  },
+  "last_bar_day": "2026-11-19",
+  "speed": "fast",
+  "timing": {
+   "speed": "fast",
+   "parallel_days": 1,
+   "cached_days": 23,
+   "paid_days": 0,
+   "estimate_seconds": 0
+  }
+ }
+}

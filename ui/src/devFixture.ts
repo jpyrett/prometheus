@@ -37,6 +37,9 @@ export function parseFixtureParams(search: string): FixtureParams | null {
 
 const loaders = import.meta.glob("./fixtures/*.json", { import: "default" }) as Record<string, () => Promise<unknown>>;
 
+/** The server's own time of an event (the Proving Ground's events carry it when they have one). */
+const tsOf = (e: ServerEvent): number | undefined => (e.data as { ts?: number }).ts;
+
 export async function loadFixture(params: FixtureParams): Promise<{ events: ServerEvent[]; now: number } | null> {
   const load = loaders[`./fixtures/${params.name}.json`];
   if (!load) return null;
@@ -46,8 +49,8 @@ export async function loadFixture(params: FixtureParams): Promise<{ events: Serv
     const questions = (await (loaders["./fixtures/questions.json"]?.() ?? Promise.resolve(null))) as Record<string, ServerEvent> | null;
     const q = questions?.[params.question];
     const last = events[events.length - 1];
-    if (q && last) events = [...events, { ...q, seq: last.seq + 1, data: { ...q.data, ts: last.data.ts } } as ServerEvent];
+    if (q && last) events = [...events, { ...q, seq: last.seq + 1, data: { ...q.data, ts: tsOf(last) } } as ServerEvent];
   }
   const last = events[events.length - 1];
-  return { events, now: (last ? last.data.ts : Date.now() / 1000) + params.dt };
+  return { events, now: ((last ? tsOf(last) : undefined) ?? Date.now() / 1000) + params.dt };
 }

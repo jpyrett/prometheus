@@ -461,6 +461,10 @@ Rules of the repo that bind here: real data only; no stand-in agent or model in 
 
 ---
 
+## 11a. The Proving Ground tab (2026-11-20)
+
+The second tab of the page (backtesting, the track record and the live monitor) has its own spec: `design/proving_ground_spec.md`, section 13. The house rules of this document hold there (no UI kit, no router, no chart library, the tokens, the meaning of each colour), with two differences stated in that spec: the tab scrolls (it is a report), and it draws charts, all hand-written SVG in `ui/src/charts/`.
+
 ## 12. Open, and next
 
 1. ~~"Strict recommendations" waits for Jacob's word~~ Confirmed (5.3). (Settled 2026-11-15, entry 104: there is no automatic-trading mark: Auto mode trades everything the Critic approves without a question whether Strict is on or off, and Strict is only the neutral rule.)

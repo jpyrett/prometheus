@@ -46,9 +46,9 @@ def model_name(role: str) -> str:
     return setting(name, default)
 
 
-def get_chat_model(role: str = "data_clerk", *, model: str | None = None, temperature: float = 0.0, timeout: float = 60, **options) -> ChatOpenAI:
+def get_chat_model(role: str = "data_clerk", *, model: str | None = None, temperature: float = 0.0, timeout: float = 60, max_retries: int = 2, **options) -> ChatOpenAI:
     """A chat model for this role, or for the OpenRouter model id given in `model` (to compare models; the role then
-    only checks that the role exists). `timeout` is the client's wait for one response in seconds (60 for every role; the Critic asks for more, its model reasons for a while before it answers). Raises RuntimeError, naming the setting and never its value, if the key is missing."""
+    only checks that the role exists). `timeout` is the client's wait for one response in seconds (60 for every role; the Critic asks for more, its model reasons for a while before it answers); `max_retries` is the client's own retries of one call (2 for every role; the Time Machine's fast mode asks for fewer). Raises RuntimeError, naming the setting and never its value, if the key is missing."""
     role_model = model_name(role)  # also checks that the role exists, even when a model id is given
     model = model or role_model
     key = setting("OPENROUTER_API_KEY", "")
@@ -60,7 +60,7 @@ def get_chat_model(role: str = "data_clerk", *, model: str | None = None, temper
         base_url=setting("OPENROUTER_BASE_URL", DEFAULT_BASE_URL),
         temperature=temperature,
         timeout=timeout,
-        max_retries=2,
+        max_retries=max_retries,
         default_headers={"HTTP-Referer": setting("OPENROUTER_HTTP_REFERER", "http://localhost"),
                          "X-Title": setting("OPENROUTER_APP_TITLE", "Prometheus")},
         **options,

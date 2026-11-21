@@ -1,0 +1,198 @@
+<<<PRESS_RELEASE>>>
+id: 0171125d384b8253
+symbol: SBUX
+published_utc: 2025-12-02T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-declares-quarterly-cash-dividend-2025-12-02
+headline: Starbucks Declares Quarterly Cash Dividend
+<<<TEXT>>>
+Starbucks Corporation today announced that its Board of Directors has approved a quarterly cash dividend of $0.62 per share of outstanding Common Stock. Since 1971, Starbucks Coffee Company has been committed to ethically sourcing and roasting high-quality arabica coffee. Through our unwavering commitment to excellence and our guiding principles, we...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5726590fab620d45
+symbol: SBUX
+published_utc: 2026-01-14T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-announces-q1-fiscal-year-2026-results-conference-call-2026-01-14
+headline: Starbucks Announces Q1 Fiscal Year 2026 Results Conference Call
+<<<TEXT>>>
+Starbucks Corporation plans to release its first quarter fiscal year 2026 financial results at 7:45 a.m. Eastern Time on Wednesday, January 28, 2026, with a conference call to follow at 8:00 a.m. Eastern Time. Through our unwavering commitment to excellence and our guiding principles, we bring the unique Starbucks Experience to life for every customer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7d826337d8da8787
+symbol: SBUX
+published_utc: 2026-01-22T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-host-2026-investor-day-january-29-2026-2026-01-22
+headline: Starbucks to Host 2026 Investor Day on January 29, 2026
+<<<TEXT>>>
+Starbucks Coffee Company, today announced plans to unveil its long-term growth strategy at its 2026 Investor Day on Thursday, January 29, 2026. Since 1971, Starbucks Coffee Company has been committed to responsibly sourcing and roasting high-quality arabica coffee. Through our unwavering commitment to excellence and our guiding principles, we bring the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7de12deec462dcd7
+symbol: SBUX
+published_utc: 2026-01-28T07:45:00Z
+url: https://www.nasdaq.com/press-release/starbucks-reports-q1-fiscal-year-2026-results-2026-01-28
+headline: Starbucks Reports Q1 Fiscal Year 2026 Results
+<<<TEXT>>>
+Starbucks Corporation today reported financial results for its 13- week fiscal first quarter ended December 28, 2025. Global comparable store sales increased 4%, driven by a 3% increase in comparable transactions and a 1% increase in average ticket North America and U.S. comparable store sales increased 4%, driven by a 3% increase in comparable...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ae04d6e117272d0c
+symbol: SBUX
+published_utc: 2026-01-29T09:00:00Z
+url: https://www.nasdaq.com/press-release/starbucks-unveils-reimagined-loyalty-program-deliver-more-meaningful-value
+headline: Starbucks Unveils Reimagined Loyalty Program to Deliver More Meaningful Value, Personalization and Engagement for Members
+<<<TEXT>>>
+--Starbucks Coffee Canada, Inc. today unveiled its new Starbucks Rewards program, designed to deliver more value, personalization and engagement for its more than 38 million active members across North America. Building on the strength of its industry leading loyalty program, the updated Starbucks Rewards program will launch on March 10, introducing a new...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e0b75b316d11c3e8
+symbol: SBUX
+published_utc: 2026-01-29T09:09:00Z
+url: https://www.nasdaq.com/press-release/starbucks-unveils-reimagined-loyalty-program-deliver-more-meaningful-value-0
+headline: Starbucks Unveils Reimagined Loyalty Program to Deliver More Meaningful Value, Personalization and Engagement for Members
+<<<TEXT>>>
+Starbucks Coffee Company today unveiled its reimagined Starbucks Rewards loyalty program, designed to deliver more meaningful value for its 35.5 million active members in the U.S. Building on the strength of its industry leading program, the updated Starbucks Rewards program will launch on March 10, introducing a new tiered structure with three levels–...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0cd6f45d95eef198
+symbol: SBUX
+published_utc: 2026-01-29T11:30:00Z
+url: https://www.nasdaq.com/press-release/starbucks-back-turning-momentum-long-term-sustainable-growth-2026-01-29
+headline: Starbucks Is Back, Turning Momentum Into Long-Term, Sustainable Growth
+<<<TEXT>>>
+During the event, Starbucks leaders offered a deep dive into the" Back to Starbucks" plan, sharing details on progress and momentum and highlighting significant opportunities for growth. Tressie Lieberman, Starbucks global chief brand officer, shared how the company is driving demand and unleashing growth potential through innovation and by making...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e5474439cd1fb2ec
+symbol: SBUX
+published_utc: 2026-02-02T07:00:00Z
+url: https://www.nasdaq.com/press-release/polypropylene-cups-earn-widely-recyclable-designation-expanding-access-curbside
+headline: Polypropylene Cups Earn Widely Recyclable Designation, Expanding Access to Curbside Recycling Nationwide
+<<<TEXT>>>
+More communities across the U.S. can now recycle cold to‑ go cups, marking a major step toward reducing waste and building a more circular future. Thanks to the leadership of How2Recycle ®, NextGen Consortium managed by Closed Loop Partners’ Center for the Circular Economy, The Recycling Partnership, Starbucks and WM, to‑ go cups are entering a new era of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 621aa13ecfb8181b
+symbol: SBUX
+published_utc: 2026-03-11T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-webcast-2026-annual-meeting-shareholders-2026-03-11
+headline: Starbucks to Webcast 2026 Annual Meeting of Shareholders
+<<<TEXT>>>
+Starbucks Coffee Company will hold its Annual Meeting of Shareholders on Wednesday, March 25, 2026, at 10:00 a.m. Pacific Time. Since 1971, Starbucks Coffee Company has been committed to responsibly sourcing and roasting high-quality arabica coffee. Through our unwavering commitment to excellence and our guiding principles, we bring the unique...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 379199774637e470
+symbol: SBUX
+published_utc: 2026-04-02T09:15:00Z
+url: https://www.nasdaq.com/press-release/starbucks-announces-new-incentive-rewards-program-create-more-opportunities-partners
+headline: Starbucks Announces New Incentive Rewards Program to Create More Opportunities for Partners to Share in Success
+<<<TEXT>>>
+Starbucks Coffee Company today announced a new incentive rewards program designed to create more opportunities for hourly coffeehouse partners to share in the success of the Back to Starbucks transformation. The program reflects Starbucks continued commitment to offering one of the most competitive total compensation and benefits packages in the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8f8bc8dd1cea019a
+symbol: SBUX
+published_utc: 2026-04-02T17:00:00Z
+url: https://www.nasdaq.com/press-release/starbucks-and-boyu-capital-finalize-joint-venture-accelerate-long-term-growth-china
+headline: Starbucks and Boyu Capital Finalize Joint Venture to Accelerate Long Term Growth in China
+<<<TEXT>>>
+Under the terms of the agreement, funds managed by Boyu Capital now hold a 60 percent stake in Starbucks China retail operations, while Starbucks retains a 40 percent ownership interest and continues to own and license the brand and intellectual property to the joint venture. "China remains one of the most exciting long-term opportunities for Starbucks, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bf976e456d621149
+symbol: SBUX
+published_utc: 2026-04-14T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-announces-q2-fiscal-year-2026-results-conference-call-2026-04-14
+headline: Starbucks Announces Q2 Fiscal Year 2026 Results Conference Call
+<<<TEXT>>>
+Starbucks Corporation plans to release its second quarter fiscal year 2026 financial results after market close on Tuesday, April 28, 2026, with a conference call to follow at 1:15 p.m. Pacific Time. Through our unwavering commitment to excellence and our guiding principles, we bring the unique Starbucks Experience to life for every customer through every...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 61b65c6b8ee8a157
+symbol: SBUX
+published_utc: 2026-04-15T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-declares-quarterly-cash-dividend-2026-04-15
+headline: Starbucks Declares Quarterly Cash Dividend
+<<<TEXT>>>
+Starbucks Corporation today announced that its Board of Directors has approved a quarterly cash dividend of $0.62 per share of outstanding Common Stock. Since 1971, Starbucks Coffee Company has been committed to responsibly sourcing and roasting high-quality arabica coffee. Through our unwavering commitment to excellence and our guiding principles,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5db61f45b7d01ea1
+symbol: SBUX
+published_utc: 2026-04-28T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-reports-q2-fiscal-year-2026-results-2026-04-28
+headline: Starbucks Reports Q2 Fiscal Year 2026 Results
+<<<TEXT>>>
+Starbucks Corporation today reported financial results for its 13- week fiscal second quarter ended March 29, 2026. Global comparable store sales increased 6.2%, primarily driven by a 3.8% increase in comparable transactions and a 2.3% increase in average ticket North America comparable store sales increased 7.1%, primarily driven by a 4.4% increase in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ce4e80edc4f258a1
+symbol: SBUX
+published_utc: 2026-05-04T16:02:00Z
+url: https://www.nasdaq.com/press-release/starbucks-corporation-commences-cash-tender-offers-eight-series-notes-2026-05-04
+headline: Starbucks Corporation Commences Cash Tender Offers for Eight Series of Notes
+<<<TEXT>>>
+Starbucks Corporation today announced the commencement of tender offers to purchase, subject to the terms and conditions of the Tender Offers described the Offer to Purchase dated May 4, 2026, in the order of priority set forth in the table below for an Aggregate Purchase Price of up to $1.1 billion, as may be increased or decreased by the Company in accordance...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 91f65a8f10fb8e35
+symbol: SBUX
+published_utc: 2026-05-15T20:32:00Z
+url: https://www.nasdaq.com/press-release/starbucks-corporation-announces-early-results-and-upsizing-its-tender-offers-eight
+headline: Starbucks Corporation Announces Early Results and Upsizing of its Tender Offers for Eight Series of Notes
+<<<TEXT>>>
+Starbucks Corporation today announced the early results of its previously announced tender offers to purchase for cash the notes of the series listed in the table below. In addition, Starbucks has exercised its previously disclosed right to amend the terms of the Tender Offers to increase the Aggregate Cap for all Notes validly tendered and accepted for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 13e7201de33bcdb1
+symbol: SBUX
+published_utc: 2026-05-18T15:15:00Z
+url: https://www.nasdaq.com/press-release/starbucks-corporation-announces-pricing-terms-its-upsized-tender-offers-eight-series
+headline: Starbucks Corporation Announces Pricing Terms for its Upsized Tender Offers for Eight Series of Notes
+<<<TEXT>>>
+Starbucks Corporation today announced the pricing terms for its previously announced tender offers to purchase for cash the notes of the series listed in the table below. Set forth below are the applicable Reference Yields and Total Consideration for each series of Notes per $1,000 principal amount of Notes tendered, as calculated by Morgan Stanley& Co. LLC,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7759225c710b9b24
+symbol: SBUX
+published_utc: 2026-05-21T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-participate-bernstein-42nd-annual-strategic-decisions-conference-2026-05-21
+headline: Starbucks to Participate in the Bernstein 42nd Annual Strategic Decisions Conference
+<<<TEXT>>>
+Starbucks Corporation today announced that Brian Niccol, chairman and chief executive officer, and Cathy Smith, evp, chief financial officer, will host a fireside chat at the Bernstein 42 nd Annual Strategic Decisions Conference on Thursday, May 28 th, 2026, at 11:00 a.m. Eastern Time. Through our unwavering commitment to excellence and our guiding...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 59144bc19530a6bc
+symbol: SBUX
+published_utc: 2026-06-02T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-participate-6th-annual-evercore-consumer-and-retail-conference-2026-06-02
+headline: Starbucks to Participate in the 6th Annual Evercore Consumer and Retail Conference
+<<<TEXT>>>
+Starbucks Corporation today announced that Brian Niccol, chairman and chief executive officer, will participate in a keynote fireside chat at the 6th Annual Evercore Consumer and Retail Conference on Tuesday, June 9 th, 2026, at 11:40 a.m. Eastern Time. The fireside chat will be webcast live from the company’ s Investor Relations website at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b2eba76be1fcc26
+symbol: SBUX
+published_utc: 2026-07-01T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-declares-quarterly-cash-dividend-2026-07-01
+headline: Starbucks Declares Quarterly Cash Dividend
+<<<TEXT>>>
+Starbucks Corporation today announced that its Board of Directors has approved a quarterly cash dividend of $0.62 per share of outstanding Common Stock. Since 1971, Starbucks Coffee Company has been committed to responsibly sourcing and roasting high-quality arabica coffee. Through our unwavering commitment to excellence and our guiding principles,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f579499f1dda8bf1
+symbol: SBUX
+published_utc: 2026-07-15T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-announces-q3-fiscal-year-2026-results-conference-call-2026-07-15
+headline: Starbucks Announces Q3 Fiscal Year 2026 Results Conference Call
+<<<TEXT>>>
+Starbucks Corporation plans to release its third quarter fiscal year 2026 financial results after market close on Wednesday, July 29, 2026, with a conference call to follow at 1:15 p.m. Pacific Time. The conference call will be webcast, including closed captioning, and can be accessed on the company’ s website at https://investor.starbucks.com/.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 80be85513968a7a9
+symbol: SBUX
+published_utc: 2026-07-29T16:05:00Z
+url: https://www.nasdaq.com/press-release/starbucks-reports-q3-fiscal-year-2026-results-2026-07-29
+headline: Starbucks Reports Q3 Fiscal Year 2026 Results
+<<<TEXT>>>
+Starbucks Corporation today reported financial results for its 13- week fiscal third quarter ended June 28, 2026. Global comparable store sales increased 7.9%, primarily driven by a 4.2% increase in comparable transactions and a 3.5% increase in average ticket North America comparable store sales increased 8.1%, primarily driven by a 4.5% increase in...
+<<<END>>>

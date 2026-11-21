@@ -1013,3 +1013,3137 @@ DPZ | neutral | Mixed performance with positive order growth (+0.3% same-store s
 PZZA | negative | Reported 8.3% decline in North America comparable sales in Q3 2026, reflecting persistent competitive pressures despite transformation initiatives aimed at improving value and customer traffic.
 YUMC | neutral | Pizza Hut China showed 15 consecutive quarters of transaction growth (5% in Q3 2026) but faced 8% year-over-year average ticket decline due to value-oriented offerings, demonstrating traffic gains offset by lower spending per customer.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140465169
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-26T17:09:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=79e4300f1b33d038f476ca1f78a18adfae9b3dbb030d1564b8cee87dd6a11044
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: How The Papa John’s (PZZA) Narrative Is Shifting With Margin Hopes And Takeover Interest
+<<<SUMMARY>>>
+Papa John's International has seen its modeled fair value nudged lower, with the price target trimmed to US$37.36 from US$37.91, a reduction of about 1.4%. This small reset lines up with mixed analyst sentiment, where margin recovery hopes are running alongside caution on traffic, same store sales, and the role of ongoing takeover interest in supporting the stock. Read on to see what is driving the split views and how you can track the story as it evolves. Analyst Price Targets don't always...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140465171
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-26T11:07:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=480ab1aa56ac079da20fd53a59fe349b590252aeb98f05b495ff5cc0d900b316
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: A Look At Papa John's International (PZZA) Valuation After Recent Share Price Weakness
+<<<SUMMARY>>>
+Recent share performance and business snapshot Papa John's International (PZZA) has drawn attention after a mixed stretch in the stock, with the share price roughly flat over the past week but down about 10% over the past month and about 21% over the past year. The company, valued at about US$1.1b, generated US$2,014.1m in revenue and US$27.5m in net income across its global pizza restaurant and commissary operations. This provides investors with a current snapshot of the company’s scale and...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140465173
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-25T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=944d4848e7a0110b1dd66c68da9e8ad7fb9ae19868d3ac5f3a4b272335a1f3d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Bitcoin Pizza Day Recipient Speaks Out: How the 10,000 BTC Was Spent
+<<<SUMMARY>>>
+Jeremy Sturdivant spent his 10,000 bitcoin on a US road trip. At Bitcoin's peak, the coins topped $1.26 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140397768
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-23T09:32:32Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a679328cabe691ac104b1b19620d4209364100b8d6ff0aba1681a7753db28180
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1482548956/image_1482548956.jpg?io=getty-c-w1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Domino's Pizza UK: The Pizza Winner Takes It All
+<<<SUMMARY>>>
+Domino's Pizza Group (DPUKY) remains a 'Buy' at ~$5, with strong market share gains and resilient cash generation despite sector price wars.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140465174
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-22T14:02:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=542076a76a80adf15b8a7f6cb46b9657fa0ec3351ee9b9f8204d2c170f4e7ab5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: If Laszlo Held His 10,000 BTC: Here’s What It Would Be Worth on Bitcoin Pizza Day 2026
+<<<SUMMARY>>>
+Laszlo Hanyecz’s 10,000 BTC would be worth approximately $772.1 million today, given Bitcoin's current price of $77,209.86. The famous 2010 pizza purchase remains the ...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140465176
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-22T10:22:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=34f07500142fda62f716a1fb2e75292d298ab5c31915106311ca9e3af1a69f7f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Bitcoin Pizza Day 2026: How Many Pizzas Would 10,000 BTC Buy You Today? And Other Crazy Things You Could Purchase
+<<<SUMMARY>>>
+Bitcoin Pizza Day marks crypto’s most famous “what if” moment. The purchasing power of 10,000 BTC today is staggering. Today symbolizes both Bitcoin’s growth and ...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140465178
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-22T05:44:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fc5ff98ab1da920ade2c993bb18d4a92da45be3f49788002735936bb52544055
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Bitcoin Pizza Day 2026 Arrived Over $300 Million Lighter Than Last Year
+<<<SUMMARY>>>
+Bitcoin Pizza Day's 10,000 BTC stack lost $328 million in value over 12 months as BTC slid 30% from last year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140377089
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-20T23:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c32840ed0dd381909b06bc1127df10795f476780526ddfb35bdc8104ec481f29
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Berkshire Hathaway Gave Up on This Underperforming Dividend Stock, But It May Be Time for You to Buy the Dip
+<<<SUMMARY>>>
+Berkshire Hathaway dumped its stake in Domino's Pizza in Q1. The stock has a healthy dividend yield of 2.6% and is trading at reasonable valuations though.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140477562
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-31T14:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ef2b9c0bae43d9d3afc6da61b76746c56d9622e3020573269e9483f2426bfa1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: The S&P 500 returns 10% on average, but your mortgage costs 6.36% — here's what the math says to do
+<<<SUMMARY>>>
+Paying off your home seems like a quick and predictable return, but there are several factors to consider before you give up on stock market gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140543267
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-31T13:58:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fa80959f0fd61af1700e86b5edbb942c9a4bd2be3ca5f92a02327ec42d31f30d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Stephens Reaffirms Overweight Rating on Papa John’s (PZZA) Despite Operating Challenges
+<<<SUMMARY>>>
+With an annual dividend yield of 5.47%, Papa John’s International, Inc. (NASDAQ:PZZA) is included among the Top 10 High Dividend Stocks to Invest In According to Analysts. On May 15, Stephens maintained its Overweight rating on Papa John’s International, Inc. (NASDAQ:PZZA). It reiterated its $40 price target on the stock following a Reuters report that the […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140470410
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-30T15:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=095553e08452e7e1e967e1812ff4caf878729db6bcfabb44b3f388b4f055cce9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Major pizza chain might sell business after closing 250 locations
+<<<SUMMARY>>>
+The pizza dining industry is facing a flurry of mergers and acquisitions that could lead to multiple sales transactions in the upcoming months. Papa John's International's largest U.S. franchisee Nadeem Bajwa and investment firm Irth Capital are negotiating with the pizza chain to buy out the ...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140465162
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-29T17:52:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e04f5cca398a8bf7311905d1d7fcc83e135394625992c8801760c520656d79f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 3 Stocks Under $50 Walking a Fine Line
+<<<SUMMARY>>>
+Stocks in the $10-50 range offer a sweet spot between affordability and stability as they’re typically more established than penny stocks. But their headline prices don’t guarantee quality, and investors should exercise caution as some have shaky business models.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140460087
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-29T13:35:47Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7f0a837281c863c03d7647d32fbe79952110dc8a0828601613c8be7d89a6da48
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/aggregated_options_2.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: 9 Consumer Discretionary Stocks Whale Activity In Today's Session
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140465163
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-27T18:33:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0f133e63cf46c1c0e268076ea72e268504c6a8e78a1ad4343ec11cd937eb8b4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Traditional Fast Food Stocks Q1 Results: Benchmarking Papa John's (NASDAQ:PZZA)
+<<<SUMMARY>>>
+Let’s dig into the relative performance of Papa John's (NASDAQ:PZZA) and its peers as we unravel the now-completed Q1 traditional fast food earnings season.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140431182
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-27T11:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=96039514a4d32eafd9ededfcf2ad44e0103b78df7a34825f536dc0cbe44713ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns Teams Up with Disney and Pixar for the Release of Toy Story 5
+<<<SUMMARY>>>
+Marking the franchise’s first collaboration with a pizza brand for a film release, Papa Johns introduces all-new Toy Story 5 personal pizzas worldwide Papa Johns Teams Up with Disney and Pixar for the Release of Toy Story 5 The Canadian program includes Toy Story 5 personal pizzas, limited-edition collectibles featuring Woody, Buzz Lightyear and Jessie, and an in-app game. The campaign will also feature a special custom-animated spot produced by Pixar Animation Studios. The full spot will launch
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140431183
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-27T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=847fd3ef846e06c6b7b00e5693d73df97b3e10f37f0875b80bb204d1678431fb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: From the Big Screen to Real Life: Papa Johns Launches ‘Papa Johns Pizza Planet’ Pop-Ups to Celebrate the Release of Disney and Pixar’s Toy Story 5 in Theaters
+<<<SUMMARY>>>
+ATLANTA, May 27, 2026--Papa Johns today announced the launch of four Papa Johns Pizza Planet experiences as part of their global collaboration celebrating Disney and Pixar’s upcoming June 19 theatrical release, Toy Story 5. Inspired by the legendary sci‑fi pizzeria first introduced in Toy Story in 1995, the activations reimagine the setting for today — bringing a familiar fan-favorite location off the big screen and into the real world.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140432402
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-27T09:51:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4f5b5eaf4636054ac91c8b50055c5111a13466a93084bdad6e3d72e892943453
+image_url: https://cdn.benzinga.com/files/images/story/2026/05/27/PapaJohns-storefront.jpeg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's Serves Up Toy Story 5 Buzz With Disney, Pixar Team-Up
+<<<SUMMARY>>>
+Papa John&#39;s International is teaming up with Disney and Pixar for a global Toy Story 5-themed promotion featuring special pizzas and limited-edition collectibles.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140432403
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-05-27T07:43:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=dbce73c2d64187bbaeb371ad75d4b522c4cd3746d238ceb0f245694a84955038
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns Partners With Disney, Pixar To Release Toy Story 5
+<<<SUMMARY>>>
+For 30 years, Toy Story has sparked laughter, adventure and imagination, with the shared joy of pizza never far from the celebration. That sense of wonder comes full circle today as Papa Johns teams-up with Disney and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140584521
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-09T15:28:10Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=31e17fa896b949bc6ef23ecfc86695d3f924cc5caf2d12473f64c901e6e789b3
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/623586604/image_623586604.jpg?io=getty-c-w1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's Has Yet To Prove Its Turnaround Story
+<<<SUMMARY>>>
+Papa John's faces structural challenges, declining order volumes, and weak customer acquisition undermining turnaround efforts. Read more on PZZA stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140538522
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-05T17:09:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2e2459baa88953291daca1295881591306d08e88769455798ba2e05ef1f7acb8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Is Papa John’s (PZZA) Toy Story 5 Tie-Up Reinforcing Its Brand Moat or Just Buzz?
+<<<SUMMARY>>>
+Papa John’s International has already launched a global collaboration with Disney and Pixar’s Toy Story 5, featuring themed personal pizzas, collectibles, in-app games, and immersive “Pizza Planet” pop-ups across more than 40 markets for a limited time. This tie-up blends Papa John’s product innovation with one of Disney’s best-known family franchises, creating a broad marketing showcase for the brand’s quality-focused positioning and digital engagement tools. Next, we’ll examine how this...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140527717
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-04T18:21:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=057ddb0774ce8fe1d4c943b065a3b6da0d1ea7ab9a0851022fc2f9e8c4d53b66
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 1 Profitable Stock for Long-Term Investors and 2 Facing Challenges
+<<<SUMMARY>>>
+Even if a company is profitable, it doesn’t always mean it’s a great investment. Some struggle to maintain growth, face looming threats, or fail to reinvest wisely, limiting their future potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140620591
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-12T13:35:30Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=93c2af627e275c37b049c4c8196b1837a4287ecdb36efc283793ceff0819372e
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/aggregated_options_2.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: 9 Consumer Discretionary Stocks With Whale Alerts In Today's Session
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140662278
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-18T08:57:04Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=aa37128f52aef797309495fc986a0503148722beea6f458880b49c9aedcd743b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1442417585/image_1442417585.jpg?io=getty-c-w1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's: Buy Rating Intact As Takeover Hopes Reignite
+<<<SUMMARY>>>
+Papa John's International, Inc. remains a Buy, supported by a healthy balance sheet, ongoing turnaround efforts, and potential acquisition catalysts. Learn more about PZZA stock here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140791573
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-02T15:44:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e32ea5a9f7e2da42c540cebe11ed0bbd098fd8bb364de3294b88f2b30fc2b70
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Ravi Thanawala Named CFO at American Eagle Outfitters
+<<<SUMMARY>>>
+Mike Mathias is handing over the finance reins, but will stay on to serve as an adviser to CEO Jay Schottenstein.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140789850
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-02T11:11:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8bc07fef70fb4affe1ff1dd6f106d2d0abccd60b6f1ffa10dd79953e7f6aa152
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: American Eagle Outfitters Names Papa John's Finance Chief as New CFO
+<<<SUMMARY>>>
+American Eagle Outfitters (AEO) named Papa John's International (PZZA) Chief Financial Officer Ravi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140904684
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-02T10:03:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=742250e9b3fec74e95b550c941c7fed589a5badc65bd9981ef132f78b941f2bd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: American Eagle swipes Papa John’s CFO
+<<<SUMMARY>>>
+In August Ravi Thanawala will take the apparel retailer’s finance reins from Michael Mathias, who has served as AEO’s CFO for six years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140948205
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-01T19:53:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=48c5e6b7381c5c50191032f3bebc46a6d4ad3284d44a5eb1724bda1173b3ebcc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's (PZZA) Stock Trades Down, Here Is Why
+<<<SUMMARY>>>
+Shares of fast-food pizza chain Papa John’s (NASDAQ:PZZA) fell 4.5% in the afternoon session after the company announced that Chief Financial Officer Ravi Thanawala would be stepping down, effective immediately.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140780211
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-01T08:26:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2a7b30a96faaf76e07e4c075bb57e424f3e8c13522760bb54e1cee15ef68534b
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Stephens & Co. Reiterates Overweight on Papa John's International, Maintains $40 Price Target
+<<<SUMMARY>>>
+Stephens &amp; Co.  analyst Jim Salera   reiterates Papa John&#39;s International (NASDAQ:PZZA) with a Overweight and maintains $40 price target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140780033
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-01T08:02:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8ce4b5bd1339313976d1887c9510685dea0e20815895eeaa33e058a7cb4db0ff
+image_url: https://cdn.benzinga.com/files/images/story/2026/07/01/Section-Of-A-Financial-Newspaper-Titled-.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Nike, Shutterstock And Other Big Stocks Moving Lower In Wednesday’s Pre-Market Session
+<<<SUMMARY>>>
+US stock futures lower as Dow falls 100 points. Nike shares down 4% after Q4 results. Shutterstock, Optimum Communications, Cronos, and others also drop.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140780213
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-30T18:13:03Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=575783a19e0465d147f2a78805aaaf36abda75a82602febc47382ac1d1eb9b36
+image_url: https://cdn.benzinga.com/files/images/story/2026/06/30/A-Papa-Johns-Logo-Sign-Outside-A-Restaur.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's Stock Slips On CFO Surprise Exit
+<<<SUMMARY>>>
+Papa John&#39;s CFO Ravi Thanawala steps down, PZZA shares slip in after-hours trading.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140780214
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-06-30T16:35:50Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0a5f4418ce6382e455354a38ef683e16b5070d0c82833735e78560f5c99fd0a1
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International Appoints Chris Collins As CFO, Effective Immediately; CFO Ravi Thanawala To Depart
+<<<SUMMARY>>>
+Papa John’s International, Inc. (NASDAQ:PZZA) (&#34;Papa Johns&#34;) (the &#34;Company&#34;) today announced that Chris Collins, Senior Vice President of Corporate Finance and Principal Accounting Officer, has been
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140818631
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-06T09:16:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=00870d6291957b5997dcd746cd3d97a9e69591ae0e5a14c3bb6e6614a072649a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 3 Cash-Producing Stocks with Warning Signs
+<<<SUMMARY>>>
+While strong cash flow is a key indicator of stability, it doesn’t always translate to superior returns. Some cash-heavy businesses struggle with inefficient spending, slowing demand, or weak competitive positioning.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140798915
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-03T10:18:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7faa4f8241d0dd97ccc84cc4044f470ce4838a8ccef9168c709bf56f73dafb01
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: American Eagle Outfitters (AEO) Appoints Ravi Thanawala As CFO After Mike Mathias Transition
+<<<SUMMARY>>>
+American Eagle Outfitters (NYSE:AEO) announced a chief financial officer succession, appointing Ravi Thanawala as CFO. Long-serving CFO Mike Mathias will move into a strategic advisor role after 25 years with the company. Thanawala joins American Eagle Outfitters with prior senior finance roles at Papa John's, Nike, and Ann Inc. American Eagle Outfitters, known for its casual apparel and Aerie brand, is making this leadership change at a time when retailers are closely watching consumer...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140948189
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-15T21:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cf1729f60f42be605e16ec6f2f1018438327cbc7d641adc4b8780bc628425cbc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: After closing 250 restaurants, pizza chain drops nostalgic offering
+<<<SUMMARY>>>
+While pizza may seem like a fast food category that is resistant to all the challenges, recent industry trends suggest otherwise. American consumers deal with heavy pressures on their wallets, as 49% of them say it is hard to afford food, and 60% are actively worrying about grocery costs, ...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140891308
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T20:02:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1862305182c510bc81ac923a78ecf3ee51489e770000147b3f44cf58182051e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's downgraded on turnaround concerns, lower forecasts
+<<<SUMMARY>>>
+Papa John's International Inc (NASDAQ:PZZA) was downgraded to 'Underperform' from 'Neutral' by Bank of America, with analysts citing the company's chief financial officer's departure, persistent competitive pressures and a less optimistic outlook for same-store sales growth (SSSG). The...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140890139
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T19:41:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a11b87d500b537066cf233b4c48c0866f6b25d4f889c86adc5a425f64b0a1fdc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Sector Update: Consumer Stocks Mixed Late Afternoon
+<<<SUMMARY>>>
+Consumer stocks were mixed late Monday afternoon, with the State Street Consumer Staples Select Sect
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140888557
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T17:38:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15292aab07e5fb4791bd0f9631832b9579a7b83e723014bf746312ac775e9228
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Sector Update: Consumer Stocks Mixed in Afternoon Trading
+<<<SUMMARY>>>
+Consumer stocks were mixed Monday afternoon, with the State Street Consumer Staples Select Sector SP
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140904669
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T16:50:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5038561f98e652aa2b2c0c0bd454513ee079719ba7417f5c26045b3712ccb632
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's CFO Departure Suggests Sharp Turnaround Not Imminent, BofA Says
+<<<SUMMARY>>>
+Papa John's International's (PZZA) chief financial officer's departure likely suggests a sharp opera
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140885931
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T13:41:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d9bd3e5a447e59b21f811bc30301952ad049da7bb5153d18da437fe995ccd6e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: American Express, Biogen upgraded: Wall Street's top analyst calls
+<<<SUMMARY>>>
+American Express, Biogen upgraded: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140885831
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T13:05:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5561c3898e8846b846e625d9cb91d42e21dc8911032a43af1b3e3d44f207ac76
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: BofA turns bearish on Papa John’s, sees limited upside amid fierce competition
+<<<SUMMARY>>>
+Investing.com -- Bank of America downgraded Papa John's International to Underperform from Neutral and cut its price objective to $34 from $42, citing growing uncertainty over the pizza chain's turnaround following the departure of its chief financial officer and intensifying competitive pressures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140948196
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7137d5b9c6143399f181a6ebd02bec168cf79a3e1b193324b665e9ef05d2d416
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Back by Popular Demand: Epic Pepperoni-Stuffed Crust Pizza Returns to Papa Johns
+<<<SUMMARY>>>
+ATLANTA, July 13, 2026--This summer, Papa Johns is bringing back the fan-favorite Epic Pepperoni-Stuffed Crust Pizza for a limited time. Crafted with Papa Johns fresh, never-frozen original dough made from six simple ingredients, stuffed by hand with real pepperoni and cheese baked directly into the crust, the Epic Pepperoni-Stuffed Crust Pizza showcases the quality ingredients and craftsmanship that set Papa Johns apart.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140948197
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T12:40:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4a1de3e5eff7b1582c3467180b0ed6a928e80477acd0a9b0f2942445bb01097a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John’s Shares Slip After BofA Downgrade to Underperform (PZZA)
+<<<SUMMARY>>>
+Analyst Downgrade Weighs on SharesPapa John’s (NASDAQ:PZZA) shares fell 1. 9% in premarket trading after BofA Securities downgraded the pizza chain to Underperform from its previous rating, while reducing its price target to $34 from $42.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140948198
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T12:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41225b1f7a7f7c9d1f98efa9675968a5f8ccf9483845e35881e3fe623371caaf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Murphy’s is closing stores, joins list of national pizza chains to shutter locations in 2026
+<<<SUMMARY>>>
+The announcement from parent company MTY Food Group follows recent waves of restaurant closures from Pizza Hut and Papa John’s.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140884998
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T11:55:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f1dc7be06c985cbaad59d7b32ea80790ba8f2868c8933acd882df5884c2cce60
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Here Are Monday’s Best Wall Street Analyst Research Calls: Atmos Energy, Best Buy, Biogen, Capital One, Costco, Disney, Papa John’s International, Shopify, and More
+<<<SUMMARY>>>
+Pre-Market Stock Futures: Futures are trading lower as we get ready for the start of second-quarter earnings this week, after a solid winning week on Wall Street. Renewed strikes against Iran and a chip sell-off are weighing on shares on Monday. All of the major indices closed higher on Friday, except the small-cap Russell 2000, ... Here Are Monday’s Best Wall Street Analyst Research Calls: Atmos Energy, Best Buy, Biogen, Capital One, Costco, Disney, Papa John’s International, Shopify, and More
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140886486
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T08:22:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7bad23fe78ba70c5e6a9846a8cfc35ac6dfc8d8c7ac01bdd53bd300af3b103cf
+image_url: https://cdn.benzinga.com/files/images/story/2026/07/13/PapaJohns-storefront.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: This Papa John's Analyst Turns Bearish; Here Are Top 5 Downgrades For Monday
+<<<SUMMARY>>>
+Top Wall Street analysts changed outlook on top names. See analyst ratings page for all changes, including upgrades, downgrades, and initiations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140887853
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-13T06:41:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8ae3eb776e765b1e4bd10d5f4b6c8cb7a74a9dde3ace6ee4582a8c830c72320d
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: B of A Securities Downgrades Papa John's International to Underperform, Lowers Price Target to $34
+<<<SUMMARY>>>
+B of A Securities  analyst Sara Senatore   downgrades Papa John&#39;s International (NASDAQ:PZZA) from Neutral to Underperform and lowers the price target from $42 to $34.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140933062
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-17T13:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9b417fbc24eb0324c176e5aa2d69abc0cc5979d36c71fb220423257155df21e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: MasTec and Papa John's International have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+MasTec is the Zacks Bull of the Day as infrastructure and energy demand support growth, while Papa John's is the Bear amid sales and margin pressures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140930234
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-17T08:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a152df60a2c4a9404724acc83c5e8518129ce2e4c0ccb7baf31daa5e66541c15
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Bear of the Day: Papa John's International, Inc. (PZZA)
+<<<SUMMARY>>>
+Pizza giant, Papa John's International, Inc. (PZZA), has seen its earnings estimates steadily fall off a cliff over the last several years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140948188
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-17T00:18:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ad5326a13c44248b2014eeb8c8c4c0c0a9d702d9ae4f5c446d71533bf28f7299
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Did Weaker Earnings and Softer Revenue Just Shift Papa John’s (PZZA) Investment Narrative?
+<<<SUMMARY>>>
+Papa John’s recently reported softer earnings and lower revenue, prompting questions about customer demand, restaurant traffic, and the effectiveness of its cost controls. The results have sharpened focus on how franchise economics, digital engagement, and tighter expense management could influence the company’s ability to regain operational momentum. We’ll now examine how these weaker earnings and revenue trends may reshape Papa John’s existing investment narrative. This technology could...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140983649
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-22T07:30:11Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ae56187d977917433684e7577da51000d30de5bb4812da974d43257f6998fd67
+image_url: https://cdn.benzinga.com/files/images/story/2026/07/22/Consumers-Wait-Businesses-Reimbursed.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Wall Street's Most Accurate Analysts Give Their Take On 3 Consumer Stocks Delivering High-Dividend Yields
+<<<SUMMARY>>>
+Investors turn to dividend-yielding stocks during market turbulence. Benzinga offers analyst ratings and news on high-yielding stocks in consumer discretionary sector.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141089696
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-07-31T13:53:51Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8d343bca9a2a97c95ccd39e3275af9a1d73ccb458163700d9155bdccfdfa2ade
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Mizuho Maintains Neutral on Papa John's International, Lowers Price Target to $32
+<<<SUMMARY>>>
+Mizuho  analyst Nick Setyan   maintains Papa John&#39;s International (NASDAQ:PZZA) with a Neutral and lowers the price target from $33 to $32.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141152576
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T21:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09072960e777fcbd5b991631cef6582a10d944a16c31492deee6492a619de82d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Stock Market Today, Aug. 7: Markets Rally on Jobs Shock and Atlassian Surges 35%
+<<<SUMMARY>>>
+Today, Aug. 7, 2026, July payrolls fell unexpectedly, fueling investor optimism for lower interest rates and boosting major indexes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141158704
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T18:50:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0f5f352d874203d16c0f787493508a698f90ef6d87db3a24460d1a6245b8d1f6
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: UBS Maintains Neutral on Papa John's International, Lowers Price Target to $28
+<<<SUMMARY>>>
+UBS  analyst Dennis Geiger   maintains Papa John&#39;s International (NASDAQ:PZZA) with a Neutral and lowers the price target from $33 to $28.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141159149
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T16:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=58410f61aaee614036c8aee43b44207ed2c52f43db01ccf66a728ce6325fd0cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's Q2 Earnings & Revenues Beat Estimates, Stock Down
+<<<SUMMARY>>>
+PZZA's Q2 earnings and revenues beat estimates, but shares sink 17.2% as weaker comps, reduced 2026 guidance and a dividend suspension weigh.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141152303
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T15:20:48Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1ac26f2d0d0c4b1a068c3397cb4bf2892f15a907cdb1abb509c6e7894bdd22b0
+image_url: https://cdn.benzinga.com/files/images/story/2026/08/07/Financial-Analysts.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: This Tower Semiconductor Analyst Begins Coverage On A Bullish Note; Here Are Top 2 Initiations For Friday
+<<<SUMMARY>>>
+Wall Street analysts changed outlook on top names. For rating changes, check our analyst ratings page. See analysts&#39; views on ADIG, TSEM and more
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250764
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T13:52:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2981a349dfec66eb73a33b88283634585352e1cf4486c68dd85cb567edd7ca71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Stephens, Benchmark cut Papa John’s to neutral after Q2 miss
+<<<SUMMARY>>>
+Stephens analyst Jim Salera cut PZZA from Overweight to Equal Weight, slashing his price target to $24 from $38, while Benchmark’s Todd Brooks moved from Buy to Hold. The dual downgrade followed a second quarter in which revenue fell 8.8% year-over-year to $482.4 million, North America comparable sales dropped 8.3%, and adjusted EBITDA came in essentially flat at $52.7 million, according to the company’s investor relations release.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141158706
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T13:29:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=38a6c6e0bec538d342225aafd97ff6557319e431f3e026fbf04627b8092ea2f2
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Benchmark Downgrades Papa John's International to Hold
+<<<SUMMARY>>>
+Benchmark  analyst Todd Brooks   downgrades Papa John&#39;s International (NASDAQ:PZZA) from Buy to Hold.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141158707
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T12:19:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5a715269fd065a9562c976485f6846450b52dc110a90307eeff4b44aa7d19258
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Piper Sandler Maintains Neutral on Papa John's International, Lowers Price Target to $26
+<<<SUMMARY>>>
+Piper Sandler  analyst Brian Mullan   maintains Papa John&#39;s International (NASDAQ:PZZA) with a Neutral and lowers the price target from $30 to $26.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250765
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T09:04:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=58bc6f7cc43d408693e3ecd42b1f5c94c16c65de806b2eb420681bc9b288826e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International Q2 Earnings Call Highlights
+<<<SUMMARY>>>
+Papa John's International (NASDAQ:PZZA) said its second-quarter results reflected continued pressure in North America, prompting the company to lower its 2026 outlook, add transformation investments and suspend its quarterly dividend beginning in August. President and Chief Executive Officer Todd P
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141148389
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T08:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9b4a30a2bbde071adcab9b2b939eb640bd024002922b068b17d076841b777b40
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: The World's Bestselling Pizza Chain In 2026 Isn't Pizza Hut Or Papa Johns
+<<<SUMMARY>>>
+While Pizza Hut and Papa Johns are big names in the pizza business, neither of them is the world's bestselling pizza chain in 2026. Here's the one that is.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141147907
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T07:54:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3a97c35d8bd101d04792bb093789ca527dba55f023a7ea31e23ac2d09ccee49f
+image_url: https://cdn.benzinga.com/files/images/story/2026/08/07/HubSpot.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: This HubSpot Analyst Is No Longer Bullish; Here Are Top 5 Downgrades For Friday
+<<<SUMMARY>>>
+Top Wall Street analysts changed outlook on top names. For all changes &amp; stock ratings, see analyst ratings page. Some stocks downgraded &amp; price targets lowered.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141147953
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-07T06:26:52Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6efb085cf5d7c4e682077128d388c58b001794f606b63693228e00c6460571dd
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Stephens & Co. Downgrades Papa John's International to Equal-Weight, Lowers Price Target to $24
+<<<SUMMARY>>>
+Stephens &amp; Co.  analyst Jim Salera   downgrades Papa John&#39;s International (NASDAQ:PZZA) from Overweight to Equal-Weight and lowers the price target from $38 to $24.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141140709
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T19:52:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da5320726b0bf4b75c4fe02f1a1647a279cba6789134eb3417d46cb48d6755ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Sector Update: Consumer Stocks Decline Late Afternoon
+<<<SUMMARY>>>
+Consumer stocks were lower late Thursday afternoon, with the State Street Consumer Staples Select Se
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250766
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T19:05:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aace51d53fa60c03371095182c27a031c3c23a9a07d413f5dbcea960342d99ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International Inc (PZZA) (Q2 2026) Earnings Call Highlights: International Growth ...
+<<<SUMMARY>>>
+Despite an 8.3% drop in North America comparable sales, Papa John's delivered its seventh consecutive quarter of international growth and advanced its supply chain savings program.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250767
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T18:02:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=03cb89148eac67806bcc54e4f1ff64353c01a4924f00cc8be9d9a4cb081069da
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Why Did Papa John's Stock Crash After Earnings?
+<<<SUMMARY>>>
+Papa John's dashes hopes for a quick going-private transaction. Investors abandon ship.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141137401
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T17:45:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8fc452c5d4327d5a0640e6942c8444630b2e55ea8c8282908be952b27167adf8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's Cuts Sales Outlook, Suspends Dividend Amid Weak North America Demand; Shares Sink
+<<<SUMMARY>>>
+Papa John's International's (PZZA) shares slumped Thursday after the company lowered its full-year s
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141137363
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T17:40:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=37db226914c65ff698a4287bb16e4ad557951f897aa47f6d017db49b798bf7dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Sector Update: Consumer Stocks Decline Thursday Afternoon
+<<<SUMMARY>>>
+Consumer stocks were lower Thursday afternoon, with the State Street Consumer Staples Select Sector
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141137873
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T14:34:21Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=ef58ffad1f28be393130006a6c15f7f41e84fad06434e84e197ba2b345d6543f
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International, Inc. (PZZA) Q2 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Papa John's International, Inc. (PZZA) Q2 2026 Earnings Call August 6, 2026 8:00 AM EDTCompany ParticipantsHeather Hollander - Senior VP of Strategy,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141139123
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-06T07:02:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=50e34b5943dd9318f3d05ceabd0176413cedb66d242d0258f76f59185729d7c4
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International Q2 Adj. EPS $0.46 Beats $0.45 Estimate, Sales $482.397M Beat $481.285M Estimate
+<<<SUMMARY>>>
+Papa John&#39;s International (NASDAQ:PZZA) reported quarterly earnings of $0.46 per share which beat the analyst consensus estimate of $0.45 by 2.22 percent. This is a 12.2 percent increase over earnings of $0.41 per
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250770
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-15T21:35:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=792a8ecfbc179534f886b2080e63d62316fc4899805d3d48986bfd1a1fa15bae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Jim Cramer Said Domino’s Was Better Than Papa John’s International, Inc. (NASDAQ:PZZA) – But Is He Right?
+<<<SUMMARY>>>
+Pizza chain Papa John’s International, Inc. (NASDAQ:PZZA)’s shares are down by 49% over the past year and by 39% year-to-date. On the 6th, the shares closed a whopping 17.8% lower. The dip occurred after Papa John’s International, Inc. (NASDAQ:PZZA) reported its second quarter earnings before market open. Looking at the report, it’s unsurprising why the […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250771
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-15T12:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=429f6bf75127e5ed583ea6235b07ecb9a6a38f7d2628e092ad260760ca63d385
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Texas Roadhouse and Brinker International Have the Recipe Rivals Are Missing
+<<<SUMMARY>>>
+Texas Roadhouse and Brinker International shares have rallied on easing beef costs, stronger comps, and improved margin trends, with Brinker also raising its fiscal 2027 guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141186796
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-11T14:16:03Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a95d93a48081a08fd59c0d5a968f0fdfa0d907296478f226fc107aae054eeb7e
+image_url: https://cdn.benzinga.com/files/images/story/2026/08/11/Earnings-Season.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: 5 Earnings Losers With More Downside Ahead
+<<<SUMMARY>>>
+It’s been a generally successful earnings season for most of the market, as EPS figures remain strong and analysts continue to raise estimates. But not everyone is joining the party.
+
+
+
+Earnings reports from the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141181835
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-11T04:02:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23fea948da3baff7233c04f3f2e32f4f0544246671a1786c25426fca1741a4d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Why Did TTD, PZZA, EBS Stocks Plummet To 52 Week Lows?
+<<<SUMMARY>>>
+Shares of Trade Desk, Papa John’s International, Emergent Biosolutions declined after the companies posted disappointing Q2 results last week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141175048
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-10T08:07:46Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1c485924947dadb3ca3f2426f84d75b67bc39e56d245a440c9a3a9b36eb2b62d
+image_url: https://cdn.benzinga.com/files/images/story/2026/08/10/Analysts-Debate-Depreciation-Impact.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: This NetApp Analyst Is No Longer Bearish; Here Are Top 5 Upgrades For Monday
+<<<SUMMARY>>>
+Wall Street analysts upgraded PTGX, LECO, and JHX. See analyst ratings and price targets for these stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141167084
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-09T10:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=910b8e3a2de921bc05592a4a211b7dba8442e8eb34d275f0f5f542adc0a1a8b3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John’s Is Having Its Worst Sales Drop in Years, Pizza Hut Is Closing 250 Locations, and Internet Thinks It Knows Why
+<<<SUMMARY>>>
+A Reddit post asks why major pizza chains are losing sales and closing stores.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250762
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-09T10:09:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=689fb4de4b2ee68ddae0ec8746a6bddb15ef5d701f9e9c084566e1bcb42bfd74
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International (PZZA) After Earnings Reset And Dividend Suspension Is Fair Value Back In Focus
+<<<SUMMARY>>>
+Papa John's International (PZZA) is back in focus after its second quarter 2026 update, which combined softer sales, suspended dividends, and leadership changes with a plan to invest more heavily in marketing and technology. See our latest analysis for Papa John's International. The second quarter update has coincided with a sharp reset in sentiment toward Papa John's International. The 7 day share price return is down 18.16% and the year to date share price return is down 39.28%, while the 1...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250769
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-17T11:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5f903a5c1dbdaa662f1eb3d0dbd0440a85394c4000bedef4a3be57390f48ccf7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns Canada Introduces Pan Pizza
+<<<SUMMARY>>>
+A new take on a classic Pan Pizza Papa Johns Pan Pizza has arrived at Papa Johns Canada. Crispy, caramelized edges. A soft, airy centre. And unmistakable Papa Johns flavour in every bite. EDMONTON, Alberta, Aug. 17, 2026 (GLOBE NEWSWIRE) -- Pan Pizza has arrived at Papa Johns Canada. Beginning today, Papa Johns Canada is introducing its highly anticipated Pan Pizza. A new take on a classic, Papa Johns' Pan Pizza delivers crispy, caramelized edges, a pillowy, airy centre and the unmistakable flav
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250760
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-16T07:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ce23230664c3d82bc6c24ccd9abffa98591f502bd989347f4ff1502d64a9c19d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Portillo's, Wingstop, Papa John's, and Sweetgreen Stocks Trade Up, What You Need To Know
+<<<SUMMARY>>>
+A number of stocks jumped in the afternoon session after a government report indicated a cooling in wholesale food inflation, a key cost for the industry.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:94eddf95029dcbd709f2996fa0950dd9c95eacd3d955dfdb36ff92c0a9bf149b
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-08-07T21:18:00Z
+publisher: The Motley Fool
+author: Emma Newbery
+url: https://www.fool.com/coverage/stock-market-today/2026/08/07/stock-market-today-aug-7-markets-rally-on-jobs-shock-and-atlassian-surges-35/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F77da40e1441423dea3c02d00c83ecbebd96a733e-1401x1250.png%3Fw%3D800%26q%3D75%26fit%3Dmax%26auto%3Dformat&w=1200&op=resize
+category: 
+tickers: TEAM, TWLO, ABNB, TTD, PZZA
+keywords: stock market rally, July payrolls, interest rates, earnings results, AI impact, market sentiment
+headline: Stock Market Today, Aug. 7: Markets Rally on Jobs Shock and Atlassian Surges 35%
+<<<SUMMARY>>>
+Major stock indexes reached record highs on August 7, 2026, following an unexpected contraction in July payrolls that boosted interest rate optimism. The S&P 500 gained 0.62%, Nasdaq rose 1.30%, and the Dow climbed 0.28%. Atlassian surged 35% and Twilio gained 25% on strong earnings, while Trade Desk and Papa John's International declined on disappointing results. The Bank of America bull-and-bear indicator hit its highest level since 2021, prompting analysts to recommend rotating into defensive investments.
+<<<INSIGHTS>>>
+TEAM | positive | Stock surged 35% on robust quarterly earnings results, demonstrating strong AI-driven demand for the company's services.
+TWLO | positive | Gained 25% following impressive quarterly earnings, indicating strong performance and positive investor reception.
+ABNB | positive | Stock surged after beating earnings expectations, demonstrating strong business performance.
+TTD | negative | Stock tumbled on disappointing earnings results, failing to meet investor expectations.
+PZZA | negative | Extended losses following analyst downgrades after the company issued a guidance cut.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:06c3859ebd4a87e9978b8f9c784aa87a158264af77ef3964098d55f45101dd50
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-08-10T13:42:00Z
+publisher: GlobeNewswire Inc.
+author: Block & Leviton
+url: https://www.globenewswire.com/news-release/2026/08/10/3341911/23044/en/cvrx-investigation-cvrx-inc-investigated-for-securities-fraud-by-block-leviton-investors-should-contact-the-firm-to-possibly-recover-losses.html
+image_url: https://ml.globenewswire.com/Resource/Download/582f8ff5-dda1-458c-b0b6-cc833c566289
+category: 
+tickers: CVRX, PZZA, HUBS
+keywords: securities fraud, class action, revenue guidance, stock decline, investor losses, misrepresentation, disclosure violations
+headline: CVRX INVESTIGATION: CVRx, Inc. Investigated for Securities Fraud by Block & Leviton; Investors Should Contact the Firm to Possibly Recover Losses
+<<<SUMMARY>>>
+Block & Leviton is investigating CVRx, Inc., Papa John's International, and HubSpot for potential securities fraud. CVRx cut its revenue guidance citing sales force challenges and reimbursement issues, while HubSpot experienced a 25% share price decline. Investors who have suffered losses are encouraged to contact the firm.
+<<<INSIGHTS>>>
+CVRX | negative | Company cut full-year revenue guidance, disclosed sales force onboarding issues, elevated turnover, negative regional implant growth, reimbursement challenges, and received a DOJ civil investigative demand regarding sales and marketing practices.
+PZZA | negative | Company is under investigation for potential federal securities law violations by executives, indicating possible misrepresentation or disclosure failures.
+HUBS | negative | Stock price plunged 25% on August 6th, triggering a securities fraud investigation for possible violations.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141352411
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-24T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e84518d41c3cffb0bcd8b8927383450b2acbf470df37bf6bed34f1f212e656c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns and PopUp Bagels Deliver the Ultimate Flavor Crossover With Two New Schmears Inspired by Iconic Papa Johns Flavors
+<<<SUMMARY>>>
+ATLANTA, August 24, 2026--This summer, Papa Johns and Not Famous but Known® PopUp Bagels are uniting two brands with devoted followings and a shared commitment to craftsmanship for a special three-week, two-part schmear release nobody saw coming, but everyone will want to try. Beginning August 27 with an initial drop, followed by a second release on September 3, PopUp Bagels is turning Papa Johns most iconic flavor signatures, the famous pepperoncini and legendary Special Garlic Sauce, into limi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141352412
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-24T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eed495430f88c291d50e5628b63aefc1b56d50953baea333658f0203d97598e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns Announces KM Capital as New Franchise Partner in Mexico
+<<<SUMMARY>>>
+MEXICO CITY, August 24, 2026--Papa Johns today announced that KM Capital has joined the Papa Johns brand as the new franchise partner in Mexico. KM Capital will assume leadership of 44 existing franchised restaurants across the country, bringing a renewed focus on commercial growth, operational excellence, innovation and delivering on the brand’s Better Ingredients. Better Pizza. Promise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141253435
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-19T10:05:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6845231c5ec458df281d37ff6bb28cce9050e3efa67d557939fbd9598c3247d5
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Don't Mail It In Before Labor Day: These 3 Events Could Shake Stock
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141250759
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-18T13:33:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=11dd9fb86c05d2d41259992e30aba89ac77dfaaeee424bc9b8ea0dfedd5aa42d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 3 Stocks Under $50 with Questionable Fundamentals
+<<<SUMMARY>>>
+The $10-50 price range often includes mid-sized businesses with proven track records and plenty of growth runway ahead. They also usually carry less risk than penny stocks, though they’re not immune to volatility as many lack the scale advantages of their larger peers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141542549
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-31T15:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=902f5006879059f452c94194ad861ece592ea06d62679ca50adb7b86b8f54da6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns Delivers More for Pepperoni Lovers With the Ultimate Pepperoni Pizza, Combining Quality and Abundance
+<<<SUMMARY>>>
+ATLANTA, August 31, 2026--For pepperoni lovers who never want to settle, Papa Johns believes more should never mean sacrificing what matters most. The Ultimate Pepperoni Pizza features 30% more pepperoni than a Papa Johns large pepperoni pizza and is made with pepperoni containing no artificial colors or MSG, bringing together craveable flavor, abundance and the ingredients fans know and love from Papa Johns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141337595
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-28T10:10:14Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=0ab65e7f0f7fe622d5e57ef07566fba830bc1a687b1c77d1dff2965a6789adad
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1044350104/image_1044350104.jpg?io=getty-c-w1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's: Fairly Valued Despite Turnaround Potential
+<<<SUMMARY>>>
+Papa Johnâs (PZZA) turnaround faces falling North America sales and dividend suspension. See valuation, upside vs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141337886
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-28T07:18:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=115e8d21f232d1e8616b5c91f4b4863b813396205e4b13a6bce262316becd59b
+image_url: https://cdn.benzinga.com/files/images/story/2026/08/28/PapaJohns-storefront.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Top 3 Consumer Stocks That May Rocket Higher This Quarter
+<<<SUMMARY>>>
+Oversold stocks in consumer discretionary sector present buying opportunity. RSI compares stock strength on up/down days, helps predict short term performance. RSI below 30 indicates oversold.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141352408
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-26T13:54:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4cdc41bb432c09e2ded721e7258b2ff6bda8e0180590745fd390b7f35d9cac9e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns Refranchises 28 Restaurants in Orlando Market
+<<<SUMMARY>>>
+Papa John’s International, Inc announced that it has refranchised 28 formerly corporate-owned restaurants in the Orlando area, which are now owned and operated by PZZA Group, LLC and Magic City Pizzerias, LLC, both led by Wade Oney, a leading franchisee operator. The restaurants were previously owned and operated by Papa Johns USA, Inc. The sale […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141352409
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-25T21:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d4c0487c9fa6da1d3d37fc4753119de980d19e7163e245bf7ddf05355fb6d17b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns Completes Strategic Refranchising of Orlando-area Restaurants with Franchisee Wade Oney
+<<<SUMMARY>>>
+ATLANTA, August 25, 2026--Papa John’s International, Inc. (Nasdaq: PZZA) ("Papa Johns®") (the "Company") today announced that it has refranchised 28 formerly corporate-owned restaurants in the Orlando area, which are now owned and operated by PZZA Group, LLC and Magic City Pizzerias, LLC, both led by Wade Oney, a leading franchisee operator. The restaurants were previously owned and operated by Papa Johns USA, Inc. The sale of these restaurants furthers Papa Johns initiative to strategically ref
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141352410
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-25T19:33:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=68a2c9d5a096b1f720b295e54826d980e813be205c3ceac06c0dc1a32f8b18c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Yum Brands Stock Zigs When The Market Zags
+<<<SUMMARY>>>
+The fast-food giant is standing out in a down market, but its real value for your portfolio is a story told over years, not days.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141670332
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-06T09:07:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2e4c4d7d1aa9cd599b6e048bb1d58d25aaa6f9c91f66fdc14fd8beb920a8462
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns (PZZA) Stock Sees Fair Value Cut As Analysts Reassess Turnaround Risks
+<<<SUMMARY>>>
+Papa John’s International is back in focus after its assessed fair value was cut from US$37.44 to US$28.67, roughly a one quarter reduction in the updated price target range. Analysts link this adjustment to ongoing questions around execution risks, recent earnings updates, and how quickly any turnaround efforts might show through in the numbers. Read on to see what is driving the evolving narrative and how you can track the next moves around Papa John’s International. Stay updated as the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141379891
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-02T14:44:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8e2dc6ea4da20bf0643bd39b3349043e116508954abec83ec3f8c8e3ac840785
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 3 Reasons PZZA is Risky and 1 Stock to Buy Instead
+<<<SUMMARY>>>
+What a brutal six months it’s been for Papa John's. The stock has dropped 28.7% and now trades at $22.77, rattling many shareholders. This was partly driven by its softer quarterly results and might have investors contemplating their next move.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141373236
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-01T20:36:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c1ddf43bf2db318362308f803569f912b1f3361c70189f18bfe7f4e1122b94ee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 1980s Pizza King Officially Gets a New Owner
+<<<SUMMARY>>>
+Yum is betting on a leaner, faster-growing restaurant portfolio
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141360113
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-01T07:50:26Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1c8d9fc9713e514dace3475fac0e853e6d6686a3e4ec06a22df8f6334fc459bf
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2271323508/image_2271323508.jpg?io=getty-c-w1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's: Self-Help Initiatives And A Discounted Valuation Create Upside
+<<<SUMMARY>>>
+Papa Johnâs (PZZA) Buy case: turnaround in North America via cost cuts, digital/AI personalization, and ad rebuild; valued at EV/EBITDA discount. See more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142139301
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-14T15:05:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23ff889b5df6d130737643e8542d10fd278bc2f8f95ccbde702646b2915b0a23
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Walmart (WMT) Delivery Push Gains Momentum with Papa John’s Partnership
+<<<SUMMARY>>>
+Walmart Inc. (NASDAQ:WMT) is expanding its restaurant-delivery business through a partnership with Papa John’s, allowing customers in select U.S. markets to order pizzas, sides, and desserts through Walmart’s app and website. The service is expected to launch this fall before expanding to thousands of participating Papa John’s locations nationwide. Customers will be able to order […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142115645
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-12T16:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dc6c652712b01256912aca23616b57e5e03865fc45ac8b20a8eabaa85d0dc80b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Popular pizza dining chain franchisee closes 13 locations
+<<<SUMMARY>>>
+The pizza restaurant franchisee at one time owned over two dozen locations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142064760
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-10T18:23:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=93a3d88c691448e6eb5046b1fdaafa733fc070d03ba2d03cf42c3bc3f4c13b8b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Walmart Takes Direct Aim at DoorDash and Uber
+<<<SUMMARY>>>
+Pizza and groceries collide in Walmart's latest delivery power play
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142063299
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-10T17:35:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=051fb698b3becf6916afe3bca514852e015aa68a8cbc8955955fabcc3782f0bc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Sector Update: Consumer Stocks Mixed Thursday Afternoon
+<<<SUMMARY>>>
+Consumer stocks were mixed Thursday afternoon, with the State Street Consumer Staples Select Sector
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142063388
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-10T16:25:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=be93362cbca7ae551042e57805b28cf6735124490f6057cfcaf31c3abc07d495
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 3 Restaurant Stocks with Questionable Fundamentals
+<<<SUMMARY>>>
+Restaurants are go-to meeting hubs for friends, family, and colleagues. But it’s not all sunshine and rainbows as they’re notoriously hard to run thanks to perishable ingredients, labor shortages, or volatile consumer spending. These factors have weighed on the industry over the past six months as its 4.4% return has fallen short of the S&P 500’s 13.1% gain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142061810
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-10T15:47:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8633c591548f6f318ad47bcb09f4ab155ba3d4de21be9745c31f078a50ddf730
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Walmart Expands Restaurant Delivery With Papa John’s Deal – What Investors Need To Know
+<<<SUMMARY>>>
+Walmart is adding Papa John’s to its delivery platform, allowing customers to bundle restaurant orders with Walmart purchases as the retailer expands its fast-delivery ecosystem.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142061835
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-10T09:44:53Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a30c0864c5656d786efc9f0654bbb4c3ec01900a8dc379d96ab510d5682ff376
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: 'Walmart Expands Restaurant Delivery With Papa John’s Deal' - Bloomberg
+<<<SUMMARY>>>
+https://www.bloomberg.com/news/articles/2026-09-10/walmart-expands-restaurant-delivery-with-papa-john-s-deal
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142035128
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-09T21:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=21c6d98eed08d75d64c0365a58bf49990b5a034f9b5509fd206e470a12e743bc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns to Participate in the Piper Sandler Growth Frontiers Conference
+<<<SUMMARY>>>
+LOUISVILLE, Ky., September 09, 2026--Papa John’s International, Inc. (Nasdaq: PZZA) ("Papa Johns®") today announced that members of its leadership team will participate in the 2026 Piper Sandler Growth Frontiers Conference.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141955246
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-08T21:55:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eab928ae430dbe8f7bce2d2e8c7d762abc17f3166e158cc8301fdbe724a9eb95
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 49-year-old beloved pizza dining chain quietly closes locations
+<<<SUMMARY>>>
+The pizza chain will not renew several restaurant location leases.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:141957807
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-08T13:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d096ee11b902e25e8da272d27f2e770ed8e9c3af0ff5e306dacefb517781a579
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Atlanta Wins. Papa Johns Delivers. Papa Johns Named Official Pizza Partner of the Atlanta Falcons and Atlanta United
+<<<SUMMARY>>>
+ATLANTA, September 08, 2026--Papa Johns today announced a new multiyear partnership with AMB Sports and Entertainment (AMBSE), becoming the Official Pizza Partner of the Atlanta Falcons and Atlanta United. Papa Johns and AMBSE will collaborate on fan-focused experiences, special promotions and community initiatives designed to celebrate Atlanta's passion for sports and bring fans together all year long.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142187075
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-16T09:07:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=97fe04eaef0fee52bae66d2414a9f60fa506dc436ed6260ffae22a36c10f75d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 3 of Wall Street’s Favorite Stocks That Fall Short
+<<<SUMMARY>>>
+The stocks in this article have caught Wall Street’s attention in a big way, with price targets implying returns above 20%. But investors should take these forecasts with a grain of salt because analysts typically say nice things about companies so their firms can win business in other product lines like M&A advisory.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c59c4f290c96ece5f684e8af3175b7fba7e79563e5b1344eb361e65383d14cd7
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-08-25T22:46:00Z
+publisher: GlobeNewswire Inc.
+author: Pomerantz Llp
+url: https://www.globenewswire.com/news-release/2026/08/25/3351020/1087/en/investor-alert-pomerantz-law-firm-investigates-claims-on-behalf-of-investors-of-papa-john-s-international-inc-pzza.html
+image_url: https://www.globenewswire.com/news-release/2026/08/25/3351020/1087/en/investor-alert-pomerantz-law-firm-investigates-claims-on-behalf-of-investors-of-papa-john-s-international-inc-pzza.html
+category: 
+tickers: PZZA, XTIA
+keywords: securities fraud, class action lawsuit, investor investigation, stock price decline, guidance cut, fiduciary duty
+headline: INVESTOR ALERT: Pomerantz Law Firm Investigates Claims On Behalf of Investors of Papa John’s International, Inc. - PZZA
+<<<SUMMARY>>>
+Pomerantz LLP announced investigations into securities fraud claims on behalf of investors in Papa John's International, XTI Aerospace, and Calumet. Papa John's stock fell 17.18% following disappointing full-year 2026 guidance despite beating Q2 expectations. The law firm is seeking investors to join class action lawsuits against these companies.
+<<<INSIGHTS>>>
+PZZA | negative | Company faced a significant 17.18% stock price drop following Q2 earnings that beat expectations but included a substantial full-year 2026 guidance reduction. Additionally, the company is under investigation for potential securities fraud and unlawful business practices.
+XTIA | negative | Company is under investigation by Pomerantz LLP for potential securities fraud or unlawful business practices, indicating investor concerns about corporate misconduct.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4ef5a45011ec5f0ade4adc8889141d425c579cd82caa1459caef1378a180b8e8
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-01T21:56:00Z
+publisher: GlobeNewswire Inc.
+author: Pomerantz Llp
+url: https://www.globenewswire.com/news-release/2026/09/01/3354728/1087/en/investor-alert-pomerantz-law-firm-investigates-claims-on-behalf-of-investors-of-papa-john-s-international-inc-pzza.html
+image_url: https://www.globenewswire.com/news-release/2026/09/01/3354728/1087/en/investor-alert-pomerantz-law-firm-investigates-claims-on-behalf-of-investors-of-papa-john-s-international-inc-pzza.html
+category: 
+tickers: PZZA
+keywords: securities fraud, class action lawsuit, earnings miss, guidance cut, stock decline, investor losses
+headline: INVESTOR ALERT: Pomerantz Law Firm Investigates Claims On Behalf of Investors of Papa John’s International, Inc. - PZZA
+<<<SUMMARY>>>
+Pomerantz LLP is investigating Papa John's International for potential securities fraud following the company's August 6, 2026 earnings report. Despite beating headline expectations on Q2 results, Papa John's slashed its full-year 2026 outlook, causing the stock to plummet $5.11 per share (17.18%) to $24.64. Investors with losses are encouraged to contact the firm to join the class action lawsuit.
+<<<INSIGHTS>>>
+PZZA | negative | Company faces securities fraud investigation following disappointing full-year guidance despite beating Q2 expectations, resulting in a significant 17.18% stock price decline and triggering a class action lawsuit on behalf of affected investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3f890d708a8d0a4e9557b567893d5f909feae8d771d3c4a19460c373d2df4354
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-04T16:33:00Z
+publisher: GlobeNewswire Inc.
+author: Bronstein, Gewirtz & Grossman Llc
+url: https://www.globenewswire.com/news-release/2026/09/04/3356721/9788/en/bronstein-gewirtz-grossman-llc-urges-papa-john-s-international-inc-investors-to-act-class-action-filed-alleging-investor-harm.html
+image_url: https://ml.globenewswire.com/Resource/Download/1a031130-a9cc-48ff-b281-d1e47c9a91a5
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities fraud, Papa John's International, investor harm, false statements, market share loss, transformation efforts
+headline: Bronstein, Gewirtz & Grossman LLC Urges Papa John's International, Inc. Investors to Act: Class Action Filed Alleging Investor Harm
+<<<SUMMARY>>>
+A class action lawsuit has been filed against Papa John's International, Inc. alleging securities fraud. The complaint claims the company made false statements about its transformation efforts and competitive position, failing to disclose that market share losses were continuing and that significant strategic shifts including increased promotional efforts would be necessary. Investors who purchased Papa John's securities between August 7, 2025 and August 5, 2026 may be eligible to join the case.
+<<<INSIGHTS>>>
+PZZA | negative | The company is accused of making materially false and misleading statements about its business transformation, competitive position, and market share performance. Allegations include failure to disclose ongoing market share losses and the need for significant strategic shifts, indicating operational challenges and potential investor deception.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:540a97d0b9f64557faeda8241f8cf48805a84c751f4906b83b84a0903177f589
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-05T22:58:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/09/05/3356892/673/en/rosen-global-investor-counsel-encourages-papa-john-s-international-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-pzza.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: PZZA, WIX
+keywords: class action lawsuit, securities fraud, investor compensation, Papa John's, Simply Good Foods, Wix.com, lead plaintiff, material misstatements
+headline: ROSEN, GLOBAL INVESTOR COUNSEL, Encourages Papa John’s International, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - PZZA
+<<<SUMMARY>>>
+Rosen Law Firm has filed class action lawsuits against Papa John's International, The Simply Good Foods Company, and Wix.com Ltd. on behalf of investors who purchased securities during specified periods. Papa John's is accused of making false statements about its transformation strategy and concealing market share losses. Investors are encouraged to secure counsel before the November 2, 2026 deadline to serve as lead plaintiff.
+<<<INSIGHTS>>>
+PZZA | negative | Company is accused of making materially false and misleading statements about its transformation strategy and concealing that it was taking longer than expected and unable to prevent market share losses. This resulted in investor damages.
+WIX | negative | Subject of a securities class action lawsuit with a specific notice for investors with losses exceeding $100,000, indicating significant alleged securities violations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:11571c6c43e90794694dacc39bda6d4f42558c1b55908d8e64d66cdd74931b8f
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-08T16:00:00Z
+publisher: GlobeNewswire Inc.
+author: Bronstein, Gewirtz & Grossman Llc
+url: https://www.globenewswire.com/news-release/2026/09/08/3357962/9788/en/bronstein-gewirtz-grossman-llc-urges-papa-john-s-international-inc-investors-to-act-class-action-filed-alleging-investor-harm.html
+image_url: https://ml.globenewswire.com/Resource/Download/1a031130-a9cc-48ff-b281-d1e47c9a91a5
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities fraud, Papa John's International, investor harm, market share losses, misleading statements, lead plaintiff
+headline: Bronstein, Gewirtz & Grossman LLC Urges Papa John's International, Inc. Investors to Act: Class Action Filed Alleging Investor Harm
+<<<SUMMARY>>>
+A class action lawsuit has been filed against Papa John's International, Inc. (NASDAQ: PZZA) alleging securities fraud. The complaint claims that company executives made materially false and misleading statements regarding the company's transformation efforts, market share losses, and competitive position during the period from August 7, 2025 to August 5, 2026. Investors who purchased Papa John's securities during this period are encouraged to join the case, with a lead plaintiff deadline of November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a securities fraud class action lawsuit alleging that executives made materially false and misleading statements about business transformation efforts, market share decline, and competitive position. This indicates serious governance and disclosure issues that resulted in investor losses.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ebd7b478bf4d058f34209a31865ea274b2731e0f18a0fad268f50aae98e55732
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-15T01:35:00Z
+publisher: GlobeNewswire Inc.
+author: Wolf Haldenstein Adler Freeman & Herz Llp
+url: https://www.globenewswire.com/news-release/2026/09/15/3361617/6819/en/shareholders-who-lost-money-in-shares-of-acquired-papa-john-s-international-inc-nasdaq-pzza-should-contact-wolf-haldenstein-immediately.html
+image_url: https://ml.globenewswire.com/Resource/Download/392044a3-be03-4f84-b6a6-55fda67051db
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities litigation, Papa John's International, misleading statements, strategic transformation, comparable sales decline, stock price decline, dividend suspension
+headline: Shareholders who lost money in shares of acquired Papa John’s International, Inc. (NASDAQ: PZZA) should contact Wolf Haldenstein Immediately
+<<<SUMMARY>>>
+A class action lawsuit has been filed against Papa John's International on behalf of shareholders who purchased stock between August 7, 2025 and August 5, 2026. The complaint alleges that defendants made materially false statements about the company's strategic transformation and growth outlook while minimizing risks. On August 6, 2026, Papa John's reported an 8.3% decline in North American comparable sales, reduced its fiscal 2026 outlook, and suspended its quarterly dividend, causing the stock to fall 17.18%.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a class action lawsuit alleging materially false and misleading statements about its strategic transformation and business prospects. Additionally, the company reported significant operational deterioration including an 8.3% decline in North American comparable sales, reduced full-year guidance, and suspended its dividend, resulting in a 17.18% stock price decline.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1dd8e3e6b60477db1b483eb699628aa54d2eb6412ecd1b18b067c99f98fc90a4
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-16T01:24:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/09/16/3362800/673/en/wix-deadline-rosen-a-ranked-and-leading-law-firm-encourages-wix-com-ltd-investors-to-secure-counsel-before-important-september-22-deadline-in-securities-class-action-wix.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: WIX, PZZA, PRCT
+keywords: securities class action, lead plaintiff deadline, Wix AI products, false statements, investor compensation, September 22 deadline
+headline: WIX DEADLINE: ROSEN, A RANKED AND LEADING LAW FIRM, Encourages Wix.com Ltd. Investors to Secure Counsel Before Important September 22 Deadline in Securities Class Action – WIX
+<<<SUMMARY>>>
+Rosen Law Firm is reminding investors in Wix.com Ltd., Papa John's International, Inc., and PROCEPT BioRobotics Corporation of upcoming lead plaintiff deadlines in securities class action lawsuits. The Wix lawsuit alleges the company made false statements about its AI product offerings, overstating competitiveness and understating development costs. Investors who purchased securities during specified class periods may be eligible for compensation.
+<<<INSIGHTS>>>
+WIX | negative | Company is subject to a securities class action lawsuit alleging material misstatements regarding AI product competitiveness, performance, and associated costs, resulting in investor damages.
+PZZA | negative | Company is subject to a securities class action lawsuit with an upcoming lead plaintiff deadline, indicating alleged securities violations.
+PRCT | negative | Company is subject to a securities class action lawsuit with an upcoming lead plaintiff deadline, indicating alleged securities violations.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142368927
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-23T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83429590af4558fa7b18d2c22969c3fc84f9e75c297475ccd80246d3b7a127e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns The Works Pizza: Seven Premium Toppings in One Perfect Bite
+<<<SUMMARY>>>
+ATLANTA, September 23, 2026--Why settle for one favorite topping when you can have seven? This fall, Papa Johns is putting one of its most beloved Handcrafted Specialty Pizzas in the spotlight: The Works, a fan-favorite loaded with seven premium toppings that come together in one craveable, flavor-packed bite.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142263114
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-18T23:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3bf42d5247a28a5787fabcd7a8b439ba41c591d99eabfcb7f892f33541a83084
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Do You Want Gains With That?
+<<<SUMMARY>>>
+Restaurants are struggling with higher prices for ingredients and labor, as well as the wellness trend the need for innovation:
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142496322
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-29T13:44:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=75505c188d4d47b9089ba09a12c983920129e3abdf9812a8024677fe61180031
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 1 Cash-Producing Stock with Impressive Fundamentals and 2 We Brush Off
+<<<SUMMARY>>>
+Generating cash is essential for any business, but not all cash-rich companies are great investments. Some produce plenty of cash but fail to allocate it effectively, leading to missed opportunities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142422307
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-24T13:35:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=275801b1e2ae6b24d115147d9711c2e29aca51c9b3f25b6b3a1d98f5f88d7f3f
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/aggregated_options_1.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: 8 Consumer Discretionary Stocks With Whale Alerts In Today’s Session
+<<<SUMMARY>>>
+This whale alert can help traders discover the next big trading opportunities.
+Whales are entities with large sums of money and we track their transactions here at Benzinga on our options activity scanner.
+Traders often
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142673062
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-06T17:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3cab0eeea178dc97e9f0469eda8bd3f254cc5db7ef936e5f93736a57f458bc0a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 45-year-old pizza chain closed more than 90 locations and filed bankruptcy 3 times
+<<<SUMMARY>>>
+The brick-oven chain joins a growing trend that has seen Pizza Hut, Papa John’s, and Chuck E. Cheese close hundreds of locations combined.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142636816
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-05T15:25:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=19790c589a90033aeeefe89206e824111b9756c81409f2d27fa44c6a8d894338
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Walmart (WMT) Is Becoming More Than a Retailer — But Is the Stock Too Expensive?
+<<<SUMMARY>>>
+Walmart Inc.’s (NASDAQ:WMT) growth narrative is moving away from reliance on low-margin sales volume. The company delivered 24% year-over-year growth in its U.S. e-commerce sales during the second quarter of fiscal 2027. It saw the Connect’s ad segment revenues increase by 43% excluding VIZIO numbers, while the U.S. membership segment exhibited double-digit growth. Strength across […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142636131
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-05T04:17:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=62e310eca0fe2c815299939aa565ec5fae0f308c32e03fe402eacc896a2d6a2f
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/movers_3.jpg?width=2048&height=1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's International Reports Q2 2026 Results: Full Earnings Call Transcript
+<<<SUMMARY>>>
+Papa John&#39;s International (NASDAQ:PZZA) reported second-quarter financial results on Thursday. The transcript from the company&#39;s second-quarter earnings call has been provided below.
+This transcript is brought
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142588565
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-02T12:52:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3011a0f8828208d1a97e715c8a15007e639d58f22cd49a9a3e6041f82abb3a7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Chain restaurants are closing hundreds of locations across the US in 2026. See the list.
+<<<SUMMARY>>>
+Several restaurant chains, including Wendy's, Papa John's, Pizza Hut, and Starbucks have announced plans to close locations this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142564275
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-01T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3944819beb77315e293980c8171b03f1a88b5414867e7eab79eb917419d77d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns to Report Third Quarter 2026 Results on November 5, 2026
+<<<SUMMARY>>>
+LOUISVILLE, Ky., October 01, 2026--Papa John's International, Inc. (Nasdaq: PZZA) ("Papa Johns©") will release its third quarter 2026 financial results before the market opens on Thursday, November 5, 2026, with a conference call to follow at 8:00 a.m. ET.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142813851
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-12T07:27:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4386c3714e9d5ed99e667d07d0a8efa19124981b9eca4216d71d3ab9646e0b61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: 3 Profitable Stocks We Approach with Caution
+<<<SUMMARY>>>
+Not all profitable companies are built to last - some rely on outdated models or unsustainable advantages. Just because a business is in the green today doesn’t mean it will thrive tomorrow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142949188
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-16T16:27:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7d766d5e571857a9f828b9283f39d97b4f0081a1c77ca6230b7ead32c950231b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Domino's Pizza Stock Is Waiting On One Answer
+<<<SUMMARY>>>
+Domino's Pizza (DPZ) stock has lost 27.0% over the past year. During that same period, the S&P 500 posted a 17.9% return. The central risk lies close to home. Management says U.S. franchisees are under profit pressure, and this pressure has already strained the pipeline of new stores. In the latest quarter, Domino’s U.S. growth came largely from new stores. How many stores franchisees will actually open in 2027 remains unsettled.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142946906
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-15T11:55:18Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b76431ed437b18b4dd6f1a4041d2a4175c67f1c9b7d3cfbdd7e90545be6f2200
+image_url: 
+category: company
+tickers: PZZA
+keywords: 
+headline: Stephens & Co. Maintains Equal-Weight on Papa John's International, Lowers Price Target to $19
+<<<SUMMARY>>>
+Stephens &amp; Co.  analyst Jim Salera   maintains Papa John&#39;s International (NASDAQ:PZZA) with a Equal-Weight and lowers the price target from $24 to $19.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3a72fa1bb5988da061a2126961b58fb0ed83ad439af583adb536efb1e93bb3a5
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-22T17:50:00Z
+publisher: GlobeNewswire Inc.
+author: Glancy Prongay Wolke & Rotter Llp
+url: https://www.globenewswire.com/news-release/2026/09/22/3366805/34548/en/deadline-alert-dick-s-sporting-goods-inc-dks-shareholders-who-lost-money-urged-to-contact-glancy-prongay-wolke-rotter-llp-about-securities-fraud-lawsuit.html
+image_url: https://ml.globenewswire.com/Resource/Download/a67368e9-bc06-4c5b-a902-dd2d9af3e4f0
+category: 
+tickers: DKS, PZZA, HIMS
+keywords: securities fraud, class action lawsuit, DICK's Sporting Goods, Papa John's International, Hims & Hers Health, stock decline, Foot Locker, misleading statements, lead plaintiff deadline
+headline: Deadline Alert: DICK’s Sporting Goods, Inc. (DKS) Shareholders Who Lost Money Urged To Contact Glancy Prongay Wolke & Rotter LLP About Securities Fraud Lawsuit
+<<<SUMMARY>>>
+Class action lawsuits have been filed against DICK's Sporting Goods, Papa John's International, and Hims & Hers Health for alleged securities fraud. DICK's stock fell 30.68% after reporting disappointing Q2 2026 results and reduced guidance, citing increased promotional pressures in the athletic footwear market and underperformance of its Foot Locker acquisition. Investors who suffered losses are urged to file lead plaintiff motions by the respective deadlines in early November 2026.
+<<<INSIGHTS>>>
+DKS | negative | Company faced a 30.68% stock price decline following disappointing Q2 2026 earnings results, reduced full-year guidance, and disclosure of significant challenges with Foot Locker acquisition including excess inventory and promotional pressures. Securities fraud lawsuit alleges material misstatements about business operations and prospects.
+PZZA | negative | Subject of a securities fraud class action lawsuit with a November 2, 2026 deadline for lead plaintiff motions, indicating alleged material misstatements or omissions to investors.
+HIMS | negative | Subject of a securities fraud class action lawsuit with a November 2, 2026 deadline for lead plaintiff motions, indicating alleged material misstatements or omissions to investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c2b23370d2c212bc01c01f40863c6422991efff77c8052b8a51c0de5d6266ff6
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-22T18:00:00Z
+publisher: GlobeNewswire Inc.
+author: Glancy Prongay Wolke & Rotter Llp
+url: https://www.globenewswire.com/news-release/2026/09/22/3366811/34548/en/deadline-alert-papa-john-s-international-inc-pzza-shareholders-who-lost-money-urged-to-contact-glancy-prongay-wolke-rotter-llp-about-securities-fraud-lawsuit.html
+image_url: https://ml.globenewswire.com/Resource/Download/a67368e9-bc06-4c5b-a902-dd2d9af3e4f0
+category: 
+tickers: PZZA
+keywords: securities fraud, class action lawsuit, Papa John's International, misleading statements, comparable sales decline, dividend suspension, stock price decline
+headline: Deadline Alert: Papa John’s International, Inc. (PZZA) Shareholders Who Lost Money Urged To Contact Glancy Prongay Wolke & Rotter LLP About Securities Fraud Lawsuit
+<<<SUMMARY>>>
+Papa John's International faces a securities fraud class action lawsuit for allegedly making materially false statements about its business transformation and growth outlook. The company reported an 8.3% decline in North American comparable sales on August 6, 2026, suspended its dividend, and reduced fiscal 2026 guidance, causing the stock to fall 17.18%. Investors who purchased PZZA securities between August 7, 2025 and August 5, 2026 can file a lead plaintiff motion by November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is facing securities fraud allegations for making false and misleading statements about its business transformation and growth prospects. Additionally, the company reported significant operational challenges including an 8.3% decline in North American comparable sales, reduced fiscal guidance, dividend suspension, and a 17.18% stock price decline on the announcement date.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:449ef9628a5efec54fcc0a6aeaad8dafe5049cdfec77ec9cf8677616c90ad726
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-23T21:54:00Z
+publisher: GlobeNewswire Inc.
+author: Wolf Haldenstein Adler Freeman & Herz Llp
+url: https://www.globenewswire.com/news-release/2026/09/23/3367898/6819/en/shareholders-who-lost-money-in-shares-of-acquired-doximity-inc-nyse-docs-should-contact-wolf-haldenstein-immediately.html
+image_url: https://ml.globenewswire.com/Resource/Download/392044a3-be03-4f84-b6a6-55fda67051db
+category: 
+tickers: DOCS, PZZA, HIMS
+keywords: class action lawsuit, securities fraud, misleading statements, revenue guidance, stock decline, shareholder losses
+headline: Shareholders who lost money in shares of acquired Doximity, Inc. (NYSE: DOCS) should contact Wolf Haldenstein Immediately
+<<<SUMMARY>>>
+Wolf Haldenstein has filed class action lawsuits against Doximity, Papa John's International, and Hims & Hers Health on behalf of shareholders who suffered losses. The lawsuits allege that these companies made false or misleading statements regarding their financial performance and business prospects. Doximity's stock declined significantly following multiple guidance misses and revenue warnings between November 2025 and May 2026.
+<<<INSIGHTS>>>
+DOCS | negative | Company is subject to class action lawsuit alleging false statements about Newsfeed revenue impact and market share losses. Stock declined 13%, 17%, and 23% on three separate negative announcements, with cumulative losses from $62.58 to $23.39 per share.
+PZZA | negative | Company is subject to class action lawsuit for alleged securities fraud, though specific details are not provided in the article excerpt.
+HIMS | negative | Company is subject to class action lawsuit for alleged securities fraud, though specific details are not provided in the article excerpt.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:520a21eee9747b4711b2582e2bdfb08c4b2c2cc72da3cffe37e06b85de53ab8c
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-25T16:00:00Z
+publisher: GlobeNewswire Inc.
+author: Bronstein, Gewirtz & Grossman Llc
+url: https://www.globenewswire.com/news-release/2026/09/25/3369237/9788/en/bronstein-gewirtz-grossman-llc-urges-papa-john-s-international-inc-investors-to-act-class-action-filed-alleging-investor-harm.html
+image_url: https://ml.globenewswire.com/Resource/Download/1a031130-a9cc-48ff-b281-d1e47c9a91a5
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities fraud, Papa John's International, investor harm, false statements, market share losses, lead plaintiff
+headline: Bronstein, Gewirtz & Grossman LLC Urges Papa John's International, Inc. Investors to Act: Class Action Filed Alleging Investor Harm
+<<<SUMMARY>>>
+A class action lawsuit has been filed against Papa John's International (NASDAQ: PZZA) alleging that company executives made materially false and misleading statements regarding the company's transformation efforts, market share losses, and competitive position during the period from August 7, 2025 to August 5, 2026. Investors who purchased Papa John's securities during this period are encouraged to join the case, with a lead plaintiff deadline of November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is facing a securities fraud class action lawsuit alleging material misstatements about transformation efforts, market share decline, and competitive position. This indicates serious governance and disclosure issues that resulted in investor losses.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a62530f82f099dbe02e3fa2086ebcaef4afa9e7ffad9e564531937c0234a0657
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-25T19:18:00Z
+publisher: GlobeNewswire Inc.
+author: Robbins Llp
+url: https://www.globenewswire.com/news-release/2026/09/25/3369306/32719/en/pzza-stockholders-have-rights-if-you-lost-money-investing-in-papa-john-s-international-inc-contact-robbins-llp-for-information-about-recovering-your-losses.html
+image_url: https://ml.globenewswire.com/Resource/Download/f6c754ad-b344-4389-a551-cf97ce05752e
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities fraud, misleading guidance, dividend suspension, comparable sales decline, shareholder rights
+headline: PZZA Stockholders Have Rights – If You Lost Money Investing in Papa John's International, Inc. Contact Robbins LLP for Information About Recovering Your Losses
+<<<SUMMARY>>>
+A class action lawsuit was filed against Papa John's International (PZZA) for allegedly misleading investors about its business prospects and financial outlook. The company announced an 8.3% decrease in North American comparable sales, suspended its dividend, and sharply reduced its 2026 guidance on August 6, 2026, causing the stock to plummet 17.18% in a single day. Investors who purchased stock between August 7, 2025 and August 5, 2026 may be eligible to participate in the lawsuit.
+<<<INSIGHTS>>>
+PZZA | negative | The company is accused of misleading investors about its strategic transformation and growth prospects. It reported significant operational failures including an 8.3% decline in North American comparable sales, suspended its dividend, and drastically reduced its 2026 outlook from a 3% decline to a 7% decline, resulting in a 17.18% single-day stock price drop.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5d814a101989d3ee7ff4456c618d8cea4c9ff1229b7acf32dbcb24bc3aa0bc21
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-27T15:22:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/09/27/3369456/673/en/rosen-national-trial-lawyers-encourages-honeywell-aerospace-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-hona.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: HONA, PZZA, TYGO
+keywords: class action lawsuit, securities fraud, investor compensation, false statements, supply chain constraints, regulatory investigation
+headline: ROSEN, NATIONAL TRIAL LAWYERS, Encourages Honeywell Aerospace Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - HONA
+<<<SUMMARY>>>
+Rosen Law Firm has filed class action lawsuits against Honeywell Aerospace Inc., Papa John's International Inc., and Tigo Energy Inc. on behalf of investors who purchased securities during specified periods. The lawsuits allege materially false and misleading statements regarding business operations, supply chain issues, and regulatory investigations.
+<<<INSIGHTS>>>
+HONA | negative | Company is subject to a securities class action lawsuit alleging material misstatements about supplier concentration, supply constraints, and undisclosed false Claims Act investigation regarding cybersecurity compliance on government contracts.
+PZZA | negative | Company is subject to a securities class action lawsuit filed by Rosen Law Firm, though specific allegations are not detailed in the provided excerpt.
+TYGO | negative | Company is subject to a securities class action lawsuit filed by Rosen Law Firm, though specific allegations are not detailed in the provided excerpt.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:85c1eb34c59bf5efcd79b86df9aa4bb10a413897cd2d66703602ba1b41e7d1ba
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-09-28T20:50:00Z
+publisher: GlobeNewswire Inc.
+author: Glancy Prongay Wolke & Rotter Llp
+url: https://www.globenewswire.com/news-release/2026/09/28/3370292/34548/en/deadline-alert-papa-john-s-international-inc-pzza-shareholders-who-lost-money-urged-to-contact-glancy-prongay-wolke-rotter-llp-about-securities-fraud-lawsuit.html
+image_url: https://ml.globenewswire.com/Resource/Download/a67368e9-bc06-4c5b-a902-dd2d9af3e4f0
+category: 
+tickers: PZZA
+keywords: securities fraud, class action lawsuit, Papa John's International, misleading statements, comparable sales decline, dividend suspension, strategic transformation
+headline: Deadline Alert: Papa John’s International, Inc. (PZZA) Shareholders Who Lost Money Urged To Contact Glancy Prongay Wolke & Rotter LLP About Securities Fraud Lawsuit
+<<<SUMMARY>>>
+Papa John's International (PZZA) faces a securities fraud class action lawsuit after the company reported an 8.3% decline in North American comparable sales on August 6, 2026, and reduced its fiscal 2026 outlook. The lawsuit alleges that defendants made materially false statements about the company's strategic transformation and business prospects between August 7, 2025 and August 5, 2026. The stock fell 17.18% following the announcement. The deadline to file a lead plaintiff motion is November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company faces securities fraud allegations for making materially false and misleading statements about its business transformation and growth outlook. The significant stock price decline of 17.18% following disappointing financial results, reduced guidance, and dividend suspension indicates serious operational challenges and investor confidence erosion.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:859cca4d9b508eabdeccddcdb330f0719393ebadc3058897af14f5ddae39beea
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-02T13:56:00Z
+publisher: GlobeNewswire Inc.
+author: Schall, Brown & Schwartz Llp
+url: https://www.globenewswire.com/news-release/2026/10/02/3373861/0/en/pzza-investors-have-opportunity-to-lead-papa-john-s-international-inc-securities-fraud-lawsuit-with-sbs-law.html
+image_url: https://ml.globenewswire.com/Resource/Download/0b1ae5f6-3843-4b48-9c73-0b3760ba856a
+category: 
+tickers: PZZA
+keywords: securities fraud, class action lawsuit, Papa John's, false statements, market share erosion, transformation plan, investor losses
+headline: PZZA Investors Have Opportunity to Lead Papa John's International, Inc. Securities Fraud Lawsuit with SBS Law
+<<<SUMMARY>>>
+Schall, Brown & Schwartz LLP announced a securities fraud class action lawsuit against Papa John's International (NASDAQ: PZZA) for allegedly making false and misleading statements regarding its transformation plan. The company failed to achieve expected results, prevent market share erosion, and was forced to increase promotional efforts. The class period spans August 7, 2025 to August 5, 2026, with a November 2, 2026 deadline for investors to participate.
+<<<INSIGHTS>>>
+PZZA | negative | The company is accused of making false and misleading statements about its transformation plan, failing to achieve expected results, losing market share, and requiring increased promotional efforts to maintain position. These allegations indicate operational underperformance and potential fraud, resulting in investor losses.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2614bc403a65888d6aca3fbcdc202c018d58417109f6c67293299393b3ae70ab
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-02T16:00:00Z
+publisher: GlobeNewswire Inc.
+author: Bronstein, Gewirtz & Grossman Llc
+url: https://www.globenewswire.com/news-release/2026/10/02/3373933/9788/en/bronstein-gewirtz-grossman-llc-urges-papa-john-s-international-inc-investors-to-act-class-action-filed-alleging-investor-harm.html
+image_url: https://ml.globenewswire.com/Resource/Download/1a031130-a9cc-48ff-b281-d1e47c9a91a5
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities fraud, Papa John's International, investor harm, false statements, market share losses, lead plaintiff
+headline: Bronstein, Gewirtz & Grossman LLC Urges Papa John's International, Inc. Investors to Act: Class Action Filed Alleging Investor Harm
+<<<SUMMARY>>>
+A class action lawsuit has been filed against Papa John's International (NASDAQ: PZZA) alleging that company executives made materially false and misleading statements regarding the company's transformation efforts, market share losses, and competitive position during the period from August 7, 2025 to August 5, 2026. Investors who purchased Papa John's securities during this period are encouraged to join the case, with a lead plaintiff deadline of November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is accused of making materially false and misleading statements about its business transformation, inability to prevent market share losses, and declining competitive position. These allegations suggest operational challenges and potential management misconduct, which negatively impacts investor confidence and shareholder value.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6c4aaa023d0e426a865de412ae04ff0a010195697e1eb5d1887d43e162546552
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-04T02:42:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/10/04/3374117/673/en/rosen-regarded-investor-counsel-encourages-papa-john-s-international-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-pzza.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: PZZA
+keywords: securities class action, Papa John's International, investor lawsuit, material misstatement, market share loss, lead plaintiff deadline, November 2, 2026
+headline: ROSEN, REGARDED INVESTOR COUNSEL, Encourages Papa John’s International, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - PZZA
+<<<SUMMARY>>>
+Rosen Law Firm is soliciting investors who purchased Papa John's International (PZZA) stock between August 7, 2025 and August 5, 2026 to join a securities class action lawsuit. The lawsuit alleges that Papa John's made materially false and misleading statements about its transformation efforts, which were taking longer than expected and failed to prevent market share losses, ultimately requiring a shift toward increased promotional efforts.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a securities class action lawsuit alleging materially false and misleading statements regarding its business transformation, inability to prevent market share losses, and need for strategic shifts. These allegations indicate significant operational and disclosure failures that harmed investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ee679c2752fb688a6f2e10399bb87ff601b1dc1ee38c7af9feb75b3fece6bb9a
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T17:00:00Z
+publisher: GlobeNewswire Inc.
+author: Bronstein, Gewirtz & Grossman Llc
+url: https://www.globenewswire.com/news-release/2026/10/06/3375862/9788/en/bronstein-gewirtz-grossman-llc-urges-papa-john-s-international-inc-investors-to-act-class-action-filed-alleging-investor-harm.html
+image_url: https://ml.globenewswire.com/Resource/Download/1a031130-a9cc-48ff-b281-d1e47c9a91a5
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities fraud, Papa John's International, investor harm, false statements, market share losses, lead plaintiff deadline
+headline: Bronstein, Gewirtz & Grossman LLC Urges Papa John's International, Inc. Investors to Act: Class Action Filed Alleging Investor Harm
+<<<SUMMARY>>>
+A class action lawsuit has been filed against Papa John's International, Inc. alleging that company executives made materially false and misleading statements regarding the company's transformation efforts, market share losses, and competitive position during the period from August 7, 2025 to August 5, 2026. Investors who purchased Papa John's securities during this period are encouraged to join the lawsuit.
+<<<INSIGHTS>>>
+PZZA | negative | The company is accused of making materially false and misleading statements about its business transformation, inability to prevent market share losses, and declining competitive position. These allegations suggest operational challenges and management credibility issues that harm investor interests.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2f6da40fbbfd2daca6e8be4efc9de42eae1893bc55f47d1350850c73fbd405c3
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T21:33:00Z
+publisher: GlobeNewswire Inc.
+author: Pomerantz Llp
+url: https://www.globenewswire.com/news-release/2026/10/06/3376114/1087/en/investor-alert-pomerantz-law-firm-reminds-investors-with-losses-on-their-investment-in-papa-john-s-international-inc-of-class-action-lawsuit-and-upcoming-deadlines-pzza.html
+image_url: https://www.globenewswire.com/news-release/2026/10/06/3376114/1087/en/investor-alert-pomerantz-law-firm-reminds-investors-with-losses-on-their-investment-in-papa-john-s-international-inc-of-class-action-lawsuit-and-upcoming-deadlines-pzza.html
+category: 
+tickers: PZZA, DAVA, JBHT
+keywords: class action lawsuit, securities fraud, Papa John's, stock decline, comparable sales decrease, dividend suspension, Endava, J.B. Hunt
+headline: INVESTOR ALERT: Pomerantz Law Firm Reminds Investors with Losses on their Investment in Papa John’s International, Inc. of Class Action Lawsuit and Upcoming Deadlines – PZZA
+<<<SUMMARY>>>
+Pomerantz Law Firm has filed class action lawsuits against Papa John's International and Endava Plc, and is investigating claims against J.B. Hunt Transport Services. Papa John's stock fell 17.18% after announcing an 8.3% decrease in North American comparable sales, dividend suspension, and reduced 2026 guidance. Investors with losses are urged to contact the firm by November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | Company announced 8.3% decrease in North American comparable sales, suspended dividend, and significantly reduced 2026 guidance from 3% to 7% decline. Stock fell 17.18% on the news. Class action lawsuit filed alleging securities fraud and unlawful business practices.
+DAVA | negative | Class action lawsuit has been filed against the company, though specific details are not provided in the article excerpt. The filing indicates investor losses and potential securities violations.
+JBHT | negative | Pomerantz LLP is investigating claims on behalf of investors, suggesting potential securities violations or corporate misconduct, though specific details are not provided in the article excerpt.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e51095b9ecf5350b16259eee019743b6ea9005bbe1ccc21b98de84e3f0e9c3e1
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-06T22:36:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/10/06/3376127/673/en/rosen-a-longstanding-law-firm-encourages-papa-john-s-international-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-pzza.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: PZZA
+keywords: securities class action, Papa John's International, lead plaintiff deadline, material misstatements, market share losses, investor compensation
+headline: ROSEN, A LONGSTANDING LAW FIRM, Encourages Papa John’s International, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - PZZA
+<<<SUMMARY>>>
+Rosen Law Firm is seeking lead plaintiffs for a securities class action lawsuit against Papa John's International (PZZA) on behalf of investors who purchased stock between August 7, 2025 and August 5, 2026. The lawsuit alleges that Papa John's made materially false and misleading statements about its transformation efforts, which were taking longer than expected and failed to prevent market share losses, requiring a shift toward increased promotional efforts.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a securities class action lawsuit alleging materially false and misleading statements regarding its business transformation, inability to prevent market share losses, and need for strategic shifts. This indicates significant corporate governance and disclosure concerns that negatively impact investor confidence.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b1fd20d85e43cb0f9f7809df3f464d9151770e93fa4850ced7dc605b071b02df
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-09T18:50:00Z
+publisher: GlobeNewswire Inc.
+author: Law Offices Of Howard G. Smith
+url: https://www.globenewswire.com/news-release/2026/10/09/3378342/3448/en/deadline-alert-for-pzza-yss-inv-xtia-law-offices-of-howard-g-smith-reminds-investors-of-opportunity-to-lead-securities-fraud-class-actions.html
+image_url: https://www.globenewswire.com/news-release/2026/10/09/3378342/3448/en/deadline-alert-for-pzza-yss-inv-xtia-law-offices-of-howard-g-smith-reminds-investors-of-opportunity-to-lead-securities-fraud-class-actions.html
+category: 
+tickers: PZZA, YSS, INV, XTIA
+keywords: securities fraud, class action lawsuit, materially false statements, investor losses, lead plaintiff deadline
+headline: DEADLINE ALERT for PZZA, YSS, INV, XTIA: Law Offices of Howard G. Smith Reminds Investors of Opportunity to Lead Securities Fraud Class Actions
+<<<SUMMARY>>>
+Law Offices of Howard G. Smith has filed securities fraud class action lawsuits against four publicly-traded companies (PZZA, YSS, INV, XTIA) alleging materially false and misleading statements regarding business operations and prospects. Investors have until specified deadlines in late October and early November 2026 to file lead plaintiff motions.
+<<<INSIGHTS>>>
+PZZA | negative | Defendants allegedly made false statements about strategic transformation effectiveness and growth projections while minimizing risks related to consumer sentiment and competition. The transformation was taking longer than projected and the company was ill-equipped to meet consumer demands.
+YSS | negative | Defendants allegedly failed to disclose that satellite onboard mission and payload software was not fully functional before launch, presented contract risks, and involved cutting corners on mission-critical software delivery.
+INV | negative | Defendants allegedly misrepresented a transformative deal with DarkNX that was unlikely to materialize, leading to overstated revenue and cash flow targets for the Accelsius division in 2026.
+XTIA | negative | Defendants allegedly failed to disclose undisclosed senior executive activities requiring Board review, raising doubts about disclosure controls and procedures, resulting in inability to timely file earnings reports.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9bb5b2f8b8e9f85008fe8d0c9e81b89628f506feaa102adc7cbbb4fd01292e57
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-09T21:52:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/10/09/3378404/673/en/rosen-trusted-investor-counsel-encourages-papa-john-s-international-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-pzza.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: PZZA
+keywords: securities class action, Papa John's International, lead plaintiff deadline, materially false statements, market share losses, investor compensation, fiduciary duties
+headline: ROSEN, TRUSTED INVESTOR COUNSEL, Encourages Papa John’s International, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - PZZA
+<<<SUMMARY>>>
+Rosen Law Firm is reminding investors who purchased Papa John's International common stock between August 7, 2025 and August 5, 2026 of the November 2, 2026 lead plaintiff deadline in an ongoing securities class action. The lawsuit alleges that Papa John's made materially false and misleading statements about its transformation efforts, which were taking longer than expected and failed to prevent market share losses, ultimately requiring a shift toward increased promotional efforts.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a securities class action lawsuit alleging material misstatements about its business transformation, failure to prevent market share losses, and the need for strategic shifts. This indicates significant operational and disclosure issues that harmed investor value.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e791552f941a5d6536f93918ed46d2f75ffac865f68821553459940531be4f0e
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-12T17:55:00Z
+publisher: GlobeNewswire Inc.
+author: Levi & Korsinsky, Llp
+url: https://www.globenewswire.com/news-release/2026/10/12/3379162/3080/en/pzza-shareholder-alert-november-2-2026-lead-plaintiff-deadline-in-papa-john-s-international-inc-securities-class-action-contact-levi-korsinsky.html
+image_url: https://ml.globenewswire.com/Resource/Download/d91bd4e6-7d18-43f7-a479-4f992242a82a
+category: 
+tickers: PZZA
+keywords: securities class action, Papa John's International, comparable sales decline, dividend suspension, control person liability, Sarbanes-Oxley, Section 20(a), material misstatement
+headline: PZZA Shareholder Alert: November 2, 2026 Lead Plaintiff Deadline in Papa John’s International, Inc. Securities Class Action - Contact Levi & Korsinsky
+<<<SUMMARY>>>
+Papa John's International faces a securities class action lawsuit alleging that CEO Todd Allan Penegor and former CFO Ravi Thanawala misrepresented the company's strategic transformation while North American comparable sales deteriorated. The company cut its 2026 North American comparable sales outlook from a 3% decline to a 6-8% decline and suspended its dividend on August 6, 2026, causing the stock to fall 17.18%. The lead plaintiff deadline is November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is facing a securities class action lawsuit for allegedly making false and misleading statements about its strategic transformation while North American comparable sales deteriorated significantly. The stock declined 17.18% following the August 6, 2026 announcement of reduced guidance (6-8% decline vs. 3% expected) and dividend suspension, indicating serious operational and disclosure concerns.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fe98441c2e91a0d82ab53fcf2ff8e7de2648d83d2e4448a9bc81bdb02f9bc280
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-12T20:48:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/10/12/3379260/673/en/rosen-national-investor-counsel-encourages-papa-john-s-international-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-pzza.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: PZZA
+keywords: securities class action, Papa John's International, investor lawsuit, material misstatement, market share loss, lead plaintiff deadline
+headline: ROSEN, NATIONAL INVESTOR COUNSEL, Encourages Papa John’s International, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - PZZA
+<<<SUMMARY>>>
+Rosen Law Firm is urging Papa John's International (PZZA) investors who purchased stock between August 7, 2025 and August 5, 2026 to join a securities class action lawsuit. The lawsuit alleges that Papa John's made materially false statements about its transformation progress, concealing that it was taking longer than expected and unable to prevent market share losses, ultimately requiring a shift toward increased promotional efforts. The lead plaintiff deadline is November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a securities class action lawsuit alleging materially false and misleading statements regarding its business transformation, inability to prevent market share losses, and need for strategic shifts. This indicates significant operational and disclosure issues that negatively impact investor confidence.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c6c0e19488f118607fd09fea7bd9c2a9db47b77bc8fa5fbe44169230dc804f22
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-13T17:33:32Z
+publisher: The Motley Fool
+author: Jeremy Bowman
+url: https://www.fool.com/investing/2026/10/13/dominos-pizza-us-same-store-sales-grew-just-03-heres-why-new-ceo-joe-jordan-says-the-companys-next-chapter-will-be-our-strongest-yet/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fcf7297ad6f810c62a4f3141e342919657a655dba-3000x2000.jpg%3Fw%3D800%26q%3D75%26fit%3Dmax%26auto%3Dformat&w=1200&op=resize
+category: 
+tickers: DPZ, PZZA, YUM, DASH
+keywords: same-store sales, pizza chains, inflation, delivery platforms, franchisee profitability, consumer spending, market share, CEO transition
+headline: Domino’s Pizza U.S. Same-Store Sales Grew Just 0.3%. Here’s Why New CEO Joe Jordan Says the Company’s ‘Next Chapter Will Be Our Strongest Yet.’
+<<<SUMMARY>>>
+Domino's Pizza reported disappointing Q3 results with U.S. same-store sales growth of just 0.3% and international comparable sales up 0.2%, reflecting ongoing challenges from inflation, competition from delivery platforms, and weakening consumer spending. New CEO Joe Jordan, who took over in October, aims to improve customer relationships and franchisee profitability, but analysts note that returning to the strong growth of the 2010s will be difficult.
+<<<INSIGHTS>>>
+DPZ | negative | Stock down 36% over five years with minimal same-store sales growth (0.3%), declining average ticket sizes, customer financial pressure, franchisee reluctance to expand, and reduced store-growth guidance. While the company maintains market leadership and profitability, growth momentum has stalled significantly.
+PZZA | negative | Mentioned as a struggling competitor in the pizza chain industry facing broader fast-food sector pressure from weak discretionary spending, though Domino's is taking market share from them.
+YUM | negative | Pizza Hut division mentioned as a struggling competitor in the pizza chain industry facing similar headwinds as the broader fast-food sector, with Domino's gaining market share at its expense.
+DASH | positive | Mentioned as a delivery platform competitor that has reduced Domino's delivery model uniqueness and contributed to the company's growth challenges, indicating DoorDash's competitive strength in the delivery space.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:78d6fa6f5617447b2d4fd6bbd7be7824b9ca513b091b098e3e12c7a4698b9b49
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-14T00:12:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/10/14/3380293/673/en/pzza-deadline-rosen-trusted-investor-counsel-encourages-papa-john-s-international-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-pzza.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: PZZA, HIMS
+keywords: securities class action, Papa John's International, false statements, market share losses, investor compensation, lead plaintiff deadline
+headline: PZZA DEADLINE: ROSEN, TRUSTED INVESTOR COUNSEL, Encourages Papa John’s International, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - PZZA
+<<<SUMMARY>>>
+Rosen Law Firm announces securities class action lawsuits against Papa John's International (PZZA) and other companies. The Papa John's lawsuit alleges the company made materially false statements about its transformation efforts, concealing that the process was taking longer than expected and failing to prevent market share losses. Investors who purchased stock during the class period may be eligible for compensation. The lead plaintiff deadline is November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is accused of making materially false and misleading statements about its business transformation, concealing that the transformation was taking longer than expected and failing to prevent market share losses. These allegations suggest operational challenges and potential misrepresentation to investors.
+HIMS | negative | The article mentions a securities class action lawsuit against this company, though details are not provided in the excerpt. The mere existence of such litigation indicates investor concerns.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3d697b648f4d2141fb9fb8637e2921cc2fe5e58b9ef3c0462fe0ea738a1a841b
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-14T00:52:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/10/14/3380294/673/en/hims-deadline-rosen-global-investor-counsel-encourages-hims-hers-health-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-hims.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: HIMS, PZZA, MRP
+keywords: securities class action, false statements, data privacy, regulatory scrutiny, lead plaintiff, investor compensation
+headline: HIMS DEADLINE: ROSEN, GLOBAL INVESTOR COUNSEL, Encourages Hims & Hers Health, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - HIMS
+<<<SUMMARY>>>
+Rosen Law Firm has filed securities class action lawsuits against multiple companies. The primary case involves Hims & Hers Health, Inc., alleging the company made false statements about data privacy, charged consumers for prescriptions without proper consultation, and failed to disclose regulatory scrutiny. The firm is seeking lead plaintiffs with a November 2, 2026 deadline. Similar lawsuits have been filed against Papa John's International and Millrose Properties.
+<<<INSIGHTS>>>
+HIMS | negative | Company is subject to a securities class action lawsuit alleging material misstatements regarding consumer data sharing with third-party platforms, improper billing practices, and undisclosed regulatory risks. These allegations suggest potential fraud and regulatory violations that could result in significant financial penalties and reputational damage.
+PZZA | negative | Company is subject to a securities class action lawsuit, though specific allegations are not detailed in the provided excerpt. The mere filing of such litigation indicates investor concerns and potential legal/financial exposure.
+MRP | negative | Company is subject to a securities class action lawsuit, though specific allegations are not detailed in the provided excerpt. The filing of litigation suggests potential investor harm and undisclosed material information.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b38f3a85da6de5811fcef2c7b1c46ebf31635a3cce482155047e3cf6d4a3e263
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-16T16:00:00Z
+publisher: GlobeNewswire Inc.
+author: Bronstein, Gewirtz & Grossman Llc
+url: https://www.globenewswire.com/news-release/2026/10/16/3382712/9788/en/bronstein-gewirtz-grossman-llc-urges-papa-john-s-international-inc-investors-to-act-class-action-filed-alleging-investor-harm.html
+image_url: https://ml.globenewswire.com/Resource/Download/1a031130-a9cc-48ff-b281-d1e47c9a91a5
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities fraud, Papa John's International, investor harm, false statements, market share losses, lead plaintiff
+headline: Bronstein, Gewirtz & Grossman LLC Urges Papa John's International, Inc. Investors to Act: Class Action Filed Alleging Investor Harm
+<<<SUMMARY>>>
+A class action lawsuit has been filed against Papa John's International, Inc. (NASDAQ: PZZA) alleging securities fraud. The complaint claims that company executives made materially false and misleading statements regarding the company's transformation efforts, market share losses, and competitive position during the period from August 7, 2025 to August 5, 2026. Investors who purchased Papa John's securities during this period are encouraged to join the lawsuit, with a lead plaintiff deadline of November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a securities fraud class action lawsuit alleging materially false and misleading statements about business transformation, market share decline, and competitive position. This represents significant legal and reputational risk to investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143071987
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-21T22:54:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2dd30a22b20ad951c599672b25f505d7de9f93dc787f39b98c62427704bd053a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: El Pollo Loco and Papa John's shares plummet, what you need to know
+<<<SUMMARY>>>
+A number of stocks fell in the afternoon session after reports pointed to persistent traffic headwinds, sluggish sales growth, and mounting executive pessimism ahead of quarterly earnings. According to Morningstar, quick-service and fast-casual operators are still navigating a steep, industrywide consumer pullback, with budget-strained diners cutting visits even as chains invest in value, digital, and operations to defend unit economics. That backdrop is showing up in the numbers: Wingstop’s dom
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143030071
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-20T13:46:31Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=aa591d4676a47faf7504d1c77e5f693492b4fc1623a9481b195b17d1e34e94c0
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/535109409/image_535109409.jpg?io=getty-c-w1536
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John's: This Painful Reset Could Set The Stage For Recovery (Rating Upgrade)
+<<<SUMMARY>>>
+Papa Johnâs (PZZA) upgraded to Strong Buy: restructuring, Walmart delivery deal and margin/EBITDA upside create a valuation disconnect.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143016624
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T11:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f61a2e2f74cc956ead6b9f836c6ab2bdc4163b7208be131554473fa89b6674b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa Johns Summons a Halloween Favourite: The Jack-o’-Lantern Pizza Returns
+<<<SUMMARY>>>
+Worth sinking your teeth into: The ghoulishly good pizza is back for a limited time Papa Johns Jack-o'-Lantern pizza Papa Johns Canada’s Jack-o’-Lantern Pizza returns for Halloween, featuring a pumpkin-shaped thin crust, pepperoni smile and olive eyes. EDMONTON, Alberta, Oct. 19, 2026 (GLOBE NEWSWIRE) -- Papa Johns Canada is summoning a familiar face this Halloween, bringing back its Jack-o’-Lantern Pizza for a limited time. The seasonal favourite arrives on menus across Canada just in time for
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142996747
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-10-19T04:24:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=90288aab5b2fb5ee8baf5c5900a0932ecddcab1593757e7b68df237b8774bc00
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: What Papa John's International Investors Missed Before A 61% Fall
+<<<SUMMARY>>>
+Papa John's International has been in the headlines for the wrong reasons lately, from a dividend suspension to securities-fraud investigations tied to its transformation story. Holding Papa John's International over the past year would have meant a 61.3% loss, including dividends. If you had put money into the stock back on 16 October 2025, that outcome might feel brutal rather than abstract. The real question now is whether the same underlying business story still supports any expectation...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e4ceff0e355d90ea9431cfe36a320a71ea843fde14dd420d93c660c09495ff45
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-18T12:01:00Z
+publisher: GlobeNewswire Inc.
+author: Rosen Law Firm
+url: https://www.globenewswire.com/news-release/2026/10/18/3382914/673/en/pzza-deadline-rosen-a-ranked-and-leading-law-firm-encourages-papa-john-s-international-inc-investors-to-secure-counsel-before-important-deadline-in-securities-class-action-pzza.html
+image_url: https://ml.globenewswire.com/Resource/Download/745335af-3a3a-4fb5-84c0-fdedc9adf092
+category: 
+tickers: PZZA
+keywords: securities class action, Papa John's International, lead plaintiff deadline, false statements, market share losses, investor compensation
+headline: PZZA DEADLINE: ROSEN, A RANKED AND LEADING LAW FIRM, Encourages Papa John’s International, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - PZZA
+<<<SUMMARY>>>
+Rosen Law Firm reminds Papa John's International investors of the November 2, 2026 lead plaintiff deadline in a securities class action lawsuit. The lawsuit alleges that Papa John's made materially false and misleading statements about its transformation efforts, which were taking longer than expected and failed to prevent market share losses, ultimately requiring a shift toward increased promotional efforts.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a securities class action lawsuit alleging materially false and misleading statements regarding its business transformation, inability to prevent market share losses, and need for strategic shifts toward increased promotional efforts. These allegations indicate operational challenges and potential investor harm.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:25080d96e126f67c9af13f09d520a15445cd707ed0879d8988f8c1301b24a910
+symbol: PZZA
+company: 
+api: polygon
+type: news
+published_utc: 2026-10-20T16:00:00Z
+publisher: GlobeNewswire Inc.
+author: Bronstein, Gewirtz & Grossman Llc
+url: https://www.globenewswire.com/news-release/2026/10/20/3384745/9788/en/bronstein-gewirtz-grossman-llc-urges-papa-john-s-international-inc-investors-to-act-class-action-filed-alleging-investor-harm.html
+image_url: https://ml.globenewswire.com/Resource/Download/1a031130-a9cc-48ff-b281-d1e47c9a91a5
+category: 
+tickers: PZZA
+keywords: class action lawsuit, securities fraud, Papa John's International, investor harm, market share losses, misleading statements, NASDAQ: PZZA
+headline: Bronstein, Gewirtz & Grossman LLC Urges Papa John's International, Inc. Investors to Act: Class Action Filed Alleging Investor Harm
+<<<SUMMARY>>>
+A class action lawsuit has been filed against Papa John's International, Inc. alleging securities fraud. The complaint claims that company executives made materially false and misleading statements regarding the company's transformation efforts, market share losses, and competitive position during the period from August 7, 2025 to August 5, 2026. Investors who purchased Papa John's securities during this period are encouraged to join the lawsuit, with a lead plaintiff deadline of November 2, 2026.
+<<<INSIGHTS>>>
+PZZA | negative | The company is the subject of a securities fraud class action lawsuit alleging that executives made materially false and misleading statements about business transformation efforts, market share decline, and competitive position. These allegations indicate significant operational challenges and potential investor deception.
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143949586
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff1dd3fbf005342393b660bdd68ad54d739b54a497a2e8e2ba9e0173ee110e0c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Wills Group Names Lance Tucker Chief Financial Officer and Executive Vice President
+<<<SUMMARY>>>
+LA PLATA, Md., November 19, 2026--Wills Group, parent company of Dash In convenience stores and Splash In car washes, announced today that Lance Tucker has joined the company as Chief Financial Officer and Executive Vice President of Finance and Administration, effective October 19, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143926338
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T20:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=22b140e601ed7d726c2cfe97a72dc04b5c4e2509890f1ad50ecaebbca082cf9c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Papa John’s wants you to take a picture of your pizza. The reason might surprise you
+<<<SUMMARY>>>
+The chain already uses AI-powered cameras in some restaurants, but customer photos could help it monitor quality across many more locations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143853154
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T21:54:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=826c5be854d444d7ccd4677833b66da3986fba7fe0cb533e83a0a6a5f7b3fb6a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Leaving feedback for Papa John's can earn you free pizza. Here's how
+<<<SUMMARY>>>
+Papa John's is rewarding customer feedback with free pizza, at least through the rest of the week. Here's how to claim offer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849937
+symbol: PZZA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T18:10:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=abd4e3c46fb1eec5507ec04341bf566fd43b0d4066d7c7191917a06cb0ca67d7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PZZA
+keywords: 
+headline: Here’s Why Papa John’s (PZZA) Ranks Among the Best Restaurant Stocks With the Highest Upside
+<<<SUMMARY>>>
+We just published the list of the 10 Best Restaurant Stocks with Highest Upside and Papa John’s International, Inc. (NASDAQ:PZZA) ranked 10th on this list. Restaurant stocks have taken sharply different paths in 2026, as pressure on consumer spending has exposed a widening gap between companies that can sustain customer traffic and those struggling to […]
+<<<INSIGHTS>>>
+
+<<<END>>>

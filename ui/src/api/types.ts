@@ -1,4 +1,5 @@
 // The shapes of design/ui_v1_spec.md sections 4.1 to 4.5, as the Python server (prometheus/application/web/) really sends them.
+import type { PvDayData, PvDecisionData, PvFinishedData, PvOutcomeData, PvResearchData, PvStartedData } from "../proving/types";
 
 export type AgentKey = "account_manager" | "data_clerk" | "advisor" | "critic" | "trader";
 export type LogAgent = AgentKey | "system" | "you";
@@ -211,7 +212,7 @@ export interface RunStartedData {
   mode: "live" | "replay";
   account_id: number;
   prompt: string;
-  options: { strict: boolean; neutral: boolean; fetch: boolean };
+  options: { strict: boolean; neutral: boolean; fetch: boolean; speed?: "fast" | "faithful" | null };
   trade_mode: TradeMode;
   started_utc: string;
   stages: StageInfo[];
@@ -314,10 +315,33 @@ export type ServerEvent =
   | { seq: number; type: "work_order"; data: WorkOrderView & { ts: number } }
   | { seq: number; type: "portfolio"; data: PortfolioData }
   | { seq: number; type: "activity"; data: ActivityData }
-  | { seq: number; type: "run_finished"; data: RunFinishedData };
+  | { seq: number; type: "run_finished"; data: RunFinishedData }
+  // the Proving Ground's run (design/proving_ground_spec.md section 9): the Desk's reducer ignores them, the Proving Ground's folds them
+  | { seq: number; type: "pv_research"; data: PvResearchData }
+  | { seq: number; type: "pv_started"; data: PvStartedData }
+  | { seq: number; type: "pv_day"; data: PvDayData }
+  | { seq: number; type: "pv_decision"; data: PvDecisionData }
+  | { seq: number; type: "pv_outcome"; data: PvOutcomeData }
+  | { seq: number; type: "pv_finished"; data: PvFinishedData };
 
 export type ServerEventType = ServerEvent["type"];
-export const EVENT_TYPES: ServerEventType[] = ["run_started", "stage", "log", "question", "question_closed", "work_order", "portfolio", "activity", "run_finished"];
+export const EVENT_TYPES: ServerEventType[] = [
+  "run_started",
+  "stage",
+  "log",
+  "question",
+  "question_closed",
+  "work_order",
+  "portfolio",
+  "activity",
+  "run_finished",
+  "pv_research",
+  "pv_started",
+  "pv_day",
+  "pv_decision",
+  "pv_outcome",
+  "pv_finished",
+];
 
 // ---------------------------------------------------------------- health and requests (4.1)
 
@@ -330,6 +354,8 @@ export interface Health {
   defaults: { prompt: string; strict: boolean; neutral: boolean; fetch: boolean };
   limits: { prompt_chars: number };
   active_run: string | null;
+  /** What the active run is, when the server says (a desk run or a Proving Ground run): the page attaches it to the right tab. */
+  active_kind?: "desk" | "proving" | null;
   tracing?: "langfuse" | "off";
   replay_file?: string | null;
 }

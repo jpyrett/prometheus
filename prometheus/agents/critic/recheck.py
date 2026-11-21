@@ -19,12 +19,12 @@ from dataclasses import dataclass, field
 from datetime import date, datetime
 from zoneinfo import ZoneInfo
 
-from prometheus.agents.advisor.advisor import names_company
 from prometheus.agents.advisor.record import Recommendation
-from prometheus.agents.critic.chart import CHART_METRICS
+from prometheus.agents.critic.chart import CHART_METRICS, TREND_METRICS
 from prometheus.agents.critic.claims import Claim
 from prometheus.agents.critic.common import blocker, metric_value, quote_in_text, warning
 from prometheus.agents.critic.config import Accuracy, CriticConfig
+from prometheus.agents.critic.names import same_company
 from prometheus.agents.critic.record import CrossCheck, Finding, Identity, Measure, Recheck, SourceCheck
 from prometheus.agents.data_clerk.metrics_catalog import METRIC_NAMES
 from prometheus.common.market_calendar import eastern_date, is_trading_day, load_calendar, previous_trading_day
@@ -34,6 +34,7 @@ REQUESTER = "critic"
 DECISIVE = ("last_close", "atr_14")
 ALWAYS = ("sma_50", "vol_63d_ann", "beta_63d", "max_drawdown_63d", "atr_pct", "ret_21d", "earnings_yield", "negative_equity")
 OWN = ("sma_126", "high_126d", "low_126d", "eps", "ps_ratio", "high_52w", "pct_of_52w_high", *CHART_METRICS)   # not on the record (nothing to compare): the Critic's own judgements of risk, value and chart read them
+ASKED_ONLY = TREND_METRICS      # asked for with the review but never compared with the record's: the Critic's own reading (rule C5), which must change no accuracy number of any review (the share of values that matched)
 BLEND_GROUPS = ("performance", "historical", "filings")
 
 
@@ -46,7 +47,7 @@ def key_metrics(rec: Recommendation, cap: int) -> tuple[list[str], set[str]]:
     decisive = [*DECISIVE, *(n for f in used for n in f.features_used if n in METRIC_NAMES and n in rec.features)]
     blend = [p["metric"] for g in BLEND_GROUPS for p in ((rec.blend or {}).get("components", {}).get(g, {}).get("parts", [])) if "metric" in p]
     decisive = list(dict.fromkeys(n for n in decisive if n in METRIC_NAMES))
-    rest = [n for n in dict.fromkeys([*ALWAYS, *blend, *OWN]) if n in METRIC_NAMES and n not in decisive]
+    rest = [n for n in dict.fromkeys([*ALWAYS, *blend, *OWN, *ASKED_ONLY]) if n in METRIC_NAMES and n not in decisive]
     return [*decisive, *rest][:max(cap, len(decisive))], set(decisive)
 
 
@@ -169,6 +170,8 @@ def compare(rec: Recommendation, fetched: dict | None, names: list[str], decisiv
         return [], findings, None
     rechecks, changed = [], set()
     for name in names:
+        if name in ASKED_ONLY and name not in decisive:
+            continue
         old = rec.features.get(name)
         if old is None or isinstance(old.get("value"), list):
             continue
@@ -294,8 +297,8 @@ def cross_checks(rec: Recommendation, fetched: dict | None, quote: dict | None, 
         checks.append(CrossCheck(name="identity", a=rec.symbol, b=None, passed=False, note=listing.get("note")))
         findings.append(blocker("accuracy", "symbol_unknown", f"{rec.symbol} is not in the symbol directory."))
     elif listing.get("listed") is True:
-        mismatch = bool(rec.company and listing.get("company") and not names_company(listing["company"], rec.symbol, rec.company))
-        checks.append(CrossCheck(name="identity", a=rec.company, b=listing.get("company"), passed=not mismatch, note="the names do not share a distinctive word" if mismatch else None))
+        mismatch = bool(rec.company and listing.get("company") and not same_company(rec.symbol, rec.company, listing["company"]))      # Critic v2, rule C4: the names are compared in the Critic's own `names.py`, not with the Advisor's rule for a quote
+        checks.append(CrossCheck(name="identity", a=rec.company, b=listing.get("company"), passed=not mismatch, note="the names are not the same company, with the case, spacing, punctuation and corporate words taken out" if mismatch else None))
         if mismatch:
             findings.append(warning("accuracy", "company_mismatch", f"The record calls {rec.symbol} {rec.company!r} but the directory lists it as {listing['company']!r}.", requires_human=True))
     else:

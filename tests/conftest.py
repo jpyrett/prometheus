@@ -111,3 +111,54 @@ def no_real_guard_model(monkeypatch):
         raise RuntimeError("OPENROUTER_API_KEY is not set (a test must not build a real model)")
 
     monkeypatch.setattr("prometheus.security.scorer.get_chat_model", refuse)
+
+
+@pytest.fixture(autouse=True)
+def proving_store_in_a_temp_folder(monkeypatch, tmp_path_factory):
+    """A live desk run saves its work order for the Track Record (`prometheus/proving/sessions.py`, design/proving_ground_spec.md section 10). No test may write the project's own `data/proving/`: the default store is a temporary folder."""
+    from prometheus.proving.store import ProvingStore
+    root = tmp_path_factory.mktemp("proving")
+    monkeypatch.setattr("prometheus.proving.sessions.default_store", lambda: ProvingStore(root))
+
+
+@pytest.fixture(autouse=True)
+def no_test_touches_the_users_saved_runs(monkeypatch):
+    """`data/proving/` holds the user's own saved runs, the research cache and the saved sessions (design/proving_ground_spec.md P6): no test may write there or delete from there. A test gives its store a temporary folder; one that does not
+    fails here, loudly, before anything is changed."""
+    from pathlib import Path
+
+    from prometheus.proving.store import ProvingStore
+    from prometheus.rag.config import REPO_ROOT
+    real = (REPO_ROOT / "data" / "proving").resolve()
+    write, delete = ProvingStore._write, ProvingStore.delete_run
+
+    def guarded_write(path, text):
+        if real == Path(path).resolve() or real in Path(path).resolve().parents:
+            raise AssertionError(f"a test tried to write to the user's own store {path}: give the ProvingStore a temporary folder")
+        return write(path, text)
+
+    def guarded_delete(self, run_id):
+        if real == self.root or real in self.root.parents:
+            raise AssertionError("a test tried to delete a saved run of the user's own store: give the ProvingStore a temporary folder")
+        return delete(self, run_id)
+    monkeypatch.setattr(ProvingStore, "_write", staticmethod(guarded_write))
+    monkeypatch.setattr(ProvingStore, "delete_run", guarded_delete)
+
+
+@pytest.fixture(autouse=True)
+def no_test_writes_the_label_store(monkeypatch):
+    """The Critic keeps the model's labels in `data/critic/labels/` (Critic v2, `prometheus/agents/critic/labels.py`: the same quote gets the same label). No test may write or read the project's own labels: a Critic a test builds keeps none (the
+    store of the config is turned off), a test of the store gives a `LabelStore` its own temporary folder, and one that points a store at the real folder fails here, loudly."""
+    from pathlib import Path
+
+    from prometheus.agents.critic.labels import LabelStore
+    from prometheus.rag.config import REPO_ROOT
+    real = (REPO_ROOT / "data" / "critic").resolve()
+    put = LabelStore.put
+
+    def guarded_put(self, key, value):
+        if real == self.folder.resolve() or real in self.folder.resolve().parents:
+            raise AssertionError(f"a test tried to write the project's own label store {self.folder}: give the LabelStore a temporary folder")
+        return put(self, key, value)
+    monkeypatch.setattr(LabelStore, "put", guarded_put)
+    monkeypatch.setattr("prometheus.agents.critic.critic.open_store", lambda folder: None)

@@ -174,8 +174,8 @@ def test_the_same_article_twice_in_one_call_is_stored_once_with_merged_tickers(s
 # ---------------------------------------------------------------- the length check, symbols, settings
 
 def test_the_length_check_is_reported(store):
-    stats = ingest_documents([article(body=LONG_BODY)], store, too_long=lambda texts: sum(len(t) > 700 for t in texts))
-    assert stats["over_limit"] == sum(len(text) > 700 for text, _ in held(store).values()) > 0
+    stats = ingest_documents([article(body=LONG_BODY)], store, too_long=lambda texts: sum(len(t) > 600 for t in texts))
+    assert stats["over_limit"] == sum(len(text) > 600 for text, _ in held(store).values()) > 0
 
 
 @pytest.mark.parametrize("body", [
@@ -193,11 +193,11 @@ def test_chroma_stores_odd_text_exactly(store, body):
 
 def test_the_fixture_goes_in_whole(store):
     stats = ingest_documents(load_news(FIXTURE), store)
-    assert (stats["articles"], stats["chunks"]) == (3, 4)  # the CoreWeave article is the one that needs two chunks
+    assert (stats["articles"], stats["chunks"]) == (3, 5)  # the CoreWeave article is the one that needs more than one chunk (three at 680 characters, entry 130; two at 800)
     text, meta = held(store)[f"{COREWEAVE}#1"]
     assert text.startswith("CoreWeave Is Projected to Have a 6.3x Gross Leverage Ratio")  # headline put back
     assert "CRWV | negative | Stock declined 11.91%" in text
-    assert meta["tickers"] == ["CRWV", "MSFT", "META", "NVDA"] and meta["chunk"] == 1 and meta["chunks"] == 2
+    assert meta["tickers"] == ["CRWV", "MSFT", "META", "NVDA"] and meta["chunk"] == 1 and meta["chunks"] == 3
 
 
 def test_an_article_that_fails_is_never_stored_never_found_and_the_others_are_ingested(monkeypatch, tmp_path, store):
@@ -267,10 +267,10 @@ def cli(monkeypatch, tmp_path, store):
 def test_cli_ingests_a_symbol_and_reports(cli, capsys):
     assert ingest.main(["AAPL"]) == 0
     out = capsys.readouterr().out
-    assert "AAPL: 3 articles -> 4 chunks | added 4, updated 0, unchanged 0, deleted 0" in out
-    assert "the collection now holds 4 chunks" in out
+    assert "AAPL: 3 articles -> 5 chunks | added 5, updated 0, unchanged 0, deleted 0" in out
+    assert "the collection now holds 5 chunks" in out
     assert ingest.main(["AAPL"]) == 0
-    assert "added 0, updated 0, unchanged 4, deleted 0" in capsys.readouterr().out
+    assert "added 0, updated 0, unchanged 5, deleted 0" in capsys.readouterr().out
 
 
 def test_cli_warns_loudly_when_chunks_are_over_the_embedder_limit(cli, monkeypatch, capsys):
@@ -339,6 +339,45 @@ def test_real_chunks_of_every_news_file_fit_the_embedder_limit(real_embeddings):
     assert rag_store.count_too_long(["word " * 400], real_embeddings) == 1  # and the check can see a text that is too long
 
 
+def test_real_chunks_of_every_filing_fit_the_embedder_limit_once_cut_by_tokens_and_lose_no_text(real_embeddings):
+    """Design choices entry 131. A filing's tables have two or three times the tokens per character of prose: by characters alone thousands of the real
+    filing chunks are over the embedder's limit (the part past it is not searchable). Cut again by the model's own token count, none is, every article's
+    text is still all there (each chunk's body is the article's text from its `start_index`), and a chunk that already fitted is the same chunk."""
+    from prometheus.rag.loaders import load_filings
+    files = sorted(config.filings_dir().glob("*.txt"))
+    if not files:
+        pytest.skip(f"no filings in {config.filings_dir()}")
+    docs = list({doc.id: doc for file in reversed(files) for doc in reversed(load_filings(file))}.values())   # one text per article id, as `ingest_documents` keeps
+    lengths = lambda texts: rag_store.token_lengths(texts, real_embeddings)   # noqa: E731
+    limit = rag_store.token_limit(real_embeddings)
+    by_characters = to_chunks(docs)
+    fitted = to_chunks(docs, lengths, limit)
+    assert rag_store.count_too_long([c.page_content for c in by_characters], real_embeddings) > 1000     # the problem is real
+    assert rag_store.count_too_long([c.page_content for c in fitted], real_embeddings) == 0
+    text_of = {doc.id: doc.page_content for doc in docs}
+
+    def left_out(chunks) -> set[tuple[str, str]]:
+        """(article id, text) of everything that is in an article and in none of its chunks; each chunk must be the article's own text, where it says it is."""
+        covered: dict[str, int] = {}
+        missing = set()
+        for chunk in chunks:
+            article, start = text_of[chunk.metadata["article_id"]], chunk.metadata["start_index"]
+            body = chunk.page_content if article.startswith(chunk.page_content, start) else chunk.page_content.split("\n\n", 1)[1]    # with the headline put in front, or without
+            assert article[start:start + len(body)] == body
+            done = covered.get(chunk.metadata["article_id"], 0)
+            if start > done and article[done:start].strip():
+                missing.add((chunk.metadata["article_id"], article[done:start].strip()))
+            covered[chunk.metadata["article_id"]] = max(done, start + len(body))
+        assert all(len(text_of[article].rstrip()) <= end for article, end in covered.items())       # each article is covered to its end
+        return missing
+
+    # The character splitter itself leaves out one lone page number ("26", between two tables of one 10-Q): found by this test, older than it. The cut by tokens loses nothing more.
+    assert left_out(fitted) == left_out(by_characters) and len(left_out(by_characters)) <= 1
+    kept = {c.page_content for c in fitted}
+    fitting = [c.page_content for c, n in zip(by_characters, lengths([c.page_content for c in by_characters])) if n <= limit]
+    assert all(text in kept for text in fitting)                                    # what already fitted is untouched
+
+
 def test_the_length_check_sees_dense_text_but_a_100_character_word_becomes_one_token(real_embeddings):
     # Found by breaking the input (entry 19). The model's tokenizer replaces any "word" longer than 100
     # characters with ONE unknown token, so a huge string vanishes instead of overflowing, while 64
@@ -368,14 +407,14 @@ def test_the_real_entry_points_end_to_end(monkeypatch, tmp_path, real_embeddings
     monkeypatch.setenv("VECTOR_STORE_PATH", str(tmp_path / "index"))
     assert rag_store.count_chunks() == 0 and rag_store.reset_collection() is False
     assert ingest.main(["AAPL"]) == 0
-    assert "added 4" in capsys.readouterr().out and rag_store.count_chunks() == 4
+    assert "added 5" in capsys.readouterr().out and rag_store.count_chunks() == 5
     client = chromadb.PersistentClient(path=str(tmp_path / "index"), settings=Settings(anonymized_telemetry=False))
     collection = client.get_collection(rag_store.collection_name())
     assert collection.configuration["hnsw"]["space"] == "cosine"
     assert rag_store._client().get_settings().anonymized_telemetry is False  # the client the code really uses
     assert ingest.main(["--rebuild", "AAPL"]) == 0
-    assert "deleted the collection" in capsys.readouterr().out and rag_store.count_chunks() == 4
+    assert "deleted the collection" in capsys.readouterr().out and rag_store.count_chunks() == 5
     assert rag_store.main() == 0
     out = capsys.readouterr().out
-    assert "stored     : 4 chunks of 3 articles" in out and "over the embedder's limit: 0 of 4" in out
+    assert "stored     : 5 chunks of 3 articles" in out and "over the embedder's limit: 0 of 5" in out
     assert "reads at most 256 tokens" in out  # also proves the one private attribute we rely on still exists

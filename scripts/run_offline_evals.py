@@ -27,14 +27,14 @@ from prometheus.evals import targets  # noqa: E402
 from prometheus.models.chat import model_name  # noqa: E402
 
 CONCURRENCY = 4
-RUNS = {"redteam": datasets.REDTEAM, "sessions": datasets.SESSIONS}
+RUNS = {"redteam": datasets.REDTEAM, "sessions": datasets.SESSIONS, "outcomes": datasets.OUTCOMES}
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--dry-run", action="store_true", help="build the examples and run the code evaluators locally on the recorded outputs; sends nothing (free)")
     parser.add_argument("--upload", action="store_true", help="create or update the two datasets in LangSmith")
-    parser.add_argument("--run", choices=("redteam", "sessions", "all"), help="run the experiment(s) with langsmith.evaluate (paid)")
+    parser.add_argument("--run", choices=("redteam", "sessions", "outcomes", "all"), help="run the experiment(s) with langsmith.evaluate (paid)")
     parser.add_argument("--no-judge", action="store_true", help="leave the Opus judge out (the code evaluators and the guard still run)")
     parser.add_argument("--limit", type=int, metavar="N", help="only the first N examples of each dataset")
     return parser
@@ -50,7 +50,9 @@ def dry_run(names: list[str], limit: int | None) -> None:
     print(f"DRY RUN (nothing is sent; no model is called): {date.today().isoformat()}")
     for name in names:
         examples = examples_of(name, limit)
-        if name == datasets.REDTEAM:
+        if name == datasets.OUTCOMES:
+            rows = ev.evaluate_locally(examples, lambda inputs: next(e["outputs"] for e in examples if e["key"] == inputs["example_key"]), ev.OUTCOME_EVALUATORS)
+        elif name == datasets.REDTEAM:
             rows = ev.evaluate_locally(examples, targets.recorded_redteam_target(), ev.REDTEAM_EVALUATORS)
             print("(the guard here is the real Guard.with_scorer: its exact rules and hints over the replies of the guard model recorded on 2026-11-20, tests/fixtures/security/guard_replies.json; the judge is not run)")
         else:
@@ -101,7 +103,9 @@ def run_experiment(client, name: str, limit: int | None, no_judge: bool, usage) 
     if not client.has_dataset(dataset_name=name):
         print(f"{name} does not exist in LangSmith: run with --upload first", file=sys.stderr)
         raise SystemExit(2)
-    if name == datasets.REDTEAM:
+    if name == datasets.OUTCOMES:
+        target, evaluators = targets.outcomes_target, list(ev.OUTCOME_EVALUATORS)
+    elif name == datasets.REDTEAM:
         target, evaluators = targets.redteam_target(), list(ev.REDTEAM_EVALUATORS)
         if not no_judge:
             evaluators.append(judge.redteam_judge(judge.build_judge(callbacks=[usage])))

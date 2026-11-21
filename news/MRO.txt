@@ -1,0 +1,40 @@
+<<<ARTICLE>>>
+id: finnhub:140070727
+symbol: MRO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-08-27T14:05:36Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4193488f66a415a37d2724cde45edf6a0b1621d0095571f0358717fd41349848
+image_url: 
+category: company
+tickers: MRO
+keywords: 
+headline: Zaza Energy Says Hess Agrees to Early Release of Escrow, Sees Net Cash Proceeds $11.5M
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:142421716
+symbol: MRO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-09-23T17:07:11Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7d60f4b12b2fdd265be83e5a05c57d1d96252984598618df52b03ad3b947e38f
+image_url: 
+category: company
+tickers: MRO
+keywords: 
+headline: Dozens Of U.S. Oil Refining And Business Groups Urge Trump To Reject Any Effort To Impose Ban On Diesel Exports
+<<<SUMMARY>>>
+- Reuters Citing Letter
+<<<INSIGHTS>>>
+
+<<<END>>>

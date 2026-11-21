@@ -1,0 +1,4701 @@
+{
+ "_note": "GET /api/proving/track. Copied by scripts/make_proving_fixtures.mjs from tests/fixtures/proving_real/track.json; the answer in `data` is not edited.",
+ "source": "tests/fixtures/proving_real/track.json",
+ "data": {
+  "run_id": "track-20261120-2105",
+  "kind": "track",
+  "status": "finished",
+  "created_utc": "2026-11-20T21:05:00Z",
+  "seconds": 4.175,
+  "request": null,
+  "understood": "17 saved runs, 49 recommendations scored",
+  "range": {
+   "first_day": "2026-11-13",
+   "last_day": "2026-11-20",
+   "last_bar_day": "2026-11-19"
+  },
+  "decision_days": [
+   {
+    "day": "2026-11-13",
+    "status": "traded",
+    "recommended": 3,
+    "approved": 1,
+    "denied": 2,
+    "traded": 3,
+    "spent": 19933.41,
+    "reason": "fixture: auto_ai_quoted_theme.json",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-13",
+    "status": "traded",
+    "recommended": 3,
+    "approved": 2,
+    "denied": 1,
+    "traded": 3,
+    "spent": 12345.67,
+    "reason": "fixture: auto_even_split_decimal.json",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-13",
+    "status": "traded",
+    "recommended": 5,
+    "approved": 3,
+    "denied": 2,
+    "traded": 5,
+    "spent": 30000,
+    "reason": "fixture: auto_even_split_dollars.json",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-13",
+    "status": "traded",
+    "recommended": 3,
+    "approved": 2,
+    "denied": 1,
+    "traded": 3,
+    "spent": 14974.53,
+    "reason": "fixture: auto_oil_no_second_mark.json",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-13",
+    "status": "traded",
+    "recommended": 3,
+    "approved": 2,
+    "denied": 1,
+    "traded": 2,
+    "spent": 2632.6,
+    "reason": "fixture: bob_jones_oil.json",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-13",
+    "status": "traded",
+    "recommended": 3,
+    "approved": 2,
+    "denied": 1,
+    "traded": 2,
+    "spent": 2745.59,
+    "reason": "fixture: bob_jones_oil_round_robin.json",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-13",
+    "status": "traded",
+    "recommended": 1,
+    "approved": 0,
+    "denied": 1,
+    "traded": 2,
+    "spent": 49497.42,
+    "reason": "fixture: pam_smith_neutral.json",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-20",
+    "status": "traded",
+    "recommended": 0,
+    "approved": 0,
+    "denied": 0,
+    "traded": 3,
+    "spent": 30000,
+    "reason": "fixture: auto_even_split_fractions.json",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-20",
+    "status": "traded",
+    "recommended": 3,
+    "approved": 0,
+    "denied": 3,
+    "traded": 3,
+    "spent": 15000,
+    "reason": "run: 4435c024e662",
+    "trace_id": null
+   },
+   {
+    "day": "2026-11-20",
+    "status": "traded",
+    "recommended": 1,
+    "approved": 0,
+    "denied": 1,
+    "traded": 3,
+    "spent": 11754.4,
+    "reason": "run: 79dfd8aa5b83",
+    "trace_id": null
+   }
+  ],
+  "equity": [
+   {
+    "date": "2026-11-13",
+    "equity": 99.98,
+    "cash": 0,
+    "invested": 99.98,
+    "benchmark": 99.25,
+    "drawdown_pct": 0,
+    "stale": []
+   },
+   {
+    "date": "2026-11-16",
+    "equity": 97.82,
+    "cash": 0,
+    "invested": 97.82,
+    "benchmark": 97.64,
+    "drawdown_pct": -0.021604,
+    "stale": []
+   },
+   {
+    "date": "2026-11-17",
+    "equity": 97.21,
+    "cash": 0,
+    "invested": 97.21,
+    "benchmark": 96.8,
+    "drawdown_pct": -0.027706,
+    "stale": []
+   },
+   {
+    "date": "2026-11-18",
+    "equity": 96.28,
+    "cash": 0,
+    "invested": 96.28,
+    "benchmark": 96.59,
+    "drawdown_pct": -0.037007,
+    "stale": []
+   },
+   {
+    "date": "2026-11-19",
+    "equity": 94.97,
+    "cash": 0,
+    "invested": 94.97,
+    "benchmark": 95.74,
+    "drawdown_pct": -0.05011,
+    "stale": []
+   }
+  ],
+  "events": [],
+  "outcomes": [
+   {
+    "key": "2026-11-13:02e129ad6817",
+    "decision_day": "2026-11-13",
+    "symbol": "PSX",
+    "company": "Phillips 66",
+    "record_id": "02e129ad6817",
+    "review_id": "8c390e4dec0c",
+    "advisor": {
+     "score": 67,
+     "stance": "bullish",
+     "family": "conviction",
+     "rank": 3
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 259.7472,
+     "entry_high": 270.0528,
+     "entry_mid": 264.9,
+     "limit_price": 264.9,
+     "stop": 233.9833,
+     "target": 267.2841,
+     "time_stop_date": "2027-01-08",
+     "horizon_bars": 40,
+     "order_style": "limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 262,
+     "shares": 1,
+     "amount": 262
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.073626,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.028552,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.005267,
+    "max_adverse_pct": -0.073626,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 260.62,
+      "return_pct": -0.005267,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 256.93,
+      "return_pct": -0.019351,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 244.83,
+      "return_pct": -0.065534,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 242.71,
+      "return_pct": -0.073626,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:4e3de10667c9",
+    "decision_day": "2026-11-13",
+    "symbol": "APA",
+    "company": "APA Corporation",
+    "record_id": "4e3de10667c9",
+    "review_id": "2765018318f4",
+    "advisor": {
+     "score": 72,
+     "stance": "bullish",
+     "family": "event",
+     "rank": 2
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile",
+      "needs_human_review"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 47.4884,
+     "entry_high": 49.3916,
+     "entry_mid": 48.44,
+     "limit_price": 48.44,
+     "stop": 44.6336,
+     "target": 49.0769,
+     "time_stop_date": "2027-01-08",
+     "horizon_bars": 40,
+     "order_style": "limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 47.96,
+     "shares": 1,
+     "amount": 47.96
+    },
+    "exit": {
+     "date": "2026-11-19",
+     "price": 44.6336,
+     "reason": "stop",
+     "sessions_held": 3
+    },
+    "result": "lost",
+    "return_pct": -0.069358,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.024284,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.069358,
+      "benchmark_return_pct": -0.045074
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.069358,
+      "benchmark_return_pct": -0.045074
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.069358,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "max_favorable_pct": -0.013761,
+    "max_adverse_pct": -0.069641,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 47.3,
+      "return_pct": -0.013761,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 46.88,
+      "return_pct": -0.022519,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 45.52,
+      "return_pct": -0.050876,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 44.62,
+      "return_pct": -0.069641,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:58c301a73699",
+    "decision_day": "2026-11-13",
+    "symbol": "EOG",
+    "company": null,
+    "record_id": "58c301a73699",
+    "review_id": "23e6d64b38cd",
+    "advisor": {
+     "score": 72,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 3
+    },
+    "critic": {
+     "approved": true,
+     "score": 76,
+     "grade": "C",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 156.1465,
+     "entry_high": 160.4935,
+     "entry_mid": 158.32,
+     "limit_price": 159.4068,
+     "stop": 150.028,
+     "target": 162.2635,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 158.3992,
+     "shares": 8,
+     "amount": 1267.19
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 150.028,
+     "reason": "stop",
+     "sessions_held": 3
+    },
+    "result": "lost",
+    "return_pct": -0.052849,
+    "benchmark_return_pct": -0.039299,
+    "excess_return_pct": -0.01355,
+    "sector_return_pct": -0.05577,
+    "gain": -66.97,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.054983,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 158.32,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 155.47,
+      "return_pct": -0.018493,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 154.91,
+      "return_pct": -0.022028,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 149.69,
+      "return_pct": -0.054983,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:64cf72c6b6bc",
+    "decision_day": "2026-11-13",
+    "symbol": "XOM",
+    "company": "ExxonMobil",
+    "record_id": "64cf72c6b6bc",
+    "review_id": "6f2b1abadfb8",
+    "advisor": {
+     "score": 70,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 3
+    },
+    "critic": {
+     "approved": true,
+     "score": 85,
+     "grade": "B",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 168.4354,
+     "entry_high": 172.7446,
+     "entry_mid": 170.59,
+     "limit_price": 171.6673,
+     "stop": 169.3786,
+     "target": 174.9426,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 170.59,
+     "shares": 35.172049,
+     "amount": 6000
+    },
+    "exit": {
+     "date": "2026-11-13",
+     "price": 169.3786,
+     "reason": "stop",
+     "sessions_held": 0
+    },
+    "result": "lost",
+    "return_pct": -0.007101,
+    "benchmark_return_pct": -0.007499,
+    "excess_return_pct": 0.000398,
+    "sector_return_pct": 0.00077,
+    "gain": -42.61,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.007101,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.007101,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.007101,
+      "benchmark_return_pct": -0.007499
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.007101,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 170.59,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:7adfd4849da4",
+    "decision_day": "2026-11-13",
+    "symbol": "EOG",
+    "company": null,
+    "record_id": "7adfd4849da4",
+    "review_id": "1e7f9d44b44b",
+    "advisor": {
+     "score": 75,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 1
+    },
+    "critic": {
+     "approved": true,
+     "score": 74,
+     "grade": "C",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 156.1465,
+     "entry_high": 160.4935,
+     "entry_mid": 158.32,
+     "limit_price": 159.4068,
+     "stop": 150.028,
+     "target": 162.2635,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 158.32,
+     "shares": 25.993115,
+     "amount": 4115.23
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 150.028,
+     "reason": "stop",
+     "sessions_held": 3
+    },
+    "result": "lost",
+    "return_pct": -0.052375,
+    "benchmark_return_pct": -0.039299,
+    "excess_return_pct": -0.013076,
+    "sector_return_pct": -0.05577,
+    "gain": -215.53,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.052375,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.052375,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.052375,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.05451,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 158.32,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 155.47,
+      "return_pct": -0.018002,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 154.91,
+      "return_pct": -0.021539,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 149.69,
+      "return_pct": -0.05451,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:816aea79fcda",
+    "decision_day": "2026-11-13",
+    "symbol": "SNDK",
+    "company": "SanDisk",
+    "record_id": "816aea79fcda",
+    "review_id": "8dba487dea51",
+    "advisor": {
+     "score": 46,
+     "stance": "bullish",
+     "family": "capital_return",
+     "rank": 1
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile",
+      "falling_knife",
+      "dead_cat_bounce"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 831.6103,
+     "entry_high": 938.4097,
+     "entry_mid": 885.01,
+     "limit_price": 885.01,
+     "stop": 564.6116,
+     "target": null,
+     "time_stop_date": "2027-05-10",
+     "horizon_bars": 126,
+     "order_style": "limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 828.225,
+     "shares": 1,
+     "amount": 828.23
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.088219,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.043145,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.023079,
+    "max_adverse_pct": -0.088219,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 809.11,
+      "return_pct": -0.023079,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 797.24,
+      "return_pct": -0.037411,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 776.22,
+      "return_pct": -0.062791,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 755.16,
+      "return_pct": -0.088219,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:83910656bece",
+    "decision_day": "2026-11-13",
+    "symbol": "AMD",
+    "company": "Advanced Micro Devices",
+    "record_id": "83910656bece",
+    "review_id": "1b0e1bc35197",
+    "advisor": {
+     "score": 68,
+     "stance": "bullish",
+     "family": "conviction",
+     "rank": 2
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile",
+      "valuation_extreme",
+      "dead_cat_bounce",
+      "blend_not_supported",
+      "needs_human_review"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 513.0926,
+     "entry_high": 555.0274,
+     "entry_mid": 534.06,
+     "limit_price": 534.06,
+     "stop": 408.2556,
+     "target": 538.8665,
+     "time_stop_date": "2027-01-08",
+     "horizon_bars": 40,
+     "order_style": "limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 503.445,
+     "shares": 1,
+     "amount": 503.45
+    },
+    "exit": {
+     "date": "2026-11-19",
+     "price": 542.17,
+     "reason": "target",
+     "sessions_held": 3
+    },
+    "result": "won",
+    "return_pct": 0.07692,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": 0.121994,
+    "sector_return_pct": -0.036284,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": 0.07692,
+      "benchmark_return_pct": -0.045074
+     },
+     {
+      "sessions": 10,
+      "return_pct": 0.07692,
+      "benchmark_return_pct": -0.045074
+     },
+     {
+      "sessions": 20,
+      "return_pct": 0.07692,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "max_favorable_pct": 0.07692,
+    "max_adverse_pct": -0.028315,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 504.28,
+      "return_pct": 0.001659,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 503.41,
+      "return_pct": -0.00007,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 530.14,
+      "return_pct": 0.053025,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 489.19,
+      "return_pct": -0.028315,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:85ca6d9aadcd",
+    "decision_day": "2026-11-13",
+    "symbol": "APA",
+    "company": "APA Corporation",
+    "record_id": "85ca6d9aadcd",
+    "review_id": "8d83a2eeea34",
+    "advisor": {
+     "score": 72,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 2
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile",
+      "needs_human_review"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 47.4884,
+     "entry_high": 49.3916,
+     "entry_mid": 48.44,
+     "limit_price": 48.9158,
+     "stop": 46.1843,
+     "target": 49.2338,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 47.96,
+     "shares": 1,
+     "amount": 47.96
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 46.1843,
+     "reason": "stop",
+     "sessions_held": 2
+    },
+    "result": "lost",
+    "return_pct": -0.037025,
+    "benchmark_return_pct": -0.025958,
+    "excess_return_pct": -0.011067,
+    "sector_return_pct": -0.050062,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.037025,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.037025,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.037025,
+      "benchmark_return_pct": -0.025958
+     }
+    ],
+    "max_favorable_pct": -0.013761,
+    "max_adverse_pct": -0.050876,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 47.3,
+      "return_pct": -0.013761,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 46.88,
+      "return_pct": -0.022519,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 45.52,
+      "return_pct": -0.050876,
+      "benchmark_return_pct": -0.025958
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:8a112417726e",
+    "decision_day": "2026-11-13",
+    "symbol": "MU",
+    "company": null,
+    "record_id": "8a112417726e",
+    "review_id": "b0499f75ba7c",
+    "advisor": {
+     "score": 66,
+     "stance": "bullish",
+     "family": "conviction",
+     "rank": 3
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile",
+      "dead_cat_bounce",
+      "blend_not_supported",
+      "needs_human_review"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 748.8252,
+     "entry_high": 807.7948,
+     "entry_mid": 778.31,
+     "limit_price": 778.31,
+     "stop": 601.4014,
+     "target": 785.3148,
+     "time_stop_date": "2027-01-08",
+     "horizon_bars": 40,
+     "order_style": "limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 734.16,
+     "shares": 1,
+     "amount": 734.16
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.059551,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.014477,
+    "sector_return_pct": -0.036284,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.020622,
+    "max_adverse_pct": -0.059551,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 719.02,
+      "return_pct": -0.020622,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 712.42,
+      "return_pct": -0.029612,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 705.27,
+      "return_pct": -0.039351,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 690.44,
+      "return_pct": -0.059551,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:8b78a7afdbcc",
+    "decision_day": "2026-11-13",
+    "symbol": "XOM",
+    "company": "ExxonMobil",
+    "record_id": "8b78a7afdbcc",
+    "review_id": "09332dbfbb8d",
+    "advisor": {
+     "score": 73,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 1
+    },
+    "critic": {
+     "approved": true,
+     "score": 86,
+     "grade": "B",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 168.4354,
+     "entry_high": 172.7446,
+     "entry_mid": 170.59,
+     "limit_price": 171.6673,
+     "stop": 169.3786,
+     "target": 174.9426,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 170.6753,
+     "shares": 8,
+     "amount": 1365.4
+    },
+    "exit": {
+     "date": "2026-11-13",
+     "price": 169.3786,
+     "reason": "stop",
+     "sessions_held": 0
+    },
+    "result": "lost",
+    "return_pct": -0.007597,
+    "benchmark_return_pct": -0.007499,
+    "excess_return_pct": -0.000098,
+    "sector_return_pct": 0.00077,
+    "gain": -10.37,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.007597,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.007597,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.007597,
+      "benchmark_return_pct": -0.007499
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.007597,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 170.59,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:937bfd681be3",
+    "decision_day": "2026-11-13",
+    "symbol": "APA",
+    "company": "APA Corporation",
+    "record_id": "937bfd681be3",
+    "review_id": "d93556d94f3a",
+    "advisor": {
+     "score": 72,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 2
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 47.4884,
+     "entry_high": 49.3916,
+     "entry_mid": 48.44,
+     "limit_price": 48.9158,
+     "stop": 46.1843,
+     "target": 49.2338,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 47.96,
+     "shares": 1,
+     "amount": 47.96
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 46.1843,
+     "reason": "stop",
+     "sessions_held": 2
+    },
+    "result": "lost",
+    "return_pct": -0.037025,
+    "benchmark_return_pct": -0.025958,
+    "excess_return_pct": -0.011067,
+    "sector_return_pct": -0.050062,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.037025,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.037025,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.037025,
+      "benchmark_return_pct": -0.025958
+     }
+    ],
+    "max_favorable_pct": -0.013761,
+    "max_adverse_pct": -0.050876,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 47.3,
+      "return_pct": -0.013761,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 46.88,
+      "return_pct": -0.022519,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 45.52,
+      "return_pct": -0.050876,
+      "benchmark_return_pct": -0.025958
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:a7cf63305c05",
+    "decision_day": "2026-11-13",
+    "symbol": "COP",
+    "company": "ConocoPhillips",
+    "record_id": "a7cf63305c05",
+    "review_id": "47ec69ee4d1b",
+    "advisor": {
+     "score": 73,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 3
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile",
+      "needs_human_review"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 140.2967,
+     "entry_high": 144.2633,
+     "entry_mid": 142.28,
+     "limit_price": 143.2717,
+     "stop": 137.2894,
+     "target": 145.5069,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 140.11,
+     "shares": 1,
+     "amount": 140.11
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 137.2894,
+     "reason": "stop",
+     "sessions_held": 2
+    },
+    "result": "lost",
+    "return_pct": -0.020131,
+    "benchmark_return_pct": -0.025958,
+    "excess_return_pct": 0.005827,
+    "sector_return_pct": -0.050062,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.020131,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.020131,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.020131,
+      "benchmark_return_pct": -0.025958
+     }
+    ],
+    "max_favorable_pct": 0.002926,
+    "max_adverse_pct": -0.040754,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 140.52,
+      "return_pct": 0.002926,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 139.48,
+      "return_pct": -0.004496,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 134.4,
+      "return_pct": -0.040754,
+      "benchmark_return_pct": -0.025958
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:ad29c38b9f06",
+    "decision_day": "2026-11-13",
+    "symbol": "EOG",
+    "company": null,
+    "record_id": "ad29c38b9f06",
+    "review_id": "6a0cb213707e",
+    "advisor": {
+     "score": 72,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 2
+    },
+    "critic": {
+     "approved": true,
+     "score": 77,
+     "grade": "C",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 156.1465,
+     "entry_high": 160.4935,
+     "entry_mid": 158.32,
+     "limit_price": 159.4068,
+     "stop": 150.028,
+     "target": 162.2635,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 158.3992,
+     "shares": 9,
+     "amount": 1425.59
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 150.028,
+     "reason": "stop",
+     "sessions_held": 3
+    },
+    "result": "lost",
+    "return_pct": -0.052849,
+    "benchmark_return_pct": -0.039299,
+    "excess_return_pct": -0.01355,
+    "sector_return_pct": -0.05577,
+    "gain": -75.34,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.054983,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 158.32,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 155.47,
+      "return_pct": -0.018493,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 154.91,
+      "return_pct": -0.022028,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 149.69,
+      "return_pct": -0.054983,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:bc8ff36a5ecf",
+    "decision_day": "2026-11-13",
+    "symbol": "CVX",
+    "company": "Chevron",
+    "record_id": "bc8ff36a5ecf",
+    "review_id": "4822d21964fb",
+    "advisor": {
+     "score": 73,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 2
+    },
+    "critic": {
+     "approved": true,
+     "score": 86,
+     "grade": "B",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 217.3817,
+     "entry_high": 222.3983,
+     "entry_mid": 219.89,
+     "limit_price": 221.1441,
+     "stop": 215.4814,
+     "target": 224.7431,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 219.9999,
+     "shares": 34,
+     "amount": 7480
+    },
+    "exit": {
+     "date": "2026-11-17",
+     "price": 215.4814,
+     "reason": "stop",
+     "sessions_held": 2
+    },
+    "result": "lost",
+    "return_pct": -0.020539,
+    "benchmark_return_pct": -0.036352,
+    "excess_return_pct": 0.015813,
+    "sector_return_pct": -0.023879,
+    "gain": -153.63,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.020539,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.020539,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.020539,
+      "benchmark_return_pct": -0.036352
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.020539,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 219.89,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 217.14,
+      "return_pct": -0.013,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 216.13,
+      "return_pct": -0.01759,
+      "benchmark_return_pct": -0.036352
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:be3e391cac5f",
+    "decision_day": "2026-11-13",
+    "symbol": "MSFT",
+    "company": "Microsoft",
+    "record_id": "be3e391cac5f",
+    "review_id": "15a54a0363b3",
+    "advisor": {
+     "score": 69,
+     "stance": "bullish",
+     "family": "conviction",
+     "rank": 1
+    },
+    "critic": {
+     "approved": true,
+     "score": 81,
+     "grade": "B",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 516.2709,
+     "entry_high": 531.4891,
+     "entry_mid": 523.88,
+     "limit_price": 523.88,
+     "stop": 478.2255,
+     "target": 528.5949,
+     "time_stop_date": "2027-01-08",
+     "horizon_bars": 40,
+     "order_style": "limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 523.88,
+     "shares": 15,
+     "amount": 7858.2
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.048828,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": 0.009325,
+    "sector_return_pct": -0.07426,
+    "gain": -383.7,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.048828,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 523.88,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 517.99,
+      "return_pct": -0.011243,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 506.24,
+      "return_pct": -0.033672,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 508.29,
+      "return_pct": -0.029759,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 498.3,
+      "return_pct": -0.048828,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:c17c56d1ce7d",
+    "decision_day": "2026-11-13",
+    "symbol": "CVX",
+    "company": "Chevron",
+    "record_id": "c17c56d1ce7d",
+    "review_id": "48ac15b95e1f",
+    "advisor": {
+     "score": 65,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 5
+    },
+    "critic": {
+     "approved": true,
+     "score": 82,
+     "grade": "B",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 217.3817,
+     "entry_high": 222.3983,
+     "entry_mid": 219.89,
+     "limit_price": 221.1441,
+     "stop": 215.4814,
+     "target": 224.7431,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 219.89,
+     "shares": 27.28637,
+     "amount": 6000
+    },
+    "exit": {
+     "date": "2026-11-17",
+     "price": 215.4814,
+     "reason": "stop",
+     "sessions_held": 2
+    },
+    "result": "lost",
+    "return_pct": -0.020049,
+    "benchmark_return_pct": -0.036352,
+    "excess_return_pct": 0.016303,
+    "sector_return_pct": -0.023879,
+    "gain": -120.29,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.020049,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.020049,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.020049,
+      "benchmark_return_pct": -0.036352
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.020049,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 219.89,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 217.14,
+      "return_pct": -0.012506,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 216.13,
+      "return_pct": -0.017099,
+      "benchmark_return_pct": -0.036352
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:c62e2edbcde1",
+    "decision_day": "2026-11-13",
+    "symbol": "EOG",
+    "company": "EOG Resources",
+    "record_id": "c62e2edbcde1",
+    "review_id": "ab8d6d034b90",
+    "advisor": {
+     "score": 81,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 1
+    },
+    "critic": {
+     "approved": true,
+     "score": 79,
+     "grade": "C",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 156.1465,
+     "entry_high": 160.4935,
+     "entry_mid": 158.32,
+     "limit_price": 159.4068,
+     "stop": 150.028,
+     "target": 162.2635,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 158.3992,
+     "shares": 47,
+     "amount": 7444.76
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 150.028,
+     "reason": "stop",
+     "sessions_held": 3
+    },
+    "result": "lost",
+    "return_pct": -0.052849,
+    "benchmark_return_pct": -0.039299,
+    "excess_return_pct": -0.01355,
+    "sector_return_pct": -0.05577,
+    "gain": -393.44,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.052849,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.054983,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 158.32,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 155.47,
+      "return_pct": -0.018493,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 154.91,
+      "return_pct": -0.022028,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 149.69,
+      "return_pct": -0.054983,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:d4074afd0793",
+    "decision_day": "2026-11-13",
+    "symbol": "XOM",
+    "company": "ExxonMobil Holdings",
+    "record_id": "d4074afd0793",
+    "review_id": "2bb765bd04c9",
+    "advisor": {
+     "score": 70,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 3
+    },
+    "critic": {
+     "approved": true,
+     "score": 85,
+     "grade": "B",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 168.4354,
+     "entry_high": 172.7446,
+     "entry_mid": 170.59,
+     "limit_price": 171.6673,
+     "stop": 169.3786,
+     "target": 174.9426,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 170.59,
+     "shares": 24.123453,
+     "amount": 4115.22
+    },
+    "exit": {
+     "date": "2026-11-13",
+     "price": 169.3786,
+     "reason": "stop",
+     "sessions_held": 0
+    },
+    "result": "lost",
+    "return_pct": -0.007101,
+    "benchmark_return_pct": -0.007499,
+    "excess_return_pct": 0.000398,
+    "sector_return_pct": 0.00077,
+    "gain": -29.22,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.007101,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.007101,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.007101,
+      "benchmark_return_pct": -0.007499
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.007101,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 170.59,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:d415bba65829",
+    "decision_day": "2026-11-13",
+    "symbol": "EOG",
+    "company": "EOG Resources",
+    "record_id": "d415bba65829",
+    "review_id": "c870a9f059fe",
+    "advisor": {
+     "score": 75,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 1
+    },
+    "critic": {
+     "approved": true,
+     "score": 74,
+     "grade": "C",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 156.1465,
+     "entry_high": 160.4935,
+     "entry_mid": 158.32,
+     "limit_price": 159.4068,
+     "stop": 150.028,
+     "target": 162.2635,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 158.32,
+     "shares": 37.897928,
+     "amount": 6000
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 150.028,
+     "reason": "stop",
+     "sessions_held": 3
+    },
+    "result": "lost",
+    "return_pct": -0.052375,
+    "benchmark_return_pct": -0.039299,
+    "excess_return_pct": -0.013076,
+    "sector_return_pct": -0.05577,
+    "gain": -314.25,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.052375,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.052375,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.052375,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.05451,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 158.32,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 155.47,
+      "return_pct": -0.018002,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 154.91,
+      "return_pct": -0.021539,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 149.69,
+      "return_pct": -0.05451,
+      "benchmark_return_pct": -0.039299
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:f0e146ada0f7",
+    "decision_day": "2026-11-13",
+    "symbol": "CVX",
+    "company": "Chevron",
+    "record_id": "f0e146ada0f7",
+    "review_id": "15c735a2e3a2",
+    "advisor": {
+     "score": 72,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 1
+    },
+    "critic": {
+     "approved": true,
+     "score": 87,
+     "grade": "B",
+     "denial_reasons": []
+    },
+    "trust_score": null,
+    "verdict": "approved",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": 217.3817,
+     "entry_high": 222.3983,
+     "entry_mid": 219.89,
+     "limit_price": 221.1441,
+     "stop": 215.4814,
+     "target": 224.7431,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 219.9999,
+     "shares": 6,
+     "amount": 1320
+    },
+    "exit": {
+     "date": "2026-11-17",
+     "price": 215.4814,
+     "reason": "stop",
+     "sessions_held": 2
+    },
+    "result": "lost",
+    "return_pct": -0.020539,
+    "benchmark_return_pct": -0.036352,
+    "excess_return_pct": 0.015813,
+    "sector_return_pct": -0.023879,
+    "gain": -27.11,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.020539,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.020539,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.020539,
+      "benchmark_return_pct": -0.036352
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.020539,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 219.89,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 217.14,
+      "return_pct": -0.013,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 216.13,
+      "return_pct": -0.01759,
+      "benchmark_return_pct": -0.036352
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:f3eb947cf512",
+    "decision_day": "2026-11-13",
+    "symbol": "COP",
+    "company": "ConocoPhillips",
+    "record_id": "f3eb947cf512",
+    "review_id": "65079e63ca8c",
+    "advisor": {
+     "score": 66,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 4
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile",
+      "needs_human_review"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 140.2967,
+     "entry_high": 144.2633,
+     "entry_mid": 142.28,
+     "limit_price": 143.2717,
+     "stop": 137.2894,
+     "target": 145.5069,
+     "time_stop_date": "2027-02-10",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 140.11,
+     "shares": 1,
+     "amount": 140.11
+    },
+    "exit": {
+     "date": "2026-11-18",
+     "price": 137.2894,
+     "reason": "stop",
+     "sessions_held": 2
+    },
+    "result": "lost",
+    "return_pct": -0.020131,
+    "benchmark_return_pct": -0.025958,
+    "excess_return_pct": 0.005827,
+    "sector_return_pct": -0.050062,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": -0.020131,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "sessions": 10,
+      "return_pct": -0.020131,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "sessions": 20,
+      "return_pct": -0.020131,
+      "benchmark_return_pct": -0.025958
+     }
+    ],
+    "max_favorable_pct": 0.002926,
+    "max_adverse_pct": -0.040754,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 140.52,
+      "return_pct": 0.002926,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 139.48,
+      "return_pct": -0.004496,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 134.4,
+      "return_pct": -0.040754,
+      "benchmark_return_pct": -0.025958
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-3b7baae5bff8-1",
+    "decision_day": "2026-11-13",
+    "symbol": "CNQ",
+    "company": null,
+    "record_id": "neutral-3b7baae5bff8-1",
+    "review_id": null,
+    "advisor": {
+     "score": 66,
+     "stance": "neutral",
+     "family": null,
+     "rank": 5
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 49.7749,
+     "shares": 1,
+     "amount": 49.77
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.101957,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": -0.043804,
+    "sector_return_pct": -0.061932,
+    "gain": -5.07,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.101957,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 49.75,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 48.17,
+      "return_pct": -0.032243,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 47.74,
+      "return_pct": -0.040882,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 45.53,
+      "return_pct": -0.085282,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 44.7,
+      "return_pct": -0.101957,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-3b7baae5bff8-2",
+    "decision_day": "2026-11-13",
+    "symbol": "OXY",
+    "company": null,
+    "record_id": "neutral-3b7baae5bff8-2",
+    "review_id": null,
+    "advisor": {
+     "score": 66,
+     "stance": "neutral",
+     "family": null,
+     "rank": 7
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "not_filled",
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 58.08,
+     "shares": 1,
+     "amount": 58.08
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.073519,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.028445,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.012397,
+    "max_adverse_pct": -0.07438,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 57.36,
+      "return_pct": -0.012397,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 56.52,
+      "return_pct": -0.02686,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 53.76,
+      "return_pct": -0.07438,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 53.81,
+      "return_pct": -0.073519,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-3b7baae5bff8-3",
+    "decision_day": "2026-11-13",
+    "symbol": "BP",
+    "company": "BP plc",
+    "record_id": "neutral-3b7baae5bff8-3",
+    "review_id": null,
+    "advisor": {
+     "score": 64,
+     "stance": "neutral",
+     "family": null,
+     "rank": 8
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "not_filled",
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 45.32,
+     "shares": 1,
+     "amount": 45.32
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.046558,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.001484,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.008826,
+    "max_adverse_pct": -0.046558,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 44.92,
+      "return_pct": -0.008826,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 44.85,
+      "return_pct": -0.010371,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 43.25,
+      "return_pct": -0.045675,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 43.21,
+      "return_pct": -0.046558,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-3b7baae5bff8-4",
+    "decision_day": "2026-11-13",
+    "symbol": "META",
+    "company": null,
+    "record_id": "neutral-3b7baae5bff8-4",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 10
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "not_filled",
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 640,
+     "shares": 1,
+     "amount": 640
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.068406,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.023332,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.021234,
+    "max_adverse_pct": -0.068406,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 626.41,
+      "return_pct": -0.021234,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 618.87,
+      "return_pct": -0.033016,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 616.38,
+      "return_pct": -0.036906,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 596.22,
+      "return_pct": -0.068406,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-3b7baae5bff8-5",
+    "decision_day": "2026-11-13",
+    "symbol": "VLO",
+    "company": null,
+    "record_id": "neutral-3b7baae5bff8-5",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 9
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "not_filled",
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 373.82,
+     "shares": 1,
+     "amount": 373.82
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.094591,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.049517,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.010941,
+    "max_adverse_pct": -0.094591,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 369.73,
+      "return_pct": -0.010941,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 363.77,
+      "return_pct": -0.026885,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 343.7,
+      "return_pct": -0.080574,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 338.46,
+      "return_pct": -0.094591,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-3b7baae5bff8-6",
+    "decision_day": "2026-11-13",
+    "symbol": "FANG",
+    "company": null,
+    "record_id": "neutral-3b7baae5bff8-6",
+    "review_id": null,
+    "advisor": {
+     "score": 50,
+     "stance": "neutral",
+     "family": null,
+     "rank": 11
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "not_filled",
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 182,
+     "shares": 1,
+     "amount": 182
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.028736,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": 0.016338,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.02522,
+    "max_adverse_pct": -0.042198,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 177.41,
+      "return_pct": -0.02522,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 177.07,
+      "return_pct": -0.027088,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 174.32,
+      "return_pct": -0.042198,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 176.77,
+      "return_pct": -0.028736,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-559d2e3e54f5-1",
+    "decision_day": "2026-11-13",
+    "symbol": "META",
+    "company": null,
+    "record_id": "neutral-559d2e3e54f5-1",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 7
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 641.69,
+     "shares": 6.413096,
+     "amount": 4115.22
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.07086,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": -0.012707,
+    "sector_return_pct": -0.061932,
+    "gain": -291.6,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.07086,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 641.69,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 626.41,
+      "return_pct": -0.023812,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 618.87,
+      "return_pct": -0.035562,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 616.38,
+      "return_pct": -0.039443,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 596.22,
+      "return_pct": -0.07086,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-55a4497bdd20-VLO",
+    "decision_day": "2026-11-13",
+    "symbol": "VLO",
+    "company": null,
+    "record_id": "neutral-55a4497bdd20-VLO",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 7
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "neutral_off",
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 373.82,
+     "shares": 1,
+     "amount": 373.82
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.094591,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.049517,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.010941,
+    "max_adverse_pct": -0.094591,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 369.73,
+      "return_pct": -0.010941,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 363.77,
+      "return_pct": -0.026885,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 343.7,
+      "return_pct": -0.080574,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 338.46,
+      "return_pct": -0.094591,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-8a7460ffc3c2-VLO",
+    "decision_day": "2026-11-13",
+    "symbol": "VLO",
+    "company": null,
+    "record_id": "neutral-8a7460ffc3c2-VLO",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 6
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "neutral_off",
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-16",
+     "price": 373.82,
+     "shares": 1,
+     "amount": 373.82
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.094591,
+    "benchmark_return_pct": -0.045074,
+    "excess_return_pct": -0.049517,
+    "sector_return_pct": -0.056262,
+    "gain": null,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.010941,
+    "max_adverse_pct": -0.094591,
+    "path": [
+     {
+      "date": "2026-11-16",
+      "close": 369.73,
+      "return_pct": -0.010941,
+      "benchmark_return_pct": -0.012953
+     },
+     {
+      "date": "2026-11-17",
+      "close": 363.77,
+      "return_pct": -0.026885,
+      "benchmark_return_pct": -0.02297
+     },
+     {
+      "date": "2026-11-18",
+      "close": 343.7,
+      "return_pct": -0.080574,
+      "benchmark_return_pct": -0.025958
+     },
+     {
+      "date": "2026-11-19",
+      "close": 338.46,
+      "return_pct": -0.094591,
+      "benchmark_return_pct": -0.045074
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-b7532c4526c9-1",
+    "decision_day": "2026-11-13",
+    "symbol": "AMZN",
+    "company": null,
+    "record_id": "neutral-b7532c4526c9-1",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 4
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 266.66,
+     "shares": 14,
+     "amount": 3733.24
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.034838,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": 0.023315,
+    "sector_return_pct": -0.07426,
+    "gain": -130.06,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": 0.00405,
+    "max_adverse_pct": -0.034838,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 266.66,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 257.75,
+      "return_pct": -0.033413,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 257.89,
+      "return_pct": -0.032888,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 267.74,
+      "return_pct": 0.00405,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 257.37,
+      "return_pct": -0.034838,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-b7532c4526c9-2",
+    "decision_day": "2026-11-13",
+    "symbol": "META",
+    "company": null,
+    "record_id": "neutral-b7532c4526c9-2",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 6
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 641.69,
+     "shares": 13,
+     "amount": 8341.97
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.07086,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": -0.012707,
+    "sector_return_pct": -0.07426,
+    "gain": -591.11,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.07086,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 641.69,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 626.41,
+      "return_pct": -0.023812,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 618.87,
+      "return_pct": -0.035562,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 616.38,
+      "return_pct": -0.039443,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 596.22,
+      "return_pct": -0.07086,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-ce4c2f395399-1",
+    "decision_day": "2026-11-13",
+    "symbol": "OXY",
+    "company": null,
+    "record_id": "neutral-ce4c2f395399-1",
+    "review_id": null,
+    "advisor": {
+     "score": 66,
+     "stance": "neutral",
+     "family": null,
+     "rank": 5
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 58.75,
+     "shares": 102.127659,
+     "amount": 6000
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.084085,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": -0.025932,
+    "sector_return_pct": -0.061932,
+    "gain": -504.51,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.084936,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 58.75,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 57.36,
+      "return_pct": -0.02366,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 56.52,
+      "return_pct": -0.037957,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 53.76,
+      "return_pct": -0.084936,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 53.81,
+      "return_pct": -0.084085,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-ce4c2f395399-2",
+    "decision_day": "2026-11-13",
+    "symbol": "META",
+    "company": null,
+    "record_id": "neutral-ce4c2f395399-2",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 8
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 641.69,
+     "shares": 9.350309,
+     "amount": 6000
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.07086,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": -0.012707,
+    "sector_return_pct": -0.061932,
+    "gain": -425.16,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": 0,
+    "max_adverse_pct": -0.07086,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 641.69,
+      "return_pct": 0,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 626.41,
+      "return_pct": -0.023812,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 618.87,
+      "return_pct": -0.035562,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 616.38,
+      "return_pct": -0.039443,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 596.22,
+      "return_pct": -0.07086,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-d76d39703eed-0",
+    "decision_day": "2026-11-13",
+    "symbol": "MU",
+    "company": "Micron Technology",
+    "record_id": "neutral-d76d39703eed-0",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 1
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 778.6992,
+     "shares": 32,
+     "amount": 24918.37
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.113342,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": -0.055189,
+    "sector_return_pct": null,
+    "gain": -2824.29,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.113342,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 778.31,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 719.02,
+      "return_pct": -0.07664,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 712.42,
+      "return_pct": -0.085115,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 705.27,
+      "return_pct": -0.094297,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 690.44,
+      "return_pct": -0.113342,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-13:neutral-d76d39703eed-1",
+    "decision_day": "2026-11-13",
+    "symbol": "AMD",
+    "company": "Advanced Micro Devices",
+    "record_id": "neutral-d76d39703eed-1",
+    "review_id": null,
+    "advisor": {
+     "score": 48,
+     "stance": "neutral",
+     "family": null,
+     "rank": 2
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": {
+     "date": "2026-11-13",
+     "price": 534.327,
+     "shares": 46,
+     "amount": 24579.04
+    },
+    "exit": null,
+    "result": "open",
+    "return_pct": -0.084474,
+    "benchmark_return_pct": -0.058153,
+    "excess_return_pct": -0.026321,
+    "sector_return_pct": null,
+    "gain": -2076.3,
+    "horizons": [
+     {
+      "sessions": 5,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 10,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     },
+     {
+      "sessions": 20,
+      "return_pct": null,
+      "benchmark_return_pct": null
+     }
+    ],
+    "max_favorable_pct": -0.0005,
+    "max_adverse_pct": -0.084474,
+    "path": [
+     {
+      "date": "2026-11-13",
+      "close": 534.06,
+      "return_pct": -0.0005,
+      "benchmark_return_pct": -0.007499
+     },
+     {
+      "date": "2026-11-16",
+      "close": 504.28,
+      "return_pct": -0.056233,
+      "benchmark_return_pct": -0.026471
+     },
+     {
+      "date": "2026-11-17",
+      "close": 503.41,
+      "return_pct": -0.057862,
+      "benchmark_return_pct": -0.036352
+     },
+     {
+      "date": "2026-11-18",
+      "close": 530.14,
+      "return_pct": -0.007836,
+      "benchmark_return_pct": -0.039299
+     },
+     {
+      "date": "2026-11-19",
+      "close": 489.19,
+      "return_pct": -0.084474,
+      "benchmark_return_pct": -0.058153
+     }
+    ],
+    "split_adjusted": false,
+    "notes": []
+   },
+   {
+    "key": "2026-11-20:27f0880b8b96",
+    "decision_day": "2026-11-20",
+    "symbol": "PBF",
+    "company": "PBF Energy",
+    "record_id": "27f0880b8b96",
+    "review_id": "b936e789db88",
+    "advisor": {
+     "score": 65,
+     "stance": "bullish",
+     "family": "conviction",
+     "rank": 3
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile",
+      "blend_not_supported",
+      "needs_human_review"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 59.5773,
+     "entry_high": 63.8427,
+     "entry_mid": 61.71,
+     "limit_price": 61.71,
+     "stop": 48.9139,
+     "target": 61.9877,
+     "time_stop_date": "2027-01-15",
+     "horizon_bars": 40,
+     "order_style": "limit"
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "no daily bar is stored after 2026-11-20 yet: the future is not stored"
+    ]
+   },
+   {
+    "key": "2026-11-20:4f81adfe2f80",
+    "decision_day": "2026-11-20",
+    "symbol": "VLO",
+    "company": "Valero Energy",
+    "record_id": "4f81adfe2f80",
+    "review_id": "b46d2f4e24cd",
+    "advisor": {
+     "score": 67,
+     "stance": "bullish",
+     "family": "conviction",
+     "rank": 2
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "risk_above_profile"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 331.2975,
+     "entry_high": 347.8425,
+     "entry_mid": 339.57,
+     "limit_price": 339.57,
+     "stop": 289.9352,
+     "target": 341.0981,
+     "time_stop_date": "2027-01-15",
+     "horizon_bars": 40,
+     "order_style": "limit"
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "no daily bar is stored after 2026-11-20 yet: the future is not stored"
+    ]
+   },
+   {
+    "key": "2026-11-20:653dfbe9e70f",
+    "decision_day": "2026-11-20",
+    "symbol": "EOG",
+    "company": null,
+    "record_id": "653dfbe9e70f",
+    "review_id": "15036de4e093",
+    "advisor": {
+     "score": 72,
+     "stance": "bullish",
+     "family": "trend",
+     "rank": 1
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "stop_already_hit"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 149.5172,
+     "entry_high": 153.7628,
+     "entry_mid": 151.64,
+     "limit_price": 152.7014,
+     "stop": 150.6044,
+     "target": 154.6493,
+     "time_stop_date": "2027-02-17",
+     "horizon_bars": 63,
+     "order_style": "marketable_limit"
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "no daily bar is stored after 2026-11-20 yet: the future is not stored"
+    ]
+   },
+   {
+    "key": "2026-11-20:7d0f9be159e1",
+    "decision_day": "2026-11-20",
+    "symbol": "GOOG",
+    "company": "Alphabet (GOOG)",
+    "record_id": "7d0f9be159e1",
+    "review_id": "2a684cee8a6a",
+    "advisor": {
+     "score": 50,
+     "stance": "bullish",
+     "family": "capital_return",
+     "rank": 1
+    },
+    "critic": {
+     "approved": false,
+     "score": 49,
+     "grade": "F",
+     "denial_reasons": [
+      "price_mismatch",
+      "needs_human_review"
+     ]
+    },
+    "trust_score": null,
+    "verdict": "denied",
+    "traded": false,
+    "hypothetical": true,
+    "not_traded_reason": "denied",
+    "reject_code": null,
+    "plan": {
+     "entry_low": 267.8039,
+     "entry_high": 278.1961,
+     "entry_mid": 273,
+     "limit_price": 273,
+     "stop": 241.8231,
+     "target": null,
+     "time_stop_date": "2027-05-17",
+     "horizon_bars": 126,
+     "order_style": "limit"
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "no daily bar is stored after 2026-11-20 yet: the future is not stored"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-1ce7aeab5abc-1",
+    "decision_day": "2026-11-20",
+    "symbol": "COP",
+    "company": null,
+    "record_id": "neutral-1ce7aeab5abc-1",
+    "review_id": null,
+    "advisor": {
+     "score": 64,
+     "stance": "neutral",
+     "family": null,
+     "rank": 1
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "COP has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-1ce7aeab5abc-2",
+    "decision_day": "2026-11-20",
+    "symbol": "CVX",
+    "company": null,
+    "record_id": "neutral-1ce7aeab5abc-2",
+    "review_id": null,
+    "advisor": {
+     "score": 63,
+     "stance": "neutral",
+     "family": null,
+     "rank": 2
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "CVX has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-1ce7aeab5abc-3",
+    "decision_day": "2026-11-20",
+    "symbol": "APA",
+    "company": null,
+    "record_id": "neutral-1ce7aeab5abc-3",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 3
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "APA has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-4435c024e662-1",
+    "decision_day": "2026-11-20",
+    "symbol": "COP",
+    "company": null,
+    "record_id": "neutral-4435c024e662-1",
+    "review_id": null,
+    "advisor": {
+     "score": 64,
+     "stance": "neutral",
+     "family": null,
+     "rank": 4
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "COP has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-4435c024e662-2",
+    "decision_day": "2026-11-20",
+    "symbol": "CVX",
+    "company": null,
+    "record_id": "neutral-4435c024e662-2",
+    "review_id": null,
+    "advisor": {
+     "score": 63,
+     "stance": "neutral",
+     "family": null,
+     "rank": 5
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "CVX has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-4435c024e662-3",
+    "decision_day": "2026-11-20",
+    "symbol": "APA",
+    "company": null,
+    "record_id": "neutral-4435c024e662-3",
+    "review_id": null,
+    "advisor": {
+     "score": 62,
+     "stance": "neutral",
+     "family": null,
+     "rank": 6
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "APA has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-79dfd8aa5b83-1",
+    "decision_day": "2026-11-20",
+    "symbol": "AMZN",
+    "company": null,
+    "record_id": "neutral-79dfd8aa5b83-1",
+    "review_id": null,
+    "advisor": {
+     "score": 61,
+     "stance": "neutral",
+     "family": null,
+     "rank": 1
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "AMZN has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-79dfd8aa5b83-2",
+    "decision_day": "2026-11-20",
+    "symbol": "AMD",
+    "company": "Advanced Micro Devices",
+    "record_id": "neutral-79dfd8aa5b83-2",
+    "review_id": null,
+    "advisor": {
+     "score": 57,
+     "stance": "neutral",
+     "family": null,
+     "rank": 2
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "AMD has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   },
+   {
+    "key": "2026-11-20:neutral-79dfd8aa5b83-3",
+    "decision_day": "2026-11-20",
+    "symbol": "MSFT",
+    "company": "Microsoft",
+    "record_id": "neutral-79dfd8aa5b83-3",
+    "review_id": null,
+    "advisor": {
+     "score": 56,
+     "stance": "neutral",
+     "family": null,
+     "rank": 3
+    },
+    "critic": null,
+    "trust_score": null,
+    "verdict": "neutral",
+    "traded": true,
+    "hypothetical": false,
+    "not_traded_reason": null,
+    "reject_code": null,
+    "plan": {
+     "entry_low": null,
+     "entry_high": null,
+     "entry_mid": null,
+     "limit_price": null,
+     "stop": null,
+     "target": null,
+     "time_stop_date": null,
+     "horizon_bars": null,
+     "order_style": null
+    },
+    "entry": null,
+    "exit": null,
+    "result": "no_data",
+    "return_pct": null,
+    "benchmark_return_pct": null,
+    "excess_return_pct": null,
+    "sector_return_pct": null,
+    "gain": null,
+    "horizons": [],
+    "max_favorable_pct": null,
+    "max_adverse_pct": null,
+    "path": [],
+    "split_adjusted": false,
+    "notes": [
+     "MSFT has no stored bar on 2026-11-20, the day of the entry: it cannot be followed"
+    ]
+   }
+  ],
+  "stats": {
+   "portfolio": null,
+   "outcomes": {
+    "n": 49,
+    "closed": 17,
+    "open": 19,
+    "won": 1,
+    "lost": 16,
+    "not_filled": 0,
+    "no_data": 13,
+    "win_rate": 0.058824,
+    "avg_win_pct": 0.07692,
+    "avg_loss_pct": -0.033118,
+    "profit_factor": 0.145161,
+    "avg_sessions_held": 2.058824,
+    "exits": {
+     "stop": 16,
+     "target": 1,
+     "time_stop": 0,
+     "open": 19
+    },
+    "small_sample": true
+   },
+   "by_verdict": [
+    {
+     "n": 12,
+     "closed": 11,
+     "mean_return_pct": -0.032921,
+     "mean_excess_pct": -0.000738,
+     "win_rate": 0,
+     "small_sample": true,
+     "verdict": "approved"
+    },
+    {
+     "n": 9,
+     "closed": 6,
+     "mean_return_pct": -0.036461,
+     "mean_excess_pct": 0.000117,
+     "win_rate": 0.166667,
+     "small_sample": true,
+     "verdict": "denied"
+    },
+    {
+     "n": 15,
+     "closed": 0,
+     "mean_return_pct": -0.075485,
+     "mean_excess_pct": -0.023435,
+     "win_rate": null,
+     "small_sample": true,
+     "verdict": "neutral"
+    },
+    {
+     "n": 0,
+     "closed": 0,
+     "mean_return_pct": null,
+     "mean_excess_pct": null,
+     "win_rate": null,
+     "small_sample": true,
+     "verdict": "unreviewed"
+    }
+   ],
+   "by_score": [
+    {
+     "n": 0,
+     "closed": 0,
+     "mean_return_pct": null,
+     "mean_excess_pct": null,
+     "win_rate": null,
+     "small_sample": true,
+     "low": 0,
+     "high": 40
+    },
+    {
+     "n": 2,
+     "closed": 0,
+     "mean_return_pct": -0.086347,
+     "mean_excess_pct": -0.034733,
+     "win_rate": null,
+     "small_sample": true,
+     "low": 40,
+     "high": 50
+    },
+    {
+     "n": 1,
+     "closed": 0,
+     "mean_return_pct": -0.028736,
+     "mean_excess_pct": 0.016338,
+     "win_rate": null,
+     "small_sample": true,
+     "low": 50,
+     "high": 60
+    },
+    {
+     "n": 19,
+     "closed": 3,
+     "mean_return_pct": -0.06128,
+     "mean_excess_pct": -0.012164,
+     "win_rate": 0.333333,
+     "small_sample": true,
+     "low": 60,
+     "high": 70
+    },
+    {
+     "n": 13,
+     "closed": 13,
+     "mean_return_pct": -0.033605,
+     "mean_excess_pct": -0.004732,
+     "win_rate": 0,
+     "small_sample": true,
+     "low": 70,
+     "high": 80
+    },
+    {
+     "n": 1,
+     "closed": 1,
+     "mean_return_pct": -0.052849,
+     "mean_excess_pct": -0.01355,
+     "win_rate": 0,
+     "small_sample": true,
+     "low": 80,
+     "high": 101
+    }
+   ],
+   "by_family": [
+    {
+     "n": 1,
+     "closed": 0,
+     "mean_return_pct": -0.088219,
+     "mean_excess_pct": -0.043145,
+     "win_rate": null,
+     "small_sample": true,
+     "family": "capital_return"
+    },
+    {
+     "n": 4,
+     "closed": 1,
+     "mean_return_pct": -0.026271,
+     "mean_excess_pct": 0.022073,
+     "win_rate": 1,
+     "small_sample": true,
+     "family": "conviction"
+    },
+    {
+     "n": 1,
+     "closed": 1,
+     "mean_return_pct": -0.069358,
+     "mean_excess_pct": -0.024284,
+     "win_rate": 0,
+     "small_sample": true,
+     "family": "event"
+    },
+    {
+     "n": 15,
+     "closed": 15,
+     "mean_return_pct": -0.030702,
+     "mean_excess_pct": -0.00191,
+     "win_rate": 0,
+     "small_sample": true,
+     "family": "trend"
+    }
+   ],
+   "by_symbol": [
+    {
+     "symbol": "AMD",
+     "n": 1,
+     "gain": -2076.3,
+     "return_pct": -0.084474
+    },
+    {
+     "symbol": "AMZN",
+     "n": 1,
+     "gain": -130.06,
+     "return_pct": -0.034838
+    },
+    {
+     "symbol": "CNQ",
+     "n": 1,
+     "gain": -5.07,
+     "return_pct": -0.101869
+    },
+    {
+     "symbol": "CVX",
+     "n": 3,
+     "gain": -301.03,
+     "return_pct": -0.02034
+    },
+    {
+     "symbol": "EOG",
+     "n": 5,
+     "gain": -1065.53,
+     "return_pct": -0.052612
+    },
+    {
+     "symbol": "META",
+     "n": 3,
+     "gain": -1307.87,
+     "return_pct": -0.07086
+    },
+    {
+     "symbol": "MSFT",
+     "n": 1,
+     "gain": -383.7,
+     "return_pct": -0.048828
+    },
+    {
+     "symbol": "MU",
+     "n": 1,
+     "gain": -2824.29,
+     "return_pct": -0.113342
+    },
+    {
+     "symbol": "OXY",
+     "n": 1,
+     "gain": -504.51,
+     "return_pct": -0.084085
+    },
+    {
+     "symbol": "XOM",
+     "n": 3,
+     "gain": -82.2,
+     "return_pct": -0.00716
+    }
+   ],
+   "critic_value": {
+    "denied_n": 9,
+    "denied_mean_excess_pct": 0.000117,
+    "approved_n": 12,
+    "approved_mean_excess_pct": -0.000738,
+    "sentence": "Small sample: the Critic denied 9 and approved 12, too few to say whether it was right (20 of each are needed)."
+   },
+   "headline": {
+    "tone": "neutral",
+    "sentence": "Small sample: 17 closed so far, 20 needed. On average the recommendations were -1.0 points against SPY; 49 recommendations are too few to call it."
+   }
+  },
+  "caveats": [
+   "price_returns_no_dividends",
+   "fills_at_next_open_no_slippage",
+   "daily_bars_stop_before_target",
+   "small_sample",
+   "open_positions_marked"
+  ],
+  "coverage": {
+   "sources": {
+    "2026-11-20:653dfbe9e70f": "run",
+    "2026-11-20:4f81adfe2f80": "run",
+    "2026-11-20:27f0880b8b96": "run",
+    "2026-11-20:neutral-4435c024e662-1": "run",
+    "2026-11-20:neutral-4435c024e662-2": "run",
+    "2026-11-20:neutral-4435c024e662-3": "run",
+    "2026-11-20:7d0f9be159e1": "run",
+    "2026-11-20:neutral-79dfd8aa5b83-1": "run",
+    "2026-11-20:neutral-79dfd8aa5b83-2": "run",
+    "2026-11-20:neutral-79dfd8aa5b83-3": "run",
+    "2026-11-13:be3e391cac5f": "fixture",
+    "2026-11-13:83910656bece": "fixture",
+    "2026-11-13:8a112417726e": "fixture",
+    "2026-11-13:neutral-b7532c4526c9-1": "fixture",
+    "2026-11-13:neutral-b7532c4526c9-2": "fixture",
+    "2026-11-13:7adfd4849da4": "fixture",
+    "2026-11-13:4e3de10667c9": "fixture",
+    "2026-11-13:d4074afd0793": "fixture",
+    "2026-11-13:neutral-559d2e3e54f5-1": "fixture",
+    "2026-11-13:d415bba65829": "fixture",
+    "2026-11-13:85ca6d9aadcd": "fixture",
+    "2026-11-13:64cf72c6b6bc": "fixture",
+    "2026-11-13:f3eb947cf512": "fixture",
+    "2026-11-13:c17c56d1ce7d": "fixture",
+    "2026-11-13:neutral-ce4c2f395399-1": "fixture",
+    "2026-11-13:neutral-ce4c2f395399-2": "fixture",
+    "2026-11-20:neutral-1ce7aeab5abc-1": "fixture",
+    "2026-11-20:neutral-1ce7aeab5abc-2": "fixture",
+    "2026-11-20:neutral-1ce7aeab5abc-3": "fixture",
+    "2026-11-13:c62e2edbcde1": "fixture",
+    "2026-11-13:bc8ff36a5ecf": "fixture",
+    "2026-11-13:a7cf63305c05": "fixture",
+    "2026-11-13:neutral-3b7baae5bff8-1": "fixture",
+    "2026-11-13:neutral-3b7baae5bff8-2": "fixture",
+    "2026-11-13:neutral-3b7baae5bff8-3": "fixture",
+    "2026-11-13:neutral-3b7baae5bff8-4": "fixture",
+    "2026-11-13:neutral-3b7baae5bff8-5": "fixture",
+    "2026-11-13:neutral-3b7baae5bff8-6": "fixture",
+    "2026-11-13:8b78a7afdbcc": "fixture",
+    "2026-11-13:937bfd681be3": "fixture",
+    "2026-11-13:58c301a73699": "fixture",
+    "2026-11-13:neutral-8a7460ffc3c2-VLO": "fixture",
+    "2026-11-13:f0e146ada0f7": "fixture",
+    "2026-11-13:ad29c38b9f06": "fixture",
+    "2026-11-13:02e129ad6817": "fixture",
+    "2026-11-13:neutral-55a4497bdd20-VLO": "fixture",
+    "2026-11-13:816aea79fcda": "fixture",
+    "2026-11-13:neutral-d76d39703eed-0": "fixture",
+    "2026-11-13:neutral-d76d39703eed-1": "fixture"
+   },
+   "captures": [
+    {
+     "source": "run",
+     "name": "4435c024e662",
+     "decision_day": "2026-11-20",
+     "request": "I want to buy oil stocks. Use $15,000 to buy shares of the 3 most recommended oil companies, and split the money evenly among the 3.",
+     "outcomes": 6
+    },
+    {
+     "source": "run",
+     "name": "79dfd8aa5b83",
+     "decision_day": "2026-11-20",
+     "request": "Buy the 3 most recommended \"AI stocks\" with $12,000.",
+     "outcomes": 4
+    },
+    {
+     "source": "fixture",
+     "name": "auto_ai_quoted_theme.json",
+     "decision_day": "2026-11-13",
+     "request": "I want to buy the best \"AI stocks\" as a theme. Buy $20000 worth of the top 3",
+     "outcomes": 5
+    },
+    {
+     "source": "fixture",
+     "name": "auto_even_split_decimal.json",
+     "decision_day": "2026-11-13",
+     "request": "I want to buy oil stocks. Split $12,345.67 evenly among the 3 most recommended companies.",
+     "outcomes": 4
+    },
+    {
+     "source": "fixture",
+     "name": "auto_even_split_dollars.json",
+     "decision_day": "2026-11-13",
+     "request": "I want to buy oil stocks. Split $30,000 evenly among the 5 most recommended companies.",
+     "outcomes": 7
+    },
+    {
+     "source": "fixture",
+     "name": "auto_even_split_fractions.json",
+     "decision_day": "2026-11-20",
+     "request": "I want to buy oil stocks. Split $30,000 evenly among the 3 most recommended companies.",
+     "outcomes": 3
+    },
+    {
+     "source": "fixture",
+     "name": "auto_oil_no_second_mark.json",
+     "decision_day": "2026-11-13",
+     "request": "I want to buy oil stocks. Buy the most amount of oil stocks shares from the 3 most recommended companies. Balance the purchased stocks evenly among the 3 recommended companies.",
+     "outcomes": 9
+    },
+    {
+     "source": "fixture",
+     "name": "bob_jones_oil.json",
+     "decision_day": "2026-11-13",
+     "request": "I want to buy oil stocks. Buy the most amount of oil stocks shares from the 3 most recommended companies. Balance the purchased stocks evenly among the 3 recommended companies.",
+     "outcomes": 4
+    },
+    {
+     "source": "fixture",
+     "name": "bob_jones_oil_round_robin.json",
+     "decision_day": "2026-11-13",
+     "request": "I want to buy oil stocks. Use as much of the money in my account as you can to buy shares of the 3 most recommended oil companies.",
+     "outcomes": 4
+    },
+    {
+     "source": "fixture",
+     "name": "pam_smith_neutral.json",
+     "decision_day": "2026-11-13",
+     "request": "Buy MU, SNDK and AMD if the recommendations pass. Go ahead and trade if the recommendations pass.",
+     "outcomes": 3
+    }
+   ],
+   "last_bar_day": "2026-11-19",
+   "index": "$1 in every traded recommendation, 100 at the first entry; benchmark: the same dollars in SPY at the open of each entry day"
+  },
+  "models": {},
+  "config_versions": {
+   "proving": "1",
+   "trader": "1"
+  },
+  "langsmith": null
+ }
+}

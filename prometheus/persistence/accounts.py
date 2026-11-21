@@ -242,6 +242,21 @@ class AccountStore:
             return Portfolio(user=account["display_name"], currency=account["currency"], cash_avail=account["cash_balance"], positions=positions, note=account["note"])
         return self._run(account_id, fn)
 
+    def history(self, account_id: int) -> dict:
+        """The account's own dated record, READ ONLY (the Proving Ground's live monitor draws the account's equity from it): `trades` (every row of `trading.trades`, oldest first: symbol, side, shares, price, traded_on, record_id,
+        source) and `cash` (every row of `trading.cash_ledger`, oldest first: kind, amount, balance_after, occurred_on). Nothing is written; a SELECT of the account's own rows."""
+        def fn(cur):
+            cur.execute("SELECT 1 FROM trading.accounts WHERE account_id = %s", (account_id,))
+            if cur.fetchone() is None:
+                raise ValueError(f"no account {account_id}")
+            cur.execute("""SELECT trade_id, symbol, side, shares, price, traded_on, record_id, source FROM trading.trades
+                           WHERE account_id = %s ORDER BY traded_on, trade_id""", (account_id,))
+            trades = [dict(row) for row in cur.fetchall()]
+            cur.execute("""SELECT entry_id, kind, amount, balance_after, occurred_on FROM trading.cash_ledger
+                           WHERE account_id = %s ORDER BY occurred_on, entry_id""", (account_id,))
+            return {"trades": trades, "cash": [dict(row) for row in cur.fetchall()]}
+        return self._run(account_id, fn)
+
     def record_trade(self, account_id: int, symbol: str, side: str, shares: Decimal, price: Decimal, traded_on: date, *,
                      name: str | None = None, source: str = "bot", record_id: str | None = None) -> Decimal:
         """Book a filled trade. Returns that trade's realized gain (0 for a buy). Does not send an order to a broker. This is `book_trade` and its gain."""

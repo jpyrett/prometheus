@@ -217,6 +217,14 @@ def simulated_moment(day: date, config: CalendarConfig | None = None) -> datetim
     return (datetime.combine(day, close, tzinfo=_zone(config)) - timedelta(minutes=config.simulated_minutes_before_close)).astimezone(timezone.utc)
 
 
+def regular_close_utc(day: date, config: CalendarConfig | None = None) -> datetime:
+    """The moment the regular session of `day` closes (16:00 Eastern, 13:00 on an early-close day), as an aware UTC datetime. For a day that is not a trading day it is the same clock time: the caller asks about a
+    day it has a bar for."""
+    config = config or load_calendar()
+    close = config.early_close if day in config.early_close_dates else config.regular_close
+    return datetime.combine(day, close, tzinfo=_zone(config)).astimezone(timezone.utc)
+
+
 def window_end(day: date, config: CalendarConfig | None = None) -> time:
     """When the trading window of a trading day ends: the after-hours close, or the regular close when there is no after-hours session that day."""
     config = config or load_calendar()

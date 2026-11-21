@@ -1,0 +1,2263 @@
+<<<ARTICLE>>>
+id: finnhub:143774302
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T23:21:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8ff5c27e772e05a6ec76a078eb72598e02a611e0366dd71b90293d96131d01ba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Procter & Gamble vs. Starbucks: Which Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Procter & Gamble's steady cash machine goes head-to-head with Starbucks' bid for a brand-led comeback, and the valuation gap may tip the scales.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773368
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T21:56:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d06dd44e042e43aadd5907186250743282685c28439fe30133564ac5e669e40b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: 'Math has no opinion': Why Denver Broncos part-owner Mellody Hobson is putting big money into women's sports
+<<<SUMMARY>>>
+Ariel Investments' co-CEO Mellody Hobson is just getting started putting big money to work in women's sports.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773364
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:39:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a1f592198b1dcd303679f5bfa0bf3586e9a585e11f6c42023fbac850c9abffb5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: 'Right now, we're focused on being Starbucks': CEO addresses Chipotle merger rumors
+<<<SUMMARY>>>
+Starbucks (SBUX) CEO Brian Niccol joins Yahoo Finance Executive Editor Brian Sozzi at Yahoo Finance's 2026 Invest conference to discuss the company's turnaround strategy, address rumors about a Chipotle (CMG) merger, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802365
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:36:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83b5808cf8f19cd360a53a467bf1d1a14371970249afb75c71def6a11b876d90
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks CEO Brian Niccol focused on 'being Starbucks' but leaves door open for future restaurant acquisitions
+<<<SUMMARY>>>
+Starbucks CEO Brian Niccol doesn't rule out building a restaurant empire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773363
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:36:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e11b8b96849f5ae7587ac8026b88a25283ea550e8e5c839ba557a873d2a4f570
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks CEO Brian Niccol focused 'being Starbucks' but leaves door open for future restaurant acquisitions
+<<<SUMMARY>>>
+Starbucks CEO Brian Niccol doesn't rule out building a restaurant empire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773365
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:21:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2da87b006e4e757c875b7eb8008e29b5de32cb894cbe53b233778df67c707ec6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks wants to reinvent the drive-thru: CEO Brian Niccol explains how
+<<<SUMMARY>>>
+Starbucks (SBUX) CEO Brian Niccol joins Yahoo Finance Executive Editor Brian Sozzi at Yahoo Finance's 2026 Invest conference to discuss Starbucks' continued turnaround strategy, which includes menu innovations, reinventing the drive-through experience, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773366
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:13:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=373143e2809475c042954f4eaffd93b15b785862a486576bfe446a5b9107502a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks' plan to get the afternoon crowd? Protein and collagen.
+<<<SUMMARY>>>
+Starbucks moves closer to unlocking the afternoon crowd.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773367
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:07:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aeea0a52624c1bc9c5801e931b21dd4dd9c91a755fd3cf7a143c8468f5d961ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: 'You'll definitely glow': Starbucks CEO says collagen drinks are coming
+<<<SUMMARY>>>
+Starbucks (SBUX) CEO Brian Niccol joins Yahoo Finance Executive Editor Brian Sozzi at Yahoo Finance's 2026 Invest conference to discuss Starbucks' continued turnaround strategy, including the company's post-noon strategy, upcoming menu innovations, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770826
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f4a63106946dd9871967e2577d0d59c3610cccb00c72d457c38ab4c7c6b60ed2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: American Haiku Adds Moran, Dabre To Flex Creative Muscle
+<<<SUMMARY>>>
+The duo's portfolio will include Starbucks, New Balance and Tiffany & Co.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770046
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5513b428ab3fa0c38f65a74d4cb2799707fd6ffaa520a3ea8cfd6c91ee579c13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Can Dutch Bros' 250-Shop Plan Deliver Growth Despite Cannibalization?
+<<<SUMMARY>>>
+BROS plans to open 250 shops in 2027, banking on stronger market coverage and solid shop economics while navigating rising cannibalization risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769546
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e157fa36d60ee54e14d163f05843baaac311efec7c660d0ab9e30bc06e0cdda
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: McDonald's Stock Up 17% in a Month: Is the Rally Built to Last?
+<<<SUMMARY>>>
+MCD stock jumps 17% as U.S. recovery and growth initiatives boost optimism, but rising costs and execution risks threaten momentum.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767091
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:31:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5c977a9780e411d784c769de69fc4e5b5b15e7febc1e3351ea99eb1270d2d2c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks baristas start receiving bonus payments
+<<<SUMMARY>>>
+Nearly 80% of the chain’s eligible North American coffee shop workers are receiving the first quarterly reward payouts based on store performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767090
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:04:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ccb80637aafe3bba1654e7257e214f8f89aa1e964b62ba96d6db8f6d0af1122e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Select Starbucks baristas and managers to receive up to $300 in bonuses in push to boost sales
+<<<SUMMARY>>>
+A majority of Starbucks baristas and shift supervisors in North America received a bonus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767092
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:00:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89d6f25ef44484f9e067b3921ae23a966999ac2806dbb323990194b811e14912
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks is Putting More Money in Employees’ Pockets
+<<<SUMMARY>>>
+Starbucks is giving hundreds of thousands of employees a financial stake in its turnaround, rolling out stock grants, performance bonuses, and expanded tipping opportunities as its Back to Starbucks strategy gains traction. The coffee giant announced Thursday that nearly 200,000 full- and part-time employees worldwide received new Bean Stock grants on Wednesday. Another 130,000 employees […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769386
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=84c37186e29f3436fe6b2dfc2a24dbe5fa2548bb9b42cee8e31fe239d4b28378
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Tony Robbins: 4 rules the world's greatest investors follow
+<<<SUMMARY>>>
+Author, entrepreneur, and philanthropist Tony Robbins sits down with Yahoo Finance Executive Editor Brian Sozzi to break down the four things every elite investor does in common, and why you should run your money like a side business.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143749585
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T02:17:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6c19a31f596e9072e10b2e5e48fdd0effc6c03bcd845d1a4829497e73b5031ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Dutch Bros (BROS) Names Kira Druyan Chief Legal Officer As Expansion Continues
+<<<SUMMARY>>>
+Dutch Bros (NYSE:BROS) has appointed Kira Druyan as incoming Chief Legal Officer to lead its legal and compliance functions. Druyan previously held senior legal roles at Starbucks, bringing large scale coffee chain experience into the Dutch Bros executive team. The new hire comes as Dutch Bros continues its national expansion and rolls out major product launches across the United States. Dutch Bros' decision to hire Kira Druyan from Starbucks as Chief Legal Officer is only one part of the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748168
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=94a37e69f12222889e693b3bded639ac7966891a5f9a0587d106ebc89454a4b2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks' Bearista comeback sparks a surprising resale mystery
+<<<SUMMARY>>>
+The coffee giant’s new $40 mystery boxes are selling out, but overseas sellers are offering dozens of its rarest collectibles at unexpectedly low prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739270
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:10:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d980bc05c7ae13a7027958c8b23a6ff82853d78b6f16b12a6cefaacf264424f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Can Chipotle Stock Hit $54?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739271
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2d381c5d67d0d51874c943ac0132ed4877ee7f489f7ef7ba392f3a5c38faed6e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Can Chipotle's 1,700 Upgraded Kitchens Revive Traffic in 2027?
+<<<SUMMARY>>>
+CMG's 1,700-plus upgraded kitchens are lifting sales and speeding service. Can the broader rollout revive traffic in 2027 despite weak consumer demand?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738100
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:32:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a1779081653e181ceea334ff75e788225ccf634b6e6c5ba74d85453f97e054a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Veterans Day starts with free coffee and breakfast, if you time it right
+<<<SUMMARY>>>
+Denny’s serves a free Grand Slam until noon on Nov. 11 for veterans, while IHOP’s pancake deal runs into the evening. Starbucks extends its free coffee offer to military spouses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737012
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:08:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2bafdf06cb494bf3b69913ba8ed5b89daffe6cbc1a5ed46e9a8bb22967fad0b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Has Starbucks (SBUX) Run Too Far Ahead As Fresh 2027 Guidance Resets Valuation?
+<<<SUMMARY>>>
+Starbucks (SBUX) is back in focus after reporting fourth quarter and full year results on October 29, 2026, along with fresh 2027 guidance that points to slightly lower revenue as its China business shifts models. The fresh earnings and 2027 outlook arrived after a strong run in Starbucks shares. A 30.9% year to date share price return and a 21.2% one month share price gain point to building momentum as investors reassess both growth prospects and risks. Scan for other consumer stocks showing...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738101
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a63218c6f4631ee2587ac8ee064f3933880d10be4814b48b449efc2456cd7095
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Shake Shack Opened a Record 21 Stores in 3 Months — Here’s Their One Strict Rule for Growth That’s Paying Off
+<<<SUMMARY>>>
+CEO Rob Lynch says new Shacks aren’t cannibalizing each other, and Wall Street likes what it's hearing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734728
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:43:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a080178944dc0a2da69152fcd9d985dd2b0d1e46d13125bd712a33501c54dde6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Here’s where veterans can get free meals, deals on Veterans Day
+<<<SUMMARY>>>
+Veterans and active-duty military members can get free meals and restaurant discounts on November 11.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143728913
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T05:45:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1f1a43be2e801977b13b9e963bb216321ceb37e177fbe23b9a4a06d1ab91283c
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/458887889/image_458887889.jpg?io=getty-c-og
+category: company
+tickers: SBUX
+keywords: 
+headline: Wall Street Breakfast Podcast: Stocking Up On Costco Cash
+<<<SUMMARY>>>
+Costco has a $13.3B surprise for investors. CoreWeave just gave Wall Street more to like. 7 Brew serves Starbucks, Dutch Bros a fresh challenge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692760
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=edd3ec624482b529e835971f6fe77d89350c8fc39b5c35c4f3c67a65fc1c1be5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Can SBUX Deliver 18% EPS Growth Despite a 1% Revenue Decline in FY27?
+<<<SUMMARY>>>
+Starbucks targets 18% EPS growth in fiscal 2027 despite a 1% revenue decline, backed by margin expansion, cost savings and an additional fiscal week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737597
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:13:16Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=6a069201dc9a633ab9e47be44038b863dca6f02c052df11294276d8a554328eb
+image_url: https://image.cnbcfm.com/api/v1/image/108548619-17943519821794351980-49560430691-1080pnbcnews.jpg?v=1794351981&w=1920&h=1080
+category: company
+tickers: SBUX
+keywords: 
+headline: Final Trade: BCS, SBUX, GOOGL, CDW
+<<<SUMMARY>>>
+The final trades of the day with CNBC's Melissa Lee and the 'Fast Money' traders.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692797
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:55:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32331c09368281485b2c6aa67cd193dd470e46c2292203ab04dccb85e0f53b88
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Nike or Starbucks: Only One Gets My Dividend Dollars for the Next 10 Years
+<<<SUMMARY>>>
+Key TakeawaysNike yields 4. 3% after its stock fell on weak fiscal 2027 guidance, while Starbucks raised its quarterly dividend to $0.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690894
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8211c19fa1bd48144de361589f0a4393cf10fd60bc9fb5cadfe55a43120ba94f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: 3 Dividend Stocks to Buy in November and Hold Forever
+<<<SUMMARY>>>
+From the morning latte to the dinner rolls to the nightcap, these three consumer stocks own the holiday table, and each has a dividend date on the calendar right now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690452
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:31:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b416aa3bf2265ece14ed4a412406b67d79483c53ddf139bc753d124f9cc12b95
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: What Is Next For McDonald's Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690453
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d81f4c8d60ca3365dd28e3423c06248eb5609e14f79074c912f682e50a9ae851
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: McDonald’s new drinks take aim at your Starbucks order
+<<<SUMMARY>>>
+The fast-food chain wants to take business from Starbucks, but that’s only part of its plan.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659986
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T19:04:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=25c9253d10324a3030a24e4f7901ce3e82d31cb5677d19c4a976357a4177f017
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks Stocks Rise 3.74% as Stifel Resumes With Buy, $115 Target
+<<<SUMMARY>>>
+Stifel says the turnaround is becoming self-funding, projecting 4% global same-store sales growth in fiscal 2027
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659947
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T18:03:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a69edb33d2d2ed79c6dc000d57ab4cbe4afdf2d8933e984e1ae75e395662aca4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: MCD Stock Outlook: Wall Street Eyes a Potential Upside Breakout After Q3 Results
+<<<SUMMARY>>>
+McDonald's stock bounced hard after earnings, yet U.S. guest counts are still sliding and revenue missed again. One variable could decide whether the rally runs or stalls, and it starts with a cheap bundle being tested in 1,900 restaurants.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658821
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:47:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3e920273825c314f7e1903c196f8549003882cc79b7fb92f4fa50f53c231849b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks rises as Stifel resumes coverage with Buy rating and $115 target
+<<<SUMMARY>>>
+Investing.com -- Starbucks Corporation (NASDAQ:SBUX) shares rose 3.8% in Monday trading after Stifel resumed coverage with a Buy rating and a $115 price target. The positive reaction reflects growing market confidence that the coffeehouse chain is establishing durable operating traction under its ongoing turnaround strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658822
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:47:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15257bf6bebcb60fab6440b24442becd2f468ac056c2c36024dc42b53e3ac27d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks Yields 3 Times as Much as Wingstop. Which Is Better for Retirement?
+<<<SUMMARY>>>
+One restaurant stock grows units at a blistering pace and has rewarded shareholders tenfold, while the other quietly hands out bigger checks year after year. For retirees who need dependable income, the flashier story may not be the safer bet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662616
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=266c6ea3ce4448cb5bd6dd0a5d6f1a85841b200ae199f1037d11916c9b0e75ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Jim Cramer is ‘furious’ as Intel crashes nearly 30% — but Uncle Sam is the top shareholder. What it means for taxpayers
+<<<SUMMARY>>>
+Major investors like Jim Cramer aren’t the only ones feeling the pain after a disappointing Q3 report. Every American has some Intel exposure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652475
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:06:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=66e6708530d400edf3cbca9109c0ee60dfecebe4a1c8d9825f9e9400b5dbe51c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: What Capital Group Core Equity ETF (CGUS) Bought: Corning Leads on Nov. 5
+<<<SUMMARY>>>
+The fund bought $48.0 million of Corning and $15.0 million of Starbucks while selling $46.1 million of Apple.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652355
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14338b50d14da120f2c3f79ad1a6893df3bb15ea7994c4af8e061bd099a0fabe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: The business mistake McDonald's and Chipotle keep making: Robert Irvine
+<<<SUMMARY>>>
+World-class chef and entrepreneur, Robert Irvine explains to Yahoo Finance Executive Editor Brian Sozzi how he helped push through the legislative change that's replacing 50-year-old Army mess halls with campus-style dining
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642726
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T21:07:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e29f95904ef600207e861f089e851292c4d0e449228060f5ccb54f3c9c13e205
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: McDonald’s Just Became a Dividend King. Is It Still a Buy for Retirement?
+<<<SUMMARY>>>
+Fifty years of dividend hikes sound bulletproof, but McDonald's U.S. traffic is sliding while debt costs climb. The cash coverage numbers and one balance sheet cushion reveal how much room retirees really have.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640983
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T15:46:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=784e59c666e632d70151c27da6c69b8f65034530a55342ab5b3b43308d903ba5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks Is Up 28% in 2026 After a 7.2% Comp Quarter: Take Profits, or Buy More?
+<<<SUMMARY>>>
+Key TakeawaysStarbucks posted fiscal fourth-quarter adjusted EPS of $0. 80, beating the $0.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639029
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T09:31:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a8aff5fcb183a2341dd552a1c1e78e515ee89f0cec1117981f9366f1049eaa7a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Jim Cramer: Starbucks Stock “Goes to 125” After a 54% Earnings Jump
+<<<SUMMARY>>>
+Key TakeawaysStarbucks’ adjusted EPS jumped 54% to $0. 80 in its fiscal fourth quarter, and Jim Cramer said on Mad Money that he thinks the stock “goes to 125,” 19% above Friday’s close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143637114
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T09:12:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3fc8b84c4a58a7f974d6d2d6f0aec5fbde865cf83231207e793943e6162dfda
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks (SBUX) Stock Looks Rich With A 32% Cash Flow Gap
+<<<SUMMARY>>>
+Starbucks has delivered a solid share price run, and that puts fresh attention on whether the current market value lines up with the cash the business can generate over time. With investors weighing expansion plans and evolving store economics, the key issue is what the recent price strength implies for the underlying cash flows. Starbucks has returned 26.3% over the past year, which raises the question of whether the recent gain already reflects the cash that the company is expected to...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640364
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a00f26dc83e55267df6c18123ead92a3ba804021afb62ce2db40d7d2a731db5b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Dutch Bros Gave Wall Street What It Wanted, So Why Did the Stock Crater?
+<<<SUMMARY>>>
+Dutch Bros beat Q3 EPS and revenue estimates, but shares fell 21% as slowing customer traffic growth raised concerns about the sustainability of its aggressive store expansion plans.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143639586
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8374a8eaf2e3855e96c32ee45b20424a417901caa56175b2cab23ffb8ce68d1f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: MarketBeat Week in Review – 11/2 - 11/6
+<<<SUMMARY>>>
+Market volatility persists on data center regulation concerns and rate expectations, as MarketBeat writers analyze earnings from AbbVie, Apple, Amazon, Palantir, Meta, Cameco, and other companies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143613910
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T08:15:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=615eab4e360161422560f22826b284e731ae6e2161cd1a049d4ad20db68991c6
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1220422950/image_1220422950.jpg?io=getty-c-w1536
+category: company
+tickers: SBUX
+keywords: 
+headline: Simon Property Group: Strong Execution, But Wait For A Better Entry
+<<<SUMMARY>>>
+Simon Property earned a Hold rating after strong gains, rising FFO, and dividend growth, and see what valuation means now. Click for a SPG stock update.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947131
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:17:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6d30ae8949f76c90b51c064d4821732bba53346d2ffed7312a07edc0d9465c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks Has Raised Its Dividend 16 Straight Years. These 3 Restaurant Stocks Keep Paying
+<<<SUMMARY>>>
+One chain cut its payout in 2020, another pays out nearly all its earnings, and a third has cash waiting to deploy. Before chasing yields near 2%, see which restaurant dividend holds up when sales stumble.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143948241
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:02:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d2e35b65c7ae4f6b0117975a48511dc0dcda6b7740441d8b8c12b3ee157ee57
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks apparently sold a lot of holiday drinks on Tuesday
+<<<SUMMARY>>>
+The coffee shop giant generated record sales on Nov. 5 with the launch of its new holiday menu, the latest in a string of strong seasonal menu debuts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944539
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3124117b2adabed43813c4df53b2e6c6d211141d1844114b771588e0f8d41178
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Can BROS' DoorDash Pilot Unlock Growth Beyond the Drive-Thru?
+<<<SUMMARY>>>
+Dutch Bros is testing DoorDash delivery to expand beyond drive-thrus, tap customer demand and unlock new sales opportunities amid growing digital adoption.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942998
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:58:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=403210d497bfae3c4a05a26ac892e87437dfe6718be9838498f2ab43e4a61968
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: What Is The One Risk Every Starbucks Investor Should Know?
+<<<SUMMARY>>>
+Today’s big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942997
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6fe32d6561d02af2cfb81807b787ba9cc41c251a4bb7b6d725dcd335faac987c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Zappi Research Finds the Fast Food Value War Is Buying Visits, Not Hearts, as Challengers Win Over Younger Consumers in QSR and Coffee
+<<<SUMMARY>>>
+Zappi, the leading consumer insights platform helping global brands win with consumers, today released Who Owns the QSR and Coffee Market?, a study of 10,000 U.S. and U.K. consumers that maps which fast food and coffee brands people think of, and for which moments. The headline for fast food: the value war is buying visits, not hearts. McDonald's dominates the cheap meal, while dinner, family meals and treat moments have no clear owner. In coffee, Starbucks and Dunkin' hold 48% of U.S. Mental Ma
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918734
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:05:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dbcbde904a1d724d71204cd23d45196c38ad373f7bd2cce52c92c08eee719ce9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Monster Beverage vs. Starbucks: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Monster's Coca-Cola-backed distribution clashes with Starbucks' 41,000-store empire, and their debt profiles could not be more different.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944587
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bb63a7920dfe73ba3d92bd7a2c5ee4bf76b4f0c9fdf7077778b0b8142189ee71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: 5 Consumer Discretionary Plays Showing Strength During the Tech Sell-Off
+<<<SUMMARY>>>
+As semiconductors sell off and NVIDIA sees a leadership shake-up, the XLY consumer discretionary ETF has gained ground, with Amazon, Starbucks, Royal Caribbean, and Hilton showing notable strength.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917572
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:38:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=662dd143899f7b79ca2f769e39e2b385ae7ac426ec4a66012486b5d582c343f7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks inventory availability at ‘all-time high’ with daily deliveries, CEO says
+<<<SUMMARY>>>
+The coffeehouse chain has been testing a 24-hour operating model to improve inventory availability and build an overall faster, more reliable supply chain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917573
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a64c00d78856c7c2ac5c238697a9852cdf370ce0e2545e0e15ca5c0691bd7e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Smoothie King’s Sales Momentum Builds with 8.7 Percent Growth in Q3
+<<<SUMMARY>>>
+Smoothie King, whose vision is to make the world a better place by nourishing healthy habits, delivered strong Q3 sales growth and increased guest visits, outperforming several leading restaurant brands as consumers increasingly prioritize health, wellness and nutrition. Same-store sales grew 9% in July and climbed to 11.6% in August. For the third quarter overall, […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143912690
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:38:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5baf4e4cc05d04a20470d13045916100c642e885db002ae4b428ba37beb702d7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Why Huang's Exit May Not Sink Nvidia Stock
+<<<SUMMARY>>>
+Nvidia has lost the only CEO it ever had. Jensen Huang co-founded the company in 1993 and ran it until he resigned. Nvidia announced the change on Thursday, Nov 12, before the market opened. Its chief financial officer, Colette Kress, became interim CEO. On Tuesday, Nov 17, the board's chair said the board does not intend to bring Huang back.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911183
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9f4852cfbafa37e0c7cefd352b1af8f22d68200c9078b055aa8c7a2dce3f5e13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: SMOOTHIE KING DELIVERS 8.7% Q3 SAME-STORE SALES GROWTH, OUTPACING STARBUCKS, CHIPOTLE AND CAVA AS DEMAND FOR HEALTH AND WELLNESS KEEPS GROWING
+<<<SUMMARY>>>
+Smoothie King, whose vision is to make the world a better place by nourishing healthy habits, delivered strong Q3 sales growth and increased guest visits, outperforming several leading restaurant brands as consumers increasingly prioritize health, wellness and nutrition.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143909434
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T09:17:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=42e46b69495ec367c93bca5656eeb187997b63f030f82597b80635ba8b4fe916
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: How Investors Are Reacting To Starbucks (SBUX) Red Cup Day Launch
+<<<SUMMARY>>>
+Starbucks held its annual Red Cup Day promotion on November 17, 2026, giving customers a free reusable cup with qualifying holiday or fall drinks and aiming to lift store visits across mobile, drive-thru, and in-store channels. The giveaway coincides with momentum from Starbucks' Back to Starbucks turnaround plan, where refreshed stores, labor investments, and margin-focused execution are central to holiday-season performance. We will look at how Starbucks' investment narrative intersects...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143905971
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T07:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed250974985aa8115b20a28bc4b2745a11c11783853021a926fd4a1abee8644b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Delek US Holdings and Winnebago have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Delek US Holdings and Winnebago have been highlighted as Zacks Bull and Bear of the Day
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884324
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:01:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44b159c95c79c17f1559f6ac5a7a6487dcbe0aa98f1d619e51c85e606493a33d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Does Coca-Cola Stock Fit Your Portfolio Risk?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882773
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:38:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c838c38a7f21725707be3c675a82df8a97d2ffb4f84dba2f77ec7db0268f7507
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: What Threatens Keurig Dr Pepper Stock Most?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881160
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4385672b84ac9ed4ca5be6b9edc5548ee4dc9e0b6b7ef1120a38f582d915aee4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Launching ZenaStudios, Ushering in a New Era of Drone-Powered Storytelling and Branding
+<<<SUMMARY>>>
+New entertainment division debuts with digital series The Money System: Crossing the Street and upcoming feature film The Money System: Weight of EvidenceLOS ANGELES, Nov. 17, 2026 (GLOBE NEWSWIRE) -- ZenaStudios, a new entertainment division of ZenaTech, Inc., a global AI drone manufacturer and drone services provider, announced its launch to produce original film, streaming, and digital content. The division will develop and retain ownership of its original IP while putting ZenaTech’s autonomo
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881045
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ad35be4cf263a1413b236fa2645b922e449d3769addff889088b97a5ad1c7182
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks' AI-Powered Drive-Thru: Can Technology Improve Efficiency?
+<<<SUMMARY>>>
+SBUX is testing AI-powered drive-thru technology to improve order accuracy, speed service and boost efficiency as part of its broader modernization strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881158
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a77541b8d4ebab29fcd6b5a14869ace8a95bdb12ce3f68415d8782a463a14769
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Here is What to Know Beyond Why Starbucks Corporation (SBUX) is a Trending Stock
+<<<SUMMARY>>>
+Zacks.com users have recently been watching Starbucks (SBUX) quite a bit. Thus, it is worth knowing the facts that could determine the stock's prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878141
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:19:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=991d2bc21d86a10d5d32722748efa0fca83027605daa5997aaa0c327f45a4fa0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Has McDonald's Stock Become A Different Bet?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878760
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff16ad8d9c573d27089dcdf0b646293298cf82b32e54a86f3301938f67c2f4f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: What Is The True Hidden Price Of Starbucks Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877372
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T08:01:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=524debcaa2bedaac53c45bfb558865b98ad1c7194a1c63d0b203303688514240
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1447863208/image_1447863208.jpg?io=getty-c-og
+category: company
+tickers: SBUX
+keywords: 
+headline: Wall Street Breakfast Podcast: Happy Red Cup Day!
+<<<SUMMARY>>>
+Starbucks kicks off the holiday season with annual Red Cup Day. Nvidia's board reportedly rules out a return for Jensen Huang. Kalshi prepares to launch stock trading
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857702
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T03:10:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=17f2dc57e45664d30c807b1dd44b1cf8c574e41a41a98ce047bb1ea3e914ccb8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks brings back a popular freebie for one day only
+<<<SUMMARY>>>
+Starbucks Red Cup Day returns Nov. 17 with free reusable cups for customers who buy qualifying holiday drinks. Here’s how to get one.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143865660
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T01:28:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=51f152853efc5e9c3dc2bce065bea28c262b1f1764d1342afa8065d3dadcd8a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: “How Does It Close the Gap?” Starbucks’ 2027 Plans Cost $5.8 Billion Against $5.0 Billion of Cash Flow
+<<<SUMMARY>>>
+Key TakeawaysStarbucks’ fiscal 2027 dividend, a buyback of about $1 billion and capital spending of about 5% of revenue add up to about $5. 8 billion, against $5.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850810
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T22:25:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4209ec8c07938a6c9eb16f526c21c56393b71d4988330cb772b9f5390bcafc03
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Is It Too Early To Buy Dutch Bros Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857703
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T21:49:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=99f035ef49add64b80808b9696b366b537c93311bfbb3c4997d7ba8ccc110ab7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Dear Starbucks Stock Fans, Mark Your Calendars for November 17
+<<<SUMMARY>>>
+Starbucks’ Nov. 17 Red Cup Day could drive a meaningful holiday traffic boost, and can translate into stronger sales during the crucial holiday season.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850088
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T19:11:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dc2208e230d05662b12e205bb097d39ae563cc4855fb9bab4036495f8e4f6e14
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Tyson, Starbucks Lead The S&P 500, Nasdaq 100 As Investors Play Defense
+<<<SUMMARY>>>
+The AI sell-off steepened on Monday. Defensive stocks made strides amid rotation out of tech. Starbucks jumped on the Nasdaq-100.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850106
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T17:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d26946ea0f18d6c7b3d3ce1d1cb2ef3f9a93640c62776a6fbae8795bb7c123be
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks sees service and food innovation driving sales growth, says Bank of America
+<<<SUMMARY>>>
+Starbucks Corp (NASDAQ:SBUX, XETRA:SRB) is counting on improvements in customer service, menu innovation and food sales to sustain comparable-store growth and restore profitability, as the coffee chain shifts its focus from restructuring towards expansion, according to Bank of America...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849686
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T15:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ad24bfb50ff740a403c37c26fce684fa28cb0ead54f6d6107441b2462267fbd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Can MCD Protect Margins Amid Mid-Single-Digit Food Inflation in 2027?
+<<<SUMMARY>>>
+McDonald's is pursuing selective pricing, expanded value offerings and operating efficiencies as it prepares for elevated food inflation in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143844242
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T08:08:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a36147361480274e2f9a84c4310dd538ad6b10211e974d574e1c696b1fd0959
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: What Could Stop Chipotle Stock Over The Next Six Months?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841879
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T03:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c3636285e8e2ebde36df13211feee6ddb4bb6f475f98801e796426dc61945b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Steve Jobs Went Back to Apple in 1997 and $10,000 Became $18.6 Million. Jensen Huang May Be Next
+<<<SUMMARY>>>
+Jensen Huang has discussed returning to Nvidia, the Financial Times reported Sunday. Five leaders came back before him. When Steve Jobs went back to Apple in 1997, $10,000 became $18.6 million; when Bob Iger went back to Disney, it trailed the S&P 500.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807343
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T18:50:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c5baa0dcd93277d1959d9d3ccfaea2b881bf6e0b32516dd94266dd73522d7e85
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: 1 Reason Starbucks Is Worth Buying in November
+<<<SUMMARY>>>
+Starbucks' customers are spending more per visit without big price hikes -- and that could matter more than the stock's premium valuation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840182
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T14:30:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d428e2bc7e1af3b4d21fea043b24f944752e0b149ad1eac958decbc95e999419
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/14/Jensen-Huang--Nvidia-Founder-And-Ceo-And.jpg?width=2048&height=1536
+category: company
+tickers: SBUX
+keywords: 
+headline: What Is Next for Jensen Huang? His Top Options After Leaving Nvidia
+<<<SUMMARY>>>
+Explore the top options for Jensen Huang after he left Nvidia after admitting to affairs, including with an alleged Chinese spy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805732
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T00:24:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ceb540e7a346960f47f4b9741307608b36ccdf661e3d56650832ef2ead0920e5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks (SBUX) Unveils Global Stock Grants As Brian Niccol Maps Drive Thru Reset
+<<<SUMMARY>>>
+Starbucks (NasdaqGS:SBUX) announced new global employee compensation programs on 13 November 2026, including stock grants and quarterly bonuses. CEO Brian Niccol outlined a turnaround strategy that focuses on fresh menu concepts and a comprehensive reinvention of the drive thru format. The refreshed drive thru model is planned as a global template for future store development and operational changes across key markets. The mix of global stock awards and the drive thru overhaul only captures...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805377
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:56:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=71cd2feeed6c07316bd3698d67b308bff23af19a8d20671782fd204f25233b0b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Lutnick Under Fire as Bessent Blames Commerce for Nvidia Crisis
+<<<SUMMARY>>>
+Denver Riggleman, CEO of RIIG Technology, said that it is 'mind boggling' that anyone would defend Jensen Huang's actions as he faces the personal, political and legal fallout from his affair with an alleged Chinese spy. Riggleman, who served in Congress as a representative from Virginia, said that lawmakers who want to get real answers from both Jensen Huang and Commerce Secretary Howard Lutnick should call on intelligence experts to advise them on their line of questioning.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804945
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bbd0fdd3e7ccc0a7c83d2ad3be3e60cb44f2d8a07a77d74d5305c9968959ddfb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Chipotle Bought Back Stock at $34.05 a Share Last Quarter. Is It Still a Buy Today?
+<<<SUMMARY>>>
+The fast-casual restaurant chain's business is gradually stabilizing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805733
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T18:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae31b28995e062f50a75ec94c9aa0dcafe6d639512229c404f2e157cc88533a3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks’ Unusual Options Activity Points to Bullish Institutional Sentiment: Should You Follow the Crowd?
+<<<SUMMARY>>>
+Massive institutional options activity surged in Starbucks (SBUX) on Thursday. A $96.3 million block trade used deep in-the-money calls for a short-term stock-replacement strategy. At the same time, LEAPS are used more often; the institution that made the bet could profit nicely.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804091
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:45:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=428010e5a39cf3bc7c0f98affc06410278e7a13608aba3b33778a1ae0df7e669
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks CEO Brian Niccol explains how he plans to create an 'afternoon ritual'
+<<<SUMMARY>>>
+Starbucks (SBUX) CEO Brian Niccol joins Yahoo Finance Executive Editor Brian Sozzi at Yahoo Finance's 2026 Invest conference to discuss Starbucks' continued turnaround strategy, upcoming menu innovations, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804660
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=03fe83f1a1a0ec275e724c3e733b29b741cdb1367a21bc97b104047d37691066
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Should You Buy, Sell or Hold Starbucks Stock Post Q4 Earnings?
+<<<SUMMARY>>>
+SBUX's Q4 earnings beat, stronger comparable sales and cost savings fuel its turnaround, but revenue headwinds and rising competition call for caution.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801776
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7d9602531d1b5d80aa231114ed1f04b7040addc0c911970e8aaa958774c8ad1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Loyalty members seek rewards of all sizes
+<<<SUMMARY>>>
+Rewards that don’t feel valuable or are too hard to earn are loyalty programs’ biggest shortcomings, an Arrivia survey found.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801668
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:43:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef846261c2d868e5434c2c85c12a58f7f25f68fef91811a7e1a4289b05df83af
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks gives 80% of baristas a bonus with a catch
+<<<SUMMARY>>>
+The coffee chain is rewarding employees based on store sales, operations and customer service performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143992789
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T18:05:39Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=51b035f7ba892cdbd157c33ca3861b29438f99a471354008330c6555df2b6be9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-og
+category: company
+tickers: SBUX
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week Of November 22
+<<<SUMMARY>>>
+A weekly summary of dividend activity for Dividend Champions, Contenders, and Challengers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143989854
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:33:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=39a0b35f5baee07ce9648104ab9f6a9d79e9422012db8ef1e44495530b2b83b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Chipotle Stock Looks Cheaper On 2027 Profit, If Sales Deliver
+<<<SUMMARY>>>
+Today’s big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988564
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=acd2959ffcc696668ea6370dfd352fc0d88cca9338968a34725f121a64d5b1f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Dutch Bros vs. Starbucks: Which Coffee Stock Has Stronger Prospects?
+<<<SUMMARY>>>
+Can BROS' rapid expansion and beverage innovation outshine SBUX's ongoing recovery and stronger earnings momentum in the battle for coffee market growth?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988565
+symbol: SBUX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T10:10:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fbd77233e0c5f85daa8d86df8e2079ac41936a534686ef65858c55b7df003f10
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: SBUX
+keywords: 
+headline: Starbucks Is Up 16% Since September as Holiday Merch Becomes “a Cultural Phenomenon”
+<<<SUMMARY>>>
+Key TakeawaysStarbucks says its November 5 holiday launch was its highest U. S.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ea092b42279348f6ecbc6d0d51af33427c4cc35f7590eda396ef2876ccb41a6e
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-07T12:37:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/07/chewy-vs-target-which-retailer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F2c43bf5d791b028eb54cd9bd1b9d0cd627404173-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: CHWY, TGT, AMZN, AAPL, SBUX, ULTA, WOOF
+keywords: retail stocks, Autoship subscription model, pet e-commerce, brick-and-mortar retail, valuation comparison, 2027 outlook, consumer spending
+headline: Chewy vs. Target: Which Retailer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Chewy and Target as investment options for 2027. Chewy, a digital-first pet retailer with 21 million Autoship subscribers, projects 7% sales growth and 40% net income growth. Target, a broad-line retailer, expects 6% sales growth with significantly improved profitability. While both have identical P/S ratios, Target offers better value on a P/E basis at 16.44x versus Chewy's 34.50x, making it the recommended choice for value-focused investors.
+<<<INSIGHTS>>>
+CHWY | positive | Strong growth trajectory with 7% projected sales growth and 40% net income growth for 2027. Expanding into veterinary services and pet healthcare with Modern Animal acquisition. Loyal customer base through Autoship program with 21 million active subscribers. However, faces valuation concerns with high P/E ratio of 34.50x.
+TGT | positive | Recommended as the better buy for 2027 due to attractive valuation (P/E of 16.44x, near S&P 500 average). Multi-year turnaround strategy showing positive results. Expected net income improvement from $3.7B to $4.7B by 2027. Strong market position with strategic brand partnerships and omnichannel capabilities. Risks include consumer spending pressures from elevated gas prices.
+AMZN | neutral | Mentioned as a competitive threat to Chewy in online retail, but no specific analysis provided regarding its investment merit.
+AAPL | neutral | Mentioned as a strategic brand partner for Target's in-store experience, but not evaluated as an investment option.
+SBUX | neutral | Mentioned as a strategic brand partnership within Target stores, but not evaluated as an investment option.
+ULTA | neutral | Mentioned as a strategic brand partnership within Target stores, but not evaluated as an investment option.
+WOOF | neutral | Mentioned as a brick-and-mortar competitor to Chewy in the pet retail space, but not evaluated as an investment option.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bc1172c4de4c38d71acf12b07cb6800e9e14318e6d71838f492f1652412a659f
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T10:10:00Z
+publisher: The Motley Fool
+author: Geoffrey Seiler
+url: https://www.fool.com/investing/2026/11/08/is-dutch-bros-stock-a-buy-as-shares-plunge/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893645%2Fbros.png&w=1200&op=resize
+category: 
+tickers: BROS, SBUX
+keywords: Dutch Bros, stock valuation, same-store sales growth, expansion strategy, coffee shop operator, comparable-store sales, earnings report, consumer discretionary
+headline: Is Dutch Bros Stock a Buy as Shares Plunge?
+<<<SUMMARY>>>
+Dutch Bros stock has plummeted over 40% this year as investors worry about slowing same-store sales growth and increased competition. However, the author argues the stock is now a bargain, highlighting the company's strong expansion potential (planning 250 new locations in 2027), solid Q3 comparable-store sales growth of 4.4%, and attractive valuation at 1.9x forward P/S ratio compared to Starbucks' 3.2x multiple. The author recommends buying Dutch Bros on this dip.
+<<<INSIGHTS>>>
+BROS | positive | Despite recent stock decline, the author views this as a buying opportunity. The company maintains solid fundamentals with 4.4% comparable-store sales growth, ambitious expansion plans (250 new locations in 2027), efficient unit economics (AUV >$2.2M), and attractive valuation (1.9x P/S) relative to growth potential. The sell-off is attributed to temporary consumer headwinds rather than fundamental business deterioration.
+SBUX | neutral | Mentioned as a valuation comparison point. Starbucks trades at a higher 3.2x forward P/S multiple, but the article uses this to highlight Dutch Bros' relative discount given its superior growth runway, rather than making a direct investment recommendation about Starbucks.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c75026b4c91ebc602fafa705ebf34164cc478f4342636e1e774e38695e72b27c
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T04:25:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/09/cava-vs-chipotle-mexican-grill-which-stock-is-a-better-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F9a27cb2a1e29cf849f4a8b605a9c2c4f4d655fa5-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: CAVA, CMG, MCD, SBUX
+keywords: fast-casual restaurants, Mediterranean cuisine, revenue growth, valuation multiples, net income, expansion strategy, investor risk profile
+headline: Cava vs. Chipotle Mexican Grill: Which Stock Is a Better Buy?
+<<<SUMMARY>>>
+The article compares two fast-casual restaurant stocks: Cava Group, a rapidly expanding Mediterranean-focused chain with 22.4% revenue growth but high valuation multiples, and Chipotle Mexican Grill, an established market leader with $1.5 billion in net income, steady 5.4% growth, and lower valuations. The author recommends Chipotle for conservative investors seeking stability and proven profitability, while Cava suits aggressive investors with longer time horizons willing to tolerate volatility for growth potential.
+<<<INSIGHTS>>>
+CAVA | positive | Strong double-digit revenue growth (22.4%), expanding restaurant network, vertically-integrated supply chain, and grocery store presence demonstrate solid expansion trajectory. However, high valuation multiples (78.3x forward P/E) and recent stock volatility indicate premium pricing for growth potential.
+CMG | positive | Established market dominance with $1.5 billion net income, strong 12.9% net margin, efficient operations, and lower valuation multiples (26.2x forward P/E) make it attractive. Continued growth plans to 7,000 North American locations and proven profitability support recommendation as the safer choice.
+MCD | neutral | Mentioned as a competitive threat to Chipotle's expansion efforts, but no specific analysis provided regarding its performance or investment merit.
+SBUX | neutral | Mentioned as a competitive incumbent in the fast-casual space, but no detailed analysis or investment recommendation provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:98e47f7ec22aac926a1df29af3e3e6d2464dc902d92c2c49392fbd91e509899b
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:26:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027423/can-sbux-deliver-18-eps-growth-despite-a-1-revenue-decline-in-fy27?cid=CS-ZC-FT-analyst_blog|quick_take-3027423
+image_url: https://staticx-tuner.zacks.com/images/articles/main/05/563.jpg
+category: 
+tickers: SBUX, BROS, MCD
+keywords: EPS growth, revenue decline, China deconsolidation, operating margin expansion, North America comparable sales, Back to Starbucks strategy, cost savings, 53rd week
+headline: Can SBUX Deliver 18% EPS Growth Despite a 1% Revenue Decline in FY27?
+<<<SUMMARY>>>
+Starbucks projects fiscal 2027 EPS growth of 18% at the midpoint ($3.15-$3.25) despite a 1% consolidated revenue decline, driven by China's deconsolidation to a licensed joint venture and operating margin expansion of ~190 basis points. North America comparable sales are expected to grow 4% YoY, with a 53rd week adding $700M in revenues and over 10 cents to EPS. The company's Back to Starbucks strategy and cost savings initiatives are expected to support margin improvement.
+<<<INSIGHTS>>>
+SBUX | positive | Strong EPS growth of 18% projected despite revenue headwinds, supported by margin expansion, North America comp sales growth of 4%, and cost savings realization. Stock has outperformed industry by 26.1% over the past year. Zacks Rank #3 (Hold) with recent consensus estimate increases.
+BROS | neutral | Mentioned as industry peer with 35.7% stock decline over past year and projected 31% earnings growth in 2027, but no direct analysis or comparison to Starbucks' strategy provided.
+MCD | neutral | Referenced as industry peer with 8.6% stock decline over past year and projected 5.5% earnings growth in 2027, but no direct analysis provided. Included only for comparative valuation context.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e19d1a1db4de4cfb34fdfea3194bb72441a853d8ab1d7ac658bca2bbb27bf80b
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T02:30:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/11/3400420/0/en/coffee-market-in-the-us-to-cross-usd-32-bn-by-2032-fueled-by-rising-demand-for-specialty-coffee-and-premiumization-reports-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: SBUX, SJM, NSRGY, KDP
+keywords: US coffee market, specialty coffee, premiumization, packaged coffee, app-based ordering, functional coffee, market growth, CAGR
+headline: Coffee Market in the US to Cross USD 32 Bn by 2032 Fueled by Rising Demand for Specialty Coffee and Premiumization, Reports Mordor Intelligence
+<<<SUMMARY>>>
+The US coffee market is projected to grow from USD 24.98 billion in 2026 to USD 32.23 billion by 2032, with a CAGR of 4.32%. Specialty coffee is the fastest-growing segment at 6.78% CAGR, driven by premiumization and functional coffee options. Market growth is supported by packaged coffee affordability, specialty adoption, app-based ordering, and premium prepared-coffee occasions.
+<<<INSIGHTS>>>
+SBUX | positive | Starbucks benefits from the growing specialty coffee segment and app-based ordering trends, which are identified as key growth drivers. The company's strong position in premium and prepared-coffee occasions aligns well with market expansion.
+SJM | positive | As a major packaged coffee supplier, J.M. Smucker is positioned to benefit from the overall market growth and the emphasis on packaged retail formats, which remain central to US coffee spending.
+NSRGY | positive | Nestlé's diverse coffee portfolio across packaged and specialty segments positions it well to capture growth across both conventional and premium coffee occasions in the expanding market.
+KDP | positive | Keurig's dominance in single-serve coffee pods and capsules aligns with the market's growth trajectory, particularly in convenient packaged formats that remain central to US coffee consumption.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:da4e185b281b2fa7501a287fb05e07f2647174bfb791b8982038136971ebf4e4
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T17:15:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027988/can-chipotle-s-1-700-upgraded-kitchens-revive-traffic-in-2027?cid=CS-ZC-FT-analyst_blog|quick_take-3027988
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b7/464.jpg
+category: 
+tickers: CMG, SBUX, MCD
+keywords: restaurant modernization, kitchen equipment upgrades, comparable sales growth, throughput improvement, consumer demand, quick-service restaurants
+headline: Can Chipotle's 1,700 Upgraded Kitchens Revive Traffic in 2027?
+<<<SUMMARY>>>
+Chipotle's High-Efficiency Equipment Package (HEEP) installed in 1,700+ restaurants is delivering measurable comparable-sales uplift of a couple hundred basis points and improved throughput. The company targets 2,000 upgrades by end of 2026, with potential to support traffic growth through 2028. However, weak consumer demand remains a headwind, with Q3 2026 comparable sales up only 2.1% and transaction growth at just 0.8%. Starbucks and McDonald's are similarly investing in restaurant modernization to compete.
+<<<INSIGHTS>>>
+CMG | positive | HEEP installations are delivering measurable sales uplift and improved operational metrics. The company has a clear expansion roadmap with 2,000 upgrades by end of 2026, and only half of current installations have matured, suggesting significant incremental upside potential through 2028.
+SBUX | positive | Completed 1,700+ coffeehouse uplifts in fiscal 2026 with demonstrated transaction gains across dayparts. Plans 2,000+ additional uplifts in fiscal 2027 with refined technology systems, positioning the company to improve customer experience and drive traffic.
+MCD | positive | Advancing McDonald's NEXT modernization strategy with plans to remodel hundreds of U.S. restaurants in 2027 and exceed 5,000 annual remodels globally by 2028. ArchIQ smart-ordering system deployment expected to reach majority of U.S. restaurants by end of 2027, improving operational efficiency and customer experience.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:24ade090f2cc86aa45f9358c9e5a71190e10c339ee7381022c9b2a03b801d160
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T19:30:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/11/booking-holdings-vs-target-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd67b72f311c0049bc5fb042a933765d112c5acb9-2000x1200.jpg&w=1200&op=resize
+category: 
+tickers: BKNG, PCLN, TGT, GOOG, GOOGL, GOOGM, GOOGN, AAPL, SBUX, ULTA, CVS
+keywords: online travel, retail, consumer stocks, valuation, margins, revenue growth, free cash flow, merchant model, brand partnerships
+headline: Booking Holdings vs. Target: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Booking Holdings and Target as consumer stocks for 2027 investment. Booking operates a high-margin digital travel platform with 97.38% gross margins, 13.4% revenue growth, and strong free cash flow of $9.1 billion. Target is a traditional retailer with 1,995 stores, lower margins at 3.5%, but strategic brand partnerships and an expected 6% sales growth. The analyst recommends Booking as the better buy, citing its cheaper forward P/E ratio (15.2x vs 15.8x), shift to a merchant model for higher margins, and strong financial position with $16 billion in cash.
+<<<INSIGHTS>>>
+BKNG | positive | Strong financial metrics including 97.38% gross margins, 13.4% revenue growth, $9.1B free cash flow, $16B cash position, and successful shift to merchant model. Trading at lower forward P/E (15.2x) with 2-thirds organic traffic to Booking.com. Analyst explicitly recommends buying this stock.
+PCLN | positive | Strong financial metrics including 97.38% gross margins, 13.4% revenue growth, $9.1B free cash flow, $16B cash position, and successful shift to merchant model. Trading at lower forward P/E (15.2x) with 2-thirds organic traffic to Booking.com. Analyst explicitly recommends buying this stock.
+TGT | neutral | Mixed outlook with positive turnaround strategy and expected 6% sales growth to $110B+ by 2027, but concerns about elevated gas prices impacting consumer spending. Lower margins (3.5%) and higher operational complexity. Analyst views it as having potential but prefers Booking at current valuations.
+GOOG | neutral | Mentioned as a key dependency for Booking's traffic through search platforms, though Booking is reducing reliance on paid search with 2-thirds organic traffic. No direct investment recommendation provided.
+GOOGL | neutral | Mentioned as a key dependency for Booking's traffic through search platforms, though Booking is reducing reliance on paid search with 2-thirds organic traffic. No direct investment recommendation provided.
+GOOGM | neutral | Mentioned as a key dependency for Booking's traffic through search platforms, though Booking is reducing reliance on paid search with 2-thirds organic traffic. No direct investment recommendation provided.
+GOOGN | neutral | Mentioned as a key dependency for Booking's traffic through search platforms, though Booking is reducing reliance on paid search with 2-thirds organic traffic. No direct investment recommendation provided.
+AAPL | neutral | Mentioned as a strategic brand partner with Target for in-store experiences. No direct investment thesis or recommendation provided.
+SBUX | neutral | Mentioned as a strategic brand partner with Target. No direct investment recommendation provided.
+ULTA | neutral | Mentioned as a strategic brand partner with Target. No direct investment recommendation provided.
+CVS | neutral | Mentioned as a strategic brand partner with Target. No direct investment recommendation provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a4d2c81145afd271abe0c892db77e316e1dc90e77b5e04782e451d2e0b38fef4
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T13:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028697/mcdonald-s-stock-up-17-in-a-month-is-the-rally-built-to-last?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3028697
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6f/392.jpg
+category: 
+tickers: MCD, SBUX, DPZ, QSR
+keywords: McDonald's recovery, comparable sales growth, value menu initiatives, specialty beverages, food cost inflation, consumer pressures, franchise model, restaurant industry
+headline: McDonald's Stock Up 17% in a Month: Is the Rally Built to Last?
+<<<SUMMARY>>>
+McDonald's shares surged 17% in a month, outperforming peers and the S&P 500, driven by improving U.S. comparable sales, value menu initiatives, and specialty beverage growth. However, rising food costs, persistent consumer pressures, and execution risks could limit further upside. The stock carries a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+MCD | neutral | While the company shows improving U.S. business trends, resilient international operations, and strong specialty beverage growth, persistent headwinds including mid-single-digit food inflation in 2027, early-stage U.S. recovery, and execution risks warrant caution. The Zacks Rank #3 (Hold) reflects this balanced outlook.
+SBUX | positive | Starbucks outperformed McDonald's with a 19.5% gain over the past month, indicating strong investor sentiment and market performance relative to peers.
+DPZ | positive | Domino's gained 11% over the past month, outperforming the broader market and demonstrating solid performance among restaurant industry peers.
+QSR | positive | Restaurant Brands advanced 7.6% over the past month, showing positive momentum in the restaurant industry sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f68f862c857c8b2a41e5289170e52f39d0fc078bc90f7eaa1fb2dc94b2c75e52
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:04:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3028804/can-dutch-bros-250-shop-plan-deliver-growth-despite-cannibalization?cid=CS-ZC-FT-analyst_blog|quick_take-3028804
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a2/35092.jpg
+category: 
+tickers: BROS, SBUX, MCD
+keywords: expansion strategy, cannibalization, shop openings, cash-on-cash returns, market density, company-operated locations, stock performance
+headline: Can Dutch Bros' 250-Shop Plan Deliver Growth Despite Cannibalization?
+<<<SUMMARY>>>
+Dutch Bros plans to open approximately 250 shops in 2027, primarily in existing states, to strengthen market presence despite potential cannibalization risks. New shops are performing above underwriting assumptions with $2M annualized sales and 45% year-two cash-on-cash returns, supporting the expansion to reach 2,029 locations by 2029. However, the stock has declined 27.6% in six months and carries a Zacks Rank #4 (Sell) rating.
+<<<INSIGHTS>>>
+BROS | neutral | While new shop performance metrics are positive (exceeding sales assumptions and showing strong returns), the company faces headwinds from stock decline (-27.6% in 6 months), Zacks Sell rating, and acknowledged cannibalization risks that could pressure future profitability as density increases.
+SBUX | neutral | Mentioned as a competitive comparison with a more selective, balanced approach to expansion (1,200 net new locations globally with emphasis on upgrades and international growth) rather than aggressive domestic density, suggesting a different strategic philosophy.
+MCD | neutral | Presented as a competitive benchmark emphasizing franchisee returns and profitability over rapid expansion, contrasting with Dutch Bros' company-operated model and highlighting different growth strategies in the QSR space.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1ffa1ae870219b96d566bb030f7f10b99fb4094b7cb8444bdc0f9f479d903c94
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T15:13:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029644/should-you-buy-sell-or-hold-starbucks-stock-post-q4-earnings?cid=CS-ZC-FT-analyst_blog|rank_focused-3029644
+image_url: https://staticx-tuner.zacks.com/images/articles/main/42/519.jpg
+category: 
+tickers: SBUX, MCD, BROS
+keywords: earnings beat, revenue miss, comparable sales growth, margin expansion, China licensing transition, cost savings, beverage competition, loyalty program, coffeehouse upgrades
+headline: Should You Buy, Sell or Hold Starbucks Stock Post Q4 Earnings?
+<<<SUMMARY>>>
+Starbucks reported mixed Q4 fiscal 2026 results with EPS beating estimates by 9.6% while revenues missed by 1.4%. The company projects fiscal 2027 EPS growth of ~18% supported by sales leverage and cost savings, but faces headwinds from China's licensing transition, higher product costs, and intensifying beverage competition. Analysts recommend a Hold rating, suggesting investors maintain positions while awaiting better entry points.
+<<<INSIGHTS>>>
+SBUX | neutral | Mixed results with strong EPS beat and comparable sales growth offset by revenue miss, China transition headwinds, and competitive pressures. Positive earnings recovery outlook for fiscal 2027 is tempered by near-term revenue decline expectations and execution risks, warranting a Hold recommendation.
+MCD | negative | Mentioned as a competitive threat expanding specialty beverages and reinforcing value proposition, which could limit Starbucks' pricing and traffic momentum. Stock declined 10.3% year-to-date.
+BROS | negative | Identified as a competitive threat accelerating shop development and introducing new products. Stock significantly underperformed, declining 44.9% year-to-date, indicating broader challenges in the beverage category.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:844af709db43a0b9fc2d1e54f5166b70f409e37473bb742ad346b0bb2765dea9
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T19:30:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/13/3402928/0/en/quick-service-restaurant-market-to-reach-usd-1-87-trillion-by-2032-as-digital-ordering-and-drive-thru-access-expand-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: MCD, YUM, QSR, DPZ, SBUX
+keywords: quick-service restaurants, digital ordering, drive-thru, loyalty programs, market growth, omnichannel, franchise expansion, delivery services
+headline: Quick-Service Restaurant Market to Reach USD 1.87 Trillion by 2032 as Digital Ordering and Drive-Thru Access Expand - Mordor Intelligence
+<<<SUMMARY>>>
+The global QSR market is projected to grow from USD 1.16 trillion in 2026 to USD 1.87 trillion by 2032, at an 8.18% CAGR. Growth is driven by digital ordering, drive-thru formats, and loyalty programs, with North America leading the market. Major operators are expanding through omnichannel strategies and technology integration to maintain competitive positioning.
+<<<INSIGHTS>>>
+MCD | positive | Listed as a key company in the expanding QSR market benefiting from drive-thru formats, digital ordering capabilities, and loyalty programs that are driving industry growth at 8.18% CAGR.
+YUM | positive | Identified as a major QSR operator (KFC, Taco Bell, Pizza Hut) positioned to benefit from market expansion through digital channels, delivery options, and restaurant network growth.
+QSR | positive | Listed as a key competitor (Burger King, Popeyes, Tim Hortons) well-positioned to capitalize on growing demand for convenient dining formats and digital ordering capabilities.
+DPZ | positive | Specifically highlighted as a digital ordering leader with growing U.S. retail sales through digital channels, exemplifying successful omnichannel strategy in the expanding QSR market.
+SBUX | positive | Included as a key QSR operator positioned to benefit from digital ordering expansion, loyalty programs, and convenient service formats driving market growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a333e637bec8cfbb925baa17df1d538eba537c868ea541b12ae27003d3007fe2
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T18:30:02Z
+publisher: The Motley Fool
+author: John Ballard
+url: https://www.fool.com/investing/2026/11/14/1-reason-starbucks-is-worth-buying-in-november/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fa1011e8571a1073a1da8d7f669d64627dfae8133-2000x1200.png&w=1200&op=resize
+category: 
+tickers: SBUX
+keywords: comparable sales growth, customer spending, valuation, earnings growth, turnaround strategy, North America expansion
+headline: 1 Reason Starbucks Is Worth Buying in November
+<<<SUMMARY>>>
+Starbucks shows strong momentum with global comparable sales rising to 7.2% in Q4, driven by customers spending more per visit rather than just price increases. Despite a premium valuation of 34x fiscal 2026 earnings, the company is executing its turnaround about a year ahead of schedule with management guiding for 4% North America comp growth and 18% EPS growth, positioning it as worth buying for long-term investors.
+<<<INSIGHTS>>>
+SBUX | positive | Strong comparable sales growth of 7.2%, accelerating from 1% a year ago. Customers increasing order sizes organically (50% of ticket gain from added items, not just pricing). Management executing turnaround ahead of schedule with guided 4% North America comp growth and 18% EPS growth. Stock up 29% over 12 months despite premium valuation, indicating strong investor confidence in growth trajectory.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c7172d1bd9b268be4cb6db7448163922de77b5417f955253de9cdcdb86ee57a2
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T15:56:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3030500/can-mcd-protect-margins-amid-mid-single-digit-food-inflation-in-2027?cid=CS-ZC-FT-analyst_blog|quick_take-3030500
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f6/355.jpg
+category: 
+tickers: MCD, SBUX, BROS
+keywords: food inflation, margin protection, value bundles, pricing strategy, operating efficiency, quick service restaurants
+headline: Can MCD Protect Margins Amid Mid-Single-Digit Food Inflation in 2027?
+<<<SUMMARY>>>
+McDonald's expects mid-single-digit food and paper inflation in 2027 and plans to protect margins through selective pricing, value bundles, and operating efficiencies. Entry-level bundles covering over 40% of U.S. locations will launch nationally in early 2027, with existing Extra Value Meals showing 7% unit sales growth. Competitors like Starbucks and Dutch Bros are also managing cost pressures through margin initiatives and pricing strategies.
+<<<INSIGHTS>>>
+MCD | neutral | McDonald's faces mid-single-digit inflation headwinds but has demonstrated ability to manage margins through value initiatives and selective pricing. Stock has underperformed (down 10.8% YoY) and trades at premium valuation (P/S 6.76 vs industry 3.25). Zacks Rank #3 (Hold) reflects balanced outlook with execution risks on margin protection.
+SBUX | positive | Starbucks expects consolidated operating margin expansion of ~190 basis points in fiscal 2027, supported by sales leverage, cost savings, and labor efficiency gains. Company has realized half of targeted gross savings with margin contribution expected to improve further.
+BROS | neutral | Dutch Bros faces persistent elevated coffee and occupancy costs into 2027, though company-operated shop contribution margin expanded 30 basis points YoY to 28.1%. Company sees opportunities for operating leverage but may need further price increases if coffee costs remain elevated.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e74a081144afbc612769daf07f76e3c238d4efb07255fb2535893512ee4f8eb7
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T13:46:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031072/starbucks-ai-powered-drive-thru-can-technology-improve-efficiency?cid=CS-ZC-FT-analyst_blog|quick_take-3031072
+image_url: https://staticx-tuner.zacks.com/images/articles/main/05/563.jpg
+category: 
+tickers: SBUX, MCD, WEN
+keywords: artificial intelligence, drive-thru operations, order accuracy, customer experience, digital menus, labor productivity, technology modernization
+headline: Starbucks' AI-Powered Drive-Thru: Can Technology Improve Efficiency?
+<<<SUMMARY>>>
+Starbucks is testing AI technology in drive-thru operations to improve order accuracy, throughput, and customer experience. The initiative includes background AI models to help baristas capture orders more efficiently, personalized digital menus, and simplified payments. With roughly half of Starbucks' customers using drive-thrus, successful implementation could drive revenue growth and profitability. The company is in early testing stages with plans to expand solutions that deliver results.
+<<<INSIGHTS>>>
+SBUX | positive | Starbucks is proactively investing in AI technology to enhance drive-thru efficiency and customer experience, with significant upside potential given that half its customers use drive-thrus. Stock has gained 30.5% over the past year and fiscal 2027 EPS estimates have increased in the past 30 days, indicating positive market sentiment and growth prospects.
+MCD | positive | McDonald's is advancing AI-powered drive-thru ordering through its ArchIQ platform with reported accuracy above 90% and potential to free up 50+ labor hours per week, demonstrating tangible operational benefits and competitive positioning in AI-driven restaurant technology.
+WEN | positive | Wendy's is investing in AI through its FreshAI platform developed with Google Cloud to improve order accuracy, speed, and customer service, positioning the company competitively in the AI-driven quick-service restaurant sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:478f487251c912cd1ed1139d859c275ba758d59891007ee2395f757eb9de5a4c
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T20:22:02Z
+publisher: The Motley Fool
+author: Will Healy
+url: https://www.fool.com/investing/2026/11/17/history-says-stocks-tend-to-rise-after-a-midterm-election-3-stocks-that-should-serve-investors-well-over-the-next-year-and-beyond/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F689b9e96171fc753154105aa5ad159988cb87282-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: RCL, MELI, BROS, SBUX, CMG
+keywords: midterm elections, stock market, consumer discretionary, cruise industry, e-commerce, coffee chains, expansion strategy, valuation opportunity
+headline: History Says Stocks Tend to Rise After a Midterm Election: 3 Stocks That Should Serve Investors Well Over the Next Year and Beyond
+<<<SUMMARY>>>
+Following the 2026 midterm elections, historical market trends suggest stocks tend to rise in the subsequent year. The article highlights three overlooked consumer discretionary stocks positioned for growth: Royal Caribbean, benefiting from strong cruise demand and pricing power; MercadoLibre, expanding aggressively despite near-term profitability pressures; and Dutch Bros, executing regional-to-national expansion similar to successful blue-chip chains.
+<<<INSIGHTS>>>
+RCL | positive | Record demand, strong pricing power, 111% occupancy rates, 9% revenue growth, and attractive 20x P/E valuation despite higher debt load recovery from pandemic.
+MELI | positive | 48% revenue growth despite near-term profitability challenges; stock down 40% from peak creating multiyear low P/E below 40, positioning it as a buying opportunity once investments translate to profits.
+BROS | positive | 31% revenue growth, 38% net income growth, on-track expansion to 2,029 locations by 2029, and P/E around 48 suggests undervaluation given growth trajectory similar to Starbucks and Chipotle.
+SBUX | neutral | Mentioned as a comparable company for Dutch Bros' expansion strategy; no direct investment recommendation or analysis provided.
+CMG | neutral | Referenced as a historical example of successful regional-to-national expansion; no direct analysis or recommendation included.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:518c14ce3af55f27fe696229c13b51175fd21f74ad19c3b46ae04f47590a93ca
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T07:27:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3031476/delek-us-holdings-and-winnebago-have-been-highlighted-as-zacks-bull-and-bear-of-the-day?cid=CS-ZC-FT-press_releases-3031476
+image_url: https://staticx-tuner.zacks.com/images/articles/main/fa/675.jpg
+category: 
+tickers: DK, WGO, SBUX, MCD, WEN
+keywords: refining margins, crack spreads, geopolitical tensions, RV industry downturn, AI drive-thru technology, diesel supply, consumer discretionary spending
+headline: Delek US Holdings and Winnebago have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Delek US Holdings (DK) is highlighted as the Bull of the Day due to strong refining margins driven by Middle East geopolitical tensions and tight diesel supply, with record Q3 earnings. Winnebago Industries (WGO) is the Bear of the Day as it faces declining earnings estimates, weak consumer demand for RVs, and margin compression amid high interest rates and inflation. The article also covers AI initiatives by Starbucks, McDonald's, and Wendy's in drive-thru operations.
+<<<INSIGHTS>>>
+DK | positive | Strong Zacks Rank #1 (Strong Buy) with record Q3 net income of $1.13 billion. Positioned to benefit from elevated refining margins driven by Middle East disruptions and tight diesel supply. Analysts have revised earnings estimates sharply higher, and the company's product mix (40% distillate output) aligns well with current market dynamics.
+WGO | negative | Zacks Rank #5 (Strong Sell) with significant negative earnings momentum. Q4 adjusted EPS fell 31% year-over-year, revenue declined 17%, and operating margins compressed. Current year estimates lowered 18.3% in 30 days and next year EPS forecasts down 60.58% in 60 days. Weak consumer demand for discretionary RV purchases persists due to high interest rates and fragile consumer confidence.
+SBUX | neutral | Zacks Rank #3 (Hold). Stock has outperformed the industry (up 30.5% vs. 1.6%), but trades at premium valuation (P/E 33.06 vs. industry 22.47). AI drive-thru initiatives are in early testing stages with uncertain financial benefits. Fiscal 2027 EPS estimates show 18% growth with recent positive estimate revisions, but execution risk remains.
+MCD | neutral | Advancing AI-powered drive-thru ordering through ArchIQ platform with Archy voice assistant showing 90%+ accuracy in early tests. Potential to free up 50+ labor hours per week, but technology is still in expansion phase with uncertain scalability and financial impact.
+WEN | neutral | Investing in AI through FreshAI platform developed with Google Cloud to improve drive-thru accuracy and speed. Technology shows promise for operational efficiency, but remains in development stage with uncertain financial benefits and competitive positioning.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7d3aab4615b30fbb54143a842821f42b277b6998d48e0d64a0220a672b5f8542
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T15:45:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/better-buy/2026/11/18/monster-beverage-vs-starbucks-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb45231345f89d5a402992740004f8fb70bfca18a-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: MNST, SBUX, KO, PEP, CELH
+keywords: energy drinks, beverage stocks, revenue growth, operating margins, distribution networks, valuation comparison, consumer goods
+headline: Monster Beverage vs. Starbucks: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Monster Beverage emerges as the better investment choice compared to Starbucks for 2027, driven by superior revenue growth (16.7% vs -4.5%), higher operating margins (28.5% vs 10.7%), and better valuation metrics. While Starbucks operates 41,000+ stores globally with stronger free cash flow, Monster's Coca-Cola-backed distribution network and consistent profitability provide a more compelling growth trajectory.
+<<<INSIGHTS>>>
+MNST | positive | Strong revenue growth of 16.7% YoY, superior operating margin of 28.5%, zero debt (0.0x debt-to-equity), robust free cash flow of $2.0B, and Coca-Cola's distribution advantage position it as the preferred investment choice for 2027.
+SBUX | neutral | While the company maintains a strong global footprint with 41,000+ stores and generates $3.7B in free cash flow, it faces headwinds including declining revenue growth (-4.5%), lower operating margins (10.7%), negative debt-to-equity ratio (-2.9x), and modest valuation advantage that don't offset fundamental weakness.
+KO | positive | Mentioned as a strategic partner providing Monster Beverage with significant competitive advantage through its massive distribution network and equity stake, supporting Monster's growth trajectory.
+PEP | neutral | Referenced as a competitor to Monster Beverage in the energy drink market and as a strategic partner to Starbucks for ready-to-drink products, representing competitive pressures in the beverage sector.
+CELH | neutral | Mentioned as a newer competitor to Monster Beverage in the energy drink space, representing emerging competitive threats in the market.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ac812a27f2bae0ec2606eb8febde45c570661b24cc0112bd5948732d649f0615
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:45:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/better-buy/2026/11/18/chipotle-mexican-grill-vs-kraft-heinz-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd1f17cfa526400d7190c6fd3b28b1042242aa231-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: CMG, KHC, WMT, SBUX, SJM
+keywords: fast-casual dining, packaged food, valuation comparison, free cash flow, dividend yield, growth vs value, food industry
+headline: Chipotle Mexican Grill vs. Kraft Heinz: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Chipotle Mexican Grill and Kraft Heinz as investment options for 2027. Chipotle offers strong growth through expansion and quality focus, while Kraft Heinz provides stability through its brand portfolio and cash generation. Despite Chipotle's higher growth prospects, Kraft Heinz emerges as the better choice for value and income-oriented investors due to superior profitability margins (16.6% vs 14.9%), higher free cash flow ($3.7B vs $1.4B), and a 6.4% dividend yield compared to Chipotle's zero dividend.
+<<<INSIGHTS>>>
+CMG | neutral | Chipotle demonstrates strong revenue growth (7.9%) and expansion potential internationally, but trades at a premium valuation (P/E 32.9x) with no dividend. The company faces food safety risks and competitive pressures, making it suitable for growth investors but not recommended over Kraft Heinz for value-oriented investors.
+KHC | positive | Kraft Heinz is recommended as the better buy for 2027 due to superior profitability margins (16.6%), significantly higher free cash flow ($3.7B), attractive valuation multiples (P/E 12.0x), and a 6.4% dividend yield. Despite revenue decline and net losses, the company's cash generation and income potential make it attractive for value and income-seeking investors.
+WMT | neutral | Walmart is mentioned as a major customer of Kraft Heinz, accounting for 21% of net sales, representing a concentration risk for Kraft Heinz's business model.
+SBUX | neutral | Starbucks is mentioned as a competitive rival to Chipotle in the restaurant industry.
+SJM | neutral | J.M. Smucker is mentioned as a competitor to Kraft Heinz in the packaged food industry.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6d4048be53cec9428ef8ef2a99d86d9b1ff317464ef39b0054c1e7052dc2742c
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T10:00:00Z
+publisher: GlobeNewswire Inc.
+author: A Race Against Blindness
+url: https://www.globenewswire.com/news-release/2026/11/19/3406366/0/en/a-race-against-blindness-brings-back-miles-magic-mochas-fundraiser-for-the-holiday-season.html
+image_url: https://ml.globenewswire.com/Resource/Download/a59db4da-f980-4ed5-ba2c-772123426a9f
+category: 
+tickers: TM, SBUX, DIS
+keywords: fundraiser, inherited retinal diseases, childhood blindness research, nonprofit, holiday campaign, vision loss, prize package
+headline: A Race Against Blindness Brings Back “Miles, Magic & Mochas” Fundraiser for the Holiday Season
+<<<SUMMARY>>>
+A Race Against Blindness is relaunching its Miles, Magic & Mochas holiday fundraiser through December 25, offering supporters a chance to win a prize package valued at approximately $125,000, including a 2026 Toyota Sienna Platinum, $20,000 Disney vacation, Starbucks for a year, and $30,000 cash. The nonprofit aims to advance research for inherited retinal diseases while celebrating family moments and holiday traditions.
+<<<INSIGHTS>>>
+TM | neutral | Toyota is mentioned as a product sponsor (2026 Toyota Sienna Platinum) in a charitable fundraiser. This represents positive brand association through corporate partnership, but the article does not provide business performance information or financial impact.
+SBUX | neutral | Starbucks is mentioned as a prize sponsor (Starbucks for a year) in the fundraiser. While this indicates brand partnership and community engagement, the article contains no information about business performance or financial implications.
+DIS | neutral | Disney is referenced as a vacation award sponsor ($20,000 Disney vacation). This represents corporate sponsorship of a charitable cause, but the article provides no business or financial performance data.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:768002e050a8642889861d9befec1f4345805679df18e3f1de896d54f6361bf0
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:46:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032672/can-bros-doordash-pilot-unlock-growth-beyond-the-drive-thru?cid=CS-ZC-FT-analyst_blog|quick_take-3032672
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a2/35092.jpg
+category: 
+tickers: BROS, SBUX, MCD
+keywords: delivery expansion, DoorDash partnership, digital ordering, drive-thru model, incremental growth, beverage industry
+headline: Can BROS' DoorDash Pilot Unlock Growth Beyond the Drive-Thru?
+<<<SUMMARY>>>
+Dutch Bros is piloting delivery service with DoorDash across several markets to reach customers beyond its drive-thru locations. The company aims to capitalize on elevated delivery platform searches and leverage its growing digital infrastructure, with Order Ahead representing 17% of Q3 2026 visits. However, BROS stock has declined 35.6% in the past six months and carries a Zacks Rank #5 (Strong Sell) rating.
+<<<INSIGHTS>>>
+BROS | neutral | While the DoorDash pilot represents a strategic growth initiative with seamless early execution and strong digital adoption (17% Order Ahead penetration), the stock has significantly underperformed (-35.6% in 6 months) and carries a Strong Sell rating. The initiative shows promise but is offset by negative market performance and analyst downgrade.
+SBUX | positive | Starbucks has established a successful delivery platform with U.S. delivery revenues tripling over five years and largely incremental transactions. The company is enhancing digital capabilities by integrating delivery into its app in fiscal 2027 with rewards integration, demonstrating strong execution and market leadership.
+MCD | positive | McDonald's leverages its extensive restaurant network and third-party delivery partnerships to drive mid-to-high-single-digit delivery growth. The company's established operations, strong delivery provider relationships, and focus on managing pricing demonstrate effective execution and incremental sales generation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8738d218baa6830e3518d079028cf98778a6fd2dbd1df8e2f8679f19c4b2bb14
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T13:50:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033111/starbucks-sbux-is-a-top-ranked-momentum-stock-should-you-buy?cid=CS-ZC-FT-fundamental_analysis|zacks_education_momentum_score-3033111
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default151.jpg
+category: 
+tickers: SBUX
+keywords: Zacks Rank, Style Scores, investment research, stock rating, value investing, growth investing, momentum investing, VGM Score
+headline: Starbucks (SBUX) is a Top-Ranked Momentum Stock: Should You Buy?
+<<<SUMMARY>>>
+Zacks Premium offers investment research tools including the Zacks Rank and Style Scores to help investors identify stocks with strong performance potential. The service combines value, growth, and momentum indicators to rate stocks on an A-F scale. Starbucks is highlighted as a stock to watch with a #3 Hold rank and B VGM Score, showing positive momentum with shares up 2.5% over four weeks.
+<<<INSIGHTS>>>
+SBUX | neutral | Starbucks holds a #3 (Hold) Zacks Rank with a B VGM Score. While it shows positive momentum with shares up 2.5% over four weeks and eight analysts revised earnings estimates higher, the Hold rating indicates it is not a strong buy recommendation. The neutral sentiment reflects the mixed signals between positive momentum and the conservative Hold ranking.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:583d77904b7bcba7e4edc60ddb52ef29009a842f793f54b2c3f8a24fe1ed08c6
+symbol: SBUX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T14:39:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033231/dutch-bros-vs-starbucks-which-coffee-stock-has-stronger-prospects?cid=CS-ZC-FT-analyst_blog|comparison_of_stocks-3033231
+image_url: https://staticx-tuner.zacks.com/images/articles/main/df/56762.jpg
+category: 
+tickers: BROS, SBUX
+keywords: specialty coffee market, same-shop sales growth, store expansion, comparable sales, customer engagement, earnings estimates, operating costs, menu innovation
+headline: Dutch Bros vs. Starbucks: Which Coffee Stock Has Stronger Prospects?
+<<<SUMMARY>>>
+Dutch Bros and Starbucks are competing in the specialty coffee market with different strategies. Dutch Bros achieved 14 consecutive quarters of positive same-shop sales and plans to expand to 2,029 shops by 2029, but faces rising occupancy costs and downward earnings revisions. Starbucks is showing stronger recovery momentum with 7.2% global comparable sales growth, improving store execution, and upward earnings estimate revisions. Analysts favor Starbucks (Hold) over Dutch Bros (Sell) due to better earnings trends and operational performance.
+<<<INSIGHTS>>>
+BROS | negative | Despite 14 consecutive quarters of positive same-shop sales and solid expansion plans, Dutch Bros faces headwinds from rising occupancy costs (up 100 basis points YoY), downward earnings estimate revisions (2026 EPS revised down from $0.98 to $0.92), tougher customer visit comparisons ahead, and stock underperformance (-44.2% YTD). The company carries a Zacks Rank #4 (Sell) rating.
+SBUX | positive | Starbucks demonstrates sustained recovery with 7.2% global comparable sales growth, improving store-level execution with over 80% of North American stores showing positive comps, record Rewards membership at 36 million, and upward earnings estimate revisions (fiscal 2027 EPS revised up from $3.16 to $3.21). Stock has gained 24.1% YTD and carries a Zacks Rank #3 (Hold) rating, indicating better momentum than Dutch Bros.
+<<<END>>>

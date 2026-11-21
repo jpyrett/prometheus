@@ -1,19 +1,19 @@
 """The ten steps of `Trader.execute_trades` (Trader v1 spec section 4), as `critic/review.py` holds the Critic's nine. Since design choices entry 81 every trade goes through the per-trade HANDSHAKE with the Account
 Manager (`broker.py`), and steps 2 and 8 changed (see the amendment at the end of `design/trader_v1_final_spec.md`):
 
-     1 preconditions      PAPER_TRADING is true; the mode is paper or backtest; no `book` in backtest; the order was decided; it has decisions
+     1 preconditions      PAPER_TRADING is true; the mode names a venue (`venue_for`: paper or backtest); no `book` for a venue that cannot book (`venue.books`: a backtest); the order was decided; it has decisions
      2 account            `account.trading_portfolio` opens the run (the Account Manager takes the funds into its own hands); the portfolio's user is the profile's user; the Account Manager applies the fills of an earlier
                           run that were never booked to its working portfolio (`apply_earlier_fills`); the portfolio the Account Manager then reports is read only to REPORT it (`portfolio_before`) and to build the tickets
      3 tickets            one per decision that says yes_auto or yes_user (tickets.py; a decision whose symbol is not a ticker gets none and is named in the errors); trades already on the order are loaded: filled and rejected are final, active is judged again
-     4 prices             ONE snapshot through the Account Manager, asked in groups of at most 30 symbols: quotes (paper) or stored bars (backtest); an active trade of an earlier run is judged again, by code
+     4 prices             ONE snapshot through the Account Manager, made by the VENUE (`venue.py`, entry 128), asked in groups of at most 30 symbols: quotes (paper) or stored bars (backtest); an active trade of an earlier run is judged again, by code
      5 funding consent    the user's yes for the sales that pay for a purchase the cash does not cover (the Account Manager says whether the cash covers it: the Trader never works the funds out)
      6 the model's loop   (trader.py), when the model may and could run and a ticket is `new`
      7 the sweep          code places what is left, every sale before any purchase; what nobody placed is `not_attempted`. EVERY trade of steps 4, 6 and 7 goes through the handshake in `broker.py`: approval, the fill
                           for at most the shares approved, the output check of that one fill (`work_order.verify_fill`), and the report to the Account Manager (`record_fill`, which books it) BEFORE the next trade
      8 the close          the run is closed (nothing more is placed); the whole-run output guard `work_order.verify_trades` REPORTS (what was booked stays booked: it is the book's); the account is read back from the
                           Account Manager for `portfolio_after` and the cash figures. It tells the Account Manager nothing: each fill was told as it happened
-     9 outcomes           backtest only: each filled purchase is followed through the later bars (simulator.follow)
-    10 records            `order.trades`, one more entry on `order.trader_runs`, the trades ledger (paper mode only), the status
+     9 outcomes           each filled purchase is followed through the later bars by the venue (`venue.follow`: the backtest venue, by simulator.follow; a venue with no later bars gives none)
+    10 records            `order.trades`, one more entry on `order.trader_runs`, the trades ledger (a venue that keeps one: `venue.keeps_ledger`, paper), the status
 
 DECIMAL MONEY (design choices entry 112): the account's figures here (the cash before and after, a snapshot, a ticket's prices, a fill) are `Decimal`. The prices the Account Manager asks the Data Clerk for come back as the floats of the quote
 or the bar and cross the price door ONCE: a quote in `_prices` (a `Decimal` price in the snapshot), a stored bar's prices inside the fill rules (`simulator.bar_price`). The trades and the runs are written to the order with `model_dump()` (Python mode: the
@@ -28,22 +28,22 @@ its own (a test reads the source). It never edits what the Advisor, the Critic a
 """
 import re
 from dataclasses import dataclass, field
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 from decimal import ROUND_HALF_UP, Decimal
 
 from prometheus.agents.advisor.calls import parse_object
 from prometheus.agents.trader import simulator, tickets
-from prometheus.agents.trader.broker import CASH_HINT, PaperBroker, Prices, Refused
+from prometheus.agents.trader.broker import CASH_HINT, PaperBroker, Refused
 from prometheus.agents.trader.config import paper_trading_enabled
-from prometheus.agents.trader.record import MODES, FundingRun, Run, Snapshot, Trade
+from prometheus.agents.trader.record import FundingRun, Run, Snapshot, Trade
+from prometheus.agents.trader.venue import Prices, Venue, groups, venue_for      # `groups` was here until entry 128 and is still importable from here
 from prometheus.common import shares as sh
 from prometheus.common.market_calendar import eastern_date
-from prometheus.common.money import digits, price as price_door, price_scale
+from prometheus.common.money import digits, price_scale
 from prometheus.common.portfolio import Portfolio, trade_amount
 from prometheus.common.trace import traced
 from prometheus.common.trading_clock import trading_now
-from prometheus.common.work_order import MAX_BAR_SYMBOLS, MAX_QUOTE_SYMBOLS, TRADING, WorkOrder, verify_trades
-from prometheus.tools.trader import market_price
+from prometheus.common.work_order import TRADING, WorkOrder, verify_trades
 
 STARTABLE = ("reviewed", "decided", "traded")      # the statuses of an order the Trader may work on
 
@@ -59,6 +59,7 @@ class Context:
     now: datetime
     run: Run
     book: bool
+    venue: Venue | None = None                        # where the orders go (`venue.py`, entry 128): the price, the fill and the exits of this run come from it
     start: Portfolio | None = None                    # the account at the start of this run, as the Account Manager reported it (the fills of an earlier run that were never booked are in it): read to REPORT and to build tickets, never changed
     broker: PaperBroker | None = None
     prices: Prices | None = None
@@ -263,19 +264,22 @@ def refuse(order: WorkOrder, run: Run, text: str) -> WorkOrder:
     return order
 
 
-def preconditions(order: WorkOrder, mode: str, book: bool) -> str | None:
-    """Step 1. The first reason the Trader may not run, or None."""
+def preconditions(order: WorkOrder, mode: str, book: bool, config) -> tuple[str | None, Venue | None]:
+    """Step 1. (the first reason the Trader may not run, or None; the venue of the mode, or None when there is a reason). The venue is `venue_for(mode, config)`: a mode that is not paper or backtest, and a venue that places
+    real orders, are refused there (entry 128); `book` is refused for a venue that cannot book (`venue.books`)."""
     if not paper_trading_enabled():
-        return "PAPER_TRADING is not true: the Trader only trades on paper and refuses to run (set PAPER_TRADING=true)"
-    if mode not in MODES:
-        return f"the Trader's mode must be {' or '.join(MODES)}, not {str(mode)[:20]!r}: live trading is not built, and is refused here"
-    if book and mode == "backtest":
-        return "a backtest replay never writes the account book: book is refused in backtest mode"
+        return "PAPER_TRADING is not true: the Trader only trades on paper and refuses to run (set PAPER_TRADING=true)", None
+    try:
+        venue = venue_for(mode, config)
+    except ValueError as error:
+        return str(error), None
+    if book and not venue.books:
+        return f"a {venue.name} replay never writes the account book: book is refused in {venue.name} mode", None
     if order.status not in STARTABLE:
-        return f"the Trader needs an order the Account Manager decided on (status {order.status})"
+        return f"the Trader needs an order the Account Manager decided on (status {order.status})", None
     if not order.trade_decisions:
-        return "the order has no trade decisions: the Account Manager has not decided on it"
-    return None
+        return "the order has no trade decisions: the Account Manager has not decided on it", None
+    return None, venue
 
 
 @traced("trader.execute")
@@ -291,10 +295,10 @@ def execute(trader, order: WorkOrder, account, portfolio, now, funding, approver
         return refuse(order, run, f"the Trader's settings could not be read: {error}")
     mode = trader.mode or config.mode
     run = Run(model=None, temperature=0.0, mode=str(mode), now_utc=tickets.utc_text(now), use_model=trader.use_model, config_version=config.config_version)
-    reason = preconditions(order, mode, book)
+    reason, venue = preconditions(order, mode, book, config)
     if reason:
         return refuse(order, run, reason)
-    ctx = Context(trader=trader, order=order, account=account, config=config, mode=mode, now=now, run=run, book=book)
+    ctx = Context(trader=trader, order=order, account=account, config=config, mode=mode, now=now, run=run, book=book, venue=venue)
     try:
         return _steps(ctx, portfolio, funding, approver)
     except AssertionError:   # not a failure of data, model or account: an assertion is a programming mistake (or a test's guard, like the one that stops a test from writing the real ledger), and hiding it would hide the bug
@@ -343,7 +347,7 @@ def _steps(ctx: Context, portfolio, funding, approver) -> WorkOrder:
         order.errors = [*order.errors, text]
     run.portfolio_before = snapshot(ctx.start)
     # ---- 3 tickets
-    ctx.skipped = [t for t in existing if t.status == "active" and t.mode != mode]
+    ctx.skipped = [t for t in existing if t.status == "active" and t.mode != ctx.venue.name]
     for trade in ctx.skipped:
         run.errors.append(f"{trade.trade_id} is an active trade of a {trade.mode} run: it cannot be judged in a {mode} run and was left as it was")
         order.errors = [*order.errors, run.errors[-1]]
@@ -362,7 +366,7 @@ def _steps(ctx: Context, portfolio, funding, approver) -> WorkOrder:
     symbols = list(dict.fromkeys([t.symbol for t in judged] + [leg["symbol"] for leg in legs]))
     ctx.prices = _prices(ctx, symbols, now)
     permit = lambda t: tickets.permission(order, t.record_id, now)
-    ctx.broker = PaperBroker(config, mode, ctx.account, order, ctx.prices, trades, permit, now, cash_hint=CASH_HINT if funding is None else "")
+    ctx.broker = PaperBroker(config, mode, ctx.account, order, ctx.prices, trades, permit, now, cash_hint=CASH_HINT if funding is None else "", venue=ctx.venue)
     ctx.notifier = Notifier(ctx)
     _mark_unavailable(ctx)
     for trade in fill_order([t for t in loaded if t.status == "active" and t.kind == "recommendation"]):
@@ -395,97 +399,32 @@ def _steps(ctx: Context, portfolio, funding, approver) -> WorkOrder:
     # ---- 8 the output guard, then the Account Manager
     ctx.notifier()
     # ---- 9 outcomes
-    if mode == "backtest":
-        _outcomes(ctx)
+    _outcomes(ctx)
     # ---- 10 records
     return _records(ctx, loop)
 
 
-def groups(symbols: list[str], size: int) -> list[list[str]]:
-    """`symbols` in order, cut into groups of at most `size`: a quote order and a bars order each take at most 30 symbols (`MAX_QUOTE_SYMBOLS`, `MAX_BAR_SYMBOLS`)."""
-    return [symbols[i:i + size] for i in range(0, len(symbols), size)]
-
-
 def _prices(ctx: Context, symbols: list[str], now: datetime) -> Prices:
-    """Step 4: the ONE snapshot for every symbol the trades need, through the Account Manager. The request is made in groups of at most 30 symbols (the limit of a quote order and of a bars order; spec section 15) and
-    the answers are joined, so a long order is not refused whole. When every group fails the snapshot has `failed` (every ticket is `price_unavailable`, with the one reason); when only some do, each symbol of a failed group is
-    `unavailable` with its reason and a message goes on the run, and the others trade. Nothing is asked when there is nothing to judge (so an order with no live trade costs no quote)."""
-    run, config, mode = ctx.run, ctx.config, ctx.mode
-    today = eastern_date(now)
-    if not symbols:
-        return Prices(mode, today)
-    if mode == "paper":
-        quotes, ids, why = {}, [], {}                     # why: the reason of each group that failed, by its symbols
-        for group in groups(symbols, MAX_QUOTE_SYMBOLS):
-            try:
-                answer = ctx.account.request_prices(group)
-            except Exception as error:
-                why[tuple(group)] = f"the quotes could not be fetched ({type(error).__name__})"
-                continue
-            ids.append(answer.request_id)
-            found = {s: _quoted(q) for s, q in (answer.data.quotes if answer.data else {}).items() if isinstance(q, dict) and _quoted(q) is not None}      # a quote is the Data Clerk's float: it becomes a Decimal price here, once
-            quotes.update(found)
-            for text in (answer.data.problems if answer.data else answer.errors):
-                run.errors.append(str(text)[:200])
-            if not found and answer.status != "data_ready":
-                why[tuple(group)] = "the quotes could not be fetched: " + ("; ".join(str(e)[:80] for e in answer.errors[:2]) or "the Data Clerk returned none")
-        run.price_order = ", ".join(ids) or None
-        return _snapshot(ctx, Prices(mode, today, quotes=quotes, order_id=run.price_order), why, answered=len(why) < len(groups(symbols, MAX_QUOTE_SYMBOLS)))
-    wanted = list(dict.fromkeys([*symbols, config.backtest.benchmark]))
-    bars, ids, why = {}, [], {}
-    for group in groups(wanted, MAX_BAR_SYMBOLS):
-        try:
-            answer = ctx.account.request_bars(group, today, today + timedelta(days=config.backtest.max_follow_days))
-        except Exception as error:
-            why[tuple(group)] = f"the stored bars could not be read ({type(error).__name__})"
-            continue
-        ids.append(answer.request_id)
-        if answer.status != "data_ready" or answer.data is None:
-            reasons = "; ".join(str(e)[:100] for e in answer.errors[:2]) or "the Data Clerk returned no bars"
-            why[tuple(group)] = f"the stored bars could not be read: {reasons}"
-            continue
-        bars.update({s: list(series) for s, series in answer.data.bars.items()})
-    run.price_order = ", ".join(ids) or None
-    entry = simulator.entry_date(now, bars)
-    return _snapshot(ctx, Prices(mode, entry or today, bars=bars, entry_date=entry, order_id=run.price_order), why, answered=len(why) < len(groups(wanted, MAX_BAR_SYMBOLS)))
-
-
-def _quoted(quote: dict) -> Decimal | None:
-    """The price of one quote (a dict with the `price` the API client gave) through THE price door: a Decimal at four places above zero, or None."""
-    try:
-        return price_door(quote.get("price"))
-    except ValueError:
-        return None
-
-
-def _snapshot(ctx: Context, prices: Prices, why: dict[tuple[str, ...], str], answered: bool) -> Prices:
-    """The groups that failed (`why`, by their symbols) turned into the snapshot's verdict. None answered: `failed`, the reason once (the same sentence however many groups asked). Some answered: each symbol of a
-    group that did not is `unavailable`, and the run says which group and why."""
-    if not why:
-        return prices
-    if not answered:
-        prices.failed = "; ".join(dict.fromkeys(why.values()))
-        if prices.mode == "backtest":
-            ctx.run.errors.append(prices.failed)
-        return prices
-    for group, reason in why.items():
-        ctx.run.errors.append(f"{reason} (for {', '.join(group)})")
-        prices.unavailable.update({symbol: reason for symbol in group})
+    """Step 4: the ONE snapshot for every symbol the trades need, through the Account Manager, made by the venue (`venue.prices`: quotes for paper, stored bars for backtest). The request is made in groups of at most 30
+    symbols (the limit of a quote order and of a bars order; spec section 15) and the answers are joined, so a long order is not refused whole. When every group fails the snapshot has `failed` (every ticket is
+    `price_unavailable`, with the one reason); when only some do, each symbol of a failed group is `unavailable` with its reason and a message goes on the run, and the others trade. Nothing is asked when there is nothing
+    to judge (so an order with no live trade costs no quote)."""
+    prices = ctx.venue.prices(ctx.account, symbols, now, ctx.run.errors)
+    if prices.order_id:
+        ctx.run.price_order = prices.order_id
     return prices
 
 
 def _mark_unavailable(ctx: Context) -> None:
-    """A ticket whose symbol step 4 gave no price for is rejected `price_unavailable` at once, and the model never sees it as placeable. A backtest with no bar from the entry day on is not that: the orders wait."""
+    """A ticket whose symbol step 4 gave no price for is rejected `price_unavailable` at once, and the model never sees it as placeable (the venue says whether the snapshot holds a price: `venue.missing`). A backtest with no bar from the entry day on is not that: the orders wait."""
     prices, broker = ctx.prices, ctx.broker
     for trade in broker.tickets():
         if prices.failed:
             broker.reject(trade, "price_unavailable", prices.failed)
         elif trade.symbol in prices.unavailable:
             broker.reject(trade, "price_unavailable", prices.unavailable[trade.symbol])
-        elif prices.mode == "paper" and trade.symbol not in prices.quotes:
-            broker.reject(trade, "price_unavailable", f"there is no usable quote for {trade.symbol}")
-        elif prices.mode == "backtest" and prices.entry_date is not None and simulator.bar_on(prices.bars.get(trade.symbol), prices.entry_date) is None:
-            broker.reject(trade, "price_unavailable", f"{trade.symbol} has no stored bar on {prices.entry_date.isoformat()}")
+        elif (why := ctx.venue.missing(prices, trade.symbol)) is not None:
+            broker.reject(trade, "price_unavailable", why)
 
 
 def _consent(ctx: Context, funding, target: Trade, legs: list[dict], approver, fresh: list[Trade]) -> None:
@@ -495,7 +434,7 @@ def _consent(ctx: Context, funding, target: Trade, legs: list[dict], approver, f
     if target.status != "new":
         run.funding.note = f"{target.trade_id} was rejected ({target.reject_code}) before any sale: the funding sells are not used"
         return
-    price = market_price(ctx.prices, target.symbol) or target.ref_price
+    price = ctx.venue.price_of(ctx.prices, target.symbol) or target.ref_price
     paid = price_scale(price * (1 + config.costs.slippage_bps / 10000))
     cost = trade_amount(target.shares, paid) + config.costs.commission_per_order
     question = broker.preview(target, paid)
@@ -530,7 +469,7 @@ def funding_card(ctx: Context, target: Trade, legs: list[dict], cost: Decimal, c
     """What the user is asked (spec section 7): the sells, one per line (symbol, shares, about the proceeds, the gain), and the question. `cash` is what the Account Manager said the account has (None: not known)."""
     held, lines, proceeds = ctx.start, [], Decimal("0.00")
     for leg in legs:
-        price = market_price(ctx.prices, leg["symbol"]) or leg["price"]
+        price = ctx.venue.price_of(ctx.prices, leg["symbol"]) or leg["price"]
         position = held.position(leg["symbol"])
         amount = trade_amount(leg["shares"], price)                                                          # decimal, half up to the cent, the way the book works a sale (entries 111 and 112)
         gain = amount - trade_amount(leg["shares"], position.cost_basis if position else price)
@@ -541,25 +480,16 @@ def funding_card(ctx: Context, target: Trade, legs: list[dict], cost: Decimal, c
             "question": f"Sell these to pay for {sh.text(target.shares)} shares of {target.symbol} (about ${cost:,.0f})? [y/N] ", "kind": "funding"}
 
 
-def _plan_price(measured) -> Decimal | None:
-    """The Advisor's stop or target (its float) through THE price door, once; None when the plan has none (a capital-return plan has no target)."""
-    try:
-        return price_door(measured)
-    except ValueError:
-        return None
-
-
 def _outcomes(ctx: Context) -> None:
-    """Step 9, backtest only: each filled purchase of a recommendation is followed through the later bars by the Advisor's own plan. A simulation: it is never booked."""
-    order, run, config, prices = ctx.order, ctx.run, ctx.config, ctx.prices
-    benchmark = prices.bars.get(config.backtest.benchmark)
+    """Step 9: each filled purchase of a recommendation is followed through the later bars by the Advisor's own plan, as the venue does it (`venue.follow`: the backtest venue; a venue with no later bars gives None and the
+    trade has no outcome). A simulation: it is never booked."""
+    order, run = ctx.order, ctx.run
     for trade in ctx.broker.trades.values():
         if trade.kind != "recommendation" or trade.side != "buy" or trade.status != "filled" or trade.fill is None or trade.outcome is not None:
             continue
         try:
             plan = next((r.get("trade") for r in order.recommendations if isinstance(r, dict) and (r.get("identity") or {}).get("record_id") == trade.record_id), None) or {}
-            trade.outcome = simulator.follow(trade.fill.price, trade.fill.shares, trade.fill.date, prices.bars.get(trade.symbol, []), _plan_price(plan.get("stop_price")), _plan_price(plan.get("target_price")), plan.get("time_stop_date"),
-                                             config.costs.slippage_bps, benchmark)
+            trade.outcome = ctx.venue.follow(trade, plan, ctx.prices)
         except Exception as error:   # an outcome is a nicety: the fills stand
             run.errors.append(f"{trade.trade_id}: the outcome could not be followed ({message(error)})")
 
@@ -575,7 +505,7 @@ def _records(ctx: Context, loop: dict) -> WorkOrder:
     trades = all_trades(ctx)
     summary, dropped = (check_summary(loop["text"], ctx, trades) if loop.get("ran") and not loop.get("error") else (None, ["the model did not finish, so there is no summary of its own"] if loop.get("ran") else []))
     run.summary, run.summary_by, run.dropped = (summary, "model", dropped) if summary else (code_summary(ctx, trades), "code", dropped)
-    if ctx.mode == "paper":
+    if ctx.venue.keeps_ledger:
         _ledger(ctx, trades)
     permitted = [d for d in order.trade_decisions if d.get("will_trade") in TRADING]
     by_record = {t.record_id: t for t in trades if t.kind == "recommendation"}

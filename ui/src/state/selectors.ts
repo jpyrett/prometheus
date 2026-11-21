@@ -83,6 +83,8 @@ export function tradeWords(row: WorkRow, state: RunState): { text: string; tone:
   const trade = row.trade;
   if (trade?.status === "filled") return { text: "FILLED", tone: "pos" };
   if (trade?.status === "rejected") return { text: "REJECTED", tone: "neg" };
+  // an order a past decision day left placed, to fill at the next open (the Proving Ground's day desk): not busy any more, not yet a fill
+  if (trade?.status === "placed") return { text: "PLACED", tone: "info" };
   const decision = row.decision;
   if (decision?.will_trade === "pending_user") return { text: "PENDING YOU", tone: "warn" };
   if (decision?.will_trade.startsWith("yes_")) {

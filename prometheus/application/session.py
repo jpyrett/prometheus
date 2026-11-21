@@ -46,6 +46,8 @@ from prometheus.common.user_account import clean_age, clean_display_name, clean_
 from prometheus.common.user_profile import TOLERANCES
 from prometheus.langgraph.desk import build_desk
 from prometheus.common import langsmith_tracing
+from prometheus.proving import sessions as proving_sessions
+from prometheus.proving.sessions import screen_of
 
 DEFAULT_COUNT = 3
 RULE = "=" * 118
@@ -438,6 +440,7 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
     find, result = (None, None) if direct else (plan["find"], plan["result"])
     if result is not None:
         result.order = order
+    proving_sessions.save_session(args.prompt, intent, final, account_id=account_id, screen=screen_of(parts.guard, account_id))      # the Track Record keeps every run that reached the Advisor (never a failed run if it cannot)
     if args.save:
         Path(args.save).parent.mkdir(parents=True, exist_ok=True)
         Path(args.save).write_text(dumps({"request": " ".join(args.prompt.split()), "intent": intent.model_dump(), "path": final["path"], "order": json.loads(order.model_dump_json(exclude=set() if plan.get("direct") else {"data"}))}, indent=1), encoding="utf-8")      # a direct order's `data` is only what the Data Clerk found (the company name and the symbol of each stock): it is kept; a research order's is large and is left out

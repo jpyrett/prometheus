@@ -21,6 +21,7 @@ from fastapi.staticfiles import StaticFiles
 from prometheus.agents.account_manager.intent import MAX_TEXT
 from prometheus.application.web import tracing, views
 from prometheus.application.web.accounts import Accounts, ServiceError
+from prometheus.application.web.proving_run import FIXTURES as PROVING_FIXTURES, Proving, ProvingError
 from prometheus.application.web.replay import Replay
 from prometheus.application.web.runs import QuestionClosed, RunBusy, RunManager
 from prometheus.common.market_calendar import load_calendar
@@ -45,18 +46,27 @@ def clock_pill() -> str:
     return f"SIMULATED CLOCK \u00b7 {local:%a %b %d} CLOSE".upper()
 
 
+def active_kind(runs) -> str | None:
+    """What the active run is: "proving" (a Time Machine run or the replay of a saved one), "desk" (a desk run or the replay of a session), or None when nothing runs: the page disables the other tab's Go!/Launch with the reason."""
+    active = runs.active
+    if runs.active_id() is None or active is None:
+        return None
+    return "proving" if active.kind == "proving" else "desk"
+
+
 def error(status: int, message: str) -> JSONResponse:
     return JSONResponse({"error": message}, status_code=status)
 
 
 def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None, manager: RunManager | None = None, dev: bool = False, question_timeout: float = 600.0,
-               live_target=None, static_dir: Path | None = UI_DIST, guard: Guard | None = None) -> FastAPI:
+               live_target=None, static_dir: Path | None = UI_DIST, guard: Guard | None = None, proving: Proving | None = None) -> FastAPI:
     """`live_target(run, params, accounts, question_timeout)` runs the live desk (`desk_run.run_live` by default, imported when first needed: it builds the real agents). `guard` (entry 116) counts the requests of `POST /api/runs`
     against the account's rate limit (HTTP 429 with the policy's message); `Guard.code_only()` by default: the rate limit needs no model."""
     app = FastAPI(title="Prometheus desk", docs_url=None, redoc_url=None, openapi_url=None)
     runs, accounts = manager or RunManager(), accounts or Accounts()
     guard = guard or Guard.code_only()
-    app.state.runs, app.state.replay, app.state.accounts, app.state.guard = runs, replay, accounts, guard
+    proving = proving or (Proving(fixtures=PROVING_FIXTURES, paid=False) if replay else Proving())      # --replay serves the saved real runs and refuses a paid one
+    app.state.runs, app.state.replay, app.state.accounts, app.state.guard, app.state.proving = runs, replay, accounts, guard, proving
     if dev:
         app.add_middleware(CORSMiddleware, allow_origins=DEV_ORIGINS, allow_methods=["GET", "POST", "PATCH"], allow_headers=["*"])
 
@@ -68,6 +78,10 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
     async def refused(request: Request, exc: ServiceError):
         return error(exc.status, exc.message)
 
+    @app.exception_handler(ProvingError)
+    async def proving_refused(request: Request, exc: ProvingError):
+        return error(exc.status, exc.message)
+
     @app.exception_handler(ValueError)
     async def bad_value(request: Request, exc: ValueError):
         return error(422, str(exc))
@@ -77,7 +91,7 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
     def health():
         return {"ok": True, "mode": "replay" if replay else "live", "book": "ok" if replay else accounts.book_status(), "clock_note": clock_note() or "", "clock_pill": clock_pill(),
                 "defaults": {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": True}, "limits": {"prompt_chars": MAX_TEXT},
-                "active_run": runs.active_id(), "tracing": tracing.status(), "replay_file": replay.capture.get("_file") if replay else None}
+                "active_run": runs.active_id(), "active_kind": active_kind(runs), "tracing": tracing.status(), "replay_file": replay.capture.get("_file") if replay else None}
 
     # ---------------------------------------------------------------- accounts
     def read_only_replay() -> JSONResponse:
@@ -191,6 +205,91 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
         if found is None:
             return error(404, f"no row {key} on this work order")
         return jsonable(found)
+
+
+    # ---------------------------------------------------------------- the Proving Ground (design/proving_ground_spec.md section 9)
+    @app.get("/api/proving/coverage")
+    def proving_coverage():
+        return jsonable(proving.coverage())
+
+    @app.post("/api/proving/plan")
+    def proving_plan(body: dict = Body(...)):
+        return proving.plan(body)                                         # free: reads nothing with a model
+
+    @app.post("/api/proving/runs", status_code=202)
+    def proving_start(body: dict = Body(...)):
+        if not proving.paid:
+            return error(409, "this is a recorded session: a new Time Machine run is a paid run and is not made here")
+        if (refused := guard.check_rate(None)) is not None:
+            return error(429, refused.message)
+        if runs.active_id():
+            return error(409, "a run is already active: wait for it to finish, or stop it")
+        try:
+            run = proving.start(body, runs)
+        except RunBusy:
+            return error(409, "a run is already active: wait for it to finish, or stop it")
+        return {"run_id": run.id}
+
+    @app.get("/api/proving/runs")
+    def proving_runs():
+        return jsonable(proving.runs())
+
+    @app.get("/api/proving/runs/{run_id}")
+    def proving_run(run_id: str):
+        return jsonable(proving.view(run_id))
+
+    @app.get("/api/proving/runs/{run_id}/days/{day}")
+    def proving_day(run_id: str, day: str):
+        return proving.day(run_id, day)
+
+    @app.get("/api/proving/runs/{run_id}/days/{day}/records/{key}")
+    def proving_record(run_id: str, day: str, key: str):
+        return proving.record(run_id, day, key)
+
+    @app.post("/api/proving/runs/{run_id}/replay", status_code=202)
+    def proving_replay(run_id: str, speed: int = Query(1, ge=0, le=10)):
+        if runs.active_id():
+            return error(409, "a run is already active: wait for it to finish, or stop it")
+        try:
+            run = proving.replay(run_id, runs, speed)
+        except RunBusy:
+            return error(409, "a run is already active: wait for it to finish, or stop it")
+        return {"run_id": run.id}
+
+    @app.delete("/api/proving/runs/{run_id}", status_code=204)
+    def proving_delete(run_id: str):
+        proving.delete(run_id)
+        return Response(status_code=204)
+
+    @app.get("/api/proving/track")
+    def proving_track():
+        return jsonable(proving.track())
+
+    @app.get("/api/proving/critic-report")
+    def proving_critic_report():
+        return jsonable(proving.critic_report())                          # free: the Critic's rules scored against the saved outcomes (`proving/report_card.py`)
+
+    @app.get("/api/proving/live/{account_id}")
+    def proving_live(account_id: int):
+        return proving.live(account_id, lambda n: accounts.manager(n))
+
+    @app.get("/api/proving/live/{account_id}/events")
+    def proving_live_events(account_id: int, once: bool = Query(False)):
+        """One live snapshot every `poll_seconds` as Server-Sent Events (`snapshot`); `once=true` sends one and ends (the tests' and the recordings' handle)."""
+        from prometheus.proving.config import load_config as load_proving_config
+
+        def stream():
+            while True:
+                try:
+                    shot = proving.live(account_id, lambda n: accounts.manager(n))
+                except (ProvingError, ServiceError) as exc:
+                    yield f"event: error\ndata: {dumps({'error': getattr(exc, 'message', str(exc))})}\n\n"
+                    return
+                yield f"event: snapshot\ndata: {dumps(shot)}\n\n"
+                if once or not proving.paid:
+                    return
+                time.sleep(load_proving_config().live.poll_seconds)
+        return StreamingResponse(stream(), media_type="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no", "Connection": "keep-alive"})
 
     # ---------------------------------------------------------------- the built page
     if static_dir and (Path(static_dir) / "index.html").is_file():

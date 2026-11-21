@@ -26,14 +26,21 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from prometheus.rag.config import filings_dir, news_dir, press_releases_dir
 from prometheus.rag.loaders import (PRESS_RELEASES_SUFFIX, Skipped, filing_file, load_filings, load_news, load_press_releases, news_file,
                                     press_release_file)
-from prometheus.rag.store import count_chunks, count_too_long, get_vector_store, reset_collection
+from prometheus.rag.store import count_chunks, count_too_long, get_vector_store, reset_collection, token_lengths, token_limit
 
-# Characters, not tokens. With these numbers no chunk of the 288 news articles passes the embedding model's
-# 256-token limit, even with the headline put back in front (design choices entry 17).
-CHUNK_SIZE = 800
+# Characters, not tokens. With these numbers no chunk of the stored news passes the embedding model's
+# 256-token limit, even with the headline put back in front (design choices entry 17: 800, measured on 288 articles).
+# 680 since entry 130 (2026-11-20): the 6 months of backfilled news (132,847 articles) had 8 chunks over the limit at 800,
+# 4 at 760, 1 at 720 and none at 680 (the longest is 247 tokens). Press releases: none at any of them (174 tokens).
+# Filings share the size and are NOT inside the limit at either (dense tables: 2,701 chunks over at 800, 1,298 at 680).
+CHUNK_SIZE = 680
 CHUNK_OVERLAP = 100
 HEADLINE_PREFIX_MAX = 250  # the longest real headline is 208 characters (design choices entry 19)
 LOOKUP_BATCH = 100  # article ids per lookup in the store
+WRITE_BATCH = 2000  # chunks per upsert, under Chroma's max batch size
+FIT_SHRINK = 0.85  # a chunk over the token limit is cut again at its own characters-per-token rate, less this margin
+FIT_ROUNDS = 12     # the most times one chunk is cut again (each round shrinks it; a dense table needs two or three)
+FIT_MIN_CHARS = 40  # under this a piece is cut in two by position: the splitter has no separator left to cut at
 
 
 def _prefix(headline: str) -> str:
@@ -45,23 +52,62 @@ def _prefix(headline: str) -> str:
     return headline[:HEADLINE_PREFIX_MAX].rsplit(" ", 1)[0] + " ..."
 
 
-def to_chunks(docs: list[Document]) -> list[Document]:
+def _with_headline(headline: str, body: str) -> str:
+    """The text of a chunk: its body, with the headline put back in front when the body does not begin with it."""
+    return body if body.startswith(headline) else f"{_prefix(headline)}\n\n{body}"
+
+
+def _cut_again(start: int, body: str, tokens: int, limit: int) -> list[tuple[int, str]]:
+    """One piece that is too long for the embedder, cut into smaller pieces: [(where it begins in the article, its text)]. The new size is the piece's own
+    characters-per-token rate times the limit, less a margin, so a dense table (many tokens per character) is cut finer than prose. A piece the splitter
+    cannot cut (no separator left) is cut in two by position."""
+    size = max(FIT_MIN_CHARS, int(len(body) * limit / tokens * FIT_SHRINK))
+    pieces = RecursiveCharacterTextSplitter(chunk_size=size, chunk_overlap=min(CHUNK_OVERLAP, size // 4), add_start_index=True).create_documents([body])
+    if len(pieces) < 2:
+        half = len(body) // 2
+        return [(start, body[:half]), (start + half, body[half:])] if half else [(start, body)]
+    return [(start + piece.metadata["start_index"], piece.page_content) for piece in pieces]
+
+
+def _fit(headline: str, parts: list[tuple[int, str]], lengths: Callable[[list[str]], list[int]], limit: int) -> list[tuple[int, str]]:
+    """The pieces of one article, each cut again until its chunk text (the headline in front included) is within the embedder's token limit. The pieces that
+    already fit are not touched, so prose is chunked exactly as by characters alone; only what is too dense is cut finer."""
+    for _ in range(FIT_ROUNDS):
+        counts = lengths([_with_headline(headline, body) for _, body in parts])
+        if all(count <= limit for count in counts):
+            break
+        fitted: list[tuple[int, str]] = []
+        for (start, body), count in zip(parts, counts):
+            fitted.extend([(start, body)] if count <= limit else _cut_again(start, body, count, limit))
+        if len(fitted) == len(parts):   # nothing could be cut (a headline that alone is over the limit): said by the length check, not looped on
+            break
+        parts = fitted
+    return parts
+
+
+def to_chunks(docs: list[Document], lengths: Callable[[list[str]], list[int]] | None = None, limit: int | None = None) -> list[Document]:
     """Cut each article into chunks. A chunk's id is <article id>#<number>, and it keeps the article's
     metadata plus start_index (where it begins in the article), chunk and chunks (its number and how many).
 
     A chunk that does not begin with the headline gets the headline put back in front, so that a chunk
-    like "CRWV | negative | Stock declined 11.91% ..." still says which article it belongs to."""
+    like "CRWV | negative | Stock declined 11.91% ..." still says which article it belongs to.
+
+    BY CHARACTERS, THEN BY TOKENS (design choices entry 131). The first cut is by characters (`CHUNK_SIZE`). With `lengths` (the embedding model's own token
+    count of each text, `store.token_lengths`) and `limit` (`store.token_limit`), a chunk whose text is over the limit is cut again until it fits (`_fit`):
+    the embedder ignores everything past its limit, and a filing's table has two or three times the tokens per character of prose, so no character count
+    keeps it inside. Without them (a test with its own store) the cut is by characters alone, as before."""
     splitter = RecursiveCharacterTextSplitter(chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP, add_start_index=True)
     chunks = []
     for doc in docs:
         headline = doc.metadata["headline"]
-        parts = splitter.split_documents([doc])
-        for number, part in enumerate(parts):
-            text = part.page_content if part.page_content.startswith(headline) else f"{_prefix(headline)}\n\n{part.page_content}"
+        parts = [(part.metadata["start_index"], part.page_content) for part in splitter.split_documents([doc])]
+        if lengths is not None and limit is not None:
+            parts = _fit(headline, parts, lengths, limit)
+        for number, (start, body) in enumerate(parts):
             chunks.append(Document(
                 id=f"{doc.id}#{number}",
-                page_content=text,
-                metadata={**part.metadata, "chunk": number, "chunks": len(parts)},
+                page_content=_with_headline(headline, body),
+                metadata={**doc.metadata, "start_index": start, "chunk": number, "chunks": len(parts)},
             ))
     return chunks
 
@@ -83,7 +129,7 @@ def _stored(store: Chroma, article_ids: list[str]) -> dict[str, dict[str, tuple[
 
 
 def ingest_documents(docs: list[Document], store: Chroma,
-                     too_long: Callable[[list[str]], int] | None = None) -> dict:
+                     too_long: Callable[[list[str]], int] | None = None, fit: bool = False) -> dict:
     """Chunk, encode and store these articles, reconciling with what the store already holds.
 
     Returns {articles, chunks, added, updated, unchanged, deleted, over_limit}. over_limit is how many
@@ -96,7 +142,7 @@ def ingest_documents(docs: list[Document], store: Chroma,
         else:
             articles[doc.id] = Document(id=doc.id, page_content=doc.page_content, metadata=dict(doc.metadata))
 
-    chunks = to_chunks(list(articles.values()))
+    chunks = to_chunks(list(articles.values()), token_lengths, token_limit()) if fit else to_chunks(list(articles.values()))   # `fit`: the real store, the real embedder (entry 131)
     by_article: dict[str, list[Document]] = defaultdict(list)
     for chunk in chunks:
         by_article[chunk.metadata["article_id"]].append(chunk)
@@ -126,7 +172,9 @@ def ingest_documents(docs: list[Document], store: Chroma,
     if stale:
         store.delete(ids=stale)
     if to_write:
-        store.add_documents(to_write, ids=[chunk.id for chunk in to_write])  # encodes the text, then upserts
+        for start in range(0, len(to_write), WRITE_BATCH):  # Chroma refuses one upsert over its own batch limit (5461 here): a symbol with months of news has more chunks than that
+            batch = to_write[start:start + WRITE_BATCH]
+            store.add_documents(batch, ids=[chunk.id for chunk in batch])  # encodes the text, then upserts
     stats["deleted"] = len(stale)
     stats["over_limit"] = too_long([c.page_content for c in chunks]) if too_long else None
     return stats
@@ -138,7 +186,7 @@ def ingest_symbol(symbol: str, store: Chroma | None = None) -> dict:
     path = news_file(symbol)
     skipped: list[Skipped] = []
     stats = ingest_documents(load_news(path, skipped), store or get_vector_store(),
-                             too_long=count_too_long if store is None else None)
+                             too_long=count_too_long if store is None else None, fit=store is None)
     return {"symbol": symbol.strip().upper(), "path": str(path), **stats, "skipped": skipped}
 
 
@@ -149,7 +197,7 @@ def ingest_press_releases(symbol: str, store: Chroma | None = None) -> dict:
     path = press_release_file(symbol)
     skipped: list[Skipped] = []
     stats = ingest_documents(load_press_releases(path, skipped), store or get_vector_store("press_releases"),
-                             too_long=count_too_long if store is None else None)
+                             too_long=count_too_long if store is None else None, fit=store is None)
     return {"symbol": symbol.strip().upper(), "path": str(path), **stats, "skipped": skipped}
 
 
@@ -160,7 +208,7 @@ def ingest_filings(symbol: str, store: Chroma | None = None) -> dict:
     the real one; a test passes its own."""
     path = filing_file(symbol)
     stats = ingest_documents(load_filings(path), store or get_vector_store("filings"),
-                             too_long=count_too_long if store is None else None)
+                             too_long=count_too_long if store is None else None, fit=store is None)
     return {"symbol": symbol.strip().upper(), "path": str(path), **stats}
 
 

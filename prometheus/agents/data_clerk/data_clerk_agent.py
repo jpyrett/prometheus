@@ -55,7 +55,7 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 
-from prometheus.common.trading_clock import market_day, use_live_trading
+from prometheus.common.trading_clock import NEVER_FETCHES, bound_day, market_day, use_live_trading
 from prometheus.common.trace import traced
 from prometheus.common.work_order import HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_request, verify_symbol_request, verify_verification_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
@@ -765,6 +765,8 @@ class DataClerk:
         kind, and the next step still runs: a company whose filings cannot be read still gets its bars and news. `bars_for` are more symbols that need only their bars (the user's holdings: the
         Advisor sizes a position from their prices). Returns [{step, symbol, outcome, detail}]."""
         from prometheus.agents.data_clerk.metrics_catalog import SPY, sector_etfs
+        if bound_day() is not None:   # the Proving Ground (`trading_clock.as_of`): a past day calls no paid API and writes no stored text
+            return [{"step": "all", "symbol": None, "outcome": "refused", "detail": f"{NEVER_FETCHES}: nothing is fetched while the desk works as of {bound_day()}"}]
         if not self.allow_fetch:
             return [{"step": "all", "symbol": None, "outcome": "refused", "detail": "the Data Clerk was built without allow_fetch: nothing is fetched (fetching uses paid APIs and writes files)"}]
         wanted = list(dict.fromkeys(check_symbol(s.strip().lstrip("$")) for s in symbols_))

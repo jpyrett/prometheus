@@ -1,0 +1,1312 @@
+<<<ARTICLE>>>
+id: finnhub:143770679
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c51c12e8c85cdb6822b9ee720bf1f539b7ec75ea4fb8013a45ea4b13b791d927
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Nervous Market, Big Opportunity: The 1 Beaten-Down Growth Stock I'd Buy With $500 Right Now
+<<<SUMMARY>>>
+This fast-growing company has seen its stock cut in half. This is your wake-up call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770046
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5513b428ab3fa0c38f65a74d4cb2799707fd6ffaa520a3ea8cfd6c91ee579c13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Can Dutch Bros' 250-Shop Plan Deliver Growth Despite Cannibalization?
+<<<SUMMARY>>>
+BROS plans to open 250 shops in 2027, banking on stronger market coverage and solid shop economics while navigating rising cannibalization risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143749585
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T02:17:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6c19a31f596e9072e10b2e5e48fdd0effc6c03bcd845d1a4829497e73b5031ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros (BROS) Names Kira Druyan Chief Legal Officer As Expansion Continues
+<<<SUMMARY>>>
+Dutch Bros (NYSE:BROS) has appointed Kira Druyan as incoming Chief Legal Officer to lead its legal and compliance functions. Druyan previously held senior legal roles at Starbucks, bringing large scale coffee chain experience into the Dutch Bros executive team. The new hire comes as Dutch Bros continues its national expansion and rolls out major product launches across the United States. Dutch Bros' decision to hire Kira Druyan from Starbucks as Chief Legal Officer is only one part of the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143753619
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:25:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=c5291151713e0185909785397d52726dd86b726060e7c60cf98a0b30def49a0d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1256967959/image_1256967959.jpg?io=getty-c-og
+category: company
+tickers: BROS
+keywords: 
+headline: Impax Small Cap Fund Q3 2026 Portfolio Review
+<<<SUMMARY>>>
+Impax Small Cap Fund outperformed the Russell 2000 Index in what was a difficult period for the small cap asset class. Read more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739630
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:59:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76d308807f18da76344be08d6aacd1e192f6037d03a24adb592586f584d58e51
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: I'd Buy Dutch Bros Shares Without Any Hesitation Right Now. Here's the 1 Reason Why.
+<<<SUMMARY>>>
+This growth company's shares have been battered this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738055
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e4332144c2cb88793096015a7b05b43442949a1123854c7c2766fdf1f393acb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Should You Approach Dutch Bros Stock With Caution After Q3 Results?
+<<<SUMMARY>>>
+Should BROS' strong Q3 beat be overshadowed by slowing customer traffic, rising operating costs, aggressive expansion and a premium valuation?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766606
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:44:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0367921b38b0885e0050afbcca4e98722cbe3206a50a514f97f71625f17522d2
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Powder-Keg-Stocks-Ignite-The-Dynamite-Fo.jpg?width=2048&height=1536
+category: company
+tickers: BROS
+keywords: 
+headline: Short Interest Powder Kegs: 10 Stocks Bears Cannot Quit Buying
+<<<SUMMARY>>>
+Venture Global tops heavily shorted stocks at 90.11% of float, with Sunrun, Ondas, Kohl&#39;s and Under Armour also on the list.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143728913
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T05:45:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1f1a43be2e801977b13b9e963bb216321ceb37e177fbe23b9a4a06d1ab91283c
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/458887889/image_458887889.jpg?io=getty-c-og
+category: company
+tickers: BROS
+keywords: 
+headline: Wall Street Breakfast Podcast: Stocking Up On Costco Cash
+<<<SUMMARY>>>
+Costco has a $13.3B surprise for investors. CoreWeave just gave Wall Street more to like. 7 Brew serves Starbucks, Dutch Bros a fresh challenge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143702100
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T00:14:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=37b108cdddcacb46ac091e56b0284563e1e6bb9575f4816d0418c4f47bbe425c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Black Rock Coffee Bar Q3 Earnings Call Highlights
+<<<SUMMARY>>>
+Black Rock Coffee Bar (NASDAQ:BRCB) reported a 29.7% increase in third-quarter revenue as customer transactions returned to growth, and the company raised its full-year store opening target while reaffirming its sales and profit outlook. Revenue rose to $66.8 million, while same-store sales increas
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692760
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=edd3ec624482b529e835971f6fe77d89350c8fc39b5c35c4f3c67a65fc1c1be5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Can SBUX Deliver 18% EPS Growth Despite a 1% Revenue Decline in FY27?
+<<<SUMMARY>>>
+Starbucks targets 18% EPS growth in fiscal 2027 despite a 1% revenue decline, backed by margin expansion, cost savings and an additional fiscal week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690883
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:49:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92354fbfac2d91ce2e4fae3baec661fd963804862f124d92c09dfd6cb50d7645
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Consumers are still spending — even on 'indulgences': Chime CEO
+<<<SUMMARY>>>
+Chime (CHYM) CEO and co-founder Chris Britt joins Yahoo Finance Executive Editor Brian Sozzi to discuss the company's latest earnings results, the health of the US consumer, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690881
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1637b3c18546a00de5cec3fe2863f2bf5950a9edf5e9881cc48be580d823556f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: IAMPHENOM 2027 Registration Opens: Where HR Leaders Get the Playbook for Turning AI Investment into Outcomes
+<<<SUMMARY>>>
+PHILADELPHIA, November 10, 2026--IAMPHENOM 2027 Registration Opens: Where HR Leaders Get the Playbook for Turning AI Investment into Outcomes
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690882
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=13e87a63b53b055031e20f4b6d082b157613766489e4959bf08cf35da2bfb5fb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Wall Street Analysts Think Dutch Bros (BROS) Is a Good Investment: Is It?
+<<<SUMMARY>>>
+According to the average brokerage recommendation (ABR), one should invest in Dutch Bros (BROS). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143688283
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:58:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=614299c6d902d73bb1a820414efb7dff050af28f6596d72a427365a6b63a1d61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros® Rolls Out the Pink Carpet for Third Annual National Passenger Princess Day
+<<<SUMMARY>>>
+Every passenger princess has their own style and this year, Dutch Bros is helping fans find theirs. Wednesday, November 18 marks the third annual National Passenger Princess Day and Dutch Bros is taking the viral trend to the next level. Inspired by a popular social media trend with millions of impressions across Instagram and TikTok, the specialty beverage leader is turning the passenger princess lifestyle into a week-long celebration including a signature drink, exclusive merch and accessories
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143663172
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T03:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=24bee3700c92aa4b3ad86e48d7d6b703830cce76604a329688bcef03ef81c7b4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros vs. On: Which Stock Is a Better Buy?
+<<<SUMMARY>>>
+Both are growth stocks, but one stands out more than the other.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662765
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T02:27:54Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=808490a8bf9effcf480175d085fcabeee9780ec27a2c7811df4b0330a1497e49
+image_url: 
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros Consensus Price Target Decreased by 16.59% to $59.06
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662111
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T22:27:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8215030ce4d29af05b66eb402fb7e11654a1c826ce5281505cd589957921c7d2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros CEO: Gas Prices Are Impacting the Consumer
+<<<SUMMARY>>>
+Dutch Bros CEO Christine Barone says the coffee chain delivered more than 30% year-over-year growth in revenue and EBITDA in the third quarter. The company also recorded its 14th consecutive quarter of positive same-store sales and ninth consecutive quarter of positive traffic, while continuing to open stores; it plans to open 250 new locations in 2027. Barone credited beverage launches, including the returning cookie butter drink, and targeted offers through Dutch Bros' rewards program. She spoke with Romaine Bostick on "The Close" on November 5, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658928
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3946d6d23f4d88dd93ca98ebcf7cd52879be40872e4872547506040ed499c53f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: 3 Beaten-Down Consumer Stocks to Hold for the Next 10 Years
+<<<SUMMARY>>>
+These three brands keep winning customers even as their stocks slump, setting up better prospects for returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143650336
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T07:51:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=117137160cdcbdd7965e596c6cfab74a972b057f507ed759cd3e913ee4e5ca8a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Retail Therapy: Defensive Bets Extend Streak, Trounce SPY, QQQ As EVgo, Helen Of Troy, Magnite Lead Weekly Consumer Gains
+<<<SUMMARY>>>
+Consumer ETFs posted gains while the S&P 500 had its worst week in 18 months, with buyout offers and a beat-and-raise quarter driving the biggest winners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143646487
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T22:44:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=06e6f5fa10156215f612c25149564c02e374cbbbf99ea2714c4f6c10c835c7ff
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros Inc. 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-08. The following slide deck was published by Dutch Bros Inc.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143642065
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T20:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=538d7d0a2c50ef1a65809b2a7192cc6619fd773726e6df6cbdca74f382e18c17
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: A Once-in-a-Decade Opportunity: 1 Super Growth Stock Down 58% to Buy and Hold for a Decade
+<<<SUMMARY>>>
+This stock just got crushed, and it's a great opportunity to buy on the dip.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640363
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=06c9d146ff1a9b6eba1ddcc4f44993248242c02f73acc0942f6718599493ca83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Coffee giant Dutch Bros made all of its executives, including the CEO, do a two-week bootcamp where they learned how to pour drinks and run stores
+<<<SUMMARY>>>
+Dutch Bros CEO Christine Barone and senior leaders have to complete six shifts of hands-on shop training, sharpening their hospitality skills and perfecting drinks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143638656
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-08T10:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dac7e8afe2cf0a634183c89ab49d0412de4c2e9f94f2c08c125858cfc5fe02a3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Is Dutch Bros Stock a Buy as Shares Plunge?
+<<<SUMMARY>>>
+Dutch Bros shares plummeted as same-store sales growth slows.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143640364
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a00f26dc83e55267df6c18123ead92a3ba804021afb62ce2db40d7d2a731db5b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros Gave Wall Street What It Wanted, So Why Did the Stock Crater?
+<<<SUMMARY>>>
+Dutch Bros beat Q3 EPS and revenue estimates, but shares fell 21% as slowing customer traffic growth raised concerns about the sustainability of its aggressive store expansion plans.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143614257
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T09:00:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8faf68204a7a19a7fa720080299f760b8d11a4e098f2dd98ad88cf4d506c1a76
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/07/Bulls-and-Bears-1.jpg?width=2048&height=1536
+category: company
+tickers: BROS
+keywords: 
+headline: Benzinga Bulls and Bears: Palantir, IonQ, DraftKings
+<<<SUMMARY>>>
+Benzinga examined the prospects for many investors’ favorite stocks over the last week — here’s a look at some of our top stories.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143593037
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-07T00:17:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1578e7e321ea7cc000e33ade9bf453e3bcb538a64f524c9aa7ce09bf190e75b0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: 3 Consumer Discretionary Stocks To Watch After The Strong US Jobs Report
+<<<SUMMARY>>>
+A labor market that keeps surprising to the upside can feel like a gift and a warning at the same time. Job gains far above forecasts and a lower unemployment rate support the idea of consumers with paychecks to spend, while also keeping pressure on interest rates that can weigh on stock valuations. This article highlights three Consumer Discretionary stocks exposed to that tug of war and explains how the same jobs report can create very different setups for each one. The stocks covered below...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944539
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3124117b2adabed43813c4df53b2e6c6d211141d1844114b771588e0f8d41178
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Can BROS' DoorDash Pilot Unlock Growth Beyond the Drive-Thru?
+<<<SUMMARY>>>
+Dutch Bros is testing DoorDash delivery to expand beyond drive-thrus, tap customer demand and unlock new sales opportunities amid growing digital adoption.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942998
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:58:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=403210d497bfae3c4a05a26ac892e87437dfe6718be9838498f2ab43e4a61968
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: What Is The One Risk Every Starbucks Investor Should Know?
+<<<SUMMARY>>>
+Today’s big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942997
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6fe32d6561d02af2cfb81807b787ba9cc41c251a4bb7b6d725dcd335faac987c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Zappi Research Finds the Fast Food Value War Is Buying Visits, Not Hearts, as Challengers Win Over Younger Consumers in QSR and Coffee
+<<<SUMMARY>>>
+Zappi, the leading consumer insights platform helping global brands win with consumers, today released Who Owns the QSR and Coffee Market?, a study of 10,000 U.S. and U.K. consumers that maps which fast food and coffee brands people think of, and for which moments. The headline for fast food: the value war is buying visits, not hearts. McDonald's dominates the cheap meal, while dinner, family meals and treat moments have no clear owner. In coffee, Starbucks and Dunkin' hold 48% of U.S. Mental Ma
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936842
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T10:34:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cddea1b428a8e9c1558b3bfc5117d183aadc74b0f7cae95b63811d1d02fc1d79
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros vs. CAVA: Revenue Trends May Be Misleading. Here's What Else to Watch.
+<<<SUMMARY>>>
+Dutch Bros has climbed quarter after quarter, while CAVA's sales have swung sharply, and the gap between the two may be shifting.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143916124
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T09:45:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cfac6d423dccec942698cd016d4e64c6a558ced7c3fb629852c31bffef25a7bf
+image_url: 
+category: company
+tickers: BROS
+keywords: 
+headline: Guggenheim Maintains Buy on Dutch Bros, Lowers Price Target to $62
+<<<SUMMARY>>>
+Guggenheim  analyst Gregory Francfort   maintains Dutch Bros (NYSE:BROS) with a Buy and lowers the price target from $76 to $62.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884735
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:53:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=363f284493ebe5a65da5746b3934969496088c52caf49b3163db7100b808895d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Should You Buy Dutch Bros Stock Before the End of November?
+<<<SUMMARY>>>
+Does the calendar matter for Dutch Bros investors? Not really, but the price might.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878760
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff16ad8d9c573d27089dcdf0b646293298cf82b32e54a86f3301938f67c2f4f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: What Is The True Hidden Price Of Starbucks Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143871995
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T08:09:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d257ae18a205d3533b832ccb3d0ab811dffbde0aea0dc033ed0b3fa09ac82ef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros (BROS) Launches Pink Majesty Rebel Nationwide
+<<<SUMMARY>>>
+Dutch Bros (NYSE:BROS) introduced its Pink Majesty Rebel energy drink as part of a new nationwide promotion in the United States. The company paired the drink rollout with a limited-edition Passenger Princess merchandise line, including collectible car vent charms. The promotion is available across all Dutch Bros locations, bringing both the beverage and merch collection into the full store network. The Pink Majesty Rebel launch and Passenger Princess merch drop highlight only one piece of...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143866406
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T07:10:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0bfc7b017a97523bbeca23dfd1293a469c180a5ee95e38485d6d5a5d6545ec06
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros (BROS) Stock Could Be Cheap Despite a 43% Slide
+<<<SUMMARY>>>
+Dutch Bros has had a tough run in 2026, and the slide in the share price raises a straightforward question for investors who care about cash flows. After a year of sharp swings and mixed sentiment, the issue is whether the current valuation still lines up with the money this business is expected to generate over time. The stock is down 42.6% year to date, which puts the focus squarely on whether the recent sell off has moved the price closer to or further away from what its cash flows can...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850810
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T22:25:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4209ec8c07938a6c9eb16f526c21c56393b71d4988330cb772b9f5390bcafc03
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Is It Too Early To Buy Dutch Bros Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849966
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T16:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=37bdca20adb99133ac8c3a51e9919abf0c54a5fbda6115d353e54f9e76c3ba2f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: 3 ways Dutch Bros is growing beyond drinks
+<<<SUMMARY>>>
+As the chain works toward reaching 2,029 stores by 2029, it is also testing delivery, expanding its food menu and enhancing its digital platform.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849686
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T15:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ad24bfb50ff740a403c37c26fce684fa28cb0ead54f6d6107441b2462267fbd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Can MCD Protect Margins Amid Mid-Single-Digit Food Inflation in 2027?
+<<<SUMMARY>>>
+McDonald's is pursuing selective pricing, expanded value offerings and operating efficiencies as it prepares for elevated food inflation in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840520
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T20:05:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=012df706254185075d612f006c15b067817f636ca335815323744ba414f3672e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: 3 Magnificent Stocks to Buy Before 2027 and Hold for a Decade
+<<<SUMMARY>>>
+These stocks are all down, but they have incredible long-term potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840338
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T15:50:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8d384f8cbb758b2cda78685105b9a7b6e3ddf8f4b8a4e9f110318dcfb1a3641d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: 2 Growth Stocks Down Over 20% to Hold for 10 Years
+<<<SUMMARY>>>
+Two fast-growing consumer brands were just marked down sharply, but their latest results tell a different story.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840125
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T13:52:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e7eb3dbef34faaf69d4e9ce08cb1787425224ab254263431fa781544817b1e7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: 5 Best Restaurant Stocks with Highest Upside
+<<<SUMMARY>>>
+Restaurant stocks have taken sharply different paths in 2026, as pressure on consumer spending has exposed a widening gap between companies that can sustain customer traffic and those struggling to protect sales. While restaurant operators face many of the same challenges, including rising costs and increasingly selective consumers, their stock market performance has been far […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805793
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T01:25:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dedca937d6a506d9073a42b5ffa806e0acdd942fc5bacc6768e6358e90f48428
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros vs. Wendy's: Which Stock Is a Better Buy?
+<<<SUMMARY>>>
+Dutch Bros is adding drive-thru shops at a rapid clip, while Wendy's relies on a franchise model built for steady cash flow. Their valuations tell very different stories.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805221
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:25:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0edf17e7f8581e216c084caa36eb74a1c2b9248804e731c8d46bef275969a7ef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros vs. CAVA: Which Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Dutch Bros trades at a steep discount to CAVA on forward earnings and sales, but its Rebel energy drink reliance and Western concentration raise questions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804660
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=03fe83f1a1a0ec275e724c3e733b29b741cdb1367a21bc97b104047d37691066
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Should You Buy, Sell or Hold Starbucks Stock Post Q4 Earnings?
+<<<SUMMARY>>>
+SBUX's Q4 earnings beat, stronger comparable sales and cost savings fuel its turnaround, but revenue headwinds and rising competition call for caution.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143796943
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T07:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=12ae523c87ceeebe6b5983eefed0e324efb79228b4bd729cee36f1c60eb4e46e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: New Strong Sell Stocks for November 13th
+<<<SUMMARY>>>
+XRAY, BROS and GECC have been added to the Zacks Rank #5 (Strong Sell) List on November 13, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988564
+symbol: BROS
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=acd2959ffcc696668ea6370dfd352fc0d88cca9338968a34725f121a64d5b1f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: BROS
+keywords: 
+headline: Dutch Bros vs. Starbucks: Which Coffee Stock Has Stronger Prospects?
+<<<SUMMARY>>>
+Can BROS' rapid expansion and beverage innovation outshine SBUX's ongoing recovery and stronger earnings momentum in the battle for coffee market growth?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bc1172c4de4c38d71acf12b07cb6800e9e14318e6d71838f492f1652412a659f
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T10:10:00Z
+publisher: The Motley Fool
+author: Geoffrey Seiler
+url: https://www.fool.com/investing/2026/11/08/is-dutch-bros-stock-a-buy-as-shares-plunge/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893645%2Fbros.png&w=1200&op=resize
+category: 
+tickers: BROS, SBUX
+keywords: Dutch Bros, stock valuation, same-store sales growth, expansion strategy, coffee shop operator, comparable-store sales, earnings report, consumer discretionary
+headline: Is Dutch Bros Stock a Buy as Shares Plunge?
+<<<SUMMARY>>>
+Dutch Bros stock has plummeted over 40% this year as investors worry about slowing same-store sales growth and increased competition. However, the author argues the stock is now a bargain, highlighting the company's strong expansion potential (planning 250 new locations in 2027), solid Q3 comparable-store sales growth of 4.4%, and attractive valuation at 1.9x forward P/S ratio compared to Starbucks' 3.2x multiple. The author recommends buying Dutch Bros on this dip.
+<<<INSIGHTS>>>
+BROS | positive | Despite recent stock decline, the author views this as a buying opportunity. The company maintains solid fundamentals with 4.4% comparable-store sales growth, ambitious expansion plans (250 new locations in 2027), efficient unit economics (AUV >$2.2M), and attractive valuation (1.9x P/S) relative to growth potential. The sell-off is attributed to temporary consumer headwinds rather than fundamental business deterioration.
+SBUX | neutral | Mentioned as a valuation comparison point. Starbucks trades at a higher 3.2x forward P/S multiple, but the article uses this to highlight Dutch Bros' relative discount given its superior growth runway, rather than making a direct investment recommendation about Starbucks.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7f753bada9f3f038a08dbd76013f57295ae1e0fd918a451732cedf3884ff930f
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-08T19:45:00Z
+publisher: The Motley Fool
+author: Jennifer Saibil
+url: https://www.fool.com/investing/2026/11/08/once-in-a-decade-opportunity-super-growth-stock/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893390%2Fbroista-handing-hot-drink.png&w=1200&op=resize
+category: 
+tickers: BROS
+keywords: growth stock, earnings disappointment, expansion strategy, same-store sales, coffee chain, long-term investment, stock decline
+headline: A Once-in-a-Decade Opportunity: 1 Super Growth Stock Down 58% to Buy and Hold for a Decade
+<<<SUMMARY>>>
+Dutch Bros stock plummeted 58% after disappointing Q3 earnings guidance, despite strong revenue growth of 30% year-over-year and net income increases. The company lowered full-year outlook on same-store sales growth and adjusted EBITDA, but reaffirmed its goal of 2,029 stores by 2029 and plans to accelerate openings to 250 stores next year. The analyst views the stock decline as a buying opportunity for long-term investors willing to tolerate volatility.
+<<<INSIGHTS>>>
+BROS | positive | Despite the 58% stock decline and lowered guidance, the company demonstrates strong fundamentals with 30% revenue growth, increasing net income, and aggressive expansion plans (250 new stores planned for next year, targeting 2,029 stores by 2029). The analyst expresses high conviction for decade-long holding, viewing the price decline as an attractive entry point for risk-tolerant investors. The company maintains strong customer satisfaction metrics and a differentiated product offering.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:90ab9325285bd8c492a999147ef41b18cb2daa6844c42138043bf4238287550a
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T03:00:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/09/dutch-bros-vs-on-which-stock-is-a-better-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F4b94d60af61ec105db116c55530575df69073d91-2120x1414.jpg&w=1200&op=resize
+category: 
+tickers: BROS, ONON, NKE, ADDYY
+keywords: growth stocks, consumer brands, valuation comparison, revenue growth, expansion strategy, analyst price targets
+headline: Dutch Bros vs. On: Which Stock Is a Better Buy?
+<<<SUMMARY>>>
+The article compares two high-growth consumer stocks: Dutch Bros, a rapidly expanding drive-thru coffee chain with 27.9% revenue growth, and On, a Swiss athletic footwear brand with 30% revenue growth. While On has better valuation metrics and higher profitability margins, the author recommends Dutch Bros as the better buy due to its everyday consumption model, significant expansion potential (targeting 7,000+ locations), and more favorable analyst price targets (60% upside vs. 16% for On).
+<<<INSIGHTS>>>
+BROS | positive | The author recommends Dutch Bros as the better investment choice, citing strong revenue growth (27.9%), improved profitability, significant expansion opportunities (fewer than 30 states currently, targeting 7,000+ locations), favorable analyst outlook with 60% median one-year price target upside, and resilience of coffee as an affordable luxury in economic downturns.
+ONON | neutral | While On demonstrates solid fundamentals with 30% revenue growth, higher net margins (6.8%), and better valuation metrics (lower P/E and P/S ratios), the author views it less favorably due to lower frequency of customer purchases, vulnerability to economic downturns in premium apparel, and more modest analyst price target upside (16.1%).
+NKE | neutral | Mentioned as a major competitor to On in the crowded premium footwear market, indicating competitive pressure but no specific sentiment expressed about the company itself.
+ADDYY | neutral | Mentioned as a major competitor to On in the crowded premium footwear market, indicating competitive pressure but no specific sentiment expressed about the company itself.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:98e47f7ec22aac926a1df29af3e3e6d2464dc902d92c2c49392fbd91e509899b
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:26:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027423/can-sbux-deliver-18-eps-growth-despite-a-1-revenue-decline-in-fy27?cid=CS-ZC-FT-analyst_blog|quick_take-3027423
+image_url: https://staticx-tuner.zacks.com/images/articles/main/05/563.jpg
+category: 
+tickers: SBUX, BROS, MCD
+keywords: EPS growth, revenue decline, China deconsolidation, operating margin expansion, North America comparable sales, Back to Starbucks strategy, cost savings, 53rd week
+headline: Can SBUX Deliver 18% EPS Growth Despite a 1% Revenue Decline in FY27?
+<<<SUMMARY>>>
+Starbucks projects fiscal 2027 EPS growth of 18% at the midpoint ($3.15-$3.25) despite a 1% consolidated revenue decline, driven by China's deconsolidation to a licensed joint venture and operating margin expansion of ~190 basis points. North America comparable sales are expected to grow 4% YoY, with a 53rd week adding $700M in revenues and over 10 cents to EPS. The company's Back to Starbucks strategy and cost savings initiatives are expected to support margin improvement.
+<<<INSIGHTS>>>
+SBUX | positive | Strong EPS growth of 18% projected despite revenue headwinds, supported by margin expansion, North America comp sales growth of 4%, and cost savings realization. Stock has outperformed industry by 26.1% over the past year. Zacks Rank #3 (Hold) with recent consensus estimate increases.
+BROS | neutral | Mentioned as industry peer with 35.7% stock decline over past year and projected 31% earnings growth in 2027, but no direct analysis or comparison to Starbucks' strategy provided.
+MCD | neutral | Referenced as industry peer with 8.6% stock decline over past year and projected 5.5% earnings growth in 2027, but no direct analysis provided. Included only for comparative valuation context.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7536cce4be943a81bcf8e60030b575cb3e4fa59a0cfa803bcd23a0f498e91d60
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T16:12:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027849/should-you-approach-dutch-bros-stock-with-caution-after-q3-results?cid=CS-ZC-FT-analyst_blog|rank_focused-3027849
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a2/35092.jpg
+category: 
+tickers: BROS, MCD, CAVA, CMG
+keywords: Dutch Bros, Q3 2026 earnings, customer traffic decline, occupancy costs, store expansion, profitability concerns, valuation premium, downward earnings revisions
+headline: Should You Approach Dutch Bros Stock With Caution After Q3 Results?
+<<<SUMMARY>>>
+Dutch Bros reported better-than-expected Q3 2026 earnings and revenue with 29.8% year-over-year sales growth and 48 new shop openings. However, the company faces challenges including slower customer traffic growth, higher occupancy expenses, rising food costs, and aggressive expansion plans. The stock trades at a premium valuation and has declined 42.9% year-to-date, earning a Zacks Rank #4 (Sell) rating.
+<<<INSIGHTS>>>
+BROS | negative | Despite beating Q3 earnings estimates and showing strong revenue growth, the company faces significant headwinds including slower customer traffic growth (0.4% systemwide visits vs. 4.7% prior year), elevated occupancy costs rising to 18% of revenues, expected food/packaging cost increases to 27.5%, and downward earnings estimate revisions. The stock trades at a premium 28.64X forward P/E ratio with limited margin for error, and has underperformed peers and broader indices significantly.
+MCD | neutral | Mentioned as an industry peer for comparison purposes. Expected to report 5.8% earnings growth in 2026, outpacing Dutch Bros' challenges, but no specific analysis provided in the article.
+CAVA | neutral | Mentioned as an industry peer for comparison purposes. Expected to report a 1.9% earnings decline in 2026, but no specific analysis provided in the article.
+CMG | neutral | Mentioned as an industry peer for comparison purposes. Expected to report a 6% earnings decline in 2026, but no specific analysis provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:254505fe8f5a3ad46637a5c2fcb8e942c14fa63af4cad2c79f8ac5831dd7edc1
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T19:39:00Z
+publisher: The Motley Fool
+author: Lawrence Rothman, Cfa
+url: https://www.fool.com/investing/2026/11/11/id-buy-dutch-bros-stock-without-any-hesitation/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F889212%2Fgettyimages-1874595483-1280x853-c533c3e.jpg&w=1200&op=resize
+category: 
+tickers: BROS
+keywords: Dutch Bros, stock valuation, growth opportunity, same-store sales growth, expansion, P/E ratio, beverage chain
+headline: I'd Buy Dutch Bros Shares Without Any Hesitation Right Now. Here's the 1 Reason Why.
+<<<SUMMARY>>>
+Dutch Bros stock has declined 42.6% in 2026, but the author argues this presents a buying opportunity. The company maintains strong fundamentals with 14 consecutive quarters of same-store sales growth and aggressive expansion plans (250+ new locations targeted for next year). The key attraction is the valuation: the P/E ratio has fallen from 100 to 46, well below the three-year median of 137, offering a rare combination of growth potential at reasonable valuation.
+<<<INSIGHTS>>>
+BROS | positive | Despite a 42.6% stock price decline in 2026, the author identifies Dutch Bros as an attractive investment due to: (1) consistent operational performance with 14 consecutive quarters of same-store sales growth, (2) significant expansion opportunity with 250+ locations planned for next year, and (3) improved valuation with P/E ratio falling from 100 to 46, creating a rare opportunity to buy a growth company at reasonable valuation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f68f862c857c8b2a41e5289170e52f39d0fc078bc90f7eaa1fb2dc94b2c75e52
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:04:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3028804/can-dutch-bros-250-shop-plan-deliver-growth-despite-cannibalization?cid=CS-ZC-FT-analyst_blog|quick_take-3028804
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a2/35092.jpg
+category: 
+tickers: BROS, SBUX, MCD
+keywords: expansion strategy, cannibalization, shop openings, cash-on-cash returns, market density, company-operated locations, stock performance
+headline: Can Dutch Bros' 250-Shop Plan Deliver Growth Despite Cannibalization?
+<<<SUMMARY>>>
+Dutch Bros plans to open approximately 250 shops in 2027, primarily in existing states, to strengthen market presence despite potential cannibalization risks. New shops are performing above underwriting assumptions with $2M annualized sales and 45% year-two cash-on-cash returns, supporting the expansion to reach 2,029 locations by 2029. However, the stock has declined 27.6% in six months and carries a Zacks Rank #4 (Sell) rating.
+<<<INSIGHTS>>>
+BROS | neutral | While new shop performance metrics are positive (exceeding sales assumptions and showing strong returns), the company faces headwinds from stock decline (-27.6% in 6 months), Zacks Sell rating, and acknowledged cannibalization risks that could pressure future profitability as density increases.
+SBUX | neutral | Mentioned as a competitive comparison with a more selective, balanced approach to expansion (1,200 net new locations globally with emphasis on upgrades and international growth) rather than aggressive domestic density, suggesting a different strategic philosophy.
+MCD | neutral | Presented as a competitive benchmark emphasizing franchisee returns and profitability over rapid expansion, contrasting with Dutch Bros' company-operated model and highlighting different growth strategies in the QSR space.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:04c756103a68f80df9eca4b403a01a996aa5e3c76895c11c6b5ec1fa78841d28
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T07:40:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029188/new-strong-sell-stocks-for-november-13th?cid=CS-ZC-FT-tale_of_the_tape|new_zacks_5_rank_stocks-3029188
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f5/284.jpg
+category: 
+tickers: XRAY, BROS, GECC, GECCG, GECCH, GECCI
+keywords: Strong Sell, earnings revision, downward revision, stock rating
+headline: New Strong Sell Stocks for November 13th
+<<<SUMMARY>>>
+Three companies have been added to the Zacks Rank #5 (Strong Sell) list today due to downward revisions in earnings estimates over the past 60 days. DENTSPLY SIRONA, a medical devices company, saw an 11% downward revision. Dutch Bros, a drive-thru restaurant operator, experienced a 5.2% downward revision. Great Elm Capital Corp., a business development company, faced a 5.5% downward revision.
+<<<INSIGHTS>>>
+XRAY | negative | Added to Zacks Rank #5 (Strong Sell) list with 11% downward revision to current year earnings estimates over the last 60 days, indicating deteriorating financial outlook.
+BROS | negative | Added to Zacks Rank #5 (Strong Sell) list with 5.2% downward revision to current year earnings estimates over the last 60 days, suggesting weakening business performance.
+GECC | negative | Added to Zacks Rank #5 (Strong Sell) list with 5.5% downward revision to current year earnings estimates over the last 60 days, indicating negative earnings momentum.
+GECCG | negative | Added to Zacks Rank #5 (Strong Sell) list with 5.5% downward revision to current year earnings estimates over the last 60 days, indicating negative earnings momentum.
+GECCH | negative | Added to Zacks Rank #5 (Strong Sell) list with 5.5% downward revision to current year earnings estimates over the last 60 days, indicating negative earnings momentum.
+GECCI | negative | Added to Zacks Rank #5 (Strong Sell) list with 5.5% downward revision to current year earnings estimates over the last 60 days, indicating negative earnings momentum.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1ffa1ae870219b96d566bb030f7f10b99fb4094b7cb8444bdc0f9f479d903c94
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T15:13:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029644/should-you-buy-sell-or-hold-starbucks-stock-post-q4-earnings?cid=CS-ZC-FT-analyst_blog|rank_focused-3029644
+image_url: https://staticx-tuner.zacks.com/images/articles/main/42/519.jpg
+category: 
+tickers: SBUX, MCD, BROS
+keywords: earnings beat, revenue miss, comparable sales growth, margin expansion, China licensing transition, cost savings, beverage competition, loyalty program, coffeehouse upgrades
+headline: Should You Buy, Sell or Hold Starbucks Stock Post Q4 Earnings?
+<<<SUMMARY>>>
+Starbucks reported mixed Q4 fiscal 2026 results with EPS beating estimates by 9.6% while revenues missed by 1.4%. The company projects fiscal 2027 EPS growth of ~18% supported by sales leverage and cost savings, but faces headwinds from China's licensing transition, higher product costs, and intensifying beverage competition. Analysts recommend a Hold rating, suggesting investors maintain positions while awaiting better entry points.
+<<<INSIGHTS>>>
+SBUX | neutral | Mixed results with strong EPS beat and comparable sales growth offset by revenue miss, China transition headwinds, and competitive pressures. Positive earnings recovery outlook for fiscal 2027 is tempered by near-term revenue decline expectations and execution risks, warranting a Hold recommendation.
+MCD | negative | Mentioned as a competitive threat expanding specialty beverages and reinforcing value proposition, which could limit Starbucks' pricing and traffic momentum. Stock declined 10.3% year-to-date.
+BROS | negative | Identified as a competitive threat accelerating shop development and introducing new products. Stock significantly underperformed, declining 44.9% year-to-date, indicating broader challenges in the beverage category.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:43588ec33e36bfcfc1378832647f81436e5b9aa28c588a54e7cae4d9abd526cf
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-14T01:05:01Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/13/dutch-bros-vs-wendy-s-which-stock-is-a-better-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F9034862da0560e8658025d922127ff68b8fda2f0-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: BROS, WEN
+keywords: restaurant stocks, expansion strategy, franchise model, revenue growth, valuation comparison, risk profile, quick-service restaurants
+headline: Dutch Bros vs. Wendy's: Which Stock Is a Better Buy?
+<<<SUMMARY>>>
+Dutch Bros and Wendy's represent different investment strategies in the restaurant sector. Dutch Bros pursues aggressive expansion with 27.9% revenue growth and plans to reach 2,000 locations by 2029, while Wendy's operates a mature franchise model generating steady cash flow but facing a 3.1% revenue decline. The choice depends on whether investors prefer growth potential or current profitability and dividend income.
+<<<INSIGHTS>>>
+BROS | positive | Strong revenue growth of 27.9% YoY, rapid store expansion (48 new stores in Q3 2026), net income of $117.3M, and ambitious growth plans to reach 2,000+ locations by 2029 demonstrate significant expansion potential, though tempered by rising occupancy costs and geographic concentration risks.
+WEN | neutral | Mature business with declining revenue (-3.1% YoY) and net income down 49.2% in first nine months of 2026, but maintains profitability with 7.6% net margin, offers a 5.99% dividend yield, and shows promise in breakfast offerings that could generate up to $200M in additional EBITDA. Represents a turnaround story rather than growth opportunity.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:80e94a5b0f55915658c6b8fda6ff2c8f80eed987467c263faab24640eb47f943
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T15:30:02Z
+publisher: The Motley Fool
+author: John Ballard
+url: https://www.fool.com/investing/2026/11/15/2-growth-stocks-down-over-20-to-hold-for-10-years/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F3752b0b6d888857fdb7abbe082176585d6437a7a-4000x2667.jpg&w=1200&op=resize
+category: 
+tickers: ONON, BROS
+keywords: growth stocks, premium footwear, drive-thru coffee, full-price strategy, brand loyalty, long-term investing, market downturn, earnings growth
+headline: 2 Growth Stocks Down Over 20% to Hold for 10 Years
+<<<SUMMARY>>>
+On Holding and Dutch Bros, both down over 20% this year, present buying opportunities for long-term investors. On Holding maintains strong fundamentals with record sales and highest-ever gross margins while successfully maintaining premium pricing. Dutch Bros continues robust growth with 30% year-over-year revenue increase and a clear expansion path to 2,029 shops by 2029, supported by its strong 'Broista' brand culture.
+<<<INSIGHTS>>>
+ONON | positive | Despite 24% year-to-date decline, the company shows strengthening fundamentals with record sales, highest gross margins in company history (66.9%), successful full-price strategy, and strong earnings growth expectations (25% annualized). Forward P/E of 17 appears attractive relative to growth prospects.
+BROS | positive | Despite 43% year-to-date decline, Q3 revenue grew 30% year-over-year, new shop sales exceed targets, and shop-level contribution margins are healthy at 28.1%. Clear expansion path to 2,029 shops by 2029 with strong brand differentiation through customer experience. Expected 36% annualized earnings growth supports long-term potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:07ab709f270089005067547015753ec520f5db8abb1535b4283357af68ee4722
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T19:45:02Z
+publisher: The Motley Fool
+author: Jennifer Saibil
+url: https://www.fool.com/investing/2026/11/15/3-magnificent-stocks-to-buy-before-2027-and-hold-for-a-decade/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fdf6f15fe48e8eaeb1c5be4d31d6c4c511da7e06f-1599x1066.jpg&w=1200&op=resize
+category: 
+tickers: BROS, MELI, ONON
+keywords: stock recommendations, long-term investing, growth stocks, e-commerce, beverage retail, athletic wear, Latin America expansion, digital finance
+headline: 3 Magnificent Stocks to Buy Before 2027 and Hold for a Decade
+<<<SUMMARY>>>
+The article recommends three underperforming stocks with strong long-term potential: Dutch Bros (down 43%) is expanding aggressively with plans to nearly double store count by 2029; MercadoLibre (down 25%) is investing heavily in growth across e-commerce and fintech in Latin America; and On Holding (down 25%) maintains premium positioning with high gross margins despite inflationary pressures.
+<<<INSIGHTS>>>
+BROS | positive | Despite 43% year-to-date decline, company shows strong fundamentals with 30% revenue growth, expanding store count from 1,273 to projected 2,029 by 2029, and improving net income. Management navigating near-term cost pressures but positioned for long-term shareholder returns.
+MELI | positive | Down 25% but demonstrating exceptional growth metrics (45% sales growth, 38% GMV increase, 53% payment volume growth). Current margin compression from strategic investments expected to drive future profitability at scale in underpenetrated Latin American e-commerce and fintech markets.
+ONON | positive | Down 25% but outperforming competitors with 17% sales growth and industry-leading 66.9% gross margin despite inflation. Premium brand positioning with affluent, resilient customer base and clear path to maintain 65% gross margins through 2029.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c7172d1bd9b268be4cb6db7448163922de77b5417f955253de9cdcdb86ee57a2
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T15:56:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3030500/can-mcd-protect-margins-amid-mid-single-digit-food-inflation-in-2027?cid=CS-ZC-FT-analyst_blog|quick_take-3030500
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f6/355.jpg
+category: 
+tickers: MCD, SBUX, BROS
+keywords: food inflation, margin protection, value bundles, pricing strategy, operating efficiency, quick service restaurants
+headline: Can MCD Protect Margins Amid Mid-Single-Digit Food Inflation in 2027?
+<<<SUMMARY>>>
+McDonald's expects mid-single-digit food and paper inflation in 2027 and plans to protect margins through selective pricing, value bundles, and operating efficiencies. Entry-level bundles covering over 40% of U.S. locations will launch nationally in early 2027, with existing Extra Value Meals showing 7% unit sales growth. Competitors like Starbucks and Dutch Bros are also managing cost pressures through margin initiatives and pricing strategies.
+<<<INSIGHTS>>>
+MCD | neutral | McDonald's faces mid-single-digit inflation headwinds but has demonstrated ability to manage margins through value initiatives and selective pricing. Stock has underperformed (down 10.8% YoY) and trades at premium valuation (P/S 6.76 vs industry 3.25). Zacks Rank #3 (Hold) reflects balanced outlook with execution risks on margin protection.
+SBUX | positive | Starbucks expects consolidated operating margin expansion of ~190 basis points in fiscal 2027, supported by sales leverage, cost savings, and labor efficiency gains. Company has realized half of targeted gross savings with margin contribution expected to improve further.
+BROS | neutral | Dutch Bros faces persistent elevated coffee and occupancy costs into 2027, though company-operated shop contribution margin expanded 30 basis points YoY to 28.1%. Company sees opportunities for operating leverage but may need further price increases if coffee costs remain elevated.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cb0f598e3fa9b617e7bc9a4adeb38834c89e3b02ea4de926accb953c45ee155e
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T19:33:01Z
+publisher: The Motley Fool
+author: Anders Bylund
+url: https://www.fool.com/investing/2026/11/17/should-you-buy-dutch-bros-stock-before-the-end-of-november/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fef163a386899e9fece5f1ada93c167aa9bb34331-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: BROS
+keywords: Dutch Bros, stock valuation, growth stock, same-store sales, expansion strategy, earnings multiple, restaurant chain
+headline: Should You Buy Dutch Bros Stock Before the End of November?
+<<<SUMMARY>>>
+Dutch Bros stock has fallen 43% in 2026 despite the company's aggressive expansion plans. While Q3 results showed concerning trends—revenue growth of 30% driven mainly by price increases rather than customer traffic growth—the stock now trades at a modest 30x forward earnings multiple for a high-growth company. The author suggests the stock looks tempting after the sell-off for long-term investors, though the November deadline is arbitrary.
+<<<INSIGHTS>>>
+BROS | neutral | Mixed signals: negative near-term performance (43% YTD decline, slowing customer traffic growth, lowered guidance) balanced against positive long-term fundamentals (aggressive expansion on track, 250 new locations planned for 2027, reasonable valuation at 30x forward earnings for a 30% revenue growth company). The author presents both concerns and opportunities without a strong directional recommendation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:478f487251c912cd1ed1139d859c275ba758d59891007ee2395f757eb9de5a4c
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T20:22:02Z
+publisher: The Motley Fool
+author: Will Healy
+url: https://www.fool.com/investing/2026/11/17/history-says-stocks-tend-to-rise-after-a-midterm-election-3-stocks-that-should-serve-investors-well-over-the-next-year-and-beyond/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F689b9e96171fc753154105aa5ad159988cb87282-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: RCL, MELI, BROS, SBUX, CMG
+keywords: midterm elections, stock market, consumer discretionary, cruise industry, e-commerce, coffee chains, expansion strategy, valuation opportunity
+headline: History Says Stocks Tend to Rise After a Midterm Election: 3 Stocks That Should Serve Investors Well Over the Next Year and Beyond
+<<<SUMMARY>>>
+Following the 2026 midterm elections, historical market trends suggest stocks tend to rise in the subsequent year. The article highlights three overlooked consumer discretionary stocks positioned for growth: Royal Caribbean, benefiting from strong cruise demand and pricing power; MercadoLibre, expanding aggressively despite near-term profitability pressures; and Dutch Bros, executing regional-to-national expansion similar to successful blue-chip chains.
+<<<INSIGHTS>>>
+RCL | positive | Record demand, strong pricing power, 111% occupancy rates, 9% revenue growth, and attractive 20x P/E valuation despite higher debt load recovery from pandemic.
+MELI | positive | 48% revenue growth despite near-term profitability challenges; stock down 40% from peak creating multiyear low P/E below 40, positioning it as a buying opportunity once investments translate to profits.
+BROS | positive | 31% revenue growth, 38% net income growth, on-track expansion to 2,029 locations by 2029, and P/E around 48 suggests undervaluation given growth trajectory similar to Starbucks and Chipotle.
+SBUX | neutral | Mentioned as a comparable company for Dutch Bros' expansion strategy; no direct investment recommendation or analysis provided.
+CMG | neutral | Referenced as a historical example of successful regional-to-national expansion; no direct analysis or recommendation included.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a2051595e3b6ee3a83e3c3112390abe6d4ba5aa5265e13005e6c659fa1be2e16
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T10:14:02Z
+publisher: The Motley Fool
+author: Sarah Sidlow
+url: https://www.fool.com/coverage/charts/2026/11/19/dutch-bros-vs-cava-revenue-trends-may-be-misleading-here-s-what-else-to-watch/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fcharts%2Fproduction%2Fprocessed%2Fbros-cava%2Fquarter%2Frevenue%2Fbar%2Fprimary%2Fstandard%2Flimit-8%2Flatest%2Fbros-cava_quarter_revenue_bar_primary_standard_limit8.png&w=1200&op=resize
+category: 
+tickers: BROS, CAVA
+keywords: revenue growth, quarterly earnings, fast-casual restaurants, profitability, geographic expansion, fiscal calendar, operating margins
+headline: Dutch Bros vs. CAVA: Revenue Trends May Be Misleading. Here's What Else to Watch.
+<<<SUMMARY>>>
+Dutch Bros demonstrates steadier revenue growth with higher quarterly totals and stronger profitability metrics compared to CAVA, which shows more volatile quarterly fluctuations partly due to differing fiscal calendar lengths. While both fast-casual restaurant chains are growing rapidly, Dutch Bros trades at a discount to CAVA on forward earnings and sales, though investors should monitor debt levels and whether both companies meet their ambitious expansion goals.
+<<<INSIGHTS>>>
+BROS | positive | Demonstrates consistent quarter-over-quarter revenue growth, higher net profit, stronger operating margins, faster profit growth relative to sales, and trades at a discount to CAVA on forward earnings and sales metrics.
+CAVA | neutral | Shows solid long-term growth (27.88% 3-year CAGR) and reached 500th restaurant milestone, but displays pronounced quarterly revenue fluctuations and lower profitability metrics compared to Dutch Bros, warranting cautious monitoring of debt and execution.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:768002e050a8642889861d9befec1f4345805679df18e3f1de896d54f6361bf0
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:46:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032672/can-bros-doordash-pilot-unlock-growth-beyond-the-drive-thru?cid=CS-ZC-FT-analyst_blog|quick_take-3032672
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a2/35092.jpg
+category: 
+tickers: BROS, SBUX, MCD
+keywords: delivery expansion, DoorDash partnership, digital ordering, drive-thru model, incremental growth, beverage industry
+headline: Can BROS' DoorDash Pilot Unlock Growth Beyond the Drive-Thru?
+<<<SUMMARY>>>
+Dutch Bros is piloting delivery service with DoorDash across several markets to reach customers beyond its drive-thru locations. The company aims to capitalize on elevated delivery platform searches and leverage its growing digital infrastructure, with Order Ahead representing 17% of Q3 2026 visits. However, BROS stock has declined 35.6% in the past six months and carries a Zacks Rank #5 (Strong Sell) rating.
+<<<INSIGHTS>>>
+BROS | neutral | While the DoorDash pilot represents a strategic growth initiative with seamless early execution and strong digital adoption (17% Order Ahead penetration), the stock has significantly underperformed (-35.6% in 6 months) and carries a Strong Sell rating. The initiative shows promise but is offset by negative market performance and analyst downgrade.
+SBUX | positive | Starbucks has established a successful delivery platform with U.S. delivery revenues tripling over five years and largely incremental transactions. The company is enhancing digital capabilities by integrating delivery into its app in fiscal 2027 with rewards integration, demonstrating strong execution and market leadership.
+MCD | positive | McDonald's leverages its extensive restaurant network and third-party delivery partnerships to drive mid-to-high-single-digit delivery growth. The company's established operations, strong delivery provider relationships, and focus on managing pricing demonstrate effective execution and incremental sales generation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:583d77904b7bcba7e4edc60ddb52ef29009a842f793f54b2c3f8a24fe1ed08c6
+symbol: BROS
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T14:39:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033231/dutch-bros-vs-starbucks-which-coffee-stock-has-stronger-prospects?cid=CS-ZC-FT-analyst_blog|comparison_of_stocks-3033231
+image_url: https://staticx-tuner.zacks.com/images/articles/main/df/56762.jpg
+category: 
+tickers: BROS, SBUX
+keywords: specialty coffee market, same-shop sales growth, store expansion, comparable sales, customer engagement, earnings estimates, operating costs, menu innovation
+headline: Dutch Bros vs. Starbucks: Which Coffee Stock Has Stronger Prospects?
+<<<SUMMARY>>>
+Dutch Bros and Starbucks are competing in the specialty coffee market with different strategies. Dutch Bros achieved 14 consecutive quarters of positive same-shop sales and plans to expand to 2,029 shops by 2029, but faces rising occupancy costs and downward earnings revisions. Starbucks is showing stronger recovery momentum with 7.2% global comparable sales growth, improving store execution, and upward earnings estimate revisions. Analysts favor Starbucks (Hold) over Dutch Bros (Sell) due to better earnings trends and operational performance.
+<<<INSIGHTS>>>
+BROS | negative | Despite 14 consecutive quarters of positive same-shop sales and solid expansion plans, Dutch Bros faces headwinds from rising occupancy costs (up 100 basis points YoY), downward earnings estimate revisions (2026 EPS revised down from $0.98 to $0.92), tougher customer visit comparisons ahead, and stock underperformance (-44.2% YTD). The company carries a Zacks Rank #4 (Sell) rating.
+SBUX | positive | Starbucks demonstrates sustained recovery with 7.2% global comparable sales growth, improving store-level execution with over 80% of North American stores showing positive comps, record Rewards membership at 36 million, and upward earnings estimate revisions (fiscal 2027 EPS revised up from $3.16 to $3.21). Stock has gained 24.1% YTD and carries a Zacks Rank #3 (Hold) rating, indicating better momentum than Dutch Bros.
+<<<END>>>

@@ -1,0 +1,2955 @@
+{
+ "_note": "Recorded from the replay server by scripts/record_proving.mjs (GET /api/proving/critic-report). The answer in `data` is exactly what the page received.",
+ "source": "GET /api/proving/critic-report",
+ "data": {
+  "min_sample": 20,
+  "chance_band": 2,
+  "limits": [
+   "The outcomes of overlapping weeks are not independent of one another, so the standard errors flatter a result.",
+   "A rule that was chosen on one window can only be confirmed by later outcomes: judge each rule on the weeks that came after it was set.",
+   "The stocks are those of a few themes, in one stretch of the market."
+  ],
+  "sentences": {
+   "denies_winners": "Denies winners: {hit} did better than {rest} by {points} points, more than chance gives with this many.",
+   "picks_losers": "Picks losers: {hit} did worse than {rest} by {points} points, more than chance gives with this many.",
+   "no_clear_difference": "No clear difference: a gap of {points} points is what chance alone gives with this many.",
+   "too_few": "Too few to say: the smaller group has {n} with an outcome, and {min_sample} are needed.",
+   "suitability": "A suitability rule (the user's own risk profile): it is listed and never judged by returns."
+  },
+  "runs": [
+   {
+    "run_id": "tm-20261120-201643-1cab",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "faithful",
+    "created_utc": "2026-11-20T20:50:09Z",
+    "reviewed": 53
+   },
+   {
+    "run_id": "tm-20261120-205106-f631",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "faithful",
+    "created_utc": "2026-11-20T20:58:23Z",
+    "reviewed": 9
+   },
+   {
+    "run_id": "tm-20261120-205834-43ba",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "faithful",
+    "created_utc": "2026-11-20T20:58:36Z",
+    "reviewed": 0
+   },
+   {
+    "run_id": "tm-20261120-210213-78af",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "faithful",
+    "created_utc": "2026-11-20T21:02:32Z",
+    "reviewed": 0
+   },
+   {
+    "run_id": "tm-20261120-211429-acda",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "faithful",
+    "created_utc": "2026-11-20T21:19:27Z",
+    "reviewed": 9
+   },
+   {
+    "run_id": "tm-20261120-212546-3505",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "faithful",
+    "created_utc": "2026-11-20T21:28:57Z",
+    "reviewed": 10
+   },
+   {
+    "run_id": "tm-20261120-213136-8cba",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T21:33:55Z",
+    "reviewed": 10
+   },
+   {
+    "run_id": "tm-20261120-213436-fced",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T21:37:57Z",
+    "reviewed": 10
+   },
+   {
+    "run_id": "tm-20261120-214117-6fc2",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T21:42:01Z",
+    "reviewed": 10
+   },
+   {
+    "run_id": "tm-20261120-214729-ba86",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T21:48:48Z",
+    "reviewed": 64
+   },
+   {
+    "run_id": "tm-20261120-215021-0008",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "faithful",
+    "created_utc": "2026-11-20T21:56:22Z",
+    "reviewed": 19
+   },
+   {
+    "run_id": "tm-20261120-215729-864a",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T21:57:32Z",
+    "reviewed": 0
+   },
+   {
+    "run_id": "tm-20261120-215757-bc1e",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T21:58:03Z",
+    "reviewed": 0
+   },
+   {
+    "run_id": "tm-20261120-215823-f611",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T21:58:30Z",
+    "reviewed": 0
+   },
+   {
+    "run_id": "tm-20261120-222822-1221",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T22:30:05Z",
+    "reviewed": 59
+   },
+   {
+    "run_id": "tm-20261120-232020-db7f",
+    "kind": "time_machine",
+    "theme": "AI stocks",
+    "prompt": "Buy the 5 most recommended \"AI stocks\" with $5,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T23:23:19Z",
+    "reviewed": 91
+   },
+   {
+    "run_id": "tm-20261120-232408-013c",
+    "kind": "time_machine",
+    "theme": "restaurant",
+    "prompt": "Buy the 5 most recommended restaurant stocks with $5,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T23:25:45Z",
+    "reviewed": 45
+   },
+   {
+    "run_id": "tm-20261120-232616-e1c6",
+    "kind": "time_machine",
+    "theme": "consumer staples",
+    "prompt": "Buy the 5 most recommended consumer staples stocks with $5,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-20T23:27:44Z",
+    "reviewed": 31
+   },
+   {
+    "run_id": "tm-20261121-000738-2fa2",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-21T00:09:12Z",
+    "reviewed": 85
+   },
+   {
+    "run_id": "tm-20261121-000943-53a3",
+    "kind": "time_machine",
+    "theme": "AI stocks",
+    "prompt": "Buy the 5 most recommended \"AI stocks\" with $5,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-21T00:11:42Z",
+    "reviewed": 88
+   },
+   {
+    "run_id": "tm-20261121-001213-3904",
+    "kind": "time_machine",
+    "theme": "restaurant",
+    "prompt": "Buy the 5 most recommended restaurant stocks with $5,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-21T00:13:39Z",
+    "reviewed": 53
+   },
+   {
+    "run_id": "tm-20261121-001346-c3c2",
+    "kind": "time_machine",
+    "theme": "consumer staples",
+    "prompt": "Buy the 5 most recommended consumer staples stocks with $5,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-21T00:15:12Z",
+    "reviewed": 34
+   },
+   {
+    "run_id": "tm-20261121-001609-b691",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-21T00:17:55Z",
+    "reviewed": 80
+   },
+   {
+    "run_id": "tm-20261121-001802-21e8",
+    "kind": "time_machine",
+    "theme": "oil",
+    "prompt": "Buy the 3 most recommended oil stocks with $3,000, split evenly",
+    "speed": "fast",
+    "created_utc": "2026-11-21T00:20:47Z",
+    "reviewed": 86
+   },
+   {
+    "run_id": "track-20261121-0043",
+    "kind": "track",
+    "theme": "live sessions",
+    "prompt": null,
+    "speed": "faithful",
+    "created_utc": "2026-11-21T00:43:51Z",
+    "reviewed": 29
+   }
+  ],
+  "themes": [
+   "AI stocks",
+   "consumer staples",
+   "live sessions",
+   "oil",
+   "restaurant"
+  ],
+  "config_versions": [
+   "1",
+   "2"
+  ],
+  "unmatched": 53,
+  "by_config_version": {
+   "1": {
+    "config_version": "1",
+    "reviewed": 447,
+    "population": 389,
+    "suitability_excluded": 58,
+    "verdict": {
+     "code": "denied",
+     "kind": "verdict",
+     "suitability": false,
+     "fired": 139,
+     "hit": {
+      "n": 122,
+      "closed": 118,
+      "won": 86,
+      "mean_excess": 0.003419
+     },
+     "rest": {
+      "n": 214,
+      "closed": 208,
+      "won": 134,
+      "mean_excess": 0.006161
+     },
+     "gap": -0.002742,
+     "se": 0.005827,
+     "inside_chance": true,
+     "sentence_code": "no_clear_difference",
+     "sentence": "No clear difference: a gap of 0.3 points is what chance alone gives with this many.",
+     "by_theme": {
+      "AI stocks": {
+       "n": 21,
+       "closed": 21,
+       "won": 18,
+       "mean_excess": 0.014378,
+       "rest_n": 28,
+       "rest_closed": 26,
+       "rest_won": 12,
+       "rest_mean_excess": -0.006767,
+       "gap": 0.021144,
+       "se": 0.008183,
+       "inside_chance": false,
+       "sentence_code": "denies_winners"
+      },
+      "consumer staples": {
+       "n": 5,
+       "closed": 4,
+       "won": 3,
+       "mean_excess": 0.008836,
+       "rest_n": 22,
+       "rest_closed": 22,
+       "rest_won": 16,
+       "rest_mean_excess": 0.010677,
+       "gap": -0.001841,
+       "se": 0.017656,
+       "inside_chance": true,
+       "sentence_code": "too_few"
+      },
+      "live sessions": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null,
+       "rest_n": 12,
+       "rest_closed": 11,
+       "rest_won": 0,
+       "rest_mean_excess": -0.000072,
+       "gap": null,
+       "se": null,
+       "inside_chance": null,
+       "sentence_code": "too_few"
+      },
+      "oil": {
+       "n": 85,
+       "closed": 85,
+       "won": 62,
+       "mean_excess": -0.002403,
+       "rest_n": 127,
+       "rest_closed": 127,
+       "rest_won": 95,
+       "rest_mean_excess": 0.006665,
+       "gap": -0.009067,
+       "se": 0.00619,
+       "inside_chance": true,
+       "sentence_code": "no_clear_difference"
+      },
+      "restaurant": {
+       "n": 11,
+       "closed": 8,
+       "won": 3,
+       "mean_excess": 0.025021,
+       "rest_n": 25,
+       "rest_closed": 22,
+       "rest_won": 11,
+       "rest_mean_excess": 0.017101,
+       "gap": 0.00792,
+       "se": 0.039403,
+       "inside_chance": true,
+       "sentence_code": "too_few"
+      }
+     }
+    },
+    "rows": [
+     {
+      "code": "blend_not_supported",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 58,
+      "hit": {
+       "n": 41,
+       "closed": 40,
+       "won": 37,
+       "mean_excess": 0.012422
+      },
+      "rest": {
+       "n": 295,
+       "closed": 286,
+       "won": 183,
+       "mean_excess": 0.004157
+      },
+      "gap": 0.008265,
+      "se": 0.004977,
+      "inside_chance": true,
+      "sentence_code": "no_clear_difference",
+      "sentence": "No clear difference: a gap of 0.8 points is what chance alone gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 7,
+        "closed": 7,
+        "won": 7,
+        "mean_excess": 0.018907,
+        "rest_n": 42,
+        "rest_closed": 40,
+        "rest_won": 23,
+        "rest_mean_excess": -0.000474,
+        "gap": 0.01938,
+        "se": 0.006927,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 3,
+        "closed": 2,
+        "won": 2,
+        "mean_excess": 0.027288,
+        "rest_n": 24,
+        "rest_closed": 24,
+        "rest_won": 17,
+        "rest_mean_excess": 0.008218,
+        "gap": 0.01907,
+        "se": 0.012127,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 27,
+        "closed": 27,
+        "won": 26,
+        "mean_excess": 0.015447,
+        "rest_n": 185,
+        "rest_closed": 185,
+        "rest_won": 131,
+        "rest_mean_excess": 0.001217,
+        "gap": 0.01423,
+        "se": 0.004952,
+        "inside_chance": false,
+        "sentence_code": "denies_winners"
+       },
+       "restaurant": {
+        "n": 4,
+        "closed": 4,
+        "won": 2,
+        "mean_excess": -0.030493,
+        "rest_n": 32,
+        "rest_closed": 26,
+        "rest_won": 12,
+        "rest_mean_excess": 0.025773,
+        "gap": -0.056265,
+        "se": 0.028763,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "overpriced",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 38,
+      "hit": {
+       "n": 24,
+       "closed": 24,
+       "won": 9,
+       "mean_excess": -0.035881
+      },
+      "rest": {
+       "n": 312,
+       "closed": 302,
+       "won": 211,
+       "mean_excess": 0.008323
+      },
+      "gap": -0.044204,
+      "se": 0.013421,
+      "inside_chance": false,
+      "sentence_code": "picks_losers",
+      "sentence": "Picks losers: what it fired on did worse than the others by 4.4 points, more than chance gives with this many.",
+      "by_theme": {
+       "oil": {
+        "n": 23,
+        "closed": 23,
+        "won": 9,
+        "mean_excess": -0.034642,
+        "rest_n": 189,
+        "rest_closed": 189,
+        "rest_won": 148,
+        "rest_mean_excess": 0.007614,
+        "gap": -0.042256,
+        "se": 0.013925,
+        "inside_chance": false,
+        "sentence_code": "picks_losers"
+       },
+       "restaurant": {
+        "n": 1,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.064388,
+        "rest_n": 35,
+        "rest_closed": 29,
+        "rest_won": 14,
+        "rest_mean_excess": 0.021918,
+        "gap": -0.086306,
+        "se": 0.017033,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "valuation_extreme",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 18,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 336,
+       "closed": 326,
+       "won": 220,
+       "mean_excess": 0.005166
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {}
+     },
+     {
+      "code": "fresh_negative_event",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 6,
+      "hit": {
+       "n": 5,
+       "closed": 5,
+       "won": 5,
+       "mean_excess": 0.024933
+      },
+      "rest": {
+       "n": 331,
+       "closed": 321,
+       "won": 215,
+       "mean_excess": 0.004867
+      },
+      "gap": 0.020066,
+      "se": 0.003464,
+      "inside_chance": false,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 5 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "oil": {
+        "n": 5,
+        "closed": 5,
+        "won": 5,
+        "mean_excess": 0.024933,
+        "rest_n": 207,
+        "rest_closed": 207,
+        "rest_won": 152,
+        "rest_mean_excess": 0.0025,
+        "gap": 0.022432,
+        "se": 0.003623,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "dead_cat_bounce",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 5,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 336,
+       "closed": 326,
+       "won": 220,
+       "mean_excess": 0.005166
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {}
+     },
+     {
+      "code": "market_closed",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 2,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 336,
+       "closed": 326,
+       "won": 220,
+       "mean_excess": 0.005166
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 12,
+        "rest_closed": 11,
+        "rest_won": 0,
+        "rest_mean_excess": -0.000072,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "falling_knife",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 1,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 336,
+       "closed": 326,
+       "won": 220,
+       "mean_excess": 0.005166
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {}
+     },
+     {
+      "code": "price_mismatch",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 1,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 336,
+       "closed": 326,
+       "won": 220,
+       "mean_excess": 0.005166
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 12,
+        "rest_closed": 11,
+        "rest_won": 0,
+        "rest_mean_excess": -0.000072,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "stop_already_hit",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 1,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 336,
+       "closed": 326,
+       "won": 220,
+       "mean_excess": 0.005166
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 12,
+        "rest_closed": 11,
+        "rest_won": 0,
+        "rest_mean_excess": -0.000072,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "fresh_negative_news",
+      "kind": "human",
+      "suitability": false,
+      "fired": 107,
+      "hit": {
+       "n": 78,
+       "closed": 74,
+       "won": 62,
+       "mean_excess": 0.016933
+      },
+      "rest": {
+       "n": 258,
+       "closed": 252,
+       "won": 158,
+       "mean_excess": 0.001608
+      },
+      "gap": 0.015325,
+      "se": 0.006017,
+      "inside_chance": false,
+      "sentence_code": "denies_winners",
+      "sentence": "Denies winners: what it fired on did better than the others by 1.5 points, more than chance gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 19,
+        "closed": 19,
+        "won": 16,
+        "mean_excess": 0.012866,
+        "rest_n": 30,
+        "rest_closed": 28,
+        "rest_won": 14,
+        "rest_mean_excess": -0.0044,
+        "gap": 0.017266,
+        "se": 0.007967,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 5,
+        "closed": 4,
+        "won": 3,
+        "mean_excess": 0.008836,
+        "rest_n": 22,
+        "rest_closed": 22,
+        "rest_won": 16,
+        "rest_mean_excess": 0.010677,
+        "gap": -0.001841,
+        "se": 0.017656,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 12,
+        "rest_closed": 11,
+        "rest_won": 0,
+        "rest_mean_excess": -0.000072,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 47,
+        "closed": 47,
+        "won": 42,
+        "mean_excess": 0.013263,
+        "rest_n": 165,
+        "rest_closed": 165,
+        "rest_won": 115,
+        "rest_mean_excess": 0.000114,
+        "gap": 0.013149,
+        "se": 0.005298,
+        "inside_chance": false,
+        "sentence_code": "denies_winners"
+       },
+       "restaurant": {
+        "n": 7,
+        "closed": 4,
+        "won": 1,
+        "mean_excess": 0.058395,
+        "rest_n": 29,
+        "rest_closed": 26,
+        "rest_won": 13,
+        "rest_mean_excess": 0.010137,
+        "gap": 0.048257,
+        "se": 0.0522,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "company_mismatch",
+      "kind": "human",
+      "suitability": false,
+      "fired": 35,
+      "hit": {
+       "n": 16,
+       "closed": 16,
+       "won": 11,
+       "mean_excess": 0.000092
+      },
+      "rest": {
+       "n": 320,
+       "closed": 310,
+       "won": 209,
+       "mean_excess": 0.005419
+      },
+      "gap": -0.005327,
+      "se": 0.013906,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 16 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 2,
+        "closed": 2,
+        "won": 2,
+        "mean_excess": 0.028735,
+        "rest_n": 47,
+        "rest_closed": 45,
+        "rest_won": 28,
+        "rest_mean_excess": 0.00117,
+        "gap": 0.027565,
+        "se": 0.006074,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 14,
+        "closed": 14,
+        "won": 9,
+        "mean_excess": -0.004,
+        "rest_n": 198,
+        "rest_closed": 198,
+        "rest_won": 148,
+        "rest_mean_excess": 0.003526,
+        "gap": -0.007526,
+        "se": 0.015586,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "high_52w_differs",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 235,
+      "hit": {
+       "n": 176,
+       "closed": 176,
+       "won": 147,
+       "mean_excess": 0.015077
+      },
+      "rest": {
+       "n": 160,
+       "closed": 150,
+       "won": 73,
+       "mean_excess": -0.005737
+      },
+      "gap": 0.020815,
+      "se": 0.005425,
+      "inside_chance": false,
+      "sentence_code": "denies_winners",
+      "sentence": "Denies winners: what it fired on did better than the others by 2.1 points, more than chance gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 12,
+        "closed": 12,
+        "won": 8,
+        "mean_excess": 0.00348,
+        "rest_n": 37,
+        "rest_closed": 35,
+        "rest_won": 22,
+        "rest_mean_excess": 0.001911,
+        "gap": 0.001569,
+        "se": 0.012848,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 20,
+        "closed": 20,
+        "won": 16,
+        "mean_excess": 0.014742,
+        "rest_n": 7,
+        "rest_closed": 6,
+        "rest_won": 3,
+        "rest_mean_excess": -0.00225,
+        "gap": 0.016992,
+        "se": 0.016301,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 143,
+        "closed": 143,
+        "won": 122,
+        "mean_excess": 0.016066,
+        "rest_n": 69,
+        "rest_closed": 69,
+        "rest_won": 35,
+        "rest_mean_excess": -0.023988,
+        "gap": 0.040054,
+        "se": 0.006413,
+        "inside_chance": false,
+        "sentence_code": "denies_winners"
+       },
+       "restaurant": {
+        "n": 1,
+        "closed": 1,
+        "won": 1,
+        "mean_excess": 0.019645,
+        "rest_n": 35,
+        "rest_closed": 29,
+        "rest_won": 13,
+        "rest_mean_excess": 0.019517,
+        "gap": 0.000128,
+        "se": 0.017211,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "rich_price",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 126,
+      "hit": {
+       "n": 92,
+       "closed": 91,
+       "won": 51,
+       "mean_excess": -0.005466
+      },
+      "rest": {
+       "n": 244,
+       "closed": 235,
+       "won": 169,
+       "mean_excess": 0.009174
+      },
+      "gap": -0.014641,
+      "se": 0.005571,
+      "inside_chance": false,
+      "sentence_code": "picks_losers",
+      "sentence": "Picks losers: what it fired on did worse than the others by 1.5 points, more than chance gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 11,
+        "closed": 11,
+        "won": 8,
+        "mean_excess": 0.000613,
+        "rest_n": 38,
+        "rest_closed": 36,
+        "rest_won": 22,
+        "rest_mean_excess": 0.002782,
+        "gap": -0.002168,
+        "se": 0.014968,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 6,
+        "closed": 6,
+        "won": 5,
+        "mean_excess": 0.009637,
+        "rest_n": 21,
+        "rest_closed": 20,
+        "rest_won": 14,
+        "rest_mean_excess": 0.010536,
+        "gap": -0.000899,
+        "se": 0.012165,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "live sessions": {
+        "n": 9,
+        "closed": 8,
+        "won": 0,
+        "mean_excess": -0.000174,
+        "rest_n": 3,
+        "rest_closed": 3,
+        "rest_won": 0,
+        "rest_mean_excess": 0.000233,
+        "gap": -0.000407,
+        "se": 0.005217,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 62,
+        "closed": 62,
+        "won": 35,
+        "mean_excess": -0.00834,
+        "rest_n": 150,
+        "rest_closed": 150,
+        "rest_won": 122,
+        "rest_mean_excess": 0.007729,
+        "gap": -0.016068,
+        "se": 0.006662,
+        "inside_chance": false,
+        "sentence_code": "picks_losers"
+       },
+       "restaurant": {
+        "n": 4,
+        "closed": 4,
+        "won": 3,
+        "mean_excess": -0.012209,
+        "rest_n": 32,
+        "rest_closed": 26,
+        "rest_won": 11,
+        "rest_mean_excess": 0.023487,
+        "gap": -0.035696,
+        "se": 0.036705,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "single_publisher",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 59,
+      "hit": {
+       "n": 42,
+       "closed": 40,
+       "won": 34,
+       "mean_excess": 0.017871
+      },
+      "rest": {
+       "n": 294,
+       "closed": 286,
+       "won": 186,
+       "mean_excess": 0.00335
+      },
+      "gap": 0.014521,
+      "se": 0.01022,
+      "inside_chance": true,
+      "sentence_code": "no_clear_difference",
+      "sentence": "No clear difference: a gap of 1.5 points is what chance alone gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 1,
+        "closed": 1,
+        "won": 1,
+        "mean_excess": 0.026749,
+        "rest_n": 48,
+        "rest_closed": 46,
+        "rest_won": 29,
+        "rest_mean_excess": 0.001786,
+        "gap": 0.024963,
+        "se": 0.004785,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 1,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.043094,
+        "rest_n": 26,
+        "rest_closed": 25,
+        "rest_won": 19,
+        "rest_mean_excess": 0.012391,
+        "gap": -0.055485,
+        "se": 0.006479,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "live sessions": {
+        "n": 1,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": 0.015813,
+        "rest_n": 11,
+        "rest_closed": 10,
+        "rest_won": 0,
+        "rest_mean_excess": -0.001516,
+        "gap": 0.017329,
+        "se": 0.003912,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 37,
+        "closed": 37,
+        "won": 33,
+        "mean_excess": 0.00595,
+        "rest_n": 175,
+        "rest_closed": 175,
+        "rest_won": 124,
+        "rest_mean_excess": 0.002412,
+        "gap": 0.003538,
+        "se": 0.00612,
+        "inside_chance": true,
+        "sentence_code": "no_clear_difference"
+       },
+       "restaurant": {
+        "n": 2,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": 0.265485,
+        "rest_n": 34,
+        "rest_closed": 30,
+        "rest_won": 14,
+        "rest_mean_excess": 0.005052,
+        "gap": 0.260432,
+        "se": 0.014444,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "source_not_tagged",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 30,
+      "hit": {
+       "n": 18,
+       "closed": 18,
+       "won": 14,
+       "mean_excess": 0.013818
+      },
+      "rest": {
+       "n": 318,
+       "closed": 308,
+       "won": 206,
+       "mean_excess": 0.004676
+      },
+      "gap": 0.009142,
+      "se": 0.00812,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 18 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 1,
+        "closed": 1,
+        "won": 1,
+        "mean_excess": 0.030899,
+        "rest_n": 48,
+        "rest_closed": 46,
+        "rest_won": 29,
+        "rest_mean_excess": 0.001699,
+        "gap": 0.0292,
+        "se": 0.004775,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "live sessions": {
+        "n": 1,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.000098,
+        "rest_n": 11,
+        "rest_closed": 10,
+        "rest_won": 0,
+        "rest_mean_excess": -0.00007,
+        "gap": -0.000028,
+        "se": 0.004219,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 12,
+        "closed": 12,
+        "won": 10,
+        "mean_excess": 0.016874,
+        "rest_n": 200,
+        "rest_closed": 200,
+        "rest_won": 147,
+        "rest_mean_excess": 0.002199,
+        "gap": 0.014675,
+        "se": 0.011284,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "restaurant": {
+        "n": 4,
+        "closed": 4,
+        "won": 3,
+        "mean_excess": 0.003858,
+        "rest_n": 32,
+        "rest_closed": 26,
+        "rest_won": 11,
+        "rest_mean_excess": 0.021479,
+        "gap": -0.017621,
+        "se": 0.021125,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "evidence_old",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 23,
+      "hit": {
+       "n": 18,
+       "closed": 18,
+       "won": 16,
+       "mean_excess": 0.013367
+      },
+      "rest": {
+       "n": 318,
+       "closed": 308,
+       "won": 204,
+       "mean_excess": 0.004701
+      },
+      "gap": 0.008666,
+      "se": 0.009788,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 18 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 4,
+        "closed": 4,
+        "won": 4,
+        "mean_excess": 0.017735,
+        "rest_n": 45,
+        "rest_closed": 43,
+        "rest_won": 26,
+        "rest_mean_excess": 0.000923,
+        "gap": 0.016813,
+        "se": 0.00821,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 12,
+        "closed": 12,
+        "won": 10,
+        "mean_excess": 0.010596,
+        "rest_n": 200,
+        "rest_closed": 200,
+        "rest_won": 147,
+        "rest_mean_excess": 0.002575,
+        "gap": 0.008021,
+        "se": 0.014364,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "restaurant": {
+        "n": 2,
+        "closed": 2,
+        "won": 2,
+        "mean_excess": 0.021259,
+        "rest_n": 34,
+        "rest_closed": 28,
+        "rest_won": 12,
+        "rest_mean_excess": 0.019419,
+        "gap": 0.00184,
+        "se": 0.018137,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "weak_chart",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 20,
+      "hit": {
+       "n": 13,
+       "closed": 7,
+       "won": 4,
+       "mean_excess": 0.07536
+      },
+      "rest": {
+       "n": 323,
+       "closed": 319,
+       "won": 216,
+       "mean_excess": 0.00234
+      },
+      "gap": 0.07302,
+      "se": 0.036795,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 13 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 3,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.02146,
+        "rest_n": 46,
+        "rest_closed": 46,
+        "rest_won": 30,
+        "rest_mean_excess": 0.003844,
+        "gap": -0.025304,
+        "se": 0.040236,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 12,
+        "rest_closed": 11,
+        "rest_won": 0,
+        "rest_mean_excess": -0.000072,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 2,
+        "closed": 2,
+        "won": 2,
+        "mean_excess": 0.034741,
+        "rest_n": 210,
+        "rest_closed": 210,
+        "rest_won": 155,
+        "rest_mean_excess": 0.002727,
+        "gap": 0.032014,
+        "se": 0.002887,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "restaurant": {
+        "n": 8,
+        "closed": 4,
+        "won": 2,
+        "mean_excess": 0.121823,
+        "rest_n": 28,
+        "rest_closed": 26,
+        "rest_won": 12,
+        "rest_mean_excess": -0.009708,
+        "gap": 0.131531,
+        "se": 0.053282,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "death_cross",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 10,
+      "hit": {
+       "n": 8,
+       "closed": 5,
+       "won": 3,
+       "mean_excess": -0.009229
+      },
+      "rest": {
+       "n": 328,
+       "closed": 321,
+       "won": 217,
+       "mean_excess": 0.005517
+      },
+      "gap": -0.014746,
+      "se": 0.017032,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 8 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 3,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.02146,
+        "rest_n": 46,
+        "rest_closed": 46,
+        "rest_won": 30,
+        "rest_mean_excess": 0.003844,
+        "gap": -0.025304,
+        "se": 0.040236,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 1,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": 0.029643,
+        "rest_n": 26,
+        "rest_closed": 26,
+        "rest_won": 19,
+        "rest_mean_excess": 0.009594,
+        "gap": 0.020049,
+        "se": 0.006778,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 12,
+        "rest_closed": 11,
+        "rest_won": 0,
+        "rest_mean_excess": -0.000072,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 1,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.065646,
+        "rest_n": 211,
+        "rest_closed": 211,
+        "rest_won": 157,
+        "rest_mean_excess": 0.003355,
+        "gap": -0.069001,
+        "se": 0.002863,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "restaurant": {
+        "n": 3,
+        "closed": 3,
+        "won": 3,
+        "mean_excess": 0.008849,
+        "rest_n": 33,
+        "rest_closed": 27,
+        "rest_won": 11,
+        "rest_mean_excess": 0.020491,
+        "gap": -0.011642,
+        "se": 0.018755,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "price_below_zone",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 1,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 336,
+       "closed": 326,
+       "won": 220,
+       "mean_excess": 0.005166
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 12,
+        "rest_closed": 11,
+        "rest_won": 0,
+        "rest_mean_excess": -0.000072,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "risk_above_profile",
+      "kind": "blocker",
+      "suitability": true,
+      "fired": 58,
+      "hit": {
+       "n": 46,
+       "closed": 44,
+       "won": 33,
+       "mean_excess": 0.010579
+      },
+      "rest": {
+       "n": 336,
+       "closed": 326,
+       "won": 220,
+       "mean_excess": 0.005166
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "suitability",
+      "sentence": "A suitability rule (the user's own risk profile): it is listed and never judged by returns.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 30,
+        "closed": 30,
+        "won": 26,
+        "mean_excess": 0.016545,
+        "rest_n": 49,
+        "rest_closed": 47,
+        "rest_won": 30,
+        "rest_mean_excess": 0.002295,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "suitability"
+       },
+       "live sessions": {
+        "n": 9,
+        "closed": 7,
+        "won": 1,
+        "mean_excess": -0.019469,
+        "rest_n": 12,
+        "rest_closed": 11,
+        "rest_won": 0,
+        "rest_mean_excess": -0.000072,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "suitability"
+       },
+       "oil": {
+        "n": 2,
+        "closed": 2,
+        "won": 2,
+        "mean_excess": 0.040815,
+        "rest_n": 212,
+        "rest_closed": 212,
+        "rest_won": 157,
+        "rest_mean_excess": 0.003029,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "suitability"
+       },
+       "restaurant": {
+        "n": 5,
+        "closed": 5,
+        "won": 4,
+        "mean_excess": 0.016769,
+        "rest_n": 36,
+        "rest_closed": 30,
+        "rest_won": 14,
+        "rest_mean_excess": 0.019521,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "suitability"
+       }
+      }
+     }
+    ],
+    "by_family": [
+     {
+      "family": "capital_return",
+      "n": 10,
+      "closed": 2,
+      "won": 0,
+      "mean_excess": 0.125314,
+      "denied": {
+       "n": 3,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": 0.185371
+      },
+      "approved": {
+       "n": 7,
+       "closed": 2,
+       "won": 0,
+       "mean_excess": 0.099575
+      },
+      "gap": 0.085796,
+      "se": 0.074364,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 3 with an outcome, and 20 are needed."
+     },
+     {
+      "family": "conviction",
+      "n": 121,
+      "closed": 119,
+      "won": 109,
+      "mean_excess": 0.010779,
+      "denied": {
+       "n": 57,
+       "closed": 56,
+       "won": 48,
+       "mean_excess": 0.0047
+      },
+      "approved": {
+       "n": 64,
+       "closed": 63,
+       "won": 61,
+       "mean_excess": 0.016194
+      },
+      "gap": -0.011494,
+      "se": 0.005497,
+      "inside_chance": false,
+      "sentence_code": "picks_losers",
+      "sentence": "Picks losers: the denied did worse than the approved by 1.1 points, more than chance gives with this many."
+     },
+     {
+      "family": "event",
+      "n": 12,
+      "closed": 12,
+      "won": 8,
+      "mean_excess": -0.005146,
+      "denied": {
+       "n": 7,
+       "closed": 7,
+       "won": 6,
+       "mean_excess": 0.003757
+      },
+      "approved": {
+       "n": 5,
+       "closed": 5,
+       "won": 2,
+       "mean_excess": -0.017611
+      },
+      "gap": 0.021368,
+      "se": 0.018139,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 5 with an outcome, and 20 are needed."
+     },
+     {
+      "family": "trend",
+      "n": 193,
+      "closed": 193,
+      "won": 103,
+      "mean_excess": -0.003938,
+      "denied": {
+       "n": 55,
+       "closed": 55,
+       "won": 32,
+       "mean_excess": -0.007876
+      },
+      "approved": {
+       "n": 138,
+       "closed": 138,
+       "won": 71,
+       "mean_excess": -0.002369
+      },
+      "gap": -0.005508,
+      "se": 0.007902,
+      "inside_chance": true,
+      "sentence_code": "no_clear_difference",
+      "sentence": "No clear difference: a gap of 0.6 points is what chance alone gives with this many."
+     }
+    ]
+   },
+   "2": {
+    "config_version": "2",
+    "reviewed": 428,
+    "population": 382,
+    "suitability_excluded": 46,
+    "verdict": {
+     "code": "denied",
+     "kind": "verdict",
+     "suitability": false,
+     "fired": 108,
+     "hit": {
+      "n": 94,
+      "closed": 94,
+      "won": 37,
+      "mean_excess": -0.012333
+     },
+     "rest": {
+      "n": 231,
+      "closed": 220,
+      "won": 166,
+      "mean_excess": 0.010304
+     },
+     "gap": -0.022638,
+     "se": 0.006508,
+     "inside_chance": false,
+     "sentence_code": "picks_losers",
+     "sentence": "Picks losers: the denied did worse than the approved by 2.3 points, more than chance gives with this many.",
+     "by_theme": {
+      "AI stocks": {
+       "n": 10,
+       "closed": 10,
+       "won": 2,
+       "mean_excess": 0.014371,
+       "rest_n": 39,
+       "rest_closed": 37,
+       "rest_won": 24,
+       "rest_mean_excess": -0.004184,
+       "gap": 0.018555,
+       "se": 0.015797,
+       "inside_chance": true,
+       "sentence_code": "too_few"
+      },
+      "consumer staples": {
+       "n": 8,
+       "closed": 8,
+       "won": 5,
+       "mean_excess": 0.008992,
+       "rest_n": 20,
+       "rest_closed": 19,
+       "rest_won": 16,
+       "rest_mean_excess": 0.01235,
+       "gap": -0.003358,
+       "se": 0.014816,
+       "inside_chance": true,
+       "sentence_code": "too_few"
+      },
+      "live sessions": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null,
+       "rest_n": 0,
+       "rest_closed": 0,
+       "rest_won": 0,
+       "rest_mean_excess": null,
+       "gap": null,
+       "se": null,
+       "inside_chance": null,
+       "sentence_code": "too_few"
+      },
+      "oil": {
+       "n": 63,
+       "closed": 63,
+       "won": 26,
+       "mean_excess": -0.016106,
+       "rest_n": 142,
+       "rest_closed": 142,
+       "rest_won": 111,
+       "rest_mean_excess": 0.006073,
+       "gap": -0.022179,
+       "se": 0.00777,
+       "inside_chance": false,
+       "sentence_code": "picks_losers"
+      },
+      "restaurant": {
+       "n": 13,
+       "closed": 13,
+       "won": 4,
+       "mean_excess": -0.027714,
+       "rest_n": 30,
+       "rest_closed": 22,
+       "rest_won": 15,
+       "rest_mean_excess": 0.047806,
+       "gap": -0.07552,
+       "se": 0.0229,
+       "inside_chance": false,
+       "sentence_code": "too_few"
+      }
+     }
+    },
+    "rows": [
+     {
+      "code": "trend_not_confirmed",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 87,
+      "hit": {
+       "n": 69,
+       "closed": 69,
+       "won": 13,
+       "mean_excess": -0.029512
+      },
+      "rest": {
+       "n": 256,
+       "closed": 245,
+       "won": 190,
+       "mean_excess": 0.012724
+      },
+      "gap": -0.042236,
+      "se": 0.006615,
+      "inside_chance": false,
+      "sentence_code": "picks_losers",
+      "sentence": "Picks losers: what it fired on did worse than the others by 4.2 points, more than chance gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 8,
+        "closed": 8,
+        "won": 0,
+        "mean_excess": -0.001824,
+        "rest_n": 41,
+        "rest_closed": 39,
+        "rest_won": 26,
+        "rest_mean_excess": -0.000119,
+        "gap": -0.001705,
+        "se": 0.007446,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 7,
+        "closed": 7,
+        "won": 4,
+        "mean_excess": 0.008161,
+        "rest_n": 21,
+        "rest_closed": 20,
+        "rest_won": 17,
+        "rest_mean_excess": 0.012467,
+        "gap": -0.004305,
+        "se": 0.016526,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 43,
+        "closed": 43,
+        "won": 6,
+        "mean_excess": -0.041655,
+        "rest_n": 162,
+        "rest_closed": 162,
+        "rest_won": 131,
+        "rest_mean_excess": 0.010116,
+        "gap": -0.051771,
+        "se": 0.008121,
+        "inside_chance": false,
+        "sentence_code": "picks_losers"
+       },
+       "restaurant": {
+        "n": 11,
+        "closed": 11,
+        "won": 3,
+        "mean_excess": -0.026152,
+        "rest_n": 32,
+        "rest_closed": 24,
+        "rest_won": 16,
+        "rest_mean_excess": 0.042549,
+        "gap": -0.068701,
+        "se": 0.02291,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "overpriced",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 46,
+      "hit": {
+       "n": 31,
+       "closed": 31,
+       "won": 18,
+       "mean_excess": -0.009565
+      },
+      "rest": {
+       "n": 294,
+       "closed": 283,
+       "won": 185,
+       "mean_excess": 0.005162
+      },
+      "gap": -0.014727,
+      "se": 0.013595,
+      "inside_chance": true,
+      "sentence_code": "no_clear_difference",
+      "sentence": "No clear difference: a gap of 1.5 points is what chance alone gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 1,
+        "closed": 1,
+        "won": 1,
+        "mean_excess": 0.142992,
+        "rest_n": 48,
+        "rest_closed": 46,
+        "rest_won": 25,
+        "rest_mean_excess": -0.003384,
+        "gap": 0.146376,
+        "se": 0.004945,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 29,
+        "closed": 29,
+        "won": 17,
+        "mean_excess": -0.012935,
+        "rest_n": 176,
+        "rest_closed": 176,
+        "rest_won": 120,
+        "rest_mean_excess": 0.001266,
+        "gap": -0.014201,
+        "se": 0.013319,
+        "inside_chance": true,
+        "sentence_code": "no_clear_difference"
+       },
+       "restaurant": {
+        "n": 1,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.064388,
+        "rest_n": 42,
+        "rest_closed": 34,
+        "rest_won": 19,
+        "rest_mean_excess": 0.027102,
+        "gap": -0.09149,
+        "se": 0.015484,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "valuation_extreme",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 14,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 325,
+       "closed": 314,
+       "won": 203,
+       "mean_excess": 0.003757
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {}
+     },
+     {
+      "code": "fresh_negative_event",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 7,
+      "hit": {
+       "n": 5,
+       "closed": 5,
+       "won": 4,
+       "mean_excess": 0.011181
+      },
+      "rest": {
+       "n": 320,
+       "closed": 309,
+       "won": 199,
+       "mean_excess": 0.003641
+      },
+      "gap": 0.00754,
+      "se": 0.009232,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 5 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "consumer staples": {
+        "n": 1,
+        "closed": 1,
+        "won": 1,
+        "mean_excess": 0.014804,
+        "rest_n": 27,
+        "rest_closed": 26,
+        "rest_won": 20,
+        "rest_mean_excess": 0.011264,
+        "gap": 0.00354,
+        "se": 0.006138,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 4,
+        "closed": 4,
+        "won": 3,
+        "mean_excess": 0.010275,
+        "rest_n": 201,
+        "rest_closed": 201,
+        "rest_won": 134,
+        "rest_mean_excess": -0.000963,
+        "gap": 0.011238,
+        "se": 0.011632,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "market_closed",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 2,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 325,
+       "closed": 314,
+       "won": 203,
+       "mean_excess": 0.003757
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 0,
+        "rest_closed": 0,
+        "rest_won": 0,
+        "rest_mean_excess": null,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "dead_cat_bounce",
+      "kind": "blocker",
+      "suitability": false,
+      "fired": 1,
+      "hit": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "rest": {
+       "n": 325,
+       "closed": 314,
+       "won": 203,
+       "mean_excess": 0.003757
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed.",
+      "by_theme": {}
+     },
+     {
+      "code": "company_mismatch",
+      "kind": "human",
+      "suitability": false,
+      "fired": 1,
+      "hit": {
+       "n": 1,
+       "closed": 1,
+       "won": 0,
+       "mean_excess": 0.005593
+      },
+      "rest": {
+       "n": 324,
+       "closed": 313,
+       "won": 203,
+       "mean_excess": 0.003751
+      },
+      "gap": 0.001842,
+      "se": 0.00305,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 1 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "oil": {
+        "n": 1,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": 0.005593,
+        "rest_n": 204,
+        "rest_closed": 204,
+        "rest_won": 137,
+        "rest_mean_excess": -0.000774,
+        "gap": 0.006367,
+        "se": 0.003199,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "high_52w_differs",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 241,
+      "hit": {
+       "n": 178,
+       "closed": 178,
+       "won": 143,
+       "mean_excess": 0.014044
+      },
+      "rest": {
+       "n": 147,
+       "closed": 136,
+       "won": 60,
+       "mean_excess": -0.008699
+      },
+      "gap": 0.022743,
+      "se": 0.006353,
+      "inside_chance": false,
+      "sentence_code": "denies_winners",
+      "sentence": "Denies winners: what it fired on did better than the others by 2.3 points, more than chance gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 10,
+        "closed": 10,
+        "won": 7,
+        "mean_excess": 0.016914,
+        "rest_n": 39,
+        "rest_closed": 37,
+        "rest_won": 19,
+        "rest_mean_excess": -0.004836,
+        "gap": 0.02175,
+        "se": 0.017824,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 21,
+        "closed": 21,
+        "won": 18,
+        "mean_excess": 0.016053,
+        "rest_n": 7,
+        "rest_closed": 6,
+        "rest_won": 3,
+        "rest_mean_excess": -0.002599,
+        "gap": 0.018652,
+        "se": 0.015831,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 146,
+        "closed": 146,
+        "won": 117,
+        "mean_excess": 0.01352,
+        "rest_n": 59,
+        "rest_closed": 59,
+        "rest_won": 20,
+        "rest_mean_excess": -0.036039,
+        "gap": 0.049559,
+        "se": 0.00731,
+        "inside_chance": false,
+        "sentence_code": "denies_winners"
+       },
+       "restaurant": {
+        "n": 1,
+        "closed": 1,
+        "won": 1,
+        "mean_excess": 0.019645,
+        "rest_n": 42,
+        "rest_closed": 34,
+        "rest_won": 18,
+        "rest_mean_excess": 0.025101,
+        "gap": -0.005456,
+        "se": 0.015636,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "rich_price",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 108,
+      "hit": {
+       "n": 80,
+       "closed": 80,
+       "won": 45,
+       "mean_excess": -0.008636
+      },
+      "rest": {
+       "n": 245,
+       "closed": 234,
+       "won": 158,
+       "mean_excess": 0.007804
+      },
+      "gap": -0.01644,
+      "se": 0.006218,
+      "inside_chance": false,
+      "sentence_code": "picks_losers",
+      "sentence": "Picks losers: what it fired on did worse than the others by 1.6 points, more than chance gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 10,
+        "closed": 10,
+        "won": 7,
+        "mean_excess": 0.010202,
+        "rest_n": 39,
+        "rest_closed": 37,
+        "rest_won": 19,
+        "rest_mean_excess": -0.003115,
+        "gap": 0.013317,
+        "se": 0.011839,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 6,
+        "closed": 6,
+        "won": 5,
+        "mean_excess": 0.009637,
+        "rest_n": 22,
+        "rest_closed": 21,
+        "rest_won": 16,
+        "rest_mean_excess": 0.011868,
+        "gap": -0.002231,
+        "se": 0.011563,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 59,
+        "closed": 59,
+        "won": 30,
+        "mean_excess": -0.013201,
+        "rest_n": 146,
+        "rest_closed": 146,
+        "rest_won": 107,
+        "rest_mean_excess": 0.004291,
+        "gap": -0.017492,
+        "se": 0.007157,
+        "inside_chance": false,
+        "sentence_code": "picks_losers"
+       },
+       "restaurant": {
+        "n": 5,
+        "closed": 5,
+        "won": 3,
+        "mean_excess": -0.014379,
+        "rest_n": 38,
+        "rest_closed": 30,
+        "rest_won": 16,
+        "rest_mean_excess": 0.030152,
+        "gap": -0.044531,
+        "se": 0.029908,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "fresh_negative_news",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 82,
+      "hit": {
+       "n": 67,
+       "closed": 65,
+       "won": 49,
+       "mean_excess": 0.010043
+      },
+      "rest": {
+       "n": 258,
+       "closed": 249,
+       "won": 154,
+       "mean_excess": 0.002125
+      },
+      "gap": 0.007918,
+      "se": 0.006957,
+      "inside_chance": true,
+      "sentence_code": "no_clear_difference",
+      "sentence": "No clear difference: a gap of 0.8 points is what chance alone gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 16,
+        "closed": 16,
+        "won": 11,
+        "mean_excess": -0.004119,
+        "rest_n": 33,
+        "rest_closed": 31,
+        "rest_won": 15,
+        "rest_mean_excess": 0.001408,
+        "gap": -0.005526,
+        "se": 0.011508,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 6,
+        "closed": 6,
+        "won": 6,
+        "mean_excess": 0.01733,
+        "rest_n": 22,
+        "rest_closed": 21,
+        "rest_won": 15,
+        "rest_mean_excess": 0.00977,
+        "gap": 0.00756,
+        "se": 0.011604,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 37,
+        "closed": 37,
+        "won": 29,
+        "mean_excess": 0.010631,
+        "rest_n": 168,
+        "rest_closed": 168,
+        "rest_won": 108,
+        "rest_mean_excess": -0.003248,
+        "gap": 0.013879,
+        "se": 0.007194,
+        "inside_chance": true,
+        "sentence_code": "no_clear_difference"
+       },
+       "restaurant": {
+        "n": 8,
+        "closed": 6,
+        "won": 3,
+        "mean_excess": 0.03018,
+        "rest_n": 35,
+        "rest_closed": 29,
+        "rest_won": 16,
+        "rest_mean_excess": 0.023785,
+        "gap": 0.006395,
+        "se": 0.04148,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "blend_not_supported",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 61,
+      "hit": {
+       "n": 48,
+       "closed": 47,
+       "won": 38,
+       "mean_excess": 0.000389
+      },
+      "rest": {
+       "n": 277,
+       "closed": 267,
+       "won": 165,
+       "mean_excess": 0.004341
+      },
+      "gap": -0.003952,
+      "se": 0.006371,
+      "inside_chance": true,
+      "sentence_code": "no_clear_difference",
+      "sentence": "No clear difference: a gap of 0.4 points is what chance alone gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 5,
+        "closed": 5,
+        "won": 3,
+        "mean_excess": -0.028432,
+        "rest_n": 44,
+        "rest_closed": 42,
+        "rest_won": 23,
+        "rest_mean_excess": 0.002789,
+        "gap": -0.031221,
+        "se": 0.024634,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 5,
+        "closed": 4,
+        "won": 4,
+        "mean_excess": 0.012231,
+        "rest_n": 23,
+        "rest_closed": 23,
+        "rest_won": 17,
+        "rest_mean_excess": 0.011207,
+        "gap": 0.001024,
+        "se": 0.008735,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 29,
+        "closed": 29,
+        "won": 25,
+        "mean_excess": 0.007052,
+        "rest_n": 176,
+        "rest_closed": 176,
+        "rest_won": 112,
+        "rest_mean_excess": -0.002028,
+        "gap": 0.00908,
+        "se": 0.007146,
+        "inside_chance": true,
+        "sentence_code": "no_clear_difference"
+       },
+       "restaurant": {
+        "n": 9,
+        "closed": 9,
+        "won": 6,
+        "mean_excess": -0.01165,
+        "rest_n": 34,
+        "rest_closed": 26,
+        "rest_won": 13,
+        "rest_mean_excess": 0.034669,
+        "gap": -0.04632,
+        "se": 0.023362,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "single_publisher",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 45,
+      "hit": {
+       "n": 26,
+       "closed": 26,
+       "won": 24,
+       "mean_excess": 0.01301
+      },
+      "rest": {
+       "n": 299,
+       "closed": 288,
+       "won": 179,
+       "mean_excess": 0.002952
+      },
+      "gap": 0.010057,
+      "se": 0.006755,
+      "inside_chance": true,
+      "sentence_code": "no_clear_difference",
+      "sentence": "No clear difference: a gap of 1.0 points is what chance alone gives with this many.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 2,
+        "closed": 2,
+        "won": 1,
+        "mean_excess": -0.028496,
+        "rest_n": 47,
+        "rest_closed": 45,
+        "rest_won": 25,
+        "rest_mean_excess": 0.000799,
+        "gap": -0.029294,
+        "se": 0.041051,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 1,
+        "closed": 1,
+        "won": 1,
+        "mean_excess": 0.019356,
+        "rest_n": 27,
+        "rest_closed": 26,
+        "rest_won": 20,
+        "rest_mean_excess": 0.011095,
+        "gap": 0.008261,
+        "se": 0.006132,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 22,
+        "closed": 22,
+        "won": 22,
+        "mean_excess": 0.02081,
+        "rest_n": 183,
+        "rest_closed": 183,
+        "rest_won": 115,
+        "rest_mean_excess": -0.003335,
+        "gap": 0.024145,
+        "se": 0.004934,
+        "inside_chance": false,
+        "sentence_code": "denies_winners"
+       },
+       "restaurant": {
+        "n": 1,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.081935,
+        "rest_n": 42,
+        "rest_closed": 34,
+        "rest_won": 19,
+        "rest_mean_excess": 0.02752,
+        "gap": -0.109455,
+        "se": 0.015418,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "evidence_old",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 21,
+      "hit": {
+       "n": 13,
+       "closed": 13,
+       "won": 6,
+       "mean_excess": -0.027489
+      },
+      "rest": {
+       "n": 312,
+       "closed": 301,
+       "won": 197,
+       "mean_excess": 0.005059
+      },
+      "gap": -0.032548,
+      "se": 0.016028,
+      "inside_chance": false,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 13 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "oil": {
+        "n": 10,
+        "closed": 10,
+        "won": 5,
+        "mean_excess": -0.026392,
+        "rest_n": 195,
+        "rest_closed": 195,
+        "rest_won": 132,
+        "rest_mean_excess": 0.000572,
+        "gap": -0.026964,
+        "se": 0.01996,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "restaurant": {
+        "n": 3,
+        "closed": 3,
+        "won": 1,
+        "mean_excess": -0.031146,
+        "rest_n": 40,
+        "rest_closed": 32,
+        "rest_won": 18,
+        "rest_mean_excess": 0.029183,
+        "gap": -0.060329,
+        "se": 0.029321,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "source_not_tagged",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 21,
+      "hit": {
+       "n": 14,
+       "closed": 14,
+       "won": 12,
+       "mean_excess": 0.011349
+      },
+      "rest": {
+       "n": 311,
+       "closed": 300,
+       "won": 191,
+       "mean_excess": 0.003415
+      },
+      "gap": 0.007934,
+      "se": 0.010301,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 14 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "consumer staples": {
+        "n": 1,
+        "closed": 1,
+        "won": 1,
+        "mean_excess": 0.061893,
+        "rest_n": 27,
+        "rest_closed": 26,
+        "rest_won": 20,
+        "rest_mean_excess": 0.00952,
+        "gap": 0.052373,
+        "se": 0.005824,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 8,
+        "closed": 8,
+        "won": 7,
+        "mean_excess": 0.013527,
+        "rest_n": 197,
+        "rest_closed": 197,
+        "rest_won": 130,
+        "rest_mean_excess": -0.001323,
+        "gap": 0.014849,
+        "se": 0.015785,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "restaurant": {
+        "n": 5,
+        "closed": 5,
+        "won": 4,
+        "mean_excess": -0.002244,
+        "rest_n": 38,
+        "rest_closed": 30,
+        "rest_won": 15,
+        "rest_mean_excess": 0.028556,
+        "gap": -0.0308,
+        "se": 0.018103,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "weak_chart",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 14,
+      "hit": {
+       "n": 12,
+       "closed": 4,
+       "won": 2,
+       "mean_excess": 0.116981
+      },
+      "rest": {
+       "n": 313,
+       "closed": 310,
+       "won": 201,
+       "mean_excess": -0.000584
+      },
+      "gap": 0.117565,
+      "se": 0.039717,
+      "inside_chance": false,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 12 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 3,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.02146,
+        "rest_n": 46,
+        "rest_closed": 46,
+        "rest_won": 26,
+        "rest_mean_excess": 0.000977,
+        "gap": -0.022437,
+        "se": 0.040382,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "oil": {
+        "n": 2,
+        "closed": 2,
+        "won": 2,
+        "mean_excess": 0.034741,
+        "rest_n": 203,
+        "rest_closed": 203,
+        "rest_won": 135,
+        "rest_mean_excess": -0.001093,
+        "gap": 0.035834,
+        "se": 0.003205,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "restaurant": {
+        "n": 7,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": 0.19981,
+        "rest_n": 36,
+        "rest_closed": 34,
+        "rest_won": 19,
+        "rest_mean_excess": -0.009022,
+        "gap": 0.208832,
+        "se": 0.044091,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "death_cross",
+      "kind": "warning",
+      "suitability": false,
+      "fired": 8,
+      "hit": {
+       "n": 8,
+       "closed": 3,
+       "won": 2,
+       "mean_excess": 0.025352
+      },
+      "rest": {
+       "n": 317,
+       "closed": 311,
+       "won": 201,
+       "mean_excess": 0.003212
+      },
+      "gap": 0.022141,
+      "se": 0.031222,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 8 with an outcome, and 20 are needed.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 3,
+        "closed": 1,
+        "won": 0,
+        "mean_excess": -0.02146,
+        "rest_n": 46,
+        "rest_closed": 46,
+        "rest_won": 26,
+        "rest_mean_excess": 0.000977,
+        "gap": -0.022437,
+        "se": 0.040382,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       },
+       "consumer staples": {
+        "n": 1,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": 0.029643,
+        "rest_n": 27,
+        "rest_closed": 27,
+        "rest_won": 21,
+        "rest_mean_excess": 0.010714,
+        "gap": 0.018929,
+        "se": 0.006099,
+        "inside_chance": false,
+        "sentence_code": "too_few"
+       },
+       "restaurant": {
+        "n": 4,
+        "closed": 2,
+        "won": 2,
+        "mean_excess": 0.059389,
+        "rest_n": 39,
+        "rest_closed": 33,
+        "rest_won": 17,
+        "rest_mean_excess": 0.021445,
+        "gap": 0.037944,
+        "se": 0.055042,
+        "inside_chance": true,
+        "sentence_code": "too_few"
+       }
+      }
+     },
+     {
+      "code": "risk_above_profile",
+      "kind": "blocker",
+      "suitability": true,
+      "fired": 46,
+      "hit": {
+       "n": 35,
+       "closed": 35,
+       "won": 28,
+       "mean_excess": 0.012623
+      },
+      "rest": {
+       "n": 325,
+       "closed": 314,
+       "won": 203,
+       "mean_excess": 0.003757
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "suitability",
+      "sentence": "A suitability rule (the user's own risk profile): it is listed and never judged by returns.",
+      "by_theme": {
+       "AI stocks": {
+        "n": 27,
+        "closed": 27,
+        "won": 21,
+        "mean_excess": 0.008977,
+        "rest_n": 49,
+        "rest_closed": 47,
+        "rest_won": 26,
+        "rest_mean_excess": -0.000397,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "suitability"
+       },
+       "live sessions": {
+        "n": 0,
+        "closed": 0,
+        "won": 0,
+        "mean_excess": null,
+        "rest_n": 0,
+        "rest_closed": 0,
+        "rest_won": 0,
+        "rest_mean_excess": null,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "suitability"
+       },
+       "oil": {
+        "n": 3,
+        "closed": 3,
+        "won": 3,
+        "mean_excess": 0.040815,
+        "rest_n": 205,
+        "rest_closed": 205,
+        "rest_won": 137,
+        "rest_mean_excess": -0.000743,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "suitability"
+       },
+       "restaurant": {
+        "n": 5,
+        "closed": 5,
+        "won": 4,
+        "mean_excess": 0.015393,
+        "rest_n": 43,
+        "rest_closed": 35,
+        "rest_won": 19,
+        "rest_mean_excess": 0.024974,
+        "gap": null,
+        "se": null,
+        "inside_chance": null,
+        "sentence_code": "suitability"
+       }
+      }
+     }
+    ],
+    "by_family": [
+     {
+      "family": "capital_return",
+      "n": 11,
+      "closed": 2,
+      "won": 0,
+      "mean_excess": 0.142664,
+      "denied": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "approved": {
+       "n": 11,
+       "closed": 2,
+       "won": 0,
+       "mean_excess": 0.142664
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed."
+     },
+     {
+      "family": "conviction",
+      "n": 106,
+      "closed": 104,
+      "won": 87,
+      "mean_excess": 0.00155,
+      "denied": {
+       "n": 4,
+       "closed": 4,
+       "won": 4,
+       "mean_excess": 0.013539
+      },
+      "approved": {
+       "n": 102,
+       "closed": 100,
+       "won": 83,
+       "mean_excess": 0.00108
+      },
+      "gap": 0.012459,
+      "se": 0.009101,
+      "inside_chance": true,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 4 with an outcome, and 20 are needed."
+     },
+     {
+      "family": "event",
+      "n": 5,
+      "closed": 5,
+      "won": 5,
+      "mean_excess": 0.02246,
+      "denied": {
+       "n": 0,
+       "closed": 0,
+       "won": 0,
+       "mean_excess": null
+      },
+      "approved": {
+       "n": 5,
+       "closed": 5,
+       "won": 5,
+       "mean_excess": 0.02246
+      },
+      "gap": null,
+      "se": null,
+      "inside_chance": null,
+      "sentence_code": "too_few",
+      "sentence": "Too few to say: the smaller group has 0 with an outcome, and 20 are needed."
+     },
+     {
+      "family": "trend",
+      "n": 203,
+      "closed": 203,
+      "won": 111,
+      "mean_excess": -0.003078,
+      "denied": {
+       "n": 90,
+       "closed": 90,
+       "won": 33,
+       "mean_excess": -0.013483
+      },
+      "approved": {
+       "n": 113,
+       "closed": 113,
+       "won": 78,
+       "mean_excess": 0.005209
+      },
+      "gap": -0.018692,
+      "se": 0.006643,
+      "inside_chance": false,
+      "sentence_code": "picks_losers",
+      "sentence": "Picks losers: the denied did worse than the approved by 1.9 points, more than chance gives with this many."
+     }
+    ]
+   }
+  }
+ }
+}

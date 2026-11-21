@@ -14,6 +14,13 @@ news and press releases the Advisor never saw) as bearish (with an exact quote) 
   * calculates the expected return again WITHOUT the quotes that did not hold (`counterfactual`). It can only be lower than the Advisor's.
 
 THE MODEL NEVER DECIDES: it labels, and every label can only LOWER a result. It sees no score, no thesis, no stance reasoning and nothing about the user.
+
+CRITIC v2 (`design/critic_v2_evidence_spec.md`). Three rules of this step changed, each because the outcomes of four six-month tests said a reason did not earn its place:
+  C2  `fresh_negative_news` (the model's label of a newer article, or a bad word of the text with no blocking class) INFORMS: it stays a warning and no longer asks for a person, so it no longer denies. `fresh_negative_event`
+      (going concern, restatement, material weakness, guidance cut, earnings miss, dilution, dividend cut: code finds it in the text) is still a blocker.
+  C3  `blend_not_supported` is a WARNING. The blend worked again without the quotes that did not hold is still calculated and shown, the evidence dimension still loses its points, and the review still says so.
+  C6  The same quote gets the same label: a label is kept in the label store (`labels.py`, `evidence.label_store`) and read back, so the model is asked about a quote once; a call with nothing left to ask is not made. The control claim
+      still runs in every call that is made, and only a reply whose control was read right is kept.
 """
 import re
 import zlib
@@ -30,6 +37,7 @@ from prometheus.agents.advisor.record import Recommendation
 from prometheus.agents.critic.claims import Claim, stance_direction, supporting
 from prometheus.agents.critic.common import blocker, info, producer, quote_in_text, warning
 from prometheus.agents.critic.config import CriticConfig
+from prometheus.agents.critic.labels import LabelStore, prompt_version
 from prometheus.agents.critic.record import ClaimLabel, Control, Counterfactual, EvidenceDetail, Finding, FreshItem, Measure, SourceCheck
 from prometheus.common.market_calendar import eastern_date
 from prometheus.common.work_order import WorkOrder, corpus_of
@@ -74,6 +82,15 @@ def control_claim(rec: Recommendation, order: WorkOrder, config: CriticConfig, d
     top = max([s.get("number") for s in (order.data.sources if order.data else []) if isinstance(s.get("number"), int)] + [0])
     ref = f"[{top + 1}]"
     return Claim(ref=ref, kind="signal", direction=direction, quote=SENTENCE.split(notice.text.strip())[0], source=top + 1), notice.text.strip(), f"{notice.headline}, {today.isoformat()}"
+
+
+def _claim_source(c: Claim, rec: Recommendation, verification: dict, config: CriticConfig) -> tuple[str, str]:
+    """(the heading, the text) the model is shown for one claim: the source as the Data Clerk read it again today, cut to the part around the quote."""
+    if c.kind == "evidence":
+        found = ((verification.get("evidence") or {}).get(rec.symbol) or {}).get(c.evidence_id) or {}
+        return "SEC filing evidence", excerpt(f"{found.get('what') or ''}\nQuote: {found.get('quote') or ''}".strip(), c.quote, config.limits.max_source_chars)
+    found = (verification.get("chunks") or {}).get(c.chunk_id) or {}
+    return _heading(found), excerpt(found.get("text") or "", c.quote, config.limits.max_source_chars)
 
 
 def fresh_candidates(rec: Recommendation, order: WorkOrder, verification: dict, config: CriticConfig) -> list[dict]:
@@ -212,9 +229,10 @@ def _age(published: str | None, today: date) -> int | None:
 
 
 def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceCheck], verification: dict, order: WorkOrder, advisor: AdvisorConfig, config: CriticConfig, now: datetime,
-           critic_model: str | None, independent: bool | None, run: dict) -> EvidenceResult:
+           critic_model: str | None, independent: bool | None, run: dict, store: LabelStore | None = None) -> EvidenceResult:
     """The evidence findings of one record, its score, and the expected return worked again. `claims` are ALL the record's claims; the model is asked about the supporting ones. `checks` are the
-    source checks of recheck (a claim whose source does not list the symbol counts for nothing). `run` is the review's `critic_runs` entry: tokens, calls and drops are added to it."""
+    source checks of recheck (a claim whose source does not list the symbol counts for nothing). `run` is the review's `critic_runs` entry: tokens, calls and drops are added to it, and `labels_from_store`, the number of labels
+    the store answered. `store` is the label store (`labels.py`, rule C6): a quote it has a label for is not sent to the model; None keeps and reads none."""
     ev, out = config.evidence, EvidenceResult()
     today = eastern_date(now)
     direction = stance_direction(rec)
@@ -227,30 +245,42 @@ def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceC
     readable = [c for c in mine if (check_of.get(c.ref) and check_of[c.ref].found)]
     fresh_hits = fresh_candidates(rec, order, verification, config)
     fresh = {f"F{i}": h for i, h in enumerate(fresh_hits, 1)}
-    need_call = bool(readable or fresh)
     labels: dict[str, tuple[str, str | None]] = {}
     marks: dict[str, tuple[str, str | None]] = {}
     control: Control | None = None
     failure: str | None = None
+    had_something = bool(readable or fresh)
+
+    # what the model is shown of each claim and each fresh source (the text the label depends on), and the labels the store already has (rule C6): those are not asked again
+    shown_of: dict[str, tuple[str, str]] = {c.ref: _claim_source(c, rec, verification, config) for c in readable}
+    fresh_shown = {k: (f"{_heading(h)}: {h.get('headline') or ''}", excerpt(h.get("text") or "", "", config.limits.max_source_chars)) for k, h in fresh.items()}
+    version = prompt_version(ev.max_reason_words)
+    claim_keys = {c.ref: LabelStore.claim_key(critic_model, version, rec.symbol, direction, c.quote, shown_of[c.ref][1]) for c in readable}
+    fresh_keys = {k: LabelStore.fresh_key(critic_model, version, rec.symbol, direction, text[0], text[1]) for k, text in fresh_shown.items()}
+    if store is not None:
+        for ref, key in claim_keys.items():
+            kept = store.get(key)
+            if kept is not None and kept["label"] in REAL_LABELS:
+                labels[ref] = (kept["label"], kept.get("reason") if isinstance(kept.get("reason"), str) else None)
+        for key_id, key in fresh_keys.items():
+            kept = store.get(key)
+            if kept is not None and kept["label"] in ("bearish", "none"):
+                marks[key_id] = (kept["label"], kept.get("quote") if isinstance(kept.get("quote"), str) else None)
+    from_store = len(labels) + len(marks)
+    run["labels_from_store"] = run.get("labels_from_store", 0) + from_store
+    ask_claims = [c for c in readable if c.ref not in labels]
+    ask_fresh = {k: h for k, h in fresh.items() if k not in marks}
+    need_call = bool(ask_claims or ask_fresh)
 
     if need_call:
         if model is None or run["records_called"] >= config.limits.max_model_calls:
             failure = "the review's model calls were used up" if model is not None else "there is no model to ask"
         else:
             control_c, control_text, control_head = control_claim(rec, order, config, direction, today)
-            shown = list(readable)
+            shown = list(ask_claims)
             shown.insert(seed_of(rec.identity.record_id) % (len(shown) + 1), control_c)
-            sources = []
-            for c in shown:
-                if c is control_c:
-                    sources.append((c.ref, control_head, control_text))
-                elif c.kind == "evidence":
-                    found = ((verification.get("evidence") or {}).get(rec.symbol) or {}).get(c.evidence_id) or {}
-                    sources.append((c.ref, "SEC filing evidence", excerpt(f"{found.get('what') or ''}\nQuote: {found.get('quote') or ''}".strip(), c.quote, config.limits.max_source_chars)))
-                else:
-                    found = (verification.get("chunks") or {}).get(c.chunk_id) or {}
-                    sources.append((c.ref, _heading(found), excerpt(found.get("text") or "", c.quote, config.limits.max_source_chars)))
-            fresh_block = [(k, f"{_heading(h)}: {h.get('headline') or ''}", excerpt(h.get("text") or "", "", config.limits.max_source_chars)) for k, h in fresh.items()]
+            sources = [(c.ref, control_head, control_text) if c is control_c else (c.ref, *shown_of[c.ref]) for c in shown]
+            fresh_block = [(k, *fresh_shown[k]) for k in ask_fresh]
             messages = [SystemMessage(content=review_system(today, rec.symbol, rec.company, direction, ev.max_reason_words)),
                         HumanMessage(content=review_message(rec.symbol, direction, [(c.ref, c.quote) for c in shown], sources, fresh_block))]
             record_run = new_run("review", model)
@@ -262,18 +292,25 @@ def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceC
             if reply is None:
                 failure = record_run["error"] or "the model gave no usable reply"
             else:
-                labels, marks = read_reply(reply, {c.ref for c in shown}, fresh, rec.symbol, rec.company, ev.max_reason_words, dropped)
-                got = labels.pop(control_c.ref, None)
+                said, noted = read_reply(reply, {c.ref for c in shown}, ask_fresh, rec.symbol, rec.company, ev.max_reason_words, dropped)
+                got = said.pop(control_c.ref, None)
                 control = Control(ref=control_c.ref, label=got[0] if got else None, passed=bool(got and got[0] == "unrelated"))
                 run["controls_failed"] += not control.passed
-                if not control.passed:
-                    labels, marks = {}, {}
+                if control.passed:
+                    labels.update(said)
+                    marks.update(noted)
+                    if store is not None:      # only a reply whose control was read right is kept: a failed control keeps nothing, so the next review asks again
+                        for ref, (label, reason) in said.items():
+                            store.put(claim_keys[ref], {"label": label, "reason": reason})
+                        for key_id, (label, quote) in noted.items():
+                            store.put(fresh_keys[key_id], {"label": label, "quote": quote})
+                else:
                     out.findings.append(warning("evidence", "control_failed", f"The model did not read the text: it did not call a planted, unrelated notice {control.expected!r} (it said {control.label!r}). "
                                                 f"Its labels are not used.", value=control.label, requires_human=True))
     run["dropped"].extend(f"{rec.symbol}: {d}" for d in dropped)
     if failure:
         run["errors"].append(f"{rec.symbol}: {failure}")
-    reviewed = need_call and failure is None and control is not None and control.passed
+    reviewed = had_something and failure is None and (control is None or control.passed)      # no control when the store answered everything: every label it holds was made by a reply whose control was read right
 
     # the labels, and what each claim counts for
     unanswered = [c for c in readable if c.ref not in labels]
@@ -281,7 +318,7 @@ def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceC
     untagged = {c.ref for c in checks if c.tagged is False}
     out.detail.claims = [ClaimLabel(ref=c.ref, direction=c.direction, label=label_of[c.ref], reason=(labels.get(c.ref) or (None, None))[1]) for c in mine]
     out.detail.control = control
-    if need_call and failure:
+    if failure:
         out.findings.append(warning("evidence", "evidence_not_reviewed", f"The quotes could not be reviewed by the model: {failure}.", requires_human=True))
     elif reviewed and unanswered:
         out.findings.append(warning("evidence", "evidence_not_reviewed", f"The model left {len(unanswered)} claim(s) unlabelled: {', '.join(c.ref for c in unanswered)}.", requires_human=True))
@@ -305,7 +342,7 @@ def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceC
                                             value=blocking, threshold=ev.fresh_event_max_age_days))
             else:
                 out.findings.append(warning("evidence", "fresh_negative_news", f"Newer stored text the Advisor did not see ({key}, {when}) looks bad for {rec.symbol}: {hit.get('headline') or ''}.",
-                                            value=classes or label, requires_human=True))
+                                            value=classes or label))      # Critic v2, rule C2: it informs and asks for nobody (it was `requires_human=True`, a denial since entry 103: 60 of the 72 it fired on and that closed were winners)
     out.detail.fresh = items
 
     # the event family stands on one event: if it was not supported, the position has no entry
@@ -318,8 +355,8 @@ def assess(model, rec: Recommendation, claims: list[Claim], checks: list[SourceC
     # the conviction family stands on the blend alone: if the blend, worked again with this review's labels, falls under the family's own mark, it has no entry
     cf_early = counterfactual(rec, claims, label_of, untagged, fresh_bearish, advisor, config)
     if rec.trade.family == "conviction" and cf_early is not None and cf_early.blend < advisor.families.conviction.min_blend:
-        out.findings.append(blocker("evidence", "blend_not_supported", f"This position was opened on the blend alone ({rec.blend['value']:+.2f}); with the quotes the review did not accept it is {cf_early.blend:+.2f}, "
-                                    f"under the {advisor.families.conviction.min_blend:g} the conviction strategy needs.", value=cf_early.blend, threshold=advisor.families.conviction.min_blend))
+        out.findings.append(warning("evidence", "blend_not_supported", f"This position was opened on the blend alone ({rec.blend['value']:+.2f}); with the quotes the review did not accept it is {cf_early.blend:+.2f}, "
+                                    f"under the {advisor.families.conviction.min_blend:g} the conviction strategy needs.", value=cf_early.blend, threshold=advisor.families.conviction.min_blend))      # Critic v2, rule C3: a warning (it was a blocker: 37 of the 41 it fired on and that closed were winners; the evidence dimension still loses its points)
 
     # about the claims themselves
     if independent is False:

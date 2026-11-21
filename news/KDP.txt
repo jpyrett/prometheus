@@ -1,0 +1,1036 @@
+<<<ARTICLE>>>
+id: finnhub:143774493
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T21:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3f52b56ed8a21efa1b528930334c8d4e868d5c4c5bec233c77f79363af52a1b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Is Paying Down Debt Ahead of Coffee Split. What That Means for the Stock.
+<<<SUMMARY>>>
+The beverage maker plans to complete the split early next year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773961
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:06:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=6df1ed164784a9c1004bf9ddc8ddd88b274e7ab7b23b279e74cc42528d0f86ff
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: KDP
+keywords: 
+headline: S&P 500 Top Movers for Nov. 12, 2026: AMD and AVGO Gain, GPN and NVDA Fall
+<<<SUMMARY>>>
+S&P 500 top movers on Nov. 12, 2026 included AMD, AVGO, ANET, VLO and MPC among gainers, while GPN, SMCI, KDP, MRNA and NVDA led declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143781789
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:27:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=99666bbabd699b3f79bf7163defe4f9d714326af2c25a162ca99618d6c0f458f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: A $2 Billion Reason Keurig Dr Pepper Stock Is Plunging Today
+<<<SUMMARY>>>
+Keurig Dr Pepper stock sinks as management announces $2 billion equity offering. But is it worth buying the dip in KDP shares today?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773959
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:05:52Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=6742dcbd48e2366e2592ab59fab328827edb4980f3a2b2eccc99ae44821125fa
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: KDP
+keywords: 
+headline: Most Active S&P 500 Stocks: KDP, Ford, AT&T Lead Today's Session
+<<<SUMMARY>>>
+Keurig Dr Pepper, Ford, and AT&T led S&P 500 share volume in today's session, with price moves from Alphabet's 2.53% gain to KDP's 6.1% decline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773956
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:36:17Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=8d72580f24855ff04af7f0752cd818ab15909885e271639988acb5b9006eddb8
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: KDP
+keywords: 
+headline: S&P 500 Top Movers: Gainers and Losers on Nov. 12, 2026
+<<<SUMMARY>>>
+S&P 500 top movers for Nov. 12, 2026: AVGO, AMD, SWKS and energy names gained, while SMCI, GPN, NVDA and other technology shares declined.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143771066
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:26:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f5331b6ec88cc711bbd1075b1245d77415e48f6f3b784f4e0fd486e62139a0e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Dr Pepper Commences $2B Stock Offering To Reduce Debt – Here’s What Investors Need To Know
+<<<SUMMARY>>>
+KDP plans to grant underwriters a 30-day option to purchase up to an additional $300 million in shares, with Goldman Sachs and Morgan Stanley serving as joint book-running managers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772271
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cdc8f325a916884bf06f395a8a8637487bb60469bde572c9b862bbd3cb280c67
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Can Keurig's New Fountain Distribution Gains Boost Its Reach?
+<<<SUMMARY>>>
+KDP expands Dr Pepper's foodservice reach with a Jersey Mike's fountain distribution win, adding growth opportunities amid strong brand momentum.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770825
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=63dd2ced977c45ae6518e783d76b70e4c53aa92b58d060c3e698405c6684abb2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Coca-Cola Stock Hits 52-Week High: Should You Buy Now or Wait?
+<<<SUMMARY>>>
+KO's strong revenue growth, rising volumes, brand innovation and upbeat 2026 outlook bolster its prospects, but a premium valuation warrants caution.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770488
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:36:11Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2ef40b84167174ff1479ae550e9e637737b39a805ba99494a4e4d8c7707b855f
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: KDP
+keywords: 
+headline: S&P 500 Gap-Down Stocks in the Nov. 12, 2026 Session
+<<<SUMMARY>>>
+S&P 500 gap-down stocks on Nov. 12, 2026, including SMCI, KDP, NVDA, MOS, RDDT, SNDK, PANW, COIN, DELL, and BE, with session moves and gap details.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801997
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:00:09Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b390485295ac4a2f76ba81435cb9d89785f0e30a31ce7a66e02dd2fd42cd48c7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Jensen-Huang-Nvidias-Founder--President-.jpg?width=2048&height=1536
+category: company
+tickers: KDP
+keywords: 
+headline: Wall Street Now Values Nvidia Like a Package-Delivery Company, Data Shows
+<<<SUMMARY>>>
+Nvidia stock&#39;s forward P/E fell below UPS after Jensen Huang resigned. The AI chipmaker now trades cheaper than airlines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767161
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=28d778d7164b6776e6ba5fe0b3ed78e5123be66575204424fc2e752ebbc64d1f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Dr Pepper Announces Proposed Public Offering of Common Stock
+<<<SUMMARY>>>
+Keurig Dr Pepper Inc. (NASDAQ: KDP) ("KDP" or the "Company") today announced that it has commenced an underwritten public offering of $2.0 billion of shares of its common stock, par value $0.01 per share (the "Offering"). KDP's common stock is listed on the Nasdaq Global Select Market under the symbol "KDP."
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803494
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T10:24:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7230e621c29d3dd1f18b289570232baca4d58478536ff591d81d82c3d866fd0a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Konskie--Poland---December-08--2024-Keur.jpg?width=2048&height=1536
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Dr Pepper Launches $2B Stock Offering to Pay Debt Ahead of Business Split
+<<<SUMMARY>>>
+Keurig Dr Pepper shares fell as it launched a $2B stock offering to repay debt, strengthening its balance sheet ahead of a 2027 separation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766651
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T09:42:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=aa2e7904fa0e25642801f3100ce229832f3a13e6a8629784889ca708f8825561
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/12/Costco-Sign-At-The-Entrance-Of-A-Store-I.jpg?width=2048&height=1536
+category: company
+tickers: KDP
+keywords: 
+headline: Top 3 Risk Off Stocks That Could Sink Your Portfolio This Quarter
+<<<SUMMARY>>>
+Costco, Coca-Cola and Keurig Dr Pepper show overbought RSI readings above 70, signaling potential momentum warnings despite recent gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143656169
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T08:28:48Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f331e060867bb5a3b70d4240611d36963611a6ea49f6832527a999a91abb0dac
+image_url: 
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Dr Pepper Reports ~99M Of Tariff Refunds Received As Benefit To Gross Profit During Q3
+<<<SUMMARY>>>
+https://www.sec.gov/ix?doc=/Archives/edgar/data/1418135/000141813526000066/kdp-20260930.htm
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947239
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T22:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cdd5f500e1602f638242ee58378eb82a9e341506dd2c5be66efae3ea423a0e1b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Tyson Foods Announces Updates to Board of Directors
+<<<SUMMARY>>>
+SPRINGDALE, Ark., Nov. 19, 2026 (GLOBE NEWSWIRE) -- Tyson Foods, Inc. (NYSE: TSN) today announced changes to its board, effective immediately, that reflect the company’s commitment to long-term growth and governance. Les R. Baledge has been named Lead Independent Director of the board. Baledge has served on the Tyson Foods board since 2020 and has served as Chair of both the Compensation and Leadership Development Committee and the Governance and Nominating Committee. Tyson Foods has also appoin
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944462
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b7ac8403d7a11a2be9dc9583fce16f81d6a3cf4d75e5800e304c0af32d88d558
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Return your empties. Reject the closure of local bottle depots
+<<<SUMMARY>>>
+The BC Bottle and Recycling Depot Association (BCBRDA), representing BC's independent depots, is launching Reject-It.ca to challenge underpayment and threatened closures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942998
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:58:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=403210d497bfae3c4a05a26ac892e87437dfe6718be9838498f2ab43e4a61968
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: What Is The One Risk Every Starbucks Investor Should Know?
+<<<SUMMARY>>>
+Today’s big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943216
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83aa4a8cfeec81fd64d993f04e5a0fb7a588c504781e406c50c0e5e164f71481
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: KEURIG® TAKES THE GRIND OUT OF HOLIDAY HASSLES, BREWING UP LITTLE MOMENTS OF RELIEF & JOY
+<<<SUMMARY>>>
+The holidays are meant to be joyful, but Keurig's NEW Holiday Grind Report has found nearly three in four Americans surveyed (73%) experience at least one holiday hassle, from wrapping gifts after midnight (29%) and navigating late gift deliveries (27%) to struggling to find a quiet moment to recharge (22%).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936408
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T11:34:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=486e0fb19fd9c5404154d7e672bca9685f5eb145ec88316a06261caf798f160e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Was Primo Brands' 50% Rebound Visible In Advance?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922408
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T23:35:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=243d975f681904010d2ec361e3dd040f24c50cd4e9ca65a6ed529ebb26aa8f9e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Barfresh Manufacturing Recovery Drives Margins – Quarterly Update Report
+<<<SUMMARY>>>
+Download the Complete Report Here Barfresh Food Group, Inc. (BRFH) Manufacturing Recovery Drives Margin Improvement; Education Rebuilding Gains Momentum as Defiance Remains Key Growth Catalyst. Attractively Valued. Key Takeaways: Manufacturing stabilization is driving a core revenue rebound, with 3Q26 sales up 37% y/y to $5.8 million and core sales recovering sequentially despite a 23% y/y […] The post Barfresh Manufacturing Recovery Drives Margins – Quarterly Update Report appeared first on Exe
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921388
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:47:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da66e4f0f8b673491edb7f849405416407f31369c45e233a41c99e825633e58a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: 3 Food and Beverage Dividend Stocks to Buy in December for Reliable Income
+<<<SUMMARY>>>
+One grocery-aisle giant has mailed dividend checks for 127 straight years, while another has not given shareholders a raise since 2019. Before you lock in a December income pick, see which payout is safest and which one quietly erodes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143910904
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:04:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4b8bf9b252c4befdd95743df4ddb8e8ba587be2127c7518cbe0c5e95fd88fa28
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: iShares Core S&P 500 (IVV) Buys $74.7 Million More Apple on Nov. 16
+<<<SUMMARY>>>
+The fund added $952.6 million across 498 positions and sold nothing, with Apple, Microsoft and Nvidia leading the buys.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143912874
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T07:58:23Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=45826e011962ac007e14e487e92fbe6e0692c5aa6a0524e51422873d7b84179c
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1859821130/image_1859821130.jpg?io=getty-c-og
+category: company
+tickers: KDP
+keywords: 
+headline: Celsius: Distribution Strength Meets Customer Concentration Risk
+<<<SUMMARY>>>
+Analyst rates Celsius a Hold: Q3 revenue rose 16.8% to $847.2 million, while core-brand sales fell 6.3%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143916389
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T06:20:36Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fcfc818338f1a35d53ffaa71b83da0291bf9c7759536d2186b1c96bd2e870ff5
+image_url: 
+category: company
+tickers: KDP
+keywords: 
+headline: Wolfe Research Initiates Coverage On Keurig Dr Pepper with Outperform Rating, Announces Price Target of $42
+<<<SUMMARY>>>
+Wolfe Research  analyst Margaret-May Binshtok   initiates coverage on Keurig Dr Pepper (NASDAQ:KDP) with a Outperform rating and announces Price Target of $42.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884324
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:01:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44b159c95c79c17f1559f6ac5a7a6487dcbe0aa98f1d619e51c85e606493a33d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Does Coca-Cola Stock Fit Your Portfolio Risk?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882773
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:38:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c838c38a7f21725707be3c675a82df8a97d2ffb4f84dba2f77ec7db0268f7507
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: What Threatens Keurig Dr Pepper Stock Most?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882936
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5110750355ab550b38d9347c6bfe56bee5d6bf9f7af90f65aabc13d578167916
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: How Is Coca-Cola's Packaging Strategy Supporting Growth?
+<<<SUMMARY>>>
+KO's diversified packaging strategy boosts affordability, consumer reach and brand engagement, supporting global volume growth. Can it sustain momentum?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880867
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6345db0a8f24b589f3529df8480775f06bc2c3a2157ed45852836d3945c8a39
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Could PepsiCo Be The Value Stock For Your Portfolio?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878760
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff16ad8d9c573d27089dcdf0b646293298cf82b32e54a86f3301938f67c2f4f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: What Is The True Hidden Price Of Starbucks Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850088
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T19:11:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dc2208e230d05662b12e205bb097d39ae563cc4855fb9bab4036495f8e4f6e14
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Tyson, Starbucks Lead The S&P 500, Nasdaq 100 As Investors Play Defense
+<<<SUMMARY>>>
+The AI sell-off steepened on Monday. Defensive stocks made strides amid rotation out of tech. Starbucks jumped on the Nasdaq-100.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849293
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=75734501752e2553d2e4da5cccb12639127eff0f7bb2b714d0516afdfc129bc4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Implied Volatility Surging for Keurig Dr Pepper Stock Options
+<<<SUMMARY>>>
+Investors need to pay close attention to KDP stock based on the movements in the options market lately.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807747
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T23:09:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ac72d95d5efdb8a555e711c7952b8414d178d28791863846335cf5921bc40511
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: How Investors Are Reacting To Keurig Dr Pepper (KDP) $2b Share Sale
+<<<SUMMARY>>>
+Keurig Dr Pepper completed a US$2b follow on equity offering of about 57,971,015 common shares at US$34.50 each, with proceeds allocated to repaying or repurchasing outstanding debt ahead of a planned split into two listed companies. The move shifts part of the capital structure from borrowings to equity, which affects leverage targets, earnings per share calculations, and flexibility for the upcoming Beverage Co and Global Coffee Co separation. This article examines how Keurig Dr Pepper's...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807246
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T11:52:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=68bd17965b7bda5ddc0ceab72ecdedb91959d4e5309e7de5064e10096de7287d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: A $5.2 Billion Fund Dumps These 3 Stocks
+<<<SUMMARY>>>
+Key TakeawaysIlex Capital Partners, a fund with $5. 15 billion of US stocks, sold its whole stakes in Keurig Dr Pepper, Yum! Brands and Philip Morris International in the third quarter, its 13F shows.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806156
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T08:17:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6da95183e17220532b1fa5ca118992e92cf492c89219bc3a94bfeb34f67dc818
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/14/Stock-Whisper-Index.jpg?width=2048&height=1536
+category: company
+tickers: KDP
+keywords: 
+headline: Benzinga's 'Stock Whisper' Index: Five Stocks Investors Secretly Monitor But Don't Talk About Yet
+<<<SUMMARY>>>
+The Stock Whisper Index is a market indicator highlighting stocks that are attracting heightened interest from traders and investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805941
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T08:10:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a4712d0929e409a8efe9283446dfc17416972470d9443ff654232678ad01089a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Does Keurig Dr Pepper (KDP) Look Fully Valued After Its 38% Run?
+<<<SUMMARY>>>
+Keurig Dr Pepper has delivered a strong share price run over the past year, while also announcing a large equity raise and a planned split into two businesses. The live question is whether that combination leaves the current valuation in line with what its earnings can support. The stock is up about 38.2% over the past year, which puts meaningful pressure on the earnings profile to justify a higher bar for what investors are paying per dollar of profit. A roughly US$2.0b stock offering...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805881
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T06:12:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1b72aace0bc6588a8be1a97eb76085063f30215040532fde3c2f85d65b6307a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Dr Pepper (KDP) Raises $2b In Equity, Is The Stock Fully Valued?
+<<<SUMMARY>>>
+Keurig Dr Pepper (KDP) has just completed a follow on equity offering of about $2 billion, issuing roughly 58 million common shares at $34.50 each to support its upcoming corporate split. The equity raise lands at a time when Keurig Dr Pepper’s share price has been climbing, with a 30 day share price return of 9.72% and a 90 day gain of 15.59%, while the 1 year total shareholder return of 38.21% points to momentum that has been building rather than fading. The 1 day share price move of 2.60%...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805258
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T20:42:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=377481e8996c0e10b5c8220d2adebaa9baea179035e5ccb61147b28920ad88d8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Sector Update: Consumer Stocks Mixed Late Afternoon
+<<<SUMMARY>>>
+Consumer stocks were mixed late Friday afternoon, with the State Street Consumer Staples Select Sect
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805901
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T20:05:54Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=be3fdb8d07915e0be2cd4515b98267b2b4974a4811a7553772ecbabacec06658
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: KDP
+keywords: 
+headline: S&P 500 Top Movers for Nov. 13, 2026: Charter Communications Leads Gainers, AMD Leads Losers
+<<<SUMMARY>>>
+S&P 500 top movers on Nov. 13, 2026: Charter Communications led gainers at 4.58%, while Advanced Micro Devices led losers at -9.42%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805899
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:06:07Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2e6bbda0da9128db1a7ec2dd7b4acb5c2719395e559236102f017c21e2f2a722
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: KDP
+keywords: 
+headline: S&P 500 Most Active Stocks: Nov. 13, 2026 Session
+<<<SUMMARY>>>
+S&P 500 volume scan for Nov. 13, 2026: KDP and SO traded well above their 50-day average volume, while CSCO and MRVL fell sharply among the most active names.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803805
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:30:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=575b33af58fa7af3a7e5a82971f9aed73850cc7c66ac233f90a6b6c5b7885bc6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: BC-Most Active Stocks
+<<<SUMMARY>>>
+NEW YORK (AP) — prices for the Nasdaq composite, NYSE and NYSE American listed most active stocks. Nasdaq most active stocks:Stock Name Volume High Low Last Change  SHF Holdings Inc.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143801699
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e757a89e6996f0e02779d122e2491d1edb6ef731d9c10f71027c9b128360e4e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Dr Pepper Shares Decline 1.1% Premarket Following Pricing of $2 Billion Share Offering
+<<<SUMMARY>>>
+Keurig Dr Pepper (NASDAQ:KDP) shares declined 1. 1% in premarket trading on Friday after the beverage company announced the pricing of an offering of approximately 58 million shares at $34.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143783677
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T02:21:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=36e50e1fe2e87d92120ac4cf611c957a32f1ea871c3b79e77943e02708e7a19c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Dr Pepper Announces Pricing of Public Offering of Common Stock
+<<<SUMMARY>>>
+Keurig Dr Pepper Inc. (NASDAQ: KDP) ("KDP" or the "Company") today announced the pricing of its previously announced underwritten public offering of 57,971,015 shares of its common stock, par value $0.01 per share (the "Offering"), at a price to the public of $34.50 per share. KDP's common stock is listed on the Nasdaq Global Select Market under the symbol "KDP."
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990024
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T15:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1cd8f35737204650075c14c5435663b732df463adae3acacc07f58c9c2a7709b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig's U.S. Beverage Sales Rise 10.9%: Can This Momentum Last?
+<<<SUMMARY>>>
+KDP's U.S. Refreshment Beverages sales increase 10.9% as Dr Pepper, GHOST and Electrolit fuel growth and energy share expands.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988730
+symbol: KDP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T15:11:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6623d86ba09bbcc137125909ab4d7a844e55ac2ffca74d4237209a3ae050dc40
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KDP
+keywords: 
+headline: Keurig Dr Pepper (KDP) Stock Gets Fair Value Bump As Analysts Weigh Split Plan
+<<<SUMMARY>>>
+The fair value estimate for Keurig Dr Pepper has shifted modestly higher to US$38.82 from US$36.97, pointing to a small adjustment in the underlying valuation work. This move comes as analysts weigh confidence in the beverage and coffee franchises against questions around the planned split into Global Coffee Co and Beverage Co, which is tightening the range of price views. Read on to see how these refreshed targets fit into the broader Keurig Dr Pepper story and what signals to watch as the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bff1fa68f09df766981d79b4de2bfa5c6729cd1a389423ddc26fa201855e2a9b
+symbol: KDP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T13:50:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027255/here-s-why-keurig-dr-pepper-inc-kdp-is-a-strong-momentum-stock?cid=CS-ZC-FT-fundamental_analysis|zacks_education_momentum_score-3027255
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default115.jpg
+category: 
+tickers: KDP
+keywords: Keurig Dr Pepper, momentum investing, Zacks Rank, Style Scores, earnings estimates, beverage company
+headline: Here's Why Keurig Dr Pepper, Inc (KDP) is a Strong Momentum Stock
+<<<SUMMARY>>>
+Keurig Dr Pepper (KDP) is highlighted as a stock to watch for momentum investors, holding a #3 (Hold) Zacks Rank with a B VGM Score. The stock has gained 12.8% over the past four weeks, and three analysts revised earnings estimates upward in the last 60 days, with the consensus estimate increasing to $2.31 per share.
+<<<INSIGHTS>>>
+KDP | positive | KDP demonstrates positive momentum with a 12.8% gain over four weeks, upward earnings estimate revisions from three analysts, and a B-rated Momentum Style Score. The company's solid fundamentals and recent performance make it noteworthy for momentum-focused investors, despite the neutral #3 Hold rating.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e19d1a1db4de4cfb34fdfea3194bb72441a853d8ab1d7ac658bca2bbb27bf80b
+symbol: KDP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T02:30:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/11/3400420/0/en/coffee-market-in-the-us-to-cross-usd-32-bn-by-2032-fueled-by-rising-demand-for-specialty-coffee-and-premiumization-reports-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: SBUX, SJM, NSRGY, KDP
+keywords: US coffee market, specialty coffee, premiumization, packaged coffee, app-based ordering, functional coffee, market growth, CAGR
+headline: Coffee Market in the US to Cross USD 32 Bn by 2032 Fueled by Rising Demand for Specialty Coffee and Premiumization, Reports Mordor Intelligence
+<<<SUMMARY>>>
+The US coffee market is projected to grow from USD 24.98 billion in 2026 to USD 32.23 billion by 2032, with a CAGR of 4.32%. Specialty coffee is the fastest-growing segment at 6.78% CAGR, driven by premiumization and functional coffee options. Market growth is supported by packaged coffee affordability, specialty adoption, app-based ordering, and premium prepared-coffee occasions.
+<<<INSIGHTS>>>
+SBUX | positive | Starbucks benefits from the growing specialty coffee segment and app-based ordering trends, which are identified as key growth drivers. The company's strong position in premium and prepared-coffee occasions aligns well with market expansion.
+SJM | positive | As a major packaged coffee supplier, J.M. Smucker is positioned to benefit from the overall market growth and the emphasis on packaged retail formats, which remain central to US coffee spending.
+NSRGY | positive | Nestlé's diverse coffee portfolio across packaged and specialty segments positions it well to capture growth across both conventional and premium coffee occasions in the expanding market.
+KDP | positive | Keurig's dominance in single-serve coffee pods and capsules aligns with the market's growth trajectory, particularly in convenient packaged formats that remain central to US coffee consumption.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1b86832e03e553d07ae96bfbb02683a5fddd51ed4142314c3aa214e0bfb4b214
+symbol: KDP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:43:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028872/coca-cola-stock-hits-52-week-high-should-you-buy-now-or-wait?cid=CS-ZC-FT-analyst_blog|quick_take-3028872
+image_url: https://staticx-tuner.zacks.com/images/articles/main/e3/65.jpg
+category: 
+tickers: KO, PEP, KDP, MNST
+keywords: Coca-Cola, stock performance, valuation, earnings growth, beverage industry, premium valuation, hold recommendation
+headline: Coca-Cola Stock Hits 52-Week High: Should You Buy Now or Wait?
+<<<SUMMARY>>>
+Coca-Cola (KO) reached a 52-week high of $97.83 with a 39.6% YTD gain, driven by strong Q3 results including 7% organic revenue growth and 11% EPS growth. However, the stock's 27.8X forward P/E valuation is significantly higher than peers, suggesting it is overvalued at current levels. Analysts recommend holding for existing shareholders while prospective investors should wait for a better entry point.
+<<<INSIGHTS>>>
+KO | neutral | While KO demonstrates strong fundamentals with 39.6% YTD gains, 7% organic revenue growth, and 11% EPS growth, the stock's premium 27.8X forward P/E valuation significantly exceeds industry peers (20.8X) and competitors like PepsiCo (16.72X). This overvaluation limits near-term upside potential despite long-term growth prospects, warranting a hold rating rather than a buy.
+PEP | negative | PepsiCo has underperformed with only 0.3% YTD growth compared to Coca-Cola's 39.6%, facing headwinds from weaker volume trends, margin pressures, and cautious consumer spending. The company trades at a more reasonable 16.72X forward P/E but lacks the momentum of its competitor.
+KDP | negative | Keurig Dr Pepper has experienced softness with 36.6% YTD growth, facing challenges from weaker volume trends, margin pressures, and execution concerns. The company trades at 15.35X forward P/E but lags Coca-Cola's performance.
+MNST | negative | Monster Beverage has shown 18.5% YTD growth, underperforming Coca-Cola's 39.6% gain. Despite trading at a higher 34.89X forward P/E, the company faces weaker volume trends and margin pressures affecting the broader beverage sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2d4882f4a52a505b4f12d60bceafa9831c797013422533a5321ba6098fd107e3
+symbol: KDP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T17:09:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028979/can-keurig-s-new-fountain-distribution-gains-boost-its-reach?cid=CS-ZC-FT-analyst_blog|rank_focused-3028979
+image_url: https://staticx-tuner.zacks.com/images/articles/main/7a/1255.jpg
+category: 
+tickers: KDP, LKNCY, AVO, AKO.A, AKO.B
+keywords: fountain distribution, away-from-home channel, Dr Pepper, Dr Pepper Zero, foodservice expansion, market share gains, retail sales growth
+headline: Can Keurig's New Fountain Distribution Gains Boost Its Reach?
+<<<SUMMARY>>>
+Keurig Dr Pepper (KDP) secured new Dr Pepper fountain distribution at Jersey Mike's, strengthening its away-from-home presence. Dr Pepper achieved double-digit Q3 net sales growth and is the most widely available fountain beverage across major U.S. foodservice chains. Dr Pepper Zero delivered 25% retail sales growth and surpassed $1 billion in annualized retail sales. KDP shares rallied 22.9% in three months and trade at a forward P/E of 15.35, below the industry average of 20.79.
+<<<INSIGHTS>>>
+KDP | positive | KDP demonstrated strong brand momentum with double-digit net sales growth, secured new distribution at Jersey Mike's, Dr Pepper Zero achieved 25% retail sales growth exceeding $1 billion in annualized sales, stock rallied 22.9% in three months, and trades at a valuation discount to industry peers with positive earnings growth expectations (12.7% and 9.3% YoY).
+LKNCY | positive | Carries Zacks Rank #1 (Strong Buy) with consensus estimates indicating 33.3% sales growth and 52.2% earnings growth for current fiscal year, despite a trailing four-quarter negative earnings surprise of 7.3%.
+AVO | neutral | Carries Zacks Rank #2 (Buy) with modest 3.6% sales growth expected but earnings expected to decline 17.7% year-over-year, though it delivered a positive 17.6% average trailing four-quarter earnings surprise.
+AKO.A | positive | Carries Zacks Rank #2 (Buy) with consensus estimates indicating 12.4% sales growth and 17.9% earnings growth, though it delivered a negative 4.1% average trailing four-quarter earnings surprise.
+AKO.B | positive | Carries Zacks Rank #2 (Buy) with consensus estimates indicating 12.4% sales growth and 17.9% earnings growth, though it delivered a negative 4.1% average trailing four-quarter earnings surprise.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d8ab15849ce631393e6c79d8eb24648f48a0cdda6d9a55fde8590743ed2d31c3
+symbol: KDP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T14:04:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030368/implied-volatility-surging-for-keurig-dr-pepper-stock-options?cid=CS-ZC-FT-tale_of_the_tape|options-3030368
+image_url: https://staticx-tuner.zacks.com/images/articles/main/24/2362.jpg
+category: 
+tickers: KDP
+keywords: implied volatility, options trading, Keurig Dr Pepper, analyst estimates, Zacks Rank, beverage industry
+headline: Implied Volatility Surging for Keurig Dr Pepper Stock Options
+<<<SUMMARY>>>
+Keurig Dr Pepper (KDP) is attracting investor attention due to high implied volatility in its January 2027 $50 put options, suggesting traders expect significant price movement. However, the company holds a Zacks Rank #3 (Hold) rating with analyst estimates declining over the past 60 days, indicating fundamental weakness despite options market activity.
+<<<INSIGHTS>>>
+KDP | negative | The company received a Zacks Rank #3 (Hold) rating, operates in an industry ranking in the bottom 32%, and has experienced declining analyst estimates over the past 60 days (5 downgrades vs. 1 upgrade), indicating weakening fundamental outlook despite elevated options volatility.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c2ceef7b8fec5eaa2057f93339248cc5c5f56dae0292d007b7b337f6b67b9080
+symbol: KDP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T15:41:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031296/how-is-coca-cola-s-packaging-strategy-supporting-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3031296
+image_url: https://staticx-tuner.zacks.com/images/articles/main/e3/65.jpg
+category: 
+tickers: KO, PEP, KDP
+keywords: packaging strategy, affordable formats, volume growth, consumer reach, beverage industry, revenue growth management
+headline: How Is Coca-Cola's Packaging Strategy Supporting Growth?
+<<<SUMMARY>>>
+Coca-Cola is expanding affordable packaging options across Europe, Africa, and Vietnam to boost consumer accessibility and purchase frequency. The company achieved 5% global unit case volume growth and 7% organic revenue growth in Q3 2026. Competitors PepsiCo and Keurig Dr Pepper are similarly prioritizing packaging innovation and affordable formats to drive long-term growth.
+<<<INSIGHTS>>>
+KO | positive | Strong Q3 2026 performance with 5% unit case volume growth and 7% organic revenue growth. Successful expansion of affordable packaging across multiple regions and innovative marketing initiatives support continued growth momentum. However, valuation is elevated at 28.33X forward P/E versus industry average of 21.05X, and cost pressures could temper profitability.
+PEP | positive | Portion-control multipacks generating over $3.5 billion in annual revenues with both volume and revenue growth in Q3 2026. Strategic focus on packaging innovation and consumer-focused product combinations supports sustained growth trajectory.
+KDP | positive | Strong Q3 2026 performance with U.S. Refreshment Beverages sales up 10.9% and coffee appliance volumes up 16.7%. Emphasis on convenient single-serve formats and product innovation demonstrates effective execution of growth strategy.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:121315e2bff0f67d8928ff7b391366537486e9b42e9c277028ea63a3d57723a0
+symbol: KDP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T15:42:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033359/keurig-s-u-s-beverage-sales-rise-10-9-can-this-momentum-last?cid=CS-ZC-FT-analyst_blog|rank_focused-3033359
+image_url: https://staticx-tuner.zacks.com/images/articles/main/7a/1255.jpg
+category: 
+tickers: KDP, LKNCY, AVO, AKO.A, AKO.B
+keywords: beverage industry, Q3 2026 earnings, sales growth, energy drinks, market share expansion, brand performance
+headline: Keurig's U.S. Beverage Sales Rise 10.9%: Can This Momentum Last?
+<<<SUMMARY>>>
+Keurig Dr Pepper (KDP) reported 10.9% growth in U.S. Refreshment Beverages sales in Q3 2026, driven by volume/mix growth and net price realization. Dr Pepper achieved double-digit growth with Dr Pepper Zero up 25%, while the company's energy drink portfolio surpassed 10% market share. GHOST became the fourth brand to reach $1 billion in retail sales, and Electrolit posted over 40% retail sales growth.
+<<<INSIGHTS>>>
+KDP | positive | Strong Q3 performance with 10.9% segment sales growth, double-digit growth in flagship brands (Dr Pepper, Canada Dry), successful energy drink market expansion (surpassing 10% share), and GHOST reaching $1 billion in retail sales milestone. Management expressed confidence in continued Q4 momentum and future growth opportunities.
+LKNCY | positive | Carries Zacks Rank #1 (Strong Buy) with consensus estimates indicating 33.3% sales growth and 52.2% earnings growth for current fiscal year, despite recent negative earnings surprises.
+AVO | neutral | Carries Zacks Rank #2 (Buy) but consensus estimates show modest 3.6% sales growth and 17.7% earnings decline. Positive trailing four-quarter earnings surprise of 17.6% provides some offset to declining earnings outlook.
+AKO.A | positive | Carries Zacks Rank #2 (Buy) with consensus estimates indicating 12.4% sales growth and 17.9% earnings growth, though recent performance shows 4.1% average negative earnings surprises.
+AKO.B | positive | Carries Zacks Rank #2 (Buy) with consensus estimates indicating 12.4% sales growth and 17.9% earnings growth, though recent performance shows 4.1% average negative earnings surprises.
+<<<END>>>

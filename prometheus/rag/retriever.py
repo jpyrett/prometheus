@@ -15,6 +15,8 @@ questions the week 3 design asks of retrieval (design choices entry 20):
   caller has to say "no supporting text" instead of guessing.
 * No repeats. One hit per article (its best chunk). With diverse=True the hits are also spread over different
   stories (maximal marginal relevance), for a broad question over news that repeats itself.
+* Nothing from the future of the desk's day. While a past trading day is bound (`trading_clock.as_of`, the Proving Ground, design choices entry 127) every search is closed at the end of that day by the
+  search itself: `until` defaults to `trading_clock.horizon()`, a later `until` is cut to it, and `since_days` counts back from it. No caller has to remember to pass a date.
 * Newest first, on request. A search ranks by meaning, not by date, so a question about "the latest news" can be
   answered with older articles that match the words better (found in the SNDK run: all five hits were from Oct 19
   while newer articles were stored). With newest_first=True the articles that pass the relevance bar are ordered
@@ -23,13 +25,14 @@ questions the week 3 design asks of retrieval (design choices entry 20):
 import argparse
 import sys
 from dataclasses import asdict, dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, time, timedelta, timezone
 
 import numpy as np
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_core.vectorstores.utils import maximal_marginal_relevance
 
+from prometheus.common import trading_clock
 from prometheus.rag.loaders import check_symbol
 from prometheus.rag.store import count_chunks, get_vector_store
 
@@ -71,15 +74,18 @@ def _symbols(tickers: str | list[str] | None) -> list[str]:
     return [check_symbol(t) for t in items]
 
 
-def _where(symbols: list[str], since_ts: int | None) -> dict | None:
+def _where(symbols: list[str], since_ts: int | None, until_ts: int | None = None) -> dict | None:
     """The Chroma filter. `tickers` is a list in the metadata, so a symbol is matched with $contains; several
-    symbols are OR-ed. Chroma wants at least two clauses inside $or and $and, hence the special cases."""
+    symbols are OR-ed. Chroma wants at least two clauses inside $or and $and, hence the special cases. `until_ts` closes the window at the other end
+    (`$lte`): a chunk with no `published_ts` fails the clause, so it is never returned when there is one."""
     clauses = []
     if symbols:
         has = [{"tickers": {"$contains": s}} for s in symbols]
         clauses.append(has[0] if len(has) == 1 else {"$or": has})
     if since_ts is not None:
         clauses.append({"published_ts": {"$gte": since_ts}})
+    if until_ts is not None:
+        clauses.append({"published_ts": {"$lte": until_ts}})
     if not clauses:
         return None
     return clauses[0] if len(clauses) == 1 else {"$and": clauses}
@@ -115,7 +121,7 @@ def _hit(doc: Document, score: float) -> Hit:
 def search_news(query: str, *, tickers: str | list[str] | None = None, since_days: int | None = None,
                 k: int = K, min_score: float | None = MIN_SCORE, diverse: bool = False,
                 lambda_mult: float = MMR_LAMBDA, newest_first: bool = False, store: Chroma | None = None,
-                now: datetime | None = None) -> list[Hit]:
+                now: datetime | None = None, until: datetime | None = None) -> list[Hit]:
     """Search the news index by meaning. Returns at most k hits, one per article, best first (or, with
     diverse=True, in the order maximal marginal relevance picks them). An empty list means "no supporting text".
 
@@ -129,6 +135,8 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     newest_first: of the articles that pass the relevance bar (among the closest k * FETCH_FACTOR chunks), return the
                 newest k, newest first, instead of the k that match best. For "latest", "newest", "most recent". The bar
                 still applies, so a new article that is not about the question is not returned. It wins over diverse.
+    until:      only articles published at or before this moment (an aware datetime). While a day is bound (`trading_clock.as_of`) it is `trading_clock.horizon()` when left out and never later than it,
+                and `now` is never later than it either, so `since_days` counts back from the bound day. Unbound and left out: no upper bound, as before.
     store, now: for tests; the real index and the real clock when left out."""
     if not isinstance(query, str) or not query.strip():
         raise ValueError("the question must be a non-empty text")
@@ -143,6 +151,15 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     if not isinstance(newest_first, bool):
         raise ValueError("newest_first must be true or false")
     symbols = _symbols(tickers)
+    for name, moment in (("until", until), ("now", now)):
+        if moment is not None and (not isinstance(moment, datetime) or moment.tzinfo is None or moment.utcoffset() is None):
+            if name == "until" or trading_clock.bound_day() is not None:
+                raise ValueError(f"{name} must be a datetime with a timezone")
+    horizon = trading_clock.horizon()
+    if horizon is not None:   # a past trading day is bound: nothing after its end, and the window counts back from it
+        until = horizon if until is None else min(until, horizon)
+        now = horizon if now is None else min(now, horizon)
+    until_ts = int(until.timestamp()) if until is not None else None
 
     since_ts = None
     if since_days is not None:
@@ -153,7 +170,9 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     # warns, with a message that holds every document, as soon as one score is below 0. That happens when a large
     # k reaches far-away chunks, and the experiments hit it (a test checks that the two agree).
     scored = [(doc, 1.0 - distance) for doc, distance in store.similarity_search_with_score(
-        query.strip(), k=k * FETCH_FACTOR, filter=_where(symbols, since_ts))]
+        query.strip(), k=k * FETCH_FACTOR, filter=_where(symbols, since_ts, until_ts))]
+    if until_ts is not None:   # the store's filter does it already; this keeps a chunk with no (or a later) date out whatever the store is
+        scored = [(doc, score) for doc, score in scored if isinstance(doc.metadata.get("published_ts"), (int, float)) and doc.metadata["published_ts"] <= until_ts]
 
     candidates = _best_chunk_per_article(scored)
     if min_score is not None:
@@ -175,8 +194,17 @@ def search_press_releases(query: str, **options) -> list[Hit]:
 def search_filings(query: str, **options) -> list[Hit]:
     """`search_news` over the FILINGS collection (design choices entry 35): the same filters, relevance bar, one hit per article (here: per filing SECTION, so a 10-K
     gives at most two hits, its Business and its Risk Factors), `diverse` and `newest_first`, and the same `Hit`. `options` are those of `search_news`; `store` is
-    the filings store (the real one when left out)."""
+    the filings store (the real one when left out).
+
+    A filing has a DATE, not a time (`published_utc` is its filing date at 00:00 UTC). While a day is bound, the filings of that day count and the next day's do not: the end of the Eastern day (`horizon()`) is already
+    the next day in UTC, so for this collection `until` is cut to 23:59:59 UTC of the bound day, and a filing of the day after is never returned."""
     store = options.pop("store", None) or get_vector_store("filings")
+    day = trading_clock.bound_day()
+    if day is not None:
+        stamped = datetime.combine(day, time(23, 59, 59), tzinfo=timezone.utc)
+        asked = options.get("until")
+        if asked is None or (isinstance(asked, datetime) and asked.tzinfo is not None and asked > stamped):   # a naive `until` is left for `search_news` to refuse
+            options["until"] = stamped
     return search_news(query, store=store, **options)
 
 

@@ -18,9 +18,14 @@ THE CRITIC ONLY DEALS WITH RECOMMENDATIONS. It approves or denies a company's re
 sizes nothing: how much to buy or sell is the Account Manager's (agents/account_manager/sizing.py), made after the review, from the user's money and limits.
 
 THE CRITIC NEVER TRADES AND NEVER FETCHES (spec P8): its Data Clerk requests read stored data and Finnhub's quote, metric and symbol-search endpoints; it never sets `allow_fetch`.
+
+VERSION 2 (config_version "2", design/critic_v2_evidence_spec.md, design choices entry 133): A DENIAL REASON MUST EARN ITS PLACE. Each finding code is scored against the outcomes by a program (`proving/report_card.py`), and the reasons that denied winners
+were changed: `fresh_negative_news` and `blend_not_supported` inform and no longer deny (C2, C3: `evidence.py`), `company_mismatch` compares the names in `names.py` (C4), the new blocker `trend_not_confirmed` denies a trend recommendation whose
+stock fell over the last five sessions (C5: `chart.py`), and the model's labels are kept in a store so that the same quote gets the same label (C6: `labels.py`). It still sizes nothing, sees no portfolio and has no liquidity, stop-distance or market-cap rule (C7).
 """
 from prometheus.agents.advisor.config import load_config as load_advisor_config
 from prometheus.agents.critic.config import CriticConfig, load_config
+from prometheus.agents.critic.labels import LabelStore, open_store
 from prometheus.agents.critic.review import review_order
 from prometheus.common.trace import traced
 from prometheus.common.user_profile import RiskView
@@ -30,7 +35,8 @@ EFFORTS = ("low", "high", "max")   # the reasoning efforts OpenRouter lists for 
 
 
 class Critic:
-    def __init__(self, model=None, model_id: str | None = None, clerk=None, config_path=None, ledger=None, history=None, effort: str | None = None, advisor_config=None):
+    def __init__(self, model=None, model_id: str | None = None, clerk=None, config_path=None, ledger=None, history=None, effort: str | None = None, advisor_config=None, parallel: int = 1,
+                 label_store: LabelStore | None | bool = True):
         """model: a chat model (anything with `invoke`; a scripted one in tests); otherwise OpenRouter through `get_chat_model` with the model of the `critic` role (CRITIC_MODEL, Z.ai GLM 5.3 by
         default), or `model_id`, built when first needed: a model that cannot start (a missing key) is a note on the review, never an exception. clerk: the Data Clerk that is asked for the numbers,
         the quote and the sources (anything with `request_metrics`, `request_quotes` and `request_verification`; a fake in tests; the real one, with no model of its own to call, when left out).
@@ -39,11 +45,20 @@ class Critic:
         works again (configs/advisor_v1.json when left out).
 
         effort: None (the default) sends no reasoning parameter, so GLM 5.3 runs at its own default, `max`. Do not lower it to save time: on OpenRouter's listed benchmarks the model at `low`
-        avoids a made-up answer far less often than at `max`. "low", "high" or "max" sends OpenRouter's `reasoning` effort, for an experiment."""
+        avoids a made-up answer far less often than at `max`. "low", "high" or "max" sends OpenRouter's `reasoning` effort, for an experiment.
+
+        parallel: how many records of one review are checked at once (1, the default, is the sequential loop every live run uses; the Proving Ground's Time Machine passes more, `review._check_all`: the same review comes out, in the same order).
+
+        label_store: where the model's labels are kept so that the same quote gets the same label (Critic v2, `labels.py`): True (the default) opens the store the config names (`evidence.label_store`, None there turns it off); a `LabelStore` is
+        used as it is (a test passes one in a temporary folder); None or False keeps and reads no label."""
         if effort is not None and effort not in EFFORTS:
             raise ValueError(f"effort must be one of {', '.join(EFFORTS)} (or None for the model's own default)")
+        if not isinstance(parallel, int) or isinstance(parallel, bool) or parallel < 1:
+            raise ValueError("parallel must be a whole number of at least 1")
+        self.parallel = parallel
         self._model, self._model_id, self._clerk, self._config_path, self._ledger = model, model_id, clerk, config_path, ledger
         self._advisor_config, self._config = advisor_config, None
+        self._label_store = label_store
         self.history, self.effort = history, effort
         self.errors: list[str] = []            # why the critic's model could not start, when it could not: copied onto the run of every review
         self._model_tried = model is not None
@@ -54,6 +69,13 @@ class Critic:
         if self._config is None:
             self._config = load_config(self._config_path)
         return self._config
+
+    @property
+    def label_store(self) -> LabelStore | None:
+        """The label store of this Critic (see `__init__`): the config's own folder when left as True, else what was given (None: none)."""
+        if self._label_store is True:
+            self._label_store = open_store(self.config.evidence.label_store)
+        return self._label_store or None
 
     @property
     def advisor_config(self):

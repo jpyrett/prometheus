@@ -855,8 +855,8 @@ PART 12. THE TRADER (Trader v1: design choices entries 73 to 75; spec design/tra
 
 
 PART 13. THE SIMULATED CLOCK: USE_LIVE_TRADING (design choices entry 76)
-  USE_LIVE_TRADING=false in .env: the desk works at the PREVIOUS BUSINESS DAY's close, 30 minutes before it (15:30 Eastern; 12:30 on an early-close day), as if the market were open. It runs at night, at the weekend and on a holiday.
-    Friday, Saturday-Monday morning -> Friday's close | a Tuesday -> Monday's close | the day after Thanksgiving -> Wednesday's close.   The moment is the same for every agent and does not move, so an approval never runs out in a run.
+  USE_LIVE_TRADING=false in .env: the desk works at the close of the LAST TRADING DAY THAT HAS CLOSED (entry 129: today itself once it is past 16:00 Eastern, or past 13:00 on an early-close day; before the close, after midnight, at the weekend and on a holiday the trading day before), 30 minutes before it (15:30 Eastern; 12:30 on an early-close day), as if the market were open. It runs at night, at the weekend and on a holiday.
+    Friday 16:12 -> Friday's close | Friday 11:00 -> Thursday's close (Friday has not closed yet) | Saturday 00:30, Saturday, Sunday, Monday before 16:00 -> Friday's close | Thanksgiving evening -> Wednesday's close.  The stored bars must hold that day's CLOSE: refresh them after 16:00 (a bar fetched during the session is a part of a day).   The moment is the same for every agent and does not move, so an approval never runs out in a run.
   A price is the stored daily bar of that day (no Finnhub call: it costs nothing and needs no key), marked "simulated". A symbol with no stored bar on that day fails; it is never priced from another day or from the live quote.
   true, or not set: the real clock and Finnhub's live quote, as before. A typing mistake in the value is read as false (the simulation). It is NOT live trading: there is none, and PAPER_TRADING is a separate setting.
   Every report starts with a CLOCK line saying which moment the run works at. An explicit --now (the runner) or --today is a replay on purpose and wins. The stored bars must reach the simulated day (the Advisor's freshness gate says so when not).
@@ -995,3 +995,40 @@ OFFLINE EVALUATION (design choices entry 117; spec design/offline_evaluation_spe
                                                                       about $1.80 in all per run (the two real runs of 2026-11-20 cost $1.81 and $1.88 on the key's counter; Opus 5.5 on OpenRouter is $4 per million tokens in, $20 out, a call is about 1,500 to 4,000 tokens in and 700 out); prints per evaluator the mean and the count and the experiment's URL. The judge's provider refuses about a quarter of the ATTACK requests (a content filter): those get `judge_refused` and no score.
           options: --upload alone (datasets only), --run redteam|sessions, --no-judge (code evaluators and the guard only), --limit N (the first N examples). Exit 0 when it ran: a low score is a result, not a failure.
   A real capture that fails a money or policy evaluator is a FINDING and is reported, never hidden by changing the evaluator (entry 117 named one; entry 123 recorded that session again, and today every session passes: within_pot 15/15).
+
+
+PART 15. THE PROVING GROUND: BACKTESTING, THE TRACK RECORD AND THE LIVE MONITOR (design choices entries 126 to 132; spec design/proving_ground_spec.md)
+  Did the desk's recommendations work? Three views, on the page (the "Proving Ground" tab: ./run_ui.sh, then http://127.0.0.1:8000/#proving) and by command (./test_proving.sh = python -m prometheus.proving).
+  FREE
+    ./test_proving.sh track                    every recommendation of the saved real sessions scored against the stored bars (denied ones too, hypothetically); says the last bar day it used
+    ./test_proving.sh coverage                 what is stored per month (bars, news, press releases, filings) and the usable range of a test
+    ./test_proving.sh index                    build the bar index (data/index/bars_v1: derived, safe to delete; it is also built on first use)
+    ./test_proving.sh show RUN_ID              a saved run (data/proving/runs/)
+    ./run_ui.sh --replay                       the page over recorded runs: the Proving Ground shows the real saved runs of tests/fixtures/proving_real/ and can replay them ("Watch it again")
+  FINNHUB QUOTES (the simulated clock uses the stored close and calls nothing)
+    ./test_proving.sh live --account N         the paper account marked to the quotes, each position against its plan (stop, target, time stop). It WATCHES AND ALERTS: nothing is sold, ever.
+                                               A position bought as a NEUTRAL company has no plan (the Advisor writes none for a neutral score) and says so.
+  PAID (the models; it never fetches; it prints the plan, the days in the cache and the estimate, and asks first)
+    ./test_proving.sh time-machine --prompt "Buy the 3 most recommended oil stocks with $3,000, split evenly" --cash 10000 --from 2026-06-08 --to 2026-11-09 --cadence weekly --neutral
+        replays the REAL desk at each decision day with only what was known that day, fills at the next open of the stored bars, follows each position by the Advisor's own plan, and saves the run.
+        --faithful      the models exactly as the live desk runs them (about 6 minutes for 23 days, about $0.65). The default is FAST: the Advisor's reasoning off, the Critic's low, the fastest provider
+                        (about 90 seconds, about $0.14), and the run says so in its caveats. --no-cache researches every day again. --risk conservative|moderate|aggressive  --save FILE  --yes
+        A rerun of the same request with other cash, another range or another cadence takes every day it shares from the cache (seconds, free). A fast day never answers a faithful run.
+        The request must ask for recommendations; a direct order ("Buy 50 shares of MSFT") is refused: there is no recommendation in it to test.
+  WHAT A RESULT SAYS, AND WHAT IT CANNOT. Every result lists its caveats: fundamentals are today's snapshot, the symbol directory is today's, returns are price returns, fills are the next open with no slippage,
+        exits are judged on daily bars (a day that touches stop and target is a stop), open positions are marked and never counted as wins, and under 20 outcomes a rate is marked "small sample".
+        A test's money is its own: it never writes the Postgres book, the ledgers, the news files or the vector store.
+  THE HISTORY (PAID, ask first; it appends to news/ and data/press_releases/ and writes data/historical/splits_v1/ and backfill_v1/)
+    python scripts/backfill_history.py --from 2026-05-20 --kinds news,press_releases,market_news,splits [--symbols ...] [--yes]     windows of 30 days, oldest first, resumable; without --yes it prints the plan
+    python -m prometheus.rag.ingest --all ; --press-releases --all ; --filings --all       then make it searchable (writes data/processed/vectorstore: ask first; chunks are 680 characters, and a chunk over
+        the embedder's 256 tokens is cut again by tokens: entries 130 and 131). Foreign tickers (BP.L, 2222.SR) are refused by the news provider: leave them out with --symbols.
+    Refresh the daily bars AFTER 16:00 Eastern for the same day to count: a bar fetched during the session is a part of a day and is never read (entry 129).
+  TESTS  tests/test_as_of_clock.py test_proving_*.py test_venue.py test_bar_index.py test_web_proving.py; the front end: cd ui && corepack npm@10.9.2 test. Tests never write data/proving (a conftest guard fails one that does).
+
+  THE CRITIC'S REPORT CARD (design choices entry 133; free)
+    ./test_proving.sh critic-report [--run RUN_ID ...] [--save FILE]     every finding of the Critic scored against the outcomes of the saved runs: how many it fired on, how those did against the rest, and whether
+        the gap is beyond chance (two standard errors): "picks losers", "denies winners", "no clear difference" or "too few". Reviews of the Critic's config version 1 and 2 are never mixed. A denial for the
+        risk profile is suitability and is listed, never judged by returns. The same on the page: the Track Record tab, "The Critic's rules". This is how a denial reason earns its place or loses it.
+  Since entries 133 to 136: a trend recommendation in a stock that fell over the last five sessions is denied (trend_not_confirmed); "looks bad" news and an unsupported blend are warnings; the Critic keeps its labels
+        (data/critic/labels: delete the folder to have every quote judged again); a neutral purchase has a stop (2 x ATR) and a 20-session time stop in a test and on the Live view, and is never sold by them in a live account;
+        a bar is read only 90 minutes after its day's close.

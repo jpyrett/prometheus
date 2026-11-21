@@ -1,0 +1,91 @@
+{
+ "_note": "GET /api/proving/live/{account_id}: three neutral companies, no plan. Copied by scripts/make_proving_fixtures.mjs from tests/fixtures/proving_real/live_snapshot_oil.json; the answer in `data` is not edited.",
+ "source": "tests/fixtures/proving_real/live_snapshot_oil.json",
+ "data": {
+  "account_id": 8277,
+  "name": "Paper Proving",
+  "positions": [
+   {
+    "symbol": "APA",
+    "name": null,
+    "shares": 110.521662,
+    "cost_basis": 45.24,
+    "price": 45.18,
+    "price_time": "2026-11-20T19:35:04Z",
+    "simulated": false,
+    "value": 4993.37,
+    "gain": -6.63,
+    "gain_pct": -0.001326,
+    "day_change_pct": 0.01255,
+    "plan": null,
+    "status": "no_plan",
+    "evidence": null,
+    "since": "2026-11-20",
+    "record_id": "neutral-4435c024e662-3",
+    "notes": [
+     "bought as a company the Advisor scored neutral: it made no plan (no stop or target) for it"
+    ]
+   },
+   {
+    "symbol": "COP",
+    "name": null,
+    "shares": 36.573769,
+    "cost_basis": 136.71,
+    "price": 136.46,
+    "price_time": "2026-11-20T19:35:13Z",
+    "simulated": false,
+    "value": 4990.86,
+    "gain": -9.14,
+    "gain_pct": -0.001828,
+    "day_change_pct": 0.01089,
+    "plan": null,
+    "status": "no_plan",
+    "evidence": null,
+    "since": "2026-11-20",
+    "record_id": "neutral-4435c024e662-1",
+    "notes": [
+     "bought as a company the Advisor scored neutral: it made no plan (no stop or target) for it"
+    ]
+   },
+   {
+    "symbol": "CVX",
+    "name": null,
+    "shares": 23.883448,
+    "cost_basis": 209.35,
+    "price": 209.02,
+    "price_time": "2026-11-20T19:35:13Z",
+    "simulated": false,
+    "value": 4992.12,
+    "gain": -7.88,
+    "gain_pct": -0.001576,
+    "day_change_pct": 0.012203,
+    "plan": null,
+    "status": "no_plan",
+    "evidence": null,
+    "since": "2026-11-20",
+    "record_id": "neutral-4435c024e662-2",
+    "notes": [
+     "bought as a company the Advisor scored neutral: it made no plan (no stop or target) for it"
+    ]
+   }
+  ],
+  "cash": 10000,
+  "invested_at_cost": 15000,
+  "market_value": 14976.35,
+  "equity": 24976.35,
+  "gain": -23.65,
+  "gain_pct": -0.001577,
+  "as_of_utc": "2026-11-20T19:35:38Z",
+  "alerts": [],
+  "session": {
+   "state": "regular",
+   "open": true,
+   "reason": "",
+   "next_open_utc": "2026-11-23T09:00:00Z"
+  },
+  "history": [],
+  "last_bar_day": "2026-11-20",
+  "clock_note": null,
+  "notes": []
+ }
+}

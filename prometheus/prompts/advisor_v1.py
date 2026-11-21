@@ -15,6 +15,7 @@ from datetime import date
 
 from prometheus.agents.advisor.events import EVENT_CLASSES, TEXT_CLASSES
 from prometheus.agents.advisor.families import FAMILIES
+from prometheus.common import trading_clock
 
 ARCHETYPES = {
     "event": "a corporate event (guidance, earnings, a buyback, a dividend, an offering, an executive change) that the price may not have absorbed yet",
@@ -74,7 +75,7 @@ RETRY_THESIS = ("These theses failed the program's checks:\n{reasons}\nReply aga
 
 
 def plan_system(today: date | None, max_companies: int, max_signals: int, evidence: bool) -> str:
-    text = PLAN_SYSTEM.format(today=(today or date.today()).isoformat(), max_companies=max_companies, max_signals=max_signals, events=event_lines(), archetypes=_lines(ARCHETYPES))
+    text = PLAN_SYSTEM.format(today=(today or trading_clock.bound_day() or date.today()).isoformat(), max_companies=max_companies, max_signals=max_signals, events=event_lines(), archetypes=_lines(ARCHETYPES))
     if evidence:
         head, tail = text.split("\n- model_score is your own view", 1)
         text = f"{head}\n{EVIDENCE_RULES}\n- model_score is your own view{tail}"

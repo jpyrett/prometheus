@@ -1,0 +1,5 @@
+ point it at docs/SESSION_NOTES.md. The "CHECKPOINT of 2026-11-20" at the top covers what entries 114–125 built, the test numbers, the four older failures and the open items:
+- price limits like "under $50 a share";
+- the "each" word being accepted anywhere in the request;
+- masking keys in LangSmith traces;
+- the request-reading spec design/request_reading_spec.md, which isn't built yet.

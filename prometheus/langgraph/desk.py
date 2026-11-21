@@ -291,7 +291,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
     funds_factory = funds_factory or (lambda: AccountManager())
     critic_factory = critic_factory or (lambda order: Critic())
     guard = guard or Guard.code_only()
-    clock = clock or trading_now   # the real clock, or the simulated one (the previous business day's close) when USE_LIVE_TRADING=false: entry 76
+    clock = clock or trading_now   # the real clock, or the simulated one (the close of the last trading day that has closed: entry 129) when USE_LIVE_TRADING=false: entry 76
 
     def saved_account(manager: AccountManager, who, profile) -> Portfolio:
         """Connect `manager` to the saved account `who` (a sample key such as jacob_sample, or an account number), set the profile that was given (AFTER `connect`, which forgets a profile read from the default file), and

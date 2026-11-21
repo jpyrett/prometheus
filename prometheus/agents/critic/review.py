@@ -20,6 +20,8 @@ The Critic only deals with recommendations TO BUY (entry 105: a record that is n
 the user reads the whole scorecard. Nothing raises for a data, API or model failure (P7): a failed step is a finding, and what could not be checked is not approved (P3). The Advisor's records are
 never edited (P5): the reviews are written beside them and joined by `record_id`; the only thing added to a record is its `critic` block (feedback.py, Amendment 2).
 """
+import concurrent.futures
+import contextvars
 import time
 import uuid
 from dataclasses import dataclass, field
@@ -104,7 +106,7 @@ def review_order(critic, order: WorkOrder, view: RiskView, now: datetime | None 
         return order
     model = critic.model
     run = {"stage": "review", "model": critic.model_name, "tokens_in": 0, "tokens_out": 0, "calls": 0, "dropped": [], "error": None, "errors": list(critic.errors), "records": len(order.recommendations),
-           "records_called": 0, "controls_failed": 0, "metric_order": None, "quote_order": None, "verify_order": None, "independent_model": None, "advisor_model": None, "seconds": 0.0,
+           "records_called": 0, "controls_failed": 0, "labels_from_store": 0, "metric_order": None, "quote_order": None, "verify_order": None, "independent_model": None, "advisor_model": None, "seconds": 0.0,
            "tolerance": view.risk_tolerance, "now_et": et_text(now), "session": session_at(now).state, "ignore_market_hours": timing.market_hours_ignored()}
     works = [Work(i, raw) for i, raw in enumerate(order.recommendations)]
 
@@ -135,14 +137,8 @@ def review_order(critic, order: WorkOrder, view: RiskView, now: datetime | None 
     run["metric_order"] = ",".join(gathered.metric_orders.values()) or None
     run["quote_order"], run["verify_order"] = gathered.quote_order, ",".join(gathered.verify_orders) or None
 
-    # ---- 4 to 8, per record
-    for w in reviewable:
-        try:
-            _check(w, critic, model, order, view, gathered, now, run)
-        except Exception as error:  # a bug in a check must never become an approval (P3), nor a crash (P7)
-            w.findings.append(blocker("accuracy", "record_defect", f"The review of this record failed ({type(error).__name__}): it cannot be approved."))
-            run["errors"].append(f"{w.rec.symbol}: the review raised {type(error).__name__}")
-            w.dimensions = {}
+    # ---- 4 to 8, per record (one after the other, as always; `critic.parallel` above 1 reviews the records at once, see `_check_all`)
+    _check_all(reviewable, critic, model, order, view, gathered, now, run)
 
     # ---- 9 the verdicts
     reviews = [_build(w, critic, order, now, gathered, run) for w in works]
@@ -156,6 +152,50 @@ def review_order(critic, order: WorkOrder, view: RiskView, now: datetime | None 
     for review in order.reviews:
         critic.ledger.append(review)      # append only: the reviews are the Critic's record, and the ledger is never read back by this step
     return order
+
+
+NOT_SET = object()      # a part of a parallel review that never reached the line that sets a field of the run
+COUNTERS = ("tokens_in", "tokens_out", "calls", "records_called", "controls_failed", "labels_from_store")
+SET_BY_CHECK = ("independent_model", "advisor_model")
+
+
+def _guarded(w: Work, critic, model, order: WorkOrder, view: RiskView, gathered: recheck.Gathered, now: datetime, run: dict) -> None:
+    """`_check` for one record, never raising: a bug in a check must never become an approval (P3), nor a crash (P7)."""
+    try:
+        _check(w, critic, model, order, view, gathered, now, run)
+    except Exception as error:
+        w.findings.append(blocker("accuracy", "record_defect", f"The review of this record failed ({type(error).__name__}): it cannot be approved."))
+        run["errors"].append(f"{w.rec.symbol}: the review raised {type(error).__name__}")
+        w.dimensions = {}
+
+
+def _check_all(reviewable: list[Work], critic, model, order: WorkOrder, view: RiskView, gathered: recheck.Gathered, now: datetime, run: dict) -> None:
+    """Steps 4 to 8 for every record. With `critic.parallel` of 1 (the default, and every live run) the records are checked one after the other, exactly as before. With more, the records are checked AT ONCE (the model call of each
+    is the slow part, and the records do not depend on one another), each in a copy of the caller's context (the as-of day and the trace follow) and with a run record of its own, and the parts are put back IN THE ORDER OF THE RECORDS:
+    the counters are added, the drops and the errors are appended record by record, and the fields a check sets (`independent_model`, `advisor_model`) take the last record's value, so the review that comes out is the one the sequential
+    loop makes. It stays sequential when the review's model-call limit could bind (more records than `limits.max_model_calls`): then WHICH record gets its call depends on the order, and the order stays the loop's."""
+    workers = min(critic.parallel, len(reviewable))
+    if workers <= 1 or len(reviewable) > critic.config.limits.max_model_calls:
+        for w in reviewable:
+            _guarded(w, critic, model, order, view, gathered, now, run)
+        return
+    parts = []
+    for _ in reviewable:
+        part = {k: (list(v) if isinstance(v, list) else v) for k, v in run.items()}
+        part.update({k: 0 for k in COUNTERS}, dropped=[], errors=[], **{k: NOT_SET for k in SET_BY_CHECK})
+        parts.append(part)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = [pool.submit(contextvars.copy_context().run, _guarded, w, critic, model, order, view, gathered, now, part) for w, part in zip(reviewable, parts)]
+        for future in futures:
+            future.result()
+    for part in parts:
+        for key in COUNTERS:
+            run[key] += part[key]
+        run["dropped"].extend(part["dropped"])
+        run["errors"].extend(part["errors"])
+        for key in SET_BY_CHECK:
+            if part[key] is not NOT_SET:
+                run[key] = part[key]
 
 
 def _check(w: Work, critic, model, order: WorkOrder, view: RiskView, gathered: recheck.Gathered, now: datetime, run: dict) -> None:
@@ -179,7 +219,7 @@ def _check(w: Work, critic, model, order: WorkOrder, view: RiskView, gathered: r
     # 5 evidence
     independent = ev.independence(critic.model_name, rec.advisor.get("model"))
     run["independent_model"], run["advisor_model"] = independent, rec.advisor.get("model")
-    w.evidence_result = ev.assess(model, rec, w.claims, w.sources, gathered.verification, order, advisor, config, now, critic.model_name, independent, run)
+    w.evidence_result = ev.assess(model, rec, w.claims, w.sources, gathered.verification, order, advisor, config, now, critic.model_name, independent, run, store=critic.label_store)
     w.findings += w.evidence_result.findings
     # 7 risk fit
     w.risk_result = risk.assess(rec, view, fetched, w.timing_result.deal_price, config.risk)
@@ -217,7 +257,7 @@ def _build(w: Work, critic, order: WorkOrder, now: datetime, gathered: recheck.G
     advisor_model = rec.advisor.get("model") if rec else None
     audit = Audit(critic_model=critic.model_name, advisor_model=advisor_model, independent_model=ev.independence(critic.model_name, advisor_model) if rec else None, config_version=config.config_version,
                   metric_order=w.metric_order, quote_order=gathered.quote_order, verify_order=",".join(gathered.verify_orders) or None,
-                  run={k: run[k] for k in ("model", "calls", "tokens_in", "tokens_out", "records_called", "controls_failed")})
+                  run={k: run[k] for k in ("model", "calls", "tokens_in", "tokens_out", "records_called", "controls_failed", "labels_from_store")})
     return Review(
         review_id=uuid.uuid4().hex[:12], record_id=identity.get("record_id") or f"record-{w.index}", request_id=identity.get("request_id") or order.request_id, symbol=raw.get("symbol", "?"), action=action,
         reviewed_utc=utc_text(now), valid_until_utc=until, approved=verdict.approved, score=verdict.score, score_before_blockers=verdict.score_before_blockers, grade=verdict.grade, bonus=bonus,

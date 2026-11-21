@@ -22,6 +22,7 @@ from prometheus.agents.critic.record import ChartDetail, Finding, Measure, Patte
 CHART_METRICS = ("sma_200", "sma_50_vs_200", "cross_50_200_20d", "structure_63d", "breakout_20d", "volume_ratio_1d", "macd_hist", "rsi_14", "obv_20d_change",
                  "decline_from_peak_63d", "rebound_from_trough_63d", "sessions_since_trough_63d")   # asked for with `sma_50`, `last_close` and `pct_of_52w_high`, which the review already has
 FACTS = ("last_close", "sma_50", "pct_of_52w_high", *CHART_METRICS)
+TREND_METRICS = ("ret_5d",)      # asked for with the review for rule C5 (`trend_not_confirmed`); the Critic's own reading, never compared with the record's (`recheck.ASKED_ONLY`)
 
 Judgement = tuple[bool | None, str]      # (does the pattern hold: None when a number it needs is missing, the numbers in words)
 UNKNOWN: Judgement = (None, "")
@@ -122,6 +123,19 @@ JUDGES = {
 assert set(JUDGES) == set(PATTERNS)
 
 
+def trend_confirmation(rec: Recommendation, ret_5d: float | None, config: Chart) -> list[Finding]:
+    """Rule C5: `trend_not_confirmed` (a BLOCKER) for a TREND recommendation whose stock's return over the last five sessions, as the Critic's own metric gives it, is at or under `config.trend_confirm_ret_5d`; the warning
+    `trend_unconfirmed_unknown` when that return cannot be had; nothing for any other family."""
+    if rec.trade.family != "trend":
+        return []
+    if ret_5d is None:
+        return [warning("chart", "trend_unconfirmed_unknown", f"The strategy is trend, which needs the stock to be rising, but {rec.symbol}'s return over the last five sessions could not be calculated: the move is not confirmed or denied.")]
+    if ret_5d <= config.trend_confirm_ret_5d:
+        return [blocker("chart", "trend_not_confirmed", f"The strategy is trend, which assumes a move goes on, but {rec.symbol}'s return over the last five sessions is {ret_5d:+.1%} (it needs more than {config.trend_confirm_ret_5d:+.1%}): "
+                        f"the move is not confirmed.", value=ret_5d, threshold=config.trend_confirm_ret_5d)]
+    return []
+
+
 def assess(rec: Recommendation, fetched: dict | None, config: Chart) -> ChartResult:
     """The chart findings of one record, its score (0 to 100) and the detail."""
     out = ChartResult()
@@ -147,6 +161,7 @@ def assess(rec: Recommendation, fetched: dict | None, config: Chart) -> ChartRes
         out.findings.append(warning("chart", "death_cross", f"Death cross: {held['death_cross'].evidence}.", value=facts["cross_50_200_20d"]))
     if "golden_cross" in held:
         out.findings.append(info("chart", "golden_cross", f"Golden cross: {held['golden_cross'].evidence}.", value=facts["cross_50_200_20d"]))
+    out.findings.extend(trend_confirmation(rec, metric_value(fetched, "ret_5d"), config))
     if len(unknown) == len(config.patterns):
         out.findings.append(warning("chart", "chart_not_assessable", "The chart could not be judged: none of the numbers it needs could be made (too few stored sessions)."))
     elif out.score < config.weak_below:

@@ -106,6 +106,7 @@ class Evidence(_Section):
     max_reason_words: int = Field(gt=0)
     control_texts: list[ControlText] = Field(min_length=1)
     blocking_classes: list[str]
+    label_store: str | None            # where the model's labels are kept so that the same quote gets the same label (`labels.py`, rule C6); null keeps and reads none
 
     @model_validator(mode="after")
     def _check(self):
@@ -232,6 +233,7 @@ class Chart(_Section):
     weak_below: float = Field(ge=0, le=100)
     volume_ratio_min: float = Field(gt=0)
     near_high: float = Field(gt=0, le=1)
+    trend_confirm_ret_5d: float            # a recommendation of the TREND family is denied when the stock's return over the last five sessions is at or under this (`trend_not_confirmed`, Critic v2 rule C5)
     rsi_healthy_low: float
     rsi_healthy_high: float
     rsi_overbought: float
