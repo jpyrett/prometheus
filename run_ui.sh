@@ -13,7 +13,10 @@
 # sent `fetch: true`. The Trader is simulated either way: nothing is sent to a broker. Needs the cmu conda env (Python) and `corepack` (npm 10.9.2) for the page.
 set -euo pipefail
 cd "$(dirname "$0")"
-PY="${HOME}/miniconda3/envs/cmu/bin/python"
+# The Python to use: $PYTHON if set, else the cmu conda env at ~/miniconda3, else the `python` of the active environment (e.g. after `conda activate cmu`).
+if [[ -n "${PYTHON:-}" ]]; then PY="$PYTHON"
+elif [[ -x "${HOME}/miniconda3/envs/cmu/bin/python" ]]; then PY="${HOME}/miniconda3/envs/cmu/bin/python"
+else PY="$(command -v python || command -v python3 || true)"; fi
 NPM=(corepack npm@10.9.2)
 DEV=0
 SERVER_ARGS=()
@@ -27,7 +30,7 @@ while [[ $# -gt 0 ]]; do
     *) echo "unknown option: $1 (see ./run_ui.sh --help)" >&2; exit 2 ;;
   esac
 done
-if [[ ! -x "$PY" ]]; then echo "ERROR: $PY not found (the cmu conda env)" >&2; exit 2; fi
+if [[ -z "$PY" || ! -x "$PY" ]]; then echo "ERROR: no Python found: run 'conda activate cmu' first, or set PYTHON=/path/to/python" >&2; exit 2; fi
 if [[ " ${SERVER_ARGS[*]:-} " != *" --replay"* ]]; then
   echo "LIVE MODE: pressing Go! is a PAID run (OpenRouter, Finnhub) that writes the UI's own account in Postgres."
   echo "           'Refresh market data first (paid)' is TICKED by default: Go! also calls the paid data APIs and writes the data files. Untick it to use the stored data. --replay is the free recorded session."
